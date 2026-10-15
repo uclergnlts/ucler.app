@@ -3,14 +3,16 @@
 Fizik, kimya ve biyolojiyi en temelden başlayıp üniversite sınavı düzeyine kadar **kısa, görsel, sade ve hikâyeli** anlatan bir eğitim platformu. Hedef kitle 9. sınıftan üniversite 1-2. sınıfa kadar.
 
 İki parçadan oluşur:
-- **Site / uygulama** (`site/`): Mobil öncelikli. Konular kısa kartlarla anlatılır, her konunun sonunda 4 soruluk bir mini test vardır.
+- **Site / uygulama** (Next.js; içerik `content/`, kod `app/` ve `components/`): Mobil öncelikli. Konular kısa kartlarla anlatılır, her konunun sonunda 4 soruluk bir mini test vardır.
 - **Kısa videolar** (`video/`): Dikey, 45-60 saniyelik, sosyal medyada da paylaşılacak bağımsız videolar.
 
 ## Hızlı başlangıç
 ```bash
-open site/index.html                                  # ya da tarayıcıda aç; derleme yok
+npm install                                           # ilk kez (Node 20 veya üstü)
+npm run dev                                           # http://localhost:3000 adresinde aç
+npm run build                                         # out/ klasörüne statik site
 python3 tools/check.py                                # içerik doğrulama
-NODE_PATH=$(npm root -g) node tools/ekran.js ekran     # ekran görüntüleri (playwright gerekir)
+NODE_PATH=$(npm root -g) node tools/ekran.js ekran     # ekran görüntüleri (önce build; playwright gerekir)
 ```
 
 ## Belgeler

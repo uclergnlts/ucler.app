@@ -10,7 +10,7 @@ Her denetimde aşağıdaki listeyi baştan sona geç. Bulgularını `denetim/RAP
 
 ## 2. Kapsam
 - [ ] Konu, o konunun TYT/AYT'de beklenen temel kavramlarının hepsini kapsıyor. Eksik kavramları listele.
-- [ ] Konu yolu (`SUBJ`) sınav konularının hepsini içeriyor. Eksik ya da yanlış sıralı konuları listele.
+- [ ] Konu yolu (`content/dersler.json`) sınav konularının hepsini içeriyor. Eksik ya da yanlış sıralı konuları listele.
 - [ ] Özet kartı konunun ana fikirlerini doğru topluyor.
 
 ## 3. Dil ve ton
@@ -27,7 +27,7 @@ Her denetimde aşağıdaki listeyi baştan sona geç. Bulgularını `denetim/RAP
 ## 5. Kod
 - [ ] `python3 tools/check.py` → TAMAM.
 - [ ] Tarayıcı konsolunda hata yok (`tools/ekran.js` "Sayfa hatası yok" diyor).
-- [ ] Bütün adresler çalışıyor: `#`, `#kesfet`, `#kayit`, `#profil`, `#<ders>`, `#<ders>.<konu>` ve olmayan bir konu adresi.
+- [ ] Bütün adresler çalışıyor: `/`, `/kesfet/`, `/kaydedilenler/`, `/profil/`, `/<ders>/`, `/<ders>/<konu>/` ve olmayan bir konu adresi (404 sayfası). `npm run build` hatasız bitiyor.
 - [ ] Kaydetme ve ilerleme sayfa yenilenince korunuyor. `localStorage` kapalıyken site çökmüyor.
 - [ ] Kullanılmayan, eski kod ya da eski tasarımdan kalan parça yok.
 
@@ -38,7 +38,6 @@ Her denetimde aşağıdaki listeyi baştan sona geç. Bulgularını `denetim/RAP
 
 ## Bilinen açıklar (Claude'un bildikleri, 2026-10-15)
 Bunları da doğrula ve raporuna ekle:
-- `site/index.html` içinde maskottan kalan `isil()` fonksiyonu duruyor, büyük olasılıkla kullanılmıyor.
 - Kodda ve `localStorage` anahtarlarında eski "Temelden Fen" adının izleri var (`tf-` öneki). Anahtarı değiştirmek mevcut ilerlemeyi siler, bu yüzden yalnızca öner.
 - AYT konu listeleri resmi listeyle karşılaştırılmadı.
 - Otomatik arayüz testi yok. Yalnızca içerik doğrulayıcı ve ekran görüntüsü aracı var.
@@ -46,14 +45,14 @@ Bunları da doğrula ve raporuna ekle:
 ## Rapor kalıbı
 ```markdown
 # Denetim raporu: YYYY-MM-DD
-Kapsam: (ne denetlendi: örn. kimya.js tamamı, site kodu)
+Kapsam: (ne denetlendi: örn. content/kimya.json tamamı, site kodu)
 Özet: X kritik, Y orta, Z küçük bulgu; N tanesi düzeltildi.
 
 ## Bulgular
 | # | Önem | Yer | Sorun | Öneri / düzeltme | Durum |
 |---|---|---|---|---|---|
 | 1 | Kritik | kimya.js › atomun-yapisi › kart 3 | Elektronun kütlesi yanlış yazılmış | 9,11×10⁻³¹ kg olmalı (kaynak) | Düzeltildi (commit abc123) |
-| 2 | Orta | SUBJ › biyoloji | "Bitki biyolojisi" AYT'de iki konuya ayrılıyor | Bölünmesi önerilir | Öneri |
+| 2 | Orta | dersler.json › biyoloji | "Bitki biyolojisi" AYT'de iki konuya ayrılıyor | Bölünmesi önerilir | Öneri |
 
 Önem: **Kritik** = yanlış bilgi, çalışmayan özellik · **Orta** = eksik kavram, kafa karıştıran anlatım, görsel taşma · **Küçük** = yazım, biçim.
 

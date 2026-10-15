@@ -31,8 +31,9 @@ Senin görevin **denetlemek**. Yeniden tasarlamak, ürünün yönünü değişti
 ## Proje haritası
 | Yol | Ne |
 |---|---|
-| `site/index.html` | Tek sayfalık mobil öncelikli site (uygulama gibi). Konu listeleri `SUBJ` içindedir. |
-| `site/fizik.js`, `kimya.js`, `biyoloji.js` | Konu içerikleri (kartlar, SVG görseller, 4 soruluk testler). |
+| `content/dersler.json` | Her dersin sıralı konu listesi (hangi konular hazır, hangileri yakında). |
+| `content/fizik.json`, `kimya.json`, `biyoloji.json` | Konu içerikleri (kartlar, SVG görseller, 4 soruluk testler). |
+| `app/`, `components/`, `lib/` | Mobil öncelikli site (Next.js + React + TypeScript). Stil `app/globals.css` içindedir. |
 | `tools/check.py` | İçerik doğrulayıcı. |
 | `tools/ekran.js` | Her sayfanın ve kartın telefon boyutunda ekran görüntüsünü alır. |
 | `video/` | Kısa dikey video şablonu, senaryolar, üretim adımları. |
@@ -40,10 +41,13 @@ Senin görevin **denetlemek**. Yeniden tasarlamak, ürünün yönünü değişti
 
 ## Kontrol komutları
 ```bash
-python3 tools/check.py                              # "TAMAM" yazmalı
+npm install                                          # ilk kez
+python3 tools/check.py                               # "TAMAM" yazmalı
+npm run lint                                         # TypeScript hatası olmamalı
+npm run build                                        # hatasız bitmeli; out/ klasörünü üretir
 NODE_PATH=$(npm root -g) node tools/ekran.js ekran   # "Sayfa hatası yok" yazmalı; ekran/ klasöründeki görüntülere bak
 ```
-Site derleme gerektirmez; `site/index.html` dosyasını tarayıcıda açman yeterli.
+Siteyi gezmek için `npm run dev` çalıştır ve `http://localhost:3000` adresini aç.
 
 ## Dil
 - İçerik ve raporlar Türkçe yazılır.

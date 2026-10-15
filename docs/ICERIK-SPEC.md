@@ -3,14 +3,15 @@
 Her konu, o konunun **tüm temel kavramlarını** kapsar. Her kart ise kısa olur ve **tek bir fikir** anlatır.
 
 ## Dosya
-Her ders için bir dosya vardır: `site/<ders>.js`.
-```js
-window.DERS = window.DERS || {};
-window.DERS.<ders> = {
-  "<konu-id>": { ...konu... },
-};
+Her ders için bir JSON dosyası vardır: `content/<ders>.json`.
+```json
+{
+  "<konu-id>": { ...konu... }
+}
 ```
-Konu id'si, `site/index.html` içindeki `SUBJ.<ders>.list` dizisinde `["<konu-id>","Görünen ad"]` biçiminde yer almalıdır. Henüz yazılmamış konular orada `[0,"Ad"]` olarak durur.
+Konu id'si, `content/dersler.json` içindeki ders listesinde `{"id": "<konu-id>", "ad": "Görünen ad"}` biçiminde yer almalıdır. Henüz yazılmamış konular orada yalnızca `{"ad": "Ad"}` olarak durur. Bir konu yazılınca o satıra `id` eklenir.
+
+Dosyalar düz JSON'dur: anahtarlar ve metinler çift tırnak içindedir, sondaki virgüle izin yoktur. SVG içinde öznitelikler tek tırnakla yazılır, böylece JSON içinde kaçış gerekmez.
 
 ## Konu nesnesi
 ```js

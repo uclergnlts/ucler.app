@@ -29,9 +29,14 @@ Bu dosyadaki kararları Üçler verdi. Codex bunları değiştirmez. Bir karara 
   3. Claude videoyu üretir.
 
 ## Konu yolları (sınav listeleriyle, 2026-10-15)
-Sıralama `site/index.html` içindeki `SUBJ` listesindedir. Fizik 26, kimya 25, biyoloji 26 konudan oluşur.
+Sıralama `content/dersler.json` dosyasındadır. Fizik 26, kimya 25, biyoloji 26 konudan oluşur.
 - TYT konuları Üçler'in gönderdiği listelerden alındı.
 - **AYT konuları Claude'un müfredat bilgisinden eklendi ve resmi listeyle henüz karşılaştırılmadı.**
+
+## Teknoloji (Üçler, 2026-10-15)
+- Site **Next.js + React + TypeScript + Tailwind CSS** ile yapılır. İçerik `content/` altındaki JSON dosyalarında durur.
+- Yayın için **Vercel** düşünülüyor; `ucler.app` alan adı oraya bağlanacak. Her PR için önizleme adresi çıkar.
+- İleride hesap ve ilerleme için Supabase, ödeme için iyzico veya Stripe değerlendirilecek (karar değil).
 
 ## Şimdilik bekleyenler
 - Ücretli üyelik, kayıt ve giriş. Bunlar için sunucu, veritabanı ve ödeme altyapısı gerekiyor.

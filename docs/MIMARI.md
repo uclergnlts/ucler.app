@@ -1,38 +1,50 @@
 # Mimari
 
-## Şu anki durum (prototip)
-Site, derleme gerektirmeyen **tek bir statik sayfadır**. Sunucu, veritabanı ve kullanıcı hesabı yoktur. Yayında `claude.ai` artifact'ı olarak durur. İleride `ucler.app` alan adına taşınacak.
+## Şu anki durum
+Site bir **Next.js** uygulamasıdır (App Router, React, TypeScript, Tailwind CSS). Derleme sonucu tamamen statiktir (`output: "export"`): `npm run build` komutu `out/` klasörüne düz HTML, CSS ve JS dosyaları üretir. Sunucu, veritabanı ve kullanıcı hesabı yoktur. Yayın için Vercel düşünülüyor; `ucler.app` alan adı oraya bağlanacak.
 
 ```
-site/
-  index.html     görünüm, stil ve uygulama mantığının tamamı (HTML + CSS + JS)
-  fizik.js       window.DERS.fizik    = { konu-id: {title, summary, cards[], quiz[]} }
-  kimya.js       window.DERS.kimya
-  biyoloji.js    window.DERS.biyoloji
+content/
+  dersler.json     her dersin adı, yol başlığı ve sıralı konu listesi  ← konu sırasının tek kaynağı
+  fizik.json       { konu-id: {title, summary, cards[], quiz[]} }
+  kimya.json
+  biyoloji.json
+app/               sayfalar (adres = klasör)
+  layout.tsx       yazı tipleri, alt menü
+  globals.css      bütün stil: renk değişkenleri, bileşen sınıfları
+  page.tsx                 /                ana sayfa
+  kesfet/page.tsx          /kesfet/         arama ve ders süzgeci
+  kaydedilenler/page.tsx   /kaydedilenler/  kaydedilen konular
+  profil/page.tsx          /profil/         profil
+  [ders]/page.tsx          /<ders>/         konu yolu
+  [ders]/[konu]/page.tsx   /<ders>/<konu>/  ders ekranı
+components/        ekranların kendisi (Home, Road, Lesson, Explore, Saved, Profile, Tabs, ui, icons)
+lib/
+  dersler.ts       türler ve ders listesi (tarayıcıya giden küçük kısım)
+  content.ts       konu içeriğini okuyan yardımcılar (yalnızca derleme sırasında)
+  store.ts         localStorage üzerindeki ilerleme ve kaydedilenler
 ```
-`index.html`, içerik dosyalarını `<script src>` ile yükler. Ardından `window.DERS` verisini okuyup sayfayı çizer.
 
-### index.html içinde
-- **`SUBJ`:** Her dersin adı, yol başlığı ve sıralı konu listesi (`[id, ad]`). `id` yerine `0` yazan konular henüz hazır değildir ve sitede "yakında" olarak görünür. **Konu sırasının tek kaynağı burasıdır.**
-- **Yönlendirme (hash):**
-
-  | Adres | Sayfa |
-  |---|---|
-  | `#` | ana sayfa |
-  | `#kesfet` | arama ve ders süzgeci |
-  | `#kayit` | kaydedilen konular |
-  | `#profil` | profil |
-  | `#<ders>` | konu yolu |
-  | `#<ders>.<konu-id>` | ders ekranı |
-
-  Hepsini `route()` fonksiyonu yönetir.
-- **Ders ekranı:** `lesson()` ve `drawLesson()` kartları tek tek gösterir. Kartlar bitince 4 soruluk test başlar, test bitince sonuç kartı gelir. `step()` ileri ve geri gitmeyi sağlar, klavyede ok tuşları da çalışır.
-- **Durum:** Durum tarayıcının `localStorage` alanında tutulur. Hesap olmadığı için cihaza özeldir.
-  - `tf-prog`: konu bazında ilerleme ve test sonucu
+- **Konu listesi:** `content/dersler.json` içinde her konu `{"id": "...", "ad": "..."}` biçimindedir. `id` olmayan konular henüz yazılmamıştır ve sitede "Yakında" görünür.
+- **Sayfalar statik üretilir.** Her hazır konu için `/<ders>/<konu>/` sayfası derleme sırasında oluşturulur; bir konunun kartları yalnızca kendi sayfasına gömülür. Keşfet ve ana sayfa yalnızca başlık ve özetleri taşır.
+- **Ders ekranı (`components/Lesson.tsx`):** Kartları tek tek gösterir. Kartlar bitince 4 soruluk test başlar, test bitince sonuç kartı gelir. Kaydırma ve sağ/sol ok tuşları çalışır.
+- **Durum (`lib/store.ts`):** Tarayıcının `localStorage` alanında tutulur. Hesap olmadığı için cihaza özeldir.
+  - `tf-prog`: konu bazında test sonucu (`"ders.konu": "3/4 doğru"`) ve son açılan konu (`_last`)
   - `tf-saved`: kaydedilen konular
 
   Anahtarlardaki `tf-` öneki eski "Temelden Fen" adından kalmıştır. Değiştirilirse kullanıcıların mevcut ilerlemesi kaybolur.
-- **Tema:** Renkler `:root` içinde CSS değişkenleriyle tanımlıdır. `data-ders` özniteliği dersin vurgu rengini (`--acc`) belirler. SVG'ler de yalnızca bu değişkenleri kullanır.
+- **Tema:** Renkler `app/globals.css` içinde `:root` CSS değişkenleriyle tanımlıdır. `data-ders` özniteliği dersin vurgu rengini (`--acc`) belirler. Konu SVG'leri de yalnızca bu değişkenleri kullanır. Tailwind yüklüdür; yeni bileşenlerde yardımcı sınıflar kullanılabilir, ama renkler yine bu değişkenlerden gelir.
+- **İçerik HTML'i:** Kart metinleri küçük HTML parçaları taşır (`<b>`, `<em>`, `<sub>`...). Bunlar `components/ui.tsx` içindeki `Html` bileşeniyle basılır. İçerik bizim yazdığımız ve doğrulayıcıdan geçen metindir; kullanıcıdan gelen metin bu yoldan basılmamalı.
+
+### Komutlar
+```bash
+npm install          # ilk kez
+npm run dev          # http://localhost:3000 (değişiklikler anında görünür)
+npm run build        # out/ klasörüne statik site
+npm run lint         # TypeScript tür denetimi
+python3 tools/check.py
+NODE_PATH=$(npm root -g) node tools/ekran.js ekran   # önce npm run build
+```
 
 ## Video hattı
 Ayrıntılar `video/README.md` dosyasındadır. Kısaca:
@@ -42,5 +54,4 @@ Ayrıntılar `video/README.md` dosyasındadır. Kısaca:
 
 ## İleride gerekecek mimari (henüz yok)
 - **Hesap, giriş ve ücretli üyelik:** Sunucu, veritabanı, kimlik doğrulama ve ödeme sağlayıcısı gerekecek. İlerleme `localStorage` yerine hesaba bağlanmalı.
-- **Oyunlar ve etkileşimli anlatım:** Ayrıntı `docs/YOL-HARITASI.md` dosyasında. Kart modeline yeni bir kart türü eklenmesi önerilir; örneğin `type: "etkilesim"` ve bir bileşen adı. Tek dosyadaki kodun bölünmesi (bileşenler, derleme adımı) o noktada değerlendirilmeli.
-- **Konu sayısı:** 74 konuya çıkınca tüm içeriği tek seferde yüklemek ağırlaşabilir. Konu başına ayrı dosya ya da gerektiğinde yükleme değerlendirilmeli.
+- **Oyunlar ve etkileşimli anlatım:** Ayrıntı `docs/YOL-HARITASI.md` dosyasında. Kart modeline yeni bir kart türü eklenmesi önerilir; örneğin `type: "etkilesim"` ve bir bileşen adı. Bileşen `components/` altında bir React bileşeni olur, `Lesson.tsx` kart türüne göre onu çizer.
