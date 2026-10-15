@@ -1,11 +1,11 @@
 "use client";
 import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
-import { doneKeys, resetAll, useProg, useSaved } from "@/lib/store";
+import { doneKeys, resetAll, useProg, useSaved, useStorageOk } from "@/lib/store";
 import { Icon } from "./icons";
 import { PageHead, Top } from "./ui";
 
 export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
-  const prog = useProg(), saved = useSaved();
+  const prog = useProg(), saved = useSaved(), storageOk = useStorageOk();
   const done = doneKeys(prog).filter((k) => /\//.test(prog[k]));
   let right = 0, total = 0;
   for (const k of done) {
@@ -23,7 +23,11 @@ export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
           <span className="avatar"><User /></span>
           <span>
             <b>Misafir</b>
-            <span>İlerlemen şimdilik yalnızca bu cihazda saklanıyor.</span>
+            <span>
+              {storageOk
+                ? "İlerlemen şimdilik yalnızca bu cihazda saklanıyor."
+                : "Tarayıcın kayıt tutmaya izin vermiyor. İlerlemen ve kaydettiklerin bu sekmeyi kapatınca silinir."}
+            </span>
           </span>
         </section>
         <section className="stats">

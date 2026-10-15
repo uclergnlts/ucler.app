@@ -9,9 +9,15 @@ const KEYS = { prog: "tf-prog", saved: "tf-saved" } as const;
 const listeners = new Set<() => void>();
 const cache: Record<string, { raw: string | null; val: unknown }> = {};
 
+// Tarayıcı depolamayı engellerse (gizli pencere, kapalı site verisi) değerler bu oturum boyunca bellekte tutulur.
+const mem: Record<string, string | null> = {};
+let broken = false;
+
 function read<T>(key: string, fallback: T): T {
-  let raw: string | null = null;
-  try { raw = localStorage.getItem(key); } catch {}
+  let raw: string | null = mem[key] ?? null;
+  if (!broken) {
+    try { raw = mem[key] = localStorage.getItem(key); } catch { broken = true; }
+  }
   const c = cache[key];
   if (c && c.raw === raw) return c.val as T;
   let val: T = fallback;
@@ -20,7 +26,10 @@ function read<T>(key: string, fallback: T): T {
   return val;
 }
 function write(key: string, val: unknown) {
-  try { localStorage.setItem(key, JSON.stringify(val)); } catch {}
+  const raw = (mem[key] = JSON.stringify(val));
+  if (!broken) {
+    try { localStorage.setItem(key, raw); } catch { broken = true; }
+  }
   listeners.forEach((l) => l());
 }
 function subscribe(l: () => void) {
@@ -37,6 +46,9 @@ export const useProg = () =>
   useSyncExternalStore(subscribe, () => read<Prog>(KEYS.prog, EMPTY_PROG), () => EMPTY_PROG);
 export const useSaved = () =>
   useSyncExternalStore(subscribe, () => read<string[]>(KEYS.saved, EMPTY_SAVED), () => EMPTY_SAVED);
+
+/** Kalıcı depolama çalışıyor mu? Çalışmıyorsa ilerleme sayfa kapanınca silinir. */
+export const useStorageOk = () => useSyncExternalStore(subscribe, () => !broken, () => true);
 
 export function setProg(patch: Prog) {
   write(KEYS.prog, { ...read<Prog>(KEYS.prog, EMPTY_PROG), ...patch });
