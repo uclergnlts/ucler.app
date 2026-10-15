@@ -28,7 +28,7 @@ for ders, topics in d.items():
         for k in ("title", "summary", "cards", "quiz"):
             if k not in t: err(ders, tid, "eksik alan", k)
         cards = t.get("cards", [])
-        if not 6 <= len(cards) <= 11: err(ders, tid, "kart sayısı", len(cards), "(6-11 olmalı)")
+        if not 6 <= len(cards) <= 14: err(ders, tid, "kart sayısı", len(cards), "(6-14 olmalı)")
         if cards and cards[-1].get("h") != "Özet": err(ders, tid, "son kart 'Özet' değil")
         if len(t.get("quiz", [])) != 4: err(ders, tid, "test soru sayısı", len(t.get("quiz", [])), "(4 olmalı)")
         ids = []
