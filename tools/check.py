@@ -17,6 +17,7 @@ files = [os.path.abspath(f) for f in sys.argv[1:]] or [
 d = {os.path.splitext(os.path.basename(f))[0]: json.load(open(f, encoding="utf-8")) for f in files}
 
 bad = 0
+warn = []
 def err(*a):
     global bad
     bad += 1
@@ -35,6 +36,7 @@ for ders, topics in d.items():
             if len(c.get("h", "")) > 40: err(ders, tid, i, "başlık 40 karakteri aşıyor")
             w = len(re.sub("<[^>]+>", " ", c.get("p", "")).split())
             if w > 55: err(ders, tid, i, "uzun metin", w, "kelime")
+            elif w > 45: warn.append(f"{ders} {tid} {i}: {w} kelime (hedef 45)")
             s = c.get("svg", "")
             if not s: err(ders, tid, i, "svg yok"); continue
             try: ET.fromstring(s)
@@ -63,6 +65,7 @@ for ders, topics in d.items():
     for tid in set(listed) - set(topics):
         err(ders, tid, "dersler.json listesinde var ama veri dosyasında yok")
 
+for w in warn: print("UYARI:", w)
 print("TAMAM" if not bad else f"{bad} sorun")
 for ders, topics in d.items():
     print(f"  {ders}: {len(topics)} konu hazır -> {', '.join(topics)}")
