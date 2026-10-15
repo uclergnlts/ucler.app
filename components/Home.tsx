@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
 import { doneKeys, useProg } from "@/lib/store";
 import { Icon } from "./icons";
@@ -11,6 +13,17 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
   const [ld, lid] = (prog._last || "").split(".");
   const last = ld in all ? all[ld as DersId].find((e) => e.id && e.id === lid) : undefined;
   const Play = Icon.play;
+  const router = useRouter();
+
+  // Eski tek sayfalık sürümün adresleri (#kimya.simya, #kesfet, #kayit...) yeni adreslere yönlensin.
+  useEffect(() => {
+    const h = decodeURIComponent(location.hash.slice(1));
+    if (!h) return;
+    const [d, id] = h.split(".");
+    const page = ({ kesfet: "/kesfet/", kayit: "/kaydedilenler/", profil: "/profil/" } as Record<string, string>)[d];
+    if (page) router.replace(page);
+    else if (d in all) router.replace(id ? href(d, id) : href(d));
+  }, [all, router]);
 
   return (
     <div className="app">
