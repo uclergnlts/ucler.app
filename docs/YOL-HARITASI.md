@@ -3,7 +3,7 @@
 ## Durum (2026-10-15)
 | Ders | Hazır konu | Toplam |
 |---|---|---|
-| Fizik | 8 (Fizik bilimine giriş, Madde ve özellikleri, Basınç, Vektörler, Bir ve iki boyutta hareket, Newton yasaları, İş-enerji-güç) | 26 |
+| Fizik | 26 (hepsi hazır) | 26 |
 | Kimya | 7 (Simyadan kimyaya, Kimyanın dili ve güvenliği, Madde, Atom modelleri, Atomun yapısı, Periyodik tablo, Kimyasal türler arası etkileşimler) | 25 |
 | Biyoloji | 6 (Ortak özellikler, Biyomoleküller, Enzimler, Hücre ve organeller, Madde geçişi, Canlıların sınıflandırılması) | 26 |
 
