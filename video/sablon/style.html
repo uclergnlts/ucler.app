@@ -1,0 +1,79 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:265px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#d63c63}
+.head .sub i{display:block;width:44px;height:6px;background:#d63c63;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.title{position:absolute;left:80px;right:80px;top:345px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+.title em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.cap{position:absolute;left:80px;width:860px;top:1405px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08)}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:640px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#d63c63;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:860px;top:1545px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;background:#d63c63;border-radius:3px}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>KİMYA</div><div class="brand">ucler<b>.</b></div></div>
+<div id="c"></div>
+</div>
+<script>
+const f = new URLSearchParams(location.search).get('f');
+const c = document.getElementById('c');
+const frames = {
+'1': `<div class="title">Kurşun neden hiç<br><em>altına dönüşmedi?</em></div>
+<svg class="v" viewBox="0 0 1080 1920">
+ <g stroke="#1d3557" stroke-width="4" fill="none" stroke-linejoin="round">
+  <path d="M80 1180 H1000"/>
+  <path d="M130 1180 V1010 H210 V1180 M210 1050 H290 V1180 M300 1180 V930 Q345 860 390 930 V1180 M345 860 V820 M400 1180 V1060 H470 V1180"/>
+  <path d="M690 1180 V1000 Q760 900 830 1000 V1180 M760 900 V860 M840 1180 V1050 H930 V1180"/>
+ </g>
+ <circle cx="900" cy="760" r="38" fill="none" stroke="#1d3557" stroke-width="4"/>
+ <circle cx="915" cy="750" r="34" fill="#f6f8fb"/>
+ <g transform="translate(540 1060)">
+  <ellipse cx="0" cy="110" rx="190" ry="18" fill="#1d3557" opacity=".08"/>
+  <path d="M-150 -40 H150 L120 100 H-120 Z" fill="#ffffff" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M-142 -10 H142 L134 30 H-134 Z" fill="#9aa6b6"/>
+  <path d="M-60 -70 q10 -40 0 -80 M0 -60 q12 -50 0 -100 M60 -70 q10 -40 0 -80" stroke="#9aa6b6" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M-110 100 l-30 60 M110 100 l30 60" stroke="#1d3557" stroke-width="5"/>
+  <path d="M-80 175 q20 -40 40 0 q20 -45 40 0 q20 -40 40 0" fill="#ffd95a" stroke="#d63c63" stroke-width="4"/>
+ </g>
+ <text x="540" y="1300" text-anchor="middle" font-family="Inter" font-weight="600" font-size="34" fill="#5f6f88">Bağdat, 9. yüzyıl</text>
+</svg>
+<div class="cap"><span>Dokuzuncu</span>&nbsp;<span class="on">yüzyıl,</span>&nbsp;<span>Bağdat.</span></div>
+<div class="prog"><i style="width:6%"></i></div>`,
+'2': `<div class="title">Elementi belirleyen:<br><em>proton sayısı</em></div>
+<svg class="v" viewBox="0 0 1080 1920">
+ <g fill="none" stroke="#c9d3e0" stroke-width="3">
+  <circle cx="290" cy="930" r="90"/><circle cx="290" cy="930" r="150"/><circle cx="290" cy="930" r="210"/>
+  <circle cx="790" cy="930" r="90"/><circle cx="790" cy="930" r="150"/><circle cx="790" cy="930" r="210"/>
+ </g>
+ <g fill="#1d3557"><circle cx="290" cy="840" r="9"/><circle cx="440" cy="930" r="9"/><circle cx="142" cy="980" r="9"/><circle cx="350" cy="1130" r="9"/><circle cx="200" cy="740" r="9"/>
+  <circle cx="790" cy="840" r="9"/><circle cx="940" cy="930" r="9"/><circle cx="642" cy="980" r="9"/><circle cx="850" cy="1130" r="9"/><circle cx="700" cy="740" r="9"/></g>
+ <circle cx="290" cy="930" r="56" fill="#9aa6b6" stroke="#1d3557" stroke-width="4"/>
+ <circle cx="790" cy="930" r="56" fill="#ffd95a" stroke="#1d3557" stroke-width="4"/>
+ <text x="290" y="944" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="38" fill="#1d3557">82 p</text>
+ <text x="790" y="944" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="38" fill="#1d3557">79 p</text>
+ <text x="290" y="1215" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="56" fill="#1d3557">Pb</text>
+ <text x="290" y="1262" text-anchor="middle" font-family="Inter" font-weight="600" font-size="32" fill="#5f6f88">kurşun</text>
+ <text x="790" y="1215" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="56" fill="#1d3557">Au</text>
+ <text x="790" y="1262" text-anchor="middle" font-family="Inter" font-weight="600" font-size="32" fill="#5f6f88">altın</text>
+ <path d="M500 930 H580" stroke="#1d3557" stroke-width="5"/><path d="M570 916 l18 14 -18 14" stroke="#1d3557" stroke-width="5" fill="none"/>
+ <path d="M520 900 l40 60 M560 900 l-40 60" stroke="#d63c63" stroke-width="7" stroke-linecap="round"/>
+ <text x="540" y="1340" text-anchor="middle" font-family="Inter" font-weight="600" font-size="32" fill="#5f6f88">Kimyasal tepkime çekirdeğe dokunmaz</text>
+</svg>
+<div class="cap"><span>Kurşunda</span>&nbsp;<span class="on">seksen iki</span>&nbsp;<span>proton</span></div>
+<div class="prog"><i style="width:58%"></i></div>`,
+'3': `<div class="q"><small>DÜŞÜN</small>Hiç gerçekleşmeyen bir hayal, bilime nasıl bu kadar çok şey <em style="font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)">kazandırmış</em> olabilir?</div>
+<div class="cap"><span>bilime</span>&nbsp;<span class="on">nasıl</span>&nbsp;<span>bu kadar</span></div>
+<div class="prog"><i style="width:97%"></i></div>`
+};
+c.innerHTML = frames[f];
+</script></body></html>
