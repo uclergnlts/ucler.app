@@ -3,14 +3,14 @@
 ## Durum (2026-10-15)
 | Ders | Hazır konu | Toplam |
 |---|---|---|
-| Fizik | 7 (Fizik bilimine giriş, Madde ve özellikleri, Vektörler, Bir ve iki boyutta hareket, Newton yasaları, İş-enerji-güç) | 26 |
-| Kimya | 6 (Simyadan kimyaya, Kimyanın dili ve güvenliği, Madde, Atom modelleri, Atomun yapısı, Periyodik tablo) | 25 |
-| Biyoloji | 5 (Ortak özellikler, Biyomoleküller, Enzimler, Hücre ve organeller, Madde geçişi) | 26 |
+| Fizik | 8 (Fizik bilimine giriş, Madde ve özellikleri, Basınç, Vektörler, Bir ve iki boyutta hareket, Newton yasaları, İş-enerji-güç) | 26 |
+| Kimya | 7 (Simyadan kimyaya, Kimyanın dili ve güvenliği, Madde, Atom modelleri, Atomun yapısı, Periyodik tablo, Kimyasal türler arası etkileşimler) | 25 |
+| Biyoloji | 6 (Ortak özellikler, Biyomoleküller, Enzimler, Hücre ve organeller, Madde geçişi, Canlıların sınıflandırılması) | 26 |
 
 Güncel liste için `python3 tools/check.py` çıktısına bakılabilir.
 
 ## Sıradaki işler
-1. **İçerik:** Her dersin konuları sırayla yazılacak. Ders başına ilk konu sınav kapsamına göre gözden geçirildi; sıradaki adım ikinci konular.
+1. **İçerik:** Her dersin konuları sırayla yazılacak. Her derste sıradaki yazılmamış konu yazılır (2026-10-16: Basınç, kimyasal etkileşimler, sınıflandırma eklendi).
 2. **Videolar:** İlk dalgada hazır konular için yaklaşık 45 video çıkacak (KIM-01, FIZ-01, BIY-01 …). KIM-01 senaryosu hazır, ses bekleniyor.
 3. **AYT konu listeleri:** Resmi listeyle karşılaştırılacak.
 4. **Yayın:** Site Vercel'e bağlanacak, ardından `ucler.app` alan adı. O zamana kadar claude.ai artifact'ı eski sürümü gösterir.
