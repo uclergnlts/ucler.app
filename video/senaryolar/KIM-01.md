@@ -11,7 +11,7 @@ Simya konusu 3 bağımsız videoya bölündü:
 
 Dokuzuncu yüzyıl, Bağdat. Loş bir odada bir simyacı, eritilmiş kurşunun başında bekliyor. Tek bir hayali var: bu gri, ucuz metali altına çevirmek.
 
-Simya, kimyadan önceki adımdı. İskenderiye'de doğdu, İslam dünyasında gelişti, oradan Avrupa'ya yayıldı. Simyacılar iki şey arıyordu. Biri, metalleri altına çevireceğine inandıkları felsefe taşıydı. Diğeri, ömrü uzatacak hayat iksiri.
+Simya, kimyadan önceki adımdı. Çin'den Hindistan'a pek çok yerde vardı. Batı'daki kolu İskenderiye'de doğdu, İslam dünyasında gelişti, oradan Avrupa'ya yayıldı. Simyacılar iki şey arıyordu. Biri, metalleri altına çevireceğine inandıkları felsefe taşıydı. Diğeri, ömrü uzatacak hayat iksiri.
 
 İkisini de hiç bulamadılar. Neden? Çünkü bir elementi belirleyen şey, atomunun çekirdeğindeki proton sayısıdır. Kurşunda seksen iki proton var, altında yetmiş dokuz. Kimyasal tepkimeler çekirdeğe dokunmaz, atomları sadece yeniden düzenler. Yani hiçbir karışım, hiçbir ateş kurşunu altına çeviremez.
 
