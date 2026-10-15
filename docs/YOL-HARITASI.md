@@ -13,6 +13,7 @@ Güncel liste için `python3 tools/check.py` çıktısına bakılabilir.
 1. **İçerik:** Her dersin konuları sırayla yazılacak. Ders başına ilk konu sınav kapsamına göre gözden geçirildi; sıradaki adım ikinci konular.
 2. **Videolar:** İlk dalgada hazır konular için yaklaşık 45 video çıkacak (KIM-01, FIZ-01, BIY-01 …). KIM-01 senaryosu hazır, ses bekleniyor.
 3. **AYT konu listeleri:** Resmi listeyle karşılaştırılacak.
+4. **Yayın:** Site Vercel'e bağlanacak, ardından `ucler.app` alan adı. O zamana kadar claude.ai artifact'ı eski sürümü gösterir.
 
 ## Planlanacak: oyunlar (Üçler, 2026-10-15)
 Konularla bağlantılı kısa oyunlar eklenecek. Üçler'in örneği: kimyada periyodik tabloda elementin yerini bulmak. Henüz tasarlanmadı. Olası fikirler (karar değil):

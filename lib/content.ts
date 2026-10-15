@@ -1,0 +1,34 @@
+// İçerik tek kaynaktan gelir: content/*.json. Biçim için docs/ICERIK-SPEC.md'ye bak.
+import fizik from "@/content/fizik.json";
+import kimya from "@/content/kimya.json";
+import biyoloji from "@/content/biyoloji.json";
+import { DERS_IDS, DERSLER, type DersId, type Entry, type Topic } from "./dersler";
+
+export * from "./dersler";
+const DATA: Record<DersId, Record<string, Topic>> = { fizik, kimya, biyoloji };
+
+export const topic = (d: DersId, id: string): Topic | undefined => DATA[d][id];
+
+export function entries(d: DersId): Entry[] {
+  return DERSLER[d].konular.map((k, i) => {
+    const t = k.id ? topic(d, k.id) : undefined;
+    if (!k.id || !t) return { ders: d, no: i + 1, ad: k.ad };
+    return {
+      ders: d, no: i + 1, ad: k.ad, id: k.id, title: t.title, summary: t.summary,
+      cardCount: t.cards.length, quizCount: t.quiz.length, headings: t.cards.map((c) => c.h).join(" "),
+    };
+  });
+}
+
+export const allEntries = () => Object.fromEntries(DERS_IDS.map((d) => [d, entries(d)])) as Record<DersId, Entry[]>;
+
+/** Aynı dersteki bir sonraki hazır konu. */
+export function nextTopic(d: DersId, id: string): Entry | undefined {
+  const list = entries(d);
+  const k = list.findIndex((e) => e.id === id);
+  return list.slice(k + 1).find((e) => e.id);
+}
+
+export function readyTopics(): { ders: DersId; id: string }[] {
+  return DERS_IDS.flatMap((d) => entries(d).filter((e) => e.id).map((e) => ({ ders: d, id: e.id! })));
+}
