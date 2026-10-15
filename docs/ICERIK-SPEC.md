@@ -20,7 +20,7 @@ Dosyalar düz JSON'dur: anahtarlar ve metinler çift tırnak içindedir, sondaki
   summary: "Tek cümlelik özet (≤ 70 karakter)",
   cards: [                       // 7-10 kart önerilir; doğrulayıcı 6-11 arasını kabul eder
     { h: "Başlık (≤ 40 karakter)",
-      p: "Metin: en fazla 45 kelime (doğrulayıcı 55'e kadar izin verir). <b>, <em>, <sub>, <sup>, <br> kullanılabilir.",
+      p: "Metin: en fazla 45 kelime (doğrulayıcı 45'i aşanı uyarır, 55'i aşanı hata sayar). <b>, <em>, <sub>, <sup>, <br> kullanılabilir.",
       svg: "<svg viewBox='0 0 320 200'>...</svg>",   // her kartta ZORUNLU
       key: "İsteğe bağlı 'akılda kalsın' cümlesi (≤ 90 karakter)" }
   ],
