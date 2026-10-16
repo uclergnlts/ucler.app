@@ -1,6 +1,6 @@
 # Videolar sitede nerede durur?
 
-Karar (Üçler, 2026-10-16): Videolar **tek yerde saklanır, iki yerde gösterilir.**
+Karar (Üçler, 2026-10-16): Videolar **tek yerde saklanır**, alt menüdeki **Videolar** sekmesinde YouTube Shorts / Instagram Reels gibi dikey bir akış olarak gösterilir. Keşfet'te video yoktur.
 
 ## 1. Saklama: `content/videolar.json`
 Her video bir kez yazılır. `yerler` listesi videonun hangi konuya ve hangi karta (kavrama) ait olduğunu söyler. Bir video birden fazla konuya bağlanabilir; ilk yer videonun asıl konusudur.
@@ -33,10 +33,10 @@ Her video bir kez yazılır. `yerler` listesi videonun hangi konuya ve hangi kar
 Yalnızca **yayına hazır** videolar bu dosyaya girer. Henüz sesi gelmemiş videolar `video/senaryolar/` altında bekler; sitede "yakında" kutusu çıkmaz.
 
 ## 2. Gösterim
-1. **Ders ekranında, ilgili kartın altında.** Kartın altında "Video · 0:52" düğmesi çıkar. Dokununca video kartın üstünde açılır, kapatınca öğrenci kaldığı karttan devam eder. Asıl yer burası, çünkü öğrenme o kartta oluyor.
-2. **Keşfet'te.** Arama kutusunun altında bir video şeridi durur, oradan `/videolar/` sayfasına gidilir. Bu sayfa Instagram'daki gibi dikey kaydırılan bir akıştır: ekrana gelen video sessiz başlar, dokununca ses açılır. Her videonun altında **"Konuya git"** bağlantısı vardır ve öğrenciyi doğrudan ilgili karta götürür (`/kimya/simya/?kart=2`).
+1. **Ders ekranında, ilgili kartın altında** (ek kolaylık). Kartın altında "Video · 0:52" düğmesi çıkar. Dokununca video kartın üstünde açılır, kapatınca öğrenci kaldığı karttan devam eder. Asıl yer burası, çünkü öğrenme o kartta oluyor.
+2. **Videolar sekmesinde.** Alt menüde ayrı bir sekmedir (`/videolar/`). Shorts/Reels gibi dikey kaydırılan bir akıştır: ekrana gelen video sessiz başlar, "Sesi aç" ile ses açılır. Her videonun altında **"Konuya git"** bağlantısı vardır ve öğrenciyi doğrudan ilgili karta götürür (`/kimya/simya/?kart=2`).
 
-Alt menüye yeni sekme eklenmez (alt menü kararı). Video akışı Keşfet'in bir parçasıdır, bu yüzden orada Keşfet sekmesi seçili görünür.
+Videolarda maskot ya da süs karakteri olmaz; görsel stil `docs/KARARLAR.md` içindeki "sade bilgi grafiği"dir.
 
 ## 3. Video dosyaları nerede barınır?
 mp4 dosyaları depoya konmaz, çünkü çok büyükler (45 video ≈ 300-400 MB). Seçenekler:

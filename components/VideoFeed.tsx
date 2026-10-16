@@ -1,5 +1,5 @@
 "use client";
-// Keşfet'teki dikey video akışı: ekrana gelen video sessiz başlar, dokununca ses açılır.
+// Videolar sekmesi: Shorts/Reels gibi dikey video akışı: ekrana gelen video sessiz başlar, dokununca ses açılır.
 // Her videonun altında asıl konusuna ve kartına giden "Konuya git" bağlantısı vardır.
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -57,14 +57,12 @@ export default function VideoFeed() {
       <div className="app">
         <Top />
         <main className="view">
-          <PageHead title="Videolar" text="Kısa, dikey konu videoları çok yakında burada." />
-          <Link className="btn" href="/kesfet/">Konulara dön</Link>
+          <PageHead title="Videolar" text="Kısa, dikey konu videoları çok yakında burada. Her videodan ilgili konuya geçebileceksin." />
         </main>
       </div>
     );
   return (
     <div className="feed">
-      <Link className="feed-back" href="/kesfet/" aria-label="Keşfet'e dön"><Icon.back /></Link>
       {VIDEOLAR.map((v) => <Reel key={v.id} v={v} muted={muted} onSound={() => setMuted((m) => !m)} />)}
     </div>
   );

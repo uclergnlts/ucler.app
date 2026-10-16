@@ -11,7 +11,7 @@ Güncel liste için `python3 tools/check.py` çıktısına bakılabilir.
 
 ## Sıradaki işler
 1. **İçerik:** Her dersin konuları sırayla yazılacak. Her derste sıradaki yazılmamış konu yazılır (2026-10-16: Basınç, kimyasal etkileşimler, sınıflandırma eklendi).
-2. **Videolar:** İlk dalgada hazır konular için yaklaşık 45 video çıkacak (KIM-01, FIZ-01, BIY-01 …). KIM-01 senaryosu hazır, ses bekleniyor. Sitedeki yeri hazır (`docs/VIDEOLAR.md`): kartın altında ve Keşfet'teki video akışında. Yayından önce video deposu seçilecek (öneri: Cloudflare R2).
+2. **Videolar:** İlk dalgada hazır konular için yaklaşık 45 video çıkacak (KIM-01, FIZ-01, BIY-01 …). KIM-01 senaryosu hazır, ses bekleniyor. Sitedeki yeri hazır (`docs/VIDEOLAR.md`): alt menüdeki Videolar sekmesinde dikey akış, ayrıca ilgili kartın altında. Yayından önce video deposu seçilecek (öneri: Cloudflare R2).
 3. **AYT konu listeleri:** Resmi listeyle karşılaştırılacak.
 4. **Yayın:** Site Vercel'e bağlanacak, ardından `ucler.app` alan adı. O zamana kadar claude.ai artifact'ı eski sürümü gösterir.
 

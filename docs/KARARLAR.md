@@ -15,7 +15,7 @@ Bu dosyadaki kararları Üçler verdi. Codex bunları değiştirmez. Bir karara 
 - **Maskot yok.** Ateşböceği "Işıl" çok çocuksu bulunup her yerden kaldırıldı.
 - **Tema:** Yalnızca açık renkler kullanılır. Tasarım tutarlı bir sistem gibi görünmeli, "yapay zekâ yapımı" gibi durmamalı.
 - **Yazı tipleri:** Manrope (başlık) ve Inter (metin). Site ve videolar aynı yazı tiplerini kullanır.
-- **Alt menü:** Ana sayfa · Keşfet · Kaydedilenler · Profil. Alt menüde **ders adları olmaz.**
+- **Alt menü:** Ana sayfa · Keşfet · Videolar · Kaydedilenler · Profil. Alt menüde **ders adları olmaz.** Videolar sekmesi 2026-10-16'da eklendi (Üçler: "YouTube Shorts, Instagram Reels mantığı gibi ayrı bir menüde").
 
 ## Videolar
 - **Biçim:** Dikey 9:16 (1080×1920), **45-60 saniye.** Videolar hem uygulamada hem sosyal medyada kullanılacak.
@@ -23,7 +23,8 @@ Bu dosyadaki kararları Üçler verdi. Codex bunları değiştirmez. Bir karara 
 - **Kapanış:** **Her video, izleyiciyi düşündüren bir soruyla biter.**
 - **Altyazı:** Sabit bir yerde, videonun alt kısmına yakın durur. Ekranda gezmez.
 - **Görsel stil:** "Sade bilgi grafiği". Izgaralı açık zemin, sabit altyazı şeridi ve ince ilerleme çubuğu kullanılır.
-- **Sitede yeri (Üçler, 2026-10-16):** Videolar tek yerde saklanır (`content/videolar.json`), iki yerde gösterilir: ilgili konunun ilgili kartının altında ve Keşfet'teki dikey video akışında. Akıştaki her videodan "Konuya git" ile karta dönülür. Alt menüye yeni sekme eklenmez. Ayrıntı: `docs/VIDEOLAR.md`.
+- **Sitede yeri (Üçler, 2026-10-16):** Videolar tek yerde saklanır (`content/videolar.json`). Alt menüdeki **Videolar** sekmesinde Shorts/Reels gibi dikey akış olarak durur; Keşfet'te video olmaz. Akıştaki her videodan "Konuya git" ile ilgili karta geçilir; videosu olan kartın altında da video düğmesi çıkar. Ayrıntı: `docs/VIDEOLAR.md`.
+- **Videolarda maskot ya da süs karakteri yok;** tasarım ilkelerine uyan sade bilgi grafiği (Üçler, 2026-10-16'da yeniden vurguladı).
 - **İş akışı:**
   1. Claude senaryoyu ve konuşma metnini yazar.
   2. Üçler metni ElevenLabs'ta ("Damla" sesi) seslendirip mp3 ve srt dosyasını gönderir.

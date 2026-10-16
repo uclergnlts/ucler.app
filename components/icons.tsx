@@ -17,6 +17,9 @@ export const Icon = {
   kesfet: () => (
     <svg {...base} strokeLinecap="round"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></svg>
   ),
+  video: () => (
+    <svg {...base} strokeLinejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="3" /><path d="M10 9v6l5-3z" fill="currentColor" /></svg>
+  ),
   kayit: () => (
     <svg {...base} strokeLinejoin="round"><path d="M6 3h12v18l-6-4.5L6 21z" /></svg>
   ),
