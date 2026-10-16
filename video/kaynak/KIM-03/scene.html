@@ -1,0 +1,181 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#d63c63}
+.head .sub i{display:block;width:44px;height:6px;background:#d63c63;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#d63c63;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#d63c63;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>KİMYA</div><div class="brand">ucler<b>.</b></div></div>
+
+<!-- 1. Kül -->
+<div class="scene" data-s="0" data-e="12.9">
+ <div class="title">Odun yanınca<br><em>kütle nereye gider?</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="0.2" data-out="3.0">
+   <rect x="400" y="1020" width="280" height="96" rx="40" fill="#e9d3bd" stroke="#1d3557" stroke-width="5"/>
+   <ellipse cx="636" cy="1068" rx="26" ry="40" fill="#f6e7d6" stroke="#1d3557" stroke-width="4"/>
+   <ellipse cx="636" cy="1068" rx="10" ry="16" fill="none" stroke="#c9a27c" stroke-width="4"/>
+  </g>
+  <g data-in="0.9" data-out="3.2"><path d="M450 1020 q25 -80 50 -20 q20 -90 45 -10 q25 -80 50 -5 q20 -60 40 25 Z" fill="#ffd95a" stroke="#d63c63" stroke-width="5" stroke-linejoin="round"/></g>
+  <g data-in="3.0"><path d="M455 1120 Q540 1050 625 1120 Z" fill="#9aa6b6" stroke="#5f6f88" stroke-width="4"/></g>
+  <rect x="320" y="1120" width="440" height="30" rx="10" fill="#fff" stroke="#1d3557" stroke-width="5"/>
+  <rect x="360" y="1150" width="360" height="100" rx="14" fill="#fff" stroke="#1d3557" stroke-width="5"/>
+  <rect x="445" y="1170" width="190" height="60" rx="8" fill="#1d3557"/>
+  <text id="disp" x="540" y="1213" text-anchor="middle" font-size="36" font-weight="800" fill="#ffd95a">500 g</text>
+  <text x="540" y="1310" text-anchor="middle" font-size="34" fill="#5f6f88" data-in="0.3" data-out="3.0">odun</text>
+  <text x="540" y="1310" text-anchor="middle" font-size="34" fill="#5f6f88" data-in="3.2">kül</text>
+  <g data-draw="6.5" data-dur="1.6" fill="none" stroke="#9aa6b6" stroke-width="5" stroke-linecap="round">
+   <path d="M500 1060 q-25 -60 0 -120 q25 -60 0 -120"/><path d="M540 1050 q-25 -60 0 -120 q25 -60 0 -140"/><path d="M580 1060 q-25 -60 0 -120 q25 -60 0 -120"/>
+  </g>
+  <g data-in="7.4"><text x="640" y="850" font-size="34" font-weight="800" fill="#1d3557">çıkan gazlar</text><text x="640" y="890" font-size="28" fill="#5f6f88">teraziye girmedi</text></g>
+  <text x="540" y="1420" text-anchor="middle" font-family="Manrope" font-size="46" font-weight="800" fill="#d63c63" data-in="11.2">kütle azalmış gibi görünür</text>
+ </svg>
+</div>
+
+<!-- 2. Lavoisier'in terazisi -->
+<div class="scene" data-s="12.9" data-e="35.6">
+ <div class="title">Lavoisier:<br><em>kapalı kapta tart</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="13.4">
+   <rect x="270" y="560" width="540" height="120" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/>
+   <text x="540" y="610" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">Antoine Lavoisier</text>
+   <text x="540" y="652" text-anchor="middle" font-size="28" fill="#5f6f88">18. yüzyıl sonu</text>
+  </g>
+  <g data-draw="17.9" data-dur="2" fill="none" stroke="#1d3557" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+   <path d="M540 860 V1220 M440 1235 H640"/>
+   <path d="M290 860 H790"/>
+   <path d="M300 860 L200 1060 M300 860 L400 1060 M200 1060 Q300 1110 400 1060"/>
+   <path d="M780 860 L680 1060 M780 860 L880 1060 M680 1060 Q780 1110 880 1060"/>
+  </g>
+  <path d="M528 860 L540 838 L552 860 Z" fill="#1d3557" data-in="18.6"/>
+  <g data-in="18.8">
+   <rect x="283" y="895" width="34" height="45" fill="#fff" stroke="#1d3557" stroke-width="5"/>
+   <rect x="276" y="880" width="48" height="20" rx="5" fill="#d63c63"/>
+   <circle cx="300" cy="990" r="56" fill="#fff" stroke="#1d3557" stroke-width="5"/>
+   <path d="M246 1005 A56 56 0 0 0 354 1005 Z" fill="#c9d3e0"/>
+  </g>
+  <g data-in="24.0"><path d="M246 1005 A56 56 0 0 0 354 1005 Z" fill="#f4a3b8"/><path d="M280 975 l-12 -14 M300 968 v-18 M320 975 l12 -14" stroke="#d63c63" stroke-width="5" stroke-linecap="round"/></g>
+  <g data-in="20.4"><rect x="735" y="985" width="90" height="62" rx="8" fill="#e1e7ef" stroke="#1d3557" stroke-width="5"/><rect x="760" y="968" width="40" height="20" rx="4" fill="#e1e7ef" stroke="#1d3557" stroke-width="4"/></g>
+  <text x="300" y="1150" text-anchor="middle" font-size="28" fill="#5f6f88" data-in="18.9">kapalı kap</text>
+  <text x="780" y="1150" text-anchor="middle" font-size="28" fill="#5f6f88" data-in="20.5">ağırlık</text>
+  <g data-in="23.2"><text x="300" y="1282" text-anchor="middle" font-size="30" fill="#5f6f88">önce</text><text x="300" y="1324" text-anchor="middle" font-size="40" font-weight="800" fill="#1d3557">100 g</text></g>
+  <g data-in="25.8"><text x="780" y="1282" text-anchor="middle" font-size="30" fill="#5f6f88">sonra</text><text x="780" y="1324" text-anchor="middle" font-size="40" font-weight="800" fill="#1d3557">100 g</text></g>
+  <text x="540" y="1440" text-anchor="middle" font-family="Manrope" font-size="46" font-weight="800" fill="#1d3557" data-in="28.4" data-out="33.4">toplam kütle değişmedi</text>
+  <g data-in="33.7"><rect x="300" y="1396" width="480" height="24" fill="#ffd95a"/><text x="540" y="1418" text-anchor="middle" font-family="Manrope" font-size="54" font-weight="800" fill="#1d3557">kütlenin korunumu</text></g>
+ </svg>
+</div>
+
+<!-- 3. Yanma -->
+<div class="scene" data-s="35.6" data-e="46.2">
+ <div class="title">Yanma:<br><em>oksijenle birleşme</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="37.8"><rect x="160" y="740" width="300" height="120" rx="18" fill="#f6e7d6" stroke="#1d3557" stroke-width="4"/><text x="310" y="815" text-anchor="middle" font-size="40" font-weight="800" fill="#1d3557">odun</text></g>
+  <text x="540" y="822" text-anchor="middle" font-family="Manrope" font-size="64" font-weight="800" fill="#1d3557" data-in="38.6">+</text>
+  <g data-in="39.2"><rect x="620" y="740" width="300" height="120" rx="18" fill="#e3f2f3" stroke="#1d3557" stroke-width="4"/><text x="770" y="796" text-anchor="middle" font-size="40" font-weight="800" fill="#1d3557">oksijen</text><text x="770" y="838" text-anchor="middle" font-size="28" fill="#5f6f88">havadan</text></g>
+  <g data-in="40.5"><path d="M540 900 V1010" stroke="#d63c63" stroke-width="6"/><path d="M518 990 L540 1022 L562 990 Z" fill="#d63c63"/></g>
+  <g data-in="41.6"><rect x="90" y="1060" width="280" height="130" rx="18" fill="#fff" stroke="#1d3557" stroke-width="4"/><text x="230" y="1118" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">karbondioksit</text><text x="230" y="1160" text-anchor="middle" font-size="28" fill="#5f6f88">CO₂</text></g>
+  <g data-in="42.4"><rect x="400" y="1060" width="280" height="130" rx="18" fill="#fff" stroke="#1d3557" stroke-width="4"/><text x="540" y="1118" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">su buharı</text><text x="540" y="1160" text-anchor="middle" font-size="28" fill="#5f6f88">H₂O</text></g>
+  <g data-in="44.6"><rect x="710" y="1060" width="280" height="130" rx="18" fill="#e1e7ef" stroke="#1d3557" stroke-width="4"/><text x="850" y="1138" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">kül</text></g>
+  <g data-in="43.3"><path d="M120 1225 H650" stroke="#9aa6b6" stroke-width="4" stroke-dasharray="10 8"/><text x="385" y="1275" text-anchor="middle" font-size="32" font-weight="800" fill="#2a9d8f">havaya karışır</text></g>
+  <text x="850" y="1275" text-anchor="middle" font-size="32" font-weight="800" fill="#d63c63" data-in="45.0">hafif kalır</text>
+ </svg>
+</div>
+
+<!-- 4. Bilim -->
+<div class="scene" data-s="46.2" data-e="51.75">
+ <div class="title">Kimya artık<br><em>ölçülüyor</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="46.4"><rect x="80" y="800" width="260" height="110" rx="18" fill="#fff" stroke="#1d3557" stroke-width="4"/><text x="210" y="868" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">iddia</text></g>
+  <path d="M352 855 H398 M384 842 L400 855 L384 868" fill="none" stroke="#9aa6b6" stroke-width="5" data-in="47.2"/>
+  <g data-in="47.4"><rect x="410" y="800" width="260" height="110" rx="18" fill="#fff" stroke="#1d3557" stroke-width="4"/><text x="540" y="868" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">tartı</text></g>
+  <path d="M682 855 H728 M714 842 L730 855 L714 868" fill="none" stroke="#9aa6b6" stroke-width="5" data-in="48.2"/>
+  <g data-in="48.4"><rect x="740" y="800" width="260" height="110" rx="18" fill="#fff" stroke="#1d3557" stroke-width="4"/><text x="870" y="868" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">sayı</text></g>
+  <g data-in="49.6"><rect x="440" y="1074" width="200" height="30" fill="#ffd95a"/><text x="540" y="1100" text-anchor="middle" font-family="Manrope" font-size="76" font-weight="800" fill="#1d3557">bilim</text></g>
+ </svg>
+</div>
+
+<!-- 5. Düşün -->
+<div class="scene" data-s="51.75" data-e="99">
+ <div class="q"><small>DÜŞÜN</small>Bir demir çivi <em>paslandığında</em> kütlesi artar mı, azalır mı?</div>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;                 // ses hızlandırılmadı
+const DUR = 56.84;           // ses süresi
+// Konuşma parçaları: [başlangıç, bitiş, metin] (sessizlik tespitinden)
+const PH = [
+ [0.00,3.71,"Bir odun parçasını yaktığında geriye bir avuç kül kalır."],[3.98,6.16,"Peki geri kalan kütle nereye gitti?"],
+ [6.41,10.90,"Yalnızca külü tartarsan, yanarken çıkan gazları hesaba katmamış olursun."],[11.12,12.66,"Kütle de eksilmiş gibi görünür."],
+ [13.12,17.67,"On sekizinci yüzyılın sonunda Antoine Lavoisier bu soruyu farklı sordu."],
+ [17.92,22.94,"Tepkimeleri kapalı kaplarda yaptı ve her şeyi çok hassas terazilerle tarttı."],
+ [23.19,25.54,"Önce tarttı, tepkimeyi başlattı,"],[25.75,27.01,"sonra yeniden tarttı."],
+ [27.28,28.12,"Sonuç açıktı."],[28.39,30.10,"Toplam kütle değişmemişti."],
+ [30.36,33.41,"Madde yok olmuyor, yalnızca biçim değiştiriyordu."],[33.67,35.47,"Buna kütlenin korunumu denir."],
+ [35.76,37.49,"Lavoisier yanmayı da çözdü."],[37.73,40.26,"Yanan madde havadaki oksijenle birleşir."],
+ [40.48,46.07,"Odun yanınca oluşan karbondioksit ve su buharı havaya karışır, bu yüzden kül hafif kalır."],
+ [46.32,49.32,"Artık iddialar tartılıyor, sayılarla sınanıyordu."],[49.57,51.50,"Kimya böylece bilim oldu."],
+ [51.79,56.64,"Peki sence, bir demir çivi paslandığında kütlesi artar mı, azalır mı?"]
+];
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // terazi göstergesi: odun 500 g, yandıktan sonra kül 5 g
+  const kd = Math.max(0, Math.min(1, (t - 2.9) / 1.2));
+  document.getElementById('disp').textContent = Math.round(500 - 495 * ease(kd)) + ' g';
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
