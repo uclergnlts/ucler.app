@@ -1,0 +1,121 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#d63c63}
+.head .sub i{display:block;width:44px;height:6px;background:#d63c63;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#d63c63;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#d63c63;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>KİMYA</div><div class="brand">ucler<b>.</b></div></div>
+
+<div class="scene" data-s="0" data-e="9.75">
+ <div class="title">1909:<br><em>altın levha deneyi</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="1.6"><rect x="190" y="600" width="700" height="120" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="652" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">Geiger ve Marsden</text><text x="540" y="694" text-anchor="middle" font-size="28" font-weight="600" fill="#5f6f88">Rutherford'un laboratuvarı</text></g><g data-in="4.5"><rect x="695" y="760" width="10" height="480" fill="#ffd95a" stroke="#e0a800" stroke-width="3"/><text x="700" y="1290" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">çok ince altın levha</text></g><g data-in="5.5"><rect x="130" y="950" width="150" height="100" rx="14" fill="#fff" stroke="#1d3557" stroke-width="5"/><text x="205" y="1012" text-anchor="middle" font-size="28" font-weight="800" fill="#1d3557">kaynak</text><path d="M280 1000 H690" stroke="#d63c63" stroke-width="6" stroke-dasharray="14 10"/></g><g data-in="7.8"><text x="480" y="975" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">alfa tanecikleri (+)</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="9.75" data-e="21.5">
+ <div class="title">Thomson'a göre:<br><em>dümdüz geçmeli</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="10.0"><circle cx="540" cy="1000" r="230" fill="#fde2ea" stroke="#d63c63" stroke-width="5"/><text x="480" y="912" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">+</text><text x="630" y="952" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">+</text><text x="430" y="1012" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">+</text><text x="600" y="1072" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">+</text><text x="520" y="1152" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">+</text><text x="690" y="1122" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">+</text><text x="380" y="952" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">+</text><text x="560" y="842" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">+</text><text x="540" y="1052" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">+</text></g><g data-in="12.5"><text x="540" y="720" text-anchor="middle" font-size="32" font-weight="800" fill="#d63c63">pozitif yük her yere yayılmış</text></g><g data-in="15.3"><circle cx="420" cy="920" r="12" fill="#457b9d"/><circle cx="600" cy="860" r="12" fill="#457b9d"/><circle cx="670" cy="1030" r="12" fill="#457b9d"/><circle cx="480" cy="1090" r="12" fill="#457b9d"/><circle cx="550" cy="980" r="12" fill="#457b9d"/><circle cx="390" cy="1060" r="12" fill="#457b9d"/><circle cx="640" cy="1130" r="12" fill="#457b9d"/><circle cx="710" cy="910" r="12" fill="#457b9d"/><text x="540" y="1290" text-anchor="middle" font-size="32" font-weight="800" fill="#457b9d">elektronlar içine gömülü</text></g><g data-in="17.4"><path d="M150 900 H930" stroke="#1d3557" stroke-width="4" opacity=".55"/><path d="M914 890 L932 900 L914 910" fill="none" stroke="#1d3557" stroke-width="4" opacity=".55"/><path d="M150 960 H930" stroke="#1d3557" stroke-width="4" opacity=".55"/><path d="M914 950 L932 960 L914 970" fill="none" stroke="#1d3557" stroke-width="4" opacity=".55"/><path d="M150 1040 H930" stroke="#1d3557" stroke-width="4" opacity=".55"/><path d="M914 1030 L932 1040 L914 1050" fill="none" stroke="#1d3557" stroke-width="4" opacity=".55"/><path d="M150 1100 H930" stroke="#1d3557" stroke-width="4" opacity=".55"/><path d="M914 1090 L932 1100 L914 1110" fill="none" stroke="#1d3557" stroke-width="4" opacity=".55"/></g><g data-in="17.6"><text x="540" y="1400" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#1d3557">tahmin: hepsi dümdüz geçer</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="21.5" data-e="33.3">
+ <div class="title">Ama sonuç<br><em>farklıydı</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<rect x="595" y="760" width="10" height="480" fill="#ffd95a" stroke="#e0a800" stroke-width="3"/><path data-draw="21.8" data-dur="0.8" d="M150 800 H940" fill="none" stroke="#1d3557" stroke-width="4" opacity=".5"/><path data-draw="21.8" data-dur="0.8" d="M150 880 H940" fill="none" stroke="#1d3557" stroke-width="4" opacity=".5"/><path data-draw="21.8" data-dur="0.8" d="M150 1120 H940" fill="none" stroke="#1d3557" stroke-width="4" opacity=".5"/><path data-draw="21.8" data-dur="0.8" d="M150 1200 H940" fill="none" stroke="#1d3557" stroke-width="4" opacity=".5"/><path data-draw="23.6" data-dur="0.8" d="M150 960 H600 L900 820" fill="none" stroke="#e0a800" stroke-width="5"/><path data-draw="23.9" data-dur="0.8" d="M150 1060 H600 L880 1220" fill="none" stroke="#e0a800" stroke-width="5"/><path data-draw="26.1" data-dur="1.0" d="M150 1005 H596 L170 1110" fill="none" stroke="#d63c63" stroke-width="6"/><g data-in="21.8"><text x="960" y="770" text-anchor="end" font-size="30" font-weight="800" fill="#1d3557">çoğu geçti</text></g><g data-in="23.7"><text x="900" y="1270" text-anchor="end" font-size="30" font-weight="800" fill="#b08600">bazıları saptı</text></g><g data-in="26.2"><text x="180" y="1160" text-anchor="start" font-size="30" font-weight="800" fill="#d63c63">çok azı geri döndü</text></g><g data-in="28.5"><text x="540" y="1380" text-anchor="middle" font-size="32" font-weight="600" fill="#1d3557">"kâğıt mendile top mermisi atmak</text><text x="540" y="1425" text-anchor="middle" font-size="32" font-weight="600" fill="#1d3557">ve merminin geri sekmesi gibi"</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="33.3" data-e="44.4">
+ <div class="title">Sonuç:<br><em>çekirdek</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="33.5"><circle cx="540" cy="980" r="270" fill="none" stroke="#9aa6b6" stroke-width="4" stroke-dasharray="14 12"/></g><g data-in="34.8"><circle cx="540" cy="980" r="14" fill="#d63c63"/><path d="M552 966 L690 720" stroke="#d63c63" stroke-width="3"/><text x="700" y="700" text-anchor="start" font-size="32" font-weight="800" fill="#d63c63">çekirdek</text><text x="700" y="738" text-anchor="start" font-size="26" font-weight="600" fill="#5f6f88">+ yük, kütlenin çoğu</text></g><g data-in="36.0"><text x="540" y="1300" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6f88">(ölçekli değil: gerçekte çok daha küçük)</text></g><g data-in="41.6"><circle cx="340" cy="860" r="9" fill="#457b9d"/><circle cx="720" cy="1130" r="9" fill="#457b9d"/><circle cx="420" cy="1180" r="9" fill="#457b9d"/><circle cx="770" cy="920" r="9" fill="#457b9d"/><text x="540" y="1400" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#1d3557">geri kalanı büyük ölçüde boşluk</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="44.4" data-e="99">
+ <div class="q"><small>DÜŞÜN</small>Taneciklerin çoğu neden <em>hiç sapmadan</em> geçti?</div>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;                 // ses hızlandırılmadı
+const DUR = 48.35;           // ses süresi
+const PH = [
+ [0.00,1.12,"Bin dokuz yüz dokuz."],
+ [1.51,9.60,"Hans Geiger ve Ernest Marsden, Rutherford'un laboratuvarında çok ince bir altın levhaya pozitif yüklü alfa tanecikleri gönderiyor."],
+ [9.91,12.18,"O dönemin atom modeli Thomson'unkiydi."],
+ [12.41,15.06,"Pozitif yük atomun her yerine yayılmıştı,"],
+ [15.27,17.05,"elektronlar da içine gömülüydü."],
+ [17.28,21.39,"Bu modele göre tanecikler levhadan neredeyse dümdüz geçmeliydi."],
+ [21.66,23.27,"Çoğu gerçekten de geçti."],
+ [23.52,25.78,"Ama bazıları büyük açıyla saptı,"],
+ [26.00,28.15,"çok azı da geldiği yöne geri döndü."],
+ [28.40,33.15,"Rutherford bunu, kâğıt mendile top mermisi atıp merminin geri sekmesine benzetti."],
+ [33.44,34.49,"Tek açıklama vardı."],
+ [34.79,41.28,"Atomun pozitif yükü ve kütlesinin neredeyse tamamı, minicik bir merkezde, çekirdekte toplanmıştı."],
+ [41.53,44.17,"Atomun geri kalanı büyük ölçüde boşluktu."],
+ [44.48,48.35,"Peki sence, taneciklerin çoğu neden hiç sapmadan geçti?"]
+];
+
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>

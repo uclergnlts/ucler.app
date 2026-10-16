@@ -34,3 +34,4 @@ Ses ve video dosyaları depoya konmaz, çünkü çok büyükler.
 
 ## Siteye ekleme
 Biten video video deposuna yüklenir ve `content/videolar.json` dosyasına konu ve kart numarasıyla yazılır. Ayrıntı: `docs/VIDEOLAR.md`.
+- `sablon/hizala.py`: Senaryo metnini mp3'teki konuşma parçalarına (ffmpeg sessizlik tespiti) otomatik hizalar ve sahneye yapıştırılacak `DUR` ve `PH` satırlarını yazar. Kullanım: `python3 video/sablon/hizala.py ses.mp3 video/senaryolar/KIM-05.md "H iki O=>H₂O"` (isteğe bağlı değiştirmeler altyazıda yazıyla okunan formülleri simgeye çevirir). srt dosyası gerekmez.

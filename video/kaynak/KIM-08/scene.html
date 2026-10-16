@@ -1,0 +1,127 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#d63c63}
+.head .sub i{display:block;width:44px;height:6px;background:#d63c63;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#d63c63;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#d63c63;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>KİMYA</div><div class="brand">ucler<b>.</b></div></div>
+
+<div class="scene" data-s="0" data-e="7.0">
+ <div class="title">Erime mi,<br><em>yanma mı?</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="0.2" data-out="4.8"><rect x="220" y="880" width="170" height="170" rx="14" fill="#e3f2f3" stroke="#1d3557" stroke-width="5"/><path d="M240 905 l25 0" stroke="#fff" stroke-width="8" stroke-linecap="round"/></g><g data-in="1.5"><ellipse cx="305" cy="1080" rx="150" ry="26" fill="#a8dadc"/></g><g data-in="4.8"><rect x="255" y="960" width="100" height="100" rx="14" fill="#e3f2f3" stroke="#1d3557" stroke-width="5"/><path d="M275 985 l25 0" stroke="#fff" stroke-width="8" stroke-linecap="round"/></g><text x="305" y="1180" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">buz eriyor</text><g data-in="2.0"><rect x="680" y="900" width="200" height="22" rx="10" fill="#e9d3bd" stroke="#1d3557" stroke-width="4" transform="rotate(-30 780 911)"/><circle cx="868" cy="860" r="20" fill="#d63c63"/><path d="M870 845 C900 800 900 770 885 740 C915 760 930 800 905 845 C895 860 875 860 870 845 Z" fill="#ffd95a" stroke="#d63c63" stroke-width="4"/></g><text x="780" y="1180" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">kibrit yanıyor</text><g data-in="3.8"><text x="540" y="1420" text-anchor="middle" font-family="Manrope" font-size="46" font-weight="800" fill="#d63c63">aynı türden değil</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="7.0" data-e="19.5">
+ <div class="title">Fiziksel değişim:<br><em>kimlik aynı</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="7.2"><rect x="170" y="700" width="260" height="150" rx="18" fill="#fff" stroke="#1d3557" stroke-width="4"/><text x="300.0" y="788.0" text-anchor="middle" font-size="38" font-weight="800" fill="#1d3557">buz</text></g><g data-in="7.4"><rect x="650" y="700" width="260" height="150" rx="18" fill="#fff" stroke="#1d3557" stroke-width="4"/><text x="780.0" y="788.0" text-anchor="middle" font-size="38" font-weight="800" fill="#1d3557">su</text></g><g data-in="7.3"><path d="M450 740 H630" stroke="#2a9d8f" stroke-width="5"/><path d="M614 728 L630 740 L614 752" fill="none" stroke="#2a9d8f" stroke-width="5"/><text x="540" y="722" text-anchor="middle" font-size="28" font-weight="700" fill="#2a9d8f">erir</text></g><g data-in="9.1"><path d="M630 810 H450" stroke="#457b9d" stroke-width="5"/><path d="M466 798 L450 810 L466 822" fill="none" stroke="#457b9d" stroke-width="5"/><text x="540" y="860" text-anchor="middle" font-size="28" font-weight="700" fill="#457b9d">donar</text></g><g data-in="10.9"><text x="300" y="900" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">H₂O</text><text x="780" y="900" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">H₂O</text><text x="540" y="960" text-anchor="middle" font-size="32" font-weight="600" fill="#5f6f88">yalnızca hâli değişti</text></g><g data-in="14.5"><rect x="300" y="1078" width="480" height="26" fill="#ffd95a"/><text x="540" y="1100" text-anchor="middle" font-family="Manrope" font-size="56" font-weight="800" fill="#1d3557">fiziksel değişim</text></g><g data-in="16.6"><rect x="180" y="1215" width="340" height="70" rx="35" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="350" y="1260" text-anchor="middle" font-size="30" font-weight="700" fill="#1d3557">kâğıt yırtmak</text></g><g data-in="17.8"><rect x="560" y="1215" width="340" height="70" rx="35" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="730" y="1260" text-anchor="middle" font-size="30" font-weight="700" fill="#1d3557">şeker çözmek</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="19.5" data-e="32.2">
+ <div class="title">Kimyasal değişim:<br><em>yeni madde</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="19.7"><rect x="110" y="640" width="220" height="150" rx="18" fill="#fff" stroke="#1d3557" stroke-width="4"/><text x="220.0" y="728.0" text-anchor="middle" font-size="38" font-weight="800" fill="#1d3557">kibrit</text></g><g data-in="22.4"><path d="M345 715 H450" stroke="#d63c63" stroke-width="5"/><path d="M434 703 L450 715 L434 727" fill="none" stroke="#d63c63" stroke-width="5"/></g><g data-in="22.5"><rect x="470" y="600" width="220" height="90" rx="18" fill="#fff" stroke="#1d3557" stroke-width="4"/><text x="580.0" y="658.0" text-anchor="middle" font-size="38" font-weight="800" fill="#1d3557">kül</text></g><g data-in="23.0"><rect x="700" y="600" width="220" height="90" rx="18" fill="#fff" stroke="#1d3557" stroke-width="4"/><text x="810.0" y="658.0" text-anchor="middle" font-size="38" font-weight="800" fill="#1d3557">duman</text></g><g data-in="23.5"><rect x="585" y="710" width="220" height="90" rx="18" fill="#fff" stroke="#1d3557" stroke-width="4"/><text x="695.0" y="768.0" text-anchor="middle" font-size="38" font-weight="800" fill="#1d3557">gazlar</text></g><g data-in="24.8"><text x="700" y="860" text-anchor="middle" font-size="32" font-weight="800" fill="#d63c63">yeni maddeler</text></g><g data-in="26.9"><rect x="290" y="1078" width="500" height="26" fill="#ffd95a"/><text x="540" y="1100" text-anchor="middle" font-family="Manrope" font-size="56" font-weight="800" fill="#1d3557">kimyasal değişim</text></g><g data-in="28.9"><rect x="180" y="1215" width="340" height="70" rx="35" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="350" y="1260" text-anchor="middle" font-size="30" font-weight="700" fill="#1d3557">demirin paslanması</text></g><g data-in="30.3"><rect x="560" y="1215" width="340" height="70" rx="35" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="730" y="1260" text-anchor="middle" font-size="30" font-weight="700" fill="#1d3557">sütün ekşimesi</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="32.2" data-e="43.0">
+ <div class="title">İpuçları<br><em>ve bir uyarı</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="32.4"><text x="540" y="620" text-anchor="middle" font-size="32" font-weight="600" fill="#5f6f88">kimyasal değişimin ipuçları</text></g><g data-in="34.9"><rect x="110" y="660" width="380" height="220" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><circle cx="270" cy="760" r="40" fill="#a8dadc" stroke="#1d3557" stroke-width="4"/><circle cx="335" cy="760" r="40" fill="#f4a3b8" stroke="#1d3557" stroke-width="4"/><text x="300" y="855" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">renk değişir</text></g><g data-in="36.1"><rect x="590" y="660" width="380" height="220" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><circle cx="760" cy="790" r="18" fill="none" stroke="#1d3557" stroke-width="5"/><circle cx="800" cy="745" r="13" fill="none" stroke="#1d3557" stroke-width="5"/><circle cx="770" cy="715" r="9" fill="none" stroke="#1d3557" stroke-width="5"/><text x="780" y="855" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">gaz çıkar</text></g><g data-in="37.0"><rect x="110" y="920" width="380" height="220" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><rect x="288" y="945" width="24" height="80" rx="12" fill="#fff" stroke="#1d3557" stroke-width="5"/><circle cx="300" cy="1035" r="22" fill="#d63c63" stroke="#1d3557" stroke-width="5"/><rect x="295" y="975" width="10" height="50" fill="#d63c63"/><text x="300" y="1115" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">ısı yayılır</text></g><g data-in="37.8"><rect x="590" y="920" width="380" height="220" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><circle cx="780" cy="1000" r="30" fill="#ffd95a" stroke="#1d3557" stroke-width="5"/><path d="M780 952 v-14 M780 1048 v14 M732 1000 h-14 M828 1000 h14 M746 966 l-10 -10 M814 966 l10 -10 M746 1034 l-10 10 M814 1034 l10 10" stroke="#1d3557" stroke-width="5" stroke-linecap="round"/><text x="780" y="1115" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">ışık yayılır</text></g><g data-in="38.8"><rect x="200" y="1200" width="680" height="110" rx="18" fill="#fff" stroke="#d63c63" stroke-width="4"/><text x="540" y="1268" text-anchor="middle" font-size="36" font-weight="800" fill="#d63c63">ipucu tek başına kanıt değil</text></g><g data-in="41.2"><text x="540" y="1380" text-anchor="middle" font-size="32" font-weight="600" fill="#1d3557">kaynayan su: gaz çıkar, ama hâlâ su</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="43.0" data-e="99">
+ <div class="q"><small>DÜŞÜN</small>Yumurtayı haşlamak <em>fiziksel</em> mi, yoksa <em>kimyasal</em> bir değişim mi?</div>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;                 // ses hızlandırılmadı
+const DUR = 48.12;           // ses süresi
+const PH = [
+ [0.00,1.63,"Masada bir buz küpü eriyor."],
+ [2.00,3.32,"Yanında bir kibrit yanıyor."],
+ [3.67,6.89,"İkisinde de bir şey değişiyor, ama aynı türden değil."],
+ [7.18,8.70,"Eriyen buz hâlâ sudur."],
+ [9.04,10.56,"Dondurursan yine buz olur."],
+ [10.89,12.39,"Maddenin kimliği değişmedi,"],
+ [12.64,14.20,"yalnızca hâli değişti."],
+ [14.45,16.01,"Buna fiziksel değişim denir."],
+ [16.33,19.35,"Kâğıdı yırtmak ve şekeri suda çözmek de böyledir."],
+ [19.62,22.19,"Yanan kibrit ise artık kibrit değildir."],
+ [22.43,24.50,"Kül, duman ve gazlar oluştu;"],
+ [24.71,26.65,"yani yeni maddeler ortaya çıktı."],
+ [26.87,28.55,"Buna kimyasal değişim denir."],
+ [28.88,32.03,"Demirin paslanması ve sütün ekşimesi de böyledir."],
+ [32.29,34.69,"Kimyasal değişimi ipuçlarından tanırsın:"],
+ [34.93,35.85,"renk değişir,"],
+ [36.05,38.47,"gaz çıkar, ısı ya da ışık yayılır."],
+ [38.71,40.95,"Ama ipucu tek başına kanıt değildir."],
+ [41.18,42.78,"Suyu kaynatınca da gaz çıkar."],
+ [43.10,48.12,"Peki sence, yumurtayı haşlamak fiziksel mi, yoksa kimyasal bir değişim mi?"]
+];
+
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
