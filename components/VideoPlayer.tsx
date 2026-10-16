@@ -17,6 +17,7 @@ export default function VideoPlayer({ v, onClose }: { v: Video; onClose: () => v
     if (!d.open) d.showModal();
     d.querySelector<HTMLButtonElement>(".player-bar .btn")?.focus();
     return () => {
+      d.querySelector("video")?.pause();
       if (d.open) d.close();
       document.body.style.overflow = o;
       opener?.focus();

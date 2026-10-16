@@ -23,7 +23,11 @@ function Reel({ v, muted, onSound }: { v: Video; muted: boolean; onSound: () => 
       { threshold: [0, 0.6, 1] },
     );
     io.observe(el);
-    return () => io.disconnect();
+    // Başka sayfaya geçilince React videoyu kaldırır ama tarayıcı onu arkada çalmaya devam ettirir.
+    return () => {
+      io.disconnect();
+      el.pause();
+    };
   }, []);
   const SesAcik = Icon.sesAcik, SesKapali = Icon.sesKapali;
   return (
