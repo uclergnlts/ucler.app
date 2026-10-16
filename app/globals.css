@@ -172,6 +172,9 @@ a.btn{display:grid;place-items:center;text-align:center}
 .avatar{width:56px;height:56px;border-radius:50%;background:var(--panel);display:grid;place-items:center;color:var(--muted);flex:none}
 .avatar svg{width:28px;height:28px}
 .prof b{display:block;font-family:var(--f-display);font-size:20px}
+.prof .ad{display:block;width:100%;border:0;border-bottom:1px dashed var(--line-2);background:none;outline:0;padding:2px 0;font-family:var(--f-display);font-weight:800;font-size:20px;color:var(--ink)}
+.prof .ad:focus{border-bottom:1px solid var(--ink)}
+.prof .ad::placeholder{color:var(--muted);font-weight:700}
 .prof span{font-size:14px;color:var(--muted)}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);background:var(--surface);border:1px solid var(--line);border-radius:16px}
 .stat{padding:14px 8px;text-align:center}

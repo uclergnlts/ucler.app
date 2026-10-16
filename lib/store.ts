@@ -5,7 +5,7 @@ import { useSyncExternalStore } from "react";
 
 export type Prog = Record<string, string>; // "ders.konu" -> "3/4 doğru", "_last" -> "ders.konu"
 
-const KEYS = { prog: "tf-prog", saved: "tf-saved" } as const;
+const KEYS = { prog: "tf-prog", saved: "tf-saved", ad: "tf-ad" } as const;
 const listeners = new Set<() => void>();
 const cache: Record<string, { raw: string | null; val: unknown }> = {};
 
@@ -49,6 +49,10 @@ export const useSaved = () =>
 
 /** Kalıcı depolama çalışıyor mu? Çalışmıyorsa ilerleme sayfa kapanınca silinir. */
 export const useStorageOk = () => useSyncExternalStore(subscribe, () => !broken, () => true);
+
+/** Ana sayfadaki "Hoş geldin, ..." için öğrencinin adı. Hesap gelince adı hesaptan alınacak; şimdilik yalnızca bu cihazda. */
+export const useAd = () => useSyncExternalStore(subscribe, () => read<string>(KEYS.ad, ""), () => "");
+export const setAd = (ad: string) => write(KEYS.ad, ad.trim().slice(0, 30));
 
 export function setProg(patch: Prog) {
   write(KEYS.prog, { ...read<Prog>(KEYS.prog, EMPTY_PROG), ...patch });

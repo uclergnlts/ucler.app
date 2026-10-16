@@ -3,13 +3,13 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
-import { doneKeys, useProg } from "@/lib/store";
+import { doneKeys, useAd, useProg } from "@/lib/store";
 import { sureYaz, VIDEOLAR } from "@/lib/videolar";
 import { Icon } from "./icons";
 import { href, Top } from "./ui";
 
 export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
-  const prog = useProg();
+  const prog = useProg(), ad = useAd();
   const doneAll = doneKeys(prog).length;
   const [ld, lid] = (prog._last || "").split(".");
   const last = ld in all ? all[ld as DersId].find((e) => e.id && e.id === lid) : undefined;
@@ -31,12 +31,8 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
       <Top />
       <main className="view">
         <section className="intro">
-          <h1>Fen, en temelden.</h1>
-          <p>
-            {doneAll
-              ? `Tekrar hoş geldin. Şimdiye kadar ${doneAll} konu bitirdin.`
-              : "Her konu kısa, görselli kartlarla anlatılır; sonunda 4 soruluk bir test var."}
-          </p>
+          <h1>Hoş geldin{ad ? `, ${ad}` : ""}</h1>
+          {doneAll > 0 && <p>Şimdiye kadar {doneAll} konu bitirdin.</p>}
         </section>
 
         {last && (

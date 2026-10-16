@@ -1,11 +1,11 @@
 "use client";
 import { DERSLER, DERS_IDS, type DersId, type Entry, isDers } from "@/lib/dersler";
-import { doneKeys, resetAll, useProg, useSaved, useStorageOk } from "@/lib/store";
+import { doneKeys, resetAll, setAd, useAd, useProg, useSaved, useStorageOk } from "@/lib/store";
 import { Icon } from "./icons";
 import { PageHead, Row, Top } from "./ui";
 
 export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
-  const prog = useProg(), saved = useSaved(), storageOk = useStorageOk();
+  const prog = useProg(), saved = useSaved(), storageOk = useStorageOk(), ad = useAd();
   const done = doneKeys(prog).filter((k) => /\//.test(prog[k]));
   let right = 0, total = 0;
   for (const k of done) {
@@ -26,8 +26,17 @@ export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
         <PageHead title="Profil" />
         <section className="prof">
           <span className="avatar"><User /></span>
-          <span>
-            <b>Misafir</b>
+          <span style={{ minWidth: 0, flex: 1 }}>
+            <input
+              className="ad"
+              defaultValue={ad}
+              key={ad}
+              placeholder="Adın"
+              aria-label="Adın"
+              maxLength={30}
+              onBlur={(e) => setAd(e.target.value)}
+              onKeyDown={(e) => { if (e.key === "Enter") e.currentTarget.blur(); }}
+            />
             <span>
               {storageOk
                 ? "İlerlemen şimdilik yalnızca bu cihazda saklanıyor."
