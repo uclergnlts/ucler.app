@@ -1,0 +1,165 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#1fa463}
+.head .sub i{display:block;width:44px;height:6px;background:#1fa463;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#1fa463;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#1fa463;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>BİYOLOJİ</div><div class="brand">ucler<b>.</b></div></div>
+
+<div class="scene" data-s="0" data-e="4.4">
+ <div class="title">Üç gramlık<br><em>bir yolcu</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="0.3"><g transform="translate(540 1000) scale(2.2)"><path d="M-60 10 C-40 -40 40 -50 70 -10 C80 10 60 40 10 45 C-30 48 -55 35 -60 10 Z" fill="#cfe8d8" stroke="#1d3557" stroke-width="5"/><path d="M-50 30 L-120 60 L-95 20 Z" fill="#cfe8d8" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/><path d="M30 25 C40 40 20 50 0 42" fill="#d63c63" stroke="#1d3557" stroke-width="4"/><path d="M70 -12 L170 -30" stroke="#1d3557" stroke-width="6" stroke-linecap="round"/><circle cx="45" cy="-10" r="7" fill="#1d3557"/><path d="M-10 -20 C-60 -110 -10 -160 30 -150 C40 -100 20 -50 0 -20 Z" fill="#fff" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/></g></g><g data-in="1.8"><text x="540" y="1290" text-anchor="middle" font-family="Manrope" font-size="36" font-weight="800" fill="#1d3557">yakut boğazlı sinekkuşu ≈ 3 g</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="4.4" data-e="12.1">
+ <div class="title">Durmadan<br><em>800 km</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="4.5"><path d="M140 760 C260 740 330 800 420 790 C520 780 600 740 700 760 C800 780 880 760 940 740" fill="none" stroke="#1fa463" stroke-width="6"/><path d="M140 1250 C300 1270 420 1200 560 1240 C700 1280 820 1230 940 1250" fill="none" stroke="#1fa463" stroke-width="6"/><rect x="140" y="800" width="800" height="430" fill="#eaf2fa"/><text x="320" y="1030" text-anchor="middle" font-size="34" font-weight="800" fill="#457b9d">Meksika Körfezi</text><text x="860" y="730" text-anchor="middle" font-size="28" font-weight="800" fill="#5f6f88">ABD</text><text x="860" y="1300" text-anchor="middle" font-size="28" font-weight="800" fill="#5f6f88">Meksika</text></g><path data-draw="5.2" data-dur="3.4" d="M540 790 C600 900 480 1100 540 1240" fill="none" stroke="#d63c63" stroke-width="6" stroke-dasharray="16 12"/><g data-in="7.0"><rect x="610" y="1070" width="300" height="90" rx="18" fill="#fff" stroke="#d63c63" stroke-width="3"/><text x="760" y="1128" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#d63c63">≈ 800 km</text></g><g data-in="9.1"><rect x="140" y="1340" width="380" height="90" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="330" y="1398" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">hiç konmadan</text></g><g data-in="10.15"><rect x="560" y="1340" width="380" height="90" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="750" y="1398" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">gece gündüz</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="12.1" data-e="22.8">
+ <div class="title">Yola çıkmadan<br><em>yakıt depolar</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="12.2"><ellipse cx="230" cy="850" rx="34" ry="60" transform="rotate(0 230 850)" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><ellipse cx="280" cy="900" rx="34" ry="60" transform="rotate(90 280 900)" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><ellipse cx="230" cy="950" rx="34" ry="60" transform="rotate(0 230 950)" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><ellipse cx="180" cy="900" rx="34" ry="60" transform="rotate(90 180 900)" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><circle cx="230" cy="900" r="28" fill="#e0a800"/><path d="M230 960 V1200" stroke="#1fa463" stroke-width="6"/><g transform="translate(520 880) scale(1.1)"><path d="M-60 10 C-40 -40 40 -50 70 -10 C80 10 60 40 10 45 C-30 48 -55 35 -60 10 Z" fill="#cfe8d8" stroke="#1d3557" stroke-width="5"/><path d="M-50 30 L-120 60 L-95 20 Z" fill="#cfe8d8" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/><path d="M30 25 C40 40 20 50 0 42" fill="#d63c63" stroke="#1d3557" stroke-width="4"/><path d="M70 -12 L170 -30" stroke="#1d3557" stroke-width="6" stroke-linecap="round"/><circle cx="45" cy="-10" r="7" fill="#1d3557"/><path d="M-10 -20 C-60 -110 -10 -160 30 -150 C40 -100 20 -50 0 -20 Z" fill="#fff" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/></g><text x="230" y="1250" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">nektar = şeker</text></g><g data-in="14.6"><path transform="translate(380 940) scale(0.7)" d="M0 -26 C-14 -6 -18 6 -18 12 A18 18 0 0 0 18 12 C18 6 14 -6 0 -26 Z" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><path transform="translate(410 960) scale(0.7)" d="M0 -26 C-14 -6 -18 6 -18 12 A18 18 0 0 0 18 12 C18 6 14 -6 0 -26 Z" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><path transform="translate(440 980) scale(0.7)" d="M0 -26 C-14 -6 -18 6 -18 12 A18 18 0 0 0 18 12 C18 6 14 -6 0 -26 Z" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/></g><g data-in="15.6"><text x="830" y="780" text-anchor="middle" font-size="30" font-weight="800" fill="#5f6f88">ağırlık</text><rect x="700" y="810" width="260" height="90" rx="18" fill="#fff" stroke="#1d3557" stroke-width="4"/><text x="830.0" y="868" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#1d3557">3 g</text></g><g data-in="16.8"><path d="M830 915 V990" stroke="#1d3557" stroke-width="5"/><path d="M816 970 L830 994 L844 970" fill="none" stroke="#1d3557" stroke-width="5"/></g><g data-in="16.9"><rect x="700" y="1005" width="260" height="90" rx="18" fill="#fff" stroke="#d63c63" stroke-width="4"/><text x="830.0" y="1063" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#d63c63">≈ 5-6 g</text></g><g data-in="18.6"><rect x="140" y="1300" width="800" height="130" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="300" y="1380" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#457b9d">şeker</text><path d="M420 1365 H654" stroke="#1d3557" stroke-width="5"/><path d="M636 1351 L660 1365 L636 1379" fill="none" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/><text x="800" y="1380" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#e0a800">yağ</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="22.8" data-e="34.2">
+ <div class="title">Gram başına<br><em>enerji</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="22.9"><path d="M140 1260 H940" stroke="#1d3557" stroke-width="5"/><text x="540" y="720" text-anchor="middle" font-size="32" font-weight="800" fill="#5f6f88">1 gramın verdiği enerji</text></g><g data-in="23.6"><rect x="240" y="810" width="220" height="450" rx="14" fill="#fdf3cf" stroke="#e0a800" stroke-width="5"/><text x="350" y="786" text-anchor="middle" font-family="Manrope" font-size="48" font-weight="800" fill="#e0a800">≈ 9 kcal</text><text x="350" y="1310" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">yağ</text></g><g data-in="27.5"><rect x="620" y="1060" width="220" height="200" rx="14" fill="#e3eef7" stroke="#457b9d" stroke-width="5"/><text x="730" y="1036" text-anchor="middle" font-family="Manrope" font-size="48" font-weight="800" fill="#457b9d">≈ 4 kcal</text><text x="730" y="1310" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">şeker, nişasta</text></g><g data-in="30.8"><rect x="300" y="1360" width="480" height="100" rx="18" fill="#fff" stroke="#d63c63" stroke-width="4"/><text x="540" y="1425" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#d63c63">2 kattan fazla</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="34.2" data-e="49.8">
+ <div class="title">Enerji nereden<br><em>çıkar?</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="36.7"><circle cx="200" cy="800" r="34" fill="#dbe3ee" stroke="#1d3557" stroke-width="4"/><text x="200" y="812" text-anchor="middle" font-family="Manrope" font-size="32" font-weight="800" fill="#1d3557">C</text><circle cx="290" cy="800" r="26" fill="#fff" stroke="#5f6f88" stroke-width="4"/><text x="290" y="812" text-anchor="middle" font-family="Manrope" font-size="32" font-weight="800" fill="#5f6f88">H</text><text x="380" y="812" text-anchor="middle" font-size="44" font-weight="800" fill="#1d3557">+</text><circle cx="460" cy="800" r="34" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><text x="460" y="812" text-anchor="middle" font-family="Manrope" font-size="32" font-weight="800" fill="#d63c63">O</text><circle cx="530" cy="800" r="34" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><text x="530" y="812" text-anchor="middle" font-family="Manrope" font-size="32" font-weight="800" fill="#d63c63">O</text><path d="M590 800 H684" stroke="#1d3557" stroke-width="5"/><path d="M666 786 L690 800 L666 814" fill="none" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/></g>
+ <g data-in="39.4"><circle cx="760" cy="770" r="34" fill="#dbe3ee" stroke="#1d3557" stroke-width="4"/><text x="760" y="782" text-anchor="middle" font-family="Manrope" font-size="32" font-weight="800" fill="#1d3557">C</text><circle cx="825" cy="770" r="34" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><text x="825" y="782" text-anchor="middle" font-family="Manrope" font-size="32" font-weight="800" fill="#d63c63">O</text><circle cx="890" cy="770" r="34" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><text x="890" y="782" text-anchor="middle" font-family="Manrope" font-size="32" font-weight="800" fill="#d63c63">O</text><text x="825" y="840" text-anchor="middle" font-size="28" font-weight="800" fill="#5f6f88">CO<tspan font-size="20" dy="6">2</tspan></text></g><g data-in="40.6"><circle cx="760" cy="900" r="34" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><text x="760" y="912" text-anchor="middle" font-family="Manrope" font-size="32" font-weight="800" fill="#d63c63">O</text><circle cx="822" cy="900" r="26" fill="#fff" stroke="#5f6f88" stroke-width="4"/><text x="822" y="912" text-anchor="middle" font-family="Manrope" font-size="32" font-weight="800" fill="#5f6f88">H</text><circle cx="880" cy="900" r="26" fill="#fff" stroke="#5f6f88" stroke-width="4"/><text x="880" y="912" text-anchor="middle" font-family="Manrope" font-size="32" font-weight="800" fill="#5f6f88">H</text><text x="822" y="965" text-anchor="middle" font-size="28" font-weight="800" fill="#5f6f88">H<tspan font-size="20" dy="6">2</tspan><tspan dy="-6">O</tspan></text></g><g data-in="41.7"><rect x="140" y="1000" width="800" height="90" rx="18" fill="#fff" stroke="#1fa463" stroke-width="4"/><text x="540" y="1058" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#1fa463">+ enerji</text></g><g data-in="43.6"><rect x="140" y="1130" width="800" height="170" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1195" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#1d3557">glikoz: C<tspan font-size="30" dy="8">6</tspan><tspan dy="-8"></tspan>H<tspan font-size="30" dy="8">12</tspan><tspan dy="-8"></tspan>O<tspan font-size="30" dy="8">6</tspan><tspan dy="-8"></tspan></text><text x="540" y="1255" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">her karbona bir oksijen düşer</text></g><g data-in="46.6"><text x="540" y="1380" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#d63c63">yarı yolda bir yakıt</text></g></svg>
+</div>
+
+<div class="scene" data-s="49.8" data-e="59.0">
+ <div class="title">Yağ asidi:<br><em>karbon-hidrojen zinciri</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="49.9"><text x="540" y="760" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#1d3557">palmitik asit: C<tspan font-size="28" dy="8">16</tspan><tspan dy="-8"></tspan>H<tspan font-size="28" dy="8">32</tspan><tspan dy="-8"></tspan>O<tspan font-size="28" dy="8">2</tspan><tspan dy="-8"></tspan></text></g><polyline data-draw="50.2" data-dur="2.0" points="230,960 274,920 318,960 362,920 406,960 450,920 494,960 538,920 582,960 626,920 670,960 714,920 758,960 802,920 846,960 890,920" fill="none" stroke="#1d3557" stroke-width="6"/><g data-in="51.6"><circle cx="230" cy="960" r="12" fill="#1d3557"/><circle cx="274" cy="920" r="12" fill="#1d3557"/><circle cx="318" cy="960" r="12" fill="#1d3557"/><circle cx="362" cy="920" r="12" fill="#1d3557"/><circle cx="406" cy="960" r="12" fill="#1d3557"/><circle cx="450" cy="920" r="12" fill="#1d3557"/><circle cx="494" cy="960" r="12" fill="#1d3557"/><circle cx="538" cy="920" r="12" fill="#1d3557"/><circle cx="582" cy="960" r="12" fill="#1d3557"/><circle cx="626" cy="920" r="12" fill="#1d3557"/><circle cx="670" cy="960" r="12" fill="#1d3557"/><circle cx="714" cy="920" r="12" fill="#1d3557"/><circle cx="758" cy="960" r="12" fill="#1d3557"/><circle cx="802" cy="920" r="12" fill="#1d3557"/><circle cx="846" cy="960" r="12" fill="#1d3557"/><circle cx="890" cy="920" r="12" fill="#1d3557"/><path d="M274 920 V880" stroke="#5f6f88" stroke-width="3"/><circle cx="274" cy="880" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/><path d="M318 960 V1000" stroke="#5f6f88" stroke-width="3"/><circle cx="318" cy="1000" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/><path d="M362 920 V880" stroke="#5f6f88" stroke-width="3"/><circle cx="362" cy="880" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/><path d="M406 960 V1000" stroke="#5f6f88" stroke-width="3"/><circle cx="406" cy="1000" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/><path d="M450 920 V880" stroke="#5f6f88" stroke-width="3"/><circle cx="450" cy="880" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/><path d="M494 960 V1000" stroke="#5f6f88" stroke-width="3"/><circle cx="494" cy="1000" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/><path d="M538 920 V880" stroke="#5f6f88" stroke-width="3"/><circle cx="538" cy="880" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/><path d="M582 960 V1000" stroke="#5f6f88" stroke-width="3"/><circle cx="582" cy="1000" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/><path d="M626 920 V880" stroke="#5f6f88" stroke-width="3"/><circle cx="626" cy="880" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/><path d="M670 960 V1000" stroke="#5f6f88" stroke-width="3"/><circle cx="670" cy="1000" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/><path d="M714 920 V880" stroke="#5f6f88" stroke-width="3"/><circle cx="714" cy="880" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/><path d="M758 960 V1000" stroke="#5f6f88" stroke-width="3"/><circle cx="758" cy="1000" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/><path d="M802 920 V880" stroke="#5f6f88" stroke-width="3"/><circle cx="802" cy="880" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/><path d="M846 960 V1000" stroke="#5f6f88" stroke-width="3"/><circle cx="846" cy="1000" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/><path d="M890 920 V880" stroke="#5f6f88" stroke-width="3"/><circle cx="890" cy="880" r="8" fill="#fff" stroke="#5f6f88" stroke-width="3"/></g><g data-in="53.6"><path d="M230 960 L190 1000" stroke="#1d3557" stroke-width="5"/><circle cx="175" cy="1025" r="22" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><text x="175" y="1037" text-anchor="middle" font-family="Manrope" font-size="24" font-weight="800" fill="#d63c63">O</text><path d="M230 960 L190 920" stroke="#1d3557" stroke-width="5"/><circle cx="175" cy="895" r="22" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><text x="175" y="907" text-anchor="middle" font-family="Manrope" font-size="24" font-weight="800" fill="#d63c63">O</text><text x="175" y="1095" text-anchor="middle" font-size="26" font-weight="800" fill="#d63c63">yalnız 2 O</text></g><g data-in="55.9"><rect x="140" y="1170" width="380" height="170" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="330" y="1235" text-anchor="middle" font-size="32" font-weight="800" fill="#457b9d">glikoz</text><text x="330" y="1295" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#1d3557">6 C · 6 O</text><rect x="560" y="1170" width="380" height="170" rx="18" fill="#fff" stroke="#e0a800" stroke-width="4"/><text x="750" y="1235" text-anchor="middle" font-size="32" font-weight="800" fill="#e0a800">yağ asidi</text><text x="750" y="1295" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#1d3557">16 C · 2 O</text></g><g data-in="57.2"><text x="540" y="1410" text-anchor="middle" font-family="Manrope" font-size="36" font-weight="800" fill="#1fa463">yakılacak çok daha fazla atom</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="59.0" data-e="75.2">
+ <div class="title">Bir de<br><em>su meselesi</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="60.7"><rect x="170" y="880" width="150" height="150" rx="16" fill="#e3eef7" stroke="#457b9d" stroke-width="5"/><text x="245" y="968" text-anchor="middle" font-family="Manrope" font-size="36" font-weight="800" fill="#457b9d">1 g</text><text x="245" y="1080" text-anchor="middle" font-size="30" font-weight="800" fill="#457b9d">glikojen</text></g><g data-in="63.4"><path transform="translate(380 880) scale(1.3)" d="M0 -26 C-14 -6 -18 6 -18 12 A18 18 0 0 0 18 12 C18 6 14 -6 0 -26 Z" fill="#cfe3f5" stroke="#457b9d" stroke-width="4"/><path transform="translate(450 880) scale(1.3)" d="M0 -26 C-14 -6 -18 6 -18 12 A18 18 0 0 0 18 12 C18 6 14 -6 0 -26 Z" fill="#cfe3f5" stroke="#457b9d" stroke-width="4"/><path transform="translate(520 880) scale(1.3)" d="M0 -26 C-14 -6 -18 6 -18 12 A18 18 0 0 0 18 12 C18 6 14 -6 0 -26 Z" fill="#cfe3f5" stroke="#457b9d" stroke-width="4"/><path transform="translate(380 955) scale(1.3)" d="M0 -26 C-14 -6 -18 6 -18 12 A18 18 0 0 0 18 12 C18 6 14 -6 0 -26 Z" fill="#cfe3f5" stroke="#457b9d" stroke-width="4"/><path transform="translate(450 955) scale(1.3)" d="M0 -26 C-14 -6 -18 6 -18 12 A18 18 0 0 0 18 12 C18 6 14 -6 0 -26 Z" fill="#cfe3f5" stroke="#457b9d" stroke-width="4"/><path transform="translate(520 955) scale(1.3)" d="M0 -26 C-14 -6 -18 6 -18 12 A18 18 0 0 0 18 12 C18 6 14 -6 0 -26 Z" fill="#cfe3f5" stroke="#457b9d" stroke-width="4"/><text x="450" y="1080" text-anchor="middle" font-size="30" font-weight="800" fill="#457b9d">+ ≈ 3 g su</text></g><g data-in="66.7"><rect x="700" y="880" width="150" height="150" rx="16" fill="#fdf3cf" stroke="#e0a800" stroke-width="5"/><text x="775" y="968" text-anchor="middle" font-family="Manrope" font-size="36" font-weight="800" fill="#e0a800">1 g</text><text x="775" y="1080" text-anchor="middle" font-size="30" font-weight="800" fill="#e0a800">yağ: kuru</text></g><g data-in="70.5"><path d="M140 1140 H940" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1190" text-anchor="middle" font-size="30" font-weight="800" fill="#5f6f88">aynı enerji için depo:</text><rect x="170" y="1220" width="420" height="200" rx="16" fill="#e3eef7" stroke="#457b9d" stroke-width="5"/><text x="380" y="1330" text-anchor="middle" font-size="32" font-weight="800" fill="#457b9d">glikojen + su</text><rect x="700" y="1350" width="110" height="70" rx="12" fill="#fdf3cf" stroke="#e0a800" stroke-width="5"/><text x="755" y="1395" text-anchor="middle" font-size="28" font-weight="800" fill="#e0a800">yağ</text></g><g data-in="72.6"><text x="880" y="1290" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#d63c63">≈ 6 kat</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="75.2" data-e="86.2">
+ <div class="title">Hızlı enerji,<br><em>uzun yol</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="75.3"><g transform="translate(540 900) scale(1.5)"><path d="M-60 10 C-40 -40 40 -50 70 -10 C80 10 60 40 10 45 C-30 48 -55 35 -60 10 Z" fill="#cfe8d8" stroke="#1d3557" stroke-width="5"/><path d="M-50 30 L-120 60 L-95 20 Z" fill="#cfe8d8" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/><path d="M30 25 C40 40 20 50 0 42" fill="#d63c63" stroke="#1d3557" stroke-width="4"/><path d="M70 -12 L170 -30" stroke="#1d3557" stroke-width="6" stroke-linecap="round"/><circle cx="45" cy="-10" r="7" fill="#1d3557"/><path d="M-10 -20 C-60 -110 -10 -160 30 -150 C40 -100 20 -50 0 -20 Z" fill="#fff" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/></g><text x="540" y="1100" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#1d3557">her gram önemli</text></g><g data-in="80.8"><rect x="140" y="1180" width="380" height="220" rx="18" fill="#fff" stroke="#457b9d" stroke-width="4"/><text x="330" y="1250" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#457b9d">glikojen</text><text x="330" y="1310" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">hızlı enerji</text><text x="330" y="1355" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6f88">karaciğer, kas</text></g><g data-in="83.0"><rect x="560" y="1180" width="380" height="220" rx="18" fill="#fff" stroke="#e0a800" stroke-width="4"/><text x="750" y="1250" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#e0a800">yağ</text><text x="750" y="1310" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">uzun süreli depo</text><text x="750" y="1355" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6f88">yağ dokusu</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="86.28" data-e="99">
+ <div class="q"><small>DÜŞÜN</small>Rüzgârla taşınan küçük tohumlar enerjiyi <em>nişasta</em> mı, <em>yağ</em> olarak mı depolamalı?</div>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;                 // ses hızlandırılmadı
+const DUR = 93.47;           // ses süresi
+const PH = [
+ [0.00,4.21,"Yakut boğazlı sinekkuşu, yalnızca üç gram ağırlığında bir kuş."],
+ [4.45,6.82,"Her sonbahar Meksika Körfezi'ni geçer."],
+ [7.04,8.83,"Yaklaşık sekiz yüz kilometre,"],
+ [9.11,9.90,"hiç konmadan,"],
+ [10.15,11.90,"gece gündüz kanat çırparak."],
+ [12.17,18.29,"Yola çıkmadan önce birkaç hafta boyunca durmadan nektar içer ve ağırlığını neredeyse ikiye katlar."],
+ [18.62,21.15,"Ama içtiği şekeri şeker olarak saklamaz."],
+ [21.42,22.48,"Onu yağa çevirir."],
+ [22.81,23.19,"Neden?"],
+ [23.44,27.23,"Çünkü bir gram yağ yaklaşık dokuz kilokalori enerji verir."],
+ [27.47,30.33,"Bir gram şeker ya da nişasta ise yaklaşık dört."],
+ [30.73,33.97,"Yağ, gram başına iki kattan fazla enerji taşır."],
+ [34.29,36.34,"Farkın sırrı moleküllerin içinde."],
+ [36.62,43.21,"Hücrende enerji, karbon ve hidrojenin oksijenle birleşip karbondioksit ve suya dönüşmesiyle açığa çıkar."],
+ [43.52,46.32,"Glikoz molekülünde zaten çok oksijen vardır."],
+ [46.54,49.62,"Yani glikoz, bir anlamda yarı yolda bir yakıttır."],
+ [49.87,53.35,"Yağ asidi ise uzun bir karbon ve hidrojen zinciridir,"],
+ [53.60,55.59,"neredeyse hiç oksijen içermez."],
+ [55.82,58.76,"Oksijenle birleşecek çok daha fazla atomu vardır."],
+ [59.04,60.34,"Bir de su meselesi var."],
+ [60.65,63.04,"Vücudun şekeri glikojen olarak saklar."],
+ [63.38,66.39,"Her gram glikojen yanında birkaç gram su tutar."],
+ [66.70,68.41,"Yağ ise suda çözünmez,"],
+ [68.63,70.11,"kuru ve sıkı paketlenir."],
+ [70.41,74.96,"Aynı enerjiyi glikojen olarak taşısaydın, deposu birkaç kat ağır olurdu."],
+ [75.23,77.50,"Sinekkuşu için her gram önemlidir."],
+ [77.71,80.51,"Bu yüzden uzun yolculuğun yakıtı yağdır."],
+ [80.74,86.02,"Senin vücudun da hızlı enerji için glikojeni, uzun süreli depo için yağı kullanır."],
+ [86.28,89.74,"Peki sence, rüzgârla uzaklara taşınan küçük tohumlar"],
+ [89.94,93.47,"enerjiyi nişasta olarak mı, yağ olarak mı depolamalı?"]
+];
+
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
