@@ -23,6 +23,7 @@ Bu dosyadaki kararları Üçler verdi. Codex bunları değiştirmez. Bir karara 
 - **Kapanış:** **Her video, izleyiciyi düşündüren bir soruyla biter.**
 - **Altyazı:** Sabit bir yerde, videonun alt kısmına yakın durur. Ekranda gezmez.
 - **Görsel stil:** "Sade bilgi grafiği". Izgaralı açık zemin, sabit altyazı şeridi ve ince ilerleme çubuğu kullanılır.
+- **Sitede yeri (Üçler, 2026-10-16):** Videolar tek yerde saklanır (`content/videolar.json`), iki yerde gösterilir: ilgili konunun ilgili kartının altında ve Keşfet'teki dikey video akışında. Akıştaki her videodan "Konuya git" ile karta dönülür. Alt menüye yeni sekme eklenmez. Ayrıntı: `docs/VIDEOLAR.md`.
 - **İş akışı:**
   1. Claude senaryoyu ve konuşma metnini yazar.
   2. Üçler metni ElevenLabs'ta ("Damla" sesi) seslendirip mp3 ve srt dosyasını gönderir.

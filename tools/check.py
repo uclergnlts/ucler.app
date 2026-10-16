@@ -65,8 +65,37 @@ for ders, topics in d.items():
     for tid in set(listed) - set(topics):
         err(ders, tid, "dersler.json listesinde var ama veri dosyasında yok")
 
+# content/videolar.json (docs/VIDEOLAR.md): her video gerçek bir konuya ve karta bağlı mı?
+VIDEO_JSON = os.path.join(CONTENT, "videolar.json")
+if os.path.exists(VIDEO_JSON) and not sys.argv[1:]:
+    vids = json.load(open(VIDEO_JSON, encoding="utf-8"))
+    if not isinstance(vids, list): err("videolar.json bir liste olmalı"); vids = []
+    seen = set()
+    for v in vids:
+        vid = v.get("id", "?")
+        if not re.fullmatch(r"(KIM|FIZ|BIY)-\d{2}", vid): err("video", vid, "id KIM-nn / FIZ-nn / BIY-nn biçiminde olmalı")
+        if vid in seen: err("video", vid, "tekrar eden id")
+        seen.add(vid)
+        if not v.get("baslik") or len(v["baslik"]) > 60: err("video", vid, "başlık yok ya da 60 karakteri aşıyor")
+        sure = v.get("sure")
+        if not isinstance(sure, (int, float)) or sure <= 0: err("video", vid, "süre (saniye) yok")
+        elif not 45 <= sure <= 60: warn.append(f"video {vid}: {sure} sn (karar 45-60 sn)")
+        for k in ("src", "poster"):
+            u = v.get(k)
+            if u is None and k == "poster": continue
+            if not isinstance(u, str) or not (u.startswith("https://") or u.startswith("/videolar/")):
+                err("video", vid, k, "https:// adresi ya da /videolar/ yolu olmalı")
+        if not v.get("yerler"): err("video", vid, "en az bir yer (ders, konu, kart) gerekli")
+        for y in v.get("yerler", []):
+            t = d.get(y.get("ders"), {}).get(y.get("konu"))
+            if t is None: err("video", vid, "böyle bir hazır konu yok:", y.get("ders"), y.get("konu")); continue
+            kart = y.get("kart", 1)
+            if not isinstance(kart, int) or not 1 <= kart <= len(t["cards"]):
+                err("video", vid, y["konu"], "kart numarası", kart, f"(1-{len(t['cards'])} olmalı)")
+
 for w in warn: print("UYARI:", w)
 print("TAMAM" if not bad else f"{bad} sorun")
 for ders, topics in d.items():
     print(f"  {ders}: {len(topics)} konu hazır -> {', '.join(topics)}")
+if os.path.exists(VIDEO_JSON) and not sys.argv[1:]: print(f"  videolar: {len(vids)} video")
 sys.exit(1 if bad else 0)

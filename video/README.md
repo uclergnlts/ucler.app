@@ -29,3 +29,6 @@ Videolar dikey 9:16 (1080×1920) ve 45-60 saniyedir. Her video tek başına duru
 5. Kareler sesle birleştirilir: `ffmpeg -framerate 30 -i frames/f%05d.jpg -i ses.mp3 -c:v libx264 -crf 20 -pix_fmt yuv420p -c:a aac -shortest -movflags +faststart cikti.mp4`
 
 Ses ve video dosyaları depoya konmaz, çünkü çok büyükler.
+
+## Siteye ekleme
+Biten video video deposuna yüklenir ve `content/videolar.json` dosyasına konu ve kart numarasıyla yazılır. Ayrıntı: `docs/VIDEOLAR.md`.

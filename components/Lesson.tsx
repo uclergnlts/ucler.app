@@ -5,8 +5,10 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { DERSLER, type DersId, type Topic } from "@/lib/dersler";
 import { setProg, toggleSaved, useSaved } from "@/lib/store";
+import { kartVideolari, sureYaz, type Video } from "@/lib/videolar";
 import { Icon } from "./icons";
 import { Html, href, Logo } from "./ui";
+import VideoPlayer from "./VideoPlayer";
 
 type State = { i: number; q: number; picked: number | null; right: number };
 const START: State = { i: 0, q: -1, picked: null, right: 0 };
@@ -15,9 +17,16 @@ export default function Lesson({
   ders, id, t, next,
 }: { ders: DersId; id: string; t: Topic; next?: { id: string; title: string } }) {
   const [s, setS] = useState<State>(START);
+  const [play, setPlay] = useState<Video | null>(null);
   const saved = useSaved().includes(`${ders}.${id}`);
   const nCards = t.cards.length, nQuiz = t.quiz.length;
-  const Back = Icon.back, Bookmark = Icon.kayit, Bulb = Icon.bulb;
+  const Back = Icon.back, Bookmark = Icon.kayit, Bulb = Icon.bulb, Play = Icon.play;
+
+  // Videodan gelen bağlantı (?kart=3) dersi o karttan açar.
+  useEffect(() => {
+    const k = Number(new URLSearchParams(location.search).get("kart"));
+    if (k >= 1 && k <= nCards) setS({ ...START, i: k - 1 });
+  }, [nCards]);
 
   useEffect(() => { setProg({ _last: `${ders}.${id}` }); }, [ders, id]);
   useEffect(() => { window.scrollTo(0, 0); }, [s.i, s.q]);
@@ -42,7 +51,7 @@ export default function Lesson({
 
   // Klavye
   const stepRef = useRef(step);
-  stepRef.current = step;
+  stepRef.current = play ? () => {} : step;
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") stepRef.current(1);
@@ -69,13 +78,19 @@ export default function Lesson({
   let body: React.ReactNode, controls: React.ReactNode = null;
 
   if (s.q < 0) {
-    const c = t.cards[s.i], last = s.i === nCards - 1;
+    const c = t.cards[s.i], last = s.i === nCards - 1, vids = kartVideolari(ders, id, s.i + 1);
     body = (
       <article className="card" key={`c${s.i}`} aria-live="polite">
         <div className="visual" dangerouslySetInnerHTML={{ __html: c.svg }} />
         <div className="step">{s.i + 1} / {nCards}</div>
         <div className="say"><div className="bubble"><Html as="h2" html={c.h} /><Html as="p" html={c.p} /></div></div>
         {c.key && <div className="note"><Bulb /><Html html={c.key} /></div>}
+        {vids.map((v) => (
+          <button key={v.id} className="vidbtn" onClick={() => setPlay(v)}>
+            <span className="pl"><Play /></span>
+            <span><b>{v.baslik}</b><span className="s">Video · {sureYaz(v.sure)}</span></span>
+          </button>
+        ))}
       </article>
     );
     controls = (
@@ -158,6 +173,7 @@ export default function Lesson({
         {body}
         {controls}
       </main>
+      {play && <VideoPlayer v={play} onClose={() => setPlay(null)} />}
     </div>
   );
 }

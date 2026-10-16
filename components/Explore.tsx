@@ -1,7 +1,9 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
 import { useProg } from "@/lib/store";
+import { sureYaz, VIDEOLAR } from "@/lib/videolar";
 import { Icon } from "./icons";
 import { PageHead, Row, Top } from "./ui";
 
@@ -38,6 +40,19 @@ export default function Explore({ all }: { all: Record<DersId, Entry[]> }) {
             onChange={(ev) => setQ((memo.q = ev.target.value))}
           />
         </label>
+        {!needle && VIDEOLAR.length > 0 && (
+          <section className="vstrip-wrap">
+            <div className="label">Videolar</div>
+            <div className="vstrip">
+              {VIDEOLAR.map((v) => (
+                <Link key={v.id} className="vthumb" data-ders={v.yerler[0].ders} href={`/videolar/#${v.id}`}>
+                  {v.poster ? <img src={v.poster} alt="" /> : <video src={`${v.src}#t=1`} muted playsInline preload="metadata" />}
+                  <span><b>{v.baslik}</b>{sureYaz(v.sure)}</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
         <div className="chips">
           {([["all", "Tümü"], ...DERS_IDS.map((d) => [d, DERSLER[d].ad])] as [typeof filter, string][]).map(([k, l]) => (
             <button key={k} className="chip" aria-pressed={filter === k} onClick={() => setFilter((memo.filter = k))}>

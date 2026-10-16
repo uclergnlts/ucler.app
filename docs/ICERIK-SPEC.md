@@ -13,6 +13,8 @@ Konu id'si, `content/dersler.json` içindeki ders listesinde `{"id": "<konu-id>"
 
 Dosyalar düz JSON'dur: anahtarlar ve metinler çift tırnak içindedir, sondaki virgüle izin yoktur. SVG içinde öznitelikler tek tırnakla yazılır, böylece JSON içinde kaçış gerekmez.
 
+Videolar ayrı bir dosyada durur: `content/videolar.json` (biçim `docs/VIDEOLAR.md` içinde).
+
 ## Konu nesnesi
 ```js
 {

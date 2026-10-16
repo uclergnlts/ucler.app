@@ -1,0 +1,71 @@
+"use client";
+// Keşfet'teki dikey video akışı: ekrana gelen video sessiz başlar, dokununca ses açılır.
+// Her videonun altında asıl konusuna ve kartına giden "Konuya git" bağlantısı vardır.
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import { DERSLER } from "@/lib/dersler";
+import { sureYaz, VIDEOLAR, yerHref, type Video } from "@/lib/videolar";
+import { Icon } from "./icons";
+import { PageHead, Top } from "./ui";
+
+function Reel({ v, muted, onSound }: { v: Video; muted: boolean; onSound: () => void }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const y = v.yerler[0];
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting && e.intersectionRatio > 0.6) el.play().catch(() => {});
+        else el.pause();
+      },
+      { threshold: [0, 0.6, 1] },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  const Play = Icon.play;
+  return (
+    <section className="reel" id={v.id} data-ders={y.ders}>
+      <div className="reel-v">
+        <video ref={ref} src={v.src} poster={v.poster} muted={muted} loop playsInline preload="metadata" onClick={onSound} />
+        {muted && (
+          <button className="reel-sound" onClick={onSound} aria-label="Sesi aç">
+            <Play /> Sesi aç
+          </button>
+        )}
+      </div>
+      <div className="reel-cap">
+        <span>
+          <b>{v.baslik}</b>
+          <span className="s">{DERSLER[y.ders].ad} · {sureYaz(v.sure)}</span>
+        </span>
+        <Link className="btn main" href={yerHref(y)}>Konuya git</Link>
+      </div>
+    </section>
+  );
+}
+
+export default function VideoFeed() {
+  const [muted, setMuted] = useState(true);
+  useEffect(() => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (id) document.getElementById(id)?.scrollIntoView();
+  }, []);
+  if (!VIDEOLAR.length)
+    return (
+      <div className="app">
+        <Top />
+        <main className="view">
+          <PageHead title="Videolar" text="Kısa, dikey konu videoları çok yakında burada." />
+          <Link className="btn" href="/kesfet/">Konulara dön</Link>
+        </main>
+      </div>
+    );
+  return (
+    <div className="feed">
+      <Link className="feed-back" href="/kesfet/" aria-label="Keşfet'e dön"><Icon.back /></Link>
+      {VIDEOLAR.map((v) => <Reel key={v.id} v={v} muted={muted} onSound={() => setMuted((m) => !m)} />)}
+    </div>
+  );
+}
