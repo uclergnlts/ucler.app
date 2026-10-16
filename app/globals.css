@@ -178,16 +178,16 @@ a.btn{display:grid;place-items:center;text-align:center}
 .player-bar b{font-family:var(--f-display);font-size:17px;line-height:1.25}
 .player-bar .btn{flex:none;height:46px}
 .feed{height:100dvh;overflow-y:auto;scroll-snap-type:y mandatory;max-width:520px;margin:0 auto;position:relative;scrollbar-width:none}
-.reel{height:100dvh;scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;gap:10px;padding:12px 16px calc(84px + env(safe-area-inset-bottom, 0px))}
+.reel{height:100dvh;scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;gap:10px;padding:12px 16px calc(84px + env(safe-area-inset-bottom, 0px));container:reel / size}
 .reel-v{flex:1;min-height:0;position:relative;display:grid;place-items:center;container-type:size}
 .reel-v video{height:min(100cqh, 100cqw * 16 / 9);width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:20px;background:var(--ink)}
 .reel-sound{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:6px;align-items:center;background:var(--surface);border:2px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:800;font-size:14px}
-.reel-sound svg{width:16px;height:16px}
-/* Kısa video alanında ses düğmesi küçülür ve altyazının altına iner; videonun altyazısını örtmez. */
-@container (max-height: 520px){.reel-sound{bottom:4px;padding:5px 9px}.reel-sound-t{display:none}}
-/* Yatay alanda video yüksekliği doldurur (genişlik 100cqh*9/16); düğme videonun sağına, altyazının dışına çıkar. */
-@container (orientation: landscape){.reel-sound{left:calc(50% + 100cqh * 9 / 32 + 10px);bottom:0;transform:none;padding:8px 14px}.reel-sound-t{display:inline}}
+.reel-sound svg,.reel-sound2 svg{width:16px;height:16px}
+.reel-sound2{display:none;flex:none;width:46px;height:46px;place-items:center;border-radius:999px;background:var(--surface);border:2px solid var(--line)}
+/* Kısa ekranda video küçülür; ses düğmesi videonun üstünden kalkıp alttaki satıra geçer, altyazıyı örtmez, taşmaz. */
+@container reel (max-height: 700px){.reel-sound{display:none}.reel-sound2{display:grid}}
 .reel-cap{display:flex;gap:12px;align-items:center;justify-content:space-between}
+.reel-cap>span:first-child{flex:1;min-width:0}
 .reel-cap b{display:block;font-family:var(--f-display);font-size:17px;line-height:1.25}
 .reel-cap .s{display:block;font-size:14px;color:var(--muted);font-weight:600}
 .reel-cap .btn{flex:none;height:46px;display:grid;place-items:center}

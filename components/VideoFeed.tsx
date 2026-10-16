@@ -31,7 +31,7 @@ function Reel({ v, muted, onSound }: { v: Video; muted: boolean; onSound: () => 
         <video ref={ref} src={v.src} poster={v.poster} muted={muted} loop playsInline preload="metadata" onClick={onSound} />
         <button className="reel-sound" onClick={onSound} aria-pressed={!muted} aria-label={muted ? "Sesi aç" : "Sesi kapat"}>
           {muted ? <SesKapali /> : <SesAcik />}
-          <span className="reel-sound-t">{muted ? "Sesi aç" : "Sesi kapat"}</span>
+          {muted ? "Sesi aç" : "Sesi kapat"}
         </button>
       </div>
       <div className="reel-cap">
@@ -39,6 +39,9 @@ function Reel({ v, muted, onSound }: { v: Video; muted: boolean; onSound: () => 
           <b>{v.baslik}</b>
           <span className="s">{DERSLER[y.ders].ad} · {sureYaz(v.sure)}</span>
         </span>
+        <button className="reel-sound2" onClick={onSound} aria-pressed={!muted} aria-label={muted ? "Sesi aç" : "Sesi kapat"}>
+          {muted ? <SesKapali /> : <SesAcik />}
+        </button>
         <Link className="btn main" href={yerHref(y)}>Konuya git</Link>
       </div>
     </section>

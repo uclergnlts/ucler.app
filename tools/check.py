@@ -93,6 +93,16 @@ if os.path.exists(VIDEO_JSON) and not sys.argv[1:]:
             if not isinstance(kart, int) or not 1 <= kart <= len(t["cards"]):
                 err("video", vid, y["konu"], "kart numarası", kart, f"(1-{len(t['cards'])} olmalı)")
 
+# senaryolar: başlıktaki "· N kelime" etiketi konuşma metniyle tutmalı
+import glob, re
+for f in sorted(glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "video", "senaryolar", "*.md"))):
+    s = open(f, encoding="utf-8").read()
+    m = re.search(r"· (\d+) kelime", s)
+    if not m or "## Konuşma metni" not in s: continue
+    n = len(s.split("## Konuşma metni")[1].split("\n", 1)[1].split("## Kapanış")[0].split())
+    if n != int(m.group(1)): err("senaryo", os.path.basename(f), f"etiket {m.group(1)} kelime, metin {n} kelime")
+    elif not 100 <= n <= 115: warn.append(f"senaryo {os.path.basename(f)}: {n} kelime (hedef 100-115)")
+
 for w in warn: print("UYARI:", w)
 print("TAMAM" if not bad else f"{bad} sorun")
 for ders, topics in d.items():

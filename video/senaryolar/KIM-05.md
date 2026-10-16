@@ -1,6 +1,6 @@
 # KIM-05 · H₂O, NaCl: Kimyanın alfabesi nasıl okunur?
 
-Kimya › Kimyanın dili ve güvenliği › Kart 4: Bileşik formülleri · 45-60 sn · 113 kelime
+Kimya › Kimyanın dili ve güvenliği › Kart 4: Bileşik formülleri · 45-60 sn · 114 kelime
 
 ## Konuşma metni (ElevenLabs'a aynen yapıştırılır)
 

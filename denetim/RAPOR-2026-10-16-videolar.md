@@ -33,3 +33,12 @@ Denetçi: Codex. İncelenen sürüm: `06d537c`. Raporun tamamı Üçler'e proje 
 | V05 | Orta | KIM-03 | "Gazları kimse tartmıyordu" genellemesi. | Düzeltildi: "Yalnızca külü tartarsan, yanarken çıkan gazları hesaba katmamış olursun. Kütle de eksilmiş gibi görünür." |
 
 İsteğe bağlı öneri de uygulandı: KIM-05'te "Formülde bir oksijen daha olursa hidrojen peroksit olur."
+
+## Üçüncü tur: beş video (Codex, `4643aa7`)
+
+D01–D04 ve V05 kapandı. Yeni bilimsel hata bulunmadı.
+
+| # | Önem | Yer | Sorun | Durum |
+|---|---|---|---|---|
+| E01 | Orta | Video akışı, kısa ekranlar | Yatay kurala giren kısa video alanlarında ses düğmesi sağ kenardan taşıyor, akış yatay kayıyordu. | Düzeltildi. Video satırı yüksekliği 700 px'i geçmeyen ekranlarda ses düğmesi videonun üstünden kalkıp başlık ve "Konuya git" ile aynı satıra, simge düğmesi olarak geçiyor. 320×450, 320×480, 360×540, 375×500, 390×500, 390×650, 320×568, 390×844, 844×390 ve 1280×800'de iki ses durumunda da taşma yok, altyazı örtülmüyor, düğme ve bağlantı tıklanabilir. |
+| E02 | Küçük | KIM-05, KIM-09 | Kelime etiketi metinle tutmuyordu. | Düzeltildi (114 ve 109). `tools/check.py` artık her senaryonun etiketini metinle karşılaştırıyor; uyuşmazlık HATA, 100-115 dışı UYARI veriyor. |

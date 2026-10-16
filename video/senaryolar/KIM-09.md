@@ -1,6 +1,6 @@
 # KIM-09 · Element mi, bileşik mi, karışım mı?
 
-Kimya › Madde ve özellikleri › Kart 4: Saf madde: Element ve bileşik · 45-60 sn · 107 kelime
+Kimya › Madde ve özellikleri › Kart 4: Saf madde: Element ve bileşik · 45-60 sn · 109 kelime
 
 ## Konuşma metni (ElevenLabs'a aynen yapıştırılır)
 
