@@ -1,9 +1,10 @@
 # Videolar
 
-Videolar dikey 9:16 (1080×1920) ve 45-60 saniyedir. Her video tek başına durur ve bir soruyla biter. Kuralların tamamı `docs/KARARLAR.md` dosyasında.
+Videolar dikey 9:16 (1080×1920) ve 45-60 saniyedir. Her video tek başına durur ve bir soruyla biter. Kuralların tamamı `docs/KARARLAR.md` dosyasında. Görsel stil ve hareket kuralları `STIL.md` dosyasında (KIM-01 standardı).
 
 ## Klasörler
 - `senaryolar/`: Her video için bir `.md` dosyası (örnek: `KIM-01.md`). İçinde konuşma metni (ElevenLabs'a aynen yapıştırılır), görsel plan ve kapanış sorusu bulunur.
+- `kaynak/<KOD>/scene.html`: Videonun sahne dosyası. Yeni video KIM-01'inkinden kopyalanır.
 - `sablon/style.html`: "Sade bilgi grafiği" stilinin örnek kareleri. Manrope + Inter, ızgaralı açık zemin, sabit altyazı şeridi (y 1405-1515), altında ilerleme çubuğu, kapanışta "DÜŞÜN" kartı. Ders vurgu rengi kimya için #d63c63, sarı vurgu #ffd95a.
 - `sablon/shot.js`: Kare kare görüntü alma aracı.
 - `ornek/KIM-01-ornek-kareler.png`: Onaylanan stilin örneği.
@@ -17,7 +18,7 @@ Videolar dikey 9:16 (1080×1920) ve 45-60 saniyedir. Her video tek başına duru
 | 40-50 sn | Bağlantı |
 | 50-60 sn | Düşündüren soru |
 
-- Seslendirme (ElevenLabs "Damla" sesi) saniyede yaklaşık 2,6 kelime okur. Bu yüzden metin **120-150 kelime** olmalı.
+- Seslendirme (ElevenLabs "Damla - Energetic" sesi) saniyede yaklaşık 1,95 kelime okur. Bu yüzden metin **100-115 kelime** olmalı (KIM-01'de ölçüldü).
 - Sayılar seslendirme için yazıyla yazılır.
 - Kodlar: `KIM-nn`, `FIZ-nn`, `BIY-nn`.
 

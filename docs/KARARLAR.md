@@ -25,6 +25,7 @@ Bu dosyadaki kararları Üçler verdi. Codex bunları değiştirmez. Bir karara 
 - **Görsel stil:** "Sade bilgi grafiği". Izgaralı açık zemin, sabit altyazı şeridi ve ince ilerleme çubuğu kullanılır.
 - **Sitede yeri (Üçler, 2026-10-16):** Videolar tek yerde saklanır (`content/videolar.json`). Alt menüdeki **Videolar** sekmesinde Shorts/Reels gibi dikey akış olarak durur; Keşfet'te video olmaz. Akıştaki her videodan "Konuya git" ile ilgili karta geçilir; videosu olan kartın altında da video düğmesi çıkar. Ayrıntı: `docs/VIDEOLAR.md`.
 - **Videolarda maskot ya da süs karakteri yok;** tasarım ilkelerine uyan sade bilgi grafiği (Üçler, 2026-10-16'da yeniden vurguladı).
+- **Stil standardı (Üçler, 2026-10-16):** KIM-01 onaylandı ("tek kelime ile harika"); bütün videolar onun yazı stili, tasarımı ve hareket kurallarıyla üretilir. Ayrıntı: `video/STIL.md`, kaynak: `video/kaynak/KIM-01/scene.html`.
 - **İş akışı:**
   1. Claude senaryoyu ve konuşma metnini yazar.
   2. Üçler metni ElevenLabs'ta ("Damla" sesi) seslendirip mp3 ve srt dosyasını gönderir.

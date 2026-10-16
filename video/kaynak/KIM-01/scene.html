@@ -1,0 +1,220 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:265px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#d63c63}
+.head .sub i{display:block;width:44px;height:6px;background:#d63c63;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:345px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1405px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:600px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#d63c63;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1545px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#d63c63;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>KİMYA</div><div class="brand">ucler<b>.</b></div></div>
+
+<!-- 1. Bağdat -->
+<div class="scene" data-s="0" data-e="10.8">
+ <div class="title">Kurşun neden hiç<br><em>altına dönüşmedi?</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g stroke="#1d3557" stroke-width="4" fill="none" stroke-linejoin="round" data-draw="0.2" data-dur="2.2">
+   <path d="M80 1180 H1000"/>
+   <path d="M130 1180 V1010 H210 V1180 M210 1050 H290 V1180 M300 1180 V930 Q345 860 390 930 V1180 M345 860 V820 M400 1180 V1060 H470 V1180"/>
+   <path d="M690 1180 V1000 Q760 900 830 1000 V1180 M760 900 V860 M840 1180 V1050 H930 V1180"/>
+  </g>
+  <g data-in="1.4"><circle cx="900" cy="760" r="38" fill="none" stroke="#1d3557" stroke-width="4"/><circle cx="915" cy="750" r="34" fill="#f6f8fb"/></g>
+  <g transform="translate(540 1060)" data-in="2.3">
+   <ellipse cx="0" cy="110" rx="190" ry="18" fill="#1d3557" opacity=".08"/>
+   <path d="M-150 -40 H150 L120 100 H-120 Z" fill="#ffffff" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/>
+   <path d="M-142 -10 H142 L134 30 H-134 Z" fill="#9aa6b6"/>
+   <g id="steam" stroke="#9aa6b6" stroke-width="4" fill="none" stroke-linecap="round"><path d="M-60 -70 q10 -40 0 -80"/><path d="M0 -60 q12 -50 0 -100"/><path d="M60 -70 q10 -40 0 -80"/></g>
+   <path d="M-110 100 l-30 60 M110 100 l30 60" stroke="#1d3557" stroke-width="5"/>
+   <path id="fire" d="M-80 175 q20 -40 40 0 q20 -45 40 0 q20 -40 40 0" fill="#ffd95a" stroke="#d63c63" stroke-width="4"/>
+  </g>
+  <text x="540" y="1300" text-anchor="middle" font-size="34" fill="#5f6f88" data-in="0.3">Bağdat, 9. yüzyıl</text>
+  <text x="540" y="1370" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="46" fill="#1d3557" data-in="7.9">gri, ucuz kurşun → <tspan fill="#b8860b">altın?</tspan></text>
+ </svg>
+</div>
+
+<!-- 2. Simyanın yolu -->
+<div class="scene" data-s="10.8" data-e="21.5">
+ <div class="title">Simya:<br><em>kimyadan önceki adım</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <path d="M120 900 Q320 760 520 860 T960 880" fill="none" stroke="#dbe3ee" stroke-width="3" stroke-dasharray="10 12" data-in="10.9"/>
+  <g data-in="13.2"><circle cx="930" cy="830" r="16" fill="#9aa6b6"/><text x="930" y="790" text-anchor="middle" font-size="34" fill="#5f6f88">Çin</text></g>
+  <g data-in="13.9"><circle cx="880" cy="1100" r="16" fill="#9aa6b6"/><text x="880" y="1156" text-anchor="middle" font-size="34" fill="#5f6f88">Hindistan</text></g>
+  <path id="route" d="M250 1080 Q380 1000 520 960 Q420 840 260 760" fill="none" stroke="#d63c63" stroke-width="7" stroke-linecap="round" data-draw="15.7" data-dur="5.4"/>
+  <g data-in="15.8"><circle cx="250" cy="1080" r="20" fill="#d63c63"/><text x="250" y="1136" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">İskenderiye</text></g>
+  <g data-in="18.1"><circle cx="520" cy="960" r="20" fill="#d63c63"/><text x="560" y="975" font-size="36" font-weight="800" fill="#1d3557">Bağdat</text><text x="560" y="1015" font-size="28" fill="#5f6f88">İslam dünyası</text></g>
+  <g data-in="19.9"><circle cx="260" cy="760" r="20" fill="#d63c63"/><text x="260" y="718" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">Avrupa</text></g>
+  <text x="540" y="1300" text-anchor="middle" font-size="32" fill="#5f6f88" data-in="16">Batı'daki simyanın yolu</text>
+ </svg>
+</div>
+
+<!-- 3. İki hedef -->
+<div class="scene" data-s="21.5" data-e="30.2">
+ <div class="title">Simyacıların<br><em>iki hedefi</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="23.5">
+   <rect x="80" y="660" width="430" height="560" rx="24" fill="#fff" stroke="#dbe3ee" stroke-width="3"/>
+   <path d="M235 840 L295 790 L370 815 L385 890 L320 940 L245 915 Z" fill="#ffd95a" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/>
+   <path d="M295 790 L310 870 L245 915 M310 870 L385 890 M310 870 L320 940" stroke="#1d3557" stroke-width="3" fill="none"/>
+   <text x="295" y="1030" text-anchor="middle" font-size="40" font-weight="800" fill="#1d3557">Felsefe taşı</text>
+   <text x="295" y="1080" text-anchor="middle" font-size="30" fill="#5f6f88">metaller → altın</text>
+   <text x="295" y="1150" text-anchor="middle" font-size="44" font-weight="800" fill="#1d3557">Pb → Au</text>
+  </g>
+  <g data-in="28.3">
+   <rect x="570" y="660" width="430" height="560" rx="24" fill="#fff" stroke="#dbe3ee" stroke-width="3"/>
+   <path d="M760 760 h50 v60 l55 110 a20 20 0 0 1 -18 30 h-124 a20 20 0 0 1 -18 -30 l55 -110 z" fill="#fff" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/>
+   <path d="M720 900 h130 l20 40 a10 10 0 0 1 -9 15 h-152 a10 10 0 0 1 -9 -15 z" fill="#2a9d8f" opacity=".75"/>
+   <path d="M752 760 h66" stroke="#1d3557" stroke-width="6" stroke-linecap="round"/>
+   <text x="785" y="1030" text-anchor="middle" font-size="40" font-weight="800" fill="#1d3557">Hayat iksiri</text>
+   <text x="785" y="1080" text-anchor="middle" font-size="30" fill="#5f6f88">ömrü uzatmak</text>
+  </g>
+ </svg>
+</div>
+
+<!-- 4. Neden olmadı -->
+<div class="scene" data-s="30.2" data-e="50.3">
+ <div class="title" id="t4a">İkisini de<br><em>hiç bulamadılar</em></div>
+ <div class="title" id="t4b" style="opacity:0">Elementi belirleyen:<br><em>proton sayısı</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="32.9">
+   <g fill="none" stroke="#c9d3e0" stroke-width="3">
+    <circle cx="290" cy="930" r="90"/><circle cx="290" cy="930" r="150"/><circle cx="290" cy="930" r="210"/>
+    <circle cx="790" cy="930" r="90"/><circle cx="790" cy="930" r="150"/><circle cx="790" cy="930" r="210"/>
+   </g>
+   <g id="eL" fill="#1d3557"></g><g id="eR" fill="#1d3557"></g>
+   <circle id="nL" cx="290" cy="930" r="56" fill="#9aa6b6" stroke="#1d3557" stroke-width="4"/>
+   <circle id="nR" cx="790" cy="930" r="56" fill="#ffd95a" stroke="#1d3557" stroke-width="4"/>
+   <text x="290" y="944" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="38" fill="#1d3557" data-in="37.9">82 p</text>
+   <text x="790" y="944" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="38" fill="#1d3557" data-in="39.4">79 p</text>
+   <text x="290" y="1215" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="56" fill="#1d3557">Pb</text>
+   <text x="290" y="1262" text-anchor="middle" font-size="32" fill="#5f6f88">kurşun</text>
+   <text x="790" y="1215" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="56" fill="#1d3557">Au</text>
+   <text x="790" y="1262" text-anchor="middle" font-size="32" fill="#5f6f88">altın</text>
+  </g>
+  <text x="540" y="1340" text-anchor="middle" font-size="32" fill="#5f6f88" data-in="41.3">Kimyasal tepkime çekirdeğe dokunmaz</text>
+  <g data-in="46.1">
+   <path d="M500 930 H580" stroke="#1d3557" stroke-width="5"/><path d="M570 916 l18 14 -18 14" stroke="#1d3557" stroke-width="5" fill="none"/>
+   <path d="M520 900 l40 60 M560 900 l-40 60" stroke="#d63c63" stroke-width="7" stroke-linecap="round"/>
+  </g>
+ </svg>
+</div>
+
+<!-- 5. Miras -->
+<div class="scene" data-s="50.3" data-e="59.0">
+ <div class="title">Simyanın mirası:<br><em>laboratuvar</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="52.6" data-base=".18" transform="translate(220 860)">
+   <rect x="-90" y="-40" width="180" height="140" rx="14" fill="#fff" stroke="#1d3557" stroke-width="5"/>
+   <path d="M-40 60 q14 -34 28 0 q14 -38 28 0 q14 -34 28 0" fill="#ffd95a" stroke="#d63c63" stroke-width="4"/>
+   <text x="0" y="170" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">ocaklar</text>
+  </g>
+  <g data-in="54.7" data-base=".18" transform="translate(540 860)">
+   <circle cx="0" cy="40" r="62" fill="#fff" stroke="#1d3557" stroke-width="5"/>
+   <path d="M-16 -22 V-80 H16 V-22" fill="#fff" stroke="#1d3557" stroke-width="5"/>
+   <path d="M-54 60 a62 62 0 0 0 108 0 z" fill="#2a9d8f" opacity=".6"/>
+   <text x="0" y="170" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">cam kaplar</text>
+  </g>
+  <g data-in="56.0" data-base=".18" transform="translate(860 860)">
+   <rect x="-70" y="-60" width="140" height="170" rx="10" fill="#fff" stroke="#1d3557" stroke-width="5"/>
+   <path d="M-40 -20 H40 M-40 15 H40 M-40 50 H20" stroke="#9aa6b6" stroke-width="5" stroke-linecap="round"/>
+   <text x="0" y="170" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">yöntemler</text>
+  </g>
+  <g data-in="57.3">
+   <path d="M540 1080 V1150" stroke="#d63c63" stroke-width="6"/><path d="M522 1135 l18 20 18 -20" stroke="#d63c63" stroke-width="6" fill="none"/>
+   <text x="540" y="1230" text-anchor="middle" font-family="Manrope" font-size="48" font-weight="800" fill="#1d3557">bugünkü kimya laboratuvarı</text>
+  </g>
+ </svg>
+</div>
+
+<!-- 6. Düşün -->
+<div class="scene" data-s="59.0" data-e="99">
+ <div class="q"><small>DÜŞÜN</small>Hiç gerçekleşmeyen bir hayal, bilime nasıl bu kadar çok şey <em>kazandırmış</em> olabilir?</div>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1.08;              // ses 1,08 kat hızlandırıldı (64,8 sn -> 60 sn)
+const DUR = 64.76;           // asıl ses süresi
+// Konuşma parçaları: [başlangıç, bitiş, metin] (asıl ses zamanı, sessizlik tespitinden)
+const PH = [
+ [0.00,1.12,"Dokuzuncu yüzyıl,"],[1.41,1.95,"Bağdat."],
+ [2.34,6.15,"Loş bir odada bir simyacı, eritilmiş kurşunun başında bekliyor."],
+ [6.48,7.40,"Tek bir hayali var:"],[7.81,10.44,"bu gri, ucuz metali altına çevirmek."],
+ [10.87,12.88,"Simya, kimyadan önceki adımdı."],[13.14,15.42,"Çin'den Hindistan'a pek çok yerde vardı."],
+ [15.69,17.87,"Batı'daki kolu İskenderiye'de doğdu,"],[18.07,21.25,"İslam dünyasında gelişti, oradan Avrupa'ya yayıldı."],
+ [21.56,23.21,"Simyacılar iki şey arıyordu."],[23.47,27.34,"Biri, metalleri altına çevireceğine inandıkları felsefe"],[27.58,28.10,"taşıydı."],
+ [28.30,29.96,"Diğeri, ömrü uzatacak hayat iksiri."],[30.27,31.81,"İkisini de hiç bulamadılar."],[32.26,32.60,"Neden?"],
+ [32.92,37.35,"Çünkü bir elementi belirleyen şey, atomunun çekirdeğindeki proton sayısıdır."],
+ [37.74,40.90,"Kurşunda seksen iki proton var, altında yetmiş dokuz."],
+ [41.25,43.55,"Kimyasal tepkimeler çekirdeğe dokunmaz,"],[43.76,45.79,"atomları sadece yeniden düzenler."],
+ [46.11,50.09,"Yani hiçbir karışım, hiçbir ateş kurşunu altına çeviremez."],
+ [50.39,52.16,"Simyacılar hedefe ulaşamadı."],[52.40,54.39,"Ama denerken kurdukları ocaklar,"],
+ [54.61,58.76,"cam kaplar ve yöntemler, bugünkü kimya laboratuvarının temeli oldu."],
+ [59.05,59.82,"Peki sence,"],[60.03,64.70,"hiç gerçekleşmeyen bir hayal, bilime nasıl bu kadar çok şey kazandırmış olabilir?"]
+];
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0);
+    el.style.opacity = b + (1-b)*k; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // ateş ve buhar
+  const fire = document.getElementById('fire'); fire.setAttribute('transform', `scale(1 ${1+0.12*Math.sin(t*9)})`); fire.style.transformOrigin='0 175px';
+  document.getElementById('steam').setAttribute('transform', `translate(${6*Math.sin(t*2)} ${-8*((t*0.8)%1)})`);
+  // başlık 4: "Neden?" sonrası
+  const k4 = ease((t-32.6)/0.4); document.getElementById('t4a').style.opacity = 1-k4; document.getElementById('t4b').style.opacity = k4;
+  // elektronlar döner, tepkime anında karışır; çekirdek sabit
+  const elec = (id, cx, ph) => { const g = document.getElementById(id); let h=''; const sp = (t>41.2 && t<46)?1.6:0.35;
+    [[90,1],[150,2],[210,2]].forEach(([r,n],i)=>{ for(let j=0;j<n;j++){ const an = ph + t*sp*(i%2?-1:1) + j*Math.PI + i; h += `<circle cx="${cx+r*Math.cos(an)}" cy="${930+r*Math.sin(an)}" r="9"/>`; }});
+    g.innerHTML = h; };
+  elec('eL',290,0); elec('eR',790,1);
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
