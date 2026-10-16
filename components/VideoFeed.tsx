@@ -29,8 +29,9 @@ function Reel({ v, muted, onSound }: { v: Video; muted: boolean; onSound: () => 
     <section className="reel" id={v.id} data-ders={y.ders}>
       <div className="reel-v">
         <video ref={ref} src={v.src} poster={v.poster} muted={muted} loop playsInline preload="metadata" onClick={onSound} />
-        <button className="reel-sound" onClick={onSound} aria-pressed={!muted}>
-          {muted ? <><SesKapali /> Sesi aç</> : <><SesAcik /> Sesi kapat</>}
+        <button className="reel-sound" onClick={onSound} aria-pressed={!muted} aria-label={muted ? "Sesi aç" : "Sesi kapat"}>
+          {muted ? <SesKapali /> : <SesAcik />}
+          <span className="reel-sound-t">{muted ? "Sesi aç" : "Sesi kapat"}</span>
         </button>
       </div>
       <div className="reel-cap">

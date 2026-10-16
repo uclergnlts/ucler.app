@@ -4,7 +4,7 @@ Videolar dikey 9:16 (1080×1920) ve 45-60 saniyedir. Her video tek başına duru
 
 ## Klasörler
 - `senaryolar/`: Her video için bir `.md` dosyası (örnek: `KIM-01.md`). İçinde konuşma metni (ElevenLabs'a aynen yapıştırılır), görsel plan ve kapanış sorusu bulunur.
-- `sablon/sahne.html`: **Onaylı video şablonu** (KIM-01, Üçler 2026-10-16: "tüm videoları bu şekilde yapacağız"). Yeni video için `kaynak/<KOD>/scene.html` olarak kopyalanır; yerleşim, yazı tipleri, altyazı ve hareket motoru aynen kalır, yalnızca sahneler, başlıklar, ders adı/rengi ve konuşma zamanları (`PH`, `S`, `DUR`) değişir.
+- `sablon/sahne.html`: **Onaylı video şablonu** (KIM-01, Üçler 2026-10-16: "tüm videoları bu şekilde yapacağız"). Yeni video için `kaynak/<KOD>/scene.html` olarak kopyalanır; yerleşim, yazı tipleri, altyazı ve hareket motoru aynen kalır, yalnızca sahneler, başlıklar, ders adı/rengi ve konuşma zamanları (`PH`, `S`, `DUR`) değişir. Kopyada yazı tipi bağlantısı `href="../../sablon/fonts-local.css"` olarak değiştirilir; böylece sahne kendi klasöründen açıldığında da Manrope ve Inter yüklenir.
 - `kaynak/<KOD>/scene.html`: Her videonun kendi sahne dosyası.
 - `sablon/style.html`: "Sade bilgi grafiği" stilinin örnek kareleri. Manrope + Inter, ızgaralı açık zemin, sabit altyazı şeridi (y 1405-1515), altında ilerleme çubuğu, kapanışta "DÜŞÜN" kartı. Ders vurgu rengi kimya için #d63c63, sarı vurgu #ffd95a.
 - `sablon/shot.js`: Kare kare görüntü alma aracı.

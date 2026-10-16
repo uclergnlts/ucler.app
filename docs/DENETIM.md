@@ -32,7 +32,7 @@ Her denetimde aşağıdaki listeyi baştan sona geç. Bulgularını `denetim/RAP
 - [ ] Kullanılmayan, eski kod ya da eski tasarımdan kalan parça yok.
 
 ## 6. Videolar (senaryo varsa)
-- [ ] Konuşma metni 120-150 kelime, yani 45-60 saniye.
+- [ ] Konuşma metni 100-115 kelime, yani 45-60 saniye (Damla sesi saniyede yaklaşık 1,95 kelime okur). Asıl ölçüt videonun gerçek süresidir.
 - [ ] Video bağımsız: "sıradaki video" gibi ifadeler yok. Video bir soruyla bitiyor.
 - [ ] Sayılar yazıyla yazılmış (seslendirme için). Bilgi doğru.
 
