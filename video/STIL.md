@@ -1,6 +1,6 @@
 # Video stili (KIM-01 standardı)
 
-Üçler KIM-01'i onayladı (2026-10-16: "tek kelime ile harika"). Bütün videolar bu stille üretilir. Kaynak sahne: `video/kaynak/KIM-01/scene.html`; yeni video için kopyalanır, yalnızca içerik değişir.
+Üçler KIM-01'i onayladı (2026-10-16: "tek kelime ile harika"). Bütün videolar bu stille üretilir. Yeni yerleşimi de onayladı ("harika, tam da istediğim gibi, tüm videoları bu şekilde yapacağız"). Şablon: `video/sablon/sahne.html`; yeni video için kopyalanır, yalnızca içerik değişir.
 
 ## Görünüm
 Yerleşim (Üçler, 2026-10-16): üst bant ve başlık yukarıda, altyazı ve ilerleme çubuğu aşağıda; ortadaki görsel alan ferah kalır.
