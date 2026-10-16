@@ -239,6 +239,13 @@ a.btn{display:grid;place-items:center;text-align:center}
 .reel-ic svg{width:22px;height:22px}
 .reel-ic[aria-pressed="true"]{color:var(--acc)}
 .reel-ic[aria-label="Konuyu kaydet"][aria-pressed="true"] svg{fill:currentColor}
+/* Dar telefonda (320 px) düğmeler tek satıra sığmaz: iki hap üstte, kaydet/paylaş/ses ikinci satırda sağda. */
+@media (max-width:359px){
+  .reel-acts{flex-wrap:wrap;row-gap:4px}
+  .reel-acts .sp{flex-basis:100%;height:0}
+  .reel-acts .sp + .reel-ic{margin-left:auto}
+  .reel-go,.reel-pill{flex:1 1 0;justify-content:center;padding:0 10px}
+}
 .reel-prog{position:absolute;left:0;right:0;top:-1px;height:2px;background:transparent}
 .reel-prog i{display:block;height:100%;background:var(--acc)}
 .sheet-bg{position:absolute;inset:0;z-index:3;background:rgba(29,53,87,.28);display:flex;align-items:flex-end;animation:fade .2s}

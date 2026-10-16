@@ -4906,26 +4906,40 @@
           ],
           "ciktilar": [
             {
+              "ad": "h·f − W",
+              "ifade": "1240/lam - W",
+              "birim": "eV",
+              "basamak": 4
+            },
+            {
               "ad": "E<sub>k,max</sub>",
               "ifade": "((1240/lam - W) + abs(1240/lam - W))/2",
               "birim": "eV",
-              "basamak": 2
+              "basamak": 4
             },
             {
-              "ad": "Foton enerjisi",
+              "ad": "Foton enerjisi h·f",
               "ifade": "1240/lam",
               "birim": "eV",
-              "basamak": 2
+              "basamak": 4
             }
           ],
           "yorum": [
             [
-              0.005,
+              -1e-09,
               "Elektron kopmaz: foton enerjisi W'den küçük (f &lt; f<sub>0</sub>). Şiddeti artırmak da işe yaramaz."
             ],
             [
+              1e-09,
+              "Tam eşik (f = f<sub>0</sub>): foton enerjisi W'ye eşit. Elektron ancak kopar, kinetik enerjisi sıfırdır."
+            ],
+            [
+              0.05,
+              "Elektron kopar ama çok yavaş: foton enerjisi W'yi çok az aşıyor, artan küçük enerji kinetik enerji olur."
+            ],
+            [
               null,
-              "Elektron kopar; artan enerji kinetik enerji olur."
+              "Elektron kopar: foton enerjisi W'den büyük, artan enerji kinetik enerji olur."
             ]
           ]
         }

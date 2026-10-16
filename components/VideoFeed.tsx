@@ -20,6 +20,7 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
   const [cevap, setCevap] = useState(false);
   const [pct, setPct] = useState(0);
   const [hint, setHint] = useState(false);
+  const cevapBtn = useRef<HTMLButtonElement>(null), kapatBtn = useRef<HTMLButtonElement>(null);
   const y = v.yerler[0], key = `${y.ders}.${y.konu}`;
   const saved = useSaved().includes(key);
   const I = Icon;
@@ -65,16 +66,30 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
     return () => clearTimeout(t);
   }, [flash]);
 
+  // Cevap penceresi: açılınca odak "Kapat"a gider ve pencerede kalır; Escape kapatır, kapanınca odak
+  // "Cevabı gör" düğmesine döner. Açıkken akışın kısayolları (oklar, boşluk, m) çalışmaz.
+  const kapat = useCallback(() => { setCevap(false); cevapBtn.current?.focus(); }, []);
+  useEffect(() => {
+    if (!cevap) return;
+    kapatBtn.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { e.preventDefault(); kapat(); }
+      else if (e.key === "Tab") { e.preventDefault(); kapatBtn.current?.focus(); }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [cevap, kapat]);
+
   // Klavye: boşluk durdurur/sürdürür, m sesi açar/kapatır (yalnızca ekrandaki videoda).
   useEffect(() => {
-    if (!active) return;
+    if (!active || cevap) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === " " && !(e.target as Element)?.closest?.("button,a")) { e.preventDefault(); toggle(); }
       if (e.key === "m") o.setMuted(!o.muted);
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
-  }, [active, toggle, o]);
+  }, [active, cevap, toggle, o]);
 
   async function paylas() {
     const url = `${location.origin}/videolar/#${v.id}`;
@@ -111,7 +126,7 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
         <span className="k"><b>{DERSLER[y.ders].ad}</b> · {konu || v.baslik}</span>
         <div className="reel-acts">
           <Link className="reel-go" href={yerHref(y)}>Konuya git<I.ileri /></Link>
-          {v.cevap && <button className="reel-pill" onClick={() => setCevap(true)}>Cevabı gör</button>}
+          {v.cevap && <button ref={cevapBtn} className="reel-pill" aria-haspopup="dialog" onClick={() => setCevap(true)}>Cevabı gör</button>}
           <span className="sp" />
           <button className="reel-ic" onClick={() => { toggleSaved(key); o.toast(saved ? "Kaydedilenlerden çıkarıldı" : "Konu kaydedildi"); }} aria-pressed={saved} aria-label="Konuyu kaydet">
             <I.kayit />
@@ -124,13 +139,13 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
       </div>
 
       {cevap && (
-        <div className="sheet-bg" onClick={() => setCevap(false)}>
-          <div className="sheet" role="dialog" aria-label="Sorunun cevabı" onClick={(e) => e.stopPropagation()}>
+        <div className="sheet-bg" onClick={kapat}>
+          <div className="sheet" role="dialog" aria-modal="true" aria-label="Sorunun cevabı" onClick={(e) => e.stopPropagation()}>
             <span className="grip" aria-hidden="true" />
             <span className="k">Videonun sorusu</span>
             <b>{v.soru}</b>
             <p>{v.cevap}</p>
-            <button className="btn" onClick={() => setCevap(false)}>Kapat</button>
+            <button ref={kapatBtn} className="btn" onClick={kapat}>Kapat</button>
           </div>
         </div>
       )}
@@ -172,12 +187,15 @@ export default function VideoFeed({ konular }: { konular: Record<string, string>
     return () => io.disconnect();
   }, []);
 
-  // Klavye: aşağı/yukarı ok sıradaki/önceki video.
+  // Klavye: aşağı/yukarı ok sıradaki/önceki video (cevap penceresi açık değilken).
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const f = feed.current;
       if (!f || !["ArrowDown", "ArrowUp"].includes(e.key)) return;
       e.preventDefault();
+      // Cevap penceresi açıkken oklar videoyu değiştirmez; uzun cevapta pencerenin kendisini kaydırır.
+      const sheet = f.querySelector<HTMLElement>(".sheet");
+      if (sheet) { sheet.scrollBy({ top: (e.key === "ArrowDown" ? 1 : -1) * 40 }); return; }
       f.scrollBy({ top: (e.key === "ArrowDown" ? 1 : -1) * f.clientHeight, behavior: "smooth" });
     };
     document.addEventListener("keydown", onKey);
