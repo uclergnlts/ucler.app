@@ -29,6 +29,7 @@ Her video bir kez yazılır. `yerler` listesi videonun hangi konuya ve hangi kar
 | `src` | `https://` ile başlayan adres ya da yerel deneme için `/videolar/...` yolu. |
 | `poster` | İsteğe bağlı kapak görseli (9:16). Yoksa videonun ilk karesi görünür. |
 | `yerler` | En az bir yer. `kart` 1'den başlar; yazılmazsa video konunun ilk kartında görünür. |
+| `soru`, `cevap` | Videonun sonundaki DÜŞÜN sorusu ve 2-3 cümlelik cevabı (en çok 60 kelime). Cevap videonun altında kapalı durur; öğrenci "Cevabı gör"e dokununca açılır (akışta ve ders penceresinde). Sosyal medyada aynı cevap sabit yoruma yazılır. |
 
 Yalnızca **yayına hazır** videolar bu dosyaya girer. Henüz sesi gelmemiş videolar `video/senaryolar/` altında bekler; sitede "yakında" kutusu çıkmaz.
 

@@ -4,7 +4,8 @@ import data from "@/content/videolar.json";
 import type { DersId } from "./dersler";
 
 export type VideoYer = { ders: DersId; konu: string; kart?: number };
-export type Video = { id: string; baslik: string; sure: number; src: string; poster?: string; yerler: VideoYer[] };
+/** soru: videonun sonundaki DÜŞÜN sorusu; cevap: videonun altında "Cevabı gör" ile açılan kısa açıklama. */
+export type Video = { id: string; baslik: string; sure: number; src: string; poster?: string; yerler: VideoYer[]; soru?: string; cevap?: string };
 
 export const VIDEOLAR = data as unknown as Video[];
 

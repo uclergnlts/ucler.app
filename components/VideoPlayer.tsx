@@ -4,6 +4,7 @@
 // Escape kapatır ve kapanınca odak açma düğmesine döner.
 import { useEffect, useRef } from "react";
 import type { Video } from "@/lib/videolar";
+import Cevap from "./Cevap";
 
 export default function VideoPlayer({ v, onClose }: { v: Video; onClose: () => void }) {
   const ref = useRef<HTMLDialogElement>(null);
@@ -34,7 +35,7 @@ export default function VideoPlayer({ v, onClose }: { v: Video; onClose: () => v
       <div className="player-in">
         <video src={v.src} poster={v.poster} controls autoPlay playsInline preload="metadata" />
         <div className="player-bar">
-          <b>{v.baslik}</b>
+          <span><b>{v.baslik}</b><Cevap v={v} /></span>
           <button className="btn" onClick={onClose}>Karta dön</button>
         </div>
       </div>

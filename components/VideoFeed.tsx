@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { DERSLER } from "@/lib/dersler";
 import { sureYaz, VIDEOLAR, yerHref, type Video } from "@/lib/videolar";
+import Cevap from "./Cevap";
 import { Icon } from "./icons";
 import { PageHead, Top } from "./ui";
 
@@ -38,6 +39,7 @@ function Reel({ v, muted, onSound }: { v: Video; muted: boolean; onSound: () => 
         <span>
           <b>{v.baslik}</b>
           <span className="s">{DERSLER[y.ders].ad} · {sureYaz(v.sure)}</span>
+          <Cevap v={v} />
         </span>
         <button className="reel-sound2" onClick={onSound} aria-pressed={!muted} aria-label={muted ? "Sesi aç" : "Sesi kapat"}>
           {muted ? <SesKapali /> : <SesAcik />}

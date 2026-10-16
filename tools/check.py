@@ -85,6 +85,9 @@ if os.path.exists(VIDEO_JSON) and not sys.argv[1:]:
             if u is None and k == "poster": continue
             if not isinstance(u, str) or not (u.startswith("https://") or u.startswith("/videolar/")):
                 err("video", vid, k, "https:// adresi ya da /videolar/ yolu olmalı")
+        if bool(v.get("soru")) != bool(v.get("cevap")): err("video", vid, "soru ve cevap birlikte yazılmalı")
+        elif not v.get("cevap"): warn.append(f"video {vid}: kapanış sorusunun cevabı yok")
+        elif len(v["cevap"].split()) > 60: warn.append(f"video {vid}: cevap {len(v['cevap'].split())} kelime (en çok 60)")
         if not v.get("yerler"): err("video", vid, "en az bir yer (ders, konu, kart) gerekli")
         for y in v.get("yerler", []):
             t = d.get(y.get("ders"), {}).get(y.get("konu"))
