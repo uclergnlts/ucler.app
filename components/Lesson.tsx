@@ -22,10 +22,10 @@ export default function Lesson({
   const nCards = t.cards.length, nQuiz = t.quiz.length;
   const Back = Icon.back, Bookmark = Icon.kayit, Bulb = Icon.bulb, Play = Icon.play;
 
-  // Videodan gelen bağlantı (?kart=3) dersi o karttan açar.
+  // Videodan gelen bağlantı (?kart=3) dersi o karttan açar; geçersiz değerde ilk kart.
   useEffect(() => {
     const k = Number(new URLSearchParams(location.search).get("kart"));
-    if (k >= 1 && k <= nCards) setS({ ...START, i: k - 1 });
+    if (Number.isInteger(k) && k >= 1 && k <= nCards) setS({ ...START, i: k - 1 });
   }, [nCards]);
 
   useEffect(() => { setProg({ _last: `${ders}.${id}` }); }, [ders, id]);

@@ -1,5 +1,5 @@
 "use client";
-// Videolar sekmesi: Shorts/Reels gibi dikey video akışı: ekrana gelen video sessiz başlar, dokununca ses açılır.
+// Videolar sekmesi: Shorts/Reels gibi dikey video akışı: ekrana gelen video sessiz başlar; ses düğmesi sesi açar ve kapatır.
 // Her videonun altında asıl konusuna ve kartına giden "Konuya git" bağlantısı vardır.
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -24,16 +24,14 @@ function Reel({ v, muted, onSound }: { v: Video; muted: boolean; onSound: () => 
     io.observe(el);
     return () => io.disconnect();
   }, []);
-  const Play = Icon.play;
+  const SesAcik = Icon.sesAcik, SesKapali = Icon.sesKapali;
   return (
     <section className="reel" id={v.id} data-ders={y.ders}>
       <div className="reel-v">
         <video ref={ref} src={v.src} poster={v.poster} muted={muted} loop playsInline preload="metadata" onClick={onSound} />
-        {muted && (
-          <button className="reel-sound" onClick={onSound} aria-label="Sesi aç">
-            <Play /> Sesi aç
-          </button>
-        )}
+        <button className="reel-sound" onClick={onSound} aria-pressed={!muted}>
+          {muted ? <><SesKapali /> Sesi aç</> : <><SesAcik /> Sesi kapat</>}
+        </button>
       </div>
       <div className="reel-cap">
         <span>

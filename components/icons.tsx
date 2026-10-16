@@ -20,6 +20,12 @@ export const Icon = {
   video: () => (
     <svg {...base} strokeLinejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="3" /><path d="M10 9v6l5-3z" fill="currentColor" /></svg>
   ),
+  sesAcik: () => (
+    <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z" /><path d="M17 9a4 4 0 0 1 0 6M19.5 6.5a7.5 7.5 0 0 1 0 11" /></svg>
+  ),
+  sesKapali: () => (
+    <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z" /><path d="M17 10l4 4M21 10l-4 4" /></svg>
+  ),
   kayit: () => (
     <svg {...base} strokeLinejoin="round"><path d="M6 3h12v18l-6-4.5L6 21z" /></svg>
   ),

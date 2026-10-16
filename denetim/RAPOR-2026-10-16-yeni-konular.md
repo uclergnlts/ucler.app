@@ -37,3 +37,16 @@ Denetleyen: Codex. İncelenen sürüm: `002f96c` (59 yeni konu, 236 yeni soru). 
 | N09 | “Şiddeti (W/m²) genlikle artar; kulağın duyduğu şiddet düzeyi desibelle (dB) ölçülür ve her +10 dB şiddetin 10 katı demektir.” Görsel: 10⁻⁵ W/m² · 70 dB ve 10⁻⁶ W/m² · 60 dB. |
 | N11 | Profil: “…sayfayı yenilersen ya da sekmeyi kapatırsan silinir.” |
 | N10 | Dört yeni konu (14'er kart, 4'er soru): **Basit harmonik hareket** (F = −kx, izdüşüm, x = A·cos ωt, v = ω√(A² − x²), a = −ω²x, faz, yay ve sarkaç periyodu, seri/paralel yay, g etkin, enerji paylaşımı, sönüm ve rezonans); **Işığın girişimi ve kırınımı** (Huygens, Young, yol farkı, saçak koşulları ve konumları, Δx = λL/d, sıvıda Δx/n, beyaz ışık, tek yarık, ince zar, polarizasyon); **Hayvanlar âlemi** (omurgasız şubeler, omurgalı sınıflar, kalp ve vücut sıcaklığı karşılaştırması); **Bitkiler âlemi** (damarsız/damarlı, tohumsuz/tohumlu, döl almaşı, açık/kapalı tohumlu, tek/çift çenekli tablosu). Konu sayısı: Fizik 28, Kimya 25, Biyoloji 28. Uygulanmadı: soru sayısını 4'ün üstüne çıkarmak (biçim kuralı, Üçler'in kararı) ve resmî kazanım eşleştirme tablosu. |
+
+# Son değişikliklerin denetimi: 2026-10-16 (ikinci tur)
+
+Denetleyen: Codex. İncelenen sürüm: `1bde609`. Codex'in tam raporu proje sohbetinde. Önceki bulgulardan N01–N09 ve N11 kapandı; N10'un resmî kazanım eşleştirme kısmı açık.
+
+| # | Önem | Yer | Sorun | Claude'un uygulaması |
+|---|---|---|---|---|
+| S01 | Kritik | Ders: `?kart=` bağlantısı | `?kart=1.5` ders ekranını çökertiyordu. | `Number.isInteger` ve aralık denetimi; geçersiz değerde (1.5, 0, −1, 99, abc) ders ilk karttan açılır. Tarayıcıda denendi. |
+| S02 | Kritik | Bitkiler âlemi › kart 8 | “Tohumlu bitkilerde sperm suda yüzmez” genellemesi. | “Tohumlu bitkiler döllenme için dış ortamdaki suya bağımlı değildir”; görsel: “döllenme dış ortam suyuna bağlı değil”. |
+| S03 | Orta | Video penceresi | Odak pencerenin dışına çıkıyor, arkadaki kart değişebiliyordu. | Yerel `<dialog>` + `showModal()`: arka ekran etkileşime kapalı, odak açılışta “Karta dön”de, Tab içeride kalır, Escape kapatır, odak video düğmesine döner. Belge düzeyindeki tuş engelleme kaldırıldı; video kontrolleri klavyeyle çalışır. |
+| S04 | Orta | Videolar akışı | Ses açılınca düğme kayboluyordu. | Düğme her zaman görünür: “Sesi aç” / “Sesi kapat”, `aria-pressed`, ses simgeleri. Enter ve Boşluk ile iki yönde denendi. |
+| S05 | Orta | Basit harmonik hareket › kart 5, özet | Pozitif köklü bağıntı işaretli hız gibi sunuluyordu. | Kart, görsel, özet ve soru açıklaması `|v| = ω√(A² − x²)`; “hızın yönü cismin hangi yöne gittiğine bağlıdır”. |
+| S06 | Küçük | Dalga optiği › kart 12 | “Sabun köpeği” yazımı. | Metin ve görselde “sabun köpüğü(nde)”. |

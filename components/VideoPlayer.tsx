@@ -1,29 +1,33 @@
 "use client";
 // Ders ekranında kartın üstünde açılan video. Kapatınca öğrenci kaldığı karttan devam eder.
-import { useEffect } from "react";
+// Yerel <dialog> (showModal): odak pencerenin içinde kalır, arkadaki ders etkileşime kapanır,
+// Escape kapatır ve kapanınca odak açma düğmesine döner.
+import { useEffect, useRef } from "react";
 import type { Video } from "@/lib/videolar";
 
 export default function VideoPlayer({ v, onClose }: { v: Video; onClose: () => void }) {
+  const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-      e.stopPropagation();
-    };
-    document.addEventListener("keydown", onKey, true);
+    const d = ref.current;
+    if (!d) return;
+    const opener = document.activeElement as HTMLElement | null;
     const o = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    if (!d.open) d.showModal();
+    d.querySelector<HTMLButtonElement>(".player-bar .btn")?.focus();
     return () => {
-      document.removeEventListener("keydown", onKey, true);
+      if (d.open) d.close();
       document.body.style.overflow = o;
+      opener?.focus();
     };
-  }, [onClose]);
+  }, []);
 
   return (
-    <div
+    <dialog
+      ref={ref}
       className="player"
-      role="dialog"
-      aria-modal="true"
       aria-label={v.baslik}
+      onCancel={(e) => { e.preventDefault(); onClose(); }}
       onTouchStart={(e) => e.stopPropagation()}
       onTouchEnd={(e) => e.stopPropagation()}
     >
@@ -34,6 +38,6 @@ export default function VideoPlayer({ v, onClose }: { v: Video; onClose: () => v
           <button className="btn" onClick={onClose}>Karta dön</button>
         </div>
       </div>
-    </div>
+    </dialog>
   );
 }
