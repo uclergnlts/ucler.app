@@ -19,7 +19,7 @@ export default function Tabs() {
   const cur =
     parts.length === 0
       ? "home"
-      : ({ kaydedilenler: "kayit", profil: "profil", videolar: "video" } as const)[parts[0]] ?? "kesfet";
+      : ({ kaydedilenler: "kayit", profil: "profil", videolar: "video", oyunlar: "home" } as const)[parts[0]] ?? "kesfet";
   return (
     <div className="tabs">
       <nav aria-label="Bölümler">

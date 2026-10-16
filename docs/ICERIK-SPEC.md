@@ -50,5 +50,12 @@ Videolar ayrı bir dosyada durur: `content/videolar.json` (biçim `docs/VIDEOLAR
 - `<style>`, `<script>`, `foreignObject` ve dış görsel kullanılmaz.
 - Görsel süs değildir; konuyu anlatır (şema, karşılaştırma, grafik, model).
 
+## Etkileşimli kart
+Bir karta `etk` alanı eklenirse o kartta durağan SVG yerine öğrencinin değiştirebildiği bir görsel çıkar (`components/Etk.tsx`). `svg` yine zorunludur; yedek görsel olarak kalır. Türler ve başlangıç değerleri:
+- `{"tur": "atom", "p": 11, "n": 12, "e": 11}`: proton, nötron, elektron düğmeleri; element, gösterim, katmanlar ve iyon yükü değişir.
+- `{"tur": "vektor", "v": 10, "aci": 30}`: büyüklük ve açı sürgüsü; V<sub>x</sub> ve V<sub>y</sub> hesaplanır.
+- `{"tur": "osmoz", "c": 0.9}`: dış ortamın tuz oranı (%0-2); alyuvar şişer, dengede kalır ya da büzüşür.
+Yeni tür eklemek kod işidir; içerik yalnızca var olan türleri kullanır. Doğrulayıcı türü ve değer aralıklarını denetler.
+
 ## Doğrulama
 `python3 tools/check.py` komutu "TAMAM" yazmalıdır. Ardından `tools/ekran.js` ile alınan görüntülere bakılır, çünkü taşma ve üst üste binme gibi sorunları ancak göz yakalar.

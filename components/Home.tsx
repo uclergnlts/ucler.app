@@ -12,7 +12,7 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
   const doneAll = doneKeys(prog).length;
   const [ld, lid] = (prog._last || "").split(".");
   const last = ld in all ? all[ld as DersId].find((e) => e.id && e.id === lid) : undefined;
-  const Play = Icon.play;
+  const Play = Icon.play, Game = Icon.oyun;
   const router = useRouter();
 
   // Eski tek sayfalık sürümün adresleri (#kimya.simya, #kesfet, #kayit...) yeni adreslere yönlensin.
@@ -56,6 +56,17 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
             </Link>
           </section>
         )}
+
+        <section style={{ display: "grid", gap: 8 }}>
+          <div className="label">Oyun alanı</div>
+          <Link className="resume" data-ders="kimya" href="/oyunlar/">
+            <span className="dot"><Game /></span>
+            <span style={{ minWidth: 0 }}>
+              <b>Periyodik tabloda yerini bul</b>
+              <span>Konulara bağlı kısa oyunlar</span>
+            </span>
+          </Link>
+        </section>
 
         <section style={{ display: "grid", gap: 10 }}>
           <div className="label">Dersler</div>

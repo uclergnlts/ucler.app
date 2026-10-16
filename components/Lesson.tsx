@@ -9,6 +9,8 @@ import { kartVideolari, sureYaz, type Video } from "@/lib/videolar";
 import { Icon } from "./icons";
 import { Html, href, Logo } from "./ui";
 import VideoPlayer from "./VideoPlayer";
+import Etk from "./Etk";
+import { konuOyunlari } from "@/lib/oyunlar";
 
 type State = { i: number; q: number; picked: number | null; right: number };
 const START: State = { i: 0, q: -1, picked: null, right: 0 };
@@ -54,6 +56,7 @@ export default function Lesson({
   stepRef.current = play ? () => {} : step;
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      if ((e.target as Element | null)?.closest?.("input")) return; // sürgüdeki ok tuşları kart değiştirmesin
       if (e.key === "ArrowRight") stepRef.current(1);
       if (e.key === "ArrowLeft") stepRef.current(-1);
     };
@@ -64,6 +67,8 @@ export default function Lesson({
   // Kaydırma: yalnızca kartlarda
   const touch = useRef<{ x: number; y: number } | null>(null);
   const onTouchStart = (e: React.TouchEvent) => {
+    // Etkileşimli görseldeki sürgüyü kaydırmak kart değiştirmesin.
+    if ((e.target as Element).closest(".etk")) return;
     if (s.q < 0) touch.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
   };
   const onTouchEnd = (e: React.TouchEvent) => {
@@ -81,7 +86,7 @@ export default function Lesson({
     const c = t.cards[s.i], last = s.i === nCards - 1, vids = kartVideolari(ders, id, s.i + 1);
     body = (
       <article className="card" key={`c${s.i}`} aria-live="polite">
-        <div className="visual" dangerouslySetInnerHTML={{ __html: c.svg }} />
+        {c.etk ? <Etk e={c.etk} /> : <div className="visual" dangerouslySetInnerHTML={{ __html: c.svg }} />}
         <div className="step">{s.i + 1} / {nCards}</div>
         <div className="say"><div className="bubble"><Html as="h2" html={c.h} /><Html as="p" html={c.p} /></div></div>
         {c.key && <div className="note"><Bulb /><Html html={c.key} /></div>}
@@ -150,6 +155,9 @@ export default function Lesson({
         <p>{t.title} tamamlandı.</p>
         <div className="acts">
           {next && <Link className="btn main" href={href(ders, next.id)}>Sıradaki: {next.title}</Link>}
+          {konuOyunlari(ders, id).map((o) => (
+            <Link key={o.id} className="btn" href={`/oyunlar/${o.id}/`}>Oyna: {o.ad}</Link>
+          ))}
           <button className="btn" onClick={() => setS(START)}>Konuyu tekrar et</button>
           <Link className="btn" href={href(ders)}>{DERSLER[ders].ad} konularına dön</Link>
         </div>

@@ -5,7 +5,8 @@ import biyoloji from "@/content/biyoloji.json";
 import { DERS_IDS, DERSLER, type DersId, type Entry, type Topic } from "./dersler";
 
 export * from "./dersler";
-const DATA: Record<DersId, Record<string, Topic>> = { fizik, kimya, biyoloji };
+// JSON'dan gelen "tur" alanı string olarak çıkarılır; biçimi tools/check.py doğrular.
+const DATA = { fizik, kimya, biyoloji } as unknown as Record<DersId, Record<string, Topic>>;
 
 export const topic = (d: DersId, id: string): Topic | undefined => DATA[d][id];
 

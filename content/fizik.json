@@ -643,7 +643,12 @@
         "h": "Bileşenlere ayırma",
         "p": "Eğik bir vektörü yatay ve düşey iki parçaya ayırabilirsin: V<sub>x</sub> = V·cosθ, V<sub>y</sub> = V·sinθ. İkisi uç uca eklenince yine V'yi verir. Örnek: V = 10, θ = 30° ise V<sub>x</sub> ≈ 8,66, V<sub>y</sub> = 5.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='50' y1='170' x2='172.9' y2='170' stroke='var(--c1)' stroke-width='3' fill='none'/><polygon points='179.9,170 169.9,174.5 169.9,165.5' fill='var(--c1)'/><line x1='179.9' y1='170' x2='179.9' y2='102' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='179.9,95 184.4,105 175.4,105' fill='var(--c2)'/><line x1='50' y1='170' x2='173.8' y2='98.5' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='179.9,95 173.5,103.9 169,96.1' fill='var(--c3)'/><path d='M80 170 A30 30 0 0 0 76 155' fill='none' stroke='var(--acc)' stroke-width='2'/><text x='86' y='164' font-size='12' fill='var(--acc)'>30°</text><text x='74' y='116' font-size='13' fill='var(--c3)' font-weight='bold'>V = 10</text><text x='115' y='190' font-size='13' fill='var(--c1)' text-anchor='middle'>Vx ≈ 8,66</text><text x='188' y='137' font-size='13' fill='var(--c2)'>Vy = 5</text><text x='200' y='40' font-size='12' fill='var(--ink)'>cos30° ≈ 0,866</text><text x='200' y='62' font-size='12' fill='var(--ink)'>sin30° = 0,5</text></svg>",
-        "key": "Vx = V·cosθ, Vy = V·sinθ (θ: +x ekseniyle yapılan açı)"
+        "key": "Vx = V·cosθ, Vy = V·sinθ (θ: +x ekseniyle yapılan açı)",
+        "etk": {
+          "tur": "vektor",
+          "v": 10,
+          "aci": 30
+        }
       },
       {
         "h": "Bileşenlerden büyüklük",

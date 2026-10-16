@@ -46,6 +46,13 @@ for ders, topics in d.items():
             if re.search(r"<svg[^>]*\s(width|height)=", s): err(ders, tid, i, "svg width/height özniteliği")
             if re.search(r"<(script|style|foreignObject|image)\b", s): err(ders, tid, i, "svg içinde yasak etiket")
             ids += re.findall(r"\sid='([^']+)'", s)
+            if "etk" in c:  # etkileşimli görsel; svg yine zorunlu (yedek görsel)
+                e = c["etk"]
+                ALAN = {"atom": {"p": (1, 20), "n": (0, 24), "e": (0, 20)}, "vektor": {"v": (1, 10), "aci": (0, 180)}, "osmoz": {"c": (0, 2)}}
+                if e.get("tur") not in ALAN: err(ders, tid, i, "etk: bilinmeyen tür", e.get("tur"))
+                else:
+                    for k, (lo, hi) in ALAN[e["tur"]].items():
+                        if not isinstance(e.get(k), (int, float)) or not lo <= e[k] <= hi: err(ders, tid, i, "etk:", k, "eksik ya da aralık dışı")
         dup = {x for x in ids if ids.count(x) > 1}
         if dup: err(ders, tid, "tekrar eden svg id", sorted(dup))
         for j, q in enumerate(t.get("quiz", [])):

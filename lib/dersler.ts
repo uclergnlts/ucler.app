@@ -1,7 +1,12 @@
 // Ders listesi ve türler. İstemci bileşenleri yalnızca bunu içe aktarır; konu içerikleri (büyük JSON) lib/content.ts'tedir.
 import dersler from "@/content/dersler.json";
 
-export type Card = { h: string; p: string; svg: string; key?: string };
+/** Etkileşimli kart görseli (components/Etk.tsx). Başlangıç değerleri içerikten gelir. */
+export type Etk =
+  | { tur: "atom"; p: number; n: number; e: number }
+  | { tur: "vektor"; v: number; aci: number }
+  | { tur: "osmoz"; c: number };
+export type Card = { h: string; p: string; svg: string; key?: string; etk?: Etk };
 export type Question = { q: string; o: string[]; a: number; e: string };
 export type Topic = { title: string; summary: string; cards: Card[]; quiz: Question[] };
 export type DersId = "fizik" | "kimya" | "biyoloji";
