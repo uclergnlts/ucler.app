@@ -15,12 +15,13 @@ app/               sayfalar (adres = klasör)
   globals.css      bütün stil: renk değişkenleri, bileşen sınıfları
   page.tsx                 /                ana sayfa
   kesfet/page.tsx          /kesfet/         arama ve ders süzgeci
-  kaydedilenler/page.tsx   /kaydedilenler/  kaydedilen konular
+  kaydedilenler/page.tsx   /kaydedilenler/  eski adres; Profil'i gösterir (kaydedilenler Profil'in içinde)
+  oyunlar/                 /oyunlar/        Oyunlar sekmesi ve oyunlar
   profil/page.tsx          /profil/         profil
   videolar/page.tsx        /videolar/       Videolar sekmesi: dikey video akışı
   [ders]/page.tsx          /<ders>/         konu yolu
   [ders]/[konu]/page.tsx   /<ders>/<konu>/  ders ekranı
-components/        ekranların kendisi (Home, Road, Lesson, Explore, Saved, Profile, Tabs, VideoPlayer, VideoFeed, ui, icons)
+components/        ekranların kendisi (Home, Road, Lesson, Explore, Profile, Oyunlar, Tabs, VideoPlayer, VideoFeed, ui, icons)
 lib/
   dersler.ts       türler ve ders listesi (tarayıcıya giden küçük kısım)
   content.ts       konu içeriğini okuyan yardımcılar (yalnızca derleme sırasında)

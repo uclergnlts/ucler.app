@@ -27,7 +27,7 @@ Her denetimde aşağıdaki listeyi baştan sona geç. Bulgularını `denetim/RAP
 ## 5. Kod
 - [ ] `python3 tools/check.py` → TAMAM.
 - [ ] Tarayıcı konsolunda hata yok (`tools/ekran.js` "Sayfa hatası yok" diyor).
-- [ ] Bütün adresler çalışıyor: `/`, `/kesfet/`, `/kaydedilenler/`, `/profil/`, `/<ders>/`, `/<ders>/<konu>/` ve olmayan bir konu adresi (404 sayfası). `npm run build` hatasız bitiyor.
+- [ ] Bütün adresler çalışıyor: `/`, `/kesfet/`, `/videolar/`, `/oyunlar/`, `/profil/`, `/kaydedilenler/`, `/<ders>/`, `/<ders>/<konu>/` ve olmayan bir konu adresi (404 sayfası). `npm run build` hatasız bitiyor.
 - [ ] Kaydetme ve ilerleme sayfa yenilenince korunuyor. `localStorage` kapalıyken site çökmüyor.
 - [ ] Kullanılmayan, eski kod ya da eski tasarımdan kalan parça yok.
 

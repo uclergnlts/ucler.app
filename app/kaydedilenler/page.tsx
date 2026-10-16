@@ -1,8 +1,9 @@
-import Saved from "@/components/Saved";
+import Profile from "@/components/Profile";
 import { allEntries } from "@/lib/content";
 
-export const metadata = { title: "Kaydedilenler" };
+// Kaydedilenler artık Profil'in içinde. Eski bağlantılar çalışsın diye bu adres de Profil'i gösterir.
+export const metadata = { title: "Profil" };
 
 export default function Page() {
-  return <Saved all={allEntries()} />;
+  return <Profile all={allEntries()} />;
 }

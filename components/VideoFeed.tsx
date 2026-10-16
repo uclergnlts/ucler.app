@@ -1,65 +1,189 @@
 "use client";
-// Videolar sekmesi: Shorts/Reels gibi dikey video akışı: ekrana gelen video sessiz başlar; ses düğmesi sesi açar ve kapatır.
-// Her videonun altında asıl konusuna ve kartına giden "Konuya git" bağlantısı vardır.
+// Videolar sekmesi: Reels/Shorts gibi tam ekran dikey akış. Yukarı kaydırınca sıradaki video gelir.
+// Ekrana gelen video sessiz başlar (tarayıcılar sesli otomatik oynatmaya izin vermez); ilk dokunuş sesi açar,
+// sonraki dokunuşlar durdurur ve sürdürür. Videonun altyazısı alt kenara yakın olduğu için düğmeler videonun
+// üstüne değil altındaki şeride konur: konunun adı, "Konuya git", "Cevabı gör", kaydet, paylaş ve ses.
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { DERSLER } from "@/lib/dersler";
-import { sureYaz, VIDEOLAR, yerHref, type Video } from "@/lib/videolar";
-import Cevap from "./Cevap";
+import { toggleSaved, useSaved } from "@/lib/store";
+import { VIDEOLAR, yerHref, type Video } from "@/lib/videolar";
 import { Icon } from "./icons";
 import { PageHead, Top } from "./ui";
 
-function Reel({ v, muted, onSound }: { v: Video; muted: boolean; onSound: () => void }) {
+type Ortak = { muted: boolean; setMuted: (m: boolean) => void; toast: (t: string) => void };
+
+function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean; o: Ortak }) {
   const ref = useRef<HTMLVideoElement>(null);
-  const y = v.yerler[0];
+  const [paused, setPaused] = useState(false);
+  const [flash, setFlash] = useState<"play" | "pause" | null>(null);
+  const [cevap, setCevap] = useState(false);
+  const [pct, setPct] = useState(0);
+  const [hint, setHint] = useState(false);
+  const y = v.yerler[0], key = `${y.ders}.${y.konu}`;
+  const saved = useSaved().includes(key);
+  const I = Icon;
+
+  // Yalnızca ekrandaki video oynar; ekrandan çıkan durur ve başa sarılır.
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const io = new IntersectionObserver(
-      ([e]) => {
-        if (e.isIntersecting && e.intersectionRatio > 0.6) el.play().catch(() => {});
-        else el.pause();
-      },
-      { threshold: [0, 0.6, 1] },
-    );
-    io.observe(el);
-    // Başka sayfaya geçilince React videoyu kaldırır ama tarayıcı onu arkada çalmaya devam ettirir.
-    return () => {
-      io.disconnect();
+    if (active) {
+      setPaused(false);
+      setHint(true);
+      el.play().catch(() => setPaused(true));
+    } else {
       el.pause();
+      el.currentTime = 0;
+      setCevap(false);
+    }
+  }, [active]);
+  // "Sesi açmak için dokun" ipucu birkaç saniye görünür; sonra yalnızca alttaki ses düğmesi kalır.
+  useEffect(() => {
+    if (!hint) return;
+    const t = setTimeout(() => setHint(false), 2800);
+    return () => clearTimeout(t);
+  }, [hint]);
+  // Başka sayfaya geçilince React videoyu kaldırır ama tarayıcı onu arkada çalmaya devam ettirebilir.
+  useEffect(() => () => ref.current?.pause(), []);
+
+  const toggle = useCallback(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (o.muted) {
+      o.setMuted(false);
+      if (el.paused) el.play().catch(() => {});
+      setPaused(false);
+      return;
+    }
+    if (el.paused) { el.play().catch(() => {}); setPaused(false); setFlash("play"); }
+    else { el.pause(); setPaused(true); setFlash("pause"); }
+  }, [o]);
+  useEffect(() => {
+    if (!flash) return;
+    const t = setTimeout(() => setFlash(null), 600);
+    return () => clearTimeout(t);
+  }, [flash]);
+
+  // Klavye: boşluk durdurur/sürdürür, m sesi açar/kapatır (yalnızca ekrandaki videoda).
+  useEffect(() => {
+    if (!active) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === " " && !(e.target as Element)?.closest?.("button,a")) { e.preventDefault(); toggle(); }
+      if (e.key === "m") o.setMuted(!o.muted);
     };
-  }, []);
-  const SesAcik = Icon.sesAcik, SesKapali = Icon.sesKapali;
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [active, toggle, o]);
+
+  async function paylas() {
+    const url = `${location.origin}/videolar/#${v.id}`;
+    try {
+      if (navigator.share) await navigator.share({ title: v.baslik, url });
+      else { await navigator.clipboard.writeText(url); o.toast("Bağlantı kopyalandı"); }
+    } catch {}
+  }
+
   return (
-    <section className="reel" id={v.id} data-ders={y.ders}>
+    <section className="reel" id={v.id} data-ders={y.ders} aria-label={v.baslik}>
       <div className="reel-v">
-        <video ref={ref} src={v.src} poster={v.poster} muted={muted} loop playsInline preload="metadata" onClick={onSound} />
-        <button className="reel-sound" onClick={onSound} aria-pressed={!muted} aria-label={muted ? "Sesi aç" : "Sesi kapat"}>
-          {muted ? <SesKapali /> : <SesAcik />}
-          {muted ? "Sesi aç" : "Sesi kapat"}
-        </button>
+        <video
+          ref={ref}
+          src={v.src}
+          poster={v.poster}
+          muted={o.muted}
+          loop
+          playsInline
+          preload={active ? "auto" : "metadata"}
+          onClick={toggle}
+          onTimeUpdate={(e) => setPct((100 * e.currentTarget.currentTime) / (e.currentTarget.duration || 1))}
+        />
+        {o.muted && active && hint && !cevap && (
+          <button className="reel-hint" onClick={toggle}><I.sesKapali />Sesi açmak için dokun</button>
+        )}
+        {(flash || (paused && !o.muted)) && (
+          <span className="reel-flash" aria-hidden="true">{flash === "play" ? <I.play /> : <I.pause />}</span>
+        )}
       </div>
-      <div className="reel-cap">
-        <span>
-          <b>{v.baslik}</b>
-          <span className="s">{DERSLER[y.ders].ad} · {sureYaz(v.sure)}</span>
-          <Cevap v={v} />
-        </span>
-        <button className="reel-sound2" onClick={onSound} aria-pressed={!muted} aria-label={muted ? "Sesi aç" : "Sesi kapat"}>
-          {muted ? <SesKapali /> : <SesAcik />}
-        </button>
-        <Link className="btn main" href={yerHref(y)}>Konuya git</Link>
+
+      <div className="reel-info">
+        <span className="reel-prog" aria-hidden="true"><i style={{ width: `${pct}%` }} /></span>
+        <span className="k"><b>{DERSLER[y.ders].ad}</b> · {konu || v.baslik}</span>
+        <div className="reel-acts">
+          <Link className="reel-go" href={yerHref(y)}>Konuya git<I.ileri /></Link>
+          {v.cevap && <button className="reel-pill" onClick={() => setCevap(true)}>Cevabı gör</button>}
+          <span className="sp" />
+          <button className="reel-ic" onClick={() => { toggleSaved(key); o.toast(saved ? "Kaydedilenlerden çıkarıldı" : "Konu kaydedildi"); }} aria-pressed={saved} aria-label="Konuyu kaydet">
+            <I.kayit />
+          </button>
+          <button className="reel-ic" onClick={paylas} aria-label="Paylaş"><I.paylas /></button>
+          <button className="reel-ic" onClick={() => o.setMuted(!o.muted)} aria-pressed={!o.muted} aria-label={o.muted ? "Sesi aç" : "Sesi kapat"}>
+            {o.muted ? <I.sesKapali /> : <I.sesAcik />}
+          </button>
+        </div>
       </div>
+
+      {cevap && (
+        <div className="sheet-bg" onClick={() => setCevap(false)}>
+          <div className="sheet" role="dialog" aria-label="Sorunun cevabı" onClick={(e) => e.stopPropagation()}>
+            <span className="grip" aria-hidden="true" />
+            <span className="k">Videonun sorusu</span>
+            <b>{v.soru}</b>
+            <p>{v.cevap}</p>
+            <button className="btn" onClick={() => setCevap(false)}>Kapat</button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
 
-export default function VideoFeed() {
+export default function VideoFeed({ konular }: { konular: Record<string, string> }) {
   const [muted, setMuted] = useState(true);
+  const [active, setActive] = useState(VIDEOLAR[0]?.id ?? "");
+  const [msg, setMsg] = useState<string | null>(null);
+  const feed = useRef<HTMLDivElement>(null);
+  const toast = useCallback((t: string) => setMsg(t), []);
+  const o = { muted, setMuted, toast };
+
   useEffect(() => {
+    if (!msg) return;
+    const t = setTimeout(() => setMsg(null), 1600);
+    return () => clearTimeout(t);
+  }, [msg]);
+
+  // Adresteki #KIM-03 o videodan başlatır; ekrandaki video değişince adres de güncellenir (paylaşmak için).
+  useEffect(() => {
+    const f = feed.current;
+    if (!f) return;
     const id = decodeURIComponent(location.hash.slice(1));
-    if (id) document.getElementById(id)?.scrollIntoView();
+    const el = id ? document.getElementById(id) : null;
+    if (el) { f.scrollTop = el.offsetTop; setActive(id); }
+    const io = new IntersectionObserver(
+      (es) => es.forEach((e) => {
+        if (e.isIntersecting && e.intersectionRatio > 0.6) {
+          setActive(e.target.id);
+          history.replaceState(null, "", `#${e.target.id}`);
+        }
+      }),
+      { root: f, threshold: [0.6] },
+    );
+    f.querySelectorAll(".reel").forEach((r) => io.observe(r));
+    return () => io.disconnect();
   }, []);
+
+  // Klavye: aşağı/yukarı ok sıradaki/önceki video.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const f = feed.current;
+      if (!f || !["ArrowDown", "ArrowUp"].includes(e.key)) return;
+      e.preventDefault();
+      f.scrollBy({ top: (e.key === "ArrowDown" ? 1 : -1) * f.clientHeight, behavior: "smooth" });
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
+
   if (!VIDEOLAR.length)
     return (
       <div className="app">
@@ -70,8 +194,9 @@ export default function VideoFeed() {
       </div>
     );
   return (
-    <div className="feed">
-      {VIDEOLAR.map((v) => <Reel key={v.id} v={v} muted={muted} onSound={() => setMuted((m) => !m)} />)}
+    <div className="feed" ref={feed}>
+      {VIDEOLAR.map((v) => <Reel key={v.id} v={v} konu={konular[v.id]} active={active === v.id} o={o} />)}
+      {msg && <div className="toast" role="status">{msg}</div>}
     </div>
   );
 }

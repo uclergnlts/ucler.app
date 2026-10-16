@@ -1,8 +1,8 @@
 "use client";
-import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
+import { DERSLER, DERS_IDS, type DersId, type Entry, isDers } from "@/lib/dersler";
 import { doneKeys, resetAll, useProg, useSaved, useStorageOk } from "@/lib/store";
 import { Icon } from "./icons";
-import { PageHead, Top } from "./ui";
+import { PageHead, Row, Top } from "./ui";
 
 export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
   const prog = useProg(), saved = useSaved(), storageOk = useStorageOk();
@@ -13,6 +13,11 @@ export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
     if (m) { right += +m[1]; total += +m[2]; }
   }
   const User = Icon.profil;
+  const savedList = saved.flatMap((k) => {
+    const [d, id] = k.split(".");
+    const e = isDers(d) ? all[d].find((x) => x.id === id) : undefined;
+    return e ? [e] : [];
+  });
 
   return (
     <div className="app">
@@ -35,8 +40,18 @@ export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
           <div className="stat"><b>{total ? `${Math.round((100 * right) / total)}%` : "–"}</b><span>doğru cevap</span></div>
           <div className="stat"><b>{saved.length}</b><span>kayıtlı</span></div>
         </section>
-        <section style={{ display: "grid", gap: 10 }}>
-          <div className="label">Derslerdeki ilerleme</div>
+        <section className="sec" id="kaydedilenler">
+          <h2 className="sec-h">Kaydedilenler</h2>
+          {savedList.length ? (
+            <div className="rows">
+              {savedList.map((e) => <Row key={`${e.ders}.${e.id}`} e={e} done={!!prog[`${e.ders}.${e.id}`]} />)}
+            </div>
+          ) : (
+            <div className="empty">Henüz kaydettiğin bir konu yok. Ders ekranındaki ya da videodaki işaret simgesine dokunarak konuyu buraya ekleyebilirsin.</div>
+          )}
+        </section>
+        <section className="sec">
+          <h2 className="sec-h">Derslerdeki ilerleme</h2>
           <div className="bars">
             {DERS_IDS.map((d) => {
               const r = all[d].filter((e) => e.id), n = r.filter((e) => prog[`${d}.${e.id}`]).length;
@@ -49,8 +64,8 @@ export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
             })}
           </div>
         </section>
-        <section style={{ display: "grid", gap: 10 }}>
-          <div className="label">Hesap</div>
+        <section className="sec">
+          <h2 className="sec-h">Hesap</h2>
           <button className="btn" disabled>Hesap oluştur · yakında</button>
           <button
             className="btn"

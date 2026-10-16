@@ -22,7 +22,7 @@ export default function Lesson({
   const [play, setPlay] = useState<Video | null>(null);
   const saved = useSaved().includes(`${ders}.${id}`);
   const nCards = t.cards.length, nQuiz = t.quiz.length;
-  const Back = Icon.back, Bookmark = Icon.kayit, Bulb = Icon.bulb, Play = Icon.play;
+  const Back = Icon.back, Close = Icon.kapat, Bookmark = Icon.kayit, Bulb = Icon.bulb, Play = Icon.play;
 
   // Videodan gelen bağlantı (?kart=3) dersi o karttan açar; geçersiz değerde ilk kart.
   useEffect(() => {
@@ -88,12 +88,12 @@ export default function Lesson({
       <article className="card" key={`c${s.i}`} aria-live="polite">
         {c.etk ? <Etk key={s.i} e={c.etk} svg={c.svg} /> : <div className="visual" dangerouslySetInnerHTML={{ __html: c.svg }} />}
         <div className="step">{s.i + 1} / {nCards}</div>
-        <div className="say"><div className="bubble"><Html as="h2" html={c.h} /><Html as="p" html={c.p} /></div></div>
+        <div className="ctext"><Html as="h2" html={c.h} /><Html as="p" html={c.p} /></div>
         {c.key && <div className="note"><Bulb /><Html html={c.key} /></div>}
         {vids.map((v) => (
           <button key={v.id} className="vidbtn" onClick={() => setPlay(v)}>
-            <span className="pl"><Play /></span>
-            <span><b>{v.baslik}</b><span className="s">Video · {sureYaz(v.sure)}</span></span>
+            <span className="pl">{v.poster && <img src={v.poster} alt="" />}<Play /></span>
+            <span><b>{v.baslik}</b><span className="s">Kısa video · {sureYaz(v.sure)}</span></span>
           </button>
         ))}
       </article>
@@ -110,7 +110,7 @@ export default function Lesson({
       <article className="card" key={`q${s.q}`}>
         <div className="step">Soru {s.q + 1} / {nQuiz}</div>
         {p === null ? (
-          <div className="say"><div className="bubble"><Html as="h2" html={Q.q} /></div></div>
+          <div className="ctext"><Html as="h2" html={Q.q} /></div>
         ) : (
           <Html as="h2" className="qdone" html={Q.q} />
         )}
@@ -128,11 +128,9 @@ export default function Lesson({
           ))}
         </div>
         {p !== null && (
-          <div className="say">
-            <div className={`bubble ${ok ? "ok" : "no"}`}>
-              <h2>{ok ? "Doğru!" : `Doğru cevap ${"ABCD"[Q.a]}`}</h2>
-              <Html as="p" html={Q.e} />
-            </div>
+          <div className={`feedback ${ok ? "ok" : "no"}`}>
+            <h2>{ok ? "Doğru!" : `Doğru cevap ${"ABCD"[Q.a]}`}</h2>
+            <Html as="p" html={Q.e} />
           </div>
         )}
       </article>
@@ -167,17 +165,17 @@ export default function Lesson({
 
   return (
     <div className="app" data-ders={ders} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
-      <header className="top">
-        <Link className="back" href={href(ders)} aria-label="Konudan çık"><Back /></Link>
-        <div className="ttl">{t.title}</div>
+      <header className="top lesson-top">
+        <Link className="back" href={href(ders)} aria-label="Konudan çık"><Close /></Link>
+        <div className="ttl">
+          <span>{t.title}</span>
+          <span className="prog" aria-hidden="true"><i style={{ width: `${(100 * (pos + 1)) / (nCards + nQuiz + 1)}%` }} /></span>
+        </div>
         <button className="back save" aria-pressed={saved} aria-label="Konuyu kaydet" onClick={() => toggleSaved(`${ders}.${id}`)}>
           <Bookmark />
         </button>
       </header>
       <main className="view lesson">
-        <div className="segs" aria-hidden="true">
-          {Array.from({ length: nCards + nQuiz }, (_, k) => <i key={k} className={k <= pos ? "on" : ""} />)}
-        </div>
         {body}
         {controls}
       </main>

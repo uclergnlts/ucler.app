@@ -35,7 +35,7 @@ Yalnızca **yayına hazır** videolar bu dosyaya girer. Henüz sesi gelmemiş vi
 
 ## 2. Gösterim
 1. **Ders ekranında, ilgili kartın altında** (ek kolaylık). Kartın altında "Video · 0:52" düğmesi çıkar. Dokununca video kartın üstünde açılır, kapatınca öğrenci kaldığı karttan devam eder. Asıl yer burası, çünkü öğrenme o kartta oluyor.
-2. **Videolar sekmesinde.** Alt menüde ayrı bir sekmedir (`/videolar/`). Shorts/Reels gibi dikey kaydırılan bir akıştır: ekrana gelen video sessiz başlar; her zaman görünen ses düğmesi ("Sesi aç" / "Sesi kapat") sesi açar ve kapatır. Her videonun altında **"Konuya git"** bağlantısı vardır ve öğrenciyi doğrudan ilgili karta götürür (`/kimya/simya/?kart=2`).
+2. **Videolar sekmesinde.** Alt menüde ayrı bir sekmedir (`/videolar/`). Reels/Shorts gibi tam ekran, yukarı kaydırılan dikey bir akıştır; her kaydırma tam bir videoya oturur ve yalnızca ekrandaki video oynar. Video sessiz başlar (tarayıcılar sesli otomatik oynatmaya izin vermez): ilk dokunuş sesi açar, sonraki dokunuşlar durdurur ve sürdürür. Videonun altyazısı alt kenara yakın olduğu için düğmeler videonun üstüne değil altındaki beyaz şeride konur: dersin ve konunun adı, **"Konuya git"** (ilgili karta götürür, ör. `/kimya/simya/?kart=2`), **"Cevabı gör"** (alttan açılan pencere), konuyu kaydet, paylaş ve ses. Adres ekrandaki videoyu gösterir (`/videolar/#KIM-03`), böylece paylaşılan bağlantı o videodan açılır. Klavyede aşağı/yukarı ok, boşluk ve `m` çalışır. Ana sayfadaki "Kısa videolar" rafı da bu akışa açılır.
 
 Videolarda maskot ya da süs karakteri olmaz; görsel stil `docs/KARARLAR.md` içindeki "sade bilgi grafiği"dir.
 

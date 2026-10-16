@@ -30,7 +30,7 @@ server.listen(0, async () => {
   const errs = [];
   p.on('pageerror', e => errs.push(e.message));
   p.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
-  const pages = [['ana', '/'], ['kesfet', '/kesfet/'], ['kayit', '/kaydedilenler/'], ['profil', '/profil/'], ['videolar', '/videolar/'], ...Object.keys(dersler).map(d => [d, `/${d}/`])];
+  const pages = [['ana', '/'], ['kesfet', '/kesfet/'], ['oyunlar', '/oyunlar/'], ['profil', '/profil/'], ['videolar', '/videolar/'], ...Object.keys(dersler).map(d => [d, `/${d}/`])];
   for (const [ad, url] of pages) {
     await p.goto(base + url); await p.waitForTimeout(400);
     await p.screenshot({ path: path.join(out, `sayfa-${ad}.png`), fullPage: true });

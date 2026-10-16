@@ -1,5 +1,6 @@
 "use client";
-// Alt menü: Ana sayfa, Keşfet, Videolar, Kaydedilenler, Profil (ders adları değil; bkz. docs/KARARLAR.md).
+// Alt menü: Ana sayfa, Keşfet, Videolar, Oyunlar, Profil (ders adları değil; bkz. docs/KARARLAR.md).
+// Kaydedilenler Profil'in içindedir.
 // Ders ekranında (/ders/konu/) gizlenir.
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,7 +10,7 @@ const TABS = [
   { k: "home", href: "/", label: "Ana sayfa" },
   { k: "kesfet", href: "/kesfet/", label: "Keşfet" },
   { k: "video", href: "/videolar/", label: "Videolar" },
-  { k: "kayit", href: "/kaydedilenler/", label: "Kaydedilenler" },
+  { k: "oyun", href: "/oyunlar/", label: "Oyunlar" },
   { k: "profil", href: "/profil/", label: "Profil" },
 ] as const;
 
@@ -19,16 +20,16 @@ export default function Tabs() {
   const cur =
     parts.length === 0
       ? "home"
-      : ({ kaydedilenler: "kayit", profil: "profil", videolar: "video", oyunlar: "home" } as const)[parts[0]] ?? "kesfet";
+      : ({ kaydedilenler: "profil", profil: "profil", videolar: "video", oyunlar: "oyun" } as const)[parts[0]] ?? "home";
   return (
-    <div className="tabs">
+    <div className={`tabs${cur === "video" ? " on-video" : ""}`}>
       <nav aria-label="Bölümler">
         {TABS.map((t) => {
           const I = Icon[t.k];
           return (
             <Link key={t.k} className="tab" href={t.href} aria-current={cur === t.k ? "page" : undefined}>
               <I />
-              {t.label}
+              <span>{t.label}</span>
             </Link>
           );
         })}
