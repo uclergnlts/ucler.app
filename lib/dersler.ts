@@ -5,7 +5,18 @@ import dersler from "@/content/dersler.json";
 export type Etk =
   | { tur: "atom"; p: number; n: number; e: number }
   | { tur: "vektor"; v: number; aci: number }
-  | { tur: "osmoz"; c: number };
+  | { tur: "osmoz"; c: number }
+  | { tur: "sirala"; soru: string; ogeler: string[] }
+  | { tur: "eslestir"; soru: string; ciftler: [string, string][] }
+  | { tur: "ayir"; soru: string; gruplar: string[]; ogeler: [string, number, string?][] }
+  | { tur: "isaretle"; soru: string; noktalar: { x: number; y: number; ad: string; acik: string }[] }
+  | {
+      tur: "formul";
+      soru?: string;
+      girdiler: { ad: string; etiket: string; birim?: string; min: number; max: number; adim: number; deger: number }[];
+      ciktilar: { ad: string; ifade: string; birim?: string; basamak?: number; max?: number }[];
+      yorum?: [number | null, string][];
+    };
 export type Card = { h: string; p: string; svg: string; key?: string; etk?: Etk };
 export type Question = { q: string; o: string[]; a: number; e: string };
 export type Topic = { title: string; summary: string; cards: Card[]; quiz: Question[] };

@@ -23,6 +23,75 @@ def err(*a):
     bad += 1
     print("HATA:", *a)
 
+import math
+FN = {"sqrt": math.sqrt, "abs": abs, "ln": math.log, "log": math.log10, "exp": math.exp,
+      "sin": lambda x: math.sin(math.radians(x)), "cos": lambda x: math.cos(math.radians(x)), "tan": lambda x: math.tan(math.radians(x))}
+
+def ifade_hesapla(ifade, v):
+    """lib/ifade.ts ile aynı kurallar: yalnız sayılar, girdi adları, + - * / ^ ( ), pi, e ve FN içindeki işlevler."""
+    toks = re.findall(r"\d+(?:\.\d+)?(?:e[+-]?\d+)?|[A-Za-z_][A-Za-z_0-9]*|[-+*/^()]|\S", ifade)
+    out = []
+    for t in toks:
+        if re.fullmatch(r"[A-Za-z_]\w*", t):
+            if t in v: out.append(f"V[{t!r}]")
+            elif t in FN: out.append(f"FN[{t!r}]")
+            elif t in ("pi", "e"): out.append(f"math.{t}")
+            else: raise ValueError(f"bilinmeyen ad: {t}")
+        elif t == "^": out.append("**")
+        elif re.fullmatch(r"[\d.e+-]+|[-+*/()]", t): out.append(t)
+        else: raise ValueError(f"yasak karakter: {t}")
+    return eval(" ".join(out), {"__builtins__": {}, "math": math, "FN": FN, "V": v})
+
+def etk_denetle(ders, tid, i, e):
+    yer = (ders, tid, i, "etk:")
+    tur = e.get("tur")
+    SAYI = {"atom": {"p": (1, 20), "n": (0, 24), "e": (0, 20)}, "vektor": {"v": (1, 10), "aci": (0, 180)}, "osmoz": {"c": (0, 2)}}
+    if tur in SAYI:
+        for k, (lo, hi) in SAYI[tur].items():
+            if not isinstance(e.get(k), (int, float)) or not lo <= e[k] <= hi: err(*yer, k, "eksik ya da aralık dışı")
+        return
+    if tur not in ("sirala", "eslestir", "ayir", "isaretle", "formul"): return err(*yer, "bilinmeyen tür", tur)
+    if tur != "formul" and not e.get("soru"): err(*yer, "soru yok")
+    if tur == "sirala":
+        o = e.get("ogeler", [])
+        if not 3 <= len(o) <= 7 or len(set(o)) != len(o): err(*yer, "sirala: 3-7 farklı öğe olmalı")
+    elif tur == "eslestir":
+        c = e.get("ciftler", [])
+        if not 3 <= len(c) <= 6 or any(len(x) != 2 for x in c): err(*yer, "eslestir: 3-6 çift olmalı")
+        elif len({x[0] for x in c}) != len(c) or len({x[1] for x in c}) != len(c): err(*yer, "eslestir: tekrar eden öğe")
+    elif tur == "ayir":
+        g, o = e.get("gruplar", []), e.get("ogeler", [])
+        if not 2 <= len(g) <= 3: err(*yer, "ayir: 2-3 grup olmalı")
+        if not 4 <= len(o) <= 10: err(*yer, "ayir: 4-10 öğe olmalı")
+        for x in o:
+            if not (2 <= len(x) <= 3 and isinstance(x[1], int) and 0 <= x[1] < len(g)): err(*yer, "ayir: öğe biçimi", x)
+        if len({x[1] for x in o if len(x) > 1}) < len(g): err(*yer, "ayir: boş grup var")
+    elif tur == "isaretle":
+        n = e.get("noktalar", [])
+        if not 3 <= len(n) <= 7: err(*yer, "isaretle: 3-7 nokta olmalı")
+        for p in n:
+            if not (0 <= p.get("x", -1) <= 320 and 0 <= p.get("y", -1) <= 200 and p.get("ad") and p.get("acik")): err(*yer, "isaretle: nokta biçimi", p)
+        for a in range(len(n)):
+            for b in range(a + 1, len(n)):
+                if math.hypot(n[a]["x"] - n[b]["x"], n[a]["y"] - n[b]["y"]) < 22: err(*yer, "isaretle: noktalar çok yakın", n[a]["ad"], n[b]["ad"])
+    elif tur == "formul":
+        G, C = e.get("girdiler", []), e.get("ciktilar", [])
+        if not 1 <= len(G) <= 3 or not 1 <= len(C) <= 3: err(*yer, "formul: 1-3 girdi, 1-3 çıktı")
+        for g in G:
+            if not all(k in g for k in ("ad", "etiket", "min", "max", "adim", "deger")) or not g["min"] <= g["deger"] <= g["max"] or g["adim"] <= 0:
+                err(*yer, "formul: girdi biçimi", g.get("ad"))
+        for c in C:
+            for uc in ("min", "deger", "max"):
+                v = {g["ad"]: g[uc] for g in G if uc in g}
+                try:
+                    x = ifade_hesapla(c.get("ifade", ""), v)
+                    if not math.isfinite(x): raise ValueError("sonsuz")
+                except Exception as ex:
+                    if uc == "deger" or not isinstance(ex, (ZeroDivisionError, ValueError, OverflowError)): err(*yer, "formul:", c.get("ad"), uc, "değerinde hesaplanamıyor", ex)
+                    else: warn.append(f"{ders} {tid} {i}: formül {c.get('ad')} {uc} ucunda tanımsız ({ex})")
+        y = e.get("yorum")
+        if y is not None and (not y or y[-1][0] is not None): err(*yer, "formul: yorumun son satırı [null, metin] olmalı")
+
 for ders, topics in d.items():
     for tid, t in topics.items():
         for k in ("title", "summary", "cards", "quiz"):
@@ -46,13 +115,7 @@ for ders, topics in d.items():
             if re.search(r"<svg[^>]*\s(width|height)=", s): err(ders, tid, i, "svg width/height özniteliği")
             if re.search(r"<(script|style|foreignObject|image)\b", s): err(ders, tid, i, "svg içinde yasak etiket")
             ids += re.findall(r"\sid='([^']+)'", s)
-            if "etk" in c:  # etkileşimli görsel; svg yine zorunlu (yedek görsel)
-                e = c["etk"]
-                ALAN = {"atom": {"p": (1, 20), "n": (0, 24), "e": (0, 20)}, "vektor": {"v": (1, 10), "aci": (0, 180)}, "osmoz": {"c": (0, 2)}}
-                if e.get("tur") not in ALAN: err(ders, tid, i, "etk: bilinmeyen tür", e.get("tur"))
-                else:
-                    for k, (lo, hi) in ALAN[e["tur"]].items():
-                        if not isinstance(e.get(k), (int, float)) or not lo <= e[k] <= hi: err(ders, tid, i, "etk:", k, "eksik ya da aralık dışı")
+            if "etk" in c: etk_denetle(ders, tid, i, c["etk"])
         dup = {x for x in ids if ids.count(x) > 1}
         if dup: err(ders, tid, "tekrar eden svg id", sorted(dup))
         for j, q in enumerate(t.get("quiz", [])):

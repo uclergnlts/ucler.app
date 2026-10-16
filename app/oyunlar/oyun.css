@@ -1,0 +1,42 @@
+/* Oyun alanındaki vektör, organel ve atom sayma oyunlarının ek stilleri.
+   Ortak parçalar (.oyun-ust, .oyun-soru, .opts, .bubble, .btn) app/globals.css içindedir. */
+
+/* Formülde atom say */
+.formul sub{font-size:.6em;line-height:0;vertical-align:-.25em}
+.oyun-soru.as-soru{flex-direction:column;align-items:center;gap:6px;text-align:center}
+.oyun-soru.as-soru b{font-size:40px;font-weight:800;line-height:1.25;overflow-wrap:anywhere}
+.oyun-soru.as-soru b .formul{font-size:inherit;font-weight:inherit;color:var(--ink)}
+.oyun-soru.as-soru > span{font-size:15px}
+.as-ne{margin:0;text-align:center;font-weight:700;font-size:17px}
+.as-opts{grid-template-columns:1fr 1fr}
+.as-opts .opt{font-family:var(--f-display);font-size:20px;font-weight:800;min-height:54px}
+.dokum{list-style:none;margin:4px 0 6px;padding:0;display:grid;gap:2px;font-size:17px;font-variant-numeric:tabular-nums}
+.bubble .ipucu{font-size:15px;color:var(--muted)}
+
+/* Vektörle hedefi vur */
+.vk-alan{background:var(--surface);border:2px solid var(--line);border-radius:22px;padding:8px 8px 10px;display:grid;gap:6px}
+.vk-izgara{display:block;width:100%;height:auto;max-height:40vh;margin-inline:auto;aspect-ratio:1}
+.vk-lejant{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px;font-size:14px;font-weight:600;color:var(--muted)}
+.vk-lejant span{display:inline-flex;align-items:center;gap:6px}
+.vk-lejant i{display:inline-block;width:12px;height:12px;border-radius:50%}
+.vk-bas{background:var(--ink)}
+.vk-hedef{border:3px solid var(--c2);background:radial-gradient(var(--c2) 30%,transparent 34%)}
+.vk-kartlar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.vk-kart{min-height:58px;border-radius:16px;border:2px solid var(--line);border-top:5px solid var(--vk);background:var(--surface);display:grid;place-items:center;gap:0;padding:4px 2px;font-variant-numeric:tabular-nums}
+.vk-kart b{font-family:var(--f-display);font-size:18px;line-height:1.1;color:var(--vk)}
+.vk-kart span{font-size:15px;font-weight:700;white-space:nowrap}
+.vk-kart[aria-pressed="true"]{background:color-mix(in srgb, var(--vk) 14%, #fff);border-color:var(--vk)}
+.vk-kart[disabled]{cursor:default}
+.vk-kart[disabled]:not([aria-pressed="true"]){opacity:.5}
+.vk-yol{margin:0;text-align:center;font-weight:700;font-size:16px;font-variant-numeric:tabular-nums}
+.vk-arac{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vk-arac .btn{height:46px;font-size:16px}
+
+/* Organeli bul */
+.og-soru{background:var(--surface);border:2px solid var(--line);border-radius:22px;padding:12px 16px;font-weight:700;font-size:17px;line-height:1.45;text-align:center}
+.og-alan{background:var(--surface);border:2px solid var(--line);border-radius:22px;padding:8px}
+.og-alan svg{display:block;width:100%;height:auto;max-height:46vh;margin-inline:auto}
+.og-hit{fill:transparent;stroke:transparent;cursor:pointer;outline:none}
+.og-hit:focus-visible{stroke:var(--ink);stroke-dasharray:4 3}
+.og-hit.ok{fill:color-mix(in srgb, var(--good) 16%, transparent);stroke:var(--good);stroke-opacity:.8}
+.og-hit.no{fill:color-mix(in srgb, var(--bad) 16%, transparent);stroke:var(--bad);stroke-opacity:.8}

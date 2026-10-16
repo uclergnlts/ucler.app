@@ -7,7 +7,18 @@
         "h": "Hücre ve organizasyon basamakları",
         "p": "Tüm canlılar hücreden oluşur; hücre, canlılığın en küçük birimidir. Çok hücrelilerde hücreler birleşip daha büyük yapılar kurar: <b>hücre → doku → organ → sistem → organizma</b>. Örnek: kas hücresi → kas dokusu → kalp → dolaşım sistemi → sen.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='canlilarin-ozellikleri-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><text x='160' y='28' font-size='14' fill='var(--ink)' text-anchor='middle'>Basitten karmaşığa</text><circle cx='32' cy='90' r='16' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='2'/><circle cx='32' cy='90' r='5' fill='var(--c1)'/><g fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'><rect x='82' y='76' width='14' height='14'/><rect x='96' y='76' width='14' height='14'/><rect x='82' y='90' width='14' height='14'/><rect x='96' y='90' width='14' height='14'/></g><path d='M160,108 C140,94 140,76 152,76 C157,76 160,80 160,84 C160,80 163,76 168,76 C180,76 180,94 160,108 Z' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='2'/><ellipse cx='224' cy='90' rx='24' ry='22' fill='none' stroke='var(--c2)' stroke-width='1.5' stroke-dasharray='4 3'/><path d='M224,100 C210,90 210,78 218,78 C222,78 224,81 224,84 C224,81 226,78 230,78 C238,78 238,90 224,100 Z' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1.5'/><g fill='none' stroke='var(--ink)' stroke-width='2'><circle cx='288' cy='70' r='7'/><line x1='288' y1='77' x2='288' y2='100'/><line x1='276' y1='85' x2='300' y2='85'/><line x1='288' y1='100' x2='280' y2='115'/><line x1='288' y1='100' x2='296' y2='115'/></g><g stroke='var(--ink)' stroke-width='1.5' marker-end='url(#canlilarin-ozellikleri-1)'><line x1='50' y1='90' x2='76' y2='90'/><line x1='114' y1='90' x2='138' y2='90'/><line x1='180' y1='90' x2='198' y2='90'/><line x1='250' y1='90' x2='272' y2='90'/></g><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='32' y='140'>Hücre</text><text x='96' y='140'>Doku</text><text x='160' y='140'>Organ</text><text x='224' y='140'>Sistem</text><text x='286' y='140'>Organizma</text></g><text x='160' y='180' font-size='13' fill='var(--muted)' text-anchor='middle'>Hepsinin temeli hücredir</text></svg>",
-        "key": "Hücre → doku → organ → sistem → organizma"
+        "key": "Hücre → doku → organ → sistem → organizma",
+        "etk": {
+          "tur": "sirala",
+          "soru": "Canlılığın basamaklarını basitten karmaşığa doğru sırala.",
+          "ogeler": [
+            "Hücre",
+            "Doku",
+            "Organ",
+            "Sistem",
+            "Organizma"
+          ]
+        }
       },
       {
         "h": "Metabolizma: yapım ve yıkım",
@@ -176,7 +187,52 @@
         "h": "Vitaminler",
         "p": "Vitaminler enerji vermez ama metabolizmanın düzgün işlemesi için az miktarda gerekir. <b>Yağda çözünenler</b> (A, D, E, K) vücutta depolanabilir. <b>Suda çözünenlerin</b> (B grubu, C) çoğu depolanmaz, fazlası idrarla atılır; düzenli alınmalıdır. İstisna: B<sub>12</sub> karaciğerde yıllarca depolanır.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='14' y='20' width='140' height='150' rx='8' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='84' y='44' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Yağda çözünen</text><circle cx='44' cy='76' r='9' fill='var(--c4)' fill-opacity='0.35'/><text x='44' y='80' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><circle cx='64' cy='76' r='9' fill='var(--c4)' fill-opacity='0.35'/><text x='64' y='80' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>D</text><circle cx='84' cy='76' r='9' fill='var(--c4)' fill-opacity='0.35'/><text x='84' y='80' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>E</text><circle cx='104' cy='76' r='9' fill='var(--c4)' fill-opacity='0.35'/><text x='104' y='80' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>K</text><text x='84' y='112' font-size='12' fill='var(--ink)' text-anchor='middle'>depolanabilir</text><text x='84' y='132' font-size='10' fill='var(--muted)' text-anchor='middle'>fazlası zararlı olabilir</text><rect x='166' y='20' width='140' height='150' rx='8' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='236' y='44' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Suda çözünen</text><text x='236' y='80' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>B grubu, C</text><text x='236' y='112' font-size='12' fill='var(--ink)' text-anchor='middle'>çoğu depolanmaz</text><text x='236' y='132' font-size='10' fill='var(--muted)' text-anchor='middle'>istisna: B₁₂ depolanır</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>D vitamini güneş ışığıyla deride de üretilir</text></svg>",
-        "key": "Yağda çözünen dörtlü: A, D, E, K"
+        "key": "Yağda çözünen dörtlü: A, D, E, K",
+        "etk": {
+          "tur": "ayir",
+          "soru": "Vitamini doğru gruba koy: yağda mı çözünür, suda mı?",
+          "gruplar": [
+            "Yağda çözünen",
+            "Suda çözünen"
+          ],
+          "ogeler": [
+            [
+              "A vitamini",
+              0
+            ],
+            [
+              "D vitamini",
+              0,
+              "D vitamini yağda çözünür ve vücutta depolanabilir."
+            ],
+            [
+              "E vitamini",
+              0
+            ],
+            [
+              "K vitamini",
+              0
+            ],
+            [
+              "C vitamini",
+              1,
+              "C vitamini suda çözünür; fazlası idrarla atılır, düzenli alınmalıdır."
+            ],
+            [
+              "B<sub>1</sub> vitamini",
+              1
+            ],
+            [
+              "B<sub>12</sub> vitamini",
+              1,
+              "B<sub>12</sub> suda çözünür; yine de karaciğerde yıllarca depolanabilir."
+            ],
+            [
+              "Folik asit (B<sub>9</sub>)",
+              1
+            ]
+          ]
+        }
       },
       {
         "h": "Özet",
@@ -287,7 +343,43 @@
         "h": "İnhibitörler: enzim frenleri",
         "p": "Enzimi yavaşlatan ya da durduran maddelere <b>inhibitör</b> denir. <b>Yarışmalı</b> inhibitör substrata benzer, aktif bölgeyi kapar; substrat çoğalınca etkisi azalır. <b>Yarışmasız</b> inhibitör başka bir yere bağlanıp enzimin şeklini bozar. Birçok ilaç ve zehir böyle etki eder.",
         "svg": "<svg viewBox='0 0 320 205'><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='60' y='30'>Yarışmalı</text><text x='230' y='30'>Yarışmasız</text></g><line x1='150' y1='20' x2='150' y2='200' stroke='var(--line)'/><path d='M20,110 L50,110 L50,125 L70,125 L70,110 L100,110 L100,150 Q60,165 20,150 Z' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='2'/><rect x='50' y='103' width='20' height='22' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)' stroke-width='2'/><text x='60' y='119' font-size='12' fill='var(--ink)' text-anchor='middle'>İ</text><rect x='75' y='60' width='20' height='22' fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)' stroke-width='2'/><text x='85' y='76' font-size='12' fill='var(--ink)' text-anchor='middle'>S</text><g stroke='var(--c2)' stroke-width='2.5'><line x1='102' y1='62' x2='112' y2='72'/><line x1='112' y1='62' x2='102' y2='72'/></g><path d='M180,110 L210,110 L215,122 L225,118 L235,110 L265,110 L265,150 Q222,165 180,150 Z' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='2'/><circle cx='272' cy='132' r='9' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)' stroke-width='2'/><text x='272' y='136' font-size='12' fill='var(--ink)' text-anchor='middle'>İ</text><rect x='212' y='60' width='20' height='22' fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)' stroke-width='2'/><text x='222' y='76' font-size='12' fill='var(--ink)' text-anchor='middle'>S</text><g stroke='var(--c2)' stroke-width='2.5'><line x1='238' y1='62' x2='248' y2='72'/><line x1='248' y1='62' x2='238' y2='72'/></g><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='70' y='182'>aktif bölgeyi kapar</text><text x='230' y='182'>başka yere bağlanır</text></g><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='70' y='198'>substrata benzer</text><text x='230' y='198'>aktif bölge bozulur</text></g></svg>",
-        "key": "Yarışmalı: aktif bölge için yarışır. Yarışmasız: şekli bozar."
+        "key": "Yarışmalı: aktif bölge için yarışır. Yarışmasız: şekli bozar.",
+        "etk": {
+          "tur": "ayir",
+          "soru": "Özellik hangi inhibitöre ait?",
+          "gruplar": [
+            "Yarışmalı",
+            "Yarışmasız"
+          ],
+          "ogeler": [
+            [
+              "Substrata benzer",
+              0
+            ],
+            [
+              "Aktif bölgeye bağlanır",
+              0
+            ],
+            [
+              "Aktif bölge dışına bağlanır",
+              1
+            ],
+            [
+              "Enzimin şeklini bozar",
+              1
+            ],
+            [
+              "Substrat artınca etkisi azalır",
+              0,
+              "Yarışmalı inhibitör substratla aynı yer için yarışır; substrat çoğalınca aktif bölgeyi daha az kapar."
+            ],
+            [
+              "Substrat artırmak etkisini kaldırmaz",
+              1,
+              "Yarışmasız inhibitör başka yere bağlanır; substrat çoğalsa da şekli bozulan enzim çalışmaz."
+            ]
+          ]
+        }
       },
       {
         "h": "Özet",
@@ -396,7 +488,55 @@
         "h": "Bitki ve hayvan hücresi",
         "p": "Bitkide selülozdan <b>hücre duvarı</b> (destek, koruma), <b>kloroplast</b> ve su depolayan büyük merkezi <b>koful</b> vardır. Hayvanda bunlar yoktur, kofullar küçüktür; ama <b>sentrozom</b> vardır ve bölünmede iğ ipliklerini düzenler.",
         "svg": "<svg viewBox='0 0 320 200'><text x='80' y='25' font-size='14' fill='var(--ink)' text-anchor='middle'>Bitki</text><text x='240' y='25' font-size='14' fill='var(--ink)' text-anchor='middle'>Hayvan</text><rect x='15' y='35' width='130' height='120' rx='4' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='5'/><rect x='22' y='42' width='116' height='106' fill='none' stroke='var(--ink)'/><rect x='45' y='60' width='85' height='75' rx='10' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><text x='88' y='102' font-size='12' fill='var(--ink)' text-anchor='middle'>koful</text><circle cx='33' cy='80' r='8' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)'/><g fill='var(--c3)' fill-opacity='0.7'><ellipse cx='70' cy='51' rx='8' ry='3.5'/><ellipse cx='110' cy='51' rx='8' ry='3.5'/><ellipse cx='33' cy='125' rx='5' ry='8'/><ellipse cx='85' cy='142' rx='8' ry='3.5'/></g><circle cx='240' cy='95' r='58' fill='var(--c2)' fill-opacity='0.1' stroke='var(--ink)' stroke-width='1.5'/><circle cx='240' cy='95' r='16' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)'/><g fill='var(--c5)'><rect x='270' y='66' width='12' height='4'/><rect x='274' y='62' width='4' height='12'/></g><ellipse cx='210' cy='125' rx='9' ry='5' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)'/><circle cx='265' cy='122' r='6' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><g font-size='12' text-anchor='middle'><text x='80' y='174' fill='var(--ink)'>duvar + kloroplast</text><text x='80' y='191' fill='var(--muted)'>büyük koful</text><text x='240' y='174' fill='var(--ink)'>sentrozom var</text><text x='240' y='191' fill='var(--muted)'>duvar ve kloroplast yok</text></g></svg>",
-        "key": "Ortak: zar, sitoplazma, çekirdek, ribozom, ER, Golgi, mitokondri"
+        "key": "Ortak: zar, sitoplazma, çekirdek, ribozom, ER, Golgi, mitokondri",
+        "etk": {
+          "tur": "isaretle",
+          "soru": "Numaralara dokun: hangi yapı her iki hücrede var, hangisi yalnız birinde?",
+          "noktalar": [
+            {
+              "x": 40,
+              "y": 35,
+              "ad": "Hücre duvarı",
+              "acik": "Selülozdan yapılır; bitki hücresine destek ve koruma sağlar, su alınca patlamasını önler. Hayvan hücresinde yoktur."
+            },
+            {
+              "x": 110,
+              "y": 51,
+              "ad": "Kloroplast",
+              "acik": "Klorofille ışık enerjisini yakalar, fotosentezle glikoz yapar. Bitki ve alglerde bulunur, hayvan hücresinde yoktur."
+            },
+            {
+              "x": 110,
+              "y": 118,
+              "ad": "Büyük merkezi koful",
+              "acik": "Su, besin, pigment ve atık depolar; suyla dolunca hücreyi gergin tutar. Hayvan hücresinde kofullar küçüktür."
+            },
+            {
+              "x": 33,
+              "y": 80,
+              "ad": "Çekirdek",
+              "acik": "DNA'yı taşır, hücrenin işleyişini yönetir. Bitki ve hayvan hücresinde ortaktır."
+            },
+            {
+              "x": 276,
+              "y": 68,
+              "ad": "Sentrozom",
+              "acik": "Hücre bölünürken iğ ipliklerini düzenler. Hayvan hücresinde bulunur; bitki hücresi iğ ipliğini sentrozom olmadan kurar."
+            },
+            {
+              "x": 210,
+              "y": 125,
+              "ad": "Mitokondri",
+              "acik": "Oksijenli solunumla ATP üretir. Hem bitki hem hayvan hücresinde bulunur."
+            },
+            {
+              "x": 182,
+              "y": 95,
+              "ad": "Hücre zarı",
+              "acik": "Seçici geçirgen sınırdır; her hücrede bulunur. Bitkide hücre duvarının hemen içinde yer alır."
+            }
+          ]
+        }
       },
       {
         "h": "İş birliği: protein üretim yolu",
@@ -592,7 +732,20 @@
         "h": "Sınıflandırma basamakları",
         "p": "Canlılar iç içe geçmiş basamaklara yerleştirilir: <b>üst âlem (domain) → âlem → şube → sınıf → takım → familya → cins → tür</b>. Her basamak, bir alttakileri kapsayan daha büyük bir gruptur. En geniş basamak üst âlem, en dar ve temel birim türdür.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='16' font-size='13' fill='var(--ink)' text-anchor='middle'>İnsanın yeri: en genelden en özele</text><rect x='10' y='24' width='300' height='19' rx='4' fill='var(--c5)' fill-opacity='0.18' stroke='var(--c5)'/><text x='18' y='38' font-size='11' fill='var(--ink)' font-weight='700'>Üst âlem</text><text x='302' y='38' font-size='11' fill='var(--ink)' text-anchor='end'>Ökaryotlar</text><rect x='21' y='46' width='278' height='19' rx='4' fill='var(--c1)' fill-opacity='0.18' stroke='var(--c1)'/><text x='29' y='60' font-size='11' fill='var(--ink)' font-weight='700'>Âlem</text><text x='291' y='60' font-size='11' fill='var(--ink)' text-anchor='end'>Hayvanlar</text><rect x='32' y='68' width='256' height='19' rx='4' fill='var(--c1)' fill-opacity='0.18' stroke='var(--c1)'/><text x='40' y='82' font-size='11' fill='var(--ink)' font-weight='700'>Şube</text><text x='280' y='82' font-size='11' fill='var(--ink)' text-anchor='end'>Kordalılar</text><rect x='43' y='90' width='234' height='19' rx='4' fill='var(--c3)' fill-opacity='0.18' stroke='var(--c3)'/><text x='51' y='104' font-size='11' fill='var(--ink)' font-weight='700'>Sınıf</text><text x='269' y='104' font-size='11' fill='var(--ink)' text-anchor='end'>Memeliler</text><rect x='54' y='112' width='212' height='19' rx='4' fill='var(--c3)' fill-opacity='0.18' stroke='var(--c3)'/><text x='62' y='126' font-size='11' fill='var(--ink)' font-weight='700'>Takım</text><text x='258' y='126' font-size='11' fill='var(--ink)' text-anchor='end'>Primatlar</text><rect x='65' y='134' width='190' height='19' rx='4' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)'/><text x='73' y='148' font-size='11' fill='var(--ink)' font-weight='700'>Familya</text><text x='247' y='148' font-size='11' fill='var(--ink)' text-anchor='end'>İnsangiller</text><rect x='76' y='156' width='168' height='19' rx='4' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)'/><text x='84' y='170' font-size='11' fill='var(--ink)' font-weight='700'>Cins</text><text x='236' y='170' font-size='11' fill='var(--ink)' text-anchor='end' font-style='italic'>Homo</text><rect x='87' y='178' width='146' height='19' rx='4' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)'/><text x='95' y='192' font-size='11' fill='var(--ink)' font-weight='700'>Tür</text><text x='225' y='192' font-size='11' fill='var(--ink)' text-anchor='end' font-style='italic'>Homo sapiens</text></svg>",
-        "key": "Üst âlem > âlem > şube > sınıf > takım > familya > cins > tür"
+        "key": "Üst âlem > âlem > şube > sınıf > takım > familya > cins > tür",
+        "etk": {
+          "tur": "sirala",
+          "soru": "Âlemden başlayarak basamakları en genişten en dara doğru sırala.",
+          "ogeler": [
+            "Âlem",
+            "Şube",
+            "Sınıf",
+            "Takım",
+            "Familya",
+            "Cins",
+            "Tür"
+          ]
+        }
       },
       {
         "h": "Basamaklarda yukarı ve aşağı",
@@ -703,7 +856,61 @@
         "h": "Omurgasız ve omurgalı",
         "p": "Hayvanlar iki büyük gruba ayrılır. <b>Omurgalılarda</b> sırtta, omurlardan oluşan bir <b>omurga</b> bulunur; iç iskeletin parçasıdır ve omuriliği korur. <b>Omurgasızlarda</b> omurga yoktur; bazılarında dış iskelet ya da kabuk bulunur. Bilinen hayvan türlerinin yaklaşık %95'i omurgasızdır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='16' font-size='12' fill='var(--ink)' text-anchor='middle'>Bilinen hayvan türlerinin dağılımı</text><rect x='12' y='24' width='281' height='18' rx='3' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1'/><rect x='293' y='24' width='15' height='18' rx='3' fill='var(--c1)' fill-opacity='0.6' stroke='var(--c1)' stroke-width='1'/><text x='12' y='58' font-size='11' fill='var(--c5)' text-anchor='start' font-weight='700'>omurgasız ≈ %95</text><text x='308' y='58' font-size='11' fill='var(--c1)' text-anchor='end' font-weight='700'>omurgalı ≈ %5</text><rect x='10' y='68' width='176' height='126' rx='6' fill='var(--c5)' fill-opacity='0.07' stroke='var(--c5)' stroke-width='1.2'/><rect x='194' y='68' width='116' height='126' rx='6' fill='var(--c1)' fill-opacity='0.07' stroke='var(--c1)' stroke-width='1.2'/><text x='98' y='86' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Omurgasız şubeler</text><text x='252' y='86' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Omurgalı sınıflar</text><text x='22' y='106' font-size='11' fill='var(--ink)' text-anchor='start'>Süngerler</text><text x='22' y='122' font-size='11' fill='var(--ink)' text-anchor='start'>Sölenterler</text><text x='22' y='138' font-size='11' fill='var(--ink)' text-anchor='start'>Solucanlar (3 şube)</text><text x='22' y='154' font-size='11' fill='var(--ink)' text-anchor='start'>Yumuşakçalar</text><text x='22' y='170' font-size='11' fill='var(--ink)' text-anchor='start'>Eklem bacaklılar</text><text x='22' y='186' font-size='11' fill='var(--ink)' text-anchor='start'>Derisi dikenliler</text><text x='206' y='106' font-size='11' fill='var(--ink)' text-anchor='start'>Balıklar</text><text x='206' y='122' font-size='11' fill='var(--ink)' text-anchor='start'>İki yaşamlılar</text><text x='206' y='138' font-size='11' fill='var(--ink)' text-anchor='start'>Sürüngenler</text><text x='206' y='154' font-size='11' fill='var(--ink)' text-anchor='start'>Kuşlar</text><text x='206' y='170' font-size='11' fill='var(--ink)' text-anchor='start'>Memeliler</text></svg>",
-        "key": "İskelet olması omurgalı demek değildir: böceğin dış iskeleti var, omurgası yok."
+        "key": "İskelet olması omurgalı demek değildir: böceğin dış iskeleti var, omurgası yok.",
+        "etk": {
+          "tur": "ayir",
+          "soru": "Hayvanı doğru gruba koy.",
+          "gruplar": [
+            "Omurgasız",
+            "Omurgalı"
+          ],
+          "ogeler": [
+            [
+              "Deniz yıldızı",
+              0,
+              "Derisinin altında kireçli plakalardan iç iskelet var ama omurgası yok."
+            ],
+            [
+              "Ahtapot",
+              0,
+              "Gelişmiş gözleri ve sinir sistemi var ama bir yumuşakçadır; omurgası yoktur."
+            ],
+            [
+              "Örümcek",
+              0
+            ],
+            [
+              "Toprak solucanı",
+              0
+            ],
+            [
+              "Denizanası",
+              0
+            ],
+            [
+              "Köpek balığı",
+              1,
+              "İskeleti kıkırdaktır ama omurgası vardır: kıkırdaklı bir balıktır."
+            ],
+            [
+              "Kurbağa",
+              1
+            ],
+            [
+              "Yunus",
+              1,
+              "Balığa benzer ama memelidir; omurgalıdır."
+            ],
+            [
+              "Yılan",
+              1
+            ],
+            [
+              "Penguen",
+              1
+            ]
+          ]
+        }
       },
       {
         "h": "Süngerler ve sölenterler",
@@ -844,7 +1051,56 @@
         "h": "Bitki grupları",
         "p": "Bitkiler iki soruyla gruplanır: <b>iletim demeti</b> var mı, <b>tohum</b> var mı? <b>Tohumsuz damarsızlar</b>: kara yosunları, ciğer otları. <b>Tohumsuz damarlılar</b>: eğrelti otları, at kuyrukları, kibrit otları. <b>Tohumlu damarlılar</b>: açık tohumlular ve kapalı tohumlular.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='160' y1='28' x2='51' y2='50' stroke='var(--muted)' stroke-width='1'/><line x1='160' y1='28' x2='203' y2='50' stroke='var(--muted)' stroke-width='1'/><line x1='203' y1='72' x2='145' y2='96' stroke='var(--muted)' stroke-width='1'/><line x1='203' y1='72' x2='250' y2='96' stroke='var(--muted)' stroke-width='1'/><line x1='250' y1='118' x2='221' y2='140' stroke='var(--muted)' stroke-width='1'/><line x1='250' y1='118' x2='283' y2='140' stroke='var(--muted)' stroke-width='1'/><rect x='120' y='6' width='80' height='22' rx='6' fill='var(--acc)' fill-opacity='0.2' stroke='var(--acc)' stroke-width='1'/><text x='160' y='21' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Bitkiler</text><rect x='8' y='50' width='86' height='22' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1'/><text x='51' y='65' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Damarsız</text><rect x='160' y='50' width='86' height='22' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1'/><text x='203' y='65' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Damarlı</text><text x='51' y='88' font-size='10' fill='var(--muted)' text-anchor='middle'>(tohumsuz)</text><text x='51' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>kara yosunu</text><text x='51' y='122' font-size='12' fill='var(--ink)' text-anchor='middle'>ciğer otu</text><rect x='105' y='96' width='80' height='22' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1'/><text x='145' y='111' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Tohumsuz</text><text x='145' y='136' font-size='12' fill='var(--ink)' text-anchor='middle'>eğrelti otu</text><text x='145' y='152' font-size='12' fill='var(--ink)' text-anchor='middle'>at kuyruğu</text><text x='145' y='168' font-size='12' fill='var(--ink)' text-anchor='middle'>kibrit otu</text><rect x='210' y='96' width='80' height='22' rx='6' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1'/><text x='250' y='111' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Tohumlu</text><rect x='196' y='140' width='50' height='22' rx='6' fill='var(--c5)' fill-opacity='0.1' stroke='var(--c5)' stroke-width='1'/><text x='221' y='155' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Açık</text><rect x='254' y='140' width='58' height='22' rx='6' fill='var(--c5)' fill-opacity='0.1' stroke='var(--c5)' stroke-width='1'/><text x='283' y='155' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Kapalı</text><text x='221' y='178' font-size='11' fill='var(--ink)' text-anchor='middle'>çam</text><text x='221' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>ladin</text><text x='283' y='178' font-size='11' fill='var(--ink)' text-anchor='middle'>buğday</text><text x='283' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>fasulye</text><text x='10' y='192' font-size='10' fill='var(--muted)' text-anchor='start'>tohumlu her bitki damarlıdır</text></svg>",
-        "key": "Damarsız ama tohumlu bir bitki grubu yoktur."
+        "key": "Damarsız ama tohumlu bir bitki grubu yoktur.",
+        "etk": {
+          "tur": "ayir",
+          "soru": "Bitkiyi doğru gruba koy.",
+          "gruplar": [
+            "Damarsız",
+            "Tohumsuz damarlı",
+            "Tohumlu"
+          ],
+          "ogeler": [
+            [
+              "Kara yosunu",
+              0
+            ],
+            [
+              "Ciğer otu",
+              0
+            ],
+            [
+              "Eğrelti otu",
+              1,
+              "Eğreltide iletim demeti var ama tohum yok; sporla çoğalır."
+            ],
+            [
+              "At kuyruğu",
+              1
+            ],
+            [
+              "Kibrit otu",
+              1
+            ],
+            [
+              "Çam",
+              2,
+              "Çam açık tohumludur: tohumu kozalak pulunun üstünde açıkta durur."
+            ],
+            [
+              "Buğday",
+              2
+            ],
+            [
+              "Fasulye",
+              2
+            ],
+            [
+              "Ladin",
+              2
+            ]
+          ]
+        }
       },
       {
         "h": "Damarsız bitkiler: yosunlar",
@@ -967,7 +1223,20 @@
         "h": "Hücre döngüsü: interfaz ve M",
         "p": "Bir hücrenin oluşmasından bölünmesine kadar geçen süreç <b>hücre döngüsü</b>dür. En uzun evre <b>interfaz</b>dır: G<sub>1</sub>'de hücre büyür, protein ve organel üretir; <b>S</b>'de DNA eşlenir; G<sub>2</sub>'de bölünmeye hazırlanır. Sonra M evresi gelir: mitoz (çekirdek bölünmesi) ve sitokinez.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mit-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><path d='M94.3 44.0 A60 60 0 0 1 129.1 151.2' stroke='var(--c1)' stroke-opacity='0.45' stroke-width='24' fill='none'/><text x='149.1' y='90.0' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>G₁</text><path d='M125.4 153.8 A60 60 0 0 1 35.7 124.7' stroke='var(--c2)' stroke-opacity='0.45' stroke-width='24' fill='none'/><text x='73.5' y='165.6' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>S</text><path d='M34.3 120.4 A60 60 0 0 1 49.3 61.8' stroke='var(--c4)' stroke-opacity='0.45' stroke-width='24' fill='none'/><text x='33.9' y='93.6' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>G₂</text><path d='M52.6 58.7 A60 60 0 0 1 89.7 44.0' stroke='var(--c3)' stroke-opacity='0.45' stroke-width='24' fill='none'/><text x='69.9' y='52.7' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>M</text><path d='M121.4 29.6 A80 80 0 0 1 168.1 79.3' stroke='var(--muted)' stroke-width='1.4' fill='none' marker-end='url(#mit-1)'/><text x='92' y='101' font-size='12' fill='var(--muted)' text-anchor='middle'>hücre</text><text x='92' y='117' font-size='12' fill='var(--muted)' text-anchor='middle'>döngüsü</text><text x='186' y='30' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>interfaz = G₁ + S + G₂</text><circle cx='190' cy='56' r='5' fill='var(--c1)' fill-opacity='0.6'/><text x='202' y='60' font-size='12' fill='var(--ink)' text-anchor='start'>G₁: büyüme, sentez</text><circle cx='190' cy='84' r='5' fill='var(--c2)' fill-opacity='0.6'/><text x='202' y='88' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>S: DNA eşlenir</text><circle cx='190' cy='112' r='5' fill='var(--c4)' fill-opacity='0.6'/><text x='202' y='116' font-size='12' fill='var(--ink)' text-anchor='start'>G₂: hazırlık</text><circle cx='190' cy='140' r='5' fill='var(--c3)' fill-opacity='0.6'/><text x='202' y='144' font-size='12' fill='var(--ink)' text-anchor='start'>M: mitoz +</text><text x='202' y='160' font-size='12' fill='var(--ink)' text-anchor='start'>sitokinez</text><text x='186' y='190' font-size='11' fill='var(--muted)' text-anchor='start'>en uzun evre: interfaz</text></svg>",
-        "key": "DNA eşlenmesi mitozda değil, interfazın S evresinde olur."
+        "key": "DNA eşlenmesi mitozda değil, interfazın S evresinde olur.",
+        "etk": {
+          "tur": "sirala",
+          "soru": "Hücre döngüsünün evrelerini G<sub>1</sub>'den başlayarak sırala.",
+          "ogeler": [
+            "G<sub>1</sub>",
+            "S",
+            "G<sub>2</sub>",
+            "Profaz",
+            "Metafaz",
+            "Anafaz",
+            "Telofaz"
+          ]
+        }
       },
       {
         "h": "Kromozom, kromatit, sentromer",
@@ -1015,7 +1284,37 @@
         "h": "Eşeysiz üreme: bölünme",
         "p": "<b>Eşeysiz üremede</b> tek ata yeterlidir; üreme hücresi ve döllenme yoktur, yavrular genellikle atayla kalıtsal olarak özdeştir. <b>Bölünmede</b> ata ikiye ayrılır: amip ve öglena mitozla bölünür. Bakterideki <b>ikiye bölünme</b> mitoz değildir; çekirdek ve iğ ipliği yoktur, halkasal DNA eşlenip ayrılır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mit-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='160' y='18' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>Amip: mitozla bölünme</text><path d='M34 56 C30 36 54 32 60 40 C70 28 90 42 84 56 C92 72 66 80 56 72 C42 80 26 68 34 56 Z' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.5'/><circle cx='60' cy='56' r='6' fill='var(--c5)' fill-opacity='0.6'/><path d='M106 56 L146 56' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-9)'/><path d='M179.2 56 C176.0 40.0 195.2 36.8 200 43.2 C208.0 33.599999999999994 224.0 44.8 219.2 56 C225.6 68.8 204.8 75.2 196.8 68.8 C185.6 75.2 172.8 65.6 179.2 56 Z' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.5'/><circle cx='200' cy='56' r='4.800000000000001' fill='var(--c5)' fill-opacity='0.6'/><path d='M247.2 56 C244.0 40.0 263.2 36.8 268 43.2 C276.0 33.599999999999994 292.0 44.8 287.2 56 C293.6 68.8 272.8 75.2 264.8 68.8 C253.6 75.2 240.8 65.6 247.2 56 Z' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.5'/><circle cx='268' cy='56' r='4.800000000000001' fill='var(--c5)' fill-opacity='0.6'/><path d='M10 98 L310 98' stroke='var(--line)' stroke-width='1'/><text x='160' y='118' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>Bakteri: ikiye bölünme (mitoz değil)</text><rect x='34' y='138' width='52' height='24' rx='12' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><ellipse cx='60' cy='150' rx='10' ry='6' fill='none' stroke='var(--c2)' stroke-width='1.4'/><path d='M106 150 L146 150' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-9)'/><rect x='174' y='138' width='52' height='24' rx='12' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><ellipse cx='200' cy='150' rx='10' ry='6' fill='none' stroke='var(--c2)' stroke-width='1.4'/><rect x='242' y='138' width='52' height='24' rx='12' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><ellipse cx='268' cy='150' rx='10' ry='6' fill='none' stroke='var(--c2)' stroke-width='1.4'/><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>çekirdek ve iğ ipliği yok, halkasal DNA</text></svg>",
-        "key": "Mitoz yalnızca ökaryotlarda olur; bakterinin bölünmesi mitoz değildir."
+        "key": "Mitoz yalnızca ökaryotlarda olur; bakterinin bölünmesi mitoz değildir.",
+        "etk": {
+          "tur": "eslestir",
+          "soru": "Canlıyı eşeysiz üreme biçimiyle eşleştir.",
+          "ciftler": [
+            [
+              "Amip",
+              "Mitozla bölünme"
+            ],
+            [
+              "Bakteri",
+              "İkiye bölünme (mitoz değil)"
+            ],
+            [
+              "Bira mayası",
+              "Tomurcuklanma"
+            ],
+            [
+              "Ekmek küfü",
+              "Sporla üreme"
+            ],
+            [
+              "Planarya",
+              "Rejenerasyon"
+            ],
+            [
+              "Erkek bal arısı",
+              "Partenogenez"
+            ]
+          ]
+        }
       },
       {
         "h": "Tomurcuklanma ve sporla üreme",
@@ -1138,7 +1437,60 @@
         "h": "Mayoz ve mitoz",
         "p": "İkisi de interfazda DNA eşlenmesiyle başlar ama sonuçları farklıdır. Mitoz büyüme, onarım ve eşeysiz üreme sağlar. Mayoz gamet ya da spor üretir ve çeşitlilik yaratır. Haploit (n) hücre mitoz geçirebilir, mayoz geçiremez.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='4' y='7' width='312' height='26' rx='6' fill='var(--acc)' fill-opacity='0.15'/><text x='12' y='24' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'></text><text x='162' y='24' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Mitoz</text><text x='260' y='24' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Mayoz</text><path d='M6 32.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='50' font-size='12' fill='var(--ink)' text-anchor='start'>Bölünme sayısı</text><text x='162' y='50' font-size='11' fill='var(--c1)' text-anchor='middle'>1</text><text x='260' y='50' font-size='11' fill='var(--c5)' text-anchor='middle'>2</text><path d='M6 58.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='76' font-size='12' fill='var(--ink)' text-anchor='start'>Oluşan hücre</text><text x='162' y='76' font-size='11' fill='var(--c1)' text-anchor='middle'>2</text><text x='260' y='76' font-size='11' fill='var(--c5)' text-anchor='middle'>4</text><path d='M6 84.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='102' font-size='12' fill='var(--ink)' text-anchor='start'>Kromozom sayısı</text><text x='162' y='102' font-size='11' fill='var(--c1)' text-anchor='middle'>korunur</text><text x='260' y='102' font-size='11' fill='var(--c5)' text-anchor='middle'>yarıya iner</text><path d='M6 110.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='128' font-size='12' fill='var(--ink)' text-anchor='start'>Krossing-over</text><text x='162' y='128' font-size='11' fill='var(--c1)' text-anchor='middle'>yok</text><text x='260' y='128' font-size='11' fill='var(--c5)' text-anchor='middle'>var</text><path d='M6 136.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='154' font-size='12' fill='var(--ink)' text-anchor='start'>Yavru hücreler</text><text x='162' y='154' font-size='11' fill='var(--c1)' text-anchor='middle'>ataya benzer</text><text x='260' y='154' font-size='11' fill='var(--c5)' text-anchor='middle'>farklı</text><path d='M6 162.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='180' font-size='12' fill='var(--ink)' text-anchor='start'>Nerede?</text><text x='162' y='180' font-size='11' fill='var(--c1)' text-anchor='middle'>vücut hücresi</text><text x='260' y='180' font-size='11' fill='var(--c5)' text-anchor='middle'>eşey ana hücresi</text></svg>",
-        "key": "Mitoz kromozom sayısını korur, mayoz yarıya indirir."
+        "key": "Mitoz kromozom sayısını korur, mayoz yarıya indirir.",
+        "etk": {
+          "tur": "ayir",
+          "soru": "Özellik mitoza mı, mayoza mı ait, yoksa ikisinde de mi var?",
+          "gruplar": [
+            "Mitoz",
+            "Mayoz",
+            "İkisi de"
+          ],
+          "ogeler": [
+            [
+              "Tetrat oluşur",
+              1
+            ],
+            [
+              "Krossing-over olur",
+              1
+            ],
+            [
+              "Homologlar ayrılır",
+              1
+            ],
+            [
+              "4 haploit hücre oluşur",
+              1
+            ],
+            [
+              "Yavru hücreler özdeş",
+              0
+            ],
+            [
+              "Haploit hücrede olabilir",
+              0,
+              "Haploit (n) hücre mitoz geçirebilir; mayoz için homolog çiftler gerektiğinden mayoz geçiremez."
+            ],
+            [
+              "Büyüme ve onarım sağlar",
+              0
+            ],
+            [
+              "Önce DNA bir kez eşlenir",
+              2
+            ],
+            [
+              "Kardeş kromatitler ayrılır",
+              2,
+              "Mitozun anafazında da, mayozun anafaz II'sinde de kardeş kromatitler ayrılır."
+            ],
+            [
+              "İğ iplikleri oluşur",
+              2
+            ]
+          ]
+        }
       },
       {
         "h": "Çeşitliliğin kaynakları",
@@ -1267,7 +1619,37 @@
         "h": "Kontrol (test) çaprazlaması",
         "p": "Baskın fenotipli bir bireyin AA mı Aa mı olduğu görünüşünden anlaşılmaz. Onu homozigot çekinik (aa) bireyle çaprazlarsın. Yavruların hepsi baskın fenotipliyse birey büyük olasılıkla AA'dır; yaklaşık yarısı çekinikse Aa'dır (1:1). Tek bir çekinik yavru bile Aa olduğunu kanıtlar.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='12' fill='var(--muted)' text-anchor='middle'>baskın fenotipli birey (A_) × aa</text><line x1='160' y1='32' x2='160' y2='192' stroke='var(--line)' stroke-width='1.5'/><text x='80' y='50' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>AA × aa</text><text x='240' y='50' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>Aa × aa</text><circle cx='35' cy='92' r='11' fill='var(--c5)' fill-opacity='0.55' stroke='var(--c5)' stroke-width='1.5'/><circle cx='65' cy='92' r='11' fill='var(--c5)' fill-opacity='0.55' stroke='var(--c5)' stroke-width='1.5'/><circle cx='95' cy='92' r='11' fill='var(--c5)' fill-opacity='0.55' stroke='var(--c5)' stroke-width='1.5'/><circle cx='125' cy='92' r='11' fill='var(--c5)' fill-opacity='0.55' stroke='var(--c5)' stroke-width='1.5'/><circle cx='195' cy='92' r='11' fill='var(--c5)' fill-opacity='0.55' stroke='var(--c5)' stroke-width='1.5'/><circle cx='225' cy='92' r='11' fill='var(--panel)' fill-opacity='1' stroke='var(--muted)' stroke-width='1.5'/><circle cx='255' cy='92' r='11' fill='var(--c5)' fill-opacity='0.55' stroke='var(--c5)' stroke-width='1.5'/><circle cx='285' cy='92' r='11' fill='var(--panel)' fill-opacity='1' stroke='var(--muted)' stroke-width='1.5'/><text x='80' y='130' font-size='12' fill='var(--c5)' text-anchor='middle'>hepsi Aa, mor</text><text x='240' y='130' font-size='12' fill='var(--ink)' text-anchor='middle'>½ Aa mor : ½ aa beyaz</text><text x='80' y='170' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>→ birey AA</text><text x='240' y='170' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>1 : 1 → birey Aa</text></svg>",
-        "key": "Test çaprazlamasında karşı birey her zaman homozigot çekiniktir (aa)."
+        "key": "Test çaprazlamasında karşı birey her zaman homozigot çekiniktir (aa).",
+        "etk": {
+          "tur": "eslestir",
+          "soru": "Çaprazlamayı yavruların fenotip oranıyla eşleştir. Genler ayrı kromozomlarda; aksi yazmıyorsa baskınlık tamdır.",
+          "ciftler": [
+            [
+              "AA × aa",
+              "Hepsi baskın fenotipli"
+            ],
+            [
+              "Aa × Aa",
+              "3 : 1"
+            ],
+            [
+              "Aa × aa",
+              "1 : 1"
+            ],
+            [
+              "AaBb × AaBb",
+              "9 : 3 : 3 : 1"
+            ],
+            [
+              "AaBb × aabb",
+              "1 : 1 : 1 : 1"
+            ],
+            [
+              "KB × KB (eksik baskın)",
+              "1 : 2 : 1"
+            ]
+          ]
+        }
       },
       {
         "h": "Eksik baskınlık ve eş baskınlık",
@@ -1384,7 +1766,57 @@
         "h": "Üretici, tüketici, ayrıştırıcı",
         "p": "<b>Üreticiler</b> (ototrof) inorganik maddeden besin yapar: <b>fotosentetikler</b> ışıkla, <b>kemosentetikler</b> inorganik maddeleri yükseltgeyerek elde ettikleri kimyasal enerjiyle. <b>Tüketiciler</b> (heterotrof) hazır besin alır: otçul, etçil, hepçil, leşçil. <b>Ayrıştırıcılar</b> (bakteri, mantar) ölü artıkları parçalayıp mineralleri toprağa geri verir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='14' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>grup</text><text x='100' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>enerji / besin</text><text x='206' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>örnek</text><rect x='6' y='24.0' width='308' height='21' rx='4' fill='var(--c3)' fill-opacity='0.12'/><text x='14' y='39.0' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>fotosentetik</text><text x='100' y='39.0' font-size='12' fill='var(--ink)' text-anchor='start'>ışık enerjisi</text><text x='206' y='39.0' font-size='11' fill='var(--ink)' text-anchor='start'>bitki, alg</text><rect x='6' y='48.5' width='308' height='21' rx='4' fill='var(--c3)' fill-opacity='0.12'/><text x='14' y='63.5' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>kemosentetik</text><text x='100' y='63.5' font-size='12' fill='var(--ink)' text-anchor='start'>kimyasal enerji</text><text x='206' y='63.5' font-size='11' fill='var(--ink)' text-anchor='start'>nitrifikasyon bkt.</text><rect x='6' y='73.0' width='308' height='21' rx='4' fill='var(--c4)' fill-opacity='0.12'/><text x='14' y='88.0' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>otçul</text><text x='100' y='88.0' font-size='12' fill='var(--ink)' text-anchor='start'>bitki</text><text x='206' y='88.0' font-size='11' fill='var(--ink)' text-anchor='start'>tavşan, çekirge</text><rect x='6' y='97.5' width='308' height='21' rx='4' fill='var(--c4)' fill-opacity='0.12'/><text x='14' y='112.5' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>etçil</text><text x='100' y='112.5' font-size='12' fill='var(--ink)' text-anchor='start'>hayvan</text><text x='206' y='112.5' font-size='11' fill='var(--ink)' text-anchor='start'>kurt, kartal</text><rect x='6' y='122.0' width='308' height='21' rx='4' fill='var(--c4)' fill-opacity='0.12'/><text x='14' y='137.0' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>hepçil</text><text x='100' y='137.0' font-size='12' fill='var(--ink)' text-anchor='start'>bitki + hayvan</text><text x='206' y='137.0' font-size='11' fill='var(--ink)' text-anchor='start'>ayı, insan</text><rect x='6' y='146.5' width='308' height='21' rx='4' fill='var(--c4)' fill-opacity='0.12'/><text x='14' y='161.5' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>leşçil</text><text x='100' y='161.5' font-size='12' fill='var(--ink)' text-anchor='start'>ölü hayvan</text><text x='206' y='161.5' font-size='11' fill='var(--ink)' text-anchor='start'>akbaba</text><rect x='6' y='171.0' width='308' height='21' rx='4' fill='var(--c5)' fill-opacity='0.12'/><text x='14' y='186.0' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>ayrıştırıcı</text><text x='100' y='186.0' font-size='12' fill='var(--ink)' text-anchor='start'>ölü → mineral</text><text x='206' y='186.0' font-size='11' fill='var(--ink)' text-anchor='start'>bakteri, mantar</text></svg>",
-        "key": "Leşçil (akbaba) bir tüketicidir; ölüyü minerale çeviren ayrıştırıcılardır."
+        "key": "Leşçil (akbaba) bir tüketicidir; ölüyü minerale çeviren ayrıştırıcılardır.",
+        "etk": {
+          "tur": "ayir",
+          "soru": "Canlıyı ekosistemdeki rolüne göre yerleştir.",
+          "gruplar": [
+            "Üretici",
+            "Tüketici",
+            "Ayrıştırıcı"
+          ],
+          "ogeler": [
+            [
+              "Buğday",
+              0
+            ],
+            [
+              "Siyanobakteri",
+              0,
+              "Siyanobakteriler fotosentez yapar; üreticidir."
+            ],
+            [
+              "Nitrifikasyon bakterisi",
+              0,
+              "Kemosentezle inorganik maddelerden besin yapar; üreticidir."
+            ],
+            [
+              "Tavşan",
+              1
+            ],
+            [
+              "Kartal",
+              1
+            ],
+            [
+              "Ayı",
+              1
+            ],
+            [
+              "Akbaba",
+              1,
+              "Akbaba leşçildir: ölü hayvanı yer, yani tüketicidir. Ölü artığı minerallere kadar parçalayanlar ayrıştırıcılardır."
+            ],
+            [
+              "Çürükçül mantar",
+              2
+            ],
+            [
+              "Çürükçül bakteri",
+              2
+            ]
+          ]
+        }
       },
       {
         "h": "Besin zinciri ve besin ağı",
@@ -1396,7 +1828,45 @@
         "h": "Enerji akışı ve %10 kuralı",
         "p": "Ekosisteme enerji çoğunlukla güneş ışığı olarak girer; üreticiler onu besine bağlar. Her basamakta enerjinin büyük kısmı solunumla <b>ısı</b> olarak kaybolur, bir kısmı sindirilmez. Bir üst basamağa ortalama yalnızca <b>≈ %10</b>'u geçer. Enerji tek yönlü akar, geri dönmez; madde ise döngüye girer.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker><marker id='eko-5b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><text x='10' y='18' font-size='11' fill='var(--muted)' text-anchor='start'>her basamakta ≈ %90 kaybolur (solunum ısısı, atık)</text><rect x='95' y='34' width='46' height='24' rx='4' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='88' y='50' font-size='12' fill='var(--ink)' text-anchor='end'>üst etçil</text><text x='118.0' y='50' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>10 kJ</text><rect x='95' y='74' width='70' height='24' rx='4' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.5'/><text x='88' y='90' font-size='12' fill='var(--ink)' text-anchor='end'>etçil</text><text x='130.0' y='90' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>100 kJ</text><path d='M110 73 V59' stroke='var(--c4)' stroke-width='2' fill='none' marker-end='url(#eko-5)'/><rect x='95' y='114' width='120' height='24' rx='4' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='88' y='130' font-size='12' fill='var(--ink)' text-anchor='end'>otçul</text><text x='155.0' y='130' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>1 000 kJ</text><path d='M110 113 V99' stroke='var(--c4)' stroke-width='2' fill='none' marker-end='url(#eko-5)'/><rect x='95' y='154' width='200' height='24' rx='4' fill='var(--c4)' fill-opacity='0.45000000000000007' stroke='var(--c4)' stroke-width='1.5'/><text x='88' y='170' font-size='12' fill='var(--ink)' text-anchor='end'>üretici</text><text x='195.0' y='170' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>10 000 kJ</text><path d='M110 153 V139' stroke='var(--c4)' stroke-width='2' fill='none' marker-end='url(#eko-5)'/><path d='M169 86 H199' stroke='var(--c2)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-5b)'/><text x='203' y='90' font-size='11' fill='var(--c2)' text-anchor='start'>ısı</text><path d='M219 126 H249' stroke='var(--c2)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-5b)'/><text x='253' y='130' font-size='11' fill='var(--c2)' text-anchor='start'>ısı</text><text x='10' y='196' font-size='11' fill='var(--muted)' text-anchor='start'>güneş ışığı → üretici</text></svg>",
-        "key": "Enerji akar, madde döner. %10 ortalamadır; gerçek oran genellikle %5-20 arasıdır."
+        "key": "Enerji akar, madde döner. %10 ortalamadır; gerçek oran genellikle %5-20 arasıdır.",
+        "etk": {
+          "tur": "formul",
+          "soru": "Üreticiye giren enerjiyi ve basamağı değiştir; her basamağa ≈%10 geçer.",
+          "girdiler": [
+            {
+              "ad": "E",
+              "etiket": "Üreticideki enerji",
+              "birim": "kJ",
+              "min": 1000,
+              "max": 100000,
+              "adim": 1000,
+              "deger": 10000
+            },
+            {
+              "ad": "n",
+              "etiket": "Basamak (1 = üretici)",
+              "min": 1,
+              "max": 5,
+              "adim": 1,
+              "deger": 3
+            }
+          ],
+          "ciktilar": [
+            {
+              "ad": "Bu basamaktaki enerji",
+              "ifade": "E*0.1^(n-1)",
+              "birim": "kJ",
+              "basamak": 2
+            },
+            {
+              "ad": "Üreticiye oranı",
+              "ifade": "100*0.1^(n-1)",
+              "birim": "%",
+              "basamak": 3,
+              "max": 100
+            }
+          ]
+        }
       },
       {
         "h": "Ekolojik piramitler",
@@ -1513,7 +1983,55 @@
         "h": "Yaprağın iç yapısı",
         "p": "Üstte mumsu <b>kutikula</b> su kaybını azaltır; altında tek sıra epidermis vardır. Sık dizili <b>palizat parankiması</b> fotosentezin çoğunu yapar. Gevşek <b>sünger parankiması</b> hava boşluklarıyla gaz alışverişini kolaylaştırır. Damarlar iletim demetleridir; <b>stomalar</b> çoğu bitkide alt yüzde daha fazladır.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='28' width='160' height='4' fill='var(--c4)'/><rect x='10' y='32' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><rect x='30' y='32' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><rect x='50' y='32' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><rect x='70' y='32' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><rect x='90' y='32' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><rect x='110' y='32' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><rect x='130' y='32' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><rect x='150' y='32' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><rect x='11' y='46' width='14' height='40' rx='5' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)' stroke-width='0.8'/><rect x='27' y='46' width='14' height='40' rx='5' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)' stroke-width='0.8'/><rect x='43' y='46' width='14' height='40' rx='5' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)' stroke-width='0.8'/><rect x='59' y='46' width='14' height='40' rx='5' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)' stroke-width='0.8'/><rect x='75' y='46' width='14' height='40' rx='5' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)' stroke-width='0.8'/><rect x='91' y='46' width='14' height='40' rx='5' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)' stroke-width='0.8'/><rect x='107' y='46' width='14' height='40' rx='5' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)' stroke-width='0.8'/><rect x='123' y='46' width='14' height='40' rx='5' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)' stroke-width='0.8'/><rect x='139' y='46' width='14' height='40' rx='5' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)' stroke-width='0.8'/><rect x='155' y='46' width='14' height='40' rx='5' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)' stroke-width='0.8'/><circle cx='22' cy='98' r='8' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='0.8'/><circle cx='44' cy='108' r='8' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='0.8'/><circle cx='24' cy='126' r='8' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='0.8'/><circle cx='52' cy='132' r='8' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='0.8'/><circle cx='128' cy='98' r='8' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='0.8'/><circle cx='150' cy='112' r='8' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='0.8'/><circle cx='132' cy='132' r='8' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='0.8'/><circle cx='160' cy='134' r='8' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='0.8'/><circle cx='64' cy='96' r='8' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='0.8'/><circle cx='96' cy='116' r='21' fill='var(--panel)' stroke='var(--ink)'/><path d='M75 116 A21 21 0 0 1 117 116 Z' fill='var(--c1)' fill-opacity='0.45'/><path d='M75 116 A21 21 0 0 0 117 116 Z' fill='var(--c4)' fill-opacity='0.45'/><rect x='10' y='144' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><rect x='30' y='144' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><rect x='50' y='144' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><rect x='70' y='144' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><rect x='90' y='144' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><rect x='110' y='144' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><rect x='150' y='144' width='20' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='0.8'/><ellipse cx='133' cy='150' rx='4' ry='6' fill='var(--c3)' fill-opacity='0.7' stroke='var(--c3)'/><ellipse cx='147' cy='150' rx='4' ry='6' fill='var(--c3)' fill-opacity='0.7' stroke='var(--c3)'/><rect x='10' y='156' width='160' height='3' fill='var(--c4)'/><line x1='172' y1='30' x2='180' y2='26' stroke='var(--muted)' stroke-width='1'/><text x='184' y='28' font-size='11' fill='var(--c4)' text-anchor='start'>kutikula</text><line x1='172' y1='40' x2='180' y2='44' stroke='var(--muted)' stroke-width='1'/><text x='184' y='48' font-size='11' fill='var(--ink)' text-anchor='start'>üst epidermis</text><line x1='172' y1='70' x2='180' y2='72' stroke='var(--muted)' stroke-width='1'/><text x='184' y='76' font-size='11' fill='var(--c3)' text-anchor='start'>palizat parankiması</text><line x1='170' y1='120' x2='180' y2='104' stroke='var(--muted)' stroke-width='1'/><text x='184' y='104' font-size='11' fill='var(--c3)' text-anchor='start'>sünger parankiması</text><line x1='117' y1='122' x2='180' y2='128' stroke='var(--muted)' stroke-width='1'/><text x='184' y='132' font-size='11' fill='var(--ink)' text-anchor='start'>iletim demeti</text><text x='96' y='111' font-size='10' fill='var(--ink)' text-anchor='middle'>ksilem</text><text x='96' y='129' font-size='10' fill='var(--ink)' text-anchor='middle'>floem</text><line x1='172' y1='151' x2='180' y2='154' stroke='var(--muted)' stroke-width='1'/><text x='184' y='158' font-size='11' fill='var(--ink)' text-anchor='start'>alt epidermis</text><line x1='140' y1='158' x2='180' y2='178' stroke='var(--muted)' stroke-width='1'/><text x='184' y='182' font-size='11' fill='var(--ink)' text-anchor='start'>stoma (bekçi hücreli)</text><text x='90' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>yaprak enine kesiti</text></svg>",
-        "key": "Epidermis hücrelerinde genellikle kloroplast yoktur; bekçi hücrelerinde vardır."
+        "key": "Epidermis hücrelerinde genellikle kloroplast yoktur; bekçi hücrelerinde vardır.",
+        "etk": {
+          "tur": "isaretle",
+          "soru": "Yaprak kesitindeki numaralara dokun; her katmanın işini gör.",
+          "noktalar": [
+            {
+              "x": 60,
+              "y": 29,
+              "ad": "Kutikula",
+              "acik": "Mumsu, su geçirmeyen tabaka; yapraktan su kaybını azaltır."
+            },
+            {
+              "x": 130,
+              "y": 38,
+              "ad": "Üst epidermis",
+              "acik": "Tek sıra, saydam hücreler; ışığı içeri geçirir, alttaki dokuları korur."
+            },
+            {
+              "x": 98,
+              "y": 66,
+              "ad": "Palizat parankiması",
+              "acik": "Sık dizili, kloroplastça zengin hücreler; fotosentezin çoğu burada yapılır."
+            },
+            {
+              "x": 44,
+              "y": 108,
+              "ad": "Sünger parankiması",
+              "acik": "Gevşek dizili hücreler; aralarındaki hava boşlukları gaz alışverişini kolaylaştırır."
+            },
+            {
+              "x": 70,
+              "y": 116,
+              "ad": "İletim demeti",
+              "acik": "Yaprak damarıdır: üstteki ksilem su ve mineral getirir, alttaki floem üretilen şekeri taşır."
+            },
+            {
+              "x": 30,
+              "y": 150,
+              "ad": "Alt epidermis",
+              "acik": "Yaprağın alt yüzünü örter; çoğu bitkide stomaların çoğu buradadır."
+            },
+            {
+              "x": 140,
+              "y": 150,
+              "ad": "Stoma",
+              "acik": "İki bekçi hücresi arasındaki açıklık; CO<sub>2</sub> girer, O<sub>2</sub> ve su buharı çıkar."
+            }
+          ]
+        }
       },
       {
         "h": "Meristem ve yıllık halkalar",
@@ -1531,7 +2049,58 @@
         "h": "İletim doku: ksilem ve floem",
         "p": "<b>Ksilem</b> su ve mineralleri kökten yaprağa, tek yönde taşır; iletim hücreleri (trake, trakeit) olgunlukta <b>ölüdür</b>, çeperleri ligninle kalınlaşmıştır. <b>Floem</b> organik maddeyi (çoğunlukla sakkaroz) taşır; kalburlu boru hücreleri <b>canlıdır</b> ve akış iki yönde de olabilir.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='105' y='18' width='100' height='30' rx='6' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><rect x='212' y='18' width='100' height='30' rx='6' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)'/><text x='155' y='38' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>Ksilem</text><text x='262' y='38' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>Floem</text><text x='10' y='72' font-size='12' fill='var(--muted)' text-anchor='start'>taşıdığı</text><text x='155' y='72' font-size='12' fill='var(--ink)' text-anchor='middle'>su, mineral</text><text x='262' y='72' font-size='12' fill='var(--ink)' text-anchor='middle'>organik madde</text><line x1='8' y1='85' x2='312' y2='85' stroke='var(--line)' stroke-width='1'/><text x='10' y='104' font-size='12' fill='var(--muted)' text-anchor='start'>yön</text><text x='155' y='104' font-size='12' fill='var(--ink)' text-anchor='middle'>tek yön: yukarı</text><text x='262' y='104' font-size='12' fill='var(--ink)' text-anchor='middle'>iki yönlü</text><line x1='8' y1='117' x2='312' y2='117' stroke='var(--line)' stroke-width='1'/><text x='10' y='136' font-size='12' fill='var(--muted)' text-anchor='start'>iletim hücresi</text><text x='155' y='136' font-size='12' fill='var(--ink)' text-anchor='middle'>ölü (trake)</text><text x='262' y='136' font-size='12' fill='var(--ink)' text-anchor='middle'>canlı (kalburlu)</text><line x1='8' y1='149' x2='312' y2='149' stroke='var(--line)' stroke-width='1'/><text x='10' y='168' font-size='12' fill='var(--muted)' text-anchor='start'>itici güç</text><text x='155' y='168' font-size='12' fill='var(--ink)' text-anchor='middle'>terleme çekimi</text><text x='262' y='168' font-size='12' fill='var(--ink)' text-anchor='middle'>basınç akışı</text><text x='160' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>ikisi birlikte iletim demetini oluşturur</text></svg>",
-        "key": "Ksilem: ölü, su, yukarı. Floem: canlı, besin, iki yön."
+        "key": "Ksilem: ölü, su, yukarı. Floem: canlı, besin, iki yön.",
+        "etk": {
+          "tur": "ayir",
+          "soru": "Özellik ksileme mi, floeme mi ait?",
+          "gruplar": [
+            "Ksilem",
+            "Floem"
+          ],
+          "ogeler": [
+            [
+              "Su ve mineral taşır",
+              0
+            ],
+            [
+              "Organik madde taşır",
+              1
+            ],
+            [
+              "İletim hücreleri ölü",
+              0
+            ],
+            [
+              "Kalburlu boru hücreleri canlı",
+              1
+            ],
+            [
+              "Yalnız yukarı doğru akış",
+              0
+            ],
+            [
+              "İki yönlü akış olabilir",
+              1,
+              "Floemde besin kaynaktan havuza akar; havuz kökte de olabilir, büyüyen uçta da."
+            ],
+            [
+              "Trake ve trakeitler",
+              0
+            ],
+            [
+              "Basınç akışıyla taşır",
+              1
+            ],
+            [
+              "Terleme çekimiyle yükselir",
+              0
+            ],
+            [
+              "Kaynaktan havuza şeker",
+              1
+            ]
+          ]
+        }
       },
       {
         "h": "Kök basıncı ve gutasyon",
@@ -1660,7 +2229,46 @@
         "h": "Chargaff kuralı ve hesap",
         "p": "Çift iplikli DNA'da A sayısı T'ye, G sayısı C'ye eşittir; bu yüzden <b>A + G = T + C</b> olur. Örnek: 100 baz çiftlik DNA'da 30 adenin varsa T = 30, G = C = 70'tir. Hidrojen bağı sayısı 2·30 + 3·70 = 270 olur.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='24' font-size='12' fill='var(--muted)' text-anchor='middle'>100 baz çiftlik DNA (200 nükleotit)</text><rect x='20' y='38' width='42' height='26' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.2'/><text x='41.0' y='56' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>A 30</text><rect x='62' y='38' width='98' height='26' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.2'/><text x='111.0' y='56' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>G 70</text><rect x='160' y='38' width='42' height='26' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1.2'/><text x='181.0' y='56' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>T 30</text><rect x='202' y='38' width='98' height='26' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1.2'/><text x='251.0' y='56' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>C 70</text><text x='90' y='80' font-size='11' fill='var(--c5)' text-anchor='middle'>pürin: 100</text><text x='230' y='80' font-size='11' fill='var(--c2)' text-anchor='middle'>pirimidin: 100</text><text x='160' y='108' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>A = T,  G = C,  A + G = T + C</text><rect x='20' y='124' width='280' height='62' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.2'/><text x='160' y='146' font-size='12' fill='var(--ink)' text-anchor='middle'>H bağı = 2 × (A–T çifti) + 3 × (G–C çifti)</text><text x='160' y='172' font-size='15' fill='var(--c4)' text-anchor='middle' font-weight='700'>2 × 30 + 3 × 70 = 270</text></svg>",
-        "key": "Kural tek iplikte ve RNA'da geçmez; (A+T)/(G+C) oranı türden türe değişir."
+        "key": "Kural tek iplikte ve RNA'da geçmez; (A+T)/(G+C) oranı türden türe değişir.",
+        "etk": {
+          "tur": "formul",
+          "soru": "Çift iplikli DNA'daki A–T ve G–C çiftlerinin sayısını değiştir.",
+          "girdiler": [
+            {
+              "ad": "at",
+              "etiket": "A–T çifti",
+              "min": 1,
+              "max": 100,
+              "adim": 1,
+              "deger": 30
+            },
+            {
+              "ad": "gc",
+              "etiket": "G–C çifti",
+              "min": 1,
+              "max": 100,
+              "adim": 1,
+              "deger": 70
+            }
+          ],
+          "ciktilar": [
+            {
+              "ad": "Toplam nükleotit",
+              "ifade": "2*(at+gc)",
+              "basamak": 0
+            },
+            {
+              "ad": "Pürin (A + G)",
+              "ifade": "at+gc",
+              "basamak": 0
+            },
+            {
+              "ad": "Hidrojen bağı",
+              "ifade": "2*at+3*gc",
+              "basamak": 0
+            }
+          ]
+        }
       },
       {
         "h": "DNA ve RNA farkı",
@@ -1777,7 +2385,20 @@
         "h": "Genden proteine: merkezi dogma",
         "p": "Bir <b>gen</b>, bir proteinin (ya da bir RNA'nın) yapım bilgisini taşıyan DNA bölgesidir. Bilgi önce DNA'dan RNA'ya kopyalanır: <b>transkripsiyon</b>. Sonra RNA'daki şifre amino asit diline çevrilir: <b>translasyon</b>. Bu bilgi akışına <b>merkezi dogma</b> denir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='prot-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='10' y='72' width='70' height='40' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><text x='45' y='98' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>DNA</text><rect x='125' y='72' width='70' height='40' rx='6' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.2'/><text x='160' y='98' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>RNA</text><rect x='240' y='72' width='70' height='40' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.2'/><text x='275' y='98' font-size='14' fill='var(--c3)' text-anchor='middle' font-weight='700'>Protein</text><path d='M82 92 L121 92' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#prot-1)'/><path d='M197 92 L236 92' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#prot-1)'/><text x='102' y='62' font-size='11' fill='var(--ink)' text-anchor='middle'>transkripsiyon</text><text x='218' y='62' font-size='11' fill='var(--ink)' text-anchor='middle'>translasyon</text><path d='M24 70 C20 38 52 38 50 68' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#prot-1)'/><text x='40' y='30' font-size='11' fill='var(--muted)' text-anchor='middle'>eşlenme</text><text x='45' y='130' font-size='12' fill='var(--muted)' text-anchor='middle'>gen</text><text x='160' y='130' font-size='12' fill='var(--muted)' text-anchor='middle'>mRNA</text><text x='275' y='130' font-size='12' fill='var(--muted)' text-anchor='middle'>polipeptit</text><text x='160' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>istisna: retrovirüsler RNA'dan DNA yapar</text></svg>",
-        "key": "Transkripsiyon = DNA'dan RNA'ya yazma, translasyon = RNA'dan proteine çeviri."
+        "key": "Transkripsiyon = DNA'dan RNA'ya yazma, translasyon = RNA'dan proteine çeviri.",
+        "etk": {
+          "tur": "sirala",
+          "soru": "Ökaryot bir hücrede genden proteine giden adımları sırala.",
+          "ogeler": [
+            "RNA polimeraz promotora bağlanır",
+            "mRNA sentezlenir",
+            "İntronlar çıkarılır",
+            "mRNA sitoplazmaya geçer",
+            "Ribozom AUG'de başlar",
+            "Polipeptit uzar",
+            "Dur kodonunda ayrılma"
+          ]
+        }
       },
       {
         "h": "Transkripsiyon: DNA'dan mRNA'ya",
@@ -1837,7 +2458,38 @@
         "h": "Hesap: amino asit, kodon, bağ",
         "p": "Tek zincirli, <b>n</b> amino asitlik bir polipeptit için n kodon gerekir; dur kodonuyla n + 1. mRNA'nın kodlayan kısmında 3(n + 1), genin çift iplikli DNA'sında en az 6(n + 1) nükleotit bulunur. Peptit bağı ve açığa çıkan su sayısı <b>n − 1</b>'dir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='14' y='22' font-size='11' fill='var(--muted)' text-anchor='start'>büyüklük</text><text x='222' y='22' font-size='11' fill='var(--muted)' text-anchor='middle'>formül</text><text x='290' y='22' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>n = 100</text><rect x='8' y='30' width='304' height='23' rx='4' fill='var(--panel)'/><text x='14' y='46' font-size='12' fill='var(--ink)' text-anchor='start'>amino asit</text><text x='222' y='46' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><text x='290' y='46' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>100</text><text x='14' y='71' font-size='12' fill='var(--ink)' text-anchor='start'>kodon (dur hariç)</text><text x='222' y='71' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><text x='290' y='71' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>100</text><rect x='8' y='80' width='304' height='23' rx='4' fill='var(--panel)'/><text x='14' y='96' font-size='12' fill='var(--ink)' text-anchor='start'>kodon (dur dahil)</text><text x='222' y='96' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>n + 1</text><text x='290' y='96' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>101</text><text x='14' y='121' font-size='12' fill='var(--ink)' text-anchor='start'>mRNA nükleotidi</text><text x='222' y='121' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>3(n + 1)</text><text x='290' y='121' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>303</text><rect x='8' y='130' width='304' height='23' rx='4' fill='var(--panel)'/><text x='14' y='146' font-size='12' fill='var(--ink)' text-anchor='start'>DNA nükleotidi (çift iplik)</text><text x='222' y='146' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>6(n + 1)</text><text x='290' y='146' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>606</text><text x='14' y='171' font-size='12' fill='var(--ink)' text-anchor='start'>peptit bağı = su</text><text x='222' y='171' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>n − 1</text><text x='290' y='171' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>99</text><text x='160' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>kodlayan bölge; intronlar ve uç bölgeler hariç</text></svg>",
-        "key": "Dur kodonu sayılır ama amino asidi yoktur. Bağ ve su: amino asit sayısının bir eksiği."
+        "key": "Dur kodonu sayılır ama amino asidi yoktur. Bağ ve su: amino asit sayısının bir eksiği.",
+        "etk": {
+          "tur": "formul",
+          "soru": "Polipeptitteki amino asit sayısını değiştir; yalnız kodlayan bölge sayılır.",
+          "girdiler": [
+            {
+              "ad": "n",
+              "etiket": "Amino asit sayısı (n)",
+              "min": 2,
+              "max": 500,
+              "adim": 1,
+              "deger": 100
+            }
+          ],
+          "ciktilar": [
+            {
+              "ad": "mRNA nükleotidi",
+              "ifade": "3*(n+1)",
+              "basamak": 0
+            },
+            {
+              "ad": "DNA nükleotidi",
+              "ifade": "6*(n+1)",
+              "basamak": 0
+            },
+            {
+              "ad": "Peptit bağı = su",
+              "ifade": "n-1",
+              "basamak": 0
+            }
+          ]
+        }
       },
       {
         "h": "Nokta mutasyonu ve orak hücre",
@@ -1918,7 +2570,49 @@
         "h": "Kloroplastın yapısı",
         "p": "Kloroplast çift zarlıdır. İçindeki yassı keselere <b>tilakoit</b> denir; üst üste dizilince <b>granum</b> (çoğulu grana) oluşur. Klorofil tilakoit zarındadır. Tilakoitleri saran sıvı <b>stroma</b>dır; Calvin döngüsü enzimleri, kloroplastın kendi DNA'sı ve ribozomları buradadır.",
         "svg": "<svg viewBox='0 0 320 200'><ellipse cx='115' cy='105' rx='100' ry='68' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)' stroke-width='2'/><ellipse cx='115' cy='105' rx='93' ry='61' fill='none' stroke='var(--c3)' stroke-width='1.2'/><path d='M77 94 H98 M132 94 H153 M77 112 H98 M132 112 H153' stroke='var(--c3)' stroke-width='2'/><rect x='43' y='80' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><rect x='43' y='89' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><rect x='43' y='98' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><rect x='43' y='107' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><rect x='43' y='116' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><rect x='98' y='80' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><rect x='98' y='89' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><rect x='98' y='98' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><rect x='98' y='107' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><rect x='98' y='116' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><rect x='153' y='80' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><rect x='153' y='89' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><rect x='153' y='98' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><rect x='153' y='107' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><rect x='153' y='116' width='34' height='7' rx='3.5' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><path d='M140 150 q4 -6 8 0 t8 0 t8 0' fill='none' stroke='var(--c2)' stroke-width='1.5'/><g fill='var(--ink)'><circle cx='150' cy='160' r='2'/><circle cx='158' cy='163' r='2'/><circle cx='90' cy='60' r='2'/><circle cx='100' cy='150' r='2'/></g><text x='115' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Kloroplast</text><g stroke='var(--muted)'><line x1='225' y1='42' x2='194' y2='58'/><line x1='225' y1='77' x2='189' y2='88'/><line x1='225' y1='112' x2='189' y2='119'/><line x1='225' y1='142' x2='170' y2='140'/><line x1='225' y1='172' x2='167' y2='152'/></g><text x='229' y='46' font-size='12' fill='var(--ink)' text-anchor='start'>dış ve iç zar</text><text x='229' y='81' font-size='12' fill='var(--ink)' text-anchor='start'>granum</text><text x='229' y='116' font-size='12' fill='var(--ink)' text-anchor='start'>tilakoit</text><text x='229' y='146' font-size='12' fill='var(--ink)' text-anchor='start'>stroma</text><text x='229' y='176' font-size='12' fill='var(--ink)' text-anchor='start'>DNA, ribozom</text></svg>",
-        "key": "Işığa bağımlı evre tilakoit zarında, Calvin döngüsü stromada."
+        "key": "Işığa bağımlı evre tilakoit zarında, Calvin döngüsü stromada.",
+        "etk": {
+          "tur": "isaretle",
+          "soru": "Kloroplastın bölümlerine dokun.",
+          "noktalar": [
+            {
+              "x": 18,
+              "y": 105,
+              "ad": "Dış ve iç zar",
+              "acik": "Kloroplast çift zarlıdır; zarlar madde giriş çıkışını denetler."
+            },
+            {
+              "x": 115,
+              "y": 101,
+              "ad": "Granum",
+              "acik": "Üst üste dizilmiş tilakoit yığını. Çoğulu grana; stroma tilakoitleriyle birbirine bağlanır."
+            },
+            {
+              "x": 170,
+              "y": 119,
+              "ad": "Tilakoit",
+              "acik": "Yassı kesecik. Zarında klorofil bulunur; ışığa bağımlı tepkimeler burada olur."
+            },
+            {
+              "x": 60,
+              "y": 140,
+              "ad": "Stroma",
+              "acik": "Tilakoitleri saran sıvı. Calvin döngüsü burada, CO<sub>2</sub>'yi glikoza çevirir."
+            },
+            {
+              "x": 152,
+              "y": 150,
+              "ad": "Kloroplast DNA'sı",
+              "acik": "Kloroplastın kendi halkasal DNA'sı vardır; bazı proteinlerini kendisi yapar."
+            },
+            {
+              "x": 90,
+              "y": 60,
+              "ad": "Ribozom",
+              "acik": "Kloroplastın kendi ribozomları, kendi DNA'sındaki genlere göre protein üretir."
+            }
+          ]
+        }
       },
       {
         "h": "Pigmentler",
@@ -1972,7 +2666,56 @@
         "h": "Fotosentez ve solunum",
         "p": "Fotosentez yalnızca klorofilli hücrelerde ve ışıkta olur; enerji depolanır. Oksijenli solunum gece gündüz sürer; besindeki enerji ATP'ye aktarılır. Bitki hücresi ikisini de yapar. Siyanobakteriler kloroplast olmadan, hücre zarı kıvrımlarındaki klorofille fotosentez yapar.",
         "svg": "<svg viewBox='0 0 320 200'><text x='122' y='22' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Fotosentez</text><text x='248' y='22' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Oksijenli solunum</text><rect x='4' y='32' width='312' height='27' fill='var(--panel)'/><text x='8' y='50' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Kimde</text><text x='122' y='50' font-size='11' fill='var(--ink)' text-anchor='middle'>klorofilli hücreler</text><text x='248' y='50' font-size='11' fill='var(--ink)' text-anchor='middle'>çoğu canlı hücre</text><text x='8' y='77' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Nerede</text><text x='122' y='77' font-size='11' fill='var(--ink)' text-anchor='middle'>kloroplast</text><text x='248' y='77' font-size='11' fill='var(--ink)' text-anchor='middle'>sitoplazma + mitokondri</text><rect x='4' y='86' width='312' height='27' fill='var(--panel)'/><text x='8' y='104' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Ne zaman</text><text x='122' y='104' font-size='11' fill='var(--ink)' text-anchor='middle'>yalnız ışıkta</text><text x='248' y='104' font-size='11' fill='var(--ink)' text-anchor='middle'>her an, gece-gündüz</text><text x='8' y='131' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Girdi</text><text x='122' y='131' font-size='11' fill='var(--ink)' text-anchor='middle'>CO₂ + H₂O</text><text x='248' y='131' font-size='11' fill='var(--ink)' text-anchor='middle'>glikoz + O₂</text><rect x='4' y='140' width='312' height='27' fill='var(--panel)'/><text x='8' y='158' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Ürün</text><text x='122' y='158' font-size='11' fill='var(--ink)' text-anchor='middle'>glikoz + O₂</text><text x='248' y='158' font-size='11' fill='var(--ink)' text-anchor='middle'>CO₂ + H₂O + ATP</text><text x='8' y='185' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Enerji</text><text x='122' y='185' font-size='11' fill='var(--ink)' text-anchor='middle'>depolanır</text><text x='248' y='185' font-size='11' fill='var(--ink)' text-anchor='middle'>açığa çıkar</text><line x1='66' y1='30' x2='66' y2='194' stroke='var(--line)'/><line x1='178' y1='30' x2='178' y2='194' stroke='var(--line)'/></svg>",
-        "key": "Bitki gündüz de solunum yapar; ışıkta fotosentez genellikle solunumdan hızlıdır."
+        "key": "Bitki gündüz de solunum yapar; ışıkta fotosentez genellikle solunumdan hızlıdır.",
+        "etk": {
+          "tur": "ayir",
+          "soru": "Özellik fotosenteze mi, oksijenli solunuma mı ait, yoksa ikisinde de mi var?",
+          "gruplar": [
+            "Fotosentez",
+            "Solunum",
+            "İkisi de"
+          ],
+          "ogeler": [
+            [
+              "O<sub>2</sub> açığa çıkar",
+              0
+            ],
+            [
+              "CO<sub>2</sub> kullanılır",
+              0
+            ],
+            [
+              "Yalnız ışıkta olur",
+              0
+            ],
+            [
+              "Glikoz yıkılır",
+              1
+            ],
+            [
+              "Gece gündüz sürer",
+              1
+            ],
+            [
+              "Mitokondride tamamlanır",
+              1
+            ],
+            [
+              "ATP üretilir",
+              2,
+              "Fotosentezde ışığa bağımlı tepkimelerde, solunumda glikoliz, Krebs ve ETS'de ATP üretilir."
+            ],
+            [
+              "Elektron taşıma zinciri var",
+              2
+            ],
+            [
+              "Bitki hücresinde olur",
+              2,
+              "Bitki hücresi ikisini de yapar: fotosentezi ışıkta, solunumu her an."
+            ]
+          ]
+        }
       },
       {
         "h": "C4 ve CAM bitkileri",
@@ -2089,7 +2832,60 @@
         "h": "Toplam ATP: 30-32 mi, 38 mi?",
         "p": "Glikozdan doğrudan yalnız 4 ATP çıkar; asıl kazanç ETS'dedir. Güncel hesapla bir NADH ≈2,5, bir FADH₂ ≈1,5 ATP verir; toplam <b>yaklaşık 30-32 ATP</b>. Eski kitaplarda NADH = 3, FADH₂ = 2 alınarak bulunan <b>36-38</b> değerini görebilirsin.",
         "svg": "<svg viewBox='0 0 320 200'><text x='12' y='26' font-size='12' fill='var(--muted)' text-anchor='start'>Glikoz başına</text><text x='175' y='26' font-size='12' fill='var(--muted)' text-anchor='middle'>ATP</text><text x='230' y='26' font-size='12' fill='var(--muted)' text-anchor='middle'>NADH</text><text x='286' y='26' font-size='12' fill='var(--muted)' text-anchor='middle'>FADH₂</text><path d='M10 34 L310 34' stroke='var(--line)' stroke-width='1'/><text x='12' y='52' font-size='12' fill='var(--ink)' text-anchor='start'>Glikoliz</text><text x='175' y='52' font-size='12' fill='var(--ink)' text-anchor='middle'>2</text><text x='230' y='52' font-size='12' fill='var(--ink)' text-anchor='middle'>2</text><text x='286' y='52' font-size='12' fill='var(--ink)' text-anchor='middle'>0</text><text x='12' y='72' font-size='12' fill='var(--ink)' text-anchor='start'>Pirüvat oksidasyonu</text><text x='175' y='72' font-size='12' fill='var(--ink)' text-anchor='middle'>0</text><text x='230' y='72' font-size='12' fill='var(--ink)' text-anchor='middle'>2</text><text x='286' y='72' font-size='12' fill='var(--ink)' text-anchor='middle'>0</text><text x='12' y='92' font-size='12' fill='var(--ink)' text-anchor='start'>Krebs (2 tur)</text><text x='175' y='92' font-size='12' fill='var(--ink)' text-anchor='middle'>2</text><text x='230' y='92' font-size='12' fill='var(--ink)' text-anchor='middle'>6</text><text x='286' y='92' font-size='12' fill='var(--ink)' text-anchor='middle'>2</text><path d='M10 100 L310 100' stroke='var(--ink)' stroke-width='1'/><text x='12' y='116' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Toplam</text><text x='175' y='116' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>4</text><text x='230' y='116' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>10</text><text x='286' y='116' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>2</text><text x='160' y='142' font-size='12' fill='var(--c1)' text-anchor='middle'>ETS: 10 × 2,5 + 2 × 1,5 = 28 ATP</text><rect x='70' y='152' width='180' height='22' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.2'/><text x='160' y='168' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>4 + 28 ≈ 30-32 ATP</text><text x='160' y='191' font-size='11' fill='var(--muted)' text-anchor='middle'>eski kitaplarda: NADH = 3, FADH₂ = 2 → 36-38</text></svg>",
-        "key": "30 ile 32 farkı, glikoliz NADH'sinin mitokondriye taşınma yolundan gelir."
+        "key": "30 ile 32 farkı, glikoliz NADH'sinin mitokondriye taşınma yolundan gelir.",
+        "etk": {
+          "tur": "formul",
+          "soru": "Bir NADH ve bir FADH<sub>2</sub> için kabul edilen ATP değerini değiştir. Glikoz başına 10 NADH, 2 FADH<sub>2</sub> ve doğrudan 4 ATP var.",
+          "girdiler": [
+            {
+              "ad": "a",
+              "etiket": "1 NADH →",
+              "birim": "ATP",
+              "min": 2.5,
+              "max": 3,
+              "adim": 0.5,
+              "deger": 2.5
+            },
+            {
+              "ad": "b",
+              "etiket": "1 FADH<sub>2</sub> →",
+              "birim": "ATP",
+              "min": 1.5,
+              "max": 2,
+              "adim": 0.5,
+              "deger": 1.5
+            }
+          ],
+          "ciktilar": [
+            {
+              "ad": "Toplam",
+              "ifade": "4+10*a+2*b",
+              "birim": "ATP",
+              "basamak": 1,
+              "max": 40
+            },
+            {
+              "ad": "ETS'den",
+              "ifade": "10*a+2*b",
+              "birim": "ATP",
+              "basamak": 1
+            }
+          ],
+          "yorum": [
+            [
+              32.5,
+              "Güncel değerlerle en çok 32; glikoliz NADH'sinin mitokondriye taşınma yoluna göre ≈30-32 ATP."
+            ],
+            [
+              37.5,
+              "Güncel ve eski değerler karışık."
+            ],
+            [
+              null,
+              "Eski kitaplardaki hesap: 36-38 ATP."
+            ]
+          ]
+        }
       },
       {
         "h": "Oksijen yoksa: fermantasyon",
@@ -2107,7 +2903,60 @@
         "h": "Oksijenli mi, fermantasyon mu?",
         "p": "İkisi de <b>glikolizle</b> başlar; fark pirüvattan sonradır. Oksijenli solunumda glikoz CO₂ ve suya kadar tamamen yıkılır. Fermantasyonun ürünleri (alkol, laktik asit) hâlâ enerji taşır; bu yüzden verim çok düşüktür. Maya gibi bazı canlılar koşula göre ikisini de yapabilir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='150' y='24' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Oksijenli</text><text x='258' y='24' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Fermantasyon</text><path d='M8 32 L312 32' stroke='var(--ink)' stroke-width='1'/><text x='10' y='52' font-size='12' fill='var(--ink)' text-anchor='start'>O₂</text><text x='150' y='52' font-size='12' fill='var(--ink)' text-anchor='middle'>gerekir</text><text x='258' y='52' font-size='12' fill='var(--ink)' text-anchor='middle'>gerekmez</text><path d='M8 61 L312 61' stroke='var(--line)' stroke-width='1'/><text x='10' y='77' font-size='12' fill='var(--ink)' text-anchor='start'>Mitokondri</text><text x='150' y='77' font-size='12' fill='var(--ink)' text-anchor='middle'>kullanılır</text><text x='258' y='77' font-size='12' fill='var(--ink)' text-anchor='middle'>kullanılmaz</text><path d='M8 86 L312 86' stroke='var(--line)' stroke-width='1'/><text x='10' y='102' font-size='12' fill='var(--ink)' text-anchor='start'>ETS</text><text x='150' y='102' font-size='12' fill='var(--ink)' text-anchor='middle'>var</text><text x='258' y='102' font-size='12' fill='var(--ink)' text-anchor='middle'>yok</text><path d='M8 111 L312 111' stroke='var(--line)' stroke-width='1'/><text x='10' y='127' font-size='12' fill='var(--ink)' text-anchor='start'>Son ürün</text><text x='150' y='127' font-size='12' fill='var(--ink)' text-anchor='middle'>CO₂ + H₂O</text><text x='258' y='127' font-size='11' fill='var(--ink)' text-anchor='middle'>alkol, laktik asit</text><path d='M8 136 L312 136' stroke='var(--line)' stroke-width='1'/><text x='10' y='152' font-size='12' fill='var(--ink)' text-anchor='start'>Net ATP</text><text x='150' y='152' font-size='12' fill='var(--ink)' text-anchor='middle'>≈30-32</text><text x='258' y='152' font-size='12' fill='var(--ink)' text-anchor='middle'>2</text><path d='M8 161 L312 161' stroke='var(--line)' stroke-width='1'/><text x='10' y='177' font-size='12' fill='var(--ink)' text-anchor='start'>Glikoz yıkımı</text><text x='150' y='177' font-size='12' fill='var(--ink)' text-anchor='middle'>tam</text><text x='258' y='177' font-size='12' fill='var(--ink)' text-anchor='middle'>eksik</text><text x='160' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>ikisi de glikolizle başlar; fark pirüvattan sonra</text></svg>",
-        "key": "Aynı ATP için fermantasyon yapan hücre çok daha fazla glikoz harcar."
+        "key": "Aynı ATP için fermantasyon yapan hücre çok daha fazla glikoz harcar.",
+        "etk": {
+          "tur": "ayir",
+          "soru": "Özellik oksijenli solunuma mı, fermantasyona mı ait, yoksa ikisinde de mi var?",
+          "gruplar": [
+            "Oksijenli",
+            "Fermantasyon",
+            "İkisi de"
+          ],
+          "ogeler": [
+            [
+              "Glikolizle başlar",
+              2
+            ],
+            [
+              "O<sub>2</sub> gerekir",
+              0
+            ],
+            [
+              "ETS çalışır",
+              0
+            ],
+            [
+              "Ürün: CO<sub>2</sub> ve su",
+              0
+            ],
+            [
+              "Ürün: alkol ya da laktik asit",
+              1
+            ],
+            [
+              "Glikoz başına net 2 ATP",
+              1
+            ],
+            [
+              "≈30-32 ATP",
+              0
+            ],
+            [
+              "Yalnız sitoplazmada",
+              1,
+              "Fermantasyonun tamamı sitoplazmada olur; mitokondri kullanılmaz."
+            ],
+            [
+              "Mayada görülebilir",
+              2,
+              "Maya koşula göre ikisini de yapabilir: O<sub>2</sub> varken oksijenli solunum, yokken fermantasyon."
+            ],
+            [
+              "Pirüvat oluşur",
+              2
+            ]
+          ]
+        }
       },
       {
         "h": "Yağ ve proteinler de yakılır",
@@ -2182,7 +3031,49 @@
         "h": "Nöronun yapısı",
         "p": "Sinir hücresine <b>nöron</b> denir. <b>Dendritler</b> uyarıyı alır, <b>hücre gövdesi</b> çekirdeği taşır, <b>akson</b> impulsu uzağa iletir. Aksonu saran yağlı <b>miyelin kılıf</b> yalıtır; kılıfın kesildiği yerler <b>Ranvier boğumu</b>dur. <b>Akson ucu</b> mesajı sonraki hücreye aktarır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='sin-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><g stroke='var(--c3)' stroke-width='2.5' fill='none' stroke-linecap='round'><line x1='40' y1='88' x2='18' y2='62'/><line x1='26' y1='71' x2='14' y2='74'/><line x1='50' y1='80' x2='44' y2='52'/><line x1='46' y1='62' x2='34' y2='54'/><line x1='36' y1='108' x2='14' y2='122'/><line x1='22' y1='117' x2='18' y2='134'/><line x1='48' y1='120' x2='40' y2='142'/></g><circle cx='55' cy='100' r='22' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='2'/><circle cx='55' cy='100' r='8' fill='var(--c5)' fill-opacity='0.6' stroke='var(--c5)'/><line x1='77' y1='100' x2='258' y2='100' stroke='var(--c3)' stroke-width='3'/><g fill='var(--c4)' fill-opacity='0.45' stroke='var(--c4)' stroke-width='1.5'><rect x='95' y='92' width='35' height='16' rx='7'/><rect x='140' y='92' width='35' height='16' rx='7'/><rect x='185' y='92' width='35' height='16' rx='7'/><rect x='230' y='92' width='22' height='16' rx='7'/></g><g stroke='var(--c3)' stroke-width='2.5' fill='none'><line x1='258' y1='100' x2='288' y2='78'/><line x1='258' y1='100' x2='292' y2='100'/><line x1='258' y1='100' x2='288' y2='122'/></g><g fill='var(--c3)'><circle cx='290' cy='77' r='5'/><circle cx='294' cy='100' r='5'/><circle cx='290' cy='123' r='5'/></g><g stroke='var(--muted)' stroke-width='1'><line x1='86' y1='66' x2='86' y2='96'/><line x1='160' y1='64' x2='158' y2='90'/><line x1='180' y1='104' x2='180' y2='132'/><line x1='55' y1='124' x2='55' y2='136'/><line x1='290' y1='130' x2='290' y2='140'/></g><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='86' y='60'>akson</text><text x='162' y='58'>miyelin kılıf</text><text x='180' y='146'>Ranvier boğumu</text><text x='55' y='150'>hücre gövdesi</text><text x='282' y='154'>akson ucu</text></g><text x='8' y='40' font-size='12' fill='var(--ink)'>dendrit</text><line x1='110' y1='182' x2='230' y2='182' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#sin-1)'/><text x='102' y='186' font-size='12' fill='var(--muted)' text-anchor='end'>impuls yönü</text></svg>",
-        "key": "İmpulsun yolu: dendrit → hücre gövdesi → akson → akson ucu."
+        "key": "İmpulsun yolu: dendrit → hücre gövdesi → akson → akson ucu.",
+        "etk": {
+          "tur": "isaretle",
+          "soru": "Nöronun bölümlerine dokun; impulsun yolunu izle.",
+          "noktalar": [
+            {
+              "x": 28,
+              "y": 74,
+              "ad": "Dendrit",
+              "acik": "Kısa, dallı uzantılar; uyarıyı alıp hücre gövdesine taşır."
+            },
+            {
+              "x": 55,
+              "y": 100,
+              "ad": "Hücre gövdesi",
+              "acik": "Çekirdeği ve organellerin çoğunu taşır; nöronun yaşamsal işlerini yürütür."
+            },
+            {
+              "x": 86,
+              "y": 100,
+              "ad": "Akson",
+              "acik": "Tek, uzun uzantı; impulsu gövdeden uzağa, akson ucuna iletir."
+            },
+            {
+              "x": 112,
+              "y": 100,
+              "ad": "Miyelin kılıf",
+              "acik": "Aksonu saran yağlı, yalıtkan kılıf; iletimi hızlandırır."
+            },
+            {
+              "x": 180,
+              "y": 100,
+              "ad": "Ranvier boğumu",
+              "acik": "Miyelinin kesildiği yer; impuls boğumdan boğuma sıçrar."
+            },
+            {
+              "x": 294,
+              "y": 100,
+              "ad": "Akson ucu",
+              "acik": "Keseciklerdeki nörotransmitteri sinapsa bırakır; mesaj sonraki hücreye geçer."
+            }
+          ]
+        }
       },
       {
         "h": "Nöron türleri ve glia hücreleri",
@@ -2389,7 +3280,37 @@
         "h": "Hormon bozuklukları",
         "p": "Çocuklukta GH fazlası <b>devliğe</b>, eksikliği orantılı <b>cüceliğe</b> yol açar. Yetişkinde boy artık uzamaz; GH fazlası el, ayak ve çeneyi kalınlaştırır: <b>akromegali</b>. İyot eksikliği guatra, insülin sorunu diyabete yol açar. ADH eksikliğinde çok miktarda seyreltik idrar çıkar: <b>şekersiz diyabet</b>.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='8' y1='150' x2='312' y2='150' stroke='var(--muted)'/><circle cx='42' cy='65' r='11' fill='var(--muted)' fill-opacity='0.3' stroke='var(--muted)' stroke-width='2'/><g stroke='var(--muted)' stroke-width='3' stroke-linecap='round' fill='none'><line x1='42' y1='75' x2='42' y2='107'/><line x1='42' y1='107' x2='30' y2='150'/><line x1='42' y1='107' x2='54' y2='150'/><line x1='42' y1='81' x2='27' y2='107'/><line x1='42' y1='81' x2='57' y2='107'/></g><circle cx='118' cy='36' r='14' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='2'/><g stroke='var(--c2)' stroke-width='3' stroke-linecap='round' fill='none'><line x1='118' y1='50' x2='118' y2='92'/><line x1='118' y1='92' x2='103' y2='150'/><line x1='118' y1='92' x2='133' y2='150'/><line x1='118' y1='58' x2='98' y2='92'/><line x1='118' y1='58' x2='138' y2='92'/></g><circle cx='194' cy='97' r='7' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='2'/><g stroke='var(--c1)' stroke-width='3' stroke-linecap='round' fill='none'><line x1='194' y1='103' x2='194' y2='123'/><line x1='194' y1='123' x2='187' y2='150'/><line x1='194' y1='123' x2='201' y2='150'/><line x1='194' y1='107' x2='184' y2='123'/><line x1='194' y1='107' x2='204' y2='123'/></g><circle cx='270' cy='65' r='11' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='2'/><g stroke='var(--c5)' stroke-width='3' stroke-linecap='round' fill='none'><line x1='270' y1='75' x2='270' y2='107'/><line x1='270' y1='107' x2='258' y2='150'/><line x1='270' y1='107' x2='282' y2='150'/><line x1='270' y1='81' x2='255' y2='107'/><line x1='270' y1='81' x2='285' y2='107'/></g><circle cx='255' cy='107' r='5' fill='var(--c5)'/><circle cx='285' cy='107' r='5' fill='var(--c5)'/><ellipse cx='258' cy='149' rx='8' ry='3' fill='var(--c5)'/><ellipse cx='282' cy='149' rx='8' ry='3' fill='var(--c5)'/><rect x='262' y='69' width='16' height='6' rx='3' fill='var(--c5)'/><text x='42' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>normal</text><text x='118' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>devlik</text><text x='118' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>çocuk, GH ↑</text><text x='194' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>cücelik</text><text x='194' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>çocuk, GH ↓</text><text x='270' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>akromegali</text><text x='270' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>yetişkin, GH ↑</text></svg>",
-        "key": "Aynı GH fazlası çocukta devlik, büyüme plakları kapanmış yetişkinde akromegali yapar."
+        "key": "Aynı GH fazlası çocukta devlik, büyüme plakları kapanmış yetişkinde akromegali yapar.",
+        "etk": {
+          "tur": "eslestir",
+          "soru": "Bozukluğu nedeniyle eşleştir.",
+          "ciftler": [
+            [
+              "Devlik",
+              "Çocuklukta GH fazlası"
+            ],
+            [
+              "Cücelik",
+              "Çocuklukta GH eksikliği"
+            ],
+            [
+              "Akromegali",
+              "Yetişkinde GH fazlası"
+            ],
+            [
+              "Guatr",
+              "İyot eksikliği"
+            ],
+            [
+              "Şekersiz diyabet",
+              "ADH eksikliği"
+            ],
+            [
+              "Tip 1 diyabet",
+              "İnsülin üretilemez"
+            ]
+          ]
+        }
       },
       {
         "h": "Özet",
@@ -2464,7 +3385,55 @@
         "h": "Gözün tabakaları",
         "p": "Göz küresi üç tabakalıdır. Dıştaki sağlam <b>sert tabaka</b> önde saydam <b>kornea</b> olur. Ortadaki <b>damar tabaka</b> gözü besler ve önde renkli <b>iris</b>i oluşturur. İrisin ortasındaki açıklık <b>göz bebeği</b>dir. En içteki <b>ağ tabaka (retina)</b> ışık reseptörlerini taşır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='duy-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker></defs><path d='M2 100 H24' stroke='var(--c4)' stroke-width='2' fill='none' marker-end='url(#duy-3)'/><text x='12' y='92' font-size='10' fill='var(--c4)' text-anchor='middle'>ışık</text><path d='M44 64 A62 62 0 1 1 44 136' stroke='var(--ink)' stroke-width='3' fill='none'/><path d='M44 64 A44 44 0 0 0 44 136' stroke='var(--c1)' stroke-width='3' fill='none'/><path d='M57 52 A57 57 0 1 1 57 148' stroke='var(--c2)' stroke-width='4' fill='none' stroke-opacity='0.7'/><path d='M70 53 A51 51 0 1 1 70 147' stroke='var(--c5)' stroke-width='4' fill='none'/><path d='M49 63 V91' stroke='var(--c4)' stroke-width='5' fill='none'/><path d='M49 109 V137' stroke='var(--c4)' stroke-width='5' fill='none'/><ellipse cx='63' cy='100' rx='8' ry='21' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.2'/><rect x='155' y='92' width='28' height='16' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)'/><text x='26' y='30' font-size='11' fill='var(--c1)' text-anchor='middle'>kornea</text><path d='M28 34 L33 72' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='92' y='22' font-size='11' fill='var(--ink)' text-anchor='middle'>mercek</text><path d='M88 26 L68 80' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='20' y='170' font-size='11' fill='var(--c4)' text-anchor='middle'>iris</text><path d='M22 160 L46 132' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='84' y='186' font-size='11' fill='var(--ink)' text-anchor='middle'>göz bebeği</text><path d='M78 175 L52 101' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='169' y='128' font-size='10' fill='var(--c3)' text-anchor='middle'>görme</text><text x='169' y='140' font-size='10' fill='var(--c3)' text-anchor='middle'>siniri</text><path d='M188 36 H198' stroke='var(--ink)' stroke-width='3' fill='none'/><text x='203' y='40' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Dış: sert tabaka</text><text x='203' y='55' font-size='11' fill='var(--muted)' text-anchor='start'>önde saydam kornea</text><path d='M188 86 H198' stroke='var(--c2)' stroke-width='4' fill='none' stroke-opacity='0.7'/><text x='203' y='90' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Orta: damar tabaka</text><text x='203' y='105' font-size='11' fill='var(--muted)' text-anchor='start'>önde iris, göz bebeği</text><path d='M188 136 H198' stroke='var(--c5)' stroke-width='4' fill='none'/><text x='203' y='140' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>İç: ağ tabaka</text><text x='203' y='155' font-size='11' fill='var(--muted)' text-anchor='start'>(retina): reseptörler</text></svg>",
-        "key": "Göz bebeği çok ışıkta küçülür, az ışıkta büyür; bunu iris kasları refleksle yapar."
+        "key": "Göz bebeği çok ışıkta küçülür, az ışıkta büyür; bunu iris kasları refleksle yapar.",
+        "etk": {
+          "tur": "isaretle",
+          "soru": "Gözün bölümlerine dokun; ışığın izlediği yolu düşün.",
+          "noktalar": [
+            {
+              "x": 31,
+              "y": 78,
+              "ad": "Kornea",
+              "acik": "Sert tabakanın önde saydamlaşan kısmı; ışığı ilk kıran yapıdır."
+            },
+            {
+              "x": 49,
+              "y": 125,
+              "ad": "İris",
+              "acik": "Damar tabakanın önde renkli kısmı; kaslarıyla göz bebeğini daraltıp genişletir."
+            },
+            {
+              "x": 49,
+              "y": 100,
+              "ad": "Göz bebeği",
+              "acik": "İrisin ortasındaki açıklık; göze giren ışık miktarını ayarlar."
+            },
+            {
+              "x": 64,
+              "y": 83,
+              "ad": "Mercek",
+              "acik": "Esnek, saydam yapı; kalınlığını değiştirerek ışığı retinaya odaklar."
+            },
+            {
+              "x": 112,
+              "y": 35,
+              "ad": "Sert tabaka",
+              "acik": "En dıştaki sağlam tabaka; gözü korur ve şeklini korur."
+            },
+            {
+              "x": 134,
+              "y": 100,
+              "ad": "Ağ tabaka (retina)",
+              "acik": "En içteki tabaka; çubuk ve koni hücreleri ışığı impulsa çevirir."
+            },
+            {
+              "x": 169,
+              "y": 100,
+              "ad": "Görme siniri",
+              "acik": "Retinadaki impulsları beyne taşır; çıktığı yerde reseptör yoktur (kör nokta)."
+            }
+          ]
+        }
       },
       {
         "h": "Mercek ve uyum (akomodasyon)",
@@ -2500,7 +3469,55 @@
         "h": "Kulak ve işitme",
         "p": "Ses kulak yolundan geçip <b>kulak zarını</b> titreştirir. Orta kulaktaki <b>çekiç, örs, üzengi</b> titreşimi büyütüp iç kulağa iletir; <b>östaki borusu</b> orta kulağı yutağa bağlar, basıncı dengeler. <b>Salyangozdaki Korti organının</b> tüylü hücreleri titreşimi impulsa çevirir; işitme siniri impulsu beyne taşır.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='0' y='24' width='110' height='176' fill='var(--c4)' fill-opacity='0.07'/><rect x='114' y='24' width='76' height='176' fill='var(--c2)' fill-opacity='0.06'/><rect x='194' y='24' width='126' height='176' fill='var(--c5)' fill-opacity='0.07'/><text x='55' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Dış kulak</text><text x='152' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Orta kulak</text><text x='257' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>İç kulak</text><path d='M32 40 C2 55 2 135 32 150' stroke='var(--ink)' stroke-width='2' fill='none'/><path d='M32 88 H110 M32 110 H110' stroke='var(--ink)' stroke-width='1.5' fill='none'/><path d='M112 82 V116' stroke='var(--c2)' stroke-width='3.5' fill='none'/><path d='M114 99 H186' stroke='var(--c4)' stroke-width='2' fill='none'/><ellipse cx='126' cy='99' rx='8' ry='5' fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)' stroke-width='1.2'/><circle cx='146' cy='95' r='6' fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)' stroke-width='1.2'/><path d='M162 92 L174 92 L178 106 L158 106 Z' fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)'/><path d='M150 108 C150 135 134 145 130 170' stroke='var(--muted)' stroke-width='8' fill='none' stroke-opacity='0.45'/><ellipse cx='208' cy='100' rx='14' ry='10' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.2'/><ellipse cx='202' cy='64' rx='9' ry='18' fill='var(--c1)' fill-opacity='0' stroke='var(--c1)' stroke-width='2'/><ellipse cx='226' cy='58' rx='18' ry='9' fill='var(--c1)' fill-opacity='0' stroke='var(--c1)' stroke-width='2'/><ellipse cx='236' cy='80' rx='9' ry='16' fill='var(--c1)' fill-opacity='0' stroke='var(--c1)' stroke-width='2'/><path d='M218 106 L238 122' stroke='var(--c5)' stroke-width='3' fill='none'/><path d='M255 128 m-4 0 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0 a12 12 0 1 1 24 0 a16 16 0 1 1 -32 0' stroke='var(--c5)' stroke-width='3' fill='none'/><path d='M272 122 L316 108' stroke='var(--c3)' stroke-width='6' fill='none' stroke-opacity='0.5'/><text x='68' y='78' font-size='11' fill='var(--ink)' text-anchor='middle'>kulak yolu</text><text x='10' y='172' font-size='11' fill='var(--ink)' text-anchor='start'>kepçe</text><text x='76' y='140' font-size='11' fill='var(--c2)' text-anchor='middle'>kulak zarı</text><path d='M108 116 L92 130' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='152' y='58' font-size='10' fill='var(--c4)' text-anchor='middle'>çekiç, örs,</text><text x='152' y='71' font-size='10' fill='var(--c4)' text-anchor='middle'>üzengi</text><text x='166' y='178' font-size='10' fill='var(--muted)' text-anchor='start'>östaki</text><text x='166' y='191' font-size='10' fill='var(--muted)' text-anchor='start'>borusu</text><text x='262' y='44' font-size='11' fill='var(--c1)' text-anchor='start'>denge</text><text x='316' y='98' font-size='10' fill='var(--c3)' text-anchor='end'>işitme siniri</text><text x='255' y='170' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>salyangoz (Korti)</text></svg>",
-        "key": "Uçakta yutkununca kulağının açılması, östaki borusunun basıncı dengelemesidir."
+        "key": "Uçakta yutkununca kulağının açılması, östaki borusunun basıncı dengelemesidir.",
+        "etk": {
+          "tur": "isaretle",
+          "soru": "Kulağın bölümlerine dokun; sesin yolunu izle.",
+          "noktalar": [
+            {
+              "x": 60,
+              "y": 99,
+              "ad": "Kulak yolu",
+              "acik": "Sesi kulak zarına iletir; kıllar ve kulak kiri tozu tutar."
+            },
+            {
+              "x": 112,
+              "y": 86,
+              "ad": "Kulak zarı",
+              "acik": "Ses dalgalarıyla titreşen ince zar; dış kulağı orta kulaktan ayırır."
+            },
+            {
+              "x": 146,
+              "y": 95,
+              "ad": "Çekiç, örs, üzengi",
+              "acik": "Vücudun en küçük kemikleri; zarın titreşimini büyütüp iç kulağa iletir."
+            },
+            {
+              "x": 136,
+              "y": 150,
+              "ad": "Östaki borusu",
+              "acik": "Orta kulağı yutağa bağlar; zarın iki yanındaki basıncı dengeler."
+            },
+            {
+              "x": 226,
+              "y": 58,
+              "ad": "Yarım daire kanalları",
+              "acik": "Birbirine dik üç kanal; içindeki sıvı başın dönme hareketini algılatır."
+            },
+            {
+              "x": 255,
+              "y": 128,
+              "ad": "Salyangoz",
+              "acik": "İçindeki Korti organının tüylü hücreleri titreşimi impulsa çevirir."
+            },
+            {
+              "x": 300,
+              "y": 113,
+              "ad": "İşitme siniri",
+              "acik": "Salyangozdaki impulsları beyindeki işitme merkezine taşır."
+            }
+          ]
+        }
       },
       {
         "h": "Denge",
@@ -2599,7 +3616,49 @@
         "h": "Uzun kemiğin yapısı",
         "p": "Uzun kemiğin gövdesi (<b>diafiz</b>) kalın <b>sıkı kemik</b>tir; ortasında ilik boşluğu vardır. Uçları (<b>epifiz</b>) gözenekli <b>süngerimsi kemik</b>ten yapılır ve eklem yüzü kıkırdakla örtülüdür. Dıştaki <b>periost</b> zarı damar ve sinir taşır; kemiğin kalınlaşmasını ve kırık onarımını sağlar.",
         "svg": "<svg viewBox='0 0 320 200'><ellipse cx='60' cy='100' rx='30' ry='38' fill='var(--panel)' stroke='var(--c1)' stroke-width='1.6'/><ellipse cx='260' cy='100' rx='30' ry='38' fill='var(--panel)' stroke='var(--c1)' stroke-width='1.6'/><circle cx='44' cy='86' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='276' cy='86' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='56' cy='78' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='264' cy='78' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='68' cy='90' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='252' cy='90' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='48' cy='104' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='272' cy='104' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='62' cy='110' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='258' cy='110' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='74' cy='102' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='246' cy='102' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='52' cy='122' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='268' cy='122' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='40' cy='96' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='280' cy='96' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='66' cy='124' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><circle cx='254' cy='124' r='3.5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='0.8'/><rect x='82' y='76' width='156' height='48' fill='var(--panel)'/><rect x='82' y='76' width='156' height='48' fill='var(--c1)' fill-opacity='0.35'/><rect x='92' y='88' width='136' height='24' fill='var(--c4)' fill-opacity='0.45'/><path d='M82 70 L82 130' stroke='var(--c4)' stroke-width='3' stroke-dasharray='4 2'/><path d='M238 70 L238 130' stroke='var(--c4)' stroke-width='3' stroke-dasharray='4 2'/><path d='M45 67 A30 38 0 0 0 45 133' stroke='var(--c3)' stroke-width='4' fill='none' fill-opacity='1'/><path d='M275 67 A30 38 0 0 1 275 133' stroke='var(--c3)' stroke-width='4' fill='none' fill-opacity='1'/><path d='M88 75 L232 75' stroke='var(--c5)' stroke-width='2.5'/><path d='M88 125 L232 125' stroke='var(--c5)' stroke-width='2.5'/><text x='60' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>epifiz</text><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>diafiz (gövde)</text><text x='260' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>epifiz</text><text x='16' y='46' font-size='11' fill='var(--c3)' text-anchor='start'>eklem</text><text x='16' y='58' font-size='11' fill='var(--c3)' text-anchor='start'>kıkırdağı</text><path d='M32 62 L36 72' stroke='var(--muted)' stroke-width='1'/><text x='100' y='44' font-size='11' fill='var(--c4)' text-anchor='start'>epifiz plağı</text><path d='M98 41 L84 68' stroke='var(--muted)' stroke-width='1'/><text x='212' y='50' font-size='11' fill='var(--c5)' text-anchor='start'>periost</text><path d='M220 54 L214 72' stroke='var(--muted)' stroke-width='1'/><text x='60' y='156' font-size='11' fill='var(--c2)' text-anchor='middle'>süngerimsi kemik</text><text x='60' y='170' font-size='11' fill='var(--c2)' text-anchor='middle'>(kırmızı ilik)</text><text x='140' y='150' font-size='11' fill='var(--c1)' text-anchor='middle'>sıkı kemik</text><path d='M140 140 L140 122' stroke='var(--muted)' stroke-width='1'/><text x='220' y='156' font-size='11' fill='var(--ink)' text-anchor='middle'>ilik boşluğu</text><text x='220' y='170' font-size='11' fill='var(--c4)' text-anchor='middle'>(sarı ilik)</text><path d='M205 146 L200 108' stroke='var(--muted)' stroke-width='1'/></svg>",
-        "key": "Sıkı kemik sağlamlık, süngerimsi kemik hafiflik sağlar."
+        "key": "Sıkı kemik sağlamlık, süngerimsi kemik hafiflik sağlar.",
+        "etk": {
+          "tur": "isaretle",
+          "soru": "Uzun kemiğin bölümlerine dokun.",
+          "noktalar": [
+            {
+              "x": 31,
+              "y": 100,
+              "ad": "Eklem kıkırdağı",
+              "acik": "Kemik uçlarını örter; eklemde sürtünmeyi azaltır, darbeyi yumuşatır."
+            },
+            {
+              "x": 58,
+              "y": 96,
+              "ad": "Süngerimsi kemik",
+              "acik": "Epifizdeki gözenekli kemik; boşluklarında kan hücresi üreten kırmızı ilik bulunur."
+            },
+            {
+              "x": 82,
+              "y": 100,
+              "ad": "Epifiz plağı",
+              "acik": "Kıkırdak hücreleri bölünüp kemiğe dönüştükçe kemik boyca uzar; ergenlik sonunda kemikleşir."
+            },
+            {
+              "x": 130,
+              "y": 74,
+              "ad": "Periost",
+              "acik": "Kemiği saran zar; damar ve sinir taşır, kalınlaşmayı ve kırık onarımını sağlar."
+            },
+            {
+              "x": 170,
+              "y": 118,
+              "ad": "Sıkı kemik",
+              "acik": "Diafizin kalın, sert duvarı; Havers sistemlerinden oluşur."
+            },
+            {
+              "x": 200,
+              "y": 100,
+              "ad": "İlik boşluğu",
+              "acik": "Diafizin ortası; yetişkinde çoğunlukla yağ depolayan sarı ilikle doludur."
+            }
+          ]
+        }
       },
       {
         "h": "Kemik iliği: kırmızı ve sarı",
@@ -2629,7 +3688,59 @@
         "h": "Üç kas türü",
         "p": "<b>İskelet kası</b> çizgili, istemli ve çok çekirdeklidir; kemikleri hareket ettirir. <b>Düz kas</b> çizgisiz ve istemsizdir; mide, bağırsak ve damar duvarında yavaş ama uzun süre kasılır. <b>Kalp kası</b> çizgili ama istemsizdir; hücreleri <b>ara disklerle</b> bağlanır ve birlikte kasılır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='56' y='24' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>iskelet</text><rect x='14' y='38' width='84' height='34' rx='3' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.2'/><path d='M20 39 L20 71' stroke='var(--c2)' stroke-width='1.2'/><path d='M26 39 L26 71' stroke='var(--c2)' stroke-width='1.2'/><path d='M32 39 L32 71' stroke='var(--c2)' stroke-width='1.2'/><path d='M38 39 L38 71' stroke='var(--c2)' stroke-width='1.2'/><path d='M44 39 L44 71' stroke='var(--c2)' stroke-width='1.2'/><path d='M50 39 L50 71' stroke='var(--c2)' stroke-width='1.2'/><path d='M56 39 L56 71' stroke='var(--c2)' stroke-width='1.2'/><path d='M62 39 L62 71' stroke='var(--c2)' stroke-width='1.2'/><path d='M68 39 L68 71' stroke='var(--c2)' stroke-width='1.2'/><path d='M74 39 L74 71' stroke='var(--c2)' stroke-width='1.2'/><path d='M80 39 L80 71' stroke='var(--c2)' stroke-width='1.2'/><path d='M86 39 L86 71' stroke='var(--c2)' stroke-width='1.2'/><path d='M92 39 L92 71' stroke='var(--c2)' stroke-width='1.2'/><ellipse cx='30' cy='40' rx='5' ry='2.4' fill='var(--ink)'/><ellipse cx='60' cy='40' rx='5' ry='2.4' fill='var(--ink)'/><ellipse cx='86' cy='40' rx='5' ry='2.4' fill='var(--ink)'/><text x='56' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>çizgili</text><text x='56' y='121' font-size='11' fill='var(--ink)' text-anchor='middle'>istemli</text><text x='56' y='142' font-size='11' fill='var(--ink)' text-anchor='middle'>çok çekirdekli</text><text x='56' y='163' font-size='11' fill='var(--ink)' text-anchor='middle'>kemiğe bağlı</text><text x='56' y='184' font-size='11' fill='var(--ink)' text-anchor='middle'>hızlı, yorulur</text><text x='160' y='24' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>düz</text><path d='M118 46 Q144 38 170 46 Q144 54 118 46 Z' stroke='var(--c3)' stroke-width='1.2' fill='var(--c3)' fill-opacity='0.2'/><ellipse cx='144' cy='46' rx='4' ry='1.8' fill='var(--ink)'/><path d='M150 54 Q176 46 202 54 Q176 62 150 54 Z' stroke='var(--c3)' stroke-width='1.2' fill='var(--c3)' fill-opacity='0.2'/><ellipse cx='176' cy='54' rx='4' ry='1.8' fill='var(--ink)'/><path d='M124 66 Q150 58 176 66 Q150 74 124 66 Z' stroke='var(--c3)' stroke-width='1.2' fill='var(--c3)' fill-opacity='0.2'/><ellipse cx='150' cy='66' rx='4' ry='1.8' fill='var(--ink)'/><text x='160' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>çizgisiz</text><text x='160' y='121' font-size='11' fill='var(--ink)' text-anchor='middle'>istemsiz</text><text x='160' y='142' font-size='11' fill='var(--ink)' text-anchor='middle'>tek çekirdekli</text><text x='160' y='163' font-size='11' fill='var(--ink)' text-anchor='middle'>iç organ, damar</text><text x='160' y='184' font-size='11' fill='var(--ink)' text-anchor='middle'>yavaş, uzun süre</text><text x='264' y='24' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>kalp</text><path d='M222 42 L262 42 L274 34 L306 34 L306 50 L276 50 L268 56 L268 72 L222 72 Z' stroke='var(--c5)' stroke-width='1.2' fill='var(--c5)' fill-opacity='0.15'/><path d='M228 43 L228 71' stroke='var(--c5)' stroke-width='1'/><path d='M234 43 L234 71' stroke='var(--c5)' stroke-width='1'/><path d='M240 43 L240 71' stroke='var(--c5)' stroke-width='1'/><path d='M246 43 L246 71' stroke='var(--c5)' stroke-width='1'/><path d='M252 43 L252 71' stroke='var(--c5)' stroke-width='1'/><path d='M258 43 L258 71' stroke='var(--c5)' stroke-width='1'/><path d='M264 43 L264 71' stroke='var(--c5)' stroke-width='1'/><path d='M248 42 L248 72' stroke='var(--ink)' stroke-width='3'/><ellipse cx='238' cy='57' rx='4' ry='2' fill='var(--ink)'/><text x='264' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>çizgili</text><text x='264' y='121' font-size='11' fill='var(--ink)' text-anchor='middle'>istemsiz</text><text x='264' y='142' font-size='11' fill='var(--ink)' text-anchor='middle'>1–2 çekirdekli</text><text x='264' y='163' font-size='11' fill='var(--ink)' text-anchor='middle'>ara diskler</text><text x='264' y='184' font-size='11' fill='var(--ink)' text-anchor='middle'>ritmik, yorulmaz</text><path d='M12 110 L308 110' stroke='var(--line)' stroke-width='1'/><path d='M12 131 L308 131' stroke='var(--line)' stroke-width='1'/><path d='M12 152 L308 152' stroke='var(--line)' stroke-width='1'/><path d='M12 173 L308 173' stroke='var(--line)' stroke-width='1'/></svg>",
-        "key": "Kalp kası iskelet kası gibi çizgili, düz kas gibi istemsizdir."
+        "key": "Kalp kası iskelet kası gibi çizgili, düz kas gibi istemsizdir.",
+        "etk": {
+          "tur": "ayir",
+          "soru": "Örneği ya da özelliği doğru kas türüne koy.",
+          "gruplar": [
+            "İskelet kası",
+            "Düz kas",
+            "Kalp kası"
+          ],
+          "ogeler": [
+            [
+              "Biseps",
+              0
+            ],
+            [
+              "Diyafram",
+              0,
+              "Diyafram iskelet kasıdır; soluk alıp vermeyi sağlar, istersen nefesini tutarak onu denetleyebilirsin."
+            ],
+            [
+              "Mide duvarı",
+              1
+            ],
+            [
+              "Damar duvarı",
+              1
+            ],
+            [
+              "Bağırsak duvarı",
+              1
+            ],
+            [
+              "Ara disklerle bağlı hücreler",
+              2
+            ],
+            [
+              "Çizgili ama istemsiz",
+              2
+            ],
+            [
+              "Çok çekirdekli uzun lifler",
+              0
+            ],
+            [
+              "İğ biçimli, tek çekirdekli",
+              1
+            ],
+            [
+              "Ritmik, yorulmaz",
+              2
+            ]
+          ]
+        }
       },
       {
         "h": "İskelet kasının yapısı",
@@ -2728,7 +3839,20 @@
         "h": "Sindirim kanalı ve yardımcı organlar",
         "p": "Besin, ağızdan anüse uzanan tek yönlü bir kanal boyunca ilerler: ağız → yutak → yemek borusu → mide → ince bağırsak → kalın bağırsak → anüs. <b>Yardımcı organlar</b> (tükürük bezleri, karaciğer, safra kesesi, pankreas) kanalın parçası değildir; besin içlerinden geçmez, salgılarını kanala dökerler.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='sind-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><marker id='sind-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker></defs><text x='80' y='14' font-size='11' fill='var(--muted)' text-anchor='middle'>sindirim kanalı</text><text x='250' y='14' font-size='11' fill='var(--muted)' text-anchor='middle'>yardımcı organlar</text><rect x='20' y='22' width='120' height='20' rx='5' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.5'/><text x='80' y='36' font-size='12' fill='var(--ink)' text-anchor='middle'>Ağız</text><path d='M80 42 V47' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='20' y='47' width='120' height='20' rx='5' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.5'/><text x='80' y='61' font-size='12' fill='var(--ink)' text-anchor='middle'>Yutak</text><path d='M80 67 V72' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='20' y='72' width='120' height='20' rx='5' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.5'/><text x='80' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>Yemek borusu</text><path d='M80 92 V97' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='20' y='97' width='120' height='20' rx='5' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.5'/><text x='80' y='111' font-size='12' fill='var(--ink)' text-anchor='middle'>Mide</text><path d='M80 117 V122' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='20' y='122' width='120' height='20' rx='5' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.5'/><text x='80' y='136' font-size='12' fill='var(--ink)' text-anchor='middle'>İnce bağırsak</text><path d='M80 142 V147' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='20' y='147' width='120' height='20' rx='5' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.5'/><text x='80' y='161' font-size='12' fill='var(--ink)' text-anchor='middle'>Kalın bağırsak</text><path d='M80 167 V172' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='20' y='172' width='120' height='20' rx='5' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.5'/><text x='80' y='186' font-size='12' fill='var(--ink)' text-anchor='middle'>Anüs</text><rect x='190' y='22' width='120' height='20' rx='5' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='250' y='36' font-size='12' fill='var(--ink)' text-anchor='middle'>Tükürük bezleri</text><path d='M188 32 H144' stroke='var(--c4)' stroke-width='1.5' fill='none' stroke-dasharray='4 3' marker-end='url(#sind-3)'/><rect x='190' y='94' width='120' height='36' rx='5' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='250' y='109' font-size='12' fill='var(--ink)' text-anchor='middle'>Karaciğer</text><text x='250' y='124' font-size='11' fill='var(--muted)' text-anchor='middle'>+ safra kesesi</text><path d='M188 118 L144 128' stroke='var(--c4)' stroke-width='1.5' fill='none' stroke-dasharray='4 3' marker-end='url(#sind-3)'/><rect x='190' y='140' width='120' height='20' rx='5' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='250' y='154' font-size='12' fill='var(--ink)' text-anchor='middle'>Pankreas</text><path d='M188 150 L144 136' stroke='var(--c4)' stroke-width='1.5' fill='none' stroke-dasharray='4 3' marker-end='url(#sind-3)'/><text x='250' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>besin bunlardan geçmez,</text><text x='250' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>salgı gönderirler</text></svg>",
-        "key": "Karaciğer ve pankreas sindirim kanalında değildir; salgı gönderir."
+        "key": "Karaciğer ve pankreas sindirim kanalında değildir; salgı gönderir.",
+        "etk": {
+          "tur": "sirala",
+          "soru": "Besinin sindirim kanalındaki yolunu sırala.",
+          "ogeler": [
+            "Ağız",
+            "Yutak",
+            "Yemek borusu",
+            "Mide",
+            "İnce bağırsak",
+            "Kalın bağırsak",
+            "Anüs"
+          ]
+        }
       },
       {
         "h": "Ağız: dişler ve tükürük",
@@ -2770,7 +3894,37 @@
         "h": "Hangi besin nerede sindirilir?",
         "p": "Kimyasal sindirim karbonhidratlarda ağızda, proteinlerde midede, yağlarda ince bağırsakta başlar. Üçünün sindirimi de ince bağırsakta biter. Son ürünler: karbonhidrattan <b>monosakkaritler</b> (çoğu glikoz), proteinden <b>amino asitler</b>, yağdan <b>yağ asitleri</b> ve <b>gliserol</b>. Vitaminler, mineraller ve su sindirilmeden emilir.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='8' width='304' height='28' fill='var(--acc)' fill-opacity='0.2'/><text x='52' y='26' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Besin</text><text x='128' y='26' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Başlar</text><text x='192' y='26' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Biter</text><text x='268' y='26' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Ürün</text><rect x='8' y='36' width='88' height='44' fill='var(--c4)' fill-opacity='0.12'/><text x='52' y='62' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>Karbonhidrat</text><text x='128.0' y='62' font-size='12' fill='var(--ink)' text-anchor='middle'>ağız</text><text x='192.0' y='55' font-size='12' fill='var(--ink)' text-anchor='middle'>ince</text><text x='192.0' y='70' font-size='12' fill='var(--ink)' text-anchor='middle'>bağırsak</text><text x='268.0' y='55' font-size='12' fill='var(--ink)' text-anchor='middle'>monosakkarit</text><text x='268.0' y='70' font-size='11' fill='var(--muted)' text-anchor='middle'>(çoğu glikoz)</text><rect x='8' y='80' width='88' height='44' fill='var(--c2)' fill-opacity='0.12'/><text x='52' y='106' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Protein</text><text x='128.0' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>mide</text><text x='192.0' y='99' font-size='12' fill='var(--ink)' text-anchor='middle'>ince</text><text x='192.0' y='114' font-size='12' fill='var(--ink)' text-anchor='middle'>bağırsak</text><text x='268.0' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>amino asit</text><rect x='8' y='124' width='88' height='44' fill='var(--c1)' fill-opacity='0.12'/><text x='52' y='150' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>Yağ</text><text x='128.0' y='143' font-size='12' fill='var(--ink)' text-anchor='middle'>ince</text><text x='128.0' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>bağırsak</text><text x='192.0' y='143' font-size='12' fill='var(--ink)' text-anchor='middle'>ince</text><text x='192.0' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>bağırsak</text><text x='268.0' y='143' font-size='12' fill='var(--ink)' text-anchor='middle'>yağ asidi +</text><text x='268.0' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>gliserol</text><path d='M8 8 V168 M96 8 V168 M160 8 V168 M224 8 V168 M312 8 V168 M8 8 H312 M8 36 H312 M8 80 H312 M8 124 H312 M8 168 H312 ' stroke='var(--line)' stroke-width='1.2' fill='none'/><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>Vitamin, mineral ve su sindirilmeden emilir.</text></svg>",
-        "key": "Başlama sırası: karbonhidrat (ağız) → protein (mide) → yağ (ince bağırsak)."
+        "key": "Başlama sırası: karbonhidrat (ağız) → protein (mide) → yağ (ince bağırsak).",
+        "etk": {
+          "tur": "eslestir",
+          "soru": "Enzimi ya da salgıyı etki ettiği maddeyle eşleştir.",
+          "ciftler": [
+            [
+              "Tükürük amilazı",
+              "Nişasta"
+            ],
+            [
+              "Pepsin",
+              "Protein"
+            ],
+            [
+              "Lipaz",
+              "Yağ"
+            ],
+            [
+              "Laktaz",
+              "Laktoz"
+            ],
+            [
+              "Peptidaz",
+              "Kısa peptitler"
+            ],
+            [
+              "Safra (enzim değil)",
+              "Yağı damlacıklara ayırır"
+            ]
+          ]
+        }
       },
       {
         "h": "Emilim: villus, kan ve lenf",
@@ -2899,7 +4053,19 @@
         "h": "Kanın pıhtılaşması",
         "p": "Damar yaralanınca kan pulcukları yaraya yapışıp tıkaç oluşturur ve hasarlı dokuyla birlikte <b>tromboplastin</b> salar. Tromboplastin, Ca<sup>2+</sup> varlığında <b>protrombin</b>i <b>trombin</b>e çevirir. Trombin, çözünür <b>fibrinojen</b>i çözünmez <b>fibrin</b> ipliklerine dönüştürür; bu ağ kan hücrelerini yakalar ve pıhtı oluşur.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dol-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='8' y='12' width='92' height='26' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><text x='54' y='29' font-size='11' fill='var(--ink)' text-anchor='middle'>damar yaralanır</text><line x1='103' y1='25' x2='197' y2='25' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#dol-12)'/><rect x='200' y='8' width='115' height='34' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='257' y='22' font-size='10' fill='var(--ink)' text-anchor='middle'>pulcuklar yapışır,</text><text x='257' y='35' font-size='10' fill='var(--ink)' text-anchor='middle'>tromboplastin salınır</text><rect x='8' y='77' width='92' height='26' rx='6' fill='var(--muted)' fill-opacity='0.12' stroke='var(--muted)' stroke-width='1.5'/><text x='54' y='94' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>protrombin</text><text x='150' y='70' font-size='10' fill='var(--c4)' text-anchor='middle'>tromboplastin</text><text x='150' y='83' font-size='10' fill='var(--c4)' text-anchor='middle' font-weight='700'>+ Ca²⁺</text><line x1='103' y1='90' x2='197' y2='90' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#dol-12)'/><rect x='200' y='77' width='115' height='26' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><text x='257' y='94' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>trombin</text><text x='8' y='120' font-size='10' fill='var(--muted)' text-anchor='start'>karaciğerde, K vitaminiyle yapılır</text><rect x='8' y='147' width='92' height='26' rx='6' fill='var(--muted)' fill-opacity='0.12' stroke='var(--muted)' stroke-width='1.5'/><text x='54' y='164' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>fibrinojen</text><text x='150' y='152' font-size='10' fill='var(--c2)' text-anchor='middle' font-weight='700'>trombin</text><line x1='103' y1='160' x2='197' y2='160' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#dol-12)'/><rect x='200' y='147' width='115' height='26' rx='6' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.5'/><text x='257' y='164' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>fibrin ağı → pıhtı</text><text x='54' y='188' font-size='10' fill='var(--muted)' text-anchor='middle'>çözünür</text><text x='257' y='188' font-size='10' fill='var(--muted)' text-anchor='middle'>çözünmez iplikler</text><path d='M257 103 L257 129 L150 129 L150 140' fill='none' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='4 3' marker-end='url(#dol-15)'/><defs><marker id='dol-15' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs></svg>",
-        "key": "Protrombin yapımı K vitamini ister; K vitamini ya da Ca²⁺ azsa pıhtılaşma gecikir."
+        "key": "Protrombin yapımı K vitamini ister; K vitamini ya da Ca²⁺ azsa pıhtılaşma gecikir.",
+        "etk": {
+          "tur": "sirala",
+          "soru": "Pıhtılaşmanın adımlarını sırala.",
+          "ogeler": [
+            "Damar yaralanır",
+            "Kan pulcukları tıkaç yapar",
+            "Tromboplastin salınır",
+            "Protrombin trombine döner",
+            "Fibrinojen fibrine döner",
+            "Fibrin ağı pıhtı yapar"
+          ]
+        }
       },
       {
         "h": "Kan grupları ve kan nakli",
@@ -2998,7 +4164,20 @@
         "h": "Havanın yolu: burundan alveole",
         "p": "Hava <b>burun → yutak → gırtlak → soluk borusu → bronş → bronşçuk → alveol</b> yolunu izler. Yutkunurken <b>epiglot</b> gırtlağı kapatır, besin soluk borusuna kaçmaz. Gırtlakta ses telleri vardır. Soluk borusunu ve bronşları <b>kıkırdak</b> halkalar açık tutar; bronşçuklarda kıkırdak yoktur, <b>düz kas</b> vardır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='solsis-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='10' y='8' width='104' height='19' rx='5' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='62' y='22' font-size='12' fill='var(--ink)' text-anchor='middle'>burun</text><text x='128' y='22' font-size='12' fill='var(--muted)' text-anchor='start'>ısıtır, nemlendirir, süzer</text><path d='M62 28 V34' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#solsis-3)'/><rect x='10' y='35' width='104' height='19' rx='5' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='62' y='49' font-size='12' fill='var(--ink)' text-anchor='middle'>yutak</text><text x='128' y='49' font-size='12' fill='var(--muted)' text-anchor='start'>hava ve besinin ortak yolu</text><path d='M62 55 V61' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#solsis-3)'/><rect x='10' y='62' width='104' height='19' rx='5' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='62' y='76' font-size='12' fill='var(--ink)' text-anchor='middle'>gırtlak</text><text x='128' y='76' font-size='12' fill='var(--muted)' text-anchor='start'>epiglot ve ses telleri</text><path d='M62 82 V88' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#solsis-3)'/><rect x='10' y='89' width='104' height='19' rx='5' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='62' y='103' font-size='12' fill='var(--ink)' text-anchor='middle'>soluk borusu</text><text x='128' y='103' font-size='12' fill='var(--muted)' text-anchor='start'>C biçimli kıkırdak halkalar</text><path d='M62 109 V115' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#solsis-3)'/><rect x='10' y='116' width='104' height='19' rx='5' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='62' y='130' font-size='12' fill='var(--ink)' text-anchor='middle'>bronş</text><text x='128' y='130' font-size='12' fill='var(--muted)' text-anchor='start'>kıkırdaklı, akciğere girer</text><path d='M62 136 V142' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#solsis-3)'/><rect x='10' y='143' width='104' height='19' rx='5' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='62' y='157' font-size='12' fill='var(--ink)' text-anchor='middle'>bronşçuk</text><text x='128' y='157' font-size='12' fill='var(--muted)' text-anchor='start'>kıkırdak yok, düz kas var</text><path d='M62 163 V169' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#solsis-3)'/><rect x='10' y='170' width='104' height='19' rx='5' fill='var(--acc)' fill-opacity='0.3' stroke='var(--acc)' stroke-width='1.2'/><text x='62' y='184' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>alveol</text><text x='128' y='184' font-size='12' fill='var(--ink)' text-anchor='start'>gaz değişimi burada</text></svg>",
-        "key": "Yutak hem hava hem besin yoludur; trafiği epiglot yönetir."
+        "key": "Yutak hem hava hem besin yoludur; trafiği epiglot yönetir.",
+        "etk": {
+          "tur": "sirala",
+          "soru": "Soluduğun havanın alveole kadar izlediği yolu sırala.",
+          "ogeler": [
+            "Burun",
+            "Yutak",
+            "Gırtlak",
+            "Soluk borusu",
+            "Bronş",
+            "Bronşçuk",
+            "Alveol"
+          ]
+        }
       },
       {
         "h": "Havayı ısıt, nemlendir, süz",
@@ -3169,7 +4348,49 @@
         "h": "Nefron: böbreğin süzme birimi",
         "p": "Kan, kılcal yumağı olan <b>glomerul</b>e gelir; onu çanak gibi saran <b>Bowman kapsülü</b> süzüntüyü toplar. Süzüntü sırayla <b>proksimal tüp</b>, <b>Henle kulpu</b> ve <b>distal tüp</b>ten geçer. Birçok nefron ortak bir <b>toplama kanalı</b>na açılır; oradan idrar havuzcuğa akar.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bos-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><path d='M8 108 L222 108' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><path d='M238 108 L312 108' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><text x='312' y='102' font-size='11' fill='var(--muted)' text-anchor='end'>kabuk</text><text x='312' y='124' font-size='11' fill='var(--muted)' text-anchor='end'>öz</text><circle cx='48' cy='55' r='22' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='2'/><circle cx='48' cy='55' r='12' fill='var(--c2)' fill-opacity='0.45' stroke='var(--c2)'/><path d='M10 82 L38 64' stroke='var(--c2)' stroke-width='2'/><text x='45' y='18' font-size='11' fill='var(--c5)' text-anchor='middle'>Bowman kapsülü</text><text x='48' y='94' font-size='11' fill='var(--c2)' text-anchor='middle'>glomerul</text><path d='M70 55 C 82 35, 92 75, 104 55 S 124 40 130 62 L130 165 A15 15 0 0 0 160 165 L160 72' stroke='var(--c4)' stroke-width='4' fill='none'/><path d='M160 72 C 170 47, 180 85, 192 62 S 212 50 228 55' stroke='var(--c1)' stroke-width='4' fill='none'/><text x='135' y='28' font-size='11' fill='var(--c4)' text-anchor='middle'>proksimal tüp</text><text x='196' y='92' font-size='11' fill='var(--c1)' text-anchor='middle'>distal tüp</text><text x='145' y='194' font-size='11' fill='var(--c4)' text-anchor='middle'>Henle kulpu</text><path d='M230 20 L230 188' stroke='var(--c3)' stroke-width='2.5' fill='none' marker-end='url(#bos-8)'/><text x='240' y='150' font-size='11' fill='var(--c3)' text-anchor='start'>toplama</text><text x='240' y='165' font-size='11' fill='var(--c3)' text-anchor='start'>kanalı</text></svg>",
-        "key": "Sıra: glomerul ve Bowman → proksimal → Henle → distal → toplama kanalı."
+        "key": "Sıra: glomerul ve Bowman → proksimal → Henle → distal → toplama kanalı.",
+        "etk": {
+          "tur": "isaretle",
+          "soru": "Nefronun bölümlerine dokun; süzüntünün yolunu izle.",
+          "noktalar": [
+            {
+              "x": 48,
+              "y": 55,
+              "ad": "Glomerul",
+              "acik": "Kılcal damar yumağı; yüksek kan basıncı plazmanın bir kısmını kapsüle süzer."
+            },
+            {
+              "x": 32,
+              "y": 39,
+              "ad": "Bowman kapsülü",
+              "acik": "Glomerulü çanak gibi sarar; süzüntüyü toplayıp tüpe gönderir."
+            },
+            {
+              "x": 104,
+              "y": 55,
+              "ad": "Proksimal tüp",
+              "acik": "Glikoz ve amino asitlerin tamamı, suyun ve Na<sup>+</sup>'nın çoğu burada kana geri emilir."
+            },
+            {
+              "x": 130,
+              "y": 150,
+              "ad": "Henle kulpu",
+              "acik": "Öze uzanan U biçimli kıvrım; su ve tuz geri emilimiyle idrarın derişikleşmesine yardım eder."
+            },
+            {
+              "x": 192,
+              "y": 62,
+              "ad": "Distal tüp",
+              "acik": "Salgılama ve aldosteron etkisiyle Na<sup>+</sup> geri emilimi burada sürer."
+            },
+            {
+              "x": 230,
+              "y": 130,
+              "ad": "Toplama kanalı",
+              "acik": "Birçok nefronun ortak kanalı; ADH burada su geri emilimini artırır."
+            }
+          ]
+        }
       },
       {
         "h": "1. adım: süzülme",
@@ -3316,7 +4537,55 @@
         "h": "Embriyo zarları ve plasenta",
         "p": "<b>Amniyon</b> embriyoyu sıvı içinde korur. <b>Koryon</b> en dış zardır; plasentanın embriyo kısmını yapar. <b>Allantois</b> kuşta artık depolar, insanda göbek kordonu damarlarına katılır. <b>Vitellus</b> kuşta besin sağlar, insanda ilk kan hücrelerini üretir. Plasentada anne ve bebek kanı normalde <b>karışmaz</b>.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='292' y='20' width='28' height='160' fill='var(--c2)' fill-opacity='0.15'/><path d='M292 44 Q258 100 292 156 Z' fill='var(--c2)' fill-opacity='0.4' stroke='var(--c2)' stroke-width='1.5'/><ellipse cx='170' cy='100' rx='104' ry='72' fill='var(--c5)' fill-opacity='0.06' stroke='var(--c5)' stroke-width='2.2'/><ellipse cx='146' cy='100' rx='62' ry='50' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.8'/><path d='M118 112 Q108 84 130 74 Q152 66 160 86 Q166 104 152 116 Q134 128 118 112 Z' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1.2'/><path d='M160 100 Q200 92 220 104 Q244 116 276 100' stroke='var(--c3)' stroke-width='5' fill='none'/><circle cx='194' cy='128' r='8' fill='var(--c4)' fill-opacity='0.4' stroke='var(--c4)' stroke-width='1.5'/><path d='M190 121 L182 104' stroke='var(--c4)' stroke-width='1.5' fill='none'/><ellipse cx='232' cy='94' rx='9' ry='5' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)'/><text x='4' y='34' font-size='11' fill='var(--c5)' text-anchor='start' font-weight='700'>koryon</text><path d='M42 38 L86 62' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='4' y='150' font-size='11' fill='var(--c1)' text-anchor='start' font-weight='700'>amniyon</text><path d='M50 146 L96 128' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='140' y='100' font-size='10' fill='var(--ink)' text-anchor='middle'>embriyo</text><text x='232' y='18' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>allantois</text><path d='M232 23 L232 87' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='100' y='192' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>vitellus</text><path d='M118 182 L188 135' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='286' y='192' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>plasenta</text><path d='M282 182 L278 140' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='220' y='192' font-size='11' fill='var(--c3)' text-anchor='end'>göbek kordonu</text><path d='M214 182 L246 113' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='116' y='140' font-size='10' fill='var(--muted)' text-anchor='middle'>amniyon sıvısı</text></svg>",
-        "key": "Göbek kordonu: 2 atardamar bebekten plasentaya, 1 toplardamar plasentadan bebeğe."
+        "key": "Göbek kordonu: 2 atardamar bebekten plasentaya, 1 toplardamar plasentadan bebeğe.",
+        "etk": {
+          "tur": "isaretle",
+          "soru": "Embriyo zarlarına ve plasentaya dokun.",
+          "noktalar": [
+            {
+              "x": 150,
+              "y": 29,
+              "ad": "Koryon",
+              "acik": "En dıştaki zar; plasentanın embriyoya ait kısmını oluşturur."
+            },
+            {
+              "x": 84,
+              "y": 100,
+              "ad": "Amniyon",
+              "acik": "Embriyoyu saran, içi sıvı dolu zar; darbelere ve kurumaya karşı korur."
+            },
+            {
+              "x": 136,
+              "y": 77,
+              "ad": "Embriyo",
+              "acik": "Zigotun mitozla bölünmesiyle gelişen yeni birey."
+            },
+            {
+              "x": 209,
+              "y": 99,
+              "ad": "Göbek kordonu",
+              "acik": "Embriyoyu plasentaya bağlar; damarları besin ve O<sub>2</sub> getirir, atıkları götürür."
+            },
+            {
+              "x": 232,
+              "y": 94,
+              "ad": "Allantois",
+              "acik": "Kuşta artıkları depolar; insanda göbek kordonu damarlarının oluşumuna katılır."
+            },
+            {
+              "x": 194,
+              "y": 128,
+              "ad": "Vitellus",
+              "acik": "Kuşta besin sağlar; insanda ilk kan hücrelerini üretir."
+            },
+            {
+              "x": 284,
+              "y": 100,
+              "ad": "Plasenta",
+              "acik": "Anne ile bebek arasında madde alışverişi yapar; iki kan normalde karışmaz."
+            }
+          ]
+        }
       },
       {
         "h": "hCG, gebelik testi ve doğum",
@@ -3445,7 +4714,53 @@
         "h": "Türler arası ilişkiler: simbiyoz",
         "p": "<b>Simbiyoz</b>, iki türün sıkı birlikte yaşamasıdır. <b>Mutualizmde</b> ikisi de kazanır: liken (mantar + alg), mikoriza (mantar + kök), baklagil ve <em>Rhizobium</em>. <b>Kommensalizmde</b> biri kazanır, diğeri etkilenmez. <b>Parazitlikte</b> parazit kazanır, konak zarar görür: <b>iç parazit</b> (tenya) konağın içinde, <b>dış parazit</b> (pire, kene) üzerinde yaşar.",
         "svg": "<svg viewBox='0 0 320 200'><text x='10' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>ilişki</text><text x='118' y='16' font-size='11' fill='var(--muted)' text-anchor='middle'>etki</text><text x='150' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>örnek</text><rect x='4' y='24' width='312' height='26' rx='4' fill='var(--muted)' fill-opacity='0.12'/><text x='10' y='41' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>rekabet</text><text x='118' y='41' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>− / −</text><text x='150' y='41' font-size='11' fill='var(--ink)' text-anchor='start'>aynı besini isteyen iki tür</text><rect x='4' y='54' width='312' height='26' rx='4' fill='var(--muted)' fill-opacity='0.12'/><text x='10' y='71' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>av-avcı</text><text x='118' y='71' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>+ / −</text><text x='150' y='71' font-size='11' fill='var(--ink)' text-anchor='start'>vaşak – tavşan</text><rect x='4' y='84' width='312' height='26' rx='4' fill='var(--c3)' fill-opacity='0.12'/><text x='10' y='101' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>mutualizm</text><text x='118' y='101' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>+ / +</text><text x='150' y='101' font-size='11' fill='var(--ink)' text-anchor='start'>liken, mikoriza, <tspan font-style='italic'>Rhizobium</tspan></text><rect x='4' y='114' width='312' height='26' rx='4' fill='var(--c1)' fill-opacity='0.12'/><text x='10' y='131' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>kommensalizm</text><text x='118' y='131' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>+ / 0</text><text x='150' y='131' font-size='11' fill='var(--ink)' text-anchor='start'>vantuz balığı – köpekbalığı</text><rect x='4' y='144' width='312' height='26' rx='4' fill='var(--c2)' fill-opacity='0.12'/><text x='10' y='161' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>parazitlik</text><text x='118' y='161' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>+ / −</text><text x='150' y='161' font-size='11' fill='var(--ink)' text-anchor='start'>iç: tenya · dış: pire, kene</text><path d='M4 82 H316' stroke='var(--ink)' stroke-width='1' fill='none' stroke-dasharray='5 3'/><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>+ yararlanır · − zarar görür · 0 etkilenmez</text></svg>",
-        "key": "Parazit genellikle konağını hemen öldürmez; avcı ise avını öldürüp yer."
+        "key": "Parazit genellikle konağını hemen öldürmez; avcı ise avını öldürüp yer.",
+        "etk": {
+          "tur": "ayir",
+          "soru": "İlişkiyi doğru simbiyoz türüne koy.",
+          "gruplar": [
+            "Mutualizm",
+            "Kommensalizm",
+            "Parazitlik"
+          ],
+          "ogeler": [
+            [
+              "Liken (mantar + alg)",
+              0
+            ],
+            [
+              "Mikoriza (mantar + kök)",
+              0
+            ],
+            [
+              "Baklagil ve <em>Rhizobium</em>",
+              0
+            ],
+            [
+              "Vantuz balığı ve köpek balığı",
+              1,
+              "Vantuz balığı köpek balığının artıklarından yararlanır; köpek balığı etkilenmez (+/0)."
+            ],
+            [
+              "Ağaca tutunan orkide",
+              1,
+              "Orkide ışığa ulaşmak için ağaca tutunur ama ağacın besinini almaz; ağaç etkilenmez (+/0)."
+            ],
+            [
+              "Tenya",
+              2
+            ],
+            [
+              "Pire",
+              2
+            ],
+            [
+              "Kene",
+              2,
+              "Kene konağın kanını emer; konak zarar görür (+/−). Dış parazittir."
+            ]
+          ]
+        }
       },
       {
         "h": "Kamuflaj ve mimikri",
@@ -3562,7 +4877,41 @@
         "h": "Hardy–Weinberg dengesi",
         "p": "Çok büyük, rastgele çiftleşen; mutasyon, göç ve doğal seçilimin olmadığı bir popülasyonda alel ve genotip frekansları kuşaklar boyunca değişmez. Buna <b>Hardy–Weinberg dengesi</b> denir. A'nın frekansı p, a'nınki q ise p + q = 1 ve p² + 2pq + q² = 1 olur.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='34' font-size='20' fill='var(--acc)' text-anchor='middle' font-weight='700'>p² + 2pq + q² = 1</text><text x='160' y='56' font-size='12' fill='var(--ink)' text-anchor='middle'>p + q = 1   (p: A frekansı, q: a frekansı)</text><rect x='14' y='68' width='292' height='124' rx='6' fill='var(--c1)' fill-opacity='0.06' stroke='var(--c1)' stroke-width='1.2'/><text x='26' y='87' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Örnek: aa bireylerin oranı 0,16</text><text x='26' y='108' font-size='12' fill='var(--ink)' text-anchor='start'>q² = 0,16  →  q = 0,4</text><text x='26' y='126' font-size='12' fill='var(--ink)' text-anchor='start'>p = 1 − 0,4 = 0,6</text><text x='26' y='144' font-size='12' fill='var(--ink)' text-anchor='start'>AA = p² = 0,36</text><text x='26' y='162' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>Aa = 2pq = 2 · 0,6 · 0,4 = 0,48</text><text x='26' y='180' font-size='12' fill='var(--ink)' text-anchor='start'>kontrol: 0,36 + 0,48 + 0,16 = 1</text></svg>",
-        "key": "Önce aa oranından q'yu bul (q = √aa); taşıyıcı (Aa) oranı 2pq'dur."
+        "key": "Önce aa oranından q'yu bul (q = √aa); taşıyıcı (Aa) oranı 2pq'dur.",
+        "etk": {
+          "tur": "formul",
+          "soru": "Çekinik alelin (a) frekansı q'yu değiştir; dengedeki genotip oranlarını gör.",
+          "girdiler": [
+            {
+              "ad": "q",
+              "etiket": "q (a alelinin frekansı)",
+              "min": 0,
+              "max": 1,
+              "adim": 0.01,
+              "deger": 0.4
+            }
+          ],
+          "ciktilar": [
+            {
+              "ad": "AA = p<sup>2</sup>",
+              "ifade": "(1-q)^2",
+              "basamak": 4,
+              "max": 1
+            },
+            {
+              "ad": "Aa = 2pq",
+              "ifade": "2*(1-q)*q",
+              "basamak": 4,
+              "max": 1
+            },
+            {
+              "ad": "aa = q<sup>2</sup>",
+              "ifade": "q^2",
+              "basamak": 4,
+              "max": 1
+            }
+          ]
+        }
       },
       {
         "h": "Genetik sürüklenme",
@@ -3598,7 +4947,48 @@
         "h": "Kanıtlar: fosiller ve yapılar",
         "p": "<b>Fosiller</b> geçmişteki canlıları ve ara formları gösterir; bozulmamış katmanlarda alttakiler genellikle daha eskidir. <b>Homolog yapılar</b> kökence aynı, işlevce farklı olabilir: insan kolu, yarasa kanadı, balina yüzgeci ortak ataya işaret eder. <b>Analog yapılar</b> işlevce benzer, kökence farklıdır: kuş ve kelebek kanadı.",
         "svg": "<svg viewBox='0 0 320 200'><text x='80' y='15' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>üst kol</text><text x='160' y='15' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>ön kol</text><text x='240' y='15' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>el kemikleri</text><line x1='55' y1='26' x2='55' y2='66' stroke='var(--c1)' stroke-width='6' stroke-linecap='round'/><line x1='51' y1='72' x2='49' y2='106' stroke='var(--c3)' stroke-width='3' stroke-linecap='round'/><line x1='59' y1='72' x2='61' y2='106' stroke='var(--c3)' stroke-width='3' stroke-linecap='round'/><line x1='50.2' y1='112' x2='43' y2='136' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='52.6' y1='112' x2='49' y2='136' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='55.0' y1='112' x2='55' y2='136' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='57.4' y1='112' x2='61' y2='136' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='59.8' y1='112' x2='67' y2='136' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><path d='M160 92 L120 136 L140 140 L160 142 L180 140 L198 130 Z' fill='var(--c4)' fill-opacity='0.12' stroke='none'/><line x1='160' y1='26' x2='160' y2='50' stroke='var(--c1)' stroke-width='6' stroke-linecap='round'/><line x1='158' y1='56' x2='158' y2='88' stroke='var(--c3)' stroke-width='3' stroke-linecap='round'/><line x1='163' y1='56' x2='163' y2='88' stroke='var(--c3)' stroke-width='2' stroke-linecap='round'/><line x1='160' y1='94' x2='120' y2='136' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='160' y1='94' x2='140' y2='140' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='160' y1='94' x2='160' y2='142' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='160' y1='94' x2='180' y2='140' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='160' y1='94' x2='198' y2='130' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><ellipse cx='265' cy='104' rx='20' ry='38' fill='var(--c4)' fill-opacity='0.08' stroke='var(--muted)' stroke-width='1.2'/><line x1='265' y1='32' x2='265' y2='50' stroke='var(--c1)' stroke-width='8' stroke-linecap='round'/><line x1='261' y1='55' x2='260' y2='70' stroke='var(--c3)' stroke-width='4' stroke-linecap='round'/><line x1='269' y1='55' x2='270' y2='70' stroke='var(--c3)' stroke-width='4' stroke-linecap='round'/><line x1='259.6' y1='76' x2='256' y2='134' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='263.2' y1='76' x2='262' y2='134' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='266.8' y1='76' x2='268' y2='134' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='270.4' y1='76' x2='274' y2='134' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><text x='55' y='158' font-size='11' fill='var(--ink)' text-anchor='middle'>insan: tutma</text><text x='160' y='158' font-size='11' fill='var(--ink)' text-anchor='middle'>yarasa: uçma</text><text x='265' y='158' font-size='11' fill='var(--ink)' text-anchor='middle'>balina: yüzme</text><text x='160' y='178' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>homolog: kemik planı aynı, işlev farklı</text><text x='160' y='195' font-size='11' fill='var(--muted)' text-anchor='middle'>analog: kuş ve kelebek kanadı, köken farklı</text></svg>",
-        "key": "Homolog: köken ortak. Analog: işlev ortak, benzer ortama uyumdan doğar."
+        "key": "Homolog: köken ortak. Analog: işlev ortak, benzer ortama uyumdan doğar.",
+        "etk": {
+          "tur": "ayir",
+          "soru": "Yapı çifti homolog mu, analog mu?",
+          "gruplar": [
+            "Homolog",
+            "Analog"
+          ],
+          "ogeler": [
+            [
+              "İnsan kolu – yarasa kanadı",
+              0
+            ],
+            [
+              "Balina yüzgeci – at ön bacağı",
+              0
+            ],
+            [
+              "Bezelye sülüğü – kaktüs dikeni",
+              0,
+              "İkisi de değişmiş yapraktır: kökenleri aynı, işlevleri farklı."
+            ],
+            [
+              "Kuş kanadı – kelebek kanadı",
+              1
+            ],
+            [
+              "Yarasa kanadı – sinek kanadı",
+              1
+            ],
+            [
+              "Ahtapot gözü – insan gözü",
+              1,
+              "İkisi de mercekli göz ama ayrı soylarda bağımsız gelişti; kökenleri farklı."
+            ],
+            [
+              "Gül dikeni – kaktüs dikeni",
+              1,
+              "Kaktüs dikeni değişmiş yapraktır; gül dikeni ise gövde yüzeyinden çıkan bir uzantıdır."
+            ]
+          ]
+        }
       },
       {
         "h": "Kanıtlar: körelmiş organ, embriyo, DNA",

@@ -86,7 +86,7 @@ export default function Lesson({
     const c = t.cards[s.i], last = s.i === nCards - 1, vids = kartVideolari(ders, id, s.i + 1);
     body = (
       <article className="card" key={`c${s.i}`} aria-live="polite">
-        {c.etk ? <Etk e={c.etk} /> : <div className="visual" dangerouslySetInnerHTML={{ __html: c.svg }} />}
+        {c.etk ? <Etk key={s.i} e={c.etk} svg={c.svg} /> : <div className="visual" dangerouslySetInnerHTML={{ __html: c.svg }} />}
         <div className="step">{s.i + 1} / {nCards}</div>
         <div className="say"><div className="bubble"><Html as="h2" html={c.h} /><Html as="p" html={c.p} /></div></div>
         {c.key && <div className="note"><Bulb /><Html html={c.key} /></div>}

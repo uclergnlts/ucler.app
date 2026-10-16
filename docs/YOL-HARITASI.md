@@ -16,13 +16,13 @@ Güncel liste için `python3 tools/check.py` çıktısına bakılabilir.
 4. **Yayın:** Site Vercel'e bağlanacak, ardından `ucler.app` alan adı. O zamana kadar claude.ai artifact'ı eski sürümü gösterir.
 
 ## Planlanacak: oyunlar (Üçler, 2026-10-15)
-Konularla bağlantılı kısa oyunlar. **2026-10-16 deneme:** `/oyunlar/` oyun alanı ve ilk oyun "Periyodik tabloda yerini bul" (ilk 20 element, 10 tur). Liste `lib/oyunlar.ts`; ana sayfada ve ilgili konunun sonunda bağlantı var. Alt menüde yeri Üçler'in kararını bekliyor. Sıradaki fikirler (karar değil):
+Konularla bağlantılı kısa oyunlar. **2026-10-16:** `/oyunlar/` oyun alanında dört oyun var: Periyodik tabloda yerini bul, Vektörle hedefi vur, Organeli bul, Formülde atom say. Liste `lib/oyunlar.ts`; ana sayfada ve ilgili konunun sonunda bağlantı var. Alt menüde yeri Üçler'in kararını bekliyor. Sıradaki fikirler (karar değil):
 - **Kimya:** Elementi tabloya yerleştirme, sembol-ad eşleştirme, formüldeki atom sayısını bulma.
 - **Fizik:** Vektörleri uç uca ekleyip sonucu tahmin etme, birim dönüştürme yarışı.
 - **Biyoloji:** Organeli hücrede doğru yere koyma, organizasyon basamaklarını sıralama.
 
 ## Planlanacak: etkileşimli anlatım (Üçler, 2026-10-15)
-Konu anlatımında kullanıcının dokunup değiştirebileceği öğeler. **2026-10-16 deneme:** üç kart etkileşimli oldu: Atomun yapısı 4 (atom), Vektörler 7 (vektör), Hücre zarından madde geçişi 6 (osmoz). Biçim `docs/ICERIK-SPEC.md` içinde. Üçler beğenirse her konuya yayılacak.
+Konu anlatımında kullanıcının dokunup değiştirebileceği öğeler. **2026-10-16:** Üçler pilotu beğendi ("çok güzel devam et"); 81 konunun hepsinde en az bir etkileşimli kart var (toplam 113). Türler ve biçim `docs/ICERIK-SPEC.md` içinde.
 
 ## Bekleyen (sunucu gerektirir)
 - Kayıt, giriş, ücretli üyelik.
