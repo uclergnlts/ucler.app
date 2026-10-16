@@ -1,0 +1,154 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#1fa463}
+.head .sub i{display:block;width:44px;height:6px;background:#1fa463;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#1fa463;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#1fa463;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>BİYOLOJİ</div><div class="brand">ucler<b>.</b></div></div>
+
+<div class="scene" data-s="0" data-e="7.9">
+ <div class="title">1892:<br><em>görünmeyen hastalık</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="0.3"><g transform="translate(540 960) scale(1.1)"><path d="M0 -160 C110 -110 120 60 0 160 C-120 60 -110 -110 0 -160 Z" fill="#e1f5ea" stroke="#1fa463" stroke-width="5"/><path d="M0 -150 V200" stroke="#1fa463" stroke-width="4"/></g><text x="540" y="1235" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">tütün yaprağı</text></g><g data-in="1.0" transform="translate(540 960) scale(1.1)"><circle cx="-40" cy="-30" r="16" fill="#c9b458" opacity=".85"/><circle cx="30" cy="10" r="20" fill="#c9b458" opacity=".85"/><circle cx="-10" cy="50" r="13" fill="#c9b458" opacity=".85"/><circle cx="50" cy="-60" r="11" fill="#c9b458" opacity=".85"/><circle cx="-60" cy="40" r="10" fill="#c9b458" opacity=".85"/></g><g data-in="1.9"><rect x="270" y="600" width="540" height="120" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="655" text-anchor="middle" font-size="38" font-weight="800" fill="#1d3557">Dimitri İvanovski</text><text x="540" y="700" text-anchor="middle" font-size="28" font-weight="600" fill="#5f6f88">Rus bilim insanı</text></g><g data-in="4.6"><text x="540" y="1300" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">lekeler yapan bir hastalık</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="7.9" data-e="20.2">
+ <div class="title">Bakteriler<br><em>süzgeçte kalır</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="8.0"><path d="M380 820 H700 L590 960 V1040 H490 V960 Z" fill="#fff" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/><rect x="420" y="900" width="240" height="18" fill="#dbe3ee" stroke="#1d3557" stroke-width="3"/><text x="720" y="915" text-anchor="start" font-size="28" font-weight="800" fill="#1d3557">porselen süzgeç</text><path d="M402 840 H678 L664 895 H416 Z" fill="#cfe8d8"/><rect x="435.0" y="854.0" width="70" height="24" rx="12.0" fill="#fde2ea" stroke="#d63c63" stroke-width="4" transform="rotate(10 470 866)"/><rect x="525.0" y="860.0" width="70" height="24" rx="12.0" fill="#fde2ea" stroke="#d63c63" stroke-width="4" transform="rotate(-8 560 872)"/><rect x="595.0" y="850.0" width="70" height="24" rx="12.0" fill="#fde2ea" stroke="#d63c63" stroke-width="4" transform="rotate(15 630 862)"/><text x="260" y="860" text-anchor="end" font-size="28" font-weight="800" fill="#1d3557">hasta özsu</text></g><g data-in="10.5"><text x="260" y="900" text-anchor="end" font-size="28" font-weight="800" fill="#d63c63">bakteriler</text><path d="M270 892 L455 868" stroke="#d63c63" stroke-width="3"/></g><g data-in="13.8"><rect x="440" y="1110" width="200" height="150" rx="16" fill="#fff" stroke="#1d3557" stroke-width="5"/><rect x="446" y="1180" width="188" height="74" rx="10" fill="#cfe8d8"/><path d="M540 1045 V1100" stroke="#1fa463" stroke-width="5" stroke-dasharray="8 8"/><text x="680" y="1200" text-anchor="start" font-size="28" font-weight="800" fill="#1d3557">süzülen sıvı:</text><text x="680" y="1238" text-anchor="start" font-size="28" font-weight="800" fill="#1fa463">bakteri yok</text></g><g data-in="16.0"><g transform="translate(250 1180) scale(0.55)"><path d="M0 -160 C110 -110 120 60 0 160 C-120 60 -110 -110 0 -160 Z" fill="#e1f5ea" stroke="#1fa463" stroke-width="5"/><path d="M0 -150 V200" stroke="#1fa463" stroke-width="4"/></g><text x="250" y="1330" text-anchor="middle" font-size="26" font-weight="800" fill="#1d3557">sağlıklı yaprak</text><path d="M430 1190 L330 1190" stroke="#1d3557" stroke-width="4"/><path d="M345 1180 L328 1190 L345 1200" fill="none" stroke="#1d3557" stroke-width="4"/></g><g data-in="17.4" transform="translate(250 1180) scale(0.55)"><circle cx="-40" cy="-30" r="16" fill="#c9b458" opacity=".85"/><circle cx="30" cy="10" r="20" fill="#c9b458" opacity=".85"/><circle cx="-10" cy="50" r="13" fill="#c9b458" opacity=".85"/><circle cx="50" cy="-60" r="11" fill="#c9b458" opacity=".85"/><circle cx="-60" cy="40" r="10" fill="#c9b458" opacity=".85"/></g><g data-in="17.4"><text x="250" y="1380" text-anchor="middle" font-size="32" font-weight="800" fill="#d63c63">yine hastalanıyor!</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="20.2" data-e="31.4">
+ <div class="title">Bakteriden<br><em>çok daha küçük</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="20.3"><rect x="240.0" y="725.0" width="600" height="190" rx="95.0" fill="#fde2ea" stroke="#d63c63" stroke-width="4" transform="rotate(0 540 820)"/><text x="540" y="700" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">bakteri  ≈ 2 µm</text></g><g data-in="21.6"><g transform="rotate(0 540 1010)"><rect x="495.0" y="1002.0" width="90" height="16" rx="4" fill="#457b9d"/><path d="M503.0 1002.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M513.0 1002.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M523.0 1002.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M533.0 1002.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M543.0 1002.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M553.0 1002.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M563.0 1002.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M573.0 1002.0 l6 16" stroke="#fff" stroke-width="2"/></g><text x="540" y="1080" text-anchor="middle" font-size="34" font-weight="800" fill="#457b9d">virüs  ≈ 0,3 µm</text><text x="540" y="1120" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6f88">(tütün mozaik virüsü)</text></g><g data-in="24.0"><rect x="150" y="1190" width="780" height="140" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1245" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">Martinus Beijerinck, Hollanda</text><text x="540" y="1295" text-anchor="middle" font-size="32" font-weight="600" fill="#1fa463">"bulaşıcı canlı sıvı"</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="31.4" data-e="44.1">
+ <div class="title">1935:<br><em>virüs kristali</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="31.6"><rect x="250" y="600" width="580" height="120" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="655" text-anchor="middle" font-size="38" font-weight="800" fill="#1d3557">Wendell Stanley</text><text x="540" y="700" text-anchor="middle" font-size="28" font-weight="600" fill="#5f6f88">virüsü saflaştırıyor</text></g><g data-in="35.8"><rect x="430" y="860" width="220" height="300" rx="34" fill="#fff" stroke="#1d3557" stroke-width="5"/><rect x="470" y="820" width="140" height="44" rx="10" fill="#dbe3ee" stroke="#1d3557" stroke-width="5"/></g><g data-in="38.0"><path transform="translate(500 1030) scale(1.0)" d="M0 -40 L18 -12 L10 40 L-10 40 L-18 -12 Z" fill="#eaf2fa" stroke="#457b9d" stroke-width="4" stroke-linejoin="round"/><path transform="translate(570 1050) scale(0.8)" d="M0 -40 L18 -12 L10 40 L-10 40 L-18 -12 Z" fill="#eaf2fa" stroke="#457b9d" stroke-width="4" stroke-linejoin="round"/><path transform="translate(540 990) scale(1.2)" d="M0 -40 L18 -12 L10 40 L-10 40 L-18 -12 Z" fill="#eaf2fa" stroke="#457b9d" stroke-width="4" stroke-linejoin="round"/><path transform="translate(595 995) scale(0.7)" d="M0 -40 L18 -12 L10 40 L-10 40 L-18 -12 Z" fill="#eaf2fa" stroke="#457b9d" stroke-width="4" stroke-linejoin="round"/><path transform="translate(480 980) scale(0.6)" d="M0 -40 L18 -12 L10 40 L-10 40 L-18 -12 Z" fill="#eaf2fa" stroke="#457b9d" stroke-width="4" stroke-linejoin="round"/><text x="540" y="1225" text-anchor="middle" font-size="32" font-weight="800" fill="#457b9d">tuza benzeyen kristaller</text></g><g data-in="40.3"><text x="540" y="1320" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#1d3557">bir canlı şişede saklanabilir mi?</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="44.1" data-e="59.8">
+ <div class="title">Virüs bir<br><em>hücre değil</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="44.2"><rect x="300" y="720" width="480" height="110" rx="20" fill="#eaf2fa" stroke="#457b9d" stroke-width="6"/><path d="M330 720 l20 110" stroke="#457b9d" stroke-width="3" opacity=".5"/><path d="M366 720 l20 110" stroke="#457b9d" stroke-width="3" opacity=".5"/><path d="M402 720 l20 110" stroke="#457b9d" stroke-width="3" opacity=".5"/><path d="M438 720 l20 110" stroke="#457b9d" stroke-width="3" opacity=".5"/><path d="M474 720 l20 110" stroke="#457b9d" stroke-width="3" opacity=".5"/><path d="M510 720 l20 110" stroke="#457b9d" stroke-width="3" opacity=".5"/><path d="M546 720 l20 110" stroke="#457b9d" stroke-width="3" opacity=".5"/><path d="M582 720 l20 110" stroke="#457b9d" stroke-width="3" opacity=".5"/><path d="M618 720 l20 110" stroke="#457b9d" stroke-width="3" opacity=".5"/><path d="M654 720 l20 110" stroke="#457b9d" stroke-width="3" opacity=".5"/><path d="M690 720 l20 110" stroke="#457b9d" stroke-width="3" opacity=".5"/><path d="M726 720 l20 110" stroke="#457b9d" stroke-width="3" opacity=".5"/><path d="M762 720 l20 110" stroke="#457b9d" stroke-width="3" opacity=".5"/><text x="540" y="690" text-anchor="middle" font-size="30" font-weight="800" fill="#457b9d">protein kılıf</text></g><path data-draw="45.9" data-dur="1.2" d="M330 775 q30 -30 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t40 0" fill="none" stroke="#d63c63" stroke-width="7"/><g data-in="46.4"><text x="540" y="880" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">DNA ya da RNA</text></g><g data-in="50.4"><text x="540" y="960" text-anchor="middle" font-size="30" font-weight="800" fill="#5f6f88">virüste yok:</text></g><g data-in="50.4"><text x="330" y="1020" text-anchor="start" font-size="34" font-weight="800" fill="#1d3557">beslenme</text></g><g data-in="50.4"><circle cx="280" cy="1008" r="26" fill="#d63c63"/><path d="M270 998 l20 20 M290 998 l-20 20" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g><g data-in="51.6"><text x="330" y="1090" text-anchor="start" font-size="34" font-weight="800" fill="#1d3557">enerji üretme</text></g><g data-in="51.6"><circle cx="280" cy="1078" r="26" fill="#d63c63"/><path d="M270 1068 l20 20 M290 1068 l-20 20" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g><g data-in="52.9"><text x="330" y="1160" text-anchor="start" font-size="34" font-weight="800" fill="#1d3557">uyarılara tepki</text></g><g data-in="52.9"><circle cx="280" cy="1148" r="26" fill="#d63c63"/><path d="M270 1138 l20 20 M290 1138 l-20 20" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g><g data-in="54.0"><text x="330" y="1230" text-anchor="start" font-size="34" font-weight="800" fill="#1d3557">tek başına çoğalma</text></g><g data-in="54.0"><circle cx="280" cy="1218" r="26" fill="#d63c63"/><path d="M270 1208 l20 20 M290 1208 l-20 20" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g><g data-in="55.6"><text x="540" y="1350" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#1d3557">şişede yıllarca bekleyebilir</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="59.8" data-e="78.9">
+ <div class="title">Hücrenin içinde<br><em>canlanıyor</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="59.9"><ellipse cx="540" cy="950" rx="330" ry="250" fill="#e1f5ea" fill-opacity=".6" stroke="#1fa463" stroke-width="6"/><circle cx="560" cy="960" r="70" fill="#cfe8d8" stroke="#1fa463" stroke-width="4"/><text x="540" y="1250" text-anchor="middle" font-size="30" font-weight="800" fill="#1fa463">tütün yaprağı hücresi</text></g><g data-in="62.5"><g transform="rotate(30 130 760)"><rect x="85.0" y="752.0" width="90" height="16" rx="4" fill="#457b9d"/><path d="M93.0 752.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M103.0 752.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M113.0 752.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M123.0 752.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M133.0 752.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M143.0 752.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M153.0 752.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M163.0 752.0 l6 16" stroke="#fff" stroke-width="2"/></g><path d="M190 790 L280 840" stroke="#1d3557" stroke-width="4" stroke-dasharray="8 8"/></g><g data-in="65.5"><g transform="rotate(20 340 860)"><rect x="305.0" y="853.5" width="70" height="13" rx="4" fill="#457b9d"/><path d="M313.0 853.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M323.0 853.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M333.0 853.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M343.0 853.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M353.0 853.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M363.0 853.5 l6 13" stroke="#fff" stroke-width="2"/></g><g transform="rotate(-30 390 1030)"><rect x="355.0" y="1023.5" width="70" height="13" rx="4" fill="#457b9d"/><path d="M363.0 1023.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M373.0 1023.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M383.0 1023.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M393.0 1023.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M403.0 1023.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M413.0 1023.5 l6 13" stroke="#fff" stroke-width="2"/></g><g transform="rotate(5 480 780)"><rect x="445.0" y="773.5" width="70" height="13" rx="4" fill="#457b9d"/><path d="M453.0 773.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M463.0 773.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M473.0 773.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M483.0 773.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M493.0 773.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M503.0 773.5 l6 13" stroke="#fff" stroke-width="2"/></g><g transform="rotate(-15 700 810)"><rect x="665.0" y="803.5" width="70" height="13" rx="4" fill="#457b9d"/><path d="M673.0 803.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M683.0 803.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M693.0 803.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M703.0 803.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M713.0 803.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M723.0 803.5 l6 13" stroke="#fff" stroke-width="2"/></g><g transform="rotate(40 760 990)"><rect x="725.0" y="983.5" width="70" height="13" rx="4" fill="#457b9d"/><path d="M733.0 983.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M743.0 983.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M753.0 983.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M763.0 983.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M773.0 983.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M783.0 983.5 l6 13" stroke="#fff" stroke-width="2"/></g><g transform="rotate(-10 670 1100)"><rect x="635.0" y="1093.5" width="70" height="13" rx="4" fill="#457b9d"/><path d="M643.0 1093.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M653.0 1093.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M663.0 1093.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M673.0 1093.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M683.0 1093.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M693.0 1093.5 l6 13" stroke="#fff" stroke-width="2"/></g><g transform="rotate(80 310 960)"><rect x="275.0" y="953.5" width="70" height="13" rx="4" fill="#457b9d"/><path d="M283.0 953.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M293.0 953.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M303.0 953.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M313.0 953.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M323.0 953.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M333.0 953.5 l6 13" stroke="#fff" stroke-width="2"/></g><g transform="rotate(30 520 1120)"><rect x="485.0" y="1113.5" width="70" height="13" rx="4" fill="#457b9d"/><path d="M493.0 1113.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M503.0 1113.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M513.0 1113.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M523.0 1113.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M533.0 1113.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M543.0 1113.5 l6 13" stroke="#fff" stroke-width="2"/></g><g transform="rotate(60 600 890)"><rect x="565.0" y="883.5" width="70" height="13" rx="4" fill="#457b9d"/><path d="M573.0 883.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M583.0 883.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M593.0 883.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M603.0 883.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M613.0 883.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M623.0 883.5 l6 13" stroke="#fff" stroke-width="2"/></g><g transform="rotate(0 790 890)"><rect x="755.0" y="883.5" width="70" height="13" rx="4" fill="#457b9d"/><path d="M763.0 883.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M773.0 883.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M783.0 883.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M793.0 883.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M803.0 883.5 l6 13" stroke="#fff" stroke-width="2"/><path d="M813.0 883.5 l6 13" stroke="#fff" stroke-width="2"/></g><text x="540" y="660" text-anchor="middle" font-size="36" font-weight="800" fill="#457b9d">binlerce kopya</text></g><g data-in="70.0"><g transform="rotate(-20 780 1120)"><rect x="735.0" y="1112.0" width="90" height="16" rx="4" fill="#d63c63"/><path d="M743.0 1112.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M753.0 1112.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M763.0 1112.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M773.0 1112.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M783.0 1112.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M793.0 1112.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M803.0 1112.0 l6 16" stroke="#fff" stroke-width="2"/><path d="M813.0 1112.0 l6 16" stroke="#fff" stroke-width="2"/></g><text x="870" y="1200" text-anchor="end" font-size="28" font-weight="800" fill="#d63c63">hatalı kopya:</text><text x="870" y="1236" text-anchor="end" font-size="28" font-weight="800" fill="#d63c63">mutasyon</text></g><g data-in="74.0"><rect x="200" y="1290" width="680" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1352" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">grip aşısı her yıl yenilenir</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="78.9" data-e="90.0">
+ <div class="title">Canlı ile cansızın<br><em>sınırında</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="79.0"><text x="300" y="690" text-anchor="middle" font-size="36" font-weight="800" fill="#1fa463">canlı gibi</text><text x="780" y="690" text-anchor="middle" font-size="36" font-weight="800" fill="#d63c63">cansız gibi</text><path d="M540 640 V1180" stroke="#9aa6b6" stroke-width="4" stroke-dasharray="12 10"/></g><g data-in="79.2"><circle cx="140" cy="780" r="26" fill="#1fa463"/><path d="M128 780 l9 10 l17 -20" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g><g data-in="79.2"><text x="180" y="792" text-anchor="start" font-size="30" font-weight="800" fill="#1d3557">kalıtım maddesi</text></g><g data-in="81.3"><circle cx="140" cy="860" r="26" fill="#1fa463"/><path d="M128 860 l9 10 l17 -20" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g><g data-in="81.3"><text x="180" y="872" text-anchor="start" font-size="30" font-weight="800" fill="#1d3557">çoğalır</text></g><g data-in="82.0"><circle cx="140" cy="940" r="26" fill="#1fa463"/><path d="M128 940 l9 10 l17 -20" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g><g data-in="82.0"><text x="180" y="952" text-anchor="start" font-size="30" font-weight="800" fill="#1d3557">değişir</text></g><g data-in="83.1"><circle cx="620" cy="780" r="26" fill="#d63c63"/><path d="M610 770 l20 20 M630 770 l-20 20" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g><g data-in="83.1"><text x="660" y="792" text-anchor="start" font-size="30" font-weight="800" fill="#1d3557">hücre yok</text></g><g data-in="84.0"><circle cx="620" cy="860" r="26" fill="#d63c63"/><path d="M610 850 l20 20 M630 850 l-20 20" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g><g data-in="84.0"><text x="660" y="872" text-anchor="start" font-size="30" font-weight="800" fill="#1d3557">metabolizma yok</text></g><g data-in="84.8"><circle cx="620" cy="940" r="26" fill="#d63c63"/><path d="M610 930 l20 20 M630 930 l-20 20" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g><g data-in="84.8"><text x="660" y="952" text-anchor="start" font-size="30" font-weight="800" fill="#1d3557">tek başına çoğalmaz</text></g><g data-in="86.4"><g transform="rotate(0 540 1100)"><rect x="475.0" y="1089.0" width="130" height="22" rx="4" fill="#457b9d"/><path d="M483.0 1089.0 l6 22" stroke="#fff" stroke-width="2"/><path d="M493.0 1089.0 l6 22" stroke="#fff" stroke-width="2"/><path d="M503.0 1089.0 l6 22" stroke="#fff" stroke-width="2"/><path d="M513.0 1089.0 l6 22" stroke="#fff" stroke-width="2"/><path d="M523.0 1089.0 l6 22" stroke="#fff" stroke-width="2"/><path d="M533.0 1089.0 l6 22" stroke="#fff" stroke-width="2"/><path d="M543.0 1089.0 l6 22" stroke="#fff" stroke-width="2"/><path d="M553.0 1089.0 l6 22" stroke="#fff" stroke-width="2"/><path d="M563.0 1089.0 l6 22" stroke="#fff" stroke-width="2"/><path d="M573.0 1089.0 l6 22" stroke="#fff" stroke-width="2"/><path d="M583.0 1089.0 l6 22" stroke="#fff" stroke-width="2"/><path d="M593.0 1089.0 l6 22" stroke="#fff" stroke-width="2"/></g><text x="540" y="1210" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#1d3557">virüs: tam sınırda</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="90.05" data-e="99">
+ <div class="q"><small>DÜŞÜN</small>Bir şeye canlı demek için <em>hangi özellik</em> şart?</div>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;                 // ses hızlandırılmadı
+const DUR = 93.88;           // ses süresi
+const PH = [
+ [0.00,1.45,"Bin sekiz yüz doksan iki."],
+ [1.92,7.69,"Rus bilim insanı Dimitri İvanovski, tütün yapraklarında lekeler yapan bir hastalığı araştırıyor."],
+ [7.98,13.41,"Hasta yaprağın özsuyunu, bakterileri tutan çok ince bir porselen süzgeçten geçiriyor."],
+ [13.79,15.75,"Süzülen sıvıda hiç bakteri yok."],
+ [16.01,19.94,"Ama bu sıvıyı sağlıklı bir yaprağa sürünce, yaprak yine hastalanıyor."],
+ [20.23,23.72,"Demek ki hastalığı yapan şey, bakteriden çok daha küçük."],
+ [24.02,31.08,"Birkaç yıl sonra Hollandalı Martinus Beijerinck aynı deneyi tekrarlıyor ve bu etkene bulaşıcı canlı sıvı diyor."],
+ [31.54,35.52,"Bin dokuz yüz otuz beşte ise Wendell Stanley virüsü saflaştırıyor."],
+ [35.82,37.68,"Elinde kalan şey onu şaşırtıyor:"],
+ [37.98,39.94,"tuza benzeyen küçük kristaller."],
+ [40.27,43.84,"Bir canlı, kristal hâline getirilip şişede saklanabilir mi?"],
+ [44.16,45.61,"Virüs bir hücre değildir."],
+ [45.85,50.06,"Protein bir kılıfın içinde yalnızca DNA ya da RNA taşır."],
+ [50.37,55.35,"Beslenmez, enerji üretmez, uyarılara tepki vermez, tek başına çoğalamaz."],
+ [55.60,59.56,"Şişedeki kristaller yıllarca hiçbir şey yapmadan bekleyebilir."],
+ [59.84,65.13,"Ama o kristalleri suda çözüp bir tütün yaprağına sürersen, virüs yeniden hücrelere girer."],
+ [65.45,69.67,"Hücrenin düzeneğini ele geçirir ve ona binlerce yeni kopyasını yaptırır."],
+ [69.99,71.53,"Kopyalanırken hatalar olur,"],
+ [71.89,73.70,"yani virüs mutasyona uğrar."],
+ [74.00,77.02,"Grip aşısının her yıl yenilenmesinin bir nedeni de budur:"],
+ [77.36,78.72,"virüs sürekli değişir."],
+ [78.97,80.94,"Yani virüsün kalıtım maddesi var,"],
+ [81.27,82.71,"çoğalıyor ve değişiyor."],
+ [83.02,86.07,"Ama bunların hiçbirini bir hücre olmadan yapamıyor."],
+ [86.38,89.68,"Bu yüzden virüsler, canlı ile cansızın sınırında sayılır."],
+ [90.05,93.88,"Peki sence, bir şeye canlı demek için hangi özellik şart?"]
+];
+
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
