@@ -1,0 +1,148 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#d63c63}
+.head .sub i{display:block;width:44px;height:6px;background:#d63c63;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#d63c63;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#d63c63;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>KİMYA</div><div class="brand">ucler<b>.</b></div></div>
+
+<!-- 1. Şişe -->
+<div class="scene" data-s="0" data-e="11.4">
+ <div class="title">Etiketteki<br><em>kırmızı baklavalar</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="0.2">
+   <rect x="250" y="820" width="70" height="60" rx="8" fill="#fff" stroke="#1d3557" stroke-width="5"/>
+   <path d="M230 880 H340 L360 930 V1250 Q360 1270 340 1270 H230 Q210 1270 210 1250 V930 Z" fill="#e3f2f3" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/>
+   <rect x="225" y="1000" width="120" height="190" rx="8" fill="#fff" stroke="#c9d3e0" stroke-width="3"/>
+   <path d="M240 1030 H330 M240 1050 H310" stroke="#c9d3e0" stroke-width="5"/>
+  </g>
+  <g data-in="3.0"><g transform="translate(262 1120) scale(0.17)"><rect x="-90" y="-90" width="180" height="180" rx="10" transform="rotate(45)" fill="#fff" stroke="#e0242c" stroke-width="12"/><path d="M0 -58 V18" stroke="#1d3557" stroke-width="18" stroke-linecap="round"/><circle cx="0" cy="48" r="11" fill="#1d3557"/></g><g transform="translate(310 1120) scale(0.17)"><rect x="-90" y="-90" width="180" height="180" rx="10" transform="rotate(45)" fill="#fff" stroke="#e0242c" stroke-width="12"/><path d="M-52 -60 L-20 -44 L-30 -24 L-62 -40 Z M24 -60 L56 -44 L46 -24 L14 -40 Z" fill="#1d3557"/><path d="M-30 -14 v12 M-30 8 v10 M40 -14 v12 M40 8 v10" stroke="#1d3557" stroke-width="7" stroke-linecap="round"/><path d="M-62 40 H-8 V60 H-62 Z" fill="#1d3557"/><path d="M-50 40 l6 -8 l6 8 M4 60 C4 36 20 30 34 30 H62 V48 H40 C34 48 30 54 30 60 Z" fill="#1d3557"/></g></g>
+  <g data-in="4.2"><path d="M360 1100 L520 990" stroke="#9aa6b6" stroke-width="4" stroke-dasharray="10 8"/><g transform="translate(700 960) scale(1.2)"><rect x="-90" y="-90" width="180" height="180" rx="10" transform="rotate(45)" fill="#fff" stroke="#e0242c" stroke-width="12"/><path d="M-52 -60 L-20 -44 L-30 -24 L-62 -40 Z M24 -60 L56 -44 L46 -24 L14 -40 Z" fill="#1d3557"/><path d="M-30 -14 v12 M-30 8 v10 M40 -14 v12 M40 8 v10" stroke="#1d3557" stroke-width="7" stroke-linecap="round"/><path d="M-62 40 H-8 V60 H-62 Z" fill="#1d3557"/><path d="M-50 40 l6 -8 l6 8 M4 60 C4 36 20 30 34 30 H62 V48 H40 C34 48 30 54 30 60 Z" fill="#1d3557"/></g></g>
+  <text x="700" y="1210" text-anchor="middle" font-size="34" fill="#5f6f88" data-in="4.6">kırmızı çerçeve, baklava şekli</text>
+  <text x="540" y="1420" text-anchor="middle" font-family="Manrope" font-size="46" font-weight="800" fill="#d63c63" data-in="8.0">açmadan önce oku</text>
+ </svg>
+</div>
+
+<!-- 2. Altı işaret -->
+<div class="scene" data-s="11.4" data-e="32.2">
+ <div class="title">Her işaret<br><em>bir tehlike</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="12.3" data-base=".15"><g transform="translate(220 760) scale(1.0)"><rect x="-90" y="-90" width="180" height="180" rx="10" transform="rotate(45)" fill="#fff" stroke="#e0242c" stroke-width="12"/><path d="M0 -62 C22 -30 40 -10 34 22 C30 46 14 56 0 56 C-14 56 -32 46 -34 22 C-37 0 -22 -18 -12 -36 C-8 -18 -2 -12 6 -8 C10 -26 4 -44 0 -62 Z" fill="#1d3557"/></g><text x="220" y="930" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">yanıcı</text></g>
+  <g data-in="14.4" data-base=".15"><g transform="translate(540 760) scale(1.0)"><rect x="-90" y="-90" width="180" height="180" rx="10" transform="rotate(45)" fill="#fff" stroke="#e0242c" stroke-width="12"/><circle cx="0" cy="30" r="26" fill="none" stroke="#1d3557" stroke-width="9"/><path d="M0 -66 C14 -46 26 -34 22 -14 C20 -2 10 4 0 4 C-10 4 -22 -2 -22 -14 C-24 -28 -14 -40 -8 -50 C-4 -40 0 -36 4 -34 C6 -46 2 -56 0 -66 Z" fill="#1d3557"/><path d="M-50 64 H50" stroke="#1d3557" stroke-width="8"/></g><text x="540" y="930" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">yakıcı</text></g>
+  <g data-in="20.2" data-base=".15"><g transform="translate(860 760) scale(1.0)"><rect x="-90" y="-90" width="180" height="180" rx="10" transform="rotate(45)" fill="#fff" stroke="#e0242c" stroke-width="12"/><circle cx="-8" cy="22" r="30" fill="#1d3557"/><path d="M-8 -48 V-22 M24 -36 L12 -14 M-40 -36 L-28 -14 M44 -4 L24 4 M-60 -4 L-40 4" stroke="#1d3557" stroke-width="8" stroke-linecap="round"/><path d="M30 50 l14 6 M-46 52 l-14 6" stroke="#1d3557" stroke-width="8" stroke-linecap="round"/></g><text x="860" y="930" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">patlayıcı</text></g>
+  <g data-in="22.0" data-base=".15"><g transform="translate(220 1140) scale(1.0)"><rect x="-90" y="-90" width="180" height="180" rx="10" transform="rotate(45)" fill="#fff" stroke="#e0242c" stroke-width="12"/><path d="M-36 -10 C-36 -50 36 -50 36 -10 C36 8 26 14 22 20 V34 H-22 V20 C-26 14 -36 8 -36 -10 Z" fill="#1d3557"/><circle cx="-14" cy="-10" r="10" fill="#fff"/><circle cx="14" cy="-10" r="10" fill="#fff"/><path d="M-50 44 L50 70 M50 44 L-50 70" stroke="#1d3557" stroke-width="10" stroke-linecap="round"/></g><text x="220" y="1310" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">zehirli</text></g>
+  <g data-in="24.5" data-base=".15"><g transform="translate(540 1140) scale(1.0)"><rect x="-90" y="-90" width="180" height="180" rx="10" transform="rotate(45)" fill="#fff" stroke="#e0242c" stroke-width="12"/><path d="M-52 -60 L-20 -44 L-30 -24 L-62 -40 Z M24 -60 L56 -44 L46 -24 L14 -40 Z" fill="#1d3557"/><path d="M-30 -14 v12 M-30 8 v10 M40 -14 v12 M40 8 v10" stroke="#1d3557" stroke-width="7" stroke-linecap="round"/><path d="M-62 40 H-8 V60 H-62 Z" fill="#1d3557"/><path d="M-50 40 l6 -8 l6 8 M4 60 C4 36 20 30 34 30 H62 V48 H40 C34 48 30 54 30 60 Z" fill="#1d3557"/></g><text x="540" y="1310" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">aşındırıcı</text></g>
+  <g data-in="29.3" data-base=".15"><g transform="translate(860 1140) scale(1.0)"><rect x="-90" y="-90" width="180" height="180" rx="10" transform="rotate(45)" fill="#fff" stroke="#e0242c" stroke-width="12"/><path d="M0 -58 V18" stroke="#1d3557" stroke-width="18" stroke-linecap="round"/><circle cx="0" cy="48" r="11" fill="#1d3557"/></g><text x="860" y="1310" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">tahriş edici</text></g>
+  
+ </svg>
+</div>
+
+<!-- 3. Eski ve yeni -->
+<div class="scene" data-s="32.2" data-e="41.4">
+ <div class="title">Eskiden turuncu,<br><em>bugün ortak</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="32.4"><rect x="140" y="860" width="220" height="220" fill="#f39200" stroke="#1d3557" stroke-width="5"/><path d="M180 900 L320 1040 M320 900 L180 1040" stroke="#1d3557" stroke-width="18" stroke-linecap="round"/><text x="250" y="1150" text-anchor="middle" font-size="34" fill="#5f6f88">eski</text></g>
+  <g data-in="34.7"><path d="M420 970 H630 M605 945 L635 970 L605 995" fill="none" stroke="#9aa6b6" stroke-width="6"/><g transform="translate(820 970) scale(1.0)"><rect x="-90" y="-90" width="180" height="180" rx="10" transform="rotate(45)" fill="#fff" stroke="#e0242c" stroke-width="12"/><path d="M0 -58 V18" stroke="#1d3557" stroke-width="18" stroke-linecap="round"/><circle cx="0" cy="48" r="11" fill="#1d3557"/></g><text x="820" y="1150" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">bugün</text></g>
+  <text x="540" y="1340" text-anchor="middle" font-family="Manrope" font-size="46" font-weight="800" fill="#1d3557" data-in="38.0">her ülkede aynı anlam</text>
+ </svg>
+</div>
+
+<!-- 4. Kural -->
+<div class="scene" data-s="41.4" data-e="47.35">
+ <div class="title">Kural basit:<br><em>etiketi oku</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="41.6">
+   <rect x="240" y="720" width="600" height="560" rx="20" fill="#fff" stroke="#1d3557" stroke-width="5"/>
+   <g transform="translate(340 830) scale(0.42)"><rect x="-90" y="-90" width="180" height="180" rx="10" transform="rotate(45)" fill="#fff" stroke="#e0242c" stroke-width="12"/><path d="M-52 -60 L-20 -44 L-30 -24 L-62 -40 Z M24 -60 L56 -44 L46 -24 L14 -40 Z" fill="#1d3557"/><path d="M-30 -14 v12 M-30 8 v10 M40 -14 v12 M40 8 v10" stroke="#1d3557" stroke-width="7" stroke-linecap="round"/><path d="M-62 40 H-8 V60 H-62 Z" fill="#1d3557"/><path d="M-50 40 l6 -8 l6 8 M4 60 C4 36 20 30 34 30 H62 V48 H40 C34 48 30 54 30 60 Z" fill="#1d3557"/></g><g transform="translate(450 830) scale(0.42)"><rect x="-90" y="-90" width="180" height="180" rx="10" transform="rotate(45)" fill="#fff" stroke="#e0242c" stroke-width="12"/><path d="M0 -58 V18" stroke="#1d3557" stroke-width="18" stroke-linecap="round"/><circle cx="0" cy="48" r="11" fill="#1d3557"/></g>
+   <text x="530" y="830" font-size="40" font-weight="800" fill="#e0242c">TEHLİKE</text>
+  </g>
+  <g data-in="42.9"><text x="290" y="960" font-size="32" font-weight="800" fill="#1d3557">Kullanım talimatı</text><path d="M290 1000 H780 M290 1045 H740 M290 1090 H760 M290 1135 H700" stroke="#c9d3e0" stroke-width="10" stroke-linecap="round"/></g>
+  <g data-in="45.0"><circle cx="790" cy="1240" r="50" fill="#2a9d8f"/><path d="M766 1240 L784 1258 L816 1222" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="540" y="1400" text-anchor="middle" font-family="Manrope" font-size="46" font-weight="800" fill="#1d3557" data-in="45.0">talimata uygun kullan</text>
+ </svg>
+</div>
+
+<!-- 5. Düşün -->
+<div class="scene" data-s="47.35" data-e="99">
+ <div class="q"><small>DÜŞÜN</small>Evinde <em>aşındırıcı</em> işareti taşıyan hangi ürün olabilir?</div>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;                 // ses hızlandırılmadı
+const DUR = 51.88;           // ses süresi
+// Konuşma parçaları: [başlangıç, bitiş, metin] (sessizlik tespitinden)
+const PH = [
+ [0.00,2.54,"Bir temizlik ürününün arkasına hiç baktın mı?"],
+ [2.82,6.67,"Kırmızı çerçeveli, baklava şeklinde küçük işaretler görürsün."],[6.89,7.77,"Bunlar süs değil."],
+ [7.98,11.29,"Şişeyi açmadan önce okunması gereken bir uyarı dilidir."],
+ [11.58,14.01,"Alev, maddenin kolay tutuştuğunu söyler."],
+ [14.34,17.68,"Bir dairenin üstündeki alev ise yakıcı maddeyi gösterir;"],[17.90,19.92,"başka şeylerin yanmasını hızlandırır."],
+ [20.19,24.18,"Patlayan bomba patlayıcıyı, kurukafa zehirli maddeyi anlatır."],
+ [24.45,27.40,"Ele ve yüzeye damlayan sıvı aşındırıcı demektir;"],[27.61,29.03,"deriyi ve metali yakar."],
+ [29.30,32.02,"Ünlem işareti de tahriş edici maddeyi gösterir."],
+ [32.35,34.43,"Eskiden turuncu kareler kullanılırdı."],
+ [34.66,41.21,"Bugün dünyanın büyük bölümünde aynı ortak sistem geçerli, yani işaretler her ülkede aynı şeyi söyler."],
+ [41.56,42.35,"Kural basit:"],[42.58,47.12,"önce etiketi ve kullanım talimatını oku, ürünü talimata uygun kullan."],
+ [47.39,51.60,"Peki sence, evinde aşındırıcı işareti taşıyan hangi ürün olabilir?"]
+];
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
