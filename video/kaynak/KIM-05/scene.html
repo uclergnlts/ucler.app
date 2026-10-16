@@ -1,0 +1,139 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#d63c63}
+.head .sub i{display:block;width:44px;height:6px;background:#d63c63;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#d63c63;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#d63c63;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>KİMYA</div><div class="brand">ucler<b>.</b></div></div>
+
+<!-- 1. H2O -->
+<div class="scene" data-s="0" data-e="7.3">
+ <div class="title">Kimyanın<br><em>alfabesi</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="0.05"><text x="540" y="900" text-anchor="middle" font-family="Manrope" font-size="230" font-weight="800" fill="#1d3557">H₂O</text></g>
+  <g data-in="1.4"><path d="M330 950 H420 M500 950 H560 M640 950 H750" stroke="#d63c63" stroke-width="8" stroke-linecap="round"/><text x="540" y="1010" text-anchor="middle" font-size="34" fill="#5f6f88">üç işaret</text></g>
+  <g data-in="2.6"><path d="M470 1080 H610 L595 1280 H485 Z" fill="#fff" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/><path d="M477 1140 H603 L595 1270 H485 Z" fill="#a8dadc"/><text x="540" y="1345" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">bir bardak su</text></g>
+ </svg>
+</div>
+
+<!-- 2. Semboller -->
+<div class="scene" data-s="7.3" data-e="15.3">
+ <div class="title">Her elemente<br><em>bir sembol</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="9.7"><rect x="200" y="640" width="300" height="260" rx="22" fill="#fff" stroke="#1d3557" stroke-width="5"/><rect x="200" y="640" width="300" height="14" rx="7" fill="#9aa6b6"/><text x="350" y="800" text-anchor="middle" font-family="Manrope" font-size="120" font-weight="800" fill="#1d3557">H</text><text x="350" y="865" text-anchor="middle" font-size="34" fill="#5f6f88">hidrojen</text></g><g data-in="10.9"><rect x="580" y="640" width="300" height="260" rx="22" fill="#fff" stroke="#1d3557" stroke-width="5"/><rect x="580" y="640" width="300" height="14" rx="7" fill="#d63c63"/><text x="730" y="800" text-anchor="middle" font-family="Manrope" font-size="120" font-weight="800" fill="#1d3557">O</text><text x="730" y="865" text-anchor="middle" font-size="34" fill="#5f6f88">oksijen</text></g>
+  <g data-in="12.2"><rect x="200" y="960" width="300" height="260" rx="22" fill="#fff" stroke="#1d3557" stroke-width="5"/><rect x="200" y="960" width="300" height="14" rx="7" fill="#ffd95a"/><text x="350" y="1120" text-anchor="middle" font-family="Manrope" font-size="120" font-weight="800" fill="#1d3557">Na</text><text x="350" y="1185" text-anchor="middle" font-size="34" fill="#5f6f88">sodyum</text></g><g data-in="14.4"><rect x="580" y="960" width="300" height="260" rx="22" fill="#fff" stroke="#1d3557" stroke-width="5"/><rect x="580" y="960" width="300" height="14" rx="7" fill="#2a9d8f"/><text x="730" y="1120" text-anchor="middle" font-family="Manrope" font-size="120" font-weight="800" fill="#1d3557">Cl</text><text x="730" y="1185" text-anchor="middle" font-size="34" fill="#5f6f88">klor</text></g>
+ </svg>
+</div>
+
+<!-- 3. İndis -->
+<div class="scene" data-s="15.3" data-e="36.3">
+ <div class="title">İndis:<br><em>kaç tane?</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="15.5"><text x="330" y="820" font-family="Manrope" font-size="220" font-weight="800" fill="#1d3557">H</text><text x="500" y="860" font-family="Manrope" font-size="120" font-weight="800" fill="#d63c63">2</text><text x="580" y="820" font-family="Manrope" font-size="220" font-weight="800" fill="#1d3557">O</text></g>
+  <g data-in="18.0"><text x="540" y="560" text-anchor="middle" font-size="34" fill="#5f6f88">bileşik = elementler, belirli oranda</text></g>
+  <g data-in="22.6"><path d="M535 900 V960" stroke="#d63c63" stroke-width="6"/><path d="M520 915 L535 890 L550 915" fill="none" stroke="#d63c63" stroke-width="6"/><text x="535" y="1005" text-anchor="middle" font-size="38" font-weight="800" fill="#d63c63">indis</text></g>
+  <g data-in="31.2"><rect x="800" y="780" width="70" height="90" rx="10" fill="none" stroke="#9aa6b6" stroke-width="5" stroke-dasharray="10 8"/><text x="835" y="845" text-anchor="middle" font-family="Manrope" font-size="60" font-weight="800" fill="#9aa6b6">1</text><text x="835" y="910" text-anchor="middle" font-size="28" fill="#5f6f88">yazılmaz</text></g>
+  <g data-in="27.6">
+   <circle cx="540" cy="1170" r="80" fill="#f4a3b8" stroke="#1d3557" stroke-width="5"/><text x="540" y="1188" text-anchor="middle" font-size="50" font-weight="800" fill="#1d3557">O</text>
+   <circle cx="420" cy="1250" r="52" fill="#fff" stroke="#1d3557" stroke-width="5"/><text x="420" y="1266" text-anchor="middle" font-size="42" font-weight="800" fill="#1d3557">H</text>
+   <circle cx="660" cy="1250" r="52" fill="#fff" stroke="#1d3557" stroke-width="5"/><text x="660" y="1266" text-anchor="middle" font-size="42" font-weight="800" fill="#1d3557">H</text>
+   <text x="540" y="1380" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#1d3557">2 hidrojen + 1 oksijen</text>
+  </g>
+ </svg>
+</div>
+
+<!-- 4. Oran -->
+<div class="scene" data-s="36.3" data-e="48.7">
+ <div class="title">Oran değişirse<br><em>madde değişir</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="36.6"><rect x="120" y="620" width="840" height="180" rx="22" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="170" y="745" font-family="Manrope" font-size="90" font-weight="800" fill="#1d3557">NaCl</text><text x="560" y="700" font-size="38" font-weight="800" fill="#1d3557">sofra tuzu</text><text x="560" y="750" font-size="30" fill="#5f6f88">1 sodyum : 1 klor</text></g>
+  <g data-in="41.4"><rect x="120" y="860" width="840" height="180" rx="22" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="170" y="985" font-family="Manrope" font-size="90" font-weight="800" fill="#1d3557">H₂O</text><text x="560" y="940" font-size="38" font-weight="800" fill="#1d3557">su</text><text x="560" y="990" font-size="30" fill="#5f6f88">2 hidrojen : 1 oksijen</text></g>
+  <g data-in="43.7"><rect x="120" y="1100" width="840" height="180" rx="22" fill="#fff" stroke="#d63c63" stroke-width="4"/><text x="170" y="1225" font-family="Manrope" font-size="90" font-weight="800" fill="#1d3557">H₂O<tspan fill="#d63c63">₂</tspan></text><text x="560" y="1180" font-size="38" font-weight="800" fill="#1d3557">hidrojen peroksit</text><text x="560" y="1230" font-size="30" fill="#5f6f88">2 hidrojen : 2 oksijen</text></g>
+  <text x="540" y="1380" text-anchor="middle" font-family="Manrope" font-size="46" font-weight="800" fill="#d63c63" data-in="47.4">artık su değil</text>
+ </svg>
+</div>
+
+<!-- 5. Düşün -->
+<div class="scene" data-s="48.7" data-e="99">
+ <div class="q"><small>DÜŞÜN</small>Karbondioksitin formülü <em>CO₂</em> ise bir molekülünde kaç atom vardır?</div>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;                 // ses hızlandırılmadı
+const DUR = 54.99;           // ses süresi
+// Konuşma parçaları: [başlangıç, bitiş, metin] (sessizlik tespitinden; formüller altyazıda yazıyla değil simgeyle)
+const PH = [
+ [0.00,0.86,"H₂O."],[1.28,4.74,"Üç işaret, bir bardak suyun ne olduğunu anlatmaya yeter."],
+ [5.11,7.15,"Kimyanın alfabesi böyle çalışır."],[7.43,9.24,"Her element bir sembolle yazılır:"],
+ [9.61,11.96,"hidrojen H, oksijen O,"],[12.19,14.22,"sodyum Na,"],[14.45,15.07,"klor Cl."],
+ [15.36,20.63,"Bileşik ise farklı elementlerin belirli bir oranda birleşmesidir ve formülle gösterilir."],
+ [21.00,24.17,"Sembolün sağ altındaki küçük sayıya indis denir."],
+ [24.44,27.15,"İndis, o atomdan kaç tane olduğunu söyler."],
+ [27.53,30.91,"H₂O'da iki hidrojen ve bir oksijen vardır."],
+ [31.16,36.12,"İndis bir ise yazılmaz. Oksijenin yanındaki boşluk bu yüzden bir demektir."],
+ [36.48,41.06,"Sofra tuzunda, yani sodyum klorürde, bir sodyuma bir klor düşer."],
+ [41.35,43.35,"Oran değişirse madde de değişir."],
+ [43.61,47.07,"Formülde bir oksijen daha olursa hidrojen peroksit olur;"],[47.36,48.53,"o artık su değildir."],
+ [48.86,54.69,"Peki sence, karbondioksitin formülü CO₂ ise, bir molekülünde kaç atom vardır?"]
+];
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
