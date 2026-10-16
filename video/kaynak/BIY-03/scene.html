@@ -1,0 +1,143 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#1fa463}
+.head .sub i{display:block;width:44px;height:6px;background:#1fa463;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#1fa463;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#1fa463;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>BİYOLOJİ</div><div class="brand">ucler<b>.</b></div></div>
+
+<div class="scene" data-s="0" data-e="15.3">
+ <div class="title">1868:<br><em>bir milyon ölçüm</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="2.0"><rect x="260" y="600" width="560" height="120" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="652" text-anchor="middle" font-size="38" font-weight="800" fill="#1d3557">Carl Wunderlich</text><text x="540" y="696" text-anchor="middle" font-size="28" font-weight="600" fill="#5f6f88">Alman hekim</text></g><g data-in="4.0"><rect x="238" y="820" width="44" height="260" rx="22" fill="#fff" stroke="#1d3557" stroke-width="5"/><circle cx="260" cy="1080" r="40" fill="#d63c63" stroke="#1d3557" stroke-width="5"/><rect x="250" y="920.0" width="20" height="160.0" fill="#d63c63"/><text x="420" y="880" text-anchor="start" font-family="Manrope" font-size="40" font-weight="800" fill="#1d3557">25 000 hasta</text><text x="420" y="925" text-anchor="start" font-size="28" font-weight="600" fill="#5f6f88">koltuk altı ölçümü</text></g><g data-in="8.3"><text x="420" y="1010" text-anchor="start" font-family="Manrope" font-size="40" font-weight="800" fill="#1d3557">1 000 000+ ölçüm</text></g><g data-in="11.4"><text x="540" y="1300" text-anchor="middle" font-family="Manrope" font-size="110" font-weight="800" fill="#d63c63">≈ 37 °C</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="15.3" data-e="34.9">
+ <div class="title">Neredeyse<br><em>hiç oynamaz</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="15.4"><text x="540" y="700" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">bugünkü ölçümler: 36,5 – 37 °C</text></g><g data-in="23.7"><path d="M160 780 V1220 H900" fill="none" stroke="#1d3557" stroke-width="4"/><text x="150" y="810" text-anchor="end" font-size="26" font-weight="700" fill="#5f6f88">40</text><text x="150" y="1130" text-anchor="end" font-size="26" font-weight="700" fill="#5f6f88">0</text><text x="150" y="1210" text-anchor="end" font-size="26" font-weight="700" fill="#5f6f88">−10</text><text x="530" y="1270" text-anchor="middle" font-size="26" font-weight="700" fill="#5f6f88">zaman</text></g><polyline data-draw="24.0" data-dur="2.5" points="180,1200 250,1080 320,920 390,800 460,1000 530,1160 600,880 670,1040 740,816 810,1120 880,960" fill="none" stroke="#457b9d" stroke-width="5"/><g data-in="24.5"><text x="910" y="960" text-anchor="start" font-size="28" font-weight="800" fill="#457b9d">dış ortam</text></g><polyline data-draw="26.5" data-dur="2.0" points="180,822 250,824 320,826 390,822 460,824 530,826 600,822 670,824 740,826 810,822 880,824" fill="none" stroke="#d63c63" stroke-width="7"/><g data-in="27.0"><text x="910" y="834" text-anchor="start" font-size="28" font-weight="800" fill="#d63c63">vücut içi</text></g><g data-in="30.6"><text x="540" y="1360" text-anchor="middle" font-family="Manrope" font-size="56" font-weight="800" fill="#1fa463">homeostazi</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="34.9" data-e="40.1">
+ <div class="title">Termostat:<br><em>hipotalamus</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="35.1"><path d="M420 1100 C340 1060 330 900 400 820 C460 750 600 740 670 800 C730 850 740 930 710 980 L730 1040 L700 1050 L700 1100 L640 1110 L640 1180 L470 1180 Z" fill="#fff" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/><circle cx="560" cy="985" r="18" fill="#d63c63"/><text x="560" y="1240" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">beyin tabanında: hipotalamus</text></g><g data-in="38.4" transform="translate(850 760)"><circle cx="0" cy="0" r="70" fill="#fff" stroke="#1d3557" stroke-width="5"/><path d="M-50 30 A58 58 0 1 1 50 30" fill="none" stroke="#dbe3ee" stroke-width="10"/><path d="M0 0 L30 -45" stroke="#d63c63" stroke-width="6" stroke-linecap="round"/><text x="0" y="45" text-anchor="middle" font-size="26" font-weight="800" fill="#1d3557">37</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="40.1" data-e="46.8">
+ <div class="title">Isınınca:<br><em>ısı ver</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="40.12"><text x="350" y="1010" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">deri damarları genişler</text><rect x="200" y="1060" width="300" height="56" rx="28" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><path d="M200 1088 H500" stroke="#d63c63" stroke-width="3" stroke-dasharray="10 8"/></g><g data-in="42.8"><path d="M640 1060 c-10 16 -10 26 0 30 c10 -4 10 -14 0 -30 Z" fill="#cfe3f5" stroke="#457b9d" stroke-width="3"/><path d="M700 1040 c-10 16 -10 26 0 30 c10 -4 10 -14 0 -30 Z" fill="#cfe3f5" stroke="#457b9d" stroke-width="3"/><path d="M760 1070 c-10 16 -10 26 0 30 c10 -4 10 -14 0 -30 Z" fill="#cfe3f5" stroke="#457b9d" stroke-width="3"/><text x="700" y="1150" text-anchor="middle" font-size="30" font-weight="800" fill="#457b9d">ter</text></g><g data-in="44.1"><path d="M650 1010 q-12 -30 0 -60 q12 -30 0 -60" fill="none" stroke="#9aa6b6" stroke-width="4"/><path d="M710 1010 q-12 -30 0 -60 q12 -30 0 -60" fill="none" stroke="#9aa6b6" stroke-width="4"/><path d="M770 1010 q-12 -30 0 -60 q12 -30 0 -60" fill="none" stroke="#9aa6b6" stroke-width="4"/><text x="710" y="860" text-anchor="middle" font-size="28" font-weight="800" fill="#5f6f88">buharlaşan ter ısıyı götürür</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="46.8" data-e="57.0">
+ <div class="title">Soğuyunca:<br><em>ısıyı koru, üret</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="46.9"><text x="350" y="1010" text-anchor="middle" font-size="30" font-weight="800" fill="#457b9d">damarlar daralır</text><rect x="200" y="1076" width="300" height="24" rx="12" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/></g><g data-in="48.6"><path d="M620 1100 q20 -36 40 0" fill="none" stroke="#1d3557" stroke-width="4"/><path d="M660 1100 q20 -36 40 0" fill="none" stroke="#1d3557" stroke-width="4"/><path d="M700 1100 q20 -36 40 0" fill="none" stroke="#1d3557" stroke-width="4"/><path d="M740 1100 q20 -36 40 0" fill="none" stroke="#1d3557" stroke-width="4"/><path d="M780 1100 q20 -36 40 0" fill="none" stroke="#1d3557" stroke-width="4"/><text x="720" y="1010" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">tüyler diken diken</text></g><path data-draw="49.6" data-dur="1.4" d="M220 1290 l40 -30 l40 30 l40 -30 l40 30 l40 -30 l40 30 l40 -30 l40 30 l40 -30 l40 30 l40 -30 l40 30 l40 -30 l40 30 l40 -30" fill="none" stroke="#e0a800" stroke-width="6"/><g data-in="49.8"><text x="540" y="1210" text-anchor="middle" font-size="32" font-weight="800" fill="#e0a800">kaslar titrer</text></g><g data-in="52.9"><text x="540" y="1380" text-anchor="middle" font-family="Manrope" font-size="34" font-weight="800" fill="#1d3557">titreme = ısı üreten hızlı kasılmalar</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="57.0" data-e="75.8">
+ <div class="title">Neden tam<br><em>37?</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="59.1"><path d="M160 760 V1200 H900" fill="none" stroke="#1d3557" stroke-width="4"/><text x="170" y="740" text-anchor="start" font-size="28" font-weight="800" fill="#5f6f88">enzim etkinliği</text><text x="880" y="1250" text-anchor="end" font-size="28" font-weight="800" fill="#5f6f88">sıcaklık</text></g><path data-draw="59.2" data-dur="1.6" d="M200 1180 C380 1170 470 820 600 820 C680 820 700 1000 740 1180" fill="none" stroke="#1fa463" stroke-width="7"/><g data-in="60.3"><path d="M600 820 V1200" stroke="#d63c63" stroke-width="3" stroke-dasharray="10 8"/><text x="600" y="1250" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">37 °C</text></g><g data-in="62.5"><text x="900" y="1300" text-anchor="end" font-size="28" font-weight="800" fill="#d63c63">yüksek: enzim bozulur</text></g><g data-in="65.6"><text x="170" y="1300" text-anchor="start" font-size="28" font-weight="800" fill="#457b9d">düşük: tepkime yavaşlar</text></g><g data-in="68.2"><rect x="140" y="1340" width="800" height="110" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1385" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">bir hipotez: mantarlardan korunma</text><text x="540" y="1428" text-anchor="middle" font-size="28" font-weight="600" fill="#5f6f88">ile enerji harcaması arasında denge</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="75.88" data-e="99">
+ <div class="q"><small>DÜŞÜN</small>Ateşin çıkarken neden <em>üşürsün</em> ve titrersin?</div>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;                 // ses hızlandırılmadı
+const DUR = 79.88;           // ses süresi
+const PH = [
+ [0.00,1.69,"Bin sekiz yüz altmış sekiz."],
+ [2.01,3.83,"Alman hekim Carl Wunderlich,"],
+ [4.04,8.09,"yirmi beş bin hastanın koltuk altı sıcaklığını tekrar tekrar ölçüyor."],
+ [8.31,10.31,"Toplamda bir milyonu aşan ölçüm."],
+ [10.61,11.07,"Sonuç:"],
+ [11.36,15.11,"sağlıklı bir insanın vücut sıcaklığı otuz yedi derece civarında."],
+ [15.34,19.77,"Bugünkü ölçümler biraz daha düşük, otuz altı buçukla otuz yedi arasında."],
+ [19.99,23.51,"Ama asıl şaşırtıcı olan, bu sayının ne kadar az oynaması."],
+ [23.73,30.23,"Kışın eksi on derecede de, yazın kırk derecede de iç sıcaklığın ancak birkaç onda bir derece değişir."],
+ [30.55,34.90,"Dış koşullar değişirken iç ortamı sabit tutmaya homeostazi denir."],
+ [35.13,38.15,"Bu işi beyninin tabanındaki hipotalamus yönetir."],
+ [38.39,39.84,"Bir termostat gibi çalışır."],
+ [40.12,42.48,"Vücut ısınınca deri damarları genişler,"],
+ [42.79,43.91,"ter bezleri çalışır."],
+ [44.14,46.55,"Ter buharlaşırken ısıyı alıp götürür."],
+ [46.87,52.58,"Vücut soğuyunca deri damarları daralır, tüylerin diken diken olur ve kasların titremeye başlar."],
+ [52.91,56.78,"Titreme, kasların ısı üretmek için yaptığı hızlı kasılmalardır."],
+ [57.07,58.79,"Peki neden tam otuz yedi?"],
+ [59.06,62.23,"Vücudundaki enzimler bu sıcaklıkta en iyi çalışır."],
+ [62.46,67.84,"Sıcaklık çok yükselirse enzimlerin şekli bozulur, çok düşerse tepkimeler yavaşlar."],
+ [68.17,75.59,"Bir açıklamaya göre bu sıcaklık, mantarlardan korunmakla fazla enerji harcamamak arasındaki en iyi denge noktasıdır."],
+ [75.88,79.88,"Peki sence, ateşin çıkarken neden üşürsün ve titrersin?"]
+];
+
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
