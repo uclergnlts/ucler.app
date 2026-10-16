@@ -1,6 +1,6 @@
 # KIM-04 · Etiketteki kırmızı baklavalar ne anlatır?
 
-Kimya › Kimyanın dili ve güvenliği › Kart 6: Tehlike işaretleri · 45-60 sn · 102 kelime
+Kimya › Kimyanın dili ve güvenliği › Kart 6: Tehlike işaretleri · 45-60 sn · 107 kelime
 
 ## Konuşma metni (ElevenLabs'a aynen yapıştırılır)
 
@@ -10,7 +10,7 @@ Alev, maddenin kolay tutuştuğunu söyler. Bir dairenin üstündeki alev ise ya
 
 Eskiden turuncu kareler kullanılırdı. Bugün dünyanın büyük bölümünde aynı ortak sistem geçerli, yani işaretler her ülkede aynı şeyi söyler.
 
-Kural basit: önce işareti tanı, sonra dokun.
+Kural basit: önce etiketi ve kullanım talimatını oku, ürünü talimata uygun kullan.
 
 Peki sence, evinde aşındırıcı işareti taşıyan hangi ürün olabilir?
 

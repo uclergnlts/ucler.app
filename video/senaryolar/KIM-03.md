@@ -1,10 +1,10 @@
 # KIM-03 · Bir terazi kimyayı nasıl bilim yaptı?
 
-Kimya › Simyadan kimyaya › Kart 8: Lavoisier: Terazi devrimi · 45-60 sn · 113 kelime
+Kimya › Simyadan kimyaya › Kart 8: Lavoisier: Terazi devrimi · 45-60 sn · 115 kelime
 
 ## Konuşma metni (ElevenLabs'a aynen yapıştırılır)
 
-Bir odun parçasını yaktığında geriye bir avuç kül kalır. Peki geri kalan kütle nereye gitti? Yanarken çıkan gazları kimse tartmıyordu. Bu yüzden yanmayı açıklamak yüzyıllarca zor oldu.
+Bir odun parçasını yaktığında geriye bir avuç kül kalır. Peki geri kalan kütle nereye gitti? Yalnızca külü tartarsan, yanarken çıkan gazları hesaba katmamış olursun. Kütle de eksilmiş gibi görünür.
 
 On sekizinci yüzyılın sonunda Antoine Lavoisier bu soruyu farklı sordu. Tepkimeleri kapalı kaplarda yaptı ve her şeyi çok hassas terazilerle tarttı. Önce tarttı, tepkimeyi başlattı, sonra yeniden tarttı.
 

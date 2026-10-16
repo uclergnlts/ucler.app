@@ -19,3 +19,17 @@ Denetçi: Codex. İncelenen sürüm: `06d537c`. Raporun tamamı Üçler'e proje 
 
 - `docs/DENETIM.md` içindeki eski 120-150 kelime hedefi, ölçülen okuma hızına göre 100-115 kelimeye çekildi.
 - Bu ortamdaki Chromium H.264 çözemediği için otomatik oynatma burada doğrulanamadı. Video artık alanına tamamen sığdığından %60 görünürlük eşiği her boyutta sağlanıyor; gerçek tarayıcıda yeniden denenmeli.
+
+## İkinci tur: yeni senaryolar ve KIM-02 sürüm 2 (Codex, `6c289de`)
+
+Önceki V01, V02, V03, V04 ve V06 kapandı. V05 kısmen açıktı; dört yeni bulgu geldi.
+
+| # | Önem | Yer | Sorun | Durum |
+|---|---|---|---|---|
+| D01 | Kritik | KIM-07 | Buzun yoğunluğu birimsiz ("gram") okunuyordu. | Düzeltildi: "santimetreküp başına yaklaşık sıfır virgül dokuz iki gram". |
+| D02 | Orta | KIM-04 | "Önce işareti tanı, sonra dokun" yanlış yönlendirebilir. | Düzeltildi: "önce etiketi ve kullanım talimatını oku, ürünü talimata uygun kullan." |
+| D03 | Orta | KIM-09 | "Bağ kurmadan bir aradadır" moleküller arası etkileşimi dışlıyor. | Düzeltildi: "yeni bir bileşik oluşturmadan karışır." |
+| D04 | Orta | Video akışı, 844×390 | Ses düğmesi gömülü altyazıyı örtüyordu. | Düzeltildi: yatay alanda düğme videonun sağına çıkıyor. Dört boyutta altyazı örtüşmesi yok; düğme ve "Konuya git" tıklanabilir. |
+| V05 | Orta | KIM-03 | "Gazları kimse tartmıyordu" genellemesi. | Düzeltildi: "Yalnızca külü tartarsan, yanarken çıkan gazları hesaba katmamış olursun. Kütle de eksilmiş gibi görünür." |
+
+İsteğe bağlı öneri de uygulandı: KIM-05'te "Formülde bir oksijen daha olursa hidrojen peroksit olur."

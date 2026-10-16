@@ -185,6 +185,8 @@ a.btn{display:grid;place-items:center;text-align:center}
 .reel-sound svg{width:16px;height:16px}
 /* Kısa video alanında ses düğmesi küçülür ve altyazının altına iner; videonun altyazısını örtmez. */
 @container (max-height: 520px){.reel-sound{bottom:4px;padding:5px 9px}.reel-sound-t{display:none}}
+/* Yatay alanda video yüksekliği doldurur (genişlik 100cqh*9/16); düğme videonun sağına, altyazının dışına çıkar. */
+@container (orientation: landscape){.reel-sound{left:calc(50% + 100cqh * 9 / 32 + 10px);bottom:0;transform:none;padding:8px 14px}.reel-sound-t{display:inline}}
 .reel-cap{display:flex;gap:12px;align-items:center;justify-content:space-between}
 .reel-cap b{display:block;font-family:var(--f-display);font-size:17px;line-height:1.25}
 .reel-cap .s{display:block;font-size:14px;color:var(--muted);font-weight:600}

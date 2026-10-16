@@ -1,6 +1,6 @@
 # KIM-05 · H₂O, NaCl: Kimyanın alfabesi nasıl okunur?
 
-Kimya › Kimyanın dili ve güvenliği › Kart 4: Bileşik formülleri · 45-60 sn · 114 kelime
+Kimya › Kimyanın dili ve güvenliği › Kart 4: Bileşik formülleri · 45-60 sn · 113 kelime
 
 ## Konuşma metni (ElevenLabs'a aynen yapıştırılır)
 
@@ -12,7 +12,7 @@ Sembolün sağ altındaki küçük sayıya indis denir. İndis, o atomdan kaç t
 
 Sofra tuzunda, yani sodyum klorürde, bir sodyuma bir klor düşer.
 
-Oran değişirse madde de değişir. Bir oksijen daha eklersen hidrojen peroksit elde edersin; o artık su değildir.
+Oran değişirse madde de değişir. Formülde bir oksijen daha olursa hidrojen peroksit olur; o artık su değildir.
 
 Peki sence, karbondioksitin formülü C O iki ise, bir molekülünde kaç atom vardır?
 
