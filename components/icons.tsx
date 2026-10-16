@@ -29,6 +29,9 @@ export const Icon = {
   kayit: () => (
     <svg {...base} strokeLinejoin="round"><path d="M6 3h12v18l-6-4.5L6 21z" /></svg>
   ),
+  instagram: () => (
+    <svg {...base} strokeLinecap="round"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor" /></svg>
+  ),
   profil: () => (
     <svg {...base} strokeLinecap="round"><circle cx="12" cy="8" r="4" /><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" /></svg>
   ),

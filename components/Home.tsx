@@ -6,7 +6,7 @@ import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
 import { doneKeys, useAd, useProg } from "@/lib/store";
 import { sureYaz, VIDEOLAR } from "@/lib/videolar";
 import { Icon } from "./icons";
-import { href, Top } from "./ui";
+import { href, InstaLink, Top } from "./ui";
 
 export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
   const prog = useProg(), ad = useAd();
@@ -88,6 +88,10 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
             </div>
           </section>
         )}
+
+        <section className="sec">
+          <InstaLink />
+        </section>
       </main>
     </div>
   );

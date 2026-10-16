@@ -60,6 +60,13 @@ img{display:block}
 .resume .k{display:block;font-size:13px;color:var(--muted);font-weight:600}
 .resume b{display:block;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .resume>svg{color:var(--muted);flex:none}
+.insta{display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+.insta .ic{width:44px;height:44px;border-radius:12px;border:1px solid var(--line-2);display:grid;place-items:center;flex:none}
+.insta .ic svg{width:22px;height:22px}
+.insta .txt{flex:1;min-width:0}
+.insta b{display:block;font-weight:700}
+.insta .s{display:block;font-size:13px;color:var(--muted)}
+.insta>svg{color:var(--muted);flex:none;width:20px;height:20px}
 .list{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
 .subj{display:flex;gap:14px;align-items:center;padding:14px}
 .subj+.subj{border-top:1px solid var(--line)}

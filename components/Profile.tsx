@@ -2,7 +2,7 @@
 import { DERSLER, DERS_IDS, type DersId, type Entry, isDers } from "@/lib/dersler";
 import { doneKeys, resetAll, setAd, useAd, useProg, useSaved, useStorageOk } from "@/lib/store";
 import { Icon } from "./icons";
-import { PageHead, Row, Top } from "./ui";
+import { InstaLink, PageHead, Row, Top } from "./ui";
 
 export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
   const prog = useProg(), saved = useSaved(), storageOk = useStorageOk(), ad = useAd();
@@ -72,6 +72,10 @@ export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
               );
             })}
           </div>
+        </section>
+        <section className="sec">
+          <h2 className="sec-h">Bizi takip et</h2>
+          <InstaLink />
         </section>
         <section className="sec">
           <h2 className="sec-h">Hesap</h2>

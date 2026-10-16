@@ -22,6 +22,20 @@ export const PageHead = ({ title, text }: { title: string; text?: string }) => (
   </section>
 );
 
+export const INSTAGRAM = { ad: "@ucler.app", url: "https://www.instagram.com/ucler.app/" };
+
+/** Instagram hesabına giden bağlantı satırı. */
+export function InstaLink() {
+  const I = Icon.instagram, Next = Icon.ileri;
+  return (
+    <a className="insta" href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer">
+      <span className="ic"><I /></span>
+      <span className="txt"><b>{INSTAGRAM.ad}</b><span className="s">Kısa videolar her hafta Instagram'da</span></span>
+      <Next />
+    </a>
+  );
+}
+
 export const href = (d: string, id?: string) => (id ? `/${d}/${id}/` : `/${d}/`);
 
 /** Keşfet ve Kaydedilenler listelerindeki satır. */
