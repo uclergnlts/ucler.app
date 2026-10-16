@@ -92,6 +92,12 @@ def etk_denetle(ders, tid, i, e):
         y = e.get("yorum")
         if y is not None and (not y or y[-1][0] is not None): err(*yer, "formul: yorumun son satırı [null, metin] olmalı")
 
+# Video süresi (Üçler, 2026-10-16 17:31): KIM-01..KIM-10 45-60 sn kalır; sonraki bütün videolar 1-3 dk.
+# Damla sesi saniyede ~1,95 kelime okur: 60 sn ≈ 120 kelime, 180 sn ≈ 345 kelime.
+ILK_DALGA = {f"KIM-{i:02d}" for i in range(1, 11)}
+def sure_siniri(vid): return (45, 60) if vid in ILK_DALGA else (60, 180)
+def kelime_siniri(vid): return (100, 115) if vid in ILK_DALGA else (120, 340)
+
 for ders, topics in d.items():
     for tid, t in topics.items():
         for k in ("title", "summary", "cards", "quiz"):
@@ -149,7 +155,9 @@ if os.path.exists(VIDEO_JSON) and not sys.argv[1:]:
         if not v.get("baslik") or len(v["baslik"]) > 60: err("video", vid, "başlık yok ya da 60 karakteri aşıyor")
         sure = v.get("sure")
         if not isinstance(sure, (int, float)) or sure <= 0: err("video", vid, "süre (saniye) yok")
-        elif not 45 <= sure <= 60: warn.append(f"video {vid}: {sure} sn (karar 45-60 sn)")
+        else:
+            lo, hi = sure_siniri(vid)
+            if not lo <= sure <= hi: warn.append(f"video {vid}: {sure} sn (karar {lo}-{hi} sn)")
         for k in ("src", "poster"):
             u = v.get(k)
             if u is None and k == "poster": continue
@@ -174,7 +182,9 @@ for f in sorted(glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)
     if not m or "## Konuşma metni" not in s: continue
     n = len(s.split("## Konuşma metni")[1].split("\n", 1)[1].split("## Kapanış")[0].split())
     if n != int(m.group(1)): err("senaryo", os.path.basename(f), f"etiket {m.group(1)} kelime, metin {n} kelime")
-    elif not 100 <= n <= 115: warn.append(f"senaryo {os.path.basename(f)}: {n} kelime (hedef 100-115)")
+    else:
+        lo, hi = kelime_siniri(os.path.basename(f)[:-3])
+        if not lo <= n <= hi: warn.append(f"senaryo {os.path.basename(f)}: {n} kelime (hedef {lo}-{hi})")
 
 for w in warn: print("UYARI:", w)
 print("TAMAM" if not bad else f"{bad} sorun")

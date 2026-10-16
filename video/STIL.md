@@ -23,6 +23,6 @@ Yerleşim (Üçler, 2026-10-16): üst bant ve başlık yukarıda, altyazı ve il
 - Henüz sırası gelmeyen öğeler soluk (%18) görünebilir, sırası gelince belirginleşir.
 
 ## Ses ve zamanlama
-- ElevenLabs "Damla - Energetic Content creator" sesi saniyede ~1,95 kelime okur. Metin **100-115 kelime** olmalı.
+- ElevenLabs "Damla - Energetic Content creator" sesi saniyede ~1,95 kelime okur. Metin **120-340 kelime** (1-3 dk) olmalı; KIM-01–KIM-10 100-115 kelimeydi. Uzun videoda görsel 15-20 saniyede bir yeni sahneye geçer, tek sahne uzun süre durağan kalmaz.
 - Ses 60 sn'yi aşarsa `atempo` ile en çok %8 hızlandırılır (KIM-01: 64,8 → 60,0 sn).
 - Altyazı ElevenLabs srt'sinden değil, senaryodaki metinden yapılır (srt'de filigran ve yazım hatası olabiliyor). Cümle zamanları `silencedetect` ile bulunur; kelime zamanları cümle içinde harf sayısıyla dağıtılır.

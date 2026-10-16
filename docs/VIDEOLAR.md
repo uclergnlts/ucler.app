@@ -25,7 +25,7 @@ Her video bir kez yazılır. `yerler` listesi videonun hangi konuya ve hangi kar
 |---|---|
 | `id` | `KIM-nn`, `FIZ-nn`, `BIY-nn`. Senaryo dosyasının adıyla aynı (`video/senaryolar/KIM-01.md`). |
 | `baslik` | En çok 60 karakter. |
-| `sure` | Saniye. Karar 45-60 sn; dışındaysa doğrulayıcı uyarır. |
+| `sure` | Saniye. Karar 60-180 sn (KIM-01–KIM-10: 45-60 sn); dışındaysa doğrulayıcı uyarır. |
 | `src` | `https://` ile başlayan adres ya da yerel deneme için `/videolar/...` yolu. |
 | `poster` | İsteğe bağlı kapak görseli (9:16). Yoksa videonun ilk karesi görünür. |
 | `yerler` | En az bir yer. `kart` 1'den başlar; yazılmazsa video konunun ilk kartında görünür. |
@@ -48,4 +48,4 @@ mp4 dosyaları depoya konmaz, çünkü çok büyükler (45 video ≈ 300-400 MB)
 1. Video `video/README.md` adımlarıyla üretilir (`KIM-01.mp4`, kapak için bir kare `KIM-01.jpg`).
 2. Dosyalar video deposuna yüklenir.
 3. `content/videolar.json` dosyasına bir kayıt eklenir.
-4. `python3 tools/check.py` çalıştırılır: konu ve kart numarasının gerçekten var olduğunu, sürenin 45-60 sn olduğunu denetler.
+4. `python3 tools/check.py` çalıştırılır: konu ve kart numarasının gerçekten var olduğunu, sürenin karara uyduğunu denetler.

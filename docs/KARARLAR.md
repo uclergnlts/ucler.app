@@ -18,7 +18,7 @@ Bu dosyadaki kararları Üçler verdi. Codex bunları değiştirmez. Bir karara 
 - **Alt menü:** Ana sayfa · Keşfet · Videolar · Kaydedilenler · Profil. Alt menüde **ders adları olmaz.** Videolar sekmesi 2026-10-16'da eklendi (Üçler: "YouTube Shorts, Instagram Reels mantığı gibi ayrı bir menüde").
 
 ## Videolar
-- **Biçim:** Dikey 9:16 (1080×1920), **45-60 saniye.** Videolar hem uygulamada hem sosyal medyada kullanılacak.
+- **Biçim:** Dikey 9:16 (1080×1920). **Süre en az 1, en çok 3 dakika** (Üçler, 2026-10-16 17:31: "biraz daha uzun yapabiliriz … maksimum 3 dk min 1 dk"). İlk 10 kimya videosu (KIM-01–KIM-10) 45-60 saniye olarak kalır. Videolar hem uygulamada hem sosyal medyada kullanılacak.
 - **Bağımsızlık:** Her video tek başına durur. "Sıradaki videoda" ya da "2/4" gibi ifadeler kullanılmaz. Uzun konular birden fazla bağımsız videoya bölünür.
 - **Kapanış:** **Her video, izleyiciyi düşündüren bir soruyla biter.**
 - **Altyazı:** Sabit bir yerde, videonun alt kısmına yakın durur. Ekranda gezmez.
