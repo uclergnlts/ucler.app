@@ -5,7 +5,7 @@
 |---|---|---|
 | Fizik | 26 (hepsi hazır) | 26 |
 | Kimya | 25 (hepsi hazır) | 25 |
-| Biyoloji | 6 (Ortak özellikler, Biyomoleküller, Enzimler, Hücre ve organeller, Madde geçişi, Canlıların sınıflandırılması) | 26 |
+| Biyoloji | 26 (hepsi hazır) | 26 |
 
 Güncel liste için `python3 tools/check.py` çıktısına bakılabilir.
 
