@@ -26,7 +26,7 @@ export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
             <span>
               {storageOk
                 ? "İlerlemen şimdilik yalnızca bu cihazda saklanıyor."
-                : "Tarayıcın kayıt tutmaya izin vermiyor. İlerlemen ve kaydettiklerin bu sekmeyi kapatınca silinir."}
+                : "Tarayıcın kayıt tutmaya izin vermiyor. İlerlemen ve kaydettiklerin sayfayı yenilersen ya da sekmeyi kapatırsan silinir."}
             </span>
           </span>
         </section>
