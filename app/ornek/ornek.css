@@ -1,0 +1,19 @@
+/* Adım adım örnek ders (components/AdimliDers.tsx). Ortak parçalar (.card, .opts, .feedback, .btn, .surgu) globals.css içindedir. */
+.ad-kart{gap:14px}
+.ad-sahne{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:10px 8px;overflow:hidden}
+.ad-sahne svg{display:block;width:100%;height:auto;max-height:46vh;margin-inline:auto;font-family:var(--f-body);font-variant-numeric:tabular-nums}
+.ad-surukle{touch-action:none;cursor:grab;user-select:none}
+.ad-surukle:active{cursor:grabbing}
+.ad-ipucu{margin:0;font-size:15px;line-height:1.55;color:var(--ink)}
+.ad-soru{display:grid;gap:10px}
+.ad-soru-h{margin:0;font-family:var(--f-display);font-weight:800;font-size:17px;line-height:1.35}
+.ad-serit{display:block;width:170px;height:20px}
+.ad-oynat{height:46px}
+.ad-belir{animation:in .35s ease-out}
+.ad-adimlar{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px}
+.ad-adimlar i{display:block;height:5px;border-radius:3px;background:var(--line);transition:background .25s}
+.ad-adimlar i.simdi{background:color-mix(in srgb, var(--acc) 35%, var(--line))}
+.ad-adimlar i.on{background:var(--acc)}
+.ad-ozet{margin:0;padding:0 0 0 20px;display:grid;gap:8px;font-size:16px;line-height:1.5}
+.ad-acts{display:grid;gap:10px}
+.ad-soru .feedback{scroll-margin-bottom:96px}
