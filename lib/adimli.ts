@@ -69,6 +69,12 @@ import organikGiris from "@/content/adimli/organik-giris.json";
 import hidrokarbonlar from "@/content/adimli/hidrokarbonlar.json";
 import sindirim from "@/content/adimli/sindirim.json";
 import dolasim from "@/content/adimli/dolasim-bagisiklik.json";
+import optik from "@/content/adimli/optik.json";
+import dalgaOptigi from "@/content/adimli/dalga-optigi.json";
+import fonksiyonelGruplar from "@/content/adimli/fonksiyonel-gruplar.json";
+import enerjiKaynaklari from "@/content/adimli/enerji-kaynaklari.json";
+import solunum from "@/content/adimli/solunum.json";
+import bosaltim from "@/content/adimli/bosaltim.json";
 import type { DersId } from "./dersler";
 
 /** etiket: şık yalnızca görselse ekran okuyucunun okuyacağı ad. */
@@ -110,8 +116,8 @@ export type Adim = {
 export type AdimliDers = { id: string; ders: DersId; konu: string; baslik: string; ozet: string; adimlar: Adim[]; kapanis: string[] };
 
 export const ADIMLI: AdimliDers[] = [
-  fizikGiris, maddeOzellikleri, basinc, kaldirma, isiSicaklik, vektorler, hareket, newton, ikiBoyut, bagil, isEnerji, basitMakineler, momentum, tork, cembersel, kutleCekimi, elektrostatik, elektrikAkimi, elektrikselEnerji, manyetizma, induksiyon, bhh, dalgalar,
-  simya, kimyaBilimi, madde, atomModelleri, atom, periyodikTablo, kimyasalBaglar, maddeninHalleri, karisimlar, temelKanunlar, tepkimeler, mol, asitBaz, kimyaHerYerde, gazlar, cozeltiler, tepkimeEnerjisi, tepkimeHizi, kimyasalDenge, redoks, elektrokimya, organikGiris, hidrokarbonlar,
-  canlilar, biyomolekuller, enzimler, hucreOrganeller, zar, siniflandirma, hayvanlar, bitkiler, mitoz, mayoz, kalitim, ekosistem, bitkiBiyolojisi, dnaGenetikKod, proteinSentezi, fotosentez, hucreselSolunum, sinirSistemi, endokrin, duyuOrganlari, destekHareket, sindirim, dolasim,
+  fizikGiris, maddeOzellikleri, basinc, kaldirma, isiSicaklik, vektorler, hareket, newton, ikiBoyut, bagil, isEnerji, basitMakineler, momentum, tork, cembersel, kutleCekimi, elektrostatik, elektrikAkimi, elektrikselEnerji, manyetizma, induksiyon, bhh, dalgalar, optik, dalgaOptigi,
+  simya, kimyaBilimi, madde, atomModelleri, atom, periyodikTablo, kimyasalBaglar, maddeninHalleri, karisimlar, temelKanunlar, tepkimeler, mol, asitBaz, kimyaHerYerde, gazlar, cozeltiler, tepkimeEnerjisi, tepkimeHizi, kimyasalDenge, redoks, elektrokimya, organikGiris, hidrokarbonlar, fonksiyonelGruplar, enerjiKaynaklari,
+  canlilar, biyomolekuller, enzimler, hucreOrganeller, zar, siniflandirma, hayvanlar, bitkiler, mitoz, mayoz, kalitim, ekosistem, bitkiBiyolojisi, dnaGenetikKod, proteinSentezi, fotosentez, hucreselSolunum, sinirSistemi, endokrin, duyuOrganlari, destekHareket, sindirim, dolasim, solunum, bosaltim,
 ] as unknown as AdimliDers[];
 export const adimliDers = (id: string) => ADIMLI.find((d) => d.id === id);

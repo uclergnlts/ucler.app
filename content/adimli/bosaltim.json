@@ -1,0 +1,115 @@
+{
+ "id": "bosaltim",
+ "ders": "biyoloji",
+ "konu": "bosaltim",
+ "baslik": "Boşaltım sistemi",
+ "ozet": "Azotlu atıkları karşılaştır, ürenin yolunu izle, nefronda süz, geri emdir, kanın pH'sını ve suyunu dengede tut.",
+ "adimlar": [
+  {
+   "baslik": "Üç azotlu atık",
+   "metin": "Amino asitler yıkılınca zehirli <b>amonyak</b> oluşur. Canlılar onu daha az zehirli <b>üre</b>ye ya da <b>ürik asit</b>e çevirerek su tasarrufu yapar. Üç atığı karşılaştır.",
+   "sahne": { "tur": "biy12-atik" },
+   "deger": { "a": 1 },
+   "kontroller": [ { "ad": "a", "etiket": "Atık", "min": 1, "max": 3, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Kabuklu yumurtadaki embriyo atığını yumurtanın içinde biriktirir. Hangi atık buna uygundur?",
+    "secenekler": [
+     { "yazi": "Amonyak", "neden": "Amonyak çok zehirlidir ve seyreltmek için bol su ister. Kapalı yumurtada birikse embriyoyu zehirler." },
+     { "yazi": "Üre", "neden": "Üre suda çözünür ve birikince yine su ister. Kapalı yumurtada bu kadar su yoktur." },
+     { "yazi": "Ürik asit", "dogru": true, "neden": "Ürik asit az zehirlidir ve suda çözünmeyen kristaller yapar; neredeyse hiç su istemez. Kuş ve sürüngen embriyoları atığı böyle biriktirir." }
+    ]
+   }
+  },
+  {
+   "baslik": "Ürenin yolu",
+   "metin": "Fazla amino asitler yıkılınca amonyak oluşur. Bir organ onu CO₂ ile birleştirip üreye çevirir, başka bir organ da kandan süzüp atar. Tahmin et, sonra izle.",
+   "sahne": { "tur": "biy12-ure", "sure": 6 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Üre hangi organda üretilir?",
+    "secenekler": [
+     { "yazi": "Böbrek", "neden": "Böbrek üreyi üretmez; kandan süzüp idrarla atar." },
+     { "yazi": "Karaciğer", "dogru": true, "neden": "Karaciğer amonyağı CO₂ ile birleştirip üreye çevirir (ornitin döngüsü, ATP harcanır). Üre kanla böbreğe gider." },
+     { "yazi": "İdrar kesesi", "neden": "İdrar kesesi yalnızca idrarı biriktirir; içinde üre üretilmez." }
+    ]
+   }
+  },
+  {
+   "baslik": "Süzülme",
+   "metin": "Her böbrekte yaklaşık bir milyon <b>nefron</b> vardır. Nefronun başında kılcal yumağı <b>glomerul</b>, onu saran çanak <b>Bowman kapsülü</b>dür. Kan basıncı plazmayı kapsüle iter. Tahmin et, sonra oynat.",
+   "sahne": { "tur": "biy12-suzme", "sure": 5 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hangileri Bowman kapsülüne geçmez?",
+    "secenekler": [
+     { "yazi": "Alyuvar ve büyük proteinler", "dogru": true, "neden": "Kan hücreleri ve büyük proteinler süzme zarından geçemeyecek kadar büyüktür. Süzüntü, bunları içermeyen plazmaya benzer." },
+     { "yazi": "Glikoz ve amino asit", "neden": "Glikoz ve amino asit küçüktür, süzülür. Sonra tüplerde kana geri emilir." },
+     { "yazi": "Üre ve tuzlar", "neden": "Üre ve tuzlar küçüktür, süzüntüye geçer. Ürenin çoğu idrarla atılır." }
+    ]
+   }
+  },
+  {
+   "baslik": "Geri emilim",
+   "metin": "İki böbrekte günde yaklaşık <b>180 L</b> süzüntü oluşur, ama günde 1,8 L kadar idrar yaparsın. Yararlı maddeler ve suyun çoğu tüplerden kana döner. Geri emilimi ayarla.",
+   "sahne": { "tur": "biy12-geri" },
+   "deger": { "g": 80 },
+   "kontroller": [ { "ad": "g", "etiket": "Geri emilen", "min": 80, "max": 100, "onek": "%" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "g": 99 },
+    "ipucu": "Günde 1,8 L idrar, 180 L'nin yüzde kaçıdır? Geri kalanı kana döner.",
+    "tamam": "180 L'nin %99'u kana döndü, yalnızca 1,8 L idrar kaldı. Glikoz ve amino asitlerin tamamı, suyun ve Na⁺'nın çoğu geri emilir; bunun çoğu proksimal tüpte olur."
+   }
+  },
+  {
+   "baslik": "Salgılama ve pH",
+   "metin": "<b>Salgılama</b> geri emilimin tersidir: bazı maddeler kandan tüpe aktarılır. Kan asitleşmiş, pH 7,22. Böbreğe H⁺ salgılat ve pH'yi normale getir.",
+   "sahne": { "tur": "biy12-ph" },
+   "deger": { "n": 0 },
+   "kontroller": [ { "ad": "n", "etiket": "H⁺ salgılama", "min": 0, "max": 4, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "n": 3 },
+    "ipucu": "Kanın normal pH'sı 7,35 ile 7,45 arasıdır. Fazla salgılarsan kan bazikleşir.",
+    "tamam": "Böbrek H⁺ salgıladı ve HCO₃⁻ geri emdi; kan pH'sı 7,4'e döndü. K⁺, amonyak ve bazı ilaçlar da salgılamayla idrara katılır."
+   }
+  },
+  {
+   "baslik": "ADH",
+   "metin": "Toplama kanalının ne kadar su geri emeceğini hipofizin salgıladığı <b>ADH</b> belirler. Üç durumu karşılaştır.",
+   "sahne": { "tur": "biy12-adh" },
+   "deger": { "d": 1 },
+   "kontroller": [ { "ad": "d", "etiket": "Durum", "min": 1, "max": 3, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Çok terleyen ve az su içen birinde ne olur?",
+    "secenekler": [
+     { "yazi": "ADH azalır, idrar bol ve açık olur", "neden": "Bu, bol su içince olur. Terleyince kan derişikleşir ve vücut suyu tutmaya çalışır." },
+     { "yazi": "ADH artar, idrar az ve koyu olur", "dogru": true, "neden": "Kan derişikleşince ADH artar, toplama kanalı daha çok su geri emer. İdrar azalır ve koyulaşır." },
+     { "yazi": "Süzülme durur, idrar hiç oluşmaz", "neden": "Glomerulda süzülme sürer. Değişen, toplama kanalında ne kadar suyun geri emildiğidir." }
+    ]
+   }
+  },
+  {
+   "baslik": "İdrarda glikoz",
+   "metin": "Glikozu proksimal tüpteki taşıyıcılar geri emer. Taşıyıcıların sayısı sınırlıdır. Kan şekerini artır ve idrarda glikozun ilk göründüğü değeri bul.",
+   "sahne": { "tur": "biy12-esik" },
+   "deger": { "k": 100 },
+   "kontroller": [ { "ad": "k", "etiket": "Kan şekeri", "min": 80, "max": 300, "adim": 10, "birim": "mg/dL" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "k": 190 },
+    "ipucu": "Taşıyıcılar dolana kadar glikozun hepsi kana döner. İdrara ilk glikozun kaçtığı değerde dur.",
+    "tamam": "Yaklaşık 180 mg/dL'ye kadar glikozun hepsi geri emilir; üstünde taşıyıcılar doyar ve fazlası idrara kaçar. İdrarda glikoz genellikle şeker hastalığının (diyabet) işaretidir."
+   }
+  }
+ ],
+ "kapanis": [
+  "Amonyak suda, üre memelilerde, ürik asit kuş, sürüngen ve böceklerde baskın atıktır.",
+  "Üre karaciğerde yapılır, böbrekte atılır; idrar üreter, idrar kesesi ve üretradan geçer.",
+  "Glomerulda alyuvar ve büyük proteinler dışındaki plazma süzülür; süzüntünün %99'u geri emilir.",
+  "Salgılama kandan tüpe olur; böbrek H⁺ salgılayıp HCO₃⁻ geri emerek kan pH'sını 7,4'te tutar.",
+  "ADH toplama kanalında su geri emilimini artırır. Glikoz taşıyıcıları doyunca glikoz idrara geçer."
+ ]
+}

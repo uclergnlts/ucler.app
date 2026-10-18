@@ -1,0 +1,231 @@
+{
+ "id": "enerji-kaynaklari",
+ "ders": "kimya",
+ "konu": "enerji-kaynaklari",
+ "baslik": "Enerji kaynakları ve bilimsel gelişmeler",
+ "ozet": "Ham petrolü damıt, yakıtların CO₂'sini karşılaştır, sera gazlarını kaldır, asit yağmurunu izle, santralleri incele, atom ekonomisini ve nano yüzeyi hesapla.",
+ "adimlar": [
+  {
+   "baslik": "Ham petrolü ayır",
+   "metin": "Ham petrol kulenin altında ısıtılır. Buhar yükseldikçe soğur; her molekül kaynama noktasına uygun rafta sıvılaşır: buna <b>ayrımsal damıtma</b> denir. <b>Benzine gidecek</b> bir molekül seç.",
+   "sahne": {
+    "tur": "kim12-kule"
+   },
+   "deger": {
+    "c": 20
+   },
+   "kontroller": [
+    {
+     "ad": "c",
+     "etiket": "Karbon sayısı",
+     "min": 1,
+     "max": 30,
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "c": [
+      5,
+      10
+     ]
+    },
+    "ipucu": "Benzin, kulenin üst kısmından alınır: küçük moleküller.",
+    "tamam": "Benzin yaklaşık C₅–C₁₀ moleküllerinden oluşur. Molekül küçüldükçe kaynama noktası düşer ve kulenin daha yukarısında yoğunlaşır."
+   }
+  },
+  {
+   "baslik": "Hangi yakıt daha az CO₂ verir?",
+   "metin": "Fosil yakıt tam yanınca CO₂ ve su çıkar. Aynı ısıyı (1 MJ) üç yakıtla üret. <b>En az CO₂ salan</b> fosil yakıtı bul.",
+   "sahne": {
+    "tur": "kim12-co2"
+   },
+   "deger": {
+    "y": 0
+   },
+   "kontroller": [
+    {
+     "ad": "y",
+     "etiket": "Yakıt",
+     "min": 0,
+     "max": 2,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "y": 2
+    },
+    "ipucu": "Çubuğu en kısa olanı ara.",
+    "tamam": "Doğal gaz (çoğu metan) en az CO₂ salan fosil yakıttır. Yine de sıfır değildir: doğal gaz da fosil yakıttır."
+   }
+  },
+  {
+   "baslik": "Sera etkisi",
+   "metin": "Güneş ışığı yeryüzünü ısıtır; yeryüzü de kızılötesi ışın yayar. CO₂ ve su buharı bu ışının bir kısmını tutar. Şimdi atmosferdeki bütün sera gazlarını kaldıracağız.",
+   "sahne": {
+    "tur": "kim12-sera",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Dünya'nın ortalama sıcaklığı ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Değişmez, ≈ 15 °C kalır",
+      "neden": "Gelen güneş ışığı aynı kalsa da yayılan ısı tutulmadan uzaya kaçar; yeryüzü soğur."
+     },
+     {
+      "yazi": "≈ −18 °C'ye düşer",
+      "neden": "Sera etkisi olmasaydı ortalama sıcaklık ≈ −18 °C olurdu. Doğal sera etkisi yaşam için gereklidir; sorun, fazla CO₂'nin onu güçlendirmesidir.",
+      "dogru": true
+     },
+     {
+      "yazi": "≈ 40 °C'ye çıkar",
+      "neden": "Sera gazları ısıyı tutar; onları kaldırmak ısınmaya değil, soğumaya yol açar."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Asit yağmuru",
+   "metin": "Kömür ve petrolde kükürt vardır; yanınca SO₂ çıkar ve havada sülfürik aside dönüşür. Havadaki SO₂'yi artır, yağmurun pH'ını ve mermeri izle.",
+   "sahne": {
+    "tur": "kim12-asit"
+   },
+   "deger": {
+    "s": 0
+   },
+   "kontroller": [
+    {
+     "ad": "s",
+     "etiket": "Havadaki SO₂",
+     "min": 0,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Kirlenmemiş yağmurun pH'ı neden 7 değil de ≈ 5,6'dır?",
+    "secenekler": [
+     {
+      "yazi": "Havadaki SO₂ her yağmuru asitlendirir",
+      "neden": "SO₂ yokken bile pH 5,6'dır. SO₂ ancak pH'ı 5,6'nın altına indirir; asıl asit yağmurunu o yapar."
+     },
+     {
+      "yazi": "Yağmur suyu bazik tozlar taşır",
+      "neden": "Bazik maddeler pH'ı yükseltirdi; yağmur ise hafif asidiktir."
+     },
+     {
+      "yazi": "Havadaki CO₂'yi çözer; zayıf karbonik asit oluşur",
+      "neden": "CO₂ + H₂O ⇌ H₂CO₃. Bu yüzden temiz yağmur bile hafif asidiktir; asit yağmuru pH 5,6'nın altıdır.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Santraller",
+   "metin": "Her santral bir enerji türünü elektriğe çevirir. Santralleri tek tek seç ve dönüşüm zincirine bak.",
+   "sahne": {
+    "tur": "kim12-santral"
+   },
+   "deger": {
+    "k": 0
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Santral",
+     "min": 0,
+     "max": 5,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangileri elektriği türbin ve jeneratör olmadan üretir?",
+    "secenekler": [
+     {
+      "yazi": "Güneş pili ve yakıt pili",
+      "neden": "Güneş pilinde ışık yarı iletkendeki elektronları doğrudan harekete geçirir; yakıt pilinde H₂ ile O₂ elektrotlarda tepkimeye girer. İkisinde de dönen parça yoktur.",
+      "dogru": true
+     },
+     {
+      "yazi": "Rüzgâr ve hidroelektrik",
+      "neden": "İkisi de hareket enerjisiyle türbin döndürür; elektriği jeneratör üretir."
+     },
+     {
+      "yazi": "Nükleer ve güneş pili",
+      "neden": "Güneş pili doğrudur, ama nükleer santral fisyon ısısıyla buhar üretip türbin döndürür."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Atom ekonomisi",
+   "metin": "Yeşil kimya, girenlerin atomlarını ürüne taşımayı hedefler. Etanolü üç farklı yoldan elde edebiliriz. <b>Atom ekonomisi %100</b> olan yolu bul.",
+   "sahne": {
+    "tur": "kim12-atomeko"
+   },
+   "deger": {
+    "y": 0
+   },
+   "kontroller": [
+    {
+     "ad": "y",
+     "etiket": "Yol",
+     "min": 0,
+     "max": 2,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "y": 2
+    },
+    "ipucu": "Hiç yan ürün çıkmayan tepkimeyi ara.",
+    "tamam": "Katılma tepkimesinde girenlerin bütün atomları etanole geçer: %100. Verim %100 olsa bile yan ürün (CO₂, NaBr) atık sayılır."
+   }
+  },
+  {
+   "baslik": "Nano boyut",
+   "metin": "Bir küpü küçük küplere böldükçe toplam hacim aynı kalır, ama yüzey büyür. Nano boyutta atomların çoğu yüzeydedir. Küpü bölerek <b>toplam yüzeyi 3 katına</b> çıkar.",
+   "sahne": {
+    "tur": "kim12-nano"
+   },
+   "deger": {
+    "n": 1
+   },
+   "kontroller": [
+    {
+     "ad": "n",
+     "etiket": "Kenar başına parça",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "n": 3
+    },
+    "ipucu": "Her kenarı 2 parçaya bölmek yüzeyi 2 katına çıkarır.",
+    "tamam": "27 küçük küp: toplam yüzey 3 katı. Yüzey/hacim oranı büyüyen madde daha etkin tepkimeye girer; nano parçacıklar bu yüzden iyi katalizördür."
+   }
+  }
+ ],
+ "kapanis": [
+  "Ham petrol ayrımsal damıtmayla ayrılır; küçük moleküller kulenin üstünden çıkar.",
+  "Aynı ısı için en az CO₂'yi doğal gaz verir, ama o da fosil yakıttır.",
+  "Sera etkisi olmasaydı ortalama sıcaklık ≈ −18 °C olurdu; fazla CO₂ onu güçlendirir.",
+  "Temiz yağmurun pH'ı ≈ 5,6'dır; SO₂ ve azot oksitler onu daha da düşürür.",
+  "Güneş pili ve yakıt pili elektriği türbinsiz üretir; diğer santraller türbin ve jeneratör kullanır.",
+  "Yeşil kimya atığı baştan önler; nano boyutta yüzey/hacim oranı büyür."
+ ]
+}

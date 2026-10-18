@@ -1,0 +1,113 @@
+{
+ "id": "solunum",
+ "ders": "biyoloji",
+ "konu": "solunum",
+ "baslik": "Solunum sistemi",
+ "ozet": "Havayı burundan alveole kadar izle, soluk alma kaslarını çalıştır, dağa tırman, gazları değiştir ve hemoglobine O₂ bıraktır.",
+ "adimlar": [
+  {
+   "baslik": "Havanın yolu",
+   "metin": "Soluduğun hava burundan <b>alveole</b> kadar bir dizi borudan geçer. Yutak hem hava hem besin yoludur. Tahmin et, sonra havayı izle.",
+   "sahne": { "tur": "biy12-yol", "sure": 7 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hava hangisinin içinden geçmez?",
+    "secenekler": [
+     { "yazi": "Gırtlak", "neden": "Hava yutaktan gırtlağa, oradan soluk borusuna geçer. Ses telleri gırtlaktadır." },
+     { "yazi": "Yemek borusu", "dogru": true, "neden": "Yemek borusu besinin yoludur. Yutkunurken epiglot gırtlağı kapatır; soluk alırken açıktır ve hava soluk borusuna gider." },
+     { "yazi": "Bronş", "neden": "Soluk borusu ikiye ayrılır: her bronş bir akciğere girer ve bronşçuklara dallanır. Hava bronştan geçer." }
+    ]
+   }
+  },
+  {
+   "baslik": "Soluk alma",
+   "metin": "Akciğerde iskelet kası yoktur; göğüs boşluğu genişleyince o da genişler. Hacim artınca basınç düşer. İki kası da çalıştır ve havayı içeri al.",
+   "sahne": { "tur": "biy12-gogus" },
+   "deger": { "d": 0, "k": 0 },
+   "kontroller": [
+    { "ad": "d", "etiket": "Diyafram kasılsın", "min": 0, "max": 1, "tur": "anahtar" },
+    { "ad": "k", "etiket": "Kaburga kasları kasılsın", "min": 0, "max": 1, "tur": "anahtar" }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "d": 1, "k": 1 },
+    "ipucu": "Diyafram düzleşince göğüs aşağı, dış kaburgalar arası kaslar kasılınca yukarı ve dışa genişler.",
+    "tamam": "Hacim arttı, akciğer içi basınç atmosferin altına indi ve hava basınç farkıyla aktı. Kaslar gevşeyince hacim azalır, basınç artar, hava çıkar: dinlenirken soluk verme pasiftir."
+   }
+  },
+  {
+   "baslik": "Kısmi basınç",
+   "metin": "Deniz düzeyinde hava basıncı 760 mmHg, havanın %21'i O₂'dir. O₂'nin <b>kısmi basıncı</b> 760 × 0,21 ≈ 160 mmHg'dir. Dağa tırman ve PO₂'yi yarıya indir.",
+   "sahne": { "tur": "biy12-kismi" },
+   "deger": { "h": 0 },
+   "kontroller": [ { "ad": "h", "etiket": "Yükseklik", "min": 0, "max": 8, "adim": 0.5, "birim": "km" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "h": [5, 6] },
+    "ipucu": "Yükseldikçe hava basıncı azalır. PO₂ 80 mmHg dolayına inene kadar çık.",
+    "tamam": "Yaklaşık 5,5 km'de hava basıncı yarıya, PO₂ 80 mmHg'ye iner. O₂ oranı hâlâ %21; düşen, O₂'nin kısmi basıncıdır. Kana geçen O₂ azalır, soluk hızlanır; haftalar içinde böbreğin EPO'su alyuvar sayısını artırır."
+   }
+  },
+  {
+   "baslik": "Alveolde gaz değişimi",
+   "metin": "Alveol ve kılcal duvarı tek kat hücredir. Gazlar <b>kısmi basıncı</b> yüksek olan yerden düşük olan yere geçer. Tahmin et, sonra oynat.",
+   "sahne": { "tur": "biy12-alveol", "sure": 5 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Kılcala gelen kanda PO₂ 40, alveolde 100 mmHg. O₂ nereye geçer?",
+    "secenekler": [
+     { "yazi": "Alveolden kana", "dogru": true, "neden": "O₂ alveolde daha yüksek basınçtadır, difüzyonla kana geçer. CO₂ ise kanda yüksektir (45), alveole geçer. ATP harcanmaz." },
+     { "yazi": "Kandan alveole", "neden": "Gaz, kısmi basıncının yüksek olduğu yerden düşük olduğu yere geçer. Kanda PO₂ daha düşük, yani O₂ kana gelir." },
+     { "yazi": "ATP ile kana pompalanır", "neden": "Gaz değişimi difüzyondur; enerji gerekmez. İtici güç kısmi basınç farkıdır." }
+    ]
+   }
+  },
+  {
+   "baslik": "Hemoglobin O₂ bırakır",
+   "metin": "O₂'nin %98,5'i alyuvardaki <b>hemoglobine</b> bağlanarak taşınır; bir hemoglobin 4 O₂ bağlar. PO₂ düştükçe O₂'yi bırakır. Hemoglobine O₂'sinin yarısından çoğunu bıraktır.",
+   "sahne": { "tur": "biy12-hb" },
+   "deger": { "p": 100 },
+   "kontroller": [ { "ad": "p", "etiket": "PO₂", "min": 10, "max": 100, "adim": 10, "birim": "mmHg" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "p": [10, 20] },
+    "ipucu": "Dinlenen dokuda PO₂ 40 mmHg'dir; hemoglobin orada yalnızca 1 O₂ bırakır. Çalışan kas O₂'yi çok daha hızlı harcar.",
+    "tamam": "Çalışan kasta PO₂ çok düşer ve hemoglobin O₂'nin çoğunu bırakır. Kas aynı zamanda sıcak, asidik ve CO₂'ce zengindir; bu da O₂'nin bırakılmasını kolaylaştırır."
+   }
+  },
+  {
+   "baslik": "CO₂'nin yolculuğu",
+   "metin": "Dokuda oluşan CO₂ kana geçer ve akciğere taşınır. Alyuvarda bir enzim, <b>karbonik anhidraz</b>, CO₂'yi suyla hızla birleştirir. Tahmin et, sonra oynat.",
+   "sahne": { "tur": "biy12-co2", "sure": 5 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "CO₂'nin çoğu kanda hangi biçimde taşınır?",
+    "secenekler": [
+     { "yazi": "Hemoglobine bağlı", "neden": "Hemoglobine bağlanan CO₂ yaklaşık %23'tür. Çoğu başka biçimde taşınır." },
+     { "yazi": "Plazmada çözünmüş gaz", "neden": "Plazmada gaz olarak çözünen CO₂ yalnızca %7 kadardır." },
+     { "yazi": "Plazmada bikarbonat iyonu", "dogru": true, "neden": "Karbonik asit H⁺ ve HCO₃⁻'e ayrışır; bikarbonat plazmaya geçer. CO₂'nin yaklaşık %70'i böyle taşınır, akciğerde tepkime tersine döner." }
+    ]
+   }
+  },
+  {
+   "baslik": "Egzersizde soluk",
+   "metin": "Soluk ritmini beyin sapındaki <b>soğanilik</b> kurar. En güçlü uyaran kandaki CO₂ artışıdır. Koşarken kasların CO₂ üretimi 3 katına çıktı. Soluğu ayarla, PCO₂'yi 40'ta tut.",
+   "sahne": { "tur": "biy12-egzersiz" },
+   "deger": { "s": 1 },
+   "kontroller": [ { "ad": "s", "etiket": "Soluk", "min": 1, "max": 4, "tur": "sayac", "onek": "×" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "s": 3 },
+    "ipucu": "Atılan CO₂, üretilen CO₂'ye eşit olmalı. Çok hızlı solursan CO₂ fazla atılır.",
+    "tamam": "Soluk hızı ve derinliği artınca üretilen CO₂ kadarı atılır, pH 7,4'te kalır. Soluğunu tuttuğunda seni zorlayan da O₂ azlığından çok CO₂ birikmesidir."
+   }
+  }
+ ],
+ "kapanis": [
+  "Hava burun, yutak, gırtlak, soluk borusu, bronş ve bronşçuktan alveole gider; epiglot besini soluk borusundan uzak tutar.",
+  "Diyafram ve dış kaburgalar arası kaslar kasılınca göğüs hacmi artar, basınç düşer ve hava içeri akar.",
+  "Gazlar kısmi basınç farkıyla, difüzyonla geçer. Yüksekte O₂ oranı değil, kısmi basıncı düşer.",
+  "O₂'nin çoğu hemoglobinle taşınır; hemoglobin PO₂'nin düşük olduğu dokuda O₂'yi bırakır.",
+  "CO₂'nin çoğu bikarbonat olarak taşınır. Soluğu en çok kandaki CO₂ artışı hızlandırır."
+ ]
+}
