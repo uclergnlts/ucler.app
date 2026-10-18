@@ -53,7 +53,7 @@ function Secenekler({ secenekler, sinif, kapali, onSec }: { secenekler: Secenek[
   return (
     <div className="opts ad-opts">
       {secenekler.map((s, k) => (
-        <button key={k} className={`opt ${sinif(k)}`} disabled={kapali(k)} onClick={() => onSec(k)}>
+        <button key={k} className={`opt ${sinif(k)}`} aria-label={s.etiket} disabled={kapali(k)} onClick={() => onSec(k)}>
           <Html html={s.yazi} />
         </button>
       ))}
@@ -161,7 +161,7 @@ function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; bildir:
     const dk = g.secenekler.findIndex((s) => s.dogru), d = g.secenekler[dk];
     return secim === dk
       ? { ok: true, baslik: "Tahminin doğru!", metin: d.neden }
-      : { ok: false, baslik: `Doğrusu: ${d.yazi}`, metin: `${g.secenekler[secim].neden} ${d.neden}` };
+      : { ok: false, baslik: `Doğrusu: ${d.etiket ?? d.yazi}`, metin: `${g.secenekler[secim].neden} ${d.neden}` };
   })();
   const geri = ayarlaGeri ?? tahminGeri;
   const geriAnahtar = geri ? JSON.stringify(geri) : g.tur === "secim" ? "secim" : "";

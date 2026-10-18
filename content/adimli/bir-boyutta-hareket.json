@@ -153,16 +153,19 @@
     "secenekler": [
      {
       "yazi": "<svg viewBox=\"0 0 200 20\" class=\"ad-serit\" aria-hidden=\"true\"><line x1=\"6\" x2=\"194\" y1=\"10\" y2=\"10\" stroke=\"var(--line-2)\" stroke-width=\"2\"/><circle cx=\"6\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"53\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"100\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"147\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"194\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/></svg>",
-      "neden": "Eşit aralıklar sabit hız demek. Hızlanan arabanın her saniye aldığı yol artar."
+      "neden": "Eşit aralıklar sabit hız demek. Hızlanan arabanın her saniye aldığı yol artar.",
+      "etiket": "Kareler eşit aralıklı"
      },
      {
       "yazi": "<svg viewBox=\"0 0 200 20\" class=\"ad-serit\" aria-hidden=\"true\"><line x1=\"6\" x2=\"194\" y1=\"10\" y2=\"10\" stroke=\"var(--line-2)\" stroke-width=\"2\"/><circle cx=\"6\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"18\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"53\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"112\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"194\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/></svg>",
       "dogru": true,
-      "neden": "Hız arttıkça her saniyede alınan yol da artar, kareler giderek açılır. Hız-zaman grafiği de düz bir çizgiyle yükselir."
+      "neden": "Hız arttıkça her saniyede alınan yol da artar, kareler giderek açılır. Hız-zaman grafiği de düz bir çizgiyle yükselir.",
+      "etiket": "Kareler arası açılıyor"
      },
      {
       "yazi": "<svg viewBox=\"0 0 200 20\" class=\"ad-serit\" aria-hidden=\"true\"><line x1=\"6\" x2=\"194\" y1=\"10\" y2=\"10\" stroke=\"var(--line-2)\" stroke-width=\"2\"/><circle cx=\"6\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"88\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"147\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"182\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"194\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/></svg>",
-      "neden": "Aralıklar küçülüyorsa araba yavaşlıyordur. Yukarıdaki kareler nasıl açıldı?"
+      "neden": "Aralıklar küçülüyorsa araba yavaşlıyordur. Yukarıdaki kareler nasıl açıldı?",
+      "etiket": "Kareler arası daralıyor"
      }
     ]
    }
@@ -198,7 +201,7 @@
  "kapanis": [
   "<b>Konum</b> başlangıca göre yerin, <b>yer değiştirme</b> Δx = x<sub>son</sub> − x<sub>ilk</sub>.",
   "<b>Yol</b> gidilen toplam mesafe; geri dönersen Δx'ten büyük olur.",
-  "<b>Hız</b> her saniye alınan yol; konum-zaman grafiğinin eğimi.",
+  "<b>Hız</b> = yer değiştirme / süre (v = Δx / Δt); konum-zaman grafiğinin eğimidir. Toplam yolun süreye oranı ise <b>sürat</b>tir; geri dönülen bir yolculukta ikisi farklıdır.",
   "<b>İvme</b> hızın her saniyedeki değişimi; kareler giderek açılır.",
   "Grafik yatay ise araba duruyor, aşağı iniyorsa geri gidiyor."
  ]

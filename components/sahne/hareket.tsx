@@ -100,7 +100,7 @@ function KonumZaman({ v, t, oynuyor, kosular }: SahneProps) {
   return (
     <svg viewBox="0 0 340 300" role="img" aria-label="Araba ve konum-zaman grafiği">
       <Yol y={22} etiket={false} />
-      <Araba x={X(hiz * (oynuyor ? t : 0))} y={35} renk={simdiki} />
+      <Araba x={X(hiz * t)} y={35} renk={simdiki} />
       <Eksen tMax={5} yMax={50} yAd="x (m)" yAdim={10} />
       {eski.map((h) => (
         <g key={h} opacity={oynuyor ? 0.35 : 1}>

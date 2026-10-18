@@ -84,5 +84,6 @@ Brilliant tarzı örnek dersler `content/adimli/<konu>.json` dosyalarındadır; 
 - Ders: `id`, `ders`, `konu` (konunun normal sayfası), `baslik`, `ozet`, `adimlar`, `kapanis` (bitişte gösterilen özet maddeleri).
 - Adım: `baslik`, `metin` (kısa, HTML olabilir), `sahne` (`tur` = sahne kütüphanesindeki ad; `sure` verilirse sahne "Oynat" ile oynar), isteğe bağlı `deger` ve `kontroller` (sürgü, − / + sayaç ya da aç/kapa anahtar), `gorev`.
 - Görev türleri: `devam`, `oynat`, `secim` (her yanlış şıkta "neden" ipucu çıkar; `kosu` ile soru, sahne o kadar farklı değerle oynatılınca açılır), `tahmin` (önce tahmin, sonra sahne oynar ve doğrusu açıklanır), `ayarla` (değerleri `hedef`e getir; sahne oynayabiliyorsa hedef değerle oynatılmalıdır).
+- `tools/check.py` bu dosyaları da denetler: sahne adı, tek doğru şık, görsel şıkta `etiket`, kontrol sınırları ve hedefin ulaşılabilirliği.
 - Her adımda öğrenci bir şey yapar; geri bildirim alttaki çubukta çıkar, "Devam" görev bitince açılır.
 - Görünüm sade tutulur (Üçler, 2026-10-18): beyaz sayfa, adım başlığı yok, kısa metin, ortada tek görsel, sahnelerde süs arka planı yok.

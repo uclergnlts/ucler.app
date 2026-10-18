@@ -186,9 +186,60 @@ for f in sorted(glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)
         lo, hi = kelime_siniri(os.path.basename(f)[:-3])
         if not lo <= n <= hi: warn.append(f"senaryo {os.path.basename(f)}: {n} kelime (hedef {lo}-{hi})")
 
+# adımlı dersler (content/adimli/*.json): sahne adı, tek doğru şık, ulaşılabilir hedef, kontrol sınırları
+SAHNE_DIR = os.path.join(ROOT, "components", "sahne")
+sahneler = set()
+for f in glob.glob(os.path.join(SAHNE_DIR, "*.tsx")):
+    m = re.search(r"export const \w+: Record<string, SahneKaydi> = \{(.*?)\n\};", open(f, encoding="utf-8").read(), re.S)
+    if m: sahneler |= set(re.findall(r'^\s{2}"?([a-z][a-z-]*)"?:\s*\{', m.group(1), re.M))
+adimli_idler = set()
+for f in sorted(glob.glob(os.path.join(CONTENT, "adimli", "*.json"))):
+    a = json.load(open(f, encoding="utf-8")); ad = os.path.basename(f)
+    if a.get("id") in adimli_idler: err("adımlı", ad, "id tekrar ediyor:", a.get("id"))
+    adimli_idler.add(a.get("id"))
+    if a.get("ders") not in dersler: err("adımlı", ad, "bilinmeyen ders:", a.get("ders"))
+    elif not sys.argv[1:] and a.get("konu") not in d.get(a["ders"], {}): err("adımlı", ad, "böyle bir hazır konu yok:", a.get("konu"))
+    for k in ("baslik", "ozet", "adimlar", "kapanis"):
+        if not a.get(k): err("adımlı", ad, "eksik alan:", k)
+    for n, s in enumerate(a.get("adimlar", []), 1):
+        yer = f"{ad} adım {n}"
+        tur = s.get("sahne", {}).get("tur")
+        if tur not in sahneler: err("adımlı", yer, "bilinmeyen sahne:", tur)
+        if not s.get("metin"): err("adımlı", yer, "metin boş")
+        deger, kont = s.get("deger", {}), {k["ad"]: k for k in s.get("kontroller", [])}
+        for k in kont.values():
+            if k.get("tur", "surgu") not in ("surgu", "sayac", "anahtar"): err("adımlı", yer, "bilinmeyen kontrol türü:", k.get("tur"))
+            if k["ad"] not in deger: err("adımlı", yer, "kontrolün başlangıç değeri yok:", k["ad"])
+            elif not k["min"] <= deger[k["ad"]] <= k["max"]: err("adımlı", yer, k["ad"], "başlangıç değeri sınırların dışında")
+        g = s.get("gorev", {}); gt = g.get("tur")
+        if gt not in ("devam", "oynat", "secim", "tahmin", "ayarla"): err("adımlı", yer, "bilinmeyen görev:", gt); continue
+        if gt in ("oynat", "tahmin") and not s["sahne"].get("sure"): err("adımlı", yer, gt, "görevi için sahnede sure gerekli")
+        if gt in ("secim", "tahmin"):
+            sec = g.get("secenekler", [])
+            if not g.get("soru"): err("adımlı", yer, "soru boş")
+            if len(sec) < 2: err("adımlı", yer, "en az iki şık gerekli")
+            if sum(1 for x in sec if x.get("dogru")) != 1: err("adımlı", yer, "tam bir doğru şık olmalı")
+            for x in sec:
+                if not x.get("neden"): err("adımlı", yer, "şıkta neden boş:", x.get("yazi", "")[:30])
+                if not re.sub(r"<svg.*?</svg>", "", x.get("yazi", ""), flags=re.S).strip() and not x.get("etiket"): err("adımlı", yer, "yalnızca görsel olan şıkta etiket yok")
+            if g.get("kosu") and not (s["sahne"].get("sure") and kont): err("adımlı", yer, "kosu için oynatılabilir sahne ve kontrol gerekli")
+        if gt == "ayarla":
+            if not g.get("tamam"): err("adımlı", yer, "tamam metni boş")
+            hedef = g.get("hedef", {})
+            if not hedef: err("adımlı", yer, "hedef boş")
+            for k, h in hedef.items():
+                if k not in kont: err("adımlı", yer, "hedefteki değerin kontrolü yok:", k); continue
+                lo, hi = (h if isinstance(h, list) else (h, h))
+                c = kont[k]; adim = c.get("adim", 1)
+                ulasir = [x for x in range(c["min"], c["max"] + 1, adim) if lo <= x <= hi]
+                if not ulasir: err("adımlı", yer, k, "hedefi kontrolle ulaşılamaz:", h)
+            if hedef and all(k in deger and (deger[k] == h if not isinstance(h, list) else h[0] <= deger[k] <= h[1]) for k, h in hedef.items()):
+                warn.append(f"adımlı {yer}: hedef başlangıçta zaten sağlanıyor")
+
 for w in warn: print("UYARI:", w)
 print("TAMAM" if not bad else f"{bad} sorun")
 for ders, topics in d.items():
     print(f"  {ders}: {len(topics)} konu hazır -> {', '.join(topics)}")
 if os.path.exists(VIDEO_JSON) and not sys.argv[1:]: print(f"  videolar: {len(vids)} video")
+if adimli_idler: print(f"  adımlı dersler: {len(adimli_idler)} ders")
 sys.exit(1 if bad else 0)

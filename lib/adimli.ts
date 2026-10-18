@@ -5,7 +5,8 @@ import atom from "@/content/adimli/atomun-yapisi.json";
 import zar from "@/content/adimli/madde-gecisi.json";
 import type { DersId } from "./dersler";
 
-export type Secenek = { yazi: string; dogru?: boolean; neden: string };
+/** etiket: şık yalnızca görselse ekran okuyucunun okuyacağı ad. */
+export type Secenek = { yazi: string; etiket?: string; dogru?: boolean; neden: string };
 
 /**
  * Öğrencinin sahnede değiştirdiği değer. "surgu" kaydırma çubuğu, "sayac" − / + düğmeleri, "anahtar" aç/kapa düğmesidir (0 / 1).
