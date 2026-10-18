@@ -2,7 +2,7 @@
 // Fizik sahneleri: düz yolda giden araba, her saniye çekilen kareler, konum-zaman ve hız-zaman grafikleri.
 import { useRef } from "react";
 import {
-  Araba, Balon, Eksen, G, Manzara, Ok, PX, RENK, ROAD_H, X, X0, Yol, gX, gY, svgNokta, yumusak,
+  Araba, Balon, Eksen, G, Ok, PX, RENK, ROAD_H, X, X0, Yol, gX, gY, svgNokta, yumusak,
   type SahneKaydi, type SahneProps,
 } from "./ortak";
 
@@ -25,7 +25,6 @@ function Konum({ s, v, set }: SahneProps) {
       onPointerMove={(e) => tut.current && tasi(e)}
       onPointerUp={() => (tut.current = false)}
     >
-      <Manzara y={104} />
       <g opacity={oldu ? 0.35 : 1}>
         <line x1={X(hedef)} x2={X(hedef)} y1={52} y2={104} stroke="var(--c4)" strokeWidth={2} />
         <path d={`M${X(hedef)} 52 L${X(hedef) + 18} 58 L${X(hedef)} 64 Z`} fill="var(--c4)" />
@@ -47,7 +46,6 @@ function YerDegistirme({ t, oynuyor, kosular }: SahneProps) {
   const bitti = !oynuyor && kosular.length > 0;
   return (
     <svg viewBox="0 0 340 190" role="img" aria-label="Araba 40 m ileri, sonra 30 m geri gidiyor">
-      <Manzara y={124} />
       <Ok x1={X(0)} x2={X(enUzak)} y={30} renk="var(--c1)" />
       {enUzak > 4 && <text x={X(20)} y={22} fontSize={12} fontWeight={700} fill="var(--c1)" textAnchor="middle">40 m ileri</text>}
       {t > 2 && <Ok x1={X(40)} x2={X(m)} y={56} renk="var(--c2)" />}

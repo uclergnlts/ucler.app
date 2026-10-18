@@ -20,7 +20,6 @@ function ZarModel() {
   const bos = (x: number) => (x > 70 && x < 118) || (x > 206 && x < 262);
   return (
     <svg viewBox="0 0 340 220" role="img" aria-label="Akıcı mozaik zar modeli">
-      <rect x={0} y={0} width={340} height={70} fill="#f3f7fd" />
       <text x={10} y={20} fontSize={11} fill="var(--muted)" fontWeight={700}>hücre dışı</text>
       <text x={10} y={210} fontSize={11} fill="var(--muted)" fontWeight={700}>hücre içi (sitoplazma)</text>
       <g className="ad-kay">
@@ -99,8 +98,6 @@ function Gecis({ s, v, t, oynuyor }: SahneProps) {
   const bas = Array.from({ length: 13 }, (_, i) => UST + 4 + i * 12).filter((y) => !(kanal && Math.abs(y - KANAL_Y) < 16) && !(pompa && Math.abs(y - POMPA_Y) < 20));
   return (
     <svg viewBox="0 0 340 238" role="img" aria-label="Zarın iki yanındaki tanecikler">
-      <rect x={10} y={UST - 6} width={150} height={ALT - UST + 12} rx={12} fill="#f3f7fd" />
-      <rect x={180} y={UST - 6} width={150} height={ALT - UST + 12} rx={12} fill="#f8faf6" />
       <text x={85} y={UST - 14} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{String(s.solAd ?? "sol")}</text>
       <text x={255} y={UST - 14} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{String(s.sagAd ?? "sağ")}</text>
       <g>
@@ -172,7 +169,7 @@ function Osmoz({ v }: SahneProps) {
   const ad = { hipo: "Hipotonik: su hücreye giriyor", izo: "İzotonik: net su geçişi yok", hiper: "Hipertonik: su hücreden çıkıyor" }[hal];
   return (
     <svg viewBox="0 0 340 224" role="img" aria-label={`${ad}. Dış ortam yüzde ${c} tuz`}>
-      <rect x={10} y={10} width={320} height={190} rx={14} fill="var(--c1)" fillOpacity={0.04 + c * 0.04} stroke="var(--line)" strokeWidth={1.5} />
+      <rect x={10} y={10} width={320} height={190} rx={14} fill="var(--c1)" fillOpacity={0.04 + c * 0.04} />
       {noktalar}
       {hal === "izo" ? [0, 90, 180, 270].map((a) => ok(a, a % 180 === 0)) : [0, 90, 180, 270].map((a) => ok(a, hal === "hipo"))}
       <polygon points={kenar} fill="var(--c2)" fillOpacity={0.28} stroke="var(--c2)" strokeWidth={2.5} strokeDasharray={t < 5 ? "7 5" : undefined} />

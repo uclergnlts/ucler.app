@@ -38,8 +38,6 @@ export type Adim = {
   deger?: Record<string, number>;
   kontroller?: Kontrol[];
   gorev: Gorev;
-  /** Adım tamamlanınca çıkan kısa özet notu. */
-  not?: string;
 };
 
 export type AdimliDers = { id: string; ders: DersId; konu: string; baslik: string; ozet: string; adimlar: Adim[]; kapanis: string[] };

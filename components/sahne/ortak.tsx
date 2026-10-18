@@ -61,23 +61,6 @@ export function Araba({ x, y, renk = "var(--fizik)", soluk = false, ters = false
   );
 }
 
-/** Arka plan: açık gökyüzü ve iki yumuşak tepe. */
-export function Manzara({ y }: { y: number }) {
-  return (
-    <g aria-hidden="true">
-      <defs>
-        <linearGradient id="ad-gok" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0" stopColor="#eaf2ff" stopOpacity={0} />
-          <stop offset="1" stopColor="#eaf2ff" />
-        </linearGradient>
-      </defs>
-      <rect x={0} y={y - 90} width={340} height={90} fill="url(#ad-gok)" />
-      <path d={`M0 ${y} Q60 ${y - 34} 130 ${y - 8} T250 ${y - 14} T340 ${y - 6} V${y} Z`} fill="#dff1e7" />
-      <path d={`M150 ${y} Q215 ${y - 24} 280 ${y - 4} T340 ${y - 2} V${y} Z`} fill="#cfe9da" />
-    </g>
-  );
-}
-
 export function Ok({ x1, x2, y, renk, kalin = 3 }: { x1: number; x2: number; y: number; renk: string; kalin?: number }) {
   if (Math.abs(x2 - x1) < 2) return null;
   const d = x2 > x1 ? 1 : -1, uc = x2 - d * 9;

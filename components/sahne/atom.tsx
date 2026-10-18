@@ -30,7 +30,6 @@ function Atom({ s, v }: SahneProps) {
   const durum = q === 0 ? "Nötr atom" : q > 0 ? `Katyon: ${q} elektron verdi` : `Anyon: ${-q} elektron aldı`;
   return (
     <svg viewBox="0 0 340 224" role="img" aria-label={`${el.ad}: ${p} proton, ${n} nötron, ${e} elektron`}>
-      <circle cx={CX} cy={CY} r={R[Math.max(0, k.length - 1)] + 10} fill="var(--kimya-soft)" opacity={0.6} />
       {k.map((c, i) => (
         <g key={i}>
           <circle cx={CX} cy={CY} r={R[i]} fill="none" stroke="var(--line-2)" strokeWidth={1.5} />
