@@ -1,0 +1,116 @@
+{
+ "id": "hucresel-solunum",
+ "ders": "biyoloji",
+ "konu": "hucresel-solunum",
+ "baslik": "Hücresel solunum",
+ "ozet": "Glikozu adım adım yık, ATP'nin nereden geldiğini say, oksijeni kes ve fermantasyonun neden az verimli olduğunu gör.",
+ "adimlar": [
+  {
+   "baslik": "Glikozdan ATP'ye",
+   "metin": "Oksijenli solunumda glikoz CO₂ ve suya kadar yıkılır. Evreler: <b>glikoliz</b> (sitoplazma), <b>Krebs</b> (matriks) ve <b>ETS</b> (iç zar). Oynat.",
+   "sahne": { "tur": "biy8-solunum", "sure": 8 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "ATP'nin en büyük kısmı hangi evrede üretilir?",
+    "secenekler": [
+     { "yazi": "Glikolizde", "neden": "Glikoliz glikoz başına yalnız net 2 ATP verir." },
+     { "yazi": "Krebs döngüsünde", "neden": "Krebs iki turda yalnız 2 ATP verir; asıl ürünü NADH ve FADH₂'dir." },
+     { "yazi": "ETS'de", "dogru": true, "neden": "NADH ve FADH₂'nin elektronları ETS'de proton gradyanı kurar, ATP sentaz yaklaşık 26 ATP yapar. Toplam yaklaşık 30-32 ATP." }
+    ]
+   }
+  },
+  {
+   "baslik": "Glikoliz",
+   "metin": "Glikoliz sitoplazmada olur ve O₂ gerektirmez. 6 karbonlu glikoz, 3 karbonlu iki <b>pirüvata</b> bölünür. ATP sayacını izle.",
+   "sahne": { "tur": "biy8-glikoliz", "sure": 5 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Glikoliz 4 ATP üretir. Net kazanç neden 2 ATP?",
+    "secenekler": [
+     { "yazi": "Başta 2 ATP harcanır", "dogru": true, "neden": "Glikozu tepkimeye hazırlamak için önce 2 ATP harcanır; 4 − 2 = net 2 ATP. Ayrıca 2 NADH oluşur." },
+     { "yazi": "2 ATP CO₂ ile dışarı atılır", "neden": "ATP CO₂ ile atılmaz. Glikolizde CO₂ de çıkmaz; ilk CO₂ pirüvat oksidasyonunda çıkar." },
+     { "yazi": "2 ATP NADH'ye dönüşür", "neden": "NADH, NAD⁺'nın indirgenmiş hâlidir; ATP'den oluşmaz." }
+    ]
+   }
+  },
+  {
+   "baslik": "Karbonlar CO₂ olur",
+   "metin": "O₂ varsa pirüvat mitokondriye girer. Önce pirüvat oksidasyonu, sonra iki Krebs turu döner. Aşamaları ilerlet ve sayaçları izle.",
+   "sahne": { "tur": "biy8-krebs" },
+   "deger": { "a": 0 },
+   "kontroller": [ { "ad": "a", "etiket": "Aşama", "min": 0, "max": 3, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "a": 3 },
+    "tamam": "Glikozun 6 karbonunun hepsi CO₂ oldu: 2'si pirüvat oksidasyonunda, 4'ü Krebs'te. Toplam 10 NADH ve 2 FADH₂ birikti; bunların enerjisi ETS'de ATP'ye çevrilecek."
+   }
+  },
+  {
+   "baslik": "Oksijeni kes",
+   "metin": "ETS'de NADH elektronlarını zincire verir ve NAD⁺'ya döner. Zincirin sonunda elektronları <b>O₂</b> alır ve su oluşur. Ortamda O₂ yok. Oynat.",
+   "sahne": { "tur": "biy8-ets", "sure": 5, "oksijen": false },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "O₂ yoksa ne olur?",
+    "secenekler": [
+     { "yazi": "ETS yavaşlar ama ATP üretimi sürer", "neden": "Son alıcı yoksa elektronlar zincirde birikir; zincir tamamen durur." },
+     { "yazi": "Krebs döngüsü daha hızlı döner", "neden": "Krebs NAD⁺ ister; NAD⁺ azalınca hızlanmaz, durur." },
+     { "yazi": "Zincir tıkanır, NAD⁺ tükenir", "dogru": true, "neden": "Elektronları alacak O₂ yoksa NADH, NAD⁺'ya dönemez. NAD⁺ biterse Krebs ve glikoliz de durur." }
+    ]
+   }
+  },
+  {
+   "baslik": "Fermantasyon",
+   "metin": "Fermantasyon pirüvatı NADH ile indirgeyerek NAD⁺'yı geri kazanır; glikoliz sürer. Önce mayayı oynat, sonra kas hücresine geç ve yine oynat.",
+   "sahne": { "tur": "biy8-fermantasyon", "sure": 5 },
+   "deger": { "kas": 0 },
+   "kontroller": [ { "ad": "kas", "etiket": "Kas hücresi", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "gorev": {
+    "tur": "secim",
+    "kosu": 2,
+    "soru": "İki fermantasyonun farkı ne?",
+    "secenekler": [
+     { "yazi": "Kas hücresi daha çok ATP üretir", "neden": "İkisinde de ATP yalnız glikolizden gelir: glikoz başına net 2 ATP." },
+     { "yazi": "Yalnız mayada CO₂ çıkar", "dogru": true, "neden": "Maya pirüvatı etil alkol ve CO₂'ye çevirir; hamuru kabartan bu CO₂'dir. Kas hücresi laktik asit yapar ve CO₂ çıkmaz." },
+     { "yazi": "Yalnız kasta NAD⁺ geri kazanılır", "neden": "İki fermantasyonun da amacı NAD⁺'yı geri kazanıp glikolizi sürdürmektir." }
+    ]
+   }
+  },
+  {
+   "baslik": "Verim",
+   "metin": "Fermantasyon glikoz başına net 2 ATP verir; ürünleri hâlâ enerji taşır. Oksijenli solunum bir glikozdan yaklaşık 30 ATP çıkarır. Fermantasyonun aynı ATP'yi vermesi için kaç glikoz gerekir?",
+   "sahne": { "tur": "biy8-verim" },
+   "deger": { "g": 1 },
+   "kontroller": [ { "ad": "g", "etiket": "Glikoz", "min": 1, "max": 20, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "g": 15 },
+    "ipucu": "Her glikoz 2 ATP verir; 30 ATP için 30 ÷ 2.",
+    "tamam": "15 glikoz × 2 ATP = 30 ATP. Aynı ATP için fermantasyon yapan hücre yaklaşık 15 kat fazla glikoz harcar."
+   }
+  },
+  {
+   "baslik": "Bitki gece ve gündüz",
+   "metin": "Bitki hücresi hem fotosentez hem solunum yapar. Gündüz ile gece arasında gaz alışverişini karşılaştır.",
+   "sahne": { "tur": "biy8-gece" },
+   "deger": { "gece": 0 },
+   "kontroller": [ { "ad": "gece", "etiket": "Gece", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Gündüz bitki dışarıya neden O₂ verir?",
+    "secenekler": [
+     { "yazi": "Gündüz solunum yapmaz, yalnız fotosentez yapar", "neden": "Solunum canlı hücrede gece gündüz sürer; gündüz de durmaz." },
+     { "yazi": "Solunum yalnız gece O₂ kullanır", "neden": "Oksijenli solunum her an O₂ kullanır; ETS'nin son elektron alıcısı O₂'dir." },
+     { "yazi": "Fotosentez solunumdan hızlıdır", "dogru": true, "neden": "Gündüz ikisi birlikte yürür ama fotosentezin ürettiği O₂ solunumun harcadığından fazladır. Gece yalnız solunum kalır: O₂ alır, CO₂ verir." }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Glikoliz sitoplazmada net 2 ATP verir; O₂ gerektirmez.",
+  "Glikozun karbonları pirüvat oksidasyonunda ve Krebs'te CO₂ olarak çıkar.",
+  "ATP'nin çoğu ETS'de yapılır; son elektron alıcısı O₂'dir. Toplam ≈30-32 ATP.",
+  "O₂ yoksa fermantasyon NAD⁺'yı geri kazanır; verim yalnız 2 ATP.",
+  "Bitki gece gündüz solunum yapar; ışıkta fotosentez daha hızlıdır."
+ ]
+}

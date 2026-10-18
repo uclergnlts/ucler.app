@@ -1,0 +1,253 @@
+{
+ "id": "cozeltiler",
+ "ders": "kimya",
+ "konu": "cozeltiler",
+ "baslik": "Çözeltiler",
+ "ozet": "Tuzu çöz, derişimi ayarla, seyrelt, dondur: çözeltileri kendi elinle hazırla.",
+ "adimlar": [
+  {
+   "baslik": "İyonik mi, moleküler mi?",
+   "metin": "Suya önce şeker, sonra tuz at. Çözünen taneciklere ve devredeki ampule bak.",
+   "sahne": {
+    "tur": "kim8-cozunme"
+   },
+   "deger": {
+    "tuz": 0
+   },
+   "kontroller": [
+    {
+     "ad": "tuz",
+     "etiket": "Çözünen: tuz (kapalıysa şeker)",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Tuzlu su elektriği neden iletir?",
+    "secenekler": [
+     {
+      "yazi": "Su tek başına elektriği iyi iletir",
+      "neden": "Saf su çok az iyon içerir, ampulü yakmaz. Şekerli suda da ampul sönük kaldı."
+     },
+     {
+      "yazi": "Tuz suda iyonlarına ayrışır; serbest iyonlar yükü taşır",
+      "neden": "NaCl suda Na⁺ ve Cl⁻ iyonlarına ayrışır (<b>iyonik çözünme</b>). Şeker ise molekül olarak dağılır, iyon vermez (<b>moleküler çözünme</b>). Elektrik ileten çözeltilere <b>elektrolit</b> denir.",
+      "dogru": true
+     },
+     {
+      "yazi": "Tuz kristalleri suda olduğu gibi durur",
+      "neden": "Kristal suda dağılır; su molekülleri iyonları sarar ve birbirinden ayırır. Çözünmeyen kristal yükü taşıyamaz."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Kütlece yüzde",
+   "metin": "Bardakta <b>20 g tuz</b> var. Suyu ayarla ve çözeltiyi kütlece <b>%20</b> yap.",
+   "sahne": {
+    "tur": "kim8-yuzde"
+   },
+   "deger": {
+    "su": 40
+   },
+   "kontroller": [
+    {
+     "ad": "su",
+     "etiket": "Su",
+     "min": 20,
+     "max": 120,
+     "adim": 10,
+     "birim": "g",
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "su": 80
+    },
+    "tamam": "20 g tuz + 80 g su = 100 g çözelti; 20/100 = <b>%20</b>. Payda <b>çözeltinin</b> kütlesidir, suyunki değil: 100 g suyla 20/120 ≈ %16,7 olurdu. Kütlece % = (çözünen / çözelti) · 100."
+   }
+  },
+  {
+   "baslik": "Molarite",
+   "metin": "Balonda <b>0,1 mol</b> NaOH var. Hacmi değiştirerek çözeltiyi <b>0,4 M</b> yap. Molarite, bir litre çözeltideki mol sayısıdır.",
+   "sahne": {
+    "tur": "kim8-molarite"
+   },
+   "deger": {
+    "V": 500
+   },
+   "kontroller": [
+    {
+     "ad": "V",
+     "etiket": "Çözelti hacmi",
+     "min": 100,
+     "max": 1000,
+     "adim": 50,
+     "birim": "mL",
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "V": 250
+    },
+    "tamam": "M = n / V = 0,1 mol / 0,25 L = <b>0,4 M</b>. Hacmi mutlaka litreye çevir: 250 mL = 0,25 L. Aynı mol daha az hacimde, daha derişik."
+   }
+  },
+  {
+   "baslik": "Seyreltme",
+   "metin": "Elinde 100 mL <b>2 M</b> çözelti var. Su ekleyerek derişimi <b>0,5 M</b> yap.",
+   "sahne": {
+    "tur": "kim8-seyreltme"
+   },
+   "deger": {
+    "V": 100
+   },
+   "kontroller": [
+    {
+     "ad": "V",
+     "etiket": "Toplam hacim",
+     "min": 100,
+     "max": 500,
+     "adim": 50,
+     "birim": "mL",
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "V": 400
+    },
+    "tamam": "Su eklemek mol sayısını değiştirmez, hep 0,2 mol. Bu yüzden <b>M₁·V₁ = M₂·V₂</b>: 2 · 100 = 0,5 · V₂, yani V₂ = <b>400 mL</b>. 300 mL su ekledin."
+   }
+  },
+  {
+   "baslik": "İyon derişimi",
+   "metin": "CaCl₂ suda <b>bir Ca²⁺ ve iki Cl⁻</b> iyonuna ayrışır. Derişimi değiştir; iyon çubuklarına bak.",
+   "sahne": {
+    "tur": "kim8-iyon"
+   },
+   "deger": {
+    "c": 2
+   },
+   "kontroller": [
+    {
+     "ad": "c",
+     "etiket": "CaCl₂ derişimi",
+     "min": 1,
+     "max": 4,
+     "carpan": 0.5,
+     "birim": "M",
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "0,5 M CaCl₂ çözeltisinde toplam iyon derişimi kaç M'dir?",
+    "secenekler": [
+     {
+      "yazi": "0,5 M",
+      "neden": "Bu yalnızca Ca²⁺ derişimi. Her CaCl₂ iki de Cl⁻ verir."
+     },
+     {
+      "yazi": "1 M",
+      "neden": "Bu yalnızca Cl⁻ derişimi (2 · 0,5). Ca²⁺ iyonlarını da eklemelisin."
+     },
+     {
+      "yazi": "1,5 M",
+      "neden": "CaCl₂ → Ca²⁺ + 2Cl⁻. [Ca²⁺] = 0,5 M, [Cl⁻] = 1 M; toplam <b>1,5 M</b>. Bir formül birimi 3 iyon verir.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Donma noktası",
+   "metin": "Saf su, şekerli su, tuzlu su (NaCl) ve CaCl₂ çözeltisini dondurucuya koyuyoruz. Hepsinin derişimi <b>1 molal</b>.",
+   "sahne": {
+    "tur": "kim8-donma",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Çözeltiler içinde hangisi en son donar?",
+    "secenekler": [
+     {
+      "yazi": "Şekerli su",
+      "neden": "Şeker iyonlaşmaz, her molekül tek tanecik kalır (i = 1). Donma noktası yalnızca 1,86 °C düşer."
+     },
+     {
+      "yazi": "Tuzlu su (NaCl)",
+      "neden": "NaCl iki iyon verir (i = 2), donma noktası 3,72 °C düşer. Ama üç iyon veren bir çözünen daha var."
+     },
+     {
+      "yazi": "CaCl₂ çözeltisi",
+      "neden": "Donma noktası düşmesi tanecik sayısına bağlıdır: ΔT = K·m·i. CaCl₂ üç iyon verir (i = 3): 1,86 · 3 ≈ <b>5,6 °C</b> düşer. Kışın yollara bu yüzden tuz serpilir.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Gazoz neden köpürür?",
+   "metin": "Gazozda basınç altında çözünmüş CO₂ var. Kapağı aç ve sıcaklığı değiştir; çözünmüş CO₂ çubuğuna bak.",
+   "sahne": {
+    "tur": "kim8-gazoz"
+   },
+   "deger": {
+    "kapak": 0,
+    "T": 5
+   },
+   "kontroller": [
+    {
+     "ad": "kapak",
+     "etiket": "Kapağı aç",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": 5,
+     "max": 35,
+     "adim": 10,
+     "birim": "°C",
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Gazoz açılınca neden köpürür?",
+    "secenekler": [
+     {
+      "yazi": "Şişe açılınca sıvı ısınır, su kaynar",
+      "neden": "Gazozun sıcaklığı açınca değişmez; kabarcıklar su buharı değil, CO₂'dir."
+     },
+     {
+      "yazi": "Hava gazoza girip kabarcık yapar",
+      "neden": "Kabarcıklar dışarıdan giren hava değil, sıvıdan ayrılan CO₂'dir."
+     },
+     {
+      "yazi": "Üstteki gaz basıncı düşer, CO₂'nin çözünürlüğü azalır",
+      "neden": "Gazların çözünürlüğü kısmi basınçla artar (<b>Henry yasası</b>). Kapak açılınca basınç düşer, fazla CO₂ kabarcık olarak çıkar. Sıcaklık artınca da gaz çözünürlüğü azalır; ılık gazoz daha çabuk kaçar.",
+      "dogru": true
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Tuz suda <b>iyonlarına</b> ayrışır ve elektrik iletir; şeker <b>molekül</b> olarak dağılır.",
+  "Kütlece % = çözünen / <b>çözelti</b> · 100. Molarite: <b>M = n / V</b> (V litre).",
+  "Seyreltmede mol değişmez: <b>M₁·V₁ = M₂·V₂</b>. İyon derişimi için formüldeki iyon sayısını çarp.",
+  "Koligatif özellikler tanecik sayısına bağlıdır: <b>ΔT = K·m·i</b>. Daha çok iyon, daha düşük donma noktası.",
+  "Gazların çözünürlüğü <b>basınçla artar</b>, <b>sıcaklıkla azalır</b>."
+ ]
+}

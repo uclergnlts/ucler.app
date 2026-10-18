@@ -1,0 +1,98 @@
+{
+ "id": "fotosentez",
+ "ders": "biyoloji",
+ "konu": "fotosentez",
+ "baslik": "Fotosentez",
+ "ozet": "Oksijenin nereden geldiğini izle, klorofilin hangi rengi yakaladığını bul, ışığı kapat ve hızı sınırlayan faktörü ara.",
+ "adimlar": [
+  {
+   "baslik": "Oksijen nereden geliyor?",
+   "metin": "Fotosentezde CO₂ ve su, ışık enerjisiyle glikoza dönüşür; O₂ açığa çıkar. Suyun oksijenini ¹⁸O ile işaretledik (kırmızı). Oynat ve atomları izle.",
+   "sahne": { "tur": "biy8-denklem", "sure": 5 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Açığa çıkan O₂'deki oksijen atomları nereden gelir?",
+    "secenekler": [
+     { "yazi": "CO₂'den", "neden": "CO₂'nin oksijeni glikoza ve tepkime sonunda oluşan suya geçer, O₂'ye geçmez." },
+     { "yazi": "Sudan", "dogru": true, "neden": "Işığa bağımlı evrede su parçalanır (fotoliz) ve O₂ açığa çıkar. İşaretli su verilince işaretli O₂ çıkar." },
+     { "yazi": "Yarısı CO₂'den, yarısı sudan", "neden": "İşaretli oksijenin hepsi O₂'de göründü; CO₂'nin oksijeni hiç O₂'ye geçmedi." }
+    ]
+   }
+  },
+  {
+   "baslik": "Klorofil hangi rengi yakalar?",
+   "metin": "Klorofil her rengi aynı ölçüde soğurmaz. Dalga boyunu değiştir ve eğrinin ikinci tepesini, <b>kırmızıdaki</b> zirveyi bul.",
+   "sahne": { "tur": "biy8-renk" },
+   "deger": { "l": 550 },
+   "kontroller": [ { "ad": "l", "etiket": "Dalga boyu", "min": 400, "max": 700, "adim": 5, "birim": "nm" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "l": [650, 680] },
+    "ipucu": "Kırmızı ışık spektrumun sağ ucundadır, 650 nm'nin üstü.",
+    "tamam": "Klorofil en çok mavi-mor ve kırmızıyı soğurur. Yeşil (≈550 nm) en az soğurulan renktir; yaprak yeşili yansıttığı için yeşil görünür."
+   }
+  },
+  {
+   "baslik": "Engelmann deneyi",
+   "metin": "Engelmann ipliksi bir algi prizmadan geçen ışıkla aydınlattı ve yanına oksijen arayan bakteriler koydu. Bakteriler O₂'nin çok üretildiği yere toplanır.",
+   "sahne": { "tur": "biy8-engelmann", "sure": 5 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Bakteriler en çok nerede toplanır?",
+    "secenekler": [
+     { "yazi": "Yeşil ışık alan bölgede", "neden": "Yeşil en az soğurulan renktir; orada fotosentez ve O₂ üretimi en düşüktür." },
+     { "yazi": "Her yerde eşit dağılırlar", "neden": "Fotosentez hızı dalga boyuna göre değişir; O₂ her bölgede aynı miktarda üretilmez." },
+     { "yazi": "Mavi-mor ve kırmızı bölgelerde", "dogru": true, "neden": "Fotosentez en hızlı bu renklerde olur, O₂ en çok orada çıkar. Deney etki spektrumunu gösterdi." }
+    ]
+   }
+  },
+  {
+   "baslik": "Işığı kapat",
+   "metin": "Tilakoitte ışıkla ATP ve NADPH yapılır; stromadaki Calvin döngüsü bunları harcayıp CO₂'yi şekere çevirir. Işığı kapat ve oynat.",
+   "sahne": { "tur": "biy8-evreler", "sure": 6 },
+   "deger": { "isik": 1 },
+   "kontroller": [ { "ad": "isik", "etiket": "Işık", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "isik": 0 },
+    "tamam": "Calvin döngüsü ışık kullanmaz ama ışığa muhtaçtır: elindeki ATP ve NADPH bitince durdu. Bir glikoz için 18 ATP ve 12 NADPH harcanır."
+   }
+  },
+  {
+   "baslik": "Sınırlayıcı faktör",
+   "metin": "Işık şiddeti yüksek ama hız artmıyor. Hızı en kıt olan faktör belirler. Fotosentezi en hızlı hâle getir.",
+   "sahne": { "tur": "biy8-sinirlayici" },
+   "deger": { "isik": 80, "co2": 1 },
+   "kontroller": [
+    { "ad": "isik", "etiket": "Işık şiddeti", "min": 0, "max": 100, "adim": 10, "birim": "%" },
+    { "ad": "co2", "etiket": "CO₂", "min": 1, "max": 3, "tur": "sayac" }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "isik": [80, 100], "co2": 3 },
+    "ipucu": "Eğrinin düz kısmında ışığı artırmak işe yaramaz. Öteki faktörü artır.",
+    "tamam": "Düz kısımda sınırlayan ışık değil CO₂'ydi; CO₂ artınca eğri yükseldi. Hızı artırmak için o anda en kıt olan faktörü artırmalısın."
+   }
+  },
+  {
+   "baslik": "Sıcaklık",
+   "metin": "Calvin döngüsü enzimlerle yürür. Su bitkisinin çıkardığı kabarcıkları say ve sıcaklığı en hızlı fotosentezin olduğu değere getir.",
+   "sahne": { "tur": "biy8-sicaklik" },
+   "deger": { "s": 10 },
+   "kontroller": [ { "ad": "s", "etiket": "Sıcaklık", "min": 0, "max": 50, "adim": 5, "birim": "°C" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "s": 30 },
+    "ipucu": "Sıcaklığı adım adım artır; kabarcıklar azalmaya başlayınca bir adım geri gel.",
+    "tamam": "Hız optimum sıcaklıkta en yüksektir. Daha sıcakta enzimler bozulur ve hız hızla düşer. Sıcaklık eğrisi çan biçimlidir, ışık ve CO₂ eğrisi ise doyuma ulaşır."
+   }
+  }
+ ],
+ "kapanis": [
+  "Fotosentezde açığa çıkan O₂ sudan gelir.",
+  "Klorofil mavi-mor ve kırmızıyı soğurur, yeşili yansıtır.",
+  "Işığa bağımlı evre ATP ve NADPH yapar; Calvin döngüsü bunlar bitince durur.",
+  "Hızı en kıt faktör sınırlar: ışık, CO₂, sıcaklık.",
+  "Sıcaklık eğrisi çan biçimlidir; çok sıcakta enzimler bozulur."
+ ]
+}

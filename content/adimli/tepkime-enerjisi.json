@@ -1,0 +1,219 @@
+{
+ "id": "tepkime-enerjisi",
+ "ders": "kimya",
+ "konu": "tepkime-enerjisi",
+ "baslik": "Tepkimelerde enerji",
+ "ozet": "Kabın soğumasını izle, enerji diyagramını kur, Hess ile ΔH hesapla, kalorimetrede ölç.",
+ "adimlar": [
+  {
+   "baslik": "Soğuk kompres",
+   "metin": "Oda sıcaklığındaki suya amonyum nitrat (NH₄NO₃) atıyoruz. Termometreyi izle.",
+   "sahne": {
+    "tur": "kim8-kap",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "NH₄NO₃ suda çözünürken kap ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Isınır",
+      "neden": "Isınma ısı veren (ekzotermik) bir olayda olur; örneğin NaOH'un suda çözünmesi."
+     },
+     {
+      "yazi": "Soğur",
+      "neden": "Çözünme ortamdan ısı çeker, bu yüzden kap soğur: <b>endotermik</b> (ΔH > 0). Spor yaralanmalarındaki anlık soğuk kompres böyle çalışır.",
+      "dogru": true
+     },
+     {
+      "yazi": "Sıcaklık değişmez",
+      "neden": "Çözünme sırasında iyonlar arası bağlar kopar, iyonlar suyla sarılır; bunların enerjisi pek dengelenmez, sıcaklık değişir."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Enerji diyagramı",
+   "metin": "Girenlerin entalpisi <b>200 kJ</b>. Ürünlerin entalpisini ayarla ve tepkimeyi <b>ΔH = −90 kJ</b> yap.",
+   "sahne": {
+    "tur": "kim8-pe"
+   },
+   "deger": {
+    "u": 300
+   },
+   "kontroller": [
+    {
+     "ad": "u",
+     "etiket": "Ürünlerin entalpisi",
+     "min": 50,
+     "max": 350,
+     "adim": 10,
+     "birim": "kJ",
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "u": 110
+    },
+    "tamam": "ΔH = H(ürünler) − H(girenler) = 110 − 200 = <b>−90 kJ</b>. Ürünler aşağıda: enerji dışarı verildi, tepkime <b>ekzotermik</b>. Başta ürünler yukarıdaydı (ΔH = +100 kJ), yani endotermikti."
+   }
+  },
+  {
+   "baslik": "Aktifleşme enerjisi",
+   "metin": "Tepkimenin başlaması için tepeyi aşmak gerekir; bu <b>aktifleşme enerjisidir</b> (Ea). Tepeyi yükselt ve alçalt.",
+   "sahne": {
+    "tur": "kim8-pe"
+   },
+   "deger": {
+    "u": 110,
+    "ea": 120
+   },
+   "kontroller": [
+    {
+     "ad": "ea",
+     "etiket": "Aktifleşme enerjisi",
+     "min": 40,
+     "max": 200,
+     "adim": 10,
+     "birim": "kJ",
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Tepe yükselince ΔH ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Daha negatif olur",
+      "neden": "ΔH yalnızca başlangıç ve bitiş düzeyine bakar; tepenin yüksekliği hesaba girmez."
+     },
+     {
+      "yazi": "Pozitif olur",
+      "neden": "Girenler ve ürünler aynı yerde kaldı; ürünler hâlâ aşağıda, tepkime hâlâ ekzotermik."
+     },
+     {
+      "yazi": "Değişmez",
+      "neden": "ΔH = 110 − 200 = −90 kJ, tepe ne olursa olsun. Ea yalnızca tepkimenin <b>hızını</b> etkiler: tepe alçaldıkça tepkime hızlanır. <b>Katalizör</b> de Ea'yı düşürür ama ΔH'yi değiştirmez.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Metanın yanması",
+   "metin": "CH₄ + 2O₂ → CO₂ + ? H₂O. Denklemi denkleştir; ΔH oluşum entalpilerinden hesaplanır: ΔH = ΣΔH°f(ürünler) − ΣΔH°f(girenler).",
+   "sahne": {
+    "tur": "kim8-metan"
+   },
+   "deger": {
+    "k": 1
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "H₂O katsayısı",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "k": 2
+    },
+    "tamam": "4 H atomu için 2 H₂O gerekir. ΔH = [−393,5 + 2·(−285,8)] − (−74,8) = <b>−890,3 kJ</b>. O₂ elementtir, oluşum entalpisi sıfırdır. Doğal gaz bu yüzden iyi bir yakıttır."
+   }
+  },
+  {
+   "baslik": "Hess yasası",
+   "metin": "C + ½O₂ → CO tepkimesinin ΔH'sini doğrudan ölçmek zor. İki bilinen denklemi topla. Hedefte CO ürün tarafında olmalı.",
+   "sahne": {
+    "tur": "kim8-hess"
+   },
+   "deger": {
+    "ters": 0
+   },
+   "kontroller": [
+    {
+     "ad": "ters",
+     "etiket": "İkinci denklemi ters çevir",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "ters": 1
+    },
+    "tamam": "Ters çevrilen denklemin ΔH işareti değişir: −283,0 → +283,0. Toplayınca CO₂ sadeleşir: −393,5 + 283,0 = <b>−110,5 kJ</b>. <b>Hess yasası</b>: ΔH yola değil, yalnızca başlangıç ve bitişe bağlıdır."
+   }
+  },
+  {
+   "baslik": "Bağ enerjileri",
+   "metin": "H₂ + Cl₂ → 2HCl. Bağ kırmak enerji ister, bağ oluşmak enerji verir. H–H 436, Cl–Cl 243, H–Cl 432 kJ/mol.",
+   "sahne": {
+    "tur": "kim8-bag",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Bu tepkime ısı alır mı, verir mi?",
+    "secenekler": [
+     {
+      "yazi": "Alır, çünkü bağ kırmak enerji ister",
+      "neden": "Bağ kırmak 679 kJ ister ama iki H–Cl bağı oluşurken 864 kJ açığa çıkar; veren daha fazla."
+     },
+     {
+      "yazi": "Verir, çünkü oluşan bağlar daha güçlü",
+      "neden": "Kırılan: 436 + 243 = 679 kJ. Oluşan: 2 · 432 = 864 kJ. ΔH = 679 − 864 = <b>−185 kJ</b>, ekzotermik. ΔH = Σ(kırılan) − Σ(oluşan).",
+      "dogru": true
+     },
+     {
+      "yazi": "Ne alır ne verir",
+      "neden": "Kırılan ve oluşan bağların enerjisi eşit değil: 679 kJ'ye karşı 864 kJ."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Kalorimetre",
+   "metin": "Bir tepkime kalorimetredeki suya <b>8360 J</b> ısı veriyor. Su 20 °C'de. Suyun kütlesini ayarla ve sıcaklığı <b>10 °C</b> artır.",
+   "sahne": {
+    "tur": "kim8-kalorimetre"
+   },
+   "deger": {
+    "m": 100
+   },
+   "kontroller": [
+    {
+     "ad": "m",
+     "etiket": "Su kütlesi",
+     "min": 100,
+     "max": 500,
+     "adim": 50,
+     "birim": "g",
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "m": 200
+    },
+    "tamam": "q = m·c·ΔT, yani 8360 = 200 · 4,18 · 10. Su <b>20 °C'den 30 °C'ye</b> çıktı. Aynı ısı daha çok suya dağılınca sıcaklık daha az artar. Besinlerin kalorisi de böyle ölçülür."
+   }
+  }
+ ],
+ "kapanis": [
+  "Isı veren tepkime <b>ekzotermiktir</b> (ΔH < 0), ısı alan <b>endotermiktir</b> (ΔH > 0).",
+  "<b>ΔH = H(ürünler) − H(girenler)</b>. Aktifleşme enerjisi hızı belirler, ΔH'yi değiştirmez.",
+  "Oluşum entalpileriyle: ΔH = ΣΔH°f(ürünler) − ΣΔH°f(girenler); elementlerin ΔH°f'si sıfırdır.",
+  "<b>Hess</b>: denklemler toplanırsa ΔH'ler de toplanır; ters çevirince işaret değişir. Bağlarla: ΔH = Σ(kırılan) − Σ(oluşan).",
+  "Kalorimetrede <b>q = m·c·ΔT</b> ile ölçülür; suyun öz ısısı 4,18 J/g·°C."
+ ]
+}

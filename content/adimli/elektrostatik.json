@@ -1,0 +1,244 @@
+{
+ "id": "elektrostatik",
+ "ders": "fizik",
+ "konu": "elektrostatik",
+ "baslik": "Elektrostatik",
+ "ozet": "Camı ipekle sürt, küreleri dokundur, topraklama ile yükle, elektroskobu aç, Coulomb kuvvetini ayarla, alan çizgilerini izle.",
+ "adimlar": [
+  {
+   "baslik": "Sürtünme ile elektriklenme",
+   "metin": "Yük yoktan var olmaz, yalnızca <b>elektron</b> bir cisimden ötekine geçer. Cam çubuğu ipek kumaşla sürt.",
+   "sahne": {
+    "tur": "fiz8-surtunme",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Sürtünmeden sonra cam çubuk ne yüklü olur?",
+    "secenekler": [
+     {
+      "yazi": "(−) yüklü",
+      "neden": "(−) olan, elektronları alan ipektir."
+     },
+     {
+      "yazi": "(+) yüklü",
+      "neden": "Cam, ipeğe elektron verir. Elektron eksiği olan cam <b>(+)</b>, ipek eşit miktarda <b>(−)</b> yüklenir. Toplam yük korunur.",
+      "dogru": true
+     },
+     {
+      "yazi": "Nötr kalır",
+      "neden": "İki elektron ipeğe geçti; cam artık nötr değil."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Dokunma ile paylaşım",
+   "metin": "A küresi 12 μC yüklü, B nötr. Dokunan iletken küreler yükü <b>yarıçaplarıyla orantılı</b> paylaşır: q₁/q₂ = r₁/r₂. B'ye <b>8 μC</b> düşsün.",
+   "sahne": {
+    "tur": "fiz8-dokunma",
+    "sure": 4
+   },
+   "deger": {
+    "r": 1
+   },
+   "kontroller": [
+    {
+     "ad": "r",
+     "etiket": "B'nin yarıçapı",
+     "min": 1,
+     "max": 3,
+     "tur": "sayac",
+     "birim": "× r"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "r": 2
+    },
+    "tamam": "Yarıçaplar 1 : 2 olunca 12 μC de 4 : 8 bölünür. Toplam yük yine 12 μC; dokunmada yük korunur ve iki küre <b>aynı işaretli</b> olur.",
+    "ipucu": "B, toplamın 2/3'ünü almalı."
+   }
+  },
+  {
+   "baslik": "Etki ile kutuplanma",
+   "metin": "(−) yüklü çubuk, dokunmadan nötr iletken küreye yaklaşıyor. Küredeki elektronlar serbestçe hareket edebilir.",
+   "sahne": {
+    "tur": "fiz8-etki",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Kürenin çubuğa yakın yüzü ne olur?",
+    "secenekler": [
+     {
+      "yazi": "(−) olur",
+      "neden": "Elektronlar (−) çubuktan itilir ve uzak yüze kaçar."
+     },
+     {
+      "yazi": "Nötr kalır",
+      "neden": "Toplam yük sıfırdır, ama yükler yer değiştirir."
+     },
+     {
+      "yazi": "(+) olur",
+      "neden": "Elektronlar itilir ve uzak yüze geçer. Yakın yüz <b>(+)</b>, uzak yüz <b>(−)</b> olur. Küre toplamda hâlâ nötrdür; buna <b>kutuplanma</b> denir.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Topraklama ile yükleme",
+   "metin": "Şimdi sıra şöyle: çubuğu yaklaştır, küreyi toprağa bağla, bağı kes, çubuğu uzaklaştır. Sırayı izle.",
+   "sahne": {
+    "tur": "fiz8-etki",
+    "sure": 6,
+    "toprak": true
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Sonunda küre ne yüklü kalır?",
+    "secenekler": [
+     {
+      "yazi": "(+) yüklü",
+      "neden": "İtilen elektronlar toprağa kaçar. Bağ çubuk uzaklaşmadan kesildiği için geri gelemezler. Küre, çubuğa <b>zıt işaretli</b> yükle kalır.",
+      "dogru": true
+     },
+     {
+      "yazi": "(−) yüklü, çubuk gibi",
+      "neden": "Etki ile yüklenen cisim, çubuğun <b>zıt</b> işaretini alır. Elektronlar küreden gitti."
+     },
+     {
+      "yazi": "Nötr, çünkü dokunmadık",
+      "neden": "Dokunmadan da yük geçer: elektronlar toprağa aktı."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Elektroskop",
+   "metin": "(+) çubuk elektroskobun topuzuna yaklaştırılmış. Yapraklar etkiyle aynı işaretle yüklenip birbirini itiyor. Çubuğu <b>uzaklaştır</b>.",
+   "sahne": {
+    "tur": "fiz8-elektroskop"
+   },
+   "deger": {
+    "d": 1
+   },
+   "kontroller": [
+    {
+     "ad": "d",
+     "etiket": "Uzaklık",
+     "min": 1,
+     "max": 10,
+     "adim": 1,
+     "carpan": 2,
+     "birim": "cm"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Çubuk uzaklaşınca yapraklar ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Daha çok açılır",
+      "neden": "Etki azalır, yapraklardaki yük azalır."
+     },
+     {
+      "yazi": "Açık kalır",
+      "neden": "Elektroskoba yük geçmedi; etki bitince yapraklar eski hâline döner."
+     },
+     {
+      "yazi": "Kapanır",
+      "neden": "Çubuğa dokunulmadığı için elektroskobun toplam yükü sıfırdır. Çubuk uzaklaşınca yükler eski yerine döner ve yapraklar <b>kapanır</b>.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Coulomb kuvveti",
+   "metin": "F = k·q₁·q₂ / r², k ≈ 9·10⁹ N·m²/C². q₁ = +4 μC. q₂'yi ve uzaklığı ayarla: kuvvet <b>0,1 N çekme</b> olsun.",
+   "sahne": {
+    "tur": "fiz8-coulomb"
+   },
+   "deger": {
+    "q": 2,
+    "r": 1
+   },
+   "kontroller": [
+    {
+     "ad": "q",
+     "etiket": "q₂",
+     "min": -4,
+     "max": 4,
+     "tur": "sayac",
+     "birim": "μC"
+    },
+    {
+     "ad": "r",
+     "etiket": "Uzaklık",
+     "min": 1,
+     "max": 3,
+     "tur": "sayac",
+     "carpan": 30,
+     "birim": "cm"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "q": -1,
+     "r": 2
+    },
+    "tamam": "q₂ = −1 μC, r = 60 cm: F = 9·10⁹ · 4·10⁻⁶ · 1·10⁻⁶ / 0,36 = 0,1 N. Zıt işaretli yükler <b>çeker</b>, aynı işaretliler iter.",
+    "ipucu": "Çekme için q₂ (−) olmalı. 30 cm'de −1 μC 0,4 N verir; uzaklığı 2 katına çıkar."
+   }
+  },
+  {
+   "baslik": "Alan çizgileri",
+   "metin": "Elektrik alan çizgileri, oraya konan (+) deneme yükünün itileceği yönü gösterir. Sağdaki yükün işaretini değiştir.",
+   "sahne": {
+    "tur": "fiz8-alan"
+   },
+   "deger": {
+    "isaret": 0
+   },
+   "kontroller": [
+    {
+     "ad": "isaret",
+     "etiket": "Sağdaki yük (−)",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Alan çizgileri nereden çıkar, nereye girer?",
+    "secenekler": [
+     {
+      "yazi": "(+)'dan çıkar, (−)'ye girer",
+      "neden": "Çizgiler (+) yükten dışarı, (−) yüke doğrudur. Çizgilerin sık olduğu yerde alan güçlüdür ve çizgiler <b>birbirini kesmez</b>.",
+      "dogru": true
+     },
+     {
+      "yazi": "(−)'den çıkar, (+)'ya girer",
+      "neden": "Yön, (+) deneme yükünün itileceği yöndür; (+) yükten uzağa bakar."
+     },
+     {
+      "yazi": "Yalnızca iki yükün arasında olur",
+      "neden": "Çizgiler her yöne yayılır. Aynı işaretli iki yükte aralarında boş bir bölge kalır."
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Yük kuantlıdır (e = 1,6·10⁻¹⁹ C) ve korunur; elektriklenmede yalnızca elektron geçer.",
+  "Sürtünmede cam (+), ipek (−) olur. Dokunmada yük yarıçapla orantılı ve aynı işaretle paylaşılır.",
+  "Etki ile topraklamada cisim çubuğa zıt işaretli yükle kalır; bağ, çubuk uzaklaşmadan kesilmeli.",
+  "Coulomb: F = k·q₁·q₂ / r². Zıt yükler çeker, aynı yükler iter.",
+  "Alan çizgileri (+)'dan çıkar, (−)'ye girer ve birbirini kesmez."
+ ]
+}

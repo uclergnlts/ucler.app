@@ -22,8 +22,11 @@ import { BIYOLOJI6 } from "./biyoloji6";
 import { FIZIK7 } from "./fizik7";
 import { KIMYA7 } from "./kimya7";
 import { BIYOLOJI7 } from "./biyoloji7";
+import { FIZIK8 } from "./fizik8";
+import { KIMYA8 } from "./kimya8";
+import { BIYOLOJI8 } from "./biyoloji8";
 import type { SahneKaydi } from "./ortak";
 import { ZAR } from "./zar";
 
-export const SAHNELER: Record<string, SahneKaydi> = { ...HAREKET, ...ATOM, ...ZAR, ...FIZIK1, ...FIZIK2, ...FIZIK3, ...FIZIK4, ...KIMYA1, ...KIMYA2, ...KIMYA3, ...KIMYA4, ...BIYOLOJI1, ...BIYOLOJI2, ...BIYOLOJI3, ...BIYOLOJI4, ...FIZIK5, ...KIMYA5, ...BIYOLOJI5, ...FIZIK6, ...KIMYA6, ...BIYOLOJI6, ...FIZIK7, ...KIMYA7, ...BIYOLOJI7 };
+export const SAHNELER: Record<string, SahneKaydi> = { ...HAREKET, ...ATOM, ...ZAR, ...FIZIK1, ...FIZIK2, ...FIZIK3, ...FIZIK4, ...KIMYA1, ...KIMYA2, ...KIMYA3, ...KIMYA4, ...BIYOLOJI1, ...BIYOLOJI2, ...BIYOLOJI3, ...BIYOLOJI4, ...FIZIK5, ...KIMYA5, ...BIYOLOJI5, ...FIZIK6, ...KIMYA6, ...BIYOLOJI6, ...FIZIK7, ...KIMYA7, ...BIYOLOJI7, ...FIZIK8, ...KIMYA8, ...BIYOLOJI8 };
 export type { SahneKaydi, SahneProps } from "./ortak";

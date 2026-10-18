@@ -1,0 +1,230 @@
+{
+ "id": "kutle-cekimi",
+ "ders": "fizik",
+ "konu": "kutle-cekimi",
+ "baslik": "Kütle çekimi",
+ "ozet": "Çekim kuvvetini kütle ve uzaklıkla ayarla, elmayı düşür, Newton'un topunu yörüngeye oturt, asansörün halatını kes.",
+ "adimlar": [
+  {
+   "baslik": "Kütle ve uzaklık",
+   "metin": "Her iki kütle birbirini çeker: <b>F = G·m₁·m₂ / r²</b>. Kuvvet kütlelerle doğru, uzaklığın <b>karesiyle</b> ters orantılıdır. Uzaklığı iki katına çıkar, kuvveti yine F₀ yap.",
+   "sahne": {
+    "tur": "fiz8-cekim"
+   },
+   "deger": {
+    "m": 1,
+    "r": 1
+   },
+   "kontroller": [
+    {
+     "ad": "m",
+     "etiket": "B'nin kütlesi",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac",
+     "birim": "× m"
+    },
+    {
+     "ad": "r",
+     "etiket": "Uzaklık",
+     "min": 1,
+     "max": 3,
+     "tur": "sayac",
+     "birim": "× r"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "r": 2,
+     "m": 4
+    },
+    "tamam": "Uzaklık 2 katına çıkınca kuvvet 2² = 4'te birine iner. Kütleyi 4 katına çıkarınca kuvvet yeniden F₀ olur. Buna <b>ters kare yasası</b> denir.",
+    "ipucu": "Önce uzaklığı 2 yap; kuvvetin kaçta birine indiğine bak."
+   }
+  },
+  {
+   "baslik": "Elma Dünya'yı da çeker",
+   "metin": "100 g'lık elma ağaçtan düşüyor. Dünya elmayı yaklaşık <b>1 N</b> ile çekiyor.",
+   "sahne": {
+    "tur": "fiz8-elma",
+    "sure": 3
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Elma Dünya'yı ne kadar kuvvetle çeker?",
+    "secenekler": [
+     {
+      "yazi": "Hiç çekmez, çok küçük",
+      "neden": "Kütlesi olan her cisim çeker. Küçük olması kuvveti yok etmez."
+     },
+     {
+      "yazi": "1 N, Dünya'nın elmayı çektiği kadar",
+      "neden": "Etki ve tepki: kuvvetler <b>eşit büyüklükte</b> ve zıt yönlüdür. Ama Dünya'nın kütlesi çok büyük olduğu için ivmesi fark edilemeyecek kadar küçüktür.",
+      "dogru": true
+     },
+     {
+      "yazi": "Çok daha küçük bir kuvvetle",
+      "neden": "Kuvvetler eşittir. Küçük olan Dünya'nın <b>ivmesidir</b>, kuvveti değil."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Yükseldikçe g azalır",
+   "metin": "Yüzeyde g = GM/R² ≈ 9,8 m/s². 80 kg'lık astronot yerden yükseliyor. Ağırlığını <b>196 N</b>'a indir.",
+   "sahne": {
+    "tur": "fiz8-yukseklik"
+   },
+   "deger": {
+    "h": 0
+   },
+   "kontroller": [
+    {
+     "ad": "h",
+     "etiket": "Yükseklik",
+     "min": 0,
+     "max": 3,
+     "tur": "sayac",
+     "carpan": 6400,
+     "birim": "km"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "h": 1
+    },
+    "tamam": "6400 km yukarıda merkeze uzaklık r = 2R olur. g, 2² = 4'te birine iner: 9,8 / 4 ≈ 2,45 m/s². Ağırlık 784 N'dan 196 N'a düşer, kütle ise hep 80 kg'dır.",
+    "ipucu": "Ağırlığın 4'te birine inmesi için merkeze uzaklık 2 katına çıkmalı."
+   }
+  },
+  {
+   "baslik": "Kepler'in alanlar yasası",
+   "metin": "Gezegenler Güneş'in çevresinde <b>elips</b> yörüngede döner; Güneş odaklardan birindedir. Gezegeni bir tur izle.",
+   "sahne": {
+    "tur": "fiz8-kepler",
+    "sure": 6
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Gezegen ne zaman en hızlı?",
+    "secenekler": [
+     {
+      "yazi": "Hızı hep aynı",
+      "neden": "Güneş'e yakınken çekim artar ve gezegen hızlanır."
+     },
+     {
+      "yazi": "Güneş'ten en uzakken (günöte)",
+      "neden": "Günötede en yavaştır. Eşit sürede taradığı alan aynı kalsın diye yavaş gitmesi gerekir."
+     },
+     {
+      "yazi": "Güneş'e en yakınken (günberi)",
+      "neden": "Kepler'in 2. yasası: Güneş'i gezegene bağlayan doğru <b>eşit sürelerde eşit alanlar</b> tarar. Yakında yarıçap kısa olduğu için aynı alanı taramak için gezegen daha hızlı gider.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Newton'un topu",
+   "metin": "Dağın tepesinden yatay atılan top hem düşer hem ilerler. Yeterince hızlı atarsan yüzey de topun altından eğilip gider. Topu <b>yörüngeye</b> oturt.",
+   "sahne": {
+    "tur": "fiz8-newton",
+    "sure": 5
+   },
+   "deger": {
+    "v": 50
+   },
+   "kontroller": [
+    {
+     "ad": "v",
+     "etiket": "Atış hızı",
+     "min": 20,
+     "max": 130,
+     "adim": 1,
+     "carpan": 0.1,
+     "birim": "km/s"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "v": [
+      79,
+      111
+     ]
+    },
+    "tamam": "Yaklaşık <b>7,9 km/s</b> ile top Dünya'nın çevresinde döner. Uydu da hep düşer, ama Dünya'yı hep ıskalar. Çekim kuvveti merkezcil kuvvet olur: v = √(GM/r).",
+    "ipucu": "Hızı 7,9 km/s'nin biraz üstüne çıkar ve oynat."
+   }
+  },
+  {
+   "baslik": "Kurtulma hızı",
+   "metin": "Hızı daha da artırırsan yörünge uzar. Topu Dünya'nın çekiminden <b>kurtar</b>.",
+   "sahne": {
+    "tur": "fiz8-newton",
+    "sure": 5
+   },
+   "deger": {
+    "v": 90
+   },
+   "kontroller": [
+    {
+     "ad": "v",
+     "etiket": "Atış hızı",
+     "min": 20,
+     "max": 130,
+     "adim": 1,
+     "carpan": 0.1,
+     "birim": "km/s"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "v": [
+      112,
+      130
+     ]
+    },
+    "tamam": "Yeryüzünden kurtulma hızı yaklaşık <b>11,2 km/s</b>'dir: yörünge hızının √2 katı (7,9 × 1,41). Bu hızla atılan cisim bir daha geri dönmez.",
+    "ipucu": "Kurtulma hızı yörünge hızının yaklaşık 1,41 katıdır."
+   }
+  },
+  {
+   "baslik": "Ağırlıksızlık",
+   "metin": "60 kg'lık kişi asansördeki tartının üstünde; tartı 588 N gösteriyor. Halatı kes ve oynat.",
+   "sahne": {
+    "tur": "fiz8-asansor",
+    "sure": 3
+   },
+   "deger": {
+    "kes": 0
+   },
+   "kontroller": [
+    {
+     "ad": "kes",
+     "etiket": "Halatı kes",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "kes": 1
+    },
+    "tamam": "Kişi ve tartı birlikte serbest düşer, tartı 0 gösterir. Uzay istasyonundaki astronotlar da böyledir: 400 km'de g hâlâ ≈ 8,7 m/s², ama istasyonla birlikte <b>sürekli düşerler</b>. Ağırlıksızlık çekimin yokluğu değildir."
+   }
+  }
+ ],
+ "kapanis": [
+  "Her iki kütle birbirini çeker: F = G·m₁·m₂ / r². Uzaklık 2 katına çıkınca kuvvet 4'te birine iner.",
+  "Çekim kuvvetleri eşit ve zıttır; elma da Dünya'yı 1 N ile çeker.",
+  "g = GM/r²: yükseldikçe azalır. r = 2R'de 9,8'in 4'te biri olur.",
+  "Gezegenler eşit sürede eşit alan tarar; Güneş'e yakınken hızlanır.",
+  "Yörünge hızı ≈ 7,9 km/s, kurtulma hızı ≈ 11,2 km/s. Uydular ve astronotlar sürekli düşer."
+ ]
+}
