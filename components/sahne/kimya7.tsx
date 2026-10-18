@@ -250,7 +250,7 @@ function Etiket({ v }: SahneProps) {
         <text x={42} y={80} fontSize={11.5} fontWeight={700} fill="var(--kimya)">Şeker</text>
         <text x={168} y={80} fontSize={11.5} fontWeight={700} textAnchor="end" fill="var(--kimya)">25 g</text>
         <text x={42} y={98} fontSize={11.5} fill="var(--muted)">Tuz</text>
-        <text x={168} y={98} fontSize={11.5} textAnchor="end" fill="var(--muted)">0,6 g</text>
+        <text x={168} y={98} fontSize={11.5} textAnchor="end" fill="var(--muted)">0,8 g</text>
       </g>
       <g fontSize={12.5} fontWeight={700}>
         <text x={200} y={44} fill="var(--muted)">Yediğin</text>
@@ -469,7 +469,7 @@ function Graham({ s, t, oynuyor }: SahneProps) {
         <g fontSize={11.5} fontWeight={700} textAnchor="middle">
           <line x1={a} x2={a} y1={Y + 18} y2={Y + 34} stroke="var(--ink)" strokeWidth={1.4} />
           <text x={a} y={Y + 50} fill="var(--ink)">beyaz halka: NH₄Cl</text>
-          <text x={170} y={Y + 78} fill="var(--muted)">NH₃ yolun %{Math.round(pay * 100)}'unu, HCl %{100 - Math.round(pay * 100)}'unu aldı</text>
+          <text x={170} y={Y + 78} fill="var(--muted)">NH₃ yolun %{Math.round(pay * 100)}'unu, HCl %{100 - Math.round(pay * 100)}'ini aldı</text>
         </g>
       )}
     </svg>
