@@ -1,0 +1,183 @@
+{
+ "id": "basit-makineler",
+ "ders": "fizik",
+ "konu": "basit-makineler",
+ "baslik": "Basit makineler",
+ "ozet": "Kaldıracı dengele, palangayla yük kaldır, rampayı uzat, bisikletin dişlisini değiştir; kuvvetten kazanırken neyi kaybettiğini gör.",
+ "adimlar": [
+  {
+   "baslik": "Kaldıraç",
+   "metin": "Kaldıraç bir destek çevresinde dönen çubuktur. Dengede iki taraftaki <b>tork</b> eşittir: F·dF = Y·dY. 400 N'luk yükü, 2 m uzaktan uyguladığın kuvvetle <b>dengele</b>.",
+   "sahne": {
+    "tur": "fiz6-kaldirac",
+    "Y": 400,
+    "dY": 0.5,
+    "dF": 2
+   },
+   "deger": {
+    "F": 50
+   },
+   "kontroller": [
+    {
+     "ad": "F",
+     "etiket": "Kuvvet",
+     "min": 50,
+     "max": 300,
+     "adim": 50,
+     "birim": "N",
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "F": 100
+    },
+    "tamam": "400 · 0,5 = 100 · 2 = 200 N·m. Kuvvet kolu yük kolunun 4 katı, bu yüzden kuvvet 4 kat küçük: kazanç dF / dY = 4."
+   }
+  },
+  {
+   "baslik": "Üç tür kaldıraç",
+   "metin": "Destek (D), yük (Y) ve kuvvetin (F) sırası kaldıracın türünü belirler. Ortadaki öğe, hangi kolun daha uzun olabileceğini söyler.",
+   "sahne": {
+    "tur": "fiz6-turler"
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangisi kuvvetten <b>kaybettirir</b> (kazanç 1'den küçük)?",
+    "secenekler": [
+     {
+      "yazi": "Tahterevalli",
+      "neden": "Destek ortada olunca kazanç kolların boyuna bağlıdır; 1'den büyük de olabilir."
+     },
+     {
+      "yazi": "El arabası",
+      "neden": "Yük ortada: kuvvet kolu hep yük kolundan uzundur, kazanç 1'den büyük."
+     },
+     {
+      "yazi": "Cımbız",
+      "neden": "Kuvvet ortada: kuvvet kolu hep yük kolundan kısadır, kazanç 1'den küçük. Karşılığında uç daha çok yol alır, hassas tutarsın.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Makara ve palanga",
+   "metin": "Sabit makara yalnızca yönü değiştirir. Hareketli bloğu birden çok ip kolu taşırsa yük paylaşılır: F = Y / n. 400 N'luk yükü <b>100 N</b> ile kaldır.",
+   "sahne": {
+    "tur": "fiz6-makara"
+   },
+   "deger": {
+    "n": 1
+   },
+   "kontroller": [
+    {
+     "ad": "n",
+     "etiket": "Taşıyan ip kolu",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "n": 4
+    },
+    "tamam": "4 kol yükü paylaşır: 400 / 4 = 100 N. Ama yük 1 m kalkınca ipi 4 m çekersin: kuvvetten kazanırsın, yoldan kaybedersin. İş yine 400 J."
+   }
+  },
+  {
+   "baslik": "Eğik düzlem",
+   "metin": "600 N'luk kasayı 1 m yükseğe dikey kaldırmak yerine rampada itebilirsin: F·L = G·h. Rampayı uzatarak gereken kuvveti <b>150 N</b>'a indir.",
+   "sahne": {
+    "tur": "fiz6-rampa"
+   },
+   "deger": {
+    "L": 1
+   },
+   "kontroller": [
+    {
+     "ad": "L",
+     "etiket": "Rampanın boyu",
+     "min": 1,
+     "max": 6,
+     "birim": "m",
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "L": 4
+    },
+    "tamam": "600 · 1 / 4 = 150 N. Rampa 4 kat uzun, kuvvet 4 kat küçük. İş hep 600 J: makine işi azaltmaz, yalnızca kolaylaştırır."
+   }
+  },
+  {
+   "baslik": "Bisiklet dişlileri",
+   "metin": "Zincirle bağlı dişlilerde n₁·r₁ = n₂·r₂; yarıçap yerine diş sayısı da yazılır. Ön dişli 48 diş. Pedalın bir turunda tekerlek <b>3 tur</b> atsın: arka dişliyi seç ve oynat.",
+   "sahne": {
+    "tur": "fiz6-bisiklet",
+    "sure": 4,
+    "hedefTur": 3
+   },
+   "deger": {
+    "z": 24
+   },
+   "kontroller": [
+    {
+     "ad": "z",
+     "etiket": "Arka dişli (diş)",
+     "min": 12,
+     "max": 48,
+     "adim": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "z": 16
+    },
+    "tamam": "48 / 16 = 3: tekerlek 3 tur atar, bisiklet hızlı gider ama pedal ağırlaşır. Yokuşta büyük arka dişliye geçersin: tekerlek az döner, pedal kolaylaşır."
+   }
+  },
+  {
+   "baslik": "Verim",
+   "metin": "Gerçek rampada sürtünme vardır. 600 N'luk yükü 4 m'lik rampayla 1 m yükseltmek için 150 N yetmedi; <b>200 N</b> uygulamak gerekti.",
+   "sahne": {
+    "tur": "fiz6-rampa",
+    "L": 4,
+    "Fg": 200
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bu rampanın verimi yüzde kaçtır?",
+    "secenekler": [
+     {
+      "yazi": "%133",
+      "neden": "Verim %100'ü geçemez: hiçbir makine işten kazandırmaz. Yararlı işi harcanan işe böl."
+     },
+     {
+      "yazi": "%75",
+      "neden": "Yararlı iş 600 J, harcanan iş 200 · 4 = 800 J. Verim = 600 / 800 = %75. Kalan 200 J sürtünmeyle ısıya gitti.",
+      "dogru": true
+     },
+     {
+      "yazi": "%25",
+      "neden": "200 J ısıya giden kısımdır. Verim, yararlı işin harcanan işe oranıdır."
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Kuvvet kazancı = Y / F. Kuvvetten kazanırsan yoldan kaybedersin; ideal makinede iş değişmez.",
+  "Kaldıraç dengesi: F·dF = Y·dY. Cımbızda kuvvet ortadadır ve kazanç 1'den küçüktür.",
+  "Makara kazancı: sabit 1, hareketli 2, palangada taşıyan kol sayısı n.",
+  "Eğik düzlem: F·L = G·h. Dişliler: n₁·r₁ = n₂·r₂.",
+  "Verim = yararlı iş / harcanan iş; gerçek makinede %100'ün altındadır."
+ ]
+}

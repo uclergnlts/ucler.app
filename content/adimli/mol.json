@@ -1,0 +1,214 @@
+{
+ "id": "mol",
+ "ders": "kimya",
+ "konu": "mol",
+ "baslik": "Mol kavramı ve kimyasal hesaplamalar",
+ "ozet": "Maddeyi tart, gazı ölç, denklemden ürün hesapla: mol ile tanecik saymayı öğren.",
+ "adimlar": [
+  {
+   "baslik": "Kimyanın düzinesi",
+   "metin": "Bir düzine yumurta da bir düzine karpuz da 12 tanedir ama ağırlıkları çok farklıdır. Kimyacıların paketi <b>moldür</b>: 1 mol = 6,02×10²³ tanecik (Avogadro sayısı). Mol sayısını değiştir ve kefelere bak.",
+   "sahne": {
+    "tur": "kim6-paket"
+   },
+   "deger": {
+    "n": 1
+   },
+   "kontroller": [
+    {
+     "ad": "n",
+     "etiket": "Mol sayısı",
+     "min": 1,
+     "max": 3,
+     "birim": "mol",
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "1 mol karbon, 1 mol su ve 1 mol demirde aynı olan nedir?",
+    "secenekler": [
+     {
+      "yazi": "Kütleleri",
+      "neden": "Kefelere bak: 12 g, 18 g ve 56 g. Taneciklerin kütlesi farklı olduğu için paketin kütlesi de farklıdır."
+     },
+     {
+      "yazi": "Hacimleri",
+      "neden": "Katı, sıvı ve katının hacmi tanecik boyutuna ve dizilişine bağlıdır; mol bunu eşitlemez."
+     },
+     {
+      "yazi": "Tanecik sayıları",
+      "neden": "Hepsinde 6,02×10²³ tanecik var: karbon ve demirde atom, suda molekül. Mol bir sayma birimidir, kütle birimi değildir.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Molden grama",
+   "metin": "Bir H₂O molekülü 18 akb'dir; 1 mol su ise 18 g'dır. Buna <b>mol kütlesi</b> (M) denir: n = m / M. Beherdeki suyu ayarla ve teraziye <b>36 g</b> su koy.",
+   "sahne": {
+    "tur": "kim6-su"
+   },
+   "deger": {
+    "n": 1
+   },
+   "kontroller": [
+    {
+     "ad": "n",
+     "etiket": "Su",
+     "min": 0.5,
+     "max": 4,
+     "adim": 0.5,
+     "birim": "mol",
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "n": 2
+    },
+    "tamam": "36 g / 18 g/mol = 2 mol su. İçinde 2 × 6,02×10²³ = 1,20×10²⁴ molekül var. Kütleden tanecik sayısına giderken arada hep mol vardır."
+   }
+  },
+  {
+   "baslik": "Molekül mü, atom mu?",
+   "metin": "Formüldeki alt indis, bir moleküldeki atom sayısını söyler. Aynı oran mol için de geçerlidir. Molekülleri atomlarına ayır ve say.",
+   "sahne": {
+    "tur": "kim6-atom"
+   },
+   "deger": {
+    "a": 0
+   },
+   "kontroller": [
+    {
+     "ad": "a",
+     "etiket": "Atomlarına ayır",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "1 mol H₂O'da toplam kaç mol atom vardır?",
+    "secenekler": [
+     {
+      "yazi": "1 mol",
+      "neden": "1 mol, molekül sayısıdır. Her molekülün içinde kaç atom var?"
+     },
+     {
+      "yazi": "2 mol",
+      "neden": "Yalnız hidrojenleri saydın: 2 mol H. Oksijeni de ekle."
+     },
+     {
+      "yazi": "3 mol",
+      "neden": "Her H₂O molekülünde 2 H ve 1 O var. 1 mol suda 2 mol H + 1 mol O = 3 mol atom, yani 3 × 6,02×10²³ atom bulunur.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Gazlarda hacim",
+   "metin": "Aynı sıcaklık ve basınçta eşit mol gazlar eşit hacim kaplar. <b>Normal koşulda</b> (0 °C, 1 atm) 1 mol gaz 22,4 L, oda koşulunda yaklaşık 24,5 L'dir. Şırıngada <b>NK'de 11,2 L</b> gaz olsun.",
+   "sahne": {
+    "tur": "kim6-gaz"
+   },
+   "deger": {
+    "n": 1,
+    "k": 1
+   },
+   "kontroller": [
+    {
+     "ad": "n",
+     "etiket": "Gaz",
+     "min": 0.5,
+     "max": 3,
+     "adim": 0.5,
+     "birim": "mol",
+     "tur": "surgu"
+    },
+    {
+     "ad": "k",
+     "etiket": "Oda koşulu (25 °C)",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "n": 0.5,
+     "k": 0
+    },
+    "ipucu": "Önce koşulu NK'ye al, sonra mol sayısını ayarla.",
+    "tamam": "NK'de 11,2 / 22,4 = 0,5 mol. Oda koşulunda aynı 0,5 mol gaz 12,25 L yer kaplar. 22,4 L/mol yalnız gazlar ve NK içindir; koşulu hep kontrol et."
+   }
+  },
+  {
+   "baslik": "Stokiyometri: üç adım",
+   "metin": "Metan yanınca CO₂ çıkar: CH₄ + 2O₂ → CO₂ + 2H₂O. Yol hep aynıdır: mole çevir, katsayılarla istenenin molünü bul, istenen birime geç. <b>22 g CO₂</b> elde edecek kadar metan yak (CH₄ = 16, CO₂ = 44 g/mol).",
+   "sahne": {
+    "tur": "kim6-stok"
+   },
+   "deger": {
+    "m": 16
+   },
+   "kontroller": [
+    {
+     "ad": "m",
+     "etiket": "Metan",
+     "min": 4,
+     "max": 32,
+     "adim": 4,
+     "birim": "g",
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "m": 8
+    },
+    "tamam": "8 g CH₄ = 0,5 mol. Katsayılar 1 : 1 olduğu için 0,5 mol CO₂ oluşur: 0,5 × 44 = 22 g, NK'de 11,2 L. Kütleden kütleye doğrudan geçilmez; arada mol ve katsayı oranı vardır."
+   }
+  },
+  {
+   "baslik": "Hangisi önce biter?",
+   "metin": "Kapta 6 g H₂ (3 mol) ve 32 g O₂ (1 mol) var: 2H₂ + O₂ → 2H₂O. Girenler katsayı oranında değilse biri önce biter ve ürünü o belirler.",
+   "sahne": {
+    "tur": "kim6-sinir",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Tepkime bitince ne olur?",
+    "secenekler": [
+     {
+      "yazi": "H₂ tükenir, O₂ artar",
+      "neden": "Oksijenin kütlesi büyük ama karar molle verilir. 3 mol H₂ için 1,5 mol O₂ gerekirdi; elimizde 1 mol var."
+     },
+     {
+      "yazi": "İkisi de tamamen biter",
+      "neden": "Bunun için mol oranı 2 : 1 olmalıydı. Burada 3 : 1."
+     },
+     {
+      "yazi": "O₂ tükenir, H₂ artar",
+      "neden": "1 mol O₂, 2 mol H₂ ile tepkimeye girer ve 2 mol (36 g) su oluşur. 1 mol (2 g) H₂ artar. Sınırlayıcı bileşen O₂'dir: mol / katsayı oranı küçük olan tükenir.",
+      "dogru": true
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "1 mol = 6,02×10²³ taneciktir (Avogadro sayısı); mol bir sayma birimidir.",
+  "n = m / M = N / N<sub>A</sub>; 1 mol suyun kütlesi 18 g'dır.",
+  "1 mol H₂O'da 3 mol atom vardır: molekül ve atom sayısını karıştırma.",
+  "NK'de (0 °C, 1 atm) 1 mol gaz 22,4 L kaplar.",
+  "Hesapta önce mole çevir, katsayıları kullan; ürünü tükenen (sınırlayıcı) bileşen belirler."
+ ]
+}

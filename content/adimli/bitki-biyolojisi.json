@@ -1,0 +1,261 @@
+{
+ "id": "bitki-biyolojisi",
+ "ders": "biyoloji",
+ "konu": "bitki-biyolojisi",
+ "baslik": "Bitki biyolojisi",
+ "ozet": "Suyu ağacın tepesine çek, stomayı aç, şekerin yönünü bul, halkaları say, tepeyi buda, fideyi ışığa eğ, tohumu çimlendir.",
+ "adimlar": [
+  {
+   "baslik": "Su yukarı nasıl çıkar?",
+   "metin": "Bir ağaç her gün yüzlerce litre suyu metrelerce yukarı taşır, üstelik pompasız. Stomaları aç ve ksilemdeki suya ne olduğuna bak.",
+   "sahne": {
+    "tur": "biy6-terleme"
+   },
+   "deger": {
+    "st": 0
+   },
+   "kontroller": [
+    {
+     "ad": "st",
+     "etiket": "Stomalar açık",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Uzun bir ağaçta suyu tepeye taşıyan asıl güç hangisi?",
+    "secenekler": [
+     {
+      "yazi": "Kök basıncı",
+      "neden": "Kök basıncı suyu biraz iter ama uzun ağaçlar için tek başına yetmez."
+     },
+     {
+      "yazi": "ATP harcayan su pompaları",
+      "neden": "Ksilemde su pompası yoktur; bitki suyu taşımak için ATP harcamaz."
+     },
+     {
+      "yazi": "Yapraktaki terlemenin çekişi",
+      "dogru": true,
+      "neden": "Stomalardan su buharlaşınca ksilemdeki su yukarı çekilir. Su molekülleri birbirine (kohezyon) ve boru çeperine (adezyon) tutunduğu için sütun kopmaz. Enerjiyi Güneş sağlar."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Stomayı aç",
+   "metin": "Stoma, iki bekçi hücresi arasındaki açıklıktır. Gece ve kuraklıkta kapalıdır. Koşulları değiştir ve stomayı aç.",
+   "sahne": {
+    "tur": "biy6-stoma"
+   },
+   "deger": {
+    "isik": 0,
+    "su": 0
+   },
+   "kontroller": [
+    {
+     "ad": "isik",
+     "etiket": "Işık",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "su",
+     "etiket": "Toprakta yeterli su",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "isik": 1,
+     "su": 1
+    },
+    "tamam": "Işıkta K⁺ iyonları aktif taşımayla bekçi hücrelerine girer, su osmozla izler; hücreler şişip bükülür ve stoma açılır. Susuzlukta absisik asit stomayı kapatır: su kaybı azalır ama CO₂ girişi de azalır, fotosentez yavaşlar."
+   }
+  },
+  {
+   "baslik": "Şeker nereye gider?",
+   "metin": "Floem, yaprakta üretilen şekeri <b>kaynaktan</b>, kullanıldığı ya da depolandığı <b>havuza</b> taşır. Önce yazın bir bitkiye bak ve oynat.",
+   "sahne": {
+    "tur": "biy6-floem",
+    "mevsim": "yaz",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "oynat"
+   }
+  },
+  {
+   "baslik": "İlkbaharda",
+   "metin": "Şimdi aynı bitki ilkbaharda: yapraklar henüz açılmadı ama tomurcuklar büyümek için şeker istiyor.",
+   "sahne": {
+    "tur": "biy6-floem",
+    "mevsim": "ilkbahar",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "İlkbaharda şeker floemde hangi yönde akar?",
+    "secenekler": [
+     {
+      "yazi": "Yapraklardan köke",
+      "neden": "Henüz fotosentez yapacak olgun yaprak yok."
+     },
+     {
+      "yazi": "Kökteki depodan tomurcuklara",
+      "dogru": true,
+      "neden": "Kökteki depo ilkbaharda kaynak olur; şeker yukarı, büyüyen tomurcuklara (havuz) taşınır. Floem canlı hücrelerden oluşur ve iki yönde de taşıyabilir; ksilem ise ölüdür ve suyu yalnızca yukarı taşır."
+     },
+     {
+      "yazi": "Hiç akmaz",
+      "neden": "Büyüyen tomurcuk şekere muhtaçtır; besin bir yerden gelmeli."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Yıllık halkalar",
+   "metin": "Kambiyum her yıl içe yeni ksilem, dışa floem yapar ve gövde kalınlaşır. Mevsimli iklimde her yıl bir halka oluşur. Bu ağacı <b>5 yaşına</b> getir.",
+   "sahne": {
+    "tur": "biy6-halka"
+   },
+   "deger": {
+    "yil": 1
+   },
+   "kontroller": [
+    {
+     "ad": "yil",
+     "etiket": "Yıl",
+     "min": 1,
+     "max": 8,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "yil": 5
+    },
+    "tamam": "5 halka = 5 yaş. Halkalar ksilemdir, yani odun; floem ince kalır ve dışa doğru itilir. Buğday, mısır gibi çoğu tek çenekli bitkide kambiyum yoktur, halka da oluşmaz."
+   }
+  },
+  {
+   "baslik": "Tepeyi buda",
+   "metin": "Gövde ucundaki tepe tomurcuğu <b>oksin</b> üretir. Oksin aşağı iner ve yan tomurcukları baskılar. Bahçıvan tepeyi kesiyor.",
+   "sahne": {
+    "tur": "biy6-tepe",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Tepe budanınca ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Bitki boyca daha hızlı uzar",
+      "neden": "Boyca uzamayı sağlayan uç kesildi."
+     },
+     {
+      "yazi": "Bitki kurur",
+      "neden": "Budama bitkiyi öldürmez; bahçıvanlar bunu her yıl yapar."
+     },
+     {
+      "yazi": "Yan tomurcuklar büyür, bitki dallanır",
+      "dogru": true,
+      "neden": "Oksinin baskısı kalkar; kökten gelen sitokinin yan tomurcukları uyarır ve bitki dallanır. Tepe baskınlığı kalkmış olur."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Işığa yönelme",
+   "metin": "Pencere kenarındaki fide ışığa doğru eğilir: <b>fototropizma</b>. Eğilmeyi oksin yönetir. Oynatmadan önce tahmin et.",
+   "sahne": {
+    "tur": "biy6-foto",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Oksin fidenin hangi yüzünde toplanır?",
+    "secenekler": [
+     {
+      "yazi": "Işık alan yüzünde",
+      "neden": "Öyle olsaydı ışık alan yüz uzar, fide ışıktan uzaklaşırdı."
+     },
+     {
+      "yazi": "Gölgede kalan yüzünde",
+      "dogru": true,
+      "neden": "Oksin gölge yüze geçer ve oradaki hücreleri daha çok uzatır. Gölge yüzü uzayınca uç ışığa eğilir."
+     },
+     {
+      "yazi": "Köke iner, gövdede kalmaz",
+      "neden": "Eğilmeyi, uçtan aşağı inen oksinin iki yüze nasıl dağıldığı belirler."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Çimlenme",
+   "metin": "Bir tohum yıllarca kuru bekleyebilir. Çimlenmesi için gereken koşulları sağla.",
+   "sahne": {
+    "tur": "biy6-cimlenme"
+   },
+   "deger": {
+    "su": 0,
+    "o2": 0,
+    "sicak": 0,
+    "isik": 0
+   },
+   "kontroller": [
+    {
+     "ad": "su",
+     "etiket": "Su",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "o2",
+     "etiket": "Oksijen (havalı toprak)",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "sicak",
+     "etiket": "Uygun sıcaklık",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "isik",
+     "etiket": "Işık",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "su": 1,
+     "o2": 1,
+     "sicak": 1
+    },
+    "tamam": "Su, oksijen ve uygun sıcaklık yetti. Su alan tohumda enzimler çalışır, depo besin solunumla harcanır; solunum için oksijen gerekir. Çoğu tohum ışık istemez, bazıları ister. Yaprak açıp fotosenteze başlayana dek tohumun kuru kütlesi azalır."
+   }
+  }
+ ],
+ "kapanis": [
+  "Su, yapraktaki <b>terlemenin çekişiyle</b> yükselir; kohezyon ve adezyon sütunu koparmaz. Kök basıncı yardımcıdır.",
+  "Işıkta K⁺ ve su bekçi hücrelerine girer, <b>stoma açılır</b>; susuzlukta absisik asit kapatır.",
+  "<b>Ksilem</b> (ölü) suyu yukarı, <b>floem</b> (canlı) şekeri kaynaktan havuza, iki yönde de taşır.",
+  "Kambiyum gövdeyi kalınlaştırır; her yıl bir halka oluşur. <b>Oksin</b> tepe baskınlığını ve ışığa yönelmeyi yönetir.",
+  "Çimlenme için <b>su, oksijen ve uygun sıcaklık</b> gerekir."
+ ]
+}

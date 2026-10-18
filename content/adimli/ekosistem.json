@@ -1,0 +1,207 @@
+{
+ "id": "ekosistem",
+ "ders": "biyoloji",
+ "konu": "ekosistem",
+ "baslik": "Ekosistem ekolojisi ve güncel çevre sorunları",
+ "ozet": "Enerjiyi basamak basamak izle, zehrin zincirde nasıl biriktiğini gör, karbon ve azot döngüsünü oynat, bir gölü gübreyle boğ.",
+ "adimlar": [
+  {
+   "baslik": "%10 kuralı",
+   "metin": "Çayırdaki otlar 10 000 kJ enerji depoladı. Çekirge otu, kurbağa çekirgeyi, yılan kurbağayı, kartal yılanı yer. Zincirde yukarı çık ve enerjinin <b>100 kJ</b>'e düştüğü basamağı bul.",
+   "sahne": {
+    "tur": "biy6-zincir"
+   },
+   "deger": {
+    "ust": 1
+   },
+   "kontroller": [
+    {
+     "ad": "ust",
+     "etiket": "Basamak",
+     "min": 1,
+     "max": 5,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "ust": 3
+    },
+    "tamam": "İkincil tüketici kurbağaya yalnızca 100 kJ ulaştı. Her basamakta enerjinin büyük kısmı solunumla ısı olarak kaybolur, bir kısmı sindirilmez; üste ortalama ≈ %10'u geçer. Bu yüzden zincirler 4-5 halkadan uzun olmaz."
+   }
+  },
+  {
+   "baslik": "Ekolojik piramitler",
+   "metin": "Basamakları alttan üste dizince piramit çıkar. Ama neyi ölçtüğüne göre piramidin biçimi değişebilir. Üç piramit arasında gez.",
+   "sahne": {
+    "tur": "biy6-piramit"
+   },
+   "deger": {
+    "tur": 1
+   },
+   "kontroller": [
+    {
+     "ad": "tur",
+     "etiket": "Piramit",
+     "min": 1,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangi piramit hiçbir koşulda ters dönmez?",
+    "secenekler": [
+     {
+      "yazi": "Birey sayısı piramidi",
+      "neden": "Tek bir ağaçta binlerce tırtıl yaşar; 2. piramide bak."
+     },
+     {
+      "yazi": "Biyokütle piramidi",
+      "neden": "Okyanusta hızla çoğalan fitoplanktonun anlık kütlesi zooplanktondan az olabilir; 3. piramide bak."
+     },
+     {
+      "yazi": "Enerji piramidi",
+      "dogru": true,
+      "neden": "Her basamağa bir alttakinden daha az enerji ulaşır, çünkü enerji yolda ısı olarak kaybolur. Bu yüzden enerji piramidi hep düzdür."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Zehir yukarı çıkar",
+   "metin": "DDT gibi bazı maddeler vücuttan atılamaz, dokularda birikir. Bir göle çok az DDT karıştı. Zinciri oynatmadan önce tahmin et.",
+   "sahne": {
+    "tur": "biy6-birikim",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "DDT derişimi en çok hangisinde olur?",
+    "secenekler": [
+     {
+      "yazi": "Suda",
+      "neden": "Suda derişim en düşüktür; asıl birikim canlıların dokularındadır."
+     },
+     {
+      "yazi": "Planktonda",
+      "neden": "Plankton suya göre çok DDT biriktirir ama onu yiyenler daha da fazlasını toplar."
+     },
+     {
+      "yazi": "Balıkçılda",
+      "dogru": true,
+      "neden": "Her tüketici çok sayıda av yer ve avlarının DDT'si onda toplanır. Derişim her basamakta katlanır: suda 0,000003 ppm iken balıkçılda ≈ 25 ppm olur. DDT yırtıcı kuşların yumurta kabuğunu inceltmiştir."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Karbon döngüsü",
+   "metin": "Enerji akar, madde döner. Karbon havadaki CO₂ ile canlılar arasında dolaşır. Fosil yakıt yakmayı aç, sonra ayrıştırıcıları kapat ve neyin değiştiğine bak.",
+   "sahne": {
+    "tur": "biy6-karbon"
+   },
+   "deger": {
+    "yak": 0,
+    "ayr": 1
+   },
+   "kontroller": [
+    {
+     "ad": "yak",
+     "etiket": "Fosil yakıt yak",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "ayr",
+     "etiket": "Ayrıştırıcılar (bakteri, mantar)",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Havadaki CO₂'yi alıp organik maddeye bağlayan başlıca süreç hangisi?",
+    "secenekler": [
+     {
+      "yazi": "Solunum",
+      "neden": "Solunum organik maddeyi parçalar ve CO₂'yi havaya geri verir."
+     },
+     {
+      "yazi": "Fotosentez",
+      "dogru": true,
+      "neden": "Bitkiler ve algler fotosentezle CO₂'yi organik maddeye bağlar. Solunum, ayrışma ve yanma ise onu havaya geri verir. Ayrıştırıcılar olmasa ölü maddedeki karbon ve mineraller birikir, döngüye dönmezdi."
+     },
+     {
+      "yazi": "Yanma",
+      "neden": "Yanma karbonu havaya CO₂ olarak verir; fosil yakıt yandıkça havadaki CO₂ artar."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Azot döngüsü",
+   "metin": "Havanın ≈ %78'i azottur (N₂), ama bitkiler onu doğrudan kullanamaz. Döngüyü oynatmadan önce tahmin et.",
+   "sahne": {
+    "tur": "biy6-azot",
+    "sure": 6
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Havadaki N₂ bitkiye nasıl ulaşır?",
+    "secenekler": [
+     {
+      "yazi": "Stomalardan doğrudan alınır",
+      "neden": "N₂ stomadan girse de bitki onu kullanamaz; molekülündeki üçlü bağ çok sağlamdır."
+     },
+     {
+      "yazi": "Bakteriler onu bağlar ve dönüştürür",
+      "dogru": true,
+      "neden": "Azot bağlayan bakteriler (baklagil köklerindeki Rhizobium) N₂'yi amonyağa çevirir. Nitrifikasyon bakterileri onu nitrite, sonra nitrata dönüştürür; bitki nitratı kökle alır. Denitrifikasyon bakterileri nitratı yeniden N₂ olarak havaya verir."
+     },
+     {
+      "yazi": "Yalnızca yıldırımla",
+      "neden": "Yıldırım da azot bağlar ama çok küçük bir kısmını; azotun çoğunu bakteriler bağlar."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Ötrofikasyon",
+   "metin": "Tarlalardan gelen gübre bir göle karışıyor. Gübrede azot ve fosfor var. Ne olacağını tahmin et, sonra izle.",
+   "sahne": {
+    "tur": "biy6-gol",
+    "sure": 6
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Balıkları öldüren O₂ azalmasının asıl nedeni ne?",
+    "secenekler": [
+     {
+      "yazi": "Alglerin O₂ tüketmesi",
+      "neden": "Canlı algler gündüz fotosentezle O₂ üretir; asıl tüketici başka."
+     },
+     {
+      "yazi": "Gübrenin suyla tepkimeye girmesi",
+      "neden": "Gübre doğrudan O₂ harcamaz; algleri besler."
+     },
+     {
+      "yazi": "Ölü algleri ayrıştıran bakteriler",
+      "dogru": true,
+      "neden": "Gübre algleri aşırı çoğaltır, algler ölüp dibe çöker. Onları ayrıştıran bakteriler çoğalır ve solunumla suyun O₂'sini tüketir; balıklar ölür. Buna ötrofikasyon denir."
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Ekosistem = canlılar (biyotik) + cansız çevre (abiyotik).",
+  "Enerji tek yönlü akar; her basamağa ortalama yalnızca <b>≈ %10</b>'u geçer. Enerji piramidi hiç ters dönmez.",
+  "Zehirler (DDT, cıva) zincirde yukarı doğru <b>birikir</b>; en çok üst tüketiciler zarar görür.",
+  "Madde döner: fotosentez CO₂'yi bağlar; solunum, ayrışma ve yanma geri verir. Azotu bakteriler bağlar, dönüştürür ve havaya geri verir.",
+  "Gübre göle karışınca algler çoğalır; ölü algleri ayrıştıran bakteriler O₂'yi tüketir: <b>ötrofikasyon</b>."
+ ]
+}

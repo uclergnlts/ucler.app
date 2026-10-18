@@ -16,8 +16,11 @@ import { KIMYA4 } from "./kimya4";
 import { FIZIK5 } from "./fizik5";
 import { KIMYA5 } from "./kimya5";
 import { BIYOLOJI5 } from "./biyoloji5";
+import { FIZIK6 } from "./fizik6";
+import { KIMYA6 } from "./kimya6";
+import { BIYOLOJI6 } from "./biyoloji6";
 import type { SahneKaydi } from "./ortak";
 import { ZAR } from "./zar";
 
-export const SAHNELER: Record<string, SahneKaydi> = { ...HAREKET, ...ATOM, ...ZAR, ...FIZIK1, ...FIZIK2, ...FIZIK3, ...FIZIK4, ...KIMYA1, ...KIMYA2, ...KIMYA3, ...KIMYA4, ...BIYOLOJI1, ...BIYOLOJI2, ...BIYOLOJI3, ...BIYOLOJI4, ...FIZIK5, ...KIMYA5, ...BIYOLOJI5 };
+export const SAHNELER: Record<string, SahneKaydi> = { ...HAREKET, ...ATOM, ...ZAR, ...FIZIK1, ...FIZIK2, ...FIZIK3, ...FIZIK4, ...KIMYA1, ...KIMYA2, ...KIMYA3, ...KIMYA4, ...BIYOLOJI1, ...BIYOLOJI2, ...BIYOLOJI3, ...BIYOLOJI4, ...FIZIK5, ...KIMYA5, ...BIYOLOJI5, ...FIZIK6, ...KIMYA6, ...BIYOLOJI6 };
 export type { SahneKaydi, SahneProps } from "./ortak";

@@ -1,0 +1,244 @@
+{
+ "id": "momentum",
+ "ders": "fizik",
+ "konu": "momentum",
+ "baslik": "Momentum ve çarpışmalar",
+ "ozet": "Arabanın momentumunu kamyonunkine eşitle, topu duvardan sektir, hava yastığıyla kuvveti azalt, arabaları çarpıştır, tüfeği ateşle.",
+ "adimlar": [
+  {
+   "baslik": "Momentum",
+   "metin": "<b>Momentum</b> kütle ile hızın çarpımıdır: p = m·v. 4000 kg'lık kamyon 5 m/s ile gidiyor. 1000 kg'lık arabanın hızını ayarla, momentumları <b>eşit</b> olsun.",
+   "sahne": {
+    "tur": "fiz6-p"
+   },
+   "deger": {
+    "v": 5
+   },
+   "kontroller": [
+    {
+     "ad": "v",
+     "etiket": "Arabanın hızı",
+     "min": 0,
+     "max": 40,
+     "adim": 5,
+     "birim": "m/s"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "v": 20
+    },
+    "tamam": "1000 · 20 = 4000 · 5 = 20 000 kg·m/s. Kütle 4 kat küçükse hız 4 kat büyük olmalı. Yavaş giden kamyonu durdurmak bu yüzden zordur."
+   }
+  },
+  {
+   "baslik": "Duvardan geri seken top",
+   "metin": "0,2 kg'lık top duvara 10 m/s ile çarpıyor. Önce yapışsın, sonra geri seksin: <b>iki durumu da oynat</b> ve momentum değişimini karşılaştır.",
+   "sahne": {
+    "tur": "fiz6-duvar",
+    "sure": 4
+   },
+   "deger": {
+    "k": 0
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Top geri seksin",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "kosu": 2,
+    "soru": "Top aynı hızla geri sekince momentum değişiminin büyüklüğü kaç kg·m/s?",
+    "secenekler": [
+     {
+      "yazi": "0",
+      "neden": "Hızın büyüklüğü aynı ama yönü ters döndü. Momentum bir vektördür."
+     },
+     {
+      "yazi": "2",
+      "neden": "Bu, topun yapıştığı durum. Sekince hız +10'dan −10'a iner."
+     },
+     {
+      "yazi": "4",
+      "neden": "Δp = 0,2·(−10) − 0,2·10 = −4: büyüklüğü 4 kg·m/s, yapışmanın iki katı. Duvar topa iki kat itme uygular.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Hava yastığı",
+   "metin": "İtme, momentum değişimine eşittir: F·Δt = Δp. 70 kg'lık sürücü 15 m/s'den duruyor, Δp hep 1050 N·s. Durma süresini uzat, kuvveti <b>10 000 N'un altına</b> indir.",
+   "sahne": {
+    "tur": "fiz6-yastik"
+   },
+   "deger": {
+    "dt": 10
+   },
+   "kontroller": [
+    {
+     "ad": "dt",
+     "etiket": "Durma süresi",
+     "min": 10,
+     "max": 200,
+     "adim": 10,
+     "birim": "ms"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "dt": [
+      110,
+      200
+     ]
+    },
+    "tamam": "Grafiğin altındaki alan (itme) hep 1050 N·s. Süre uzayınca dikdörtgen yayılır, yüksekliği yani kuvvet azalır. Hava yastığı, kasktaki köpük ve dizini bükerek inmek bu yüzden korur."
+   }
+  },
+  {
+   "baslik": "Esnek çarpışma",
+   "metin": "Dış kuvvet yoksa toplam momentum korunur. Esnek çarpışmada kinetik enerji de korunur. 1 kg'lık A arabası 4 m/s ile, duran 1 kg'lık B'ye çarpacak.",
+   "sahne": {
+    "tur": "fiz6-carpisma",
+    "sure": 4,
+    "esnek": true,
+    "m1": 1,
+    "v1": 4,
+    "m2": 1
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Çarpışmadan sonra ne olur?",
+    "secenekler": [
+     {
+      "yazi": "İkisi birlikte 2 m/s ile gider",
+      "neden": "Bu, yapışan arabalarda olur; o zaman kinetik enerji azalır. Esnek çarpışmada KE korunur."
+     },
+     {
+      "yazi": "A geri seker, B yavaş gider",
+      "neden": "Bu, hafif bir cisim ağır bir cisme çarpınca olur. Burada kütleler eşit."
+     },
+     {
+      "yazi": "A durur, B 4 m/s ile gider",
+      "neden": "Eşit kütleler kafa kafaya esnek çarpışınca hızlarını değiş tokuş eder. Newton beşiği ve bilardo topları böyledir.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Yapışan arabalar",
+   "metin": "Şimdi arabalar çarpışınca birbirine yapışıyor: m1·v1 = (m1 + m2)·v. B'nin kütlesini seç ve oynat; ortak hız <b>1 m/s</b> olsun.",
+   "sahne": {
+    "tur": "fiz6-carpisma",
+    "sure": 4,
+    "m1": 1,
+    "v1": 4
+   },
+   "deger": {
+    "m2": 1
+   },
+   "kontroller": [
+    {
+     "ad": "m2",
+     "etiket": "B'nin kütlesi",
+     "min": 1,
+     "max": 5,
+     "birim": "kg",
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "m2": 3
+    },
+    "tamam": "1 · 4 = (1 + 3) · v, yani v = 1 m/s. Momentum 4 kg·m/s olarak korundu; yalnızca 4 kg'lık kütleye yayıldı."
+   }
+  },
+  {
+   "baslik": "Enerji nereye gitti?",
+   "metin": "Aynı çarpışmaya bir de enerji gözüyle bak. Oynat ve alttaki toplam kinetik enerjiyi izle.",
+   "sahne": {
+    "tur": "fiz6-carpisma",
+    "sure": 4,
+    "m1": 1,
+    "v1": 4
+   },
+   "deger": {
+    "m2": 3
+   },
+   "kontroller": [
+    {
+     "ad": "m2",
+     "etiket": "B'nin kütlesi",
+     "min": 1,
+     "max": 5,
+     "birim": "kg",
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "kosu": 1,
+    "soru": "Yapışmada kinetik enerji 8 J'den 2 J'ye indi. Hangisi doğru?",
+    "secenekler": [
+     {
+      "yazi": "Momentum da azaldı",
+      "neden": "Toplam momentum önce de sonra da 4 kg·m/s. Dış kuvvet yoksa momentum korunur."
+     },
+     {
+      "yazi": "Enerji yok oldu",
+      "neden": "Enerji yok olmaz, biçim değiştirir."
+     },
+     {
+      "yazi": "6 J ısıya, sese ve kalıcı şekil değişikliğine gitti",
+      "neden": "Momentum korunur ama yapışmada KE kaybı en büyüktür. Toplam enerji yine korunur; yalnızca kinetik kısmı azalır.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Geri tepme",
+   "metin": "Başta duran bir sistem ikiye ayrılırsa toplam momentum sıfır kalır. 4 kg'lık tüfek, 0,01 kg'lık mermiyi 400 m/s ile fırlatacak.",
+   "sahne": {
+    "tur": "fiz6-patlama",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Tüfek hangi hızla geri teper?",
+    "secenekler": [
+     {
+      "yazi": "Hiç kımıldamaz",
+      "neden": "Mermiyi ileri iten tüfek, aynı büyüklükte geri itme alır (etki–tepki)."
+     },
+     {
+      "yazi": "1 m/s",
+      "neden": "0,01 · 400 = 4 kg·m/s ileri; tüfek 4 kg·m/s geri: 4 / 4 = 1 m/s. Ağır parça yavaş, hafif parça hızlı gider. Roket de gazı geri iterek ilerler.",
+      "dogru": true
+     },
+     {
+      "yazi": "400 m/s",
+      "neden": "Momentumlar eşit olur, hızlar değil. Tüfek mermiden 400 kat ağır."
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Momentum p = m·v bir vektördür; birimi kg·m/s.",
+  "İtme I = F·Δt = Δp; F–t grafiğinin altındaki alandır. Aynı Δp için süre uzarsa kuvvet azalır.",
+  "Geri seken cisimde Δp, yapışan cisminkinin iki katıdır.",
+  "Dış kuvvet yoksa toplam momentum korunur: çarpışmada da patlamada da.",
+  "Esnek çarpışmada KE korunur; yapışmada en çok azalır; patlamada artar."
+ ]
+}
