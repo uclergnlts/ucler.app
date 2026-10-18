@@ -322,8 +322,8 @@ function Kuvvet({ v }: SahneProps) {
       <text x={cx + ux * (L - 22) + 12} y={cy + uy * (L - 22) - 6} fontSize={11.5} fontWeight={800} fill="var(--c4)">I = 5 A</text>
       {a > 0 && <path d={`M${cx + 34} ${cy} A34 34 0 0 0 ${cx + Math.cos(a * DER) * 34} ${cy - Math.sin(a * DER) * 34}`} fill="none" stroke="var(--ink)" strokeWidth={1.4} />}
       <text x={cx + 40} y={cy + 18} fontSize={12} fontWeight={800} fill="var(--ink)">θ = {a}°</text>
-      {F > 0.001 ? <Yon x={cx} y={cy} cikan r={5 + 18 * (F / 0.25) * 0.5} renk="var(--c2)" /> : <circle cx={cx} cy={cy} r={3} fill="var(--ink)" />}
-      <text x={14} y={228} fontSize={11.5} fontWeight={700} fill="var(--muted)">{F > 0.001 ? "⊙ kuvvet ekrandan sana doğru (L = 0,5 m)" : "tel alana paralel: kuvvet yok"}</text>
+      {F > 0.001 ? <Yon x={cx} y={cy} cikan={false} r={5 + 18 * (F / 0.25) * 0.5} renk="var(--c2)" /> : <circle cx={cx} cy={cy} r={3} fill="var(--ink)" />}
+      <text x={14} y={228} fontSize={11.5} fontWeight={700} fill="var(--muted)">{F > 0.001 ? "⊗ kuvvet ekrana giriyor (L = 0,5 m)" : "tel alana paralel: kuvvet yok"}</text>
     </svg>
   );
 }
