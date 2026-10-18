@@ -358,3 +358,250 @@ Doğrulama: `python3 tools/check.py` → TAMAM (bu konularda 45 kelime uyarısı
 - **Evrim:** rastgele olmayan çiftleşme ve cinsel seçilim; "en güçlü hayatta kalır" yanılgısına karşı uyum = üreme başarısı vurgusu (kart 4'te dolaylı var); türleşmede simpatrik türleşme ve poliploidi.
 
 Videolar kapsam dışı; bu konularla ilgili video kartı numaralarını değiştirecek bir işlem yapılmadı (kart eklenmedi, sıra korunarak yalnızca metin değişti).
+
+# Eksik kavram turu (2026-10-18, ikinci tur)
+Üçler kart sınırını 16'ya çıkardı ("Sınırı 16 yap"). Raporlardaki kapsam eksikleri kapatıldı: 78 yeni kart, yaklaşık 40 kart genişletildi. Kimyaya yeni konu eklendi: **Modern atom teorisi** (16 kart, 4 soruluk test, 7 adımlı etkileşimli ders; atomun-yapisi'ndan sonra). Kart sırası kayan videoların kart numaraları güncellendi (KIM-04, KIM-06, KIM-10, BIY-05, BIY-06).
+
+## fizik1
+
+Dal: `worktree-agent-a58f2045032516cde` (taban main `cccf2c9`). Yalnızca `content/fizik.json` değişti. 17 yeni kart eklendi, 1 kart genişletildi. Testler, etkileşimli dersler ve videolar değişmedi: bu 10 konuya bağlı video yok, `?kart=N` bağlantısı da yok. Yeni kartlarda `etk` yok, var olan `etk` kartları yalnızca sıra numarası değiştirdi. Yeni SVG'lerin hepsi 390 px genişlikte çizilip tek tek gözle kontrol edildi.
+
+| # | Yer | Eklenen kavram | Nasıl |
+|---|---|---|---|
+| 1 | fizik › fizik-bilimine-giris | Ölçümde hata, aletin duyarlılığı (en küçük bölme), tekrarlı ölçüm ve ortalama, göz hizası | Yeni kart 9 "Ölçümde hata ve duyarlılık" (iki cetvelle aynı kalem: ≈ 4 cm ve 4,3 cm) |
+| 2 | fizik › madde-ozellikleri | Karışımın m–V doğrusu iki maddenin doğrusu arasında kalır | Kart 4 genişletildi: "Sınavda en sık sorulan grafik budur." cümlesinin yerine bu bilgi yazıldı, SVG'ye kesikli "karışım" doğrusu eklendi |
+| 3 | fizik › basinc | Sıvının tabana uyguladığı kuvvet F = P·A = h·d·g·A; düz, genişleyen ve daralan kapta F ile G'nin karşılaştırması; katıda F = G | Yeni kart 5 "Tabana etki eden kuvvet" |
+| 4 | fizik › basinc | Basınçların toplanması: P = P₀ + h·d·g ve kapalı kapta P = P<sub>gaz</sub> + h·d·g, üst üste sıvılar | Yeni kart 11 "Basınçlar toplanır" |
+| 5 | fizik › kaldirma-kuvveti | Tabana iple bağlı cisim (F<sub>k</sub> = G + T) ve ipe asılı batık cisim (T + F<sub>k</sub> = G) | Yeni kart 7 "İple bağlı cisim" |
+| 6 | fizik › kaldirma-kuvveti | İki sıvının ara yüzeyinde duran cisim: F<sub>k</sub> = V₁·d₁·g + V₂·d₂·g (örnek: yarısı suda, yarısı yağda → 0,9 g/cm³) | Yeni kart 9 "İki sıvının sınırında" |
+| 7 | fizik › isi-sicaklik | "Karışımda buz kalır mı?" kontrolü: önce ısılar karşılaştırılır (4000 cal < 8000 cal → 50 g buz erir, denge 0 °C) | Yeni kart 8 "Karışımda buz kalır mı?" |
+| 8 | fizik › isi-sicaklik | İletim hızı: sıcaklık farkı, kesit alanı, kalınlık ve madde cinsi (Q/t = k·A·ΔT/L) | Yeni kart 11 "İletim hızı neye bağlı?" |
+| 9 | fizik › vektorler | Eğik vektörleri bileşenlerle toplama (A = (4, 3), B = (2, −3) → R = (6, 0)) | Yeni kart 10 "Bileşenlerle toplama" |
+| 10 | fizik › vektorler | Denge: bileşke sıfır, üç kuvvetle kapalı üçgen, Lami teoremi | Yeni kart 12 "Denge: bileşke sıfır" |
+| 11 | fizik › bir-boyutta-hareket | Aşağı atış: v = v₀ + g·t, h = v₀·t + ½·g·t² (5 m/s → 2 s'de 24,6 m/s ve 29,6 m) | Yeni kart 9 "Aşağı atış" |
+| 12 | fizik › bir-boyutta-hareket | Hava direnci ve limit hız (direnç = ağırlık olunca a = 0; kütle ve kesit alanıyla ilişkisi, paraşüt) | Yeni kart 11 "Hava direnci ve limit hız" |
+| 13 | fizik › newton-yasalari | Eğik düzlemde ivme: a = g·sinθ (sürtünmesiz, kütleden bağımsız) ve a = g·sinθ − μ<sub>k</sub>·g·cosθ (37°, 0,5 → 2 m/s²) | Yeni kart 11 "Eğik düzlemde kayma" |
+| 14 | fizik › newton-yasalari | Makaralı sistem (Atwood): a = (m₁ − m₂)·g/(m₁ + m₂), T = m₂·(g + a) (3 kg ve 2 kg → 2 m/s², 24 N). Basit makineler konusu yalnızca dengeyi anlatıyor, ivmeli makara yok. | Yeni kart 13 "Makaralı sistem (Atwood)" |
+| 15 | fizik › iki-boyutta-hareket | Yüksekten eğik atış: düşeyde −h = v₀y·t − ½·g·t² (20 m, 15 ve 10 m/s → 4 s, 40 m) | Yeni kart 7 "Yüksekten eğik atış" |
+| 16 | fizik › iki-boyutta-hareket | Hareketli araçtan atış: yere göre ilk hız = araca göre hız + aracın hızı; kamyondan düşey atılan top kamyona geri düşer | Yeni kart 8 "Hareketli araçtan atış" |
+| 17 | fizik › bagil-hareket | Akıntıda gidip dönme süresi (160 m: 20 s + 80 s = 100 s, durgun suda 64 s) | Yeni kart 9 "Akıntıda gidip dönmek" |
+| 18 | fizik › bagil-hareket | Nehirde karşılaşma: akıntı karşılaşma süresini değiştirmez (200 / (4 + 6) = 20 s) | Yeni kart 10 "Nehirde karşılaşma" |
+
+Kart sayıları: fizik-bilimine-giris 10 → 11, madde-ozellikleri 11 (değişmedi), basinc 11 → 13, kaldirma-kuvveti 14 → 16, isi-sicaklik 14 → 16, vektorler 11 → 13, bir-boyutta-hareket 11 → 13, newton-yasalari 13 → 15, iki-boyutta-hareket 8 → 10, bagil-hareket 14 → 16.
+
+Örneklerdeki sayıların hepsi yeniden hesaplandı. Newton, iki boyutta hareket ve Atwood örneklerinde g ≈ 10 m/s² kullanıldığı hem metinde hem SVG'de belirtildi; konunun öbür kartları 9,8 kullanıyor.
+
+Özet kartları değiştirilmedi. Hepsi 42-45 kelimede; yeni bir madde eklemek 45 kelime sınırını aşacaktı.
+
+### Eklenmeyen eksikler
+- **Sahte bilim / bilimin sınırları** (fizik bilimine giriş): TYT'de soru tipi olarak çıkmıyor, eklenmedi.
+- **Esneklik, plastiklik ve Hooke** (madde ve özellikleri): Bu konuda YKS için ayrı bir soru tipi değil. Yay kuvveti ve F–x grafiği iş-enerji ile basit harmonik hareket konularında zaten anlatılıyor, bu yüzden eklenmedi. Özkütlenin sıcaklıkla değişimi zaten kart 6'da var.
+- **Önceki turdan kalan öneriler 16-18** (ısı adımlı ders "titreşir" ifadesi, fiz2-rakim ölçek yüksekliği, kaldırma adımlı ders "askıda") kart sınırı yüzünden değil, adımlı ders ve sahne metni oldukları için bekliyor. Bu turda adımlı derslere dokunulmadı. Hâlâ öneri.
+
+## fizik2
+
+Kart sınırı 16'ya çıktığı için "Kapsam eksikleri" listesindeki sekiz kavramın hepsi yeni kartla eklendi (mevcut kartlar 45 kelimeye yakın olduğundan genişletme yerine yeni kart seçildi). Bu konulara bağlı video yok (`content/videolar.json`), kart kayması bir şeyi bozmadı. Testler değiştirilmedi. Bütün yeni SVG'ler 390 px genişlikte görüntülenip gözle denetlendi; "Sayfa hatası yok". `check.py` TAMAM (uyarısız), `lint` ve `build` temiz. Commit: a0556de.
+
+| # | Yer | Eklenen kavram | Nasıl |
+|---|---|---|---|
+| 1 | fizik › is-enerji-guc | P = F·v (sabit hızla çekilen/itilen cisimde güç; 500 N · 2 m/s = 1000 W) | Yeni kart 11 "Güç ve hız: P = F·v"; Özet'e "P = W/t = F·v" eklendi |
+| 2 | fizik › kutle-cekimi | Yörüngedeki uydunun toplam enerjisi E = −GMm/2r, KE = −E, Eₚ = 2E; uydu alçalınca hızlanır ama toplam enerjisi azalır | Yeni kart 13 "Yörüngedeki uydunun enerjisi" (kurtulma hızı kartından sonra); Özet'e E eklendi |
+| 3 | fizik › cembersel-hareket | Konik sarkaç: T·cosα = mg, T·sinα = mv²/r, tanα = v²/(rg); yatayda döndürülen ip hiç tam yatay olmaz | Yeni kart 9 "Konik sarkaç" (eğimli virajdan sonra) |
+| 4 | fizik › tork-denge | Eğik düzlemde kayma (tanα > μs) ve devrilme (tanα > b/h) sınırları; hangisine önce varılırsa | Yeni kart 13 "Kayar mı, devrilir mi?" (devrilme kartından sonra) |
+| 5 | fizik › elektrik-akimi | Reosta / potansiyometre: sürgüyle tel boyu, dolayısıyla R değişir; seri lambanın parlaklığı | Yeni kart 7 "Reosta: ayarlanabilir direnç" (seri bağlamadan sonra) |
+| 6 | fizik › elektriksel-enerji | Üretecin gücü P = ε·I, iç dirençte I²r kaybı, R = r'de en büyük dış güç | Yeni kart 6 "Üretecin gücü ve iç direnç" (12 V, r = 2 Ω, R = 4 Ω örneği; R = r'de 18 W) |
+| 7 | fizik › manyetizma | Eğim (inklinasyon) açısı: manyetik ekvatorda 0°, kutuplarda 90°, Türkiye'de ≈ 55-60° | Yeni kart 5 "Eğim (inklinasyon) açısı" (Dünya'nın manyetik alanı kartından sonra) |
+| 8 | fizik › momentum | Kütle merkezinin hızı v_KM = Σp/Σm; dış kuvvet yoksa sabit; patlayan havai fişekte KM aynı yolda kalır | Yeni kart 13 "Kütle merkezinin hızı" (patlama kartından sonra) |
+
+Kart sayıları şimdi: is-enerji-guc 12, kutle-cekimi 15, cembersel-hareket 15, tork-denge 15, elektrik-akimi 15, elektriksel-enerji 15, manyetizma 15, momentum 15.
+
+Bu turda değiştirilmeyenler: #12 ("ısıya dönüşür" terimi) proje genelinde terim kararı gerektiriyor; #13 (yarıçapla yük paylaşımı) ders kitabına göre değişir; #14-16 kart sınırıyla ilgisi olmayan yuvarlama / temsilî değer önerileri olarak bırakıldı.
+
+## fizik3
+
+Dal: `worktree-agent-acd2a2dd4db0afe7c` · Commit: `605f229` (taban main `cccf2c9`). Kart sayıları: induksiyon-ac 16, basit-harmonik-hareket 15, dalgalar 14, optik 16, dalga-optigi 14, ozel-gorelilik 13, kuantum 15, radyoaktivite 15. Bu konulara bağlı video yok; `videolar.json` değişmedi. Testler değişmedi. check.py TAMAM, lint ve build hatasız, yeni kartlar 390 px'te gözle kontrol edildi ("Sayfa hatası yok").
+
+| # | Yer | Eklenen kavram | Nasıl (yeni kart N / kart N genişletildi) |
+|---|---|---|---|
+| 1 | fizik › induksiyon-ac | Lenz yönünü sağ el kuralıyla bulmak (akı artıyor/azalıyor, örnek: ⊙ alan artınca akım saat yönünde) | Yeni kart 5 |
+| 2 | fizik › induksiyon-ac | Gerçek transformatör: verim = P₂/P₁ < %100, sargı ısınması, girdap akımları, katmanlı çekirdek | Yeni kart 13 |
+| 3 | fizik › induksiyon-ac | Öneri 10: V²/R'deki V hat gerilimi değil gerilim düşüşüdür | Kart 14 ana fikri değiştirildi |
+| 4 | fizik › basit-harmonik-hareket | Sarkaçta geri getirici kuvvet mg·sinθ ≈ (mg/L)·x, k → mg/L ile T = 2π√(L/g) | Yeni kart 10 |
+| 5 | fizik › basit-harmonik-hareket | Öneri 7: "dengeden + yönde başlarsa x = A·sin(ωt)" | Kart 4 metni düzeltildi |
+| 6 | fizik › dalgalar | Öneri 9: "kulağın duyduğu" ifadesi çıkarıldı, "şiddet düzeyi desibelle ölçülür" | Kart 11 metni düzeltildi |
+| 7 | fizik › optik | Işık akısı (lümen), ışık şiddeti (kandela), aydınlanma E = I·cosθ/d² (lüks) | Yeni kart 2 (kart 1'in aydınlanma ana fikri, tekrar olmasın diye gölge notuyla değiştirildi) |
+| 8 | fizik › optik | Tümsek ayna (f = −10, d<sub>c</sub> = 15 → d<sub>g</sub> = −6, m = 0,4) ve ıraksak mercek (f = −20, d<sub>c</sub> = 20 → d<sub>g</sub> = −10, m = 0,5) sayısal örneği | Yeni kart 12 |
+| 9 | fizik › optik | Öneri 8: ayna aslında ön-arkayı ters çevirir | Kart 4 (Düz ayna) ana fikrine eklendi |
+| 10 | fizik › dalga-optigi | İnce zarda kırılma indisi büyük ortamdan yansımada λ/2 kayması | Kart 12 ana fikri değiştirildi |
+| 11 | fizik › ozel-gorelilik | E = γmc², E<sub>k</sub> = (γ − 1)mc² (0,6c ve 0,8c örneği), "kütle hızla artar" yanılgısına karşı not | Yeni kart 11 |
+| 12 | fizik › kuantum | Bohr'dan modern atom modeline: olasılık, orbital (elektron bulutu), kimya › atom-modelleri bağlantısı | Yeni kart 13 |
+| 13 | fizik › radyoaktivite | Aktivite (Bq), soğurulan doz (Gy), eşdeğer doz (Sv), ışınlanma ile bulaşma ayrımı | Yeni kart 13 |
+| 14 | fizik › radyoaktivite | Öneri 6: β'nın daha çok sapması yük/kütle oranıyla açıklandı | Kart 8 metni ve adımlı ders adım 6 geri bildirimi |
+| 15 | sahne `fiz13-hiz`, `fiz13-esz` | Öneri 11: yorumlardaki ölçekler kodla uyumlu (1 m = 1,2 px; c = 40 px/s) | Yalnız kod yorumu |
+
+Özet kartlarına yeni kavram eklenmedi: beş konuda Özet zaten 44-45 kelimeydi ve eklenen cümle sınırı aşıyordu.
+
+## kimya1
+
+Dal: `worktree-agent-a0ed20fab62804324` · Commit: `bdffae3` (taban main cccf2c9)
+
+| # | Yer | Eklenen kavram | Nasıl |
+|---|---|---|---|
+| 1 | kimya › modern-atom-teorisi (YENİ KONU) | Modern atom teorisi (AYT): de Broglie/Schrödinger/Heisenberg, yörünge–orbital, dört kuantum sayısı, s/p/d/f şekil ve kapasite, Aufbau (n + ℓ), Pauli, Hund, dizilim ve orbital şeması, soy gaz kısaltması, Cr/Cu istisnası (küresel simetri), iyon dizilimi (önce 4s boşalır), dizilimden periyot/grup, para/diyamanyetik | Yeni konu: 16 kart (4 etkileşimli: eşleştir ×2, sırala, ayır), 4 soruluk test; `dersler.json`'da atomun-yapisi'nden sonra. Adımlı ders `content/adimli/modern-atom-teorisi.json` (7 adım), sahneler `components/sahne/kimya13.tsx` (`kim13-*`) |
+| 2 | kimya › atomun-yapisi › kart 11 | Orbitaller kartı yeni konuya kısa ön izleme olarak kaldı | anahtar cümle "Ayrıntısı: Modern atom teorisi konusu" |
+| 3 | kimya › atomun-yapisi › kart 2 | Öneri 15: stadyum benzetmesi kartta "bilye", adımlı derste "bezelye" | kart 2 "bezelye" yapıldı (adımlı dersle aynı) |
+| 4 | kimya › simya › kart 4 | Câbir (nitrik/sülfürik asit), Râzî (alkol, maddelerin sınıflandırılması) | kart 4 genişletildi ("atfedilir") |
+| 5 | kimya › simya › kart 2 | Öneri 18: çekirdek tepkimeleri elementi değiştirir | kart 2 anahtar cümlesi |
+| 6 | kimya › kimya-bilimi | Yemek sodası, çamaşır sodası, potas kostik, amonyak, göz taşı, çamaşır suyu (NaOCl) | yeni kart 6 "Mutfaktan temizliğe yaygın adlar" (KIM-04 kart 6→7, KIM-06 8→9) |
+| 7 | kimya › atom-modelleri | Millikan yağ damlası deneyi, e = 1,6·10⁻¹⁹ C | yeni kart 5 "Millikan: Elektronun yükü"; Özet'e bir ifade (KIM-10 kart 5→6) |
+| 8 | kimya › periyodik-tablo | Ardışık iyonlaşma enerjilerinden grup bulma (Mg: 738, 1451, 7733, 10543 kJ/mol) | yeni kart 8 "Ardışık iyonlaşma enerjileri" |
+| 9 | kimya › maddenin-halleri | Bağıl nem ve hissedilen sıcaklık (25 °C'de 23,8 mmHg) | yeni kart 8 "Bağıl nem ve hissedilen sıcaklık" |
+| 10 | kimya › karisimlar › kart 5 | Öneri 16: aerosoller de koloittir | kart 5 genişletildi |
+| 11 | kimya › kimyasal-baglar › kart 3 | Öneri 17: H dubleti bağ kurunca kazanır | kart 3 metni düzeltildi |
+| 12 | docs/KARARLAR.md, docs/YOL-HARITASI.md | Konu sayıları | kimya 25→26 (KARARLAR'daki eski "fizik 26, biyoloji 26" dersler.json'a göre 28 yapıldı) |
+
+Eklenmeyen: kireç kaymağı (formülü kaynağa göre CaOCl₂ / Ca(OCl)₂ diye değişiyor).
+
+## kimya2
+Dal: `worktree-agent-a5258c28c4e8ccaed` · Commit: `aee3210` (taban main cccf2c9). Yeni kart: 7. Videolarda bu konulara bağlı kart yok, `videolar.json` değişmedi. Yeni ve değişen bütün SVG'ler 390 px'te kontrol edildi; sayfa hatası yok.
+
+| # | Yer | Eklenen kavram | Nasıl |
+|---|---|---|---|
+| 1 | kimya › asit-baz | Çok protonlu asit ve bazlar; tam nötralleşmede n(H⁺) = n(OH⁻), Ma·Va·(H⁺ sayısı) = Mb·Vb·(OH⁻ sayısı); CH₃COOH'nin 4 H'den yalnız 1 H⁺ vermesi | Yeni kart 10 (Nötralleşme'den sonra) |
+| 2 | kimya › asit-baz | Zayıf asit + zayıf baz tuzunun pH'ı (Ka ile Kb karşılaştırması, NH₄CN örneği) | Kart 11 (Tuzlar) genişletildi: metin + SVG'ye 4. satır |
+| 3 | kimya › asit-baz | Asidik, bazik, amfoter ve nötr oksitler (CO₂/SO₂, Na₂O/CaO, Al₂O₃/ZnO, CO/NO/N₂O) | Yeni kart 15 (metaller kartından sonra) |
+| 4 | kimya › asit-baz › Özet | n(H⁺) = n(OH⁻) | Özet maddesi güncellendi |
+| 5 | kimya › cozeltiler | Çözünme ısısı (ayrılma enerji alır, sarılma verir; NaOH/H₂SO₄ ekzo, NH₄NO₃/KNO₃ endo; endotermik çözünmede çözünürlük sıcaklıkla artar) | Yeni kart 4 (Benzer benzeri çözer'den sonra) |
+| 6 | kimya › cozeltiler | Raoult yasası: P = X(çözücü)·P° | Kart 10 (Koligatif özellikler) genişletildi; serum cümlesi osmoz kartına taşındı |
+| 7 | kimya › cozeltiler | Osmoz, osmotik basınç, ters osmoz (deniz suyu arıtma) | Yeni kart 12 (Kaynama/donma kartından sonra) |
+| 8 | kimya › cozeltiler › Özet | Çözünme ekzotermik ya da endotermik olabilir | Özet maddesi güncellendi |
+| 9 | kimya › tepkime-hizi | Hız sabitinin biriminin toplam dereceye göre değişmesi (M/s, 1/s, 1/(M·s); genel M¹⁻ⁿ·s⁻¹) | Yeni kart 9 (Deneyden derece bulma'dan sonra) |
+| 10 | kimya › tepkime-hizi | Homojen ve heterojen katalizör (H₂O₂ + I⁻ / MnO₂), inhibitör | Yeni kart 15 (Katalizör'den sonra) |
+| 11 | kimya › tepkime-enerjisi | Bağ enerjisi tanımı (gaz hâlinde 1 mol bağı kırmak için gereken enerji) — eski bulgu 16 | Kart 10 genişletildi |
+| 12 | kimya › tepkime-enerjisi | Özel adlı entalpiler: yanma, nötralleşme (≈ −57 kJ/mol su), çözünme, erime/buharlaşma | Yeni kart 14 (Hâl değişimi kartından sonra) |
+
+Kart sayıları: asit-baz 16, cozeltiler 16, tepkime-hizi 16, tepkime-enerjisi 15; diğer konular 14'te kaldı. Testler değiştirilmedi.
+
+Eklenmeyenler:
+- **gazlar:** Van der Waals denklemi. AYT gerçek gazları nitel ister; kart 13 bunu karşılıyor.
+- **mol / gazlar:** IUPAC STP notu (1 bar, 22,7 L). YKS'de sorulmuyor, MEB 22,4 L kullanıyor; eklemek kafa karıştırır. Öneri olarak kalıyor (bulgu 15).
+- **Sahne önerileri (bulgu 11-14):** Kart sınırıyla ilgili değil, etkileşimli ders/sahne işi; bu turun kapsamı dışında, öneri olarak kalıyor.
+
+## kimya3
+
+Dal: `worktree-agent-a3a6c97e7b73d9dc4` · Commit: `de5e78c` (taban main cccf2c9). Kart sınırı 16.
+
+| # | Yer | Eklenen kavram | Nasıl |
+|---|---|---|---|
+| 1 | kimya › organik-giris | Yakma analiziyle formül bulma (CO₂'den C, H₂O'dan H, farktan O; basit → kapalı formül; "ürünlerdeki O sayılmaz") | Yeni kart 10 (Formül türleri'nden sonra); konu 15 kart |
+| 2 | kimya › organik-giris › test 2 | Yakma analizi sorusu (4,6 g → 8,8 g CO₂ + 5,4 g H₂O → C₂H₆O; çeldirici C₂H₃O = H₂O'daki 2 H'yi unutma). Eski "hangisi organik?" sorusu çıktı (kart 1'de zaten var) | Test sorusu değiştirildi, cevap indeksi 2 |
+| 3 | kimya › elektrokimya | Sulu çözeltilerin elektrolizi: katotta az aktif metal / 1A-2A-Al³⁺ yerine su (H₂); anotta Cl⁻, Br⁻, I⁻ / SO₄²⁻-NO₃⁻ yerine su (O₂); derişik NaCl → H₂ + Cl₂ + NaOH | Yeni kart 10 (Erimiş NaCl'den sonra); konu 15 kart |
+| 4 | kimya › redoks | Kendi kendine redoks (disproporsiyonlaşma): Cl₂ + 2NaOH, H₂O₂ ayrışması | Yeni kart 8 (Redoks mu, değil mi? kartından sonra) |
+| 5 | kimya › redoks | Bazik ortamda denkleştirme (H⁺ kadar OH⁻ ekle, suyu sadeleştir; MnO₄⁻ → MnO₂ örneği, yük kontrolü) | Yeni kart 11 (MnO₄⁻/Fe²⁺ örneğinden sonra); konu 16 kart |
+| 6 | kimya › hidrokarbonlar | Alkin adlandırması (-in, numaralama) ve uç alkin testi (amonyaklı AgNO₃ beyaz, amonyaklı CuCl kırmızı-kahve çökelek; 2-bütin vermez) | Yeni kart 12 (Alkinler kartından sonra); konu 15 kart |
+| 7 | kimya › kimyasal-denge › kart 1 | Dengeye yalnız ürünlerden başlayarak da ulaşılır | Kart 1 genişletildi (45 kelime) |
+
+Video bağlantısı: `content/videolar.json` içinde bu yedi konuya bağlı video yok; kayma etkisi yok. Adımlı derslerde kart numarası referansı yok; adım eklenmedi.
+Özet kartları değişmedi: redoks ve elektrokimya özetleri zaten 45 kelimede, yeni maddeye yer yok.
+Görsel kontrol: yeni 5 kartın SVG'si ve kimyasal-denge kart 1, 390 px'te çekildi; taşma ya da üst üste binme yok, "Sayfa hatası yok". `check.py` TAMAM (bu konularda kelime uyarısı yok), `npm run lint` ve `npm run build` hatasız.
+
+Eklenmeyenler:
+- **Optik izomerlik / kiral karbon:** Güncel MEB 12. sınıf ve AYT kapsamında açıkça yer aldığı kesin değil (raporda "sınırda" denmişti). Brief'teki "sınavda çıkmayan ayrıntıyı ekleme" kuralı yüzünden eklenmedi.
+- **Sulu çözelti dengeleri (Ka, Kb, Ksu, tampon, hidroliz):** asit-baz konusunda (kart 4, 7, 8, 10, 12) zaten var; tekrar edilmedi.
+- Öneri 5-7 (bromlu su rengi, kule kesir etiketleri, Pb notu) kart sınırından kaynaklanmıyordu; bu turun kapsamı dışında bırakıldı.
+
+## biyoloji1
+
+Dal: `worktree-agent-a344f7b5e9b69e7a3` · Commit: `2ccb6e1` (temel: main cccf2c9). 6 yeni kart, 7 kart genişletildi. `check.py` TAMAM (benim konularımda 45 kelimeyi aşan kart yok), `npm run lint` hatasız. `npm run build` (Turbopack) bu ortamda Google Fonts dosyasını çözemediği için içerikten bağımsız olarak düşüyor; `next build --webpack` hatasız bitti, `out/` ondan üretildi. Konularımın ekran görüntüleri 390 px genişlikte alındı: "Sayfa hatası yok". Yeni SVG'lerde taşma ya da üst üste binme yok.
+
+| # | Yer | Eklenen kavram | Nasıl |
+|---|---|---|---|
+| 1 | biyoloji › canlilarin-ozellikleri | Hareket (tepkinin görünen biçimi; hayvanda yer değiştirme, bitkide organ hareketi) | Kart 7 genişletildi, başlık "Uyarılara tepki ve hareket" oldu |
+| 2 | biyoloji › canlilarin-ozellikleri | Bilimsel yöntem: hipotez, bağımsız/bağımlı değişken, sabit tutulanlar, kontrol grubu (biyolojide başka hiçbir konuda yoktu) | Yeni kart 11 (deney ve kontrol saksısı SVG'si), Özet'e bir madde |
+| 3 | biyoloji › biyomolekuller | Doymuş/doymamış yağ asidi (tek bağ, çift bağ, katı/sıvı), zorunlu yağ asitleri (omega-3, omega-6) | Yeni kart 6 |
+| 4 | biyoloji › biyomolekuller | Protein denatürasyonu (sıcaklık, pH) | Kart 9 (Proteinlerin görevleri) genişletildi |
+| 5 | biyoloji › enzimler | Aktivatör (Cl⁻ ile amilaz, HCl ile pepsinojen → pepsin); enzimin tersinir tepkimeyi iki yönde de hızlandırması, dengeyi değiştirmemesi (karbonik anhidraz örneği) | Yeni kart 10, Özet'e "aktivatörler" eklendi |
+| 6 | biyoloji › hucre-organeller | Plazmit | Kart 2 genişletildi |
+| 7 | biyoloji › hucre-organeller | Besin kofulu, kontraktil koful, merkezi koful | Yeni kart 10, Özet'e bir madde (yer açmak için "plastitler üç çeşittir" ifadesi Özet'ten çıkarıldı; kart 8'de duruyor) |
+| 8 | biyoloji › madde-gecisi | Suyun akuaporinlerden geçişi | Kart 5 (Osmoz) genişletildi |
+| 9 | biyoloji › siniflandirma | Protistler: amip, terliksi hayvan, öglena (karışık beslenme), plazmodyum, algler | Yeni kart 10 |
+| 10 | biyoloji › siniflandirma | Mantarlar (hif, ayrıştırıcı; maya, küf, şapkalı) ve liken (mantar ile alg ya da siyanobakteri ortaklığı, öncü canlı) | Yeni kart 11 |
+| 11 | biyoloji › bitkiler-alemi | Çift döllenmenin yalnızca kapalı tohumlularda görülmesi (kart 9'daki "açık tohumluda yok" ifadesiyle eş) | Kart 10 genişletildi |
+| 12 | biyoloji › mayoz | Oogenezde ikincil oositin metafaz II'de beklemesi, mayoz II'nin sperm girince tamamlanması | Kart 10 genişletildi |
+| 13 | content/videolar.json | Biyomoleküllerde yeni kart 6 araya girdiği için iki videonun kartı kaydı | BIY-05: 7 → 8 (Proteinler), BIY-06: 10 → 11 (Vitaminler). BIY-01/02/03/04 aynı başlıkta kaldı |
+
+Kart sayıları: canlilarin-ozellikleri 12, biyomolekuller 12, enzimler 12, hucre-organeller 13, madde-gecisi 11, siniflandirma 13. Hayvanlar âlemi, bitkiler âlemi, mitoz ve mayozda sayı değişmedi (14). Testler değiştirilmedi. Adımlı derslerde tutarsızlık oluşmadı.
+
+Eklenmeyenler ve nedeni:
+- **Ribozim:** YKS'de sorulmuyor. Kart 1'deki "çoğu protein yapılı" ifadesi yeterli.
+- **Hormonların kimyasal yapısı:** Zaten var. Steroit hormonlar biyomoleküller kart 7'de, protein hormon (insülin) kart 9'da geçiyor. Ayrıntısı endokrin konusunun işi.
+- **Özet maddeleri (biyomoleküller, sınıflandırma):** Özet kartları 45 kelime sınırında olduğu için yeni madde eklenmedi.
+- **Hücreler arası bağlantılar:** YKS'de beklenen bir kavram değil.
+- **Diyaliz:** Boşaltım konusunda anlatılıyor.
+- **Önceki turdaki öneri 10-13** (ATP "enerji bağları" etiketi, orak hücre seçeneği, enzimler SVG viewBox'ı, "yoğunluk" terimi): Kart sınırıyla ilgili değillerdi, öneri olarak kalıyorlar.
+
+## biyoloji2
+
+Dal: `worktree-agent-a5766453315179064` · Commit: `148674f` (taban main cccf2c9). Doğrulama: `check.py` TAMAM (bu konularda yeni uyarı yok), `npm run lint` ve `npm run build` hatasız. Yeni ve değişen kartlar 390 px genişlikte çekilip tek tek incelendi; "Sayfa hatası yok". Bu konulara bağlı video yok, `videolar.json` değişmedi. Testler ve adımlı dersler değişmedi; yeni metinlerle çelişki yok.
+
+| # | Yer | Eklenen kavram | Nasıl |
+|---|---|---|---|
+| 1 | biyoloji › kalitim | Y'ye bağlı kalıtım (kulak kıllılığı), eşeyden etkilenen özellik (kellik: Kk erkekte kel, kadında normal) | yeni kart 11 |
+| 2 | biyoloji › kalitim | Çok genli (poligenik) kalıtım (AaBbCc dağılımı 1-6-15-20-15-6-1), genetik çeşitliliğin kaynakları (krossing-over, bağımsız dağılım, rastgele döllenme, mutasyon); notta pleiotropi | yeni kart 13 |
+| 3 | biyoloji › kalitim › kart 15 | Mutasyonun kalıtımı: "eşeyli üremede" kaydı (önceki rapor 12. satır) | kart 15 genişletildi; Özet'e Y'ye bağlı eklendi |
+| 4 | biyoloji › ekosistem › kart 7 | "Biyomagnifikasyon" terimi | kart 7 genişletildi |
+| 5 | biyoloji › ekosistem | Endemik tür, Türkiye'nin biyoçeşitliliği (bitki türlerinin ≈ üçte biri endemik; üç bitki coğrafyası bölgesi; Kazdağı göknarı, inci kefali); notta gen merkezi | yeni kart 13 |
+| 6 | biyoloji › dna-genetik-kod › kart 8 | Primaz ve RNA primer: DNA polimeraz zinciri sıfırdan başlatamaz | kart 8 genişletildi (not da güncellendi); Özet'e primaz eklendi |
+| 7 | biyoloji › dna-genetik-kod | Öncü ve kesikli iplik, Okazaki parçaları, primerin DNA ile değiştirilmesi, ligaz | yeni kart 9 |
+| 8 | biyoloji › protein-sentezi | Poliribozom; serbest ribozom ile granüllü ER ayrımı; salgı proteininin ER → Golgi → kesecik yolu | yeni kart 11 |
+| 9 | biyoloji › fotosentez | Tarihsel deneyler: Van Helmont (söğüt, 2,3 → 76,7 kg; toprak ≈ 57 g azaldı), Priestley (1771), Ingenhousz (1779); not: kuru kütlenin çoğu CO₂'den gelir | yeni kart 5 (Engelmann'dan önce) |
+| 10 | biyoloji › sinir-sistemi › kart 8 | Nasırlı cisim (korpus kallozum) | kart 8 genişletildi |
+| 11 | biyoloji › sinir-sistemi | Beyin zarları (sert zar, örümcek ağı zar, ince zar), beyin-omurilik sıvısı, menenjit; notta karıncıklar | yeni kart 11; Özet'e eklendi |
+| 12 | biyoloji › duyu-organlari | Gözü koruyan yapılar: kaş, kirpik, göz kapağı, gözyaşı bezi, lizozim, gözyaşı kanalı | yeni kart 4 |
+| 13 | biyoloji › duyu-organlari | Ses yüksekliğinin (frekans) salyangozda yerle ayırt edilmesi, ses şiddeti, 20-20 000 Hz, desibel ve 85 dB sınırı | yeni kart 11 |
+| 14 | biyoloji › duyu-organlari › kart 15 | Koku ve tat hücrelerinin düzenli yenilenmesi (önceki rapor 13. satır) | kart 15 genişletildi |
+| 15 | biyoloji › endokrin | Hormonların kimyasal sınıfları: protein/peptit, amin, steroid; çözünürlük ve reseptör yeri; notta üretim yeri | yeni kart 3 |
+| 16 | biyoloji › endokrin › kart 10 | Böbrek üstü özünden noradrenalin salgısı | kart 10 genişletildi |
+
+Kart sayıları: kalitim 16, ekosistem 15, dna-genetik-kod 15, protein-sentezi 15, fotosentez 15, sinir-sistemi 15, duyu-organlari 16, endokrin 15. bitki-biyolojisi ve hucresel-solunum 14'te kaldı; bu konularda kapsam eksiği yazılmamıştı.
+
+Eklenmeyenler:
+- **Sinir sistemi: EEG, MR gibi beyin inceleme teknikleri.** YKS'de beklenen bir kavram değil; kart sınırını beyin zarlarına ve beyin-omurilik sıvısına ayırdım.
+- **Önceki rapor 14-16. satırlar** (sahne `biy6-azot` NH₄⁺, bitki-biyolojisi adımlı ders adım 1, dna adımlı ders adım 6). Bunlar sahne ve adımlı ders metinleri. Kart sınırıyla ilgileri yok ve bu turun kapsamı dışında kalıyor (görev 6). Öneri olarak duruyorlar.
+- Test soruları değiştirilmedi (isteğe bağlıydı); her konuda 4 soru ve cevap anahtarı aynı kaldı.
+
+## biyoloji3
+
+Kart sınırı 16'ya çıktıktan sonra yukarıdaki "Kapsam eksikleri" listesi ve 14, 15 numaralı öneriler kapatıldı. Bu konuların hiçbirine video bağlı değil (`content/videolar.json` içinde kart numarası kayan bir yer yok). Adımlı derslerle çelişen bir yer çıkmadı, testler değiştirilmedi. Yeni kartlar Özet'ten önce, konu akışında ilgili kartın hemen arkasına kondu. Her yeni ve değişen SVG 390 px genişlikte görüntülenip kontrol edildi.
+
+| # | Yer | Eklenen kavram | Nasıl |
+|---|---|---|---|
+| 1 | biyoloji › destek-hareket | Troponin ve tropomiyozin (Ca²⁺ bağlanma yerlerini nasıl açar) | Kart 10 genişletildi (42 kelime) |
+| 2 | biyoloji › destek-hareket | Seğirme (gizli evre, kasılma, gevşeme), tetanos, kas yorgunluğu | Yeni kart 12 (miyogram çizimi) |
+| 3 | biyoloji › destek-hareket | Motor ünite, izotonik ve izometrik kasılma | Yeni kart 13 |
+| 4 | biyoloji › sindirim | Enterokinaz, kimotripsin, karboksipeptidaz (proteazların etkinleşme zinciri) | Yeni kart 7 |
+| 5 | biyoloji › sindirim | Safra tuzlarının yağ emilimine yardımı | Kart 11 (Emilim) genişletildi (44 kelime) |
+| 6 | biyoloji › dolasim-bagisiklik | Antijen sunumu (MHC), yardımcı ve sitotoksik T, hümoral ve hücresel bağışıklık | Yeni kart 12 |
+| 7 | biyoloji › dolasim-bagisiklik | Doku uyuşmazlığı, organ nakli, doku reddi, bağışıklık baskılayıcı ilaç | Yeni kart 14 |
+| 8 | biyoloji › dolasim-bagisiklik | Rh uyuşmazlığının anti-D iğnesiyle önlenmesi (pasif bağışıklık örneği), öneri 14 | Kart 13 (Aktif ve pasif bağışıklık) genişletildi (45 kelime) |
+| 9 | biyoloji › solunum | Soluk hacmi, yedek hacimler, vital kapasite, artık hava | Yeni kart 6 (spirogram, yetişkin için yaklaşık değerler) |
+| 10 | biyoloji › solunum | Sürfaktan ve yüzey gerilimi | Kart 7'nin anahtar cümlesi değiştirildi. Eski cümle kart 8'in anahtar cümlesiyle aynı şeyi söylüyordu. |
+| 11 | biyoloji › bosaltim | Karşı akım, Henle kulpunun kolları, öz bölgesinin tuzluluğu, derişik idrar | Yeni kart 12 |
+| 12 | biyoloji › bosaltim | Renin-anjiyotensin sistemi | Kart 13 (ADH ve aldosteron) genişletildi (43 kelime) |
+| 13 | biyoloji › bosaltim | Böbrek atardamarı ve toplardamarındaki kanın karşılaştırması; glomerulden çıkan kanın hâlâ oksijenli olması (öneri 15) | Yeni kart 14 |
+| 14 | biyoloji › ureme-sistemi | Östrojenin ikincil eşey özellikleri, menopoz (FSH ve LH yükselir), doğum kontrol hapının negatif geri bildirim mantığı | Yeni kart 8 |
+| 15 | biyoloji › ureme-sistemi | Plasentadan geçen ve geçemeyen maddeler (alkol, nikotin, ilaç, virüs dahil) | Yeni kart 12 |
+| 16 | biyoloji › populasyon-komunite | Tür içi ve türler arası rekabet, amensalizm (0/−) | Yeni kart 8 |
+| 17 | biyoloji › evrim | Cinsel seçilim, rastgele olmayan çiftleşme, "en güçlü hayatta kalır" yanılgısı (başarı = üreme başarısı) | Yeni kart 9 |
+| 18 | biyoloji › evrim | Simpatrik türleşme, poliploidi (4n × 2n → kısır 3n) | Yeni kart 13 |
+
+Toplam 13 yeni kart. Kart sayıları: destek-hareket 16, sindirim 15, dolasim-bagisiklik 16, solunum 15, bosaltim 16, ureme-sistemi 16, populasyon-komunite 15, evrim 16.
+
+Eklenmeyenler:
+- **Volkmann kanalı (destek-hareket):** YKS'de nadiren sorulan bir ayrıntı. Kart 5 de 42 kelimede.
+- **Kalp debisi ve atım hacmi (dolaşım):** Konu 16 kartta doldu. Bağışıklık kavramları (hümoral/hücresel, doku uyuşmazlığı) sınavda daha sık soruluyor, yer onlara verildi.
+- **Öneri 11 ve 12 (sahne `biy10-enerji` ve `biy10-eklem`):** Kart sınırıyla ilgisi yok, sahne `.tsx` değişikliği gerekiyor. Öneri olarak duruyor.
+- **Öneri 13 (yabani hardal / yabani lahana):** Ders kitabına göre değişen bir konu, dokunulmadı.
+- Özet kartları 41-45 kelimede olduğu için yeni kavramlar Özet'e eklenmedi.
+
+Doğrulama: `python3 tools/check.py` TAMAM verdi, bu konularda 45 kelime uyarısı yok. `npm run lint` ve `npm run build` hatasız. `tools/ekran.js` "Sayfa hatası yok" verdi. Sitedeki görüntüler kartları çizim animasyonunun ortasında yakaladığı için 14 yeni ya da değişen SVG ayrıca tam hâliyle 358 px genişlikte (390 px ekran) çizdirildi. Taşma ve üst üste binme düzeltildi: sindirim kart 7'deki organ etiketi, dolaşım kart 12'deki "yardımcı T" dairesi ve plasenta kartındaki gösterge. Dal: `worktree-agent-a592e097a46efdc9e`, commit `080d806`.
