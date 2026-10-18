@@ -1,0 +1,180 @@
+{
+ "id": "fizik-bilimine-giris",
+ "ders": "fizik",
+ "konu": "fizik-bilimine-giris",
+ "baslik": "Fizik bilimine giriş",
+ "ozet": "Bir deney yap, ölç, birimleri ve yönü keşfet: fizik nasıl çalışır?",
+ "adimlar": [
+  {
+   "baslik": "Bir tahminle başla",
+   "metin": "Fizik doğayı gözlem, deney ve matematikle inceler. İşe bir deneyle başlayalım: havası boşaltılmış bir tüpte çelik bir bilye ile bir tüyü aynı anda bırakıyorsun.",
+   "sahne": {
+    "tur": "fiz-dusme",
+    "sure": 2
+   },
+   "deger": {
+    "hava": 0
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hangisi yere önce düşer?",
+    "secenekler": [
+     {
+      "yazi": "İkisi aynı anda",
+      "dogru": true,
+      "neden": "Havasız ortamda her cisim, kütlesi ne olursa olsun aynı biçimde hızlanarak düşer. Astronot David Scott 1971'de bunu Ay'da bir çekiç ve bir tüyle gösterdi."
+     },
+     {
+      "yazi": "Çelik bilye",
+      "neden": "Ağır olan önce düşer gibi gelir; ama havasız ortamda kütle, düşüşü hızlandırmaz."
+     },
+     {
+      "yazi": "Tüy",
+      "neden": "Tüyün hafif olması onu hızlandırmaz."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Farkı yaratan ne?",
+   "metin": "Günlük hayatta tüy yine de yavaş düşer. Bir <b>hipotez</b>, yani test edilebilir bir tahmin kur: farkı hava yaratıyor. Test etmek için tüpe havayı geri ver ve deneyi tekrarla.",
+   "sahne": {
+    "tur": "fiz-dusme",
+    "sure": 2
+   },
+   "deger": {
+    "hava": 0
+   },
+   "kontroller": [
+    {
+     "ad": "hava",
+     "etiket": "Tüpte hava",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "hava": 1
+    },
+    "ipucu": "Tüpteki havayı aç ve yeniden oynat.",
+    "tamam": "Bilye neredeyse hiç etkilenmedi, tüy ise yavaşladı: farkı hava direnci yaratıyor. Hipotezin deneyle sınandı. Defalarca doğrulanan sonuçlardan <b>yasa</b> ne olduğunu söyler, <b>teori</b> nedenini açıklar."
+   }
+  },
+  {
+   "baslik": "Ölçmek: karşılaştırmak",
+   "metin": "Ölçmek, bir büyüklüğü bilinen bir birimle karşılaştırmaktır. Elinde 25 cm'lik çubuklar var. Masayı tam kaplayacak kadar çubuk diz.",
+   "sahne": {
+    "tur": "fiz-birim"
+   },
+   "deger": {
+    "n": 1
+   },
+   "kontroller": [
+    {
+     "ad": "n",
+     "etiket": "Çubuk sayısı",
+     "min": 1,
+     "max": 7,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "n": 6
+    },
+    "tamam": "Masa 6 çubuk, yani 150 cm = 1,5 m. 30 cm'lik çubukla ölçseydin 5 bulurdun: sayı birime bağlıdır. Bu yüzden sonuç hep <b>sayı + birim</b> yazılır ve herkes aynı birimleri, yani <b>SI</b> birimlerini kullanır."
+   }
+  },
+  {
+   "baslik": "Yedi temel büyüklük",
+   "metin": "SI'da yedi <b>temel büyüklük</b> vardır; hiçbiri başka büyüklüklerden türetilmez. Hepsi bu tabloda.",
+   "sahne": {
+    "tur": "fiz-si-tablo"
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Sürat (m/s) neden bu tabloda yok?",
+    "secenekler": [
+     {
+      "yazi": "Uzunluk ve zamandan türetilir",
+      "dogru": true,
+      "neden": "Sürat = yol ÷ zaman, birimi m/s. İki temel birimden kurulduğu için <b>türetilmiş</b> büyüklüktür. Alan (m²), hacim (m³) ve kuvvet (1 N = 1 kg·m/s²) da öyle."
+     },
+     {
+      "yazi": "Sürat ölçülemez",
+      "neden": "Sürat ölçülebilir; arabadaki hız göstergesi bunu yapar. Birimine bak: m/s neyden oluşuyor?"
+     },
+     {
+      "yazi": "m/s bir SI birimi değil",
+      "neden": "m/s bir SI birimidir, yalnızca temel değildir. Hangi iki temel birimden oluştuğuna bak."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Türetilmiş büyüklük",
+   "metin": "Türetilmiş büyüklükler temel olanlardan hesaplanır. Bir koşucu 100 metre koşuyor ve <b>sürat = yol ÷ zaman</b>. Süreyi değiştir, süratini <b>10 m/s</b> yap.",
+   "sahne": {
+    "tur": "fiz-kosu"
+   },
+   "deger": {
+    "t": 20
+   },
+   "kontroller": [
+    {
+     "ad": "t",
+     "etiket": "Süre",
+     "min": 8,
+     "max": 20,
+     "birim": "s",
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "t": 10
+    },
+    "tamam": "100 m ÷ 10 s = 10 m/s: koşucu her saniye 10 m yol alıyor. Birim m/s, uzunluk ve zaman birimlerinden kuruldu. Dünyanın en hızlı koşucuları 100 metreyi 10 saniyenin biraz altında koşar."
+   }
+  },
+  {
+   "baslik": "Yön gerekir mi?",
+   "metin": "Kütle, zaman ve sıcaklık gibi <b>skaler</b> büyüklükleri sayı ve birim tam anlatır. Ama \"3 km yürü\" dersem nereye varacağın belli değil. Okul, evin kuzeydoğusunda. Yönü ayarla.",
+   "sahne": {
+    "tur": "fiz-yon"
+   },
+   "deger": {
+    "yon": 0
+   },
+   "kontroller": [
+    {
+     "ad": "yon",
+     "etiket": "Yön (kuzeyden saat yönünde)",
+     "min": 0,
+     "max": 315,
+     "adim": 45,
+     "birim": "°"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "yon": 45
+    },
+    "tamam": "3 km, kuzeydoğu: artık nereye varacağın belli. Yer değiştirme, hız ve kuvvet gibi yön de isteyen büyüklüklere <b>vektörel</b> denir. \"10 N\" eksiktir, \"10 N, sağa\" tamdır."
+   }
+  }
+ ],
+ "kapanis": [
+  "Fizik; madde, enerji ve aralarındaki etkileşimi <b>gözlem, deney ve matematikle</b> inceler.",
+  "<b>Hipotez</b> test edilebilir bir tahmindir. <b>Yasa</b> ne olduğunu söyler, <b>teori</b> nedenini açıklar.",
+  "Ölçmek, bilinen bir birimle karşılaştırmaktır; sonuç her zaman <b>sayı + birim</b>dir.",
+  "SI'da 7 <b>temel büyüklük</b> vardır; sürat (m/s) gibi diğerleri bunlardan <b>türetilir</b>.",
+  "<b>Skaler</b> büyüklükte yön yoktur; <b>vektörel</b> büyüklükte yön de gerekir."
+ ]
+}
