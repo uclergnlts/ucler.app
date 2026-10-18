@@ -17,7 +17,8 @@
      { "yazi": "Epididim", "dogru": true, "neden": "Sperm testisin üstündeki epididimde olgunlaşır ve depolanır, sonra sperm kanalıyla üretraya taşınır." },
      { "yazi": "Prostat", "neden": "Prostat bir bezdir; salgısı spermle birleşip meniyi oluşturur. Sperm prostatta depolanmaz." }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Testiste iki hormon",
@@ -33,7 +34,9 @@
     "hedef": { "f": 1, "l": 1 },
     "ipucu": "Sertoli hücreleri gelişen spermi besler; Leydig hücrelerinin testosteronu da üretimi sürdürür. İkisi birlikte gerekir.",
     "tamam": "FSH Sertoli'yi, LH Leydig'i uyardı; Leydig hücreleri testosteron salgıladı. Testosteron sperm üretimini ve sakal, kas gelişimi gibi ikincil eşey özelliklerini sağlar. Hormon adları kadınla aynıdır."
-   }
+   },
+   "kart": 2,
+   "goster": { "deger": { "f": 1, "l": 0 }, "not": "Yalnız FSH: Sertoli hücreleri spermi besliyor, ama Leydig hücreleri testosteron salgılamadığı için sperm üretimi <b>zayıf</b>." }
   },
   {
    "baslik": "Sperm ve yumurta oluşumu",
@@ -50,7 +53,9 @@
      { "yazi": "100", "neden": "Bu, spermde olur: bir birincil spermatosit 4 sperm verir. Oositte 4 hücreden yalnızca biri yumurtadır." },
      { "yazi": "50", "neden": "Mayoz I'de oluşan iki hücreden küçük olanı kutup hücresidir, yumurta olamaz. Sonunda her oositten 1 yumurta kalır." }
     ]
-   }
+   },
+   "kart": 5,
+   "goster": { "not": "Erkekte bir birincil spermatosit mayozla eşit bölünüyor ve <b>4 sperm</b> veriyor.", "oynat": true }
   },
   {
    "baslik": "Döngünün ortası",
@@ -63,7 +68,9 @@
     "hedef": { "g": [13, 14] },
     "ipucu": "Mor LH eğrisinin birden yükseldiği günü ara. Ovulasyonu LH tepesi tetikler.",
     "tamam": "Yüksek östrojen hipofizi uyardı (pozitif geri bildirim), LH aniden arttı ve oosit atıldı. Sonra boş folikül sarı cisme dönüşür ve progesteron salgılar; progesteron iç zarı korur, FSH ve LH'yi baskılar."
-   }
+   },
+   "kart": 7,
+   "goster": { "deger": { "g": 10 }, "not": "10. gün folikül evresi: folikül büyüyor, östrojen yükselip iç zarı kalınlaştırıyor; LH hâlâ düşük." }
   },
   {
    "baslik": "hCG",
@@ -80,7 +87,8 @@
      { "yazi": "hCG sarı cismi yaşatır, progesteron düşmez", "dogru": true, "neden": "hCG sarı cismin körelmesini önler. Progesteron yüksek kalır, iç zar dökülmez. Yaklaşık 3. aydan sonra progesteronu plasenta üretir." },
      { "yazi": "hCG FSH'yi artırır, yeni folikül olgunlaşır", "neden": "Gebelikte yeni folikül olgunlaşmaz; yüksek progesteron FSH ve LH'yi baskılar." }
     ]
-   }
+   },
+   "kart": 13
   },
   {
    "baslik": "Zigottan implantasyona",
@@ -94,7 +102,8 @@
      { "yazi": "Yarıya iner", "neden": "Bölünme madde kaybettirmez; dış boyut korunur." },
      { "yazi": "Pek değişmez; hücreler küçülür", "dogru": true, "neden": "Zigot önce morulaya, sonra içi sıvılı blastosiste dönüşür; bu sırada her bölünmede hücreler küçülür. Blastosist 6-7. günde rahim iç zarına gömülür: implantasyon." }
     ]
-   }
+   },
+   "kart": 9
   },
   {
    "baslik": "Üç germ tabakası",
@@ -110,7 +119,8 @@
      { "yazi": "Mezoderm", "neden": "Mezoderm kas, kemik, kalp ve kanı yapar. Akciğerin çevresindeki kas ve damarlar mezodermdendir, iç yüzeyi değil." },
      { "yazi": "Ektoderm", "neden": "Ektoderm dış yüzü (epidermis) ve sinir sistemini yapar. Hava keselerinin örtüsü içte kalır." }
     ]
-   }
+   },
+   "kart": 10
   }
  ],
  "kapanis": [

@@ -16,7 +16,9 @@
     "hedef": { "g": 40 },
     "ipucu": "Doğum ve göçle gelen sayıyı artırır; ölüm ve göçle giden azaltır. İki çubuk eşit olmalı.",
     "tamam": "60 + 40 = 80 + 20: artış azalışa eşit, popülasyon 500'de kaldı. Göçün olmadığı yalıtılmış bir adada büyüklüğü yalnızca doğum ve ölüm belirlerdi."
-   }
+   },
+   "kart": 3,
+   "goster": { "deger": { "g": 20 }, "not": "Göçle 20 kuş gelirse artış 60 + 20 = 80, azalış 80 + 20 = 100: popülasyon 20 azalıp <b>480</b> olur." }
   },
   {
    "baslik": "Dağılım",
@@ -32,7 +34,8 @@
      { "yazi": "Rastgele", "neden": "Rastgele dağılım, bireyler arasında etkileşim zayıfken olur. Burada güçlü bir rekabet var." },
      { "yazi": "Düzenli", "dogru": true, "neden": "Kaynak rekabeti ya da bölge savunması bireyleri birbirinden eşit uzaklıkta tutar. Doğada en yaygın tip ise kümelidir." }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "J eğrisi",
@@ -45,7 +48,9 @@
     "hedef": { "n": 7 },
     "ipucu": "10, 20, 40, 80... Kırmızı çizgiyi ilk geçtiğin nesilde dur.",
     "tamam": "7. nesilde 10 bakteri 1 280 oldu. Kaynak sınırsızken popülasyon her dönemde aynı oranla artar: üstel büyüme, J eğrisi. Her nesilde eklenen birey sayısı da büyür."
-   }
+   },
+   "kart": 4,
+   "goster": { "deger": { "n": 3 }, "not": "3. nesilde 10 × 2³ = <b>80</b> bakteri: her nesilde sayı ikiye katlanıyor." }
   },
   {
    "baslik": "S eğrisi",
@@ -58,7 +63,9 @@
     "hedef": { "n": [450, 550] },
     "ipucu": "Küçük popülasyonda çoğalan birey azdır; K'ya yakınken sınırlayıcı faktörler artışı durdurur. Alttaki eğrinin tepesini ara.",
     "tamam": "Artış K/2 = 500 civarında en hızlıdır; S eğrisi burada en diktir. K'ya yaklaştıkça artış sıfıra iner. K sabit değildir; ortam değişince o da değişir."
-   }
+   },
+   "kart": 4,
+   "goster": { "deger": { "n": 200 }, "not": "N = 200: artış yaklaşık <b>64</b> birey/yıl. Çoğalan birey henüz az olduğu için artış düşük." }
   },
   {
    "baslik": "Sınırlayıcı faktörler",
@@ -77,7 +84,8 @@
      { "yazi": "Yoğunluktan bağımsız", "dogru": true, "neden": "Don, kuraklık, sel ve yangın seyrek ya da sık popülasyonu benzer oranda etkiler. Ölçüt: kalabalık arttıkça etkisi artıyor mu?" },
      { "yazi": "Yalnızca seyrek popülasyonu etkiler", "neden": "Sel her yoğunluktaki popülasyonu etkiler; etkisi yoğunluğa göre değişmez." }
     ]
-   }
+   },
+   "kart": 5
   },
   {
    "baslik": "Av ve avcı",
@@ -91,7 +99,8 @@
      { "yazi": "Tavşanla aynı anda", "neden": "Avcının çoğalması için önce avın çoğalması ve yavruların büyümesi gerekir; bu zaman alır." },
      { "yazi": "Tavşanın tepesinden biraz önce", "neden": "Avcı, besini artmadan çoğalamaz. Avcının artışı avın artışını izler." }
     ]
-   }
+   },
+   "kart": 8
   },
   {
    "baslik": "Rekabetçi dışlama",
@@ -108,7 +117,9 @@
      { "yazi": "İkisi aynı sınırlı besini aynı şekilde kullandı", "dogru": true, "neden": "Rekabetçi dışlama ilkesi: aynı sınırlı kaynağı aynı şekilde kullanan iki tür sürekli bir arada yaşayamaz. Türler farklı besin, saat ya da bölge kullanarak nişlerini ayırabilir." },
      { "yazi": "Kap küçük olduğu için ikisi de azaldı", "neden": "<em>P. aurelia</em> azalmadı; çoğalıp dengelendi. Yalnızca rakibi yok oldu." }
     ]
-   }
+   },
+   "kart": 7,
+   "goster": { "not": "Ayrı kaplarda iki tür de çoğalıp dengeleniyor: <em>P. aurelia</em> da <em>P. caudatum</em> da tek başına yaşayabiliyor.", "oynat": true }
   }
  ],
  "kapanis": [

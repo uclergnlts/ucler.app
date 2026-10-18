@@ -17,7 +17,8 @@
      { "yazi": "Dendrit → gövde → akson → akson ucu", "dogru": true, "neden": "Uyarı dendritte alınır, gövdeden geçer, akson boyunca ilerler ve akson ucunda sonraki hücreye aktarılır." },
      { "yazi": "Gövde → dendrit → akson ucu", "neden": "Dendritler uyarıyı gövdeye getirir; impuls gövdeden dendrite gitmez." }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Eşiği aş",
@@ -30,7 +31,9 @@
     "hedef": { "u": [15, 30] },
     "ipucu": "Zarı −70'ten −55'e çıkarmak için en az +15 mV gerekir.",
     "tamam": "Eşik aşıldı: Na⁺ kanalları açıldı, Na⁺ içeri girdi ve zar +30 mV'a çıktı (depolarizasyon). Sonra K⁺ dışarı çıktı ve zar eski hâline döndü (repolarizasyon). Bu akışlar ATP harcamaz."
-   }
+   },
+   "kart": 4,
+   "goster": { "deger": { "u": 10 }, "not": "+10 mV uyarı zarı yalnızca −60 mV'a çıkarıyor. −55 mV eşiğine ulaşmadığı için <b>impuls oluşmuyor</b>." }
   },
   {
    "baslik": "Ya hep ya hiç",
@@ -47,7 +50,8 @@
      { "yazi": "Küçüldü", "neden": "Tepe küçülmedi; iki koşuda da +30 mV'a ulaştı." },
      { "yazi": "Değişmedi", "dogru": true, "neden": "Ya hep ya hiç: eşik aşılırsa impuls tam boyda oluşur. Güçlü uyarı impulsu büyütmez, daha sık impuls üretir." }
     ]
-   }
+   },
+   "kart": 5
   },
   {
    "baslik": "Miyelin yarışı",
@@ -61,7 +65,8 @@
      { "yazi": "Miyelinsiz akson", "neden": "Miyelinsiz aksonda impuls zarın her noktasında yeniden oluşmak zorundadır; bu yavaştır." },
      { "yazi": "İkisi aynı anda", "neden": "Miyelin hızı belirgin biçimde artırır; uçlara aynı anda ulaşmazlar." }
     ]
-   }
+   },
+   "kart": 5
   },
   {
    "baslik": "Sinaps",
@@ -75,7 +80,8 @@
      { "yazi": "Nörotransmitter salgılanır", "dogru": true, "neden": "Kesecikler asetilkolin, dopamin ya da serotonin gibi nörotransmitterleri boşluğa bırakır; bunlar sonraki nöronun reseptörlerine bağlanır." },
      { "yazi": "Akson ucu sonraki nöronla kaynaşır", "neden": "Nöronlar kaynaşmaz; aralarındaki boşluk korunur." }
     ]
-   }
+   },
+   "kart": 6
   },
   {
    "baslik": "Refleks yayı",
@@ -89,7 +95,8 @@
      { "yazi": "Beyincikten", "neden": "Beyincik denge ve hareket uyumunu yönetir; bu refleksi başlatmaz." },
      { "yazi": "Omurilikten", "dogru": true, "neden": "Ara nöron omuriliktedir. Sinyal beyne gitmeden motor nörona aktarılır; bu yüzden refleks çok hızlıdır." }
     ]
-   }
+   },
+   "kart": 9
   },
   {
    "baslik": "Otonom sinir sistemi",
@@ -105,7 +112,8 @@
      { "yazi": "Sindirimin hızlanması", "dogru": true, "neden": "Parasempatik sistem dinlenme ve sindirim sistemidir; asetilkolinle sindirimi hızlandırır, kalbi yavaşlatır." },
      { "yazi": "Göz bebeğinin büyümesi", "neden": "Göz bebeğini büyüten sempatik sistemdir; daha çok ışık girer." }
     ]
-   }
+   },
+   "kart": 13
   }
  ],
  "kapanis": [

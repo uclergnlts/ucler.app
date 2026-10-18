@@ -41,6 +41,14 @@
     },
     "tamam": "Uzaklık 2 katına çıkınca kuvvet 2² = 4'te birine iner. Kütleyi 4 katına çıkarınca kuvvet yeniden F₀ olur. Buna <b>ters kare yasası</b> denir.",
     "ipucu": "Önce uzaklığı 2 yap; kuvvetin kaçta birine indiğine bak."
+   },
+   "kart": 2,
+   "goster": {
+    "deger": {
+     "m": 1,
+     "r": 3
+    },
+    "not": "Uzaklık 3 katına çıkınca kuvvet 3² = 9'da birine iner: F ≈ <b>0,11 F₀</b>."
    }
   },
   {
@@ -68,7 +76,8 @@
       "neden": "Kuvvetler eşittir. Küçük olan Dünya'nın <b>ivmesidir</b>, kuvveti değil."
      }
     ]
-   }
+   },
+   "kart": 2
   },
   {
    "baslik": "Yükseldikçe g azalır",
@@ -97,6 +106,13 @@
     },
     "tamam": "6400 km yukarıda merkeze uzaklık r = 2R olur. g, 2² = 4'te birine iner: 9,8 / 4 ≈ 2,45 m/s². Ağırlık 784 N'dan 196 N'a düşer, kütle ise hep 80 kg'dır.",
     "ipucu": "Ağırlığın 4'te birine inmesi için merkeze uzaklık 2 katına çıkmalı."
+   },
+   "kart": 5,
+   "goster": {
+    "deger": {
+     "h": 2
+    },
+    "not": "12.800 km yukarıda r = 3R: g, 9'da birine iner (≈ 1,09 m/s²), ağırlık 784 / 9 ≈ <b>87 N</b>. Kütle yine 80 kg."
    }
   },
   {
@@ -124,7 +140,8 @@
       "dogru": true
      }
     ]
-   }
+   },
+   "kart": 6
   },
   {
    "baslik": "Newton'un topu",
@@ -157,6 +174,13 @@
     },
     "tamam": "Yaklaşık <b>7,9 km/s</b> ile top Dünya'nın çevresinde döner. Uydu da hep düşer, ama Dünya'yı hep ıskalar. Çekim kuvveti merkezcil kuvvet olur: v = √(GM/r).",
     "ipucu": "Hızı 7,9 km/s'nin biraz üstüne çıkar ve oynat."
+   },
+   "kart": 9,
+   "goster": {
+    "deger": {
+     "v": 60
+    },
+    "not": "6 km/s yetmiyor: top ilerlerken düşüyor, yüzey yeterince eğilmeden Dünya'ya çarpıyor."
    }
   },
   {
@@ -190,6 +214,13 @@
     },
     "tamam": "Yeryüzünden kurtulma hızı yaklaşık <b>11,2 km/s</b>'dir: yörünge hızının √2 katı (7,9 × 1,41). Bu hızla atılan cisim bir daha geri dönmez.",
     "ipucu": "Kurtulma hızı yörünge hızının yaklaşık 1,41 katıdır."
+   },
+   "kart": 12,
+   "goster": {
+    "deger": {
+     "v": 95
+    },
+    "not": "9,5 km/s ile top uzun bir elips çizip geri dönüyor: hız, 11,2 km/s'lik kurtulma hızının altında."
    }
   },
   {
@@ -217,7 +248,8 @@
      "kes": 1
     },
     "tamam": "Kişi ve tartı birlikte serbest düşer, tartı 0 gösterir. Uzay istasyonundaki astronotlar da böyledir: 400 km'de g hâlâ ≈ 8,7 m/s², ama istasyonla birlikte <b>sürekli düşerler</b>. Ağırlıksızlık çekimin yokluğu değildir."
-   }
+   },
+   "kart": 11
   }
  ],
  "kapanis": [

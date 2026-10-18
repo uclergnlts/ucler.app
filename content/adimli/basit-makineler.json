@@ -34,6 +34,13 @@
      "F": 100
     },
     "tamam": "400 · 0,5 = 100 · 2 = 200 N·m. Kuvvet kolu yük kolunun 4 katı, bu yüzden kuvvet 4 kat küçük: kazanç dF / dY = 4."
+   },
+   "kart": 3,
+   "goster": {
+    "deger": {
+     "F": 150
+    },
+    "not": "F = 150 N: 150 · 2 = 300 N·m, yükün torku 400 · 0,5 = 200 N·m'den büyük. Çubuk kuvvet tarafına dönüyor."
    }
   },
   {
@@ -60,7 +67,8 @@
       "dogru": true
      }
     ]
-   }
+   },
+   "kart": 4
   },
   {
    "baslik": "Makara ve palanga",
@@ -86,6 +94,13 @@
      "n": 4
     },
     "tamam": "4 kol yükü paylaşır: 400 / 4 = 100 N. Ama yük 1 m kalkınca ipi 4 m çekersin: kuvvetten kazanırsın, yoldan kaybedersin. İş yine 400 J."
+   },
+   "kart": 7,
+   "goster": {
+    "deger": {
+     "n": 2
+    },
+    "not": "2 ip kolu yükü paylaşıyor: F = 400 / 2 = 200 N. Yük 1 m kalkınca ipi 2 m çekersin."
    }
   },
   {
@@ -113,6 +128,13 @@
      "L": 4
     },
     "tamam": "600 · 1 / 4 = 150 N. Rampa 4 kat uzun, kuvvet 4 kat küçük. İş hep 600 J: makine işi azaltmaz, yalnızca kolaylaştırır."
+   },
+   "kart": 8,
+   "goster": {
+    "deger": {
+     "L": 2
+    },
+    "not": "2 m'lik rampa: F = 600 · 1 / 2 = 300 N. Rampa 2 kat uzun, kuvvet 2 kat küçük."
    }
   },
   {
@@ -142,6 +164,13 @@
      "z": 16
     },
     "tamam": "48 / 16 = 3: tekerlek 3 tur atar, bisiklet hızlı gider ama pedal ağırlaşır. Yokuşta büyük arka dişliye geçersin: tekerlek az döner, pedal kolaylaşır."
+   },
+   "kart": 12,
+   "goster": {
+    "deger": {
+     "z": 32
+    },
+    "not": "Arka dişli 32 diş: 48 / 32 = 1,5. Pedalın bir turunda tekerlek 1,5 tur atıyor."
    }
   },
   {
@@ -170,7 +199,8 @@
       "neden": "200 J ısıya giden kısımdır. Verim, yararlı işin harcanan işe oranıdır."
      }
     ]
-   }
+   },
+   "kart": 13
   }
  ],
  "kapanis": [

@@ -17,7 +17,8 @@
      { "yazi": "Yemek borusu", "dogru": true, "neden": "Yemek borusu besinin yoludur. Yutkunurken epiglot gırtlağı kapatır; soluk alırken açıktır ve hava soluk borusuna gider." },
      { "yazi": "Bronş", "neden": "Soluk borusu ikiye ayrılır: her bronş bir akciğere girer ve bronşçuklara dallanır. Hava bronştan geçer." }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Soluk alma",
@@ -33,7 +34,9 @@
     "hedef": { "d": 1, "k": 1 },
     "ipucu": "Diyafram düzleşince göğüs aşağı, dış kaburgalar arası kaslar kasılınca yukarı ve dışa genişler.",
     "tamam": "Hacim arttı, akciğer içi basınç atmosferin altına indi ve hava basınç farkıyla aktı. Kaslar gevşeyince hacim azalır, basınç artar, hava çıkar: dinlenirken soluk verme pasiftir."
-   }
+   },
+   "kart": 5,
+   "goster": { "deger": { "d": 1, "k": 0 }, "not": "Yalnız diyafram kasıldı: göğüs boşluğu aşağı doğru genişledi, basınç biraz düştü ve hava girmeye başladı." }
   },
   {
    "baslik": "Kısmi basınç",
@@ -46,7 +49,9 @@
     "hedef": { "h": [5, 6] },
     "ipucu": "Yükseldikçe hava basıncı azalır. PO₂ 80 mmHg dolayına inene kadar çık.",
     "tamam": "Yaklaşık 5,5 km'de hava basıncı yarıya, PO₂ 80 mmHg'ye iner. O₂ oranı hâlâ %21; düşen, O₂'nin kısmi basıncıdır. Kana geçen O₂ azalır, soluk hızlanır; haftalar içinde böbreğin EPO'su alyuvar sayısını artırır."
-   }
+   },
+   "kart": 13,
+   "goster": { "deger": { "h": 2 }, "not": "2 km'de hava basıncı yaklaşık 592 mmHg. O₂ oranı yine %21, PO₂ ise yaklaşık <b>124 mmHg</b>." }
   },
   {
    "baslik": "Alveolde gaz değişimi",
@@ -60,7 +65,8 @@
      { "yazi": "Kandan alveole", "neden": "Gaz, kısmi basıncının yüksek olduğu yerden düşük olduğu yere geçer. Kanda PO₂ daha düşük, yani O₂ kana gelir." },
      { "yazi": "ATP ile kana pompalanır", "neden": "Gaz değişimi difüzyondur; enerji gerekmez. İtici güç kısmi basınç farkıdır." }
     ]
-   }
+   },
+   "kart": 6
   },
   {
    "baslik": "Hemoglobin O₂ bırakır",
@@ -73,7 +79,9 @@
     "hedef": { "p": [10, 20] },
     "ipucu": "Dinlenen dokuda PO₂ 40 mmHg'dir; hemoglobin orada yalnızca 1 O₂ bırakır. Çalışan kas O₂'yi çok daha hızlı harcar.",
     "tamam": "Çalışan kasta PO₂ çok düşer ve hemoglobin O₂'nin çoğunu bırakır. Kas aynı zamanda sıcak, asidik ve CO₂'ce zengindir; bu da O₂'nin bırakılmasını kolaylaştırır."
-   }
+   },
+   "kart": 9,
+   "goster": { "deger": { "p": 40 }, "not": "Dinlenen dokuda PO₂ 40 mmHg: hemoglobin 4 O₂'nin yalnızca <b>1</b>'ini bırakıyor." }
   },
   {
    "baslik": "CO₂'nin yolculuğu",
@@ -87,7 +95,8 @@
      { "yazi": "Plazmada çözünmüş gaz", "neden": "Plazmada gaz olarak çözünen CO₂ yalnızca %7 kadardır." },
      { "yazi": "Plazmada bikarbonat iyonu", "dogru": true, "neden": "Karbonik asit H⁺ ve HCO₃⁻'e ayrışır; bikarbonat plazmaya geçer. CO₂'nin yaklaşık %70'i böyle taşınır, akciğerde tepkime tersine döner." }
     ]
-   }
+   },
+   "kart": 9
   },
   {
    "baslik": "Egzersizde soluk",
@@ -100,7 +109,9 @@
     "hedef": { "s": 3 },
     "ipucu": "Atılan CO₂, üretilen CO₂'ye eşit olmalı. Çok hızlı solursan CO₂ fazla atılır.",
     "tamam": "Soluk hızı ve derinliği artınca üretilen CO₂ kadarı atılır, pH 7,4'te kalır. Soluğunu tuttuğunda seni zorlayan da O₂ azlığından çok CO₂ birikmesidir."
-   }
+   },
+   "kart": 13,
+   "goster": { "deger": { "s": 2 }, "not": "Soluk ×2 yetmiyor: üretilen CO₂'nin hepsi atılamıyor, PCO₂ 50 mmHg'ye çıkıyor ve pH 7,32'ye düşüyor." }
   }
  ],
  "kapanis": [

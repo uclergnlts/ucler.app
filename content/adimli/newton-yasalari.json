@@ -30,7 +30,8 @@
       "neden": "Tabaklara yukarı doğru bir kuvvet etki etmiyor."
      }
     ]
-   }
+   },
+   "kart": 2
   },
   {
    "baslik": "Net kuvvet",
@@ -57,6 +58,13 @@
      "F": 30
     },
     "tamam": "30 N sağa, 30 N sola: net kuvvet 0. Kutu duruyorsa durur, kayıyorsa aynı hızla kaymayı sürdürür. Kuvvetler var ama hız değişmez (1. yasa)."
+   },
+   "kart": 2,
+   "goster": {
+    "deger": {
+     "F": 20
+    },
+    "not": "Sağdaki 20 N iterse net kuvvet 30 − 20 = <b>10 N</b>, sağa doğru: kutu sağa ivmelenir."
    }
   },
   {
@@ -86,6 +94,13 @@
      "F": 20
     },
     "tamam": "a = 20 N / 10 kg = 2 m/s². Hız her saniye 2 m/s artar, 2 s'de araba 4 m yol alır. 1 N, 1 kg'lık kütleye 1 m/s² ivme verir: 1 N = 1 kg·m/s²."
+   },
+   "kart": 3,
+   "goster": {
+    "deger": {
+     "F": 30
+    },
+    "not": "30 N ile a = 30 / 10 = <b>3 m/s²</b>; 2 s'de araba ½ · 3 · 2² = 6 m yol alır."
    }
   },
   {
@@ -129,6 +144,13 @@
       "neden": "20 N ile 10 kg'da 2 m/s², 20 kg'da 1 m/s². Dolu market arabasını hızlandırmak bu yüzden zordur."
      }
     ]
+   },
+   "kart": 3,
+   "goster": {
+    "deger": {
+     "m": 5
+    },
+    "not": "5 kg'lık araba 20 N ile a = 20 / 5 = <b>4 m/s²</b> ivmelenir."
    }
   },
   {
@@ -155,7 +177,8 @@
      "ay": 1
     },
     "tamam": "Kütle hâlâ 60 kg, ama ağırlık 588 N'dan 97 N'a indi. Kütle her yerde aynıdır; ağırlık bulunduğun yerin g değerine göre değişir."
-   }
+   },
+   "kart": 6
   },
   {
    "baslik": "Etki–tepki",
@@ -182,7 +205,8 @@
       "neden": "Kardeşine uyguladığın kuvvet onu da hareket ettirir."
      }
     ]
-   }
+   },
+   "kart": 5
   },
   {
    "baslik": "Sürtünme",
@@ -212,6 +236,13 @@
      ]
     },
     "tamam": "Sınır μs·N = 0,4 × 196 ≈ 78 N. İtme bunu aşınca dolap kaydı ve sürtünme <b>kinetik</b> oldu: fk = μk·N = 0,3 × 196 ≈ 59 N. Genellikle μk &lt; μs: başlatmak, sürdürmekten zordur."
+   },
+   "kart": 9,
+   "goster": {
+    "deger": {
+     "F": 60
+    },
+    "not": "60 N ile itiyorsun: statik sürtünme de <b>60 N</b> olur, net kuvvet sıfır, dolap kımıldamaz."
    }
   }
  ],

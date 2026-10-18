@@ -1,95 +1,311 @@
 {
-  "id": "optik",
-  "ders": "fizik",
-  "konu": "optik",
-  "baslik": "Optik",
-  "ozet": "Gölgeyi büyüt, lazeri hedefe yansıt, açılı aynalarda görüntü say, çukur aynada görüntü bul, ışığı kır, tam yansımayı yakala, ışıkta rengi ve miyop gözü çöz.",
-  "adimlar": [
+ "id": "optik",
+ "ders": "fizik",
+ "konu": "optik",
+ "baslik": "Optik",
+ "ozet": "Gölgeyi büyüt, lazeri hedefe yansıt, açılı aynalarda görüntü say, çukur aynada görüntü bul, ışığı kır, tam yansımayı yakala, ışıkta rengi ve miyop gözü çöz.",
+ "adimlar": [
+  {
+   "baslik": "Işık doğrusal yayılır",
+   "metin": "Işık doğrular boyunca yayıldığı için topun arkasında <b>gölge</b> oluşur. Topun çapı 10 cm, perde lambadan 120 cm uzakta. Topu öyle yerleştir ki gölgenin çapı topun <b>tam 3 katı</b> olsun. Sonra geniş kaynağı da dene.",
+   "sahne": {
+    "tur": "fiz12-golge"
+   },
+   "deger": {
+    "d": 60,
+    "g": 0
+   },
+   "kontroller": [
     {
-      "baslik": "Işık doğrusal yayılır",
-      "metin": "Işık doğrular boyunca yayıldığı için topun arkasında <b>gölge</b> oluşur. Topun çapı 10 cm, perde lambadan 120 cm uzakta. Topu öyle yerleştir ki gölgenin çapı topun <b>tam 3 katı</b> olsun. Sonra geniş kaynağı da dene.",
-      "sahne": {"tur": "fiz12-golge"},
-      "deger": {"d": 60, "g": 0},
-      "kontroller": [
-        {"ad": "d", "etiket": "Topun lambaya uzaklığı", "min": 20, "max": 80, "adim": 10, "tur": "surgu", "birim": "cm"},
-        {"ad": "g", "etiket": "Geniş kaynak", "min": 0, "max": 1, "tur": "anahtar"}
-      ],
-      "gorev": {"tur": "ayarla", "hedef": {"d": 40}, "tamam": "Noktasal kaynakla: lambadan topa 40 cm, perdeye 120 cm: üç kat uzaklık, üç kat gölge, yani <b>30 cm</b>. Benzer üçgenler bunu söyler. Noktasal kaynak yalnızca <b>tam gölge</b> verir. Geniş kaynakta kaynağın bir kısmını gören bölgede <b>yarı gölge</b> de oluşur.", "ipucu": "Gölge, lambadan perdeye uzaklığın lambadan topa uzaklığa oranı kadar büyür: 120 / d = 3."}
+     "ad": "d",
+     "etiket": "Topun lambaya uzaklığı",
+     "min": 20,
+     "max": 80,
+     "adim": 10,
+     "tur": "surgu",
+     "birim": "cm"
     },
     {
-      "baslik": "Yansıma yasası",
-      "metin": "Yansımada <b>gelme açısı yansıma açısına eşittir</b>; iki açı da yüzeye dik çizilen <b>normal</b>den ölçülür. Lazerin açısını değiştir ve yansıyan ışını hedefe gönder.",
-      "sahne": {"tur": "fiz12-yansima"},
-      "deger": {"a": 20},
-      "kontroller": [{"ad": "a", "etiket": "Gelme açısı", "min": 10, "max": 60, "adim": 5, "tur": "surgu", "birim": "°"}],
-      "gorev": {"tur": "ayarla", "hedef": {"a": 40}, "tamam": "40° ile gelen ışın normalin öbür yanından <b>40° ile</b> yansıdı ve hedefe çarptı. Gelen ışın, normal ve yansıyan ışın aynı düzlemdedir. Pürüzlü yüzeyde de her ışın bu kurala uyar; yalnızca normaller farklı yönlere bakar, bu yüzden yansıma dağınık olur.", "ipucu": "Hedef lazerle aynı yükseklikte. Işın aynaya gidip aynı açıyla geri çıkıyor; hedef, ayna noktasının iki katı uzakta olmalı."}
-    },
-    {
-      "baslik": "Açılı iki ayna",
-      "metin": "Düz aynada görüntü <b>sanal, düz ve cisimle eşit boydadır</b>. İki aynayı aralarında 60° olacak şekilde birleştirdin; arada bir bayrak duruyor. Görüntüler birbirinin de görüntüsünü verir.",
-      "sahne": {"tur": "fiz12-aynalar", "sure": 4, "aci": 60},
-      "gorev": {"tur": "tahmin", "soru": "Aynalarda kaç görüntü görürsün?", "secenekler": [
-        {"yazi": "2", "neden": "İki ayna yalnızca birer görüntü verseydi 2 olurdu; ama görüntüler öbür aynada yeniden yansır."},
-        {"yazi": "5", "dogru": true, "neden": "360/α çift sayıysa n = 360/α − 1 = 360/60 − 1 = <b>5</b>. Görüntülerin hepsi tepe noktası çevresindeki çemberin üzerindedir. Aynalar arası açı 90° olsaydı 3 görüntü olurdu."},
-        {"yazi": "6", "neden": "360/60 = 6 bayrak konumu vardır, ama biri cismin kendisidir; görüntü sayısı bir eksiktir."}
-      ]}
-    },
-    {
-      "baslik": "Çukur aynada görüntü",
-      "metin": "Odak uzaklığı 10 cm olan çukur aynanın önünde bir cisim var. Turuncu ışın asal eksene paralel gelip <b>odaktan (F)</b> geçer; yeşil ışın tepe noktasından simetrik yansır. Cismi kaydır: görüntü <b>gerçek, ters ve 2 kat büyük</b> olsun.",
-      "sahne": {"tur": "fiz12-cukur"},
-      "deger": {"d": 30},
-      "kontroller": [{"ad": "d", "etiket": "Cismin uzaklığı", "min": 5, "max": 40, "adim": 5, "tur": "surgu", "birim": "cm"}],
-      "gorev": {"tur": "ayarla", "hedef": {"d": 15}, "tamam": "1/d<sub>g</sub> = 1/10 − 1/15 = 1/30, yani görüntü aynanın önünde <b>30 cm</b>'de. Büyütme m = −30/15 = <b>−2</b>: ters ve 2 kat büyük. Cisim F'deyken görüntü oluşmaz; F ile ayna arasında görüntü sanal, düz ve büyüktür.", "ipucu": "Cisim F'nin dışında olmalı ama M'den yakın: F ile M arasında görüntü gerçek, ters ve büyüktür."}
-    },
-    {
-      "baslik": "Kırılma ve Snell yasası",
-      "metin": "Işık başka bir ortama eğik geçerken hızı değiştiği için yön değiştirir. <b>n₁·sinθ₁ = n₂·sinθ₂</b>. Işık havadan 53° ile geliyor (sin 53° ≈ 0,8). Ortamın kırılma indisini ayarla: kırılma açısı <b>30°</b> olsun.",
-      "sahne": {"tur": "fiz12-snell"},
-      "deger": {"n": 1.2},
-      "kontroller": [{"ad": "n", "etiket": "Kırılma indisi", "min": 1, "max": 2, "adim": 0.1, "tur": "surgu"}],
-      "gorev": {"tur": "ayarla", "hedef": {"n": 1.6}, "tamam": "1 · 0,8 = n · 0,5, yani <b>n = 1,6</b>. Işık bu ortamda c/1,6 hızla, yaklaşık 1,9·10⁸ m/s ile ilerler. Az yoğundan çok yoğun ortama geçen ışık <b>normale yaklaşır</b>; indis büyüdükçe daha çok kırılır. Frekans değişmez, hız ve dalga boyu küçülür.", "ipucu": "sin 30° = 0,5. 1 · 0,8 = n · 0,5 eşitliğinden n'yi bul."}
-    },
-    {
-      "baslik": "Tam yansıma",
-      "metin": "Şimdi ışık camın içinden havaya çıkmaya çalışıyor; bu kez normalden <b>uzaklaşır</b>. Kırılma açısı 90° olduğunda gelme açısına <b>sınır açı</b> denir. Gelme açısını öyle ayarla ki ışık <b>hiç dışarı çıkmasın</b>.",
-      "sahne": {"tur": "fiz12-tam"},
-      "deger": {"a": 20},
-      "kontroller": [{"ad": "a", "etiket": "Gelme açısı", "min": 0, "max": 80, "adim": 5, "tur": "surgu", "birim": "°"}],
-      "gorev": {"tur": "ayarla", "hedef": {"a": [45, 80]}, "tamam": "sin θ<sub>s</sub> = 1/1,5 ≈ 0,67, yani sınır açı yaklaşık <b>42°</b>. Gelme açısı bunu aşınca ışığın hepsi geri yansır: <b>tam yansıma</b>. Fiber optik kablo ışığı böyle hapseder; elmasın parıltısı da buradan gelir.", "ipucu": "Açıyı büyüttükçe dışarı çıkan ışın yüzeye yaklaşıyor. Sınır açıyı geç."}
-    },
-    {
-      "baslik": "Işıkta renk",
-      "metin": "Bir cisim, üzerine düşen ışıktan <b>yansıttığı</b> rengin renginde görünür. Sarı top beyaz ışığın kırmızı ve yeşilini yansıtır, mavisini soğurur. Şimdi odada yalnızca <b>kırmızı ışık</b> yanacak.",
-      "sahne": {"tur": "fiz12-renk", "sure": 3.5},
-      "gorev": {"tur": "tahmin", "soru": "Sarı top kırmızı ışıkta nasıl görünür?", "secenekler": [
-        {"yazi": "Yine sarı", "neden": "Sarı görünmesi için göze kırmızıyla birlikte yeşil ışık da gelmeli; odada yeşil ışık yok."},
-        {"yazi": "Siyah", "neden": "Top kırmızıyı da yansıtır; yansıtacak hiçbir ışık kalmasaydı siyah görünürdü."},
-        {"yazi": "Kırmızı", "dogru": true, "neden": "Top, üzerine düşen kırmızı ışığı yansıtır; yeşil gelmediği için yalnızca kırmızı görünür. Kırmızı elma ise mavi ışıkta siyah görünür: yansıtacağı kırmızı yoktur."}
-      ]}
-    },
-    {
-      "baslik": "Miyop göz",
-      "metin": "Göz, yakınsak bir mercek gibi çalışır. <b>Miyop</b> gözde uzaktan gelen ışınlar retinanın önünde buluşur, uzak bulanık görünür. İki gözlük camını tek tek dene.",
-      "sahne": {"tur": "fiz12-goz"},
-      "deger": {"k": 0, "i": 0},
-      "kontroller": [
-        {"ad": "k", "etiket": "Kalın kenarlı cam", "min": 0, "max": 1, "tur": "anahtar"},
-        {"ad": "i", "etiket": "İnce kenarlı cam", "min": 0, "max": 1, "tur": "anahtar"}
-      ],
-      "gorev": {"tur": "secim", "soru": "Miyop göz için hangi gözlük camı gerekir?", "secenekler": [
-        {"yazi": "Kalın kenarlı (ıraksak) cam", "dogru": true, "neden": "Kalın kenarlı cam ışınları biraz dağıtır, odak geriye kayıp retinaya düşer. Hipermetrop gözde ise görüntü retinanın arkasına düşer; ona ince kenarlı (yakınsak) cam takılır."},
-        {"yazi": "İnce kenarlı (yakınsak) cam", "neden": "İnce kenarlı cam ışınları daha da toplar; odak retinadan daha da uzaklaşır."},
-        {"yazi": "İkisi de olur", "neden": "İnce kenarlı camla görüntü daha da bulanıklaştı; iki cam birbirinin etkisini götürür."}
-      ]}
+     "ad": "g",
+     "etiket": "Geniş kaynak",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
     }
-  ],
-  "kapanis": [
-    "Işık doğrusal yayılır; noktasal kaynak tam gölge, geniş kaynak yarı gölge de verir.",
-    "Yansımada gelme açısı yansıma açısına eşittir; açılar normalden ölçülür.",
-    "Açılı iki aynada (360/α çiftse) n = 360/α − 1 görüntü oluşur.",
-    "Ayna ve mercekte 1/f = 1/d<sub>c</sub> + 1/d<sub>g</sub>, büyütme m = −d<sub>g</sub>/d<sub>c</sub>.",
-    "n₁·sinθ₁ = n₂·sinθ₂; çok yoğundan az yoğuna geçerken sınır açı aşılırsa tam yansıma olur.",
-    "Cisim yansıttığı rengin renginde görünür; miyop göze kalın kenarlı, hipermetrop göze ince kenarlı cam takılır."
-  ]
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "d": 40
+    },
+    "tamam": "Noktasal kaynakla: lambadan topa 40 cm, perdeye 120 cm: üç kat uzaklık, üç kat gölge, yani <b>30 cm</b>. Benzer üçgenler bunu söyler. Noktasal kaynak yalnızca <b>tam gölge</b> verir. Geniş kaynakta kaynağın bir kısmını gören bölgede <b>yarı gölge</b> de oluşur.",
+    "ipucu": "Gölge, lambadan perdeye uzaklığın lambadan topa uzaklığa oranı kadar büyür: 120 / d = 3."
+   },
+   "kart": 1,
+   "goster": {
+    "deger": {
+     "d": 30
+    },
+    "not": "Top lambadan 30 cm uzakta: perde 4 kat uzakta, gölgenin çapı 4 × 10 = <b>40 cm</b>."
+   }
+  },
+  {
+   "baslik": "Yansıma yasası",
+   "metin": "Yansımada <b>gelme açısı yansıma açısına eşittir</b>; iki açı da yüzeye dik çizilen <b>normal</b>den ölçülür. Lazerin açısını değiştir ve yansıyan ışını hedefe gönder.",
+   "sahne": {
+    "tur": "fiz12-yansima"
+   },
+   "deger": {
+    "a": 20
+   },
+   "kontroller": [
+    {
+     "ad": "a",
+     "etiket": "Gelme açısı",
+     "min": 10,
+     "max": 60,
+     "adim": 5,
+     "tur": "surgu",
+     "birim": "°"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "a": 40
+    },
+    "tamam": "40° ile gelen ışın normalin öbür yanından <b>40° ile</b> yansıdı ve hedefe çarptı. Gelen ışın, normal ve yansıyan ışın aynı düzlemdedir. Pürüzlü yüzeyde de her ışın bu kurala uyar; yalnızca normaller farklı yönlere bakar, bu yüzden yansıma dağınık olur.",
+    "ipucu": "Hedef lazerle aynı yükseklikte. Işın aynaya gidip aynı açıyla geri çıkıyor; hedef, ayna noktasının iki katı uzakta olmalı."
+   },
+   "kart": 3,
+   "goster": {
+    "deger": {
+     "a": 30
+    },
+    "not": "30° ile gelen ışın normalin öbür yanından <b>30°</b> ile yansıyor, ama hedefi ıskalıyor."
+   }
+  },
+  {
+   "baslik": "Açılı iki ayna",
+   "metin": "Düz aynada görüntü <b>sanal, düz ve cisimle eşit boydadır</b>. İki aynayı aralarında 60° olacak şekilde birleştirdin; arada bir bayrak duruyor. Görüntüler birbirinin de görüntüsünü verir.",
+   "sahne": {
+    "tur": "fiz12-aynalar",
+    "sure": 4,
+    "aci": 60
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Aynalarda kaç görüntü görürsün?",
+    "secenekler": [
+     {
+      "yazi": "2",
+      "neden": "İki ayna yalnızca birer görüntü verseydi 2 olurdu; ama görüntüler öbür aynada yeniden yansır."
+     },
+     {
+      "yazi": "5",
+      "dogru": true,
+      "neden": "360/α çift sayıysa n = 360/α − 1 = 360/60 − 1 = <b>5</b>. Görüntülerin hepsi tepe noktası çevresindeki çemberin üzerindedir. Aynalar arası açı 90° olsaydı 3 görüntü olurdu."
+     },
+     {
+      "yazi": "6",
+      "neden": "360/60 = 6 bayrak konumu vardır, ama biri cismin kendisidir; görüntü sayısı bir eksiktir."
+     }
+    ]
+   },
+   "kart": 4
+  },
+  {
+   "baslik": "Çukur aynada görüntü",
+   "metin": "Odak uzaklığı 10 cm olan çukur aynanın önünde bir cisim var. Turuncu ışın asal eksene paralel gelip <b>odaktan (F)</b> geçer; yeşil ışın tepe noktasından simetrik yansır. Cismi kaydır: görüntü <b>gerçek, ters ve 2 kat büyük</b> olsun.",
+   "sahne": {
+    "tur": "fiz12-cukur"
+   },
+   "deger": {
+    "d": 30
+   },
+   "kontroller": [
+    {
+     "ad": "d",
+     "etiket": "Cismin uzaklığı",
+     "min": 5,
+     "max": 40,
+     "adim": 5,
+     "tur": "surgu",
+     "birim": "cm"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "d": 15
+    },
+    "tamam": "1/d<sub>g</sub> = 1/10 − 1/15 = 1/30, yani görüntü aynanın önünde <b>30 cm</b>'de. Büyütme m = −30/15 = <b>−2</b>: ters ve 2 kat büyük. Cisim F'deyken görüntü oluşmaz; F ile ayna arasında görüntü sanal, düz ve büyüktür.",
+    "ipucu": "Cisim F'nin dışında olmalı ama M'den yakın: F ile M arasında görüntü gerçek, ters ve büyüktür."
+   },
+   "kart": 6,
+   "goster": {
+    "deger": {
+     "d": 30
+    },
+    "not": "Cisim 30 cm'de: 1/d<sub>g</sub> = 1/10 − 1/30, d<sub>g</sub> = 15 cm. Görüntü gerçek, ters ve <b>yarı boyda</b>."
+   }
+  },
+  {
+   "baslik": "Kırılma ve Snell yasası",
+   "metin": "Işık başka bir ortama eğik geçerken hızı değiştiği için yön değiştirir. <b>n₁·sinθ₁ = n₂·sinθ₂</b>. Işık havadan 53° ile geliyor (sin 53° ≈ 0,8). Ortamın kırılma indisini ayarla: kırılma açısı <b>30°</b> olsun.",
+   "sahne": {
+    "tur": "fiz12-snell"
+   },
+   "deger": {
+    "n": 1.2
+   },
+   "kontroller": [
+    {
+     "ad": "n",
+     "etiket": "Kırılma indisi",
+     "min": 1,
+     "max": 2,
+     "adim": 0.1,
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "n": 1.6
+    },
+    "tamam": "1 · 0,8 = n · 0,5, yani <b>n = 1,6</b>. Işık bu ortamda c/1,6 hızla, yaklaşık 1,9·10⁸ m/s ile ilerler. Az yoğundan çok yoğun ortama geçen ışık <b>normale yaklaşır</b>; indis büyüdükçe daha çok kırılır. Frekans değişmez, hız ve dalga boyu küçülür.",
+    "ipucu": "sin 30° = 0,5. 1 · 0,8 = n · 0,5 eşitliğinden n'yi bul."
+   },
+   "kart": 7,
+   "goster": {
+    "deger": {
+     "n": 2
+    },
+    "not": "n = 2 olunca sin θ₂ = 0,8 / 2 = 0,4, kırılma açısı ≈ <b>24°</b>: ışık normale daha çok yaklaşıyor."
+   }
+  },
+  {
+   "baslik": "Tam yansıma",
+   "metin": "Şimdi ışık camın içinden havaya çıkmaya çalışıyor; bu kez normalden <b>uzaklaşır</b>. Kırılma açısı 90° olduğunda gelme açısına <b>sınır açı</b> denir. Gelme açısını öyle ayarla ki ışık <b>hiç dışarı çıkmasın</b>.",
+   "sahne": {
+    "tur": "fiz12-tam"
+   },
+   "deger": {
+    "a": 20
+   },
+   "kontroller": [
+    {
+     "ad": "a",
+     "etiket": "Gelme açısı",
+     "min": 0,
+     "max": 80,
+     "adim": 5,
+     "tur": "surgu",
+     "birim": "°"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "a": [
+      45,
+      80
+     ]
+    },
+    "tamam": "sin θ<sub>s</sub> = 1/1,5 ≈ 0,67, yani sınır açı yaklaşık <b>42°</b>. Gelme açısı bunu aşınca ışığın hepsi geri yansır: <b>tam yansıma</b>. Fiber optik kablo ışığı böyle hapseder; elmasın parıltısı da buradan gelir.",
+    "ipucu": "Açıyı büyüttükçe dışarı çıkan ışın yüzeye yaklaşıyor. Sınır açıyı geç."
+   },
+   "kart": 8,
+   "goster": {
+    "deger": {
+     "a": 30
+    },
+    "not": "30°'de sin θ₂ = 1,5 · 0,5 = 0,75: ışık normalden uzaklaşarak, yaklaşık <b>49°</b> ile dışarı çıkıyor."
+   }
+  },
+  {
+   "baslik": "Işıkta renk",
+   "metin": "Bir cisim, üzerine düşen ışıktan <b>yansıttığı</b> rengin renginde görünür. Sarı top beyaz ışığın kırmızı ve yeşilini yansıtır, mavisini soğurur. Şimdi odada yalnızca <b>kırmızı ışık</b> yanacak.",
+   "sahne": {
+    "tur": "fiz12-renk",
+    "sure": 3.5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Sarı top kırmızı ışıkta nasıl görünür?",
+    "secenekler": [
+     {
+      "yazi": "Yine sarı",
+      "neden": "Sarı görünmesi için göze kırmızıyla birlikte yeşil ışık da gelmeli; odada yeşil ışık yok."
+     },
+     {
+      "yazi": "Siyah",
+      "neden": "Top kırmızıyı da yansıtır; yansıtacak hiçbir ışık kalmasaydı siyah görünürdü."
+     },
+     {
+      "yazi": "Kırmızı",
+      "dogru": true,
+      "neden": "Top, üzerine düşen kırmızı ışığı yansıtır; yeşil gelmediği için yalnızca kırmızı görünür. Kırmızı elma ise mavi ışıkta siyah görünür: yansıtacağı kırmızı yoktur."
+     }
+    ]
+   },
+   "kart": 14
+  },
+  {
+   "baslik": "Miyop göz",
+   "metin": "Göz, yakınsak bir mercek gibi çalışır. <b>Miyop</b> gözde uzaktan gelen ışınlar retinanın önünde buluşur, uzak bulanık görünür. İki gözlük camını tek tek dene.",
+   "sahne": {
+    "tur": "fiz12-goz"
+   },
+   "deger": {
+    "k": 0,
+    "i": 0
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Kalın kenarlı cam",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "i",
+     "etiket": "İnce kenarlı cam",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Miyop göz için hangi gözlük camı gerekir?",
+    "secenekler": [
+     {
+      "yazi": "Kalın kenarlı (ıraksak) cam",
+      "dogru": true,
+      "neden": "Kalın kenarlı cam ışınları biraz dağıtır, odak geriye kayıp retinaya düşer. Hipermetrop gözde ise görüntü retinanın arkasına düşer; ona ince kenarlı (yakınsak) cam takılır."
+     },
+     {
+      "yazi": "İnce kenarlı (yakınsak) cam",
+      "neden": "İnce kenarlı cam ışınları daha da toplar; odak retinadan daha da uzaklaşır."
+     },
+     {
+      "yazi": "İkisi de olur",
+      "neden": "İnce kenarlı camla görüntü daha da bulanıklaştı; iki cam birbirinin etkisini götürür."
+     }
+    ]
+   },
+   "kart": 15
+  }
+ ],
+ "kapanis": [
+  "Işık doğrusal yayılır; noktasal kaynak tam gölge, geniş kaynak yarı gölge de verir.",
+  "Yansımada gelme açısı yansıma açısına eşittir; açılar normalden ölçülür.",
+  "Açılı iki aynada (360/α çiftse) n = 360/α − 1 görüntü oluşur.",
+  "Ayna ve mercekte 1/f = 1/d<sub>c</sub> + 1/d<sub>g</sub>, büyütme m = −d<sub>g</sub>/d<sub>c</sub>.",
+  "n₁·sinθ₁ = n₂·sinθ₂; çok yoğundan az yoğuna geçerken sınır açı aşılırsa tam yansıma olur.",
+  "Cisim yansıttığı rengin renginde görünür; miyop göze kalın kenarlı, hipermetrop göze ince kenarlı cam takılır."
+ ]
 }

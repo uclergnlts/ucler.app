@@ -32,6 +32,13 @@
     },
     "tamam": "W = 5 · 2 · 3600 = <b>36 000 J</b>. 1 saat 3600 saniyedir; dakikayı saniyeye çevirmeyi unutma.",
     "ipucu": "36 000 / (5 · 2) saniye kaç dakika?"
+   },
+   "kart": 2,
+   "goster": {
+    "deger": {
+     "t": 30
+    },
+    "not": "30 dakika = 1800 s: W = 5 · 2 · 1800 = 18 000 J."
    }
   },
   {
@@ -73,7 +80,8 @@
       "neden": "Dirençler farklı; aynı akımla farklı güç harcarlar."
      }
     ]
-   }
+   },
+   "kart": 4
   },
   {
    "baslik": "Joule ısınması",
@@ -101,6 +109,13 @@
     },
     "tamam": "Akım 2 katı, ısı 2² = <b>4 katı</b>: 2400 J. Isı akımın karesiyle artar; kablo kalınlığı ve sigortalar bu yüzden önemlidir.",
     "ipucu": "Isı akımın karesiyle artar."
+   },
+   "kart": 5,
+   "goster": {
+    "deger": {
+     "I": 3
+    },
+    "not": "Akım 3 katı: ısı 3² = 9 katı, 3² · 10 · 60 = 5400 J."
    }
   },
   {
@@ -128,7 +143,8 @@
       "dogru": true
      }
     ]
-   }
+   },
+   "kart": 7
   },
   {
    "baslik": "Faturayı düşür",
@@ -158,6 +174,13 @@
     },
     "tamam": "Günde 2 saat: 1,5 · 2 · 30 = 90 kWh, 90 · 3 = <b>270 TL</b>. Süreyi yarıya indirmek faturayı da yarıya indirir.",
     "ipucu": "270 TL / 3 TL = 90 kWh; 90 / (1,5 · 30) kaç saat?"
+   },
+   "kart": 7,
+   "goster": {
+    "deger": {
+     "h": 3
+    },
+    "not": "Günde 3 saat: 1,5 · 3 · 30 = 135 kWh, 135 · 3 = 405 TL."
    }
   },
   {
@@ -203,7 +226,8 @@
     },
     "tamam": "9,1 A + 5 A ≈ 14,1 A, sınırın altında. Su ısıtıcısıyla 19,1 A olurdu ve sigorta atardı. Sigorta, kabloyu aşırı ısınmaktan korur.",
     "ipucu": "I = P / 220. Toplam 16 A'yı geçmemeli."
-   }
+   },
+   "kart": 12
   },
   {
    "baslik": "Verim",
@@ -241,7 +265,8 @@
       "dogru": true
      }
     ]
-   }
+   },
+   "kart": 14
   }
  ],
  "kapanis": [

@@ -30,7 +30,8 @@
       "dogru": true
      }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Periyot ve frekans",
@@ -57,6 +58,13 @@
      "rpm": 1200
     },
     "tamam": "Dakikada 1200 tur, saniyede 1200 / 60 = 20 tur eder: f = 20 Hz. Bir tur T = 1/20 = 0,05 s sürer. Periyot büyüdükçe frekans küçülür."
+   },
+   "kart": 2,
+   "goster": {
+    "deger": {
+     "rpm": 900
+    },
+    "not": "Dakikada 900 tur, saniyede 900 / 60 = 15 tur: f = 15 Hz, bir tur T = 1/15 ≈ 0,067 s sürer."
    }
   },
   {
@@ -84,7 +92,8 @@
       "neden": "Merkeze yakın koltuk daha küçük bir çember çizer, aynı sürede daha az yol alır."
      }
     ]
-   }
+   },
+   "kart": 2
   },
   {
    "baslik": "İp koparsa",
@@ -111,7 +120,8 @@
       "neden": "Taşı çemberde tutan ip gerilmesiydi. O kalkınca yol düzleşir."
      }
     ]
-   }
+   },
+   "kart": 5
   },
   {
    "baslik": "Merkezcil kuvvet",
@@ -138,6 +148,13 @@
      "v": 20
     },
     "tamam": "1000 · 20² / 50 = 8000 N. Hız 10'dan 20 m/s'ye iki katına çıkınca gereken kuvvet dört katına çıkar. Bu yeni bir kuvvet değildir; burada onu lastiklerle yol arasındaki sürtünme sağlar."
+   },
+   "kart": 5,
+   "goster": {
+    "deger": {
+     "v": 15
+    },
+    "not": "15 m/s'de gereken kuvvet 1000 · 15² / 50 = 4500 N."
    }
   },
   {
@@ -168,6 +185,13 @@
      ]
     },
     "tamam": "En büyük güvenli hız v = √(μ·g·r). μ = 0,5'te √(0,5 · 9,8 · 50) ≈ 15,7 m/s, yani 15 m/s güvenli. Islak yolda (μ ≈ 0,4) sınır 14 m/s'ye iner; yağmurda bu yüzden yavaşlanır. Güvenli hız kütleye bağlı değildir."
+   },
+   "kart": 7,
+   "goster": {
+    "deger": {
+     "mu": 4
+    },
+    "not": "Islak yol, μ = 0,4: en büyük güvenli hız √(0,4 · 9,8 · 50) = 14 m/s. 15 m/s ile giren araba savruluyor."
    }
   },
   {
@@ -195,7 +219,8 @@
       "neden": "Hız değişmeseydi I yarıya inince L de yarıya inerdi; dış tork olmadan L değişemez."
      }
     ]
-   }
+   },
+   "kart": 12
   }
  ],
  "kapanis": [

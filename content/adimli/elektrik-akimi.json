@@ -29,7 +29,8 @@
      "k": 1
     },
     "tamam": "Devre tamamlandı. Her saniye 2 C geçiyorsa I = 2 C / 1 s = <b>2 A</b>. Açık devrede akım olmaz."
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Ohm yasası",
@@ -58,6 +59,13 @@
     },
     "tamam": "V = I · R = 2 · 4 = <b>8 V</b>. Gerilim iki katına çıkarsa akım da iki katına çıkar; V–I grafiği bir doğrudur.",
     "ipucu": "I = V / R; 2 A için V = 2 · 4."
+   },
+   "kart": 4,
+   "goster": {
+    "deger": {
+     "V": 4
+    },
+    "not": "4 V'ta akım I = V / R = 4 / 4 = 1 A."
    }
   },
   {
@@ -84,7 +92,8 @@
       "dogru": true
      }
     ]
-   }
+   },
+   "kart": 4
   },
   {
    "baslik": "Telin direnci",
@@ -113,6 +122,13 @@
     },
     "tamam": "Boy 2 kat, kesit 2 kat: R = 2/2 · R₀ = R₀. Dikkat: bir tel çekilip <b>iki kat uzatılırsa</b> kesiti de yarıya iner ve direnci <b>4 kat</b> olur.",
     "ipucu": "L / A oranı 1 olmalı."
+   },
+   "kart": 3,
+   "goster": {
+    "deger": {
+     "A": 4
+    },
+    "not": "Boy 2 kat, kesit 4 kat: R = 2/4 · R₀ = R₀/2. Kalın tel akımı kolay geçirir."
    }
   },
   {
@@ -159,7 +175,8 @@
       "neden": "Paralelde öteki kolun yolu açık kalır; sahnede sökünce de yandığını görebilirsin."
      }
     ]
-   }
+   },
+   "kart": 8
   },
   {
    "baslik": "Ampermetre nereye?",
@@ -186,7 +203,8 @@
       "dogru": true
      }
     ]
-   }
+   },
+   "kart": 11
   },
   {
    "baslik": "Karışık devre",
@@ -215,6 +233,13 @@
     },
     "tamam": "V = I · Reş = 3 · 6 = <b>18 V</b>. Paralel uçlarda 3 · 2 = 6 V düşer: 6 Ω'dan 1 A, 3 Ω'dan 2 A. Kolların toplamı ana akımdır (Kirchhoff).",
     "ipucu": "Reş = 4 + 2 = 6 Ω."
+   },
+   "kart": 10,
+   "goster": {
+    "deger": {
+     "V": 12
+    },
+    "not": "12 V'ta ana akım 12 / 6 = 2 A. Paralel uçlarda 2 · 2 = 4 V düşer, 4 Ω'da 8 V."
    }
   }
  ],

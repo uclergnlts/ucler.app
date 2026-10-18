@@ -17,7 +17,8 @@
      { "yazi": "Yalnızca uygun reseptörü olan hücrelerde", "dogru": true, "neden": "Hormon, reseptörüne anahtar-kilit gibi bağlanır. Reseptörü olmayan hücre hormondan etkilenmez." },
      { "yazi": "Yalnızca bezin yanındaki hücrelerde", "neden": "Hormon kanla taşındığı için uzaktaki hücreleri de etkileyebilir." }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Hız ve süre",
@@ -31,7 +32,8 @@
      { "yazi": "Sinirsel etki", "neden": "Sinirsel etki çok hızlı başlar ama kısa sürer." },
      { "yazi": "İkisi eşit sürer", "neden": "Süreleri belirgin biçimde farklıdır: sinirsel kısa, hormonal uzun." }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Yemekten sonra",
@@ -44,7 +46,9 @@
     "hedef": { "ins": 1 },
     "ipucu": "İnsülini aç ve yeniden oynat.",
     "tamam": "İnsülin hücrelerin glikoz almasını sağladı ve karaciğer fazlayı glikojen olarak depoladı; şeker normale döndü. İnsülin üretilemezse tip 1, hücreler insüline yanıt vermezse tip 2 diyabet görülür."
-   }
+   },
+   "kart": 11,
+   "goster": { "oynat": true, "not": "İnsülin yokken hücreler glikozu alamıyor: yemekten sonra kan şekeri yükseliyor ve normale inmiyor." }
   },
   {
    "baslik": "İki zıt hormon",
@@ -60,7 +64,9 @@
      { "yazi": "Glukagon", "dogru": true, "neden": "Pankreasın α hücreleri glukagon salgılar; karaciğer glikojeni yıkarak kana glikoz verir." },
      { "yazi": "ADH", "neden": "ADH hipofizden salınır ve böbrekte su geri emilimini artırır; kan şekerini ayarlamaz." }
     ]
-   }
+   },
+   "kart": 11,
+   "goster": { "deger": { "mg": 160 }, "not": "Kan şekeri 160 mg/dL: β hücreleri insülin salgılıyor, karaciğer ve kaslar glikojen depoluyor." }
   },
   {
    "baslik": "Kendini frenleyen zincir",
@@ -72,7 +78,9 @@
     "tur": "ayarla",
     "hedef": { "tx": 5 },
     "tamam": "Tiroksin arttıkça TRH ve TSH azaldı. Buna negatif geri bildirim denir: ürün, kendisini üreten zinciri frenler ve düzey sabit kalır."
-   }
+   },
+   "kart": 5,
+   "goster": { "deger": { "tx": 1 }, "not": "Tiroksin azalınca fren zayıflıyor: TRH ve TSH artıyor, tiroit daha çok uyarılıyor." }
   },
   {
    "baslik": "İyot eksikliği",
@@ -88,7 +96,8 @@
      { "yazi": "Tiroksin çok artar", "neden": "İyot olmadan tiroksin yapılamaz; tiroksin azalır." },
      { "yazi": "Fren kalkar, TSH artar ve bezi büyütür", "dogru": true, "neden": "Tiroksin düşünce hipotalamus ve hipofiz frenlenmez. Artan TSH tiroiti sürekli uyarır ve bez büyür." }
     ]
-   }
+   },
+   "kart": 8
   }
  ],
  "kapanis": [

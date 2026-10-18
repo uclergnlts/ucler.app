@@ -30,7 +30,8 @@
       "neden": "Geri tepkime NO₂'den yeniden N₂O₄ üretir. Kapalı kapta girenler tükenmez."
      }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Kc hesabı",
@@ -60,6 +61,13 @@
     },
     "ipucu": "2x mol HI oluşurken x mol H₂ ve x mol I₂ harcanır.",
     "tamam": "2x = 1,6 → x = 0,8. Dengede 0,2 M H₂, 0,2 M I₂, 1,6 M HI. Kc = 1,6² / (0,2 · 0,2) = <b>64</b>. Katılar ve saf sıvılar Kc'ye yazılmaz."
+   },
+   "kart": 7,
+   "goster": {
+    "deger": {
+     "hi": 6
+    },
+    "not": "0,6 mol HI oluşsaydı 0,3'er mol H₂ ve I₂ harcanır, 0,7'şer mol kalırdı: Kc = 0,6² / 0,7² ≈ <b>0,73</b>."
    }
   },
   {
@@ -88,6 +96,13 @@
      "hi": 8
     },
     "tamam": "Q = 0,8² / (0,1 · 0,1) = 64 = K: sistem <b>dengede</b>. Q < K ise tepkime ileri, Q > K ise geri yürür."
+   },
+   "kart": 7,
+   "goster": {
+    "deger": {
+     "hi": 4
+    },
+    "not": "[HI] = 0,4 M iken Q = 0,4² / (0,1 · 0,1) = <b>16</b>. Q < K olduğu için tepkime ileri yönde yürür."
    }
   },
   {
@@ -115,7 +130,8 @@
       "dogru": true
      }
     ]
-   }
+   },
+   "kart": 9
   },
   {
    "baslik": "Sıcaklık",
@@ -146,6 +162,13 @@
      ]
     },
     "tamam": "Isı verince denge ısıyı harcayan yöne, <b>endotermik</b> ileri yöne kaydı; renk koyulaştı. Dengeyi kaydıran etkenler içinde K'yı değiştiren yalnızca sıcaklıktır."
+   },
+   "kart": 10,
+   "goster": {
+    "deger": {
+     "T": 50
+    },
+    "not": "50 °C'de N₂O₄'ün yaklaşık %58'i ayrışıyor. Sıcaklık arttıkça ayrışan kısım da artar."
    }
   },
   {
@@ -184,7 +207,8 @@
       "neden": "K yalnızca sıcaklıkla değişir. Katalizör iki yönü eşit hızlandırdığı için oranı bozmaz."
      }
     ]
-   }
+   },
+   "kart": 10
   },
   {
    "baslik": "Haber yöntemi",
@@ -234,7 +258,8 @@
       "neden": "Verim artar, ama tepkime çok yavaşlar. Bu yüzden ılımlı bir sıcaklık ve katalizör seçilir."
      }
     ]
-   }
+   },
+   "kart": 11
   }
  ],
  "kapanis": [

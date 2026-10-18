@@ -17,7 +17,8 @@
      {"yazi": "Deniz yıldızı", "neden": "Derisinin altında kireçli plakalardan bir iç iskeleti var ama omurgası yok; derisi dikenliler omurgasızdır."},
      {"yazi": "Balık", "dogru": true, "neden": "Balığın sırtında omurlardan oluşan bir omurga var. Bilinen hayvan türlerinin yaklaşık %95'i ise omurgasızdır."}
     ]
-   }
+   },
+   "kart": 2
   },
   {
    "baslik": "Böcek mi, örümcek mi?",
@@ -29,7 +30,9 @@
     "tur": "ayarla",
     "hedef": {"b": 3},
     "tamam": "2 örümcek × 8 = 16 bacak, 3 böcek × 6 = 18 bacak; toplam 34. Böceğin vücudu 3 bölümlüdür ve anteni vardır. Örümceğin vücudu 2 bölümlüdür ve anteni yoktur."
-   }
+   },
+   "kart": 6,
+   "goster": {"deger": {"b": 1}, "not": "1 böcek × 6 + 2 örümcek × 8 = <b>22</b> bacak. Her böcek toplama 6, her örümcek 8 bacak ekler."}
   },
   {
    "baslik": "Kalbi kur",
@@ -41,7 +44,9 @@
     "tur": "ayarla",
     "hedef": {"o": 4},
     "tamam": "Kuşun kalbi dört odacıklıdır: oksijenli ve oksijensiz kan karışmaz, dokulara bol oksijen gider. Balığın kalbi iki odacıklıdır ve içinden yalnızca oksijensiz kan geçer; kan solungaçta oksijenlenir."
-   }
+   },
+   "kart": 11,
+   "goster": {"deger": {"o": 3}, "not": "Üç odacıklı kalpte (iki yaşamlılar, çoğu sürüngen) oksijenli ve oksijensiz kan karıncıkta kısmen karışıyor."}
   },
   {
    "baslik": "Değişken ve sabit vücut sıcaklığı",
@@ -57,7 +62,9 @@
      {"yazi": "Fare", "dogru": true, "neden": "Fare, 37 °C'yi korumak için ısıyı metabolizmayla, yani besin yakarak üretir. Isı üretmek pahalıdır: sabit sıcaklıklılar, benzer boydaki sürüngenden çok daha fazla yer."},
      {"yazi": "İkisi eşit yer", "neden": "Ortamı 5 °C'ye indir: farenin sıcaklığı hâlâ 37 °C. Bu ısı nereden geliyor?"}
     ]
-   }
+   },
+   "kart": 13,
+   "goster": {"deger": {"T": 10}, "not": "Ortam 10 °C: kertenkelenin sıcaklığı da 10 °C'ye indi ve çok yavaşladı. Farenin sıcaklığı ise 37 °C'de kaldı."}
   },
   {
    "baslik": "Kim bu hayvan?",
@@ -73,7 +80,8 @@
      {"yazi": "Kurbağa", "neden": "Kurbağanın kalbi üç odacıklıdır."},
      {"yazi": "Timsah", "dogru": true, "neden": "Timsah bir sürüngendir ama kalbi dört odacıklıdır. Yine de vücut sıcaklığı değişkendir: dört odacık tek başına sabit sıcaklık demek değildir."}
     ]
-   }
+   },
+   "kart": 11
   },
   {
    "baslik": "Uçmak ölçüt değil",
@@ -87,7 +95,8 @@
      {"yazi": "Memeliler", "dogru": true, "neden": "Yarasa kıllıdır ve yavrusunu sütle besler: memelidir. Aynı şekilde balina yüzer ama memelidir, penguen uçamaz ama kuştur."},
      {"yazi": "Sürüngenler", "neden": "Sürüngenlerin derisi kuru ve pulludur, vücut sıcaklıkları değişkendir; yarasa kıllıdır ve sıcaklığı sabittir."}
     ]
-   }
+   },
+   "kart": 12
   }
  ],
  "kapanis": [

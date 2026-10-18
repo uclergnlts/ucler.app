@@ -15,7 +15,9 @@
     "tur": "ayarla",
     "hedef": {"k": 7},
     "tamam": "Cins <i>Felis</i>: ev kedisi ile yaban kedisi. Aslan bile dışarıda kaldı. Türe indikçe gruptaki canlı sayısı azalır; ortak özellik ve akrabalık artar. En dar birim türdür."
-   }
+   },
+   "kart": 3,
+   "goster": {"deger": {"k": 4}, "not": "Sınıf basamağında (Memeliler) 16 canlıdan <b>8</b>'i kaldı; şubede birlikte olan kartal ve kurbağa burada dışarıda kaldı."}
   },
   {
    "baslik": "Aynı familya, aynı cins değil",
@@ -31,7 +33,8 @@
      {"yazi": "Aynı takımdadırlar", "dogru": true, "neden": "Bir alt basamakta birlikte olanlar, onun üstündeki bütün basamakları da paylaşır: takım, sınıf, şube, âlem. Tersi doğru değildir."},
      {"yazi": "Verimli yavru verebilirler", "neden": "Verimli yavru ölçütü türü tanımlar. Aynı familyadaki aslan ile ev kedisi farklı türlerdir."}
     ]
-   }
+   },
+   "kart": 4
   },
   {
    "baslik": "Tür nedir?",
@@ -45,7 +48,8 @@
      {"yazi": "Yalnızca atla çiftleşirse", "neden": "Sorun eşte değil, katırın kendisindedir: düzgün üreme hücresi yapamaz."},
      {"yazi": "Hayır, katır kısırdır", "dogru": true, "neden": "At ve eşeğin kromozomları eşlenemez; katır düzgün üreme hücresi yapamaz. Yavru verimli olmadığı için at ve eşek <b>ayrı türlerdir</b>."}
     ]
-   }
+   },
+   "kart": 4
   },
   {
    "baslik": "İkili adlandırma",
@@ -62,7 +66,8 @@
     "hedef": {"cb": 1, "tb": 0, "it": 1},
     "tamam": "<i>Canis lupus</i>: önce cins (<i>Canis</i>), sonra türü belirleyen tanımlayıcı ad (<i>lupus</i>). Köpek de kurtla aynı cinstedir: <i>Canis</i>. Elle yazarken italik yerine iki kelimenin altı ayrı ayrı çizilir.",
     "ipucu": "Üç kuralı da kontrol et."
-   }
+   },
+   "kart": 6
   },
   {
    "baslik": "Âlem anahtarı",
@@ -76,7 +81,8 @@
      {"yazi": "Mantarlar", "dogru": true, "neden": "Çekirdekli, kitin duvarlı ve heterotrof: mantar. Mantarlar besini dışarıda sindirip emer; küf de ekmeği böyle tüketir."},
      {"yazi": "Bakteriler", "neden": "Bakterilerde çekirdek yoktur; küfün hücrelerinde ise çekirdek vardır."}
     ]
-   }
+   },
+   "kart": 8
   },
   {
    "baslik": "Arkeler bakteri değildir",
@@ -90,7 +96,8 @@
      {"yazi": "Mantarlar", "neden": "Mantarlar ökaryottur, hücrelerinde çekirdek vardır."},
      {"yazi": "Arkeler", "dogru": true, "neden": "Çekirdeksiz ama peptidoglikansız: arke. Arkeler de prokaryottur ama bakteri değildir. DNA karşılaştırmaları onları ökaryotlara bakterilerden daha yakın gösterir."}
     ]
-   }
+   },
+   "kart": 8
   }
  ],
  "kapanis": [

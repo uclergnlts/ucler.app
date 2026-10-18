@@ -41,7 +41,8 @@
       "neden": "Elektron bir noktada durmaz; yalnızca belli bir bölgede bulunma olasılığı hesaplanabilir."
      }
     ]
-   }
+   },
+   "kart": 2
   },
   {
    "baslik": "Elektronun adresi",
@@ -77,6 +78,14 @@
     },
     "ipucu": "d alt katmanı ℓ = 2'dir; ℓ = 2 olabilmesi için n en az 3 olmalı.",
     "tamam": "n = 3, ℓ = 2: 3d. m<sub>ℓ</sub> −2'den +2'ye beş değer alır, yani beş d orbitali vardır. Dördüncü sayı m<sub>s</sub> ise +½ ya da −½'dir."
+   },
+   "kart": 4,
+   "goster": {
+    "deger": {
+     "n": 2,
+     "l": 1
+    },
+    "not": "n = 2, ℓ = 1: <b>2p</b>. mℓ −1, 0, +1 değerlerini alır: 3 orbital, en çok 6 elektron."
    }
   },
   {
@@ -104,6 +113,13 @@
     },
     "ipucu": "K ve Ca'nın son elektronları nereye girdi? 3d kutularında ilk ok görününce dur.",
     "tamam": "Skandiyum (21): [Ar] 4s² 3d¹. 4s'te n + ℓ = 4, 3d'de 5 olduğu için önce 4s doldu; bu yüzden K ve Ca'da 3. katman 8'de kaldı."
+   },
+   "kart": 7,
+   "goster": {
+    "deger": {
+     "e": 19
+    },
+    "not": "19. elektron (potasyum) 3d'ye değil <b>4s</b>'e girdi: 4s'te n + ℓ = 4, 3d'de 5."
    }
   },
   {
@@ -149,6 +165,14 @@
     },
     "ipucu": "Elektronlar boş bir orbital varken eşleşmez: önce her kutuya bir tane.",
     "tamam": "↑ ↑ ↑: elektronlar önce birer birer ve aynı spinle yerleşti. Azotta 3 eşleşmemiş elektron var; oksijende (2p⁴) dördüncü elektron eşleşir."
+   },
+   "kart": 9,
+   "goster": {
+    "deger": {
+     "a": 2,
+     "b": 1
+    },
+    "not": "Elektronları 2, 1, 0 diye dağıtınca kutular kırmızı: <b>boş orbital varken eşleşme olmaz</b>."
    }
   },
   {
@@ -191,7 +215,8 @@
       "neden": "Argonun 3p'si tam doludur (3p⁶, 18 elektron). Burada 3p'de 4 elektron var."
      }
     ]
-   }
+   },
+   "kart": 14
   },
   {
    "baslik": "Kurala uymayan iki element",
@@ -229,7 +254,8 @@
       "neden": "4p, 3d'den daha yüksek enerjilidir; 3d dolmadan elektron 4p'ye geçmez."
      }
     ]
-   }
+   },
+   "kart": 12
   },
   {
    "baslik": "Demiri iyonlaştır",
@@ -256,6 +282,13 @@
     },
     "ipucu": "Fe²⁺ için iki elektron vermelisin.",
     "tamam": "Fe²⁺: [Ar] 3d⁶, [Ar] 4s² 3d⁴ değil. Katyonda elektronlar önce en büyük n'li katmandan, yani 4s'ten kopar. Bir elektron daha verirsen Fe³⁺: yarı dolu [Ar] 3d⁵."
+   },
+   "kart": 13,
+   "goster": {
+    "deger": {
+     "k": 1
+    },
+    "not": "Bir elektron verince <b>Fe⁺</b>: [Ar] 4s¹ 3d⁶. Kopan elektron 3d'den değil, en büyük n'li 4s'ten geldi."
    }
   }
  ],

@@ -17,7 +17,8 @@
      { "yazi": "A ve G", "dogru": true, "neden": "Adenin ve guanin çift halkalı pürinlerdir. Timin ve sitozin tek halkalı pirimidinlerdir; RNA'daki urasil de tek halkalıdır." },
      { "yazi": "A ve T", "neden": "A çift halkalı ama T tek halkalı. Halkaları yeniden say." }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Baz eşleşmesi",
@@ -31,7 +32,8 @@
      { "yazi": "3'-UACGUC-5'", "neden": "U yalnızca RNA'da bulunur; DNA'da A'nın karşısına T gelir." },
      { "yazi": "3'-TACGTC-5'", "dogru": true, "neden": "A'nın karşısına T, T'nin karşısına A, G'nin karşısına C, C'nin karşısına G gelir. Yön de zıttır: 3'→5'. A=T arasında iki, G≡C arasında üç hidrojen bağı var." }
     ]
-   }
+   },
+   "kart": 3
   },
   {
    "baslik": "Chargaff kuralı",
@@ -43,7 +45,9 @@
     "tur": "ayarla",
     "hedef": { "A": 30 },
     "tamam": "30 adenin varsa T = 30, G = C = 70 olur. Hidrojen bağı 2·30 + 3·70 = 270. G–C çifti çoğaldıkça bağ sayısı artar ve iplikleri ayırmak zorlaşır."
-   }
+   },
+   "kart": 4,
+   "goster": { "deger": { "A": 70 }, "not": "70 adenin varsa T = 70, G = C = 30 olur. Hidrojen bağı 2·70 + 3·30 = <b>230</b>." }
   },
   {
    "baslik": "Eşlenme yarı korunumludur",
@@ -57,7 +61,8 @@
      { "yazi": "Hiçbirinde", "neden": "Eski iplikler kaybolmaz; her eşlenmede kalıp olarak yeni moleküllerin içinde kalır." },
      { "yazi": "2'sinde", "dogru": true, "neden": "İki eski iplik iki ayrı moleküle gider: 2 hibrit + 2 hafif DNA. 1. eşlenmede ise hepsi hibritti. Her yeni molekülde bir eski, bir yeni iplik bulunur: yarı korunumlu eşlenme." }
     ]
-   }
+   },
+   "kart": 7
   },
   {
    "baslik": "Eşlenmenin enzimleri",
@@ -71,7 +76,8 @@
      { "yazi": "DNA polimeraz", "neden": "DNA polimeraz kalıba uygun nükleotitleri ekleyip yeni ipliği örer; açma işi ondan önce yapılır." },
      { "yazi": "Helikaz", "dogru": true, "neden": "Helikaz çatalın ucunda ilerleyip iplikleri açar. DNA polimeraz yeni ipliği yalnızca 5'→3' yönünde uzatır; bu yüzden bir iplik parça parça örülür ve ligaz parçaları birleştirir." }
     ]
-   }
+   },
+   "kart": 7
   },
   {
    "baslik": "PCR: tüpte kopyalama",
@@ -83,7 +89,9 @@
     "tur": "ayarla",
     "hedef": { "n": [10, 12] },
     "tamam": "10 döngüde 2¹⁰ = 1024 kopya olur. Bu yüzden suç yerindeki tek bir saç telinden bile DNA parmak izi çıkarılabilir."
-   }
+   },
+   "kart": 12,
+   "goster": { "deger": { "n": 4 }, "not": "4 döngüde 2⁴ = <b>16 kopya</b>: her döngü kopya sayısını ikiye katlıyor." }
   }
  ],
  "kapanis": [

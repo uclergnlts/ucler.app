@@ -19,7 +19,8 @@
      {"yazi": "Oluşan ürünü", "neden": "Grafiğin sağ ucuna bak: ürün aynı yerde. Enzim yalnızca yolu kolaylaştırır."},
      {"yazi": "Substratla ürün arasındaki enerji farkını", "neden": "Mor oka bak: enzimli de enzimsiz de enerji farkı aynı. Değişen yalnızca tepenin yüksekliği."}
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Enzim-substrat kompleksi",
@@ -33,7 +34,8 @@
      {"yazi": "Ürünle birlikte harcanır", "neden": "Enzim katalizördür, tepkimede tükenmez."},
      {"yazi": "Kendisi ürüne dönüşür", "neden": "Ürüne dönüşen substrattır; enzim yalnızca bu dönüşümü hızlandırır."}
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Her enzimin kendi substratı",
@@ -47,7 +49,8 @@
      {"yazi": "Laktoz", "dogru": true, "neden": "Laktoz, laktazın aktif bölgesine tam oturur. Enzim adlarının çoğu substrat adına -az eki getirilerek yapılır: laktoz → laktaz, maltoz → maltaz, lipit → lipaz."},
      {"yazi": "Maltoz", "neden": "Maltozu maltaz parçalar. Benzer bir şeker olsa da laktazın aktif bölgesine uymaz."}
     ]
-   }
+   },
+   "kart": 3
   },
   {
    "baslik": "Sıcaklık",
@@ -59,7 +62,9 @@
     "tur": "ayarla",
     "hedef": {"T": [36, 38]},
     "tamam": "İnsan enzimlerinin <b>optimum sıcaklığı</b> yaklaşık 37 °C. Daha sıcakta enzimin şekli bozulur (<b>denatürasyon</b>) ve bu çoğunlukla geri dönmez. Soğuk ise enzimi bozmaz, yalnızca yavaşlatır."
-   }
+   },
+   "kart": 5,
+   "goster": { "deger": { "T": 60 }, "not": "60 °C'de enzimin şekli bozuldu (<b>denatürasyon</b>): hız sıfıra düştü." }
   },
   {
    "baslik": "pH",
@@ -71,7 +76,9 @@
     "tur": "ayarla",
     "hedef": {"ph": 2},
     "tamam": "Pepsin midenin asidinde (pH ≈ 2) en hızlıdır; tripsin ise ince bağırsakta (pH ≈ 8). Uygun olmayan pH aktif bölgenin şeklini bozar, aşırısı enzimi denatüre eder."
-   }
+   },
+   "kart": 6,
+   "goster": { "deger": { "ph": 8 }, "not": "pH 8'de tripsin en hızlı çalışıyor, pepsin ise neredeyse hiç çalışmıyor." }
   },
   {
    "baslik": "Substrat miktarı",
@@ -87,7 +94,8 @@
      {"yazi": "Artar", "neden": "Substratı 4'ün üstüne çıkar ve hız çubuğuna bak. Aktif bölgeler dolunca ne oluyor?"},
      {"yazi": "Azalır", "neden": "Substrat çoğalınca hız düşmez. Ama dolu enzimler daha fazlasını aynı anda işleyemez."}
     ]
-   }
+   },
+   "kart": 7
   },
   {
    "baslik": "Yarışmalı inhibitör",
@@ -99,7 +107,8 @@
     "tur": "ayarla",
     "hedef": {"s": [8, 16]},
     "tamam": "Substrat çoğalınca aktif bölgeyi kapma şansı artar ve inhibitörün etkisi azalır. <b>Yarışmasız inhibitör</b> ise aktif bölgeye değil başka bir yere bağlanıp enzimin şeklini bozar; ona karşı substrat eklemek işe yaramaz. Birçok ilaç ve zehir böyle çalışır."
-   }
+   },
+   "kart": 9
   }
  ],
  "kapanis": [

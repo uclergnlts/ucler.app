@@ -19,7 +19,8 @@
      { "yazi": "Üre", "neden": "Üre suda çözünür ve birikince yine su ister. Kapalı yumurtada bu kadar su yoktur." },
      { "yazi": "Ürik asit", "dogru": true, "neden": "Ürik asit az zehirlidir ve suda çözünmeyen kristaller yapar; neredeyse hiç su istemez. Kuş ve sürüngen embriyoları atığı böyle biriktirir." }
     ]
-   }
+   },
+   "kart": 3
   },
   {
    "baslik": "Ürenin yolu",
@@ -33,7 +34,8 @@
      { "yazi": "Karaciğer", "dogru": true, "neden": "Karaciğer amonyağı CO₂ ile birleştirip üreye çevirir (ornitin döngüsü, ATP harcanır). Üre kanla böbreğe gider." },
      { "yazi": "İdrar kesesi", "neden": "İdrar kesesi yalnızca idrarı biriktirir; içinde üre üretilmez." }
     ]
-   }
+   },
+   "kart": 3
   },
   {
    "baslik": "Süzülme",
@@ -47,7 +49,8 @@
      { "yazi": "Glikoz ve amino asit", "neden": "Glikoz ve amino asit küçüktür, süzülür. Sonra tüplerde kana geri emilir." },
      { "yazi": "Üre ve tuzlar", "neden": "Üre ve tuzlar küçüktür, süzüntüye geçer. Ürenin çoğu idrarla atılır." }
     ]
-   }
+   },
+   "kart": 8
   },
   {
    "baslik": "Geri emilim",
@@ -60,7 +63,9 @@
     "hedef": { "g": 99 },
     "ipucu": "Günde 1,8 L idrar, 180 L'nin yüzde kaçıdır? Geri kalanı kana döner.",
     "tamam": "180 L'nin %99'u kana döndü, yalnızca 1,8 L idrar kaldı. Glikoz ve amino asitlerin tamamı, suyun ve Na⁺'nın çoğu geri emilir; bunun çoğu proksimal tüpte olur."
-   }
+   },
+   "kart": 10,
+   "goster": { "deger": { "g": 90 }, "not": "Süzüntünün %90'ı geri emilse günde 18 L idrar çıkardın; vücut saatler içinde susuz kalırdı." }
   },
   {
    "baslik": "Salgılama ve pH",
@@ -73,7 +78,9 @@
     "hedef": { "n": 3 },
     "ipucu": "Kanın normal pH'sı 7,35 ile 7,45 arasıdır. Fazla salgılarsan kan bazikleşir.",
     "tamam": "Böbrek H⁺ salgıladı ve HCO₃⁻ geri emdi; kan pH'sı 7,4'e döndü. K⁺, amonyak ve bazı ilaçlar da salgılamayla idrara katılır."
-   }
+   },
+   "kart": 11,
+   "goster": { "deger": { "n": 1 }, "not": "1 birim H⁺ salgılandı: pH 7,22'den <b>7,28</b>'e çıktı ama kan hâlâ asidik." }
   },
   {
    "baslik": "ADH",
@@ -89,7 +96,8 @@
      { "yazi": "ADH artar, idrar az ve koyu olur", "dogru": true, "neden": "Kan derişikleşince ADH artar, toplama kanalı daha çok su geri emer. İdrar azalır ve koyulaşır." },
      { "yazi": "Süzülme durur, idrar hiç oluşmaz", "neden": "Glomerulda süzülme sürer. Değişen, toplama kanalında ne kadar suyun geri emildiğidir." }
     ]
-   }
+   },
+   "kart": 13
   },
   {
    "baslik": "İdrarda glikoz",
@@ -102,7 +110,9 @@
     "hedef": { "k": 190 },
     "ipucu": "Taşıyıcılar dolana kadar glikozun hepsi kana döner. İdrara ilk glikozun kaçtığı değerde dur.",
     "tamam": "Yaklaşık 180 mg/dL'ye kadar glikozun hepsi geri emilir; üstünde taşıyıcılar doyar ve fazlası idrara kaçar. İdrarda glikoz genellikle şeker hastalığının (diyabet) işaretidir."
-   }
+   },
+   "kart": 10,
+   "goster": { "deger": { "k": 140 }, "not": "Kan şekeri 140 mg/dL: 9 taşıyıcının 7'si dolu, glikozun hepsi kana dönüyor, idrarda glikoz yok." }
   }
  ],
  "kapanis": [

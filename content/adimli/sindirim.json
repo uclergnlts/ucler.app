@@ -17,7 +17,8 @@
      { "yazi": "Yemek borusu", "neden": "Yemek borusu lokmayı peristaltik hareketle mideye iter; lokma içinden geçer." },
      { "yazi": "Pankreas", "dogru": true, "neden": "Pankreas yardımcı organdır. Besin içinden geçmez; pankreas sıvısını onikiparmak bağırsağına döker. Karaciğer de böyledir." }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Çiğne",
@@ -30,7 +31,9 @@
     "hedef": { "n": 4 },
     "ipucu": "Her kenarı daha çok parçaya böldükçe toplam yüzey artar.",
     "tamam": "64 parça, 4 kat yüzey. Enzimin değdiği yer arttı, ama madde hâlâ nişasta. Molekülü yalnızca enzimler hidrolizle değiştirir: buna kimyasal sindirim denir."
-   }
+   },
+   "kart": 3,
+   "goster": { "deger": { "n": 2 }, "not": "Her kenarı ikiye bölünce 8 parça çıkıyor ve toplam yüzey <b>2 katına</b> çıkıyor; madde hâlâ nişasta." }
   },
   {
    "baslik": "Kim nerede başlar?",
@@ -47,7 +50,8 @@
      { "yazi": "Karbonhidrat → protein → yağ", "dogru": true, "neden": "Tükürük amilazı ağızda nişastaya başlar, pepsin midede proteine, lipaz ince bağırsakta yağa. Üçünün sindirimi de ince bağırsakta biter." },
      { "yazi": "Yağ → protein → karbonhidrat", "neden": "Yağ en son başlar: lipaz ince bağırsakta çalışır. Ağızda ve midede yağ değişmeden geçer." }
     ]
-   }
+   },
+   "kart": 10
   },
   {
    "baslik": "Enzim ve pH",
@@ -60,7 +64,9 @@
     "hedef": { "ph": 2 },
     "ipucu": "Pepsin midede çalışır. Mide asidi pH'yi çok düşürür.",
     "tamam": "pH 2'de pepsin en hızlı, tripsin neredeyse durmuş. Kimus onikiparmağa geçince bikarbonat pH'yi yükseltir; pepsin durur, pankreasın tripsini çalışır."
-   }
+   },
+   "kart": 6,
+   "goster": { "deger": { "ph": 8 }, "not": "pH 8'de tripsin en hızlı çalışıyor, pepsin ise neredeyse durmuş: bu, ince bağırsağın ortamı." }
   },
   {
    "baslik": "Safra",
@@ -73,7 +79,9 @@
     "hedef": { "safra": 1 },
     "ipucu": "Safra yağı küçük damlacıklara ayırır. Yüzey artınca lipaz hızlanır.",
     "tamam": "Safra yağı damlacıklara ayırdı, yüzey 3 katına çıktı ve lipaz yağın hepsini parçaladı. Safra enzim değildir; yaptığı iş emülsiyondur, yani mekanik sindirimdir."
-   }
+   },
+   "kart": 8,
+   "goster": { "not": "Safra yokken lipaz yalnızca büyük damlanın yüzeyinde çalışıyor: aynı sürede yağın ancak <b>%30</b>'u sindirildi.", "oynat": true }
   },
   {
    "baslik": "Villuslar",
@@ -86,7 +94,9 @@
     "hedef": { "k": 3 },
     "ipucu": "Son düzeyde her epitel hücresinin zarı fırça gibi çıkıntılar yapar.",
     "tamam": "Kıvrımlar, villuslar ve mikrovilluslar birlikte yüzeyi yüzlerce kat artırır. Mikrovillus zarındaki maltaz, laktaz ve peptidazlar sindirimin son adımını da burada atar."
-   }
+   },
+   "kart": 11,
+   "goster": { "deger": { "k": 1 }, "not": "Duvarın kıvrılması tek başına iç yüzeyi <b>3 katına</b> çıkarıyor." }
   },
   {
    "baslik": "Kana mı, lenfe mi?",
@@ -100,7 +110,8 @@
      { "yazi": "Kılcal kana", "neden": "Kılcal kana glikoz, amino asit, su ve suda çözünen vitaminler geçer; bu kan önce karaciğere gider. Yağların çoğu bu yolu izlemez." },
      { "yazi": "Kalın bağırsağa", "neden": "Kalın bağırsak sindirim enzimi salgılamaz; su ve mineral emer. Yağın sindirimi ve emilimi ince bağırsakta tamamlanır." }
     ]
-   }
+   },
+   "kart": 11
   }
  ],
  "kapanis": [

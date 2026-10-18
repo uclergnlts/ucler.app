@@ -32,6 +32,13 @@
      "a": 60
     },
     "tamam": "cos60° = 0,5: W = 50 · 4 · 0,5 = 100 J. İşi yalnızca kuvvetin hareket yönündeki bileşeni yapar. Birimi joule: 1 J = 1 N·m."
+   },
+   "kart": 1,
+   "goster": {
+    "deger": {
+     "a": 30
+    },
+    "not": "30°'de W = 50 · 4 · cos30° ≈ 173 J. İşi yalnızca kuvvetin hareket yönündeki bileşeni yapar."
    }
   },
   {
@@ -61,7 +68,8 @@
       "neden": "cos90° = 0: kuvvet harekete dikse iş sıfırdır. Duvarı itip kımıldatamazsan da iş sıfırdır, yorulsan bile."
      }
     ]
-   }
+   },
+   "kart": 2
   },
   {
    "baslik": "Kinetik enerji",
@@ -89,6 +97,13 @@
      "v": 40
     },
     "tamam": "Hız 2 katına çıkınca enerji 4 katına çıktı, çünkü hız karesiyle girer: ½ · 1000 · 40² = 800 000 J. Hızlı giden aracı durdurmak bu yüzden çok daha zordur."
+   },
+   "kart": 3,
+   "goster": {
+    "deger": {
+     "v": 30
+    },
+    "not": "30 m/s'de KE = ½ · 1000 · 30² = 450 000 J: hız 1,5 katına çıktı, enerji 2,25 katına."
    }
   },
   {
@@ -116,7 +131,8 @@
       "neden": "PE azaldıkça KE artar; toplam hep 98 J kalır. Yerde PE sıfırdır, enerjinin tamamı kinetiktir: top ≈ 9,9 m/s ile çarpar. Buna <b>mekanik enerjinin korunumu</b> denir."
      }
     ]
-   }
+   },
+   "kart": 5
   },
   {
    "baslik": "Sürtünme",
@@ -144,6 +160,14 @@
     },
     "ipucu": "Şimdi sürtünmeyi aç ve yeniden kaydır.",
     "tamam": "Sürtünme mekanik enerjinin bir kısmını <b>ısıya</b> çevirdi: çocuk daha yavaş indi, kaydırak ısındı. Enerji yok olmadı; potansiyel, kinetik ve ısı toplamı hep 588 J."
+   },
+   "kart": 7,
+   "goster": {
+    "deger": {
+     "s": 0
+    },
+    "not": "Sürtünmesiz: 588 J'lik potansiyel enerjinin hepsi kinetiğe dönüşüyor, çocuk dibe yaklaşık 7,7 m/s ile varıyor.",
+    "oynat": true
    }
   },
   {
@@ -171,6 +195,13 @@
      "t": 5
     },
     "tamam": "Yapılan iş hep 1470 J; süre yarıya inince güç iki katına çıkar: 1470 / 5 = 294 W. 10 s'de yürüyerek çıksaydın 147 W olurdu. Elektrik faturasındaki 1 kWh = 3,6 milyon J'dür."
+   },
+   "kart": 10,
+   "goster": {
+    "deger": {
+     "t": 7
+    },
+    "not": "7 s'de çıkarsan güç 1470 / 7 = 210 W olur."
    }
   },
   {
@@ -198,6 +229,13 @@
      "x": 10
     },
     "tamam": "x = 0,1 m'de F = 200 · 0,1 = 20 N. Üçgenin alanı ½ · 0,1 · 20 = 1 J; bu, yayda depolanan <b>esneklik potansiyel enerjisidir</b>: ½·k·x². Uzamayı iki katına çıkarırsan enerji 4 katına çıkar."
+   },
+   "kart": 8,
+   "goster": {
+    "deger": {
+     "x": 5
+    },
+    "not": "x = 5 cm'de F = 200 · 0,05 = 10 N. Üçgenin alanı ½ · 0,05 · 10 = 0,25 J."
    }
   }
  ],

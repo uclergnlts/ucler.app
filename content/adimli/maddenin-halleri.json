@@ -30,7 +30,8 @@
       "neden": "Biri düzenli örgülü, öteki değil. Eriyişleri aynı olabilir mi?"
      }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Viskozite",
@@ -62,6 +63,14 @@
     },
     "ipucu": "Balı ısıtıp yeniden oynat.",
     "tamam": "Isınan balda tanecikler çekimi daha kolay yener ve birbirinin üzerinden hızla kayar: viskozite azalır. Gliserin ve bal sudan ağır akar, çünkü moleküller arası çekimleri güçlüdür."
+   },
+   "kart": 4,
+   "goster": {
+    "deger": {
+     "T": 30
+    },
+    "not": "30 °C'de bal daha kolay akıyor, ama 10 saniyede bardağın ancak <b>%35</b>'i doldu.",
+    "oynat": true
    }
   },
   {
@@ -109,6 +118,13 @@
       "dogru": true
      }
     ]
+   },
+   "kart": 6,
+   "goster": {
+    "deger": {
+     "T": 80
+    },
+    "not": "Sıcaklık 80 °C'ye çıkınca suyun buhar basıncı 55'ten <b>355 mmHg</b>'ye yükseldi."
    }
   },
   {
@@ -136,6 +152,13 @@
      "p": 20
     },
     "tamam": "2 atm'de su yaklaşık 120 °C'de kaynar; yemek bu yüzden çabuk pişer. Basınç düşünce kaynama noktası da düşer: Everest'te (≈ 0,3 atm) su yaklaşık 70 °C'de kaynar. 1 atm'deki kaynama noktasına <b>normal kaynama noktası</b> denir (su: 100 °C)."
+   },
+   "kart": 7,
+   "goster": {
+    "deger": {
+     "p": 5
+    },
+    "not": "0,5 atm'de (≈ 5500 m yükseklik) su yaklaşık <b>82 °C</b>'de kaynar: dış basınç düşünce kaynama noktası da düşer."
    }
   },
   {
@@ -174,7 +197,8 @@
       "neden": "Ter vücut sıcaklığındadır. Serinlik hâl değişiminden gelir."
      }
     ]
-   }
+   },
+   "kart": 12
   },
   {
    "baslik": "Faz diyagramı",
@@ -204,6 +228,13 @@
      ]
     },
     "tamam": "−20 °C'de yaklaşık 20 atm'nin üstünde CO₂ sıvılaşır. Üçlü noktası 5,1 atm'de olduğu için 1 atm'de sıvı CO₂ olamaz; kuru buz bu yüzden süblimleşir. Kritik sıcaklığın (31 °C) üstünde ise hiçbir basınç onu sıvılaştıramaz."
+   },
+   "kart": 14,
+   "goster": {
+    "deger": {
+     "P": 10
+    },
+    "not": "−20 °C ve 10 atm'de CO₂ hâlâ <b>gaz</b>: nokta, buhar eğrisinin altında kalıyor."
    }
   }
  ],

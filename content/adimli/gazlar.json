@@ -30,6 +30,13 @@
      "V": 2
     },
     "tamam": "Hacim yarıya inince basınç iki katına çıktı: P·V hep 4. Bu <b>Boyle yasasıdır</b>: P₁·V₁ = P₂·V₂. Dalgıç yüzeye çıkarken nefesini tutmaz, çünkü basınç azalınca ciğerdeki hava genleşir."
+   },
+   "kart": 3,
+   "goster": {
+    "deger": {
+     "V": 8
+    },
+    "not": "Hacim 8 L'ye, yani iki katına çıkınca basınç yarıya iner: <b>0,5 atm</b>. P·V yine 4."
    }
   },
   {
@@ -58,6 +65,13 @@
      "t": 327
     },
     "tamam": "Hacmi iki katına çıkarmak için kelvin sıcaklığı iki katına çıkmalı: 300 K → 600 K, yani 27 °C → 327 °C (54 °C değil). <b>Charles yasası</b>: V₁/T₁ = V₂/T₂. Doğruyu geri uzatırsan −273 °C'de, yani <b>mutlak sıfırda</b> (0 K) hacim sıfıra iner."
+   },
+   "kart": 4,
+   "goster": {
+    "deger": {
+     "t": -73
+    },
+    "not": "−73 °C = 200 K. Kelvin sıcaklığı 300 K'den 200 K'e inince hacim 6 L'den <b>4 L</b>'ye iner."
    }
   },
   {
@@ -85,7 +99,8 @@
       "neden": "27'den 327'ye 12 kat gibi görünür ama gaz hesaplarında sıcaklık her zaman kelvindir: 300 K → 600 K."
      }
     ]
-   }
+   },
+   "kart": 5
   },
   {
    "baslik": "Hepsi bir arada: PV = nRT",
@@ -113,6 +128,13 @@
      "n": 1.5
     },
     "tamam": "P = 1,5 · 0,082 · 300 / 4,1 = 9 atm. Aynı kap ve sıcaklıkta basınç mol sayısıyla doğru orantılıdır. <b>Avogadro</b>'ya göre de aynı T ve P'de eşit hacimdeki gazlar eşit sayıda tanecik içerir."
+   },
+   "kart": 8,
+   "goster": {
+    "deger": {
+     "n": 1
+    },
+    "not": "1 mol gazla P = 1 · 0,082 · 300 / 4,1 = <b>6 atm</b>. Mol sayısı artınca basınç da aynı oranda artar."
    }
   },
   {
@@ -153,7 +175,8 @@
       "dogru": true
      }
     ]
-   }
+   },
+   "kart": 10
   },
   {
    "baslik": "Graham: hangisi hızlı?",
@@ -180,7 +203,8 @@
       "neden": "Bu, HCl'nin daha hızlı olduğu anlamına gelirdi; oysa HCl daha ağırdır."
      }
     ]
-   }
+   },
+   "kart": 11
   },
   {
    "baslik": "Dalton: kısmi basınç",
@@ -207,6 +231,13 @@
      "o": 2
     },
     "tamam": "2 mol O₂ de 1 atm yapar: P(top) = 1 + 1 = 2 atm. Kısmi basınç mol kesriyle orantılıdır: P(O₂) = X(O₂) · P(top) = ½ · 2 = 1 atm. Bu <b>Dalton yasasıdır</b>: P(top) = P(A) + P(B)."
+   },
+   "kart": 12,
+   "goster": {
+    "deger": {
+     "o": 1
+    },
+    "not": "1 mol O₂ eklendi: 3 mol gazda P(top) = 1,5 atm, P(O₂) = ⅓ · 1,5 = <b>0,5 atm</b>, toplamın üçte biri."
    }
   }
  ],

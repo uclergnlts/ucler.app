@@ -32,7 +32,8 @@
       "neden": "Yanlar eşit, çünkü aynı derinlikteler. Üst ve alt yüzlerin derinliği farklı."
      }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Taşı tart",
@@ -60,6 +61,13 @@
      "V": 200
     },
     "tamam": "Gösterge 3 N'a indi: <b>görünür ağırlık = G − F<sub>k</sub></b>, yani F<sub>k</sub> = 2 N. <b>Arşimet ilkesi</b>: F<sub>k</sub> = V<sub>batan</sub>·d<sub>sıvı</sub>·g = 0,0002 m³ × 1000 kg/m³ × 10 m/s² = 2 N. Kaldırma kuvveti, cismin yerinden ettiği sıvının ağırlığıdır."
+   },
+   "kart": 3,
+   "goster": {
+    "deger": {
+     "V": 100
+    },
+    "not": "Taşın 100 cm³'ü suda: F<sub>k</sub> = 0,0001 × 1000 × 10 = 1 N, gösterge 5 − 1 = <b>4 N</b>."
    }
   },
   {
@@ -99,7 +107,8 @@
       "neden": "İki yüzün kuvveti de aynı miktarda artar; aradaki fark hep 10 N kalır. F<sub>k</sub> batan hacme bağlıdır, derinliğe değil. Kısmen batmış bir cismi bastırırsan ise batan hacim, dolayısıyla F<sub>k</sub> artar."
      }
     ]
-   }
+   },
+   "kart": 4
   },
   {
    "baslik": "Aynı cisim, farklı sıvılar",
@@ -126,6 +135,13 @@
      "dl": 12
     },
     "tamam": "Yüzen cisimde <b>F<sub>k</sub> = G</b>, bu yüzden V<sub>batan</sub> / V = d<sub>cisim</sub> / d<sub>sıvı</sub> = 0,6 / 1,2 = 1/2. Yüzdüğü her sıvıda F<sub>k</sub> hep 6 N; değişen yalnızca batan hacim. Özkütlesi 0,6'dan küçük sıvıda ise küp batar."
+   },
+   "kart": 6,
+   "goster": {
+    "deger": {
+     "dl": 15
+    },
+    "not": "1,5 g/cm³'lük sıvıda V<sub>batan</sub> / V = 0,6 / 1,5 = 0,4: küpün <b>%40</b>'ı batık."
    }
   },
   {
@@ -152,6 +168,13 @@
      "n": 4
     },
     "tamam": "Her konteyner gemiyi biraz daha batırdı. Yüzen gemide <b>F<sub>k</sub> = G<sub>gemi</sub> + G<sub>yük</sub></b>; artan ağırlığı dengelemek için gemi daha çok su yerinden etmeli. Yükleme çizgisi, gemiyi güvenle ne kadar batırabileceğini gösterir."
+   },
+   "kart": 10,
+   "goster": {
+    "deger": {
+     "n": 2
+    },
+    "not": "2 konteynerle F<sub>k</sub> = 2000 + 600 = 2600 kN. Gemi biraz daha battı ama su henüz yükleme çizgisinde değil."
    }
   },
   {
@@ -182,7 +205,8 @@
       "neden": "Hacim, yani F<sub>k</sub> aynı kaldı ama ağırlık arttı."
      }
     ]
-   }
+   },
+   "kart": 10
   },
   {
    "baslik": "Balonu uçur",
@@ -212,6 +236,13 @@
      ]
     },
     "tamam": "Her m³ helyum net yaklaşık 10 N kaldırır. 4 m³'te F<sub>k</sub> = 48 N, ağırlık 46,8 N: balon yükselir. Kaldırma kuvveti F<sub>k</sub> = V·d<sub>hava</sub>·g'dir. Sıcak hava balonunda ise ısınan havanın özkütlesi azalır."
+   },
+   "kart": 13,
+   "goster": {
+    "deger": {
+     "V": 3
+    },
+    "not": "3 m³'lük balonda F<sub>k</sub> ≈ 36 N, toplam ağırlık ≈ 40 + 5,1 = 45,1 N: balon yerden kalkmıyor."
    }
   }
  ],

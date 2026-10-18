@@ -30,7 +30,8 @@
       "neden": "Her an aynı yükseklikteler. Yatay hız düşmeyi ne hızlandırır ne yavaşlatır: yatay ve düşey hareket birbirinden bağımsızdır."
      }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Yatay atış",
@@ -58,6 +59,13 @@
      "v": 20
     },
     "tamam": "Düşüş 2 s sürdü: h = ½·g·t² → 19,6 = 4,9·t² → t = 2 s. Bu sürede taş yatayda x = 20 × 2 = 40 m gitti."
+   },
+   "kart": 2,
+   "goster": {
+    "deger": {
+     "v": 15
+    },
+    "not": "15 m/s ile atılan taş 2 s'de düşüyor ve 15 × 2 = 30 m öteye varıyor; bayrağa ulaşmıyor."
    }
   },
   {
@@ -99,7 +107,8 @@
       "neden": "Yatay hız düşmeyi hızlandırmaz."
      }
     ]
-   }
+   },
+   "kart": 2
   },
   {
    "baslik": "Tepe noktası",
@@ -129,7 +138,8 @@
       "neden": "vx = 20 × cos60° = 10 m/s hiç değişmez. Tepede vy = 0 olduğu için hız = vx = 10 m/s."
      }
     ]
-   }
+   },
+   "kart": 3
   },
   {
    "baslik": "En uzun menzil",
@@ -157,6 +167,13 @@
      "a": 45
     },
     "tamam": "45°'de menzil R = v0²·sin2θ / g = 400 × 1 / 9,8 ≈ 41 m; en büyüğü bu. Hava direnci yoksa ve top atıldığı seviyeye inerse en uzun menzil 45°'dedir."
+   },
+   "kart": 6,
+   "goster": {
+    "deger": {
+     "a": 75
+    },
+    "not": "75°: top dik çıkıyor ama menzil 400 · sin150° / 9,8 ≈ 20 m."
    }
   },
   {
@@ -198,7 +215,8 @@
       "neden": "İkisi de ≈ 35 m. Toplamı 90° olan açılarda sin2θ aynıdır (sin60° = sin120°). 60° daha yükseğe çıkar ve uzun uçar ama yatayda yavaştır."
      }
     ]
-   }
+   },
+   "kart": 6
   }
  ],
  "kapanis": [

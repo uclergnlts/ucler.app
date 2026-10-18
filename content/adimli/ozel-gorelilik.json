@@ -1,91 +1,290 @@
 {
-  "id": "ozel-gorelilik",
-  "ders": "fizik",
-  "konu": "ozel-gorelilik",
-  "baslik": "Özel Görelilik",
-  "ozet": "Hızları topla, ışığın hızını ölç, şimşeklerin sırasını bul, ışık saatini hızlandır, γ'yı 2 yap, müonu yere indir, gemiyi kısalt ve c sınırını zorla.",
-  "adimlar": [
+ "id": "ozel-gorelilik",
+ "ders": "fizik",
+ "konu": "ozel-gorelilik",
+ "baslik": "Özel Görelilik",
+ "ozet": "Hızları topla, ışığın hızını ölç, şimşeklerin sırasını bul, ışık saatini hızlandır, γ'yı 2 yap, müonu yere indir, gemiyi kısalt ve c sınırını zorla.",
+ "adimlar": [
+  {
+   "baslik": "Klasik hız toplama",
+   "metin": "Trenden ileri atılan top, trene göre <b>20 m/s</b> ile gidiyor. Yerdeki gözlemciye göre hızı ne olur? Treni hızlandır: top yere göre <b>50 m/s</b> ile gitsin, sonra oynat.",
+   "sahne": {
+    "tur": "fiz13-hiz",
+    "sure": 3
+   },
+   "deger": {
+    "v": 10
+   },
+   "kontroller": [
     {
-      "baslik": "Klasik hız toplama",
-      "metin": "Trenden ileri atılan top, trene göre <b>20 m/s</b> ile gidiyor. Yerdeki gözlemciye göre hızı ne olur? Treni hızlandır: top yere göre <b>50 m/s</b> ile gitsin, sonra oynat.",
-      "sahne": {"tur": "fiz13-hiz", "sure": 3},
-      "deger": {"v": 10},
-      "kontroller": [{"ad": "v", "etiket": "Trenin hızı", "min": 0, "max": 40, "adim": 10, "tur": "surgu", "birim": "m/s"}],
-      "gorev": {"tur": "ayarla", "hedef": {"v": 30}, "tamam": "30 + 20 = <b>50 m/s</b>. Klasik fizikte hızlar böyle toplanır ve günlük hızlarda bu doğrudur. Peki trenin farından çıkan ışık yere göre <b>c + v</b> ile mi gider?", "ipucu": "Yere göre topun hızı = trenin hızı + 20. Bu toplam 50 olmalı."}
-    },
-    {
-      "baslik": "Işık hızı herkes için c",
-      "metin": "1887'de Michelson ve Morley ışığın yöne göre farklı hızda gittiğini aradı, bulamadı. Şimdi bir gemi Dünya'ya <b>0,5c</b> ile yaklaşıyor ve farını yakıyor.",
-      "sahne": {"tur": "fiz13-isik", "sure": 4},
-      "gorev": {"tur": "tahmin", "soru": "Dünya'daki gözlemci farın ışığını hangi hızla ölçer?", "secenekler": [
-        {"yazi": "1,5c", "neden": "Klasik hız toplama böyle derdi; ama ışıkta işlemez, ölçümler hep c verir."},
-        {"yazi": "c", "dogru": true, "neden": "Einstein'ın ikinci postulatı: ışığın boşluktaki hızı kaynağın ve gözlemcinin hareketinden bağımsızdır; her eylemsiz gözlemci <b>c ≈ 3·10⁸ m/s</b> ölçer. Birinci postulat: fizik yasaları bütün eylemsiz sistemlerde aynıdır."},
-        {"yazi": "0,5c", "neden": "Işık kaynaktan yavaşlayarak çıkmaz; gemi de Dünya da c ölçer."}
-      ]}
-    },
-    {
-      "baslik": "Eşzamanlılık göreli",
-      "metin": "Giden trenin iki ucuna, A'ya ve B'ye, şimşek düşüyor. Yerde tam ortadaki <b>O</b>'ya iki ışık aynı anda gelir. Trenin ortasındaki <b>O′</b> ise B'ye doğru gidiyor. İki ışık da c ile geliyor.",
-      "sahne": {"tur": "fiz13-esz", "sure": 4.5},
-      "gorev": {"tur": "tahmin", "soru": "O′ şimşeklerin hangi sırayla düştüğü sonucuna varır?", "secenekler": [
-        {"yazi": "Aynı anda düştü", "neden": "O′ ışıkları farklı anlarda görür ve ikisinin de c ile geldiğini bilir; aynı anda düştüklerini söyleyemez."},
-        {"yazi": "Önce A'ya düştü", "neden": "O′, A'dan uzaklaşıyor; A'nın ışığı ona daha geç ulaşır."},
-        {"yazi": "Önce B'ye düştü", "dogru": true, "neden": "O′ öndeki ışığa doğru gittiği için onu önce görür. İki ışık da c ile geldiğinden, B'ye <b>önce</b> düştüğü sonucuna varır. Bir sistemde aynı anda olan olaylar başka bir sistemde aynı anda olmayabilir."}
-      ]}
-    },
-    {
-      "baslik": "Işık saati ve zaman genişlemesi",
-      "metin": "Gemideki ışık saatinde ışık iki ayna arasında <b>dik</b> gider. Dünya'dan bakınca ayna kayar, ışık <b>eğik ve daha uzun</b> yol alır; ama hızı yine c. Gemide 6 yıl geçiyor. Hızı ayarla: Dünya'da <b>10 yıl</b> geçsin.",
-      "sahne": {"tur": "fiz13-saat"},
-      "deger": {"b": 0.3},
-      "kontroller": [{"ad": "b", "etiket": "Geminin hızı", "min": 0, "max": 0.9, "adim": 0.1, "tur": "surgu", "birim": "c"}],
-      "gorev": {"tur": "ayarla", "hedef": {"b": 0.8}, "tamam": "0,8c'de γ = 1/√(1 − 0,64) = <b>5/3</b>. Δt = γ·Δt<sub>0</sub> = 5/3 · 6 = <b>10 yıl</b>. Olayların aynı yerde olduğu gemideki süre <b>öz zamandır</b>; en kısa süre odur, başka sistemlerden hep daha uzun ölçülür.", "ipucu": "10 / 6 = 5/3 olmalı. γ = 1/√(1 − v²/c²): v/c'yi büyüttükçe γ artar."}
-    },
-    {
-      "baslik": "γ çarpanı",
-      "metin": "γ hiçbir zaman 1'den küçük olmaz. 300 m/s hızlı bir jette bile γ ≈ 1 + 5·10⁻¹³; fark ancak atom saatleriyle ölçülür. Hızı ayarla: saatler <b>yarı hızda</b> işlesin, yani γ = 2 olsun.",
-      "sahne": {"tur": "fiz13-gama"},
-      "deger": {"b": 0.5},
-      "kontroller": [{"ad": "b", "etiket": "Hız", "min": 0, "max": 0.99, "adim": 0.01, "tur": "surgu", "birim": "c"}],
-      "gorev": {"tur": "ayarla", "hedef": {"b": [0.86, 0.87]}, "tamam": "γ = 2 için 1 − v²/c² = 1/4, yani v = (√3/2)c ≈ <b>0,866c</b>. Hız c'ye yaklaştıkça γ hızla büyür. v ≪ c iken γ ≈ 1 olduğu için günlük hayatta Newton fiziği yeterlidir.", "ipucu": "γ = 2 için √(1 − v²/c²) = 1/2 olmalı. Hızı 0,8c'nin biraz üstüne çıkar."}
-    },
-    {
-      "baslik": "Müonlar yere nasıl ulaşıyor?",
-      "metin": "Kozmik ışınlar atmosferde <b>müon</b> üretir. Durgun müonun ortalama ömrü <b>2,2 μs</b>; 0,995c ile bu sürede ancak <b>660 m</b> yol alabilir. Bir müon yerden 6,6 km yükseklikte doğdu.",
-      "sahne": {"tur": "fiz13-muon", "sure": 3.5},
-      "gorev": {"tur": "tahmin", "soru": "Müon ortalama ömründe yere ulaşabilir mi?", "secenekler": [
-        {"yazi": "Evet: yerden bakınca ömrü yaklaşık 10 kat uzar", "dogru": true, "neden": "0,995c'de γ ≈ 10. Yerden bakınca ömrü ≈ <b>22 μs</b> olur, bu sürede ≈ 6,6 km yol alır. Bu yüzden yerde bolca müon ölçülür. Müonun kendi sisteminde ise atmosferin kalınlığı γ kat kısalmıştır: ≈ 660 m."},
-        {"yazi": "Hayır: 2,2 μs'de ancak 660 m gider", "neden": "2,2 μs müonun kendi saatine göre ömrüdür. Yerden bakınca hareketli saat yavaş işler."},
-        {"yazi": "Evet: ışıktan hızlı gittiği için", "neden": "Müon 0,995c ile gider; kütleli hiçbir cisim c'ye ulaşamaz."}
-      ]}
-    },
-    {
-      "baslik": "Boy kısalması",
-      "metin": "Geminin kendi sisteminde ölçülen boyu, yani <b>öz boyu</b> 100 m. Hareket eden gemiyi Dünya'dan ölçen gözlemci onu daha kısa bulur: <b>L = L<sub>0</sub>/γ</b>. Hızı ayarla: gemi <b>80 m</b> ölçülsün.",
-      "sahne": {"tur": "fiz13-boy"},
-      "deger": {"b": 0},
-      "kontroller": [{"ad": "b", "etiket": "Geminin hızı", "min": 0, "max": 0.9, "adim": 0.1, "tur": "surgu", "birim": "c"}],
-      "gorev": {"tur": "ayarla", "hedef": {"b": 0.6}, "tamam": "0,6c'de γ = 1/√(1 − 0,36) = <b>1,25</b>, L = 100 / 1,25 = <b>80 m</b>. Kısalma <b>yalnız hareket doğrultusunda</b> olur: geminin yüksekliği 20 m kalır. Gemideki astronot ise kendi gemisini hep 100 m ölçer.", "ipucu": "100 / 80 = 1,25 olmalı, yani γ = 1,25. Hızı azar azar artır."}
-    },
-    {
-      "baslik": "c sınırı",
-      "metin": "Yüksek hızlarda momentum <b>p = γ·m·v</b> olur. Gemiye adım adım enerji ver ve Newton'un tahminiyle gerçeği karşılaştır.",
-      "sahne": {"tur": "fiz13-sinir"},
-      "deger": {"K": 0},
-      "kontroller": [{"ad": "K", "etiket": "Verilen enerji", "min": 0, "max": 9, "adim": 1, "tur": "sayac", "birim": "mc²"}],
-      "gorev": {"tur": "secim", "soru": "Motorları durmadan çalıştırırsan geminin hızına ne olur?", "secenekler": [
-        {"yazi": "Bir süre sonra c'yi geçer", "neden": "Newton fiziği böyle derdi; ama γ sınırsız büyüdüğü için hız hep c'nin altında kalır."},
-        {"yazi": "c'ye yaklaşır ama hiç ulaşamaz", "dogru": true, "neden": "v, c'ye yaklaştıkça γ sınırsız büyür; biraz daha hızlanmak için gereken enerji de sınırsız artar. <b>Kütleli hiçbir cisim c'ye ulaşamaz.</b> Yalnız foton gibi kütlesiz parçacıklar c ile gider."},
-        {"yazi": "Tam c'ye ulaşır ve orada kalır", "neden": "c'ye ulaşmak sonsuz enerji ister; kütleli cisim için her zaman v < c."}
-      ]}
+     "ad": "v",
+     "etiket": "Trenin hızı",
+     "min": 0,
+     "max": 40,
+     "adim": 10,
+     "tur": "surgu",
+     "birim": "m/s"
     }
-  ],
-  "kapanis": [
-    "Klasik hız toplama günlük hızlarda işler; ışıkta işlemez: herkes c ölçer.",
-    "Eşzamanlılık görelidir.",
-    "Zaman genişlemesi: Δt = γ·Δt₀, γ = 1/√(1 − v²/c²).",
-    "Boy yalnız hareket yönünde kısalır: L = L₀/γ.",
-    "Kütleli cisim c'ye ulaşamaz; durgun enerji E₀ = m·c².",
-    "v ≪ c iken γ ≈ 1 ve görelilik Newton fiziğine dönüşür."
-  ]
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "v": 30
+    },
+    "tamam": "30 + 20 = <b>50 m/s</b>. Klasik fizikte hızlar böyle toplanır ve günlük hızlarda bu doğrudur. Peki trenin farından çıkan ışık yere göre <b>c + v</b> ile mi gider?",
+    "ipucu": "Yere göre topun hızı = trenin hızı + 20. Bu toplam 50 olmalı."
+   },
+   "kart": 1,
+   "goster": {
+    "deger": {
+     "v": 20
+    },
+    "not": "Tren 20 m/s ile giderken top yere göre 20 + 20 = <b>40 m/s</b> ile gidiyor."
+   }
+  },
+  {
+   "baslik": "Işık hızı herkes için c",
+   "metin": "1887'de Michelson ve Morley ışığın yöne göre farklı hızda gittiğini aradı, bulamadı. Şimdi bir gemi Dünya'ya <b>0,5c</b> ile yaklaşıyor ve farını yakıyor.",
+   "sahne": {
+    "tur": "fiz13-isik",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Dünya'daki gözlemci farın ışığını hangi hızla ölçer?",
+    "secenekler": [
+     {
+      "yazi": "1,5c",
+      "neden": "Klasik hız toplama böyle derdi; ama ışıkta işlemez, ölçümler hep c verir."
+     },
+     {
+      "yazi": "c",
+      "dogru": true,
+      "neden": "Einstein'ın ikinci postulatı: ışığın boşluktaki hızı kaynağın ve gözlemcinin hareketinden bağımsızdır; her eylemsiz gözlemci <b>c ≈ 3·10⁸ m/s</b> ölçer. Birinci postulat: fizik yasaları bütün eylemsiz sistemlerde aynıdır."
+     },
+     {
+      "yazi": "0,5c",
+      "neden": "Işık kaynaktan yavaşlayarak çıkmaz; gemi de Dünya da c ölçer."
+     }
+    ]
+   },
+   "kart": 3
+  },
+  {
+   "baslik": "Eşzamanlılık göreli",
+   "metin": "Giden trenin iki ucuna, A'ya ve B'ye, şimşek düşüyor. Yerde tam ortadaki <b>O</b>'ya iki ışık aynı anda gelir. Trenin ortasındaki <b>O′</b> ise B'ye doğru gidiyor. İki ışık da c ile geliyor.",
+   "sahne": {
+    "tur": "fiz13-esz",
+    "sure": 4.5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "O′ şimşeklerin hangi sırayla düştüğü sonucuna varır?",
+    "secenekler": [
+     {
+      "yazi": "Aynı anda düştü",
+      "neden": "O′ ışıkları farklı anlarda görür ve ikisinin de c ile geldiğini bilir; aynı anda düştüklerini söyleyemez."
+     },
+     {
+      "yazi": "Önce A'ya düştü",
+      "neden": "O′, A'dan uzaklaşıyor; A'nın ışığı ona daha geç ulaşır."
+     },
+     {
+      "yazi": "Önce B'ye düştü",
+      "dogru": true,
+      "neden": "O′ öndeki ışığa doğru gittiği için onu önce görür. İki ışık da c ile geldiğinden, B'ye <b>önce</b> düştüğü sonucuna varır. Bir sistemde aynı anda olan olaylar başka bir sistemde aynı anda olmayabilir."
+     }
+    ]
+   },
+   "kart": 3
+  },
+  {
+   "baslik": "Işık saati ve zaman genişlemesi",
+   "metin": "Gemideki ışık saatinde ışık iki ayna arasında <b>dik</b> gider. Dünya'dan bakınca ayna kayar, ışık <b>eğik ve daha uzun</b> yol alır; ama hızı yine c. Gemide 6 yıl geçiyor. Hızı ayarla: Dünya'da <b>10 yıl</b> geçsin.",
+   "sahne": {
+    "tur": "fiz13-saat"
+   },
+   "deger": {
+    "b": 0.3
+   },
+   "kontroller": [
+    {
+     "ad": "b",
+     "etiket": "Geminin hızı",
+     "min": 0,
+     "max": 0.9,
+     "adim": 0.1,
+     "tur": "surgu",
+     "birim": "c"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "b": 0.8
+    },
+    "tamam": "0,8c'de γ = 1/√(1 − 0,64) = <b>5/3</b>. Δt = γ·Δt<sub>0</sub> = 5/3 · 6 = <b>10 yıl</b>. Olayların aynı yerde olduğu gemideki süre <b>öz zamandır</b>; en kısa süre odur, başka sistemlerden hep daha uzun ölçülür.",
+    "ipucu": "10 / 6 = 5/3 olmalı. γ = 1/√(1 − v²/c²): v/c'yi büyüttükçe γ artar."
+   },
+   "kart": 5,
+   "goster": {
+    "deger": {
+     "b": 0.5
+    },
+    "not": "0,5c'de γ = 1/√(1 − 0,25) ≈ 1,15: gemideki 6 yıl, Dünya'dan ≈ <b>6,9 yıl</b> ölçülür."
+   }
+  },
+  {
+   "baslik": "γ çarpanı",
+   "metin": "γ hiçbir zaman 1'den küçük olmaz. 300 m/s hızlı bir jette bile γ ≈ 1 + 5·10⁻¹³; fark ancak atom saatleriyle ölçülür. Hızı ayarla: saatler <b>yarı hızda</b> işlesin, yani γ = 2 olsun.",
+   "sahne": {
+    "tur": "fiz13-gama"
+   },
+   "deger": {
+    "b": 0.5
+   },
+   "kontroller": [
+    {
+     "ad": "b",
+     "etiket": "Hız",
+     "min": 0,
+     "max": 0.99,
+     "adim": 0.01,
+     "tur": "surgu",
+     "birim": "c"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "b": [
+      0.86,
+      0.87
+     ]
+    },
+    "tamam": "γ = 2 için 1 − v²/c² = 1/4, yani v = (√3/2)c ≈ <b>0,866c</b>. Hız c'ye yaklaştıkça γ hızla büyür. v ≪ c iken γ ≈ 1 olduğu için günlük hayatta Newton fiziği yeterlidir.",
+    "ipucu": "γ = 2 için √(1 − v²/c²) = 1/2 olmalı. Hızı 0,8c'nin biraz üstüne çıkar."
+   },
+   "kart": 6,
+   "goster": {
+    "deger": {
+     "b": 0.7
+    },
+    "not": "0,7c'de γ = 1/√(1 − 0,49) ≈ <b>1,4</b>: hareketli saat Dünya'dan bakınca yaklaşık 0,71 hızla işliyor."
+   }
+  },
+  {
+   "baslik": "Müonlar yere nasıl ulaşıyor?",
+   "metin": "Kozmik ışınlar atmosferde <b>müon</b> üretir. Durgun müonun ortalama ömrü <b>2,2 μs</b>; 0,995c ile bu sürede ancak <b>660 m</b> yol alabilir. Bir müon yerden 6,6 km yükseklikte doğdu.",
+   "sahne": {
+    "tur": "fiz13-muon",
+    "sure": 3.5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Müon ortalama ömründe yere ulaşabilir mi?",
+    "secenekler": [
+     {
+      "yazi": "Evet: yerden bakınca ömrü yaklaşık 10 kat uzar",
+      "dogru": true,
+      "neden": "0,995c'de γ ≈ 10. Yerden bakınca ömrü ≈ <b>22 μs</b> olur, bu sürede ≈ 6,6 km yol alır. Bu yüzden yerde bolca müon ölçülür. Müonun kendi sisteminde ise atmosferin kalınlığı γ kat kısalmıştır: ≈ 660 m."
+     },
+     {
+      "yazi": "Hayır: 2,2 μs'de ancak 660 m gider",
+      "neden": "2,2 μs müonun kendi saatine göre ömrüdür. Yerden bakınca hareketli saat yavaş işler."
+     },
+     {
+      "yazi": "Evet: ışıktan hızlı gittiği için",
+      "neden": "Müon 0,995c ile gider; kütleli hiçbir cisim c'ye ulaşamaz."
+     }
+    ]
+   },
+   "kart": 6
+  },
+  {
+   "baslik": "Boy kısalması",
+   "metin": "Geminin kendi sisteminde ölçülen boyu, yani <b>öz boyu</b> 100 m. Hareket eden gemiyi Dünya'dan ölçen gözlemci onu daha kısa bulur: <b>L = L<sub>0</sub>/γ</b>. Hızı ayarla: gemi <b>80 m</b> ölçülsün.",
+   "sahne": {
+    "tur": "fiz13-boy"
+   },
+   "deger": {
+    "b": 0
+   },
+   "kontroller": [
+    {
+     "ad": "b",
+     "etiket": "Geminin hızı",
+     "min": 0,
+     "max": 0.9,
+     "adim": 0.1,
+     "tur": "surgu",
+     "birim": "c"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "b": 0.6
+    },
+    "tamam": "0,6c'de γ = 1/√(1 − 0,36) = <b>1,25</b>, L = 100 / 1,25 = <b>80 m</b>. Kısalma <b>yalnız hareket doğrultusunda</b> olur: geminin yüksekliği 20 m kalır. Gemideki astronot ise kendi gemisini hep 100 m ölçer.",
+    "ipucu": "100 / 80 = 1,25 olmalı, yani γ = 1,25. Hızı azar azar artır."
+   },
+   "kart": 8,
+   "goster": {
+    "deger": {
+     "b": 0.8
+    },
+    "not": "0,8c'de γ = 5/3: 100 m'lik gemi Dünya'dan 100 / (5/3) = <b>60 m</b> ölçülür."
+   }
+  },
+  {
+   "baslik": "c sınırı",
+   "metin": "Yüksek hızlarda momentum <b>p = γ·m·v</b> olur. Gemiye adım adım enerji ver ve Newton'un tahminiyle gerçeği karşılaştır.",
+   "sahne": {
+    "tur": "fiz13-sinir"
+   },
+   "deger": {
+    "K": 0
+   },
+   "kontroller": [
+    {
+     "ad": "K",
+     "etiket": "Verilen enerji",
+     "min": 0,
+     "max": 9,
+     "adim": 1,
+     "tur": "sayac",
+     "birim": "mc²"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Motorları durmadan çalıştırırsan geminin hızına ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Bir süre sonra c'yi geçer",
+      "neden": "Newton fiziği böyle derdi; ama γ sınırsız büyüdüğü için hız hep c'nin altında kalır."
+     },
+     {
+      "yazi": "c'ye yaklaşır ama hiç ulaşamaz",
+      "dogru": true,
+      "neden": "v, c'ye yaklaştıkça γ sınırsız büyür; biraz daha hızlanmak için gereken enerji de sınırsız artar. <b>Kütleli hiçbir cisim c'ye ulaşamaz.</b> Yalnız foton gibi kütlesiz parçacıklar c ile gider."
+     },
+     {
+      "yazi": "Tam c'ye ulaşır ve orada kalır",
+      "neden": "c'ye ulaşmak sonsuz enerji ister; kütleli cisim için her zaman v < c."
+     }
+    ]
+   },
+   "kart": 9
+  }
+ ],
+ "kapanis": [
+  "Klasik hız toplama günlük hızlarda işler; ışıkta işlemez: herkes c ölçer.",
+  "Eşzamanlılık görelidir.",
+  "Zaman genişlemesi: Δt = γ·Δt₀, γ = 1/√(1 − v²/c²).",
+  "Boy yalnız hareket yönünde kısalır: L = L₀/γ.",
+  "Kütleli cisim c'ye ulaşamaz; durgun enerji E₀ = m·c².",
+  "v ≪ c iken γ ≈ 1 ve görelilik Newton fiziğine dönüşür."
+ ]
 }

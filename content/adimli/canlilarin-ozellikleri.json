@@ -15,7 +15,9 @@
     "tur": "ayarla",
     "hedef": { "d": 3 },
     "tamam": "Kalp bir <b>organdır</b>: kas dokusu başta olmak üzere birkaç dokudan oluşur ve belirli bir işi yapar. Sonraki basamaklar dolaşım sistemi ve sensin: hücre → doku → organ → sistem → organizma."
-   }
+   },
+   "kart": 1,
+   "goster": { "deger": { "d": 2 }, "not": "Kas hücreleri bir araya gelince <b>kas dokusu</b> oluşur: ikinci basamak." }
   },
   {
    "baslik": "ATP: enerji parası",
@@ -29,7 +31,8 @@
      { "yazi": "Molekül tamamen dağılır", "neden": "ATP'nin yalnızca son fosfatı ayrılır; adenin ve riboz yerinde kalır." },
      { "yazi": "Bir fosfat daha eklenir", "neden": "Fosfat eklemek enerji ister; ATP enerji verirken fosfat kaybeder." }
     ]
-   }
+   },
+   "kart": 2
   },
   {
    "baslik": "Metabolizma",
@@ -45,7 +48,8 @@
      { "yazi": "Besinlerin sindirilmesi", "neden": "Sindirim büyük molekülleri parçalar: bu bir yıkım, yani katabolizmadır." },
      { "yazi": "Glikozun solunumla yıkılması", "neden": "Solunum glikozu parçalayıp enerji açığa çıkarır: katabolizmadır." }
     ]
-   }
+   },
+   "kart": 2
   },
   {
    "baslik": "Homeostazi",
@@ -57,7 +61,9 @@
     "tur": "ayarla",
     "hedef": { "dis": [-10, 0] },
     "tamam": "Soğukta titrersin, sıcakta terlersin; ikisi de iç sıcaklığı yaklaşık 37 °C'de tutar. Dış koşullar değişse de iç ortamı sabit tutmaya <b>homeostazi</b> denir. Kan şekeri ve su miktarı da böyle dengelenir."
-   }
+   },
+   "kart": 8,
+   "goster": { "deger": { "dis": 40 }, "not": "Dışarısı 40 °C: terliyorsun, ter buharlaşırken ısı alıyor ve iç sıcaklık yine 37 °C kalıyor." }
   },
   {
    "baslik": "Uyarılara tepki",
@@ -70,7 +76,9 @@
     "hedef": { "isik": 1 },
     "ipucu": "Lambayı sağa alıp yeniden oynat.",
     "tamam": "Bitki ışığa doğru eğildi. Gölgede kalan taraftaki hücreler daha çok uzadığı için gövde ışığa döner. Elini sıcak sobadan çekmen de bir uyarıya tepkidir."
-   }
+   },
+   "kart": 7,
+   "goster": { "oynat": true, "not": "Lamba bitkinin tam üstündeyken ışık yukarıdan geliyor: bitki dümdüz yukarı uzuyor." }
   },
   {
    "baslik": "Virüs canlı mı?",
@@ -84,7 +92,8 @@
      { "yazi": "Evet, bakteri gibi ikiye bölünür", "neden": "Virüs hücre değildir, bölünemez." },
      { "yazi": "Evet, ama daha yavaş", "neden": "Metabolizması olmayan virüs hücre dışında hiç çoğalamaz." }
     ]
-   }
+   },
+   "kart": 9
   }
  ],
  "kapanis": [

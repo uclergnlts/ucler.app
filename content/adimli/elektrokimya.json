@@ -30,7 +30,8 @@
       "neden": "Elektronlar çözeltiden geçmez, yalnızca telden akar. Köprüde iyonlar hareket eder."
      }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Tuz köprüsü",
@@ -56,7 +57,8 @@
      "k": 0
     },
     "tamam": "Köprü olmadan devre tamamlanmaz: anot kabında + yük, katot kabında − yük birikir ve akım <b>durur</b>. Köprüdeki KNO₃ iyonları iki çözeltiyi de nötr tutar. Pil gösterimi: Zn | Zn²⁺ || Cu²⁺ | Cu."
-   }
+   },
+   "kart": 2
   },
   {
    "baslik": "Pil kur",
@@ -92,6 +94,14 @@
     },
     "ipucu": "E°pil = E°katot − E°anot. Şu an Zn–Cu: 1,10 V.",
     "tamam": "Zn anot, Ag katot: 0,80 − (−0,76) = <b>1,56 V</b>. Tablo standart hidrojen elektroduna (0 V) göre ölçülür; E° negatif çıksaydı pil kendiliğinden çalışmazdı."
+   },
+   "kart": 4,
+   "goster": {
+    "deger": {
+     "a": 3,
+     "k": 6
+    },
+    "not": "Fe anot, Ag katot: E°pil = 0,80 − (−0,44) = <b>1,24 V</b>. E°'si büyük olan katot olur."
    }
   },
   {
@@ -118,7 +128,8 @@
       "neden": "0,80 + 0,34 aldın. Fark alınır: E°katot − E°anot."
      }
     ]
-   }
+   },
+   "kart": 4
   },
   {
    "baslik": "Suyun elektrolizi",
@@ -145,7 +156,8 @@
       "dogru": true
      }
     ]
-   }
+   },
+   "kart": 8
   },
   {
    "baslik": "Faraday hesabı",
@@ -174,6 +186,13 @@
     },
     "ipucu": "0,1 mol Cu için 0,2 mol elektron gerekir: Q = 0,2 · 96 500 C.",
     "tamam": "Q = 0,2 · 96 500 = 19 300 C; t = Q / I = 19 300 / 4 = <b>4825 s</b>. Katotta 6,35 g bakır birikir. Kaplamada kaplanacak eşya katot yapılır."
+   },
+   "kart": 12,
+   "goster": {
+    "deger": {
+     "t": 965
+    },
+    "not": "965 s'de Q = 4 · 965 = 3860 C, yani 0,04 mol e⁻ geçer. Cu²⁺ iki elektron aldığı için 0,02 mol (≈ 1,27 g) bakır birikir."
    }
   },
   {
@@ -201,7 +220,8 @@
       "neden": "Tersi olur: çinko demirden aktif olduğu için önce o yükseltgenir. Gemilerde Mg veya Zn bloklar bu yüzden <b>kurban anot</b> olarak kullanılır."
      }
     ]
-   }
+   },
+   "kart": 12
   }
  ],
  "kapanis": [

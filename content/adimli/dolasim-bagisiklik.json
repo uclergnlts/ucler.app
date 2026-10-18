@@ -17,7 +17,8 @@
      { "yazi": "Oksijensiz", "dogru": true, "neden": "Akciğer atardamarı, sağ karıncıktan oksijensiz kanı akciğere götürür. Kan akciğerde O₂ alır ve akciğer toplardamarıyla oksijenli olarak sol kulakçığa döner." },
      { "yazi": "Yarı oksijenli, karışık", "neden": "İnsanda kalbin sağ ve sol yarısı birbirinden ayrıdır; oksijenli ve oksijensiz kan karışmaz." }
     ]
-   }
+   },
+   "kart": 2
   },
   {
    "baslik": "Kapakçıklar",
@@ -30,7 +31,9 @@
     "hedef": { "k": 1 },
     "ipucu": "Karıncık kasılınca kulakçığa giden kapı kapanmalı, aorta giden kapı açılmalı.",
     "tamam": "Karıncık kasılınca ikili kapakçık kapandı, yarım ay kapakçığı açıldı; kanın hepsi aorta gitti. Sağ tarafta da aynı işi üçlü kapakçık yapar."
-   }
+   },
+   "kart": 1,
+   "goster": { "oynat": true, "not": "Kapakçıklar tam kapanmayınca karıncık kasılırken kanın yarısı aort yerine kulakçığa geri kaçıyor." }
   },
   {
    "baslik": "Kalp hızı",
@@ -43,7 +46,9 @@
     "hedef": { "n": 75 },
     "ipucu": "Bir dakika 60 saniyedir. 60 saniyeye kaç tane 0,8 saniye sığar?",
     "tamam": "60 ÷ 0,8 = 75 atım. Kalbin sinirleri kesilse de kalp atar; sinirler ve hormonlar yalnızca hızı ayarlar."
-   }
+   },
+   "kart": 2,
+   "goster": { "deger": { "n": 100 }, "not": "Nabız 100 atım/dk olunca bir kalp döngüsü 60 ÷ 100 = <b>0,6 s</b> sürer." }
   },
   {
    "baslik": "Kanın içinde ne var?",
@@ -59,7 +64,8 @@
      { "yazi": "Akyuvarda", "neden": "Antikoru B lenfositinden gelişen plazma hücreleri üretir, ama salgılanan antikor hücrede kalmaz; plazmada çözünmüş taşınır." },
      { "yazi": "Plazmada", "dogru": true, "neden": "Plazma kanın yaklaşık %55'idir. Çoğu sudur ve içinde albümin, fibrinojen ve antikor gibi proteinler taşınır." }
     ]
-   }
+   },
+   "kart": 7
   },
   {
    "baslik": "Basınç ve hız",
@@ -75,7 +81,8 @@
      { "yazi": "Kılcallarda basınç sıfırdır", "neden": "Kılcalın atardamar ucunda basınç hâlâ sıvıyı dokuya itecek kadar yüksektir. Sıfıra yakın basınç ana toplardamardadır." },
      { "yazi": "Kılcal duvarı kalın ve serttir", "neden": "Tam tersi: kılcal duvarı tek kat hücredir. İnce duvar, madde alışverişini kolaylaştırır." }
     ]
-   }
+   },
+   "kart": 5
   },
   {
    "baslik": "Kan grupları",
@@ -88,7 +95,9 @@
     "hedef": { "g": 4 },
     "ipucu": "O grubunun plazmasında hem anti-A hem anti-B vardır. Antijeni olmayan alyuvarı ara.",
     "tamam": "Yalnız O grubu alyuvar çökelmedi; zarında A ya da B antijeni yoktur. Bu yüzden O Rh− genel vericidir. Yine de nakilden önce her zaman uygunluk testi yapılır."
-   }
+   },
+   "kart": 9,
+   "goster": { "deger": { "g": 2 }, "not": "B grubu alyuvardaki B antijeni, O grubu alıcının anti-B antikoruyla karşılaştı: alyuvarlar çöktü, bu kan verilemez." }
   },
   {
    "baslik": "Aşı neden işe yarar?",
@@ -102,7 +111,8 @@
      { "yazi": "Daha geç ve daha zayıf", "neden": "Vücut antijene alışıp yanıtı azaltmaz. Hafıza hücreleri yanıtı tersine hızlandırır." },
      { "yazi": "Daha hızlı ve daha güçlü", "dogru": true, "neden": "Hafıza hücreleri hemen çoğalır; antikor kısa sürede ve çok daha yüksek düzeye çıkar. Mikrop hastalık yapamadan etkisiz kalır. Aktif bağışıklık bu yüzden uzun sürer." }
     ]
-   }
+   },
+   "kart": 10
   }
  ],
  "kapanis": [

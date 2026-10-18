@@ -41,7 +41,8 @@
       "neden": "Molekülün iki ucu farklı davranır: biri suyu, öteki yağı sever. Sabunu işe yarar kılan da budur."
      }
     ]
-   }
+   },
+   "kart": 2
   },
   {
    "baslik": "Sert su",
@@ -77,6 +78,13 @@
     },
     "ipucu": "Su sert kalmalı; temizleyiciyi değiştir.",
     "tamam": "Sabun Ca²⁺ ve Mg²⁺ ile suda çözünmeyen bir çökelek (kaymak) yapar ve boşa gider. Sentetik <b>deterjan</b> bu iyonlarla çökelek yapmaz, sert suda da köpürür. Buna karşılık sabun doğada daha kolay parçalanır."
+   },
+   "kart": 4,
+   "goster": {
+    "deger": {
+     "sert": 0
+    },
+    "not": "Yumuşak suda sabun bol köpürür. Sorun sabunun kendisi değil, sert sudaki Ca²⁺ ve Mg²⁺ iyonlarıdır."
    }
   },
   {
@@ -104,7 +112,8 @@
       "dogru": true
      }
     ]
-   }
+   },
+   "kart": 3
   },
   {
    "baslik": "Asla karıştırma",
@@ -131,7 +140,8 @@
       "neden": "Bu karışım yalnızca nötrleşmez: klor gazı da açığa çıkar."
      }
     ]
-   }
+   },
+   "kart": 4
   },
   {
    "baslik": "Monomerden polimere",
@@ -157,6 +167,13 @@
      "m": 3
     },
     "tamam": "Tetrafloroetenden teflon (PTFE) oluşur. Etenden polietilen (poşet), vinil klorürden PVC (boru) elde edilir. Plastikler doğada yüzlerce yıl kalır ve mikroplastiğe ufalanır; nişasta, selüloz ve protein ise doğal polimerlerdir."
+   },
+   "kart": 6,
+   "goster": {
+    "deger": {
+     "m": 2
+    },
+    "not": "Vinil klorürün (CH₂=CHCl) çift bağları açılıp uç uca bağlanınca <b>PVC</b> oluşur: su borusu."
    }
   },
   {
@@ -185,6 +202,13 @@
      "g": 200
     },
     "tamam": "200 g × 25 / 100 = 50 g şeker. Etiketteki değeri yediğin kütleye göre hesapla: 40 g'lık paketin tamamı 10 g şeker eder. Kozmetikte de içerikler çoktan aza doğru sıralanır."
+   },
+   "kart": 10,
+   "goster": {
+    "deger": {
+     "g": 100
+    },
+    "not": "100 g bisküvide etiketteki değer aynen geçerli: 25 g şeker, günlük sınırın yarısı."
    }
   }
  ],

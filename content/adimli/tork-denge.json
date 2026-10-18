@@ -33,6 +33,13 @@
      ]
     },
     "tamam": "d = 0,6 m'de F = 12 / 0,6 = 20 N yetiyor, daha uzakta daha da azı. Menteşeye yakın itersen 60 N gerekir. Kapı kolu bu yüzden menteşeden en uzak kenardadır."
+   },
+   "kart": 1,
+   "goster": {
+    "deger": {
+     "d": 3
+    },
+    "not": "Elin menteşeden 0,3 m uzakta: 12 / 0,3 = <b>40 N</b> gerekiyor."
    }
   },
   {
@@ -63,6 +70,13 @@
      "theta": 90
     },
     "tamam": "θ = 90°'de τ = 20 · 0,5 · sin90° = 10 N·m. Yalnızca anahtara dik bileşen F·sinθ döndürür; anahtar boyunca çeken bileşen tork üretmez. Kuvvet kolu d = r·sinθ'dır."
+   },
+   "kart": 2,
+   "goster": {
+    "deger": {
+     "theta": 150
+    },
+    "not": "θ = 150°'de τ = 20 · 0,5 · sin150° = <b>5 N·m</b>: kuvvet kolu yalnızca 0,25 m."
    }
   },
   {
@@ -95,7 +109,8 @@
       "neden": "20 / 0,8 = 25 eder ama tork bölmeyle değil, F·d çarpımıyla bulunur."
      }
     ]
-   }
+   },
+   "kart": 2
   },
   {
    "baslik": "Tahterevalli",
@@ -122,6 +137,13 @@
      "d": 6
     },
     "tamam": "400 · 1,5 = 600 N·m = 300 · 2. Zıt yönlü torklar eşit, Στ = 0. Ağır çocuk desteğe daha yakın oturur. Tahtanın ağırlığını saymazsak destek de 700 N yukarı iter, böylece ΣF = 0 olur."
+   },
+   "kart": 7,
+   "goster": {
+    "deger": {
+     "d": 8
+    },
+    "not": "400 N'luk çocuk 2 m'de: 400 · 2 = 800 N·m, soldaki 300 · 2 = 600 N·m'den büyük; tahterevalli onun tarafına iner."
    }
   },
   {
@@ -149,6 +171,13 @@
      "x": 2
     },
     "tamam": "A'ya göre tork: N<sub>B</sub> · 4 = 40 · 2 + 60 · 1, yani N<sub>B</sub> = 35 N. ΣF = 0'dan N<sub>A</sub> = 100 − 35 = 65 N. Dönme noktasını bilinmeyen kuvvetin üstüne koyunca o kuvvetin torku sıfır olur."
+   },
+   "kart": 8,
+   "goster": {
+    "deger": {
+     "x": 4
+    },
+    "not": "Yük ortada (2 m): N<sub>B</sub> · 4 = 40 · 2 + 60 · 2, yani N<sub>B</sub> = <b>50 N</b>; iki destek eşit yük taşıyor."
    }
   },
   {
@@ -176,6 +205,13 @@
      "m": 6
     },
     "tamam": "x<sub>KM</sub> = (2·0 + 6·4) / (2 + 6) = 3 m. Kütle merkezinden asılan çubuk dengede durur. Kütle merkezi ağır parçaya daha yakındır."
+   },
+   "kart": 11,
+   "goster": {
+    "deger": {
+     "m": 3
+    },
+    "not": "Sağda 3 kg varken x<sub>KM</sub> = 3 · 4 / (2 + 3) = <b>2,4 m</b>. Asma noktası 3 m'de olduğu için çubuk sola yatıyor."
    }
   },
   {
@@ -203,7 +239,8 @@
       "dogru": true
      }
     ]
-   }
+   },
+   "kart": 11
   }
  ],
  "kapanis": [

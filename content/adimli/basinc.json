@@ -30,7 +30,8 @@
       "neden": "Ağırlıklar eşit, ama değdikleri alanlar farklı."
      }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Kara gömülme",
@@ -60,6 +61,13 @@
      ]
     },
     "tamam": "600 N ÷ 0,2 m² = 3000 Pa. Kar ayakkabısı ağırlığını değiştirmez, onu geniş alana yayar. Tersi de işe yarar: bıçağın keskin ağzı ve raptiyenin ucu küçük alanla büyük basınç yaratır."
+   },
+   "kart": 2,
+   "goster": {
+    "deger": {
+     "A": 10
+    },
+    "not": "Taban alanı 0,1 m²: basınç 600 ÷ 0,1 = 6000 Pa, karın taşıyabildiğinin iki katı. Bu alanla kara gömülürsün."
    }
   },
   {
@@ -87,6 +95,13 @@
      "h": 20
     },
     "tamam": "20 × 1000 × 10 = 200.000 Pa. Derinlik iki katına çıkınca basınç da iki katına çıkar. Suda her 10 m, yaklaşık 100.000 Pa ekler. Baraj duvarları bu yüzden altta daha kalındır."
+   },
+   "kart": 3,
+   "goster": {
+    "deger": {
+     "h": 10
+    },
+    "not": "10 m derinlikte suyun basıncı 10 × 1000 × 10 = 100.000 Pa."
    }
   },
   {
@@ -114,7 +129,8 @@
       "neden": "Sıvı basıncı yalnızca derinliğe ve sıvının özkütlesine bağlıdır: 0,2 × 1000 × 10 = 2000 Pa. Kabın şekli ve sıvının miktarı fark etmez. Buna <b>hidrostatik paradoks</b> denir."
      }
     ]
-   }
+   },
+   "kart": 3
   },
   {
    "baslik": "Hidrolik kaldıraç",
@@ -141,6 +157,13 @@
      "A2": 500
     },
     "tamam": "İki pistonda basınç eşittir: <b>F₁ / A₁ = F₂ / A₂</b>. Alan 50 kat olunca kuvvet de 50 kat olur: 200 N × 50 = 10.000 N. Ama iş kazanmazsın: küçük pistonu 50 cm itersen araba yalnızca 1 cm yükselir."
+   },
+   "kart": 7,
+   "goster": {
+    "deger": {
+     "A2": 300
+    },
+    "not": "Büyük piston 300 cm², küçüğün 30 katı: kuvvet 200 N × 30 = 6000 N. Araba için yetmiyor."
    }
   },
   {
@@ -168,6 +191,13 @@
      "r": 6000
     },
     "tamam": "Yukarı çıktıkça üstündeki hava azalır, açık hava basıncı düşer ve cıva sütunu kısalır. Su, buhar basıncı dış basınca eşitlenince kaynar; dış basınç düşünce bunu daha düşük sıcaklıkta yapar. Everest zirvesinde su yaklaşık 70 °C'de kaynar."
+   },
+   "kart": 9,
+   "goster": {
+    "deger": {
+     "r": 3000
+    },
+    "not": "3000 m'de açık hava basıncı düşer, cıva yaklaşık 53 cm'ye iner. Su burada yaklaşık 90 °C'de kaynar."
    }
   }
  ],

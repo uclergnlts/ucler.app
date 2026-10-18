@@ -17,7 +17,8 @@
      { "yazi": "İlik boşluğundan", "neden": "İlik kan hücresi üretir (kırmızı ilik) ya da yağ depolar (sarı ilik); kemiğin boyunu uzatmaz." },
      { "yazi": "Epifiz plaklarından", "dogru": true, "neden": "Plakta kıkırdak çoğalır ve kemikleşir; kemik iki ucundan uzar. Ergenlik bitince plak kemikleşir ve boy uzaması durur." }
     ]
-   }
+   },
+   "kart": 5
   },
   {
    "baslik": "Eklemler",
@@ -34,7 +35,8 @@
      { "yazi": "Kemik iliği", "neden": "İlik kemiğin içindedir ve kan hücresi üretir; eklemle ilgisi yoktur." },
      { "yazi": "Eklem sıvısı ve kıkırdak", "dogru": true, "neden": "Kapsülün içindeki eklem sıvısı kayganlaştırır, uçlardaki kıkırdak darbeyi yumuşatır. Bağlar ise kemikleri birbirine tutar." }
     ]
-   }
+   },
+   "kart": 7
   },
   {
    "baslik": "Kolunu bük",
@@ -50,7 +52,9 @@
     "hedef": { "b": 1, "tr": 0 },
     "ipucu": "Bükmek için öndeki kas çekmeli, arkadaki gevşemeli. İkisi birden kasılırsa kol kilitlenir.",
     "tamam": "Biseps kasıldı ve önkolu çekti, triseps gevşedi. Kolu açarken tersi olur. Böyle zıt çalışan kaslara antagonist kaslar denir."
-   }
+   },
+   "kart": 14,
+   "goster": { "deger": { "b": 1 }, "not": "Triseps kasılıyken biseps de kasıldı: iki kas birbirine karşı çekiyor, kol yarı bükük kilitlendi." }
   },
   {
    "baslik": "Kayan iplikler",
@@ -64,7 +68,8 @@
      { "yazi": "I bandının", "neden": "I bandı yalnızca aktinin bulunduğu bölgedir; aktin içeri kaydıkça I bandı daralır." },
      { "yazi": "A bandının", "dogru": true, "neden": "A bandı miyozinin boyudur ve miyozin kısalmaz. İplikler kısalmaz, birbirinin üzerinde kayar; I bandı ve H bölgesi daralır." }
     ]
-   }
+   },
+   "kart": 9
   },
   {
    "baslik": "Ca²⁺ ve ATP",
@@ -80,7 +85,9 @@
     "hedef": { "ca": 1, "atp": 1 },
     "ipucu": "Kasılma için iki şey gerekir: bağlanma yerlerini açan Ca²⁺ ve çekme enerjisini veren ATP.",
     "tamam": "Kas kasıldı. Gevşemek de ATP ister: miyozin başı ancak ATP bağlayınca aktinden ayrılır, Ca²⁺ da ATP harcanarak sarkoplazmik retikuluma geri pompalanır. Ölümden sonra ATP bitince başlar ayrılamaz: ölüm sertliği."
-   }
+   },
+   "kart": 10,
+   "goster": { "oynat": true, "not": "ATP var ama Ca²⁺ salınmadı: aktindeki bağlanma yerleri kapalı, miyozin tutunamıyor ve kas kasılmıyor." }
   },
   {
    "baslik": "ATP nereden gelir?",
@@ -94,7 +101,8 @@
      { "yazi": "Oksijenli solunum", "neden": "Oksijenli solunum en çok ATP'yi verir, ama devreye girmesi zaman alır. Uzun süren hareketin kaynağıdır." },
      { "yazi": "Laktik asit fermantasyonu", "neden": "Oksijen yetmediğinde çalışır ve glikoz başına yalnızca 2 ATP verir. Hazır ATP'den sonraki ilk kaynak değildir." }
     ]
-   }
+   },
+   "kart": 10
   },
   {
    "baslik": "Üç kas türü",
@@ -108,7 +116,8 @@
      { "yazi": "Düz kas", "neden": "Düz kas istemsizdir (mide, damar duvarı) ama çizgisizdir." },
      { "yazi": "Kalp kası", "dogru": true, "neden": "Kalp kası çizgilidir ama istemsiz çalışır. Ara diskler hücreleri bağlar, uyarı hızla yayılır." }
     ]
-   }
+   },
+   "kart": 8
   }
  ],
  "kapanis": [

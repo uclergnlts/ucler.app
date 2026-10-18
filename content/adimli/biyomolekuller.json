@@ -15,7 +15,9 @@
     "tur": "ayarla",
     "hedef": { "n": 5 },
     "tamam": "5 glikoz arasında 4 bağ kuruldu ve her bağda bir su molekülü ayrıldı. Birimler su çıkararak birleşir: <b>dehidrasyon sentezi</b>."
-   }
+   },
+   "kart": 2,
+   "goster": { "deger": { "n": 3 }, "not": "3 glikoz arasında 2 bağ kuruldu ve her bağda bir su ayrıldı: <b>2 su</b>." }
   },
   {
    "baslik": "Kaç su?",
@@ -30,7 +32,8 @@
      { "yazi": "100", "neden": "Ekrandaki 6 glikoza bak: kaç bağ var? Bağ sayısı birim sayısından bir eksik." },
      { "yazi": "50", "neden": "Su, her iki komşu birim arasındaki bağda çıkar; birimleri ikişer ikişer saymıyoruz." }
     ]
-   }
+   },
+   "kart": 4
   },
   {
    "baslik": "Hidroliz",
@@ -42,7 +45,8 @@
     "tur": "ayarla",
     "hedef": { "su": 1 },
     "tamam": "4 su girdi, 4 bağ kırıldı ve 5 glikoz serbest kaldı. Su eklenerek bağ kırılmasına <b>hidroliz</b> denir. Sindirimde nişasta böyle glikoza ayrılır."
-   }
+   },
+   "kart": 2
   },
   {
    "baslik": "Yağ: yoğun enerji",
@@ -54,7 +58,9 @@
     "tur": "ayarla",
     "hedef": { "g": 11 },
     "tamam": "11 g yağ ≈ 99 kcal, karbonhidratta ise 25 g gerekiyor. Yağ, gramda karbonhidratın iki katından fazla enerji verir; bu yüzden uzun süreli depo için idealdir."
-   }
+   },
+   "kart": 5,
+   "goster": { "deger": { "g": 5 }, "not": "5 g yağ × 9 kcal = <b>45 kcal</b>: karbonhidratın 100 kcal'ine henüz yetmiyor." }
   },
   {
    "baslik": "Proteinin şekli",
@@ -70,7 +76,8 @@
      { "yazi": "Hiçbir şey değişmedi", "neden": "Değiştirince alyuvara ne oldu? Sıra değişirse şekil de değişebilir." },
      { "yazi": "Protein yağa dönüştü", "neden": "Hâlâ bir protein; değişen yalnızca sırası, dolayısıyla şekli ve görevi." }
     ]
-   }
+   },
+   "kart": 8
   },
   {
    "baslik": "DNA ve RNA",
@@ -86,7 +93,8 @@
      { "yazi": "Timin (T)", "neden": "Timin DNA'ya özgüdür. RNA'da onun yerinde hangi baz var?" },
      { "yazi": "Adenin (A)", "neden": "Adenin hem DNA'da hem RNA'da bulunur." }
     ]
-   }
+   },
+   "kart": 10
   }
  ],
  "kapanis": [

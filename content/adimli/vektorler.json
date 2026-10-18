@@ -29,7 +29,8 @@
       "neden": "10 N sağa da, sola da, yukarı da olabilir. Kuvvet, hız, yer değiştirme gibi büyüklükler <b>vektöreldir</b>: sayı + birim + <b>yön</b>."
      }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Ok ile çiz",
@@ -65,6 +66,14 @@
      "a": 135
     },
     "tamam": "135° sol üste bakar. Boyu ve yönü aynı iki vektör, nerede çizilirse çizilsin eşittir."
+   },
+   "kart": 2,
+   "goster": {
+    "deger": {
+     "L": 2,
+     "a": 45
+    },
+    "not": "Boyu 2 birim, θ = 45°: ok sağ üste, +x ekseniyle 45° açı yaparak bakıyor."
    }
   },
   {
@@ -92,6 +101,13 @@
      "b": 90
     },
     "tamam": "A ile B dik olunca bir dik üçgen oluşur: R = √(3² + 4²) = 5. Bileşkenin büyüklüğü, vektörlerin arasındaki açıya bağlıdır; sayıları toplamak yetmez."
+   },
+   "kart": 3,
+   "goster": {
+    "deger": {
+     "b": 60
+    },
+    "not": "B 60° dönünce bileşke ≈ <b>6,1 birim</b>: 3 + 4 = 7'den kısa, çünkü vektörler aynı yönde değil."
    }
   },
   {
@@ -131,7 +147,8 @@
       "neden": "B'yi 0° yap: bileşke 7 olur, 4'ten büyük."
      }
     ]
-   }
+   },
+   "kart": 4
   },
   {
    "baslik": "Sayıyla çarp",
@@ -158,6 +175,13 @@
      "k": -2
     },
     "tamam": "−2A: boyu iki kat, yönü ters. Çıkarma da buna dayanır: A − B = A + (−B), yani B'yi ters çevirip eklersin."
+   },
+   "kart": 5,
+   "goster": {
+    "deger": {
+     "k": -1
+    },
+    "not": "k = −1: boyu A ile aynı ama yönü ters, yani <b>−A</b>."
    }
   },
   {
@@ -185,6 +209,13 @@
      "a": 30
     },
     "tamam": "sin 30° = 0,5, yani Vy = 10 × 0,5 = 5. O zaman Vx = 10 × cos 30° ≈ 8,66. İki bileşen uç uca eklenince yine V'yi verir."
+   },
+   "kart": 7,
+   "goster": {
+    "deger": {
+     "a": 45
+    },
+    "not": "θ = 45°'de V<sub>y</sub> = 10 × sin45° ≈ <b>7,07</b>; V<sub>x</sub> da aynı."
    }
   },
   {
@@ -211,6 +242,13 @@
      "k": 4
     },
     "tamam": "√(3² + 4²) = √25 = 5. Toplam 7 adım yürüdün ama yer değiştirmen 5 adım: yol skaler, yer değiştirme vektördür."
+   },
+   "kart": 8,
+   "goster": {
+    "deger": {
+     "k": 2
+    },
+    "not": "Kuzeye 2 adımla uzaklık √(3² + 2²) = √13 ≈ <b>3,6 adım</b>."
    }
   }
  ],

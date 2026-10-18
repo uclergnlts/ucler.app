@@ -17,7 +17,8 @@
      { "yazi": "Göz merceğinde", "neden": "Mercek yalnızca ışığı kırıp retinaya odaklar; algıyla ilgisi yoktur." },
      { "yazi": "Beyindeki görme merkezinde", "dogru": true, "neden": "Reseptör uyarıyı impulsa çevirir; görmek, duymak, tat almak gibi algıların hepsi beyinde oluşur." }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Göz bebeği",
@@ -30,7 +31,9 @@
     "hedef": { "isik": 1 },
     "ipucu": "Az ışıkta göz bebeği büyür ki retinaya daha çok ışık girsin.",
     "tamam": "Loşta göz bebeği büyüdü; çok ışıkta küçülür. Bu bir reflekstir ve retinayı fazla ışıktan korur."
-   }
+   },
+   "kart": 3,
+   "goster": { "deger": { "isik": 5 }, "not": "Işık en parlak: iris göz bebeğini en dar hâline getirdi, retinaya daha az ışık giriyor." }
   },
   {
    "baslik": "Yakına bak",
@@ -46,7 +49,8 @@
      { "yazi": "Kirpiksi kas gevşer, askı bağları gerilir", "neden": "Bu uzağa bakarken olur. Gergin bağlar merceği çeker ve inceltir." },
      { "yazi": "İris kasılır ve merceği sıkıştırır", "neden": "İris yalnızca göz bebeğinin çapını ayarlar; merceğin şeklini kirpiksi kaslar değiştirir." }
     ]
-   }
+   },
+   "kart": 5
   },
   {
    "baslik": "Miyop göz",
@@ -59,7 +63,9 @@
     "hedef": { "d": -2 },
     "ipucu": "Odak öne düşüyor. Işığı biraz dağıtan eksi numaralı mercek odağı geriye iter.",
     "tamam": "Kalın kenarlı (ıraksak) mercek ışığı dağıttı ve odak retinaya geldi. Miyoplar uzağı bulanık görür ve eksi numaralı gözlük takar."
-   }
+   },
+   "kart": 8,
+   "goster": { "deger": { "d": 1 }, "not": "+1 D ince kenarlı (yakınsak) cam ışığı daha çok topladı: odak retinanın daha da önüne kaydı." }
   },
   {
    "baslik": "Hipermetrop göz",
@@ -75,7 +81,8 @@
      { "yazi": "İnce kenarlı (yakınsak) mercek", "dogru": true, "neden": "Yakınsak mercek ışığı önceden toplar ve odağı öne, retinaya çeker. Hipermetroplar artı numaralı gözlük takar." },
      { "yazi": "Silindirik mercek", "neden": "Silindirik mercek astigmatizmi, yani korneadaki eğrilik bozukluğunu düzeltir. Odağı öne almaz." }
     ]
-   }
+   },
+   "kart": 8
   },
   {
    "baslik": "Sesin yolu",
@@ -89,7 +96,8 @@
      { "yazi": "Kulak zarı → kemikçikler → salyangoz", "dogru": true, "neden": "Zar titreşir; çekiç, örs ve üzengi titreşimi iç kulağa iletir. Salyangozdaki tüylü hücreler impuls üretir, işitme siniri beyne taşır." },
      { "yazi": "Kulak zarı → salyangoz → kemikçikler", "neden": "Kemikçikler (çekiç, örs, üzengi) orta kulaktadır; titreşimi salyangoza onlar taşır." }
     ]
-   }
+   },
+   "kart": 9
   },
   {
    "baslik": "Denge",
@@ -103,7 +111,8 @@
      { "yazi": "Östaki borusu", "neden": "Östaki borusu orta kulağı yutağa bağlar ve kulak zarının iki yanındaki basıncı eşitler. Algılama yapmaz." },
      { "yazi": "Yarım daire kanalları", "dogru": true, "neden": "Kanal başla döner ama içindeki sıvı geride kalır ve tüylü hücreleri eğer. Bilgi beyinciğe gider. Durunca sıvı biraz daha döndüğü için başın döner." }
     ]
-   }
+   },
+   "kart": 11
   }
  ],
  "kapanis": [

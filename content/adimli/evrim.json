@@ -19,7 +19,8 @@
      { "yazi": "Popülasyondaki birey sayısı", "neden": "Her kuşakta 5 birey var; sayı değişmedi. Değişen başka bir şey." },
      { "yazi": "Gen havuzundaki alel frekansı", "dogru": true, "neden": "A'nın payı 0,3'ten 0,8'e çıktı. Evrim alel frekansının değişmesidir; birey değil, popülasyon evrimleşir." }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Kazanılmış özellik",
@@ -33,7 +34,8 @@
      { "yazi": "Geçmez; kas büyümesi gametteki DNA'yı değiştirmez", "dogru": true, "neden": "Yavruya yalnızca gametteki DNA geçer. Çalışmayla büyüyen kas bir modifikasyondur; kalıtsal değildir." },
      { "yazi": "Yarısı geçer; çocuk biraz kaslı doğar", "neden": "Kazanılmış özelliğin hiçbir kısmı kalıtılmaz. Çocuğun kasları kendi genlerine ve yaşamına bağlıdır." }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Antibiyotik direnci",
@@ -47,7 +49,8 @@
      { "yazi": "Bakteriler ilaca alışır ve bunu yavrularına aktarır", "neden": "Bu, Lamarckçı bir yanılgıdır. Ölen duyarlı bakteriler alışamaz; yaşayan dirençliler zaten dirençliydi." },
      { "yazi": "Önceden var olan dirençlileri seçer", "dogru": true, "neden": "Antibiyotik duyarlıları öldürür; dirençliler hayatta kalıp bölünür. Seçilim yeni alel üretmez, var olanlar arasından seçer." }
     ]
-   }
+   },
+   "kart": 4
   },
   {
    "baslik": "Seçilim tipleri",
@@ -63,7 +66,8 @@
      { "yazi": "Yönlendirici seçilim", "neden": "Yönlendiricide yalnızca bir uç kayırılır ve ortalama kayar. Burada iki uç da dezavantajlı." },
      { "yazi": "Ayırıcı seçilim", "neden": "Ayırıcıda iki uç kayırılır, ortadakiler elenir. Bebeklerde tam tersi oluyor." }
     ]
-   }
+   },
+   "kart": 8
   },
   {
    "baslik": "Hardy–Weinberg",
@@ -76,7 +80,9 @@
     "hedef": { "q": 40 },
     "ipucu": "aa oranı q²'dir. Karesi 0,16 eden sayıyı ara.",
     "tamam": "q = √0,16 = 0,4 ve p = 0,6. Taşıyıcı (Aa) oranı 2pq = 2 · 0,6 · 0,4 = 0,48: çekinik alel çoğunlukla fark edilmeden taşıyıcılarda saklanır."
-   }
+   },
+   "kart": 6,
+   "goster": { "deger": { "q": 50 }, "not": "q = 0,5 olsaydı aa oranı q² = 0,25, yani <b>%25</b> olurdu; Aa oranı 2pq = %50." }
   },
   {
    "baslik": "Genetik sürüklenme",
@@ -93,7 +99,8 @@
      { "yazi": "Küçük popülasyonda", "dogru": true, "neden": "10 bireyde birkaç bireyin şansı bütün havuzu değiştirir; bazı tekrarlarda bir alel tamamen kayboldu. Darboğaz ve kurucu etkisi de bu yüzden güçlüdür." },
      { "yazi": "İkisinde eşit; sürüklenme boyuta bakmaz", "neden": "Grafiklere bak: küçük popülasyonda çizgiler çok daha çok savruluyor." }
     ]
-   }
+   },
+   "kart": 7
   },
   {
    "baslik": "Türleşme",
@@ -107,7 +114,8 @@
      { "yazi": "Uzun süre ayrı bölgelerde yaşamaları", "neden": "Coğrafi ayrılık türleşmeyi başlatır ama kanıtlamaz. Yeniden karşılaştıklarında verimli yavru verirlerse hâlâ tek türdürler." },
      { "yazi": "Aralarında verimli yavru oluşmaması", "dogru": true, "neden": "Verimli yavru veremiyorlarsa üreme izolasyonu oluşmuştur: artık iki ayrı türdürler. Farklı çiftleşme dönemi ya da kur davranışı da buna yol açabilir." }
     ]
-   }
+   },
+   "kart": 11
   },
   {
    "baslik": "Homolog ve analog",
@@ -123,7 +131,8 @@
      { "yazi": "Aynı kemik planından gelişmişlerdir", "neden": "Kelebek kanadında hiç kemik yok. Ortak kemik planı homolog yapıların özelliğidir." },
      { "yazi": "İkisi de körelmiş organdır", "neden": "İkisi de işlevini sürdürüyor. Körelmiş organ, atada işlevli olup küçülmüş yapıdır; insanda kuyruk sokumu gibi." }
     ]
-   }
+   },
+   "kart": 14
   }
  ],
  "kapanis": [
