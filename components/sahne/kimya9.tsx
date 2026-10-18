@@ -387,7 +387,9 @@ function Hacim({ s, t, oynuyor }: SahneProps) {
   const sure = Number(s.sure ?? 4), u = oran(t, oynuyor, sure);
   const sik = yumusak(Math.min(1, u / 0.4)), kay = yumusak(Math.max(0, (u - 0.45) / 0.55));
   const w = 200 - sik * 100;
-  const d = Math.round(4 - kay * 2); // ayrışmış N₂O₄ sayısı: 4 → 2
+  // Ayrışmış N₂O₄ sayısı: 4 → 3. Hacim yarıya inince K'yı koruyan yeni denge yaklaşık 7 N₂O₄ · 6 NO₂'dir;
+  // kayma etkiyi tümüyle silmez, NO₂ derişimi başlangıçtakinden yüksek kalır (4 → 2 olsaydı K değişirdi).
+  const d = Math.round(4 - kay);
   const yogun = (2 * d) / (w / 100);
   return (
     <svg viewBox="0 0 340 214" role="img" aria-label={u >= 1 ? "Hacim yarıya indi, denge N₂O₄ tarafına kaydı" : "Şırıngadaki N₂O₄ ve NO₂ dengede"}>
