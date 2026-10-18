@@ -52,7 +52,7 @@ const uyar = (v: Degerler, hedef: Record<string, number | [number, number]>) =>
   Object.entries(hedef).every(([k, h]) => (Array.isArray(h) ? v[k] >= h[0] && v[k] <= h[1] : v[k] === h));
 const ayni = (a: Degerler, b: Degerler) => Object.keys({ ...a, ...b }).every((k) => a[k] === b[k]);
 const gosterim = (k: Kontrol, x: number) =>
-  `${k.onek ?? ""}${(x * (k.carpan ?? 1)).toLocaleString("tr-TR", { maximumFractionDigits: 2 })}${k.birim ? ` ${k.birim}` : ""}`;
+  `${k.onek ?? ""}${(x * (k.carpan ?? 1)).toLocaleString("tr-TR", { maximumFractionDigits: 2 })}${k.birim ? (k.birim === "°" ? "°" : ` ${k.birim}`) : ""}`;
 
 /** Şıkların gösterim sırası: içerikte doğru şık çoğu zaman ilk yazılır, ekranda karışık çıksın.
  * Sıra şıkların metninden üretilir, yani her açılışta aynıdır. */
