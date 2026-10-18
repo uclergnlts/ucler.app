@@ -1,0 +1,247 @@
+{
+ "id": "kimyasal-denge",
+ "ders": "kimya",
+ "konu": "kimyasal-denge",
+ "baslik": "Kimyasal denge",
+ "ozet": "Dengenin kuruluşunu izle, Kc hesapla, Q ile K'yı karşılaştır, dengeyi basınç, sıcaklık ve katalizörle zorla.",
+ "adimlar": [
+  {
+   "baslik": "Denge nasıl kurulur?",
+   "metin": "Kapalı kaba yalnızca N₂O₄ koyuyoruz: N₂O₄ ⇌ 2NO₂. İleri ve geri tepkimenin hızlarını izle.",
+   "sahne": {
+    "tur": "kim9-denge",
+    "sure": 6
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hızlar eşitlenince ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Tepkime durur",
+      "neden": "Dışarıdan durmuş görünür, ama moleküller dönüşmeye devam eder. Denge durgun değil, dinamiktir."
+     },
+     {
+      "yazi": "Tepkime iki yönde eşit hızla sürer",
+      "neden": "İleri ve geri hız eşit olduğu için derişimler sabit kalır, ama dönüşüm sürer: <b>dinamik denge</b>.",
+      "dogru": true
+     },
+     {
+      "yazi": "N₂O₄ tümüyle biter",
+      "neden": "Geri tepkime NO₂'den yeniden N₂O₄ üretir. Kapalı kapta girenler tükenmez."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Kc hesabı",
+   "metin": "1 L kaba 1 mol H₂ ve 1 mol I₂ koyduk: H₂ + I₂ ⇌ 2HI. Dengede <b>1,6 mol HI</b> ölçüldü. Tabloyu buna göre ayarla.",
+   "sahne": {
+    "tur": "kim9-bdd"
+   },
+   "deger": {
+    "hi": 10
+   },
+   "kontroller": [
+    {
+     "ad": "hi",
+     "etiket": "Dengedeki HI",
+     "min": 2,
+     "max": 18,
+     "adim": 2,
+     "birim": "mol",
+     "carpan": 0.1,
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "hi": 16
+    },
+    "ipucu": "2x mol HI oluşurken x mol H₂ ve x mol I₂ harcanır.",
+    "tamam": "2x = 1,6 → x = 0,8. Dengede 0,2 M H₂, 0,2 M I₂, 1,6 M HI. Kc = 1,6² / (0,2 · 0,2) = <b>64</b>. Katılar ve saf sıvılar Kc'ye yazılmaz."
+   }
+  },
+  {
+   "baslik": "Q ile K",
+   "metin": "Aynı tepkimede K = 64. Kapta [H₂] = [I₂] = 0,1 M. Tepkime bölümü Q'yu K'ya eşitleyecek HI derişimini bul.",
+   "sahne": {
+    "tur": "kim9-q"
+   },
+   "deger": {
+    "hi": 2
+   },
+   "kontroller": [
+    {
+     "ad": "hi",
+     "etiket": "[HI]",
+     "min": 1,
+     "max": 16,
+     "birim": "M",
+     "carpan": 0.1,
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "hi": 8
+    },
+    "tamam": "Q = 0,8² / (0,1 · 0,1) = 64 = K: sistem <b>dengede</b>. Q < K ise tepkime ileri, Q > K ise geri yürür."
+   }
+  },
+  {
+   "baslik": "Hacmi küçült",
+   "metin": "N₂O₄ ⇌ 2NO₂ dengede. Pistonu iterek hacmi yarıya indiriyoruz.",
+   "sahne": {
+    "tur": "kim9-hacim",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Denge hangi yöne kayar?",
+    "secenekler": [
+     {
+      "yazi": "NO₂ tarafına (sağa)",
+      "neden": "Sağda 2 mol gaz var. Oraya kayış gaz molünü ve basıncı artırırdı; sistem bunun tersini yapar."
+     },
+     {
+      "yazi": "Kaymaz",
+      "neden": "Gaz mol sayıları iki tarafta farklı olduğu için hacim değişimi dengeyi kaydırır."
+     },
+     {
+      "yazi": "N₂O₄ tarafına (sola)",
+      "neden": "Basınç artınca denge <b>daha az gaz molü</b> olan tarafa kayar: 2 mol NO₂ → 1 mol N₂O₄. Le Chatelier: sistem zorlamayı azaltır.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Sıcaklık",
+   "metin": "N₂O₄ + ısı ⇌ 2NO₂: ileri yön ısı alır. Kabı ısıt ve N₂O₄'ün en az %80'ini ayrıştır.",
+   "sahne": {
+    "tur": "kim9-isi"
+   },
+   "deger": {
+    "T": 20
+   },
+   "kontroller": [
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": 0,
+     "max": 100,
+     "adim": 10,
+     "birim": "°C",
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "T": [
+      70,
+      100
+     ]
+    },
+    "tamam": "Isı verince denge ısıyı harcayan yöne, <b>endotermik</b> ileri yöne kaydı; renk koyulaştı. Dengeyi kaydıran etkenler içinde K'yı değiştiren yalnızca sıcaklıktır."
+   }
+  },
+  {
+   "baslik": "Katalizör ve denge",
+   "metin": "Aynı tepkimeye katalizör ekle ve NO₂ eğrisini karşılaştır.",
+   "sahne": {
+    "tur": "kim9-dengekat"
+   },
+   "deger": {
+    "k": 0
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Katalizör",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Katalizör dengeyi nasıl etkiler?",
+    "secenekler": [
+     {
+      "yazi": "Dengeye daha çabuk ulaşılır, miktarlar aynı kalır",
+      "neden": "Katalizör ileri ve geri tepkimeyi eşit hızlandırır. Denge derişimi ve K değişmez, yalnızca dengeye varış kısalır.",
+      "dogru": true
+     },
+     {
+      "yazi": "Daha çok NO₂ oluşur",
+      "neden": "İki eğri de aynı yüksekliğe çıkıyor. Katalizör ürünü artırmaz, dengeyi kaydırmaz."
+     },
+     {
+      "yazi": "K büyür",
+      "neden": "K yalnızca sıcaklıkla değişir. Katalizör iki yönü eşit hızlandırdığı için oranı bozmaz."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Haber yöntemi",
+   "metin": "N₂ + 3H₂ ⇌ 2NH₃ + ısı. Basıncı ve sıcaklığı değiştir; NH₃ verimine ve hıza bak.",
+   "sahne": {
+    "tur": "kim9-haber"
+   },
+   "deger": {
+    "P": 100,
+    "T": 450
+   },
+   "kontroller": [
+    {
+     "ad": "P",
+     "etiket": "Basınç",
+     "min": 50,
+     "max": 300,
+     "adim": 50,
+     "birim": "atm",
+     "tur": "surgu"
+    },
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": 300,
+     "max": 600,
+     "adim": 50,
+     "birim": "°C",
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hızı düşürmeden NH₃ verimini artıran hangisi?",
+    "secenekler": [
+     {
+      "yazi": "Sıcaklığı artırmak",
+      "neden": "Hız artar, ama ileri yön ekzotermik olduğu için denge sola kayar, verim düşer."
+     },
+     {
+      "yazi": "Basıncı artırmak",
+      "neden": "4 mol gaz → 2 mol gaz: basınç dengeyi az mollü NH₃ tarafına kaydırır. Hız da düşmez. Endüstride yüksek basınç, yaklaşık 450 °C ve demir katalizör kullanılır.",
+      "dogru": true
+     },
+     {
+      "yazi": "Sıcaklığı düşürmek",
+      "neden": "Verim artar, ama tepkime çok yavaşlar. Bu yüzden ılımlı bir sıcaklık ve katalizör seçilir."
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Kapalı kapta ileri ve geri hız eşitlenince <b>dinamik denge</b> kurulur; derişimler sabittir, dönüşüm sürer.",
+  "<b>Kc</b> = ürünler / girenler, üs olarak katsayılar; katılar ve saf sıvılar yazılmaz.",
+  "<b>Q < K</b> ise tepkime ileri, <b>Q > K</b> ise geri yürür; Q = K dengedir.",
+  "Le Chatelier: sistem zorlamayı azaltır. Basınç artınca az gaz mollü tarafa, ısıtınca endotermik yöne kayar.",
+  "K'yı yalnızca sıcaklık değiştirir; katalizör dengeye varışı hızlandırır, dengeyi kaydırmaz."
+ ]
+}

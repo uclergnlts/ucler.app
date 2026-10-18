@@ -1,0 +1,258 @@
+{
+ "id": "tepkime-hizi",
+ "ders": "kimya",
+ "konu": "tepkime-hizi",
+ "baslik": "Tepkime hızı",
+ "ozet": "Derişim eğrisini izle, molekülleri çarpıştır, sıcaklığı ve katalizörü dene, deneyden hız denklemini bul.",
+ "adimlar": [
+  {
+   "baslik": "Hız yavaşlar mı?",
+   "metin": "A → B tepkimesi başlıyor. Grafikte [A] azalıyor, [B] artıyor. Hız, eğrinin o andaki eğimidir: <b>hız = −Δ[A]/Δt</b>.",
+   "sahne": {
+    "tur": "kim9-egri",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Tepkime ilerledikçe hız ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Artar",
+      "neden": "Hız girenlerin derişimine bağlıdır. A harcandıkça çarpışacak tanecik azalır; hız artmaz."
+     },
+     {
+      "yazi": "Azalır",
+      "neden": "A tükendikçe çarpışma sayısı düşer, eğim yatıklaşır. Hız en büyük değerini başta alır.",
+      "dogru": true
+     },
+     {
+      "yazi": "Hep aynı kalır",
+      "neden": "Sabit hız, eğrinin düz bir çizgi olması demekti. Oysa eğri giderek yatıklaşıyor."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Katsayılar ve hız",
+   "metin": "N₂ + 3H₂ → 2NH₃ tepkimesinde H₂ <b>0,6 M/s</b> hızla harcanıyor. NH₃'ün oluşma hızını ayarla.",
+   "sahne": {
+    "tur": "kim9-katsayi"
+   },
+   "deger": {
+    "nh3": 2
+   },
+   "kontroller": [
+    {
+     "ad": "nh3",
+     "etiket": "NH₃ oluşma hızı",
+     "min": 1,
+     "max": 10,
+     "birim": "M/s",
+     "carpan": 0.1,
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "nh3": 4
+    },
+    "ipucu": "Hızlar katsayılarla orantılıdır: 3 mol H₂ harcanırken 2 mol NH₃ oluşur.",
+    "tamam": "0,6 × 2/3 = <b>0,4 M/s</b>. Hızlar katsayılarla orantılı: N₂ 0,2, H₂ 0,6, NH₃ 0,4 M/s. Her birini katsayısına bölünce aynı tepkime hızı çıkar: 0,2 M/s."
+   }
+  },
+  {
+   "baslik": "Etkin çarpışma",
+   "metin": "AB + C → A + BC. Çarpışma hem yeterli enerjili hem doğru yönelimli olmalı. Bu tepkimede Ea = 60 kJ. İkisini de ayarla ve oynat.",
+   "sahne": {
+    "tur": "kim9-carpisma",
+    "sure": 3
+   },
+   "deger": {
+    "yon": 0,
+    "e": 30
+   },
+   "kontroller": [
+    {
+     "ad": "yon",
+     "etiket": "C, B ucuna çarpsın",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "e",
+     "etiket": "Çarpışma enerjisi",
+     "min": 10,
+     "max": 100,
+     "adim": 10,
+     "birim": "kJ",
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "yon": 1,
+     "e": [
+      60,
+      100
+     ]
+    },
+    "tamam": "Enerji Ea'ya ulaştı ve C, B ucuna çarptı: <b>etkin çarpışma</b>. Çarpışmaların çok azı etkindir; bu yüzden her çarpışma ürün vermez."
+   }
+  },
+  {
+   "baslik": "Sıcaklık",
+   "metin": "Eğri, taneciklerin enerjilere göre dağılımı. Boyalı alan Ea'yı aşanlar. Sıcaklığı artır ve neyin değiştiğine bak.",
+   "sahne": {
+    "tur": "kim9-maxwell"
+   },
+   "deger": {
+    "T": 300
+   },
+   "kontroller": [
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": 300,
+     "max": 500,
+     "adim": 20,
+     "birim": "K",
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Sıcaklık artınca hız neden artar?",
+    "secenekler": [
+     {
+      "yazi": "Ea küçülür",
+      "neden": "Ea çizgisi yerinden oynamadı. Aktifleşme enerjisini sıcaklık değil, katalizör değiştirir."
+     },
+     {
+      "yazi": "Tanecik sayısı artar",
+      "neden": "Kaptaki tanecik sayısı aynı; eğrinin altındaki toplam alan değişmiyor."
+     },
+     {
+      "yazi": "Ea'yı aşan tanecik oranı artar",
+      "neden": "Eğri sağa yayılıyor, boyalı alan büyüyor. Daha çok çarpışma etkin olur, hız artar.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Temas yüzeyi",
+   "metin": "Aynı kütlede mermeri (CaCO₃) iki kapta HCl'ye atıyoruz: birinde parça, ötekinde toz. Çıkan CO₂ balonları şişirecek.",
+   "sahne": {
+    "tur": "kim9-yuzey",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hangi balon daha hızlı şişer?",
+    "secenekler": [
+     {
+      "yazi": "Parça mermer",
+      "neden": "Parçada asit yalnızca dış yüzeye değer. Yüzey küçük olunca çarpışma azdır."
+     },
+     {
+      "yazi": "Toz mermer",
+      "neden": "Toz hâlinde asitle değen yüzey çok büyür, çarpışma artar, CO₂ hızlı çıkar. Kütle aynı olduğu için sonunda iki balon eşit şişer.",
+      "dogru": true
+     },
+     {
+      "yazi": "İkisi aynı hızda",
+      "neden": "Toplam CO₂ aynı olur, ama hızı yüzey belirler. Katı-sıvı gibi heterojen tepkimelerde temas yüzeyi önemlidir."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Katalizör",
+   "metin": "Katalizörü aç ve enerji diyagramına bak.",
+   "sahne": {
+    "tur": "kim9-katalizor"
+   },
+   "deger": {
+    "k": 0
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Katalizör",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Katalizör neyi değiştirmez?",
+    "secenekler": [
+     {
+      "yazi": "İleri aktifleşme enerjisini",
+      "neden": "Değiştirir: 120 kJ'den 60 kJ'e indi. Katalizör tepkimeye daha alçak tepeli yeni bir yol açar."
+     },
+     {
+      "yazi": "Tepkime hızını",
+      "neden": "Değiştirir: tepe alçalınca daha çok çarpışma etkin olur, hız artar."
+     },
+     {
+      "yazi": "ΔH'yi",
+      "neden": "Girenlerin ve ürünlerin enerjisi aynı kaldı, ΔH hep −100 kJ. Katalizör iki yönün Ea'sını da eşit miktarda düşürür.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Deneyden hız denklemi",
+   "metin": "hız = k[X]ˣ[Y]ʸ. Üsler deneyle bulunur. [X] sabit; [Y]'yi artır ve hızın kaç kat olduğunu izle.",
+   "sahne": {
+    "tur": "kim9-derece"
+   },
+   "deger": {
+    "y": 1
+   },
+   "kontroller": [
+    {
+     "ad": "y",
+     "etiket": "[Y]",
+     "min": 1,
+     "max": 4,
+     "birim": "M",
+     "carpan": 0.1,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Tepkime Y'ye göre kaçıncı derecedir?",
+    "secenekler": [
+     {
+      "yazi": "1",
+      "neden": "Birinci derece olsaydı [Y] 2 katına çıkınca hız da 2 kat olurdu. Burada 4 kat oluyor."
+     },
+     {
+      "yazi": "3",
+      "neden": "Üçüncü derece olsaydı [Y] 2 kat olunca hız 8 kat olurdu."
+     },
+     {
+      "yazi": "2",
+      "neden": "[Y] 2 kat → hız 4 kat, 3 kat → 9 kat. Hız [Y]²'yle orantılı: y = 2.",
+      "dogru": true
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Tepkime hızı, birim zamandaki derişim değişimidir: <b>hız = −Δ[giren]/Δt</b>; maddelerin hızları katsayılarla orantılıdır.",
+  "Tepkime için çarpışma <b>etkin</b> olmalı: enerji Ea'yı aşmalı, yönelim uygun olmalı.",
+  "Sıcaklık Ea'yı aşan tanecik oranını artırır; temas yüzeyi heterojen tepkimeleri hızlandırır.",
+  "<b>Katalizör</b> iki yönün Ea'sını eşit düşürür; ΔH değişmez.",
+  "<b>hız = k[A]ˣ[B]ʸ</b>: derişim 2 kat olunca hız 4 kat oluyorsa o maddeye göre derece 2'dir."
+ ]
+}

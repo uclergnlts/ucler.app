@@ -1,0 +1,228 @@
+{
+ "id": "elektrik-akimi",
+ "ders": "fizik",
+ "konu": "elektrik-akimi",
+ "baslik": "Elektrik Akımı",
+ "ozet": "Anahtarı kapat, Ohm yasasını grafikte gör, teli uzat, ampulleri seri ve paralel bağla, karışık devrenin akımını bul.",
+ "adimlar": [
+  {
+   "baslik": "Akım nedir?",
+   "metin": "Akım, bir kesitten birim zamanda geçen yüktür: <b>I = q / t</b>. Elektronlar (−) kutuptan çıkar; geleneksel akım ters yöndedir. Anahtarı kapat.",
+   "sahne": {
+    "tur": "fiz9-devre"
+   },
+   "deger": {
+    "k": 0
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Anahtarı kapat",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "k": 1
+    },
+    "tamam": "Devre tamamlandı. Her saniye 2 C geçiyorsa I = 2 C / 1 s = <b>2 A</b>. Açık devrede akım olmaz."
+   }
+  },
+  {
+   "baslik": "Ohm yasası",
+   "metin": "Direnç 4 Ω. Gerilimi artır ve <b>2 A</b> akım elde et: <b>V = I · R</b>.",
+   "sahne": {
+    "tur": "fiz9-ohm",
+    "R": 4
+   },
+   "deger": {
+    "V": 0
+   },
+   "kontroller": [
+    {
+     "ad": "V",
+     "etiket": "Gerilim",
+     "min": 0,
+     "max": 12,
+     "tur": "surgu",
+     "birim": "V"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "V": 8
+    },
+    "tamam": "V = I · R = 2 · 4 = <b>8 V</b>. Gerilim iki katına çıkarsa akım da iki katına çıkar; V–I grafiği bir doğrudur.",
+    "ipucu": "I = V / R; 2 A için V = 2 · 4."
+   }
+  },
+  {
+   "baslik": "Grafiğin eğimi",
+   "metin": "V–I grafiğinde (V düşey, I yatay) doğrunun <b>eğimi direnci</b> verir.",
+   "sahne": {
+    "tur": "fiz9-vi"
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangisinin direnci daha büyük?",
+    "secenekler": [
+     {
+      "yazi": "Y'nin",
+      "neden": "Y daha yatık; aynı akım için daha az gerilim ister, direnci küçüktür."
+     },
+     {
+      "yazi": "İkisi eşit",
+      "neden": "Eğimler farklı; eşit dirençli iletkenlerin doğruları üst üste olurdu."
+     },
+     {
+      "yazi": "X'in",
+      "neden": "X daha dik: aynı akım için daha çok gerilim ister. Eğim = V / I = R, X'in direnci daha büyük. Paralel bağlanınca daha çok akımı Y taşır.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Telin direnci",
+   "metin": "Direnç <b>R = ρ · L / A</b>: boyla artar, kesitle azalır. Tel iki kat uzun. Kesiti ayarla, direnç yine R₀ olsun.",
+   "sahne": {
+    "tur": "fiz9-tel"
+   },
+   "deger": {
+    "L": 2,
+    "A": 1
+   },
+   "kontroller": [
+    {
+     "ad": "A",
+     "etiket": "Kesit",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac",
+     "birim": "× A₀"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "A": 2
+    },
+    "tamam": "Boy 2 kat, kesit 2 kat: R = 2/2 · R₀ = R₀. Dikkat: bir tel çekilip <b>iki kat uzatılırsa</b> kesiti de yarıya iner ve direnci <b>4 kat</b> olur.",
+    "ipucu": "L / A oranı 1 olmalı."
+   }
+  },
+  {
+   "baslik": "Seri mi, paralel mi?",
+   "metin": "Seride akım her ampulden aynıdır; paralelde her kolun gerilimi aynıdır. Önce paralel bağla, sonra bir ampulü sök; seride de dene.",
+   "sahne": {
+    "tur": "fiz9-iki-ampul"
+   },
+   "deger": {
+    "p": 0,
+    "s": 0
+   },
+   "kontroller": [
+    {
+     "ad": "p",
+     "etiket": "Paralel bağla",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "s",
+     "etiket": "Bir ampulü sök",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bir ampul sökülünce öteki hangi bağlamada yanmaya devam eder?",
+    "secenekler": [
+     {
+      "yazi": "Seri bağlamada",
+      "neden": "Seride tek yol vardır; bir ampul sökülünce devre açılır ve hepsi söner."
+     },
+     {
+      "yazi": "Paralel bağlamada",
+      "neden": "Paralelde her ampulün kendi kolu vardır. Biri sökülse öteki aynı 12 V'u alır ve aynı parlaklıkta yanar. Evlerdeki tesisat bu yüzden paraleldir.",
+      "dogru": true
+     },
+     {
+      "yazi": "İkisinde de söner",
+      "neden": "Paralelde öteki kolun yolu açık kalır; sahnede sökünce de yandığını görebilirsin."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Ampermetre nereye?",
+   "metin": "Ampermetre devreye <b>seri</b>, voltmetre <b>paralel</b> bağlanır. Ampermetreyi yanlışlıkla lambaya paralel bağlarsan ne olur?",
+   "sahne": {
+    "tur": "fiz9-yanlis-amper",
+    "sure": 3
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Ampermetre lambaya paralel bağlanırsa ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Lamba daha parlak yanar",
+      "neden": "Akım lambaya uğramaz; neredeyse hiç direnci olmayan ampermetreden geçer."
+     },
+     {
+      "yazi": "Hiçbir şey değişmez",
+      "neden": "İç direnci ≈ 0 olan bir yol açıldı; akım o yolu seçer."
+     },
+     {
+      "yazi": "Lamba söner, çok büyük akım geçer",
+      "neden": "Ampermetrenin iç direnci neredeyse sıfırdır. Lambanın üzerinden bir <b>kısa devre</b> yolu açılır: lamba söner, pilden çok büyük akım çekilir ve ampermetre yanabilir.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Karışık devre",
+   "metin": "4 Ω, paralel bağlı 6 Ω ve 3 Ω'a seri. Paralel kısım 6·3/(6+3) = 2 Ω, Reş = 6 Ω. Ana koldan <b>3 A</b> geçsin.",
+   "sahne": {
+    "tur": "fiz9-karisik"
+   },
+   "deger": {
+    "V": 6
+   },
+   "kontroller": [
+    {
+     "ad": "V",
+     "etiket": "Üreteç",
+     "min": 0,
+     "max": 24,
+     "adim": 2,
+     "tur": "surgu",
+     "birim": "V"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "V": 18
+    },
+    "tamam": "V = I · Reş = 3 · 6 = <b>18 V</b>. Paralel uçlarda 3 · 2 = 6 V düşer: 6 Ω'dan 1 A, 3 Ω'dan 2 A. Kolların toplamı ana akımdır (Kirchhoff).",
+    "ipucu": "Reş = 4 + 2 = 6 Ω."
+   }
+  }
+ ],
+ "kapanis": [
+  "Akım, birim zamanda geçen yüktür: I = q / t. Geleneksel akım elektronlara ters yöndedir.",
+  "Ohm yasası V = I · R; V–I grafiğinin eğimi direnci verir.",
+  "R = ρ · L / A. İki kat uzatılan telin direnci 4 kat olur.",
+  "Seride akım ortaktır, Reş toplamdır. Paralelde gerilim ortaktır, Reş en küçük dirençten küçüktür.",
+  "Ampermetre seri (iç direnci ≈ 0), voltmetre paralel (iç direnci çok büyük) bağlanır."
+ ]
+}

@@ -1,0 +1,254 @@
+{
+ "id": "elektriksel-enerji",
+ "ders": "fizik",
+ "konu": "elektriksel-enerji",
+ "baslik": "Elektriksel Enerji ve Güç",
+ "ozet": "Telefonu şarj et, ampullerin parlaklığını karşılaştır, teli ısıt, etiketi oku, faturayı düşür, sigortayı attırma, LED'e geç.",
+ "adimlar": [
+  {
+   "baslik": "Enerji = V · I · t",
+   "metin": "Şarj aleti 5 V, 2 A veriyor. Harcanan enerji <b>W = V · I · t</b> (t saniye). Telefona <b>36 000 J</b> aktar.",
+   "sahne": {
+    "tur": "fiz9-sarj"
+   },
+   "deger": {
+    "t": 0
+   },
+   "kontroller": [
+    {
+     "ad": "t",
+     "etiket": "Süre",
+     "min": 0,
+     "max": 120,
+     "adim": 10,
+     "tur": "surgu",
+     "birim": "dk"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "t": 60
+    },
+    "tamam": "W = 5 · 2 · 3600 = <b>36 000 J</b>. 1 saat 3600 saniyedir; dakikayı saniyeye çevirmeyi unutma.",
+    "ipucu": "36 000 / (5 · 2) saniye kaç dakika?"
+   }
+  },
+  {
+   "baslik": "Hangisi parlak?",
+   "metin": "Parlaklık ampulün <b>gücüdür</b>. Ampuller 2 Ω ve 4 Ω. Seride akım ortak: <b>P = I² · R</b>. Paralelde gerilim ortak: <b>P = V² / R</b>. İki bağlamayı da dene.",
+   "sahne": {
+    "tur": "fiz9-iki-ampul",
+    "r1": 2,
+    "r2": 4
+   },
+   "deger": {
+    "p": 0,
+    "s": 0
+   },
+   "kontroller": [
+    {
+     "ad": "p",
+     "etiket": "Paralel bağla",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Seri bağlıyken hangi ampul daha parlak?",
+    "secenekler": [
+     {
+      "yazi": "2 Ω'luk",
+      "neden": "Seride akım ortaktır; P = I² · R ile küçük direnç daha az güç harcar. 2 Ω'luk ancak paralelde daha parlak olur."
+     },
+     {
+      "yazi": "4 Ω'luk",
+      "neden": "Seride ikisinden aynı akım geçer; P = I² · R ile büyük direnç daha çok güç harcar. Paralelde ise P = V² / R olduğundan tersi olur: 2 Ω'luk parlar.",
+      "dogru": true
+     },
+     {
+      "yazi": "Eşit parlak",
+      "neden": "Dirençler farklı; aynı akımla farklı güç harcarlar."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Joule ısınması",
+   "metin": "Akım geçen direnç ısınır: <b>Q = I² · R · t</b>. 10 Ω'luk tel 1 dakikada 1 A ile 600 J verir. Isıyı <b>4 katına</b> çıkar.",
+   "sahne": {
+    "tur": "fiz9-joule"
+   },
+   "deger": {
+    "I": 1
+   },
+   "kontroller": [
+    {
+     "ad": "I",
+     "etiket": "Akım",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac",
+     "birim": "A"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "I": 2
+    },
+    "tamam": "Akım 2 katı, ısı 2² = <b>4 katı</b>: 2400 J. Isı akımın karesiyle artar; kablo kalınlığı ve sigortalar bu yüzden önemlidir.",
+    "ipucu": "Isı akımın karesiyle artar."
+   }
+  },
+  {
+   "baslik": "Etiketi oku",
+   "metin": "Isıtıcının etiketi <b>220 V, 2000 W</b>. Direnci R = V² / P = 24,2 Ω ve değişmez. Isıtıcıyı 110 V'luk prize takıyoruz.",
+   "sahne": {
+    "tur": "fiz9-etiket",
+    "sure": 3
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "110 V'ta ısıtıcı kaç watt harcar?",
+    "secenekler": [
+     {
+      "yazi": "1000 W",
+      "neden": "Gerilim yarıya indi ama güç V² ile orantılı: yarının karesi dörtte birdir."
+     },
+     {
+      "yazi": "2000 W",
+      "neden": "Etiketteki güç yalnızca 220 V'ta geçerlidir."
+     },
+     {
+      "yazi": "500 W",
+      "neden": "Direnç sabit: P = V² / R = 110² / 24,2 = <b>500 W</b>. Gerilim yarıya inince güç <b>dörtte birine</b> düşer.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Faturayı düşür",
+   "metin": "1,5 kW klima, 30 gün, 1 kWh = 3 TL. <b>kWh enerji birimidir</b>: E = P · t. Aylık tutar 270 TL'yi geçmesin.",
+   "sahne": {
+    "tur": "fiz9-fatura"
+   },
+   "deger": {
+    "h": 4
+   },
+   "kontroller": [
+    {
+     "ad": "h",
+     "etiket": "Günlük kullanım (saat)",
+     "min": 1,
+     "max": 6,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "h": [
+      1,
+      2
+     ]
+    },
+    "tamam": "Günde 2 saat: 1,5 · 2 · 30 = 90 kWh, 90 · 3 = <b>270 TL</b>. Süreyi yarıya indirmek faturayı da yarıya indirir.",
+    "ipucu": "270 TL / 3 TL = 90 kWh; 90 / (1,5 · 30) kaç saat?"
+   }
+  },
+  {
+   "baslik": "Sigortayı attırma",
+   "metin": "Evdeki cihazlar <b>paralel</b> bağlıdır; hattan geçen akım kolların toplamıdır. Sigorta 16 A. Isıtıcı açık; yanına bir cihaz daha aç ama sigortayı attırma.",
+   "sahne": {
+    "tur": "fiz9-sigorta"
+   },
+   "deger": {
+    "a": 1,
+    "b": 0,
+    "c": 0
+   },
+   "kontroller": [
+    {
+     "ad": "a",
+     "etiket": "Isıtıcı",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "b",
+     "etiket": "Su ısıtıcısı",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "c",
+     "etiket": "Ütü",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "a": 1,
+     "b": 0,
+     "c": 1
+    },
+    "tamam": "9,1 A + 5 A ≈ 14,1 A, sınırın altında. Su ısıtıcısıyla 19,1 A olurdu ve sigorta atardı. Sigorta, kabloyu aşırı ısınmaktan korur.",
+    "ipucu": "I = P / 220. Toplam 16 A'yı geçmemeli."
+   }
+  },
+  {
+   "baslik": "Verim",
+   "metin": "Akkor ampul enerjinin çoğunu ısıya çevirir. 60 W'lık akkor ampulle 9 W'lık LED aynı ışığı verir. LED'e geç.",
+   "sahne": {
+    "tur": "fiz9-verim"
+   },
+   "deger": {
+    "led": 0
+   },
+   "kontroller": [
+    {
+     "ad": "led",
+     "etiket": "LED'e geç",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Günde 5 saat yanarsa LED yılda ne kadar enerji tasarrufu sağlar?",
+    "secenekler": [
+     {
+      "yazi": "Yaklaşık 9 kWh",
+      "neden": "Bu yalnızca LED'in harcadığı 9 W'a bakmak olur; fark 60 − 9 = 51 W'tır."
+     },
+     {
+      "yazi": "Yaklaşık 51 kWh",
+      "neden": "51, watt cinsinden farktır; saat ve günle çarpmak gerekir."
+     },
+     {
+      "yazi": "Yaklaşık 93 kWh",
+      "neden": "Fark 51 W. 51 W · 5 saat · 365 gün ≈ 93 000 Wh = <b>93 kWh</b>. Verim, faydalı enerjinin harcanan enerjiye oranıdır.",
+      "dogru": true
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Elektriksel enerji W = V · I · t; güç P = V · I = I² · R = V² / R.",
+  "Parlaklık güçtür: seride büyük direnç, paralelde küçük direnç daha parlak yanar.",
+  "Isı Q = I² · R · t; akım iki katına çıkınca ısı dört katına çıkar.",
+  "kWh enerji birimidir; fatura = güç · süre · birim fiyat.",
+  "Ev tesisatı paraleldir; sigorta toplam akımı sınırlar. LED aynı ışığı çok daha az enerjiyle verir."
+ ]
+}

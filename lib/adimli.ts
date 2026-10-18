@@ -51,6 +51,12 @@ import cozeltiler from "@/content/adimli/cozeltiler.json";
 import tepkimeEnerjisi from "@/content/adimli/tepkime-enerjisi.json";
 import fotosentez from "@/content/adimli/fotosentez.json";
 import hucreselSolunum from "@/content/adimli/hucresel-solunum.json";
+import elektrikAkimi from "@/content/adimli/elektrik-akimi.json";
+import elektrikselEnerji from "@/content/adimli/elektriksel-enerji.json";
+import tepkimeHizi from "@/content/adimli/tepkime-hizi.json";
+import kimyasalDenge from "@/content/adimli/kimyasal-denge.json";
+import sinirSistemi from "@/content/adimli/sinir-sistemi.json";
+import endokrin from "@/content/adimli/endokrin.json";
 import type { DersId } from "./dersler";
 
 /** etiket: şık yalnızca görselse ekran okuyucunun okuyacağı ad. */
@@ -92,8 +98,8 @@ export type Adim = {
 export type AdimliDers = { id: string; ders: DersId; konu: string; baslik: string; ozet: string; adimlar: Adim[]; kapanis: string[] };
 
 export const ADIMLI: AdimliDers[] = [
-  fizikGiris, maddeOzellikleri, basinc, kaldirma, isiSicaklik, vektorler, hareket, newton, ikiBoyut, bagil, isEnerji, basitMakineler, momentum, tork, cembersel, kutleCekimi, elektrostatik,
-  simya, kimyaBilimi, madde, atomModelleri, atom, periyodikTablo, kimyasalBaglar, maddeninHalleri, karisimlar, temelKanunlar, tepkimeler, mol, asitBaz, kimyaHerYerde, gazlar, cozeltiler, tepkimeEnerjisi,
-  canlilar, biyomolekuller, enzimler, hucreOrganeller, zar, siniflandirma, hayvanlar, bitkiler, mitoz, mayoz, kalitim, ekosistem, bitkiBiyolojisi, dnaGenetikKod, proteinSentezi, fotosentez, hucreselSolunum,
+  fizikGiris, maddeOzellikleri, basinc, kaldirma, isiSicaklik, vektorler, hareket, newton, ikiBoyut, bagil, isEnerji, basitMakineler, momentum, tork, cembersel, kutleCekimi, elektrostatik, elektrikAkimi, elektrikselEnerji,
+  simya, kimyaBilimi, madde, atomModelleri, atom, periyodikTablo, kimyasalBaglar, maddeninHalleri, karisimlar, temelKanunlar, tepkimeler, mol, asitBaz, kimyaHerYerde, gazlar, cozeltiler, tepkimeEnerjisi, tepkimeHizi, kimyasalDenge,
+  canlilar, biyomolekuller, enzimler, hucreOrganeller, zar, siniflandirma, hayvanlar, bitkiler, mitoz, mayoz, kalitim, ekosistem, bitkiBiyolojisi, dnaGenetikKod, proteinSentezi, fotosentez, hucreselSolunum, sinirSistemi, endokrin,
 ] as unknown as AdimliDers[];
 export const adimliDers = (id: string) => ADIMLI.find((d) => d.id === id);
