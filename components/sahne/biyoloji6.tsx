@@ -39,7 +39,7 @@ function Zincir({ v }: SahneProps) {
           </g>
         );
       })}
-      <text x={170} y={256} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">her basamakta enerjinin ≈ %90'ı ısı olarak kaybolur</text>
+      <text x={170} y={256} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">her basamakta enerjinin ≈ %90'ı üste geçmez (ısı, atık)</text>
     </svg>
   );
 }
