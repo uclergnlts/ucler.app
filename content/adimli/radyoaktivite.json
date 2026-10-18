@@ -1,0 +1,95 @@
+{
+  "id": "radyoaktivite",
+  "ders": "fizik",
+  "konu": "radyoaktivite",
+  "baslik": "Atom çekirdeği ve radyoaktivite",
+  "ozet": "Çekirdeği kur ve izotop yap, güçlü kuvveti tart, kütle açığını terazide gör, en kararlı çekirdeği bul, uranyumdan kurşuna in, ışımaları ayır, yarı ömrü hesapla, zincirleme tepkimeyi denetle.",
+  "adimlar": [
+    {
+      "baslik": "Çekirdek ve izotop",
+      "metin": "Çekirdekte <b>proton</b> ve <b>nötron</b> bulunur; ikisinin ortak adı <b>nükleon</b>dur. Proton sayısı Z elementi belirler; A = Z + N kütle numarasıdır. Bu bir karbon-12 çekirdeği. Onu <b>karbon-14</b>'e çevir.",
+      "sahne": {"tur": "fiz14-cekirdek"},
+      "deger": {"p": 6, "n": 6},
+      "kontroller": [
+        {"ad": "p", "etiket": "Proton", "min": 1, "max": 8, "tur": "sayac"},
+        {"ad": "n", "etiket": "Nötron", "min": 0, "max": 10, "tur": "sayac"}
+      ],
+      "gorev": {"tur": "ayarla", "hedef": {"p": 6, "n": 8}, "tamam": "6 proton ve 8 nötron: <sup>14</sup><sub>6</sub>C. Z aynı kaldığı için hâlâ karbon; yalnızca A değişti. Z'si aynı, A'sı farklı çekirdeklere <b>izotop</b> denir. Proton sayısını değiştirseydin başka bir element olurdu.", "ipucu": "Elementi proton sayısı belirler; karbonda Z = 6 kalmalı. A = 14 için nötron sayısını değiştir."}
+    },
+    {
+      "baslik": "Güçlü çekirdek kuvveti",
+      "metin": "Çekirdekteki protonlar birbirini elektriksel olarak iter. Onları <b>güçlü çekirdek kuvveti</b> bir arada tutar. İki protonun arasını aç ve iki kuvvetin nasıl değiştiğine bak.",
+      "sahne": {"tur": "fiz14-kuvvet"},
+      "deger": {"r": 1},
+      "kontroller": [{"ad": "r", "etiket": "Protonlar arası uzaklık", "min": 1, "max": 4, "adim": 0.5, "tur": "surgu", "birim": "fm"}],
+      "gorev": {"tur": "secim", "soru": "Güçlü çekirdek kuvveti için hangisi doğrudur?", "secenekler": [
+        {"yazi": "Yalnızca protonlar arasında etkir", "neden": "Güçlü kuvvet yükten bağımsızdır: proton-proton, proton-nötron ve nötron-nötron arasında etkir. Nötronlar itme eklemeden çekim ekler."},
+        {"yazi": "Uzaklık arttıkça elektriksel itmeden yavaş azalır", "neden": "Tersi: grafikte yeşil eğri kırmızıdan çok daha hızlı sönüyor. Birkaç fm'de güçlü çekim neredeyse sıfırdır."},
+        {"yazi": "Çok kısa menzillidir; yaklaşık 1 fm'de itmeyi yener", "dogru": true, "neden": "Yaklaşık 10⁻¹⁵ m'de güçlü çekim itmeyi rahatça yener; birkaç katı uzaklıkta ise neredeyse sıfıra iner. Bu yüzden çekirdek küçüktür ve nötronlar kararlılık için önemlidir."}
+      ]}
+    },
+    {
+      "baslik": "Kütle açığı",
+      "metin": "Terazinin bir kefesinde ayrı ayrı <b>2 proton ve 2 nötron</b>, öbüründe bunların birleşmesiyle oluşan <b>helyum-4 çekirdeği</b> var. Parçalar aynı.",
+      "sahne": {"tur": "fiz14-kutle", "sure": 4},
+      "gorev": {"tur": "tahmin", "soru": "Terazi hangi yana ağır basar?", "secenekler": [
+        {"yazi": "Ayrı nükleonlar", "dogru": true, "neden": "Çekirdek oluşurken kütlenin bir kısmı enerji olarak salınır: <b>E = Δm·c²</b>. Helyum-4 çekirdeği parçalarından 0,0304 u hafiftir; 1 u ≈ 931,5 MeV olduğundan bu ≈ 28,3 MeV <b>bağlanma enerjisi</b> eder. Çekirdeği ayırmak için aynı enerjiyi vermen gerekir."},
+        {"yazi": "Helyum çekirdeği", "neden": "Birleşince kütle artmaz; tersine bir kısmı enerjiye dönüşüp salınır."},
+        {"yazi": "Dengede kalır", "neden": "Parçalar aynı olsa da kütleler eşit değildir; aradaki farka kütle açığı denir."}
+      ]}
+    },
+    {
+      "baslik": "En sıkı bağlı çekirdek",
+      "metin": "Bağlanma enerjisini nükleon sayısına bölersen çekirdeğin ne kadar sıkı bağlı olduğunu görürsün. Kütle numarasını değiştir ve eğrinin <b>tepesini</b> bul.",
+      "sahne": {"tur": "fiz14-egri"},
+      "deger": {"A": 12},
+      "kontroller": [{"ad": "A", "etiket": "Kütle numarası", "min": 2, "max": 238, "adim": 2, "tur": "surgu"}],
+      "gorev": {"tur": "ayarla", "hedef": {"A": [54, 64]}, "tamam": "Tepe A ≈ 56-62 civarında, nükleon başına ≈ 8,8 MeV: <b>demir-56</b> ve nikel-62 en kararlı çekirdeklerdendir. Hafif çekirdekler birleşerek (<b>füzyon</b>), ağır çekirdekler bölünerek (<b>fisyon</b>) tepeye yaklaşır; ikisinde de enerji açığa çıkar.", "ipucu": "Eğri hafiflerde hızla yükseliyor, ağırlarda yavaşça düşüyor. Ortadaki en yüksek noktayı ara."}
+    },
+    {
+      "baslik": "Uranyumdan kurşuna",
+      "metin": "<b>α</b> bozunmasında A 4, Z 2 azalır. <b>β⁻</b> bozunmasında bir nötron protona döner: Z 1 artar, A değişmez. <sup>238</sup>U art arda bozunarak kararlı <sup>206</sup>Pb'ye iniyor. Kaç α ve kaç β⁻ gerekir?",
+      "sahne": {"tur": "fiz14-zincir"},
+      "deger": {"a": 0, "b": 0},
+      "kontroller": [
+        {"ad": "a", "etiket": "α bozunması", "min": 0, "max": 10, "tur": "sayac"},
+        {"ad": "b", "etiket": "β⁻ bozunması", "min": 0, "max": 8, "tur": "sayac"}
+      ],
+      "gorev": {"tur": "ayarla", "hedef": {"a": 8, "b": 6}, "tamam": "A farkı 238 − 206 = 32; A'yı yalnızca α değiştirir, yani 32 / 4 = <b>8 α</b>. 8 α, Z'yi 16 azaltıp 76'ya indirir; 82'ye çıkmak için <b>6 β⁻</b> gerekir. Her bozunmada iki taraftaki A toplamı ve Z toplamı korunur. γ ışıması ne A'yı ne Z'yi değiştirir.", "ipucu": "Önce α sayısını A farkından bul: 238 − 206 = 32. Sonra Z'yi β⁻ ile düzelt."}
+    },
+    {
+      "baslik": "Işımaları ayır",
+      "metin": "Bir kaynak <b>α</b>, <b>β⁻</b> ve <b>γ</b> saçıyor. Işımalar önce iki yüklü plaka arasından, sonra kâğıt, alüminyum ve kurşun levhalardan geçecek.",
+      "sahne": {"tur": "fiz14-isinim", "sure": 4.5},
+      "gorev": {"tur": "tahmin", "soru": "Elektrik alanda en çok hangisi sapar?", "secenekler": [
+        {"yazi": "α (alfa)", "neden": "α çift yüklüdür ama çok ağırdır (helyum çekirdeği); negatif plakaya doğru yalnızca biraz sapar."},
+        {"yazi": "β⁻ (beta eksi)", "dogru": true, "neden": "β⁻ bir elektrondur; α'dan yaklaşık 7300 kat hafif olduğu için pozitif plakaya doğru en çok o sapar. Yüksüz γ hiç sapmaz. Giricilikte sıra γ > β > α'dır: kâğıt α'yı, birkaç mm alüminyum β'yı durdurur, kurşun γ'yı ancak zayıflatır."},
+        {"yazi": "γ (gama)", "neden": "γ yüksüz bir fotondur; elektrik alanda hiç sapmaz."}
+      ]}
+    },
+    {
+      "baslik": "Yarı ömür",
+      "metin": "Çekirdeklerin yarısının bozunması için geçen süreye <b>yarı ömür</b> denir. n = t / T<sub>½</sub> ise kalan <b>N = N₀ / 2ⁿ</b>. Yarı ömrü 4 gün olan 120 g maddeden <b>15 g</b> kalması için ne kadar beklemelisin?",
+      "sahne": {"tur": "fiz14-yari"},
+      "deger": {"t": 0},
+      "kontroller": [{"ad": "t", "etiket": "Geçen süre", "min": 0, "max": 24, "adim": 1, "tur": "surgu", "birim": "gün"}],
+      "gorev": {"tur": "ayarla", "hedef": {"t": 12}, "tamam": "120 → 60 → 30 → 15: üç yarı ömür, yani <b>12 gün</b>. Madde hiçbir zaman tam bitmez, her yarı ömürde yarıya iner. Yarı ömür sıcaklıkla değişmez. Karbon-14 ile yaş tayini de böyle çalışır: oran dörtte bire inmişse 2 · 5730 ≈ 11 460 yıl geçmiştir.", "ipucu": "120'yi kaç kez yarıya bölersen 15 olur? Her bölme 4 gün sürer."}
+    },
+    {
+      "baslik": "Zincirleme tepkime",
+      "metin": "<sup>235</sup>U bir nötron yutunca ikiye bölünür ve 2-3 nötron salar. Bu nötronlar yeni bölünmeler başlatabilir. Santralde kontrol çubukları fazla nötronları yutar. Her bölünmeden kaç nötron yeni bölünme yapmalı ki tepkime <b>sabit hızla</b> sürsün?",
+      "sahne": {"tur": "fiz14-fisyon"},
+      "deger": {"k": 2},
+      "kontroller": [{"ad": "k", "etiket": "Yeni bölünme yapan nötron", "min": 0, "max": 3, "tur": "sayac"}],
+      "gorev": {"tur": "ayarla", "hedef": {"k": 1}, "tamam": "Her bölünme tam <b>bir</b> yeni bölünme başlatırsa tepkime sabit hızla sürer; nükleer santraller böyle çalışır. 2 ya da 3 olursa sayı her kuşakta katlanır ve tepkime denetimden çıkar; 0 olursa söner. <b>Füzyon</b>da ise hafif çekirdekler birleşir: Güneş, yaklaşık 15 milyon K'lik merkezinde hidrojeni helyuma çevirir.", "ipucu": "Kuşaklardaki bölünme sayısı her adımda aynı kalmalı."}
+    }
+  ],
+  "kapanis": [
+    "Z proton sayısıdır ve elementi belirler; A = Z + N. Z'si aynı, A'sı farklı çekirdekler izotoptur.",
+    "Güçlü çekirdek kuvveti yükten bağımsız ve çok kısa menzillidir.",
+    "Çekirdek, parçalarından hafiftir: E = Δm·c²; nükleon başına bağlanma enerjisi demir civarında en büyüktür.",
+    "α: A − 4, Z − 2; β⁻: Z + 1; β⁺: Z − 1; γ: A ve Z değişmez.",
+    "Elektrik alanda β⁻ en çok sapar, γ sapmaz; giricilik γ > β > α.",
+    "N = N₀ / 2ⁿ; fisyon böler, füzyon birleştirir, ikisi de enerji verir."
+  ]
+}

@@ -1,0 +1,123 @@
+{
+ "id": "ureme-sistemi",
+ "ders": "biyoloji",
+ "konu": "ureme-sistemi",
+ "baslik": "Üreme sistemi ve embriyonik gelişim",
+ "ozet": "Spermin yolunu izle, testisi hormonlarla çalıştır, mayozu karşılaştır, döngünün gününü bul ve zigotu rahme kadar götür.",
+ "adimlar": [
+  {
+   "baslik": "Spermin yolu",
+   "metin": "Sperm <b>testislerde</b> üretilir ve dışarı çıkana kadar bir kanal sisteminden geçer. Yolda bezlerin salgıları katılır. Tahmin et, sonra izle.",
+   "sahne": { "tur": "biy13-sperm", "sure": 6 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Sperm hangi yapıda olgunlaşıp depolanır?",
+    "secenekler": [
+     { "yazi": "Testis", "neden": "Testis spermi üretir. Yeni üretilen sperm henüz yüzemez; olgunlaşması başka yerde olur." },
+     { "yazi": "Epididim", "dogru": true, "neden": "Sperm testisin üstündeki epididimde olgunlaşır ve depolanır, sonra sperm kanalıyla üretraya taşınır." },
+     { "yazi": "Prostat", "neden": "Prostat bir bezdir; salgısı spermle birleşip meniyi oluşturur. Sperm prostatta depolanmaz." }
+    ]
+   }
+  },
+  {
+   "baslik": "Testiste iki hormon",
+   "metin": "Hipofiz testise iki hormon gönderir. <b>FSH</b> tüpçük duvarındaki <b>Sertoli</b> hücrelerini, <b>LH</b> tüpçükler arasındaki <b>Leydig</b> hücrelerini uyarır. Sperm üretimini tam çalıştır.",
+   "sahne": { "tur": "biy13-testis" },
+   "deger": { "f": 0, "l": 0 },
+   "kontroller": [
+    { "ad": "f", "etiket": "FSH", "min": 0, "max": 1, "tur": "anahtar" },
+    { "ad": "l", "etiket": "LH", "min": 0, "max": 1, "tur": "anahtar" }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "f": 1, "l": 1 },
+    "ipucu": "Sertoli hücreleri gelişen spermi besler; Leydig hücrelerinin testosteronu da üretimi sürdürür. İkisi birlikte gerekir.",
+    "tamam": "FSH Sertoli'yi, LH Leydig'i uyardı; Leydig hücreleri testosteron salgıladı. Testosteron sperm üretimini ve sakal, kas gelişimi gibi ikincil eşey özelliklerini sağlar. Hormon adları kadınla aynıdır."
+   }
+  },
+  {
+   "baslik": "Sperm ve yumurta oluşumu",
+   "metin": "Sperm de yumurta da <b>mayozla</b> oluşur ama sonuç farklıdır. Önce spermatositi, sonra oositi bölünürken izle.",
+   "sahne": { "tur": "biy13-mayoz", "sure": 5 },
+   "deger": { "k": 0 },
+   "kontroller": [ { "ad": "k", "etiket": "Kadında (oosit)", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "gorev": {
+    "tur": "secim",
+    "kosu": 2,
+    "soru": "Bir kadında 25 birincil oosit mayozu tamamlıyor. En fazla kaç yumurta oluşur?",
+    "secenekler": [
+     { "yazi": "25", "dogru": true, "neden": "Her birincil oosit yalnızca 1 yumurta verir. Sitoplazma eşit bölünmez; besin yumurtada kalır, kutup hücreleri yok olur." },
+     { "yazi": "100", "neden": "Bu, spermde olur: bir birincil spermatosit 4 sperm verir. Oositte 4 hücreden yalnızca biri yumurtadır." },
+     { "yazi": "50", "neden": "Mayoz I'de oluşan iki hücreden küçük olanı kutup hücresidir, yumurta olamaz. Sonunda her oositten 1 yumurta kalır." }
+    ]
+   }
+  },
+  {
+   "baslik": "Döngünün ortası",
+   "metin": "Menstrual döngü ortalama 28 gündür. <b>FSH</b> folikülü büyütür, folikül <b>östrojen</b> salgılar. Östrojen yeterince yükselince <b>LH</b> aniden artar. Günü kaydır ve ovulasyonu bul.",
+   "sahne": { "tur": "biy13-dongu" },
+   "deger": { "g": 3 },
+   "kontroller": [ { "ad": "g", "etiket": "Gün", "min": 1, "max": 28, "adim": 1 } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "g": [13, 14] },
+    "ipucu": "Mor LH eğrisinin birden yükseldiği günü ara. Ovulasyonu LH tepesi tetikler.",
+    "tamam": "Yüksek östrojen hipofizi uyardı (pozitif geri bildirim), LH aniden arttı ve oosit atıldı. Sonra boş folikül sarı cisme dönüşür ve progesteron salgılar; progesteron iç zarı korur, FSH ve LH'yi baskılar."
+   }
+  },
+  {
+   "baslik": "hCG",
+   "metin": "Döllenme olmazsa <b>sarı cisim</b> (korpus luteum) körelir. Embriyo rahme yerleşirse <b>hCG</b> salgılar; gebelik testleri bu hormonu arar. İki durumu da oynat.",
+   "sahne": { "tur": "biy13-hcg", "sure": 5 },
+   "deger": { "e": 0 },
+   "kontroller": [ { "ad": "e", "etiket": "Embriyo yerleşti", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "gorev": {
+    "tur": "secim",
+    "kosu": 2,
+    "soru": "hCG olunca menstruasyon neden olmaz?",
+    "secenekler": [
+     { "yazi": "hCG iç zarı doğrudan kalınlaştırır", "neden": "İç zarı koruyan hormon progesterondur. hCG bunu dolaylı yoldan sağlar." },
+     { "yazi": "hCG sarı cismi yaşatır, progesteron düşmez", "dogru": true, "neden": "hCG sarı cismin körelmesini önler. Progesteron yüksek kalır, iç zar dökülmez. Yaklaşık 3. aydan sonra progesteronu plasenta üretir." },
+     { "yazi": "hCG FSH'yi artırır, yeni folikül olgunlaşır", "neden": "Gebelikte yeni folikül olgunlaşmaz; yüksek progesteron FSH ve LH'yi baskılar." }
+    ]
+   }
+  },
+  {
+   "baslik": "Zigottan implantasyona",
+   "metin": "Döllenme <b>yumurta kanalında</b> olur. Zigot rahme giderken mitozla hızla bölünür: <b>segmentasyon</b>. Tahmin et, sonra izle.",
+   "sahne": { "tur": "biy13-zigot", "sure": 7 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Segmentasyonda hücre sayısı artar. Embriyonun toplam boyutu ne olur?",
+    "secenekler": [
+     { "yazi": "Hücre sayısıyla aynı oranda büyür", "neden": "Bölünmeler arasında hücreler büyümeye zaman bulamaz. Toplam boyut büyümez." },
+     { "yazi": "Yarıya iner", "neden": "Bölünme madde kaybettirmez; dış boyut korunur." },
+     { "yazi": "Pek değişmez; hücreler küçülür", "dogru": true, "neden": "Zigot önce morulaya, sonra içi sıvılı blastosiste dönüşür; bu sırada her bölünmede hücreler küçülür. Blastosist 6-7. günde rahim iç zarına gömülür: implantasyon." }
+    ]
+   }
+  },
+  {
+   "baslik": "Üç germ tabakası",
+   "metin": "İmplantasyondan sonra <b>gastrula</b> oluşur ve üç <b>germ tabakası</b> ayrılır. Her tabaka belirli organlara farklılaşır. Organları gez, sonra soruyu yanıtla.",
+   "sahne": { "tur": "biy13-germ" },
+   "deger": { "o": 1 },
+   "kontroller": [ { "ad": "o", "etiket": "Organ", "min": 1, "max": 5, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Akciğerdeki hava keselerinin iç yüzeyi hangi tabakadan gelişir?",
+    "secenekler": [
+     { "yazi": "Endoderm", "dogru": true, "neden": "Endoderm iç yüzeyleri yapar: sindirim ve solunum yollarının örtüsü, karaciğer, pankreas. Akciğer, ilkel bağırsaktan tomurcuklanır." },
+     { "yazi": "Mezoderm", "neden": "Mezoderm kas, kemik, kalp ve kanı yapar. Akciğerin çevresindeki kas ve damarlar mezodermdendir, iç yüzeyi değil." },
+     { "yazi": "Ektoderm", "neden": "Ektoderm dış yüzü (epidermis) ve sinir sistemini yapar. Hava keselerinin örtüsü içte kalır." }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Sperm testiste üretilir, epididimde olgunlaşır; bez salgılarıyla birleşip meni olur.",
+  "FSH Sertoli hücrelerini, LH Leydig hücrelerini uyarır; Leydig hücreleri testosteron salgılar.",
+  "Bir spermatosit 4 sperm, bir oosit 1 yumurta verir; mayoz II döllenmede tamamlanır.",
+  "Yüksek östrojen LH artışını, LH ovulasyonu tetikler. hCG sarı cismi yaşatır.",
+  "Zigot → morula → blastosist → implantasyon → gastrula; üç germ tabakası organlara farklılaşır."
+ ]
+}

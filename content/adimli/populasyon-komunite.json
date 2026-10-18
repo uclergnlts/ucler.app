@@ -1,0 +1,121 @@
+{
+ "id": "populasyon-komunite",
+ "ders": "biyoloji",
+ "konu": "populasyon-komunite",
+ "baslik": "Komünite ve popülasyon ekolojisi",
+ "ozet": "Popülasyonu sabit tut, dağılımları karşılaştır, J ve S eğrisini kur, av ile avcıyı izle ve Gause'un deneyini tekrarla.",
+ "adimlar": [
+  {
+   "baslik": "Doğum, ölüm ve göç",
+   "metin": "Bir adada 500 kuş var. Bir yılda 60 yavru doğuyor, 80 kuş ölüyor, 20 kuş göçüp gidiyor. Başka adalardan kaç kuş gelirse sayı değişmez?",
+   "sahne": { "tur": "biy13-akis" },
+   "deger": { "g": 0 },
+   "kontroller": [ { "ad": "g", "etiket": "Göçle gelen", "min": 0, "max": 80, "adim": 10 } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "g": 40 },
+    "ipucu": "Doğum ve göçle gelen sayıyı artırır; ölüm ve göçle giden azaltır. İki çubuk eşit olmalı.",
+    "tamam": "60 + 40 = 80 + 20: artış azalışa eşit, popülasyon 500'de kaldı. Göçün olmadığı yalıtılmış bir adada büyüklüğü yalnızca doğum ve ölüm belirlerdi."
+   }
+  },
+  {
+   "baslik": "Dağılım",
+   "metin": "Yoğunluk, birim alandaki birey sayısıdır. Yoğunluk aynı olsa da bireyler alana farklı dağılabilir. Üç tipi gez.",
+   "sahne": { "tur": "biy13-dagilim" },
+   "deger": { "d": 1 },
+   "kontroller": [ { "ad": "d", "etiket": "Tip", "min": 1, "max": 3, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Çölde çalılar su için kökleriyle yarışıyor; her çalının çevresi boş kalıyor. Bu çalılar nasıl dağılır?",
+    "secenekler": [
+     { "yazi": "Kümeli", "neden": "Kümeli dağılımda bireyler kaynağın çevresinde toplanır. Burada her çalı komşusunu uzak tutuyor." },
+     { "yazi": "Rastgele", "neden": "Rastgele dağılım, bireyler arasında etkileşim zayıfken olur. Burada güçlü bir rekabet var." },
+     { "yazi": "Düzenli", "dogru": true, "neden": "Kaynak rekabeti ya da bölge savunması bireyleri birbirinden eşit uzaklıkta tutar. Doğada en yaygın tip ise kümelidir." }
+    ]
+   }
+  },
+  {
+   "baslik": "J eğrisi",
+   "metin": "Besini sınırsız bir kapta 10 bakteri var; her nesilde sayı ikiye katlanıyor. Nesilleri ilerlet ve sayının 1 000'i ilk geçtiği nesli bul.",
+   "sahne": { "tur": "biy13-j" },
+   "deger": { "n": 0 },
+   "kontroller": [ { "ad": "n", "etiket": "Nesil", "min": 0, "max": 8, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "n": 7 },
+    "ipucu": "10, 20, 40, 80... Kırmızı çizgiyi ilk geçtiğin nesilde dur.",
+    "tamam": "7. nesilde 10 bakteri 1 280 oldu. Kaynak sınırsızken popülasyon her dönemde aynı oranla artar: üstel büyüme, J eğrisi. Her nesilde eklenen birey sayısı da büyür."
+   }
+  },
+  {
+   "baslik": "S eğrisi",
+   "metin": "Doğada besin ve alan sınırlıdır. Popülasyon <b>taşıma kapasitesi</b> K çevresinde dengelenir: S eğrisi. Burada K = 1 000. Artışın en hızlı olduğu büyüklüğü bul.",
+   "sahne": { "tur": "biy13-s" },
+   "deger": { "n": 100 },
+   "kontroller": [ { "ad": "n", "etiket": "Popülasyon", "min": 50, "max": 950, "adim": 50 } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "n": [450, 550] },
+    "ipucu": "Küçük popülasyonda çoğalan birey azdır; K'ya yakınken sınırlayıcı faktörler artışı durdurur. Alttaki eğrinin tepesini ara.",
+    "tamam": "Artış K/2 = 500 civarında en hızlıdır; S eğrisi burada en diktir. K'ya yaklaştıkça artış sıfıra iner. K sabit değildir; ortam değişince o da değişir."
+   }
+  },
+  {
+   "baslik": "Sınırlayıcı faktörler",
+   "metin": "Bazı faktörlerin etkisi kalabalık arttıkça büyür: <b>yoğunluğa bağlı</b>. Bazıları kalabalığa bakmaz: <b>yoğunluktan bağımsız</b>. Yoğunluğu ve olayı değiştir.",
+   "sahne": { "tur": "biy13-faktor" },
+   "deger": { "y": 1, "o": 1 },
+   "kontroller": [
+    { "ad": "y", "etiket": "Yoğunluk", "min": 1, "max": 3, "tur": "sayac" },
+    { "ad": "o", "etiket": "Olay", "min": 1, "max": 2, "tur": "sayac" }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bu ölçüte göre sel nasıl bir faktördür?",
+    "secenekler": [
+     { "yazi": "Yoğunluğa bağlı", "neden": "Sel, alandaki bireylerin çoğunu kalabalıktan bağımsız olarak etkiler. Yoğunluğa bağlı olanlar salgın, rekabet, avcılık gibi faktörlerdir." },
+     { "yazi": "Yoğunluktan bağımsız", "dogru": true, "neden": "Don, kuraklık, sel ve yangın seyrek ya da sık popülasyonu benzer oranda etkiler. Ölçüt: kalabalık arttıkça etkisi artıyor mu?" },
+     { "yazi": "Yalnızca seyrek popülasyonu etkiler", "neden": "Sel her yoğunluktaki popülasyonu etkiler; etkisi yoğunluğa göre değişmez." }
+    ]
+   }
+  },
+  {
+   "baslik": "Av ve avcı",
+   "metin": "Kanada'da kar tavşanı ile onu avlayan vaşağın sayıları yıllarca kaydedildi. İki popülasyon birbirini etkiler. Tahmin et, sonra izle.",
+   "sahne": { "tur": "biy13-avavci", "sure": 7 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Vaşak sayısı en yükseğe ne zaman ulaşır?",
+    "secenekler": [
+     { "yazi": "Tavşanın tepesinden biraz sonra", "dogru": true, "neden": "Av çoğalınca avcının besini artar, avcı ardından çoğalır. Artan avcı avı azaltır, sonra kendisi de azalır. Döngü yaklaşık 10 yıldır." },
+     { "yazi": "Tavşanla aynı anda", "neden": "Avcının çoğalması için önce avın çoğalması ve yavruların büyümesi gerekir; bu zaman alır." },
+     { "yazi": "Tavşanın tepesinden biraz önce", "neden": "Avcı, besini artmadan çoğalamaz. Avcının artışı avın artışını izler." }
+    ]
+   }
+  },
+  {
+   "baslik": "Rekabetçi dışlama",
+   "metin": "Gause iki <em>Paramecium</em> türünü aynı besinle besledi. Önce ayrı kaplarda, sonra aynı kapta büyüt.",
+   "sahne": { "tur": "biy13-gause", "sure": 6 },
+   "deger": { "k": 0 },
+   "kontroller": [ { "ad": "k", "etiket": "Aynı kapta", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "gorev": {
+    "tur": "secim",
+    "kosu": 2,
+    "soru": "Aynı kapta <em>P. caudatum</em> neden yok oldu?",
+    "secenekler": [
+     { "yazi": "P. aurelia onu avladı", "neden": "İki tür de bakteri ile beslenir; biri diğerini yemez. Kayıp, besin rekabetinden gelir." },
+     { "yazi": "İkisi aynı sınırlı besini aynı şekilde kullandı", "dogru": true, "neden": "Rekabetçi dışlama ilkesi: aynı sınırlı kaynağı aynı şekilde kullanan iki tür sürekli bir arada yaşayamaz. Türler farklı besin, saat ya da bölge kullanarak nişlerini ayırabilir." },
+     { "yazi": "Kap küçük olduğu için ikisi de azaldı", "neden": "<em>P. aurelia</em> azalmadı; çoğalıp dengelendi. Yalnızca rakibi yok oldu." }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Doğum ve göçle gelen popülasyonu artırır; ölüm ve göçle giden azaltır.",
+  "Yoğunluk aynı olsa da dağılım kümeli, düzenli ya da rastgele olabilir.",
+  "Sınırsız kaynakta J, sınırlı kaynakta S eğrisi; artış K/2 civarında en hızlıdır.",
+  "Salgın ve rekabet yoğunluğa bağlı, don ve sel yoğunluktan bağımsızdır.",
+  "Avcının tepesi avınkinden sonra gelir. Aynı sınırlı kaynağı paylaşan iki türden biri dışlanır."
+ ]
+}
