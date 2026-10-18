@@ -1,0 +1,258 @@
+{
+ "id": "organik-giris",
+ "ders": "kimya",
+ "konu": "organik-giris",
+ "baslik": "Karbon ve organik kimyaya giriş",
+ "ozet": "Karbona dört bağ kur, bağ türüyle değişen açıyı izle, σ ve π bağlarını say, formül türlerini gez ve izomerleri ayır.",
+ "adimlar": [
+  {
+   "baslik": "Dört bağ",
+   "metin": "Karbonun dört değerlik elektronu var; okteti tamamlamak için <b>dört kovalent bağ</b> yapar. Boşta bağ kalmayacak şekilde karbona hidrojen bağla.",
+   "sahne": {
+    "tur": "kim11-dortbag",
+    "mod": "metan"
+   },
+   "deger": {
+    "h": 1
+   },
+   "kontroller": [
+    {
+     "ad": "h",
+     "etiket": "H sayısı",
+     "min": 0,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "h": 4
+    },
+    "ipucu": "Kesik çizgiler boşta kalan bağlardır.",
+    "tamam": "CH₄, metan: en basit organik bileşik. Karbon kendi atomlarıyla da bağ kurar; uzun zincirler ve halkalar bu dört bağdan doğar."
+   }
+  },
+  {
+   "baslik": "İkili bağ da sayılır",
+   "metin": "Şimdi iki karbon <b>ikili bağla</b> bağlı. C=C, her karbon için iki bağ sayılır. Her karbona kaç H bağlanmalı?",
+   "sahne": {
+    "tur": "kim11-dortbag",
+    "mod": "eten"
+   },
+   "deger": {
+    "h": 0
+   },
+   "kontroller": [
+    {
+     "ad": "h",
+     "etiket": "Her C'deki H",
+     "min": 0,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "h": 2
+    },
+    "ipucu": "İkili bağ 2 bağ sayılır; 4'e tamamla.",
+    "tamam": "C₂H₄, eten: ikili bağ 2, iki H de 2 bağ eder. Üçlü bağlı etinde (C₂H₂) her karbona tek H kalır."
+   }
+  },
+  {
+   "baslik": "Hibrit ve açı",
+   "metin": "Bağ türü, karbonun çevresindeki geometriyi belirler. Bağ türünü değiştir; hibriti ve bağ açısını izle.",
+   "sahne": {
+    "tur": "kim11-hibrit"
+   },
+   "deger": {
+    "b": 1
+   },
+   "kontroller": [
+    {
+     "ad": "b",
+     "etiket": "Bağ türü",
+     "min": 1,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "CO₂'de karbon iki ikili bağ yapar (O=C=O). Karbonun hibriti ve molekülün biçimi nedir?",
+    "secenekler": [
+     {
+      "yazi": "sp³, 109,5°, açısal",
+      "neden": "sp³ dört tekli bağ yapan karbondur. CO₂'de karbonun yalnızca iki komşusu ve hiç tekli bağı yok."
+     },
+     {
+      "yazi": "sp², 120°, düzlem üçgen",
+      "neden": "sp² karbonun üç komşusu olur: bir ikili ve iki tekli bağ. CO₂'de karbonun yalnızca iki O komşusu var."
+     },
+     {
+      "yazi": "sp, 180°, doğrusal",
+      "neden": "Üçlü bağ ya da iki ikili bağ yapan karbon sp'dir: O=C=O 180° doğrusaldır. Bu yüzden iki C=O dipolü birbirini götürür; CO₂ apolardır.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "σ ve π say",
+   "metin": "İki atom arasındaki ilk bağ <b>sigma (σ)</b>, fazlası <b>pi (π)</b>'dir: ikili bağ 1σ + 1π, üçlü bağ 1σ + 2π. Propindeki bağları say.",
+   "sahne": {
+    "tur": "kim11-sigmapi"
+   },
+   "deger": {
+    "s": 0,
+    "p": 0
+   },
+   "kontroller": [
+    {
+     "ad": "s",
+     "etiket": "σ sayısı",
+     "min": 0,
+     "max": 10,
+     "tur": "sayac"
+    },
+    {
+     "ad": "p",
+     "etiket": "π sayısı",
+     "min": 0,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "s": 6,
+     "p": 2
+    },
+    "ipucu": "C–H bağlarını da say: her biri bir σ'dır.",
+    "tamam": "4 C–H + 2 C–C = 6σ; üçlü bağ fazladan 2π katar. σ bağı π'den sağlamdır; π bağı, bağ ekseni etrafında dönmeyi engeller."
+   }
+  },
+  {
+   "baslik": "Formül türleri",
+   "metin": "Aynı molekül farklı biçimlerde yazılır. Bütanın formüllerini gez; üstteki sekmelere de dokunabilirsin.",
+   "sahne": {
+    "tur": "kim11-formul"
+   },
+   "deger": {
+    "f": 0
+   },
+   "kontroller": [
+    {
+     "ad": "f",
+     "etiket": "Formül",
+     "min": 0,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangi iki molekülün basit formülü aynıdır?",
+    "secenekler": [
+     {
+      "yazi": "CH₄ ve C₂H₆",
+      "neden": "CH₄'ün basit formülü CH₄, C₂H₆'nınki CH₃'tür; C:H oranları farklı."
+     },
+     {
+      "yazi": "C₂H₂ ve C₆H₆",
+      "neden": "İkisinde de C:H oranı 1:1, basit formül CH'dir. Bu yüzden basit formül molekülü tek başına tanımlamaz.",
+      "dogru": true
+     },
+     {
+      "yazi": "C₂H₄ ve C₂H₆",
+      "neden": "C₂H₄'ün basit formülü CH₂, C₂H₆'nınki CH₃'tür. Karbon sayısı aynı olsa da oran farklı."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Aynı formül, farklı yapı",
+   "metin": "Dört karbon iki farklı biçimde dizilebilir. Zinciri dallandır ve neyin değiştiğine bak.",
+   "sahne": {
+    "tur": "kim11-izomer"
+   },
+   "deger": {
+    "d": 0
+   },
+   "kontroller": [
+    {
+     "ad": "d",
+     "etiket": "Dallı zincir",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bütan ile 2-metilpropan için hangisi doğrudur?",
+    "secenekler": [
+     {
+      "yazi": "Kapalı formülleri farklıdır, izomer değildirler",
+      "neden": "İkisinde de 4 C ve 10 H var: kapalı formül C₄H₁₀, yani aynı."
+     },
+     {
+      "yazi": "Aynı maddedir, yalnızca farklı çizilmiştir",
+      "neden": "Kaynama noktaları farklıdır (−0,5 °C ve −11,7 °C), demek ki farklı maddelerdir. Biri düz, öteki dallı zincirdir."
+     },
+     {
+      "yazi": "Zincir izomeridirler",
+      "neden": "Kapalı formül aynı (C₄H₁₀), karbon iskeleti farklı: bu zincir izomerliğidir. Yapı değişince özellikler de değişir.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Cis mi, trans mı?",
+   "metin": "C=C bağı, π bağı yüzünden dönemez. Sağ karbona Cl koy ve o karbonu çevir: <b>trans-1,2-dikloroeteni</b> kur.",
+   "sahne": {
+    "tur": "kim11-cistrans"
+   },
+   "deger": {
+    "m": 0,
+    "y": 0
+   },
+   "kontroller": [
+    {
+     "ad": "m",
+     "etiket": "Sağ C'ye Cl",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "y",
+     "etiket": "Sağ C'yi çevir",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "m": 1,
+     "y": 1
+    },
+    "ipucu": "Trans: iki Cl zıt taraflarda.",
+    "tamam": "Cis ve trans aynı atomlara ve bağlara sahip, yalnızca uzaydaki dizilişleri farklı; kaynama noktaları da farklı. CH₂=CHCl'de bir karbonda iki H olduğu için cis-trans yoktur."
+   }
+  }
+ ],
+ "kapanis": [
+  "Kararlı organik bileşiklerde karbon <b>dört bağ</b> yapar; C=C iki, C≡C üç bağ sayılır.",
+  "Hep tekli bağ → <b>sp³</b> (109,5°); bir ikili → <b>sp²</b> (120°); üçlü ya da iki ikili → <b>sp</b> (180°).",
+  "Tekli bağ 1σ, ikili 1σ + 1π, üçlü 1σ + 2π'dir; C–H bağları da σ'dır.",
+  "Kapalı formül atom sayılarını, basit formül en küçük oranı verir: C₂H₂ ile C₆H₆'nın basit formülü aynıdır (CH).",
+  "<b>İzomerler</b> aynı kapalı formüllü, farklı yapılı maddelerdir: bütan ile 2-metilpropan zincir izomeri, cis ve trans dikloroeten geometrik izomerdir."
+ ]
+}

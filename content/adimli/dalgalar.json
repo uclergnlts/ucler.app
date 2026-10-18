@@ -1,0 +1,84 @@
+{
+  "id": "dalgalar",
+  "ders": "fizik",
+  "konu": "dalgalar",
+  "baslik": "Titreşimler ve Dalgalar",
+  "ozet": "Enine ve boyuna dalgayı karşılaştır, v = λ·f ile dalga boyunu ayarla, dalgayı başka ortama geçir, genliğin rolünü gör, atmayı yansıt, girişim yaptır ve salıncakla rezonansı bul.",
+  "adimlar": [
+    {
+      "baslik": "Enine ve boyuna dalga",
+      "metin": "Dalga, bir titreşimin ortamda yayılmasıdır. Önce ipte, sonra yayda bir dalga gönder. Kırmızı tanecikleri izle.",
+      "sahne": {"tur": "fiz11-tur", "sure": 4},
+      "deger": {"b": 0},
+      "kontroller": [{"ad": "b", "etiket": "Yay (boyuna dalga)", "min": 0, "max": 1, "tur": "anahtar"}],
+      "gorev": {"tur": "secim", "kosu": 2, "soru": "Kırmızı tanecik dalgayla birlikte ilerliyor mu?", "secenekler": [
+        {"yazi": "Evet, dalgayla birlikte sağa gider", "neden": "Kesik çizgiye bak: tanecik başladığı yerin çevresinde kalıyor."},
+        {"yazi": "Hayır, yerinde titreşir; ilerleyen enerjidir", "dogru": true, "neden": "Dalga enerji taşır, madde taşımaz. Titreşim yayılma yönüne dikse <b>enine</b> dalga (ip, ışık), paralelse <b>boyuna</b> dalga (ses, sıkıştırılan yay) olur."},
+        {"yazi": "Yalnızca boyuna dalgada ilerler", "neden": "Boyuna dalgada da tanecik ileri geri gidip aynı yere döner."}
+      ]}
+    },
+    {
+      "baslik": "Dalga boyu ve frekans",
+      "metin": "Bu ipte dalganın hızı <b>4 m/s</b>. Dalga bir periyotta bir dalga boyu ilerler: <b>v = λ·f</b>. Frekansı ayarla, dalga boyu <b>1 m</b> olsun.",
+      "sahne": {"tur": "fiz11-dalga"},
+      "deger": {"f": 1},
+      "kontroller": [{"ad": "f", "etiket": "Frekans", "min": 1, "max": 4, "tur": "sayac", "birim": "Hz"}],
+      "gorev": {"tur": "ayarla", "hedef": {"f": 4}, "tamam": "f = 4 Hz'de λ = 4 / 4 = <b>1 m</b>, periyot T = 1/f = 0,25 s. Frekansı artırınca hız değişmedi, yalnızca dalga boyu kısaldı. Hızı ortam, frekansı kaynak belirler.", "ipucu": "λ = v / f; 1 m için f = 4 / 1."}
+    },
+    {
+      "baslik": "Başka bir ortama geçiş",
+      "metin": "Dalga ince ipten kalın ipe geçecek. Frekansı kaynak, hızı ortam belirler.",
+      "sahne": {"tur": "fiz11-ortam", "sure": 5},
+      "gorev": {"tur": "tahmin", "soru": "Kalın ipte ne değişir?", "secenekler": [
+        {"yazi": "Hız ve dalga boyu azalır, frekans aynı kalır", "dogru": true, "neden": "Kalın ipte dalga yavaşlar. Frekans değişmediği için v = λ·f gereği λ da kısalır. Ses de böyle: havada yaklaşık 343 m/s, suda yaklaşık 1480 m/s; sesin hızını da ortam belirler."},
+        {"yazi": "Frekans azalır, dalga boyu aynı kalır", "neden": "Frekansı kaynak belirler; dalga başka ortama geçince f değişmez."},
+        {"yazi": "Hiçbir şey değişmez", "neden": "Kalın ipte dalgalar sıklaşıyor ve cephe yavaşlıyor."}
+      ]}
+    },
+    {
+      "baslik": "Genlik",
+      "metin": "Genlik, dengeden tepeye yüksekliktir. İki ip aynı; üstteki dalganın genliği A, alttakinin 3A.",
+      "sahne": {"tur": "fiz11-genlik", "sure": 4},
+      "gorev": {"tur": "tahmin", "soru": "Hangi dalga önde gider?", "secenekler": [
+        {"yazi": "Büyük genlikli dalga", "neden": "Büyük genlikli dalga daha çok enerji taşır ama daha hızlı gitmez."},
+        {"yazi": "Küçük genlikli dalga", "neden": "Küçük genlik dalgayı hızlandırmaz; iki dalga aynı ortamda."},
+        {"yazi": "İkisi yan yana gider", "dogru": true, "neden": "Dalganın hızını ortam belirler. Genlik ise dalganın taşıdığı enerjiyi belirler: genlik 3 katına çıkınca enerji 9 katına çıkar."}
+      ]}
+    },
+    {
+      "baslik": "Atmanın yansıması",
+      "metin": "Yayda tek bir sarsıntıya <b>atma</b> denir. Atmayı önce duvara bağlı <b>sabit uca</b>, sonra çubukta kayan halkalı <b>serbest uca</b> gönder.",
+      "sahne": {"tur": "fiz11-yansima", "sure": 4},
+      "deger": {"u": 0},
+      "kontroller": [{"ad": "u", "etiket": "Serbest uç", "min": 0, "max": 1, "tur": "anahtar"}],
+      "gorev": {"tur": "secim", "kosu": 2, "soru": "Hangi uçta atma ters döner?", "secenekler": [
+        {"yazi": "Serbest uçta", "neden": "Serbest uçta halka atmayla birlikte yukarı kalkar ve atma tepe olarak döner."},
+        {"yazi": "Sabit uçta", "dogru": true, "neden": "Atma duvarı yukarı çeker, duvar da ipi aşağı çeker: tepe çukur olarak döner. Serbest uçta halka yukarı kalkar, atma düz döner. İki yay arasındaki geçişte iletilen atma ise hep düz kalır."},
+        {"yazi": "İkisinde de ters döner", "neden": "Serbest uçlu denemede atma tepe olarak döndü."}
+      ]}
+    },
+    {
+      "baslik": "Girişim",
+      "metin": "İki atma karşı karşıya geliyor. Aynı noktada buluşunca yer değiştirmeleri <b>toplanır</b>. Buluştukları an ip <b>düz</b> görünsün.",
+      "sahne": {"tur": "fiz11-girisim", "sure": 3.4},
+      "deger": {"c": 0},
+      "kontroller": [{"ad": "c", "etiket": "Sağdaki atma çukur", "min": 0, "max": 1, "tur": "anahtar"}],
+      "gorev": {"tur": "ayarla", "hedef": {"c": 1}, "tamam": "Tepe, eşit bir çukurla buluşunca yer değiştirmeler birbirini götürdü: <b>yıkıcı girişim</b>. Tepe tepeyle buluşunca genlik 2 katına çıkar: <b>yapıcı girişim</b>. Buluşmadan sonra atmalar yollarına değişmeden devam eder.", "ipucu": "Bir tepeyi sıfırlamak için ona eşit bir çukur gerekir."}
+    },
+    {
+      "baslik": "Rezonans",
+      "metin": "Salıncağı düzenli aralıklarla hep aynı yöne it. Salınımın en çok büyüdüğü itme aralığını bul.",
+      "sahne": {"tur": "fiz11-rezonans", "sure": 10},
+      "deger": {"p": 1},
+      "kontroller": [{"ad": "p", "etiket": "İtme aralığı", "min": 1, "max": 3, "adim": 0.5, "tur": "surgu", "birim": "s"}],
+      "gorev": {"tur": "ayarla", "hedef": {"p": 2}, "tamam": "Salıncağın kendi periyodu 2 s, yani <b>doğal frekansı</b> 0,5 Hz. Her itme salıncak aynı yöne giderken geldi ve genlik büyüdü: <b>rezonans</b>. Dış itmenin frekansı doğal frekansa eşit olmalı. Sürtünme genliği sınırlar.", "ipucu": "İtmeler salıncağın bir tam gidiş-gelişine denk gelmeli."}
+    }
+  ],
+  "kapanis": [
+    "Dalga enerji taşır, madde taşımaz; ortamın tanecikleri yerinde titreşir.",
+    "Enine dalgada titreşim yayılma yönüne dik, boyuna dalgada paraleldir. Ses boyuna dalgadır.",
+    "v = λ·f. Hızı ortam, frekansı kaynak belirler; genlik hızı değil, enerjiyi değiştirir.",
+    "Sabit uçta atma ters, serbest uçta düz yansır. Buluşan dalgaların yer değiştirmeleri toplanır.",
+    "Doğal frekansta yapılan itmeler genliği büyütür: rezonans."
+  ]
+}

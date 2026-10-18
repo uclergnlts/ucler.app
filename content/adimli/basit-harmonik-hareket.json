@@ -1,0 +1,86 @@
+{
+  "id": "basit-harmonik-hareket",
+  "ders": "fizik",
+  "konu": "basit-harmonik-hareket",
+  "baslik": "Basit Harmonik Hareket",
+  "ozet": "Yayı çekip geri getirici kuvveti gör, salınımı izle, konum-zaman grafiğini oku, periyodu ayarla, sarkacı Ay'a götür ve enerjinin paylaşımını bul.",
+  "adimlar": [
+    {
+      "baslik": "Geri getirici kuvvet",
+      "metin": "Yaya bağlı cismi dengeden x kadar çekersen yay onu <b>F = −k·x</b> kuvvetiyle geri çeker. Yay sabiti k = 50 N/m. Cismi öyle bir yere götür ki yay onu <b>5 N ile sola</b> çeksin.",
+      "sahne": {"tur": "fiz11-geri"},
+      "deger": {"x": -4},
+      "kontroller": [{"ad": "x", "etiket": "Uzanım x", "min": -10, "max": 10, "tur": "surgu", "birim": "cm"}],
+      "gorev": {"tur": "ayarla", "hedef": {"x": 10}, "tamam": "x = +0,1 m için F = −50 · 0,1 = <b>−5 N</b>. Eksi işareti, kuvvetin uzanıma zıt, yani hep dengeye doğru olduğunu söyler. Bu <b>geri getirici kuvvet</b>, sürtünmesiz ortamda cismi <b>basit harmonik hareket</b> yapmaya zorlar.", "ipucu": "Kuvvetin sola olması için cisim dengenin sağında olmalı. 5 / 50 = 0,1 m."}
+    },
+    {
+      "baslik": "Bırakınca ne olur?",
+      "metin": "Cismi 10 cm çekip bırakıyorsun. Ortamda sürtünme yok. Kırmızı ok ivmeyi, yeşil ok hızı gösterecek.",
+      "sahne": {"tur": "fiz11-salinim", "sure": 4},
+      "gorev": {"tur": "tahmin", "soru": "Cisim nasıl hareket eder?", "secenekler": [
+        {"yazi": "Dengeye gelip orada durur", "neden": "Dengede kuvvet sıfırdır ama cisim o an en hızlıdır; hızının etkisiyle dengeyi geçer."},
+        {"yazi": "Dengeyi biraz geçer, giderek yavaşlayıp durur", "neden": "Bu sönümlü salınımdır: sürtünme enerjiyi ısıya çevirir. Burada sürtünme yok."},
+        {"yazi": "−10 cm'ye kadar gider, iki uç arasında gidip gelir", "dogru": true, "neden": "Dengeden geçerken hız en büyük (v<sub>max</sub> = ωA), ivme sıfırdır. Uçlarda cisim bir an durur, ivme en büyüktür (a<sub>max</sub> = ω²A). Sürtünme yoksa genlik hep 10 cm kalır."}
+      ]}
+    },
+    {
+      "baslik": "Konum-zaman grafiği",
+      "metin": "Düşey yaydaki cisim t = 0'da +A'dan bırakıldı. Periyot T = 2 s, grafik <b>x = A·cos(ωt)</b> eğrisi. Zamanı kaydır ve cismin <b>−A'ya ilk vardığı</b> anı bul.",
+      "sahne": {"tur": "fiz11-grafik"},
+      "deger": {"t": 0},
+      "kontroller": [{"ad": "t", "etiket": "Zaman", "min": 0, "max": 2, "adim": 0.25, "tur": "surgu", "birim": "s"}],
+      "gorev": {"tur": "ayarla", "hedef": {"t": 1}, "tamam": "Cisim −A'ya <b>T/2 = 1 s</b>'de varır. T/4 = 0,5 s'de dengeden geçer, T = 2 s'de başa döner. Grafiğin eğimi hızdır: tepede ve çukurda eğim, yani hız sıfırdır.", "ipucu": "Bir tam gidiş-geliş T sürer; −A'ya varmak bunun yarısıdır."}
+    },
+    {
+      "baslik": "Yay-kütle periyodu",
+      "metin": "Yay sabiti k = 40 N/m, periyot <b>T = 2π√(m/k)</b>. Kütleyi ve genliği değiştirip oynat. Periyodu tam <b>2 katına</b> çıkar.",
+      "sahne": {"tur": "fiz11-periyot", "sure": 4},
+      "deger": {"m": 1, "A": 10},
+      "kontroller": [
+        {"ad": "m", "etiket": "Kütle", "min": 1, "max": 4, "tur": "sayac", "birim": "kg"},
+        {"ad": "A", "etiket": "Genlik", "min": 5, "max": 15, "adim": 5, "tur": "surgu", "birim": "cm"}
+      ],
+      "gorev": {"tur": "ayarla", "hedef": {"m": 4}, "tamam": "Kütle 4 katına çıkınca periyot √4 = <b>2 katına</b> çıktı: 0,99 s'den 1,99 s'ye. Genlik periyodu değiştirmez; daha çok çeksen de bir salınım aynı sürer. Yay sertleşirse (k büyürse) periyot kısalır.", "ipucu": "Periyot kütlenin kareköküyle artar. √m = 2 için m kaç olmalı?"}
+    },
+    {
+      "baslik": "Basit sarkaç",
+      "metin": "Küçük açılarla salınan sarkaçta <b>T = 2π√(L/g)</b>. İpin boyunu ve topun kütlesini değiştirip en az iki kez oynat.",
+      "sahne": {"tur": "fiz11-sarkac", "sure": 4},
+      "deger": {"L": 1, "a": 0},
+      "kontroller": [
+        {"ad": "L", "etiket": "İpin boyu", "min": 0.25, "max": 1, "adim": 0.25, "tur": "surgu", "birim": "m"},
+        {"ad": "a", "etiket": "Ağır top", "min": 0, "max": 1, "tur": "anahtar"}
+      ],
+      "gorev": {"tur": "secim", "kosu": 2, "soru": "Sarkacın periyodu neye bağlı?", "secenekler": [
+        {"yazi": "Topun kütlesine", "neden": "Ağır ve hafif topla periyot aynı çıkar; formülde kütle yok."},
+        {"yazi": "Kütleye de ipin boyuna da", "neden": "Yalnız kütleyi değiştirdiğin denemede periyot değişmez."},
+        {"yazi": "İpin boyuna", "dogru": true, "neden": "T = 2π√(L/g): ip 4 kat uzayınca periyot 2 katına çıkar. L = 1 m ve g = 9,8 m/s² için T ≈ 2 s. Kütle ve (küçük açılarda) genlik periyodu değiştirmez."}
+      ]}
+    },
+    {
+      "baslik": "Ay'da sarkaç",
+      "metin": "Aynı 1 m'lik sarkaç Dünya'da ve Ay'da salınacak. Ay'da g yaklaşık 1,6 m/s², Dünya'dakinin altıda biri kadar.",
+      "sahne": {"tur": "fiz11-ay", "sure": 6.5},
+      "gorev": {"tur": "tahmin", "soru": "Ay'daki sarkacın periyodu ne olur?", "secenekler": [
+        {"yazi": "Dünya'dakiyle aynı olur", "neden": "Sarkacın periyodu g'ye bağlıdır: T = 2π√(L/g)."},
+        {"yazi": "6 katına çıkar", "neden": "Periyot g ile değil, √g ile ters orantılıdır."},
+        {"yazi": "Yaklaşık 2,5 katına çıkar", "dogru": true, "neden": "g altıda birine inince periyot √6 ≈ 2,45 katına çıkar: 2 s yerine yaklaşık 4,9 s. Sarkaçlı saat Ay'da geri kalır. Yay sarkacının periyodunda g yoktur; o Ay'da da değişmez."}
+      ]}
+    },
+    {
+      "baslik": "Enerji paylaşımı",
+      "metin": "Sürtünmesiz sistemde toplam enerji sabittir: <b>E = ½kA²</b>. Konumdaki pay <b>E<sub>p</sub> = ½kx²</b>, gerisi kinetik. Cismi öyle bir yere getir ki enerjinin <b>%75'i kinetik</b> olsun.",
+      "sahne": {"tur": "fiz11-enerji"},
+      "deger": {"x": 10},
+      "kontroller": [{"ad": "x", "etiket": "Dengeden uzaklık", "min": 0, "max": 10, "tur": "surgu", "birim": "cm"}],
+      "gorev": {"tur": "ayarla", "hedef": {"x": 5}, "tamam": "x = A/2 = 5 cm'de E<sub>p</sub> = ½ · 50 · 0,05² = 0,0625 J, toplamın dörtte biri. Kalan %75 kinetiktir; hız burada en büyük hızın yaklaşık %87'si. Uçta enerjinin hepsi potansiyel, dengede hepsi kinetiktir. x = A/√2 ≈ 7,1 cm'de ikisi eşit olur.", "ipucu": "Potansiyel pay %25 olmalı: x²/A² = 1/4."}
+    }
+  ],
+  "kapanis": [
+    "Geri getirici kuvvet F = −k·x hep dengeye yöneliktir.",
+    "Hız dengede en büyüktür (ωA), ivme uçlarda en büyüktür (ω²A).",
+    "Yay sarkacında T = 2π√(m/k), basit sarkaçta T = 2π√(L/g); periyot genliğe bağlı değildir.",
+    "Sarkacın periyodu kütleye bağlı değildir; g küçülünce uzar. Yay sarkacının periyodu g'ye bağlı değildir.",
+    "Toplam enerji E = ½kA² sabittir; uçta hepsi potansiyel, dengede hepsi kinetiktir."
+  ]
+}

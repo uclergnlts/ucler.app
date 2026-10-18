@@ -1,0 +1,227 @@
+{
+ "id": "hidrokarbonlar",
+ "ders": "kimya",
+ "konu": "hidrokarbonlar",
+ "baslik": "Hidrokarbonlar",
+ "ozet": "Alkan serisini büyüt, dallı izomerleri kaynat, en uzun zinciri bul, etini doyur, bromlu suyla test et ve pentanı yak.",
+ "adimlar": [
+  {
+   "baslik": "Alkan serisi",
+   "metin": "Alkanlar yalnız tekli bağ içerir; genel formülleri CₙH₂ₙ₊₂. Karbon sayısını artır ve kaynama noktasını izle. Oda sıcaklığında <b>sıvı olan ilk alkanı</b> bul.",
+   "sahne": {
+    "tur": "kim11-alkan"
+   },
+   "deger": {
+    "n": 1
+   },
+   "kontroller": [
+    {
+     "ad": "n",
+     "etiket": "Karbon sayısı",
+     "min": 1,
+     "max": 10,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "n": 5
+    },
+    "ipucu": "Kaynama noktası 25 °C çizgisini geçen ilk alkanı ara.",
+    "tamam": "Pentan 36 °C'de kaynar: metandan bütana gaz, pentandan dekana sıvı. Zincir uzadıkça London kuvvetleri artar, kaynama noktası yükselir."
+   }
+  },
+  {
+   "baslik": "Dallanma",
+   "metin": "Üç kapta aynı formüllü (C₅H₁₂) üç alkan var: düz zincirli, bir dallı ve iki dallı. Üçünü birlikte yavaşça ısıtıyoruz.",
+   "sahne": {
+    "tur": "kim11-dallanma",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hangisi önce kaynar?",
+    "secenekler": [
+     {
+      "yazi": "Pentan",
+      "neden": "Pentan düz zincirlidir; molekülleri yan yana uzun bir yüzeyle değer, London çekimi en güçlüdür. En son o kaynar (36 °C)."
+     },
+     {
+      "yazi": "2,2-dimetilpropan",
+      "neden": "En dallı molekül küreye en yakındır: temas yüzeyi küçük, London çekimi zayıf. 10 °C'de ilk o kaynar.",
+      "dogru": true
+     },
+     {
+      "yazi": "Üçü aynı anda, çünkü mol kütleleri aynı",
+      "neden": "Mol kütlesi aynı olsa da biçim farklı. Dallanma temas yüzeyini küçültür ve kaynama noktasını düşürür."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "En uzun zinciri say",
+   "metin": "Ad, <b>en uzun karbon zincirinden</b> gelir ve zincir düz çizilmek zorunda değildir. Zinciri kıvır, karbonları say. Numaralama dala en yakın uçtan başlar.",
+   "sahne": {
+    "tur": "kim11-adlandir"
+   },
+   "deger": {
+    "z": 0
+   },
+   "kontroller": [
+    {
+     "ad": "z",
+     "etiket": "Kıvrılan zincir",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bu alkanın IUPAC adı hangisi?",
+    "secenekler": [
+     {
+      "yazi": "3-metilpentan",
+      "neden": "En uzun zincir 5 C'dir (pentan); metil dalı iki uçtan da 3. karbonda kalır. Molekül C₆H₁₄, bir hekzan izomeridir.",
+      "dogru": true
+     },
+     {
+      "yazi": "2-etilbütan",
+      "neden": "Yatay zincir 4 C ama en uzunu değil: etil dalı zincirin devamıdır. Dalı zincire katınca 5 C çıkar."
+     },
+     {
+      "yazi": "3-etilbütan",
+      "neden": "Hem zincir hem numara yanlış: en uzun zincir 5 C'dir ve dal en küçük numarayı almalıdır."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Etini doyur",
+   "metin": "Etinin (C₂H₂) üçlü bağına H₂ katalım. Her mol H₂ bir π bağını açar ve iki karbona birer H ekler. Etini tamamen doyur.",
+   "sahne": {
+    "tur": "kim11-doyur"
+   },
+   "deger": {
+    "h": 0
+   },
+   "kontroller": [
+    {
+     "ad": "h",
+     "etiket": "Eklenen H₂ (mol)",
+     "min": 0,
+     "max": 2,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "h": 2
+    },
+    "ipucu": "Üçlü bağda iki π bağı var.",
+    "tamam": "Alkin → alken → alkan: katılma iki basamaktır. 1 mol alkin doymak için 2 mol H₂ (ya da 2 mol Br₂) harcar; alken 1 mol."
+   }
+  },
+  {
+   "baslik": "Bromlu su testi",
+   "metin": "Üç tüpte turuncu <b>bromlu su</b> var. Her birine birkaç damla hidrokarbon ekleyip çalkalıyoruz.",
+   "sahne": {
+    "tur": "kim11-brom",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hangi tüpte turuncu renk kaybolur?",
+    "secenekler": [
+     {
+      "yazi": "Hekzan ve hekzende",
+      "neden": "Hekzan doymuştur; tekli bağlarına Br₂ katılamaz. Işık altında yavaşça yer değiştirir ama renk hemen gitmez."
+     },
+     {
+      "yazi": "Hekzen ve benzende",
+      "neden": "Benzen çift bağlı gibi çizilse de kararlı aromatik halkası katılmaya direnir; renk kalır."
+     },
+     {
+      "yazi": "Yalnız hekzende",
+      "neden": "Hekzenin C=C bağı açılır ve Br₂ iki karbona katılır; renkli Br₂ harcanır. Bu, doymamışlık testidir.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Benzen neden farklı?",
+   "metin": "Benzen üç çift bağlıymış gibi çizilir, ama bu bağlar yerinde durmaz. Halkayı göster ve bağ uzunluklarına bak.",
+   "sahne": {
+    "tur": "kim11-benzen"
+   },
+   "deger": {
+    "r": 0
+   },
+   "kontroller": [
+    {
+     "ad": "r",
+     "etiket": "Halkayı göster",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Benzen bromlu suyu neden renksizleştirmez?",
+    "secenekler": [
+     {
+      "yazi": "Benzen doymuş bir hidrokarbondur",
+      "neden": "C₆H₆, aynı karbon sayılı hekzandan (C₆H₁₄) 8 H eksiktir; doymuş değildir. Fark, π elektronlarının halkaya yayılmasıdır."
+     },
+     {
+      "yazi": "Yayılmış π halkası çok kararlıdır; katılma onu bozardı",
+      "neden": "Katılma aromatik halkayı bozacağı için benzen bunun yerine yer değiştirme yapar: FeBr₃ katalizörüyle Br₂, bir H'nin yerine geçer.",
+      "dogru": true
+     },
+     {
+      "yazi": "Benzende hiç π elektronu yoktur",
+      "neden": "Benzende 6 π elektronu vardır; sabit çift bağlarda değil, halkanın tamamına yayılmış durumdadır."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Pentanı yak",
+   "metin": "Yeterli oksijenle bir hidrokarbon yanınca CO₂ ve H₂O oluşur. Pentanın yanma denklemini O₂ katsayısıyla denkleştir.",
+   "sahne": {
+    "tur": "kim11-yanma"
+   },
+   "deger": {
+    "o": 4
+   },
+   "kontroller": [
+    {
+     "ad": "o",
+     "etiket": "O₂ katsayısı",
+     "min": 1,
+     "max": 12,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "o": 8
+    },
+    "ipucu": "Sağda kaç O atomu var? Her O₂ iki O getirir.",
+    "tamam": "C₅H₁₂ + 8O₂ → 5CO₂ + 6H₂O. Oksijen az olursa yanma eksik kalır; zehirli CO ve is oluşur. Yanma bir redoks tepkimesidir."
+   }
+  }
+ ],
+ "kapanis": [
+  "Alkanlar CₙH₂ₙ₊₂ formüllü, tek bağlı ve doymuştur; zincir uzadıkça kaynama noktası artar, dallandıkça düşer.",
+  "Ad <b>en uzun zincirden</b> gelir; numaralama dala en yakın uçtan başlar: 3-metilpentan.",
+  "Alkin → alken → alkan: 1 mol alkin 2 mol, 1 mol alken 1 mol H₂ ya da Br₂ katar.",
+  "Bromlu suyu alken ve alkin renksizleştirir; alkan ve benzen renksizleştirmez.",
+  "Benzenin 6 π elektronu halkaya yayılmıştır; bu kararlılık yüzünden katılma yerine <b>yer değiştirme</b> yapar."
+ ]
+}

@@ -1,0 +1,113 @@
+{
+ "id": "sindirim",
+ "ders": "biyoloji",
+ "konu": "sindirim",
+ "baslik": "Sindirim sistemi",
+ "ozet": "Bir lokmayı ağızdan anüse kadar izle, besinleri parçala, enzimleri doğru pH'de çalıştır ve villusların yüzeyini aç.",
+ "adimlar": [
+  {
+   "baslik": "Lokmanın yolculuğu",
+   "metin": "Besin, ağızdan anüse uzanan tek yönlü bir kanalda ilerler. Yanında <b>yardımcı organlar</b> vardır. Tahmin et, sonra lokmayı izle.",
+   "sahne": { "tur": "biy11-kanal", "sure": 7 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Lokma hangisinin içinden geçmez?",
+    "secenekler": [
+     { "yazi": "Mide", "neden": "Mide sindirim kanalının parçasıdır; lokma burada asitle çalkalanıp kimusa dönüşür." },
+     { "yazi": "Yemek borusu", "neden": "Yemek borusu lokmayı peristaltik hareketle mideye iter; lokma içinden geçer." },
+     { "yazi": "Pankreas", "dogru": true, "neden": "Pankreas yardımcı organdır. Besin içinden geçmez; pankreas sıvısını onikiparmak bağırsağına döker. Karaciğer de böyledir." }
+    ]
+   }
+  },
+  {
+   "baslik": "Çiğne",
+   "metin": "Dişler lokmayı keser ve öğütür. Buna <b>mekanik sindirim</b> denir. Lokmayı parçalara böl ve yüzeyini 4 katına çıkar.",
+   "sahne": { "tur": "biy11-yuzey" },
+   "deger": { "n": 1 },
+   "kontroller": [ { "ad": "n", "etiket": "Bölme", "min": 1, "max": 4, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "n": 4 },
+    "ipucu": "Her kenarı daha çok parçaya böldükçe toplam yüzey artar.",
+    "tamam": "64 parça, 4 kat yüzey. Enzimin değdiği yer arttı, ama madde hâlâ nişasta. Molekülü yalnızca enzimler hidrolizle değiştirir: buna kimyasal sindirim denir."
+   }
+  },
+  {
+   "baslik": "Kim nerede başlar?",
+   "metin": "Üç besin de aynı kanaldan geçer, ama her birinin <b>kimyasal sindirimi</b> başka yerde başlar. Besini değiştir ve üçünü de oynat.",
+   "sahne": { "tur": "biy11-baslangic", "sure": 5 },
+   "deger": { "b": 1 },
+   "kontroller": [ { "ad": "b", "etiket": "Besin", "min": 1, "max": 3, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "secim",
+    "kosu": 3,
+    "soru": "Kimyasal sindirimin başlama sırası hangisi?",
+    "secenekler": [
+     { "yazi": "Protein → karbonhidrat → yağ", "neden": "Proteinin sindirimi ağızda başlamaz; tükürükte protein parçalayan enzim yoktur. İlk başlayan karbonhidrattır." },
+     { "yazi": "Karbonhidrat → protein → yağ", "dogru": true, "neden": "Tükürük amilazı ağızda nişastaya başlar, pepsin midede proteine, lipaz ince bağırsakta yağa. Üçünün sindirimi de ince bağırsakta biter." },
+     { "yazi": "Yağ → protein → karbonhidrat", "neden": "Yağ en son başlar: lipaz ince bağırsakta çalışır. Ağızda ve midede yağ değişmeden geçer." }
+    ]
+   }
+  },
+  {
+   "baslik": "Enzim ve pH",
+   "metin": "Mide bezleri <b>HCl</b> salgılar ve pH 2'ye iner. Pankreas sıvısındaki <b>bikarbonat</b> ise asidi nötrler. pH'yi değiştir ve pepsinin en hızlı çalıştığı yeri bul.",
+   "sahne": { "tur": "biy11-ph" },
+   "deger": { "ph": 7 },
+   "kontroller": [ { "ad": "ph", "etiket": "pH", "min": 1, "max": 9 } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "ph": 2 },
+    "ipucu": "Pepsin midede çalışır. Mide asidi pH'yi çok düşürür.",
+    "tamam": "pH 2'de pepsin en hızlı, tripsin neredeyse durmuş. Kimus onikiparmağa geçince bikarbonat pH'yi yükseltir; pepsin durur, pankreasın tripsini çalışır."
+   }
+  },
+  {
+   "baslik": "Safra",
+   "metin": "Yağ suda büyük damlalar yapar; <b>lipaz</b> yalnızca damlanın yüzeyinde çalışır. Karaciğerin ürettiği <b>safra</b> onikiparmağa dökülür. Safrayı aç ve oynat.",
+   "sahne": { "tur": "biy11-safra", "sure": 4 },
+   "deger": { "safra": 0 },
+   "kontroller": [ { "ad": "safra", "etiket": "Safra dökülsün", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "safra": 1 },
+    "ipucu": "Safra yağı küçük damlacıklara ayırır. Yüzey artınca lipaz hızlanır.",
+    "tamam": "Safra yağı damlacıklara ayırdı, yüzey 3 katına çıktı ve lipaz yağın hepsini parçaladı. Safra enzim değildir; yaptığı iş emülsiyondur, yani mekanik sindirimdir."
+   }
+  },
+  {
+   "baslik": "Villuslar",
+   "metin": "Emilimin çoğu <b>ince bağırsakta</b> olur. Düz bir boru olsaydı yüzey çok küçük kalırdı. Duvarı kıvır, villusları ve mikrovillusları ekle.",
+   "sahne": { "tur": "biy11-villus" },
+   "deger": { "k": 0 },
+   "kontroller": [ { "ad": "k", "etiket": "Yüzey düzeyi", "min": 0, "max": 3, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "k": 3 },
+    "ipucu": "Son düzeyde her epitel hücresinin zarı fırça gibi çıkıntılar yapar.",
+    "tamam": "Kıvrımlar, villuslar ve mikrovilluslar birlikte yüzeyi yüzlerce kat artırır. Mikrovillus zarındaki maltaz, laktaz ve peptidazlar sindirimin son adımını da burada atar."
+   }
+  },
+  {
+   "baslik": "Kana mı, lenfe mi?",
+   "metin": "Her villusun içinde bir <b>kılcal kan damarı</b> ağı ve ortada ucu kapalı bir <b>lenf kılcalı</b> vardır. Tahmin et, sonra oynat.",
+   "sahne": { "tur": "biy11-emilim", "sure": 4 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Yağ asidi ve gliserolün çoğu villusta nereye geçer?",
+    "secenekler": [
+     { "yazi": "Lenf kılcalına", "dogru": true, "neden": "Yağ asidi ve gliserol epitel hücresinde yeniden yağa dönüşür ve çoğu lenfe geçer. A, D, E, K vitaminleri de bu yolu izler; lenf sonra kana katılır." },
+     { "yazi": "Kılcal kana", "neden": "Kılcal kana glikoz, amino asit, su ve suda çözünen vitaminler geçer; bu kan önce karaciğere gider. Yağların çoğu bu yolu izlemez." },
+     { "yazi": "Kalın bağırsağa", "neden": "Kalın bağırsak sindirim enzimi salgılamaz; su ve mineral emer. Yağın sindirimi ve emilimi ince bağırsakta tamamlanır." }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Besin tek yönlü bir kanalda ilerler; karaciğer ve pankreas kanalın parçası değildir, salgılarını döker.",
+  "Mekanik sindirim yüzeyi artırır; molekülü yalnızca enzimler hidrolizle değiştirir.",
+  "Kimyasal sindirim karbonhidratta ağızda, proteinde midede, yağda ince bağırsakta başlar; hepsi ince bağırsakta biter.",
+  "Pepsin asitte, pankreas enzimleri bikarbonatın nötrlediği ortamda çalışır. Safra enzim değildir, yağı emülsiyonlaştırır.",
+  "Villus ve mikrovilluslar yüzeyi çok artırır: glikoz ve amino asit kana, yağların çoğu lenfe geçer."
+ ]
+}

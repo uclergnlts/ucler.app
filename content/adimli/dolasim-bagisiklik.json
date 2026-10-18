@@ -1,0 +1,115 @@
+{
+ "id": "dolasim-bagisiklik",
+ "ders": "biyoloji",
+ "konu": "dolasim-bagisiklik",
+ "baslik": "Dolaşım ve bağışıklık",
+ "ozet": "Kanı kalpten akciğere ve dokulara gönder, kapakçıkları onar, nabzı ayarla, uygun kanı bul ve aşının neden işe yaradığını grafikte gör.",
+ "adimlar": [
+  {
+   "baslik": "İki dolaşım",
+   "metin": "Kalbin sağ yarısı kanı <b>akciğere</b>, sol yarısı <b>vücuda</b> pompalar. Atardamar kanı kalpten götürür, toplardamar kalbe getirir. Tahmin et, sonra bir damla kanı izle.",
+   "sahne": { "tur": "biy11-dolasim", "sure": 9 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Akciğer atardamarındaki kan nasıldır?",
+    "secenekler": [
+     { "yazi": "Oksijenli", "neden": "Atardamar kanı kalpten götüren damardır; oksijenli olmak zorunda değildir. Akciğere giden kan oksijenini dokularda bırakmıştır." },
+     { "yazi": "Oksijensiz", "dogru": true, "neden": "Akciğer atardamarı, sağ karıncıktan oksijensiz kanı akciğere götürür. Kan akciğerde O₂ alır ve akciğer toplardamarıyla oksijenli olarak sol kulakçığa döner." },
+     { "yazi": "Yarı oksijenli, karışık", "neden": "İnsanda kalbin sağ ve sol yarısı birbirinden ayrıdır; oksijenli ve oksijensiz kan karışmaz." }
+    ]
+   }
+  },
+  {
+   "baslik": "Kapakçıklar",
+   "metin": "Kalpte kanı tek yöne akıtan <b>kapakçıklar</b> vardır. Bu kalbin kapakçıkları tam kapanmıyor. Oynat ve kana ne olduğunu gör, sonra onar.",
+   "sahne": { "tur": "biy11-kapak", "sure": 3 },
+   "deger": { "k": 0 },
+   "kontroller": [ { "ad": "k", "etiket": "Kapakçıklar sağlam", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "k": 1 },
+    "ipucu": "Karıncık kasılınca kulakçığa giden kapı kapanmalı, aorta giden kapı açılmalı.",
+    "tamam": "Karıncık kasılınca ikili kapakçık kapandı, yarım ay kapakçığı açıldı; kanın hepsi aorta gitti. Sağ tarafta da aynı işi üçlü kapakçık yapar."
+   }
+  },
+  {
+   "baslik": "Kalp hızı",
+   "metin": "Kalp kasılma uyarısını kendisi üretir; uyarıyı <b>SA düğüm</b> başlatır. Dinlenmede bir kalp döngüsü <b>0,8 saniye</b> sürer. Nabzı buna ayarla.",
+   "sahne": { "tur": "biy11-nabiz" },
+   "deger": { "n": 60 },
+   "kontroller": [ { "ad": "n", "etiket": "Nabız", "min": 50, "max": 150, "adim": 5, "birim": "atım/dk" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "n": 75 },
+    "ipucu": "Bir dakika 60 saniyedir. 60 saniyeye kaç tane 0,8 saniye sığar?",
+    "tamam": "60 ÷ 0,8 = 75 atım. Kalbin sinirleri kesilse de kalp atar; sinirler ve hormonlar yalnızca hızı ayarlar."
+   }
+  },
+  {
+   "baslik": "Kanın içinde ne var?",
+   "metin": "Bir tüp kanı döndürünce ikiye ayrılır: üstte sarımsı <b>plazma</b>, altta hücreler. Bileşenleri tek tek incele.",
+   "sahne": { "tur": "biy11-kan" },
+   "deger": { "h": 1 },
+   "kontroller": [ { "ad": "h", "etiket": "Bileşen", "min": 1, "max": 4, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Antikorlar kanın hangi bölümünde taşınır?",
+    "secenekler": [
+     { "yazi": "Alyuvarda", "neden": "Alyuvar hemoglobinle O₂ taşır. Zarında kan grubunu belirleyen antijenler vardır, antikor taşımaz." },
+     { "yazi": "Akyuvarda", "neden": "Antikoru B lenfositinden gelişen plazma hücreleri üretir, ama salgılanan antikor hücrede kalmaz; plazmada çözünmüş taşınır." },
+     { "yazi": "Plazmada", "dogru": true, "neden": "Plazma kanın yaklaşık %55'idir. Çoğu sudur ve içinde albümin, fibrinojen ve antikor gibi proteinler taşınır." }
+    ]
+   }
+  },
+  {
+   "baslik": "Basınç ve hız",
+   "metin": "Kan aorttan kılcallara, oradan toplardamarlara geçerken <b>basıncı</b> ve <b>hızı</b> değişir. Damarları tek tek seç ve grafiğe bak.",
+   "sahne": { "tur": "biy11-damar" },
+   "deger": { "d": 1 },
+   "kontroller": [ { "ad": "d", "etiket": "Damar", "min": 1, "max": 5, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Kan neden en yavaş kılcallarda akar?",
+    "secenekler": [
+     { "yazi": "Kılcalların toplam kesit alanı en büyüktür", "dogru": true, "neden": "Tek bir kılcal çok incedir, ama sayıları milyarlarcadır; toplam kesitleri aorttan kat kat geniştir. Kan geniş bir yatağa yayılır ve yavaşlar, alışverişe zaman kalır." },
+     { "yazi": "Kılcallarda basınç sıfırdır", "neden": "Kılcalın atardamar ucunda basınç hâlâ sıvıyı dokuya itecek kadar yüksektir. Sıfıra yakın basınç ana toplardamardadır." },
+     { "yazi": "Kılcal duvarı kalın ve serttir", "neden": "Tam tersi: kılcal duvarı tek kat hücredir. İnce duvar, madde alışverişini kolaylaştırır." }
+    ]
+   }
+  },
+  {
+   "baslik": "Kan grupları",
+   "metin": "Kan grubunu alyuvardaki <b>antijenler</b> belirler; plazmada karşıt <b>antikorlar</b> vardır. Alıcının grubu O. Ona uygun vericiyi bul.",
+   "sahne": { "tur": "biy11-grup", "alici": "O" },
+   "deger": { "g": 1 },
+   "kontroller": [ { "ad": "g", "etiket": "Verici grubu", "min": 1, "max": 4, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "g": 4 },
+    "ipucu": "O grubunun plazmasında hem anti-A hem anti-B vardır. Antijeni olmayan alyuvarı ara.",
+    "tamam": "Yalnız O grubu alyuvar çökelmedi; zarında A ya da B antijeni yoktur. Bu yüzden O Rh− genel vericidir. Yine de nakilden önce her zaman uygunluk testi yapılır."
+   }
+  },
+  {
+   "baslik": "Aşı neden işe yarar?",
+   "metin": "Aşı, vücudu hastalık yapmayan bir <b>antijenle</b> tanıştırır. B lenfositleri antikor üretir ve geriye <b>hafıza hücreleri</b> kalır. Tahmin et, sonra antikor grafiğini izle.",
+   "sahne": { "tur": "biy11-yanit", "sure": 6 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Aynı antijenle ikinci karşılaşmada antikor yanıtı nasıl olur?",
+    "secenekler": [
+     { "yazi": "Birincisiyle aynı", "neden": "İlk karşılaşmadan hafıza hücreleri kalır; vücut antijeni tanır ve yanıt aynı kalmaz." },
+     { "yazi": "Daha geç ve daha zayıf", "neden": "Vücut antijene alışıp yanıtı azaltmaz. Hafıza hücreleri yanıtı tersine hızlandırır." },
+     { "yazi": "Daha hızlı ve daha güçlü", "dogru": true, "neden": "Hafıza hücreleri hemen çoğalır; antikor kısa sürede ve çok daha yüksek düzeye çıkar. Mikrop hastalık yapamadan etkisiz kalır. Aktif bağışıklık bu yüzden uzun sürer." }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Küçük dolaşımda kan akciğerde O₂ alır, büyük dolaşımda dokulara bırakır. Akciğer atardamarı oksijensiz kan taşır.",
+  "Kapakçıklar kanı tek yöne akıtır; dinlenmede bir döngü 0,8 s, yani dakikada 75 atımdır.",
+  "Kanın %55'i plazmadır; alyuvar O₂ taşır, akyuvar savunur, kan pulcuğu pıhtılaşmayı başlatır.",
+  "Basınç aorttan toplardamara düşer; kan, toplam kesiti en geniş olan kılcallarda en yavaş akar.",
+  "Alyuvar antijeni alıcının antikoruyla karşılaşırsa çökelme olur. Aşı hafıza hücresi bırakır; ikinci yanıt hızlı ve güçlüdür."
+ ]
+}
