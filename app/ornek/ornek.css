@@ -1,4 +1,4 @@
-/* Adım adım örnek ders (components/AdimliDers.tsx). Ortak parçalar (.card, .opts, .feedback, .btn, .surgu) globals.css içindedir. */
+/* Adımlı dersler (components/DersMotoru.tsx, components/sahne/). Ortak parçalar (.card, .opts, .feedback, .btn, .surgu) globals.css içindedir. */
 .ad-kart{gap:14px}
 .ad-sahne{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:10px 8px;overflow:hidden}
 .ad-sahne svg{display:block;width:100%;height:auto;max-height:46vh;margin-inline:auto;font-family:var(--f-body);font-variant-numeric:tabular-nums}
@@ -17,3 +17,23 @@
 .ad-ozet{margin:0;padding:0 0 0 20px;display:grid;gap:8px;font-size:16px;line-height:1.5}
 .ad-acts{display:grid;gap:10px}
 .ad-soru .feedback{scroll-margin-bottom:96px}
+.ad-kontroller{display:grid;gap:10px}
+.ad-sayac{display:grid;grid-template-columns:1fr 44px minmax(56px,auto) 44px;align-items:center;gap:8px;font-weight:700;font-size:14px}
+.ad-sayac .btn{height:40px;padding:0;font-size:20px;line-height:1}
+.ad-sayac b{text-align:center;font-family:var(--f-display);font-size:18px;font-variant-numeric:tabular-nums}
+.ad-anahtar{display:grid;grid-template-columns:1fr auto 54px;align-items:center;gap:10px;width:100%;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:var(--surface);font:inherit;font-weight:700;font-size:14px;color:var(--ink);text-align:left;cursor:pointer}
+.ad-anahtar i{position:relative;width:42px;height:24px;border-radius:12px;background:var(--line-2);transition:background .2s}
+.ad-anahtar i::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2);transition:transform .2s}
+.ad-anahtar.acik i{background:var(--acc)}
+.ad-anahtar.acik i::after{transform:translateX(18px)}
+.ad-anahtar b{text-align:right;color:var(--muted);font-weight:600}
+.ad-anahtar:disabled{opacity:.6;cursor:default}
+.ad-anahtar:focus-visible{outline:3px solid var(--glow);outline-offset:2px}
+.opt .ad-serit{vertical-align:middle}
+.ad-don{animation:ad-don linear infinite;transform-box:view-box}
+@keyframes ad-don{to{transform:rotate(360deg)}}
+.ad-kay{animation:ad-kay 6s ease-in-out infinite alternate}
+@keyframes ad-kay{from{transform:translateX(-3px)}to{transform:translateX(3px)}}
+.ad-akis{animation:ad-akis 1.6s ease-in-out infinite}
+@keyframes ad-akis{50%{opacity:.45}}
+@media (prefers-reduced-motion:reduce){.ad-don,.ad-kay,.ad-akis{animation:none}}
