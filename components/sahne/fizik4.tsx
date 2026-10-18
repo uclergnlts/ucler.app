@@ -92,7 +92,7 @@ function Net({ v }: SahneProps) {
         Net kuvvet: {Math.abs(net)} N{net > 0 ? " sağa" : net < 0 ? " sola" : ""}
       </text>
       <text x={170} y={net !== 0 ? 218 : 204} fontSize={12} textAnchor="middle" fill="var(--muted)">
-        {net === 0 ? "Kuvvetler dengede: hız değişmez" : "Kutu net kuvvet yönünde hızlanır"}
+        {net === 0 ? "Kuvvetler dengede: hız değişmez" : "Kutunun hızı net kuvvet yönünde değişir"}
       </text>
     </svg>
   );
