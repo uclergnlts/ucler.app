@@ -1,0 +1,243 @@
+{
+ "id": "atomun-yapisi",
+ "ders": "kimya",
+ "konu": "atomun-yapisi",
+ "baslik": "Atomun yapısı",
+ "ozet": "Proton, nötron ve elektronu kendi elinle ekleyip çıkararak atom ve iyon kur.",
+ "adimlar": [
+  {
+   "baslik": "Atom ne kadar küçük?",
+   "metin": "Bir atom o kadar küçük ki yan yana 3 milyon tanesi ancak 1 milimetre eder. Şimdi bir lityum atomunun içine yakınlaşacaksın.",
+   "sahne": {
+    "tur": "atom-olcek",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Atomu bir futbol stadyumu kadar büyütsen, ortadaki çekirdek ne kadar olurdu?",
+    "secenekler": [
+     {
+      "yazi": "Bir bezelye tanesi kadar",
+      "dogru": true,
+      "neden": "Çekirdek, atomdan yaklaşık 100.000 kat küçüktür. Stadyum kadar bir atomda çekirdek, sahanın ortasındaki bir bezelyedir. Atomun neredeyse tamamı boşluktur."
+     },
+     {
+      "yazi": "Bir futbol topu kadar",
+      "neden": "Futbol topu bile çok büyük kalır."
+     },
+     {
+      "yazi": "Sahanın yarısı kadar",
+      "neden": "Çekirdek atomun içinde ancak küçük bir noktadır."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Üç tanecik",
+   "metin": "Her atom üç taneciğin birleşimidir. Çekirdekte <b>proton</b> (+1) ve <b>nötron</b> (yüksüz) bulunur, <b>elektronlar</b> (−1) çekirdeğin çevresindeki katmanlarda dolaşır. Bu, helyum atomu.",
+   "sahne": {
+    "tur": "atom",
+    "etiket": true
+   },
+   "deger": {
+    "p": 2,
+    "n": 2,
+    "e": 2
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Atomun kütlesinin neredeyse tamamı nerede?",
+    "secenekler": [
+     {
+      "yazi": "Çekirdekte",
+      "dogru": true,
+      "neden": "Proton ve nötronun kütlesi birbirine yakındır; elektron ise bir protondan yaklaşık 1836 kat hafiftir. Bu yüzden kütlenin neredeyse tamamı çekirdektedir."
+     },
+     {
+      "yazi": "Elektron katmanlarında",
+      "neden": "Katmanlar atomun hacmini oluşturur ama elektronlar çok hafiftir: bir proton yaklaşık 1836 elektron eder."
+     },
+     {
+      "yazi": "Eşit dağılmış",
+      "neden": "Elektron, protondan çok daha hafiftir. Ağırlık nerede toplanır?"
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Elementi proton belirler",
+   "metin": "Proton ekle ya da çıkar ve elementin nasıl değiştiğine bak. Proton sayısına <b>atom numarası</b> (Z) denir. <b>Karbonu</b> bul.",
+   "sahne": {
+    "tur": "atom"
+   },
+   "deger": {
+    "p": 1,
+    "n": 0,
+    "e": 1
+   },
+   "kontroller": [
+    {
+     "ad": "p",
+     "etiket": "Proton",
+     "min": 1,
+     "max": 20,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "p": 6
+    },
+    "tamam": "6 proton = karbon. Proton sayısı değişirse element de değişir: 7 proton artık azottur. Her elementin kendine özgü bir atom numarası vardır."
+   }
+  },
+  {
+   "baslik": "Nötron ve izotop",
+   "metin": "Nötron eklemek elementi değiştirmez, yalnızca kütle numarasını (A = proton + nötron) değiştirir. Bu karbon atomunu <b>karbon-14</b> yap.",
+   "sahne": {
+    "tur": "atom"
+   },
+   "deger": {
+    "p": 6,
+    "n": 6,
+    "e": 6
+   },
+   "kontroller": [
+    {
+     "ad": "n",
+     "etiket": "Nötron",
+     "min": 4,
+     "max": 10,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "n": 8
+    },
+    "tamam": "Hâlâ karbon, çünkü proton sayısı 6. Ama A = 6 + 8 = 14. Proton sayısı aynı, nötron sayısı farklı atomlara <b>izotop</b> denir. Karbon-14 eski kalıntıların yaşını bulmada kullanılır."
+   }
+  },
+  {
+   "baslik": "Elektron ve iyon",
+   "metin": "Atom elektron verir ya da alırsa yüklü bir taneciğe, yani <b>iyona</b> dönüşür. Sodyum atomu bir elektron vererek <b>Na⁺</b> olur. Onu yap.",
+   "sahne": {
+    "tur": "atom"
+   },
+   "deger": {
+    "p": 11,
+    "n": 12,
+    "e": 11
+   },
+   "kontroller": [
+    {
+     "ad": "e",
+     "etiket": "Elektron",
+     "min": 8,
+     "max": 12,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "e": 10
+    },
+    "tamam": "11 proton, 10 elektron: yük 11 − 10 = +1. Elektron veren atom pozitif iyon (<b>katyon</b>), elektron alan atom negatif iyon (<b>anyon</b>) olur. Çekirdek hiç değişmedi."
+   }
+  },
+  {
+   "baslik": "Elektron katmanları",
+   "metin": "Elektronlar katmanlara dizilir: ilk katmana en çok 2, sonraki ikisine 8'er elektron sığar (ilk 20 element için). Proton sayısını değiştir ve katmanlara bak.",
+   "sahne": {
+    "tur": "atom"
+   },
+   "deger": {
+    "p": 3,
+    "n": 4,
+    "e": 3
+   },
+   "kontroller": [
+    {
+     "ad": "p",
+     "etiket": "Proton",
+     "min": 1,
+     "max": 20,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Klor atomunun (17 proton) son katmanında kaç elektron var?",
+    "secenekler": [
+     {
+      "yazi": "7",
+      "dogru": true,
+      "neden": "17 elektron 2-8-7 diye dizilir. Son katmandaki 7 elektron, klorun bir elektron alıp Cl⁻ olmaya yatkın olmasının nedenidir."
+     },
+     {
+      "yazi": "8",
+      "neden": "Önce ilk iki katman dolar: 2 + 8 = 10. Kalan 17 − 10 kaç eder?"
+     },
+     {
+      "yazi": "1",
+      "neden": "Proton sayısını 17 yap ve katmanları say."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Hepsi bir arada",
+   "metin": "Şimdi her şeyi kendin kur: kütle numarası 32 olan kükürdün iki elektron almış hâli, yani <b>³²S²⁻</b> iyonu. Önce protonu ayarla.",
+   "sahne": {
+    "tur": "atom"
+   },
+   "deger": {
+    "p": 10,
+    "n": 10,
+    "e": 10
+   },
+   "kontroller": [
+    {
+     "ad": "p",
+     "etiket": "Proton",
+     "min": 1,
+     "max": 20,
+     "tur": "sayac"
+    },
+    {
+     "ad": "n",
+     "etiket": "Nötron",
+     "min": 0,
+     "max": 24,
+     "tur": "sayac"
+    },
+    {
+     "ad": "e",
+     "etiket": "Elektron",
+     "min": 0,
+     "max": 20,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "p": 16,
+     "n": 16,
+     "e": 18
+    },
+    "tamam": "16 proton kükürdü belirler. 32 − 16 = 16 nötron. Nötr atomda 16 elektron olurdu; 2 elektron alınca 18 olur ve yük 16 − 18 = −2."
+   }
+  }
+ ],
+ "kapanis": [
+  "Atom, çekirdek (<b>proton</b> + <b>nötron</b>) ve çevresindeki <b>elektronlardan</b> oluşur; kütle çekirdekte, hacim boşluktadır.",
+  "Proton sayısı = <b>atom numarası</b> (Z); elementi belirler.",
+  "<b>Kütle numarası</b> A = proton + nötron. Nötron sayısı farklı aynı element atomları <b>izotoptur</b>.",
+  "Yük = proton − elektron. Elektron veren <b>katyon</b>, alan <b>anyon</b> olur.",
+  "İlk 20 elementte elektronlar 2, 8, 8, 2 diye katmanlara dizilir."
+ ]
+}

@@ -1,0 +1,230 @@
+{
+ "id": "madde-gecisi",
+ "ders": "biyoloji",
+ "konu": "madde-gecisi",
+ "baslik": "Hücre zarından madde geçişi",
+ "ozet": "Taneciklerin zardan nasıl geçtiğini izle: difüzyon, kanal proteini, pompa ve osmoz.",
+ "adimlar": [
+  {
+   "baslik": "Hücre zarı",
+   "metin": "Hücre zarı iki sıra <b>fosfolipitten</b> oluşur. Aralarında proteinler ve kolesterol yüzer, yerleri sabit değildir. Bu yapıya <b>akıcı mozaik model</b> denir.",
+   "sahne": {
+    "tur": "zar-model"
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Fosfolipitlerin hangi kısmı zarın iki yüzündeki suya bakar?",
+    "secenekler": [
+     {
+      "yazi": "Baş kısımları",
+      "dogru": true,
+      "neden": "Fosfolipitin başı suyu sever (hidrofilik), kuyrukları suyu sevmez (hidrofobik). Bu yüzden başlar dışa, iki yandaki suya; kuyruklar içe, birbirine bakar."
+     },
+     {
+      "yazi": "Kuyrukları",
+      "neden": "Kuyruklar yağ benzeridir ve suyu sevmez. Görselde kuyruklar nereye bakıyor?"
+     },
+     {
+      "yazi": "Rastgele dizilirler",
+      "neden": "Görsele bak: iki sıra da aynı düzende. Su seven kısım hep suya döner."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Difüzyon",
+   "metin": "Zarın iki yanında farklı sayıda oksijen (O₂) molekülü var. Küçük ve yüksüz O₂, fosfolipitlerin arasından kolayca geçebilir.",
+   "sahne": {
+    "tur": "gecis",
+    "sure": 5,
+    "solAd": "çok O₂",
+    "sagAd": "az O₂",
+    "gruplar": [
+     {
+      "ad": "O₂",
+      "renk": "var(--c1)",
+      "sol": 24,
+      "sag": 4,
+      "gecer": "evet"
+     }
+    ]
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Oynatınca ne olur sence?",
+    "secenekler": [
+     {
+      "yazi": "Çok olan taraftan az olana geçer, sayılar eşitlenir",
+      "dogru": true,
+      "neden": "Tanecikler hep hareket eder; çok olan taraftan zara daha çok tanecik çarpar ve geçer. Sonunda iki yan eşitlenir. Enerji harcanmaz: buna <b>basit difüzyon</b> denir."
+     },
+     {
+      "yazi": "Az olan taraftan çok olana geçer",
+      "neden": "Bu, kendiliğinden olmaz; enerji ister. Sonraki adımlarda göreceksin."
+     },
+     {
+      "yazi": "Hiç geçmez",
+      "neden": "O₂ küçük ve yüksüz olduğu için zardan geçebilir."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Kanal proteini",
+   "metin": "Na⁺ gibi yüklü iyonlar fosfolipitlerin yağlı ortasından geçemez. Önce oynat ve bak, sonra iyonlara bir kapı aç.",
+   "sahne": {
+    "tur": "gecis",
+    "sure": 5,
+    "solAd": "çok Na⁺",
+    "sagAd": "az Na⁺",
+    "gruplar": [
+     {
+      "ad": "Na⁺",
+      "renk": "var(--c4)",
+      "r": 4.5,
+      "sol": 20,
+      "sag": 4,
+      "gecer": "kanal"
+     }
+    ]
+   },
+   "deger": {
+    "kanal": 0
+   },
+   "kontroller": [
+    {
+     "ad": "kanal",
+     "etiket": "Kanal proteini",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "kanal": 1
+    },
+    "ipucu": "Kanal kapalıyken iyonlar zarın bir yanında kaldı. Kanal proteinini aç ve yeniden oynat.",
+    "tamam": "Kanal açılınca Na⁺ çok olan taraftan az olana geçti. Yine enerji harcanmadı; ama bir proteinin yardımıyla oldu. Buna <b>kolaylaştırılmış difüzyon</b> denir."
+   }
+  },
+  {
+   "baslik": "Pompa ve aktif taşıma",
+   "metin": "Hücre, potasyum (K⁺) iyonlarını içeride dışarıdakinden çok daha fazla tutar. Bunu zardaki <b>pompa</b> proteinleri sağlar.",
+   "sahne": {
+    "tur": "gecis",
+    "sure": 5,
+    "pompa": true,
+    "solAd": "hücre dışı (az K⁺)",
+    "sagAd": "hücre içi (çok K⁺)",
+    "gruplar": [
+     {
+      "ad": "K⁺",
+      "renk": "var(--c5)",
+      "r": 4.5,
+      "sol": 10,
+      "sag": 14,
+      "gecer": "pompa",
+      "sonSol": 2
+     }
+    ]
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Pompa K⁺ iyonlarını az olduğu taraftan çok olduğu tarafa taşıyacak. Bunun için ne gerekir?",
+    "secenekler": [
+     {
+      "yazi": "Enerji (ATP)",
+      "dogru": true,
+      "neden": "Tanecikleri az olduğu yerden çok olduğu yere taşımak, yokuş yukarı itmek gibidir ve enerji ister. Hücre bu enerjiyi ATP'den alır. Buna <b>aktif taşıma</b> denir."
+     },
+     {
+      "yazi": "Hiçbir şey, kendiliğinden olur",
+      "neden": "Kendiliğinden geçiş hep çoktan aza doğrudur. Burada yön ters."
+     },
+     {
+      "yazi": "Yalnızca bir kanalın açılması",
+      "neden": "Kanal yalnızca kapı açar; tanecikler yine çoktan aza geçer."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Osmoz",
+   "metin": "Zardan su da geçer. Su, az tuzlu (suyu bol) taraftan çok tuzlu tarafa geçer: buna <b>osmoz</b> denir. Alyuvarın içi %0,9 tuzlu. Dış ortamı, alyuvar su kaybedip büzüşecek şekilde ayarla.",
+   "sahne": {
+    "tur": "osmoz"
+   },
+   "deger": {
+    "tuz": 9
+   },
+   "kontroller": [
+    {
+     "ad": "tuz",
+     "etiket": "Dış ortamın tuzu",
+     "min": 0,
+     "max": 20,
+     "carpan": 0.1,
+     "onek": "%"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "tuz": [
+      10,
+      20
+     ]
+    },
+    "tamam": "Dışarısı içeriden daha tuzlu: <b>hipertonik</b> ortam. Su hücreden dışarı çıkar ve alyuvar büzüşür."
+   }
+  },
+  {
+   "baslik": "Saf suda alyuvar",
+   "metin": "Sürgüyle farklı ortamları dene ve alyuvarı izle.",
+   "sahne": {
+    "tur": "osmoz"
+   },
+   "deger": {
+    "tuz": 9
+   },
+   "kontroller": [
+    {
+     "ad": "tuz",
+     "etiket": "Dış ortamın tuzu",
+     "min": 0,
+     "max": 20,
+     "carpan": 0.1,
+     "onek": "%"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Saf suya konan alyuvara ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Su alıp şişer, sonunda patlayabilir",
+      "dogru": true,
+      "neden": "Saf su hipotoniktir; su hücreye girer. Alyuvarın çeperi olmadığı için şişip patlayabilir. Damara verilen serumun %0,9 tuzlu (izotonik) hazırlanması bu yüzdendir."
+     },
+     {
+      "yazi": "Su kaybedip büzüşür",
+      "neden": "Büzüşme, dışarısı daha tuzluyken olur. Saf suda tuz yok."
+     },
+     {
+      "yazi": "Hiçbir şey olmaz",
+      "neden": "Net su geçişi yalnızca iki yan eşit tuzluyken (%0,9) durur."
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Hücre zarı fosfolipit çift katman ve içinde yüzen proteinlerden oluşur (<b>akıcı mozaik model</b>).",
+  "<b>Difüzyon</b>: tanecikler çoktan aza, enerji harcamadan geçer. Küçük, yüksüz tanecikler doğrudan geçer.",
+  "<b>Kolaylaştırılmış difüzyon</b>: iyonlar gibi tanecikler kanal ya da taşıyıcı proteinle, yine çoktan aza geçer.",
+  "<b>Aktif taşıma</b>: pompa proteinleri ATP harcayarak tanecikleri azdan çoğa taşır.",
+  "<b>Osmoz</b>: su, az tuzlu ortamdan çok tuzlu ortama geçer. Hipotonikte alyuvar şişer, hipertonikte büzüşür."
+ ]
+}
