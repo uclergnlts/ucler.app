@@ -2,6 +2,7 @@
 // İçerik content/adimli/*.json dosyalarındadır; biçim için docs/ICERIK-SPEC.md ("Adımlı ders").
 import hareket from "@/content/adimli/bir-boyutta-hareket.json";
 import atom from "@/content/adimli/atomun-yapisi.json";
+import modernAtom from "@/content/adimli/modern-atom-teorisi.json";
 import zar from "@/content/adimli/madde-gecisi.json";
 import fizikGiris from "@/content/adimli/fizik-bilimine-giris.json";
 import maddeOzellikleri from "@/content/adimli/madde-ozellikleri.json";
@@ -123,7 +124,7 @@ export type AdimliDers = { id: string; ders: DersId; konu: string; baslik: strin
 
 export const ADIMLI: AdimliDers[] = [
   fizikGiris, maddeOzellikleri, basinc, kaldirma, isiSicaklik, vektorler, hareket, newton, ikiBoyut, bagil, isEnerji, basitMakineler, momentum, tork, cembersel, kutleCekimi, elektrostatik, elektrikAkimi, elektrikselEnerji, manyetizma, induksiyon, bhh, dalgalar, optik, dalgaOptigi, ozelGorelilik, kuantum, radyoaktivite,
-  simya, kimyaBilimi, madde, atomModelleri, atom, periyodikTablo, kimyasalBaglar, maddeninHalleri, karisimlar, temelKanunlar, tepkimeler, mol, asitBaz, kimyaHerYerde, gazlar, cozeltiler, tepkimeEnerjisi, tepkimeHizi, kimyasalDenge, redoks, elektrokimya, organikGiris, hidrokarbonlar, fonksiyonelGruplar, enerjiKaynaklari,
+  simya, kimyaBilimi, madde, atomModelleri, atom, modernAtom, periyodikTablo, kimyasalBaglar, maddeninHalleri, karisimlar, temelKanunlar, tepkimeler, mol, asitBaz, kimyaHerYerde, gazlar, cozeltiler, tepkimeEnerjisi, tepkimeHizi, kimyasalDenge, redoks, elektrokimya, organikGiris, hidrokarbonlar, fonksiyonelGruplar, enerjiKaynaklari,
   canlilar, biyomolekuller, enzimler, hucreOrganeller, zar, siniflandirma, hayvanlar, bitkiler, mitoz, mayoz, kalitim, ekosistem, bitkiBiyolojisi, dnaGenetikKod, proteinSentezi, fotosentez, hucreselSolunum, sinirSistemi, endokrin, duyuOrganlari, destekHareket, sindirim, dolasim, solunum, bosaltim, uremeSistemi, populasyonKomunite, evrim,
 ] as unknown as AdimliDers[];
 export const adimliDers = (id: string) => ADIMLI.find((d) => d.id === id);

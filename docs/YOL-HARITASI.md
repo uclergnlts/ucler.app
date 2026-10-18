@@ -4,7 +4,7 @@
 | Ders | Hazır konu | Toplam |
 |---|---|---|
 | Fizik | 28 (hepsi hazır) | 28 |
-| Kimya | 25 (hepsi hazır) | 25 |
+| Kimya | 26 (hepsi hazır) | 26 |
 | Biyoloji | 28 (hepsi hazır) | 28 |
 
 Güncel liste için `python3 tools/check.py` çıktısına bakılabilir.

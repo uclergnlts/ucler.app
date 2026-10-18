@@ -1,0 +1,269 @@
+{
+ "id": "modern-atom-teorisi",
+ "ders": "kimya",
+ "konu": "modern-atom-teorisi",
+ "baslik": "Modern atom teorisi",
+ "ozet": "Yörüngeden orbitale geç, kuantum sayılarını kur, elektronları sırayla yerleştir, Hund kuralını uygula, bakırın istisnasını bul ve demiri iyonlaştır.",
+ "adimlar": [
+  {
+   "baslik": "Yörünge mi, orbital mi?",
+   "metin": "Bohr elektronu çekirdeğin çevresinde belirli bir yolda döndürdü. Kuantum modeli ise elektronun yerini ve hızını aynı anda kesin bilemeyeceğimizi söyler (Heisenberg). Anahtarı açıp iki modeli karşılaştır.",
+   "sahne": {
+    "tur": "kim13-model"
+   },
+   "deger": {
+    "o": 0
+   },
+   "kontroller": [
+    {
+     "ad": "o",
+     "etiket": "Kuantum modeli",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Kuantum modelindeki <b>orbital</b> neyi anlatır?",
+    "secenekler": [
+     {
+      "yazi": "Elektronun çekirdek çevresinde izlediği dairesel yolu",
+      "neden": "Bu, Bohr'un yörüngesidir. Kuantum modelinde elektronun izlediği kesin bir yol tanımlanamaz."
+     },
+     {
+      "yazi": "Elektronun bulunma olasılığının yüksek olduğu bölgeyi",
+      "neden": "Orbital bir olasılık haritasıdır; sınırı genellikle elektronun %90 olasılıkla içinde bulunduğu yüzey olarak çizilir.",
+      "dogru": true
+     },
+     {
+      "yazi": "Elektronun durduğu sabit bir noktayı",
+      "neden": "Elektron bir noktada durmaz; yalnızca belli bir bölgede bulunma olasılığı hesaplanabilir."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Elektronun adresi",
+   "metin": "Her orbitalin bir adresi var: <b>n</b> katmanı, <b>ℓ</b> alt katmanı ve şekli söyler; ℓ en fazla n − 1 olabilir. Demirin son elektronları <b>3d</b>'de. 3d'deki bir elektronun n ve ℓ değerlerini kur.",
+   "sahne": {
+    "tur": "kim13-kuantum"
+   },
+   "deger": {
+    "n": 1,
+    "l": 0
+   },
+   "kontroller": [
+    {
+     "ad": "n",
+     "etiket": "n (katman)",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    },
+    {
+     "ad": "l",
+     "etiket": "ℓ (alt katman)",
+     "min": 0,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "n": 3,
+     "l": 2
+    },
+    "ipucu": "d alt katmanı ℓ = 2'dir; ℓ = 2 olabilmesi için n en az 3 olmalı.",
+    "tamam": "n = 3, ℓ = 2: 3d. m<sub>ℓ</sub> −2'den +2'ye beş değer alır, yani beş d orbitali vardır. Dördüncü sayı m<sub>s</sub> ise +½ ya da −½'dir."
+   }
+  },
+  {
+   "baslik": "Dolma sırası",
+   "metin": "Elektronlar önce en düşük enerjili orbitale girer. Argonda 3p doldu. Elektron ekle: <b>3d'ye ilk elektronun girdiği</b> elementte dur.",
+   "sahne": {
+    "tur": "kim13-dolma"
+   },
+   "deger": {
+    "e": 18
+   },
+   "kontroller": [
+    {
+     "ad": "e",
+     "etiket": "Elektron sayısı",
+     "min": 1,
+     "max": 30,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "e": 21
+    },
+    "ipucu": "K ve Ca'nın son elektronları nereye girdi? 3d kutularında ilk ok görününce dur.",
+    "tamam": "Skandiyum (21): [Ar] 4s² 3d¹. 4s'te n + ℓ = 4, 3d'de 5 olduğu için önce 4s doldu; bu yüzden K ve Ca'da 3. katman 8'de kaldı."
+   }
+  },
+  {
+   "baslik": "Hund kuralı",
+   "metin": "Azotun üç 2p elektronunu üç eş enerjili 2p orbitaline yerleştir. Bir kutuya iki elektron girerse spinleri zıt olur (Pauli). Hund kuralına uygun dağılımı kur.",
+   "sahne": {
+    "tur": "kim13-hund"
+   },
+   "deger": {
+    "a": 0,
+    "b": 0,
+    "c": 0
+   },
+   "kontroller": [
+    {
+     "ad": "a",
+     "etiket": "1. 2p orbitali",
+     "min": 0,
+     "max": 2,
+     "tur": "sayac"
+    },
+    {
+     "ad": "b",
+     "etiket": "2. 2p orbitali",
+     "min": 0,
+     "max": 2,
+     "tur": "sayac"
+    },
+    {
+     "ad": "c",
+     "etiket": "3. 2p orbitali",
+     "min": 0,
+     "max": 2,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "a": 1,
+     "b": 1,
+     "c": 1
+    },
+    "ipucu": "Elektronlar boş bir orbital varken eşleşmez: önce her kutuya bir tane.",
+    "tamam": "↑ ↑ ↑: elektronlar önce birer birer ve aynı spinle yerleşti. Azotta 3 eşleşmemiş elektron var; oksijende (2p⁴) dördüncü elektron eşleşir."
+   }
+  },
+  {
+   "baslik": "Dizilimden elementi bul",
+   "metin": "Bir elementin temel hâl dizilimi aşağıda. Üslerin toplamı elektron sayısını, en büyük n periyodu, dış katmandaki s + p elektronları A grubunu verir.",
+   "sahne": {
+    "tur": "kim13-bul"
+   },
+   "deger": {
+    "k": 0
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Elektronları say",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bu element hangisi ve periyodik tablodaki yeri neresi?",
+    "secenekler": [
+     {
+      "yazi": "Kükürt (S): 3. periyot, 6A",
+      "neden": "16 elektron, Z = 16. En büyük n = 3, dış katmanda 3s² 3p⁴ = 6 elektron: 3. periyot 6A.",
+      "dogru": true
+     },
+     {
+      "yazi": "Oksijen (O): 2. periyot, 6A",
+      "neden": "Grup doğru, ama oksijende 8 elektron vardır (1s² 2s² 2p⁴). Burada en büyük n = 3."
+     },
+     {
+      "yazi": "Silisyum (Si): 3. periyot, 4A",
+      "neden": "Grup numarası yalnızca p elektronları değil, dış katmandaki s + p elektronlarıdır: 2 + 4 = 6."
+     },
+     {
+      "yazi": "Argon (Ar): 3. periyot, 8A",
+      "neden": "Argonun 3p'si tam doludur (3p⁶, 18 elektron). Burada 3p'de 4 elektron var."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Kurala uymayan iki element",
+   "metin": "Krom kurala uymaz: bir 4s elektronu 3d'ye geçer. Anahtarla bakıra geç ve iki aday dizilime bak.",
+   "sahne": {
+    "tur": "kim13-istisna"
+   },
+   "deger": {
+    "el": 0
+   },
+   "kontroller": [
+    {
+     "ad": "el",
+     "etiket": "Bakır",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bakırın (29) gerçek temel hâl dizilimi hangisi?",
+    "secenekler": [
+     {
+      "yazi": "[Ar] 4s² 3d⁹",
+      "neden": "Bu, dolma sırasına göre beklenen dizilimdir; ama 3d tam dolu olunca atom daha kararlıdır."
+     },
+     {
+      "yazi": "[Ar] 4s¹ 3d¹⁰",
+      "neden": "Bir 4s elektronu 3d'ye geçer ve tam dolu 3d¹⁰ oluşur. Kromdaki yarı dolu 3d⁵ gibi, bu da daha kararlıdır.",
+      "dogru": true
+     },
+     {
+      "yazi": "[Ar] 4s² 3d⁸ 4p¹",
+      "neden": "4p, 3d'den daha yüksek enerjilidir; 3d dolmadan elektron 4p'ye geçmez."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Demiri iyonlaştır",
+   "metin": "Demir: [Ar] 4s² 3d⁶. Son giren elektronlar 3d'deydi; peki iyon olurken önce hangileri gider? Elektron ver ve <b>Fe²⁺</b> iyonunu oluştur.",
+   "sahne": {
+    "tur": "kim13-iyon"
+   },
+   "deger": {
+    "k": 0
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Verilen elektron",
+     "min": 0,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "k": 2
+    },
+    "ipucu": "Fe²⁺ için iki elektron vermelisin.",
+    "tamam": "Fe²⁺: [Ar] 3d⁶, [Ar] 4s² 3d⁴ değil. Katyonda elektronlar önce en büyük n'li katmandan, yani 4s'ten kopar. Bir elektron daha verirsen Fe³⁺: yarı dolu [Ar] 3d⁵."
+   }
+  }
+ ],
+ "kapanis": [
+  "Orbital, elektronun bulunma olasılığının yüksek olduğu bölgedir; Bohr'un yörüngesi gibi kesin bir yol değildir.",
+  "n katmanı, ℓ alt katmanı (s, p, d, f) verir; ℓ en fazla n − 1'dir. 3d'de n = 3, ℓ = 2 ve beş orbital vardır.",
+  "Elektronlar n + ℓ'si küçük orbitale önce girer: 4s, 3d'den önce dolar. Bir orbitalde en çok iki zıt spinli elektron olur (Pauli).",
+  "Hund: eş enerjili orbitallere önce birer birer, aynı spinle. Azot ↑ ↑ ↑.",
+  "Cr [Ar] 4s¹ 3d⁵ ve Cu [Ar] 4s¹ 3d¹⁰ istisnadır; katyon olurken önce 4s boşalır: Fe²⁺ [Ar] 3d⁶."
+ ]
+}
