@@ -1,0 +1,121 @@
+{
+ "id": "destek-hareket",
+ "ders": "biyoloji",
+ "konu": "destek-hareket",
+ "baslik": "Destek ve hareket",
+ "ozet": "Kemiğin nereden uzadığını izle, eklemleri oynat, biseps ve trisepsle kolunu bük, sarkomerin içinde ipliklerin kaymasını gör.",
+ "adimlar": [
+  {
+   "baslik": "Kemik nereden uzar?",
+   "metin": "Uzun kemiğin gövdesine <b>diafiz</b>, uçlarına <b>epifiz</b> denir. İkisinin arasında kıkırdaktan bir <b>plak</b> vardır. Tahmin et, sonra oynat.",
+   "sahne": { "tur": "biy10-boy", "sure": 4 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Kemik boyca nereden uzar?",
+    "secenekler": [
+     { "yazi": "Periosttan, yani kemik zarından", "neden": "Periost kemiği enine kalınlaştırır ve kırıkları onarır, ama boyu uzatmaz." },
+     { "yazi": "İlik boşluğundan", "neden": "İlik kan hücresi üretir (kırmızı ilik) ya da yağ depolar (sarı ilik); kemiğin boyunu uzatmaz." },
+     { "yazi": "Epifiz plaklarından", "dogru": true, "neden": "Plakta kıkırdak çoğalır ve kemikleşir; kemik iki ucundan uzar. Ergenlik bitince plak kemikleşir ve boy uzaması durur." }
+    ]
+   }
+  },
+  {
+   "baslik": "Eklemler",
+   "metin": "Kemiklerin birleştiği yere <b>eklem</b> denir. Eklem türünü değiştir ve her birini oynat. Üçünü de dene.",
+   "sahne": { "tur": "biy10-eklem", "sure": 2.5 },
+   "deger": { "e": 1 },
+   "kontroller": [ { "ad": "e", "etiket": "Eklem", "min": 1, "max": 3, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "secim",
+    "kosu": 3,
+    "soru": "Oynar eklemde kemik uçlarının sürtünmeden kaymasını ne sağlar?",
+    "secenekler": [
+     { "yazi": "Kiriş", "neden": "Kiriş (tendon) kası kemiğe bağlar; kemik uçlarının kaymasını sağlamaz." },
+     { "yazi": "Kemik iliği", "neden": "İlik kemiğin içindedir ve kan hücresi üretir; eklemle ilgisi yoktur." },
+     { "yazi": "Eklem sıvısı ve kıkırdak", "dogru": true, "neden": "Kapsülün içindeki eklem sıvısı kayganlaştırır, uçlardaki kıkırdak darbeyi yumuşatır. Bağlar ise kemikleri birbirine tutar." }
+    ]
+   }
+  },
+  {
+   "baslik": "Kolunu bük",
+   "metin": "Kaslar yalnızca <b>çeker</b>, itemez. Bu yüzden kolu iki kas birlikte çalıştırır. Kolunu dirsekten bük.",
+   "sahne": { "tur": "biy10-kol" },
+   "deger": { "b": 0, "tr": 1 },
+   "kontroller": [
+    { "ad": "b", "etiket": "Biseps kasılsın", "min": 0, "max": 1, "tur": "anahtar" },
+    { "ad": "tr", "etiket": "Triseps kasılsın", "min": 0, "max": 1, "tur": "anahtar" }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "b": 1, "tr": 0 },
+    "ipucu": "Bükmek için öndeki kas çekmeli, arkadaki gevşemeli. İkisi birden kasılırsa kol kilitlenir.",
+    "tamam": "Biseps kasıldı ve önkolu çekti, triseps gevşedi. Kolu açarken tersi olur. Böyle zıt çalışan kaslara antagonist kaslar denir."
+   }
+  },
+  {
+   "baslik": "Kayan iplikler",
+   "metin": "Kas lifinde tekrar eden birime <b>sarkomer</b> denir. İçinde ince <b>aktin</b> ve kalın <b>miyozin</b> iplikleri vardır. Tahmin et, sonra kasılmayı izle.",
+   "sahne": { "tur": "biy10-sarkomer", "sure": 4 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Kas kasılınca hangisinin boyu değişmez?",
+    "secenekler": [
+     { "yazi": "Sarkomerin", "neden": "Sarkomer kısalır; Z çizgileri birbirine yaklaşır (2,4 → 2,0 µm)." },
+     { "yazi": "I bandının", "neden": "I bandı yalnızca aktinin bulunduğu bölgedir; aktin içeri kaydıkça I bandı daralır." },
+     { "yazi": "A bandının", "dogru": true, "neden": "A bandı miyozinin boyudur ve miyozin kısalmaz. İplikler kısalmaz, birbirinin üzerinde kayar; I bandı ve H bölgesi daralır." }
+    ]
+   }
+  },
+  {
+   "baslik": "Ca²⁺ ve ATP",
+   "metin": "Sinirden gelen impulsla <b>Ca²⁺</b> salınır ve aktindeki bağlanma yerlerini açar. Miyozin başları aktini <b>ATP</b> enerjisiyle çeker. Kası kasılmaya hazırla ve oynat.",
+   "sahne": { "tur": "biy10-kalsiyum", "sure": 3 },
+   "deger": { "ca": 0, "atp": 1 },
+   "kontroller": [
+    { "ad": "ca", "etiket": "Ca²⁺ salınsın", "min": 0, "max": 1, "tur": "anahtar" },
+    { "ad": "atp", "etiket": "ATP var", "min": 0, "max": 1, "tur": "anahtar" }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "ca": 1, "atp": 1 },
+    "ipucu": "Kasılma için iki şey gerekir: bağlanma yerlerini açan Ca²⁺ ve çekme enerjisini veren ATP.",
+    "tamam": "Kas kasıldı. Gevşemek de ATP ister: Ca²⁺, ATP harcanarak sarkoplazmik retikuluma geri pompalanır."
+   }
+  },
+  {
+   "baslik": "ATP nereden gelir?",
+   "metin": "Kasta <b>hazır ATP</b> yalnızca birkaç saniye yeter. Koşmaya başladın. Tahmin et, sonra oynat.",
+   "sahne": { "tur": "biy10-enerji", "sure": 6 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hazır ATP bitince ATP'yi ilk hangisi yeniler?",
+    "secenekler": [
+     { "yazi": "Kreatin fosfat", "dogru": true, "neden": "Kreatin fosfat, fosfatını hemen ADP'ye verir ve ATP'yi yeniler. Bu stok da birkaç saniyede biter; sonra solunum devralır." },
+     { "yazi": "Oksijenli solunum", "neden": "Oksijenli solunum en çok ATP'yi verir, ama devreye girmesi zaman alır. Uzun süren hareketin kaynağıdır." },
+     { "yazi": "Laktik asit fermantasyonu", "neden": "Oksijen yetmediğinde çalışır ve glikoz başına yalnızca 2 ATP verir. Hazır ATP'den sonraki ilk kaynak değildir." }
+    ]
+   }
+  },
+  {
+   "baslik": "Üç kas türü",
+   "metin": "Vücutta üç tür kas vardır. Çizgiler, aktin ve miyozinin düzenli dizilişinden gelir. Dokulara bak.",
+   "sahne": { "tur": "biy10-kas" },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hem çizgili hem istemsiz çalışan kas hangisi?",
+    "secenekler": [
+     { "yazi": "İskelet kası", "neden": "İskelet kası çizgilidir ama istemlidir; onu sen kasarsın." },
+     { "yazi": "Düz kas", "neden": "Düz kas istemsizdir (mide, damar duvarı) ama çizgisizdir." },
+     { "yazi": "Kalp kası", "dogru": true, "neden": "Kalp kası çizgilidir ama istemsiz çalışır. Ara diskler hücreleri bağlar, uyarı hızla yayılır." }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Kemik boyca epifiz plaklarından uzar; ergenlik sonunda plak kemikleşir. Periost enine büyütür ve kırığı onarır.",
+  "Eklemler oynamaz, yarı oynar ve oynar diye ayrılır; oynar eklemde eklem sıvısı ve kıkırdak sürtünmeyi azaltır.",
+  "Kaslar yalnızca çeker: biseps kolu büker, triseps açar.",
+  "Kasılmada aktin ve miyozin kısalmaz, kayar. Sarkomer, I bandı ve H bölgesi kısalır; A bandı aynı kalır.",
+  "Kasılma için Ca²⁺ ve ATP gerekir. ATP önce kreatin fosfatla, sonra solunumla yenilenir."
+ ]
+}

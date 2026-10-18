@@ -1,0 +1,194 @@
+{
+ "id": "redoks",
+ "ders": "kimya",
+ "konu": "redoks",
+ "baslik": "Redoks tepkimeleri",
+ "ozet": "Yükseltgenme basamağını hesapla, çinkonun bakır iyonlarını indirgeyişini izle, aktiflik sırasını dene ve redoks olanı olmayandan ayır.",
+ "adimlar": [
+  {
+   "baslik": "Basamağı hesapla",
+   "metin": "Nötr bir bileşikte basamakların toplamı <b>0</b>'dır. H₂SO₄'te H +1, O −2. Kükürdün basamağını ayarla.",
+   "sahne": {
+    "tur": "kim10-basamak",
+    "formul": "h2so4"
+   },
+   "deger": {
+    "x": 0
+   },
+   "kontroller": [
+    {
+     "ad": "x",
+     "etiket": "S'nin basamağı",
+     "min": -4,
+     "max": 8,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "x": 6
+    },
+    "ipucu": "2(+1) + x + 4(−2) = 0 denklemini çöz.",
+    "tamam": "2 − 8 + x = 0 → S <b>+6</b>. Aynı yolla KMnO₄'te Mn +7, Cr₂O₇²⁻'de Cr +6 bulunur."
+   }
+  },
+  {
+   "baslik": "İyonda toplam",
+   "metin": "Bir iyonda basamakların toplamı iyonun <b>yüküne</b> eşittir. NH₄⁺'da azotu bul.",
+   "sahne": {
+    "tur": "kim10-basamak",
+    "formul": "nh4"
+   },
+   "deger": {
+    "x": 0
+   },
+   "kontroller": [
+    {
+     "ad": "x",
+     "etiket": "N'nin basamağı",
+     "min": -4,
+     "max": 8,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "x": -3
+    },
+    "ipucu": "x + 4(+1) = +1.",
+    "tamam": "x + 4 = +1 → N <b>−3</b>. Azot, bileşiğine göre −3'ten +5'e kadar farklı basamaklar alabilir."
+   }
+  },
+  {
+   "baslik": "Çinko ve bakır iyonu",
+   "metin": "Mavi CuSO₄ çözeltisine bir çinko şerit daldırıyoruz.",
+   "sahne": {
+    "tur": "kim10-zncu",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Ne gözlersin?",
+    "secenekler": [
+     {
+      "yazi": "Şeridin üstünde bakır birikir, mavi renk solar",
+      "neden": "Zn elektron verip Zn²⁺ olarak çözünür; Cu²⁺ bu elektronları alıp metal bakır olarak şeride çöker. Mavi rengi veren Cu²⁺ azaldığı için renk solar.",
+      "dogru": true
+     },
+     {
+      "yazi": "Hiçbir şey olmaz",
+      "neden": "Zn, aktiflik sırasında Cu'dan önce gelir; Cu²⁺'yı kendiliğinden indirger."
+     },
+     {
+      "yazi": "Çözelti koyulaşır, şerit kalınlaşır",
+      "neden": "Mavi rengi Cu²⁺ verir ve bu iyon harcanır. Şerit de çözünerek incelir; üstündeki kahverengi tabaka bakırdır."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Kim ne oldu?",
+   "metin": "Yarı tepkimelere bak: biri elektron veriyor, öteki alıyor.",
+   "sahne": {
+    "tur": "kim10-zncu",
+    "son": true
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bu tepkimede indirgen hangisi?",
+    "secenekler": [
+     {
+      "yazi": "Cu²⁺",
+      "neden": "Cu²⁺ elektron alıp indirgenir; Zn'yi yükseltgediği için <b>yükseltgen</b>dir."
+     },
+     {
+      "yazi": "SO₄²⁻",
+      "neden": "Sülfat iyonu tepkimede değişmez; seyirci iyondur."
+     },
+     {
+      "yazi": "Zn",
+      "neden": "Zn elektron verip yükseltgenir ve Cu²⁺'yı indirger. Kendisi yükseltgenen tür <b>indirgen</b>dir.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Aktiflik sırası",
+   "metin": "Daha aktif metal, daha az aktif metalin iyonunu indirger. Cu²⁺ çözeltisinde <b>tepkime vermeyen</b> bir metal seç; listedeki metale dokunabilirsin.",
+   "sahne": {
+    "tur": "kim10-aktiflik"
+   },
+   "deger": {
+    "m": 5
+   },
+   "kontroller": [
+    {
+     "ad": "m",
+     "etiket": "Metal",
+     "min": 0,
+     "max": 12,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "m": [
+      11,
+      12
+     ]
+    },
+    "ipucu": "Sırada Cu'nun sağındaki metallere bak.",
+    "tamam": "Ag ve Au, Cu'dan daha az aktiftir; Cu²⁺'yı indirgeyemez. Aynı nedenle bakır, ZnSO₄ çözeltisinde tepkime vermez. H'den önceki metaller asitten H₂ açığa çıkarır."
+   }
+  },
+  {
+   "baslik": "Redoks mu?",
+   "metin": "Üç tepkime var. Basamakları göster ve değişen var mı bak.",
+   "sahne": {
+    "tur": "kim10-redoksmu"
+   },
+   "deger": {
+    "g": 0
+   },
+   "kontroller": [
+    {
+     "ad": "g",
+     "etiket": "Basamakları göster",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangisi redoks değildir?",
+    "secenekler": [
+     {
+      "yazi": "Zn + 2HCl → ZnCl₂ + H₂",
+      "neden": "Zn 0'dan +2'ye yükseltgenir, H +1'den 0'a indirgenir: redokstur."
+     },
+     {
+      "yazi": "HCl + NaOH → NaCl + H₂O",
+      "neden": "Nötrleşmede hiçbir elementin basamağı değişmez; elektron alışverişi yoktur. Çökelme tepkimeleri de böyledir.",
+      "dogru": true
+     },
+     {
+      "yazi": "CH₄ + 2O₂ → CO₂ + 2H₂O",
+      "neden": "Yanma bir redokstur: C −4'ten +4'e yükseltgenir, O 0'dan −2'ye indirgenir."
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "<b>Yükseltgenme</b> elektron vermek, basamağın artmasıdır; <b>indirgenme</b> elektron almak, basamağın azalmasıdır.",
+  "Basamakların toplamı nötr bileşikte 0, iyonda iyonun yüküdür: H₂SO₄'te S +6, NH₄⁺'da N −3.",
+  "Kendisi yükseltgenen tür <b>indirgen</b>, kendisi indirgenen tür <b>yükseltgen</b>dir: Zn + Cu²⁺ tepkimesinde indirgen Zn'dir.",
+  "Aktiflik sırasında önde olan metal, arkadaki metalin iyonunu indirger; tersi kendiliğinden olmaz.",
+  "Basamak değişmiyorsa redoks yoktur: nötrleşme ve çökelme redoks değildir; yanma, paslanma ve solunum redokstur."
+ ]
+}
