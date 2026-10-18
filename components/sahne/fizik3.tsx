@@ -31,14 +31,14 @@ function Izgara({ x0, y0, n, m, k }: { x0: number; y0: number; n: number; m: num
 
 /* ---------- ısı ve sıcaklık ---------- */
 
-// Bardaktaki çayın tanecikleri. v.T: sıcaklık (°C). Sıcaklık arttıkça tanecikler daha hızlı ve geniş titreşir.
+// Bardaktaki çayın tanecikleri. v.T: sıcaklık (°C). Sıcaklık arttıkça tanecikler daha hızlı ve geniş hareket eder.
 function Tanecik({ v }: SahneProps) {
   const T = v.T ?? 20, rnd = rastgele(41);
   const genlik = 1.5 + T * 0.07, sure = 1.4 - T * 0.011;
   const renk = T >= 80 ? "var(--c2)" : T >= 50 ? "var(--c4)" : "var(--c1)";
   const noktalar = Array.from({ length: 16 }, (_, i) => ({ x: 106 + (i % 4) * 30 + rnd() * 10, y: 92 + Math.floor(i / 4) * 30 + rnd() * 10, a: rnd() * 6.28 }));
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Çay ${T} derece: tanecikler ${T >= 60 ? "hızlı" : "yavaş"} titreşiyor`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={`Çay ${T} derece: tanecikler ${T >= 60 ? "hızlı" : "yavaş"} hareket ediyor`}>
       <path d="M92 64 L100 210 L240 210 L248 64" fill="var(--c4)" opacity={0.12} />
       <path d="M92 52 L100 210 L240 210 L248 52" fill="none" stroke="var(--ink)" strokeWidth={2} />
       <g>
@@ -64,7 +64,7 @@ function Tanecik({ v }: SahneProps) {
       </g>
       <text x={276} y={40} fontSize={15} fontWeight={800} fill="var(--ink)" textAnchor="middle">{T} °C</text>
       <text x={170} y={232} fontSize={12} fill="var(--muted)" textAnchor="middle">
-        {T >= 80 ? "Tanecikler çok hızlı titreşiyor" : T >= 50 ? "Tanecikler hızlandı" : "Tanecikler yavaş titreşiyor"}
+        {T >= 80 ? "Tanecikler çok hızlı hareket ediyor" : T >= 50 ? "Tanecikler hızlandı" : "Tanecikler yavaş hareket ediyor"}
       </text>
     </svg>
   );
