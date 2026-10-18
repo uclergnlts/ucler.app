@@ -1,0 +1,99 @@
+{
+ "id": "biyomolekuller",
+ "ders": "biyoloji",
+ "konu": "biyomolekuller",
+ "baslik": "Biyomoleküller",
+ "ozet": "Glikozlardan zincir kur ve suyla parçala, yağın enerjisini tart, proteinin şeklini ve DNA ile RNA'yı karşılaştır.",
+ "adimlar": [
+  {
+   "baslik": "Birleşirken su çıkar",
+   "metin": "Küçük birimler (<b>monomer</b>) birleşip büyük molekül (<b>polimer</b>) kurar. Glikoz ekleyerek <b>5 glikozluk</b> bir zincir kur ve her bağda ne olduğuna bak.",
+   "sahne": { "tur": "polimer" },
+   "deger": { "n": 1, "su": 0 },
+   "kontroller": [ { "ad": "n", "etiket": "Glikoz", "min": 1, "max": 8, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "n": 5 },
+    "tamam": "5 glikoz arasında 4 bağ kuruldu ve her bağda bir su molekülü ayrıldı. Birimler su çıkararak birleşir: <b>dehidrasyon sentezi</b>."
+   }
+  },
+  {
+   "baslik": "Kaç su?",
+   "metin": "Nişasta ve glikojen, binlerce glikozun böyle birleşmesiyle oluşur. Kural hep aynı: her bağ için bir su.",
+   "sahne": { "tur": "polimer" },
+   "deger": { "n": 6, "su": 0 },
+   "gorev": {
+    "tur": "secim",
+    "soru": "100 glikozluk düz bir zincir kurulurken kaç su molekülü çıkar?",
+    "secenekler": [
+     { "yazi": "99", "dogru": true, "neden": "Düz bir zincirde bağ sayısı birim sayısından bir eksiktir: 100 − 1 = 99 bağ, 99 su." },
+     { "yazi": "100", "neden": "Ekrandaki 6 glikoza bak: kaç bağ var? Bağ sayısı birim sayısından bir eksik." },
+     { "yazi": "50", "neden": "Su, her iki komşu birim arasındaki bağda çıkar; birimleri ikişer ikişer saymıyoruz." }
+    ]
+   }
+  },
+  {
+   "baslik": "Hidroliz",
+   "metin": "Sindirimde bunun tersi olur: büyük molekül <b>su eklenerek</b> parçalanır. Zincire su ekle.",
+   "sahne": { "tur": "polimer" },
+   "deger": { "n": 5, "su": 0 },
+   "kontroller": [ { "ad": "su", "etiket": "Su ekle", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "su": 1 },
+    "tamam": "4 su girdi, 4 bağ kırıldı ve 5 glikoz serbest kaldı. Su eklenerek bağ kırılmasına <b>hidroliz</b> denir. Sindirimde nişasta böyle glikoza ayrılır."
+   }
+  },
+  {
+   "baslik": "Yağ: yoğun enerji",
+   "metin": "Yağlar uzun süreli enerji deposudur. Alttaki çubuk 25 g karbonhidratın verdiği 100 kcal. Aynı enerji için kaç gram yağ gerekir? Sürgüyü <b>100 kcal</b>'a en yakın yere getir.",
+   "sahne": { "tur": "enerji-yag" },
+   "deger": { "g": 0 },
+   "kontroller": [ { "ad": "g", "etiket": "Yağ", "min": 0, "max": 30, "birim": "g" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "g": 11 },
+    "tamam": "11 g yağ ≈ 99 kcal, karbonhidratta ise 25 g gerekiyor. Yağ, gramda karbonhidratın iki katından fazla enerji verir; bu yüzden uzun süreli depo için idealdir."
+   }
+  },
+  {
+   "baslik": "Proteinin şekli",
+   "metin": "Proteinler <b>amino asit</b> zinciridir. Zincir katlanır; amino asit sırası şekli, şekil de görevi belirler. Hemoglobinin 6. amino asidini değiştir.",
+   "sahne": { "tur": "protein" },
+   "deger": { "deg": 0 },
+   "kontroller": [ { "ad": "deg", "etiket": "6. amino asidi değiştir", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Tek bir amino asit değişince ne oldu?",
+    "secenekler": [
+     { "yazi": "Proteinin şekli ve görevi bozuldu", "dogru": true, "neden": "Bu, <b>orak hücre anemisidir</b>: tek değişiklik hemoglobinin davranışını bozar, alyuvar orak biçimini alır ve oksijen taşıması aksar." },
+     { "yazi": "Hiçbir şey değişmedi", "neden": "Değiştirince alyuvara ne oldu? Sıra değişirse şekil de değişebilir." },
+     { "yazi": "Protein yağa dönüştü", "neden": "Hâlâ bir protein; değişen yalnızca sırası, dolayısıyla şekli ve görevi." }
+    ]
+   }
+  },
+  {
+   "baslik": "DNA ve RNA",
+   "metin": "Nükleik asitlerin birimi nükleotittir: fosfat + şeker + azotlu baz. DNA kalıtsal bilgiyi saklar, RNA bu bilgiyi protein yapımında kullanır. RNA'ya geç ve bazları karşılaştır.",
+   "sahne": { "tur": "nukleik" },
+   "deger": { "tur": 0 },
+   "kontroller": [ { "ad": "tur", "etiket": "RNA'yı göster", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangi baz yalnızca RNA'da bulunur?",
+    "secenekler": [
+     { "yazi": "Urasil (U)", "dogru": true, "neden": "RNA, DNA'daki timinin (T) yerine urasil (U) taşır. Ayrıca RNA genelde tek zincirlidir ve şekeri ribozdur." },
+     { "yazi": "Timin (T)", "neden": "Timin DNA'ya özgüdür. RNA'da onun yerinde hangi baz var?" },
+     { "yazi": "Adenin (A)", "neden": "Adenin hem DNA'da hem RNA'da bulunur." }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Monomerler <b>dehidrasyonla</b> (su çıkarak) birleşir, polimerler <b>hidrolizle</b> (su eklenerek) parçalanır.",
+  "Düz bir zincirde bağ ve çıkan su sayısı, birim sayısından bir eksiktir.",
+  "Yağ gramda yaklaşık 9 kcal, karbonhidrat yaklaşık 4 kcal verir; yağ uzun süreli depodur.",
+  "Protein: amino asit sırası → katlanma → şekil → görev. Tek bir değişiklik görevi bozabilir.",
+  "DNA çift zincir, deoksiriboz, A-T-G-C; RNA genelde tek zincir, riboz, T yerine U."
+ ]
+}

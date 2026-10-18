@@ -1,0 +1,206 @@
+{
+ "id": "simya",
+ "ders": "kimya",
+ "konu": "simya",
+ "baslik": "Kimya bilimi: simyadan kimyaya",
+ "ozet": "Simyacıların hayalini, damıtmayı ve kimyayı bilim yapan deneyleri kendin dene.",
+ "adimlar": [
+  {
+   "baslik": "Kurşundan altın?",
+   "metin": "Simyacılar yüzyıllarca kurşunu altına çevirmeye uğraştı. Bugün iki elementin farkını biliyoruz: kurşun atomunun çekirdeğinde 82, altınınkinde 79 proton var.",
+   "sahne": {
+    "tur": "element-donusum"
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Simyacılar kurşunu neden altına çeviremedi?",
+    "secenekler": [
+     {
+      "yazi": "Kimyasal tepkime çekirdeği, yani proton sayısını değiştirmez",
+      "neden": "Kimyasal tepkimede atomlar yeniden düzenlenir, bağlar kurulur ve kopar; çekirdek değişmez. Proton sayısı aynı kaldıkça kurşun kurşun kalır.",
+      "dogru": true
+     },
+     {
+      "yazi": "Yeterince yüksek sıcaklığa çıkamadılar",
+      "neden": "Sorun sıcaklık değildi. Isı ne kadar artarsa artsın kimyasal değişim çekirdeğe dokunmaz."
+     },
+     {
+      "yazi": "Felsefe taşını bulamadılar",
+      "neden": "Felsefe taşı bir efsaneydi. Hiçbir madde, kimyasal tepkimeyle bir elementi başka bir elemente çeviremez."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Damıtma",
+   "metin": "Simyanın kalıcı mirası damıtmadır: sıvıyı ısıt, buharını soğutup yeniden sıvılaştır. Balonda su ve alkol karışımı var.",
+   "sahne": {
+    "tur": "damitma",
+    "sure": 6
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Isıtınca toplama kabına önce hangisi gelir?",
+    "secenekler": [
+     {
+      "yazi": "Alkol",
+      "neden": "Alkol yaklaşık 78 °C'de, su 100 °C'de kaynar. Kaynama noktası düşük olan önce buharlaşır, soğutucuda yoğuşur ve toplanır. Toplanan sıvı çoğunlukla alkoldür; damıtma kaynama noktası farkıyla ayırır.",
+      "dogru": true
+     },
+     {
+      "yazi": "Su",
+      "neden": "Su 100 °C'de kaynar, alkolden daha geç buharlaşır."
+     },
+     {
+      "yazi": "İkisi aynı anda",
+      "neden": "Kaynama noktaları farklı olduğu için biri önce buharlaşır."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Su element mi?",
+   "metin": "Antik çağdan beri su bir element sayılıyordu. 1661'de Robert Boyle bu \"dört element\" fikrini sorguladı ve her iddianın deneyle sınanmasını istedi. Suya elektrik akımı ver.",
+   "sahne": {
+    "tur": "elektroliz",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Akım verince su ne olur?",
+    "secenekler": [
+     {
+      "yazi": "İki farklı gaza ayrılır",
+      "neden": "Eksi kutupta hidrojen, artı kutupta oksijen toplanır. Hidrojenin hacmi oksijeninkinin iki katıdır; bu, H₂O formülündeki 2'ye 1 oranıdır.",
+      "dogru": true
+     },
+     {
+      "yazi": "Değişmez, yalnızca ısınır",
+      "neden": "Akım suyu ayrıştırır; tüplerde gaz birikir."
+     },
+     {
+      "yazi": "Tamamen buharlaşır",
+      "neden": "Buharlaşma değil, ayrışma olur: tüplerdeki gazlar su buharı değil, hidrojen ve oksijendir."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Boyle'un tanımı",
+   "metin": "Boyle'a göre element, daha basit maddelere ayrılamayan maddedir. Tüplerde ne toplandığına bak ve karar ver.",
+   "sahne": {
+    "tur": "elektroliz",
+    "son": true
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bu tanıma göre su nedir?",
+    "secenekler": [
+     {
+      "yazi": "Bileşik: hidrojen ve oksijenden oluşur",
+      "neden": "Su daha basit iki maddeye ayrıldı, öyleyse element olamaz. Su, hidrojen ve oksijenin belirli oranda birleştiği bir bileşiktir.",
+      "dogru": true
+     },
+     {
+      "yazi": "Element: antik çağdan beri öyle bilinir",
+      "neden": "Eski fikir buydu, ama deney suyun ayrıştığını gösterdi. Bilimde son sözü deney söyler."
+     },
+     {
+      "yazi": "Karışım: iki gaz suda çözünmüştür",
+      "neden": "Gazlar suda çözünmüş değildi; ancak kimyasal bir değişimle ve hep 2'ye 1 oranında ayrıldılar. Bu bir bileşiğin işaretidir."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Lavoisier'in terazisi",
+   "metin": "Antoine Lavoisier tepkimeleri kapalı kaplarda yaptı ve her şeyi tarttı. Ağzı kapalı balondaki kalayı ısıtacaksın; kalay yavaşça beyaz bir toza dönüşecek.",
+   "sahne": {
+    "tur": "kapali-kap",
+    "sure": 5
+   },
+   "deger": {
+    "acik": 0
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Isıtma bitince terazi ne gösterir?",
+    "secenekler": [
+     {
+      "yazi": "Aynı: 120,00 g",
+      "neden": "Kapalı kaba hiçbir şey girip çıkmaz; atomlar yalnızca yeniden düzenlenir. Toplam kütle aynı kalır: <b>kütlenin korunumu</b>.",
+      "dogru": true
+     },
+     {
+      "yazi": "Daha fazla",
+      "neden": "Kalay ağırlaşır, ama gereken oksijen kabın içindeki havadan gelir. Toplam değişmez."
+     },
+     {
+      "yazi": "Daha az",
+      "neden": "Kapalı kaptan hiçbir şey kaçamaz, kütle azalamaz."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Ağzı açık olursa",
+   "metin": "Şimdi balonun ağzını açık bırak ve deneyi tekrarla. Teraziyi izle.",
+   "sahne": {
+    "tur": "kapali-kap",
+    "sure": 5
+   },
+   "deger": {
+    "acik": 0
+   },
+   "kontroller": [
+    {
+     "ad": "acik",
+     "etiket": "Balonun ağzı açık",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "acik": 1
+    },
+    "tamam": "Kütle arttı! Kalay havadaki oksijenle birleşti, yerine dışarıdan yeni hava girdi. Lavoisier yanmada oksijenin rolünü böyle açıkladı; tartmadan bu anlaşılamazdı."
+   }
+  },
+  {
+   "baslik": "Neden bilim değildi?",
+   "metin": "Simyacılar bilgilerini gizli tutar, sembollerle yazar, nadiren ölçerdi. Bilimde ise deneyi herkes tekrarlayabilir ve sonuçlar sayılarla ölçülür.",
+   "sahne": {
+    "tur": "bilim-dongu"
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Kimyayı bilim yapan hangisidir?",
+    "secenekler": [
+     {
+      "yazi": "Herkesin tekrarlayıp ölçebildiği deneyler",
+      "neden": "Gözlem, hipotez, deney ve sonuç döngüsü, yani bilimsel yöntem, kimyanın yeni dili oldu. Başkaları tekrarlayıp aynı sonucu bulunca iddia güven kazanır.",
+      "dogru": true
+     },
+     {
+      "yazi": "Gizli sembollerle yazılmış tarifler",
+      "neden": "Gizli bilgi başkalarınca denetlenemez; simyanın zayıf yanı tam da buydu."
+     },
+     {
+      "yazi": "Usta bir bilginin sözü",
+      "neden": "Bilimde otorite değil kanıt geçerlidir. Boyle'un istediği gibi her iddia deneyle sınanır."
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Simya altın yapmayı ve hayat iksirini aradı; başaramadı, çünkü kimyasal tepkime elementi değiştirmez.",
+  "Simya <b>damıtmayı</b> ve laboratuvar araçlarını miras bıraktı. Damıtma, kaynama noktası farkıyla ayırır.",
+  "<b>Boyle</b>: element, daha basit maddelere ayrılamayan maddedir. Su ayrıştığı için bir bileşiktir.",
+  "<b>Lavoisier</b>: kapalı kapta tepkimeden önce ve sonra toplam kütle aynıdır (kütlenin korunumu).",
+  "Tekrarlanabilir deney ve ölçüm, yani bilimsel yöntem, kimyayı bilim yaptı."
+ ]
+}

@@ -5,6 +5,10 @@ import atom from "@/content/adimli/atomun-yapisi.json";
 import zar from "@/content/adimli/madde-gecisi.json";
 import fizikGiris from "@/content/adimli/fizik-bilimine-giris.json";
 import maddeOzellikleri from "@/content/adimli/madde-ozellikleri.json";
+import simya from "@/content/adimli/simya.json";
+import kimyaBilimi from "@/content/adimli/kimya-bilimi.json";
+import canlilar from "@/content/adimli/canlilarin-ozellikleri.json";
+import biyomolekuller from "@/content/adimli/biyomolekuller.json";
 import type { DersId } from "./dersler";
 
 /** etiket: şık yalnızca görselse ekran okuyucunun okuyacağı ad. */
@@ -45,5 +49,7 @@ export type Adim = {
 
 export type AdimliDers = { id: string; ders: DersId; konu: string; baslik: string; ozet: string; adimlar: Adim[]; kapanis: string[] };
 
-export const ADIMLI: AdimliDers[] = [hareket, atom, zar, fizikGiris, maddeOzellikleri] as unknown as AdimliDers[];
+export const ADIMLI: AdimliDers[] = [
+  hareket, atom, zar, fizikGiris, maddeOzellikleri, simya, kimyaBilimi, canlilar, biyomolekuller,
+] as unknown as AdimliDers[];
 export const adimliDers = (id: string) => ADIMLI.find((d) => d.id === id);

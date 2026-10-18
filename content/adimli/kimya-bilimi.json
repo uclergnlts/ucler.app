@@ -1,0 +1,273 @@
+{
+ "id": "kimya-bilimi",
+ "ders": "kimya",
+ "konu": "kimya-bilimi",
+ "baslik": "Kimyanın dili ve güvenliği",
+ "ozet": "Formül kur, sembol çöz, tehlike işaretlerini tanı ve asidi güvenle seyrelt.",
+ "adimlar": [
+  {
+   "baslik": "Formülü kendin kur",
+   "metin": "Bileşikleri formülle yazarız. Sembolün sağ altındaki küçük sayıya <b>indis</b> denir; o atomdan kaç tane olduğunu söyler. Atom ekleyerek suyu, yani <b>H₂O</b>'yu kur.",
+   "sahne": {
+    "tur": "formul-kur",
+    "atomlar": [
+     "H",
+     "O"
+    ],
+    "adlar": {
+     "H": "hidrojen atomu",
+     "O": "oksijen atomu",
+     "H2": "hidrojen gazı",
+     "O2": "oksijen gazı",
+     "O3": "ozon",
+     "H2O": "su",
+     "H2O2": "hidrojen peroksit",
+     "C": "karbon atomu",
+     "CO": "karbon monoksit",
+     "CO2": "karbon dioksit",
+     "Na": "sodyum",
+     "Cl": "klor atomu",
+     "NaCl": "sodyum klorür (sofra tuzu)"
+    }
+   },
+   "deger": {
+    "H": 0,
+    "O": 1
+   },
+   "kontroller": [
+    {
+     "ad": "H",
+     "etiket": "Hidrojen (H)",
+     "min": 0,
+     "max": 4,
+     "tur": "sayac"
+    },
+    {
+     "ad": "O",
+     "etiket": "Oksijen (O)",
+     "min": 0,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "H": 2,
+     "O": 1
+    },
+    "tamam": "İki hidrojen, bir oksijen: H₂O. Oksijenin indisi 1 olduğu için yazılmaz. Su molekülü düz değil, açılıdır."
+   }
+  },
+  {
+   "baslik": "Bir atom, büyük fark",
+   "metin": "Bu <b>CO</b>, yani karbon monoksit: zehirli bir gaz. Bir oksijen daha ekle ve soluk verirken çıkardığın <b>CO₂</b>'yi yap.",
+   "sahne": {
+    "tur": "formul-kur",
+    "atomlar": [
+     "C",
+     "O"
+    ],
+    "adlar": {
+     "H": "hidrojen atomu",
+     "O": "oksijen atomu",
+     "H2": "hidrojen gazı",
+     "O2": "oksijen gazı",
+     "O3": "ozon",
+     "H2O": "su",
+     "H2O2": "hidrojen peroksit",
+     "C": "karbon atomu",
+     "CO": "karbon monoksit",
+     "CO2": "karbon dioksit",
+     "Na": "sodyum",
+     "Cl": "klor atomu",
+     "NaCl": "sodyum klorür (sofra tuzu)"
+    }
+   },
+   "deger": {
+    "C": 1,
+    "O": 1
+   },
+   "kontroller": [
+    {
+     "ad": "O",
+     "etiket": "Oksijen (O)",
+     "min": 0,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "O": 2
+    },
+    "tamam": "CO₂: karbon dioksit. Tek bir oksijen, zehirli bir gazı bambaşka bir maddeye çevirdi. Dikkat: <b>Co</b> (küçük o) ise kobalt elementidir."
+   }
+  },
+  {
+   "baslik": "Sembolü çöz",
+   "metin": "Her elementin bir sembolü vardır: ilk harf büyük, varsa ikincisi küçük yazılır. Bazı semboller elementin Latince adından gelir.",
+   "sahne": {
+    "tur": "element-sembol",
+    "sembol": "Fe",
+    "z": 26,
+    "ipucu": "Kanındaki hemoglobinde bulunur."
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "<b>Fe</b> hangi elementin sembolüdür?",
+    "secenekler": [
+     {
+      "yazi": "Demir",
+      "neden": "Fe, demirin Latince adı <i>ferrum</i>'dan gelir. Altın Au (<i>aurum</i>), kurşun Pb (<i>plumbum</i>) da böyledir.",
+      "dogru": true
+     },
+     {
+      "yazi": "Flor",
+      "neden": "Florun sembolü F'dir. Fe, Latince bir addan gelir."
+     },
+     {
+      "yazi": "Fosfor",
+      "neden": "Fosforun sembolü P'dir. Fe'nin kaynağı Latince <i>ferrum</i>'dur."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Yaygın adlar",
+   "metin": "Bazı bileşiklerin günlük hayatta kullanılan <b>yaygın adları</b> vardır: tuz ruhu HCl, kezzap HNO₃, sud kostik NaOH. Şimdi <b>sofra tuzunu</b>, yani NaCl'yi kur.",
+   "sahne": {
+    "tur": "formul-kur",
+    "atomlar": [
+     "Na",
+     "Cl"
+    ],
+    "adlar": {
+     "H": "hidrojen atomu",
+     "O": "oksijen atomu",
+     "H2": "hidrojen gazı",
+     "O2": "oksijen gazı",
+     "O3": "ozon",
+     "H2O": "su",
+     "H2O2": "hidrojen peroksit",
+     "C": "karbon atomu",
+     "CO": "karbon monoksit",
+     "CO2": "karbon dioksit",
+     "Na": "sodyum",
+     "Cl": "klor atomu",
+     "NaCl": "sodyum klorür (sofra tuzu)"
+    },
+    "iyonik": true
+   },
+   "deger": {
+    "Na": 1,
+    "Cl": 0
+   },
+   "kontroller": [
+    {
+     "ad": "Cl",
+     "etiket": "Klor (Cl)",
+     "min": 0,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "Cl": 1
+    },
+    "tamam": "NaCl: sodyum klorür, yani sofra tuzu. Tuz aslında Na⁺ ve Cl⁻ iyonlarından oluşan bir kristaldir; formül, iyonların 1'e 1 oranını gösterir."
+   }
+  },
+  {
+   "baslik": "Tehlike işareti",
+   "metin": "Kimyasal şişelerindeki kırmızı çerçeveli baklava işaretler maddenin tehlikesini anlatır. Şişeyi açmadan önce işareti tanımak ilk iştir.",
+   "sahne": {
+    "tur": "piktogram",
+    "isaret": "alev"
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bu işaret ne anlama gelir?",
+    "secenekler": [
+     {
+      "yazi": "Yanıcı",
+      "neden": "Alev işareti yanıcı maddeyi gösterir: alkol, aseton, benzin gibi. Ateşten ve kıvılcımdan uzak tutulur.",
+      "dogru": true
+     },
+     {
+      "yazi": "Patlayıcı",
+      "neden": "Patlayıcı işarette patlayan bir bomba vardır."
+     },
+     {
+      "yazi": "Zehirli",
+      "neden": "Zehirli maddeyi kurukafa gösterir."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Küçük bir fark",
+   "metin": "Bu işaret ilkine benziyor, ama alevin altında bir daire var. Küçük bir fark, bambaşka bir tehlike.",
+   "sahne": {
+    "tur": "piktogram",
+    "isaret": "alev-daire"
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bu işaret hangi maddeyi gösterir?",
+    "secenekler": [
+     {
+      "yazi": "Yakıcı (oksitleyici)",
+      "neden": "Alevli daire, kendisi yanmasa da oksijen vererek yanmayı başlatan ya da şiddetlendiren maddeyi gösterir (ör. derişik hidrojen peroksit). Yanıcı maddelerden uzak tutulur.",
+      "dogru": true
+     },
+     {
+      "yazi": "Yanıcı",
+      "neden": "Yanıcı işarette yalnızca alev vardır, altında daire yoktur."
+     },
+     {
+      "yazi": "Aşındırıcı",
+      "neden": "Aşındırıcı işarette ele ve yüzeye damlayıp onları aşındıran sıvı vardır."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Asidi seyreltmek",
+   "metin": "Laboratuvarda gözlük, önlük ve eldiven takılır. Derişik bir asidi seyreltmen gerekiyor; asit ile su karışırken çok ısı açığa çıkar.",
+   "sahne": {
+    "tur": "seyreltme",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Nasıl karıştırırsın?",
+    "secenekler": [
+     {
+      "yazi": "Asidi suya yavaşça eklerim",
+      "neden": "Asit çok suyun içine azar azar girince ısı büyük su kütlesine yayılır ve sıçrama olmaz. Kural: <b>asit suya eklenir</b>.",
+      "dogru": true
+     },
+     {
+      "yazi": "Suyu asidin üstüne dökerim",
+      "neden": "Az su, asidin üstünde birden ısınıp kaynar ve asidi sıçratır."
+     },
+     {
+      "yazi": "Sırası fark etmez",
+      "neden": "Fark eder: su aside eklenirse ısınan su asidi sıçratabilir."
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Sembolde ilk harf büyük, ikincisi küçük yazılır: <b>Co</b> kobalt, <b>CO</b> karbon monoksittir.",
+  "Formüldeki <b>indis</b> o atomdan kaç tane olduğunu söyler; 1 ise yazılmaz (H₂O, CO₂).",
+  "Bazı semboller Latince addan gelir: Fe (<i>ferrum</i>), Au (<i>aurum</i>), Pb (<i>plumbum</i>).",
+  "Kırmızı çerçeveli baklava işaretler tehlikeyi anlatır: alev yanıcı, alevli daire yakıcı (oksitleyici) maddedir.",
+  "Asit seyreltilirken <b>asit suya</b> yavaşça eklenir, tersi yapılmaz."
+ ]
+}
