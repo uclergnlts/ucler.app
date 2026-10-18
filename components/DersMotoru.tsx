@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Icon } from "./icons";
 import { SAHNELER } from "./sahne";
+import { rastgele } from "./sahne/ortak";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Html } from "./temel";
@@ -53,12 +54,24 @@ const ayni = (a: Degerler, b: Degerler) => Object.keys({ ...a, ...b }).every((k)
 const gosterim = (k: Kontrol, x: number) =>
   `${k.onek ?? ""}${(x * (k.carpan ?? 1)).toLocaleString("tr-TR", { maximumFractionDigits: 2 })}${k.birim ? ` ${k.birim}` : ""}`;
 
+/** Şıkların gösterim sırası: içerikte doğru şık çoğu zaman ilk yazılır, ekranda karışık çıksın.
+ * Sıra şıkların metninden üretilir, yani her açılışta aynıdır. */
+function sira(secenekler: Secenek[]) {
+  let h = 2166136261;
+  for (const ch of secenekler.map((s) => s.yazi).join("|")) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+  const rnd = rastgele(h);
+  const d = secenekler.map((_, k) => k);
+  for (let k = d.length - 1; k > 0; k--) { const j = Math.floor(rnd() * (k + 1)); [d[k], d[j]] = [d[j], d[k]]; }
+  return d;
+}
+
 function Secenekler({ secenekler, sinif, kapali, onSec }: { secenekler: Secenek[]; sinif: (k: number) => string; kapali: (k: number) => boolean; onSec: (k: number) => void }) {
+  const d = useMemo(() => sira(secenekler), [secenekler]);
   return (
     <div className="opts ad-opts">
-      {secenekler.map((s, k) => (
-        <button key={k} className={`opt ${sinif(k)}`} aria-label={s.etiket} disabled={kapali(k)} onClick={() => onSec(k)}>
-          <Html html={s.yazi} />
+      {d.map((k) => (
+        <button key={k} className={`opt ${sinif(k)}`} aria-label={secenekler[k].etiket} disabled={kapali(k)} onClick={() => onSec(k)}>
+          <Html html={secenekler[k].yazi} />
         </button>
       ))}
     </div>
