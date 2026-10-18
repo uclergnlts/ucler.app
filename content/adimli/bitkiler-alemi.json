@@ -1,0 +1,223 @@
+{
+ "id": "bitkiler-alemi",
+ "ders": "biyoloji",
+ "konu": "bitkiler-alemi",
+ "baslik": "Bitkiler âlemi ve bitki grupları",
+ "ozet": "Anahtarlarla bitki gruplarını bul, suyu ksilemle taşı, döl almaşını oynat ve gülü laleye çevir.",
+ "adimlar": [
+  {
+   "baslik": "Bitki grupları",
+   "metin": "Bitkileri üç soruyla gruplarız: <b>iletim demeti</b> var mı, <b>tohum</b> var mı, <b>çiçek</b> var mı? Anahtarları değiştir ve <b>çamın</b> hangi grupta olduğunu bul.",
+   "sahne": {
+    "tur": "biy4-gruplar"
+   },
+   "deger": {
+    "d": 0,
+    "t": 0,
+    "c": 0
+   },
+   "kontroller": [
+    {
+     "ad": "d",
+     "etiket": "İletim demeti (ksilem, floem)",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "t",
+     "etiket": "Tohum",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "c",
+     "etiket": "Çiçek ve meyve",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "d": 1,
+     "t": 1,
+     "c": 0
+    },
+    "tamam": "Çam bir <b>açık tohumludur</b>: iletim demeti ve tohumu var ama çiçeği ve meyvesi yok. Damarsız ama tohumlu bir grup yoktur, çünkü bu kazanımlar sırayla geldi: önce iletim demeti, sonra tohum, en son çiçek."
+   }
+  },
+  {
+   "baslik": "Yosunlar neden küçük?",
+   "metin": "Karada bitkinin suyu topraktan yukarı taşıması gerekir. İki gövdeye aynı anda alttan su veriliyor: birinde iletim demeti (ksilem) yok, ötekinde var.",
+   "sahne": {
+    "tur": "biy4-su",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Su hangisinde tepeye ulaşır?",
+    "secenekler": [
+     {
+      "yazi": "İkisinde de aynı anda",
+      "neden": "Hücreden hücreye geçiş çok yavaştır; boru gibi bir yol suyu çok daha hızlı taşır."
+     },
+     {
+      "yazi": "Yalnızca iletim demeti olanda",
+      "neden": "Ksilem suyu boru gibi hızla yukarı taşır ve bitkiyi dik tutar. Kara yosununda iletim demeti yoktur, su hücreden hücreye geçer. Bu yüzden yosunlar kısa kalır ve nemli, gölgeli yerlerde yaşar.",
+      "dogru": true
+     },
+     {
+      "yazi": "Yalnızca iletim demeti olmayanda",
+      "neden": "Demeti olmayan gövdede su yalnızca hücreden hücreye, yavaşça ilerler."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Döl almaşı",
+   "metin": "Bitkilerde iki döl sırayla gelir: <b>döl almaşı</b>. Biri diploit (2n) <b>sporofit</b>, öteki haploit (n) <b>gametofittir</b>. Eğreltinin yaşam döngüsünü oynatmadan önce tahmin et.",
+   "sahne": {
+    "tur": "biy4-dol",
+    "sure": 6
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Eğreltinin sporofitinde mayozla ne oluşur?",
+    "secenekler": [
+     {
+      "yazi": "Gametler (sperm ve yumurta)",
+      "neden": "Bitkide gametler gametofitte mitozla oluşur. Mayoz başka bir şey üretir."
+     },
+     {
+      "yazi": "Zigot",
+      "neden": "Zigot döllenmeyle, sperm ve yumurta birleşince oluşur."
+     },
+     {
+      "yazi": "Sporlar",
+      "neden": "Sporofit (2n) mayozla haploit (n) sporlar üretir. Spor mitozla protallusa (gametofit) gelişir; gametofit de gametleri mitozla yapar. Hayvanlardan farklı olarak bitkide mayoz gamet değil spor üretir.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Hangi döl baskın?",
+   "metin": "İki dölden biri büyük ve uzun ömürlüdür: <b>baskın döl</b>. Grubu değiştir ve gametofit ile sporofitin boyunu karşılaştır.",
+   "sahne": {
+    "tur": "biy4-baskin"
+   },
+   "deger": {
+    "g": 1
+   },
+   "kontroller": [
+    {
+     "ad": "g",
+     "etiket": "Grup",
+     "min": 1,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Yosundan tohumlu bitkiye giderken döller nasıl değişir?",
+    "secenekler": [
+     {
+      "yazi": "Gametofit büyür, sporofit küçülür",
+      "neden": "Grubu 3'e getir: tohumlu bitkide gametofit yalnızca polen ve embriyo kesesi kadardır."
+     },
+     {
+      "yazi": "Sporofit büyür, gametofit küçülür ve ona bağlanır",
+      "neden": "Yosunda gördüğün yeşil örtü gametofittir (n). Eğreltide büyük bitki sporofittir. Tohumlu bitkide gametofit mikroskobiktir: polen tanesi erkek gametofit, embriyo kesesi dişi gametofittir.",
+      "dogru": true
+     },
+     {
+      "yazi": "İkisi de hep aynı boyda kalır",
+      "neden": "Çubuklara bak: her grupta biri öbüründen çok daha büyük."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Açık ve kapalı tohum",
+   "metin": "Tohumlu bitkiler döllenme için suya muhtaç değildir; polen rüzgârla ya da hayvanlarla taşınır. Tohumda embriyo, besin deposu ve koruyucu kabuk vardır. Çam ve elmada döllenmeden sonra ne olduğunu izle.",
+   "sahne": {
+    "tur": "biy4-tohum",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hangisinde tohum bir meyvenin içinde kalır?",
+    "secenekler": [
+     {
+      "yazi": "Elmada",
+      "neden": "Elma kapalı tohumludur: tohum taslağı çiçeğin yumurtalığında korunur. Döllenmeden sonra yumurtalık meyveye, tohum taslağı tohuma dönüşür.",
+      "dogru": true
+     },
+     {
+      "yazi": "Çamda",
+      "neden": "Çamda tohum dişi kozalağın pulu üzerinde açıkta durur. Yumurtalık olmadığı için çiçek ve meyve oluşmaz."
+     },
+     {
+      "yazi": "İkisinde de",
+      "neden": "Meyve yumurtalıktan gelişir. Çiçeği ve yumurtalığı olmayan çamda meyve yoktur."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Tek ve çift çenekli",
+   "metin": "Kapalı tohumlular, embriyodaki çenek sayısına göre <b>tek</b> ve <b>çift çenekli</b> diye ikiye ayrılır. Ekrandaki gül çift çeneklidir. Özelliklerini değiştir ve onu 6 çiçek yapraklı bir <b>laleye</b> çevir.",
+   "sahne": {
+    "tur": "biy4-cenek"
+   },
+   "deger": {
+    "p": 5,
+    "pd": 0,
+    "sk": 0
+   },
+   "kontroller": [
+    {
+     "ad": "p",
+     "etiket": "Çiçek yaprağı",
+     "min": 3,
+     "max": 6,
+     "tur": "sayac"
+    },
+    {
+     "ad": "pd",
+     "etiket": "Paralel yaprak damarı",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "sk",
+     "etiket": "Saçak kök",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "p": 6,
+     "pd": 1,
+     "sk": 1
+    },
+    "tamam": "Lale tek çeneklidir: çiçek kısımları 3'ün katı (6), yaprak damarları paralel, kökü saçak köktür. Gülde çiçek kısımları 5'in katı, damarlar ağsı, kök kazık köktür. Bir bitkiyi tanırken birkaç özelliğe birlikte bak."
+   }
+  }
+ ],
+ "kapanis": [
+  "Bitkiler ökaryot, çok hücreli, selüloz çeperli ve <b>embriyoludur</b>; çoğu fotosentezle kendi besinini üretir.",
+  "Yosun damarsız ve tohumsuz, eğrelti damarlı ama tohumsuz; açık ve kapalı tohumlular hem damarlı hem tohumludur.",
+  "Döl almaşında sporofit (2n) mayozla <b>spor</b> üretir; gametler gametofitte (n) mitozla oluşur.",
+  "Yosunda gametofit, eğreltide ve tohumlularda sporofit baskındır.",
+  "Açık tohumluda tohum pulun üstünde açıkta, kapalı tohumluda meyvenin içindedir. Tek çenekli: 3'ün katları, paralel damar, saçak kök."
+ ]
+}

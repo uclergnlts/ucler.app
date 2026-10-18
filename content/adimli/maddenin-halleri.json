@@ -1,0 +1,217 @@
+{
+ "id": "maddenin-halleri",
+ "ders": "kimya",
+ "konu": "maddenin-halleri",
+ "baslik": "Maddenin halleri",
+ "ozet": "Katıyı erit, balı akıt, suyu farklı basınçlarda kaynat ve CO₂'yi basınçla sıvılaştır.",
+ "adimlar": [
+  {
+   "baslik": "Kristal ve amorf",
+   "metin": "Katılar ikiye ayrılır. <b>Kristal</b> katıda tanecikler düzenli bir örgü kurar; <b>amorf</b> katıda uzun mesafeli düzen yoktur. Tuz kristal, cam amorftur. İkisini de ısıtacağız.",
+   "sahne": {
+    "tur": "kim4-erime",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hangisi belirli bir sıcaklıkta birden erir?",
+    "secenekler": [
+     {
+      "yazi": "Cam",
+      "neden": "Cam amorftur: belirli bir erime noktası yoktur, önce yumuşar."
+     },
+     {
+      "yazi": "Tuz",
+      "neden": "Tuz 801 °C'de birden erir ve eriyip bitene kadar sıcaklığı sabit kalır. Cam ise belirli bir erime noktası olmadan yavaş yavaş yumuşar. Düzenli örgü her yerde aynı sıcaklıkta çözülür.",
+      "dogru": true
+     },
+     {
+      "yazi": "İkisi de",
+      "neden": "Biri düzenli örgülü, öteki değil. Eriyişleri aynı olabilir mi?"
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Viskozite",
+   "metin": "Akmaya karşı gösterilen dirence <b>viskozite</b> (akmazlık) denir. Bal, tanecikleri arasındaki güçlü çekim yüzünden ağır akar. Balı ısıt ve bardağı 10 saniyede doldur.",
+   "sahne": {
+    "tur": "kim4-bal",
+    "sure": 4
+   },
+   "deger": {
+    "T": 20
+   },
+   "kontroller": [
+    {
+     "ad": "T",
+     "etiket": "Balın sıcaklığı",
+     "min": 10,
+     "max": 60,
+     "adim": 5,
+     "birim": "°C"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "T": [
+      50,
+      60
+     ]
+    },
+    "ipucu": "Balı ısıtıp yeniden oynat.",
+    "tamam": "Isınan balda tanecikler çekimi daha kolay yener ve birbirinin üzerinden hızla kayar: viskozite azalır. Gliserin ve bal sudan ağır akar, çünkü moleküller arası çekimleri güçlüdür."
+   }
+  },
+  {
+   "baslik": "Buhar basıncı",
+   "metin": "Kapalı kapta sıvıdan kopan moleküllerin bir kısmı geri yoğuşur. İki hız eşitlenince buharın yaptığı basınca <b>buhar basıncı</b> denir. Sıcaklığı ve sıvı miktarını değiştir.",
+   "sahne": {
+    "tur": "kim4-buhar"
+   },
+   "deger": {
+    "T": 40,
+    "m": 1
+   },
+   "kontroller": [
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": 20,
+     "max": 100,
+     "adim": 10,
+     "birim": "°C"
+    },
+    {
+     "ad": "m",
+     "etiket": "Sıvı miktarı",
+     "min": 1,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Aynı sıcaklıkta kaptaki suyu artırırsan buhar basıncı ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Artar",
+      "neden": "Sıvı miktarını artır ve göstergeye bak: değer kıpırdıyor mu?"
+     },
+     {
+      "yazi": "Azalır",
+      "neden": "Daha çok sıvı, buharı azaltmaz. Sayaçla dene."
+     },
+     {
+      "yazi": "Değişmez",
+      "neden": "Buhar basıncı yalnızca sıcaklığa ve sıvının cinsine bağlıdır; sıvı miktarına, kap hacmine ve yüzey alanına bağlı değildir. Sıcaklıkla ise hızla artar: su için 40 °C'de 55, 100 °C'de 760 mmHg.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Kaynama ve dış basınç",
+   "metin": "Buhar basıncı dış basınca eşitlenince sıvının her yerinde kabarcık oluşur: <b>kaynama</b>. Dış basınç değişirse kaynama noktası da değişir. Basıncı düdüklü tencereninkine (2 atm) çıkar.",
+   "sahne": {
+    "tur": "kim4-kaynama"
+   },
+   "deger": {
+    "p": 10
+   },
+   "kontroller": [
+    {
+     "ad": "p",
+     "etiket": "Dış basınç",
+     "min": 3,
+     "max": 20,
+     "carpan": 0.1,
+     "birim": "atm"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "p": 20
+    },
+    "tamam": "2 atm'de su yaklaşık 120 °C'de kaynar; yemek bu yüzden çabuk pişer. Basınç düşünce kaynama noktası da düşer: Everest'te (≈ 0,3 atm) su yaklaşık 70 °C'de kaynar. 1 atm'deki kaynama noktasına <b>normal kaynama noktası</b> denir (su: 100 °C)."
+   }
+  },
+  {
+   "baslik": "Hâl değişimi ve ısı",
+   "metin": "Hâl değişirken madde ya ısı alır ya da ısı verir. Değişimleri tek tek gez ve hangilerinin ısı aldığına bak.",
+   "sahne": {
+    "tur": "kim4-hal"
+   },
+   "deger": {
+    "d": 1
+   },
+   "kontroller": [
+    {
+     "ad": "d",
+     "etiket": "Değişim",
+     "min": 1,
+     "max": 6,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Ter buharlaşırken seni neden serinletir?",
+    "secenekler": [
+     {
+      "yazi": "Buharlaşma derinden ısı alır",
+      "neden": "Buharlaşma endotermiktir: gereken ısıyı derinden alır, derin soğur. Tersine yoğuşma ısı verir; buhar yanığı bu yüzden kaynar su yanığından ağırdır.",
+      "dogru": true
+     },
+     {
+      "yazi": "Buharlaşma ısı verir",
+      "neden": "Isı veren değişimler donma, yoğuşma ve kırağılaşmadır. Buharlaşmayı bul."
+     },
+     {
+      "yazi": "Ter soğuk olduğu için",
+      "neden": "Ter vücut sıcaklığındadır. Serinlik hâl değişiminden gelir."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Faz diyagramı",
+   "metin": "<b>Faz diyagramı</b>, maddenin hangi sıcaklık ve basınçta hangi hâlde olduğunu gösterir. 1 atm'de kuru buz (katı CO₂) erimez, doğrudan gaza döner. −20 °C'deki CO₂'yi basınçla sıvı yap.",
+   "sahne": {
+    "tur": "kim4-faz",
+    "T": -20
+   },
+   "deger": {
+    "P": 1
+   },
+   "kontroller": [
+    {
+     "ad": "P",
+     "etiket": "Basınç",
+     "min": 1,
+     "max": 80,
+     "birim": "atm"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "P": [
+      20,
+      80
+     ]
+    },
+    "tamam": "−20 °C'de yaklaşık 20 atm'nin üstünde CO₂ sıvılaşır. Üçlü noktası 5,1 atm'de olduğu için 1 atm'de sıvı CO₂ olamaz; kuru buz bu yüzden süblimleşir. Kritik sıcaklığın (31 °C) üstünde ise hiçbir basınç onu sıvılaştıramaz."
+   }
+  }
+ ],
+ "kapanis": [
+  "Kristal katı belirli bir sıcaklıkta keskin erir; <b>amorf</b> katı (cam, plastik) yumuşayarak erir.",
+  "<b>Viskozite</b> akmaya karşı dirençtir; moleküller arası çekim güçlüyse yüksektir, ısınınca azalır.",
+  "<b>Buhar basıncı</b> sıcaklıkla artar ve sıvının cinsine bağlıdır; sıvı miktarına bağlı değildir.",
+  "Buhar basıncı dış basınca eşitlenince sıvı kaynar: dağda 100 °C'nin altında, düdüklü tencerede üstünde.",
+  "Erime, buharlaşma ve süblimleşme ısı alır; donma, yoğuşma ve kırağılaşma ısı verir."
+ ]
+}

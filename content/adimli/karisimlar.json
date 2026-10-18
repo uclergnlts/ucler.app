@@ -1,0 +1,224 @@
+{
+ "id": "karisimlar",
+ "ders": "kimya",
+ "konu": "karisimlar",
+ "baslik": "Karışımlar ve ayırma yöntemleri",
+ "ozet": "Işıkla koloiti bul, tuzu ısıtarak çöz ve her karışıma uygun ayırma yöntemini seç.",
+ "adimlar": [
+  {
+   "baslik": "Çözelti mi, koloit mi?",
+   "metin": "Çözeltide dağılan tanecikler çok küçüktür. <b>Koloitte</b> daha büyüktür (yaklaşık 1–1000 nm) ama yine de dibe çökmez. İki bardağa yandan ışık tutacağız.",
+   "sahne": {
+    "tur": "kim4-tyndall",
+    "sure": 3
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Işık demetinin yolu hangi bardakta görünür?",
+    "secenekler": [
+     {
+      "yazi": "Tuzlu suda",
+      "neden": "Çözeltideki iyonlar ışığı saçamayacak kadar küçüktür."
+     },
+     {
+      "yazi": "İkisinde de",
+      "neden": "Biri çözelti, öteki koloit. Tanecik boyutları farklı."
+     },
+     {
+      "yazi": "Sulandırılmış sütte",
+      "neden": "Süt bir koloittir: dağılan tanecikleri ışığı saçar ve demetin yolu görünür. Buna <b>Tyndall etkisi</b> denir. Tuzlu su gibi çözeltilerde ışık görünmez; sisteki far ışığı da Tyndall etkisidir.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Benzer benzeri çözer",
+   "metin": "Çözünmede, çözünenin tanecikleri çözücünün tanecikleri arasına dağılır. Kural: <b>benzer benzeri çözer</b>. Su polar, benzin apolar bir sıvıdır; zeytinyağı da apolardır.",
+   "sahne": {
+    "tur": "kim4-cozunme",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "İki tüpü de çalkalıyoruz. Zeytinyağı hangisinde çözünür?",
+    "secenekler": [
+     {
+      "yazi": "Suda",
+      "neden": "Polar su apolar yağı çözmez."
+     },
+     {
+      "yazi": "Benzinde",
+      "neden": "Apolar benzin apolar yağı çözer ve tek fazlı bir çözelti oluşur. Suda ise yağ damlacıkları birleşip yine üstte katman olur: bu heterojen karışıma <b>emülsiyon</b> denir. Polar su ise tuzu ve şekeri çözer.",
+      "dogru": true
+     },
+     {
+      "yazi": "İkisinde de",
+      "neden": "Yağ, polar suya benzemez."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Çözünürlük",
+   "metin": "100 g suda en çok çözünebilen madde kütlesine <b>çözünürlük</b> denir; sıcaklıkla değişir. Kapta 100 g su ve 60 g KNO₃ var. Suyu ısıt ve hepsini çöz.",
+   "sahne": {
+    "tur": "kim4-cozunurluk"
+   },
+   "deger": {
+    "T": 20
+   },
+   "kontroller": [
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": 0,
+     "max": 100,
+     "adim": 2,
+     "birim": "°C"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "T": [
+      38,
+      100
+     ]
+    },
+    "tamam": "38 °C civarında 60 g KNO₃'ün hepsi çözünür. Çözebileceği kadar madde çözmüş çözeltiye <b>doymuş çözelti</b> denir. Bu çözeltiyi soğutursan çözünürlük düşer ve fazlası kristal olarak ayrılır: <b>kristallenme</b>."
+   }
+  },
+  {
+   "baslik": "Ayrımsal kristallendirme",
+   "metin": "Şimdi 100 g sıcak suda 100 g KNO₃ ile 30 g NaCl çözünmüş. Çözeltiyi 20 °C'ye soğut ve dibe ne çöktüğüne bak.",
+   "sahne": {
+    "tur": "kim4-cozunurluk",
+    "ikili": true
+   },
+   "deger": {
+    "T": 80
+   },
+   "kontroller": [
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": 0,
+     "max": 100,
+     "adim": 2,
+     "birim": "°C"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "20 °C'de dibe ne çöker?",
+    "secenekler": [
+     {
+      "yazi": "Yalnızca NaCl",
+      "neden": "NaCl'nin çözünürlüğü sıcaklıkla neredeyse değişmez. Eğrilere bak."
+     },
+     {
+      "yazi": "İkisi de",
+      "neden": "NaCl'nin çözünürlüğü 20 °C'de de 36 g; 30 g'ın hepsi çözünmüş kalır."
+     },
+     {
+      "yazi": "Yalnızca KNO₃",
+      "neden": "KNO₃'ün çözünürlüğü 20 °C'de 31,6 g'a düşer; yaklaşık 68 g'ı kristallenir. NaCl'nin çözünürlüğü neredeyse değişmez, hepsi çözeltide kalır. Bu yönteme <b>ayrımsal kristallendirme</b> denir.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Mıknatısla ayırma",
+   "metin": "Bir karışımı ayırmak için bileşenlerin farklı bir özelliğini kullanırsın. Demir tozu ile kükürt tozunu ayıracak yöntemi seç ve oynat.",
+   "sahne": {
+    "tur": "kim4-ayirma",
+    "karisim": "demir-kukurt",
+    "sure": 4
+   },
+   "deger": {
+    "y": 2
+   },
+   "kontroller": [
+    {
+     "ad": "y",
+     "etiket": "Yöntem",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "y": 1
+    },
+    "tamam": "Demir mıknatısa çekilir, kükürt çekilmez. Mıknatısla ayırma bu farka dayanır; hurdalıkta çelik de böyle seçilir. Nikel ve kobalt da mıknatısa çekilir."
+   }
+  },
+  {
+   "baslik": "Ayırma hunisi",
+   "metin": "Zeytinyağı ile su birbirinde çözünmez ve iki katmana ayrılır. Bunları ayıracak yöntemi seç ve oynat.",
+   "sahne": {
+    "tur": "kim4-ayirma",
+    "karisim": "yag-su",
+    "sure": 4
+   },
+   "deger": {
+    "y": 1
+   },
+   "kontroller": [
+    {
+     "ad": "y",
+     "etiket": "Yöntem",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "y": 3
+    },
+    "tamam": "Ayırma hunisinde yoğun olan su altta toplanır; musluk açılınca önce su akar, yağ hunide kalır. Bu yöntem yalnızca birbirinde çözünmeyen sıvılar içindir; alkol ile su böyle ayrılmaz."
+   }
+  },
+  {
+   "baslik": "Damıtma",
+   "metin": "Tuzlu sudan hem tuzu hem de suyu geri kazanmak istiyorsun. İkisini de veren yöntemi seç ve oynat.",
+   "sahne": {
+    "tur": "kim4-ayirma",
+    "karisim": "tuzlu-su",
+    "sure": 4
+   },
+   "deger": {
+    "y": 2
+   },
+   "kontroller": [
+    {
+     "ad": "y",
+     "etiket": "Yöntem",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "y": 4
+    },
+    "tamam": "Damıtmada su kaynar, buhar soğutucuda yoğuşur ve toplama kabına saf su damlar; tuz balonda kalır. Yalnızca buharlaştırsaydın tuzu alırdın ama su havaya karışırdı. Kaynama noktaları yakın sıvılar için ayrımsal damıtma kullanılır."
+   }
+  }
+ ],
+ "kapanis": [
+  "Karışımda bileşenler özelliklerini korur; oranları değişebilir, belirli bir kaynama noktası yoktur.",
+  "Homojen karışım (çözelti) tek fazlıdır; <b>koloit</b> ışığı saçar (Tyndall etkisi), çözelti saçmaz.",
+  "<b>Benzer benzeri çözer:</b> polar su tuzu ve şekeri, apolar benzin yağı çözer.",
+  "Çözünürlük sıcaklıkla değişir; soğutulan doymuş çözeltide fazlası kristallenir.",
+  "Her ayırma yöntemi bir özellik farkına dayanır: manyetiklik, yoğunluk, tanecik boyutu, kaynama noktası."
+ ]
+}

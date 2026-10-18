@@ -1,0 +1,225 @@
+{
+ "id": "newton-yasalari",
+ "ders": "fizik",
+ "konu": "newton-yasalari",
+ "baslik": "Newton'un hareket yasaları",
+ "ozet": "Örtü çek, kutu it, kaykayda itiş: kuvvetin hareketi nasıl değiştirdiğini kendin dene.",
+ "adimlar": [
+  {
+   "baslik": "Masa örtüsü",
+   "metin": "Bir cisme etki eden net kuvvet sıfırsa hareket durumu değişmez: duran durur, giden aynı hızla gider. Buna <b>eylemsizlik</b> denir. Şimdi masa örtüsünü bir anda hızla çekeceksin.",
+   "sahne": {
+    "tur": "fiz4-ortu",
+    "sure": 2.5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Örtüyü hızla çekince tabaklar ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Örtüyle birlikte kayar",
+      "neden": "Örtü tabakları ancak sürtünmeyle çekebilir. Çok hızlı çekince bu kuvvet çok kısa sürer."
+     },
+     {
+      "yazi": "Masada yerinde kalır",
+      "dogru": true,
+      "neden": "Duran tabaklar durmayı sürdürmek ister. Sürtünme çok kısa etki ettiği için hızları neredeyse hiç değişmez: eylemsizlik."
+     },
+     {
+      "yazi": "Havaya fırlar",
+      "neden": "Tabaklara yukarı doğru bir kuvvet etki etmiyor."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Net kuvvet",
+   "metin": "Kuvvet bir itme ya da çekmedir; yönü olduğu için vektördür. Hareketi belirleyen, tüm kuvvetlerin toplamı olan <b>net kuvvettir</b>. Soldaki 30 N ile sağa itiyor. Sağdakinin itmesini ayarla ve net kuvveti <b>sıfır</b> yap.",
+   "sahne": {
+    "tur": "fiz4-net"
+   },
+   "deger": {
+    "F": 10
+   },
+   "kontroller": [
+    {
+     "ad": "F",
+     "etiket": "Sağdakinin itmesi",
+     "min": 0,
+     "max": 50,
+     "adim": 5,
+     "birim": "N"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "F": 30
+    },
+    "tamam": "30 N sağa, 30 N sola: net kuvvet 0. Kutu duruyorsa durur, kayıyorsa aynı hızla kaymayı sürdürür. Kuvvetler var ama hız değişmez (1. yasa)."
+   }
+  },
+  {
+   "baslik": "F = m·a",
+   "metin": "Net kuvvet cismi <b>ivmelendirir</b>: a = F / m. 10 kg'lık arabayı it. İvmesi <b>2 m/s²</b> olsun, sonra oynat.",
+   "sahne": {
+    "tur": "fiz4-fma",
+    "sure": 2,
+    "m": 10
+   },
+   "deger": {
+    "F": 10
+   },
+   "kontroller": [
+    {
+     "ad": "F",
+     "etiket": "Kuvvet",
+     "min": 0,
+     "max": 40,
+     "adim": 5,
+     "birim": "N"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "F": 20
+    },
+    "tamam": "a = 20 N / 10 kg = 2 m/s². Hız her saniye 2 m/s artar, 2 s'de araba 4 m yol alır. 1 N, 1 kg'lık kütleye 1 m/s² ivme verir: 1 N = 1 kg·m/s²."
+   }
+  },
+  {
+   "baslik": "Kütle artarsa",
+   "metin": "Kuvvet şimdi hep 20 N. Arabanın kütlesini değiştir ve en az iki farklı kütleyle oynat.",
+   "sahne": {
+    "tur": "fiz4-fma",
+    "sure": 2,
+    "F": 20
+   },
+   "deger": {
+    "m": 10
+   },
+   "kontroller": [
+    {
+     "ad": "m",
+     "etiket": "Kütle",
+     "min": 5,
+     "max": 20,
+     "adim": 5,
+     "birim": "kg",
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "kosu": 2,
+    "soru": "Aynı kuvvette kütle iki katına çıkınca ivme ne olur?",
+    "secenekler": [
+     {
+      "yazi": "İki katına çıkar",
+      "neden": "Ağır arabayı hızlandırmak daha zordur. 10 kg ile 20 kg'ın ivmelerine bak."
+     },
+     {
+      "yazi": "Değişmez",
+      "neden": "a = F / m: m değişince a da değişir."
+     },
+     {
+      "yazi": "Yarıya iner",
+      "dogru": true,
+      "neden": "20 N ile 10 kg'da 2 m/s², 20 kg'da 1 m/s². Dolu market arabasını hızlandırmak bu yüzden zordur."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Ağırlık ≠ kütle",
+   "metin": "<b>Kütle</b> madde miktarıdır (kg). <b>Ağırlık</b> yerçekiminin sana uyguladığı kuvvettir (N): G = m·g. 60 kg'lık astronotu Ay'a götür (g ≈ 1,62 m/s²).",
+   "sahne": {
+    "tur": "fiz4-agirlik"
+   },
+   "deger": {
+    "ay": 0
+   },
+   "kontroller": [
+    {
+     "ad": "ay",
+     "etiket": "Ay'a git",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "ay": 1
+    },
+    "tamam": "Kütle hâlâ 60 kg, ama ağırlık 588 N'dan 97 N'a indi. Kütle her yerde aynıdır; ağırlık bulunduğun yerin g değerine göre değişir."
+   }
+  },
+  {
+   "baslik": "Etki–tepki",
+   "metin": "Kaykayda duruyorsun. 60 kg'sın ve 30 kg'lık kardeşini iteceksin. <b>3. yasa:</b> A cismi B'ye kuvvet uygularsa B de A'ya eşit büyüklükte, zıt yönde kuvvet uygular.",
+   "sahne": {
+    "tur": "fiz4-etki-tepki",
+    "sure": 3
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "İtince kim kayar?",
+    "secenekler": [
+     {
+      "yazi": "İkiniz de, zıt yönlere",
+      "dogru": true,
+      "neden": "Kuvvetler eşit (60 N) ve zıt yönlü. Farklı cisimlere etki ettikleri için birbirini yok etmez. Kardeşinin kütlesi yarı olduğu için iki kat hızlı uzaklaşır (a = F / m)."
+     },
+     {
+      "yazi": "Yalnızca kardeşin",
+      "neden": "Kardeşin de sana eşit büyüklükte bir kuvvet uygular; sen de geri kayarsın."
+     },
+     {
+      "yazi": "Yalnızca sen",
+      "neden": "Kardeşine uyguladığın kuvvet onu da hareket ettirir."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Sürtünme",
+   "metin": "20 kg'lık dolabı itiyorsun. Duran dolapta <b>statik sürtünme</b> itmeni dengeler, ama bir sınırı var: μs·N. İtmeni artır ve dolabı kaydır.",
+   "sahne": {
+    "tur": "fiz4-surtunme"
+   },
+   "deger": {
+    "F": 20
+   },
+   "kontroller": [
+    {
+     "ad": "F",
+     "etiket": "İtme",
+     "min": 0,
+     "max": 100,
+     "adim": 10,
+     "birim": "N"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "F": [
+      80,
+      100
+     ]
+    },
+    "tamam": "Sınır μs·N = 0,4 × 196 ≈ 78 N. İtme bunu aşınca dolap kaydı ve sürtünme <b>kinetik</b> oldu: fk = μk·N = 0,3 × 196 ≈ 59 N. Genellikle μk &lt; μs: başlatmak, sürdürmekten zordur."
+   }
+  }
+ ],
+ "kapanis": [
+  "<b>1. yasa:</b> net kuvvet sıfırsa hız değişmez (durmak da sabit hızdır: v = 0).",
+  "<b>2. yasa:</b> Fnet = m·a. Aynı kuvvette kütle iki katına çıkarsa ivme yarıya iner. 1 N = 1 kg·m/s².",
+  "<b>3. yasa:</b> etki ve tepki eşit, zıt ve farklı cisimlerdedir; bu yüzden birbirini yok etmez.",
+  "Ağırlık G = m·g (N); kütle (kg) her yerde aynıdır.",
+  "Durgunken sürtünme itmeyi μs·N'ye kadar dengeler; kayarken fk = μk·N."
+ ]
+}
