@@ -1,0 +1,211 @@
+{
+ "id": "is-enerji-guc",
+ "ders": "fizik",
+ "konu": "is-enerji-guc",
+ "baslik": "İş, enerji ve güç",
+ "ozet": "İpin açısını değiştir, topu düşür, kaydıraktan kay, merdiveni koşarak çık; işi, enerjiyi ve gücü hesapla.",
+ "adimlar": [
+  {
+   "baslik": "İş",
+   "metin": "Fizikte <b>iş</b>, kuvvet cismi yer değiştirince yapılır: W = F·d·cosθ. Kutuyu 50 N ile 4 m çekiyorsun. İpin açısını ayarla ve işi <b>100 J</b> yap.",
+   "sahne": {
+    "tur": "fiz5-is",
+    "F": 50,
+    "d": 4
+   },
+   "deger": {
+    "a": 0
+   },
+   "kontroller": [
+    {
+     "ad": "a",
+     "etiket": "İpin açısı",
+     "min": 0,
+     "max": 90,
+     "adim": 15,
+     "birim": "°"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "a": 60
+    },
+    "tamam": "cos60° = 0,5: W = 50 · 4 · 0,5 = 100 J. İşi yalnızca kuvvetin hareket yönündeki bileşeni yapar. Birimi joule: 1 J = 1 N·m."
+   }
+  },
+  {
+   "baslik": "Sıfır iş",
+   "metin": "Ağır bir çantayı tutarak yatay yolda yürüyorsun. Kolun çantayı yukarı tutar, çanta ise yatay ilerler: θ = 90°.",
+   "sahne": {
+    "tur": "fiz5-is",
+    "F": 50,
+    "d": 4,
+    "aci": 90
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Kolunun çantaya yaptığı iş ne kadardır?",
+    "secenekler": [
+     {
+      "yazi": "Pozitif, çünkü yoruluyorsun",
+      "neden": "Yorulmak fiziksel iş demek değildir. cos90° kaç eder?"
+     },
+     {
+      "yazi": "Negatif",
+      "neden": "Negatif iş için kuvvet harekete karşı koymalı (sürtünme gibi). Burada kuvvet harekete dik."
+     },
+     {
+      "yazi": "Sıfır",
+      "dogru": true,
+      "neden": "cos90° = 0: kuvvet harekete dikse iş sıfırdır. Duvarı itip kımıldatamazsan da iş sıfırdır, yorulsan bile."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Kinetik enerji",
+   "metin": "Hareket eden cismin <b>kinetik enerjisi</b> vardır: KE = ½·m·v². 1000 kg'lık araba 20 m/s ile gidiyor. Kinetik enerjisini <b>4 katına</b> (800 000 J) çıkar.",
+   "sahne": {
+    "tur": "fiz5-ke"
+   },
+   "deger": {
+    "v": 20
+   },
+   "kontroller": [
+    {
+     "ad": "v",
+     "etiket": "Hız",
+     "min": 0,
+     "max": 40,
+     "adim": 10,
+     "tur": "sayac",
+     "birim": "m/s"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "v": 40
+    },
+    "tamam": "Hız 2 katına çıkınca enerji 4 katına çıktı, çünkü hız karesiyle girer: ½ · 1000 · 40² = 800 000 J. Hızlı giden aracı durdurmak bu yüzden çok daha zordur."
+   }
+  },
+  {
+   "baslik": "Enerji biçim değiştirir",
+   "metin": "2 kg'lık top 5 m'den bırakılıyor. Yüksekteki topun <b>potansiyel enerjisi</b> var: PE = m·g·h = 2 · 9,8 · 5 = 98 J. Üzerinde yalnızca yer çekimi iş yapıyor.",
+   "sahne": {
+    "tur": "fiz5-dusme",
+    "sure": 2
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Top yere değerken kinetik enerjisi kaç J olur?",
+    "secenekler": [
+     {
+      "yazi": "0 J",
+      "neden": "Yere değerken top en hızlıdır; kinetik enerjisi en büyüktür."
+     },
+     {
+      "yazi": "49 J",
+      "neden": "Bu, yolun yarısındaki değer."
+     },
+     {
+      "yazi": "98 J",
+      "dogru": true,
+      "neden": "PE azaldıkça KE artar; toplam hep 98 J kalır. Yerde PE sıfırdır, enerjinin tamamı kinetiktir: top ≈ 9,9 m/s ile çarpar. Buna <b>mekanik enerjinin korunumu</b> denir."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Sürtünme",
+   "metin": "20 kg'lık çocuk 3 m yüksek kaydıraktan kayıyor. Önce sürtünmesiz kaydır. Sonra <b>sürtünmeyi aç</b> ve yeniden kaydır.",
+   "sahne": {
+    "tur": "fiz5-kaydirak",
+    "sure": 3
+   },
+   "deger": {
+    "s": 0
+   },
+   "kontroller": [
+    {
+     "ad": "s",
+     "etiket": "Sürtünme",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "s": 1
+    },
+    "ipucu": "Şimdi sürtünmeyi aç ve yeniden kaydır.",
+    "tamam": "Sürtünme mekanik enerjinin bir kısmını <b>ısıya</b> çevirdi: çocuk daha yavaş indi, kaydırak ısındı. Enerji yok olmadı; potansiyel, kinetik ve ısı toplamı hep 588 J."
+   }
+  },
+  {
+   "baslik": "Güç",
+   "metin": "<b>Güç</b> birim zamanda yapılan iştir: P = W / t, birimi watt (1 W = 1 J/s). 50 kg'lık biri 3 m'lik merdiveni çıkıyor. Çıkış süresini ayarla: güç <b>294 W</b> olsun.",
+   "sahne": {
+    "tur": "fiz5-guc"
+   },
+   "deger": {
+    "t": 10
+   },
+   "kontroller": [
+    {
+     "ad": "t",
+     "etiket": "Çıkış süresi",
+     "min": 2,
+     "max": 12,
+     "tur": "sayac",
+     "birim": "s"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "t": 5
+    },
+    "tamam": "Yapılan iş hep 1470 J; süre yarıya inince güç iki katına çıkar: 1470 / 5 = 294 W. 10 s'de yürüyerek çıksaydın 147 W olurdu. Elektrik faturasındaki 1 kWh = 3,6 milyon J'dür."
+   }
+  },
+  {
+   "baslik": "Yay ve F–x grafiği",
+   "metin": "Yayı germek için gereken kuvvet uzamayla artar: F = k·x. Kuvvet–uzama grafiğinin altındaki alan yapılan işi verir. Yayı ger ve içine <b>1 J</b> enerji depola.",
+   "sahne": {
+    "tur": "fiz5-yay"
+   },
+   "deger": {
+    "x": 0
+   },
+   "kontroller": [
+    {
+     "ad": "x",
+     "etiket": "Uzama",
+     "min": 0,
+     "max": 20,
+     "adim": 5,
+     "birim": "cm"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "x": 10
+    },
+    "tamam": "x = 0,1 m'de F = 200 · 0,1 = 20 N. Üçgenin alanı ½ · 0,1 · 20 = 1 J; bu, yayda depolanan <b>esneklik potansiyel enerjisidir</b>: ½·k·x². Uzamayı iki katına çıkarırsan enerji 4 katına çıkar."
+   }
+  }
+ ],
+ "kapanis": [
+  "İş: W = F·d·cosθ (joule). Kuvvet harekete dikse ya da cisim kımıldamıyorsa iş sıfırdır.",
+  "Kinetik enerji KE = ½·m·v²: hız 2 kat, enerji 4 kat. Potansiyel enerji PE = m·g·h.",
+  "Yalnız yer çekimi iş yapıyorsa KE + PE sabittir; sürtünme mekanik enerjinin bir kısmını ısıya çevirir, toplam enerji yine korunur.",
+  "Güç P = W / t (watt): aynı iş daha kısa sürede yapılırsa güç artar.",
+  "F–x grafiğinin altındaki alan iştir; yayda depolanan enerji ½·k·x²."
+ ]
+}

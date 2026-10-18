@@ -1,0 +1,255 @@
+{
+ "id": "tepkimeler",
+ "ders": "kimya",
+ "konu": "tepkimeler",
+ "baslik": "Kimyasal tepkimeler ve denklemler",
+ "ozet": "Atomları yeniden düzenle, denklemleri denkleştir, eksik yanmayı ve çökelmeyi kendin gör.",
+ "adimlar": [
+  {
+   "baslik": "Tepkime nedir?",
+   "metin": "Kimyasal tepkimede bağlar kopar, atomlar yeni bağlar kurar ve özellikleri farklı yeni maddeler oluşur. Hidrojen ile oksijenden su oluşacak.",
+   "sahne": {
+    "tur": "kim5-bag",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Tepkime sırasında atomlara ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Bir kısmı yok olur",
+      "neden": "Atomlar yok olmaz. Önce 4 H ve 2 O vardı, sonra da 4 H ve 2 O var."
+     },
+     {
+      "yazi": "Yeniden düzenlenir",
+      "neden": "Atomlar aynı kalır; değişen, kime bağlı oldukları. Bu yüzden atom sayısı ve toplam kütle korunur.",
+      "dogru": true
+     },
+     {
+      "yazi": "Başka atomlara dönüşür",
+      "neden": "Kimyasal tepkimede çekirdekler değişmez: hidrojen hidrojen, oksijen oksijen olarak kalır."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Katsayı ve indis",
+   "metin": "Denklemde iki tarafta her atomdan eşit sayıda olmalı. Bu denklemde solda 2 O, sağda 1 O var.",
+   "sahne": {
+    "tur": "kim5-denklestir",
+    "denklem": "su"
+   },
+   "deger": {
+    "k0": 1,
+    "k1": 1,
+    "k2": 1
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Oksijeni eşitlemenin doğru yolu hangisi?",
+    "secenekler": [
+     {
+      "yazi": "H₂O'yu H₂O₂ yapmak",
+      "neden": "İndis maddenin kimliğidir. H₂O₂ su değil, hidrojen peroksittir; başka bir madde yazmış olursun."
+     },
+     {
+      "yazi": "O₂'yi O yapmak",
+      "neden": "Oksijen gazı O₂ moleküllerinden oluşur; formülünü değiştiremezsin."
+     },
+     {
+      "yazi": "H₂O'nun önüne 2 yazmak",
+      "neden": "Katsayı molekül sayısıdır: 2H₂O iki su molekülü demek. Yalnızca katsayılar değişir, indisler değişmez.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Denkleştir",
+   "metin": "Şimdi katsayıları sen ayarla. <b>H₂ + O₂ → H₂O</b> denkleminde her atom iki yanda eşit olsun.",
+   "sahne": {
+    "tur": "kim5-denklestir",
+    "denklem": "su"
+   },
+   "deger": {
+    "k0": 1,
+    "k1": 1,
+    "k2": 1
+   },
+   "kontroller": [
+    {
+     "ad": "k0",
+     "etiket": "H₂",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    },
+    {
+     "ad": "k1",
+     "etiket": "O₂",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    },
+    {
+     "ad": "k2",
+     "etiket": "H₂O",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "k0": 2,
+     "k1": 1,
+     "k2": 2
+    },
+    "tamam": "2H₂ + O₂ → 2H₂O: iki yanda da 4 H ve 2 O. Katsayılar en küçük tam sayılar olmalı; 4H₂ + 2O₂ → 4H₂O da denktir ama sadeleşir."
+   }
+  },
+  {
+   "baslik": "Metanın yanması",
+   "metin": "Doğal gaz (metan) yanınca CO₂ ve su oluşur. Önce karmaşık bileşikleri ayarla, tek element olan O₂'yi en sona bırak.",
+   "sahne": {
+    "tur": "kim5-denklestir",
+    "denklem": "metan"
+   },
+   "deger": {
+    "k0": 1,
+    "k1": 1,
+    "k2": 1,
+    "k3": 1
+   },
+   "kontroller": [
+    {
+     "ad": "k0",
+     "etiket": "CH₄",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    },
+    {
+     "ad": "k1",
+     "etiket": "O₂",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    },
+    {
+     "ad": "k2",
+     "etiket": "CO₂",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    },
+    {
+     "ad": "k3",
+     "etiket": "H₂O",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "k0": 1,
+     "k1": 2,
+     "k2": 1,
+     "k3": 2
+    },
+    "tamam": "CH₄ + 2O₂ → CO₂ + 2H₂O. İki yanda 1 C, 4 H ve 4 O var. Tepkimede atom türü ve sayısı, kütle ve yük korunur; molekül sayısı korunmak zorunda değildir."
+   }
+  },
+  {
+   "baslik": "Eksik yanma",
+   "metin": "Yanma, bir maddenin oksijenle tepkimesidir ve ısı verir. Oksijen yeterliyse karbonlu yakıt tam yanar. Bu ocak, havası az olan kapalı bir odada yanıyor.",
+   "sahne": {
+    "tur": "kim5-yanma",
+    "sure": 5,
+    "hava": 0
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Oksijen yetersizken metan yanınca ne oluşur?",
+    "secenekler": [
+     {
+      "yazi": "Yalnızca CO₂ ve su",
+      "neden": "Bu tam yanmadır; bunun için yeterli oksijen gerekir."
+     },
+     {
+      "yazi": "Yalnızca su buharı",
+      "neden": "Metandaki karbon da bir yere gitmeli: CO₂, CO ya da is olarak."
+     },
+     {
+      "yazi": "Karbon monoksit ve is",
+      "neden": "Eksik yanmada CO ve is (karbon) da oluşur. CO renksiz ve kokusuzdur; kandaki hemoglobine oksijenden çok daha sıkı bağlanır. Dedektör ve havalandırma hayat kurtarır.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Çökelme",
+   "metin": "Suda çözünmüş iki iyonik bileşik karışınca bazı iyonlar suda çözünmeyen bir katı oluşturabilir. Gümüş nitrat ve sodyum klorür çözeltileri ikisi de berrak.",
+   "sahne": {
+    "tur": "kim5-cokelme",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Aradaki bölme kalkınca ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Beyaz bir katı dibe çöker",
+      "neden": "Ag⁺ ile Cl⁻ birleşip suda çözünmeyen AgCl oluşturur: çökelek. Na⁺ ve NO₃⁻ değişmeden kalır; bunlar seyirci iyonlardır ve net denklemde yazılmaz: Ag⁺ + Cl⁻ → AgCl(k).",
+      "dogru": true
+     },
+     {
+      "yazi": "Hiçbir şey olmaz",
+      "neden": "Bazı iyon çiftleri suda çözünmez. Buradaki iyonlardan hangi ikisi birleşebilir?"
+     },
+     {
+      "yazi": "Gaz kabarcıkları çıkar",
+      "neden": "Burada gaz oluşturacak bir iyon çifti yok; oluşan ürün bir katı."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Tepkime türleri",
+   "metin": "Kireç taşı ısıtılınca sönmemiş kireç ve karbon dioksit oluşur. Bir tepkimenin türünü bulurken giren ve çıkan madde sayısına bak.",
+   "sahne": {
+    "tur": "kim5-analiz"
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "CaCO₃ → CaO + CO₂ hangi tür tepkimedir?",
+    "secenekler": [
+     {
+      "yazi": "Sentez (birleşme)",
+      "neden": "Sentezde birden çok madde tek ürüne dönüşür. Burada tersi oluyor."
+     },
+     {
+      "yazi": "Analiz (ayrışma)",
+      "neden": "Bir bileşik daha basit maddelere ayrılıyor: bir → çok. Analiz çoğu zaman ısı ya da elektrik ister; burada ısı.",
+      "dogru": true
+     },
+     {
+      "yazi": "Çökelme",
+      "neden": "Çökelme iki çözelti karışınca olur. Burada tek bir katı ısıtılıyor."
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Tepkimede bağlar kopar, atomlar yeniden düzenlenir ve yeni maddeler oluşur.",
+  "Denkleştirmede yalnızca katsayılar değişir, indisler değişmez; katsayılar en küçük tam sayılar olmalı.",
+  "Atom türü ve sayısı, kütle ve yük korunur; molekül sayısı ve gaz hacmi değişebilir.",
+  "Yanma oksijenle olur ve ısı verir. Oksijen azsa eksik yanma olur; zehirli CO ve is oluşur.",
+  "Türler: yanma, sentez (çok → bir), analiz (bir → çok), çökelme, asit-baz ve redoks."
+ ]
+}

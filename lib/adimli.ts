@@ -27,6 +27,12 @@ import maddeninHalleri from "@/content/adimli/maddenin-halleri.json";
 import karisimlar from "@/content/adimli/karisimlar.json";
 import bitkiler from "@/content/adimli/bitkiler-alemi.json";
 import mitoz from "@/content/adimli/mitoz.json";
+import bagil from "@/content/adimli/bagil-hareket.json";
+import isEnerji from "@/content/adimli/is-enerji-guc.json";
+import temelKanunlar from "@/content/adimli/temel-kanunlar.json";
+import tepkimeler from "@/content/adimli/tepkimeler.json";
+import mayoz from "@/content/adimli/mayoz.json";
+import kalitim from "@/content/adimli/kalitim.json";
 import type { DersId } from "./dersler";
 
 /** etiket: şık yalnızca görselse ekran okuyucunun okuyacağı ad. */
@@ -68,8 +74,8 @@ export type Adim = {
 export type AdimliDers = { id: string; ders: DersId; konu: string; baslik: string; ozet: string; adimlar: Adim[]; kapanis: string[] };
 
 export const ADIMLI: AdimliDers[] = [
-  fizikGiris, maddeOzellikleri, basinc, kaldirma, isiSicaklik, vektorler, hareket, newton, ikiBoyut,
-  simya, kimyaBilimi, madde, atomModelleri, atom, periyodikTablo, kimyasalBaglar, maddeninHalleri, karisimlar,
-  canlilar, biyomolekuller, enzimler, hucreOrganeller, zar, siniflandirma, hayvanlar, bitkiler, mitoz,
+  fizikGiris, maddeOzellikleri, basinc, kaldirma, isiSicaklik, vektorler, hareket, newton, ikiBoyut, bagil, isEnerji,
+  simya, kimyaBilimi, madde, atomModelleri, atom, periyodikTablo, kimyasalBaglar, maddeninHalleri, karisimlar, temelKanunlar, tepkimeler,
+  canlilar, biyomolekuller, enzimler, hucreOrganeller, zar, siniflandirma, hayvanlar, bitkiler, mitoz, mayoz, kalitim,
 ] as unknown as AdimliDers[];
 export const adimliDers = (id: string) => ADIMLI.find((d) => d.id === id);

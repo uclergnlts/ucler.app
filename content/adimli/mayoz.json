@@ -1,0 +1,232 @@
+{
+ "id": "mayoz",
+ "ders": "biyoloji",
+ "konu": "mayoz",
+ "baslik": "Mayoz ve eşeyli üreme",
+ "ozet": "Kromozom sayısını kuşaklar boyu sabit tut, tetrat kur, parça değiştir, mayozu oynat ve gamet çeşitlerini say.",
+ "adimlar": [
+  {
+   "baslik": "Mayoz neden gerekli?",
+   "metin": "Döllenmede iki gamet birleşir. Gametler vücut hücresi kadar kromozom taşısaydı ne olurdu? Kuşaklara bak, sonra gametlerde <b>mayozu</b> aç.",
+   "sahne": {
+    "tur": "biy5-kusak"
+   },
+   "deger": {
+    "kusak": 3,
+    "mayoz": 0
+   },
+   "kontroller": [
+    {
+     "ad": "kusak",
+     "etiket": "Kuşak",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    },
+    {
+     "ad": "mayoz",
+     "etiket": "Gametlerde mayoz",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "mayoz": 1
+    },
+    "tamam": "Mayoz kromozom sayısını yarıya indirir (2n → n): insanda 46'dan 23'e. Döllenme ikiye katlar: 23 + 23 = 46. Böylece sayı kuşaktan kuşağa sabit kalır."
+   }
+  },
+  {
+   "baslik": "Homologlar ve tetrat",
+   "metin": "Diploit hücrede her kromozomun bir eşi vardır: biri anneden, biri babadan. Bunlar <b>homolog kromozomlardır</b>. Mayozdan önce DNA eşlendi. Profaz I'de homologları yan yana getir.",
+   "sahne": {
+    "tur": "biy5-homolog"
+   },
+   "deger": {
+    "s": 0
+   },
+   "kontroller": [
+    {
+     "ad": "s",
+     "etiket": "Homologları eşleştir (sinapsis)",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bir tetratta kaç kromatit vardır?",
+    "secenekler": [
+     {
+      "yazi": "2",
+      "neden": "2 olan kromozom sayısı. Her kromozom eşlendiği için iki kromatitlidir."
+     },
+     {
+      "yazi": "8",
+      "neden": "8, bu hücredeki toplam kromatit sayısı. Bir tetrat yalnızca bir homolog çifttir."
+     },
+     {
+      "yazi": "4",
+      "dogru": true,
+      "neden": "1 tetrat = 1 homolog çift = 2 kromozom = 4 kromatit. Tetrat yalnızca mayoz I'de oluşur, mitozda görülmez."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Krossing-over",
+   "metin": "Tetratta homologların <b>kardeş olmayan</b> kromatitleri çaprazlaşıp karşılıklı parça değiştirebilir. Bu kromatitler A ve B genlerini taşıyor. Parça değişimini yap ve gen birleşimlerine bak.",
+   "sahne": {
+    "tur": "biy5-krossing"
+   },
+   "deger": {
+    "k": 0
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Krossing-over",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "k": 1
+    },
+    "tamam": "Önce yalnızca AB ve ab vardı. Parça değişiminden sonra <b>Ab</b> ve <b>aB</b> da oluştu: anne ve baba genlerini birlikte taşıyan yeni kromatitler. Krossing-over profaz I'de olur ve çeşitliliği artırır."
+   }
+  },
+  {
+   "baslik": "Mayoz I ve mayoz II",
+   "metin": "Mayozda DNA bir kez eşlenir ama hücre <b>iki kez</b> bölünür. Bu hücrede 2n = 4. Oynatmadan önce tahmin et.",
+   "sahne": {
+    "tur": "biy5-mayoz",
+    "sure": 9
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Anafaz I'de zıt kutuplara giden yapılar hangileri?",
+    "secenekler": [
+     {
+      "yazi": "Kardeş kromatitler",
+      "neden": "Kardeş kromatitler mayoz II'de, anafaz II'de ayrılır."
+     },
+     {
+      "yazi": "Homolog kromozomlar",
+      "dogru": true,
+      "neden": "Anafaz I'de homologlar ayrılır, sentromer bölünmez. Kromozom sayısı burada yarıya iner (n), mayoz II'de değişmez. Sonuçta 4 haploit hücre oluşur."
+     },
+     {
+      "yazi": "Tetratın dört kromatiti ayrı ayrı",
+      "neden": "Mayoz I'de kromatitler birbirinden kopmaz: her kutba iki kromatitli kromozomlar gider."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Bağımsız dağılım",
+   "metin": "Metafaz I'de her homolog çift ekvatora rastgele dizilir: annenin kromozomu bir yana da gidebilir, öbür yana da. Bu yüzden gamet çeşidi <b>2ⁿ</b> olur (n: homolog çift sayısı). 8 çeşit gamet yapan hücreyi kur.",
+   "sahne": {
+    "tur": "biy5-dagilim"
+   },
+   "deger": {
+    "n": 1
+   },
+   "kontroller": [
+    {
+     "ad": "n",
+     "etiket": "Homolog çift",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "n": 3
+    },
+    "tamam": "3 çift: 2³ = 8 gamet çeşidi. İnsanda 23 çift var: 2²³ ≈ 8,4 milyon çeşit, krossing-over hesaba katılmadan. Rastgele döllenmeyle bir anne-baba için yaklaşık 70 trilyon zigot olasılığı çıkar."
+   }
+  },
+  {
+   "baslik": "Ayrılmama",
+   "metin": "Bazen homologlar ya da kardeş kromatitler ayrılmaz (<b>ayrılmama</b>). Bu insan hücresinde mayoz I'de bir homolog çift ayrılmıyor; mayoz II normal. Tahmin et, sonra oynat.",
+   "sahne": {
+    "tur": "biy5-ayrilmama",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Oluşan 4 gametten kaçının kromozom sayısı anormal olur?",
+    "secenekler": [
+     {
+      "yazi": "Hiçbirinin",
+      "neden": "Ayrılmayan çift bir hücreye fazla gider, öbürüne hiç gitmez."
+     },
+     {
+      "yazi": "İkisinin",
+      "neden": "İki gamet ancak ayrılmama mayoz II'de, tek hücrede olursa anormal olur."
+     },
+     {
+      "yazi": "Dördünün de",
+      "dogru": true,
+      "neden": "Mayoz I'de ayrılmama iki hücreyi de bozar: 24, 24, 22, 22 (n+1 ve n−1). 24 kromozomlu bir gamet normal (23) bir gametle döllenirse 47 kromozomlu zigot oluşur; Down sendromunda 21. kromozomdan üç tane vardır."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Mitoz ve mayoz",
+   "metin": "İkisi de DNA'nın eşlenmesiyle başlar, ama sonuçları farklıdır. Mitozla mayoz arasında geçiş yap ve oluşan hücreleri karşılaştır.",
+   "sahne": {
+    "tur": "biy5-karsilastir"
+   },
+   "deger": {
+    "m": 0
+   },
+   "kontroller": [
+    {
+     "ad": "m",
+     "etiket": "Mayoz",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangisi yalnızca mayozda görülür?",
+    "secenekler": [
+     {
+      "yazi": "DNA'nın eşlenmesi",
+      "neden": "İki bölünme de interfazda DNA'nın eşlenmesiyle başlar."
+     },
+     {
+      "yazi": "Tetrat ve krossing-over",
+      "dogru": true,
+      "neden": "Homologlar yalnızca profaz I'de eşleşir; tetrat ve krossing-over mitozda olmaz. Mitoz özdeş 2n hücreler verir (büyüme, onarım), mayoz farklı n hücreler (gamet, spor)."
+     },
+     {
+      "yazi": "Kardeş kromatitlerin ayrılması",
+      "neden": "Kardeş kromatitler mitozun anafazında da, mayozun anafaz II'sinde de ayrılır."
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Mayoz kromozom sayısını yarıya indirir (2n → n), döllenme ikiye katlar; sayı kuşaktan kuşağa sabit kalır.",
+  "<b>Bir eşleme, iki bölünme:</b> mayoz I'de homologlar, mayoz II'de kardeş kromatitler ayrılır; sonunda 4 haploit hücre oluşur.",
+  "Profaz I'de homologlar <b>tetrat</b> kurar; kardeş olmayan kromatitler <b>krossing-over</b> ile parça değiştirir.",
+  "Çeşitliliğin kaynakları: krossing-over, bağımsız dağılım (2ⁿ gamet) ve rastgele döllenme.",
+  "Ayrılmama n+1 ve n−1 gametler verir; örnek: Down sendromu (47 kromozom)."
+ ]
+}

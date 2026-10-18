@@ -1,0 +1,225 @@
+{
+ "id": "kalitim",
+ "ders": "biyoloji",
+ "konu": "kalitim",
+ "baslik": "Kalıtım (Mendel genetiği)",
+ "ozet": "Punnett karesini kendin kur: baskın ve çekinik aleller, kontrol çaprazlaması, pembe aslanağzı, kan grupları ve renk körlüğü.",
+ "adimlar": [
+  {
+   "baslik": "Saf döllerle başla",
+   "metin": "Bezelyede mor çiçek aleli <b>A</b> baskın, beyaz aleli <b>a</b> çekiniktir. Mendel gibi saf mor (AA) ile saf beyazı (aa) çaprazla. Her ebeveyn yavruya bir alel verir.",
+   "sahne": {
+    "tur": "biy5-punnett",
+    "mod": "baskin",
+    "p1": 2,
+    "p2": 0,
+    "sure": 3
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Yavruların (F₁) çiçekleri ne renk olur?",
+    "secenekler": [
+     {
+      "yazi": "Yarısı mor, yarısı beyaz",
+      "neden": "Bir ebeveyn yalnızca A, öbürü yalnızca a verebilir."
+     },
+     {
+      "yazi": "Hepsi beyaz",
+      "neden": "Beyaz için iki çekinik alel (aa) gerekir."
+     },
+     {
+      "yazi": "Hepsi mor",
+      "dogru": true,
+      "neden": "Bütün yavrular Aa olur. A baskın olduğu için çiçekler mordur; a aleli kaybolmadı, yalnızca gizli kaldı."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Ayrılma yasası",
+   "metin": "Şimdi F₁ bitkilerini kendi aralarında çaprazla. Gamet oluşurken iki alel ayrılır, her gamete biri gider. İki ebeveyni de <b>Aa</b> yap.",
+   "sahne": {
+    "tur": "biy5-punnett",
+    "mod": "baskin"
+   },
+   "deger": {
+    "p1": 2,
+    "p2": 0
+   },
+   "kontroller": [
+    {
+     "ad": "p1",
+     "etiket": "1. ebeveyndeki A sayısı",
+     "min": 0,
+     "max": 2,
+     "tur": "sayac"
+    },
+    {
+     "ad": "p2",
+     "etiket": "2. ebeveyndeki A sayısı",
+     "min": 0,
+     "max": 2,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "p1": 1,
+     "p2": 1
+    },
+    "tamam": "Aa × Aa: genotipte <b>1 AA : 2 Aa : 1 aa</b>, fenotipte <b>3 mor : 1 beyaz</b>. Beyaz yeniden ortaya çıktı. Bu oranlar olasılıktır: 4 yavrudan tam 1'inin beyaz çıkması garanti değildir."
+   }
+  },
+  {
+   "baslik": "Kontrol çaprazlaması",
+   "metin": "Mor bir bitkinin AA mı Aa mı olduğu görünüşünden anlaşılmaz. Onu homozigot çekinik (<b>aa</b>) bir bitkiyle çaprazlarsın. Yavruları saymadan önce tahmin et.",
+   "sahne": {
+    "tur": "biy5-test",
+    "mor": 52,
+    "beyaz": 48,
+    "sure": 3
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Yavruların yaklaşık yarısı beyaz çıkarsa mor bitkinin genotipi nedir?",
+    "secenekler": [
+     {
+      "yazi": "AA",
+      "neden": "AA × aa çaprazlamasında bütün yavrular Aa ve mor olur; beyaz yavru çıkamaz."
+     },
+     {
+      "yazi": "Aa",
+      "dogru": true,
+      "neden": "52 mor, 48 beyaz: yaklaşık 1:1. Mor bitki gametlerinin yarısına a aleli veriyor, yani Aa. Tek bir beyaz yavru bile bunu kanıtlar."
+     },
+     {
+      "yazi": "Belirlenemez",
+      "neden": "Kontrol çaprazlaması tam da bunun için yapılır: beyaz yavrular a alelinin mor bitkiden geldiğini gösterir."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Eksik baskınlık",
+   "metin": "Aslanağzında kırmızı (<b>K</b>) ve beyaz (<b>B</b>) alelleri birbirine baskın değildir: KB bitki <b>pembe</b> açar. İki pembe bitkiyi çaprazladık.",
+   "sahne": {
+    "tur": "biy5-punnett",
+    "mod": "eksik",
+    "e1": [
+     "K",
+     "B"
+    ],
+    "e2": [
+     "K",
+     "B"
+    ]
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Yavrularda fenotip oranı ne olur?",
+    "secenekler": [
+     {
+      "yazi": "3 kırmızı : 1 beyaz",
+      "neden": "3:1 oranı tam baskınlıkta görülür. Burada KB bireyler ara renkte, pembe olur."
+     },
+     {
+      "yazi": "Hepsi pembe",
+      "neden": "Pembe bir karışım değildir: aleller ayrılır ve KK ile BB yavrular yeniden ortaya çıkar."
+     },
+     {
+      "yazi": "1 kırmızı : 2 pembe : 1 beyaz",
+      "dogru": true,
+      "neden": "Eksik baskınlıkta her genotip kendi rengini verir, bu yüzden fenotip oranı genotip oranıyla aynıdır: 1:2:1."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Kan grupları",
+   "metin": "ABO'da üç alel var: <b>I<sup>A</sup></b> ve <b>I<sup>B</sup></b> eş baskın, <b>i</b> ikisine de çekinik. Anne A grubu (I<sup>A</sup>i), baba B grubu (I<sup>B</sup>i). Tahmin et, sonra kareyi doldur.",
+   "sahne": {
+    "tur": "biy5-punnett",
+    "mod": "kan",
+    "e1": [
+     "IA",
+     "i"
+    ],
+    "e2": [
+     "IB",
+     "i"
+    ],
+    "sure": 3
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Bu çiftin çocukları hangi kan gruplarından olabilir?",
+    "secenekler": [
+     {
+      "yazi": "Yalnızca A ve B",
+      "neden": "İki ebeveyn de i taşıyor; çocuk iki i alırsa 0 olur. I<sup>A</sup> ve I<sup>B</sup> birlikte gelirse AB olur."
+     },
+     {
+      "yazi": "A, B, AB ve 0",
+      "dogru": true,
+      "neden": "Dördü de mümkün, her biri ¼ olasılıkla. I<sup>A</sup>I<sup>B</sup> çocukta iki alel birden ifade edilir (eş baskınlık): alyuvarlarda hem A hem B antijeni bulunur."
+     },
+     {
+      "yazi": "Yalnızca AB",
+      "neden": "AB için çocuğun anneden I<sup>A</sup>, babadan I<sup>B</sup> alması gerekir; bu dört olasılıktan yalnızca biridir."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "X'e bağlı kalıtım",
+   "metin": "Renk körlüğü aleli (<b>X<sup>h</sup></b>) X kromozomunda taşınan çekinik bir aleldir. Anne taşıyıcı (X<sup>H</sup>X<sup>h</sup>), baba sağlıklı. Kareye bak; babayı renk körü yapıp karşılaştırabilirsin.",
+   "sahne": {
+    "tur": "biy5-punnett",
+    "mod": "x",
+    "e1": [
+     "XH",
+     "Xh"
+    ]
+   },
+   "deger": {
+    "bk": 0
+   },
+   "kontroller": [
+    {
+     "ad": "bk",
+     "etiket": "Baba renk körü",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Baba sağlıklıyken bu çiftin oğullarının renk körü olma olasılığı nedir?",
+    "secenekler": [
+     {
+      "yazi": "0",
+      "neden": "Oğul X'ini annesinden alır ve annenin X'lerinden biri X<sup>h</sup>."
+     },
+     {
+      "yazi": "½",
+      "dogru": true,
+      "neden": "Oğul Y'yi babadan, X'i anneden alır: yarısı X<sup>H</sup>, yarısı X<sup>h</sup>. Erkeğin tek X'i olduğundan tek çekinik alel yeter. Bu yüzden renk körlüğü erkeklerde çok daha sıktır."
+     },
+     {
+      "yazi": "¼",
+      "neden": "¼ bütün çocuklar içindeki oran. Yalnızca oğullara bakınca iki oğuldan biri renk körüdür."
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Her özellik için iki alel vardır, biri anneden biri babadan; gamete yalnızca biri gider (<b>ayrılma yasası</b>).",
+  "Aa × Aa: genotip <b>1:2:1</b>, fenotip <b>3:1</b>. Baskın fenotipin genotipi <b>kontrol çaprazlamasıyla</b> (× aa) bulunur.",
+  "<b>Eksik baskınlıkta</b> heterozigot ara fenotip gösterir (pembe), <b>eş baskınlıkta</b> iki alel birden görünür (AB kan grubu).",
+  "ABO'da üç alel vardır ama her insan yalnızca ikisini taşır.",
+  "X'e bağlı çekinik özellikler (renk körlüğü, hemofili) erkeklerde sık görülür; erkek X'ini annesinden alır."
+ ]
+}
