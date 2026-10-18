@@ -40,7 +40,7 @@ function Paket({ x, y, aci = 0, lam, renk, boy = 46 }: { x: number; y: number; a
 
 /* ================= Özel görelilik ================= */
 
-// Hız toplama: tren v.v m/s ile sağa gider, öne 20 m/s'lik top atılır. 1 m = 1,6 px, oynatma 3 s.
+// Hız toplama: tren v.v m/s ile sağa gider, öne 20 m/s'lik top atılır. 1 m = 1,2 px, oynatma 3 s.
 function HizToplama({ v, t, oynuyor, s }: SahneProps) {
   const sure = Number(s.sure ?? 3), u = ilerleme(t, oynuyor, sure), zt = u * sure;
   const vt = sinir(v.v ?? 10, 0, 40), vb = vt + 20, PX = 1.2, Y = 120;
@@ -108,7 +108,7 @@ function IsikHizi({ t, oynuyor, s }: SahneProps) {
   );
 }
 
-// Eşzamanlılık: şimşek A (arka) ve B (ön) uçlara aynı anda (yer sistemine göre) düşer. c = 60 px/s, tren 0,3c.
+// Eşzamanlılık: şimşek A (arka) ve B (ön) uçlara aynı anda (yer sistemine göre) düşer. c = 40 px/s, tren 12 px/s = 0,3c.
 const ES = { A: 30, B: 250, O: 140, C: 40, U: 12 };
 function Eszaman({ t, oynuyor, s }: SahneProps) {
   const sure = Number(s.sure ?? 3), zt = ilerleme(t, oynuyor, sure) * sure, { A, B, O, C, U } = ES, Y = 92, GY = 150;
