@@ -56,8 +56,9 @@ function ZnCu({ s, t, oynuyor }: SahneProps) {
   const r = rastgele(7);
   const birikim = Array.from({ length: 22 }, () => ({ yan: r() < 0.5 ? -1 : 1, y: 92 + r() * 72, r: 2.2 + r() * 2 }));
   const cuIyon = Array.from({ length: 7 }, () => ({ x: 104 + r() * 50 + (r() < 0.5 ? 0 : 80), y: 96 + r() * 66 }));
-  const znIyon = Array.from({ length: 4 }, () => ({ x: 108 + r() * 40 + (r() < 0.5 ? 0 : 80), y: 100 + r() * 60 }));
-  const nCu = Math.round(7 - u * 5), nZn = Math.round(u * 4), nBir = Math.round(u * birikim.length);
+  // Zn + Cu²⁺ → Zn²⁺ + Cu: her Cu²⁺ yerine bir Zn²⁺ gelir (5 giden, 5 gelen).
+  const znIyon = Array.from({ length: 5 }, () => ({ x: 108 + r() * 40 + (r() < 0.5 ? 0 : 80), y: 100 + r() * 60 }));
+  const nCu = Math.round(7 - u * 5), nZn = Math.round(u * 5), nBir = Math.round(u * birikim.length);
   const w = 18 * (1 - 0.18 * u);
   const ok = 0 < u && u < 1 && Math.floor(t * 3) % 2 === 0;
   return (
