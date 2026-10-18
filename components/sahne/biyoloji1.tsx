@@ -375,7 +375,7 @@ function Protein({ v }: SahneProps) {
           {deg ? "Orak biçimli alyuvar: O₂ taşıması aksar" : "Yuvarlak alyuvar: O₂'yi rahat taşır"}
         </text>
         <text x={170} y={210} fontSize={12} fill="var(--muted)" textAnchor="middle">
-          {deg ? "Tek değişiklik: glutamik asit (Glu) yerine valin (Val)" : "Hemoglobin düzgün katlanıyor"}
+          {deg ? "Tek değişiklik: glutamik asit (Glu) yerine valin (Val)" : "Normal hemoglobin: alyuvar esnek kalır"}
         </text>
       </g>
     </svg>
