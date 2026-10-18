@@ -1,0 +1,96 @@
+{
+ "id": "dna-genetik-kod",
+ "ders": "biyoloji",
+ "konu": "dna-genetik-kod",
+ "baslik": "DNA ve genetik kod",
+ "ozet": "Bazları eşleştir, Chargaff kuralıyla hesap yap, DNA'nın kendini nasıl kopyaladığını izle.",
+ "adimlar": [
+  {
+   "baslik": "DNA'nın harfleri",
+   "metin": "DNA'nın yapı birimi <b>nükleotittir</b>: bir fosfat, bir deoksiriboz şekeri ve bir baz. Dört baz vardır: A, G, T ve C. Halkalarına bak.",
+   "sahne": { "tur": "biy7-nukleotit" },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangi iki baz çift halkalıdır (pürin)?",
+    "secenekler": [
+     { "yazi": "T ve C", "neden": "T ve C tek halkalıdır; bunlar pirimidindir." },
+     { "yazi": "A ve G", "dogru": true, "neden": "Adenin ve guanin çift halkalı pürinlerdir. Timin ve sitozin tek halkalı pirimidinlerdir; RNA'daki urasil de tek halkalıdır." },
+     { "yazi": "A ve T", "neden": "A çift halkalı ama T tek halkalı. Halkaları yeniden say." }
+    ]
+   }
+  },
+  {
+   "baslik": "Baz eşleşmesi",
+   "metin": "İki iplik bazlarından hidrojen bağlarıyla tutunur: A hep T ile, G hep C ile eşleşir. İplikler zıt yönlüdür. Üstteki ipliğin eşini tahmin et.",
+   "sahne": { "tur": "biy7-eslesme", "sure": 4 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "5'-ATGCAG-3' ipliğinin karşısındaki iplik hangisi?",
+    "secenekler": [
+     { "yazi": "3'-ATGCAG-5'", "neden": "Bu, aynı dizinin kopyası; eşleşme kuralını uygulamıyor." },
+     { "yazi": "3'-UACGUC-5'", "neden": "U yalnızca RNA'da bulunur; DNA'da A'nın karşısına T gelir." },
+     { "yazi": "3'-TACGTC-5'", "dogru": true, "neden": "A'nın karşısına T, T'nin karşısına A, G'nin karşısına C, C'nin karşısına G gelir. Yön de zıttır: 3'→5'. A=T arasında iki, G≡C arasında üç hidrojen bağı var." }
+    ]
+   }
+  },
+  {
+   "baslik": "Chargaff kuralı",
+   "metin": "Her A bir T ile eşleştiği için çift iplikli DNA'da A sayısı T'ye, G sayısı C'ye eşittir. Bu 100 baz çiftlik DNA'da adenin sayısını değiştir; hidrojen bağı sayısını <b>270</b> yap.",
+   "sahne": { "tur": "biy7-chargaff" },
+   "deger": { "A": 50 },
+   "kontroller": [ { "ad": "A", "etiket": "Adenin", "min": 0, "max": 100, "adim": 10, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "A": 30 },
+    "tamam": "30 adenin varsa T = 30, G = C = 70 olur. Hidrojen bağı 2·30 + 3·70 = 270. G–C çifti çoğaldıkça bağ sayısı artar ve iplikleri ayırmak zorlaşır."
+   }
+  },
+  {
+   "baslik": "Eşlenme yarı korunumludur",
+   "metin": "DNA kopyalanırken iki iplik ayrılır ve her biri yeni ipliğe kalıp olur. Meselson ve Stahl, ağır ¹⁵N'li DNA'yı hafif ¹⁴N ortamında iki kez eşledi.",
+   "sahne": { "tur": "biy7-eslenme", "sure": 6 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "İkinci eşlenmeden sonraki 4 DNA molekülünün kaçında eski (ağır) bir iplik bulunur?",
+    "secenekler": [
+     { "yazi": "4'ünde", "neden": "Eski iplikler yalnızca iki tanedir ve parçalanmaz; ancak iki moleküle girebilir." },
+     { "yazi": "Hiçbirinde", "neden": "Eski iplikler kaybolmaz; her eşlenmede kalıp olarak yeni moleküllerin içinde kalır." },
+     { "yazi": "2'sinde", "dogru": true, "neden": "İki eski iplik iki ayrı moleküle gider: 2 hibrit + 2 hafif DNA. 1. eşlenmede ise hepsi hibritti. Her yeni molekülde bir eski, bir yeni iplik bulunur: yarı korunumlu eşlenme." }
+    ]
+   }
+  },
+  {
+   "baslik": "Eşlenmenin enzimleri",
+   "metin": "Eşlenme hücre bölünmeden önce, interfazda olur. Eşlenme çatalını oynat ve hangi enzimin ne yaptığına bak.",
+   "sahne": { "tur": "biy7-catal", "sure": 5 },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "İki iplik arasındaki hidrojen bağlarını koparıp iplikleri ayıran enzim hangisi?",
+    "secenekler": [
+     { "yazi": "Ligaz", "neden": "Ligaz parçaları birbirine yapıştırır; iplikleri ayırmaz." },
+     { "yazi": "DNA polimeraz", "neden": "DNA polimeraz kalıba uygun nükleotitleri ekleyip yeni ipliği örer; açma işi ondan önce yapılır." },
+     { "yazi": "Helikaz", "dogru": true, "neden": "Helikaz çatalın ucunda ilerleyip iplikleri açar. DNA polimeraz yeni ipliği yalnızca 5'→3' yönünde uzatır; bu yüzden bir iplik parça parça örülür ve ligaz parçaları birleştirir." }
+    ]
+   }
+  },
+  {
+   "baslik": "PCR: tüpte kopyalama",
+   "metin": "PCR bir DNA parçasını tüpte çoğaltır: ısıt, iplikleri ayır, primer bağla, ör. Her döngüde kopya sayısı ikiye katlanır. Döngü sayısını artır ve en az <b>1000</b> kopya elde et.",
+   "sahne": { "tur": "biy7-pcr" },
+   "deger": { "n": 1 },
+   "kontroller": [ { "ad": "n", "etiket": "Döngü", "min": 0, "max": 12, "tur": "sayac" } ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": { "n": [10, 12] },
+    "tamam": "10 döngüde 2¹⁰ = 1024 kopya olur. Bu yüzden suç yerindeki tek bir saç telinden bile DNA parmak izi çıkarılabilir."
+   }
+  }
+ ],
+ "kapanis": [
+  "Nükleotit: fosfat + deoksiriboz + baz. Pürinler (A, G) çift, pirimidinler (T, C) tek halkalıdır.",
+  "A = T (iki hidrojen bağı), G ≡ C (üç hidrojen bağı); iki iplik zıt yönlüdür.",
+  "Çift iplikli DNA'da A sayısı T'ye, G sayısı C'ye eşittir (Chargaff).",
+  "Eşlenme yarı korunumludur: helikaz açar, DNA polimeraz örer, ligaz birleştirir.",
+  "PCR'da her döngü kopya sayısını ikiye katlar: n döngüde 2ⁿ kopya."
+ ]
+}

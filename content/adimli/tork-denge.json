@@ -1,0 +1,216 @@
+{
+ "id": "tork-denge",
+ "ders": "fizik",
+ "konu": "tork-denge",
+ "baslik": "Tork, denge ve kütle merkezi",
+ "ozet": "Kapıyı it, tahterevalliyi dengele, çubuğu kütle merkezinden as ve kutuları devir.",
+ "adimlar": [
+  {
+   "baslik": "Tork: döndürme etkisi",
+   "metin": "Kuvvetin döndürme etkisine <b>tork</b> denir: τ = F·d. Burada d, dönme noktasından kuvvete olan dik uzaklıktır. Bu kapıyı açmak için 12 N·m tork gerekiyor. Elini öyle yerleştir ki <b>20 N</b> yetsin.",
+   "sahne": {
+    "tur": "fiz7-kapi"
+   },
+   "deger": {
+    "d": 2
+   },
+   "kontroller": [
+    {
+     "ad": "d",
+     "etiket": "Menteşeden uzaklık",
+     "min": 1,
+     "max": 10,
+     "carpan": 0.1,
+     "birim": "m"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "d": [
+      6,
+      10
+     ]
+    },
+    "tamam": "d = 0,6 m'de F = 12 / 0,6 = 20 N yetiyor, daha uzakta daha da azı. Menteşeye yakın itersen 60 N gerekir. Kapı kolu bu yüzden menteşeden en uzak kenardadır."
+   }
+  },
+  {
+   "baslik": "Açı da önemli",
+   "metin": "Somun anahtarının ucuna 20 N uyguluyorsun; somundan uzaklık r = 0,5 m. Kuvvetin anahtarla yaptığı açıyı değiştir ve torku <b>en büyük</b> yap.",
+   "sahne": {
+    "tur": "fiz7-aci",
+    "F": 20,
+    "r": 0.5,
+    "nokta": "somun"
+   },
+   "deger": {
+    "theta": 30
+   },
+   "kontroller": [
+    {
+     "ad": "theta",
+     "etiket": "Açı θ",
+     "min": 0,
+     "max": 180,
+     "adim": 15,
+     "birim": "°"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "theta": 90
+    },
+    "tamam": "θ = 90°'de τ = 20 · 0,5 · sin90° = 10 N·m. Yalnızca anahtara dik bileşen F·sinθ döndürür; anahtar boyunca çeken bileşen tork üretmez. Kuvvet kolu d = r·sinθ'dır."
+   }
+  },
+  {
+   "baslik": "Doğrultu menteşeden geçerse",
+   "metin": "Kapıya menteşeden 0,8 m uzakta 20 N uyguluyorsun. Ama kuvvetin doğrultusu tam menteşeden geçiyor.",
+   "sahne": {
+    "tur": "fiz7-aci",
+    "F": 20,
+    "r": 0.8,
+    "nokta": "menteşe"
+   },
+   "deger": {
+    "theta": 180
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Kapıya etki eden tork kaç N·m?",
+    "secenekler": [
+     {
+      "yazi": "16",
+      "neden": "20 · 0,8 = 16 olurdu, ama bu yalnız kuvvet kapıya dik olsaydı geçerli. Kuvvet kolu kaç?"
+     },
+     {
+      "yazi": "0",
+      "neden": "Doğrultusu dönme noktasından geçen kuvvetin kolu d = 0'dır: τ = 20 · 0 = 0. Ne kadar itersen it kapı dönmez, yalnızca menteşeye bastırırsın.",
+      "dogru": true
+     },
+     {
+      "yazi": "25",
+      "neden": "20 / 0,8 = 25 eder ama tork bölmeyle değil, F·d çarpımıyla bulunur."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Tahterevalli",
+   "metin": "Duran bir cisim için iki şart birlikte gerekir: ΣF = 0 ve Στ = 0. Soldaki 300 N'luk çocuk destekten 2 m uzakta. 400 N'luk çocuğu tahterevalli <b>dengede</b> kalacak yere oturt.",
+   "sahne": {
+    "tur": "fiz7-tahterevalli"
+   },
+   "deger": {
+    "d": 12
+   },
+   "kontroller": [
+    {
+     "ad": "d",
+     "etiket": "400 N'luk çocuğun uzaklığı",
+     "min": 2,
+     "max": 12,
+     "carpan": 0.25,
+     "birim": "m"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "d": 6
+    },
+    "tamam": "400 · 1,5 = 600 N·m = 300 · 2. Zıt yönlü torklar eşit, Στ = 0. Ağır çocuk desteğe daha yakın oturur. Destek de 700 N yukarı iter, böylece ΣF = 0 olur."
+   }
+  },
+  {
+   "baslik": "Destek kuvvetleri",
+   "metin": "4 m'lik, 40 N'luk düzgün çubuk iki ucundan destekli; ağırlığı ortasından etki eder. 60 N'luk yükü kaydır ve B desteğinin taşıdığı kuvveti <b>35 N</b> yap.",
+   "sahne": {
+    "tur": "fiz7-cubuk"
+   },
+   "deger": {
+    "x": 6
+   },
+   "kontroller": [
+    {
+     "ad": "x",
+     "etiket": "Yükün A'ya uzaklığı",
+     "min": 0,
+     "max": 8,
+     "carpan": 0.5,
+     "birim": "m"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "x": 2
+    },
+    "tamam": "A'ya göre tork: N<sub>B</sub> · 4 = 40 · 2 + 60 · 1, yani N<sub>B</sub> = 35 N. ΣF = 0'dan N<sub>A</sub> = 100 − 35 = 65 N. Dönme noktasını bilinmeyen kuvvetin üstüne koyunca o kuvvetin torku sıfır olur."
+   }
+  },
+  {
+   "baslik": "Kütle merkezi",
+   "metin": "Hafif bir çubuğun sol ucunda 2 kg, 4 m ötedeki sağ ucunda bir kütle var. Çubuğu 3 m'deki noktadan asıyorsun. Sağdaki kütleyi değiştir ve çubuğu <b>yatay</b> durdur.",
+   "sahne": {
+    "tur": "fiz7-km"
+   },
+   "deger": {
+    "m": 2
+   },
+   "kontroller": [
+    {
+     "ad": "m",
+     "etiket": "Sağdaki kütle",
+     "min": 1,
+     "max": 10,
+     "birim": "kg",
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "m": 6
+    },
+    "tamam": "x<sub>KM</sub> = (2·0 + 6·4) / (2 + 6) = 3 m. Kütle merkezinden asılan çubuk dengede durur. Kütle merkezi ağır parçaya daha yakındır."
+   }
+  },
+  {
+   "baslik": "Ne zaman devrilir?",
+   "metin": "Ağırlık merkezinden inen düşey doğru taban yüzeyinin dışına çıkarsa cisim devrilir. Tabanları aynı iki kutuyu yavaşça eğilen bir tahtaya koydun.",
+   "sahne": {
+    "tur": "fiz7-devrilme",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hangisi önce devrilir?",
+    "secenekler": [
+     {
+      "yazi": "Basık kutu",
+      "neden": "Basık kutunun ağırlık merkezi alçakta; düşey doğrusu tabandan zor çıkar."
+     },
+     {
+      "yazi": "İkisi aynı anda",
+      "neden": "Tabanları aynı ama ağırlık merkezlerinin yüksekliği farklı."
+     },
+     {
+      "yazi": "Uzun kutu",
+      "neden": "Uzun kutunun ağırlık merkezi yüksekte: yaklaşık 22°'de düşey doğru tabandan çıkar ve kutu devrilir. Basık kutu 45°'ye kadar dayanır. Yarış arabaları bu yüzden basıktır.",
+      "dogru": true
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "<b>Tork</b> τ = F·d = F·r·sinθ, birimi N·m. Kuvvet kolu d, dönme noktasından kuvvetin doğrultusuna olan dik uzaklıktır.",
+  "Doğrultusu dönme noktasından geçen kuvvetin torku sıfırdır; en büyük tork θ = 90°'de elde edilir.",
+  "Denge için <b>ΣF = 0</b> ve <b>Στ = 0</b> birlikte gerekir. Düzgün çubuğun ağırlığı ortasından etki eder.",
+  "Kütle merkezi x<sub>KM</sub> = Σm·x / Σm; ağır parçaya daha yakındır.",
+  "Ağırlık merkezinin düşeyi tabandan çıkarsa cisim devrilir. Alçak ağırlık merkezi ve geniş taban devrilmeyi zorlaştırır."
+ ]
+}

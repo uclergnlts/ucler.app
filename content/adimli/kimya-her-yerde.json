@@ -1,0 +1,198 @@
+{
+ "id": "kimya-her-yerde",
+ "ders": "kimya",
+ "konu": "kimya-her-yerde",
+ "baslik": "Kimya her yerde",
+ "ozet": "Sabunun kiri nasıl taşıdığını, sert suyu, plastikleri ve etiketleri kendin dene.",
+ "adimlar": [
+  {
+   "baslik": "Sabun nasıl temizler?",
+   "metin": "Yağlı kir suda çözünmez. Sabun molekülünün bir ucu suyu, öteki ucu yağı sever. Suya <b>sabun ekle</b> ve moleküllerin yağ damlasını nasıl sardığına bak.",
+   "sahne": {
+    "tur": "kim7-misel"
+   },
+   "deger": {
+    "s": 0
+   },
+   "kontroller": [
+    {
+     "ad": "s",
+     "etiket": "Sabun ekle",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Sabun molekülünün yağlı kire gömülen kısmı hangisi?",
+    "secenekler": [
+     {
+      "yazi": "İyonik baş",
+      "neden": "Baş suyu sever (hidrofil); bu yüzden misel oluşunca başlar dışarıda kalır ve suya bakar."
+     },
+     {
+      "yazi": "Hidrokarbon kuyruk",
+      "neden": "Kuyruk yağı sever (hidrofob) ve kire gömülür; başlar suya bakar. Oluşan küre <b>misel</b>dir: kiri suda asılı tutar, durulayınca kir akıp gider.",
+      "dogru": true
+     },
+     {
+      "yazi": "Molekülün tamamı",
+      "neden": "Molekülün iki ucu farklı davranır: biri suyu, öteki yağı sever. Sabunu işe yarar kılan da budur."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Sert su",
+   "metin": "Kireçli bölgelerde su çok Ca²⁺ ve Mg²⁺ içerir: buna <b>sert su</b> denir. Bu suda sabun az köpürür. Temizleyiciyi değiştir ve sert suda bol köpük elde et.",
+   "sahne": {
+    "tur": "kim7-sert-su"
+   },
+   "deger": {
+    "sert": 1,
+    "d": 0
+   },
+   "kontroller": [
+    {
+     "ad": "sert",
+     "etiket": "Sert su",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "d",
+     "etiket": "Deterjan kullan",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "sert": 1,
+     "d": 1
+    },
+    "ipucu": "Su sert kalmalı; temizleyiciyi değiştir.",
+    "tamam": "Sabun Ca²⁺ ve Mg²⁺ ile suda çözünmeyen bir çökelek (kaymak) yapar ve boşa gider. Sentetik <b>deterjan</b> bu iyonlarla çökelek yapmaz, sert suda da köpürür. Buna karşılık sabun doğada daha kolay parçalanır."
+   }
+  },
+  {
+   "baslik": "Çaydanlıktaki kireç",
+   "metin": "Sert su ısıtılınca çaydanlığın dibine CaCO₃ çöker: bildiğin kireç. Evde onu sirkeyle temizlersin. Neden işe yaradığını görelim.",
+   "sahne": {
+    "tur": "kim7-kirec",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Kireçli çaydanlığa sirke koyarsan ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Kireç kalınlaşır",
+      "neden": "Sirke kireç bırakmaz; tersine, asit kireçle tepkimeye girer."
+     },
+     {
+      "yazi": "Hiçbir şey olmaz",
+      "neden": "Sirke bir asittir (asetik asit), kireç ise karbonattır; ikisi tepkimeye girer."
+     },
+     {
+      "yazi": "Kireç çözülür, gaz kabarcıkları çıkar",
+      "neden": "CaCO₃ asitte çözünür: çözünen bir tuz, su ve CO₂ gazı oluşur. Kireç çözücüler de aynı nedenle asitlidir.",
+      "dogru": true
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Asla karıştırma",
+   "metin": "Banyoyu daha iyi temizlemek için iki temizleyiciyi karıştırmak akla gelebilir. Çamaşır suyu (NaOCl) ile tuz ruhu (HCl) karışınca ne olur?",
+   "sahne": {
+    "tur": "kim7-karistir",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Çamaşır suyu ile tuz ruhunu karıştırırsan ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Zehirli klor gazı çıkar",
+      "neden": "NaOCl ile HCl tepkimeye girer ve zehirli Cl₂ gazı çıkar. Amonyaklı temizleyiciyle de zehirli kloramin oluşur. Temizleyicileri ayrı kullan, ortamı havalandır.",
+      "dogru": true
+     },
+     {
+      "yazi": "Daha güçlü bir temizleyici olur",
+      "neden": "Karıştırmak daha iyi temizlemez; iki madde tepkimeye girip zehirli gaz üretir."
+     },
+     {
+      "yazi": "Birbirini nötrleyip su olur",
+      "neden": "Bu karışım yalnızca nötrleşmez: klor gazı da açığa çıkar."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Monomerden polimere",
+   "metin": "<b>Polimer</b>, binlerce küçük molekülün (<b>monomer</b>) zincir gibi bağlanmasıyla oluşan dev moleküldür. Monomeri değiştir ve yapışmaz tavalardaki <b>teflonu</b> elde et.",
+   "sahne": {
+    "tur": "kim7-polimer"
+   },
+   "deger": {
+    "m": 1
+   },
+   "kontroller": [
+    {
+     "ad": "m",
+     "etiket": "Monomer",
+     "min": 1,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "m": 3
+    },
+    "tamam": "Tetrafloroetenden teflon (PTFE) oluşur. Etenden polietilen (poşet), vinil klorürden PVC (boru) elde edilir. Plastikler doğada yüzlerce yıl kalır ve mikroplastiğe ufalanır; nişasta, selüloz ve protein ise doğal polimerlerdir."
+   }
+  },
+  {
+   "baslik": "Etiketi oku",
+   "metin": "Besin etiketindeki değerler genellikle <b>100 g</b> içindir. Bu bisküvinin 100 g'ında 25 g şeker var. Ne kadar yersen günlük önerilen 50 g şeker sınırına ulaşırsın?",
+   "sahne": {
+    "tur": "kim7-etiket"
+   },
+   "deger": {
+    "g": 40
+   },
+   "kontroller": [
+    {
+     "ad": "g",
+     "etiket": "Yediğin bisküvi",
+     "min": 20,
+     "max": 300,
+     "adim": 20,
+     "birim": "g",
+     "tur": "surgu"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "g": 200
+    },
+    "tamam": "200 g × 25 / 100 = 50 g şeker. Etiketteki değeri yediğin kütleye göre hesapla: 40 g'lık paketin tamamı 10 g şeker eder. Kozmetikte de içerikler çoktan aza doğru sıralanır."
+   }
+  }
+ ],
+ "kapanis": [
+  "Sabun yağ asidi tuzudur: kuyruğu kire gömülür, başı suya bakar ve <b>misel</b> kiri suda taşır.",
+  "Sert suda (Ca²⁺, Mg²⁺) sabun çökelek yapar, <b>deterjan</b> köpürür. Kireç (CaCO₃) asitte çözünür.",
+  "Çamaşır suyunu asitli ya da amonyaklı temizleyiciyle <b>karıştırma</b>: zehirli gaz çıkar.",
+  "Plastikler monomerlerden oluşan sentetik <b>polimerlerdir</b> ve doğada uzun süre kalır.",
+  "Etiketteki değerler 100 g içindir; ilaçta da doza ve kullanım süresine uy."
+ ]
+}
