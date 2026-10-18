@@ -229,7 +229,7 @@ function Degisim({ t, oynuyor, s }: SahneProps) {
   }
   const satir = [70, 112, 154];
   return (
-    <svg viewBox="0 0 340 228" role="img" aria-label={u >= 1 ? "Karbon ve oksijen birleşip karbondioksit oluştu" : "Karbon atomları ve oksijen molekülleri"}>
+    <svg viewBox="0 0 340 228" role="img" aria-label={u >= 1 ? "Karbon ve oksijen birleşip karbon dioksit oluştu" : "Karbon atomları ve oksijen molekülleri"}>
       <g>
         {satir.map((y, i) => (
           <g key={i}>
@@ -248,7 +248,7 @@ function Degisim({ t, oynuyor, s }: SahneProps) {
       <g fontSize={12} fontWeight={700} textAnchor="middle">
         {u < 0.5 && <text x={110} y={190} fill="var(--muted)">karbon</text>}
         {u < 0.5 && <text x={230} y={190} fill="var(--muted)">oksijen (O₂)</text>}
-        {u >= 1 && <text x={270} y={116} fill="var(--kimya)">karbondioksit</text>}
+        {u >= 1 && <text x={270} y={116} fill="var(--kimya)">karbon dioksit</text>}
       </g>
     </svg>
   );
