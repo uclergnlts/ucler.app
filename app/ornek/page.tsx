@@ -4,15 +4,15 @@ import { Govde, Liste, PageHead, Satir, Top } from "@/components/temel";
 import { DERSLER } from "@/lib/dersler";
 import { ADIMLI } from "@/lib/adimli";
 
-export const metadata = { title: "Örnek dersler" };
+export const metadata = { title: "Etkileşimli dersler" };
 
-// Adım adım, etkileşimli örnek dersler (deneme). Ana menüde bağlantısı yok.
+// Adım adım, etkileşimli dersler. Her biri kendi konusunun sayfasından da açılır.
 export default function Page() {
   return (
     <div className="app">
       <Top />
       <Govde>
-        <PageHead title="Örnek dersler" text="Her adımda bir şey yaparak öğrendiğin yeni ders biçimi. Bunlar deneme." />
+        <PageHead title="Etkileşimli dersler" text="Her adımda bir şey yaparak öğrendiğin dersler. Yeni konular eklendikçe burada görünür." />
         <Liste>
           {ADIMLI.map((d) => {
             const I = Icon[d.ders];

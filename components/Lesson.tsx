@@ -22,8 +22,8 @@ type State = { i: number; q: number; picked: number | null; right: number };
 const START: State = { i: 0, q: -1, picked: null, right: 0 };
 
 export default function Lesson({
-  ders, id, t, next,
-}: { ders: DersId; id: string; t: Topic; next?: { id: string; title: string } }) {
+  ders, id, t, next, adimli,
+}: { ders: DersId; id: string; t: Topic; next?: { id: string; title: string }; adimli?: { id: string; adim: number } }) {
   const [s, setS] = useState<State>(START);
   const [play, setPlay] = useState<Video | null>(null);
   const yon = useRef<1 | -1>(1); // kart geçişinin yönü (kayma animasyonu için)
@@ -85,6 +85,18 @@ export default function Lesson({
     key = "kartlar";
     body = (
       <div className="flex flex-col gap-14" aria-live="polite">
+        {adimli && (
+          <Link
+            href={`/ornek/${adimli.id}/`}
+            className="-mb-6 flex items-center gap-3 rounded-2xl bg-acc-soft px-4 py-3.5 transition-transform active:scale-[.99]"
+          >
+            <span className="grid flex-1 gap-0.5">
+              <b className="text-[16px] font-bold">Önce yaparak öğren</b>
+              <span className="text-[14px] text-muted-foreground">Etkileşimli ders · {adimli.adim} adım</span>
+            </span>
+            <span className="rounded-full bg-acc px-4 py-2 text-[14px] font-bold text-white">Başla</span>
+          </Link>
+        )}
         {t.cards.slice(0, s.i + 1).map((c, k) => (
           <AkisKart
             key={k}

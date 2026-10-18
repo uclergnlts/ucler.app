@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Lesson from "@/components/Lesson";
 import { isDers, nextTopic, readyTopics, topic } from "@/lib/content";
+import { adimliDers } from "@/lib/adimli";
 
 type Props = { params: Promise<{ ders: string; konu: string }> };
 
@@ -18,6 +19,8 @@ export default async function Page({ params }: Props) {
   const t = isDers(ders) ? topic(ders, konu) : undefined;
   if (!isDers(ders) || !t) notFound();
   const n = nextTopic(ders, konu);
+  const a = adimliDers(konu);
   // key: başka bir konuya geçince ders ekranı baştan başlasın.
-  return <Lesson key={`${ders}.${konu}`} ders={ders} id={konu} t={t} next={n?.id ? { id: n.id, title: n.title! } : undefined} />;
+  return <Lesson key={`${ders}.${konu}`} ders={ders} id={konu} t={t} next={n?.id ? { id: n.id, title: n.title! } : undefined}
+    adimli={a && a.ders === ders ? { id: a.id, adim: a.adimlar.length } : undefined} />;
 }
