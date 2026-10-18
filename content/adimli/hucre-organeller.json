@@ -1,0 +1,106 @@
+{
+ "id": "hucre-organeller",
+ "ders": "biyoloji",
+ "konu": "hucre-organeller",
+ "baslik": "Hücre ve organeller",
+ "ozet": "Hücrenin içinde organelleri bul, hayvan, bitki ve bakteri hücresini karşılaştır, bir proteinin yolunu izle.",
+ "adimlar": [
+  {
+   "baslik": "Hücrenin enerji santrali",
+   "metin": "Bu bir hayvan hücresi. İçinde her biri ayrı bir iş yapan <b>organeller</b> var. Kas gibi çok çalışan hücrelerde bunlardan biri özellikle boldur.",
+   "sahne": {"tur": "biy2-hucre", "sure": 2, "organeller": ["golgi", "mitokondri", "lizozom"], "dogru": "mitokondri"},
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Besinlerden ATP üreten organel hangisi?",
+    "secenekler": [
+     {"yazi": "Golgi aygıtı", "neden": "Golgi proteinleri paketleyip yollar; ATP üretmez."},
+     {"yazi": "Mitokondri", "dogru": true, "neden": "Mitokondri, oksijenli solunumla besinlerdeki enerjiyi ATP'ye aktarır. Çift zarlıdır; iç zarın kıvrımları yüzeyi artırır."},
+     {"yazi": "Lizozom", "neden": "Lizozom sindirim enzimleriyle dolu bir kesecik; ATP üretmez."}
+    ]
+   }
+  },
+  {
+   "baslik": "Hücre içi sindirim",
+   "metin": "Eskiyen organellerin ve hücreye alınan besinlerin sindirilmesi gerekir. Bu iş, sindirim enzimleriyle dolu küçük keseciklerin işidir.",
+   "sahne": {"tur": "biy2-hucre", "sure": 2, "organeller": ["cekirdek", "sentrozom", "lizozom"], "dogru": "lizozom"},
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hücre içi sindirimi yapan organel hangisi?",
+    "secenekler": [
+     {"yazi": "Çekirdek", "neden": "Çekirdek DNA'yı taşır ve hücreyi yönetir; sindirim yapmaz."},
+     {"yazi": "Sentrozom", "neden": "Sentrozom, hücre bölünürken iğ ipliklerini düzenler."},
+     {"yazi": "Lizozom", "dogru": true, "neden": "Lizozom, Golgi'den oluşan ve sindirim enzimleriyle dolu bir kesecik. Hücre içi sindirimi yapar, eskiyen organelleri yıkar. Özellikle hayvan hücrelerinde bulunur."}
+    ]
+   }
+  },
+  {
+   "baslik": "Çekirdeksiz hücre",
+   "metin": "Bakteriler <b>prokaryottur</b>: zarla çevrili çekirdekleri ve zarlı organelleri yoktur. Bitki, hayvan ve mantar hücreleri ise <b>ökaryottur</b>. Bakteriye geç ve karşılaştır.",
+   "sahne": {"tur": "biy2-hucre", "etiket": true},
+   "deger": {"bakteri": 0},
+   "kontroller": [{"ad": "bakteri", "etiket": "Bakteri hücresini göster", "min": 0, "max": 1, "tur": "anahtar"}],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bir bakteri hücresinde hangisi bulunur?",
+    "secenekler": [
+     {"yazi": "Ribozom", "dogru": true, "neden": "Her hücre protein yapmak zorundadır; zarsız bir yapı olan ribozom her hücrede vardır. Hücre zarı, sitoplazma ve DNA da hem prokaryotta hem ökaryotta bulunur."},
+     {"yazi": "Mitokondri", "neden": "Mitokondri zarlı bir organeldir; prokaryotlarda zarlı organel yoktur."},
+     {"yazi": "Çekirdek zarı", "neden": "Bakterinin DNA'sı sitoplazmada serbesttir, çevresinde zar yoktur."}
+    ]
+   }
+  },
+  {
+   "baslik": "Bitki ve hayvan",
+   "metin": "Bitki ve hayvan hücresinde çekirdek, mitokondri, ribozom, ER ve Golgi ortaktır. Bitki hücresine geç ve farkları bul.",
+   "sahne": {"tur": "biy2-hucre", "etiket": true},
+   "deger": {"bitki": 0},
+   "kontroller": [{"ad": "bitki", "etiket": "Bitki hücresini göster", "min": 0, "max": 1, "tur": "anahtar"}],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangisi bitki hücresinde bulunur ama hayvan hücresinde bulunmaz?",
+    "secenekler": [
+     {"yazi": "Hücre duvarı", "dogru": true, "neden": "Bitki hücresini selülozdan bir duvar çevreler; destek ve koruma sağlar. Kloroplast ve büyük merkezi koful da bitkiye özgüdür. Hayvan hücresinde ise sentrozom vardır."},
+     {"yazi": "Mitokondri", "neden": "Bitki hücresi de ATP'ye ihtiyaç duyar; mitokondri ikisinde de vardır."},
+     {"yazi": "Golgi aygıtı", "neden": "Golgi her iki hücrede de proteinleri paketler."}
+    ]
+   }
+  },
+  {
+   "baslik": "Kloroplast ve mitokondri",
+   "metin": "<b>Kloroplast</b> ışık enerjisiyle glikoz yapar, <b>mitokondri</b> glikozdaki enerjiyi ATP'ye aktarır. İkisi de çift zarlıdır ve kendi DNA'sı vardır. Işığı kapat.",
+   "sahne": {"tur": "biy2-enerji"},
+   "deger": {"karanlik": 0},
+   "kontroller": [{"ad": "karanlik", "etiket": "Işığı kapat", "min": 0, "max": 1, "tur": "anahtar"}],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bir bitki hücresinde hangisi bulunur?",
+    "secenekler": [
+     {"yazi": "Hem kloroplast hem mitokondri", "dogru": true, "neden": "Bitki besinini kloroplastta üretir ama o besinden ATP elde etmek için mitokondriye ihtiyaç duyar. Gece fotosentez durur, solunum sürer."},
+     {"yazi": "Yalnızca kloroplast", "neden": "Işığı kapatınca ne oldu? Bitki gece de yaşar; ATP'yi mitokondri üretir."},
+     {"yazi": "Yalnızca mitokondri", "neden": "Bitki hücresi besinini kendisi yapar; bunun için kloroplastı vardır."}
+    ]
+   }
+  },
+  {
+   "baslik": "Bir proteinin yolculuğu",
+   "metin": "Pankreas hücresi <b>insülin</b> üretip kana salgılar. Bu iş için organeller bir üretim hattı gibi birlikte çalışır.",
+   "sahne": {"tur": "biy2-salgi-yolu", "sure": 6},
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "İnsülin hücreden çıkana kadar hangi yolu izler?",
+    "secenekler": [
+     {"yazi": "Golgi → ER → ribozom → dışarı", "neden": "Sıra ters: protein önce ribozomda yapılır, en son Golgi'den yollanır."},
+     {"yazi": "Ribozom (granüllü ER) → Golgi → kesecik → dışarı", "dogru": true, "neden": "DNA'nın bilgisi mRNA ile çekirdekten çıkar, granüllü ER'deki ribozomda protein yapılır, keseciklerle Golgi'ye gider. Golgi paketler, kesecik zarla kaynaşıp insülini dışarı bırakır (<b>ekzositoz</b>). Gereken ATP'yi mitokondri sağlar."},
+     {"yazi": "Ribozom → lizozom → Golgi → dışarı", "neden": "Lizozom sindirim yapar; salgılanacak proteinin yolunda yer almaz."}
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Hücre canlılığın yapı ve işlev birimidir; prokaryotta zarlı çekirdek ve organel yoktur, ökaryotta vardır.",
+  "Ribozom her hücrede bulunur ve protein yapar; çekirdek DNA'daki bilgiyle hücreyi yönetir.",
+  "Granüllü ER ve Golgi salgı proteinlerini üretip paketler; lizozom hücre içi sindirim yapar.",
+  "<b>Mitokondri</b> besinden ATP üretir, <b>kloroplast</b> ışıkla besin yapar; bitkide ikisi de vardır.",
+  "Bitkide hücre duvarı, kloroplast ve büyük merkezi koful; hayvanda sentrozom vardır, lizozom özellikle hayvanda bulunur."
+ ]
+}

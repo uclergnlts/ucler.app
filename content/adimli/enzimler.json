@@ -1,0 +1,112 @@
+{
+ "id": "enzimler",
+ "ders": "biyoloji",
+ "konu": "enzimler",
+ "baslik": "Enzimler",
+ "ozet": "Enerji eşiğini düşür, substratı aktif bölgeye oturt, sıcaklık ve pH ile oyna, inhibitörle yarış.",
+ "adimlar": [
+  {
+   "baslik": "Enerji eşiği",
+   "metin": "Her tepkimenin başlaması için aşılması gereken bir enerji eşiği vardır: <b>aktivasyon enerjisi</b>. Hücredeki tepkimeleri <b>enzimler</b> hızlandırır. Enzimi ekle ve grafiğe bak.",
+   "sahne": {"tur": "biy2-aktivasyon"},
+   "deger": {"enzim": 0},
+   "kontroller": [{"ad": "enzim", "etiket": "Enzim ekle", "min": 0, "max": 1, "tur": "anahtar"}],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Enzim neyi değiştirdi?",
+    "secenekler": [
+     {"yazi": "Yalnızca aktivasyon enerjisini", "dogru": true, "neden": "Enzim eşiği düşürür, böylece tepkime çok daha hızlı gerçekleşir. Substrat, ürün ve aralarındaki enerji farkı aynı kalır."},
+     {"yazi": "Oluşan ürünü", "neden": "Grafiğin sağ ucuna bak: ürün aynı yerde. Enzim yalnızca yolu kolaylaştırır."},
+     {"yazi": "Substratla ürün arasındaki enerji farkını", "neden": "Mor oka bak: enzimli de enzimsiz de enerji farkı aynı. Değişen yalnızca tepenin yüksekliği."}
+    ]
+   }
+  },
+  {
+   "baslik": "Enzim-substrat kompleksi",
+   "metin": "Enzimin etki ettiği maddeye <b>substrat</b> denir. Substrat, enzimin <b>aktif bölgesine</b> bağlanır. Aktif bölge esnektir: substratı sıkıca sarar (<b>uyarılmış uyum</b>).",
+   "sahne": {"tur": "biy2-enzim-substrat", "sure": 5},
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Tepkime bitince enzime ne olur?",
+    "secenekler": [
+     {"yazi": "Değişmeden çıkar, yeniden kullanılır", "dogru": true, "neden": "Enzim tepkimede harcanmaz. Ürünler ayrılınca aktif bölge boşalır ve enzim yeni bir substratı bağlar. Bu yüzden az miktarda enzim çok iş görür."},
+     {"yazi": "Ürünle birlikte harcanır", "neden": "Enzim katalizördür, tepkimede tükenmez."},
+     {"yazi": "Kendisi ürüne dönüşür", "neden": "Ürüne dönüşen substrattır; enzim yalnızca bu dönüşümü hızlandırır."}
+    ]
+   }
+  },
+  {
+   "baslik": "Her enzimin kendi substratı",
+   "metin": "Aktif bölgenin bir şekli vardır ve her enzim genellikle yalnızca belirli bir substrata etki eder: <b>özgüllük</b>. Bu enzim <b>laktaz</b>.",
+   "sahne": {"tur": "biy2-ozgulluk", "sure": 3, "maddeler": [{"ad": "yağ", "sekil": "zincir"}, {"ad": "laktoz", "sekil": "sivri"}, {"ad": "maltoz", "sekil": "kare"}]},
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Laktaz hangisine etki eder?",
+    "secenekler": [
+     {"yazi": "Yağ", "neden": "Yağları lipaz parçalar; laktazın aktif bölgesi yağa uymaz."},
+     {"yazi": "Laktoz", "dogru": true, "neden": "Laktoz, laktazın aktif bölgesine tam oturur. Enzim adlarının çoğu substrat adına -az eki getirilerek yapılır: laktoz → laktaz, maltoz → maltaz, lipit → lipaz."},
+     {"yazi": "Maltoz", "neden": "Maltozu maltaz parçalar. Benzer bir şeker olsa da laktazın aktif bölgesine uymaz."}
+    ]
+   }
+  },
+  {
+   "baslik": "Sıcaklık",
+   "metin": "Sıcaklık tepkime hızını değiştirir. Sıcaklığı değiştir; 60 °C'yi de dene. Sonra bu insan enzimini <b>en hızlı</b> çalıştığı sıcaklığa getir.",
+   "sahne": {"tur": "biy2-sicaklik"},
+   "deger": {"T": 10},
+   "kontroller": [{"ad": "T", "etiket": "Sıcaklık", "min": 0, "max": 80, "birim": "°C"}],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {"T": [36, 38]},
+    "tamam": "İnsan enzimlerinin <b>optimum sıcaklığı</b> yaklaşık 37 °C. Daha sıcakta enzimin şekli bozulur (<b>denatürasyon</b>) ve bu çoğunlukla geri dönmez. Soğuk ise enzimi bozmaz, yalnızca yavaşlatır."
+   }
+  },
+  {
+   "baslik": "pH",
+   "metin": "Her enzimin en iyi çalıştığı bir pH vardır. Mide asidiktir, ince bağırsak hafif baziktir. pH'yi değiştir ve <b>pepsini</b> en hızlı çalıştığı yere getir.",
+   "sahne": {"tur": "biy2-ph"},
+   "deger": {"ph": 7},
+   "kontroller": [{"ad": "ph", "etiket": "pH", "min": 0, "max": 14}],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {"ph": 2},
+    "tamam": "Pepsin midenin asidinde (pH ≈ 2) en hızlıdır; tripsin ise ince bağırsakta (pH ≈ 8). Uygun olmayan pH aktif bölgenin şeklini bozar, aşırısı enzimi denatüre eder."
+   }
+  },
+  {
+   "baslik": "Substrat miktarı",
+   "metin": "Burada 4 enzim var ve sayıları değişmiyor. Substrat ekle ve hızın nasıl değiştiğine bak.",
+   "sahne": {"tur": "biy2-doygunluk"},
+   "deger": {"s": 1},
+   "kontroller": [{"ad": "s", "etiket": "Substrat", "min": 0, "max": 12, "tur": "sayac"}],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Substratı 8'den 12'ye çıkarırsan hız ne olur?",
+    "secenekler": [
+     {"yazi": "Değişmez", "dogru": true, "neden": "Bütün aktif bölgeler zaten dolu; fazla substrat sırada bekler. Buna <b>doygunluk</b> denir. Bu noktada hızı artırmak için enzim miktarını artırmak gerekir."},
+     {"yazi": "Artar", "neden": "Substratı 4'ün üstüne çıkar ve hız çubuğuna bak. Aktif bölgeler dolunca ne oluyor?"},
+     {"yazi": "Azalır", "neden": "Substrat çoğalınca hız düşmez. Ama dolu enzimler daha fazlasını aynı anda işleyemez."}
+    ]
+   }
+  },
+  {
+   "baslik": "Yarışmalı inhibitör",
+   "metin": "Bazı moleküller substrata benzer ve aktif bölgeyi kapatır: <b>yarışmalı inhibitör</b>. Şu an 4 enzimin 2'si kapalı. Substrat ekleyerek en az <b>3 enzimi</b> yeniden çalıştır.",
+   "sahne": {"tur": "biy2-inhibitor"},
+   "deger": {"s": 4},
+   "kontroller": [{"ad": "s", "etiket": "Substrat", "min": 4, "max": 16, "adim": 4, "tur": "sayac"}],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {"s": [8, 16]},
+    "tamam": "Substrat çoğalınca aktif bölgeyi kapma şansı artar ve inhibitörün etkisi azalır. <b>Yarışmasız inhibitör</b> ise aktif bölgeye değil başka bir yere bağlanıp enzimin şeklini bozar; ona karşı substrat eklemek işe yaramaz. Birçok ilaç ve zehir böyle çalışır."
+   }
+  }
+ ],
+ "kapanis": [
+  "Enzimler <b>aktivasyon enerjisini</b> düşürerek tepkimeyi hızlandırır; ürünü ve enerji farkını değiştirmez.",
+  "Substrat aktif bölgeye bağlanır (E + S → ES → E + ürün); enzim değişmeden çıkar ve tekrar kullanılır.",
+  "Aktif bölge esnektir (<b>uyarılmış uyum</b>) ve her enzim belirli substratlara etki eder (<b>özgüllük</b>).",
+  "Her enzimin <b>optimum sıcaklığı</b> ve <b>pH'si</b> vardır; aşırı sıcak ve uygunsuz pH enzimi denatüre eder.",
+  "Aktif bölgeler dolunca hız sabitlenir (doygunluk). <b>Yarışmalı inhibitörün</b> etkisi substrat artınca azalır."
+ ]
+}

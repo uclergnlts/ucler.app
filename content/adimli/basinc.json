@@ -1,0 +1,181 @@
+{
+ "id": "basinc",
+ "ders": "fizik",
+ "konu": "basinc",
+ "baslik": "Basınç",
+ "ozet": "Tuğlayı süngere koy, kara bas, denize dal, arabayı kaldır: basıncı yaparak öğren.",
+ "adimlar": [
+  {
+   "baslik": "Hangisi daha çok gömülür?",
+   "metin": "İki tuğla birbirinin aynısı, ikisi de 20 N. Biri <b>dik</b> duruyor, yani küçük yüzüyle süngere değecek. Öteki <b>yatık</b> duruyor ve geniş yüzüyle değecek.",
+   "sahne": {
+    "tur": "fiz2-tugla",
+    "sure": 2
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Bırakınca hangisi süngere daha çok gömülür?",
+    "secenekler": [
+     {
+      "yazi": "Yatık duran",
+      "neden": "Yatık tuğla daha geniş bir yere değiyor; ağırlığı geniş alana yayılır."
+     },
+     {
+      "yazi": "Dik duran",
+      "dogru": true,
+      "neden": "Kuvvet aynı ama dik tuğla onu 4 kat küçük bir alana yığıyor. Birim yüzeye düşen kuvvete <b>basınç</b> denir: <b>P = F / A</b>. Birimi pascal: 1 Pa = 1 N/m². Dik tuğla 4000 Pa, yatık tuğla 1000 Pa basınç yapar."
+     },
+     {
+      "yazi": "İkisi eşit gömülür",
+      "neden": "Ağırlıklar eşit, ama değdikleri alanlar farklı."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Kara gömülme",
+   "metin": "Ağırlığın 600 N ve karın üstündesin. Bu kar en çok 3000 Pa taşıyabiliyor. Ayakkabılarının yere değen alanını büyüt ve <b>kara gömülme</b>.",
+   "sahne": {
+    "tur": "fiz2-kar"
+   },
+   "deger": {
+    "A": 4
+   },
+   "kontroller": [
+    {
+     "ad": "A",
+     "etiket": "Taban alanı",
+     "min": 2,
+     "max": 30,
+     "carpan": 0.01,
+     "birim": "m²"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "A": [
+      20,
+      30
+     ]
+    },
+    "tamam": "600 N ÷ 0,2 m² = 3000 Pa. Kar ayakkabısı ağırlığını değiştirmez, onu geniş alana yayar. Tersi de işe yarar: bıçağın keskin ağzı ve raptiyenin ucu küçük alanla büyük basınç yaratır."
+   }
+  },
+  {
+   "baslik": "Derine dal",
+   "metin": "Suyun kendi ağırlığı da basınç yapar: <b>P = h·d·g</b>. h derinlik, d suyun özkütlesi (1000 kg/m³), g ≈ 10 m/s². Dalgıcı, suyun basıncının <b>200.000 Pa</b> olduğu derinliğe indir.",
+   "sahne": {
+    "tur": "fiz2-derinlik"
+   },
+   "deger": {
+    "h": 5
+   },
+   "kontroller": [
+    {
+     "ad": "h",
+     "etiket": "Derinlik",
+     "min": 0,
+     "max": 40,
+     "adim": 5,
+     "birim": "m"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "h": 20
+    },
+    "tamam": "20 × 1000 × 10 = 200.000 Pa. Derinlik iki katına çıkınca basınç da iki katına çıkar. Suda her 10 m, yaklaşık 100.000 Pa ekler. Baraj duvarları bu yüzden altta daha kalındır."
+   }
+  },
+  {
+   "baslik": "Kabın şekli",
+   "metin": "Geniş, dar ve huni biçimli üç kabı 20 cm yüksekliğe kadar suyla dolduracağız. Huni en çok suyu alıyor, dar kap en azını.",
+   "sahne": {
+    "tur": "fiz2-kaplar",
+    "sure": 3
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Tabanlardaki sıvı basıncı hangisinde en büyük olur?",
+    "secenekler": [
+     {
+      "yazi": "Hunide",
+      "neden": "Hunide en çok su var, ama formül P = h·d·g: içinde miktar yok."
+     },
+     {
+      "yazi": "Geniş kapta",
+      "neden": "Taban geniş olunca toplam kuvvet büyür, ama birim yüzeye düşen kuvvet aynı kalır."
+     },
+     {
+      "yazi": "Üçünde de eşit",
+      "dogru": true,
+      "neden": "Sıvı basıncı yalnızca derinliğe ve sıvının özkütlesine bağlıdır: 0,2 × 1000 × 10 = 2000 Pa. Kabın şekli ve sıvının miktarı fark etmez. Buna <b>hidrostatik paradoks</b> denir."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Hidrolik kaldıraç",
+   "metin": "Kapalı bir sıvıya uyguladığın basınç her yere aynen iletilir (<b>Pascal ilkesi</b>). Küçük pistona 200 N uyguluyorsun. 10.000 N'luk arabayı taşıyabilen <b>en küçük</b> büyük pistonu bul.",
+   "sahne": {
+    "tur": "fiz2-hidrolik"
+   },
+   "deger": {
+    "A2": 100
+   },
+   "kontroller": [
+    {
+     "ad": "A2",
+     "etiket": "Büyük piston",
+     "min": 100,
+     "max": 1000,
+     "adim": 100,
+     "birim": "cm²"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "A2": 500
+    },
+    "tamam": "İki pistonda basınç eşittir: <b>F₁ / A₁ = F₂ / A₂</b>. Alan 50 kat olunca kuvvet de 50 kat olur: 200 N × 50 = 10.000 N. Ama iş kazanmazsın: küçük pistonu 50 cm itersen araba yalnızca 1 cm yükselir."
+   }
+  },
+  {
+   "baslik": "Dağa tırman",
+   "metin": "Havanın da ağırlığı var. Torricelli'nin cıva tüpünde, deniz seviyesinde cıva <b>76 cm</b>'de durur: 1 atm. Yukarı çık ve suyun <b>80 °C'de kaynadığı</b> yüksekliği bul.",
+   "sahne": {
+    "tur": "fiz2-rakim"
+   },
+   "deger": {
+    "r": 0
+   },
+   "kontroller": [
+    {
+     "ad": "r",
+     "etiket": "Rakım",
+     "min": 0,
+     "max": 9000,
+     "adim": 500,
+     "birim": "m"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "r": 6000
+    },
+    "tamam": "Yukarı çıktıkça üstündeki hava azalır, açık hava basıncı düşer ve cıva sütunu kısalır. Su, buhar basıncı dış basınca eşitlenince kaynar; dış basınç düşünce bunu daha düşük sıcaklıkta yapar. Everest zirvesinde su yaklaşık 70 °C'de kaynar."
+   }
+  }
+ ],
+ "kapanis": [
+  "<b>Basınç</b>, birim yüzeye dik etki eden kuvvettir: P = F / A. Birimi pascal (1 Pa = 1 N/m²).",
+  "Kuvvet aynıysa alan küçüldükçe basınç büyür: bıçak keser, kar ayakkabısı gömülmez.",
+  "Sıvı basıncı <b>P = h·d·g</b>; derinlikle artar, kabın şekline ve sıvının miktarına bağlı değildir.",
+  "<b>Pascal ilkesi</b>: kapalı sıvıda basınç her yere iletilir. Hidrolikte F₁ / A₁ = F₂ / A₂.",
+  "Açık hava basıncı deniz seviyesinde 76 cmHg (1 atm) olur; yükseldikçe azalır ve su daha düşük sıcaklıkta kaynar."
+ ]
+}

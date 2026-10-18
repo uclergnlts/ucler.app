@@ -191,7 +191,7 @@ SAHNE_DIR = os.path.join(ROOT, "components", "sahne")
 sahneler = set()
 for f in glob.glob(os.path.join(SAHNE_DIR, "*.tsx")):
     m = re.search(r"export const \w+: Record<string, SahneKaydi> = \{(.*?)\n\};", open(f, encoding="utf-8").read(), re.S)
-    if m: sahneler |= set(re.findall(r'^\s{2}"?([a-z][a-z-]*)"?:\s*\{', m.group(1), re.M))
+    if m: sahneler |= set(re.findall(r'^\s{2}"?([a-z][a-z0-9-]*)"?:\s*\{', m.group(1), re.M))
 adimli_idler = set()
 for f in sorted(glob.glob(os.path.join(CONTENT, "adimli", "*.json"))):
     a = json.load(open(f, encoding="utf-8")); ad = os.path.basename(f)

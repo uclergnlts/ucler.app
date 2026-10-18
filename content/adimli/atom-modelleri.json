@@ -1,0 +1,191 @@
+{
+ "id": "atom-modelleri",
+ "ders": "kimya",
+ "konu": "atom-modelleri",
+ "baslik": "Atom modellerinin tarihi",
+ "ozet": "Katot ışınından altın levhaya, atom modellerini değiştiren deneyleri kendin yap.",
+ "adimlar": [
+  {
+   "baslik": "Katot ışınları",
+   "metin": "Dalton atomu bölünemez, içi dolu bir küre sanıyordu. 1897'de J. J. Thomson, havası boşaltılmış bir tüpte katot ışınlarını iki yüklü levhanın arasından geçirdi.",
+   "sahne": {
+    "tur": "kim2-katot",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Işın hangi levhaya doğru sapar?",
+    "secenekler": [
+     {
+      "yazi": "Artı (+) yüklü levhaya",
+      "dogru": true,
+      "neden": "Işın artı levhaya çekildi; demek ki eksi yüklü taneciklerden oluşuyor: elektron. Elektron atomdan geldiğine göre atom bölünebilir; Dalton'un içi dolu küresi yetmez."
+     },
+     {
+      "yazi": "Eksi (−) yüklü levhaya",
+      "neden": "Zıt yükler birbirini çeker, aynı yükler iter. Işın hangi levhaya yaklaştı?"
+     },
+     {
+      "yazi": "Hiç sapmaz",
+      "neden": "Yüksüz bir ışın sapmazdı; bu ışın yüklü taneciklerden oluşuyor."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Üzümlü kek",
+   "metin": "Thomson'ın 1904 modelinde atom, artı yüklü bir küredir; elektronlar içine üzüm gibi gömülüdür. Bu kürede 6 birim artı yük var. Elektron ekleyerek atomu <b>nötr</b> yap.",
+   "sahne": {
+    "tur": "kim2-thomson"
+   },
+   "deger": {
+    "e": 2
+   },
+   "kontroller": [
+    {
+     "ad": "e",
+     "etiket": "Elektron",
+     "min": 0,
+     "max": 10,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "e": 6
+    },
+    "tamam": "6 eksi yük, 6 artı yükü dengeler; atom bir bütün olarak yüksüzdür. Thomson'a göre artı yük kürenin her yerine yayılmıştı; çekirdek fikri henüz yoktu."
+   }
+  },
+  {
+   "baslik": "Altın levha deneyi",
+   "metin": "1909'da Geiger ve Marsden, Rutherford'un yönetiminde çok ince bir altın levhaya artı yüklü alfa tanecikleri gönderdi. Thomson modeline göre hepsi neredeyse düz geçmeliydi.",
+   "sahne": {
+    "tur": "kim2-altin",
+    "sure": 6
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Sence tanecikler ne yaptı?",
+    "secenekler": [
+     {
+      "yazi": "Çoğu düz geçti, bazıları saptı, çok azı geri döndü",
+      "dogru": true,
+      "neden": "Çoğunun geçmesi, atomun büyük kısmının boşluk olduğunu gösterir. Rutherford'u en çok geri dönenler şaşırttı. Gerçekte yaklaşık 8000 taneciğin ancak 1'i geri yansıdı; çizimde bu oran abartıldı."
+     },
+     {
+      "yazi": "Hepsi düz geçti",
+      "neden": "Thomson modeline göre beklenen buydu, ama deney başka bir sonuç verdi."
+     },
+     {
+      "yazi": "Çoğu geri döndü",
+      "neden": "Levha çok ince ve atom çoğunlukla boşluk; taneciklerin çoğu hiçbir engele çarpmaz."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Çekirdeğe nişan al",
+   "metin": "Rutherford 1911'de şöyle açıkladı: atomun kütlesi ve artı yükü çok küçük bir çekirdekte toplanmıştır, gerisi boşluktur. Alfa taneciğini çekirdeğe yaklaştır ve <b>geri döndür</b>.",
+   "sahne": {
+    "tur": "kim2-nisan",
+    "sure": 4
+   },
+   "deger": {
+    "b": 40
+   },
+   "kontroller": [
+    {
+     "ad": "b",
+     "etiket": "Çekirdeğe uzaklık",
+     "min": 0,
+     "max": 60,
+     "adim": 5
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "b": [
+      0,
+      5
+     ]
+    },
+    "tamam": "Yalnızca çekirdeğe çok yaklaşan tanecik, çekirdeğin artı yüküyle itilip geri döner. Çekirdek atomdan yaklaşık 100.000 kat küçük olduğu için bu çok nadirdir; taneciklerin çoğu boşluktan geçer.",
+    "ipucu": "Uzaklığı azaltıp yeniden oynat."
+   }
+  },
+  {
+   "baslik": "Bohr'un katmanları",
+   "metin": "Rutherford modeline göre dönen elektron enerji yayıp çekirdeğe düşmeliydi. Bohr 1913'te elektronların yalnızca belirli katmanlarda dolandığını söyledi. Hidrojenin elektronu 3. katmanda; onu <b>2. katmana</b> indir.",
+   "sahne": {
+    "tur": "kim2-bohr"
+   },
+   "deger": {
+    "n": 3
+   },
+   "kontroller": [
+    {
+     "ad": "n",
+     "etiket": "Elektronun katmanı",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "n": 2
+    },
+    "tamam": "Elektron alt katmana inerken aradaki enerji farkını belirli bir renkte ışık olarak verdi: 3 → 2 inişi kırmızı (656 nm), 4 → 2 inişi mavi-yeşildir (486 nm). Bohr hidrojenin çizgi spektrumunu böyle açıkladı."
+   }
+  },
+  {
+   "baslik": "Elektron bulutu",
+   "metin": "1920'lerde kuantum mekaniği kuruldu: elektronun yeri ve hızı aynı anda kesin olarak bilinemez. Anahtarla Bohr'un yörüngesinden modern modele geç.",
+   "sahne": {
+    "tur": "kim2-bulut"
+   },
+   "deger": {
+    "bulut": 0
+   },
+   "kontroller": [
+    {
+     "ad": "bulut",
+     "etiket": "Elektron bulutu",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Modern modele göre elektron için hangisi doğru?",
+    "secenekler": [
+     {
+      "yazi": "Yalnızca bir bölgede bulunma olasılığı bilinir",
+      "dogru": true,
+      "neden": "Elektronun bulunma olasılığının yüksek olduğu bölgelere <b>orbital</b> denir. Elektronu çekirdeği saran bir bulut gibi düşün: koyu yerlerde bulunma olasılığı daha yüksek."
+     },
+     {
+      "yazi": "Belirli bir çember üzerinde döner",
+      "neden": "Bu Bohr'un fikriydi. Modern modelde kesin bir yörünge yoktur."
+     },
+     {
+      "yazi": "Çekirdeğin içinde durur",
+      "neden": "Çekirdekte proton ve nötronlar vardır; elektronlar çekirdeğin çevresindedir."
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "<b>Dalton</b> (1803-1808): atom bölünemez, içi dolu bir küredir.",
+  "<b>Thomson</b>: katot ışınları eksi yüklü elektronlardan oluşur (1897); atom, elektronların gömülü olduğu artı yüklü bir küredir (üzümlü kek, 1904).",
+  "<b>Rutherford</b>: altın levha deneyi, atomun çoğunlukla boşluk olduğunu ve kütlenin küçük, artı yüklü bir çekirdekte toplandığını gösterdi (1909-1911).",
+  "<b>Bohr</b> (1913): elektronlar belirli enerji katmanlarında dolanır; alt katmana inen elektron belirli renkte ışık yayar.",
+  "<b>Modern model</b>: elektronun yeri kesin bilinemez; yalnızca bulunma olasılığı (orbital) hesaplanır."
+ ]
+}
