@@ -3,12 +3,13 @@
 // yaptığı bir görev. Geri bildirim alttaki çubukta çıkar; görev bitince "Devam" açılır. Adımlar
 // content/adimli/*.json dosyalarından gelir, sahneler components/sahne/ kütüphanesindendir.
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Icon } from "./icons";
 import { SAHNELER } from "./sahne";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Html } from "./temel";
+import { SiraliMetin, useCanliSvg } from "./canli";
 import { Button } from "./ui/button";
 import type { Adim, AdimliDers, Gorev, Kontrol, Secenek } from "@/lib/adimli";
 
@@ -118,6 +119,7 @@ function Kontroller({ liste, v, set, kapali }: { liste: Kontrol[]; v: Degerler; 
 /* ---------- tek adım ---------- */
 
 function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; bildir: Bildir }) {
+  const sahneRef = useCanliSvg<HTMLDivElement>(250);
   const kayit = SAHNELER[a.sahne.tur];
   const sure = a.sahne.sure ?? 0;
   const g: Gorev = a.gorev;
@@ -179,7 +181,7 @@ function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; bildir:
 
   return (
     <>
-      <div className="ad-sahne">
+      <div className="ad-sahne" ref={sahneRef}>
         <C s={a.sahne} v={v} set={set} t={o.t} oynuyor={o.oynuyor} kosular={kosular} secim={secim} />
       </div>
 
@@ -216,9 +218,16 @@ export default function DersMotoru({ ders }: { ders: AdimliDers }) {
   const [biten, setBiten] = useState<boolean[]>(() => ders.adimlar.map(() => false));
   const [bildirim, setBildirim] = useState<Bildirim | null>(null);
   const son = i === n;
-  const tamam = useCallback(() => setBiten((b) => (b[i] ? b : b.map((x, k) => (k === i ? true : x)))), [i]);
+  // Her adımın kendi "tamam"ı: önceki adımlar yukarıda durur ve şimdiki adımı bitirmiş saymaz.
+  const tamamlar = useMemo(() => ders.adimlar.map((_, k) => () => setBiten((b) => (b[k] ? b : b.map((x, j) => (j === k ? true : x))))), [ders]);
   const git = (k: number) => { setBildirim(null); setI(k); };
-  useEffect(() => { window.scrollTo(0, 0); }, [i]);
+  // Yeni adım altta belirince sayfa ona kayar (slayt gibi yer değiştirmez).
+  const sonAdim = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (i === 0) return;
+    if (i === n) window.scrollTo({ top: 0, behavior: "smooth" });
+    else sonAdim.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [i, n]);
   const konu = `/${ders.ders}/${ders.konu}/`;
   const Close = Icon.kapat;
   const A = ders.adimlar[i];
@@ -235,19 +244,24 @@ export default function DersMotoru({ ders }: { ders: AdimliDers }) {
         </span>
       </header>
       <main className="view ad-govde">
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode="wait">
           {!son ? (
-            <motion.article
-              className="ad-kart"
-              key={i}
-              initial={{ opacity: 0, x: 24 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -24 }}
-              transition={{ duration: 0.18, ease: "easeOut" }}
-            >
-              <Html as="p" className="ad-metin" html={A.metin} />
-              <AdimGorunum a={A} tamam={tamam} bildir={setBildirim} />
-            </motion.article>
+            <div key="akis" className="ad-liste">
+              {ders.adimlar.slice(0, i + 1).map((A, k) => (
+                <motion.article
+                  className={cn("ad-kart", k < i && "ad-gecmis")}
+                  key={k}
+                  ref={k === i ? sonAdim : undefined}
+                  inert={k < i}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: k < i ? 0.45 : 1, y: 0 }}
+                  transition={{ duration: 0.35, ease: "easeOut" }}
+                >
+                  <SiraliMetin className="ad-metin" html={A.metin} gecikme={0.1} />
+                  <AdimGorunum a={A} tamam={tamamlar[k]} bildir={setBildirim} />
+                </motion.article>
+              ))}
+            </div>
           ) : (
             <motion.article className="ad-kart" key="son" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }}>
               <h2 className="ad-bitti">{ders.baslik}: bitti</h2>

@@ -1,6 +1,7 @@
 "use client";
 // Ders ekranı: kartlar -> 4 soruluk mini test -> sonuç.
-// Kaydırma (swipe) ve sağ/sol ok tuşlarıyla kartlar arasında gezilir.
+// Kartlar slayt gibi yer değiştirmez: "Devam" ile bir sonraki kart altta belirir ve sayfa ona kayar
+// (Brilliant gibi akış). Yeni kartta görsel parça parça çizilir, yazı cümle cümle gelir.
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { DERSLER, type DersId, type Topic } from "@/lib/dersler";
@@ -14,6 +15,7 @@ import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
 import VideoPlayer from "./VideoPlayer";
 import Etk from "./Etk";
+import { Belir, CanliSvg, SiraliMetin, useCanliSvg } from "./canli";
 import { konuOyunlari } from "@/lib/oyunlar";
 
 type State = { i: number; q: number; picked: number | null; right: number };
@@ -27,7 +29,7 @@ export default function Lesson({
   const yon = useRef<1 | -1>(1); // kart geçişinin yönü (kayma animasyonu için)
   const saved = useSaved().includes(`${ders}.${id}`);
   const nCards = t.cards.length, nQuiz = t.quiz.length;
-  const Back = Icon.back, Close = Icon.kapat, Bookmark = Icon.kayit, Bulb = Icon.bulb, Play = Icon.play;
+  const Close = Icon.kapat, Bookmark = Icon.kayit;
 
   // Videodan gelen bağlantı (?kart=3) dersi o karttan açar; geçersiz değerde ilk kart.
   useEffect(() => {
@@ -36,7 +38,12 @@ export default function Lesson({
   }, [nCards]);
 
   useEffect(() => { setProg({ _last: `${ders}.${id}` }); }, [ders, id]);
-  useEffect(() => { window.scrollTo(0, 0); }, [s.i, s.q]);
+  useEffect(() => { window.scrollTo(0, 0); }, [s.q]);
+  // Yeni kart altta belirince sayfa ona kayar.
+  const sonKart = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (s.q < 0 && s.i > 0) sonKart.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [s.i, s.q]);
   useEffect(() => {
     if (s.q === nQuiz) setProg({ [`${ders}.${id}`]: `${s.right}/${nQuiz} doğru` });
   }, [s.q, s.right, nQuiz, ders, id]);
@@ -46,7 +53,7 @@ export default function Lesson({
     setS((p) => {
       if (p.q < 0) {
         if (dir > 0) return p.i < nCards - 1 ? { ...p, i: p.i + 1 } : { ...p, q: 0 };
-        return p.i > 0 ? { ...p, i: p.i - 1 } : p;
+        return p; // akışta geri gitmek yok: önceki kartlar yukarıda duruyor
       }
       if (p.q < nQuiz && dir > 0 && p.picked !== null) {
         return { ...p, q: p.q + 1, picked: null };
@@ -70,61 +77,31 @@ export default function Lesson({
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
-  // Kaydırma: yalnızca kartlarda
-  const touch = useRef<{ x: number; y: number } | null>(null);
-  const onTouchStart = (e: React.TouchEvent) => {
-    // Etkileşimli görseldeki sürgüyü kaydırmak kart değiştirmesin.
-    if ((e.target as Element).closest(".etk")) return;
-    if (s.q < 0) touch.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-  };
-  const onTouchEnd = (e: React.TouchEvent) => {
-    const st = touch.current;
-    touch.current = null;
-    if (!st) return;
-    const dx = e.changedTouches[0].clientX - st.x, dy = e.changedTouches[0].clientY - st.y;
-    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) step(dx < 0 ? 1 : -1);
-  };
-
   const pos = s.q < 0 ? s.i : nCards + s.q;
   let body: React.ReactNode, controls: React.ReactNode = null, key: string;
 
   if (s.q < 0) {
-    const c = t.cards[s.i], last = s.i === nCards - 1, vids = kartVideolari(ders, id, s.i + 1);
-    key = `c${s.i}`;
+    const last = s.i === nCards - 1;
+    key = "kartlar";
     body = (
-      <article className="flex flex-col gap-4" aria-live="polite">
-        {c.etk ? <Etk key={s.i} e={c.etk} svg={c.svg} /> : <div className="visual" dangerouslySetInnerHTML={{ __html: c.svg }} />}
-        <div className="grid gap-1.5">
-          <span className="text-[13px] font-bold tabular-nums text-acc">{s.i + 1} / {nCards}</span>
-          <Html as="h2" className="text-[22px]" html={c.h} />
-          <Html as="p" className="text-[17px] leading-relaxed" html={c.p} />
-        </div>
-        {c.key && (
-          <div className="flex items-start gap-2.5 rounded-xl bg-[var(--glow-soft)] px-3.5 py-3 text-[15px] font-semibold [&_svg]:mt-px [&_svg]:size-5 [&_svg]:flex-none">
-            <Bulb /><Html html={c.key} />
-          </div>
-        )}
-        {vids.map((v) => (
-          <button
-            key={v.id}
-            onClick={() => setPlay(v)}
-            className="flex items-center gap-3 rounded-2xl border border-border bg-card p-2 pr-3 text-left transition-transform active:scale-[.99]"
-          >
-            <span className="relative grid h-14 w-10 flex-none place-items-center overflow-hidden rounded-lg bg-acc">
-              {v.poster && <img src={v.poster} alt="" className="absolute inset-0 size-full object-cover" />}
-              <span className="relative grid size-6 place-items-center rounded-full bg-white/90 text-foreground [&_svg]:size-3.5"><Play /></span>
-            </span>
-            <span><b className="block text-[15px] leading-snug font-semibold">{v.baslik}</b><span className="block text-[13px] text-muted-foreground">Kısa video · {sureYaz(v.sure)}</span></span>
-          </button>
+      <div className="flex flex-col gap-14" aria-live="polite">
+        {t.cards.slice(0, s.i + 1).map((c, k) => (
+          <AkisKart
+            key={k}
+            ref={k === s.i ? sonKart : undefined}
+            c={c}
+            no={k + 1}
+            toplam={nCards}
+            vids={kartVideolari(ders, id, k + 1)}
+            canli={k === s.i}
+            oynat={setPlay}
+          />
         ))}
-      </article>
+      </div>
     );
     controls = (
       <Alt>
-        <div className="grid grid-cols-[auto_1fr] gap-2.5">
-          <Button variant="outline" className="w-12 px-0" data-prev disabled={s.i === 0} aria-label="Önceki kart" onClick={() => step(-1)}><Back /></Button>
-          <Button data-next onClick={() => step(1)}>{last ? "Mini teste geç" : "Devam"}</Button>
-        </div>
+        <Button className="w-full" data-next onClick={() => step(1)}>{last ? "Mini teste geç" : "Devam"}</Button>
       </Alt>
     );
   } else if (s.q < nQuiz) {
@@ -220,7 +197,7 @@ export default function Lesson({
   }
 
   return (
-    <div className="app" data-ders={ders} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+    <div className="app" data-ders={ders}>
       <header className="top gap-3">
         <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={href(ders)} aria-label="Konudan çık"><Close /></Link></Button>
         <div className="grid min-w-0 flex-1 gap-1.5">
@@ -239,7 +216,7 @@ export default function Lesson({
         </Button>
       </header>
       <main className="view gap-0 pt-1 pb-0">
-        <AnimatePresence mode="wait" initial={false} custom={yon.current}>
+        <AnimatePresence mode="wait" custom={yon.current}>
           <motion.div
             key={key}
             custom={yon.current}
@@ -276,4 +253,61 @@ function Alt({ durum, children }: { durum?: "ok" | "no"; children: React.ReactNo
       {children}
     </div>
   );
+}
+
+type Kart = Topic["cards"][number];
+
+/** Akıştaki bir kart. canli: kart yeni açıldı, görsel çizilsin ve yazı sırayla gelsin. */
+function AkisKart({ c, no, toplam, vids, canli, oynat, ref }: {
+  c: Kart; no: number; toplam: number; vids: Video[]; canli: boolean; oynat: (v: Video) => void; ref?: React.Ref<HTMLElement>;
+}) {
+  const ilk = useRef(canli).current; // yalnızca ilk açılışta canlandır
+  const Bulb = Icon.bulb, Play = Icon.play;
+  const etkRef = useCanliSvg<HTMLDivElement>();
+  const n = c.p.split(/[.!?…]\s/).length;
+  const metinBitti = ilk ? 0.55 + n * 0.35 : 0;
+  return (
+    <article ref={ref} className="flex scroll-mt-20 flex-col gap-4">
+      {c.etk ? (
+        <div ref={ilk ? etkRef : undefined}><Etk e={c.etk} svg={c.svg} /></div>
+      ) : ilk ? (
+        <CanliSvg className="visual" html={c.svg} />
+      ) : (
+        <div className="visual" dangerouslySetInnerHTML={{ __html: c.svg }} />
+      )}
+      <div className="grid gap-1.5">
+        <Kap on={ilk} d={0.15}>
+          <span className="block text-[13px] font-bold tabular-nums text-acc">{no} / {toplam}</span>
+          <Html as="h2" className="text-[22px]" html={c.h} />
+        </Kap>
+        {ilk ? <SiraliMetin className="text-[17px] leading-relaxed" html={c.p} gecikme={0.45} /> : <Html as="p" className="text-[17px] leading-relaxed" html={c.p} />}
+      </div>
+      {c.key && (
+        <Kap on={ilk} d={metinBitti}>
+          <div className="flex items-start gap-2.5 rounded-xl bg-[var(--glow-soft)] px-3.5 py-3 text-[15px] font-semibold [&_svg]:mt-px [&_svg]:size-5 [&_svg]:flex-none">
+            <Bulb /><Html html={c.key} />
+          </div>
+        </Kap>
+      )}
+      {vids.map((v) => (
+        <Kap key={v.id} on={ilk} d={metinBitti + 0.15}>
+          <button
+            onClick={() => oynat(v)}
+            className="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-2 pr-3 text-left transition-transform active:scale-[.99]"
+          >
+            <span className="relative grid h-14 w-10 flex-none place-items-center overflow-hidden rounded-lg bg-acc">
+              {v.poster && <img src={v.poster} alt="" className="absolute inset-0 size-full object-cover" />}
+              <span className="relative grid size-6 place-items-center rounded-full bg-white/90 text-foreground [&_svg]:size-3.5"><Play /></span>
+            </span>
+            <span><b className="block text-[15px] leading-snug font-semibold">{v.baslik}</b><span className="block text-[13px] text-muted-foreground">Kısa video · {sureYaz(v.sure)}</span></span>
+          </button>
+        </Kap>
+      ))}
+    </article>
+  );
+}
+
+/** Yeni açılan kartta parçayı gecikmeyle getirir; eski kartlarda olduğu gibi gösterir. */
+function Kap({ on, d, children }: { on: boolean; d: number; children: React.ReactNode }) {
+  return on ? <Belir gecikme={d}>{children}</Belir> : <>{children}</>;
 }

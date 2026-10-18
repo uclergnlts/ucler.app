@@ -9,7 +9,8 @@ body:has(.ad-sayfa){background:#fff}
 .ad-adimlar i{display:block;height:6px;border-radius:3px;background:var(--line);overflow:hidden}
 .ad-adimlar i b{display:block;height:100%;background:var(--acc);transform-origin:left}
 .ad-govde{padding-block:8px 0;gap:0}
-.ad-kart{display:flex;flex-direction:column;gap:20px;padding-bottom:24px}
+.ad-liste{display:flex;flex-direction:column;gap:44px}
+.ad-kart{display:flex;flex-direction:column;gap:20px;padding-bottom:24px;scroll-margin-top:72px}
 .ad-metin{margin:0;font-size:18px;line-height:1.55}
 .ad-sahne svg{display:block;width:100%;height:auto;max-height:44vh;margin-inline:auto;font-family:var(--f-body);font-variant-numeric:tabular-nums}
 .ad-surukle{touch-action:none;cursor:grab;user-select:none}
