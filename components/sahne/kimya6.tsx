@@ -249,7 +249,7 @@ function Sinir({ s, t, oynuyor }: SahneProps) {
 /* ---------- pH ölçeği ve turnusol ---------- */
 
 const PH_RENK = ["#d6342c", "#e5512f", "#ef7a2f", "#f4a12c", "#f2c12e", "#d9cf34", "#a8c83a", "#58b04a", "#2e9d6a", "#2a8f8a", "#2f7cb3", "#3a5fb8", "#4b4aa8", "#5a3b98", "#5b2d84"];
-const PH_ORNEK = ["Akü asidi", "Mide özsuyu", "Limon suyu", "Sirke", "Domates", "Kahve", "Süt", "Saf su", "Deniz suyu", "Kabartma tozu", "Sabunlu su", "Amonyaklı temizleyici", "Kireç suyu", "Çamaşır suyu", "Lavabo açıcı"];
+const PH_ORNEK = ["Akü asidi", "Mide özsuyu", "Limon suyu", "Sirke", "Domates", "Kahve", "Süt", "Saf su", "Deniz suyu", "Karbonat (NaHCO₃)", "Sabunlu su", "Amonyaklı temizleyici", "Kireç suyu", "Çamaşır suyu", "Lavabo açıcı"];
 
 function PhOlcek({ v }: SahneProps) {
   const p = v.p ?? 7;
