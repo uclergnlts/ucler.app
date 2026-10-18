@@ -20,7 +20,7 @@ Videolar ayrı bir dosyada durur: `content/videolar.json` (biçim `docs/VIDEOLAR
 {
   title: "Atomun yapısı",
   summary: "Tek cümlelik özet (≤ 70 karakter)",
-  cards: [                       // 8-12 kart önerilir; geniş konular 14 karta kadar çıkabilir (doğrulayıcı 6-14)
+  cards: [                       // 8-12 kart önerilir; geniş konular 16 karta kadar çıkabilir (doğrulayıcı 6-16)
     { h: "Başlık (≤ 40 karakter)",
       p: "Metin: en fazla 45 kelime (doğrulayıcı 45'i aşanı uyarır, 55'i aşanı hata sayar). <b>, <em>, <sub>, <sup>, <br> kullanılabilir.",
       svg: "<svg viewBox='0 0 320 200'>...</svg>",   // her kartta ZORUNLU
