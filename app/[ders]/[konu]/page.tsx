@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Lesson from "@/components/Lesson";
 import { isDers, nextTopic, readyTopics, topic } from "@/lib/content";
 import { adimliDers } from "@/lib/adimli";
+import "../../ornek/ornek.css";
 
 type Props = { params: Promise<{ ders: string; konu: string }> };
 
@@ -22,5 +23,5 @@ export default async function Page({ params }: Props) {
   const a = adimliDers(konu);
   // key: başka bir konuya geçince ders ekranı baştan başlasın.
   return <Lesson key={`${ders}.${konu}`} ders={ders} id={konu} t={t} next={n?.id ? { id: n.id, title: n.title! } : undefined}
-    adimli={a && a.ders === ders ? { id: a.id, adim: a.adimlar.length } : undefined} />;
+    adimli={a && a.ders === ders ? a : undefined} />;
 }

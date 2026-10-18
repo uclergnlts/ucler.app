@@ -16,8 +16,14 @@ import type { Adim, AdimliDers, Gorev, Kontrol, Secenek } from "@/lib/adimli";
 
 type Degerler = Record<string, number>;
 /** Alttaki çubukta gösterilen geri bildirim (HTML metin). */
-type Bildirim = { ok: boolean; baslik: string; metin: string };
+export type Bildirim = { ok: boolean; baslik: string; metin: string };
 type Bildir = (b: Bildirim | null) => void;
+
+/** Takılan öğrenci için "Çözümü göster": iki yanlıştan sonra (sahnesi oynamayan ayar görevinde bir süre sonra) çıkar. */
+const COZUM_YANLIS = 2, COZUM_SURE = 25000;
+function CozumDugmesi({ onClick }: { onClick: () => void }) {
+  return <button className="ad-cozum" onClick={onClick}>Çözümü göster</button>;
+}
 
 /* ---------- oynatma ---------- */
 
@@ -81,6 +87,10 @@ function Secenekler({ secenekler, sinif, kapali, onSec }: { secenekler: Secenek[
 function Soru({ soru, secenekler, tamam, bildir }: { soru: string; secenekler: Secenek[]; tamam: () => void; bildir: Bildir }) {
   const [yanlis, setYanlis] = useState<number[]>([]);
   const [dogru, setDogru] = useState<number | null>(null);
+  const cozum = () => {
+    const k = secenekler.findIndex((x) => x.dogru);
+    setDogru(k); tamam(); bildir({ ok: true, baslik: "Çözüm", metin: secenekler[k].neden });
+  };
   return (
     <div className="ad-soru">
       <Html as="p" className="ad-soru-h" html={soru} />
@@ -93,6 +103,7 @@ function Soru({ soru, secenekler, tamam, bildir }: { soru: string; secenekler: S
           else { setYanlis((y) => [...y, k]); bildir({ ok: false, baslik: "Tekrar dene", metin: secenekler[k].neden }); }
         }}
       />
+      {dogru === null && yanlis.length >= COZUM_YANLIS && <CozumDugmesi onClick={cozum} />}
     </div>
   );
 }
@@ -131,7 +142,23 @@ function Kontroller({ liste, v, set, kapali }: { liste: Kontrol[]; v: Degerler; 
 
 /* ---------- tek adım ---------- */
 
-function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; bildir: Bildir }) {
+/** Kontrolleri başlangıçtan hedefe birkaç karede götüren değer dizisi (örnek ve çözüm gösterimi için). */
+function kareler(bas: Degerler, hedef: Degerler, kontroller: Kontrol[] = [], bagla?: (ad: string, x: number, v: Degerler) => Degerler) {
+  const out: Degerler[] = [];
+  let v = { ...bas };
+  for (const [ad, son] of Object.entries(hedef)) {
+    const k = kontroller.find((x) => x.ad === ad), adim = k?.adim ?? 1, ilk = v[ad] ?? son;
+    const n = Math.max(1, Math.min(8, Math.round(Math.abs(son - ilk) / adim)));
+    for (let j = 1; j <= n; j++) {
+      const x = j === n ? son : Math.round((ilk + ((son - ilk) * j) / n) / adim) * adim;
+      v = bagla ? bagla(ad, x, v) : { ...v, [ad]: x };
+      out.push(v);
+    }
+  }
+  return out;
+}
+
+export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; bildir: Bildir }) {
   const sahneRef = useCanliSvg<HTMLDivElement>(250);
   const kayit = SAHNELER[a.sahne.tur];
   const sure = a.sahne.sure ?? 0;
@@ -143,13 +170,42 @@ function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; bildir:
   vRef.current = v;
   const o = useOynat(sure, () => setKosular((k) => [...k, vRef.current]));
 
+  // Göster: önce sahne örneği kendisi oynar (kontroller örnek değerlere kayar, sahne oynar), sonra sıra öğrenciye geçer.
+  const [faz, setFaz] = useState<"goster" | "sen">(a.goster ? "goster" : "sen");
+  const [ornekBitti, setOrnekBitti] = useState(false);
+  const [ornekNo, setOrnekNo] = useState(0);
+  useEffect(() => {
+    if (faz !== "goster" || !a.goster) return;
+    setOrnekBitti(false);
+    const bas = { ...(a.deger ?? {}) };
+    setV(bas);
+    const dizi = kareler(bas, a.goster.deger ?? {}, a.kontroller, kayit?.bagla);
+    const zaman: ReturnType<typeof setTimeout>[] = [];
+    dizi.forEach((x, j) => zaman.push(setTimeout(() => setV(x), 600 + j * 260)));
+    const sonra = 600 + dizi.length * 260 + 250;
+    if (sure && a.goster.oynat !== false) zaman.push(setTimeout(o.basla, sonra));
+    else zaman.push(setTimeout(() => setOrnekBitti(true), sonra + 600));
+    return () => zaman.forEach(clearTimeout);
+  }, [faz, ornekNo]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { if (faz === "goster" && kosular.length) setOrnekBitti(true); }, [faz, kosular.length]);
+  const senBasla = () => { setV({ ...(a.deger ?? {}) }); setKosular([]); o.sifirla(); setFaz("sen"); };
+  const ornekte = faz === "goster";
+
+  // Takılınca çözüm: sahnesi oynayan ayar görevinde iki yanlış koşudan, oynamayanda bir süre sonra.
+  const [sureDoldu, setSureDoldu] = useState(false);
+  useEffect(() => {
+    if (ornekte || g.tur !== "ayarla" || sure) return;
+    const z = setTimeout(() => setSureDoldu(true), COZUM_SURE);
+    return () => clearTimeout(z);
+  }, [ornekte, g.tur, sure]);
+
   const set = useCallback(
     (ad: string, x: number) => {
-      if (o.oynuyor) return;
+      if (o.oynuyor || faz === "goster") return;
       setV((eski) => (kayit?.bagla ? kayit.bagla(ad, x, eski) : { ...eski, [ad]: x }));
       o.sifirla();
     },
-    [kayit, o.oynuyor, o.sifirla],
+    [kayit, o.oynuyor, o.sifirla, faz],
   );
 
   const sonKosu = kosular.length ? kosular[kosular.length - 1] : null;
@@ -157,7 +213,7 @@ function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; bildir:
   const farkli = new Set(kosular.map((k) => JSON.stringify(k))).size;
   const acik = g.tur !== "tahmin" || (secim !== null && (!sure || kosular.length > 0) && !o.oynuyor);
   const hedefte = g.tur === "ayarla" && uyar(v, g.hedef);
-  const basari =
+  const basari = ornekte ? false :
     g.tur === "devam" ? true :
     g.tur === "oynat" ? kosular.length > 0 :
     g.tur === "tahmin" ? acik :
@@ -168,7 +224,7 @@ function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; bildir:
 
   // Ayarla ve tahmin görevlerinin geri bildirimi (seçim sorusu kendi bildirir).
   const ayarlaGeri: Bildirim | null =
-    g.tur !== "ayarla" || (sure && !oynandi) ? null :
+    ornekte || g.tur !== "ayarla" || (sure && !oynandi) ? null :
     hedefte ? { ok: true, baslik: "Oldu!", metin: g.tamam } :
     sure ? (() => {
       const m = kayit?.geri?.(v, a.sahne) ?? { baslik: "Henüz değil", metin: g.ipucu ?? "Değerleri değiştirip yeniden oynat." };
@@ -188,6 +244,20 @@ function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; bildir:
     bildir(geri);
   }, [geriAnahtar]);
 
+  const yanlisKosu = g.tur === "ayarla" ? kosular.filter((k) => !uyar(k, g.hedef)).length : 0;
+  const cozumAcik = !ornekte && g.tur === "ayarla" && !basari && !o.oynuyor && (sure ? yanlisKosu >= COZUM_YANLIS : sureDoldu);
+  const cozumGoster = () => {
+    if (g.tur !== "ayarla") return;
+    const hedef = Object.fromEntries(Object.entries(g.hedef).map(([ad, h]) => {
+      if (!Array.isArray(h)) return [ad, h];
+      const k = a.kontroller?.find((x) => x.ad === ad), adim = k?.adim ?? 1;
+      return [ad, Math.min(h[1], Math.max(h[0], Math.round((h[0] + h[1]) / 2 / adim) * adim))];
+    }));
+    const dizi = kareler(v, hedef, a.kontroller, kayit?.bagla);
+    dizi.forEach((x, j) => setTimeout(() => setV(x), j * 200));
+    if (sure) setTimeout(o.basla, dizi.length * 200 + 200);
+  };
+
   if (!kayit) return <p className="ad-ipucu">Bu sahne bulunamadı: {a.sahne.tur}</p>;
   const C = kayit.C;
   const tahminOncesi = g.tur === "tahmin" && secim === null;
@@ -198,17 +268,33 @@ function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; bildir:
         <C s={a.sahne} v={v} set={set} t={o.t} oynuyor={o.oynuyor} kosular={kosular} secim={secim} />
       </div>
 
-      {a.kontroller && <Kontroller liste={a.kontroller} v={v} set={set} kapali={o.oynuyor} />}
+      {ornekte && (
+        <div className="ad-ornek" aria-live="polite">
+          <span className="ad-ornek-k">Örnek</span>
+          {a.goster?.not && <Html as="p" html={a.goster.not} />}
+        </div>
+      )}
 
-      {sure > 0 && !tahminOncesi && !(g.tur === "tahmin" && !acik) && (
+      {a.kontroller && <Kontroller liste={a.kontroller} v={v} set={set} kapali={o.oynuyor || ornekte} />}
+
+      {ornekte ? (
+        <div className="ad-ornek-acts">
+          <Button disabled={!ornekBitti} onClick={senBasla}>Şimdi sen dene</Button>
+          <button className="ad-cozum" disabled={!ornekBitti} onClick={() => setOrnekNo((x) => x + 1)}>Örneği tekrar izle</button>
+        </div>
+      ) : null}
+
+      {!ornekte && sure > 0 && !tahminOncesi && !(g.tur === "tahmin" && !acik) && (
         <button className="ad-oynat" disabled={o.oynuyor} onClick={o.basla}>
           <span aria-hidden="true">{o.oynuyor ? "●" : "▶"}</span> {o.oynuyor ? "Oynuyor" : kosular.length ? "Tekrar oynat" : "Oynat"}
         </button>
       )}
 
-      {g.tur === "secim" && farkli >= (g.kosu ?? 0) && <Soru soru={g.soru} secenekler={g.secenekler} tamam={tamam} bildir={bildir} />}
+      {cozumAcik && <CozumDugmesi onClick={cozumGoster} />}
 
-      {g.tur === "tahmin" && (
+      {!ornekte && g.tur === "secim" && farkli >= (g.kosu ?? 0) && <Soru soru={g.soru} secenekler={g.secenekler} tamam={tamam} bildir={bildir} />}
+
+      {!ornekte && g.tur === "tahmin" && (
         <div className="ad-soru">
           <Html as="p" className="ad-soru-h" html={g.soru} />
           <Secenekler

@@ -87,3 +87,6 @@ Brilliant tarzı örnek dersler `content/adimli/<konu>.json` dosyalarındadır; 
 - `tools/check.py` bu dosyaları da denetler: sahne adı, tek doğru şık, görsel şıkta `etiket`, kontrol sınırları ve hedefin ulaşılabilirliği.
 - Her adımda öğrenci bir şey yapar; geri bildirim alttaki çubukta çıkar, "Devam" görev bitince açılır.
 - Görünüm sade tutulur (Üçler, 2026-10-18): beyaz sayfa, adım başlığı yok, kısa metin, ortada tek görsel, sahnelerde süs arka planı yok.
+- **Konu anlatımının içinde (Üçler, 2026-10-18):** Adımlara `kart` (1'den başlar) yazılırsa adım, konu sayfasında o karttan hemen sonra akışa girer; ayrı "Önce yaparak öğren" bağlantısı çıkmaz. `kart` ya her adımda olur ya hiçbirinde. Görev bitmeden "Devam" açılmaz.
+- **Göster → sen dene:** İsteğe bağlı `goster` alanı (`deger`: kontrollerin örnekte gideceği değerler, görevin cevabı olmamalı; `not`: kısa açıklama; `oynat: false` sahneyi oynatmaz). Adım önce örneği kendisi oynatır, öğrenci "Şimdi sen dene"ye basınca değerler başa döner. Tahmin adımlarında `goster` kullanılmaz (tahmini bozar).
+- **Çözümü göster:** Seçimde iki yanlıştan, oynayan ayar görevinde iki yanlış koşudan, oynamayan ayar görevinde 25 saniyeden sonra çıkar.

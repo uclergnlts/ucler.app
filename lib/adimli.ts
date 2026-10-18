@@ -118,6 +118,11 @@ export type Adim = {
   deger?: Record<string, number>;
   kontroller?: Kontrol[];
   gorev: Gorev;
+  /** Konu anlatımında bu adımın duracağı yer: bu numaralı karttan hemen sonra (1'den başlar). */
+  kart?: number;
+  /** "Göster": öğrenci denemeden önce sahne bir örneği kendisi oynar. deger: kontrollerin örnekte gideceği
+   * değerler (görevin cevabı olmamalı); not: örneğin altındaki kısa açıklama; oynat: false ise sahne oynatılmaz. */
+  goster?: { deger?: Record<string, number>; not?: string; oynat?: boolean };
 };
 
 export type AdimliDers = { id: string; ders: DersId; konu: string; baslik: string; ozet: string; adimlar: Adim[]; kapanis: string[] };

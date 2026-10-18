@@ -29,7 +29,8 @@
       "neden": "Görsele bak: iki sıra da aynı düzende. Su seven kısım hep suya döner."
      }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Difüzyon",
@@ -67,7 +68,8 @@
       "neden": "O₂ küçük ve yüksüz olduğu için zardan geçebilir."
      }
     ]
-   }
+   },
+   "kart": 3
   },
   {
    "baslik": "Kanal proteini",
@@ -107,6 +109,11 @@
     },
     "ipucu": "Kanal kapalıyken iyonlar zarın bir yanında kaldı. Kanal proteinini aç ve yeniden oynat.",
     "tamam": "Kanal açılınca Na⁺ çok olan taraftan az olana geçti. Yine enerji harcanmadı; ama bir proteinin yardımıyla oldu. Buna <b>kolaylaştırılmış difüzyon</b> denir."
+   },
+   "kart": 4,
+   "goster": {
+    "oynat": true,
+    "not": "Kanal kapalıyken Na⁺ iyonları zarın yağlı ortasından geçemiyor."
    }
   },
   {
@@ -148,7 +155,8 @@
       "neden": "Kanal yalnızca kapı açar; tanecikler yine çoktan aza geçer."
      }
     ]
-   }
+   },
+   "kart": 9
   },
   {
    "baslik": "Osmoz",
@@ -178,6 +186,13 @@
      ]
     },
     "tamam": "Dışarısı içeriden daha tuzlu: <b>hipertonik</b> ortam. Su hücreden dışarı çıkar ve alyuvar büzüşür."
+   },
+   "kart": 5,
+   "goster": {
+    "deger": {
+     "tuz": 5
+    },
+    "not": "Dış ortam alyuvarın içinden az tuzlu: su içeri giriyor, alyuvar şişiyor."
    }
   },
   {
@@ -217,7 +232,8 @@
       "neden": "Net su geçişi yalnızca iki yan eşit tuzluyken (%0,9) durur."
      }
     ]
-   }
+   },
+   "kart": 6
   }
  ],
  "kapanis": [

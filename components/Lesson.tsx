@@ -2,8 +2,10 @@
 // Ders ekranı: kartlar -> 4 soruluk mini test -> sonuç.
 // Kartlar slayt gibi yer değiştirmez: "Devam" ile bir sonraki kart altta belirir ve sayfa ona kayar
 // (Brilliant gibi akış). Yeni kartta görsel parça parça çizilir, yazı cümle cümle gelir.
+// Etkileşimli adımları "kart" alanıyla yerleştirilmiş konularda adımlar anlatımın içinde, ilgili karttan hemen
+// sonra gelir: kısa açıklama (kart) → örnek (sahne kendisi oynar) → sıra sende (görev). Görev bitmeden "Devam" açılmaz.
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { DERSLER, type DersId, type Topic } from "@/lib/dersler";
 import { setProg, toggleSaved, useSaved } from "@/lib/store";
 import { kartVideolari, sureYaz, type Video } from "@/lib/videolar";
@@ -17,25 +19,44 @@ import VideoPlayer from "./VideoPlayer";
 import Etk from "./Etk";
 import { Belir, CanliSvg, SiraliMetin, useCanliSvg } from "./canli";
 import { konuOyunlari } from "@/lib/oyunlar";
+import type { Adim, AdimliDers } from "@/lib/adimli";
+import { AdimGorunum, type Bildirim } from "./DersMotoru";
+
+/** Akıştaki öğe: konu kartı ya da etkileşimli adım. */
+type Oge = { tur: "kart"; k: number } | { tur: "adim"; a: Adim; n: number };
 
 type State = { i: number; q: number; picked: number | null; right: number };
 const START: State = { i: 0, q: -1, picked: null, right: 0 };
 
 export default function Lesson({
   ders, id, t, next, adimli,
-}: { ders: DersId; id: string; t: Topic; next?: { id: string; title: string }; adimli?: { id: string; adim: number } }) {
+}: { ders: DersId; id: string; t: Topic; next?: { id: string; title: string }; adimli?: AdimliDers }) {
   const [s, setS] = useState<State>(START);
+  // Adımların hepsi bir karta yerleştirilmişse anlatımın içine girer; değilse ayrı ders olarak bağlantısı çıkar.
+  const birlesik = !!adimli?.adimlar.length && adimli.adimlar.every((a) => a.kart);
+  const ogeler = useMemo(() => {
+    const out: Oge[] = [];
+    t.cards.forEach((_, k) => {
+      out.push({ tur: "kart", k });
+      if (birlesik) adimli!.adimlar.forEach((a, n) => { if (a.kart === k + 1) out.push({ tur: "adim", a, n }); });
+    });
+    return out;
+  }, [t, adimli, birlesik]);
+  const [biten, setBiten] = useState<Set<number>>(() => new Set());
+  const [bildirim, setBildirim] = useState<Bildirim | null>(null);
+  const tamamlar = useMemo(() => ogeler.map((_, j) => () => setBiten((b) => (b.has(j) ? b : new Set(b).add(j)))), [ogeler]);
   const [play, setPlay] = useState<Video | null>(null);
   const yon = useRef<1 | -1>(1); // kart geçişinin yönü (kayma animasyonu için)
   const saved = useSaved().includes(`${ders}.${id}`);
-  const nCards = t.cards.length, nQuiz = t.quiz.length;
+  const nCards = ogeler.length, nQuiz = t.quiz.length, nKart = t.cards.length;
   const Close = Icon.kapat, Bookmark = Icon.kayit;
 
   // Videodan gelen bağlantı (?kart=3) dersi o karttan açar; geçersiz değerde ilk kart.
   useEffect(() => {
     const k = Number(new URLSearchParams(location.search).get("kart"));
-    if (Number.isInteger(k) && k >= 1 && k <= nCards) setS({ ...START, i: k - 1 });
-  }, [nCards]);
+    const j = ogeler.findIndex((o) => o.tur === "kart" && o.k === k - 1);
+    if (Number.isInteger(k) && j >= 0) setS({ ...START, i: j });
+  }, [ogeler]);
 
   useEffect(() => { setProg({ _last: `${ders}.${id}` }); }, [ders, id]);
   useEffect(() => { window.scrollTo(0, 0); }, [s.q]);
@@ -48,8 +69,11 @@ export default function Lesson({
     if (s.q === nQuiz) setProg({ [`${ders}.${id}`]: `${s.right}/${nQuiz} doğru` });
   }, [s.q, s.right, nQuiz, ders, id]);
 
+  const kilitli = s.q < 0 && ogeler[s.i]?.tur === "adim" && !biten.has(s.i);
   function step(dir: 1 | -1) {
+    if (dir > 0 && kilitli) return;
     yon.current = dir;
+    setBildirim(null);
     setS((p) => {
       if (p.q < 0) {
         if (dir > 0) return p.i < nCards - 1 ? { ...p, i: p.i + 1 } : { ...p, q: 0 };
@@ -85,35 +109,66 @@ export default function Lesson({
     key = "kartlar";
     body = (
       <div className="flex flex-col gap-14" aria-live="polite">
-        {adimli && (
+        {adimli && !birlesik && (
           <Link
             href={`/ornek/${adimli.id}/`}
             className="-mb-6 flex items-center gap-3 rounded-2xl bg-acc-soft px-4 py-3.5 transition-transform active:scale-[.99]"
           >
             <span className="grid flex-1 gap-0.5">
               <b className="text-[16px] font-bold">Önce yaparak öğren</b>
-              <span className="text-[14px] text-muted-foreground">Etkileşimli ders · {adimli.adim} adım</span>
+              <span className="text-[14px] text-muted-foreground">Etkileşimli ders · {adimli.adimlar.length} adım</span>
             </span>
             <span className="rounded-full bg-acc px-4 py-2 text-[14px] font-bold text-white">Başla</span>
           </Link>
         )}
-        {t.cards.slice(0, s.i + 1).map((c, k) => (
-          <AkisKart
-            key={k}
-            ref={k === s.i ? sonKart : undefined}
-            c={c}
-            no={k + 1}
-            toplam={nCards}
-            vids={kartVideolari(ders, id, k + 1)}
-            canli={k === s.i}
-            oynat={setPlay}
-          />
-        ))}
+        {ogeler.slice(0, s.i + 1).map((o, j) =>
+          o.tur === "kart" ? (
+            <AkisKart
+              key={j}
+              ref={j === s.i ? sonKart : undefined}
+              c={t.cards[o.k]}
+              no={o.k + 1}
+              toplam={nKart}
+              vids={kartVideolari(ders, id, o.k + 1)}
+              canli={j === s.i}
+              oynat={setPlay}
+            />
+          ) : (
+            <motion.article
+              key={j}
+              ref={j === s.i ? sonKart : undefined}
+              className="ad-kart ad-akista scroll-mt-20"
+              inert={j < s.i}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+            >
+              <SiraliMetin className="ad-metin" html={o.a.metin} gecikme={0.1} />
+              <AdimGorunum a={o.a} tamam={tamamlar[j]} bildir={j === s.i ? setBildirim : yoksay} />
+            </motion.article>
+          ),
+        )}
       </div>
     );
     controls = (
-      <Alt>
-        <Button className="w-full" data-next onClick={() => step(1)}>{last ? "Mini teste geç" : "Devam"}</Button>
+      <Alt durum={bildirim ? (bildirim.ok ? "ok" : "no") : undefined}>
+        <AnimatePresence initial={false} mode="popLayout">
+          {bildirim && (
+            <motion.div
+              key={bildirim.baslik + bildirim.metin}
+              aria-live="polite"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="pb-3"
+            >
+              <Html as="h2" className={cn("mb-0.5 text-lg", bildirim.ok ? "text-good" : "text-bad")} html={bildirim.baslik} />
+              <Html as="p" className="text-[15px] leading-normal" html={bildirim.metin} />
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <Button className="w-full" data-next disabled={kilitli} onClick={() => step(1)}>{last ? "Mini teste geç" : "Devam"}</Button>
       </Alt>
     );
   } else if (s.q < nQuiz) {
@@ -201,7 +256,7 @@ export default function Lesson({
           {konuOyunlari(ders, id).map((o) => (
             <Button key={o.id} asChild variant="outline"><Link href={`/oyunlar/${o.id}/`}>Oyna: {o.ad}</Link></Button>
           ))}
-          <Button variant="outline" onClick={() => setS(START)}>Konuyu tekrar et</Button>
+          <Button variant="outline" onClick={() => { setS(START); setBiten(new Set()); }}>Konuyu tekrar et</Button>
           <Button asChild variant="outline"><Link href={href(ders)}>{DERSLER[ders].ad} konularına dön</Link></Button>
         </div>
       </article>
@@ -252,6 +307,8 @@ export default function Lesson({
     </div>
   );
 }
+
+const yoksay = () => {};
 
 /** Alttaki sabit çubuk: düğmeler ve (testte) renkli geri bildirim. */
 function Alt({ durum, children }: { durum?: "ok" | "no"; children: React.ReactNode }) {

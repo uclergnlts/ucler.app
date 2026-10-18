@@ -201,6 +201,8 @@ for f in sorted(glob.glob(os.path.join(CONTENT, "adimli", "*.json"))):
     elif not sys.argv[1:] and a.get("konu") not in d.get(a["ders"], {}): err("adımlı", ad, "böyle bir hazır konu yok:", a.get("konu"))
     for k in ("baslik", "ozet", "adimlar", "kapanis"):
         if not a.get(k): err("adımlı", ad, "eksik alan:", k)
+    kartlar = [s.get("kart") for s in a.get("adimlar", [])]
+    if any(kartlar) and not all(kartlar): err("adımlı", ad, "kart alanı ya her adımda olmalı ya hiçbirinde (konu anlatımına yerleştirme)")
     for n, s in enumerate(a.get("adimlar", []), 1):
         yer = f"{ad} adım {n}"
         tur = s.get("sahne", {}).get("tur")
@@ -211,6 +213,13 @@ for f in sorted(glob.glob(os.path.join(CONTENT, "adimli", "*.json"))):
             if k.get("tur", "surgu") not in ("surgu", "sayac", "anahtar"): err("adımlı", yer, "bilinmeyen kontrol türü:", k.get("tur"))
             if k["ad"] not in deger: err("adımlı", yer, "kontrolün başlangıç değeri yok:", k["ad"])
             elif not k["min"] <= deger[k["ad"]] <= k["max"]: err("adımlı", yer, k["ad"], "başlangıç değeri sınırların dışında")
+        # konu anlatımına yerleştirme: kart numarası ve "göster" örneği
+        if "kart" in s:
+            nk = len(d.get(a.get("ders"), {}).get(a.get("konu"), {}).get("cards", [])) if not sys.argv[1:] else 0
+            if not isinstance(s["kart"], int) or s["kart"] < 1 or (nk and s["kart"] > nk): err("adımlı", yer, "kart numarası geçersiz:", s["kart"])
+        for k, x in (s.get("goster") or {}).get("deger", {}).items():
+            if k not in kont: err("adımlı", yer, "göster değerinin kontrolü yok:", k)
+            elif not kont[k]["min"] <= x <= kont[k]["max"]: err("adımlı", yer, k, "göster değeri sınırların dışında")
         g = s.get("gorev", {}); gt = g.get("tur")
         if gt not in ("devam", "oynat", "secim", "tahmin", "ayarla"): err("adımlı", yer, "bilinmeyen görev:", gt); continue
         if gt in ("oynat", "tahmin") and not s["sahne"].get("sure"): err("adımlı", yer, gt, "görevi için sahnede sure gerekli")

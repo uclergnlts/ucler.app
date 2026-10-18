@@ -30,6 +30,13 @@
      "x": 30
     },
     "tamam": "Araba başlangıçtan 30 m uzakta, yani konumu x = 30 m. Konum her zaman bir başlangıç noktasına göre söylenir."
+   },
+   "kart": 1,
+   "goster": {
+    "deger": {
+     "x": 12
+    },
+    "not": "Araba başlangıç noktasından 12 m sağa gitti, yani konumu <b>+12 m</b>."
    }
   },
   {
@@ -57,7 +64,8 @@
       "neden": "−30 m yalnızca geri dönüşteki yer değiştirme; ilk 40 m'yi unutma."
      }
     ]
-   }
+   },
+   "kart": 1
   },
   {
    "baslik": "Hız",
@@ -85,6 +93,13 @@
      "vB": 5
     },
     "tamam": "İkisi de her saniye 5 m gidiyor: v = Δx / Δt = 25 m / 5 s = 5 m/s. Aynı hız, aynı aralıklı kareler demek."
+   },
+   "kart": 2,
+   "goster": {
+    "deger": {
+     "vB": 3
+    },
+    "not": "B'nin hızı 3 m/s: her saniye 3 m gidiyor, bu yüzden A'nın gerisinde kalıyor."
    }
   },
   {
@@ -125,6 +140,13 @@
       "neden": "İki çizgi aynı yerde bitmiyor. Hangisi daha yukarıda bitiyor?"
      }
     ]
+   },
+   "kart": 5,
+   "goster": {
+    "deger": {
+     "v": 3
+    },
+    "not": "3 m/s ile giden araba her saniye 3 m daha uzakta, grafiği düz ve eğik bir çizgi."
    }
   },
   {
@@ -168,6 +190,13 @@
       "etiket": "Kareler arası daralıyor"
      }
     ]
+   },
+   "kart": 4,
+   "goster": {
+    "deger": {
+     "a": 1
+    },
+    "not": "İvme 1 m/s²: hız her saniye 1 m/s artıyor, kareler arası giderek açılıyor."
    }
   },
   {
@@ -195,7 +224,8 @@
       "neden": "Hızlanan arabanın konum grafiği giderek dikleşen bir eğridir. Oynatıp arabaya bak."
      }
     ]
-   }
+   },
+   "kart": 12
   }
  ],
  "kapanis": [
