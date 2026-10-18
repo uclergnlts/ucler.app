@@ -1,0 +1,100 @@
+{
+ "id": "hayvanlar-alemi",
+ "ders": "biyoloji",
+ "konu": "hayvanlar-alemi",
+ "baslik": "Hayvanlar âlemi",
+ "ozet": "Omurgayı bul, böcek ile örümceğin bacaklarını say, kalbi odacık odacık kur ve yarasanın sınıfını çöz.",
+ "adimlar": [
+  {
+   "baslik": "İskelet var, omurga var mı?",
+   "metin": "Hayvanlar <b>omurgasız</b> ve <b>omurgalı</b> diye iki gruba ayrılır. Omurgalılarda sırtta omurlardan yapılmış bir omurga bulunur; iç iskeletin parçasıdır ve omuriliği korur. Üç hayvanın iskeletine bak.",
+   "sahne": {"tur": "biy3-iskelet"},
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangisi omurgalıdır?",
+    "secenekler": [
+     {"yazi": "Böcek", "neden": "Böceğin sert bir dış iskeleti var ama omurgası yok. İskelet olması omurgalı demek değildir."},
+     {"yazi": "Deniz yıldızı", "neden": "Derisinin altında kireçli plakalardan bir iç iskeleti var ama omurgası yok; derisi dikenliler omurgasızdır."},
+     {"yazi": "Balık", "dogru": true, "neden": "Balığın sırtında omurlardan oluşan bir omurga var. Bilinen hayvan türlerinin yaklaşık %95'i ise omurgasızdır."}
+    ]
+   }
+  },
+  {
+   "baslik": "Böcek mi, örümcek mi?",
+   "metin": "En kalabalık hayvan şubesi eklem bacaklılardır. Böceklerin 3 çift, örümceklerin 4 çift bacağı vardır; örümcek böcek değildir. Bahçede 2 örümcek var. Toplam bacak sayısı <b>34</b> olacak kadar böcek ekle.",
+   "sahne": {"tur": "biy3-bacak", "orumcek": 2},
+   "deger": {"b": 0},
+   "kontroller": [{"ad": "b", "etiket": "Böcek", "min": 0, "max": 5, "tur": "sayac"}],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {"b": 3},
+    "tamam": "2 örümcek × 8 = 16 bacak, 3 böcek × 6 = 18 bacak; toplam 34. Böceğin vücudu 3 bölümlüdür ve anteni vardır. Örümceğin vücudu 2 bölümlüdür ve anteni yoktur."
+   }
+  },
+  {
+   "baslik": "Kalbi kur",
+   "metin": "Omurgalılarda kalbin odacık sayısı gruba göre değişir. Odacık sayısını değiştir ve kanın nasıl aktığına bak. Sonra bir <b>kuşun</b> kalbini kur.",
+   "sahne": {"tur": "biy3-kalp"},
+   "deger": {"o": 2},
+   "kontroller": [{"ad": "o", "etiket": "Odacık", "min": 2, "max": 4, "tur": "sayac"}],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {"o": 4},
+    "tamam": "Kuşun kalbi dört odacıklıdır: oksijenli ve oksijensiz kan karışmaz, dokulara bol oksijen gider. Balığın kalbi iki odacıklıdır ve içinden yalnızca oksijensiz kan geçer; kan solungaçta oksijenlenir."
+   }
+  },
+  {
+   "baslik": "Değişken ve sabit vücut sıcaklığı",
+   "metin": "Balık, iki yaşamlı ve sürüngenlerin vücut sıcaklığı ortamla birlikte değişir. Kuş ve memeliler ise sıcaklıklarını sabit tutar. Ortam sıcaklığını değiştir ve iki hayvanı karşılaştır.",
+   "sahne": {"tur": "biy3-sicaklik"},
+   "deger": {"T": 30},
+   "kontroller": [{"ad": "T", "etiket": "Ortam sıcaklığı", "min": 0, "max": 40, "birim": "°C"}],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Benzer boydaki fare ile kertenkeleden hangisi daha çok besin yemek zorundadır?",
+    "secenekler": [
+     {"yazi": "Kertenkele", "neden": "Kertenkele vücudunu ısıtmak için besin yakmaz, ısıyı güneşten ve ortamdan alır."},
+     {"yazi": "Fare", "dogru": true, "neden": "Fare, 37 °C'yi korumak için ısıyı metabolizmayla, yani besin yakarak üretir. Isı üretmek pahalıdır: sabit sıcaklıklılar, benzer boydaki sürüngenden çok daha fazla yer."},
+     {"yazi": "İkisi eşit yer", "neden": "Ortamı 5 °C'ye indir: farenin sıcaklığı hâlâ 37 °C. Bu ısı nereden geliyor?"}
+    ]
+   }
+  },
+  {
+   "baslik": "Kim bu hayvan?",
+   "metin": "Bir hayvan akciğerle soluyor, kalbi <b>dört odacıklı</b>, vücut sıcaklığı ise <b>değişken</b>. Odacık sayısını değiştirip hangi gruplarda kaç odacık olduğuna bak.",
+   "sahne": {"tur": "biy3-kalp"},
+   "deger": {"o": 3},
+   "kontroller": [{"ad": "o", "etiket": "Odacık", "min": 2, "max": 4, "tur": "sayac"}],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bu hayvan hangisi olabilir?",
+    "secenekler": [
+     {"yazi": "Kartal", "neden": "Kartalın kalbi dört odacıklıdır ama vücut sıcaklığı sabittir."},
+     {"yazi": "Kurbağa", "neden": "Kurbağanın kalbi üç odacıklıdır."},
+     {"yazi": "Timsah", "dogru": true, "neden": "Timsah bir sürüngendir ama kalbi dört odacıklıdır. Yine de vücut sıcaklığı değişkendir: dört odacık tek başına sabit sıcaklık demek değildir."}
+    ]
+   }
+  },
+  {
+   "baslik": "Uçmak ölçüt değil",
+   "metin": "Hayvanı sınıfına koyarken ona özgü özelliklere bakarız. Tüy yalnızca kuşlarda, <b>kıl ve süt bezi</b> yalnızca memelilerde bulunur. Yarasanın özelliklerini sırayla gör.",
+   "sahne": {"tur": "biy3-yarasa", "sure": 4},
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Yarasa hangi sınıftadır?",
+    "secenekler": [
+     {"yazi": "Kuşlar", "neden": "Yarasanın tüyü yok; uçmak kuşlara özgü değildir."},
+     {"yazi": "Memeliler", "dogru": true, "neden": "Yarasa kıllıdır ve yavrusunu sütle besler: memelidir. Aynı şekilde balina yüzer ama memelidir, penguen uçamaz ama kuştur."},
+     {"yazi": "Sürüngenler", "neden": "Sürüngenlerin derisi kuru ve pulludur, vücut sıcaklıkları değişkendir; yarasa kıllıdır ve sıcaklığı sabittir."}
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Hayvanlar ökaryot, çok hücreli ve heterotroftur; hücrelerinde çeper yoktur.",
+  "Omurgalıyı gösteren, iskelet değil <b>omurgadır</b>. Türlerin yaklaşık %95'i omurgasızdır; en kalabalık şube eklem bacaklılardır.",
+  "Böcek 3 çift, örümcek 4 çift bacaklıdır; örümcek böcek değildir.",
+  "Kalp: balık 2, iki yaşamlı ve çoğu sürüngen 3, kuş, memeli ve timsah 4 odacıklıdır.",
+  "Vücut sıcaklığı yalnızca kuş ve memelilerde sabittir. Tüy kuşa, kıl ve süt bezi memeliye özgüdür."
+ ]
+}

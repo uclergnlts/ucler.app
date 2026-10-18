@@ -1,0 +1,223 @@
+{
+ "id": "vektorler",
+ "ders": "fizik",
+ "konu": "vektorler",
+ "baslik": "Vektörler",
+ "ozet": "Vektörü çiz, uç uca topla, ters çevir ve bileşenlerine ayır.",
+ "adimlar": [
+  {
+   "baslik": "Yön de gerekir",
+   "metin": "Kütle, sıcaklık, zaman gibi büyüklükleri bir sayı ve birim anlatır; bunlar <b>skalerdir</b>. Kutuyu 10 N'luk bir kuvvetle itiyorsun.",
+   "sahne": {
+    "tur": "fiz3-buyukluk"
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Kutunun nereye kayacağını bilmek için kuvvet hakkında başka ne söylenmeli?",
+    "secenekler": [
+     {
+      "yazi": "Kuvvetin birimi",
+      "neden": "Birim zaten belli: newton. Eksik olan başka bir şey."
+     },
+     {
+      "yazi": "Kutunun kütlesi",
+      "neden": "Kütle ne kadar hızlanacağını etkiler, ama nereye gideceğini söylemez."
+     },
+     {
+      "yazi": "Kuvvetin yönü",
+      "dogru": true,
+      "neden": "10 N sağa da, sola da, yukarı da olabilir. Kuvvet, hız, yer değiştirme gibi büyüklükler <b>vektöreldir</b>: sayı + birim + <b>yön</b>."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Ok ile çiz",
+   "metin": "Vektörü okla çizeriz: okun uzunluğu büyüklüğü, ucu yönü gösterir. Yönü, +x ekseniyle yaptığı <b>θ açısıyla</b> veririz. Boyu <b>3 birim</b>, θ = <b>135°</b> olan vektörü çiz.",
+   "sahne": {
+    "tur": "fiz3-vektor"
+   },
+   "deger": {
+    "L": 2,
+    "a": 0
+   },
+   "kontroller": [
+    {
+     "ad": "L",
+     "etiket": "Büyüklük",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    },
+    {
+     "ad": "a",
+     "etiket": "Açı (θ)",
+     "min": 0,
+     "max": 315,
+     "adim": 45,
+     "birim": "°"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "L": 3,
+     "a": 135
+    },
+    "tamam": "135° sol üste bakar. Boyu ve yönü aynı iki vektör, nerede çizilirse çizilsin eşittir."
+   }
+  },
+  {
+   "baslik": "Uç uca topla",
+   "metin": "A'nın ucuna B'nin kuyruğunu koy. İlk kuyruktan son uca çizilen ok <b>bileşkedir</b>: R = A + B. A = 3, B = 4 birim. B'yi döndür ve bileşkeyi <b>tam 5 birim</b> yap.",
+   "sahne": {
+    "tur": "fiz3-toplama"
+   },
+   "deger": {
+    "b": 0
+   },
+   "kontroller": [
+    {
+     "ad": "b",
+     "etiket": "B'nin açısı",
+     "min": 0,
+     "max": 180,
+     "adim": 30,
+     "birim": "°"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "b": 90
+    },
+    "tamam": "A ile B dik olunca bir dik üçgen oluşur: R = √(3² + 4²) = 5. Bileşkenin büyüklüğü, vektörlerin arasındaki açıya bağlıdır; sayıları toplamak yetmez."
+   }
+  },
+  {
+   "baslik": "Bileşke ne kadar olabilir?",
+   "metin": "B'yi 0°'den 180°'ye kadar çevir ve bileşkenin nasıl değiştiğine bak.",
+   "sahne": {
+    "tur": "fiz3-toplama"
+   },
+   "deger": {
+    "b": 60
+   },
+   "kontroller": [
+    {
+     "ad": "b",
+     "etiket": "B'nin açısı",
+     "min": 0,
+     "max": 180,
+     "adim": 30,
+     "birim": "°"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "3 ve 4 birimlik iki vektörün bileşkesi hangi aralıkta kalır?",
+    "secenekler": [
+     {
+      "yazi": "0 ile 7 arasında",
+      "neden": "Bileşkenin sıfır olması için vektörlerin boyları eşit olmalıydı. B'yi 180° yap ve bak."
+     },
+     {
+      "yazi": "1 ile 7 arasında",
+      "dogru": true,
+      "neden": "Aynı yönde en büyük: 3 + 4 = 7. Zıt yönde en küçük: 4 − 3 = 1. Bileşke daima |A − B| ile A + B arasındadır."
+     },
+     {
+      "yazi": "3 ile 4 arasında",
+      "neden": "B'yi 0° yap: bileşke 7 olur, 4'ten büyük."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Sayıyla çarp",
+   "metin": "Vektörü k sayısıyla çarpınca boyu |k| katına çıkar. k negatifse yönü <b>tersine döner</b>. A'nın iki katı uzunlukta ama <b>ters yönde</b> bir vektör yap.",
+   "sahne": {
+    "tur": "fiz3-carpma"
+   },
+   "deger": {
+    "k": 1
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Çarpan (k)",
+     "min": -2,
+     "max": 2,
+     "adim": 0.5,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "k": -2
+    },
+    "tamam": "−2A: boyu iki kat, yönü ters. Çıkarma da buna dayanır: A − B = A + (−B), yani B'yi ters çevirip eklersin."
+   }
+  },
+  {
+   "baslik": "Bileşenler",
+   "metin": "Eğik bir vektörü yatay ve düşey iki parçaya ayırabilirsin: <b>Vx = V·cosθ</b>, <b>Vy = V·sinθ</b>. V = 10 birim. Açıyı değiştir ve <b>düşey bileşeni 5</b> yap.",
+   "sahne": {
+    "tur": "fiz3-bilesen"
+   },
+   "deger": {
+    "a": 60
+   },
+   "kontroller": [
+    {
+     "ad": "a",
+     "etiket": "Açı (θ)",
+     "min": 0,
+     "max": 90,
+     "adim": 15,
+     "birim": "°"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "a": 30
+    },
+    "tamam": "sin 30° = 0,5, yani Vy = 10 × 0,5 = 5. O zaman Vx = 10 × cos 30° ≈ 8,66. İki bileşen uç uca eklenince yine V'yi verir."
+   }
+  },
+  {
+   "baslik": "Bileşenlerden büyüklük",
+   "metin": "Bileşenleri biliyorsan Pisagor yeter: <b>V = √(Vx² + Vy²)</b>. 3 adım doğuya yürüdün. Başlangıç noktana <b>tam 5 adım</b> uzakta olmak için kuzeye kaç adım yürümelisin?",
+   "sahne": {
+    "tur": "fiz3-yuruyus"
+   },
+   "deger": {
+    "k": 0
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Kuzeye adım",
+     "min": 0,
+     "max": 8,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "k": 4
+    },
+    "tamam": "√(3² + 4²) = √25 = 5. Toplam 7 adım yürüdün ama yer değiştirmen 5 adım: yol skaler, yer değiştirme vektördür."
+   }
+  }
+ ],
+ "kapanis": [
+  "<b>Skaler</b>: sayı + birim (kütle, sıcaklık, zaman). <b>Vektör</b>: sayı + birim + yön (kuvvet, hız, yer değiştirme).",
+  "Bileşke, uç uca eklenen vektörlerde ilk kuyruktan son uca çizilen oktur; daima |A − B| ile A + B arasındadır.",
+  "<b>kA</b>: boy |k| katı; k negatifse yön ters. A − B = A + (−B).",
+  "<b>Vx = V·cosθ</b>, <b>Vy = V·sinθ</b>; büyüklük <b>V = √(Vx² + Vy²)</b>."
+ ]
+}

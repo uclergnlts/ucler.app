@@ -231,7 +231,8 @@ for f in sorted(glob.glob(os.path.join(CONTENT, "adimli", "*.json"))):
                 if k not in kont: err("adımlı", yer, "hedefteki değerin kontrolü yok:", k); continue
                 lo, hi = (h if isinstance(h, list) else (h, h))
                 c = kont[k]; adim = c.get("adim", 1)
-                ulasir = [x for x in range(c["min"], c["max"] + 1, adim) if lo <= x <= hi]
+                adimlar = [c["min"] + i * adim for i in range(int(round((c["max"] - c["min"]) / adim)) + 1)]  # adım kesirli olabilir (0,5)
+                ulasir = [x for x in adimlar if lo - 1e-9 <= x <= hi + 1e-9]
                 if not ulasir: err("adımlı", yer, k, "hedefi kontrolle ulaşılamaz:", h)
             if hedef and all(k in deger and (deger[k] == h if not isinstance(h, list) else h[0] <= deger[k] <= h[1]) for k, h in hedef.items()):
                 warn.append(f"adımlı {yer}: hedef başlangıçta zaten sağlanıyor")

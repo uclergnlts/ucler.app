@@ -1,0 +1,103 @@
+{
+ "id": "siniflandirma",
+ "ders": "biyoloji",
+ "konu": "siniflandirma",
+ "baslik": "Canlıların sınıflandırılması",
+ "ozet": "Basamakları in, katırın neden kısır olduğunu gör, bilimsel adı doğru yaz ve âlem anahtarında yol bul.",
+ "adimlar": [
+  {
+   "baslik": "Basamaklarda aşağı",
+   "metin": "Canlılar iç içe basamaklara yerleştirilir: üst âlem, âlem, şube, sınıf, takım, familya, cins, tür. Basamakları ev kedisine doğru in. <b>Ev kedisiyle aynı cinsteki</b> canlıyı bulunca dur.",
+   "sahne": {"tur": "biy3-basamak"},
+   "deger": {"k": 1},
+   "kontroller": [{"ad": "k", "etiket": "Basamak", "min": 1, "max": 8, "tur": "sayac"}],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {"k": 7},
+    "tamam": "Cins <i>Felis</i>: ev kedisi ile yaban kedisi. Aslan bile dışarıda kaldı. Türe indikçe gruptaki canlı sayısı azalır; ortak özellik ve akrabalık artar. En dar birim türdür."
+   }
+  },
+  {
+   "baslik": "Aynı familya, aynı cins değil",
+   "metin": "Aslan ile ev kedisi aynı familyadadır: kedigiller. Basamakları yukarı ve aşağı gezerek ikisinin hangi gruplarda birlikte olduğuna bak.",
+   "sahne": {"tur": "biy3-basamak"},
+   "deger": {"k": 6},
+   "kontroller": [{"ad": "k", "etiket": "Basamak", "min": 1, "max": 8, "tur": "sayac"}],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Aynı familyadaki iki canlı için hangisi <b>kesinlikle</b> doğrudur?",
+    "secenekler": [
+     {"yazi": "Aynı cinstendirler", "neden": "Familyanın altında cins var. Aslan <i>Panthera</i>, ev kedisi <i>Felis</i> cinsindedir."},
+     {"yazi": "Aynı takımdadırlar", "dogru": true, "neden": "Bir alt basamakta birlikte olanlar, onun üstündeki bütün basamakları da paylaşır: takım, sınıf, şube, âlem. Tersi doğru değildir."},
+     {"yazi": "Verimli yavru verebilirler", "neden": "Verimli yavru ölçütü türü tanımlar. Aynı familyadaki aslan ile ev kedisi farklı türlerdir."}
+    ]
+   }
+  },
+  {
+   "baslik": "Tür nedir?",
+   "metin": "<b>Tür</b>, kendi aralarında çiftleşip verimli, yani üreyebilen yavru veren bireylerin oluşturduğu gruptur. Dişi at ile erkek eşek çiftleşince katır doğar.",
+   "sahne": {"tur": "biy3-melez", "sure": 4},
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Katırlar kendi aralarında çiftleşip yavru verebilir mi?",
+    "secenekler": [
+     {"yazi": "Evet, katır yeni bir türdür", "neden": "Yeni bir tür olması için yavruların da üreyebilmesi gerekir."},
+     {"yazi": "Yalnızca atla çiftleşirse", "neden": "Sorun eşte değil, katırın kendisindedir: düzgün üreme hücresi yapamaz."},
+     {"yazi": "Hayır, katır kısırdır", "dogru": true, "neden": "At ve eşeğin kromozomları eşlenemez; katır düzgün üreme hücresi yapamaz. Yavru verimli olmadığı için at ve eşek <b>ayrı türlerdir</b>."}
+    ]
+   }
+  },
+  {
+   "baslik": "İkili adlandırma",
+   "metin": "Linnaeus her türe iki kelimelik Latince bir ad verdi. Cins adı büyük harfle, tanımlayıcı ad küçük harfle başlar ve ikisi de <i>italik</i> yazılır. Kurdun adını kurallara göre düzelt.",
+   "sahne": {"tur": "biy3-ad"},
+   "deger": {"cb": 0, "tb": 1, "it": 0},
+   "kontroller": [
+    {"ad": "cb", "etiket": "Cins adı büyük harfle", "min": 0, "max": 1, "tur": "anahtar"},
+    {"ad": "tb", "etiket": "Tanımlayıcı ad büyük harfle", "min": 0, "max": 1, "tur": "anahtar"},
+    {"ad": "it", "etiket": "İtalik", "min": 0, "max": 1, "tur": "anahtar"}
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {"cb": 1, "tb": 0, "it": 1},
+    "tamam": "<i>Canis lupus</i>: önce cins (<i>Canis</i>), sonra türü belirleyen tanımlayıcı ad (<i>lupus</i>). Köpek de kurtla aynı cinstedir: <i>Canis</i>. Elle yazarken italik yerine iki kelimenin altı ayrı ayrı çizilir.",
+    "ipucu": "Üç kuralı da kontrol et."
+   }
+  },
+  {
+   "baslik": "Âlem anahtarı",
+   "metin": "Canlılar önce üç üst âleme ayrılır: Bakteriler, Arkeler ve Ökaryotlar. Hücre yapısına dair sorularla âlemi bulabilirsin. Ekmek küfü çekirdeklidir ve hücre duvarında <b>kitin</b> vardır.",
+   "sahne": {"tur": "biy3-anahtar", "sure": 3, "hedef": "Mantarlar"},
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Ekmek küfü hangi âlemdedir?",
+    "secenekler": [
+     {"yazi": "Bitkiler", "neden": "Bitkilerin duvarı selülozdur ve fotosentez yaparlar; küf yapmaz."},
+     {"yazi": "Mantarlar", "dogru": true, "neden": "Çekirdekli, kitin duvarlı ve heterotrof: mantar. Mantarlar besini dışarıda sindirip emer; küf de ekmeği böyle tüketir."},
+     {"yazi": "Bakteriler", "neden": "Bakterilerde çekirdek yoktur; küfün hücrelerinde ise çekirdek vardır."}
+    ]
+   }
+  },
+  {
+   "baslik": "Arkeler bakteri değildir",
+   "metin": "Bir kaplıcada tek hücreli bir canlı bulundu. Hücresinde çekirdek yok ve hücre duvarında <b>peptidoglikan bulunmuyor</b>. Anahtarı kullan.",
+   "sahne": {"tur": "biy3-anahtar"},
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bu canlı hangi gruptadır?",
+    "secenekler": [
+     {"yazi": "Bakteriler", "neden": "Bakterilerin hücre duvarında peptidoglikan bulunur; bu canlıda yok."},
+     {"yazi": "Mantarlar", "neden": "Mantarlar ökaryottur, hücrelerinde çekirdek vardır."},
+     {"yazi": "Arkeler", "dogru": true, "neden": "Çekirdeksiz ama peptidoglikansız: arke. Arkeler de prokaryottur ama bakteri değildir. DNA karşılaştırmaları onları ökaryotlara bakterilerden daha yakın gösterir."}
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "Bilim, akrabalığa (ortak ataya) dayanan <b>doğal sınıflandırmayı</b> kullanır.",
+  "Basamaklar: üst âlem > âlem > şube > sınıf > takım > familya > cins > <b>tür</b>. Türe indikçe tür sayısı azalır, ortak özellik ve akrabalık artar.",
+  "<b>Tür</b>: kendi aralarında verimli yavru verebilenler. Katır kısır olduğu için at ve eşek ayrı türlerdir.",
+  "İkili ad italik yazılır; cins büyük, tanımlayıcı küçük harfle başlar: <i>Homo sapiens</i>.",
+  "Üç üst âlem: Bakteriler, Arkeler, Ökaryotlar. Virüsler hücre olmadığı için hiçbir âleme girmez."
+ ]
+}

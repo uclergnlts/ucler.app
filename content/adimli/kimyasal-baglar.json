@@ -1,0 +1,188 @@
+{
+ "id": "kimyasal-baglar",
+ "ders": "kimya",
+ "konu": "kimyasal-baglar",
+ "baslik": "Kimyasal bağlar",
+ "ozet": "Elektron vererek, ortaklaşarak ya da serbest bırakarak kurulan bağları kendin oluştur.",
+ "adimlar": [
+  {
+   "baslik": "Elektron aktarımı",
+   "metin": "Sodyumun dış katmanında 1, klorun dış katmanında 7 elektron var. İkisi de dış katmanını 8 elektrona (oktet) tamamlamaya yatkın.",
+   "sahne": {
+    "tur": "kim3-iyonik",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Sodyum ile klor karşılaşınca ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Klor bir elektronunu sodyuma verir",
+      "neden": "Klorun okteti tamamlaması için 7 elektron vermesi gerekirdi; 1 elektron almak çok daha kolay."
+     },
+     {
+      "yazi": "İkisi elektronlarını ortaklaşa kullanır",
+      "neden": "Ortaklaşma iki ametal arasında olur. Sodyum bir metaldir ve elektronunu kolayca verir."
+     },
+     {
+      "yazi": "Sodyum bir elektronunu klora verir",
+      "dogru": true,
+      "neden": "Sodyum tek dış elektronunu verip Na⁺ (2-8), klor onu alıp Cl⁻ (2-8-8) olur. Zıt yüklü iyonların çekimi <b>iyonik bağdır</b>. Genellikle metal ile ametal arasında oluşur."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Ortak elektron çifti",
+   "metin": "İki ametal atomu elektron aktarmaz, elektronlarını <b>ortaklaşa</b> kullanır. Ortak çifti iki çekirdek birden çeker: <b>kovalent bağ</b>. Ortak çift sayısını artır, iki azot atomunun da okteti tamamlansın.",
+   "sahne": {
+    "tur": "kim3-kovalent"
+   },
+   "deger": {
+    "b": 1
+   },
+   "kontroller": [
+    {
+     "ad": "b",
+     "etiket": "Ortak çift",
+     "min": 1,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "b": 3
+    },
+    "ipucu": "Her ortak çift iki atomun da sayımına girer. 5 + ortak çift sayısı kaç olmalı?",
+    "tamam": "Üç ortak çift: N≡N, üçlü bağ. Her N, 3 ortak çift (6 elektron) ve 1 ortaklanmamış çiftle (2 elektron) 8 elektrona ulaşır. H₂'de tekli, O₂'de ikili bağ vardır."
+   }
+  },
+  {
+   "baslik": "Polar ve apolar",
+   "metin": "Ortak elektron çifti, elektronegatifliği büyük atoma daha yakın durur. Önce iki hidrojen arasındaki çifte bak, sonra ikinci hidrojenin yerine klor koy.",
+   "sahne": {
+    "tur": "kim3-polar"
+   },
+   "deger": {
+    "cl": 0
+   },
+   "kontroller": [
+    {
+     "ad": "cl",
+     "etiket": "İkinci atom klor olsun",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "H–Cl bağında ortak elektron çifti nerede durur?",
+    "secenekler": [
+     {
+      "yazi": "Tam ortada",
+      "neden": "Tam ortada durması için iki atomun çekimi eşit olmalı; bu yalnızca aynı atomlar arasında olur (H₂, Cl₂)."
+     },
+     {
+      "yazi": "Klora daha yakın",
+      "dogru": true,
+      "neden": "Klorun elektronegatifliği (3,2) hidrojeninkinden (2,2) büyük; çifti kendine çeker. Cl kısmi negatif (δ−), H kısmi pozitif (δ+) olur: <b>polar kovalent bağ</b>."
+     },
+     {
+      "yazi": "Hidrojene daha yakın",
+      "neden": "Çifti hangi atom daha güçlü çekiyor? Elektronegatifliklere bak."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Elektron denizi",
+   "metin": "Metal atomları değerlik elektronlarını kolayca bırakır. Bu elektronlar hiçbir atoma ait olmadan dolaşır; katyonlarla aralarındaki çekim <b>metalik bağdır</b>. Metale bir pil bağla.",
+   "sahne": {
+    "tur": "kim3-metal"
+   },
+   "deger": {
+    "pil": 0
+   },
+   "kontroller": [
+    {
+     "ad": "pil",
+     "etiket": "Pili bağla",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "pil": 1
+    },
+    "tamam": "Serbest elektronlar artı kutba doğru akmaya başladı: metal elektriği böyle iletir. Katyon katmanları kayabildiği için metaller dövülüp tel ve levha hâline de getirilebilir."
+   }
+  },
+  {
+   "baslik": "Hidrojen bağı",
+   "metin": "F, O ya da N'ye bağlı H atomu, komşu moleküldeki F, O ya da N'nin ortaklanmamış çiftini çeker: <b>hidrojen bağı</b>. H₂O molekülleri arasında var, H₂S molekülleri arasında yok. İkisini birlikte ısıtacağız.",
+   "sahne": {
+    "tur": "kim3-kaynama",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hangisi daha yüksek sıcaklıkta kaynar?",
+    "secenekler": [
+     {
+      "yazi": "H₂S, çünkü molekülü daha ağır",
+      "neden": "Ağır molekülde London kuvvetleri biraz daha güçlüdür, ama H₂O'daki hidrojen bağları bundan çok daha güçlü."
+     },
+     {
+      "yazi": "H₂O",
+      "dogru": true,
+      "neden": "H₂S −60 °C'de kaynar, daha hafif olan H₂O ise 100 °C'de. Farkı moleküller arasındaki hidrojen bağları yaratır: onları koparmak için daha çok enerji gerekir."
+     },
+     {
+      "yazi": "İkisi aynı sıcaklıkta",
+      "neden": "Moleküller arası çekimleri farklı; kaynama noktaları da farklı olmalı."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Kaynarken ne kopar?",
+   "metin": "Kesikli çizgiler moleküller arasındaki hidrojen bağları, düz çizgiler molekül içindeki O–H kovalent bağları. Şimdi suyu kaynatıyoruz.",
+   "sahne": {
+    "tur": "kim3-kaynatma",
+    "sure": 4
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Su kaynarken hangi bağlar kopar?",
+    "secenekler": [
+     {
+      "yazi": "Molekül içindeki O–H bağları",
+      "neden": "O–H bağları kopsaydı H₂ ve O₂ gibi yeni maddeler oluşurdu; bu, elektrolizde olur ve kimyasal değişimdir."
+     },
+     {
+      "yazi": "Hiçbir bağ kopmaz",
+      "neden": "Moleküller birbirinden uzaklaşıyorsa aralarındaki çekim yenilmiş demektir."
+     },
+     {
+      "yazi": "Moleküller arası hidrojen bağları",
+      "dogru": true,
+      "neden": "Kaynamada yalnızca moleküller arası zayıf etkileşimler kopar; H₂O molekülleri bozulmaz: <b>fiziksel değişim</b>. Kimyasal değişimde güçlü bağlar kopar ve yeni madde oluşur."
+     }
+    ]
+   }
+  }
+ ],
+ "kapanis": [
+  "<b>İyonik bağ</b>: metal elektron verir, ametal alır; zıt yüklü iyonlar birbirini çeker.",
+  "<b>Kovalent bağ</b>: ametaller elektronlarını ortaklaşa kullanır; her çizgi bir ortak çifttir (H₂ tekli, O₂ ikili, N₂ üçlü).",
+  "Ortak çift elektronegatif atoma kayarsa bağ <b>polar</b>, aynı atomlar arasında <b>apolar</b>dır.",
+  "<b>Metalik bağ</b>: katyonlar serbest elektron denizine gömülüdür; bu elektronlar akımı iletir.",
+  "<b>Hidrojen bağı</b> ve van der Waals zayıf etkileşimlerdir; kaynamada bunlar kopar, tepkimede güçlü bağlar kopar."
+ ]
+}

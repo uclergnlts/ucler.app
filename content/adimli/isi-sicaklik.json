@@ -1,0 +1,204 @@
+{
+ "id": "isi-sicaklik",
+ "ders": "fizik",
+ "konu": "isi-sicaklik",
+ "baslik": "Isı, sıcaklık ve genleşme",
+ "ozet": "Çayı ısıt, termometreyi oku, suları karıştır, buzu erit ve rayı uzat: ısıyı yaparak öğren.",
+ "adimlar": [
+  {
+   "baslik": "Sıcaklık nedir?",
+   "metin": "Maddenin tanecikleri durmadan titreşir. <b>Sıcaklık</b>, bu taneciklerin ortalama kinetik enerjisinin ölçüsüdür. Çayı <b>80 °C</b>'ye ısıt ve taneciklere bak.",
+   "sahne": {
+    "tur": "fiz3-tanecik"
+   },
+   "deger": {
+    "T": 20
+   },
+   "kontroller": [
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": 0,
+     "max": 100,
+     "adim": 10,
+     "birim": "°C"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "T": 80
+    },
+    "tamam": "Isındıkça tanecikler daha hızlı titreşti. Termometre bu ortalama hareketi ölçer. Sıcaklık bir enerji miktarı değildir; ortalama enerjinin ölçüsüdür."
+   }
+  },
+  {
+   "baslik": "Damla mı, kova mı?",
+   "metin": "1 atm'de kaynayan bir damla su ile bir kova suyu düşün. <b>Isı</b>, sıcaktan soğuğa aktarılan enerjidir; cisim ısı içermez. <b>İç enerji</b> ise taneciklerin enerjilerinin toplamıdır.",
+   "sahne": {
+    "tur": "fiz3-damla-kova"
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangisinin <b>iç enerjisi</b> daha büyüktür?",
+    "secenekler": [
+     {
+      "yazi": "İkisininki eşit",
+      "neden": "Sıcaklıklar eşit, yani ortalama enerji eşit. Ama iç enerji bir ortalama değil, toplamdır."
+     },
+     {
+      "yazi": "Kovanın",
+      "dogru": true,
+      "neden": "İkisi de 100 °C, yani taneciklerin ortalama enerjisi aynı. Kovada çok daha fazla tanecik var; iç enerji toplam olduğu için madde miktarına bağlıdır. Sıcaklık ise bağlı değildir."
+     },
+     {
+      "yazi": "Damlanın",
+      "neden": "Damlada çok az tanecik var. Toplam enerji tanecik sayısıyla büyür."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Üç ölçek",
+   "metin": "Su Celsius'ta 0 °C'de donar, 100 °C'de kaynar; Kelvin'de 273 ve 373, Fahrenheit'ta 32 ve 212. <b>T = t + 273</b>. Termometreyi <b>300 K</b>'e getir.",
+   "sahne": {
+    "tur": "fiz3-termometre"
+   },
+   "deger": {
+    "t": 0
+   },
+   "kontroller": [
+    {
+     "ad": "t",
+     "etiket": "Sıcaklık",
+     "min": -10,
+     "max": 110,
+     "birim": "°C"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "t": 27
+    },
+    "ipucu": "T = t + 273 ise t = 300 − 273.",
+    "tamam": "300 − 273 = 27 °C, yani 80,6 °F. Fark olarak 1 °C = 1 K = 1,8 °F. Kelvin'de eksi değer yoktur: 0 K ≈ −273 °C."
+   }
+  },
+  {
+   "baslik": "Öz ısı",
+   "metin": "100 g su ve 100 g demir aynı ısıtıcılara konuyor. İkisi de aynı ısıyı, 1000 cal alacak. Başlangıçta ikisi de 20 °C.",
+   "sahne": {
+    "tur": "fiz3-ozisi",
+    "sure": 3
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hangisinin sıcaklığı daha çok artar?",
+    "secenekler": [
+     {
+      "yazi": "Su",
+      "neden": "Suyun öz ısısı çok büyüktür; aynı ısıyla az ısınır."
+     },
+     {
+      "yazi": "İkisi eşit artar",
+      "neden": "Kütleler ve ısı eşit, ama maddeler farklı."
+     },
+     {
+      "yazi": "Demir",
+      "dogru": true,
+      "neden": "Q = m·c·ΔT. Suyun öz ısısı 1, demirinki yaklaşık 0,11 cal/g·°C. Aynı 1000 cal suyu 10 °C, demiri yaklaşık 91 °C ısıtır. Denizler bu yüzden geç ısınıp geç soğur."
+     }
+    ]
+   }
+  },
+  {
+   "baslik": "Isıl denge",
+   "metin": "80 °C'deki 200 g su ile 20 °C'deki soğuk su karışıyor. Isı, sıcaklıklar eşitlenene kadar akar; ısı kaybı yoksa <b>alınan ısı = verilen ısı</b>. Karışımı <b>44 °C</b> yapacak soğuk suyu bul.",
+   "sahne": {
+    "tur": "fiz3-karisim"
+   },
+   "deger": {
+    "m": 100
+   },
+   "kontroller": [
+    {
+     "ad": "m",
+     "etiket": "Soğuk su",
+     "min": 100,
+     "max": 500,
+     "adim": 100,
+     "birim": "g"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "m": 300
+    },
+    "tamam": "200·(80 − 44) = 7200 cal verildi, 300·(44 − 20) = 7200 cal alındı. Denge sıcaklığı iki ilk sıcaklığın arasındadır ve kütlesi büyük olana daha yakındır."
+   }
+  },
+  {
+   "baslik": "Gizli ısı",
+   "metin": "0 °C'de 10 g buz var. Erirken aldığı ısı tanecikler arasındaki çekimi yenmeye gider: <b>Q = m·L</b>, buzun erime ısısı L = 80 cal/g. Buzun <b>hepsini erit</b> ama suyu ısıtma.",
+   "sahne": {
+    "tur": "fiz3-erime"
+   },
+   "deger": {
+    "Q": 0
+   },
+   "kontroller": [
+    {
+     "ad": "Q",
+     "etiket": "Verilen ısı",
+     "min": 0,
+     "max": 1200,
+     "adim": 100,
+     "birim": "cal"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "Q": 800
+    },
+    "tamam": "10 g × 80 cal/g = 800 cal. Erime boyunca sıcaklık hep 0 °C kaldı: ısı alındı, iç enerji arttı ama sıcaklık değişmedi. Bundan sonra verilen ısı suyu ısıtır."
+   }
+  },
+  {
+   "baslik": "Ray uzar",
+   "metin": "Isınan katı uzar: <b>ΔL = L₀·λ·ΔT</b>. 10 m'lik çelik raylar arasında 6 mm boşluk var; çelikte λ ≈ 1,2·10⁻⁵ 1/°C. Sıcaklığı artır ve boşluğun <b>tam kapandığı</b> anı bul.",
+   "sahne": {
+    "tur": "fiz3-ray"
+   },
+   "deger": {
+    "dT": 0
+   },
+   "kontroller": [
+    {
+     "ad": "dT",
+     "etiket": "Sıcaklık artışı",
+     "min": 0,
+     "max": 70,
+     "adim": 5,
+     "birim": "°C"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "dT": 50
+    },
+    "tamam": "10.000 mm × 1,2·10⁻⁵ × 50 = 6 mm. Daha sıcak bir günde boşluk yetmez ve raylar eğrilir. Raylar arasına boşluk, köprülere genleşme derzi bu yüzden bırakılır."
+   }
+  }
+ ],
+ "kapanis": [
+  "<b>Sıcaklık</b> taneciklerin ortalama kinetik enerjisinin ölçüsüdür; madde miktarına bağlı değildir. <b>Isı</b> sıcaktan soğuğa aktarılan enerjidir.",
+  "<b>T = t + 273</b>, F = 1,8·t + 32.",
+  "Hâl değişmiyorsa <b>Q = m·c·ΔT</b>; öz ısısı büyük madde geç ısınır. Isıl dengede alınan ısı = verilen ısı.",
+  "Hâl değişirken <b>Q = m·L</b>; sıcaklık sabit kalır.",
+  "Isınan katı uzar: <b>ΔL = L₀·λ·ΔT</b>."
+ ]
+}
