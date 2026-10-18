@@ -1,10 +1,27 @@
 "use client";
 // Bir dersin konu listesi: hazır konular açık, yazılmamış olanlar "Yakında".
 import Link from "next/link";
+import { motion } from "motion/react";
 import { DERSLER, type DersId, type Entry } from "@/lib/dersler";
 import { useProg } from "@/lib/store";
+import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
-import { href } from "./ui";
+import { Govde, href, Liste } from "./temel";
+import { Button } from "./ui/button";
+import { Progress } from "./ui/progress";
+
+const Dugum = ({ children, durum }: { children: React.ReactNode; durum: "bitti" | "acik" | "yakinda" }) => (
+  <span
+    className={cn(
+      "grid size-8 flex-none place-items-center rounded-full border-[1.5px] font-display text-sm font-extrabold tabular-nums [&_svg]:size-4",
+      durum === "bitti" && "border-acc bg-acc text-primary-foreground",
+      durum === "acik" && "border-acc text-acc",
+      durum === "yakinda" && "border-border-strong text-muted-foreground",
+    )}
+  >
+    {children}
+  </span>
+);
 
 export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
   const prog = useProg();
@@ -14,42 +31,48 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
   return (
     <div className="app" data-ders={ders}>
       <header className="top">
-        <Link className="back" href="/" aria-label="Ana sayfa"><Back /></Link>
+        <Button asChild variant="outline" size="icon"><Link href="/" aria-label="Ana sayfa"><Back /></Link></Button>
       </header>
-      <main className="view">
-        <section className="intro">
-          <h1>{s.ad}</h1>
-          <p>{s.yol}. Konular sırayla birbirinin üzerine kurulu, baştan başlamak en iyisi.</p>
-          <div className="meter big" aria-label={`${ready.length} konudan ${done} tanesi bitti`}>
-            <i style={{ width: `${ready.length ? (100 * done) / ready.length : 0}%` }} />
-          </div>
-          <span className="meter-t">{done} / {ready.length} konu bitti</span>
+      <Govde>
+        <section className="grid gap-1.5">
+          <h1 className="text-[28px]">{s.ad}</h1>
+          <p className="text-[15px] text-muted-foreground">{s.yol}. Konular sırayla birbirinin üzerine kurulu, baştan başlamak en iyisi.</p>
+          <Progress className="mt-2.5" value={ready.length ? (100 * done) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti`} />
+          <span className="text-[13px] font-semibold text-muted-foreground">{done} / {ready.length} konu bitti</span>
         </section>
-        <ol className="road">
-          {list.map((e) => {
-            if (!e.id)
+        <Liste>
+          <ol className="contents">
+            {list.map((e, k) => {
+              const anim = { initial: { opacity: 0, y: 6 }, animate: { opacity: 1, y: 0 }, transition: { delay: Math.min(k, 10) * 0.025 } };
+              if (!e.id)
+                return (
+                  <motion.li key={e.no} {...anim} className="flex items-start gap-3.5 p-4">
+                    <Dugum durum="yakinda">{e.no}</Dugum>
+                    <div className="grid min-w-0 gap-0.5">
+                      <b className="font-semibold leading-snug text-muted-foreground">{e.ad}</b>
+                      <span className="text-sm text-muted-foreground">Yakında</span>
+                    </div>
+                  </motion.li>
+                );
+              const res = prog[`${ders}.${e.id}`];
               return (
-                <li key={e.no} className="soon">
-                  <span className="node">{e.no}</span>
-                  <div className="topic"><b>{e.ad}</b><span className="s">Yakında</span></div>
-                </li>
+                <motion.li key={e.no} {...anim}>
+                  <Link href={href(ders, e.id)} className="flex items-start gap-3.5 p-4 transition-colors active:bg-secondary">
+                    <Dugum durum={res ? "bitti" : "acik"}>{res ? <Check /> : e.no}</Dugum>
+                    <span className="grid min-w-0 gap-0.5">
+                      <b className="font-bold leading-snug">{e.title}</b>
+                      <span className="line-clamp-2 text-sm text-muted-foreground">{e.summary}</span>
+                      <span className={cn("mt-0.5 text-xs font-semibold", res ? "text-acc" : "text-muted-foreground")}>
+                        {e.cardCount} kart · {e.quizCount} soru{res ? ` · ${res}` : ""}
+                      </span>
+                    </span>
+                  </Link>
+                </motion.li>
               );
-            const res = prog[`${ders}.${e.id}`];
-            return (
-              <li key={e.no} className={res ? "done" : undefined}>
-                <Link className="topic-l" href={href(ders, e.id)}>
-                  <span className="node">{res ? <Check /> : e.no}</span>
-                  <span className="topic">
-                    <b>{e.title}</b>
-                    <span className="s">{e.summary}</span>
-                    <span className="meta">{e.cardCount} kart · {e.quizCount} soru{res ? ` · ${res}` : ""}</span>
-                  </span>
-                </Link>
-              </li>
-            );
-          })}
-        </ol>
-      </main>
+            })}
+          </ol>
+        </Liste>
+      </Govde>
     </div>
   );
 }

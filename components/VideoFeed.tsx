@@ -9,7 +9,10 @@ import { DERSLER } from "@/lib/dersler";
 import { toggleSaved, useSaved } from "@/lib/store";
 import { VIDEOLAR, yerHref, type Video } from "@/lib/videolar";
 import { Icon } from "./icons";
-import { PageHead, Top } from "./ui";
+import { AnimatePresence, motion } from "motion/react";
+import { PageHead, Top } from "./temel";
+import { Button } from "./ui/button";
+import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
 
 type Ortak = { muted: boolean; setMuted: (m: boolean) => void; toast: (t: string) => void };
 
@@ -20,7 +23,6 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
   const [cevap, setCevap] = useState(false);
   const [pct, setPct] = useState(0);
   const [hint, setHint] = useState(false);
-  const cevapBtn = useRef<HTMLButtonElement>(null), kapatBtn = useRef<HTMLButtonElement>(null);
   const y = v.yerler[0], key = `${y.ders}.${y.konu}`;
   const saved = useSaved().includes(key);
   const I = Icon;
@@ -66,19 +68,8 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
     return () => clearTimeout(t);
   }, [flash]);
 
-  // Cevap penceresi: açılınca odak "Kapat"a gider ve pencerede kalır; Escape kapatır, kapanınca odak
+  // Cevap penceresi (shadcn/ui Sheet, Radix Dialog): odak içeride kalır, Escape kapatır, kapanınca odak
   // "Cevabı gör" düğmesine döner. Açıkken akışın kısayolları (oklar, boşluk, m) çalışmaz.
-  const kapat = useCallback(() => { setCevap(false); cevapBtn.current?.focus(); }, []);
-  useEffect(() => {
-    if (!cevap) return;
-    kapatBtn.current?.focus();
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") { e.preventDefault(); kapat(); }
-      else if (e.key === "Tab") { e.preventDefault(); kapatBtn.current?.focus(); }
-    };
-    document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
-  }, [cevap, kapat]);
 
   // Klavye: boşluk durdurur/sürdürür, m sesi açar/kapatır (yalnızca ekrandaki videoda).
   useEffect(() => {
@@ -126,7 +117,17 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
         <span className="k"><b>{DERSLER[y.ders].ad}</b> · {konu || v.baslik}</span>
         <div className="reel-acts">
           <Link className="reel-go" href={yerHref(y)}>Konuya git<I.ileri /></Link>
-          {v.cevap && <button ref={cevapBtn} className="reel-pill" aria-haspopup="dialog" onClick={() => setCevap(true)}>Cevabı gör</button>}
+          {v.cevap && (
+            <Sheet open={cevap} onOpenChange={setCevap}>
+              <SheetTrigger className="reel-pill">Cevabı gör</SheetTrigger>
+              <SheetContent data-ders={y.ders} aria-describedby={undefined}>
+                <span className="text-xs font-bold tracking-wide text-acc uppercase">Videonun sorusu</span>
+                <SheetTitle>{v.soru}</SheetTitle>
+                <p className="mb-1.5 text-base leading-relaxed">{v.cevap}</p>
+                <SheetClose asChild><Button variant="outline">Kapat</Button></SheetClose>
+              </SheetContent>
+            </Sheet>
+          )}
           <span className="sp" />
           <button className="reel-ic" onClick={() => { toggleSaved(key); o.toast(saved ? "Kaydedilenlerden çıkarıldı" : "Konu kaydedildi"); }} aria-pressed={saved} aria-label="Konuyu kaydet">
             <I.kayit />
@@ -138,17 +139,6 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
         </div>
       </div>
 
-      {cevap && (
-        <div className="sheet-bg" onClick={kapat}>
-          <div className="sheet" role="dialog" aria-modal="true" aria-label="Sorunun cevabı" onClick={(e) => e.stopPropagation()}>
-            <span className="grip" aria-hidden="true" />
-            <span className="k">Videonun sorusu</span>
-            <b>{v.soru}</b>
-            <p>{v.cevap}</p>
-            <button ref={kapatBtn} className="btn" onClick={kapat}>Kapat</button>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
@@ -194,7 +184,7 @@ export default function VideoFeed({ konular }: { konular: Record<string, string>
       if (!f || !["ArrowDown", "ArrowUp"].includes(e.key)) return;
       e.preventDefault();
       // Cevap penceresi açıkken oklar videoyu değiştirmez; uzun cevapta pencerenin kendisini kaydırır.
-      const sheet = f.querySelector<HTMLElement>(".sheet");
+      const sheet = document.querySelector<HTMLElement>('[data-slot="sheet-content"]');
       if (sheet) { sheet.scrollBy({ top: (e.key === "ArrowDown" ? 1 : -1) * 40 }); return; }
       f.scrollBy({ top: (e.key === "ArrowDown" ? 1 : -1) * f.clientHeight, behavior: "smooth" });
     };
@@ -214,7 +204,21 @@ export default function VideoFeed({ konular }: { konular: Record<string, string>
   return (
     <div className="feed" ref={feed}>
       {VIDEOLAR.map((v) => <Reel key={v.id} v={v} konu={konular[v.id]} active={active === v.id} o={o} />)}
-      {msg && <div className="toast" role="status">{msg}</div>}
+      <AnimatePresence>
+        {msg && (
+          <motion.div
+            key={msg}
+            className="toast"
+            role="status"
+            initial={{ opacity: 0, y: 8, x: "-50%" }}
+            animate={{ opacity: 1, y: 0, x: "-50%" }}
+            exit={{ opacity: 0, y: 8, x: "-50%" }}
+            transition={{ duration: 0.18 }}
+          >
+            {msg}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

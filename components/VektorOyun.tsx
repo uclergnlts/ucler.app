@@ -5,7 +5,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Icon } from "./icons";
-import { href } from "./ui";
+import { href } from "./temel";
 
 type Mod = "cizim" | "kafadan";
 type V = { x: number; y: number };

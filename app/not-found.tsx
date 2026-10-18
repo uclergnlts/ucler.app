@@ -1,14 +1,14 @@
 import Link from "next/link";
-import { Top } from "@/components/ui";
+import { Bos, Top } from "@/components/temel";
 
 export default function NotFound() {
   return (
     <div className="app">
       <Top />
       <main className="view">
-        <div className="empty">
-          Bu sayfa bulunamadı. <Link href="/" style={{ textDecoration: "underline" }}>Ana sayfaya dön</Link>
-        </div>
+        <Bos>
+          Bu sayfa bulunamadı. <Link href="/" className="underline">Ana sayfaya dön</Link>
+        </Bos>
       </main>
     </div>
   );

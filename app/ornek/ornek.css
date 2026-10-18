@@ -1,14 +1,15 @@
 /* Adımlı dersler (components/DersMotoru.tsx, components/sahne/). Sade: beyaz sayfa, ortada tek görsel, kısa metin,
    geri bildirim alttaki çubukta. .opt, .btn ortak parçaları globals.css içindedir. */
+@layer components {
 body:has(.ad-sayfa){background:#fff}
 .ad-sayfa{--bg:#fff;background:#fff}
 .ad-ust{gap:14px}
 .ad-kapat{width:36px;height:36px;display:grid;place-items:center;color:var(--muted);flex:none}
 .ad-adimlar{flex:1;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px}
-.ad-adimlar i{display:block;height:6px;border-radius:3px;background:var(--line);transition:background .3s}
-.ad-adimlar i.on{background:var(--acc)}
+.ad-adimlar i{display:block;height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.ad-adimlar i b{display:block;height:100%;background:var(--acc);transform-origin:left}
 .ad-govde{padding-block:8px 0;gap:0}
-.ad-kart{display:flex;flex-direction:column;gap:20px;padding-bottom:24px;animation:in .25s ease-out}
+.ad-kart{display:flex;flex-direction:column;gap:20px;padding-bottom:24px}
 .ad-metin{margin:0;font-size:18px;line-height:1.55}
 .ad-sahne svg{display:block;width:100%;height:auto;max-height:44vh;margin-inline:auto;font-family:var(--f-body);font-variant-numeric:tabular-nums}
 .ad-surukle{touch-action:none;cursor:grab;user-select:none}
@@ -47,12 +48,10 @@ body:has(.ad-sayfa){background:#fff}
 .ad-cubuk{position:sticky;bottom:0;display:grid;gap:12px;margin:auto -16px 0;padding:12px 16px calc(12px + env(safe-area-inset-bottom, 0px));background:#fff;border-top:1px solid var(--line);transition:background .2s}
 .ad-cubuk.ok{background:#eaf7ef;border-color:transparent}
 .ad-cubuk.no{background:#fdeeed;border-color:transparent}
-.ad-mesaj{animation:in .2s ease-out}
 .ad-mesaj h2{margin:0 0 2px;font-size:18px}
 .ad-mesaj p{margin:0;font-size:15px;line-height:1.5}
 .ad-cubuk.ok h2{color:var(--good)}
 .ad-cubuk.no h2{color:var(--bad)}
-.ad-cubuk .btn{width:100%}
 
 /* bitiş */
 .ad-bitti{margin:8px 0 0;font-size:24px}
@@ -68,3 +67,4 @@ body:has(.ad-sayfa){background:#fff}
 .ad-akis{animation:ad-akis 1.6s ease-in-out infinite}
 @keyframes ad-akis{50%{opacity:.45}}
 @media (prefers-reduced-motion:reduce){.ad-don,.ad-kay,.ad-akis{animation:none}}
+}

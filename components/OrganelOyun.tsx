@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Icon } from "./icons";
-import { href } from "./ui";
+import { href } from "./temel";
 
 type Mod = "hayvan" | "bitki";
 type Org = { ad: string; gorev: string; not: string };

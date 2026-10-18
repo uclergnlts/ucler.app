@@ -6,7 +6,9 @@ import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
 import { doneKeys, useAd, useProg } from "@/lib/store";
 import { sureYaz, VIDEOLAR } from "@/lib/videolar";
 import { Icon } from "./icons";
-import { href, InstaLink, Top } from "./ui";
+import { motion } from "motion/react";
+import { Progress } from "./ui/progress";
+import { Bolum, Govde, href, InstaLink, Liste, Simge, Top } from "./temel";
 
 export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
   const prog = useProg(), ad = useAd();
@@ -29,70 +31,71 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
   return (
     <div className="app">
       <Top />
-      <main className="view">
-        <section className="intro">
-          <h1>Hoş geldin{ad ? `, ${ad}` : ""}</h1>
-          {doneAll > 0 && <p>Şimdiye kadar {doneAll} konu bitirdin.</p>}
+      <Govde>
+        <section className="grid gap-1.5">
+          <h1 className="text-[28px]">Hoş geldin{ad ? `, ${ad}` : ""}</h1>
+          {doneAll > 0 && <p className="text-[15px] text-muted-foreground">Şimdiye kadar {doneAll} konu bitirdin.</p>}
         </section>
 
         {last && (
-          <Link className="resume" data-ders={last.ders} href={href(last.ders, last.id)}>
-            <span className="dot"><Play /></span>
-            <span className="txt">
-              <span className="k">Kaldığın yerden devam et</span>
-              <b>{last.title}</b>
+          <Link
+            data-ders={last.ders}
+            href={href(last.ders, last.id)}
+            className="flex items-center gap-3.5 rounded-2xl bg-acc p-4 text-primary-foreground transition-transform active:scale-[.99]"
+          >
+            <span className="grid size-11 flex-none place-items-center rounded-xl bg-white/20 [&_svg]:size-5"><Play /></span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-[13px] font-semibold opacity-85">Kaldığın yerden devam et</span>
+              <b className="block truncate font-bold">{last.title}</b>
             </span>
             <Next />
           </Link>
         )}
 
-        <section className="sec">
-          <h2 className="sec-h">Dersler</h2>
-          <div className="list">
+        <Bolum title="Dersler">
+          <Liste>
             {DERS_IDS.map((d) => {
               const s = DERSLER[d], ready = all[d].filter((e) => e.id);
               const done = ready.filter((e) => prog[`${d}.${e.id}`]).length;
               const I = Icon[d];
               return (
-                <Link key={d} className="subj" data-ders={d} href={href(d)}>
-                  <span className="ic"><I /></span>
-                  <span className="txt">
-                    <b>{s.ad}</b>
-                    <span className="s">{s.yol}</span>
-                    <span className="meter" aria-label={`${ready.length} konudan ${done} tanesi bitti`}>
-                      <i style={{ width: `${ready.length ? (100 * done) / ready.length : 0}%` }} />
-                    </span>
+                <Link key={d} data-ders={d} href={href(d)} className="flex items-center gap-3.5 p-4 transition-colors active:bg-secondary">
+                  <Simge className="size-11 [&_svg]:size-[22px]"><I /></Simge>
+                  <span className="grid min-w-0 flex-1 gap-0.5">
+                    <b className="font-display text-[17px] font-extrabold">{s.ad}</b>
+                    <span className="text-sm text-muted-foreground">{s.yol}</span>
+                    <Progress className="mt-1.5 h-1" value={ready.length ? (100 * done) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti`} />
                   </span>
-                  <span className="n">{done}/{ready.length}</span>
+                  <span className="flex-none text-[13px] font-bold tabular-nums text-muted-foreground">{done}/{ready.length}</span>
                 </Link>
               );
             })}
-          </div>
-        </section>
+          </Liste>
+        </Bolum>
 
         {VIDEOLAR.length > 0 && (
-          <section className="sec">
-            <div className="sec-row">
-              <h2 className="sec-h">Kısa videolar</h2>
-              <Link className="more" href="/videolar/">Tümü</Link>
-            </div>
-            <div className="shelf">
-              {VIDEOLAR.map((v) => (
-                <Link key={v.id} className="thumb" href={`/videolar/#${v.id}`} aria-label={`${v.baslik} (${sureYaz(v.sure)})`}>
-                  <span className="pic">
-                    {v.poster && <img src={v.poster} alt="" loading="lazy" />}
-                    <span className="t">{sureYaz(v.sure)}</span>
-                  </span>
-                </Link>
+          <Bolum title="Kısa videolar" more={<Link className="text-sm font-bold text-muted-foreground" href="/videolar/">Tümü</Link>}>
+            <div className="-mx-4 flex snap-x snap-mandatory gap-2.5 overflow-x-auto px-4 [scrollbar-width:none]">
+              {VIDEOLAR.map((v, k) => (
+                <motion.div
+                  key={v.id}
+                  className="w-[118px] flex-none snap-start"
+                  initial={{ opacity: 0, x: 12 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: Math.min(k, 6) * 0.04 }}
+                >
+                  <Link href={`/videolar/#${v.id}`} aria-label={`${v.baslik} (${sureYaz(v.sure)})`} className="relative block aspect-[9/16] overflow-hidden rounded-xl border border-border bg-secondary">
+                    {v.poster && <img src={v.poster} alt="" loading="lazy" className="size-full object-cover" />}
+                    <span className="absolute right-1.5 bottom-1.5 rounded-md bg-white/90 px-1.5 text-[11px] font-bold">{sureYaz(v.sure)}</span>
+                  </Link>
+                </motion.div>
               ))}
             </div>
-          </section>
+          </Bolum>
         )}
 
-        <section className="sec">
-          <InstaLink />
-        </section>
-      </main>
+        <InstaLink />
+      </Govde>
     </div>
   );
 }

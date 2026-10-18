@@ -6,7 +6,10 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Icon } from "./icons";
 import { SAHNELER } from "./sahne";
-import { Html } from "./ui";
+import { AnimatePresence, motion } from "motion/react";
+import { cn } from "@/lib/utils";
+import { Html } from "./temel";
+import { Button } from "./ui/button";
 import type { Adim, AdimliDers, Gorev, Kontrol, Secenek } from "@/lib/adimli";
 
 type Degerler = Record<string, number>;
@@ -224,38 +227,61 @@ export default function DersMotoru({ ders }: { ders: AdimliDers }) {
       <header className="top ad-ust">
         <Link className="ad-kapat" href={konu} aria-label="Dersten çık"><Close /></Link>
         <span className="ad-adimlar" aria-label={`${Math.min(i + 1, n)} / ${n}`}>
-          {ders.adimlar.map((_, k) => <i key={k} className={k < i || (k === i && biten[k]) || son ? "on" : ""} />)}
+          {ders.adimlar.map((_, k) => (
+            <i key={k}>
+              <motion.b initial={false} animate={{ scaleX: k < i || (k === i && biten[k]) || son ? 1 : 0 }} transition={{ duration: 0.35, ease: "easeOut" }} />
+            </i>
+          ))}
         </span>
       </header>
       <main className="view ad-govde">
-        {!son ? (
-          <article className="ad-kart" key={i}>
-            <Html as="p" className="ad-metin" html={A.metin} />
-            <AdimGorunum a={A} tamam={tamam} bildir={setBildirim} />
-          </article>
-        ) : (
-          <article className="ad-kart">
-            <h2 className="ad-bitti">{ders.baslik}: bitti</h2>
-            <ul className="ad-ozet">
-              {ders.kapanis.map((m, k) => <li key={k} dangerouslySetInnerHTML={{ __html: m }} />)}
-            </ul>
-            <div className="ad-acts">
-              <Link className="btn main" href={konu}>Konunun kartlarına ve testine geç</Link>
-              <button className="btn" onClick={() => { git(0); setBiten(ders.adimlar.map(() => false)); }}>Baştan başla</button>
-            </div>
-          </article>
-        )}
-        {!son && (
-          <div className={`ad-cubuk ${bildirim ? (bildirim.ok ? "ok" : "no") : ""}`}>
-            {bildirim && (
-              <div className="ad-mesaj" aria-live="polite" key={bildirim.baslik + bildirim.metin}>
-                <Html as="h2" html={bildirim.baslik} />
-                <Html as="p" html={bildirim.metin} />
+        <AnimatePresence mode="wait" initial={false}>
+          {!son ? (
+            <motion.article
+              className="ad-kart"
+              key={i}
+              initial={{ opacity: 0, x: 24 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -24 }}
+              transition={{ duration: 0.18, ease: "easeOut" }}
+            >
+              <Html as="p" className="ad-metin" html={A.metin} />
+              <AdimGorunum a={A} tamam={tamam} bildir={setBildirim} />
+            </motion.article>
+          ) : (
+            <motion.article className="ad-kart" key="son" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }}>
+              <h2 className="ad-bitti">{ders.baslik}: bitti</h2>
+              <ul className="ad-ozet">
+                {ders.kapanis.map((m, k) => <li key={k} dangerouslySetInnerHTML={{ __html: m }} />)}
+              </ul>
+              <div className="ad-acts">
+                <Button asChild><Link href={konu}>Konunun kartlarına ve testine geç</Link></Button>
+                <Button variant="outline" onClick={() => { git(0); setBiten(ders.adimlar.map(() => false)); }}>Baştan başla</Button>
               </div>
-            )}
-            <button className="btn main" disabled={!biten[i]} onClick={() => git(i + 1)}>
+            </motion.article>
+          )}
+        </AnimatePresence>
+        {!son && (
+          <div className={cn("ad-cubuk", bildirim && (bildirim.ok ? "ok" : "no"))}>
+            <AnimatePresence initial={false} mode="popLayout">
+              {bildirim && (
+                <motion.div
+                  className="ad-mesaj"
+                  aria-live="polite"
+                  key={bildirim.baslik + bildirim.metin}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Html as="h2" html={bildirim.baslik} />
+                  <Html as="p" html={bildirim.metin} />
+                </motion.div>
+              )}
+            </AnimatePresence>
+            <Button className="w-full" disabled={!biten[i]} onClick={() => git(i + 1)}>
               {i === n - 1 ? "Bitir" : "Devam"}
-            </button>
+            </Button>
           </div>
         )}
       </main>

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import { coz, FORMULLER, katkiDegeri, say, toplam, yanlisSay } from "@/lib/formul";
 import { Icon } from "./icons";
-import { href } from "./ui";
+import { href } from "./temel";
 
 type Soru = { f: string; ad: string; el: string | null; dogru: number; secenek: number[] };
 type Durum = { sorular: Soru[]; i: number; secim: number | null; dogru: number };

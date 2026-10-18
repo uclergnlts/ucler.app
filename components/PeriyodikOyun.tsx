@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ELEMENTLER, grup18, katmanlar, yer } from "@/lib/elementler";
 import { Icon } from "./icons";
-import { href } from "./ui";
+import { href } from "./temel";
 
 type Mod = "z" | "ezber";
 type Durum = { mod: Mod; sira: number[]; i: number; secim: [number, number] | null; sonuc: Record<number, boolean>; dogru: number };

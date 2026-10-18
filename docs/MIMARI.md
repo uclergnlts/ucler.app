@@ -12,7 +12,7 @@ content/
   videolar.json    yayına hazır videolar ve bağlı oldukları konu/kart (docs/VIDEOLAR.md)
 app/               sayfalar (adres = klasör)
   layout.tsx       yazı tipleri, alt menü
-  globals.css      bütün stil: renk değişkenleri, bileşen sınıfları
+  globals.css      renk değişkenleri, shadcn/ui jetonları (@theme), eski bileşen sınıfları (oyunlar, video, etkileşimli kartlar)
   page.tsx                 /                ana sayfa
   kesfet/page.tsx          /kesfet/         arama ve ders süzgeci
   kaydedilenler/page.tsx   /kaydedilenler/  eski adres; Profil'i gösterir (kaydedilenler Profil'in içinde)
@@ -21,7 +21,8 @@ app/               sayfalar (adres = klasör)
   videolar/page.tsx        /videolar/       Videolar sekmesi: dikey video akışı
   [ders]/page.tsx          /<ders>/         konu yolu
   [ders]/[konu]/page.tsx   /<ders>/<konu>/  ders ekranı
-components/        ekranların kendisi (Home, Road, Lesson, Explore, Profile, Oyunlar, Tabs, VideoPlayer, VideoFeed, ui, icons)
+components/        ekranların kendisi (Home, Road, Lesson, Explore, Profile, Oyunlar, Tabs, VideoPlayer, VideoFeed, temel, icons)
+components/ui/     shadcn/ui parçaları (Button, Card, Input, Badge, Progress, Sheet); kod projenin içindedir, görünümü biz belirleriz
 lib/
   dersler.ts       türler ve ders listesi (tarayıcıya giden küçük kısım)
   content.ts       konu içeriğini okuyan yardımcılar (yalnızca derleme sırasında)
@@ -38,8 +39,8 @@ lib/
   - `tf-saved`: kaydedilen konular
 
   Anahtarlardaki `tf-` öneki eski "Temelden Fen" adından kalmıştır. Değiştirilirse kullanıcıların mevcut ilerlemesi kaybolur.
-- **Tema:** Renkler `app/globals.css` içinde `:root` CSS değişkenleriyle tanımlıdır. `data-ders` özniteliği dersin vurgu rengini (`--acc`) belirler. Konu SVG'leri de yalnızca bu değişkenleri kullanır. Tailwind yüklüdür; yeni bileşenlerde yardımcı sınıflar kullanılabilir, ama renkler yine bu değişkenlerden gelir.
-- **İçerik HTML'i:** Kart metinleri küçük HTML parçaları taşır (`<b>`, `<em>`, `<sub>`...). Bunlar `components/ui.tsx` içindeki `Html` bileşeniyle basılır. İçerik bizim yazdığımız ve doğrulayıcıdan geçen metindir; kullanıcıdan gelen metin bu yoldan basılmamalı.
+- **Tema:** Renkler `app/globals.css` içinde `:root` CSS değişkenleriyle tanımlıdır. `data-ders` özniteliği dersin vurgu rengini (`--acc`) belirler. Konu SVG'leri de yalnızca bu değişkenleri kullanır. Arayüz **shadcn/ui** (Tailwind + Radix) ve **Motion** (animasyon) ile yazılır (Üçler, 2026-10-18). shadcn jetonları (`bg-primary`, `border-border`, `text-muted-foreground`, `bg-acc`...) `globals.css` içindeki `@theme inline` bloğunda bu değişkenlere bağlıdır, yani renkler yine buradan gelir. Eski sınıflar `@layer components` içindedir; Tailwind sınıfları onların üstüne yazar. Yeni parça gerekirse `npx shadcn add <ad>` ile `components/ui/` altına eklenir ve renkleri jetonlara uydurulur.
+- **İçerik HTML'i:** Kart metinleri küçük HTML parçaları taşır (`<b>`, `<em>`, `<sub>`...). Bunlar `components/temel.tsx` içindeki `Html` bileşeniyle basılır. İçerik bizim yazdığımız ve doğrulayıcıdan geçen metindir; kullanıcıdan gelen metin bu yoldan basılmamalı.
 
 ### Komutlar
 ```bash

@@ -4,7 +4,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Etk } from "@/lib/dersler";
 import { hesapla } from "@/lib/ifade";
-import { Html } from "./ui";
+import { Html } from "./temel";
 
 type Of<T extends Etk["tur"]> = Extract<Etk, { tur: T }>;
 

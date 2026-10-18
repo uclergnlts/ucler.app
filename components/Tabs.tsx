@@ -4,6 +4,8 @@
 // Ders ekranında (/ders/konu/) gizlenir.
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "motion/react";
+import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
 
 const TABS = [
@@ -20,14 +22,30 @@ export default function Tabs() {
   const cur =
     parts.length === 0
       ? "home"
-      : ({ kaydedilenler: "profil", profil: "profil", videolar: "video", oyunlar: "oyun" } as const)[parts[0]] ?? "home";
+      : ({ kesfet: "kesfet", kaydedilenler: "profil", profil: "profil", videolar: "video", oyunlar: "oyun" } as const)[parts[0]] ?? "home";
   return (
-    <div className={`tabs${cur === "video" ? " on-video" : ""}`}>
-      <nav aria-label="Bölümler">
+    <div className="fixed inset-x-0 bottom-0 z-10 border-t border-border bg-card pb-[env(safe-area-inset-bottom,0px)]">
+      <nav aria-label="Bölümler" className="mx-auto grid h-[var(--nav)] max-w-[520px] grid-cols-5">
         {TABS.map((t) => {
-          const I = Icon[t.k];
+          const I = Icon[t.k], on = cur === t.k;
           return (
-            <Link key={t.k} className="tab" href={t.href} aria-current={cur === t.k ? "page" : undefined}>
+            <Link
+              key={t.k}
+              href={t.href}
+              aria-current={on ? "page" : undefined}
+              className={cn(
+                "relative grid content-center justify-items-center gap-0.5 text-[11px] transition-colors [&_svg]:size-6",
+                on ? "font-bold text-foreground [&_svg]:stroke-[2.4]" : "font-semibold text-muted-foreground",
+              )}
+            >
+              {on && (
+                <motion.span
+                  layoutId="sekme"
+                  aria-hidden="true"
+                  className="absolute top-0 h-0.5 w-8 rounded-full bg-foreground"
+                  transition={{ type: "spring", stiffness: 500, damping: 40 }}
+                />
+              )}
               <I />
               <span>{t.label}</span>
             </Link>

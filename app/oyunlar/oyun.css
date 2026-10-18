@@ -1,5 +1,6 @@
 /* Oyun alanındaki vektör, organel ve atom sayma oyunlarının ek stilleri.
    Ortak parçalar (.oyun-ust, .oyun-soru, .opts, .bubble, .btn) app/globals.css içindedir. */
+@layer components {
 
 /* Formülde atom say */
 .formul sub{font-size:.6em;line-height:0;vertical-align:-.25em}
@@ -40,3 +41,4 @@
 .og-hit:focus-visible{stroke:var(--ink);stroke-dasharray:4 3}
 .og-hit.ok{fill:color-mix(in srgb, var(--good) 16%, transparent);stroke:var(--good);stroke-opacity:.8}
 .og-hit.no{fill:color-mix(in srgb, var(--bad) 16%, transparent);stroke:var(--bad);stroke-opacity:.8}
+}

@@ -33,7 +33,7 @@ Senin görevin **denetlemek**. Yeniden tasarlamak, ürünün yönünü değişti
 |---|---|
 | `content/dersler.json` | Her dersin sıralı konu listesi (hangi konular hazır, hangileri yakında). |
 | `content/fizik.json`, `kimya.json`, `biyoloji.json` | Konu içerikleri (kartlar, SVG görseller, 4 soruluk testler). |
-| `app/`, `components/`, `lib/` | Mobil öncelikli site (Next.js + React + TypeScript). Stil `app/globals.css` içindedir. |
+| `app/`, `components/`, `lib/` | Mobil öncelikli site (Next.js + React + TypeScript). Arayüz shadcn/ui (`components/ui/`) + Tailwind + Motion; renkler `app/globals.css` içindedir. |
 | `tools/check.py` | İçerik doğrulayıcı. |
 | `tools/ekran.js` | Her sayfanın ve kartın telefon boyutunda ekran görüntüsünü alır. |
 | `video/` | Kısa dikey video şablonu, senaryolar, üretim adımları. |
