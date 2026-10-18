@@ -34,7 +34,7 @@ Bu dosyadaki kararları Üçler verdi. Codex bunları değiştirmez. Bir karara 
   3. Claude videoyu üretir.
 
 ## Konu yolları (sınav listeleriyle, 2026-10-15)
-Sıralama `content/dersler.json` dosyasındadır. Fizik 26, kimya 25, biyoloji 26 konudan oluşur.
+Sıralama `content/dersler.json` dosyasındadır. Fizik 28, kimya 26, biyoloji 28 konudan oluşur.
 - TYT konuları Üçler'in gönderdiği listelerden alındı.
 - **AYT konuları Claude'un müfredat bilgisinden eklendi ve resmi listeyle henüz karşılaştırılmadı.**
 
