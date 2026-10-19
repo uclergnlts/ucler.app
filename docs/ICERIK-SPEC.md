@@ -109,4 +109,4 @@ Brilliant tarzı örnek dersler `content/adimli/<konu>.json` dosyalarındadır; 
   - `coz`: "Çözümü göster"de kontrollerin sırayla gideceği değer kümeleri. Düğme 25 saniye yeni bulgu çıkmazsa belirir ve bulunmamış ilk bulguyu gösterir.
   - Kontrol türü `dugme`: basınca değeri 1 olur; sahnenin `bagla` işlevi eylemi uygular ve değeri 0'a döndürür (ör. "Taze enzim koy").
   - Sahnenin kendi hesapladığı bir durum (ör. kutu kayıyor mu, zarın sağındaki iyon sayısı) `set` ile bildirilir ve hedeflerde kullanılır; başlangıç değeri `deger` içinde verilir.
-  - Şimdiye kadar: fizik `iki-boyutta-hareket` (atış), `newton-yasalari` (sürtünme); kimya `asit-baz` (pH), `gazlar` (gaz pistonu); biyoloji `enzimler` (sıcaklık), `madde-gecisi` (zar ve difüzyon).
+  - Şimdiye kadar: fizik `iki-boyutta-hareket` (atış), `newton-yasalari` (sürtünme); kimya `asit-baz` (pH), `gazlar` (gaz pistonu); biyoloji `enzimler` (sıcaklık), `madde-gecisi` (zar ve difüzyon). 3. grup: `is-enerji-guc` (rampa), `tepkime-hizi` (çarpışma), `fotosentez` (sınırlayıcı faktör).

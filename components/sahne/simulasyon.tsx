@@ -469,7 +469,193 @@ function ZarLab({ v, set, saat = 0 }: SahneProps) {
   );
 }
 
+/* ---------- fizik: kaykay rampası ve enerjinin korunumu ---------- */
+
+/* Rampa y = k·x² (m), g = 10 m/s². Kaykaycı x0 = −√(h/k)'den durgun bırakılır. Sürtünme açıkken μ = 0,25. */
+const RP = { k: 0.2, g: 10, MU: 0.25, X0: 170, Y0: 196, PXM: 28 };
+const rpX = (x: number) => RP.X0 + x * RP.PXM, rpY = (y: number) => RP.Y0 - y * RP.PXM;
+
+function RampaLab({ v, set, saat = 0 }: SahneProps) {
+  const h = v.h ?? 2, m = v.m ?? 40, sur = v.sur === 1;
+  const dt = useAdim(saat);
+  const anahtar = `${h}|${m}|${v.sur ?? 0}`;
+  const r = useRef({ anahtar: "", x: 0, hiz: 0, dur: false });
+  const d = r.current;
+  if (d.anahtar !== anahtar) Object.assign(d, { anahtar, x: -Math.sqrt(h / RP.k), hiz: 0, dur: false });
+  // Eğim boyunca hareket: a = −g·sinθ − μ·g·cosθ·yön. Kararlılık için kareyi küçük adımlara böl.
+  for (let i = 0; i < 8 && !d.dur; i++) {
+    const e = dt / 8, egim = 2 * RP.k * d.x, th = Math.atan(egim), cos = Math.cos(th);
+    let a = -RP.g * Math.sin(th);
+    if (sur) {
+      if (Math.abs(d.hiz) < 0.05 && Math.abs(egim) < RP.MU) { d.hiz = 0; d.dur = true; break; }
+      a -= Math.sign(d.hiz || -egim) * RP.MU * RP.g * cos;
+    }
+    const once = d.hiz;
+    d.hiz += a * e;
+    if (sur && once !== 0 && Math.sign(once) !== Math.sign(d.hiz) && Math.abs(egim) < RP.MU) { d.hiz = 0; d.dur = true; }
+    const ds = d.hiz * e;
+    d.x += ds * cos;
+  }
+  const y = RP.k * d.x * d.x, PE = m * RP.g * y, KE = 0.5 * m * d.hiz * d.hiz, top = m * RP.g * h;
+  // Isı, kaybolan mekanik enerjidir (sayısal adımların küçük hatası çubuğu taşırmasın).
+  const isi = sur ? Math.max(0, top - PE - KE) : 0;
+  const durdu = sur && (d.dur || PE + KE < top * 0.03) ? 1 : 0;
+  useBildir(v, set, { durdu });
+  const xm = Math.sqrt(5.4 / RP.k);
+  const yol = Array.from({ length: 61 }, (_, i) => { const x = -xm + (i / 60) * 2 * xm; return `${rpX(x).toFixed(1)},${rpY(RP.k * x * x).toFixed(1)}`; }).join(" ");
+  const egim = Math.atan(2 * RP.k * d.x), kx = rpX(d.x) - Math.sin(egim) * 3, ky = rpY(y) - Math.cos(egim) * 3;
+  const genis = 300, bar = (e: number) => (e / Math.max(top, 1)) * genis;
+  return (
+    <svg viewBox="0 0 340 262" role="img" aria-label={`${m} kilogram, ${h} metreden bırakıldı; kinetik ${Math.round(KE)}, potansiyel ${Math.round(PE)}, ısı ${Math.round(isi)} joule`}>
+      <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">h = {h} m · m = {m} kg · hız {say(Math.abs(d.hiz))} m/s</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{sur ? "sürtünme açık (μ = 0,25)" : `sürtünmesiz: en altta v = √(2gh) = ${say(Math.sqrt(2 * RP.g * h))} m/s`}</text>
+      <polyline points={yol} fill="none" stroke="var(--ink)" strokeWidth={3} strokeLinecap="round" />
+      <line x1={rpX(-xm)} x2={rpX(xm)} y1={rpY(h)} y2={rpY(h)} stroke="var(--c3)" strokeDasharray="4 4" opacity={0.6} />
+      <text x={rpX(xm) + 4} y={rpY(h) + 4} fontSize={10.5} fontWeight={700} fill="var(--c3)" textAnchor="end">{h} m</text>
+      <g transform={`translate(${kx} ${ky}) rotate(${(-egim * 180) / Math.PI})`}>
+        <rect x={-11} y={-3} width={22} height={4} rx={2} fill="var(--ink)" />
+        <circle cx={0} cy={-11} r={7} fill="var(--fizik)" />
+      </g>
+      {/* enerji çubuğu: üç parçanın toplamı hep aynı uzunlukta */}
+      <g>
+        <rect x={20} y={222} width={bar(KE)} height={14} fill="var(--c1)" />
+        <rect x={20 + bar(KE)} y={222} width={bar(PE)} height={14} fill="var(--c3)" />
+        <rect x={20 + bar(KE) + bar(PE)} y={222} width={bar(isi)} height={14} fill="var(--c2)" />
+        <rect x={20} y={222} width={genis} height={14} fill="none" stroke="var(--line-2)" />
+      </g>
+      <g fontSize={10.5} fontWeight={700}>
+        <text x={20} y={252} fill="var(--c1)">kinetik {Math.round(KE)} J</text>
+        <text x={130} y={252} fill="var(--c3)">potansiyel {Math.round(PE)} J</text>
+        <text x={320} y={252} fill="var(--c2)" textAnchor="end">ısı {Math.round(isi)} J</text>
+      </g>
+    </svg>
+  );
+}
+
+/* ---------- kimya: çarpışma ve tepkime hızı ---------- */
+
+const EA = 50, EA_KAT = 40, R_J = 8.314;
+/** 300 K, katalizörsüz ve 1 birim derişime göre bağıl hız: hız ∝ [A][B]·e^(−Ea/RT). */
+const bagilHiz = (T: number, n: number, kat: boolean) => n * n * Math.exp((-(kat ? EA_KAT : EA) * 1000) / R_J * (1 / T - 1 / 300)) * Math.exp(((kat ? EA - EA_KAT : 0) * 1000) / (R_J * 300));
+const CK = { x0: 12, x1: 196, ust: 58, alt: 210 };
+type Parca = { x: number; y: number; vx: number; vy: number; tur: 0 | 1; parla: number };
+
+function CarpismaLab({ v, saat = 0 }: SahneProps) {
+  const T = v.T ?? 300, n = v.n ?? 1, kat = v.kat === 1, hiz = bagilHiz(T, n, kat);
+  const dt = useAdim(saat);
+  const r = useRef<{ p: Parca[]; urun: number[]; } | null>(null);
+  if (!r.current) {
+    const q = rastgele(5);
+    r.current = { urun: [], p: Array.from({ length: 48 }, (_, i) => { const a = q() * 6.28; return { x: CK.x0 + 6 + q() * (CK.x1 - CK.x0 - 12), y: CK.ust + 6 + q() * (CK.alt - CK.ust - 12), vx: Math.cos(a), vy: Math.sin(a), tur: (i % 2) as 0 | 1, parla: -9 }; }) };
+  }
+  const d = r.current, adet = n * 16, sur = 55 * Math.sqrt(T / 300);
+  // Görsel olasılık: etkin çarpışma oranı bağıl hızla orantılı (en çok 1).
+  const olas = Math.min(1, 0.03 * hiz / (n * n));
+  const ps = d.p.slice(0, adet);
+  for (const q of ps) {
+    q.x += q.vx * sur * dt; q.y += q.vy * sur * dt;
+    if (q.x < CK.x0 + 5 || q.x > CK.x1 - 5) { q.vx = -q.vx; q.x = sinir(q.x, CK.x0 + 5, CK.x1 - 5); }
+    if (q.y < CK.ust + 5 || q.y > CK.alt - 5) { q.vy = -q.vy; q.y = sinir(q.y, CK.ust + 5, CK.alt - 5); }
+  }
+  for (let i = 0; i < ps.length; i++) for (let j = i + 1; j < ps.length; j++) {
+    const a = ps[i], b = ps[j];
+    if (a.tur === b.tur || saat - a.parla < 0.5 || saat - b.parla < 0.5) continue;
+    if (Math.hypot(a.x - b.x, a.y - b.y) < 9 && Math.random() < olas) { a.parla = b.parla = saat; d.urun.push(saat); }
+  }
+  d.urun = d.urun.filter((t) => saat - t < 5);
+  // Maxwell–Boltzmann (şematik ölçek): f(E) ∝ √E·e^(−E/kT) / (kT)^1,5; eşiğin sağı boyalı.
+  const Ea = kat ? EA_KAT : EA, kT = (14 * T) / 300;
+  const MB = { x0: 214, x1: 330, y0: 92, y1: 178, EMAX: 70 };
+  const f = (E: number, k = kT) => (Math.sqrt(E) * Math.exp(-E / k)) / Math.pow(k, 1.5);
+  const tepe = f(7, 14) * 1.25;
+  const mbX = (E: number) => MB.x0 + (E / MB.EMAX) * (MB.x1 - MB.x0), mbY = (y: number) => MB.y1 - (y / tepe) * (MB.y1 - MB.y0);
+  const nok = Array.from({ length: 71 }, (_, i) => [i, f(i)] as const);
+  const egri = nok.map(([E, y]) => `${mbX(E).toFixed(1)},${mbY(y).toFixed(1)}`).join(" ");
+  const alan = `M${mbX(Ea)} ${MB.y1} ` + nok.filter(([E]) => E >= Ea).map(([E, y]) => `L${mbX(E).toFixed(1)} ${mbY(y).toFixed(1)}`).join(" ") + ` L${mbX(MB.EMAX)} ${MB.y1} Z`;
+  return (
+    <svg viewBox="0 0 340 236" role="img" aria-label={`${T} kelvin, derişim ${n}, katalizör ${kat ? "var" : "yok"}: bağıl hız ${say(hiz)}`}>
+      <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">bağıl hız ×{hiz < 10 ? say(hiz) : Math.round(hiz)}</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">T = {T} K · Ea = {Ea} kJ · son 5 s: {d.urun.length} etkin çarpışma</text>
+      <rect x={CK.x0} y={CK.ust} width={CK.x1 - CK.x0} height={CK.alt - CK.ust} rx={10} fill="none" stroke="var(--line-2)" strokeWidth={1.5} />
+      {ps.map((q, i) => {
+        const yeni = saat - q.parla < 0.5;
+        return <circle key={i} cx={q.x} cy={q.y} r={yeni ? 7 : 4.2} fill={yeni ? "var(--c4)" : q.tur ? "var(--c1)" : "var(--c2)"} opacity={yeni ? 0.9 : 1} />;
+      })}
+      <g fontSize={11} fontWeight={700}>
+        <circle cx={18} cy={224} r={4} fill="var(--c2)" /><text x={26} y={228} fill="var(--c2)">A</text>
+        <circle cx={46} cy={224} r={4} fill="var(--c1)" /><text x={54} y={228} fill="var(--c1)">B</text>
+        <circle cx={74} cy={224} r={5} fill="var(--c4)" /><text x={83} y={228} fill="var(--muted)">etkin çarpışma</text>
+      </g>
+      <path d={alan} fill="var(--kimya)" opacity={0.3} />
+      <polyline points={egri} fill="none" stroke="var(--kimya)" strokeWidth={2} />
+      <line x1={mbX(Ea)} x2={mbX(Ea)} y1={MB.y0 - 6} y2={MB.y1} stroke="var(--ink)" strokeDasharray="3 3" />
+      <text x={mbX(Ea) + 3} y={MB.y0 - 8} fontSize={10.5} fontWeight={700} fill="var(--ink)">Ea</text>
+      <line x1={MB.x0} x2={MB.x1} y1={MB.y1} y2={MB.y1} stroke="var(--ink)" strokeWidth={1.2} />
+      <line x1={MB.x0} x2={MB.x0} y1={MB.y0 - 14} y2={MB.y1} stroke="var(--ink)" strokeWidth={1.2} />
+      <text x={(MB.x0 + MB.x1) / 2} y={MB.y1 + 14} fontSize={10} fill="var(--muted)" textAnchor="middle">tanecik enerjisi</text>
+      <text x={MB.x0} y={MB.y0 - 20} fontSize={10.5} fontWeight={700} fill="var(--muted)">tanecik sayısı</text>
+    </svg>
+  );
+}
+
+/* ---------- biyoloji: fotosentez hızı (su bitkisi) ---------- */
+
+/** Bağıl fotosentez hızı (0-1): en kıt faktör (ışık ya da CO₂) sınırlar; sıcaklıkta tepe 30 °C. */
+const fotoHiz = (isik: number, co2: number, T: number) => {
+  const fT = Math.exp(-Math.pow((T - 30) / (T > 30 ? 8 : 14), 2));
+  return Math.min(1, isik / 40, co2 / 40) * fT;
+};
+type Kabarcik = { t: number; x: number };
+
+function FotoLab({ v, saat = 0 }: SahneProps) {
+  const isik = v.isik ?? 20, co2 = v.co2 ?? 30, T = v.T ?? 25, hz = fotoHiz(isik, co2, T);
+  const dt = useAdim(saat);
+  const r = useRef<{ biri: number; k: Kabarcik[] }>({ biri: 0, k: [] });
+  const d = r.current;
+  d.biri += hz * 6 * dt;
+  while (d.biri >= 1) { d.biri -= 1; d.k.push({ t: saat, x: 118 + (Math.random() - 0.5) * 18 }); }
+  d.k = d.k.filter((b) => saat - b.t < 2.4);
+  const sinirlayan = T > 34 ? "sıcaklık" : isik / 40 < co2 / 40 && isik < 40 ? "ışık" : co2 < 40 ? "CO₂" : T < 26 ? "sıcaklık" : "hiçbiri: en hızlı";
+  const GR2 = { x0: 226, x1: 330, y0: 86, y1: 176 };
+  const egri = Array.from({ length: 51 }, (_, i) => { const L = i * 2; return `${(GR2.x0 + (L / 100) * (GR2.x1 - GR2.x0)).toFixed(1)},${(GR2.y1 - fotoHiz(L, co2, T) * (GR2.y1 - GR2.y0)).toFixed(1)}`; }).join(" ");
+  const parlak = isik / 100;
+  return (
+    <svg viewBox="0 0 340 236" role="img" aria-label={`Işık yüzde ${isik}, CO2 ${co2}, ${T} derece: hız yüzde ${Math.round(hz * 100)}`}>
+      <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--biyoloji)">hız %{Math.round(hz * 100)} · {Math.round(hz * 360)} kabarcık/dk</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">sınırlayan: {sinirlayan}</text>
+      {/* lamba */}
+      <g>
+        <circle cx={34} cy={96} r={14} fill={`rgba(242,193,46,${0.15 + 0.85 * parlak})`} stroke="var(--ink)" strokeWidth={1.5} />
+        {parlak > 0 && [0, 1, 2, 3, 4].map((k) => { const a = -0.8 + k * 0.4; return <line key={k} x1={34 + Math.cos(a) * 19} y1={96 + Math.sin(a) * 19} x2={34 + Math.cos(a) * (19 + 12 * parlak)} y2={96 + Math.sin(a) * (19 + 12 * parlak)} stroke="var(--c4)" strokeWidth={2} strokeLinecap="round" />; })}
+      </g>
+      {/* beher, su ve bitki */}
+      <path d="M70 70 L70 206 Q70 214 78 214 L170 214 Q178 214 178 206 L178 70" fill="none" stroke="var(--ink)" strokeWidth={2} />
+      <rect x={71} y={84} width={106} height={129} fill="var(--c1)" opacity={0.08} />
+      <path d="M120 212 C116 180 124 150 118 112" fill="none" stroke="var(--biyoloji)" strokeWidth={3} />
+      {[200, 184, 168, 152, 136, 122].map((y, k) => (
+        <g key={y} fill="var(--biyoloji)">
+          <ellipse cx={k % 2 ? 108 : 132} cy={y - 4} rx={11} ry={4} transform={`rotate(${k % 2 ? 20 : -20} ${k % 2 ? 108 : 132} ${y - 4})`} />
+        </g>
+      ))}
+      {d.k.map((b, i) => { const u = (saat - b.t) / 2.4; return <circle key={i} cx={b.x + Math.sin(u * 9 + i) * 3} cy={112 - u * 26} r={2.6} fill="#fff" stroke="var(--c1)" strokeWidth={1.2} opacity={1 - u} />; })}
+      <g fontSize={11} fontWeight={700} fill="var(--muted)">
+        <text x={124} y={230} textAnchor="middle">su bitkisi · {T} °C</text>
+      </g>
+      {/* hız–ışık grafiği (şimdiki CO₂ ve sıcaklıkta) */}
+      <polyline points={egri} fill="none" stroke="var(--line-2)" strokeWidth={2.2} />
+      <line x1={GR2.x0} x2={GR2.x1} y1={GR2.y1} y2={GR2.y1} stroke="var(--ink)" strokeWidth={1.2} />
+      <line x1={GR2.x0} x2={GR2.x0} y1={GR2.y0 - 8} y2={GR2.y1} stroke="var(--ink)" strokeWidth={1.2} />
+      <text x={GR2.x0 + 4} y={GR2.y0 - 12} fontSize={10.5} fontWeight={700} fill="var(--ink)">hız</text>
+      <text x={(GR2.x0 + GR2.x1) / 2} y={GR2.y1 + 15} fontSize={10} fill="var(--muted)" textAnchor="middle">ışık şiddeti</text>
+      <circle cx={GR2.x0 + (isik / 100) * (GR2.x1 - GR2.x0)} cy={GR2.y1 - hz * (GR2.y1 - GR2.y0)} r={6} fill="var(--biyoloji)" />
+    </svg>
+  );
+}
+
 export const SIMULASYON: Record<string, SahneKaydi> = {
+  "sim-rampa": { C: RampaLab, canli: true },
+  "sim-carpisma": { C: CarpismaLab, canli: true, olc: (v) => ({ hiz: Math.round(bagilHiz(v.T ?? 300, v.n ?? 1, v.kat === 1) * 100) / 100 }) },
+  "sim-foto": { C: FotoLab, canli: true, olc: (v) => ({ hiz: Math.round(fotoHiz(v.isik ?? 20, v.co2 ?? 30, v.T ?? 25) * 100) / 100 }) },
   "sim-surtunme": { C: SurtunmeLab, canli: true },
   "sim-gaz": { C: GazLab, canli: true, olc: (v) => ({ P: Math.round(gazP(v.n ?? 1, v.T ?? 27, v.V ?? 24.6) * 100) / 100 }) },
   "sim-zar": {

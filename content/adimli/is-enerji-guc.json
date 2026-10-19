@@ -135,18 +135,37 @@
    "kart": 5
   },
   {
-   "baslik": "Sürtünme",
-   "metin": "20 kg'lık çocuk 3 m yüksek kaydıraktan kayıyor. Önce sürtünmesiz kaydır. Sonra <b>sürtünmeyi aç</b> ve yeniden kaydır.",
+   "baslik": "Rampa laboratuvarı",
+   "metin": "Kaykaycıyı rampanın ucundan bırakıyorsun (g = 10 m/s²). Yüksekliği, kütleyi ve sürtünmeyi değiştir; alttaki çubuk enerjinin nasıl biçim değiştirdiğini gösterir. Aşağıdakileri kendin bul.",
    "sahne": {
-    "tur": "fiz5-kaydirak",
-    "sure": 3
+    "tur": "sim-rampa"
    },
    "deger": {
-    "s": 0
+    "h": 2,
+    "m": 40,
+    "sur": 0,
+    "durdu": 0
    },
    "kontroller": [
     {
-     "ad": "s",
+     "ad": "h",
+     "etiket": "Bırakma yüksekliği",
+     "min": 1,
+     "max": 5,
+     "adim": 0.5,
+     "birim": "m"
+    },
+    {
+     "ad": "m",
+     "etiket": "Kütle",
+     "min": 20,
+     "max": 80,
+     "adim": 20,
+     "birim": "kg",
+     "tur": "sayac"
+    },
+    {
+     "ad": "sur",
      "etiket": "Sürtünme",
      "min": 0,
      "max": 1,
@@ -154,21 +173,65 @@
     }
    ],
    "gorev": {
-    "tur": "ayarla",
-    "hedef": {
-     "s": 1
-    },
-    "ipucu": "Şimdi sürtünmeyi aç ve yeniden kaydır.",
-    "tamam": "Sürtünme mekanik enerjinin bir kısmını <b>ısıya</b> çevirdi: çocuk daha yavaş indi, kaydırak ısındı. Enerji yok olmadı; potansiyel, kinetik ve ısı toplamı hep 588 J."
+    "tur": "kesfet",
+    "bulgular": [
+     {
+      "yazi": "Sürtünmesiz rampada en alttaki hızı <b>10 m/s</b> yapan yüksekliği bul.",
+      "hedef": {
+       "h": 5,
+       "sur": 0
+      },
+      "coz": [
+       {
+        "sur": 0,
+        "h": 5
+       }
+      ],
+      "tamam": "m·g·h = ½·m·v² olduğundan v = √(2gh) = √(2·10·5) = 10 m/s. Kaykaycı karşı tarafta yine 5 m'ye çıkıyor: KE + PE hep aynı."
+     },
+     {
+      "yazi": "5 m'de kütleyi önce <b>40</b>, sonra <b>80 kg</b> yap. En alttaki hız değişiyor mu?",
+      "hedef": [
+       {
+        "h": 5,
+        "m": 40,
+        "sur": 0
+       },
+       {
+        "h": 5,
+        "m": 80,
+        "sur": 0
+       }
+      ],
+      "sirali": true,
+      "coz": [
+       {
+        "sur": 0,
+        "h": 5,
+        "m": 40
+       },
+       {
+        "m": 80
+       }
+      ],
+      "tamam": "Hız değişmedi (10 m/s): m iki tarafta da var ve sadeleşir. Ama enerji 2 katına çıktı: 2000 J yerine 4000 J."
+     },
+     {
+      "yazi": "Sürtünmeyi aç ve kaykaycı durana kadar izle. Enerji nereye gitti?",
+      "hedef": {
+       "sur": 1,
+       "durdu": 1
+      },
+      "coz": [
+       {
+        "sur": 1
+       }
+      ],
+      "tamam": "Mekanik enerji (KE + PE) azaldı ama çubuğun boyu değişmedi: azalan kısım <b>ısıya</b> dönüştü. Enerji yok olmaz, biçim değiştirir."
+     }
+    ]
    },
-   "kart": 7,
-   "goster": {
-    "deger": {
-     "s": 0
-    },
-    "not": "Sürtünmesiz: 588 J'lik potansiyel enerjinin hepsi kinetiğe dönüşüyor, çocuk dibe yaklaşık 7,7 m/s ile varıyor.",
-    "oynat": true
-   }
+   "kart": 7
   },
   {
    "baslik": "Güç",

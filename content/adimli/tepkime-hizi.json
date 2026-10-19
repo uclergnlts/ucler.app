@@ -183,17 +183,35 @@
    "kart": 12
   },
   {
-   "baslik": "Katalizör",
-   "metin": "Katalizörü aç ve enerji diyagramına bak.",
+   "baslik": "Çarpışma laboratuvarı",
+   "metin": "Kapta A ve B tanecikleri çarpışıyor; turuncu parlama, ürün veren <b>etkin çarpışmadır</b>. Sağdaki eğri taneciklerin enerji dağılımı, boyalı kısım Ea'yı aşanlar. Derişimi, sıcaklığı ve katalizörü değiştir.",
    "sahne": {
-    "tur": "kim9-katalizor"
+    "tur": "sim-carpisma"
    },
    "deger": {
-    "k": 0
+    "T": 300,
+    "n": 1,
+    "kat": 0
    },
    "kontroller": [
     {
-     "ad": "k",
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": 250,
+     "max": 400,
+     "adim": 10,
+     "birim": "K"
+    },
+    {
+     "ad": "n",
+     "etiket": "Derişim",
+     "min": 1,
+     "max": 3,
+     "tur": "sayac",
+     "onek": "×"
+    },
+    {
+     "ad": "kat",
      "etiket": "Katalizör",
      "min": 0,
      "max": 1,
@@ -201,21 +219,66 @@
     }
    ],
    "gorev": {
-    "tur": "secim",
-    "soru": "Katalizör neyi değiştirmez?",
-    "secenekler": [
+    "tur": "kesfet",
+    "bulgular": [
      {
-      "yazi": "İleri aktifleşme enerjisini",
-      "neden": "Değiştirir: 120 kJ'den 60 kJ'e indi. Katalizör tepkimeye daha alçak tepeli yeni bir yol açar."
+      "yazi": "300 K'de A ve B'nin derişimini <b>2 katına</b> çıkar. Hız kaç kat oldu?",
+      "hedef": {
+       "n": 2,
+       "T": 300,
+       "kat": 0
+      },
+      "coz": [
+       {
+        "kat": 0,
+        "T": 300,
+        "n": 2
+       }
+      ],
+      "tamam": "Hız 4 kat oldu: A da B de 2 kat, A–B çarpışmaları 2 × 2 = 4 kat. Bu tepkime için hız = k[A][B]."
      },
      {
-      "yazi": "Tepkime hızını",
-      "neden": "Değiştirir: tepe alçalınca daha çok çarpışma etkin olur, hız artar."
+      "yazi": "Derişim 1'de sıcaklığı <b>300 K</b>'den yalnızca <b>310 K</b>'ye çıkar.",
+      "hedef": [
+       {
+        "n": 1,
+        "T": 300,
+        "kat": 0
+       },
+       {
+        "n": 1,
+        "T": 310,
+        "kat": 0
+       }
+      ],
+      "sirali": true,
+      "coz": [
+       {
+        "kat": 0,
+        "n": 1,
+        "T": 300
+       },
+       {
+        "T": 310
+       }
+      ],
+      "tamam": "10 K'de hız ≈ 1,9 kat oldu. Tanecikler biraz hızlandı ama asıl neden, eğrinin Ea'yı aşan kısmının büyümesi."
      },
      {
-      "yazi": "ΔH'yi",
-      "neden": "Girenlerin ve ürünlerin enerjisi aynı kaldı, ΔH hep −100 kJ. Katalizör iki yönün Ea'sını da eşit miktarda düşürür.",
-      "dogru": true
+      "yazi": "300 K ve derişim 1'de <b>katalizör</b> ekle.",
+      "hedef": {
+       "n": 1,
+       "T": 300,
+       "kat": 1
+      },
+      "coz": [
+       {
+        "n": 1,
+        "T": 300,
+        "kat": 1
+       }
+      ],
+      "tamam": "Katalizör Ea'yı 50'den 40 kJ'e indirdi: eşik sola kaydı, sıcaklık değişmeden hız ≈ 55 kat oldu. Katalizör tepkimeden değişmeden çıkar."
      }
     ]
    },

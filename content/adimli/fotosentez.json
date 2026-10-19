@@ -65,22 +65,24 @@
    "goster": { "oynat": true, "not": "Işık varken tilakoit sürekli ATP ve NADPH yapıyor; Calvin döngüsü dönüyor ve şeker birikiyor." }
   },
   {
-   "baslik": "Sınırlayıcı faktör",
-   "metin": "Işık şiddeti yüksek ama hız artmıyor. Hızı en kıt olan faktör belirler. Fotosentezi en hızlı hâle getir.",
-   "sahne": { "tur": "biy8-sinirlayici" },
-   "deger": { "isik": 80, "co2": 1 },
+   "baslik": "Fotosentez laboratuvarı",
+   "metin": "Su bitkisi fotosentez yaptıkça O₂ kabarcıkları çıkarır. Işığı, CO₂'yi ve sıcaklığı değiştir; kabarcıklar ve grafik anında değişir. Aşağıdakileri kendin bul.",
+   "sahne": { "tur": "sim-foto" },
+   "deger": { "isik": 20, "co2": 30, "T": 25 },
    "kontroller": [
     { "ad": "isik", "etiket": "Işık şiddeti", "min": 0, "max": 100, "adim": 10, "birim": "%" },
-    { "ad": "co2", "etiket": "CO₂", "min": 1, "max": 3, "tur": "sayac" }
+    { "ad": "co2", "etiket": "CO₂", "min": 0, "max": 100, "adim": 10, "birim": "%" },
+    { "ad": "T", "etiket": "Sıcaklık", "min": 5, "max": 45, "birim": "°C" }
    ],
-   "gorev": {
-    "tur": "ayarla",
-    "hedef": { "isik": [80, 100], "co2": 3 },
-    "ipucu": "Eğrinin düz kısmında ışığı artırmak işe yaramaz. Öteki faktörü artır.",
-    "tamam": "Düz kısımda sınırlayan ışık değil CO₂'ydi; CO₂ artınca eğri yükseldi. Hızı artırmak için o anda en kıt olan faktörü artırmalısın."
-   },
-   "kart": 11,
-   "goster": { "deger": { "isik": 100 }, "not": "Işığı %100'e çıkarmak hızı artırmadı: hız yine 30, çünkü eğrinin düz kısmındasın." }
+   "gorev": { "tur": "kesfet", "bulgular": [
+    { "yazi": "CO₂ %30'dayken ışığı artır: hız nerede <b>artmayı bırakıyor</b>?", "hedef": { "co2": 30, "isik": [40, 100] }, "coz": [{ "co2": 30, "isik": 50 }],
+      "tamam": "Işık %30'u geçince hız artmadı: artık en kıt faktör CO₂. Grafiğin düz kısmında ışığı artırmak işe yaramaz." },
+    { "yazi": "Fotosentezi <b>en hızlı</b> hâle getir.", "hedef": { "hiz": [0.97, 1] }, "coz": [{ "isik": 100, "co2": 100, "T": 30 }],
+      "tamam": "Işık ve CO₂ yeterli, sıcaklık optimumda (≈ 30 °C): hiçbir faktör sınırlamıyor. Hızı her an en kıt faktör belirler." },
+    { "yazi": "En hızlıyken sıcaklığı <b>40 °C</b>'nin üstüne çıkar.", "hedef": { "T": [41, 45], "isik": [40, 100], "co2": [40, 100] }, "coz": [{ "isik": 100, "co2": 100, "T": 44 }],
+      "tamam": "Işık ve CO₂ bol olduğu hâlde hız düştü: Calvin döngüsü enzimlerle yürür, optimumun üstünde enzimler bozulur." }
+   ] },
+   "kart": 11
   },
   {
    "baslik": "Sıcaklık",
