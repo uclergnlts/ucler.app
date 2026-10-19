@@ -6,7 +6,7 @@ Biyoloji › Enzimler › Kart 5: Sıcaklık ve denatürasyon · 1-3 dk · 177 k
 
 Ateşin kırk biri geçerse ne olur? Üstelik vücudu on üç dereceye düşüp hayatta kalan biri var.
 
-Önce ateşe bakalım. Hastalandığında ateşinin otuz sekiz, otuz dokuz dereceye çıkması çoğu zaman bir savunmadır. Mikropların çoğalması yavaşlar, bağışıklık hücrelerin hızlanır. Ama kırk bir dereceyi geçen ateş tehlikelidir. Neden?
+Önce ateşe bakalım. Hastalandığında ateşinin otuz sekiz, otuz dokuz dereceye çıkması çoğu zaman bir savunmadır. Mikropların çoğalması yavaşlar, bağışıklık hücreleri hızlanır. Ama kırk bir dereceyi geçen ateş tehlikelidir. Neden?
 
 Cevap enzimlerde. Hücrendeki neredeyse her tepkimeyi enzimler hızlandırır. Enzim, belirli bir şekle katlanmış bir proteindir. Üzerindeki aktif bölge, substratı bir anahtarı tutan kilit gibi kavrar.
 
