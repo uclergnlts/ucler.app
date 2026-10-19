@@ -40,3 +40,9 @@ BIY-07'den başlayarak her video, kapanış sorusundan sonra 2 saniyelik bir öz
 - Kartta en çok 3 kısa madde olur (videonun ana bilgileri, her biri ~5 kelime), altında "Kaydet, sınavdan önce bak" ve ucler logosu.
 - Kart tek seferde görünür (yavaş belirme yok); ekran görüntüsü alınınca tek başına okunabilir olmalıdır.
 - Senaryo dosyasının notlarına "Özet kartı" başlığıyla bu 3 madde yazılır.
+
+## Meme kalıbıyla açılış (Üçler, 2026-10-19)
+Konuya gerçekten uyuyorsa ilk kare, tanıdık bir meme kalıbıyla açılabilir. Her videoda kullanılmaz; yoksa alışılır ve etkisini kaybeder.
+- Hazır meme görseli (film sahnesi, ünlü yüz, internetten tepki fotoğrafı) **kullanılmaz**: telif riski taşır ve sade stile aykırıdır.
+- Yalnız yazı kalıbı alınır ("X: sorun yok / Y 41 °C'de:" gibi), görsel bizim stilimizde çizilir.
+- Kanca kuralı geçerlidir: kare 0. saniyede tam görünür ve kapak karesi olur. Seslendirmedeki kanca cümlesi değişmez.
