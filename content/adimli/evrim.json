@@ -103,6 +103,94 @@
    "kart": 7
   },
   {
+   "baslik": "Seçilim laboratuvarı",
+   "metin": "İngiltere'de benekli güveler ağaç gövdelerinde dinlenir; kuşlar onları avlar. Koyu ve açık renk kalıtsaldır. Başta güvelerin çoğu açık renkli. Sanayi kirliliğini ve kuşları aç kapa; her saniye bir kuşak geçer. Aşağıdakileri kendin bul.",
+   "sahne": {
+    "tur": "sim-guve"
+   },
+   "deger": {
+    "kirli": 0,
+    "kus": 1,
+    "koyu": 5,
+    "kusuz": 0,
+    "donus": 0
+   },
+   "kontroller": [
+    {
+     "ad": "kirli",
+     "etiket": "Sanayi kirliliği (kurum)",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "kus",
+     "etiket": "Kuşlar",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "kesfet",
+    "bulgular": [
+     {
+      "yazi": "Kirliliği aç ve bekle. Koyu güvelerin oranı <b>%80</b>'i geçiyor mu?",
+      "hedef": {
+       "kirli": 1,
+       "koyu": [
+        80,
+        100
+       ]
+      },
+      "coz": [
+       {
+        "kirli": 1,
+        "kus": 1
+       }
+      ],
+      "tamam": "Kurumla kararmış ağaçta kuşlar açık güveleri kolay gördü. Koyu güveler daha çok hayatta kalıp ürediği için koyu renk yayıldı: <b>doğal seçilim</b>."
+     },
+     {
+      "yazi": "Kuşları kaldır ve birkaç kuşak bekle. Oran hâlâ değişiyor mu?",
+      "hedef": {
+       "kus": 0,
+       "kusuz": [
+        4,
+        99
+       ]
+      },
+      "coz": [
+       {
+        "kus": 0
+       }
+      ],
+      "tamam": "Avcı kalkınca oran sabit kaldı. Renkleri mutasyon üretir; hangi rengin çoğalacağını çevredeki <b>seçici baskı</b> belirler."
+     },
+     {
+      "yazi": "Kuşları geri getir ve kirliliği kapat (havayı temizle). Koyu güveler <b>%30</b>'un altına iniyor mu?",
+      "hedef": {
+       "kus": 1,
+       "kirli": 0,
+       "koyu": [
+        0,
+        30
+       ],
+       "donus": 1
+      },
+      "coz": [
+       {
+        "kus": 1,
+        "kirli": 0
+       }
+      ],
+      "tamam": "Ağaçlar yeniden açılınca bu kez açık güveler avantajlı oldu ve koyu güveler azaldı. Seçilimin yönünü çevre belirler; İngiltere'de 1960'lardan sonra tam olarak bu gözlendi."
+     }
+    ]
+   },
+   "kart": 11
+  },
+  {
    "baslik": "Türleşme",
    "metin": "Bir nehir popülasyonu ikiye bölerse iki grup arasında <b>gen akışı</b> kesilir. Binlerce kuşak geçer. Tahmin et, sonra oynat.",
    "sahne": { "tur": "biy14-turlesme", "sure": 8 },

@@ -266,6 +266,116 @@
     ]
    },
    "kart": 14
+  },
+  {
+   "baslik": "Çözünürlük laboratuvarı",
+   "metin": "Behere 100 g su koyduk. İçine KNO₃ (potasyum nitrat) ekle ve sıcaklığı değiştir. Çözünen iyonlar suda dağılır, çözünmeyen kısım dipte kristal olarak kalır. Sağdaki noktaya ve çözünürlük eğrisine bak. Aşağıdakileri kendin bul.",
+   "sahne": {
+    "tur": "sim-cozunurluk"
+   },
+   "deger": {
+    "tuz": 0,
+    "T": 20,
+    "doygun": 0,
+    "cozunen": 0
+   },
+   "kontroller": [
+    {
+     "ad": "tuz",
+     "etiket": "Eklenen KNO₃",
+     "min": 0,
+     "max": 120,
+     "adim": 5,
+     "birim": "g"
+    },
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": 0,
+     "max": 80,
+     "adim": 5,
+     "birim": "°C"
+    }
+   ],
+   "gorev": {
+    "tur": "kesfet",
+    "bulgular": [
+     {
+      "yazi": "20 °C'de suya KNO₃ ekle. En çok kaç gram çözünüyor?",
+      "hedef": {
+       "T": 20,
+       "doygun": 1
+      },
+      "coz": [
+       {
+        "T": 20,
+        "tuz": 50
+       }
+      ],
+      "tamam": "20 °C'de 100 g suda yaklaşık 32 g çözündü, fazlası dipte kaldı. Bu çözelti <b>doymuş</b>: o sıcaklıkta daha fazla KNO₃ çözemez."
+     },
+     {
+      "yazi": "Dipteki katıyı <b>ısıtarak</b> çözündür (en az 40 g KNO₃ ile).",
+      "hedef": {
+       "tuz": [
+        40,
+        120
+       ],
+       "doygun": 0,
+       "cozunen": [
+        40,
+        120
+       ]
+      },
+      "coz": [
+       {
+        "tuz": 50,
+        "T": 45
+       }
+      ],
+      "tamam": "KNO₃'ün çözünürlüğü sıcaklıkla hızla artar: 45 °C'de 50 g'ın hepsi çözündü. Katıların çoğu böyledir; gazlar ise sıcakta daha az çözünür."
+     },
+     {
+      "yazi": "Hepsi çözünmüşken çözeltiyi <b>25 °C'nin altına</b> soğut ve dibi izle.",
+      "hedef": [
+       {
+        "tuz": [
+         40,
+         120
+        ],
+        "doygun": 0,
+        "cozunen": [
+         40,
+         120
+        ]
+       },
+       {
+        "tuz": [
+         40,
+         120
+        ],
+        "T": [
+         0,
+         25
+        ],
+        "doygun": 1
+       }
+      ],
+      "sirali": true,
+      "coz": [
+       {
+        "tuz": 50,
+        "T": 45
+       },
+       {
+        "T": 10
+       }
+      ],
+      "tamam": "Soğuyunca çözünürlük düştü ve fazla KNO₃ kristal olarak <b>çöktü</b>. Sıcakta çözüp soğutarak saf kristal elde etmeye <b>kristallendirme</b> denir."
+     }
+    ]
+   },
+   "kart": 15
   }
  ],
  "kapanis": [

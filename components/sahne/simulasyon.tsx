@@ -980,7 +980,177 @@ function CaprazLab({ v, set }: SahneProps) {
   );
 }
 
+/* ---------- fizik: kırılma ve tam yansıma ---------- */
+
+const RAD = Math.PI / 180;
+/** Işığın gittiği ortamdaki kırılma açısı (derece); tam yansımada null. ters: ışık alttaki ortamdan havaya çıkıyor. */
+const kirilma = (aci: number, n: number, ters: boolean) => {
+  const sn = ters ? n * Math.sin(aci * RAD) : Math.sin(aci * RAD) / n;
+  return sn > 1 ? null : Math.asin(sn) / RAD;
+};
+const ortamAdi = (n: number) => (n < 1.2 ? "hava" : n < 1.4 ? "su" : n < 1.7 ? "cam" : n > 2.3 ? "elmas" : "yoğun cam");
+
+function KirilmaLab({ v, saat = 0 }: SahneProps) {
+  const aci = v.aci ?? 30, n = (v.n ?? 150) / 100, ters = v.ters === 1, k = kirilma(aci, n, ters);
+  const O = { x: 170, y: 118 }, L = 150;
+  const yon = (a: number, asagi: boolean) => ({ x: Math.sin(a * RAD), y: asagi ? Math.cos(a * RAD) : -Math.cos(a * RAD) });
+  // Gelen ışın: üstten (havadan) aşağı ya da alttan (yoğun ortamdan) yukarı.
+  // Işınlar çerçevenin içinde kalsın: O noktasından u yönünde gidilebilecek en uzun yol.
+  const boy = (u: { x: number; y: number }) => Math.min(L, u.x > 0.01 ? (326 - O.x) / u.x : u.x < -0.01 ? (O.x - 14) / -u.x : L, u.y > 0.01 ? (214 - O.y) / u.y : u.y < -0.01 ? (O.y - 56) / -u.y : L);
+  const g = yon(aci, !ters), gb = boy({ x: -g.x, y: -g.y }), bas = { x: O.x - g.x * gb, y: O.y - g.y * gb };
+  const yans = yon(aci, ters), kir = k === null ? null : yon(k, !ters);
+  const n1 = ters ? n : 1, n2 = ters ? 1 : n;
+  const sinir = ters ? Math.asin(1 / n) / RAD : null;
+  const akis = -(saat * 60) % 20;
+  const isin = (x2: number, y2: number, op: number, x1 = O.x, y1 = O.y) => (
+    <g opacity={op}>
+      <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="var(--c2)" strokeWidth={3} strokeLinecap="round" />
+      <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="#fff" strokeWidth={1.2} strokeDasharray="4 16" strokeDashoffset={akis} />
+    </g>
+  );
+  const yay = (a: number, asagi: boolean, r: number) => { const u = yon(a, asagi); return `M${O.x} ${O.y + (asagi ? r : -r)} A${r} ${r} 0 0 ${asagi === a > 0 ? 0 : 1} ${O.x + u.x * r} ${O.y + u.y * r}`; };
+  const yansOp = k === null ? 1 : 0.18 + 0.5 * Math.pow(aci / 90, 4), etiket = `${ortamAdi(n)} · n = ${say(n, 2)}`;
+  return (
+    <svg viewBox="0 0 340 236" role="img" aria-label={`Gelme açısı ${aci} derece, ${k === null ? "tam yansıma" : `kırılma açısı ${Math.round(k)} derece`}`}>
+      <text x={10} y={22} fontSize={13} fontWeight={800} fill={k === null ? "var(--c2)" : "var(--ink)"}>{k === null ? "Tam yansıma: ışık dışarı çıkamıyor" : `kırılma açısı θ₂ = ${say(k)}°`}</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{k === null ? `${say(n1, 2)} · sin${aci}° = ${say(n1 * Math.sin(aci * RAD), 2)} > 1` : `${say(n1, 2)} · sin${aci}° = ${say(n2, 2)} · sin θ₂`}{sinir !== null ? ` · sınır açı ${say(sinir)}°` : ""}</text>
+      <rect x={10} y={O.y} width={320} height={110} rx={0} fill="var(--fizik-soft)" />
+      <rect x={10} y={O.y} width={320} height={110} fill="var(--fizik)" opacity={Math.min(0.28, (n - 1) * 0.18)} />
+      <line x1={10} x2={330} y1={O.y} y2={O.y} stroke="var(--ink)" strokeWidth={1.4} />
+      <line x1={O.x} x2={O.x} y1={O.y - 66} y2={O.y + 104} stroke="var(--muted)" strokeDasharray="4 4" />
+      <text x={O.x + 4} y={O.y - 58} fontSize={10} fill="var(--muted)">normal</text>
+      {/* lazer */}
+      <g transform={`translate(${bas.x} ${bas.y}) rotate(${Math.atan2(g.y, g.x) / RAD})`}>
+        <rect x={-18} y={-6} width={22} height={12} rx={3} fill="var(--ink)" />
+      </g>
+      {isin(O.x, O.y, 1, bas.x, bas.y)}
+      {isin(O.x + yans.x * boy(yans), O.y + yans.y * boy(yans), yansOp)}
+      {kir && isin(O.x + kir.x * boy(kir), O.y + kir.y * boy(kir), 1)}
+      <path d={yay(aci, ters, 34)} fill="none" stroke="var(--c2)" strokeWidth={1.5} />
+      {kir && k !== null && <path d={yay(k, !ters, 44)} fill="none" stroke="var(--fizik)" strokeWidth={1.5} />}
+      {/* ortam adları ışınların üstünde, zeminli */}
+      <g fontSize={11} fontWeight={700} textAnchor="end">
+        <rect x={252} y={O.y - 21} width={74} height={17} rx={8} fill="#fff" opacity={0.92} />
+        <text x={320} y={O.y - 8.5} fill="var(--muted)">hava · n = 1</text>
+        <rect x={326 - etiket.length * 6.4 - 10} y={O.y + 5} width={etiket.length * 6.4 + 10} height={17} rx={8} fill="#fff" opacity={0.92} />
+        <text x={320} y={O.y + 17.5} fill="var(--fizik)">{etiket}</text>
+      </g>
+    </svg>
+  );
+}
+
+/* ---------- kimya: çözünürlük ve çökme (KNO₃) ---------- */
+
+/** 100 g sudaki çözünürlük (g KNO₃), sıcaklık 0-80 °C, 10 derecede bir tablo. */
+const KNO3 = [13.3, 20.9, 31.6, 45.8, 63.9, 85.5, 110, 138, 169];
+const cozunurluk = (T: number) => { const i = Math.min(7, Math.floor(T / 10)), u = T / 10 - i; return KNO3[i] + (KNO3[i + 1] - KNO3[i]) * u; };
+
+function CozunurlukLab({ v, set, saat = 0 }: SahneProps) {
+  const tuz = v.tuz ?? 0, T = v.T ?? 20, S = cozunurluk(T);
+  const dt = useAdim(saat);
+  const r = useRef({ c: 0 });
+  const d = r.current;
+  // Çözünen miktar dengeye (eklenen ile çözünürlükten küçüğü) doğru gider; soğuyunca fazlası kristal olarak çöker.
+  const hedef = Math.min(tuz, S);
+  d.c += sinir(hedef - d.c, -24 * dt, 24 * dt);
+  const dip = Math.max(0, tuz - d.c), doygun = dip > 0.5 && Math.abs(d.c - S) < 0.6;
+  useBildir(v, set, { doygun: doygun ? 1 : 0, cozunen: Math.round(d.c) });
+  const q = rastgele(5), nIyon = Math.round(d.c / 1.4), nKristal = Math.round(dip / 2.2);
+  const GR = { x0: 214, x1: 330, ust: 70, alt: 196, SMAX: 170 };
+  const gx = (t: number) => GR.x0 + (t / 80) * (GR.x1 - GR.x0), gy = (c: number) => GR.alt - (Math.min(c, GR.SMAX) / GR.SMAX) * (GR.alt - GR.ust);
+  const egri = Array.from({ length: 41 }, (_, i) => `${gx(i * 2).toFixed(1)},${gy(cozunurluk(i * 2)).toFixed(1)}`).join(" ");
+  const durum = tuz === 0 ? "Saf su" : doygun ? "Doymuş: fazlası dipte kalıyor" : dip > 0.5 ? (d.c < hedef ? "Çözünüyor" : "Çöküyor") : "Doymamış: hepsi çözündü";
+  return (
+    <svg viewBox="0 0 340 236" role="img" aria-label={`${T} derecede 100 gram suya ${tuz} gram KNO3: ${Math.round(d.c)} gram çözündü`}>
+      <text x={10} y={22} fontSize={13} fontWeight={800} fill={doygun ? "var(--kimya)" : "var(--ink)"}>{durum}</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">100 g su · {T} °C · çözünen {Math.round(d.c)} g · dipte {Math.round(dip)} g</text>
+      {/* beher */}
+      <path d="M30 66 L30 206 Q30 214 38 214 L172 214 Q180 214 180 206 L180 66" fill="none" stroke="var(--ink)" strokeWidth={2} />
+      <rect x={31} y={84} width={148} height={129} fill="var(--kimya)" opacity={0.05 + Math.min(0.12, d.c / 1200)} />
+      <line x1={31} x2={179} y1={84} y2={84} stroke="var(--c1)" strokeWidth={1.5} />
+      {Array.from({ length: Math.min(110, nIyon) }, (_, i) => { const x = 40 + q() * 130, y = 92 + q() * 100, f = q() * 6, k = i % 2; return <circle key={i} cx={x + Math.sin(saat * 1.6 + f) * 3} cy={y + Math.cos(saat * 1.3 + f) * 3} r={k ? 2.4 : 3.2} fill={k ? "var(--c1)" : "var(--kimya)"} opacity={0.75} />; })}
+      {Array.from({ length: Math.min(60, nKristal) }, (_, i) => { const x = 40 + (i % 15) * 9 + (Math.floor(i / 15) % 2) * 4, y = 207 - Math.floor(i / 15) * 7; return <rect key={`k${i}`} x={x} y={y} width={7} height={6} rx={1} fill="#fff" stroke="var(--ink)" strokeWidth={1} />; })}
+      {/* ısıtıcı */}
+      <rect x={24} y={218} width={162} height={6} rx={3} fill="var(--ink)" />
+      <rect x={24} y={218} width={162 * (T / 80)} height={6} rx={3} fill="var(--c2)" opacity={0.8} />
+      {/* çözünürlük eğrisi */}
+      <line x1={GR.x0} x2={GR.x1} y1={GR.alt} y2={GR.alt} stroke="var(--ink)" strokeWidth={1.2} />
+      <line x1={GR.x0} x2={GR.x0} y1={GR.ust - 6} y2={GR.alt} stroke="var(--ink)" strokeWidth={1.2} />
+      <polyline points={egri} fill="none" stroke="var(--line-2)" strokeWidth={2.2} />
+      <text x={GR.x0 + 4} y={GR.ust - 10} fontSize={10.5} fontWeight={700} fill="var(--muted)">çözünürlük eğrisi</text>
+      <text x={(GR.x0 + GR.x1) / 2} y={GR.alt + 15} fontSize={10} fill="var(--muted)" textAnchor="middle">sıcaklık (0-80 °C)</text>
+      <circle cx={gx(T)} cy={gy(d.c)} r={6} fill="var(--kimya)" />
+    </svg>
+  );
+}
+
+/* ---------- biyoloji: benekli güve ve doğal seçilim ---------- */
+
+/** Bir kuşak: kuşlar arka plana uymayan güveleri daha çok yakalar. Az bir mutasyon iki rengi de hep ortada tutar. */
+const guveKusak = (p: number, kirli: boolean, kus: boolean) => {
+  const wk = !kus ? 1 : kirli ? 0.9 : 0.6, wa = !kus ? 1 : kirli ? 0.6 : 0.9;
+  const s = (p * wk) / (p * wk + (1 - p) * wa);
+  return sinir(s * (1 - 0.004) + (1 - s) * 0.004, 0, 1);
+};
+
+function GuveLab({ v, set, saat = 0 }: SahneProps) {
+  const kirli = v.kirli === 1, kus = v.kus !== 0;
+  const r = useRef({ p: 0.05, son: saat, kusak: 0, kusuz: 0, enCok: 0.05 });
+  const d = r.current;
+  // Her saniye bir kuşak.
+  if (saat - d.son > 3) d.son = saat;
+  while (saat - d.son >= 1) {
+    d.son += 1; d.kusak += 1;
+    d.p = guveKusak(d.p, kirli, kus);
+    d.kusuz = kus ? 0 : Math.min(99, d.kusuz + 1);
+    d.enCok = Math.max(d.enCok, d.p);
+  }
+  const koyu = Math.round(d.p * 100);
+  useBildir(v, set, { koyu, kusuz: d.kusuz, donus: d.enCok >= 0.7 ? 1 : 0 });
+  const g = useGecmis(saat, d.p, 30, 0.25);
+  const q = rastgele(21), nKoyu = Math.round(d.p * 40);
+  const GR = { x0: 214, x1: 330, ust: 70, alt: 196 };
+  const gx = (t: number) => GR.x1 - ((saat - t) / 30) * (GR.x1 - GR.x0), gy = (x: number) => GR.alt - x * (GR.alt - GR.ust);
+  const yer = Array.from({ length: 40 }, () => ({ x: 26 + q() * 140, y: 70 + q() * 128, a: q() * 60 - 30 }));
+  // Hangi güvenin koyu olduğu karışık dursun: sıra rastgele.
+  const sira = yer.map((_, i) => i).sort((a, b) => ((a * 37) % 40) - ((b * 37) % 40));
+  const kus2 = kus ? { x: 30 + ((saat * 40) % 140), y: 62 + Math.sin(saat * 2) * 6 } : null;
+  return (
+    <svg viewBox="0 0 340 236" role="img" aria-label={`Kuşak ${d.kusak}: güvelerin yüzde ${koyu} kadarı koyu`}>
+      <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">koyu güve %{koyu} · açık güve %{100 - koyu}</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">kuşak {d.kusak} · {kirli ? "kurumla kararmış ağaç" : "likenli açık renk ağaç"}{kus ? "" : " · kuş yok"}</text>
+      {/* ağaç gövdesi */}
+      <rect x={14} y={56} width={168} height={160} rx={10} fill={kirli ? "#4a4744" : "#d9d3c4"} />
+      {Array.from({ length: 9 }, (_, i) => <path key={i} d={`M${26 + i * 18.5} 60 q ${(i % 2 ? 6 : -6)} 70 0 152`} fill="none" stroke={kirli ? "#3a3734" : "#c6bea9"} strokeWidth={3} />)}
+      {sira.map((j, i) => {
+        const m = yer[j], k = i < nKoyu;
+        return (
+          <g key={j} transform={`translate(${m.x} ${m.y}) rotate(${m.a})`}>
+            <path d="M0 0 C-10 -7 -13 3 -6 6 Z M0 0 C10 -7 13 3 6 6 Z" fill={k ? "#26231f" : "#efe9dc"} stroke={k ? "#26231f" : "#b9b09c"} strokeWidth={0.8} />
+          </g>
+        );
+      })}
+      {kus2 && <path d={`M${kus2.x - 10} ${kus2.y} q 5 -7 10 0 q 5 -7 10 0`} fill="none" stroke="var(--ink)" strokeWidth={2.2} strokeLinecap="round" />}
+      {/* koyu oranı grafiği */}
+      <line x1={GR.x0} x2={GR.x1} y1={GR.alt} y2={GR.alt} stroke="var(--ink)" strokeWidth={1.2} />
+      <line x1={GR.x0} x2={GR.x0} y1={GR.ust - 6} y2={GR.alt} stroke="var(--ink)" strokeWidth={1.2} />
+      <line x1={GR.x0} x2={GR.x1} y1={gy(0.5)} y2={gy(0.5)} stroke="var(--line-2)" strokeDasharray="3 4" />
+      <polyline points={g.map((p) => `${gx(p.t).toFixed(1)},${gy(p.d).toFixed(1)}`).join(" ")} fill="none" stroke="var(--biyoloji)" strokeWidth={2.2} />
+      <text x={GR.x0 + 4} y={GR.ust - 10} fontSize={10.5} fontWeight={700} fill="var(--muted)">koyu güve oranı</text>
+      <text x={GR.x0 - 4} y={GR.ust + 4} fontSize={9.5} fill="var(--muted)" textAnchor="end">%100</text>
+      <text x={GR.x0 - 4} y={GR.alt} fontSize={9.5} fill="var(--muted)" textAnchor="end">0</text>
+    </svg>
+  );
+}
+
 export const SIMULASYON: Record<string, SahneKaydi> = {
+  "sim-kirilma": {
+    C: KirilmaLab,
+    canli: true,
+    olc: (v) => { const k = kirilma(v.aci ?? 30, (v.n ?? 150) / 100, v.ters === 1); return { tam: k === null ? 1 : 0 }; },
+  },
+  "sim-cozunurluk": { C: CozunurlukLab, canli: true },
+  "sim-guve": { C: GuveLab, canli: true },
   "sim-dalga": { C: DalgaLab, canli: true, olc: (v) => ({ lam: Math.round(((v.v ?? 4) / (v.f ?? 1)) * 100) / 100 }) },
   "sim-kaynama": { C: KaynamaLab, canli: true },
   // "100 yavru üret": uretildi sayacı artar, sahne 100 yeni yavru çizer. Ebeveyn değişince sayım sıfırlanır.

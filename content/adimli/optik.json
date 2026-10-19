@@ -186,43 +186,102 @@
    }
   },
   {
-   "baslik": "Tam yansıma",
-   "metin": "Şimdi ışık camın içinden havaya çıkmaya çalışıyor; bu kez normalden <b>uzaklaşır</b>. Kırılma açısı 90° olduğunda gelme açısına <b>sınır açı</b> denir. Gelme açısını öyle ayarla ki ışık <b>hiç dışarı çıkmasın</b>.",
+   "baslik": "Işık laboratuvarı",
+   "metin": "Lazer ışığı iki ortamın sınırına gönderiyor. Bir kısmı yansıyor, bir kısmı kırılarak geçiyor. Gelme açısını ve alttaki ortamın kırılma indisini değiştir; ışığı tersine de gönderebilirsin. Aşağıdakileri kendin bul.",
    "sahne": {
-    "tur": "fiz12-tam"
+    "tur": "sim-kirilma"
    },
    "deger": {
-    "a": 20
+    "aci": 30,
+    "n": 150,
+    "ters": 0
    },
    "kontroller": [
     {
-     "ad": "a",
+     "ad": "aci",
      "etiket": "Gelme açısı",
      "min": 0,
-     "max": 80,
-     "adim": 5,
-     "tur": "surgu",
+     "max": 85,
      "birim": "°"
+    },
+    {
+     "ad": "n",
+     "etiket": "Alttaki ortamın indisi",
+     "min": 100,
+     "max": 250,
+     "adim": 2,
+     "carpan": 0.01
+    },
+    {
+     "ad": "ters",
+     "etiket": "Işık alttaki ortamdan havaya çıksın",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
     }
    ],
    "gorev": {
-    "tur": "ayarla",
-    "hedef": {
-     "a": [
-      45,
-      80
-     ]
-    },
-    "tamam": "sin θ<sub>s</sub> = 1/1,5 ≈ 0,67, yani sınır açı yaklaşık <b>42°</b>. Gelme açısı bunu aşınca ışığın hepsi geri yansır: <b>tam yansıma</b>. Fiber optik kablo ışığı böyle hapseder; elmasın parıltısı da buradan gelir.",
-    "ipucu": "Açıyı büyüttükçe dışarı çıkan ışın yüzeye yaklaşıyor. Sınır açıyı geç."
+    "tur": "kesfet",
+    "bulgular": [
+     {
+      "yazi": "Işık havadan cama (n = 1,5) geçerken gelme açısını <b>80°</b>'nin üstüne çıkar. Işık hiç geçemez hâle geliyor mu?",
+      "hedef": {
+       "ters": 0,
+       "n": [
+        146,
+        154
+       ],
+       "aci": [
+        80,
+        85
+       ]
+      },
+      "coz": [
+       {
+        "ters": 0,
+        "n": 150,
+        "aci": 82
+       }
+      ],
+      "tamam": "Hayır: kırılma açısı en fazla ≈ 42° oldu, camın sınır açısı kadar. Az yoğundan çok yoğun ortama geçen ışık hep normale yaklaşır; bu yönde tam yansıma olmaz."
+     },
+     {
+      "yazi": "Şimdi ışığı camdan havaya gönder ve ışığın <b>hiç dışarı çıkmadığı</b> bir açı bul.",
+      "hedef": {
+       "ters": 1,
+       "tam": 1
+      },
+      "coz": [
+       {
+        "ters": 1,
+        "n": 150,
+        "aci": 50
+       }
+      ],
+      "tamam": "Gelme açısı sınır açıyı (camda ≈ 42°) geçince ışığın hepsi geri yansıdı: <b>tam yansıma</b>. Fiber optik kablo ışığı böyle hapseder."
+     },
+     {
+      "yazi": "Alttaki ortamı <b>elmas</b> (n ≈ 2,42) yap. Tam yansımanın başladığı <b>en küçük</b> tam sayı açıyı bul.",
+      "hedef": {
+       "ters": 1,
+       "n": [
+        238,
+        246
+       ],
+       "aci": 25
+      },
+      "coz": [
+       {
+        "ters": 1,
+        "n": 242,
+        "aci": 25
+       }
+      ],
+      "tamam": "Elmasta sınır açı ≈ 24°, camda ≈ 42°. Elmasa giren ışık yüzeylerde defalarca tam yansıyıp ancak birkaç yönden çıkabildiği için elmas çok parlar."
+     }
+    ]
    },
-   "kart": 8,
-   "goster": {
-    "deger": {
-     "a": 30
-    },
-    "not": "30°'de sin θ₂ = 1,5 · 0,5 = 0,75: ışık normalden uzaklaşarak, yaklaşık <b>49°</b> ile dışarı çıkıyor."
-   }
+   "kart": 8
   },
   {
    "baslik": "Işıkta renk",
