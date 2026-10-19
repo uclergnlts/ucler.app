@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Momentum",
-   "metin": "<b>Momentum</b> kütle ile hızın çarpımıdır: p = m·v. 4000 kg'lık kamyon 5 m/s ile gidiyor. 1000 kg'lık arabanın hızını ayarla, momentumları <b>eşit</b> olsun.",
+   "metin": "4000 kg'lık kamyon 5 m/s ile gidiyor. 1000 kg'lık arabanın hızını ayarla, momentumları <b>eşit</b> olsun.",
    "sahne": {
     "tur": "fiz6-p"
    },
@@ -82,7 +82,7 @@
   },
   {
    "baslik": "Hava yastığı",
-   "metin": "İtme, momentum değişimine eşittir: F·Δt = Δp. 70 kg'lık sürücü 15 m/s'den duruyor, Δp hep 1050 N·s. Durma süresini uzat, kuvveti <b>10 000 N'un altına</b> indir.",
+   "metin": "70 kg'lık sürücü 15 m/s'den duruyor: Δp hep 1050 N·s. Durma süresini uzat, kuvveti <b>10 000 N'un altına</b> indir.",
    "sahne": {
     "tur": "fiz6-yastik"
    },
@@ -107,7 +107,7 @@
       200
      ]
     },
-    "tamam": "Grafiğin altındaki alan (itme) hep 1050 N·s. Süre uzayınca dikdörtgen yayılır, yüksekliği yani kuvvet azalır. Hava yastığı, kasktaki köpük ve dizini bükerek inmek bu yüzden korur."
+    "tamam": "Grafiğin altındaki alan (itme) hep 1050 N·s. Süre uzayınca dikdörtgen yayılır, yüksekliği yani kuvvet azalır: 150 ms'de 1050 / 0,15 = 7000 N."
    },
    "kart": 5,
    "goster": {
@@ -119,7 +119,7 @@
   },
   {
    "baslik": "Esnek çarpışma",
-   "metin": "Dış kuvvet yoksa toplam momentum korunur. Esnek çarpışmada kinetik enerji de korunur. 1 kg'lık A arabası 4 m/s ile, duran 1 kg'lık B'ye çarpacak.",
+   "metin": "Bu çarpışma <b>esnek</b>: momentumla birlikte kinetik enerji de korunur. 1 kg'lık A arabası 4 m/s ile duran 1 kg'lık B'ye çarpacak.",
    "sahne": {
     "tur": "fiz6-carpisma",
     "sure": 4,
@@ -142,7 +142,7 @@
      },
      {
       "yazi": "A durur, B 4 m/s ile gider",
-      "neden": "Eşit kütleler kafa kafaya esnek çarpışınca hızlarını değiş tokuş eder. Newton beşiği ve bilardo topları böyledir.",
+      "neden": "Momentum (4 kg·m/s) ve KE (8 J) ancak böyle ikisi birden korunur. Eşit kütlelerde hızlar yer değiştirir.",
       "dogru": true
      }
     ]
@@ -188,7 +188,7 @@
   },
   {
    "baslik": "Enerji nereye gitti?",
-   "metin": "Aynı çarpışmaya bir de enerji gözüyle bak. Oynat ve alttaki toplam kinetik enerjiyi izle.",
+   "metin": "1 kg'lık A, 4 m/s ile duran 1 kg'lık B'ye çarpıp <b>yapışıyor</b>. Oynat ve alttaki toplam kinetik enerjiyi izle.",
    "sahne": {
     "tur": "fiz6-carpisma",
     "sure": 4,
@@ -196,7 +196,7 @@
     "v1": 4
    },
    "deger": {
-    "m2": 3
+    "m2": 1
    },
    "kontroller": [
     {
@@ -211,7 +211,7 @@
    "gorev": {
     "tur": "secim",
     "kosu": 1,
-    "soru": "Yapışmada kinetik enerji 8 J'den 2 J'ye indi. Hangisi doğru?",
+    "soru": "B 1 kg iken yapışmada kinetik enerji 8 J'den 4 J'ye indi. Hangisi doğru?",
     "secenekler": [
      {
       "yazi": "Momentum da azaldı",
@@ -222,8 +222,8 @@
       "neden": "Enerji yok olmaz, biçim değiştirir."
      },
      {
-      "yazi": "6 J ısıya, sese ve kalıcı şekil değişikliğine gitti",
-      "neden": "Momentum korunur ama yapışmada KE kaybı en büyüktür. Toplam enerji yine korunur; yalnızca kinetik kısmı azalır.",
+      "yazi": "4 J ısıya, sese ve kalıcı şekil değişikliğine gitti",
+      "neden": "Ortak hız 2 m/s, KE = ½ · 2 · 2² = 4 J. Momentum korunur, toplam enerji de korunur; azalan yalnızca kinetik kısımdır.",
       "dogru": true
      }
     ]
@@ -232,7 +232,7 @@
   },
   {
    "baslik": "Geri tepme",
-   "metin": "Başta duran bir sistem ikiye ayrılırsa toplam momentum sıfır kalır. 4 kg'lık tüfek, 0,01 kg'lık mermiyi 400 m/s ile fırlatacak.",
+   "metin": "4 kg'lık tüfek, 0,01 kg'lık mermiyi 400 m/s ile fırlatacak.",
    "sahne": {
     "tur": "fiz6-patlama",
     "sure": 4
@@ -247,7 +247,7 @@
      },
      {
       "yazi": "1 m/s",
-      "neden": "0,01 · 400 = 4 kg·m/s ileri; tüfek 4 kg·m/s geri: 4 / 4 = 1 m/s. Ağır parça yavaş, hafif parça hızlı gider. Roket de gazı geri iterek ilerler.",
+      "neden": "Mermi 0,01 · 400 = 4 kg·m/s ileri, tüfek 4 kg·m/s geri alır: 4 / 4 = 1 m/s. KE'ler ise 800 J ve 2 J: enerjinin çoğu hafif mermiye gider.",
       "dogru": true
      },
      {

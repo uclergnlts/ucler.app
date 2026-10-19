@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Kütle ve uzaklık",
-   "metin": "Her iki kütle birbirini çeker: <b>F = G·m₁·m₂ / r²</b>. Kuvvet kütlelerle doğru, uzaklığın <b>karesiyle</b> ters orantılıdır. Uzaklığı iki katına çıkar, kuvveti yine F₀ yap.",
+   "metin": "Uzaklığı iki katına çıkar, sonra B'nin kütlesini ayarlayıp kuvveti yine <b>F₀</b> yap.",
    "sahne": {
     "tur": "fiz8-cekim"
    },
@@ -68,7 +68,7 @@
      },
      {
       "yazi": "1 N, Dünya'nın elmayı çektiği kadar",
-      "neden": "Etki ve tepki: kuvvetler <b>eşit büyüklükte</b> ve zıt yönlüdür. Ama Dünya'nın kütlesi çok büyük olduğu için ivmesi fark edilemeyecek kadar küçüktür.",
+      "neden": "Etki ve tepki: kuvvetler <b>eşit büyüklükte</b> ve zıt yönlüdür.",
       "dogru": true
      },
      {
@@ -81,7 +81,7 @@
   },
   {
    "baslik": "Yükseldikçe g azalır",
-   "metin": "Yüzeyde g = GM/R² ≈ 9,8 m/s². 80 kg'lık astronot yerden yükseliyor. Ağırlığını <b>196 N</b>'a indir.",
+   "metin": "80 kg'lık astronot yerden yükseliyor. Ağırlığını yaklaşık <b>87 N</b>'a indir.",
    "sahne": {
     "tur": "fiz8-yukseklik"
    },
@@ -102,22 +102,22 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": {
-     "h": 1
+     "h": 2
     },
-    "tamam": "6400 km yukarıda merkeze uzaklık r = 2R olur. g, 2² = 4'te birine iner: 9,8 / 4 ≈ 2,45 m/s². Ağırlık 784 N'dan 196 N'a düşer, kütle ise hep 80 kg'dır.",
-    "ipucu": "Ağırlığın 4'te birine inmesi için merkeze uzaklık 2 katına çıkmalı."
+    "tamam": "12 800 km yukarıda r = 3R: g, 3² = 9'da birine iner (≈ 1,09 m/s²); ağırlık 784 / 9 ≈ 87 N. Kütle ise hep 80 kg.",
+    "ipucu": "Ağırlığın 9'da birine inmesi için merkeze uzaklık 3 katına çıkmalı."
    },
    "kart": 5,
    "goster": {
     "deger": {
-     "h": 2
+     "h": 1
     },
-    "not": "12.800 km yukarıda r = 3R: g, 9'da birine iner (≈ 1,09 m/s²), ağırlık 784 / 9 ≈ <b>87 N</b>. Kütle yine 80 kg."
+    "not": "6400 km yukarıda r = 2R: g dörtte birine iner, ağırlık 784 / 4 = <b>196 N</b>."
    }
   },
   {
    "baslik": "Kepler'in alanlar yasası",
-   "metin": "Gezegenler Güneş'in çevresinde <b>elips</b> yörüngede döner; Güneş odaklardan birindedir. Gezegeni bir tur izle.",
+   "metin": "Gezegeni elips yörüngesinde bir tur izle.",
    "sahne": {
     "tur": "fiz8-kepler",
     "sure": 6
@@ -136,7 +136,7 @@
      },
      {
       "yazi": "Güneş'e en yakınken (günberi)",
-      "neden": "Kepler'in 2. yasası: Güneş'i gezegene bağlayan doğru <b>eşit sürelerde eşit alanlar</b> tarar. Yakında yarıçap kısa olduğu için aynı alanı taramak için gezegen daha hızlı gider.",
+      "neden": "Yakında yarıçap kısadır: eşit sürede eşit alanı taramak için gezegen daha hızlı gitmeli.",
       "dogru": true
      }
     ]
@@ -247,9 +247,9 @@
     "hedef": {
      "kes": 1
     },
-    "tamam": "Kişi ve tartı birlikte serbest düşer, tartı 0 gösterir. Uzay istasyonundaki astronotlar da böyledir: 400 km'de g hâlâ ≈ 8,7 m/s², ama istasyonla birlikte <b>sürekli düşerler</b>. Ağırlıksızlık çekimin yokluğu değildir."
+    "tamam": "Kişi ve tartı birlikte serbest düşer, tartı 0 gösterir. Çekim hâlâ var: düşmelerinin nedeni zaten o."
    },
-   "kart": 11
+   "kart": 10
   }
  ],
  "kapanis": [

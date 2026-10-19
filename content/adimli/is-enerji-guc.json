@@ -7,11 +7,11 @@
  "adimlar": [
   {
    "baslik": "İş",
-   "metin": "Fizikte <b>iş</b>, kuvvet cismi yer değiştirince yapılır: W = F·d·cosθ. Kutuyu 50 N ile 4 m çekiyorsun. İpin açısını ayarla ve işi <b>100 J</b> yap.",
+   "metin": "Bu kez kutuyu <b>40 N</b> ile <b>5 m</b> çekiyorsun. İpin açısını ayarla ve işi <b>100 J</b> yap.",
    "sahne": {
     "tur": "fiz5-is",
-    "F": 50,
-    "d": 4
+    "F": 40,
+    "d": 5
    },
    "deger": {
     "a": 0
@@ -31,19 +31,19 @@
     "hedef": {
      "a": 60
     },
-    "tamam": "cos60° = 0,5: W = 50 · 4 · 0,5 = 100 J. İşi yalnızca kuvvetin hareket yönündeki bileşeni yapar. Birimi joule: 1 J = 1 N·m."
+    "tamam": "W = 40 · 5 · cos60° = 200 · 0,5 = 100 J. Açı büyüdükçe kuvvetin hareket yönündeki payı küçülür; 90°'de sıfır olur."
    },
    "kart": 1,
    "goster": {
     "deger": {
      "a": 30
     },
-    "not": "30°'de W = 50 · 4 · cos30° ≈ 173 J. İşi yalnızca kuvvetin hareket yönündeki bileşeni yapar."
+    "not": "30°'de W = 40 · 5 · cos30° ≈ 173 J. İşi yalnızca kuvvetin hareket yönündeki bileşeni yapar."
    }
   },
   {
    "baslik": "Sıfır iş",
-   "metin": "Ağır bir çantayı tutarak yatay yolda yürüyorsun. Kolun çantayı yukarı tutar, çanta ise yatay ilerler: θ = 90°.",
+   "metin": "Ağır bir çantayı tutarak yatay yolda <b>sabit hızla</b> yürüyorsun. Kolun çantayı yukarı tutar, çanta yatay ilerler: θ = 90°.",
    "sahne": {
     "tur": "fiz5-is",
     "F": 50,
@@ -65,7 +65,7 @@
      {
       "yazi": "Sıfır",
       "dogru": true,
-      "neden": "cos90° = 0: kuvvet harekete dikse iş sıfırdır. Duvarı itip kımıldatamazsan da iş sıfırdır, yorulsan bile."
+      "neden": "cos90° = 0. Yorgunluğun kaslarının içinde harcanan enerjiden gelir, çantaya aktarılan işten değil."
      }
     ]
    },
@@ -73,12 +73,12 @@
   },
   {
    "baslik": "Kinetik enerji",
-   "metin": "Hareket eden cismin <b>kinetik enerjisi</b> vardır: KE = ½·m·v². 1000 kg'lık araba 20 m/s ile gidiyor. Kinetik enerjisini <b>4 katına</b> (800 000 J) çıkar.",
+   "metin": "1000 kg'lık araba <b>10 m/s</b> ile gidiyor: KE = 50 000 J. Hızı ayarla, kinetik enerji <b>9 katına</b> çıksın.",
    "sahne": {
     "tur": "fiz5-ke"
    },
    "deger": {
-    "v": 20
+    "v": 10
    },
    "kontroller": [
     {
@@ -94,21 +94,21 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": {
-     "v": 40
+     "v": 30
     },
-    "tamam": "Hız 2 katına çıkınca enerji 4 katına çıktı, çünkü hız karesiyle girer: ½ · 1000 · 40² = 800 000 J. Hızlı giden aracı durdurmak bu yüzden çok daha zordur."
+    "tamam": "30 m/s'de ½ · 1000 · 30² = 450 000 J: hız 3 kat, enerji 3² = 9 kat. Hızlı giden aracı durdurmak bu yüzden çok daha zordur."
    },
    "kart": 3,
    "goster": {
     "deger": {
-     "v": 30
+     "v": 20
     },
-    "not": "30 m/s'de KE = ½ · 1000 · 30² = 450 000 J: hız 1,5 katına çıktı, enerji 2,25 katına."
+    "not": "20 m/s'de KE = ½ · 1000 · 20² = 200 000 J: hız 2 kat, enerji 4 kat."
    }
   },
   {
    "baslik": "Enerji biçim değiştirir",
-   "metin": "2 kg'lık top 5 m'den bırakılıyor. Yüksekteki topun <b>potansiyel enerjisi</b> var: PE = m·g·h = 2 · 9,8 · 5 = 98 J. Üzerinde yalnızca yer çekimi iş yapıyor.",
+   "metin": "2 kg'lık top 5 m'den bırakılıyor: PE = 2 · 9,8 · 5 = 98 J. Üzerinde yalnızca yer çekimi iş yapıyor.",
    "sahne": {
     "tur": "fiz5-dusme",
     "sure": 2
@@ -128,7 +128,7 @@
      {
       "yazi": "98 J",
       "dogru": true,
-      "neden": "PE azaldıkça KE artar; toplam hep 98 J kalır. Yerde PE sıfırdır, enerjinin tamamı kinetiktir: top ≈ 9,9 m/s ile çarpar. Buna <b>mekanik enerjinin korunumu</b> denir."
+      "neden": "Yerde PE sıfırdır; kaybolan 98 J'ün tamamı KE'ye geçti. ½ · 2 · v² = 98 J'den top yere ≈ 9,9 m/s ile çarpar."
      }
     ]
    },
@@ -235,7 +235,7 @@
   },
   {
    "baslik": "Güç",
-   "metin": "<b>Güç</b> birim zamanda yapılan iştir: P = W / t, birimi watt (1 W = 1 J/s). 50 kg'lık biri 3 m'lik merdiveni çıkıyor. Çıkış süresini ayarla: güç <b>294 W</b> olsun.",
+   "metin": "Aynı merdiven: 50 kg, 3 m, iş ≈ 1470 J. Çıkış süresini ayarla, güç <b>210 W</b> olsun.",
    "sahne": {
     "tur": "fiz5-guc"
    },
@@ -255,21 +255,21 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": {
-     "t": 5
+     "t": 7
     },
-    "tamam": "Yapılan iş hep 1470 J; süre yarıya inince güç iki katına çıkar: 1470 / 5 = 294 W. 10 s'de yürüyerek çıksaydın 147 W olurdu. Elektrik faturasındaki 1 kWh = 3,6 milyon J'dür."
+    "tamam": "1470 / 7 = 210 W. Aynı iş daha kısa sürede yapılırsa güç artar. Elektrik faturasındaki 1 kWh = 3,6 milyon J'dür."
    },
    "kart": 10,
    "goster": {
     "deger": {
-     "t": 7
+     "t": 10
     },
-    "not": "7 s'de çıkarsan güç 1470 / 7 = 210 W olur."
+    "not": "10 s'de çıkarsan güç 1470 / 10 = 147 W olur."
    }
   },
   {
    "baslik": "Yay ve F–x grafiği",
-   "metin": "Yayı germek için gereken kuvvet uzamayla artar: F = k·x. Kuvvet–uzama grafiğinin altındaki alan yapılan işi verir. Yayı ger ve içine <b>1 J</b> enerji depola.",
+   "metin": "Yayın sabiti k = 200 N/m. Yayı ger ve içine <b>4 J</b> enerji depola.",
    "sahne": {
     "tur": "fiz5-yay"
    },
@@ -289,9 +289,9 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": {
-     "x": 10
+     "x": 20
     },
-    "tamam": "x = 0,1 m'de F = 200 · 0,1 = 20 N. Üçgenin alanı ½ · 0,1 · 20 = 1 J; bu, yayda depolanan <b>esneklik potansiyel enerjisidir</b>: ½·k·x². Uzamayı iki katına çıkarırsan enerji 4 katına çıkar."
+    "tamam": "x = 0,2 m'de F = 200 · 0,2 = 40 N; üçgenin alanı ½ · 0,2 · 40 = 4 J. Uzama 2 kat (10 → 20 cm), enerji 4 kat (1 → 4 J)."
    },
    "kart": 8,
    "goster": {

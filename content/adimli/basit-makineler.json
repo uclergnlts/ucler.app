@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Kaldıraç",
-   "metin": "Kaldıraç bir destek çevresinde dönen çubuktur. Dengede iki taraftaki <b>tork</b> eşittir: F·dF = Y·dY. 400 N'luk yükü, 2 m uzaktan uyguladığın kuvvetle <b>dengele</b>.",
+   "metin": "400 N'luk yük desteğe 0,5 m uzakta. Desteğin öbür yanında, 2 m uzaktan uyguladığın kuvvetle çubuğu <b>dengele</b>.",
    "sahne": {
     "tur": "fiz6-kaldirac",
     "Y": 400,
@@ -63,16 +63,16 @@
      },
      {
       "yazi": "Cımbız",
-      "neden": "Kuvvet ortada: kuvvet kolu hep yük kolundan kısadır, kazanç 1'den küçük. Karşılığında uç daha çok yol alır, hassas tutarsın.",
+      "neden": "Kuvvet ortada: kuvvet kolu yük kolundan hep kısadır, kazanç 1'den küçük. Karşılığında uç daha çok yol alır.",
       "dogru": true
      }
     ]
    },
-   "kart": 4
+   "kart": 3
   },
   {
    "baslik": "Makara ve palanga",
-   "metin": "Sabit makara yalnızca yönü değiştirir. Hareketli bloğu birden çok ip kolu taşırsa yük paylaşılır: F = Y / n. 400 N'luk yükü <b>100 N</b> ile kaldır.",
+   "metin": "Hareketli bloğu taşıyan ip kolu sayısını değiştir. 400 N'luk yükü <b>100 N</b> ile kaldır.",
    "sahne": {
     "tur": "fiz6-makara"
    },
@@ -105,7 +105,7 @@
   },
   {
    "baslik": "Eğik düzlem",
-   "metin": "600 N'luk kasayı 1 m yükseğe dikey kaldırmak yerine rampada itebilirsin: F·L = G·h. Rampayı uzatarak gereken kuvveti <b>150 N</b>'a indir.",
+   "metin": "600 N'luk kasayı 1 m yükseğe rampayla çıkaracaksın. Rampayı uzatarak gereken kuvveti <b>150 N</b>'a indir.",
    "sahne": {
     "tur": "fiz6-rampa"
    },
@@ -139,11 +139,11 @@
   },
   {
    "baslik": "Bisiklet dişlileri",
-   "metin": "Zincirle bağlı dişlilerde n₁·r₁ = n₂·r₂; yarıçap yerine diş sayısı da yazılır. Ön dişli 48 diş. Pedalın bir turunda tekerlek <b>3 tur</b> atsın: arka dişliyi seç ve oynat.",
+   "metin": "Ön dişli 48 diş. Pedalın bir turunda tekerlek <b>4 tur</b> atsın: arka dişliyi seç ve oynat.",
    "sahne": {
     "tur": "fiz6-bisiklet",
     "sure": 4,
-    "hedefTur": 3
+    "hedefTur": 4
    },
    "deger": {
     "z": 24
@@ -161,11 +161,11 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": {
-     "z": 16
+     "z": 12
     },
-    "tamam": "48 / 16 = 3: tekerlek 3 tur atar, bisiklet hızlı gider ama pedal ağırlaşır. Yokuşta büyük arka dişliye geçersin: tekerlek az döner, pedal kolaylaşır."
+    "tamam": "48 / 12 = 4: tekerlek 4 tur atar. Tekerleğin çevresi 2 m ise pedalın bir turunda bisiklet 8 m gider; hızlıdır ama pedal ağırlaşır."
    },
-   "kart": 12,
+   "kart": 13,
    "goster": {
     "deger": {
      "z": 32
@@ -175,32 +175,32 @@
   },
   {
    "baslik": "Verim",
-   "metin": "Gerçek rampada sürtünme vardır. 600 N'luk yükü 4 m'lik rampayla 1 m yükseltmek için 150 N yetmedi; <b>200 N</b> uygulamak gerekti.",
+   "metin": "Gerçek rampada sürtünme vardır. 600 N'luk yükü <b>5 m</b>'lik rampayla 1 m yükseltmek için 120 N yetmedi; <b>150 N</b> uygulamak gerekti.",
    "sahne": {
     "tur": "fiz6-rampa",
-    "L": 4,
-    "Fg": 200
+    "L": 5,
+    "Fg": 150
    },
    "gorev": {
     "tur": "secim",
     "soru": "Bu rampanın verimi yüzde kaçtır?",
     "secenekler": [
      {
-      "yazi": "%133",
-      "neden": "Verim %100'ü geçemez: hiçbir makine işten kazandırmaz. Yararlı işi harcanan işe böl."
+      "yazi": "%125",
+      "neden": "Verim %100'ü geçemez. Harcanan işi yararlı işe böldün; tersini yap."
      },
      {
-      "yazi": "%75",
-      "neden": "Yararlı iş 600 J, harcanan iş 200 · 4 = 800 J. Verim = 600 / 800 = %75. Kalan 200 J sürtünmeyle ısıya gitti.",
+      "yazi": "%80",
+      "neden": "Yararlı iş 600 · 1 = 600 J, harcanan iş 150 · 5 = 750 J: 600 / 750 = %80. Kalan 150 J ısıya gitti.",
       "dogru": true
      },
      {
-      "yazi": "%25",
-      "neden": "200 J ısıya giden kısımdır. Verim, yararlı işin harcanan işe oranıdır."
+      "yazi": "%20",
+      "neden": "%20 ısıya giden kısımdır. Verim, yararlı işin harcanan işe oranıdır."
      }
     ]
    },
-   "kart": 13
+   "kart": 14
   }
  ],
  "kapanis": [

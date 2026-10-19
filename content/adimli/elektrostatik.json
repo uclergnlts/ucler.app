@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Dokunma ile paylaşım",
-   "metin": "A küresi 12 μC yüklü, B nötr. Dokunan iletken küreler yükü <b>yarıçaplarıyla orantılı</b> paylaşır: q₁/q₂ = r₁/r₂. B'ye <b>8 μC</b> düşsün.",
+   "metin": "A küresi 12 μC yüklü, B nötr. B'nin yarıçapını seç: dokunduktan sonra B'ye <b>8 μC</b> düşsün.",
    "sahne": {
     "tur": "fiz8-dokunma",
     "sure": 4
@@ -111,7 +111,7 @@
     "secenekler": [
      {
       "yazi": "(+) yüklü",
-      "neden": "İtilen elektronlar toprağa kaçar. Bağ çubuk uzaklaşmadan kesildiği için geri gelemezler. Küre, çubuğa <b>zıt işaretli</b> yükle kalır.",
+      "neden": "İtilen elektronlar toprağa kaçar ve bağ önce kesildiği için geri gelemez. Küre çubuğa <b>zıt işaretli</b> kalır.",
       "dogru": true
      },
      {
@@ -160,7 +160,7 @@
      },
      {
       "yazi": "Kapanır",
-      "neden": "Çubuğa dokunulmadığı için elektroskobun toplam yükü sıfırdır. Çubuk uzaklaşınca yükler eski yerine döner ve yapraklar <b>kapanır</b>.",
+      "neden": "Dokunulmadığı için elektroskobun toplam yükü sıfırdır. Çubuk uzaklaşınca yükler eski yerine döner, yapraklar <b>kapanır</b>.",
       "dogru": true
      }
     ]
@@ -169,7 +169,7 @@
   },
   {
    "baslik": "Coulomb kuvveti",
-   "metin": "F = k·q₁·q₂ / r², k ≈ 9·10⁹ N·m²/C². q₁ = +4 μC. q₂'yi ve uzaklığı ayarla: kuvvet <b>0,1 N çekme</b> olsun.",
+   "metin": "q₁ = +4 μC. q₂'yi ve uzaklığı ayarla: kuvvet <b>0,1 N çekme</b> olsun (k ≈ 9·10⁹ N·m²/C²).",
    "sahne": {
     "tur": "fiz8-coulomb"
    },
@@ -238,7 +238,7 @@
     "secenekler": [
      {
       "yazi": "(+)'dan çıkar, (−)'ye girer",
-      "neden": "Çizgiler (+) yükten dışarı, (−) yüke doğrudur. Çizgilerin sık olduğu yerde alan güçlüdür ve çizgiler <b>birbirini kesmez</b>.",
+      "neden": "Çizgiler (+) yükten dışarı, (−) yüke doğrudur ve birbirini <b>kesmez</b>.",
       "dogru": true
      },
      {
@@ -251,7 +251,7 @@
      }
     ]
    },
-   "kart": 9
+   "kart": 8
   }
  ],
  "kapanis": [
