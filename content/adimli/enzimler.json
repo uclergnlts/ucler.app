@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Enerji eşiği",
-   "metin": "Her tepkimenin başlaması için aşılması gereken bir enerji eşiği vardır: <b>aktivasyon enerjisi</b>. Hücredeki tepkimeleri <b>enzimler</b> hızlandırır. Enzimi ekle ve grafiğe bak.",
+   "metin": "<b>Enzimi</b> ekle ve grafiğe bak.",
    "sahne": {"tur": "biy2-aktivasyon"},
    "deger": {"enzim": 0},
    "kontroller": [{"ad": "enzim", "etiket": "Enzim ekle", "min": 0, "max": 1, "tur": "anahtar"}],
@@ -15,7 +15,7 @@
     "tur": "secim",
     "soru": "Enzim neyi değiştirdi?",
     "secenekler": [
-     {"yazi": "Yalnızca aktivasyon enerjisini", "dogru": true, "neden": "Enzim eşiği düşürür, böylece tepkime çok daha hızlı gerçekleşir. Substrat, ürün ve aralarındaki enerji farkı aynı kalır."},
+     {"yazi": "Yalnızca aktivasyon enerjisini", "dogru": true, "neden": "Tepe alçalınca çarpışan moleküllerin çok daha büyük kısmı eşiği aşar; tepkime bu yüzden hızlanır."},
      {"yazi": "Oluşan ürünü", "neden": "Grafiğin sağ ucuna bak: ürün aynı yerde. Enzim yalnızca yolu kolaylaştırır."},
      {"yazi": "Substratla ürün arasındaki enerji farkını", "neden": "Mor oka bak: enzimli de enzimsiz de enerji farkı aynı. Değişen yalnızca tepenin yüksekliği."}
     ]
@@ -24,13 +24,13 @@
   },
   {
    "baslik": "Enzim-substrat kompleksi",
-   "metin": "Enzimin etki ettiği maddeye <b>substrat</b> denir. Substrat, enzimin <b>aktif bölgesine</b> bağlanır. Aktif bölge esnektir: substratı sıkıca sarar (<b>uyarılmış uyum</b>).",
+   "metin": "Enzim, etki ettiği maddeyi (<b>substrat</b>) yakalayıp dönüştürüyor. Oynatmadan önce tahmin et.",
    "sahne": {"tur": "biy2-enzim-substrat", "sure": 5},
    "gorev": {
     "tur": "tahmin",
     "soru": "Tepkime bitince enzime ne olur?",
     "secenekler": [
-     {"yazi": "Değişmeden çıkar, yeniden kullanılır", "dogru": true, "neden": "Enzim tepkimede harcanmaz. Ürünler ayrılınca aktif bölge boşalır ve enzim yeni bir substratı bağlar. Bu yüzden az miktarda enzim çok iş görür."},
+     {"yazi": "Değişmeden çıkar, yeniden kullanılır", "dogru": true, "neden": "Ürünler ayrılınca aktif bölge boşalır ve enzim yeni bir substrat bağlar. Bu yüzden hücre az miktarda enzimle çok iş görür."},
      {"yazi": "Ürünle birlikte harcanır", "neden": "Enzim katalizördür, tepkimede tükenmez."},
      {"yazi": "Kendisi ürüne dönüşür", "neden": "Ürüne dönüşen substrattır; enzim yalnızca bu dönüşümü hızlandırır."}
     ]
@@ -39,14 +39,14 @@
   },
   {
    "baslik": "Her enzimin kendi substratı",
-   "metin": "Aktif bölgenin bir şekli vardır ve her enzim genellikle yalnızca belirli bir substrata etki eder: <b>özgüllük</b>. Bu enzim <b>laktaz</b>.",
+   "metin": "Bu enzim <b>laktaz</b>. Üç maddeden hangisi aktif bölgesine oturur?",
    "sahne": {"tur": "biy2-ozgulluk", "sure": 3, "maddeler": [{"ad": "yağ", "sekil": "zincir"}, {"ad": "laktoz", "sekil": "sivri"}, {"ad": "maltoz", "sekil": "kare"}]},
    "gorev": {
     "tur": "tahmin",
     "soru": "Laktaz hangisine etki eder?",
     "secenekler": [
      {"yazi": "Yağ", "neden": "Yağları lipaz parçalar; laktazın aktif bölgesi yağa uymaz."},
-     {"yazi": "Laktoz", "dogru": true, "neden": "Laktoz, laktazın aktif bölgesine tam oturur. Enzim adlarının çoğu substrat adına -az eki getirilerek yapılır: laktoz → laktaz, maltoz → maltaz, lipit → lipaz."},
+     {"yazi": "Laktoz", "dogru": true, "neden": "Laktoz, laktazın aktif bölgesine tam oturur. Laktazı az olan kişiler sütteki laktozu sindiremez."},
      {"yazi": "Maltoz", "neden": "Maltozu maltaz parçalar. Benzer bir şeker olsa da laktazın aktif bölgesine uymaz."}
     ]
    },
@@ -73,16 +73,16 @@
   },
   {
    "baslik": "pH",
-   "metin": "Her enzimin en iyi çalıştığı bir pH vardır. Mide asidiktir, ince bağırsak hafif baziktir. pH'yi değiştir ve <b>pepsini</b> en hızlı çalıştığı yere getir.",
+   "metin": "Mide asidiktir, ince bağırsak hafif baziktir. pH'yi değiştir ve <b>pepsini</b> en hızlı çalıştığı yere getir.",
    "sahne": {"tur": "biy2-ph"},
    "deger": {"ph": 7},
    "kontroller": [{"ad": "ph", "etiket": "pH", "min": 0, "max": 14}],
    "gorev": {
     "tur": "ayarla",
     "hedef": {"ph": 2},
-    "tamam": "Pepsin midenin asidinde (pH ≈ 2) en hızlıdır; tripsin ise ince bağırsakta (pH ≈ 8). Uygun olmayan pH aktif bölgenin şeklini bozar, aşırısı enzimi denatüre eder."
+    "tamam": "Pepsin midenin asidinde (pH ≈ 2) en hızlıdır; pH 8'de neredeyse durur, orada tripsin çalışır."
    },
-   "kart": 6,
+   "kart": 5,
    "goster": { "deger": { "ph": 8 }, "not": "pH 8'de tripsin en hızlı çalışıyor, pepsin ise neredeyse hiç çalışmıyor." }
   },
   {
@@ -95,7 +95,7 @@
     "tur": "secim",
     "soru": "Substratı 8'den 12'ye çıkarırsan hız ne olur?",
     "secenekler": [
-     {"yazi": "Değişmez", "dogru": true, "neden": "Bütün aktif bölgeler zaten dolu; fazla substrat sırada bekler. Buna <b>doygunluk</b> denir. Bu noktada hızı artırmak için enzim miktarını artırmak gerekir."},
+     {"yazi": "Değişmez", "dogru": true, "neden": "4 enzimin 4 aktif bölgesi 4. substratta dolmuştu; fazlası sırada bekler."},
      {"yazi": "Artar", "neden": "Substratı 4'ün üstüne çıkar ve hız çubuğuna bak. Aktif bölgeler dolunca ne oluyor?"},
      {"yazi": "Azalır", "neden": "Substrat çoğalınca hız düşmez. Ama dolu enzimler daha fazlasını aynı anda işleyemez."}
     ]
@@ -104,14 +104,14 @@
   },
   {
    "baslik": "Yarışmalı inhibitör",
-   "metin": "Bazı moleküller substrata benzer ve aktif bölgeyi kapatır: <b>yarışmalı inhibitör</b>. Şu an 4 enzimin 2'si kapalı. Substrat ekleyerek en az <b>3 enzimi</b> yeniden çalıştır.",
+   "metin": "Şu an 4 enzimin 2'sinin aktif bölgesini <b>yarışmalı inhibitör</b> kapatmış. Substrat ekleyerek en az <b>3 enzimi</b> yeniden çalıştır.",
    "sahne": {"tur": "biy2-inhibitor"},
    "deger": {"s": 4},
    "kontroller": [{"ad": "s", "etiket": "Substrat", "min": 4, "max": 16, "adim": 4, "tur": "sayac"}],
    "gorev": {
     "tur": "ayarla",
     "hedef": {"s": [8, 16]},
-    "tamam": "Substrat çoğalınca aktif bölgeyi kapma şansı artar ve inhibitörün etkisi azalır. <b>Yarışmasız inhibitör</b> ise aktif bölgeye değil başka bir yere bağlanıp enzimin şeklini bozar; ona karşı substrat eklemek işe yaramaz. Birçok ilaç ve zehir böyle çalışır."
+    "tamam": "Substrat çoğalınca aktif bölgeyi kapma şansı artar ve inhibitörün etkisi azalır. Yarışmasız inhibitöre karşı bu yol işe yaramaz, çünkü o aktif bölgeye bağlanmaz."
    },
    "kart": 9
   }

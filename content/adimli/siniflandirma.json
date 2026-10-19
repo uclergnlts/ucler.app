@@ -7,14 +7,14 @@
  "adimlar": [
   {
    "baslik": "Basamaklarda aşağı",
-   "metin": "Canlılar iç içe basamaklara yerleştirilir: üst âlem, âlem, şube, sınıf, takım, familya, cins, tür. Basamakları ev kedisine doğru in. <b>Ev kedisiyle aynı cinsteki</b> canlıyı bulunca dur.",
+   "metin": "Basamakları ev kedisine doğru in. <b>Ev kedisiyle aynı cinsteki</b> canlıyı bulunca dur.",
    "sahne": {"tur": "biy3-basamak"},
    "deger": {"k": 1},
    "kontroller": [{"ad": "k", "etiket": "Basamak", "min": 1, "max": 8, "tur": "sayac"}],
    "gorev": {
     "tur": "ayarla",
     "hedef": {"k": 7},
-    "tamam": "Cins <i>Felis</i>: ev kedisi ile yaban kedisi. Aslan bile dışarıda kaldı. Türe indikçe gruptaki canlı sayısı azalır; ortak özellik ve akrabalık artar. En dar birim türdür."
+    "tamam": "Cins <i>Felis</i>: ev kedisi ile yaban kedisi. Aslan bile dışarıda kaldı."
    },
    "kart": 3,
    "goster": {"deger": {"k": 4}, "not": "Sınıf basamağında (Memeliler) 16 canlıdan <b>8</b>'i kaldı; şubede birlikte olan kartal ve kurbağa burada dışarıda kaldı."}
@@ -34,11 +34,11 @@
      {"yazi": "Verimli yavru verebilirler", "neden": "Verimli yavru ölçütü türü tanımlar. Aynı familyadaki aslan ile ev kedisi farklı türlerdir."}
     ]
    },
-   "kart": 4
+   "kart": 3
   },
   {
    "baslik": "Tür nedir?",
-   "metin": "<b>Tür</b>, kendi aralarında çiftleşip verimli, yani üreyebilen yavru veren bireylerin oluşturduğu gruptur. Dişi at ile erkek eşek çiftleşince katır doğar.",
+   "metin": "Dişi at ile erkek eşek çiftleşince <b>katır</b> doğar. Oynatmadan önce tahmin et.",
    "sahne": {"tur": "biy3-melez", "sure": 4},
    "gorev": {
     "tur": "tahmin",
@@ -46,14 +46,14 @@
     "secenekler": [
      {"yazi": "Evet, katır yeni bir türdür", "neden": "Yeni bir tür olması için yavruların da üreyebilmesi gerekir."},
      {"yazi": "Yalnızca atla çiftleşirse", "neden": "Sorun eşte değil, katırın kendisindedir: düzgün üreme hücresi yapamaz."},
-     {"yazi": "Hayır, katır kısırdır", "dogru": true, "neden": "At ve eşeğin kromozomları eşlenemez; katır düzgün üreme hücresi yapamaz. Yavru verimli olmadığı için at ve eşek <b>ayrı türlerdir</b>."}
+     {"yazi": "Hayır, katır kısırdır", "dogru": true, "neden": "Atın 64, eşeğin 62 kromozomu vardır; 63 kromozomlu katır bu yüzden düzgün üreme hücresi yapamaz."}
     ]
    },
    "kart": 4
   },
   {
    "baslik": "İkili adlandırma",
-   "metin": "Linnaeus her türe iki kelimelik Latince bir ad verdi. Cins adı büyük harfle, tanımlayıcı ad küçük harfle başlar ve ikisi de <i>italik</i> yazılır. Kurdun adını kurallara göre düzelt.",
+   "metin": "Kurdun adını kurallara göre düzelt.",
    "sahne": {"tur": "biy3-ad"},
    "deger": {"cb": 0, "tb": 1, "it": 0},
    "kontroller": [
@@ -71,14 +71,14 @@
   },
   {
    "baslik": "Âlem anahtarı",
-   "metin": "Canlılar önce üç üst âleme ayrılır: Bakteriler, Arkeler ve Ökaryotlar. Hücre yapısına dair sorularla âlemi bulabilirsin. Ekmek küfü çekirdeklidir ve hücre duvarında <b>kitin</b> vardır.",
+   "metin": "Hücre yapısına dair sorularla âlemi bulabilirsin. Ekmek küfü çekirdeklidir ve hücre duvarında <b>kitin</b> vardır.",
    "sahne": {"tur": "biy3-anahtar", "sure": 3, "hedef": "Mantarlar"},
    "gorev": {
     "tur": "tahmin",
     "soru": "Ekmek küfü hangi âlemdedir?",
     "secenekler": [
      {"yazi": "Bitkiler", "neden": "Bitkilerin duvarı selülozdur ve fotosentez yaparlar; küf yapmaz."},
-     {"yazi": "Mantarlar", "dogru": true, "neden": "Çekirdekli, kitin duvarlı ve heterotrof: mantar. Mantarlar besini dışarıda sindirip emer; küf de ekmeği böyle tüketir."},
+     {"yazi": "Mantarlar", "dogru": true, "neden": "Çekirdekli ve kitin duvarlı canlı mantardır; küf, maya ve şapkalı mantar aynı âlemdedir."},
      {"yazi": "Bakteriler", "neden": "Bakterilerde çekirdek yoktur; küfün hücrelerinde ise çekirdek vardır."}
     ]
    },
@@ -94,7 +94,7 @@
     "secenekler": [
      {"yazi": "Bakteriler", "neden": "Bakterilerin hücre duvarında peptidoglikan bulunur; bu canlıda yok."},
      {"yazi": "Mantarlar", "neden": "Mantarlar ökaryottur, hücrelerinde çekirdek vardır."},
-     {"yazi": "Arkeler", "dogru": true, "neden": "Çekirdeksiz ama peptidoglikansız: arke. Arkeler de prokaryottur ama bakteri değildir. DNA karşılaştırmaları onları ökaryotlara bakterilerden daha yakın gösterir."}
+     {"yazi": "Arkeler", "dogru": true, "neden": "Çekirdeksiz ama peptidoglikansız: arke. Kaplıcanın sıcağı da arkelerin öne çıktığı aşırı ortamlardandır."}
     ]
    },
    "kart": 8
