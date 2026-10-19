@@ -54,7 +54,7 @@
      {
       "yazi": "Her parça N ve S kutuplu tam bir mıknatıs olur",
       "dogru": true,
-      "neden": "Kırılan her parça kendi N ve S kutbu olan tam bir mıknatıstır. Tek kutuplu mıknatıs yoktur; ne kadar bölersen böl, her parçada iki kutup bulunur."
+      "neden": "Kırık uçlarda hemen yeni kutuplar oluşur: sol parçanın sağ ucu N, sağ parçanın sol ucu S olur."
      }
     ]
    },
@@ -62,7 +62,7 @@
   },
   {
    "baslik": "Alan çizgileri",
-   "metin": "Alan çizgileri mıknatısın dışında <b>N'den S'ye</b> gider, kapalıdır ve kesişmez. Pusulayı numaralı yerlere taşı; iğnenin N ucu alanın yönünü gösterir.",
+   "metin": "Pusulayı numaralı yerlere taşı ve iğneyi izle.",
    "sahne": {
     "tur": "fiz10-alan"
    },
@@ -85,7 +85,7 @@
      {
       "yazi": "Kutupların yakınında, çizgilerin sık olduğu yerde",
       "dogru": true,
-      "neden": "Çizgiler nerede sıksa alan (B, birimi tesla) orada güçlüdür. Dünya da bir mıknatıstır: pusulanın N ucu coğrafi kuzeyi gösterdiğine göre orada Dünya'nın manyetik <b>S</b> kutbu vardır."
+      "neden": "Çizgiler kutuplarda toplanıp sıklaşır; alan (B) en güçlü oradadır."
      },
      {
       "yazi": "Mıknatısın ortasının hemen üstünde",
@@ -101,7 +101,7 @@
   },
   {
    "baslik": "Akımlı tel",
-   "metin": "Oersted: akım taşıyan tel çevresinde manyetik alan oluşturur. Tel ekrana dik duruyor. Akımı aç, sonra yönünü çevir ve pusulalara bak.",
+   "metin": "Oersted'in deneyi: tel ekrana dik duruyor. Akımı aç, sonra yönünü çevir ve pusulalara bak.",
    "sahne": {
     "tur": "fiz10-oersted"
    },
@@ -136,7 +136,7 @@
      {
       "yazi": "Saat yönünde",
       "dogru": true,
-      "neden": "Sağ el kuralı: başparmak akım yönünde (ekrana doğru), kıvrılan parmaklar alanın yönünü, yani saat yönünü gösterir. Alan B = 2k·I/d ile uzaklaştıkça zayıflar: d iki katına çıkınca B yarıya iner."
+      "neden": "Sağ el kuralı: başparmak akım yönünde (ekrana doğru), kıvrılan parmaklar saat yönünde döner."
      },
      {
       "yazi": "Telden dışarı, ışın gibi",
@@ -148,7 +148,7 @@
   },
   {
    "baslik": "Elektromıknatıs",
-   "metin": "Bobinden 2 A geçiyor. Alan, sarım sayısı ve akımla güçlenir; demir çekirdek onu kat kat artırır. Tam <b>8 ataç</b> çekecek bir elektromıknatıs yap.",
+   "metin": "Bobinden 2 A geçiyor. Tam <b>8 ataç</b> çekecek bir elektromıknatıs yap.",
    "sahne": {
     "tur": "fiz10-elektromiknatis"
    },
@@ -179,7 +179,7 @@
      "N": 40,
      "c": 1
     },
-    "tamam": "Demir çekirdekli 40 sarım 8 ataç çekti. Akımı artırmak da alanı güçlendirir; akım kesilince mıknatıslık neredeyse tamamen kaybolur. Hurda vinçleri, zil, röle, hoparlör ve MR cihazı böyle çalışır.",
+    "tamam": "Demir çekirdekli 40 sarım 8 ataç çekti. Çekirdek bobinin alanında kendisi mıknatıslanır ve alana katkı yapar.",
     "ipucu": "Çekirdeksiz bobin zayıftır. Önce demir çekirdeği koy, sonra sarımı ayarla."
    },
    "kart": 9,
@@ -229,7 +229,7 @@
   },
   {
    "baslik": "Elektrik motoru",
-   "metin": "Motorda akımlı bobin iki mıknatıs arasında döner. Kuvvetler bobini döndürür; <b>komütatör</b> ise akımın yönünü her yarım turda çevirir. Bu motorda komütatör yok.",
+   "metin": "Bu motorda <b>komütatör</b> yok: akım bobinden hep aynı yönde geçiyor.",
    "sahne": {
     "tur": "fiz10-motor",
     "sure": 4
@@ -239,13 +239,13 @@
     "soru": "Komütatör olmasaydı bobin ne yapardı?",
     "secenekler": [
      {
-      "yazi": "Dik konuma kadar döner, salınır ve orada durur",
+      "yazi": "Çerçeve düzlemi alana dik olana kadar döner, salınıp durur",
       "dogru": true,
-      "neden": "Akım hep aynı yönde kalınca kuvvetler bobini dik konuma çeker; orada tork sıfırdır. Bobin biraz salınıp durur. Komütatör akımı her yarım turda çevirerek dönmeyi sürekli kılar."
+      "neden": "Çerçeve düzlemi alana dik olunca kenarlara etkiyen kuvvetler aynı doğrultuda kalır, tork sıfırdır. Bobin bu konumun çevresinde salınıp durur."
      },
      {
       "yazi": "Aynı yönde sürekli döner",
-      "neden": "Dik konumu geçince kuvvetler bobini geri çeker; sürekli dönüş için akımın çevrilmesi gerekir."
+      "neden": "Çerçeve düzlemi alana dik konumu geçince kuvvetler bobini geri çeker; sürekli dönüş için akımın çevrilmesi gerekir."
      },
      {
       "yazi": "Hiç dönmez",

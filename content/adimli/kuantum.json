@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Siyah cisim ışıması",
-   "metin": "Mutlak sıfırın üstündeki her cisim ışıma yapar. Sıcaklık arttıkça ışıma artar ve eğrinin tepesi <b>kısa dalga boylarına</b> kayar. Planck bu eğriyi açıklamak için enerjinin <b>paket paket</b> (kuantum) alınıp verildiğini önerdi. Sıcaklığı ayarla: tepe <b>500 nm</b>'de olsun.",
+   "metin": "Sıcaklığı ayarla: eğrinin tepesi <b>500 nm</b>'de olsun.",
    "sahne": {
     "tur": "fiz13-siyah"
    },
@@ -30,7 +30,7 @@
     "hedef": {
      "T": 5800
     },
-    "tamam": "Wien: λ<sub>max</sub> = 2,9·10⁶ / 5800 = <b>500 nm</b>. Bu, Güneş'in yüzey sıcaklığıdır; Güneş tepesini görünür bölgede yapar. Sen (~310 K) kızılötesinde ışırsın. Isınan demir önce kırmızı, sonra beyaza yakın parlar.",
+    "tamam": "Wien: λ<sub>max</sub> = 2,9·10⁶ / 5800 = <b>500 nm</b>. Bu, Güneş'in yüzey sıcaklığıdır.",
     "ipucu": "λ<sub>max</sub>·T ≈ 2,9·10⁶ nm·K. T = 2,9·10⁶ / 500."
    },
    "kart": 1,
@@ -43,7 +43,7 @@
   },
   {
    "baslik": "Fotoelektrik olay: eşik",
-   "metin": "Işık <b>foton</b>lardan oluşur; bir fotonun enerjisi <b>E = h·f</b>, yani E(eV) ≈ 1240 / λ(nm). Sodyumdan elektron koparmak için en az <b>W = 2,3 eV</b> gerekir. Rengi ve şiddeti değiştirip en az iki farklı deneme yap.",
+   "metin": "Metale ışık düşünce elektron kopabilir. Sodyumdan elektron koparmak için en az <b>W = 2,3 eV</b> gerekir. Rengi ve şiddeti değiştirip en az iki farklı deneme yap.",
    "sahne": {
     "tur": "fiz13-esik",
     "sure": 2.5
@@ -87,11 +87,11 @@
      {
       "yazi": "Işığın frekansı (rengi)",
       "dogru": true,
-      "neden": "Tek bir fotonun enerjisi h·f'dir. f, <b>eşik frekansı</b> f<sub>0</sub>'ın altındaysa (h·f &lt; W) ışık ne kadar şiddetli olursa olsun elektron çıkmaz. Sodyum için eşik ≈ 540 nm."
+      "neden": "Bir elektron tek bir fotonun enerjisini (h·f) alır; h·f &lt; W ise ışık ne kadar şiddetli olursa olsun elektron çıkmaz. Sodyum için eşik ≈ 540 nm."
      }
     ]
    },
-   "kart": 4,
+   "kart": 3,
    "goster": {
     "deger": {
      "lam": 450,
@@ -102,7 +102,7 @@
   },
   {
    "baslik": "Einstein denklemi ve durdurma gerilimi",
-   "metin": "Foton enerjisinin W kadarı elektronu koparmaya gider, kalanı kinetik enerji olur: <b>E<sub>k,max</sub> = h·f − W</b>. En hızlı elektronu durduran ters gerilim <b>V<sub>0</sub></b>'dır: e·V<sub>0</sub> = E<sub>k,max</sub>. Dalga boyunu ayarla: V<sub>0</sub> = <b>0,8 V</b> olsun.",
+   "metin": "En hızlı elektronu durduran ters gerilim <b>V<sub>0</sub></b>'dır: e·V<sub>0</sub> = E<sub>k,max</sub>. Dalga boyunu ayarla: V<sub>0</sub> = <b>0,8 V</b> olsun.",
    "sahne": {
     "tur": "fiz13-durdur"
    },
@@ -125,10 +125,10 @@
     "hedef": {
      "lam": 400
     },
-    "tamam": "400 nm'de foton 1240/400 = <b>3,1 eV</b>; E<sub>k,max</sub> = 3,1 − 2,3 = <b>0,8 eV</b>, V<sub>0</sub> = 0,8 V. Daha derindeki elektronlar yolda enerji kaybeder; formül <b>en büyük</b> kinetik enerjiyi verir. E<sub>k,max</sub> f ile artar ama doğru orantılı değildir: W düşülür.",
+    "tamam": "400 nm'de foton 1240/400 = <b>3,1 eV</b>; E<sub>k,max</sub> = 3,1 − 2,3 = <b>0,8 eV</b>, V<sub>0</sub> = 0,8 V.",
     "ipucu": "h·f = 2,3 + 0,8 = 3,1 eV olmalı. λ = 1240 / 3,1."
    },
-   "kart": 6,
+   "kart": 5,
    "goster": {
     "deger": {
      "lam": 350
@@ -154,7 +154,7 @@
      {
       "yazi": "Akım artar, E<sub>k,max</sub> aynı kalır",
       "dogru": true,
-      "neden": "İki kat foton, iki kat elektron koparır: <b>akım</b> büyür. Her elektron yine 0,8 eV ile çıkar; E<sub>k,max</sub> ve V<sub>0</sub> değişmez. V<sub>0</sub>'ı yalnızca ışığın frekansı ve metalin cinsi belirler."
+      "neden": "İki kat foton, iki kat elektron koparır: <b>akım</b> büyür. Her elektron yine tek fotonun enerjisini alır, en fazla 0,8 eV ile çıkar."
      },
      {
       "yazi": "Akım da E<sub>k,max</sub> da iki katına çıkar",
@@ -162,7 +162,7 @@
      }
     ]
    },
-   "kart": 6
+   "kart": 5
   },
   {
    "baslik": "Compton olayı",
@@ -178,7 +178,7 @@
      {
       "yazi": "Uzar",
       "dogru": true,
-      "neden": "Foton enerjisinin ve momentumunun bir kısmını elektrona verir: enerjisi azalır, <b>λ büyür</b>, f küçülür. Hızı yine c'dir. Bu olay ışığın parçacık gibi çarpıştığını gösterir."
+      "neden": "Foton enerjisinin bir kısmını elektrona verir: enerjisi azalır, <b>λ büyür</b>, f küçülür. Hızı yine c'dir."
      },
      {
       "yazi": "Kısalır",
@@ -214,7 +214,7 @@
      {
       "yazi": "Aydınlık-karanlık girişim saçakları",
       "dogru": true,
-      "neden": "Her elektron perdeye <b>tek nokta</b> olarak düşer (parçacık), ama noktalar birikince <b>girişim saçakları</b> çıkar (dalga). Buna <b>dalga-parçacık ikiliği</b> denir. Heisenberg: konum ve momentum aynı anda tam bilinemez."
+      "neden": "Her elektron perdeye <b>tek nokta</b> olarak düşer (parçacık), ama noktalar birikince <b>girişim saçakları</b> çıkar (dalga). Buna <b>dalga-parçacık ikiliği</b> denir."
      }
     ]
    },
@@ -222,7 +222,7 @@
   },
   {
    "baslik": "Bohr modeli ve spektrum",
-   "metin": "Hidrojende elektron yalnızca belirli düzeylerde bulunur: <b>E<sub>n</sub> = −13,6/n² eV</b>. Üst düzeyden alta inen elektron farkı tek foton olarak yayar: h·f = E<sub>üst</sub> − E<sub>alt</sub>. <b>2,55 eV</b>'lik mavi-yeşil fotonu veren geçişi bul.",
+   "metin": "Hidrojende <b>E<sub>n</sub> = −13,6/n² eV</b>. <b>2,55 eV</b>'lik mavi-yeşil fotonu veren geçişi bul.",
    "sahne": {
     "tur": "fiz13-bohr"
    },
@@ -254,7 +254,7 @@
      "ust": 4,
      "alt": 2
     },
-    "tamam": "E<sub>4</sub> − E<sub>2</sub> = −0,85 − (−3,4) = <b>2,55 eV</b>, λ = 1240/2,55 ≈ <b>486 nm</b>. n = 2'ye inen geçişler görünür ışık verir; n = 1'e inenler morötesindedir. Her elementin çizgileri kendine özgüdür; parmak izi gibi elementi tanıtır.",
+    "tamam": "E<sub>4</sub> − E<sub>2</sub> = −0,85 − (−3,4) = <b>2,55 eV</b>, λ = 1240/2,55 ≈ <b>486 nm</b>. n = 2'ye inen geçişlerin çoğu görünür bölgededir (Balmer serisi); n = 1'e inenler morötesindedir (Lyman serisi).",
     "ipucu": "Düzeyler: −13,6; −3,4; −1,51; −0,85 eV. Farkı 2,55 olan ikiliyi ara."
    },
    "kart": 12,

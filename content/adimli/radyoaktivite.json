@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Çekirdek ve izotop",
-   "metin": "Çekirdekte <b>proton</b> ve <b>nötron</b> bulunur; ikisinin ortak adı <b>nükleon</b>dur. Proton sayısı Z elementi belirler; A = Z + N kütle numarasıdır. Bu bir karbon-12 çekirdeği. Onu <b>karbon-14</b>'e çevir.",
+   "metin": "Bu bir karbon-12 çekirdeği. Onu <b>karbon-14</b>'e çevir.",
    "sahne": {
     "tur": "fiz14-cekirdek"
    },
@@ -37,7 +37,7 @@
      "p": 6,
      "n": 8
     },
-    "tamam": "6 proton ve 8 nötron: <sup>14</sup><sub>6</sub>C. Z aynı kaldığı için hâlâ karbon; yalnızca A değişti. Z'si aynı, A'sı farklı çekirdeklere <b>izotop</b> denir. Proton sayısını değiştirseydin başka bir element olurdu.",
+    "tamam": "6 proton ve 8 nötron: <sup>14</sup><sub>6</sub>C. Z aynı kaldığı için hâlâ karbon; yalnızca A değişti: bu, karbonun bir <b>izotopudur</b>.",
     "ipucu": "Elementi proton sayısı belirler; karbonda Z = 6 kalmalı. A = 14 için nötron sayısını değiştir."
    },
    "kart": 1,
@@ -51,7 +51,7 @@
   },
   {
    "baslik": "Güçlü çekirdek kuvveti",
-   "metin": "Çekirdekteki protonlar birbirini elektriksel olarak iter. Onları <b>güçlü çekirdek kuvveti</b> bir arada tutar. İki protonun arasını aç ve iki kuvvetin nasıl değiştiğine bak.",
+   "metin": "Çekirdekteki protonlar birbirini elektriksel olarak iter. Onları <b>güçlü çekirdek kuvveti</b> bir arada tutar. İki protonun arasını aç (1 fm = 10⁻¹⁵ m) ve iki kuvvetin nasıl değiştiğine bak.",
    "sahne": {
     "tur": "fiz14-kuvvet"
    },
@@ -75,7 +75,7 @@
     "secenekler": [
      {
       "yazi": "Yalnızca protonlar arasında etkir",
-      "neden": "Güçlü kuvvet yükten bağımsızdır: proton-proton, proton-nötron ve nötron-nötron arasında etkir. Nötronlar itme eklemeden çekim ekler."
+      "neden": "Güçlü kuvvet yükten bağımsızdır: proton-nötron ve nötron-nötron arasında da etkir."
      },
      {
       "yazi": "Uzaklık arttıkça elektriksel itmeden yavaş azalır",
@@ -84,11 +84,11 @@
      {
       "yazi": "Çok kısa menzillidir; yaklaşık 1 fm'de itmeyi yener",
       "dogru": true,
-      "neden": "Yaklaşık 10⁻¹⁵ m'de güçlü çekim itmeyi rahatça yener; birkaç katı uzaklıkta ise neredeyse sıfıra iner. Bu yüzden çekirdek küçüktür ve nötronlar kararlılık için önemlidir."
+      "neden": "Yaklaşık 1 fm'de güçlü çekim itmeyi rahatça yener; birkaç fm'de ise neredeyse sıfıra iner. Bu yüzden çekirdek çok küçüktür."
      }
     ]
    },
-   "kart": 2
+   "kart": 1
   },
   {
    "baslik": "Kütle açığı",
@@ -104,7 +104,7 @@
      {
       "yazi": "Ayrı nükleonlar",
       "dogru": true,
-      "neden": "Çekirdek oluşurken kütlenin bir kısmı enerji olarak salınır: <b>E = Δm·c²</b>. Helyum-4 çekirdeği parçalarından 0,0304 u hafiftir; 1 u ≈ 931,5 MeV olduğundan bu ≈ 28,3 MeV <b>bağlanma enerjisi</b> eder. Çekirdeği ayırmak için aynı enerjiyi vermen gerekir."
+      "neden": "Çekirdek parçalarından hafiftir; aradaki kütle, çekirdek oluşurken enerji olarak salınmıştır."
      },
      {
       "yazi": "Helyum çekirdeği",
@@ -145,10 +145,10 @@
       64
      ]
     },
-    "tamam": "Tepe A ≈ 56-62 civarında, nükleon başına ≈ 8,8 MeV: <b>demir-56</b> ve nikel-62 en kararlı çekirdeklerdendir. Hafif çekirdekler birleşerek (<b>füzyon</b>), ağır çekirdekler bölünerek (<b>fisyon</b>) tepeye yaklaşır; ikisinde de enerji açığa çıkar.",
+    "tamam": "Tepe A ≈ 56-62 civarında, nükleon başına ≈ 8,8 MeV: <b>demir-56</b> ve nikel-62 en kararlı çekirdeklerdendir.",
     "ipucu": "Eğri hafiflerde hızla yükseliyor, ağırlarda yavaşça düşüyor. Ortadaki en yüksek noktayı ara."
    },
-   "kart": 4,
+   "kart": 3,
    "goster": {
     "deger": {
      "A": 238
@@ -158,7 +158,7 @@
   },
   {
    "baslik": "Uranyumdan kurşuna",
-   "metin": "<b>α</b> bozunmasında A 4, Z 2 azalır. <b>β⁻</b> bozunmasında bir nötron protona döner: Z 1 artar, A değişmez. <sup>238</sup>U art arda bozunarak kararlı <sup>206</sup>Pb'ye iniyor. Kaç α ve kaç β⁻ gerekir?",
+   "metin": "<sup>238</sup>U art arda bozunarak kararlı <sup>206</sup>Pb'ye iniyor. Kaç α ve kaç β⁻ gerekir?",
    "sahne": {
     "tur": "fiz14-zincir"
    },
@@ -188,7 +188,7 @@
      "a": 8,
      "b": 6
     },
-    "tamam": "A farkı 238 − 206 = 32; A'yı yalnızca α değiştirir, yani 32 / 4 = <b>8 α</b>. 8 α, Z'yi 16 azaltıp 76'ya indirir; 82'ye çıkmak için <b>6 β⁻</b> gerekir. Her bozunmada iki taraftaki A toplamı ve Z toplamı korunur. γ ışıması ne A'yı ne Z'yi değiştirir.",
+    "tamam": "A farkı 238 − 206 = 32; A'yı yalnızca α değiştirir, yani 32 / 4 = <b>8 α</b>. 8 α, Z'yi 16 azaltıp 76'ya indirir; 82'ye çıkmak için <b>6 β⁻</b> gerekir.",
     "ipucu": "Önce α sayısını A farkından bul: 238 − 206 = 32. Sonra Z'yi β⁻ ile düzelt."
    },
    "kart": 7,
@@ -218,7 +218,7 @@
      {
       "yazi": "β⁻ (beta eksi)",
       "dogru": true,
-      "neden": "β⁻ bir elektrondur; yük/kütle oranı α'nınkinden binlerce kat büyük olduğu için pozitif plakaya doğru en çok o sapar. Yüksüz γ hiç sapmaz. Giricilikte sıra γ > β > α'dır: kâğıt α'yı, birkaç mm alüminyum β'yı durdurur, kurşun γ'yı ancak zayıflatır."
+      "neden": "β⁻ bir elektrondur; yük/kütle oranı α'nınkinden binlerce kat büyük olduğu için pozitif plakaya doğru en çok o sapar. Yüksüz γ hiç sapmaz."
      },
      {
       "yazi": "γ (gama)",
@@ -230,7 +230,7 @@
   },
   {
    "baslik": "Yarı ömür",
-   "metin": "Çekirdeklerin yarısının bozunması için geçen süreye <b>yarı ömür</b> denir. n = t / T<sub>½</sub> ise kalan <b>N = N₀ / 2ⁿ</b>. Yarı ömrü 4 gün olan 120 g maddeden <b>15 g</b> kalması için ne kadar beklemelisin?",
+   "metin": "Yarı ömrü 4 gün olan 120 g maddeden <b>15 g</b> kalması için ne kadar beklemelisin?",
    "sahne": {
     "tur": "fiz14-yari"
    },
@@ -253,7 +253,7 @@
     "hedef": {
      "t": 12
     },
-    "tamam": "120 → 60 → 30 → 15: üç yarı ömür, yani <b>12 gün</b>. Madde hiçbir zaman tam bitmez, her yarı ömürde yarıya iner. Yarı ömür sıcaklıkla değişmez. Karbon-14 ile yaş tayini de böyle çalışır: oran dörtte bire inmişse 2 · 5730 ≈ 11 460 yıl geçmiştir.",
+    "tamam": "120 → 60 → 30 → 15: üç yarı ömür, yani <b>12 gün</b>.",
     "ipucu": "120'yi kaç kez yarıya bölersen 15 olur? Her bölme 4 gün sürer."
    },
    "kart": 9,
@@ -266,7 +266,7 @@
   },
   {
    "baslik": "Zincirleme tepkime",
-   "metin": "<sup>235</sup>U bir nötron yutunca ikiye bölünür ve 2-3 nötron salar. Bu nötronlar yeni bölünmeler başlatabilir. Santralde kontrol çubukları fazla nötronları yutar. Her bölünmeden kaç nötron yeni bölünme yapmalı ki tepkime <b>sabit hızla</b> sürsün?",
+   "metin": "Santralde kontrol çubukları fazla nötronları yutar. Her bölünmeden kaç nötron yeni bölünme yapmalı ki tepkime <b>sabit hızla</b> sürsün?",
    "sahne": {
     "tur": "fiz14-fisyon"
    },
@@ -287,7 +287,7 @@
     "hedef": {
      "k": 1
     },
-    "tamam": "Her bölünme tam <b>bir</b> yeni bölünme başlatırsa tepkime sabit hızla sürer; nükleer santraller böyle çalışır. 2 ya da 3 olursa sayı her kuşakta katlanır ve tepkime denetimden çıkar; 0 olursa söner. <b>Füzyon</b>da ise hafif çekirdekler birleşir: Güneş, yaklaşık 15 milyon K'lik merkezinde hidrojeni helyuma çevirir.",
+    "tamam": "Her bölünme tam <b>bir</b> yeni bölünme başlatırsa tepkime sabit hızla sürer; nükleer santraller böyle çalışır. 2 ya da 3 olursa sayı her kuşakta katlanır ve tepkime denetimden çıkar; 0 olursa söner.",
     "ipucu": "Kuşaklardaki bölünme sayısı her adımda aynı kalmalı."
    },
    "kart": 11,

@@ -13,10 +13,10 @@
       "kontroller": [{"ad": "h", "etiket": "Mıknatısın hızı", "min": 1, "max": 3, "tur": "sayac", "birim": "m/s"}],
       "gorev": {"tur": "secim", "kosu": 2, "soru": "Galvanometrenin sapması neye bağlı?", "secenekler": [
         {"yazi": "Mıknatısın bobinin içinde durmasına", "neden": "Mıknatıs durunca akı değişmez ve iğne sıfıra döner."},
-        {"yazi": "Mıknatısın ne kadar hızlı hareket ettiğine", "dogru": true, "neden": "Faraday: ε = −N·ΔΦ/Δt. Akı ne kadar hızlı değişirse gerilim o kadar büyük olur. 100 sarımlı bobinde akı 0,1 s'de 0,02 Wb'den 0'a inerse ε = 100 · 0,02 / 0,1 = 20 V."},
+        {"yazi": "Mıknatısın ne kadar hızlı hareket ettiğine", "dogru": true, "neden": "Mıknatıs hızlandıkça bobinden geçen akı daha kısa sürede değişir; akı ne kadar hızlı değişirse gerilim o kadar büyük olur."},
         {"yazi": "Hiçbir şeye; hep aynı sapar", "neden": "Denemelerin soluk izlerine bak: hız artınca sapma da artıyor."}
       ]},
-      "kart": 2
+      "kart": 1
     },
     {
       "baslik": "Lenz kuralı",
@@ -25,23 +25,23 @@
       "gorev": {"tur": "tahmin", "soru": "Bobinin mıknatısa bakan yüzü ne olur?", "secenekler": [
         {"yazi": "S olur ve mıknatısı çeker", "neden": "Öyle olsaydı mıknatıs kendiliğinden hızlanır, hiç yoktan enerji üretilirdi."},
         {"yazi": "Mıknatıs olmaz, bir şey değişmez", "neden": "Bobinden geçen akım, bobini bir mıknatıs gibi davranmaya zorlar."},
-        {"yazi": "N olur ve mıknatısı iter", "dogru": true, "neden": "Lenz kuralı: indüksiyon akımı, kendisini oluşturan değişime karşı koyar. Yaklaşan N kutbunu itmek için bobinin o yüzü N olur. Mıknatısı itmek için iş yaparsın; bu iş elektrik enerjisine dönüşür. Bu, enerjinin korunumudur."}
+        {"yazi": "N olur ve mıknatısı iter", "dogru": true, "neden": "Bobin, yaklaşan N kutbunu iterek onun yaklaşmasına karşı koyar. Mıknatısı bu itmeye karşı itmek için yaptığın iş elektrik enerjisine dönüşür."}
       ]},
       "kart": 3
     },
     {
       "baslik": "Kayan çubuk",
-      "metin": "İletken çubuk, B = 0,5 T'lık alanda raylar üzerinde kayıyor. Çubuğun boyu L = 0,4 m. Uçlarında <b>ε = B·L·v</b> gerilimi oluşur. Hızı ayarla, gerilim <b>1 V</b> olsun.",
+      "metin": "B = 0,5 T, çubuğun boyu L = 0,4 m. Hızı ayarla, gerilim <b>0,8 V</b> olsun.",
       "sahne": {"tur": "fiz10-cubuk"},
       "deger": {"v": 2},
       "kontroller": [{"ad": "v", "etiket": "Hız", "min": 0, "max": 10, "tur": "surgu", "birim": "m/s"}],
-      "gorev": {"tur": "ayarla", "hedef": {"v": 5}, "tamam": "ε = 0,5 · 0,4 · 5 = <b>1 V</b>. Çubuk durunca devrenin alanı değişmez, akım da kesilir. Akıyı B, alan ya da açıyı değiştirerek değiştirebilirsin.", "ipucu": "0,5 · 0,4 = 0,2; 1 V için v = 1 / 0,2."},
+      "gorev": {"tur": "ayarla", "hedef": {"v": 4}, "tamam": "ε = 0,5 · 0,4 · 4 = <b>0,8 V</b>. Çubuk durunca devrenin yüzey alanı (A) artık değişmez; akı sabit kalır, akım kesilir.", "ipucu": "0,5 · 0,4 = 0,2; 0,8 V için v = 0,8 / 0,2."},
       "kart": 6,
       "goster": {"deger": {"v": 3}, "not": "v = 3 m/s: ε = 0,5 · 0,4 · 3 = 0,6 V."}
     },
     {
       "baslik": "Jeneratör",
-      "metin": "Jeneratörde bobin mıknatıslar arasında döner; akı sürekli değişir ve yönü dönüp duran bir akım oluşur: <b>alternatif akım</b>. Bobini farklı hızlarla döndür.",
+      "metin": "Bobini farklı hızlarla döndür ve grafikteki gerilimi izle.",
       "sahne": {"tur": "fiz10-jenerator", "sure": 2},
       "deger": {"r": 1},
       "kontroller": [{"ad": "r", "etiket": "Dönme hızı (tur/s)", "min": 1, "max": 3, "tur": "sayac"}],
@@ -64,15 +64,15 @@
     },
     {
       "baslik": "Transformatör",
-      "metin": "Transformatörde <b>V₁ / V₂ = N₁ / N₂</b>. Birincil bobin 1000 sarım ve 230 V'a bağlı. Telefon şarj cihazı için çıkışı <b>11,5 V</b> yap. Sonra pili de dene.",
+      "metin": "Birincil bobin 1000 sarım ve 230 V'a bağlı. Telefon şarj cihazı için çıkışı <b>11,5 V</b> yap. Sonra pili de dene.",
       "sahne": {"tur": "fiz10-trafo"},
       "deger": {"N2": 500, "d": 0},
       "kontroller": [
         {"ad": "N2", "etiket": "İkincil sarım N₂", "min": 50, "max": 2000, "adim": 50, "tur": "surgu"},
         {"ad": "d", "etiket": "Pil bağla (DC)", "min": 0, "max": 1, "tur": "anahtar"}
       ],
-      "gorev": {"tur": "ayarla", "hedef": {"N2": 50, "d": 0}, "tamam": "V₂ = 230 · 50 / 1000 = <b>11,5 V</b>. Akım ters oranda artar: I₁ / I₂ = N₂ / N₁. Pil bağlarsan çıkış 0 olur: doğru akım akıyı değiştirmez, transformatör yalnız AC ile çalışır.", "ipucu": "11,5 / 230 = 1/20; N₂ = 1000 / 20."},
-      "kart": 12,
+      "gorev": {"tur": "ayarla", "hedef": {"N2": 50, "d": 0}, "tamam": "V₂ = 230 · 50 / 1000 = <b>11,5 V</b>. Pili bağlayınca çıkış 0 olur: sabit akımın akısı değişmez.", "ipucu": "11,5 / 230 = 1/20; N₂ = 1000 / 20."},
+      "kart": 11,
       "goster": {"deger": {"N2": 100}, "not": "N₂ = 100 sarım: V₂ = 230 · 100 / 1000 = 23 V. Şarj cihazı için hâlâ fazla."}
     },
     {
@@ -81,8 +81,8 @@
       "sahne": {"tur": "fiz10-iletim"},
       "deger": {"k": 1},
       "kontroller": [{"ad": "k", "etiket": "Hat gerilimi", "min": 1, "max": 10, "tur": "surgu", "carpan": 38, "birim": "kV"}],
-      "gorev": {"tur": "ayarla", "hedef": {"k": 10}, "tamam": "Gerilim 10 katına çıkınca akım 10'da birine iner, kayıp I²·R ise <b>100'de birine</b> düşer. Bu yüzden Türkiye'de enerji 154 kV ve 380 kV ile taşınır; şehre girerken transformatörlerle düşürülür.", "ipucu": "Kayıp akımın karesiyle orantılı. Akımı 10'da birine indirmek için gerilimi 10 katına çıkar."},
-      "kart": 14,
+      "gorev": {"tur": "ayarla", "hedef": {"k": 10}, "tamam": "Gerilim 10 katına çıkınca akım 10'da birine iner, kayıp I²·R ise <b>100'de birine</b> düşer.", "ipucu": "Kayıp akımın karesiyle orantılı. Akımı 10'da birine indirmek için gerilimi 10 katına çıkar."},
+      "kart": 12,
       "goster": {"deger": {"k": 5}, "not": "Gerilim 5 katına (190 kV) çıkınca akım 5'te bire, kayıp I²·R 25'te bire iniyor."}
     }
   ],

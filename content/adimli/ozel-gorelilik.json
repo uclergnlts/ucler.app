@@ -44,7 +44,7 @@
   },
   {
    "baslik": "Işık hızı herkes için c",
-   "metin": "1887'de Michelson ve Morley ışığın yöne göre farklı hızda gittiğini aradı, bulamadı. Şimdi bir gemi Dünya'ya <b>0,5c</b> ile yaklaşıyor ve farını yakıyor.",
+   "metin": "Bir gemi Dünya'ya <b>0,5c</b> ile yaklaşıyor ve farını yakıyor.",
    "sahne": {
     "tur": "fiz13-isik",
     "sure": 4
@@ -60,7 +60,7 @@
      {
       "yazi": "c",
       "dogru": true,
-      "neden": "Einstein'ın ikinci postulatı: ışığın boşluktaki hızı kaynağın ve gözlemcinin hareketinden bağımsızdır; her eylemsiz gözlemci <b>c ≈ 3·10⁸ m/s</b> ölçer. Birinci postulat: fizik yasaları bütün eylemsiz sistemlerde aynıdır."
+      "neden": "Ölçümler hep c verir: ışığın hızı kaynağın hareketine eklenmez. Einstein bunu bir postulat olarak kabul etti (sonraki kart)."
      },
      {
       "yazi": "0,5c",
@@ -68,7 +68,7 @@
      }
     ]
    },
-   "kart": 3
+   "kart": 2
   },
   {
    "baslik": "Eşzamanlılık göreli",
@@ -126,7 +126,7 @@
     "tamam": "0,8c'de γ = 1/√(1 − 0,64) = <b>5/3</b>. Δt = γ·Δt<sub>0</sub> = 5/3 · 6 = <b>10 yıl</b>. Olayların aynı yerde olduğu gemideki süre <b>öz zamandır</b>; en kısa süre odur, başka sistemlerden hep daha uzun ölçülür.",
     "ipucu": "10 / 6 = 5/3 olmalı. γ = 1/√(1 − v²/c²): v/c'yi büyüttükçe γ artar."
    },
-   "kart": 5,
+   "kart": 4,
    "goster": {
     "deger": {
      "b": 0.5
@@ -136,7 +136,7 @@
   },
   {
    "baslik": "γ çarpanı",
-   "metin": "γ hiçbir zaman 1'den küçük olmaz. 300 m/s hızlı bir jette bile γ ≈ 1 + 5·10⁻¹³; fark ancak atom saatleriyle ölçülür. Hızı ayarla: saatler <b>yarı hızda</b> işlesin, yani γ = 2 olsun.",
+   "metin": "Hızı ayarla: hareketli saat Dünya'dan bakınca <b>yarı hızda</b> işlesin, yani γ = 2 olsun.",
    "sahne": {
     "tur": "fiz13-gama"
    },
@@ -162,10 +162,10 @@
       0.87
      ]
     },
-    "tamam": "γ = 2 için 1 − v²/c² = 1/4, yani v = (√3/2)c ≈ <b>0,866c</b>. Hız c'ye yaklaştıkça γ hızla büyür. v ≪ c iken γ ≈ 1 olduğu için günlük hayatta Newton fiziği yeterlidir.",
+    "tamam": "γ = 2 için 1 − v²/c² = 1/4, yani v = (√3/2)c ≈ <b>0,866c</b>.",
     "ipucu": "γ = 2 için √(1 − v²/c²) = 1/2 olmalı. Hızı 0,8c'nin biraz üstüne çıkar."
    },
-   "kart": 6,
+   "kart": 5,
    "goster": {
     "deger": {
      "b": 0.7
@@ -187,7 +187,7 @@
      {
       "yazi": "Evet: yerden bakınca ömrü yaklaşık 10 kat uzar",
       "dogru": true,
-      "neden": "0,995c'de γ ≈ 10. Yerden bakınca ömrü ≈ <b>22 μs</b> olur, bu sürede ≈ 6,6 km yol alır. Bu yüzden yerde bolca müon ölçülür. Müonun kendi sisteminde ise atmosferin kalınlığı γ kat kısalmıştır: ≈ 660 m."
+      "neden": "0,995c'de γ ≈ 10. Yerden bakınca ömrü ≈ <b>22 μs</b> olur, bu sürede ≈ 6,6 km yol alır. Müonun kendi sisteminde ise atmosferin kalınlığı γ kat kısalmıştır: ≈ 660 m."
      },
      {
       "yazi": "Hayır: 2,2 μs'de ancak 660 m gider",
@@ -199,11 +199,11 @@
      }
     ]
    },
-   "kart": 6
+   "kart": 5
   },
   {
    "baslik": "Boy kısalması",
-   "metin": "Geminin kendi sisteminde ölçülen boyu, yani <b>öz boyu</b> 100 m. Hareket eden gemiyi Dünya'dan ölçen gözlemci onu daha kısa bulur: <b>L = L<sub>0</sub>/γ</b>. Hızı ayarla: gemi <b>80 m</b> ölçülsün.",
+   "metin": "Geminin kendi sisteminde ölçülen boyu, yani <b>öz boyu</b> 100 m. Hareket eden gemiyi Dünya'dan ölçen gözlemci onu daha kısa bulur: <b>L = L<sub>0</sub>/γ</b>. Hızı ayarla: gemi <b>60 m</b> ölçülsün.",
    "sahne": {
     "tur": "fiz13-boy"
    },
@@ -224,17 +224,17 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": {
-     "b": 0.6
-    },
-    "tamam": "0,6c'de γ = 1/√(1 − 0,36) = <b>1,25</b>, L = 100 / 1,25 = <b>80 m</b>. Kısalma <b>yalnız hareket doğrultusunda</b> olur: geminin yüksekliği 20 m kalır. Gemideki astronot ise kendi gemisini hep 100 m ölçer.",
-    "ipucu": "100 / 80 = 1,25 olmalı, yani γ = 1,25. Hızı azar azar artır."
-   },
-   "kart": 8,
-   "goster": {
-    "deger": {
      "b": 0.8
     },
-    "not": "0,8c'de γ = 5/3: 100 m'lik gemi Dünya'dan 100 / (5/3) = <b>60 m</b> ölçülür."
+    "tamam": "0,8c'de γ = 1/√(1 − 0,64) = <b>5/3</b>, L = 100 / (5/3) = <b>60 m</b>. Geminin yüksekliği 20 m kalır; gemideki astronot ise kendi gemisini hep 100 m ölçer.",
+    "ipucu": "100 / 60 = 5/3 olmalı, yani γ = 5/3. Hızı azar azar artır."
+   },
+   "kart": 6,
+   "goster": {
+    "deger": {
+     "b": 0.6
+    },
+    "not": "0,6c'de γ = 1,25: 100 m'lik gemi Dünya'dan 100 / 1,25 = <b>80 m</b> ölçülür."
    }
   },
   {
@@ -268,7 +268,7 @@
      {
       "yazi": "c'ye yaklaşır ama hiç ulaşamaz",
       "dogru": true,
-      "neden": "v, c'ye yaklaştıkça γ sınırsız büyür; biraz daha hızlanmak için gereken enerji de sınırsız artar. <b>Kütleli hiçbir cisim c'ye ulaşamaz.</b> Yalnız foton gibi kütlesiz parçacıklar c ile gider."
+      "neden": "v, c'ye yaklaştıkça γ sınırsız büyür; biraz daha hızlanmak için gereken enerji de sınırsız artar."
      },
      {
       "yazi": "Tam c'ye ulaşır ve orada kalır",
@@ -276,7 +276,7 @@
      }
     ]
    },
-   "kart": 9
+   "kart": 6
   }
  ],
  "kapanis": [

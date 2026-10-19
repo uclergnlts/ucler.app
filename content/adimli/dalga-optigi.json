@@ -7,7 +7,7 @@
   "adimlar": [
     {
       "baslik": "Huygens ilkesi",
-      "metin": "Huygens'e göre dalga cephesinin her noktası küçük dalgacıklar yayan yeni bir kaynaktır. Düz dalga engeldeki aralıktan geçiyor. Aralığı daralt: dalganın <b>her yöne yayıldığını</b> gör.",
+      "metin": "Düz dalga engeldeki aralıktan geçiyor. Aralığı daralt: dalganın <b>her yöne yayıldığını</b> gör.",
       "sahne": {"tur": "fiz12-huygens"},
       "deger": {"w": 5},
       "kontroller": [{"ad": "w", "etiket": "Aralık genişliği", "min": 1, "max": 6, "tur": "sayac", "birim": "λ"}],
@@ -17,11 +17,11 @@
     },
     {
       "baslik": "Young deneyi",
-      "metin": "Tek renkli ışık iki dar yarıktan geçiyor; perdede aydınlık ve karanlık saçaklar oluşuyor. P noktasına S₁ ve S₂'den gelen ışınların <b>yol farkı</b> Δ = d·x/L. P'yi kaydır ve <b>2. aydınlık saçağı</b> bul.",
+      "metin": "P noktasına S₁ ve S₂'den gelen ışınların <b>yol farkı</b> Δ = d·x/L. P'yi kaydır ve <b>2. aydınlık saçağı</b> bul.",
       "sahne": {"tur": "fiz12-young"},
       "deger": {"x": 1.5},
       "kontroller": [{"ad": "x", "etiket": "P'nin merkeze uzaklığı", "min": 0, "max": 8, "adim": 0.5, "tur": "surgu", "birim": "mm"}],
-      "gorev": {"tur": "ayarla", "hedef": {"x": 6}, "tamam": "x = 6 mm'de Δ = 1200 nm = <b>2λ</b>: dalgalar tepe tepeye buluşur, <b>yapıcı girişim</b>. Aydınlık saçakta Δ = n·λ, karanlık saçakta Δ = (n − ½)·λ. Saçak aralığı Δx = λL/d = 3 mm, bu yüzden 2. aydınlık merkezden 2 · 3 = 6 mm uzakta.", "ipucu": "Yol farkı dalga boyunun tam 2 katı olmalı: Δ = 1200 nm."},
+      "gorev": {"tur": "ayarla", "hedef": {"x": 6}, "tamam": "x = 6 mm'de Δ = 1200 nm = <b>2λ</b>: dalgalar tepe tepeye buluşur, <b>yapıcı girişim</b>. Bu düzenekte saçak aralığı 3 mm, bu yüzden 2. aydınlık merkezden 2 · 3 = 6 mm uzakta.", "ipucu": "Yol farkı dalga boyunun tam 2 katı olmalı: Δ = 1200 nm."},
       "kart": 5,
       "goster": {"deger": {"x": 3}, "not": "x = 3 mm'de yol farkı Δ = 600 nm, yani tam 1λ: dalgalar tepe tepeye buluşuyor, 1. aydınlık saçak."}
     },
@@ -32,13 +32,13 @@
       "gorev": {"tur": "tahmin", "soru": "P noktasında ne görülür?", "secenekler": [
         {"yazi": "3. aydınlık saçak", "neden": "Aydınlık için Δ dalga boyunun tam katı olmalı; 1750 / 500 = 3,5 tam sayı değil."},
         {"yazi": "3. karanlık saçak", "neden": "3. karanlıkta Δ = (3 − ½)·λ = 2,5λ = 1250 nm olurdu."},
-        {"yazi": "4. karanlık saçak", "dogru": true, "neden": "Δ/λ = 3,5 = 4 − ½: tepe çukurla buluşur, <b>yıkıcı girişim</b>. Karanlık saçak koşulu Δ = (n − ½)·λ olduğu için n = 4. Işık üstüne ışık gelince karanlık oluşması, ışığın dalga olduğunu gösterir."}
+        {"yazi": "4. karanlık saçak", "dogru": true, "neden": "Δ/λ = 3,5 = 4 − ½: tepe çukurla buluşur, <b>yıkıcı girişim</b>. Karanlık saçak koşulu Δ = (n − ½)·λ olduğu için n = 4."}
       ]},
       "kart": 4
     },
     {
       "baslik": "Saçak aralığı",
-      "metin": "Ardışık iki aydınlık saçak arasındaki uzaklık <b>Δx = λL/d</b>. Dalga boyunu, perde uzaklığını ve yarık aralığını değiştir; her seferinde ışığı yakıp deseni gör.",
+      "metin": "Dalga boyunu, perde uzaklığını ve yarık aralığını değiştir; her seferinde ışığı yakıp deseni gör.",
       "sahne": {"tur": "fiz12-sacak", "sure": 1.5},
       "deger": {"lam": 600, "L": 1.5, "d": 0.3},
       "kontroller": [
@@ -47,18 +47,18 @@
         {"ad": "d", "etiket": "Yarık aralığı d", "min": 0.2, "max": 0.4, "adim": 0.1, "tur": "surgu", "birim": "mm"}
       ],
       "gorev": {"tur": "secim", "kosu": 2, "soru": "Saçakları sıklaştırmak için ne yapmalısın?", "secenekler": [
-        {"yazi": "Yarık aralığı d'yi artırmak", "dogru": true, "neden": "d paydada: yarıklar uzaklaştıkça Δx küçülür, saçaklar sıklaşır. λ ve L büyüdükçe ise saçaklar açılır. Kırmızı ışığın saçakları mordakinden geniştir."},
+        {"yazi": "Yarık aralığı d'yi artırmak", "dogru": true, "neden": "Yarıklar birbirinden uzaklaştıkça saçaklar sıklaştı. Bunun nedenini bir sonraki kartta Δx = λL/d bağıntısında göreceksin."},
         {"yazi": "Kırmızı ışık kullanmak", "neden": "Kırmızının dalga boyu daha uzundur; λ büyüyünce Δx de büyür, saçaklar açılır."},
         {"yazi": "Işığı daha parlak yapmak", "neden": "Işık şiddeti Δx'i değiştirmez; saçaklar yalnızca parlar."}
       ]},
-      "kart": 6
+      "kart": 5
     },
     {
       "baslik": "Düzenek suya daldırılırsa",
-      "metin": "Havada saçak aralığı 4 mm. Şimdi bütün düzeneği kırılma indisi 1,33 olan suya daldıracağız. Işığın frekansı değişmez; hızı ve dalga boyu küçülür.",
+      "metin": "Havada saçak aralığı 4 mm. Şimdi bütün düzeneği kırılma indisi 1,33 olan suya daldıracağız.",
       "sahne": {"tur": "fiz12-sivi", "sure": 4},
       "gorev": {"tur": "tahmin", "soru": "Perdedeki saçaklara ne olur?", "secenekler": [
-        {"yazi": "Sıklaşır, merkezi saçak yerinde kalır", "dogru": true, "neden": "Suda λ′ = λ/n olur; saçak aralığı da aynı oranda küçülür: Δx′ = 4 / 1,33 ≈ <b>3 mm</b>. Merkezde yol farkı yine sıfır olduğu için merkezi aydınlık saçak ortada kalır."},
+        {"yazi": "Sıklaşır, merkezi saçak yerinde kalır", "dogru": true, "neden": "Suda ışığın dalga boyu 1,33 kat küçülür; saçak aralığı da aynı oranda küçülür: 4 / 1,33 ≈ <b>3 mm</b>."},
         {"yazi": "Açılır, saçaklar seyrekleşir", "neden": "Saçakları açmak için dalga boyu büyümeliydi; suda dalga boyu küçülür."},
         {"yazi": "Değişmez, çünkü frekans aynı kalır", "neden": "Frekans aynı kalır ama Δx = λL/d dalga boyuna bağlıdır; suda λ küçülür."}
       ]},
@@ -66,23 +66,23 @@
     },
     {
       "baslik": "Tek yarıkta kırınım",
-      "metin": "Tek bir dar yarıktan geçen ışık da desen oluşturur. Merkezi aydınlık saçak geniş ve parlaktır, genişliği <b>2λL/w</b>. Yarığı ayarla: merkezi saçak <b>20 mm</b> genişliğinde olsun.",
+      "metin": "Merkezi aydınlık saçağın genişliği <b>2λL/w</b> (λ = 500 nm, L = 1 m). Yarığı ayarla: merkezi saçak <b>20 mm</b> genişliğinde olsun.",
       "sahne": {"tur": "fiz12-tekyarik"},
       "deger": {"w": 200},
       "kontroller": [{"ad": "w", "etiket": "Yarık genişliği w", "min": 50, "max": 250, "adim": 50, "tur": "surgu", "birim": "μm"}],
-      "gorev": {"tur": "ayarla", "hedef": {"w": 50}, "tamam": "w = 50 μm için 2 · 500 nm · 1 m / 50 μm = <b>20 mm</b>. Yarık daraldıkça desen <b>genişler</b>. Yan saçaklar merkezinkinin yarısı genişliktedir ve hızla sönükleşir. Tek yarıkta karanlık koşulu w·sinθ = n·λ'dır; çift yarıktaki (n − ½)·λ ile karıştırma.", "ipucu": "Merkezi saçağın genişliği w ile ters orantılı: genişletmek için yarığı daralt."},
-      "kart": 10,
+      "gorev": {"tur": "ayarla", "hedef": {"w": 50}, "tamam": "w = 50 μm için 2 · 500 nm · 1 m / 50 μm = <b>20 mm</b>. Yarık daraldıkça desen <b>genişler</b>.", "ipucu": "Merkezi saçağın genişliği w ile ters orantılı: genişletmek için yarığı daralt."},
+      "kart": 11,
       "goster": {"deger": {"w": 100}, "not": "w = 100 μm: merkezi saçak 2 · 500 nm · 1 m / 100 μm = 10 mm. Yarık daraldıkça desen genişliyor."}
     },
     {
       "baslik": "Polarizasyon",
-      "metin": "Doğal ışıkta titreşimler ilerleme yönüne dik her doğrultudadır. <b>Polarizör</b> yalnızca bir doğrultudakileri geçirir. İkinci polarizörü çevir ve perdeye <b>hiç ışık ulaşmasın</b>.",
+      "metin": "<b>Polarizör</b>, ışığı yalnızca tek bir doğrultudaki titreşimleriyle geçirir. İkinci polarizörü çevir ve perdeye <b>hiç ışık ulaşmasın</b>.",
       "sahne": {"tur": "fiz12-polar"},
       "deger": {"a": 0},
       "kontroller": [{"ad": "a", "etiket": "2. polarizörün açısı", "min": 0, "max": 90, "adim": 15, "tur": "surgu", "birim": "°"}],
-      "gorev": {"tur": "ayarla", "hedef": {"a": 90}, "tamam": "İkinci polarizör birinciye <b>90°</b> çevrikken ışık tamamen kesilir. Yalnızca <b>enine</b> dalgalar polarize olabilir; bu, ışığın enine dalga olduğunu kanıtlar. Ses boyuna dalgadır, polarize edilemez. Polarize güneş gözlüğü sudan yansıyan parlamayı bu yolla keser.", "ipucu": "Geçen ışık, iki polarizörün doğrultuları birbirine dik olunca söner."},
+      "gorev": {"tur": "ayarla", "hedef": {"a": 90}, "tamam": "İkinci polarizör birinciye <b>90°</b> çevrikken ışık tamamen kesilir; ara açılarda ışığın bir kısmı geçer.", "ipucu": "Geçen ışık, iki polarizörün doğrultuları birbirine dik olunca söner."},
       "kart": 13,
-      "goster": {"deger": {"a": 45}, "not": "İkinci polarizör 45° çevrik: birinciden geçen ışığın cos²45° = %50'si geçiyor."}
+      "goster": {"deger": {"a": 45}, "not": "İkinci polarizör 45° çevrik: birinciden geçen ışığın yaklaşık yarısı geçiyor."}
     }
   ],
   "kapanis": [
