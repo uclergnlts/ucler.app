@@ -134,42 +134,93 @@
    "kart": 9
   },
   {
-   "baslik": "Sıcaklık",
-   "metin": "N₂O₄ + ısı ⇌ 2NO₂: ileri yön ısı alır. Kabı ısıt ve N₂O₄'ün en az %80'ini ayrıştır.",
+   "baslik": "Denge laboratuvarı",
+   "metin": "Kapalı kaba 1 M N₂O₄ koyduk: N₂O₄ + ısı ⇌ 2NO₂. NO₂ kahverengidir. Molekülleri ve derişim grafiğini izle; kaba N₂O₄ ekle ya da kabı ısıt.",
    "sahne": {
-    "tur": "kim9-isi"
+    "tur": "sim-denge"
    },
    "deger": {
-    "T": 20
+    "T": 300,
+    "ekle": 0,
+    "eklendi": 0,
+    "dengede": 0
    },
    "kontroller": [
     {
      "ad": "T",
      "etiket": "Sıcaklık",
-     "min": 0,
-     "max": 100,
+     "min": 300,
+     "max": 400,
      "adim": 10,
-     "birim": "°C",
-     "tur": "surgu"
+     "birim": "K"
+    },
+    {
+     "ad": "ekle",
+     "etiket": "N₂O₄ ekle",
+     "min": 0,
+     "max": 1,
+     "tur": "dugme"
     }
    ],
    "gorev": {
-    "tur": "ayarla",
-    "hedef": {
-     "T": [
-      70,
-      100
-     ]
-    },
-    "tamam": "Isı verince denge ısıyı harcayan yöne, <b>endotermik</b> ileri yöne kaydı; renk koyulaştı. Dengeyi kaydıran etkenler içinde K'yı değiştiren yalnızca sıcaklıktır."
+    "tur": "kesfet",
+    "bulgular": [
+     {
+      "yazi": "Dengenin kurulmasını izle. Derişimler neden artık değişmiyor?",
+      "hedef": {
+       "dengede": 1
+      },
+      "coz": [
+       {
+        "T": 300
+       }
+      ],
+      "tamam": "İleri ve geri hız eşitlendi: tepkime durmadı, iki yönde aynı hızla yürüyor. Bu yüzden derişimler sabit kaldı: <b>dinamik denge</b>."
+     },
+     {
+      "yazi": "Dengedeyken kaba <b>N₂O₄ ekle</b> ve yeni dengeyi bekle.",
+      "hedef": [
+       {
+        "eklendi": [
+         1,
+         99
+        ]
+       },
+       {
+        "eklendi": [
+         1,
+         99
+        ],
+        "dengede": 1
+       }
+      ],
+      "sirali": true,
+      "coz": [
+       {
+        "ekle": 1
+       }
+      ],
+      "tamam": "Eklenen N₂O₄'ün bir kısmı NO₂'ye dönüştü: denge, eklenen maddeyi harcayan <b>ileri</b> yöne kaydı (Le Chatelier). Q yeniden K'ya eşit oldu; K değişmedi."
+     },
+     {
+      "yazi": "Kabı <b>360 K</b>'nin üstüne ısıt ve yeni dengeyi bekle.",
+      "hedef": {
+       "T": [
+        360,
+        400
+       ],
+       "dengede": 1
+      },
+      "coz": [
+       {
+        "T": 380
+       }
+      ],
+      "tamam": "İleri yön ısı alır: ısıtınca denge ileri kaydı, kap kahverengileşti ve <b>Kc büyüdü</b>. K'yı yalnızca sıcaklık değiştirir."
+     }
+    ]
    },
-   "kart": 10,
-   "goster": {
-    "deger": {
-     "T": 50
-    },
-    "not": "50 °C'de N₂O₄'ün yaklaşık %58'i ayrışıyor. Sıcaklık arttıkça ayrışan kısım da artar."
-   }
+   "kart": 10
   },
   {
    "baslik": "Katalizör ve denge",

@@ -652,7 +652,168 @@ function FotoLab({ v, saat = 0 }: SahneProps) {
   );
 }
 
+/** Son birkaç saniyenin değerlerini tutar (kayan grafikler için). */
+function useGecmis<T>(saat: number, deger: T, sure = 6, aralik = 0.05) {
+  const r = useRef<{ t: number; d: T }[]>([]);
+  const g = r.current;
+  if (!g.length || saat - g[g.length - 1].t >= aralik) g.push({ t: saat, d: deger });
+  while (g.length && saat - g[0].t > sure) g.shift();
+  return g;
+}
+
+/* ---------- fizik: yay-kütle salınımı ---------- */
+
+const yayT = (m: number, k: number) => 2 * Math.PI * Math.sqrt(m / k);
+
+function YayLab({ v, saat = 0 }: SahneProps) {
+  const k = v.k ?? 40, m = v.m ?? 1, A = v.A ?? 5, w = Math.sqrt(k / m), T = yayT(m, k);
+  // Faz birikir: k ya da m değişince cisim zıplamaz, yeni hızla salınmayı sürdürür.
+  const dt = useAdim(saat);
+  const r = useRef({ faz: 0 });
+  r.current.faz += w * dt;
+  const x = A * Math.cos(r.current.faz);
+  const g = useGecmis(saat, x, 4, 0.03);
+  const DUVAR = 22, DENGE = 176, CM = 4.4, Y = 96;
+  const bx = DENGE + x * CM, w2 = 20 + Math.sqrt(m) * 14;
+  const sarim = 14, bas = DUVAR + 6, son = bx - w2 / 2;
+  const yay = Array.from({ length: sarim * 2 + 1 }, (_, i) => `${(bas + ((son - bas) * i) / (sarim * 2)).toFixed(1)},${(Y + (i === 0 || i === sarim * 2 ? 0 : i % 2 ? -9 : 9)).toFixed(1)}`).join(" ");
+  const GY = { ust: 150, alt: 222, x0: 22, x1: 330 }, orta = (GY.ust + GY.alt) / 2;
+  const izx = (t: number) => GY.x1 - ((saat - t) / 4) * (GY.x1 - GY.x0), izy = (x: number) => orta - (x / 20) * ((GY.alt - GY.ust) / 2);
+  return (
+    <svg viewBox="0 0 340 236" role="img" aria-label={`Yay sabiti ${k}, kütle ${m} kilogram, genlik ${A} santimetre: periyot ${say(T, 2)} saniye`}>
+      <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">T = 2π√(m/k) = {say(T, 2)} s</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">k = {k} N/m · m = {say(m)} kg · A = {A} cm · f = {say(1 / T, 2)} Hz</text>
+      <rect x={DUVAR - 8} y={Y - 30} width={8} height={60} fill="var(--ink)" />
+      <line x1={DUVAR} x2={334} y1={Y + w2 / 2 + 2} y2={Y + w2 / 2 + 2} stroke="var(--line-2)" strokeWidth={2} />
+      <line x1={DENGE} x2={DENGE} y1={Y - 34} y2={Y + w2 / 2 + 6} stroke="var(--muted)" strokeDasharray="3 4" />
+      <text x={DENGE} y={Y - 38} fontSize={10} fill="var(--muted)" textAnchor="middle">denge</text>
+      <polyline points={yay} fill="none" stroke="var(--ink)" strokeWidth={2} strokeLinejoin="round" />
+      <rect x={bx - w2 / 2} y={Y - w2 / 2} width={w2} height={w2} rx={5} fill="var(--fizik)" />
+      <text x={bx} y={Y + 4} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">{say(m)} kg</text>
+      {/* konum-zaman grafiği: son 4 saniye */}
+      <line x1={GY.x0} x2={GY.x1} y1={orta} y2={orta} stroke="var(--line-2)" />
+      <polyline points={g.map((p) => `${izx(p.t).toFixed(1)},${izy(p.d).toFixed(1)}`).join(" ")} fill="none" stroke="var(--fizik)" strokeWidth={2.2} />
+      <text x={GY.x0} y={GY.ust - 4} fontSize={10.5} fontWeight={700} fill="var(--muted)">x (son 4 s)</text>
+    </svg>
+  );
+}
+
+/* ---------- kimya: N₂O₄ ⇌ 2NO₂ dengesi ---------- */
+
+/** Kc(T): 298 K'de 0,0046; ileri yön endotermik (ΔH = +57 kJ), van 't Hoff ile. */
+const dengeK = (T: number) => 0.0046 * Math.exp((-57000 / R_J) * (1 / T - 1 / 298));
+const KF = 1.5;
+
+function DengeLab({ v, set, saat = 0 }: SahneProps) {
+  const T = v.T ?? 300, K = dengeK(T), kb = KF / K;
+  const dt = useAdim(saat);
+  const r = useRef({ a: 1, b: 0, eklenen: v.eklendi ?? 0, sakin: 0 });
+  const d = r.current;
+  if ((v.eklendi ?? 0) > d.eklenen) { d.a = Math.min(3, d.a + 0.5); d.eklenen = v.eklendi ?? 0; }
+  // İleri hız kf[N₂O₄], geri hız kb[NO₂]²; kararlılık için küçük adımlar.
+  for (let i = 0; i < 20; i++) {
+    const h = dt / 20, net = KF * d.a - kb * d.b * d.b;
+    d.a = Math.max(0, d.a - net * h); d.b = Math.max(0, d.b + 2 * net * h);
+  }
+  const ileri = KF * d.a, geri = kb * d.b * d.b, Q = d.a > 0 ? (d.b * d.b) / d.a : 0;
+  d.sakin = Math.abs(ileri - geri) < 0.03 * Math.max(ileri, 0.01) ? d.sakin + dt : 0;
+  useBildir(v, set, { dengede: d.sakin > 0.5 ? 1 : 0 });
+  const g = useGecmis(saat, [d.a, d.b] as const, 8, 0.08);
+  const q = rastgele(3), nA = Math.round(d.a * 12), nB = Math.round(d.b * 12);
+  const kahve = sinir(d.b / 1.2, 0, 1);
+  const GR3 = { x0: 206, x1: 330, ust: 70, alt: 196, YMAX: 3 };
+  const gx = (t: number) => GR3.x1 - ((saat - t) / 8) * (GR3.x1 - GR3.x0), gy = (c: number) => GR3.alt - (c / GR3.YMAX) * (GR3.alt - GR3.ust);
+  const ciz = (j: 0 | 1) => g.map((p) => `${gx(p.t).toFixed(1)},${gy(p.d[j]).toFixed(1)}`).join(" ");
+  return (
+    <svg viewBox="0 0 340 236" role="img" aria-label={`${T} kelvin: N2O4 ${say(d.a, 2)} molar, NO2 ${say(d.b, 2)} molar, ${d.sakin > 0.5 ? "dengede" : "denge kuruluyor"}`}>
+      <text x={10} y={22} fontSize={13} fontWeight={800} fill={d.sakin > 0.5 ? "var(--good)" : "var(--ink)"}>{d.sakin > 0.5 ? "Dengede: ileri hız = geri hız" : ileri > geri ? "İleri yönde yürüyor" : "Geri yönde yürüyor"}</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">T = {T} K · Kc = {K < 0.1 ? K.toFixed(4).replace(".", ",") : say(K, 2)} · Q = {Q < 0.1 ? Q.toFixed(4).replace(".", ",") : say(Q, 2)}</text>
+      {/* kap: NO₂ kahverengidir */}
+      <rect x={12} y={60} width={180} height={140} rx={10} fill={`rgba(150,80,30,${0.06 + 0.3 * kahve})`} stroke="var(--line-2)" strokeWidth={1.5} />
+      {Array.from({ length: Math.min(nA, 36) }, (_, i) => { const x = 26 + q() * 152, y = 74 + q() * 112, f = q() * 6.3; const xx = x + Math.sin(saat * 0.9 + f) * 5, yy = y + Math.cos(saat * 0.7 + f) * 5; return <g key={`a${i}`}><circle cx={xx - 3.5} cy={yy} r={4} fill="var(--c1)" /><circle cx={xx + 3.5} cy={yy} r={4} fill="var(--c1)" /></g>; })}
+      {Array.from({ length: Math.min(nB, 40) }, (_, i) => { const x = 22 + q() * 160, y = 70 + q() * 120, f = q() * 6.3; return <circle key={`b${i}`} cx={x + Math.sin(saat * 1.3 + f) * 7} cy={y + Math.cos(saat * 1.1 + f) * 7} r={4} fill="#9a5a2a" />; })}
+      <g fontSize={11} fontWeight={700}>
+        <circle cx={18} cy={216} r={4} fill="var(--c1)" /><circle cx={25} cy={216} r={4} fill="var(--c1)" /><text x={34} y={220} fill="var(--c1)">N₂O₄ {say(d.a, 2)} M</text>
+        <circle cx={118} cy={216} r={4} fill="#9a5a2a" /><text x={126} y={220} fill="#9a5a2a">NO₂ {say(d.b, 2)} M</text>
+      </g>
+      {/* derişim-zaman: son 8 saniye */}
+      <line x1={GR3.x0} x2={GR3.x1} y1={GR3.alt} y2={GR3.alt} stroke="var(--ink)" strokeWidth={1.2} />
+      <line x1={GR3.x0} x2={GR3.x0} y1={GR3.ust - 6} y2={GR3.alt} stroke="var(--ink)" strokeWidth={1.2} />
+      <polyline points={ciz(0)} fill="none" stroke="var(--c1)" strokeWidth={2.2} />
+      <polyline points={ciz(1)} fill="none" stroke="#9a5a2a" strokeWidth={2.2} />
+      <text x={GR3.x0 + 4} y={GR3.ust - 10} fontSize={10.5} fontWeight={700} fill="var(--muted)">derişim (son 8 s)</text>
+    </svg>
+  );
+}
+
+/* ---------- biyoloji: av-avcı döngüsü ---------- */
+
+/* Lotka–Volterra, avda taşıma kapasitesiyle: dH = rH(1 − H/K) − aHP, dP = b·aHP − mP. 1 yıl = 1 saniye. */
+const LV = { r: 1, K: 2000, a: 0.02, b: 0.25, m: 0.6, H0: 60, P0: 8 };
+
+function AvLab({ v, set, saat = 0 }: SahneProps) {
+  const avci = v.avci !== 0;
+  const dt = useAdim(saat);
+  const r = useRef({ tur: -1, H: LV.H0, P: LV.P0, yil: 0, avTepe: -1, dongu: 0, onceH: 0, onceP: 0, artH: true, artP: true, sonAvci: true });
+  const d = r.current;
+  if (d.tur !== (v.tur ?? 0)) Object.assign(d, { tur: v.tur ?? 0, H: LV.H0, P: avci ? LV.P0 : 0, yil: 0, avTepe: -1, dongu: 0 });
+  if (d.sonAvci !== avci) { d.sonAvci = avci; d.dongu = 0; d.avTepe = -1; }
+  if (avci && d.P < 0.5) d.P = LV.P0;
+  if (!avci) d.P = 0;
+  for (let i = 0; i < 10; i++) {
+    const h = dt / 10, dH = LV.r * d.H * (1 - d.H / LV.K) - LV.a * d.H * d.P, dP = LV.b * LV.a * d.H * d.P - LV.m * d.P;
+    d.H = Math.max(1, d.H + dH * h); d.P = Math.max(0, d.P + dP * h);
+  }
+  d.yil += dt;
+  // Tepe yakalama: av tepe yapınca bekle; ardından avcı tepe yapınca bir döngü say.
+  // Zaman ilerlemeyen yeniden çizimlerde (dt = 0) eğilim değişmiş sayılmaz.
+  if (dt > 0) {
+    const artH = d.H >= d.onceH, artP = d.P >= d.onceP;
+    if (d.artH && !artH && d.H > 100) d.avTepe = d.yil;
+    if (d.artP && !artP && d.avTepe >= 0 && avci && d.P > 5) { d.dongu += 1; d.avTepe = -1; }
+    d.artH = artH; d.artP = artP; d.onceH = d.H; d.onceP = d.P;
+  }
+  useBildir(v, set, { dongu: d.dongu, doydu: !avci && d.H > 0.9 * LV.K ? 1 : 0 });
+  const g = useGecmis(saat, [d.H, d.P] as const, 16, 0.1);
+  const ymax = Math.max(400, ...g.map((p) => p.d[0])) * 1.05;
+  const GR4 = { x0: 26, x1: 330, ust: 130, alt: 222 };
+  const gx = (t: number) => GR4.x1 - ((saat - t) / 16) * (GR4.x1 - GR4.x0);
+  const ciz = (j: 0 | 1, olcek: number) => g.map((p) => `${gx(p.t).toFixed(1)},${(GR4.alt - (p.d[j] * olcek / ymax) * (GR4.alt - GR4.ust)).toFixed(1)}`).join(" ");
+  const q = rastgele(11), nH = Math.min(60, Math.round(d.H / 12)), nP = Math.min(24, Math.round(d.P / 3));
+  return (
+    <svg viewBox="0 0 340 238" role="img" aria-label={`Tavşan ${Math.round(d.H)}, vaşak ${Math.round(d.P)}`}>
+      <g fontSize={13} fontWeight={800}>
+        <text x={10} y={22} fill="var(--c4)">tavşan {Math.round(d.H)}</text>
+        <text x={120} y={22} fill="var(--c2)">vaşak {Math.round(d.P)}</text>
+      </g>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{avci ? `yıl ${Math.floor(d.yil)} · görülen döngü: ${d.dongu}` : "avcı yok: av yalnız besinle sınırlı"}</text>
+      <rect x={10} y={52} width={320} height={62} rx={10} fill="var(--biyoloji-soft)" />
+      {Array.from({ length: nH }, (_, i) => { const x = 18 + q() * 304, y = 60 + q() * 46, f = q() * 6; return <circle key={`h${i}`} cx={x + Math.sin(saat * 1.5 + f) * 4} cy={y + Math.cos(saat * 1.2 + f) * 3} r={3.2} fill="var(--c4)" />; })}
+      {Array.from({ length: nP }, (_, i) => { const x = 22 + q() * 296, y = 62 + q() * 42, f = q() * 6; return <circle key={`p${i}`} cx={x + Math.sin(saat * 0.9 + f) * 10} cy={y + Math.cos(saat * 0.8 + f) * 6} r={5} fill="var(--c2)" />; })}
+      <line x1={GR4.x0} x2={GR4.x1} y1={GR4.alt} y2={GR4.alt} stroke="var(--ink)" strokeWidth={1.2} />
+      <line x1={GR4.x0} x2={GR4.x0} y1={GR4.ust - 6} y2={GR4.alt} stroke="var(--ink)" strokeWidth={1.2} />
+      <polyline points={ciz(0, 1)} fill="none" stroke="var(--c4)" strokeWidth={2.2} />
+      {avci && <polyline points={ciz(1, 4)} fill="none" stroke="var(--c2)" strokeWidth={2.2} />}
+      <text x={GR4.x0 + 4} y={GR4.ust - 10} fontSize={10.5} fontWeight={700} fill="var(--muted)">son 16 yıl (vaşak ölçeği ×4)</text>
+    </svg>
+  );
+}
+
 export const SIMULASYON: Record<string, SahneKaydi> = {
+  "sim-yay": { C: YayLab, canli: true, olc: (v) => ({ T: Math.round(yayT(v.m ?? 1, v.k ?? 40) * 100) / 100 }) },
+  "sim-denge": {
+    C: DengeLab,
+    canli: true,
+    // "N₂O₄ ekle": eklendi sayacı artar, sahne kaba 0,5 M N₂O₄ koyar.
+    // Sıcaklık değişince de denge yeniden kurulur (dengede bayrağı sahne yeniden bildirene kadar 0).
+    bagla: (ad, x, v) => (ad === "ekle" ? { ...v, ekle: 0, eklendi: (v.eklendi ?? 0) + 1, dengede: 0 } : ad === "T" ? { ...v, T: x, dengede: 0 } : { ...v, [ad]: x }),
+  },
+  "sim-avavci": {
+    C: AvLab,
+    canli: true,
+    // Yeniden başlat ya da avcıyı aç/kapa: döngü sayacı sıfırdan başlar.
+    bagla: (ad, x, v) => (ad === "yenile" ? { ...v, yenile: 0, tur: (v.tur ?? 0) + 1, dongu: 0 } : ad === "avci" ? { ...v, avci: x, dongu: 0 } : { ...v, [ad]: x }),
+  },
   "sim-rampa": { C: RampaLab, canli: true },
   "sim-carpisma": { C: CarpismaLab, canli: true, olc: (v) => ({ hiz: Math.round(bagilHiz(v.T ?? 300, v.n ?? 1, v.kat === 1) * 100) / 100 }) },
   "sim-foto": { C: FotoLab, canli: true, olc: (v) => ({ hiz: Math.round(fotoHiz(v.isik ?? 20, v.co2 ?? 30, v.T ?? 25) * 100) / 100 }) },

@@ -120,6 +120,25 @@
    },
    "kart": 7,
    "goster": { "not": "Ayrı kaplarda iki tür de çoğalıp dengeleniyor: <em>P. aurelia</em> da <em>P. caudatum</em> da tek başına yaşayabiliyor.", "oynat": true }
+  },
+  {
+   "baslik": "Av-avcı laboratuvarı",
+   "metin": "Bir ormanda tavşanlar (av) ve vaşaklar (avcı) yaşıyor; her saniye bir yıl. Sayıları ve son 16 yılın grafiğini izle. Vaşakları kaldırabilir ya da her şeyi baştan başlatabilirsin.",
+   "sahne": { "tur": "sim-avavci" },
+   "deger": { "avci": 1, "yenile": 0, "tur": 0, "dongu": 0, "doydu": 0 },
+   "kontroller": [
+    { "ad": "avci", "etiket": "Vaşaklar", "min": 0, "max": 1, "tur": "anahtar" },
+    { "ad": "yenile", "etiket": "Baştan başlat", "min": 0, "max": 1, "tur": "dugme" }
+   ],
+   "gorev": { "tur": "kesfet", "bulgular": [
+    { "yazi": "Bir döngüyü izle: önce hangisi <b>tepe</b> yapıyor?", "hedef": { "avci": 1, "dongu": [1, 99] }, "coz": [{ "avci": 1 }],
+      "tamam": "Önce tavşan tepe yaptı, vaşak ondan sonra. Av çoğalınca avcının besini artar; avcı çoğalınca av azalır, ardından avcı da azalır." },
+    { "yazi": "Vaşakları <b>kaldır</b>. Tavşanlar sonsuza kadar artıyor mu?", "hedef": { "avci": 0, "doydu": 1 }, "coz": [{ "avci": 0 }],
+      "tamam": "Hayır: tavşanlar hızla arttı ama besin yetmeyince ≈ 2000'de durdu. Avcı yokken de çevre direnci büyümeyi sınırlar: <b>S eğrisi</b>." },
+    { "yazi": "Vaşakları <b>geri koy</b> ve yeni bir döngü izle.", "hedef": [{ "avci": 0 }, { "avci": 1, "dongu": [1, 99] }], "sirali": true, "coz": [{ "avci": 0 }, { "avci": 1 }],
+      "tamam": "Çok sayıda tavşanla karşılaşan vaşaklar hızla çoğaldı, tavşanları azalttı, sonra kendileri de azaldı: döngü yeniden başladı." }
+   ] },
+   "kart": 9
   }
  ],
  "kapanis": [

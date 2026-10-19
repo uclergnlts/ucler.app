@@ -37,17 +37,24 @@
       "goster": {"deger": {"t": 0.5}, "not": "t = 0,5 s = T/4: cisim dengeden geçiyor, x = 0. Grafik burada sıfırı kesiyor ve en dik yerinde: hız en büyük."}
     },
     {
-      "baslik": "Yay-kütle periyodu",
-      "metin": "Yay sabiti k = 40 N/m, periyot <b>T = 2π√(m/k)</b>. Kütleyi ve genliği değiştirip oynat. Periyodu tam <b>2 katına</b> çıkar.",
-      "sahne": {"tur": "fiz11-periyot", "sure": 4},
-      "deger": {"m": 1, "A": 10},
+      "baslik": "Yay laboratuvarı",
+      "metin": "Cisim yayın ucunda sürtünmesiz salınıyor; altta konum-zaman grafiği akıyor. Yay sabitini, kütleyi ve genliği değiştir: salınım anında değişir. Aşağıdakileri kendin bul.",
+      "sahne": {"tur": "sim-yay"},
+      "deger": {"k": 40, "m": 1, "A": 5},
       "kontroller": [
-        {"ad": "m", "etiket": "Kütle", "min": 1, "max": 4, "tur": "sayac", "birim": "kg"},
-        {"ad": "A", "etiket": "Genlik", "min": 5, "max": 15, "adim": 5, "tur": "surgu", "birim": "cm"}
+        {"ad": "k", "etiket": "Yay sabiti", "min": 10, "max": 80, "adim": 10, "tur": "surgu", "birim": "N/m"},
+        {"ad": "m", "etiket": "Kütle", "min": 0.5, "max": 4, "adim": 0.5, "tur": "sayac", "birim": "kg"},
+        {"ad": "A", "etiket": "Genlik", "min": 5, "max": 20, "adim": 5, "tur": "surgu", "birim": "cm"}
       ],
-      "gorev": {"tur": "ayarla", "hedef": {"m": 4}, "tamam": "Kütle 4 katına çıkınca periyot √4 = <b>2 katına</b> çıktı: 0,99 s'den 1,99 s'ye. Genlik periyodu değiştirmez; daha çok çeksen de bir salınım aynı sürer. Yay sertleşirse (k büyürse) periyot kısalır.", "ipucu": "Periyot kütlenin kareköküyle artar. √m = 2 için m kaç olmalı?"},
-      "kart": 8,
-      "goster": {"deger": {"m": 2}, "not": "Kütle 2 katına çıktı: T = 2π√(2/40) ≈ 1,4 s. Periyot 2 kat değil, yalnızca √2 ≈ 1,41 kat uzadı."}
+      "gorev": {"tur": "kesfet", "bulgular": [
+        {"yazi": "k = 40 N/m ve 1 kg'da genliği önce <b>10</b>, sonra <b>20 cm</b> yap. Periyot değişiyor mu?", "hedef": [{"A": 10, "m": 1, "k": 40}, {"A": 20, "m": 1, "k": 40}], "sirali": true, "coz": [{"k": 40, "m": 1, "A": 10}, {"A": 20}],
+         "tamam": "Periyot hep 0,99 s: genlik 2 katına çıkınca cisim 2 kat uzağa gider ama 2 kat hızlı gider. Periyot genliğe bağlı değildir."},
+        {"yazi": "Periyodu <b>2 katına</b> (≈ 2 s) çıkaran bir yol bul.", "hedef": {"T": [1.95, 2.03]}, "coz": [{"k": 40, "m": 4}],
+         "tamam": "T = 2π√(m/k) karekök içerir: periyodu 2 katına çıkarmak için kütleyi 4 katına çıkarmak (ya da k'yı 4'te birine indirmek) gerekir."},
+        {"yazi": "Şimdi periyodu <b>0,5 s</b>'ye indir.", "hedef": {"T": [0.47, 0.52]}, "coz": [{"m": 0.5, "k": 80}],
+         "tamam": "Hafif kütle ve sert yay: m = 0,5 kg, k = 80 N/m ile T = 2π√(0,5/80) ≈ 0,5 s. Yay sertleşince geri getirici kuvvet büyür, salınım hızlanır."}
+      ]},
+      "kart": 8
     },
     {
       "baslik": "Basit sarkaç",
