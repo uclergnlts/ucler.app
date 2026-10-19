@@ -21,7 +21,8 @@ export type Card = { h: string; p: string; svg: string; key?: string; etk?: Etk 
 export type Question = { q: string; o: string[]; a: number; e: string };
 export type Topic = { title: string; summary: string; cards: Card[]; quiz: Question[] };
 export type DersId = "fizik" | "kimya" | "biyoloji";
-export type Ders = { ad: string; yol: string; konular: { id?: string; ad: string }[] };
+/** on: ön koşul konular (aynı dersten, listede daha önce gelen id'ler). Konu haritası bunlarla çizilir. */
+export type Ders = { ad: string; yol: string; konular: { id?: string; ad: string; on?: string[] }[] };
 
 /** Ders yolundaki bir konu: hazırsa kısa bilgisiyle, değilse yalnızca adıyla. Kart görsellerini taşımaz. */
 export type Entry = {
@@ -34,6 +35,7 @@ export type Entry = {
   cardCount?: number;
   quizCount?: number;
   headings?: string;
+  on?: string[];
 };
 
 export const DERSLER = dersler as Record<DersId, Ders>;

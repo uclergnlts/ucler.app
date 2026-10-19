@@ -5,7 +5,7 @@ import { useSyncExternalStore } from "react";
 
 export type Prog = Record<string, string>; // "ders.konu" -> "3/4 doğru", "_last" -> "ders.konu"
 
-const KEYS = { prog: "tf-prog", saved: "tf-saved", ad: "tf-ad" } as const;
+const KEYS = { prog: "tf-prog", saved: "tf-saved", ad: "tf-ad", tekrar: "tf-tekrar", anlamadim: "tf-anlamadim", gorunum: "tf-gorunum" } as const;
 const listeners = new Set<() => void>();
 const cache: Record<string, { raw: string | null; val: unknown }> = {};
 
@@ -41,6 +41,7 @@ function subscribe(l: () => void) {
 
 const EMPTY_PROG: Prog = {};
 const EMPTY_SAVED: string[] = [];
+const EMPTY_TEKRAR: Tekrar = {};
 
 export const useProg = () =>
   useSyncExternalStore(subscribe, () => read<Prog>(KEYS.prog, EMPTY_PROG), () => EMPTY_PROG);
@@ -64,7 +65,72 @@ export function toggleSaved(key: string) {
 export function resetAll() {
   write(KEYS.prog, {});
   write(KEYS.saved, []);
+  write(KEYS.tekrar, {});
+  write(KEYS.anlamadim, []);
 }
+
+// Akıllı tekrar: testte yanlış yapılan soru 1, 3 ve 7 gün sonra yeniden sorulur.
+// Her doğru cevap soruyu bir sonraki basamağa taşır; üçüncü doğrudan sonra soru sıradan çıkar.
+// Yanlış cevap soruyu başa (ertesi güne) döndürür. Anahtar: "ders.konu.soru sırası" (0'dan başlar).
+/** s: basamak (0, 1, 2), g: sorulacağı gün (YYYY-AA-GG, yerel saat). */
+export type Tekrar = Record<string, { s: number; g: string }>;
+/** Basamaktan bir sonrakine kaç gün: yanlıştan 1, 1+2 = 3 ve 3+4 = 7 gün sonra. */
+const ARA = [1, 2, 4];
+
+/** Bugünden n gün sonrası, yerel saatle YYYY-AA-GG. */
+export function gun(n = 0) {
+  const d = new Date();
+  d.setDate(d.getDate() + n);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+/** "bugün", "yarın", "3 gün sonra". */
+export function gunAdi(g: string) {
+  const fark = Math.round((Date.parse(g) - Date.parse(gun())) / 864e5);
+  return fark <= 0 ? "bugün" : fark === 1 ? "yarın" : `${fark} gün sonra`;
+}
+
+export const useTekrar = () =>
+  useSyncExternalStore(subscribe, () => read<Tekrar>(KEYS.tekrar, EMPTY_TEKRAR), () => EMPTY_TEKRAR);
+
+/** Anlık değer (abonelik olmadan); tekrar ekranı başlarken sorulacakları bir kez seçmek için. */
+export const tekrarOku = () => read<Tekrar>(KEYS.tekrar, EMPTY_TEKRAR);
+
+/** Sorusu bugün ya da daha önce gelmiş olanlar. */
+export const bugunku = (t: Tekrar) => Object.keys(t).filter((k) => t[k].g <= gun());
+
+/** Testte yanlış yapılan soru (ya da tekrarda yine yanlış): ertesi gün yeniden sorulur. */
+export function yanlisKaydet(key: string) {
+  write(KEYS.tekrar, { ...read<Tekrar>(KEYS.tekrar, EMPTY_TEKRAR), [key]: { s: 0, g: gun(ARA[0]) } });
+}
+
+/** Tekrardaki cevap: doğruysa bir basamak ilerler (üçüncüden sonra sıradan çıkar), yanlışsa başa döner. */
+export function tekrarCevap(key: string, dogru: boolean) {
+  const t = { ...read<Tekrar>(KEYS.tekrar, EMPTY_TEKRAR) };
+  const cur = t[key];
+  if (!cur) return;
+  if (!dogru) t[key] = { s: 0, g: gun(ARA[0]) };
+  else if (cur.s + 1 >= ARA.length) delete t[key];
+  else t[key] = { s: cur.s + 1, g: gun(ARA[cur.s + 1]) };
+  write(KEYS.tekrar, t);
+}
+
+// "Bunu anlamadım": öğrencinin işaretlediği kartlar. Anahtar: "ders.konu.kart no" (1'den başlar).
+export const useAnlamadim = () =>
+  useSyncExternalStore(subscribe, () => read<string[]>(KEYS.anlamadim, EMPTY_SAVED), () => EMPTY_SAVED);
+/** İşareti açar ya da kapatır; yeni durumu döndürür. */
+export function toggleAnlamadim(key: string) {
+  const s = read<string[]>(KEYS.anlamadim, EMPTY_SAVED);
+  const on = !s.includes(key);
+  write(KEYS.anlamadim, on ? [key, ...s] : s.filter((k) => k !== key));
+  return on;
+}
+
+/** Ders sayfasında harita mı liste mi görünsün (yalnızca bir kolaylık). */
+export type Gorunum = "harita" | "liste";
+export const useGorunum = () =>
+  useSyncExternalStore(subscribe, () => read<Gorunum>(KEYS.gorunum, "harita"), () => "harita" as Gorunum);
+export const setGorunum = (g: Gorunum) => write(KEYS.gorunum, g);
 
 /** Bitirilen konuların anahtarları ("_last" hariç). */
 export const doneKeys = (p: Prog) => Object.keys(p).filter((k) => k !== "_last");

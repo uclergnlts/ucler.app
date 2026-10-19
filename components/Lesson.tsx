@@ -7,7 +7,8 @@
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { DERSLER, type DersId, type Topic } from "@/lib/dersler";
-import { setProg, toggleSaved, useSaved } from "@/lib/store";
+import { setProg, toggleAnlamadim, toggleSaved, useAnlamadim, useProg, useSaved, yanlisKaydet } from "@/lib/store";
+import { olay } from "@/lib/olay";
 import { kartVideolari, sureYaz, type Video } from "@/lib/videolar";
 import { Icon } from "./icons";
 import { AnimatePresence, motion } from "motion/react";
@@ -21,6 +22,7 @@ import { Belir, CanliSvg, SiraliMetin, useCanliSvg } from "./canli";
 import { konuOyunlari } from "@/lib/oyunlar";
 import type { Adim, AdimliDers } from "@/lib/adimli";
 import { AdimGorunum, type Bildirim } from "./DersMotoru";
+import { Alt, Secenekler } from "./Soru";
 
 /** Akıştaki öğe: konu kartı ya da etkileşimli adım. */
 type Oge = { tur: "kart"; k: number } | { tur: "adim"; a: Adim; n: number };
@@ -29,8 +31,8 @@ type State = { i: number; q: number; picked: number | null; right: number };
 const START: State = { i: 0, q: -1, picked: null, right: 0 };
 
 export default function Lesson({
-  ders, id, t, next, adimli,
-}: { ders: DersId; id: string; t: Topic; next?: { id: string; title: string }; adimli?: AdimliDers }) {
+  ders, id, t, next, adimli, on = [],
+}: { ders: DersId; id: string; t: Topic; next?: { id: string; title: string }; adimli?: AdimliDers; on?: { id: string; title: string }[] }) {
   const [s, setS] = useState<State>(START);
   // Adımların hepsi bir karta yerleştirilmişse anlatımın içine girer; değilse ayrı ders olarak bağlantısı çıkar.
   const birlesik = !!adimli?.adimlar.length && adimli.adimlar.every((a) => a.kart);
@@ -48,6 +50,8 @@ export default function Lesson({
   const [play, setPlay] = useState<Video | null>(null);
   const yon = useRef<1 | -1>(1); // kart geçişinin yönü (kayma animasyonu için)
   const saved = useSaved().includes(`${ders}.${id}`);
+  const prog = useProg(), anlamadim = useAnlamadim();
+  const eksik = on.filter((o) => !prog[`${ders}.${o.id}`]);
   const nCards = ogeler.length, nQuiz = t.quiz.length, nKart = t.cards.length;
   const Close = Icon.kapat, Bookmark = Icon.kayit;
 
@@ -85,8 +89,12 @@ export default function Lesson({
       return p;
     });
   }
-  const pick = (k: number) =>
+  const pick = (k: number) => {
+    if (s.picked !== null) return;
+    // Yanlış yapılan soru akıllı tekrara girer: 1, 3 ve 7 gün sonra yeniden sorulur.
+    if (k !== t.quiz[s.q].a) yanlisKaydet(`${ders}.${id}.${s.q}`);
     setS((p) => (p.picked !== null ? p : { ...p, picked: k, right: p.right + (k === t.quiz[p.q].a ? 1 : 0) }));
+  };
 
   // Klavye
   const stepRef = useRef(step);
@@ -109,6 +117,17 @@ export default function Lesson({
     key = "kartlar";
     body = (
       <div className="flex flex-col gap-14" aria-live="polite">
+        {eksik.length > 0 && (
+          <div className="-mb-6 grid gap-1 rounded-2xl bg-secondary px-4 py-3.5 text-[14px]">
+            <b className="text-[15px]">Bu konu şunların üzerine kurulu:</b>
+            <span>
+              {eksik.map((o, k) => (
+                <span key={o.id}>{k > 0 && ", "}<Link href={href(ders, o.id)} className="font-semibold text-acc">{o.title}</Link></span>
+              ))}
+            </span>
+            <span className="text-muted-foreground">Önce {eksik.length > 1 ? "onları" : "onu"} bitirmen işini kolaylaştırır. İstersen buradan devam edebilirsin.</span>
+          </div>
+        )}
         {adimli && !birlesik && (
           <Link
             href={`/ornek/${adimli.id}/`}
@@ -132,6 +151,11 @@ export default function Lesson({
               vids={kartVideolari(ders, id, o.k + 1)}
               canli={j === s.i}
               oynat={setPlay}
+              anlamadim={anlamadim.includes(`${ders}.${id}.${o.k + 1}`)}
+              isaretle={() => {
+                const k = `${ders}.${id}.${o.k + 1}`;
+                if (toggleAnlamadim(k)) olay("anlamadim", { kart: k });
+              }}
             />
           ) : (
             <motion.article
@@ -178,38 +202,7 @@ export default function Lesson({
       <article className="flex flex-col gap-4">
         <span className="text-[13px] font-bold tabular-nums text-acc">Soru {s.q + 1} / {nQuiz}</span>
         <Html as="h2" className={p === null ? "text-[22px]" : "text-lg"} html={Q.q} />
-        <div className="grid gap-2">
-          {Q.o.map((o, k) => {
-            const durum = p === null ? "" : k === Q.a ? "right" : k === p ? "wrong" : "pasif";
-            return (
-              <motion.button
-                key={k}
-                className={cn(
-                  "flex items-center gap-3 rounded-2xl border-[1.5px] bg-card px-3.5 py-3 text-left text-base font-medium transition-colors",
-                  durum === "" && "border-border hover:border-border-strong",
-                  durum === "right" && "border-good bg-good-soft",
-                  durum === "wrong" && "border-bad bg-bad-soft",
-                  durum === "pasif" && "border-border opacity-55",
-                )}
-                disabled={p !== null}
-                onClick={() => pick(k)}
-                whileTap={p === null ? { scale: 0.98 } : undefined}
-                animate={durum === "wrong" ? { x: [0, -5, 5, -3, 0] } : durum === "right" ? { scale: [1, 1.02, 1] } : undefined}
-                transition={{ duration: 0.3 }}
-              >
-                <span
-                  className={cn(
-                    "grid size-7 flex-none place-items-center rounded-lg text-[13px] font-bold",
-                    durum === "right" ? "bg-good text-white" : durum === "wrong" ? "bg-bad text-white" : "bg-secondary text-muted-foreground",
-                  )}
-                >
-                  {"ABCD"[k]}
-                </span>
-                <Html html={o} />
-              </motion.button>
-            );
-          })}
-        </div>
+        <Secenekler q={Q} picked={p} pick={pick} />
       </article>
     );
     controls = (
@@ -251,6 +244,11 @@ export default function Lesson({
         </motion.div>
         <h2 className="text-[22px]">{great ? "Harika, hepsi doğru!" : fine ? "Güzel gidiyorsun!" : "Kartlara bir kez daha bakalım."}</h2>
         <p className="font-medium text-muted-foreground">{t.title} tamamlandı.</p>
+        {s.right < nQuiz && (
+          <p className="mt-2 rounded-2xl bg-secondary px-4 py-3 text-[14px] font-medium">
+            Yanlış yaptığın {nQuiz - s.right === 1 ? "soru" : `${nQuiz - s.right} soru`} yarın, sonra 3. ve 7. gün yeniden karşına çıkacak. Ana sayfadaki <b>Tekrar</b> bölümünden çözebilirsin.
+          </p>
+        )}
         <div className="mt-4 grid w-full gap-2">
           {next && <Button asChild><Link href={href(ders, next.id)}>Sıradaki: {next.title}</Link></Button>}
           {konuOyunlari(ders, id).map((o) => (
@@ -310,28 +308,15 @@ export default function Lesson({
 
 const yoksay = () => {};
 
-/** Alttaki sabit çubuk: düğmeler ve (testte) renkli geri bildirim. */
-function Alt({ durum, children }: { durum?: "ok" | "no"; children: React.ReactNode }) {
-  return (
-    <div
-      className={cn(
-        "sticky bottom-0 -mx-4 mt-auto border-t px-4 pt-3 pb-[calc(12px+env(safe-area-inset-bottom,0px))] transition-colors duration-200",
-        durum === "ok" ? "border-transparent bg-good-soft" : durum === "no" ? "border-transparent bg-bad-soft" : "border-border bg-card/95 backdrop-blur",
-      )}
-    >
-      {children}
-    </div>
-  );
-}
-
 type Kart = Topic["cards"][number];
 
 /** Akıştaki bir kart. canli: kart yeni açıldı, görsel çizilsin ve yazı sırayla gelsin. */
-function AkisKart({ c, no, toplam, vids, canli, oynat, ref }: {
-  c: Kart; no: number; toplam: number; vids: Video[]; canli: boolean; oynat: (v: Video) => void; ref?: React.Ref<HTMLElement>;
+function AkisKart({ c, no, toplam, vids, canli, oynat, anlamadim, isaretle, ref }: {
+  c: Kart; no: number; toplam: number; vids: Video[]; canli: boolean; oynat: (v: Video) => void;
+  anlamadim: boolean; isaretle: () => void; ref?: React.Ref<HTMLElement>;
 }) {
   const ilk = useRef(canli).current; // yalnızca ilk açılışta canlandır
-  const Bulb = Icon.bulb, Play = Icon.play;
+  const Bulb = Icon.bulb, Play = Icon.play, Soru = Icon.soru;
   const etkRef = useCanliSvg<HTMLDivElement>();
   const n = c.p.split(/[.!?…]\s/).length;
   const metinBitti = ilk ? 0.55 + n * 0.35 : 0;
@@ -372,6 +357,21 @@ function AkisKart({ c, no, toplam, vids, canli, oynat, ref }: {
           </button>
         </Kap>
       ))}
+      <Kap on={ilk} d={metinBitti + 0.3}>
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+          <button
+            onClick={isaretle}
+            aria-pressed={anlamadim}
+            className={cn(
+              "flex h-8 items-center gap-1.5 rounded-full border px-3 text-[13px] font-semibold transition-colors [&_svg]:size-4",
+              anlamadim ? "border-acc bg-acc-soft text-acc" : "border-border text-muted-foreground hover:border-border-strong",
+            )}
+          >
+            <Soru />{anlamadim ? "İşaretledin" : "Bunu anlamadım"}
+          </button>
+          {anlamadim && <span className="text-[13px] text-muted-foreground">Profil'de "Anlamadığım kartlar" altında duruyor.</span>}
+        </div>
+      </Kap>
     </article>
   );
 }

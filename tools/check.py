@@ -136,6 +136,16 @@ for ders, topics in d.items():
     if dup: err(ders, "dersler.json içinde tekrar eden konu id", sorted(dup))
     for k in dersler[ders]["konular"]:
         if not k.get("ad"): err(ders, "dersler.json içinde adı olmayan konu", k)
+    # ön koşullar (konu haritası): aynı dersten, listede daha önce gelen hazır konular
+    onceki = set()
+    for k in dersler[ders]["konular"]:
+        on = k.get("on", [])
+        if not isinstance(on, list): err(ders, k.get("id"), "on bir liste olmalı"); on = []
+        if on and not k.get("id"): err(ders, k.get("ad"), "yazılmamış konunun ön koşulu olmaz")
+        for o in on:
+            if o not in onceki: err(ders, k.get("id"), "ön koşul listede daha önce gelen bir konu değil:", o)
+        if len(set(on)) != len(on): err(ders, k.get("id"), "tekrar eden ön koşul")
+        if k.get("id"): onceki.add(k["id"])
     for tid in topics:
         if tid not in listed: err(ders, tid, "veri dosyasında var ama dersler.json listesinde yok")
     for tid in set(listed) - set(topics):

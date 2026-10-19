@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Lesson from "@/components/Lesson";
-import { isDers, nextTopic, readyTopics, topic } from "@/lib/content";
+import { entries, isDers, nextTopic, readyTopics, topic } from "@/lib/content";
 import { adimliDers } from "@/lib/adimli";
 import "../../ornek/ornek.css";
 
@@ -21,7 +21,9 @@ export default async function Page({ params }: Props) {
   if (!isDers(ders) || !t) notFound();
   const n = nextTopic(ders, konu);
   const a = adimliDers(konu);
+  const list = entries(ders);
+  const on = (list.find((e) => e.id === konu)?.on ?? []).map((o) => ({ id: o, title: list.find((e) => e.id === o)?.title ?? o }));
   // key: başka bir konuya geçince ders ekranı baştan başlasın.
   return <Lesson key={`${ders}.${konu}`} ders={ders} id={konu} t={t} next={n?.id ? { id: n.id, title: n.title! } : undefined}
-    adimli={a && a.ders === ders ? a : undefined} />;
+    adimli={a && a.ders === ders ? a : undefined} on={on} />;
 }

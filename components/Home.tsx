@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
-import { doneKeys, useAd, useProg } from "@/lib/store";
+import { bugunku, doneKeys, gunAdi, useAd, useProg, useTekrar } from "@/lib/store";
 import { sureYaz, VIDEOLAR } from "@/lib/videolar";
 import { Icon } from "./icons";
 import { motion } from "motion/react";
@@ -11,11 +11,13 @@ import { Progress } from "./ui/progress";
 import { Bolum, Govde, href, InstaLink, Liste, Simge, Top } from "./temel";
 
 export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
-  const prog = useProg(), ad = useAd();
+  const prog = useProg(), ad = useAd(), tekrar = useTekrar();
+  const bugun = bugunku(tekrar).length, kalan = Object.keys(tekrar).length;
+  const sonraki = Object.values(tekrar).map((x) => x.g).sort()[0];
   const doneAll = doneKeys(prog).length;
   const [ld, lid] = (prog._last || "").split(".");
   const last = ld in all ? all[ld as DersId].find((e) => e.id && e.id === lid) : undefined;
-  const Next = Icon.ileri, Play = Icon.play;
+  const Next = Icon.ileri, Play = Icon.play, Tekrar = Icon.tekrar;
   const router = useRouter();
 
   // Eski tek sayfalık sürümün adresleri (#kimya.simya, #kesfet, #kayit...) yeni adreslere yönlensin.
@@ -36,6 +38,20 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
           <h1 className="text-[28px]">Hoş geldin{ad ? `, ${ad}` : ""}</h1>
           {doneAll > 0 && <p className="text-[15px] text-muted-foreground">Şimdiye kadar {doneAll} konu bitirdin.</p>}
         </section>
+
+        {bugun > 0 && (
+          <Link href="/tekrar/" className="flex items-center gap-3.5 rounded-2xl border-[1.5px] border-foreground bg-card p-4 transition-transform active:scale-[.99]">
+            <span className="grid size-11 flex-none place-items-center rounded-xl bg-secondary [&_svg]:size-5"><Tekrar /></span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-[13px] font-semibold text-muted-foreground">Tekrar zamanı</span>
+              <b className="block font-bold">Bugün {bugun} soru seni bekliyor</b>
+            </span>
+            <Next />
+          </Link>
+        )}
+        {bugun === 0 && kalan > 0 && sonraki && (
+          <p className="-mt-3 flex items-center gap-2 text-[14px] text-muted-foreground [&_svg]:size-4"><Tekrar />Tekrar sıranda {kalan} soru var; ilki {gunAdi(sonraki)} gelecek.</p>
+        )}
 
         {last && (
           <Link

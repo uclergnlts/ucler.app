@@ -1,14 +1,15 @@
 "use client";
 import { DERSLER, DERS_IDS, type DersId, type Entry, isDers } from "@/lib/dersler";
-import { doneKeys, resetAll, setAd, useAd, useProg, useSaved, useStorageOk } from "@/lib/store";
+import { doneKeys, resetAll, setAd, toggleAnlamadim, useAd, useAnlamadim, useProg, useSaved, useStorageOk } from "@/lib/store";
 import { Icon } from "./icons";
-import { Bolum, Bos, Govde, InstaLink, Liste, PageHead, Row, Top } from "./temel";
+import Link from "next/link";
+import { Bolum, Bos, Govde, href, Html, InstaLink, Liste, PageHead, Row, Simge, Top } from "./temel";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Progress } from "./ui/progress";
 
-export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
-  const prog = useProg(), saved = useSaved(), storageOk = useStorageOk(), ad = useAd();
+export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[]>; basliklar: Record<string, string[]> }) {
+  const prog = useProg(), saved = useSaved(), storageOk = useStorageOk(), ad = useAd(), anlamadim = useAnlamadim();
   const done = doneKeys(prog).filter((k) => /\//.test(prog[k]));
   let right = 0, total = 0;
   for (const k of done) {
@@ -21,6 +22,14 @@ export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
     const e = isDers(d) ? all[d].find((x) => x.id === id) : undefined;
     return e ? [e] : [];
   });
+  // "ders.konu.kart no" → konu ve kart başlığı; silinmiş kartlar atlanır.
+  const anlamadimList = anlamadim.flatMap((k) => {
+    const [d, id, no] = k.split(".");
+    const e = isDers(d) ? all[d].find((x) => x.id === id) : undefined;
+    const h = basliklar[`${d}.${id}`]?.[+no - 1];
+    return e && h ? [{ k, e, no: +no, h }] : [];
+  });
+  const Soru = Icon.soru, Kapat = Icon.kapat;
 
   return (
     <div className="app">
@@ -64,6 +73,28 @@ export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
             <Bos>Henüz kaydettiğin bir konu yok. Ders ekranındaki ya da videodaki işaret simgesine dokunarak konuyu buraya ekleyebilirsin.</Bos>
           )}
         </Bolum>
+        <Bolum title="Anlamadığım kartlar" id="anlamadim">
+          {anlamadimList.length ? (
+            <Liste>
+              {anlamadimList.map(({ k, e, no, h }) => (
+                <div key={k} className="flex items-center" data-ders={e.ders}>
+                  <Link href={`${href(e.ders, e.id)}?kart=${no}`} className="flex min-w-0 flex-1 items-center gap-3 py-3 pl-4 transition-colors active:bg-secondary">
+                    <Simge><Soru /></Simge>
+                    <span className="min-w-0 flex-1">
+                      <Html as="span" className="block leading-snug font-semibold" html={h} />
+                      <span className="block truncate text-[13px] text-muted-foreground">{e.title} · {no}. kart</span>
+                    </span>
+                  </Link>
+                  <button className="grid size-11 flex-none place-items-center text-muted-foreground [&_svg]:size-4" aria-label="İşareti kaldır" onClick={() => toggleAnlamadim(k)}>
+                    <Kapat />
+                  </button>
+                </div>
+              ))}
+            </Liste>
+          ) : (
+            <Bos>Bir kartı anlamadıysan altındaki "Bunu anlamadım" düğmesine dokun. Kart buraya gelir, sonra dönüp yeniden bakabilirsin.</Bos>
+          )}
+        </Bolum>
         <Bolum title="Derslerdeki ilerleme">
           <Card className="grid gap-3.5 px-4 py-3.5">
             {DERS_IDS.map((d) => {
@@ -86,7 +117,7 @@ export default function Profile({ all }: { all: Record<DersId, Entry[]> }) {
           <Button variant="outline" disabled>Hesap oluştur · yakında</Button>
           <Button
             variant="outline"
-            onClick={() => { if (confirm("Tüm ilerlemen ve kaydettiğin konular silinsin mi?")) resetAll(); }}
+            onClick={() => { if (confirm("Tüm ilerlemen, kaydettiğin konular, tekrar sıran ve işaretlediğin kartlar silinsin mi?")) resetAll(); }}
           >
             İlerlemeyi sıfırla
           </Button>

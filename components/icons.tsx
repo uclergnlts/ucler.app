@@ -62,6 +62,18 @@ export const Icon = {
   pause: () => (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1" /><rect x="14" y="5" width="4" height="14" rx="1" /></svg>
   ),
+  kilit: () => (
+    <svg {...base} strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5" /><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" /></svg>
+  ),
+  harita: () => (
+    <svg {...base} strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="5" r="2.2" /><circle cx="18" cy="12" r="2.2" /><circle cx="7" cy="19" r="2.2" /><path d="M7.6 6.6l8.6 4M16.2 13.4l-7.4 4.4" /></svg>
+  ),
+  liste: () => (
+    <svg {...base} strokeLinecap="round"><path d="M9 6h11M9 12h11M9 18h11" /><circle cx="4.5" cy="6" r="1" fill="currentColor" /><circle cx="4.5" cy="12" r="1" fill="currentColor" /><circle cx="4.5" cy="18" r="1" fill="currentColor" /></svg>
+  ),
+  tekrar: () => (
+    <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M20 11a8 8 0 1 0-2.3 5.7" /><path d="M20 4v7h-7" /></svg>
+  ),
   bulb: () => (
     <svg viewBox="0 0 24 24" fill="none" stroke="#1d3557" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18h6M10 21h4" /><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="#ffc93c" /></svg>
   ),

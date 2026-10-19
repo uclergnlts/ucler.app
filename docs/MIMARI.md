@@ -19,7 +19,8 @@ app/               sayfalar (adres = klasör)
   oyunlar/                 /oyunlar/        Oyunlar sekmesi ve oyunlar
   profil/page.tsx          /profil/         profil
   videolar/page.tsx        /videolar/       Videolar sekmesi: dikey video akışı
-  [ders]/page.tsx          /<ders>/         konu yolu
+  tekrar/page.tsx          /tekrar/         akıllı tekrar: yanlış yapılan sorulardan bugün sırası gelenler
+  [ders]/page.tsx          /<ders>/         konu haritası (ön koşul bağlantılarıyla) ve konu listesi
   [ders]/[konu]/page.tsx   /<ders>/<konu>/  ders ekranı
 components/        ekranların kendisi (Home, Road, Lesson, Explore, Profile, Oyunlar, Tabs, VideoPlayer, VideoFeed, temel, icons)
 components/ui/     shadcn/ui parçaları (Button, Card, Input, Badge, Progress, Sheet); kod projenin içindedir, görünümü biz belirleriz
@@ -27,7 +28,9 @@ lib/
   dersler.ts       türler ve ders listesi (tarayıcıya giden küçük kısım)
   content.ts       konu içeriğini okuyan yardımcılar (yalnızca derleme sırasında)
   videolar.ts      videoları karta bağlayan yardımcılar
-  store.ts         localStorage üzerindeki ilerleme ve kaydedilenler
+  store.ts         localStorage üzerindeki ilerleme, kaydedilenler, tekrar sırası, anlamadım işaretleri
+  harita.ts        konu haritası: ön koşullara göre konu durumu (bitti / açık / kilitli) ve yerleşim
+  olay.ts          toplu kullanım olayları (Umami; kimliği boşken hiçbir şey gönderilmez)
 ```
 
 - **Konu listesi:** `content/dersler.json` içinde her konu `{"id": "...", "ad": "..."}` biçimindedir. `id` olmayan konular henüz yazılmamıştır ve sitede "Yakında" görünür.
@@ -37,6 +40,9 @@ lib/
 - **Durum (`lib/store.ts`):** Tarayıcının `localStorage` alanında tutulur. Hesap olmadığı için cihaza özeldir.
   - `tf-prog`: konu bazında test sonucu (`"ders.konu": "3/4 doğru"`) ve son açılan konu (`_last`)
   - `tf-saved`: kaydedilen konular
+  - `tf-tekrar`: akıllı tekrar sırası (`"ders.konu.soru sırası": {s: basamak, g: "YYYY-AA-GG"}`). Testte yanlış yapılan soru 1, 3 ve 7 gün sonra yeniden sorulur; tekrarda yanlış yapılırsa başa döner, üç doğrudan sonra sıradan çıkar.
+  - `tf-anlamadim`: "Bunu anlamadım" diye işaretlenen kartlar (`"ders.konu.kart no"`); Profil'de "Anlamadığım kartlar" altında görünür. `lib/olay.ts` içindeki Umami kimliği doldurulursa her işaret toplu olay olarak da gönderilir (kişisel bilgi yok).
+  - `tf-gorunum`: ders sayfasında harita mı liste mi seçildiği
 
   Anahtarlardaki `tf-` öneki eski "Temelden Fen" adından kalmıştır. Değiştirilirse kullanıcıların mevcut ilerlemesi kaybolur.
 - **Tema:** Renkler `app/globals.css` içinde `:root` CSS değişkenleriyle tanımlıdır. `data-ders` özniteliği dersin vurgu rengini (`--acc`) belirler. Konu SVG'leri de yalnızca bu değişkenleri kullanır. Arayüz **shadcn/ui** (Tailwind + Radix) ve **Motion** (animasyon) ile yazılır (Üçler, 2026-10-18). shadcn jetonları (`bg-primary`, `border-border`, `text-muted-foreground`, `bg-acc`...) `globals.css` içindeki `@theme inline` bloğunda bu değişkenlere bağlıdır, yani renkler yine buradan gelir. Eski sınıflar `@layer components` içindedir; Tailwind sınıfları onların üstüne yazar. Yeni parça gerekirse `npx shadcn add <ad>` ile `components/ui/` altına eklenir ve renkleri jetonlara uydurulur.

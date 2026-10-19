@@ -1,7 +1,7 @@
 "use client";
 // Alt menü: Ana sayfa, Keşfet, Videolar, Oyunlar, Profil (ders adları değil; bkz. docs/KARARLAR.md).
 // Kaydedilenler Profil'in içindedir.
-// Ders ekranında (/ders/konu/) gizlenir.
+// Ders ekranında (/ders/konu/) ve tekrar ekranında gizlenir.
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
@@ -18,7 +18,7 @@ const TABS = [
 
 export default function Tabs() {
   const parts = usePathname().split("/").filter(Boolean);
-  if (parts.length >= 2) return null;
+  if (parts.length >= 2 || parts[0] === "tekrar") return null;
   const cur =
     parts.length === 0
       ? "home"

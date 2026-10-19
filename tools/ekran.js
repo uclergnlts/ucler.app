@@ -58,7 +58,7 @@ server.listen(0, async () => {
   p.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
 
   if (!secili.length) {
-    const pages = [['ana', '/'], ['kesfet', '/kesfet/'], ['oyunlar', '/oyunlar/'], ['profil', '/profil/'], ['videolar', '/videolar/'], ...Object.keys(dersler).map(d => [d, `/${d}/`])];
+    const pages = [['ana', '/'], ['kesfet', '/kesfet/'], ['oyunlar', '/oyunlar/'], ['profil', '/profil/'], ['videolar', '/videolar/'], ['tekrar', '/tekrar/'], ...Object.keys(dersler).map(d => [d, `/${d}/`])];
     for (const [ad, url] of pages) {
       await p.goto(base + url); await ileri(1500);
       await p.screenshot({ path: path.join(out, `sayfa-${ad}.png`), fullPage: true });
