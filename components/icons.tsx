@@ -68,9 +68,6 @@ export const Icon = {
   harita: () => (
     <svg {...base} strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="5" r="2.2" /><circle cx="18" cy="12" r="2.2" /><circle cx="7" cy="19" r="2.2" /><path d="M7.6 6.6l8.6 4M16.2 13.4l-7.4 4.4" /></svg>
   ),
-  liste: () => (
-    <svg {...base} strokeLinecap="round"><path d="M9 6h11M9 12h11M9 18h11" /><circle cx="4.5" cy="6" r="1" fill="currentColor" /><circle cx="4.5" cy="12" r="1" fill="currentColor" /><circle cx="4.5" cy="18" r="1" fill="currentColor" /></svg>
-  ),
   tekrar: () => (
     <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M20 11a8 8 0 1 0-2.3 5.7" /><path d="M20 4v7h-7" /></svg>
   ),

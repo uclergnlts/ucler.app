@@ -6,7 +6,7 @@ import { useSyncExternalStore } from "react";
 export type Prog = Record<string, string>; // "ders.konu" -> "3/4 doğru", "_last" -> "ders.konu"
 
 export const KEYS = {
-  prog: "tf-prog", saved: "tf-saved", ad: "tf-ad", tekrar: "tf-tekrar", anlamadim: "tf-anlamadim", gorunum: "tf-gorunum",
+  prog: "tf-prog", saved: "tf-saved", ad: "tf-ad", tekrar: "tf-tekrar", anlamadim: "tf-anlamadim",
   asama: "tf-asama", puan: "tf-puan", gorev: "tf-gorev", yer: "tf-yer", ipucu: "tf-ipucu",
 } as const;
 const listeners = new Set<() => void>();
@@ -134,10 +134,6 @@ export function toggleAnlamadim(key: string) {
 }
 
 /** Ders sayfasında harita mı liste mi görünsün (yalnızca bir kolaylık). */
-export type Gorunum = "harita" | "liste";
-export const useGorunum = () =>
-  useSyncExternalStore(subscribe, () => read<Gorunum>(KEYS.gorunum, "harita"), () => "harita" as Gorunum);
-export const setGorunum = (g: Gorunum) => write(KEYS.gorunum, g);
 
 // Aşamalar: her konu 2-4 aşamaya bölünür (lib/asama.ts). Değer, o konuda bitirilen aşama sayısıdır.
 // Aşamalar sırayla açılır; öğrenci her konuya 1. aşamadan başlar.

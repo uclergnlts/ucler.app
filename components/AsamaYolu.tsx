@@ -1,18 +1,20 @@
 "use client";
-// Konu girişindeki aşama yolu: aşamalar kıvrılan bir yolun üstünde büyük düğmeler, en sonda mini test (kupa).
+// Aşama yolu (konu girişi ve ders sayfasındaki konu listesi): aşamalar kıvrılan bir yolun üstünde büyük düğmeler, en sonda mini test (kupa).
 // Bitmiş aşama dolu ve işaretli, sıradaki aşama nabız gibi atar ve üstünde "Başla" balonu durur, kilitliler gri.
+import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Html } from "./temel";
 import { Icon } from "./icons";
 
 /** serbest: kilitli görünse de dokunulunca açılır (mini test: konuyu bilen öğrenci aşamaları beklemeden çözebilir). */
-export type YolDugum = { baslik: string; alt: string; durum: "bitti" | "sirada" | "kilitli"; test?: boolean; serbest?: boolean; ac: () => void };
+export type YolDugum = { baslik: string; alt: string; durum: "bitti" | "sirada" | "kilitli"; test?: boolean; serbest?: boolean; etiket?: string; ac: () => void };
 
 const SATIR = 112; // bir düğümün satır yüksekliği (px)
 const KAYMA = [0, 26, 0, -26]; // düğümün ortadan sapması (% genişlik), yol bu sırayla kıvrılır
 
-export default function AsamaYolu({ dugumler, balon }: { dugumler: YolDugum[]; balon: string }) {
+/** kaydir: sıradaki düğüm ekranın altında kalıyorsa sayfa açılınca ona kaydırılır (uzun konu listesi için). */
+export default function AsamaYolu({ dugumler, balon, ad = "Aşamalar", kaydir }: { dugumler: YolDugum[]; balon: string; ad?: string; kaydir?: boolean }) {
   const x = (i: number) => 50 + KAYMA[i % KAYMA.length];
   const h = dugumler.length * SATIR;
   // Düğüm merkezlerinden geçen yumuşak yol (viewBox: genişlik 100, yükseklik piksel).
@@ -28,6 +30,11 @@ export default function AsamaYolu({ dugumler, balon }: { dugumler: YolDugum[]; b
   const sirada = dugumler.findIndex((g) => g.durum === "sirada");
   const renkliSon = Math.max(sirada, dugumler.reduce((n, g, i) => (g.durum === "bitti" ? i : n), -1));
   const Check = Icon.check, Kilit = Icon.kilit, Kupa = Icon.kupa;
+  const siradaRef = useRef<HTMLLIElement>(null);
+  useEffect(() => {
+    const el = siradaRef.current;
+    if (kaydir && el && el.getBoundingClientRect().bottom > window.innerHeight - 80) el.scrollIntoView({ block: "center" });
+  }, [kaydir, sirada]);
 
   return (
     <div className="relative" style={{ height: h }}>
@@ -48,15 +55,15 @@ export default function AsamaYolu({ dugumler, balon }: { dugumler: YolDugum[]; b
           />
         )}
       </svg>
-      <ol aria-label="Aşamalar">
+      <ol aria-label={ad}>
         {dugumler.map((g, i) => {
           const solda = x(i) > 50; // düğüm sağdaysa yazı solda
           return (
-            <li key={i} className="absolute inset-x-0" style={{ top: i * SATIR, height: SATIR }}>
+            <li key={i} ref={i === sirada ? siradaRef : undefined} className="absolute inset-x-0" style={{ top: i * SATIR, height: SATIR }}>
               <motion.button
                 disabled={g.durum === "kilitli" && !g.serbest}
                 onClick={g.ac}
-                aria-label={`${g.baslik}, ${g.durum === "bitti" ? "bitti" : g.durum === "sirada" ? "sıradaki" : g.serbest ? "aşamalar bitmeden de çözebilirsin" : "kilitli"}`}
+                aria-label={g.etiket ?? `${g.baslik}, ${g.durum === "bitti" ? "bitti" : g.durum === "sirada" ? "sıradaki" : g.serbest ? "aşamalar bitmeden de çözebilirsin" : "kilitli"}`}
                 className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2"
                 style={{ left: `${x(i)}%` }}
                 initial={{ scale: 0.6, opacity: 0 }}
