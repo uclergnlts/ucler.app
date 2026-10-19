@@ -29,7 +29,7 @@
     "hedef": {
      "V": 2
     },
-    "tamam": "Hacim yarıya inince basınç iki katına çıktı: P·V hep 4. Bu <b>Boyle yasasıdır</b>: P₁·V₁ = P₂·V₂. Dalgıç yüzeye çıkarken nefesini tutmaz, çünkü basınç azalınca ciğerdeki hava genleşir."
+    "tamam": "Hacim yarıya inince basınç iki katına çıktı: P·V hep 4. Bu <b>Boyle yasasıdır</b>: P₁·V₁ = P₂·V₂."
    },
    "kart": 3,
    "goster": {
@@ -41,7 +41,7 @@
   },
   {
    "baslik": "Charles: ısıt",
-   "metin": "Şimdi basınç sabit, piston serbest. 27 °C'deki gaz 6 L. Gazı ısıt ve hacmini <b>12 L</b> yap. Sıcaklığın kelvin karşılığına da bak.",
+   "metin": "Şimdi basınç sabit, piston serbest. 27 °C'deki gaz 6 L. Gazı ısıt ve hacmini <b>8 L</b> yap. Sıcaklığın kelvin karşılığına da bak.",
    "sahne": {
     "tur": "kim7-charles"
    },
@@ -62,9 +62,9 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": {
-     "t": 327
+     "t": 127
     },
-    "tamam": "Hacmi iki katına çıkarmak için kelvin sıcaklığı iki katına çıkmalı: 300 K → 600 K, yani 27 °C → 327 °C (54 °C değil). <b>Charles yasası</b>: V₁/T₁ = V₂/T₂. Doğruyu geri uzatırsan −273 °C'de, yani <b>mutlak sıfırda</b> (0 K) hacim sıfıra iner."
+    "tamam": "Hacmi 6 L'den 8 L'ye, yani 4/3 katına çıkarmak için kelvin sıcaklığı da 4/3 katına çıkmalı: 300 K → 400 K, yani 127 °C. <b>Charles yasası</b>: V₁/T₁ = V₂/T₂."
    },
    "kart": 4,
    "goster": {
@@ -205,7 +205,7 @@
   },
   {
    "baslik": "Tanecikler ne yapıyor?",
-   "metin": "<b>Kinetik teoriye</b> göre gaz tanecikleri sürekli, rastgele ve düz çizgilerle hareket eder. Sıcaklığı değiştir; okların ve çubukların nasıl değiştiğine bak.",
+   "metin": "Sıcaklığı değiştir; okların ve çubukların nasıl değiştiğine bak.",
    "sahne": {
     "tur": "kim7-kinetik"
    },
@@ -237,7 +237,7 @@
      },
      {
       "yazi": "İki katına çıkar",
-      "neden": "Ortalama kinetik enerji mutlak sıcaklıkla doğru orantılıdır. Hız ise √T ile artar: 600 K'de yaklaşık 1,41 kat. Aynı sıcaklıkta bütün gazların ortalama kinetik enerjisi eşittir; hafif gaz daha hızlıdır.",
+      "neden": "Ortalama kinetik enerji mutlak sıcaklıkla doğru orantılıdır. Hız ise √T ile artar: 600 K'de yaklaşık 1,41 kat.",
       "dogru": true
      }
     ]
@@ -274,7 +274,7 @@
   },
   {
    "baslik": "Dalton: kısmi basınç",
-   "metin": "Kapta 2 mol N₂ var ve 1 atm basınç yapıyor. Tepkimeye girmeyen gazlarda her gaz kabı tek başına doldurmuş gibi basınç yapar. O₂ ekle: O₂'nin basıncı toplamın <b>yarısı</b> olsun.",
+   "metin": "Kapta 2 mol N₂ var ve 1 atm basınç yapıyor. O₂ ekle: O₂'nin basıncı toplamın yarısı olsun.",
    "sahne": {
     "tur": "kim7-dalton"
    },

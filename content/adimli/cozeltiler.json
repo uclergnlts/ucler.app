@@ -46,7 +46,7 @@
   },
   {
    "baslik": "Kütlece yüzde",
-   "metin": "Bardakta <b>20 g tuz</b> var. Suyu ayarla ve çözeltiyi kütlece <b>%20</b> yap.",
+   "metin": "Bardakta 20 g tuz var. Suyu ayarla ve çözeltiyi kütlece <b>%40</b> yap.",
    "sahne": {
     "tur": "kim8-yuzde"
    },
@@ -67,11 +67,11 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": {
-     "su": 80
+     "su": 30
     },
-    "tamam": "20 g tuz + 80 g su = 100 g çözelti; 20/100 = <b>%20</b>. Payda <b>çözeltinin</b> kütlesidir, suyunki değil: 100 g suyla 20/120 ≈ %16,7 olurdu. Kütlece % = (çözünen / çözelti) · 100."
+    "tamam": "20 g tuz + 30 g su = 50 g çözelti; 20 / 50 = <b>%40</b>. Payda yine çözeltinin kütlesidir: suya bölseydin %67 bulurdun."
    },
-   "kart": 5,
+   "kart": 4,
    "goster": {
     "deger": {
      "su": 60
@@ -81,7 +81,7 @@
   },
   {
    "baslik": "Molarite",
-   "metin": "Balonda <b>0,1 mol</b> NaOH var. Hacmi değiştirerek çözeltiyi <b>0,4 M</b> yap. Molarite, bir litre çözeltideki mol sayısıdır.",
+   "metin": "Balonda 0,1 mol NaOH var. Hacmi değiştirerek çözeltiyi <b>0,5 M</b> yap.",
    "sahne": {
     "tur": "kim8-molarite"
    },
@@ -102,11 +102,11 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": {
-     "V": 250
+     "V": 200
     },
-    "tamam": "M = n / V = 0,1 mol / 0,25 L = <b>0,4 M</b>. Hacmi mutlaka litreye çevir: 250 mL = 0,25 L. Aynı mol daha az hacimde, daha derişik."
+    "tamam": "V = n / M = 0,1 / 0,5 = 0,2 L = <b>200 mL</b>. Aynı mol daha az hacimde daha derişik olur."
    },
-   "kart": 6,
+   "kart": 5,
    "goster": {
     "deger": {
      "V": 1000
@@ -116,7 +116,7 @@
   },
   {
    "baslik": "Seyreltme",
-   "metin": "Elinde 100 mL <b>2 M</b> çözelti var. Su ekleyerek derişimi <b>0,5 M</b> yap.",
+   "metin": "Elinde 100 mL 2 M çözelti var. Su ekleyerek derişimi <b>0,8 M</b> yap.",
    "sahne": {
     "tur": "kim8-seyreltme"
    },
@@ -137,11 +137,11 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": {
-     "V": 400
+     "V": 250
     },
-    "tamam": "Su eklemek mol sayısını değiştirmez, hep 0,2 mol. Bu yüzden <b>M₁·V₁ = M₂·V₂</b>: 2 · 100 = 0,5 · V₂, yani V₂ = <b>400 mL</b>. 300 mL su ekledin."
+    "tamam": "Su eklemek mol sayısını değiştirmez, hep 0,2 mol: 2 · 100 = 0,8 · V₂, yani V₂ = <b>250 mL</b>. 150 mL su ekledin."
    },
-   "kart": 8,
+   "kart": 7,
    "goster": {
     "deger": {
      "V": 200
@@ -211,12 +211,12 @@
      },
      {
       "yazi": "CaCl₂ çözeltisi",
-      "neden": "Donma noktası düşmesi tanecik sayısına bağlıdır: ΔT = K·m·i. CaCl₂ üç iyon verir (i = 3): 1,86 · 3 ≈ <b>5,6 °C</b> düşer. Kışın yollara bu yüzden tuz serpilir.",
+      "neden": "CaCl₂ üç iyon verir (i = 3), en çok tanecik onda: donma noktası 1,86 · 3 ≈ 5,6 °C düşer. Kışın yollara bu yüzden tuz serpilir.",
       "dogru": true
      }
     ]
    },
-   "kart": 11
+   "kart": 10
   },
   {
    "baslik": "Gazoz neden köpürür?",
@@ -260,12 +260,12 @@
      },
      {
       "yazi": "Üstteki gaz basıncı düşer, CO₂'nin çözünürlüğü azalır",
-      "neden": "Gazların çözünürlüğü kısmi basınçla artar (<b>Henry yasası</b>). Kapak açılınca basınç düşer, fazla CO₂ kabarcık olarak çıkar. Sıcaklık artınca da gaz çözünürlüğü azalır; ılık gazoz daha çabuk kaçar.",
+      "neden": "Gazın çözünürlüğü üstündeki kısmi basınçla orantılıdır (Henry yasası). Kapak açılınca basınç düşer, fazla CO₂ kabarcık olarak çıkar.",
       "dogru": true
      }
     ]
    },
-   "kart": 14
+   "kart": 13
   },
   {
    "baslik": "Çözünürlük laboratuvarı",

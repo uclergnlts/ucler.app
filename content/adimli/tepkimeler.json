@@ -114,7 +114,7 @@
   },
   {
    "baslik": "Metanın yanması",
-   "metin": "Doğal gaz (metan) yanınca CO₂ ve su oluşur. Önce karmaşık bileşikleri ayarla, tek element olan O₂'yi en sona bırak.",
+   "metin": "Doğal gaz (metan) yanınca CO₂ ve su oluşur. Önce C'yi, sonra H'yi eşitle; tek element olan O₂'yi en sona bırak.",
    "sahne": {
     "tur": "kim5-denklestir",
     "denklem": "metan"
@@ -165,11 +165,11 @@
     },
     "tamam": "CH₄ + 2O₂ → CO₂ + 2H₂O. İki yanda 1 C, 4 H ve 4 O var. Tepkimede atom türü ve sayısı, kütle ve yük korunur; molekül sayısı korunmak zorunda değildir."
    },
-   "kart": 6
+   "kart": 5
   },
   {
    "baslik": "Eksik yanma",
-   "metin": "Yanma, bir maddenin oksijenle tepkimesidir ve ısı verir. Oksijen yeterliyse karbonlu yakıt tam yanar. Bu ocak, havası az olan kapalı bir odada yanıyor.",
+   "metin": "Yanma, bir maddenin oksijenle tepkimesidir. Bu ocak, havası az olan kapalı bir odada metan yakıyor.",
    "sahne": {
     "tur": "kim5-yanma",
     "sure": 5,
@@ -189,40 +189,12 @@
      },
      {
       "yazi": "Karbon monoksit ve is",
-      "neden": "Eksik yanmada CO ve is (karbon) da oluşur. CO renksiz ve kokusuzdur; kandaki hemoglobine oksijenden çok daha sıkı bağlanır. Dedektör ve havalandırma hayat kurtarır.",
+      "neden": "Eksik yanmada CO ve is (karbon) oluşur. CO renksiz ve kokusuzdur, hemoglobine oksijenden çok daha sıkı bağlanır; dedektör ve havalandırma hayat kurtarır.",
       "dogru": true
      }
     ]
    },
-   "kart": 9
-  },
-  {
-   "baslik": "Çökelme",
-   "metin": "Suda çözünmüş iki iyonik bileşik karışınca bazı iyonlar suda çözünmeyen bir katı oluşturabilir. Gümüş nitrat ve sodyum klorür çözeltileri ikisi de berrak.",
-   "sahne": {
-    "tur": "kim5-cokelme",
-    "sure": 5
-   },
-   "gorev": {
-    "tur": "tahmin",
-    "soru": "Aradaki bölme kalkınca ne olur?",
-    "secenekler": [
-     {
-      "yazi": "Beyaz bir katı dibe çöker",
-      "neden": "Ag⁺ ile Cl⁻ birleşip suda çözünmeyen AgCl oluşturur: çökelek. Na⁺ ve NO₃⁻ değişmeden kalır; bunlar seyirci iyonlardır ve net denklemde yazılmaz: Ag⁺ + Cl⁻ → AgCl(k).",
-      "dogru": true
-     },
-     {
-      "yazi": "Hiçbir şey olmaz",
-      "neden": "Bazı iyon çiftleri suda çözünmez. Buradaki iyonlardan hangi ikisi birleşebilir?"
-     },
-     {
-      "yazi": "Gaz kabarcıkları çıkar",
-      "neden": "Burada gaz oluşturacak bir iyon çifti yok; oluşan ürün bir katı."
-     }
-    ]
-   },
-   "kart": 11
+   "kart": 8
   },
   {
    "baslik": "Tepkime türleri",
@@ -249,7 +221,35 @@
      }
     ]
    },
-   "kart": 11
+   "kart": 10
+  },
+  {
+   "baslik": "Çökelme",
+   "metin": "Suda çözünmüş iki iyonik bileşik karışınca bazı iyonlar suda çözünmeyen bir katı oluşturabilir. Gümüş nitrat ve sodyum klorür çözeltileri ikisi de berrak.",
+   "sahne": {
+    "tur": "kim5-cokelme",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Aradaki bölme kalkınca ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Beyaz bir katı dibe çöker",
+      "neden": "Ag⁺ ile Cl⁻ birleşip suda çözünmeyen AgCl'yi oluşturur: beyaz çökelek. Na⁺ ve NO₃⁻ çözeltide değişmeden kalır.",
+      "dogru": true
+     },
+     {
+      "yazi": "Hiçbir şey olmaz",
+      "neden": "Bazı iyon çiftleri suda çözünmez. Buradaki iyonlardan hangi ikisi birleşebilir?"
+     },
+     {
+      "yazi": "Gaz kabarcıkları çıkar",
+      "neden": "Burada gaz oluşturacak bir iyon çifti yok; oluşan ürün bir katı."
+     }
+    ]
+   },
+   "kart": 10
   }
  ],
  "kapanis": [

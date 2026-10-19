@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "pH ölçeği",
-   "metin": "pH, bir çözeltinin ne kadar asidik ya da bazik olduğunu gösterir: 7 nötr, altı asidik, üstü baziktir. <b>Turnusol</b> kâğıdı asitte kırmızı, bazda mavidir. Ölçekte gez ve turnusolu <b>maviye</b> çeviren bir madde bul.",
+   "metin": "Ölçekte gez ve turnusolu <b>maviye</b> çeviren bir madde bul.",
    "sahne": {
     "tur": "kim6-ph"
    },
@@ -31,7 +31,7 @@
       14
      ]
     },
-    "tamam": "pH 7'nin üstündeki maddeler baziktir ve turnusolu maviye çevirir: sabun, amonyak, çamaşır suyu. Bazların sulu çözeltisi kaygandır. Laboratuvarda hiçbir madde tadılmaz ya da elle denenmez."
+    "tamam": "pH 7'nin üstündeki maddeler baziktir ve turnusolu maviye çevirir: sabun, amonyak, çamaşır suyu."
    },
    "kart": 5,
    "goster": {
@@ -132,7 +132,7 @@
   },
   {
    "baslik": "Kuvvetli ve zayıf",
-   "metin": "Kuvvetli asitler suda tamamen iyonlaşır, zayıflar çok az. Aynı derişimde (0,1 M) HCl ile sirke asidini karşılaştır: iyonlara ve lambaya bak.",
+   "metin": "Aynı derişimde (0,1 M) HCl ile sirke asidini karşılaştır: iyonlara ve lambaya bak.",
    "sahne": {
     "tur": "kim6-kuvvet"
    },
@@ -167,11 +167,11 @@
      }
     ]
    },
-   "kart": 6
+   "kart": 5
   },
   {
    "baslik": "Nötralleşme",
-   "metin": "Asit ile baz tepkimeye girince tuz ve su oluşur; asıl olay H₃O⁺ + OH⁻ → 2H₂O'dur. Büretten 0,1 M NaOH ekleyerek 25 mL 0,1 M HCl'yi tam <b>eşdeğerlik noktasına</b> getir. Kapta fenolftalein var.",
+   "metin": "Büretten 0,1 M NaOH ekleyerek 25 mL 0,1 M HCl'yi tam <b>eşdeğerlik noktasına</b> getir. Kapta fenolftalein var.",
    "sahne": {
     "tur": "kim6-titrasyon"
    },
@@ -226,16 +226,16 @@
      },
      {
       "yazi": "7'den büyük",
-      "neden": "Asetat iyonu (CH₃COO⁻) zayıf asidin eşlenik bazıdır ve sudan proton alır: CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻. Bu hidrolizle OH⁻ oluşur, pH ≈ 8,7. Hangi taraf kuvvetliyse tuz onun karakterini taşır.",
+      "neden": "Asetat iyonu (CH₃COO⁻) zayıf asidin eşlenik bazıdır ve sudan proton alır: CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻. Oluşan OH⁻ yüzünden pH ≈ 8,7 olur.",
       "dogru": true
      }
     ]
    },
-   "kart": 11
+   "kart": 10
   },
   {
    "baslik": "Tampon",
-   "metin": "Zayıf asit ile eşlenik bazını birlikte içeren çözeltiye <b>tampon</b> denir. İki kaba aynı miktarda HCl ekle ve pH'larının nasıl değiştiğine bak.",
+   "metin": "İki kaba aynı miktarda HCl ekle ve pH'larının nasıl değiştiğine bak.",
    "sahne": {
     "tur": "kim6-tampon"
    },
@@ -257,7 +257,7 @@
     "secenekler": [
      {
       "yazi": "Asetat iyonu eklenen H₃O⁺'yu tutuyor",
-      "neden": "CH₃COO⁻ + H₃O⁺ → CH₃COOH + H₂O. Eklenen asit zayıf aside dönüşür, pH çok az düşer. Kanın pH'ını ≈7,4'te böyle bir tampon (H₂CO₃ / HCO₃⁻) korur; ama tamponun kapasitesi sınırlıdır.",
+      "neden": "CH₃COO⁻ + H₃O⁺ → CH₃COOH + H₂O. Eklenen asit zayıf aside dönüşür, bu yüzden pH çok az düşer.",
       "dogru": true
      },
      {
@@ -289,12 +289,12 @@
      },
      {
       "yazi": "Bakır",
-      "neden": "Bakır, hidrojenden daha az aktiftir; HCl ile H₂ vermez (gümüş ve altın da). Bakır HNO₃ ile tepkimeye girer ama H₂ değil, NO ya da NO₂ çıkar.",
+      "neden": "Bakır hidrojenden daha az aktiftir; HCl ile H₂ vermez (gümüş ve altın da).",
       "dogru": true
      },
      {
       "yazi": "Çinko",
-      "neden": "Çinko da asitle H₂ verir, magnezyumdan daha yavaş. Çinko amfoterdir: NaOH ile de H₂ çıkarır."
+      "neden": "Çinko da asitle H₂ verir, yalnız magnezyumdan daha yavaş."
      }
     ]
    },

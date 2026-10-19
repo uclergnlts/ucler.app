@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Kimyanın düzinesi",
-   "metin": "Bir düzine yumurta da bir düzine karpuz da 12 tanedir ama ağırlıkları çok farklıdır. Kimyacıların paketi <b>moldür</b>: 1 mol = 6,02×10²³ tanecik (Avogadro sayısı). Mol sayısını değiştir ve kefelere bak.",
+   "metin": "Bir düzine yumurta da bir düzine karpuz da 12 tanedir ama ağırlıkları çok farklıdır. Mol sayısını değiştir ve kefelere bak.",
    "sahne": {
     "tur": "kim6-paket"
    },
@@ -34,7 +34,7 @@
      },
      {
       "yazi": "Hacimleri",
-      "neden": "Katı, sıvı ve katının hacmi tanecik boyutuna ve dizilişine bağlıdır; mol bunu eşitlemez."
+      "neden": "Karbonun (katı), suyun (sıvı) ve demirin (katı) hacmi tanecik boyutuna ve dizilişine bağlıdır; mol bunu eşitlemez."
      },
      {
       "yazi": "Tanecik sayıları",
@@ -47,7 +47,7 @@
   },
   {
    "baslik": "Molden grama",
-   "metin": "Bir H₂O molekülü 18 akb'dir; 1 mol su ise 18 g'dır. Buna <b>mol kütlesi</b> (M) denir: n = m / M. Beherdeki suyu ayarla ve teraziye <b>36 g</b> su koy.",
+   "metin": "1 mol maddenin gram cinsinden kütlesi <b>mol kütlesidir</b> (M): n = m / M. Beherdeki suyu ayarla ve teraziye <b>45 g</b> su koy.",
    "sahne": {
     "tur": "kim6-su"
    },
@@ -68,9 +68,9 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": {
-     "n": 2
+     "n": 2.5
     },
-    "tamam": "36 g / 18 g/mol = 2 mol su. İçinde 2 × 6,02×10²³ = 1,20×10²⁴ molekül var. Kütleden tanecik sayısına giderken arada hep mol vardır."
+    "tamam": "45 g / 18 g/mol = 2,5 mol su; içinde 2,5 × 6,02×10²³ ≈ 1,5×10²⁴ molekül var. Kütleden tanecik sayısına giderken arada hep mol vardır."
    },
    "kart": 2,
    "goster": {
@@ -81,47 +81,8 @@
    }
   },
   {
-   "baslik": "Molekül mü, atom mu?",
-   "metin": "Formüldeki alt indis, bir moleküldeki atom sayısını söyler. Aynı oran mol için de geçerlidir. Molekülleri atomlarına ayır ve say.",
-   "sahne": {
-    "tur": "kim6-atom"
-   },
-   "deger": {
-    "a": 0
-   },
-   "kontroller": [
-    {
-     "ad": "a",
-     "etiket": "Atomlarına ayır",
-     "min": 0,
-     "max": 1,
-     "tur": "anahtar"
-    }
-   ],
-   "gorev": {
-    "tur": "secim",
-    "soru": "1 mol H₂O'da toplam kaç mol atom vardır?",
-    "secenekler": [
-     {
-      "yazi": "1 mol",
-      "neden": "1 mol, molekül sayısıdır. Her molekülün içinde kaç atom var?"
-     },
-     {
-      "yazi": "2 mol",
-      "neden": "Yalnız hidrojenleri saydın: 2 mol H. Oksijeni de ekle."
-     },
-     {
-      "yazi": "3 mol",
-      "neden": "Her H₂O molekülünde 2 H ve 1 O var. 1 mol suda 2 mol H + 1 mol O = 3 mol atom, yani 3 × 6,02×10²³ atom bulunur.",
-      "dogru": true
-     }
-    ]
-   },
-   "kart": 5
-  },
-  {
    "baslik": "Gazlarda hacim",
-   "metin": "Aynı sıcaklık ve basınçta eşit mol gazlar eşit hacim kaplar. <b>Normal koşulda</b> (0 °C, 1 atm) 1 mol gaz 22,4 L, oda koşulunda yaklaşık 24,5 L'dir. Şırıngada <b>NK'de 11,2 L</b> gaz olsun.",
+   "metin": "Şırıngada normal koşulda (NK) 11,2 L gaz olsun. Koşulu ve mol sayısını ayarla.",
    "sahne": {
     "tur": "kim6-gaz"
    },
@@ -166,8 +127,47 @@
    }
   },
   {
+   "baslik": "Molekül mü, atom mu?",
+   "metin": "Formüldeki alt indis, bir moleküldeki atom sayısını söyler. Molekülleri atomlarına ayır ve say.",
+   "sahne": {
+    "tur": "kim6-atom"
+   },
+   "deger": {
+    "a": 0
+   },
+   "kontroller": [
+    {
+     "ad": "a",
+     "etiket": "Atomlarına ayır",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "1 mol H₂O'da toplam kaç mol atom vardır?",
+    "secenekler": [
+     {
+      "yazi": "1 mol",
+      "neden": "1 mol, molekül sayısıdır. Her molekülün içinde kaç atom var?"
+     },
+     {
+      "yazi": "2 mol",
+      "neden": "Yalnız hidrojenleri saydın: 2 mol H. Oksijeni de ekle."
+     },
+     {
+      "yazi": "3 mol",
+      "neden": "Her H₂O molekülünde 2 H ve 1 O var. 1 mol suda 2 mol H + 1 mol O = 3 mol atom, yani 3 × 6,02×10²³ atom bulunur.",
+      "dogru": true
+     }
+    ]
+   },
+   "kart": 4
+  },
+  {
    "baslik": "Stokiyometri: üç adım",
-   "metin": "Metan yanınca CO₂ çıkar: CH₄ + 2O₂ → CO₂ + 2H₂O. Yol hep aynıdır: mole çevir, katsayılarla istenenin molünü bul, istenen birime geç. <b>22 g CO₂</b> elde edecek kadar metan yak (CH₄ = 16, CO₂ = 44 g/mol).",
+   "metin": "Metan yanınca CO₂ çıkar: CH₄ + 2O₂ → CO₂ + 2H₂O. <b>33 g</b> CO₂ elde edecek kadar metan yak (CH₄ = 16, CO₂ = 44 g/mol).",
    "sahne": {
     "tur": "kim6-stok"
    },
@@ -188,9 +188,9 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": {
-     "m": 8
+     "m": 12
     },
-    "tamam": "8 g CH₄ = 0,5 mol. Katsayılar 1 : 1 olduğu için 0,5 mol CO₂ oluşur: 0,5 × 44 = 22 g, NK'de 11,2 L. Kütleden kütleye doğrudan geçilmez; arada mol ve katsayı oranı vardır."
+    "tamam": "33 g CO₂ = 0,75 mol. Katsayılar 1 : 1 olduğu için 0,75 mol CH₄ gerekir: 0,75 × 16 = 12 g. Kütleden kütleye doğrudan geçilmez; arada mol ve katsayı oranı vardır."
    },
    "kart": 10,
    "goster": {
