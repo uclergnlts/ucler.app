@@ -27,7 +27,7 @@
      {
       "yazi": "Aynı anda değerler",
       "dogru": true,
-      "neden": "Her an aynı yükseklikteler. Yatay hız düşmeyi ne hızlandırır ne yavaşlatır: yatay ve düşey hareket birbirinden bağımsızdır."
+      "neden": "Her an aynı yükseklikteler: yatay hız düşmeyi ne hızlandırır ne yavaşlatır. Yatay ve düşey hareket birbirinden bağımsızdır."
      }
     ]
    },
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Yatay atış",
-   "metin": "19,6 m'lik yardan taşı yatay atacaksın. Taş yatayda sabit hızla gider (x = v0·t), düşeyde serbest düşer. Hızı ayarla ve taşı <b>40 m</b> ötedeki bayrağa düşür.",
+   "metin": "19,6 m'lik yardan taşı yatay atacaksın. Hızı ayarla ve taşı 40 m ötedeki bayrağa düşür.",
    "sahne": {
     "tur": "fiz4-yatay",
     "sure": 2
@@ -60,7 +60,7 @@
     },
     "tamam": "Düşüş 2 s sürdü: h = ½·g·t² → 19,6 = 4,9·t² → t = 2 s. Bu sürede taş yatayda x = 20 × 2 = 40 m gitti."
    },
-   "kart": 2,
+   "kart": 3,
    "goster": {
     "deger": {
      "v": 15
@@ -100,7 +100,7 @@
      {
       "yazi": "Değişmez",
       "dogru": true,
-      "neden": "Her atış 2 s sürdü. Uçuş süresi yalnızca yüksekliğe bağlıdır: t = √(2h / g). Hız yalnızca ne kadar uzağa gidileceğini değiştirir."
+      "neden": "Her atış 2 s sürdü: uçuş süresi yalnızca yüksekliğe bağlıdır, t = √(2h / g). Hız yalnızca ne kadar uzağa gidileceğini değiştirir."
      },
      {
       "yazi": "Kısalır",
@@ -108,11 +108,11 @@
      }
     ]
    },
-   "kart": 2
+   "kart": 3
   },
   {
    "baslik": "Tepe noktası",
-   "metin": "Topu 20 m/s hızla 60° açıyla atıyorsun. Hızı iki parçaya ayrılır: yatay <b>vx = v0·cosθ</b> hiç değişmez, düşey <b>vy</b> her saniye 9,8 m/s azalır.",
+   "metin": "Topu 20 m/s hızla 60° açıyla atıyorsun.",
    "sahne": {
     "tur": "fiz4-egik",
     "sure": 1.8,
@@ -133,13 +133,13 @@
       "neden": "Bu atış hızı. Yükselirken düşey hız azaldı."
      },
      {
-      "yazi": "10 (yalnızca vx)",
+      "yazi": "10",
       "dogru": true,
-      "neden": "vx = 20 × cos60° = 10 m/s hiç değişmez. Tepede vy = 0 olduğu için hız = vx = 10 m/s."
+      "neden": "v<sub>x</sub> = 20 × cos60° = 10 m/s hiç değişmez. Tepede v<sub>y</sub> = 0 olduğu için hız v<sub>x</sub>'e eşittir, sıfır değildir."
      }
     ]
    },
-   "kart": 3
+   "kart": 4
   },
   {
    "baslik": "Atış laboratuvarı",

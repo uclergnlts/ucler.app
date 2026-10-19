@@ -46,7 +46,7 @@
   },
   {
    "baslik": "Bağıl hız",
-   "metin": "A doğuya 90 km/h gidiyor. Bir gözlemcinin ölçtüğü hız <b>bağıl hızdır</b>: v<sub>bağıl</sub> = v<sub>cisim</sub> − v<sub>gözlemci</sub>. B'nin hızını ayarla: A'daki sürücü B'yi <b>durgun</b> görsün.",
+   "metin": "A doğuya 90 km/h gidiyor. B'nin hızını ayarla: A'daki sürücü B'yi durgun görsün.",
    "sahne": {
     "tur": "fiz5-iki-arac"
    },
@@ -68,9 +68,9 @@
     "hedef": {
      "b": 90
     },
-    "tamam": "90 − 90 = 0: aynı yönde eşit hızla giden araçlar birbirini durgun görür. Aynı yönde bağıl hız, hızların farkıdır."
+    "tamam": "90 − 90 = 0: aynı yönde eşit hızla giden araçlar birbirini durgun görür."
    },
-   "kart": 3,
+   "kart": 4,
    "goster": {
     "deger": {
      "b": 30
@@ -102,9 +102,9 @@
     "hedef": {
      "b": -60
     },
-    "tamam": "A'ya göre B: −60 − 90 = −150 km/h, yani batıya 150 km/h. Zıt yönde hızlar toplanır. Aralarında 30 km varsa 30 / 150 = 0,2 h = 12 dakikada karşılaşırlar."
+    "tamam": "A'ya göre B: −60 − 90 = −150 km/h, yani batıya 150 km/h: zıt yönde hızlar toplanır."
    },
-   "kart": 4,
+   "kart": 5,
    "goster": {
     "deger": {
      "b": -30
@@ -134,11 +134,11 @@
      {
       "yazi": "16 s",
       "dogru": true,
-      "neden": "Yere göre hızın 1 + 0,5 = 1,5 m/s olur: 24 / 1,5 = 16 s. Hızlar toplanır, süreler toplanmaz."
+      "neden": "Yere göre hızın 1 + 0,5 = 1,5 m/s olur: 24 / 1,5 = 16 s; hızlar toplanır, süreler toplanmaz. Ters yönde yürüseydin 1 − 0,5 = 0,5 m/s ile 48 s sürerdi."
      }
     ]
    },
-   "kart": 6
+   "kart": 7
   },
   {
    "baslik": "Nehirde kayık",
@@ -183,7 +183,7 @@
      }
     ]
    },
-   "kart": 11
+   "kart": 10
   },
   {
    "baslik": "Tam karşıya çık",
@@ -213,7 +213,7 @@
      "aci": 37
     },
     "ipucu": "Kayığın akıntıya karşı bileşeni akıntıyı (3 m/s) tam dengelemeli.",
-    "tamam": "Yaklaşık 37°'de kayığın akıntıya karşı bileşeni 3 m/s olur ve akıntıyı dengeler. Kıyıya dik bileşen √(5² − 3²) = 4 m/s kalır: 60 / 4 = 15 s. Burnu dik tutsaydın 12 s'de geçer ama 36 m sürüklenirdin."
+    "tamam": "Yaklaşık 37°'de (sin37° = 0,6) akıntıya karşı bileşen 5 · 0,6 = 3 m/s olur ve akıntıyı dengeler. Kıyıya dik bileşen 5 · 0,8 = 4 m/s kalır: 60 / 4 = 15 s."
    },
    "kart": 12,
    "goster": {
@@ -248,7 +248,7 @@
     "hedef": {
      "v": 6
     },
-    "tamam": "Arabadakine göre yağmur: 8 m/s aşağı ve 6 m/s geriye. √(8² + 6²) = 10 m/s, düşeyle tanθ = 6/8, θ ≈ 37°. Araba hızlandıkça yağmur daha eğik gelir; ön cam daha çok ıslanır."
+    "tamam": "Arabadakine göre yağmur 8 m/s aşağı ve 6 m/s geriye gelir: √(8² + 6²) = 10 m/s, düşeyle tanθ = 6/8 = 0,75, yani θ ≈ 37°."
    },
    "kart": 13,
    "goster": {
