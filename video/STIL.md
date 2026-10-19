@@ -33,3 +33,10 @@ Instagram ve YouTube, izleyicinin ilk 2-3 saniyede kaydırıp kaydırmadığına
   Örnek: "Bin dokuz yüz elli beş…" yerine "Vücudundaki her protein, yirmi harfli bir alfabeyle yazılmış."
 - **İlk kare kancayı gösterir:** kanca 0. saniyede ekranda büyük yazıyla tam görünür (yavaş belirme yok), yanında konuyu anlatan güçlü bir görsel olur. Kapak (poster) karesi de bu karedir.
 - Sessiz izleyen için de çalışmalı: altyazı ve büyük yazı, sesi açmadan kancayı anlatır.
+
+## Son 2 saniye: özet kartı (Üçler, 2026-10-19)
+BIY-07'den başlayarak her video, kapanış sorusundan sonra 2 saniyelik bir özet kartıyla biter. Amaç kaydetme ve paylaşmayı artırmaktır.
+- Seslendirme yoktur; sesin sonuna 2 sn sessizlik eklenir, altyazı şeridi boş kalır.
+- Kartta en çok 3 kısa madde olur (videonun ana bilgileri, her biri ~5 kelime), altında "Kaydet, sınavdan önce bak" ve ucler logosu.
+- Kart tek seferde görünür (yavaş belirme yok); ekran görüntüsü alınınca tek başına okunabilir olmalıdır.
+- Senaryo dosyasının notlarına "Özet kartı" başlığıyla bu 3 madde yazılır.

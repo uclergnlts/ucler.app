@@ -27,3 +27,11 @@ Peki sence, seksen derecelik kaplıca suyunda yaşayan bakterilerin enzimleri ne
 Kanca (ilk 2-3 sn, STIL.md): "Ateşin kırk biri geçerse ne olur?" Kart 5 ile uyumlu (optimum ≈37 °C, denatürasyon çoğunlukla geri dönmez, soğuk yalnızca yavaşlatır). 38-39 °C ateş çoğu enfeksiyonda koruyucudur; 41 °C üstü (hiperpireksi) tıbbi acildir; ≈42 °C civarında proteinler denatüre olmaya başlar, beyin en hassas organdır. Anna Bågenholm: 20 Mayıs 1999, Narvik yakınında kayak kazası, buzun altında ~80 dk; vücut sıcaklığı 13,7 °C, kayıtlı en düşük sıcaklıkta hayatta kalan kazara hipotermi vakası (Gilbert ve ark., The Lancet, 2000). Termofil bakteriler (ör. Thermus aquaticus, Yellowstone kaplıcaları) 70-80 °C'de yaşar; Taq polimeraz PCR'da kullanılır.
 
 Cevap (videoların altındaki "Cevabı gör"): Bu bakterilerin enzimleri, şekillerini tutan daha çok ve daha güçlü bağlara sahiptir (daha çok tuz köprüsü, sıkı katlanma). Bu yüzden 80 °C'de bile şekilleri bozulmaz. Böyle bir enzim (Taq polimeraz) bugün laboratuvarlarda DNA çoğaltmada kullanılır.
+
+## Özet kartı (son 2 sn, sessiz)
+
+- Ateş 38-39 °C: savunmadır
+- Enzimin en iyi sıcaklığı ≈37 °C
+- Aşırı sıcak enzimi bozar, soğuk yavaşlatır
+
+Kaydet, sınavdan önce bak.
