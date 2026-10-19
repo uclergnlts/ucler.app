@@ -11,7 +11,7 @@ export default function Oyunlar() {
     <div className="app">
       <Top />
       <Govde>
-        <PageHead title="Oyun alanı" text="Konularda öğrendiğini kısa oyunlarla dene." />
+        <PageHead title="Oyunlar"text="Konularda öğrendiğini kısa oyunlarla dene." />
         <Liste>
           {OYUNLAR.map((o) => {
             const I = Icon[o.ders];

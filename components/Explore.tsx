@@ -22,7 +22,8 @@ export default function Explore({ all }: { all: Record<DersId, Entry[]> }) {
 
   const needle = fold(q.trim());
   const rows = DERS_IDS.filter((d) => filter === "all" || filter === d).flatMap((d) =>
-    all[d].filter((e) => !needle || fold(e.id ? `${e.title} ${e.summary} ${e.headings}` : e.ad).includes(needle)),
+    // Sınav etiketi de aranır: "tyt" yazınca TYT konuları gelir ("TYT-AYT" ikisinde de çıkar).
+    all[d].filter((e) => !needle || fold(`${e.id ? `${e.title} ${e.summary} ${e.headings}` : e.ad} ${e.sinav ?? ""}`).includes(needle)),
   );
 
   return (
@@ -35,7 +36,7 @@ export default function Explore({ all }: { all: Record<DersId, Entry[]> }) {
           <Input
             type="search"
             className="pl-11"
-            placeholder="Konu ara: atom, osmoz, vektör..."
+            placeholder="Konu ara: atom, osmoz, tyt..."
             aria-label="Konu ara"
             value={q}
             onChange={(ev) => setQ((memo.q = ev.target.value))}

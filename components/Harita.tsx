@@ -1,11 +1,12 @@
 "use client";
 // Konu haritası: konular ders sırasıyla alt alta, solda ön koşul bağlantılarını gösteren şeritler (metro haritası gibi).
 // Biten konu dolu nokta, açık konu çerçeveli nokta, ön koşulu bitmemiş konu gri nokta olarak görünür (ayrıntısı dokununca açılır).
+// Sıra yalnızca öneridir: gri konu da açılır ("kilit" sözcüğü kullanılmaz).
 // Konuya dokununca alttan ayrıntı açılır: ön koşullar, bitince açılan konular, başla düğmesi.
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import { motion } from "motion/react";
-import type { DersId, Entry } from "@/lib/dersler";
+import { SINAV_AD, type DersId, type Entry } from "@/lib/dersler";
 import { actiklari, durumlar, siradaki, yerlesim, type Durum } from "@/lib/harita";
 import { useProg } from "@/lib/store";
 import { cn } from "@/lib/utils";
@@ -13,7 +14,7 @@ import { href } from "./temel";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "./ui/sheet";
 
-const RH = 66; // satır yüksekliği (px)
+const RH = 80; // satır yüksekliği (px): uzun konu adı iki satıra sığar
 const SW = 14; // şerit aralığı (px)
 const NY = 24; // noktanın satır içindeki yüksekliği (başlığın ilk satırı hizası)
 
@@ -71,11 +72,14 @@ export default function Harita({ ders, list }: { ders: DersId; list: Entry[] }) 
             transition={{ delay: Math.min(k, 14) * 0.015 }}
             aria-label={`${e.no}. ${e.title}, ${DURUM_AD[durum]}${burada ? ", sıradaki konu" : ""}`}
           >
-            <span className={cn("line-clamp-1 text-[15px] leading-snug font-semibold", durum === "kilitli" && "text-muted-foreground")}>
+            <span className={cn("line-clamp-2 text-[15px] leading-snug font-semibold", durum === "kilitli" && "text-muted-foreground")}>
               <span className="mr-1 tabular-nums text-muted-foreground">{e.no}.</span>{e.ad}
             </span>
-            <span className={cn("line-clamp-1 text-[12.5px] font-medium", burada || durum === "bitti" ? "text-acc" : "text-muted-foreground")}>
-              {burada ? "Sıradaki konu" : durum === "bitti" ? `Bitti · ${sonuc}` : ""}
+            <span className="line-clamp-1 text-[12.5px] font-medium text-muted-foreground">
+              {e.sinav && SINAV_AD[e.sinav]}
+              {(burada || durum === "bitti") && (
+                <span className="text-acc">{e.sinav && " · "}{burada ? "Sıradaki konu" : `Bitti · ${sonuc}`}</span>
+              )}
             </span>
           </motion.button>
         );
@@ -91,7 +95,7 @@ export default function Harita({ ders, list }: { ders: DersId; list: Entry[] }) 
   );
 }
 
-const DURUM_AD: Record<Durum, string> = { bitti: "bitti", acik: "açık", kilitli: "kilitli" };
+const DURUM_AD: Record<Durum, string> = { bitti: "bitti", acik: "açık", kilitli: "önerilen sırada ileride" };
 
 function Ayrinti({ ders, e, list, d, prog }: { ders: DersId; e: Entry; list: Entry[]; d: Record<string, Durum>; prog: Record<string, string> }) {
   const ad = (id: string) => list.find((x) => x.id === id);
@@ -101,27 +105,27 @@ function Ayrinti({ ders, e, list, d, prog }: { ders: DersId; e: Entry; list: Ent
   return (
     <div className="grid gap-3">
       <span className="text-[13px] font-bold text-acc">
-        {e.no}. konu · {durum === "bitti" ? `Bitti · ${sonuc}` : durum === "acik" ? "Açık" : "Kilitli"}
+        {e.no}. konu{e.sinav && ` · ${SINAV_AD[e.sinav]}`}{durum === "bitti" && ` · Bitti · ${sonuc}`}
       </span>
       <SheetTitle className="text-[22px]">{e.title}</SheetTitle>
       <SheetDescription className="text-[15px] text-muted-foreground">{e.summary}</SheetDescription>
       {eksik.length > 0 && (
         <div className="grid gap-1.5 rounded-2xl bg-secondary px-4 py-3">
-          <b className="text-[14px]">Önce bunları bitir</b>
+          <b className="text-[14px]">Önerilen: önce bunlar</b>
           {eksik.map((o) => (
             <Link key={o} href={href(ders, o)} className="text-[15px] font-semibold text-acc underline-offset-2 hover:underline">{ad(o)?.title}</Link>
           ))}
-          <span className="text-[13px] text-muted-foreground">Bu konu onların üzerine kurulu. İstersen yine de başlayabilirsin.</span>
+          <span className="text-[13px] text-muted-foreground">Bu konu onların üzerine kurulu. Biliyorsan doğrudan başlayabilirsin.</span>
         </div>
       )}
       {acar.length > 0 && (
         <p className="text-[14px] text-muted-foreground">
-          <b className="font-semibold text-foreground">Bitirince açılır: </b>
+          <b className="font-semibold text-foreground">Sonra gelenler: </b>
           {acar.map((x) => x.title).join(", ")}
         </p>
       )}
       <Button asChild className="mt-1 w-full" variant={durum === "kilitli" ? "outline" : "default"}>
-        <Link href={href(ders, e.id)}>{durum === "bitti" ? "Konuyu tekrar et" : durum === "kilitli" ? "Yine de başla" : "Başla"}</Link>
+        <Link href={href(ders, e.id)}>{durum === "bitti" ? "Konuyu tekrar et" : "Başla"}</Link>
       </Button>
     </div>
   );

@@ -1,5 +1,7 @@
 "use client";
 // Ana sayfadaki "Bugün" bölümü: seri (alev, puan ve son 7 gün) ile günün üç görevi (halka + liste).
+// Her görev, yapılacağı yere götürür (oyun → Oyunlar, video → Videolar, tekrar → Tekrar, gerisi → kalınan konu).
+import Link from "next/link";
 import { motion } from "motion/react";
 import { aktif, gorevAdi, PUAN, seri, useGorev, usePuan, type GorevId } from "@/lib/puan";
 import { gun } from "@/lib/store";
@@ -20,7 +22,11 @@ const GOREV_GORUNUM: Record<GorevId, { ikon: keyof typeof Icon; renk: string }> 
   video: { ikon: "video", renk: "var(--c2)" },
 };
 
-export default function Bugun() {
+/** Görevin yapılacağı sayfa; konu görevleri konuHref'e gider. */
+const gorevYeri = (id: GorevId, konuHref: string) =>
+  id === "oyun" ? "/oyunlar/" : id === "video" ? "/videolar/" : id === "tekrar" ? "/tekrar/" : konuHref;
+
+export default function Bugun({ konuHref }: { konuHref: string }) {
   const p = usePuan(), gk = useGorev();
   const gunler = p.gunler ?? {};
   const bugun = gunler[gun()] ?? {};
@@ -48,7 +54,7 @@ export default function Bugun() {
           <span className="grid min-w-0 leading-tight">
             <b className="font-display text-[30px] font-extrabold tabular-nums text-[#8a4300]">{n} gün</b>
             <span className="text-[14px] font-semibold text-[#a0602a]">
-              {n === 0 ? "Bugün bir kart oku, serin başlasın" : tehlikede ? "Bugün bir kart oku, serin bitmesin" : "Serin devam ediyor"}
+              {n === 0 ? "Bugün bir şey öğren, serin başlasın" : tehlikede ? "Bugün bir şey öğren, serin bitmesin" : "Serin devam ediyor"}
             </span>
           </span>
           <span className="ml-auto flex flex-none items-center gap-1.5 rounded-full bg-white/80 px-3 py-1.5 text-[15px] font-extrabold tabular-nums text-[#8a4300] [&_svg]:size-4 [&_svg]:fill-[var(--glow)] [&_svg]:stroke-[var(--glow-deep)]" aria-label={`${p.toplam ?? 0} puan`}>
@@ -86,7 +92,8 @@ export default function Bugun() {
             const sayi = Math.min(bugun[g.id] ?? 0, g.hedef), tamam = gk.tamam?.includes(g.id);
             const { ikon, renk } = GOREV_GORUNUM[g.id], I = Icon[ikon];
             return (
-              <li key={g.id} className="flex items-center gap-3">
+              <li key={g.id}>
+                <Link href={gorevYeri(g.id, konuHref)} className="-mx-1.5 flex items-center gap-3 rounded-xl px-1.5 py-0.5 transition-colors active:bg-secondary">
                 <span
                   className="grid size-10 flex-none place-items-center rounded-xl [&_svg]:size-5"
                   style={{ background: tamam ? "var(--good)" : `color-mix(in srgb, ${renk} 14%, white)`, color: tamam ? "white" : renk }}
@@ -110,6 +117,7 @@ export default function Bugun() {
                     />
                   </span>
                 </span>
+                </Link>
               </li>
             );
           })}

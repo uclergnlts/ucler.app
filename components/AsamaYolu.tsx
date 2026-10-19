@@ -6,7 +6,8 @@ import { cn } from "@/lib/utils";
 import { Html } from "./temel";
 import { Icon } from "./icons";
 
-export type YolDugum = { baslik: string; alt: string; durum: "bitti" | "sirada" | "kilitli"; test?: boolean; ac: () => void };
+/** serbest: kilitli görünse de dokunulunca açılır (mini test: konuyu bilen öğrenci aşamaları beklemeden çözebilir). */
+export type YolDugum = { baslik: string; alt: string; durum: "bitti" | "sirada" | "kilitli"; test?: boolean; serbest?: boolean; ac: () => void };
 
 const SATIR = 112; // bir düğümün satır yüksekliği (px)
 const KAYMA = [0, 26, 0, -26]; // düğümün ortadan sapması (% genişlik), yol bu sırayla kıvrılır
@@ -53,15 +54,15 @@ export default function AsamaYolu({ dugumler, balon }: { dugumler: YolDugum[]; b
           return (
             <li key={i} className="absolute inset-x-0" style={{ top: i * SATIR, height: SATIR }}>
               <motion.button
-                disabled={g.durum === "kilitli"}
+                disabled={g.durum === "kilitli" && !g.serbest}
                 onClick={g.ac}
-                aria-label={`${g.baslik}, ${g.durum === "bitti" ? "bitti" : g.durum === "sirada" ? "sıradaki" : "kilitli"}`}
+                aria-label={`${g.baslik}, ${g.durum === "bitti" ? "bitti" : g.durum === "sirada" ? "sıradaki" : g.serbest ? "aşamalar bitmeden de çözebilirsin" : "kilitli"}`}
                 className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2"
                 style={{ left: `${x(i)}%` }}
                 initial={{ scale: 0.6, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: "spring", stiffness: 320, damping: 20, delay: 0.05 + i * 0.07 }}
-                whileTap={g.durum === "kilitli" ? undefined : { y: 4 }}
+                whileTap={g.durum === "kilitli" && !g.serbest ? undefined : { y: 4 }}
               >
                 {g.durum === "sirada" && (
                   <>
@@ -90,7 +91,7 @@ export default function AsamaYolu({ dugumler, balon }: { dugumler: YolDugum[]; b
                         : "bg-acc text-white shadow-[0_6px_0_color-mix(in_srgb,var(--acc),#000_22%)]",
                   )}
                 >
-                  {g.durum === "kilitli" ? <Kilit /> : g.test ? <Kupa /> : g.durum === "bitti" ? <Check /> : i + 1}
+                  {g.durum === "kilitli" && !g.serbest ? <Kilit /> : g.test ? <Kupa /> : g.durum === "bitti" ? <Check /> : i + 1}
                 </span>
               </motion.button>
               <div

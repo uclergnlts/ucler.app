@@ -211,6 +211,7 @@ export default function VideoFeed({ konular }: { konular: Record<string, string>
     );
   return (
     <div className="feed" ref={feed}>
+      <h1 className="sr-only">Videolar</h1>
       {VIDEOLAR.map((v) => <Reel key={v.id} v={v} konu={konular[v.id]} active={active === v.id} o={o} />)}
       <AnimatePresence>
         {msg && (

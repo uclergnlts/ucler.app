@@ -9,7 +9,7 @@ export default function Gunluk() {
   const [liste, setListe] = useState<Odul[]>([]);
   // Ders ve tekrar ekranında öğrenci dikkatini dağıtmasın: puan oradaki bitiş ekranında zaten görünür.
   const yol = usePathname() ?? "";
-  const sessiz = /^\/(fizik|kimya|biyoloji)\/[^/]+\/?$/.test(yol) || yol.startsWith("/tekrar") || yol.startsWith("/ornek/");
+  const sessiz = /^\/(fizik|kimya|biyoloji)\/[^/]+\/?$/.test(yol) || yol.startsWith("/tekrar");
 
   useEffect(() => {
     const kapat = odulDinle((o) => {

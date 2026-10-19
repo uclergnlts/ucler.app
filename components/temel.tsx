@@ -3,10 +3,12 @@
 // hareket Motion ile. Sade: beyaz zemin, 1px çizgiler, renk yalnızca küçük vurgularda (docs/KARARLAR.md).
 import Link from "next/link";
 import { motion, type HTMLMotionProps } from "motion/react";
-import { DERSLER, type Entry } from "@/lib/dersler";
+import { DERSLER, SINAV_AD, type Entry } from "@/lib/dersler";
+import { INSTAGRAM } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { Badge } from "./ui/badge";
 import { Card } from "./ui/card";
+import { Button } from "./ui/button";
 import { Icon } from "./icons";
 
 export const Logo = ({ className }: { className?: string }) => (
@@ -15,11 +17,22 @@ export const Logo = ({ className }: { className?: string }) => (
   </div>
 );
 
+/** Üst çubuk: logo Ana sayfaya götürür. */
 export const Top = () => (
   <header className="top">
-    <Logo />
+    <Link href="/" aria-label="ucler, Ana sayfa" className="rounded-lg"><Logo /></Link>
   </header>
 );
+
+/** Alt sayfaların üst çubuğu: geri düğmesi (Profil'den açılan Hakkında, Gizlilik gibi). */
+export const GeriTop = ({ to, label }: { to: string; label: string }) => {
+  const Back = Icon.back;
+  return (
+    <header className="top">
+      <Button asChild variant="outline" size="icon"><Link href={to} aria-label={label}><Back /></Link></Button>
+    </header>
+  );
+};
 
 /** Sayfa gövdesi: açılırken hafifçe yukarı kayarak belirir. */
 export const Govde = ({ className, ...props }: HTMLMotionProps<"main">) => (
@@ -104,7 +117,7 @@ export const Ok = () => {
   return <span className="flex-none text-muted-foreground [&_svg]:size-5"><N /></span>;
 };
 
-export const INSTAGRAM = { ad: "@ucler.app", url: "https://www.instagram.com/ucler.app/" };
+export { INSTAGRAM };
 
 /** Instagram hesabına giden bağlantı satırı. */
 export function InstaLink() {
@@ -136,7 +149,7 @@ export function Row({ e, done }: { e: Entry; done?: boolean }) {
       href={href(e.ders, e.id)}
       icon={<I />}
       title={e.title}
-      sub={`${DERSLER[e.ders].ad} · ${e.summary}`}
+      sub={`${DERSLER[e.ders].ad}${e.sinav ? ` · ${SINAV_AD[e.sinav]}` : ""} · ${e.summary}`}
       tag={done ? <Badge variant="default">Bitti</Badge> : <span className="flex-none text-xs font-semibold text-muted-foreground">{e.cardCount} kart</span>}
     />
   );

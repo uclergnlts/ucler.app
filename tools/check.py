@@ -135,6 +135,8 @@ for ders, topics in d.items():
     if dup: err(ders, "dersler.json içinde tekrar eden konu id", sorted(dup))
     for k in dersler[ders]["konular"]:
         if not k.get("ad"): err(ders, "dersler.json içinde adı olmayan konu", k)
+        # sınav etiketi (Keşfet araması ve konu haritası): TYT, AYT ya da ikisi
+        if k.get("sinav") not in ("TYT", "AYT", "TYT-AYT"): err(ders, k.get("id") or k.get("ad"), "sinav alanı TYT, AYT ya da TYT-AYT olmalı:", k.get("sinav"))
     # ön koşullar (konu haritası): aynı dersten, listede daha önce gelen hazır konular
     onceki = set()
     for k in dersler[ders]["konular"]:

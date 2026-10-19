@@ -1,9 +1,8 @@
-import Profile from "@/components/Profile";
-import { allEntries, kartBasliklari } from "@/lib/content";
+import Yonlendir from "@/components/Yonlendir";
 
-// Kaydedilenler artık Profil'in içinde. Eski bağlantılar çalışsın diye bu adres de Profil'i gösterir.
-export const metadata = { title: "Profil" };
+// Kaydedilenler artık Profil'in içinde. Eski bağlantılar Profil'deki bölüme gider.
+export const metadata = { title: "Profil", robots: { index: false } };
 
 export default function Page() {
-  return <Profile all={allEntries()} basliklar={kartBasliklari()} />;
+  return <Yonlendir to="/profil/#kaydedilenler" ad="Profil · Kaydedilenler" />;
 }

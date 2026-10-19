@@ -7,7 +7,7 @@ export type Prog = Record<string, string>; // "ders.konu" -> "3/4 doğru", "_las
 
 export const KEYS = {
   prog: "tf-prog", saved: "tf-saved", ad: "tf-ad", tekrar: "tf-tekrar", anlamadim: "tf-anlamadim", gorunum: "tf-gorunum",
-  asama: "tf-asama", puan: "tf-puan", gorev: "tf-gorev",
+  asama: "tf-asama", puan: "tf-puan", gorev: "tf-gorev", yer: "tf-yer", ipucu: "tf-ipucu",
 } as const;
 const listeners = new Set<() => void>();
 const cache: Record<string, { raw: string | null; val: unknown }> = {};
@@ -73,6 +73,7 @@ export function resetAll() {
   write(KEYS.asama, {});
   write(KEYS.puan, {});
   write(KEYS.gorev, {});
+  write(KEYS.yer, {});
 }
 
 // Akıllı tekrar: testte yanlış yapılan soru 1, 3 ve 7 gün sonra yeniden sorulur.
@@ -154,3 +155,25 @@ export function asamaBitir(key: string, a: number) {
 
 /** Bitirilen konuların anahtarları ("_last" hariç). */
 export const doneKeys = (p: Prog) => Object.keys(p).filter((k) => k !== "_last");
+/** Anlık ilerleme (abonelik olmadan); karışık test başlarken bitirilen konuları bir kez okumak için. */
+export const progOku = () => read<Prog>(KEYS.prog, EMPTY_PROG);
+
+// Kaldığın yer: konunun ortasında çıkınca hangi aşamanın hangi öğesinde kalındığı. Anahtar "ders.konu".
+// Aşama bitince silinir; "Kaldığın yerden devam et" öğrenciyi aşamanın başına değil bu öğeye götürür.
+export type Yer = Record<string, { a: number; i: number }>;
+const EMPTY_YER: Yer = {};
+export const useYer = () => useSyncExternalStore(subscribe, () => read<Yer>(KEYS.yer, EMPTY_YER), () => EMPTY_YER);
+export function yerYaz(key: string, yer: { a: number; i: number } | null) {
+  const s = { ...read<Yer>(KEYS.yer, EMPTY_YER) };
+  if (yer) s[key] = yer;
+  else if (key in s) delete s[key];
+  else return;
+  write(KEYS.yer, s);
+}
+
+// Bir kez gösterilen ipuçları (ör. ders akışında "önceki kartlar yukarıda, anlamadığın kartta ?").
+export const useIpucu = () => useSyncExternalStore(subscribe, () => read<string[]>(KEYS.ipucu, EMPTY_SAVED), () => EMPTY_SAVED);
+export function ipucuGoruldu(k: string) {
+  const s = read<string[]>(KEYS.ipucu, EMPTY_SAVED);
+  if (!s.includes(k)) write(KEYS.ipucu, [...s, k]);
+}
