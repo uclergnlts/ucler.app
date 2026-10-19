@@ -38,7 +38,7 @@
   },
   {
    "baslik": "Çaprazlama laboratuvarı",
-   "metin": "Bezelyede mor (<b>A</b>) beyaza (<b>a</b>) baskın. Ebeveynleri seç ve yavru üret: her ebeveyn her yavruya alellerinden birini rastgele verir. Punnett karesi beklenen oranı, yavrular gerçekte çıkanı gösterir. Aşağıdakileri kendin bul.",
+   "metin": "Ebeveynleri seç ve yavru üret: her ebeveyn her yavruya alellerinden birini rastgele verir. Aşağıdakileri kendin bul.",
    "sahne": {
     "tur": "sim-capraz"
    },
@@ -148,7 +148,7 @@
         "uret": 1
        }
       ],
-      "tamam": "Az yavruda oran şansa göre sapar; yavru sayısı arttıkça %25'e yaklaşır. Mendel bu yüzden binlerce bezelye saydı. Oranlar olasılıktır: 4 yavrudan tam 1'inin beyaz çıkması garanti değildir."
+      "tamam": "Az yavruda oran şansa göre sapar; yavru sayısı arttıkça %25'e yaklaşır. Mendel bu yüzden binlerce bezelye saydı."
      }
     ]
    },
@@ -156,7 +156,7 @@
   },
   {
    "baslik": "Kontrol çaprazlaması",
-   "metin": "Mor bir bitkinin AA mı Aa mı olduğu görünüşünden anlaşılmaz. Onu homozigot çekinik (<b>aa</b>) bir bitkiyle çaprazlarsın. Yavruları saymadan önce tahmin et.",
+   "metin": "Mor bir bitkinin AA mı Aa mı olduğunu bulmak için onu beyaz (<b>aa</b>) bir bitkiyle çaprazladın. Yavruları saymadan önce tahmin et.",
    "sahne": {
     "tur": "biy5-test",
     "mor": 52,
@@ -174,15 +174,15 @@
      {
       "yazi": "Aa",
       "dogru": true,
-      "neden": "52 mor, 48 beyaz: yaklaşık 1:1. Mor bitki gametlerinin yarısına a aleli veriyor, yani Aa. Tek bir beyaz yavru bile bunu kanıtlar."
+      "neden": "52 mor : 48 beyaz ≈ 1:1. Mor bitki gametlerinin yarısına a veriyor, yani Aa."
      },
      {
       "yazi": "Belirlenemez",
-      "neden": "Kontrol çaprazlaması tam da bunun için yapılır: beyaz yavrular a alelinin mor bitkiden geldiğini gösterir."
+      "neden": "Her beyaz yavru (aa) a alellerinden birini mor bitkiden almış olmalı."
      }
     ]
    },
-   "kart": 5
+   "kart": 4
   },
   {
    "baslik": "Eksik baskınlık",
@@ -218,7 +218,7 @@
      }
     ]
    },
-   "kart": 7
+   "kart": 6
   },
   {
    "baslik": "Kan grupları",
@@ -291,7 +291,7 @@
      {
       "yazi": "½",
       "dogru": true,
-      "neden": "Oğul Y'yi babadan, X'i anneden alır: yarısı X<sup>H</sup>, yarısı X<sup>h</sup>. Erkeğin tek X'i olduğundan tek çekinik alel yeter. Bu yüzden renk körlüğü erkeklerde çok daha sıktır."
+      "neden": "Oğul Y'yi babadan, X'i anneden alır: yarısı X<sup>H</sup>, yarısı X<sup>h</sup> alır."
      },
      {
       "yazi": "¼",
@@ -299,7 +299,7 @@
      }
     ]
    },
-   "kart": 10
+   "kart": 9
   }
  ],
  "kapanis": [

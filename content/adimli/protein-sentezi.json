@@ -14,7 +14,7 @@
     "soru": "Kalıp iplikteki A'nın karşısına mRNA'da hangi baz gelir?",
     "secenekler": [
      { "yazi": "T", "neden": "T yalnızca DNA'da bulunur; RNA'da onun yerini başka bir baz alır." },
-     { "yazi": "U", "dogru": true, "neden": "RNA'da timin yoktur; A'nın karşısına urasil (U) gelir. Bu yüzden mRNA, kodlayan ipliğin T yerine U yazılmış kopyasıdır: 5'-AUG CCU UUA-3'." },
+     { "yazi": "U", "dogru": true, "neden": "RNA'da timin yoktur; A'nın karşısına urasil (U) gelir." },
      { "yazi": "A", "neden": "Baz kendisiyle eşleşmez; A'nın eşi bir pirimidindir." }
     ]
    },
@@ -22,21 +22,21 @@
   },
   {
    "baslik": "Üç harfli kelimeler",
-   "metin": "mRNA üçer üçer, boşluksuz okunur; her üçlü bir <b>kodondur</b>. AUG başlama kodonudur ve metiyonin şifreler. Kodonları sırayla oku ve dur kodonuna kadar git.",
+   "metin": "Kodonları sırayla oku ve dur kodonuna kadar git.",
    "sahne": { "tur": "biy7-kodon" },
    "deger": { "k": 0 },
    "kontroller": [ { "ad": "k", "etiket": "Okunan kodon", "min": 0, "max": 5, "tur": "sayac" } ],
    "gorev": {
     "tur": "ayarla",
     "hedef": { "k": 5 },
-    "tamam": "UAA bir dur kodonudur ve amino asit şifrelemez. 5 kodondan 4 amino asit çıktı (Met-Ala-Trp-Lys) ve aralarında 3 peptit bağı var. 64 kodonun 61'i 20 amino asidi şifreler, 3'ü durdurur."
+    "tamam": "5 kodondan 4 amino asit çıktı (Met-Ala-Trp-Lys); aralarında 3 peptit bağı var."
    },
    "kart": 4,
    "goster": { "deger": { "k": 2 }, "not": "İlk iki kodon okundu: AUG metiyonin (Met), GCU alanin (Ala). İki amino asit arasında <b>1 peptit bağı</b> var." }
   },
   {
    "baslik": "Ribozomda çeviri",
-   "metin": "tRNA'lar amino asitleri ribozoma taşır; antikodonları mRNA'daki kodonla eşleşir. P bölgesinde zincir, A bölgesinde yeni gelen tRNA durur. Oynat.",
+   "metin": "Ribozomu oynat; tRNA'ların A, P ve E bölgelerinden geçişini izle.",
    "sahne": { "tur": "biy7-ribozom", "sure": 6 },
    "gorev": {
     "tur": "tahmin",
@@ -44,14 +44,14 @@
     "secenekler": [
      { "yazi": "A bölgesinden", "neden": "A bölgesi yeni gelen tRNA'nın girdiği yerdir." },
      { "yazi": "P bölgesinden", "neden": "P bölgesi zinciri taşıyan tRNA'nın durduğu yerdir; kaymadan sonra oraya A'daki tRNA geçer." },
-     { "yazi": "E bölgesinden", "dogru": true, "neden": "Zincir A'daki amino aside peptit bağıyla aktarılır, ribozom bir kodon kayar ve boşalan tRNA E (exit) bölgesinden çıkar. Döngü her amino asitte tekrarlanır." }
+     { "yazi": "E bölgesinden", "dogru": true, "neden": "Boşalan tRNA E (exit, çıkış) bölgesinden ayrılır." }
     ]
    },
    "kart": 8
   },
   {
    "baslik": "Kodon ve bağ hesabı",
-   "metin": "n amino asitlik bir zincir için dur kodonuyla n + 1 kodon gerekir. Amino asit sayısını değiştir; mRNA'nın kodlayan bölgesi <b>453</b> nükleotit olsun.",
+   "metin": "Amino asit sayısını değiştir; mRNA'nın kodlayan bölgesi <b>453</b> nükleotit olsun.",
    "sahne": { "tur": "biy7-hesap" },
    "deger": { "n": 50 },
    "kontroller": [ { "ad": "n", "etiket": "Amino asit", "min": 10, "max": 200, "adim": 10 } ],
@@ -74,7 +74,7 @@
     "hedef": { "b2": 1 },
     "tamam": "GAG kodonu GUG oldu ve glutamik asidin yerine valin (Val) geldi. Bu tek değişim hemoglobinin şeklini bozar, alyuvarlar orak biçimini alır: orak hücre anemisi. Buna yanlış anlamlı nokta mutasyonu denir."
    },
-   "kart": 13
+   "kart": 12
   },
   {
    "baslik": "Sessiz mutasyon",
@@ -91,7 +91,7 @@
      { "yazi": "Bir kodon birkaç amino asidi şifreleyebilir", "neden": "Tersi doğru: bir kodon hep tek bir amino asidi belirtir, ama bir amino asidin birden çok kodonu olabilir." }
     ]
    },
-   "kart": 13
+   "kart": 12
   },
   {
    "baslik": "Çerçeve kayması",
@@ -105,10 +105,10 @@
     "secenekler": [
      { "yazi": "Yalnızca bir amino asit değişti", "neden": "Bu, nokta mutasyonunda olur. Eklemeden sonraki kodonlara bak." },
      { "yazi": "Protein hiç değişmedi", "neden": "Anahtarı açınca zincirin kısaldığını görüyorsun." },
-     { "yazi": "Sonraki bütün kodonlar kaydı, erken bir dur geldi", "dogru": true, "neden": "Okuma çerçevesi bir harf kaydı: GCU'dan sonra UAA dur kodonu oluştu ve protein 2 amino asitte kaldı. Üç bazlık bir ekleme ya da silme ise çerçeveyi korur." }
+     { "yazi": "Sonraki bütün kodonlar kaydı, erken bir dur geldi", "dogru": true, "neden": "Okuma çerçevesi bir harf kaydı: GCU'dan sonra UAA dur kodonu oluştu ve protein 2 amino asitte kaldı." }
     ]
    },
-   "kart": 14
+   "kart": 13
   }
  ],
  "kapanis": [

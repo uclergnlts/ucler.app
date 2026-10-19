@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Hedef hücre",
-   "metin": "Hormon kanla bütün vücuda dağılır. Ama yalnızca uygun <b>reseptörü</b> olan hücreler yanıt verir. Oynat.",
+   "metin": "Hormon kanla bütün vücuda dağılır. Oynat ve hangi hücrelerin yanıt verdiğine bak.",
    "sahne": { "tur": "biy9-hedef", "sure": 5 },
    "gorev": {
     "tur": "tahmin",
@@ -33,7 +33,7 @@
      { "yazi": "İkisi eşit sürer", "neden": "Süreleri belirgin biçimde farklıdır: sinirsel kısa, hormonal uzun." }
     ]
    },
-   "kart": 1
+   "kart": 3
   },
   {
    "baslik": "Yemekten sonra",
@@ -45,9 +45,9 @@
     "tur": "ayarla",
     "hedef": { "ins": 1 },
     "ipucu": "İnsülini aç ve yeniden oynat.",
-    "tamam": "İnsülin hücrelerin glikoz almasını sağladı ve karaciğer fazlayı glikojen olarak depoladı; şeker normale döndü. İnsülin üretilemezse tip 1, hücreler insüline yanıt vermezse tip 2 diyabet görülür."
+    "tamam": "İnsülin hücrelerin glikoz almasını sağladı ve karaciğer fazlayı glikojen olarak depoladı; şeker normale döndü."
    },
-   "kart": 11,
+   "kart": 10,
    "goster": { "oynat": true, "not": "İnsülin yokken hücreler glikozu alamıyor: yemekten sonra kan şekeri yükseliyor ve normale inmiyor." }
   },
   {
@@ -65,7 +65,7 @@
      { "yazi": "ADH", "neden": "ADH hipofizden salınır ve böbrekte su geri emilimini artırır; kan şekerini ayarlamaz." }
     ]
    },
-   "kart": 11,
+   "kart": 10,
    "goster": { "deger": { "mg": 160 }, "not": "Kan şekeri 160 mg/dL: β hücreleri insülin salgılıyor, karaciğer ve kaslar glikojen depoluyor." }
   },
   {
@@ -97,7 +97,7 @@
      { "yazi": "Fren kalkar, TSH artar ve bezi büyütür", "dogru": true, "neden": "Tiroksin düşünce hipotalamus ve hipofiz frenlenmez. Artan TSH tiroiti sürekli uyarır ve bez büyür." }
     ]
    },
-   "kart": 8
+   "kart": 7
   }
  ],
  "kapanis": [

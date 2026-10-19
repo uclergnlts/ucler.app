@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Nöronda yol",
-   "metin": "Nöron uyarıyı <b>dendritlerle</b> alır, <b>akson</b> boyunca iletir ve <b>akson ucundan</b> bir sonraki hücreye aktarır. Oynat.",
+   "metin": "Nöronu oynat ve impulsun izlediği yolu takip et.",
    "sahne": { "tur": "biy9-noron", "sure": 4 },
    "gorev": {
     "tur": "tahmin",
@@ -76,8 +76,8 @@
     "tur": "tahmin",
     "soru": "İmpuls sinaps boşluğunu nasıl geçer?",
     "secenekler": [
-     { "yazi": "Elektrik akımı boşluktan atlar", "neden": "Boşluk elektrik iletmez. Aktarım kimyasaldır." },
-     { "yazi": "Nörotransmitter salgılanır", "dogru": true, "neden": "Kesecikler asetilkolin, dopamin ya da serotonin gibi nörotransmitterleri boşluğa bırakır; bunlar sonraki nöronun reseptörlerine bağlanır." },
+     { "yazi": "Elektrik akımı boşluktan atlar", "neden": "Çoğu sinapsta boşluğu elektrik atlamaz; aktarım kimyasaldır." },
+     { "yazi": "Nörotransmitter salgılanır", "dogru": true, "neden": "Akson ucundaki kesecikler boşluğa kimyasal bir haberci (nörotransmitter) bırakır." },
      { "yazi": "Akson ucu sonraki nöronla kaynaşır", "neden": "Nöronlar kaynaşmaz; aralarındaki boşluk korunur." }
     ]
    },
@@ -85,7 +85,7 @@
   },
   {
    "baslik": "Refleks yayı",
-   "metin": "Elin sıcak ocağa değiyor. Sinyal <b>reseptör → duyu nöronu → ara nöron → motor nöron → kas</b> yolunu izler. Oynat.",
+   "metin": "Elin sıcak ocağa değiyor. Sinyalin yolunu oynat.",
    "sahne": { "tur": "biy9-refleks", "sure": 6 },
    "gorev": {
     "tur": "tahmin",
@@ -96,7 +96,7 @@
      { "yazi": "Omurilikten", "dogru": true, "neden": "Ara nöron omuriliktedir. Sinyal beyne gitmeden motor nörona aktarılır; bu yüzden refleks çok hızlıdır." }
     ]
    },
-   "kart": 9
+   "kart": 10
   },
   {
    "baslik": "Otonom sinir sistemi",
