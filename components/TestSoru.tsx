@@ -26,7 +26,14 @@ export function ilkCevap(q: Question): Cevap {
   return null;
 }
 
-const sayiOku = (s: string) => Number(s.trim().replace(/\s/g, "").replace(",", ".").replace("−", "-"));
+/** Öğrencinin yazdığı sayıyı Türkçe yazımla okur: virgül ondalık ayracıdır, nokta binlik ayracıdır ("2.700" = 2700,
+ *  "1.250,5" = 1250,5). Virgül yoksa ve noktalar binlik gruplamaya uymuyorsa ("2.5", "0.125") nokta ondalık sayılır. */
+export function sayiOku(yazi: string): number {
+  let s = yazi.replace(/\s/g, "").replace(/−/g, "-");
+  if (s.includes(",")) s = s.replace(/\./g, "").replace(",", ".");
+  else if (/^-?[1-9]\d{0,2}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, "");
+  return s === "" || s === "-" ? NaN : Number(s);
+}
 const doluMu = (c: Cevap) => Array.isArray(c) && c.every((x) => x !== null);
 const ayniDeger = (a: Record<string, number>, b: Record<string, number>) => Object.keys({ ...a, ...b }).every((k) => a[k] === b[k]);
 
@@ -241,22 +248,25 @@ function Ayir({ q, grup, setGrup, bitti, tohum }: { q: Of<"ayir">; grup: (number
 /** Sayı: öğrenci sonucu kendisi hesaplayıp yazar. */
 function Sayi({ q, yazi, setYazi, sonuc }: { q: Of<"sayi">; yazi: string; setYazi: (c: Cevap) => void; sonuc: boolean | null }) {
   return (
-    <label className="flex items-center justify-center gap-3">
-      <input
-        className={cn(
-          "h-14 w-40 rounded-2xl border-[1.5px] bg-card px-3 text-center font-display text-[24px] font-extrabold tabular-nums outline-none focus:border-acc",
-          sonuc === null ? "border-border-strong" : sonuc ? "border-good bg-good-soft" : "border-bad bg-bad-soft",
-        )}
-        inputMode="decimal"
-        autoComplete="off"
-        aria-label="Cevabın"
-        placeholder="?"
-        disabled={sonuc !== null}
-        value={yazi}
-        onChange={(e) => setYazi(e.target.value.replace(/[^0-9.,\-−]/g, "").slice(0, 10))}
-      />
-      {q.birim && <Html className="text-[18px] font-bold" html={q.birim} />}
-    </label>
+    <div className="flex flex-col items-center gap-2">
+      <label className="flex items-center justify-center gap-3">
+        <input
+          className={cn(
+            "h-14 w-40 rounded-2xl border-[1.5px] bg-card px-3 text-center font-display text-[24px] font-extrabold tabular-nums outline-none focus:border-acc",
+            sonuc === null ? "border-border-strong" : sonuc ? "border-good bg-good-soft" : "border-bad bg-bad-soft",
+          )}
+          inputMode="decimal"
+          autoComplete="off"
+          aria-label="Cevabın"
+          placeholder="?"
+          disabled={sonuc !== null}
+          value={yazi}
+          onChange={(e) => setYazi(e.target.value.replace(/[^0-9.,\-−]/g, "").slice(0, 10))}
+        />
+        {q.birim && <Html className="text-[18px] font-bold" html={q.birim} />}
+      </label>
+      {sonuc === null && <p className="text-center text-[13px] font-semibold text-muted-foreground">Ondalık virgülle: 2,5 · Binlik: 2.700 ya da 2700</p>}
+    </div>
   );
 }
 
