@@ -30,7 +30,7 @@ Cevap (videoların altındaki "Cevabı gör"): Bu bakterilerin enzimleri, şekil
 
 ## Özet kartı (son 2 sn, sessiz)
 
-- Ateş 38-39 °C: savunmadır
+- Ateş 38-39 °C: çoğu zaman savunma
 - Enzimin en iyi sıcaklığı ≈37 °C
 - Aşırı sıcak enzimi bozar, soğuk yavaşlatır
 

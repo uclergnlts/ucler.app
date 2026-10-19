@@ -3,7 +3,7 @@ Kapsam: Codex'in `0ebeaed` sürümü için yazdığı ikinci tur raporundaki D2-
 
 | # | Önem | Yer | Yapılan | Durum |
 |---|---|---|---|---|
-| D2-01 | Kritik | BIY-07 kapak / ilk kare | Video tarafına iletildi: "39 °C: sorun yok" kaldırılacak, ateş koşullu anlatılacak. Yalnız görsel değiştiği için yeni ses gerekmiyor; sahne yeniden üretilecek. | Açık (video) |
+| D2-01 | Kritik | BIY-07 kapak / ilk kare | "Vücudun 39 °C'de: sorun yok" yerine "Ateş 38-39 °C'de: çoğu zaman savunma" yazıyor; özet kartındaki madde de "Ateş 38-39 °C: çoğu zaman savunma" oldu. Ses değişmedi, video ve kapak yeniden üretildi. | Düzeltildi |
 | D2-02 | Kritik | BIY-07, 26–29 sn | "Enzim … bir proteindir" cümlesi seslendirmede geçiyor. Önerilen yeni cümle: "Enzimlerin çoğu, belirli bir şekle katlanmış proteinlerdir." Üçler'den yeni ses bekleniyor; sonra senaryo, altyazı, görsel ve ses birlikte güncellenecek. | Açık (ses bekleniyor) |
 | D2-03 | Kritik | biyoloji › kalitim › kart 11 (metin + SVG) | Kellik artık gerçek kalıtım kuralı olarak sunulmuyor: "Ders kitapları kelliği bu basit modelle anlatır; gerçek kellikte birçok gen ve hormon birlikte rol oynar." SVG başlığı "Eşeyden etkilenen", alt yazısı "basit model: otozomal gen", alt notu "gerçekte çok genli". | Düzeltildi |
 | D2-04 | Orta | lib/puan.ts | Seri artık gün sayaçlarından değil `seri` ve `seriSon` alanlarından okunuyor; sayaçlar 120 günde budansa da seri büyümeye devam ediyor. Eski kayıtlar ilk yazımda, budamadan önce sayaçlardan aktarılıyor. 130 günlük deneme geçmişi bir kart etkinliğinden sonra 131 gün oldu (profilde de 131). | Düzeltildi |
