@@ -201,7 +201,7 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
   // Göster: önce sahne örneği kendisi oynar (kontroller örnek değerlere kayar, sahne oynar), sonra sıra öğrenciye geçer.
   const [faz, setFaz] = useState<"goster" | "sen">(a.goster ? "goster" : "sen");
   const [ornekBitti, setOrnekBitti] = useState(false);
-  const [ornekNo, setOrnekNo] = useState(0);
+  const [ornekNo] = useState(0);
   useEffect(() => {
     if (faz !== "goster" || !a.goster) return;
     setOrnekBitti(false);
@@ -345,7 +345,6 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
 
       {ornekte && (
         <div className="ad-ornek" aria-live="polite">
-          <span className="ad-ornek-k">Örnek</span>
           {a.goster?.not && <Html as="p" html={a.goster.not} />}
         </div>
       )}
@@ -355,7 +354,6 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
       {ornekte ? (
         <div className="ad-ornek-acts">
           <Button disabled={!ornekBitti} onClick={senBasla}>Şimdi sen dene</Button>
-          <button className="ad-cozum" disabled={!ornekBitti} onClick={() => setOrnekNo((x) => x + 1)}>Örneği tekrar izle</button>
         </div>
       ) : null}
 

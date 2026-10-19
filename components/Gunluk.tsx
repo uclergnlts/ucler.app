@@ -1,11 +1,15 @@
 "use client";
 // Her sayfada çalışır: günün ilk açılışında giriş puanını verir ve kazanılan ödülleri ekranın üstünde kısaca gösterir.
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { girisYap, odulDinle, type Odul } from "@/lib/puan";
 
 export default function Gunluk() {
   const [liste, setListe] = useState<Odul[]>([]);
+  // Ders ve tekrar ekranında öğrenci dikkatini dağıtmasın: puan oradaki bitiş ekranında zaten görünür.
+  const yol = usePathname() ?? "";
+  const sessiz = /^\/(fizik|kimya|biyoloji)\/[^/]+\/?$/.test(yol) || yol.startsWith("/tekrar") || yol.startsWith("/ornek/");
 
   useEffect(() => {
     const kapat = odulDinle((o) => {
@@ -22,7 +26,7 @@ export default function Gunluk() {
   return (
     <div aria-live="polite" className="pointer-events-none fixed inset-x-0 top-[calc(env(safe-area-inset-top,0px)+10px)] z-30 flex flex-col items-center gap-1.5 px-4">
       <AnimatePresence>
-        {liste.map((o) => (
+        {!sessiz && liste.map((o) => (
           <motion.div
             key={o.id}
             layout

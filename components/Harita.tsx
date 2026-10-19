@@ -1,6 +1,6 @@
 "use client";
 // Konu haritası: konular ders sırasıyla alt alta, solda ön koşul bağlantılarını gösteren şeritler (metro haritası gibi).
-// Biten konu dolu nokta, açık konu çerçeveli nokta, ön koşulu bitmemiş konu gri nokta ve "Önce: ..." yazısıyla görünür.
+// Biten konu dolu nokta, açık konu çerçeveli nokta, ön koşulu bitmemiş konu gri nokta olarak görünür (ayrıntısı dokununca açılır).
 // Konuya dokununca alttan ayrıntı açılır: ön koşullar, bitince açılan konular, başla düğmesi.
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
@@ -57,7 +57,6 @@ export default function Harita({ ders, list }: { ders: DersId; list: Entry[] }) 
       </svg>
       {dugumler.map(({ e, satir: r }, k) => {
         const durum = d[e.id!], burada = e.id === sira, sonuc = prog[`${ders}.${e.id}`];
-        const eksik = (e.on ?? []).filter((o) => d[o] !== "bitti").map((o) => list.find((x) => x.id === o)?.ad);
         return (
           <motion.button
             key={e.id}
@@ -76,7 +75,7 @@ export default function Harita({ ders, list }: { ders: DersId; list: Entry[] }) 
               <span className="mr-1 tabular-nums text-muted-foreground">{e.no}.</span>{e.ad}
             </span>
             <span className={cn("line-clamp-1 text-[12.5px] font-medium", burada || durum === "bitti" ? "text-acc" : "text-muted-foreground")}>
-              {burada ? "Sıradaki konu" : durum === "bitti" ? `Bitti · ${sonuc}` : durum === "acik" ? "Açık" : `Önce: ${eksik.join(", ")}`}
+              {burada ? "Sıradaki konu" : durum === "bitti" ? `Bitti · ${sonuc}` : ""}
             </span>
           </motion.button>
         );

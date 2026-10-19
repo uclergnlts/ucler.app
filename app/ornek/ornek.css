@@ -57,9 +57,9 @@ body:has(.ad-sayfa){background:#fff}
 .ad-bulgular li.ok i{border-color:var(--good);background:var(--good);color:#fff}
 
 /* göster → sen dene (DersMotoru ve konu anlatımı) */
-.ad-ornek{display:grid;gap:4px;padding:10px 14px;border-radius:14px;background:var(--acc-soft)}
+.ad-ornek{display:grid;gap:4px}
 .ad-ornek-k{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--acc)}
-.ad-ornek p{margin:0;font-size:15px;line-height:1.5}
+.ad-ornek p{margin:0;font-size:15px;line-height:1.5;color:var(--muted)}
 .ad-ornek-acts{display:grid;gap:6px;justify-items:center}
 .ad-ornek-acts>button:first-child{width:100%}
 .ad-cozum{justify-self:center;padding:8px 12px;border:0;background:none;font:inherit;font-size:14px;font-weight:700;color:var(--muted);text-decoration:underline;text-underline-offset:3px;cursor:pointer}

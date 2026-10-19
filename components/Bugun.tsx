@@ -1,5 +1,5 @@
 "use client";
-// Ana sayfadaki "Bugün" bölümü: seri (alev ve son 7 gün), puan, görev halkası ve günün üç görevi.
+// Ana sayfadaki "Bugün" bölümü: seri (alev, puan ve son 7 gün) ile günün üç görevi (halka + liste).
 import { motion } from "motion/react";
 import { aktif, gorevAdi, PUAN, seri, useGorev, usePuan, type GorevId } from "@/lib/puan";
 import { gun } from "@/lib/store";
@@ -51,6 +51,9 @@ export default function Bugun() {
               {n === 0 ? "Bugün bir kart oku, serin başlasın" : tehlikede ? "Bugün bir kart oku, serin bitmesin" : "Serin devam ediyor"}
             </span>
           </span>
+          <span className="ml-auto flex flex-none items-center gap-1.5 rounded-full bg-white/80 px-3 py-1.5 text-[15px] font-extrabold tabular-nums text-[#8a4300] [&_svg]:size-4 [&_svg]:fill-[var(--glow)] [&_svg]:stroke-[var(--glow-deep)]" aria-label={`${p.toplam ?? 0} puan`}>
+            <Yildiz />{p.toplam ?? 0}
+          </span>
         </div>
         <ol className="grid grid-cols-7 gap-1.5" aria-label="Son 7 gün">
           {hafta.map((h) => (
@@ -71,27 +74,13 @@ export default function Bugun() {
         </ol>
       </div>
 
-      {/* Puan ve görev halkası */}
-      <div className="grid grid-cols-2 gap-3">
-        <div className="flex items-center gap-3 rounded-3xl bg-[var(--glow-soft)] p-4">
-          <span className="grid size-11 flex-none place-items-center rounded-2xl bg-white [&_svg]:size-6 [&_svg]:fill-[var(--glow)] [&_svg]:stroke-[var(--glow-deep)]"><Yildiz /></span>
-          <span className="grid min-w-0 leading-tight">
-            <b className="font-display text-[22px] font-extrabold tabular-nums">{p.toplam ?? 0}</b>
-            <span className="text-[12px] font-semibold text-muted-foreground">{bugun.p ? `puan · bugün +${bugun.p}` : "puan"}</span>
-          </span>
-        </div>
-        <div className="flex items-center gap-3 rounded-3xl bg-[var(--fizik-soft)] p-4">
-          <Halka oran={gorevler.length ? biten / gorevler.length : 0} />
-          <span className="grid min-w-0 leading-tight">
-            <b className="font-display text-[22px] font-extrabold tabular-nums">{biten}/{gorevler.length || 3}</b>
-            <span className="text-[12px] font-semibold text-muted-foreground">görev</span>
-          </span>
-        </div>
-      </div>
-
       {/* Görevler */}
       <div className="grid gap-3 rounded-3xl border border-border bg-card p-4">
-        <b className="font-display text-[16px] font-extrabold">Bugünün görevleri</b>
+        <span className="flex items-center gap-3">
+          <Halka oran={gorevler.length ? biten / gorevler.length : 0} />
+          <b className="flex-1 font-display text-[16px] font-extrabold">Bugünün görevleri</b>
+          <b className="font-display text-[16px] font-extrabold tabular-nums text-muted-foreground">{biten}/{gorevler.length || 3}</b>
+        </span>
         <ul className="grid gap-3">
           {gorevler.map((g) => {
             const sayi = Math.min(bugun[g.id] ?? 0, g.hedef), tamam = gk.tamam?.includes(g.id);
@@ -137,7 +126,7 @@ export default function Bugun() {
 function Halka({ oran }: { oran: number }) {
   const r = 18, c = 2 * Math.PI * r;
   return (
-    <svg viewBox="0 0 44 44" className="size-11 flex-none -rotate-90" aria-hidden="true">
+    <svg viewBox="0 0 44 44" className="size-8 flex-none -rotate-90" aria-hidden="true">
       <circle cx="22" cy="22" r={r} fill="white" stroke="#cfe0fb" strokeWidth="6" />
       <motion.circle
         cx="22" cy="22" r={r} fill="none" stroke="var(--fizik)" strokeWidth="6" strokeLinecap="round"

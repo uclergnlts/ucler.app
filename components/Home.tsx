@@ -9,7 +9,7 @@ import { Icon } from "./icons";
 import { motion } from "motion/react";
 import { Progress } from "./ui/progress";
 import Bugun from "./Bugun";
-import { Bolum, Govde, href, InstaLink, Liste, Simge, Top } from "./temel";
+import { Bolum, Govde, href, Liste, Simge, Top } from "./temel";
 
 export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
   const prog = useProg(), ad = useAd(), tekrar = useTekrar();
@@ -113,7 +113,6 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
           </Bolum>
         )}
 
-        <InstaLink />
       </Govde>
     </div>
   );

@@ -63,7 +63,6 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
                   </motion.li>
                 );
               const res = prog[`${ders}.${e.id}`], kilitli = d[e.id] === "kilitli";
-              const eksik = (e.on ?? []).filter((o) => d[o] !== "bitti").map((o) => list.find((x) => x.id === o)?.title);
               return (
                 <motion.li key={e.no} {...anim}>
                   <Link href={href(ders, e.id)} className="flex items-start gap-3.5 p-4 transition-colors active:bg-secondary">
@@ -74,7 +73,6 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
                       <span className={cn("mt-0.5 text-xs font-semibold", res ? "text-acc" : "text-muted-foreground")}>
                         {e.cardCount} kart · {e.quizCount} soru{res ? ` · ${res}` : asama[`${ders}.${e.id}`] ? ` · ${asama[`${ders}.${e.id}`]}/${asamaSayisi(e.cardCount ?? 0)} aşama` : ""}
                       </span>
-                      {kilitli && <span className="text-xs font-medium text-muted-foreground">Önce: {eksik.join(", ")}</span>}
                     </span>
                   </Link>
                 </motion.li>
