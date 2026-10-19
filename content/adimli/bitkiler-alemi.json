@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Bitki grupları",
-   "metin": "Bitkileri üç soruyla gruplarız: <b>iletim demeti</b> var mı, <b>tohum</b> var mı, <b>çiçek</b> var mı? Anahtarları değiştir ve <b>çamın</b> hangi grupta olduğunu bul.",
+   "metin": "Anahtarları değiştir ve <b>çamın</b> hangi grupta olduğunu bul.",
    "sahne": {
     "tur": "biy4-gruplar"
    },
@@ -46,7 +46,7 @@
      "t": 1,
      "c": 0
     },
-    "tamam": "Çam bir <b>açık tohumludur</b>: iletim demeti ve tohumu var ama çiçeği ve meyvesi yok. Damarsız ama tohumlu bir grup yoktur, çünkü bu kazanımlar sırayla geldi: önce iletim demeti, sonra tohum, en son çiçek."
+    "tamam": "Çam bir <b>açık tohumludur</b>: iletim demeti ve tohumu var ama çiçeği ve meyvesi yok."
    },
    "kart": 3,
    "goster": {
@@ -58,7 +58,7 @@
   },
   {
    "baslik": "Yosunlar neden küçük?",
-   "metin": "Karada bitkinin suyu topraktan yukarı taşıması gerekir. İki gövdeye aynı anda alttan su veriliyor: birinde iletim demeti (ksilem) yok, ötekinde var.",
+   "metin": "İki gövdeye aynı anda alttan su veriliyor: birinde iletim demeti (ksilem) yok, ötekinde var.",
    "sahne": {
     "tur": "biy4-su",
     "sure": 5
@@ -73,7 +73,7 @@
      },
      {
       "yazi": "Yalnızca iletim demeti olanda",
-      "neden": "Ksilem suyu boru gibi hızla yukarı taşır ve bitkiyi dik tutar. Kara yosununda iletim demeti yoktur, su hücreden hücreye geçer. Bu yüzden yosunlar kısa kalır ve nemli, gölgeli yerlerde yaşar.",
+      "neden": "Ksilem suyu boru gibi hızla yukarı taşır; demetsiz gövdede su hücreden hücreye yavaşça geçer.",
       "dogru": true
      },
      {
@@ -82,35 +82,35 @@
      }
     ]
    },
-   "kart": 1
+   "kart": 2
   },
   {
    "baslik": "Döl almaşı",
-   "metin": "Bitkilerde iki döl sırayla gelir: <b>döl almaşı</b>. Biri diploit (2n) <b>sporofit</b>, öteki haploit (n) <b>gametofittir</b>. Eğreltinin yaşam döngüsünü oynatmadan önce tahmin et.",
+   "metin": "Bu eğreltinin yaprak hücreleri <b>2n = 24</b> kromozomlu. Döngüyü oynatmadan önce tahmin et.",
    "sahne": {
     "tur": "biy4-dol",
     "sure": 6
    },
    "gorev": {
     "tur": "tahmin",
-    "soru": "Eğreltinin sporofitinde mayozla ne oluşur?",
+    "soru": "Kalp biçimli protallusun hücrelerinde kaç kromozom bulunur?",
     "secenekler": [
      {
-      "yazi": "Gametler (sperm ve yumurta)",
-      "neden": "Bitkide gametler gametofitte mitozla oluşur. Mayoz başka bir şey üretir."
+      "yazi": "24",
+      "neden": "Protallus sporofit değil gametofittir; mayozla oluşan spordan gelişir."
      },
      {
-      "yazi": "Zigot",
-      "neden": "Zigot döllenmeyle, sperm ve yumurta birleşince oluşur."
-     },
-     {
-      "yazi": "Sporlar",
-      "neden": "Sporofit (2n) mayozla haploit (n) sporlar üretir. Spor mitozla protallusa (gametofit) gelişir; gametofit de gametleri mitozla yapar. Hayvanlardan farklı olarak bitkide mayoz gamet değil spor üretir.",
+      "yazi": "12",
+      "neden": "Spor mayozla oluşur (n = 12); protallus spordan mitozla gelişir ve mitoz sayıyı değiştirmez.",
       "dogru": true
+     },
+     {
+      "yazi": "48",
+      "neden": "Döl almaşında sayı yalnız döllenmede n'den 2n'e çıkar; 4n hücre oluşmaz."
      }
     ]
    },
-   "kart": 5
+   "kart": 6
   },
   {
    "baslik": "Hangi döl baskın?",
@@ -140,7 +140,7 @@
      },
      {
       "yazi": "Sporofit büyür, gametofit küçülür ve ona bağlanır",
-      "neden": "Yosunda gördüğün yeşil örtü gametofittir (n). Eğreltide büyük bitki sporofittir. Tohumlu bitkide gametofit mikroskobiktir: polen tanesi erkek gametofit, embriyo kesesi dişi gametofittir.",
+      "neden": "Yosunda yeşil örtü gametofit, eğreltide büyük bitki sporofittir; tohumluda gametofit mikroskobik kalır.",
       "dogru": true
      },
      {
@@ -149,11 +149,11 @@
      }
     ]
    },
-   "kart": 7
+   "kart": 6
   },
   {
    "baslik": "Açık ve kapalı tohum",
-   "metin": "Tohumlu bitkiler döllenme için suya muhtaç değildir; polen rüzgârla ya da hayvanlarla taşınır. Tohumda embriyo, besin deposu ve koruyucu kabuk vardır. Çam ve elmada döllenmeden sonra ne olduğunu izle.",
+   "metin": "Çam ve elmada döllenmeden sonra ne olduğunu izle.",
    "sahne": {
     "tur": "biy4-tohum",
     "sure": 5
@@ -164,7 +164,7 @@
     "secenekler": [
      {
       "yazi": "Elmada",
-      "neden": "Elma kapalı tohumludur: tohum taslağı çiçeğin yumurtalığında korunur. Döllenmeden sonra yumurtalık meyveye, tohum taslağı tohuma dönüşür.",
+      "neden": "Elma kapalı tohumludur: tohum taslağı çiçeğin yumurtalığında korunur, tohum meyvenin içinde kalır.",
       "dogru": true
      },
      {
@@ -181,7 +181,7 @@
   },
   {
    "baslik": "Tek ve çift çenekli",
-   "metin": "Kapalı tohumlular, embriyodaki çenek sayısına göre <b>tek</b> ve <b>çift çenekli</b> diye ikiye ayrılır. Ekrandaki gül çift çeneklidir. Özelliklerini değiştir ve onu 6 çiçek yapraklı bir <b>laleye</b> çevir.",
+   "metin": "Ekrandaki gül çift çeneklidir. Özelliklerini değiştir ve onu 6 çiçek yapraklı bir <b>laleye</b> çevir.",
    "sahne": {
     "tur": "biy4-cenek"
    },
@@ -220,7 +220,7 @@
      "pd": 1,
      "sk": 1
     },
-    "tamam": "Lale tek çeneklidir: çiçek kısımları 3'ün katı (6), yaprak damarları paralel, kökü saçak köktür. Gülde çiçek kısımları 5'in katı, damarlar ağsı, kök kazık köktür. Bir bitkiyi tanırken birkaç özelliğe birlikte bak."
+    "tamam": "Lale tek çeneklidir: 6 çiçek yaprağı (3'ün katı), paralel damar ve saçak kök birlikte bunu gösterir."
    },
    "kart": 12,
    "goster": {

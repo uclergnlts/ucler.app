@@ -7,36 +7,36 @@
  "adimlar": [
   {
    "baslik": "Organizasyon basamakları",
-   "metin": "Tüm canlılar hücreden oluşur. Çok hücrelilerde hücreler birleşip daha büyük yapılar kurar. Bir kas hücresinden başla ve basamakları tek tek çık. <b>Kalbe</b> ulaştığında dur.",
+   "metin": "Bir kas hücresinden başla ve basamakları tek tek çık. <b>Kalbe</b> ulaştığında dur.",
    "sahne": { "tur": "basamak" },
    "deger": { "d": 1 },
    "kontroller": [ { "ad": "d", "etiket": "Basamak", "min": 1, "max": 5, "tur": "sayac" } ],
    "gorev": {
     "tur": "ayarla",
     "hedef": { "d": 3 },
-    "tamam": "Kalp bir <b>organdır</b>: kas dokusu başta olmak üzere birkaç dokudan oluşur ve belirli bir işi yapar. Sonraki basamaklar dolaşım sistemi ve sensin: hücre → doku → organ → sistem → organizma."
+    "tamam": "Kalp bir <b>organdır</b>: kas, sinir ve bağ dokusu birlikte tek bir iş, kanı pompalamayı yapar."
    },
    "kart": 1,
    "goster": { "deger": { "d": 2 }, "not": "Kas hücreleri bir araya gelince <b>kas dokusu</b> oluşur: ikinci basamak." }
   },
   {
    "baslik": "ATP: enerji parası",
-   "metin": "Hücre besindeki enerjiyi doğrudan kullanamaz; önce <b>ATP</b>'ye yükler. ATP'de bir adenin, bir riboz şekeri ve üç fosfat vardır.",
+   "metin": "Kartta gördüğün ATP kas kasılırken enerji verir. Oynatmadan önce tahmin et.",
    "sahne": { "tur": "atp", "sure": 4 },
    "gorev": {
     "tur": "tahmin",
     "soru": "Kasın kasılması için ATP enerji verirken ne olur?",
     "secenekler": [
-     { "yazi": "Son fosfat ayrılır, enerji açığa çıkar", "dogru": true, "neden": "ATP + su → ADP + P + enerji. Geriye iki fosfatlı ADP kalır. Hücre ATP'yi az tutar ve sürekli yeniden üretir." },
+     { "yazi": "Son fosfat ayrılır, enerji açığa çıkar", "dogru": true, "neden": "Yalnız son fosfat bağı kopar, geriye iki fosfatlı ADP kalır. Solunum bu ADP'ye fosfatı geri takarak ATP'yi yeniden yükler." },
      { "yazi": "Molekül tamamen dağılır", "neden": "ATP'nin yalnızca son fosfatı ayrılır; adenin ve riboz yerinde kalır." },
      { "yazi": "Bir fosfat daha eklenir", "neden": "Fosfat eklemek enerji ister; ATP enerji verirken fosfat kaybeder." }
     ]
    },
-   "kart": 2
+   "kart": 3
   },
   {
    "baslik": "Metabolizma",
-   "metin": "Canlıdaki tüm kimyasal tepkimelerin toplamına <b>metabolizma</b> denir. Glikozları birleştir ve ne değiştiğine bak.",
+   "metin": "Glikozları birleştir ve ne değiştiğine bak.",
    "sahne": { "tur": "metabolizma" },
    "deger": { "yon": 0 },
    "kontroller": [ { "ad": "yon", "etiket": "Glikozları birleştir", "min": 0, "max": 1, "tur": "anahtar" } ],
@@ -60,14 +60,14 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": { "dis": [-10, 0] },
-    "tamam": "Soğukta titrersin, sıcakta terlersin; ikisi de iç sıcaklığı yaklaşık 37 °C'de tutar. Dış koşullar değişse de iç ortamı sabit tutmaya <b>homeostazi</b> denir. Kan şekeri ve su miktarı da böyle dengelenir."
+    "tamam": "Soğukta titreyen kaslar ısı üretir, deri damarları daralıp ısı kaybını azaltır. İç sıcaklık yine 37 °C civarında kalır."
    },
    "kart": 8,
    "goster": { "deger": { "dis": 40 }, "not": "Dışarısı 40 °C: terliyorsun, ter buharlaşırken ısı alıyor ve iç sıcaklık yine 37 °C kalıyor." }
   },
   {
    "baslik": "Uyarılara tepki",
-   "metin": "Canlılar ışık, ısı, dokunma gibi uyarıları algılar ve tepki verir. Lambayı bitkinin sağına al ve bitkiyi büyüt.",
+   "metin": "Lambayı bitkinin sağına al ve bitkiyi büyüt.",
    "sahne": { "tur": "bitki-isik", "sure": 4 },
    "deger": { "isik": 0 },
    "kontroller": [ { "ad": "isik", "etiket": "Lambayı sağa al", "min": 0, "max": 1, "tur": "anahtar" } ],
@@ -75,20 +75,20 @@
     "tur": "ayarla",
     "hedef": { "isik": 1 },
     "ipucu": "Lambayı sağa alıp yeniden oynat.",
-    "tamam": "Bitki ışığa doğru eğildi. Gölgede kalan taraftaki hücreler daha çok uzadığı için gövde ışığa döner. Elini sıcak sobadan çekmen de bir uyarıya tepkidir."
+    "tamam": "Bitki ışığa doğru eğildi: gölgede kalan taraftaki hücreler daha çok uzadığı için gövde ışığa döner."
    },
    "kart": 7,
    "goster": { "oynat": true, "not": "Lamba bitkinin tam üstündeyken ışık yukarıdan geliyor: bitki dümdüz yukarı uzuyor." }
   },
   {
    "baslik": "Virüs canlı mı?",
-   "metin": "Virüsler hücre değildir: protein bir kılıfın içinde DNA ya da RNA taşırlar, kendi metabolizmaları yoktur. Biri hücre dışında, biri canlı bir hücrenin yanında.",
+   "metin": "Biri hücre dışında, biri canlı bir hücrenin yanında. Hangisi çoğalır?",
    "sahne": { "tur": "virus-cogalma", "sure": 5 },
    "gorev": {
     "tur": "tahmin",
     "soru": "Virüs hücre dışında tek başına çoğalabilir mi?",
     "secenekler": [
-     { "yazi": "Hayır, yalnızca canlı bir hücrenin içinde çoğalır", "dogru": true, "neden": "Virüs, kalıtsal maddesini hücreye sokar ve hücrenin düzeneğiyle kopyalarını yaptırır. Hücre dışında hiçbir şey yapmaz. Bu yüzden canlı ile cansız arasında sayılır." },
+     { "yazi": "Hayır, yalnızca canlı bir hücrenin içinde çoğalır", "dogru": true, "neden": "Virüs kalıtsal maddesini hücreye sokar, hücrenin ribozomu ve enerjisiyle kendi kopyalarını yaptırır. Kendi metabolizması olmadığı için hücre dışında hiçbir şey yapmaz." },
      { "yazi": "Evet, bakteri gibi ikiye bölünür", "neden": "Virüs hücre değildir, bölünemez." },
      { "yazi": "Evet, ama daha yavaş", "neden": "Metabolizması olmayan virüs hücre dışında hiç çoğalamaz." }
     ]

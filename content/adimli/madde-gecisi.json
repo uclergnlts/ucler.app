@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Hücre zarı",
-   "metin": "Hücre zarı iki sıra <b>fosfolipitten</b> oluşur. Aralarında proteinler ve kolesterol yüzer, yerleri sabit değildir. Bu yapıya <b>akıcı mozaik model</b> denir.",
+   "metin": "Zardaki <b>fosfolipitlerin</b> baş ve kuyruklarına bak.",
    "sahne": {
     "tur": "zar-model"
    },
@@ -57,7 +57,7 @@
      {
       "yazi": "Çok olan taraftan az olana geçer, sayılar eşitlenir",
       "dogru": true,
-      "neden": "Tanecikler hep hareket eder; çok olan taraftan zara daha çok tanecik çarpar ve geçer. Sonunda iki yan eşitlenir. Enerji harcanmaz: buna <b>basit difüzyon</b> denir."
+      "neden": "Tanecikler hep hareket eder; çok olan taraftan zara daha çok tanecik çarpar ve geçer. Eşitlenince geçiş iki yönde sürer ama net geçiş durur."
      },
      {
       "yazi": "Az olan taraftan çok olana geçer",
@@ -166,7 +166,7 @@
      {
       "yazi": "Enerji (ATP)",
       "dogru": true,
-      "neden": "Tanecikleri az olduğu yerden çok olduğu yere taşımak, yokuş yukarı itmek gibidir ve enerji ister. Hücre bu enerjiyi ATP'den alır. Buna <b>aktif taşıma</b> denir."
+      "neden": "Az olduğu yerden çok olduğu yere taşımak yokuş yukarı itmek gibidir; bu enerjiyi ATP verir."
      },
      {
       "yazi": "Hiçbir şey, kendiliğinden olur",
@@ -178,11 +178,11 @@
      }
     ]
    },
-   "kart": 9
+   "kart": 8
   },
   {
    "baslik": "Osmoz",
-   "metin": "Zardan su da geçer. Su, az tuzlu (suyu bol) taraftan çok tuzlu tarafa geçer: buna <b>osmoz</b> denir. Alyuvarın içi %0,9 tuzlu. Dış ortamı, alyuvar su kaybedip büzüşecek şekilde ayarla.",
+   "metin": "Alyuvarın içi, %0,9'luk tuzlu suyla aynı derişimdedir (izotonik). Dış ortamı, alyuvar su kaybedip büzüşecek şekilde ayarla.",
    "sahne": {
     "tur": "osmoz"
    },
@@ -243,7 +243,7 @@
      {
       "yazi": "Su alıp şişer, sonunda patlayabilir",
       "dogru": true,
-      "neden": "Saf su hipotoniktir; su hücreye girer. Alyuvarın çeperi olmadığı için şişip patlayabilir. Damara verilen serumun %0,9 tuzlu (izotonik) hazırlanması bu yüzdendir."
+      "neden": "Saf su en uç hipotonik ortamdır. Alyuvarın hücre duvarı olmadığı için şişmeyi durduracak bir şey yoktur."
      },
      {
       "yazi": "Su kaybedip büzüşür",
@@ -251,7 +251,7 @@
      },
      {
       "yazi": "Hiçbir şey olmaz",
-      "neden": "Net su geçişi yalnızca iki yan eşit tuzluyken (%0,9) durur."
+      "neden": "Net su geçişi yalnızca dış ortam alyuvarla aynı derişimdeyken (%0,9'luk tuzlu su gibi) durur."
      }
     ]
    },

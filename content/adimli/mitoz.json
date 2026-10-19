@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Hücre döngüsü",
-   "metin": "Bir hücrenin oluşmasından bölünmesine kadar geçen süreç <b>hücre döngüsüdür</b>. Hücre zamanının çoğunu interfazda geçirir. Döngüde ilerle ve DNA miktarının arttığı evrede dur.",
+   "metin": "Hücre zamanının çoğunu interfazda geçirir. Döngüde ilerle ve DNA miktarının arttığı evrede dur.",
    "sahne": {
     "tur": "biy4-dongu"
    },
@@ -32,7 +32,7 @@
       55
      ]
     },
-    "tamam": "DNA <b>S evresinde</b> eşlenir: 2 birimden 4 birime çıkar. Kromozom sayısı ise 4'te kalır, çünkü her kromozom artık iki kardeş kromatit taşır. Mitozda yeni DNA yapılmaz."
+    "tamam": "DNA <b>S evresinde</b> 2 birimden 4 birime çıkar. Mitozda yeni DNA yapılmaz."
    },
    "kart": 1,
    "goster": {
@@ -44,7 +44,7 @@
   },
   {
    "baslik": "Kromozom ve kromatit",
-   "metin": "S evresinde eşlenen kromozom, <b>sentromerle</b> bağlı iki özdeş <b>kardeş kromatit</b> taşır. Anahtarla DNA'yı eşle ve sayılara bak.",
+   "metin": "Anahtarla DNA'yı eşle ve sayılara bak.",
    "sahne": {
     "tur": "biy4-kromatit"
    },
@@ -70,7 +70,7 @@
      },
      {
       "yazi": "4",
-      "neden": "Kromozom sayısı sentromer sayısına eşittir: 4. Eşlenmiş kromozom yine 1 kromozomdur ama 2 kromatit, yani 2 DNA molekülü taşır.",
+      "neden": "4 sentromer, 4 kromozom demektir; kromatit sayısı ise 8'dir.",
       "dogru": true
      },
      {
@@ -102,7 +102,7 @@
      },
      {
       "yazi": "Anafaz",
-      "neden": "Anafazda sentromerler ayrılır ve her kromatit bağımsız bir kromozom olur: 4'ten 8'e. DNA miktarı ise değişmez, 4 birimde kalır. Sitokinezden sonra her yavru hücrede yine 4 kromozom olur.",
+      "neden": "Sentromerler ayrılınca her kromatit ayrı bir kromozom sayılır: 4'ten 8'e. DNA miktarı ise değişmez.",
       "dogru": true
      }
     ]
@@ -111,7 +111,7 @@
   },
   {
    "baslik": "Kromozomları saymak",
-   "metin": "Kromozomları saymak ve karyotip çıkarmak için hücre belirli bir evrede incelenir: kromozomların en kısa ve en belirgin olduğu, tek sıra dizildiği evrede. Evreleri değiştir ve o evreyi bul.",
+   "metin": "Karyotip için kromozomların en kısa, en belirgin olduğu ve tek sıra dizildiği evre gerekir. Evreleri değiştir ve o evreyi bul.",
    "sahne": {
     "tur": "biy4-mitoz"
    },
@@ -132,13 +132,13 @@
     "hedef": {
      "e": 2
     },
-    "tamam": "<b>Metafaz</b>: iğ iplikleri her kromozomun sentromerine bağlanır, kromozomlar ekvatorda tek sıra dizilir ve en yoğun hâldedir. İnsanın 2n = 46 kromozomu da bu evrede sayılır."
+    "tamam": "<b>Metafaz</b>: kromozomlar ekvatorda tek sıra dizildi. İnsanın 2n = 46 kromozomu da bu evrede sayılır."
    },
-   "kart": 4
+   "kart": 3
   },
   {
    "baslik": "Sitoplazmanın bölünmesi",
-   "metin": "Telofazdan sonra sitoplazma da bölünür: <b>sitokinez</b>. Önce hayvan hücresini oynat. Sonra bitki hücresine geç ve onu da oynat.",
+   "metin": "Önce hayvan hücresini oynat. Sonra bitki hücresine geç ve onu da oynat.",
    "sahne": {
     "tur": "biy4-sitokinez",
     "sure": 4
@@ -160,7 +160,7 @@
     "hedef": {
      "b": 1
     },
-    "tamam": "Bitki hücresinin sert duvarı boğumlanmaya izin vermez. Golgi kesecikleri ortada birleşip <b>hücre plağını</b> (ara lamel) kurar. Bitki hücresinde sentrozom da yoktur, ama iğ iplikleri yine oluşur."
+    "tamam": "Bitkide Golgi kesecikleri ortada birleşir; <b>hücre plağı</b> içten kenarlara doğru büyüyerek iki hücreyi ayırır."
    },
    "kart": 6,
    "goster": {
@@ -170,7 +170,7 @@
   },
   {
    "baslik": "Eşeysiz üreme: bölünme",
-   "metin": "Eşeysiz üremede tek ata yeter ve yavrular genellikle atayla özdeştir. Amip ve öglena mitozla bölünür. Bakteri de ikiye bölünür ama onun bölünmesi mitoz değildir.",
+   "metin": "Bakteri sayısı nasıl artar? Oynatmadan önce tahmin et.",
    "sahne": {
     "tur": "biy4-bakteri",
     "sure": 6
@@ -189,7 +189,7 @@
      },
      {
       "yazi": "64",
-      "neden": "120 / 20 = 6 bölünme; her birinde sayı ikiye katlanır: 2⁶ = 64. Bakteride çekirdek ve iğ ipliği yoktur, halkasal DNA eşlenip ayrılır. Bu yüzden bakterinin ikiye bölünmesi mitoz sayılmaz.",
+      "neden": "120 / 20 = 6 bölünme; her birinde sayı ikiye katlanır: 2⁶ = 64.",
       "dogru": true
      }
     ]
@@ -198,7 +198,7 @@
   },
   {
    "baslik": "Aşı",
-   "metin": "Bitkiler kök, gövde ya da yapraktan yeni birey verebilir: <b>vejetatif üreme</b>. <b>Aşıda</b> bir bitkiden alınan dal parçası (kalem), başka bir bitkinin kök ve gövdesine (anaç) eklenir.",
+   "metin": "<b>Aşıda</b> bir bitkiden alınan dal parçası (kalem), başka bir bitkinin kök ve gövdesine (anaç) eklenir.",
    "sahne": {
     "tur": "biy4-asi",
     "sure": 5
@@ -222,7 +222,7 @@
      }
     ]
    },
-   "kart": 12
+   "kart": 11
   }
  ],
  "kapanis": [
