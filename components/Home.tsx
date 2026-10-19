@@ -8,6 +8,7 @@ import { sureYaz, VIDEOLAR } from "@/lib/videolar";
 import { Icon } from "./icons";
 import { motion } from "motion/react";
 import { Progress } from "./ui/progress";
+import Bugun from "./Bugun";
 import { Bolum, Govde, href, InstaLink, Liste, Simge, Top } from "./temel";
 
 export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
@@ -38,6 +39,8 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
           <h1 className="text-[28px]">Hoş geldin{ad ? `, ${ad}` : ""}</h1>
           {doneAll > 0 && <p className="text-[15px] text-muted-foreground">Şimdiye kadar {doneAll} konu bitirdin.</p>}
         </section>
+
+        <Bugun />
 
         {bugun > 0 && (
           <Link href="/tekrar/" className="flex items-center gap-3.5 rounded-2xl border-[1.5px] border-foreground bg-card p-4 transition-transform active:scale-[.99]">

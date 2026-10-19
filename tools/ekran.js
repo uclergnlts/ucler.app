@@ -5,7 +5,8 @@
 // Önce derle:  npm run build          (out/ klasörünü üretir)
 // Kullanım:    NODE_PATH=$(npm root -g) node tools/ekran.js [cikti-klasoru] [ders/konu ...]
 //              Konu verilirse yalnızca o konular çekilir (ör. kimya/modern-atom-teorisi fizik).
-// Dosya adları: <ders>.<konu>.<sıra>-k<kart no>.png (kart), <ders>.<konu>.<sıra>-a<adım no>[-bitti].png (adım).
+// Dosya adları: <ders>.<konu>.00-giris.png (aşama listesi), <ders>.<konu>.<sıra>-k<kart no>.png (kart),
+// <ders>.<konu>.<sıra>-a<adım no>[-bitti].png (adım), ...-ara.png (aşama bitti ekranı).
 // Gerekenler: node, playwright (chromium).
 const { chromium } = require('playwright');
 const http = require('http'), path = require('path'), fs = require('fs');
@@ -118,6 +119,8 @@ server.listen(0, async () => {
       const adimli = fs.existsSync(path.join(root, 'content', 'adimli', `${id}.json`)) ? oku(`adimli/${id}.json`) : null;
       await p.goto(`${base}/${ders}/${id}/`); await ileri(800);
       const liste = akis(ders, id, t);
+      // Konu girişi (aşama listesi) → "Başla" ile 1. aşama.
+      try { await cek(`${ders}.${id}.00-giris`); await devam.click(); await ileri(600); } catch (e) { takilan.push(`${ders}/${id}: ${e.message.split('\n')[0]}`); continue; }
       try { for (let j = 0; j < liste.length; j++) {
         const o = liste[j], ad = `${ders}.${id}.${String(j + 1).padStart(2, '0')}-${o.tur === 'kart' ? 'k' : 'a'}${o.no}`;
         await cek(ad);
@@ -126,7 +129,11 @@ server.listen(0, async () => {
           await cek(`${ad}-bitti`);
           if (!ok) { takilan.push(`${ders}/${id} adım ${o.no}`); break; }
         }
-        if (await devam.isEnabled()) { await devam.click(); await ileri(600); }
+        if (await devam.isEnabled()) {
+          await devam.click(); await ileri(600);
+          // Aşama sonu ekranı: görüntüsünü al, sonraki aşamaya (ya da teste) geç.
+          if (await p.getByRole('heading', { name: /aşama bitti$/ }).count()) { await cek(`${ad}-ara`); await devam.click(); await ileri(600); }
+        }
       } } catch (e) { takilan.push(`${ders}/${id}: ${e.message.split('\n')[0]}`); }
     }
   }

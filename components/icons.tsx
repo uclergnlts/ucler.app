@@ -74,6 +74,9 @@ export const Icon = {
   tekrar: () => (
     <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M20 11a8 8 0 1 0-2.3 5.7" /><path d="M20 4v7h-7" /></svg>
   ),
+  seri: () => (
+    <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M12 21c-3.9 0-6.5-2.6-6.5-6.2 0-3.4 2.5-5.4 3.6-8.3.9 1.5 1.3 2.8 1.3 4.2 1.6-1.2 2.6-3.6 2.4-6.7 3.6 2.4 5.7 6.4 5.7 10.6 0 3.7-2.6 6.4-6.5 6.4z" /></svg>
+  ),
   bulb: () => (
     <svg viewBox="0 0 24 24" fill="none" stroke="#1d3557" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18h6M10 21h4" /><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="#ffc93c" /></svg>
   ),

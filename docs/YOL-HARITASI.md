@@ -24,6 +24,42 @@ Konularla bağlantılı kısa oyunlar. **2026-10-16:** `/oyunlar/` oyun alanınd
 ## Planlanacak: etkileşimli anlatım (Üçler, 2026-10-15)
 Konu anlatımında kullanıcının dokunup değiştirebileceği öğeler. **2026-10-16:** Üçler pilotu beğendi ("çok güzel devam et"); 81 konunun hepsinde en az bir etkileşimli kart var (toplam 113). Türler ve biçim `docs/ICERIK-SPEC.md` içinde.
 
-## Bekleyen (sunucu gerektirir)
-- Kayıt, giriş, ücretli üyelik.
-- İlerlemenin hesaba bağlanması.
+## Uygulama yol haritası (2026-10-19)
+Hedef (Üçler): uygulama tamamen bitince iOS ve Android uygulaması çıkarmak, bugünkü siteyi tanıtım sitesine çevirmek.
+
+### "Bitti" demek için eksikler
+| İş | Sunucu gerekir mi | Durum |
+|---|---|---|
+| Aşamalı öğrenme (konu 2-4 aşama, hep 1. aşamadan) | Hayır | Yapıldı (2026-10-19) |
+| Puan, günlük giriş, seri, günlük görevler | Hayır | Yapıldı, bu cihazda (2026-10-19) |
+| Akıllı tekrar, "Bunu anlamadım", konu haritası | Hayır | Yapıldı (2026-10-19) |
+| Çevrimdışı çalışma (içerik uygulamanın içinde) | Hayır | Mobil kabukla birlikte |
+| Seriyi hatırlatan günlük bildirim | Hayır (cihazdaki yerel bildirim) | Mobil kabukla birlikte |
+| Konu başına daha çok soru, "YKS'de çıktı" soruları | Hayır | İçerik işi, sırada |
+| Hesap, giriş, ilerlemenin cihazlar arası taşınması | **Evet** | Bekliyor |
+| Puan listesi (arkadaşlar, haftalık lig) | **Evet** | Bekliyor |
+| Ücretli üyelik | **Evet** (+ mağaza ödeme sistemi) | Bekliyor |
+| Toplu "anlamadım" verisi | **Evet** (Umami yeter) | Umami kimliği bekleniyor |
+| Uzaktan bildirim (ör. "yeni video çıktı") | **Evet** | Bekliyor |
+| Videoların ayrı depoya taşınması (Cloudflare R2) | Depo hesabı | Mağazaya çıkmadan önce |
+
+### Mobile geçiş yolu
+**Öneri: mevcut kodu Capacitor ile sarmak.** Site zaten statik çıktı (`out/`) üretiyor; Capacitor bu klasörü iOS ve Android uygulamasının içine koyar. Kod tek kalır, içerik ve tasarım iki platformda da aynı olur.
+- Yeniden yazmak (React Native / Flutter) bütün ekranları, sahneleri ve etkileşimli SVG'leri ikinci kez yazmak demek. Kazancı (biraz daha "yerli" his) bu maliyete değmez.
+- Apple yalnızca site gösteren uygulamaları reddedebilir (kural 4.2). Bunu aşmak için uygulamada yerel parçalar olacak: çevrimdışı içerik, günlük seri bildirimi (yerel bildirim), titreşim, paylaşım.
+- Videolar uygulamanın içine konmaz (boyut büyür); R2'den akışla gelir.
+- Aynı depo iki çıktı verir: uygulama derlemesi (bütün dersler) ve tanıtım sitesi (ucler.app: ne olduğu, ekran görüntüleri, örnek bir konu, App Store / Google Play bağlantıları). Bugünkü web uygulaması istenirse `app.ucler.app` adresinde kalabilir.
+
+### Sırası
+1. Sunucusuz özellikler (bu cihazda): aşamalar, puan, seri, görevler. **Yapıldı.**
+2. Capacitor kabuğu: iOS ve Android projeleri, yerel bildirim, çevrimdışı içerik, simge ve açılış ekranı.
+3. Hesap ve puan listesi: Supabase (giriş, ilerleme eşitleme, puan listesi). Cihazdaki sayaçlar (`tf-puan`) ilk girişte hesaba taşınır.
+4. Ücretli üyelik: uygulama içi satın alma (Apple ve Google kuralı gereği). RevenueCat iki mağazayı tek yerden yönetir.
+5. Tanıtım sitesi ve mağaza sayfaları; ardından yayın.
+
+### Üçler'in açması gereken hesaplar (zamanı gelince)
+- **Apple Developer Program:** yıllık 99 USD. iOS'a çıkmak için şart. Xcode için Mac gerekir (var).
+- **Google Play Console:** bir kerelik 25 USD.
+- **Supabase:** ücretsiz plan yeter. Hesap ve puan listesi aşamasında gerekir.
+- **Cloudflare (R2):** videolar için, mağazaya çıkmadan önce.
+- **RevenueCat:** ücretli üyelik aşamasında (ücretsiz başlar).

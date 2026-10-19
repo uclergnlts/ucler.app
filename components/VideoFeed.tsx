@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { DERSLER } from "@/lib/dersler";
 import { toggleSaved, useSaved } from "@/lib/store";
+import { kaydet, PUAN } from "@/lib/puan";
 import { VIDEOLAR, yerHref, type Video } from "@/lib/videolar";
 import { Icon } from "./icons";
 import { AnimatePresence, motion } from "motion/react";
@@ -18,6 +19,7 @@ type Ortak = { muted: boolean; setMuted: (m: boolean) => void; toast: (t: string
 
 function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean; o: Ortak }) {
   const ref = useRef<HTMLVideoElement>(null);
+  const izlendi = useRef(false);
   const [paused, setPaused] = useState(false);
   const [flash, setFlash] = useState<"play" | "pause" | null>(null);
   const [cevap, setCevap] = useState(false);
@@ -38,6 +40,7 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
     } else {
       el.pause();
       el.currentTime = 0;
+      izlendi.current = false;
       setCevap(false);
     }
   }, [active]);
@@ -102,7 +105,12 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
           playsInline
           preload={active ? "auto" : "metadata"}
           onClick={toggle}
-          onTimeUpdate={(e) => setPct((100 * e.currentTarget.currentTime) / (e.currentTarget.duration || 1))}
+          onTimeUpdate={(e) => {
+            const yuzde = (100 * e.currentTarget.currentTime) / (e.currentTarget.duration || 1);
+            setPct(yuzde);
+            // Videonun %80'i izlenince bir kez sayılır (video döngüde olduğu için yeniden sayılmaz).
+            if (yuzde >= 80 && !izlendi.current) { izlendi.current = true; kaydet("video", 1, PUAN.video); }
+          }}
         />
         {o.muted && active && hint && !cevap && (
           <button className="reel-hint" onClick={toggle}><I.sesKapali />Sesi açmak için dokun</button>

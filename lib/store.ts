@@ -5,7 +5,10 @@ import { useSyncExternalStore } from "react";
 
 export type Prog = Record<string, string>; // "ders.konu" -> "3/4 doğru", "_last" -> "ders.konu"
 
-const KEYS = { prog: "tf-prog", saved: "tf-saved", ad: "tf-ad", tekrar: "tf-tekrar", anlamadim: "tf-anlamadim", gorunum: "tf-gorunum" } as const;
+export const KEYS = {
+  prog: "tf-prog", saved: "tf-saved", ad: "tf-ad", tekrar: "tf-tekrar", anlamadim: "tf-anlamadim", gorunum: "tf-gorunum",
+  asama: "tf-asama", puan: "tf-puan", gorev: "tf-gorev",
+} as const;
 const listeners = new Set<() => void>();
 const cache: Record<string, { raw: string | null; val: unknown }> = {};
 
@@ -13,7 +16,7 @@ const cache: Record<string, { raw: string | null; val: unknown }> = {};
 const mem: Record<string, string | null> = {};
 let broken = false;
 
-function read<T>(key: string, fallback: T): T {
+export function read<T>(key: string, fallback: T): T {
   let raw: string | null = mem[key] ?? null;
   if (!broken) {
     try { raw = mem[key] = localStorage.getItem(key); } catch { broken = true; }
@@ -25,14 +28,14 @@ function read<T>(key: string, fallback: T): T {
   cache[key] = { raw, val };
   return val;
 }
-function write(key: string, val: unknown) {
+export function write(key: string, val: unknown) {
   const raw = (mem[key] = JSON.stringify(val));
   if (!broken) {
     try { localStorage.setItem(key, raw); } catch { broken = true; }
   }
   listeners.forEach((l) => l());
 }
-function subscribe(l: () => void) {
+export function subscribe(l: () => void) {
   listeners.add(l);
   const onStorage = () => l();
   window.addEventListener("storage", onStorage);
@@ -67,6 +70,9 @@ export function resetAll() {
   write(KEYS.saved, []);
   write(KEYS.tekrar, {});
   write(KEYS.anlamadim, []);
+  write(KEYS.asama, {});
+  write(KEYS.puan, {});
+  write(KEYS.gorev, {});
 }
 
 // Akıllı tekrar: testte yanlış yapılan soru 1, 3 ve 7 gün sonra yeniden sorulur.
@@ -131,6 +137,20 @@ export type Gorunum = "harita" | "liste";
 export const useGorunum = () =>
   useSyncExternalStore(subscribe, () => read<Gorunum>(KEYS.gorunum, "harita"), () => "harita" as Gorunum);
 export const setGorunum = (g: Gorunum) => write(KEYS.gorunum, g);
+
+// Aşamalar: her konu 2-4 aşamaya bölünür (lib/asama.ts). Değer, o konuda bitirilen aşama sayısıdır.
+// Aşamalar sırayla açılır; öğrenci her konuya 1. aşamadan başlar.
+export type Asama = Record<string, number>;
+const EMPTY_ASAMA: Asama = {};
+export const useAsama = () =>
+  useSyncExternalStore(subscribe, () => read<Asama>(KEYS.asama, EMPTY_ASAMA), () => EMPTY_ASAMA);
+/** Aşama bitince çağrılır; yalnızca sıradaki aşamaysa sayaç ilerler. İlk kez bitiyorsa true döner. */
+export function asamaBitir(key: string, a: number) {
+  const s = read<Asama>(KEYS.asama, EMPTY_ASAMA);
+  if ((s[key] ?? 0) !== a) return false;
+  write(KEYS.asama, { ...s, [key]: a + 1 });
+  return true;
+}
 
 /** Bitirilen konuların anahtarları ("_last" hariç). */
 export const doneKeys = (p: Prog) => Object.keys(p).filter((k) => k !== "_last");

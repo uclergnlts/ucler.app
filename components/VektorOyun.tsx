@@ -3,7 +3,8 @@
 // Her turda dört vektör kartı var; çözüm bunların 1-3 tanesinden kurulur, yani her tur çözülebilir.
 // Kural kartlardakiyle aynı: bileşke R = A + B + ..., bileşenler ayrı ayrı toplanır (Rx, Ry).
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { kaydet, PUAN } from "@/lib/puan";
 import { Icon } from "./icons";
 import { href } from "./temel";
 
@@ -106,8 +107,11 @@ export default function VektorOyun() {
   useEffect(() => setRekor(enIyi()), []);
 
   const bitti = d !== null && d.i >= TUR;
+  // Oyun bitince bir kez puan yazılır (aynı oyun nesnesi için yeniden yazılmaz).
+  const sayilan = useRef<Durum | null>(null);
   useEffect(() => {
     if (!bitti || !d) return;
+    if (sayilan.current !== d) { sayilan.current = d; kaydet("oyun", 1, PUAN.oyun); }
     if (d.dogru > enIyi()) {
       try { localStorage.setItem(KAYIT, String(d.dogru)); } catch {}
       setRekor(d.dogru);

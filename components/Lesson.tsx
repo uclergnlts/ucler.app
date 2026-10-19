@@ -1,5 +1,6 @@
 "use client";
-// Ders ekranı: kartlar -> 4 soruluk mini test -> sonuç.
+// Ders ekranı: konu girişi (aşamalar) -> aşama aşama kartlar -> 4 soruluk mini test -> sonuç.
+// Kartlar 2-4 aşamaya bölünür (lib/asama.ts). Aşamalar sırayla açılır; öğrenci konuya her zaman 1. aşamadan başlar.
 // Kartlar slayt gibi yer değiştirmez: "Devam" ile bir sonraki kart altta belirir ve sayfa ona kayar
 // (Brilliant gibi akış). Yeni kartta görsel parça parça çizilir, yazı cümle cümle gelir.
 // Etkileşimli adımları "kart" alanıyla yerleştirilmiş konularda adımlar anlatımın içinde, ilgili karttan hemen
@@ -7,7 +8,9 @@
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { DERSLER, type DersId, type Topic } from "@/lib/dersler";
-import { setProg, toggleAnlamadim, toggleSaved, useAnlamadim, useProg, useSaved, yanlisKaydet } from "@/lib/store";
+import { asamaBitir, setProg, toggleAnlamadim, toggleSaved, useAnlamadim, useAsama, useProg, useSaved, yanlisKaydet } from "@/lib/store";
+import { asamalar, kartinAsamasi } from "@/lib/asama";
+import { kaydet, PUAN } from "@/lib/puan";
 import { olay } from "@/lib/olay";
 import { kartVideolari, sureYaz, type Video } from "@/lib/videolar";
 import { Icon } from "./icons";
@@ -27,8 +30,10 @@ import { Alt, Secenekler } from "./Soru";
 /** Akıştaki öğe: konu kartı ya da etkileşimli adım. */
 type Oge = { tur: "kart"; k: number } | { tur: "adim"; a: Adim; n: number };
 
-type State = { i: number; q: number; picked: number | null; right: number };
-const START: State = { i: 0, q: -1, picked: null, right: 0 };
+/** a: aşama (-1: konu girişi), ara: aşama bitti ekranı, i: akıştaki öğe, q: test sorusu (-1: test başlamadı),
+ * odul: aşama ya da konu bitince kazanılan puan (ilk kez bitiyorsa). */
+type State = { a: number; ara: boolean; i: number; q: number; picked: number | null; right: number; odul: number };
+const START: State = { a: -1, ara: false, i: 0, q: -1, picked: null, right: 0, odul: 0 };
 
 export default function Lesson({
   ders, id, t, next, adimli, on = [],
@@ -46,54 +51,88 @@ export default function Lesson({
   }, [t, adimli, birlesik]);
   const [biten, setBiten] = useState<Set<number>>(() => new Set());
   const [bildirim, setBildirim] = useState<Bildirim | null>(null);
-  const tamamlar = useMemo(() => ogeler.map((_, j) => () => setBiten((b) => (b.has(j) ? b : new Set(b).add(j)))), [ogeler]);
+  // Görev bir kez puan getirir; sahne "tamam"ı birden çok kez çağırabilir.
+  const sayilan = useRef(new Set<number>());
+  const tamamlar = useMemo(() => ogeler.map((_, j) => () => {
+    if (!sayilan.current.has(j)) { sayilan.current.add(j); kaydet("adim", 1, PUAN.adim); }
+    setBiten((b) => (b.has(j) ? b : new Set(b).add(j)));
+  }), [ogeler]);
   const [play, setPlay] = useState<Video | null>(null);
   const yon = useRef<1 | -1>(1); // kart geçişinin yönü (kayma animasyonu için)
   const saved = useSaved().includes(`${ders}.${id}`);
   const prog = useProg(), anlamadim = useAnlamadim();
   const eksik = on.filter((o) => !prog[`${ders}.${o.id}`]);
   const nCards = ogeler.length, nQuiz = t.quiz.length, nKart = t.cards.length;
+  // Her aşamanın akıştaki öğe aralığı [ilk, son): aşamanın ilk kartından sonraki aşamanın ilk kartına kadar.
+  const asamaOge = useMemo(() => {
+    const yer = (k: number) => (k >= nKart ? ogeler.length : ogeler.findIndex((o) => o.tur === "kart" && o.k === k));
+    return asamalar(nKart).map(([b, e]) => [yer(b), yer(e)] as const);
+  }, [ogeler, nKart]);
+  const nAsama = asamaOge.length, konuKey = `${ders}.${id}`;
+  // Testi bitmiş konuda bütün aşamalar bitmiş sayılır (aşamalardan önce bitirilen konular dahil).
+  const asamaDurum = useAsama();
+  const bitenA = prog[konuKey] ? nAsama : Math.min(asamaDurum[konuKey] ?? 0, nAsama);
+  const [ilkOge, sonOge] = s.a >= 0 && s.a < nAsama ? asamaOge[s.a] : [0, 0];
   const Close = Icon.kapat, Bookmark = Icon.kayit;
 
   // Videodan gelen bağlantı (?kart=3) dersi o karttan açar; geçersiz değerde ilk kart.
   useEffect(() => {
     const k = Number(new URLSearchParams(location.search).get("kart"));
     const j = ogeler.findIndex((o) => o.tur === "kart" && o.k === k - 1);
-    if (Number.isInteger(k) && j >= 0) setS({ ...START, i: j });
-  }, [ogeler]);
+    if (Number.isInteger(k) && k > 0 && j >= 0) setS({ ...START, a: kartinAsamasi(nKart, k - 1), i: j });
+  }, [ogeler, nKart]);
 
   useEffect(() => { setProg({ _last: `${ders}.${id}` }); }, [ders, id]);
-  useEffect(() => { window.scrollTo(0, 0); }, [s.q]);
+  useEffect(() => { window.scrollTo(0, 0); }, [s.q, s.a, s.ara]);
   // Yeni kart altta belirince sayfa ona kayar.
   const sonKart = useRef<HTMLElement>(null);
   useEffect(() => {
-    if (s.q < 0 && s.i > 0) sonKart.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [s.i, s.q]);
+    if (s.q < 0 && s.a >= 0 && !s.ara && s.i > ilkOge) sonKart.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [s.i, s.q, s.a, s.ara, ilkOge]);
   useEffect(() => {
     if (s.q === nQuiz) setProg({ [`${ders}.${id}`]: `${s.right}/${nQuiz} doğru` });
   }, [s.q, s.right, nQuiz, ders, id]);
 
-  const kilitli = s.q < 0 && ogeler[s.i]?.tur === "adim" && !biten.has(s.i);
+  const akista = s.q < 0 && s.a >= 0 && !s.ara;
+  const kilitli = akista && ogeler[s.i]?.tur === "adim" && !biten.has(s.i);
+  /** Aşamayı (ya da testi) baştan açar. */
+  const asamaAc = (a: number) => {
+    yon.current = 1;
+    setBildirim(null);
+    setS(a < nAsama ? { ...START, a, i: asamaOge[a][0] } : { ...START, a: nAsama, q: 0 });
+  };
+  // Akışta geri gitmek yok: önceki kartlar yukarıda duruyor. Puan yan etkileri setS'in dışında, olay anında yazılır.
   function step(dir: 1 | -1) {
-    if (dir > 0 && kilitli) return;
+    if (dir < 0 || kilitli) return;
     yon.current = dir;
     setBildirim(null);
-    setS((p) => {
-      if (p.q < 0) {
-        if (dir > 0) return p.i < nCards - 1 ? { ...p, i: p.i + 1 } : { ...p, q: 0 };
-        return p; // akışta geri gitmek yok: önceki kartlar yukarıda duruyor
+    if (s.q < 0 && s.a < 0) return asamaAc(prog[konuKey] ? 0 : bitenA);
+    if (s.ara) return asamaAc(s.a + 1);
+    if (akista) {
+      if (ogeler[s.i].tur === "kart") kaydet("kart", 1, PUAN.kart);
+      if (s.i < sonOge - 1) return setS({ ...s, i: s.i + 1 });
+      // Puan yalnızca aşama ilk kez bittiğinde; görev sayacı tekrarda da ilerler.
+      const ilk = s.a === bitenA && asamaBitir(konuKey, s.a);
+      kaydet("asama", 1, ilk ? PUAN.asama : 0);
+      return setS({ ...s, ara: true, odul: ilk ? PUAN.asama : 0 });
+    }
+    if (s.q >= 0 && s.q < nQuiz && s.picked !== null) {
+      if (s.q === nQuiz - 1) {
+        const ilk = !prog[konuKey];
+        kaydet("konu", 1, ilk ? PUAN.konu : 0);
+        return setS({ ...s, q: s.q + 1, picked: null, odul: ilk ? PUAN.konu : 0 });
       }
-      if (p.q < nQuiz && dir > 0 && p.picked !== null) {
-        return { ...p, q: p.q + 1, picked: null };
-      }
-      return p;
-    });
+      setS({ ...s, q: s.q + 1, picked: null });
+    }
   }
   const pick = (k: number) => {
     if (s.picked !== null) return;
+    const ok = k === t.quiz[s.q].a;
     // Yanlış yapılan soru akıllı tekrara girer: 1, 3 ve 7 gün sonra yeniden sorulur.
-    if (k !== t.quiz[s.q].a) yanlisKaydet(`${ders}.${id}.${s.q}`);
-    setS((p) => (p.picked !== null ? p : { ...p, picked: k, right: p.right + (k === t.quiz[p.q].a ? 1 : 0) }));
+    if (!ok) yanlisKaydet(`${ders}.${id}.${s.q}`);
+    kaydet("soru");
+    if (ok) kaydet("dogru", 1, PUAN.dogru);
+    setS((p) => (p.picked !== null ? p : { ...p, picked: k, right: p.right + (ok ? 1 : 0) }));
   };
 
   // Klavye
@@ -109,16 +148,22 @@ export default function Lesson({
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
-  const pos = s.q < 0 ? s.i : nCards + s.q;
+  const pos = s.q >= 0 ? nCards + s.q : s.a < 0 ? -1 : s.ara ? sonOge - 1 : s.i;
   let body: React.ReactNode, controls: React.ReactNode = null, key: string;
+  const Check = Icon.check, Kilit = Icon.kilit, SoruI = Icon.soru;
 
-  if (s.q < 0) {
-    const last = s.i === nCards - 1;
-    key = "kartlar";
+  if (s.q < 0 && s.a < 0) {
+    // Konu girişi: aşamalar sırayla açılır.
+    key = "giris";
+    const testAcik = bitenA >= nAsama;
     body = (
-      <div className="flex flex-col gap-14" aria-live="polite">
+      <div className="flex flex-col gap-5">
+        <section className="grid gap-1.5 pt-2">
+          <h1 className="text-[26px]">{t.title}</h1>
+          <Html as="p" className="text-[15px] text-muted-foreground" html={t.summary} />
+        </section>
         {eksik.length > 0 && (
-          <div className="-mb-6 grid gap-1 rounded-2xl bg-secondary px-4 py-3.5 text-[14px]">
+          <div className="grid gap-1 rounded-2xl bg-secondary px-4 py-3.5 text-[14px]">
             <b className="text-[15px]">Bu konu şunların üzerine kurulu:</b>
             <span>
               {eksik.map((o, k) => (
@@ -131,7 +176,7 @@ export default function Lesson({
         {adimli && !birlesik && (
           <Link
             href={`/ornek/${adimli.id}/`}
-            className="-mb-6 flex items-center gap-3 rounded-2xl bg-acc-soft px-4 py-3.5 transition-transform active:scale-[.99]"
+            className="flex items-center gap-3 rounded-2xl bg-acc-soft px-4 py-3.5 transition-transform active:scale-[.99]"
           >
             <span className="grid flex-1 gap-0.5">
               <b className="text-[16px] font-bold">Önce yaparak öğren</b>
@@ -140,8 +185,113 @@ export default function Lesson({
             <span className="rounded-full bg-acc px-4 py-2 text-[14px] font-bold text-white">Başla</span>
           </Link>
         )}
-        {ogeler.slice(0, s.i + 1).map((o, j) =>
-          o.tur === "kart" ? (
+        <ol className="grid overflow-hidden rounded-2xl border border-border bg-card" aria-label="Aşamalar">
+          {asamalar(nKart).map(([b, e], a) => {
+            const durum = a < bitenA ? "bitti" : a === bitenA ? "sirada" : "kilitli";
+            return (
+              <li key={a} className="border-b border-border last:border-b-0">
+                <button
+                  disabled={durum === "kilitli"}
+                  onClick={() => asamaAc(a)}
+                  className="flex w-full items-center gap-3.5 p-4 text-left transition-colors enabled:active:bg-secondary disabled:opacity-60"
+                >
+                  <AsamaNokta durum={durum}>{durum === "bitti" ? <Check /> : durum === "kilitli" ? <Kilit /> : a + 1}</AsamaNokta>
+                  <span className="grid min-w-0 flex-1 gap-0.5">
+                    <b className="font-bold">{a + 1}. aşama</b>
+                    <Html as="span" className="truncate text-sm text-muted-foreground" html={t.cards[b].h} />
+                  </span>
+                  <span className="flex-none text-[13px] font-semibold tabular-nums text-muted-foreground">{e - b} kart</span>
+                </button>
+              </li>
+            );
+          })}
+          <li>
+            <button
+              disabled={!testAcik}
+              onClick={() => asamaAc(nAsama)}
+              className="flex w-full items-center gap-3.5 p-4 text-left transition-colors enabled:active:bg-secondary disabled:opacity-60"
+            >
+              <AsamaNokta durum={prog[konuKey] ? "bitti" : testAcik ? "sirada" : "kilitli"}>{prog[konuKey] ? <Check /> : testAcik ? <SoruI /> : <Kilit />}</AsamaNokta>
+              <span className="grid min-w-0 flex-1 gap-0.5">
+                <b className="font-bold">Mini test</b>
+                <span className="text-sm text-muted-foreground">{prog[konuKey] ? `Son sonuç: ${prog[konuKey]}` : testAcik ? "Aşamaları bitirdin, sıra testte" : "Son aşamadan sonra açılır"}</span>
+              </span>
+              <span className="flex-none text-[13px] font-semibold tabular-nums text-muted-foreground">{nQuiz} soru</span>
+            </button>
+          </li>
+        </ol>
+        <p className="text-[13px] text-muted-foreground">Aşamalar sırayla açılır. Bitirdiğin aşamaya istediğin zaman dönebilirsin.</p>
+      </div>
+    );
+    controls = (
+      <Alt>
+        <Button className="w-full" data-next onClick={() => step(1)}>
+          {prog[konuKey] ? "Baştan başla" : bitenA === 0 ? "Başla" : testAcik ? "Mini teste geç" : `${bitenA + 1}. aşamadan devam et`}
+        </Button>
+      </Alt>
+    );
+  } else if (s.ara) {
+    // Aşama bitti.
+    const sonAsama = s.a === nAsama - 1;
+    key = `ara${s.a}`;
+    body = (
+      <article className="flex flex-col items-center gap-3 pt-10 text-center">
+        <div className="flex gap-1.5" aria-hidden="true">
+          {asamaOge.map((_, a) => (
+            <motion.span
+              key={a}
+              className={cn("h-2 w-10 rounded-full", a <= Math.max(s.a, bitenA - 1) ? "bg-acc" : "bg-secondary")}
+              initial={a === s.a ? { scaleX: 0 } : false}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            />
+          ))}
+        </div>
+        <motion.h1
+          className="text-[28px]"
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15 }}
+        >
+          {s.a + 1}. aşama bitti
+        </motion.h1>
+        <p className="text-[15px] text-muted-foreground">
+          {sonAsama ? "Bütün kartları gördün. Şimdi öğrendiklerini mini testte dene." : s.a + 2 === nAsama ? "Sırada son aşama var." : `Sırada ${s.a + 2}. aşama var.`}
+        </p>
+        <ul className="mt-3 grid w-full gap-2 rounded-2xl bg-secondary px-4 py-3.5 text-left text-[15px]">
+          {t.cards.slice(...asamalar(nKart)[s.a]).map((c, k) => (
+            <li key={k} className="flex items-start gap-2.5 [&_svg]:mt-0.5 [&_svg]:size-4 [&_svg]:flex-none [&_svg]:text-acc"><Check /><Html as="span" html={c.h} /></li>
+          ))}
+        </ul>
+        {s.odul > 0 && (
+          <motion.span
+            className="rounded-full bg-acc-soft px-3.5 py-1.5 text-[15px] font-bold text-acc tabular-nums"
+            initial={{ scale: 0.7, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 300, damping: 18, delay: 0.3 }}
+          >
+            +{s.odul} puan
+          </motion.span>
+        )}
+      </article>
+    );
+    controls = (
+      <Alt>
+        <div className="grid gap-2">
+          <Button className="w-full" data-next onClick={() => step(1)}>{sonAsama ? "Mini teste geç" : `${s.a + 2}. aşamaya geç`}</Button>
+          <Button variant="outline" className="w-full" onClick={() => setS(START)}>Aşamalara dön</Button>
+        </div>
+      </Alt>
+    );
+  } else if (s.q < 0) {
+    const last = s.i === sonOge - 1;
+    key = `a${s.a}`;
+    body = (
+      <div className="flex flex-col gap-14" aria-live="polite">
+        <span className="-mb-10 text-[13px] font-bold text-muted-foreground">{s.a + 1}. aşama · {nAsama} aşamadan</span>
+        {ogeler.slice(ilkOge, s.i + 1).map((o, jj) => {
+          const j = ilkOge + jj;
+          return o.tur === "kart" ? (
             <AkisKart
               key={j}
               ref={j === s.i ? sonKart : undefined}
@@ -170,8 +320,8 @@ export default function Lesson({
               <SiraliMetin className="ad-metin" html={o.a.metin} gecikme={0.1} />
               <AdimGorunum a={o.a} tamam={tamamlar[j]} bildir={j === s.i ? setBildirim : yoksay} />
             </motion.article>
-          ),
-        )}
+          );
+        })}
       </div>
     );
     controls = (
@@ -192,7 +342,7 @@ export default function Lesson({
             </motion.div>
           )}
         </AnimatePresence>
-        <Button className="w-full" data-next disabled={kilitli} onClick={() => step(1)}>{last ? "Mini teste geç" : "Devam"}</Button>
+        <Button className="w-full" data-next disabled={kilitli} onClick={() => step(1)}>{last ? "Aşamayı bitir" : "Devam"}</Button>
       </Alt>
     );
   } else if (s.q < nQuiz) {
@@ -244,6 +394,7 @@ export default function Lesson({
         </motion.div>
         <h2 className="text-[22px]">{great ? "Harika, hepsi doğru!" : fine ? "Güzel gidiyorsun!" : "Kartlara bir kez daha bakalım."}</h2>
         <p className="font-medium text-muted-foreground">{t.title} tamamlandı.</p>
+        {s.odul > 0 && <span className="mt-1 rounded-full bg-acc-soft px-3.5 py-1.5 text-[15px] font-bold text-acc tabular-nums">+{s.odul} puan</span>}
         {s.right < nQuiz && (
           <p className="mt-2 rounded-2xl bg-secondary px-4 py-3 text-[14px] font-medium">
             Yanlış yaptığın {nQuiz - s.right === 1 ? "soru" : `${nQuiz - s.right} soru`} yarın, sonra 3. ve 7. gün yeniden karşına çıkacak. Ana sayfadaki <b>Tekrar</b> bölümünden çözebilirsin.
@@ -254,7 +405,7 @@ export default function Lesson({
           {konuOyunlari(ders, id).map((o) => (
             <Button key={o.id} asChild variant="outline"><Link href={`/oyunlar/${o.id}/`}>Oyna: {o.ad}</Link></Button>
           ))}
-          <Button variant="outline" onClick={() => { setS(START); setBiten(new Set()); }}>Konuyu tekrar et</Button>
+          <Button variant="outline" onClick={() => { setS(START); setBiten(new Set()); }}>Aşamalara dön</Button>
           <Button asChild variant="outline"><Link href={href(ders)}>{DERSLER[ders].ad} konularına dön</Link></Button>
         </div>
       </article>
@@ -307,6 +458,22 @@ export default function Lesson({
 }
 
 const yoksay = () => {};
+
+/** Konu girişindeki aşama düğümü. */
+function AsamaNokta({ children, durum }: { children: React.ReactNode; durum: "bitti" | "sirada" | "kilitli" }) {
+  return (
+    <span
+      className={cn(
+        "grid size-9 flex-none place-items-center rounded-full border-[1.5px] font-display text-[15px] font-extrabold tabular-nums [&_svg]:size-4",
+        durum === "bitti" && "border-acc bg-acc text-primary-foreground",
+        durum === "sirada" && "border-acc text-acc",
+        durum === "kilitli" && "border-border bg-secondary text-muted-foreground",
+      )}
+    >
+      {children}
+    </span>
+  );
+}
 
 type Kart = Topic["cards"][number];
 

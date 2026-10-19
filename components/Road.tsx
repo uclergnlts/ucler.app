@@ -5,7 +5,8 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { DERSLER, type DersId, type Entry } from "@/lib/dersler";
 import { durumlar } from "@/lib/harita";
-import { setGorunum, useGorunum, useProg, type Gorunum } from "@/lib/store";
+import { setGorunum, useAsama, useGorunum, useProg, type Gorunum } from "@/lib/store";
+import { asamaSayisi } from "@/lib/asama";
 import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
 import { Govde, href, Liste } from "./temel";
@@ -28,7 +29,7 @@ const Dugum = ({ children, durum }: { children: React.ReactNode; durum: "bitti" 
 );
 
 export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
-  const prog = useProg(), gorunum = useGorunum();
+  const prog = useProg(), gorunum = useGorunum(), asama = useAsama();
   const s = DERSLER[ders];
   const d = durumlar(ders, list, prog);
   const ready = list.filter((e) => e.id), done = ready.filter((e) => prog[`${ders}.${e.id}`]).length;
@@ -71,7 +72,7 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
                       <b className="font-bold leading-snug">{e.title}</b>
                       <span className="line-clamp-2 text-sm text-muted-foreground">{e.summary}</span>
                       <span className={cn("mt-0.5 text-xs font-semibold", res ? "text-acc" : "text-muted-foreground")}>
-                        {e.cardCount} kart · {e.quizCount} soru{res ? ` · ${res}` : ""}
+                        {e.cardCount} kart · {e.quizCount} soru{res ? ` · ${res}` : asama[`${ders}.${e.id}`] ? ` · ${asama[`${ders}.${e.id}`]}/${asamaSayisi(e.cardCount ?? 0)} aşama` : ""}
                       </span>
                       {kilitli && <span className="text-xs font-medium text-muted-foreground">Önce: {eksik.join(", ")}</span>}
                     </span>

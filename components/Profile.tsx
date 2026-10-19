@@ -2,6 +2,7 @@
 import { DERSLER, DERS_IDS, type DersId, type Entry, isDers } from "@/lib/dersler";
 import { doneKeys, resetAll, setAd, toggleAnlamadim, useAd, useAnlamadim, useProg, useSaved, useStorageOk } from "@/lib/store";
 import { Icon } from "./icons";
+import { seri, usePuan } from "@/lib/puan";
 import Link from "next/link";
 import { Bolum, Bos, Govde, href, Html, InstaLink, Liste, PageHead, Row, Simge, Top } from "./temel";
 import { Button } from "./ui/button";
@@ -9,6 +10,7 @@ import { Card } from "./ui/card";
 import { Progress } from "./ui/progress";
 
 export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[]>; basliklar: Record<string, string[]> }) {
+  const puan = usePuan();
   const prog = useProg(), saved = useSaved(), storageOk = useStorageOk(), ad = useAd(), anlamadim = useAnlamadim();
   const done = doneKeys(prog).filter((k) => /\//.test(prog[k]));
   let right = 0, total = 0;
@@ -56,8 +58,11 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
             </span>
           </span>
         </section>
-        <Card className="grid grid-cols-3 divide-x divide-border">
-          {([[done.length, "konu bitti"], [total ? `${Math.round((100 * right) / total)}%` : "–", "doğru cevap"], [saved.length, "kayıtlı"]] as const).map(([b, l]) => (
+        <Card className="grid grid-cols-3 gap-0 py-0 [&>div]:border-border [&>div:nth-child(-n+3)]:border-b [&>div:not(:nth-child(3n+1))]:border-l">
+          {([
+            [puan.toplam ?? 0, "puan"], [`${seri(puan)} gün`, "seri"], [`${puan.enUzun ?? 0} gün`, "en uzun seri"],
+            [done.length, "konu bitti"], [total ? `${Math.round((100 * right) / total)}%` : "–", "doğru cevap"], [saved.length, "kayıtlı"],
+          ] as const).map(([b, l]) => (
             <div key={l} className="px-2 py-3.5 text-center">
               <b className="block font-display text-2xl leading-tight font-extrabold">{b}</b>
               <span className="text-xs font-semibold text-muted-foreground">{l}</span>
@@ -115,9 +120,10 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
         </Bolum>
         <Bolum title="Hesap">
           <Button variant="outline" disabled>Hesap oluştur · yakında</Button>
+          <p className="text-[13px] text-muted-foreground">Hesap gelince puanın ve serin hesabına taşınır, puan listesinde arkadaşlarınla yarışabilirsin.</p>
           <Button
             variant="outline"
-            onClick={() => { if (confirm("Tüm ilerlemen, kaydettiğin konular, tekrar sıran ve işaretlediğin kartlar silinsin mi?")) resetAll(); }}
+            onClick={() => { if (confirm("Tüm ilerlemen, puanın, serin, kaydettiğin konular, tekrar sıran ve işaretlediğin kartlar silinsin mi?")) resetAll(); }}
           >
             İlerlemeyi sıfırla
           </Button>

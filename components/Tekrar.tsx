@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import type { TekrarSoru } from "@/lib/content";
 import { DERSLER } from "@/lib/dersler";
+import { kaydet, PUAN } from "@/lib/puan";
 import { gun, gunAdi, tekrarCevap, tekrarOku, useTekrar } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
@@ -46,6 +47,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
     setPicked(k);
     if (ok) setRight((r) => r + 1);
     tekrarCevap(cur.key, ok);
+    kaydet("tekrar", 1, ok ? PUAN.tekrar : 0);
   };
   const ileri = () => { setPicked(null); setI((x) => x + 1); };
 
