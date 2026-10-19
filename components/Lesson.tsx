@@ -16,7 +16,7 @@ import { kartVideolari, sureYaz, type Video } from "@/lib/videolar";
 import { Icon } from "./icons";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
-import { Html, href, Logo } from "./temel";
+import { Html, href } from "./temel";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
 import VideoPlayer from "./VideoPlayer";
@@ -26,6 +26,8 @@ import { konuOyunlari } from "@/lib/oyunlar";
 import type { Adim, AdimliDers } from "@/lib/adimli";
 import { AdimGorunum, type Bildirim } from "./DersMotoru";
 import { Alt, Secenekler } from "./Soru";
+import AsamaYolu, { type YolDugum } from "./AsamaYolu";
+import { Konfeti, Madalya, PuanRozet } from "./Kutlama";
 
 /** Akıştaki öğe: konu kartı ya da etkileşimli adım. */
 type Oge = { tur: "kart"; k: number } | { tur: "adim"; a: Adim; n: number };
@@ -158,9 +160,23 @@ export default function Lesson({
     const testAcik = bitenA >= nAsama;
     body = (
       <div className="flex flex-col gap-5">
-        <section className="grid gap-1.5 pt-2">
+        <motion.div
+          className="relative overflow-hidden rounded-3xl bg-acc-soft p-4 [&_svg]:mx-auto [&_svg]:block [&_svg]:h-auto [&_svg]:max-h-[120px] [&_svg]:w-full"
+          initial={{ opacity: 0, scale: 0.97 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <div className="rounded-2xl bg-card p-2.5" aria-hidden="true" dangerouslySetInnerHTML={{ __html: t.cards[0].svg }} />
+        </motion.div>
+        <section className="grid gap-2">
           <h1 className="text-[26px]">{t.title}</h1>
           <Html as="p" className="text-[15px] text-muted-foreground" html={t.summary} />
+          <div className="mt-1 flex items-center gap-3">
+            <div className="flex flex-1 gap-1" aria-hidden="true">
+              {asamaOge.map((_, a) => <span key={a} className={cn("h-2.5 flex-1 rounded-full", a < bitenA ? "bg-acc" : "bg-secondary")} />)}
+            </div>
+            <span className="text-[13px] font-bold tabular-nums text-muted-foreground">{bitenA}/{nAsama} aşama</span>
+          </div>
         </section>
         {eksik.length > 0 && (
           <div className="grid gap-1 rounded-2xl bg-secondary px-4 py-3.5 text-[14px]">
@@ -185,42 +201,26 @@ export default function Lesson({
             <span className="rounded-full bg-acc px-4 py-2 text-[14px] font-bold text-white">Başla</span>
           </Link>
         )}
-        <ol className="grid overflow-hidden rounded-2xl border border-border bg-card" aria-label="Aşamalar">
-          {asamalar(nKart).map(([b, e], a) => {
-            const durum = a < bitenA ? "bitti" : a === bitenA ? "sirada" : "kilitli";
-            return (
-              <li key={a} className="border-b border-border last:border-b-0">
-                <button
-                  disabled={durum === "kilitli"}
-                  onClick={() => asamaAc(a)}
-                  className="flex w-full items-center gap-3.5 p-4 text-left transition-colors enabled:active:bg-secondary disabled:opacity-60"
-                >
-                  <AsamaNokta durum={durum}>{durum === "bitti" ? <Check /> : durum === "kilitli" ? <Kilit /> : a + 1}</AsamaNokta>
-                  <span className="grid min-w-0 flex-1 gap-0.5">
-                    <b className="font-bold">{a + 1}. aşama</b>
-                    <Html as="span" className="truncate text-sm text-muted-foreground" html={t.cards[b].h} />
-                  </span>
-                  <span className="flex-none text-[13px] font-semibold tabular-nums text-muted-foreground">{e - b} kart</span>
-                </button>
-              </li>
-            );
-          })}
-          <li>
-            <button
-              disabled={!testAcik}
-              onClick={() => asamaAc(nAsama)}
-              className="flex w-full items-center gap-3.5 p-4 text-left transition-colors enabled:active:bg-secondary disabled:opacity-60"
-            >
-              <AsamaNokta durum={prog[konuKey] ? "bitti" : testAcik ? "sirada" : "kilitli"}>{prog[konuKey] ? <Check /> : testAcik ? <SoruI /> : <Kilit />}</AsamaNokta>
-              <span className="grid min-w-0 flex-1 gap-0.5">
-                <b className="font-bold">Mini test</b>
-                <span className="text-sm text-muted-foreground">{prog[konuKey] ? `Son sonuç: ${prog[konuKey]}` : testAcik ? "Aşamaları bitirdin, sıra testte" : "Son aşamadan sonra açılır"}</span>
-              </span>
-              <span className="flex-none text-[13px] font-semibold tabular-nums text-muted-foreground">{nQuiz} soru</span>
-            </button>
-          </li>
-        </ol>
-        <p className="text-[13px] text-muted-foreground">Aşamalar sırayla açılır. Bitirdiğin aşamaya istediğin zaman dönebilirsin.</p>
+        <div className="pt-8 pb-2">
+          <AsamaYolu
+            balon={prog[konuKey] ? "Yeniden" : bitenA === 0 ? "Başla" : "Devam"}
+            dugumler={[
+              ...asamalar(nKart).map(([b], a) => ({
+                baslik: `${a + 1}. aşama`,
+                alt: t.cards[b].h,
+                durum: (prog[konuKey] ? (a === 0 ? "sirada" : "bitti") : a < bitenA ? "bitti" : a === bitenA ? "sirada" : "kilitli") as YolDugum["durum"],
+                ac: () => asamaAc(a),
+              })),
+              {
+                baslik: "Mini test",
+                alt: prog[konuKey] ? `Son sonuç: ${prog[konuKey]}` : `${nQuiz} soru`,
+                durum: (prog[konuKey] ? "bitti" : testAcik ? "sirada" : "kilitli") as YolDugum["durum"],
+                test: true,
+                ac: () => asamaAc(nAsama),
+              },
+            ]}
+          />
+        </div>
       </div>
     );
     controls = (
@@ -235,15 +235,17 @@ export default function Lesson({
     const sonAsama = s.a === nAsama - 1;
     key = `ara${s.a}`;
     body = (
-      <article className="flex flex-col items-center gap-3 pt-10 text-center">
+      <article className="flex flex-col items-center gap-3 pt-4 text-center">
+        <Konfeti />
+        <Madalya />
         <div className="flex gap-1.5" aria-hidden="true">
           {asamaOge.map((_, a) => (
             <motion.span
               key={a}
-              className={cn("h-2 w-10 rounded-full", a <= Math.max(s.a, bitenA - 1) ? "bg-acc" : "bg-secondary")}
+              className={cn("h-2.5 w-10 origin-left rounded-full", a <= Math.max(s.a, bitenA - 1) ? "bg-acc" : "bg-secondary")}
               initial={a === s.a ? { scaleX: 0 } : false}
               animate={{ scaleX: 1 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
             />
           ))}
         </div>
@@ -251,28 +253,19 @@ export default function Lesson({
           className="text-[28px]"
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15 }}
+          transition={{ delay: 0.3 }}
         >
           {s.a + 1}. aşama bitti
         </motion.h1>
         <p className="text-[15px] text-muted-foreground">
           {sonAsama ? "Bütün kartları gördün. Şimdi öğrendiklerini mini testte dene." : s.a + 2 === nAsama ? "Sırada son aşama var." : `Sırada ${s.a + 2}. aşama var.`}
         </p>
-        <ul className="mt-3 grid w-full gap-2 rounded-2xl bg-secondary px-4 py-3.5 text-left text-[15px]">
+        <ul className="mt-1 grid w-full gap-2 rounded-2xl bg-secondary px-4 py-3.5 text-left text-[15px]">
           {t.cards.slice(...asamalar(nKart)[s.a]).map((c, k) => (
             <li key={k} className="flex items-start gap-2.5 [&_svg]:mt-0.5 [&_svg]:size-4 [&_svg]:flex-none [&_svg]:text-acc"><Check /><Html as="span" html={c.h} /></li>
           ))}
         </ul>
-        {s.odul > 0 && (
-          <motion.span
-            className="rounded-full bg-acc-soft px-3.5 py-1.5 text-[15px] font-bold text-acc tabular-nums"
-            initial={{ scale: 0.7, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 300, damping: 18, delay: 0.3 }}
-          >
-            +{s.odul} puan
-          </motion.span>
-        )}
+        {s.odul > 0 && <PuanRozet puan={s.odul} />}
       </article>
     );
     controls = (
@@ -382,8 +375,9 @@ export default function Lesson({
     const great = s.right === nQuiz, fine = s.right >= nQuiz / 2;
     key = "son";
     body = (
-      <article className="flex flex-col items-center gap-2 pt-6 text-center">
-        <Logo className="mb-1 text-[40px]" />
+      <article className="flex flex-col items-center gap-2 pt-4 text-center">
+        {fine && <Konfeti />}
+        <Madalya kupa />
         <motion.div
           className="font-display text-[56px] leading-none font-extrabold text-acc"
           initial={{ scale: 0.6, opacity: 0 }}
@@ -394,7 +388,7 @@ export default function Lesson({
         </motion.div>
         <h2 className="text-[22px]">{great ? "Harika, hepsi doğru!" : fine ? "Güzel gidiyorsun!" : "Kartlara bir kez daha bakalım."}</h2>
         <p className="font-medium text-muted-foreground">{t.title} tamamlandı.</p>
-        {s.odul > 0 && <span className="mt-1 rounded-full bg-acc-soft px-3.5 py-1.5 text-[15px] font-bold text-acc tabular-nums">+{s.odul} puan</span>}
+        {s.odul > 0 && <PuanRozet puan={s.odul} />}
         {s.right < nQuiz && (
           <p className="mt-2 rounded-2xl bg-secondary px-4 py-3 text-[14px] font-medium">
             Yanlış yaptığın {nQuiz - s.right === 1 ? "soru" : `${nQuiz - s.right} soru`} yarın, sonra 3. ve 7. gün yeniden karşına çıkacak. Ana sayfadaki <b>Tekrar</b> bölümünden çözebilirsin.

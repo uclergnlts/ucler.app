@@ -2,7 +2,8 @@
 import { DERSLER, DERS_IDS, type DersId, type Entry, isDers } from "@/lib/dersler";
 import { doneKeys, resetAll, setAd, toggleAnlamadim, useAd, useAnlamadim, useProg, useSaved, useStorageOk } from "@/lib/store";
 import { Icon } from "./icons";
-import { seri, usePuan } from "@/lib/puan";
+import { seri, usePuan, type Gun } from "@/lib/puan";
+import { gun } from "@/lib/store";
 import Link from "next/link";
 import { Bolum, Bos, Govde, href, Html, InstaLink, Liste, PageHead, Row, Simge, Top } from "./temel";
 import { Button } from "./ui/button";
@@ -69,6 +70,7 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
             </div>
           ))}
         </Card>
+        <HaftalikPuan gunler={puan.gunler ?? {}} />
         <Bolum title="Kaydedilenler" id="kaydedilenler">
           {savedList.length ? (
             <Liste>
@@ -130,5 +132,36 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
         </Bolum>
       </Govde>
     </div>
+  );
+}
+
+const GUN_ADI = ["Pz", "Pt", "Sa", "Ça", "Pe", "Cu", "Ct"];
+
+/** Son 7 günün puanı: tek seri sütun grafik; bugünün sütunu koyu, değeri üstünde yazar. */
+function HaftalikPuan({ gunler }: { gunler: Record<string, Gun> }) {
+  const g = Array.from({ length: 7 }, (_, k) => {
+    const t = gun(k - 6);
+    return { t, ad: GUN_ADI[new Date(Date.parse(t + "T12:00:00")).getDay()], p: gunler[t]?.p ?? 0, bugun: k === 6 };
+  });
+  const max = Math.max(20, ...g.map((x) => x.p)), toplam = g.reduce((n, x) => n + x.p, 0);
+  return (
+    <Bolum title="Son 7 gün" more={<span className="text-sm font-bold tabular-nums text-muted-foreground">{toplam} puan</span>}>
+      <Card className="px-4 pt-4 pb-3">
+        <ol className="flex h-36 items-end gap-2" aria-label="Son 7 günün puanı">
+          {g.map((x) => (
+            <li key={x.t} className="group relative grid h-full flex-1 grid-rows-[1fr_auto] justify-items-center gap-1.5" title={`${x.ad}: ${x.p} puan`}>
+              <span className="flex w-full flex-col items-center justify-end">
+                {(x.bugun || x.p === max) && x.p > 0 && <span className="mb-1 text-[11px] font-bold tabular-nums text-muted-foreground">{x.p}</span>}
+                <span
+                  className={x.bugun ? "w-full max-w-7 rounded-t-[4px] bg-[var(--c1)]" : "w-full max-w-7 rounded-t-[4px] bg-[#a9c8fb] group-hover:bg-[#7fadf9]"}
+                  style={{ height: `${Math.max(x.p ? 4 : 2, (100 * x.p) / max)}%` }}
+                />
+              </span>
+              <span className={x.bugun ? "text-[11px] font-bold" : "text-[11px] font-semibold text-muted-foreground"}>{x.ad}</span>
+            </li>
+          ))}
+        </ol>
+      </Card>
+    </Bolum>
   );
 }

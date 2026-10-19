@@ -74,6 +74,15 @@ export const Icon = {
   tekrar: () => (
     <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M20 11a8 8 0 1 0-2.3 5.7" /><path d="M20 4v7h-7" /></svg>
   ),
+  kupa: () => (
+    <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0z" /><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3" /><path d="M12 14v3M8.5 20h7l-.8-3h-5.4z" /></svg>
+  ),
+  yildiz: () => (
+    <svg {...base} strokeLinejoin="round"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z" /></svg>
+  ),
+  kitap: () => (
+    <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z" /><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5" /></svg>
+  ),
   seri: () => (
     <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M12 21c-3.9 0-6.5-2.6-6.5-6.2 0-3.4 2.5-5.4 3.6-8.3.9 1.5 1.3 2.8 1.3 4.2 1.6-1.2 2.6-3.6 2.4-6.7 3.6 2.4 5.7 6.4 5.7 10.6 0 3.7-2.6 6.4-6.5 6.4z" /></svg>
   ),
