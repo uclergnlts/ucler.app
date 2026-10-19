@@ -60,7 +60,7 @@
     "hedef": {
      "V": 200
     },
-    "tamam": "Gösterge 3 N'a indi: <b>görünür ağırlık = G − F<sub>k</sub></b>, yani F<sub>k</sub> = 2 N. <b>Arşimet ilkesi</b>: F<sub>k</sub> = V<sub>batan</sub>·d<sub>sıvı</sub>·g = 0,0002 m³ × 1000 kg/m³ × 10 m/s² = 2 N. Kaldırma kuvveti, cismin yerinden ettiği sıvının ağırlığıdır."
+    "tamam": "Gösterge 3 N'a indi: F<sub>k</sub> = 5 − 3 = 2 N. Sağlaması: V<sub>batan</sub>·d<sub>sıvı</sub>·g = 0,0002 m³ (200 cm³) × 1000 kg/m³ × 10 m/s² = 2 N."
    },
    "kart": 3,
    "goster": {
@@ -72,7 +72,7 @@
   },
   {
    "baslik": "Derine in",
-   "metin": "Küp artık tamamen suyun içinde. Onu yukarı aşağı oynat: üst ve alt yüzlerdeki kuvvetler nasıl değişiyor?",
+   "metin": "Baştaki 10 cm'lik küp tamamen suyun içinde. Onu yukarı aşağı oynat: üst ve alt yüzlerdeki kuvvetler nasıl değişiyor?",
    "sahne": {
     "tur": "fiz2-basinc-fark"
    },
@@ -104,15 +104,15 @@
      {
       "yazi": "Değişmez",
       "dogru": true,
-      "neden": "İki yüzün kuvveti de aynı miktarda artar; aradaki fark hep 10 N kalır. F<sub>k</sub> batan hacme bağlıdır, derinliğe değil. Kısmen batmış bir cismi bastırırsan ise batan hacim, dolayısıyla F<sub>k</sub> artar."
+      "neden": "İki yüzün kuvveti de aynı miktarda artar; aradaki fark hep 10 N kalır. F<sub>k</sub> batan hacme bağlıdır, derinliğe değil."
      }
     ]
    },
-   "kart": 4
+   "kart": 3
   },
   {
    "baslik": "Aynı cisim, farklı sıvılar",
-   "metin": "Özkütlesi 0,6 g/cm³ olan tahta küpü farklı sıvılara bırakıyorsun. Sıvının özkütlesini değiştir ve küpün <b>tam yarısı</b> batık olarak yüzsün.",
+   "metin": "Özkütlesi 0,6 g/cm³ olan 1000 cm³'lük (6 N) tahta küpü farklı sıvılara bırakıyorsun. Sıvının özkütlesini değiştir ve küpün tam yarısı batık olarak yüzsün.",
    "sahne": {
     "tur": "fiz2-sivilar"
    },
@@ -134,7 +134,7 @@
     "hedef": {
      "dl": 12
     },
-    "tamam": "Yüzen cisimde <b>F<sub>k</sub> = G</b>, bu yüzden V<sub>batan</sub> / V = d<sub>cisim</sub> / d<sub>sıvı</sub> = 0,6 / 1,2 = 1/2. Yüzdüğü her sıvıda F<sub>k</sub> hep 6 N; değişen yalnızca batan hacim. Özkütlesi 0,6'dan küçük sıvıda ise küp batar."
+    "tamam": "0,6 / 1,2 = 1/2: küpün yarısı batık. Yüzdüğü her sıvıda F<sub>k</sub> = G = 6 N kalır; değişen yalnızca batan hacimdir, yoğun sıvıda cisim az batar."
    },
    "kart": 6,
    "goster": {
@@ -146,7 +146,7 @@
   },
   {
    "baslik": "Gemiyi yükle",
-   "metin": "Çelik suda batar ama gemi yüzer, çünkü içi hava dolu büyük bir kabuktur. Gemiye konteyner yükle; su, gövdedeki <b>yükleme çizgisine</b> (sarı daire) gelince dur.",
+   "metin": "Gemiye konteyner yükle; su, gövdedeki yükleme çizgisine (sarı daire) gelince dur.",
    "sahne": {
     "tur": "fiz2-gemi"
    },
@@ -167,9 +167,9 @@
     "hedef": {
      "n": 4
     },
-    "tamam": "Her konteyner gemiyi biraz daha batırdı. Yüzen gemide <b>F<sub>k</sub> = G<sub>gemi</sub> + G<sub>yük</sub></b>; artan ağırlığı dengelemek için gemi daha çok su yerinden etmeli. Yükleme çizgisi, gemiyi güvenle ne kadar batırabileceğini gösterir."
+    "tamam": "Her konteyner gemiyi biraz daha batırdı: artan ağırlığı dengelemek için gemi daha çok su yerinden etmeli. Yükleme çizgisi, gemiyi güvenle ne kadar batırabileceğini gösterir."
    },
-   "kart": 10,
+   "kart": 9,
    "goster": {
     "deger": {
      "n": 2
@@ -198,7 +198,7 @@
      {
       "yazi": "Dalar",
       "dogru": true,
-      "neden": "Denizaltı hacmini değil, <b>ağırlığını</b> değiştirir. Tanklara su alınca G &gt; F<sub>k</sub> olur ve dalar. Su basınçlı havayla dışarı atılınca G &lt; F<sub>k</sub> olur ve yükselir. G = F<sub>k</sub> olursa askıda kalır."
+      "neden": "Denizaltı hacmini değil ağırlığını değiştirir: su alınca G &gt; F<sub>k</sub> olur ve dalar, su basınçlı havayla atılınca G &lt; F<sub>k</sub> olur ve yükselir. G = F<sub>k</sub> olursa askıda kalır."
      },
      {
       "yazi": "Olduğu yerde kalır",
@@ -206,11 +206,11 @@
      }
     ]
    },
-   "kart": 10
+   "kart": 9
   },
   {
    "baslik": "Balonu uçur",
-   "metin": "Hava da bir akışkandır ve kaldırır. 1 m³ helyum, havadan yaklaşık <b>12 N</b> kaldırma kuvveti alır; kendi ağırlığı ise yaklaşık 1,7 N. Sepet ve balonun zarı 40 N. Balonu büyüt ve <b>yerden kaldır</b>.",
+   "metin": "1 m³ helyum havadan yaklaşık 12 N kaldırma kuvveti alır; kendi ağırlığı yaklaşık 1,7 N. Sepet ve balonun zarı 40 N. Balonu büyüt ve yerden kaldır.",
    "sahne": {
     "tur": "fiz2-balon"
    },
@@ -235,9 +235,9 @@
       8
      ]
     },
-    "tamam": "Her m³ helyum net yaklaşık 10 N kaldırır. 4 m³'te F<sub>k</sub> = 48 N, ağırlık 46,8 N: balon yükselir. Kaldırma kuvveti F<sub>k</sub> = V·d<sub>hava</sub>·g'dir. Sıcak hava balonunda ise ısınan havanın özkütlesi azalır."
+    "tamam": "4 m³'te F<sub>k</sub> = 48 N, toplam ağırlık 40 + 6,8 = 46,8 N: balon yükselir. Her m³ helyum net yaklaşık 10 N kaldırır."
    },
-   "kart": 13,
+   "kart": 11,
    "goster": {
     "deger": {
      "V": 3

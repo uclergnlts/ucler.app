@@ -6,8 +6,42 @@
  "ozet": "Örtü çek, kutu it, kaykayda itiş: kuvvetin hareketi nasıl değiştirdiğini kendin dene.",
  "adimlar": [
   {
+   "baslik": "Net kuvvet",
+   "metin": "Soldaki 30 N ile sağa itiyor. Sağdakinin itmesini ayarla ve net kuvveti sıfır yap.",
+   "sahne": {
+    "tur": "fiz4-net"
+   },
+   "deger": {
+    "F": 10
+   },
+   "kontroller": [
+    {
+     "ad": "F",
+     "etiket": "Sağdakinin itmesi",
+     "min": 0,
+     "max": 50,
+     "adim": 5,
+     "birim": "N"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "F": 30
+    },
+    "tamam": "30 N sağa, 30 N sola: net kuvvet 0. Kuvvetler var ama kutunun hızı değişmez; bunun nedenini 1. yasa anlatıyor."
+   },
+   "kart": 1,
+   "goster": {
+    "deger": {
+     "F": 20
+    },
+    "not": "Sağdaki 20 N iterse net kuvvet 30 − 20 = <b>10 N</b>, sağa doğru: kutu sağa ivmelenir."
+   }
+  },
+  {
    "baslik": "Masa örtüsü",
-   "metin": "Bir cisme etki eden net kuvvet sıfırsa hareket durumu değişmez: duran durur, giden aynı hızla gider. Buna <b>eylemsizlik</b> denir. Şimdi masa örtüsünü bir anda hızla çekeceksin.",
+   "metin": "Masa örtüsünü bir anda hızla çekeceksin.",
    "sahne": {
     "tur": "fiz4-ortu",
     "sure": 2.5
@@ -31,45 +65,11 @@
      }
     ]
    },
-   "kart": 2
-  },
-  {
-   "baslik": "Net kuvvet",
-   "metin": "Kuvvet bir itme ya da çekmedir; yönü olduğu için vektördür. Hareketi belirleyen, tüm kuvvetlerin toplamı olan <b>net kuvvettir</b>. Soldaki 30 N ile sağa itiyor. Sağdakinin itmesini ayarla ve net kuvveti <b>sıfır</b> yap.",
-   "sahne": {
-    "tur": "fiz4-net"
-   },
-   "deger": {
-    "F": 10
-   },
-   "kontroller": [
-    {
-     "ad": "F",
-     "etiket": "Sağdakinin itmesi",
-     "min": 0,
-     "max": 50,
-     "adim": 5,
-     "birim": "N"
-    }
-   ],
-   "gorev": {
-    "tur": "ayarla",
-    "hedef": {
-     "F": 30
-    },
-    "tamam": "30 N sağa, 30 N sola: net kuvvet 0. Kutu duruyorsa durur, kayıyorsa aynı hızla kaymayı sürdürür. Kuvvetler var ama hız değişmez (1. yasa)."
-   },
-   "kart": 2,
-   "goster": {
-    "deger": {
-     "F": 20
-    },
-    "not": "Sağdaki 20 N iterse net kuvvet 30 − 20 = <b>10 N</b>, sağa doğru: kutu sağa ivmelenir."
-   }
+   "kart": 3
   },
   {
    "baslik": "F = m·a",
-   "metin": "Net kuvvet cismi <b>ivmelendirir</b>: a = F / m. 10 kg'lık arabayı it. İvmesi <b>2 m/s²</b> olsun, sonra oynat.",
+   "metin": "10 kg'lık arabayı it. İvmesi 2 m/s² olsun, sonra oynat.",
    "sahne": {
     "tur": "fiz4-fma",
     "sure": 2,
@@ -93,9 +93,9 @@
     "hedef": {
      "F": 20
     },
-    "tamam": "a = 20 N / 10 kg = 2 m/s². Hız her saniye 2 m/s artar, 2 s'de araba 4 m yol alır. 1 N, 1 kg'lık kütleye 1 m/s² ivme verir: 1 N = 1 kg·m/s²."
+    "tamam": "a = 20 N / 10 kg = 2 m/s². Hız her saniye 2 m/s artar, 2 s'de araba ½ · 2 · 2² = 4 m yol alır."
    },
-   "kart": 3,
+   "kart": 4,
    "goster": {
     "deger": {
      "F": 30
@@ -141,11 +141,11 @@
      {
       "yazi": "Yarıya iner",
       "dogru": true,
-      "neden": "20 N ile 10 kg'da 2 m/s², 20 kg'da 1 m/s². Dolu market arabasını hızlandırmak bu yüzden zordur."
+      "neden": "20 N ile 10 kg'da 2 m/s², 20 kg'da 1 m/s²: a = F / m, yani ivme kütleyle ters orantılıdır."
      }
     ]
    },
-   "kart": 3,
+   "kart": 4,
    "goster": {
     "deger": {
      "m": 5
@@ -154,8 +154,36 @@
    }
   },
   {
+   "baslik": "Etki–tepki",
+   "metin": "Kaykayda duruyorsun; kütlen 60 kg. 30 kg'lık kardeşini 60 N'luk bir kuvvetle iteceksin.",
+   "sahne": {
+    "tur": "fiz4-etki-tepki",
+    "sure": 3
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "İtince kim kayar?",
+    "secenekler": [
+     {
+      "yazi": "İkiniz de, zıt yönlere",
+      "dogru": true,
+      "neden": "Kardeşin de seni eşit (60 N) ve zıt yönde iter; kuvvetler farklı cisimlere etki ettiği için birbirini yok etmez. Kardeşinin kütlesi yarı olduğu için iki kat hızlı uzaklaşır (a = F / m)."
+     },
+     {
+      "yazi": "Yalnızca kardeşin",
+      "neden": "Kardeşin de sana eşit büyüklükte bir kuvvet uygular; sen de geri kayarsın."
+     },
+     {
+      "yazi": "Yalnızca sen",
+      "neden": "Kardeşine uyguladığın kuvvet onu da hareket ettirir."
+     }
+    ]
+   },
+   "kart": 4
+  },
+  {
    "baslik": "Ağırlık ≠ kütle",
-   "metin": "<b>Kütle</b> madde miktarıdır (kg). <b>Ağırlık</b> yerçekiminin sana uyguladığı kuvvettir (N): G = m·g. 60 kg'lık astronotu Ay'a götür (g ≈ 1,62 m/s²).",
+   "metin": "60 kg'lık astronotu Ay'a götür. Bu sahnede gerçek değerler var: Dünya'da g ≈ 9,8, Ay'da g ≈ 1,62 m/s².",
    "sahne": {
     "tur": "fiz4-agirlik"
    },
@@ -176,37 +204,9 @@
     "hedef": {
      "ay": 1
     },
-    "tamam": "Kütle hâlâ 60 kg, ama ağırlık 588 N'dan 97 N'a indi. Kütle her yerde aynıdır; ağırlık bulunduğun yerin g değerine göre değişir."
+    "tamam": "Kütle hâlâ 60 kg, ama ağırlık 60 × 9,8 ≈ 588 N'dan 60 × 1,62 ≈ 97 N'a indi."
    },
    "kart": 6
-  },
-  {
-   "baslik": "Etki–tepki",
-   "metin": "Kaykayda duruyorsun. 60 kg'sın ve 30 kg'lık kardeşini iteceksin. <b>3. yasa:</b> A cismi B'ye kuvvet uygularsa B de A'ya eşit büyüklükte, zıt yönde kuvvet uygular.",
-   "sahne": {
-    "tur": "fiz4-etki-tepki",
-    "sure": 3
-   },
-   "gorev": {
-    "tur": "tahmin",
-    "soru": "İtince kim kayar?",
-    "secenekler": [
-     {
-      "yazi": "İkiniz de, zıt yönlere",
-      "dogru": true,
-      "neden": "Kuvvetler eşit (60 N) ve zıt yönlü. Farklı cisimlere etki ettikleri için birbirini yok etmez. Kardeşinin kütlesi yarı olduğu için iki kat hızlı uzaklaşır (a = F / m)."
-     },
-     {
-      "yazi": "Yalnızca kardeşin",
-      "neden": "Kardeşin de sana eşit büyüklükte bir kuvvet uygular; sen de geri kayarsın."
-     },
-     {
-      "yazi": "Yalnızca sen",
-      "neden": "Kardeşine uyguladığın kuvvet onu da hareket ettirir."
-     }
-    ]
-   },
-   "kart": 5
   },
   {
    "baslik": "Sürtünme laboratuvarı",

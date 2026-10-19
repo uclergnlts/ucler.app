@@ -100,7 +100,7 @@
   },
   {
    "baslik": "Yedi temel büyüklük",
-   "metin": "SI'da yedi <b>temel büyüklük</b> vardır; hiçbiri başka büyüklüklerden türetilmez. Hepsi bu tabloda.",
+   "metin": "Tabloya bak.",
    "sahne": {
     "tur": "fiz-si-tablo"
    },
@@ -111,7 +111,7 @@
      {
       "yazi": "Uzunluk ve zamandan türetilir",
       "dogru": true,
-      "neden": "Sürat = yol ÷ zaman, birimi m/s. İki temel birimden kurulduğu için <b>türetilmiş</b> büyüklüktür. Alan (m²), hacim (m³) ve kuvvet (1 N = 1 kg·m/s²) da öyle."
+      "neden": "m/s, uzunluk (m) ve zaman (s) birimlerinin birleşimidir; temel birimlerden kurulan böyle büyüklüklere <b>türetilmiş</b> denir."
      },
      {
       "yazi": "Sürat ölçülemez",
@@ -123,11 +123,11 @@
      }
     ]
    },
-   "kart": 7
+   "kart": 6
   },
   {
    "baslik": "Türetilmiş büyüklük",
-   "metin": "Türetilmiş büyüklükler temel olanlardan hesaplanır. Bir koşucu 100 metre koşuyor ve <b>sürat = yol ÷ zaman</b>. Süreyi değiştir, süratini <b>10 m/s</b> yap.",
+   "metin": "Bir koşucu 100 metre koşuyor; sürat = yol ÷ zaman. Süreyi değiştir, süratini 10 m/s yap.",
    "sahne": {
     "tur": "fiz-kosu"
    },
@@ -149,7 +149,7 @@
     "hedef": {
      "t": 10
     },
-    "tamam": "100 m ÷ 10 s = 10 m/s: koşucu her saniye 10 m yol alıyor. Birim m/s, uzunluk ve zaman birimlerinden kuruldu. Dünyanın en hızlı koşucuları 100 metreyi 10 saniyenin biraz altında koşar."
+    "tamam": "100 m ÷ 10 s = 10 m/s: koşucu her saniye 10 m yol alıyor. Dünyanın en hızlı koşucuları 100 metreyi 10 saniyenin biraz altında koşar."
    },
    "kart": 7,
    "goster": {
@@ -161,7 +161,7 @@
   },
   {
    "baslik": "Yön gerekir mi?",
-   "metin": "Kütle, zaman ve sıcaklık gibi <b>skaler</b> büyüklükleri sayı ve birim tam anlatır. Ama \"3 km yürü\" dersem nereye varacağın belli değil. Okul, evin kuzeydoğusunda. Yönü ayarla.",
+   "metin": "\"3 km yürü\" dersem nereye varacağın belli değil. Okul, evin kuzeydoğusunda. Yönü ayarla.",
    "sahne": {
     "tur": "fiz-yon"
    },
@@ -183,9 +183,9 @@
     "hedef": {
      "yon": 45
     },
-    "tamam": "3 km, kuzeydoğu: artık nereye varacağın belli. Yer değiştirme, hız ve kuvvet gibi yön de isteyen büyüklüklere <b>vektörel</b> denir. \"10 N\" eksiktir, \"10 N, sağa\" tamdır."
+    "tamam": "3 km, kuzeydoğu: artık nereye varacağın belli. Yer değiştirme, hız ve kuvvet gibi yön de isteyen büyüklüklere <b>vektörel</b> denir."
    },
-   "kart": 8,
+   "kart": 9,
    "goster": {
     "deger": {
      "yon": 135

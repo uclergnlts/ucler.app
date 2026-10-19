@@ -23,7 +23,7 @@
      {
       "yazi": "Dik duran",
       "dogru": true,
-      "neden": "Kuvvet aynı ama dik tuğla onu 4 kat küçük bir alana yığıyor. Birim yüzeye düşen kuvvete <b>basınç</b> denir: <b>P = F / A</b>. Birimi pascal: 1 Pa = 1 N/m². Dik tuğla 4000 Pa, yatık tuğla 1000 Pa basınç yapar."
+      "neden": "Kuvvet aynı, ama dik tuğla onu 4 kat küçük alana yığar; alan küçülünce basınç büyür. Dik tuğla 4000 Pa, yatık tuğla 1000 Pa yapar."
      },
      {
       "yazi": "İkisi eşit gömülür",
@@ -60,7 +60,7 @@
       30
      ]
     },
-    "tamam": "600 N ÷ 0,2 m² = 3000 Pa. Kar ayakkabısı ağırlığını değiştirmez, onu geniş alana yayar. Tersi de işe yarar: bıçağın keskin ağzı ve raptiyenin ucu küçük alanla büyük basınç yaratır."
+    "tamam": "600 N ÷ 0,2 m² = 3000 Pa. Kar ayakkabısı ağırlığını değiştirmez, onu geniş alana yayar."
    },
    "kart": 2,
    "goster": {
@@ -72,7 +72,7 @@
   },
   {
    "baslik": "Derine dal",
-   "metin": "Suyun kendi ağırlığı da basınç yapar: <b>P = h·d·g</b>. h derinlik, d suyun özkütlesi (1000 kg/m³), g ≈ 10 m/s². Dalgıcı, suyun basıncının <b>200.000 Pa</b> olduğu derinliğe indir.",
+   "metin": "Suyun özkütlesi 1000 kg/m³, g ≈ 10 m/s². Dalgıcı, suyun basıncının 200.000 Pa olduğu derinliğe indir.",
    "sahne": {
     "tur": "fiz2-derinlik"
    },
@@ -94,7 +94,7 @@
     "hedef": {
      "h": 20
     },
-    "tamam": "20 × 1000 × 10 = 200.000 Pa. Derinlik iki katına çıkınca basınç da iki katına çıkar. Suda her 10 m, yaklaşık 100.000 Pa ekler. Baraj duvarları bu yüzden altta daha kalındır."
+    "tamam": "20 × 1000 × 10 = 200.000 Pa: derinlik iki katına çıkınca sıvı basıncı da iki katına çıktı."
    },
    "kart": 3,
    "goster": {
@@ -126,7 +126,7 @@
      {
       "yazi": "Üçünde de eşit",
       "dogru": true,
-      "neden": "Sıvı basıncı yalnızca derinliğe ve sıvının özkütlesine bağlıdır: 0,2 × 1000 × 10 = 2000 Pa. Kabın şekli ve sıvının miktarı fark etmez. Buna <b>hidrostatik paradoks</b> denir."
+      "neden": "Sıvı basıncı yalnızca derinliğe ve özkütleye bağlıdır: 0,2 × 1000 × 10 = 2000 Pa; kabın şekli ve su miktarı fark etmez. Buna <b>hidrostatik paradoks</b> denir."
      }
     ]
    },
@@ -134,7 +134,7 @@
   },
   {
    "baslik": "Hidrolik kaldıraç",
-   "metin": "Kapalı bir sıvıya uyguladığın basınç her yere aynen iletilir (<b>Pascal ilkesi</b>). Küçük pistona 200 N uyguluyorsun. 10.000 N'luk arabayı taşıyabilen <b>en küçük</b> büyük pistonu bul.",
+   "metin": "Küçük pistonun alanı 10 cm² ve ona 200 N uyguluyorsun. 10.000 N'luk arabayı taşıyabilen en küçük büyük pistonu bul.",
    "sahne": {
     "tur": "fiz2-hidrolik"
    },
@@ -156,9 +156,9 @@
     "hedef": {
      "A2": 500
     },
-    "tamam": "İki pistonda basınç eşittir: <b>F₁ / A₁ = F₂ / A₂</b>. Alan 50 kat olunca kuvvet de 50 kat olur: 200 N × 50 = 10.000 N. Ama iş kazanmazsın: küçük pistonu 50 cm itersen araba yalnızca 1 cm yükselir."
+    "tamam": "500 cm², küçüğün 50 katı: 200 N × 50 = 10.000 N. Ama yoldan kaybedersin: küçük pistonu 50 cm itersen araba yalnızca 1 cm yükselir."
    },
-   "kart": 7,
+   "kart": 6,
    "goster": {
     "deger": {
      "A2": 300
@@ -168,7 +168,7 @@
   },
   {
    "baslik": "Dağa tırman",
-   "metin": "Havanın da ağırlığı var. Torricelli'nin cıva tüpünde, deniz seviyesinde cıva <b>76 cm</b>'de durur: 1 atm. Yukarı çık ve suyun <b>80 °C'de kaynadığı</b> yüksekliği bul.",
+   "metin": "Deniz seviyesinde su 100 °C'de kaynar. Yukarı çık ve suyun 80 °C'de kaynadığı yüksekliği bul.",
    "sahne": {
     "tur": "fiz2-rakim"
    },
@@ -190,9 +190,9 @@
     "hedef": {
      "r": 6000
     },
-    "tamam": "Yukarı çıktıkça üstündeki hava azalır, açık hava basıncı düşer ve cıva sütunu kısalır. Su, buhar basıncı dış basınca eşitlenince kaynar; dış basınç düşünce bunu daha düşük sıcaklıkta yapar. Everest zirvesinde su yaklaşık 70 °C'de kaynar."
+    "tamam": "Yaklaşık 6000 m'de dış basınç o kadar düşer ki su 80 °C'de kaynar. Bu yüzden yüksek dağlarda yemek geç pişer."
    },
-   "kart": 9,
+   "kart": 8,
    "goster": {
     "deger": {
      "r": 3000
@@ -202,7 +202,7 @@
   }
  ],
  "kapanis": [
-  "<b>Basınç</b>, birim yüzeye dik etki eden kuvvettir: P = F / A. Birimi pascal (1 Pa = 1 N/m²).",
+  "<b>Basınç</b>, birim yüzeye dik etki eden kuvvetin büyüklüğüdür: P = F / A. Skalerdir; birimi pascal (1 Pa = 1 N/m²).",
   "Kuvvet aynıysa alan küçüldükçe basınç büyür: bıçak keser, kar ayakkabısı gömülmez.",
   "Sıvı basıncı <b>P = h·d·g</b>; derinlikle artar, kabın şekline ve sıvının miktarına bağlı değildir.",
   "<b>Pascal ilkesi</b>: kapalı sıvıda basınç her yere iletilir. Hidrolikte F₁ / A₁ = F₂ / A₂.",
