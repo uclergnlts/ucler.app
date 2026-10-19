@@ -27,15 +27,73 @@
      {
       "yazi": "Sodyum bir elektronunu klora verir",
       "dogru": true,
-      "neden": "Sodyum tek dış elektronunu verip Na⁺ (2-8), klor onu alıp Cl⁻ (2-8-8) olur. Zıt yüklü iyonların çekimi <b>iyonik bağdır</b>. Genellikle metal ile ametal arasında oluşur."
+      "neden": "Sodyum tek dış elektronunu verip Na⁺ (2-8), klor onu alıp Cl⁻ (2-8-8) olur. Zıt yüklü iyonların çekimi iyonik bağdır; genellikle metal ile ametal arasında kurulur."
      }
     ]
    },
    "kart": 3
   },
   {
+   "baslik": "Formülü yüklerden kur",
+   "metin": "Alüminyum Al³⁺, oksijen O²⁻ iyonu oluşturur. İyon ekleyerek toplam yükü sıfır yap.",
+   "sahne": {
+    "tur": "formul-kur",
+    "atomlar": [
+     "Al",
+     "O"
+    ],
+    "adlar": {
+     "Al": "alüminyum iyonu (+3)",
+     "O": "oksit iyonu (−2)",
+     "AlO": "toplam yük +1",
+     "AlO2": "toplam yük −1",
+     "AlO3": "toplam yük −3",
+     "AlO4": "toplam yük −5",
+     "Al2O": "toplam yük +4",
+     "Al2O2": "toplam yük +2",
+     "Al2O3": "alüminyum oksit: yük 0 ✓",
+     "Al2O4": "toplam yük −2",
+     "Al3O": "toplam yük +7",
+     "Al3O2": "toplam yük +5",
+     "Al3O3": "toplam yük +3",
+     "Al3O4": "toplam yük +1"
+    },
+    "iyonik": true
+   },
+   "deger": {
+    "Al": 1,
+    "O": 1
+   },
+   "kontroller": [
+    {
+     "ad": "Al",
+     "etiket": "Al³⁺",
+     "min": 1,
+     "max": 3,
+     "tur": "sayac"
+    },
+    {
+     "ad": "O",
+     "etiket": "O²⁻",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "Al": 2,
+     "O": 3
+    },
+    "tamam": "Al₂O₃: 2 · (+3) + 3 · (−2) = 0. Kısa yol: yükleri çaprazla, Al'nin 3'ü O'ya, O'nun 2'si Al'ye indis olur.",
+    "ipucu": "+6 ve −6'yı veren iyon sayılarını ara."
+   },
+   "kart": 4
+  },
+  {
    "baslik": "Ortak elektron çifti",
-   "metin": "İki ametal atomu elektron aktarmaz, elektronlarını <b>ortaklaşa</b> kullanır. Ortak çifti iki çekirdek birden çeker: <b>kovalent bağ</b>. Ortak çift sayısını artır, iki azot atomunun da okteti tamamlansın.",
+   "metin": "Ortak çift sayısını artır, iki azot atomunun da okteti tamamlansın.",
    "sahne": {
     "tur": "kim3-kovalent"
    },
@@ -57,9 +115,9 @@
      "b": 3
     },
     "ipucu": "Her ortak çift iki atomun da sayımına girer. 5 + ortak çift sayısı kaç olmalı?",
-    "tamam": "Üç ortak çift: N≡N, üçlü bağ. Her N, 3 ortak çift (6 elektron) ve 1 ortaklanmamış çiftle (2 elektron) 8 elektrona ulaşır. H₂'de tekli, O₂'de ikili bağ vardır."
+    "tamam": "Üç ortak çift: N≡N, üçlü bağ. Her N, 3 ortak çift (6 e⁻) ve 1 ortaklanmamış çiftle (2 e⁻) 8 elektrona ulaşır."
    },
-   "kart": 5,
+   "kart": 7,
    "goster": {
     "deger": {
      "b": 2
@@ -104,11 +162,11 @@
      }
     ]
    },
-   "kart": 6
+   "kart": 8
   },
   {
    "baslik": "Elektron denizi",
-   "metin": "Metal atomları değerlik elektronlarını kolayca bırakır. Bu elektronlar hiçbir atoma ait olmadan dolaşır; katyonlarla aralarındaki çekim <b>metalik bağdır</b>. Metale bir pil bağla.",
+   "metin": "Metal atomları değerlik elektronlarını kolayca bırakır. Metale bir pil bağla.",
    "sahne": {
     "tur": "kim3-metal"
    },
@@ -131,7 +189,7 @@
     },
     "tamam": "Serbest elektronlar artı kutba doğru akmaya başladı: metal elektriği böyle iletir. Katyon katmanları kayabildiği için metaller dövülüp tel ve levha hâline de getirilebilir."
    },
-   "kart": 7
+   "kart": 10
   },
   {
    "baslik": "Hidrojen bağı",
@@ -151,7 +209,7 @@
      {
       "yazi": "H₂O",
       "dogru": true,
-      "neden": "H₂S −60 °C'de kaynar, daha hafif olan H₂O ise 100 °C'de. Farkı moleküller arasındaki hidrojen bağları yaratır: onları koparmak için daha çok enerji gerekir."
+      "neden": "H₂S −60 °C'de, daha hafif H₂O ise 100 °C'de kaynar. Farkı moleküller arası hidrojen bağları yaratır."
      },
      {
       "yazi": "İkisi aynı sıcaklıkta",
@@ -159,7 +217,7 @@
      }
     ]
    },
-   "kart": 9
+   "kart": 12
   },
   {
    "baslik": "Kaynarken ne kopar?",
@@ -183,11 +241,11 @@
      {
       "yazi": "Moleküller arası hidrojen bağları",
       "dogru": true,
-      "neden": "Kaynamada yalnızca moleküller arası zayıf etkileşimler kopar; H₂O molekülleri bozulmaz: <b>fiziksel değişim</b>. Kimyasal değişimde güçlü bağlar kopar ve yeni madde oluşur."
+      "neden": "Kaynamada yalnızca moleküller arası zayıf etkileşimler kopar; H₂O molekülleri bozulmaz: fiziksel değişim."
      }
     ]
    },
-   "kart": 10
+   "kart": 13
   }
  ],
  "kapanis": [
@@ -195,6 +253,6 @@
   "<b>Kovalent bağ</b>: ametaller elektronlarını ortaklaşa kullanır; her çizgi bir ortak çifttir (H₂ tekli, O₂ ikili, N₂ üçlü).",
   "Ortak çift elektronegatif atoma kayarsa bağ <b>polar</b>, aynı atomlar arasında <b>apolar</b>dır.",
   "<b>Metalik bağ</b>: katyonlar serbest elektron denizine gömülüdür; bu elektronlar akımı iletir.",
-  "<b>Hidrojen bağı</b> ve van der Waals zayıf etkileşimlerdir; kaynamada bunlar kopar, tepkimede güçlü bağlar kopar."
+  "<b>Hidrojen bağı</b> ve van der Waals zayıf etkileşimlerdir; kaynamada bunlar kopar. Değişimin kimyasal sayılması için yeni madde oluşmalıdır."
  ]
 }

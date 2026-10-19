@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Formülü kendin kur",
-   "metin": "Bileşikleri formülle yazarız. Sembolün sağ altındaki küçük sayıya <b>indis</b> denir; o atomdan kaç tane olduğunu söyler. Atom ekleyerek suyu, yani <b>H₂O</b>'yu kur.",
+   "metin": "Atom ekleyerek suyu, yani H₂O'yu kur.",
    "sahne": {
     "tur": "formul-kur",
     "atomlar": [
@@ -109,7 +109,7 @@
     "hedef": {
      "O": 2
     },
-    "tamam": "CO₂: karbon dioksit. Tek bir oksijen, zehirli bir gazı bambaşka bir maddeye çevirdi. Dikkat: <b>Co</b> (küçük o) ise kobalt elementidir."
+    "tamam": "CO₂: karbon dioksit. Tek bir oksijen farkı büyük: CO kandaki hemoglobine yapışıp oksijen taşınmasını engeller, CO₂ ise soluduğun havada zaten vardır."
    },
    "kart": 4,
    "goster": {
@@ -121,29 +121,29 @@
   },
   {
    "baslik": "Sembolü çöz",
-   "metin": "Her elementin bir sembolü vardır: ilk harf büyük, varsa ikincisi küçük yazılır. Bazı semboller elementin Latince adından gelir.",
+   "metin": "Bazı semboller elementin Latince adından gelir. Kartta görmediğin bir sembolü çöz.",
    "sahne": {
     "tur": "element-sembol",
-    "sembol": "Fe",
-    "z": 26,
-    "ipucu": "Kanındaki hemoglobinde bulunur."
+    "sembol": "Sn",
+    "z": 50,
+    "ipucu": "Konserve kutularını paslanmaya karşı kaplar."
    },
    "gorev": {
     "tur": "secim",
-    "soru": "<b>Fe</b> hangi elementin sembolüdür?",
+    "soru": "Sn hangi elementin sembolüdür?",
     "secenekler": [
      {
-      "yazi": "Demir",
-      "neden": "Fe, demirin Latince adı <i>ferrum</i>'dan gelir. Altın Au (<i>aurum</i>), kurşun Pb (<i>plumbum</i>) da böyledir.",
+      "yazi": "Kalay",
+      "neden": "Sn, kalayın Latince adı <i>stannum</i>'dan gelir. Konserve tenekesi, ince kalay kaplı çeliktir.",
       "dogru": true
      },
      {
-      "yazi": "Flor",
-      "neden": "Florun sembolü F'dir. Fe, Latince bir addan gelir."
+      "yazi": "Sodyum",
+      "neden": "Sodyumun sembolü Na'dır (<i>natrium</i>)."
      },
      {
-      "yazi": "Fosfor",
-      "neden": "Fosforun sembolü P'dir. Fe'nin kaynağı Latince <i>ferrum</i>'dur."
+      "yazi": "Silisyum",
+      "neden": "Silisyumun sembolü Si'dir. Sn, Latince <i>stannum</i>'dan gelir."
      }
     ]
    },
@@ -151,7 +151,7 @@
   },
   {
    "baslik": "Yaygın adlar",
-   "metin": "Bazı bileşiklerin günlük hayatta kullanılan <b>yaygın adları</b> vardır: tuz ruhu HCl, kezzap HNO₃, sud kostik NaOH. Şimdi <b>sofra tuzunu</b>, yani NaCl'yi kur.",
+   "metin": "Şimdi sofra tuzunu, yani NaCl'yi kur.",
    "sahne": {
     "tur": "formul-kur",
     "atomlar": [
@@ -199,7 +199,7 @@
   },
   {
    "baslik": "Tehlike işareti",
-   "metin": "Kimyasal şişelerindeki kırmızı çerçeveli baklava işaretler maddenin tehlikesini anlatır. Şişeyi açmadan önce işareti tanımak ilk iştir.",
+   "metin": "Şişeyi açmadan önce etiketteki işarete bak.",
    "sahne": {
     "tur": "piktogram",
     "isaret": "alev"
@@ -255,7 +255,7 @@
   },
   {
    "baslik": "Asidi seyreltmek",
-   "metin": "Laboratuvarda gözlük, önlük ve eldiven takılır. Derişik bir asidi seyreltmen gerekiyor; asit ile su karışırken çok ısı açığa çıkar.",
+   "metin": "Derişik bir asidi seyreltmen gerekiyor. Asit ile su karışırken çok ısı açığa çıkar.",
    "sahne": {
     "tur": "seyreltme",
     "sure": 5
@@ -266,7 +266,7 @@
     "secenekler": [
      {
       "yazi": "Asidi suya yavaşça eklerim",
-      "neden": "Asit çok suyun içine azar azar girince ısı büyük su kütlesine yayılır ve sıçrama olmaz. Kural: <b>asit suya eklenir</b>.",
+      "neden": "Asit çok suyun içine azar azar girince ısı büyük su kütlesine yayılır, sıçrama olmaz. Kural: asit suya eklenir.",
       "dogru": true
      },
      {
