@@ -104,6 +104,75 @@
     ],
     "quiz": [
       {
+        "tur": "eslestir",
+        "q": "Her ismi kimyaya bıraktığı katkıyla eşleştir.",
+        "ciftler": [
+          [
+            "Câbir bin Hayyân",
+            "Nitrik ve sülfürik asit"
+          ],
+          [
+            "Ebubekir er-Râzî",
+            "Alkol elde etme"
+          ],
+          [
+            "Robert Boyle",
+            "Şüpheci Kimyager (1661)"
+          ],
+          [
+            "Antoine Lavoisier",
+            "Kütlenin korunumu"
+          ]
+        ],
+        "e": "Câbir'e nitrik ve sülfürik asit, Râzî'ye alkolü elde etmek atfedilir. Boyle 1661'de Şüpheci Kimyager'i yazdı; Lavoisier kapalı kapta tartarak toplam kütlenin değişmediğini gösterdi."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her özelliği ait olduğu uğraşa koy.",
+        "gruplar": [
+          "Simya",
+          "Bilim olarak kimya"
+        ],
+        "ogeler": [
+          [
+            "Bilgiyi gizli tutmak",
+            0
+          ],
+          [
+            "Sembollerle yazmak",
+            0
+          ],
+          [
+            "Nadiren ölçüm yapmak",
+            0
+          ],
+          [
+            "Tekrarlanabilir deney",
+            1
+          ],
+          [
+            "Sayısal ölçüm",
+            1
+          ],
+          [
+            "Sonuçları paylaşmak",
+            1
+          ]
+        ],
+        "e": "Simyacılar bilgiyi gizli tutup sembollerle yazdı ve nadiren ölçtü, bu yüzden deneyleri kontrol edilemedi. Bilim ise herkesin tekrarlayabileceği deneye, sayısal ölçüme ve paylaşılan sonuçlara dayanır."
+      },
+      {
+        "tur": "sirala",
+        "q": "Bilimsel yöntemin adımlarını sıraya koy.",
+        "ogeler": [
+          "Gözlem",
+          "Hipotez",
+          "Deney",
+          "Sonuç"
+        ],
+        "e": "Önce bir olay gözlenir, sonra onu açıklayan bir hipotez kurulur. Hipotez deneyle sınanır ve sonuç çıkarılır."
+      },
+      {
         "q": "Simyacıların, metalleri altına çevireceğine inandıkları efsanevi madde hangisidir?",
         "o": [
           "Hayat iksiri",
@@ -113,39 +182,6 @@
         ],
         "a": 1,
         "e": "Simyacılar ucuz metalleri altına çevirecek maddeye felsefe taşı dediler; böyle bir madde hiç bulunamadı."
-      },
-      {
-        "q": "Simyanın günümüz kimyasına en önemli katkısı hangisidir?",
-        "o": [
-          "Kurşunu altına çevirmesi",
-          "Periyodik tabloyu kurması",
-          "Damıtma gibi laboratuvar teknikleri",
-          "Atom modelini bulması"
-        ],
-        "a": 2,
-        "e": "Simyacılar hedeflerine ulaşamadı ama damıtma gibi teknikler ve laboratuvar araçları kimyaya miras kaldı."
-      },
-      {
-        "q": "Kapalı bir kapta toplam 20 g madde tepkimeye giriyor. Tepkime bitince kaptaki toplam kütle ne olur?",
-        "o": [
-          "20 g'dan az",
-          "Tam 20 g",
-          "20 g'dan fazla",
-          "Ürüne göre değişir"
-        ],
-        "a": 1,
-        "e": "Lavoisier'nin gösterdiği kütlenin korunumu yasasına göre kapalı kapta toplam kütle değişmez."
-      },
-      {
-        "q": "Kimyayı simyadan ayıran temel özellik hangisidir?",
-        "o": [
-          "Gizli semboller kullanması",
-          "Altın üretmeyi hedeflemesi",
-          "Dört element fikrine bağlı kalması",
-          "Tekrarlanabilir deney ve ölçüme dayanması"
-        ],
-        "a": 3,
-        "e": "Bilim, herkesin tekrar edip kontrol edebileceği deneylere ve sayısal ölçümlere dayanır."
       }
     ]
   },
@@ -241,26 +277,77 @@
     ],
     "quiz": [
       {
-        "q": "Hangisi bir element sembolü olarak doğru yazılmıştır?",
-        "o": [
-          "CA",
-          "co",
-          "Fe",
-          "nA"
+        "tur": "eslestir",
+        "q": "Her yaygın adı bileşiğin formülüyle eşleştir.",
+        "ciftler": [
+          [
+            "Tuz ruhu",
+            "HCl"
+          ],
+          [
+            "Kezzap",
+            "HNO<sub>3</sub>"
+          ],
+          [
+            "Zaç yağı",
+            "H<sub>2</sub>SO<sub>4</sub>"
+          ],
+          [
+            "Sud kostik",
+            "NaOH"
+          ],
+          [
+            "Yemek sodası",
+            "NaHCO<sub>3</sub>"
+          ]
         ],
-        "a": 2,
-        "e": "Sembolün ilk harfi büyük, ikinci harfi küçük yazılır. Fe (demir) bu kurala uyar."
+        "e": "Tuz ruhu HCl, kezzap HNO<sub>3</sub>, zaç yağı H<sub>2</sub>SO<sub>4</sub>, sud kostik NaOH, yemek sodası NaHCO<sub>3</sub>'tür."
       },
       {
-        "q": "H₂SO₄ formüllü bileşikle ilgili hangisi doğrudur?",
-        "o": [
-          "Yaygın adı kezzaptır",
-          "4 tane kükürt atomu içerir",
-          "Yaygın adı zaç yağıdır",
-          "2 tane oksijen atomu içerir"
+        "tur": "ayir",
+        "q": "Her elementi doğru gruba koy.",
+        "gruplar": [
+          "Vücut için gerekli",
+          "Zararlı ağır metal"
         ],
-        "a": 2,
-        "e": "H₂SO₄'te 2 H, 1 S, 4 O vardır ve yaygın adı zaç yağıdır. Kezzap HNO₃'tür."
+        "ogeler": [
+          [
+            "Kalsiyum",
+            0
+          ],
+          [
+            "Demir",
+            0
+          ],
+          [
+            "Sodyum",
+            0
+          ],
+          [
+            "Potasyum",
+            0
+          ],
+          [
+            "Cıva",
+            1
+          ],
+          [
+            "Kurşun",
+            1
+          ],
+          [
+            "Kadmiyum",
+            1
+          ]
+        ],
+        "e": "Kalsiyum kemik ve dişte, demir hemoglobinde, sodyum ve potasyum sinir iletiminde görev alır. Cıva, kurşun ve kadmiyum vücutta birikip organlara zarar verir."
+      },
+      {
+        "tur": "sayi",
+        "q": "Bir H<sub>2</sub>SO<sub>4</sub> molekülünde toplam kaç atom vardır?",
+        "cevap": 7,
+        "birim": "atom",
+        "e": "İndisler atom sayısını verir: 2 H + 1 S + 4 O = 7 atom. S'nin indisi 1 olduğu için yazılmamıştır."
       },
       {
         "q": "Asit seyreltirken doğru yöntem hangisidir?",
@@ -272,17 +359,6 @@
         ],
         "a": 0,
         "e": "Asit suya yavaşça eklenir. Su asidin üzerine dökülürse açığa çıkan ısı suyu kaynatır ve asidi sıçratabilir."
-      },
-      {
-        "q": "Hangisi vücutta birikerek zarar veren bir ağır metaldir?",
-        "o": [
-          "Kalsiyum",
-          "Cıva",
-          "Potasyum",
-          "Demir"
-        ],
-        "a": 1,
-        "e": "Cıva vücutta birikir ve sinir sistemine zarar verir. Diğerleri vücut için gerekli elementlerdir."
       }
     ]
   },
@@ -445,15 +521,77 @@
     ],
     "quiz": [
       {
-        "q": "Aşağıdakilerden hangisi kimyasal değişimdir?",
-        "o": [
-          "Buzun erimesi",
-          "Camın kırılması",
-          "Demirin paslanması",
-          "Şekerin suda çözünmesi"
+        "tur": "ayir",
+        "q": "Her olayı doğru gruba koy.",
+        "gruplar": [
+          "Fiziksel değişim",
+          "Kimyasal değişim"
         ],
-        "a": 2,
-        "e": "Paslanmada demir, oksijen ve suyla tepkimeye girip yeni bir madde (demir oksit) oluşturur."
+        "ogeler": [
+          [
+            "Buzun erimesi",
+            0
+          ],
+          [
+            "Kâğıdın yırtılması",
+            0
+          ],
+          [
+            "Şekerin suda çözünmesi",
+            0
+          ],
+          [
+            "Suyun kaynaması",
+            0
+          ],
+          [
+            "Odunun yanması",
+            1
+          ],
+          [
+            "Demirin paslanması",
+            1
+          ],
+          [
+            "Sütün ekşimesi",
+            1
+          ]
+        ],
+        "e": "Erime, yırtılma, çözünme ve kaynamada maddenin kimliği aynı kalır. Yanma, paslanma ve ekşimede yeni maddeler oluşur."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her hal değişimini adıyla eşleştir.",
+        "ciftler": [
+          [
+            "Katı → sıvı",
+            "Erime"
+          ],
+          [
+            "Sıvı → katı",
+            "Donma"
+          ],
+          [
+            "Sıvı → gaz",
+            "Buharlaşma"
+          ],
+          [
+            "Katı → gaz",
+            "Süblimleşme"
+          ],
+          [
+            "Gaz → katı",
+            "Kırağılaşma"
+          ]
+        ],
+        "e": "Katı sıvıya dönerken erir, sıvı katıya dönerken donar, gaza dönerken buharlaşır. Katının doğrudan gaza geçmesi süblimleşme, tersi kırağılaşmadır."
+      },
+      {
+        "tur": "sayi",
+        "q": "Kütlesi 54 g, hacmi 20 cm³ olan bir maddenin yoğunluğu kaç g/cm³'tür?",
+        "cevap": 2.7,
+        "birim": "g/cm³",
+        "e": "Yoğunluk birim hacimdeki kütledir: d = m / V = 54 / 20 = 2,7 g/cm³ (alüminyumun yoğunluğu)."
       },
       {
         "q": "Hangisi homojen bir karışımdır?",
@@ -465,28 +603,6 @@
         ],
         "a": 1,
         "e": "Tuzlu suyun her yeri aynıdır, bileşenler gözle ayırt edilmez. Saf su ise karışım değil, bileşiktir."
-      },
-      {
-        "q": "Kütlesi 54 g, hacmi 20 cm³ olan bir maddenin yoğunluğu nedir?",
-        "o": [
-          "0,37 g/cm³",
-          "1080 g/cm³",
-          "27 g/cm³",
-          "2,7 g/cm³"
-        ],
-        "a": 3,
-        "e": "d = m / V = 54 / 20 = 2,7 g/cm³ (alüminyumun yoğunluğu)."
-      },
-      {
-        "q": "Naftalinin katı hâlden doğrudan gaz hâline geçmesine ne denir?",
-        "o": [
-          "Süblimleşme",
-          "Buharlaşma",
-          "Kırağılaşma",
-          "Erime"
-        ],
-        "a": 0,
-        "e": "Katının sıvı olmadan doğrudan gaza dönüşmesi süblimleşmedir; tersi kırağılaşmadır."
       }
     ]
   },
@@ -567,6 +683,77 @@
     ],
     "quiz": [
       {
+        "tur": "sirala",
+        "q": "Atom fikirlerini ve modellerini ortaya çıkış sırasına koy.",
+        "ogeler": [
+          "Democritus: bölünemez atomos",
+          "Dalton: içi dolu küre",
+          "Thomson: üzümlü kek",
+          "Rutherford: küçük, yoğun çekirdek",
+          "Bohr: enerji katmanları",
+          "Modern model: elektron bulutu"
+        ],
+        "e": "Democritus MÖ 5.-4. yüzyılda, Dalton 1803-1808'de, Thomson 1904'te, Rutherford 1911'de, Bohr 1913'te modelini önerdi. Kuantum modeli 1920'lerde kuruldu."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her deneyi ya da bulguyu ilgili bilim insanıyla eşleştir.",
+        "ciftler": [
+          [
+            "Katot ışınlarıyla elektronun keşfi",
+            "Thomson"
+          ],
+          [
+            "Yağ damlası deneyi",
+            "Millikan"
+          ],
+          [
+            "Altın levha deneyi",
+            "Rutherford"
+          ],
+          [
+            "Yüksüz nötronun keşfi",
+            "Chadwick"
+          ],
+          [
+            "Hidrojen spektrumunun açıklanması",
+            "Bohr"
+          ]
+        ],
+        "e": "Thomson katot ışınlarıyla elektronu buldu, Millikan yağ damlalarıyla elektronun yükünü ölçtü. Altın levha deneyi Rutherford'un yönetiminde yapıldı, nötronu Chadwick buldu, hidrojen spektrumunu Bohr açıkladı."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her modeli, atomda çekirdek olup olmamasına göre ayır.",
+        "gruplar": [
+          "Çekirdek yok",
+          "Çekirdek var"
+        ],
+        "ogeler": [
+          [
+            "Dalton modeli",
+            0
+          ],
+          [
+            "Thomson modeli",
+            0
+          ],
+          [
+            "Rutherford modeli",
+            1
+          ],
+          [
+            "Bohr modeli",
+            1
+          ],
+          [
+            "Modern model",
+            1
+          ]
+        ],
+        "e": "Dalton atomu içi dolu küre, Thomson pozitif küreye gömülü elektronlar olarak düşündü; çekirdek fikri yoktu. Çekirdeği Rutherford buldu; Bohr ve modern model çekirdeğin çevresindeki elektronları anlatır."
+      },
+      {
         "q": "Altın levha deneyinde alfa taneciklerinin çoğunun sapmadan geçmesi neyi gösterir?",
         "o": [
           "Atomun büyük kısmı boşluktur",
@@ -576,39 +763,6 @@
         ],
         "a": 0,
         "e": "Taneciklerin çoğu hiçbir şeye çarpmadan geçti; demek ki atomun hacminin çoğu boşluktur."
-      },
-      {
-        "q": "Elektronu keşfeden ve \"üzümlü kek\" modelini öneren bilim insanı kimdir?",
-        "o": [
-          "Dalton",
-          "Bohr",
-          "Thomson",
-          "Rutherford"
-        ],
-        "a": 2,
-        "e": "Thomson 1897'de elektronu keşfetti ve elektronların pozitif bir küreye gömülü olduğu modeli önerdi."
-      },
-      {
-        "q": "Bohr modelinin açıklayabildiği olay hangisidir?",
-        "o": [
-          "Elektronun keşfi",
-          "Hidrojenin çizgi spektrumu",
-          "Kütlenin korunumu",
-          "Nötronun varlığı"
-        ],
-        "a": 1,
-        "e": "Bohr, elektronun belirli enerji düzeyleri arasında geçiş yaparken belirli enerjide ışık yaydığını söyleyerek hidrojen spektrumunu açıkladı."
-      },
-      {
-        "q": "Modern atom modeline göre elektron için hangisi doğrudur?",
-        "o": [
-          "Yeri ve hızı kesin bilinen bir yörüngede döner",
-          "Çekirdeğin içinde bulunur",
-          "Pozitif bir küreye gömülüdür",
-          "Bulunma olasılığının yüksek olduğu bölgelerde (orbitallerde) bulunur"
-        ],
-        "a": 3,
-        "e": "Kuantum mekaniğine göre elektronun yeri kesin bilinemez; sadece bulunma olasılığı (orbital) hesaplanır."
       }
     ]
   },
@@ -1015,26 +1169,47 @@
     ],
     "quiz": [
       {
-        "q": "n = 3 katmanında hangi alt katman <b>bulunmaz</b>?",
-        "o": [
-          "3s",
-          "3p",
-          "3d",
-          "3f"
+        "tur": "eslestir",
+        "q": "Her kuantum sayısını elektron hakkında söylediği şeyle eşleştir.",
+        "ciftler": [
+          [
+            "n",
+            "Katman"
+          ],
+          [
+            "ℓ",
+            "Alt katman ve orbitalin şekli"
+          ],
+          [
+            "m<sub>ℓ</sub>",
+            "Orbitalin uzaydaki yönelimi"
+          ],
+          [
+            "m<sub>s</sub>",
+            "Elektronun spini"
+          ]
         ],
-        "a": 3,
-        "e": "ℓ en fazla n − 1 = 2 olabilir, yani 3. katmanda s, p ve d vardır. f (ℓ = 3) ilk kez 4. katmanda görülür."
+        "e": "n katmanı, ℓ alt katmanı ve orbitalin şeklini, m<sub>ℓ</sub> orbitalin yönelimini, m<sub>s</sub> elektronun spinini söyler."
       },
       {
-        "q": "Azotun (N) 2p³ elektronları için Hund kuralına uygun şema hangisidir?",
-        "o": [
-          "[↑↓] [↑] [  ]",
-          "[↑] [↑] [↑]",
-          "[↑] [↓] [↑]",
-          "[↑↓↑] [  ] [  ]"
+        "tur": "sirala",
+        "q": "Bu alt katmanları n + ℓ kuralına göre dolma sırasına koy.",
+        "ogeler": [
+          "3s",
+          "3p",
+          "4s",
+          "3d",
+          "4p",
+          "5s"
         ],
-        "a": 1,
-        "e": "Eş enerjili orbitallere elektronlar önce birer birer ve aynı spinle girer. Üç elektron üç 2p orbitaline ↑ ↑ ↑ diye dağılır."
+        "e": "n + ℓ değerleri: 3s 3, 3p 4, 4s 4, 3d 5, 4p 5, 5s 5. Toplam eşitse n'si küçük olan önce dolar: 3p, 4s'ten; 3d, 4p'den; 4p de 5s'ten önce gelir."
+      },
+      {
+        "tur": "sayi",
+        "q": "n = 3 katmanında toplam kaç orbital vardır?",
+        "cevap": 9,
+        "birim": "orbital",
+        "e": "n = 3 için ℓ 0, 1, 2 olabilir: 3s, 3p, 3d. Orbital sayıları 1 + 3 + 5 = 9'dur."
       },
       {
         "q": "<sub>29</sub>Cu atomunun temel hâl elektron dizilimi hangisidir?",
@@ -1046,17 +1221,6 @@
         ],
         "a": 1,
         "e": "Tam dolu d¹⁰ alt katmanı daha kararlı olduğu için bir 4s elektronu 3d'ye geçer: [Ar] 4s¹ 3d¹⁰. Krom da benzer biçimde [Ar] 4s¹ 3d⁵'tir."
-      },
-      {
-        "q": "<sub>26</sub>Fe atomunun dizilimi [Ar] 4s² 3d⁶'dır. Fe²⁺ iyonunun dizilimi hangisidir?",
-        "o": [
-          "[Ar] 4s² 3d⁴",
-          "[Ar] 3d⁶",
-          "[Ar] 4s¹ 3d⁵",
-          "[Ar] 4s² 3d⁶"
-        ],
-        "a": 1,
-        "e": "Katyon oluşurken elektronlar önce en dış katmandan, yani 4s'ten kopar. İki elektron gidince [Ar] 3d⁶ kalır."
       }
     ]
   },
@@ -1184,6 +1348,68 @@
     ],
     "quiz": [
       {
+        "tur": "ayir",
+        "q": "Her elementi doğru gruba koy.",
+        "gruplar": [
+          "Metal",
+          "Ametal",
+          "Soy gaz"
+        ],
+        "ogeler": [
+          [
+            "Demir",
+            0
+          ],
+          [
+            "Bakır",
+            0
+          ],
+          [
+            "Sodyum",
+            0
+          ],
+          [
+            "Oksijen",
+            1
+          ],
+          [
+            "Kükürt",
+            1
+          ],
+          [
+            "Flor",
+            1
+          ],
+          [
+            "Helyum",
+            2
+          ],
+          [
+            "Neon",
+            2
+          ]
+        ],
+        "e": "Demir, bakır ve alkali metal sodyum metaldir. Oksijen, kükürt ve flor sağ üstteki ametallerdir. Helyum ve neon en sağdaki soy gazlardır."
+      },
+      {
+        "tur": "sirala",
+        "q": "3. periyottaki bu atomları atom yarıçapı <b>büyükten küçüğe</b> sırala. (Z: Na 11, Mg 12, Al 13, Cl 17)",
+        "ogeler": [
+          "Na",
+          "Mg",
+          "Al",
+          "Cl"
+        ],
+        "e": "Periyotta sağa gidildikçe katman sayısı aynı kalır, proton sayısı artar; çekirdek elektronları daha güçlü çeker ve atom küçülür. Bu yüzden Na > Mg > Al > Cl."
+      },
+      {
+        "tur": "sayi",
+        "q": "Bir ana grup atomunun ardışık iyonlaşma enerjileri (kJ/mol): İE₁ = 578, İE₂ = 1817, İE₃ = 2745, İE₄ = 11 577. Bu atomun kaç değerlik elektronu vardır?",
+        "cevap": 3,
+        "birim": "elektron",
+        "e": "Büyük sıçrama İE₃'ten İE₄'e (2745 → 11 577) olur; demek ki ilk 3 elektron değerlik elektronudur ve dördüncüde iç katmana geçilir. Atom 3A grubundadır (alüminyum)."
+      },
+      {
         "q": "Modern periyodik tabloda elementler neye göre sıralanır?",
         "o": [
           "Atom kütlesine",
@@ -1193,39 +1419,6 @@
         ],
         "a": 1,
         "e": "Moseley'den beri elementler proton sayısına, yani atom numarasına göre dizilir."
-      },
-      {
-        "q": "3. periyot, 2A grubundaki element (magnezyum) için hangisi doğrudur?",
-        "o": [
-          "3 katmanı ve 2 değerlik elektronu var",
-          "2 katmanı ve 3 değerlik elektronu var",
-          "2 katmanı ve 2 değerlik elektronu var",
-          "3 katmanı ve 8 değerlik elektronu var"
-        ],
-        "a": 0,
-        "e": "Periyot no = katman sayısı (3), ana grup no = değerlik elektronu (2). Mg: 2-8-2."
-      },
-      {
-        "q": "Aynı periyotta soldan sağa gidildikçe hangisi olur?",
-        "o": [
-          "Atom yarıçapı artar",
-          "Elektronegatiflik azalır",
-          "İyonlaşma enerjisi genellikle artar",
-          "Katman sayısı artar"
-        ],
-        "a": 2,
-        "e": "Proton sayısı artar, katman sayısı aynı kalır; çekirdek elektronları daha güçlü tutar, elektron koparmak zorlaşır."
-      },
-      {
-        "q": "En elektronegatif element hangisidir?",
-        "o": [
-          "Oksijen",
-          "Helyum",
-          "Sezyum",
-          "Flor"
-        ],
-        "a": 3,
-        "e": "Flor, Pauling ölçeğinde yaklaşık 4,0 ile en yüksek elektronegatifliğe sahiptir."
       }
     ]
   },
@@ -1337,15 +1530,77 @@
     ],
     "quiz": [
       {
-        "q": "Aşağıdaki eşleştirmelerden hangisi doğrudur?",
-        "o": [
-          "Cl₂: polar kovalent",
-          "KCl: iyonik",
-          "Cu: kovalent",
-          "HCl: apolar kovalent"
+        "tur": "ayir",
+        "q": "Her maddeyi, atomlarını bir arada tutan bağ türüne göre ayır.",
+        "gruplar": [
+          "İyonik",
+          "Kovalent",
+          "Metalik"
         ],
-        "a": 1,
-        "e": "K bir metal, Cl bir ametaldir; K elektronunu Cl'ye verir ve iyonik bağ oluşur. Cl₂ apolar, HCl polar kovalent, Cu ise metalik bağlıdır."
+        "ogeler": [
+          [
+            "NaCl",
+            0
+          ],
+          [
+            "KCl",
+            0
+          ],
+          [
+            "H<sub>2</sub>",
+            1
+          ],
+          [
+            "HCl",
+            1
+          ],
+          [
+            "N<sub>2</sub>",
+            1
+          ],
+          [
+            "Cu",
+            2
+          ],
+          [
+            "Fe",
+            2
+          ]
+        ],
+        "e": "NaCl ve KCl'de metal elektron verir, ametal alır: iyonik bağ. H<sub>2</sub>, HCl ve N<sub>2</sub>'de ametaller elektron ortaklaşır: kovalent bağ. Cu ve Fe'de katyonlar elektron denizine gömülüdür: metalik bağ."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her olayı, onu açıklayan etkileşimle eşleştir.",
+        "ciftler": [
+          [
+            "Tuzun suda çözünmesi",
+            "İyon–dipol"
+          ],
+          [
+            "Oksijenin suda az çözünmesi",
+            "Dipol–indüklenmiş dipol"
+          ],
+          [
+            "Suyun 100 °C'de kaynaması",
+            "Hidrojen bağı"
+          ],
+          [
+            "Apolar moleküllerin çekimi",
+            "London kuvvetleri"
+          ]
+        ],
+        "e": "Tuz çözünürken iyonlar suyun zıt yüklü uçlarını çeker: iyon–dipol. Polar su, apolar O<sub>2</sub>'de geçici dipol oluşturur. Suyun yüksek kaynama noktası hidrojen bağından, apolar moleküllerin çekimi anlık dipollerden (London) gelir."
+      },
+      {
+        "tur": "sirala",
+        "q": "Bu çekimleri <b>zayıftan güçlüye</b> sırala.",
+        "ogeler": [
+          "Van der Waals etkileşimi",
+          "Hidrojen bağı",
+          "Kovalent bağ"
+        ],
+        "e": "Hidrojen bağı van der Waals etkileşimlerinden güçlü, kovalent bağdan çok zayıftır. Van der Waals ve hidrojen bağı zayıf, kovalent bağ güçlü etkileşimdir."
       },
       {
         "q": "Azot 5A grubundadır. N₂ molekülünde her N atomu okteti nasıl tamamlar?",
@@ -1357,28 +1612,6 @@
         ],
         "a": 2,
         "e": "Her N üç elektronunu ortaklaşır (üç ortak çift = 6 e⁻) ve bir ortaklanmamış çifti kalır: 6 + 2 = 8 elektron."
-      },
-      {
-        "q": "Hangi maddenin molekülleri arasında hidrojen bağı oluşur?",
-        "o": [
-          "CH₄",
-          "H₂S",
-          "HCl",
-          "NH₃"
-        ],
-        "a": 3,
-        "e": "Hidrojen bağı için H'nin F, O ya da N'ye bağlı olması gerekir. NH₃'te H, N'ye bağlıdır; diğerlerinde H, C, S ya da Cl'ye bağlıdır."
-      },
-      {
-        "q": "Hangi olayda güçlü etkileşimler kopar ve yeni bağlar oluşur?",
-        "o": [
-          "Kömürün yanması",
-          "İyotun süblimleşmesi",
-          "Suyun donması",
-          "Alkolün buharlaşması"
-        ],
-        "a": 0,
-        "e": "Yanmada C ve O₂'deki bağlar kopar, CO₂'nin kovalent bağları kurulur: kimyasal değişim. Diğerlerinde yalnızca moleküller arası zayıf etkileşimler değişir."
       }
     ]
   },
@@ -1536,15 +1769,69 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "0 °C'deki 20 g buz tamamen eriyip 0 °C'de su oluncaya kadar kaç kalori ısı alır? (Buzun erime ısısı 80 cal/g)",
-        "o": [
-          "4 cal",
-          "100 cal",
-          "1600 cal",
-          "10 800 cal"
-        ],
-        "a": 2,
+        "cevap": 1600,
+        "birim": "cal",
         "e": "Q = m · L = 20 · 80 = 1600 cal. Erime boyunca sıcaklık 0 °C'de sabit kalır."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her hâl değişimini doğru gruba koy.",
+        "gruplar": [
+          "Isı alır (endotermik)",
+          "Isı verir (ekzotermik)"
+        ],
+        "ogeler": [
+          [
+            "Erime",
+            0
+          ],
+          [
+            "Buharlaşma",
+            0
+          ],
+          [
+            "Süblimleşme",
+            0
+          ],
+          [
+            "Donma",
+            1
+          ],
+          [
+            "Yoğuşma",
+            1
+          ],
+          [
+            "Kırağılaşma",
+            1
+          ]
+        ],
+        "e": "Erime, buharlaşma ve süblimleşmede tanecikler çekimi yenmek için ısı alır. Tersleri olan donma, yoğuşma ve kırağılaşmada aynı ısı geri verilir."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her kristal katı türünü örneğiyle eşleştir.",
+        "ciftler": [
+          [
+            "İyonik kristal",
+            "NaCl"
+          ],
+          [
+            "Kovalent ağ kristali",
+            "Elmas"
+          ],
+          [
+            "Moleküler kristal",
+            "I<sub>2</sub>"
+          ],
+          [
+            "Metalik kristal",
+            "Cu"
+          ]
+        ],
+        "e": "NaCl iyonların örgüsüdür, elmas kovalent bağlarla kurulmuş bir ağdır. I<sub>2</sub> kristalinde moleküller zayıf etkileşimlerle, Cu'da katyonlar metalik bağla tutunur."
       },
       {
         "q": "Kapalı bir kapta sıvısıyla dengede olan bir maddenin buhar basıncını aşağıdakilerden hangisi değiştirir?",
@@ -1556,28 +1843,6 @@
         ],
         "a": 0,
         "e": "Denge buhar basıncı yalnızca sıcaklığa ve sıvının cinsine bağlıdır; miktar, hacim ve yüzey alanı onu değiştirmez."
-      },
-      {
-        "q": "Saf bir katı sabit hızla ısıtılıyor. Sıcaklığı önce yükseliyor, sonra bir süre 80 °C'de sabit kalıyor. Bu sabit bölge için hangisi doğrudur?",
-        "o": [
-          "Madde ısı almadığı için sıcaklık değişmiyor",
-          "Taneciklerin ortalama kinetik enerjisi artıyor",
-          "Madde bir karışımdır",
-          "Katı ve sıvı bir arada; alınan ısı çekimleri yenmeye harcanıyor"
-        ],
-        "a": 3,
-        "e": "İlk sabit bölge erimedir: madde ısı almaya devam eder ama bu ısı tanecikler arası çekimleri yenmeye gider, sıcaklık sabit kalır."
-      },
-      {
-        "q": "1 atm basınçta kaynamakta olan saf suyun altındaki ocağın ateşi artırılırsa ne olur?",
-        "o": [
-          "Suyun sıcaklığı 100 °C'nin üstüne çıkar",
-          "Su daha hızlı buharlaşır, sıcaklığı 100 °C'de kalır",
-          "Suyun buhar basıncı 1 atm'yi aşar",
-          "Kaynama durur"
-        ],
-        "a": 1,
-        "e": "Kaynayan saf suyun sıcaklığı dış basınçla belirlenir; fazla ısı yalnızca daha çok suyu buhara çevirir."
       }
     ]
   },
@@ -1749,14 +2014,77 @@
     ],
     "quiz": [
       {
-        "q": "60 °C'de 100 g suda en çok 110 g, 20 °C'de en çok 32 g KNO₃ çözünür. 60 °C'deki 210 g doymuş KNO₃ çözeltisi 20 °C'ye soğutulursa kaç g KNO₃ kristallenir?",
-        "o": [
-          "32 g",
-          "110 g",
-          "78 g",
-          "142 g"
+        "tur": "eslestir",
+        "q": "Her karışımı ayırmak için kullanılan yöntemle eşleştir.",
+        "ciftler": [
+          [
+            "Kum ile çakıl",
+            "Eleme"
+          ],
+          [
+            "Demir tozu ile kükürt tozu",
+            "Mıknatısla ayırma"
+          ],
+          [
+            "Zeytinyağı ile su",
+            "Ayırma hunisi"
+          ],
+          [
+            "Ham petrol",
+            "Ayrımsal damıtma"
+          ],
+          [
+            "Mürekkepteki boyalar",
+            "Kromatografi"
+          ]
         ],
-        "a": 2,
+        "e": "Kum ile çakıl tanecik boyutuyla elenir, demir mıknatısa çekilir. Zeytinyağı ile su birbirinde çözünmediği için ayırma hunisinde ayrılır. Ham petrol kaynama noktası farkıyla, boyalar sabit faza farklı tutunmalarıyla ayrılır."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her karışımı türüne göre ayır.",
+        "gruplar": [
+          "Çözelti",
+          "Süspansiyon",
+          "Emülsiyon"
+        ],
+        "ogeler": [
+          [
+            "Şekerli su",
+            0
+          ],
+          [
+            "Tuzlu su",
+            0
+          ],
+          [
+            "Bronz",
+            0
+          ],
+          [
+            "Çamurlu su",
+            1
+          ],
+          [
+            "Türk kahvesi",
+            1
+          ],
+          [
+            "Zeytinyağlı su",
+            2
+          ],
+          [
+            "Mayonez",
+            2
+          ]
+        ],
+        "e": "Şekerli su, tuzlu su ve bronz alaşımı homojen karışım, yani çözeltidir. Çamurlu su ve Türk kahvesinde çözünmeyen katı dibe çöker: süspansiyon. Zeytinyağlı su ve mayonez birbirinde çözünmeyen iki sıvıdan oluşur: emülsiyon."
+      },
+      {
+        "tur": "sayi",
+        "q": "60 °C'de 100 g suda en çok 110 g, 20 °C'de en çok 32 g KNO₃ çözünür. 60 °C'deki 210 g doymuş KNO₃ çözeltisi 20 °C'ye soğutulursa kaç g KNO₃ kristallenir?",
+        "cevap": 78,
+        "birim": "g",
         "e": "Suyun kütlesi 100 g'dır ve değişmez; 110 g çözünmüşken soğukta yalnızca 32 g çözünebilir, 110 − 32 = 78 g dibe kristallenir."
       },
       {
@@ -1769,28 +2097,6 @@
         ],
         "a": 0,
         "e": "Süt bir koloittir; tanecikleri ışığı saçar (Tyndall etkisi). Çözeltilerde ve saf suda tanecikler çok küçük olduğu için ışığın yolu görünmez."
-      },
-      {
-        "q": "1 atm'de ısıtılan bir sıvı 102 °C'de kaynamaya başlıyor ve kaynama boyunca sıcaklığı yavaşça yükseliyor. Bu sıvı için ne söylenebilir?",
-        "o": [
-          "Saf bir elementtir.",
-          "Saf bir bileşiktir.",
-          "Saf sudur.",
-          "Bir karışımdır."
-        ],
-        "a": 3,
-        "e": "Saf maddeler kaynarken sıcaklık sabit kalır. Kaynarken sıcaklığı değişen sıvı, tuzlu su gibi bir karışımdır."
-      },
-      {
-        "q": "Tuzlu su süzgeç kâğıdından süzülürse ne olur?",
-        "o": [
-          "Tuz kâğıtta kalır, saf su geçer.",
-          "Tuz suyla birlikte geçer; karışım ayrılmaz.",
-          "Su kâğıtta kalır, tuz geçer.",
-          "Tuz kâğıtta kristallenir."
-        ],
-        "a": 1,
-        "e": "Çözünmüş tuz tanecikleri süzgeç kâğıdının gözeneklerinden çok küçüktür. Çözeltiler süzmeyle değil, buharlaştırma ya da damıtmayla ayrılır."
       }
     ]
   },
@@ -1928,37 +2234,77 @@
     ],
     "quiz": [
       {
-        "q": "12 g hidrojen ile 64 g oksijen su oluşturmak üzere tepkimeye giriyor (kütlece H:O = 1:8). Tepkime tamamlanınca hangisi doğrudur?",
-        "o": [
-          "76 g su oluşur, madde artmaz",
-          "72 g su oluşur, 4 g hidrojen artar",
-          "72 g su oluşur, 4 g oksijen artar",
-          "68 g su oluşur, 8 g hidrojen artar"
+        "tur": "eslestir",
+        "q": "Her kanunu ya da hipotezi ortaya koyan bilim insanıyla eşleştir.",
+        "ciftler": [
+          [
+            "Kütlenin korunumu",
+            "Lavoisier"
+          ],
+          [
+            "Sabit oranlar",
+            "Proust"
+          ],
+          [
+            "Katlı oranlar",
+            "Dalton"
+          ],
+          [
+            "Birleşen hacimler",
+            "Gay-Lussac"
+          ],
+          [
+            "Eşit hacimde eşit sayıda tanecik",
+            "Avogadro"
+          ]
         ],
-        "a": 1,
+        "e": "Kütlenin korunumunu Lavoisier, sabit oranları Proust, katlı oranları Dalton gösterdi. Gaz hacimlerinin tam sayılı oranda birleştiğini Gay-Lussac buldu; eşit hacimde eşit sayıda tanecik olduğunu Avogadro önerdi."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her çifti, aralarında katlı oran aranıp aranamayacağına göre ayır.",
+        "gruplar": [
+          "Katlı oran var",
+          "Katlı oran yok"
+        ],
+        "ogeler": [
+          [
+            "CO – CO<sub>2</sub>",
+            0
+          ],
+          [
+            "NO – NO<sub>2</sub>",
+            0
+          ],
+          [
+            "SO<sub>2</sub> – SO<sub>3</sub>",
+            0
+          ],
+          [
+            "N<sub>2</sub>O – NO<sub>2</sub>",
+            0
+          ],
+          [
+            "H<sub>2</sub>O – H<sub>2</sub>S",
+            1
+          ],
+          [
+            "NO<sub>2</sub> – N<sub>2</sub>O<sub>4</sub>",
+            1
+          ],
+          [
+            "5 g su – 50 g su",
+            1
+          ]
+        ],
+        "e": "Katlı oran, aynı iki elementten oluşan ve basit formülü farklı bileşikler arasında aranır. H<sub>2</sub>O ile H<sub>2</sub>S'nin ortak iki elementi yoktur, NO<sub>2</sub> ile N<sub>2</sub>O<sub>4</sub>'ün basit formülü aynıdır, 5 g ve 50 g su ise aynı bileşiktir."
+      },
+      {
+        "tur": "sayi",
+        "q": "12 g hidrojen ile 64 g oksijen su oluşturmak üzere tepkimeye giriyor (kütlece H:O = 1:8). Tepkime tamamlanınca kaç g su oluşur?",
+        "cevap": 72,
+        "birim": "g",
         "e": "64 g oksijen 64 ÷ 8 = 8 g hidrojenle birleşir; 8 + 64 = 72 g su oluşur ve 12 − 8 = 4 g hidrojen artar."
-      },
-      {
-        "q": "Aşağıdaki bileşik çiftlerinden hangisi katlı oranlar yasasına örnektir?",
-        "o": [
-          "H₂O ve H₂S",
-          "NO₂ ve N₂O₄",
-          "SO₂ ve SO₃",
-          "5 g su ve 50 g su"
-        ],
-        "a": 2,
-        "e": "32 g kükürt SO₂'de 32 g, SO₃'te 48 g oksijenle birleşir; oran 2:3'tür. Diğerlerinde ortak iki element yoktur ya da bileşik/basit formül aynıdır."
-      },
-      {
-        "q": "X ve Y'den oluşan bir bileşikte, harcanan Y kütlesinin X kütlesine karşı grafiği orijinden ve (6 g X, 2 g Y) noktasından geçen bir doğrudur. 15 g X ile 4 g Y tepkimeye girerse ne olur?",
-        "o": [
-          "16 g bileşik oluşur, 3 g X artar",
-          "19 g bileşik oluşur, madde artmaz",
-          "16 g bileşik oluşur, 3 g Y artar",
-          "15 g bileşik oluşur, 4 g Y artar"
-        ],
-        "a": 0,
-        "e": "Grafiğe göre X:Y = 3:1. 4 g Y, 12 g X ile birleşir; 16 g bileşik oluşur ve 15 − 12 = 3 g X artar."
       },
       {
         "q": "Aynı sıcaklık ve basınçta 2 L H₂ ile 1 L O₂ tamamen tepkimeye girip su buharı oluşturuyor. Hangisi doğrudur?",
@@ -2073,37 +2419,72 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "C<sub>3</sub>H<sub>8</sub> + a O<sub>2</sub> → b CO<sub>2</sub> + c H<sub>2</sub>O tepkimesi en küçük tam sayılarla denkleştirilince a kaç olur?",
-        "o": [
-          "3",
-          "4",
-          "5",
-          "7"
-        ],
-        "a": 2,
+        "cevap": 5,
         "e": "C için b = 3, H için c = 4 olur. Sağda 3·2 + 4 = 10 O var; bu yüzden a = 5."
       },
       {
-        "q": "Kapalı bir kapta gerçekleşen kimyasal tepkimede aşağıdakilerden hangisi korunmak zorunda değildir?",
-        "o": [
-          "Atomların türü ve sayısı",
-          "Toplam kütle",
-          "Toplam yük",
-          "Molekül sayısı"
+        "tur": "ayir",
+        "q": "Kapalı kapta gerçekleşen bir kimyasal tepkimede hangileri korunur? Her birini doğru gruba koy.",
+        "gruplar": [
+          "Korunur",
+          "Korunmayabilir"
         ],
-        "a": 3,
-        "e": "Atomlar yeniden dizildiği için molekül sayısı değişebilir (N<sub>2</sub> + 3H<sub>2</sub> → 2NH<sub>3</sub>). Atomlar, kütle ve yük ise korunur."
+        "ogeler": [
+          [
+            "Atom türü",
+            0
+          ],
+          [
+            "Atom sayısı",
+            0
+          ],
+          [
+            "Toplam kütle",
+            0
+          ],
+          [
+            "Toplam yük",
+            0
+          ],
+          [
+            "Molekül sayısı",
+            1
+          ],
+          [
+            "Gaz hacmi",
+            1
+          ]
+        ],
+        "e": "Tepkimede çekirdekler değişmez, atomlar yalnızca yeniden düzenlenir; atom türü ve sayısı, kütle ve yük korunur. Molekül sayısı ve hacim değişebilir: N<sub>2</sub> + 3H<sub>2</sub> → 2NH<sub>3</sub>'te 4 molekülden 2 molekül çıkar."
       },
       {
-        "q": "Pb(NO<sub>3</sub>)<sub>2</sub>(suda) + 2KI(suda) → PbI<sub>2</sub>(k) + 2KNO<sub>3</sub>(suda) tepkimesinde sarı bir çökelek oluşuyor. Seyirci iyonlar hangileridir?",
-        "o": [
-          "Pb<sup>2+</sup> ve I<sup>−</sup>",
-          "K<sup>+</sup> ve NO<sub>3</sub><sup>−</sup>",
-          "Pb<sup>2+</sup> ve K<sup>+</sup>",
-          "I<sup>−</sup> ve NO<sub>3</sub><sup>−</sup>"
+        "tur": "eslestir",
+        "q": "Her tepkimeyi türüyle eşleştir.",
+        "ciftler": [
+          [
+            "CH<sub>4</sub> + 2O<sub>2</sub> → CO<sub>2</sub> + 2H<sub>2</sub>O",
+            "Yanma"
+          ],
+          [
+            "N<sub>2</sub> + 3H<sub>2</sub> → 2NH<sub>3</sub>",
+            "Sentez"
+          ],
+          [
+            "2H<sub>2</sub>O → 2H<sub>2</sub> + O<sub>2</sub>",
+            "Analiz"
+          ],
+          [
+            "Ag<sup>+</sup> + Cl<sup>−</sup> → AgCl(k)",
+            "Çözünme-çökelme"
+          ],
+          [
+            "HCl + NaOH → NaCl + H<sub>2</sub>O",
+            "Asit-baz"
+          ]
         ],
-        "a": 1,
-        "e": "Çökelek PbI<sub>2</sub>'dir; Pb<sup>2+</sup> ve I<sup>−</sup> tepkimeye girer. K<sup>+</sup> ve NO<sub>3</sub><sup>−</sup> çözeltide aynen kalır, net denklem Pb<sup>2+</sup> + 2I<sup>−</sup> → PbI<sub>2</sub>(k) olur."
+        "e": "Metan oksijenle yanar. Azot ve hidrojen birleşip tek ürün verir: sentez. Suyun elektrolizi bir bileşiğin ayrışmasıdır: analiz. Ag<sup>+</sup> ve Cl<sup>−</sup> çökelek oluşturur; HCl ile NaOH tuz ve su verir: asit-baz."
       },
       {
         "q": "Bir öğrenci H<sub>2</sub> + O<sub>2</sub> → H<sub>2</sub>O denklemini denkleştirmek için ürünü H<sub>2</sub>O<sub>2</sub> olarak yazıyor. Bu yaklaşım için ne söylenebilir?",
@@ -2247,26 +2628,46 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "Normal koşullarda 4,48 L hacim kaplayan CO<sub>2</sub> gazı kaç gramdır? (C = 12, O = 16)",
-        "o": [
-          "4,4 g",
-          "8,8 g",
-          "17,6 g",
-          "9,8 g"
-        ],
-        "a": 1,
+        "cevap": 8.8,
+        "tolerans": 0.05,
+        "birim": "g",
         "e": "n = 4,48 / 22,4 = 0,2 mol; CO<sub>2</sub> = 44 g/mol olduğundan m = 0,2 × 44 = 8,8 g."
       },
       {
-        "q": "1 mol NH<sub>3</sub> için hangisi doğrudur? (N = 14, H = 1)",
-        "o": [
-          "6,02×10<sup>23</sup> tane atom içerir",
-          "Kütlesi 17 akb'dir",
-          "3 mol H atomu içerir ve kütlesi 17 g'dır",
-          "Oda koşulunda 22,4 L hacim kaplar"
+        "tur": "eslestir",
+        "q": "Her miktarı mol sayısıyla eşleştir. (H = 1, C = 12, O = 16)",
+        "ciftler": [
+          [
+            "36 g H<sub>2</sub>O",
+            "2 mol"
+          ],
+          [
+            "4,4 g CO<sub>2</sub>",
+            "0,1 mol"
+          ],
+          [
+            "NK'de 11,2 L CH<sub>4</sub>",
+            "0,5 mol"
+          ],
+          [
+            "1,806×10<sup>24</sup> molekül",
+            "3 mol"
+          ]
         ],
-        "a": 2,
-        "e": "1 mol NH<sub>3</sub> 17 g'dır ve 1 mol N ile 3 mol H, toplam 4 mol atom içerir. 17 akb tek molekülün kütlesidir; 22,4 L ise NK'deki hacimdir."
+        "e": "36 / 18 = 2 mol, 4,4 / 44 = 0,1 mol, 11,2 / 22,4 = 0,5 mol. 1,806×10<sup>24</sup> / 6,02×10<sup>23</sup> = 3 mol."
+      },
+      {
+        "tur": "sirala",
+        "q": "Kütlece yüzdesi bilinen bir bileşiğin molekül formülünü bulma adımlarını sıraya koy.",
+        "ogeler": [
+          "Yüzdeleri 100 g örnekte grama çevir",
+          "Her elementin kütlesini mol kütlesine böl",
+          "Mol sayılarını en küçük mole böl: basit formül",
+          "Mol kütlesiyle n'yi bul: molekül formülü"
+        ],
+        "e": "100 g örnekte yüzdeler grama dönüşür, gramlar mol kütlesine bölünerek mole çevrilir. En küçük mole bölünce basit formül çıkar; bileşiğin mol kütlesi basit formülünkine bölünerek n ve molekül formülü bulunur."
       },
       {
         "q": "N<sub>2</sub> + 3H<sub>2</sub> → 2NH<sub>3</sub> tepkimesi için kapta 2 mol N<sub>2</sub> ve 3 mol H<sub>2</sub> var. Tepkime tam verimle tamamlanınca kapta ne bulunur?",
@@ -2278,17 +2679,6 @@
         ],
         "a": 0,
         "e": "3 mol H<sub>2</sub> yalnızca 1 mol N<sub>2</sub> ile tepkimeye girer; H<sub>2</sub> tükenir, 2 mol NH<sub>3</sub> oluşur ve 1 mol N<sub>2</sub> artar."
-      },
-      {
-        "q": "Bir öğrenci \"2H<sub>2</sub> + O<sub>2</sub> → 2H<sub>2</sub>O denklemine göre 2 g H<sub>2</sub>, 1 g O<sub>2</sub> ile tepkimeye girer\" diyor. Doğrusu hangisidir? (H = 1, O = 16)",
-        "o": [
-          "Öğrenci haklıdır; katsayılar kütle oranını verir",
-          "Kütle korunmadığı için oran hesaplanamaz",
-          "H<sub>2</sub> hafif olduğu için her zaman artan maddedir",
-          "Katsayılar mol oranıdır: 4 g H<sub>2</sub>, 32 g O<sub>2</sub> ile tepkimeye girer"
-        ],
-        "a": 3,
-        "e": "2 mol H<sub>2</sub> (4 g) 1 mol O<sub>2</sub> (32 g) ile tepkimeye girer; kütlece oran 1 : 8'dir, 2 : 1 değil."
       }
     ]
   },
@@ -2488,26 +2878,68 @@
     ],
     "quiz": [
       {
-        "q": "25 °C'de pH'ı 3 olan bir HCl çözeltisinde [OH<sup>−</sup>] kaç M'dir?",
-        "o": [
-          "1×10<sup>−3</sup>",
-          "1×10<sup>−7</sup>",
-          "1×10<sup>−11</sup>",
-          "3×10<sup>−14</sup>"
-        ],
-        "a": 2,
-        "e": "pOH = 14 − 3 = 11 olduğundan [OH<sup>−</sup>] = 1×10<sup>−11</sup> M'dir. Ksu = 10<sup>−3</sup>·10<sup>−11</sup> = 10<sup>−14</sup> ile de doğrulanır."
+        "tur": "sayi",
+        "q": "25 °C'de 0,01 M NaOH çözeltisinin pH'ı kaçtır?",
+        "cevap": 12,
+        "e": "NaOH kuvvetli bazdır, tamamen iyonlaşır: [OH<sup>−</sup>] = 0,01 M ve pOH = 2. pH = 14 − 2 = 12."
       },
       {
-        "q": "HCO₃<sup>−</sup> + H₂O ⇌ H₂CO₃ + OH<sup>−</sup> tepkimesinde HCO₃<sup>−</sup> iyonunun eşlenik asidi hangisidir?",
-        "o": [
-          "H₂CO₃",
-          "CO₃<sup>2−</sup>",
-          "OH<sup>−</sup>",
-          "H₃O<sup>+</sup>"
+        "tur": "ayir",
+        "q": "Her maddeyi suda iyonlaşmasına göre doğru gruba koy.",
+        "gruplar": [
+          "Kuvvetli",
+          "Zayıf"
         ],
-        "a": 0,
-        "e": "HCO₃<sup>−</sup> bir proton alarak H₂CO₃'e dönüşür; bu tepkimede baz gibi davranır ve eşlenik asidi H₂CO₃'tür."
+        "ogeler": [
+          [
+            "HCl",
+            0
+          ],
+          [
+            "HNO₃",
+            0
+          ],
+          [
+            "NaOH",
+            0
+          ],
+          [
+            "KOH",
+            0
+          ],
+          [
+            "CH₃COOH",
+            1
+          ],
+          [
+            "NH₃",
+            1
+          ]
+        ],
+        "e": "HCl, HNO₃, NaOH ve KOH suda tamamen iyonlaşır. CH₃COOH (sirke) ve NH₃ ise az iyonlaşır; moleküllerinin çoğu sağlam kalır."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her oksidi türüyle eşleştir.",
+        "ciftler": [
+          [
+            "CO₂",
+            "Asidik oksit"
+          ],
+          [
+            "CaO",
+            "Bazik oksit"
+          ],
+          [
+            "ZnO",
+            "Amfoter oksit"
+          ],
+          [
+            "CO",
+            "Nötr oksit"
+          ]
+        ],
+        "e": "CO₂ suyla asit oluşturur, CaO suyla baz oluşturur. ZnO hem asitle hem bazla tepkimeye girer; CO ise ikisiyle de girmez, nötrdür."
       },
       {
         "q": "0,1 M CH₃COOH çözeltisi 0,1 M NaOH ile titre ediliyor. 25 °C'de eşdeğerlik noktasındaki çözelti için hangisi doğrudur?",
@@ -2519,17 +2951,6 @@
         ],
         "a": 3,
         "e": "Eşdeğerlikte çözeltide CH₃COONa vardır. Zayıf asidin anyonu suyla tepkimeye girip OH<sup>−</sup> verdiği için çözelti baziktir."
-      },
-      {
-        "q": "Bir öğrenci \"Çok seyreltik olduğu için 0,001 M HCl zayıf bir asittir\" diyor. Hangisi doğrudur?",
-        "o": [
-          "Doğru; seyreltik asitler zayıftır",
-          "Yanlış; HCl her derişimde suda tamamen iyonlaşır, kuvvetli asittir",
-          "Doğru; pH'ı 7'ye yakındır",
-          "Yanlış; HCl asit değil tuzdur"
-        ],
-        "a": 1,
-        "e": "Kuvvet iyonlaşma oranıyla, derişiklik çözünen miktarıyla ilgilidir. 0,001 M HCl seyreltik ama kuvvetlidir; pH'ı 3'tür."
       }
     ]
   },
@@ -2647,37 +3068,69 @@
     ],
     "quiz": [
       {
-        "q": "Sabun molekülünün yağlı kire tutunan kısmı hangisidir?",
-        "o": [
-          "İyonik –COO⁻ başı",
-          "Na⁺ iyonu",
-          "Uzun hidrokarbon kuyruğu",
-          "Su molekülleri"
+        "tur": "eslestir",
+        "q": "Her tarım kimyasalını işiyle eşleştir.",
+        "ciftler": [
+          [
+            "İnsektisit",
+            "Böcekleri öldürür"
+          ],
+          [
+            "Herbisit",
+            "Yabani otları öldürür"
+          ],
+          [
+            "Fungisit",
+            "Mantarları öldürür"
+          ],
+          [
+            "Gübre",
+            "Bitkiye N, P, K sağlar"
+          ]
         ],
-        "a": 2,
-        "e": "Hidrokarbon kuyruğu hidrofobdur ve yağa gömülür; iyonik baş ise suya dönük kalır."
+        "e": "İnsektisit böceğe, herbisit yabani ota, fungisit mantara karşı kullanılan pestisittir. Gübre ise zararlı öldürmez; bitkiye azot, fosfor ve potasyum sağlar."
       },
       {
-        "q": "Kireçli bir bölgede çamaşır yıkarken sabun köpürmüyor ve kumaşta beyaz tortu kalıyor. En uygun açıklama hangisidir?",
-        "o": [
-          "Suda çok Ca²⁺ ve Mg²⁺ var; sabun bunlarla çökelek yapıyor, deterjan kullanılmalı",
-          "Su çok yumuşak, sabun fazla geliyor",
-          "Sabun asidik olduğu için kireci çözüyor",
-          "Su soğuk olduğu için sabun buharlaşıyor"
+        "tur": "ayir",
+        "q": "Her özelliği sabun ya da deterjana göre ayır.",
+        "gruplar": [
+          "Sabun",
+          "Deterjan"
         ],
-        "a": 0,
-        "e": "Sert sudaki Ca²⁺ ve Mg²⁺ sabunla çözünmeyen kaymak oluşturur. Deterjan bu iyonlarla çökelek yapmadığı için sert suda da köpürür."
+        "ogeler": [
+          [
+            "Yağ asidi tuzudur",
+            0
+          ],
+          [
+            "Sert suda kaymak yapar",
+            0
+          ],
+          [
+            "Daha kolay parçalanır",
+            0
+          ],
+          [
+            "Petrolden üretilir",
+            1
+          ],
+          [
+            "Sert suda da köpürür",
+            1
+          ],
+          [
+            "Fosfat içerebilir",
+            1
+          ]
+        ],
+        "e": "Sabun yağ asidinin Na ya da K tuzudur; Ca²⁺ ve Mg²⁺ ile çökelek yapar ve doğada daha kolay parçalanır. Deterjan petrol türevi sentetik bir maddedir, sert suda da köpürür; fosfat katkılı olanlar göllerde yosunlanmaya yol açabilir."
       },
       {
+        "tur": "sayi",
         "q": "Bir bisküvinin etiketinde 100 g için 25 g şeker yazıyor. 40 g'lık paketin tamamını yersen kaç gram şeker almış olursun?",
-        "o": [
-          "25 g",
-          "4 g",
-          "62,5 g",
-          "10 g"
-        ],
-        "a": 3,
-        "e": "Değerler 100 g içindir: 40 g için 25 × 40 / 100 = 10 g şeker."
+        "cevap": 10,
+        "birim": "g",
+        "e": "Etiketteki değerler 100 g içindir: 40 g için 25 × 40 / 100 = 10 g şeker."
       },
       {
         "q": "Biri banyoyu daha iyi temizlemek için çamaşır suyuyla tuz ruhunu karıştırmak istiyor. Hangisi doğrudur?",
@@ -2830,37 +3283,46 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "8,2 L'lik kapalı bir kapta 127 °C'de 0,5 mol ideal gaz var. Gazın basıncı kaç atm'dir? (R = 0,082 L·atm/(mol·K))",
-        "o": [
-          "0,64 atm",
-          "1 atm",
-          "4 atm",
-          "2 atm"
-        ],
-        "a": 3,
-        "e": "T = 127 + 273 = 400 K; P = 0,5·0,082·400 / 8,2 = 2 atm. 0,64 atm, sıcaklığı kelvine çevirmeyi unutunca çıkar."
+        "cevap": 2,
+        "birim": "atm",
+        "e": "T = 127 + 273 = 400 K; P = n·R·T / V = 0,5·0,082·400 / 8,2 = 2 atm. Sıcaklığı kelvine çevirmeyi unutursan 0,64 atm bulursun."
       },
       {
-        "q": "Aynı sıcaklıktaki He ve CO₂ gazları için hangisi doğrudur?",
-        "o": [
-          "Ortalama kinetik enerjileri eşittir; He tanecikleri ortalamada daha hızlıdır.",
-          "CO₂ ağır olduğu için ortalama kinetik enerjisi daha büyüktür.",
-          "Ortalama hızları eşittir.",
-          "He hafif olduğu için ortalama kinetik enerjisi daha büyüktür."
+        "tur": "eslestir",
+        "q": "Her gaz yasasını, hangi nicelikler sabitken geçerli olduğuyla birlikte eşleştir.",
+        "ciftler": [
+          [
+            "Boyle",
+            "P·V sabit (T ve n sabit)"
+          ],
+          [
+            "Charles",
+            "V ∝ T (P ve n sabit)"
+          ],
+          [
+            "Gay-Lussac",
+            "P ∝ T (V ve n sabit)"
+          ],
+          [
+            "Avogadro",
+            "V ∝ n (P ve T sabit)"
+          ]
         ],
-        "a": 0,
-        "e": "Ortalama kinetik enerji yalnız sıcaklığa bağlıdır. Enerji eşitken kütlesi küçük olan He daha hızlı hareket eder."
+        "e": "Boyle'da basınç ile hacim ters orantılıdır. Charles'ta hacim, Gay-Lussac'ta basınç kelvin sıcaklığıyla doğru orantılıdır. Avogadro'da hacim mol sayısıyla doğru orantılıdır."
       },
       {
-        "q": "Sabit basınçta bir gazın hacmi Celsius sıcaklığına karşı çizilip doğru geriye uzatılıyor. Doğru sıcaklık eksenini nerede keser?",
-        "o": [
-          "0 °C",
-          "−273 °C",
-          "273 °C",
-          "−100 °C"
+        "tur": "sirala",
+        "q": "Aynı sıcaklıkta bu gazları en hızlı yayılandan en yavaşa sırala. (g/mol: H₂ 2, He 4, CH₄ 16, O₂ 32, CO₂ 44)",
+        "ogeler": [
+          "H₂",
+          "He",
+          "CH₄",
+          "O₂",
+          "CO₂"
         ],
-        "a": 1,
-        "e": "Charles yasasına göre V, kelvin sıcaklığıyla orantılıdır; hacim −273 °C'de, yani 0 K'de sıfıra iner. Bu mutlak sıfırdır."
+        "e": "Graham yasasına göre yayılma hızı √M ile ters orantılıdır: mol kütlesi küçük olan daha hızlıdır. Sıra H₂ > He > CH₄ > O₂ > CO₂."
       },
       {
         "q": "Hidrojen 25 °C'de su üstünde toplanıyor; kaptaki ve dışarıdaki su düzeyleri eşit, dış basınç 760 mmHg. 25 °C'de su buhar basıncı 24 mmHg ise H₂'nin kısmi basıncı kaç mmHg'dir?",
@@ -3025,37 +3487,49 @@
     ],
     "quiz": [
       {
-        "q": "250 mL çözeltide 0,05 mol CaCl₂ çözünmüştür. Çözeltideki Cl⁻ iyonu derişimi kaç M'dir?",
-        "o": [
-          "0,05",
-          "0,1",
-          "0,2",
-          "0,4"
-        ],
-        "a": 3,
-        "e": "CaCl₂ derişimi 0,05 / 0,25 = 0,2 M'dir. Her CaCl₂ iki Cl⁻ verdiği için [Cl⁻] = 2 · 0,2 = 0,4 M olur."
-      },
-      {
-        "q": "Aynı molalitedeki (0,1 m) sulu çözeltilerden hangisi 1 atm'de en düşük sıcaklıkta donar?",
-        "o": [
-          "Şeker (C₁₂H₂₂O₁₁)",
-          "NaCl",
-          "CaCl₂",
-          "Etanol (C₂H₅OH)"
-        ],
-        "a": 2,
-        "e": "Donma noktası alçalması tanecik sayısıyla artar. CaCl₂ üç iyon verir (i = 3); NaCl 2, şeker ve etanol 1 tanecik verir."
-      },
-      {
-        "q": "KNO₃'ün çözünürlüğü 60 °C'de 110 g, 20 °C'de 32 g / 100 g sudur. 60 °C'de 50 g suyla hazırlanmış doymuş çözelti 20 °C'ye soğutulursa kaç g KNO₃ çöker?",
-        "o": [
-          "78",
-          "39",
-          "55",
-          "16"
-        ],
-        "a": 1,
+        "tur": "sayi",
+        "q": "KNO₃'ün çözünürlüğü 60 °C'de 110 g, 20 °C'de 32 g / 100 g sudur. 60 °C'de 50 g suyla hazırlanmış doymuş çözelti 20 °C'ye soğutulursa kaç gram KNO₃ çöker?",
+        "cevap": 39,
+        "birim": "g",
         "e": "50 g su 60 °C'de 55 g, 20 °C'de 16 g KNO₃ tutar. Fark 55 − 16 = 39 g'dır."
+      },
+      {
+        "tur": "sirala",
+        "q": "1 atm'de donma noktalarını en yüksekten en düşüğe sırala.",
+        "ogeler": [
+          "Saf su",
+          "0,1 m şeker çözeltisi",
+          "0,1 m NaCl çözeltisi",
+          "0,1 m CaCl₂ çözeltisi"
+        ],
+        "e": "Donma noktası alçalması ΔT = K·m·i ile tanecik sayısına bağlıdır. Saf suda alçalma yoktur; şeker i = 1, NaCl i = 2, CaCl₂ i = 3 olduğu için CaCl₂ çözeltisi en düşük sıcaklıkta donar."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her derişim birimini tanımıyla eşleştir.",
+        "ciftler": [
+          [
+            "Molarite",
+            "mol çözünen / L çözelti"
+          ],
+          [
+            "Molalite",
+            "mol çözünen / kg çözücü"
+          ],
+          [
+            "Kütlece yüzde",
+            "g çözünen / 100 g çözelti"
+          ],
+          [
+            "ppm",
+            "mg çözünen / kg çözelti"
+          ],
+          [
+            "Mol kesri",
+            "mol bileşen / toplam mol"
+          ]
+        ],
+        "e": "Molarite çözeltinin hacmine, molalite çözücünün kütlesine dayanır. Kütlece yüzde 100 g çözeltideki çözüneni, ppm 1 kg çözeltideki mg çözüneni verir; mol kesri birimsiz bir orandır."
       },
       {
         "q": "Bir öğrenci \"Sıcaklık arttıkça her maddenin sudaki çözünürlüğü artar\" diyor. En doğru yanıt hangisidir?",
@@ -3258,26 +3732,77 @@
     ],
     "quiz": [
       {
-        "q": "CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(s) tepkimesinde ΔH = −890 kJ'dür. 8 g CH₄ (M = 16 g/mol) tamamen yanınca ne olur?",
-        "o": [
-          "890 kJ ısı açığa çıkar",
-          "445 kJ ısı açığa çıkar",
-          "445 kJ ısı alınır",
-          "1780 kJ ısı açığa çıkar"
+        "tur": "ayir",
+        "q": "Her olayı ortamla ısı alışverişine göre ayır.",
+        "gruplar": [
+          "Ekzotermik",
+          "Endotermik"
         ],
-        "a": 1,
-        "e": "8 g CH₄ 0,5 mol'dür; ısı miktarla orantılı olduğundan 0,5 × 890 = 445 kJ açığa çıkar. ΔH eksi olduğu için ısı verilir."
+        "ogeler": [
+          [
+            "Yanma",
+            0
+          ],
+          [
+            "Nötralleşme",
+            0
+          ],
+          [
+            "Donma",
+            0
+          ],
+          [
+            "Yoğuşma",
+            0
+          ],
+          [
+            "Buzun erimesi",
+            1
+          ],
+          [
+            "Buharlaşma",
+            1
+          ],
+          [
+            "Fotosentez",
+            1
+          ],
+          [
+            "Suyun elektrolizi",
+            1
+          ]
+        ],
+        "e": "Yanma, nötralleşme, donma ve yoğuşma ortama ısı verir. Erime, buharlaşma, fotosentez ve suyun elektrolizi ise ortamdan enerji alır."
       },
       {
-        "q": "25 °C ve 1 atm'de aşağıdakilerden hangisinin standart oluşum entalpisi sıfırdır?",
-        "o": [
-          "O₃(g)",
-          "C(elmas)",
-          "Br₂(s)",
-          "Br₂(g)"
+        "tur": "sayi",
+        "q": "CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(s) tepkimesinde ΔH = −890 kJ'dür. 8 g CH₄ (M = 16 g/mol) tamamen yanınca kaç kJ ısı açığa çıkar?",
+        "cevap": 445,
+        "birim": "kJ",
+        "e": "8 g CH₄ 8 / 16 = 0,5 mol'dür. Isı miktarla orantılı olduğundan 0,5 × 890 = 445 kJ açığa çıkar."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her kavramı tanımıyla eşleştir.",
+        "ciftler": [
+          [
+            "Entalpi (H)",
+            "Sabit basınçtaki enerji içeriği"
+          ],
+          [
+            "Bağ enerjisi",
+            "1 mol gaz bağını kırma enerjisi"
+          ],
+          [
+            "Isı değeri",
+            "1 g yakıtın yanınca verdiği ısı"
+          ],
+          [
+            "Kalorimetre",
+            "Isıyı ölçen yalıtılmış kap"
+          ]
         ],
-        "a": 2,
-        "e": "Brom 25 °C'de sıvıdır; elementin en kararlı hâli olan Br₂(s) için ΔH°f = 0'dır. Ozon, elmas ve brom buharı kararlı hâl değildir."
+        "e": "Entalpi sistemin sabit basınçtaki enerji içeriğidir. Bağ enerjisi gaz hâlinde 1 mol bağı kırmak için gereken enerjidir. Isı değeri kJ/g cinsinden yakıtın verdiği ısıdır; kalorimetre bu ısıyı ölçer."
       },
       {
         "q": "Bir tepkimenin potansiyel enerji diyagramında girenler 50 kJ, ürünler 20 kJ düzeyinde, tepe ise 120 kJ'dedir. Hangisi doğrudur?",
@@ -3289,17 +3814,6 @@
         ],
         "a": 3,
         "e": "ΔH = H(ürünler) − H(girenler) = 20 − 50 = −30 kJ; ürünler aşağıda olduğu için ekzotermiktir. 70 kJ ise aktifleşme enerjisidir, ΔH değil."
-      },
-      {
-        "q": "Aşağıdaki ifadelerden hangisi doğrudur?",
-        "o": [
-          "Bir bağ oluşurken enerji açığa çıkar.",
-          "Bir bağ kırılırken enerji açığa çıkar.",
-          "Buzun erimesi ekzotermiktir.",
-          "Ekzotermik tepkimede ürünlerin entalpisi girenlerinkinden büyüktür."
-        ],
-        "a": 0,
-        "e": "Bağ oluşumu enerji verir, bağ kırmak enerji ister. Buz erirken ısı alır; ekzotermik tepkimede ürünlerin entalpisi daha düşüktür."
       }
     ]
   },
@@ -3438,15 +3952,73 @@
     ],
     "quiz": [
       {
-        "q": "X + 2Y → Z tepkimesinin hız denklemi hız = k[X]<sup>2</sup>[Y] ise aynı sıcaklıkta [X] 3 katına çıkarılıp [Y] yarıya indirilirse hız nasıl değişir?",
-        "o": [
-          "1,5 katına çıkar",
-          "3 katına çıkar",
-          "4,5 katına çıkar",
-          "9 katına çıkar"
+        "tur": "sayi",
+        "q": "X + 2Y → Z tepkimesinin hız denklemi hız = k[X]<sup>2</sup>[Y]'dir. Aynı sıcaklıkta [X] 3 katına çıkarılıp [Y] yarıya indirilirse hız kaç katına çıkar?",
+        "cevap": 4.5,
+        "birim": "kat",
+        "e": "Hız 3² × ½ = 4,5 katına çıkar. Dereceler denklemin katsayılarından değil, hız denkleminden alınır."
+      },
+      {
+        "tur": "ayir",
+        "q": "Katı ile çözelti arasındaki bir tepkimede her değişikliği hıza etkisine göre ayır.",
+        "gruplar": [
+          "Hızı artırır",
+          "Hızı azaltır"
         ],
-        "a": 2,
-        "e": "Hız 3² × ½ = 4,5 katına çıkar. Dereceler hız denkleminden alınır, denklem katsayılarından değil."
+        "ogeler": [
+          [
+            "Sıcaklığı artırmak",
+            0
+          ],
+          [
+            "Katalizör eklemek",
+            0
+          ],
+          [
+            "Katıyı toz yapmak",
+            0
+          ],
+          [
+            "İnhibitör eklemek",
+            1
+          ],
+          [
+            "Sıcaklığı düşürmek",
+            1
+          ],
+          [
+            "Toz yerine parça katı",
+            1
+          ]
+        ],
+        "e": "Sıcaklık artınca E<sub>a</sub>'yı aşan tanecik sayısı artar; katalizör E<sub>a</sub>'sı düşük bir yol açar; toz katının temas yüzeyi büyüktür. İnhibitör, düşük sıcaklık ve küçük temas yüzeyi tepkimeyi yavaşlatır."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her terimi tanımıyla eşleştir.",
+        "ciftler": [
+          [
+            "Etkin çarpışma",
+            "Ürün veren çarpışma"
+          ],
+          [
+            "Aktifleşmiş kompleks",
+            "Tepedeki kısa ömürlü yapı"
+          ],
+          [
+            "Ara ürün",
+            "Oluşup sonraki basamakta harcanır"
+          ],
+          [
+            "Mekanizma",
+            "Basamakların dizisi"
+          ],
+          [
+            "İnhibitör",
+            "Tepkimeyi yavaşlatan madde"
+          ]
+        ],
+        "e": "Etkin çarpışma ürün verir. Aktifleşmiş kompleks enerji tepesindeki kararsız yapıdır. Ara ürün bir basamakta oluşup sonrakinde harcanır, mekanizma basamakların dizisidir; inhibitör tepkimeyi yavaşlatır."
       },
       {
         "q": "NO<sub>2</sub> + CO → NO + CO<sub>2</sub> tepkimesi iki basamaklıdır: 1) 2NO<sub>2</sub> → NO<sub>3</sub> + NO (yavaş), 2) NO<sub>3</sub> + CO → NO<sub>2</sub> + CO<sub>2</sub> (hızlı). Hız denklemi hangisidir?",
@@ -3458,28 +4030,6 @@
         ],
         "a": 1,
         "e": "Hızı yavaş basamak belirler; girenleri 2 tane NO<sub>2</sub> olduğu için hız = k[NO<sub>2</sub>]<sup>2</sup>. CO hızlı basamakta girdiği için hızı etkilemez."
-      },
-      {
-        "q": "Bir tepkimenin potansiyel enerji diyagramında girenler 20 kJ, aktifleşmiş kompleks 80 kJ, ürünler 50 kJ düzeyindedir. Hangisi doğrudur?",
-        "o": [
-          "E<sub>a,ileri</sub> = 80 kJ'dir.",
-          "ΔH = −30 kJ'dir.",
-          "E<sub>a,geri</sub> = 50 kJ'dir.",
-          "E<sub>a,geri</sub> = 30 kJ'dir ve tepkime endotermiktir."
-        ],
-        "a": 3,
-        "e": "E<sub>a,ileri</sub> = 80 − 20 = 60 kJ, E<sub>a,geri</sub> = 80 − 50 = 30 kJ. ΔH = 60 − 30 = +30 kJ olduğu için tepkime endotermiktir."
-      },
-      {
-        "q": "Ekzotermik bir tepkimenin sıcaklığı artırılıyor. Aşağıdakilerden hangisi doğrudur?",
-        "o": [
-          "Hız artar, çünkü E<sub>a</sub>'yı aşan tanecik sayısı artar.",
-          "Hız azalır, çünkü tepkime ısı verir.",
-          "E<sub>a</sub> düştüğü için hız artar.",
-          "k değişmez; yalnızca çarpışma sayısı artar."
-        ],
-        "a": 0,
-        "e": "Sıcaklık ekzotermik ya da endotermik her tepkimenin hızını artırır. E<sub>a</sub> değişmez; eşiği aşan tanecik oranı ve k büyür."
       }
     ]
   },
@@ -3676,26 +4226,78 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "Sabit sıcaklıkta 2 L'lik kapalı kaba 1 mol N₂O₄ konuyor: N₂O₄(g) ⇌ 2NO₂(g). Dengede kapta 0,4 mol NO₂ bulunduğuna göre K<sub>c</sub> kaçtır?",
-        "o": [
-          "0,05",
-          "0,2",
-          "0,1",
-          "0,5"
-        ],
-        "a": 2,
-        "e": "0,2 mol N₂O₄ harcanır, 0,8 mol kalır. [N₂O₄] = 0,8/2 = 0,4 M ve [NO₂] = 0,4/2 = 0,2 M olduğundan K<sub>c</sub> = 0,2² / 0,4 = 0,1'dir."
+        "cevap": 0.1,
+        "tolerans": 0.001,
+        "e": "0,4 mol NO₂ oluşurken 0,2 mol N₂O₄ harcanır, 0,8 mol kalır. [N₂O₄] = 0,4 M, [NO₂] = 0,2 M olduğundan K<sub>c</sub> = 0,2² / 0,4 = 0,1'dir."
       },
       {
-        "q": "H₂(g) + I₂(g) ⇌ 2HI(g) dengesinde, sabit sıcaklıkta kabın hacmi yarıya indiriliyor. Hangisi doğrudur?",
-        "o": [
-          "Denge HI yönüne kayar",
-          "Denge kaymaz; tüm derişimler iki katına çıkar",
-          "Denge kaymaz ve derişimler değişmez",
-          "K<sub>c</sub> iki katına çıkar"
+        "tur": "ayir",
+        "q": "N₂(g) + 3H₂(g) ⇌ 2NH₃(g) tepkimesi ekzotermiktir. Her etkinin dengeyi nereye kaydırdığını ayır.",
+        "gruplar": [
+          "Ürünlere",
+          "Girenlere",
+          "Kaymaz"
         ],
-        "a": 1,
-        "e": "İki yanda da 2'şer mol gaz olduğundan basınç değişimi dengeyi kaydırmaz. Hacim yarıya inince her derişim iki katına çıkar; Q yine K'ya eşittir."
+        "ogeler": [
+          [
+            "N₂ eklemek",
+            0
+          ],
+          [
+            "Hacmi küçültmek",
+            0
+          ],
+          [
+            "NH₃'ü ayırmak",
+            0
+          ],
+          [
+            "Isıtmak",
+            1
+          ],
+          [
+            "Hacmi büyütmek",
+            1
+          ],
+          [
+            "H₂ çekmek",
+            1
+          ],
+          [
+            "Katalizör katmak",
+            2
+          ],
+          [
+            "Sabit hacimde He",
+            2
+          ]
+        ],
+        "e": "Eklenen N₂ harcanır, çekilen NH₃ yeniden üretilir; hacim küçülünce denge az mol (2 mol gaz) tarafına kayar. Isıtmak ekzotermik dengeyi girenlere kaydırır. Katalizör ve sabit hacimde He dengeyi kaydırmaz."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Denklem değişince yeni denge sabiti ne olur? Eşleştir.",
+        "ciftler": [
+          [
+            "Denklemi ters çevirmek",
+            "1/K"
+          ],
+          [
+            "Katsayıları 2 ile çarpmak",
+            "K<sup>2</sup>"
+          ],
+          [
+            "Katsayıları 2'ye bölmek",
+            "√K"
+          ],
+          [
+            "İki denklemi toplamak",
+            "K<sub>1</sub>·K<sub>2</sub>"
+          ]
+        ],
+        "e": "Ters çevirince sabit 1/K, katsayılar n ile çarpılınca K<sup>n</sup> olur; ikiye bölünce √K. Toplanan denklemlerin sabitleri çarpılır."
       },
       {
         "q": "A(g) + B(g) ⇌ 2C(g) tepkimesi için belli sıcaklıkta K<sub>c</sub> = 4'tür. 1 L'lik kapta bir anda 1 mol A, 1 mol B ve 4 mol C bulunuyor. Hangisi doğrudur?",
@@ -3707,17 +4309,6 @@
         ],
         "a": 3,
         "e": "Q = 4² / (1·1) = 16'dır. Q &gt; K olduğundan tepkime geri yönde yürür; Q, 4'e inene kadar C harcanır."
-      },
-      {
-        "q": "Haber yönteminde (N₂ + 3H₂ ⇌ 2NH₃) bir öğrenci \"Katalizör eklersek dengede daha çok NH₃ oluşur\" diyor. Hangisi doğrudur?",
-        "o": [
-          "Yanlış; katalizör dengeye ulaşma süresini kısaltır, K ve dengedeki NH₃ miktarı değişmez",
-          "Doğru; katalizör yalnız ileri hızı artırır",
-          "Doğru; katalizör K'yı büyütür",
-          "Yanlış; katalizör dengeyi girenlere kaydırır"
-        ],
-        "a": 0,
-        "e": "Katalizör ileri ve geri tepkimeyi aynı oranda hızlandırır. Dengeye daha çabuk ulaşılır, ama sabit sıcaklıkta K ve dengedeki NH₃ miktarı değişmez."
       }
     ]
   },
@@ -3866,15 +4457,74 @@
     ],
     "quiz": [
       {
-        "q": "Cr₂O₇<sup>2−</sup> + Fe<sup>2+</sup> + H<sup>+</sup> → Cr<sup>3+</sup> + Fe<sup>3+</sup> + H₂O tepkimesi asidik ortamda en küçük tam sayılarla denkleştirilirse Fe<sup>2+</sup>'nın katsayısı kaç olur?",
-        "o": [
-          "3",
-          "5",
-          "6",
-          "14"
+        "tur": "eslestir",
+        "q": "Her bileşikteki O atomunu yükseltgenme basamağıyla eşleştir.",
+        "ciftler": [
+          [
+            "O₂",
+            "0"
+          ],
+          [
+            "H₂O₂",
+            "−1"
+          ],
+          [
+            "H₂O",
+            "−2"
+          ],
+          [
+            "OF₂",
+            "+2"
+          ]
         ],
-        "a": 2,
-        "e": "İki Cr, +6'dan +3'e inerken toplam 6e<sup>−</sup> alır; her Fe<sup>2+</sup> 1e<sup>−</sup> verdiği için 6 tane gerekir: Cr₂O₇<sup>2−</sup> + 6Fe<sup>2+</sup> + 14H<sup>+</sup> → 2Cr<sup>3+</sup> + 6Fe<sup>3+</sup> + 7H₂O."
+        "e": "Serbest elementte basamak 0'dır. Peroksitte O −1, sudaki O −2'dir. F her zaman −1 olduğu için OF₂'de O +2 olur."
+      },
+      {
+        "tur": "sirala",
+        "q": "Bu metalleri sulu çözeltide en kolay yükseltgenenden en zora sırala.",
+        "ogeler": [
+          "Mg",
+          "Zn",
+          "Fe",
+          "Cu",
+          "Ag"
+        ],
+        "e": "Aktiflik sırası Mg > Zn > Fe > Cu > Ag'dir. Soldaki metal daha kolay elektron verir, yani daha güçlü indirgendir."
+      },
+      {
+        "tur": "ayir",
+        "q": "Hangileri redoks tepkimesidir? Ayır.",
+        "gruplar": [
+          "Redoks",
+          "Redoks değil"
+        ],
+        "ogeler": [
+          [
+            "Demirin paslanması",
+            0
+          ],
+          [
+            "Metanın yanması",
+            0
+          ],
+          [
+            "Zn + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu",
+            0
+          ],
+          [
+            "Cl₂ ile NaOH tepkimesi",
+            0
+          ],
+          [
+            "HCl ile NaOH tepkimesi",
+            1
+          ],
+          [
+            "Ag<sup>+</sup> + Cl<sup>−</sup> → AgCl",
+            1
+          ]
+        ],
+        "e": "Paslanmada Fe, yanmada C ve H yükseltgenir; Zn de Cu<sup>2+</sup>'yı indirger. Cl₂ ile NaOH'ta Cl hem −1'e iner hem +1'e çıkar. Nötralleşmede ve AgCl çökmesinde hiçbir basamak değişmez."
       },
       {
         "q": "Mg + 2HCl → MgCl₂ + H₂ tepkimesi için hangisi doğrudur?",
@@ -3886,28 +4536,6 @@
         ],
         "a": 1,
         "e": "Mg 0'dan +2'ye çıkar (e<sup>−</sup> verir, indirgendir); H +1'den 0'a iner. Cl ise iki yanda −1 kalır."
-      },
-      {
-        "q": "X metali CuSO₄ çözeltisine konunca üzerinde bakır birikiyor, ZnSO₄ çözeltisine konunca hiçbir değişiklik olmuyor. X hangisi olabilir?",
-        "o": [
-          "Mg",
-          "Ag",
-          "Au",
-          "Fe"
-        ],
-        "a": 3,
-        "e": "X, Cu'dan aktif ama Zn'den az aktif olmalı. Sıradaki Zn > Fe > ... > Cu konumu yalnız Fe'ye uyar; Mg, Zn<sup>2+</sup>'yı da indirgerdi."
-      },
-      {
-        "q": "Bir öğrenci \"HCl + NaOH → NaCl + H₂O tepkimesinde iyonlar oluştuğu için tepkime redokstur\" diyor. Hangisi doğrudur?",
-        "o": [
-          "Yanlış; Na +1, Cl −1, H +1, O −2 olarak kalır, hiçbir basamak değişmez",
-          "Doğru; Na<sup>+</sup> iyonu oluşur",
-          "Doğru; su oluşan her tepkime redokstur",
-          "Yanlış; çünkü tepkimede elektron yalnızca alınır, verilmez"
-        ],
-        "a": 0,
-        "e": "Redoks ölçütü iyon oluşması değil, basamak değişmesidir. Nötralleşmede iyonlar eş değiştirir; basamaklar aynı kalır."
       }
     ]
   },
@@ -4094,37 +4722,74 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "CuSO₄ çözeltisinden 2 A akım 9650 s boyunca geçiriliyor. Katotta kaç gram Cu birikir? (Cu = 64 g/mol, 1 F = 96 500 C)",
-        "o": [
-          "3,2 g",
-          "6,4 g",
-          "12,8 g",
-          "0,64 g"
-        ],
-        "a": 1,
-        "e": "Q = 2·9650 = 19 300 C, yani 0,2 mol e<sup>−</sup> akar. Cu<sup>2+</sup> + 2e<sup>−</sup> → Cu olduğundan 0,1 mol, yani 6,4 g Cu birikir."
+        "cevap": 6.4,
+        "tolerans": 0.05,
+        "birim": "g",
+        "e": "Q = 2 · 9650 = 19 300 C, yani 0,2 mol e<sup>−</sup> akar. Cu<sup>2+</sup> + 2e<sup>−</sup> → Cu olduğundan 0,1 mol, yani 6,4 g Cu birikir."
       },
       {
-        "q": "Çalışan bir Zn–Cu (Daniell) pili için hangisi doğrudur?",
-        "o": [
-          "Anot + kutuptur.",
-          "Elektronlar tuz köprüsünden geçer.",
-          "Katot kabında Cu<sup>2+</sup> derişimi artar.",
-          "Zn elektrodun kütlesi azalır."
+        "tur": "ayir",
+        "q": "Her özelliği galvanik pile ya da elektroliz hücresine göre ayır.",
+        "gruplar": [
+          "Galvanik pil",
+          "Elektroliz"
         ],
-        "a": 3,
-        "e": "Zn anotta Zn<sup>2+</sup> olarak çözündüğü için incelir. Galvanik pilde anot − kutuptur, elektronlar yalnız dış telden akar ve katotta Cu<sup>2+</sup> azalır."
+        "ogeler": [
+          [
+            "Anot − kutuptur",
+            0
+          ],
+          [
+            "İstemli tepkime",
+            0
+          ],
+          [
+            "Kimyasal → elektrik",
+            0
+          ],
+          [
+            "Anot + kutuptur",
+            1
+          ],
+          [
+            "Dış güç kaynağı ister",
+            1
+          ],
+          [
+            "Elektrik → kimyasal",
+            1
+          ]
+        ],
+        "e": "Galvanik pilde istemli redoks elektrik üretir ve anot − kutuptur. Elektrolizde dış kaynak istemsiz tepkimeyi yürütür, elektrik enerjisi kimyasal enerjiye döner ve anot + kutuptur."
       },
       {
-        "q": "Bir Daniell pilinin gerilimi zamanla düşüp sıfır oluyor. E = 0 olduğu anda hangisi kesinlikle doğrudur?",
-        "o": [
-          "Tepkime dengededir; Q = K olmuştur.",
-          "Pilin E° değeri sıfıra inmiştir.",
-          "Zn elektrot tamamen tükenmiştir.",
-          "Çözeltilerde hiç iyon kalmamıştır."
+        "tur": "eslestir",
+        "q": "Her elektrolizde o elektrotta oluşan ürünü eşleştir.",
+        "ciftler": [
+          [
+            "Erimiş NaCl, katot",
+            "Na metali"
+          ],
+          [
+            "Erimiş NaCl, anot",
+            "Cl₂ gazı"
+          ],
+          [
+            "CuSO₄(suda), katot",
+            "Cu metali"
+          ],
+          [
+            "Na₂SO₄(suda), anot",
+            "O₂ gazı"
+          ],
+          [
+            "NaCl(suda), katot",
+            "H₂ gazı"
+          ]
         ],
-        "a": 0,
-        "e": "Pil çalıştıkça Q artar, E düşer; E = 0 dengeye karşılık gelir. E° standart koşullara ait sabit bir değerdir ve değişmez."
+        "e": "Erimiş NaCl'de Na<sup>+</sup> indirgenir, Cl<sup>−</sup> yükseltgenir. Sulu çözeltide Cu<sup>2+</sup> metal olarak birikir; Na<sup>+</sup> yerine su indirgenip H₂, SO₄<sup>2−</sup> yerine su yükseltgenip O₂ verir."
       },
       {
         "q": "Ni<sup>2+</sup>/Ni için E° = −0,25 V, Ag<sup>+</sup>/Ag için E° = +0,80 V'tur. Ni + 2Ag<sup>+</sup> → Ni<sup>2+</sup> + 2Ag tepkimesine dayanan pilin E° değeri kaçtır?",
@@ -4287,15 +4952,72 @@
     ],
     "quiz": [
       {
-        "q": "CH₂=CH–C≡CH molekülünde kaç sigma (σ) ve kaç pi (π) bağı vardır?",
-        "o": [
-          "9σ, 3π",
-          "7σ, 2π",
-          "7σ, 3π",
-          "4σ, 3π"
+        "tur": "eslestir",
+        "q": "Her moleküldeki karbon atomunu hibritleşmesi ve bağ açısıyla eşleştir.",
+        "ciftler": [
+          [
+            "CH₄",
+            "sp³, 109,5°"
+          ],
+          [
+            "C₂H₄",
+            "sp², 120°"
+          ],
+          [
+            "C₂H₂",
+            "sp, 180°"
+          ]
         ],
-        "a": 2,
-        "e": "Dört C–H ve üç C–C bağının her birinde bir σ vardır: 7σ. İkili bağ 1π, üçlü bağ 2π katar: 3π."
+        "e": "CH₄'te C dört tekli bağ yapar: sp³, 109,5°. C₂H₄'te ikili bağ vardır: sp², 120°. C₂H₂'de üçlü bağ vardır: sp, 180°."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her maddeyi organik ya da anorganik olarak ayır.",
+        "gruplar": [
+          "Organik",
+          "Anorganik"
+        ],
+        "ogeler": [
+          [
+            "CH₄",
+            0
+          ],
+          [
+            "Etanol",
+            0
+          ],
+          [
+            "Üre",
+            0
+          ],
+          [
+            "C₄H₁₀",
+            0
+          ],
+          [
+            "CO₂",
+            1
+          ],
+          [
+            "CaCO₃",
+            1
+          ],
+          [
+            "KCN",
+            1
+          ],
+          [
+            "CaC₂",
+            1
+          ]
+        ],
+        "e": "Organik kimya karbon bileşiklerini inceler; Wöhler'in sentezlediği üre de organiktir. CO₂, karbonatlar (CaCO₃), siyanürler (KCN) ve karbürler (CaC₂) karbon içerse de anorganik sayılır."
+      },
+      {
+        "tur": "sayi",
+        "q": "CH₂=CH–C≡CH molekülünde kaç sigma (σ) bağı vardır?",
+        "cevap": 7,
+        "e": "Dört C–H ve üç C–C bağının her biri bir σ bağı içerir: 4 + 3 = 7σ. İkili bağ ayrıca 1π, üçlü bağ 2π katar."
       },
       {
         "q": "C, H ve O içeren 4,6 g bir bileşik tamamen yakılınca 8,8 g CO₂ ve 5,4 g H₂O oluşuyor. Bileşiğin basit formülü hangisidir? (C = 12, H = 1, O = 16 g/mol)",
@@ -4307,28 +5029,6 @@
         ],
         "a": 2,
         "e": "8,8 g CO₂ 0,2 mol C (2,4 g), 5,4 g H₂O 0,3 mol, yani 0,6 mol H (0,6 g) verir. O = 4,6 − 3,0 = 1,6 g = 0,1 mol. Oran 2 : 6 : 1, basit formül C₂H₆O. H₂O'daki iki H'yi unutursan C₂H₃O bulursun."
-      },
-      {
-        "q": "CH₃–CH₂–CH₂–OH ve CH₃–CH(OH)–CH₃ bileşikleri için hangisi doğrudur?",
-        "o": [
-          "Kapalı formülleri C₃H₈O'dur; konum izomeridirler.",
-          "Fonksiyonel grup izomeridirler.",
-          "Kapalı formülleri farklı olduğu için izomer değildirler.",
-          "Cis-trans (geometrik) izomeridirler."
-        ],
-        "a": 0,
-        "e": "İkisi de C₃H₈O'dur ve ikisinde de –OH vardır; yalnızca –OH'nin bağlı olduğu karbon farklıdır. Bu konum izomerliğidir."
-      },
-      {
-        "q": "Bir öğrenci “CO₂'deki C=O bağları polar olduğu için CO₂ molekülü polardır” diyor. Doğru değerlendirme hangisidir?",
-        "o": [
-          "Doğru; polar bağ içeren her molekül polardır.",
-          "Yanlış; CO₂ doğrusaldır, iki bağ dipolü birbirini götürür ve molekül apolardır.",
-          "Yanlış; C=O bağları apolardır.",
-          "Yanlış; CO₂ iyonik bir bileşiktir."
-        ],
-        "a": 1,
-        "e": "C=O bağları polardır, ama CO₂'de C sp hibritleşmiştir ve molekül 180° doğrusaldır. Eşit ve zıt dipoller birbirini götürür."
       }
     ]
   },
@@ -4439,37 +5139,66 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "1 mol propan (C₃H₈) tamamen yandığında kaç mol O₂ harcanır?",
-        "o": [
-          "3",
-          "4",
-          "5",
-          "7"
-        ],
-        "a": 2,
+        "cevap": 5,
+        "birim": "mol",
         "e": "C₃H₈ + 5O₂ → 3CO₂ + 4H₂O. 3 CO₂ için 6 O, 4 H₂O için 4 O gerekir; toplam 10 O atomu, yani 5 mol O₂."
       },
       {
-        "q": "Oda koşullarında bromlu suyun rengini hangisi hızla giderir?",
-        "o": [
-          "Siklohekzan",
-          "Propen",
-          "Benzen",
-          "Hekzan"
+        "tur": "ayir",
+        "q": "Her hidrokarbonu doymuş ya da doymamış olarak ayır.",
+        "gruplar": [
+          "Doymuş",
+          "Doymamış"
         ],
-        "a": 1,
-        "e": "Propen çift bağ içerir ve Br₂ katar. Siklohekzan ile hekzan doymuştur; benzen ise kararlı halkası yüzünden katılma yapmaz."
+        "ogeler": [
+          [
+            "Metan",
+            0
+          ],
+          [
+            "Bütan",
+            0
+          ],
+          [
+            "Pentan",
+            0
+          ],
+          [
+            "Siklohekzan",
+            0
+          ],
+          [
+            "Eten",
+            1
+          ],
+          [
+            "Propen",
+            1
+          ],
+          [
+            "Etin",
+            1
+          ],
+          [
+            "2-bütin",
+            1
+          ]
+        ],
+        "e": "Alkanlar ve sikloalkanlar yalnız tek bağ içerir, doymuştur. -en ile biten alkenlerde C=C, -in ile biten alkinlerde C≡C vardır; bunlar doymamıştır."
       },
       {
-        "q": "1 atm'de kaynama noktaları: pentan 36 °C, 2-metilbütan 28 °C, 2,2-dimetilpropan 10 °C. Bu verilerden hangi sonuç çıkar?",
-        "o": [
-          "Aynı formüllü alkanlarda dallanma arttıkça kaynama noktası düşer.",
-          "C sayısı arttıkça kaynama noktası düşer.",
-          "Dallı alkanlar düz zincirlilerden daha polardır.",
-          "Mol kütlesi büyük olan alkanın kaynama noktası düşüktür."
+        "tur": "sirala",
+        "q": "Ham petrolün ayrımsal damıtmasında ürünleri kulenin tepesinden dibine doğru sırala.",
+        "ogeler": [
+          "Gazlar (LPG)",
+          "Benzin",
+          "Gazyağı",
+          "Motorin",
+          "Fuel-oil ve asfalt"
         ],
-        "a": 0,
-        "e": "Üçü de C₅H₁₂ olduğu için mol kütleleri aynıdır; fark yalnız dallanmadan gelir. Dallanma temas yüzeyini ve London çekimini azaltır."
+        "e": "Ürünler kaynama noktasına göre ayrılır: en düşük kaynama noktalı gazlar tepeden çıkar, sonra benzin, gazyağı ve motorin gelir. Fuel-oil ve asfalt dipte kalır."
       },
       {
         "q": "Hangisi cis-trans (geometrik) izomerliği gösterir?",
@@ -4604,26 +5333,70 @@
     ],
     "quiz": [
       {
-        "q": "Aşağıdaki alkollerden hangisi K₂Cr₂O₇ ile yükseltgenince keton verir?",
-        "o": [
-          "Etanol",
-          "2-propanol",
-          "Metanol",
-          "2-metil-2-propanol"
+        "tur": "eslestir",
+        "q": "Her genel formülü bileşik sınıfıyla eşleştir.",
+        "ciftler": [
+          [
+            "R−OH",
+            "Alkol"
+          ],
+          [
+            "R−O−R′",
+            "Eter"
+          ],
+          [
+            "R−CHO",
+            "Aldehit"
+          ],
+          [
+            "R−COOH",
+            "Karboksilik asit"
+          ],
+          [
+            "R−COO−R′",
+            "Ester"
+          ]
         ],
-        "a": 1,
-        "e": "2-propanol ikincil alkoldür; yükseltgenince aseton (propanon) oluşur. Etanol ve metanol aldehite, 2-metil-2-propanol ise üçüncül olduğu için yükseltgenmez."
+        "e": "−OH alkolü, iki karbon grubunu bağlayan O eteri gösterir. Uçtaki −CHO aldehit, −COOH karboksilik asit, −COO− ise ester grubudur."
       },
       {
+        "tur": "sayi",
         "q": "0,2 mol trigliserit (yağ) tamamen sabunlaşırken kaç gram NaOH harcanır? (NaOH = 40 g/mol)",
-        "o": [
-          "8 g",
-          "16 g",
-          "24 g",
-          "40 g"
-        ],
-        "a": 2,
+        "cevap": 24,
+        "birim": "g",
         "e": "Her trigliseritte üç ester bağı vardır; 1 mol yağ 3 mol NaOH harcar. 0,2 × 3 = 0,6 mol NaOH, yani 0,6 × 40 = 24 g."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her alkolü K₂Cr₂O₇ ile yükseltgenince oluşan ilk ürüne göre ayır.",
+        "gruplar": [
+          "Aldehit",
+          "Keton",
+          "Yükseltgenmez"
+        ],
+        "ogeler": [
+          [
+            "Etanol",
+            0
+          ],
+          [
+            "1-propanol",
+            0
+          ],
+          [
+            "2-propanol",
+            1
+          ],
+          [
+            "2-bütanol",
+            1
+          ],
+          [
+            "(CH₃)₃C−OH",
+            2
+          ]
+        ],
+        "e": "Etanol ve 1-propanol birincil alkoldür, önce aldehite dönüşür. 2-propanol ve 2-bütanol ikincildir, keton verir. (CH₃)₃C−OH üçüncüldür; −OH'li karbonda H olmadığı için yükseltgenmez."
       },
       {
         "q": "Formülü C₃H₆O olan X ve Y bileşiklerinden X, Tollens ayıracıyla gümüş aynası veriyor; Y vermiyor. X ve Y hangileri olabilir?",
@@ -4635,17 +5408,6 @@
         ],
         "a": 3,
         "e": "Gümüş aynası aldehit (propanal) gösterir; keton (propanon) Tollens testini vermez. İkisi aynı formüllü fonksiyonel grup izomerleridir; 2-propanol ise C₃H₈O'dur."
-      },
-      {
-        "q": "Aşağıdaki ifadelerden hangisi doğrudur?",
-        "o": [
-          "Etanol ile dimetil eter fonksiyonel grup izomerleridir.",
-          "Etanol −OH taşıdığı için suda OH⁻ verir, bazdır.",
-          "Dimetil eter molekülleri kendi aralarında hidrojen bağı kurar.",
-          "Asetik asit suda tamamen iyonlaşır."
-        ],
-        "a": 0,
-        "e": "İkisi de C₂H₆O'dur ama grupları farklıdır. Alkoldeki −OH kovalent bağlıdır, OH⁻ olarak ayrılmaz; eterde O−H yoktur; asetik asit zayıf asittir."
       }
     ]
   },
@@ -4788,15 +5550,82 @@
     ],
     "quiz": [
       {
-        "q": "Kireç taşından sönmemiş kireç üretilir: CaCO₃ → CaO + CO₂. İstenen ürün CaO ise atom ekonomisi yüzde kaçtır? (Ca = 40, C = 12, O = 16)",
-        "o": [
-          "%44",
-          "%56",
-          "%78",
-          "%100"
+        "tur": "ayir",
+        "q": "Her birini doğru gruba koy.",
+        "gruplar": [
+          "Yenilenebilir",
+          "Yenilenemez",
+          "Taşıyıcı"
         ],
-        "a": 1,
+        "ogeler": [
+          [
+            "Güneş",
+            0
+          ],
+          [
+            "Rüzgâr",
+            0
+          ],
+          [
+            "Jeotermal",
+            0
+          ],
+          [
+            "Kömür",
+            1
+          ],
+          [
+            "Doğal gaz",
+            1
+          ],
+          [
+            "Uranyum",
+            1
+          ],
+          [
+            "Elektrik",
+            2
+          ],
+          [
+            "Hidrojen",
+            2
+          ]
+        ],
+        "e": "Güneş, rüzgâr ve jeotermal kendini yeniler. Kömür, doğal gaz ve uranyumun rezervi sınırlıdır. Elektrik ve hidrojen kaynak değil, başka kaynaktan üretilen enerji taşıyıcısıdır."
+      },
+      {
+        "tur": "sayi",
+        "q": "Kireç taşından sönmemiş kireç üretilir: CaCO₃ → CaO + CO₂. İstenen ürün CaO ise atom ekonomisi yüzde kaçtır? (Atom ekonomisi = istenen ürünün mol kütlesi / girenlerin mol kütlesi × 100; Ca = 40, C = 12, O = 16)",
+        "cevap": 56,
+        "birim": "%",
         "e": "CaCO₃ = 100 g/mol, CaO = 56 g/mol; 56 / 100 × 100 = %56. Kalan %44 atık CO₂ olarak çıkar."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her teknolojiyi enerjiyi nereden aldığıyla eşleştir.",
+        "ciftler": [
+          [
+            "Fotovoltaik pil",
+            "Işık"
+          ],
+          [
+            "Rüzgâr türbini",
+            "Havanın kinetik enerjisi"
+          ],
+          [
+            "Hidroelektrik",
+            "Suyun potansiyel enerjisi"
+          ],
+          [
+            "Yakıt pili",
+            "H₂ ile O₂'nin tepkimesi"
+          ],
+          [
+            "Nükleer santral",
+            "<sup>235</sup>U fisyonu"
+          ]
+        ],
+        "e": "Fotovoltaik pil ışığı, rüzgâr türbini havanın kinetik enerjisini, hidroelektrik düşen suyun potansiyel enerjisini elektriğe çevirir. Yakıt pili H₂ ve O₂'yi yakmadan tepkimeye sokar; nükleer santral <sup>235</sup>U fisyonunun ısısını kullanır."
       },
       {
         "q": "Hidrojen ve yakıt pili için hangisi doğrudur?",
@@ -4808,28 +5637,6 @@
         ],
         "a": 3,
         "e": "Hidrojen sudan ya da doğal gazdan enerji harcanarak üretilen bir enerji taşıyıcıdır. Yakıt pili kimyasal enerjiyi yakmadan doğrudan elektriğe çevirir; hidrojen gazı ise yüksek basınç ya da çok soğutma gerektirir."
-      },
-      {
-        "q": "1 MJ ısı için yaklaşık CO₂ salımı: kömür 95 g, petrol 73 g, doğal gaz 56 g. Bir santral kömürden doğal gaza geçerse aynı ısı için CO₂ salımı yaklaşık ne kadar azalır?",
-        "o": [
-          "%10",
-          "%25",
-          "%40",
-          "%60"
-        ],
-        "a": 2,
-        "e": "(95 − 56) / 95 ≈ 0,41, yani yaklaşık %40 azalır. Salım sıfırlanmaz, çünkü doğal gaz da fosil yakıttır."
-      },
-      {
-        "q": "Asit yağmuru ile ilgili hangisi doğrudur?",
-        "o": [
-          "Kirlenmemiş yağmur suyu bile CO₂ çözdüğü için hafif asidiktir (pH ≈ 5,6).",
-          "Asit yağmurunun asıl nedeni havadaki CO₂ artışıdır.",
-          "pH'ı 7'nin altında olan her yağmur asit yağmurudur.",
-          "Kükürt dioksit mermer ve kireç taşına zarar vermez."
-        ],
-        "a": 0,
-        "e": "Yağmur havadaki CO₂'yi çözerek pH ≈ 5,6'ya iner; asit yağmuru bunun altıdır. Asıl nedeni SO₂ ve azot oksitlerdir; oluşan asitler CaCO₃'ü aşındırır."
       }
     ]
   }

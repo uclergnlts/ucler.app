@@ -87,37 +87,78 @@
     ],
     "quiz": [
       {
-        "q": "Hangisi katabolizmaya örnektir?",
-        "o": [
-          "Amino asitlerden protein yapılması",
-          "Glikozun solunumla parçalanması",
-          "Glikozlardan glikojen yapılması",
-          "Fotosentezle glikoz üretilmesi"
+        "tur": "sirala",
+        "q": "Organizasyon basamaklarını küçükten büyüğe sırala.",
+        "ogeler": [
+          "Kas hücresi",
+          "Kas dokusu",
+          "Kalp",
+          "Dolaşım sistemi",
+          "Organizma (sen)"
         ],
-        "a": 1,
-        "e": "Katabolizma büyük molekülleri parçalar. Glikozun solunumla yıkılması katabolizmadır; diğerleri yapım, yani anabolizmadır."
+        "e": "Hücreler birleşip doku, dokular organ, organlar sistem, sistemler de organizmayı kurar: kas hücresi → kas dokusu → kalp → dolaşım sistemi → sen."
       },
       {
-        "q": "Soğuk bir günde titremen en çok hangi özellikle ilgilidir?",
-        "o": [
-          "Üreme",
-          "Büyüme",
-          "Homeostazi",
-          "Adaptasyon"
+        "tur": "ayir",
+        "q": "Her olayı metabolizmanın doğru koluna koy.",
+        "gruplar": [
+          "Anabolizma (yapım)",
+          "Katabolizma (yıkım)"
         ],
-        "a": 2,
-        "e": "Titreme ısı üretip vücut sıcaklığını sabit tutar; iç dengenin korunması homeostazidir."
+        "ogeler": [
+          [
+            "Protein sentezi",
+            0
+          ],
+          [
+            "Glikozdan glikojen",
+            0
+          ],
+          [
+            "Fotosentez",
+            0
+          ],
+          [
+            "Besinlerin sindirimi",
+            1
+          ],
+          [
+            "Hücresel solunum",
+            1
+          ],
+          [
+            "Yağların parçalanması",
+            1
+          ]
+        ],
+        "e": "Küçük moleküllerden büyük molekül yapmak anabolizmadır ve enerji harcar: protein, glikojen ve fotosentezle glikoz üretimi. Büyük molekülleri parçalamak katabolizmadır: sindirim, solunum, yağların yıkımı."
       },
       {
-        "q": "Organizasyon basamaklarının doğru sırası hangisidir?",
-        "o": [
-          "Doku → hücre → organ → sistem",
-          "Hücre → doku → organ → sistem",
-          "Hücre → organ → doku → sistem",
-          "Organ → doku → hücre → sistem"
+        "tur": "eslestir",
+        "q": "Her örneği gösterdiği canlılık özelliğiyle eşleştir.",
+        "ciftler": [
+          [
+            "Kan şekerinin sabit tutulması",
+            "Homeostazi"
+          ],
+          [
+            "Kutup ayısının kalın kürkü",
+            "Adaptasyon"
+          ],
+          [
+            "Tırtılın kelebeğe dönüşmesi",
+            "Gelişme"
+          ],
+          [
+            "Bakterinin ikiye bölünmesi",
+            "Eşeysiz üreme"
+          ],
+          [
+            "Bitkinin ışığa doğru eğilmesi",
+            "Uyarılara tepki"
+          ]
         ],
-        "a": 1,
-        "e": "Benzer hücreler doku, dokular organ, organlar sistem, sistemler de organizmayı oluşturur."
+        "e": "İç ortamı sabit tutmak homeostazidir; hayatta kalmayı artıran kalıtsal kürk adaptasyondur. Yapının olgunlaşması gelişme, tek atadan yavru eşeysiz üreme, ışığa yönelmek uyarılara tepkidir."
       },
       {
         "q": "Virüsleri canlı-cansız sınırında yapan nedir?",
@@ -254,26 +295,78 @@
     ],
     "quiz": [
       {
-        "q": "Hayvanlarda karaciğer ve kasta depolanan polisakkarit hangisidir?",
-        "o": [
-          "Nişasta",
-          "Selüloz",
-          "Glikojen",
-          "Sükroz"
+        "tur": "ayir",
+        "q": "Her molekülü ait olduğu biyomolekül grubuna koy.",
+        "gruplar": [
+          "Karbonhidrat",
+          "Lipit",
+          "Protein"
         ],
-        "a": 2,
-        "e": "Hayvanlar fazla glikozu glikojen olarak depolar; nişasta bitkilerin deposudur."
+        "ogeler": [
+          [
+            "Nişasta",
+            0
+          ],
+          [
+            "Selüloz",
+            0
+          ],
+          [
+            "Laktoz",
+            0
+          ],
+          [
+            "Kolesterol",
+            1
+          ],
+          [
+            "Fosfolipit",
+            1
+          ],
+          [
+            "Testosteron",
+            1
+          ],
+          [
+            "Keratin",
+            2
+          ],
+          [
+            "Antikor",
+            2
+          ]
+        ],
+        "e": "Nişasta, selüloz ve laktoz şekerlerden oluşan karbonhidratlardır. Kolesterol ve testosteron steroit, fosfolipit zar lipitidir. Keratin ve antikor amino asit zincirinden oluşan proteinlerdir."
       },
       {
-        "q": "Bir disakkarit sindirildiğinde ne olur?",
-        "o": [
-          "Su açığa çıkar, iki monosakkarit oluşur",
-          "Su harcanır, iki monosakkarit oluşur",
-          "Su harcanır, iki amino asit oluşur",
-          "Su açığa çıkar, polisakkarit oluşur"
+        "tur": "eslestir",
+        "q": "Her minerali vücuttaki göreviyle eşleştir.",
+        "ciftler": [
+          [
+            "Kalsiyum (Ca)",
+            "Kemik ve diş yapısı"
+          ],
+          [
+            "Demir (Fe)",
+            "Hemoglobin yapısı"
+          ],
+          [
+            "İyot (I)",
+            "Tiroit hormonu"
+          ],
+          [
+            "Sodyum ve potasyum (Na, K)",
+            "Sinir iletimi"
+          ]
         ],
-        "a": 1,
-        "e": "Sindirim hidrolizdir: bağ, su eklenerek kırılır ve iki monosakkarit açığa çıkar."
+        "e": "Ca kemik ve dişte, Fe hemoglobinde, I tiroit hormonunda bulunur. Na ve K sinir iletimi için gerekir. Mineraller enerji vermez, düzenler."
+      },
+      {
+        "tur": "sayi",
+        "q": "10 amino asit birbirine peptit bağıyla bağlanıp düz bir zincir oluşturuyor. Bu sırada kaç molekül su açığa çıkar?",
+        "cevap": 9,
+        "birim": "molekül su",
+        "e": "Düz zincirde 10 amino asit arasında 10 − 1 = 9 peptit bağı kurulur. Her bağ dehidrasyonla kurulduğu için 9 molekül su çıkar."
       },
       {
         "q": "Hangisi yalnızca RNA'da bulunur?",
@@ -285,17 +378,6 @@
         ],
         "a": 1,
         "e": "RNA'da timin yerine urasil vardır. Timin ve deoksiriboz DNA'ya özgüdür, adenin ikisinde de bulunur."
-      },
-      {
-        "q": "Hücre zarının çift tabakasını hangi molekül oluşturur?",
-        "o": [
-          "Trigliserit",
-          "Fosfolipit",
-          "Glikojen",
-          "Selüloz"
-        ],
-        "a": 1,
-        "e": "Fosfolipitlerin suyu seven başları dışa, suyu sevmeyen kuyrukları içe bakacak şekilde çift sıra dizilmesiyle zar oluşur."
       }
     ]
   },
@@ -413,26 +495,78 @@
     ],
     "quiz": [
       {
-        "q": "Enzimler tepkimeyi nasıl hızlandırır?",
-        "o": [
-          "Ürün miktarını artırarak",
-          "Aktivasyon enerjisini düşürerek",
-          "Ortam sıcaklığını yükselterek",
-          "Tepkimede tükenerek"
+        "tur": "sirala",
+        "q": "Bir enzimin çalışma döngüsünü sıraya koy.",
+        "ogeler": [
+          "Substrat aktif bölgeye bağlanır",
+          "Enzim-substrat kompleksi oluşur",
+          "Tepkime gerçekleşir",
+          "Ürünler aktif bölgeden ayrılır",
+          "Değişmeden kalan enzim yeni substrat bağlar"
         ],
-        "a": 1,
-        "e": "Enzim tepkimenin aşması gereken enerji eşiğini düşürür; kendisi değişmeden çıkar."
+        "e": "Substrat aktif bölgeye bağlanınca ES kompleksi oluşur, tepkime gerçekleşir ve ürünler ayrılır. Enzim tepkimede tükenmediği için tekrar tekrar kullanılır."
       },
       {
-        "q": "Optimum sıcaklığı 37 °C olan bir enzim 70 °C'ye ısıtılırsa ne olur?",
-        "o": [
-          "Hızı sürekli artar",
-          "Denatüre olur, çalışmaz",
-          "Hızı değişmez",
-          "Koenzime dönüşür"
+        "tur": "ayir",
+        "q": "Bir tepkimeye uygun enzim eklenince neler değişir, neler değişmez? Ayır.",
+        "gruplar": [
+          "Değişir",
+          "Değişmez"
         ],
-        "a": 1,
-        "e": "Aşırı sıcaklık enzimin 3 boyutlu yapısını bozar; aktif bölge substratı bağlayamaz."
+        "ogeler": [
+          [
+            "Aktivasyon enerjisi",
+            0
+          ],
+          [
+            "Tepkime hızı",
+            0
+          ],
+          [
+            "Dengeye varış süresi",
+            0
+          ],
+          [
+            "Ürünün türü",
+            1
+          ],
+          [
+            "Toplam enerji farkı",
+            1
+          ],
+          [
+            "Dengedeki madde oranı",
+            1
+          ]
+        ],
+        "e": "Enzim aktivasyon enerjisini düşürür; tepkime hızlanır, denge daha çabuk kurulur. Ürünü, toplam enerji farkını ve dengedeki madde oranlarını değiştirmez."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her terimi doğru tanımıyla eşleştir.",
+        "ciftler": [
+          [
+            "Apoenzim",
+            "Enzimin protein kısmı"
+          ],
+          [
+            "Koenzim",
+            "Organik yardımcı molekül"
+          ],
+          [
+            "Aktivatör",
+            "Enzimin etkinliğini artırır"
+          ],
+          [
+            "Yarışmalı inhibitör",
+            "Aktif bölgeyi kapar"
+          ],
+          [
+            "Yarışmasız inhibitör",
+            "Başka yere bağlanıp şekli bozar"
+          ]
+        ],
+        "e": "Apoenzim enzimin protein kısmı, koenzim organik kofaktördür (çoğu B vitamininden). Aktivatör enzimi hızlandırır. Yarışmalı inhibitör aktif bölgeyi kapar, yarışmasız inhibitör başka yere bağlanıp şekli bozar."
       },
       {
         "q": "Enzim miktarı sabitken substrat derişimi artırılıyor. Tepkime hızı önce artıyor, sonra sabitleniyor. Hızın sabitlenmesinin nedeni nedir?",
@@ -444,17 +578,6 @@
         ],
         "a": 0,
         "e": "Substrat çoğaldıkça boş aktif bölge kalmaz; enzimler doyar ve hız artık artmaz. Hızı artırmak için enzim miktarını artırmak gerekir."
-      },
-      {
-        "q": "Yarışmalı inhibitör için hangisi doğrudur?",
-        "o": [
-          "Substrata benzer ve aktif bölgeye bağlanır",
-          "Enzimi hızlandırır",
-          "Enzimin yalnızca sıcaklığını değiştirir",
-          "Substratı parçalar"
-        ],
-        "a": 0,
-        "e": "Yarışmalı inhibitör substrata benzediği için aktif bölgeye bağlanır ve substratla yarışır."
       }
     ]
   },
@@ -588,15 +711,82 @@
     ],
     "quiz": [
       {
-        "q": "Proteinleri paketleyip hücre içine ya da dışına yollayan organel hangisidir?",
-        "o": [
-          "Mitokondri",
-          "Golgi aygıtı",
-          "Lizozom",
-          "Çekirdekçik"
+        "tur": "sirala",
+        "q": "Pankreas hücresinde insülinin üretilip salgılanma yolunu sıraya koy.",
+        "ogeler": [
+          "DNA'daki bilgi mRNA ile çekirdekten çıkar",
+          "Granüllü ER'deki ribozomda protein yapılır",
+          "Protein keseciklerle Golgi'ye taşınır",
+          "Golgi proteini düzenleyip paketler",
+          "Kesecik zarla kaynaşır, insülin dışarı çıkar"
         ],
-        "a": 1,
-        "e": "Golgi, ER'den gelen proteinleri düzenler, paketler ve keseciklerle gönderir."
+        "e": "Bilgi çekirdekten mRNA ile çıkar, protein granüllü ER'deki ribozomda yapılır. Golgi'de paketlenir ve kesecik zarla kaynaşınca ekzositozla dışarı bırakılır."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her yapıyı göreviyle eşleştir.",
+        "ciftler": [
+          [
+            "Mitokondri",
+            "Oksijenli solunumla ATP üretir"
+          ],
+          [
+            "Lizozom",
+            "Hücre içi sindirim yapar"
+          ],
+          [
+            "Peroksizom",
+            "H₂O₂'yi su ve oksijene ayırır"
+          ],
+          [
+            "Granülsüz ER",
+            "Lipit sentezler"
+          ],
+          [
+            "Kontraktil koful",
+            "Fazla suyu dışarı atar"
+          ]
+        ],
+        "e": "Mitokondri ATP üretir, lizozom sindirim enzimleriyle hücre içi sindirim yapar. Peroksizom H₂O₂'yi katalazla yıkar, granülsüz ER lipit sentezler, kontraktil koful osmozla giren fazla suyu atar."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her yapıyı bulunduğu hücreye göre ayır.",
+        "gruplar": [
+          "Yalnız bitki hücresi",
+          "Bitki ve hayvan hücresi"
+        ],
+        "ogeler": [
+          [
+            "Hücre duvarı",
+            0
+          ],
+          [
+            "Kloroplast",
+            0
+          ],
+          [
+            "Merkezi koful",
+            0
+          ],
+          [
+            "Mitokondri",
+            1
+          ],
+          [
+            "Ribozom",
+            1
+          ],
+          [
+            "Golgi aygıtı",
+            1
+          ],
+          [
+            "Hücre zarı",
+            1
+          ]
+        ],
+        "e": "Selüloz duvar, kloroplast ve büyük merkezi koful bitki hücresine özgüdür. Mitokondri, ribozom, Golgi ve hücre zarı ikisinde de bulunur."
       },
       {
         "q": "Bir bakteri hücresinde hangisi bulunur?",
@@ -607,29 +797,7 @@
           "Golgi aygıtı"
         ],
         "a": 2,
-        "e": "Prokaryotlarda zarlı organel yoktur; ribozom zarsızdır ve tüm hücrelerde bulunur."
-      },
-      {
-        "q": "Hangisi hayvan hücresinde bulunmaz?",
-        "o": [
-          "Mitokondri",
-          "Hücre duvarı",
-          "Ribozom",
-          "Golgi aygıtı"
-        ],
-        "a": 1,
-        "e": "Hücre duvarı bitki, mantar ve bakterilerde bulunur; hayvan hücresinde yoktur."
-      },
-      {
-        "q": "Salgılanacak bir proteinin izlediği doğru yol hangisidir?",
-        "o": [
-          "Golgi → ER → ribozom → dışarı",
-          "Ribozom → Golgi → ER → dışarı",
-          "Ribozom (granüllü ER) → Golgi → kesecik → dışarı",
-          "Lizozom → Golgi → ER → dışarı"
-        ],
-        "a": 2,
-        "e": "Protein granüllü ER üstündeki ribozomda yapılır, Golgi'de paketlenir ve kesecikle ekzositozla dışarı atılır."
+        "e": "Prokaryotlarda zarlı organel yoktur; ribozom zarsızdır ve hem prokaryot hem ökaryot hücrelerde bulunur."
       }
     ]
   },
@@ -887,6 +1055,90 @@
     ],
     "quiz": [
       {
+        "tur": "sirala",
+        "q": "Sınıflandırma basamaklarını en genişten en dara doğru sırala.",
+        "ogeler": [
+          "Şube",
+          "Sınıf",
+          "Takım",
+          "Familya",
+          "Cins",
+          "Tür"
+        ],
+        "e": "Âlemden sonra şube → sınıf → takım → familya → cins → tür gelir. Türe indikçe tür sayısı azalır, ortak özellikler artar."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her canlıyı ait olduğu âleme koy.",
+        "gruplar": [
+          "Bakteriler",
+          "Protistler",
+          "Mantarlar"
+        ],
+        "ogeler": [
+          [
+            "Siyanobakteri",
+            0
+          ],
+          [
+            "Amip",
+            1
+          ],
+          [
+            "Öglena",
+            1
+          ],
+          [
+            "Terliksi hayvan",
+            1
+          ],
+          [
+            "Plazmodyum",
+            1
+          ],
+          [
+            "Maya",
+            2
+          ],
+          [
+            "Küf",
+            2
+          ],
+          [
+            "Şapkalı mantar",
+            2
+          ]
+        ],
+        "e": "Siyanobakteri fotosentez yapan bir bakteridir. Amip, öglena, terliksi hayvan ve plazmodyum tek hücreli ökaryot protistlerdir (adı hayvan olsa da terliksi bir protisttir). Maya, küf ve şapkalı mantar mantarlardır."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her terimi doğru açıklamasıyla eşleştir.",
+        "ciftler": [
+          [
+            "Tür",
+            "Verimli yavru verebilenler"
+          ],
+          [
+            "Cins",
+            "İkili adın ilk kelimesi"
+          ],
+          [
+            "Doğal sınıflandırma",
+            "Ortak ataya bakar"
+          ],
+          [
+            "Yapay sınıflandırma",
+            "Dış görünüşe bakar"
+          ],
+          [
+            "Üst âlem",
+            "En geniş basamak"
+          ]
+        ],
+        "e": "Tür, verimli yavru verebilen bireylerdir; ikili adın ilk kelimesi cinstir. Doğal sınıflandırma akrabalığa, yapay sınıflandırma görünüşe bakar. En geniş basamak üst âlemdir."
+      },
+      {
         "q": "Aynı takımda bulunan iki canlı için hangisi kesinlikle doğrudur?",
         "o": [
           "Aynı familyadadırlar",
@@ -896,39 +1148,6 @@
         ],
         "a": 2,
         "e": "Bir basamağı paylaşanlar, onun üstündeki bütün basamakları da paylaşır. Takımın üstü sınıftır; altındaki familya ve cins aynı olmayabilir."
-      },
-      {
-        "q": "Dişi at ile erkek eşeğin yavrusu olan katır kısırdır. Bu bilgiden hangi sonuç çıkar?",
-        "o": [
-          "At ve eşek ayrı türlerdir",
-          "At ve eşek farklı âlemlerdedir",
-          "Katır yeni bir türdür",
-          "At ve eşek farklı sınıflardadır"
-        ],
-        "a": 0,
-        "e": "Aynı türün bireyleri verimli yavru verir. Yavru kısır olduğu için at ve eşek ayrı türdür; ama aynı cinstendir (<em>Equus</em>), yani âlem ve sınıfları ortaktır."
-      },
-      {
-        "q": "Kurdun bilimsel adı hangi yazımla doğru verilmiştir?",
-        "o": [
-          "<em>canis lupus</em>",
-          "<em>Canis Lupus</em>",
-          "Canis lupus (düz yazı)",
-          "<em>Canis lupus</em>"
-        ],
-        "a": 3,
-        "e": "İkili adlandırmada cins adı büyük, tanımlayıcı ad küçük harfle başlar ve ikisi de italik yazılır."
-      },
-      {
-        "q": "Ökaryot, hücre duvarında kitin bulunan ve besinini dışarıda sindirip emen bir canlı hangi âlemdedir?",
-        "o": [
-          "Bitkiler",
-          "Mantarlar",
-          "Bakteriler",
-          "Hayvanlar"
-        ],
-        "a": 1,
-        "e": "Kitin duvar ve emerek heterotrof beslenme mantarların özelliğidir. Bitki duvarı selülozdur, hayvanlarda duvar yoktur, bakteriler prokaryottur."
       }
     ]
   },
@@ -1076,6 +1295,83 @@
     ],
     "quiz": [
       {
+        "tur": "eslestir",
+        "q": "Her hayvanı ait olduğu şubeyle eşleştir.",
+        "ciftler": [
+          [
+            "Denizanası",
+            "Sölenterler"
+          ],
+          [
+            "Tenya",
+            "Yassı solucanlar"
+          ],
+          [
+            "Sülük",
+            "Halkalı solucanlar"
+          ],
+          [
+            "Ahtapot",
+            "Yumuşakçalar"
+          ],
+          [
+            "Deniz yıldızı",
+            "Derisi dikenliler"
+          ]
+        ],
+        "e": "Denizanası yakıcı hücreli bir sölenter, tenya yassı solucan, sülük halkalı solucandır. Ahtapot kabuksuz bir yumuşakça, deniz yıldızı derisi dikenlidir."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her hayvanı vücut sıcaklığına göre ayır.",
+        "gruplar": [
+          "Değişken sıcaklık",
+          "Sabit sıcaklık"
+        ],
+        "ogeler": [
+          [
+            "Alabalık",
+            0
+          ],
+          [
+            "Kurbağa",
+            0
+          ],
+          [
+            "Timsah",
+            0
+          ],
+          [
+            "Yılan",
+            0
+          ],
+          [
+            "Penguen",
+            1
+          ],
+          [
+            "Yarasa",
+            1
+          ],
+          [
+            "Yunus",
+            1
+          ],
+          [
+            "Gagalı memeli",
+            1
+          ]
+        ],
+        "e": "Vücut sıcaklığı yalnızca kuş ve memelilerde sabittir: penguen kuş; yarasa, yunus ve gagalı memeli memelidir. Balık, iki yaşamlı ve sürüngenlerde değişkendir; timsahın kalbi dört odacıklı olsa da sıcaklığı değişkendir."
+      },
+      {
+        "tur": "sayi",
+        "q": "Bir bahçede 6 böcek ve 4 örümcek sayılıyor. Bu hayvanların toplam bacak sayısı kaçtır?",
+        "cevap": 68,
+        "birim": "bacak",
+        "e": "Böceğin 3 çift (6), örümceğin 4 çift (8) bacağı vardır: 6·6 + 4·8 = 36 + 32 = 68. Örümceği böcek sayan 10·6 = 60 bulur."
+      },
+      {
         "q": "Bir hayvanın omurgalı olduğunu kesin olarak gösteren özellik hangisidir?",
         "o": [
           "Kapalı dolaşım sistemi olması",
@@ -1085,39 +1381,6 @@
         ],
         "a": 1,
         "e": "Kapalı dolaşım toprak solucanı ve ahtapotta, iskelet ise eklem bacaklılarda (dış iskelet) da vardır; balıklar akciğerle değil solungaçla solur. Omurgalıyı tanımlayan, omurgadır."
-      },
-      {
-        "q": "Bir tabloda üç hayvanın özellikleri var. K: solungaçla solur, kalbi iki odacıklı. L: akciğerle solur, kalbi dört odacıklı, vücut sıcaklığı değişken. M: akciğerle solur, kalbi dört odacıklı, vücut sıcaklığı sabit, vücudu tüylü. K, L ve M sırasıyla hangileri olabilir?",
-        "o": [
-          "Köpek balığı, kertenkele, yarasa",
-          "Yunus, timsah, penguen",
-          "Hamsi, timsah, penguen",
-          "Hamsi, kurbağa, kartal"
-        ],
-        "a": 2,
-        "e": "Solungaç ve iki odacıklı kalp balığı, dört odacıklı kalple değişken sıcaklık timsahı, tüy kuşu gösterir. Kertenkele ve kurbağanın kalbi üç odacıklıdır; yunus akciğerle solan bir memelidir, yarasada tüy yoktur."
-      },
-      {
-        "q": "Aşağıdaki eşleştirmelerden hangisi doğrudur?",
-        "o": [
-          "Yarasa – kuşlar",
-          "Balina – balıklar",
-          "Örümcek – böcekler",
-          "Gagalı memeli – memeliler"
-        ],
-        "a": 3,
-        "e": "Gagalı memeli yumurtlar ama kıllıdır ve yavrusunu sütle besler, bu yüzden memelidir. Yarasa ve balina da memelidir; dört çift bacaklı örümcek ise böcek değildir."
-      },
-      {
-        "q": "Bir bahçede 6 böcek ve 4 örümcek sayılıyor. Bu hayvanların toplam bacak sayısı kaçtır?",
-        "o": [
-          "68",
-          "60",
-          "34",
-          "72"
-        ],
-        "a": 0,
-        "e": "Böceğin 3 çift (6), örümceğin 4 çift (8) bacağı vardır: 6·6 + 4·8 = 36 + 32 = 68. Örümceği böcek sayan 10·6 = 60 bulur."
       }
     ]
   },
@@ -1260,15 +1523,66 @@
     ],
     "quiz": [
       {
-        "q": "Bir bitkinin yapraklarında damarlar paralel, gövdesinde iletim demetleri dağınık dizilmiştir. Bu bitkide aşağıdakilerden hangisi de beklenir?",
-        "o": [
-          "Kazık kök sistemi",
-          "Kambiyumla enine kalınlaşma ve yıllık halka",
-          "Çiçek kısımlarının 3 ve katları hâlinde olması",
-          "Embriyoda iki çenek bulunması"
+        "tur": "sirala",
+        "q": "Bir eğrelti otunun döl almaşını sporofitten başlayarak sırala.",
+        "ogeler": [
+          "Sporofit (2n) mayozla spor (n) üretir",
+          "Spor mitozla gelişip gametofiti (protallus) oluşturur",
+          "Gametofit mitozla gamet yapar",
+          "Gametler döllenir, zigot (2n) oluşur",
+          "Zigot gelişip yeni sporofiti oluşturur"
         ],
-        "a": 2,
-        "e": "Paralel damar ve dağınık demet tek çenekli özelliğidir; tek çeneklilerde çiçek kısımları 3 ve katlarıdır. Diğer seçenekler çift çeneklilere aittir."
+        "e": "Sporofit mayozla haploit spor yapar, spor mitozla gametofite gelişir. Gametofit mitozla gamet üretir; döllenmeyle oluşan diploit zigot yeniden sporofiti büyütür."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her özelliği tek ya da çift çenekli bitkiye göre ayır.",
+        "gruplar": [
+          "Tek çenekli",
+          "Çift çenekli"
+        ],
+        "ogeler": [
+          [
+            "Paralel damarlı yaprak",
+            0
+          ],
+          [
+            "Dağınık iletim demeti",
+            0
+          ],
+          [
+            "Saçak kök",
+            0
+          ],
+          [
+            "3'ün katı çiçek kısmı",
+            0
+          ],
+          [
+            "Ağsı damarlı yaprak",
+            1
+          ],
+          [
+            "Halka dizili demetler",
+            1
+          ],
+          [
+            "Kazık kök",
+            1
+          ],
+          [
+            "Embriyoda iki çenek",
+            1
+          ]
+        ],
+        "e": "Tek çeneklilerde damarlar paralel, demetler dağınık, kök saçaktır ve çiçek kısımları 3'ün katlarıdır. Çift çeneklilerde damarlar ağsı, demetler halka şeklinde, kök kazık köktür; embriyoda iki çenek bulunur."
+      },
+      {
+        "tur": "sayi",
+        "q": "Bir eğrelti otunun yaprak hücrelerinde 36 kromozom vardır. Bu bitkinin sporlarından gelişen protallusun hücrelerinde kaç kromozom bulunur?",
+        "cevap": 18,
+        "birim": "kromozom",
+        "e": "Yapraklı eğrelti sporofittir (2n = 36). Sporlar mayozla oluşur (n = 18); protallus spordan mitozla geliştiği için hücreleri de 18 kromozomludur."
       },
       {
         "q": "Çam ile elma ağacını birbirinden ayıran temel özellik hangisidir?",
@@ -1280,28 +1594,6 @@
         ],
         "a": 0,
         "e": "İkisi de tohumlu damarlı bitkidir; fark tohumun korunmasındadır. Çam açık tohumludur, çiçeği ve meyvesi yoktur; elma kapalı tohumludur."
-      },
-      {
-        "q": "Bir eğrelti otunun yaprak hücrelerinde 36 kromozom vardır. Bu bitkinin sporlarından gelişen protallusun hücrelerinde kaç kromozom bulunur?",
-        "o": [
-          "9",
-          "18",
-          "36",
-          "72"
-        ],
-        "a": 1,
-        "e": "Yapraklı eğrelti sporofittir (2n = 36). Sporlar mayozla oluşur (n = 18); protallus spordan mitozla geliştiği için hücreleri de 18 kromozomludur."
-      },
-      {
-        "q": "Nemli bir taşın üstünü kaplayan yeşil kara yosunu örtüsü için hangisi doğrudur?",
-        "o": [
-          "Taşa gerçek köklerle tutunur, suyu ksilemle taşır.",
-          "Gördüğün yeşil kısım diploit (2n) sporofittir.",
-          "Spermleri yumurtaya ulaşmak için suya gerek duymaz.",
-          "Gördüğün yeşil kısım haploit (n) gametofittir."
-        ],
-        "a": 3,
-        "e": "Kara yosununda baskın döl gametofittir. Rizoitler gerçek kök değildir, iletim demeti yoktur ve spermler yumurtaya suda yüzerek ulaşır."
       }
     ]
   },
@@ -1438,15 +1730,51 @@
     ],
     "quiz": [
       {
-        "q": "2n = 46 kromozomlu bir insan hücresi mitoz geçiriyor. Metafazda bu hücrede kaç kromatit bulunur?",
-        "o": [
-          "23",
-          "46",
-          "92",
-          "184"
+        "tur": "sirala",
+        "q": "Bir hayvan hücresinin döngüsünde olanları sıraya koy.",
+        "ogeler": [
+          "DNA eşlenir (S evresi)",
+          "Kromozomlar belirir, çekirdek zarı kaybolur",
+          "Kromozomlar ekvatorda tek sıra dizilir",
+          "Kardeş kromatitler zıt kutuplara çekilir",
+          "Kutuplarda çekirdek zarı yeniden oluşur",
+          "Sitoplazma boğumlanarak bölünür"
         ],
-        "a": 2,
+        "e": "DNA interfazın S evresinde eşlenir. Sonra profaz (kromozomlar belirir), metafaz (ekvatorda dizilme), anafaz (kromatitler ayrılır), telofaz (çekirdekler kurulur) ve sitokinez gelir."
+      },
+      {
+        "tur": "sayi",
+        "q": "2n = 46 kromozomlu bir insan hücresi mitoz geçiriyor. Metafazda bu hücrede kaç kromatit bulunur?",
+        "cevap": 92,
+        "birim": "kromatit",
         "e": "S evresinde her kromozom eşlenip iki kardeş kromatit taşır: 46 × 2 = 92 kromatit."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her örneği eşeysiz üreme şekliyle eşleştir.",
+        "ciftler": [
+          [
+            "Amibin ikiye ayrılması",
+            "Bölünme"
+          ],
+          [
+            "Bira mayasında çıkıntı oluşması",
+            "Tomurcuklanma"
+          ],
+          [
+            "Ekmek küfünün çoğalması",
+            "Sporla üreme"
+          ],
+          [
+            "Planarya parçasının birey olması",
+            "Rejenerasyon"
+          ],
+          [
+            "Erkek bal arısının oluşması",
+            "Partenogenez"
+          ]
+        ],
+        "e": "Amip mitozla bölünür, maya tomurcuklanır, ekmek küfü spor kesesinde spor üretir. Kesilen planarya parçası rejenerasyonla tam birey olur; erkek bal arısı döllenmemiş yumurtadan gelişir (partenogenez)."
       },
       {
         "q": "Mitoz geçiren bir hücrede hangisi görülürse bunun bir bitki hücresi olduğu söylenebilir?",
@@ -1458,28 +1786,6 @@
         ],
         "a": 3,
         "e": "İğ ipliği, ekvatorda dizilme ve kromatit ayrılması her iki hücrede de olur; hücre plağı ise bitki hücresine özgüdür."
-      },
-      {
-        "q": "Mitoz geçiren bir hücrede DNA miktarı değişmeden kromozom sayısı iki katına çıkıyor. Hücre hangi evrededir?",
-        "o": [
-          "Anafaz",
-          "S evresi",
-          "Metafaz",
-          "Sitokinez"
-        ],
-        "a": 0,
-        "e": "Anafazda sentromerler ayrılır ve her kromatit bağımsız kromozom olur; DNA zaten S evresinde eşlenmiştir."
-      },
-      {
-        "q": "Aşağıdaki ifadelerden hangisi doğrudur?",
-        "o": [
-          "Bakteriler mitozla ikiye bölünür.",
-          "Kertenkelenin kopan kuyruğunu yeniden yapması, yeni birey oluşmadığı için üreme sayılmaz.",
-          "DNA eşlenmesi mitozun profaz evresinde gerçekleşir.",
-          "Bitki hücresinde sentrozom olmadığı için iğ iplikleri oluşmaz."
-        ],
-        "a": 1,
-        "e": "Rejenerasyon ancak kopan parçadan yeni birey oluşursa üremedir; bakteride mitoz yoktur, DNA S evresinde eşlenir, bitkide iğ iplikleri sentrozomsuz da oluşur."
       }
     ]
   },
@@ -1626,26 +1932,63 @@
     ],
     "quiz": [
       {
-        "q": "2n = 8 olan bir canlıda homologlar birbirinden farklıysa ve krossing-over olmazsa kaç çeşit gamet oluşabilir?",
-        "o": [
-          "8",
-          "16",
-          "4",
-          "256"
+        "tur": "sirala",
+        "q": "Mayozdaki olayları sıraya koy.",
+        "ogeler": [
+          "DNA bir kez eşlenir (interfaz)",
+          "Homologlar eşleşip tetrat kurar, krossing-over olur",
+          "Tetratlar ekvatora karşılıklı dizilir",
+          "Homolog kromozomlar zıt kutuplara gider",
+          "Kardeş kromatitler zıt kutuplara gider",
+          "Dört haploit (n) hücre oluşur"
         ],
-        "a": 1,
-        "e": "Homolog çift sayısı n = 4'tür; bağımsız dağılımla 2⁴ = 16 çeşit gamet oluşur."
+        "e": "DNA mayozdan önce bir kez eşlenir. Profaz I'de tetrat ve krossing-over, metafaz I'de karşılıklı dizilme, anafaz I'de homologların ayrılması olur. Anafaz II'de kardeş kromatitler ayrılır ve dört n hücre oluşur."
       },
       {
-        "q": "Anafaz I'de zıt kutuplara giden yapılar hangileridir?",
-        "o": [
-          "Kardeş kromatitler",
-          "Tek kromatitli kromozomlar",
-          "Tetratın dört kromatiti ayrı ayrı",
-          "Homolog kromozomlar"
+        "tur": "sayi",
+        "q": "2n = 8 olan bir canlıda homologlar birbirinden farklı ve krossing-over olmuyor. Bağımsız dağılımla kaç çeşit gamet oluşabilir?",
+        "cevap": 16,
+        "birim": "çeşit",
+        "e": "Homolog çift sayısı n = 4'tür; bağımsız dağılımla 2<sup>4</sup> = 16 çeşit gamet oluşur."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her olayı görüldüğü bölünmeye göre ayır.",
+        "gruplar": [
+          "Yalnız mayoz",
+          "Mitoz ve mayoz"
         ],
-        "a": 3,
-        "e": "Anafaz I'de sentromer bölünmez; homolog kromozomlar ayrılır. Kardeş kromatitler anafaz II'de ayrılır."
+        "ogeler": [
+          [
+            "Tetrat oluşumu",
+            0
+          ],
+          [
+            "Krossing-over",
+            0
+          ],
+          [
+            "Homologların ayrılması",
+            0
+          ],
+          [
+            "Dört n hücre oluşumu",
+            0
+          ],
+          [
+            "Önceden DNA eşlenmesi",
+            1
+          ],
+          [
+            "İğ ipliği oluşumu",
+            1
+          ],
+          [
+            "Sentromer bölünmesi",
+            1
+          ]
+        ],
+        "e": "Tetrat, krossing-over, homologların ayrılması ve iki bölünme sonunda dört n hücre çıkması yalnız mayoza özgüdür. DNA eşlenmesi, iğ iplikleri ve sentromerlerin bölünmesi (mitoz anafazı, anafaz II) ikisinde de görülür."
       },
       {
         "q": "İnsanda (2n = 46) mayoz I'de bir homolog çift ayrılmazsa, mayoz II normal olursa oluşan dört gametin kromozom sayıları ne olur?",
@@ -1657,17 +2000,6 @@
         ],
         "a": 0,
         "e": "Ayrılmayan çiftin ikisi de bir hücreye gider; bu hücreden iki n+1 (24), diğerinden iki n−1 (22) gamet çıkar."
-      },
-      {
-        "q": "Bir eğreltiotunun yaşam döngüsünde gametler nasıl oluşur?",
-        "o": [
-          "Sporofitte mayozla",
-          "Gametofitte mayozla",
-          "Gametofitte mitozla",
-          "Zigotta mayozla"
-        ],
-        "a": 2,
-        "e": "Gametofit haploittir ve mayoz geçiremez; gametleri mitozla üretir. Bitkilerde mayozla spor oluşur."
       }
     ]
   },
@@ -1803,15 +2135,74 @@
     ],
     "quiz": [
       {
-        "q": "AaBb × Aabb çaprazlamasında aabb genotipli yavru oluşma olasılığı nedir? (Genler farklı kromozomlarda.)",
-        "o": [
-          "1/16",
-          "1/8",
-          "1/4",
-          "3/8"
+        "tur": "sayi",
+        "q": "AaBb × Aabb çaprazlamasında aabb genotipli yavru oluşma olasılığı yüzde kaçtır? (Genler farklı kromozomlarda.)",
+        "cevap": 12.5,
+        "tolerans": 0.1,
+        "birim": "%",
+        "e": "Aa × Aa'dan aa olasılığı 1/4, Bb × bb'den bb olasılığı 1/2'dir. Çarparsın: 1/4 · 1/2 = 1/8 = %12,5."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her çaprazlamayı yavrulardaki fenotip oranıyla eşleştir.",
+        "ciftler": [
+          [
+            "Aa × Aa",
+            "3 : 1"
+          ],
+          [
+            "Aa × aa",
+            "1 : 1"
+          ],
+          [
+            "AaBb × AaBb",
+            "9 : 3 : 3 : 1"
+          ],
+          [
+            "KB × KB (eksik baskınlık)",
+            "1 : 2 : 1"
+          ],
+          [
+            "AA × aa",
+            "Hepsi baskın fenotipli"
+          ]
         ],
-        "a": 1,
-        "e": "Aa × Aa'dan aa olasılığı 1/4, Bb × bb'den bb olasılığı 1/2'dir. Çarparsın: 1/4 · 1/2 = 1/8."
+        "e": "Aa × Aa fenotipte 3:1, kontrol çaprazlaması Aa × aa 1:1, dihibrit AaBb × AaBb 9:3:3:1 verir. Eksik baskınlıkta heterozigot ara fenotipli olduğundan oran 1:2:1'dir; AA × aa'nın bütün yavruları Aa ve baskın fenotiplidir."
+      },
+      {
+        "tur": "ayir",
+        "q": "Hangi değişim yavruya geçebilir? Her birini doğru gruba koy.",
+        "gruplar": [
+          "Kalıtsal",
+          "Kalıtsal değil"
+        ],
+        "ogeler": [
+          [
+            "Spermdeki mutasyon",
+            0
+          ],
+          [
+            "Hemofili aleli",
+            0
+          ],
+          [
+            "ABO kan grubu",
+            0
+          ],
+          [
+            "Güneşte bronzlaşma",
+            1
+          ],
+          [
+            "Egzersizle kas artışı",
+            1
+          ],
+          [
+            "Deri hücresi mutasyonu",
+            1
+          ]
+        ],
+        "e": "Kan grubu ve hemofili aleli genlerle, spermdeki mutasyon üreme hücresiyle yavruya geçer. Bronzlaşma ve egzersizle kas artışı DNA'yı değiştirmeyen modifikasyonlardır; deri hücresindeki mutasyon da o bireyde kalır."
       },
       {
         "q": "Renk körü bir kızın ailesi için hangisi kesindir?",
@@ -1823,28 +2214,6 @@
         ],
         "a": 0,
         "e": "Kızın iki X'i de çekinik alel taşır ve biri babadan gelir; tek X'i olan baba bu yüzden renk körüdür. Anne taşıyıcı ya da hasta olabilir; erkekler taşıyıcı olmaz."
-      },
-      {
-        "q": "Mor çiçekli bir bezelye, beyaz çiçekli (aa) bir bezelyeyle çaprazlanıyor: 52 mor, 48 beyaz yavru çıkıyor. Mor bitkinin genotipi nedir?",
-        "o": [
-          "AA",
-          "aa",
-          "Belirlenemez",
-          "Aa"
-        ],
-        "a": 3,
-        "e": "Beyaz yavrular mor bitkinin a alelini taşıdığını gösterir; yaklaşık 1:1 oran Aa × aa çaprazlamasının sonucudur."
-      },
-      {
-        "q": "Hangisi doğrudur?",
-        "o": [
-          "Güneşte bronzlaşan bir annenin çocukları daha esmer doğar.",
-          "Modifikasyon genotipi değiştirir ama yavruya geçmez.",
-          "Deri hücresinde oluşan bir mutasyon yavrulara aktarılmaz.",
-          "Mutasyonların hepsi zararlıdır."
-        ],
-        "a": 2,
-        "e": "Eşeyli üremede yalnızca üreme hücrelerindeki mutasyonlar yavruya geçer. Bronzlaşma bir modifikasyondur; DNA'yı değiştirmez, kalıtsal değildir."
       }
     ]
   },
@@ -2032,37 +2401,50 @@
     ],
     "quiz": [
       {
-        "q": "Bir besin zincirinde üreticilerin depoladığı enerji 50 000 kJ'dir. %10 kuralına göre ikincil tüketicilere yaklaşık ne kadar enerji ulaşır?",
-        "o": [
-          "5 000 kJ",
-          "500 kJ",
-          "50 kJ",
-          "50 000 kJ"
+        "tur": "sirala",
+        "q": "Ekolojik düzeyleri küçükten büyüğe sırala.",
+        "ogeler": [
+          "Birey",
+          "Popülasyon",
+          "Komünite",
+          "Ekosistem",
+          "Biyosfer"
         ],
-        "a": 1,
+        "e": "Aynı türün bir alandaki bireyleri popülasyonu, o alandaki tüm popülasyonlar komüniteyi kurar. Komünite cansız çevreyle ekosistemi, bütün ekosistemler biyosferi oluşturur."
+      },
+      {
+        "tur": "sayi",
+        "q": "Bir besin zincirinde üreticilerin depoladığı enerji 50 000 kJ'dir. %10 kuralına göre ikincil tüketicilere yaklaşık kaç kJ enerji ulaşır?",
+        "cevap": 500,
+        "birim": "kJ",
         "e": "Birincil tüketicilere 50 000 × 0,1 = 5 000 kJ, ikincil tüketicilere 5 000 × 0,1 = 500 kJ geçer."
       },
       {
-        "q": "Topraktaki nitratı N₂ gazına çevirip atmosfere geri veren bakteriler hangileridir?",
-        "o": [
-          "Azot bağlayan bakteriler",
-          "Nitrifikasyon bakterileri",
-          "Denitrifikasyon bakterileri",
-          "Fotosentetik siyanobakteriler"
+        "tur": "eslestir",
+        "q": "Her çevre sorununu asıl nedeniyle eşleştir.",
+        "ciftler": [
+          [
+            "Asit yağmuru",
+            "Havaya verilen SO₂ ve NOₓ"
+          ],
+          [
+            "Ozon incelmesi",
+            "CFC gazları"
+          ],
+          [
+            "Ötrofikasyon",
+            "Göle karışan gübre"
+          ],
+          [
+            "İklim değişikliği",
+            "Artan sera gazları"
+          ],
+          [
+            "Erozyon",
+            "Bitki örtüsünün yok olması"
+          ]
         ],
-        "a": 2,
-        "e": "Denitrifikasyon bakterileri nitratı N₂'ye indirger. Nitrifikasyon bakterileri ise amonyağı nitrit ve nitrata yükseltger."
-      },
-      {
-        "q": "Tarlalardan gübre karışan bir gölde önce algler aşırı çoğalıyor, birkaç hafta sonra suyun çözünmüş O₂ miktarı düşüp balıklar ölüyor. O₂ azalmasının asıl nedeni nedir?",
-        "o": [
-          "Gübrenin suyla tepkimeye girip O₂ harcaması",
-          "Alglerin gündüz fotosentezle O₂ tüketmesi",
-          "Göl suyunun soğuyarak O₂ çözünürlüğünün azalması",
-          "Ölen algleri ayrıştıran bakterilerin solunumla O₂ tüketmesi"
-        ],
-        "a": 3,
-        "e": "Bu ötrofikasyondur: ölen alglerin büyük kütlesini ayrıştıran bakteriler solunumda suyun O₂'sini harcar."
+        "e": "SO₂ ve azot oksitler nemle asit olup asit yağmuru yapar; CFC'ler ozonu inceltir. Gübredeki azot ve fosfor ötrofikasyona, sera gazlarının artışı iklim değişikliğine, bitki örtüsünün kaybı erozyona yol açar."
       },
       {
         "q": "Aşağıdaki ifadelerden hangisi doğrudur?",
@@ -2266,26 +2648,77 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "Bir bitkinin kök hücrelerinde 2n = 14 kromozom vardır. Bu bitkinin endosperm hücrelerinde kaç kromozom bulunur?",
-        "o": [
-          "7",
-          "14",
-          "21",
-          "28"
-        ],
-        "a": 2,
+        "cevap": 21,
+        "birim": "kromozom",
         "e": "Endosperm, bir spermin (n = 7) iki kutup çekirdeğiyle (7 + 7) birleşmesinden oluşur: 3n = 21."
       },
       {
-        "q": "Floem için hangisi doğrudur?",
-        "o": [
-          "İletim hücreleri canlıdır; organik maddeyi iki yönde de taşıyabilir.",
-          "İletim hücreleri ölüdür; suyu yalnızca yukarı taşır.",
-          "Yalnızca kökte bulunur.",
-          "Maddeyi kohezyon ve adezyonla yukarı çeker."
+        "tur": "ayir",
+        "q": "Her özelliği ksilem ya da floeme göre ayır.",
+        "gruplar": [
+          "Ksilem",
+          "Floem"
         ],
-        "a": 0,
-        "e": "Floemin kalburlu boru hücreleri canlıdır; besin kaynaktan havuza, yukarı ya da aşağı akabilir. Ölü hücreli ve tek yönlü olan ksilemdir."
+        "ogeler": [
+          [
+            "Su ve mineral taşır",
+            0
+          ],
+          [
+            "Ölü iletim hücreleri",
+            0
+          ],
+          [
+            "Trake ve trakeit",
+            0
+          ],
+          [
+            "Yalnız yukarı akış",
+            0
+          ],
+          [
+            "Sakkaroz taşır",
+            1
+          ],
+          [
+            "Canlı kalburlu borular",
+            1
+          ],
+          [
+            "İki yönlü akış",
+            1
+          ],
+          [
+            "Kaynaktan havuza akış",
+            1
+          ]
+        ],
+        "e": "Ksilem suyu ve mineralleri kökten yaprağa tek yönde taşır; trake ve trakeitleri olgunlukta ölüdür. Floemin kalburlu boruları canlıdır; sakkarozu kaynaktan havuza, iki yönde de taşıyabilir."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her bitki hareketini adıyla eşleştir.",
+        "ciftler": [
+          [
+            "Gövdenin ışığa yönelmesi",
+            "Fototropizma"
+          ],
+          [
+            "Kökün aşağı doğru büyümesi",
+            "Gravitropizma"
+          ],
+          [
+            "Sarılıcının desteğe dolanması",
+            "Tigmotropizma"
+          ],
+          [
+            "Küstüm otunun kapanması",
+            "Nastik hareket"
+          ]
+        ],
+        "e": "Işığa yönelmek fototropizma, yer çekimine göre büyümek gravitropizma, desteğe dolanmak tigmotropizmadır. Küstüm otunun kapanması uyaranın yönünden bağımsız, turgorla olan nastik harekettir."
       },
       {
         "q": "Nemli bir gecenin sabahı, bir bitkide yalnızca yaprak kenarlarındaki uçlarda, içinde mineral bulunan su damlaları görülüyor. Bu damlaların nedeni hangisidir?",
@@ -2297,17 +2730,6 @@
         ],
         "a": 3,
         "e": "Bu gutasyondur: terleme azken kök basıncı, ksilemdeki mineralli suyu yaprak kenarındaki su deliklerinden dışarı iter. Çiy her yüzeyde oluşur ve mineral içermez."
-      },
-      {
-        "q": "Pencere kenarındaki bir fide ışığa doğru eğilmiştir. Bu eğilmeyi doğru açıklayan hangisidir?",
-        "o": [
-          "Işık alan yüzdeki hücreler daha hızlı uzar.",
-          "Oksin gölgede kalan yüzde birikir, o yüz daha çok uzar.",
-          "Işık, gövdedeki hücre bölünmesini tamamen durdurur.",
-          "Etilen ışık alan yüzde birikip büyümeyi hızlandırır."
-        ],
-        "a": 1,
-        "e": "Oksin gölge tarafına geçer ve oradaki hücrelerin uzamasını artırır; gölge yüzü daha uzun olunca gövde ışığa eğilir. Işık alan yüz daha hızlı uzamaz."
       }
     ]
   },
@@ -2446,37 +2868,50 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "2000 nükleotitlik çift iplikli bir DNA'da 600 adenin vardır. Bu DNA'da toplam kaç hidrojen bağı bulunur?",
-        "o": [
-          "2000",
-          "2600",
-          "2400",
-          "3000"
-        ],
-        "a": 2,
-        "e": "T = 600, G = C = 400 olur. 600 A–T çifti 2, 400 G–C çifti 3 bağ yapar: 1200 + 1200 = 2400."
+        "cevap": 2400,
+        "birim": "bağ",
+        "e": "T = 600, G = C = (2000 − 1200) / 2 = 400 olur. 600 A–T çifti 2, 400 G–C çifti 3 bağ yapar: 1200 + 1200 = 2400."
       },
       {
-        "q": "Yalnızca ¹⁵N içeren bakteriler ¹⁴N ortamına alınıp DNA'larını iki kez eşliyor. Oluşan DNA moleküllerinin dağılımı nedir?",
-        "o": [
-          "%50 hibrit, %50 hafif",
-          "%100 hibrit",
-          "%50 ağır, %50 hafif",
-          "%25 ağır, %75 hafif"
+        "tur": "sirala",
+        "q": "DNA eşlenmesinde kesikli iplikte olanları sıraya koy.",
+        "ogeler": [
+          "Helikaz hidrojen bağlarını koparıp iplikleri ayırır",
+          "Primaz kısa bir RNA primer yapar",
+          "DNA polimeraz primerin ucuna nükleotit ekler",
+          "RNA primerler çıkarılıp yerine DNA konur",
+          "Ligaz Okazaki parçalarını birleştirir"
         ],
-        "a": 0,
-        "e": "Eski iplikler korunur: 1. eşlenmede hepsi hibrittir; 2. eşlenmede hibritlerin yanında yalnız ¹⁴N taşıyan hafif moleküller oluşur."
+        "e": "Önce helikaz iplikleri ayırır. Polimeraz sıfırdan başlayamadığı için primaz primer yapar, polimeraz onu uzatır. Sonra primerler DNA ile değiştirilir ve ligaz parçaları birleştirir."
       },
       {
-        "q": "Hangi mutasyon yavrulara aktarılabilir?",
-        "o": [
-          "Deri hücresinde UV ile oluşan baz değişimi",
-          "Akciğer hücresinde sigara ile oluşan mutasyon",
-          "Kas hücresinde oluşan kromozom kopması",
-          "Sperm ana hücresinde oluşan gen mutasyonu"
+        "tur": "eslestir",
+        "q": "Her biyoteknoloji terimini açıklamasıyla eşleştir.",
+        "ciftler": [
+          [
+            "Restriksiyon enzimi",
+            "DNA'yı belirli diziden keser"
+          ],
+          [
+            "Plazmit",
+            "Bakterinin halka DNA'sı"
+          ],
+          [
+            "PCR",
+            "DNA parçasını tüpte çoğaltır"
+          ],
+          [
+            "DNA parmak izi",
+            "Kişiye özgü bölgeleri kıyaslar"
+          ],
+          [
+            "Kök hücre",
+            "Henüz farklılaşmamış hücre"
+          ]
         ],
-        "a": 3,
-        "e": "Yavruya yalnızca eşey hücreleri (ve onları oluşturan hücreler) aracılığıyla DNA geçer; vücut hücresindeki mutasyon kalıtılmaz."
+        "e": "Restriksiyon enzimi DNA'yı belirli dizilerden keser; plazmit bakterinin küçük halka DNA'sıdır. PCR bir DNA parçasını tüpte çoğaltır, parmak izi kişiye özgü bölgeleri karşılaştırır, kök hücre henüz farklılaşmamıştır."
       },
       {
         "q": "Çift iplikli her DNA molekülü için hangisi kesinlikle doğrudur?",
@@ -2631,15 +3066,47 @@
     ],
     "quiz": [
       {
-        "q": "150 amino asitlik tek zincirli bir polipeptidi şifreleyen olgun mRNA'nın kodlayan bölgesinde, dur kodonu dahil kaç nükleotit vardır ve zincirde kaç peptit bağı bulunur?",
-        "o": [
-          "450 nükleotit, 150 bağ",
-          "453 nükleotit, 150 bağ",
-          "453 nükleotit, 149 bağ",
-          "906 nükleotit, 149 bağ"
+        "tur": "sayi",
+        "q": "200 amino asitlik tek zincirli bir polipeptidi şifreleyen olgun mRNA'nın kodlayan bölgesinde, dur kodonu dahil kaç nükleotit vardır?",
+        "cevap": 603,
+        "birim": "nükleotit",
+        "e": "200 amino asit için 200 kodon, dur kodonuyla 201 kodon gerekir. 201 × 3 = 603 nükleotit."
+      },
+      {
+        "tur": "sirala",
+        "q": "Ökaryot bir hücrede genden proteine giden yolu sıraya koy.",
+        "ogeler": [
+          "RNA polimeraz promotora bağlanır",
+          "Kalıp iplik okunarak RNA sentezlenir",
+          "İntronlar çıkarılır, ekzonlar birleştirilir",
+          "Olgun mRNA porlardan sitoplazmaya geçer",
+          "Ribozom AUG'den başlayarak mRNA'yı okur",
+          "Dur kodonunda zincir serbest bırakılır"
         ],
-        "a": 2,
-        "e": "150 kodon + 1 dur kodonu = 151 kodon, 151 × 3 = 453 nükleotit. Peptit bağı sayısı amino asit sayısının bir eksiğidir: 149."
+        "e": "Transkripsiyon çekirdekte promotordan başlar; ilk RNA işlenip olgun mRNA olur ve sitoplazmaya çıkar. Translasyon AUG ile başlar, dur kodonunda biter."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her baz değişimini mutasyon türüyle eşleştir. (UAA, UAG, UGA dur kodonudur.)",
+        "ciftler": [
+          [
+            "GAG → GAA (ikisi de Glu)",
+            "Sessiz"
+          ],
+          [
+            "GAG → GUG (Glu → Val)",
+            "Yanlış anlamlı"
+          ],
+          [
+            "UGG → UGA",
+            "Anlamsız"
+          ],
+          [
+            "Tek nükleotit silinmesi",
+            "Çerçeve kayması"
+          ]
+        ],
+        "e": "Aynı amino asit gelirse sessiz, başka amino asit gelirse yanlış anlamlı mutasyondur. UGA dur kodonu olduğu için protein kısa kalır: anlamsız. Bir nükleotit silinince sonraki bütün kodonlar değişir: çerçeve kayması."
       },
       {
         "q": "Bir genin kalıp ipliğinde 3'-TAC GGA-5' dizisi var. Bu bölgeden oluşan mRNA dizisi hangisidir?",
@@ -2651,28 +3118,6 @@
         ],
         "a": 0,
         "e": "mRNA kalıp ipliğe tamamlayıcıdır ve ters yönlüdür: T karşısına A, A karşısına U, G karşısına C gelir. RNA'da T bulunmaz."
-      },
-      {
-        "q": "Bir hücrede, RNA polimeraz henüz mRNA'nın sentezini bitirmeden aynı mRNA'ya ribozomların bağlanıp protein yapmaya başladığı görülüyor. Bu hücre için en doğru yorum hangisidir?",
-        "o": [
-          "İntronlar translasyondan önce çekirdekte çıkarılmıştır.",
-          "Ökaryot bir hücredir ve translasyon granüllü ER'de olur.",
-          "Hücrede ribozom bulunmaz.",
-          "Prokaryot bir hücredir; DNA'yı sitoplazmadan ayıran çekirdek zarı yoktur."
-        ],
-        "a": 3,
-        "e": "Transkripsiyon ve translasyonun eş zamanlı olması, çekirdek zarı olmayan prokaryotlara özgüdür. Ökaryotta mRNA önce çekirdekte işlenip sitoplazmaya çıkar."
-      },
-      {
-        "q": "Bir öğrenci \"DNA'daki her tek baz değişimi, proteinin amino asit dizisini mutlaka değiştirir\" diyor. Bu düşünce neden yanlıştır?",
-        "o": [
-          "Çünkü mutasyonlar yalnızca RNA'da olur.",
-          "Çünkü kod dejeneredir; yeni kodon aynı amino asidi şifreleyebilir (sessiz mutasyon).",
-          "Çünkü bir kodon birden fazla amino asidi şifreleyebilir.",
-          "Çünkü dur kodonları amino asit şifreler."
-        ],
-        "a": 1,
-        "e": "Bir amino asidin birden çok kodonu olduğu için, örneğin GAG → GAA değişimi yine glutamik asit verir. Bir kodon ise her zaman tek bir amino asidi belirtir."
       }
     ]
   },
@@ -2863,15 +3308,77 @@
     ],
     "quiz": [
       {
-        "q": "Calvin döngüsünde 2 glikoz üretmek için kaç CO₂ tutulur ve kaç ATP harcanır?",
-        "o": [
-          "6 CO₂, 18 ATP",
-          "12 CO₂, 36 ATP",
-          "12 CO₂, 24 ATP",
-          "6 CO₂, 36 ATP"
+        "tur": "ayir",
+        "q": "Her olayı fotosentezin hangi evresinde olduğuna göre gruba koy.",
+        "gruplar": [
+          "Işığa bağımlı",
+          "Calvin döngüsü"
         ],
-        "a": 1,
-        "e": "Bir glikoz için 6 CO₂, 18 ATP ve 12 NADPH gerekir; iki glikoz için 12 CO₂ ve 36 ATP."
+        "ogeler": [
+          [
+            "Suyun fotolizi",
+            0
+          ],
+          [
+            "O₂ açığa çıkması",
+            0
+          ],
+          [
+            "NADPH oluşumu",
+            0
+          ],
+          [
+            "ATP sentezi",
+            0
+          ],
+          [
+            "Rubiskoyla CO₂ tutma",
+            1
+          ],
+          [
+            "PGA → PGAL",
+            1
+          ],
+          [
+            "RuBP'nin yenilenmesi",
+            1
+          ],
+          [
+            "NADPH harcanması",
+            1
+          ]
+        ],
+        "e": "Tilakoitteki ışığa bağımlı tepkimelerde su ayrışır, O₂ çıkar, ATP ve NADPH yapılır. Stromadaki Calvin döngüsü CO₂'yi RuBP'ye bağlar, PGA'yı ATP ve NADPH harcayarak PGAL'ye indirger ve RuBP'yi yeniler."
+      },
+      {
+        "tur": "sayi",
+        "q": "Calvin döngüsünde 3 glikoz üretmek için kaç ATP harcanır?",
+        "cevap": 54,
+        "birim": "ATP",
+        "e": "Bir glikoz için 18 ATP harcanır; 3 glikoz için 3 × 18 = 54 ATP."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her bilim insanını deneyinin sonucuyla eşleştir.",
+        "ciftler": [
+          [
+            "Van Helmont",
+            "Ağacın kütlesi sudan gelir sandı"
+          ],
+          [
+            "Priestley",
+            "Bitki bozulmuş havayı düzeltir"
+          ],
+          [
+            "Ingenhousz",
+            "Havanın düzelmesi için ışık şart"
+          ],
+          [
+            "Engelmann",
+            "Bakteriler mavi-kırmızıda toplandı"
+          ]
+        ],
+        "e": "Van Helmont söğüdü yalnız suyla büyütüp kütlenin sudan geldiğini sandı. Priestley bitkinin mumun bozduğu havayı düzelttiğini, Ingenhousz bunun için ışık gerektiğini gösterdi. Engelmann'ın bakterileri O₂'nin en çok üretildiği mavi-mor ve kırmızı bölgelerde toplandı."
       },
       {
         "q": "Bir bitkiye oksijeni ¹⁸O ile işaretli CO₂ verildi. İşaretli oksijen hangilerinde görülür?",
@@ -2883,28 +3390,6 @@
         ],
         "a": 3,
         "e": "Açığa çıkan O₂ suyun fotolizinden gelir. CO₂'nin oksijeni glikoza ve tepkime sonunda oluşan suya geçer."
-      },
-      {
-        "q": "Düşük CO₂ ve 25 °C'de ışık şiddeti artırıldıkça fotosentez hızı artıyor, bir noktadan sonra sabit kalıyor. Sabit bölgede hızı artırmak için en uygun işlem hangisidir?",
-        "o": [
-          "Işık şiddetini daha da artırmak",
-          "Ortama yalnızca yeşil ışık vermek",
-          "Ortamdaki CO₂ derişimini artırmak",
-          "Sıcaklığı 60 °C'ye çıkarmak"
-        ],
-        "a": 2,
-        "e": "Düz bölgede ışık artık sınırlayıcı değildir; en kıt faktör CO₂'dir. 60 °C enzimleri bozar, yeşil ışık en az soğurulan ışıktır."
-      },
-      {
-        "q": "Aşağıdakilerden hangisi doğrudur?",
-        "o": [
-          "Bitki hücreleri gece de gündüz de solunum yapar; fotosentez ise yalnızca ışıkta olur.",
-          "Calvin döngüsü ışıktan bağımsız olduğu için karanlıkta saatlerce sürer.",
-          "Yaprak yeşil ışığı en çok soğurduğu için yeşil görünür.",
-          "Devirli fosforilasyonda su ayrışır ve O₂ açığa çıkar."
-        ],
-        "a": 0,
-        "e": "Solunum her an sürer. Calvin döngüsü ATP ve NADPH bitince durur, yaprak yeşili yansıtır, devirli akışta su ayrışmaz."
       }
     ]
   },
@@ -3104,26 +3589,60 @@
     ],
     "quiz": [
       {
-        "q": "Bir maya kültürü O₂'siz ortamda 3 glikoz molekülünü etil alkol fermantasyonuyla yıkıyor. Net kaç ATP ve kaç CO₂ oluşur?",
-        "o": [
-          "2 ATP, 2 CO₂",
-          "6 ATP, 18 CO₂",
-          "6 ATP, 6 CO₂",
-          "≈96 ATP, 18 CO₂"
+        "tur": "ayir",
+        "q": "Her olayı hücrede gerçekleştiği yere göre gruba koy.",
+        "gruplar": [
+          "Sitoplazma",
+          "Matriks",
+          "İç zar"
         ],
-        "a": 2,
-        "e": "Etil alkol fermantasyonunda glikoz başına net 2 ATP ve 2 CO₂ oluşur; 3 glikozdan 6 ATP ve 6 CO₂ çıkar."
+        "ogeler": [
+          [
+            "Glikoliz",
+            0
+          ],
+          [
+            "Fermantasyon",
+            0
+          ],
+          [
+            "Krebs döngüsü",
+            1
+          ],
+          [
+            "Sitrat oluşumu",
+            1
+          ],
+          [
+            "Elektron taşıma",
+            2
+          ],
+          [
+            "ATP sentaz",
+            2
+          ]
+        ],
+        "e": "Glikoliz ve fermantasyon sitoplazmada olur. Krebs döngüsü (asetil-KoA ile oksaloasetatın sitrat yapması dahil) mitokondri matriksinde, ETS ve ATP sentaz mitokondri iç zarında yürür."
       },
       {
-        "q": "Oksijenli solunumda O₂'nin görevi nedir?",
-        "o": [
-          "Glikolizde glikozu parçalamak",
-          "ETS'nin sonunda elektronları alıp H⁺ ile su oluşturmak",
-          "Krebs döngüsünde karbonla birleşip CO₂ oluşturmak",
-          "ATP sentazdan geçerek ATP yapmak"
+        "tur": "sayi",
+        "q": "Bir glikoz oksijenli solunumla yıkılırken glikoliz, pirüvat oksidasyonu ve Krebs döngüsünde toplam kaç NADH oluşur?",
+        "cevap": 10,
+        "birim": "NADH",
+        "e": "Glikolizde 2, iki pirüvatın oksidasyonunda 2, iki Krebs turunda 2 × 3 = 6 NADH oluşur: 2 + 2 + 6 = 10."
+      },
+      {
+        "tur": "sirala",
+        "q": "Oksijenli solunumda bir glikozun başından geçenleri sıraya koy.",
+        "ogeler": [
+          "Glikoz sitoplazmada iki pirüvata bölünür",
+          "Pirüvattan CO₂ ayrılır, asetil-KoA oluşur",
+          "Asetil-KoA oksaloasetatla birleşip sitrat yapar",
+          "Krebs'in NADH ve FADH₂'si ETS'ye elektron verir",
+          "H⁺ zarlar arası boşluğa pompalanır",
+          "H⁺ ATP sentazdan dönerken ATP yapılır"
         ],
-        "a": 1,
-        "e": "O₂ son elektron alıcısıdır ve suya dönüşür. Çıkan CO₂'nin oksijeni O₂'den değil, besin molekülünden ve sudan gelir."
+        "e": "Sıra glikoliz, pirüvat oksidasyonu, Krebs döngüsü ve ETS'dir. ETS'de elektronların enerjisiyle H⁺ pompalanır; H⁺ ATP sentazdan geri akarken ATP üretilir."
       },
       {
         "q": "Kapalı bir kapta glikozlu ortamdaki mayalar önce ortamdaki O₂'yi kullanıyor. O₂ tamamen bittikten sonra ne gözlenir?",
@@ -3135,17 +3654,6 @@
         ],
         "a": 3,
         "e": "O₂ bitince maya etil alkol fermantasyonuna geçer: CO₂ çıkışı sürer, alkol birikir. ETS durduğu için orada su oluşumu da durur."
-      },
-      {
-        "q": "Aşağıdakilerden hangisi doğrudur?",
-        "o": [
-          "Bitkiler gece gündüz solunum yapar; ışıkta fotosentez genellikle daha hızlı olduğu için net O₂ verirler.",
-          "Bitkiler fotosentez yaptıkları için solunum yapmaz.",
-          "Glikoliz yalnızca O₂ varken gerçekleşir.",
-          "Solunumda çıkan CO₂'nin tamamı glikolizde oluşur."
-        ],
-        "a": 0,
-        "e": "Solunum canlı hücrelerde sürekli yürür; ışıkta fotosentez genellikle solunumdan hızlıdır. Glikoliz O₂ istemez ve CO₂ üretmez."
       }
     ]
   },
@@ -3287,26 +3795,82 @@
     ],
     "quiz": [
       {
-        "q": "Bir nöronda Na⁺-K⁺ pompası belli bir sürede 40 ATP harcıyor. Bu sürede pompa kaç Na⁺ ve K⁺ taşır?",
-        "o": [
-          "40 Na⁺ dışarı, 40 K⁺ içeri",
-          "120 Na⁺ dışarı, 80 K⁺ içeri",
-          "80 Na⁺ dışarı, 120 K⁺ içeri",
-          "120 Na⁺ içeri, 80 K⁺ dışarı"
+        "tur": "sirala",
+        "q": "Elini sıcak bir yüzeyden çeken refleksteki impulsun yolunu sıraya koy.",
+        "ogeler": [
+          "Reseptör",
+          "Duyu nöronu",
+          "Ara nöron",
+          "Motor nöron",
+          "Efektör (kas)"
         ],
-        "a": 1,
-        "e": "Her ATP ile 3 Na⁺ dışarı, 2 K⁺ içeri taşınır: 40 × 3 = 120 Na⁺ ve 40 × 2 = 80 K⁺."
+        "e": "Refleks yayı: reseptör uyarıyı alır, duyu nöronu omuriliğe taşır, ara nöron bağlantıyı kurar, motor nöron emri kasa götürür ve kas kasılır."
       },
       {
-        "q": "Kafasını çarpan birinin bilinci ve görmesi yerinde, ama dengesi bozuk ve hareketleri uyumsuz. En olası hasar nerededir?",
-        "o": [
-          "Soğanilik",
-          "Şakak lobu",
-          "Hipotalamus",
-          "Beyincik"
+        "tur": "eslestir",
+        "q": "Her beyin bölümünü görevle eşleştir.",
+        "ciftler": [
+          [
+            "Beyincik",
+            "Denge ve hareketlerin uyumu"
+          ],
+          [
+            "Soğanilik",
+            "Kalp atışı ve solunum"
+          ],
+          [
+            "Hipotalamus",
+            "Vücut sıcaklığı ve su dengesi"
+          ],
+          [
+            "Talamus",
+            "Duyuları kabuğa aktarma"
+          ],
+          [
+            "Uç beyin",
+            "Düşünme, bellek, konuşma"
+          ]
         ],
-        "a": 3,
-        "e": "Denge ve hareketlerin uyumu beyinciğin görevidir. Soğanilik kalp ve solunumu, hipotalamus sıcaklık ve su dengesini, şakak lobu işitmeyi yönetir."
+        "e": "Beyincik dengeyi ve hareket uyumunu, soğanilik kalp atışı ve solunumu yönetir. Hipotalamus sıcaklığı ve su dengesini düzenler, talamus duyuları kabuğa aktarır. Düşünme, bellek ve konuşma uç beyindedir."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her yapıyı ait olduğu bölüme koy.",
+        "gruplar": [
+          "Merkezi (MSS)",
+          "Çevresel (ÇSS)"
+        ],
+        "ogeler": [
+          [
+            "Uç beyin",
+            0
+          ],
+          [
+            "Beyincik",
+            0
+          ],
+          [
+            "Soğanilik",
+            0
+          ],
+          [
+            "Omurilik",
+            0
+          ],
+          [
+            "Somatik sinirler",
+            1
+          ],
+          [
+            "Sempatik sinirler",
+            1
+          ],
+          [
+            "Parasempatik sinirler",
+            1
+          ]
+        ],
+        "e": "MSS beyin (uç beyin, beyincik, beyin sapı) ve omurilikten oluşur. Bunların dışındaki sinirler ÇSS'dir: somatik bölüm ile otonom bölümün sempatik ve parasempatik kolları."
       },
       {
         "q": "Aksiyon potansiyeli grafiğinde zar potansiyelinin −55 mV'tan +30 mV'a hızla yükseldiği evrede ne olur?",
@@ -3318,17 +3882,6 @@
         ],
         "a": 0,
         "e": "Yükselen evre depolarizasyondur: Na⁺ difüzyonla içeri girer ve iç taraf + olur. K⁺ çıkışı ise düşüş (repolarizasyon) evresidir."
-      },
-      {
-        "q": "Eşik değerin üstündeki bir uyarının şiddeti iki katına çıkarılıyor. Tek bir nöronda ne olur?",
-        "o": [
-          "Aksiyon potansiyelinin yüksekliği iki katına çıkar.",
-          "Hiç impuls oluşmaz.",
-          "İmpulsun büyüklüğü aynı kalır, impuls sıklığı artabilir.",
-          "İmpuls akson ucundan dendrite doğru iletilir."
-        ],
-        "a": 2,
-        "e": "Ya hep ya hiç kuralına göre eşik aşılınca impulsun büyüklüğü sabittir. Güçlü uyarı yalnızca birim zamandaki impuls sayısını artırır."
       }
     ]
   },
@@ -3458,26 +4011,87 @@
     ],
     "quiz": [
       {
-        "q": "Hipotalamusta üretilip arka hipofizde depolanan ve oradan kana verilen hormon hangisidir?",
-        "o": [
-          "TSH",
-          "Prolaktin",
-          "ADH",
-          "GH"
+        "tur": "eslestir",
+        "q": "Her hormonu salgılandığı yerle eşleştir.",
+        "ciftler": [
+          [
+            "İnsülin",
+            "Pankreas (β hücreleri)"
+          ],
+          [
+            "Parathormon",
+            "Paratiroit"
+          ],
+          [
+            "Kortizol",
+            "Böbrek üstü kabuğu"
+          ],
+          [
+            "Adrenalin",
+            "Böbrek üstü özü"
+          ],
+          [
+            "Melatonin",
+            "Epifiz"
+          ]
         ],
-        "a": 2,
-        "e": "ADH ve oksitosin hipotalamusta üretilir, sinir uzantılarıyla arka hipofize iner. TSH, prolaktin ve GH ön hipofizin kendi ürünleridir."
+        "e": "İnsülini Langerhans adacıklarındaki β hücreleri, parathormonu paratiroit salgılar. Kortizol böbrek üstünün kabuğundan, adrenalin özünden gelir. Melatonin epifizin hormonudur."
       },
       {
-        "q": "Uzun süre iyot eksikliği yaşayan birinin kanında tiroksin ve TSH düzeyi nasıl değişir?",
-        "o": [
-          "Tiroksin artar, TSH azalır",
-          "İkisi de azalır",
-          "İkisi de artar",
-          "Tiroksin azalır, TSH artar"
+        "tur": "ayir",
+        "q": "Her hormonu kimyasal yapısına göre gruba koy.",
+        "gruplar": [
+          "Protein-peptit",
+          "Amin",
+          "Steroid"
         ],
-        "a": 3,
-        "e": "İyot olmadan tiroksin yapılamaz. Düşük tiroksin hipofizi frenleyemez; TSH artar ve sürekli uyarılan tiroit büyür (guatr)."
+        "ogeler": [
+          [
+            "İnsülin",
+            0
+          ],
+          [
+            "GH",
+            0
+          ],
+          [
+            "ADH",
+            0
+          ],
+          [
+            "Adrenalin",
+            1
+          ],
+          [
+            "Tiroksin",
+            1
+          ],
+          [
+            "Melatonin",
+            1
+          ],
+          [
+            "Kortizol",
+            2
+          ],
+          [
+            "Aldosteron",
+            2
+          ]
+        ],
+        "e": "İnsülin, GH ve ADH protein ya da peptit yapılıdır. Adrenalin, tiroksin ve melatonin amino asitten türeyen aminlerdir. Kortizol ve aldosteron kolesterolden türeyen steroidlerdir."
+      },
+      {
+        "tur": "sirala",
+        "q": "Uzun süre iyot eksikliği yaşayan birinde guatra giden olayları sıraya koy.",
+        "ogeler": [
+          "Besinle yeterli iyot alınmaz",
+          "Tiroksin üretimi azalır",
+          "Hipotalamus ve hipofiz üzerindeki fren kalkar",
+          "Hipofizden TSH salgısı artar",
+          "Sürekli uyarılan tiroit büyür: guatr"
+        ],
+        "e": "İyot tiroksinin yapısında olduğu için tiroksin azalır. Negatif geri bildirim ortadan kalkınca TSH artar ve sürekli uyarılan tiroit bezi büyür."
       },
       {
         "q": "Sağlıklı bir öğrencinin kan şekeri öğle yemeğinden sonra normalin üstüne çıkıyor, iki saat içinde normale iniyor. Bu inişi esas olarak hangisi sağlar?",
@@ -3489,17 +4103,6 @@
         ],
         "a": 1,
         "e": "Kan şekeri yükselince β hücreleri insülin salgılar; hücreler glikoz alır, karaciğer glikojen depolar. Glukagon, adrenalin ve kortizol kan şekerini yükseltir."
-      },
-      {
-        "q": "Hormonlar kanla tüm vücuda dağıldığı hâlde neden yalnızca bazı hücreleri etkiler?",
-        "o": [
-          "Yalnızca hedef hücrelerde o hormona uygun reseptör vardır",
-          "Hormon yalnızca hedef organa giden damara verilir",
-          "Diğer hücreler hormonu hemen enzimle parçalar",
-          "Hormon yalnızca sinirlerin uyardığı hücrelere girer"
-        ],
-        "a": 0,
-        "e": "Hormon her hücreye ulaşır; etkisi yalnızca ona özgü reseptörü taşıyan hedef hücrelerde ortaya çıkar."
       }
     ]
   },
@@ -3701,26 +4304,79 @@
     ],
     "quiz": [
       {
-        "q": "Kırmızı-yeşil renk körlüğü X kromozomuna bağlı çekinik bir özelliktir. Görüşü normal ama taşıyıcı bir anne ile görüşü normal bir babanın her oğlu için renk körü olma olasılığı nedir?",
-        "o": [
-          "%0",
-          "%25",
-          "%50",
-          "%100"
+        "tur": "sirala",
+        "q": "Bir sesin kulaktan beyne giden yolunu sıraya koy.",
+        "ogeler": [
+          "Kulak yolu",
+          "Kulak zarı",
+          "Çekiç, örs, üzengi",
+          "Salyangozdaki Korti organı",
+          "İşitme siniri",
+          "Beyindeki işitme merkezi"
         ],
-        "a": 2,
-        "e": "Oğul X kromozomunu yalnızca anneden alır. Taşıyıcı annenin iki X'inden biri hastalık alelini taşıdığı için her oğul için olasılık %50'dir."
+        "e": "Ses kulak yolundan geçip kulak zarını titreştirir; kemikçikler titreşimi büyütüp iç kulağa iletir. Korti organının tüylü hücreleri titreşimi impulsa çevirir, işitme siniri impulsu beyne taşır ve algı orada oluşur."
       },
       {
-        "q": "Karanlık bir odaya giren biri bir süre sonra eşyaların şeklini seçebiliyor ama renklerini ayırt edemiyor. Bunun nedeni hangisidir?",
-        "o": [
-          "Loş ışıkta çoğunlukla çubuk hücreleri uyarılır ve çubuklar renk ayırt etmez.",
-          "Koni hücreleri karanlıkta daha çok uyarılır ama renkleri karıştırır.",
-          "Göz bebeği küçülerek ışığı tek noktada toplar.",
-          "Kör noktadaki reseptörler yalnızca karanlıkta çalışır."
+        "tur": "eslestir",
+        "q": "Her göz sorununu çözümüyle eşleştir.",
+        "ciftler": [
+          [
+            "Miyopi",
+            "Kalın kenarlı (ıraksak) mercek"
+          ],
+          [
+            "Hipermetropi",
+            "İnce kenarlı (yakınsak) mercek"
+          ],
+          [
+            "Astigmatizm",
+            "Silindirik mercek"
+          ],
+          [
+            "Katarakt",
+            "Ameliyatla yapay mercek"
+          ]
         ],
-        "a": 0,
-        "e": "Koniler parlak ışık ister; loş ışıkta görmeyi az ışığa duyarlı çubuklar sağlar, onlar da renk ayırt etmez. Kör noktada hiç reseptör yoktur."
+        "e": "Miyopide odak retinanın önüne düştüğü için ıraksak, hipermetropide arkasına düştüğü için yakınsak mercek takılır. Astigmatizm silindirik mercekle düzeltilir; kataraktta bulanık mercek yerine yapay mercek konur."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her özelliği ait olduğu fotoreseptöre koy.",
+        "gruplar": [
+          "Çubuk",
+          "Koni"
+        ],
+        "ogeler": [
+          [
+            "Az ışığa çok duyarlı",
+            0
+          ],
+          [
+            "Gece görüşünü sağlar",
+            0
+          ],
+          [
+            "Renk ayırt etmez",
+            0
+          ],
+          [
+            "Renkleri algılar",
+            1
+          ],
+          [
+            "Parlak ışıkta çalışır",
+            1
+          ],
+          [
+            "Sarı benekte yoğun",
+            1
+          ],
+          [
+            "Üç türü vardır",
+            1
+          ]
+        ],
+        "e": "Çubuklar loş ışıkta çalışır, gece görüşünü sağlar ama renk ayırt etmez. Koniler parlak ışıkta renkleri ve ayrıntıyı algılar; kırmızı, yeşil ve mavi için üç türü vardır ve sarı benekte yoğundur."
       },
       {
         "q": "Uzaktaki tahtaya bakan bir öğrenci gözünü önündeki kitaba çeviriyor. Gözünde hangi değişiklik olur?",
@@ -3732,17 +4388,6 @@
         ],
         "a": 3,
         "e": "Yakına bakarken kirpiksi kaslar kasılır, askı bağları gevşer; esnek mercek kalınlaşıp ışığı daha çok kırar."
-      },
-      {
-        "q": "Miyop bir göz için hangisi doğrudur?",
-        "o": [
-          "Görüntü retinanın arkasına düşer; ince kenarlı mercek takılır.",
-          "Görüntü retinanın önüne düşer; kalın kenarlı mercek takılır.",
-          "Görüntü retinanın önüne düşer; ince kenarlı mercek takılır.",
-          "Yakını net göremez; kalın kenarlı mercek takılır."
-        ],
-        "a": 1,
-        "e": "Miyopta ışık retinanın önünde odaklanır ve uzak bulanık görülür. Işığı dağıtan kalın kenarlı (ıraksak) mercek odağı retinaya taşır."
       }
     ]
   },
@@ -3942,26 +4587,79 @@
     ],
     "quiz": [
       {
-        "q": "Bir sarkomerde miyozin iplikleri (A bandı) 1,6 µm uzunluğundadır. Kasılmada sarkomer 2,4 µm'den 2,0 µm'ye kısalıyor. Kasılmadan sonra bu sarkomerdeki I bandının toplam uzunluğu kaç µm olur?",
-        "o": [
-          "0,8",
-          "1,6",
-          "0,4",
-          "0,2"
+        "tur": "eslestir",
+        "q": "Her hücreyi görevle eşleştir.",
+        "ciftler": [
+          [
+            "Osteoblast",
+            "Kemik yapar"
+          ],
+          [
+            "Osteosit",
+            "Ara maddeye gömülü kemik hücresi"
+          ],
+          [
+            "Osteoklast",
+            "Kemiği yıkar"
+          ],
+          [
+            "Kondrosit",
+            "Lakünde yaşayan kıkırdak hücresi"
+          ]
         ],
-        "a": 2,
-        "e": "A bandı (miyozin boyu) kasılmada değişmez; I bandı = 2,0 − 1,6 = 0,4 µm. Kasılmadan önce 0,8 µm'ydi."
+        "e": "Osteoblast kemik yapar, ara maddeye gömülünce osteosite dönüşür. Osteoklast kemiği yıkar. Kondrosit, kıkırdağın lakünlerde yaşayan hücresidir."
       },
       {
-        "q": "Aşağıdaki kas türlerinden hangisi hem çizgili hem istemsizdir?",
-        "o": [
-          "Kalp kası",
-          "İskelet kası",
-          "Mide duvarındaki düz kas",
-          "Damar duvarındaki düz kas"
+        "tur": "sirala",
+        "q": "Bir iskelet kasının kasılmasındaki olayları sıraya koy.",
+        "ogeler": [
+          "Sinir uyarısı kas lifine ulaşır",
+          "Sarkoplazmik retikulum Ca²⁺ salar",
+          "Ca²⁺ troponine bağlanır, tropomiyozin kayar",
+          "Miyozin başları aktine tutunur",
+          "ATP enerjisiyle aktin sarkomerin ortasına çekilir"
         ],
-        "a": 0,
-        "e": "Kalp kası iskelet kası gibi çizgilidir ama isteğimizle kasılmaz; düz kaslar çizgisizdir, iskelet kası istemlidir."
+        "e": "Uyarı gelince sarkoplazmik retikulum Ca²⁺ salar. Ca²⁺ troponine bağlanınca tropomiyozin kayar ve aktindeki bağlanma yerleri açılır; miyozin başları tutunup ATP ile aktini çeker."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her kemiği şekline göre gruba koy.",
+        "gruplar": [
+          "Uzun",
+          "Kısa",
+          "Yassı"
+        ],
+        "ogeler": [
+          [
+            "Uyluk kemiği",
+            0
+          ],
+          [
+            "Kol kemiği",
+            0
+          ],
+          [
+            "El bileği",
+            1
+          ],
+          [
+            "Ayak bileği",
+            1
+          ],
+          [
+            "Kafatası",
+            2
+          ],
+          [
+            "Kaburga",
+            2
+          ],
+          [
+            "Kürek kemiği",
+            2
+          ]
+        ],
+        "e": "Uyluk ve kol kemikleri uzun, el ve ayak bileği kemikleri kısa kemiktir. Kafatası, kaburga ve kürek kemiği yassı kemiktir."
       },
       {
         "q": "15 yaşındaki bir öğrencinin röntgeninde uyluk kemiğinin ucundaki epifiz plağı açık (kıkırdak) görünüyor; 25 yaşındaki ablasında ise kemikleşmiş. Buna göre hangisi söylenebilir?",
@@ -3973,17 +4671,6 @@
         ],
         "a": 3,
         "e": "Epifiz plağındaki kıkırdak bölündükçe kemik uzar; plak kemikleşince boyca uzama durur. Kalınlaşma ise periostla olur."
-      },
-      {
-        "q": "Bir öğrenci \"Biseps, kolu bükerken çeker; kapıyı iterken kolu açmak için de iter.\" diyor. Doğru düzeltme hangisidir?",
-        "o": [
-          "Kol açılırken de biseps kasılır, triseps hiç çalışmaz.",
-          "Kaslar yalnızca çekebilir; kolu açan, kasılan triseps kasıdır.",
-          "Kol bükülürken triseps kasılır, biseps gevşer.",
-          "Kolu, eklem sıvısının basıncı açar."
-        ],
-        "a": 1,
-        "e": "Kas yalnızca kasılarak çeker. Biseps ile triseps antagonisttir: biseps kolu büker, triseps kasılarak kolu açar."
       }
     ]
   },
@@ -4126,26 +4813,84 @@
     ],
     "quiz": [
       {
-        "q": "6 amino asitten oluşan bir peptit, ince bağırsakta tamamen amino asitlerine sindiriliyor. Bu sırada kaç su molekülü harcanır?",
-        "o": [
-          "6",
-          "7",
-          "5",
-          "3"
+        "tur": "ayir",
+        "q": "Her enzimi sindirdiği besin grubuna koy.",
+        "gruplar": [
+          "Karbonhidrat",
+          "Protein",
+          "Yağ"
         ],
-        "a": 2,
-        "e": "6 amino asit arasında 5 peptit bağı vardır; her bağ bir su molekülü harcanarak hidrolizle kırılır."
+        "ogeler": [
+          [
+            "Tükürük amilazı",
+            0
+          ],
+          [
+            "Maltaz",
+            0
+          ],
+          [
+            "Laktaz",
+            0
+          ],
+          [
+            "Pepsin",
+            1
+          ],
+          [
+            "Tripsin",
+            1
+          ],
+          [
+            "Peptidaz",
+            1
+          ],
+          [
+            "Lipaz",
+            2
+          ]
+        ],
+        "e": "Amilaz nişastayı, maltaz ve laktaz disakkaritleri parçalar. Pepsin, tripsin ve peptidazlar proteinleri sindirir. Yağları lipaz sindirir; safra enzim değildir."
       },
       {
-        "q": "Midede etkisiz pepsinojeni etkin pepsine dönüştüren nedir?",
-        "o": [
-          "Safra",
-          "Tükürük amilazı",
-          "Bikarbonat",
-          "HCl (mide asidi)"
+        "tur": "sirala",
+        "q": "Bir proteinin sindirilip emilmesine kadar olanları sıraya koy.",
+        "ogeler": [
+          "Midede HCl pepsinojeni pepsine çevirir",
+          "Pepsin proteini kısa polipeptitlere ayırır",
+          "Enterokinaz tripsinojeni tripsine çevirir",
+          "Tripsin kimotripsinojeni kimotripsine çevirir",
+          "Peptidazlar kısa peptitleri amino asitlere ayırır",
+          "Amino asitler villustaki kılcal kana geçer"
         ],
-        "a": 3,
-        "e": "Mide bezlerinin salgıladığı HCl pepsinojeni pepsine çevirir; bikarbonat ise tam tersine asidi nötrler."
+        "e": "Protein sindirimi midede pepsinle başlar. Onikiparmakta enterokinaz tripsini, tripsin de kimotripsini etkinleştirir. Mikrovillus zarındaki peptidazlar son adımı atar, amino asitler kana emilir."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her salgıyı görevle eşleştir.",
+        "ciftler": [
+          [
+            "Gastrin",
+            "Mide öz suyunu artırır"
+          ],
+          [
+            "Sekretin",
+            "Pankreasa bikarbonat salgılatır"
+          ],
+          [
+            "Kolesistokinin",
+            "Safra kesesini kasar"
+          ],
+          [
+            "Safra",
+            "Yağı damlacıklara ayırır"
+          ],
+          [
+            "Bikarbonat",
+            "Mide asidini nötrler"
+          ]
+        ],
+        "e": "Gastrin mide öz suyunu, sekretin pankreastan bikarbonat salgısını artırır; kolesistokinin safra kesesini kasar. Safra yağı emülsiyonlaştırır, bikarbonat kimusun asidini nötrler."
       },
       {
         "q": "Safra kesesi ameliyatla alınan birinde en çok hangisi zorlaşır?",
@@ -4157,17 +4902,6 @@
         ],
         "a": 0,
         "e": "Safra karaciğerde üretilmeye devam eder ama depolanamaz; yağlı yemekte yeterli safra bir anda gelemez, emülsiyon ve yağ sindirimi zorlaşır."
-      },
-      {
-        "q": "Aşağıdakilerden hangisi doğrudur?",
-        "o": [
-          "Safra, yağları parçalayan bir enzimdir",
-          "Yağların sindirim ürünlerinin çoğu villusta lenfe geçer",
-          "Kalın bağırsak sindirim enzimlerinin çoğunu salgılar",
-          "Proteinlerin kimyasal sindirimi ağızda başlar"
-        ],
-        "a": 1,
-        "e": "Safra enzim değildir, yağı yalnızca emülsiyonlaştırır. Yağ asidi ve gliserol epitelde yeniden yağa dönüşür ve çoğu lenfe geçer."
       }
     ]
   },
@@ -4285,37 +5019,57 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "Dinlenen bir kişide bir kalp döngüsü 0,8 saniye sürüyor. Kalbi dakikada kaç kez atar?",
-        "o": [
-          "48",
-          "75",
-          "80",
-          "120"
-        ],
-        "a": 1,
+        "cevap": 75,
+        "birim": "atım/dk",
         "e": "Bir dakika 60 saniyedir: 60 / 0,8 = 75 atım."
       },
       {
-        "q": "Zehirli bir yılan tarafından sokulan birine hastanede hemen ne verilir?",
-        "o": [
-          "Aşı; vücut antikor üretsin diye",
-          "Antibiyotik; zehri parçalasın diye",
-          "Kan pulcuğu; pıhtı oluşsun diye",
-          "Serum; içindeki hazır antikorlar zehri hemen etkisiz bıraksın diye"
+        "tur": "sirala",
+        "q": "Damar yaralanınca pıhtı oluşana kadar olanları sıraya koy.",
+        "ogeler": [
+          "Kan pulcukları yaraya yapışır, tromboplastin salınır",
+          "Ca²⁺ varlığında protrombin trombine dönüşür",
+          "Trombin fibrinojeni fibrine çevirir",
+          "Fibrin ağı kan hücrelerini yakalar: pıhtı"
         ],
-        "a": 3,
-        "e": "Serum hazır antikor içerir ve hemen etki eder (pasif bağışıklık). Aşının koruması haftalar sonra oluşur."
+        "e": "Kan pulcukları ve hasarlı doku tromboplastin salar. Tromboplastin Ca²⁺ ile protrombini trombine, trombin de fibrinojeni fibrine çevirir; fibrin ağı hücreleri tutup pıhtıyı oluşturur."
       },
       {
-        "q": "Karaciğer hastalığı yüzünden kanındaki albümin azalan bir kişinin dokularında sıvı birikiyor (ödem). En iyi açıklama hangisi?",
-        "o": [
-          "Kılcallarda kan basıncı sıfıra inmiştir",
-          "Lenf düğümleri fazla lenf üretmektedir",
-          "Plazmanın osmotik basıncı düşmüş, su kana yeterince geri dönememektedir",
-          "Alyuvar sayısı artmış, kan koyulaşmıştır"
+        "tur": "ayir",
+        "q": "Her durumu bağışıklık türüne göre gruba koy.",
+        "gruplar": [
+          "Aktif",
+          "Pasif"
         ],
-        "a": 2,
-        "e": "Albümin plazmanın osmotik basıncını sağlar. Azalınca toplardamar ucunda su geri çekilemez ve dokuda birikir."
+        "ogeler": [
+          [
+            "Aşı olmak",
+            0
+          ],
+          [
+            "Kızamığı geçirmek",
+            0
+          ],
+          [
+            "Yılan sokmasında serum",
+            1
+          ],
+          [
+            "Anne sütüyle antikor",
+            1
+          ],
+          [
+            "Plasentadan antikor",
+            1
+          ],
+          [
+            "Anneye anti-D iğnesi",
+            1
+          ]
+        ],
+        "e": "Aktif bağışıklıkta antikoru vücut kendisi üretir: aşı ve hastalığı geçirmek. Pasif bağışıklıkta hazır antikor alınır: serum, anneden plasenta ve sütle geçen antikorlar, anti-D iğnesi."
       },
       {
         "q": "Aşağıdakilerden hangisi doğrudur?",
@@ -4439,26 +5193,63 @@
     ],
     "quiz": [
       {
-        "q": "Deniz düzeyinde hava basıncı 760 mmHg, havadaki O<sub>2</sub> oranı yaklaşık %21'dir. O<sub>2</sub>'nin kısmi basıncı yaklaşık kaç mmHg'dir?",
-        "o": [
-          "21",
-          "76",
-          "160",
-          "600"
-        ],
-        "a": 2,
-        "e": "Kısmi basınç = toplam basınç × gazın oranı: 760 × 0,21 ≈ 160 mmHg."
+        "tur": "sayi",
+        "q": "Bir kişinin soluk hacmi 500 mL, soluk alma yedek hacmi 3000 mL, soluk verme yedek hacmi 1100 mL, artık havası 1200 mL'dir. Bu kişi en derin soluğunu aldığında akciğerlerinde toplam kaç mL hava bulunur?",
+        "cevap": 5800,
+        "birim": "mL",
+        "e": "Vital kapasite 500 + 3000 + 1100 = 4600 mL'dir. Akciğer hiç boşalmadığı için 1200 mL artık hava da eklenir: 4600 + 1200 = 5800 mL."
       },
       {
-        "q": "Soluk alma sırasında aşağıdakilerden hangisi olur?",
-        "o": [
-          "Diyafram gevşer ve kubbeleşir",
-          "Göğüs hacmi artar, akciğer içi basınç atmosfer basıncının altına düşer",
-          "Akciğer içi basınç artar ve hava içeri itilir",
-          "Dış kaburgalar arası kaslar gevşer"
+        "tur": "sirala",
+        "q": "Soluduğun havanın alveole kadar izlediği yolu sıraya koy.",
+        "ogeler": [
+          "Burun",
+          "Gırtlak",
+          "Soluk borusu",
+          "Bronş",
+          "Bronşçuk",
+          "Alveol"
         ],
-        "a": 1,
-        "e": "Diyafram ve dış kaburgalar arası kaslar kasılır; hacim artar, basınç düşer ve hava basınç farkıyla içeri akar."
+        "e": "Hava burundan girer, yutaktan sonra gırtlağa ve soluk borusuna geçer. Soluk borusu bronşlara, bronşlar bronşçuklara ayrılır; yol alveollerde biter."
+      },
+      {
+        "tur": "ayir",
+        "q": "Dinlenirken olan her değişikliği soluk alma ya da soluk verme grubuna koy.",
+        "gruplar": [
+          "Soluk alma",
+          "Soluk verme"
+        ],
+        "ogeler": [
+          [
+            "Diyafram kasılır",
+            0
+          ],
+          [
+            "Göğüs hacmi artar",
+            0
+          ],
+          [
+            "Akciğer basıncı düşer",
+            0
+          ],
+          [
+            "Kaburgalar yükselir",
+            0
+          ],
+          [
+            "Diyafram gevşer",
+            1
+          ],
+          [
+            "Göğüs hacmi azalır",
+            1
+          ],
+          [
+            "Akciğer basıncı artar",
+            1
+          ]
+        ],
+        "e": "Soluk alırken diyafram ve dış kaburgalar arası kaslar kasılır; kaburgalar yukarı kalkar, hacim artar, basınç düşer ve hava girer. Dinlenirken soluk verme pasiftir: kaslar gevşer, hacim azalır, basınç artar."
       },
       {
         "q": "Bir kılcalın girişinde PO<sub>2</sub> = 100, PCO<sub>2</sub> = 40 mmHg; çıkışında PO<sub>2</sub> = 40, PCO<sub>2</sub> = 45 mmHg ölçülüyor. Bu kılcal büyük olasılıkla nerededir?",
@@ -4470,17 +5261,6 @@
         ],
         "a": 3,
         "e": "Kan bu kılcalda O<sub>2</sub> kaybedip CO<sub>2</sub> kazanmış; bu, O<sub>2</sub>'nin harcandığı dokuda olur. Alveolde tersi olur."
-      },
-      {
-        "q": "Yüksek bir dağda kısa sürede nefes nefese kalmanın temel nedeni nedir?",
-        "o": [
-          "Hava basıncı düştüğü için O<sub>2</sub>'nin kısmi basıncı düşer",
-          "Havadaki O<sub>2</sub> yüzdesi %21'den çok azalır",
-          "Havadaki CO<sub>2</sub> oranı artar",
-          "Hemoglobin O<sub>2</sub> bağlama yeteneğini kaybeder"
-        ],
-        "a": 0,
-        "e": "Yükseklerde O<sub>2</sub> oranı yine yaklaşık %21'dir; toplam basınç düştüğü için PO<sub>2</sub> ve kana geçen O<sub>2</sub> azalır."
       }
     ]
   },
@@ -4628,26 +5408,63 @@
     ],
     "quiz": [
       {
-        "q": "Bir kişide günde 180 L süzüntü oluşuyor ve 1,8 L idrar atılıyor. Süzüntü hacminin yaklaşık yüzde kaçı geri emilmiştir?",
-        "o": [
-          "%1",
-          "%90",
-          "%99",
-          "%98,2"
-        ],
-        "a": 2,
+        "tur": "sayi",
+        "q": "Bir kişide günde 180 L süzüntü oluşuyor ve 1,8 L idrar atılıyor. Süzüntü hacminin yüzde kaçı geri emilmiştir?",
+        "cevap": 99,
+        "birim": "%",
         "e": "Geri emilen 180 − 1,8 = 178,2 L; 178,2 / 180 = 0,99, yani %99. İdrar olarak atılan yalnızca %1'dir."
       },
       {
-        "q": "Sağlıklı bir insanda aşağıdakilerden hangisi süzüntüde bulunur ama idrarda normalde bulunmaz?",
-        "o": [
-          "Üre",
-          "Glikoz",
-          "Alyuvar",
-          "Büyük plazma proteini"
+        "tur": "sirala",
+        "q": "Kanın süzüldüğü yerden başlayarak süzüntünün nefronda izlediği yolu sıraya koy.",
+        "ogeler": [
+          "Glomerul",
+          "Bowman kapsülü",
+          "Proksimal tüp",
+          "Henle kulpu",
+          "Distal tüp",
+          "Toplama kanalı"
         ],
-        "a": 1,
-        "e": "Glikoz glomerulda süzülür ama proksimal tüpte tamamen geri emilir. Üre idrarda bulunur; alyuvar ve büyük proteinler hiç süzülmez."
+        "e": "Plazma glomerulden Bowman kapsülüne süzülür. Süzüntü proksimal tüp, Henle kulpu ve distal tüpten geçip toplama kanalına açılır; oradan idrar havuzcuğa akar."
+      },
+      {
+        "tur": "ayir",
+        "q": "Sağlıklı bir insanın idrarında hangileri bulunur? Her birini doğru gruba koy.",
+        "gruplar": [
+          "İdrarda var",
+          "İdrarda yok"
+        ],
+        "ogeler": [
+          [
+            "Üre",
+            0
+          ],
+          [
+            "H<sup>+</sup>",
+            0
+          ],
+          [
+            "Amonyak",
+            0
+          ],
+          [
+            "Glikoz",
+            1
+          ],
+          [
+            "Amino asit",
+            1
+          ],
+          [
+            "Alyuvar",
+            1
+          ],
+          [
+            "Büyük protein",
+            1
+          ]
+        ],
+        "e": "Üre süzülüp atılır; H<sup>+</sup> ve amonyak tüpe salgılanır. Glikoz ve amino asitlerin tamamı geri emilir, alyuvar ve büyük proteinler ise glomerulde hiç süzülmez."
       },
       {
         "q": "Sıcak bir günde çok terleyen ve az su içen bir kişide aşağıdakilerden hangisi beklenir?",
@@ -4659,17 +5476,6 @@
         ],
         "a": 3,
         "e": "Kan derişikleşince ADH artar ve su geri kazanılır; idrar azalır ve koyulaşır. Ter ile su ve tuz kaybı aldosteronu azaltmaz, genellikle artırır."
-      },
-      {
-        "q": "Bir öğrenci \"Üre böbrekte üretilir.\" diyor. Doğrusu hangisidir?",
-        "o": [
-          "Üre karaciğerde amonyak ve CO₂'den üretilir; böbrek onu kandan süzüp atar.",
-          "Doğru; üre nefronda glikozdan üretilir.",
-          "Üre idrar kesesinde amonyaktan oluşur.",
-          "Üre akciğerde CO₂'den üretilir."
-        ],
-        "a": 0,
-        "e": "Üre, amino asit yıkımında oluşan amonyaktan karaciğerde (ornitin döngüsüyle) yapılır. Böbrek yalnızca atar."
       }
     ]
   },
@@ -4823,37 +5629,51 @@
     ],
     "quiz": [
       {
-        "q": "Bir erkekte 40 birincil spermatosit, bir kadında 40 birincil oosit mayozu tamamlıyor. En fazla kaç sperm ve kaç yumurta oluşur?",
-        "o": [
-          "40 sperm, 40 yumurta",
-          "160 sperm, 160 yumurta",
-          "160 sperm, 40 yumurta",
-          "80 sperm, 40 yumurta"
-        ],
-        "a": 2,
-        "e": "Bir birincil spermatosit 4 sperm verir (40 × 4 = 160). Bir birincil oosit ise eşit olmayan bölünmeyle 1 yumurta ve kutup hücreleri verir (40)."
+        "tur": "sayi",
+        "q": "Bir erkekte 25 birincil spermatosit mayozu tamamlıyor. En fazla kaç sperm oluşur?",
+        "cevap": 100,
+        "birim": "sperm",
+        "e": "Her birincil spermatosit mayozla 4 spermatit verir, bunlar spermlere dönüşür: 25 × 4 = 100 sperm."
       },
       {
-        "q": "Aşağıdakilerden hangisi mezodermden gelişir?",
-        "o": [
-          "Kalp ve kan damarları",
-          "Beyin ve omurilik",
-          "Karaciğer ve pankreas",
-          "Deri üst tabakası (epidermis)"
+        "tur": "sirala",
+        "q": "Döllenmeden germ tabakalarının oluşumuna kadar olanları sıraya koy.",
+        "ogeler": [
+          "Sperm yumurta kanalında ikincil oosite girer",
+          "Çekirdekler birleşir, zigot (2n) oluşur",
+          "Segmentasyonla morula oluşur",
+          "İçi sıvılı blastosist oluşur",
+          "Blastosist rahim iç zarına gömülür (implantasyon)",
+          "Gastrulada üç germ tabakası ayrılır"
         ],
-        "a": 0,
-        "e": "Kas, kemik, kalp, kan ve damarlar mezodermden gelişir. Sinir sistemi ve epidermis ektodermden, karaciğer ve pankreas endodermden gelir."
+        "e": "Döllenme yumurta kanalında olur ve zigot oluşur. Mitozla bölünen zigot önce morulayı, sonra blastosisti oluşturur; blastosist 6-7. günde rahme gömülür. Ardından gastrulada ektoderm, mezoderm ve endoderm ayrılır."
       },
       {
-        "q": "Menstrual döngü grafiğinde LH'nin döngünün ortasında aniden yükseldiği görülüyor. Bu artışı tetikleyen ve hemen ardından gelen olay hangisidir?",
-        "o": [
-          "Progesteronun düşmesi; ardından menstruasyon",
-          "FSH'nin düşmesi; ardından implantasyon",
-          "hCG'nin artması; ardından korpus luteumun körelmesi",
-          "Yüksek östrojenin pozitif geri bildirimi; ardından ovulasyon"
+        "tur": "eslestir",
+        "q": "Her hormonu görevle eşleştir.",
+        "ciftler": [
+          [
+            "FSH",
+            "Folikülü büyütür"
+          ],
+          [
+            "LH",
+            "Ovulasyonu tetikler"
+          ],
+          [
+            "Progesteron",
+            "Rahim iç zarını korur"
+          ],
+          [
+            "hCG",
+            "Korpus luteumu yaşatır"
+          ],
+          [
+            "Oksitosin",
+            "Doğumda rahmi kastırır"
+          ]
         ],
-        "a": 3,
-        "e": "Folikülün salgıladığı östrojen yeterince yükselince hipofizi uyarır ve LH aniden artar. LH artışı ovulasyonu tetikler."
+        "e": "FSH folikülü büyütür, LH'nin ani artışı ovulasyonu tetikler. Korpus luteumun progesteronu iç zarı korur; embriyonun hCG'si korpus luteumu yaşatır. Oksitosin doğumda rahmi kastırır."
       },
       {
         "q": "Biri kız, biri erkek olan ikizler için hangisi doğrudur?",
@@ -5010,15 +5830,81 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "500 bireylik bir popülasyonda bir yılda 120 doğum ve 40 ölüm oluyor; 30 birey göçle geliyor, 10 birey göçle ayrılıyor. Yıl sonunda popülasyon kaç bireydir?",
-        "o": [
-          "580",
-          "640",
-          "600",
-          "560"
+        "cevap": 600,
+        "birim": "birey",
+        "e": "Artış (120 + 30) − (40 + 10) = 100 birey; 500 + 100 = 600 birey. Göçü hesaba katmamak 580'i verir."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her etkeni popülasyonu nasıl sınırladığına göre gruba koy.",
+        "gruplar": [
+          "Yoğunluğa bağlı",
+          "Yoğunluktan bağımsız"
         ],
-        "a": 2,
-        "e": "ΔN = (120 + 30) − (40 + 10) = 100; 500 + 100 = 600 birey. Göçü hesaba katmamak 580'i verir."
+        "ogeler": [
+          [
+            "Salgın hastalık",
+            0
+          ],
+          [
+            "Besin rekabeti",
+            0
+          ],
+          [
+            "Parazitler",
+            0
+          ],
+          [
+            "Avcılık",
+            0
+          ],
+          [
+            "Don",
+            1
+          ],
+          [
+            "Kuraklık",
+            1
+          ],
+          [
+            "Sel",
+            1
+          ],
+          [
+            "Orman yangını",
+            1
+          ]
+        ],
+        "e": "Salgın, rekabet, parazit ve avcılığın etkisi kalabalık arttıkça büyür. Don, kuraklık, sel ve yangın ise seyrek ya da sık popülasyonu benzer oranda etkiler."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her kavramı örneğiyle eşleştir.",
+        "ciftler": [
+          [
+            "Mutualizm",
+            "Liken (mantar + alg)"
+          ],
+          [
+            "Parazitlik",
+            "Kene ve konağı"
+          ],
+          [
+            "Amensalizm",
+            "Penisilin küfü ve bakteriler"
+          ],
+          [
+            "Mimikri",
+            "Arıya benzeyen sirfid sineği"
+          ],
+          [
+            "Kamuflaj",
+            "Dal gibi görünen çubuk böceği"
+          ]
+        ],
+        "e": "Likende mantar ve alg birlikte kazanır (mutualizm); kene konağına zarar verir (parazitlik). Penisilin küfü bakterileri engeller ama etkilenmez (amensalizm). Sirfid sineği arıya benzer (mimikri), çubuk böceği çevresine benzeyip gizlenir (kamuflaj)."
       },
       {
         "q": "Bir orman yangınından birkaç yıl sonra yanmış alanda önce otlar, ardından çalılar ve genç ağaçlar görülüyor. Bu süreç için hangisi doğrudur?",
@@ -5030,28 +5916,6 @@
         ],
         "a": 0,
         "e": "Yangın bitki örtüsünü yok eder ama toprağı bırakır; bu yüzden süreç ikincil süksesyondur ve likenlerle toprak oluşturma evresi atlanır."
-      },
-      {
-        "q": "Lojistik (S) büyüme gösteren bir popülasyonda taşıma kapasitesi K = 1 000 bireydir. Birim zamandaki birey artışı yaklaşık hangi büyüklükte en fazladır?",
-        "o": [
-          "100 birey",
-          "1 000 birey",
-          "250 birey",
-          "500 birey"
-        ],
-        "a": 3,
-        "e": "S eğrisi K/2 = 500 civarında en diktir. Daha küçük N'de çoğalan birey azdır, K'ya yaklaştıkça sınırlayıcı faktörler artışı durdurur."
-      },
-      {
-        "q": "Aşağıdaki ifadelerden hangisi doğrudur?",
-        "o": [
-          "Taşıma kapasitesi bir tür için her ortamda aynı, sabit bir sayıdır.",
-          "Aynı sınırlı kaynağı aynı şekilde kullanan iki tür aynı yerde uzun süre birlikte yaşayamaz.",
-          "Kommensalizmde iki tür de ilişkiden yarar görür.",
-          "Kuraklık ve don, etkisi popülasyon yoğunluğu arttıkça büyüyen faktörlerdir."
-        ],
-        "a": 1,
-        "e": "Bu, Gause'un rekabetçi dışlama ilkesidir. K ortama göre değişir, kommensalizmde bir tür etkilenmez, kuraklık ve don yoğunluktan bağımsızdır."
       }
     ]
   },
@@ -5232,37 +6096,61 @@
     ],
     "quiz": [
       {
-        "q": "Hardy–Weinberg dengesindeki bir popülasyonda çekinik fenotipli (aa) bireylerin oranı 0,09'dur. Heterozigot (Aa) bireylerin oranı nedir?",
-        "o": [
-          "0,21",
-          "0,42",
-          "0,49",
-          "0,91"
-        ],
-        "a": 1,
-        "e": "q² = 0,09 olduğundan q = 0,3 ve p = 0,7 olur. Heterozigot oranı 2pq = 2 · 0,7 · 0,3 = 0,42."
+        "tur": "sayi",
+        "q": "Hardy–Weinberg dengesindeki bir popülasyonda çekinik fenotipli (aa) bireylerin oranı 0,16'dır. Heterozigot (Aa) bireylerin oranı kaçtır?",
+        "cevap": 0.48,
+        "tolerans": 0.005,
+        "e": "q² = 0,16 olduğundan q = 0,4 ve p = 1 − 0,4 = 0,6 olur. Heterozigot oranı 2pq = 2 · 0,6 · 0,4 = 0,48."
       },
       {
-        "q": "Bakterilerde antibiyotik direnciyle ilgili hangisi doğrudur?",
-        "o": [
-          "Antibiyotik, her bakteriyi ihtiyaç duyduğu direnç mutasyonunu yapmaya yönlendirir.",
-          "Bir bakteri antibiyotiğe zamanla alışır ve bu alışkanlığı yavrularına aktarır.",
-          "Dirençli bakteriler antibiyotik kullanılmadan önce de popülasyonda bulunabilir; antibiyotik onları seçer.",
-          "Direnç genleri bir bakteriden başka bir bakteriye hiçbir yolla geçemez."
+        "tur": "sirala",
+        "q": "Coğrafi izolasyonla türleşmenin adımlarını sıraya koy.",
+        "ogeler": [
+          "Bir nehir popülasyonu ikiye böler",
+          "İki grup arasında gen akışı kesilir",
+          "Mutasyon, seçilim ve sürüklenme gen havuzlarını ayırır",
+          "Gruplar verimli yavru veremez: üreme izolasyonu"
         ],
-        "a": 2,
-        "e": "Direnç alelleri rastgele mutasyonla önceden oluşur; antibiyotik duyarlıları öldürerek dirençlilerin oranını artırır. 'Alışıp aktarma' Lamarckçı bir yanılgıdır."
+        "e": "Coğrafi engel popülasyonu böler ve gen akışını keser. Ayrı kalan gen havuzları mutasyon, seçilim ve sürüklenmeyle farklılaşır; sonunda verimli yavru veremez hale gelince yeni tür oluşmuş olur."
       },
       {
-        "q": "Bir adada ispinozların gaga boyu çan eğrisi biçiminde dağılıyor. Uzun bir kuraklıktan sonra yalnızca iri ve sert tohumlar kalıyor; birkaç kuşak sonra ortalama gaga boyu artıyor. Bu hangi seçilim tipidir?",
-        "o": [
-          "Dengeleyici seçilim",
-          "Ayırıcı seçilim",
-          "Yapay seçilim",
-          "Yönlendirici seçilim"
+        "tur": "ayir",
+        "q": "Her fikri ait olduğu açıklamaya koy.",
+        "gruplar": [
+          "Lamarck",
+          "Darwin"
         ],
-        "a": 3,
-        "e": "Bir uçtaki (iri gagalı) bireyler kayırıldı ve dağılımın ortalaması o yöne kaydı; bu yönlendirici seçilimdir."
+        "ogeler": [
+          [
+            "Kullanılan organ büyür",
+            0
+          ],
+          [
+            "Edinilen özellik geçer",
+            0
+          ],
+          [
+            "Boynunu uzatan zürafa",
+            0
+          ],
+          [
+            "Varyasyon vardır",
+            1
+          ],
+          [
+            "Seçen ortamdır",
+            1
+          ],
+          [
+            "Fazla yavru doğar",
+            1
+          ],
+          [
+            "Uygun olan çok ürer",
+            1
+          ]
+        ],
+        "e": "Lamarck kullanılan organın geliştiğini ve ömür boyu kazanılan özelliğin yavruya geçtiğini öne sürdü; bu görüş geçersizdir. Darwin'in doğal seçilimi varyasyona, aşırı üremeye ve ortama uygun bireylerin daha çok üremesine dayanır; seçen ortamdır."
       },
       {
         "q": "Aşağıdaki çiftlerden hangisi homolog yapılara örnektir?",

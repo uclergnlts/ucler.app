@@ -163,6 +163,7 @@ function Yuvalar({ q, yuva, setYuva, bitti, tohum }: {
 function Ayir({ q, grup, setGrup, bitti, tohum }: { q: Of<"ayir">; grup: (number | null)[]; setGrup: (c: Cevap) => void; bitti: boolean; tohum: string }) {
   const havuz = useMemo(() => karistir(q.ogeler, tohum), [q.ogeler, tohum]);
   const kalan = havuz.filter((k) => grup[k] === null);
+  const dar = q.gruplar.length > 2; // üç grup yan yana: telefonda her kutu dar, yazı ve boşluk küçülür
   // Öğrenci başka birine dokunana dek havuzdaki ilk öğe seçilidir.
   const [secilen, setSecilen] = useState(-1);
   const sec = secilen >= 0 && grup[secilen] === null ? secilen : kalan[0];
@@ -194,26 +195,28 @@ function Ayir({ q, grup, setGrup, bitti, tohum }: { q: Of<"ayir">; grup: (number
             onClick={() => yerles(g)}
             onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); yerles(g); } }}
             className={cn(
-              "flex min-h-28 flex-col items-stretch gap-1.5 rounded-2xl border-[1.5px] border-dashed bg-secondary/60 p-2 transition-colors",
+              "flex min-h-28 min-w-0 flex-col items-stretch gap-1.5 rounded-2xl border-[1.5px] border-dashed bg-secondary/60 transition-colors",
+              dar ? "p-1" : "p-2",
               !bitti && sec !== undefined ? "cursor-pointer border-border-strong hover:border-acc" : "border-border",
             )}
           >
-            <b className="pb-0.5 text-center font-display text-[14px]">{ad}</b>
+            <b className={cn("pb-0.5 text-center font-display leading-tight [overflow-wrap:anywhere]", dar ? "text-[13px]" : "text-[14px]")}>{ad}</b>
             {grup.map((gg, k) => gg === g && (
               <span
                 key={k}
                 className={cn(
-                  "flex items-center justify-center gap-1 rounded-xl border-[1.5px] bg-card py-1 pr-1 pl-2 text-center text-[13px] font-semibold leading-snug",
-                  !bitti ? "border-border" : q.ogeler[k][1] === g ? "border-good bg-good-soft pr-2" : "border-bad bg-bad-soft pr-2",
+                  "flex items-center justify-center gap-0.5 rounded-xl border-[1.5px] bg-card py-1 pr-0.5 text-center font-semibold leading-snug",
+                  dar ? "pl-1 text-[12px]" : "pl-2 text-[13px]",
+                  !bitti ? "border-border" : q.ogeler[k][1] === g ? "border-good bg-good-soft pr-1" : "border-bad bg-bad-soft pr-1",
                 )}
               >
-                <span className="min-w-0">
+                <span className="min-w-0 [overflow-wrap:anywhere]">
                   <Html html={q.ogeler[k][0]} />
                   {bitti && q.ogeler[k][1] !== g && <span className="block text-[12px] font-medium text-muted-foreground">→ {q.gruplar[q.ogeler[k][1]]}</span>}
                 </span>
                 {!bitti && (
                   <button
-                    className="grid size-6 flex-none place-items-center rounded-full text-[15px] leading-none text-muted-foreground hover:bg-secondary"
+                    className="grid size-5 flex-none place-items-center rounded-full text-[15px] leading-none text-muted-foreground hover:bg-secondary"
                     aria-label="Geri al"
                     onClick={(e) => { e.stopPropagation(); geri(k); }}
                   >

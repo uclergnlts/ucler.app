@@ -152,15 +152,70 @@
     ],
     "quiz": [
       {
-        "q": "Hangisi SI'daki temel büyüklüklerden biri değildir?",
-        "o": [
-          "Kütle",
-          "Zaman",
-          "Hız",
-          "Elektrik akımı"
+        "tur": "ayir",
+        "q": "Her büyüklüğü SI'daki yerine göre doğru gruba koy.",
+        "gruplar": [
+          "Temel",
+          "Türetilmiş"
         ],
-        "a": 2,
-        "e": "Hız, yer değiştirmenin zamana bölümüdür; birimi m/s olduğu için uzunluk ve zamandan türetilmiş bir büyüklüktür. Kütle, zaman ve elektrik akımı temel büyüklüktür."
+        "ogeler": [
+          [
+            "Kütle",
+            0
+          ],
+          [
+            "Zaman",
+            0
+          ],
+          [
+            "Elektrik akımı",
+            0
+          ],
+          [
+            "Sıcaklık",
+            0
+          ],
+          [
+            "Sürat",
+            1
+          ],
+          [
+            "Özkütle",
+            1
+          ],
+          [
+            "Kuvvet",
+            1
+          ],
+          [
+            "Hacim",
+            1
+          ]
+        ],
+        "e": "Kütle, zaman, elektrik akımı ve sıcaklık yedi temel büyüklükten dördüdür. Sürat (m/s), özkütle (kg/m³), kuvvet (kg·m/s²) ve hacim (m³) temel büyüklüklerden türetilir."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her olayı en çok ilgili olduğu fizik dalıyla eşleştir.",
+        "ciftler": [
+          [
+            "Buzdolabının soğutması",
+            "Termodinamik"
+          ],
+          [
+            "Gökkuşağının oluşması",
+            "Optik"
+          ],
+          [
+            "Düşen elmanın hızlanması",
+            "Mekanik"
+          ],
+          [
+            "Telefonun şarj olması",
+            "Elektromanyetizma"
+          ]
+        ],
+        "e": "Isının taşınması termodinamiğin, ışığın kırılması optiğin konusudur. Hareket ve kuvvet mekaniği, elektrik akımı ise elektromanyetizmayı ilgilendirir."
       },
       {
         "q": "Hangisi vektörel bir büyüklüktür?",
@@ -172,17 +227,6 @@
         ],
         "a": 1,
         "e": "Kuvveti tam anlatmak için yönü de gerekir. Diğerleri sayı ve birimle tam anlatılır, yani skalerdir."
-      },
-      {
-        "q": "Buzdolabının soğutma sistemi en çok fiziğin hangi alt dalıyla ilgilidir?",
-        "o": [
-          "Optik",
-          "Termodinamik",
-          "Nükleer fizik",
-          "Katıhal fiziği"
-        ],
-        "a": 1,
-        "e": "Isı ve ısının taşınması termodinamiğin konusudur; buzdolabı ısıyı içeriden dışarı taşır."
       },
       {
         "q": "Bir olayın neden gerçekleştiğini açıklayan, deneylerle defalarca doğrulanmış geniş açıklamaya ne denir?",
@@ -310,26 +354,77 @@
     ],
     "quiz": [
       {
-        "q": "Kütlesi 40 g, hacmi 50 cm³ olan bir cismin özkütlesi kaç g/cm³'tür?",
-        "o": [
-          "0,8",
-          "1,25",
-          "2",
-          "90"
+        "tur": "ayir",
+        "q": "Her özelliği doğru gruba koy.",
+        "gruplar": [
+          "Ortak",
+          "Ayırt edici"
         ],
-        "a": 0,
-        "e": "d = m / V = 40 / 50 = 0,8 g/cm³. Bu cisim sudan az yoğun olduğu için suda yüzer."
+        "ogeler": [
+          [
+            "Kütle",
+            0
+          ],
+          [
+            "Hacim",
+            0
+          ],
+          [
+            "Eylemsizlik",
+            0
+          ],
+          [
+            "Tanecikli yapı",
+            0
+          ],
+          [
+            "Özkütle",
+            1
+          ],
+          [
+            "Erime noktası",
+            1
+          ],
+          [
+            "Kaynama noktası",
+            1
+          ],
+          [
+            "İletkenlik",
+            1
+          ]
+        ],
+        "e": "Kütle, hacim, eylemsizlik ve tanecikli yapı her maddede bulunur. Özkütle, erime-kaynama noktası ve iletkenlik maddeden maddeye değişir, maddeyi tanıtır."
       },
       {
-        "q": "Özkütlesi 1 g/cm³ ve 3 g/cm³ olan iki sıvı eşit hacimde karıştırılıyor. Karışırken hacim değişmediğine göre karışımın özkütlesi kaç g/cm³ olur?",
-        "o": [
-          "1",
-          "1,5",
-          "2",
-          "4"
+        "tur": "sayi",
+        "q": "Özkütlesi 1 g/cm³ olan 200 cm³ sıvı ile özkütlesi 4 g/cm³ olan 100 cm³ sıvı karıştırılıyor. Karışırken hacim değişmediğine göre karışımın özkütlesi kaç g/cm³ olur?",
+        "cevap": 2,
+        "birim": "g/cm³",
+        "e": "m<sub>toplam</sub> = 200·1 + 100·4 = 600 g, V<sub>son</sub> = 300 cm³. d = 600 / 300 = 2 g/cm³; sonuç hacmi çok olan sıvıya daha yakındır."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her olayı onu açıklayan kavramla eşleştir.",
+        "ciftler": [
+          [
+            "Su örümceğinin batmaması",
+            "Yüzey gerilimi"
+          ],
+          [
+            "Kâğıt havlunun suyu çekmesi",
+            "Kılcallık"
+          ],
+          [
+            "Suyun camı ıslatması",
+            "Yapışma, tutmadan büyük"
+          ],
+          [
+            "Cıva yüzeyinin tümsek olması",
+            "Tutma, yapışmadan büyük"
+          ]
         ],
-        "a": 2,
-        "e": "Hacim değişmediği için V<sub>son</sub> = 2V olur: d = (1·V + 3·V) / 2V = 2 g/cm³, yani iki özkütlenin ortalaması."
+        "e": "Gerili yüzey su örümceğini taşır; ince kanallarda suyun yükselmesi kılcallıktır. Suyun cama yapışması tutmasından büyük olduğu için su camı ıslatır; cıvada tutma büyük olduğu için yüzey tümsektir."
       },
       {
         "q": "Bir küpün tüm kenarları 3 katına çıkarılırsa dayanıklılığı nasıl değişir?",
@@ -341,17 +436,6 @@
         ],
         "a": 2,
         "e": "Kesit alanı 9, hacim 27 kat olur. Dayanıklılık kesit/hacim oranına bağlı olduğu için 9/27 = 1/3 katına iner."
-      },
-      {
-        "q": "İnce cam boruya konan cıvanın yüzeyinin tümsek olmasının nedeni nedir?",
-        "o": [
-          "Cıvanın yoğunluğunun büyük olması",
-          "Cıvada birbirini tutma kuvvetinin cama yapışma kuvvetinden büyük olması",
-          "Cıvanın metal olması",
-          "Borunun ince olması"
-        ],
-        "a": 1,
-        "e": "Cıva tanecikleri birbirini, camın kendilerini çektiğinden daha çok çeker; bu yüzden cıva camı ıslatmaz ve yüzeyi tümsek olur."
       }
     ]
   },
@@ -475,26 +559,49 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "Hidrolik bir kaldıraçta küçük pistonun alanı 10 cm², büyük pistonunki 200 cm². Küçük pistona 50 N uygularsan büyük piston en fazla kaç N'luk yükü dengeler?",
-        "o": [
-          "250 N",
-          "2,5 N",
-          "1000 N",
-          "100 N"
-        ],
-        "a": 2,
+        "cevap": 1000,
+        "birim": "N",
         "e": "F₁ / A₁ = F₂ / A₂ olduğundan F₂ = 50 · 200 / 10 = 1000 N. Alan 20 kat büyük, kuvvet de 20 kat büyük."
       },
       {
-        "q": "Kar ayakkabısı giyen biri neden kara daha az gömülür?",
-        "o": [
-          "Ağırlığını daha geniş alana yayar, basınç azalır",
-          "Ağırlığını azaltır",
-          "Kar ayakkabısı karı eritir",
-          "Kara uyguladığı kuvveti sıfırlar"
+        "tur": "sirala",
+        "q": "Açık kaplardaki sıvıların verilen noktalarda yaptığı sıvı basıncını küçükten büyüğe sırala.",
+        "ogeler": [
+          "Suda 20 cm derinlik (d = 1 g/cm³)",
+          "Yağda 30 cm derinlik (d = 0,8 g/cm³)",
+          "Tuzlu suda 25 cm derinlik (d = 1,2 g/cm³)",
+          "Cıvada 10 cm derinlik (d = 13,6 g/cm³)"
         ],
-        "a": 0,
-        "e": "Ağırlık (kuvvet) aynı kalır, ama alan büyüdüğü için P = F / A küçülür."
+        "e": "P = h·d·g ve g hepsinde aynı; h·d çarpımlarına bak: 20·1 = 20, 30·0,8 = 24, 25·1,2 = 30, 10·13,6 = 136. Az derinlikte bile cıvanın basıncı en büyüktür."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her örneği dayandığı ilkeyle eşleştir.",
+        "ciftler": [
+          [
+            "Hidrolik kriko",
+            "Pascal ilkesi"
+          ],
+          [
+            "Çaydanlık ağzı",
+            "Bileşik kaplar"
+          ],
+          [
+            "Fırtınada kalkan çatı",
+            "Bernoulli ilkesi"
+          ],
+          [
+            "Altı kalın baraj duvarı",
+            "Basınç derinlikle artar"
+          ],
+          [
+            "Kar ayakkabısı",
+            "Geniş alan, az basınç"
+          ]
+        ],
+        "e": "Kriko basıncı sıvıyla iletir (Pascal); çaydanlıkta bileşik kaplardaki gibi yüzeyler aynı seviyededir. Hızlı rüzgâr basıncı düşürür (Bernoulli). Baraj altta kalındır çünkü P = h·d·g; kar ayakkabısı ağırlığı geniş alana yayar."
       },
       {
         "q": "Torricelli deneyi yüksek bir dağın tepesinde yapılırsa tüpteki cıva sütununun yüksekliği için ne söylenebilir?",
@@ -506,17 +613,6 @@
         ],
         "a": 1,
         "e": "Yükseklerde açık hava basıncı daha küçüktür, bu yüzden daha kısa bir cıva sütununu dengeler. Tüpün kalınlığı yüksekliği etkilemez."
-      },
-      {
-        "q": "Geniş, dar ve huni biçimli üç açık kaba aynı yüksekliğe kadar su konuyor. Tabanlardaki sıvı basınçları için hangisi doğrudur?",
-        "o": [
-          "En çok su alan kapta en büyüktür",
-          "Tabanı en geniş kapta en büyüktür",
-          "Dar kapta en büyüktür",
-          "Üçünde de eşittir"
-        ],
-        "a": 3,
-        "e": "Sıvı basıncı P = h·d·g'dir; h ve d aynı olduğu için kabın şekli ve su miktarı ne olursa olsun basınçlar eşittir."
       }
     ]
   },
@@ -673,26 +769,55 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "Bir taş dinamometrede havada 12 N, suya tamamen daldırılınca 8 N gösteriyor. Suyun özkütlesi 1 g/cm³ ve g = 10 m/s² ise taşın özkütlesi kaç g/cm³'tür?",
-        "o": [
-          "1,5",
-          "3",
-          "2",
-          "4"
-        ],
-        "a": 1,
+        "cevap": 3,
+        "birim": "g/cm³",
         "e": "F<sub>k</sub> = 12 − 8 = 4 N, buradan V = 400 cm³. Kütle 1,2 kg = 1200 g olduğundan d = 1200 / 400 = 3 g/cm³."
       },
       {
-        "q": "Suya tamamen batmış bir taş, dibe değmeden daha derine indiriliyor. Taşa etki eden kaldırma kuvveti nasıl değişir?",
-        "o": [
-          "Artar, çünkü sıvı basıncı artar",
-          "Azalır",
-          "Önce artar, sonra azalır",
-          "Değişmez"
+        "tur": "ayir",
+        "q": "Cisimler suya (d = 1 g/cm³) bırakılıyor. Her birinin ne yapacağını seç.",
+        "gruplar": [
+          "Yüzer",
+          "Askıda kalır",
+          "Batar"
         ],
-        "a": 3,
-        "e": "Üst ve alt yüzdeki basınçlar aynı miktarda artar. Fark ve V<sub>batan</sub> değişmediği için F<sub>k</sub> sabit kalır."
+        "ogeler": [
+          [
+            "d = 0,6 g/cm³",
+            0
+          ],
+          [
+            "Yarısı batık",
+            0
+          ],
+          [
+            "d = 1 g/cm³",
+            1
+          ],
+          [
+            "d = 2,7 g/cm³",
+            2
+          ],
+          [
+            "F<sub>k</sub> &lt; G",
+            2
+          ]
+        ],
+        "e": "Sudan az yoğun cisim kısmen batarak yüzer; yarısı batık duran cisim de yüzüyordur. Özkütlesi suya eşit olan askıda kalır. Sudan yoğun cisim batar, onda F<sub>k</sub> &lt; G olur."
+      },
+      {
+        "tur": "sirala",
+        "q": "Bir denizaltının dalıp yeniden yükselmesini sıraya koy.",
+        "ogeler": [
+          "Balast tanklarına deniz suyu alınır",
+          "Ağırlık kaldırma kuvvetini aşar (G &gt; F<sub>k</sub>)",
+          "Denizaltı dalar; tamamen batınca F<sub>k</sub> sabittir",
+          "Tanklardaki su basınçlı havayla dışarı atılır",
+          "G &lt; F<sub>k</sub> olur, denizaltı yükselir"
+        ],
+        "e": "Denizaltının hacmi, dolayısıyla tam batıkken F<sub>k</sub> değişmez; değişen ağırlığıdır. Su alınca G &gt; F<sub>k</sub> olur ve dalar, su atılınca G &lt; F<sub>k</sub> olur ve yükselir."
       },
       {
         "q": "Aynı cisim X sıvısında hacminin yarısı batmış olarak yüzüyor, Y sıvısında askıda kalıyor, Z sıvısında dibe batıyor. Cisme etki eden kaldırma kuvvetleri için hangisi doğrudur?",
@@ -704,17 +829,6 @@
         ],
         "a": 2,
         "e": "Yüzen ve askıdaki cisimde F<sub>k</sub> = G'dir. Cismin battığı Z sıvısında F<sub>k</sub> &lt; G olur."
-      },
-      {
-        "q": "Eşit hacimli bir demir bilye ile bir alüminyum bilye suya tamamen batırılıyor. Hangisine daha büyük kaldırma kuvveti etki eder?",
-        "o": [
-          "İkisine eşit kaldırma kuvveti etki eder",
-          "Demire, çünkü daha ağırdır",
-          "Alüminyuma, çünkü daha hafiftir",
-          "Hangisi daha derindeyse ona"
-        ],
-        "a": 0,
-        "e": "F<sub>k</sub> = V<sub>batan</sub>·d<sub>sıvı</sub>·g'dir. Batan hacim ve sıvı aynı olduğu için kuvvetler eşittir; cismin kütlesi F<sub>k</sub>'yı etkilemez."
       }
     ]
   },
@@ -902,37 +1016,50 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "Isı kaybı olmayan bir kapta 90 °C’deki 100 g su ile 30 °C’deki 200 g su karıştırılıyor. Denge sıcaklığı kaç °C olur?",
-        "o": [
-          "60 °C",
-          "45 °C",
-          "50 °C",
-          "40 °C"
-        ],
-        "a": 2,
-        "e": "100·(90 − T) = 200·(T − 30) eşitliğinden T = 50 °C bulunur; denge, kütlesi büyük olan suya daha yakındır."
+        "cevap": 50,
+        "birim": "°C",
+        "e": "Alınan ısı = verilen ısı: 100·(90 − T) = 200·(T − 30), buradan T = 50 °C. Denge, kütlesi büyük olan suya daha yakındır."
       },
       {
-        "q": "Isı ve sıcaklık için hangisi doğrudur?",
-        "o": [
-          "Sıcaklık, taneciklerin ortalama kinetik enerjisinin ölçüsüdür ve madde miktarına bağlı değildir.",
-          "Isı her zaman iç enerjisi büyük olan cisimden küçük olana akar.",
-          "Termometre, bir cismin içerdiği ısıyı ölçer.",
-          "Aynı sıcaklıktaki bir bardak su ile bir kova suyun iç enerjisi eşittir."
+        "tur": "sirala",
+        "q": "−20 °C’deki buz 1 atm’de sabit güçle ısıtılıp buhara dönüşüyor. Aşamaları sıraya koy.",
+        "ogeler": [
+          "Buz ısınır, sıcaklığı 0 °C’ye çıkar",
+          "Buz erir, sıcaklık 0 °C’de sabit kalır",
+          "Su ısınır, sıcaklığı 100 °C’ye çıkar",
+          "Su kaynar, sıcaklık 100 °C’de sabit kalır",
+          "Buhar ısınır, sıcaklığı 100 °C’nin üstüne çıkar"
         ],
-        "a": 0,
-        "e": "Isı sıcaklığı yüksekten düşüğe akar ve termometre sıcaklığı ölçer. İç enerji madde miktarına bağlı olduğu için kovadaki su daha fazla iç enerjiye sahiptir."
+        "e": "Eğik kısımlarda sıcaklık artar (Q = m·c·ΔT), düz kısımlarda hâl değişir (Q = m·L). Sıra: buz ısınır, erir, su ısınır, kaynar, buhar ısınır."
       },
       {
-        "q": "Saf bir katı sabit güçle ısıtılıyor. Sıcaklık-zaman grafiğindeki yatay (düz) kısımda ne olur?",
-        "o": [
-          "Madde ısı almaz, bu yüzden sıcaklığı değişmez.",
-          "Taneciklerin ortalama kinetik enerjisi artar.",
-          "Maddenin iç enerjisi sabit kalır.",
-          "Madde ısı alır ve hâl değiştirir; iç enerjisi artar, sıcaklığı sabit kalır."
+        "tur": "eslestir",
+        "q": "Her olayı onu açıklayan kavramla eşleştir.",
+        "ciftler": [
+          [
+            "Ocaktaki tencere sapının ısınması",
+            "İletim"
+          ],
+          [
+            "Odada sıcak havanın yükselmesi",
+            "Konveksiyon"
+          ],
+          [
+            "Güneşin Dünya'yı ısıtması",
+            "Işıma"
+          ],
+          [
+            "Terin seni serinletmesi",
+            "Buharlaşma"
+          ],
+          [
+            "Yazın elektrik tellerinin sarkması",
+            "Genleşme"
+          ]
         ],
-        "a": 3,
-        "e": "Düz kısımda alınan ısı (Q = m·L) tanecikler arası çekimi yenmeye harcanır. Ortalama kinetik enerji, yani sıcaklık değişmez ama iç enerji artar."
+        "e": "Isı metal sapta tanecikten taneciğe iletilir; ısınan hava yükselerek konveksiyonla taşınır. Güneş ısısı boşlukta ışımayla gelir. Ter buharlaşırken en hızlı tanecikler kaçar, deri soğur; ısınan teller genleşip uzar."
       },
       {
         "q": "Ortasında dairesel bir delik bulunan metal levha ısıtılıyor. Deliğin çapı nasıl değişir?",
@@ -1034,37 +1161,77 @@
     ],
     "quiz": [
       {
-        "q": "Aşağıdakilerden hangisi vektörel bir büyüklüktür?",
-        "o": [
-          "Kütle",
-          "Sıcaklık",
-          "Kuvvet",
-          "Zaman"
-        ],
-        "a": 2,
-        "e": "Kuvvetin bir yönü vardır; diğerleri yalnızca sayı ve birimle anlatılır."
+        "tur": "sayi",
+        "q": "A = (3, 5) ve B = (1, −2) vektörleri veriliyor. A + B bileşkesinin büyüklüğü kaç birimdir?",
+        "cevap": 5,
+        "birim": "birim",
+        "e": "Bileşenleri ayrı ayrı topla: R = (3 + 1, 5 − 2) = (4, 3). Büyüklük √(4² + 3²) = √25 = 5."
       },
       {
-        "q": "6 N ve 8 N'luk iki kuvvet birbirine dik etki ediyor. Bileşke kaç N?",
-        "o": [
-          "2",
-          "10",
-          "14",
-          "48"
+        "tur": "ayir",
+        "q": "Her büyüklüğü doğru gruba koy.",
+        "gruplar": [
+          "Skaler",
+          "Vektörel"
         ],
-        "a": 1,
-        "e": "Dik vektörlerde R = √(6² + 8²) = √100 = 10 N."
+        "ogeler": [
+          [
+            "Kütle",
+            0
+          ],
+          [
+            "Sıcaklık",
+            0
+          ],
+          [
+            "Zaman",
+            0
+          ],
+          [
+            "Hız",
+            1
+          ],
+          [
+            "Kuvvet",
+            1
+          ],
+          [
+            "Yer değiştirme",
+            1
+          ],
+          [
+            "Hız değişimi (Δv)",
+            1
+          ]
+        ],
+        "e": "Kütle, sıcaklık ve zaman sayı ve birimle tam anlatılır. Hız, kuvvet, yer değiştirme ve Δv = v<sub>son</sub> − v<sub>ilk</sub> için yön de gerekir."
       },
       {
-        "q": "20 birimlik bir vektör +x ekseniyle 30° açı yapıyor. Düşey bileşeni kaçtır?",
-        "o": [
-          "10",
-          "17,3",
-          "20",
-          "5"
+        "tur": "eslestir",
+        "q": "A büyüklüğünde iki eşit vektör arasındaki açıyı bileşkenin büyüklüğüyle eşleştir.",
+        "ciftler": [
+          [
+            "Aradaki açı 0°",
+            "2A"
+          ],
+          [
+            "Aradaki açı 60°",
+            "A√3"
+          ],
+          [
+            "Aradaki açı 90°",
+            "A√2"
+          ],
+          [
+            "Aradaki açı 120°",
+            "A"
+          ],
+          [
+            "Aradaki açı 180°",
+            "0"
+          ]
         ],
-        "a": 0,
-        "e": "Vy = V·sin30° = 20 · 0,5 = 10."
+        "e": "R² = A² + A² + 2A²·cosα: 0°'de R = 2A, 60°'de A√3, 90°'de A√2, 120°'de A olur. 180°'de vektörler zıt yönlüdür, R = 0."
       },
       {
         "q": "3 N ve 5 N'luk iki kuvvetin bileşkesi hangisi OLAMAZ?",
@@ -1427,26 +1594,41 @@
     ],
     "quiz": [
       {
-        "q": "Net kuvvetin sıfır olduğu bir cisim için hangisi kesinlikle doğrudur?",
-        "o": [
-          "Cisim duruyordur",
-          "Cismin hızı değişmez",
-          "Cisim yavaşlar",
-          "Cisme hiç kuvvet etki etmez"
-        ],
-        "a": 1,
-        "e": "1. yasa: Fnet = 0 ise cisim ya durur ya sabit hızla gider; yani hızı değişmez. Kuvvetler olabilir ama dengededir."
+        "tur": "sayi",
+        "q": "İdeal bir makaranın iki yanında 4 kg ve 1 kg'lık kütleler asılı. Sistemin ivmesi kaç m/s² olur? (g = 10 m/s²)",
+        "cevap": 6,
+        "birim": "m/s²",
+        "e": "a = (m₁ − m₂)·g / (m₁ + m₂) = (4 − 1)·10 / 5 = 6 m/s². Ağır olan 4 kg'lık kütle iner."
       },
       {
-        "q": "4 kg'lık bir cisme 12 N net kuvvet etki ediyor. İvmesi nedir?",
-        "o": [
-          "48 m/s²",
-          "0,33 m/s²",
-          "3 m/s²",
-          "16 m/s²"
+        "tur": "eslestir",
+        "q": "Her durumu açıklayan Newton yasasıyla eşleştir.",
+        "ciftler": [
+          [
+            "Frende öne savrulman",
+            "1. yasa (eylemsizlik)"
+          ],
+          [
+            "Dolu arabanın zor hızlanması",
+            "2. yasa (F = m·a)"
+          ],
+          [
+            "Patenle duvarı itince geri kayman",
+            "3. yasa (etki–tepki)"
+          ]
         ],
-        "a": 2,
-        "e": "a = Fnet / m = 12 / 4 = 3 m/s²."
+        "e": "Vücudun hareketini sürdürmek ister (eylemsizlik). Kütle büyüdükçe aynı kuvvetle ivme küçülür (a = F / m). Duvarı itince duvar da seni eşit ve zıt kuvvetle iter."
+      },
+      {
+        "tur": "sirala",
+        "q": "60 kg'lık biri asansörde tartı üstünde duruyor. Tartının gösterdiği değeri küçükten büyüğe sırala. (g = 10 m/s²)",
+        "ogeler": [
+          "Asansör serbest düşerken",
+          "Asansör aşağı yönde 2 m/s² ivmelenirken",
+          "Asansör sabit hızla giderken",
+          "Asansör yukarı yönde 2 m/s² ivmelenirken"
+        ],
+        "e": "Tartı normal kuvveti gösterir: serbest düşüşte N = 0, aşağı ivmede N = 60·(10 − 2) = 480 N, sabit hızda 600 N, yukarı ivmede 60·(10 + 2) = 720 N."
       },
       {
         "q": "At arabayı çekerken araba da atı aynı büyüklükte geri çeker. Bu iki kuvvet neden birbirini yok etmez?",
@@ -1458,17 +1640,6 @@
         ],
         "a": 0,
         "e": "Etki–tepki kuvvetleri farklı cisimlere etki eder. Atı ileri götüren, yerin atın ayağına uyguladığı sürtünme kuvvetidir."
-      },
-      {
-        "q": "20 kg'lık sandık, μk = 0,25 olan yatay zeminde kayıyor. Sürtünme kuvveti yaklaşık kaç N? (g ≈ 9,8 m/s²)",
-        "o": [
-          "5",
-          "196",
-          "80",
-          "49"
-        ],
-        "a": 3,
-        "e": "N = m·g = 196 N; kayarken fk = μk·N = 0,25·196 = 49 N."
       }
     ]
   },
@@ -1579,15 +1750,65 @@
     ],
     "quiz": [
       {
-        "q": "Yatay atılan bir taşın uçuş süresi neye bağlıdır? (hava direnci yok)",
-        "o": [
-          "Yalnızca atış yüksekliğine",
-          "Yalnızca atış hızına",
-          "Taşın kütlesine",
-          "Hıza ve kütleye"
+        "tur": "sayi",
+        "q": "45 m yükseklikteki bir uçurumdan 15 m/s hızla yatay atılan taş, uçurumun dibinden kaç m uzağa düşer? (g = 10 m/s², hava direnci yok)",
+        "cevap": 45,
+        "birim": "m",
+        "e": "Düşeyde h = ½·g·t²: 45 = 5·t², t = 3 s. Yatayda x = v<sub>0</sub>·t = 15·3 = 45 m."
+      },
+      {
+        "tur": "ayir",
+        "q": "Eğik atılan bir top uçarken (hava direnci yok) hangi nicelik değişir, hangisi sabit kalır?",
+        "gruplar": [
+          "Sabit kalır",
+          "Değişir"
         ],
-        "a": 0,
-        "e": "t = √(2h / g); yatay hız süreyi değiştirmez, sadece taşın ne kadar uzağa gideceğini değiştirir."
+        "ogeler": [
+          [
+            "Yatay hız (v<sub>x</sub>)",
+            0
+          ],
+          [
+            "İvme",
+            0
+          ],
+          [
+            "Düşey hız (v<sub>y</sub>)",
+            1
+          ],
+          [
+            "Yükseklik",
+            1
+          ],
+          [
+            "Hızın büyüklüğü",
+            1
+          ]
+        ],
+        "e": "Yatayda kuvvet olmadığı için v<sub>x</sub> sabittir; ivme her an g'dir. v<sub>y</sub> her saniye g kadar değişir, yükseklik ve hızın büyüklüğü de bu yüzden değişir (tepede hız en küçüktür)."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Yerden v<sub>0</sub> hızıyla θ açısında atılıp aynı seviyeye inen top için her niceliği formülüyle eşleştir.",
+        "ciftler": [
+          [
+            "Çıkış süresi",
+            "v<sub>0y</sub> / g"
+          ],
+          [
+            "Uçuş süresi",
+            "2·v<sub>0y</sub> / g"
+          ],
+          [
+            "En büyük yükseklik",
+            "v<sub>0y</sub>² / (2g)"
+          ],
+          [
+            "Menzil",
+            "v<sub>0</sub>²·sin2θ / g"
+          ]
+        ],
+        "e": "Tepede v<sub>y</sub> = 0 olduğundan çıkış süresi v<sub>0y</sub> / g, yükseklik v<sub>0y</sub>² / (2g)'dir. İniş çıkışa eşittir: T = 2·v<sub>0y</sub> / g. Menzil R = v<sub>0</sub>²·sin2θ / g."
       },
       {
         "q": "Eğik atılan topun tepe noktasında hangisi sıfırdır?",
@@ -1598,29 +1819,7 @@
           "Toplam hız"
         ],
         "a": 2,
-        "e": "Tepede vy = 0 olur; vx aynen sürer, ivme ise yine g'dir."
-      },
-      {
-        "q": "Aynı hızla atılıp atıldığı seviyeye inen toplardan hangisi en uzağa gider? (hava direnci yok)",
-        "o": [
-          "30°",
-          "60°",
-          "75°",
-          "45°"
-        ],
-        "a": 3,
-        "e": "R = v₀²·sin2θ / g; sin2θ en büyük değerini (1) θ = 45°'de alır."
-      },
-      {
-        "q": "Yerden 20 m/s hızla 30° açıyla atılan top yine yere iniyor. Uçuş süresi yaklaşık kaç s? (g ≈ 9,8 m/s², hava direnci yok)",
-        "o": [
-          "1,0",
-          "2,0",
-          "4,1",
-          "3,5"
-        ],
-        "a": 1,
-        "e": "v₀y = 20·sin30° = 10 m/s; T = 2·10 / 9,8 ≈ 2,0 s."
+        "e": "Tepede v<sub>y</sub> = 0 olur; v<sub>x</sub> aynen sürer, ivme ise yine g'dir."
       }
     ]
   },
@@ -1777,26 +1976,41 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "Genişliği 120 m olan nehirde akıntı hızı 2 m/s'dir. Suya göre hızı 6 m/s olan kayık burnunu kıyıya dik tutarak karşıya geçiyor. Kayık akıntı yönünde kaç metre sürüklenir?",
-        "o": [
-          "20 m",
-          "40 m",
-          "60 m",
-          "120 m"
-        ],
-        "a": 1,
-        "e": "Geçiş süresi t = 120 / 6 = 20 s'dir. Sürüklenme x = 2 · 20 = 40 m olur."
+        "cevap": 40,
+        "birim": "m",
+        "e": "Geçiş süresi t = 120 / 6 = 20 s'dir; akıntı süreyi değiştirmez. Sürüklenme x = 2 · 20 = 40 m olur."
       },
       {
-        "q": "Burnunu kıyıya dik tutarak karşıya geçen bir kayık için akıntı hızı iki katına çıkarsa ne olur?",
-        "o": [
-          "Geçiş süresi artar, sürüklenme değişmez.",
-          "Geçiş süresi azalır, sürüklenme artar.",
-          "Geçiş süresi değişmez, sürüklenme iki katına çıkar.",
-          "Geçiş süresi de sürüklenme de değişmez."
+        "tur": "eslestir",
+        "q": "Hızları 8 m/s ve 6 m/s olan iki aracın birbirine göre hızının büyüklüğünü eşleştir.",
+        "ciftler": [
+          [
+            "Aynı yönde gidiyorlar",
+            "2 m/s"
+          ],
+          [
+            "Zıt yönde gidiyorlar",
+            "14 m/s"
+          ],
+          [
+            "Birbirine dik gidiyorlar",
+            "10 m/s"
+          ]
         ],
-        "a": 2,
-        "e": "Süreyi yalnızca kıyıya dik hız bileşeni belirler; akıntı paralel olduğu için süre aynı kalır. Sürüklenme x = v<sub>a</sub>·t olduğundan iki katına çıkar."
+        "e": "Aynı yönde 8 − 6 = 2 m/s, zıt yönde 8 + 6 = 14 m/s. Dik hızlarda Pisagor: √(8² + 6²) = 10 m/s."
+      },
+      {
+        "tur": "sirala",
+        "q": "Tren yere göre 20 m/s ile gidiyor. Kişilerin yere göre hızını küçükten büyüğe sırala.",
+        "ogeler": [
+          "Peronda duran kişi",
+          "Trende geriye doğru 2 m/s yürüyen yolcu",
+          "Trende oturan yolcu",
+          "Trende ileri doğru 2 m/s yürüyen yolcu"
+        ],
+        "e": "Yere göre hız = trene göre hız + trenin hızı: peron 0, geriye yürüyen 20 − 2 = 18, oturan 20, ileri yürüyen 20 + 2 = 22 m/s."
       },
       {
         "q": "Rüzgârsız havada yağmur damlaları düşey olarak 10 m/s ile düşüyor. Doğuya 10 m/s ile giden arabadaki yolcu damlaları nasıl görür?",
@@ -1808,17 +2022,6 @@
         ],
         "a": 3,
         "e": "Yolcuya göre yağmur: v<sub>yağmur</sub> − v<sub>araba</sub> = 10 m/s aşağı + 10 m/s batı. Büyüklük √(10² + 10²) ≈ 14,1 m/s, düşeyle 45°, batıya (arabanın arkasına) doğru."
-      },
-      {
-        "q": "K aracı doğuya 20 m/s, L aracı batıya 30 m/s ile gidiyor. K'deki sürücüye göre L'nin hızı nedir?",
-        "o": [
-          "Batıya 50 m/s",
-          "Batıya 10 m/s",
-          "Doğuya 50 m/s",
-          "Doğuya 10 m/s"
-        ],
-        "a": 0,
-        "e": "v<sub>L</sub> − v<sub>K</sub> = −30 − 20 = −50 m/s (doğu +), yani batıya 50 m/s. Zıt yönde giden araçlarda bağıl hızın büyüklüğü hızların toplamıdır."
       }
     ]
   },
@@ -1937,37 +2140,69 @@
     ],
     "quiz": [
       {
-        "q": "Bavulu sabit hızla yatay yönde taşırken, bavulu yukarı tutan kuvvetin yaptığı iş nedir?",
-        "o": [
-          "Sıfır",
-          "Pozitif",
-          "Negatif",
-          "Ağırlığa eşit"
-        ],
-        "a": 0,
-        "e": "Tutma kuvveti yukarı, hareket yataydır; θ = 90° ve cos90° = 0 olduğundan W = 0."
+        "tur": "sayi",
+        "q": "Sürtünmesiz ortamda 5 m yükseklikten serbest bırakılan bir cisim yere kaç m/s hızla çarpar? (g = 10 m/s²)",
+        "cevap": 10,
+        "birim": "m/s",
+        "e": "Mekanik enerji korunur: m·g·h = ½·m·v², v = √(2gh) = √(2·10·5) = 10 m/s. Kütle sadeleşir."
       },
       {
-        "q": "Bir arabanın hızı 2 katına çıkarsa kinetik enerjisi kaç katına çıkar?",
-        "o": [
-          "2",
-          "8",
-          "4",
-          "Değişmez"
+        "tur": "ayir",
+        "q": "Kuvveti sen uyguluyorsun. Fiziksel anlamda iş yapıyor musun?",
+        "gruplar": [
+          "İş yapılır",
+          "İş yapılmaz (W = 0)"
         ],
-        "a": 2,
-        "e": "KE = ½·m·v²; v iki katına çıkınca v² dört katına çıkar."
+        "ogeler": [
+          [
+            "Kitabı rafa kaldırmak",
+            0
+          ],
+          [
+            "Kutuyu sürüklemek",
+            0
+          ],
+          [
+            "Topu yukarı fırlatmak",
+            0
+          ],
+          [
+            "Duvarı itmek",
+            1
+          ],
+          [
+            "Ağırlığı havada tutmak",
+            1
+          ]
+        ],
+        "e": "İş için kuvvetin doğrultusunda yer değiştirme gerekir: kitap, kutu ve top kuvvet yönünde hareket eder. Duvar ve havada tutulan ağırlık kımıldamaz; yorulsan da W = 0'dır."
       },
       {
-        "q": "Sürtünmesiz ortamda 20 m yükseklikten bırakılan cisim yere yaklaşık hangi hızla çarpar? (g ≈ 9,8 m/s²)",
-        "o": [
-          "19,8 m/s",
-          "14 m/s",
-          "392 m/s",
-          "9,8 m/s"
+        "tur": "eslestir",
+        "q": "Her niceliği formülüyle eşleştir.",
+        "ciftler": [
+          [
+            "İş",
+            "F·d·cosθ"
+          ],
+          [
+            "Kinetik enerji",
+            "½·m·v²"
+          ],
+          [
+            "Çekim potansiyel enerjisi",
+            "m·g·h"
+          ],
+          [
+            "Yay potansiyel enerjisi",
+            "½·k·x²"
+          ],
+          [
+            "Güç",
+            "W / t"
+          ]
         ],
-        "a": 0,
-        "e": "m·g·h = ½·m·v² → v = √(2gh) = √392 ≈ 19,8 m/s; kütle sadeleşir."
+        "e": "W = F·d·cosθ, KE = ½·m·v², PE = m·g·h, yay enerjisi ½·k·x² ve güç P = W / t'dir."
       },
       {
         "q": "Bir motor 3 s'de 600 J enerji harcayıp 450 J yararlı iş yapıyor. Verimi ve yararlı gücü nedir?",
@@ -2174,26 +2409,70 @@
     ],
     "quiz": [
       {
-        "q": "Ağırlıksız bir kaldıraçta yük destekten 0,4 m, kuvvet 1,6 m uzaktadır. 600 N'luk yükü dengelemek için çubuğa dik uygulanan kuvvet kaç N olmalıdır?",
-        "o": [
-          "2400 N",
-          "150 N",
-          "600 N",
-          "240 N"
-        ],
-        "a": 1,
-        "e": "F·1,6 = 600·0,4 → F = 240 / 1,6 = 150 N. Kuvvet kolu 4 kat uzun olduğu için kuvvet 4'te 1'e iner."
+        "tur": "sayi",
+        "q": "Hareketli bloğu 4 ip kolu taşıyan bir palangayla 600 N'luk yük kaldırılıyor. Hareketli makaraların toplam ağırlığı 40 N ise ipe en az kaç N kuvvet uygulamalısın? (sürtünme yok)",
+        "cevap": 160,
+        "birim": "N",
+        "e": "Makara ağırlığı yüke eklenir: F = (Y + P) / n = (600 + 40) / 4 = 160 N."
       },
       {
-        "q": "Cımbız için hangisi doğrudur?",
-        "o": [
-          "Destek ortadadır; kazanç 1'e eşittir",
-          "Yük ortadadır; kazanç 1'den büyüktür",
-          "Kuvvet ortadadır; kazanç 1'den büyüktür",
-          "Kuvvet ortadadır; kazanç 1'den küçüktür"
+        "tur": "ayir",
+        "q": "Her aracı kaldıraç türüne göre doğru gruba koy.",
+        "gruplar": [
+          "Destek ortada",
+          "Yük ortada",
+          "Kuvvet ortada"
         ],
-        "a": 3,
-        "e": "Cımbızda parmaklar destekle uç arasındadır; kuvvet kolu yük kolundan kısa olduğu için kazanç 1'den küçüktür, karşılığında uç daha çok yol alır."
+        "ogeler": [
+          [
+            "Tahterevalli",
+            0
+          ],
+          [
+            "Makas",
+            0
+          ],
+          [
+            "El arabası",
+            1
+          ],
+          [
+            "Fındık kıracağı",
+            1
+          ],
+          [
+            "Cımbız",
+            2
+          ]
+        ],
+        "e": "Tahterevalli ve makasta destek iki kolun arasındadır. El arabasında ve fındık kıracağında yük, destek ile kuvvet arasındadır. Cımbızda parmaklar destekle uç arasına bastırır: kuvvet ortadadır."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her basit makineyi ideal kuvvet kazancıyla eşleştir.",
+        "ciftler": [
+          [
+            "Sabit makara",
+            "1"
+          ],
+          [
+            "Hareketli makara",
+            "2"
+          ],
+          [
+            "Palanga (n ip kolu)",
+            "n"
+          ],
+          [
+            "Eğik düzlem",
+            "L / h"
+          ],
+          [
+            "Çıkrık",
+            "R / r"
+          ]
+        ],
+        "e": "Sabit makara yalnızca yön değiştirir (kazanç 1); hareketli makarada yükü 2, palangada n ip kolu taşır. Eğik düzlemde F·L = G·h, çıkrıkta F·R = Y·r olduğundan kazançlar L / h ve R / r'dir."
       },
       {
         "q": "Birbirine sırayla geçmiş K, L, M dişlilerinin yarıçapları r, 3r, 2r'dir. K saat yönünde 6 tur dönerse M ne yapar?",
@@ -2205,17 +2484,6 @@
         ],
         "a": 2,
         "e": "Temas eden dişlilerde n·r sabittir: 6·r = n·2r → n = 3. L, K'nin tersine; M, L'nin tersine yani K ile aynı yönde, saat yönünde döner."
-      },
-      {
-        "q": "Ağırlıksız hareketli makarayla, sürtünmesiz ortamda bir yük 1 m yükseltiliyor. Hangisi doğrudur?",
-        "o": [
-          "İp 2 m çekilir; yapılan iş doğrudan kaldırmaktakiyle aynıdır",
-          "İp 1 m çekilir; yapılan iş yarıya iner",
-          "İp 2 m çekilir; yapılan iş yarıya iner",
-          "İp 0,5 m çekilir; yapılan iş aynıdır"
-        ],
-        "a": 0,
-        "e": "Kuvvet yarıya iner ama ip 2 kat uzun çekilir: (Y/2)·2 m = Y·1 m. Basit makine işten kazandırmaz."
       }
     ]
   },
@@ -2369,15 +2637,66 @@
     ],
     "quiz": [
       {
-        "q": "0,2 kg'lık top duvara 15 m/s hızla dik çarpıyor ve 10 m/s hızla geri sekiyor. Topun momentum değişiminin büyüklüğü kaçtır?",
-        "o": [
-          "1 kg·m/s",
-          "5 kg·m/s",
-          "3 kg·m/s",
-          "25 kg·m/s"
+        "tur": "sayi",
+        "q": "Sürtünmesiz yatay yolda 4 m/s ile giden 3 kg'lık araba, duran 1 kg'lık arabaya çarpıp ona yapışıyor. Ortak hızları kaç m/s olur?",
+        "cevap": 3,
+        "birim": "m/s",
+        "e": "Momentum korunur: 3·4 + 1·0 = (3 + 1)·v, v = 12 / 4 = 3 m/s."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her olayda sistemin toplam kinetik enerjisine ne olur?",
+        "gruplar": [
+          "KE korunur",
+          "KE azalır",
+          "KE artar"
         ],
-        "a": 1,
-        "e": "Geri yön − alınırsa Δp = 0,2·(−10) − 0,2·15 = −5 kg·m/s; büyüklüğü 5. Hızlar zıt yönlü olduğu için çıkarılmaz, toplanır."
+        "ogeler": [
+          [
+            "Esnek çarpışma",
+            0
+          ],
+          [
+            "Yapışan arabalar",
+            1
+          ],
+          [
+            "Trafik kazası",
+            1
+          ],
+          [
+            "Patlama",
+            2
+          ],
+          [
+            "Tüfeğin ateşi",
+            2
+          ]
+        ],
+        "e": "Esnek çarpışmada KE korunur. Yapışan ve kaportası ezilen araçlarda KE'nin bir kısmı ısıya, sese ve şekil değişikliğine gider. Patlamada ve ateşlemede parçalar durgunken hareketlenir; enerji yakıttan gelir, KE artar."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her niceliği formülüyle eşleştir.",
+        "ciftler": [
+          [
+            "Momentum",
+            "m·v"
+          ],
+          [
+            "İtme",
+            "F·Δt"
+          ],
+          [
+            "Net kuvvet",
+            "Δp / Δt"
+          ],
+          [
+            "Kütle merkezinin hızı",
+            "Σp / Σm"
+          ]
+        ],
+        "e": "p = m·v, I = F·Δt, F<sub>net</sub> = Δp / Δt ve v<sub>KM</sub> = Σp / Σm'dir."
       },
       {
         "q": "Bir arabanın hava yastığı, kazada sürücüyü nasıl korur?",
@@ -2389,28 +2708,6 @@
         ],
         "a": 3,
         "e": "Sürücünün durması için gereken Δp (itme) aynıdır; F = Δp / Δt olduğundan Δt uzayınca ortalama kuvvet küçülür."
-      },
-      {
-        "q": "Sürtünmesiz yatay düzlemde duran 2 kg'lık cisme, hareket yönünde uygulanan kuvvet 0,1 s'de 0'dan 400 N'a doğrusal artıyor, sonraki 0,1 s'de doğrusal olarak 0'a iniyor. Cismin son hızı kaç m/s'dir?",
-        "o": [
-          "20",
-          "40",
-          "10",
-          "80"
-        ],
-        "a": 0,
-        "e": "F–t grafiği üçgendir: I = ½·0,2·400 = 40 N·s. Δp = 40 = 2·v olduğundan v = 20 m/s."
-      },
-      {
-        "q": "Sürtünmesiz yüzeyde iki araba çarpışıp birbirine yapışıyor. Hangisi doğrudur?",
-        "o": [
-          "Momentum da kinetik enerji de korunur",
-          "Cisimler yapıştığı için momentum korunmaz",
-          "Momentum korunur, kinetik enerji azalır",
-          "Kinetik enerji korunur, momentum azalır"
-        ],
-        "a": 2,
-        "e": "Dış kuvvet olmadığından toplam momentum korunur. Yapışan çarpışma tamamen esnek değildir; kinetik enerjinin bir kısmı ısıya ve şekil değişikliğine gider."
       }
     ]
   },
@@ -2603,15 +2900,54 @@
     ],
     "quiz": [
       {
-        "q": "50 N'luk kuvvet, 0,4 m'lik anahtarın ucuna anahtarla 30° açı yapacak biçimde uygulanıyor. Somuna göre tork kaç N·m?",
-        "o": [
-          "20",
-          "10",
-          "17,3",
-          "0"
+        "tur": "sayi",
+        "q": "50 N'luk kuvvet, 0,4 m'lik anahtarın ucuna anahtarla 30° açı yapacak biçimde uygulanıyor. Somuna göre tork kaç N·m'dir?",
+        "cevap": 10,
+        "birim": "N·m",
+        "e": "τ = F·r·sinθ = 50·0,4·0,5 = 10 N·m. Kuvvet anahtara dik olsaydı 20 N·m çıkardı."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her cismin denge türünü seç.",
+        "gruplar": [
+          "Kararlı",
+          "Kararsız",
+          "Nötr"
         ],
-        "a": 1,
-        "e": "τ = F·r·sinθ = 50·0,4·0,5 = 10 N·m. 20 N·m, kuvvet anahtara dik olsaydı çıkardı."
+        "ogeler": [
+          [
+            "Çukurdaki top",
+            0
+          ],
+          [
+            "Sarkan sarkaç",
+            0
+          ],
+          [
+            "Tepedeki top",
+            1
+          ],
+          [
+            "Düzlemdeki top",
+            2
+          ],
+          [
+            "Yatan silindir",
+            2
+          ]
+        ],
+        "e": "Çukurdaki top ve sarkaç itilince ağırlık merkezi yükselir, geri döner: kararlı. Tepedeki top itilince alçalır, uzaklaşır: kararsız. Düz zemindeki top ve yatan silindirde ağırlık merkezinin yüksekliği değişmez: nötr."
+      },
+      {
+        "tur": "sirala",
+        "q": "Menteşeli bir çubuğa kuvvet uygulanıyor; r, menteşeden uygulama noktasına uzaklıktır. Torkları küçükten büyüğe sırala.",
+        "ogeler": [
+          "20 N, r = 0,5 m, doğrultusu menteşeden geçiyor",
+          "20 N, r = 0,8 m, çubukla 30° açı yapıyor",
+          "20 N, r = 0,5 m, çubuğa dik",
+          "30 N, r = 0,6 m, çubuğa dik"
+        ],
+        "e": "τ = F·r·sinθ: doğrultusu menteşeden geçen kuvvette τ = 0; 20·0,8·0,5 = 8; 20·0,5 = 10; 30·0,6 = 18 N·m."
       },
       {
         "q": "Duran bir cismin dengede kalması için hangisi gerekli ve yeterlidir?",
@@ -2623,28 +2959,6 @@
         ],
         "a": 3,
         "e": "Kuvvet çifti ΣF = 0 sağlar ama cismi döndürür; Στ = 0 tek başına da öteleme ivmesini engellemez. İki şart birlikte gerekir."
-      },
-      {
-        "q": "Ortasından desteklenen düzgün bir tahterevallide 300 N'luk çocuk destekten 2 m uzakta oturuyor. 400 N'luk çocuk denge için öbür tarafta destekten kaç m uzağa oturmalı?",
-        "o": [
-          "1,5 m",
-          "2,67 m",
-          "2 m",
-          "1 m"
-        ],
-        "a": 0,
-        "e": "Tahtanın ağırlığı destekten etki ettiği için torku sıfırdır. 300·2 = 400·x, x = 1,5 m."
-      },
-      {
-        "q": "Menteşeden 0,8 m uzaktaki bir noktaya 20 N'luk kuvvet uygulanıyor; kuvvetin doğrultusu menteşeden geçiyor. Kapıya etki eden tork kaç N·m?",
-        "o": [
-          "16",
-          "25",
-          "0",
-          "8"
-        ],
-        "a": 2,
-        "e": "Kuvvet kolu, menteşeden kuvvetin doğrultusuna dik uzaklıktır; doğrultu menteşeden geçtiği için d = 0, τ = 0. 16 N·m, 0,8 m'yi kuvvet kolu sanmaktır."
       }
     ]
   },
@@ -2781,26 +3095,73 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "1000 kg'lık bir araba 50 m yarıçaplı düz bir virajı 10 m/s sabit süratle dönüyor. Arabaya etki eden merkezcil (net) kuvvet kaç N'dur?",
-        "o": [
-          "200",
-          "2000",
-          "20 000",
-          "500"
-        ],
-        "a": 1,
+        "cevap": 2000,
+        "birim": "N",
         "e": "F = m·v²/r = 1000·10²/50 = 2000 N. Bu kuvveti lastiklerle yol arasındaki statik sürtünme sağlar."
       },
       {
-        "q": "Düzgün çembersel hareket yapan bir cisim için hangisi sabittir?",
-        "o": [
-          "Hız vektörü",
-          "İvme vektörü",
-          "Net kuvvetin yönü",
-          "Hızın büyüklüğü (sürat)"
+        "tur": "ayir",
+        "q": "Düzgün çembersel hareket yapan bir cisim için her niceliği doğru gruba koy.",
+        "gruplar": [
+          "Sabit kalır",
+          "Sürekli değişir"
         ],
-        "a": 3,
-        "e": "Sürat sabittir, ama hız, ivme ve net kuvvet her an yön değiştirir; ivme ve kuvvet hep merkeze bakar."
+        "ogeler": [
+          [
+            "Sürat",
+            0
+          ],
+          [
+            "Periyot",
+            0
+          ],
+          [
+            "Açısal hız (ω)",
+            0
+          ],
+          [
+            "Kinetik enerji",
+            0
+          ],
+          [
+            "Hız vektörü",
+            1
+          ],
+          [
+            "İvmenin yönü",
+            1
+          ],
+          [
+            "Net kuvvetin yönü",
+            1
+          ]
+        ],
+        "e": "Sürat sabit olduğu için periyot, ω ve ½·m·v² de sabittir. Hız hep teğet, ivme ve net kuvvet hep merkeze baktığından bu üçünün yönü her an değişir."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her durumda merkezcil kuvveti hangi kuvvet sağlar? Eşleştir.",
+        "ciftler": [
+          [
+            "İple döndürülen taş",
+            "İp gerilmesi"
+          ],
+          [
+            "Düz virajda dönen araba",
+            "Statik sürtünme"
+          ],
+          [
+            "Dünya çevresinde dolanan Ay",
+            "Kütle çekimi"
+          ],
+          [
+            "Sürtünmesiz eğimli virajda araba",
+            "Normal kuvvetin yatay bileşeni"
+          ]
+        ],
+        "e": "Merkezcil kuvvet yeni bir kuvvet değildir: taşta ip gerilmesi, düz virajda statik sürtünme, Ay'da kütle çekimi, eğimli virajda normal kuvvetin merkeze bakan yatay bileşeni bu görevi yapar."
       },
       {
         "q": "Yatay düzlemde döndürülen taşın ipi, taş çemberin en kuzey noktasındayken ve doğuya doğru giderken kopuyor. Yukarıdan bakınca taş hangi yolu izler? (sürtünme yok)",
@@ -2812,17 +3173,6 @@
         ],
         "a": 0,
         "e": "İp kopunca yatayda kuvvet kalmaz; taş 1. yasa gereği o anki hızıyla, yani teğet boyunca doğuya düz gider."
-      },
-      {
-        "q": "Sola dönen bir otobüste ayakta duran yolcu sağa savrulur. Bunun doğru açıklaması hangisidir?",
-        "o": [
-          "Yolcuyu dışarı doğru iten merkezkaç kuvveti oluşur",
-          "Yolcunun ağırlığı virajda artar",
-          "Yolcu eylemsizlikle düz gitmeyi sürdürürken otobüs onun altından sola döner",
-          "Merkezcil kuvvet yolcuyu sağa iter"
-        ],
-        "a": 2,
-        "e": "Yere göre yolcuyu dışa iten bir kuvvet yoktur; vücut düz gitmek ister. Merkezcil kuvvet ise her zaman merkeze, yani sola doğrudur."
       }
     ]
   },
@@ -2973,37 +3323,45 @@
     ],
     "quiz": [
       {
-        "q": "İki cisim arasındaki uzaklık 3 katına çıkarılıyor, kütlelerden biri de 2 katına çıkarılıyor. Başta F olan çekim kuvveti ne olur?",
-        "o": [
-          "2F/3",
-          "2F/9",
-          "6F",
-          "F/9"
-        ],
-        "a": 1,
-        "e": "Kuvvet kütleyle doğru, uzaklığın karesiyle ters orantılıdır: F' = F·2/3² = 2F/9."
+        "tur": "sayi",
+        "q": "İki cisim arasındaki çekim kuvveti 90 N'dur. Aradaki uzaklık 3 katına, kütlelerden biri de 2 katına çıkarılırsa yeni kuvvet kaç N olur?",
+        "cevap": 20,
+        "birim": "N",
+        "e": "Kuvvet kütleyle doğru, uzaklığın karesiyle ters orantılıdır: F' = 90·2/3² = 180/9 = 20 N."
       },
       {
-        "q": "Uzay istasyonundaki astronotların kendilerini ağırlıksız hissetmesinin nedeni nedir?",
-        "o": [
-          "O yükseklikte Dünya'nın çekimi sıfırdır",
-          "Atmosfer dışında kütle çekimi etki etmez",
-          "İstasyon ve astronotlar birlikte serbest düşer",
-          "Ay'ın çekimi Dünya'nınkini dengeler"
+        "tur": "sirala",
+        "q": "Çekim ivmesi g'yi küçükten büyüğe sırala.",
+        "ogeler": [
+          "Ay yüzeyi",
+          "Dünya yüzeyinden R kadar yukarıda (r = 2R)",
+          "Uzay istasyonunun yüksekliği (≈ 400 km)",
+          "Dünya yüzeyi"
         ],
-        "a": 2,
-        "e": "≈ 400 km'de g hâlâ ≈ 8,7 m/s²'dir. İstasyon ve içindekiler aynı ivmeyle düştüğü için birbirine ve tartıya kuvvet uygulamazlar."
+        "e": "Ay'da g ≈ 1,6 m/s², r = 2R'de g dörtte bire iner (≈ 2,45 m/s²), uzay istasyonunda ≈ 8,7 m/s², Dünya yüzeyinde ≈ 9,8 m/s²'dir."
       },
       {
-        "q": "Bir gezegen eliptik yörüngede dolanıyor; K noktası günberi, L noktası günötedir. Hangisi doğrudur?",
-        "o": [
-          "K'da hızı L'dekinden büyüktür",
-          "L'de Güneş'in uyguladığı çekim kuvveti daha büyüktür",
-          "Her noktada hızı aynıdır",
-          "Eşit sürelerde eşit uzunlukta yol alır"
+        "tur": "eslestir",
+        "q": "Her yasayı söylediğiyle eşleştir.",
+        "ciftler": [
+          [
+            "Kepler'in 1. yasası",
+            "Yörünge elips, Güneş odakta"
+          ],
+          [
+            "Kepler'in 2. yasası",
+            "Eşit sürede eşit alan taranır"
+          ],
+          [
+            "Kepler'in 3. yasası",
+            "T²/r³ = sabit"
+          ],
+          [
+            "Evrensel çekim yasası",
+            "F = G·m₁·m₂/r²"
+          ]
         ],
-        "a": 0,
-        "e": "Kepler'in 2. yasasına göre eşit sürede eşit alan taranır; Güneş'e yakın olan K'da gezegen daha hızlıdır. Çekim de K'da daha büyüktür, çünkü r küçüktür."
+        "e": "1. yasa yörüngenin biçimini (elips, Güneş bir odakta), 2. yasa eşit sürede eşit alanı, 3. yasa dolanım süresi ile uzaklığın ilişkisini verir. Newton'un yasası ise iki kütle arasındaki çekim kuvvetidir."
       },
       {
         "q": "Aynı yarıçaplı çembersel yörüngelerde dolanan iki uydudan birinin kütlesi diğerinin 2 katıdır. Yörünge hızları için ne söylenir?",
@@ -3217,37 +3575,57 @@
     ],
     "quiz": [
       {
-        "q": "Aralarında r uzaklığı bulunan iki noktasal yük birbirine F büyüklüğünde kuvvet uyguluyor. Yüklerden biri 2 katına, aradaki uzaklık da 2 katına çıkarılırsa kuvvet ne olur?",
-        "o": [
-          "F/4",
-          "F/2",
-          "F",
-          "2F"
-        ],
-        "a": 1,
-        "e": "Kuvvet q₁·q₂ ile doğru, r² ile ters orantılıdır: 2 / 2² = 1/2, yani yeni kuvvet F/2 olur."
+        "tur": "sayi",
+        "q": "2 μC ve 5 μC'luk iki noktasal yük arasında 0,3 m uzaklık var. Aralarındaki elektriksel kuvvet kaç N'dur? (k = 9×10<sup>9</sup> N·m²/C², 1 μC = 10<sup>−6</sup> C)",
+        "cevap": 1,
+        "birim": "N",
+        "e": "F = k·q₁·q₂/r² = 9×10<sup>9</sup>·2×10<sup>−6</sup>·5×10<sup>−6</sup>/0,09 = 0,09/0,09 = 1 N."
       },
       {
-        "q": "Cam çubuk ipek kumaşa sürtülünce pozitif yükleniyor. Bunun nedeni nedir?",
-        "o": [
-          "İpekten cama proton geçmiştir.",
-          "Sürtünme camda yeni pozitif yük oluşturmuştur.",
-          "Camın elektronları ısınıp yok olmuştur.",
-          "Camdan ipeğe elektron geçmiştir."
+        "tur": "ayir",
+        "q": "Her cisim hangi işaretle yüklüdür? Doğru gruba koy.",
+        "gruplar": [
+          "Pozitif (+)",
+          "Negatif (−)"
         ],
-        "a": 3,
-        "e": "Sürtünmede yalnızca elektronlar taşınır. Cam elektron kaybettiği için (+), ipek elektron kazandığı için (−) yüklenir; toplam yük korunur."
+        "ogeler": [
+          [
+            "İpeğe sürtülen cam",
+            0
+          ],
+          [
+            "Elektron veren cisim",
+            0
+          ],
+          [
+            "p sayısı e'den çok",
+            0
+          ],
+          [
+            "Camla sürtülen ipek",
+            1
+          ],
+          [
+            "Yüne sürtülen plastik",
+            1
+          ],
+          [
+            "Elektron alan cisim",
+            1
+          ]
+        ],
+        "e": "Elektron kaybeden ya da protonu elektronundan çok olan cisim (+) yüklüdür. Cam ipeğe sürtülünce elektron verir (+), ipek o elektronu alır (−); yüne sürtülen plastik çubuk (−) olur."
       },
       {
-        "q": "Yaprakları açık, pozitif yüklü bir elektroskobun topuzuna negatif yüklü bir çubuk dokundurmadan yavaşça yaklaştırılıyor. İlk olarak ne gözlenir?",
-        "o": [
-          "Yapraklar biraz kapanır.",
-          "Yapraklar daha çok açılır.",
-          "Yapraklar hiç değişmez.",
-          "Elektroskop negatif yüklenir."
+        "tur": "sirala",
+        "q": "Nötr bir iletkeni, yüklü bir çubukla topraklayarak çubuğa zıt işaretle yüklemenin adımlarını sırala.",
+        "ogeler": [
+          "Yüklü çubuk iletkene dokundurmadan yaklaştırılır",
+          "Çubuk yakındayken iletken toprağa bağlanır",
+          "Toprak bağlantısı kesilir",
+          "Çubuk uzaklaştırılır; iletken çubuğa zıt yüklü kalır"
         ],
-        "a": 0,
-        "e": "Negatif çubuk, elektronları topuzdan yapraklara doğru iter. Yaprakların pozitif yükü azalır, itme zayıflar ve yapraklar kapanmaya başlar."
+        "e": "Çubuk yakındayken toprak bağlantısı yük akışını sağlar. Bağ çubuk uzaklaşmadan kesilmelidir; yoksa yük geri akar ve iletken nötr kalır."
       },
       {
         "q": "Sığası 6 μF olan iki özdeş sığaç seri bağlanıp uçlarına 12 V gerilim uygulanıyor. Hangisi doğrudur?",
@@ -3421,26 +3799,66 @@
     ],
     "quiz": [
       {
-        "q": "4 Ω'luk bir direnç, birbirine paralel bağlı 6 Ω ve 3 Ω'luk dirençlerden oluşan gruba seri bağlanıyor. Bu devre iç direnci önemsiz 12 V'luk üretece bağlanırsa ana koldan geçen akım kaç amper olur?",
-        "o": [
-          "3 A",
-          "1 A",
-          "2 A",
-          "4 A"
-        ],
-        "a": 2,
-        "e": "Paralel kısım 6·3/(6 + 3) = 2 Ω olur; Reş = 4 + 2 = 6 Ω ve I = 12/6 = 2 A."
+        "tur": "sayi",
+        "q": "4 Ω'luk bir direnç, birbirine paralel bağlı 6 Ω ve 3 Ω'luk dirençlerden oluşan gruba seri bağlanıyor. Devre iç direnci önemsiz 12 V'luk üretece bağlanırsa ana koldan geçen akım kaç amper olur?",
+        "cevap": 2,
+        "birim": "A",
+        "e": "Paralel kısım 6·3/(6 + 3) = 2 Ω olur; R<sub>eş</sub> = 4 + 2 = 6 Ω ve I = 12/6 = 2 A."
       },
       {
-        "q": "V düşey, I yatay eksende çizilen V–I grafiğinde X direncinin doğrusu, Y'ninkinden daha diktir. X ve Y aynı üretece paralel bağlanırsa hangisinden daha büyük akım geçer?",
-        "o": [
-          "X'ten",
-          "Y'den",
-          "İkisinden eşit akım geçer",
-          "Üreteç gerilimi bilinmeden söylenemez"
+        "tur": "ayir",
+        "q": "Her özelliği doğru bağlama türüne koy.",
+        "gruplar": [
+          "Seri bağlama",
+          "Paralel bağlama"
         ],
-        "a": 1,
-        "e": "Daha dik doğru daha büyük direnç demektir, yani R(X) > R(Y). Paralelde gerilim aynı olduğundan I = V/R ile küçük dirençli Y'den daha büyük akım geçer."
+        "ogeler": [
+          [
+            "Akım her yerde aynı",
+            0
+          ],
+          [
+            "R<sub>eş</sub> = R₁ + R₂",
+            0
+          ],
+          [
+            "Tek yol oluşturur",
+            0
+          ],
+          [
+            "Ampermetre bağlantısı",
+            0
+          ],
+          [
+            "Gerilim hepsinde aynı",
+            1
+          ],
+          [
+            "1/R<sub>eş</sub> = 1/R₁ + 1/R₂",
+            1
+          ],
+          [
+            "Akım kollara bölünür",
+            1
+          ],
+          [
+            "Voltmetre bağlantısı",
+            1
+          ]
+        ],
+        "e": "Seride akımın tek yolu vardır, akım ortaktır ve dirençler toplanır; ampermetre bu yüzden seri bağlanır. Paralelde her kolun gerilimi aynıdır, akım kollara bölünür; voltmetre paralel bağlanır."
+      },
+      {
+        "tur": "sirala",
+        "q": "Karışık bir devreyi çözme adımlarını sırala.",
+        "ogeler": [
+          "Paralel grupları tek dirence indir",
+          "Serileri toplayıp R<sub>eş</sub>'i bul",
+          "Ana akımı I = V/R<sub>eş</sub> ile hesapla",
+          "Her parçanın gerilimini bul",
+          "Kol akımlarını hesapla"
+        ],
+        "e": "Devre içten dışa sadeleştirilir: önce paraleller, sonra seriler. Ana akım bulununca geri dönülür; parça gerilimlerinden kol akımları hesaplanır."
       },
       {
         "q": "Bir metal tel, hacmi değişmeden çekilerek boyu 2 katına çıkarılıyor. Sıcaklık değişmediğine göre telin yeni direnci ilk direncin kaç katıdır?",
@@ -3452,17 +3870,6 @@
         ],
         "a": 3,
         "e": "Hacim sabit kaldığı için boy 2 katına çıkınca kesit alanı yarıya iner. R = ρ·L/A'da L 2 kat, A ½ kat olduğundan R 4 katına çıkar."
-      },
-      {
-        "q": "Bir öğrenci, ideal üreteç ve lambadan oluşan devrede lambanın gerilimini ölçmek için voltmetreyi lambaya seri bağlıyor. Ne olur?",
-        "o": [
-          "Devre akımı neredeyse sıfıra düşer, lamba yanmaz; voltmetre üreteç gerilimine yakın bir değer gösterir.",
-          "Voltmetre lambanın gerilimini doğru ölçer, lamba normal yanar.",
-          "Kısa devre oluşur, devreden çok büyük akım geçer.",
-          "Lamba daha parlak yanar, çünkü voltmetre devreye gerilim ekler."
-        ],
-        "a": 0,
-        "e": "Voltmetrenin iç direnci çok büyük olduğundan seri bağlandığında akımı neredeyse keser. Gerilimin hemen hepsi voltmetrenin üzerine düşer; voltmetre her zaman paralel bağlanmalıdır."
       }
     ]
   },
@@ -3609,26 +4016,77 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "Etiketi 220 V, 2000 W olan bir ısıtıcı günde 2 saat, 30 gün çalışıyor. 1 kWh'in fiyatı 3 TL ise aylık tutar kaç TL olur?",
-        "o": [
-          "120 TL",
-          "180 TL",
-          "360 TL",
-          "12 000 TL"
-        ],
-        "a": 2,
-        "e": "Enerji = 2 kW · 2 h · 30 = 120 kWh; tutar = 120 · 3 = 360 TL. 120 kWh enerjidir, para değil."
+        "cevap": 360,
+        "birim": "TL",
+        "e": "Enerji = 2 kW · 2 h · 30 = 120 kWh; tutar = 120 · 3 = 360 TL."
       },
       {
-        "q": "220 V-100 W ve 220 V-40 W yazan iki ampul seri bağlanıp 220 V'a takılıyor. Dirençler sabitse hangisi daha parlak yanar?",
-        "o": [
-          "100 W'lık ampul",
-          "40 W'lık ampul",
-          "İkisi eşit parlaklıkta",
-          "İkisi de hiç yanmaz"
+        "tur": "ayir",
+        "q": "Her ifade ya da birim enerjiyi mi, gücü mü verir? Doğru gruba koy.",
+        "gruplar": [
+          "Enerji",
+          "Güç"
         ],
-        "a": 1,
-        "e": "R = V²/P ile 100 W'lık 484 Ω, 40 W'lık 1210 Ω olur. Seride akım ortak ve P = I²R olduğundan büyük dirençli 40 W'lık ampul daha çok güç harcar."
+        "ogeler": [
+          [
+            "kWh",
+            0
+          ],
+          [
+            "joule",
+            0
+          ],
+          [
+            "V·I·t",
+            0
+          ],
+          [
+            "I²·R·t",
+            0
+          ],
+          [
+            "watt",
+            1
+          ],
+          [
+            "J/s",
+            1
+          ],
+          [
+            "V·I",
+            1
+          ],
+          [
+            "I²·R",
+            1
+          ]
+        ],
+        "e": "Güç birim zamandaki enerjidir: watt = J/s, P = V·I = I²·R. Süreyle çarpınca enerji çıkar: W = V·I·t, Q = I²·R·t; kWh de güç ile sürenin çarpımı olduğu için enerji birimidir."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Evdeki elektrik güvenliğinde her önlemi göreviyle eşleştir.",
+        "ciftler": [
+          [
+            "Sigorta",
+            "Aşırı akımda devreyi keser"
+          ],
+          [
+            "Kaçak akım rölesi",
+            "Faz ve nötr akım farkını algılar"
+          ],
+          [
+            "Topraklama",
+            "Kaçak akımı kasadan toprağa iletir"
+          ],
+          [
+            "Paralel tesisat",
+            "Her cihaz aynı 220 V'u alır"
+          ]
+        ],
+        "e": "Sigorta akım sınırı aşılınca devreyi açar. Kaçak akım rölesi fazdan giden ve nötrden dönen akımı karşılaştırır. Topraklama kaçak akımı senin yerine toprağa götürür. Paralel tesisatta her cihaz aynı gerilimi alır."
       },
       {
         "q": "Özdeş K ve L ampulleri birbirine paralel bağlı; bu ikili, özdeş M ampulüyle seri bağlanıp ideal bir üretece takılıyor. Parlaklık sıralaması nedir?",
@@ -3640,17 +4098,6 @@
         ],
         "a": 3,
         "e": "M'den toplam akım I, K ve L'den I/2'şer akım geçer. P = I²R olduğundan M'nin gücü K ya da L'ninkinin 4 katıdır."
-      },
-      {
-        "q": "Bir öğrenci \"Faturada 150 kWh yazıyor, demek ki evin gücü 150 kW\" diyor. Doğrusu hangisi?",
-        "o": [
-          "kWh enerji birimidir; 150 kWh = 5,4×10⁸ J",
-          "kWh güç birimidir, öğrenci haklı",
-          "kWh akım birimidir",
-          "1 kWh = 1000 J olduğundan ev 150 000 J harcamıştır"
-        ],
-        "a": 0,
-        "e": "kWh, güç ile sürenin çarpımıdır, yani enerji birimidir: 150 · 3,6×10⁶ J = 5,4×10⁸ J."
       }
     ]
   },
@@ -3845,15 +4292,74 @@
     ],
     "quiz": [
       {
-        "q": "B = 0,2 T'lık düzgün manyetik alanda 0,5 m uzunluğundaki tel, alanla 30° açı yapıyor ve 5 A akım taşıyor. Tele etki eden kuvvet kaç N'dur?",
-        "o": [
-          "0,5 N",
-          "0,25 N",
-          "0,125 N",
-          "2,5 N"
+        "tur": "sayi",
+        "q": "B = 0,2 T'lık düzgün manyetik alanda 0,5 m uzunluğundaki tel, alanla 30° açı yapıyor ve 5 A akım taşıyor. Tele etki eden kuvvet kaç N'dur? (sin 30° = 0,5)",
+        "cevap": 0.25,
+        "birim": "N",
+        "e": "F = B·I·L·sinθ = 0,2·5·0,5·0,5 = 0,25 N. sin 30° çarpanını unutursan 0,5 N bulursun."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her maddeyi manyetik özelliğine göre doğru gruba koy.",
+        "gruplar": [
+          "Ferromanyetik",
+          "Paramanyetik",
+          "Diyamanyetik"
         ],
-        "a": 1,
-        "e": "F = B·I·L·sinθ = 0,2·5·0,5·0,5 = 0,25 N. sin30° = 0,5 çarpanını unutursan 0,5 N bulursun."
+        "ogeler": [
+          [
+            "Demir",
+            0
+          ],
+          [
+            "Nikel",
+            0
+          ],
+          [
+            "Kobalt",
+            0
+          ],
+          [
+            "Alüminyum",
+            1
+          ],
+          [
+            "Bakır",
+            2
+          ],
+          [
+            "Bizmut",
+            2
+          ],
+          [
+            "Su",
+            2
+          ]
+        ],
+        "e": "Demir, nikel ve kobalt mıknatısa güçlü çekilir ve mıknatıslanabilir. Alüminyum çok zayıf çekilir (paramanyetik); bakır, bizmut ve su çok zayıf itilir (diyamanyetik)."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her durumu sonucuyla eşleştir.",
+        "ciftler": [
+          [
+            "Aynı yönde akımlı paralel teller",
+            "Birbirini çeker"
+          ],
+          [
+            "Zıt yönde akımlı paralel teller",
+            "Birbirini iter"
+          ],
+          [
+            "Alana paralel giden yük",
+            "Kuvvet etkimez"
+          ],
+          [
+            "Alana dik giren yük",
+            "Çember çizer"
+          ]
+        ],
+        "e": "Aynı yönde akım taşıyan paralel teller çeker, zıt yönde akım taşıyanlar iter. Hareketli yüke F = q·v·B·sinθ etkir: alana paralelde sinθ = 0, dik girişte kuvvet hıza dik olduğu için yük çember çizer."
       },
       {
         "q": "Pusula iğnesinin N ucu coğrafi kuzeyi gösterir. Bunun nedeni nedir?",
@@ -3865,28 +4371,6 @@
         ],
         "a": 3,
         "e": "Zıt kutuplar çeker: iğnenin N ucu, coğrafi kuzey yakınındaki manyetik S kutbuna yönelir."
-      },
-      {
-        "q": "Sayfa düzlemindeki düşey bir telden yukarı yönde akım geçiyor. P noktası telin d kadar sağında, R noktası 2d kadar solunda. P'deki alan için hangisi doğrudur?",
-        "o": [
-          "Sayfa içine; büyüklüğü R'dekinin 2 katı",
-          "Sayfa dışına; büyüklüğü R'dekinin 2 katı",
-          "Sayfa içine; büyüklüğü R'dekinin yarısı",
-          "R'deki alanla aynı yönde ve eşit büyüklükte"
-        ],
-        "a": 0,
-        "e": "Başparmak yukarı tutulunca dört parmak telin sağında sayfa içine girer; solunda dışarı çıkar. B = 2k·I/d olduğundan d'deki alan 2d'dekinin 2 katıdır."
-      },
-      {
-        "q": "Düzgün manyetik alana dik giren bir proton için hangisi doğrudur?",
-        "o": [
-          "Manyetik kuvvet protonu hızlandırır, kinetik enerjisi artar",
-          "Proton alan çizgileri boyunca düz gider",
-          "Sürati değişmez, yalnızca hareket yönü değişir",
-          "Manyetik kuvvet hız ile aynı yöndedir"
-        ],
-        "a": 2,
-        "e": "Manyetik kuvvet her an hıza dik olduğundan iş yapmaz; proton sabit süratle çember çizer."
       }
     ]
   },
@@ -4075,15 +4559,46 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "50 sarımlı bir bobinden geçen akı 0,1 s içinde 0,04 Wb'den 0,01 Wb'ye düzgün olarak düşüyor. Bobinde oluşan emk'nin büyüklüğü kaç volttur?",
-        "o": [
-          "0,3 V",
-          "15 V",
-          "20 V",
-          "1,5 V"
+        "cevap": 15,
+        "birim": "V",
+        "e": "ΔΦ = 0,04 − 0,01 = 0,03 Wb; ε = N·ΔΦ/Δt = 50·0,03/0,1 = 15 V."
+      },
+      {
+        "tur": "sirala",
+        "q": "Santralde üretilen elektriğin evine ulaşma yolunu sırala.",
+        "ogeler": [
+          "Jeneratör alternatif akım üretir",
+          "Transformatör gerilimi yükseltir (154-380 kV)",
+          "Elektrik yüksek gerilim hattıyla uzağa iletilir",
+          "Şehre yaklaşınca gerilim düşürülür",
+          "Prize 230 V etkin gerilim ulaşır"
         ],
-        "a": 1,
-        "e": "ΔΦ = 0,03 Wb; ε = N·ΔΦ/Δt = 50·0,03/0,1 = 15 V."
+        "e": "Hatta kayıp I²·R olduğundan aynı güç yüksek gerilim ve küçük akımla iletilir. Bu yüzden gerilim santral çıkışında yükseltilir, şehre yaklaşınca transformatörlerle düşürülür."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her cihazı yaptığı işle eşleştir.",
+        "ciftler": [
+          [
+            "Jeneratör",
+            "Mekanik enerjiyi elektriğe çevirir"
+          ],
+          [
+            "Transformatör",
+            "AC gerilimini değiştirir"
+          ],
+          [
+            "İndüksiyon ocağı",
+            "Tencerede girdap akımı oluşturur"
+          ],
+          [
+            "Kartlı geçiş okuyucusu",
+            "Pilsiz çipte emk oluşturur"
+          ]
+        ],
+        "e": "Jeneratörde dönen bobin mekanik enerjiyi elektriğe çevirir; transformatör sarım oranıyla AC gerilimini değiştirir. İndüksiyon ocağı tencere tabanında girdap akımı, kart okuyucu da karttaki bobinde emk oluşturur."
       },
       {
         "q": "Bir transformatörün birincil bobinine 12 V'luk bir pil bağlanıp devre kapalı bırakılıyor. İkincil bobinde sürekli olarak ne gözlenir?",
@@ -4095,28 +4610,6 @@
         ],
         "a": 3,
         "e": "Pilin sabit akımı sabit akı üretir; akı değişmeyince ikincilde emk oluşmaz (yalnızca anahtarın açılıp kapandığı anlarda kısa bir emk görülür)."
-      },
-      {
-        "q": "Bir AC gerilim grafiğinde tepe değer 10 V, bir tam salınımın süresi 0,02 s olarak okunuyor. Frekans ve etkin değer nedir?",
-        "o": [
-          "50 Hz ve yaklaşık 7,1 V",
-          "50 Hz ve 10 V",
-          "0,02 Hz ve 7,1 V",
-          "100 Hz ve 14,1 V"
-        ],
-        "a": 0,
-        "e": "f = 1/T = 1/0,02 = 50 Hz; V_etkin = 10/√2 ≈ 7,1 V."
-      },
-      {
-        "q": "Bir hat aynı elektrik gücünü iletiyor. İletim gerilimi 10 katına çıkarılırsa hattaki ısı kaybı nasıl değişir?",
-        "o": [
-          "10 katına çıkar",
-          "Değişmez",
-          "100'de birine iner",
-          "10'da birine iner"
-        ],
-        "a": 2,
-        "e": "P = V·I sabitken akım 10'da birine iner; kayıp I²·R olduğundan 100'de birine düşer. Gerilim artınca kaybın arttığını sanmak sık yapılan hatadır."
       }
     ]
   },
@@ -4269,37 +4762,69 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "Genliği 0,1 m ve açısal frekansı 10 rad/s olan basit harmonik hareket yapan cismin, denge noktasından 0,06 m uzaktaki hızının büyüklüğü kaç m/s'dir?",
-        "o": [
-          "0,6",
-          "0,8",
-          "1,0",
-          "0,4"
-        ],
-        "a": 1,
+        "cevap": 0.8,
+        "birim": "m/s",
         "e": "|v| = ω√(A² − x²) = 10·√(0,01 − 0,0036) = 10·0,08 = 0,8 m/s."
       },
       {
-        "q": "Bir yay-kütle sisteminin periyodu 0,4 s'dir. Kütle 4 katına çıkarılıp genlik yarıya indirilirse yeni periyot kaç saniye olur?",
-        "o": [
-          "0,2",
-          "0,4",
-          "0,8",
-          "1,6"
+        "tur": "ayir",
+        "q": "Yay-kütle sisteminde her nicelik nerede en büyüktür? Doğru gruba koy.",
+        "gruplar": [
+          "Dengede en büyük",
+          "Uçlarda en büyük"
         ],
-        "a": 2,
-        "e": "T = 2π√(m/k): kütle 4 katına çıkınca periyot √4 = 2 katına çıkar, 0,8 s olur. Genlik periyodu etkilemez."
+        "ogeler": [
+          [
+            "Hızın büyüklüğü",
+            0
+          ],
+          [
+            "Kinetik enerji",
+            0
+          ],
+          [
+            "İvmenin büyüklüğü",
+            1
+          ],
+          [
+            "Geri getirici kuvvet",
+            1
+          ],
+          [
+            "Potansiyel enerji",
+            1
+          ],
+          [
+            "Uzanımın büyüklüğü",
+            1
+          ]
+        ],
+        "e": "Dengede x = 0'dır: hız ωA ile en büyük, enerjinin hepsi kinetiktir. Uçlarda |x| = A olduğundan kuvvet (kx), ivme (ω²A) ve potansiyel enerji (½kA²) en büyüktür."
       },
       {
-        "q": "Konum-zaman grafiği x = A·cos(ωt) olan bir cisim için t = T/4 anında hangisi doğrudur?",
-        "o": [
-          "Cisim dengededir; hızı en büyük, ivmesi sıfırdır",
-          "Cisim uçtadır; hızı sıfır, ivmesi en büyüktür",
-          "Cisim dengededir; hızı ve ivmesi sıfırdır",
-          "Cisim −A'dadır; ivmesi sıfırdır"
+        "tur": "eslestir",
+        "q": "Yay-kütle sisteminde her değişiklik periyodu ne yapar? Eşleştir.",
+        "ciftler": [
+          [
+            "Kütle 4 katına çıkar",
+            "2 katına çıkar"
+          ],
+          [
+            "Yay sabiti 4 katına çıkar",
+            "Yarıya iner"
+          ],
+          [
+            "Genlik 2 katına çıkar",
+            "Değişmez"
+          ],
+          [
+            "Özdeş ikinci yay seri eklenir",
+            "√2 ile çarpılır"
+          ]
         ],
-        "a": 0,
-        "e": "cos(π/2) = 0 olduğundan x = 0'dır. Dengede a = −ω²x = 0, hız ise ωA ile en büyüktür."
+        "e": "T = 2π√(m/k): m 4 katına çıkınca T 2 katına çıkar, k 4 katına çıkınca yarıya iner. Genlik periyodu etkilemez. Seride k<sub>eş</sub> = k/2 olduğundan T √2 ile çarpılır."
       },
       {
         "q": "Dünya'da periyotları eşit olan bir yay sarkacı ile bir basit sarkaç Ay'a götürülüyor. Periyotlar için ne söylenebilir?",
@@ -4455,37 +4980,63 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "Bir kaynak saniyede 5 dalga üretiyor ve ardışık iki tepe arası 0,4 m. Dalganın hızı kaç m/s'dir?",
-        "o": [
-          "0,08 m/s",
-          "2 m/s",
-          "12,5 m/s",
-          "20 m/s"
-        ],
-        "a": 1,
+        "cevap": 2,
+        "birim": "m/s",
         "e": "v = λ·f = 0,4 m · 5 Hz = 2 m/s."
       },
       {
-        "q": "Küçük açılarla salınan bir basit sarkacın ipinin boyu aynı kalıp kütlesi iki katına çıkarılırsa periyodu ne olur?",
-        "o": [
-          "İki katına çıkar",
-          "Yarıya iner",
-          "√2 katına çıkar",
-          "Değişmez"
+        "tur": "ayir",
+        "q": "Her dalgayı enine ya da boyuna olarak ayır.",
+        "gruplar": [
+          "Enine",
+          "Boyuna"
         ],
-        "a": 3,
-        "e": "T = 2π√(L/g) bağıntısında kütle yoktur; periyot yalnızca ipin boyuna ve g'ye bağlıdır."
+        "ogeler": [
+          [
+            "İpteki dalga",
+            0
+          ],
+          [
+            "Işık",
+            0
+          ],
+          [
+            "Radyo dalgası",
+            0
+          ],
+          [
+            "X ışını",
+            0
+          ],
+          [
+            "Havadaki ses",
+            1
+          ],
+          [
+            "Suda ilerleyen ses",
+            1
+          ],
+          [
+            "Sıkıştırılan yay",
+            1
+          ]
+        ],
+        "e": "İpteki dalga ve bütün elektromanyetik dalgalar (ışık, radyo, X ışını) enine dalgadır. Ses hangi ortamda yayılırsa yayılsın boyunadır; sıkıştırılıp bırakılan yaydaki dalga da boyunadır."
       },
       {
-        "q": "Dalga leğeninde derin bölgeden sığ bölgeye geçen su dalgaları için hangisi doğrudur?",
-        "o": [
-          "Hız ve dalga boyu azalır, frekans değişmez",
-          "Frekans azalır, hız değişmez",
-          "Hız ve dalga boyu artar",
-          "Hız, frekans ve dalga boyu değişmez"
+        "tur": "sirala",
+        "q": "Elektromanyetik dalgaları frekansı küçükten büyüğe sırala.",
+        "ogeler": [
+          "Radyo dalgaları",
+          "Mikrodalga",
+          "Kızılötesi",
+          "Görünür ışık",
+          "Morötesi",
+          "Gama ışınları"
         ],
-        "a": 0,
-        "e": "Sığ suda dalga yavaşlar. Frekansı kaynak belirlediği için f aynı kalır, v = λ·f gereği λ kısalır."
+        "e": "Sıra radyo, mikrodalga, kızılötesi, görünür ışık, morötesi, X, gamadır. Frekans arttıkça dalga boyu kısalır ve foton enerjisi artar."
       },
       {
         "q": "Sirenini çalan bir ambulans sana yaklaşırken sesi daha ince duyarsın. Bunun nedeni nedir?",
@@ -4686,26 +5237,73 @@
     ],
     "quiz": [
       {
-        "q": "Odak uzaklığı 10 cm olan çukur aynanın önüne, aynadan 15 cm uzağa bir cisim konuyor. Görüntü için hangisi doğrudur?",
-        "o": [
-          "Aynadan 30 cm uzakta; gerçek, ters ve 2 kat büyük",
-          "Aynadan 6 cm uzakta; sanal, düz ve küçük",
-          "Aynanın arkasında 30 cm uzakta; sanal ve düz",
-          "Aynadan 15 cm uzakta; gerçek, ters ve eşit boy"
-        ],
-        "a": 0,
-        "e": "1/d_g = 1/10 − 1/15 = 1/30, yani d_g = +30 cm; pozitif olduğu için gerçek ve terstir. Büyütme m = −30/15 = −2: görüntü ters ve 2 kat büyüktür."
+        "tur": "sayi",
+        "q": "Odak uzaklığı 10 cm olan çukur aynanın önüne, aynadan 15 cm uzağa bir cisim konuyor. Görüntü aynadan kaç cm uzakta oluşur?",
+        "cevap": 30,
+        "birim": "cm",
+        "e": "1/d<sub>g</sub> = 1/10 − 1/15 = 1/30, yani d<sub>g</sub> = +30 cm. Pozitif olduğu için görüntü gerçek ve terstir; m = −30/15 = −2."
       },
       {
-        "q": "Işık havadan suya eğik geçerken aşağıdakilerden hangisi değişmez?",
-        "o": [
-          "Işığın hızı",
-          "Işığın frekansı",
-          "Işığın dalga boyu",
-          "Işığın ilerleme yönü"
+        "tur": "ayir",
+        "q": "Her durumdaki görüntü gerçek mi, sanal mı? Doğru gruba koy.",
+        "gruplar": [
+          "Gerçek görüntü",
+          "Sanal görüntü"
         ],
-        "a": 1,
-        "e": "Frekans kaynağa bağlıdır, ortam değişince değişmez. Hız azalır, dalga boyu kısalır ve eğik gelen ışın normale yaklaşır."
+        "ogeler": [
+          [
+            "Çukur, F'nin dışında",
+            0
+          ],
+          [
+            "Retinadaki görüntü",
+            0
+          ],
+          [
+            "Düz ayna",
+            1
+          ],
+          [
+            "Tümsek ayna",
+            1
+          ],
+          [
+            "Çukur, F–ayna arası",
+            1
+          ],
+          [
+            "Iraksak mercek",
+            1
+          ]
+        ],
+        "e": "Çukur aynada cisim F'nin dışındaysa görüntü gerçek ve terstir; retinadaki görüntü de gerçektir. Düz ayna, tümsek ayna, F ile ayna arasındaki cisim ve ıraksak mercek sanal görüntü verir."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her durumu ilgili optik ilke ya da araçla eşleştir.",
+        "ciftler": [
+          [
+            "Miyop göz",
+            "Iraksak mercek"
+          ],
+          [
+            "Hipermetrop göz",
+            "Yakınsak mercek"
+          ],
+          [
+            "Araçtaki dikiz aynası",
+            "Tümsek ayna"
+          ],
+          [
+            "Fiber optik kablo",
+            "Tam yansıma"
+          ],
+          [
+            "Havuzun sığ görünmesi",
+            "Kırılma"
+          ]
+        ],
+        "e": "Miyopta görüntü retinanın önüne düşer, ıraksak mercek takılır; hipermetropta arkasına düşer, yakınsak mercek takılır. Tümsek ayna geniş görüş alanı verir. Fiber optik tam yansımaya, havuzun sığ görünmesi ışığın sudan havaya çıkarken kırılmasına dayanır."
       },
       {
         "q": "Kırılma indisi 1,5 olan camın içinden havaya doğru ilerleyen ışık, cam-hava yüzeyine 45° gelme açısıyla çarpıyor. Ne olur? (sin 45° ≈ 0,71)",
@@ -4717,17 +5315,6 @@
         ],
         "a": 3,
         "e": "Sınır açı için sin θs = 1/1,5 ≈ 0,67, yani θs ≈ 42°. Gelme açısı 45° bundan büyük olduğu için ışık tam yansımaya uğrar."
-      },
-      {
-        "q": "Beyaz ışıkta kırmızı görünen bir elma, karanlık bir odada yalnızca mavi ışıkla aydınlatılıyor. Elma nasıl görünür?",
-        "o": [
-          "Mor",
-          "Kırmızı",
-          "Siyah",
-          "Mavi"
-        ],
-        "a": 2,
-        "e": "Kırmızı elma yalnızca kırmızı ışığı yansıtır, maviyi soğurur. Üzerine kırmızı ışık düşmediği için gözüne ışık gelmez ve siyah görünür."
       }
     ]
   },
@@ -4863,37 +5450,74 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "Young deneyinde λ = 500 nm, yarıklar arası d = 0,25 mm, perde uzaklığı L = 2 m'dir. Merkezi aydınlık saçak ile 3. aydınlık saçak arası kaç mm'dir?",
-        "o": [
-          "4 mm",
-          "6 mm",
-          "10 mm",
-          "12 mm"
-        ],
-        "a": 3,
-        "e": "Δx = λL/d = (5×10⁻⁷ · 2)/(2,5×10⁻⁴) = 4×10⁻³ m = 4 mm. 3. aydınlık saçak merkezden 3·Δx = 12 mm uzaktadır."
+        "cevap": 12,
+        "birim": "mm",
+        "e": "Δx = λL/d = (5×10<sup>−7</sup> · 2)/(2,5×10<sup>−4</sup>) = 4×10<sup>−3</sup> m = 4 mm. 3. aydınlık saçak merkezden 3·Δx = 12 mm uzaktadır."
       },
       {
-        "q": "λ = 400 nm ışıkla yapılan çift yarık deneyinde, perdedeki P noktası için yol farkı 1000 nm'dir. P noktasında ne gözlenir?",
-        "o": [
-          "2. aydınlık saçak",
-          "3. karanlık saçak",
-          "2. karanlık saçak",
-          "3. aydınlık saçak"
+        "tur": "eslestir",
+        "q": "Çift yarık deneyinde P noktasının yol farkını (Δ) gözlenen saçakla eşleştir.",
+        "ciftler": [
+          [
+            "Δ = 0",
+            "Merkezi aydınlık saçak"
+          ],
+          [
+            "Δ = 0,5λ",
+            "1. karanlık saçak"
+          ],
+          [
+            "Δ = λ",
+            "1. aydınlık saçak"
+          ],
+          [
+            "Δ = 1,5λ",
+            "2. karanlık saçak"
+          ],
+          [
+            "Δ = 2λ",
+            "2. aydınlık saçak"
+          ]
         ],
-        "a": 1,
-        "e": "Δ/λ = 1000/400 = 2,5 olur. Δ = (n − ½)λ koşulunda n = 3 çıkar: P, 3. karanlık saçaktır."
+        "e": "Aydınlık saçakta Δ = n·λ, karanlık saçakta Δ = (n − ½)·λ olur. Buna göre 0,5λ'da n = 1, 1,5λ'da n = 2 karanlık saçaktır."
       },
       {
-        "q": "Işık iki polarizörden geçiriliyor. İkinci polarizör birinciye göre 90° çevrilince ışık hiç geçmiyor. Bu gözlem neyi gösterir?",
-        "o": [
-          "Işık enine bir dalgadır.",
-          "Işık boyuna bir dalgadır.",
-          "Işık tanecik akımıdır.",
-          "Işığın hızı polarizörde sıfır olur."
+        "tur": "ayir",
+        "q": "Young deneyinde her değişiklik saçak aralığını (Δx = λL/d) nasıl etkiler? (λ: dalga boyu, L: perde uzaklığı, d: yarıklar arası)",
+        "gruplar": [
+          "Artar",
+          "Azalır",
+          "Değişmez"
         ],
-        "a": 0,
-        "e": "Yalnızca titreşimi yayılma yönüne dik olan enine dalgalar polarize edilebilir. Ses gibi boyuna dalgalarda bu olay görülmez."
+        "ogeler": [
+          [
+            "λ artar",
+            0
+          ],
+          [
+            "L artar",
+            0
+          ],
+          [
+            "d artar",
+            1
+          ],
+          [
+            "L azalır",
+            1
+          ],
+          [
+            "Suya daldırılır",
+            1
+          ],
+          [
+            "Şiddet artar",
+            2
+          ]
+        ],
+        "e": "Δx, λ ve L ile doğru, d ile ters orantılıdır. Suda dalga boyu λ/n olduğundan Δx de n'ye bölünür. Işık şiddeti saçakları yalnızca parlatır, aralığı değiştirmez."
       },
       {
         "q": "Tek yarıkla kırınım deneyinde yarık daraltılırsa merkezi aydınlık saçak için ne söylenebilir?",
@@ -5029,37 +5653,69 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "Dünya'ya göre 0,6c hızla giden bir gemide, gemideki saate göre 8 yıl geçiyor. Dünya'daki gözlemciye göre kaç yıl geçer?",
-        "o": [
-          "6,4 yıl",
-          "8 yıl",
-          "10 yıl",
-          "13,3 yıl"
-        ],
-        "a": 2,
+        "cevap": 10,
+        "birim": "yıl",
         "e": "0,6c'de γ = 1/√(1 − 0,36) = 1,25. Gemideki süre öz zamandır: Δt = 1,25·8 = 10 yıl."
       },
       {
-        "q": "Dünya'ya göre 0,5c hızla yaklaşan bir uzay gemisinin farından çıkan ışığın hızını Dünya'daki gözlemci kaç ölçer?",
-        "o": [
-          "1,5c",
-          "c",
-          "0,5c",
-          "Geminin yönüne göre değişir"
+        "tur": "ayir",
+        "q": "Birbirine göre sabit hızla hareket eden iki gözlemci için her niceliği doğru gruba koy.",
+        "gruplar": [
+          "Herkes için aynı",
+          "Gözlemciye göre değişir"
         ],
-        "a": 1,
-        "e": "İkinci postulata göre ışığın boşluktaki hızı kaynağın hareketinden bağımsızdır; her eylemsiz gözlemci c ölçer."
+        "ogeler": [
+          [
+            "Işığın boşluktaki hızı",
+            0
+          ],
+          [
+            "Fizik yasaları",
+            0
+          ],
+          [
+            "Harekete dik boy",
+            0
+          ],
+          [
+            "Eşzamanlılık",
+            1
+          ],
+          [
+            "İki olay arası süre",
+            1
+          ],
+          [
+            "Hareket yönündeki boy",
+            1
+          ]
+        ],
+        "e": "Einstein'ın postulatlarına göre fizik yasaları ve ışığın boşluktaki hızı herkes için aynıdır. Eşzamanlılık, süre ve hareket doğrultusundaki boy gözlemciye göre değişir; harekete dik boy kısalmaz."
       },
       {
-        "q": "Kendi sistemine göre 1 m olan iki çubuk, Dünya'ya göre 0,8c ile giden bir gemide duruyor: biri gemi hareketi doğrultusunda, diğeri ona dik. Dünya'dan ölçülen boyları sırasıyla nedir?",
-        "o": [
-          "0,6 m ve 1 m",
-          "0,6 m ve 0,6 m",
-          "1 m ve 0,6 m",
-          "1,67 m ve 1 m"
+        "tur": "eslestir",
+        "q": "Her kavramı örneğiyle eşleştir.",
+        "ciftler": [
+          [
+            "Zaman genişlemesi",
+            "Gemide 6 yıl, Dünya'da 10 yıl"
+          ],
+          [
+            "Boy kısalması",
+            "100 m'lik gemi 80 m ölçülür"
+          ],
+          [
+            "Kütle-enerji eşdeğerliği",
+            "1 g kütle ≈ 9·10<sup>13</sup> J"
+          ],
+          [
+            "Michelson–Morley deneyi",
+            "Esir bulunamadı"
+          ]
         ],
-        "a": 0,
-        "e": "0,8c'de γ = 5/3, hareket doğrultusundaki boy 1/(5/3) = 0,6 m olur. Kısalma yalnız hareket doğrultusunda olduğu için dik çubuk 1 m kalır."
+        "e": "0,8c'de γ = 5/3 olduğundan 6 yıllık öz zaman Dünya'dan 10 yıl ölçülür; 0,6c'de γ = 1,25 olduğundan 100 m'lik gemi 80 m görünür. E<sub>0</sub> = m·c² ile 1 g, 9·10<sup>13</sup> J eder. Michelson ve Morley beklenen kaymayı göremedi."
       },
       {
         "q": "Dünya'ya göre çok hızlı giden bir gemideki astronot için hangisi doğrudur?",
@@ -5232,26 +5888,77 @@
     ],
     "quiz": [
       {
+        "tur": "sayi",
         "q": "Bağlanma enerjisi 2,3 eV olan bir metale dalga boyu 400 nm olan ışık düşüyor. Kopan elektronların en büyük kinetik enerjisi kaç eV'tur? (h·c ≈ 1240 eV·nm)",
-        "o": [
-          "3,1 eV",
-          "2,3 eV",
-          "0,8 eV",
-          "5,4 eV"
-        ],
-        "a": 2,
+        "cevap": 0.8,
+        "birim": "eV",
         "e": "Foton enerjisi 1240/400 = 3,1 eV'tur. E<sub>k,max</sub> = h·f − W = 3,1 − 2,3 = 0,8 eV."
       },
       {
-        "q": "Eşik frekansının üstündeki bir ışığın yalnızca şiddeti iki katına çıkarılıyor. Ne olur?",
-        "o": [
-          "Kopan elektron sayısı (akım) artar, E<sub>k,max</sub> değişmez.",
-          "E<sub>k,max</sub> iki katına çıkar.",
-          "Durdurma gerilimi iki katına çıkar.",
-          "Elektron sayısı değişmez, elektronlar hızlanır."
+        "tur": "ayir",
+        "q": "Eşik frekansının üstündeki ışığın yalnızca şiddeti artırılıyor. Her nicelik ne olur?",
+        "gruplar": [
+          "Artar",
+          "Değişmez"
         ],
-        "a": 0,
-        "e": "Şiddet saniyede gelen foton sayısını artırır, her fotonun enerjisini değil. Bu yüzden akım artar; E<sub>k,max</sub> ve V<sub>0</sub> aynı kalır."
+        "ogeler": [
+          [
+            "Gelen foton sayısı",
+            0
+          ],
+          [
+            "Kopan elektron sayısı",
+            0
+          ],
+          [
+            "Fotoelektrik akım",
+            0
+          ],
+          [
+            "Bir fotonun enerjisi",
+            1
+          ],
+          [
+            "E<sub>k,max</sub>",
+            1
+          ],
+          [
+            "Durdurma gerilimi",
+            1
+          ],
+          [
+            "Eşik frekansı",
+            1
+          ]
+        ],
+        "e": "Şiddet saniyede gelen foton sayısını artırır; daha çok elektron kopar, akım büyür. Her fotonun enerjisi h·f aynı kaldığından E<sub>k,max</sub> ve durdurma gerilimi değişmez; eşik frekansı metale bağlıdır."
+      },
+      {
+        "tur": "eslestir",
+        "q": "Her bilim insanını katkısıyla eşleştir.",
+        "ciftler": [
+          [
+            "Planck",
+            "Enerji kuantum paketleriyle alınır"
+          ],
+          [
+            "Compton",
+            "Saçılan fotonun dalga boyu uzar"
+          ],
+          [
+            "de Broglie",
+            "Madde dalgası: λ = h/(m·v)"
+          ],
+          [
+            "Heisenberg",
+            "Konum ve momentum belirsizliği"
+          ],
+          [
+            "Bohr",
+            "Hidrojende kararlı yörüngeler"
+          ]
+        ],
+        "e": "Planck enerjinin paketlerle alındığını, Compton saçılan X ışınının dalga boyunun uzadığını gösterdi. de Broglie parçacıklara dalga boyu verdi, Heisenberg belirsizlik ilkesini, Bohr hidrojenin enerji düzeylerini ortaya koydu."
       },
       {
         "q": "K ve L metalleri için çizilen E<sub>k,max</sub>–f grafiğinde iki doğru paraleldir ve L'nin doğrusu f eksenini daha büyük frekansta kesiyor. Hangisi doğrudur?",
@@ -5263,17 +5970,6 @@
         ],
         "a": 3,
         "e": "Eşik frekansı büyük olanın bağlanma enerjisi de büyüktür (W = h·f<sub>0</sub>). Eğim iki metal için de h'dir; aynı f'de W'si büyük olan L'nin E<sub>k,max</sub>'ı daha küçüktür."
-      },
-      {
-        "q": "Bir elektron ile bir proton aynı hızla hareket ediyor. Hangisi doğrudur?",
-        "o": [
-          "İkisinin de Broglie dalga boyu eşittir.",
-          "Elektronun de Broglie dalga boyu daha büyüktür.",
-          "Protonun de Broglie dalga boyu daha büyüktür.",
-          "Yüklü parçacıkların de Broglie dalga boyu yoktur."
-        ],
-        "a": 1,
-        "e": "λ = h/(m·v) olduğundan, hızlar eşitken kütlesi küçük olan elektronun dalga boyu daha büyüktür."
       }
     ]
   },
@@ -5443,15 +6139,66 @@
     ],
     "quiz": [
       {
-        "q": "Yarı ömrü 2 saat olan 64 g radyoaktif maddenin 8 saat sonra ne kadarı bozunmadan kalır?",
-        "o": [
-          "16 g",
-          "8 g",
-          "4 g",
-          "Hiç kalmaz, madde tükenir"
+        "tur": "sayi",
+        "q": "Yarı ömrü 2 saat olan 64 g radyoaktif maddenin 8 saat sonra kaç gramı bozunmadan kalır?",
+        "cevap": 4,
+        "birim": "g",
+        "e": "n = 8/2 = 4 yarı ömür geçer; kalan 64/2<sup>4</sup> = 4 g olur."
+      },
+      {
+        "tur": "ayir",
+        "q": "Her özelliği ait olduğu ışımaya koy.",
+        "gruplar": [
+          "Alfa (α)",
+          "Beta eksi (β⁻)",
+          "Gama (γ)"
         ],
-        "a": 2,
-        "e": "8 / 2 = 4 yarı ömür geçer; kalan 64 / 2⁴ = 4 g olur. Madde hiçbir zaman tam olarak sıfırlanmaz."
+        "ogeler": [
+          [
+            "Helyum çekirdeği",
+            0
+          ],
+          [
+            "Kâğıtla durur",
+            0
+          ],
+          [
+            "A 4, Z 2 azalır",
+            0
+          ],
+          [
+            "Z 1 artar",
+            1
+          ],
+          [
+            "+ plakaya sapar",
+            1
+          ],
+          [
+            "Yüksüz foton",
+            2
+          ],
+          [
+            "A ve Z değişmez",
+            2
+          ],
+          [
+            "Alanda sapmaz",
+            2
+          ]
+        ],
+        "e": "Alfa bir helyum çekirdeğidir, kâğıtla durur ve A'yı 4, Z'yi 2 azaltır. Beta eksi elektrondur: Z 1 artar, pozitif plakaya sapar. Gama yüksüz bir fotondur; sapmaz, A ve Z'yi değiştirmez."
+      },
+      {
+        "tur": "sirala",
+        "q": "Fisyonda zincirleme tepkimenin adımlarını sırala.",
+        "ogeler": [
+          "<sup>235</sup>U çekirdeği bir nötron yutar",
+          "Çekirdek ikiye bölünür, 2-3 nötron ve enerji salar",
+          "Salınan nötronlar yeni çekirdeklere çarpar",
+          "O çekirdekler de bölünür ve zincir sürer"
+        ],
+        "e": "Nötron yutan <sup>235</sup>U ikiye bölünür ve 2-3 nötron salar. Bu nötronlar yeni bölünmeler başlatırsa tepkime zincirleme sürer; santraller bunu denetimli yürütür."
       },
       {
         "q": "Bir X çekirdeği önce bir alfa, sonra art arda iki beta eksi ışıması yapıp Y çekirdeğine dönüşüyor. Y için hangisi doğrudur?",
@@ -5463,28 +6210,6 @@
         ],
         "a": 3,
         "e": "Alfa A'yı 4, Z'yi 2 azaltır; iki beta eksi Z'yi 2 artırır. Z aynı kalır, A 4 azalır: aynı element, farklı kütle numarası, yani izotop."
-      },
-      {
-        "q": "Bir ışıma kâğıttan geçiyor ama birkaç milimetrelik alüminyum levhada duruyor. Elektrik alanda pozitif plakaya doğru sapıyor. Bu ışıma hangisidir?",
-        "o": [
-          "Alfa",
-          "Beta eksi",
-          "Gama",
-          "Beta artı"
-        ],
-        "a": 1,
-        "e": "Kâğıdı geçip alüminyumda duran ışıma betadır. Pozitif plakaya çekildiğine göre negatif yüklüdür: beta eksi (elektron)."
-      },
-      {
-        "q": "Helyum-4 çekirdeği için hangisi doğrudur?",
-        "o": [
-          "Kütlesi, 2 proton ve 2 nötronun ayrı kütleleri toplamından küçüktür",
-          "Kütlesi, ayrı nükleonlarının kütleleri toplamına tam eşittir",
-          "Kütlesi, ayrı nükleonlarının kütleleri toplamından büyüktür",
-          "Protonları yalnızca elektriksel kuvvetle bir arada durur"
-        ],
-        "a": 0,
-        "e": "Çekirdek oluşurken kütlenin bir kısmı bağlanma enerjisi olarak salınır (E = Δm·c²); bu yüzden çekirdek, parçalarının toplamından hafiftir. Protonları güçlü çekirdek kuvveti tutar."
       }
     ]
   }

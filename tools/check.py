@@ -294,9 +294,8 @@ def test_denetle(yer, q):
 
 for ders, tid, quiz in testler:
     for j, q in enumerate(quiz): test_denetle((ders, tid, "test", j + 1), q)
-    # Etkileşimli teste geçen konuda en az iki soru etkileşimli olmalı (Üçler, 2026-10-19: "sadece şıklı olmasın").
-    n_etk = sum(1 for q in quiz if q.get("tur", "secim") != "secim")
-    if n_etk and n_etk < 2: err(ders, tid, "test: en az iki etkileşimli soru olmalı")
+    # Her konuda en az iki soru etkileşimli olmalı (Üçler, 2026-10-19: "sadece şıklı olmasın").
+    if sum(1 for q in quiz if q.get("tur", "secim") != "secim") < 2: err(ders, tid, "test: en az iki etkileşimli soru olmalı")
 
 for w in warn: print("UYARI:", w)
 print("TAMAM" if not bad else f"{bad} sorun")
