@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Enerji = V · I · t",
-   "metin": "Şarj aleti 5 V, 2 A veriyor. Harcanan enerji <b>W = V · I · t</b> (t saniye). Telefona <b>36 000 J</b> aktar.",
+   "metin": "Şarj aleti 5 V, 2 A veriyor. Telefona <b>36 000 J</b> aktar.",
    "sahne": {
     "tur": "fiz9-sarj"
    },
@@ -72,7 +72,7 @@
      },
      {
       "yazi": "4 Ω'luk",
-      "neden": "Seride ikisinden aynı akım geçer; P = I² · R ile büyük direnç daha çok güç harcar. Paralelde ise P = V² / R olduğundan tersi olur: 2 Ω'luk parlar.",
+      "neden": "Seride ikisinden aynı akım geçer; P = I² · R ile büyük direnç daha çok güç harcar. Paralelde ise P = V² / R ile 2 Ω'luk parlar.",
       "dogru": true
      },
      {
@@ -81,11 +81,11 @@
      }
     ]
    },
-   "kart": 4
+   "kart": 3
   },
   {
    "baslik": "Joule ısınması",
-   "metin": "Akım geçen direnç ısınır: <b>Q = I² · R · t</b>. 10 Ω'luk tel 1 dakikada 1 A ile 600 J verir. Isıyı <b>4 katına</b> çıkar.",
+   "metin": "10 Ω'luk tel 1 dakikada 1 A ile 600 J ısı verir. Isıyı <b>4 katına</b> çıkar.",
    "sahne": {
     "tur": "fiz9-joule"
    },
@@ -107,7 +107,7 @@
     "hedef": {
      "I": 2
     },
-    "tamam": "Akım 2 katı, ısı 2² = <b>4 katı</b>: 2400 J. Isı akımın karesiyle artar; kablo kalınlığı ve sigortalar bu yüzden önemlidir.",
+    "tamam": "Akım 2 katı, ısı 2² = <b>4 katı</b>: 2² · 10 · 60 = 2400 J. Sigortalar ve kablo kalınlığı bu yüzden önemlidir.",
     "ipucu": "Isı akımın karesiyle artar."
    },
    "kart": 5,
@@ -139,7 +139,7 @@
      },
      {
       "yazi": "500 W",
-      "neden": "Direnç sabit: P = V² / R = 110² / 24,2 = <b>500 W</b>. Gerilim yarıya inince güç <b>dörtte birine</b> düşer.",
+      "neden": "Direnç sabit: P = V² / R = 110² / 24,2 = <b>500 W</b>. Gerilim yarıya inince güç dörtte birine düşer.",
       "dogru": true
      }
     ]
@@ -148,7 +148,7 @@
   },
   {
    "baslik": "Faturayı düşür",
-   "metin": "1,5 kW klima, 30 gün, 1 kWh = 3 TL. <b>kWh enerji birimidir</b>: E = P · t. Aylık tutar 270 TL'yi geçmesin.",
+   "metin": "1,5 kW klima, 30 gün, 1 kWh = 3 TL. Günlük kullanımı ayarla: aylık tutar <b>270 TL</b>'yi geçmesin.",
    "sahne": {
     "tur": "fiz9-fatura"
    },
@@ -185,7 +185,7 @@
   },
   {
    "baslik": "Sigortayı attırma",
-   "metin": "Evdeki cihazlar <b>paralel</b> bağlıdır; hattan geçen akım kolların toplamıdır. Sigorta 16 A. Isıtıcı açık; yanına bir cihaz daha aç ama sigortayı attırma.",
+   "metin": "Sigorta 16 A. Isıtıcı (2000 W) açık; yanına bir cihaz daha aç ama sigortayı attırma.",
    "sahne": {
     "tur": "fiz9-sigorta"
    },
@@ -227,11 +227,11 @@
     "tamam": "9,1 A + 5 A ≈ 14,1 A, sınırın altında. Su ısıtıcısıyla 19,1 A olurdu ve sigorta atardı. Sigorta, kabloyu aşırı ısınmaktan korur.",
     "ipucu": "I = P / 220. Toplam 16 A'yı geçmemeli."
    },
-   "kart": 12
+   "kart": 11
   },
   {
    "baslik": "Verim",
-   "metin": "Akkor ampul enerjinin çoğunu ısıya çevirir. 60 W'lık akkor ampulle 9 W'lık LED aynı ışığı verir. LED'e geç.",
+   "metin": "60 W'lık akkor ampulle 9 W'lık LED aynı ışığı verir. LED'e geç.",
    "sahne": {
     "tur": "fiz9-verim"
    },
@@ -261,12 +261,12 @@
      },
      {
       "yazi": "Yaklaşık 93 kWh",
-      "neden": "Fark 51 W. 51 W · 5 saat · 365 gün ≈ 93 000 Wh = <b>93 kWh</b>. Verim, faydalı enerjinin harcanan enerjiye oranıdır.",
+      "neden": "Fark 51 W: 51 W · 5 saat · 365 gün ≈ 93 000 Wh = <b>93 kWh</b>.",
       "dogru": true
      }
     ]
    },
-   "kart": 14
+   "kart": 13
   }
  ],
  "kapanis": [

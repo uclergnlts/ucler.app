@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Periyot ve frekans",
-   "metin": "Bir tam turun süresi <b>periyot</b> (T), bir saniyedeki tur sayısı <b>frekans</b>tır: f = 1/T, birimi hertz (Hz). Çamaşır makinesinin tamburunu <b>20 Hz</b>'e ayarla.",
+   "metin": "Çamaşır makinesinin tamburunu <b>25 Hz</b>'e ayarla.",
    "sahne": {
     "tur": "fiz7-tambur"
    },
@@ -55,9 +55,9 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": {
-     "rpm": 1200
+     "rpm": 1500
     },
-    "tamam": "Dakikada 1200 tur, saniyede 1200 / 60 = 20 tur eder: f = 20 Hz. Bir tur T = 1/20 = 0,05 s sürer. Periyot büyüdükçe frekans küçülür."
+    "tamam": "Dakikada 1500 tur, saniyede 1500 / 60 = 25 tur eder: f = 25 Hz. Bir tur T = 1/25 = 0,04 s sürer."
    },
    "kart": 2,
    "goster": {
@@ -84,7 +84,7 @@
      },
      {
       "yazi": "Dış koltuk, iki kat hızlı",
-      "neden": "Bir turda dış koltuk 2π·8 ≈ 50 m, iç koltuk 25 m yol alır. Açısal hız ω = 2π/T ikinizde de aynıdır; çizgisel hız v = ω·r yarıçapla artar.",
+      "neden": "Bir turda dış koltuk 2π·8 ≈ 50 m, iç koltuk ≈ 25 m yol alır; ikisi de 20 s'de. Yol iki kat, süre aynı: hız da iki kat.",
       "dogru": true
      },
      {
@@ -108,7 +108,7 @@
     "secenekler": [
      {
       "yazi": "Doğuya, teğet boyunca düz gider",
-      "neden": "Merkeze çeken kuvvet kalkınca taş, 1. yasa gereği o anki hızıyla teğet boyunca düz gider. Çekiç atan atlet de çekici bu anı kollayarak bırakır.",
+      "neden": "Merkeze çeken kuvvet kalkınca taş, 1. yasa gereği o anki hızıyla <b>teğet boyunca</b> düz gider. Çekiç atan atlet de çekici bu anı kollayarak bırakır.",
       "dogru": true
      },
      {
@@ -125,7 +125,7 @@
   },
   {
    "baslik": "Merkezcil kuvvet",
-   "metin": "Dönmek için merkeze yönelen bir net kuvvet gerekir: F = m·v²/r. 1000 kg'lık araba 50 m yarıçaplı virajda. Hızı değiştir ve gereken kuvveti <b>8000 N</b> yap.",
+   "metin": "1000 kg'lık araba 50 m yarıçaplı virajda. Hızı değiştir ve gereken merkezcil kuvveti <b>8000 N</b> yap.",
    "sahne": {
     "tur": "fiz7-merkezcil"
    },
@@ -159,7 +159,7 @@
   },
   {
    "baslik": "Islak virajda",
-   "metin": "Düz virajda arabayı döndüren kuvvet sürtünmedir ve en çok μ·m·g olabilir. Araban 15 m/s ile 50 m'lik virajı alacak. Yol yüzeyini seç ve virajı <b>savrulmadan</b> al.",
+   "metin": "Araban 15 m/s ile 50 m'lik virajı alacak. Yol yüzeyini seç ve virajı <b>savrulmadan</b> al.",
    "sahne": {
     "tur": "fiz7-viraj",
     "sure": 4
@@ -184,9 +184,9 @@
       8
      ]
     },
-    "tamam": "En büyük güvenli hız v = √(μ·g·r). μ = 0,5'te √(0,5 · 9,8 · 50) ≈ 15,7 m/s, yani 15 m/s güvenli. Islak yolda (μ ≈ 0,4) sınır 14 m/s'ye iner; yağmurda bu yüzden yavaşlanır. Güvenli hız kütleye bağlı değildir."
+    "tamam": "μ = 0,5'te sınır √(0,5 · 9,8 · 50) ≈ 15,7 m/s, yani 15 m/s güvenli. Yağmurda μ düşer, sınır da iner; ıslak yolda bu yüzden yavaşlanır."
    },
-   "kart": 7,
+   "kart": 6,
    "goster": {
     "deger": {
      "mu": 4
@@ -196,7 +196,7 @@
   },
   {
    "baslik": "Patenci",
-   "metin": "Dönen cismin açısal momentumu L = I·ω'dır; dış tork yoksa korunur. Patenci kolları açık dönüyor. Kollarını gövdesine çekince eylemsizlik momenti I yarıya inecek.",
+   "metin": "Patenci kolları açık dönüyor; dış tork yok. Kollarını gövdesine çekince eylemsizlik momenti I yarıya inecek.",
    "sahne": {
     "tur": "fiz7-patenci",
     "sure": 6
@@ -211,7 +211,7 @@
      },
      {
       "yazi": "İki kat hızlı döner",
-      "neden": "I·ω sabit: 4 · 2 = 2 · 4. I yarıya inince ω iki katına çıkar. Kollarını yeniden açınca yine yavaşlar.",
+      "neden": "I·ω (açısal momentum) sabit kalır: 4 · 2 = 2 · 4. I yarıya inince ω iki katına çıkar.",
       "dogru": true
      },
      {
@@ -220,7 +220,7 @@
      }
     ]
    },
-   "kart": 12
+   "kart": 11
   }
  ],
  "kapanis": [
