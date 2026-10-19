@@ -28,7 +28,7 @@ Videolar ayrı bir dosyada durur: `content/videolar.json` (biçim `docs/VIDEOLAR
       svg: "<svg viewBox='0 0 320 200'>...</svg>",   // her kartta ZORUNLU
       key: "İsteğe bağlı 'akılda kalsın' cümlesi (≤ 90 karakter)" }
   ],
-  quiz: [ { q: "Soru?", o: ["A","B","C","D"], a: 2, e: "Neden doğru (1-2 cümle)" } ]   // tam 4 soru
+  quiz: [ { q: "Soru?", o: ["A","B","C","D"], a: 2, e: "Neden doğru (1-2 cümle)" } ]   // tam 4 soru; etkileşimli türler için "Konu sonu testi"
 }
 ```
 - Son kart **"Özet"** kartıdır. Konunun 3-5 ana fikri `<br>• ` ile ayrılarak yazılır.
@@ -77,6 +77,18 @@ Metinlerde kartlardaki gibi `<b>`, `<em>`, `<sub>`, `<sup>` kullanılabilir. Ö�
   1-3 girdi, 1-3 çıktı. `ifade` içinde yalnızca sayılar, girdi adları, `+ - * / ^ ( )`, `pi`, `e` ve `sqrt abs sin cos tan ln log exp` kullanılır; açılar **derecedir**, `log` 10 tabanlıdır. `max` verilirse çıktının altında dolan bir çubuk çıkar. `yorum` isteğe bağlıdır: ilk çıktının değeri listedeki ilk sınırdan küçükse o metin gösterilir; son satır `[null, "metin"]` olur. Birimler SI ya da derste kullanılan birimdir; sonuçlar gerçek değerlerle tutarlı olmalıdır.
 
 Yeni konuya özel tür eklemek kod işidir. Doğrulayıcı (`tools/check.py`) her türün biçimini, sayı aralıklarını ve formüllerin girdilerin en küçük, başlangıç ve en büyük değerinde hesaplanabildiğini denetler.
+
+## Konu sonu testi
+Her konunun sonunda 4 soruluk test vardır (aşamalar bitince açılır). Üçler'in isteğiyle (2026-10-19) testler yalnızca şıklı olmaz: soru `tur` alanıyla etkileşimli olabilir. `tur` yazılmayan soru çoktan seçmelidir. Görünüm ve değerlendirme `components/TestSoru.tsx` içindedir; ders ekranı ve Tekrar aynı parçayı kullanır.
+- Etkileşimli soruda öğrenci cevabını kurar ve alttaki **Kontrol et** ile bir kez değerlendirilir; anında düzeltme yoktur (öğrenme adımlarından farkı budur). Kontrolden sonra doğrusu gövdede işaretlenir, `e` alttaki çubukta çıkar.
+- Yanlış yapılan her tür soru akıllı tekrara girer (`ders.konu.sıra` anahtarıyla, 1-3-7 gün).
+- Türler (hepsinde `q` ve `e` zorunlu):
+  - `sirala`: `ogeler` doğru sırayla yazılır (3-6 öğe); ekranda karışık çıkar.
+  - `eslestir`: `ciftler: [[sol, sağ], ...]` (3-5 çift); sağdakiler karışık havuzdan seçilir.
+  - `ayir`: `gruplar` (2-3) ve `ogeler: [[yazı, grup sırası], ...]` (4-8 öğe).
+  - `sayi`: `cevap` (sayı), isteğe bağlı `tolerans` ve `birim`. Öğrenci sonucu kendisi yazar; virgül de nokta da kabul edilir.
+  - `sahne`: adımlı derslerin sahnesi. `sahne` (`tur` + sahnenin değerleri), `deger`, `kontroller` (adımlı dersteki biçim), `hedef` (sayı ya da [en az, en çok]). Sahne bu soruda `test: true` alır ve cevabı ele veren yazıları (hedef bayrağı, sembol, yük) gizler; kontrol edilince gösterir. Bir sahneyi teste koymadan önce test modunu o sahneye ekle (şimdilik `konum` ve `atom`).
+- Bir konu etkileşimli teste geçince 4 sorudan en az ikisi etkileşimli olur (doğrulayıcı denetler). Çoktan seçmeli soru kalabilir; hesap gerektiren soru `sayi`, sınıflandırma `ayir`, süreç `sirala`, kavram-tanım `eslestir` olarak yazılır.
 
 ## Doğrulama
 `python3 tools/check.py` komutu "TAMAM" yazmalıdır. Ardından `tools/ekran.js` ile alınan görüntülere bakılır, çünkü taşma ve üst üste binme gibi sorunları ancak göz yakalar.

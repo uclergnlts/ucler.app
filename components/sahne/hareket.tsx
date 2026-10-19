@@ -12,7 +12,8 @@ const sayi = (s: unknown, yedek: number) => (typeof s === "number" ? s : yedek);
 function Konum({ s, v, set }: SahneProps) {
   const svg = useRef<SVGSVGElement>(null);
   const tut = useRef(false);
-  const m = v.x ?? 0, hedef = sayi(s.hedef, 30), oldu = m === hedef;
+  // Testte (s.test) hedef bayrağı ve renk ipucu gizlenir; kontrol edilince görünür.
+  const m = v.x ?? 0, hedef = sayi(s.hedef, 30), gizli = s.test === true, oldu = !gizli && m === hedef;
   const tasi = (e: React.PointerEvent) => {
     if (!svg.current) return;
     const q = svgNokta(svg.current, e);
@@ -25,7 +26,7 @@ function Konum({ s, v, set }: SahneProps) {
       onPointerMove={(e) => tut.current && tasi(e)}
       onPointerUp={() => (tut.current = false)}
     >
-      <g opacity={oldu ? 0.35 : 1}>
+      <g opacity={gizli ? 0 : oldu ? 0.35 : 1}>
         <line x1={X(hedef)} x2={X(hedef)} y1={52} y2={104} stroke="var(--c4)" strokeWidth={2} />
         <path d={`M${X(hedef)} 52 L${X(hedef) + 18} 58 L${X(hedef)} 64 Z`} fill="var(--c4)" />
       </g>

@@ -98,6 +98,7 @@ ILK_DALGA = {f"KIM-{i:02d}" for i in range(1, 11)}
 def sure_siniri(vid): return (45, 60) if vid in ILK_DALGA else (60, 180)
 def kelime_siniri(vid): return (100, 115) if vid in ILK_DALGA else (120, 340)
 
+testler = []  # konu sonu testleri; sahne adları okunduktan sonra denetlenir (aşağıda)
 for ders, topics in d.items():
     for tid, t in topics.items():
         for k in ("title", "summary", "cards", "quiz"):
@@ -124,9 +125,7 @@ for ders, topics in d.items():
             if "etk" in c: etk_denetle(ders, tid, i, c["etk"])
         dup = {x for x in ids if ids.count(x) > 1}
         if dup: err(ders, tid, "tekrar eden svg id", sorted(dup))
-        for j, q in enumerate(t.get("quiz", [])):
-            if len(q.get("o", [])) != 4 or not 0 <= q.get("a", -1) <= 3 or not q.get("e"):
-                err(ders, tid, "test", j, "biçim hatası")
+        testler.append((ders, tid, t.get("quiz", [])))
 
 # content/dersler.json'daki konu listeleri ile veri dosyaları uyumlu mu?
 for ders, topics in d.items():
@@ -255,6 +254,49 @@ for f in sorted(glob.glob(os.path.join(CONTENT, "adimli", "*.json"))):
                 if not ulasir: err("adımlı", yer, k, "hedefi kontrolle ulaşılamaz:", h)
             if hedef and all(k in deger and (deger[k] == h if not isinstance(h, list) else h[0] <= deger[k] <= h[1]) for k, h in hedef.items()):
                 warn.append(f"adımlı {yer}: hedef başlangıçta zaten sağlanıyor")
+
+# konu sonu testleri (docs/ICERIK-SPEC.md "Konu sonu testi"): çoktan seçmeli ya da etkileşimli türler
+def test_denetle(yer, q):
+    tur = q.get("tur", "secim")
+    if not q.get("q") or not q.get("e"): return err(*yer, "soru ya da açıklama boş")
+    if tur == "secim":
+        if len(q.get("o", [])) != 4 or not 0 <= q.get("a", -1) <= 3: err(*yer, "çoktan seçmeli: 4 şık ve 0-3 arası doğru şık")
+    elif tur == "sirala":
+        o = q.get("ogeler", [])
+        if not 3 <= len(o) <= 6 or len(set(o)) != len(o): err(*yer, "sirala: 3-6 farklı öğe olmalı")
+    elif tur == "eslestir":
+        c = q.get("ciftler", [])
+        if not 3 <= len(c) <= 5 or any(len(x) != 2 for x in c): err(*yer, "eslestir: 3-5 çift olmalı")
+        elif len({x[0] for x in c}) != len(c) or len({x[1] for x in c}) != len(c): err(*yer, "eslestir: tekrar eden öğe")
+    elif tur == "ayir":
+        g, o = q.get("gruplar", []), q.get("ogeler", [])
+        if not 2 <= len(g) <= 3: err(*yer, "ayir: 2-3 grup olmalı")
+        if not 4 <= len(o) <= 8: err(*yer, "ayir: 4-8 öğe olmalı")
+        if len({x[0] for x in o}) != len(o): err(*yer, "ayir: tekrar eden öğe")
+        for x in o:
+            if not (len(x) == 2 and isinstance(x[1], int) and 0 <= x[1] < len(g)): err(*yer, "ayir: öğe biçimi", x)
+        if len({x[1] for x in o if len(x) > 1}) < len(g): err(*yer, "ayir: boş grup var")
+    elif tur == "sayi":
+        if not isinstance(q.get("cevap"), (int, float)): err(*yer, "sayi: cevap sayı olmalı")
+        if not isinstance(q.get("tolerans", 0), (int, float)) or q.get("tolerans", 0) < 0: err(*yer, "sayi: tolerans geçersiz")
+    elif tur == "sahne":
+        if q.get("sahne", {}).get("tur") not in sahneler: err(*yer, "bilinmeyen sahne:", q.get("sahne", {}).get("tur"))
+        deger, kont, hedef = q.get("deger", {}), {k["ad"]: k for k in q.get("kontroller", [])}, q.get("hedef", {})
+        if not kont or not hedef: err(*yer, "sahne: kontroller ve hedef gerekli")
+        for k in kont.values():
+            if k["ad"] not in deger or not k["min"] <= deger[k["ad"]] <= k["max"]: err(*yer, "sahne: başlangıç değeri yok ya da sınır dışında:", k["ad"])
+        for k, h in hedef.items():
+            lo, hi = (h if isinstance(h, list) else (h, h))
+            if k not in kont or hi < kont[k]["min"] or lo > kont[k]["max"]: err(*yer, "sahne: hedefe ulaşılamaz:", k)
+        if hedef and all(k in deger and (lambda lo, hi: lo <= deger[k] <= hi)(*(h if isinstance(h, list) else (h, h))) for k, h in hedef.items()):
+            err(*yer, "sahne: hedef başlangıçta zaten sağlanıyor")
+    else: err(*yer, "bilinmeyen test türü:", tur)
+
+for ders, tid, quiz in testler:
+    for j, q in enumerate(quiz): test_denetle((ders, tid, "test", j + 1), q)
+    # Etkileşimli teste geçen konuda en az iki soru etkileşimli olmalı (Üçler, 2026-10-19: "sadece şıklı olmasın").
+    n_etk = sum(1 for q in quiz if q.get("tur", "secim") != "secim")
+    if n_etk and n_etk < 2: err(ders, tid, "test: en az iki etkileşimli soru olmalı")
 
 for w in warn: print("UYARI:", w)
 print("TAMAM" if not bad else f"{bad} sorun")

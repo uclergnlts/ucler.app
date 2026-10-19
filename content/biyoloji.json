@@ -709,15 +709,39 @@
     ],
     "quiz": [
       {
-        "q": "Hangisinde ATP harcanır?",
-        "o": [
-          "Difüzyon",
-          "Osmoz",
-          "Na-K pompası",
-          "Kolaylaştırılmış difüzyon"
+        "tur": "ayir",
+        "q": "Hangi taşımada ATP harcanır? Her birini doğru gruba koy.",
+        "gruplar": [
+          "Pasif (ATP yok)",
+          "Aktif (ATP harcanır)"
         ],
-        "a": 2,
-        "e": "Na-K pompası iyonları azdan çoğa taşır; bu aktif taşımadır ve ATP gerektirir. Diğerleri pasiftir."
+        "ogeler": [
+          [
+            "Difüzyon",
+            0
+          ],
+          [
+            "Osmoz",
+            0
+          ],
+          [
+            "Kolaylaştırılmış difüzyon",
+            0
+          ],
+          [
+            "Na<sup>+</sup>-K<sup>+</sup> pompası",
+            1
+          ],
+          [
+            "Fagositoz",
+            1
+          ],
+          [
+            "Ekzositoz",
+            1
+          ]
+        ],
+        "e": "Difüzyon, osmoz ve kolaylaştırılmış difüzyon çoktan aza kendiliğinden olur. Na-K pompası azdan çoğa taşır; fagositoz ve ekzositoz kesecik oluşturur. Bunlar ATP harcar."
       },
       {
         "q": "Bir alyuvar saf suya konursa ne olur?",
@@ -731,26 +755,38 @@
         "e": "Saf su alyuvara göre hipotoniktir; su osmozla girer, hücre şişer ve patlayabilir."
       },
       {
-        "q": "Plazmoliz hangi durumda görülür?",
-        "o": [
-          "Bitki hücresi hipertonik ortamda",
-          "Bitki hücresi saf suda",
-          "Hayvan hücresi izotonik ortamda",
-          "Bitki hücresi izotonik ortamda"
+        "tur": "sirala",
+        "q": "Tuzlu suya konan bir bitki hücresinde olanları sıraya koy.",
+        "ogeler": [
+          "Dış ortam hücreye göre hipertonik olur",
+          "Su osmozla kofuldan dışarı çıkar",
+          "Koful küçülür, turgor basıncı düşer",
+          "Zar hücre duvarından ayrılır: plazmoliz"
         ],
-        "a": 0,
-        "e": "Hipertonik ortamda bitki hücresi su kaybeder ve zar, hücre duvarından ayrılır."
+        "e": "Dışarısı daha derişik olunca su hücreden çıkar, koful küçülür ve turgor kaybolur. Sonunda zar duvardan ayrılır. Hücre saf suya konursa olay tersine döner (deplazmoliz)."
       },
       {
-        "q": "Akyuvarın bir bakteriyi yutması hangisine örnektir?",
-        "o": [
-          "Pinositoz",
-          "Ekzositoz",
-          "Osmoz",
-          "Fagositoz"
+        "tur": "eslestir",
+        "q": "Her olayı taşıma şekliyle eşleştir.",
+        "ciftler": [
+          [
+            "Akyuvarın bakteri yutması",
+            "Fagositoz"
+          ],
+          [
+            "Hücrenin sıvı damlası alması",
+            "Pinositoz"
+          ],
+          [
+            "İnsülinin hücreden salgılanması",
+            "Ekzositoz"
+          ],
+          [
+            "Suyun zardan geçmesi",
+            "Osmoz"
+          ]
         ],
-        "a": 3,
-        "e": "Katı bir parçanın zar uzantılarıyla sarılıp hücreye alınması fagositozdur."
+        "e": "Katı parçayı yutmak fagositoz, sıvı damlası almak pinositozdur. Keseciğin zarla kaynaşıp içeriğini boşaltması ekzositozdur. Suyun zardan difüzyonu osmozdur."
       }
     ]
   },

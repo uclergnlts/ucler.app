@@ -54,7 +54,7 @@ function useOynat(T: number, bitince: () => void) {
 
 /* ---------- yardımcılar ---------- */
 
-const uyar = (v: Degerler, hedef: Record<string, number | [number, number]>) =>
+export const uyar = (v: Degerler, hedef: Record<string, number | [number, number]>) =>
   Object.entries(hedef).every(([k, h]) => (Array.isArray(h) ? v[k] >= h[0] && v[k] <= h[1] : v[k] === h));
 const ayni = (a: Degerler, b: Degerler) => Object.keys({ ...a, ...b }).every((k) => a[k] === b[k]);
 const gosterim = (k: Kontrol, x: number) =>
@@ -108,7 +108,7 @@ function Soru({ soru, secenekler, tamam, bildir }: { soru: string; secenekler: S
   );
 }
 
-function Kontroller({ liste, v, set, kapali }: { liste: Kontrol[]; v: Degerler; set: (ad: string, x: number) => void; kapali: boolean }) {
+export function Kontroller({ liste, v, set, kapali }: { liste: Kontrol[]; v: Degerler; set: (ad: string, x: number) => void; kapali: boolean }) {
   return (
     <div className="ad-kontroller">
       {liste.map((k) => {

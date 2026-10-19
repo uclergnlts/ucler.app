@@ -6,12 +6,13 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import type { TekrarSoru } from "@/lib/content";
-import { DERSLER } from "@/lib/dersler";
+import { DERSLER, secmeli } from "@/lib/dersler";
 import { kaydet, PUAN } from "@/lib/puan";
 import { gun, gunAdi, tekrarCevap, tekrarOku, useTekrar } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
-import { Alt, Secenekler } from "./Soru";
+import { Alt } from "./Soru";
+import { dogruMu, geriBaslik, hazir, ilkCevap, TestGovde, yonerge, type Cevap } from "./TestSoru";
 import { Html, href, Logo } from "./temel";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
@@ -24,7 +25,8 @@ const SONRA = ["2 gün sonra yeniden sorulacak.", "4 gün sonra son kez sorulaca
 export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru> }) {
   const [liste, setListe] = useState<Oge[] | null>(null);
   const [i, setI] = useState(0);
-  const [picked, setPicked] = useState<number | null>(null);
+  const [kurulan, setKurulan] = useState<{ key: string; c: Cevap } | null>(null);
+  const [sonuc, setSonuc] = useState<boolean | null>(null);
   const [right, setRight] = useState(0);
   // Sonuç ekranı için: kaç soru öğrenilip sıradan çıktı, kaçı bir basamak ilerledi (doğru ama sırada kaldı).
   const [ogrenilen, setOgrenilen] = useState(0);
@@ -43,16 +45,20 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
   const cur = liste && i < n ? liste[i] : undefined;
   const Q = cur ? sorular[cur.key] : undefined;
 
-  const pick = (k: number) => {
-    if (!cur || !Q || picked !== null) return;
-    const ok = k === Q.a;
-    setPicked(k);
+  // Cevap soruya bağlıdır: yeni soruda sorunun türüne göre baştan kurulur.
+  const cevap: Cevap = cur && Q ? (kurulan?.key === cur.key ? kurulan.c : ilkCevap(Q)) : null;
+  const setCevap = (c: Cevap) => { if (cur) setKurulan({ key: cur.key, c }); };
+  const degerlendir = (c: Cevap) => {
+    if (!cur || !Q || sonuc !== null) return;
+    const ok = dogruMu(Q, c);
+    setCevap(c);
+    setSonuc(ok);
     if (ok) setRight((r) => r + 1);
     if (ok && cur.s === SONRA.length - 1) setOgrenilen((x) => x + 1); // üçüncü doğru: soru sıradan çıkar
     tekrarCevap(cur.key, ok);
     kaydet("tekrar", 1, ok ? PUAN.tekrar : 0);
   };
-  const ileri = () => { setPicked(null); setI((x) => x + 1); };
+  const ileri = () => { setSonuc(null); setI((x) => x + 1); };
 
   let body: React.ReactNode = null, controls: React.ReactNode = null;
   if (liste && !n) {
@@ -74,21 +80,22 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
       </article>
     );
   } else if (cur && Q) {
-    const ok = picked === Q.a;
+    const ok = sonuc === true, not = yonerge(Q);
     body = (
       <article className="flex flex-col gap-4" data-ders={Q.ders}>
         <span className="flex items-center gap-2 text-[13px] font-bold">
           <span className="tabular-nums text-acc">Soru {i + 1} / {n}</span>
           <span className="truncate text-muted-foreground">· {DERSLER[Q.ders].ad} · {Q.baslik}</span>
         </span>
-        <Html as="h2" className={picked === null ? "text-[22px]" : "text-lg"} html={Q.q} />
-        <Secenekler q={Q} picked={picked} pick={pick} />
+        <Html as="h2" className={sonuc === null ? "text-[22px]" : "text-lg"} html={Q.q} />
+        {not && sonuc === null && <p className="-mt-2 text-[14px] font-medium text-muted-foreground">{not}</p>}
+        <TestGovde key={cur.key} q={Q} cevap={cevap} setCevap={(c) => { if (sonuc === null) setCevap(c); }} sonuc={sonuc} sec={degerlendir} tohum={cur.key} />
       </article>
     );
     controls = (
-      <Alt durum={picked === null ? undefined : ok ? "ok" : "no"}>
+      <Alt durum={sonuc === null ? undefined : ok ? "ok" : "no"}>
         <AnimatePresence initial={false}>
-          {picked !== null && (
+          {sonuc !== null && (
             <motion.div
               key="geri"
               aria-live="polite"
@@ -98,7 +105,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
               transition={{ duration: 0.2 }}
               className="overflow-hidden pb-3"
             >
-              <h2 className={cn("mb-0.5 text-lg", ok ? "text-good" : "text-bad")}>{ok ? "Doğru!" : `Doğru cevap ${"ABCD"[Q.a]}`}</h2>
+              <h2 className={cn("mb-0.5 text-lg", ok ? "text-good" : "text-bad")}>{geriBaslik(Q, ok)}</h2>
               <Html as="p" className="text-[15px] leading-normal" html={Q.e} />
               <p className="mt-1.5 text-[14px] font-semibold">
                 {ok ? SONRA[cur.s] : <>Yarın yeniden sorulacak. <Link className="text-acc underline-offset-2 hover:underline" data-ders={Q.ders} href={href(Q.ders, Q.konu)}>Konuya bak</Link></>}
@@ -106,7 +113,11 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
             </motion.div>
           )}
         </AnimatePresence>
-        <Button className="w-full" data-next disabled={picked === null} onClick={ileri}>{i === n - 1 ? "Sonucu gör" : "Sonraki soru"}</Button>
+        {!secmeli(Q) && sonuc === null ? (
+          <Button className="w-full" data-next disabled={!hazir(Q, cevap)} onClick={() => degerlendir(cevap)}>Kontrol et</Button>
+        ) : (
+          <Button className="w-full" data-next disabled={sonuc === null} onClick={ileri}>{i === n - 1 ? "Sonucu gör" : "Sonraki soru"}</Button>
+        )}
       </Alt>
     );
   } else if (liste) {
@@ -129,7 +140,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
         <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href="/" aria-label="Tekrardan çık"><Close /></Link></Button>
         <div className="grid min-w-0 flex-1 gap-1.5">
           <span className="truncate font-display text-[15px] font-extrabold">Tekrar</span>
-          <Progress value={n ? (100 * Math.min(i + (picked !== null ? 1 : 0), n)) / n : 0} />
+          <Progress value={n ? (100 * Math.min(i + (sonuc !== null ? 1 : 0), n)) / n : 0} />
         </div>
       </header>
       <main className="view gap-0 pt-1 pb-0">

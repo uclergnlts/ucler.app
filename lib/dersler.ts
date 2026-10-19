@@ -18,7 +18,29 @@ export type Etk =
       yorum?: [number | null, string][];
     };
 export type Card = { h: string; p: string; svg: string; key?: string; etk?: Etk };
-export type Question = { q: string; o: string[]; a: number; e: string };
+/**
+ * Konu sonu testinin sorusu. tur yazılmazsa çoktan seçmelidir (o: şıklar, a: doğru şıkkın sırası).
+ * Etkileşimli türlerde öğrenci cevabını kurar, "Kontrol et" ile bir kez değerlendirilir (components/TestSoru.tsx).
+ * sirala: ogeler doğru sırayla yazılır. eslestir: her çiftin sağı, solunun eşidir. ayir: [öğe, grup sırası].
+ * sayi: cevap ± tolerans kabul edilir. sahne: adımlı derslerin sahnesi; kontrolleri hedefe getir
+ * (sahne "test" modunda hedefi ve cevabı ele veren yazıları gizler, kontrol edince gösterir).
+ */
+export type Question = { q: string; e: string } & (
+  | { tur?: "secim"; o: string[]; a: number }
+  | { tur: "sirala"; ogeler: string[] }
+  | { tur: "eslestir"; ciftler: [string, string][] }
+  | { tur: "ayir"; gruplar: string[]; ogeler: [string, number][] }
+  | { tur: "sayi"; cevap: number; tolerans?: number; birim?: string }
+  | {
+      tur: "sahne";
+      sahne: { tur: string; [k: string]: unknown };
+      deger: Record<string, number>;
+      kontroller: { ad: string; etiket: string; min: number; max: number; adim?: number; birim?: string; onek?: string; carpan?: number; tur?: "surgu" | "sayac" | "anahtar" }[];
+      hedef: Record<string, number | [number, number]>;
+    }
+);
+export type Secmeli = Extract<Question, { o: string[] }>;
+export const secmeli = (q: Question): q is Secmeli => !q.tur || q.tur === "secim";
 export type Topic = { title: string; summary: string; cards: Card[]; quiz: Question[] };
 export type DersId = "fizik" | "kimya" | "biyoloji";
 /** on: ön koşul konular (aynı dersten, listede daha önce gelen id'ler). Konu haritası bunlarla çizilir. */

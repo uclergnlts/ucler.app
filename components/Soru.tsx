@@ -1,12 +1,12 @@
 "use client";
 // Test sorusunun şıkları ve alttaki sabit çubuk. Ders ekranındaki mini test ve tekrar ekranı ortak kullanır.
 import { motion } from "motion/react";
-import type { Question } from "@/lib/dersler";
+import type { Secmeli } from "@/lib/dersler";
 import { cn } from "@/lib/utils";
 import { Html } from "./temel";
 
 /** Şıklar: seçilince doğru yeşil, seçilen yanlış kırmızı, kalanlar soluk. */
-export function Secenekler({ q, picked, pick }: { q: Question; picked: number | null; pick: (k: number) => void }) {
+export function Secenekler({ q, picked, pick }: { q: Secmeli; picked: number | null; pick: (k: number) => void }) {
   return (
     <div className="grid gap-2">
       {q.o.map((o, k) => {

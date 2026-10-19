@@ -9,7 +9,7 @@ import { Html } from "./temel";
 type Of<T extends Etk["tur"]> = Extract<Etk, { tur: T }>;
 
 // Sabit karıştırma: sunucuda ve tarayıcıda aynı sırayı verir; doğru sırayla aynı çıkarsa bir kaydırılır.
-function karistir<T>(a: T[], tohum: string): number[] {
+export function karistir<T>(a: T[], tohum: string): number[] {
   let h = 2166136261;
   for (const ch of tohum) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
   const ix = a.map((_, i) => i);

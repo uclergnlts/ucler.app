@@ -7,7 +7,7 @@
 // sonra gelir: kısa açıklama (kart) → örnek (sahne kendisi oynar) → sıra sende (görev). Görev bitmeden "Devam" açılmaz.
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { DERSLER, type DersId, type Topic } from "@/lib/dersler";
+import { DERSLER, secmeli, type DersId, type Topic } from "@/lib/dersler";
 import { asamaBitir, setProg, toggleAnlamadim, toggleSaved, useAnlamadim, useAsama, useProg, useSaved, yanlisKaydet } from "@/lib/store";
 import { asamalar, kartinAsamasi } from "@/lib/asama";
 import { kaydet, PUAN } from "@/lib/puan";
@@ -25,7 +25,8 @@ import { Belir, CanliSvg, SiraliMetin, useCanliSvg } from "./canli";
 import { konuOyunlari } from "@/lib/oyunlar";
 import type { Adim, AdimliDers } from "@/lib/adimli";
 import { AdimGorunum, type Bildirim } from "./DersMotoru";
-import { Alt, Secenekler } from "./Soru";
+import { Alt } from "./Soru";
+import { dogruMu, geriBaslik, hazir, ilkCevap, TestGovde, yonerge, type Cevap } from "./TestSoru";
 import AsamaYolu, { type YolDugum } from "./AsamaYolu";
 import { Konfeti, Madalya, PuanRozet } from "./Kutlama";
 
@@ -33,9 +34,10 @@ import { Konfeti, Madalya, PuanRozet } from "./Kutlama";
 type Oge = { tur: "kart"; k: number } | { tur: "adim"; a: Adim; n: number };
 
 /** a: aşama (-1: konu girişi), ara: aşama bitti ekranı, i: akıştaki öğe, q: test sorusu (-1: test başlamadı),
+ * cevap: test sorusunda öğrencinin kurduğu cevap, sonuc: değerlendirildiyse doğru mu (null: henüz değil),
  * odul: aşama ya da konu bitince kazanılan puan (ilk kez bitiyorsa). */
-type State = { a: number; ara: boolean; i: number; q: number; picked: number | null; right: number; odul: number };
-const START: State = { a: -1, ara: false, i: 0, q: -1, picked: null, right: 0, odul: 0 };
+type State = { a: number; ara: boolean; i: number; q: number; cevap: Cevap; sonuc: boolean | null; right: number; odul: number };
+const START: State = { a: -1, ara: false, i: 0, q: -1, cevap: null, sonuc: null, right: 0, odul: 0 };
 
 export default function Lesson({
   ders, id, t, next, adimli, on = [],
@@ -101,7 +103,7 @@ export default function Lesson({
   const asamaAc = (a: number) => {
     yon.current = 1;
     setBildirim(null);
-    setS(a < nAsama ? { ...START, a, i: asamaOge[a][0] } : { ...START, a: nAsama, q: 0 });
+    setS(a < nAsama ? { ...START, a, i: asamaOge[a][0] } : { ...START, a: nAsama, q: 0, cevap: ilkCevap(t.quiz[0]) });
   };
   // Akışta geri gitmek yok: önceki kartlar yukarıda duruyor. Puan yan etkileri setS'in dışında, olay anında yazılır.
   function step(dir: 1 | -1) {
@@ -118,23 +120,24 @@ export default function Lesson({
       kaydet("asama", 1, ilk ? PUAN.asama : 0);
       return setS({ ...s, ara: true, odul: ilk ? PUAN.asama : 0 });
     }
-    if (s.q >= 0 && s.q < nQuiz && s.picked !== null) {
+    if (s.q >= 0 && s.q < nQuiz && s.sonuc !== null) {
       if (s.q === nQuiz - 1) {
         const ilk = !prog[konuKey];
         kaydet("konu", 1, ilk ? PUAN.konu : 0);
-        return setS({ ...s, q: s.q + 1, picked: null, odul: ilk ? PUAN.konu : 0 });
+        return setS({ ...s, q: s.q + 1, cevap: null, sonuc: null, odul: ilk ? PUAN.konu : 0 });
       }
-      setS({ ...s, q: s.q + 1, picked: null });
+      setS({ ...s, q: s.q + 1, cevap: ilkCevap(t.quiz[s.q + 1]), sonuc: null });
     }
   }
-  const pick = (k: number) => {
-    if (s.picked !== null) return;
-    const ok = k === t.quiz[s.q].a;
+  /** Test sorusunu değerlendirir (çoktan seçmelide şık seçilince, etkileşimlide "Kontrol et" ile). */
+  const degerlendir = (cevap: Cevap) => {
+    if (s.sonuc !== null) return;
+    const ok = dogruMu(t.quiz[s.q], cevap);
     // Yanlış yapılan soru akıllı tekrara girer: 1, 3 ve 7 gün sonra yeniden sorulur.
     if (!ok) yanlisKaydet(`${ders}.${id}.${s.q}`);
     kaydet("soru");
     if (ok) kaydet("dogru", 1, PUAN.dogru);
-    setS((p) => (p.picked !== null ? p : { ...p, picked: k, right: p.right + (ok ? 1 : 0) }));
+    setS((p) => (p.sonuc !== null ? p : { ...p, cevap, sonuc: ok, right: p.right + (ok ? 1 : 0) }));
   };
 
   // Klavye
@@ -339,19 +342,20 @@ export default function Lesson({
       </Alt>
     );
   } else if (s.q < nQuiz) {
-    const Q = t.quiz[s.q], p = s.picked, ok = p === Q.a;
+    const Q = t.quiz[s.q], sonuc = s.sonuc, ok = sonuc === true, etkilesimli = !secmeli(Q), not = yonerge(Q);
     key = `q${s.q}`;
     body = (
       <article className="flex flex-col gap-4">
         <span className="text-[13px] font-bold tabular-nums text-acc">Soru {s.q + 1} / {nQuiz}</span>
-        <Html as="h2" className={p === null ? "text-[22px]" : "text-lg"} html={Q.q} />
-        <Secenekler q={Q} picked={p} pick={pick} />
+        <Html as="h2" className={sonuc === null ? "text-[22px]" : "text-lg"} html={Q.q} />
+        {not && sonuc === null && <p className="-mt-2 text-[14px] font-medium text-muted-foreground">{not}</p>}
+        <TestGovde q={Q} cevap={s.cevap} setCevap={(c) => setS((p) => (p.sonuc !== null ? p : { ...p, cevap: c }))} sonuc={sonuc} sec={degerlendir} tohum={`${konuKey}.${s.q}`} />
       </article>
     );
     controls = (
-      <Alt durum={p === null ? undefined : ok ? "ok" : "no"}>
+      <Alt durum={sonuc === null ? undefined : ok ? "ok" : "no"}>
         <AnimatePresence initial={false}>
-          {p !== null && (
+          {sonuc !== null && (
             <motion.div
               key="geri"
               aria-live="polite"
@@ -361,14 +365,18 @@ export default function Lesson({
               transition={{ duration: 0.2 }}
               className="overflow-hidden"
             >
-              <h2 className={cn("mb-0.5 text-lg", ok ? "text-good" : "text-bad")}>{ok ? "Doğru!" : `Doğru cevap ${"ABCD"[Q.a]}`}</h2>
+              <h2 className={cn("mb-0.5 text-lg", ok ? "text-good" : "text-bad")}>{geriBaslik(Q, ok)}</h2>
               <Html as="p" className="pb-3 text-[15px] leading-normal" html={Q.e} />
             </motion.div>
           )}
         </AnimatePresence>
-        <Button className="w-full" data-next disabled={p === null} onClick={() => step(1)}>
-          {s.q === nQuiz - 1 ? "Sonucu gör" : "Sonraki soru"}
-        </Button>
+        {etkilesimli && sonuc === null ? (
+          <Button className="w-full" data-next disabled={!hazir(Q, s.cevap)} onClick={() => degerlendir(s.cevap)}>Kontrol et</Button>
+        ) : (
+          <Button className="w-full" data-next disabled={sonuc === null} onClick={() => step(1)}>
+            {s.q === nQuiz - 1 ? "Sonucu gör" : "Sonraki soru"}
+          </Button>
+        )}
       </Alt>
     );
   } else {

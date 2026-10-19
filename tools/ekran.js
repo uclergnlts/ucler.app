@@ -112,6 +112,17 @@ server.listen(0, async () => {
     }
   }
 
+  /** Test sorusuna bir cevap kurar ve (etkileşimliyse) "Kontrol et"e basar. */
+  async function testCevapla(q) {
+    const tur = q.tur || 'secim';
+    if (tur === 'secim') { await p.locator('main article button').first().click(); await ileri(400); return; }
+    if (tur === 'sayi') await p.locator('main input[inputmode=decimal]').fill(String(q.cevap));
+    else if (tur === 'ayir') for (let k = 0; k < q.ogeler.length; k++) { await p.locator('[data-grup]').nth(k % q.gruplar.length).click(); await ileri(120); }
+    else if (tur === 'sahne') await kontrolDegistir(p.locator('main'), 0);
+    else while (await p.locator('[data-cip]').count()) { await p.locator('[data-cip]').first().click(); await ileri(120); }
+    await p.getByRole('button', { name: 'Kontrol et' }).click(); await ileri(400);
+  }
+
   for (const ders of Object.keys(dersler)) {
     const konular = oku(ders + '.json');
     for (const [id, t] of Object.entries(konular)) {
@@ -121,20 +132,31 @@ server.listen(0, async () => {
       const liste = akis(ders, id, t);
       // Konu girişi (aşama listesi) → "Başla" ile 1. aşama.
       try { await cek(`${ders}.${id}.00-giris`); await devam.click(); await ileri(600); } catch (e) { takilan.push(`${ders}/${id}: ${e.message.split('\n')[0]}`); continue; }
+      let takildi = false;
       try { for (let j = 0; j < liste.length; j++) {
         const o = liste[j], ad = `${ders}.${id}.${String(j + 1).padStart(2, '0')}-${o.tur === 'kart' ? 'k' : 'a'}${o.no}`;
         await cek(ad);
         if (o.tur === 'adim') {
           const ok = await gorevBitir(adimli.adimlar[o.no - 1]);
           await cek(`${ad}-bitti`);
-          if (!ok) { takilan.push(`${ders}/${id} adım ${o.no}`); break; }
+          if (!ok) { takilan.push(`${ders}/${id} adım ${o.no}`); takildi = true; break; }
         }
         if (await devam.isEnabled()) {
           await devam.click(); await ileri(600);
           // Aşama sonu ekranı: görüntüsünü al, sonraki aşamaya (ya da teste) geç.
           if (await p.getByRole('heading', { name: /aşama bitti$/ }).count()) { await cek(`${ad}-ara`); await devam.click(); await ileri(600); }
         }
-      } } catch (e) { takilan.push(`${ders}/${id}: ${e.message.split('\n')[0]}`); }
+      }
+      // Konu sonu testi: her soruyu cevapla (çoğu zaman yanlış; amaç geri bildirim ekranlarını görmek).
+      if (!takildi) for (let j = 0; j < t.quiz.length; j++) {
+        const ad = `${ders}.${id}.t${j + 1}`;
+        await cek(ad);
+        await testCevapla(t.quiz[j]);
+        await cek(`${ad}-sonuc`);
+        await devam.click(); await ileri(500);
+      }
+      if (!takildi) await cek(`${ders}.${id}.sonuc`);
+      } catch (e) { takilan.push(`${ders}/${id}: ${e.message.split('\n')[0]}`); }
     }
   }
   if (takilan.length) console.log('Tamamlanamayan adımlar:\n' + takilan.join('\n'));

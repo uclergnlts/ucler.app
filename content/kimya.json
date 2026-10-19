@@ -716,37 +716,88 @@
     ],
     "quiz": [
       {
-        "q": "<sup>35</sup><sub>17</sub>Cl atomunda kaç nötron vardır?",
-        "o": [
-          "17",
-          "18",
-          "35",
-          "52"
-        ],
-        "a": 1,
-        "e": "Nötron sayısı = A − Z = 35 − 17 = 18."
-      },
-      {
+        "tur": "sayi",
         "q": "Atom numarası 12 olan magnezyumun Mg<sup>2+</sup> iyonunda kaç elektron vardır?",
-        "o": [
-          "10",
-          "12",
-          "14",
-          "2"
-        ],
-        "a": 0,
+        "cevap": 10,
+        "birim": "elektron",
         "e": "Nötr Mg'de 12 elektron vardır; 2 elektron verince 12 − 2 = 10 elektron kalır."
       },
       {
-        "q": "<sup>12</sup>C ve <sup>14</sup>C atomları için hangisi doğrudur?",
-        "o": [
-          "Proton sayıları farklıdır",
-          "Farklı elementlerdir",
-          "İzotopturlar; nötron sayıları farklıdır",
-          "Elektron sayıları farklıdır"
+        "tur": "ayir",
+        "q": "Her atom çiftini doğru gruba koy. (Z: C 6, N 7, O 8, Na 11, Mg 12, Cl 17, Ar 18, Ca 20)",
+        "gruplar": [
+          "İzotop",
+          "İzobar",
+          "İzoton"
         ],
-        "a": 2,
-        "e": "İkisi de 6 protonlu karbondur; 12C'de 6, 14C'de 8 nötron vardır. Bunlar izotoptur."
+        "ogeler": [
+          [
+            "<sup>12</sup>C – <sup>14</sup>C",
+            0
+          ],
+          [
+            "<sup>35</sup>Cl – <sup>37</sup>Cl",
+            0
+          ],
+          [
+            "<sup>14</sup>C – <sup>14</sup>N",
+            1
+          ],
+          [
+            "<sup>40</sup>Ar – <sup>40</sup>Ca",
+            1
+          ],
+          [
+            "<sup>14</sup>C – <sup>16</sup>O",
+            2
+          ],
+          [
+            "<sup>23</sup>Na – <sup>24</sup>Mg",
+            2
+          ]
+        ],
+        "e": "İzotoplarda proton sayısı aynıdır, izobarlarda kütle numarası. İzotonlarda nötron sayısı aynıdır: <sup>14</sup>C ve <sup>16</sup>O'da 8, <sup>23</sup>Na ve <sup>24</sup>Mg'de 12 nötron vardır."
+      },
+      {
+        "tur": "sahne",
+        "q": "Sayaçlarla <sup>37</sup>Cl<sup>−</sup> iyonunu kur. (Cl: Z = 17)",
+        "sahne": {
+          "tur": "atom"
+        },
+        "deger": {
+          "p": 10,
+          "n": 10,
+          "e": 10
+        },
+        "kontroller": [
+          {
+            "ad": "p",
+            "etiket": "Proton",
+            "min": 1,
+            "max": 20,
+            "tur": "sayac"
+          },
+          {
+            "ad": "n",
+            "etiket": "Nötron",
+            "min": 0,
+            "max": 24,
+            "tur": "sayac"
+          },
+          {
+            "ad": "e",
+            "etiket": "Elektron",
+            "min": 0,
+            "max": 20,
+            "tur": "sayac"
+          }
+        ],
+        "hedef": {
+          "p": 17,
+          "n": 20,
+          "e": 18
+        },
+        "e": "Z = 17, yani 17 proton. Nötron = A − Z = 37 − 17 = 20. Yük −1: bir elektron fazla, yani 18 elektron."
       },
       {
         "q": "Hangi ikili izoelektroniktir? (Z: F 9, Ne 10, Na 11, Mg 12, Cl 17, Ar 18)",

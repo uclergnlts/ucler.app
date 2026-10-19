@@ -1205,37 +1205,58 @@
     ],
     "quiz": [
       {
-        "q": "Bir koşucu 400 m'lik pistte bir tur atıp başladığı yere dönüyor. Yer değiştirmesi kaç m?",
-        "o": [
-          "400",
-          "0",
-          "200",
-          "800"
+        "tur": "sahne",
+        "q": "Araba başlangıç noktasından 35 m ileri gidiyor, sonra 15 m geri dönüyor. Arabayı son konumuna götür.",
+        "sahne": {
+          "tur": "konum",
+          "hedef": 20
+        },
+        "deger": {
+          "x": 0
+        },
+        "kontroller": [
+          {
+            "ad": "x",
+            "etiket": "Konum",
+            "min": 0,
+            "max": 50,
+            "birim": "m"
+          }
         ],
-        "a": 1,
-        "e": "Başladığı noktaya döndüğü için Δx = 0; aldığı yol ise 400 m'dir."
+        "hedef": {
+          "x": 20
+        },
+        "e": "Son konum x = 35 − 15 = 20 m. Yer değiştirme +20 m, alınan yol ise 35 + 15 = 50 m'dir."
       },
       {
-        "q": "Durgun hâlden 3 m/s² ivmeyle hızlanan bisikletin 4 s sonraki hızı nedir?",
-        "o": [
-          "7 m/s",
-          "0,75 m/s",
-          "24 m/s",
-          "12 m/s"
-        ],
-        "a": 3,
+        "tur": "sayi",
+        "q": "Durgun hâlden 3 m/s² ivmeyle hızlanan bir bisikletin 4 s sonraki hızı kaç m/s olur?",
+        "cevap": 12,
+        "birim": "m/s",
         "e": "v = v₀ + a·t = 0 + 3·4 = 12 m/s."
       },
       {
-        "q": "Hız–zaman grafiğinin altındaki alan neyi verir?",
-        "o": [
-          "Yer değiştirmeyi",
-          "İvmeyi",
-          "Kuvveti",
-          "Anlık hızı"
+        "tur": "eslestir",
+        "q": "Hangi grafikten ne okunur? Eşleştir.",
+        "ciftler": [
+          [
+            "x–t grafiğinin eğimi",
+            "hız"
+          ],
+          [
+            "v–t grafiğinin eğimi",
+            "ivme"
+          ],
+          [
+            "v–t grafiğinin altındaki alan",
+            "yer değiştirme"
+          ],
+          [
+            "a–t grafiğinin altındaki alan",
+            "hız değişimi (Δv)"
+          ]
         ],
-        "a": 0,
-        "e": "Alan = hız × süre, yani yer değiştirme. Grafiğin eğimi ise ivmeyi verir."
+        "e": "Eğim, dikey eksendeki niceliğin ne hızla değiştiğini verir: x–t'de hız, v–t'de ivme. Alan ise çarpımı verir: v·t yer değiştirme, a·t hız değişimidir."
       },
       {
         "q": "Hava direnci yokken durgun bırakılan bir taş 2 s'de kaç m düşer? (g ≈ 9,8 m/s²)",

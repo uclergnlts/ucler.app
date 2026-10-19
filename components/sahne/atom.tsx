@@ -26,10 +26,11 @@ function Cekirdek({ p, n, x = CX, y = CY, r = 4.4 }: { p: number; n: number; x?:
 function Atom({ s, v }: SahneProps) {
   const p = v.p ?? 1, n = v.n ?? 0, e = v.e ?? p;
   const el = ELEMENTLER[p - 1], q = p - e, A = p + n, k = katmanlar(e);
-  const etiket = s.etiket === true;
+  // Testte (s.test) gösterim, yük ve element adı gizlenir: öğrenci sayıları kendisi kurar.
+  const etiket = s.etiket === true, gizli = s.test === true;
   const durum = q === 0 ? "Nötr atom" : q > 0 ? `Katyon: ${q} elektron verdi` : `Anyon: ${-q} elektron aldı`;
   return (
-    <svg viewBox="0 0 340 224" role="img" aria-label={`${el.ad}: ${p} proton, ${n} nötron, ${e} elektron`}>
+    <svg viewBox="0 0 340 224" role="img" aria-label={gizli ? `${p} proton, ${n} nötron, ${e} elektron` : `${el.ad}: ${p} proton, ${n} nötron, ${e} elektron`}>
       {k.map((c, i) => (
         <g key={i}>
           <circle cx={CX} cy={CY} r={R[i]} fill="none" stroke="var(--line-2)" strokeWidth={1.5} />
@@ -54,7 +55,7 @@ function Atom({ s, v }: SahneProps) {
           <text x={240} y={166} fill="var(--muted)" fontWeight={600}>= proton + nötron</text>
         </g>
       )}
-      {!etiket && (
+      {!etiket && !gizli && (
         <g>
           <text x={262} y={58} fontSize={15} textAnchor="end" fill="var(--ink)" fontWeight={600}>{A}</text>
           <text x={262} y={94} fontSize={15} textAnchor="end" fill="var(--c2)" fontWeight={600}>{p}</text>
