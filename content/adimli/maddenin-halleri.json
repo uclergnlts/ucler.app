@@ -128,38 +128,100 @@
    }
   },
   {
-   "baslik": "Kaynama ve dış basınç",
-   "metin": "Buhar basıncı dış basınca eşitlenince sıvının her yerinde kabarcık oluşur: <b>kaynama</b>. Dış basınç değişirse kaynama noktası da değişir. Basıncı düdüklü tencereninkine (2 atm) çıkar.",
+   "baslik": "Kaynama laboratuvarı",
+   "metin": "Kaptaki suyu ısıt; sıcaklığı, grafiği ve iki basıncı izle. Buhar basıncı dış basınca eşitlenince sıvının her yerinde kabarcık oluşur: <b>kaynama</b>. Dış basıncı da değiştirebilirsin. Aşağıdakileri kendin bul.",
    "sahne": {
-    "tur": "kim4-kaynama"
+    "tur": "sim-kaynama"
    },
    "deger": {
-    "p": 10
+    "isit": 0,
+    "p": 10,
+    "kayniyor": 0,
+    "Tsu": 20
    },
    "kontroller": [
     {
+     "ad": "isit",
+     "etiket": "Isıtıcı",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
      "ad": "p",
      "etiket": "Dış basınç",
-     "min": 3,
+     "min": 2,
      "max": 20,
      "carpan": 0.1,
      "birim": "atm"
     }
    ],
    "gorev": {
-    "tur": "ayarla",
-    "hedef": {
-     "p": 20
-    },
-    "tamam": "2 atm'de su yaklaşık 120 °C'de kaynar; yemek bu yüzden çabuk pişer. Basınç düşünce kaynama noktası da düşer: Everest'te (≈ 0,3 atm) su yaklaşık 70 °C'de kaynar. 1 atm'deki kaynama noktasına <b>normal kaynama noktası</b> denir (su: 100 °C)."
+    "tur": "kesfet",
+    "bulgular": [
+     {
+      "yazi": "1 atm'de suyu ısıt ve kaynat. Kaynarken ısıtmaya devam ettiğin hâlde sıcaklık ne yapıyor?",
+      "hedef": {
+       "p": 10,
+       "kayniyor": 1,
+       "Tsu": [
+        99,
+        101
+       ]
+      },
+      "coz": [
+       {
+        "p": 10,
+        "isit": 1
+       }
+      ],
+      "tamam": "Su 100 °C'de kaynadı ve sıcaklık sabit kaldı: verilen ısı artık sıcaklığı artırmıyor, sıvıyı buhara çeviriyor. 1 atm'deki bu sıcaklığa <b>normal kaynama noktası</b> denir."
+     },
+     {
+      "yazi": "Yüksek bir dağdaymışsın gibi dış basıncı <b>0,5 atm</b>'ye indir. Su kaç derecede kaynıyor?",
+      "hedef": {
+       "p": [
+        4,
+        6
+       ],
+       "kayniyor": 1,
+       "Tsu": [
+        75,
+        87
+       ]
+      },
+      "coz": [
+       {
+        "isit": 1,
+        "p": 5
+       }
+      ],
+      "tamam": "Yaklaşık 81 °C: buhar basıncının dış basınca yetişmesi için daha az ısınmak yetti. Everest'te (≈ 0,3 atm) su yaklaşık 70 °C'de kaynar; makarna zor pişer."
+     },
+     {
+      "yazi": "Düdüklü tencere gibi dış basıncı <b>2 atm</b>'ye çıkar ve yeniden kaynat.",
+      "hedef": {
+       "p": [
+        18,
+        20
+       ],
+       "kayniyor": 1,
+       "Tsu": [
+        116,
+        122
+       ]
+      },
+      "coz": [
+       {
+        "isit": 1,
+        "p": 20
+       }
+      ],
+      "tamam": "Yaklaşık 121 °C'de kaynadı: dış basınç artınca kaynama noktası yükselir. Yemek daha sıcak suda olduğu için daha çabuk pişer."
+     }
+    ]
    },
-   "kart": 7,
-   "goster": {
-    "deger": {
-     "p": 5
-    },
-    "not": "0,5 atm'de (≈ 5500 m yükseklik) su yaklaşık <b>82 °C</b>'de kaynar: dış basınç düşünce kaynama noktası da düşer."
-   }
+   "kart": 7
   },
   {
    "baslik": "Hâl değişimi ve ısı",

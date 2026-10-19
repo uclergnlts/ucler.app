@@ -799,7 +799,192 @@ function AvLab({ v, set, saat = 0 }: SahneProps) {
   );
 }
 
+/* ---------- fizik: ipte ilerleyen dalga ---------- */
+
+const DALGA = { x0: 30, x1: 330, BOY: 8, Y: 112 };
+
+function DalgaLab({ v, saat = 0 }: SahneProps) {
+  const f = v.f ?? 1, hz = v.v ?? 4, A = v.A ?? 2, lam = hz / f;
+  const dt = useAdim(saat);
+  // Faz birikir: frekans değişince kaynak zıplamadan yeni frekansla titreşir. Üçgen bir tepeyi izler (v hızıyla gider).
+  const r = useRef({ faz: 0, xm: -1 });
+  const d = r.current;
+  d.faz += 2 * Math.PI * f * dt;
+  const s0 = d.faz / (2 * Math.PI) - 0.25;
+  const tepe = (x: number) => lam * (s0 - Math.round(s0 - x / lam));
+  d.xm = tepe(Math.max(0, d.xm));
+  if (d.xm > DALGA.BOY || d.xm < 0) d.xm = lam * (s0 - Math.floor(s0));
+  const px = (x: number) => DALGA.x0 + (x / DALGA.BOY) * (DALGA.x1 - DALGA.x0), AP = A * 7;
+  const y = (x: number) => DALGA.Y - AP * Math.sin(d.faz - (2 * Math.PI * x) / lam);
+  const ip = Array.from({ length: 241 }, (_, i) => { const x = (i / 240) * DALGA.BOY; return `${px(x).toFixed(1)},${y(x).toFixed(1)}`; }).join(" ");
+  const x1 = d.xm + lam <= DALGA.BOY ? d.xm : d.xm - lam;
+  const KIRMIZI = 6;
+  return (
+    <svg viewBox="0 0 340 214" role="img" aria-label={`Frekans ${say(f)} hertz, hız ${hz} metre bölü saniye: dalga boyu ${say(lam, 2)} metre`}>
+      <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">v = λ·f → {hz} m/s = {say(lam, 2)} m × {say(f)} Hz</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">periyot T = {say(1 / f, 2)} s · genlik {A} cm</text>
+      {/* kaynak */}
+      <rect x={10} y={y(0) - 9} width={16} height={18} rx={4} fill="var(--fizik)" />
+      <line x1={18} x2={18} y1={DALGA.Y - 40} y2={DALGA.Y + 40} stroke="var(--line-2)" strokeDasharray="3 4" />
+      <line x1={DALGA.x0} x2={DALGA.x1} y1={DALGA.Y} y2={DALGA.Y} stroke="var(--line-2)" strokeDasharray="2 4" />
+      <polyline points={ip} fill="none" stroke="var(--ink)" strokeWidth={2.4} strokeLinejoin="round" />
+      {/* izlenen tepe ve dalga boyu */}
+      <path d={`M${px(d.xm) - 6} ${DALGA.Y - AP - 16} l12 0 l-6 9 z`} fill="var(--fizik)" />
+      {x1 >= 0 && (
+        <g stroke="var(--fizik)" strokeWidth={1.5}>
+          <line x1={px(x1)} x2={px(x1 + lam)} y1={DALGA.Y + AP + 14} y2={DALGA.Y + AP + 14} />
+          <line x1={px(x1)} x2={px(x1)} y1={DALGA.Y + AP + 9} y2={DALGA.Y + AP + 19} />
+          <line x1={px(x1 + lam)} x2={px(x1 + lam)} y1={DALGA.Y + AP + 9} y2={DALGA.Y + AP + 19} />
+          <text x={px(x1 + lam / 2)} y={DALGA.Y + AP + 30} fontSize={11} fontWeight={800} fill="var(--fizik)" stroke="none" textAnchor="middle">λ = {say(lam, 2)} m</text>
+        </g>
+      )}
+      {/* yerinde titreşen ip parçası */}
+      <line x1={px(KIRMIZI)} x2={px(KIRMIZI)} y1={DALGA.Y - AP - 4} y2={DALGA.Y + AP + 4} stroke="var(--c2)" strokeOpacity={0.35} strokeWidth={1.5} />
+      <circle cx={px(KIRMIZI)} cy={y(KIRMIZI)} r={5} fill="var(--c2)" />
+      {/* cetvel */}
+      <line x1={DALGA.x0} x2={DALGA.x1} y1={190} y2={190} stroke="var(--ink)" strokeWidth={1.2} />
+      {Array.from({ length: DALGA.BOY + 1 }, (_, i) => (
+        <g key={i}>
+          <line x1={px(i)} x2={px(i)} y1={186} y2={194} stroke="var(--ink)" strokeWidth={1.2} />
+          <text x={px(i)} y={207} fontSize={10} fill="var(--muted)" textAnchor="middle">{i}{i === DALGA.BOY ? " m" : ""}</text>
+        </g>
+      ))}
+    </svg>
+  );
+}
+
+/* ---------- kimya: kaynama ve dış basınç ---------- */
+
+/** Su: buharlaşma ısısı 40,7 kJ/mol; Clausius-Clapeyron ile buhar basıncı (atm) ve kaynama noktası (°C). */
+const BUHAR_H = 40700;
+const buharP = (T: number) => Math.exp((-BUHAR_H / R_J) * (1 / (T + 273.15) - 1 / 373.15));
+const kaynamaT = (P: number) => 1 / (1 / 373.15 - (R_J * Math.log(P)) / BUHAR_H) - 273.15;
+type Kabarcik2 = { t: number; x: number; y: number };
+
+function KaynamaLab({ v, set, saat = 0 }: SahneProps) {
+  const P = (v.p ?? 10) / 10, isit = v.isit === 1, Tb = kaynamaT(P);
+  const dt = useAdim(saat);
+  const r = useRef<{ T: number; k: Kabarcik2[]; biri: number }>({ T: 20, k: [], biri: 0 });
+  const d = r.current;
+  // Isıtıcı açıkken sabit hızla ısınır; kaynama noktasında verilen ısı hâl değişimine gider, sıcaklık sabit kalır.
+  // Basınç birden düşerse su kaynama noktasının üstünde kalır: şiddetle kaynar ve kaynama noktasına kadar soğur.
+  if (isit) d.T = Math.min(d.T + 14 * dt, Math.max(Tb, d.T));
+  else d.T -= (d.T - 20) * 0.12 * dt;
+  if (d.T > Tb) d.T = Math.max(Tb, d.T - 30 * dt);
+  const kayniyor = d.T >= Tb - 0.01 && (isit || d.T > Tb + 0.01);
+  d.biri += (kayniyor ? (d.T > Tb + 0.5 ? 40 : 18) : 0) * dt;
+  while (d.biri >= 1) { d.biri -= 1; d.k.push({ t: saat, x: 46 + Math.random() * 108, y: 196 - Math.random() * 30 }); }
+  d.k = d.k.filter((b) => saat - b.t < 1.1);
+  useBildir(v, set, { kayniyor: kayniyor ? 1 : 0, Tsu: Math.round(d.T) });
+  const g = useGecmis(saat, d.T, 20, 0.1);
+  const Pv = buharP(d.T);
+  const GR = { x0: 212, x1: 330, ust: 66, alt: 150, TMAX: 130 };
+  const gx = (t: number) => GR.x1 - ((saat - t) / 20) * (GR.x1 - GR.x0), gy = (T: number) => GR.alt - (T / GR.TMAX) * (GR.alt - GR.ust);
+  const BAR = { x0: 212, x1: 330, PMAX: 2.2 }, bw = (p: number) => (Math.min(p, BAR.PMAX) / BAR.PMAX) * (BAR.x1 - BAR.x0);
+  const sicak = sinir((d.T - 20) / 100, 0, 1), nOk = Math.round(2 + P * 3);
+  return (
+    <svg viewBox="0 0 340 236" role="img" aria-label={`Dış basınç ${say(P)} atmosfer, su ${Math.round(d.T)} derece, ${kayniyor ? "kaynıyor" : "kaynamıyor"}`}>
+      <text x={10} y={22} fontSize={13} fontWeight={800} fill={kayniyor ? "var(--good)" : "var(--ink)"}>{kayniyor ? "Kaynıyor: buhar basıncı = dış basınç" : isit ? "Isınıyor" : "Isıtıcı kapalı"}</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">su {say(d.T)} °C · kaynama noktası {say(Tb)} °C</text>
+      {/* dış basınç okları */}
+      {Array.from({ length: nOk }, (_, i) => { const x = 48 + (i * 104) / Math.max(1, nOk - 1); return <path key={i} d={`M${x} 58 l0 18 m-4 -6 l4 6 l4 -6`} fill="none" stroke="var(--ink)" strokeWidth={1.6} strokeLinecap="round" />; })}
+      {/* kap ve su */}
+      <path d="M36 92 L36 206 Q36 214 44 214 L156 214 Q164 214 164 206 L164 92" fill="none" stroke="var(--ink)" strokeWidth={2} />
+      <rect x={37} y={112} width={126} height={101} fill={`rgb(${Math.round(47 + sicak * 160)},${Math.round(124 - sicak * 30)},${Math.round(246 - sicak * 150)})`} opacity={0.14} />
+      <line x1={37} x2={163} y1={112} y2={112} stroke="var(--c1)" strokeWidth={1.5} />
+      {d.k.map((b, i) => { const u = (saat - b.t) / 1.1, yy = b.y - u * (b.y - 114); return <circle key={i} cx={b.x + Math.sin(u * 8 + i) * 2} cy={yy} r={2 + u * 3} fill="#fff" stroke="var(--c1)" strokeWidth={1.2} opacity={1 - u * 0.6} />; })}
+      {/* ocak */}
+      <rect x={30} y={218} width={140} height={6} rx={3} fill="var(--ink)" />
+      {isit && [52, 76, 100, 124, 148].map((x, i) => <path key={x} d={`M${x - 5} 218 Q${x} ${206 - Math.sin(saat * 9 + i) * 3} ${x + 5} 218 Z`} fill="var(--c2)" opacity={0.85} />)}
+      {/* sıcaklık-zaman grafiği */}
+      <line x1={GR.x0} x2={GR.x1} y1={GR.alt} y2={GR.alt} stroke="var(--ink)" strokeWidth={1.2} />
+      <line x1={GR.x0} x2={GR.x0} y1={GR.ust - 6} y2={GR.alt} stroke="var(--ink)" strokeWidth={1.2} />
+      <line x1={GR.x0} x2={GR.x1} y1={gy(Tb)} y2={gy(Tb)} stroke="var(--good)" strokeDasharray="4 4" />
+      <line x1={GR.x0} x2={GR.x0 + 14} y1={GR.alt + 12} y2={GR.alt + 12} stroke="var(--good)" strokeDasharray="4 3" />
+      <text x={GR.x0 + 18} y={GR.alt + 15.5} fontSize={9.5} fontWeight={700} fill="var(--good)">kaynama noktası</text>
+      <polyline points={g.map((p) => `${gx(p.t).toFixed(1)},${gy(p.d).toFixed(1)}`).join(" ")} fill="none" stroke="var(--kimya)" strokeWidth={2.2} />
+      <text x={GR.x0 + 4} y={GR.ust - 10} fontSize={10.5} fontWeight={700} fill="var(--muted)">sıcaklık (son 20 s)</text>
+      {/* basınç karşılaştırması */}
+      <g fontSize={10.5} fontWeight={700}>
+        <text x={BAR.x0} y={180} fill="var(--kimya)">buhar basıncı {say(Pv, 2)} atm</text>
+        <rect x={BAR.x0} y={185} width={BAR.x1 - BAR.x0} height={8} rx={4} fill="var(--line)" />
+        <rect x={BAR.x0} y={185} width={bw(Pv)} height={8} rx={4} fill="var(--kimya)" />
+        <text x={BAR.x0} y={209} fill="var(--ink)">dış basınç {say(P)} atm</text>
+        <rect x={BAR.x0} y={214} width={BAR.x1 - BAR.x0} height={8} rx={4} fill="var(--line)" />
+        <rect x={BAR.x0} y={214} width={bw(P)} height={8} rx={4} fill="var(--ink)" />
+      </g>
+    </svg>
+  );
+}
+
+/* ---------- biyoloji: çaprazlama laboratuvarı ---------- */
+
+const GENOTIP = ["aa", "Aa", "AA"], MOR = "var(--c5)";
+
+function CaprazLab({ v, set }: SahneProps) {
+  const p1 = v.p1 ?? 2, p2 = v.p2 ?? 0;
+  const r = useRef({ p1, p2, uretilen: v.uretildi ?? 0, mor: 0, beyaz: 0, son: [] as number[] });
+  const d = r.current;
+  if (d.p1 !== p1 || d.p2 !== p2) Object.assign(d, { p1, p2, mor: 0, beyaz: 0, son: [] });
+  // Her basışta 100 yavru: her ebeveyn A alelini (A sayısı / 2) olasılıkla verir.
+  while ((v.uretildi ?? 0) > d.uretilen) {
+    d.uretilen += 1;
+    d.son = Array.from({ length: 100 }, () => (Math.random() < p1 / 2 ? 1 : 0) + (Math.random() < p2 / 2 ? 1 : 0));
+    for (const n of d.son) if (n) d.mor += 1; else d.beyaz += 1;
+  }
+  const top = d.mor + d.beyaz, beyazYuzde = top ? Math.round((d.beyaz / top) * 100) : 0;
+  useBildir(v, set, { yavru: top, beyazYuzde });
+  const g1 = p1 === 2 ? ["A", "A"] : p1 === 1 ? ["A", "a"] : ["a", "a"], g2 = p2 === 2 ? ["A", "A"] : p2 === 1 ? ["A", "a"] : ["a", "a"];
+  const beklenen = Math.round((1 - p1 / 2) * (1 - p2 / 2) * 100);
+  const cicek = (x: number, y: number, mor: boolean, rr: number) => (
+    <g>
+      {[0, 1, 2, 3, 4].map((k) => { const a = (k * 2 * Math.PI) / 5 - Math.PI / 2; return <circle key={k} cx={x + Math.cos(a) * rr * 0.55} cy={y + Math.sin(a) * rr * 0.55} r={rr * 0.5} fill={mor ? MOR : "#fff"} stroke={mor ? MOR : "var(--line-2)"} strokeWidth={1.2} />; })}
+      <circle cx={x} cy={y} r={rr * 0.3} fill="var(--c4)" />
+    </g>
+  );
+  const PU = { x: 22, y: 92, h: 30 };
+  return (
+    <svg viewBox="0 0 340 236" role="img" aria-label={`${GENOTIP[p1]} çarpı ${GENOTIP[p2]}: ${top} yavru, ${d.mor} mor, ${d.beyaz} beyaz`}>
+      {cicek(24, 24, p1 > 0, 14)}
+      <text x={44} y={30} fontSize={15} fontWeight={800} fill="var(--ink)">{GENOTIP[p1]}</text>
+      <text x={76} y={30} fontSize={15} fontWeight={700} fill="var(--muted)">×</text>
+      {cicek(104, 24, p2 > 0, 14)}
+      <text x={124} y={30} fontSize={15} fontWeight={800} fill="var(--ink)">{GENOTIP[p2]}</text>
+      <text x={160} y={22} fontSize={12} fontWeight={700} fill="var(--muted)">beklenen beyaz: %{beklenen}</text>
+      <text x={160} y={39} fontSize={12} fontWeight={800} fill="var(--ink)">{top ? `çıkan beyaz: %${beyazYuzde}` : "henüz yavru yok"}</text>
+      {/* Punnett karesi */}
+      <text x={PU.x} y={PU.y - 26} fontSize={10.5} fontWeight={700} fill="var(--muted)">Punnett karesi</text>
+      {g1.map((a, i) => <text key={`u${i}`} x={PU.x + PU.h * (i + 1) + PU.h / 2} y={PU.y - 6} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">{a}</text>)}
+      {g2.map((b, j) => <text key={`s${j}`} x={PU.x + PU.h / 2} y={PU.y + PU.h * j + PU.h / 2 + 5} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">{b}</text>)}
+      {g2.map((b, j) => g1.map((a, i) => {
+        const gt = [a, b].sort().join(""), mor = gt.includes("A");
+        return (
+          <g key={`${i}${j}`}>
+            <rect x={PU.x + PU.h * (i + 1)} y={PU.y + PU.h * j} width={PU.h} height={PU.h} fill={mor ? "var(--biyoloji-soft)" : "#fff"} stroke="var(--line-2)" />
+            <text x={PU.x + PU.h * (i + 1) + PU.h / 2} y={PU.y + PU.h * j + PU.h / 2 + 5} fontSize={12} fontWeight={700} fill={mor ? MOR : "var(--muted)"} textAnchor="middle">{gt}</text>
+          </g>
+        );
+      }))}
+      <g fontSize={11.5} fontWeight={700}>
+        <text x={PU.x} y={182} fill={MOR}>mor {d.mor}</text>
+        <text x={PU.x} y={199} fill="var(--muted)">beyaz {d.beyaz}</text>
+        <text x={PU.x} y={216} fill="var(--ink)">{d.beyaz ? `oran ${say(d.mor / d.beyaz)} : 1` : top ? "hepsi mor" : ""}</text>
+      </g>
+      {/* son 100 yavru */}
+      <text x={128} y={66} fontSize={10.5} fontWeight={700} fill="var(--muted)">{top ? `son 100 yavru · toplam ${top}` : "yavru üretmek için düğmeye bas"}</text>
+      <rect x={124} y={72} width={208} height={156} rx={10} fill="var(--biyoloji-soft)" opacity={0.6} />
+      {d.son.map((n, i) => (
+        <circle key={i} cx={136 + (i % 10) * 20.4} cy={84 + Math.floor(i / 10) * 14.8} r={5.2} fill={n ? MOR : "#fff"} stroke={n ? MOR : "var(--line-2)"} strokeWidth={1.2} />
+      ))}
+    </svg>
+  );
+}
+
 export const SIMULASYON: Record<string, SahneKaydi> = {
+  "sim-dalga": { C: DalgaLab, canli: true, olc: (v) => ({ lam: Math.round(((v.v ?? 4) / (v.f ?? 1)) * 100) / 100 }) },
+  "sim-kaynama": { C: KaynamaLab, canli: true },
+  // "100 yavru üret": uretildi sayacı artar, sahne 100 yeni yavru çizer. Ebeveyn değişince sayım sıfırlanır.
+  "sim-capraz": { C: CaprazLab, bagla: (ad, x, v) => (ad === "uret" ? { ...v, uret: 0, uretildi: (v.uretildi ?? 0) + 1 } : { ...v, [ad]: x }) },
   "sim-yay": { C: YayLab, canli: true, olc: (v) => ({ T: Math.round(yayT(v.m ?? 1, v.k ?? 40) * 100) / 100 }) },
   "sim-denge": {
     C: DengeLab,

@@ -19,16 +19,6 @@
       "kart": 3
     },
     {
-      "baslik": "Dalga boyu ve frekans",
-      "metin": "Bu ipte dalganın hızı <b>4 m/s</b>. Dalga bir periyotta bir dalga boyu ilerler: <b>v = λ·f</b>. Frekansı ayarla, dalga boyu <b>1 m</b> olsun.",
-      "sahne": {"tur": "fiz11-dalga"},
-      "deger": {"f": 1},
-      "kontroller": [{"ad": "f", "etiket": "Frekans", "min": 1, "max": 4, "tur": "sayac", "birim": "Hz"}],
-      "gorev": {"tur": "ayarla", "hedef": {"f": 4}, "tamam": "f = 4 Hz'de λ = 4 / 4 = <b>1 m</b>, periyot T = 1/f = 0,25 s. Frekansı artırınca hız değişmedi, yalnızca dalga boyu kısaldı. Hızı ortam, frekansı kaynak belirler.", "ipucu": "λ = v / f; 1 m için f = 4 / 1."},
-      "kart": 4,
-      "goster": {"deger": {"f": 2}, "not": "f = 2 Hz'de λ = 4 / 2 = 2 m, periyot T = 1/2 = 0,5 s. Hız yine 4 m/s."}
-    },
-    {
       "baslik": "Başka bir ortama geçiş",
       "metin": "Dalga ince ipten kalın ipe geçecek. Frekansı kaynak, hızı ortam belirler.",
       "sahne": {"tur": "fiz11-ortam", "sure": 5},
@@ -47,6 +37,26 @@
         {"yazi": "Büyük genlikli dalga", "neden": "Büyük genlikli dalga daha çok enerji taşır ama daha hızlı gitmez."},
         {"yazi": "Küçük genlikli dalga", "neden": "Küçük genlik dalgayı hızlandırmaz; iki dalga aynı ortamda."},
         {"yazi": "İkisi yan yana gider", "dogru": true, "neden": "Dalganın hızını ortam belirler. Genlik ise dalganın taşıdığı enerjiyi belirler: genlik 3 katına çıkınca enerji 9 katına çıkar."}
+      ]},
+      "kart": 5
+    },
+    {
+      "baslik": "Dalga laboratuvarı",
+      "metin": "Kaynak ipi titreştiriyor; dalga sağa ilerliyor. Üçgen bir tepeyi izliyor, kırmızı nokta ise ipin bir parçası. Frekansı, dalga hızını (ipin gerginliğini) ve genliği değiştir. Aşağıdakileri kendin bul.",
+      "sahne": {"tur": "sim-dalga"},
+      "deger": {"f": 1, "v": 4, "A": 2},
+      "kontroller": [
+        {"ad": "f", "etiket": "Frekans", "min": 1, "max": 4, "adim": 0.5, "tur": "sayac", "birim": "Hz"},
+        {"ad": "v", "etiket": "Dalga hızı", "min": 2, "max": 8, "adim": 2, "tur": "sayac", "birim": "m/s"},
+        {"ad": "A", "etiket": "Genlik", "min": 1, "max": 4, "birim": "cm"}
+      ],
+      "gorev": {"tur": "kesfet", "bulgular": [
+        {"yazi": "Hız 4 m/s iken frekansı <b>1 Hz</b>'den <b>2 Hz</b>'e çıkar. Dalga boyuna ne oluyor?", "hedef": [{"v": 4, "f": 1}, {"v": 4, "f": 2}], "sirali": true, "coz": [{"v": 4, "f": 1}, {"f": 2}],
+          "tamam": "λ 4 m'den 2 m'ye indi. Aynı ipte hız değişmez; frekans 2 katına çıkınca dalga boyu yarıya iner: <b>v = λ·f</b>."},
+        {"yazi": "Frekansı <b>4 Hz</b> yap ama dalga boyu <b>2 m</b>'de kalsın.", "hedef": {"f": 4, "lam": 2}, "coz": [{"v": 8, "f": 4}],
+          "tamam": "Dalga boyu aynı kalsın diye hızın da 2 katına çıkması gerekti: ipi gerdin. Hızı ortam belirler, frekansı kaynak."},
+        {"yazi": "Dalga boyunu <b>0,5 m</b>'ye indir ve kırmızı noktayı izle.", "hedef": {"lam": 0.5}, "coz": [{"v": 2, "f": 4}],
+          "tamam": "2 m/s ve 4 Hz'de λ = 0,5 m. Dalga sağa ilerlerken kırmızı nokta yalnızca aşağı yukarı titreşti: dalga enerji taşır, madde taşımaz."}
       ]},
       "kart": 5
     },

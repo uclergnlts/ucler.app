@@ -37,15 +37,18 @@
    "kart": 3
   },
   {
-   "baslik": "Ayrılma yasası",
-   "metin": "Şimdi F₁ bitkilerini kendi aralarında çaprazla. Gamet oluşurken iki alel ayrılır, her gamete biri gider. İki ebeveyni de <b>Aa</b> yap.",
+   "baslik": "Çaprazlama laboratuvarı",
+   "metin": "Bezelyede mor (<b>A</b>) beyaza (<b>a</b>) baskın. Ebeveynleri seç ve yavru üret: her ebeveyn her yavruya alellerinden birini rastgele verir. Punnett karesi beklenen oranı, yavrular gerçekte çıkanı gösterir. Aşağıdakileri kendin bul.",
    "sahne": {
-    "tur": "biy5-punnett",
-    "mod": "baskin"
+    "tur": "sim-capraz"
    },
    "deger": {
     "p1": 2,
-    "p2": 0
+    "p2": 0,
+    "uret": 0,
+    "uretildi": 0,
+    "yavru": 0,
+    "beyazYuzde": 0
    },
    "kontroller": [
     {
@@ -61,24 +64,95 @@
      "min": 0,
      "max": 2,
      "tur": "sayac"
+    },
+    {
+     "ad": "uret",
+     "etiket": "100 yavru üret",
+     "min": 0,
+     "max": 1,
+     "tur": "dugme"
     }
    ],
    "gorev": {
-    "tur": "ayarla",
-    "hedef": {
-     "p1": 1,
-     "p2": 1
-    },
-    "tamam": "Aa × Aa: genotipte <b>1 AA : 2 Aa : 1 aa</b>, fenotipte <b>3 mor : 1 beyaz</b>. Beyaz yeniden ortaya çıktı. Bu oranlar olasılıktır: 4 yavrudan tam 1'inin beyaz çıkması garanti değildir."
+    "tur": "kesfet",
+    "bulgular": [
+     {
+      "yazi": "F₁ bitkilerini kendi aralarında çaprazla (<b>Aa × Aa</b>) ve 100 yavru üret. Mor:beyaz oranı kaç?",
+      "hedef": {
+       "p1": 1,
+       "p2": 1,
+       "yavru": [
+        100,
+        100000
+       ]
+      },
+      "coz": [
+       {
+        "p1": 1,
+        "p2": 1
+       },
+       {
+        "uret": 1
+       }
+      ],
+      "tamam": "Yaklaşık <b>3 mor : 1 beyaz</b>; genotipte 1 AA : 2 Aa : 1 aa. F₁'de görünmeyen beyaz yeniden ortaya çıktı: alel kaybolmamış, Aa bitkilerde saklanmıştı."
+     },
+     {
+      "yazi": "Kaç yavru üretirsen üret <b>hiç beyaz</b> çıkmayan bir çaprazlama bul.",
+      "hedef": {
+       "yavru": [
+        100,
+        100000
+       ],
+       "beyazYuzde": 0
+      },
+      "coz": [
+       {
+        "p1": 2,
+        "p2": 1
+       },
+       {
+        "uret": 1
+       }
+      ],
+      "tamam": "Ebeveynlerden biri AA ise her yavru ondan bir A alır ve mor olur. Beyaz yavru için iki ebeveynin de a vermesi gerekir."
+     },
+     {
+      "yazi": "Aa × Aa'da yavru sayısını <b>500</b>'e çıkar. Beyaz oranı %25'e yaklaşıyor mu?",
+      "hedef": {
+       "p1": 1,
+       "p2": 1,
+       "yavru": [
+        500,
+        100000
+       ]
+      },
+      "coz": [
+       {
+        "p1": 1,
+        "p2": 1
+       },
+       {
+        "uret": 1
+       },
+       {
+        "uret": 1
+       },
+       {
+        "uret": 1
+       },
+       {
+        "uret": 1
+       },
+       {
+        "uret": 1
+       }
+      ],
+      "tamam": "Az yavruda oran şansa göre sapar; yavru sayısı arttıkça %25'e yaklaşır. Mendel bu yüzden binlerce bezelye saydı. Oranlar olasılıktır: 4 yavrudan tam 1'inin beyaz çıkması garanti değildir."
+     }
+    ]
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "p1": 2,
-     "p2": 1
-    },
-    "not": "AA × Aa: yavruların yarısı AA, yarısı Aa ve <b>hepsi mor</b>. Beyaz yavru için iki ebeveynin de a vermesi gerekir."
-   }
+   "kart": 4
   },
   {
    "baslik": "Kontrol çaprazlaması",
