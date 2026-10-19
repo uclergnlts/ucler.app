@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Gen havuzu",
-   "metin": "Bir popülasyondaki bütün aleller <b>gen havuzunu</b> oluşturur; bir alelin bu havuzdaki payı <b>alel frekansıdır</b>. Kuşakları değiştir ve havuzu izle.",
+   "metin": "Kuşakları değiştir ve <b>gen havuzunu</b> izle.",
    "sahne": { "tur": "biy14-havuz" },
    "deger": { "k": 1 },
    "kontroller": [ { "ad": "k", "etiket": "Kuşak", "min": 1, "max": 3, "tur": "sayac" } ],
@@ -17,7 +17,7 @@
     "secenekler": [
      { "yazi": "Bireylerin kendi genotipleri", "neden": "Bir bireyin genotipi ömrü boyunca aynı kalır. Her kuşakta havuzu yeni bireyler oluşturur." },
      { "yazi": "Popülasyondaki birey sayısı", "neden": "Her kuşakta 5 birey var; sayı değişmedi. Değişen başka bir şey." },
-     { "yazi": "Gen havuzundaki alel frekansı", "dogru": true, "neden": "A'nın payı 0,3'ten 0,8'e çıktı. Evrim alel frekansının değişmesidir; birey değil, popülasyon evrimleşir." }
+     { "yazi": "Gen havuzundaki alel frekansı", "dogru": true, "neden": "A'nın payı 0,3'ten 0,8'e çıktı; birey sayısı aynı kalsa da gen havuzu değişti." }
     ]
    },
    "kart": 1
@@ -31,7 +31,7 @@
     "soru": "Babanın büyüyen kasları çocuğuna geçer mi?",
     "secenekler": [
      { "yazi": "Geçer; çocuk kaslı doğar", "neden": "Bu, Lamarck'ın görüşüdür ve geçersizdir. Kas hücrelerindeki değişim gametin DNA'sına ulaşmaz." },
-     { "yazi": "Geçmez; kas büyümesi gametteki DNA'yı değiştirmez", "dogru": true, "neden": "Yavruya yalnızca gametteki DNA geçer. Çalışmayla büyüyen kas bir modifikasyondur; kalıtsal değildir." },
+     { "yazi": "Geçmez; kas büyümesi gametteki DNA'yı değiştirmez", "dogru": true, "neden": "Çalışmayla büyüyen kas bir modifikasyondur: vücut hücrelerinde olur, gamete ulaşmaz." },
      { "yazi": "Yarısı geçer; çocuk biraz kaslı doğar", "neden": "Kazanılmış özelliğin hiçbir kısmı kalıtılmaz. Çocuğun kasları kendi genlerine ve yaşamına bağlıdır." }
     ]
    },
@@ -47,7 +47,7 @@
     "secenekler": [
      { "yazi": "Bakterileri dirençli olmaya yönlendirir", "neden": "Mutasyonlar ihtiyaca göre değil, rastgele oluşur. İlaç yeni direnç yaratmaz." },
      { "yazi": "Bakteriler ilaca alışır ve bunu yavrularına aktarır", "neden": "Bu, Lamarckçı bir yanılgıdır. Ölen duyarlı bakteriler alışamaz; yaşayan dirençliler zaten dirençliydi." },
-     { "yazi": "Önceden var olan dirençlileri seçer", "dogru": true, "neden": "Antibiyotik duyarlıları öldürür; dirençliler hayatta kalıp bölünür. Seçilim yeni alel üretmez, var olanlar arasından seçer." }
+     { "yazi": "Önceden var olan dirençlileri seçer", "dogru": true, "neden": "Antibiyotik duyarlıları öldürür; ilaçtan önce dirençli olan 3 bakteri hayatta kalıp bölünür ve kabı doldurur." }
     ]
    },
    "kart": 4
@@ -67,11 +67,11 @@
      { "yazi": "Ayırıcı seçilim", "neden": "Ayırıcıda iki uç kayırılır, ortadakiler elenir. Bebeklerde tam tersi oluyor." }
     ]
    },
-   "kart": 8
+   "kart": 7
   },
   {
    "baslik": "Hardy–Weinberg",
-   "metin": "Büyük, rastgele çiftleşen ve evrimleşmeyen bir popülasyonda A'nın frekansı p, a'nınki q ise genotipler <b>p², 2pq, q²</b> oranındadır. Bu popülasyonda bireylerin %16'sı aa. q'yu bul.",
+   "metin": "Hardy–Weinberg dengesindeki bu popülasyonda bireylerin %16'sı aa. q'yu bul.",
    "sahne": { "tur": "biy14-hw" },
    "deger": { "q": 70 },
    "kontroller": [ { "ad": "q", "etiket": "q (a alelinin frekansı)", "min": 0, "max": 100, "adim": 5, "carpan": 0.01 } ],
@@ -100,7 +100,7 @@
      { "yazi": "İkisinde eşit; sürüklenme boyuta bakmaz", "neden": "Grafiklere bak: küçük popülasyonda çizgiler çok daha çok savruluyor." }
     ]
    },
-   "kart": 7
+   "kart": 6
   },
   {
    "baslik": "Seçilim laboratuvarı",
@@ -200,7 +200,7 @@
     "secenekler": [
      { "yazi": "Renklerinin farklılaşmış olması", "neden": "Aynı türün bireyleri çok farklı görünebilir; köpek ırklarını düşün. Ölçüt görünüş değil, üremedir." },
      { "yazi": "Uzun süre ayrı bölgelerde yaşamaları", "neden": "Coğrafi ayrılık türleşmeyi başlatır ama kanıtlamaz. Yeniden karşılaştıklarında verimli yavru verirlerse hâlâ tek türdürler." },
-     { "yazi": "Aralarında verimli yavru oluşmaması", "dogru": true, "neden": "Verimli yavru veremiyorlarsa üreme izolasyonu oluşmuştur: artık iki ayrı türdürler. Farklı çiftleşme dönemi ya da kur davranışı da buna yol açabilir." }
+     { "yazi": "Aralarında verimli yavru oluşmaması", "dogru": true, "neden": "Verimli yavru veremiyorlarsa üreme izolasyonu oluşmuştur: artık iki ayrı türdürler." }
     ]
    },
    "kart": 11
@@ -220,7 +220,7 @@
      { "yazi": "İkisi de körelmiş organdır", "neden": "İkisi de işlevini sürdürüyor. Körelmiş organ, atada işlevli olup küçülmüş yapıdır; insanda kuyruk sokumu gibi." }
     ]
    },
-   "kart": 14
+   "kart": 13
   }
  ],
  "kapanis": [

@@ -22,7 +22,7 @@
   },
   {
    "baslik": "Soluk alma",
-   "metin": "Akciğerde iskelet kası yoktur; göğüs boşluğu genişleyince o da genişler. Hacim artınca basınç düşer. İki kası da çalıştır ve havayı içeri al.",
+   "metin": "İki kası da çalıştır ve havayı içeri al.",
    "sahne": { "tur": "biy12-gogus" },
    "deger": { "d": 0, "k": 0 },
    "kontroller": [
@@ -33,7 +33,7 @@
     "tur": "ayarla",
     "hedef": { "d": 1, "k": 1 },
     "ipucu": "Diyafram düzleşince göğüs aşağı, dış kaburgalar arası kaslar kasılınca yukarı ve dışa genişler.",
-    "tamam": "Hacim arttı, akciğer içi basınç atmosferin altına indi ve hava basınç farkıyla aktı. Kaslar gevşeyince hacim azalır, basınç artar, hava çıkar: dinlenirken soluk verme pasiftir."
+    "tamam": "Göğüs hem aşağı hem yukarı ve dışa genişledi; basınç atmosferin altına inince hava kendiliğinden içeri aktı."
    },
    "kart": 5,
    "goster": { "deger": { "d": 1, "k": 0 }, "not": "Yalnız diyafram kasıldı: göğüs boşluğu aşağı doğru genişledi, basınç biraz düştü ve hava girmeye başladı." }
@@ -48,7 +48,7 @@
     "tur": "ayarla",
     "hedef": { "h": [5, 6] },
     "ipucu": "Yükseldikçe hava basıncı azalır. PO₂ 80 mmHg dolayına inene kadar çık.",
-    "tamam": "Yaklaşık 5,5 km'de hava basıncı yarıya, PO₂ 80 mmHg'ye iner. O₂ oranı hâlâ %21; düşen, O₂'nin kısmi basıncıdır. Kana geçen O₂ azalır, soluk hızlanır; haftalar içinde böbreğin EPO'su alyuvar sayısını artırır."
+    "tamam": "Yaklaşık 5,5 km'de hava basıncı da PO₂ de yarıya (≈80 mmHg) iner. O₂ oranı hâlâ %21."
    },
    "kart": 13,
    "goster": { "deger": { "h": 2 }, "not": "2 km'de hava basıncı yaklaşık 592 mmHg. O₂ oranı yine %21, PO₂ ise yaklaşık <b>124 mmHg</b>." }
@@ -70,7 +70,7 @@
   },
   {
    "baslik": "Hemoglobin O₂ bırakır",
-   "metin": "O₂'nin %98,5'i alyuvardaki <b>hemoglobine</b> bağlanarak taşınır; bir hemoglobin 4 O₂ bağlar. PO₂ düştükçe O₂'yi bırakır. Hemoglobine O₂'sinin yarısından çoğunu bıraktır.",
+   "metin": "PO₂ düştükçe <b>hemoglobin</b> O₂ bırakır. Hemoglobine O₂'sinin yarısından çoğunu bıraktır.",
    "sahne": { "tur": "biy12-hb" },
    "deger": { "p": 100 },
    "kontroller": [ { "ad": "p", "etiket": "PO₂", "min": 10, "max": 100, "adim": 10, "birim": "mmHg" } ],
@@ -78,7 +78,7 @@
     "tur": "ayarla",
     "hedef": { "p": [10, 20] },
     "ipucu": "Dinlenen dokuda PO₂ 40 mmHg'dir; hemoglobin orada yalnızca 1 O₂ bırakır. Çalışan kas O₂'yi çok daha hızlı harcar.",
-    "tamam": "Çalışan kasta PO₂ çok düşer ve hemoglobin O₂'nin çoğunu bırakır. Kas aynı zamanda sıcak, asidik ve CO₂'ce zengindir; bu da O₂'nin bırakılmasını kolaylaştırır."
+    "tamam": "Çalışan kasta PO₂ 10-20 mmHg'ye iner ve hemoglobin O₂'nin çoğunu bırakır. Dinlenen dokuda yalnız 1'ini bırakır; kalanı yedek kalır."
    },
    "kart": 9,
    "goster": { "deger": { "p": 40 }, "not": "Dinlenen dokuda PO₂ 40 mmHg: hemoglobin 4 O₂'nin yalnızca <b>1</b>'ini bırakıyor." }
@@ -93,14 +93,14 @@
     "secenekler": [
      { "yazi": "Hemoglobine bağlı", "neden": "Hemoglobine bağlanan CO₂ yaklaşık %23'tür. Çoğu başka biçimde taşınır." },
      { "yazi": "Plazmada çözünmüş gaz", "neden": "Plazmada gaz olarak çözünen CO₂ yalnızca %7 kadardır." },
-     { "yazi": "Plazmada bikarbonat iyonu", "dogru": true, "neden": "Karbonik asit H⁺ ve HCO₃⁻'e ayrışır; bikarbonat plazmaya geçer. CO₂'nin yaklaşık %70'i böyle taşınır, akciğerde tepkime tersine döner." }
+     { "yazi": "Plazmada bikarbonat iyonu", "dogru": true, "neden": "Karbonik asit H⁺ ve HCO₃⁻'e ayrışır; bikarbonat plazmaya geçer. Akciğerde tepkime tersine döner ve CO₂ dışarı verilir." }
     ]
    },
    "kart": 9
   },
   {
    "baslik": "Egzersizde soluk",
-   "metin": "Soluk ritmini beyin sapındaki <b>soğanilik</b> kurar. En güçlü uyaran kandaki CO₂ artışıdır. Koşarken kasların CO₂ üretimi 3 katına çıktı. Soluğu ayarla, PCO₂'yi 40'ta tut.",
+   "metin": "Koşarken kasların CO₂ üretimi 3 katına çıktı. Soluğu ayarla, PCO₂'yi 40'ta tut.",
    "sahne": { "tur": "biy12-egzersiz" },
    "deger": { "s": 1 },
    "kontroller": [ { "ad": "s", "etiket": "Soluk", "min": 1, "max": 4, "tur": "sayac", "onek": "×" } ],
@@ -108,7 +108,7 @@
     "tur": "ayarla",
     "hedef": { "s": 3 },
     "ipucu": "Atılan CO₂, üretilen CO₂'ye eşit olmalı. Çok hızlı solursan CO₂ fazla atılır.",
-    "tamam": "Soluk hızı ve derinliği artınca üretilen CO₂ kadarı atılır, pH 7,4'te kalır. Soluğunu tuttuğunda seni zorlayan da O₂ azlığından çok CO₂ birikmesidir."
+    "tamam": "Soluk 3 katına çıkınca üretilen CO₂ kadarı atıldı; PCO₂ 40'ta, pH 7,4'te kaldı."
    },
    "kart": 13,
    "goster": { "deger": { "s": 2 }, "not": "Soluk ×2 yetmiyor: üretilen CO₂'nin hepsi atılamıyor, PCO₂ 50 mmHg'ye çıkıyor ve pH 7,32'ye düşüyor." }

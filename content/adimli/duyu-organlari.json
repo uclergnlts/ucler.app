@@ -7,15 +7,15 @@
  "adimlar": [
   {
    "baslik": "Uyarıdan algıya",
-   "metin": "Duyu organındaki <b>reseptörler</b> uyarıyı alır ve impulsa çevirir. İmpuls duyu siniriyle beyne gider. Tahmin et, sonra oynat.",
+   "metin": "Gözü ve görme siniri sağlam, ama beynindeki <b>görme merkezi</b> zarar görmüş birini düşün. Tahmin et, sonra oynat.",
    "sahne": { "tur": "biy10-yol", "sure": 4 },
    "gorev": {
     "tur": "tahmin",
-    "soru": "Görme, yani ışığın algılanması nerede oluşur?",
+    "soru": "Bu kişi görebilir mi?",
     "secenekler": [
-     { "yazi": "Retinada", "neden": "Retina ışığı alır ve impulsa çevirir, ama görüntüyü yorumlamaz. Algı beyinde oluşur." },
-     { "yazi": "Göz merceğinde", "neden": "Mercek yalnızca ışığı kırıp retinaya odaklar; algıyla ilgisi yoktur." },
-     { "yazi": "Beyindeki görme merkezinde", "dogru": true, "neden": "Reseptör uyarıyı impulsa çevirir; görmek, duymak, tat almak gibi algıların hepsi beyinde oluşur." }
+     { "yazi": "Görür; ışığı alan göz sağlam", "neden": "Göz ışığı impulsa çevirir, ama impulsu yorumlayıp görüntüye dönüştüren beyindir." },
+     { "yazi": "Yalnızca renkleri göremez", "neden": "Renkleri retinadaki koniler ayırt eder; görme merkezi bozulunca ise hiçbir görüntü algılanmaz." },
+     { "yazi": "Göremez; impuls gelir ama algı oluşmaz", "dogru": true, "neden": "Algı reseptörde değil beyindeki merkezde oluşur. Bu yüzden beyin hasarı sağlam gözü de kör eder." }
     ]
    },
    "kart": 1
@@ -37,7 +37,7 @@
   },
   {
    "baslik": "Yakına bak",
-   "metin": "Göz, uzağa ve yakına bakarken <b>merceğin</b> kalınlığını değiştirir. Buna <b>uyum</b> denir. Anahtarla yakına bak, kası ve merceği izle.",
+   "metin": "Merceği <b>askı bağları</b> kirpiksi cisme bağlar. Anahtarla yakına bak; kası, bağları ve merceği izle.",
    "sahne": { "tur": "biy10-uyum" },
    "deger": { "yakin": 0 },
    "kontroller": [ { "ad": "yakin", "etiket": "Yakına bak", "min": 0, "max": 1, "tur": "anahtar" } ],
@@ -50,7 +50,7 @@
      { "yazi": "İris kasılır ve merceği sıkıştırır", "neden": "İris yalnızca göz bebeğinin çapını ayarlar; merceğin şeklini kirpiksi kaslar değiştirir." }
     ]
    },
-   "kart": 5
+   "kart": 4
   },
   {
    "baslik": "Miyop göz",
@@ -64,7 +64,7 @@
     "ipucu": "Odak öne düşüyor. Işığı biraz dağıtan eksi numaralı mercek odağı geriye iter.",
     "tamam": "Kalın kenarlı (ıraksak) mercek ışığı dağıttı ve odak retinaya geldi. Miyoplar uzağı bulanık görür ve eksi numaralı gözlük takar."
    },
-   "kart": 8,
+   "kart": 7,
    "goster": { "deger": { "d": 1 }, "not": "+1 D ince kenarlı (yakınsak) cam ışığı daha çok topladı: odak retinanın daha da önüne kaydı." }
   },
   {
@@ -82,37 +82,37 @@
      { "yazi": "Silindirik mercek", "neden": "Silindirik mercek astigmatizmi, yani korneadaki eğrilik bozukluğunu düzeltir. Odağı öne almaz." }
     ]
    },
-   "kart": 8
+   "kart": 7
   },
   {
    "baslik": "Sesin yolu",
-   "metin": "Ses bir titreşimdir. Kulakta mekanik yolla ilerler ve <b>salyangozdaki</b> tüylü hücrelerde impulsa dönüşür. Tahmin et, sonra oynat.",
+   "metin": "Bir hastada kulak zarı ve salyangoz sağlam, ama orta kulaktaki kemikçikler kireçlenip hareketsiz kalmış. Tahmin et, sonra oynat.",
    "sahne": { "tur": "biy10-kulak", "sure": 5 },
    "gorev": {
     "tur": "tahmin",
-    "soru": "Titreşim kulakta hangi sırayla ilerler?",
+    "soru": "Ses bu kulakta nerede takılır?",
     "secenekler": [
-     { "yazi": "Salyangoz → kemikçikler → kulak zarı", "neden": "Bu ters yöndür. Ses dışarıdan gelir ve önce kulak zarına çarpar." },
-     { "yazi": "Kulak zarı → kemikçikler → salyangoz", "dogru": true, "neden": "Zar titreşir; çekiç, örs ve üzengi titreşimi iç kulağa iletir. Salyangozdaki tüylü hücreler impuls üretir, işitme siniri beyne taşır." },
-     { "yazi": "Kulak zarı → salyangoz → kemikçikler", "neden": "Kemikçikler (çekiç, örs, üzengi) orta kulaktadır; titreşimi salyangoza onlar taşır." }
+     { "yazi": "Kulak zarında: zar titreşemez", "neden": "Zar sağlam olduğu için titreşir; sorun, titreşimi taşıyacak kemikçiklerdedir." },
+     { "yazi": "Orta kulakta: titreşim salyangoza geçemez", "dogru": true, "neden": "Hareketsiz üzengi oval pencereyi titreştiremez. Salyangoz ve sinir sağlam olsa da uyarı iç kulağa ulaşmaz; buna iletim tipi işitme kaybı denir." },
+     { "yazi": "İşitme sinirinde: impuls beyne gidemez", "neden": "Sinir sağlam; ama salyangoz uyarılmadığı için taşıyacak impuls oluşmaz." }
     ]
    },
-   "kart": 9
+   "kart": 10
   },
   {
    "baslik": "Denge",
-   "metin": "İç kulak dengeyi de algılar. Kanalların içinde <b>sıvı</b> ve <b>tüylü hücreler</b> vardır. Başını hızla çevirdiğini düşün. Tahmin et, sonra oynat.",
+   "metin": "Dönme dolaptan indin; durduğun hâlde başın dönüyor. Tahmin et, sonra oynat.",
    "sahne": { "tur": "biy10-denge", "sure": 4 },
    "gorev": {
     "tur": "tahmin",
-    "soru": "Başını hızla çevirdiğinde dönmeyi hangisi algılar?",
+    "soru": "Durduğun hâlde başın neden döner?",
     "secenekler": [
-     { "yazi": "Salyangoz", "neden": "Salyangoz işitme içindir; ses titreşimini algılar, dönmeyi değil." },
-     { "yazi": "Östaki borusu", "neden": "Östaki borusu orta kulağı yutağa bağlar ve kulak zarının iki yanındaki basıncı eşitler. Algılama yapmaz." },
-     { "yazi": "Yarım daire kanalları", "dogru": true, "neden": "Kanal başla döner ama içindeki sıvı geride kalır ve tüylü hücreleri eğer. Bilgi beyinciğe gider. Durunca sıvı biraz daha döndüğü için başın döner." }
+     { "yazi": "Salyangoz fazla uyarıldı", "neden": "Salyangoz işitme içindir; ses titreşimini algılar, dönmeyi değil." },
+     { "yazi": "Östaki borusundaki basınç değişti", "neden": "Östaki borusu yalnızca kulak zarının iki yanındaki basıncı eşitler; dönme algılamaz." },
+     { "yazi": "Kanallardaki sıvı dönmeyi sürdürüyor", "dogru": true, "neden": "Kanal seninle durur, ama sıvı eylemsizlikle bir süre daha akar. Tüylü hücreler beyinciğe hâlâ dönüyorsun der, gözlerin ise durduğunu söyler." }
     ]
    },
-   "kart": 11
+   "kart": 12
   }
  ],
  "kapanis": [

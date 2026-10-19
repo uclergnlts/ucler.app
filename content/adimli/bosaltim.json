@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Üç azotlu atık",
-   "metin": "Amino asitler yıkılınca zehirli <b>amonyak</b> oluşur. Canlılar onu daha az zehirli <b>üre</b>ye ya da <b>ürik asit</b>e çevirerek su tasarrufu yapar. Üç atığı karşılaştır.",
+   "metin": "Üç atığı karşılaştır; sonra kabuklu yumurtadaki embriyoyu düşün.",
    "sahne": { "tur": "biy12-atik" },
    "deger": { "a": 1 },
    "kontroller": [ { "ad": "a", "etiket": "Atık", "min": 1, "max": 3, "tur": "sayac" } ],
@@ -31,7 +31,7 @@
     "soru": "Üre hangi organda üretilir?",
     "secenekler": [
      { "yazi": "Böbrek", "neden": "Böbrek üreyi üretmez; kandan süzüp idrarla atar." },
-     { "yazi": "Karaciğer", "dogru": true, "neden": "Karaciğer amonyağı CO₂ ile birleştirip üreye çevirir (ornitin döngüsü, ATP harcanır). Üre kanla böbreğe gider." },
+     { "yazi": "Karaciğer", "dogru": true, "neden": "Amonyak karaciğerde CO₂ ile birleşir; oluşan üre kanla böbreğe taşınır." },
      { "yazi": "İdrar kesesi", "neden": "İdrar kesesi yalnızca idrarı biriktirir; içinde üre üretilmez." }
     ]
    },
@@ -39,7 +39,7 @@
   },
   {
    "baslik": "Süzülme",
-   "metin": "Her böbrekte yaklaşık bir milyon <b>nefron</b> vardır. Nefronun başında kılcal yumağı <b>glomerul</b>, onu saran çanak <b>Bowman kapsülü</b>dür. Kan basıncı plazmayı kapsüle iter. Tahmin et, sonra oynat.",
+   "metin": "Kan basıncı plazmayı <b>glomeruldan</b> Bowman kapsülüne iter. Tahmin et, sonra oynat.",
    "sahne": { "tur": "biy12-suzme", "sure": 5 },
    "gorev": {
     "tur": "tahmin",
@@ -62,14 +62,14 @@
     "tur": "ayarla",
     "hedef": { "g": 99 },
     "ipucu": "Günde 1,8 L idrar, 180 L'nin yüzde kaçıdır? Geri kalanı kana döner.",
-    "tamam": "180 L'nin %99'u kana döndü, yalnızca 1,8 L idrar kaldı. Glikoz ve amino asitlerin tamamı, suyun ve Na⁺'nın çoğu geri emilir; bunun çoğu proksimal tüpte olur."
+    "tamam": "180 L'nin %99'u kana döndü, yalnızca 1,8 L idrar kaldı."
    },
-   "kart": 10,
+   "kart": 9,
    "goster": { "deger": { "g": 90 }, "not": "Süzüntünün %90'ı geri emilse günde 18 L idrar çıkardın; vücut saatler içinde susuz kalırdı." }
   },
   {
    "baslik": "Salgılama ve pH",
-   "metin": "<b>Salgılama</b> geri emilimin tersidir: bazı maddeler kandan tüpe aktarılır. Kan asitleşmiş, pH 7,22. Böbreğe H⁺ salgılat ve pH'yi normale getir.",
+   "metin": "Kan asitleşmiş, pH 7,22. Böbreğe H⁺ salgılat ve pH'yi normale getir.",
    "sahne": { "tur": "biy12-ph" },
    "deger": { "n": 0 },
    "kontroller": [ { "ad": "n", "etiket": "H⁺ salgılama", "min": 0, "max": 4, "tur": "sayac" } ],
@@ -77,7 +77,7 @@
     "tur": "ayarla",
     "hedef": { "n": 3 },
     "ipucu": "Kanın normal pH'sı 7,35 ile 7,45 arasıdır. Fazla salgılarsan kan bazikleşir.",
-    "tamam": "Böbrek H⁺ salgıladı ve HCO₃⁻ geri emdi; kan pH'sı 7,4'e döndü. K⁺, amonyak ve bazı ilaçlar da salgılamayla idrara katılır."
+    "tamam": "3 birim H⁺ salgılanınca kan pH'sı 7,4'e döndü."
    },
    "kart": 11,
    "goster": { "deger": { "n": 1 }, "not": "1 birim H⁺ salgılandı: pH 7,22'den <b>7,28</b>'e çıktı ama kan hâlâ asidik." }
@@ -97,7 +97,7 @@
      { "yazi": "Süzülme durur, idrar hiç oluşmaz", "neden": "Glomerulda süzülme sürer. Değişen, toplama kanalında ne kadar suyun geri emildiğidir." }
     ]
    },
-   "kart": 13
+   "kart": 12
   },
   {
    "baslik": "İdrarda glikoz",
