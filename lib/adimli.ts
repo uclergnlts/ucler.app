@@ -89,12 +89,22 @@ export type Secenek = { yazi: string; etiket?: string; dogru?: boolean; neden: s
 
 /**
  * Öğrencinin sahnede değiştirdiği değer. "surgu" kaydırma çubuğu, "sayac" − / + düğmeleri, "anahtar" aç/kapa düğmesidir (0 / 1).
+ * "dugme" her basışta değeri bir artırır; sahnenin bagla işlevi bunu bir eylem gibi yorumlar (ör. taze enzim koymak).
  * Gösterilen sayı = değer × carpan (ör. tuz değeri onda bir yüzde: carpan 0.1, onek "%").
  */
 export type Kontrol = {
   ad: string; etiket: string; min: number; max: number; adim?: number;
-  birim?: string; onek?: string; carpan?: number; tur?: "surgu" | "sayac" | "anahtar";
+  birim?: string; onek?: string; carpan?: number; tur?: "surgu" | "sayac" | "anahtar" | "dugme";
 };
+
+/** Hedef: değer adı → tam değer ya da [en az, en çok]. Adlar kontroller ya da sahnenin ölçtüğü değerler (olc) olabilir. */
+export type Hedef = Record<string, number | [number, number]>;
+
+/**
+ * Canlı simülasyonda bulunacak bir şey. hedef dizi ise hepsine bir kez uğramak gerekir (sirali: verilen sırayla).
+ * coz: "Çözümü göster"de kontrollerin sırayla gideceği değerler; tamam: bulununca alttaki çubukta çıkan açıklama.
+ */
+export type Bulgu = { yazi: string; hedef: Hedef | Hedef[]; sirali?: boolean; coz: Record<string, number>[]; tamam: string };
 
 export type Gorev =
   /** Okuyup geçmek; adım hemen tamamlanır. */
@@ -106,7 +116,9 @@ export type Gorev =
   /** Önce tahmin, sonra sahne oynar ve doğrusu gösterilir. Her tahmin adımı tamamlar. */
   | { tur: "tahmin"; soru: string; secenekler: Secenek[] }
   /** Değerleri hedefe getirmek. [en az, en çok] aralık da olabilir. Sahne oynatılabiliyorsa hedef değerlerle oynatılmalıdır. */
-  | { tur: "ayarla"; hedef: Record<string, number | [number, number]>; tamam: string; ipucu?: string };
+  | { tur: "ayarla"; hedef: Hedef; tamam: string; ipucu?: string }
+  /** Canlı simülasyon: sahne sürekli çalışır, öğrenci serbestçe dener; bulguların hepsi bulununca adım tamamlanır. */
+  | { tur: "kesfet"; bulgular: Bulgu[] };
 
 export type Sahne = { tur: string; sure?: number; [k: string]: unknown };
 

@@ -142,77 +142,97 @@
    "kart": 3
   },
   {
-   "baslik": "En uzun menzil",
-   "metin": "Aynı topu yine 20 m/s ile atacaksın, ama açıyı sen seçeceksin. Topu <b>en uzağa</b> gönderen açıyı bul.",
+   "baslik": "Atış laboratuvarı",
+   "metin": "Bu bir atış laboratuvarı. Açıyı ve hızı değiştir ya da namlunun ucunu sürükle: yol, menzil ve tepe yüksekliği anında değişir. Hava direnci yok. Aşağıdakileri kendin bul.",
    "sahne": {
-    "tur": "fiz4-egik",
-    "sure": 3
+    "tur": "sim-atis"
    },
    "deger": {
-    "a": 30
+    "a": 20,
+    "v": 20
    },
    "kontroller": [
     {
      "ad": "a",
      "etiket": "Atış açısı",
-     "min": 15,
-     "max": 75,
-     "adim": 15,
+     "min": 10,
+     "max": 80,
+     "adim": 5,
      "birim": "°"
-    }
-   ],
-   "gorev": {
-    "tur": "ayarla",
-    "hedef": {
-     "a": 45
     },
-    "tamam": "45°'de menzil R = v0²·sin2θ / g = 400 × 1 / 9,8 ≈ 41 m; en büyüğü bu. Hava direnci yoksa ve top atıldığı seviyeye inerse en uzun menzil 45°'dedir."
-   },
-   "kart": 6,
-   "goster": {
-    "deger": {
-     "a": 75
-    },
-    "not": "75°: top dik çıkıyor ama menzil 400 · sin150° / 9,8 ≈ 20 m."
-   }
-  },
-  {
-   "baslik": "İkiz açılar",
-   "metin": "Şimdi topu <b>30°</b> ve <b>60°</b> ile at, iki yolu karşılaştır.",
-   "sahne": {
-    "tur": "fiz4-egik",
-    "sure": 3
-   },
-   "deger": {
-    "a": 30
-   },
-   "kontroller": [
     {
-     "ad": "a",
-     "etiket": "Atış açısı",
-     "min": 15,
-     "max": 75,
-     "adim": 15,
-     "birim": "°"
+     "ad": "v",
+     "etiket": "Atış hızı",
+     "min": 10,
+     "max": 30,
+     "adim": 5,
+     "birim": "m/s"
     }
    ],
    "gorev": {
-    "tur": "secim",
-    "kosu": 2,
-    "soru": "30° ve 60° atışlarının menzilleri için ne söylenir?",
-    "secenekler": [
+    "tur": "kesfet",
+    "bulgular": [
      {
-      "yazi": "60° daha uzağa gider",
-      "neden": "60°'de top daha yükseğe çıkar ama yatay hızı küçüktür (10 m/s)."
+      "yazi": "Hız 20 m/s iken topu <b>en uzağa</b> gönderen açıyı bul.",
+      "hedef": {
+       "a": 45,
+       "v": 20
+      },
+      "coz": [
+       {
+        "v": 20,
+        "a": 45
+       }
+      ],
+      "tamam": "45°'de menzil R = v0²·sin2θ / g = 400 × 1 / 9,8 ≈ 41 m; en büyüğü bu. Hava direnci yoksa ve top atıldığı seviyeye inerse en uzun menzil 45°'dedir."
      },
      {
-      "yazi": "30° daha uzağa gider",
-      "neden": "30°'de yatay hız büyük ama uçuş kısa sürer."
+      "yazi": "Aynı hızla önce <b>30°</b>, sonra <b>60°</b> ile at. Menzilleri karşılaştır.",
+      "hedef": [
+       {
+        "a": 30,
+        "v": 20
+       },
+       {
+        "a": 60,
+        "v": 20
+       }
+      ],
+      "sirali": true,
+      "coz": [
+       {
+        "v": 20,
+        "a": 30
+       },
+       {
+        "a": 60
+       }
+      ],
+      "tamam": "İkisi de ≈ 35 m. Toplamı 90° olan açılarda sin2θ aynıdır (sin60° = sin120°). 60° daha yükseğe çıkar ve uzun uçar ama yatayda yavaştır."
      },
      {
-      "yazi": "Eşittir",
-      "dogru": true,
-      "neden": "İkisi de ≈ 35 m. Toplamı 90° olan açılarda sin2θ aynıdır (sin60° = sin120°). 60° daha yükseğe çıkar ve uzun uçar ama yatayda yavaştır."
+      "yazi": "45°'de hızı önce <b>10</b>, sonra <b>20 m/s</b> yap. Menzil kaç katına çıktı?",
+      "hedef": [
+       {
+        "a": 45,
+        "v": 10
+       },
+       {
+        "a": 45,
+        "v": 20
+       }
+      ],
+      "sirali": true,
+      "coz": [
+       {
+        "a": 45,
+        "v": 10
+       },
+       {
+        "v": 20
+       }
+      ],
+      "tamam": "10 m/s ile ≈ 10,2 m, 20 m/s ile ≈ 40,8 m: hız 2 katına çıkınca menzil <b>4 katına</b> çıktı, çünkü R = v0²·sin2θ / g hızın karesiyle büyür."
      }
     ]
    },

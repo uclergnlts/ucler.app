@@ -219,7 +219,7 @@ for f in sorted(glob.glob(os.path.join(CONTENT, "adimli", "*.json"))):
         if not s.get("metin"): err("adımlı", yer, "metin boş")
         deger, kont = s.get("deger", {}), {k["ad"]: k for k in s.get("kontroller", [])}
         for k in kont.values():
-            if k.get("tur", "surgu") not in ("surgu", "sayac", "anahtar"): err("adımlı", yer, "bilinmeyen kontrol türü:", k.get("tur"))
+            if k.get("tur", "surgu") not in ("surgu", "sayac", "anahtar", "dugme"): err("adımlı", yer, "bilinmeyen kontrol türü:", k.get("tur"))
             if k["ad"] not in deger: err("adımlı", yer, "kontrolün başlangıç değeri yok:", k["ad"])
             elif not k["min"] <= deger[k["ad"]] <= k["max"]: err("adımlı", yer, k["ad"], "başlangıç değeri sınırların dışında")
         # konu anlatımına yerleştirme: kart numarası ve "göster" örneği
@@ -230,7 +230,7 @@ for f in sorted(glob.glob(os.path.join(CONTENT, "adimli", "*.json"))):
             if k not in kont: err("adımlı", yer, "göster değerinin kontrolü yok:", k)
             elif not kont[k]["min"] <= x <= kont[k]["max"]: err("adımlı", yer, k, "göster değeri sınırların dışında")
         g = s.get("gorev", {}); gt = g.get("tur")
-        if gt not in ("devam", "oynat", "secim", "tahmin", "ayarla"): err("adımlı", yer, "bilinmeyen görev:", gt); continue
+        if gt not in ("devam", "oynat", "secim", "tahmin", "ayarla", "kesfet"): err("adımlı", yer, "bilinmeyen görev:", gt); continue
         if gt in ("oynat", "tahmin") and not s["sahne"].get("sure"): err("adımlı", yer, gt, "görevi için sahnede sure gerekli")
         if gt in ("secim", "tahmin"):
             sec = g.get("secenekler", [])
@@ -241,6 +241,25 @@ for f in sorted(glob.glob(os.path.join(CONTENT, "adimli", "*.json"))):
                 if not x.get("neden"): err("adımlı", yer, "şıkta neden boş:", x.get("yazi", "")[:30])
                 if not re.sub(r"<svg.*?</svg>", "", x.get("yazi", ""), flags=re.S).strip() and not x.get("etiket"): err("adımlı", yer, "yalnızca görsel olan şıkta etiket yok")
             if g.get("kosu") and not (s["sahne"].get("sure") and kont): err("adımlı", yer, "kosu için oynatılabilir sahne ve kontrol gerekli")
+        if gt == "kesfet":
+            # canlı simülasyon: hedefler kontrollere ya da sahnenin ölçümlerine (olc) bakar; ölçümler burada denetlenemez
+            bul = g.get("bulgular", [])
+            if not 2 <= len(bul) <= 4: err("adımlı", yer, "kesfet: 2-4 bulgu olmalı")
+            for b in bul:
+                if not b.get("yazi") or not b.get("tamam"): err("adımlı", yer, "kesfet: bulguda yazi ya da tamam boş")
+                hs = b.get("hedef"); hs = hs if isinstance(hs, list) else [hs]
+                coz = b.get("coz", [])
+                if not hs or not all(isinstance(h, dict) and h for h in hs): err("adımlı", yer, "kesfet: hedef boş"); continue
+                if not coz: err("adımlı", yer, "kesfet: coz (çözüm değerleri) boş")
+                durum = dict(deger)
+                for c in coz:
+                    for k, x in c.items():
+                        if k not in kont: err("adımlı", yer, "kesfet: çözümdeki değerin kontrolü yok:", k)
+                        elif not kont[k]["min"] <= x <= kont[k]["max"]: err("adımlı", yer, k, "kesfet: çözüm değeri sınırların dışında")
+                    durum.update(c)
+                for k, h in hs[-1].items():
+                    lo, hi = (h if isinstance(h, list) else (h, h))
+                    if k in kont and kont[k].get("tur") != "dugme" and not lo - 1e-9 <= durum.get(k, lo) <= hi + 1e-9: err("adımlı", yer, "kesfet: çözüm son hedefe varmıyor:", k)
         if gt == "ayarla":
             if not g.get("tamam"): err("adımlı", yer, "tamam metni boş")
             hedef = g.get("hedef", {})

@@ -53,18 +53,23 @@
    "kart": 3
   },
   {
-   "baslik": "Sıcaklık",
-   "metin": "Sıcaklık tepkime hızını değiştirir. Sıcaklığı değiştir; 60 °C'yi de dene. Sonra bu insan enzimini <b>en hızlı</b> çalıştığı sıcaklığa getir.",
-   "sahne": {"tur": "biy2-sicaklik"},
-   "deger": {"T": 10},
-   "kontroller": [{"ad": "T", "etiket": "Sıcaklık", "min": 0, "max": 80, "birim": "°C"}],
-   "gorev": {
-    "tur": "ayarla",
-    "hedef": {"T": [36, 38]},
-    "tamam": "İnsan enzimlerinin <b>optimum sıcaklığı</b> yaklaşık 37 °C. Daha sıcakta enzimin şekli bozulur (<b>denatürasyon</b>) ve bu çoğunlukla geri dönmez. Soğuk ise enzimi bozmaz, yalnızca yavaşlatır."
-   },
-   "kart": 5,
-   "goster": { "deger": { "T": 60 }, "not": "60 °C'de enzimin şekli bozuldu (<b>denatürasyon</b>): hız sıfıra düştü." }
+   "baslik": "Enzim laboratuvarı",
+   "metin": "Tüpte bir insan enzimi substratı parçalıyor. Sıcaklığı değiştir ve enzimlere, ürün sayısına ve grafiğe bak. Enzim bozulursa <b>Taze enzim koy</b> ile yenisini ekleyebilirsin.",
+   "sahne": {"tur": "sim-enzim"},
+   "deger": {"T": 20, "bozuk": 0, "yeni": 0},
+   "kontroller": [
+    {"ad": "T", "etiket": "Sıcaklık", "min": 0, "max": 80, "birim": "°C"},
+    {"ad": "yeni", "etiket": "Taze enzim koy", "min": 0, "max": 1, "tur": "dugme"}
+   ],
+   "gorev": {"tur": "kesfet", "bulgular": [
+    {"yazi": "Enzimin <b>en hızlı</b> çalıştığı sıcaklığı bul.", "hedef": {"T": [36, 38], "bozuk": 0}, "coz": [{"T": 37, "yeni": 1}],
+     "tamam": "İnsan enzimlerinin <b>optimum sıcaklığı</b> yaklaşık 37 °C: aktif bölgeler en sık dolup boşalıyor."},
+    {"yazi": "Enzimi <b>5 °C</b>'ye soğut, sonra yeniden <b>37 °C</b>'ye ısıt.", "hedef": [{"T": [0, 5], "bozuk": 0}, {"T": [36, 38], "bozuk": 0}], "sirali": true, "coz": [{"T": 5, "yeni": 1}, {"T": 37}],
+     "tamam": "Soğukta enzim yavaşladı ama bozulmadı; ısınınca eski hızına döndü. Soğuk enzimi bozmaz, yalnızca yavaşlatır."},
+    {"yazi": "Şimdi <b>60 °C</b>'ye çık, sonra yeniden <b>37 °C</b>'ye soğut.", "hedef": {"T": [36, 38], "bozuk": 1}, "coz": [{"T": 60}, {"T": 37}],
+     "tamam": "55 °C'yi geçince enzimin 3 boyutlu şekli bozuldu: <b>denatürasyon</b>. Soğutsan da aktif bölge geri gelmedi; pişen yumurta akı da çiğe dönmez."}
+   ]},
+   "kart": 5
   },
   {
    "baslik": "pH",

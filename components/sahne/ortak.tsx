@@ -15,6 +15,8 @@ export type SahneProps = {
   kosular: Record<string, number>[];
   /** Tahmin görevinde seçilen şık. */
   secim: number | null;
+  /** Canlı sahnelerde (canli: true) sürekli ilerleyen saat (saniye); sahne görünmezken durur. */
+  saat?: number;
 };
 
 /** Sahne kaydı: çizim, isteğe bağlı değer bağlama ve oynatma sonrası geri bildirim. */
@@ -24,6 +26,10 @@ export type SahneKaydi = {
   bagla?: (ad: string, deger: number, v: Record<string, number>) => Record<string, number>;
   /** Hedefe ulaşılamadığında gösterilecek kısa açıklama. */
   geri?: (v: Record<string, number>, s: Sahne) => { baslik: string; metin: string } | null;
+  /** Canlı simülasyon: sahne Oynat beklemeden sürekli hareket eder (saat). */
+  canli?: boolean;
+  /** Sahnenin hesapladığı ölçümler (ör. pH, menzil); keşif hedefleri bunlara da bakabilir. */
+  olc?: (v: Record<string, number>, s: Sahne) => Record<string, number>;
 };
 
 /* Yol: 0-50 m, viewBox genişliği 340. */

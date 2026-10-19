@@ -52,6 +52,31 @@ function useOynat(T: number, bitince: () => void) {
   return { t, oynuyor, basla, sifirla };
 }
 
+/** Canlı sahnelerin saati: sahne ekrandayken her karede ilerler (saniye), ekrandan çıkınca durur. */
+function useSaat(aktif: boolean, ref: React.RefObject<HTMLElement | null>) {
+  const [saat, setSaat] = useState(0);
+  const [gorunur, setGorunur] = useState(false);
+  useEffect(() => {
+    if (!aktif || !ref.current) return;
+    const io = new IntersectionObserver(([e]) => setGorunur(e.isIntersecting));
+    io.observe(ref.current);
+    return () => io.disconnect();
+  }, [aktif, ref]);
+  useEffect(() => {
+    if (!aktif || !gorunur) return;
+    let id = 0, once = performance.now();
+    const kare = (now: number) => {
+      const dt = Math.min(0.1, (now - once) / 1000);
+      once = now;
+      setSaat((x) => x + dt);
+      id = requestAnimationFrame(kare);
+    };
+    id = requestAnimationFrame(kare);
+    return () => cancelAnimationFrame(id);
+  }, [aktif, gorunur]);
+  return saat;
+}
+
 /* ---------- yardımcılar ---------- */
 
 export const uyar = (v: Degerler, hedef: Record<string, number | [number, number]>) =>
@@ -113,6 +138,8 @@ export function Kontroller({ liste, v, set, kapali }: { liste: Kontrol[]; v: Deg
     <div className="ad-kontroller">
       {liste.map((k) => {
         const x = v[k.ad] ?? k.min, adim = k.adim ?? 1;
+        if (k.tur === "dugme")
+          return <button key={k.ad} className="ad-dugme" disabled={kapali} onClick={() => set(k.ad, 1)}>{k.etiket}</button>;
         if (k.tur === "anahtar")
           return (
             <button key={k.ad} className={`ad-anahtar ${x ? "acik" : ""}`} aria-pressed={x === 1} disabled={kapali} onClick={() => set(k.ad, x ? 0 : 1)}>
@@ -169,6 +196,7 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
   const vRef = useRef(v);
   vRef.current = v;
   const o = useOynat(sure, () => setKosular((k) => [...k, vRef.current]));
+  const saat = useSaat(kayit?.canli === true, sahneRef);
 
   // Göster: önce sahne örneği kendisi oynar (kontroller örnek değerlere kayar, sahne oynar), sonra sıra öğrenciye geçer.
   const [faz, setFaz] = useState<"goster" | "sen">(a.goster ? "goster" : "sen");
@@ -191,14 +219,6 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
   const senBasla = () => { setV({ ...(a.deger ?? {}) }); setKosular([]); o.sifirla(); setFaz("sen"); };
   const ornekte = faz === "goster";
 
-  // Takılınca çözüm: sahnesi oynayan ayar görevinde iki yanlış koşudan, oynamayanda bir süre sonra.
-  const [sureDoldu, setSureDoldu] = useState(false);
-  useEffect(() => {
-    if (ornekte || g.tur !== "ayarla" || sure) return;
-    const z = setTimeout(() => setSureDoldu(true), COZUM_SURE);
-    return () => clearTimeout(z);
-  }, [ornekte, g.tur, sure]);
-
   const set = useCallback(
     (ad: string, x: number) => {
       if (o.oynuyor || faz === "goster") return;
@@ -207,6 +227,38 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
     },
     [kayit, o.oynuyor, o.sifirla, faz],
   );
+
+  // Keşif: her bulgunun alt hedeflerinden hangilerine uğrandı. Hedefler kontrollere ve sahnenin ölçümlerine bakar.
+  const bulgular = g.tur === "kesfet" ? g.bulgular : null;
+  const hedefler = (i: number) => { const h = bulgular![i].hedef; return Array.isArray(h) ? h : [h]; };
+  const [ugrak, setUgrak] = useState<boolean[][]>(() => (bulgular ?? []).map((_, i) => hedefler(i).map(() => false)));
+  const [sonBulgu, setSonBulgu] = useState<number | null>(null);
+  const olcum = useMemo(() => ({ ...v, ...(kayit?.olc?.(v, a.sahne) ?? {}) }), [v, kayit, a.sahne]);
+  useEffect(() => {
+    if (!bulgular || ornekte) return;
+    let yeni: number | null = null;
+    const u = ugrak.map((liste, i) => {
+      const hs = hedefler(i);
+      const sonra = liste.map((ok, j) => ok || ((!bulgular[i].sirali || liste.slice(0, j).every(Boolean)) && uyar(olcum, hs[j])));
+      if (!liste.every(Boolean) && sonra.every(Boolean)) yeni = i;
+      return sonra;
+    });
+    if (u.some((l, i) => l.some((x, j) => x !== ugrak[i][j]))) setUgrak(u);
+    if (yeni !== null) setSonBulgu(yeni);
+  }, [olcum]); // eslint-disable-line react-hooks/exhaustive-deps
+  const bulunan = ugrak.map((l) => l.every(Boolean));
+  const bulunanSay = bulunan.filter(Boolean).length;
+
+  // Takılınca çözüm: sahnesi oynayan ayar görevinde iki yanlış koşudan, oynamayanda bir süre sonra.
+  const [sureDoldu, setSureDoldu] = useState(false);
+  // Keşifte süre her yeni bulgudan sonra yeniden başlar.
+  const ilerleme = g.tur === "kesfet" ? ugrak.flat().filter(Boolean).length : 0;
+  useEffect(() => {
+    if (ornekte || !(g.tur === "kesfet" || (g.tur === "ayarla" && !sure))) return;
+    setSureDoldu(false);
+    const z = setTimeout(() => setSureDoldu(true), COZUM_SURE);
+    return () => clearTimeout(z);
+  }, [ornekte, g.tur, sure, ilerleme]);
 
   const sonKosu = kosular.length ? kosular[kosular.length - 1] : null;
   const oynandi = !o.oynuyor && sonKosu !== null && ayni(sonKosu, v);
@@ -218,6 +270,7 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
     g.tur === "oynat" ? kosular.length > 0 :
     g.tur === "tahmin" ? acik :
     g.tur === "ayarla" ? hedefte && (!sure || oynandi) :
+    g.tur === "kesfet" ? bulunanSay === g.bulgular.length :
     false;
 
   useEffect(() => { if (basari) tamam(); }, [basari, tamam]);
@@ -237,7 +290,10 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
       ? { ok: true, baslik: "Tahminin doğru!", metin: d.neden }
       : { ok: false, baslik: `Doğrusu: ${d.etiket ?? d.yazi}`, metin: `${g.secenekler[secim].neden} ${d.neden}` };
   })();
-  const geri = ayarlaGeri ?? tahminGeri;
+  const kesfetGeri: Bildirim | null = bulgular && sonBulgu !== null
+    ? { ok: true, baslik: basari ? "Hepsini buldun!" : `Buldun! (${bulunanSay}/${bulgular.length})`, metin: bulgular[sonBulgu].tamam }
+    : null;
+  const geri = ayarlaGeri ?? tahminGeri ?? kesfetGeri;
   const geriAnahtar = geri ? JSON.stringify(geri) : g.tur === "secim" ? "secim" : "";
   useEffect(() => {
     if (geriAnahtar === "secim") return;
@@ -245,8 +301,27 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
   }, [geriAnahtar]);
 
   const yanlisKosu = g.tur === "ayarla" ? kosular.filter((k) => !uyar(k, g.hedef)).length : 0;
-  const cozumAcik = !ornekte && g.tur === "ayarla" && !basari && !o.oynuyor && (sure ? yanlisKosu >= COZUM_YANLIS : sureDoldu);
+  const [cozuyor, setCozuyor] = useState(false);
+  const cozumAcik = !ornekte && !basari && !cozuyor && (
+    g.tur === "kesfet" ? sureDoldu :
+    g.tur === "ayarla" && !o.oynuyor && (sure ? yanlisKosu >= COZUM_YANLIS : sureDoldu));
   const cozumGoster = () => {
+    if (g.tur === "kesfet") {
+      // Bulunmamış ilk bulgunun çözüm durumlarına sırayla git.
+      const i = bulunan.findIndex((x) => !x);
+      if (i < 0) return;
+      let bas = v;
+      const dizi: Degerler[] = [];
+      for (const hedef of g.bulgular[i].coz) {
+        const parca = kareler(bas, hedef, a.kontroller, kayit?.bagla);
+        dizi.push(...parca);
+        if (parca.length) bas = parca[parca.length - 1];
+      }
+      setCozuyor(true);
+      dizi.forEach((x, j) => setTimeout(() => setV(x), j * 220));
+      setTimeout(() => setCozuyor(false), dizi.length * 220 + 300);
+      return;
+    }
     if (g.tur !== "ayarla") return;
     const hedef = Object.fromEntries(Object.entries(g.hedef).map(([ad, h]) => {
       if (!Array.isArray(h)) return [ad, h];
@@ -265,7 +340,7 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
   return (
     <>
       <div className="ad-sahne" ref={sahneRef}>
-        <C s={a.sahne} v={v} set={set} t={o.t} oynuyor={o.oynuyor} kosular={kosular} secim={secim} />
+        <C s={a.sahne} v={v} set={set} t={o.t} oynuyor={o.oynuyor} kosular={kosular} secim={secim} saat={saat} />
       </div>
 
       {ornekte && (
@@ -288,6 +363,18 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
         <button className="ad-oynat" disabled={o.oynuyor} onClick={o.basla}>
           <span aria-hidden="true">{o.oynuyor ? "●" : "▶"}</span> {o.oynuyor ? "Oynuyor" : kosular.length ? "Tekrar oynat" : "Oynat"}
         </button>
+      )}
+
+      {bulgular && (
+        <ol className="ad-bulgular" aria-label="Bulman gerekenler">
+          {bulgular.map((b, i) => (
+            <li key={i} className={bulunan[i] ? "ok" : i === bulunan.findIndex((x) => !x) ? "simdi" : ""}>
+              <i aria-hidden="true">{bulunan[i] ? "✓" : i + 1}</i>
+              <Html html={b.yazi} />
+              {bulunan[i] && <span className="sr-only"> (bulundu)</span>}
+            </li>
+          ))}
+        </ol>
       )}
 
       {cozumAcik && <CozumDugmesi onClick={cozumGoster} />}

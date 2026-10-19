@@ -42,39 +42,89 @@
    }
   },
   {
-   "baslik": "pH bir sayı, ama logaritmik",
-   "metin": "pH = −log[H₃O⁺]. 25 °C'de [H₃O⁺]·[OH⁻] = 1×10⁻¹⁴, bu yüzden pH + pOH = 14. pH'ı değiştir ve iki iyonun derişimine bak.",
+   "baslik": "pH laboratuvarı",
+   "metin": "Kapta 1 L saf su var (pH 7). Damlalıklarla 1 M HCl ve 1 M NaOH ekle; pH ölçer, renk ve iyonlar anında değişir. Aşağıdakileri kendin bul.",
    "sahne": {
-    "tur": "kim6-log"
+    "tur": "sim-ph"
    },
    "deger": {
-    "p": 7
+    "A": 0,
+    "B": 0
    },
    "kontroller": [
     {
-     "ad": "p",
-     "etiket": "pH",
-     "min": 1,
-     "max": 13,
-     "tur": "sayac"
+     "ad": "A",
+     "etiket": "HCl (1 M)",
+     "min": 0,
+     "max": 10,
+     "adim": 0.1,
+     "birim": "mL"
+    },
+    {
+     "ad": "B",
+     "etiket": "NaOH (1 M)",
+     "min": 0,
+     "max": 20,
+     "adim": 0.1,
+     "birim": "mL"
     }
    ],
    "gorev": {
-    "tur": "secim",
-    "soru": "pH 3 olan çözeltide, pH 5 olana göre kaç kat fazla H₃O⁺ vardır?",
-    "secenekler": [
+    "tur": "kesfet",
+    "bulgular": [
      {
-      "yazi": "2 kat",
-      "neden": "pH farkı 2 ama ölçek logaritmik: her birim 10 kat demek."
+      "yazi": "Asit ekleyerek pH'ı <b>3</b>'e getir.",
+      "hedef": {
+       "pH": [
+        2.9,
+        3.1
+       ],
+       "B": 0
+      },
+      "coz": [
+       {
+        "B": 0,
+        "A": 1
+       }
+      ],
+      "tamam": "1 mL 1 M HCl, 1 L suda [H₃O⁺] = 1×10⁻³ M yapar: pH = −log(10⁻³) = 3. [OH⁻] ise 1×10⁻¹¹ M'ye düştü; çarpım yine 1×10⁻¹⁴."
      },
      {
-      "yazi": "100 kat",
-      "neden": "1×10⁻³ M ile 1×10⁻⁵ M arasındaki oran 10² = 100'dür. pH bir birim düşerse [H₃O⁺] 10 kat artar.",
-      "dogru": true
+      "yazi": "Şimdi pH'ı <b>2</b>'ye indir. Ne kadar asit gerekti?",
+      "hedef": {
+       "pH": [
+        1.9,
+        2.1
+       ],
+       "B": 0
+      },
+      "coz": [
+       {
+        "B": 0,
+        "A": 10
+       }
+      ],
+      "tamam": "pH'ı yalnızca 1 birim düşürmek için asidi <b>10 katına</b> çıkardın (1 → 10 mL). pH ölçeği logaritmiktir: her birim [H₃O⁺]'te 10 kat demek."
      },
      {
-      "yazi": "1000 kat",
-      "neden": "Bu 3 birimlik farkın sonucu olurdu. Burada pH 3'ten 5'e 2 birim var."
+      "yazi": "NaOH ekleyerek kabı <b>bazik</b> yap: pH 11.",
+      "hedef": {
+       "pH": [
+        10.9,
+        11.1
+       ],
+       "A": [
+        1,
+        10
+       ]
+      },
+      "coz": [
+       {
+        "A": 10,
+        "B": 11
+       }
+      ],
+      "tamam": "OH⁻ iyonları önce H₃O⁺ iyonlarıyla suya dönüştü; fazlası pH'ı 11 yaptı (pOH = 3, pH + pOH = 14). Eşit miktarın çevresinde tek damla pH'ı birkaç birim sıçratır."
      }
     ]
    },

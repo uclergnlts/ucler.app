@@ -44,6 +44,17 @@ body:has(.ad-sayfa){background:#fff}
 .ad-oynat{justify-self:center;align-self:center;height:44px;padding:0 22px;border-radius:999px;border:1.5px solid var(--acc);background:#fff;color:var(--acc);font-weight:700;font-size:15px}
 .ad-oynat span{font-size:11px;margin-right:4px}
 .ad-oynat:disabled{opacity:.5}
+.ad-dugme{justify-self:start;height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line-2);background:#fff;color:var(--ink);font:inherit;font-size:15px;font-weight:700;cursor:pointer}
+.ad-dugme:disabled{opacity:.5;cursor:default}
+.ad-dugme:focus-visible{outline:3px solid var(--glow);outline-offset:2px}
+
+/* canlı simülasyon: bulunacaklar listesi */
+.ad-bulgular{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ad-bulgular li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;font-size:15px;line-height:1.45;color:var(--muted)}
+.ad-bulgular li i{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:13px;font-weight:800;border:1.5px solid var(--line-2);color:var(--muted);background:#fff}
+.ad-bulgular li.simdi{color:var(--ink);font-weight:600}
+.ad-bulgular li.simdi i{border-color:var(--acc);color:var(--acc)}
+.ad-bulgular li.ok i{border-color:var(--good);background:var(--good);color:#fff}
 
 /* göster → sen dene (DersMotoru ve konu anlatımı) */
 .ad-ornek{display:grid;gap:4px;padding:10px 14px;border-radius:14px;background:var(--acc-soft)}
