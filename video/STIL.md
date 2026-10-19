@@ -26,3 +26,10 @@ Yerleşim (Üçler, 2026-10-16): üst bant ve başlık yukarıda, altyazı ve il
 - ElevenLabs "Damla - Energetic Content creator" sesi saniyede ~1,95 kelime okur. Metin **120-340 kelime** (1-3 dk) olmalı; KIM-01–KIM-10 100-115 kelimeydi. Uzun videoda görsel 15-20 saniyede bir yeni sahneye geçer, tek sahne uzun süre durağan kalmaz.
 - Ses 60 sn'yi aşarsa `atempo` ile en çok %8 hızlandırılır (KIM-01: 64,8 → 60,0 sn).
 - Altyazı ElevenLabs srt'sinden değil, senaryodaki metinden yapılır (srt'de filigran ve yazım hatası olabiliyor). Cümle zamanları `silencedetect` ile bulunur; kelime zamanları cümle içinde harf sayısıyla dağıtılır.
+
+## İlk 2-3 saniye (Üçler, 2026-10-19)
+Instagram ve YouTube, izleyicinin ilk 2-3 saniyede kaydırıp kaydırmadığına bakarak videoyu başkalarına önerir. Bu yüzden:
+- **İlk cümle kancadır:** şaşırtıcı bir iddia ya da merak uyandıran bir soru, en çok ~6 kelime (≤ 3 sn). Tarihle, kişi adıyla ya da "Bu videoda…" diye açılmaz; hikâye (tarih, kişi) ikinci cümlede başlar.
+  Örnek: "Bin dokuz yüz elli beş…" yerine "Vücudundaki her protein, yirmi harfli bir alfabeyle yazılmış."
+- **İlk kare kancayı gösterir:** kanca 0. saniyede ekranda büyük yazıyla tam görünür (yavaş belirme yok), yanında konuyu anlatan güçlü bir görsel olur. Kapak (poster) karesi de bu karedir.
+- Sessiz izleyen için de çalışmalı: altyazı ve büyük yazı, sesi açmadan kancayı anlatır.
