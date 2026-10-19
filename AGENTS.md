@@ -45,7 +45,7 @@ npm install                                          # ilk kez
 python3 tools/check.py                               # "TAMAM" yazmalı
 npm run lint                                         # TypeScript hatası olmamalı
 npm run build                                        # hatasız bitmeli; out/ klasörünü üretir
-NODE_PATH=$(npm root -g) node tools/ekran.js ekran   # "Sayfa hatası yok" yazmalı; ekran/ klasöründeki görüntülere bak
+NODE_PATH=$(npm root -g) node tools/ekran.js ekran   # "Sayfa hatası yok" yazmalı; ekran/ klasöründeki görüntülere bak (yalnız bazı konular: ... ekran kimya/mol fizik)
 ```
 Siteyi gezmek için `npm run dev` çalıştır ve `http://localhost:3000` adresini aç.
 
