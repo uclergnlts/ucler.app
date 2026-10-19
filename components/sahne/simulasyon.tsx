@@ -295,20 +295,22 @@ function useBildir(v: Record<string, number>, set: SahneProps["set"], degerler: 
 function SurtunmeLab({ v, set, saat = 0 }: SahneProps) {
   const F = v.F ?? 0, m = v.m ?? 20, N = m * SUR.g, fsMax = SUR.MUS * N, fk = SUR.MUK * N;
   const dt = useAdim(saat);
-  const r = useRef({ x: 0, hiz: 0 });
+  const r = useRef({ x: 0, hiz: 0, akis: 0 });
   const d = r.current;
   // Durgunken statik sürtünme itmeyi dengeler (en çok μs·N); kayarken kinetik sürtünme μk·N.
   let f: number, a = 0;
   if (d.hiz === 0 && F <= fsMax) { f = F; }
   else {
     f = fk; a = (F - fk) / m;
-    d.hiz = Math.min(SUR.HMAX, d.hiz + a * dt);
+    d.hiz += a * dt;
     if (d.hiz <= 0) { d.hiz = 0; a = 0; f = Math.min(F, fsMax); }
   }
   d.x += d.hiz * dt;
+  // Fiziksel hız sınırsız; yalnız zeminin görsel akışı HMAX'ta sınırlanır (çizgiler bulanmasın diye).
+  d.akis = (d.akis + Math.min(SUR.HMAX, d.hiz) * dt * SUR.PXM) % 60;
   const kayiyor = d.hiz > 0 ? 1 : 0;
   useBildir(v, set, { kayiyor });
-  const kay = (d.x * SUR.PXM) % 60;
+  const kay = d.akis;
   const okF = Math.min(130, F * 0.55), okf = Math.min(130, f * 0.55);
   const kenar = SUR.KX - 30;
   return (
@@ -1086,11 +1088,12 @@ function CozunurlukLab({ v, set, saat = 0 }: SahneProps) {
 
 /* ---------- biyoloji: benekli güve ve doğal seçilim ---------- */
 
-/** Bir kuşak: kuşlar arka plana uymayan güveleri daha çok yakalar. Az bir mutasyon iki rengi de hep ortada tutar. */
+/** Bir kuşak: kuşlar arka plana uymayan güveleri daha çok yakalar. Nadir mutasyon (%0,1) iki rengi de hep ortada tutar;
+ *  kuş yokken oranı yalnız bu mutasyon çok yavaşça %50'ye doğru kaydırır (evrim.json'daki "tamam" metni bunu söyler). */
 const guveKusak = (p: number, kirli: boolean, kus: boolean) => {
   const wk = !kus ? 1 : kirli ? 0.9 : 0.6, wa = !kus ? 1 : kirli ? 0.6 : 0.9;
   const s = (p * wk) / (p * wk + (1 - p) * wa);
-  return sinir(s * (1 - 0.004) + (1 - s) * 0.004, 0, 1);
+  return sinir(s * (1 - 0.001) + (1 - s) * 0.001, 0, 1);
 };
 
 function GuveLab({ v, set, saat = 0 }: SahneProps) {
