@@ -1,0 +1,163 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#1fa463}
+.head .sub i{display:block;width:44px;height:6px;background:#1fa463;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#1fa463;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#1fa463;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>BİYOLOJİ</div><div class="brand">ucler<b>.</b></div></div>
+
+<div class="scene" data-s="-1" data-e="6.0">
+ <div class="title">Ateşin 41&#39;i geçerse<br><em>ne olur?</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><rect x="80" y="470" width="920" height="330" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="4"/><text x="130" y="545" text-anchor="start" font-family="Manrope" font-size="44" font-weight="800" fill="#1d3557">Vücudun 39 °C&#39;de:</text><g transform="translate(330 690) scale(0.85)"><path d="M-100 -40 C-110 -110 -20 -130 40 -100 C90 -80 110 -60 110 -40 L40 -10 L40 30 L110 50 C110 100 40 130 -20 120 C-90 110 -110 60 -100 -40 Z" fill="#e1f5ea" stroke="#1fa463" stroke-width="8.5" stroke-linejoin="round"/><path d="M-70 -55 q25 -35 50 0 t50 0 M-75 25 q25 35 50 0 t45 0 M-60 -15 H10" fill="none" stroke="#1fa463" stroke-width="5.6" opacity=".55" stroke-linecap="round"/></g><g transform="translate(330 690) scale(0.85)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde6cc" stroke="#f08a24" stroke-width="7.1" stroke-linejoin="round"/></g><circle cx="690" cy="690" r="34" fill="#1fa463"/><path d="M674 690 l11 12 l21 -24" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/><text x="740" y="705" text-anchor="start" font-size="40" font-weight="800" fill="#1fa463">sorun yok</text></g><g data-in="-1"><rect x="80" y="830" width="920" height="330" rx="18" fill="#fff" stroke="#d63c63" stroke-width="5"/><text x="130" y="905" text-anchor="start" font-family="Manrope" font-size="44" font-weight="800" fill="#d63c63">Enzimlerin 41 °C&#39;de:</text><g transform="translate(680 1080) scale(1.1)"><path d="M-170 30 C-140 -60 -100 70 -60 -10 S0 -70 30 10 S90 60 120 -20 S160 -40 175 10" fill="none" stroke="#d63c63" stroke-width="8.2" stroke-linecap="round"/><path d="M-90 -95 q12 -14 0 -28 q-12 -14 0 -28" fill="none" stroke="#d63c63" stroke-width="3.6" opacity=".7" stroke-linecap="round"/><path d="M0 -95 q12 -14 0 -28 q-12 -14 0 -28" fill="none" stroke="#d63c63" stroke-width="3.6" opacity=".7" stroke-linecap="round"/><path d="M90 -95 q12 -14 0 -28 q-12 -14 0 -28" fill="none" stroke="#d63c63" stroke-width="3.6" opacity=".7" stroke-linecap="round"/></g></g><g data-in="2.35"><rect x="80" y="1190" width="920" height="120" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><g transform="translate(160 1250)"><path d="M0 0 L38 0" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M0 0 L19 33" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M0 0 L-19 33" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M0 0 L-38 -0" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M0 0 L-19 -33" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M0 0 L19 -33" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/></g><text x="230" y="1264" text-anchor="start" font-size="38" font-weight="800" fill="#3a86c8">ve 13 °C&#39;de hayatta kalan biri</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="6.0" data-e="20.9">
+ <div class="title">Ateş çoğu zaman<br><em>bir savunma</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="6.1"><rect x="238" y="650" width="44" height="600" rx="22" fill="#fff" stroke="#1d3557" stroke-width="5"/><circle cx="260" cy="1250" r="40" fill="#d63c63" stroke="#1d3557" stroke-width="5"/><rect x="250" y="940" width="20" height="310" fill="#d63c63"/><path d="M286 1060 H316" stroke="#1d3557" stroke-width="5"/><text x="330" y="1072" text-anchor="start" font-family="Manrope" font-size="34" font-weight="800" fill="#1d3557">37</text><path d="M286 940 H316" stroke="#1fa463" stroke-width="5"/><text x="330" y="952" text-anchor="start" font-family="Manrope" font-size="34" font-weight="800" fill="#1fa463">39</text><path d="M286 820 H316" stroke="#d63c63" stroke-width="5"/><text x="330" y="832" text-anchor="start" font-family="Manrope" font-size="34" font-weight="800" fill="#d63c63">41</text><text x="260" y="1340" text-anchor="middle" font-size="28" font-weight="700" fill="#5f6f88">vücut sıcaklığı (°C)</text></g><g data-in="7.6"><rect x="500" y="600" width="500" height="150" rx="18" fill="#fff" stroke="#1fa463" stroke-width="4"/><text x="750" y="665" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#1fa463">38-39 °C</text><text x="750" y="715" text-anchor="middle" font-size="30" font-weight="700" fill="#1d3557">çoğu zaman savunma</text></g><g data-in="12.4"><rect x="500" y="780" width="500" height="130" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><rect x="545.0" y="825.0" width="110" height="40" rx="20.0" fill="#fde2ea" stroke="#d63c63" stroke-width="4" transform="rotate(-10 600 845)"/><text x="680" y="856" text-anchor="start" font-size="30" font-weight="800" fill="#1d3557">mikroplar yavaşlar</text></g><g data-in="15.3"><rect x="500" y="940" width="500" height="130" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><circle cx="600" cy="1005" r="40" fill="#e3f0fb" stroke="#457b9d" stroke-width="5"/><path d="M582 999 q10 -18 22 -4 q14 -12 18 8 q-6 18 -22 12 q-16 6 -18 -16 Z" fill="#457b9d" opacity=".7"/><text x="680" y="1016" text-anchor="start" font-size="30" font-weight="800" fill="#1d3557">bağışıklık hızlanır</text></g><g data-in="17.2"><rect x="250" y="783.9999999999999" width="20" height="156.0000000000001" fill="#d63c63"/><rect x="500" y="1100" width="500" height="130" rx="18" fill="#fff" stroke="#d63c63" stroke-width="5"/><text x="750" y="1150" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#d63c63">41 °C üstü</text><text x="750" y="1198" text-anchor="middle" font-size="32" font-weight="800" fill="#d63c63">tehlikeli</text></g><g data-in="20.2"><text x="750" y="1330" text-anchor="middle" font-family="Manrope" font-size="64" font-weight="800" fill="#1d3557">Neden?</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="20.9" data-e="34.4">
+ <div class="title">Cevap:<br><em>enzimler</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="21.6"><g transform="translate(470 900) scale(2.1)"><path d="M-100 -40 C-110 -110 -20 -130 40 -100 C90 -80 110 -60 110 -40 L40 -10 L40 30 L110 50 C110 100 40 130 -20 120 C-90 110 -110 60 -100 -40 Z" fill="#e1f5ea" stroke="#1fa463" stroke-width="3.4" stroke-linejoin="round"/><path d="M-70 -55 q25 -35 50 0 t50 0 M-75 25 q25 35 50 0 t45 0 M-60 -15 H10" fill="none" stroke="#1fa463" stroke-width="2.3" opacity=".55" stroke-linecap="round"/></g></g><g data-in="22.65"><text x="540" y="600" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">hücredeki tepkimeleri hızlandırır</text></g><g data-in="26.4"><text x="470" y="1185" text-anchor="middle" font-size="34" font-weight="800" fill="#1fa463">katlanmış bir protein</text></g><g data-in="29.5" data-out="33.0"><path d="M640 760 L590 860" stroke="#1d3557" stroke-width="4"/><text x="650" y="740" text-anchor="start" font-size="32" font-weight="800" fill="#1d3557">aktif bölge</text></g><g data-in="30.4" data-out="31.8"><g transform="translate(590 900) scale(2.1)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde6cc" stroke="#f08a24" stroke-width="2.9" stroke-linejoin="round"/></g></g><g data-in="31.9"><g transform="translate(470 900) scale(2.1)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde6cc" stroke="#f08a24" stroke-width="2.9" stroke-linejoin="round"/></g><text x="770" y="1060" text-anchor="middle" font-size="32" font-weight="800" fill="#f08a24">substrat</text></g><g data-in="32.4"><rect x="220" y="1240" width="640" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1303" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">anahtar ve kilit gibi</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="34.4" data-e="49.9">
+ <div class="title">Isınınca tepkime<br><em>önce hızlanır</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="34.5"><path d="M160 620 V1200 H950" fill="none" stroke="#1d3557" stroke-width="4"/><text x="170" y="610" text-anchor="start" font-size="28" font-weight="700" fill="#5f6f88">tepkime hızı</text><text x="950" y="1250" text-anchor="end" font-size="28" font-weight="700" fill="#5f6f88">sıcaklık (°C)</text><text x="160" y="1250" text-anchor="middle" font-size="28" font-weight="700" fill="#5f6f88">0</text><text x="420" y="1250" text-anchor="middle" font-size="28" font-weight="700" fill="#5f6f88">20</text></g><path data-draw="34.8" data-dur="4.2" d="M160 1180 C394 1170 550 930 641 700" fill="none" stroke="#1fa463" stroke-width="8" stroke-linecap="round"/><g data-in="39.75"><path d="M641 700 V1200" stroke="#1fa463" stroke-width="3" stroke-dasharray="10 8"/><circle cx="641" cy="700" r="13" fill="#1fa463"/><text x="641" y="665" text-anchor="middle" font-family="Manrope" font-size="36" font-weight="800" fill="#1fa463">37 °C: en hızlı</text><text x="641" y="1250" text-anchor="middle" font-size="28" font-weight="800" fill="#1fa463">37</text></g><g data-in="43.2"><rect x="660.5" y="620" width="289.5" height="580" fill="#d63c63" opacity=".08"/></g><path data-draw="43.4" data-dur="2.4" d="M641 700 C680 760 719 1110 784 1180" fill="none" stroke="#d63c63" stroke-width="8" stroke-linecap="round"/><g data-in="46.5"><rect x="735" y="760" width="260" height="120" rx="18" fill="#fff" stroke="#d63c63" stroke-width="4"/><text x="865" y="812" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">zayıf bağlar</text><text x="865" y="852" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">kopar</text></g><g data-in="46.0"><rect x="140" y="1300" width="800" height="90" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1358" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">çok sıcakta hız birden düşer</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="49.9" data-e="59.3">
+ <div class="title">Buna<br><em>denatürasyon</em> denir</div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="50.0"><g transform="translate(240 720) scale(1.15)"><path d="M-100 -40 C-110 -110 -20 -130 40 -100 C90 -80 110 -60 110 -40 L40 -10 L40 30 L110 50 C110 100 40 130 -20 120 C-90 110 -110 60 -100 -40 Z" fill="#e1f5ea" stroke="#1fa463" stroke-width="6.3" stroke-linejoin="round"/><path d="M-70 -55 q25 -35 50 0 t50 0 M-75 25 q25 35 50 0 t45 0 M-60 -15 H10" fill="none" stroke="#1fa463" stroke-width="4.2" opacity=".55" stroke-linecap="round"/></g><text x="240" y="912" text-anchor="middle" font-family="Manrope" font-size="32" font-weight="800" fill="#1fa463">37 °C</text></g><g data-in="50.0"><path d="M410 720 H580" stroke="#1d3557" stroke-width="5"/><path d="M564 708 L580 720 L564 732" fill="none" stroke="#1d3557" stroke-width="5"/></g><g data-in="50.4"><g transform="translate(800 730) scale(0.95)"><path d="M-170 30 C-140 -60 -100 70 -60 -10 S0 -70 30 10 S90 60 120 -20 S160 -40 175 10" fill="none" stroke="#d63c63" stroke-width="9.5" stroke-linecap="round"/><path d="M-90 -95 q12 -14 0 -28 q-12 -14 0 -28" fill="none" stroke="#d63c63" stroke-width="4.2" opacity=".7" stroke-linecap="round"/><path d="M0 -95 q12 -14 0 -28 q-12 -14 0 -28" fill="none" stroke="#d63c63" stroke-width="4.2" opacity=".7" stroke-linecap="round"/><path d="M90 -95 q12 -14 0 -28 q-12 -14 0 -28" fill="none" stroke="#d63c63" stroke-width="4.2" opacity=".7" stroke-linecap="round"/></g><text x="800" y="912" text-anchor="middle" font-family="Manrope" font-size="32" font-weight="800" fill="#d63c63">41 °C üstü</text></g><g data-in="51.6"><rect x="560" y="950" width="440" height="110" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="780" y="1000" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">aktif bölge yok:</text><text x="780" y="1040" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">enzim çalışmaz</text></g><g data-in="53.2"><rect x="80" y="950" width="440" height="110" rx="18" fill="#fff" stroke="#d63c63" stroke-width="5"/><text x="300" y="1020" text-anchor="middle" font-family="Manrope" font-size="42" font-weight="800" fill="#d63c63">denatürasyon</text></g><g data-in="55.3"><rect x="80" y="1095" width="920" height="90" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1152" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">çoğu zaman geri dönmez</text></g><g data-in="57.3"><g transform="translate(220 1295) scale(0.75)"><path d="M-90 20 C-120 -30 -80 -90 -20 -80 C0 -110 70 -100 80 -60 C120 -40 115 30 70 40 C60 70 -60 70 -90 20 Z" fill="#fde2ea" stroke="#d63c63" stroke-width="5" stroke-linejoin="round"/><path d="M-50 -40 q20 20 0 40 M0 -70 q-20 30 10 50 q25 20 0 45 M45 -45 q-15 25 15 40" fill="none" stroke="#d63c63" stroke-width="4" stroke-linecap="round"/></g><text x="340" y="1308" text-anchor="start" font-size="38" font-weight="800" fill="#d63c63">en hassas organ: beyin</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="59.3" data-e="76.3">
+ <div class="title">Soğuk ise<br><em>farklıdır</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="61.0"><rect x="140" y="560" width="800" height="150" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="625" text-anchor="middle" font-family="Manrope" font-size="42" font-weight="800" fill="#3a86c8">1999, Norveç</text><text x="540" y="675" text-anchor="middle" font-size="28" font-weight="700" fill="#1d3557">kayakçı genç bir doktor buzlu dereye düşüyor</text></g><g data-in="62.8" data-out="69.4"><rect x="200" y="760" width="680" height="170" rx="18" fill="#e3f0fb" stroke="#3a86c8" stroke-width="5"/><path d="M230 800 q27 -20 55 0 t55 0" fill="none" stroke="#3a86c8" stroke-width="5"/><path d="M340 800 q27 -20 55 0 t55 0" fill="none" stroke="#3a86c8" stroke-width="5"/><path d="M450 800 q27 -20 55 0 t55 0" fill="none" stroke="#3a86c8" stroke-width="5"/><path d="M560 800 q27 -20 55 0 t55 0" fill="none" stroke="#3a86c8" stroke-width="5"/><path d="M670 800 q27 -20 55 0 t55 0" fill="none" stroke="#3a86c8" stroke-width="5"/><path d="M780 800 q27 -20 55 0 t55 0" fill="none" stroke="#3a86c8" stroke-width="5"/><rect x="260" y="850" width="120" height="50" rx="8" fill="#fff" stroke="#3a86c8" stroke-width="4" transform="rotate(-8 260 850)"/><rect x="700" y="840" width="110" height="46" rx="8" fill="#fff" stroke="#3a86c8" stroke-width="4" transform="rotate(10 700 840)"/><rect x="470" y="880" width="90" height="40" rx="8" fill="#fff" stroke="#3a86c8" stroke-width="4" transform="rotate(4 470 880)"/><text x="540" y="970" text-anchor="middle" font-size="28" font-weight="800" fill="#3a86c8">buzlu dere</text></g><g data-in="66.6"><rect x="218" y="980" width="44" height="250" rx="22" fill="#fff" stroke="#1d3557" stroke-width="5"/><circle cx="240" cy="1230" r="40" fill="#3a86c8" stroke="#1d3557" stroke-width="5"/><rect x="230" y="1170" width="20" height="60" fill="#3a86c8"/><text x="620" y="1150" text-anchor="middle" font-family="Manrope" font-size="120" font-weight="800" fill="#3a86c8">13,7 °C</text><text x="620" y="1210" text-anchor="middle" font-size="30" font-weight="700" fill="#5f6f88">vücut sıcaklığı</text></g><g data-in="69.75"><g transform="translate(330 840) scale(1.2)"><path d="M-100 -40 C-110 -110 -20 -130 40 -100 C90 -80 110 -60 110 -40 L40 -10 L40 30 L110 50 C110 100 40 130 -20 120 C-90 110 -110 60 -100 -40 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="6.0" stroke-linejoin="round"/><path d="M-70 -55 q25 -35 50 0 t50 0 M-75 25 q25 35 50 0 t45 0 M-60 -15 H10" fill="none" stroke="#3a86c8" stroke-width="4.0" opacity=".55" stroke-linecap="round"/></g><text x="560" y="825" text-anchor="start" font-size="34" font-weight="800" fill="#3a86c8">neredeyse durdu</text></g><g data-in="71.85"><circle cx="585" cy="895" r="26" fill="#1fa463"/><path d="M573 895 l9 10 l17 -20" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g><g data-in="71.85"><text x="630" y="907" text-anchor="start" font-size="34" font-weight="800" fill="#1fa463">ama bozulmadı</text></g><g data-in="73.3"><rect x="140" y="1290" width="800" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1352" text-anchor="middle" font-size="36" font-weight="800" fill="#1fa463">yavaşça ısıtıldı ve iyileşti</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="76.3" data-e="80.6">
+ <div class="title">Soğuk yavaşlatır,<br><em>sıcak bozar</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="76.4"><text x="290" y="640" text-anchor="middle" font-size="44" font-weight="800" fill="#3a86c8">soğuk</text><g transform="translate(290 880) scale(1.4)"><path d="M-100 -40 C-110 -110 -20 -130 40 -100 C90 -80 110 -60 110 -40 L40 -10 L40 30 L110 50 C110 100 40 130 -20 120 C-90 110 -110 60 -100 -40 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="5.1" stroke-linejoin="round"/><path d="M-70 -55 q25 -35 50 0 t50 0 M-75 25 q25 35 50 0 t45 0 M-60 -15 H10" fill="none" stroke="#3a86c8" stroke-width="3.4" opacity=".55" stroke-linecap="round"/></g><text x="290" y="1100" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">enzim yavaşlar</text><text x="290" y="1145" text-anchor="middle" font-size="30" font-weight="700" fill="#5f6f88">ısınınca düzelir</text></g><g data-in="76.4"><path d="M540 600 V1200" stroke="#9aa6b6" stroke-width="4" stroke-dasharray="12 10"/></g><g data-in="78.2"><text x="790" y="640" text-anchor="middle" font-size="44" font-weight="800" fill="#d63c63">aşırı sıcak</text><g transform="translate(790 880) scale(1.05)"><path d="M-170 30 C-140 -60 -100 70 -60 -10 S0 -70 30 10 S90 60 120 -20 S160 -40 175 10" fill="none" stroke="#d63c63" stroke-width="8.6" stroke-linecap="round"/><path d="M-90 -95 q12 -14 0 -28 q-12 -14 0 -28" fill="none" stroke="#d63c63" stroke-width="3.8" opacity=".7" stroke-linecap="round"/><path d="M0 -95 q12 -14 0 -28 q-12 -14 0 -28" fill="none" stroke="#d63c63" stroke-width="3.8" opacity=".7" stroke-linecap="round"/><path d="M90 -95 q12 -14 0 -28 q-12 -14 0 -28" fill="none" stroke="#d63c63" stroke-width="3.8" opacity=".7" stroke-linecap="round"/></g><text x="790" y="1100" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">enzim bozulur</text><text x="790" y="1145" text-anchor="middle" font-size="30" font-weight="700" fill="#5f6f88">çoğu zaman kalıcı</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="80.62" data-e="86.95">
+ <div class="q"><small>DÜŞÜN</small>Seksen derecelik kaplıcada yaşayan bakterilerin enzimleri <em>neden bozulmaz?</em></div>
+</div>
+
+<div class="scene" data-s="86.75" data-e="99">
+ <div class="title">Kısaca<br><em>hatırla</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><rect x="80" y="500" width="920" height="760" rx="18" fill="#fff" stroke="#1fa463" stroke-width="5"/><text x="140" y="590" text-anchor="start" font-size="32" font-weight="800" fill="#1fa463">ÖZET</text><circle cx="160" cy="680" r="14" fill="#1fa463"/><text x="200" y="694" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">Ateş 38-39 °C: savunmadır</text><circle cx="160" cy="800" r="14" fill="#1fa463"/><text x="200" y="814" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">Enzimin en iyi sıcaklığı ≈37 °C</text><circle cx="160" cy="920" r="14" fill="#1fa463"/><text x="200" y="934" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">Aşırı sıcak enzimi bozar,</text><text x="200" y="984" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">soğuk yavaşlatır</text><path d="M140 1060 H940" stroke="#dbe3ee" stroke-width="3"/><path d="M160 1110 h40 v70 l-20 -16 l-20 16 Z" fill="#1fa463"/><text x="230" y="1160" text-anchor="start" font-family="Manrope" font-size="42" font-weight="800" fill="#1fa463">Kaydet, sınavdan önce bak</text></g>
+ </svg>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;                 // ses hızlandırılmadı
+const DUR = 88.9;           // ses süresi
+const PH = [
+ [0.00,1.98,"Ateşin kırk biri geçerse ne olur?"],
+ [2.35,5.77,"Üstelik vücudu on üç dereceye düşüp hayatta kalan biri var."],
+ [6.18,7.35,"Önce ateşe bakalım."],
+ [7.59,15.14,"Hastalandığında ateşinin otuz sekiz, otuz dokuz dereceye çıkması çoğu zaman bir savunmadır. Mikropların çoğalması yavaşlar,"],
+ [15.35,16.95,"bağışıklık hücreleri hızlanır."],
+ [17.24,19.99,"Ama kırk bir dereceyi geçen ateş tehlikelidir."],
+ [20.29,20.68,"Neden?"],
+ [20.95,21.37,"Cevap"],
+ [21.61,22.36,"enzimlerde."],
+ [22.65,26.10,"Hücrendeki neredeyse her tepkimeyi enzimler hızlandırır."],
+ [26.39,29.17,"Enzim, belirli bir şekle katlanmış bir proteindir."],
+ [29.51,34.05,"Üzerindeki aktif bölge, substratı bir anahtarı tutan kilit gibi kavrar."],
+ [34.42,39.37,"Sıcaklık arttıkça moleküller hızlanır, çarpışmalar artar ve tepkime hızlanır."],
+ [39.75,42.95,"İnsan enzimleri otuz yedi derecede en hızlı çalışır."],
+ [43.23,49.54,"Daha sıcakta ise moleküller o kadar şiddetli titreşir ki enzimin şeklini tutan zayıf bağlar kopar."],
+ [49.88,55.03,"Aktif bölge bozulur ve enzim artık işini yapamaz. Buna denatürasyon denir ve"],
+ [55.31,57.05,"çoğu zaman geri dönmez."],
+ [57.27,58.95,"En hassas organ beyindir."],
+ [59.27,60.65,"Soğuk ise farklıdır."],
+ [61.03,66.40,"Bin dokuz yüz doksan dokuzda Norveçli genç bir doktor, kayak yaparken buzlu bir dereye düştü."],
+ [66.63,69.53,"Vücut sıcaklığı on üç virgül yedi dereceye indi."],
+ [69.75,71.62,"Enzimleri neredeyse durmuştu"],
+ [71.85,73.08,"ama bozulmamıştı."],
+ [73.31,76.09,"Hastanede yavaşça ısıtıldı ve iyileşti."],
+ [76.33,80.25,"Yani soğuk enzimi yavaşlatır, aşırı sıcak ise bozar."],
+ [80.62,81.38,"Peki sence,"],
+ [81.59,86.43,"seksen derecelik kaplıca suyunda yaşayan bakterilerin enzimleri neden bozulmaz?"]
+];
+
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  cap.style.opacity = t > 86.6 ? 0 : 1;
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
