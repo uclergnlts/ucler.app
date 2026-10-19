@@ -19,10 +19,11 @@ const TABS = [
 export default function Tabs() {
   const parts = usePathname().split("/").filter(Boolean);
   if (parts.length >= 2 || parts[0] === "tekrar") return null;
-  const cur =
+  // Ders haritası (/fizik/) ve bulunamayan sayfalar hiçbir sekmeye ait değil: hiçbiri seçili görünmez.
+  const cur: string | undefined =
     parts.length === 0
       ? "home"
-      : ({ kesfet: "kesfet", kaydedilenler: "profil", profil: "profil", videolar: "video", oyunlar: "oyun" } as const)[parts[0]] ?? "home";
+      : ({ kesfet: "kesfet", kaydedilenler: "profil", profil: "profil", hakkinda: "profil", gizlilik: "profil", videolar: "video", oyunlar: "oyun" } as Record<string, string>)[parts[0]];
   return (
     <div className="fixed inset-x-0 bottom-0 z-10 border-t border-border bg-card pb-[env(safe-area-inset-bottom,0px)]">
       <nav aria-label="Bölümler" className="mx-auto grid h-[var(--nav)] max-w-[520px] grid-cols-5">

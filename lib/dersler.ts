@@ -45,7 +45,10 @@ export const secmeli = (q: Question): q is Secmeli => !q.tur || q.tur === "secim
 export type Topic = { title: string; summary: string; cards: Card[]; quiz: Question[] };
 export type DersId = "fizik" | "kimya" | "biyoloji";
 /** on: ön koşul konular (aynı dersten, listede daha önce gelen id'ler). Konu haritası bunlarla çizilir. */
-export type Ders = { ad: string; yol: string; konular: { id?: string; ad: string; on?: string[] }[] };
+export type Ders = { ad: string; yol: string; konular: { id?: string; ad: string; on?: string[]; sinav?: Sinav }[] };
+/** Konunun YKS'de hangi oturumda çıktığı (content/dersler.json "sinav"; tools/check.py doğrular). */
+export type Sinav = "TYT" | "AYT" | "TYT-AYT";
+export const SINAV_AD: Record<Sinav, string> = { TYT: "TYT", AYT: "AYT", "TYT-AYT": "TYT ve AYT" };
 
 /** Ders yolundaki bir konu: hazırsa kısa bilgisiyle, değilse yalnızca adıyla. Kart görsellerini taşımaz. */
 export type Entry = {
@@ -59,6 +62,7 @@ export type Entry = {
   quizCount?: number;
   headings?: string;
   on?: string[];
+  sinav?: Sinav;
 };
 
 export const DERSLER = dersler as Record<DersId, Ders>;

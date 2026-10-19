@@ -13,9 +13,9 @@ export const topic = (d: DersId, id: string): Topic | undefined => DATA[d][id];
 export function entries(d: DersId): Entry[] {
   return DERSLER[d].konular.map((k, i) => {
     const t = k.id ? topic(d, k.id) : undefined;
-    if (!k.id || !t) return { ders: d, no: i + 1, ad: k.ad };
+    if (!k.id || !t) return { ders: d, no: i + 1, ad: k.ad, sinav: k.sinav };
     return {
-      ders: d, no: i + 1, ad: k.ad, id: k.id, title: t.title, summary: t.summary, on: k.on,
+      ders: d, no: i + 1, ad: k.ad, id: k.id, title: t.title, summary: t.summary, on: k.on, sinav: k.sinav,
       cardCount: t.cards.length, quizCount: t.quiz.length, headings: t.cards.map((c) => c.h).join(" "),
     };
   });

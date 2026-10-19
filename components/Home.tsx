@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
-import { bugunku, doneKeys, gunAdi, useAd, useProg, useTekrar } from "@/lib/store";
+import { bugunku, doneKeys, gunAdi, useAd, useAsama, useProg, useTekrar } from "@/lib/store";
 import { sureYaz, VIDEOLAR } from "@/lib/videolar";
 import { Icon } from "./icons";
 import { motion } from "motion/react";
@@ -12,12 +12,19 @@ import Bugun from "./Bugun";
 import { Bolum, Govde, href, Liste, Simge, Top } from "./temel";
 
 export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
-  const prog = useProg(), ad = useAd(), tekrar = useTekrar();
+  const prog = useProg(), ad = useAd(), tekrar = useTekrar(), asama = useAsama();
   const bugun = bugunku(tekrar).length, kalan = Object.keys(tekrar).length;
   const sonraki = Object.values(tekrar).map((x) => x.g).sort()[0];
   const doneAll = doneKeys(prog).length;
   const [ld, lid] = (prog._last || "").split(".");
   const last = ld in all ? all[ld as DersId].find((e) => e.id && e.id === lid) : undefined;
+  // Yeni kullanıcı: hiçbir konuya girmemiş. Ona önce sitenin ne olduğu ve tek bir başlangıç noktası gösterilir;
+  // seri ve görevler ders listesinin altına iner.
+  const ilk = all.fizik.find((e) => e.id);
+  const yeni = !last && doneAll === 0 && !Object.keys(asama).length;
+  // Görevlerin götürdüğü konu: kalınan konu, yoksa ilk konu.
+  const hedef = last ?? ilk;
+  const gorevHref = hedef ? href(hedef.ders, hedef.id) : "/kesfet/";
   const Next = Icon.ileri, Play = Icon.play, Tekrar = Icon.tekrar;
   const router = useRouter();
 
@@ -37,10 +44,27 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
       <Govde>
         <section className="grid gap-1.5">
           <h1 className="text-[28px]">Hoş geldin{ad ? `, ${ad}` : ""}</h1>
-          {doneAll > 0 && <p className="text-[15px] text-muted-foreground">Şimdiye kadar {doneAll} konu bitirdin.</p>}
+          {yeni ? (
+            <p className="text-[15px] text-muted-foreground">Fizik, kimya ve biyoloji en temelden: kısa, görselli kartlar ve her konunun sonunda 4 soruluk bir test.</p>
+          ) : doneAll > 0 && <p className="text-[15px] text-muted-foreground">Şimdiye kadar {doneAll} konu bitirdin.</p>}
         </section>
 
-        <Bugun />
+        {yeni && ilk && (
+          <Link
+            data-ders={ilk.ders}
+            href={href(ilk.ders, ilk.id)}
+            className="flex items-center gap-3.5 rounded-2xl bg-acc p-4 text-primary-foreground transition-transform active:scale-[.99]"
+          >
+            <span className="grid size-11 flex-none place-items-center rounded-xl bg-white/20 [&_svg]:size-5"><Play /></span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-[13px] font-semibold opacity-85">İlk konuna başla</span>
+              <b className="block truncate font-bold">{ilk.title}</b>
+            </span>
+            <Next />
+          </Link>
+        )}
+
+        {!yeni && <Bugun konuHref={gorevHref} />}
 
         {bugun > 0 && (
           <Link href="/tekrar/" className="flex items-center gap-3.5 rounded-2xl border-[1.5px] border-foreground bg-card p-4 transition-transform active:scale-[.99]">
@@ -91,6 +115,8 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
             })}
           </Liste>
         </Bolum>
+
+        {yeni && <Bugun konuHref={gorevHref} />}
 
         {VIDEOLAR.length > 0 && (
           <Bolum title="Kısa videolar" more={<Link className="text-sm font-bold text-muted-foreground" href="/videolar/">Tümü</Link>}>

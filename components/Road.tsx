@@ -1,9 +1,9 @@
 "use client";
-// Bir dersin konuları: konu haritası (ön koşul bağlantılarıyla) ya da liste. Liste görünümünde hazır konular açık,
-// ön koşulu bitmemiş olanlar kilitli, yazılmamış olanlar "Yakında".
+// Bir dersin konuları: konu haritası (ön koşul bağlantılarıyla) ya da liste. Sıra bir öneridir: ön koşulu bitmemiş
+// konu soluk görünür ama açılır. Yazılmamış konular "Yakında".
 import Link from "next/link";
 import { motion } from "motion/react";
-import { DERSLER, type DersId, type Entry } from "@/lib/dersler";
+import { DERSLER, SINAV_AD, type DersId, type Entry } from "@/lib/dersler";
 import { durumlar } from "@/lib/harita";
 import { setGorunum, useAsama, useGorunum, useProg, type Gorunum } from "@/lib/store";
 import { asamaSayisi } from "@/lib/asama";
@@ -33,7 +33,7 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
   const s = DERSLER[ders];
   const d = durumlar(ders, list, prog);
   const ready = list.filter((e) => e.id), done = ready.filter((e) => prog[`${ders}.${e.id}`]).length;
-  const Back = Icon.back, Check = Icon.check, Kilit = Icon.kilit;
+  const Back = Icon.back, Check = Icon.check;
   return (
     <div className="app" data-ders={ders}>
       <header className="top">
@@ -42,7 +42,7 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
       <Govde>
         <section className="grid gap-1.5">
           <h1 className="text-[28px]">{s.ad}</h1>
-          <p className="text-[15px] text-muted-foreground">{s.yol}. Konular birbirinin üzerine kurulu; bir konuyu bitirince ona bağlı konuların kilidi açılır.</p>
+          <p className="text-[15px] text-muted-foreground">{s.yol}. Konular birbirinin üzerine kurulu ve sırayla önerilir; istediğine atlayabilirsin.</p>
           <Progress className="mt-2.5" value={ready.length ? (100 * done) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti`} />
           <span className="text-[13px] font-semibold text-muted-foreground">{done} / {ready.length} konu bitti</span>
         </section>
@@ -66,12 +66,12 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
               return (
                 <motion.li key={e.no} {...anim}>
                   <Link href={href(ders, e.id)} className="flex items-start gap-3.5 p-4 transition-colors active:bg-secondary">
-                    <Dugum durum={res ? "bitti" : kilitli ? "kilitli" : "acik"}>{res ? <Check /> : kilitli ? <Kilit /> : e.no}</Dugum>
+                    <Dugum durum={res ? "bitti" : kilitli ? "kilitli" : "acik"}>{res ? <Check /> : e.no}</Dugum>
                     <span className="grid min-w-0 gap-0.5">
                       <b className="font-bold leading-snug">{e.title}</b>
                       <span className="line-clamp-2 text-sm text-muted-foreground">{e.summary}</span>
                       <span className={cn("mt-0.5 text-xs font-semibold", res ? "text-acc" : "text-muted-foreground")}>
-                        {e.cardCount} kart · {e.quizCount} soru{res ? ` · ${res}` : asama[`${ders}.${e.id}`] ? ` · ${asama[`${ders}.${e.id}`]}/${asamaSayisi(e.cardCount ?? 0)} aşama` : ""}
+                        {e.sinav && `${SINAV_AD[e.sinav]} · `}{e.cardCount} kart · {e.quizCount} soru{res ? ` · ${res}` : asama[`${ders}.${e.id}`] ? ` · ${asama[`${ders}.${e.id}`]}/${asamaSayisi(e.cardCount ?? 0)} aşama` : ""}
                       </span>
                     </span>
                   </Link>
