@@ -2,12 +2,12 @@
  "id": "dna-genetik-kod",
  "ders": "biyoloji",
  "konu": "dna-genetik-kod",
- "baslik": "DNA ve genetik kod",
+ "baslik": "DNA, eşlenme ve biyoteknoloji",
  "ozet": "Bazları eşleştir, Chargaff kuralıyla hesap yap, DNA'nın kendini nasıl kopyaladığını izle.",
  "adimlar": [
   {
    "baslik": "DNA'nın harfleri",
-   "metin": "DNA'nın yapı birimi <b>nükleotittir</b>: bir fosfat, bir deoksiriboz şekeri ve bir baz. Dört baz vardır: A, G, T ve C. Halkalarına bak.",
+   "metin": "Dört bazın halkalarını say. Hangileri çift halkalı?",
    "sahne": { "tur": "biy7-nukleotit" },
    "gorev": {
     "tur": "secim",
@@ -37,7 +37,7 @@
   },
   {
    "baslik": "Chargaff kuralı",
-   "metin": "Her A bir T ile eşleştiği için çift iplikli DNA'da A sayısı T'ye, G sayısı C'ye eşittir. Bu 100 baz çiftlik DNA'da adenin sayısını değiştir; hidrojen bağı sayısını <b>270</b> yap.",
+   "metin": "Bu 100 baz çiftlik DNA'da adenin sayısını değiştir; hidrojen bağı sayısını <b>270</b> yap.",
    "sahne": { "tur": "biy7-chargaff" },
    "deger": { "A": 50 },
    "kontroller": [ { "ad": "A", "etiket": "Adenin", "min": 0, "max": 100, "adim": 10, "tur": "sayac" } ],
@@ -62,11 +62,11 @@
      { "yazi": "2'sinde", "dogru": true, "neden": "İki eski iplik iki ayrı moleküle gider: 2 hibrit + 2 hafif DNA. 1. eşlenmede ise hepsi hibritti. Her yeni molekülde bir eski, bir yeni iplik bulunur: yarı korunumlu eşlenme." }
     ]
    },
-   "kart": 7
+   "kart": 6
   },
   {
    "baslik": "Eşlenmenin enzimleri",
-   "metin": "Eşlenme hücre bölünmeden önce, interfazda olur. Eşlenme çatalını oynat ve hangi enzimin ne yaptığına bak.",
+   "metin": "Eşlenme çatalını oynat ve hangi enzimin ne yaptığına bak.",
    "sahne": { "tur": "biy7-catal", "sure": 5 },
    "gorev": {
     "tur": "tahmin",
@@ -74,7 +74,7 @@
     "secenekler": [
      { "yazi": "Ligaz", "neden": "Ligaz parçaları birbirine yapıştırır; iplikleri ayırmaz." },
      { "yazi": "DNA polimeraz", "neden": "DNA polimeraz kalıba uygun nükleotitleri ekleyip yeni ipliği örer; açma işi ondan önce yapılır." },
-     { "yazi": "Helikaz", "dogru": true, "neden": "Helikaz çatalın ucunda ilerleyip iplikleri açar. DNA polimeraz yeni ipliği yalnızca 5'→3' yönünde uzatır; bu yüzden bir iplik parça parça örülür ve ligaz parçaları birleştirir." }
+     { "yazi": "Helikaz", "dogru": true, "neden": "Helikaz çatalın ucunda ilerler ve hidrojen bağlarını koparıp iki ipliği açar." }
     ]
    },
    "kart": 7
@@ -88,7 +88,7 @@
    "gorev": {
     "tur": "ayarla",
     "hedef": { "n": [10, 12] },
-    "tamam": "10 döngüde 2¹⁰ = 1024 kopya olur. Bu yüzden suç yerindeki tek bir saç telinden bile DNA parmak izi çıkarılabilir."
+    "tamam": "10 döngüde 2¹⁰ = 1024 kopya olur. Bu yüzden suç yerindeki tek bir saç kökünden ya da kan lekesinden bile DNA parmak izi çıkarılabilir."
    },
    "kart": 12,
    "goster": { "deger": { "n": 4 }, "not": "4 döngüde 2⁴ = <b>16 kopya</b>: her döngü kopya sayısını ikiye katlıyor." }

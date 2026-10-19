@@ -13,22 +13,22 @@
     "tur": "tahmin",
     "soru": "ATP'nin en büyük kısmı hangi evrede üretilir?",
     "secenekler": [
-     { "yazi": "Glikolizde", "neden": "Glikoliz glikoz başına yalnız net 2 ATP verir." },
-     { "yazi": "Krebs döngüsünde", "neden": "Krebs iki turda yalnız 2 ATP verir; asıl ürünü NADH ve FADH₂'dir." },
-     { "yazi": "ETS'de", "dogru": true, "neden": "NADH ve FADH₂'nin elektronları ETS'de proton gradyanı kurar, ATP sentaz yaklaşık 26-28 ATP yapar. Toplam yaklaşık 30-32 ATP." }
+     { "yazi": "Glikolizde", "neden": "Glikolizde yalnız birkaç ATP çıkar; asıl kazanç sonra gelir." },
+     { "yazi": "Krebs döngüsünde", "neden": "Krebs iki turda yalnız 2 ATP verir." },
+     { "yazi": "ETS'de", "dogru": true, "neden": "Glikozdan kopan elektronların enerjisiyle ATP'nin çoğu (≈ 26-28) ETS'de yapılır." }
     ]
    },
    "kart": 3
   },
   {
    "baslik": "Glikoliz",
-   "metin": "Glikoliz sitoplazmada olur ve O₂ gerektirmez. 6 karbonlu glikoz, 3 karbonlu iki <b>pirüvata</b> bölünür. ATP sayacını izle.",
+   "metin": "Glikozu ikiye bölen glikolizi oynat ve ATP sayacını izle.",
    "sahne": { "tur": "biy8-glikoliz", "sure": 5 },
    "gorev": {
     "tur": "tahmin",
     "soru": "Glikoliz 4 ATP üretir. Net kazanç neden 2 ATP?",
     "secenekler": [
-     { "yazi": "Başta 2 ATP harcanır", "dogru": true, "neden": "Glikozu tepkimeye hazırlamak için önce 2 ATP harcanır; 4 − 2 = net 2 ATP. Ayrıca 2 NADH oluşur." },
+     { "yazi": "Başta 2 ATP harcanır", "dogru": true, "neden": "Glikozu tepkimeye hazırlamak için önce 2 ATP harcanır: 4 − 2 = 2." },
      { "yazi": "2 ATP CO₂ ile dışarı atılır", "neden": "ATP CO₂ ile atılmaz. Glikolizde CO₂ de çıkmaz; ilk CO₂ pirüvat oksidasyonunda çıkar." },
      { "yazi": "2 ATP NADH'ye dönüşür", "neden": "NADH, NAD⁺'nın indirgenmiş hâlidir; ATP'den oluşmaz." }
     ]
@@ -51,7 +51,7 @@
   },
   {
    "baslik": "Oksijeni kes",
-   "metin": "ETS'de NADH elektronlarını zincire verir ve NAD⁺'ya döner. Zincirin sonunda elektronları <b>O₂</b> alır ve su oluşur. Ortamda O₂ yok. Oynat.",
+   "metin": "Ortamda <b>O₂</b> yok. ETS'yi oynat.",
    "sahne": { "tur": "biy8-ets", "sure": 5, "oksijen": false },
    "gorev": {
     "tur": "tahmin",
@@ -66,7 +66,7 @@
   },
   {
    "baslik": "Fermantasyon",
-   "metin": "Fermantasyon pirüvatı NADH ile indirgeyerek NAD⁺'yı geri kazanır; glikoliz sürer. Önce mayayı oynat, sonra kas hücresine geç ve yine oynat.",
+   "metin": "Önce mayayı oynat, sonra kas hücresine geç ve yine oynat.",
    "sahne": { "tur": "biy8-fermantasyon", "sure": 5 },
    "deger": { "kas": 0 },
    "kontroller": [ { "ad": "kas", "etiket": "Kas hücresi", "min": 0, "max": 1, "tur": "anahtar" } ],
@@ -76,11 +76,11 @@
     "soru": "İki fermantasyonun farkı ne?",
     "secenekler": [
      { "yazi": "Kas hücresi daha çok ATP üretir", "neden": "İkisinde de ATP yalnız glikolizden gelir: glikoz başına net 2 ATP." },
-     { "yazi": "Yalnız mayada CO₂ çıkar", "dogru": true, "neden": "Maya pirüvatı etil alkol ve CO₂'ye çevirir; hamuru kabartan bu CO₂'dir. Kas hücresi laktik asit yapar ve CO₂ çıkmaz." },
+     { "yazi": "Yalnız mayada CO₂ çıkar", "dogru": true, "neden": "Maya pirüvatı etil alkol ve CO₂'ye, kas hücresi laktik aside çevirir." },
      { "yazi": "Yalnız kasta NAD⁺ geri kazanılır", "neden": "İki fermantasyonun da amacı NAD⁺'yı geri kazanıp glikolizi sürdürmektir." }
     ]
    },
-   "kart": 10
+   "kart": 9
   },
   {
    "baslik": "Verim",
@@ -109,7 +109,7 @@
     "secenekler": [
      { "yazi": "Gündüz solunum yapmaz, yalnız fotosentez yapar", "neden": "Solunum canlı hücrede gece gündüz sürer; gündüz de durmaz." },
      { "yazi": "Solunum yalnız gece O₂ kullanır", "neden": "Oksijenli solunum her an O₂ kullanır; ETS'nin son elektron alıcısı O₂'dir." },
-     { "yazi": "Fotosentez solunumdan hızlıdır", "dogru": true, "neden": "Gündüz ikisi birlikte yürür ama fotosentezin ürettiği O₂ solunumun harcadığından fazladır. Gece yalnız solunum kalır: O₂ alır, CO₂ verir." }
+     { "yazi": "Fotosentez solunumdan hızlıdır", "dogru": true, "neden": "Gündüz ikisi birlikte yürür ama fotosentezin ürettiği O₂, solunumun harcadığından fazladır." }
     ]
    },
    "kart": 13

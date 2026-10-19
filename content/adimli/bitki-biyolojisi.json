@@ -38,15 +38,15 @@
      {
       "yazi": "Yapraktaki terlemenin çekişi",
       "dogru": true,
-      "neden": "Stomalardan su buharlaşınca ksilemdeki su yukarı çekilir. Su molekülleri birbirine (kohezyon) ve boru çeperine (adezyon) tutunduğu için sütun kopmaz. Enerjiyi Güneş sağlar."
+      "neden": "Stomalardan buharlaşan su, ksilemdeki su sütununu yukarı çeker. Kök basıncı yalnızca yardımcıdır."
      }
     ]
    },
-   "kart": 7
+   "kart": 6
   },
   {
    "baslik": "Stomayı aç",
-   "metin": "Stoma, iki bekçi hücresi arasındaki açıklıktır. Gece ve kuraklıkta kapalıdır. Koşulları değiştir ve stomayı aç.",
+   "metin": "Gece ve kuraklıkta stoma kapalıdır. Koşulları değiştir ve stomayı aç.",
    "sahne": {
     "tur": "biy6-stoma"
    },
@@ -76,7 +76,7 @@
      "isik": 1,
      "su": 1
     },
-    "tamam": "Işıkta K⁺ iyonları aktif taşımayla bekçi hücrelerine girer, su osmozla izler; hücreler şişip bükülür ve stoma açılır. Susuzlukta absisik asit stomayı kapatır: su kaybı azalır ama CO₂ girişi de azalır, fotosentez yavaşlar."
+    "tamam": "Işık ve su birlikte: K⁺ bekçi hücrelerine girdi, su izledi ve stoma açıldı."
    },
    "kart": 8,
    "goster": {
@@ -130,7 +130,7 @@
   },
   {
    "baslik": "Yıllık halkalar",
-   "metin": "Kambiyum her yıl içe yeni ksilem, dışa floem yapar ve gövde kalınlaşır. Mevsimli iklimde her yıl bir halka oluşur. Bu ağacı <b>5 yaşına</b> getir.",
+   "metin": "Kambiyum her yıl gövdeye bir halka ekler. Bu ağacı 5 yaşına getir.",
    "sahne": {
     "tur": "biy6-halka"
    },
@@ -151,7 +151,7 @@
     "hedef": {
      "yil": 5
     },
-    "tamam": "5 halka = 5 yaş. Halkalar ksilemdir, yani odun; floem ince kalır ve dışa doğru itilir. Buğday, mısır gibi çoğu tek çenekli bitkide kambiyum yoktur, halka da oluşmaz."
+    "tamam": "5 halka = 5 yaş. Halkalar ksilemdir, yani odun; floem ince kalır ve dışa doğru itilir."
    },
    "kart": 3,
    "goster": {
@@ -163,7 +163,7 @@
   },
   {
    "baslik": "Tepeyi buda",
-   "metin": "Gövde ucundaki tepe tomurcuğu <b>oksin</b> üretir. Oksin aşağı iner ve yan tomurcukları baskılar. Bahçıvan tepeyi kesiyor.",
+   "metin": "Bahçıvan gövdenin tepe tomurcuğunu kesiyor. Oynatmadan önce tahmin et.",
    "sahne": {
     "tur": "biy6-tepe",
     "sure": 4
@@ -183,11 +183,11 @@
      {
       "yazi": "Yan tomurcuklar büyür, bitki dallanır",
       "dogru": true,
-      "neden": "Oksinin baskısı kalkar; kökten gelen sitokinin yan tomurcukları uyarır ve bitki dallanır. Tepe baskınlığı kalkmış olur."
+      "neden": "Oksinin baskısı kalkar; kökten gelen sitokinin yan tomurcukları uyarır ve bitki dallanır."
      }
     ]
    },
-   "kart": 9
+   "kart": 10
   },
   {
    "baslik": "Işığa yönelme",

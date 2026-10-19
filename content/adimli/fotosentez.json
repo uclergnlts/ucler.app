@@ -13,7 +13,7 @@
     "tur": "tahmin",
     "soru": "Açığa çıkan O₂'deki oksijen atomları nereden gelir?",
     "secenekler": [
-     { "yazi": "CO₂'den", "neden": "CO₂'nin oksijeni glikoza ve tepkime sonunda oluşan suya geçer, O₂'ye geçmez." },
+     { "yazi": "CO₂'den", "neden": "CO₂'nin oksijeni O₂'ye geçmez." },
      { "yazi": "Sudan", "dogru": true, "neden": "Işığa bağımlı evrede su parçalanır (fotoliz) ve O₂ açığa çıkar. İşaretli su verilince işaretli O₂ çıkar." },
      { "yazi": "Yarısı CO₂'den, yarısı sudan", "neden": "İşaretli oksijenin hepsi O₂'de göründü; CO₂'nin oksijeni hiç O₂'ye geçmedi." }
     ]
@@ -30,14 +30,14 @@
     "tur": "ayarla",
     "hedef": { "l": [650, 680] },
     "ipucu": "Kırmızı ışık spektrumun sağ ucundadır, 650 nm'nin üstü.",
-    "tamam": "Klorofil en çok mavi-mor ve kırmızıyı soğurur. Yeşil (≈550 nm) en az soğurulan renktir; yaprak yeşili yansıttığı için yeşil görünür."
+    "tamam": "İki tepe var: mavi-mor ve kırmızı. Arada yeşil (≈550 nm) en az soğurulan renk."
    },
    "kart": 4,
    "goster": { "deger": { "l": 430 }, "not": "430 nm (mavi-mor): klorofil bu ışığın neredeyse tamamını soğuruyor. Eğrinin ilk tepesi burada." }
   },
   {
    "baslik": "Engelmann deneyi",
-   "metin": "Engelmann ipliksi bir algi prizmadan geçen ışıkla aydınlattı ve yanına oksijen arayan bakteriler koydu. Bakteriler O₂'nin çok üretildiği yere toplanır.",
+   "metin": "1880'lerde Engelmann ipliksi bir yeşil algi prizmadan geçen ışıkla aydınlattı, yanına oksijen arayan (aerobik) bakteriler koydu. Bakteriler O₂'nin çok üretildiği yere toplanır.",
    "sahne": { "tur": "biy8-engelmann", "sure": 5 },
    "gorev": {
     "tur": "tahmin",
@@ -45,23 +45,23 @@
     "secenekler": [
      { "yazi": "Yeşil ışık alan bölgede", "neden": "Yeşil en az soğurulan renktir; orada fotosentez ve O₂ üretimi en düşüktür." },
      { "yazi": "Her yerde eşit dağılırlar", "neden": "Fotosentez hızı dalga boyuna göre değişir; O₂ her bölgede aynı miktarda üretilmez." },
-     { "yazi": "Mavi-mor ve kırmızı bölgelerde", "dogru": true, "neden": "Fotosentez en hızlı bu renklerde olur, O₂ en çok orada çıkar. Deney etki spektrumunu gösterdi." }
+     { "yazi": "Mavi-mor ve kırmızı bölgelerde", "dogru": true, "neden": "O₂ en çok bu renklerde üretilir. Deney, fotosentez hızının dalga boyuna göre değişimini (etki spektrumu) gösterdi." }
     ]
    },
    "kart": 5
   },
   {
    "baslik": "Işığı kapat",
-   "metin": "Tilakoitte ışıkla ATP ve NADPH yapılır; stromadaki Calvin döngüsü bunları harcayıp CO₂'yi şekere çevirir. Işığı kapat ve oynat.",
+   "metin": "Işık açıkken Calvin döngüsü dönüyor. Işığı kapat ve oynat.",
    "sahne": { "tur": "biy8-evreler", "sure": 6 },
    "deger": { "isik": 1 },
    "kontroller": [ { "ad": "isik", "etiket": "Işık", "min": 0, "max": 1, "tur": "anahtar" } ],
    "gorev": {
     "tur": "ayarla",
     "hedef": { "isik": 0 },
-    "tamam": "Calvin döngüsü ışık kullanmaz ama ışığa muhtaçtır: elindeki ATP ve NADPH bitince durdu. Bir glikoz için 18 ATP ve 12 NADPH harcanır."
+    "tamam": "Işık kapanınca yeni ATP ve NADPH gelmedi; eldekiler bitince Calvin döngüsü de durdu."
    },
-   "kart": 9,
+   "kart": 8,
    "goster": { "oynat": true, "not": "Işık varken tilakoit sürekli ATP ve NADPH yapıyor; Calvin döngüsü dönüyor ve şeker birikiyor." }
   },
   {
@@ -82,7 +82,7 @@
     { "yazi": "En hızlıyken sıcaklığı <b>40 °C</b>'nin üstüne çıkar.", "hedef": { "T": [41, 45], "isik": [40, 100], "co2": [40, 100] }, "coz": [{ "isik": 100, "co2": 100, "T": 44 }],
       "tamam": "Işık ve CO₂ bol olduğu hâlde hız düştü: Calvin döngüsü enzimlerle yürür, optimumun üstünde enzimler bozulur." }
    ] },
-   "kart": 11
+   "kart": 10
   },
   {
    "baslik": "Sıcaklık",
@@ -94,9 +94,9 @@
     "tur": "ayarla",
     "hedef": { "s": 30 },
     "ipucu": "Sıcaklığı adım adım artır; kabarcıklar azalmaya başlayınca bir adım geri gel.",
-    "tamam": "Hız optimum sıcaklıkta en yüksektir. Daha sıcakta enzimler bozulur ve hız hızla düşer. Sıcaklık eğrisi çan biçimlidir, ışık ve CO₂ eğrisi ise doyuma ulaşır."
+    "tamam": "Hız optimum sıcaklıkta en yüksektir. Daha sıcakta enzimler bozulur ve hız hızla düşer."
    },
-   "kart": 10,
+   "kart": 9,
    "goster": { "deger": { "s": 45 }, "not": "45 °C'de enzimler bozuldu: kabarcık çıkmıyor, fotosentez durdu." }
   }
  ],
