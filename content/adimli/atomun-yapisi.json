@@ -6,36 +6,8 @@
  "ozet": "Proton, nötron ve elektronu kendi elinle ekleyip çıkararak atom ve iyon kur.",
  "adimlar": [
   {
-   "baslik": "Atom ne kadar küçük?",
-   "metin": "Bir atom o kadar küçük ki yan yana 3 milyon tanesi ancak 1 milimetre eder. Şimdi bir lityum atomunun içine yakınlaşacaksın.",
-   "sahne": {
-    "tur": "atom-olcek",
-    "sure": 5
-   },
-   "gorev": {
-    "tur": "tahmin",
-    "soru": "Atomu bir futbol stadyumu kadar büyütsen, ortadaki çekirdek ne kadar olurdu?",
-    "secenekler": [
-     {
-      "yazi": "Bir bezelye tanesi kadar",
-      "dogru": true,
-      "neden": "Çekirdek, atomdan yaklaşık 100.000 kat küçüktür. Stadyum kadar bir atomda çekirdek, sahanın ortasındaki bir bezelyedir. Atomun neredeyse tamamı boşluktur."
-     },
-     {
-      "yazi": "Bir futbol topu kadar",
-      "neden": "Futbol topu bile çok büyük kalır."
-     },
-     {
-      "yazi": "Sahanın yarısı kadar",
-      "neden": "Çekirdek atomun içinde ancak küçük bir noktadır."
-     }
-    ]
-   },
-   "kart": 2
-  },
-  {
    "baslik": "Üç tanecik",
-   "metin": "Atomu üç temel tanecikle açıklarız. Çekirdekte <b>proton</b> (+1) ve <b>nötron</b> (yüksüz) bulunur, <b>elektronlar</b> (−1) çekirdeğin çevresindeki katmanlarda dolaşır. Bu, helyum atomu. Tek istisna en yaygın hidrojen atomudur (¹H): çekirdeği yalnızca bir protondur, nötronu yoktur.",
+   "metin": "Hemen her atomun çekirdeğinde proton ve nötron vardır; tek istisna ¹H'dir: çekirdeği yalnız bir protondur. Ekrandaki helyum atomu.",
    "sahne": {
     "tur": "atom",
     "etiket": true
@@ -61,6 +33,34 @@
      {
       "yazi": "Eşit dağılmış",
       "neden": "Elektron, protondan çok daha hafiftir. Ağırlık nerede toplanır?"
+     }
+    ]
+   },
+   "kart": 1
+  },
+  {
+   "baslik": "Atom ne kadar küçük?",
+   "metin": "Bir atom o kadar küçük ki yan yana 3 milyon tanesi ancak 1 milimetre eder. Şimdi bir lityum atomunun içine yakınlaşacaksın.",
+   "sahne": {
+    "tur": "atom-olcek",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Atomu bir futbol stadyumu kadar büyütsen, ortadaki çekirdek ne kadar olurdu?",
+    "secenekler": [
+     {
+      "yazi": "Bir bezelye tanesi kadar",
+      "dogru": true,
+      "neden": "Çekirdeğin çapı atomunkinden yaklaşık 100.000 kat küçüktür. Stadyum boyunda bir atomda çekirdek, sahanın ortasındaki bir bezelye kadar kalır."
+     },
+     {
+      "yazi": "Bir futbol topu kadar",
+      "neden": "Futbol topu bile çok büyük kalır."
+     },
+     {
+      "yazi": "Sahanın yarısı kadar",
+      "neden": "Çekirdek atomun içinde ancak küçük bir noktadır."
      }
     ]
    },
@@ -138,7 +138,7 @@
   },
   {
    "baslik": "Elektron ve iyon",
-   "metin": "Atom elektron verir ya da alırsa yüklü bir taneciğe, yani <b>iyona</b> dönüşür. Sodyum atomu bir elektron vererek <b>Na⁺</b> olur. Onu yap.",
+   "metin": "Sodyum atomu bir elektron vererek Na⁺ olur. Onu yap.",
    "sahne": {
     "tur": "atom"
    },
@@ -161,13 +161,13 @@
     "hedef": {
      "e": 10
     },
-    "tamam": "11 proton, 10 elektron: yük 11 − 10 = +1. Elektron veren atom pozitif iyon (<b>katyon</b>), elektron alan atom negatif iyon (<b>anyon</b>) olur. Çekirdek hiç değişmedi."
+    "tamam": "11 proton, 10 elektron: yük 11 − 10 = +1. Çekirdek hiç değişmedi; iyon olmak yalnız elektron sayısını değiştirir."
    },
    "kart": 6
   },
   {
    "baslik": "Elektron katmanları",
-   "metin": "Elektronlar katmanlara dizilir: ilk katmana en çok 2, sonraki ikisine 8'er elektron sığar (ilk 20 element için). Proton sayısını değiştir ve katmanlara bak.",
+   "metin": "Proton sayısını değiştir ve elektronların katmanlara nasıl dizildiğine bak.",
    "sahne": {
     "tur": "atom"
    },
@@ -204,7 +204,7 @@
      }
     ]
    },
-   "kart": 9,
+   "kart": 10,
    "goster": {
     "deger": {
      "p": 11
@@ -255,7 +255,7 @@
     },
     "tamam": "16 proton kükürdü belirler. 32 − 16 = 16 nötron. Nötr atomda 16 elektron olurdu; 2 elektron alınca 18 olur ve yük 16 − 18 = −2."
    },
-   "kart": 10
+   "kart": 11
   }
  ],
  "kapanis": [
@@ -263,6 +263,6 @@
   "Proton sayısı = <b>atom numarası</b> (Z); elementi belirler.",
   "<b>Kütle numarası</b> A = proton + nötron. Nötron sayısı farklı aynı element atomları <b>izotoptur</b>.",
   "Yük = proton − elektron. Elektron veren <b>katyon</b>, alan <b>anyon</b> olur.",
-  "İlk 20 elementte elektronlar 2, 8, 8, 2 diye katmanlara dizilir."
+  "İlk 20 elementte katmanlar en çok 2, 8, 8 elektron alır; kalan 4. katmana geçer (Ca: 2-8-8-2)."
  ]
 }

@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Kristal ve amorf",
-   "metin": "Katılar ikiye ayrılır. <b>Kristal</b> katıda tanecikler düzenli bir örgü kurar; <b>amorf</b> katıda uzun mesafeli düzen yoktur. Tuz kristal, cam amorftur. İkisini de ısıtacağız.",
+   "metin": "Tuz kristal bir katıdır, cam ise amorf. İkisini de ısıtacağız.",
    "sahne": {
     "tur": "kim4-erime",
     "sure": 5
@@ -22,7 +22,7 @@
      },
      {
       "yazi": "Tuz",
-      "neden": "Tuz 801 °C'de birden erir ve eriyip bitene kadar sıcaklığı sabit kalır. Cam ise belirli bir erime noktası olmadan yavaş yavaş yumuşar. Düzenli örgü her yerde aynı sıcaklıkta çözülür.",
+      "neden": "Tuz 801 °C'de birden erir ve eriyip bitene kadar sıcaklığı sabit kalır. Cam ise belirli bir erime noktası olmadan yavaş yavaş yumuşar.",
       "dogru": true
      },
      {
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Viskozite",
-   "metin": "Akmaya karşı gösterilen dirence <b>viskozite</b> (akmazlık) denir. Bal, tanecikleri arasındaki güçlü çekim yüzünden ağır akar. Balı ısıt ve bardağı 10 saniyede doldur.",
+   "metin": "Balı ısıt ve bardağı 10 saniyede doldur.",
    "sahne": {
     "tur": "kim4-bal",
     "sure": 4
@@ -62,7 +62,7 @@
      ]
     },
     "ipucu": "Balı ısıtıp yeniden oynat.",
-    "tamam": "Isınan balda tanecikler çekimi daha kolay yener ve birbirinin üzerinden hızla kayar: viskozite azalır. Gliserin ve bal sudan ağır akar, çünkü moleküller arası çekimleri güçlüdür."
+    "tamam": "Isınan balda tanecikler çekimi daha kolay yener ve birbirinin üzerinden hızla kayar: viskozite azalır."
    },
    "kart": 4,
    "goster": {
@@ -75,7 +75,7 @@
   },
   {
    "baslik": "Buhar basıncı",
-   "metin": "Kapalı kapta sıvıdan kopan moleküllerin bir kısmı geri yoğuşur. İki hız eşitlenince buharın yaptığı basınca <b>buhar basıncı</b> denir. Sıcaklığı ve sıvı miktarını değiştir.",
+   "metin": "Sıcaklığı ve sıvı miktarını değiştir.",
    "sahne": {
     "tur": "kim4-buhar"
    },
@@ -114,7 +114,7 @@
      },
      {
       "yazi": "Değişmez",
-      "neden": "Buhar basıncı yalnızca sıcaklığa ve sıvının cinsine bağlıdır; sıvı miktarına, kap hacmine ve yüzey alanına bağlı değildir. Sıcaklıkla ise hızla artar: su için 40 °C'de 55, 100 °C'de 760 mmHg.",
+      "neden": "Buhar basıncı yalnızca sıcaklığa ve sıvının cinsine bağlıdır; miktar, kap hacmi ve yüzey alanı onu değiştirmez. Sıcaklıkla ise hızla artar: su için 40 °C'de 55, 100 °C'de 760 mmHg.",
       "dogru": true
      }
     ]
@@ -129,7 +129,7 @@
   },
   {
    "baslik": "Kaynama laboratuvarı",
-   "metin": "Kaptaki suyu ısıt; sıcaklığı, grafiği ve iki basıncı izle. Buhar basıncı dış basınca eşitlenince sıvının her yerinde kabarcık oluşur: <b>kaynama</b>. Dış basıncı da değiştirebilirsin. Aşağıdakileri kendin bul.",
+   "metin": "Kaptaki suyu ısıt; sıcaklığı, grafiği ve iki basıncı izle. Dış basıncı da değiştirebilirsin. Aşağıdakileri kendin bul.",
    "sahne": {
     "tur": "sim-kaynama"
    },
@@ -225,7 +225,7 @@
   },
   {
    "baslik": "Hâl değişimi ve ısı",
-   "metin": "Hâl değişirken madde ya ısı alır ya da ısı verir. Değişimleri tek tek gez ve hangilerinin ısı aldığına bak.",
+   "metin": "Hâl değişirken madde ya ısı alır ya da ısı verir. Değişimleri tek tek gez.",
    "sahne": {
     "tur": "kim4-hal"
    },
@@ -247,7 +247,7 @@
     "secenekler": [
      {
       "yazi": "Buharlaşma derinden ısı alır",
-      "neden": "Buharlaşma endotermiktir: gereken ısıyı derinden alır, derin soğur. Tersine yoğuşma ısı verir; buhar yanığı bu yüzden kaynar su yanığından ağırdır.",
+      "neden": "Buharlaşma endotermiktir: gereken ısıyı derinden alır, derin soğur. Nem yüksekse ter zor buharlaşır, bu yüzden serinleyemezsin.",
       "dogru": true
      },
      {
@@ -260,11 +260,11 @@
      }
     ]
    },
-   "kart": 12
+   "kart": 10
   },
   {
    "baslik": "Faz diyagramı",
-   "metin": "<b>Faz diyagramı</b>, maddenin hangi sıcaklık ve basınçta hangi hâlde olduğunu gösterir. 1 atm'de kuru buz (katı CO₂) erimez, doğrudan gaza döner. −20 °C'deki CO₂'yi basınçla sıvı yap.",
+   "metin": "1 atm'de kuru buz (katı CO₂) erimez, doğrudan gaza döner. −20 °C'deki CO₂'yi basınçla sıvı yap.",
    "sahne": {
     "tur": "kim4-faz",
     "T": -20
@@ -291,7 +291,7 @@
     },
     "tamam": "−20 °C'de yaklaşık 20 atm'nin üstünde CO₂ sıvılaşır. Üçlü noktası 5,1 atm'de olduğu için 1 atm'de sıvı CO₂ olamaz; kuru buz bu yüzden süblimleşir. Kritik sıcaklığın (31 °C) üstünde ise hiçbir basınç onu sıvılaştıramaz."
    },
-   "kart": 14,
+   "kart": 12,
    "goster": {
     "deger": {
      "P": 10

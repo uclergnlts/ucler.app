@@ -6,47 +6,8 @@
  "ozet": "Yörüngeden orbitale geç, kuantum sayılarını kur, elektronları sırayla yerleştir, Hund kuralını uygula, bakırın istisnasını bul ve demiri iyonlaştır.",
  "adimlar": [
   {
-   "baslik": "Yörünge mi, orbital mi?",
-   "metin": "Bohr elektronu çekirdeğin çevresinde belirli bir yolda döndürdü. Kuantum modeli ise elektronun yerini ve hızını aynı anda kesin bilemeyeceğimizi söyler (Heisenberg). Anahtarı açıp iki modeli karşılaştır.",
-   "sahne": {
-    "tur": "kim13-model"
-   },
-   "deger": {
-    "o": 0
-   },
-   "kontroller": [
-    {
-     "ad": "o",
-     "etiket": "Kuantum modeli",
-     "min": 0,
-     "max": 1,
-     "tur": "anahtar"
-    }
-   ],
-   "gorev": {
-    "tur": "secim",
-    "soru": "Kuantum modelindeki <b>orbital</b> neyi anlatır?",
-    "secenekler": [
-     {
-      "yazi": "Elektronun çekirdek çevresinde izlediği dairesel yolu",
-      "neden": "Bu, Bohr'un yörüngesidir. Kuantum modelinde elektronun izlediği kesin bir yol tanımlanamaz."
-     },
-     {
-      "yazi": "Elektronun bulunma olasılığının yüksek olduğu bölgeyi",
-      "neden": "Orbital bir olasılık haritasıdır; sınırı genellikle elektronun %90 olasılıkla içinde bulunduğu yüzey olarak çizilir.",
-      "dogru": true
-     },
-     {
-      "yazi": "Elektronun durduğu sabit bir noktayı",
-      "neden": "Elektron bir noktada durmaz; yalnızca belli bir bölgede bulunma olasılığı hesaplanabilir."
-     }
-    ]
-   },
-   "kart": 2
-  },
-  {
    "baslik": "Elektronun adresi",
-   "metin": "Her orbitalin bir adresi var: <b>n</b> katmanı, <b>ℓ</b> alt katmanı ve şekli söyler; ℓ en fazla n − 1 olabilir. Demirin son elektronları <b>3d</b>'de. 3d'deki bir elektronun n ve ℓ değerlerini kur.",
+   "metin": "Demirin son elektronları 3d'de. 3d'deki bir elektronun n ve ℓ değerlerini kur.",
    "sahne": {
     "tur": "kim13-kuantum"
    },
@@ -79,7 +40,7 @@
     "ipucu": "d alt katmanı ℓ = 2'dir; ℓ = 2 olabilmesi için n en az 3 olmalı.",
     "tamam": "n = 3, ℓ = 2: 3d. m<sub>ℓ</sub> −2'den +2'ye beş değer alır, yani beş d orbitali vardır. Dördüncü sayı m<sub>s</sub> ise +½ ya da −½'dir."
    },
-   "kart": 4,
+   "kart": 3,
    "goster": {
     "deger": {
      "n": 2,
@@ -90,7 +51,7 @@
   },
   {
    "baslik": "Dolma sırası",
-   "metin": "Elektronlar önce en düşük enerjili orbitale girer. Argonda 3p doldu. Elektron ekle: <b>3d'ye ilk elektronun girdiği</b> elementte dur.",
+   "metin": "Argonda 3p doldu. Elektron ekle: 3d'ye ilk elektronun girdiği elementte dur.",
    "sahne": {
     "tur": "kim13-dolma"
    },
@@ -114,7 +75,7 @@
     "ipucu": "K ve Ca'nın son elektronları nereye girdi? 3d kutularında ilk ok görününce dur.",
     "tamam": "Skandiyum (21): [Ar] 4s² 3d¹. 4s'te n + ℓ = 4, 3d'de 5 olduğu için önce 4s doldu; bu yüzden K ve Ca'da 3. katman 8'de kaldı."
    },
-   "kart": 7,
+   "kart": 6,
    "goster": {
     "deger": {
      "e": 19
@@ -166,7 +127,7 @@
     "ipucu": "Elektronlar boş bir orbital varken eşleşmez: önce her kutuya bir tane.",
     "tamam": "↑ ↑ ↑: elektronlar önce birer birer ve aynı spinle yerleşti. Azotta 3 eşleşmemiş elektron var; oksijende (2p⁴) dördüncü elektron eşleşir."
    },
-   "kart": 9,
+   "kart": 8,
    "goster": {
     "deger": {
      "a": 2,
@@ -174,49 +135,6 @@
     },
     "not": "Elektronları 2, 1, 0 diye dağıtınca kutular kırmızı: <b>boş orbital varken eşleşme olmaz</b>."
    }
-  },
-  {
-   "baslik": "Dizilimden elementi bul",
-   "metin": "Bir elementin temel hâl dizilimi aşağıda. Üslerin toplamı elektron sayısını, en büyük n periyodu, dış katmandaki s + p elektronları A grubunu verir.",
-   "sahne": {
-    "tur": "kim13-bul"
-   },
-   "deger": {
-    "k": 0
-   },
-   "kontroller": [
-    {
-     "ad": "k",
-     "etiket": "Elektronları say",
-     "min": 0,
-     "max": 1,
-     "tur": "anahtar"
-    }
-   ],
-   "gorev": {
-    "tur": "secim",
-    "soru": "Bu element hangisi ve periyodik tablodaki yeri neresi?",
-    "secenekler": [
-     {
-      "yazi": "Kükürt (S): 3. periyot, 6A",
-      "neden": "16 elektron, Z = 16. En büyük n = 3, dış katmanda 3s² 3p⁴ = 6 elektron: 3. periyot 6A.",
-      "dogru": true
-     },
-     {
-      "yazi": "Oksijen (O): 2. periyot, 6A",
-      "neden": "Grup doğru, ama oksijende 8 elektron vardır (1s² 2s² 2p⁴). Burada en büyük n = 3."
-     },
-     {
-      "yazi": "Silisyum (Si): 3. periyot, 4A",
-      "neden": "Grup numarası yalnızca p elektronları değil, dış katmandaki s + p elektronlarıdır: 2 + 4 = 6."
-     },
-     {
-      "yazi": "Argon (Ar): 3. periyot, 8A",
-      "neden": "Argonun 3p'si tam doludur (3p⁶, 18 elektron). Burada 3p'de 4 elektron var."
-     }
-    ]
-   },
-   "kart": 14
   },
   {
    "baslik": "Kurala uymayan iki element",
@@ -255,7 +173,7 @@
      }
     ]
    },
-   "kart": 12
+   "kart": 10
   },
   {
    "baslik": "Demiri iyonlaştır",
@@ -283,13 +201,56 @@
     "ipucu": "Fe²⁺ için iki elektron vermelisin.",
     "tamam": "Fe²⁺: [Ar] 3d⁶, [Ar] 4s² 3d⁴ değil. Katyonda elektronlar önce en büyük n'li katmandan, yani 4s'ten kopar. Bir elektron daha verirsen Fe³⁺: yarı dolu [Ar] 3d⁵."
    },
-   "kart": 13,
+   "kart": 12,
    "goster": {
     "deger": {
      "k": 1
     },
     "not": "Bir elektron verince <b>Fe⁺</b>: [Ar] 4s¹ 3d⁶. Kopan elektron 3d'den değil, en büyük n'li 4s'ten geldi."
    }
+  },
+  {
+   "baslik": "Dizilimden elementi bul",
+   "metin": "Bir elementin temel hâl dizilimi aşağıda. Elektronları say, sonra yerini bul.",
+   "sahne": {
+    "tur": "kim13-bul"
+   },
+   "deger": {
+    "k": 0
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Elektronları say",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bu element hangisi ve periyodik tablodaki yeri neresi?",
+    "secenekler": [
+     {
+      "yazi": "Kükürt (S): 3. periyot, 6A",
+      "neden": "16 elektron, Z = 16. En büyük n = 3, dış katmanda 3s² 3p⁴ = 6 elektron: 3. periyot 6A.",
+      "dogru": true
+     },
+     {
+      "yazi": "Oksijen (O): 2. periyot, 6A",
+      "neden": "Grup doğru, ama oksijende 8 elektron vardır (1s² 2s² 2p⁴). Burada en büyük n = 3."
+     },
+     {
+      "yazi": "Silisyum (Si): 3. periyot, 4A",
+      "neden": "Grup numarası yalnızca p elektronları değil, dış katmandaki s + p elektronlarıdır: 2 + 4 = 6."
+     },
+     {
+      "yazi": "Argon (Ar): 3. periyot, 8A",
+      "neden": "Argonun 3p'si tam doludur (3p⁶, 18 elektron). Burada 3p'de 4 elektron var."
+     }
+    ]
+   },
+   "kart": 13
   }
  ],
  "kapanis": [

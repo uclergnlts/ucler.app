@@ -7,26 +7,26 @@
  "adimlar": [
   {
    "baslik": "Kurşundan altın?",
-   "metin": "Simyacılar yüzyıllarca kurşunu altına çevirmeye uğraştı. Bugün iki elementin farkını biliyoruz: kurşun atomunun çekirdeğinde 82, altınınkinde 79 proton var.",
+   "metin": "Bugün iki elementin farkını biliyoruz: kurşun atomunun çekirdeğinde 82, altınınkinde 79 proton var.",
    "sahne": {
     "tur": "element-donusum"
    },
    "gorev": {
     "tur": "secim",
-    "soru": "Simyacılar kurşunu neden altına çeviremedi?",
+    "soru": "Kurşun neden hiç altına dönüşmedi?",
     "secenekler": [
      {
       "yazi": "Kimyasal tepkime çekirdeği, yani proton sayısını değiştirmez",
-      "neden": "Kimyasal tepkimede atomlar yeniden düzenlenir, bağlar kurulur ve kopar; çekirdek değişmez. Proton sayısı aynı kaldıkça kurşun kurşun kalır.",
+      "neden": "Kimyasal tepkimede yalnız elektronlar ve bağlar değişir. Kurşunu altın yapmak için çekirdekten 3 proton koparmak gerekir; bunu ancak çekirdek tepkimesi, o da çok küçük miktarlarda yapabilir.",
       "dogru": true
      },
      {
       "yazi": "Yeterince yüksek sıcaklığa çıkamadılar",
-      "neden": "Sorun sıcaklık değildi. Isı ne kadar artarsa artsın kimyasal değişim çekirdeğe dokunmaz."
+      "neden": "Ocağın ısısı bağları koparır ama çekirdeğe ulaşmaz; en sıcak fırın da proton sayısını değiştirmez."
      },
      {
       "yazi": "Felsefe taşını bulamadılar",
-      "neden": "Felsefe taşı bir efsaneydi. Hiçbir madde, kimyasal tepkimeyle bir elementi başka bir elemente çeviremez."
+      "neden": "Sorun eksik bir malzeme değildi, tepkimenin türüydü: hiçbir madde kimyasal yolla proton sayısını değiştiremez."
      }
     ]
    },
@@ -34,7 +34,7 @@
   },
   {
    "baslik": "Damıtma",
-   "metin": "Simyanın kalıcı mirası damıtmadır: sıvıyı ısıt, buharını soğutup yeniden sıvılaştır. Balonda su ve alkol karışımı var.",
+   "metin": "Balonda su ve alkol karışımı var. Isıtınca ne olur?",
    "sahne": {
     "tur": "damitma",
     "sure": 6
@@ -45,7 +45,7 @@
     "secenekler": [
      {
       "yazi": "Alkol",
-      "neden": "Alkol yaklaşık 78 °C'de, su 100 °C'de kaynar. Kaynama noktası düşük olan önce buharlaşır, soğutucuda yoğuşur ve toplanır. Toplanan sıvı çoğunlukla alkoldür; damıtma kaynama noktası farkıyla ayırır.",
+      "neden": "Alkol yaklaşık 78 °C'de, su 100 °C'de kaynar; önce alkol buharlaşıp yoğuşur. Toplanan sıvıda biraz su da olur, bu yüzden saf alkol için damıtma tekrarlanır.",
       "dogru": true
      },
      {
@@ -62,7 +62,7 @@
   },
   {
    "baslik": "Su element mi?",
-   "metin": "Antik çağdan beri su bir element sayılıyordu. 1661'de Robert Boyle bu \"dört element\" fikrini sorguladı ve her iddianın deneyle sınanmasını istedi. Onun ölçütünü suya uygulayan elektroliz deneyi ise 1800'de yapıldı. Suya elektrik akımı ver.",
+   "metin": "Antik çağdan beri su bir element sayılıyordu. Boyle'un ölçütünü suya uygula: suya elektrik akımı ver (bu deney ilk kez 1800'de yapıldı).",
    "sahne": {
     "tur": "elektroliz",
     "sure": 5
@@ -86,11 +86,11 @@
      }
     ]
    },
-   "kart": 7
+   "kart": 6
   },
   {
    "baslik": "Boyle'un tanımı",
-   "metin": "Boyle'a göre element, daha basit maddelere ayrılamayan maddedir. Tüplerde ne toplandığına bak ve karar ver.",
+   "metin": "Tüplerde ne toplandığına bak ve Boyle'un tanımına göre karar ver.",
    "sahne": {
     "tur": "elektroliz",
     "son": true
@@ -114,11 +114,11 @@
      }
     ]
    },
-   "kart": 7
+   "kart": 6
   },
   {
    "baslik": "Lavoisier'in terazisi",
-   "metin": "Antoine Lavoisier tepkimeleri kapalı kaplarda yaptı ve her şeyi tarttı. Ağzı kapalı balondaki kalayı ısıtacaksın; kalay yavaşça beyaz bir toza dönüşecek.",
+   "metin": "Ağzı kapalı balondaki kalayı ısıtacaksın; kalay yavaşça beyaz bir toza dönüşecek.",
    "sahne": {
     "tur": "kapali-kap",
     "sure": 5
@@ -145,7 +145,7 @@
      }
     ]
    },
-   "kart": 7
+   "kart": 6
   },
   {
    "baslik": "Ağzı açık olursa",
@@ -171,36 +171,36 @@
     "hedef": {
      "acik": 1
     },
-    "tamam": "Kütle arttı! Kalay havadaki oksijenle birleşti, yerine dışarıdan yeni hava girdi. Lavoisier yanmada oksijenin rolünü böyle açıkladı; tartmadan bu anlaşılamazdı."
+    "tamam": "Kütle arttı! Kalay havadaki oksijenle birleşti; balondan bir şey kaçmadı, eksilen oksijenin yerine dışarıdan yeni hava girdi."
    },
-   "kart": 8
+   "kart": 7
   },
   {
-   "baslik": "Neden bilim değildi?",
-   "metin": "Simyacılar bilgilerini gizli tutar, sembollerle yazar, nadiren ölçerdi. Bilimde ise deneyi herkes tekrarlayabilir ve sonuçlar sayılarla ölçülür.",
+   "baslik": "İddiayı sına",
+   "metin": "Bir kimyacı şöyle diyor: \"Metal yanınca içinden flojiston çıkar, bu yüzden hafifler.\" Bilimsel yöntemle bu iddiayı nasıl sınarsın?",
    "sahne": {
     "tur": "bilim-dongu"
    },
    "gorev": {
     "tur": "secim",
-    "soru": "Kimyayı bilim yapan hangisidir?",
+    "soru": "Hangisi iddiayı gerçekten sınar?",
     "secenekler": [
      {
-      "yazi": "Herkesin tekrarlayıp ölçebildiği deneyler",
-      "neden": "Gözlem, hipotez, deney ve sonuç döngüsü, yani bilimsel yöntem, kimyanın yeni dili oldu. Başkaları tekrarlayıp aynı sonucu bulunca iddia güven kazanır.",
+      "yazi": "Metali kapalı kapta yakıp önce ve sonra tartmak",
+      "neden": "Sayı iddiayı sınar: kalay yanınca kütlesi arttı, demek ki bir şey çıkmadı, havadan oksijen girdi. Flojiston fikri böyle çürüdü.",
       "dogru": true
      },
      {
-      "yazi": "Gizli sembollerle yazılmış tarifler",
-      "neden": "Gizli bilgi başkalarınca denetlenemez; simyanın zayıf yanı tam da buydu."
+      "yazi": "Konunun uzmanı ünlü bir bilgine sormak",
+      "neden": "Bilimde otorite değil kanıt geçerlidir; ünlü bilginler de yanılabilir."
      },
      {
-      "yazi": "Usta bir bilginin sözü",
-      "neden": "Bilimde otorite değil kanıt geçerlidir. Boyle'un istediği gibi her iddia deneyle sınanır."
+      "yazi": "Eski kitaplarda ne yazdığına bakmak",
+      "neden": "Kitaplar iddiayı tekrarlar ama sınamaz. Sınamak için deney ve ölçüm gerekir."
      }
     ]
    },
-   "kart": 9
+   "kart": 8
   }
  ],
  "kapanis": [
