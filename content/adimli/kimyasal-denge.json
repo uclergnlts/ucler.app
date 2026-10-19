@@ -22,7 +22,7 @@
      },
      {
       "yazi": "Tepkime iki yönde eşit hızla sürer",
-      "neden": "İleri ve geri hız eşit olduğu için derişimler sabit kalır, ama dönüşüm sürer: <b>dinamik denge</b>.",
+      "neden": "Dönüşüm sürer ama iki yön birbirini dengeler: <b>dinamik denge</b>. Yalnız NO₂ ile başlasan da dengeye ulaşırdın.",
       "dogru": true
      },
      {
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Kc hesabı",
-   "metin": "1 L kaba 1 mol H₂ ve 1 mol I₂ koyduk: H₂ + I₂ ⇌ 2HI. Dengede <b>1,6 mol HI</b> ölçüldü. Tabloyu buna göre ayarla.",
+   "metin": "Şimdi sen: 1 L kaba 1'er mol H₂ ve I₂ koyduk. Dengede 1,6 mol HI ölçüldü. Tabloyu buna göre ayarla.",
    "sahne": {
     "tur": "kim9-bdd"
    },
@@ -60,14 +60,14 @@
      "hi": 16
     },
     "ipucu": "2x mol HI oluşurken x mol H₂ ve x mol I₂ harcanır.",
-    "tamam": "2x = 1,6 → x = 0,8. Dengede 0,2 M H₂, 0,2 M I₂, 1,6 M HI. Kc = 1,6² / (0,2 · 0,2) = <b>64</b>. Katılar ve saf sıvılar Kc'ye yazılmaz."
+    "tamam": "2x = 1,6 → x = 0,8. Dengede 0,2 M H₂, 0,2 M I₂, 1,6 M HI. Kc = 1,6² / (0,2 · 0,2) = <b>64</b>."
    },
    "kart": 7,
    "goster": {
     "deger": {
      "hi": 6
     },
-    "not": "0,6 mol HI oluşsaydı 0,3'er mol H₂ ve I₂ harcanır, 0,7'şer mol kalırdı: Kc = 0,6² / 0,7² ≈ <b>0,73</b>."
+    "not": "0,6 mol HI oluşsaydı 0,3'er mol H₂ ve I₂ harcanır, 0,7'şer mol kalırdı: Kc = 0,6² / 0,7² ≈ <b>0,73</b> olurdu; bu, başka bir sıcaklık demektir."
    }
   },
   {
@@ -126,12 +126,12 @@
      },
      {
       "yazi": "N₂O₄ tarafına (sola)",
-      "neden": "Basınç artınca denge <b>daha az gaz molü</b> olan tarafa kayar: 2 mol NO₂ → 1 mol N₂O₄. Le Chatelier: sistem zorlamayı azaltır, ama tümüyle silmez; NO₂ derişimi yine başlangıçtakinden yüksek kalır.",
+      "neden": "Sistem basıncı azaltmak için gaz molünü azaltır: 2 mol NO₂ → 1 mol N₂O₄. Zorlamayı tümüyle silmez; NO₂ derişimi yine başlangıçtakinden yüksek kalır.",
       "dogru": true
      }
     ]
    },
-   "kart": 9
+   "kart": 8
   },
   {
    "baslik": "Denge laboratuvarı",
@@ -259,7 +259,7 @@
      }
     ]
    },
-   "kart": 10
+   "kart": 9
   },
   {
    "baslik": "Haber yöntemi",
@@ -301,7 +301,7 @@
      },
      {
       "yazi": "Basıncı artırmak",
-      "neden": "4 mol gaz → 2 mol gaz: basınç dengeyi az mollü NH₃ tarafına kaydırır. Hız da düşmez. Endüstride yüksek basınç, yaklaşık 450 °C ve demir katalizör kullanılır.",
+      "neden": "4 mol gaz → 2 mol gaz: basınç dengeyi az mollü NH₃ tarafına kaydırır. Gazlar sıkışınca çarpışma da artar, hız düşmez.",
       "dogru": true
      },
      {
@@ -310,7 +310,7 @@
      }
     ]
    },
-   "kart": 11
+   "kart": 10
   }
  ],
  "kapanis": [

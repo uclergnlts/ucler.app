@@ -29,9 +29,9 @@
      "n": 5
     },
     "ipucu": "Kaynama noktası 25 °C çizgisini geçen ilk alkanı ara.",
-    "tamam": "Pentan 36 °C'de kaynar: metandan bütana gaz, pentandan dekana sıvı. Zincir uzadıkça London kuvvetleri artar, kaynama noktası yükselir."
+    "tamam": "Pentan 36 °C'de kaynar. Zincir uzadıkça London kuvvetleri artar, kaynama noktası yükselir."
    },
-   "kart": 2,
+   "kart": 1,
    "goster": {
     "deger": {
      "n": 3
@@ -40,36 +40,8 @@
    }
   },
   {
-   "baslik": "Dallanma",
-   "metin": "Üç kapta aynı formüllü (C₅H₁₂) üç alkan var: düz zincirli, bir dallı ve iki dallı. Üçünü birlikte yavaşça ısıtıyoruz.",
-   "sahne": {
-    "tur": "kim11-dallanma",
-    "sure": 5
-   },
-   "gorev": {
-    "tur": "tahmin",
-    "soru": "Hangisi önce kaynar?",
-    "secenekler": [
-     {
-      "yazi": "Pentan",
-      "neden": "Pentan düz zincirlidir; molekülleri yan yana uzun bir yüzeyle değer, London çekimi en güçlüdür. En son o kaynar (36 °C)."
-     },
-     {
-      "yazi": "2,2-dimetilpropan",
-      "neden": "En dallı molekül küreye en yakındır: temas yüzeyi küçük, London çekimi zayıf. 10 °C'de ilk o kaynar.",
-      "dogru": true
-     },
-     {
-      "yazi": "Üçü aynı anda, çünkü mol kütleleri aynı",
-      "neden": "Mol kütlesi aynı olsa da biçim farklı. Dallanma temas yüzeyini küçültür ve kaynama noktasını düşürür."
-     }
-    ]
-   },
-   "kart": 3
-  },
-  {
    "baslik": "En uzun zinciri say",
-   "metin": "Ad, <b>en uzun karbon zincirinden</b> gelir ve zincir düz çizilmek zorunda değildir. Zinciri kıvır, karbonları say. Numaralama dala en yakın uçtan başlar.",
+   "metin": "Zincir düz çizilmek zorunda değil. Zinciri kıvır ve karbonları say.",
    "sahne": {
     "tur": "kim11-adlandir"
    },
@@ -107,8 +79,36 @@
    "kart": 3
   },
   {
+   "baslik": "Dallanma",
+   "metin": "Üç kapta aynı formüllü (C₅H₁₂) üç alkan var: düz zincirli, bir dallı ve iki dallı. Üçünü birlikte yavaşça ısıtıyoruz.",
+   "sahne": {
+    "tur": "kim11-dallanma",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hangisi önce kaynar?",
+    "secenekler": [
+     {
+      "yazi": "Pentan",
+      "neden": "Pentan düz zincirlidir; molekülleri yan yana uzun bir yüzeyle değer, London çekimi en güçlüdür. En son o kaynar (36 °C)."
+     },
+     {
+      "yazi": "2,2-dimetilpropan",
+      "neden": "En dallı molekül küreye en yakındır: temas yüzeyi küçük, London çekimi zayıf. 10 °C'de ilk o kaynar.",
+      "dogru": true
+     },
+     {
+      "yazi": "Üçü aynı anda, çünkü mol kütleleri aynı",
+      "neden": "Mol kütlesi aynı olsa da biçim farklı. Dallanma temas yüzeyini küçültür ve kaynama noktasını düşürür."
+     }
+    ]
+   },
+   "kart": 3
+  },
+  {
    "baslik": "Etini doyur",
-   "metin": "Etinin (C₂H₂) üçlü bağına H₂ katalım. Her mol H₂ bir π bağını açar ve iki karbona birer H ekler. Etini tamamen doyur.",
+   "metin": "Etinde (C₂H₂) üçlü bağ var. Her mol H₂ bir π bağını açar ve iki karbona birer H ekler. Etini tamamen doyur.",
    "sahne": {
     "tur": "kim11-doyur"
    },
@@ -130,9 +130,9 @@
      "h": 2
     },
     "ipucu": "Üçlü bağda iki π bağı var.",
-    "tamam": "Alkin → alken → alkan: katılma iki basamaktır. 1 mol alkin doymak için 2 mol H₂ (ya da 2 mol Br₂) harcar; alken 1 mol."
+    "tamam": "Alkin → alken → alkan: katılma iki basamaktır."
    },
-   "kart": 11,
+   "kart": 10,
    "goster": {
     "deger": {
      "h": 1
@@ -149,7 +149,7 @@
    },
    "gorev": {
     "tur": "tahmin",
-    "soru": "Hangi tüpte turuncu renk kaybolur?",
+    "soru": "Hangi tüpte bromlu suyun rengi kaybolur?",
     "secenekler": [
      {
       "yazi": "Hekzan ve hekzende",
@@ -205,11 +205,11 @@
      }
     ]
    },
-   "kart": 13
+   "kart": 12
   },
   {
    "baslik": "Pentanı yak",
-   "metin": "Yeterli oksijenle bir hidrokarbon yanınca CO₂ ve H₂O oluşur. Pentanın yanma denklemini O₂ katsayısıyla denkleştir.",
+   "metin": "Pentanın (C₅H₁₂) yanma denklemini O₂ katsayısıyla denkleştir.",
    "sahne": {
     "tur": "kim11-yanma"
    },
