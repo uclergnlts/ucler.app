@@ -7,22 +7,22 @@
  "adimlar": [
   {
    "baslik": "Spermin yolu",
-   "metin": "Sperm <b>testislerde</b> üretilir ve dışarı çıkana kadar bir kanal sisteminden geçer. Yolda bezlerin salgıları katılır. Tahmin et, sonra izle.",
+   "metin": "Bir erkeğe vazektomi yapılıyor: iki <b>sperm kanalı</b> kesilip bağlanıyor. Tahmin et, sonra spermin yolunu izle.",
    "sahne": { "tur": "biy13-sperm", "sure": 6 },
    "gorev": {
     "tur": "tahmin",
-    "soru": "Sperm hangi yapıda olgunlaşıp depolanır?",
+    "soru": "Bu kişide ne olur?",
     "secenekler": [
-     { "yazi": "Testis", "neden": "Testis spermi üretir. Yeni üretilen sperm henüz yüzemez; olgunlaşması başka yerde olur." },
-     { "yazi": "Epididim", "dogru": true, "neden": "Sperm testisin üstündeki epididimde olgunlaşır ve depolanır, sonra sperm kanalıyla üretraya taşınır." },
-     { "yazi": "Prostat", "neden": "Prostat bir bezdir; salgısı spermle birleşip meniyi oluşturur. Sperm prostatta depolanmaz." }
+     { "yazi": "Testis sperm üretmeyi bırakır", "neden": "Testis spermi ve testosteronu üretmeyi sürdürür; yalnız sperm dışarı giden yola çıkamaz." },
+     { "yazi": "Meni oluşur ama içinde sperm bulunmaz", "dogru": true, "neden": "Meninin sıvısını kesecik ve bezler yapar; kanal kesik olduğu için epididimdeki sperm bu sıvıya katılamaz." },
+     { "yazi": "Hiç meni oluşmaz", "neden": "Seminal kesecik, prostat ve bulbouretral bez kanalın ilerisindedir; salgıları yine meniyi oluşturur." }
     ]
    },
    "kart": 1
   },
   {
    "baslik": "Testiste iki hormon",
-   "metin": "Hipofiz testise iki hormon gönderir. <b>FSH</b> tüpçük duvarındaki <b>Sertoli</b> hücrelerini, <b>LH</b> tüpçükler arasındaki <b>Leydig</b> hücrelerini uyarır. Sperm üretimini tam çalıştır.",
+   "metin": "Hipofiz testise <b>FSH</b> ve <b>LH</b> gönderir. Sperm üretimini tam çalıştır.",
    "sahne": { "tur": "biy13-testis" },
    "deger": { "f": 0, "l": 0 },
    "kontroller": [
@@ -33,7 +33,7 @@
     "tur": "ayarla",
     "hedef": { "f": 1, "l": 1 },
     "ipucu": "Sertoli hücreleri gelişen spermi besler; Leydig hücrelerinin testosteronu da üretimi sürdürür. İkisi birlikte gerekir.",
-    "tamam": "FSH Sertoli'yi, LH Leydig'i uyardı; Leydig hücreleri testosteron salgıladı. Testosteron sperm üretimini ve sakal, kas gelişimi gibi ikincil eşey özelliklerini sağlar. Hormon adları kadınla aynıdır."
+    "tamam": "İki hormon birlikte: Sertoli spermi besledi, Leydig'in testosteronu üretimi tam hıza çıkardı."
    },
    "kart": 2,
    "goster": { "deger": { "f": 1, "l": 0 }, "not": "Yalnız FSH: Sertoli hücreleri spermi besliyor, ama Leydig hücreleri testosteron salgılamadığı için sperm üretimi <b>zayıf</b>." }
@@ -59,7 +59,7 @@
   },
   {
    "baslik": "Döngünün ortası",
-   "metin": "Menstrual döngü ortalama 28 gündür. <b>FSH</b> folikülü büyütür, folikül <b>östrojen</b> salgılar. Östrojen yeterince yükselince <b>LH</b> aniden artar. Günü kaydır ve ovulasyonu bul.",
+   "metin": "Günü kaydır ve ovulasyonu bul.",
    "sahne": { "tur": "biy13-dongu" },
    "deger": { "g": 3 },
    "kontroller": [ { "ad": "g", "etiket": "Gün", "min": 1, "max": 28, "adim": 1 } ],
@@ -67,7 +67,7 @@
     "tur": "ayarla",
     "hedef": { "g": [13, 14] },
     "ipucu": "Mor LH eğrisinin birden yükseldiği günü ara. Ovulasyonu LH tepesi tetikler.",
-    "tamam": "Yüksek östrojen hipofizi uyardı (pozitif geri bildirim), LH aniden arttı ve oosit atıldı. Sonra boş folikül sarı cisme dönüşür ve progesteron salgılar; progesteron iç zarı korur, FSH ve LH'yi baskılar."
+    "tamam": "LH tepesi ovulasyonu tetikledi. Östrojenin en yüksek olduğu gün, LH tepesinden hemen öncedir."
    },
    "kart": 7,
    "goster": { "deger": { "g": 10 }, "not": "10. gün folikül evresi: folikül büyüyor, östrojen yükselip iç zarı kalınlaştırıyor; LH hâlâ düşük." }
@@ -84,15 +84,15 @@
     "soru": "hCG olunca menstruasyon neden olmaz?",
     "secenekler": [
      { "yazi": "hCG iç zarı doğrudan kalınlaştırır", "neden": "İç zarı koruyan hormon progesterondur. hCG bunu dolaylı yoldan sağlar." },
-     { "yazi": "hCG sarı cismi yaşatır, progesteron düşmez", "dogru": true, "neden": "hCG sarı cismin körelmesini önler. Progesteron yüksek kalır, iç zar dökülmez. Yaklaşık 3. aydan sonra progesteronu plasenta üretir." },
+     { "yazi": "hCG sarı cismi yaşatır, progesteron düşmez", "dogru": true, "neden": "hCG sarı cismin körelmesini önler. Progesteron yüksek kalır, iç zar dökülmez." },
      { "yazi": "hCG FSH'yi artırır, yeni folikül olgunlaşır", "neden": "Gebelikte yeni folikül olgunlaşmaz; yüksek progesteron FSH ve LH'yi baskılar." }
     ]
    },
-   "kart": 13
+   "kart": 12
   },
   {
    "baslik": "Zigottan implantasyona",
-   "metin": "Döllenme <b>yumurta kanalında</b> olur. Zigot rahme giderken mitozla hızla bölünür: <b>segmentasyon</b>. Tahmin et, sonra izle.",
+   "metin": "Zigot rahme giderken mitozla hızla bölünür. Tahmin et, sonra izle.",
    "sahne": { "tur": "biy13-zigot", "sure": 7 },
    "gorev": {
     "tur": "tahmin",
@@ -100,14 +100,14 @@
     "secenekler": [
      { "yazi": "Hücre sayısıyla aynı oranda büyür", "neden": "Bölünmeler arasında hücreler büyümeye zaman bulamaz. Toplam boyut büyümez." },
      { "yazi": "Yarıya iner", "neden": "Bölünme madde kaybettirmez; dış boyut korunur." },
-     { "yazi": "Pek değişmez; hücreler küçülür", "dogru": true, "neden": "Zigot önce morulaya, sonra içi sıvılı blastosiste dönüşür; bu sırada her bölünmede hücreler küçülür. Blastosist 6-7. günde rahim iç zarına gömülür: implantasyon." }
+     { "yazi": "Pek değişmez; hücreler küçülür", "dogru": true, "neden": "Bölünmeler arasında hücreler büyümeye zaman bulamaz; her bölünmede hücreler küçülür, toplam boyut aynı kalır." }
     ]
    },
    "kart": 9
   },
   {
    "baslik": "Üç germ tabakası",
-   "metin": "İmplantasyondan sonra <b>gastrula</b> oluşur ve üç <b>germ tabakası</b> ayrılır. Her tabaka belirli organlara farklılaşır. Organları gez, sonra soruyu yanıtla.",
+   "metin": "Germ tabakalarının organlarını gez, sonra soruyu yanıtla.",
    "sahne": { "tur": "biy13-germ" },
    "deger": { "o": 1 },
    "kontroller": [ { "ad": "o", "etiket": "Organ", "min": 1, "max": 5, "tur": "sayac" } ],

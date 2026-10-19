@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Kemik nereden uzar?",
-   "metin": "Uzun kemiğin gövdesine <b>diafiz</b>, uçlarına <b>epifiz</b> denir. İkisinin arasında kıkırdaktan bir <b>plak</b> vardır. Tahmin et, sonra oynat.",
+   "metin": "Diafiz ile epifiz arasında kıkırdaktan bir <b>plak</b> var. Tahmin et, sonra oynat.",
    "sahne": { "tur": "biy10-boy", "sure": 4 },
    "gorev": {
     "tur": "tahmin",
@@ -36,11 +36,11 @@
      { "yazi": "Eklem sıvısı ve kıkırdak", "dogru": true, "neden": "Kapsülün içindeki eklem sıvısı kayganlaştırır, uçlardaki kıkırdak darbeyi yumuşatır. Bağlar ise kemikleri birbirine tutar." }
     ]
    },
-   "kart": 7
+   "kart": 6
   },
   {
    "baslik": "Kolunu bük",
-   "metin": "Kaslar yalnızca <b>çeker</b>, itemez. Bu yüzden kolu iki kas birlikte çalıştırır. Kolunu dirsekten bük.",
+   "metin": "Kolunu dirsekten bük.",
    "sahne": { "tur": "biy10-kol" },
    "deger": { "b": 0, "tr": 1 },
    "kontroller": [
@@ -51,14 +51,14 @@
     "tur": "ayarla",
     "hedef": { "b": 1, "tr": 0 },
     "ipucu": "Bükmek için öndeki kas çekmeli, arkadaki gevşemeli. İkisi birden kasılırsa kol kilitlenir.",
-    "tamam": "Biseps kasıldı ve önkolu çekti, triseps gevşedi. Kolu açarken tersi olur. Böyle zıt çalışan kaslara antagonist kaslar denir."
+    "tamam": "Biseps kısalıp önkolu çekti, triseps gevşedi. Kas kısalarak yük kaldırdığı için bu bir izotonik kasılmadır."
    },
    "kart": 14,
    "goster": { "deger": { "b": 1 }, "not": "Triseps kasılıyken biseps de kasıldı: iki kas birbirine karşı çekiyor, kol yarı bükük kilitlendi." }
   },
   {
    "baslik": "Kayan iplikler",
-   "metin": "Kas lifinde tekrar eden birime <b>sarkomer</b> denir. İçinde ince <b>aktin</b> ve kalın <b>miyozin</b> iplikleri vardır. Tahmin et, sonra kasılmayı izle.",
+   "metin": "Sarkomerdeki bantlara bak. Tahmin et, sonra kasılmayı izle.",
    "sahne": { "tur": "biy10-sarkomer", "sure": 4 },
    "gorev": {
     "tur": "tahmin",
@@ -73,7 +73,7 @@
   },
   {
    "baslik": "Ca²⁺ ve ATP",
-   "metin": "Sinirden gelen impulsla <b>Ca²⁺</b> salınır ve aktindeki bağlanma yerlerini açar. Miyozin başları aktini <b>ATP</b> enerjisiyle çeker. Kası kasılmaya hazırla ve oynat.",
+   "metin": "<b>Ca²⁺</b> troponine bağlanınca <b>tropomiyozin</b> kayar ve aktindeki bağlanma yerleri açılır. Kası kasılmaya hazırla ve oynat.",
    "sahne": { "tur": "biy10-kalsiyum", "sure": 3 },
    "deger": { "ca": 0, "atp": 1 },
    "kontroller": [
@@ -117,7 +117,7 @@
      { "yazi": "Kalp kası", "dogru": true, "neden": "Kalp kası çizgilidir ama istemsiz çalışır. Ara diskler hücreleri bağlar, uyarı hızla yayılır." }
     ]
    },
-   "kart": 8
+   "kart": 7
   }
  ],
  "kapanis": [

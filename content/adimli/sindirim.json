@@ -13,7 +13,7 @@
     "tur": "tahmin",
     "soru": "Lokma hangisinin içinden geçmez?",
     "secenekler": [
-     { "yazi": "Mide", "neden": "Mide sindirim kanalının parçasıdır; lokma burada asitle çalkalanıp kimusa dönüşür." },
+     { "yazi": "Mide", "neden": "Mide sindirim kanalının parçasıdır; lokma burada asitle çalkalanıp bulamaca (kimus) dönüşür." },
      { "yazi": "Yemek borusu", "neden": "Yemek borusu lokmayı peristaltik hareketle mideye iter; lokma içinden geçer." },
      { "yazi": "Pankreas", "dogru": true, "neden": "Pankreas yardımcı organdır. Besin içinden geçmez; pankreas sıvısını onikiparmak bağırsağına döker. Karaciğer de böyledir." }
     ]
@@ -22,7 +22,7 @@
   },
   {
    "baslik": "Çiğne",
-   "metin": "Dişler lokmayı keser ve öğütür. Buna <b>mekanik sindirim</b> denir. Lokmayı parçalara böl ve yüzeyini 4 katına çıkar.",
+   "metin": "Lokmayı parçalara böl ve yüzeyini 4 katına çıkar.",
    "sahne": { "tur": "biy11-yuzey" },
    "deger": { "n": 1 },
    "kontroller": [ { "ad": "n", "etiket": "Bölme", "min": 1, "max": 4, "tur": "sayac" } ],
@@ -30,32 +30,32 @@
     "tur": "ayarla",
     "hedef": { "n": 4 },
     "ipucu": "Her kenarı daha çok parçaya böldükçe toplam yüzey artar.",
-    "tamam": "64 parça, 4 kat yüzey. Enzimin değdiği yer arttı, ama madde hâlâ nişasta. Molekülü yalnızca enzimler hidrolizle değiştirir: buna kimyasal sindirim denir."
+    "tamam": "64 parça, 4 kat yüzey: amilazın değdiği yer arttı, ama madde hâlâ nişasta."
    },
    "kart": 3,
    "goster": { "deger": { "n": 2 }, "not": "Her kenarı ikiye bölünce 8 parça çıkıyor ve toplam yüzey <b>2 katına</b> çıkıyor; madde hâlâ nişasta." }
   },
   {
    "baslik": "Kim nerede başlar?",
-   "metin": "Üç besin de aynı kanaldan geçer, ama her birinin <b>kimyasal sindirimi</b> başka yerde başlar. Besini değiştir ve üçünü de oynat.",
+   "metin": "Besini değiştir ve üçünü de oynat; sonra şu durumu düşün.",
    "sahne": { "tur": "biy11-baslangic", "sure": 5 },
    "deger": { "b": 1 },
    "kontroller": [ { "ad": "b", "etiket": "Besin", "min": 1, "max": 3, "tur": "sayac" } ],
    "gorev": {
     "tur": "secim",
     "kosu": 3,
-    "soru": "Kimyasal sindirimin başlama sırası hangisi?",
+    "soru": "Tükürük bezleri çalışmayan birinde nişastanın kimyasal sindirimi ne olur?",
     "secenekler": [
-     { "yazi": "Protein → karbonhidrat → yağ", "neden": "Proteinin sindirimi ağızda başlamaz; tükürükte protein parçalayan enzim yoktur. İlk başlayan karbonhidrattır." },
-     { "yazi": "Karbonhidrat → protein → yağ", "dogru": true, "neden": "Tükürük amilazı ağızda nişastaya başlar, pepsin midede proteine, lipaz ince bağırsakta yağa. Üçünün sindirimi de ince bağırsakta biter." },
-     { "yazi": "Yağ → protein → karbonhidrat", "neden": "Yağ en son başlar: lipaz ince bağırsakta çalışır. Ağızda ve midede yağ değişmeden geçer." }
+     { "yazi": "Hiç gerçekleşmez", "neden": "Pankreas sıvısında da amilaz var; nişasta ince bağırsakta yine sindirilir." },
+     { "yazi": "İnce bağırsakta başlar", "dogru": true, "neden": "Ağızdaki ön sindirim olmaz; ama pankreas amilazı ve maltaz nişastayı ince bağırsakta yine glikoza kadar ayırır." },
+     { "yazi": "Midede pepsinle başlar", "neden": "Pepsin yalnız proteinlere etki eder; nişastayı parçalayan enzim amilazdır." }
     ]
    },
    "kart": 10
   },
   {
    "baslik": "Enzim ve pH",
-   "metin": "Mide bezleri <b>HCl</b> salgılar ve pH 2'ye iner. Pankreas sıvısındaki <b>bikarbonat</b> ise asidi nötrler. pH'yi değiştir ve pepsinin en hızlı çalıştığı yeri bul.",
+   "metin": "Pepsin ve tripsin farklı pH'lerde çalışır. pH'yi değiştir ve pepsinin en hızlı çalıştığı yeri bul.",
    "sahne": { "tur": "biy11-ph" },
    "deger": { "ph": 7 },
    "kontroller": [ { "ad": "ph", "etiket": "pH", "min": 1, "max": 9 } ],
@@ -63,7 +63,7 @@
     "tur": "ayarla",
     "hedef": { "ph": 2 },
     "ipucu": "Pepsin midede çalışır. Mide asidi pH'yi çok düşürür.",
-    "tamam": "pH 2'de pepsin en hızlı, tripsin neredeyse durmuş. Kimus onikiparmağa geçince bikarbonat pH'yi yükseltir; pepsin durur, pankreasın tripsini çalışır."
+    "tamam": "pH 2'de pepsin en hızlı, tripsin neredeyse durmuş. Her enzimin kendi optimum pH'si vardır; ortam değişince biri durur, öbürü çalışır."
    },
    "kart": 6,
    "goster": { "deger": { "ph": 8 }, "not": "pH 8'de tripsin en hızlı çalışıyor, pepsin ise neredeyse durmuş: bu, ince bağırsağın ortamı." }
@@ -78,7 +78,7 @@
     "tur": "ayarla",
     "hedef": { "safra": 1 },
     "ipucu": "Safra yağı küçük damlacıklara ayırır. Yüzey artınca lipaz hızlanır.",
-    "tamam": "Safra yağı damlacıklara ayırdı, yüzey 3 katına çıktı ve lipaz yağın hepsini parçaladı. Safra enzim değildir; yaptığı iş emülsiyondur, yani mekanik sindirimdir."
+    "tamam": "Safra yağı damlacıklara ayırdı; yüzey arttıkça lipaz hızlandı ve aynı sürede yağın hepsini parçaladı."
    },
    "kart": 8,
    "goster": { "not": "Safra yokken lipaz yalnızca büyük damlanın yüzeyinde çalışıyor: aynı sürede yağın ancak <b>%30</b>'u sindirildi.", "oynat": true }
@@ -95,7 +95,7 @@
     "ipucu": "Son düzeyde her epitel hücresinin zarı fırça gibi çıkıntılar yapar.",
     "tamam": "Kıvrımlar, villuslar ve mikrovilluslar birlikte yüzeyi yüzlerce kat artırır. Mikrovillus zarındaki maltaz, laktaz ve peptidazlar sindirimin son adımını da burada atar."
    },
-   "kart": 11,
+   "kart": 10,
    "goster": { "deger": { "k": 1 }, "not": "Duvarın kıvrılması tek başına iç yüzeyi <b>3 katına</b> çıkarıyor." }
   },
   {
@@ -111,7 +111,7 @@
      { "yazi": "Kalın bağırsağa", "neden": "Kalın bağırsak sindirim enzimi salgılamaz; su ve mineral emer. Yağın sindirimi ve emilimi ince bağırsakta tamamlanır." }
     ]
    },
-   "kart": 11
+   "kart": 10
   }
  ],
  "kapanis": [

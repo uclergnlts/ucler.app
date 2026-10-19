@@ -15,14 +15,14 @@
     "tur": "ayarla",
     "hedef": { "g": 40 },
     "ipucu": "Doğum ve göçle gelen sayıyı artırır; ölüm ve göçle giden azaltır. İki çubuk eşit olmalı.",
-    "tamam": "60 + 40 = 80 + 20: artış azalışa eşit, popülasyon 500'de kaldı. Göçün olmadığı yalıtılmış bir adada büyüklüğü yalnızca doğum ve ölüm belirlerdi."
+    "tamam": "60 + 40 = 80 + 20: artış azalışa eşit, popülasyon 500'de kaldı."
    },
    "kart": 3,
    "goster": { "deger": { "g": 20 }, "not": "Göçle 20 kuş gelirse artış 60 + 20 = 80, azalış 80 + 20 = 100: popülasyon 20 azalıp <b>480</b> olur." }
   },
   {
    "baslik": "Dağılım",
-   "metin": "Yoğunluk, birim alandaki birey sayısıdır. Yoğunluk aynı olsa da bireyler alana farklı dağılabilir. Üç tipi gez.",
+   "metin": "Üç dağılım tipini gez.",
    "sahne": { "tur": "biy13-dagilim" },
    "deger": { "d": 1 },
    "kontroller": [ { "ad": "d", "etiket": "Tip", "min": 1, "max": 3, "tur": "sayac" } ],
@@ -32,7 +32,7 @@
     "secenekler": [
      { "yazi": "Kümeli", "neden": "Kümeli dağılımda bireyler kaynağın çevresinde toplanır. Burada her çalı komşusunu uzak tutuyor." },
      { "yazi": "Rastgele", "neden": "Rastgele dağılım, bireyler arasında etkileşim zayıfken olur. Burada güçlü bir rekabet var." },
-     { "yazi": "Düzenli", "dogru": true, "neden": "Kaynak rekabeti ya da bölge savunması bireyleri birbirinden eşit uzaklıkta tutar. Doğada en yaygın tip ise kümelidir." }
+     { "yazi": "Düzenli", "dogru": true, "neden": "Kaynak rekabeti ya da bölge savunması bireyleri birbirinden eşit uzaklıkta tutar." }
     ]
    },
    "kart": 1
@@ -47,14 +47,14 @@
     "tur": "ayarla",
     "hedef": { "n": 7 },
     "ipucu": "10, 20, 40, 80... Kırmızı çizgiyi ilk geçtiğin nesilde dur.",
-    "tamam": "7. nesilde 10 bakteri 1 280 oldu. Kaynak sınırsızken popülasyon her dönemde aynı oranla artar: üstel büyüme, J eğrisi. Her nesilde eklenen birey sayısı da büyür."
+    "tamam": "7. nesilde 10 bakteri 1 280 oldu. Oran sabit kalsa da her nesilde eklenen birey sayısı büyür: üstel büyüme."
    },
    "kart": 4,
    "goster": { "deger": { "n": 3 }, "not": "3. nesilde 10 × 2³ = <b>80</b> bakteri: her nesilde sayı ikiye katlanıyor." }
   },
   {
    "baslik": "S eğrisi",
-   "metin": "Doğada besin ve alan sınırlıdır. Popülasyon <b>taşıma kapasitesi</b> K çevresinde dengelenir: S eğrisi. Burada K = 1 000. Artışın en hızlı olduğu büyüklüğü bul.",
+   "metin": "Burada <b>taşıma kapasitesi</b> K = 1 000. Artışın en hızlı olduğu büyüklüğü bul.",
    "sahne": { "tur": "biy13-s" },
    "deger": { "n": 100 },
    "kontroller": [ { "ad": "n", "etiket": "Popülasyon", "min": 50, "max": 950, "adim": 50 } ],
@@ -85,7 +85,7 @@
      { "yazi": "Yalnızca seyrek popülasyonu etkiler", "neden": "Sel her yoğunluktaki popülasyonu etkiler; etkisi yoğunluğa göre değişmez." }
     ]
    },
-   "kart": 5
+   "kart": 4
   },
   {
    "baslik": "Av ve avcı",
@@ -100,7 +100,7 @@
      { "yazi": "Tavşanın tepesinden biraz önce", "neden": "Avcı, besini artmadan çoğalamaz. Avcının artışı avın artışını izler." }
     ]
    },
-   "kart": 8
+   "kart": 9
   },
   {
    "baslik": "Rekabetçi dışlama",
@@ -114,7 +114,7 @@
     "soru": "Aynı kapta <em>P. caudatum</em> neden yok oldu?",
     "secenekler": [
      { "yazi": "P. aurelia onu avladı", "neden": "İki tür de bakteri ile beslenir; biri diğerini yemez. Kayıp, besin rekabetinden gelir." },
-     { "yazi": "İkisi aynı sınırlı besini aynı şekilde kullandı", "dogru": true, "neden": "Rekabetçi dışlama ilkesi: aynı sınırlı kaynağı aynı şekilde kullanan iki tür sürekli bir arada yaşayamaz. Türler farklı besin, saat ya da bölge kullanarak nişlerini ayırabilir." },
+     { "yazi": "İkisi aynı sınırlı besini aynı şekilde kullandı", "dogru": true, "neden": "İki tür de aynı bakterilerle beslendi; daha hızlı çoğalan <em>P. aurelia</em> besini tüketti, rakibi açlıktan azalıp yok oldu." },
      { "yazi": "Kap küçük olduğu için ikisi de azaldı", "neden": "<em>P. aurelia</em> azalmadı; çoğalıp dengelendi. Yalnızca rakibi yok oldu." }
     ]
    },
@@ -132,13 +132,13 @@
    ],
    "gorev": { "tur": "kesfet", "bulgular": [
     { "yazi": "Bir döngüyü izle: önce hangisi <b>tepe</b> yapıyor?", "hedef": { "avci": 1, "dongu": [1, 99] }, "coz": [{ "avci": 1 }],
-      "tamam": "Önce tavşan tepe yaptı, vaşak ondan sonra. Av çoğalınca avcının besini artar; avcı çoğalınca av azalır, ardından avcı da azalır." },
+      "tamam": "Önce tavşan tepe yaptı, vaşak ondan sonra." },
     { "yazi": "Vaşakları <b>kaldır</b>. Tavşanlar sonsuza kadar artıyor mu?", "hedef": { "avci": 0, "doydu": 1 }, "coz": [{ "avci": 0 }],
       "tamam": "Hayır: tavşanlar hızla arttı ama besin yetmeyince ≈ 2000'de durdu. Avcı yokken de çevre direnci büyümeyi sınırlar: <b>S eğrisi</b>." },
     { "yazi": "Vaşakları <b>geri koy</b> ve yeni bir döngü izle.", "hedef": [{ "avci": 0 }, { "avci": 1, "dongu": [1, 99] }], "sirali": true, "coz": [{ "avci": 0 }, { "avci": 1 }],
       "tamam": "Çok sayıda tavşanla karşılaşan vaşaklar hızla çoğaldı, tavşanları azalttı, sonra kendileri de azaldı: döngü yeniden başladı." }
    ] },
-   "kart": 9
+   "kart": 10
   }
  ],
  "kapanis": [
