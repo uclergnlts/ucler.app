@@ -12,7 +12,7 @@ import { gun, gunAdi, tekrarCevap, tekrarOku, useTekrar } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
 import { Alt } from "./Soru";
-import { dogruMu, geriBaslik, hazir, ilkCevap, TestGovde, yonerge, type Cevap } from "./TestSoru";
+import { dogruMu, geriBaslik, geriMetin, hazir, ilkCevap, TestGovde, yonerge, type Cevap } from "./TestSoru";
 import { Html, href, Logo } from "./temel";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
@@ -106,7 +106,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
               className="overflow-hidden pb-3"
             >
               <h2 className={cn("mb-0.5 text-lg", ok ? "text-good" : "text-bad")}>{geriBaslik(Q, ok)}</h2>
-              <Html as="p" className="text-[15px] leading-normal" html={Q.e} />
+              <Html as="p" className="text-[15px] leading-normal" html={geriMetin(Q, cevap, ok)} />
               <p className="mt-1.5 text-[14px] font-semibold">
                 {ok ? SONRA[cur.s] : <>Yarın yeniden sorulacak. <Link className="text-acc underline-offset-2 hover:underline" data-ders={Q.ders} href={href(Q.ders, Q.konu)}>Konuya bak</Link></>}
               </p>

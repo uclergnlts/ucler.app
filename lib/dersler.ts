@@ -19,14 +19,15 @@ export type Etk =
     };
 export type Card = { h: string; p: string; svg: string; key?: string; etk?: Etk };
 /**
- * Konu sonu testinin sorusu. tur yazılmazsa çoktan seçmelidir (o: şıklar, a: doğru şıkkın sırası).
+ * Konu sonu testinin sorusu. tur yazılmazsa çoktan seçmelidir (o: şıklar, a: doğru şıkkın sırası,
+ * y: her yanlış şık için o şıktaki düşünce hatasını söyleyen tek cümle; doğru şıkta boş).
  * Etkileşimli türlerde öğrenci cevabını kurar, "Kontrol et" ile bir kez değerlendirilir (components/TestSoru.tsx).
  * sirala: ogeler doğru sırayla yazılır. eslestir: her çiftin sağı, solunun eşidir. ayir: [öğe, grup sırası].
  * sayi: cevap ± tolerans kabul edilir. sahne: adımlı derslerin sahnesi; kontrolleri hedefe getir
  * (sahne "test" modunda hedefi ve cevabı ele veren yazıları gizler, kontrol edince gösterir).
  */
 export type Question = { q: string; e: string } & (
-  | { tur?: "secim"; o: string[]; a: number }
+  | { tur?: "secim"; o: string[]; a: number; y?: string[] }
   | { tur: "sirala"; ogeler: string[] }
   | { tur: "eslestir"; ciftler: [string, string][] }
   | { tur: "ayir"; gruplar: string[]; ogeler: [string, number][] }

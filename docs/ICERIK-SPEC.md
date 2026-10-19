@@ -88,6 +88,7 @@ Her konunun sonunda 4 soruluk test vardır (aşamalar bitince açılır). Üçle
   - `ayir`: `gruplar` (2-3) ve `ogeler: [[yazı, grup sırası], ...]` (4-8 öğe).
   - `sayi`: `cevap` (sayı), isteğe bağlı `tolerans` ve `birim`. Öğrenci sonucu kendisi yazar; virgül de nokta da kabul edilir.
   - `sahne`: adımlı derslerin sahnesi. `sahne` (`tur` + sahnenin değerleri), `deger`, `kontroller` (adımlı dersteki biçim), `hedef` (sayı ya da [en az, en çok]). Sahne bu soruda `test: true` alır ve cevabı ele veren yazıları (hedef bayrağı, sembol, yük) gizler; kontrol edilince gösterir. Bir sahneyi teste koymadan önce test modunu o sahneye ekle (şimdilik `konum` ve `atom`).
+- **Yanlışa özel ipucu (Üçler, 2026-10-19):** Çoktan seçmeli soruda `y` alanı zorunludur: 4 öğe, doğru şıkta `""`, her yanlış şıkta o şıkkı seçtiren düşünce hatasını söyleyen **tek kısa cümle** (en çok 25 kelime). Öğrenci yanlış şıkkı seçince alttaki çubukta uzun açıklamanın (`e`) **yerine** bu cümle çıkar; yeni kutu ya da düğme eklenmez. Amaç ekrandaki yazıyı artırmak değil, azaltmak.
 - Her konuda 4 sorudan en az ikisi etkileşimli olur (doğrulayıcı denetler). Çoktan seçmeli soru kalabilir; hesap gerektiren soru `sayi`, sınıflandırma `ayir`, süreç `sirala`, kavram-tanım `eslestir` olarak yazılır.
 
 ## Doğrulama

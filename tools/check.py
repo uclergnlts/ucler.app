@@ -280,6 +280,14 @@ def test_denetle(yer, q):
     if not q.get("q") or not q.get("e"): return err(*yer, "soru ya da açıklama boş")
     if tur == "secim":
         if len(q.get("o", [])) != 4 or not 0 <= q.get("a", -1) <= 3: err(*yer, "çoktan seçmeli: 4 şık ve 0-3 arası doğru şık")
+        # Yanlışa özel ipucu: her yanlış şıkta o şıktaki hatayı söyleyen tek kısa cümle, doğru şıkta boş.
+        y = q.get("y")
+        if y is None: err(*yer, "çoktan seçmeli: y (yanlış şık ipuçları) yok")
+        elif len(y) != 4 or y[q.get("a", 0)] or not all(y[i] for i in range(4) if i != q.get("a", 0)):
+            err(*yer, "y: 4 öğe olmalı; doğru şıkta boş, yanlış şıklarda dolu")
+        else:
+            for i, h in enumerate(y):
+                if h and len(re.sub(r"<[^>]+>", "", h).split()) > 25: err(*yer, f"y[{i}]: ipucu 25 kelimeyi geçiyor")
     elif tur == "sirala":
         o = q.get("ogeler", [])
         if not 3 <= len(o) <= 6 or len(set(o)) != len(o): err(*yer, "sirala: 3-6 farklı öğe olmalı")

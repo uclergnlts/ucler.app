@@ -25,7 +25,7 @@ import { Belir, CanliSvg, SiraliMetin, useCanliSvg } from "./canli";
 import type { Adim, AdimliDers } from "@/lib/adimli";
 import { AdimGorunum, type Bildirim } from "./DersMotoru";
 import { Alt } from "./Soru";
-import { dogruMu, geriBaslik, hazir, ilkCevap, TestGovde, yonerge, type Cevap } from "./TestSoru";
+import { dogruMu, geriBaslik, geriMetin, hazir, ilkCevap, TestGovde, yonerge, type Cevap } from "./TestSoru";
 import AsamaYolu, { type YolDugum } from "./AsamaYolu";
 import { Konfeti, Madalya, PuanRozet } from "./Kutlama";
 
@@ -343,7 +343,7 @@ export default function Lesson({
               className="overflow-hidden"
             >
               <h2 className={cn("mb-0.5 text-lg", ok ? "text-good" : "text-bad")}>{geriBaslik(Q, ok)}</h2>
-              <Html as="p" className="pb-3 text-[15px] leading-normal" html={Q.e} />
+              <Html as="p" className="pb-3 text-[15px] leading-normal" html={geriMetin(Q, s.cevap, ok)} />
             </motion.div>
           )}
         </AnimatePresence>

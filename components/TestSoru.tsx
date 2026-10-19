@@ -59,6 +59,12 @@ export function geriBaslik(q: Question, ok: boolean): string {
 }
 
 /** Sorunun altındaki kısa yönerge (etkileşimli türlerde ne yapılacağı). */
+/** Cevaptan sonra alttaki çubukta çıkan yazı. Yanlış seçilen şıkkın ipucu varsa uzun açıklamanın yerine o çıkar. */
+export function geriMetin(q: Question, c: Cevap, ok: boolean): string {
+  if (!ok && secmeli(q) && typeof c === "number" && q.y?.[c]) return q.y[c];
+  return q.e;
+}
+
 export function yonerge(q: Question): string | null {
   if (q.tur === "sirala") return "Öğelere sırayla dokun. Yanlış yerleşeni geri almak için ona dokun.";
   if (q.tur === "eslestir") return "Bir satır seç, sonra aşağıdan eşine dokun.";
