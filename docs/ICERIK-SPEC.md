@@ -108,4 +108,5 @@ Brilliant tarzı örnek dersler `content/adimli/<konu>.json` dosyalarındadır; 
   - Bulgu: `yazi`, `hedef`, `coz`, `tamam`, isteğe bağlı `sirali`. `hedef` tek bir hedef ya da hedef listesidir (listedeki her duruma bir kez uğramak gerekir; `sirali: true` ise verilen sırayla). Hedef adları kontroller ya da sahnenin `olc` ile hesapladığı ölçümler (ör. `pH`) olabilir.
   - `coz`: "Çözümü göster"de kontrollerin sırayla gideceği değer kümeleri. Düğme 25 saniye yeni bulgu çıkmazsa belirir ve bulunmamış ilk bulguyu gösterir.
   - Kontrol türü `dugme`: basınca değeri 1 olur; sahnenin `bagla` işlevi eylemi uygular ve değeri 0'a döndürür (ör. "Taze enzim koy").
-  - Pilotlar: fizik `iki-boyutta-hareket` (atış laboratuvarı), kimya `asit-baz` (pH laboratuvarı), biyoloji `enzimler` (enzim ve sıcaklık).
+  - Sahnenin kendi hesapladığı bir durum (ör. kutu kayıyor mu, zarın sağındaki iyon sayısı) `set` ile bildirilir ve hedeflerde kullanılır; başlangıç değeri `deger` içinde verilir.
+  - Şimdiye kadar: fizik `iki-boyutta-hareket` (atış), `newton-yasalari` (sürtünme); kimya `asit-baz` (pH), `gazlar` (gaz pistonu); biyoloji `enzimler` (sıcaklık), `madde-gecisi` (zar ve difüzyon).

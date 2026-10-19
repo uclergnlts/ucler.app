@@ -72,26 +72,17 @@
    "kart": 3
   },
   {
-   "baslik": "Kanal proteini",
-   "metin": "Na⁺ gibi yüklü iyonlar fosfolipitlerin yağlı ortasından geçemez. Önce oynat ve bak, sonra iyonlara bir kapı aç.",
+   "baslik": "Zar laboratuvarı",
+   "metin": "Zarın solunda O₂ molekülleri ve Na⁺ iyonları var; hepsi sürekli rastgele hareket ediyor. Sayılara ve geçişlere bak. Gerekirse zara bir kanal proteini koy ya da kabı yeniden doldur.",
    "sahne": {
-    "tur": "gecis",
-    "sure": 5,
-    "solAd": "çok Na⁺",
-    "sagAd": "az Na⁺",
-    "gruplar": [
-     {
-      "ad": "Na⁺",
-      "renk": "var(--c4)",
-      "r": 4.5,
-      "sol": 20,
-      "sag": 4,
-      "gecer": "kanal"
-     }
-    ]
+    "tur": "sim-zar"
    },
    "deger": {
-    "kanal": 0
+    "kanal": 0,
+    "yenile": 0,
+    "tur": 0,
+    "o2fark": 20,
+    "nasag": 0
    },
    "kontroller": [
     {
@@ -100,21 +91,52 @@
      "min": 0,
      "max": 1,
      "tur": "anahtar"
+    },
+    {
+     "ad": "yenile",
+     "etiket": "Yeniden doldur",
+     "min": 0,
+     "max": 1,
+     "tur": "dugme"
     }
    ],
    "gorev": {
-    "tur": "ayarla",
-    "hedef": {
-     "kanal": 1
-    },
-    "ipucu": "Kanal kapalıyken iyonlar zarın bir yanında kaldı. Kanal proteinini aç ve yeniden oynat.",
-    "tamam": "Kanal açılınca Na⁺ çok olan taraftan az olana geçti. Yine enerji harcanmadı; ama bir proteinin yardımıyla oldu. Buna <b>kolaylaştırılmış difüzyon</b> denir."
+    "tur": "kesfet",
+    "bulgular": [
+     {
+      "yazi": "O₂'nin iki tarafta <b>eşitlenmesini</b> izle. Eşitlenince moleküller duruyor mu?",
+      "hedef": {
+       "o2fark": [
+        0,
+        2
+       ]
+      },
+      "coz": [
+       {
+        "kanal": 0
+       }
+      ],
+      "tamam": "O₂ çok olduğu yerden az olduğu yere yayıldı: <b>difüzyon</b>, ATP harcanmadı. Eşitlenince moleküller yine geçiyor ama iki yöne yaklaşık eşit sayıda; <b>net</b> geçiş durdu."
+     },
+     {
+      "yazi": "Na⁺ iyonlarını zarın <b>sağına</b> geçir.",
+      "hedef": {
+       "kanal": 1,
+       "nasag": [
+        3,
+        12
+       ]
+      },
+      "coz": [
+       {
+        "kanal": 1
+       }
+      ],
+      "tamam": "Yüklü Na⁺ fosfolipitlerin yağlı ortasından geçemez. Kanal proteini açılınca çoktan aza geçti, yine ATP harcanmadı: <b>kolaylaştırılmış difüzyon</b>."
+     }
+    ]
    },
-   "kart": 4,
-   "goster": {
-    "oynat": true,
-    "not": "Kanal kapalıyken Na⁺ iyonları zarın yağlı ortasından geçemiyor."
-   }
+   "kart": 4
   },
   {
    "baslik": "Pompa ve aktif taşıma",

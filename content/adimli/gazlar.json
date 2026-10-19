@@ -103,39 +103,105 @@
    "kart": 5
   },
   {
-   "baslik": "Hepsi bir arada: PV = nRT",
-   "metin": "Gaz yasaları tek denklemde birleşir: <b>P·V = n·R·T</b> (R = 0,082 L·atm/mol·K). Bu 4,1 L'lik kap 300 K'de. Kaba gaz ekle ve basıncı <b>9 atm</b> yap.",
+   "baslik": "Gaz laboratuvarı",
+   "metin": "Pistonlu kapta 1 mol gaz var: 27 °C, 24,6 L, 1 atm. Hacmi, sıcaklığı ve mol sayısını değiştir; tanecikler ve basınç anında değişir. Basıncı 2 katına çıkarmanın üç yolunu bul.",
    "sahne": {
-    "tur": "kim7-ideal"
+    "tur": "sim-gaz"
    },
    "deger": {
-    "n": 0.5
+    "V": 24.6,
+    "T": 27,
+    "n": 1
    },
    "kontroller": [
     {
+     "ad": "V",
+     "etiket": "Hacim",
+     "min": 5,
+     "max": 25,
+     "adim": 0.1,
+     "birim": "L"
+    },
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": -73,
+     "max": 327,
+     "birim": "°C"
+    },
+    {
      "ad": "n",
-     "etiket": "Gaz",
+     "etiket": "Mol sayısı",
      "min": 0.5,
-     "max": 3,
+     "max": 2,
      "adim": 0.5,
      "birim": "mol",
      "tur": "sayac"
     }
    ],
    "gorev": {
-    "tur": "ayarla",
-    "hedef": {
-     "n": 1.5
-    },
-    "tamam": "P = 1,5 · 0,082 · 300 / 4,1 = 9 atm. Aynı kap ve sıcaklıkta basınç mol sayısıyla doğru orantılıdır. <b>Avogadro</b>'ya göre de aynı T ve P'de eşit hacimdeki gazlar eşit sayıda tanecik içerir."
+    "tur": "kesfet",
+    "bulgular": [
+     {
+      "yazi": "Sıcaklığı ve mol sayısını değiştirmeden basıncı <b>2 atm</b> yap.",
+      "hedef": {
+       "P": [
+        1.95,
+        2.05
+       ],
+       "T": 27,
+       "n": 1
+      },
+      "coz": [
+       {
+        "T": 27,
+        "n": 1,
+        "V": 12.3
+       }
+      ],
+      "tamam": "Hacmi yarıya (12,3 L) indirdin, basınç 2 katına çıktı: P·V sabit (<b>Boyle</b>). Tanecikler çeperlere daha sık çarpıyor."
+     },
+     {
+      "yazi": "Hacmi 24,6 L'de tut ve gazı <b>327 °C</b>'ye ısıt. Basınç kaç oldu?",
+      "hedef": {
+       "V": [
+        24.5,
+        24.7
+       ],
+       "T": 327,
+       "n": 1
+      },
+      "coz": [
+       {
+        "n": 1,
+        "V": 24.6,
+        "T": 327
+       }
+      ],
+      "tamam": "300 K'den 600 K'ye: kelvin sıcaklık 2 katı, basınç da 2 katı (<b>Gay-Lussac</b>). Celsius 27'den 327'ye 12 kat arttı ama hesapta kelvin geçer."
+     },
+     {
+      "yazi": "27 °C ve 24,6 L'de basıncı 2 atm yapmanın <b>üçüncü yolunu</b> bul.",
+      "hedef": {
+       "V": [
+        24.5,
+        24.7
+       ],
+       "T": 27,
+       "n": 2
+      },
+      "coz": [
+       {
+        "V": 24.6,
+        "T": 27,
+        "n": 2
+       }
+      ],
+      "tamam": "Mol sayısını 2 yaptın: aynı hacimde 2 kat tanecik, çeperlere 2 kat çarpma. Üç yasa da <b>P·V = n·R·T</b> içinde."
+     }
+    ]
    },
-   "kart": 8,
-   "goster": {
-    "deger": {
-     "n": 1
-    },
-    "not": "1 mol gazla P = 1 · 0,082 · 300 / 4,1 = <b>6 atm</b>. Mol sayısı artınca basınç da aynı oranda artar."
-   }
+   "kart": 8
   },
   {
    "baslik": "Tanecikler ne yapıyor?",

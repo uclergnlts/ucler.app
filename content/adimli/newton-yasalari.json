@@ -209,41 +209,89 @@
    "kart": 5
   },
   {
-   "baslik": "Sürtünme",
-   "metin": "20 kg'lık dolabı itiyorsun. Duran dolapta <b>statik sürtünme</b> itmeni dengeler, ama bir sınırı var: μs·N. İtmeni artır ve dolabı kaydır.",
+   "baslik": "Sürtünme laboratuvarı",
+   "metin": "Zeminde bir kutu var; μs = 0,5, μk = 0,3 ve g = 10 m/s². İtmeyi ve kütleyi değiştir: kuvvet okları, hız ve ivme anında değişir. Aşağıdakileri kendin bul.",
    "sahne": {
-    "tur": "fiz4-surtunme"
+    "tur": "sim-surtunme"
    },
    "deger": {
-    "F": 20
+    "F": 0,
+    "m": 20,
+    "kayiyor": 0
    },
    "kontroller": [
     {
      "ad": "F",
-     "etiket": "İtme",
+     "etiket": "İtme kuvveti",
      "min": 0,
-     "max": 100,
-     "adim": 10,
+     "max": 250,
+     "adim": 5,
      "birim": "N"
+    },
+    {
+     "ad": "m",
+     "etiket": "Kütle",
+     "min": 10,
+     "max": 40,
+     "adim": 10,
+     "birim": "kg",
+     "tur": "sayac"
     }
    ],
    "gorev": {
-    "tur": "ayarla",
-    "hedef": {
-     "F": [
-      80,
-      100
-     ]
-    },
-    "tamam": "Sınır μs·N = 0,4 × 196 ≈ 78 N. İtme bunu aşınca dolap kaydı ve sürtünme <b>kinetik</b> oldu: fk = μk·N = 0,3 × 196 ≈ 59 N. Genellikle μk &lt; μs: başlatmak, sürdürmekten zordur."
+    "tur": "kesfet",
+    "bulgular": [
+     {
+      "yazi": "20 kg'lık kutuyu kaydırmaya yeten <b>en küçük</b> itmeyi bul.",
+      "hedef": {
+       "m": 20,
+       "F": 105,
+       "kayiyor": 1
+      },
+      "coz": [
+       {
+        "m": 20,
+        "F": 105
+       }
+      ],
+      "tamam": "Statik sürtünmenin sınırı μs·N = 0,5 × 200 = 100 N. İtme bunu aşınca kutu kaydı; artık kinetik sürtünme μk·N = 0,3 × 200 = 60 N etkiyor."
+     },
+     {
+      "yazi": "Kutu kayarken itmeyi <b>60 N</b>'a indir. Hızına bak.",
+      "hedef": {
+       "m": 20,
+       "F": 60,
+       "kayiyor": 1
+      },
+      "coz": [
+       {
+        "m": 20,
+        "F": 105
+       },
+       {
+        "F": 60
+       }
+      ],
+      "tamam": "İtme kinetik sürtünmeye eşit: net kuvvet sıfır, kutu <b>sabit hızla</b> gidiyor (1. yasa). Başlatmak 100 N'dan fazlasını istedi, sürdürmeye 60 N yetiyor."
+     },
+     {
+      "yazi": "Kütleyi <b>40 kg</b> yap ve kutuyu kaydıran en küçük itmeyi yeniden bul.",
+      "hedef": {
+       "m": 40,
+       "F": 205,
+       "kayiyor": 1
+      },
+      "coz": [
+       {
+        "m": 40,
+        "F": 205
+       }
+      ],
+      "tamam": "Kütle 2 katına çıkınca N = 400 N oldu ve sınır da 2 katına çıktı: μs·N = 200 N. Sürtünme normal kuvvetle orantılıdır."
+     }
+    ]
    },
-   "kart": 9,
-   "goster": {
-    "deger": {
-     "F": 60
-    },
-    "not": "60 N ile itiyorsun: statik sürtünme de <b>60 N</b> olur, net kuvvet sıfır, dolap kımıldamaz."
-   }
+   "kart": 9
   }
  ],
  "kapanis": [
