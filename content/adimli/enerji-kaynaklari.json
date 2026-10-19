@@ -34,7 +34,7 @@
     "ipucu": "Benzin, kulenin üst kısmından alınır: küçük moleküller.",
     "tamam": "Benzin yaklaşık C₅–C₁₀ moleküllerinden oluşur. Molekül küçüldükçe kaynama noktası düşer ve kulenin daha yukarısında yoğunlaşır."
    },
-   "kart": 2,
+   "kart": 1,
    "goster": {
     "deger": {
      "c": 15
@@ -44,7 +44,7 @@
   },
   {
    "baslik": "Hangi yakıt daha az CO₂ verir?",
-   "metin": "Fosil yakıt tam yanınca CO₂ ve su çıkar. Aynı ısıyı (1 MJ) üç yakıtla üret. <b>En az CO₂ salan</b> fosil yakıtı bul.",
+   "metin": "Fosil yakıt tam yanınca CO₂ ve su çıkar. Aynı ısıyı (1 MJ) üç yakıtla üret; en az CO₂ salanı bul.",
    "sahne": {
     "tur": "kim12-co2"
    },
@@ -68,7 +68,7 @@
     "ipucu": "Çubuğu en kısa olanı ara.",
     "tamam": "Doğal gaz (çoğu metan) en az CO₂ salan fosil yakıttır. Yine de sıfır değildir: doğal gaz da fosil yakıttır."
    },
-   "kart": 3,
+   "kart": 2,
    "goster": {
     "deger": {
      "y": 1
@@ -78,7 +78,7 @@
   },
   {
    "baslik": "Sera etkisi",
-   "metin": "Güneş ışığı yeryüzünü ısıtır; yeryüzü de kızılötesi ışın yayar. CO₂ ve su buharı bu ışının bir kısmını tutar. Şimdi atmosferdeki bütün sera gazlarını kaldıracağız.",
+   "metin": "Şimdi atmosferdeki bütün sera gazlarını kaldıracağız.",
    "sahne": {
     "tur": "kim12-sera",
     "sure": 5
@@ -93,7 +93,7 @@
      },
      {
       "yazi": "≈ −18 °C'ye düşer",
-      "neden": "Sera etkisi olmasaydı ortalama sıcaklık ≈ −18 °C olurdu. Doğal sera etkisi yaşam için gereklidir; sorun, fazla CO₂'nin onu güçlendirmesidir.",
+      "neden": "Yeryüzünün yaydığı kızılötesi ışın tutulmadan uzaya kaçar; ortalama sıcaklık ≈ 15 °C'den ≈ −18 °C'ye iner.",
       "dogru": true
      },
      {
@@ -106,7 +106,7 @@
   },
   {
    "baslik": "Asit yağmuru",
-   "metin": "Kömür ve petrolde kükürt vardır; yanınca SO₂ çıkar ve havada sülfürik aside dönüşür. Havadaki SO₂'yi artır, yağmurun pH'ını ve mermeri izle.",
+   "metin": "Havadaki SO₂'yi artır; yağmurun pH'ını ve mermeri izle.",
    "sahne": {
     "tur": "kim12-asit"
    },
@@ -136,7 +136,7 @@
      },
      {
       "yazi": "Havadaki CO₂'yi çözer; zayıf karbonik asit oluşur",
-      "neden": "CO₂ + H₂O ⇌ H₂CO₃. Bu yüzden temiz yağmur bile hafif asidiktir; asit yağmuru pH 5,6'nın altıdır.",
+      "neden": "CO₂ + H₂O ⇌ H₂CO₃; bu zayıf asit pH'ı ≈ 5,6'ya indirir. SO₂ güçlü H₂SO₄ verdiği için pH'ı daha da düşürür.",
       "dogru": true
      }
     ]
@@ -184,7 +184,7 @@
   },
   {
    "baslik": "Atom ekonomisi",
-   "metin": "Yeşil kimya, girenlerin atomlarını ürüne taşımayı hedefler. Etanolü üç farklı yoldan elde edebiliriz. <b>Atom ekonomisi %100</b> olan yolu bul.",
+   "metin": "Etanolü üç farklı yoldan elde edebiliriz. Atom ekonomisi %100 olan yolu bul.",
    "sahne": {
     "tur": "kim12-atomeko"
    },
@@ -206,19 +206,19 @@
      "y": 2
     },
     "ipucu": "Hiç yan ürün çıkmayan tepkimeyi ara.",
-    "tamam": "Katılma tepkimesinde girenlerin bütün atomları etanole geçer: %100. Verim %100 olsa bile yan ürün (CO₂, NaBr) atık sayılır."
+    "tamam": "Katılma tepkimesinde girenlerin bütün atomları etanole geçer: %100. Yer değiştirme yolu ise NaBr atığıyla %31'de kalır."
    },
    "kart": 11,
    "goster": {
     "deger": {
-     "y": 1
+     "y": 0
     },
-    "not": "Yer değiştirme yolunda NaBr yan ürün olarak atılır: atom ekonomisi 46 / 149 ≈ <b>%31</b>."
+    "not": "Fermantasyonda 2 CO₂ atık olarak çıkar: atom ekonomisi 92 / 180 ≈ <b>%51</b>."
    }
   },
   {
    "baslik": "Nano boyut",
-   "metin": "Bir küpü küçük küplere böldükçe toplam hacim aynı kalır, ama yüzey büyür. Nano boyutta atomların çoğu yüzeydedir. Küpü bölerek <b>toplam yüzeyi 3 katına</b> çıkar.",
+   "metin": "Küpü küçük küplere böl. Toplam yüzeyi 3 katına çıkar.",
    "sahne": {
     "tur": "kim12-nano"
    },

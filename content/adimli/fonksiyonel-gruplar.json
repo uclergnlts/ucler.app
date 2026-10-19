@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Grubu değiştir",
-   "metin": "Bir organik bileşiğin karakterini çoğu zaman iskeleti değil, <b>fonksiyonel grubu</b> belirler. Etanın ucuna farklı gruplar tak. Etanı <b>suyla karışan bir sıvıya</b> çevir.",
+   "metin": "Etandaki bir H'nin yerine farklı gruplar koy. Etanı suyla karışan bir sıvıya çevir.",
    "sahne": {
     "tur": "kim12-grup"
    },
@@ -29,7 +29,7 @@
      "g": 3
     },
     "ipucu": "Hangi grup suyla hidrojen bağı kurabilir?",
-    "tamam": "Tek bir −OH, gazı 78 °C'de kaynayan ve suyla her oranda karışan etanole çevirdi. Grup değişti, karakter değişti."
+    "tamam": "H'nin yerine gelen −OH, gazı 78 °C'de kaynayan ve suyla her oranda karışan etanole çevirdi: −OH suyla hidrojen bağı kurar."
    },
    "kart": 1,
    "goster": {
@@ -63,9 +63,9 @@
      "n": 3
     },
     "ipucu": "Çubuğun mavi kaldığı son alkolü ara.",
-    "tamam": "İlk üç alkol suyla her oranda karışır. Zincir uzadıkça apolar kısım büyür; bütanolden sonra çözünürlük hızla düşer."
+    "tamam": "Propanole kadar alkoller suyla her oranda karışır; bütanolden sonra çözünürlük hızla düşer."
    },
-   "kart": 3,
+   "kart": 2,
    "goster": {
     "deger": {
      "n": 2
@@ -114,7 +114,7 @@
   },
   {
    "baslik": "Alkolleri yükseltge",
-   "metin": "Turuncu dikromat, −OH'nin bağlı olduğu karbondan bir H koparır ve kendisi yeşile döner. Üç tüpe birincil, ikincil ve üçüncül alkol ekliyoruz.",
+   "metin": "Turuncu dikromat, −OH'nin H'sini ve o karbondaki bir H'yi koparır, kendisi yeşile döner. Üç tüpe birincil, ikincil ve üçüncül alkol ekliyoruz.",
    "sahne": {
     "tur": "kim12-dikromat",
     "sure": 4
@@ -162,12 +162,11 @@
    "gorev": {
     "tur": "secim",
     "kosu": 2,
-    "soru": "Hangisi Tollens'i verir ama Fehling'i vermez?",
+    "soru": "Hangisi iki testi de vermez?",
     "secenekler": [
      {
       "yazi": "Benzaldehit",
-      "neden": "Benzaldehit bir aldehittir; gümüş aynası verir. Ama aromatik aldehitler Fehling'i vermez.",
-      "dogru": true
+      "neden": "Benzaldehit bir aldehittir; Tollens'le gümüş aynası verir."
      },
      {
       "yazi": "Propanal",
@@ -175,15 +174,16 @@
      },
      {
       "yazi": "Propanon",
-      "neden": "Propanon ketondur; bu ılımlı ayıraçlarla yükseltgenmez, iki testi de vermez."
+      "neden": "Propanon ketondur; karbonil C'sinde koparılacak H yoktur, ne gümüş aynası ne Cu₂O oluşur.",
+      "dogru": true
      }
     ]
    },
-   "kart": 9
+   "kart": 8
   },
   {
    "baslik": "Ester yap",
-   "metin": "Karboksilik asit ile alkol ısıtılınca <b>ester ve su</b> oluşur. Asidin −OH'si ile alkolün H'si su olarak ayrılır. Asidi ve alkolü seçerek <b>ananas kokulu etil bütanoatı</b> yap.",
+   "metin": "Asidi ve alkolü seçerek ananas kokulu etil bütanoatı yap.",
    "sahne": {
     "tur": "kim12-ester"
    },
@@ -226,7 +226,7 @@
   },
   {
    "baslik": "Sabun yap",
-   "metin": "Yağ, gliserolün üç −OH'sinin üç yağ asidiyle kurduğu bir esterdir. NaOH her ester bağını koparır. 1 mol yağı <b>tamamen sabunlaştır</b>, NaOH artmasın.",
+   "metin": "NaOH her ester bağını koparır. 1 mol yağı tamamen sabunlaştır, NaOH artmasın.",
    "sahne": {
     "tur": "kim12-sabun"
    },

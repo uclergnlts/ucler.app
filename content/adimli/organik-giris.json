@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Dört bağ",
-   "metin": "Karbonun dört değerlik elektronu var; okteti tamamlamak için <b>dört kovalent bağ</b> yapar. Boşta bağ kalmayacak şekilde karbona hidrojen bağla.",
+   "metin": "Boşta bağ kalmayacak şekilde karbona hidrojen bağla.",
    "sahne": {
     "tur": "kim11-dortbag",
     "mod": "metan"
@@ -30,9 +30,9 @@
      "h": 4
     },
     "ipucu": "Kesik çizgiler boşta kalan bağlardır.",
-    "tamam": "CH₄, metan: en basit organik bileşik. Karbon kendi atomlarıyla da bağ kurar; uzun zincirler ve halkalar bu dört bağdan doğar."
+    "tamam": "CH₄, metan: en basit organik bileşik. Dört bağ, düzgün dörtyüzlünün köşelerine yönelir."
    },
-   "kart": 3,
+   "kart": 4,
    "goster": {
     "deger": {
      "h": 2
@@ -67,7 +67,7 @@
     "ipucu": "İkili bağ 2 bağ sayılır; 4'e tamamla.",
     "tamam": "C₂H₄, eten: ikili bağ 2, iki H de 2 bağ eder. Üçlü bağlı etinde (C₂H₂) her karbona tek H kalır."
    },
-   "kart": 3,
+   "kart": 4,
    "goster": {
     "deger": {
      "h": 3
@@ -112,11 +112,11 @@
      }
     ]
    },
-   "kart": 6
+   "kart": 7
   },
   {
    "baslik": "σ ve π say",
-   "metin": "İki atom arasındaki ilk bağ <b>sigma (σ)</b>, fazlası <b>pi (π)</b>'dir: ikili bağ 1σ + 1π, üçlü bağ 1σ + 2π. Propindeki bağları say.",
+   "metin": "Propindeki (CH₃–C≡CH) σ ve π bağlarını say.",
    "sahne": {
     "tur": "kim11-sigmapi"
    },
@@ -147,9 +147,9 @@
      "p": 2
     },
     "ipucu": "C–H bağlarını da say: her biri bir σ'dır.",
-    "tamam": "4 C–H + 2 C–C = 6σ; üçlü bağ fazladan 2π katar. σ bağı π'den sağlamdır; π bağı, bağ ekseni etrafında dönmeyi engeller."
+    "tamam": "4 C–H + 2 C–C = <b>6σ</b>; üçlü bağ fazladan <b>2π</b> katar."
    },
-   "kart": 7
+   "kart": 8
   },
   {
    "baslik": "Formül türleri",
@@ -179,7 +179,7 @@
      },
      {
       "yazi": "C₂H₂ ve C₆H₆",
-      "neden": "İkisinde de C:H oranı 1:1, basit formül CH'dir. Bu yüzden basit formül molekülü tek başına tanımlamaz.",
+      "neden": "İkisinde de C:H oranı 1:1, basit formül CH'dir. Onları ayırmak için mol kütlesi gerekir: 26 ve 78 g/mol.",
       "dogru": true
      },
      {
@@ -188,7 +188,7 @@
      }
     ]
    },
-   "kart": 9
+   "kart": 11
   },
   {
    "baslik": "Aynı formül, farklı yapı",
@@ -227,11 +227,11 @@
      }
     ]
    },
-   "kart": 12
+   "kart": 14
   },
   {
    "baslik": "Cis mi, trans mı?",
-   "metin": "C=C bağı, π bağı yüzünden dönemez. Sağ karbona Cl koy ve o karbonu çevir: <b>trans-1,2-dikloroeteni</b> kur.",
+   "metin": "Sağ karbona Cl koy ve o karbonu çevir: trans-1,2-dikloroeteni kur.",
    "sahne": {
     "tur": "kim11-cistrans"
    },
@@ -262,9 +262,9 @@
      "y": 1
     },
     "ipucu": "Trans: iki Cl zıt taraflarda.",
-    "tamam": "Cis ve trans aynı atomlara ve bağlara sahip, yalnızca uzaydaki dizilişleri farklı; kaynama noktaları da farklı. CH₂=CHCl'de bir karbonda iki H olduğu için cis-trans yoktur."
+    "tamam": "Trans-1,2-dikloroeten: iki Cl zıt tarafta, dipoller birbirini götürür, molekül apolar. Cis'in kaynama noktası bu yüzden daha yüksektir."
    },
-   "kart": 13,
+   "kart": 15,
    "goster": {
     "deger": {
      "m": 1
