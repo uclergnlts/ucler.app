@@ -3,7 +3,7 @@
 // Biten konu dolu nokta, açık konu çerçeveli nokta, ön koşulu bitmemiş konu gri nokta ve "Önce: ..." yazısıyla görünür.
 // Konuya dokununca alttan ayrıntı açılır: ön koşullar, bitince açılan konular, başla düğmesi.
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { motion } from "motion/react";
 import type { DersId, Entry } from "@/lib/dersler";
 import { actiklari, durumlar, siradaki, yerlesim, type Durum } from "@/lib/harita";
@@ -23,6 +23,7 @@ export default function Harita({ ders, list }: { ders: DersId; list: Entry[] }) 
   const d = durumlar(ders, list, prog);
   const sira = siradaki(list, d);
   const [secili, setSecili] = useState<Entry | null>(null);
+  const acan = useRef<HTMLButtonElement | null>(null);
   const yer = Object.fromEntries(dugumler.map((n) => [n.e.id!, n]));
   const G = serit * SW + 10; // şerit alanının genişliği
   const px = (s: number) => 10 + s * SW, py = (r: number) => r * RH + NY;
@@ -60,7 +61,7 @@ export default function Harita({ ders, list }: { ders: DersId; list: Entry[] }) 
         return (
           <motion.button
             key={e.id}
-            onClick={() => setSecili(e)}
+            onClick={(ev) => { acan.current = ev.currentTarget; setSecili(e); }}
             className={cn(
               "absolute right-0 flex flex-col justify-start rounded-xl py-1.5 pr-2 pl-2 text-left transition-colors active:bg-secondary",
               burada && "bg-acc-soft",
@@ -81,7 +82,11 @@ export default function Harita({ ders, list }: { ders: DersId; list: Entry[] }) 
         );
       })}
       <Sheet open={!!secili} onOpenChange={(o) => { if (!o) setSecili(null); }}>
-        <SheetContent data-ders={ders}>{secili && <Ayrinti ders={ders} e={secili} list={list} d={d} prog={prog} />}</SheetContent>
+        <SheetContent
+          data-ders={ders}
+          // Kapanınca odak, ayrıntıyı açan konu düğmesine döner (klavyeyle gezen yerini kaybetmesin).
+          onCloseAutoFocus={(ev) => { ev.preventDefault(); acan.current?.focus(); }}
+        >{secili && <Ayrinti ders={ders} e={secili} list={list} d={d} prog={prog} />}</SheetContent>
       </Sheet>
     </div>
   );

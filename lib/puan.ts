@@ -7,7 +7,9 @@ import { bugunku, gun, KEYS, read, subscribe, write, type Tekrar } from "./store
 /** Bir günde yapılanlar. p: o gün kazanılan puan. */
 export type Sayac = "kart" | "adim" | "soru" | "dogru" | "asama" | "konu" | "tekrar" | "oyun" | "video";
 export type Gun = Partial<Record<Sayac, number>> & { p?: number; giris?: 1 };
-export type Puan = { toplam?: number; enUzun?: number; gunler?: Record<string, Gun> };
+/** seri/seriSon: güncel serinin uzunluğu ve son aktif günü. Gün sayaçları 120 günden sonra silindiği için
+ * seri onlardan değil bu iki alandan okunur; böylece 120 günden uzun seri de kesilmez. */
+export type Puan = { toplam?: number; enUzun?: number; gunler?: Record<string, Gun>; seri?: number; seriSon?: string };
 
 export type GorevId = "asama" | "kart" | "adim" | "dogru" | "konu" | "tekrar" | "oyun" | "video";
 export type Gorev = { id: GorevId; hedef: number };
@@ -36,12 +38,27 @@ const puanOku = () => read<Puan>(KEYS.puan, EMPTY);
 const AKTIF: Sayac[] = ["kart", "adim", "soru", "tekrar", "oyun", "video"];
 export const aktif = (g?: Gun) => !!g && AKTIF.some((k) => (g[k] ?? 0) > 0);
 
-/** Bugünden geriye kesintisiz aktif gün sayısı. Bugün henüz bir şey yapılmadıysa seri dünden sayılır. */
-export function seri(p: Puan) {
-  const gunler = p.gunler ?? {};
-  let n = 0, k = aktif(gunler[gun()]) ? 0 : -1;
+/** k. günden (0: bugün, -1: dün) geriye kesintisiz aktif gün sayısı, gün sayaçlarından. */
+function sayactanSeri(gunler: Record<string, Gun>, k: number) {
+  let n = 0;
   while (aktif(gunler[gun(k)])) { n++; k--; }
   return n;
+}
+
+/** seri/seriSon alanları. Bu alanlardan önceki kayıtlarda, gün sayaçları budanmadan önce sayaçlardan kurulur. */
+function seriAlani(p: Puan): Pick<Puan, "seri" | "seriSon"> {
+  if (p.seriSon) return { seri: p.seri, seriSon: p.seriSon };
+  const gunler = p.gunler ?? {}, dun = sayactanSeri(gunler, -1);
+  if (aktif(gunler[gun()])) return { seri: dun + 1, seriSon: gun() };
+  return dun ? { seri: dun, seriSon: gun(-1) } : {};
+}
+
+/** Güncel seri. Bugün henüz bir şey yapılmadıysa seri dünden sayılır; dün de boşsa seri bitmiştir. */
+export function seri(p: Puan) {
+  if (p.seriSon) return p.seriSon >= gun(-1) ? p.seri ?? 0 : 0;
+  // seriSon alanından önceki kayıtlar: seriyi gün sayaçlarından hesapla.
+  const gunler = p.gunler ?? {};
+  return sayactanSeri(gunler, aktif(gunler[gun()]) ? 0 : -1);
 }
 
 // Ödül bildirimi (kısa süre görünen "+15 puan" yazısı). Yalnızca bellekte; sayfa yenilenince kaybolur.
@@ -107,7 +124,12 @@ export function kaydet(tur: Sayac | "giris", n = 1, puan = 0) {
   gunler[g] = bu;
   // 120 günden eski günler silinir; seri için yeterli, depolamayı şişirmez.
   for (const k of Object.keys(gunler)) if (k < gun(-120)) delete gunler[k];
-  const yeni: Puan = { toplam: (p.toplam ?? 0) + kazanc, gunler };
+  const yeni: Puan = { toplam: (p.toplam ?? 0) + kazanc, gunler, ...seriAlani(p) };
+  if (aktif(bu) && yeni.seriSon !== g) {
+    // Günün ilk etkinliği: seri dünden devam ediyorsa bir artar, yoksa 1'den başlar.
+    yeni.seri = (yeni.seriSon === gun(-1) ? yeni.seri ?? 0 : 0) + 1;
+    yeni.seriSon = g;
+  }
   yeni.enUzun = Math.max(p.enUzun ?? 0, seri(yeni));
   write(KEYS.puan, yeni);
 

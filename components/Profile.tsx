@@ -2,7 +2,7 @@
 import { DERSLER, DERS_IDS, type DersId, type Entry, isDers } from "@/lib/dersler";
 import { doneKeys, resetAll, setAd, toggleAnlamadim, useAd, useAnlamadim, useProg, useSaved, useStorageOk } from "@/lib/store";
 import { Icon } from "./icons";
-import { seri, usePuan, type Gun } from "@/lib/puan";
+import { girisYap, seri, usePuan, type Gun } from "@/lib/puan";
 import { gun } from "@/lib/store";
 import Link from "next/link";
 import { Bolum, Bos, Govde, href, Html, InstaLink, Liste, PageHead, Row, Simge, Top } from "./temel";
@@ -125,7 +125,11 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
           <p className="text-[13px] text-muted-foreground">Hesap gelince puanın ve serin hesabına taşınır, puan listesinde arkadaşlarınla yarışabilirsin.</p>
           <Button
             variant="outline"
-            onClick={() => { if (confirm("Tüm ilerlemen, puanın, serin, kaydettiğin konular, tekrar sıran ve işaretlediğin kartlar silinsin mi?")) resetAll(); }}
+            onClick={() => { if (confirm("Tüm ilerlemen, puanın, serin, kaydettiğin konular, tekrar sıran ve işaretlediğin kartlar silinsin mi?")) {
+              resetAll();
+              // Sıfırlama yeni bir başlangıç: bugünün görevleri hemen yeniden kurulur, giriş puanı yeniden verilir.
+              girisYap();
+            } }}
           >
             İlerlemeyi sıfırla
           </Button>

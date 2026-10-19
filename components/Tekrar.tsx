@@ -26,6 +26,8 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
   const [i, setI] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [right, setRight] = useState(0);
+  // Sonuç ekranı için: kaç soru öğrenilip sıradan çıktı, kaçı bir basamak ilerledi (doğru ama sırada kaldı).
+  const [ogrenilen, setOgrenilen] = useState(0);
   const tekrar = useTekrar();
   const Close = Icon.kapat;
 
@@ -46,6 +48,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
     const ok = k === Q.a;
     setPicked(k);
     if (ok) setRight((r) => r + 1);
+    if (ok && cur.s === SONRA.length - 1) setOgrenilen((x) => x + 1); // üçüncü doğru: soru sıradan çıkar
     tekrarCevap(cur.key, ok);
     kaydet("tekrar", 1, ok ? PUAN.tekrar : 0);
   };
@@ -113,7 +116,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
         <div className="font-display text-[56px] leading-none font-extrabold">{right}/{n}</div>
         <h2 className="text-[22px]">Bugünkü tekrar bitti</h2>
         <p className="font-medium text-muted-foreground">
-          {right === n ? "Hepsi doğru. Bu sorular birkaç gün sonra son kez gelecek." : `Yanlış yaptığın ${n - right} soru yarın yeniden gelecek.`}
+          {sonucMetni(n - right, right - ogrenilen, ogrenilen)}
         </p>
         <Button asChild className="mt-4 w-full"><Link href="/">Ana sayfaya dön</Link></Button>
       </article>
@@ -137,4 +140,13 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
       </main>
     </div>
   );
+}
+
+/** Tekrar sonucundaki açıklama: yalnızca gerçekten sırada kalan sorular için yeniden gelme sözü verir. */
+function sonucMetni(yanlis: number, ilerleyen: number, ogrenilen: number) {
+  const c: string[] = [];
+  if (ogrenilen) c.push(`${ogrenilen} soruyu öğrendin, artık sorulmayacak.`);
+  if (ilerleyen) c.push(`Doğru yaptığın ${ilerleyen} soru birkaç gün sonra yeniden gelecek.`);
+  if (yanlis) c.push(`Yanlış yaptığın ${yanlis} soru yarın yeniden gelecek.`);
+  return c.join(" ");
 }
