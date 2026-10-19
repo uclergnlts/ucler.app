@@ -38,7 +38,7 @@
     "hedef": {
      "d": 40
     },
-    "tamam": "Noktasal kaynakla: lambadan topa 40 cm, perdeye 120 cm: üç kat uzaklık, üç kat gölge, yani <b>30 cm</b>. Benzer üçgenler bunu söyler. Noktasal kaynak yalnızca <b>tam gölge</b> verir. Geniş kaynakta kaynağın bir kısmını gören bölgede <b>yarı gölge</b> de oluşur.",
+    "tamam": "Noktasal kaynakla: lambadan topa 40 cm, perdeye 120 cm: üç kat uzaklık, üç kat gölge, yani <b>30 cm</b>. Benzer üçgenler bunu söyler.",
     "ipucu": "Gölge, lambadan perdeye uzaklığın lambadan topa uzaklığa oranı kadar büyür: 120 / d = 3."
    },
    "kart": 1,
@@ -51,7 +51,7 @@
   },
   {
    "baslik": "Yansıma yasası",
-   "metin": "Yansımada <b>gelme açısı yansıma açısına eşittir</b>; iki açı da yüzeye dik çizilen <b>normal</b>den ölçülür. Lazerin açısını değiştir ve yansıyan ışını hedefe gönder.",
+   "metin": "Lazerin açısını değiştir ve yansıyan ışını hedefe gönder.",
    "sahne": {
     "tur": "fiz12-yansima"
    },
@@ -74,7 +74,7 @@
     "hedef": {
      "a": 40
     },
-    "tamam": "40° ile gelen ışın normalin öbür yanından <b>40° ile</b> yansıdı ve hedefe çarptı. Gelen ışın, normal ve yansıyan ışın aynı düzlemdedir. Pürüzlü yüzeyde de her ışın bu kurala uyar; yalnızca normaller farklı yönlere bakar, bu yüzden yansıma dağınık olur.",
+    "tamam": "40° ile gelen ışın normalin öbür yanından <b>40° ile</b> yansıdı ve hedefe çarptı.",
     "ipucu": "Hedef lazerle aynı yükseklikte. Işın aynaya gidip aynı açıyla geri çıkıyor; hedef, ayna noktasının iki katı uzakta olmalı."
    },
    "kart": 3,
@@ -87,7 +87,7 @@
   },
   {
    "baslik": "Açılı iki ayna",
-   "metin": "Düz aynada görüntü <b>sanal, düz ve cisimle eşit boydadır</b>. İki aynayı aralarında 60° olacak şekilde birleştirdin; arada bir bayrak duruyor. Görüntüler birbirinin de görüntüsünü verir.",
+   "metin": "İki aynayı aralarında 60° olacak şekilde birleştirdin; arada bir bayrak duruyor. Görüntüler birbirinin de görüntüsünü verir.",
    "sahne": {
     "tur": "fiz12-aynalar",
     "sure": 4,
@@ -104,7 +104,7 @@
      {
       "yazi": "5",
       "dogru": true,
-      "neden": "360/α çift sayıysa n = 360/α − 1 = 360/60 − 1 = <b>5</b>. Görüntülerin hepsi tepe noktası çevresindeki çemberin üzerindedir. Aynalar arası açı 90° olsaydı 3 görüntü olurdu."
+      "neden": "360/α = 6 çift sayı olduğundan görüntü sayısı n = 360/α − 1 = <b>5</b>. Aynalar arası açı 90° olsaydı 3 görüntü olurdu."
      },
      {
       "yazi": "6",
@@ -139,7 +139,7 @@
     "hedef": {
      "d": 15
     },
-    "tamam": "1/d<sub>g</sub> = 1/10 − 1/15 = 1/30, yani görüntü aynanın önünde <b>30 cm</b>'de. Büyütme m = −30/15 = <b>−2</b>: ters ve 2 kat büyük. Cisim F'deyken görüntü oluşmaz; F ile ayna arasında görüntü sanal, düz ve büyüktür.",
+    "tamam": "Cisim F ile M arasında (15 cm): yansıyan ışınlar M'nin ötesinde kesişti, görüntü <b>gerçek, ters ve 2 kat büyük</b>. Bunu hesapla bulmayı Kart 11'de göreceksin.",
     "ipucu": "Cisim F'nin dışında olmalı ama M'den yakın: F ile M arasında görüntü gerçek, ters ve büyüktür."
    },
    "kart": 6,
@@ -147,12 +147,12 @@
     "deger": {
      "d": 30
     },
-    "not": "Cisim 30 cm'de: 1/d<sub>g</sub> = 1/10 − 1/30, d<sub>g</sub> = 15 cm. Görüntü gerçek, ters ve <b>yarı boyda</b>."
+    "not": "Cisim 30 cm'de, M'nin dışında: ışınlar F ile M arasında kesişiyor. Görüntü gerçek, ters ve <b>yarı boyda</b>."
    }
   },
   {
    "baslik": "Kırılma ve Snell yasası",
-   "metin": "Işık başka bir ortama eğik geçerken hızı değiştiği için yön değiştirir. <b>n₁·sinθ₁ = n₂·sinθ₂</b>. Işık havadan 53° ile geliyor (sin 53° ≈ 0,8). Ortamın kırılma indisini ayarla: kırılma açısı <b>30°</b> olsun.",
+   "metin": "Işık havadan 53° ile geliyor (sin 53° ≈ 0,8). Ortamın kırılma indisini ayarla: kırılma açısı <b>30°</b> olsun.",
    "sahne": {
     "tur": "fiz12-snell"
    },
@@ -174,7 +174,7 @@
     "hedef": {
      "n": 1.6
     },
-    "tamam": "1 · 0,8 = n · 0,5, yani <b>n = 1,6</b>. Işık bu ortamda c/1,6 hızla, yaklaşık 1,9·10⁸ m/s ile ilerler. Az yoğundan çok yoğun ortama geçen ışık <b>normale yaklaşır</b>; indis büyüdükçe daha çok kırılır. Frekans değişmez, hız ve dalga boyu küçülür.",
+    "tamam": "1 · 0,8 = n · 0,5, yani <b>n = 1,6</b>. Işık bu ortamda c/1,6 ≈ 1,9·10⁸ m/s hızla ilerler; indis büyüdükçe daha çok kırılır.",
     "ipucu": "sin 30° = 0,5. 1 · 0,8 = n · 0,5 eşitliğinden n'yi bul."
    },
    "kart": 7,
@@ -243,7 +243,7 @@
         "aci": 82
        }
       ],
-      "tamam": "Hayır: kırılma açısı en fazla ≈ 42° oldu, camın sınır açısı kadar. Az yoğundan çok yoğun ortama geçen ışık hep normale yaklaşır; bu yönde tam yansıma olmaz."
+      "tamam": "Hayır: kırılma açısı en fazla ≈ 42° oldu, camın sınır açısı kadar. İndisi küçük ortamdan büyüğe geçen ışık hep normale yaklaşır; bu yönde tam yansıma olmaz."
      },
      {
       "yazi": "Şimdi ışığı camdan havaya gönder ve ışığın <b>hiç dışarı çıkmadığı</b> bir açı bul.",
@@ -285,7 +285,7 @@
   },
   {
    "baslik": "Işıkta renk",
-   "metin": "Bir cisim, üzerine düşen ışıktan <b>yansıttığı</b> ışığın renginde görünür. Sarı top beyaz ışığın kırmızı ve yeşilini yansıtır, mavisini soğurur. Şimdi odada yalnızca <b>kırmızı ışık</b> yanacak.",
+   "metin": "Sarı top beyaz ışığın kırmızı ve yeşilini yansıtır, mavisini soğurur. Şimdi odada yalnızca <b>kırmızı ışık</b> yanacak.",
    "sahne": {
     "tur": "fiz12-renk",
     "sure": 3.5
@@ -305,7 +305,7 @@
      {
       "yazi": "Kırmızı",
       "dogru": true,
-      "neden": "Top, üzerine düşen kırmızı ışığı yansıtır; yeşil gelmediği için yalnızca kırmızı görünür. Kırmızı elma ise mavi ışıkta siyah görünür: yansıtacağı kırmızı yoktur."
+      "neden": "Top, üzerine düşen kırmızı ışığı yansıtır; yeşil gelmediği için yalnızca kırmızı görünür."
      }
     ]
    },
@@ -344,7 +344,7 @@
      {
       "yazi": "Kalın kenarlı (ıraksak) cam",
       "dogru": true,
-      "neden": "Kalın kenarlı cam ışınları biraz dağıtır, odak geriye kayıp retinaya düşer. Hipermetrop gözde ise görüntü retinanın arkasına düşer; ona ince kenarlı (yakınsak) cam takılır."
+      "neden": "Kalın kenarlı cam ışınları biraz dağıtır, odak geriye kayıp retinaya düşer."
      },
      {
       "yazi": "İnce kenarlı (yakınsak) cam",
@@ -352,11 +352,11 @@
      },
      {
       "yazi": "İkisi de olur",
-      "neden": "İnce kenarlı camla görüntü daha da bulanıklaştı; iki cam birbirinin etkisini götürür."
+      "neden": "İnce kenarlı cam ışınları daha çok toplar, odak retinadan daha da öne kayar."
      }
     ]
    },
-   "kart": 15
+   "kart": 14
   }
  ],
  "kapanis": [
@@ -365,6 +365,6 @@
   "Açılı iki aynada (360/α çiftse) n = 360/α − 1 görüntü oluşur.",
   "Ayna ve mercekte 1/f = 1/d<sub>c</sub> + 1/d<sub>g</sub>, büyütme m = −d<sub>g</sub>/d<sub>c</sub>.",
   "n₁·sinθ₁ = n₂·sinθ₂; çok yoğundan az yoğuna geçerken sınır açı aşılırsa tam yansıma olur.",
-  "Cisim yansıttığı rengin renginde görünür; miyop göze kalın kenarlı, hipermetrop göze ince kenarlı cam takılır."
+  "Cisim yansıttığı ışığın renginde görünür; miyop göze kalın kenarlı, hipermetrop göze ince kenarlı cam takılır."
  ]
 }
