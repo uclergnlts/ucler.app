@@ -1,11 +1,13 @@
 "use client";
-// Ana sayfadaki "Bugün" bölümü: seri (alev, puan ve son 7 gün) ile günün üç görevi (halka + liste).
+// Ana sayfanın sağ üstündeki iki küçük simge: seri (alev + gün sayısı) ve günün görevleri (halka + x/3).
+// Simgeye dokununca alttan bir pencere açılır: seri için puan ve son 7 gün, görevler için liste.
 // Her görev, yapılacağı yere götürür (oyun → Oyunlar, video → Videolar, tekrar → Tekrar, gerisi → kalınan konu).
 import Link from "next/link";
 import { motion } from "motion/react";
 import { aktif, gorevAdi, PUAN, seri, useGorev, usePuan, type GorevId } from "@/lib/puan";
 import { gun } from "@/lib/store";
 import { cn } from "@/lib/utils";
+import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { Icon } from "./icons";
 
 const GUN_ADI = ["Pz", "Pt", "Sa", "Ça", "Pe", "Cu", "Ct"];
@@ -39,9 +41,25 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
     return { g, ad: GUN_ADI[d.getDay()], on: aktif(gunler[g]), bugun: k === 6 };
   });
 
+  const tamamOran = gorevler.length ? biten / gorevler.length : 0;
+  const rozet = "flex h-9 items-center gap-1.5 rounded-full border border-border bg-card px-2.5 font-display text-[15px] font-extrabold tabular-nums transition-colors active:bg-secondary";
+
   return (
-    <section className="grid gap-3" aria-label="Bugün">
-      {/* Seri */}
+    <div className="ml-auto flex items-center gap-2" aria-label="Bugün">
+      <Sheet>
+        <SheetTrigger className={cn(rozet, n > 0 ? "text-[#c25e00]" : "text-muted-foreground")} aria-label={`Seri: ${n} gün`}>
+          <motion.span
+            className={cn("grid [&_svg]:size-5", n > 0 ? "text-[#f07800] [&_svg]:fill-[#ffb020]" : "text-[#c9a27a]")}
+            animate={tehlikede ? { scale: [1, 1.15, 1] } : undefined}
+            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <Seri />
+          </motion.span>
+          {n}
+        </SheetTrigger>
+        <SheetContent>
+          <SheetTitle className="sr-only">Serin</SheetTitle>
+          <SheetDescription className="sr-only">Seri, puan ve son 7 gün</SheetDescription>
       <div className="grid gap-3.5 rounded-3xl bg-[linear-gradient(135deg,#fff3d1,#ffe6d6)] p-4">
         <div className="flex items-center gap-3.5">
           <motion.span
@@ -79,12 +97,20 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
           ))}
         </ol>
       </div>
+        </SheetContent>
+      </Sheet>
 
-      {/* Görevler */}
-      <div className="grid gap-3 rounded-3xl border border-border bg-card p-4">
+      <Sheet>
+        <SheetTrigger className={rozet} aria-label={`Günün görevleri: ${biten}/${gorevler.length || 3}`}>
+          <Halka oran={tamamOran} className="size-5" />
+          {biten}/{gorevler.length || 3}
+        </SheetTrigger>
+        <SheetContent>
+          <SheetDescription className="sr-only">Bugün yapılacak üç görev</SheetDescription>
+      <div className="grid gap-3 py-1">
         <span className="flex items-center gap-3">
-          <Halka oran={gorevler.length ? biten / gorevler.length : 0} />
-          <b className="flex-1 font-display text-[16px] font-extrabold">Bugünün görevleri</b>
+          <Halka oran={tamamOran} />
+          <SheetTitle className="flex-1 text-[16px]">Bugünün görevleri</SheetTitle>
           <b className="font-display text-[16px] font-extrabold tabular-nums text-muted-foreground">{biten}/{gorevler.length || 3}</b>
         </span>
         <ul className="grid gap-3">
@@ -126,15 +152,17 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
           <p className="text-[13px] font-semibold text-good">Bugünün görevleri tamam, +{PUAN.hepsi} bonus kazandın.</p>
         )}
       </div>
-    </section>
+        </SheetContent>
+      </Sheet>
+    </div>
   );
 }
 
 /** Görev ilerleme halkası. */
-function Halka({ oran }: { oran: number }) {
+function Halka({ oran, className }: { oran: number; className?: string }) {
   const r = 18, c = 2 * Math.PI * r;
   return (
-    <svg viewBox="0 0 44 44" className="size-8 flex-none -rotate-90" aria-hidden="true">
+    <svg viewBox="0 0 44 44" className={cn("size-8 flex-none -rotate-90", className)} aria-hidden="true">
       <circle cx="22" cy="22" r={r} fill="white" stroke="#cfe0fb" strokeWidth="6" />
       <motion.circle
         cx="22" cy="22" r={r} fill="none" stroke="var(--fizik)" strokeWidth="6" strokeLinecap="round"

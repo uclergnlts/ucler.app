@@ -18,8 +18,7 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
   const doneAll = doneKeys(prog).length;
   const [ld, lid] = (prog._last || "").split(".");
   const last = ld in all ? all[ld as DersId].find((e) => e.id && e.id === lid) : undefined;
-  // Yeni kullanıcı: hiçbir konuya girmemiş. Ona önce sitenin ne olduğu ve tek bir başlangıç noktası gösterilir;
-  // seri ve görevler ders listesinin altına iner.
+  // Yeni kullanıcı: hiçbir konuya girmemiş. Ona önce sitenin ne olduğu ve tek bir başlangıç noktası gösterilir.
   const ilk = all.fizik.find((e) => e.id);
   const yeni = !last && doneAll === 0 && !Object.keys(asama).length;
   // Görevlerin götürdüğü konu: kalınan konu, yoksa ilk konu.
@@ -40,7 +39,7 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
 
   return (
     <div className="app">
-      <Top />
+      <Top><Bugun konuHref={gorevHref} /></Top>
       <Govde>
         <section className="grid gap-1.5">
           <h1 className="text-[28px]">Hoş geldin{ad ? `, ${ad}` : ""}</h1>
@@ -63,8 +62,6 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
             <Next />
           </Link>
         )}
-
-        {!yeni && <Bugun konuHref={gorevHref} />}
 
         {bugun > 0 && (
           <Link href="/tekrar/" className="flex items-center gap-3.5 rounded-2xl border-[1.5px] border-foreground bg-card p-4 transition-transform active:scale-[.99]">
@@ -115,8 +112,6 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
             })}
           </Liste>
         </Bolum>
-
-        {yeni && <Bugun konuHref={gorevHref} />}
 
         {VIDEOLAR.length > 0 && (
           <Bolum title="Kısa videolar" more={<Link className="text-sm font-bold text-muted-foreground" href="/videolar/">Tümü</Link>}>

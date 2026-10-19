@@ -24,7 +24,7 @@ export default function Gunluk() {
   }, []);
 
   return (
-    <div aria-live="polite" className="pointer-events-none fixed inset-x-0 top-[calc(env(safe-area-inset-top,0px)+10px)] z-30 flex flex-col items-center gap-1.5 px-4">
+    <div aria-live="polite" className="pointer-events-none fixed inset-x-0 top-[calc(env(safe-area-inset-top,0px)+64px)] z-30 flex flex-col items-center gap-1.5 px-4">
       <AnimatePresence>
         {!sessiz && liste.map((o) => (
           <motion.div
