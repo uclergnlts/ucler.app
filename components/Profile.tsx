@@ -28,10 +28,11 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
         <section className="flex items-center gap-3.5">
           <span className="grid size-14 flex-none place-items-center rounded-full bg-secondary text-muted-foreground [&_svg]:size-7"><User /></span>
           <span className="min-w-0 flex-1">
-            <label htmlFor="ad" className="block text-[13px] font-semibold text-muted-foreground">Sana nasıl hitap edelim?</label>
+            {/* Ad biliniyorsa yeniden sorulmaz; ada dokunup değiştirilebilir. */}
+            <label htmlFor="ad" className={ad ? "sr-only" : "block text-[13px] font-semibold text-muted-foreground"}>{ad ? "Adın" : "Sana nasıl hitap edelim?"}</label>
             <input
               id="ad"
-              className="block w-full border-0 border-b border-dashed border-border-strong bg-transparent py-0.5 font-display text-xl font-extrabold text-foreground outline-none placeholder:font-bold placeholder:text-muted-foreground focus:border-solid focus:border-foreground"
+              className={`block w-full border-0 border-b bg-transparent ${ad ? "border-transparent" : "border-dashed border-border-strong"} py-0.5 font-display text-xl font-extrabold text-foreground outline-none placeholder:font-bold placeholder:text-muted-foreground focus:border-solid focus:border-foreground`}
               defaultValue={ad}
               key={ad}
               placeholder="Adın"

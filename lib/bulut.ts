@@ -100,11 +100,13 @@ function degisti() {
 }
 
 /** Girişten sonra: buluttakiyle cihazdakini birleştirir, cihaza yazar, sonucu buluta gönderir; sonra değişiklikleri izler. */
-async function baslat(id: string) {
+async function baslat(id: string, kayitAdi?: string) {
   if (kullanici === id) return;
   kullanici = id;
   const { data } = await sb().from("ilerleme").select("veri").eq("user_id", id).maybeSingle();
   const yeni = birlestir((data?.veri as Veri) ?? {}, cihazVerisi());
+  // Kayıtta yazılan ad hesabın bilgisinde durur; onay bağlantısı başka cihazda açıldıysa ad oradan gelir.
+  if (!yeni.ad && kayitAdi) yeni.ad = kayitAdi.trim().slice(0, 30);
   uygulaniyor = true;
   for (const k of ESIT) if (yeni[k] !== undefined) write(KEYS[k], yeni[k]);
   uygulaniyor = false;
@@ -129,12 +131,12 @@ export function bulutKur() {
   c.auth.getSession().then(({ data }) => {
     oturum = data.session;
     yay();
-    if (data.session) void baslat(data.session.user.id);
+    if (data.session) void baslat(data.session.user.id, data.session.user.user_metadata?.ad);
   });
   c.auth.onAuthStateChange((olay, s) => {
     oturum = s;
     yay();
-    if (s && (olay === "SIGNED_IN" || olay === "INITIAL_SESSION")) void baslat(s.user.id);
+    if (s && (olay === "SIGNED_IN" || olay === "INITIAL_SESSION")) void baslat(s.user.id, s.user.user_metadata?.ad);
     if (olay === "SIGNED_OUT") durdur();
   });
   // Sekme kapanırken bekleyen yazışı hemen gönder.
