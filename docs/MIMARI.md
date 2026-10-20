@@ -1,7 +1,7 @@
 # Mimari
 
 ## Şu anki durum
-Site bir **Next.js** uygulamasıdır (App Router, React, TypeScript, Tailwind CSS). Derleme sonucu tamamen statiktir (`output: "export"`): `npm run build` komutu `out/` klasörüne düz HTML, CSS ve JS dosyaları üretir. Sunucu, veritabanı ve kullanıcı hesabı yoktur. Yayın için Vercel düşünülüyor; `ucler.app` alan adı oraya bağlanacak.
+Site bir **Next.js** uygulamasıdır (App Router, React, TypeScript, Tailwind CSS). Derleme sonucu tamamen statiktir (`output: "export"`): `npm run build` komutu `out/` klasörüne düz HTML, CSS ve JS dosyaları üretir. Sunucu, veritabanı ve kullanıcı hesabı yoktur. Site Vercel'de yayında (https://ucler-app.vercel.app, Hobby planı, günde en çok 100 deploy). `vercel.json` yalnız `main` dalını yayınlar (diğer dallar önizleme deploy'u açmaz) ve bir push yalnız siteyi etkilemeyen yolları (`denetim/`, `docs/`, `video/`, `tools/`, `android/`, `ios/`, `assets/`, `.github/`, `capacitor.config.ts`, `AGENTS.md`, `README.md`) değiştiriyorsa derlemeyi atlar. Siteye yeni bir klasör eklenirse bu listeye girmez, derlenir. `ucler.app` alan adı sonra bağlanacak.
 
 ```
 content/
