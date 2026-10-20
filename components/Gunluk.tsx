@@ -1,5 +1,6 @@
 "use client";
-// Her sayfada çalışır: günün ilk açılışında giriş puanını verir ve kazanılan ödülleri ekranın üstünde kısaca gösterir.
+// Her sayfada çalışır: günün ilk açılışında giriş puanını verir ve kazanılan ödülleri alt menünün hemen üstünde
+// kısaca gösterir (üstte başlığın üstüne binmesin).
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
@@ -9,7 +10,7 @@ export default function Gunluk() {
   const [liste, setListe] = useState<Odul[]>([]);
   // Ders ve tekrar ekranında öğrenci dikkatini dağıtmasın: puan oradaki bitiş ekranında zaten görünür.
   const yol = usePathname() ?? "";
-  const sessiz = /^\/(fizik|kimya|biyoloji)\/[^/]+\/?$/.test(yol) || yol.startsWith("/tekrar");
+  const sessiz = /^\/(fizik|kimya|biyoloji)\/[^/]+\/?$/.test(yol) || yol.startsWith("/tekrar") || yol.startsWith("/unite");
 
   useEffect(() => {
     const kapat = odulDinle((o) => {
@@ -24,17 +25,17 @@ export default function Gunluk() {
   }, []);
 
   return (
-    <div aria-live="polite" className="pointer-events-none fixed inset-x-0 top-[calc(env(safe-area-inset-top,0px)+64px)] z-30 flex flex-col items-center gap-1.5 px-4">
+    <div aria-live="polite" className="pointer-events-none fixed inset-x-0 bottom-[calc(var(--nav)+env(safe-area-inset-bottom,0px)+12px)] z-30 flex flex-col items-center gap-1.5 px-4">
       <AnimatePresence>
         {!sessiz && liste.map((o) => (
           <motion.div
             key={o.id}
             layout
-            initial={{ opacity: 0, y: -12 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
+            exit={{ opacity: 0, y: 8 }}
             transition={{ duration: 0.2 }}
-            className="flex max-w-[480px] items-center gap-2.5 rounded-full border border-border bg-card py-1.5 pr-4 pl-1.5 text-[14px] font-semibold shadow-sm"
+            className="flex max-w-[480px] items-center gap-2.5 rounded-full border border-border bg-card py-1.5 pr-4 pl-1.5 text-[14px] font-semibold shadow-md"
           >
             {o.puan > 0 && <span className="rounded-full bg-foreground px-2.5 py-0.5 text-[13px] font-bold text-background tabular-nums">+{o.puan}</span>}
             <span className="truncate">{o.metin}</span>

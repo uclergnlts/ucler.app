@@ -21,9 +21,10 @@ export default function Explore({ all }: { all: Record<DersId, Entry[]> }) {
   const Search = Icon.kesfet;
 
   const needle = fold(q.trim());
-  const rows = DERS_IDS.filter((d) => filter === "all" || filter === d).flatMap((d) =>
-    all[d].filter((e) => !needle || fold(`${e.id ? `${e.title} ${e.summary} ${e.headings}` : e.ad}`).includes(needle)),
-  );
+  // Dersler ayrı bölümlerde: "Tümü"nde her dersin konuları kendi başlığının altında.
+  const gruplar = DERS_IDS.filter((d) => filter === "all" || filter === d)
+    .map((d) => ({ d, rows: all[d].filter((e) => !needle || fold(`${e.id ? `${e.title} ${e.summary} ${e.headings}` : e.ad}`).includes(needle)) }))
+    .filter((g) => g.rows.length);
 
   return (
     <div className="app">
@@ -35,7 +36,7 @@ export default function Explore({ all }: { all: Record<DersId, Entry[]> }) {
           <Input
             type="search"
             className="pl-11"
-            placeholder="Konu ara: atom, osmoz, tyt..."
+            placeholder="Konu ara: atom, osmoz, vektör..."
             aria-label="Konu ara"
             value={q}
             onChange={(ev) => setQ((memo.q = ev.target.value))}
@@ -54,10 +55,18 @@ export default function Explore({ all }: { all: Record<DersId, Entry[]> }) {
             </Button>
           ))}
         </div>
-        {rows.length ? (
-          <Liste>
-            {rows.map((e) => <Row key={`${e.ders}.${e.no}`} e={e} done={!!(e.id && prog[`${e.ders}.${e.id}`])} />)}
-          </Liste>
+        {gruplar.length ? (
+          gruplar.map(({ d, rows }) => (
+            <section key={d} className="grid gap-2.5" aria-label={DERSLER[d].ad}>
+              <div className="flex items-baseline justify-between">
+                <h2 data-ders={d} className="flex items-center gap-2 text-[17px]"><span className="size-2.5 rounded-full bg-acc" aria-hidden="true" />{DERSLER[d].ad}</h2>
+                <span className="text-[13px] font-semibold text-muted-foreground">{rows.length} konu</span>
+              </div>
+              <Liste>
+                {rows.map((e) => <Row key={`${e.ders}.${e.no}`} e={e} done={!!(e.id && prog[`${e.ders}.${e.id}`])} />)}
+              </Liste>
+            </section>
+          ))
         ) : (
           <Bos>&quot;{q}&quot; için konu bulunamadı.</Bos>
         )}

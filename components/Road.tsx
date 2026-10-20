@@ -1,23 +1,30 @@
 "use client";
-// Bir dersin konuları: konu içindeki aşama yolu gibi kıvrılan tek bir yol. Sıradaki konu öne çıkar ("Başla"),
-// sonrakiler sade görünür ama hepsi açılır. Yazılmamış konular "Yakında".
+// Bir dersin konuları: ünite ünite, konu içindeki aşama yolu gibi kıvrılan yollar. Her ünitenin sonunda ünite testi.
+// Konular sırayla açılır (lib/kilit.ts). Bir konuya dokununca alttan kısa özet ve "Başla" penceresi açılır;
+// kilitli konuda pencere neden kilitli olduğunu ve ünite testiyle nasıl atlanacağını söyler.
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { DERSLER, type DersId, type Entry } from "@/lib/dersler";
-import { durumlar, siradaki } from "@/lib/harita";
-import { useAsama, useProg } from "@/lib/store";
+import { acik, atlamaUnitesi, bekledigi, GECME, siradaki, uniteAcik, uniteGecti, uniteHref, uniteler, type Unitem } from "@/lib/kilit";
+import { useDurumlar } from "@/lib/store";
 import { asamaSayisi } from "@/lib/asama";
+import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
-import { Govde, href } from "./temel";
+import { Govde, Html, href } from "./temel";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
-import AsamaYolu from "./AsamaYolu";
+import { Sheet, SheetContent, SheetDescription, SheetTitle } from "./ui/sheet";
+import AsamaYolu, { type YolDugum } from "./AsamaYolu";
+
+type Secim = { tur: "konu"; e: Entry } | { tur: "test"; u: Unitem } | null;
 
 export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
-  const prog = useProg(), asama = useAsama(), router = useRouter();
+  const d = useDurumlar();
   const s = DERSLER[ders];
-  const sira = siradaki(list, durumlar(ders, list, prog));
-  const ready = list.filter((e) => e.id), done = ready.filter((e) => prog[`${ders}.${e.id}`]).length;
+  const sira = siradaki(list, d);
+  const uler = uniteler(list);
+  const ready = list.filter((e) => e.id), done = ready.filter((e) => d.prog[`${ders}.${e.id}`]).length;
+  const [secim, setSecim] = useState<Secim>(null);
   const Back = Icon.back;
   return (
     <div className="app" data-ders={ders}>
@@ -27,31 +34,124 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
       <Govde>
         <section className="grid gap-1.5">
           <h1 className="text-[28px]">{s.ad}</h1>
-          <p className="text-[15px] text-muted-foreground">{s.yol}. Konular birbirinin üzerine kurulu ve sırayla önerilir; istediğine atlayabilirsin.</p>
+          <p className="text-[15px] text-muted-foreground">{s.yol}. Konular sırayla açılır. Bir üniteyi zaten biliyorsan ünite testinden en az {GECME} alarak atlayabilirsin.</p>
           <Progress className="mt-2.5" value={ready.length ? (100 * done) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti`} />
           <span className="text-[13px] font-semibold text-muted-foreground">{done} / {ready.length} konu bitti</span>
         </section>
-        <AsamaYolu
-          ad="Konular"
-          kaydir
-          balon={done ? "Devam" : "Başla"}
-          dugumler={list.map((e) => {
-            const res = e.id ? prog[`${ders}.${e.id}`] : undefined;
-            const durum = res ? "bitti" : e.id && e.id === sira ? "sirada" : ("kilitli" as const);
-            const ilerleme = e.id && !res && asama[`${ders}.${e.id}`] ? `${asama[`${ders}.${e.id}`]}/${asamaSayisi(e.cardCount ?? 0)} aşama` : "";
-            const alt = !e.id ? "Yakında" : [res, ilerleme].filter(Boolean).join(" · ");
-            return {
-              baslik: e.title ?? e.ad,
-              alt,
-              durum,
-              // Sıra yalnızca öneri: henüz sırası gelmeyen konu da açılır (yalnız yazılmamış konu kapalı).
-              serbest: !!e.id,
-              etiket: `${e.no}. ${e.title ?? e.ad}, ${!e.id ? "yakında" : res ? "bitti" : durum === "sirada" ? "sıradaki konu" : "istersen şimdi açabilirsin"}`,
-              ac: () => { if (e.id) router.push(href(ders, e.id)); },
-            };
-          })}
-        />
+        {uler.map((u) => {
+          const biten = u.konular.filter((e) => d.prog[`${ders}.${e.id}`]).length;
+          const gecti = uniteGecti(ders, u.no, d), testAcik = uniteAcik(list, u, d), puan = d.unite[`${ders}.${u.no}`];
+          return (
+            <section key={u.no} className="grid gap-2" aria-label={`${u.no}. ünite: ${u.ad}`}>
+              <div className="flex items-end justify-between gap-3 border-b border-border pb-2.5">
+                <div className="grid min-w-0">
+                  <span className="text-[13px] font-bold text-acc">{u.no}. ünite</span>
+                  <h2 className="text-[20px] leading-tight">{u.ad}</h2>
+                </div>
+                <span className="flex-none text-[13px] font-semibold tabular-nums text-muted-foreground">{gecti && biten < u.konular.length ? "Geçildi" : `${biten}/${u.konular.length}`}</span>
+              </div>
+              <div className="pt-10">
+                <AsamaYolu
+                  ad={`${u.no}. ünitenin konuları`}
+                  kaydir
+                  balon={done ? "Devam" : "Başla"}
+                  dugumler={[
+                    ...u.konular.map((e): YolDugum => {
+                      const k = `${ders}.${e.id}`, res = d.prog[k], ac = acik(list, e.id!, d);
+                      const durum: YolDugum["durum"] = res ? "bitti" : e.id === sira?.id ? "sirada" : "kilitli";
+                      const ilerleme = !res && d.asama[k] ? `${d.asama[k]}/${asamaSayisi(e.cardCount ?? 0)} aşama` : "";
+                      return {
+                        baslik: e.title ?? e.ad,
+                        alt: res ?? ilerleme,
+                        durum,
+                        serbest: ac,
+                        dokun: true,
+                        etiket: `${e.no}. ${e.title}, ${res ? "bitti" : durum === "sirada" ? "sıradaki konu" : ac ? "açık" : "kilitli"}`,
+                        ac: () => setSecim({ tur: "konu", e }),
+                      };
+                    }),
+                    {
+                      baslik: "Ünite testi",
+                      alt: puan !== undefined ? `En iyi puanın: ${puan}` : `${GECME} alan üniteyi geçer`,
+                      durum: gecti ? "bitti" : "kilitli",
+                      test: true,
+                      serbest: testAcik,
+                      dokun: true,
+                      etiket: `${u.no}. ünite testi, ${gecti ? "geçildi" : testAcik ? "çözebilirsin" : "kilitli"}`,
+                      ac: () => setSecim({ tur: "test", u }),
+                    },
+                  ]}
+                />
+              </div>
+            </section>
+          );
+        })}
       </Govde>
+      <Sheet open={!!secim} onOpenChange={(o) => { if (!o) setSecim(null); }}>
+        <SheetContent data-ders={ders}>
+          {secim?.tur === "konu" && <KonuPencere ders={ders} list={list} e={secim.e} sira={sira} />}
+          {secim?.tur === "test" && <TestPencere ders={ders} list={list} u={secim.u} />}
+        </SheetContent>
+      </Sheet>
+    </div>
+  );
+}
+
+function KonuPencere({ ders, list, e, sira }: { ders: DersId; list: Entry[]; e: Entry; sira?: Entry }) {
+  const d = useDurumlar();
+  const k = `${ders}.${e.id}`, res = d.prog[k], ac = acik(list, e.id!, d);
+  const nA = asamaSayisi(e.cardCount ?? 0), bitenA = res ? nA : Math.min(d.asama[k] ?? 0, nA);
+  const once = bekledigi(list, e.id!);
+  const testU = atlamaUnitesi(list, e, d);
+  const Kilit = Icon.kilit;
+  return (
+    <div className="grid gap-3 pb-1">
+      <span className="text-[13px] font-bold text-acc">{e.unite}. ünite · {e.no}. konu</span>
+      <SheetTitle className="text-[22px]">{e.title}</SheetTitle>
+      <SheetDescription className="text-[15px] text-muted-foreground"><Html html={e.summary ?? ""} /></SheetDescription>
+      <p className="flex flex-wrap gap-x-3 text-[14px] font-semibold text-muted-foreground">
+        <span>{nA} aşama + mini test</span>
+        {e.dk && <span>yaklaşık {e.dk} dk</span>}
+      </p>
+      {ac ? (
+        <>
+          {!res && bitenA > 0 && <Progress value={(100 * bitenA) / nA} label={`${nA} aşamadan ${bitenA} tanesi bitti`} />}
+          {res && <p className="text-[14px] font-semibold">Bitirdin: {res}</p>}
+          <Button asChild className="mt-1 w-full"><Link href={href(ders, e.id)}>{res ? "Yeniden çalış" : bitenA > 0 ? "Devam et" : "Başla"}</Link></Button>
+        </>
+      ) : (
+        <>
+          <p className="flex items-start gap-2.5 rounded-xl bg-secondary p-3 text-[15px] [&_svg]:mt-0.5 [&_svg]:size-4 [&_svg]:flex-none">
+            <Kilit />
+            <span>Bu konu, {once ? <b>“{once.title}”</b> : "önceki konu"} bitince açılır.{testU && <> Bu bölümü zaten biliyorsan <b>{testU.no}. ünite testinden</b> en az {GECME} alarak ilerleyebilirsin.</>}</span>
+          </p>
+          {sira && <Button asChild className="mt-1 w-full"><Link href={href(ders, sira.id)}>Sıradaki konuya git</Link></Button>}
+          {testU && <Button asChild variant="outline" className={cn("w-full", !sira && "mt-1")}><Link href={uniteHref(ders, testU.no)}>{testU.no}. ünite testini çöz</Link></Button>}
+        </>
+      )}
+    </div>
+  );
+}
+
+function TestPencere({ ders, list, u }: { ders: DersId; list: Entry[]; u: Unitem }) {
+  const d = useDurumlar();
+  const puan = d.unite[`${ders}.${u.no}`], ac = uniteAcik(list, u, d), gecti = uniteGecti(ders, u.no, d);
+  const Kilit = Icon.kilit;
+  return (
+    <div className="grid gap-3 pb-1">
+      <span className="text-[13px] font-bold text-acc">{u.no}. ünite</span>
+      <SheetTitle className="text-[22px]">{u.ad}: ünite testi</SheetTitle>
+      <SheetDescription className="text-[15px] text-muted-foreground">
+        Ünitedeki {u.konular.length} konudan karışık sorular. En az {GECME} puan alırsan bu ünitenin bütün konuları açılır ve sıradaki üniteye geçersin.
+      </SheetDescription>
+      {puan !== undefined && <p className="text-[14px] font-semibold">En iyi puanın: {puan}{gecti ? " · geçtin" : ""}</p>}
+      {ac ? (
+        <Button asChild className="mt-1 w-full"><Link href={uniteHref(ders, u.no)}>{puan !== undefined ? "Yeniden çöz" : "Teste başla"}</Link></Button>
+      ) : (
+        <p className="flex items-start gap-2.5 rounded-xl bg-secondary p-3 text-[15px] [&_svg]:mt-0.5 [&_svg]:size-4 [&_svg]:flex-none">
+          <Kilit /><span>Bu testi çözmek için önce önceki üniteleri bitir ya da onların testlerini geç.</span>
+        </p>
+      )}
     </div>
   );
 }

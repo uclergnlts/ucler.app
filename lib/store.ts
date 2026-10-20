@@ -1,13 +1,13 @@
 "use client";
 // İlerleme ve kaydedilenler yalnızca bu cihazda, localStorage'da durur.
 // Anahtarlar eski siteyle aynı (tf-prog, tf-saved), böylece öğrencinin ilerlemesi kaybolmaz.
-import { useSyncExternalStore } from "react";
+import { useMemo, useSyncExternalStore } from "react";
 
 export type Prog = Record<string, string>; // "ders.konu" -> "3/4 doğru", "_last" -> "ders.konu"
 
 export const KEYS = {
   prog: "tf-prog", saved: "tf-saved", ad: "tf-ad", tekrar: "tf-tekrar", anlamadim: "tf-anlamadim",
-  asama: "tf-asama", puan: "tf-puan", gorev: "tf-gorev", yer: "tf-yer", ipucu: "tf-ipucu",
+  asama: "tf-asama", puan: "tf-puan", gorev: "tf-gorev", yer: "tf-yer", ipucu: "tf-ipucu", unite: "tf-unite",
 } as const;
 const listeners = new Set<() => void>();
 const cache: Record<string, { raw: string | null; val: unknown }> = {};
@@ -74,6 +74,7 @@ export function resetAll() {
   write(KEYS.puan, {});
   write(KEYS.gorev, {});
   write(KEYS.yer, {});
+  write(KEYS.unite, {});
 }
 
 // Akıllı tekrar: testte yanlış yapılan soru 1, 3 ve 7 gün sonra yeniden sorulur.
@@ -172,4 +173,23 @@ export const useIpucu = () => useSyncExternalStore(subscribe, () => read<string[
 export function ipucuGoruldu(k: string) {
   const s = read<string[]>(KEYS.ipucu, EMPTY_SAVED);
   if (!s.includes(k)) write(KEYS.ipucu, [...s, k]);
+}
+
+// Ünite testleri: en yüksek puan (0-100). Anahtar "ders.ünite no". 80 ve üstü üniteyi geçer (lib/kilit.ts).
+export type Unite = Record<string, number>;
+const EMPTY_UNITE: Unite = {};
+export const useUnite = () => useSyncExternalStore(subscribe, () => read<Unite>(KEYS.unite, EMPTY_UNITE), () => EMPTY_UNITE);
+export function uniteKaydet(key: string, puan: number) {
+  const s = read<Unite>(KEYS.unite, EMPTY_UNITE);
+  if ((s[key] ?? -1) < puan) write(KEYS.unite, { ...s, [key]: puan });
+}
+
+/** Sayfa tarayıcıda açıldı mı (sunucuda ve ilk çizimde false). Cihazdaki ilerlemeye bağlı kararlar için. */
+const hep = () => () => {};
+export const useTarayici = () => useSyncExternalStore(hep, () => true, () => false);
+
+/** Konu kilitleri için gereken bütün durumlar (lib/kilit.ts). */
+export function useDurumlar() {
+  const prog = useProg(), asama = useAsama(), yer = useYer(), unite = useUnite();
+  return useMemo(() => ({ prog, asama, yer, unite }), [prog, asama, yer, unite]);
 }

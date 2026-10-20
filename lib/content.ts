@@ -3,6 +3,8 @@ import fizik from "@/content/fizik.json";
 import kimya from "@/content/kimya.json";
 import biyoloji from "@/content/biyoloji.json";
 import { DERS_IDS, DERSLER, type DersId, type Entry, type Question, type Topic } from "./dersler";
+import { adimliDers } from "./adimli";
+import { sureDk } from "./asama";
 
 export * from "./dersler";
 // JSON'dan gelen "tur" alanı string olarak çıkarılır; biçimi tools/check.py doğrular.
@@ -11,14 +13,28 @@ const DATA = { fizik, kimya, biyoloji } as unknown as Record<DersId, Record<stri
 export const topic = (d: DersId, id: string): Topic | undefined => DATA[d][id];
 
 export function entries(d: DersId): Entry[] {
+  let unite = 0, uniteAd = "";
   return DERSLER[d].konular.map((k, i) => {
+    if (k.unite) { unite++; uniteAd = k.unite; }
     const t = k.id ? topic(d, k.id) : undefined;
-    if (!k.id || !t) return { ders: d, no: i + 1, ad: k.ad, sinav: k.sinav };
+    if (!k.id || !t) return { ders: d, no: i + 1, ad: k.ad, sinav: k.sinav, unite, uniteAd };
     return {
-      ders: d, no: i + 1, ad: k.ad, id: k.id, title: t.title, summary: t.summary, on: k.on, sinav: k.sinav,
+      ders: d, no: i + 1, ad: k.ad, id: k.id, title: t.title, summary: t.summary, on: k.on, sinav: k.sinav, unite, uniteAd,
       cardCount: t.cards.length, quizCount: t.quiz.length, headings: t.cards.map((c) => c.h).join(" "),
+      dk: sureDk(t.cards.length, adimliDers(k.id)?.adimlar.length ?? 0, t.quiz.length),
     };
   });
+}
+
+/** Bir ünitenin testi için ünitedeki konuların bütün soruları; anahtar "ders.konu.soru sırası" (tekrar ile aynı). */
+export function uniteSorulari(d: DersId, u: number): Record<string, TekrarSoru> {
+  const out: Record<string, TekrarSoru> = {};
+  for (const e of entries(d)) {
+    if (e.unite !== u || !e.id) continue;
+    const t = topic(d, e.id)!;
+    t.quiz.forEach((q, j) => { out[`${d}.${e.id}.${j}`] = { ...q, ders: d, konu: e.id!, baslik: t.title }; });
+  }
+  return out;
 }
 
 export const allEntries = () => Object.fromEntries(DERS_IDS.map((d) => [d, entries(d)])) as Record<DersId, Entry[]>;

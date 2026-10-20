@@ -137,6 +137,12 @@ for ders, topics in d.items():
         if not k.get("ad"): err(ders, "dersler.json içinde adı olmayan konu", k)
         # sınav etiketi (Keşfet araması ve konu haritası): TYT, AYT ya da ikisi
         if k.get("sinav") not in ("TYT", "AYT", "TYT-AYT"): err(ders, k.get("id") or k.get("ad"), "sinav alanı TYT, AYT ya da TYT-AYT olmalı:", k.get("sinav"))
+    # üniteler: "unite" alanı yeni ünitenin ilk konusunda durur; konular sırayla açılır, ünite testiyle atlanır (lib/kilit.ts)
+    kl = dersler[ders]["konular"]
+    if kl and not kl[0].get("unite"): err(ders, "ilk konuda unite alanı olmalı")
+    for k in kl:
+        if "unite" in k and not (isinstance(k["unite"], str) and k["unite"].strip()): err(ders, k.get("id"), "unite boş olmamalı")
+        if "unite" in k and not k.get("id"): err(ders, k.get("ad"), "yazılmamış konu ünite başlatamaz")
     # ön koşullar (konu haritası): aynı dersten, listede daha önce gelen hazır konular
     onceki = set()
     for k in dersler[ders]["konular"]:

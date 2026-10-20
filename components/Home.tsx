@@ -3,7 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
-import { bugunku, doneKeys, gunAdi, useAd, useAsama, useProg, useTekrar } from "@/lib/store";
+import { bugunku, doneKeys, gunAdi, useAd, useAsama, useProg, useTekrar, useYer } from "@/lib/store";
+import { asamaSayisi } from "@/lib/asama";
 import { sureYaz, VIDEOLAR } from "@/lib/videolar";
 import { Icon } from "./icons";
 import { motion } from "motion/react";
@@ -19,7 +20,7 @@ const YAKINDA = [["matematik", "Matematik"], ["tarih", "Tarih"], ["cografya", "C
 const dersKart = "flex min-h-[160px] flex-col justify-between gap-3 rounded-3xl border border-border bg-card p-4 transition-transform active:scale-[.98]";
 
 export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
-  const prog = useProg(), ad = useAd(), tekrar = useTekrar(), asama = useAsama();
+  const prog = useProg(), ad = useAd(), tekrar = useTekrar(), asama = useAsama(), yer = useYer();
   const bugun = bugunku(tekrar).length, kalan = Object.keys(tekrar).length;
   const sonraki = Object.values(tekrar).map((x) => x.g).sort()[0];
   const doneAll = doneKeys(prog).length;
@@ -94,6 +95,18 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
             <span className="min-w-0 flex-1">
               <span className="block text-[13px] font-semibold opacity-85">Kaldığın yerden devam et</span>
               <b className="block truncate font-bold">{last.title}</b>
+              {(() => {
+                const nA = asamaSayisi(last.cardCount ?? 0), k = `${last.ders}.${last.id}`;
+                const b = prog[k] ? nA : Math.min(asama[k] ?? 0, nA);
+                return (
+                  <span className="mt-2 flex items-center gap-2.5">
+                    <span className="flex flex-1 gap-1" aria-hidden="true">
+                      {Array.from({ length: nA }, (_, a) => <span key={a} className={`h-1.5 flex-1 rounded-full ${a < b ? "bg-white" : "bg-white/30"}`} />)}
+                    </span>
+                    <span className="flex-none text-[12px] font-semibold opacity-90">{prog[k] ? "Bitti" : `${nA} aşamadan ${b} tanesi bitti`}</span>
+                  </span>
+                );
+              })()}
             </span>
             <Next />
           </Link>
@@ -104,14 +117,21 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
             {DERS_IDS.map((d) => {
               const s = DERSLER[d], ready = all[d].filter((e) => e.id);
               const done = ready.filter((e) => prog[`${d}.${e.id}`]).length;
+              // Başlanan: en az bir aşaması bitmiş ya da ortasında kalınmış ama testi bitmemiş konular.
+              const basladi = ready.filter((e) => { const k = `${d}.${e.id}`; return !prog[k] && ((asama[k] ?? 0) > 0 || yer[k]); }).length;
+              // Çubuk aşama aşama dolar: bitmiş konu tam, başlanmış konu bitirdiği aşama kadar.
+              const dolu = ready.reduce((n, e) => {
+                const k = `${d}.${e.id}`, nA = asamaSayisi(e.cardCount ?? 0);
+                return n + (prog[k] ? 1 : Math.min(asama[k] ?? 0, nA) / nA);
+              }, 0);
               const I = Icon[d];
               return (
                 <Link key={d} data-ders={d} href={href(d)} className={dersKart}>
                   <Simge className="size-14 rounded-2xl [&_svg]:size-7"><I /></Simge>
                   <span className="grid gap-1">
                     <b className="font-display text-[18px] font-extrabold">{s.ad}</b>
-                    <span className="text-[13px] font-bold tabular-nums text-muted-foreground">{done}/{ready.length} konu</span>
-                    <Progress className="mt-1 h-1" value={ready.length ? (100 * done) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti`} />
+                    <span className="text-[13px] font-bold tabular-nums text-muted-foreground">{basladi ? `${basladi} başladın · ${done} bitti` : `${done}/${ready.length} konu`}</span>
+                    <Progress className="mt-1 h-1.5" value={ready.length ? (100 * dolu) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti${basladi ? `, ${basladi} tanesine başladın` : ""}`} />
                   </span>
                 </Link>
               );

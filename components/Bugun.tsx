@@ -104,6 +104,7 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
         <SheetTrigger className={rozet} aria-label={`Günün görevleri: ${biten}/${gorevler.length || 3}`}>
           <Halka oran={tamamOran} className="size-5" />
           {biten}/{gorevler.length || 3}
+          <span className="font-sans text-[13px] font-semibold text-muted-foreground">görev</span>
         </SheetTrigger>
         <SheetContent>
           <SheetDescription className="sr-only">Bugün yapılacak üç görev</SheetDescription>

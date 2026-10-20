@@ -8,11 +8,13 @@
 // sonra gelir: kısa açıklama (kart) → örnek (sahne kendisi oynar) → sıra sende (görev). Görev bitmeden "Devam" açılmaz.
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { DERSLER, secmeli, type DersId, type Topic } from "@/lib/dersler";
+import { DERSLER, secmeli, type DersId, type Entry, type Topic } from "@/lib/dersler";
 import {
-  asamaBitir, ipucuGoruldu, setProg, toggleAnlamadim, toggleSaved, useAnlamadim, useAsama, useIpucu, useProg, useSaved, useYer, yanlisKaydet, yerYaz,
+  asamaBitir, ipucuGoruldu, setProg, toggleAnlamadim, toggleSaved, useAnlamadim, useAsama, useDurumlar, useIpucu, useProg, useSaved, useTarayici, useYer,
+  yanlisKaydet, yerYaz,
 } from "@/lib/store";
-import { asamalar, kartinAsamasi } from "@/lib/asama";
+import { asamalar, kartinAsamasi, sureDk } from "@/lib/asama";
+import { acik, atlamaUnitesi, bekledigi, GECME, siradaki, uniteHref } from "@/lib/kilit";
 import { kaydet, PUAN } from "@/lib/puan";
 import { olay } from "@/lib/olay";
 import { kartVideolari, sureYaz, type Video } from "@/lib/videolar";
@@ -21,7 +23,6 @@ import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Html, href } from "./temel";
 import { Button } from "./ui/button";
-import { Progress } from "./ui/progress";
 import VideoPlayer from "./VideoPlayer";
 import Etk from "./Etk";
 import { Belir, CanliSvg, SiraliMetin, useCanliSvg } from "./canli";
@@ -42,8 +43,8 @@ type State = { a: number; ara: boolean; i: number; q: number; cevap: Cevap; sonu
 const START: State = { a: -1, ara: false, i: 0, q: -1, cevap: null, sonuc: null, right: 0, odul: 0, cevaplar: [] };
 
 export default function Lesson({
-  ders, id, t, next, adimli, on = [],
-}: { ders: DersId; id: string; t: Topic; next?: { id: string; title: string }; adimli?: AdimliDers; on?: { id: string; title: string }[] }) {
+  ders, id, t, next, adimli, on = [], list,
+}: { ders: DersId; id: string; t: Topic; next?: { id: string; title: string }; adimli?: AdimliDers; on?: { id: string; title: string }[]; list: Entry[] }) {
   const [s, setS] = useState<State>(START);
   // Adımların hepsi bir karta yerleştirilmişse anlatımın içine girer (şu an 82 konunun hepsinde böyle).
   const birlesik = !!adimli?.adimlar.length && adimli.adimlar.every((a) => a.kart);
@@ -91,7 +92,10 @@ export default function Lesson({
     if (Number.isInteger(k) && k > 0 && j >= 0) setS({ ...START, a: kartinAsamasi(nKart, k - 1), i: j });
   }, [ogeler, nKart]);
 
-  useEffect(() => { setProg({ _last: `${ders}.${id}` }); }, [ders, id]);
+  // Konular sırayla açılır (lib/kilit.ts). Sunucuda ve ilk çizimde cihazdaki ilerleme bilinmediği için konu açık sayılır.
+  const durumlar = useDurumlar(), tarayici = useTarayici();
+  const kapali = tarayici && !acik(list, id, durumlar);
+  useEffect(() => { if (tarayici && !kapali) setProg({ _last: `${ders}.${id}` }); }, [ders, id, tarayici, kapali]);
   useEffect(() => { window.scrollTo(0, 0); }, [s.q, s.a, s.ara]);
   // Yeni kart altta belirince sayfa ona kayar.
   const sonKart = useRef<HTMLElement>(null);
@@ -176,7 +180,6 @@ export default function Lesson({
   const sonKartOge = akista ? ogeler.slice(ilkOge, s.i + 1).filter((o) => o.tur === "kart").pop() : undefined;
   const sonKartNo = sonKartOge?.tur === "kart" ? sonKartOge.k + 1 : 0;
   const anlamadimMi = !!sonKartNo && anlamadim.includes(`${ders}.${id}.${sonKartNo}`);
-  const pos = s.q >= 0 ? nCards + s.q : s.a < 0 ? -1 : s.ara ? sonOge - 1 : s.i;
   let body: React.ReactNode, controls: React.ReactNode = null, key: string;
   const SoruI = Icon.soru;
 
@@ -189,6 +192,7 @@ export default function Lesson({
         <section className="grid gap-2">
           <h1 className="text-[26px]">{t.title}</h1>
           <Html as="p" className="text-[15px] text-muted-foreground" html={t.summary} />
+          <span className="text-[14px] font-semibold text-muted-foreground">{nAsama} aşama + mini test · yaklaşık {sureDk(nKart, adimli?.adimlar.length ?? 0, nQuiz)} dk</span>
         </section>
         {eksik.length > 0 && (
           <p className="-mt-2 text-[14px] text-muted-foreground">
@@ -322,7 +326,7 @@ export default function Lesson({
           // Bir kez gösterilir: akışta geri gitmek kaydırmakla olur, anlamadım simgesi sağ üstte.
           <p className="pb-2.5 text-[13px] text-muted-foreground">Önceki kartlar yukarıda duruyor. Anlamadığın kartta sağ üstteki ? simgesine dokun.</p>
         )}
-        <Button className="w-full" data-next disabled={kilitli} onClick={() => step(1)}>{last ? "Aşamayı bitir" : "Devam"}</Button>
+        <Button className="w-full" data-next disabled={kilitli} onClick={() => step(1)}>{kilitli ? gorevYazisi(ogeler[s.i]) : last ? "Aşamayı bitir" : "Devam"}</Button>
       </Alt>
     );
   } else if (s.q < nQuiz) {
@@ -358,7 +362,7 @@ export default function Lesson({
           <Button className="w-full" data-next disabled={!hazir(Q, s.cevap)} onClick={() => degerlendir(s.cevap)}>Kontrol et</Button>
         ) : (
           <Button className="w-full" data-next disabled={sonuc === null} onClick={() => step(1)}>
-            {s.q === nQuiz - 1 ? "Sonucu gör" : "Sonraki soru"}
+            {sonuc === null ? "Bir cevap seç" : s.q === nQuiz - 1 ? "Sonucu gör" : "Sonraki soru"}
           </Button>
         )}
       </Alt>
@@ -429,13 +433,45 @@ export default function Lesson({
     );
   }
 
+  if (kapali) {
+    const bu = list.find((e) => e.id === id)!, once = bekledigi(list, id), sira = siradaki(list, durumlar), testU = atlamaUnitesi(list, bu, durumlar);
+    const Kilit = Icon.kilit;
+    return (
+      <div className="app" data-ders={ders}>
+        <header className="top gap-3">
+          <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={href(ders)} aria-label="Konulara dön"><Close /></Link></Button>
+          <span className="truncate font-display text-[15px] font-extrabold">{t.title}</span>
+        </header>
+        <main className="view pt-6">
+          <article className="flex flex-col items-center gap-3 text-center">
+            <span className="grid size-16 place-items-center rounded-2xl bg-secondary text-muted-foreground [&_svg]:size-8"><Kilit /></span>
+            <h1 className="text-[24px]">Bu konu henüz kilitli</h1>
+            <p className="text-[15px] text-muted-foreground">
+              Konular birbirinin üzerine kurulu. {once ? <><b className="text-foreground">“{once.title}”</b> konusunu bitirince bu konu açılır.</> : null}
+              {testU && <> Bu bölümü zaten biliyorsan {testU.no}. ünite testinden en az {GECME} alarak ilerleyebilirsin.</>}
+            </p>
+            <div className="mt-3 grid w-full gap-2">
+              {sira && <Button asChild><Link href={href(ders, sira.id)}>Sıradaki konuya git: {sira.title}</Link></Button>}
+              {testU && <Button asChild variant="outline"><Link href={uniteHref(ders, testU.no)}>{testU.no}. ünite testini çöz</Link></Button>}
+              <Button asChild variant="ghost"><Link href={href(ders)}>{DERSLER[ders].ad} konularına dön</Link></Button>
+            </div>
+          </article>
+        </main>
+      </div>
+    );
+  }
+
   return (
     <div className="app" data-ders={ders}>
       <header className="top gap-3">
         <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={href(ders)} aria-label="Konudan çık"><Close /></Link></Button>
         <div className="grid min-w-0 flex-1 gap-1.5">
           <span className="truncate font-display text-[15px] font-extrabold">{t.title}</span>
-          <Progress value={(100 * (pos + 1)) / (nCards + nQuiz + 1)} />
+          <AsamaCubugu dolu={[
+            ...asamaOge.map(([b, e], a) =>
+              s.q < 0 && s.a === a && !s.ara ? (s.i - b + 1) / (e - b) : a < bitenA || (s.a > a && s.q < 0) || (s.ara && s.a === a) ? 1 : 0),
+            prog[konuKey] && s.q < 0 ? 1 : s.q >= 0 ? (s.q + (s.sonuc !== null ? 1 : 0)) / nQuiz : 0,
+          ]} />
         </div>
         {akista && sonKartNo > 0 && (
           // Son okunan kartı "anlamadım" diye işaretler (Profil'de listelenir).
@@ -493,6 +529,26 @@ export default function Lesson({
 }
 
 const yoksay = () => {};
+
+/** Görevi bitmemiş adımda pasif "Devam" düğmesinin yazısı: öğrenciye ne yapması gerektiğini söyler. */
+function gorevYazisi(o: Oge | undefined) {
+  const tur = o?.tur === "adim" ? o.a.gorev.tur : "";
+  return tur === "secim" || tur === "tahmin" ? "Bir cevap seç" : tur === "ayarla" ? "Değerleri hedefe getir" : tur === "kesfet" ? "Önce bulguları keşfet" : tur === "oynat" ? "Önce sahneyi oynat" : "Devam";
+}
+
+/** Konu ilerleme çubuğu: her aşama ve mini test ayrı bir parça; parçalar kendi içinde dolar. */
+function AsamaCubugu({ dolu }: { dolu: number[] }) {
+  const toplam = dolu.reduce((a, b) => a + Math.min(1, b), 0);
+  return (
+    <div className="flex gap-1" role="progressbar" aria-label="Konu ilerlemesi" aria-valuenow={Math.round((100 * toplam) / dolu.length)} aria-valuemin={0} aria-valuemax={100}>
+      {dolu.map((v, k) => (
+        <div key={k} className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-secondary">
+          <motion.div className="h-full rounded-full bg-acc" initial={false} animate={{ width: `${Math.max(0, Math.min(1, v)) * 100}%` }} transition={{ type: "spring", stiffness: 260, damping: 32 }} />
+        </div>
+      ))}
+    </div>
+  );
+}
 
 type Kart = Topic["cards"][number];
 

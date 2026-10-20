@@ -18,3 +18,6 @@ export function asamalar(nKart: number): [number, number][] {
 
 /** Kartın (0'dan başlar) bulunduğu aşama. */
 export const kartinAsamasi = (nKart: number, k: number) => asamalar(nKart).findIndex(([b, s]) => k >= b && k < s);
+
+/** Konunun yaklaşık süresi (dakika): kart başına ~20 sn okuma, etkileşimli adım başına ~35 sn, test sorusu başına ~40 sn. */
+export const sureDk = (kart: number, adim: number, soru: number) => Math.max(3, Math.round((kart * 20 + adim * 35 + soru * 40) / 60));

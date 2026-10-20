@@ -8,7 +8,8 @@ import { Html } from "./temel";
 import { Icon } from "./icons";
 
 /** serbest: kilitli görünse de dokunulunca açılır (mini test: konuyu bilen öğrenci aşamaları beklemeden çözebilir). */
-export type YolDugum = { baslik: string; alt: string; durum: "bitti" | "sirada" | "kilitli"; test?: boolean; serbest?: boolean; etiket?: string; ac: () => void };
+/** dokun: kilitli (kilit simgesiyle) görünür ama dokunulabilir; neden kilitli olduğunu anlatan pencereyi açmak için. */
+export type YolDugum = { baslik: string; alt: string; durum: "bitti" | "sirada" | "kilitli"; test?: boolean; serbest?: boolean; dokun?: boolean; etiket?: string; ac: () => void };
 
 const SATIR = 112; // bir düğümün satır yüksekliği (px)
 const KAYMA = [0, 26, 0, -26]; // düğümün ortadan sapması (% genişlik), yol bu sırayla kıvrılır
@@ -61,7 +62,7 @@ export default function AsamaYolu({ dugumler, balon, ad = "Aşamalar", kaydir }:
           return (
             <li key={i} ref={i === sirada ? siradaRef : undefined} className="absolute inset-x-0" style={{ top: i * SATIR, height: SATIR }}>
               <motion.button
-                disabled={g.durum === "kilitli" && !g.serbest}
+                disabled={g.durum === "kilitli" && !g.serbest && !g.dokun}
                 onClick={g.ac}
                 aria-label={g.etiket ?? `${g.baslik}, ${g.durum === "bitti" ? "bitti" : g.durum === "sirada" ? "sıradaki" : g.serbest ? "aşamalar bitmeden de çözebilirsin" : "kilitli"}`}
                 className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -69,7 +70,7 @@ export default function AsamaYolu({ dugumler, balon, ad = "Aşamalar", kaydir }:
                 initial={{ scale: 0.6, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: "spring", stiffness: 320, damping: 20, delay: 0.05 + i * 0.07 }}
-                whileTap={g.durum === "kilitli" && !g.serbest ? undefined : { y: 4 }}
+                whileTap={g.durum === "kilitli" && !g.serbest && !g.dokun ? undefined : { y: 4 }}
               >
                 {g.durum === "sirada" && (
                   <>

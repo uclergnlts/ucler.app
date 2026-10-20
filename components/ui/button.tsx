@@ -9,7 +9,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        // Pasif ana düğme soluk renkte değil gri: basılamayacağı ilk bakışta anlaşılsın.
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 disabled:bg-secondary disabled:text-muted-foreground disabled:opacity-100",
         outline: "border border-border-strong bg-card text-foreground hover:bg-secondary",
         secondary: "bg-secondary text-foreground hover:bg-secondary/70",
         ghost: "text-foreground hover:bg-secondary",
