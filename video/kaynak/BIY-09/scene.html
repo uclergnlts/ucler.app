@@ -1,0 +1,151 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#1fa463}
+.head .sub i{display:block;width:44px;height:6px;background:#1fa463;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#1fa463;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#1fa463;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>BİYOLOJİ</div><div class="brand">ucler<b>.</b></div></div>
+
+<div class="scene" data-s="-1" data-e="2.9">
+ <div class="title">Bir zehrin panzehiri<br><em>bazen alkoldür</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><g transform="translate(380 900) scale(1.6)"><path d="M-100 -40 C-110 -110 -20 -130 40 -100 C90 -80 110 -60 110 -40 L40 -10 L40 30 L110 50 C110 100 40 130 -20 120 C-90 110 -110 60 -100 -40 Z" fill="#e1f5ea" stroke="#1fa463" stroke-width="4.5" stroke-linejoin="round"/><path d="M-70 -55 q25 -35 50 0 t50 0 M-75 25 q25 35 50 0 t45 0 M-60 -15 H10" fill="none" stroke="#1fa463" stroke-width="3.0" opacity=".55" stroke-linecap="round"/></g><g transform="translate(380 900) scale(1.6)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="3.8" stroke-linejoin="round"/></g><text x="560" y="1120" text-anchor="middle" font-size="32" font-weight="800" fill="#3a86c8">etanol aktif bölgede</text><g transform="translate(722.3 714.5) scale(1.1)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde2ea" stroke="#d63c63" stroke-width="5.5" stroke-linejoin="round"/></g><text x="840" y="830" text-anchor="middle" font-size="36" font-weight="800" fill="#d63c63">metanol</text><text x="840" y="875" text-anchor="middle" font-size="30" font-weight="700" fill="#5f6f88">sırada bekliyor</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="2.95" data-e="18.55">
+ <div class="title">Metanol:<br><em>sahte içkideki tehlike</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="3.0"><path d="M192 550 h56 v50 q50 30 50 90 v170 q0 20 -20 20 h-116 q-20 0 -20 -20 v-170 q0 -60 50 -90 Z" fill="#fff" stroke="#1d3557" stroke-width="5"/><rect x="160" y="710" width="120" height="90" rx="8" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><text x="220" y="768" text-anchor="middle" font-family="Manrope" font-size="30" font-weight="800" fill="#d63c63">CH<tspan font-size="24" dy="8">3</tspan><tspan dy="-8">OH</tspan></text></g><g data-in="3.6"><text x="380" y="640" text-anchor="start" font-family="Manrope" font-size="40" font-weight="800" fill="#d63c63">metanol</text><text x="380" y="690" text-anchor="start" font-size="30" font-weight="700" fill="#5f6f88">bir tür alkol</text></g><g data-in="6.4"><rect x="60" y="950" width="270" height="90" rx="16" fill="#fde2ea" stroke="#d63c63" stroke-width="4"/><text x="195.0" y="1007" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">metanol</text></g><g data-in="8.6"><path d="M340 995 H400" stroke="#1d3557" stroke-width="5"/><path d="M384 983 L400 995 L384 1007" fill="none" stroke="#1d3557" stroke-width="5"/><rect x="410" y="950" width="290" height="90" rx="16" fill="#fff" stroke="#1d3557" stroke-width="4"/><text x="555.0" y="1007" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">formaldehit</text></g><g data-in="10.6"><path d="M710 995 H770" stroke="#1d3557" stroke-width="5"/><path d="M754 983 L770 995 L754 1007" fill="none" stroke="#1d3557" stroke-width="5"/><rect x="780" y="950" width="250" height="90" rx="16" fill="#fff" stroke="#1d3557" stroke-width="4"/><text x="905.0" y="1007" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">formik asit</text></g><g data-in="7.0"><text x="540" y="1090" text-anchor="middle" font-size="30" font-weight="700" fill="#5f6f88">karaciğer enzimleri dönüştürür</text></g><g data-in="13.4"><path d="M240 1240 Q330 1170 420 1240 Q330 1310 240 1240 Z" fill="#fff" stroke="#1d3557" stroke-width="5"/><circle cx="330" cy="1240" r="28" fill="#457b9d"/><circle cx="330" cy="1240" r="12" fill="#1d3557"/><path d="M290 1200 l80 80 M370 1200 l-80 80" stroke="#d63c63" stroke-width="8" stroke-linecap="round"/><text x="470" y="1230" text-anchor="start" font-size="34" font-weight="800" fill="#1d3557">görme sinirine zarar</text></g><g data-in="15.9"><text x="470" y="1285" text-anchor="start" font-size="34" font-weight="800" fill="#d63c63">körlük, hatta ölüm</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="18.55" data-e="41.35">
+ <div class="title">Doktorların<br><em>akıllıca yolu</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="21.0"><g transform="translate(360 930) scale(1.5)"><path d="M-100 -40 C-110 -110 -20 -130 40 -100 C90 -80 110 -60 110 -40 L40 -10 L40 30 L110 50 C110 100 40 130 -20 120 C-90 110 -110 60 -100 -40 Z" fill="#e1f5ea" stroke="#1fa463" stroke-width="4.8" stroke-linejoin="round"/><path d="M-70 -55 q25 -35 50 0 t50 0 M-75 25 q25 35 50 0 t45 0 M-60 -15 H10" fill="none" stroke="#1fa463" stroke-width="3.2" opacity=".55" stroke-linecap="round"/></g><text x="360" y="1150" text-anchor="middle" font-size="28" font-weight="700" fill="#5f6f88">metanolü dönüştüren enzim</text></g><g data-in="21.0" data-out="33.3"><g transform="translate(759.05 795.75) scale(0.85)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde2ea" stroke="#d63c63" stroke-width="7.1" stroke-linejoin="round"/></g><text x="850" y="885" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">metanol</text></g><g data-in="22.6" data-out="33.3"><g transform="translate(759.05 1005.75) scale(0.85)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="7.1" stroke-linejoin="round"/></g><text x="850" y="1095" text-anchor="middle" font-size="30" font-weight="800" fill="#3a86c8">etanol</text></g><g data-in="24.7" data-out="33.3"><text x="850" y="1140" text-anchor="middle" font-size="26" font-weight="800" fill="#3a86c8">enzim onu daha çok sever</text></g><g data-in="26.5"><rect x="120" y="560" width="840" height="120" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="612" text-anchor="middle" font-size="30" font-weight="700" fill="#5f6f88">hastanede, doktor kontrolünde</text><text x="540" y="656" text-anchor="middle" font-size="36" font-weight="800" fill="#3a86c8">etanol ya da fomepizol</text></g><g data-in="33.5"><g transform="translate(360 930) scale(1.5)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="4.0" stroke-linejoin="round"/></g><text x="560" y="800" text-anchor="start" font-size="30" font-weight="800" fill="#3a86c8">aktif bölge dolu</text></g><g data-in="36.6"><g transform="translate(759.05 1005.75) scale(0.85)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde2ea" stroke="#d63c63" stroke-width="7.1" stroke-linejoin="round"/></g><text x="850" y="1095" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">metanol sırada</text></g><g data-in="38.2"><rect x="120" y="1250" width="840" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1313" text-anchor="middle" font-size="34" font-weight="800" fill="#1fa463">zarara dönüşmeden yavaşça atılır</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="41.35" data-e="52.97">
+ <div class="title">Yarışmalı<br><em>inhibisyon</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="41.4"><g transform="translate(330 900) scale(1.5)"><path d="M-100 -40 C-110 -110 -20 -130 40 -100 C90 -80 110 -60 110 -40 L40 -10 L40 30 L110 50 C110 100 40 130 -20 120 C-90 110 -110 60 -100 -40 Z" fill="#e1f5ea" stroke="#1fa463" stroke-width="4.8" stroke-linejoin="round"/><path d="M-70 -55 q25 -35 50 0 t50 0 M-75 25 q25 35 50 0 t45 0 M-60 -15 H10" fill="none" stroke="#1fa463" stroke-width="3.2" opacity=".55" stroke-linecap="round"/></g></g><g data-in="43.6" data-out="47.7"><g transform="translate(729.05 755.75) scale(0.85)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde6cc" stroke="#f08a24" stroke-width="7.1" stroke-linejoin="round"/></g><text x="820" y="850" text-anchor="middle" font-size="30" font-weight="800" fill="#f08a24">substrat</text><g transform="translate(729.05 1025.75) scale(0.85)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="7.1" stroke-linejoin="round"/></g><text x="820" y="1115" text-anchor="middle" font-size="30" font-weight="800" fill="#3a86c8">inhibitör</text><path d="M700 790 L560 870" stroke="#1d3557" stroke-width="4" stroke-dasharray="10 8"/><path d="M700 1000 L560 930" stroke="#1d3557" stroke-width="4" stroke-dasharray="10 8"/></g><g data-in="44.5"><text x="540" y="620" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">aynı aktif bölge için yarışır</text></g><g data-in="47.9"><g transform="translate(330 900) scale(1.5)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde6cc" stroke="#f08a24" stroke-width="4.0" stroke-linejoin="round"/></g><g transform="translate(695.8 757.0) scale(0.6)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde6cc" stroke="#f08a24" stroke-width="10.0" stroke-linejoin="round"/></g><g transform="translate(835.8 857.0) scale(0.6)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde6cc" stroke="#f08a24" stroke-width="10.0" stroke-linejoin="round"/></g><g transform="translate(695.8 957.0) scale(0.6)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde6cc" stroke="#f08a24" stroke-width="10.0" stroke-linejoin="round"/></g><g transform="translate(855.8 1037.0) scale(0.6)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde6cc" stroke="#f08a24" stroke-width="10.0" stroke-linejoin="round"/></g><g transform="translate(715.8 1117.0) scale(0.6)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde6cc" stroke="#f08a24" stroke-width="10.0" stroke-linejoin="round"/></g><g transform="translate(846.5 687.5) scale(0.5)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="12.0" stroke-linejoin="round"/></g><text x="850" y="1220" text-anchor="middle" font-size="30" font-weight="800" fill="#f08a24">substrat çok</text></g><g data-in="49.6"><rect x="120" y="1270" width="840" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1333" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">substrat kazanır, inhibitörün etkisi azalır</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="52.97" data-e="69.35">
+ <div class="title">Yarışmasız<br><em>inhibisyon</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="53.0" data-out="57.3"><g transform="translate(330 880) scale(1.5)"><path d="M-100 -40 C-110 -110 -20 -130 40 -100 C90 -80 110 -60 110 -40 L40 -10 L40 30 L110 50 C110 100 40 130 -20 120 C-90 110 -110 60 -100 -40 Z" fill="#e1f5ea" stroke="#1fa463" stroke-width="4.8" stroke-linejoin="round"/><path d="M-70 -55 q25 -35 50 0 t50 0 M-75 25 q25 35 50 0 t45 0 M-60 -15 H10" fill="none" stroke="#1fa463" stroke-width="3.2" opacity=".55" stroke-linecap="round"/></g></g><g data-in="55.5"><circle cx="230" cy="680" r="34" fill="#e9edf3" stroke="#7c8798" stroke-width="5"/><text x="230" y="690" text-anchor="middle" font-family="Manrope" font-size="28" font-weight="800" fill="#7c8798">Hg</text><path d="M250 708 L270 740" stroke="#7c8798" stroke-width="4"/><text x="300" y="640" text-anchor="start" font-size="30" font-weight="800" fill="#7c8798">başka bir yere bağlanır</text></g><g data-in="57.4"><g transform="translate(330 880) scale(1.5)"><g transform="skewX(14) scale(1 0.9)"><path d="M-100 -40 C-110 -110 -20 -130 40 -100 C90 -80 110 -60 110 -40 L70 0 L95 40 L110 50 C110 100 40 130 -20 120 C-90 110 -110 60 -100 -40 Z" fill="#fdecef" stroke="#d63c63" stroke-width="4.8" stroke-linejoin="round"/><path d="M-70 -55 q25 -35 50 0 t50 0 M-75 25 q25 35 50 0 t45 0 M-60 -15 H10" fill="none" stroke="#d63c63" stroke-width="3.2" opacity=".5"/></g></g><text x="330" y="1100" text-anchor="middle" font-size="32" font-weight="800" fill="#d63c63">şekli bozuldu</text></g><g data-in="60.5"><rect x="600" y="700" width="400" height="120" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="800" y="752" text-anchor="middle" font-size="34" font-weight="800" fill="#7c8798">cıva, kurşun</text><text x="800" y="795" text-anchor="middle" font-size="28" font-weight="700" fill="#5f6f88">ağır metaller</text></g><g data-in="63.8"><g transform="translate(734.4 956.0) scale(0.8)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde6cc" stroke="#f08a24" stroke-width="7.5" stroke-linejoin="round"/></g><g transform="translate(715.8 1057.0) scale(0.6)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde6cc" stroke="#f08a24" stroke-width="10.0" stroke-linejoin="round"/></g><g transform="translate(835.8 1077.0) scale(0.6)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#fde6cc" stroke="#f08a24" stroke-width="10.0" stroke-linejoin="round"/></g><g data-in="63.8"><circle cx="960" cy="960" r="26" fill="#d63c63"/><path d="M950 950 l20 20 M970 950 l-20 20" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g><text x="820" y="1160" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">substrat uymaz</text></g><g data-in="65.5"><rect x="120" y="1250" width="840" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1313" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">substrat eklemek işe yaramaz</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="69.35" data-e="77.01">
+ <div class="title">İlaçlar da<br><em>böyle çalışır</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="69.4"><g transform="rotate(-30 300 720)"><rect x="240" y="696" width="120" height="48" rx="24" fill="#fff" stroke="#3a86c8" stroke-width="5"/><path d="M300 696 V744" stroke="#3a86c8" stroke-width="4"/><rect x="300" y="699" width="57" height="42" rx="20" fill="#3a86c8" opacity=".35"/></g><g transform="rotate(-30 780 720)"><rect x="720" y="696" width="120" height="48" rx="24" fill="#fff" stroke="#d63c63" stroke-width="5"/><path d="M780 696 V744" stroke="#d63c63" stroke-width="4"/><rect x="780" y="699" width="57" height="42" rx="20" fill="#d63c63" opacity=".35"/></g><text x="300" y="840" text-anchor="middle" font-size="34" font-weight="800" fill="#3a86c8">yarışmalı</text><text x="780" y="840" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">yarışmasız</text></g><g data-in="71.5"><rect x="120" y="930" width="840" height="330" rx="18" fill="#fff" stroke="#3a86c8" stroke-width="4"/><text x="540" y="1000" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#1d3557">kolesterol ilaçları</text><g transform="translate(380 1150) scale(0.75)"><path d="M-100 -40 C-110 -110 -20 -130 40 -100 C90 -80 110 -60 110 -40 L40 -10 L40 30 L110 50 C110 100 40 130 -20 120 C-90 110 -110 60 -100 -40 Z" fill="#e1f5ea" stroke="#1fa463" stroke-width="9.6" stroke-linejoin="round"/><path d="M-70 -55 q25 -35 50 0 t50 0 M-75 25 q25 35 50 0 t45 0 M-60 -15 H10" fill="none" stroke="#1fa463" stroke-width="6.4" opacity=".55" stroke-linecap="round"/></g><g transform="translate(380 1150) scale(0.75)"><path d="M44 -8 L112 -36 H170 V46 H112 L44 28 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="8.0" stroke-linejoin="round"/></g><text x="560" y="1145" text-anchor="start" font-size="28" font-weight="700" fill="#5f6f88">kolesterol yapan</text><text x="560" y="1185" text-anchor="start" font-size="28" font-weight="800" fill="#3a86c8">enzimle yarışır</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="77.01" data-e="83.45">
+ <div class="q"><small>DÜŞÜN</small>Bir ilacın yarışmalı mı yarışmasız mı çalıştığını <em>laboratuvarda nasıl anlarsın?</em></div>
+</div>
+
+<div class="scene" data-s="83.25" data-e="99">
+ <div class="title">Kısaca<br><em>hatırla</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><rect x="80" y="500" width="920" height="800" rx="18" fill="#fff" stroke="#1fa463" stroke-width="5"/><text x="140" y="590" text-anchor="start" font-size="32" font-weight="800" fill="#1fa463">ÖZET</text><circle cx="160" cy="680" r="14" fill="#1fa463"/><text x="200" y="694" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">Yarışmalı: aktif bölge için</text><text x="200" y="744" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">substratla yarışır</text><circle cx="160" cy="840" r="14" fill="#1fa463"/><text x="200" y="854" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">Yarışmasız: başka yere</text><text x="200" y="904" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">bağlanır, şekli bozar</text><circle cx="160" cy="1000" r="14" fill="#1fa463"/><text x="200" y="1014" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">Substrat artınca yalnız</text><text x="200" y="1064" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">yarışmalının etkisi azalır</text><path d="M140 1130 H940" stroke="#dbe3ee" stroke-width="3"/><path d="M160 1170 h40 v70 l-20 -16 l-20 16 Z" fill="#1fa463"/><text x="230" y="1220" text-anchor="start" font-family="Manrope" font-size="42" font-weight="800" fill="#1fa463">Kaydet, sınavdan önce bak</text></g>
+ </svg>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;                 // ses hızlandırılmadı
+const DUR = 85.4;           // ses süresi
+const PH = [
+ [0.00,2.55,"Bir zehrin panzehiri bazen alkoldür."],
+ [2.95,6.08,"Metanol, bazı sahte içkilere karışan bir alkoldür."],
+ [6.43,13.19,"Asıl tehlike metanolün kendisi değil, karaciğer enzimlerinin onu formaldehit ve formik aside çevirmesidir."],
+ [13.43,15.75,"Bu maddeler görme sinirine zarar verir;"],
+ [15.96,18.17,"körlüğe, hatta ölüme yol açabilir."],
+ [18.55,20.67,"Doktorlar burada ilginç bir yol izler."],
+ [21.00,24.38,"Bu işi başlatan enzim, içkilerdeki etil alkolü de işler,"],
+ [24.71,26.19,"üstelik onu daha çok sever."],
+ [26.53,33.20,"Hastaya hastanede, doktor kontrolünde etil alkol ya da bugün daha çok kullanılan fomepizol verilir."],
+ [33.51,36.26,"Bu moleküller enzimin aktif bölgesini kapar."],
+ [36.58,37.94,"Metanol sırada bekler"],
+ [38.16,41.02,"ve zarara dönüşmeden yavaşça vücuttan atılır."],
+ [41.35,43.43,"Buna yarışmalı inhibisyon denir."],
+ [43.67,47.59,"İnhibitör substrata benzer ve aynı aktif bölge için yarışır."],
+ [47.86,52.65,"Ortamda substrat çoğalırsa yarışı o kazanır ve inhibitörün etkisi azalır."],
+ [52.97,55.17,"Bir de yarışmasız inhibitörler vardır."],
+ [55.47,60.18,"Bunlar aktif bölgeye değil, enzimin başka bir yerine bağlanır ve şeklini bozar."],
+ [60.46,63.51,"Cıva ve kurşun gibi ağır metaller böyle etki eder."],
+ [63.83,69.07,"Burada substrat eklemek işe yaramaz, çünkü aktif bölge artık doğru şekilde değildir."],
+ [69.35,71.27,"Birçok ilaç bu yollarla çalışır."],
+ [71.48,76.71,"Örneğin kolesterol ilaçları, kolesterol yapan bir enzimle yarışarak onu yavaşlatır."],
+ [77.01,83.15,"Peki sence, bir ilacın yarışmalı mı yarışmasız mı çalıştığını laboratuvarda nasıl anlarsın?"]
+];
+
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  cap.style.opacity = t > 83.0 ? 0 : 1;
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
