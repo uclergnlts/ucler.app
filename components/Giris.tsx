@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { hataMetni, sb, useOturum } from "@/lib/bulut";
 import { setAd, useAd } from "@/lib/store";
+import { adres } from "@/lib/site";
 import { GeriTop, Govde, PageHead } from "./temel";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -23,7 +24,7 @@ export default function Giris() {
   // Giriş yapılmışsa (ya da e-posta bağlantısıyla gelindiyse) Profil'e geç.
   useEffect(() => { if (oturum) router.replace("/profil/"); }, [oturum, router]);
 
-  const geri = typeof window !== "undefined" ? `${location.origin}/giris/` : undefined;
+  const geri = typeof window !== "undefined" ? adres("/giris/") : undefined;
   async function gonder(e: React.FormEvent) {
     e.preventDefault();
     setHata(""); setBilgi(""); setBekle(true);
