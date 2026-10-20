@@ -1,8 +1,10 @@
 "use client";
 // Videolar sekmesi: Reels/Shorts gibi tam ekran dikey akış. Yukarı kaydırınca sıradaki video gelir.
-// Ekrana gelen video sessiz başlar (tarayıcılar sesli otomatik oynatmaya izin vermez); ilk dokunuş sesi açar,
-// sonraki dokunuşlar durdurur ve sürdürür. Videonun altyazısı alt kenara yakın olduğu için düğmeler videonun
-// üstüne değil altındaki şeride konur: konunun adı, "Konuya git", "Cevabı gör", kaydet, paylaş ve ses.
+// Ekrana gelen video sesli başlar. Tarayıcı sesli otomatik oynatmayı engellerse (sayfada henüz dokunuş yoksa)
+// video sessiz oynar ve "Sesi açmak için dokun" görünür; o durumda ilk dokunuş yalnızca sesi açar.
+// Bunun dışında videoya dokunmak durdurur, yeniden dokunmak sürdürür. Videonun altyazısı alt kenara yakın
+// olduğu için düğmeler videonun üstüne değil altındaki şeride konur: konunun adı, "Konuya git", "Cevabı gör",
+// kaydet, paylaş ve ses.
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { DERSLER } from "@/lib/dersler";
@@ -15,35 +17,74 @@ import { PageHead, Top } from "./temel";
 import { Button } from "./ui/button";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
 
+// Öğrenci bu oturumda sesi açtı mı (ya da bir video sesli oynayabildi mi). Açtıysa akıştaki sonraki videolar
+// da sesli başlar; sayfa içinde gezinip Videolar'a dönünce de (bileşen yeniden kurulsa bile) sesli kalır.
+const SES_ANAHTAR = "tf-ses";
+let sesAcildi: boolean | null = null;
+function sesAcildiMi() {
+  if (sesAcildi === null) {
+    sesAcildi = false;
+    try { sesAcildi = sessionStorage.getItem(SES_ANAHTAR) === "1"; } catch {}
+  }
+  return sesAcildi;
+}
+function sesiAcildiSay() {
+  if (sesAcildiMi()) return;
+  sesAcildi = true;
+  try { sessionStorage.setItem(SES_ANAHTAR, "1"); } catch {}
+}
+
+/** muted: öğrencinin ses düğmesiyle kendi seçtiği sessizlik (akış boyunca kalır). */
 type Ortak = { muted: boolean; setMuted: (m: boolean) => void; toast: (t: string) => void };
 
 function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean; o: Ortak }) {
   const ref = useRef<HTMLVideoElement>(null);
   const izlendi = useRef(false);
-  const [paused, setPaused] = useState(false);
-  const [flash, setFlash] = useState<"play" | "pause" | null>(null);
+  const [paused, setPaused] = useState(true);
+  // zorla: tarayıcı sesli oynatmaya izin vermediği için video sessiz oynuyor; ilk dokunuş sesi açar.
+  const [zorla, setZorla] = useState(false);
   const [cevap, setCevap] = useState(false);
   const [pct, setPct] = useState(0);
   const [hint, setHint] = useState(false);
   const y = v.yerler[0], key = `${y.ders}.${y.konu}`;
   const saved = useSaved().includes(key);
+  const sessiz = o.muted || zorla;
   const I = Icon;
 
   // Yalnızca ekrandaki video oynar; ekrandan çıkan durur ve başa sarılır.
+  // Önce sesli oynatılır; tarayıcı engellerse (NotAllowedError) sessiz oynatılır ve ipucu gösterilir.
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     if (active) {
-      setPaused(false);
-      setHint(true);
-      el.play().catch(() => setPaused(true));
+      setZorla(false);
+      el.muted = o.muted;
+      el.play().then(
+        () => { if (!el.muted) sesiAcildiSay(); },
+        (e: unknown) => {
+          if ((e as Error)?.name !== "NotAllowedError" || el.muted) return;
+          el.muted = true;
+          setZorla(true);
+          setHint(true);
+          el.play().catch(() => {});
+        },
+      );
     } else {
       el.pause();
       el.currentTime = 0;
       izlendi.current = false;
       setCevap(false);
+      setZorla(false);
+      setHint(false);
     }
+    // o.muted bilerek bağımlılık değil: ses düğmesi oynatmayı baştan başlatmamalı.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [active]);
+  // Ses durumu videoya yansır (React muted özelliğini her zaman güncellemez).
+  useEffect(() => {
+    const el = ref.current;
+    if (el) el.muted = sessiz;
+  }, [sessiz]);
   // "Sesi açmak için dokun" ipucu birkaç saniye görünür; sonra yalnızca alttaki ses düğmesi kalır.
   useEffect(() => {
     if (!hint) return;
@@ -53,23 +94,30 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
   // Başka sayfaya geçilince React videoyu kaldırır ama tarayıcı onu arkada çalmaya devam ettirebilir.
   useEffect(() => () => ref.current?.pause(), []);
 
+  /** Sesi açar (dokunuş sayıldığı için tarayıcı artık izin verir); video oynamayı sürdürür. */
+  const sesiAc = useCallback(() => {
+    const el = ref.current;
+    if (!el) return;
+    el.muted = false;
+    setZorla(false);
+    setHint(false);
+    o.setMuted(false);
+    sesiAcildiSay();
+    if (el.paused) el.play().catch(() => {});
+  }, [o]);
+  const sesDugmesi = useCallback(() => {
+    if (sessiz) sesiAc();
+    else o.setMuted(true);
+  }, [sessiz, sesiAc, o]);
+
+  /** Videoya dokunuş: sessiz yedek durumdaysa yalnızca sesi açar; değilse durdurur ya da sürdürür. */
   const toggle = useCallback(() => {
     const el = ref.current;
     if (!el) return;
-    if (o.muted) {
-      o.setMuted(false);
-      if (el.paused) el.play().catch(() => {});
-      setPaused(false);
-      return;
-    }
-    if (el.paused) { el.play().catch(() => {}); setPaused(false); setFlash("play"); }
-    else { el.pause(); setPaused(true); setFlash("pause"); }
-  }, [o]);
-  useEffect(() => {
-    if (!flash) return;
-    const t = setTimeout(() => setFlash(null), 600);
-    return () => clearTimeout(t);
-  }, [flash]);
+    if (zorla) { sesiAc(); return; }
+    if (el.paused) el.play().catch(() => {});
+    else el.pause();
+  }, [zorla, sesiAc]);
 
   // Cevap penceresi (shadcn/ui Sheet, Radix Dialog): odak içeride kalır, Escape kapatır, kapanınca odak
   // "Cevabı gör" düğmesine döner. Açıkken akışın kısayolları (oklar, boşluk, m) çalışmaz.
@@ -79,11 +127,11 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
     if (!active || cevap) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === " " && !(e.target as Element)?.closest?.("button,a")) { e.preventDefault(); toggle(); }
-      if (e.key === "m") o.setMuted(!o.muted);
+      if (e.key === "m") sesDugmesi();
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
-  }, [active, cevap, toggle, o]);
+  }, [active, cevap, toggle, sesDugmesi]);
 
   async function paylas() {
     const url = `${location.origin}/videolar/#${v.id}`;
@@ -100,11 +148,13 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
           ref={ref}
           src={v.src}
           poster={v.poster}
-          muted={o.muted}
+          muted={sessiz}
           loop
           playsInline
           preload={active ? "auto" : "metadata"}
           onClick={toggle}
+          onPlay={() => setPaused(false)}
+          onPause={() => setPaused(true)}
           onTimeUpdate={(e) => {
             const yuzde = (100 * e.currentTarget.currentTime) / (e.currentTarget.duration || 1);
             setPct(yuzde);
@@ -112,11 +162,11 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
             if (yuzde >= 80 && !izlendi.current) { izlendi.current = true; kaydet("video", 1, PUAN.video); }
           }}
         />
-        {o.muted && active && hint && !cevap && (
-          <button className="reel-hint" onClick={toggle}><I.sesKapali />Sesi açmak için dokun</button>
+        {zorla && active && hint && !cevap && (
+          <button className="reel-hint" onClick={sesiAc}><I.sesKapali />Sesi açmak için dokun</button>
         )}
-        {(flash || (paused && !o.muted)) && (
-          <span className="reel-flash" aria-hidden="true">{flash === "play" ? <I.play /> : <I.pause />}</span>
+        {active && paused && !zorla && (
+          <span className="reel-flash" aria-hidden="true"><I.play /></span>
         )}
       </div>
 
@@ -141,8 +191,8 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
             <I.kayit />
           </button>
           <button className="reel-ic" onClick={paylas} aria-label="Paylaş"><I.paylas /></button>
-          <button className="reel-ic" onClick={() => o.setMuted(!o.muted)} aria-pressed={!o.muted} aria-label={o.muted ? "Sesi aç" : "Sesi kapat"}>
-            {o.muted ? <I.sesKapali /> : <I.sesAcik />}
+          <button className="reel-ic" onClick={sesDugmesi} aria-pressed={!sessiz} aria-label={sessiz ? "Sesi aç" : "Sesi kapat"}>
+            {sessiz ? <I.sesKapali /> : <I.sesAcik />}
           </button>
         </div>
       </div>
@@ -152,7 +202,8 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
 }
 
 export default function VideoFeed({ konular }: { konular: Record<string, string> }) {
-  const [muted, setMuted] = useState(true);
+  // Videolar sesli başlar; yalnızca öğrenci ses düğmesiyle kapatırsa akış sessiz sürer.
+  const [muted, setMuted] = useState(false);
   const [active, setActive] = useState(VIDEOLAR[0]?.id ?? "");
   const [msg, setMsg] = useState<string | null>(null);
   const feed = useRef<HTMLDivElement>(null);
