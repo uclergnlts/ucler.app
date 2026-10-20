@@ -42,7 +42,7 @@ Videolarda maskot ya da süs karakteri olmaz; görsel stil `docs/KARARLAR.md` i�
 ## 3. Video dosyaları nerede barınır?
 mp4 dosyaları depoya konmaz, çünkü çok büyükler (45 video ≈ 300-400 MB). Seçenekler:
 - **Yerel deneme:** Dosya `public/videolar/` altına kopyalanır (`.gitignore` mp4'leri dışarıda tutar), `src` `/videolar/KIM-01.mp4` olur.
-- **Yayın:** Videolar bir depolama ya da video servisine yüklenir, `src` oranın adresi olur. Önerim **Cloudflare R2**: indirme (trafik) ücreti yok, ilk 10 GB ücretsiz. Alternatif Bunny Stream: düşük internette kaliteyi kendisi ayarlar, az bir aylık ücreti var. Karar site yayına alınırken verilecek; adres değişirse yalnızca `src` alanları değişir.
+- **Yayın (2026-10-20, Üçler R2'yi seçti):** Videolar Üçler'in Cloudflare R2 deposunda (`ucler-videolar`) durur: `https://pub-d7370c95f24344aebcb621f6c412c2ed.r2.dev/<KOD>.mp4` ve `.jpg`. `src` ve `poster` bu adrestir. Yeni video önce R2'ye yüklenir, sonra `content/videolar.json` dosyasına yazılır. `public/videolar/` depoda yedek olarak kalır ama `.vercelignore` yüzünden Vercel'e gönderilmez (her deploy'u ~60 MB büyütüyordu).
 
 ## 4. Yeni video ekleme adımları
 1. Video `video/README.md` adımlarıyla üretilir (`KIM-01.mp4`, kapak için bir kare `KIM-01.jpg`).
