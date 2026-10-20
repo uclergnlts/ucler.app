@@ -4,6 +4,9 @@
 import type { DersId, Entry } from "@/lib/dersler";
 import { seri } from "@/lib/puan";
 import { gunAdi, setAd, useAd, useStorageOk, useTekrar } from "@/lib/store";
+import { useOturum } from "@/lib/bulut";
+import Link from "next/link";
+import { Button } from "./ui/button";
 import { Icon } from "./icons";
 import { Bos, Govde, Liste, Ok, PageHead, Satir, Top } from "./temel";
 import { Card } from "./ui/card";
@@ -11,7 +14,7 @@ import { useAnlamadiklarim, useKaydedilenler, useProfil } from "./profil/veri";
 
 export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[]>; basliklar: Record<string, string[]> }) {
   const { puan, done, yeni } = useProfil();
-  const storageOk = useStorageOk(), ad = useAd();
+  const storageOk = useStorageOk(), ad = useAd(), oturum = useOturum();
   const kayitli = useKaydedilenler(all).length, anlamadim = useAnlamadiklarim(all, basliklar).length;
   const tekrar = useTekrar();
   const sira = Object.values(tekrar).map((x) => x.g).sort(), kalan = sira.length;
@@ -37,12 +40,27 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
               onKeyDown={(e) => { if (e.key === "Enter") e.currentTarget.blur(); }}
             />
             <span className="text-sm text-muted-foreground">
-              {storageOk
-                ? "İlerlemen şimdilik yalnızca bu cihazda saklanıyor."
-                : "Tarayıcın kayıt tutmaya izin vermiyor. İlerlemen ve kaydettiklerin sayfayı yenilersen ya da sekmeyi kapatırsan silinir."}
+              {oturum
+                ? oturum.user.email
+                : storageOk
+                  ? "İlerlemen şimdilik yalnızca bu cihazda saklanıyor."
+                  : "Tarayıcın kayıt tutmaya izin vermiyor. İlerlemen ve kaydettiklerin sayfayı yenilersen ya da sekmeyi kapatırsan silinir."}
             </span>
           </span>
         </section>
+        {oturum === null && (
+          // Hesabı olmayan öğrenciye: ilerlemesi yalnız bu cihazda, hesap açınca kaybolmaz.
+          <section className="grid gap-3 rounded-2xl border border-border bg-card p-4">
+            <div className="grid gap-1">
+              <b className="font-display text-[17px] font-extrabold">İlerlemen kaybolmasın</b>
+              <p className="text-[14px] text-muted-foreground">Ücretsiz hesap aç; puanın, serin ve bitirdiğin konular hesabına kaydedilsin, telefon değiştirsen de devam et.</p>
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              <Button asChild><Link href="/giris/">Hesap aç</Link></Button>
+              <Button asChild variant="outline"><Link href="/giris/?giris">Giriş yap</Link></Button>
+            </div>
+          </section>
+        )}
         {yeni ? (
           <Bos>İlk konunu bitirdiğinde puanın, serin ve ilerlemen burada görünür.</Bos>
         ) : (

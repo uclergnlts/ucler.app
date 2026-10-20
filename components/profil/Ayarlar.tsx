@@ -1,6 +1,9 @@
 "use client";
+import Link from "next/link";
+import { useState } from "react";
+import { cikisYap, hesabiSil, useOturum } from "@/lib/bulut";
 import { girisYap } from "@/lib/puan";
-import { resetAll } from "@/lib/store";
+import { resetAll, setAd } from "@/lib/store";
 import { Icon } from "../icons";
 import { Bolum, INSTAGRAM, Liste, Ok, Satir } from "../temel";
 import { Button } from "../ui/button";
@@ -8,11 +11,48 @@ import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle, Dia
 import Kabuk from "./Kabuk";
 
 export default function Ayarlar() {
+  const oturum = useOturum();
+  const [cikiyor, setCikiyor] = useState(false), [silHata, setSilHata] = useState(false);
+  /** Çıkışta ve hesap silinince bu cihazdaki ilerleme ve ad temizlenir. */
+  const temizle = () => { resetAll(); setAd(""); girisYap(); };
   const Insta = Icon.instagram, Bulb = Icon.bulb, Kilit = Icon.kilit;
   return (
     <Kabuk title="Ayarlar">
       <Bolum title="Hesap">
-        <p className="text-[14px] text-muted-foreground">Hesap yakında. Şimdilik ilerlemen, puanın ve serin yalnızca bu cihazda tutulur.</p>
+        {oturum ? (
+          <div className="grid gap-3">
+            <p className="text-[14px] text-muted-foreground"><b className="text-foreground">{oturum.user.email}</b> ile giriş yaptın. İlerlemen hesabına kaydediliyor.</p>
+            <Button variant="outline" className="w-full" disabled={cikiyor} onClick={async () => { setCikiyor(true); await cikisYap(temizle); setCikiyor(false); }}>
+              {cikiyor ? "Çıkış yapılıyor..." : "Çıkış yap"}
+            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button variant="ghost" className="w-full text-bad hover:text-bad">Hesabımı sil</Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogTitle>Hesabın silinsin mi?</DialogTitle>
+                <DialogDescription>
+                  Hesabın, e-posta adresin ve buluttaki bütün ilerlemen kalıcı olarak silinir; bu cihazdaki ilerleme de temizlenir. Bu geri alınamaz.
+                </DialogDescription>
+                {silHata && <p role="alert" className="text-[14px] font-medium text-bad">Hesap silinemedi. İnternet bağlantını kontrol edip yeniden dene.</p>}
+                <div className="mt-2 grid gap-2">
+                  <Button className="bg-bad text-white hover:bg-bad/90" disabled={cikiyor} onClick={async () => { setCikiyor(true); setSilHata(!(await hesabiSil(temizle))); setCikiyor(false); }}>
+                    {cikiyor ? "Siliniyor..." : "Evet, hesabımı sil"}
+                  </Button>
+                  <DialogClose asChild><Button variant="ghost">Vazgeç</Button></DialogClose>
+                </div>
+              </DialogContent>
+            </Dialog>
+          </div>
+        ) : (
+          <div className="grid gap-3">
+            <p className="text-[14px] text-muted-foreground">Hesabın yok. İlerlemen, puanın ve serin yalnızca bu cihazda tutuluyor.</p>
+            <div className="grid grid-cols-2 gap-2">
+              <Button asChild><Link href="/giris/">Hesap aç</Link></Button>
+              <Button asChild variant="outline"><Link href="/giris/?giris">Giriş yap</Link></Button>
+            </div>
+          </div>
+        )}
       </Bolum>
       <Bolum title="ucler">
         <Liste>
@@ -29,7 +69,7 @@ export default function Ayarlar() {
           <DialogContent>
             <DialogTitle>İlerlemen silinsin mi?</DialogTitle>
             <DialogDescription>
-              Bitirdiğin konular, puanın, serin, kaydettiğin konular, tekrar sıran ve işaretlediğin kartlar bu cihazdan silinir. Bu geri alınamaz.
+              Bitirdiğin konular, puanın, serin, kaydettiğin konular, tekrar sıran ve işaretlediğin kartlar {oturum ? "bu cihazdan ve hesabından" : "bu cihazdan"} silinir. Bu geri alınamaz.
             </DialogDescription>
             <div className="mt-2 grid gap-2">
               <DialogClose asChild>

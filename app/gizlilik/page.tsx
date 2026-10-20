@@ -4,24 +4,29 @@ import { INSTAGRAM } from "@/lib/site";
 
 export const metadata = { title: "Gizlilik", description: "ucler'de verilerin nerede tutulduğu." };
 
-// Profil'in altından açılır. Metin yalnızca sitenin bugün gerçekten yaptığını anlatır (lib/store.ts, lib/olay.ts).
+// Profil'in altından açılır. Metin yalnızca sitenin bugün gerçekten yaptığını anlatır (lib/store.ts, lib/bulut.ts, lib/olay.ts).
 export default function Page() {
   return (
     <div className="app">
       <GeriTop to="/profil/" label="Profil'e dön" />
       <Govde className="text-[15px] leading-relaxed">
         <PageHead title="Gizlilik" />
-        <Bolum title="Hesap yok">
-          <p>ucler&apos;i kullanmak için hesap açman, ad, e-posta ya da telefon vermen gerekmez.</p>
+        <Bolum title="Hesap isteğe bağlı">
+          <p>ucler&apos;i hesap açmadan da kullanabilirsin. Hesap açarsan yalnızca e-posta adresini, şifreni ve istersen adını alırız.</p>
         </Bolum>
-        <Bolum title="Veriler yalnızca bu cihazda">
+        <Bolum title="Veriler nerede tutulur">
           <p>
             Bitirdiğin konular, test sonuçların, puanın, serin, kaydettiğin konular, tekrar sıran ve Profil&apos;e yazdığın ad
-            yalnızca bu tarayıcının kendi deposunda (localStorage) tutulur. Bunlar bize gönderilmez; başka bir cihazda ya da
-            başka bir tarayıcıda görünmez.
+            önce bu tarayıcının kendi deposunda (localStorage) tutulur. Hesabın yoksa bunlar bize gönderilmez.
           </p>
           <p>
-            Hepsini Profil &gt; Ayarlar&apos;daki &quot;İlerlemeyi sıfırla&quot; ile ya da tarayıcının site verilerini silerek kaldırabilirsin.
+            Hesabınla giriş yaptıysan aynı bilgiler, başka cihazlarda da devam edebilmen için hesabına kaydedilir. Hesaplar ve
+            ilerleme Supabase üzerinde, Avrupa Birliği&apos;ndeki (Frankfurt) sunucularda saklanır; şifren şifrelenmiş olarak
+            tutulur ve kimse göremez. Verilerini kimseyle paylaşmayız, reklam için kullanmayız.
+          </p>
+          <p>
+            Bu cihazdaki ilerlemeyi Profil &gt; Ayarlar&apos;daki &quot;İlerlemeyi sıfırla&quot; ile silebilirsin. Hesabını ve buluttaki
+            bütün verini aynı ekrandaki &quot;Hesabımı sil&quot; ile kalıcı olarak silebilirsin.
           </p>
         </Bolum>
         <Bolum title="Kullanım sayımı">

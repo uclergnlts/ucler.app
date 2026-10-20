@@ -3,6 +3,7 @@ import { Inter, Manrope } from "next/font/google";
 import Script from "next/script";
 import Tabs from "@/components/Tabs";
 import Gunluk from "@/components/Gunluk";
+import Bulut from "@/components/Bulut";
 import { UMAMI_ID } from "@/lib/olay";
 import "./globals.css";
 
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Tabs />
         <Gunluk />
+        <Bulut />
         {UMAMI_ID && <Script src="https://cloud.umami.is/script.js" data-website-id={UMAMI_ID} strategy="afterInteractive" />}
       </body>
     </html>
