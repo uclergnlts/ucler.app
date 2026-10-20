@@ -1,13 +1,13 @@
 "use client";
 // Yalnızca telefon uygulamasında (Capacitor) çalışır: üst çubuk yazıları koyu olsun; açılışta logo animasyonu oynasın.
 // Animasyon: telefonun sabit açılış ekranındaki "u." ile başlar, nokta sağa kayarken c, l, e, r harfleri noktanın
-// arkasından açılır ve "ucler." olur. Sitede `?acilis` ile önizlenir. "Hareketi azalt" açıksa oynamaz.
+// geçtiği yerde tek tek, yumuşakça belirir ve "ucler." olur. Sitede `?acilis` ile önizlenir. "Hareketi azalt" açıksa oynamaz.
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Capacitor } from "@capacitor/core";
 import { SplashScreen } from "@capacitor/splash-screen";
 import { StatusBar, Style } from "@capacitor/status-bar";
 
-const BEKLE = 250, KAYMA = 800, DUR = 450, SONME = 250;
+const BEKLE = 350, KAYMA = 1100, DUR = 500, SONME = 380;
 
 export default function Yerel() {
   const [acilis, setAcilis] = useState(false);
@@ -29,32 +29,47 @@ function Acilis({ bitti }: { bitti: () => void }) {
   const nokta = useRef<HTMLSpanElement>(null);
   useLayoutEffect(() => {
     const k = kutu.current!, y = yazi.current!, ke = kelime.current!, n = nokta.current!;
+    const harf = [...ke.children] as HTMLElement[];
     let iptal = false;
     // Harfler yazı tipi yüklenmeden ölçülürse yerleri kayar; önce yazı tipini bekle.
     document.fonts.ready.then(() => {
       if (iptal) return;
-      const W = y.offsetWidth, wN = n.offsetWidth, wKe = ke.offsetWidth;
-      const wU = (ke.firstElementChild as HTMLElement).offsetWidth;
-      // Başlangıç: yalnızca "u." görünür ve ortadadır. Kelime sola kayarken sağdan açılır; nokta açılan kenarı izler.
+      const W = y.offsetWidth, wN = n.offsetWidth, wKe = ke.offsetWidth, wU = harf[0].offsetWidth;
+      // Başlangıç: yalnızca "u." görünür ve ortadadır. Kelime sola, nokta sağa kayar; her harf nokta üstünden geçince belirir.
       const basKe = (W - wU - wN) / 2, gizli = wKe - wU, basN = basKe + wU - n.offsetLeft;
       ke.style.transform = `translateX(${basKe}px)`;
-      ke.style.clipPath = `inset(-20% ${gizli}px -20% 0)`;
       n.style.transform = `translateX(${basN}px)`;
+      harf.slice(1).forEach((h) => { h.style.opacity = "0"; });
       y.style.visibility = "visible";
       if (Capacitor.isNativePlatform()) void SplashScreen.hide({ fadeOutDuration: 0 }).catch(() => {});
-      const ayar = { duration: KAYMA, delay: BEKLE, easing: "cubic-bezier(.65,0,.35,1)", fill: "forwards" } as const;
-      ke.animate([{ transform: `translateX(${basKe}px)`, clipPath: `inset(-20% ${gizli}px -20% 0)` }, { transform: "translateX(0)", clipPath: "inset(-20% 0px -20% 0)" }], ayar);
-      n.animate([{ transform: `translateX(${basN}px)` }, { transform: "translateX(0)" }], ayar);
-      const son = k.animate([{ opacity: 1 }, { opacity: 0 }], { duration: SONME, delay: BEKLE + KAYMA + DUR, easing: "ease-in", fill: "forwards" });
-      son.onfinish = bitti;
+
+      const yumusak = "cubic-bezier(.22,1,.36,1)"; // easeOutQuint: hızlı başlar, çok yavaş durur
+      const kayma = { duration: KAYMA, delay: BEKLE, easing: yumusak, fill: "forwards" } as const;
+      // Nokta önce hafifçe "nefes alır", sonra kayar ve yerine yumuşakça oturur.
+      n.animate([{ scale: "1" }, { scale: "1.3" }, { scale: "1" }], { duration: BEKLE, easing: "ease-in-out" });
+      n.animate([{ transform: `translateX(${basN}px)` }, { transform: "translateX(0)" }], kayma);
+      n.animate([{ scale: "1" }, { scale: "1.25 0.8", offset: 0.35 }, { scale: "0.95 1.05", offset: 0.7 }, { scale: "1" }], { duration: 420, delay: BEKLE + KAYMA * 0.55, easing: "ease-out" });
+      ke.animate([{ transform: `translateX(${basKe}px)` }, { transform: "translateX(0)" }], kayma);
+      // Nokta bir harfin başına vardığı an (easeOutQuint'in tersi ile) o harf yukarı doğru, bulanıktan netleşerek gelir.
+      harf.slice(1).forEach((h) => {
+        const ilerleme = Math.min(1, Math.max(0, (h.offsetLeft - wU) / gizli));
+        const an = BEKLE + KAYMA * (1 - Math.pow(1 - ilerleme, 1 / 5)) * 0.9;
+        h.animate(
+          [{ opacity: 0, transform: "translateY(14px) scale(.85)", filter: "blur(6px)" }, { opacity: 1, transform: "none", filter: "blur(0)" }],
+          { duration: 520, delay: an, easing: yumusak, fill: "forwards" },
+        );
+      });
+      const son = BEKLE + KAYMA + DUR;
+      y.animate([{ scale: "1" }, { scale: "1.06" }], { duration: SONME, delay: son, easing: "ease-in", fill: "forwards" });
+      k.animate([{ opacity: 1 }, { opacity: 0 }], { duration: SONME, delay: son, easing: "ease-in", fill: "forwards" }).onfinish = bitti;
     });
     return () => { iptal = true; };
   }, [bitti]);
   return (
     <div ref={kutu} aria-hidden className="fixed inset-0 z-[100] grid place-items-center bg-white">
       <span ref={yazi} className="invisible relative flex font-display text-[56px] leading-none font-extrabold tracking-[-0.02em] text-[#1d3557]">
-        <span ref={kelime} className="flex"><span>u</span>cler</span>
-        <span ref={nokta} className="text-[#d63c63]">.</span>
+        <span ref={kelime} className="flex">{["u", "c", "l", "e", "r"].map((h) => <span key={h} className="inline-block">{h}</span>)}</span>
+        <span ref={nokta} className="relative z-10 inline-block origin-bottom text-[#d63c63]">.</span>
       </span>
     </div>
   );
