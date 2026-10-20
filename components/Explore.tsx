@@ -22,8 +22,7 @@ export default function Explore({ all }: { all: Record<DersId, Entry[]> }) {
 
   const needle = fold(q.trim());
   const rows = DERS_IDS.filter((d) => filter === "all" || filter === d).flatMap((d) =>
-    // Sınav etiketi de aranır: "tyt" yazınca TYT konuları gelir ("TYT-AYT" ikisinde de çıkar).
-    all[d].filter((e) => !needle || fold(`${e.id ? `${e.title} ${e.summary} ${e.headings}` : e.ad} ${e.sinav ?? ""}`).includes(needle)),
+    all[d].filter((e) => !needle || fold(`${e.id ? `${e.title} ${e.summary} ${e.headings}` : e.ad}`).includes(needle)),
   );
 
   return (

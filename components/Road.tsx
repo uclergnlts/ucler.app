@@ -3,7 +3,7 @@
 // sonrakiler sade görünür ama hepsi açılır. Yazılmamış konular "Yakında".
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { DERSLER, SINAV_AD, type DersId, type Entry } from "@/lib/dersler";
+import { DERSLER, type DersId, type Entry } from "@/lib/dersler";
 import { durumlar, siradaki } from "@/lib/harita";
 import { useAsama, useProg } from "@/lib/store";
 import { asamaSayisi } from "@/lib/asama";
@@ -39,7 +39,7 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
             const res = e.id ? prog[`${ders}.${e.id}`] : undefined;
             const durum = res ? "bitti" : e.id && e.id === sira ? "sirada" : ("kilitli" as const);
             const ilerleme = e.id && !res && asama[`${ders}.${e.id}`] ? `${asama[`${ders}.${e.id}`]}/${asamaSayisi(e.cardCount ?? 0)} aşama` : "";
-            const alt = !e.id ? "Yakında" : [e.sinav && SINAV_AD[e.sinav], res, ilerleme].filter(Boolean).join(" · ");
+            const alt = !e.id ? "Yakında" : [res, ilerleme].filter(Boolean).join(" · ");
             return {
               baslik: e.title ?? e.ad,
               alt,

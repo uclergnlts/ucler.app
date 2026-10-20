@@ -3,7 +3,7 @@
 // hareket Motion ile. Sade: beyaz zemin, 1px çizgiler, renk yalnızca küçük vurgularda (docs/KARARLAR.md).
 import Link from "next/link";
 import { motion, type HTMLMotionProps } from "motion/react";
-import { DERSLER, SINAV_AD, type Entry } from "@/lib/dersler";
+import { DERSLER, type Entry } from "@/lib/dersler";
 import { INSTAGRAM } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { Badge } from "./ui/badge";
@@ -150,7 +150,7 @@ export function Row({ e, done }: { e: Entry; done?: boolean }) {
       href={href(e.ders, e.id)}
       icon={<I />}
       title={e.title}
-      sub={`${DERSLER[e.ders].ad}${e.sinav ? ` · ${SINAV_AD[e.sinav]}` : ""} · ${e.summary}`}
+      sub={`${DERSLER[e.ders].ad} · ${e.summary}`}
       tag={done ? <Badge variant="default">Bitti</Badge> : <span className="flex-none text-xs font-semibold text-muted-foreground">{e.cardCount} kart</span>}
     />
   );

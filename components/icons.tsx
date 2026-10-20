@@ -14,6 +14,18 @@ export const Icon = {
   biyoloji: () => (
     <svg {...base}><ellipse cx="12" cy="12" rx="9" ry="7" /><circle cx="13.5" cy="11" r="2.8" /><circle cx="7.5" cy="14" r="1" fill="currentColor" /><circle cx="16" cy="16.5" r="1" fill="currentColor" /></svg>
   ),
+  matematik: () => (
+    <svg {...base} strokeLinecap="round"><path d="M7 4v6M4 7h6M14 7h6M4.5 15.5l5 5M9.5 15.5l-5 5M14 16h6M14 20h6" /></svg>
+  ),
+  tarih: () => (
+    <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18M4 9h16M12 3l8 4H4z" /><path d="M6 9v9M10 9v9M14 9v9M18 9v9" /></svg>
+  ),
+  cografya: () => (
+    <svg {...base} strokeLinecap="round"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z" /></svg>
+  ),
+  hukuk: () => (
+    <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v18M8 21h8M5 6h14M5 6l-3 7a3 3 0 0 0 6 0zM19 6l-3 7a3 3 0 0 0 6 0z" /></svg>
+  ),
   kesfet: () => (
     <svg {...base} strokeLinecap="round"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></svg>
   ),

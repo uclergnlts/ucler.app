@@ -13,7 +13,7 @@ export default function Page() {
         <PageHead title="Hakkında" />
         <p>
           ucler, fizik, kimya ve biyolojiyi en temelden anlatan bir öğrenme sitesi. Konular kısa, görselli kartlarla anlatılır;
-          9. sınıftan üniversitenin ilk yıllarına kadar herkes için yazıldı ve YKS&apos;nin (TYT ve AYT) konularını kapsamayı amaçlar.
+          9. sınıftan üniversitenin ilk yıllarına kadar herkes için yazıldı ve YKS&apos;nin konularını kapsamayı amaçlar.
           Site şu an deneme sürümünde; içerik ve görünüm geliştirilmeye devam ediyor.
         </p>
         <Bolum title="Nasıl kullanılır?">

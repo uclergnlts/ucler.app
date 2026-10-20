@@ -26,5 +26,5 @@ export default async function Page({ params }: Props) {
   const on = (bu?.on ?? []).map((o) => ({ id: o, title: list.find((e) => e.id === o)?.title ?? o }));
   // key: başka bir konuya geçince ders ekranı baştan başlasın.
   return <Lesson key={`${ders}.${konu}`} ders={ders} id={konu} t={t} next={n?.id ? { id: n.id, title: n.title! } : undefined}
-    adimli={a && a.ders === ders ? a : undefined} on={on} sinav={bu?.sinav} />;
+    adimli={a && a.ders === ders ? a : undefined} on={on} />;
 }

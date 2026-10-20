@@ -8,7 +8,7 @@
 // sonra gelir: kısa açıklama (kart) → örnek (sahne kendisi oynar) → sıra sende (görev). Görev bitmeden "Devam" açılmaz.
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { DERSLER, SINAV_AD, secmeli, type DersId, type Sinav, type Topic } from "@/lib/dersler";
+import { DERSLER, secmeli, type DersId, type Topic } from "@/lib/dersler";
 import {
   asamaBitir, ipucuGoruldu, setProg, toggleAnlamadim, toggleSaved, useAnlamadim, useAsama, useIpucu, useProg, useSaved, useYer, yanlisKaydet, yerYaz,
 } from "@/lib/store";
@@ -42,8 +42,8 @@ type State = { a: number; ara: boolean; i: number; q: number; cevap: Cevap; sonu
 const START: State = { a: -1, ara: false, i: 0, q: -1, cevap: null, sonuc: null, right: 0, odul: 0, cevaplar: [] };
 
 export default function Lesson({
-  ders, id, t, next, adimli, on = [], sinav,
-}: { ders: DersId; id: string; t: Topic; next?: { id: string; title: string }; adimli?: AdimliDers; on?: { id: string; title: string }[]; sinav?: Sinav }) {
+  ders, id, t, next, adimli, on = [],
+}: { ders: DersId; id: string; t: Topic; next?: { id: string; title: string }; adimli?: AdimliDers; on?: { id: string; title: string }[] }) {
   const [s, setS] = useState<State>(START);
   // Adımların hepsi bir karta yerleştirilmişse anlatımın içine girer (şu an 82 konunun hepsinde böyle).
   const birlesik = !!adimli?.adimlar.length && adimli.adimlar.every((a) => a.kart);
@@ -186,16 +186,7 @@ export default function Lesson({
     const testAcik = bitenA >= nAsama;
     body = (
       <div className="flex flex-col gap-5">
-        <motion.div
-          className="relative overflow-hidden rounded-3xl bg-acc-soft p-4 [&_svg]:mx-auto [&_svg]:block [&_svg]:h-auto [&_svg]:max-h-[120px] [&_svg]:w-full"
-          initial={{ opacity: 0, scale: 0.97 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="rounded-2xl bg-card p-2.5" aria-hidden="true" dangerouslySetInnerHTML={{ __html: t.cards[0].svg }} />
-        </motion.div>
         <section className="grid gap-2">
-          {sinav && <span className="text-[13px] font-bold text-muted-foreground">{SINAV_AD[sinav]} konusu</span>}
           <h1 className="text-[26px]">{t.title}</h1>
           <Html as="p" className="text-[15px] text-muted-foreground" html={t.summary} />
         </section>

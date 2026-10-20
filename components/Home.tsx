@@ -9,7 +9,14 @@ import { Icon } from "./icons";
 import { motion } from "motion/react";
 import { Progress } from "./ui/progress";
 import Bugun from "./Bugun";
-import { Bolum, Govde, href, Liste, Simge, Top } from "./temel";
+import { Bolum, Govde, href, Simge, Top } from "./temel";
+import { Button } from "./ui/button";
+import { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "./ui/sheet";
+import { cn } from "@/lib/utils";
+
+// Henüz içeriği olmayan dersler: kartı görünür, dokununca "yakında" der.
+const YAKINDA = [["matematik", "Matematik"], ["tarih", "Tarih"], ["cografya", "Coğrafya"], ["hukuk", "Hukuk"]] as const;
+const dersKart = "flex min-h-[160px] flex-col justify-between gap-3 rounded-3xl border border-border bg-card p-4 transition-transform active:scale-[.98]";
 
 export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
   const prog = useProg(), ad = useAd(), tekrar = useTekrar(), asama = useAsama();
@@ -93,24 +100,45 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
         )}
 
         <Bolum title="Dersler">
-          <Liste>
+          <div className="grid grid-cols-2 gap-3">
             {DERS_IDS.map((d) => {
               const s = DERSLER[d], ready = all[d].filter((e) => e.id);
               const done = ready.filter((e) => prog[`${d}.${e.id}`]).length;
               const I = Icon[d];
               return (
-                <Link key={d} data-ders={d} href={href(d)} className="flex items-center gap-3.5 p-4 transition-colors active:bg-secondary">
-                  <Simge className="size-11 [&_svg]:size-[22px]"><I /></Simge>
-                  <span className="grid min-w-0 flex-1 gap-0.5">
-                    <b className="font-display text-[17px] font-extrabold">{s.ad}</b>
-                    <span className="text-sm text-muted-foreground">{s.yol}</span>
-                    <Progress className="mt-1.5 h-1" value={ready.length ? (100 * done) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti`} />
+                <Link key={d} data-ders={d} href={href(d)} className={dersKart}>
+                  <Simge className="size-14 rounded-2xl [&_svg]:size-7"><I /></Simge>
+                  <span className="grid gap-1">
+                    <b className="font-display text-[18px] font-extrabold">{s.ad}</b>
+                    <span className="text-[13px] font-bold tabular-nums text-muted-foreground">{done}/{ready.length} konu</span>
+                    <Progress className="mt-1 h-1" value={ready.length ? (100 * done) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti`} />
                   </span>
-                  <span className="flex-none text-[13px] font-bold tabular-nums text-muted-foreground">{done}/{ready.length}</span>
                 </Link>
               );
             })}
-          </Liste>
+            {YAKINDA.map(([k, ad]) => {
+              const I = Icon[k];
+              return (
+                <Sheet key={k}>
+                  <SheetTrigger className={cn(dersKart, "text-left")}>
+                    <Simge soluk className="size-14 rounded-2xl [&_svg]:size-7"><I /></Simge>
+                    <span className="grid gap-1">
+                      <b className="font-display text-[18px] font-extrabold text-muted-foreground">{ad}</b>
+                      <span className="text-[13px] font-bold text-muted-foreground">Yakında</span>
+                    </span>
+                  </SheetTrigger>
+                  <SheetContent>
+                    <div className="grid justify-items-center gap-3 py-4 text-center">
+                      <Simge soluk className="size-16 rounded-2xl [&_svg]:size-8"><I /></Simge>
+                      <SheetTitle className="text-[22px]">{ad} yakında</SheetTitle>
+                      <SheetDescription className="text-muted-foreground">Bu dersin konularını hazırlıyoruz. Hazır olunca burada açılacak.</SheetDescription>
+                      <SheetClose asChild><Button className="mt-2 w-full">Tamam</Button></SheetClose>
+                    </div>
+                  </SheetContent>
+                </Sheet>
+              );
+            })}
+          </div>
         </Bolum>
 
         {VIDEOLAR.length > 0 && (
