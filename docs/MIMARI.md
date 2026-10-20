@@ -15,14 +15,15 @@ app/               sayfalar (adres = klasör)
   globals.css      renk değişkenleri, shadcn/ui jetonları (@theme), eski bileşen sınıfları (oyunlar, video, etkileşimli kartlar)
   page.tsx                 /                ana sayfa
   kesfet/page.tsx          /kesfet/         arama ve ders süzgeci
-  kaydedilenler/page.tsx   /kaydedilenler/  eski adres; Profil'i gösterir (kaydedilenler Profil'in içinde)
+  kaydedilenler/page.tsx   /kaydedilenler/  eski adres; Profil > Kaydedilenler ekranını gösterir
   oyunlar/                 /oyunlar/        Oyunlar sekmesi ve oyunlar
-  profil/page.tsx          /profil/         profil
+  profil/page.tsx          /profil/         profil: ad, üç özet sayı, alt ekranlara satırlar
+  profil/*/page.tsx        /profil/istatistikler/, /profil/kaydedilenler/, /profil/anlamadiklarim/, /profil/ayarlar/
   videolar/page.tsx        /videolar/       Videolar sekmesi: dikey video akışı
   tekrar/page.tsx          /tekrar/         akıllı tekrar: yanlış yapılan sorulardan bugün sırası gelenler
   [ders]/page.tsx          /<ders>/         konu haritası (ön koşul bağlantılarıyla) ve konu listesi
   [ders]/[konu]/page.tsx   /<ders>/<konu>/  ders ekranı
-components/        ekranların kendisi (Home, Road, Lesson, Explore, Profile, Oyunlar, Tabs, VideoPlayer, VideoFeed, temel, icons)
+components/        ekranların kendisi (Home, Road, Lesson, Explore, Profile, Oyunlar, Tabs, VideoPlayer, VideoFeed, temel, icons); profil/ altında Profil'in alt ekranları
 components/ui/     shadcn/ui parçaları (Button, Card, Input, Badge, Progress, Sheet); kod projenin içindedir, görünümü biz belirleriz
 lib/
   dersler.ts       türler ve ders listesi (tarayıcıya giden küçük kısım)
@@ -41,7 +42,7 @@ lib/
   - `tf-prog`: konu bazında test sonucu (`"ders.konu": "3/4 doğru"`) ve son açılan konu (`_last`)
   - `tf-saved`: kaydedilen konular
   - `tf-tekrar`: akıllı tekrar sırası (`"ders.konu.soru sırası": {s: basamak, g: "YYYY-AA-GG"}`). Testte yanlış yapılan soru 1, 3 ve 7 gün sonra yeniden sorulur; tekrarda yanlış yapılırsa başa döner, üç doğrudan sonra sıradan çıkar.
-  - `tf-anlamadim`: "Bunu anlamadım" diye işaretlenen kartlar (`"ders.konu.kart no"`); Profil'de "Anlamadığım kartlar" altında görünür. `lib/olay.ts` içindeki Umami kimliği doldurulursa her işaret toplu olay olarak da gönderilir (kişisel bilgi yok).
+  - `tf-anlamadim`: "Bunu anlamadım" diye işaretlenen kartlar (`"ders.konu.kart no"`); Profil > Anlamadıklarım ekranında görünür. `lib/olay.ts` içindeki Umami kimliği doldurulursa her işaret toplu olay olarak da gönderilir (kişisel bilgi yok).
   - `tf-gorunum`: ders sayfasında harita mı liste mi seçildiği
   - `tf-asama`: konu bazında bitirilen aşama sayısı (`"ders.konu": 1`). Kartlar 2-4 aşamaya bölünür (`lib/asama.ts`); aşamalar sırayla açılır, test son aşamadan sonra gelir.
   - `tf-puan`: toplam puan, en uzun seri ve gün gün sayaçlar (`gunler["YYYY-AA-GG"] = {kart, adim, soru, dogru, asama, konu, tekrar, oyun, video, p, giris}`). Puan tablosu ve görev havuzu `lib/puan.ts` içinde. Seri: kart, görev, soru, tekrar, oyun ya da video yapılan kesintisiz günler.

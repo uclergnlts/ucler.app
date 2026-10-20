@@ -98,4 +98,10 @@ export const Icon = {
   bulb: () => (
     <svg viewBox="0 0 24 24" fill="none" stroke="#1d3557" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18h6M10 21h4" /><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="#ffc93c" /></svg>
   ),
+  grafik: () => (
+    <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M4 20h16" /><path d="M7 16v-5M12 16V6M17 16v-8" /></svg>
+  ),
+  ayar: () => (
+    <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M4 7h10M18 7h2M4 17h2M10 17h10" /><circle cx="16" cy="7" r="2" /><circle cx="8" cy="17" r="2" /></svg>
+  ),
 };

@@ -18,21 +18,21 @@ export default function Page() {
         </p>
         <Bolum title="Nasıl kullanılır?">
           <ol className="grid list-decimal gap-2 pl-5">
-            <li>Ana sayfadan ya da <Link href="/kesfet/" className="font-semibold underline underline-offset-2">Keşfet</Link>&apos;ten bir konu seç. Konular sırayla önerilir ama istediğine atlayabilirsin.</li>
+            <li>Ana sayfadan ya da <Link href="/kesfet/" className="-my-2.5 inline-block py-2.5 font-semibold underline underline-offset-2">Keşfet</Link>&apos;ten bir konu seç. Konular sırayla önerilir ama istediğine atlayabilirsin.</li>
             <li>Her konu birkaç aşamadan oluşur. Kartları oku, aradaki küçük görevleri çöz.</li>
             <li>Konunun sonunda 4 soruluk mini test var. Konuyu biliyorsan teste doğrudan da geçebilirsin.</li>
             <li>Yanlış yaptığın sorular tekrar sırana girer ve birkaç gün arayla yeniden sorulur. Ana sayfada &quot;Tekrar zamanı&quot; olarak görünür.</li>
-            <li>Anlamadığın kartı sağ üstteki ? simgesiyle işaretle; Profil&apos;de listelenir.</li>
+            <li>Anlamadığın kartı sağ üstteki ? simgesiyle işaretle; Profil&apos;deki Anlamadıklarım ekranında listelenir.</li>
           </ol>
         </Bolum>
         <Bolum title="İletişim">
           <p>
             Soru, öneri ya da hata bildirimi için Instagram&apos;dan yazabilirsin:{" "}
-            <a href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">{INSTAGRAM.ad}</a>
+            <a href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer" className="-my-2.5 inline-block py-2.5 font-semibold underline underline-offset-2">{INSTAGRAM.ad}</a>
           </p>
         </Bolum>
         <p className="text-muted-foreground">
-          Verilerinin nasıl tutulduğunu <Link href="/gizlilik/" className="font-semibold underline underline-offset-2">Gizlilik</Link> sayfasında okuyabilirsin.
+          Verilerinin nasıl tutulduğunu <Link href="/gizlilik/" className="-my-2.5 inline-block py-2.5 font-semibold underline underline-offset-2">Gizlilik</Link> sayfasında okuyabilirsin.
         </p>
       </Govde>
     </div>

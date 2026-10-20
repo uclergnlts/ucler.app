@@ -18,7 +18,8 @@ const TABS = [
 
 export default function Tabs() {
   const parts = usePathname().split("/").filter(Boolean);
-  if (parts.length >= 2 || parts[0] === "tekrar") return null;
+  // Profil'in alt ekranları (/profil/istatistikler/ ...) alt menüyü gösterir, Profil seçili kalır.
+  if ((parts.length >= 2 && parts[0] !== "profil") || parts[0] === "tekrar") return null;
   // Ders haritası (/fizik/) ve bulunamayan sayfalar hiçbir sekmeye ait değil: hiçbiri seçili görünmez.
   const cur: string | undefined =
     parts.length === 0

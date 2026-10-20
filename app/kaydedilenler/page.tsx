@@ -1,8 +1,9 @@
-import Yonlendir from "@/components/Yonlendir";
+import Kaydedilenler from "@/components/profil/Kaydedilenler";
+import { allEntries } from "@/lib/content";
 
-// Kaydedilenler artık Profil'in içinde. Eski bağlantılar Profil'deki bölüme gider.
-export const metadata = { title: "Profil", robots: { index: false } };
+// Eski adres: Profil > Kaydedilenler ekranını gösterir (asıl adres /profil/kaydedilenler/).
+export const metadata = { title: "Kaydedilenler", robots: { index: false } };
 
 export default function Page() {
-  return <Yonlendir to="/profil/#kaydedilenler" ad="Profil · Kaydedilenler" />;
+  return <Kaydedilenler all={allEntries()} />;
 }

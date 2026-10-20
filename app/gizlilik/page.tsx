@@ -21,7 +21,7 @@ export default function Page() {
             başka bir tarayıcıda görünmez.
           </p>
           <p>
-            Hepsini Profil&apos;deki &quot;İlerlemeyi sıfırla&quot; ile ya da tarayıcının site verilerini silerek kaldırabilirsin.
+            Hepsini Profil &gt; Ayarlar&apos;daki &quot;İlerlemeyi sıfırla&quot; ile ya da tarayıcının site verilerini silerek kaldırabilirsin.
           </p>
         </Bolum>
         <Bolum title="Kullanım sayımı">
@@ -34,8 +34,8 @@ export default function Page() {
         <Bolum title="Soruların için">
           <p>
             Instagram&apos;dan yazabilirsin:{" "}
-            <a href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">{INSTAGRAM.ad}</a>.
-            Sitenin ne olduğunu <Link href="/hakkinda/" className="font-semibold underline underline-offset-2">Hakkında</Link> sayfasında okuyabilirsin.
+            <a href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer" className="-my-2.5 inline-block py-2.5 font-semibold underline underline-offset-2">{INSTAGRAM.ad}</a>.
+            Sitenin ne olduğunu <Link href="/hakkinda/" className="-my-2.5 inline-block py-2.5 font-semibold underline underline-offset-2">Hakkında</Link> sayfasında okuyabilirsin.
           </p>
         </Bolum>
       </Govde>
