@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from "motion/react";
 import type { TekrarSoru } from "@/lib/content";
 import { DERSLER, secmeli } from "@/lib/dersler";
 import { kaydet, PUAN } from "@/lib/puan";
-import { doneKeys, gun, gunAdi, progOku, tekrarCevap, tekrarOku, useTekrar, yanlisKaydet } from "@/lib/store";
+import { doneKeys, gun, gunAdi, progOku, tekrarCevap, tekrarOku, useProg, useTekrar, yanlisKaydet } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
 import { Alt } from "./Soru";
@@ -22,6 +22,8 @@ import { Progress } from "./ui/progress";
 type Oge = { key: string; s: number };
 /** Karışık testte kaç soru sorulur. */
 const KARISIK = 10;
+/** Hiç test çözmemiş öğrencinin "İlk testini çöz" ile gittiği konu: fiziğin ilk konusu. */
+const ILK_KONU = "/fizik/fizik-bilimine-giris/";
 
 /** Yerinde karıştırır. */
 function karistir<T>(l: T[]) {
@@ -40,7 +42,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
   const [right, setRight] = useState(0);
   // Sonuç ekranı için: kaç soru öğrenilip sıradan çıktı, kaçı bir basamak ilerledi (doğru ama sırada kaldı).
   const [ogrenilen, setOgrenilen] = useState(0);
-  const tekrar = useTekrar();
+  const tekrar = useTekrar(), prog = useProg();
   const [karisik, setKarisik] = useState(false);
   const Close = Icon.kapat;
 
@@ -102,9 +104,10 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
     // Bugün sorulacak yok: sıradakini söyle.
     const gelecek = Object.values(tekrar).map((x) => x.g).filter((g) => g > gun()).sort();
     const ilk = gelecek[0], ayni = gelecek.filter((g) => g === ilk).length;
+    // Hiç test çözülmediyse (tekrar sırası boş, bitmiş konu yok) öğrenci ilk konunun testine yönlendirilir.
+    const hicTest = !Object.keys(tekrar).length && !doneKeys(prog).length;
     body = (
-      <article className="flex flex-col items-center gap-2 pt-10 text-center">
-        <Logo className="mb-1 text-[40px]" />
+      <article className="flex flex-col items-center gap-2 pt-6 text-center">
         <h1 className="text-[24px]">Bugün tekrar edecek sorun yok</h1>
         <p className="text-[15px] text-muted-foreground">
           {ilk ? `Sıradaki tekrar ${gunAdi(ilk)}: ${ayni} soru.` : "Testlerde yanlış yaptığın sorular burada toplanır."}
@@ -113,7 +116,11 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
           Bir soruyu yanlış yapınca ertesi gün yeniden karşına çıkar. Doğru yaparsan 2 gün sonra, sonra da 4 gün sonra
           yeniden sorulur. Üçünü de doğru yaparsan soru sıradan çıkar; arada yanlış yaparsan baştan başlar. Bilgi böyle kalıcı olur.
         </p>
-        <Button asChild className="mt-4 w-full"><Link href="/">Ana sayfaya dön</Link></Button>
+        {hicTest ? (
+          <Button asChild className="mt-4 w-full"><Link href={ILK_KONU}>İlk testini çöz</Link></Button>
+        ) : (
+          <Button asChild className="mt-4 w-full"><Link href="/">Ana sayfaya dön</Link></Button>
+        )}
       </article>
     );
   } else if (cur && Q) {
@@ -184,7 +191,8 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
         <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href="/" aria-label={karisik ? "Karışık testten çık" : "Tekrardan çık"}><Close /></Link></Button>
         <div className="grid min-w-0 flex-1 gap-1.5">
           <span className="truncate font-display text-[15px] font-extrabold">{karisik ? "Karışık test" : "Tekrar"}</span>
-          <Progress value={n ? (100 * Math.min(i + (sonuc !== null ? 1 : 0), n)) / n : 0} />
+          {/* Sorulacak soru yoksa ilerleme çubuğu gösterilmez. */}
+          {n > 0 && <Progress value={(100 * Math.min(i + (sonuc !== null ? 1 : 0), n)) / n} />}
         </div>
       </header>
       <main className="view gap-0 pt-1 pb-0">
