@@ -11,6 +11,7 @@ import { DERSLER } from "@/lib/dersler";
 import { toggleSaved, useSaved } from "@/lib/store";
 import { kaydet, PUAN } from "@/lib/puan";
 import { VIDEOLAR, yerHref, type Video } from "@/lib/videolar";
+import { adres } from "@/lib/site";
 import { Icon } from "./icons";
 import { AnimatePresence, motion } from "motion/react";
 import { PageHead, Top } from "./temel";
@@ -134,7 +135,7 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
   }, [active, cevap, toggle, sesDugmesi]);
 
   async function paylas() {
-    const url = `${location.origin}/videolar/#${v.id}`;
+    const url = adres(`/videolar/#${v.id}`);
     try {
       if (navigator.share) await navigator.share({ title: v.baslik, url });
       else { await navigator.clipboard.writeText(url); o.toast("Bağlantı kopyalandı"); }

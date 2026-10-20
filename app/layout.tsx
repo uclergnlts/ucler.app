@@ -6,12 +6,14 @@ import Gunluk from "@/components/Gunluk";
 import Bulut from "@/components/Bulut";
 import Yerel from "@/components/Yerel";
 import { UMAMI_ID } from "@/lib/olay";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const manrope = Manrope({ subsets: ["latin", "latin-ext"], weight: ["600", "700", "800"], variable: "--font-manrope" });
 const inter = Inter({ subsets: ["latin", "latin-ext"], weight: ["400", "500", "600", "700", "800"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: { default: "ucler", template: "%s · ucler" },
   description: "Fizik, kimya ve biyoloji en temelden: kısa, görselli kartlar ve mini testler.",
 };
