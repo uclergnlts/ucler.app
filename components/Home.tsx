@@ -40,7 +40,7 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
     const h = decodeURIComponent(location.hash.slice(1));
     if (!h) return;
     const [d, id] = h.split(".");
-    const page = ({ kesfet: "/kesfet/", kayit: "/profil/", profil: "/profil/" } as Record<string, string>)[d];
+    const page = ({ kesfet: "/kesfet/", kayit: "/profil/kaydedilenler/", profil: "/profil/" } as Record<string, string>)[d];
     if (page) router.replace(page);
     else if (d in all) router.replace(id ? href(d, id) : href(d));
   }, [all, router]);

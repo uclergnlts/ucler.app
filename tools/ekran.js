@@ -51,6 +51,9 @@ server.listen(0, async () => {
   const p = await b.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
   p.setDefaultTimeout(8000);
   // DersMotoru'daki COZUM_SURE (25000 ms) beklemesini kısalt.
+  // Konular sırayla açılır (lib/kilit.ts): her konunun ekranı alınabilsin diye bütün ünite testleri geçilmiş sayılır.
+  const uniteler = Object.fromEntries(Object.entries(require(path.join(root, 'content/dersler.json'))).flatMap(([d, v]) => v.konular.filter((k) => k.unite).map((_, i) => [`${d}.${i + 1}`, 100])));
+  await p.addInitScript((u) => { try { if (!localStorage.getItem('tf-unite')) localStorage.setItem('tf-unite', JSON.stringify(u)); } catch {} }, uniteler);
   await p.addInitScript(() => { const st = window.setTimeout; window.setTimeout = (f, d, ...a) => st(f, d === 25000 ? 400 : d, ...a); });
   const ileri = (ms) => p.waitForTimeout(ms);
   const cek = async (ad) => { await ileri(1800); await p.screenshot({ path: path.join(out, `${ad}.png`) }); };
