@@ -52,9 +52,9 @@ Hedef (Üçler): uygulama tamamen bitince iOS ve Android uygulaması çıkarmak,
 
 ### Sırası
 1. Sunucusuz özellikler (bu cihazda): aşamalar, puan, seri, görevler. **Yapıldı.**
-2. Capacitor kabuğu: iOS ve Android projeleri, yerel bildirim, çevrimdışı içerik, simge ve açılış ekranı.
-3. Hesap ve puan listesi: Supabase (giriş, ilerleme eşitleme, puan listesi). Cihazdaki sayaçlar (`tf-puan`) ilk girişte hesaba taşınır.
-4. Ücretli üyelik: uygulama içi satın alma (Apple ve Google kuralı gereği). RevenueCat iki mağazayı tek yerden yönetir.
+2. Capacitor kabuğu: iOS ve Android projeleri, yerel bildirim, çevrimdışı içerik, simge ve açılış ekranı. **Kabuk, simge ve açılış ekranı yapıldı** (`ios/`, `android/`, bkz. `docs/UYGULAMA.md`); içerik uygulamanın içinde olduğu için çevrimdışı da çalışır. Yerel bildirim bekliyor.
+3. Hesap ve puan listesi: Supabase (giriş, ilerleme eşitleme, puan listesi). Cihazdaki sayaçlar (`tf-puan`) ilk girişte hesaba taşınır. **Hesap ve eşitleme yapıldı** (`lib/bulut.ts`); puan listesi bekliyor.
+4. Ücretli üyelik: uygulama içi aylık abonelik (Apple ve Google kuralı gereği). RevenueCat iki mağazayı tek yerden yönetir; abonelik durumu Supabase hesabına yazılır. Taslak (Üçler 2026-10-20): her dersin ilk konusu ücretsiz, sonrası abonelikle.
 5. Tanıtım sitesi ve mağaza sayfaları; ardından yayın.
 
 ### Üçler'in açması gereken hesaplar (zamanı gelince)
