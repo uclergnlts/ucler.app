@@ -8,7 +8,7 @@ Uygulama, sitenin statik çıktısını (`out/`) Capacitor ile iOS ve Android pr
 | `ios/` | Xcode projesi (Swift Package Manager; CocoaPods yok). |
 | `android/` | Android Studio projesi. |
 | `assets/` | Simge ve açılış ekranı kaynakları. Değişirse: `npx @capacitor/assets generate --ios --android --iconBackgroundColor '#f6f8fb' --splashBackgroundColor '#ffffff'` |
-| `components/Yerel.tsx` | Yalnızca uygulamada çalışan küçük ayarlar (üst çubuk, açılış ekranını kapatma). |
+| `components/Yerel.tsx` | Yalnızca uygulamada çalışan parçalar: üst çubuk ve açılış animasyonu ("u." → "ucler."). Telefonun sabit açılış ekranı "u." gösterir, animasyon aynı yerden devam eder. Sitede `?acilis` ile önizlenir. |
 
 ## Her değişiklikten sonra
 ```bash
