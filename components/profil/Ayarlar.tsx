@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { bildirimOku, bildirimYaz, cikisYap, hesabiSil, useOturum, type Bildirim } from "@/lib/bulut";
+import { bildirimOku, bildirimYaz, cikisYap, hesabiSil, useEsitleme, useOturum, type Bildirim } from "@/lib/bulut";
 import { girisYap } from "@/lib/puan";
 import { resetAll, setAd } from "@/lib/store";
 import { Icon } from "../icons";
@@ -12,7 +12,8 @@ import Kabuk from "./Kabuk";
 
 export default function Ayarlar() {
   const oturum = useOturum();
-  const [cikiyor, setCikiyor] = useState(false), [silHata, setSilHata] = useState(false);
+  const esitleme = useEsitleme();
+  const [cikiyor, setCikiyor] = useState(false), [silHata, setSilHata] = useState(false), [cikisHata, setCikisHata] = useState(false);
   /** Çıkışta ve hesap silinince bu cihazdaki ilerleme ve ad temizlenir. */
   const temizle = () => { resetAll(); setAd(""); girisYap(); };
   const Insta = Icon.instagram, Bulb = Icon.bulb, Kilit = Icon.kilit;
@@ -21,11 +22,13 @@ export default function Ayarlar() {
       <Bolum title="Hesap">
         {oturum ? (
           <div className="grid gap-3">
-            <p className="text-[14px] text-muted-foreground"><b className="text-foreground">{oturum.user.email}</b> ile giriş yaptın. İlerlemen hesabına kaydediliyor.</p>
+            <p className="text-[14px] text-muted-foreground"><b className="text-foreground">{oturum.user.email}</b> ile giriş yaptın.{" "}
+              {esitleme === "hata" ? "Şu an buluta kaydedilemedi; ilerlemen bu cihazda duruyor, bağlantı gelince yeniden denenecek." : "İlerlemen hesabına kaydediliyor."}</p>
             <Bildirimler kimlik={oturum.user.id} />
-            <Button variant="outline" className="w-full" disabled={cikiyor} onClick={async () => { setCikiyor(true); await cikisYap(temizle); setCikiyor(false); }}>
+            <Button variant="outline" className="w-full" disabled={cikiyor} onClick={async () => { setCikiyor(true); setCikisHata(!(await cikisYap(temizle))); setCikiyor(false); }}>
               {cikiyor ? "Çıkış yapılıyor..." : "Çıkış yap"}
             </Button>
+            {cikisHata && <p role="alert" className="text-[14px] font-medium text-bad">Son ilerlemen buluta kaydedilemedi, bu yüzden çıkış yapılmadı. İnternet bağlantını kontrol edip yeniden dene.</p>}
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="ghost" className="w-full text-bad hover:text-bad">Hesabımı sil</Button>
