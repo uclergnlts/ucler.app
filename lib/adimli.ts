@@ -66,6 +66,7 @@ import duyuOrganlari from "@/content/adimli/duyu-organlari.json";
 import destekHareket from "@/content/adimli/destek-hareket.json";
 import bhh from "@/content/adimli/basit-harmonik-hareket.json";
 import dalgalar from "@/content/adimli/dalgalar.json";
+import deprem from "@/content/adimli/deprem.json";
 import organikGiris from "@/content/adimli/organik-giris.json";
 import hidrokarbonlar from "@/content/adimli/hidrokarbonlar.json";
 import sindirim from "@/content/adimli/sindirim.json";
@@ -140,7 +141,7 @@ export type Adim = {
 export type AdimliDers = { id: string; ders: DersId; konu: string; baslik: string; ozet: string; adimlar: Adim[]; kapanis: string[] };
 
 export const ADIMLI: AdimliDers[] = [
-  fizikGiris, maddeOzellikleri, basinc, kaldirma, isiSicaklik, vektorler, hareket, newton, ikiBoyut, bagil, isEnerji, basitMakineler, momentum, tork, cembersel, kutleCekimi, elektrostatik, elektrikAkimi, elektrikselEnerji, manyetizma, induksiyon, bhh, dalgalar, optik, dalgaOptigi, ozelGorelilik, kuantum, radyoaktivite,
+  fizikGiris, maddeOzellikleri, basinc, kaldirma, isiSicaklik, vektorler, hareket, newton, ikiBoyut, bagil, isEnerji, basitMakineler, momentum, tork, cembersel, kutleCekimi, elektrostatik, elektrikAkimi, elektrikselEnerji, manyetizma, induksiyon, bhh, dalgalar, deprem, optik, dalgaOptigi, ozelGorelilik, kuantum, radyoaktivite,
   simya, kimyaBilimi, madde, atomModelleri, atom, modernAtom, periyodikTablo, kimyasalBaglar, maddeninHalleri, karisimlar, temelKanunlar, tepkimeler, mol, asitBaz, kimyaHerYerde, gazlar, cozeltiler, tepkimeEnerjisi, tepkimeHizi, kimyasalDenge, redoks, elektrokimya, organikGiris, hidrokarbonlar, fonksiyonelGruplar, enerjiKaynaklari,
   canlilar, biyomolekuller, enzimler, hucreOrganeller, zar, siniflandirma, hayvanlar, bitkiler, mitoz, mayoz, kalitim, ekosistem, bitkiBiyolojisi, dnaGenetikKod, proteinSentezi, fotosentez, hucreselSolunum, sinirSistemi, endokrin, duyuOrganlari, destekHareket, sindirim, dolasim, solunum, bosaltim, uremeSistemi, populasyonKomunite, evrim,
 ] as unknown as AdimliDers[];
