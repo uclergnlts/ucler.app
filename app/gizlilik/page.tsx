@@ -29,6 +29,13 @@ export default function Page() {
             bütün verini aynı ekrandaki &quot;Hesabımı sil&quot; ile kalıcı olarak silebilirsin.
           </p>
         </Bolum>
+        <Bolum title="E-postalar">
+          <p>
+            Hesabın varsa e-posta adresine yalnızca hesapla ilgili e-postalar (hesap onayı, şifre yenileme) ve serin bitmek
+            üzereyken akşam bir hatırlatma göndeririz. Hatırlatmayı Profil &gt; Ayarlar&apos;dan ya da e-postadaki
+            bağlantıdan kapatabilirsin. E-postalar Resend üzerinden gönderilir.
+          </p>
+        </Bolum>
         <Bolum title="Kullanım sayımı">
           <p>
             Şu an hiçbir kullanım verisi toplanmıyor. İleride sitenin nasıl kullanıldığını anlamak için anonim bir sayım

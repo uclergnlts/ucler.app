@@ -165,6 +165,18 @@ export async function hesabiSil(sil: () => void) {
   return true;
 }
 
+/** Seri hatırlatma e-postası açık mı (ilerleme.seri_hatirlat; gönderimi supabase/functions/seri-hatirlat yapar). */
+export async function hatirlatmaOku(): Promise<boolean | null> {
+  if (!kullanici) return null;
+  const { data } = await sb().from("ilerleme").select("seri_hatirlat").eq("user_id", kullanici).maybeSingle();
+  return data ? data.seri_hatirlat !== false : null;
+}
+export async function hatirlatmaYaz(acik: boolean) {
+  if (!kullanici) return false;
+  const { error } = await sb().from("ilerleme").update({ seri_hatirlat: acik }).eq("user_id", kullanici);
+  return !error;
+}
+
 /** Supabase hata iletilerini öğrencinin anlayacağı Türkçe cümlelere çevirir. */
 export function hataMetni(e: { message?: string; code?: string } | null | undefined): string {
   const m = `${e?.code ?? ""} ${e?.message ?? ""}`.toLowerCase();
