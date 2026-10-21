@@ -6361,7 +6361,40 @@
         "h": "p-n eklemi: diyot",
         "p": "p ve n tipi birleşince sınırda elektronlar boşlukları doldurur; taşıyıcısı olmayan bir <b>engel bölgesi</b> oluşur. Pilin artısı p'ye bağlanırsa engel incelir ve akım geçer (<b>ileri yön</b>). Ters bağlanınca engel kalınlaşır, akım geçmez. Silisyum diyot yaklaşık 0,7 V'ta iletmeye başlar.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='20' y='60' width='60' height='40' fill='var(--c2)' fill-opacity='0.14'/><rect x='80' y='60' width='60' height='40' fill='var(--c1)' fill-opacity='0.14'/><rect x='77.0' y='60' width='6' height='40' fill='var(--panel)' stroke='var(--muted)' stroke-dasharray='3 2'/><text x='42' y='85' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>p</text><text x='118' y='85' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>n</text><text x='80' y='40' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>ileri yön: akım geçer</text><text x='80' y='124' font-size='11' fill='var(--muted)' text-anchor='middle'>+ → p, − → n · engel incelir</text><rect x='180' y='60' width='60' height='40' fill='var(--c2)' fill-opacity='0.14'/><rect x='240' y='60' width='60' height='40' fill='var(--c1)' fill-opacity='0.14'/><rect x='223.0' y='60' width='34' height='40' fill='var(--panel)' stroke='var(--muted)' stroke-dasharray='3 2'/><text x='202' y='85' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>p</text><text x='278' y='85' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>n</text><text x='240' y='40' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>ters yön: akım yok</text><text x='240' y='124' font-size='11' fill='var(--muted)' text-anchor='middle'>+ → n · engel kalınlaşır</text><path d='M110 164 L110 188 L134 176 Z' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='2'/><line x1='135' y1='164' x2='135' y2='188' stroke='var(--c5)' stroke-width='3'/><line x1='80' y1='176' x2='110' y2='176' stroke='var(--ink)' stroke-width='2'/><line x1='135' y1='176' x2='165' y2='176' stroke='var(--ink)' stroke-width='2'/><text x='176' y='180' font-size='11' fill='var(--muted)' text-anchor='start'>diyot simgesi</text></svg>",
-        "key": "Diyot tek yönlü kapıdır; şarj aletleri alternatif akımı böyle doğru akıma çevirir."
+        "key": "Diyot tek yönlü kapıdır; şarj aletleri alternatif akımı böyle doğru akıma çevirir.",
+        "etk": {
+          "tur": "ayir",
+          "soru": "Lamba yanar mı? Her bağlantıyı doğru gruba koy (silisyum diyot, lamba seri).",
+          "gruplar": [
+            "Yanar",
+            "Yanmaz"
+          ],
+          "ogeler": [
+            [
+              "Artı p'de, 3 V",
+              0
+            ],
+            [
+              "Artı p'de, 1,5 V",
+              0
+            ],
+            [
+              "Artı n'de, 3 V",
+              1,
+              "Ters yönde engel kalınlaşır, akım geçmez."
+            ],
+            [
+              "Artı n'de, 9 V",
+              1,
+              "Gerilim büyük olsa da yön ters; diyot iletmez."
+            ],
+            [
+              "Artı p'de, 0,3 V",
+              1,
+              "İleri yön ama 0,7 V'tan az: engel aşılamaz."
+            ]
+          ]
+        }
       },
       {
         "h": "LED: ışık veren diyot",

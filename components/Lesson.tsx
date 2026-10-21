@@ -46,7 +46,7 @@ export default function Lesson({
   ders, id, t, next, adimli, on = [], list,
 }: { ders: DersId; id: string; t: Topic; next?: { id: string; title: string }; adimli?: AdimliDers; on?: { id: string; title: string }[]; list: Entry[] }) {
   const [s, setS] = useState<State>(START);
-  // Adımların hepsi bir karta yerleştirilmişse anlatımın içine girer (şu an 82 konunun hepsinde böyle).
+  // Adımların hepsi bir karta yerleştirilmişse anlatımın içine girer (şu an 85 konunun hepsinde böyle).
   const birlesik = !!adimli?.adimlar.length && adimli.adimlar.every((a) => a.kart);
   const ogeler = useMemo(() => {
     const out: Oge[] = [];

@@ -1,0 +1,236 @@
+{
+ "id": "yesil-kimya",
+ "ders": "kimya",
+ "konu": "yesil-kimya",
+ "baslik": "Yeşil kimya ve nanoteknoloji",
+ "ozet": "Makro ve mikro deneyi karşılaştır, küpü nano ölçeğe böl, atık özütüyle gümüş nanoparçacık yap, cıvanın zincirde birikmesini izle, nişasta filmini ayarla ve atıktan hidrojen çıkar.",
+ "adimlar": [
+  {
+   "baslik": "Beher mi, damla mı?",
+   "metin": "Aynı tepkimeyi önce beherde, sonra kuyucuklu plakada yap. Anahtarla karşılaştır.",
+   "sahne": {
+    "tur": "kim14-mikro"
+   },
+   "deger": {
+    "mikro": 0
+   },
+   "kontroller": [
+    {
+     "ad": "mikro",
+     "etiket": "Mikro ölçek",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Mikro ölçekte atık kaç kat azaldı?",
+    "secenekler": [
+     {
+      "yazi": "100 kat",
+      "dogru": true,
+      "neden": "Atık 50 mL'den 0,5 mL'ye indi: 50 ÷ 0,5 = 100. Kimyasal da 100 kat, yıkama suyu 25 kat azaldı."
+     },
+     {
+      "yazi": "10 kat",
+      "neden": "50 ÷ 0,5 işlemini yap: 10'dan çok daha büyük."
+     },
+     {
+      "yazi": "2 kat",
+      "neden": "Çubuklara bak: mikro ölçekteki atık neredeyse görünmüyor."
+     }
+    ]
+   },
+   "kart": 2
+  },
+  {
+   "baslik": "Küpü böl",
+   "metin": "1 cm³'lük küpü gittikçe küçük küplere böl. Toplam yüzey <b>yaklaşık 60 m²</b>, yani bir sınıf tabanı kadar olsun.",
+   "sahne": {
+    "tur": "kim14-nano"
+   },
+   "deger": {
+    "k": 0
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Bölme",
+     "min": 0,
+     "max": 6,
+     "adim": 1,
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "k": [
+      5,
+      5
+     ]
+    },
+    "tamam": "Kenar <b>100 nm</b> olunca 1 cm³ maddenin yüzeyi 60 m²'yi bulur. Nanoparçacıkların bu kadar etkin olmasının nedeni budur: tepkime yüzeyde olur.",
+    "ipucu": "Kenar her 10'a bölündüğünde yüzey 10 kat artar."
+   },
+   "goster": {
+    "deger": {
+     "k": 2
+    },
+    "oynat": false,
+    "not": "Kenar 100 µm: yüzey 600 cm², yani 100 kat."
+   },
+   "kart": 3
+  },
+  {
+   "baslik": "Özüt damlat",
+   "metin": "Gümüş nitrat çözeltisine çay posasından hazırlanan özüt damlatılacak.",
+   "sahne": {
+    "tur": "kim14-gumus",
+    "sure": 6
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Çözeltide ne gözlenir?",
+    "secenekler": [
+     {
+      "yazi": "Renk sarı-kahverengiye döner",
+      "dogru": true,
+      "neden": "Özütteki polifenoller Ag⁺ iyonlarını Ag'ye indirger; oluşan gümüş nanoparçacıklar ışığı soğurup çözeltiye sarı-kahve renk verir."
+     },
+     {
+      "yazi": "Mavi olur",
+      "neden": "Mavi renk bakır(II) iyonlarına özgüdür; burada gümüş var."
+     },
+     {
+      "yazi": "Hiçbir şey değişmez",
+      "neden": "Özüt indirgendir; Ag⁺ ile tepkimeye girer ve renk değişir."
+     }
+    ]
+   },
+   "kart": 3
+  },
+  {
+   "baslik": "Cıva nerede birikir?",
+   "metin": "Bir göle az miktarda cıvalı atık karıştı. Besin zincirini izle.",
+   "sahne": {
+    "tur": "kim14-birikim",
+    "sure": 6
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Cıva derişimi en çok nerede olur?",
+    "secenekler": [
+     {
+      "yazi": "Zincirin tepesinde, insanda",
+      "dogru": true,
+      "neden": "Her canlı, yediği çok sayıdaki canlının cıvasını vücudunda toplar ve atamaz. Basamak arttıkça derişim katlanır."
+     },
+     {
+      "yazi": "Suda",
+      "neden": "Suda derişim en düşüktür; cıva canlılara geçip orada birikir."
+     },
+     {
+      "yazi": "Her yerde eşit",
+      "neden": "Cıva vücuttan atılamadığı için yukarı basamaklarda yoğunlaşır."
+     }
+    ]
+   },
+   "kart": 5
+  },
+  {
+   "baslik": "Esnek film",
+   "metin": "10 g nişastayla film yapıyorsun. Gliserol oranını ayarla: film <b>esnek</b> olsun, ne kırılsın ne yapışsın.",
+   "sahne": {
+    "tur": "kim14-film"
+   },
+   "deger": {
+    "g": 0
+   },
+   "kontroller": [
+    {
+     "ad": "g",
+     "etiket": "Gliserol",
+     "min": 0,
+     "max": 60,
+     "adim": 5,
+     "tur": "surgu",
+     "birim": "%"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "g": [
+      20,
+      40
+     ]
+    },
+    "tamam": "Gliserol nişasta zincirlerinin arasına girer, onları biraz ayırır: film bükülür ama dağılmaz. Polimer tasarımı, bileşenleri amaca göre seçmektir.",
+    "ipucu": "Kırılıyorsa gliserolü artır, yapışıyorsa azalt."
+   },
+   "goster": {
+    "deger": {
+     "g": 55
+    },
+    "oynat": false,
+    "not": "%55 gliserol: zincirler fazla açıldı, film yumuşadı ve yapışıyor."
+   },
+   "kart": 10
+  },
+  {
+   "baslik": "Bakteriye uygun ortam",
+   "metin": "pH'ı ve sıcaklığı ayarla, sonra oynat: balonda <b>en çok hidrojeni</b> topla.",
+   "sahne": {
+    "tur": "kim14-hidrojen",
+    "sure": 5
+   },
+   "deger": {
+    "pH": 7,
+    "T": 25
+   },
+   "kontroller": [
+    {
+     "ad": "pH",
+     "etiket": "pH",
+     "min": 4,
+     "max": 8,
+     "adim": 0.1,
+     "tur": "surgu"
+    },
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": 20,
+     "max": 60,
+     "adim": 1,
+     "tur": "surgu",
+     "birim": "°C"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "pH": [
+      5.2,
+      5.8
+     ],
+     "T": [
+      32,
+      38
+     ]
+    },
+    "tamam": "Hafif asidik (pH ≈ 5,5) ve ılık (≈ 35 °C) ortam bu bakteriler için en uygunudur. Gerçek deneyde atık türü, miktar ve süre sabit tutulur.",
+    "ipucu": "Ortamı hafif asidik yap; sıcaklığı vücut sıcaklığına yaklaştır."
+   },
+   "kart": 11
+  }
+ ],
+ "kapanis": [
+  "Atığı önlemek, temizlemekten iyidir; mikro ölçek bunu laboratuvarda sağlar.",
+  "Küçüldükçe yüzey büyür; nano ölçekte madde farklı davranır.",
+  "Ağır metal besin zincirinde basamak basamak birikir.",
+  "Biyobozunur film ve atıktan hidrojen, bileşen ve koşul seçimine bağlıdır."
+ ]
+}

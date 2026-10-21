@@ -76,6 +76,7 @@ import optik from "@/content/adimli/optik.json";
 import dalgaOptigi from "@/content/adimli/dalga-optigi.json";
 import fonksiyonelGruplar from "@/content/adimli/fonksiyonel-gruplar.json";
 import enerjiKaynaklari from "@/content/adimli/enerji-kaynaklari.json";
+import yesilKimya from "@/content/adimli/yesil-kimya.json";
 import solunum from "@/content/adimli/solunum.json";
 import bosaltim from "@/content/adimli/bosaltim.json";
 import ozelGorelilik from "@/content/adimli/ozel-gorelilik.json";
@@ -143,7 +144,7 @@ export type AdimliDers = { id: string; ders: DersId; konu: string; baslik: strin
 
 export const ADIMLI: AdimliDers[] = [
   fizikGiris, maddeOzellikleri, basinc, kaldirma, isiSicaklik, vektorler, hareket, newton, ikiBoyut, bagil, isEnerji, basitMakineler, momentum, tork, cembersel, kutleCekimi, elektrostatik, elektrikAkimi, elektrikselEnerji, manyetizma, induksiyon, yariIletkenler, bhh, dalgalar, deprem, optik, dalgaOptigi, ozelGorelilik, kuantum, radyoaktivite,
-  simya, kimyaBilimi, madde, atomModelleri, atom, modernAtom, periyodikTablo, kimyasalBaglar, maddeninHalleri, karisimlar, temelKanunlar, tepkimeler, mol, asitBaz, kimyaHerYerde, gazlar, cozeltiler, tepkimeEnerjisi, tepkimeHizi, kimyasalDenge, redoks, elektrokimya, organikGiris, hidrokarbonlar, fonksiyonelGruplar, enerjiKaynaklari,
+  simya, kimyaBilimi, madde, atomModelleri, atom, modernAtom, periyodikTablo, kimyasalBaglar, maddeninHalleri, karisimlar, temelKanunlar, tepkimeler, mol, asitBaz, kimyaHerYerde, gazlar, cozeltiler, tepkimeEnerjisi, tepkimeHizi, kimyasalDenge, redoks, elektrokimya, organikGiris, hidrokarbonlar, fonksiyonelGruplar, enerjiKaynaklari, yesilKimya,
   canlilar, biyomolekuller, enzimler, hucreOrganeller, zar, siniflandirma, hayvanlar, bitkiler, mitoz, mayoz, kalitim, ekosistem, bitkiBiyolojisi, dnaGenetikKod, proteinSentezi, fotosentez, hucreselSolunum, sinirSistemi, endokrin, duyuOrganlari, destekHareket, sindirim, dolasim, solunum, bosaltim, uremeSistemi, populasyonKomunite, evrim,
 ] as unknown as AdimliDers[];
 export const adimliDers = (id: string) => ADIMLI.find((d) => d.id === id);
