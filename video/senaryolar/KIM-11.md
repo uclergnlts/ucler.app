@@ -14,7 +14,7 @@ Bin sekiz yüz doksan yedide Joseph John Thomson atomdan çok daha küçük bir 
 
 Bin dokuz yüz on birde Ernest Rutherford'un ekibi, ince bir altın levhaya alfa tanecikleri gönderdi. Çoğu dümdüz geçti ama birkaçı geri sekti. Sonuç: atomun büyük kısmı boşluktu ve ortada küçük, yoğun, pozitif bir çekirdek vardı.
 
-Ama bir sorun kaldı. Çekirdeğin çevresinde dönen elektron enerji kaybedip çekirdeğe düşmeliydi. Bin dokuz yüz on üçte Niels Bohr, elektronların yalnızca belirli enerji katmanlarında dolandığını ve orada enerji kaybetmediğini söyledi.
+Ama bir sorun kaldı. Çekirdeğin çevresinde dönen elektron enerji kaybedip çekirdeğe düşmeliydi. Bin dokuz yüz on üçte Niels Bohr, elektronların yalnızca belirli enerji katmanlarında dolaştığını ve orada enerji kaybetmediğini söyledi.
 
 Bugünkü modelde ise kesin bir yörünge yoktur. Yalnızca elektronun bir bölgede bulunma olasılığını biliriz. Bu bölgeye orbital denir ve bir bulut gibi çizilir.
 
