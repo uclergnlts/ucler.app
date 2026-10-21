@@ -6,5 +6,26 @@
       "main": true
     }
   },
-  "ignoreCommand": "bash tools/vercel-atla.sh"
+  "ignoreCommand": "bash tools/vercel-atla.sh",
+  "rewrites": [
+    {
+      "source": "/v/:dosya",
+      "destination": "https://pub-d7370c95f24344aebcb621f6c412c2ed.r2.dev/:dosya"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/v/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, max-age=31536000"
+        }
+      ]
+    }
+  ]
 }
