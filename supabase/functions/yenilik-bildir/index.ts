@@ -1,6 +1,7 @@
 // Yeni içerik e-postası. Her gün 12:00'de (Türkiye) pg_cron çağırır: https://ucler.app/yenilikler.json listesinde
 // daha önce duyurulmamış ders, konu ya da video varsa, bildirimi açık ve e-postası onaylı hesaplara tek bir e-posta gider.
 // Duyurulanlar public.duyurulan tablosunda tutulur; tablo boşsa (ilk çalışma) bugünkü içerik e-posta göndermeden kaydedilir.
+// Gönderilemeyen e-postalar ertesi çalışmada yeniden denenir (duyuru_teslim, alıcı bazında).
 // Kapatma: e-postadaki List-Unsubscribe tek tık başlığı ve https://ucler.app/hatirlatma/?tur=yenilik sayfası.
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
@@ -63,45 +64,67 @@ ${kalan > 0 ? `<p style="margin:8px 0 0;font-size:14px;color:#64748b;">ve ${kala
   return { html, text };
 }
 
-/** deneme: tek bir kullanıcıya, verilen içerik kimlikleriyle (yoksa son 3 içerikle) gönderir; hiçbir şey kaydetmez. */
+/** deneme: tek bir kullanıcıya, verilen içerik kimlikleriyle (yoksa son 3 içerikle) gönderir; hiçbir şey kaydetmez.
+ *  Normal çalışma: yeni içerik "duyurulan" tablosuna tamam=false yazılır. Her alıcıya bekleyen içerikler tek e-postada
+ *  gider; Resend kabul ettikçe alıcı-içerik çifti "duyuru_teslim"e yazılır. Gönderilemeyenler bir sonraki çalışmada
+ *  yeniden denenir; teslim kaydı olan kişiye aynı içerik bir daha gitmez. Herkese giden içerik tamam=true olur. */
 async function gonder(deneme?: { kullanici: string; ogeler?: string[] }) {
   const anahtar = Deno.env.get("RESEND_API_KEY");
   if (!anahtar) return json({ hata: "RESEND_API_KEY yok" }, 500);
   const db = createClient(URL_, SERVIS, { auth: { persistSession: false } });
   const liste: Oge[] = await fetch(`${SITE}/yenilikler.json`).then((r) => r.json());
-  let yeni: Oge[];
+  let bekleyen: Oge[];
+  let teslim = new Set<string>(); // "kullanici|oge"
   if (deneme) {
-    yeni = deneme.ogeler?.length ? liste.filter((o) => deneme.ogeler!.includes(o.id)) : liste.slice(-3);
+    bekleyen = deneme.ogeler?.length ? liste.filter((o) => deneme.ogeler!.includes(o.id)) : liste.slice(-3);
   } else {
-    const { data: eski, error } = await db.from("duyurulan").select("id");
+    const { data: eski, error } = await db.from("duyurulan").select("id, tamam");
     if (error) return json({ hata: error.message }, 500);
     const bilinen = new Set((eski ?? []).map((r) => r.id));
-    yeni = liste.filter((o) => !bilinen.has(o.id));
-    if (!yeni.length) return json({ yeni: 0 });
-    const { error: e2 } = await db.from("duyurulan").insert(yeni.map(({ id, tur, ad }) => ({ id, tur, ad })));
-    if (e2) return json({ hata: e2.message }, 500);
-    if (!bilinen.size) return json({ ilk: true, kaydedilen: yeni.length });
-    // Önce dersler, sonra konular, en son videolar.
-    yeni.sort((a, b) => ["ders", "konu", "video"].indexOf(a.tur) - ["ders", "konu", "video"].indexOf(b.tur));
+    const yeni = liste.filter((o) => !bilinen.has(o.id));
+    if (yeni.length) {
+      // İlk çalışmada bugünkü içerik duyurulmadan "tamam" kaydedilir.
+      const ilk = !bilinen.size;
+      const { error: e2 } = await db.from("duyurulan").insert(yeni.map(({ id, tur, ad }) => ({ id, tur, ad, tamam: ilk })));
+      if (e2) return json({ hata: e2.message }, 500);
+      if (ilk) return json({ ilk: true, kaydedilen: yeni.length });
+    }
+    const acik = new Set([...(eski ?? []).filter((r) => r.tamam === false).map((r) => r.id), ...yeni.map((o) => o.id)]);
+    bekleyen = liste.filter((o) => acik.has(o.id));
+    // Listeden kalkmış (siteden çıkarılmış) bekleyen içerik artık duyurulmaz.
+    const kalkan = [...acik].filter((id) => !bekleyen.some((o) => o.id === id));
+    if (kalkan.length) await db.from("duyurulan").update({ tamam: true }).in("id", kalkan);
+    if (!bekleyen.length) return json({ yeni: 0 });
+    const { data: t, error: e3 } = await db.from("duyuru_teslim").select("user_id, oge_id").in("oge_id", bekleyen.map((o) => o.id));
+    if (e3) return json({ hata: e3.message }, 500);
+    teslim = new Set((t ?? []).map((r) => `${r.user_id}|${r.oge_id}`));
   }
-  if (!yeni.length) return json({ yeni: 0 });
+  if (!bekleyen.length) return json({ yeni: 0 });
+  // Önce dersler, sonra konular, en son videolar.
+  bekleyen.sort((a, b) => ["ders", "konu", "video"].indexOf(a.tur) - ["ders", "konu", "video"].indexOf(b.tur));
 
   const sorgu = db.from("ilerleme").select("user_id, ad");
   const { data: kisiler, error } = deneme ? await sorgu.eq("user_id", deneme.kullanici) : await sorgu.eq("yenilik_bildir", true);
   if (error) return json({ hata: error.message }, 500);
-  const postalar = [];
+  const postalar: { posta: Record<string, unknown>; kisi: string; ogeler: string[] }[] = [];
   for (const r of kisiler ?? []) {
+    const ona = bekleyen.filter((o) => !teslim.has(`${r.user_id}|${o.id}`));
+    if (!ona.length) continue;
     const { data: k } = await db.auth.admin.getUserById(r.user_id);
     const e = k?.user?.email;
     if (!e || !k.user.email_confirmed_at) continue;
     const t = await imza(r.user_id);
-    const { html, text } = eposta(r.ad || (k.user.user_metadata?.ad ?? ""), yeni, `${SITE}/hatirlatma/?tur=yenilik&u=${r.user_id}&t=${t}`);
+    const { html, text } = eposta(r.ad || (k.user.user_metadata?.ad ?? ""), ona, `${SITE}/hatirlatma/?tur=yenilik&u=${r.user_id}&t=${t}`);
     postalar.push({
-      from: "ucler <noreply@ucler.app>", to: [e], subject: konuBasligi(yeni), html, text,
-      headers: { "List-Unsubscribe": `<${FONK}?u=${r.user_id}&t=${t}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" },
+      kisi: r.user_id,
+      ogeler: ona.map((o) => o.id),
+      posta: {
+        from: "ucler <noreply@ucler.app>", to: [e], subject: konuBasligi(ona), html, text,
+        headers: { "List-Unsubscribe": `<${FONK}?u=${r.user_id}&t=${t}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" },
+      },
     });
   }
-  // Resend toplu gönderim: tek istekte en çok 100 e-posta.
+  // Resend toplu gönderim: tek istekte en çok 100 e-posta; istek ya bütünüyle kabul edilir ya da hiç.
   let giden = 0;
   const hatalar: string[] = [];
   for (let i = 0; i < postalar.length; i += 100) {
@@ -109,12 +132,26 @@ async function gonder(deneme?: { kullanici: string; ogeler?: string[] }) {
     const y = await fetch("https://api.resend.com/emails/batch", {
       method: "POST",
       headers: { Authorization: `Bearer ${anahtar}`, "Content-Type": "application/json" },
-      body: JSON.stringify(parca),
-    });
-    if (y.ok) giden += parca.length; else hatalar.push(`${y.status} ${(await y.text()).slice(0, 200)}`);
+      body: JSON.stringify(parca.map((p) => p.posta)),
+    }).catch((e) => ({ ok: false, status: 0, text: async () => String(e) }));
+    if (y.ok) {
+      giden += parca.length;
+      if (!deneme) {
+        const satirlar = parca.flatMap((p) => p.ogeler.map((oge_id) => ({ user_id: p.kisi, oge_id })));
+        const { error: e4 } = await db.from("duyuru_teslim").upsert(satirlar, { ignoreDuplicates: true });
+        if (e4) hatalar.push(`teslim kaydı: ${e4.message}`);
+        else satirlar.forEach((r) => teslim.add(`${r.user_id}|${r.oge_id}`));
+      }
+    } else hatalar.push(`${y.status} ${(await y.text()).slice(0, 200)}`);
     await new Promise((s) => setTimeout(s, 600));
   }
-  return json({ yeni: yeni.map((o) => o.id), giden, hatalar });
+  // Hiç hata yoksa bekleyen içerik herkese ulaştı: kapat ve teslim kayıtlarını temizle.
+  if (!deneme && !hatalar.length) {
+    const ids = bekleyen.map((o) => o.id);
+    await db.from("duyurulan").update({ tamam: true }).in("id", ids);
+    await db.from("duyuru_teslim").delete().in("oge_id", ids);
+  }
+  return json({ yeni: bekleyen.map((o) => o.id), giden, hatalar, bekliyor: !deneme && hatalar.length > 0 });
 }
 
 async function kapat(u: string | null, t: string | null) {
