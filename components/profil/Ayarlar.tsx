@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
-import { cikisYap, hesabiSil, useOturum } from "@/lib/bulut";
+import { useEffect, useState } from "react";
+import { cikisYap, hatirlatmaOku, hatirlatmaYaz, hesabiSil, useOturum } from "@/lib/bulut";
 import { girisYap } from "@/lib/puan";
 import { resetAll, setAd } from "@/lib/store";
 import { Icon } from "../icons";
@@ -22,6 +22,7 @@ export default function Ayarlar() {
         {oturum ? (
           <div className="grid gap-3">
             <p className="text-[14px] text-muted-foreground"><b className="text-foreground">{oturum.user.email}</b> ile giriş yaptın. İlerlemen hesabına kaydediliyor.</p>
+            <Hatirlatma kimlik={oturum.user.id} />
             <Button variant="outline" className="w-full" disabled={cikiyor} onClick={async () => { setCikiyor(true); await cikisYap(temizle); setCikiyor(false); }}>
               {cikiyor ? "Çıkış yapılıyor..." : "Çıkış yap"}
             </Button>
@@ -90,5 +91,33 @@ export default function Ayarlar() {
         </Dialog>
       </Bolum>
     </Kabuk>
+  );
+}
+
+/** Seri bitmek üzereyken akşam 19:00'da gelen e-posta. Hesap satırı eşitleme kurulunca okunur. */
+function Hatirlatma({ kimlik }: { kimlik: string }) {
+  const [acik, setAcik] = useState<boolean | null>(null);
+  useEffect(() => {
+    let iptal = false;
+    // Eşitleme girişten hemen sonra kurulur; ilk okuma boş dönerse kısa bir süre sonra yeniden dene.
+    const oku = (n: number) => hatirlatmaOku().then((v) => { if (iptal) return; if (v === null && n) setTimeout(() => oku(n - 1), 1500); else setAcik(v); });
+    oku(3);
+    return () => { iptal = true; };
+  }, [kimlik]);
+  if (acik === null) return null;
+  return (
+    <label className="flex items-center gap-3 rounded-xl border border-border p-3.5">
+      <span className="min-w-0 flex-1">
+        <b className="block text-[15px]">Seri hatırlatması</b>
+        <span className="text-[13px] text-muted-foreground">Serin bitmek üzereyken akşam bir e-posta gönderelim.</span>
+      </span>
+      <input
+        type="checkbox"
+        role="switch"
+        className="size-5 flex-none accent-[var(--ink)]"
+        checked={acik}
+        onChange={async (e) => { const v = e.target.checked; setAcik(v); if (!(await hatirlatmaYaz(v))) setAcik(!v); }}
+      />
+    </label>
   );
 }
