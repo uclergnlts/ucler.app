@@ -69,6 +69,8 @@ function Istasyon({ v, t, oynuyor, s }: SahneProps) {
   const zt = ilerleme(t, oynuyor, sure) * sure * olcek; // gerçek zaman (s)
   const OX = 40, OY = 92, PXKM = 270 / 200, sx = OX + d * PXKM;
   const rP = VP * zt * PXKM, rS = VS * zt * PXKM;
+  // Tahmin adımında hızlar oynatılana dek yazılmaz (cevabı önceden söylemesin).
+  const hizGizli = Boolean(s.hizGizle) && zt === 0;
   const geldiP = zt >= d / VP, geldiS = zt >= tS, dt = farkSure(d);
   // Sismogram: istasyondaki yer hareketi.
   const GX0 = 40, GX1 = 320, GY = 196, tMax = tS * 1.15, gx = (q: number) => GX0 + (q / tMax) * (GX1 - GX0);
@@ -97,8 +99,8 @@ function Istasyon({ v, t, oynuyor, s }: SahneProps) {
       <path d={`M${sx - 8} 58 L${sx} 44 L${sx + 8} 58 Z`} fill="var(--ink)" />
       <text x={sx} y={38} fontSize={11.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">istasyon</text>
       <g fontSize={11.5} fontWeight={800}>
-        <text x={20} y={156} fill="var(--c1)">P (6 km/s)</text>
-        <text x={112} y={156} fill="var(--c2)">S (3,5 km/s)</text>
+        <text x={20} y={156} fill="var(--c1)">{hizGizli ? "P" : "P (6 km/s)"}</text>
+        <text x={112} y={156} fill="var(--c2)">{hizGizli ? "S" : "S (3,5 km/s)"}</text>
       </g>
       <line x1={GX0} x2={GX1} y1={GY} y2={GY} stroke="var(--line-2)" />
       <path d={iz} fill="none" stroke="var(--ink)" strokeWidth={1.5} />

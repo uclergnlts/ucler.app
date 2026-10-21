@@ -1,0 +1,325 @@
+{
+ "id": "yari-iletkenler",
+ "ders": "fizik",
+ "konu": "yari-iletkenler",
+ "baslik": "Yarı iletkenler ve süper iletkenler",
+ "ozet": "Isıtınca direnci değiştir, katkılı silisyumda yükleri yürüt, diyodu ters bağla, LED'in rengini seç, güneş pilinden ve transistörden akım al, süper iletkeni soğutup mıknatısı havada tut.",
+ "adimlar": [
+  {
+   "baslik": "Soğutunca ne olur?",
+   "metin": "Sıcaklığı düşür ve iki eğriyi izle.",
+   "sahne": {
+    "tur": "fiz16-direnc"
+   },
+   "deger": {
+    "T": 300
+   },
+   "kontroller": [
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": 20,
+     "max": 300,
+     "adim": 5,
+     "tur": "surgu",
+     "birim": "K"
+    }
+   ],
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangisinin direnci soğudukça artar?",
+    "secenekler": [
+     {
+      "yazi": "Silisyum",
+      "dogru": true,
+      "neden": "Soğuyan silisyumda serbest elektron azalır, akımı taşıyacak yük kalmaz; direnç artar."
+     },
+     {
+      "yazi": "Bakır",
+      "neden": "Bakır soğudukça atomlar daha az titreşir, direnci azalır."
+     },
+     {
+      "yazi": "İkisi de",
+      "neden": "Eğrilere bak: biri iner, biri çıkar. Metal ile yarı iletken ters davranır."
+     }
+    ]
+   },
+   "kart": 2
+  },
+  {
+   "baslik": "Fazla elektron nereye?",
+   "metin": "Fosfor katkılı silisyuma pil bağlandı: sol uç −, sağ uç +.",
+   "sahne": {
+    "tur": "fiz16-kristal",
+    "sure": 5
+   },
+   "deger": {
+    "p": 0
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Pil bağlanınca fazla elektron hangi yöne gider?",
+    "secenekler": [
+     {
+      "yazi": "+ uca",
+      "dogru": true,
+      "neden": "Elektron negatif yüklüdür, pozitif uca çekilir. Kristalde serbest dolaşan fazla elektron akımı taşır."
+     },
+     {
+      "yazi": "− uca",
+      "neden": "Aynı işaretli yükler birbirini iter; elektron − uçtan uzaklaşır."
+     },
+     {
+      "yazi": "Yerinde kalır",
+      "neden": "Beşinci elektron bağa girmediği için kolayca serbest kalır ve elektrik alanında hareket eder."
+     }
+    ]
+   },
+   "kart": 3
+  },
+  {
+   "baslik": "Boşluk nereye?",
+   "metin": "Şimdi fosfor yerine <b>bor</b>: bor 3 elektronla gelir, bir bağda elektron eksik kalır. Bu eksiğe <b>boşluk</b> denir.",
+   "sahne": {
+    "tur": "fiz16-kristal",
+    "sure": 5
+   },
+   "deger": {
+    "p": 1
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Pil bağlıyken boşluk hangi yöne gider?",
+    "secenekler": [
+     {
+      "yazi": "− uca",
+      "dogru": true,
+      "neden": "Komşu elektronlar + uca doğru boşluğa atlar; her atlayışta boşluk bir adım ters yöne, − uca kayar. Boşluk pozitif yük gibi davranır."
+     },
+     {
+      "yazi": "+ uca",
+      "neden": "Elektronlar + uca gider; boşluk onların tersine ilerler."
+     },
+     {
+      "yazi": "Yerinde kalır",
+      "neden": "Boşluk yerinde durmaz: komşu bir elektron ona atlayınca boşluk o elektronun eski yerine geçer."
+     }
+    ]
+   },
+   "kart": 3
+  },
+  {
+   "baslik": "Ters bağlı diyot",
+   "metin": "p ile n tipini birleştirdik: bu bir <b>diyot</b>. Pilin artısı <b>n</b> ucunda, gerilim 2,5 V.",
+   "sahne": {
+    "tur": "fiz16-diyot",
+    "sure": 4
+   },
+   "deger": {
+    "ters": 1,
+    "V": 2.5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Lamba yanar mı?",
+    "secenekler": [
+     {
+      "yazi": "Hayır",
+      "dogru": true,
+      "neden": "Ters yönde eklemdeki engel bölgesi kalınlaşır, akım geçmez. Pili çevirirsen lamba yanar."
+     },
+     {
+      "yazi": "Evet, sönük yanar",
+      "neden": "Ters yönde akım neredeyse sıfırdır; lamba hiç yanmaz."
+     },
+     {
+      "yazi": "Evet, parlak yanar",
+      "neden": "Gerilim yüksek olsa da yön yanlış: diyot akımı yalnız p'den n'ye geçirir."
+     }
+    ]
+   },
+   "kart": 4
+  },
+  {
+   "baslik": "Mavi LED",
+   "metin": "LED malzemesinin enerji aralığını değiştir: <b>mavi</b> ışık veren malzemeyi bul.",
+   "sahne": {
+    "tur": "fiz16-led"
+   },
+   "deger": {
+    "E": 1.9
+   },
+   "kontroller": [
+    {
+     "ad": "E",
+     "etiket": "Enerji aralığı",
+     "min": 1.6,
+     "max": 3.2,
+     "adim": 0.05,
+     "tur": "surgu",
+     "birim": "eV"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "E": [
+      2.55,
+      2.75
+     ]
+    },
+    "tamam": "Mavi ışık ≈ 450-490 nm, enerji aralığı ≈ 2,5-2,8 eV. Bu kadar büyük aralıklı, kaliteli galyum nitrür kristali yapmak zordu; mavi LED bu yüzden en son geldi.",
+    "ipucu": "Kırmızıdan maviye gittikçe enerji aralığı büyür."
+   },
+   "goster": {
+    "deger": {
+     "E": 2.2
+    },
+    "oynat": false,
+    "not": "2,2 eV ≈ 564 nm: yeşil. Enerji aralığı büyüdükçe dalga boyu kısalır."
+   },
+   "kart": 6
+  },
+  {
+   "baslik": "Panelden 150 W",
+   "metin": "Işık şiddetini ayarla: 1 m² panelden <b>150 W</b> al. Panelin verimi %20.",
+   "sahne": {
+    "tur": "fiz16-gunes"
+   },
+   "deger": {
+    "I": 300
+   },
+   "kontroller": [
+    {
+     "ad": "I",
+     "etiket": "Işık",
+     "min": 0,
+     "max": 1000,
+     "adim": 10,
+     "tur": "surgu",
+     "birim": "W/m²"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "I": [
+      740,
+      760
+     ]
+    },
+    "tamam": "0,20 × 750 = <b>150 W</b>. Açık bir yaz öğlesinde güneş ışığı ≈ 1000 W/m²; bu panel en çok ≈ 200 W verir.",
+    "ipucu": "Güç = 0,20 × ışık. 150 ÷ 0,20 = ?"
+   },
+   "kart": 7
+  },
+  {
+   "baslik": "Transistörle 3 mA",
+   "metin": "Taban akımını ayarla: toplayıcıdan <b>3 mA</b> geçsin. Bu transistör akımı 100 kat büyütüyor.",
+   "sahne": {
+    "tur": "fiz16-transistor"
+   },
+   "deger": {
+    "ib": 5
+   },
+   "kontroller": [
+    {
+     "ad": "ib",
+     "etiket": "Taban akımı",
+     "min": 0,
+     "max": 60,
+     "adim": 1,
+     "tur": "surgu",
+     "birim": "µA"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "ib": [
+      30,
+      30
+     ]
+    },
+    "tamam": "30 µA × 100 = 3000 µA = <b>3 mA</b>. Küçük taban akımı, 100 kat büyük akımı yönetiyor: yükselteç.",
+    "ipucu": "3 mA = 3000 µA. 3000 ÷ 100 = ?"
+   },
+   "goster": {
+    "deger": {
+     "ib": 60
+    },
+    "oynat": false,
+    "not": "60 µA'de akım 5 mA'de durur: devre daha fazlasına izin vermez. Transistör artık tam açık bir anahtardır."
+   },
+   "kart": 8
+  },
+  {
+   "baslik": "Soğuk disk, mıknatıs",
+   "metin": "Seramik disk (YBCO) sıvı azotla soğutulacak, sonra üstüne bir mıknatıs indirilecek.",
+   "sahne": {
+    "tur": "fiz16-meissner",
+    "sure": 6
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Mıknatıs diske yaklaşınca ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Havada asılı kalır",
+      "dogru": true,
+      "neden": "Soğuyan disk süper iletken olur ve mıknatısın alanını içinden dışarı iter: Meissner etkisi. Mıknatıs diskin üstünde havada durur."
+     },
+     {
+      "yazi": "Diske yapışır",
+      "neden": "Seramik demir gibi çekilmez; süper iletken hâlde alanı tersine dışarı iter."
+     },
+     {
+      "yazi": "Diske düşüp oturur",
+      "neden": "Oda sıcaklığında öyle olurdu. Soğuk disk süper iletkendir ve alanı dışarı iter."
+     }
+    ]
+   },
+   "kart": 10
+  },
+  {
+   "baslik": "YBCO'nun sınırı",
+   "metin": "Sıcaklığı değiştir: YBCO'nun süper iletken kaldığı <b>en yüksek</b> sıcaklığı bul.",
+   "sahne": {
+    "tur": "fiz16-direnc",
+    "ybco": true
+   },
+   "deger": {
+    "T": 200
+   },
+   "kontroller": [
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": 20,
+     "max": 300,
+     "adim": 1,
+     "tur": "surgu",
+     "birim": "K"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "T": [
+      88,
+      91
+     ]
+    },
+    "tamam": "YBCO yaklaşık <b>92 K</b>'nin altında süper iletkendir. Sıvı azot (77 K) yeter; pahalı sıvı helyum gerekmez.",
+    "ipucu": "Yeşil eğrinin sıfıra düştüğü yerin hemen altına git."
+   },
+   "kart": 12
+  }
+ ],
+ "kapanis": [
+  "Katkı türü akımı kimin taşıdığını belirler: n'de elektron, p'de boşluk.",
+  "Diyot akımı yalnız ileri yönde geçirir; LED'in rengini enerji aralığı belirler.",
+  "Transistör küçük taban akımıyla büyük akımı yönetir.",
+  "Süper iletken kritik sıcaklığın altında sıfır dirence iner ve manyetik alanı dışarı iter."
+ ]
+}

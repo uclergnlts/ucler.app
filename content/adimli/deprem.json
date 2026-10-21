@@ -7,14 +7,14 @@
  "adimlar": [
   {
    "baslik": "Kilitli fay",
-   "metin": "Fayın iki yanı zıt yönde yavaşça itiliyor ama fay sürtünmeyle kilitli. Yolu izle.",
+   "metin": "Fayın iki yanı zıt yönde yavaşça itiliyor ama fay sürtünmeyle kilitli. Oynat ve yolu izle.",
    "sahne": {
     "tur": "fiz15-fay",
     "sure": 6
    },
    "gorev": {
-    "tur": "tahmin",
-    "soru": "Gerilme kayanın dayanımını aşınca yol ne olur?",
+    "tur": "secim",
+    "soru": "Gerilme dayanımı aşınca yola ne oldu?",
     "secenekler": [
      {
       "yazi": "İki parçaya ayrılır, parçalar kaymış ve düz kalır",
@@ -35,10 +35,11 @@
   },
   {
    "baslik": "Hangi dalga önce?",
-   "metin": "Odaktan P ve S dalgası aynı anda çıkıyor. İstasyon 120 km uzakta.",
+   "metin": "Odaktan iki tür dalga aynı anda çıkıyor: <b>P</b> ve <b>S</b>. İstasyon 120 km uzakta.",
    "sahne": {
     "tur": "fiz15-istasyon",
-    "sure": 6
+    "sure": 6,
+    "hizGizle": true
    },
    "deger": {
     "d": 120
@@ -62,7 +63,7 @@
      }
     ]
    },
-   "kart": 4
+   "kart": 3
   },
   {
    "baslik": "Uzaklık ve süre farkı",
@@ -171,7 +172,7 @@
      }
     ]
    },
-   "kart": 9
+   "kart": 8
   },
   {
    "baslik": "Rezonansı yakala",
