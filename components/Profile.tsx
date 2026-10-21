@@ -18,7 +18,7 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
   const kayitli = useKaydedilenler(all).length, anlamadim = useAnlamadiklarim(all, basliklar).length;
   const tekrar = useTekrar();
   const sira = Object.values(tekrar).map((x) => x.g).sort(), kalan = sira.length;
-  const User = Icon.profil, TekrarI = Icon.tekrar, Kitap = Icon.kitap, Grafik = Icon.grafik, Kayit = Icon.kayit, Soru = Icon.soru, Ayar = Icon.ayar;
+  const User = Icon.profil, TekrarI = Icon.tekrar, Kitap = Icon.kitap, Grafik = Icon.grafik, Kayit = Icon.kayit, Soru = Icon.soru, Ayar = Icon.ayar, Kupa = Icon.kupa;
 
   return (
     <div className="app">
@@ -87,6 +87,7 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
           {done.length > 0 && (
             <Satir href="/tekrar/?karisik" icon={<Kitap />} title="Karışık test" sub="Bitirdiğin konulardan rastgele 10 soru" tag={<Ok />} />
           )}
+          <Satir href="/lig/" icon={<Kupa />} title="Haftalık lig" sub="Bu haftaki puanınla sıralamadaki yerin" tag={<Ok />} />
           <Satir href="/profil/istatistikler/" icon={<Grafik />} title="İstatistikler" sub="Puan, seri, son 7 gün ve doğru oranı" tag={<Ok />} />
           <Satir href="/profil/kaydedilenler/" icon={<Kayit />} title="Kaydedilenler" sub={kayitli ? `${kayitli} konu` : "Kaydettiğin konular burada durur"} tag={<Ok />} />
           <Satir href="/profil/anlamadiklarim/" icon={<Soru />} title="Anlamadıklarım" sub={anlamadim ? `${anlamadim} kart` : "Anlamadım diye işaretlediğin kartlar"} tag={<Ok />} />

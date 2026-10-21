@@ -22,11 +22,18 @@ export default function Page() {
           <p>
             Hesabınla giriş yaptıysan aynı bilgiler, başka cihazlarda da devam edebilmen için hesabına kaydedilir. Hesaplar ve
             ilerleme Supabase üzerinde, Avrupa Birliği&apos;ndeki (Frankfurt) sunucularda saklanır; şifren şifrelenmiş olarak
-            tutulur ve kimse göremez. Verilerini kimseyle paylaşmayız, reklam için kullanmayız.
+            tutulur ve kimse göremez. Haftalık lig dışında verilerini kimseyle paylaşmayız, reklam için kullanmayız.
           </p>
           <p>
             Bu cihazdaki ilerlemeyi Profil &gt; Ayarlar&apos;daki &quot;İlerlemeyi sıfırla&quot; ile silebilirsin. Hesabını ve buluttaki
             bütün verini aynı ekrandaki &quot;Hesabımı sil&quot; ile kalıcı olarak silebilirsin.
+          </p>
+        </Bolum>
+        <Bolum title="Haftalık lig">
+          <p>
+            Hesabın varsa adın (Profil&apos;e yazdığın ad, boşsa &quot;Öğrenci 4821&quot; gibi bir takma ad) ve o hafta kazandığın puan
+            haftalık lig listesinde görünür. E-posta adresin ve başka hiçbir bilgin listede yer almaz. Listede görünmek
+            istemezsen Profil &gt; Ayarlar&apos;daki &quot;Haftalık ligde görün&quot;ü kapat; o zaman sıranı yalnızca sen görürsün.
           </p>
         </Bolum>
         <Bolum title="E-postalar">

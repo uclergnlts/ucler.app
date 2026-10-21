@@ -37,7 +37,7 @@ Hedef (Üçler): uygulama tamamen bitince iOS ve Android uygulaması çıkarmak,
 | Seriyi hatırlatan günlük bildirim | Hayır (cihazdaki yerel bildirim) | Mobil kabukla birlikte |
 | Konu başına daha çok soru, "YKS'de çıktı" soruları | Hayır | İçerik işi, sırada |
 | Hesap, giriş, ilerlemenin cihazlar arası taşınması | **Evet** | Bekliyor |
-| Puan listesi (arkadaşlar, haftalık lig) | **Evet** | Bekliyor |
+| Puan listesi (arkadaşlar, haftalık lig) | **Evet** | Haftalık tek liste canlı (/lig/, 2026-10-21) |
 | Ücretli üyelik | **Evet** (+ mağaza ödeme sistemi) | Bekliyor |
 | Toplu "anlamadım" verisi | **Evet** (Umami yeter) | Umami kimliği bekleniyor |
 | Uzaktan bildirim (ör. "yeni video çıktı") | **Evet** | Bekliyor |

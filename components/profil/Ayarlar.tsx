@@ -100,9 +100,10 @@ export default function Ayarlar() {
 const BILDIRIMLER: [Bildirim, string, string][] = [
   ["seri_hatirlat", "Seri hatırlatması", "Serin bitmek üzereyken akşam bir e-posta gönderelim."],
   ["yenilik_bildir", "Yeni içerikler", "Yeni ders, konu ya da video eklenince e-posta gönderelim."],
+  ["ligde", "Haftalık ligde görün", "Adın ve bu haftaki puanın lider tablosunda görünsün."],
 ];
 
-/** E-posta bildirimleri. Hesap satırı eşitleme kurulunca okunur. */
+/** E-posta bildirimleri ve ligde görünmek. Hesap satırı eşitleme kurulunca okunur. */
 function Bildirimler({ kimlik }: { kimlik: string }) {
   const [acik, setAcik] = useState<Record<Bildirim, boolean> | null>(null);
   useEffect(() => {

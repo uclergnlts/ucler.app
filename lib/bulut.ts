@@ -146,6 +146,13 @@ function esitle(): Promise<boolean> {
   return p;
 }
 
+/** Bekleyen değişikliği beklemeden buluta yazar (lig ekranı açılırken son puan listeye girsin). */
+export function simdiEsitle() {
+  clearTimeout(zamanlayici);
+  zamanlayici = undefined;
+  return esitle();
+}
+
 /** Cihazda bir şey değişince birkaç saniye bekleyip eşitler (art arda değişiklikler tek turda gider). */
 function degisti() {
   if (uygulaniyor || !kullanici) return;
@@ -228,12 +235,13 @@ export async function hesabiSil(sil: () => void) {
   return true;
 }
 
-/** E-posta bildirimleri: seri hatırlatması (supabase/functions/seri-hatirlat) ve yeni içerik (supabase/functions/yenilik-bildir). */
-export type Bildirim = "seri_hatirlat" | "yenilik_bildir";
+/** Hesap anahtarları: e-posta bildirimleri (seri hatırlatması: supabase/functions/seri-hatirlat, yeni içerik:
+ * supabase/functions/yenilik-bildir) ve haftalık ligde görünmek (lib/lig.ts). */
+export type Bildirim = "seri_hatirlat" | "yenilik_bildir" | "ligde";
 export async function bildirimOku(): Promise<Record<Bildirim, boolean> | null> {
   if (!kullanici) return null;
-  const { data } = await sb().from("ilerleme").select("seri_hatirlat, yenilik_bildir").eq("user_id", kullanici).maybeSingle();
-  return data ? { seri_hatirlat: data.seri_hatirlat !== false, yenilik_bildir: data.yenilik_bildir !== false } : null;
+  const { data } = await sb().from("ilerleme").select("seri_hatirlat, yenilik_bildir, ligde").eq("user_id", kullanici).maybeSingle();
+  return data ? { seri_hatirlat: data.seri_hatirlat !== false, yenilik_bildir: data.yenilik_bildir !== false, ligde: data.ligde !== false } : null;
 }
 export async function bildirimYaz(tur: Bildirim, acik: boolean) {
   if (!kullanici) return false;

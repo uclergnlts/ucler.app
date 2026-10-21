@@ -1,5 +1,5 @@
 "use client";
-// Ana sayfanın sağ üstündeki iki küçük simge: seri (alev + gün sayısı) ve günün görevleri (halka + x/3).
+// Ana sayfanın sağ üstündeki küçük simgeler: haftalık lig (kupa, /lig/), seri (alev + gün sayısı) ve günün görevleri (halka + x/3).
 // Simgeye dokununca alttan bir pencere açılır: seri için puan ve son 7 gün, görevler için liste.
 // Her görev, yapılacağı yere götürür (oyun → Oyunlar, video → Videolar, tekrar → Tekrar, gerisi → kalınan konu).
 import Link from "next/link";
@@ -35,7 +35,7 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
   const n = seri(p), bugunAktif = aktif(bugun), tehlikede = n > 0 && !bugunAktif;
   const gorevler = gk.g === gun() ? gk.l ?? [] : [];
   const biten = gorevler.filter((g) => gk.tamam?.includes(g.id)).length;
-  const Seri = Icon.seri, Check = Icon.check, Yildiz = Icon.yildiz;
+  const Seri = Icon.seri, Check = Icon.check, Yildiz = Icon.yildiz, Kupa = Icon.kupa;
   const hafta = Array.from({ length: 7 }, (_, k) => {
     const g = gun(k - 6), d = new Date(Date.parse(g + "T12:00:00"));
     return { g, ad: GUN_ADI[d.getDay()], on: aktif(gunler[g]), bugun: k === 6 };
@@ -46,6 +46,9 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
 
   return (
     <div className="ml-auto flex items-center gap-2" aria-label="Bugün">
+      <Link href="/lig/" className={cn(rozet, "px-2 text-[var(--c5)] [&_svg]:size-5 [&_svg]:fill-[#e9dcfb]")} aria-label="Haftalık lig">
+        <Kupa />
+      </Link>
       <Sheet>
         <SheetTrigger className={cn(rozet, n > 0 ? "text-[#c25e00]" : "text-muted-foreground")} aria-label={`Seri: ${n} gün`}>
           <motion.span
