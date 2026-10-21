@@ -11,7 +11,7 @@ Her ders için bir JSON dosyası vardır: `content/<ders>.json`.
 ```
 Konu id'si, `content/dersler.json` içindeki ders listesinde `{"id": "<konu-id>", "ad": "Görünen ad"}` biçiminde yer almalıdır. Henüz yazılmamış konular orada yalnızca `{"ad": "Ad"}` olarak durur. Bir konu yazılınca o satıra `id` eklenir.
 
-**Ön koşullar (konu haritası):** Bir konunun üzerine kurulduğu konular `"on": ["konu-id", ...]` ile yazılır. Ön koşullar aynı dersten olur ve listede daha önce gelir (doğrulayıcı denetler). Ön koşulu olmayan konu baştan açıktır; ön koşullarının hepsi bitince (testi çözülünce) konunun kilidi açılır. Kilit yumuşaktır: öğrenci isterse kilitli konuyu da açabilir, ders ekranının başında önce bitirmesi önerilen konular yazar. Doğrudan bağı yaz; dolaylı olanı (A → B → C ise C için A'yı) yazma.
+**Ön koşullar:** Bir konunun üzerine kurulduğu konular `"on": ["konu-id", ...]` ile yazılır. Ön koşullar aynı dersten olur ve listede daha önce gelir (doğrulayıcı denetler). Ön koşullar kilidi belirlemez: konular `content/dersler.json` sırasıyla açılır (`lib/kilit.ts`; bir konu, önceki konu bitince ya da ünite testi en az 80 ile geçilince açılır). Ön koşullar ders ekranının başında "Önce şuna bakman iyi olur" önerisi olarak görünür. Doğrudan bağı yaz; dolaylı olanı (A → B → C ise C için A'yı) yazma.
 
 Dosyalar düz JSON'dur: anahtarlar ve metinler çift tırnak içindedir, sondaki virgüle izin yoktur. SVG içinde öznitelikler tek tırnakla yazılır, böylece JSON içinde kaçış gerekmez.
 
