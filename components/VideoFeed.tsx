@@ -5,10 +5,12 @@
 // Bunun dışında videoya dokunmak durdurur, yeniden dokunmak sürdürür. Videonun altyazısı alt kenara yakın
 // olduğu için düğmeler videonun üstüne değil altındaki şeride konur: konunun adı, "Konuya git", "Cevabı gör",
 // kaydet, paylaş ve ses.
+// Sıra her açılışta karışıktır: önce izlenmemiş videolar, hepsi izlendikten sonra izlenenler yine karışık gelir.
+// %80'i izlenen video "izlendi" sayılır; liste yalnızca bu cihazda tutulur (tf-izlenen).
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { DERSLER } from "@/lib/dersler";
-import { toggleSaved, useSaved } from "@/lib/store";
+import { KEYS, read, toggleSaved, useSaved, write } from "@/lib/store";
 import { kaydet, PUAN } from "@/lib/puan";
 import { VIDEOLAR, yerHref, type Video } from "@/lib/videolar";
 import { adres } from "@/lib/site";
@@ -33,6 +35,27 @@ function sesiAcildiSay() {
   if (sesAcildiMi()) return;
   sesAcildi = true;
   try { sessionStorage.setItem(SES_ANAHTAR, "1"); } catch {}
+}
+
+function karistir<T>(l: T[]) {
+  const a = [...l];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+function izlendiSay(id: string) {
+  const l = read<string[]>(KEYS.izlenen, []);
+  if (!l.includes(id)) write(KEYS.izlenen, [...l, id]);
+}
+/** İzlenmemişler karışık sırayla önde, izlenenler karışık sırayla arkada. Adresteki video (#KIM-03) en başa alınır. */
+function siraKur(ilk: string) {
+  const izlenen = new Set(read<string[]>(KEYS.izlenen, []));
+  const sira = [...karistir(VIDEOLAR.filter((v) => !izlenen.has(v.id))), ...karistir(VIDEOLAR.filter((v) => izlenen.has(v.id)))];
+  const i = sira.findIndex((v) => v.id === ilk);
+  if (i > 0) sira.unshift(...sira.splice(i, 1));
+  return sira;
 }
 
 /** muted: öğrencinin ses düğmesiyle kendi seçtiği sessizlik (akış boyunca kalır). */
@@ -160,7 +183,7 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
             const yuzde = (100 * e.currentTarget.currentTime) / (e.currentTarget.duration || 1);
             setPct(yuzde);
             // Videonun %80'i izlenince bir kez sayılır (video döngüde olduğu için yeniden sayılmaz).
-            if (yuzde >= 80 && !izlendi.current) { izlendi.current = true; kaydet("video", 1, PUAN.video); }
+            if (yuzde >= 80 && !izlendi.current) { izlendi.current = true; kaydet("video", 1, PUAN.video); izlendiSay(v.id); }
           }}
         />
         {zorla && active && hint && !cevap && (
@@ -205,7 +228,9 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
 export default function VideoFeed({ konular }: { konular: Record<string, string> }) {
   // Videolar sesli başlar; yalnızca öğrenci ses düğmesiyle kapatırsa akış sessiz sürer.
   const [muted, setMuted] = useState(false);
-  const [active, setActive] = useState(VIDEOLAR[0]?.id ?? "");
+  const [active, setActive] = useState("");
+  // Sıra tarayıcıda kurulur (izlenenler listesi ve rastgelelik sunucuda yok); kurulana kadar akış boş kalır.
+  const [sira, setSira] = useState<Video[] | null>(null);
   const [msg, setMsg] = useState<string | null>(null);
   const feed = useRef<HTMLDivElement>(null);
   const toast = useCallback((t: string) => setMsg(t), []);
@@ -219,11 +244,14 @@ export default function VideoFeed({ konular }: { konular: Record<string, string>
 
   // Adresteki #KIM-03 o videodan başlatır; ekrandaki video değişince adres de güncellenir (paylaşmak için).
   useEffect(() => {
+    const s = siraKur(decodeURIComponent(location.hash.slice(1)));
+    setSira(s);
+    setActive(s[0]?.id ?? "");
+  }, []);
+
+  useEffect(() => {
     const f = feed.current;
-    if (!f) return;
-    const id = decodeURIComponent(location.hash.slice(1));
-    const el = id ? document.getElementById(id) : null;
-    if (el) { f.scrollTop = el.offsetTop; setActive(id); }
+    if (!f || !sira) return;
     const io = new IntersectionObserver(
       (es) => es.forEach((e) => {
         if (e.isIntersecting && e.intersectionRatio > 0.6) {
@@ -235,7 +263,7 @@ export default function VideoFeed({ konular }: { konular: Record<string, string>
     );
     f.querySelectorAll(".reel").forEach((r) => io.observe(r));
     return () => io.disconnect();
-  }, []);
+  }, [sira]);
 
   // Klavye: aşağı/yukarı ok sıradaki/önceki video (cevap penceresi açık değilken).
   useEffect(() => {
@@ -264,7 +292,7 @@ export default function VideoFeed({ konular }: { konular: Record<string, string>
   return (
     <div className="feed" ref={feed}>
       <h1 className="sr-only">Videolar</h1>
-      {VIDEOLAR.map((v) => <Reel key={v.id} v={v} konu={konular[v.id]} active={active === v.id} o={o} />)}
+      {sira?.map((v) => <Reel key={v.id} v={v} konu={konular[v.id]} active={active === v.id} o={o} />)}
       <AnimatePresence>
         {msg && (
           <motion.div

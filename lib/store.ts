@@ -8,7 +8,7 @@ export type Prog = Record<string, string>; // "ders.konu" -> "3/4 doğru", "_las
 export const KEYS = {
   prog: "tf-prog", saved: "tf-saved", ad: "tf-ad", tekrar: "tf-tekrar", anlamadim: "tf-anlamadim",
   asama: "tf-asama", puan: "tf-puan", gorev: "tf-gorev", yer: "tf-yer", ipucu: "tf-ipucu", unite: "tf-unite",
-  sifir: "tf-sifir",
+  sifir: "tf-sifir", izlenen: "tf-izlenen",
 } as const;
 const listeners = new Set<() => void>();
 const cache: Record<string, { raw: string | null; val: unknown }> = {};
@@ -76,6 +76,7 @@ export function resetAll() {
   write(KEYS.gorev, {});
   write(KEYS.yer, {});
   write(KEYS.unite, {});
+  write(KEYS.izlenen, []);
   // Sıfırlama damgası: hesaba bağlı başka cihazın eski verisi bu sıfırlamanın üzerine birleştirilmez (lib/esitle.ts).
   write(KEYS.sifir, Date.now());
 }
