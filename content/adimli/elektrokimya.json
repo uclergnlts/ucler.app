@@ -7,27 +7,27 @@
  "adimlar": [
   {
    "baslik": "Daniell pili",
-   "metin": "Zn şerit ZnSO₄'te, Cu şerit CuSO₄'te. Tel ve tuz köprüsüyle bağladık.",
+   "metin": "Zn şerit ZnSO₄'te, Cu şerit CuSO₄'te. Tel ve tuz köprüsüyle bağladık; pil bir süre çalışacak.",
    "sahne": {
     "tur": "kim10-daniell",
     "sure": 4
    },
    "gorev": {
     "tur": "tahmin",
-    "soru": "Elektronlar dış devrede hangi yönde akar?",
+    "soru": "Pil çalıştıkça şeritlere ne olur?",
     "secenekler": [
      {
-      "yazi": "Cu'dan Zn'ye",
-      "neden": "Elektron veren Zn'dir, çünkü daha aktiftir. Elektronlar elektron verenden alana gider."
-     },
-     {
-      "yazi": "Zn'den Cu'ya",
-      "neden": "Zn yükseltgenir ve elektronları tel üzerinden Cu'ya gönderir; orada Cu²⁺ indirgenir. Zn <b>anot</b> (−), Cu <b>katot</b> (+) olur.",
+      "yazi": "Zn incelir, Cu kalınlaşır",
+      "neden": "Zn atomları elektron verip Zn²⁺ olarak çözeltiye geçer; şerit incelir. Elektronlar telden Cu'ya gider, orada Cu²⁺ iyonları Cu olarak birikir. Cu²⁺ azaldıkça mavi renk de açılır.",
       "dogru": true
      },
      {
-      "yazi": "Tuz köprüsünün içinden",
-      "neden": "Elektronlar çözeltiden geçmez, yalnızca telden akar. Köprüde iyonlar hareket eder."
+      "yazi": "Zn kalınlaşır, Cu incelir",
+      "neden": "Elektronu veren Zn'dir. Elektronunu veren atom şeritte kalır mı, iyon olup çözeltiye mi geçer?"
+     },
+     {
+      "yazi": "İkisi de değişmez",
+      "neden": "Akım, atomların elektron alıp vermesinden doğar. Elektronunu veren Zn atomu artık bir iyondur ve çözeltiye geçer."
      }
     ]
    },

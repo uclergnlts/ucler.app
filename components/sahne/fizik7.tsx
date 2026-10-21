@@ -241,6 +241,7 @@ function Devrilme({ t, oynuyor, s }: SahneProps) {
 /* ---------- Çembersel hareket ---------- */
 
 // Düzgün çembersel hareket: bir tur (sure). Hız oku teğet, ivme oku merkeze doğru; geçmiş hız okları soluk.
+// İvme oku ve yazısı sahne oynayınca çıkar: tahmin sorusunun cevabını önceden göstermesin.
 function Cember({ t, oynuyor, s }: SahneProps) {
   const sure = Number(s.sure ?? 4), u = ilerleme(t, oynuyor, sure), CX = 170, CY = 130, R = 70;
   const nokta = (b: number) => ({ x: CX + R * Math.sin(b), y: CY - R * Math.cos(b), vx: Math.cos(b), vy: Math.sin(b) });
@@ -255,11 +256,11 @@ function Cember({ t, oynuyor, s }: SahneProps) {
         return <g key={x} opacity={0.3}><Ok x1={q.x} y1={q.y} x2={q.x + q.vx * 44} y2={q.y + q.vy * 44} renk="var(--c1)" kalin={2} /></g>;
       })}
       <Ok x1={p.x} y1={p.y} x2={p.x + p.vx * 50} y2={p.y + p.vy * 50} renk="var(--c1)" />
-      <Ok x1={p.x} y1={p.y} x2={p.x + (CX - p.x) * 0.45} y2={p.y + (CY - p.y) * 0.45} renk="var(--c2)" kalin={2.5} />
+      {u > 0 && <Ok x1={p.x} y1={p.y} x2={p.x + (CX - p.x) * 0.45} y2={p.y + (CY - p.y) * 0.45} renk="var(--c2)" kalin={2.5} />}
       <circle cx={p.x} cy={p.y} r={9} fill="var(--c4)" />
       <g fontSize={12} fontWeight={800}>
         <text x={14} y={22} fill="var(--c1)">hız: 5 m/s, yönü değişiyor</text>
-        <text x={14} y={42} fill="var(--c2)">ivme: merkeze doğru</text>
+        {u > 0 && <text x={14} y={42} fill="var(--c2)">ivme: merkeze doğru</text>}
       </g>
       <text x={170} y={226} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">soluk oklar: aynı topun önceki hızları</text>
     </svg>

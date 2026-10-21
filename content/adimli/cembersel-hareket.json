@@ -7,27 +7,27 @@
  "adimlar": [
   {
    "baslik": "Sürat sabit, hız değişiyor",
-   "metin": "Top çember üzerinde sabit süratle dönüyor. Hız oku her an çembere teğettir.",
+   "metin": "Top çember üzerinde sabit süratle dönüyor. Hız oku her an çembere teğettir ve yönü değiştiği için top ivmelidir.",
    "sahne": {
     "tur": "fiz7-cember",
     "sure": 4
    },
    "gorev": {
     "tur": "tahmin",
-    "soru": "Bu top ivmeli mi?",
+    "soru": "Bu ivme hangi yönü gösterir?",
     "secenekler": [
      {
-      "yazi": "Hayır, sürati sabit",
-      "neden": "Sürat sabit, ama ivme hız <b>vektörünün</b> değişimidir. Hızın yönü de değişiyor."
+      "yazi": "Hızla aynı yönde, çembere teğet",
+      "neden": "Teğet bir ivme süratı değiştirirdi; oysa sürat sabit."
      },
      {
-      "yazi": "Yalnızca yavaşlarsa ivmeli olur",
-      "neden": "Yönün değişmesi de bir ivmedir."
-     },
-     {
-      "yazi": "Evet, hızın yönü değişiyor",
-      "neden": "Hız vektörü her an yön değiştirir; bu bir ivmedir. Bu <b>merkezcil ivme</b> her an merkeze doğrudur (kırmızı ok) ve hıza diktir: sürati değil, yalnızca yönü değiştirir.",
+      "yazi": "Merkeze doğru",
+      "neden": "Sürati değil yalnızca yönü değiştiren ivme hıza diktir ve her an merkeze doğrudur (kırmızı ok). Buna <b>merkezcil ivme</b> denir.",
       "dogru": true
+     },
+     {
+      "yazi": "Merkezden dışarı doğru",
+      "neden": "Dışarı doğru bir ivme topu çemberden uzaklaştırırdı. Topu çember üzerinde bükmek için ivme hangi yöne bakmalı?"
      }
     ]
    },
