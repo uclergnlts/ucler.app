@@ -3,7 +3,7 @@
 // Konular sırayla açılır (lib/kilit.ts). Bir konuya dokununca alttan kısa özet ve "Başla" penceresi açılır;
 // kilitli konuda pencere neden kilitli olduğunu ve ünite testiyle nasıl atlanacağını söyler.
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { DERSLER, type DersId, type Entry } from "@/lib/dersler";
 import { acik, atlamaUnitesi, bekledigi, GECME, siradaki, uniteAcik, uniteGecti, uniteHref, uniteler, type Unitem } from "@/lib/kilit";
 import { useDurumlar } from "@/lib/store";
@@ -24,7 +24,13 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
   const sira = siradaki(list, d);
   const uler = uniteler(list);
   const ready = list.filter((e) => e.id), done = ready.filter((e) => d.prog[`${ders}.${e.id}`]).length;
-  const [secim, setSecim] = useState<Secim>(null);
+  const [secim, setSecimHam] = useState<Secim>(null);
+  // Pencere bir SheetTrigger'dan açılmıyor; kapanınca odak açan düğmeye dönsün diye o düğme saklanır.
+  const acan = useRef<HTMLElement | null>(null);
+  const setSecim = (x: Secim) => {
+    if (x) acan.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    setSecimHam(x);
+  };
   const Back = Icon.back;
   return (
     <div className="app" data-ders={ders}>
@@ -88,7 +94,7 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
         })}
       </Govde>
       <Sheet open={!!secim} onOpenChange={(o) => { if (!o) setSecim(null); }}>
-        <SheetContent data-ders={ders}>
+        <SheetContent data-ders={ders} onCloseAutoFocus={(e) => { if (acan.current?.isConnected) { e.preventDefault(); acan.current.focus(); } }}>
           {secim?.tur === "konu" && <KonuPencere ders={ders} list={list} e={secim.e} sira={sira} />}
           {secim?.tur === "test" && <TestPencere ders={ders} list={list} u={secim.u} />}
         </SheetContent>
