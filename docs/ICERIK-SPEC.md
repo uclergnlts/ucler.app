@@ -91,6 +91,18 @@ Her konunun sonunda 4 soruluk test vardır (aşamalar bitince açılır). Üçle
 - **Yanlışa özel ipucu (Üçler, 2026-10-19):** Çoktan seçmeli soruda `y` alanı zorunludur: 4 öğe, doğru şıkta `""`, her yanlış şıkta o şıkkı seçtiren düşünce hatasını söyleyen **tek kısa cümle** (en çok 25 kelime). Öğrenci yanlış şıkkı seçince alttaki çubukta uzun açıklamanın (`e`) **yerine** bu cümle çıkar; yeni kutu ya da düğme eklenmez. Amaç ekrandaki yazıyı artırmak değil, azaltmak.
 - Her konuda 4 sorudan en az ikisi etkileşimli olur (doğrulayıcı denetler). Çoktan seçmeli soru kalabilir; hesap gerektiren soru `sayi`, sınıflandırma `ayir`, süreç `sirala`, kavram-tanım `eslestir` olarak yazılır.
 
+## Şık yazımı
+
+Konu sonu testindeki şıklar (`o`) ve adımlı dersteki seçim/tahmin şıkları (`yazi`) için:
+
+- Şık kısa ve tarafsızdır: yalnızca cevabın kendisi. Örnek: "Element", "Bileşik", "Karışım"; "Element: antik çağdan beri öyle bilinir" değil.
+- Şıkta gerekçe olmaz ("çünkü", "olduğu için", "; …", ": …" ile eklenen açıklama). Yanlış bir şıkka eklenen inandırıcı gerekçe öğrencide kavram yanılgısı bırakır; doğru şıktaki gerekçe ise cevabı ele verir.
+- Açıklama yalnızca cevaptan sonra gelir: adımlı derste `neden`, testte `e` ve `y`.
+- Soru "neden" diye soruyorsa şıkların kendisi gerekçedir; bu durumda da her şık tek kısa cümledir.
+- Şık en fazla 10 kelime olmalı.
+
+`tools/check.py` gerekçeli şıkkı hata, 10 kelimeyi geçen şıkkı uyarı sayar.
+
 ## Resmi program eşleştirmesi (`content/kazanimlar.json`)
 
 Her MEB öğrenme çıktısı (Türkiye Yüzyılı Maarif Modeli, 2024; Fizik, Kimya, Biyoloji, 9-12. sınıf) bir satırdır: `kod`, `sinif`, `unite`, `ad`, `durum`, `konular`, gerekirse `not`.

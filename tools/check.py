@@ -23,6 +23,16 @@ def err(*a):
     bad += 1
     print("HATA:", *a)
 
+# Şıklar kısa ve tarafsız olmalı (docs/ICERIK-SPEC.md "Şık yazımı"): gerekçe şıkta değil, cevaptan sonraki açıklamada.
+# Yanlış bir şıkka eklenen gerekçe ("Element: antik çağdan beri öyle bilinir") öğrenciyi yanılgıya iter.
+# Soru zaten "neden" diye soruyorsa şıkların kendisi gerekçedir; o zaman denetlenmez.
+GEREKCE = re.compile(r"\b(çünkü|olduğu için|olduğundan|yüzünden|dolayısıyla)\b", re.I)
+NEDEN_SORUSU = re.compile(r"\b(neden|nedeni|niçin|niye)\b", re.I)
+def sik_denetle(yer, soru, sik):
+    sik = re.sub(r"<[^>]+>", "", re.sub(r"<svg.*?</svg>", "", sik, flags=re.S)).strip()
+    if not NEDEN_SORUSU.search(soru or "") and GEREKCE.search(sik): err(*yer, "şıkta gerekçe var, açıklamaya taşı:", sik[:50])
+    if len(sik.split()) > 10: warn.append(f"{' '.join(map(str, yer))}: şık 10 kelimeyi geçiyor: {sik[:50]}")
+
 import math
 FN = {"sqrt": math.sqrt, "abs": abs, "ln": math.log, "log": math.log10, "exp": math.exp,
       "sin": lambda x: math.sin(math.radians(x)), "cos": lambda x: math.cos(math.radians(x)), "tan": lambda x: math.tan(math.radians(x))}
@@ -247,6 +257,7 @@ for f in sorted(glob.glob(os.path.join(CONTENT, "adimli", "*.json"))):
             if sum(1 for x in sec if x.get("dogru")) != 1: err("adımlı", yer, "tam bir doğru şık olmalı")
             for x in sec:
                 if not x.get("neden"): err("adımlı", yer, "şıkta neden boş:", x.get("yazi", "")[:30])
+                sik_denetle(("adımlı", yer), g.get("soru"), x.get("yazi", ""))
                 if not re.sub(r"<svg.*?</svg>", "", x.get("yazi", ""), flags=re.S).strip() and not x.get("etiket"): err("adımlı", yer, "yalnızca görsel olan şıkta etiket yok")
             if g.get("kosu") and not (s["sahne"].get("sure") and kont): err("adımlı", yer, "kosu için oynatılabilir sahne ve kontrol gerekli")
         if gt == "kesfet":
@@ -288,6 +299,7 @@ def test_denetle(yer, q):
     if not q.get("q") or not q.get("e"): return err(*yer, "soru ya da açıklama boş")
     if tur == "secim":
         if len(q.get("o", [])) != 4 or not 0 <= q.get("a", -1) <= 3: err(*yer, "çoktan seçmeli: 4 şık ve 0-3 arası doğru şık")
+        for o in q.get("o", []): sik_denetle(yer, q["q"], o)
         # Yanlışa özel ipucu: her yanlış şıkta o şıktaki hatayı söyleyen tek kısa cümle, doğru şıkta boş.
         y = q.get("y")
         if y is None: err(*yer, "çoktan seçmeli: y (yanlış şık ipuçları) yok")
