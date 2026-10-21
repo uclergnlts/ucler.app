@@ -1,6 +1,6 @@
 # BIY-06 · Vitaminler neden bu kadar az ama gerekli?
 
-Biyoloji › Biyomoleküller › Kart 10: Vitaminler · 1-3 dk · 193 kelime
+Biyoloji › Biyomoleküller › Kart 10: Vitaminler · 1-3 dk · 201 kelime
 
 ## Konuşma metni (ElevenLabs'a aynen yapıştırılır)
 
@@ -12,7 +12,7 @@ Bugün nedenini biliyoruz: C vitamini. Vücudun, deriyi, damarları ve dişetler
 
 Asıl şaşırtıcı olan miktar. Bir yetişkinin günde gereken C vitamini yüz miligramın altındadır, yani bir gramın onda birinden az. Bir portakal bu ihtiyacı neredeyse karşılar.
 
-Vitaminler enerji vermez. Görevleri, enzimlerin düzgün çalışmasına yardım etmektir. Bu yüzden az miktar yeter ama hiç olmazsa sistem aksar.
+Vitaminler enerji vermez. Birçoğu, enzimlerin düzgün çalışmasına yardım eder; bazılarının ise koruyucu ya da düzenleyici görevleri vardır. Bu yüzden az miktar yeter ama hiç olmazsa sistem aksar.
 
 Hepsi aynı davranmaz. A, D, E ve K yağda çözünür ve vücutta depolanır. B grubu ve C suda çözünür. Çoğu depolanmaz, fazlası idrarla atılır. Önemli bir istisna var: B on iki, karaciğerde yıllarca saklanabilir.
 

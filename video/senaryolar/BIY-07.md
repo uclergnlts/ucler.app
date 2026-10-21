@@ -8,7 +8,7 @@ Ateşin kırk biri geçerse ne olur? Üstelik vücudu on üç dereceye düşüp 
 
 Önce ateşe bakalım. Hastalandığında ateşinin otuz sekiz, otuz dokuz dereceye çıkması çoğu zaman bir savunmadır. Mikropların çoğalması yavaşlar, bağışıklık hücreleri hızlanır. Ama kırk bir dereceyi geçen ateş tehlikelidir. Neden?
 
-Cevap enzimlerde. Hücrendeki neredeyse her tepkimeyi enzimler hızlandırır. Enzim, belirli bir şekle katlanmış bir proteindir. Üzerindeki aktif bölge, substratı bir anahtarı tutan kilit gibi kavrar.
+Cevap enzimlerde. Hücrendeki neredeyse her tepkimeyi enzimler hızlandırır. Enzimlerin çoğu, belirli bir şekle katlanmış proteinlerdir. Üzerindeki aktif bölge, substratı bir anahtarı tutan kilit gibi kavrar.
 
 Sıcaklık arttıkça moleküller hızlanır, çarpışmalar artar ve tepkime hızlanır. İnsan enzimleri otuz yedi derecede en hızlı çalışır. Daha sıcakta ise moleküller o kadar şiddetli titreşir ki enzimin şeklini tutan zayıf bağlar kopar. Aktif bölge bozulur ve enzim artık işini yapamaz. Buna denatürasyon denir ve çoğu zaman geri dönmez. En hassas organ beyindir.
 
