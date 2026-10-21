@@ -6,7 +6,7 @@
 // olduğu için düğmeler videonun üstüne değil altındaki şeride konur: konunun adı, "Konuya git", "Cevabı gör",
 // kaydet, paylaş ve ses.
 // Sıra her açılışta karışıktır: önce izlenmemiş videolar, hepsi izlendikten sonra izlenenler yine karışık gelir.
-// %80'i izlenen video "izlendi" sayılır; liste yalnızca bu cihazda tutulur (tf-izlenen).
+// %80'i izlenen video "izlendi" sayılır; liste tf-izlenen'de tutulur, hesaba eşitlenir.
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { DERSLER } from "@/lib/dersler";

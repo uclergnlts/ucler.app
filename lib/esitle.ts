@@ -10,7 +10,7 @@
 import type { Gun, Puan } from "./puan";
 import type { Asama, Prog, Tekrar, Unite, Yer } from "./store";
 
-export const ESIT = ["prog", "saved", "ad", "tekrar", "anlamadim", "asama", "puan", "gorev", "yer", "ipucu", "unite", "sifir"] as const;
+export const ESIT = ["prog", "saved", "ad", "tekrar", "anlamadim", "asama", "puan", "gorev", "yer", "ipucu", "unite", "izlenen", "sifir"] as const;
 export type Veri = Partial<Record<(typeof ESIT)[number], unknown>>;
 
 /** Anahtar sırasından bağımsız karşılaştırma (Postgres jsonb anahtarları yeniden sıralar). */
@@ -60,6 +60,7 @@ export function birlestir(b: Veri, c: Veri): Veri {
     saved: birlesimDizi(c.saved, b.saved),
     anlamadim: birlesimDizi(c.anlamadim, b.anlamadim),
     ipucu: birlesimDizi(c.ipucu, b.ipucu),
+    izlenen: birlesimDizi(c.izlenen, b.izlenen),
     ad: (c.ad as string) || (b.ad as string) || "",
     tekrar: { ...((b.tekrar as Tekrar) ?? {}), ...((c.tekrar as Tekrar) ?? {}) },
     asama: enBuyuk(b.asama as Asama, c.asama as Asama),
@@ -114,6 +115,7 @@ export function birlestir3(b: Veri, c: Veri, t: Veri | null): Veri {
     saved: dizi3(b.saved, c.saved, t.saved),
     anlamadim: dizi3(b.anlamadim, c.anlamadim, t.anlamadim),
     ipucu: dizi3(b.ipucu, c.ipucu, t.ipucu),
+    izlenen: dizi3(b.izlenen, c.izlenen, t.izlenen),
     ad: deger3(b.ad, c.ad, t.ad, (x, y) => (y as string) || (x as string) || "") ?? "",
     tekrar: sozluk3(b.tekrar, c.tekrar, t.tekrar, cihazinki),
     asama: sozluk3(b.asama, c.asama, t.asama, buyuk),
