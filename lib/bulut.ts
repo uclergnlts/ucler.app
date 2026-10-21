@@ -165,15 +165,16 @@ export async function hesabiSil(sil: () => void) {
   return true;
 }
 
-/** Seri hatırlatma e-postası açık mı (ilerleme.seri_hatirlat; gönderimi supabase/functions/seri-hatirlat yapar). */
-export async function hatirlatmaOku(): Promise<boolean | null> {
+/** E-posta bildirimleri: seri hatırlatması (supabase/functions/seri-hatirlat) ve yeni içerik (supabase/functions/yenilik-bildir). */
+export type Bildirim = "seri_hatirlat" | "yenilik_bildir";
+export async function bildirimOku(): Promise<Record<Bildirim, boolean> | null> {
   if (!kullanici) return null;
-  const { data } = await sb().from("ilerleme").select("seri_hatirlat").eq("user_id", kullanici).maybeSingle();
-  return data ? data.seri_hatirlat !== false : null;
+  const { data } = await sb().from("ilerleme").select("seri_hatirlat, yenilik_bildir").eq("user_id", kullanici).maybeSingle();
+  return data ? { seri_hatirlat: data.seri_hatirlat !== false, yenilik_bildir: data.yenilik_bildir !== false } : null;
 }
-export async function hatirlatmaYaz(acik: boolean) {
+export async function bildirimYaz(tur: Bildirim, acik: boolean) {
   if (!kullanici) return false;
-  const { error } = await sb().from("ilerleme").update({ seri_hatirlat: acik }).eq("user_id", kullanici);
+  const { error } = await sb().from("ilerleme").update({ [tur]: acik }).eq("user_id", kullanici);
   return !error;
 }
 

@@ -31,9 +31,9 @@ export default function Page() {
         </Bolum>
         <Bolum title="E-postalar">
           <p>
-            Hesabın varsa e-posta adresine yalnızca hesapla ilgili e-postalar (hesap onayı, şifre yenileme) ve serin bitmek
-            üzereyken akşam bir hatırlatma göndeririz. Hatırlatmayı Profil &gt; Ayarlar&apos;dan ya da e-postadaki
-            bağlantıdan kapatabilirsin. E-postalar Resend üzerinden gönderilir.
+            Hesabın varsa e-posta adresine yalnızca hesapla ilgili e-postalar (hesap onayı, şifre yenileme) , serin bitmek
+            üzereyken akşam bir hatırlatma ve yeni ders, konu ya da video eklenince bir bildirim göndeririz. Bu ikisini
+            Profil &gt; Ayarlar&apos;dan ya da e-postadaki bağlantıdan kapatabilirsin. E-postalar Resend üzerinden gönderilir.
           </p>
         </Bolum>
         <Bolum title="Kullanım sayımı">
