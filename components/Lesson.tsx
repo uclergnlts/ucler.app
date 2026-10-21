@@ -85,16 +85,22 @@ export default function Lesson({
   const [ilkOge, sonOge] = s.a >= 0 && s.a < nAsama ? asamaOge[s.a] : [0, 0];
   const Close = Icon.kapat, Bookmark = Icon.kayit;
 
-  // Videodan gelen bağlantı (?kart=3) dersi o karttan açar; geçersiz değerde ilk kart.
+  // Konular sırayla açılır (lib/kilit.ts). Sunucuda ve ilk çizimde cihazdaki ilerleme bilinmediği için konu açık sayılır;
+  // bu yüzden ilerleme yazan her şey ayrıca "acikKesin"i bekler (kilitli konu kendi yan etkisiyle açılmasın).
+  const durumlar = useDurumlar(), tarayici = useTarayici();
+  const kapali = tarayici && !acik(list, id, durumlar);
+  const acikKesin = tarayici && !kapali;
+
+  // Videodan gelen bağlantı (?kart=3) dersi o karttan açar; geçersiz değerde ilk kart. Kilitli konuda uygulanmaz.
+  const kartUygulandi = useRef(false);
   useEffect(() => {
+    if (!tarayici || kartUygulandi.current) return;
+    kartUygulandi.current = true;
+    if (kapali) return;
     const k = Number(new URLSearchParams(location.search).get("kart"));
     const j = ogeler.findIndex((o) => o.tur === "kart" && o.k === k - 1);
     if (Number.isInteger(k) && k > 0 && j >= 0) setS({ ...START, a: kartinAsamasi(nKart, k - 1), i: j });
-  }, [ogeler, nKart]);
-
-  // Konular sırayla açılır (lib/kilit.ts). Sunucuda ve ilk çizimde cihazdaki ilerleme bilinmediği için konu açık sayılır.
-  const durumlar = useDurumlar(), tarayici = useTarayici();
-  const kapali = tarayici && !acik(list, id, durumlar);
+  }, [ogeler, nKart, tarayici, kapali]);
   useEffect(() => { if (tarayici && !kapali) setProg({ _last: `${ders}.${id}` }); }, [ders, id, tarayici, kapali]);
   useEffect(() => { window.scrollTo(0, 0); }, [s.q, s.a, s.ara]);
   // Yeni kart altta belirince sayfa ona kayar.
@@ -103,13 +109,14 @@ export default function Lesson({
     if (s.q < 0 && s.a >= 0 && !s.ara && s.i > ilkOge) sonKart.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   }, [s.i, s.q, s.a, s.ara, ilkOge]);
   useEffect(() => {
-    if (s.q === nQuiz) setProg({ [`${ders}.${id}`]: `${s.right}/${nQuiz} doğru` });
-  }, [s.q, s.right, nQuiz, ders, id]);
+    if (acikKesin && s.q === nQuiz) setProg({ [`${ders}.${id}`]: `${s.right}/${nQuiz} doğru` });
+  }, [acikKesin, s.q, s.right, nQuiz, ders, id]);
   // Akışta ilerledikçe kaldığın yer yazılır; aşama bitince silinir.
   useEffect(() => {
+    if (!acikKesin) return;
     if (s.q < 0 && s.a >= 0 && !s.ara) yerYaz(konuKey, s.i > ilkOge ? { a: s.a, i: s.i } : null);
     else if (s.ara) yerYaz(konuKey, null);
-  }, [s.q, s.a, s.ara, s.i, ilkOge, konuKey]);
+  }, [acikKesin, s.q, s.a, s.ara, s.i, ilkOge, konuKey]);
 
   const akista = s.q < 0 && s.a >= 0 && !s.ara;
   const kilitli = akista && ogeler[s.i]?.tur === "adim" && !biten.has(s.i);
@@ -129,7 +136,7 @@ export default function Lesson({
   // Puan yan etkileri setS'in dışında, olay anında yazılır.
   function step(dir: 1 | -1) {
     if (dir < 0) return akista ? geri() : undefined;
-    if (kilitli) return;
+    if (kilitli || !acikKesin) return;
     yon.current = dir;
     setBildirim(null);
     if (akista && s.i === ilkOge + 1) ipucuGoruldu("akis");
