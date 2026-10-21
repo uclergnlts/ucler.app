@@ -91,6 +91,14 @@ Her konunun sonunda 4 soruluk test vardır (aşamalar bitince açılır). Üçle
 - **Yanlışa özel ipucu (Üçler, 2026-10-19):** Çoktan seçmeli soruda `y` alanı zorunludur: 4 öğe, doğru şıkta `""`, her yanlış şıkta o şıkkı seçtiren düşünce hatasını söyleyen **tek kısa cümle** (en çok 25 kelime). Öğrenci yanlış şıkkı seçince alttaki çubukta uzun açıklamanın (`e`) **yerine** bu cümle çıkar; yeni kutu ya da düğme eklenmez. Amaç ekrandaki yazıyı artırmak değil, azaltmak.
 - Her konuda 4 sorudan en az ikisi etkileşimli olur (doğrulayıcı denetler). Çoktan seçmeli soru kalabilir; hesap gerektiren soru `sayi`, sınıflandırma `ayir`, süreç `sirala`, kavram-tanım `eslestir` olarak yazılır.
 
+## Resmi program eşleştirmesi (`content/kazanimlar.json`)
+
+Her MEB öğrenme çıktısı (Türkiye Yüzyılı Maarif Modeli, 2024; Fizik, Kimya, Biyoloji, 9-12. sınıf) bir satırdır: `kod`, `sinif`, `unite`, `ad`, `durum`, `konular`, gerekirse `not`.
+- `durum`: `tam` (konular çıktıyı karşılıyor), `kismi` (bir bölümü eksik), `yok` (hiçbir konuda yok). `kismi` ve `yok` için `not` neyin eksik olduğunu yazar.
+- `konular`: `ders/konu-id` biçiminde; başka dersin konusu da olabilir (ör. fizikte yenilenebilir enerji → `kimya/enerji-kaynaklari`).
+- Yeni konu ya da kart eksik bir çıktıyı kapatınca o satırın `durum`, `konular` ve `not` alanı güncellenir. `tools/check.py` kod tekrarını, bilinmeyen konuyu ve eksik `not`u hata sayar, sonunda kapsama özetini yazar.
+- Yalnızca veridir; arayüzde sınav adı (TYT/AYT) gösterilmez. Program metinleri: `denetim/meb-program/`.
+
 ## Doğrulama
 `python3 tools/check.py` komutu "TAMAM" yazmalıdır. Ardından `tools/ekran.js` ile alınan görüntülere bakılır, çünkü taşma ve üst üste binme gibi sorunları ancak göz yakalar.
 

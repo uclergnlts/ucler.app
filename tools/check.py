@@ -332,8 +332,31 @@ for ders, tid, quiz in testler:
     # Her konuda en az iki soru etkileşimli olmalı (Üçler, 2026-10-19: "sadece şıklı olmasın").
     if sum(1 for q in quiz if q.get("tur", "secim") != "secim") < 2: err(ders, tid, "test: en az iki etkileşimli soru olmalı")
 
+# Resmi program eşleştirmesi (content/kazanimlar.json; biçim dosyanın _aciklama alanında).
+KAZANIM_JSON = os.path.join(CONTENT, "kazanimlar.json")
+kazanim_ozet = None
+if os.path.exists(KAZANIM_JSON) and not sys.argv[1:]:
+    kz = json.load(open(KAZANIM_JSON, encoding="utf-8"))
+    konu_idler = {f"{ders}/{k['id']}" for ders, v in dersler.items() for k in v["konular"] if k.get("id")}
+    kodlar, sayac = set(), {"tam": 0, "kismi": 0, "yok": 0}
+    for ders, v in kz.get("dersler", {}).items():
+        for c in v.get("ciktilar", []):
+            kod = c.get("kod", "?")
+            if kod in kodlar: err("kazanım", kod, "kod iki kez geçiyor")
+            kodlar.add(kod)
+            if not c.get("ad") or c.get("sinif") not in (9, 10, 11, 12): err("kazanım", kod, "ad ya da sınıf eksik")
+            durum = c.get("durum")
+            if durum not in sayac: err("kazanım", kod, "durum tam, kismi ya da yok olmalı:", durum); continue
+            sayac[durum] += 1
+            for k in c.get("konular", []):
+                if k not in konu_idler: err("kazanım", kod, "bilinmeyen konu:", k)
+            if durum != "yok" and not c.get("konular"): err("kazanım", kod, f"{durum}: en az bir konu gerekli")
+            if durum != "tam" and not c.get("not"): err("kazanım", kod, f"{durum}: neyin eksik olduğu 'not' alanında yazılmalı")
+    kazanim_ozet = f"  kazanımlar: {len(kodlar)} çıktı, {sayac['tam']} tam, {sayac['kismi']} kısmi, {sayac['yok']} eksik"
+
 for w in warn: print("UYARI:", w)
 print("TAMAM" if not bad else f"{bad} sorun")
+if kazanim_ozet: print(kazanim_ozet)
 for ders, topics in d.items():
     print(f"  {ders}: {len(topics)} konu hazır -> {', '.join(topics)}")
 if os.path.exists(VIDEO_JSON) and not sys.argv[1:]: print(f"  videolar: {len(vids)} video")
