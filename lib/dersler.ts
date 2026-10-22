@@ -17,7 +17,12 @@ export type Etk =
       ciktilar: { ad: string; ifade: string; birim?: string; basamak?: number; max?: number }[];
       yorum?: [number | null, string][];
     };
-export type Card = { h: string; p: string; svg: string; key?: string; etk?: Etk };
+/**
+ * Kart. once yazılırsa kart "soru önce" açılır: başlık ve soru gelir, öğrenci cevaplayınca görsel ve anlatım belirir
+ * (Brilliant gibi önce düşün, sonra adını öğren). Şıkların "neden"i cevaptan sonra alttaki çubukta çıkar.
+ */
+export type Card = { h: string; p: string; svg: string; key?: string; etk?: Etk; once?: KartSorusu };
+export type KartSorusu = { soru: string; secenekler: { yazi: string; dogru?: boolean; neden: string }[] };
 /**
  * Konu sonu testinin sorusu. tur yazılmazsa çoktan seçmelidir (o: şıklar, a: doğru şıkkın sırası,
  * y: her yanlış şık için o şıktaki düşünce hatasını söyleyen tek cümle; doğru şıkta boş).

@@ -46,8 +46,9 @@ import { KIMYA14 } from "./kimya14";
 import { BIYOLOJI13 } from "./biyoloji13";
 import { BIYOLOJI14 } from "./biyoloji14";
 import { SIMULASYON } from "./simulasyon";
+import { SORU_ONCE } from "./soruonce";
 import type { SahneKaydi } from "./ortak";
 import { ZAR } from "./zar";
 
-export const SAHNELER: Record<string, SahneKaydi> = { ...HAREKET, ...ATOM, ...ZAR, ...FIZIK1, ...FIZIK2, ...FIZIK3, ...FIZIK4, ...KIMYA1, ...KIMYA2, ...KIMYA3, ...KIMYA4, ...BIYOLOJI1, ...BIYOLOJI2, ...BIYOLOJI3, ...BIYOLOJI4, ...FIZIK5, ...KIMYA5, ...BIYOLOJI5, ...FIZIK6, ...KIMYA6, ...BIYOLOJI6, ...FIZIK7, ...KIMYA7, ...BIYOLOJI7, ...FIZIK8, ...KIMYA8, ...BIYOLOJI8, ...FIZIK9, ...KIMYA9, ...BIYOLOJI9, ...FIZIK10, ...KIMYA10, ...BIYOLOJI10, ...FIZIK11, ...KIMYA11, ...BIYOLOJI11, ...FIZIK12, ...KIMYA12, ...KIMYA13, ...BIYOLOJI12, ...FIZIK13, ...FIZIK14, ...FIZIK15, ...FIZIK16, ...KIMYA14, ...BIYOLOJI13, ...BIYOLOJI14, ...SIMULASYON };
+export const SAHNELER: Record<string, SahneKaydi> = { ...HAREKET, ...ATOM, ...ZAR, ...FIZIK1, ...FIZIK2, ...FIZIK3, ...FIZIK4, ...KIMYA1, ...KIMYA2, ...KIMYA3, ...KIMYA4, ...BIYOLOJI1, ...BIYOLOJI2, ...BIYOLOJI3, ...BIYOLOJI4, ...FIZIK5, ...KIMYA5, ...BIYOLOJI5, ...FIZIK6, ...KIMYA6, ...BIYOLOJI6, ...FIZIK7, ...KIMYA7, ...BIYOLOJI7, ...FIZIK8, ...KIMYA8, ...BIYOLOJI8, ...FIZIK9, ...KIMYA9, ...BIYOLOJI9, ...FIZIK10, ...KIMYA10, ...BIYOLOJI10, ...FIZIK11, ...KIMYA11, ...BIYOLOJI11, ...FIZIK12, ...KIMYA12, ...KIMYA13, ...BIYOLOJI12, ...FIZIK13, ...FIZIK14, ...FIZIK15, ...FIZIK16, ...KIMYA14, ...BIYOLOJI13, ...BIYOLOJI14, ...SIMULASYON, ...SORU_ONCE };
 export type { SahneKaydi, SahneProps } from "./ortak";

@@ -93,11 +93,12 @@ export type Secenek = { yazi: string; etiket?: string; dogru?: boolean; neden: s
 /**
  * Öğrencinin sahnede değiştirdiği değer. "surgu" kaydırma çubuğu, "sayac" − / + düğmeleri, "anahtar" aç/kapa düğmesidir (0 / 1).
  * "dugme" her basışta değeri bir artırır; sahnenin bagla işlevi bunu bir eylem gibi yorumlar (ör. taze enzim koymak).
+ * "surukle" ekranda düğme olarak çıkmaz: öğrenci değeri sahnenin içinde sürükleyerek ya da dokunarak değiştirir.
  * Gösterilen sayı = değer × carpan (ör. tuz değeri onda bir yüzde: carpan 0.1, onek "%").
  */
 export type Kontrol = {
   ad: string; etiket: string; min: number; max: number; adim?: number;
-  birim?: string; onek?: string; carpan?: number; tur?: "surgu" | "sayac" | "anahtar" | "dugme";
+  birim?: string; onek?: string; carpan?: number; tur?: "surgu" | "sayac" | "anahtar" | "dugme" | "surukle";
 };
 
 /** Hedef: değer adı → tam değer ya da [en az, en çok]. Adlar kontroller ya da sahnenin ölçtüğü değerler (olc) olabilir. */
@@ -133,14 +134,17 @@ export type Adim = {
   deger?: Record<string, number>;
   kontroller?: Kontrol[];
   gorev: Gorev;
-  /** Konu anlatımında bu adımın duracağı yer: bu numaralı karttan hemen sonra (1'den başlar). */
+  /** Konu anlatımında bu adımın duracağı yer: bu numaralı karttan hemen sonra (1'den başlar).
+   * Derste soruOnce varsa adım bu karttan hemen ÖNCE gelir: öğrenci önce dener, kart sonra adını koyar. */
   kart?: number;
   /** "Göster": öğrenci denemeden önce sahne bir örneği kendisi oynar. deger: kontrollerin örnekte gideceği
    * değerler (görevin cevabı olmamalı); not: örneğin altındaki kısa açıklama; oynat: false ise sahne oynatılmaz. */
   goster?: { deger?: Record<string, number>; not?: string; oynat?: boolean };
 };
 
-export type AdimliDers = { id: string; ders: DersId; konu: string; baslik: string; ozet: string; adimlar: Adim[]; kapanis: string[] };
+/** soruOnce: Brilliant gibi "önce dene, sonra öğren" düzeni. Adımlar bağlı oldukları karttan önce gelir,
+ * goster (örnek çözüm) kullanılmaz; adımı olmayan kartların çoğu once sorusuyla açılır (lib/dersler.ts Card). */
+export type AdimliDers = { id: string; ders: DersId; konu: string; baslik: string; ozet: string; adimlar: Adim[]; kapanis: string[]; soruOnce?: boolean };
 
 export const ADIMLI: AdimliDers[] = [
   fizikGiris, maddeOzellikleri, basinc, kaldirma, isiSicaklik, vektorler, hareket, newton, ikiBoyut, bagil, isEnerji, basitMakineler, momentum, tork, cembersel, kutleCekimi, elektrostatik, elektrikAkimi, elektrikselEnerji, manyetizma, induksiyon, yariIletkenler, bhh, dalgalar, deprem, optik, dalgaOptigi, ozelGorelilik, kuantum, radyoaktivite,

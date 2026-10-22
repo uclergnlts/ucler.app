@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "bir-boyutta-hareket",
  "baslik": "Bir boyutta hareket",
- "ozet": "Konum, yer değiştirme, hız ve ivmeyi arabayı sürerek ve grafik çizerek keşfet.",
+ "ozet": "Önce dene, sonra adını öğren: arabayı sür, grafiği sürükle, topu at.",
  "adimlar": [
   {
    "baslik": "Konum",
-   "metin": "Arabayı sürükle ya da sürgüyü kullan, sarı bayrağa götür.",
+   "metin": "Arabayı sürükle ve sarı bayrağa götür.",
    "sahne": {
     "tur": "konum",
     "hedef": 30
@@ -21,7 +21,8 @@
      "etiket": "Konum",
      "min": 0,
      "max": 50,
-     "birim": "m"
+     "birim": "m",
+     "tur": "surukle"
     }
    ],
    "gorev": {
@@ -31,13 +32,7 @@
     },
     "tamam": "Araba başlangıçtan 30 m uzakta, yani konumu x = 30 m. Konum her zaman bir başlangıç noktasına göre söylenir."
    },
-   "kart": 1,
-   "goster": {
-    "deger": {
-     "x": 12
-    },
-    "not": "Araba başlangıç noktasından 12 m sağa gitti, yani konumu <b>+12 m</b>."
-   }
+   "kart": 1
   },
   {
    "baslik": "Yer değiştirme ve yol",
@@ -69,7 +64,7 @@
   },
   {
    "baslik": "Hız",
-   "metin": "Kamera her saniye bir kare çekiyor. A her saniye <b>5 m</b> gidiyor. B'nin hızını ayarla, oynat ve yan yana gitsinler.",
+   "metin": "Kamera her saniye bir kare çekiyor. A her saniye <b>5 m</b> gidiyor. B'nin hızını ayarla, oynat: yan yana gitsinler.",
    "sahne": {
     "tur": "hiz-serit",
     "sure": 5,
@@ -94,17 +89,11 @@
     },
     "tamam": "İkisi de her saniye 5 m gidiyor: v = Δx / Δt = 25 m / 5 s = 5 m/s. Aynı hız, aynı aralıklı kareler demek."
    },
-   "kart": 2,
-   "goster": {
-    "deger": {
-     "vB": 3
-    },
-    "not": "B'nin hızı 3 m/s: her saniye 3 m gidiyor, bu yüzden A'nın gerisinde kalıyor."
-   }
+   "kart": 2
   },
   {
    "baslik": "Konum-zaman grafiği",
-   "metin": "Araba sabit hızla giderken grafiğe her an konumunu çiziyor. <b>İki farklı hız</b> seç ve ikisini de oynat.",
+   "metin": "Araba giderken her an konumunu grafiğe çiziyor. <b>İki farklı hız</b> seç ve ikisini de oynat.",
    "sahne": {
     "tur": "konum-zaman",
     "sure": 5
@@ -141,13 +130,7 @@
      }
     ]
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "v": 3
-    },
-    "not": "3 m/s ile giden araba her saniye 3 m daha uzakta, grafiği düz ve eğik bir çizgi."
-   }
+   "kart": 3
   },
   {
    "baslik": "İvme",
@@ -191,17 +174,138 @@
      }
     ]
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "a": 1
+   "kart": 4
+  },
+  {
+   "baslik": "Grafiğin altındaki alan",
+   "metin": "Araba sabit <b>5 m/s</b> ile gidiyor. Grafikteki tutamacı sürükleyip zamanı ilerlet, arabayı bayrağa getir.",
+   "sahne": {
+    "tur": "so-vt-alan",
+    "v0": 5,
+    "a": 0,
+    "tMax": 6,
+    "yMax": 10,
+    "hedef": 20
+   },
+   "deger": {
+    "t": 1
+   },
+   "kontroller": [
+    {
+     "ad": "t",
+     "etiket": "Zaman",
+     "min": 0,
+     "max": 6,
+     "adim": 0.5,
+     "birim": "s",
+     "tur": "surukle"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "t": 4
     },
-    "not": "İvme 1 m/s²: hız her saniye 1 m/s artıyor, kareler arası giderek açılıyor."
-   }
+    "tamam": "4 s'de 20 m. Boyalı dikdörtgenin alanı da 5 · 4 = 20: hız-zaman grafiğinin altındaki alan, alınan yolu verir."
+   },
+   "kart": 5
+  },
+  {
+   "baslik": "Hızlanırken alan",
+   "metin": "Şimdi araba durgun başlıyor ve her saniye <b>2 m/s</b> hızlanıyor. Tutamacı sürükle, arabayı 16 m'deki bayrağa getir.",
+   "sahne": {
+    "tur": "so-vt-alan",
+    "v0": 0,
+    "a": 2,
+    "tMax": 5,
+    "yMax": 10,
+    "hedef": 16
+   },
+   "deger": {
+    "t": 1
+   },
+   "kontroller": [
+    {
+     "ad": "t",
+     "etiket": "Zaman",
+     "min": 0,
+     "max": 5,
+     "adim": 0.5,
+     "birim": "s",
+     "tur": "surukle"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "t": 4
+    },
+    "tamam": "4 s'de hız 8 m/s oldu. Boyalı üçgenin alanı ½ · 8 · 4 = 16 m: alan kuralı hızlanan arabada da geçerli."
+   },
+   "kart": 6
+  },
+  {
+   "baslik": "Serbest düşme",
+   "metin": "Havası alınmış bir tüpte 5 kg'lık gülle ile 1 g'lık tüy aynı anda bırakılacak.",
+   "sahne": {
+    "tur": "so-dusme",
+    "sure": 2
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Hangisi yere önce düşer?",
+    "secenekler": [
+     {
+      "yazi": "Gülle",
+      "neden": "Gülle daha büyük kuvvetle çekilir ama kütlesi de o oranda büyüktür; ivmesi tüyünkiyle aynıdır."
+     },
+     {
+      "yazi": "Tüy",
+      "neden": "Tüyü havada yavaşlatan şey havanın direncidir. Bu tüpte hava yok."
+     },
+     {
+      "yazi": "Aynı anda",
+      "dogru": true,
+      "neden": "Hava yokken her cisim aynı ivmeyle düşer. İkisi de 2 s'de 20 m düştü; izlerin arası her seferinde açıldı, yani düşerken hızlandılar."
+     }
+    ]
+   },
+   "kart": 8
+  },
+  {
+   "baslik": "Yukarı atış",
+   "metin": "Hız okunu yukarı sürükleyip atış hızını seç, sonra oynat. Top tam <b>20 m</b>'ye çıksın.",
+   "sahne": {
+    "tur": "so-yukari",
+    "sure": 6,
+    "hedef": 20
+   },
+   "deger": {
+    "v0": 10
+   },
+   "kontroller": [
+    {
+     "ad": "v0",
+     "etiket": "Atış hızı",
+     "min": 5,
+     "max": 30,
+     "adim": 5,
+     "birim": "m/s",
+     "tur": "surukle"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "v0": 20
+    },
+    "tamam": "20 m/s ile atılan top her saniye 10 m/s yavaşladı, 2 s'de durup 20 m'ye çıktı. Sonra aynı sürede, aynı süratle geri döndü."
+   },
+   "kart": 10
   },
   {
    "baslik": "Grafikten hareketi oku",
-   "metin": "Artık tersini yap: grafiği oynat, arabayı izle. Sarı bölgede neler oluyor?",
+   "metin": "Bu kez grafik hazır: oynat ve arabayı izle. Sarı bölgede ne oluyor?",
    "sahne": {
     "tur": "grafik-oku",
     "sure": 6
@@ -234,5 +338,6 @@
   "<b>Hız</b> = yer değiştirme / süre (v = Δx / Δt); konum-zaman grafiğinin eğimidir. Toplam yolun süreye oranı ise <b>sürat</b>tir; geri dönülen bir yolculukta ikisi farklıdır.",
   "<b>İvme</b> hızın her saniyedeki değişimi; hızlanan arabada kareler giderek açılır.",
   "Konum-zaman grafiği yatay ise araba duruyor, aşağı iniyorsa geri gidiyor."
- ]
+ ],
+ "soruOnce": true
 }

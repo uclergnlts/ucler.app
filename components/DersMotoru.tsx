@@ -109,7 +109,7 @@ function Secenekler({ secenekler, sinif, kapali, onSec }: { secenekler: Secenek[
   );
 }
 
-function Soru({ soru, secenekler, tamam, bildir }: { soru: string; secenekler: Secenek[]; tamam: () => void; bildir: Bildir }) {
+export function Soru({ soru, secenekler, tamam, bildir }: { soru: string; secenekler: Secenek[]; tamam: () => void; bildir: Bildir }) {
   const [yanlis, setYanlis] = useState<number[]>([]);
   const [dogru, setDogru] = useState<number | null>(null);
   const cozum = () => {
@@ -134,9 +134,12 @@ function Soru({ soru, secenekler, tamam, bildir }: { soru: string; secenekler: S
 }
 
 export function Kontroller({ liste, v, set, kapali }: { liste: Kontrol[]; v: Degerler; set: (ad: string, x: number) => void; kapali: boolean }) {
+  // "surukle" değerleri sahnenin içinde değişir; altta düğmesi çıkmaz.
+  const gorunen = liste.filter((k) => k.tur !== "surukle");
+  if (!gorunen.length) return null;
   return (
     <div className="ad-kontroller">
-      {liste.map((k) => {
+      {gorunen.map((k) => {
         const x = v[k.ad] ?? k.min, adim = k.adim ?? 1;
         if (k.tur === "dugme")
           return <button key={k.ad} className="ad-dugme" disabled={kapali} onClick={() => set(k.ad, 1)}>{k.etiket}</button>;

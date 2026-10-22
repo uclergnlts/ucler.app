@@ -37,10 +37,12 @@ function akis(ders, id, t) {
   const f = path.join(root, 'content', 'adimli', `${id}.json`);
   const a = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null;
   const birlesik = a && a.ders === ders && a.adimlar.length && a.adimlar.every((x) => x.kart);
+  const soruOnce = birlesik && a.soruOnce === true; // adımlar kartlarından önce gelir
   const liste = [];
   t.cards.forEach((_, k) => {
-    liste.push({ tur: 'kart', no: k + 1 });
+    if (!soruOnce) liste.push({ tur: 'kart', no: k + 1 });
     if (birlesik) a.adimlar.forEach((x, n) => { if (x.kart === k + 1) liste.push({ tur: 'adim', no: n + 1 }); });
+    if (soruOnce) liste.push({ tur: 'kart', no: k + 1 });
   });
   return liste;
 }
@@ -139,6 +141,13 @@ server.listen(0, async () => {
       try { for (let j = 0; j < liste.length; j++) {
         const o = liste[j], ad = `${ders}.${id}.${String(j + 1).padStart(2, '0')}-${o.tur === 'kart' ? 'k' : 'a'}${o.no}`;
         await cek(ad);
+        if (o.tur === 'kart' && t.cards[o.no - 1].once) {
+          // Soru önce kartı: şıklara sırayla dokun (ilki çoğu zaman yanlış; ipucu ekranı da görülsün).
+          const sik = p.locator('[data-akis]').last().locator('.ad-soru .opt:not([disabled])');
+          for (let k = 0; k < 4 && !(await devam.isEnabled()); k++) { await sik.first().click().catch(() => {}); await ileri(700); }
+          await cek(`${ad}-bitti`);
+          if (!(await devam.isEnabled())) { takilan.push(`${ders}/${id} kart ${o.no} sorusu`); takildi = true; break; }
+        }
         if (o.tur === 'adim') {
           const ok = await gorevBitir(adimli.adimlar[o.no - 1]);
           await cek(`${ad}-bitti`);

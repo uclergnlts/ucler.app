@@ -1,6 +1,7 @@
 "use client";
 // Kimya sahneleri: atom (çekirdek, dönen elektron katmanları, gösterim) ve atomun ölçeği.
 import { ELEMENTLER, katmanlar } from "@/lib/elementler";
+import { useState } from "react";
 import type { SahneKaydi, SahneProps } from "./ortak";
 
 // İlk 20 elementin doğada en bol izotopunun nötron sayısı (¹H, ⁴He, ⁷Li ... ⁴⁰Ar, ³⁹K, ⁴⁰Ca).
@@ -9,7 +10,7 @@ const yuk = (q: number) => (q === 0 ? "" : `${Math.abs(q) > 1 ? Math.abs(q) : ""
 const CX = 110, CY = 112, R = [46, 66, 86, 104];
 
 /** Çekirdek: proton ve nötronlar ayçiçeği düzeninde iç içe. */
-function Cekirdek({ p, n, x = CX, y = CY, r = 4.4 }: { p: number; n: number; x?: number; y?: number; r?: number }) {
+function Cekirdek({ p, n, x = CX, y = CY, r = 4.4, dokun }: { p: number; n: number; x?: number; y?: number; r?: number; dokun?: (k: "p" | "n") => void }) {
   const N = p + n;
   // Proton ve nötronları karıştır: nötronlar eşit aralıkla serpiştirilir.
   const tur = Array.from({ length: N }, (_, i) => (n && Math.floor(((i + 1) * n) / N) > Math.floor((i * n) / N) ? "n" : "p"));
@@ -17,32 +18,51 @@ function Cekirdek({ p, n, x = CX, y = CY, r = 4.4 }: { p: number; n: number; x?:
     <g>
       {tur.map((k, i) => {
         const a = i * 2.39996, d = r * 1.05 * Math.sqrt(i);
-        return <circle key={i} cx={x + d * Math.cos(a)} cy={y + d * Math.sin(a)} r={r} fill={k === "p" ? "var(--c2)" : "#9aa8ba"} stroke="#fff" strokeWidth={0.8} />;
+        return (
+          <circle
+            key={i} cx={x + d * Math.cos(a)} cy={y + d * Math.sin(a)} r={r} fill={k === "p" ? "var(--c2)" : "#9aa8ba"} stroke="#fff" strokeWidth={0.8}
+            onClick={dokun ? () => dokun(k as "p" | "n") : undefined} style={dokun ? { cursor: "pointer" } : undefined}
+          />
+        );
       }).reverse()}
     </g>
   );
 }
 
-function Atom({ s, v }: SahneProps) {
+// Dokunmalı kurulum (atom-kur): alttaki tepsiden taneciğe dokununca eklenir, atomdaki taneciğe dokununca çıkar.
+const SINIR = { p: [1, 20], n: [0, 24], e: [0, 22] } as const;
+function Atom({ s, v, set }: SahneProps) {
   const p = v.p ?? 1, n = v.n ?? 0, e = v.e ?? p;
+  const dokunmali = s.dokun === true;
+  const [dokundu, setDokundu] = useState(false);
+  const degistir = (k: "p" | "n" | "e", d: number) => {
+    const x = (k === "p" ? p : k === "n" ? n : e) + d;
+    setDokundu(true);
+    if (x >= SINIR[k][0] && x <= SINIR[k][1]) set(k, x);
+  };
   const el = ELEMENTLER[p - 1], q = p - e, A = p + n, k = katmanlar(e);
   // Testte (s.test) gösterim, yük ve element adı gizlenir: öğrenci sayıları kendisi kurar.
   const etiket = s.etiket === true, gizli = s.test === true;
   const durum = q === 0 ? "Nötr atom" : q > 0 ? `Katyon: ${q} elektron verdi` : `Anyon: ${-q} elektron aldı`;
   return (
-    <svg viewBox="0 0 340 224" role="img" aria-label={gizli ? `${p} proton, ${n} nötron, ${e} elektron` : `${el.ad}: ${p} proton, ${n} nötron, ${e} elektron`}>
+    <svg viewBox={dokunmali ? "0 0 340 272" : "0 0 340 224"} role="img" aria-label={gizli ? `${p} proton, ${n} nötron, ${e} elektron` : `${el.ad}: ${p} proton, ${n} nötron, ${e} elektron`}>
       {k.map((c, i) => (
         <g key={i}>
           <circle cx={CX} cy={CY} r={R[i]} fill="none" stroke="var(--line-2)" strokeWidth={1.5} />
           <g className="ad-don" style={{ animationDuration: `${10 + i * 5}s`, transformOrigin: `${CX}px ${CY}px` }}>
             {Array.from({ length: c }, (_, j) => {
               const a = (-90 + (j * 360) / c + i * 17) * (Math.PI / 180);
-              return <circle key={j} cx={CX + R[i] * Math.cos(a)} cy={CY + R[i] * Math.sin(a)} r={5} fill="var(--c1)" stroke="#fff" strokeWidth={1.2} />;
+              return (
+                <circle
+                  key={j} cx={CX + R[i] * Math.cos(a)} cy={CY + R[i] * Math.sin(a)} r={dokunmali ? 6.5 : 5} fill="var(--c1)" stroke="#fff" strokeWidth={1.2}
+                  onClick={dokunmali ? () => degistir("e", -1) : undefined} style={dokunmali ? { cursor: "pointer" } : undefined}
+                />
+              );
             })}
           </g>
         </g>
       ))}
-      <Cekirdek p={p} n={n} />
+      <Cekirdek p={p} n={n} r={dokunmali ? 5.2 : 4.4} dokun={dokunmali ? (k) => degistir(k, -1) : undefined} />
       {etiket && (
         <g fontSize={11.5} fontWeight={700}>
           <line x1={CX + 4} y1={CY - 4} x2={236} y2={46} stroke="var(--c2)" strokeWidth={1.2} />
@@ -66,6 +86,23 @@ function Atom({ s, v }: SahneProps) {
           <text x={284} y={146} fontSize={12} textAnchor="middle" fill="var(--muted)">A = {p} + {n} = {A}</text>
           <text x={284} y={164} fontSize={12} textAnchor="middle" fill="var(--muted)">katmanlar: {k.join("-") || "yok"}</text>
           <text x={332} y={216} fontSize={11.5} textAnchor="end" fontWeight={700} fill={q ? "var(--kimya)" : "var(--muted)"}>{durum}</text>
+        </g>
+      )}
+      {dokunmali && (
+        <g>
+          {([["p", "proton", "var(--c2)"], ["n", "nötron", "#9aa8ba"], ["e", "elektron", "var(--c1)"]] as const).map(([k, ad, renk], i) => (
+            <g
+              key={k} role="button" tabIndex={0} aria-label={`${ad} ekle`} style={{ cursor: "pointer" }}
+              onClick={() => degistir(k, 1)}
+              onKeyDown={(ev) => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); degistir(k, 1); } }}
+            >
+              <rect x={8 + i * 112} y={232} width={100} height={36} rx={18} fill="#fff" stroke={renk} strokeWidth={2} />
+              {!dokundu && <rect x={8 + i * 112} y={232} width={100} height={36} rx={18} fill="none" stroke="var(--acc)" strokeWidth={2} className="ad-nabiz ad-nabiz-hafif" />}
+              <circle cx={30 + i * 112} cy={250} r={8} fill={renk} />
+              <text x={30 + i * 112} y={254} fontSize={12} fontWeight={800} fill="#fff" textAnchor="middle">+</text>
+              <text x={44 + i * 112} y={255} fontSize={13} fontWeight={700} fill="var(--ink)">{ad}</text>
+            </g>
+          ))}
         </g>
       )}
       <g fontSize={11} fill="var(--muted)">
@@ -115,4 +152,6 @@ export const ATOM: Record<string, SahneKaydi> = {
     bagla: (ad, x, v) => (ad === "p" ? { ...v, p: x, n: YAYGIN_N[x - 1], e: x } : { ...v, [ad]: x }),
   },
   "atom-olcek": { C: AtomOlcek },
+  // Dokunarak kurulan atom (s.dokun: true): proton eklemek nötron ve elektronu değiştirmez, öğrenci her birini kendisi koyar.
+  "atom-kur": { C: Atom },
 };

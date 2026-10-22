@@ -138,8 +138,10 @@ function Gecis({ s, v, t, oynuyor }: SahneProps) {
 
 /* ---------- osmoz: alyuvar ---------- */
 
-function Osmoz({ v }: SahneProps) {
-  const t = v.tuz ?? 9;
+// s.sure ve s.dis verilirse (tahmin adımı) dış ortam oynatınca %0,9'dan s.dis'e (onda bir yüzde) yavaşça değişir.
+function Osmoz({ s, v, t: zaman, oynuyor }: SahneProps) {
+  const oynar = typeof s.sure === "number" && typeof s.dis === "number";
+  const t = oynar ? 9 + ((s.dis as number) - 9) * yumusak((oynuyor || zaman > 0 ? zaman : 0) / (s.sure as number)) : v.tuz ?? 9;
   const c = t / 10, ic = 9;
   const hal = t < ic ? "hipo" : t > ic ? "hiper" : "izo";
   const fark = Math.abs(t - ic) / 9;
@@ -168,7 +170,7 @@ function Osmoz({ v }: SahneProps) {
   };
   const ad = { hipo: "Hipotonik: su hücreye giriyor", izo: "İzotonik: net su geçişi yok", hiper: "Hipertonik: su hücreden çıkıyor" }[hal];
   return (
-    <svg viewBox="0 0 340 224" role="img" aria-label={`${ad}. Dış ortam yüzde ${c} tuz`}>
+    <svg viewBox="0 0 340 224" role="img" aria-label={`${ad}. Dış ortam yüzde ${c.toLocaleString("tr-TR", { maximumFractionDigits: 1 })} tuz`}>
       <rect x={10} y={10} width={320} height={190} rx={14} fill="var(--c1)" fillOpacity={0.04 + c * 0.04} />
       {noktalar}
       {hal === "izo" ? [0, 90, 180, 270].map((a) => ok(a, a % 180 === 0)) : [0, 90, 180, 270].map((a) => ok(a, hal === "hipo"))}

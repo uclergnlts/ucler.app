@@ -7,7 +7,7 @@
 // Etkileşimli adımları "kart" alanıyla yerleştirilmiş konularda adımlar anlatımın içinde, ilgili karttan hemen
 // sonra gelir: kısa açıklama (kart) → örnek (sahne kendisi oynar) → sıra sende (görev). Görev bitmeden "Devam" açılmaz.
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { DERSLER, secmeli, type DersId, type Entry, type Topic } from "@/lib/dersler";
 import {
   asamaBitir, ipucuGoruldu, setProg, toggleAnlamadim, toggleSaved, useAnlamadim, useAsama, useDurumlar, useIpucu, useProg, useSaved, useTarayici, useYer,
@@ -27,7 +27,8 @@ import VideoPlayer from "./VideoPlayer";
 import Etk from "./Etk";
 import { Belir, CanliSvg, SiraliMetin, useCanliSvg } from "./canli";
 import type { Adim, AdimliDers } from "@/lib/adimli";
-import { AdimGorunum, type Bildirim } from "./DersMotoru";
+import { AdimGorunum, Soru as KartSoru, type Bildirim } from "./DersMotoru";
+import { ses } from "@/lib/ses";
 import { Alt } from "./Soru";
 import { dogruMu, geriBaslik, geriMetin, hazir, ilkCevap, TestGovde, yonerge, type Cevap } from "./TestSoru";
 import AsamaYolu, { type YolDugum } from "./AsamaYolu";
@@ -48,16 +49,21 @@ export default function Lesson({
   const [s, setS] = useState<State>(START);
   // Adımların hepsi bir karta yerleştirilmişse anlatımın içine girer (şu an 85 konunun hepsinde böyle).
   const birlesik = !!adimli?.adimlar.length && adimli.adimlar.every((a) => a.kart);
+  // "Soru önce" derslerde adım kartından önce gelir: öğrenci önce dener, kart sonra adını koyar.
+  const soruOnce = birlesik && adimli!.soruOnce === true;
   const ogeler = useMemo(() => {
     const out: Oge[] = [];
     t.cards.forEach((_, k) => {
-      out.push({ tur: "kart", k });
+      if (!soruOnce) out.push({ tur: "kart", k });
       if (birlesik) adimli!.adimlar.forEach((a, n) => { if (a.kart === k + 1) out.push({ tur: "adim", a, n }); });
+      if (soruOnce) out.push({ tur: "kart", k });
     });
     return out;
-  }, [t, adimli, birlesik]);
+  }, [t, adimli, birlesik, soruOnce]);
   const [biten, setBiten] = useState<Set<number>>(() => new Set());
   const [bildirim, setBildirim] = useState<Bildirim | null>(null);
+  // Akıştaki görevlerin geri bildirimi: alttaki çubuk + doğru/yanlış sesi ve titreşim.
+  const bildir = useCallback((b: Bildirim | null) => { setBildirim(b); if (b) ses(b.ok ? "dogru" : "yanlis"); }, []);
   // Görev bir kez puan getirir; sahne "tamam"ı birden çok kez çağırabilir.
   const sayilan = useRef(new Set<number>());
   const tamamlar = useMemo(() => ogeler.map((_, j) => () => {
@@ -71,8 +77,9 @@ export default function Lesson({
   const eksik = on.filter((o) => !prog[`${ders}.${o.id}`]);
   const nCards = ogeler.length, nQuiz = t.quiz.length, nKart = t.cards.length;
   // Her aşamanın akıştaki öğe aralığı [ilk, son): aşamanın ilk kartından sonraki aşamanın ilk kartına kadar.
+  // "Soru önce" derste kartın adımları karttan önce gelir; aşama bu adımlarla başlar.
   const asamaOge = useMemo(() => {
-    const yer = (k: number) => (k >= nKart ? ogeler.length : ogeler.findIndex((o) => o.tur === "kart" && o.k === k));
+    const yer = (k: number) => (k >= nKart ? ogeler.length : ogeler.findIndex((o) => (o.tur === "kart" && o.k === k) || (o.tur === "adim" && o.a.kart === k + 1)));
     return asamalar(nKart).map(([b, e]) => [yer(b), yer(e)] as const);
   }, [ogeler, nKart]);
   const nAsama = asamaOge.length, konuKey = `${ders}.${id}`;
@@ -119,7 +126,8 @@ export default function Lesson({
   }, [acikKesin, s.q, s.a, s.ara, s.i, ilkOge, konuKey]);
 
   const akista = s.q < 0 && s.a >= 0 && !s.ara;
-  const kilitli = akista && ogeler[s.i]?.tur === "adim" && !biten.has(s.i);
+  const soruBekler = (j: number) => { const o = ogeler[j]; return o?.tur === "kart" && !!t.cards[o.k].once && !biten.has(j); };
+  const kilitli = akista && (ogeler[s.i]?.tur === "adim" || soruBekler(s.i)) && !biten.has(s.i);
   /** Aşamayı (ya da testi) baştan açar; kaldığın yer o aşamadaysa oradan. */
   const asamaAc = (a: number) => {
     yon.current = 1;
@@ -148,6 +156,7 @@ export default function Lesson({
       // Puan yalnızca aşama ilk kez bittiğinde; görev sayacı tekrarda da ilerler.
       const ilk = s.a === bitenA && asamaBitir(konuKey, s.a);
       kaydet("asama", 1, ilk ? PUAN.asama : 0);
+      ses("bitti");
       return setS({ ...s, ara: true, odul: ilk ? PUAN.asama : 0 });
     }
     if (s.q >= 0 && s.q < nQuiz && s.sonuc !== null) {
@@ -167,6 +176,7 @@ export default function Lesson({
     if (!ok) yanlisKaydet(`${ders}.${id}.${s.q}`);
     kaydet("soru");
     if (ok) kaydet("dogru", 1, PUAN.dogru);
+    ses(ok ? "dogru" : "yanlis");
     setS((p) => (p.sonuc !== null ? p : { ...p, cevap, sonuc: ok, right: p.right + (ok ? 1 : 0), cevaplar: [...p.cevaplar, ok] }));
   };
 
@@ -292,6 +302,10 @@ export default function Lesson({
               vids={kartVideolari(ders, id, o.k + 1)}
               canli={j === s.i}
               oynat={setPlay}
+              cevaplandi={biten.has(j) || j < s.i}
+              soruGoster={biten.has(j) || j === s.i}
+              tamam={tamamlar[j]}
+              bildir={j === s.i ? bildir : yoksay}
             />
           ) : (
             <motion.article
@@ -305,7 +319,7 @@ export default function Lesson({
               transition={{ duration: 0.35, ease: "easeOut" }}
             >
               <SiraliMetin className="ad-metin" html={o.a.metin} gecikme={0.1} />
-              <AdimGorunum a={o.a} tamam={tamamlar[j]} bildir={j === s.i ? setBildirim : yoksay} />
+              <AdimGorunum a={o.a} tamam={tamamlar[j]} bildir={j === s.i ? bildir : yoksay} />
             </motion.article>
           );
         })}
@@ -333,7 +347,7 @@ export default function Lesson({
           // Bir kez gösterilir: akışta geri gitmek kaydırmakla olur, anlamadım simgesi sağ üstte.
           <p className="pb-2.5 text-[13px] text-muted-foreground">Önceki kartlar yukarıda duruyor. Anlamadığın kartta sağ üstteki ? simgesine dokun.</p>
         )}
-        <Button className="w-full" data-next disabled={kilitli} onClick={() => step(1)}>{kilitli ? gorevYazisi(ogeler[s.i]) : last ? "Aşamayı bitir" : "Devam"}</Button>
+        <Button className="w-full" data-next disabled={kilitli} onClick={() => step(1)}>{kilitli ? (soruBekler(s.i) ? "Bir cevap seç" : gorevYazisi(ogeler[s.i])) : last ? "Aşamayı bitir" : "Devam"}</Button>
       </Alt>
     );
   } else if (s.q < nQuiz) {
@@ -560,48 +574,75 @@ function AsamaCubugu({ dolu }: { dolu: number[] }) {
 type Kart = Topic["cards"][number];
 
 /** Akıştaki bir kart. canli: kart yeni açıldı, görsel çizilsin ve yazı sırayla gelsin. */
-function AkisKart({ c, vids, canli, oynat, ref }: {
+function AkisKart({ c, vids, canli, oynat, ref, cevaplandi, soruGoster, tamam, bildir }: {
   c: Kart; vids: Video[]; canli: boolean; oynat: (v: Video) => void; ref?: React.Ref<HTMLElement>;
+  /** Soru önce kartında: soru cevaplandı mı (anlatım açılır) ve soru görünsün mü (kaldığın yerden dönülen eski kartta görünmez). */
+  cevaplandi: boolean; soruGoster: boolean; tamam: () => void; bildir: (b: Bildirim | null) => void;
 }) {
-  const ilk = useRef(canli).current; // yalnızca ilk açılışta canlandır
+  // Yalnızca ilk açılışta canlandır; soru önce kartında anlatım cevaptan sonra açılırken canlanır.
+  const ilk = useRef(c.once ? !cevaplandi : canli).current;
   const Play = Icon.play;
   const etkRef = useCanliSvg<HTMLDivElement>();
   const n = c.p.split(/[.!?…]\s/).length;
   const metinBitti = ilk ? 0.55 + n * 0.35 : 0;
+  const baslik = <Html as="h2" className="text-[22px]" html={c.h} />;
+  // Soru cevaplanınca açılan görsel ve anlatım ekrana gelsin.
+  const acilan = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!c.once || !cevaplandi || !ilk) return;
+    const z = setTimeout(() => acilan.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 400);
+    return () => clearTimeout(z);
+  }, [c.once, cevaplandi, ilk]);
+  const gorsel = c.etk ? (
+    <div ref={ilk ? etkRef : undefined}><Etk e={c.etk} svg={c.svg} /></div>
+  ) : ilk ? (
+    <CanliSvg className="visual" html={c.svg} />
+  ) : (
+    <div className="visual" dangerouslySetInnerHTML={{ __html: c.svg }} />
+  );
   return (
     <article ref={ref} data-akis className="flex scroll-mt-20 flex-col gap-4">
-      {c.etk ? (
-        <div ref={ilk ? etkRef : undefined}><Etk e={c.etk} svg={c.svg} /></div>
-      ) : ilk ? (
-        <CanliSvg className="visual" html={c.svg} />
+      {c.once ? (
+        // Soru önce: başlık ve soru; cevaplanınca görsel ve anlatım altta belirir.
+        <>
+          {canli && !cevaplandi ? <Belir gecikme={0.05}>{baslik}</Belir> : baslik}
+          {soruGoster && (
+            <Kap on={canli && !cevaplandi} d={0.2}>
+              <KartSoru soru={c.once.soru} secenekler={c.once.secenekler} tamam={tamam} bildir={bildir} />
+            </Kap>
+          )}
+          {cevaplandi && <div ref={acilan} className="scroll-mt-20">{gorsel}</div>}
+        </>
       ) : (
-        <div className="visual" dangerouslySetInnerHTML={{ __html: c.svg }} />
+        gorsel
       )}
-      <div className="grid gap-1.5">
-        <Kap on={ilk} d={0.15}>
-          <Html as="h2" className="text-[22px]" html={c.h} />
-        </Kap>
-        {ilk ? <SiraliMetin className="text-[17px] leading-relaxed" html={c.p} gecikme={0.45} /> : <Html as="p" className="text-[17px] leading-relaxed" html={c.p} />}
-      </div>
-      {c.key && (
-        <Kap on={ilk} d={metinBitti}>
-          <Html as="p" className="border-l-[3px] border-acc pl-3 text-[16px] leading-relaxed font-semibold" html={c.key} />
-        </Kap>
+      {(!c.once || cevaplandi) && (
+        <>
+          <div className="grid gap-1.5">
+            {!c.once && <Kap on={ilk} d={0.15}>{baslik}</Kap>}
+            {ilk ? <SiraliMetin className="text-[17px] leading-relaxed" html={c.p} gecikme={0.45} /> : <Html as="p" className="text-[17px] leading-relaxed" html={c.p} />}
+          </div>
+          {c.key && (
+            <Kap on={ilk} d={metinBitti}>
+              <Html as="p" className="border-l-[3px] border-acc pl-3 text-[16px] leading-relaxed font-semibold" html={c.key} />
+            </Kap>
+          )}
+          {vids.map((v) => (
+            <Kap key={v.id} on={ilk} d={metinBitti + 0.15}>
+              <button
+                onClick={() => oynat(v)}
+                className="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-2 pr-3 text-left transition-transform active:scale-[.99]"
+              >
+                <span className="relative grid h-14 w-10 flex-none place-items-center overflow-hidden rounded-lg bg-acc">
+                  {v.poster && <img src={v.poster} alt="" className="absolute inset-0 size-full object-cover" />}
+                  <span className="relative grid size-6 place-items-center rounded-full bg-white/90 text-foreground [&_svg]:size-3.5"><Play /></span>
+                </span>
+                <span><b className="block text-[15px] leading-snug font-semibold">{v.baslik}</b><span className="block text-[13px] text-muted-foreground">Kısa video · {sureYaz(v.sure)}</span></span>
+              </button>
+            </Kap>
+          ))}
+        </>
       )}
-      {vids.map((v) => (
-        <Kap key={v.id} on={ilk} d={metinBitti + 0.15}>
-          <button
-            onClick={() => oynat(v)}
-            className="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-2 pr-3 text-left transition-transform active:scale-[.99]"
-          >
-            <span className="relative grid h-14 w-10 flex-none place-items-center overflow-hidden rounded-lg bg-acc">
-              {v.poster && <img src={v.poster} alt="" className="absolute inset-0 size-full object-cover" />}
-              <span className="relative grid size-6 place-items-center rounded-full bg-white/90 text-foreground [&_svg]:size-3.5"><Play /></span>
-            </span>
-            <span><b className="block text-[15px] leading-snug font-semibold">{v.baslik}</b><span className="block text-[13px] text-muted-foreground">Kısa video · {sureYaz(v.sure)}</span></span>
-          </button>
-        </Kap>
-      ))}
     </article>
   );
 }

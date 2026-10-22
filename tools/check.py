@@ -133,6 +133,15 @@ for ders, topics in d.items():
             if re.search(r"<(script|style|foreignObject|image)\b", s): err(ders, tid, i, "svg içinde yasak etiket")
             ids += re.findall(r"\sid='([^']+)'", s)
             if "etk" in c: etk_denetle(ders, tid, i, c["etk"])
+            if "once" in c:
+                # soru önce kartı: önce soru, cevaptan sonra anlatım (lib/dersler.ts Card.once)
+                o = c["once"]; sec = o.get("secenekler", [])
+                if not o.get("soru"): err(ders, tid, i, "once: soru boş")
+                if not 2 <= len(sec) <= 4: err(ders, tid, i, "once: 2-4 şık olmalı")
+                if sum(1 for x in sec if x.get("dogru")) != 1: err(ders, tid, i, "once: tam bir doğru şık olmalı")
+                for x in sec:
+                    if not x.get("neden"): err(ders, tid, i, "once: şıkta neden boş:", x.get("yazi", "")[:30])
+                    sik_denetle((ders, tid, i), o.get("soru"), x.get("yazi", ""))
         dup = {x for x in ids if ids.count(x) > 1}
         if dup: err(ders, tid, "tekrar eden svg id", sorted(dup))
         testler.append((ders, tid, t.get("quiz", [])))
@@ -230,6 +239,18 @@ for f in sorted(glob.glob(os.path.join(CONTENT, "adimli", "*.json"))):
         if not a.get(k): err("adımlı", ad, "eksik alan:", k)
     kartlar = [s.get("kart") for s in a.get("adimlar", [])]
     if any(kartlar) and not all(kartlar): err("adımlı", ad, "kart alanı ya her adımda olmalı ya hiçbirinde (konu anlatımına yerleştirme)")
+    if a.get("soruOnce"):
+        # "Soru önce" (Brilliant gibi önce dene): adım kartından önce gelir, örnek çözüm yok, kartlar kısa,
+        # Özet dışındaki her kart ya bir adımla ya da once sorusuyla açılır.
+        if not all(kartlar): err("adımlı", ad, "soruOnce: her adımın kart alanı olmalı")
+        if any(s.get("goster") for s in a.get("adimlar", [])): err("adımlı", ad, "soruOnce: goster (örnek çözüm) kullanılmaz")
+        if not sys.argv[1:]:
+            kk = d.get(a.get("ders"), {}).get(a.get("konu"), {}).get("cards", [])
+            for i, c in enumerate(kk):
+                if c.get("h") == "Özet": continue
+                w = len(re.sub("<[^>]+>", "", c.get("p", "")).split())
+                if w > 25: err("adımlı", ad, f"soruOnce: kart {i + 1} metni {w} kelime (en çok 25)")
+                if i + 1 not in kartlar and "once" not in c: err("adımlı", ad, f"soruOnce: kart {i + 1} ne adımla ne soruyla açılıyor")
     for n, s in enumerate(a.get("adimlar", []), 1):
         yer = f"{ad} adım {n}"
         tur = s.get("sahne", {}).get("tur")
@@ -237,7 +258,7 @@ for f in sorted(glob.glob(os.path.join(CONTENT, "adimli", "*.json"))):
         if not s.get("metin"): err("adımlı", yer, "metin boş")
         deger, kont = s.get("deger", {}), {k["ad"]: k for k in s.get("kontroller", [])}
         for k in kont.values():
-            if k.get("tur", "surgu") not in ("surgu", "sayac", "anahtar", "dugme"): err("adımlı", yer, "bilinmeyen kontrol türü:", k.get("tur"))
+            if k.get("tur", "surgu") not in ("surgu", "sayac", "anahtar", "dugme", "surukle"): err("adımlı", yer, "bilinmeyen kontrol türü:", k.get("tur"))
             if k["ad"] not in deger: err("adımlı", yer, "kontrolün başlangıç değeri yok:", k["ad"])
             elif not k["min"] <= deger[k["ad"]] <= k["max"]: err("adımlı", yer, k["ad"], "başlangıç değeri sınırların dışında")
         # konu anlatımına yerleştirme: kart numarası ve "göster" örneği

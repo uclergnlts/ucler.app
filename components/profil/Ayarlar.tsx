@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { bildirimOku, bildirimYaz, cikisYap, hesabiSil, useEsitleme, useOturum, type Bildirim } from "@/lib/bulut";
 import { girisYap } from "@/lib/puan";
 import { resetAll, setAd } from "@/lib/store";
+import { ses, sesAyarla, useSesAcik } from "@/lib/ses";
 import { Icon } from "../icons";
 import { Bolum, INSTAGRAM, Liste, Ok, Satir } from "../temel";
 import { Button } from "../ui/button";
@@ -57,6 +58,9 @@ export default function Ayarlar() {
             </div>
           </div>
         )}
+      </Bolum>
+      <Bolum title="Ders">
+        <SesAnahtari />
       </Bolum>
       <Bolum title="ucler">
         <Liste>
@@ -136,5 +140,26 @@ function Bildirimler({ kimlik }: { kimlik: string }) {
         </label>
       ))}
     </div>
+  );
+}
+
+/** Derslerde doğru/yanlış sesi ve titreşimi. */
+function SesAnahtari() {
+  const acik = useSesAcik();
+  return (
+    <button
+      role="switch"
+      aria-checked={acik}
+      className="flex w-full items-center justify-between gap-3 rounded-2xl border border-border bg-card px-4 py-3 text-left"
+      onClick={() => { sesAyarla(!acik); if (!acik) ses("dogru"); }}
+    >
+      <span>
+        <b className="block font-semibold leading-snug">Ses ve titreşim</b>
+        <span className="block text-[13px] text-muted-foreground">Doğru ve yanlış cevapta kısa bir ses</span>
+      </span>
+      <i aria-hidden="true" className={`relative h-7 w-[46px] flex-none rounded-full transition-colors ${acik ? "bg-acc" : "bg-secondary"}`}>
+        <i className={`absolute top-[3px] left-[3px] size-[22px] rounded-full bg-white shadow transition-transform ${acik ? "translate-x-[18px]" : ""}`} />
+      </i>
+    </button>
   );
 }

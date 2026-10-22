@@ -3,7 +3,7 @@
  "ders": "biyoloji",
  "konu": "madde-gecisi",
  "baslik": "Hücre zarından madde geçişi",
- "ozet": "Taneciklerin zardan nasıl geçtiğini izle: difüzyon, kanal proteini, pompa ve osmoz.",
+ "ozet": "Önce dene, sonra adını öğren: tanecikleri zara gönder, alyuvarı farklı sulara koy.",
  "adimlar": [
   {
    "baslik": "Hücre zarı",
@@ -31,6 +31,83 @@
     ]
    },
    "kart": 1
+  },
+  {
+   "baslik": "Seçici geçirgenlik",
+   "metin": "Soldaki taneciklere dokunup her birini zara gönder. Hangisi geçebiliyor, nasıl geçiyor?",
+   "sahne": {
+    "tur": "so-zar-dene"
+   },
+   "deger": {
+    "o2": 0,
+    "glikoz": 0,
+    "protein": 0
+   },
+   "kontroller": [
+    {
+     "ad": "o2",
+     "etiket": "O₂",
+     "min": 0,
+     "max": 1,
+     "tur": "surukle"
+    },
+    {
+     "ad": "glikoz",
+     "etiket": "Glikoz",
+     "min": 0,
+     "max": 1,
+     "tur": "surukle"
+    },
+    {
+     "ad": "protein",
+     "etiket": "Protein",
+     "min": 0,
+     "max": 1,
+     "tur": "surukle"
+    }
+   ],
+   "gorev": {
+    "tur": "kesfet",
+    "bulgular": [
+     {
+      "yazi": "O₂'yi zara gönder",
+      "hedef": {
+       "o2": 1
+      },
+      "coz": [
+       {
+        "o2": 1
+       }
+      ],
+      "tamam": "Küçük ve yüksüz O₂, fosfolipitlerin arasından doğrudan geçti."
+     },
+     {
+      "yazi": "Glikozu zara gönder",
+      "hedef": {
+       "glikoz": 1
+      },
+      "coz": [
+       {
+        "glikoz": 1
+       }
+      ],
+      "tamam": "Glikoz yağ tabakasından geçemedi; zardaki taşıyıcı proteinin içinden geçti."
+     },
+     {
+      "yazi": "Proteini zara gönder",
+      "hedef": {
+       "protein": 1
+      },
+      "coz": [
+       {
+        "protein": 1
+       }
+      ],
+      "tamam": "Protein çok büyük: ne fosfolipitlerin arasından ne taşıyıcıdan geçebildi. Böyle büyük maddeler keseciklerle taşınır."
+     }
+    ]
+   },
+   "kart": 2
   },
   {
    "baslik": "Difüzyon",
@@ -139,6 +216,66 @@
    "kart": 4
   },
   {
+   "baslik": "Osmoz",
+   "metin": "Alyuvarın içi %0,9'luk tuzlu su gibidir. Şimdi alyuvarı <b>saf suya</b> koyacağız.",
+   "sahne": {
+    "tur": "osmoz",
+    "sure": 3,
+    "dis": 0
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "Saf sudaki alyuvara ne olur?",
+    "secenekler": [
+     {
+      "yazi": "Şişer",
+      "dogru": true,
+      "neden": "Dışarıda çözünen yok, su bol: su net olarak alyuvarın içine geçer ve hücre şişer. Çok şişerse patlayabilir."
+     },
+     {
+      "yazi": "Büzüşür",
+      "neden": "Büzüşmesi için suyun dışarı çıkması gerekirdi. Su, suyun bol olduğu taraftan az olduğu tarafa geçer."
+     },
+     {
+      "yazi": "Değişmez",
+      "neden": "İçi ve dışı farklı derişimde; su bu farkı dengelemeye doğru akar."
+     }
+    ]
+   },
+   "kart": 5
+  },
+  {
+   "baslik": "Osmoz",
+   "metin": "Şimdi sen ayarla: dış ortamı, alyuvar su kaybedip büzüşecek kadar tuzlu yap.",
+   "sahne": {
+    "tur": "osmoz"
+   },
+   "deger": {
+    "tuz": 9
+   },
+   "kontroller": [
+    {
+     "ad": "tuz",
+     "etiket": "Dış ortamın tuzu",
+     "min": 0,
+     "max": 20,
+     "carpan": 0.1,
+     "onek": "%"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "tuz": [
+      10,
+      20
+     ]
+    },
+    "tamam": "Dışarısı içeriden daha tuzlu: <b>hipertonik</b> ortam. Su hücreden dışarı çıkar ve alyuvar büzüşür."
+   },
+   "kart": 6
+  },
+  {
    "baslik": "Pompa ve aktif taşıma",
    "metin": "Hücre, potasyum (K⁺) iyonlarını içeride dışarıdakinden çok daha fazla tutar. Bunu zardaki <b>pompa</b> proteinleri sağlar.",
    "sahne": {
@@ -178,84 +315,7 @@
      }
     ]
    },
-   "kart": 8
-  },
-  {
-   "baslik": "Osmoz",
-   "metin": "Alyuvarın içi, %0,9'luk tuzlu suyla aynı derişimdedir (izotonik). Dış ortamı, alyuvar su kaybedip büzüşecek şekilde ayarla.",
-   "sahne": {
-    "tur": "osmoz"
-   },
-   "deger": {
-    "tuz": 9
-   },
-   "kontroller": [
-    {
-     "ad": "tuz",
-     "etiket": "Dış ortamın tuzu",
-     "min": 0,
-     "max": 20,
-     "carpan": 0.1,
-     "onek": "%"
-    }
-   ],
-   "gorev": {
-    "tur": "ayarla",
-    "hedef": {
-     "tuz": [
-      10,
-      20
-     ]
-    },
-    "tamam": "Dışarısı içeriden daha tuzlu: <b>hipertonik</b> ortam. Su hücreden dışarı çıkar ve alyuvar büzüşür."
-   },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "tuz": 5
-    },
-    "not": "Dış ortam alyuvarın içinden az tuzlu: su içeri giriyor, alyuvar şişiyor."
-   }
-  },
-  {
-   "baslik": "Saf suda alyuvar",
-   "metin": "Sürgüyle farklı ortamları dene ve alyuvarı izle.",
-   "sahne": {
-    "tur": "osmoz"
-   },
-   "deger": {
-    "tuz": 9
-   },
-   "kontroller": [
-    {
-     "ad": "tuz",
-     "etiket": "Dış ortamın tuzu",
-     "min": 0,
-     "max": 20,
-     "carpan": 0.1,
-     "onek": "%"
-    }
-   ],
-   "gorev": {
-    "tur": "secim",
-    "soru": "Saf suya konan alyuvara ne olur?",
-    "secenekler": [
-     {
-      "yazi": "Su alıp şişer, sonunda patlayabilir",
-      "dogru": true,
-      "neden": "Saf su en uç hipotonik ortamdır. Alyuvarın hücre duvarı olmadığı için şişmeyi durduracak bir şey yoktur."
-     },
-     {
-      "yazi": "Su kaybedip büzüşür",
-      "neden": "Büzüşme, dışarısı daha tuzluyken olur. Saf suda tuz yok."
-     },
-     {
-      "yazi": "Hiçbir şey olmaz",
-      "neden": "Net su geçişi yalnızca dış ortam alyuvarla aynı derişimdeyken (%0,9'luk tuzlu su gibi) durur."
-     }
-    ]
-   },
-   "kart": 6
+   "kart": 9
   }
  ],
  "kapanis": [
@@ -264,5 +324,6 @@
   "<b>Kolaylaştırılmış difüzyon</b>: iyonlar gibi tanecikler kanal ya da taşıyıcı proteinle, yine çoktan aza geçer.",
   "<b>Aktif taşıma</b>: pompa proteinleri ATP harcayarak tanecikleri azdan çoğa taşır.",
   "<b>Osmoz</b>: su, az tuzlu ortamdan çok tuzlu ortama geçer. Hipotonikte alyuvar şişer, hipertonikte büzüşür."
- ]
+ ],
+ "soruOnce": true
 }

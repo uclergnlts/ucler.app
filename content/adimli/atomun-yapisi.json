@@ -3,11 +3,11 @@
  "ders": "kimya",
  "konu": "atomun-yapisi",
  "baslik": "Atomun yapısı",
- "ozet": "Proton, nötron ve elektronu kendi elinle ekleyip çıkararak atom ve iyon kur.",
+ "ozet": "Önce dene, sonra adını öğren: tanecik ekleyip çıkararak atomu kendin kur.",
  "adimlar": [
   {
    "baslik": "Üç tanecik",
-   "metin": "Hemen her atomun çekirdeğinde proton ve nötron vardır; tek istisna ¹H'dir: çekirdeği yalnız bir protondur. Ekrandaki atom helyumdur.",
+   "metin": "Ekrandaki atom helyum: çekirdekte 2 proton ve 2 nötron, çevresinde 2 elektron var.",
    "sahne": {
     "tur": "atom",
     "etiket": true
@@ -64,13 +64,14 @@
      }
     ]
    },
-   "kart": 1
+   "kart": 2
   },
   {
    "baslik": "Elementi proton belirler",
-   "metin": "Proton ekle ya da çıkar ve elementin nasıl değiştiğine bak. Proton sayısına <b>atom numarası</b> (Z) denir. <b>Karbonu</b> bul.",
+   "metin": "Alttaki tepsiden tanecik ekle; atomdaki bir taneciğe dokunursan çıkar. Hidrojeni <b>nötr bir karbon atomuna</b> çevir: element adına bak.",
    "sahne": {
-    "tur": "atom"
+    "tur": "atom-kur",
+    "dokun": true
    },
    "deger": {
     "p": 1,
@@ -83,29 +84,39 @@
      "etiket": "Proton",
      "min": 1,
      "max": 20,
-     "tur": "sayac"
+     "tur": "surukle"
+    },
+    {
+     "ad": "n",
+     "etiket": "Nötron",
+     "min": 0,
+     "max": 24,
+     "tur": "surukle"
+    },
+    {
+     "ad": "e",
+     "etiket": "Elektron",
+     "min": 0,
+     "max": 22,
+     "tur": "surukle"
     }
    ],
    "gorev": {
     "tur": "ayarla",
     "hedef": {
-     "p": 6
+     "p": 6,
+     "e": 6
     },
-    "tamam": "6 proton = karbon. Proton sayısı değişirse element de değişir: 7 proton artık azottur. Her elementin kendine özgü bir atom numarası vardır."
+    "tamam": "6 proton = karbon. Elementi proton sayısı belirler: bir proton daha eklesen azot olurdu. Nötr atomda elektron sayısı proton sayısına eşittir."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "p": 3
-    },
-    "not": "3 proton: atom numarası 3, bu element <b>lityum</b>."
-   }
+   "kart": 3
   },
   {
    "baslik": "Nötron ve izotop",
-   "metin": "Nötron eklemek elementi değiştirmez, yalnızca kütle numarasını (A = proton + nötron) değiştirir. Bu karbon atomunu <b>karbon-14</b> yap.",
+   "metin": "Bu bir karbon atomu. Çekirdeğine nötron ekle: element değişiyor mu? Kütle numarası (A) <b>14</b> olsun.",
    "sahne": {
-    "tur": "atom"
+    "tur": "atom-kur",
+    "dokun": true
    },
    "deger": {
     "p": 6,
@@ -114,33 +125,43 @@
    },
    "kontroller": [
     {
+     "ad": "p",
+     "etiket": "Proton",
+     "min": 1,
+     "max": 20,
+     "tur": "surukle"
+    },
+    {
      "ad": "n",
      "etiket": "Nötron",
-     "min": 4,
-     "max": 10,
-     "tur": "sayac"
+     "min": 0,
+     "max": 24,
+     "tur": "surukle"
+    },
+    {
+     "ad": "e",
+     "etiket": "Elektron",
+     "min": 0,
+     "max": 22,
+     "tur": "surukle"
     }
    ],
    "gorev": {
     "tur": "ayarla",
     "hedef": {
+     "p": 6,
      "n": 8
     },
     "tamam": "Hâlâ karbon, çünkü proton sayısı 6. Ama A = 6 + 8 = 14. Proton sayısı aynı, nötron sayısı farklı atomlara <b>izotop</b> denir. Karbon-14 eski kalıntıların yaşını bulmada kullanılır."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "n": 7
-    },
-    "not": "6 proton ve 7 nötron: kütle numarası 13, yani <b>karbon-13</b>. Element yine karbon."
-   }
+   "kart": 5
   },
   {
    "baslik": "Elektron ve iyon",
-   "metin": "Sodyum atomu bir elektron vererek Na⁺ olur. Onu yap.",
+   "metin": "Bu bir sodyum atomu. Elektronlarından birine dokunup onu kopar.",
    "sahne": {
-    "tur": "atom"
+    "tur": "atom-kur",
+    "dokun": true
    },
    "deger": {
     "p": 11,
@@ -149,16 +170,31 @@
    },
    "kontroller": [
     {
+     "ad": "p",
+     "etiket": "Proton",
+     "min": 1,
+     "max": 20,
+     "tur": "surukle"
+    },
+    {
+     "ad": "n",
+     "etiket": "Nötron",
+     "min": 0,
+     "max": 24,
+     "tur": "surukle"
+    },
+    {
      "ad": "e",
      "etiket": "Elektron",
-     "min": 8,
-     "max": 12,
-     "tur": "sayac"
+     "min": 0,
+     "max": 22,
+     "tur": "surukle"
     }
    ],
    "gorev": {
     "tur": "ayarla",
     "hedef": {
+     "p": 11,
      "e": 10
     },
     "tamam": "11 proton, 10 elektron: yük 11 − 10 = +1. Çekirdek hiç değişmedi; iyon olmak yalnız elektron sayısını değiştirir."
@@ -167,7 +203,7 @@
   },
   {
    "baslik": "Elektron katmanları",
-   "metin": "Proton sayısını değiştir ve elektronların katmanlara nasıl dizildiğine bak.",
+   "metin": "Proton sayısını değiştir; elektronların katmanlara nasıl dizildiğine bak.",
    "sahne": {
     "tur": "atom"
    },
@@ -204,13 +240,7 @@
      }
     ]
    },
-   "kart": 10,
-   "goster": {
-    "deger": {
-     "p": 11
-    },
-    "not": "11 proton (sodyum): elektronlar 2, 8, 1 diye dizilir, son katmanda 1 elektron var."
-   }
+   "kart": 10
   },
   {
    "baslik": "Hepsi bir arada",
@@ -264,5 +294,6 @@
   "<b>Kütle numarası</b> A = proton + nötron. Nötron sayısı farklı aynı element atomları <b>izotoptur</b>.",
   "Yük = proton − elektron. Elektron veren <b>katyon</b>, alan <b>anyon</b> olur.",
   "İlk 20 elementte katmanlar en çok 2, 8, 8 elektron alır; kalan 4. katmana geçer (Ca: 2-8-8-2)."
- ]
+ ],
+ "soruOnce": true
 }
