@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "fizik-bilimine-giris",
  "baslik": "Fizik bilimine giriş",
- "ozet": "Bir deney yap, ölç, birimleri ve yönü keşfet: fizik nasıl çalışır?",
+ "ozet": "Önce dene, sonra adını öğren: deney yap, ölç, okun yönünü kendin çevir.",
  "adimlar": [
   {
    "baslik": "Bir tahminle başla",
-   "metin": "Fizik doğayı gözlem, deney ve matematikle inceler. İşe bir deneyle başlayalım: havası boşaltılmış bir tüpte çelik bir bilye ile bir tüyü aynı anda bırakıyorsun.",
+   "metin": "İşe bir deneyle başlayalım: havası boşaltılmış tüpte çelik bilye ile tüy aynı anda bırakılıyor.",
    "sahne": {
     "tur": "fiz-dusme",
     "sure": 2
@@ -67,7 +67,7 @@
   },
   {
    "baslik": "Ölçmek: karşılaştırmak",
-   "metin": "Ölçmek, bir büyüklüğü bilinen bir birimle karşılaştırmaktır. Elinde 25 cm'lik çubuklar var. Masayı tam kaplayacak kadar çubuk diz.",
+   "metin": "Elinde 25 cm'lik çubuklar var. Masayı tam kaplayacak kadar çubuk diz.",
    "sahne": {
     "tur": "fiz-birim"
    },
@@ -90,17 +90,11 @@
     },
     "tamam": "Masa 6 çubuk, yani 150 cm = 1,5 m. 30 cm'lik çubukla ölçseydin 5 bulurdun: sayı birime bağlıdır. Bu yüzden sonuç hep <b>sayı + birim</b> yazılır ve herkes aynı birimleri, yani <b>SI</b> birimlerini kullanır."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "n": 4
-    },
-    "not": "4 çubuk = 4 × 25 cm = 100 cm = 1 m. Masanın sonuna henüz varmadın."
-   }
+   "kart": 5
   },
   {
    "baslik": "Yedi temel büyüklük",
-   "metin": "Tabloya bak.",
+   "metin": "SI'da yedi temel büyüklük var; diğer büyüklüklerin hepsi bunlardan kurulur. Tabloya bak.",
    "sahne": {
     "tur": "fiz-si-tablo"
    },
@@ -151,19 +145,14 @@
     },
     "tamam": "100 m ÷ 10 s = 10 m/s: koşucu her saniye 10 m yol alıyor. Dünyanın en hızlı koşucuları 100 metreyi 10 saniyenin biraz altında koşar."
    },
-   "kart": 7,
-   "goster": {
-    "deger": {
-     "t": 16
-    },
-    "not": "100 m ÷ 16 s = 6,25 m/s: koşucu her saniye 6,25 m yol alıyor."
-   }
+   "kart": 7
   },
   {
    "baslik": "Yön gerekir mi?",
-   "metin": "\"3 km yürü\" dersem nereye varacağın belli değil. Okul, evin kuzeydoğusunda. Yönü ayarla.",
+   "metin": "\"3 km yürü\" dersem nereye varacağın belli değil. Okul, evin kuzeydoğusunda. Oku tutup çevir.",
    "sahne": {
-    "tur": "fiz-yon"
+    "tur": "fiz-yon",
+    "surukle": true
    },
    "deger": {
     "yon": 0
@@ -171,11 +160,12 @@
    "kontroller": [
     {
      "ad": "yon",
-     "etiket": "Yön (kuzeyden saat yönünde)",
+     "etiket": "Yön",
      "min": 0,
      "max": 315,
      "adim": 45,
-     "birim": "°"
+     "birim": "°",
+     "tur": "surukle"
     }
    ],
    "gorev": {
@@ -185,13 +175,7 @@
     },
     "tamam": "3 km, kuzeydoğu: artık nereye varacağın belli. Yer değiştirme, hız ve kuvvet gibi yön de isteyen büyüklüklere <b>vektörel</b> denir."
    },
-   "kart": 9,
-   "goster": {
-    "deger": {
-     "yon": 135
-    },
-    "not": "135°: 3 km güneydoğu. Sayı ve birim aynı, ama bambaşka bir yere varıyorsun."
-   }
+   "kart": 9
   }
  ],
  "kapanis": [
@@ -200,5 +184,6 @@
   "Ölçmek, bilinen bir birimle karşılaştırmaktır; sonuç her zaman <b>sayı + birim</b>dir.",
   "SI'da 7 <b>temel büyüklük</b> vardır; sürat (m/s) gibi diğerleri bunlardan <b>türetilir</b>.",
   "<b>Skaler</b> büyüklükte yön yoktur; <b>vektörel</b> büyüklükte yön de gerekir."
- ]
+ ],
+ "soruOnce": true
 }

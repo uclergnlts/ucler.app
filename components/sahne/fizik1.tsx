@@ -2,6 +2,7 @@
 // Fizik sahneleri (fizik bilimine giriş, madde ve özellikleri): düşme deneyi, birimle ölçme, SI tablosu,
 // sürat, yön; terazi, dereceli silindir, kütle-hacim grafiği, yüzme-batma, karışım ve kılcallık.
 import { yumusak, type SahneKaydi, type SahneProps } from "./ortak";
+import { Tutamac, useSurukle } from "./soruonce";
 
 const say = (x: number, d = 2) => x.toLocaleString("tr-TR", { maximumFractionDigits: d });
 const say2 = (x: number) => x.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -125,14 +126,23 @@ function Kosu({ v }: SahneProps) {
 const YONLER = ["kuzey", "kuzeydoğu", "doğu", "güneydoğu", "güney", "güneybatı", "batı", "kuzeybatı"];
 
 // Evden 3 km yürüyüş. v.yon: kuzeyden saat yönünde açı (derece). Okul kuzeydoğuda.
-function Yon({ v }: SahneProps) {
+// s.surukle: öğrenci oku tutup çevirir (45°'lik adımlarla).
+function Yon({ s, v, set }: SahneProps) {
   const a = v.yon ?? 0, CX = 170, CY = 124, R = 82;
+  const surukle = s.surukle === true;
+  const { svg, olaylar, dokundu } = useSurukle((q) => {
+    const d = (Math.atan2(q.x - CX, CY - q.y) * 180) / Math.PI;
+    set("yon", ((Math.round(d / 45) * 45) % 360 + 360) % 360);
+  });
   const r = (a * Math.PI) / 180, ex = CX + R * Math.sin(r), ey = CY - R * Math.cos(r);
   const ox = CX + R * Math.SQRT1_2, oy = CY - R * Math.SQRT1_2;
   const vardi = a === 45, renk = vardi ? "var(--good)" : "var(--c1)";
   const ux = Math.sin(r), uy = -Math.cos(r), bx = ex - ux * 11, by = ey - uy * 11;
   return (
-    <svg viewBox="0 0 340 262" role="img" aria-label={`3 km ${YONLER[Math.round(a / 45) % 8]} yönünde yürüyüş`}>
+    <svg
+      ref={svg} viewBox="0 0 340 262" className={surukle ? "ad-surukle" : undefined} role="img"
+      aria-label={`3 km ${YONLER[Math.round(a / 45) % 8]} yönünde yürüyüş`} {...(surukle ? olaylar : {})}
+    >
       <circle cx={CX} cy={CY} r={R} fill="none" stroke="var(--line-2)" strokeWidth={1.5} strokeDasharray="4 5" />
       <g fontSize={12} fontWeight={700} fill="var(--muted)" textAnchor="middle">
         <text x={CX} y={CY - R - 12}>K</text>
@@ -153,6 +163,7 @@ function Yon({ v }: SahneProps) {
         <line x1={CX + ux * 10} y1={CY + uy * 10} x2={bx} y2={by} stroke={renk} strokeWidth={3.5} strokeLinecap="round" />
         <path d={`M${ex} ${ey} L${bx - uy * 6} ${by + ux * 6} L${bx + uy * 6} ${by - ux * 6} Z`} fill={renk} />
       </g>
+      {surukle && <Tutamac x={CX + ux * R * 0.62} y={CY + uy * R * 0.62} nabiz={!dokundu} />}
       <text x={CX} y={252} fontSize={14} fontWeight={800} textAnchor="middle" fill={renk}>
         3 km, {YONLER[Math.round(a / 45) % 8]}{vardi ? ": okula vardın" : ""}
       </text>

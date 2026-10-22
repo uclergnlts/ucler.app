@@ -3,11 +3,11 @@
  "ders": "kimya",
  "konu": "simya",
  "baslik": "Kimya bilimi: simyadan kimyaya",
- "ozet": "Simyacıların hayalini, damıtmayı ve kimyayı bilim yapan deneyleri kendin dene.",
+ "ozet": "Önce dene, sonra adını öğren: damıt, suyu ayrıştır, kapalı kabı tart.",
  "adimlar": [
   {
    "baslik": "Kurşundan altın?",
-   "metin": "Bugün iki elementin farkını biliyoruz: kurşun atomunun çekirdeğinde 82, altınınkinde 79 proton var.",
+   "metin": "Simyacıların en büyük hedefi kurşunu altına çevirmekti. Bugün farkı biliyoruz: kurşun atomunun çekirdeğinde 82, altınınkinde 79 proton var.",
    "sahne": {
     "tur": "element-donusum"
    },
@@ -16,12 +16,12 @@
     "soru": "Kurşun neden hiç altına dönüşmedi?",
     "secenekler": [
      {
-      "yazi": "Kimyasal tepkime çekirdeği, yani proton sayısını değiştirmez",
+      "yazi": "Tepkime proton sayısını değiştirmez",
       "neden": "Kimyasal tepkimede yalnız elektronlar ve bağlar değişir. Kurşunu altın yapmak için çekirdekten 3 proton koparmak gerekir; bunu ancak çekirdek tepkimesi, o da çok küçük miktarlarda yapabilir.",
       "dogru": true
      },
      {
-      "yazi": "Yeterince yüksek sıcaklığa çıkamadılar",
+      "yazi": "Yeterince ısıtamadılar",
       "neden": "Ocağın ısısı bağları koparır ama çekirdeğe ulaşmaz; en sıcak fırın da proton sayısını değiştirmez."
      },
      {
@@ -62,7 +62,7 @@
   },
   {
    "baslik": "Su element mi?",
-   "metin": "Antik çağdan beri su bir element sayılıyordu. Boyle'un ölçütünü suya uygula: suya elektrik akımı ver (bu deney ilk kez 1800'de yapıldı).",
+   "metin": "Antik çağdan beri su bir element sayılıyordu. Gerçekten öyle mi? Suya elektrik akımı ver (bu deney ilk kez 1800'de yapıldı).",
    "sahne": {
     "tur": "elektroliz",
     "sure": 5
@@ -90,7 +90,7 @@
   },
   {
    "baslik": "Boyle'un tanımı",
-   "metin": "Tüplerde ne toplandığına bak ve Boyle'un tanımına göre karar ver.",
+   "metin": "Robert Boyle 1661'de bir tanım önermişti: <b>element</b>, daha basit maddelere ayrılamayan maddedir. Tüplerde ne toplandığına bak.",
    "sahne": {
     "tur": "elektroliz",
     "son": true
@@ -145,7 +145,7 @@
      }
     ]
    },
-   "kart": 6
+   "kart": 7
   },
   {
    "baslik": "Ağzı açık olursa",
@@ -186,16 +186,16 @@
     "soru": "Hangisi iddiayı gerçekten sınar?",
     "secenekler": [
      {
-      "yazi": "Metali kapalı kapta yakıp önce ve sonra tartmak",
+      "yazi": "Kapalı kapta yakıp tartmak",
       "neden": "Ölçüm iddiayı sınar: kalay yanınca kütlesi arttı, demek ki bir şey çıkmadı, havadan oksijen girdi. Flojiston fikri böyle çürüdü.",
       "dogru": true
      },
      {
-      "yazi": "Konunun uzmanı ünlü bir bilgine sormak",
+      "yazi": "Ünlü bir bilgine sormak",
       "neden": "Bilimde otorite değil kanıt geçerlidir; ünlü bilginler de yanılabilir."
      },
      {
-      "yazi": "Eski kitaplarda ne yazdığına bakmak",
+      "yazi": "Eski kitaplara bakmak",
       "neden": "Kitaplar iddiayı tekrarlar ama sınamaz. Sınamak için deney ve ölçüm gerekir."
      }
     ]
@@ -209,5 +209,6 @@
   "<b>Boyle</b>: element, daha basit maddelere ayrılamayan maddedir. Su ayrıştığı için bir bileşiktir.",
   "<b>Lavoisier</b>: kapalı kapta tepkimeden önce ve sonra toplam kütle aynıdır (kütlenin korunumu).",
   "Tekrarlanabilir deney ve ölçüm, yani bilimsel yöntem, kimyayı bilim yaptı."
- ]
+ ],
+ "soruOnce": true
 }

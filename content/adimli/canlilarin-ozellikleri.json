@@ -3,97 +3,188 @@
  "ders": "biyoloji",
  "konu": "canlilarin-ozellikleri",
  "baslik": "Canlıların ortak özellikleri",
- "ozet": "Hücreden organizmaya çık, ATP'yi parçala, vücut sıcaklığını ve virüsün çoğalmasını izle.",
+ "ozet": "Önce dene, sonra adını öğren: basamakları çık, ATP'yi parçala, vücut sıcaklığını ve virüsü izle.",
  "adimlar": [
   {
    "baslik": "Organizasyon basamakları",
    "metin": "Bir kas hücresinden başla ve basamakları tek tek çık. <b>Kalbe</b> ulaştığında dur.",
-   "sahne": { "tur": "basamak" },
-   "deger": { "d": 1 },
-   "kontroller": [ { "ad": "d", "etiket": "Basamak", "min": 1, "max": 5, "tur": "sayac" } ],
+   "sahne": {
+    "tur": "basamak"
+   },
+   "deger": {
+    "d": 1
+   },
+   "kontroller": [
+    {
+     "ad": "d",
+     "etiket": "Basamak",
+     "min": 1,
+     "max": 5,
+     "tur": "sayac"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "d": 3 },
+    "hedef": {
+     "d": 3
+    },
     "tamam": "Kalp bir <b>organdır</b>: kas, sinir ve bağ dokusu birlikte tek bir iş, kanı pompalamayı yapar."
    },
-   "kart": 1,
-   "goster": { "deger": { "d": 2 }, "not": "Kas hücreleri bir araya gelince <b>kas dokusu</b> oluşur: ikinci basamak." }
+   "kart": 1
   },
   {
    "baslik": "ATP: enerji parası",
-   "metin": "Kartta gördüğün ATP kas kasılırken enerji verir. Oynatmadan önce tahmin et.",
-   "sahne": { "tur": "atp", "sure": 4 },
+   "metin": "Hücre enerjiyi <b>ATP</b> adlı bir molekülde taşır; kas kasılırken ATP enerji verir. Oynatmadan önce tahmin et.",
+   "sahne": {
+    "tur": "atp",
+    "sure": 4
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Kasın kasılması için ATP enerji verirken ne olur?",
     "secenekler": [
-     { "yazi": "Son fosfat ayrılır, enerji açığa çıkar", "dogru": true, "neden": "Yalnız son fosfat bağı kopar, geriye iki fosfatlı ADP kalır. Solunum bu ADP'ye fosfatı geri takarak ATP'yi yeniden yükler." },
-     { "yazi": "Molekül tamamen dağılır", "neden": "ATP'nin yalnızca son fosfatı ayrılır; adenin ve riboz yerinde kalır." },
-     { "yazi": "Bir fosfat daha eklenir", "neden": "Fosfat eklemek enerji ister; ATP enerji verirken fosfat kaybeder." }
+     {
+      "yazi": "Son fosfat ayrılır, enerji açığa çıkar",
+      "dogru": true,
+      "neden": "Yalnız son fosfat bağı kopar, geriye iki fosfatlı ADP kalır. Solunum bu ADP'ye fosfatı geri takarak ATP'yi yeniden yükler."
+     },
+     {
+      "yazi": "Molekül tamamen dağılır",
+      "neden": "ATP'nin yalnızca son fosfatı ayrılır; adenin ve riboz yerinde kalır."
+     },
+     {
+      "yazi": "Bir fosfat daha eklenir",
+      "neden": "Fosfat eklemek enerji ister; ATP enerji verirken fosfat kaybeder."
+     }
     ]
    },
    "kart": 3
   },
   {
    "baslik": "Metabolizma",
-   "metin": "Glikozları birleştir ve ne değiştiğine bak.",
-   "sahne": { "tur": "metabolizma" },
-   "deger": { "yon": 0 },
-   "kontroller": [ { "ad": "yon", "etiket": "Glikozları birleştir", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "metin": "Hücre küçük moleküllerden büyüklerini kurar; buna <b>anabolizma</b> (yapım) denir. Glikozları birleştir ve ne değiştiğine bak.",
+   "sahne": {
+    "tur": "metabolizma"
+   },
+   "deger": {
+    "yon": 0
+   },
+   "kontroller": [
+    {
+     "ad": "yon",
+     "etiket": "Glikozları birleştir",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
    "gorev": {
     "tur": "secim",
-    "soru": "Hangisi bir <b>anabolizma</b> (yapım) örneğidir?",
+    "soru": "Hangisi bir anabolizma örneğidir?",
     "secenekler": [
-     { "yazi": "Amino asitlerden protein yapılması", "dogru": true, "neden": "Küçük moleküllerden büyük molekül kurulur ve ATP harcanır: anabolizma. Glikozdan nişasta yapmak da öyledir." },
-     { "yazi": "Besinlerin sindirilmesi", "neden": "Sindirim büyük molekülleri parçalar: bu bir yıkım, yani katabolizmadır." },
-     { "yazi": "Glikozun solunumla yıkılması", "neden": "Solunum glikozu parçalayıp enerji açığa çıkarır: katabolizmadır." }
+     {
+      "yazi": "Amino asitlerden protein yapılması",
+      "dogru": true,
+      "neden": "Küçük moleküllerden büyük molekül kurulur ve ATP harcanır: anabolizma. Glikozdan nişasta yapmak da öyledir."
+     },
+     {
+      "yazi": "Besinlerin sindirilmesi",
+      "neden": "Sindirim büyük molekülleri parçalar: bu bir yıkım, yani katabolizmadır."
+     },
+     {
+      "yazi": "Glikozun solunumla yıkılması",
+      "neden": "Solunum glikozu parçalayıp enerji açığa çıkarır: katabolizmadır."
+     }
     ]
    },
    "kart": 2
   },
   {
    "baslik": "Homeostazi",
-   "metin": "Dış sıcaklığı değiştir ve iç sıcaklığa bak. Sıcakta ne olduğunu gördükten sonra seni karlı bir güne, <b>0 °C ve altına</b> götür.",
-   "sahne": { "tur": "homeostazi" },
-   "deger": { "dis": 20 },
-   "kontroller": [ { "ad": "dis", "etiket": "Dış sıcaklık", "min": -10, "max": 45, "birim": "°C" } ],
+   "metin": "Dış sıcaklığı değiştir ve iç sıcaklığa bak. Sonra seni karlı bir güne, <b>0 °C ve altına</b> götür.",
+   "sahne": {
+    "tur": "homeostazi"
+   },
+   "deger": {
+    "dis": 20
+   },
+   "kontroller": [
+    {
+     "ad": "dis",
+     "etiket": "Dış sıcaklık",
+     "min": -10,
+     "max": 45,
+     "birim": "°C"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "dis": [-10, 0] },
+    "hedef": {
+     "dis": [
+      -10,
+      0
+     ]
+    },
     "tamam": "Soğukta titreyen kaslar ısı üretir, deri damarları daralıp ısı kaybını azaltır. İç sıcaklık yine 37 °C civarında kalır."
    },
-   "kart": 8,
-   "goster": { "deger": { "dis": 40 }, "not": "Dışarısı 40 °C: terliyorsun, ter buharlaşırken ısı alıyor ve iç sıcaklık yine 37 °C kalıyor." }
+   "kart": 8
   },
   {
    "baslik": "Uyarılara tepki",
-   "metin": "Lambayı bitkinin sağına al ve bitkiyi büyüt.",
-   "sahne": { "tur": "bitki-isik", "sure": 4 },
-   "deger": { "isik": 0 },
-   "kontroller": [ { "ad": "isik", "etiket": "Lambayı sağa al", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "metin": "Lamba bitkinin üstünde. Lambayı sağa al ve bitkiyi büyüt.",
+   "sahne": {
+    "tur": "bitki-isik",
+    "sure": 4
+   },
+   "deger": {
+    "isik": 0
+   },
+   "kontroller": [
+    {
+     "ad": "isik",
+     "etiket": "Lambayı sağa al",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "isik": 1 },
+    "hedef": {
+     "isik": 1
+    },
     "ipucu": "Lambayı sağa alıp yeniden oynat.",
     "tamam": "Bitki ışığa doğru eğildi: gölgede kalan taraftaki hücreler daha çok uzadığı için gövde ışığa döner."
    },
-   "kart": 7,
-   "goster": { "oynat": true, "not": "Lamba bitkinin tam üstündeyken ışık yukarıdan geliyor: bitki dümdüz yukarı uzuyor." }
+   "kart": 7
   },
   {
    "baslik": "Virüs canlı mı?",
    "metin": "Biri hücre dışında, biri canlı bir hücrenin yanında. Hangisi çoğalır?",
-   "sahne": { "tur": "virus-cogalma", "sure": 5 },
+   "sahne": {
+    "tur": "virus-cogalma",
+    "sure": 5
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Virüs hücre dışında tek başına çoğalabilir mi?",
     "secenekler": [
-     { "yazi": "Hayır", "dogru": true, "neden": "Virüs kalıtsal maddesini hücreye sokar, hücrenin ribozomu ve enerjisiyle kendi kopyalarını yaptırır. Kendi metabolizması olmadığı için hücre dışında hiçbir şey yapmaz." },
-     { "yazi": "Evet, ikiye bölünerek", "neden": "Virüs hücre değildir, bölünemez." },
-     { "yazi": "Evet, ama daha yavaş", "neden": "Metabolizması olmayan virüs hücre dışında hiç çoğalamaz." }
+     {
+      "yazi": "Hayır",
+      "dogru": true,
+      "neden": "Virüs kalıtsal maddesini hücreye sokar, hücrenin ribozomu ve enerjisiyle kendi kopyalarını yaptırır. Kendi metabolizması olmadığı için hücre dışında hiçbir şey yapmaz."
+     },
+     {
+      "yazi": "Evet, ikiye bölünerek",
+      "neden": "Virüs hücre değildir, bölünemez."
+     },
+     {
+      "yazi": "Evet, ama daha yavaş",
+      "neden": "Metabolizması olmayan virüs hücre dışında hiç çoğalamaz."
+     }
     ]
    },
-   "kart": 9
+   "kart": 10
   }
  ],
  "kapanis": [
@@ -102,5 +193,6 @@
   "Metabolizma = <b>anabolizma</b> (yapım, enerji harcar) + <b>katabolizma</b> (yıkım).",
   "<b>Homeostazi</b>: terleme ve titreme gibi tepkilerle iç ortam sabit tutulur.",
   "Canlılar uyarılara tepki verir. Virüsler yalnızca canlı bir hücrenin içinde çoğalır."
- ]
+ ],
+ "soruOnce": true
 }

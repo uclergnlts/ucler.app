@@ -8,7 +8,7 @@ const sayi = (s: unknown, yedek: number) => (typeof s === "number" ? s : yedek);
 const sinirla = (x: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, x));
 
 /** Sürükleme: işaretçi basılıyken her harekette viewBox koordinatını verir. */
-function useSurukle(tasi: (q: DOMPoint) => void) {
+export function useSurukle(tasi: (q: DOMPoint) => void) {
   const svg = useRef<SVGSVGElement>(null);
   const tut = useRef(false);
   const [dokundu, setDokundu] = useState(false);
@@ -23,7 +23,7 @@ function useSurukle(tasi: (q: DOMPoint) => void) {
 }
 
 /** Sürüklenen tutamaç: dolu daire, içinde iki yönlü ok; ilk dokunuşa kadar çevresinde nabız halkası. */
-function Tutamac({ x, y, yon = "yatay", nabiz }: { x: number; y: number; yon?: "yatay" | "dikey"; nabiz: boolean }) {
+export function Tutamac({ x, y, yon = "yatay", nabiz }: { x: number; y: number; yon?: "yatay" | "dikey"; nabiz: boolean }) {
   return (
     <g transform={`translate(${x} ${y})`} pointerEvents="none">
       {nabiz && <circle r={15} fill="none" stroke="var(--acc)" strokeWidth={2.5} className="ad-nabiz" />}
