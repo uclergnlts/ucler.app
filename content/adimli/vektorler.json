@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "vektorler",
  "baslik": "Vektörler",
- "ozet": "Vektörü çiz, uç uca topla, ters çevir ve bileşenlerine ayır.",
+ "ozet": "Önce dene, sonra adını öğren: vektör çiz, döndürüp topla, bileşenlerine ayır.",
  "adimlar": [
   {
    "baslik": "Ok ile çiz",
-   "metin": "Boyu 3 birim, θ = 135° olan vektörü çiz.",
+   "metin": "θ, okun +x ekseniyle (sağa doğru) yaptığı açıdır. Boyu 3 birim, θ = 135° olan vektörü çiz.",
    "sahne": {
     "tur": "fiz3-vektor"
    },
@@ -40,14 +40,7 @@
     },
     "tamam": "135° = 90° + 45°: ok sol üste bakar."
    },
-   "kart": 2,
-   "goster": {
-    "deger": {
-     "L": 2,
-     "a": 45
-    },
-    "not": "Boyu 2 birim, θ = 45°: ok sağ üste, +x ekseniyle 45° açı yaparak bakıyor."
-   }
+   "kart": 2
   },
   {
    "baslik": "Uç uca topla",
@@ -75,13 +68,7 @@
     },
     "tamam": "A ile B dik olunca bir dik üçgen oluşur: R = √(3² + 4²) = 5. Bileşkenin büyüklüğü, vektörlerin arasındaki açıya bağlıdır; sayıları toplamak yetmez."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "b": 60
-    },
-    "not": "B 60° dönünce bileşke ≈ <b>6,1 birim</b>: 3 + 4 = 7'den kısa, çünkü vektörler aynı yönde değil."
-   }
+   "kart": 3
   },
   {
    "baslik": "Bileşke ne kadar olabilir?",
@@ -121,7 +108,7 @@
      }
     ]
    },
-   "kart": 3
+   "kart": 12
   },
   {
    "baslik": "Sayıyla çarp",
@@ -149,13 +136,7 @@
     },
     "tamam": "−2A: boyu iki kat, yönü ters."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "k": -1
-    },
-    "not": "k = −1: boyu A ile aynı ama yönü ters, yani <b>−A</b>."
-   }
+   "kart": 5
   },
   {
    "baslik": "Bileşenler",
@@ -183,13 +164,7 @@
     },
     "tamam": "sin30° = 0,5, yani V<sub>y</sub> = 10 × 0,5 = 5; V<sub>x</sub> = 10 × cos30° ≈ 8,66."
    },
-   "kart": 8,
-   "goster": {
-    "deger": {
-     "a": 45
-    },
-    "not": "θ = 45°'de V<sub>y</sub> = 10 × sin45° ≈ <b>7,07</b>; V<sub>x</sub> da aynı."
-   }
+   "kart": 8
   },
   {
    "baslik": "Bileşenlerden büyüklük",
@@ -216,13 +191,7 @@
     },
     "tamam": "√(3² + 4²) = 5. Toplam 7 adım yürüdün ama yer değiştirmen 5 adım: yürüdüğün toplam mesafe (<b>yol</b>) skalerdir, yer değiştirme vektördür."
    },
-   "kart": 9,
-   "goster": {
-    "deger": {
-     "k": 2
-    },
-    "not": "Kuzeye 2 adımla uzaklık √(3² + 2²) = √13 ≈ <b>3,6 adım</b>."
-   }
+   "kart": 9
   }
  ],
  "kapanis": [
@@ -230,5 +199,6 @@
   "Bileşke, uç uca eklenen vektörlerde ilk kuyruktan son uca çizilen oktur; daima |A − B| ile A + B arasındadır.",
   "<b>kA</b>: boy |k| katı; k negatifse yön ters. A − B = A + (−B).",
   "<b>Vx = V·cosθ</b>, <b>Vy = V·sinθ</b>; büyüklük <b>V = √(Vx² + Vy²)</b>."
- ]
+ ],
+ "soruOnce": true
 }

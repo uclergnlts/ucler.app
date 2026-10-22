@@ -1749,24 +1749,42 @@
     "cards": [
       {
         "h": "Mendeleyev'in cesur tablosu",
-        "p": "1869'da Dmitri Mendeleyev, o gün bilinen 63 elementi atom kütlelerine göre sıraladı ve benzer özellikteki elementleri alt alta koydu. Henüz bulunmamış elementler için boşluk bırakıp özelliklerini tahmin etti. Alüminyumun altına koyduğu boşluğu 1875'te bulunan galyum doldurdu.",
+        "p": "1869'da Mendeleyev bilinen 63 elementi kütleye göre sıraladı, benzerleri alt alta koydu. Bulunmamış elementlere boşluk bırakıp özelliklerini tahmin etti; galyum 1875'te bulundu.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='14' text-anchor='middle' fill='var(--ink)'>Boşluk bırak, tahmin et</text><rect x='20' y='40' width='50' height='36' fill='var(--panel)' stroke='var(--line)'/><text x='45' y='63' font-size='14' text-anchor='middle' fill='var(--ink)'>Al</text><rect x='20' y='80' width='50' height='36' fill='var(--acc)' fill-opacity='0.2' stroke='var(--acc)' stroke-dasharray='4 3'/><text x='45' y='103' font-size='15' text-anchor='middle' fill='var(--acc)'>?</text><rect x='20' y='120' width='50' height='36' fill='var(--panel)' stroke='var(--line)'/><text x='45' y='143' font-size='14' text-anchor='middle' fill='var(--ink)'>In</text><g font-size='13' text-anchor='middle' fill='var(--muted)'><text x='200' y='55'>Tahmin</text><text x='272' y='55'>Gerçek (Ga)</text></g><line x1='95' y1='65' x2='310' y2='65' stroke='var(--line)' fill='none'/><g font-size='13' fill='var(--ink)'><text x='95' y='95'>Kütle</text><text x='95' y='130'>Yoğunluk</text></g><g font-size='13' text-anchor='middle' fill='var(--ink)'><text x='200' y='95'>68</text><text x='272' y='95'>69,7</text><text x='200' y='130'>5,9</text><text x='272' y='130'>5,9</text></g><text x='95' y='170' font-size='12' fill='var(--muted)'>Galyum 1875'te bulundu</text></svg>"
       },
       {
         "h": "Modern tablo: Atom numarası",
-        "p": "1913'te Henry Moseley, elementlerin asıl sırasının atom numarasına (proton sayısına) bağlı olduğunu gösterdi. Bugünkü tablo atom numarasına göre dizilir ve 118 element içerir. Böylece kütleye göre ters düşen çiftler, örneğin tellür (Te) ile iyot (I), açıklanmış oldu.",
+        "p": "1913'te Moseley, elementlerin asıl sırasının <b>atom numarası</b> (proton sayısı) olduğunu gösterdi. Bugünkü tablo buna göre dizilir ve 118 element içerir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='28' font-size='14' text-anchor='middle' fill='var(--ink)'>Asıl sıra: proton sayısı</text><rect x='60' y='45' width='80' height='80' rx='6' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)'/><rect x='180' y='45' width='80' height='80' rx='6' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)'/><text x='68' y='63' font-size='12' fill='var(--ink)'>52</text><text x='100' y='92' font-size='15' text-anchor='middle' fill='var(--ink)'>Te</text><text x='100' y='115' font-size='12' text-anchor='middle' fill='var(--muted)'>127,6</text><text x='188' y='63' font-size='12' fill='var(--ink)'>53</text><text x='220' y='92' font-size='15' text-anchor='middle' fill='var(--ink)'>I</text><text x='220' y='115' font-size='12' text-anchor='middle' fill='var(--muted)'>126,9</text><text x='160' y='155' font-size='12' text-anchor='middle' fill='var(--muted)'>Kütleye göre I önce gelmeliydi</text><text x='160' y='178' font-size='13' text-anchor='middle' fill='var(--acc)'>Z'ye göre: Te (52) → I (53) ✓</text></svg>",
-        "key": "Modern periyodik tablo = atom numarasına (Z) göre dizilim"
+        "key": "Modern periyodik tablo = atom numarasına (Z) göre dizilim",
+        "once": {
+          "soru": "Tellür (127,6) iyottan (126,9) ağırdır ama tabloda ondan önce gelir. Modern tablo neye göre dizilir?",
+          "secenekler": [
+            {
+              "yazi": "Atom numarasına",
+              "neden": "Moseley 1913'te asıl sıranın proton sayısı olduğunu gösterdi: Te 52, I 53.",
+              "dogru": true
+            },
+            {
+              "yazi": "Atom kütlesine",
+              "neden": "Kütleye göre dizilse Te ile I yer değiştirirdi."
+            },
+            {
+              "yazi": "Bulunma tarihine",
+              "neden": "Tablo keşif sırasına göre değil, atomun yapısına göre dizilir."
+            }
+          ]
+        }
       },
       {
         "h": "Periyot ve grup",
-        "p": "Yatay satırlara <b>periyot</b> denir; 7 periyot vardır ve periyot numarası elektron katmanı sayısını verir. Dikey sütunlara <b>grup</b> denir; 18 grup vardır. 1A–8A gruplarına <b>ana grup</b>, ortadaki B gruplarına geçiş metalleri denir. Aynı ana gruptakilerin değerlik elektron sayısı ve kimyasal özellikleri benzerdir.",
+        "p": "Yatay satır <b>periyot</b>tur (7 tane); numarası katman sayısıdır. Dikey sütun <b>grup</b>tur (18 tane). Aynı ana gruptakilerin değerlik elektronları ve kimyasal özellikleri benzerdir.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M16 30h16v16h-16zM288 30h16v16h-16zM16 46h16v16h-16zM32 46h16v16h-16zM208 46h16v16h-16zM224 46h16v16h-16zM240 46h16v16h-16zM256 46h16v16h-16zM272 46h16v16h-16zM288 46h16v16h-16zM16 62h16v16h-16zM32 62h16v16h-16zM208 62h16v16h-16zM224 62h16v16h-16zM240 62h16v16h-16zM256 62h16v16h-16zM272 62h16v16h-16zM288 62h16v16h-16zM16 78h288v16h-288zM16 94h288v16h-288zM16 110h288v16h-288zM16 126h288v16h-288z' fill='var(--panel)' stroke='var(--line)'/><path d='M48 78v64M64 78v64M80 78v64M96 78v64M112 78v64M128 78v64M144 78v64M160 78v64M176 78v64M192 78v64M208 78v64M224 78v64M240 78v64M256 78v64M272 78v64M288 78v64M32 78v64' stroke='var(--line)' fill='none'/><rect x='16' y='78' width='288' height='16' fill='var(--c1)' fill-opacity='0.35'/><rect x='16' y='30' width='16' height='112' fill='var(--c2)' fill-opacity='0.35'/><g font-size='12' text-anchor='middle' fill='var(--muted)'><text x='8' y='42'>1</text><text x='8' y='58'>2</text><text x='8' y='74'>3</text><text x='8' y='90'>4</text><text x='8' y='106'>5</text><text x='8' y='122'>6</text><text x='8' y='138'>7</text><text x='24' y='26'>1</text><text x='296' y='26'>18</text></g><rect x='40' y='156' width='14' height='12' fill='var(--c1)' fill-opacity='0.35'/><text x='60' y='166' font-size='12' fill='var(--ink)'>Periyot: yatay satır (7 tane)</text><rect x='40' y='176' width='14' height='12' fill='var(--c2)' fill-opacity='0.35'/><text x='60' y='186' font-size='12' fill='var(--ink)'>Grup: dikey sütun (18 tane)</text></svg>",
         "key": "He'nin 2 değerlik elektronu var ama 18. grupta (8A) durur."
       },
       {
         "h": "Metaller, ametaller, soy gazlar",
-        "p": "Tablonun solu ve ortası <b>metallerdir</b>: parlak, iletken, işlenebilir. Sağ üst <b>ametallerdir</b>: çoğu iletmez, kırılgan ya da gazdır. Arada <b>yarı metaller</b> (Si), en sağda neredeyse hiç tepkimeye girmeyen <b>soy gazlar</b> bulunur. <b>Metalik karakter</b> (elektron verme eğilimi) sola ve aşağı doğru artar.",
+        "p": "Solda ve ortada <b>metaller</b> (parlak, iletken), sağ üstte <b>ametaller</b>, arada <b>yarı metaller</b>, en sağda <b>soy gazlar</b> var. <b>Metalik karakter</b> sola ve aşağı artar.",
         "etk": {
           "tur": "ayir",
           "soru": "Her elementi doğru gruba koy.",
@@ -1819,45 +1837,135 @@
       },
       {
         "h": "Grup numarası = değerlik e⁻",
-        "p": "Ana grup elementlerinde grup numarası değerlik elektron sayısını verir: 1A'da 1, ... 7A'da 7, 8A'da 8 (helyumda 2). Oksijen 6A (16. grup): 6 değerlik elektronu. 1A <b>alkali metaller</b>, 2A <b>toprak alkali metaller</b>, 7A <b>halojenler</b>, 8A <b>soy gazlardır</b>.",
+        "p": "Ana grup numarası değerlik elektron sayısıdır (He 2 hariç). 1A <b>alkali metaller</b>, 2A <b>toprak alkali metaller</b>, 7A <b>halojenler</b>, 8A <b>soy gazlar</b>dır.",
         "svg": "<svg viewBox='0 0 320 200'><g font-size='13' text-anchor='middle' fill='var(--acc)'><text x='30' y='34'>1A</text><text x='67' y='34'>2A</text><text x='104' y='34'>3A</text><text x='141' y='34'>4A</text><text x='178' y='34'>5A</text><text x='215' y='34'>6A</text><text x='252' y='34'>7A</text><text x='289' y='34'>8A</text></g><g font-size='12' text-anchor='middle' fill='var(--muted)'><text x='30' y='52'>1</text><text x='67' y='52'>2</text><text x='104' y='52'>13</text><text x='141' y='52'>14</text><text x='178' y='52'>15</text><text x='215' y='52'>16</text><text x='252' y='52'>17</text><text x='289' y='52'>18</text></g><circle cx='30' cy='136' r='3' fill='var(--c1)'/><circle cx='67' cy='136' r='3' fill='var(--c1)'/><circle cx='67' cy='127' r='3' fill='var(--c1)'/><circle cx='104' cy='136' r='3' fill='var(--c1)'/><circle cx='104' cy='127' r='3' fill='var(--c1)'/><circle cx='104' cy='118' r='3' fill='var(--c1)'/><circle cx='141' cy='136' r='3' fill='var(--c1)'/><circle cx='141' cy='127' r='3' fill='var(--c1)'/><circle cx='141' cy='118' r='3' fill='var(--c1)'/><circle cx='141' cy='109' r='3' fill='var(--c1)'/><circle cx='178' cy='136' r='3' fill='var(--c1)'/><circle cx='178' cy='127' r='3' fill='var(--c1)'/><circle cx='178' cy='118' r='3' fill='var(--c1)'/><circle cx='178' cy='109' r='3' fill='var(--c1)'/><circle cx='178' cy='100' r='3' fill='var(--c1)'/><circle cx='215' cy='136' r='3' fill='var(--c1)'/><circle cx='215' cy='127' r='3' fill='var(--c1)'/><circle cx='215' cy='118' r='3' fill='var(--c1)'/><circle cx='215' cy='109' r='3' fill='var(--c1)'/><circle cx='215' cy='100' r='3' fill='var(--c1)'/><circle cx='215' cy='91' r='3' fill='var(--c1)'/><circle cx='252' cy='136' r='3' fill='var(--c1)'/><circle cx='252' cy='127' r='3' fill='var(--c1)'/><circle cx='252' cy='118' r='3' fill='var(--c1)'/><circle cx='252' cy='109' r='3' fill='var(--c1)'/><circle cx='252' cy='100' r='3' fill='var(--c1)'/><circle cx='252' cy='91' r='3' fill='var(--c1)'/><circle cx='252' cy='82' r='3' fill='var(--c1)'/><circle cx='289' cy='136' r='3' fill='var(--c1)'/><circle cx='289' cy='127' r='3' fill='var(--c1)'/><circle cx='289' cy='118' r='3' fill='var(--c1)'/><circle cx='289' cy='109' r='3' fill='var(--c1)'/><circle cx='289' cy='100' r='3' fill='var(--c1)'/><circle cx='289' cy='91' r='3' fill='var(--c1)'/><circle cx='289' cy='82' r='3' fill='var(--c1)'/><circle cx='289' cy='73' r='3' fill='var(--c1)'/><g font-size='13' text-anchor='middle' fill='var(--ink)'><text x='30' y='155'>1</text><text x='67' y='155'>2</text><text x='104' y='155'>3</text><text x='141' y='155'>4</text><text x='178' y='155'>5</text><text x='215' y='155'>6</text><text x='252' y='155'>7</text><text x='289' y='155'>8</text></g><text x='160' y='175' font-size='12' text-anchor='middle' fill='var(--muted)'>1A alkali metaller · 2A toprak alkali metaller</text><text x='160' y='192' font-size='12' text-anchor='middle' fill='var(--muted)'>7A halojenler · 8A soy gazlar</text></svg>",
-        "key": "1-18 numaralamasında 13-18. grupların son rakamı A grubu numarasıdır."
+        "key": "1-18 numaralamasında 13-18. grupların son rakamı A grubu numarasıdır.",
+        "once": {
+          "soru": "Klor 7A grubundadır. Son katmanında kaç elektron vardır?",
+          "secenekler": [
+            {
+              "yazi": "7",
+              "neden": "Ana grup numarası değerlik elektron sayısını verir: 7A → 7 elektron.",
+              "dogru": true
+            },
+            {
+              "yazi": "1",
+              "neden": "1 değerlik elektronu 1A grubundaki elementlerdedir."
+            },
+            {
+              "yazi": "17",
+              "neden": "17 klorun toplam elektron sayısıdır; son katmanda 7 tane var."
+            }
+          ]
+        }
       },
       {
         "h": "Atom yarıçapı",
-        "p": "Grupta aşağı inildikçe katman sayısı arttığı için atom <b>büyür</b>. Periyotta sağa gidildikçe katman sayısı aynı kalır ama proton sayısı artar; çekirdek elektronları daha güçlü çeker ve atom <b>küçülür</b>. İzoelektronik taneciklerde proton sayısı arttıkça yarıçap küçülür: O²⁻ > F⁻ > Na⁺ > Mg²⁺.",
+        "p": "Grupta aşağı katman arttığı için atom <b>büyür</b>. Periyotta sağa proton artar, çekirdek elektronları güçlü çeker, atom <b>küçülür</b>. Katyon atomundan küçük, anyon büyüktür.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='periyodik-tablo-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--acc)'/></marker></defs><g font-size='12' text-anchor='middle' fill='var(--ink)'><text x='40' y='28'>Li</text><text x='80' y='28'>Be</text><text x='120' y='28'>B</text><text x='160' y='28'>C</text><text x='200' y='28'>N</text><text x='240' y='28'>O</text><text x='280' y='28'>F</text></g><g fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)'><circle cx='40' cy='50' r='16'/><circle cx='80' cy='50' r='13'/><circle cx='120' cy='50' r='11'/><circle cx='160' cy='50' r='10'/><circle cx='200' cy='50' r='9'/><circle cx='240' cy='50' r='8'/><circle cx='280' cy='50' r='7'/><circle cx='40' cy='103' r='20'/><circle cx='40' cy='160' r='26'/></g><text x='68' y='107' font-size='12' fill='var(--ink)'>Na</text><text x='72' y='164' font-size='12' fill='var(--ink)'>K</text><line x1='100' y1='82' x2='290' y2='82' stroke='var(--acc)' stroke-width='2' fill='none' marker-end='url(#periyodik-tablo-6)'/><text x='195' y='102' font-size='12' text-anchor='middle' fill='var(--ink)'>periyotta sağa: küçülür</text><line x1='100' y1='118' x2='100' y2='182' stroke='var(--acc)' stroke-width='2' fill='none' marker-end='url(#periyodik-tablo-6)'/><text x='110' y='155' font-size='12' fill='var(--ink)'>grupta aşağı: büyür</text></svg>",
         "key": "Grupta aşağı artar, sağa azalır. Katyon atomundan küçük, anyon atomundan büyüktür."
       },
       {
         "h": "İyonlaşma enerjisinde istisnalar",
-        "p": "Az önce gördüğün eğilimin iki istisnası var. Be'den B'ye değer düşer: B'nin son elektronu daha yüksek enerjili 2p'dedir. N'den O'ya da düşer: N'nin yarı dolu 2p³'ü daha kararlıdır, O'nun 2p⁴'ünde eşleşen elektronlar birbirini iter. 3. periyotta Mg–Al ve P–S'de de aynısı olur.",
+        "p": "İyonlaşma enerjisi sağa artar, aşağı azalır. İki istisna: Be'den B'ye ve N'den O'ya düşer; s² ve yarı dolu p³ daha kararlıdır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='periyodik-tablo-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--ink)'/></marker></defs><line x1='40' y1='170' x2='310' y2='170' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#periyodik-tablo-7)'/><line x1='40' y1='170' x2='40' y2='22' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#periyodik-tablo-7)'/><line x1='36' y1='30' x2='44' y2='30' stroke='var(--ink)' fill='none'/><text x='34' y='34' font-size='12' text-anchor='end' fill='var(--ink)'>25</text><text x='34' y='174' font-size='12' text-anchor='end' fill='var(--ink)'>0</text><polyline points='40,94 54,32 67,140 81,118 95,124 108,107 122,89 136,94 149,73 163,49 177,141 191,127 204,136 218,124 232,111 245,112 259,97 273,82 286,146 300,136' fill='none' stroke='var(--acc)' stroke-width='2.5'/><g fill='var(--c5)'><circle cx='54' cy='32' r='4'/><circle cx='163' cy='49' r='4'/><circle cx='273' cy='82' r='4'/></g><g fill='var(--c4)'><circle cx='67' cy='140' r='4'/><circle cx='177' cy='141' r='4'/><circle cx='286' cy='146' r='4'/></g><g font-size='12' fill='var(--ink)'><text x='62' y='34'>He</text><text x='170' y='48'>Ne</text><text x='280' y='80'>Ar</text><text x='60' y='160'>Li</text><text x='170' y='160'>Na</text><text x='280' y='164'>K</text></g><text x='48' y='18' font-size='12' fill='var(--ink)'>İyonlaşma enerjisi (eV)</text><text x='305' y='190' font-size='12' text-anchor='end' fill='var(--ink)'>Atom numarası (1-20)</text></svg>",
         "key": "2A > 3A ve 5A > 6A: s² ve p³ dizilimleri küresel simetriktir, daha kararlıdır."
       },
       {
         "h": "Ardışık iyonlaşma enerjileri",
-        "p": "Bir atomdan elektronlar tek tek koparılırsa her seferinde daha çok enerji gerekir: İE₁ < İE₂ < İE₃ ... Değerlik elektronları bitip iç katmana geçilince enerji birden sıçrar. Mg'de büyük sıçrama İE₂'den İE₃'e olur: 2 değerlik elektronu vardır, 2A grubundadır.",
+        "p": "Elektronlar tek tek koparıldıkça her biri daha çok enerji ister. Değerlik elektronları bitip iç katmana geçilince enerji birden <b>sıçrar</b>; sıçramadan önceki sayı grup numarasıdır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='12' text-anchor='middle' font-weight='700' fill='var(--ink)'>Mg (2-8-2): ardışık iyonlaşma enerjileri</text><line x1='40' y1='170' x2='290' y2='170' stroke='var(--ink)' stroke-width='1.5'/><rect x='60' y='161.6' width='36' height='8.4' fill='var(--c1)' fill-opacity='0.55'/><text x='78' y='156' font-size='11' text-anchor='middle' fill='var(--ink)'>738</text><text x='78' y='186' font-size='12' text-anchor='middle' fill='var(--ink)'>İE<tspan font-size='9' dy='3'>1</tspan></text><rect x='120' y='153.5' width='36' height='16.5' fill='var(--c1)' fill-opacity='0.55'/><text x='138' y='147' font-size='11' text-anchor='middle' fill='var(--ink)'>1451</text><text x='138' y='186' font-size='12' text-anchor='middle' fill='var(--ink)'>İE<tspan font-size='9' dy='3'>2</tspan></text><rect x='180' y='82.0' width='36' height='88.0' fill='var(--c2)' fill-opacity='0.55'/><text x='198' y='76' font-size='11' text-anchor='middle' fill='var(--ink)'>7733</text><text x='198' y='186' font-size='12' text-anchor='middle' fill='var(--ink)'>İE<tspan font-size='9' dy='3'>3</tspan></text><rect x='240' y='50.0' width='36' height='120.0' fill='var(--c2)' fill-opacity='0.55'/><text x='258' y='44' font-size='11' text-anchor='middle' fill='var(--ink)'>10543</text><text x='258' y='186' font-size='12' text-anchor='middle' fill='var(--ink)'>İE<tspan font-size='9' dy='3'>4</tspan></text><text x='40' y='42' font-size='11' fill='var(--c2)'>İE₂ → İE₃: 5 katından fazla sıçrar</text><text x='40' y='58' font-size='12' font-weight='700' fill='var(--acc)'>→ 2 değerlik e⁻: 2A grubu</text><text x='300' y='198' font-size='10' text-anchor='end' fill='var(--muted)'>kJ/mol</text></svg>",
-        "key": "Büyük sıçramadan önceki elektron sayısı = değerlik elektronu (ana grup no)."
+        "key": "Büyük sıçramadan önceki elektron sayısı = değerlik elektronu (ana grup no).",
+        "once": {
+          "soru": "Bir atomun ardışık iyonlaşma enerjileri 738, 1451 ve 7733 kJ/mol. Kaç değerlik elektronu var?",
+          "secenekler": [
+            {
+              "yazi": "2",
+              "neden": "İlk ikisi dış katmandan kolay kopar; üçüncüsü iç katmandan gelir ve enerji sıçrar. 2 değerlik elektronu: magnezyum, 2A.",
+              "dogru": true
+            },
+            {
+              "yazi": "3",
+              "neden": "Üçüncü elektron iç katmandan kopar; değerlik elektronu değildir."
+            },
+            {
+              "yazi": "1",
+              "neden": "İkinci elektron da kolay kopuyor; büyük sıçrama ondan sonra."
+            }
+          ]
+        }
       },
       {
         "h": "Elektronegatiflik",
-        "p": "<b>Elektronegatiflik</b>, bir atomun kimyasal bağdaki ortak elektronları kendine çekme gücüdür. Periyotta sağa gidildikçe artar, grupta aşağı inildikçe azalır. En elektronegatif element flor (F), ikincisi oksijendir. Soy gazlar genellikle bu karşılaştırmanın dışında tutulur.",
+        "p": "<b>Elektronegatiflik</b>, atomun bağdaki ortak elektronları kendine çekme gücüdür. Sağa artar, aşağı azalır. En elektronegatif flor, ikincisi oksijendir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='13' text-anchor='middle' fill='var(--ink)'>Elektronegatiflik (Pauling), 2. periyot</text><line x1='10' y1='160' x2='310' y2='160' stroke='var(--line)' fill='none'/><g fill='var(--c1)' fill-opacity='0.6'><rect x='18' y='131' width='24' height='29'/><rect x='58' y='113' width='24' height='47'/><rect x='98' y='99' width='24' height='61'/><rect x='138' y='83' width='24' height='77'/><rect x='178' y='69' width='24' height='91'/><rect x='218' y='57' width='24' height='103'/></g><rect x='258' y='41' width='24' height='119' fill='var(--c2)' fill-opacity='0.7'/><g font-size='12' text-anchor='middle' fill='var(--ink)'><text x='30' y='127'>1,0</text><text x='70' y='109'>1,6</text><text x='110' y='95'>2,0</text><text x='150' y='79'>2,6</text><text x='190' y='65'>3,0</text><text x='230' y='53'>3,4</text><text x='270' y='37'>4,0</text><text x='30' y='176'>Li</text><text x='70' y='176'>Be</text><text x='110' y='176'>B</text><text x='150' y='176'>C</text><text x='190' y='176'>N</text><text x='230' y='176'>O</text><text x='270' y='176'>F</text></g><text x='160' y='195' font-size='12' text-anchor='middle' fill='var(--muted)'>Grupta aşağı: F 4,0 · Cl 3,2 · Br 3,0 · I 2,7</text></svg>",
-        "key": "Elektronegatiflik: sağa ve yukarı doğru artar. En yüksek: F"
+        "key": "Elektronegatiflik: sağa ve yukarı doğru artar. En yüksek: F",
+        "once": {
+          "soru": "H–F bağındaki ortak elektronlar hangi atoma daha yakın durur?",
+          "secenekler": [
+            {
+              "yazi": "Flora",
+              "neden": "Flor en elektronegatif elementtir; bağdaki elektronları kendine çeker.",
+              "dogru": true
+            },
+            {
+              "yazi": "Hidrojene",
+              "neden": "Hidrojen, flordan çok daha zayıf çeker."
+            },
+            {
+              "yazi": "İkisine eşit",
+              "neden": "Eşit paylaşım yalnızca aynı iki atom arasında olur (H–H gibi)."
+            }
+          ]
+        }
       },
       {
         "h": "Elektron ilgisi",
-        "p": "Gaz hâlindeki bir atom elektron aldığında açığa çıkan enerjiye <b>elektron ilgisi</b> denir. En yüksek değerler halojenlerdedir; periyotta sağa genellikle artar, grupta aşağı genellikle azalır, ama istisnası çoktur. Ametalik karakter (elektron alma eğilimi) de sağa ve yukarı doğru artar.",
+        "p": "Gaz hâlindeki atom elektron alınca açığa çıkan enerji <b>elektron ilgisi</b>dir. En yüksek değerler halojenlerdedir. Ametalik karakter sağa ve yukarı artar.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='periyodik-tablo-ei' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c3)'/></marker><marker id='periyodik-tablo-mk' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c1)'/></marker></defs><path d='M16 30h16v16h-16zM288 30h16v16h-16zM16 46h16v16h-16zM32 46h16v16h-16zM208 46h16v16h-16zM224 46h16v16h-16zM240 46h16v16h-16zM256 46h16v16h-16zM272 46h16v16h-16zM288 46h16v16h-16zM16 62h16v16h-16zM32 62h16v16h-16zM208 62h16v16h-16zM224 62h16v16h-16zM240 62h16v16h-16zM256 62h16v16h-16zM272 62h16v16h-16zM288 62h16v16h-16zM16 78h16v16h-16zM32 78h16v16h-16zM48 78h16v16h-16zM64 78h16v16h-16zM80 78h16v16h-16zM96 78h16v16h-16zM112 78h16v16h-16zM128 78h16v16h-16zM144 78h16v16h-16zM160 78h16v16h-16zM176 78h16v16h-16zM192 78h16v16h-16zM208 78h16v16h-16zM224 78h16v16h-16zM240 78h16v16h-16zM256 78h16v16h-16zM272 78h16v16h-16zM288 78h16v16h-16zM16 94h16v16h-16zM32 94h16v16h-16zM48 94h16v16h-16zM64 94h16v16h-16zM80 94h16v16h-16zM96 94h16v16h-16zM112 94h16v16h-16zM128 94h16v16h-16zM144 94h16v16h-16zM160 94h16v16h-16zM176 94h16v16h-16zM192 94h16v16h-16zM208 94h16v16h-16zM224 94h16v16h-16zM240 94h16v16h-16zM256 94h16v16h-16zM272 94h16v16h-16zM288 94h16v16h-16zM16 110h16v16h-16zM32 110h16v16h-16zM48 110h16v16h-16zM64 110h16v16h-16zM80 110h16v16h-16zM96 110h16v16h-16zM112 110h16v16h-16zM128 110h16v16h-16zM144 110h16v16h-16zM160 110h16v16h-16zM176 110h16v16h-16zM192 110h16v16h-16zM208 110h16v16h-16zM224 110h16v16h-16zM240 110h16v16h-16zM256 110h16v16h-16zM272 110h16v16h-16zM288 110h16v16h-16zM16 126h16v16h-16zM32 126h16v16h-16zM48 126h16v16h-16zM64 126h16v16h-16zM80 126h16v16h-16zM96 126h16v16h-16zM112 126h16v16h-16zM128 126h16v16h-16zM144 126h16v16h-16zM160 126h16v16h-16zM176 126h16v16h-16zM192 126h16v16h-16zM208 126h16v16h-16zM224 126h16v16h-16zM240 126h16v16h-16zM256 126h16v16h-16zM272 126h16v16h-16zM288 126h16v16h-16z' fill='var(--panel)' stroke='var(--line)'/><line x1='150' y1='100' x2='262' y2='52' stroke='var(--c3)' stroke-width='3' fill='none' marker-end='url(#periyodik-tablo-ei)'/><line x1='130' y1='104' x2='40' y2='134' stroke='var(--c1)' stroke-width='3' fill='none' marker-end='url(#periyodik-tablo-mk)'/><text x='160' y='164' font-size='12' text-anchor='middle' fill='var(--c3)'>↗ elektron ilgisi, ametalik karakter (genelde)</text><text x='160' y='180' font-size='12' text-anchor='middle' fill='var(--c1)'>↙ metalik karakter artar</text><text x='160' y='196' font-size='11' text-anchor='middle' fill='var(--muted)'>Elektron ilgisi: Cl 349, F 328 kJ/mol</text></svg>",
-        "key": "En yüksek elektron ilgisi flor değil klordadır: küçük F'de elektronlar birbirini iter."
+        "key": "En yüksek elektron ilgisi flor değil klordadır: küçük F'de elektronlar birbirini iter.",
+        "once": {
+          "soru": "Hangi grubun atomları elektron almaya en isteklidir?",
+          "secenekler": [
+            {
+              "yazi": "Halojenler (7A)",
+              "neden": "Bir elektron alınca soy gaz dizilimine ulaşırlar; elektron ilgileri en yüksektir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Alkali metaller (1A)",
+              "neden": "Bunlar elektron almaya değil, vermeye isteklidir."
+            },
+            {
+              "yazi": "Soy gazlar (8A)",
+              "neden": "Dizilimleri zaten kararlı; elektron almaya istekli değiller."
+            }
+          ]
+        }
       },
       {
         "h": "s, p, d, f blokları",
-        "p": "Elektronun en son yerleştiği alt katman, elementin <b>bloğunu</b> verir. 1A, 2A ve helyum s, 3A–8A (He hariç) p bloğudur. Ortadaki B grupları d bloğudur: <b>geçiş metalleri</b> (grup numarası s + d elektron sayısından bulunur). Lantanitler ve aktinitler f bloğudur.",
+        "p": "Son elektronun girdiği alt katman <b>bloğu</b> verir. 1A, 2A ve He s; 3A–8A p bloğudur. B grupları d bloğu, <b>geçiş metalleridir</b>. f bloğu: lantanitler, aktinitler.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M16 30h16v16h-16zM16 46h16v16h-16zM32 46h16v16h-16zM16 62h16v16h-16zM32 62h16v16h-16zM16 78h16v16h-16zM32 78h16v16h-16zM16 94h16v16h-16zM32 94h16v16h-16zM16 110h16v16h-16zM32 110h16v16h-16zM16 126h16v16h-16zM32 126h16v16h-16z' fill='var(--c1)' fill-opacity='0.35' stroke='var(--panel)'/><path d='M288 30h16v16h-16z' fill='var(--c1)' fill-opacity='0.35' stroke='var(--panel)'/><path d='M48 78h16v16h-16zM64 78h16v16h-16zM80 78h16v16h-16zM96 78h16v16h-16zM112 78h16v16h-16zM128 78h16v16h-16zM144 78h16v16h-16zM160 78h16v16h-16zM176 78h16v16h-16zM192 78h16v16h-16zM48 94h16v16h-16zM64 94h16v16h-16zM80 94h16v16h-16zM96 94h16v16h-16zM112 94h16v16h-16zM128 94h16v16h-16zM144 94h16v16h-16zM160 94h16v16h-16zM176 94h16v16h-16zM192 94h16v16h-16zM48 110h16v16h-16zM64 110h16v16h-16zM80 110h16v16h-16zM96 110h16v16h-16zM112 110h16v16h-16zM128 110h16v16h-16zM144 110h16v16h-16zM160 110h16v16h-16zM176 110h16v16h-16zM192 110h16v16h-16zM48 126h16v16h-16zM64 126h16v16h-16zM80 126h16v16h-16zM96 126h16v16h-16zM112 126h16v16h-16zM128 126h16v16h-16zM144 126h16v16h-16zM160 126h16v16h-16zM176 126h16v16h-16zM192 126h16v16h-16z' fill='var(--c4)' fill-opacity='0.35' stroke='var(--panel)'/><path d='M208 46h16v16h-16zM224 46h16v16h-16zM240 46h16v16h-16zM256 46h16v16h-16zM272 46h16v16h-16zM288 46h16v16h-16zM208 62h16v16h-16zM224 62h16v16h-16zM240 62h16v16h-16zM256 62h16v16h-16zM272 62h16v16h-16zM288 62h16v16h-16zM208 78h16v16h-16zM224 78h16v16h-16zM240 78h16v16h-16zM256 78h16v16h-16zM272 78h16v16h-16zM288 78h16v16h-16zM208 94h16v16h-16zM224 94h16v16h-16zM240 94h16v16h-16zM256 94h16v16h-16zM272 94h16v16h-16zM288 94h16v16h-16zM208 110h16v16h-16zM224 110h16v16h-16zM240 110h16v16h-16zM256 110h16v16h-16zM272 110h16v16h-16zM288 110h16v16h-16zM208 126h16v16h-16zM224 126h16v16h-16zM240 126h16v16h-16zM256 126h16v16h-16zM272 126h16v16h-16zM288 126h16v16h-16z' fill='var(--c3)' fill-opacity='0.35' stroke='var(--panel)'/><path d='M48 152h16v16h-16zM64 152h16v16h-16zM80 152h16v16h-16zM96 152h16v16h-16zM112 152h16v16h-16zM128 152h16v16h-16zM144 152h16v16h-16zM160 152h16v16h-16zM176 152h16v16h-16zM192 152h16v16h-16zM208 152h16v16h-16zM224 152h16v16h-16zM240 152h16v16h-16zM256 152h16v16h-16zM48 168h16v16h-16zM64 168h16v16h-16zM80 168h16v16h-16zM96 168h16v16h-16zM112 168h16v16h-16zM128 168h16v16h-16zM144 168h16v16h-16zM160 168h16v16h-16zM176 168h16v16h-16zM192 168h16v16h-16zM208 168h16v16h-16zM224 168h16v16h-16zM240 168h16v16h-16zM256 168h16v16h-16z' fill='var(--c5)' fill-opacity='0.35' stroke='var(--panel)'/><text x='32' y='112' font-size='14' text-anchor='middle' fill='var(--ink)'>s</text><text x='128' y='114' font-size='12' text-anchor='middle' fill='var(--ink)'>d: geçiş metalleri</text><text x='256' y='98' font-size='14' text-anchor='middle' fill='var(--ink)'>p</text><text x='160' y='172' font-size='11' text-anchor='middle' fill='var(--ink)'>f: lantanitler, aktinitler</text><text x='24' y='42' font-size='10' text-anchor='middle' fill='var(--ink)'>H</text><text x='296' y='42' font-size='10' text-anchor='middle' fill='var(--ink)'>He</text><text x='160' y='196' font-size='11' text-anchor='middle' fill='var(--muted)'>He (1s²) s bloğundadır ama 8A'da durur.</text></svg>",
-        "key": "Ana grup = s + p blokları (A grupları). Geçiş metalleri = d bloğu (B grupları)."
+        "key": "Ana grup = s + p blokları (A grupları). Geçiş metalleri = d bloğu (B grupları).",
+        "once": {
+          "soru": "Demir (Fe) tablonun ortasındaki B gruplarındadır. Son elektronu hangi alt katmana girer?",
+          "secenekler": [
+            {
+              "yazi": "d",
+              "neden": "Fe [Ar] 4s² 3d⁶: son elektron 3d'ye girer. Ortadaki B grupları d bloğudur.",
+              "dogru": true
+            },
+            {
+              "yazi": "s",
+              "neden": "s ile bitenler tablonun en solundaki iki gruptur."
+            },
+            {
+              "yazi": "p",
+              "neden": "p ile bitenler tablonun sağındaki altı gruptur."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",
