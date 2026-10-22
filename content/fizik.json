@@ -2525,36 +2525,72 @@
     "cards": [
       {
         "h": "Atılan cisimlerin eğri yolu",
-        "p": "Fırlatılan top, atılan taş ya da hortumdan fışkıran su eğri bir yol (parabol) çizer. Bu hareketi çözmenin yolu, onu yatay ve düşey iki ayrı harekete bölmektir. Hava direncini yok sayıyoruz; <b>bu konuda g = 9,8 m/s² alıyoruz</b>.",
-        "svg": "<svg viewBox='0 0 320 200'><line x1='10' y1='175' x2='310' y2='175' stroke='var(--ink)' stroke-width='1.5'/><path d='M30 170 Q150 -10 270 170' fill='none' stroke='var(--c2)' stroke-width='2' stroke-dasharray='5 4'/><circle cx='30' cy='170' r='5' fill='var(--c2)'/><line x1='90' y1='108.5' x2='90' y2='175' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='90' cy='102.5' r='5' fill='var(--c2)'/><line x1='150' y1='86' x2='150' y2='175' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='150' cy='80' r='5' fill='var(--c2)'/><line x1='210' y1='108.5' x2='210' y2='175' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='210' cy='102.5' r='5' fill='var(--c2)'/><circle cx='270' cy='170' r='5' fill='var(--c2)'/><text x='160' y='22' font-size='11' fill='var(--muted)' text-anchor='middle'>düşeyde yerçekimi: önce yavaşlar, sonra hızlanır</text><text x='160' y='194' font-size='12' fill='var(--muted)' text-anchor='middle'>yatayda eşit aralıklar: sabit hız</text></svg>"
+        "p": "Fırlatılan top eğri bir yol (<b>parabol</b>) çizer. Çözmenin yolu, hareketi yatay ve düşey iki harekete bölmektir. Bu konuda g = 9,8 m/s², hava direnci yok.",
+        "svg": "<svg viewBox='0 0 320 200'><line x1='10' y1='175' x2='310' y2='175' stroke='var(--ink)' stroke-width='1.5'/><path d='M30 170 Q150 -10 270 170' fill='none' stroke='var(--c2)' stroke-width='2' stroke-dasharray='5 4'/><circle cx='30' cy='170' r='5' fill='var(--c2)'/><line x1='90' y1='108.5' x2='90' y2='175' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='90' cy='102.5' r='5' fill='var(--c2)'/><line x1='150' y1='86' x2='150' y2='175' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='150' cy='80' r='5' fill='var(--c2)'/><line x1='210' y1='108.5' x2='210' y2='175' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='210' cy='102.5' r='5' fill='var(--c2)'/><circle cx='270' cy='170' r='5' fill='var(--c2)'/><text x='160' y='22' font-size='11' fill='var(--muted)' text-anchor='middle'>düşeyde yerçekimi: önce yavaşlar, sonra hızlanır</text><text x='160' y='194' font-size='12' fill='var(--muted)' text-anchor='middle'>yatayda eşit aralıklar: sabit hız</text></svg>",
+        "once": {
+          "soru": "Yatay atılan bir topun yolu nasıl görünür?",
+          "secenekler": [
+            {
+              "yazi": "Aşağı kıvrılan eğri",
+              "neden": "Top yatayda gitmeyi sürdürürken düşeyde giderek hızlanarak düşer; yol parabol olur.",
+              "dogru": true
+            },
+            {
+              "yazi": "Düz eğik çizgi",
+              "neden": "Düşey hız sürekli arttığı için yol düz değil, kıvrılır."
+            },
+            {
+              "yazi": "Önce düz, sonra dik",
+              "neden": "Yerçekimi ilk andan itibaren etkir; düz giden bir kısım yoktur."
+            }
+          ]
+        }
       },
       {
         "h": "Yatay ve düşey bağımsızdır",
-        "p": "Az önce gördüğün gibi, aynı yükseklikten biri serbest bırakılan, diğeri yatay fırlatılan iki top aynı anda yere düşer. Düşey hareketi yalnızca yerçekimi belirler; yatay hız düşmeyi ne hızlandırır ne yavaşlatır.",
+        "p": "Az önce gördüğün gibi serbest bırakılan ve yatay fırlatılan top aynı anda düşer. Düşeyi yalnız yerçekimi belirler; yatay hız düşmeyi değiştirmez.",
         "svg": "<svg viewBox='0 0 320 210' xmlns='http://www.w3.org/2000/svg'><line x1='10' y1='182' x2='310' y2='182' stroke='var(--ink)' stroke-width='1.5' fill='none'/><path d='M100 30 Q190 30 280 174' fill='none' stroke='var(--c2)' stroke-width='1.5' stroke-dasharray='5 4'/><line x1='56' y1='30' x2='94' y2='30' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><circle cx='50' cy='30' r='6' fill='var(--c1)'/><circle cx='100' cy='30' r='6' fill='var(--c2)'/><line x1='56' y1='46' x2='154' y2='46' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><circle cx='50' cy='46' r='6' fill='var(--c1)'/><circle cx='160' cy='46' r='6' fill='var(--c2)'/><line x1='56' y1='94' x2='214' y2='94' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><circle cx='50' cy='94' r='6' fill='var(--c1)'/><circle cx='220' cy='94' r='6' fill='var(--c2)'/><line x1='56' y1='174' x2='274' y2='174' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><circle cx='50' cy='174' r='6' fill='var(--c1)'/><circle cx='280' cy='174' r='6' fill='var(--c2)'/><text x='50' y='16' font-size='12' fill='var(--c1)' text-anchor='middle'>bırakılan</text><text x='110' y='16' font-size='12' fill='var(--c2)'>yatay fırlatılan</text><text x='160' y='202' font-size='12' fill='var(--muted)' text-anchor='middle'>eşit sürelerde hep aynı yükseklikte</text></svg>",
         "key": "Yatayda sabit hız, düşeyde serbest düşme: ikisini ayrı çöz."
       },
       {
         "h": "Yatay atış",
-        "p": "Yatay fırlatılan cisim yatayda sabit hızla gider: x = v<sub>0</sub>·t. Düşeyde serbest düşer: h = ½·g·t². 44,1 m'lik bir yardan 10 m/s ile yatay atılan taş 3 s'de düşer, 30 m öteye ulaşır.",
+        "p": "Yatay atılan cisim yatayda sabit hızla gider: x = v<sub>0</sub>·t. Düşeyde serbest düşer: h = ½·g·t².",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='48' y='60' width='30' height='98' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><line x1='10' y1='158' x2='310' y2='158' stroke='var(--ink)' stroke-width='1.5' fill='none'/><path d='M78 60 Q178 60 278 158' fill='none' stroke='var(--c2)' stroke-width='2' stroke-dasharray='5 4'/><circle cx='78' cy='60' r='4' fill='var(--c2)'/><circle cx='278' cy='158' r='4' fill='var(--c2)'/><circle cx='178' cy='84.5' r='4' fill='var(--c2)'/><line x1='178' y1='84.5' x2='211' y2='84.5' stroke='var(--c1)' stroke-width='2.5' fill='none'/><polygon points='218,84.5 208,89 208,80' fill='var(--c1)'/><line x1='178' y1='84.5' x2='178' y2='97.1' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='178,104.1 173.5,94.1 182.5,94.1' fill='var(--c2)'/><line x1='178' y1='84.5' x2='211.7' y2='101' stroke='var(--acc)' stroke-width='2' fill='none'/><polygon points='218,104.1 207,103.7 211,95.7' fill='var(--acc)'/><text x='222' y='88' font-size='12' fill='var(--c1)'>vx</text><text x='160' y='112' font-size='12' fill='var(--c2)'>vy</text><text x='6' y='112' font-size='12' fill='var(--ink)'>44,1 m</text><text x='82' y='48' font-size='12' fill='var(--c1)'>v₀ = 10 m/s</text><text x='200' y='150' font-size='12' fill='var(--ink)'>t = 3 s</text><line x1='82.9' y1='172' x2='273.1' y2='172' stroke='var(--muted)' stroke-width='1.5' fill='none'/><polygon points='278,172 271,175.2 271,168.8' fill='var(--muted)'/><polygon points='78,172 85,168.8 85,175.2' fill='var(--muted)'/><text x='178' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>x = 30 m</text></svg>",
-        "key": "Yere çarpma: vy = g·t, v = √(vx² + vy²); örnekte √(10² + 29,4²) ≈ 31 m/s."
+        "key": "44,1 m'lik yardan 10 m/s ile atılan taş 3 s'de düşer, 30 m öteye gider. Çarpma hızı: vy = g·t, v = √(10² + 29,4²) ≈ 31 m/s."
       },
       {
         "h": "Eğik atış: hızı ikiye ayır",
-        "p": "θ açısıyla v<sub>0</sub> hızında atılan topun hızı ikiye ayrılır: yatay v<sub>x</sub> = v<sub>0</sub>·cosθ değişmez, düşey v<sub>0y</sub> = v<sub>0</sub>·sinθ her saniye 9,8 m/s azalır. Örnek: 20 m/s, 53° ise v<sub>x</sub> = 12 m/s, v<sub>0y</sub> = 16 m/s.",
+        "p": "Eğik atışta hız ikiye ayrılır: yatay v<sub>x</sub> = v<sub>0</sub>·cosθ değişmez, düşey v<sub>0y</sub> = v<sub>0</sub>·sinθ her saniye 9,8 m/s azalır.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='170' x2='300' y2='170' stroke='var(--line)' stroke-width='1.5' fill='none'/><line x1='60' y1='170' x2='137' y2='170' stroke='var(--c1)' stroke-width='3' fill='none'/><polygon points='144,170 134,174.5 134,165.5' fill='var(--c1)'/><line x1='144' y1='170' x2='144' y2='65' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='144,58 148.5,68 139.5,68' fill='var(--c2)'/><line x1='60' y1='170' x2='139.8' y2='63.6' stroke='var(--acc)' stroke-width='3' fill='none'/><polygon points='144,58 141.6,68.7 134.4,63.3' fill='var(--acc)'/><path d='M85 170 A25 25 0 0 0 75 150' fill='none' stroke='var(--ink)' stroke-width='1.5'/><text x='88' y='163' font-size='12' fill='var(--ink)'>53°</text><text x='88' y='95' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='bold'>v₀ = 20 m/s</text><text x='102' y='188' font-size='12' fill='var(--c1)' text-anchor='middle'>vx = 12 m/s</text><text x='152' y='110' font-size='12' fill='var(--c2)'>vy = 16 m/s</text><rect x='200' y='30' width='110' height='60' fill='var(--panel)' rx='8'/><text x='255' y='55' font-size='12' fill='var(--ink)' text-anchor='middle'>cos53° = 0,6</text><text x='255' y='77' font-size='12' fill='var(--ink)' text-anchor='middle'>sin53° = 0,8</text><text x='200' y='140' font-size='12' fill='var(--c1)'>vx: hep aynı</text><text x='200' y='160' font-size='12' fill='var(--c2)'>vy: g ile azalır</text></svg>",
-        "key": "vx = v0·cosθ (sabit), vy = v0·sinθ − g·t"
+        "key": "vx = v0·cosθ (sabit), vy = v0·sinθ − g·t. 20 m/s, 53° ise vx = 12 m/s, v0y = 16 m/s.",
+        "once": {
+          "soru": "Eğik atılan bir topun hızının hangi bileşeni uçuş boyunca değişmez?",
+          "secenekler": [
+            {
+              "yazi": "Yatay bileşen",
+              "neden": "Yatayda kuvvet yok; vx sabit kalır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Düşey bileşen",
+              "neden": "Yerçekimi düşey hızı her saniye 9,8 m/s azaltır."
+            },
+            {
+              "yazi": "İkisi de değişir",
+              "neden": "Yerçekimi yalnız düşey yönde etkir."
+            }
+          ]
+        }
       },
       {
         "h": "Tepe noktası ve uçuş süresi",
-        "p": "Tepede v<sub>y</sub> = 0 olur; çıkış süresi v<sub>0y</sub> / g, en büyük yükseklik v<sub>0y</sub>² / (2g)'dir. Atıldığı seviyeye inen cisimde iniş çıkış kadar sürer: T = 2·v<sub>0y</sub> / g. v<sub>0y</sub> ≈ 17,3 m/s ise T ≈ 3,5 s.",
+        "p": "Tepede v<sub>y</sub> = 0 olur; çıkış süresi v<sub>0y</sub> / g'dir. Atıldığı seviyeye inen cisimde iniş çıkış kadar sürer: T = 2·v<sub>0y</sub> / g.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='100' x2='306.4' y2='100' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='312,100 304,103.6 304,96.4' fill='var(--ink)'/><line x1='40' y1='185' x2='40' y2='15' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='40' y1='60' x2='287.4' y2='60' stroke='var(--c1)' stroke-width='2.5' fill='none'/><line x1='40' y1='30.7' x2='287.4' y2='169.3' stroke='var(--c2)' stroke-width='2.5' fill='none'/><circle cx='163.7' cy='100' r='4' fill='var(--ink)'/><line x1='287.4' y1='95' x2='287.4' y2='105' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='45' y='14' font-size='12' fill='var(--muted)'>hız (m/s)</text><text x='175' y='52' font-size='12' fill='var(--c1)'>vx = 10 m/s (sabit)</text><text x='70' y='30' font-size='12' fill='var(--c2)' font-weight='bold'>vy</text><text x='35' y='34' font-size='12' fill='var(--ink)' text-anchor='end'>17,3</text><text x='155' y='118' font-size='12' fill='var(--ink)' text-anchor='end'>tepe: vy = 0</text><text x='287' y='92' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>T ≈ 3,5 s</text><text x='283' y='190' font-size='12' fill='var(--ink)' text-anchor='end'>−17,3</text><text x='300' y='118' font-size='12' fill='var(--muted)'>t</text></svg>",
-        "key": "T = 2·v0·sinθ / g"
+        "key": "En büyük yükseklik v0y² / (2g). T = 2·v0·sinθ / g; v0y ≈ 17,3 m/s ise T ≈ 3,5 s."
       },
       {
         "h": "Menzil ve 45° kuralı",
-        "p": "Yatayda gidilen toplam uzaklık <b>menzil</b>dir: R = v<sub>0</sub>²·sin2θ / g. Hava direnci yoksa ve cisim atıldığı seviyeye inerse en uzun menzil <b>45°</b>'de elde edilir. 30° ve 60° gibi toplamı 90° olan açılar aynı menzili verir.",
+        "p": "Yatayda gidilen toplam uzaklık <b>menzildir</b>: R = v<sub>0</sub>²·sin2θ / g. Aynı seviyeye inen cisimde en uzun menzil <b>45°</b>'dedir; 30° ile 60° aynı menzili verir.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='180' x2='305' y2='180' stroke='var(--ink)' stroke-width='1.5' fill='none'/><path d='M40 180 Q146 -3.6 252 180' fill='none' stroke='var(--c2)' stroke-width='2'/><path d='M40 180 Q162.5 57.6 285 180' fill='none' stroke='var(--c3)' stroke-width='2.5'/><path d='M40 180 Q146 118.8 252 180' fill='none' stroke='var(--c1)' stroke-width='2'/><text x='146' y='80' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>60°</text><text x='162.5' y='113' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>45°</text><text x='146' y='143' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>30°</text><line x1='252' y1='175' x2='252' y2='185' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='285' y1='175' x2='285' y2='185' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='246' y='197' font-size='12' fill='var(--ink)' text-anchor='middle'>35,3</text><text x='292' y='197' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>40,8 m</text><text x='10' y='20' font-size='12' fill='var(--ink)'>v₀ = 20 m/s (hepsi)</text><text x='10' y='38' font-size='12' fill='var(--muted)'>g ≈ 9,8 m/s²</text></svg>",
         "key": "R = v0²·sin2θ / g  →  en büyük menzil θ = 45°",
         "etk": {
@@ -2603,19 +2639,75 @@
       },
       {
         "h": "Yüksekten eğik atış",
-        "p": "Alçağa inen cisimde T = 2·v<sub>0y</sub>/g ve menzil formülleri geçerli değildir. Yukarıyı artı al: −h = v<sub>0y</sub>·t − ½·g·t². 19,6 m yükseklikten v<sub>0y</sub> = 14,7, v<sub>x</sub> = 10 m/s ise t = 4 s, x = 40 m.",
-        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='310' y='20' font-size='11' fill='var(--muted)' text-anchor='end'>v<tspan font-size='9' baseline-shift='sub'>x</tspan> = 10 m/s, v<tspan font-size='9' baseline-shift='sub'>0y</tspan> = 14,7 m/s</text><text x='310' y='38' font-size='11' fill='var(--muted)' text-anchor='end'>g = 9,8 m/s²</text><rect x='20' y='80' width='40' height='100' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><line x1='10' y1='180' x2='310' y2='180' stroke='var(--ink)' stroke-width='1.5'/><path d='M60 80 Q160 -70 260 180' fill='none' stroke='var(--c2)' stroke-width='2' stroke-dasharray='5 4'/><line x1='60' y1='80' x2='74.1' y2='58.8' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='78,53 76.2,63.8 68.7,58.8' fill='var(--acc)'/><text x='84' y='58' font-size='12' fill='var(--acc)' font-weight='bold'>v₀</text><circle cx='60' cy='80' r='4' fill='var(--c2)'/><circle cx='260' cy='180' r='4' fill='var(--c2)'/><text x='40' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>19,6 m</text><path d='M60 80 H300' stroke='var(--line)' stroke-dasharray='3 3'/><text x='300' y='74' font-size='10' fill='var(--muted)' text-anchor='end'>atış seviyesi</text><text x='230' y='165' font-size='12' fill='var(--ink)' text-anchor='end'>t = 4 s</text><text x='160' y='196' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>−19,6 = 14,7t − 4,9t² → t = 4 s, x = 40 m</text></svg>"
+        "p": "Alçağa inen cisimde T ve menzil formülleri geçmez. Yukarıyı artı al: −h = v<sub>0y</sub>·t − ½·g·t².",
+        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='310' y='20' font-size='11' fill='var(--muted)' text-anchor='end'>v<tspan font-size='9' baseline-shift='sub'>x</tspan> = 10 m/s, v<tspan font-size='9' baseline-shift='sub'>0y</tspan> = 14,7 m/s</text><text x='310' y='38' font-size='11' fill='var(--muted)' text-anchor='end'>g = 9,8 m/s²</text><rect x='20' y='80' width='40' height='100' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><line x1='10' y1='180' x2='310' y2='180' stroke='var(--ink)' stroke-width='1.5'/><path d='M60 80 Q160 -70 260 180' fill='none' stroke='var(--c2)' stroke-width='2' stroke-dasharray='5 4'/><line x1='60' y1='80' x2='74.1' y2='58.8' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='78,53 76.2,63.8 68.7,58.8' fill='var(--acc)'/><text x='84' y='58' font-size='12' fill='var(--acc)' font-weight='bold'>v₀</text><circle cx='60' cy='80' r='4' fill='var(--c2)'/><circle cx='260' cy='180' r='4' fill='var(--c2)'/><text x='40' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>19,6 m</text><path d='M60 80 H300' stroke='var(--line)' stroke-dasharray='3 3'/><text x='300' y='74' font-size='10' fill='var(--muted)' text-anchor='end'>atış seviyesi</text><text x='230' y='165' font-size='12' fill='var(--ink)' text-anchor='end'>t = 4 s</text><text x='160' y='196' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>−19,6 = 14,7t − 4,9t² → t = 4 s, x = 40 m</text></svg>",
+        "key": "19,6 m yükseklikten v0y = 14,7, vx = 10 m/s ise t = 4 s, x = 40 m.",
+        "once": {
+          "soru": "Aynı hız ve açıyla atılan iki taştan biri düz zeminden, öbürü yüksek bir yardan atılıyor. Hangisi havada daha uzun kalır?",
+          "secenekler": [
+            {
+              "yazi": "Yardan atılan",
+              "neden": "Atıldığı seviyeye döndükten sonra yar yüksekliği kadar daha düşer.",
+              "dogru": true
+            },
+            {
+              "yazi": "Düz zeminden atılan",
+              "neden": "Yardan atılan taş atıldığı seviyeyi geçip inmeyi sürdürür; süresi uzar."
+            },
+            {
+              "yazi": "Eşit kalırlar",
+              "neden": "Yar yüksekliği kadar ek düşüş süresi eklenir."
+            }
+          ]
+        }
       },
       {
         "h": "Hareketli araçtan atış",
-        "p": "Hareketli bir araçtan atılan cisim, aracın hızını da taşır: yere göre ilk hız = araca göre atış hızı + aracın hızı. Sabit 10 m/s giden kamyondan düşey atılan top, kamyondakine göre düz çıkıp iner; yerdekine göre eğik atış yapar. Hava direnci yoksa kamyona geri düşer.",
-        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='20' font-size='11' fill='var(--muted)' text-anchor='middle'>kamyon sabit 10 m/s ile gidiyor</text><line x1='10' y1='170' x2='310' y2='170' stroke='var(--ink)' stroke-width='1.5'/><g opacity='1'><rect x='30' y='130' width='60' height='30' rx='3' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><circle cx='45' cy='163' r='7' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='80' cy='163' r='7' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/></g><g opacity='0.55'><rect x='210' y='130' width='60' height='30' rx='3' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><circle cx='225' cy='163' r='7' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='260' cy='163' r='7' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/></g><path d='M60 130 Q150 -50 240 130' fill='none' stroke='var(--acc)' stroke-width='2' stroke-dasharray='5 4'/><line x1='60' y1='128' x2='60' y2='69' stroke='var(--c5)' stroke-width='2' fill='none'/><polygon points='60,62 64.5,72 55.5,72' fill='var(--c5)'/><circle cx='60' cy='130' r='5' fill='var(--c2)'/><circle cx='240' cy='130' r='5' fill='var(--c2)'/><line x1='96' y1='145' x2='127' y2='145' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='134,145 124,149.5 124,140.5' fill='var(--c3)'/><text x='115' y='136' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='bold'>10 m/s</text><text x='20' y='192' font-size='11' fill='var(--c5)' font-weight='bold'>kamyona göre: düz yukarı</text><text x='310' y='192' font-size='11' fill='var(--acc)' text-anchor='end' font-weight='bold'>yere göre: eğik atış</text></svg>"
+        "p": "Hareketli araçtan atılan cisim aracın hızını da taşır. Sabit hızlı kamyondan düşey atılan top, kamyondakine göre düz iner, yerdekine göre eğik atış yapar.",
+        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='20' font-size='11' fill='var(--muted)' text-anchor='middle'>kamyon sabit 10 m/s ile gidiyor</text><line x1='10' y1='170' x2='310' y2='170' stroke='var(--ink)' stroke-width='1.5'/><g opacity='1'><rect x='30' y='130' width='60' height='30' rx='3' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><circle cx='45' cy='163' r='7' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='80' cy='163' r='7' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/></g><g opacity='0.55'><rect x='210' y='130' width='60' height='30' rx='3' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><circle cx='225' cy='163' r='7' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='260' cy='163' r='7' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/></g><path d='M60 130 Q150 -50 240 130' fill='none' stroke='var(--acc)' stroke-width='2' stroke-dasharray='5 4'/><line x1='60' y1='128' x2='60' y2='69' stroke='var(--c5)' stroke-width='2' fill='none'/><polygon points='60,62 64.5,72 55.5,72' fill='var(--c5)'/><circle cx='60' cy='130' r='5' fill='var(--c2)'/><circle cx='240' cy='130' r='5' fill='var(--c2)'/><line x1='96' y1='145' x2='127' y2='145' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='134,145 124,149.5 124,140.5' fill='var(--c3)'/><text x='115' y='136' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='bold'>10 m/s</text><text x='20' y='192' font-size='11' fill='var(--c5)' font-weight='bold'>kamyona göre: düz yukarı</text><text x='310' y='192' font-size='11' fill='var(--acc)' text-anchor='end' font-weight='bold'>yere göre: eğik atış</text></svg>",
+        "key": "Yere göre ilk hız = araca göre atış hızı + aracın hızı.",
+        "once": {
+          "soru": "Sabit hızla giden bir kamyonun kasasından top düşey yukarı atılıyor. Hava direnci yoksa top nereye düşer?",
+          "secenekler": [
+            {
+              "yazi": "Kamyonun kasasına",
+              "neden": "Top kamyonun yatay hızını taşır; yatayda kamyonla birlikte gider.",
+              "dogru": true
+            },
+            {
+              "yazi": "Kamyonun arkasına",
+              "neden": "Top yatay hızı kaybetmez; kamyonla aynı yatay hızda kalır."
+            },
+            {
+              "yazi": "Kamyonun önüne",
+              "neden": "Topun yatay hızı kamyonunkinden fazla değil."
+            }
+          ]
+        }
       },
       {
         "h": "Gerçek hayatta: hava direnci",
-        "p": "Bu formüller hava direncini ihmal eder. Gerçekte hava topu yavaşlatır: menzil ve yükseklik azalır, iniş çıkıştan daha diktir. Bu yüzden gerçek en uzun menzil açısı genelde 45°'den biraz küçüktür.",
+        "p": "Formüller hava direncini ihmal eder. Gerçekte hava topu yavaşlatır: menzil ve yükseklik azalır, iniş daha diktir. En uzun menzil açısı genelde 45°'den küçüktür.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='15' y1='180' x2='305' y2='180' stroke='var(--ink)' stroke-width='1.5' fill='none'/><path d='M30 180 Q150 60 270 180' fill='none' stroke='var(--c1)' stroke-width='2' stroke-dasharray='5 4'/><path d='M30 180 C90 120 165 100 200 180' fill='none' stroke='var(--c2)' stroke-width='2.5'/><text x='222' y='112' font-size='12' fill='var(--c1)' font-weight='bold'>havasız</text><text x='110' y='170' font-size='12' fill='var(--c2)' font-weight='bold'>havada</text><text x='160' y='30' font-size='12' fill='var(--muted)' text-anchor='middle'>menzil ve yükseklik azalır</text><line x1='200' y1='175' x2='200' y2='185' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='270' y1='175' x2='270' y2='185' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='200' y='197' font-size='12' fill='var(--c2)' text-anchor='middle'>kısa</text><text x='270' y='197' font-size='12' fill='var(--c1)' text-anchor='middle'>uzun</text></svg>",
-        "key": "Havasız ortamda simetrik parabol; havada daha kısa, asimetrik yol."
+        "key": "Havasız ortamda simetrik parabol; havada daha kısa, asimetrik yol.",
+        "once": {
+          "soru": "Gerçek bir maçta topun menzili, havasız formülün verdiğine göre nasıldır?",
+          "secenekler": [
+            {
+              "yazi": "Daha kısa",
+              "neden": "Hava topu yavaşlatır; top daha kısa mesafe gider.",
+              "dogru": true
+            },
+            {
+              "yazi": "Daha uzun",
+              "neden": "Hava topa enerji vermez, yavaşlatır."
+            },
+            {
+              "yazi": "Aynı",
+              "neden": "Formül havayı ihmal eder; gerçekte fark vardır."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",

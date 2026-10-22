@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "iki-boyutta-hareket",
  "baslik": "İki boyutta hareket ve atışlar",
- "ozet": "Topları aynı anda düşür, yardan taş at, açıyı ayarlayıp en uzağa fırlat.",
+ "ozet": "Önce dene, sonra adını öğren: topları düşür, yardan taş at, açıyı ayarla.",
  "adimlar": [
   {
    "baslik": "Hangisi önce düşer?",
@@ -31,11 +31,11 @@
      }
     ]
    },
-   "kart": 1
+   "kart": 2
   },
   {
    "baslik": "Yatay atış",
-   "metin": "19,6 m'lik yardan taşı yatay atacaksın. Hızı ayarla ve taşı 40 m ötedeki bayrağa düşür.",
+   "metin": "19,6 m'lik yardan taşı yatay atacaksın; taş 2 s'de yere iner. Hızı ayarla ve taşı 40 m ötedeki bayrağa düşür.",
    "sahne": {
     "tur": "fiz4-yatay",
     "sure": 2
@@ -60,13 +60,7 @@
     },
     "tamam": "Düşüş 2 s sürdü: h = ½·g·t² → 19,6 = 4,9·t² → t = 2 s. Bu sürede taş yatayda x = 20 × 2 = 40 m gitti."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "v": 15
-    },
-    "not": "15 m/s ile atılan taş 2 s'de düşüyor ve 15 × 2 = 30 m öteye varıyor; bayrağa ulaşmıyor."
-   }
+   "kart": 3
   },
   {
    "baslik": "Hız süreyi değiştirir mi?",
@@ -139,7 +133,7 @@
      }
     ]
    },
-   "kart": 4
+   "kart": 5
   },
   {
    "baslik": "Atış laboratuvarı",
@@ -245,5 +239,6 @@
   "Eğik atışta vx = v0·cosθ sabittir, vy = v0·sinθ − g·t; tepede vy = 0 ama hız vx'tir.",
   "Menzil R = v0²·sin2θ / g. Havasız ortamda en büyük menzil 45°'dedir; 30° ile 60° aynı menzili verir.",
   "Gerçekte hava direnci menzili ve yüksekliği azaltır; en uzun menzil açısı genelde 45°'den biraz küçüktür."
- ]
+ ],
+ "soruOnce": true
 }

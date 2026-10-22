@@ -3,11 +3,11 @@
  "ders": "kimya",
  "konu": "maddenin-halleri",
  "baslik": "Maddenin halleri",
- "ozet": "Katıyı erit, balı akıt, suyu farklı basınçlarda kaynat ve CO₂'yi basınçla sıvılaştır.",
+ "ozet": "Önce dene, sonra adını öğren: katıyı erit, balı akıt, suyu farklı basınçlarda kaynat.",
  "adimlar": [
   {
    "baslik": "Kristal ve amorf",
-   "metin": "Tuz kristal bir katıdır, cam ise amorf. İkisini de ısıtacağız.",
+   "metin": "Tuzda tanecikler düzenli bir örgü kurar, camda ise rastgele dizilir. İkisini de ısıtacağız.",
    "sahne": {
     "tur": "kim4-erime",
     "sure": 5
@@ -31,7 +31,7 @@
      }
     ]
    },
-   "kart": 1
+   "kart": 2
   },
   {
    "baslik": "Viskozite",
@@ -64,18 +64,11 @@
     "ipucu": "Balı ısıtıp yeniden oynat.",
     "tamam": "Isınan balda tanecikler çekimi daha kolay yener ve birbirinin üzerinden hızla kayar: viskozite azalır."
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "T": 30
-    },
-    "not": "30 °C'de bal daha kolay akıyor, ama 10 saniyede bardağın ancak <b>%35</b>'i doldu.",
-    "oynat": true
-   }
+   "kart": 4
   },
   {
    "baslik": "Buhar basıncı",
-   "metin": "Sıcaklığı ve sıvı miktarını değiştir.",
+   "metin": "Kapalı kapta sıvıdan kopan moleküller buhar oluşturur; bu buharın yaptığı basınca buhar basıncı denir. Sıcaklığı ve sıvı miktarını değiştir.",
    "sahne": {
     "tur": "kim4-buhar"
    },
@@ -119,13 +112,7 @@
      }
     ]
    },
-   "kart": 6,
-   "goster": {
-    "deger": {
-     "T": 80
-    },
-    "not": "Sıcaklık 80 °C'ye çıkınca suyun buhar basıncı 55'ten <b>355 mmHg</b>'ye yükseldi."
-   }
+   "kart": 6
   },
   {
    "baslik": "Kaynama laboratuvarı",
@@ -246,7 +233,7 @@
     "soru": "Ter buharlaşırken seni neden serinletir?",
     "secenekler": [
      {
-      "yazi": "Buharlaşma derinden ısı alır",
+      "yazi": "Buharlaşma deriden ısı alır",
       "neden": "Buharlaşma endotermiktir: gereken ısıyı derinden alır, derin soğur. Nem yüksekse ter zor buharlaşır, bu yüzden serinleyemezsin.",
       "dogru": true
      },
@@ -255,12 +242,12 @@
       "neden": "Isı veren değişimler donma, yoğuşma ve kırağılaşmadır. Buharlaşmayı bul."
      },
      {
-      "yazi": "Ter soğuk olduğu için",
+      "yazi": "Ter soğuktur",
       "neden": "Ter vücut sıcaklığındadır. Serinlik hâl değişiminden gelir."
      }
     ]
    },
-   "kart": 10
+   "kart": 11
   },
   {
    "baslik": "Faz diyagramı",
@@ -291,13 +278,7 @@
     },
     "tamam": "−20 °C'de yaklaşık 20 atm'nin üstünde CO₂ sıvılaşır. Üçlü noktası 5,1 atm'de olduğu için 1 atm'de sıvı CO₂ olamaz; kuru buz bu yüzden süblimleşir. Kritik sıcaklığın (31 °C) üstünde ise hiçbir basınç onu sıvılaştıramaz."
    },
-   "kart": 12,
-   "goster": {
-    "deger": {
-     "P": 10
-    },
-    "not": "−20 °C ve 10 atm'de CO₂ hâlâ <b>gaz</b>: nokta, buhar eğrisinin altında kalıyor."
-   }
+   "kart": 12
   }
  ],
  "kapanis": [
@@ -306,5 +287,6 @@
   "<b>Buhar basıncı</b> sıcaklıkla artar ve sıvının cinsine bağlıdır; sıvı miktarına bağlı değildir.",
   "Buhar basıncı dış basınca eşitlenince sıvı kaynar: dağda 100 °C'nin altında, düdüklü tencerede üstünde.",
   "Erime, buharlaşma ve süblimleşme ısı alır; donma, yoğuşma ve kırağılaşma ısı verir."
- ]
+ ],
+ "soruOnce": true
 }

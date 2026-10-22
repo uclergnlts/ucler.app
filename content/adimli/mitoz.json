@@ -3,11 +3,11 @@
  "ders": "biyoloji",
  "konu": "mitoz",
  "baslik": "Mitoz ve eşeysiz üreme",
- "ozet": "Hücre döngüsünde DNA'yı eşle, mitozu evre evre oynat, hücreyi böl ve bakterilerin nasıl çoğaldığını say.",
+ "ozet": "Önce dene, sonra adını öğren: DNA'yı eşle, mitozu oynat, hücreyi böl.",
  "adimlar": [
   {
    "baslik": "Hücre döngüsü",
-   "metin": "Hücre zamanının çoğunu interfazda geçirir. Döngüde ilerle ve DNA miktarının arttığı evrede dur.",
+   "metin": "Hücre zamanının çoğunu iki bölünme arasındaki <b>interfazda</b> geçirir. Döngüde ilerle ve DNA miktarının arttığı evrede dur.",
    "sahne": {
     "tur": "biy4-dongu"
    },
@@ -34,13 +34,7 @@
     },
     "tamam": "DNA <b>S evresinde</b> 2 birimden 4 birime çıkar. Mitozda yeni DNA yapılmaz."
    },
-   "kart": 1,
-   "goster": {
-    "deger": {
-     "k": 25
-    },
-    "not": "G1 evresinde hücre büyüyor, protein ve organel üretiyor; DNA hâlâ <b>2 birim</b>."
-   }
+   "kart": 1
   },
   {
    "baslik": "Kromozom ve kromatit",
@@ -134,7 +128,7 @@
     },
     "tamam": "<b>Metafaz</b>: kromozomlar ekvatorda tek sıra dizildi. İnsanın 2n = 46 kromozomu da bu evrede sayılır."
    },
-   "kart": 3
+   "kart": 4
   },
   {
    "baslik": "Sitoplazmanın bölünmesi",
@@ -162,11 +156,7 @@
     },
     "tamam": "Bitkide Golgi kesecikleri ortada birleşir; <b>hücre plağı</b> içten kenarlara doğru büyüyerek iki hücreyi ayırır."
    },
-   "kart": 6,
-   "goster": {
-    "not": "Hayvan hücresinde esnek zar ortadan içe boğumlanıyor ve iki yavru hücre oluşuyor.",
-    "oynat": true
-   }
+   "kart": 6
   },
   {
    "baslik": "Eşeysiz üreme: bölünme",
@@ -222,7 +212,7 @@
      }
     ]
    },
-   "kart": 11
+   "kart": 12
   }
  ],
  "kapanis": [
@@ -231,5 +221,6 @@
   "Profaz, metafaz, anafaz, telofaz: kromozom sayısı yalnız anafaz ve telofazda iki katıdır. Mitoz sonunda iki tane 2n hücre çıkar.",
   "Sitokinez hayvan hücresinde boğumlanmayla, bitki hücresinde hücre plağıyla olur.",
   "Eşeysiz üremede yavrular atayla özdeştir. Bakterinin ikiye bölünmesi mitoz değildir; aşıda meyve kalemin özelliğini taşır."
- ]
+ ],
+ "soruOnce": true
 }
