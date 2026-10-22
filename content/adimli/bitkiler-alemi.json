@@ -3,7 +3,7 @@
  "ders": "biyoloji",
  "konu": "bitkiler-alemi",
  "baslik": "Bitkiler âlemi ve bitki grupları",
- "ozet": "Anahtarlarla bitki gruplarını bul, suyu ksilemle taşı, döl almaşını oynat ve gülü laleye çevir.",
+ "ozet": "Önce dene, sonra adını öğren: anahtarlarla grup bul, suyu taşı, döl almaşını oynat.",
  "adimlar": [
   {
    "baslik": "Bitki grupları",
@@ -48,13 +48,7 @@
     },
     "tamam": "Çam bir <b>açık tohumludur</b>: iletim demeti ve tohumu var ama çiçeği ve meyvesi yok."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "d": 1
-    },
-    "not": "İletim demeti var ama tohum yok: bu bir <b>eğrelti</b>, tohumsuz damarlı bir bitki."
-   }
+   "kart": 3
   },
   {
    "baslik": "Yosunlar neden küçük?",
@@ -86,7 +80,7 @@
   },
   {
    "baslik": "Döl almaşı",
-   "metin": "Bu eğreltinin yaprak hücreleri <b>2n = 24</b> kromozomlu. Döngüyü oynatmadan önce tahmin et.",
+   "metin": "Eğreltinin yaprak hücrelerinde 24 kromozom var (2n = 24). Yaprak mayozla spor yapar; mayoz kromozom sayısını yarıya indirir. Spor, sayıyı koruyan mitozla kalp biçimli küçük bir bitkiye, protallusa dönüşür.",
    "sahne": {
     "tur": "biy4-dol",
     "sure": 6
@@ -135,21 +129,21 @@
     "soru": "Yosundan tohumlu bitkiye giderken döller nasıl değişir?",
     "secenekler": [
      {
-      "yazi": "Gametofit büyür, sporofit küçülür",
+      "yazi": "Gametofit büyür",
       "neden": "Grubu 3'e getir: tohumlu bitkide gametofit yalnızca polen ve embriyo kesesi kadardır."
      },
      {
-      "yazi": "Sporofit büyür, gametofit küçülür ve ona bağlanır",
+      "yazi": "Sporofit büyür",
       "neden": "Yosunda yeşil örtü gametofit, eğreltide büyük bitki sporofittir; tohumluda gametofit mikroskobik kalır.",
       "dogru": true
      },
      {
-      "yazi": "İkisi de hep aynı boyda kalır",
+      "yazi": "Değişmez",
       "neden": "Çubuklara bak: her grupta biri öbüründen çok daha büyük."
      }
     ]
    },
-   "kart": 6
+   "kart": 7
   },
   {
    "baslik": "Açık ve kapalı tohum",
@@ -177,7 +171,7 @@
      }
     ]
    },
-   "kart": 8
+   "kart": 9
   },
   {
    "baslik": "Tek ve çift çenekli",
@@ -222,13 +216,7 @@
     },
     "tamam": "Lale tek çeneklidir: 6 çiçek yaprağı (3'ün katı), paralel damar ve saçak kök birlikte bunu gösterir."
    },
-   "kart": 12,
-   "goster": {
-    "deger": {
-     "p": 4
-    },
-    "not": "4 çiçek yapraklı, ağsı damarlı, kazık köklü bir bitki de <b>çift çeneklidir</b>: çiçek kısımları 4, 5 ve katlarıdır."
-   }
+   "kart": 12
   }
  ],
  "kapanis": [
@@ -237,5 +225,6 @@
   "Döl almaşında sporofit (2n) mayozla <b>spor</b> üretir; gametler gametofitte (n) mitozla oluşur.",
   "Yosunda gametofit, eğreltide ve tohumlularda sporofit baskındır.",
   "Açık tohumluda tohum pulun üstünde açıkta, kapalı tohumluda meyvenin içindedir. Tek çenekli: 3'ün katları, paralel damar, saçak kök."
- ]
+ ],
+ "soruOnce": true
 }
