@@ -3,7 +3,7 @@
  "ders": "biyoloji",
  "konu": "mayoz",
  "baslik": "Mayoz ve eşeyli üreme",
- "ozet": "Kromozom sayısını kuşaklar boyu sabit tut, tetrat kur, parça değiştir, mayozu oynat ve gamet çeşitlerini say.",
+ "ozet": "Önce dene, sonra adını öğren: tetrat kur, parça değiştir, mayozu oynat, gametleri say.",
  "adimlar": [
   {
    "baslik": "Mayoz neden gerekli?",
@@ -38,13 +38,7 @@
     },
     "tamam": "İnsanda gametler 23, zigot 23 + 23 = 46 kromozomlu olur; sayı kuşaktan kuşağa korunur."
    },
-   "kart": 1,
-   "goster": {
-    "deger": {
-     "kusak": 4
-    },
-    "not": "Mayoz olmasaydı sayı her kuşakta ikiye katlanırdı: 46, 92, 184 ve 4. kuşakta <b>368</b>."
-   }
+   "kart": 1
   },
   {
    "baslik": "Homologlar ve tetrat",
@@ -133,12 +127,12 @@
       "neden": "Anafaz I'de homologlar ayrılır, sentromer bölünmez; kromozom sayısı burada yarıya iner (n)."
      },
      {
-      "yazi": "Tetratın dört kromatiti ayrı ayrı",
+      "yazi": "Dört kromatit ayrı ayrı",
       "neden": "Mayoz I'de kromatitler birbirinden kopmaz: her kutba iki kromatitli kromozomlar gider."
      }
     ]
    },
-   "kart": 4
+   "kart": 5
   },
   {
    "baslik": "Bağımsız dağılım",
@@ -165,13 +159,7 @@
     },
     "tamam": "3 çift: 2³ = 8 gamet çeşidi. İnsanın 23 çiftiyle bu sayı 8 milyonu geçer."
    },
-   "kart": 9,
-   "goster": {
-    "deger": {
-     "n": 2
-    },
-    "not": "2 homolog çift: 2² = <b>4</b> çeşit gamet. Her çiftten anneden ya da babadan gelen kromozom gamete gidebilir."
-   }
+   "kart": 9
   },
   {
    "baslik": "Ayrılmama",
@@ -199,7 +187,7 @@
      }
     ]
    },
-   "kart": 9
+   "kart": 10
   },
   {
    "baslik": "Mitoz ve mayoz",
@@ -247,5 +235,6 @@
   "Profaz I'de homologlar <b>tetrat</b> kurar; kardeş olmayan kromatitler <b>krossing-over</b> ile parça değiştirir.",
   "Çeşitliliğin kaynakları: krossing-over, bağımsız dağılım (2ⁿ gamet) ve rastgele döllenme.",
   "Ayrılmama n+1 ve n−1 gametler verir; örnek: Down sendromu (47 kromozom)."
- ]
+ ],
+ "soruOnce": true
 }

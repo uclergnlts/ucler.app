@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "bagil-hareket",
  "baslik": "Bağıl hareket",
- "ozet": "Gözlemciyi değiştir; arabalardan, kayıktan ve yürüyen merdivenden hızın kime göre olduğunu gör.",
+ "ozet": "Önce dene, sonra adını öğren: gözlemciyi değiştir, arabalardan ve kayıktan hıza bak.",
  "adimlar": [
   {
    "baslik": "Kime göre?",
@@ -42,7 +42,7 @@
      }
     ]
    },
-   "kart": 1
+   "kart": 2
   },
   {
    "baslik": "Bağıl hız",
@@ -70,13 +70,7 @@
     },
     "tamam": "90 − 90 = 0: aynı yönde eşit hızla giden araçlar birbirini durgun görür."
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "b": 30
-    },
-    "not": "B 30 km/h ile doğuya gidiyor: A'ya göre B 30 − 90 = −60 km/h. A'daki sürücü B'yi 60 km/h ile geriye gidiyor görür."
-   }
+   "kart": 4
   },
   {
    "baslik": "Zıt yönde",
@@ -104,13 +98,7 @@
     },
     "tamam": "A'ya göre B: −60 − 90 = −150 km/h, yani batıya 150 km/h: zıt yönde hızlar toplanır."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "b": -30
-    },
-    "not": "B batıya 30 km/h: A'ya göre B −30 − 90 = −120 km/h, yani batıya 120 km/h. Zıt yönde hızlar toplanır."
-   }
+   "kart": 5
   },
   {
    "baslik": "Yürüyen merdiven",
@@ -183,7 +171,7 @@
      }
     ]
    },
-   "kart": 10
+   "kart": 11
   },
   {
    "baslik": "Tam karşıya çık",
@@ -215,13 +203,7 @@
     "ipucu": "Kayığın akıntıya karşı bileşeni akıntıyı (3 m/s) tam dengelemeli.",
     "tamam": "Yaklaşık 37°'de (sin37° = 0,6) akıntıya karşı bileşen 5 · 0,6 = 3 m/s olur ve akıntıyı dengeler. Kıyıya dik bileşen 5 · 0,8 = 4 m/s kalır: 60 / 4 = 15 s."
    },
-   "kart": 12,
-   "goster": {
-    "deger": {
-     "aci": 20
-    },
-    "not": "Burun 20° akıntıya karşı: karşı bileşen 5 · sin20° ≈ 1,7 m/s, akıntının 3 m/s'sini dengelemiyor. Kayık yine yaklaşık 16 m aşağı sürükleniyor."
-   }
+   "kart": 12
   },
   {
    "baslik": "Arabadan yağmur",
@@ -250,13 +232,7 @@
     },
     "tamam": "Arabadakine göre yağmur 8 m/s aşağı ve 6 m/s geriye gelir: √(8² + 6²) = 10 m/s, düşeyle tanθ = 6/8 = 0,75, yani θ ≈ 37°."
    },
-   "kart": 13,
-   "goster": {
-    "deger": {
-     "v": 4
-    },
-    "not": "Araba 4 m/s ile gidiyor: yağmur 8 m/s aşağı ve 4 m/s geriye gelir. √(8² + 4²) ≈ 8,9 m/s, düşeyle yaklaşık 27°."
-   }
+   "kart": 13
   }
  ],
  "kapanis": [
@@ -265,5 +241,6 @@
   "Yere göre hız = araca göre hız + aracın yere göre hızı; hızlar toplanır, süreler toplanmaz.",
   "Nehirde geçiş süresi = genişlik / kıyıya dik hız. Akıntı süreyi değiştirmez, kayığı sürükler.",
   "Araçtan bakınca yağmur, bağıl hızıyla eğik görünür."
- ]
+ ],
+ "soruOnce": true
 }

@@ -3,7 +3,7 @@
  "ders": "kimya",
  "konu": "karisimlar",
  "baslik": "Karışımlar ve ayırma yöntemleri",
- "ozet": "Işıkla koloiti bul, tuzu ısıtarak çöz ve her karışıma uygun ayırma yöntemini seç.",
+ "ozet": "Önce dene, sonra adını öğren: ışıkla koloiti bul, tuzu çöz, ayırma yöntemini seç.",
  "adimlar": [
   {
    "baslik": "Çözelti mi, koloit mi?",
@@ -31,7 +31,7 @@
      }
     ]
    },
-   "kart": 4
+   "kart": 5
   },
   {
    "baslik": "Benzer benzeri çözer",
@@ -59,7 +59,7 @@
      }
     ]
    },
-   "kart": 2
+   "kart": 3
   },
   {
    "baslik": "Çözünürlük",
@@ -90,13 +90,7 @@
     },
     "tamam": "38 °C civarında 60 g KNO₃'ün hepsi çözünür. Çözebileceği kadar madde çözmüş çözeltiye <b>doymuş çözelti</b> denir. Bu çözeltiyi soğutursan çözünürlük düşer ve fazlası kristal olarak ayrılır: <b>kristallenme</b>."
    },
-   "kart": 9,
-   "goster": {
-    "deger": {
-     "T": 30
-    },
-    "not": "30 °C'de 100 g su yalnızca yaklaşık 46 g KNO₃ çözer; 14 g'ı dipte kalır."
-   }
+   "kart": 9
   },
   {
    "baslik": "Ayrımsal kristallendirme",
@@ -166,11 +160,7 @@
     },
     "tamam": "Demir mıknatısa çekilir, kükürt çekilmez. Mıknatısla ayırma bu farka dayanır; hurdalıkta çelik de böyle seçilir. Nikel ve kobalt da mıknatısa çekilir."
    },
-   "kart": 7,
-   "goster": {
-    "not": "Süzme burada işe yaramaz: demir de kükürt de katı tozdur, ikisi de süzgeç kâğıdında kalır.",
-    "oynat": true
-   }
+   "kart": 7
   },
   {
    "baslik": "Ayırma hunisi",
@@ -199,14 +189,7 @@
     },
     "tamam": "Ayırma hunisinde yoğun olan su altta toplanır; musluk açılınca önce su akar, yağ hunide kalır. Bu yöntem yalnızca birbirinde çözünmeyen sıvılar içindir; alkol ile su böyle ayrılmaz."
    },
-   "kart": 8,
-   "goster": {
-    "deger": {
-     "y": 2
-    },
-    "not": "Süzme burada işe yaramaz: iki sıvı da süzgeç kâğıdından geçer. Süzme, sıvıda çözünmeyen katıyı tutar.",
-    "oynat": true
-   }
+   "kart": 8
   },
   {
    "baslik": "Damıtma",
@@ -235,14 +218,7 @@
     },
     "tamam": "Damıtmada su kaynar, buhar soğutucuda yoğuşur ve toplama kabına saf su damlar; tuz balonda kalır. Yalnızca buharlaştırsaydın tuzu alırdın ama su havaya karışırdı. Kaynama noktaları yakın sıvılar için ayrımsal damıtma kullanılır."
    },
-   "kart": 10,
-   "goster": {
-    "deger": {
-     "y": 3
-    },
-    "not": "Tuzlu su tek fazlı bir çözeltidir, katmanlara ayrılmaz; bu yüzden ayırma hunisi işe yaramaz.",
-    "oynat": true
-   }
+   "kart": 10
   }
  ],
  "kapanis": [
@@ -251,5 +227,6 @@
   "<b>Benzer benzeri çözer:</b> polar su tuzu ve şekeri, apolar benzin yağı çözer.",
   "Çözünürlük sıcaklıkla değişir; soğutulan doymuş çözeltide fazlası kristallenir.",
   "Her ayırma yöntemi bir özellik farkına dayanır: manyetiklik, yoğunluk, tanecik boyutu, kaynama noktası."
- ]
+ ],
+ "soruOnce": true
 }

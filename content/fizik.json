@@ -2793,66 +2793,176 @@
     "cards": [
       {
         "h": "Duruyor musun, gidiyor musun?",
-        "p": "Sandalyede oturan sen, odaya göre durgunsun. Ama Dünya, Güneş'in çevresinde yaklaşık 30 km/s ile dolanıyor ve seni de taşıyor. Peki gerçekten duruyor musun, yoksa çok hızlı mı gidiyorsun? Önce bir trene bakalım.",
-        "svg": "<svg viewBox='0 0 320 200'><text x='10' y='22' font-size='12' fill='var(--c3)' font-weight='bold'>odaya göre: durgun</text><text x='10' y='42' font-size='12' fill='var(--c1)' font-weight='bold'>Güneş'e göre: ≈ 30 km/s</text><circle cx='190' cy='110' r='65' fill='none' stroke='var(--line)' stroke-width='1.5' stroke-dasharray='5 4'/><circle cx='190' cy='110' r='18' fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)'/><text x='190' y='146' font-size='11' fill='var(--muted)' text-anchor='middle'>Güneş</text><circle cx='255' cy='110' r='9' fill='var(--c1)'/><text x='272' y='128' font-size='11' fill='var(--muted)'>Dünya</text><line x1='255' y1='99' x2='255' y2='65' stroke='var(--c1)' stroke-width='2.5'/><polygon points='255,58 250.5,68 259.5,68' fill='var(--c1)'/><text x='262' y='72' font-size='12' fill='var(--c1)'>30 km/s</text><text x='160' y='194' font-size='12' fill='var(--muted)' text-anchor='middle'>Hangisi doğru: duruyor musun, gidiyor musun?</text></svg>"
+        "p": "Odaya göre durgunsun; ama Dünya seni Güneş çevresinde yaklaşık 30 km/s ile taşır. Aynı cisim bir gözlemciye göre durur, ötekine göre gider.",
+        "svg": "<svg viewBox='0 0 320 200'><text x='10' y='22' font-size='12' fill='var(--c3)' font-weight='bold'>odaya göre: durgun</text><text x='10' y='42' font-size='12' fill='var(--c1)' font-weight='bold'>Güneş'e göre: ≈ 30 km/s</text><circle cx='190' cy='110' r='65' fill='none' stroke='var(--line)' stroke-width='1.5' stroke-dasharray='5 4'/><circle cx='190' cy='110' r='18' fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)'/><text x='190' y='146' font-size='11' fill='var(--muted)' text-anchor='middle'>Güneş</text><circle cx='255' cy='110' r='9' fill='var(--c1)'/><text x='272' y='128' font-size='11' fill='var(--muted)'>Dünya</text><line x1='255' y1='99' x2='255' y2='65' stroke='var(--c1)' stroke-width='2.5'/><polygon points='255,58 250.5,68 259.5,68' fill='var(--c1)'/><text x='262' y='72' font-size='12' fill='var(--c1)'>30 km/s</text><text x='160' y='194' font-size='12' fill='var(--muted)' text-anchor='middle'>Hangisi doğru: duruyor musun, gidiyor musun?</text></svg>",
+        "once": {
+          "soru": "Sandalyede oturuyorsun. Güneş'e göre hareket ediyor musun?",
+          "secenekler": [
+            {
+              "yazi": "Evet",
+              "neden": "Dünya seni Güneş'in çevresinde yaklaşık 30 km/s ile taşır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Hayır",
+              "neden": "Odaya göre durgunsun; Güneş'e göre Dünya ile birlikte gidiyorsun."
+            },
+            {
+              "yazi": "Yalnız gündüz",
+              "neden": "Dünya'nın yörüngedeki hareketi gece de sürer."
+            }
+          ]
+        }
       },
       {
         "h": "Hareket gözlemciye göredir",
-        "p": "Az önce trende gördüğün gibi, yolcu yanındaki arkadaşına göre durgun, perondaki birine göre ise trenle birlikte 20 m/s hızla gider. Hareketi ölçtüğün gözlemci ve onun eksenleri <b>referans sistemi</b> adını alır. Referansı söylemeden “hızı şu kadar” demek eksik kalır.",
+        "p": "Az önce trende gördüğün gibi yolcu, arkadaşına göre durgun, perondakine göre 20 m/s ile gider. Hareketi ölçen gözlemci ve eksenleri <b>referans sistemidir</b>.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='10' y='22' font-size='12' fill='var(--c3)' font-weight='bold'>arkadaşına göre: durgun</text><text x='10' y='42' font-size='12' fill='var(--c1)' font-weight='bold'>perondakine göre: 20 m/s</text><line x1='10' y1='160' x2='310' y2='160' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='110' y='82' width='190' height='60' rx='8' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><rect x='125' y='92' width='40' height='22' rx='3' fill='var(--panel)' stroke='var(--c1)' stroke-width='1'/><rect x='185' y='92' width='40' height='22' rx='3' fill='var(--panel)' stroke='var(--c1)' stroke-width='1'/><rect x='245' y='92' width='40' height='22' rx='3' fill='var(--panel)' stroke='var(--c1)' stroke-width='1'/><circle cx='145' cy='104' r='6' fill='var(--c3)'/><circle cx='205' cy='104' r='6' fill='var(--c3)'/><circle cx='140' cy='150' r='8' fill='var(--ink)'/><circle cx='270' cy='150' r='8' fill='var(--ink)'/><line x1='160' y1='64' x2='242.8' y2='64' stroke='var(--c1)' stroke-width='2.5' fill='none'/><polygon points='250,64 241,68.5 241,59.5' fill='var(--c1)'/><text x='256' y='68' font-size='12' fill='var(--c1)'>20 m/s</text><circle cx='40' cy='127' r='5' fill='var(--c2)'/><line x1='40' y1='132' x2='40' y2='146' stroke='var(--c2)' stroke-width='2' fill='none'/><line x1='40' y1='146' x2='35' y2='158' stroke='var(--c2)' stroke-width='2' fill='none'/><line x1='40' y1='146' x2='45' y2='158' stroke='var(--c2)' stroke-width='2' fill='none'/><line x1='33' y1='137' x2='47' y2='137' stroke='var(--c2)' stroke-width='2' fill='none'/><text x='10' y='184' font-size='12' fill='var(--c2)'>perondaki gözlemci</text><text x='205' y='184' font-size='12' fill='var(--c3)' text-anchor='middle'>trendeki iki yolcu</text></svg>",
         "key": "“Hareket ediyor mu?” sorusunun cevabı hep “kime göre?” sorusuna bağlıdır."
       },
       {
         "h": "Bağıl hız: gözlemcinin hızını çıkar",
-        "p": "Bir gözlemcinin ölçtüğü hız <b>bağıl hızdır</b>: v<sub>bağıl</sub> = v<sub>cisim</sub> − v<sub>gözlemci</sub>. Bu bir vektör çıkarmasıdır: gözlemcinin hız vektörünü ters çevirip cismin hızına eklersin. Gözlemci yerde duruyorsa bağıl hız, cismin yere göre hızına eşittir.",
+        "p": "Gözlemcinin ölçtüğü hız <b>bağıl hızdır</b>: v<sub>bağıl</sub> = v<sub>cisim</sub> − v<sub>gözlemci</sub>. Gözlemci yerde duruyorsa bağıl hız, cismin yere göre hızıdır.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='38' font-size='17' fill='var(--ink)' text-anchor='middle' font-weight='bold'>v<tspan font-size='11' dy='4'>bağıl</tspan><tspan dy='-4'> = v</tspan><tspan font-size='11' dy='4'>cisim</tspan><tspan dy='-4'> − v</tspan><tspan font-size='11' dy='4'>gözlemci</tspan></text><line x1='40' y1='100' x2='152.8' y2='100' stroke='var(--c1)' stroke-width='3' fill='none'/><polygon points='160,100 151,104.5 151,95.5' fill='var(--c1)'/><text x='100' y='90' font-size='12' fill='var(--c1)' text-anchor='middle'>v cisim</text><line x1='160' y1='100' x2='160' y2='152.8' stroke='var(--c2)' stroke-width='2.5' fill='none' stroke-dasharray='5 4'/><polygon points='160,160 155.5,151 164.5,151' fill='var(--c2)'/><text x='168' y='135' font-size='12' fill='var(--c2)'>−v gözlemci</text><line x1='40' y1='100' x2='153.6' y2='156.8' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='160,160 149.9,160 154,152' fill='var(--c3)'/><text x='92' y='156' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='bold'>v bağıl</text><line x1='280' y1='160' x2='280' y2='107.2' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='280,100 284.5,109 275.5,109' fill='var(--c2)'/><text x='280' y='88' font-size='12' fill='var(--c2)' text-anchor='middle'>v gözlemci</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>gözlemcinin hızını ters çevir, cismin hızına ekle</text></svg>",
-        "key": "Önce gözlemciyi bul: “A'ya göre B” sorusunda A gözlemcidir: vB − vA yazılır."
+        "key": "“A'ya göre B” sorusunda vB − vA yazılır. Vektör çıkarmasıdır: gözlemcinin hızını ters çevirip eklersin.",
+        "once": {
+          "soru": "“A'ya göre B'nin hızı” sorulunca gözlemci hangisidir?",
+          "secenekler": [
+            {
+              "yazi": "A",
+              "neden": "Hızı ölçen A'dır: vB − vA yazılır.",
+              "dogru": true
+            },
+            {
+              "yazi": "B",
+              "neden": "B, hızı ölçülen cisimdir."
+            },
+            {
+              "yazi": "Yer",
+              "neden": "Soru yeri değil, A'yı gözlemci alır."
+            }
+          ]
+        }
       },
       {
         "h": "Aynı yönde giden araçlar",
-        "p": "A 90 km/h, B 60 km/h ile aynı yönde gidiyor. B'deki sürücü A'yı 90 − 60 = <b>30 km/h</b> hızla ileri gidiyor görür. A'daki sürücü ise B'yi 30 km/h hızla <b>geriye</b> gidiyor görür. Büyüklük aynı, yön terstir.",
+        "p": "A 90, B 60 km/h ile aynı yönde. B'deki sürücü A'yı <b>30 km/h</b> ile ileri, A'daki sürücü B'yi 30 km/h ile <b>geri</b> gidiyor görür.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='10' y='28' width='300' height='84' fill='var(--panel)'/><line x1='10' y1='70' x2='310' y2='70' stroke='var(--muted)' stroke-width='1.5' fill='none' stroke-dasharray='5 4'/><rect x='140' y='38' width='50' height='22' rx='5' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><text x='165' y='54' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>A</text><line x1='196' y1='49' x2='242.8' y2='49' stroke='var(--c1)' stroke-width='2.5' fill='none'/><polygon points='250,49 241,53.5 241,44.5' fill='var(--c1)'/><text x='255' y='53' font-size='12' fill='var(--c1)'>90 km/h</text><rect x='50' y='80' width='50' height='22' rx='5' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.5'/><text x='75' y='96' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>B</text><line x1='106' y1='91' x2='137.8' y2='91' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='145,91 136,95.5 136,86.5' fill='var(--c2)'/><text x='150' y='95' font-size='12' fill='var(--c2)'>60 km/h</text><text x='20' y='140' font-size='12' fill='var(--c1)'>B'ye göre A: 90 − 60 = +30 km/h (ileri)</text><text x='20' y='162' font-size='12' fill='var(--c2)'>A'ya göre B: 60 − 90 = −30 km/h (geri)</text><text x='160' y='190' font-size='12' fill='var(--muted)' text-anchor='middle'>büyüklük aynı, yön ters</text></svg>",
         "key": "Aynı yönde bağıl hız, hızların farkıdır; işareti kimin önde gittiğini söyler."
       },
       {
         "h": "Zıt yönde: hızlar toplanır",
-        "p": "A doğuya 80 km/h, B batıya 40 km/h gidiyor. A'ya göre B: −40 − 80 = −120 km/h, yani batıya 120 km/h. Aralarında 30 km varsa birbirlerine 120 km/h ile yaklaşırlar ve 30 / 120 = 0,25 h = 15 dakikada karşılaşırlar.",
+        "p": "A doğuya 80, B batıya 40 km/h gidiyor. A'ya göre B: −40 − 80 = −120, yani batıya <b>120 km/h</b>. Zıt yönde hızlar toplanır.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='10' y='30' width='300' height='60' fill='var(--panel)'/><line x1='10' y1='60' x2='310' y2='60' stroke='var(--muted)' stroke-width='1.5' fill='none' stroke-dasharray='5 4'/><rect x='20' y='36' width='50' height='22' rx='5' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><text x='45' y='52' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>A</text><line x1='76' y1='47' x2='112.8' y2='47' stroke='var(--c1)' stroke-width='2.5' fill='none'/><polygon points='120,47 111,51.5 111,42.5' fill='var(--c1)'/><text x='80' y='26' font-size='12' fill='var(--c1)'>80 km/h</text><rect x='250' y='64' width='50' height='22' rx='5' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.5'/><text x='275' y='80' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>B</text><line x1='244' y1='75' x2='207.2' y2='75' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='200,75 209,70.5 209,79.5' fill='var(--c2)'/><text x='240' y='106' font-size='12' fill='var(--c2)' text-anchor='end'>40 km/h</text><line x1='45' y1='114' x2='275' y2='114' stroke='var(--muted)' stroke-width='1' fill='none'/><line x1='45' y1='108' x2='45' y2='120' stroke='var(--muted)' stroke-width='1' fill='none'/><line x1='275' y1='108' x2='275' y2='120' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='160' y='108' font-size='12' fill='var(--ink)' text-anchor='middle'>30 km</text><text x='20' y='144' font-size='12' fill='var(--ink)'>A'ya göre B: −40 − 80 = −120 km/h</text><text x='20' y='166' font-size='12' fill='var(--c3)' font-weight='bold'>karşılaşma: 30 / 120 = 0,25 h = 15 dk</text><text x='20' y='188' font-size='11' fill='var(--muted)'>(doğu yönü + alındı)</text></svg>",
-        "key": "Karşılaşma ya da yetişme süresi = aradaki uzaklık / bağıl hız"
+        "key": "Karşılaşma süresi = aradaki uzaklık / bağıl hız: 30 km arayla 30 / 120 = 0,25 h = 15 dakika."
       },
       {
         "h": "Farklı doğrultular: vektör çiz",
-        "p": "Kavşakta A doğuya 12 m/s, B kuzeye 5 m/s gidiyor. A'ya göre B: v<sub>B</sub> − v<sub>A</sub>, yani kuzeye 5 ve batıya 12 m/s. Dik bileşenleri Pisagor'la birleştir: √(5² + 12²) = <b>13 m/s</b>. A, B'yi batının biraz kuzeyine doğru gidiyor görür.",
+        "p": "Kavşakta A doğuya 12, B kuzeye 5 m/s gidiyor. A'ya göre B: kuzeye 5, batıya 12 m/s. Pisagor: √(5² + 12²) = <b>13 m/s</b>.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='26' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>A'ya göre B = v<tspan font-size='10' dy='3'>B</tspan><tspan dy='-3'> − v</tspan><tspan font-size='10' dy='3'>A</tspan></text><line x1='30' y1='150' x2='118.8' y2='150' stroke='var(--c1)' stroke-width='3' fill='none'/><polygon points='126,150 117,154.5 117,145.5' fill='var(--c1)'/><text x='78' y='170' font-size='12' fill='var(--c1)' text-anchor='middle'>A: 12 m/s</text><line x1='30' y1='150' x2='30' y2='117.2' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='30,110 34.5,119 25.5,119' fill='var(--c2)'/><text x='36' y='100' font-size='12' fill='var(--c2)'>B: 5 m/s</text><line x1='170' y1='40' x2='170' y2='180' stroke='var(--line)' stroke-width='1' fill='none'/><line x1='290' y1='150' x2='290' y2='117.2' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='290,110 294.5,119 285.5,119' fill='var(--c2)'/><text x='296' y='134' font-size='12' fill='var(--c2)'>v B</text><line x1='290' y1='110' x2='201.2' y2='110' stroke='var(--c1)' stroke-width='2.5' fill='none' stroke-dasharray='5 4'/><polygon points='194,110 203,105.5 203,114.5' fill='var(--c1)'/><text x='242' y='100' font-size='12' fill='var(--c1)' text-anchor='middle'>−v A</text><line x1='290' y1='150' x2='200.6' y2='112.8' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='194,110 204,109.3 200.6,117.6' fill='var(--c3)'/><text x='232' y='150' font-size='12' fill='var(--c3)' font-weight='bold'>13 m/s</text><text x='240' y='188' font-size='12' fill='var(--c3)' text-anchor='middle'>√(5² + 12²) = 13 m/s</text><text x='88' y='188' font-size='12' fill='var(--muted)' text-anchor='middle'>yere göre hızlar</text></svg>",
-        "key": "Farklı doğrultudaki hızlar düz toplanıp çıkarılmaz; vektör üçgenini çiz."
+        "key": "Farklı doğrultudaki hızlar düz toplanıp çıkarılmaz; vektör üçgenini çiz.",
+        "once": {
+          "soru": "Kavşakta A doğuya 12 m/s, B kuzeye 5 m/s gidiyor. A'ya göre B'nin hızının büyüklüğü kaç m/s?",
+          "secenekler": [
+            {
+              "yazi": "13",
+              "neden": "Dik hızlar Pisagor'la birleşir: √(5² + 12²) = 13.",
+              "dogru": true
+            },
+            {
+              "yazi": "17",
+              "neden": "Dik hızlar düz toplanmaz."
+            },
+            {
+              "yazi": "7",
+              "neden": "Dik hızlar düz çıkarılmaz; vektör üçgenini çiz."
+            }
+          ]
+        }
       },
       {
         "h": "Yere göre hız: hızları topla",
-        "p": "Tren yere göre 20 m/s gidiyor. Yolcu trende ileri doğru 2 m/s yürürse yere göre hızı 20 + 2 = <b>22 m/s</b>, geriye yürürse 20 − 2 = <b>18 m/s</b> olur. Genel kural: v<sub>cisim,yer</sub> = v<sub>cisim,araç</sub> + v<sub>araç,yer</sub> (vektörel).",
+        "p": "Tren 20 m/s giderken içinde ileri 2 m/s yürüyen yolcu yere göre <b>22</b>, geri yürüyen <b>18 m/s</b> gider. Kural: v<sub>cisim,yer</sub> = v<sub>cisim,araç</sub> + v<sub>araç,yer</sub>.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='70' y1='40' x2='182.8' y2='40' stroke='var(--c1)' stroke-width='3' fill='none'/><polygon points='190,40 181,44.5 181,35.5' fill='var(--c1)'/><text x='196' y='44' font-size='12' fill='var(--c1)'>tren: 20 m/s</text><rect x='30' y='58' width='260' height='70' rx='8' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.5'/><circle cx='110' cy='89' r='5' fill='var(--c3)'/><line x1='110' y1='94' x2='110' y2='108' stroke='var(--c3)' stroke-width='2' fill='none'/><line x1='110' y1='108' x2='105' y2='120' stroke='var(--c3)' stroke-width='2' fill='none'/><line x1='110' y1='108' x2='115' y2='120' stroke='var(--c3)' stroke-width='2' fill='none'/><line x1='103' y1='99' x2='117' y2='99' stroke='var(--c3)' stroke-width='2' fill='none'/><line x1='124' y1='96' x2='162.8' y2='96' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='170,96 161,100.5 161,91.5' fill='var(--c3)'/><text x='176' y='100' font-size='12' fill='var(--c3)'>yolcu: 2 m/s</text><circle cx='70' cy='136' r='8' fill='var(--ink)'/><circle cx='250' cy='136' r='8' fill='var(--ink)'/><line x1='10' y1='145' x2='310' y2='145' stroke='var(--ink)' stroke-width='2' fill='none'/><text x='20' y='168' font-size='12' fill='var(--c3)' font-weight='bold'>ileri yürürse: 20 + 2 = 22 m/s</text><text x='20' y='190' font-size='12' fill='var(--c2)' font-weight='bold'>geri yürürse: 20 − 2 = 18 m/s</text></svg>",
         "key": "İndisleri zincir gibi bağla: (cisim, araç) + (araç, yer) = (cisim, yer)."
       },
       {
         "h": "Nehir: suya göre, yere göre",
-        "p": "Motor kayığa <b>suya göre</b> hız verir (v<sub>k</sub>); su ise akıntı hızıyla (v<sub>a</sub>) akar. Kayığın yere göre hızı bu ikisinin vektörel toplamıdır. v<sub>k</sub> = 5, v<sub>a</sub> = 3 m/s ise akıntı yönünde 8, akıntıya karşı 2 m/s gider.",
+        "p": "Motor kayığa <b>suya göre</b> hız verir (v<sub>k</sub>); su akıntıyla (v<sub>a</sub>) akar. Yere göre hız ikisinin vektörel toplamıdır.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='10' y='26' font-size='12' fill='var(--c4)'>akıntı v<tspan font-size='10' dy='3'>a</tspan></text><line x1='64' y1='22' x2='96.8' y2='22' stroke='var(--c4)' stroke-width='2' fill='none'/><polygon points='104,22 95,26.5 95,17.5' fill='var(--c4)'/><text x='110' y='26' font-size='12' fill='var(--c4)'>3 m/s</text><line x1='10' y1='40' x2='310' y2='40' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='10' y1='160' x2='310' y2='160' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='10' y='41' width='300' height='118' fill='var(--c1)' fill-opacity='0.1'/><ellipse cx='40' cy='75' rx='20' ry='8' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><line x1='64' y1='75' x2='116.8' y2='75' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='124,75 115,79.5 115,70.5' fill='var(--c3)'/><text x='130' y='79' font-size='12' fill='var(--c3)' font-weight='bold'>akıntı yönü: 5 + 3 = 8 m/s</text><ellipse cx='280' cy='125' rx='20' ry='8' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><line x1='256' y1='125' x2='248.2' y2='125' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='241,125 250,120.5 250,129.5' fill='var(--c2)'/><text x='234' y='129' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='bold'>akıntıya karşı: 5 − 3 = 2 m/s</text><text x='160' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>kıyı (yer): buradan bakan yere göre hızı görür</text></svg>",
-        "key": "Durgun suda ölçülen hız suya göre hızdır; kıyıdaki gözlemci yere göre hızı görür."
+        "key": "vk = 5, va = 3 m/s ise akıntı yönünde 8, akıntıya karşı 2 m/s. Durgun suda ölçülen hız suya göre hızdır.",
+        "once": {
+          "soru": "Kayık suya göre 5 m/s, akıntı 3 m/s. Kayık akıntı yönünde giderken kıyıdaki biri onu kaç m/s ile görür?",
+          "secenekler": [
+            {
+              "yazi": "8",
+              "neden": "Aynı yönde hızlar toplanır: 5 + 3 = 8 m/s.",
+              "dogru": true
+            },
+            {
+              "yazi": "2",
+              "neden": "2 m/s, akıntıya karşı giderken olur."
+            },
+            {
+              "yazi": "5",
+              "neden": "5 m/s suya göre hızdır; kıyıdaki akıntıyı da görür."
+            }
+          ]
+        }
       },
       {
         "h": "Akıntıda gidip dönmek",
-        "p": "Kayık suya göre 5, akıntı 3 m/s; 160 m gidip dönüyor. Akıntı yönünde 8 m/s ile 20 s, karşı yönde 2 m/s ile 80 s: toplam <b>100 s</b>. Durgun suda 320 / 5 = 64 s sürerdi. Akıntı dönüşte, gidişte kazandırdığından fazlasını kaybettirir.",
-        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='10' y='26' font-size='12' fill='var(--muted)'>kayık suya göre 5 m/s</text><text x='310' y='26' font-size='12' fill='var(--c4)' text-anchor='end'>akıntı 3 m/s</text><line x1='240' y1='36' x2='293' y2='36' stroke='var(--c4)' stroke-width='2' fill='none'/><polygon points='300,36 290,40.5 290,31.5' fill='var(--c4)'/><line x1='10' y1='46' x2='310' y2='46' stroke='var(--ink)' stroke-width='2'/><line x1='10' y1='146' x2='310' y2='146' stroke='var(--ink)' stroke-width='2'/><rect x='10' y='47' width='300' height='98' fill='var(--c1)' fill-opacity='0.1'/><circle cx='50' cy='96' r='5' fill='var(--ink)'/><circle cx='270' cy='96' r='5' fill='var(--ink)'/><text x='50' y='120' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>A</text><text x='270' y='120' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>B</text><line x1='62' y1='80' x2='251' y2='80' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='258,80 248,84.5 248,75.5' fill='var(--c3)'/><text x='160' y='72' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>gidiş: 5 + 3 = 8 m/s → 20 s</text><line x1='258' y1='112' x2='69' y2='112' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='62,112 72,107.5 72,116.5' fill='var(--c2)'/><text x='160' y='134' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>dönüş: 5 − 3 = 2 m/s → 80 s</text><line x1='56' y1='158' x2='264' y2='158' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='270,158 262,161.5 262,154.5' fill='var(--ink)'/><polygon points='50,158 58,161.5 58,154.5' fill='var(--ink)'/><text x='160' y='174' font-size='12' fill='var(--ink)' text-anchor='middle'>160 m</text><text x='160' y='194' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>toplam 100 s; durgun suda 64 s</text></svg>"
+        "p": "Kayık suya göre 5, akıntı 3 m/s. 160 m'yi akıntıyla 20 s'de gider, karşı 80 s'de döner: <b>100 s</b>. Durgun suda 64 s sürerdi.",
+        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='10' y='26' font-size='12' fill='var(--muted)'>kayık suya göre 5 m/s</text><text x='310' y='26' font-size='12' fill='var(--c4)' text-anchor='end'>akıntı 3 m/s</text><line x1='240' y1='36' x2='293' y2='36' stroke='var(--c4)' stroke-width='2' fill='none'/><polygon points='300,36 290,40.5 290,31.5' fill='var(--c4)'/><line x1='10' y1='46' x2='310' y2='46' stroke='var(--ink)' stroke-width='2'/><line x1='10' y1='146' x2='310' y2='146' stroke='var(--ink)' stroke-width='2'/><rect x='10' y='47' width='300' height='98' fill='var(--c1)' fill-opacity='0.1'/><circle cx='50' cy='96' r='5' fill='var(--ink)'/><circle cx='270' cy='96' r='5' fill='var(--ink)'/><text x='50' y='120' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>A</text><text x='270' y='120' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>B</text><line x1='62' y1='80' x2='251' y2='80' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='258,80 248,84.5 248,75.5' fill='var(--c3)'/><text x='160' y='72' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>gidiş: 5 + 3 = 8 m/s → 20 s</text><line x1='258' y1='112' x2='69' y2='112' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='62,112 72,107.5 72,116.5' fill='var(--c2)'/><text x='160' y='134' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>dönüş: 5 − 3 = 2 m/s → 80 s</text><line x1='56' y1='158' x2='264' y2='158' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='270,158 262,161.5 262,154.5' fill='var(--ink)'/><polygon points='50,158 58,161.5 58,154.5' fill='var(--ink)'/><text x='160' y='174' font-size='12' fill='var(--ink)' text-anchor='middle'>160 m</text><text x='160' y='194' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>toplam 100 s; durgun suda 64 s</text></svg>",
+        "key": "Akıntı dönüşte, gidişte kazandırdığından fazlasını kaybettirir.",
+        "once": {
+          "soru": "Akıntılı nehirde bir yere gidip dönmek, durgun suya göre nasıl sürer?",
+          "secenekler": [
+            {
+              "yazi": "Daha uzun",
+              "neden": "Akıntıya karşı yavaş gittiğin süre, akıntıyla hızlı gittiğin süreden çok uzundur.",
+              "dogru": true
+            },
+            {
+              "yazi": "Aynı",
+              "neden": "Kazanılan ve kaybedilen hızlar eşit ama süreler eşit değildir."
+            },
+            {
+              "yazi": "Daha kısa",
+              "neden": "Dönüşte kaybedilen süre gidişte kazanılandan fazladır."
+            }
+          ]
+        }
       },
       {
         "h": "Nehirde karşılaşma",
-        "p": "Nehirde birbirine doğru giden iki kayığı akıntı aynı miktarda sürükler; aralarındaki uzaklığın değişimini etkilemez. Suya göre hızlar 4 ve 6 m/s, aradaki uzaklık 200 m ise akıntı ne olursa olsun 200 / (4 + 6) = <b>20 s</b>'de karşılaşırlar. Akıntı yalnızca karşılaşma noktasını kaydırır.",
-        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='26' font-size='12' fill='var(--muted)' text-anchor='middle'>akıntı ikisini de aynı sürükler</text><line x1='10' y1='40' x2='310' y2='40' stroke='var(--ink)' stroke-width='2'/><line x1='10' y1='130' x2='310' y2='130' stroke='var(--ink)' stroke-width='2'/><rect x='10' y='41' width='300' height='88' fill='var(--c1)' fill-opacity='0.1'/><polygon points='35,88 60,88 68,95 60,102 35,102' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><polygon points='285,88 260,88 252,95 260,102 285,102' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><line x1='74' y1='95' x2='121' y2='95' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='128,95 118,99.5 118,90.5' fill='var(--c3)'/><text x='100' y='80' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>4 m/s</text><line x1='246' y1='95' x2='185' y2='95' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='178,95 188,90.5 188,99.5' fill='var(--c2)'/><text x='212' y='80' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>6 m/s</text><line x1='130' y1='118' x2='173' y2='118' stroke='var(--c4)' stroke-width='2' fill='none'/><polygon points='180,118 170,122.5 170,113.5' fill='var(--c4)'/><text x='186' y='122' font-size='11' fill='var(--c4)'>akıntı</text><line x1='58' y1='145' x2='262' y2='145' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='268,145 260,148.5 260,141.5' fill='var(--ink)'/><polygon points='52,145 60,148.5 60,141.5' fill='var(--ink)'/><text x='160' y='162' font-size='12' fill='var(--ink)' text-anchor='middle'>200 m</text><text x='160' y='190' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='bold'>t = 200 / (4 + 6) = 20 s</text></svg>"
+        "p": "Akıntı birbirine yaklaşan iki kayığı aynı miktarda sürükler, aradaki uzaklığı değiştirmez. Suya göre 4 ve 6 m/s, aralık 200 m ise <b>20 s</b>'de karşılaşırlar.",
+        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='26' font-size='12' fill='var(--muted)' text-anchor='middle'>akıntı ikisini de aynı sürükler</text><line x1='10' y1='40' x2='310' y2='40' stroke='var(--ink)' stroke-width='2'/><line x1='10' y1='130' x2='310' y2='130' stroke='var(--ink)' stroke-width='2'/><rect x='10' y='41' width='300' height='88' fill='var(--c1)' fill-opacity='0.1'/><polygon points='35,88 60,88 68,95 60,102 35,102' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><polygon points='285,88 260,88 252,95 260,102 285,102' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><line x1='74' y1='95' x2='121' y2='95' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='128,95 118,99.5 118,90.5' fill='var(--c3)'/><text x='100' y='80' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>4 m/s</text><line x1='246' y1='95' x2='185' y2='95' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='178,95 188,90.5 188,99.5' fill='var(--c2)'/><text x='212' y='80' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>6 m/s</text><line x1='130' y1='118' x2='173' y2='118' stroke='var(--c4)' stroke-width='2' fill='none'/><polygon points='180,118 170,122.5 170,113.5' fill='var(--c4)'/><text x='186' y='122' font-size='11' fill='var(--c4)'>akıntı</text><line x1='58' y1='145' x2='262' y2='145' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='268,145 260,148.5 260,141.5' fill='var(--ink)'/><polygon points='52,145 60,148.5 60,141.5' fill='var(--ink)'/><text x='160' y='162' font-size='12' fill='var(--ink)' text-anchor='middle'>200 m</text><text x='160' y='190' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='bold'>t = 200 / (4 + 6) = 20 s</text></svg>",
+        "key": "200 / (4 + 6) = 20 s, akıntı ne olursa olsun. Akıntı yalnız karşılaşma noktasını kaydırır.",
+        "once": {
+          "soru": "Nehirde birbirine doğru giden iki kayık var. Akıntı hızlanırsa karşılaşma süresi ne olur?",
+          "secenekler": [
+            {
+              "yazi": "Değişmez",
+              "neden": "Akıntı ikisini de aynı miktarda sürükler; aradaki uzaklık aynı hızla kapanır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Kısalır",
+              "neden": "Akıntı bir kayığı hızlandırırken öbürünü aynı miktarda yavaşlatır."
+            },
+            {
+              "yazi": "Uzar",
+              "neden": "Akıntının etkisi iki kayıkta birbirini götürür."
+            }
+          ]
+        }
       },
       {
         "h": "Geçiş süresi ve sürüklenme",
-        "p": "Burnu kıyıya dik tutan kayığın geçiş süresi t = genişlik / v<sub>k</sub>'dır; akıntı kıyıya paralel olduğundan süreyi değiştirmez. Akıntı kayığı x = v<sub>a</sub>·t kadar aşağı sürükler. Kayığın yere göre hızı √(v<sub>k</sub>² + v<sub>a</sub>²) olur.",
+        "p": "Burnu kıyıya dik kayığın geçiş süresi t = genişlik / v<sub>k</sub>; akıntı kıyıya paralel olduğundan süreyi değiştirmez, kayığı x = v<sub>a</sub>·t kadar sürükler.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='10' y='40' width='175' height='130' fill='var(--c1)' fill-opacity='0.1'/><line x1='10' y1='40' x2='185' y2='40' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='10' y1='170' x2='185' y2='170' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='40' y1='170' x2='40' y2='40' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><text x='46' y='112' font-size='12' fill='var(--ink)'>80 m</text><line x1='40' y1='170' x2='137.5' y2='40' stroke='var(--c3)' stroke-width='2' fill='none' stroke-dasharray='5 4'/><circle cx='40' cy='170' r='5' fill='var(--c5)'/><circle cx='137.5' cy='40' r='5' fill='var(--c5)'/><line x1='40' y1='26' x2='137.5' y2='26' stroke='var(--muted)' stroke-width='1' fill='none'/><line x1='40' y1='21' x2='40' y2='31' stroke='var(--muted)' stroke-width='1' fill='none'/><line x1='137.5' y1='21' x2='137.5' y2='31' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='89' y='18' font-size='12' fill='var(--ink)' text-anchor='middle'>sürüklenme 60 m</text><line x1='130' y1='148' x2='164.8' y2='148' stroke='var(--c4)' stroke-width='2' fill='none'/><polygon points='172,148 163,152.5 163,143.5' fill='var(--c4)'/><text x='128' y='140' font-size='12' fill='var(--c4)'>akıntı</text><line x1='225' y1='165' x2='225' y2='120.2' stroke='var(--c1)' stroke-width='3' fill='none'/><polygon points='225,113 229.5,122 220.5,122' fill='var(--c1)'/><text x='218' y='144' font-size='12' fill='var(--c1)' text-anchor='end' font-weight='bold'>4</text><line x1='225' y1='165' x2='256.8' y2='165' stroke='var(--c4)' stroke-width='3' fill='none'/><polygon points='264,165 255,169.5 255,160.5' fill='var(--c4)'/><text x='244' y='186' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='bold'>3</text><line x1='225' y1='113' x2='264' y2='113' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><line x1='264' y1='165' x2='264' y2='113' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><line x1='225' y1='165' x2='259.7' y2='118.8' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='264,113 262.2,122.9 255,117.5' fill='var(--c3)'/><text x='270' y='136' font-size='12' fill='var(--c3)' font-weight='bold'>5 m/s</text><text x='200' y='56' font-size='12' fill='var(--ink)' font-weight='bold'>t = 80/4 = 20 s</text><text x='200' y='78' font-size='12' fill='var(--ink)'>x = 3 · 20 = 60 m</text></svg>",
-        "key": "Süre = genişlik / kıyıya DİK hız bileşeni; akıntı yalnızca sürükler.",
+        "key": "Süre = genişlik / kıyıya dik hız bileşeni. Kayığın yere göre hızı √(vk² + va²).",
         "etk": {
           "tur": "formul",
           "soru": "Kayık burnunu kıyıya dik tutuyor. Genişliği ve akıntıyı değiştir: sürüklenme neye bağlı?",
@@ -2909,27 +3019,63 @@
       },
       {
         "h": "En kısa süre mi, tam karşı mı?",
-        "p": "Nehir 60 m, kayık 5, akıntı 3 m/s. <b>En kısa süre</b> için burnu dik tut: 60/5 = 12 s, ama 36 m sürüklenirsin. <b>Tam karşıya</b> çıkmak için burnu akıntıya karşı eğ; dik bileşen √(5² − 3²) = 4 m/s kalır: 15 s.",
+        "p": "<b>En kısa süre</b> için burnu dik tut ama sürüklenirsin. <b>Tam karşıya</b> çıkmak için burnu akıntıya karşı eğ; dik bileşen küçülür, süre uzar.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='82' y='30' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>en kısa süre</text><text x='237' y='30' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>tam karşıya</text><rect x='10' y='45' width='140' height='110' fill='var(--c1)' fill-opacity='0.1'/><rect x='170' y='45' width='140' height='110' fill='var(--c1)' fill-opacity='0.1'/><line x1='10' y1='45' x2='150' y2='45' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='10' y1='155' x2='150' y2='155' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='170' y1='45' x2='310' y2='45' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='170' y1='155' x2='310' y2='155' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='35' y1='150' x2='98' y2='45' stroke='var(--c3)' stroke-width='1.5' fill='none' stroke-dasharray='5 4'/><line x1='35' y1='150' x2='35' y2='107.2' stroke='var(--c1)' stroke-width='2.5' fill='none'/><polygon points='35,100 39.5,109 30.5,109' fill='var(--c1)'/><line x1='35' y1='150' x2='57.8' y2='150' stroke='var(--c4)' stroke-width='2.5' fill='none'/><polygon points='65,150 56,154.5 56,145.5' fill='var(--c4)'/><line x1='35' y1='150' x2='61.3' y2='106.2' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='65,100 64.2,110 56.5,105.4' fill='var(--c3)'/><text x='82' y='174' font-size='12' fill='var(--ink)' text-anchor='middle'>12 s, 36 m kayar</text><line x1='237' y1='150' x2='237' y2='45' stroke='var(--c3)' stroke-width='1.5' fill='none' stroke-dasharray='5 4'/><line x1='237' y1='150' x2='211.3' y2='115.8' stroke='var(--c1)' stroke-width='2.5' fill='none'/><polygon points='207,110 216,114.5 208.8,119.9' fill='var(--c1)'/><line x1='237' y1='150' x2='259.8' y2='150' stroke='var(--c4)' stroke-width='2.5' fill='none'/><polygon points='267,150 258,154.5 258,145.5' fill='var(--c4)'/><line x1='237' y1='150' x2='237' y2='117.2' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='237,110 241.5,119 232.5,119' fill='var(--c3)'/><text x='237' y='174' font-size='12' fill='var(--ink)' text-anchor='middle'>15 s, kayma yok</text><text x='160' y='194' font-size='11' text-anchor='middle'><tspan fill='var(--c1)'>suya göre 5</tspan><tspan fill='var(--muted)'>  ·  </tspan><tspan fill='var(--c4)'>akıntı 3</tspan><tspan fill='var(--muted)'>  ·  </tspan><tspan fill='var(--c3)'>yere göre (m/s)</tspan></text></svg>",
-        "key": "Tam karşıya çıkış ancak suya göre hız akıntıdan büyükse mümkündür."
+        "key": "60 m, 5 ve 3 m/s: dik tutunca 12 s, 36 m sürüklenme. Tam karşı için dik bileşen √(5² − 3²) = 4 m/s, 15 s. Bu, ancak suya göre hız akıntıdan büyükse mümkün."
       },
       {
         "h": "Yağmur ve araçtaki gözlemci",
-        "p": "Rüzgârsız havada yağmur düşey 6 m/s ile düşüyor, araba 8 m/s ile ilerliyor. Arabadakine göre yağmur: v<sub>yağmur</sub> − v<sub>araba</sub>, yani 6 m/s aşağı ve 8 m/s geriye. Damlalar 10 m/s ile, önden arkaya eğik gelir: tanθ = 8/6, θ ≈ 53°.",
+        "p": "Yağmur 6, araba 8 m/s ise arabadakine göre damla 6 aşağı, 8 geri: <b>10 m/s</b> ile önden eğik gelir. Araç hızlandıkça yağmur daha eğik gelir.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='60' y1='40' x2='44' y2='52' stroke='var(--c1)' stroke-width='1.5' fill='none'/><line x1='100' y1='30' x2='84' y2='42' stroke='var(--c1)' stroke-width='1.5' fill='none'/><line x1='140' y1='44' x2='124' y2='56' stroke='var(--c1)' stroke-width='1.5' fill='none'/><line x1='40' y1='74' x2='24' y2='86' stroke='var(--c1)' stroke-width='1.5' fill='none'/><line x1='80' y1='66' x2='64' y2='78' stroke='var(--c1)' stroke-width='1.5' fill='none'/><line x1='120' y1='78' x2='104' y2='90' stroke='var(--c1)' stroke-width='1.5' fill='none'/><line x1='160' y1='64' x2='144' y2='76' stroke='var(--c1)' stroke-width='1.5' fill='none'/><line x1='150' y1='100' x2='134' y2='112' stroke='var(--c1)' stroke-width='1.5' fill='none'/><rect x='30' y='146' width='110' height='24' rx='6' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.5'/><path d='M50 146 L64 126 L106 126 L122 146' fill='var(--panel)' stroke='var(--c2)' stroke-width='1.5'/><circle cx='55' cy='172' r='8' fill='var(--ink)'/><circle cx='115' cy='172' r='8' fill='var(--ink)'/><line x1='40' y1='112' x2='84.8' y2='112' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='92,112 83,116.5 83,107.5' fill='var(--c2)'/><text x='98' y='116' font-size='12' fill='var(--c2)'>8 m/s</text><text x='20' y='194' font-size='11' fill='var(--muted)'>arabadan görünen damlalar</text><line x1='270' y1='60' x2='270' y2='112.8' stroke='var(--c1)' stroke-width='3' fill='none'/><polygon points='270,120 265.5,111 274.5,111' fill='var(--c1)'/><text x='276' y='94' font-size='12' fill='var(--c1)' font-weight='bold'>6</text><line x1='270' y1='120' x2='197.2' y2='120' stroke='var(--c2)' stroke-width='2.5' fill='none' stroke-dasharray='5 4'/><polygon points='190,120 199,115.5 199,124.5' fill='var(--c2)'/><text x='230' y='138' font-size='12' fill='var(--c2)' text-anchor='middle'>−v araba: 8</text><line x1='270' y1='60' x2='195.6' y2='115.8' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='190,120 200.7,117.6 195.3,110.4' fill='var(--c3)'/><text x='226' y='82' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='bold'>10 m/s</text><text x='240' y='166' font-size='12' fill='var(--ink)' text-anchor='middle'>√(6² + 8²) = 10 m/s</text><text x='240' y='186' font-size='12' fill='var(--ink)' text-anchor='middle'>düşeyle θ ≈ 53°</text></svg>",
-        "key": "Araç hızlandıkça yağmur daha eğik gelir; bu yüzden ön cam daha çok ıslanır."
+        "key": "Yağmurun hızından arabanınki çıkarılır; tanθ = 8/6, θ ≈ 53°. Ön cam bu yüzden daha çok ıslanır."
       },
       {
         "h": "Rüzgâr, duman ve bayrak",
-        "p": "Rüzgârsız havada bisiklet sürerken yüzüne çarpan rüzgâr, havanın sana göre hızıdır: −v. Gemi doğuya 4 m/s, rüzgâr kuzeye 3 m/s ise duman ve bayrak v<sub>rüzgâr</sub> − v<sub>gemi</sub> yönünde uzanır: kuzeye 3, batıya 4, toplam <b>5 m/s</b>.",
+        "p": "Bisikletle giderken yüzüne çarpan rüzgâr, havanın sana göre hızıdır. Gemideki duman ve bayrak da rüzgârın <b>gemiye göre</b> hızı yönünde uzanır.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><circle cx='58' cy='108' r='5' fill='var(--muted)' fill-opacity='0.35'/><circle cx='34' cy='90' r='7' fill='var(--muted)' fill-opacity='0.35'/><circle cx='10' cy='72' r='9' fill='var(--muted)' fill-opacity='0.35'/><ellipse cx='90' cy='140' rx='40' ry='13' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><rect x='84' y='124' width='10' height='12' fill='var(--ink)'/><line x1='134' y1='140' x2='168.8' y2='140' stroke='var(--c1)' stroke-width='2.5' fill='none'/><polygon points='176,140 167,144.5 167,135.5' fill='var(--c1)'/><text x='155' y='162' font-size='12' fill='var(--c1)' text-anchor='middle'>gemi: 4 m/s</text><line x1='200' y1='70' x2='200' y2='37.2' stroke='var(--c4)' stroke-width='2.5' fill='none'/><polygon points='200,30 204.5,39 195.5,39' fill='var(--c4)'/><text x='208' y='54' font-size='12' fill='var(--c4)'>rüzgâr: 3 m/s</text><line x1='290' y1='150' x2='290' y2='109.2' stroke='var(--c4)' stroke-width='3' fill='none'/><polygon points='290,102 294.5,111 285.5,111' fill='var(--c4)'/><text x='296' y='130' font-size='12' fill='var(--c4)' font-weight='bold'>3</text><line x1='290' y1='102' x2='233.2' y2='102' stroke='var(--c1)' stroke-width='2.5' fill='none' stroke-dasharray='5 4'/><polygon points='226,102 235,97.5 235,106.5' fill='var(--c1)'/><text x='258' y='92' font-size='12' fill='var(--c1)' text-anchor='middle'>−v gemi</text><line x1='290' y1='150' x2='231.8' y2='106.3' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='226,102 235.9,103.8 230.5,111' fill='var(--c3)'/><text x='246' y='146' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='bold'>5 m/s</text><text x='10' y='190' font-size='11' fill='var(--muted)'>duman ve bayrak, rüzgârın gemiye göre hızı yönünde</text></svg>",
-        "key": "Bayrak ve duman, rüzgârın yere göre değil, araca göre hızının yönünü gösterir."
+        "key": "Gemi doğuya 4, rüzgâr kuzeye 3 m/s ise duman kuzeye 3, batıya 4, toplam 5 m/s.",
+        "once": {
+          "soru": "Rüzgârsız bir günde bisikletle kuzeye gidiyorsun. Rüzgârı nereden geliyor hissedersin?",
+          "secenekler": [
+            {
+              "yazi": "Önden",
+              "neden": "Sana göre hava güneye akar, yani önden yüzüne çarpar.",
+              "dogru": true
+            },
+            {
+              "yazi": "Arkadan",
+              "neden": "Hava sana göre ters yönde, yani önden gelir."
+            },
+            {
+              "yazi": "Hissetmezsin",
+              "neden": "Hava durgun ama sen hareket ediyorsun; bağıl hız sıfır değil."
+            }
+          ]
+        }
       },
       {
         "h": "Sık yapılan hatalar",
-        "p": "Dört klasik tuzak: “A'ya göre B” sorusunda v<sub>A</sub> − v<sub>B</sub> yazmak; zıt yönlü araçlarda hızları çıkarmak; birbirine dik hızları düz toplamak; nehirde geçiş süresini yere göre hızla ya da akıntıyı katarak hesaplamak. Doğru hâlleri tabloda.",
+        "p": "Dört tuzak: “A'ya göre B”de v<sub>A</sub> − v<sub>B</sub> yazmak; zıt yönde hızları çıkarmak; dik hızları düz toplamak; geçiş süresine akıntıyı katmak.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='10' y='14' width='300' height='176' rx='8' fill='var(--panel)'/><text x='20' y='38' font-size='12' fill='var(--muted)'>durum</text><text x='180' y='38' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>✗ yanlış</text><text x='270' y='38' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>✓ doğru</text><line x1='18' y1='48' x2='302' y2='48' stroke='var(--line)' stroke-width='1.5' fill='none'/><text x='20' y='76' font-size='12' fill='var(--ink)'>A'ya göre B</text><text x='180' y='76' font-size='12' fill='var(--c2)' text-anchor='middle'>v A − v B</text><text x='270' y='76' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>v B − v A</text><line x1='18' y1='89' x2='302' y2='89' stroke='var(--line)' stroke-width='1' fill='none'/><text x='20' y='110' font-size='12' fill='var(--ink)'>zıt: 90 ve 60</text><text x='180' y='110' font-size='12' fill='var(--c2)' text-anchor='middle'>30 km/h</text><text x='270' y='110' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>150 km/h</text><line x1='18' y1='123' x2='302' y2='123' stroke='var(--line)' stroke-width='1' fill='none'/><text x='20' y='144' font-size='12' fill='var(--ink)'>dik: 3 ve 4</text><text x='180' y='144' font-size='12' fill='var(--c2)' text-anchor='middle'>7 m/s</text><text x='270' y='144' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>5 m/s</text><line x1='18' y1='157' x2='302' y2='157' stroke='var(--line)' stroke-width='1' fill='none'/><text x='20' y='178' font-size='12' fill='var(--ink)'>geçiş süresi</text><text x='180' y='178' font-size='12' fill='var(--c2)' text-anchor='middle'>d / v yer</text><text x='270' y='178' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>d / v dik</text></svg>",
-        "key": "Bağıl hızda işaret, yön demektir; sonucu yazınca yönünü de söyle."
+        "key": "Bağıl hızda işaret, yön demektir; sonucu yazınca yönünü de söyle.",
+        "once": {
+          "soru": "Doğuya 30 km/h giden A'ya göre, batıya 50 km/h giden B'nin hızı nedir?",
+          "secenekler": [
+            {
+              "yazi": "Batıya 80 km/h",
+              "neden": "vB − vA = −50 − 30 = −80: batıya 80 km/h.",
+              "dogru": true
+            },
+            {
+              "yazi": "Batıya 20 km/h",
+              "neden": "Zıt yönlü hızlar çıkarılmaz, toplanır."
+            },
+            {
+              "yazi": "Doğuya 80 km/h",
+              "neden": "Büyüklük doğru ama A, B'yi batıya giderken görür."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",
