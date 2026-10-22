@@ -4160,15 +4160,15 @@
     "cards": [
       {
         "h": "Tork: döndürme etkisi",
-        "p": "Kapıyı menteşeye yakın itersen zor açılır, kolundan itersen kolay. Kuvvetin döndürme etkisine <b>tork</b> ya da <b>kuvvet momenti</b> denir: <b>τ = F·d</b>. Burada d, dönme noktasından kuvvetin doğrultusuna olan <b>dik uzaklıktır</b> (kuvvet kolu).",
+        "p": "Kuvvetin döndürme etkisine <b>tork</b> denir: <b>τ = F·d</b>. d, dönme noktasından kuvvetin doğrultusuna <b>dik uzaklıktır</b> (kuvvet kolu). Kol uzarsa az kuvvet yeter.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tork-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><text x='160.0' y='34.0' font-size='22' fill='var(--acc)' text-anchor='middle' font-weight='bold'>τ = F · d</text><rect x='50' y='95' width='230' height='10' rx='2' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='50' cy='100' r='6' fill='var(--ink)'/><line x1='270.0' y1='52.0' x2='270.0' y2='92.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-1)'/><text x='282.0' y='72.0' font-size='14' fill='var(--c2)' text-anchor='start' font-weight='bold'>F</text><text x='50.0' y='126.0' font-size='12' fill='var(--muted)' text-anchor='middle'>menteşe</text><text x='50.0' y='141.0' font-size='11' fill='var(--muted)' text-anchor='middle'>(dönme noktası)</text><line x1='50.0' y1='165.0' x2='270.0' y2='165.0' stroke='var(--muted)' stroke-width='1'/><line x1='50.0' y1='160.0' x2='50.0' y2='170.0' stroke='var(--muted)' stroke-width='1'/><line x1='270.0' y1='160.0' x2='270.0' y2='170.0' stroke='var(--muted)' stroke-width='1'/><text x='160.0' y='185.0' font-size='12' fill='var(--ink)' text-anchor='middle'>d: kuvvet kolu (dik uzaklık)</text><text x='150.0' y='82.0' font-size='11' fill='var(--muted)' text-anchor='middle'>kapı (üstten)</text></svg>",
-        "key": "Aynı tork için kuvvet kolu artınca gereken kuvvet azalır: F = τ / d."
+        "key": "Tork, kuvvet momenti diye de anılır. Aynı tork için kuvvet kolu artınca gereken kuvvet azalır: F = τ / d."
       },
       {
         "h": "Kuvvet kolu: dik uzaklık",
-        "p": "Kuvvet, dönme noktasını uygulama noktasına bağlayan r ile θ açısı yapıyorsa kuvvet kolu d = r·sinθ olur: <b>τ = F·r·sinθ</b>. Yalnızca r'ye dik bileşen <b>F·sinθ</b> döndürür; r boyunca uzanan F·cosθ tork üretmez. sin90° = 1, sin30° = sin150° = 0,5.",
+        "p": "Kuvvet r ile θ açısı yapıyorsa kuvvet kolu d = r·sinθ olur: <b>τ = F·r·sinθ</b>. r'ye dik bileşen döndürür; sin90° = 1, sin0° = 0.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tork-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><line x1='79.8' y1='47.5' x2='240.0' y2='140.0' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='4 3'/><rect x='76' y='136' width='168' height='8' rx='2' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><circle cx='80' cy='140' r='5' fill='var(--ink)'/><line x1='240.0' y1='140.0' x2='293.7' y2='171.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-2)'/><text x='297.7' y='163.0' font-size='14' fill='var(--c2)' text-anchor='start' font-weight='bold'>F</text><line x1='80.0' y1='140.0' x2='120.0' y2='70.7' stroke='var(--c3)' stroke-width='2.5'/><path d='M116.0,77.6 L122.9,81.6 L126.9,74.7' fill='none' stroke='var(--c3)' stroke-width='1.2'/><text x='86.0' y='104.0' font-size='14' fill='var(--c3)' text-anchor='end' font-weight='bold'>d</text><text x='80.0' y='162.0' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>O</text><text x='160.0' y='162.0' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>r</text><path d='M216.0,140.0 A24,24 0 0,1 219.2,128.0' fill='none' stroke='var(--c4)' stroke-width='1.5'/><text x='204.0' y='133.0' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='bold'>θ</text><text x='232.0' y='40.0' font-size='15' fill='var(--c3)' text-anchor='middle' font-weight='bold'>d = r · sinθ</text><text x='232.0' y='60.0' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='bold'>τ = F · r · sinθ</text><text x='160.0' y='192.0' font-size='12' fill='var(--muted)' text-anchor='middle'>doğrultu O’dan geçerse d = 0, τ = 0</text></svg>",
-        "key": "sin0° = sin180° = 0: doğrultusu dönme noktasından geçen kuvvet döndürmez.",
+        "key": "sin30° = sin150° = 0,5. r boyunca uzanan F·cosθ bileşeni tork üretmez; doğrultusu dönme noktasından geçen kuvvet döndürmez.",
         "etk": {
           "tur": "formul",
           "soru": "Kuvveti, uzaklığı ve açıyı değiştir. θ = 0° ya da 180° olunca tork ne olur?",
@@ -4218,63 +4218,153 @@
       },
       {
         "h": "Yön ve işaret",
-        "p": "Tork cismi <b>saat yönünde</b> ya da <b>saat yönünün tersine</b> döndürmeye çalışır. Problemde bir yönü + seç (çoğu kitapta saat tersi +), diğerine − ver. Net tork, işaretli torkların toplamıdır; sonucun işareti dönme yönünü söyler.",
+        "p": "Tork cismi <b>saat yönünde</b> ya da <b>tersine</b> döndürür. Bir yönü + seç, ötekine − ver. Net tork, işaretli torkların toplamıdır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tork-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='tork-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><text x='160.0' y='22.0' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='bold'>Net tork = 60 − 40 = 20 N·m (saat tersi)</text><rect x='40' y='106' width='240' height='8' rx='2' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><polygon points='160,114 148,134 172,134' fill='var(--muted)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1'/><line x1='50.0' y1='46.0' x2='50.0' y2='104.0' stroke='var(--c1)' stroke-width='3' marker-end='url(#tork-6)'/><text x='60.0' y='64.0' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='bold'>30 N</text><line x1='270.0' y1='62.0' x2='270.0' y2='104.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-7)'/><text x='260.0' y='78.0' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='bold'>20 N</text><line x1='50.0' y1='150.0' x2='160.0' y2='150.0' stroke='var(--muted)' stroke-width='1'/><line x1='50.0' y1='145.0' x2='50.0' y2='155.0' stroke='var(--muted)' stroke-width='1'/><line x1='160.0' y1='145.0' x2='160.0' y2='155.0' stroke='var(--muted)' stroke-width='1'/><line x1='160.0' y1='150.0' x2='270.0' y2='150.0' stroke='var(--muted)' stroke-width='1'/><line x1='160.0' y1='145.0' x2='160.0' y2='155.0' stroke='var(--muted)' stroke-width='1'/><line x1='270.0' y1='145.0' x2='270.0' y2='155.0' stroke='var(--muted)' stroke-width='1'/><text x='105.0' y='146.0' font-size='12' fill='var(--muted)' text-anchor='middle'>2 m</text><text x='215.0' y='146.0' font-size='12' fill='var(--muted)' text-anchor='middle'>2 m</text><text x='80.0' y='172.0' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>sol: 30·2 = 60 N·m</text><text x='80.0' y='188.0' font-size='11' fill='var(--c1)' text-anchor='middle'>saat tersi (+)</text><text x='240.0' y='172.0' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>sağ: 20·2 = 40 N·m</text><text x='240.0' y='188.0' font-size='11' fill='var(--c2)' text-anchor='middle'>saat yönü (−)</text></svg>",
-        "key": "Torkları toplamadan önce yönlerini belirle; zıt yönlüler birbirinden çıkar."
+        "key": "Çoğu kitapta saat tersi + alınır. Torkları toplamadan önce yönlerini belirle; zıt yönlüler birbirinden çıkar.",
+        "once": {
+          "soru": "Bir çubuğa saat yönünde 30 N·m, tersine 20 N·m tork etki ediyor. Net tork kaç N·m?",
+          "secenekler": [
+            {
+              "yazi": "10",
+              "neden": "Zıt yönlü torklar birbirinden çıkarılır: 30 − 20 = 10 N·m, saat yönünde.",
+              "dogru": true
+            },
+            {
+              "yazi": "50",
+              "neden": "Zıt yönlü torklar toplanmaz, birbirinden çıkarılır."
+            },
+            {
+              "yazi": "0",
+              "neden": "Torklar eşit olsaydı sıfır olurdu; 30 ile 20 eşit değil."
+            }
+          ]
+        }
       },
       {
         "h": "Birim: N·m, ama joule değil",
-        "p": "Torkun SI birimi <b>newton·metre (N·m)</b>dir. İşin birimi joule da N·m'dir ama nicelikler farklıdır: işte kuvvet ile <b>aynı doğrultudaki</b> yerdeğiştirme çarpılır, torkta kuvvet ile ona <b>dik</b> uzaklık. Bu yüzden tork joule ile yazılmaz.",
+        "p": "Torkun birimi <b>N·m</b>'dir. Joule da N·m'dir ama işte kuvvet <b>aynı doğrultudaki</b> yolla, torkta <b>dik</b> uzaklıkla çarpılır. Tork joule ile yazılmaz.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='26' width='300' height='160' rx='6' fill='var(--panel)' stroke='var(--line)'/><text x='172.0' y='48.0' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='bold'>Tork</text><text x='265.0' y='48.0' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='bold'>İş</text><line x1='10.0' y1='58.0' x2='310.0' y2='58.0' stroke='var(--line)' stroke-width='1'/><text x='20.0' y='82.0' font-size='12' fill='var(--muted)' text-anchor='start'>formül</text><text x='172.0' y='82.0' font-size='12' fill='var(--ink)' text-anchor='middle'>τ = F · d</text><text x='265.0' y='82.0' font-size='12' fill='var(--ink)' text-anchor='middle'>W = F · Δx</text><line x1='16.0' y1='93.0' x2='304.0' y2='93.0' stroke='var(--line)' stroke-width='1'/><text x='20.0' y='112.0' font-size='12' fill='var(--muted)' text-anchor='start'>F ile uzunluk</text><text x='172.0' y='112.0' font-size='12' fill='var(--ink)' text-anchor='middle'>birbirine dik</text><text x='265.0' y='112.0' font-size='12' fill='var(--ink)' text-anchor='middle'>aynı doğrultu</text><line x1='16.0' y1='123.0' x2='304.0' y2='123.0' stroke='var(--line)' stroke-width='1'/><text x='20.0' y='142.0' font-size='12' fill='var(--muted)' text-anchor='start'>nicelik</text><text x='172.0' y='142.0' font-size='12' fill='var(--ink)' text-anchor='middle'>vektör (yönlü)</text><text x='265.0' y='142.0' font-size='12' fill='var(--ink)' text-anchor='middle'>skaler</text><line x1='16.0' y1='153.0' x2='304.0' y2='153.0' stroke='var(--line)' stroke-width='1'/><text x='20.0' y='172.0' font-size='12' fill='var(--muted)' text-anchor='start'>birim</text><text x='172.0' y='172.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>N·m</text><text x='265.0' y='172.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>J (= N·m)</text><line x1='122.0' y1='32.0' x2='122.0' y2='180.0' stroke='var(--line)' stroke-width='1'/><line x1='222.0' y1='32.0' x2='222.0' y2='180.0' stroke='var(--line)' stroke-width='1'/></svg>",
-        "key": "Tork N·m ile verilir; J yalnızca iş ve enerji içindir."
+        "key": "Tork N·m ile verilir; J yalnızca iş ve enerji içindir.",
+        "once": {
+          "soru": "Torkun birimi hangisidir?",
+          "secenekler": [
+            {
+              "yazi": "N·m",
+              "neden": "Tork kuvvet ile dik uzaklığın çarpımıdır: newton × metre.",
+              "dogru": true
+            },
+            {
+              "yazi": "Joule",
+              "neden": "Joule iş ve enerji içindir; tork N·m ile yazılır."
+            },
+            {
+              "yazi": "Newton",
+              "neden": "Newton kuvvetin birimidir; torkta uzaklıkla çarpılır."
+            }
+          ]
+        }
       },
       {
         "h": "Denge: ΣF = 0 ve Στ = 0",
-        "p": "Duran bir cismin dengede kalması için iki şart birlikte gerekir: <b>ΣF = 0</b> (öteleme dengesi) ve <b>Στ = 0</b> (dönme dengesi). Eşit, zıt yönlü ama aynı doğrultuda olmayan iki kuvvet (<b>kuvvet çifti</b>) ΣF = 0 sağlar, yine de cismi döndürür.",
+        "p": "Denge için iki şart gerekir: <b>ΣF = 0</b> (öteleme) ve <b>Στ = 0</b> (dönme). Eşit, zıt ama ayrı doğrultulu iki kuvvet (<b>kuvvet çifti</b>) cismi döndürür.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tork-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker><marker id='tork-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker><marker id='tork-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker></defs><text x='160.0' y='22.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>denge = öteleme dengesi + dönme dengesi</text><rect x='12' y='34' width='143' height='162' rx='6' fill='var(--c2)' fill-opacity='0.06' stroke='var(--line)'/><rect x='165' y='34' width='143' height='162' rx='6' fill='var(--c3)' fill-opacity='0.06' stroke='var(--line)'/><rect x='30' y='96' width='106' height='8' rx='2' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><line x1='36.0' y1='96.0' x2='36.0' y2='52.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-10)'/><text x='46.0' y='62.0' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='bold'>F</text><line x1='130.0' y1='104.0' x2='130.0' y2='148.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-10)'/><text x='120.0' y='142.0' font-size='13' fill='var(--c2)' text-anchor='end' font-weight='bold'>F</text><text x='83.0' y='168.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>ΣF = 0, Στ ≠ 0</text><text x='83.0' y='186.0' font-size='11' fill='var(--c2)' text-anchor='middle'>kuvvet çifti: döner</text><rect x='183' y='96' width='106' height='8' rx='2' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><line x1='236.0' y1='140.0' x2='236.0' y2='106.0' stroke='var(--c3)' stroke-width='3' marker-end='url(#tork-11)'/><text x='244.0' y='134.0' font-size='13' fill='var(--c3)' text-anchor='start' font-weight='bold'>2F</text><line x1='188.0' y1='56.0' x2='188.0' y2='94.0' stroke='var(--c1)' stroke-width='3' marker-end='url(#tork-12)'/><text x='196.0' y='64.0' font-size='13' fill='var(--c1)' text-anchor='start' font-weight='bold'>F</text><line x1='284.0' y1='56.0' x2='284.0' y2='94.0' stroke='var(--c1)' stroke-width='3' marker-end='url(#tork-12)'/><text x='276.0' y='64.0' font-size='13' fill='var(--c1)' text-anchor='end' font-weight='bold'>F</text><text x='236.0' y='168.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>ΣF = 0, Στ = 0</text><text x='236.0' y='186.0' font-size='11' fill='var(--c3)' text-anchor='middle'>dengede</text></svg>",
         "key": "Dengede Στ = 0 her noktaya göre sağlanır; dönme noktasını işine gelen yerde seç."
       },
       {
         "h": "Çubuk ve destek tepkileri",
-        "p": "4 m'lik, 40 N'luk düzgün çubuk iki ucundan destekli; 60 N'luk yük A ucundan 1 m uzakta. Çubuğun ağırlığı orta noktasından etki eder. A'ya göre: N<sub>2</sub>·4 = 40·2 + 60·1, N<sub>2</sub> = 35 N. ΣF = 0'dan N<sub>1</sub> = 65 N.",
+        "p": "Dönme noktasını bir desteğin üstüne koy; o desteğin torku sıfır olur. Düzgün çubuğun ağırlığı <b>orta noktasından</b> etki eder. Öbür desteği ΣF = 0 verir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tork-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker><marker id='tork-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><line x1='40.0' y1='40.0' x2='280.0' y2='40.0' stroke='var(--muted)' stroke-width='1'/><line x1='40.0' y1='35.0' x2='40.0' y2='45.0' stroke='var(--muted)' stroke-width='1'/><line x1='280.0' y1='35.0' x2='280.0' y2='45.0' stroke='var(--muted)' stroke-width='1'/><text x='160.0' y='34.0' font-size='12' fill='var(--muted)' text-anchor='middle'>4 m</text><line x1='40.0' y1='72.0' x2='100.0' y2='72.0' stroke='var(--muted)' stroke-width='1'/><line x1='40.0' y1='67.0' x2='40.0' y2='77.0' stroke='var(--muted)' stroke-width='1'/><line x1='100.0' y1='67.0' x2='100.0' y2='77.0' stroke='var(--muted)' stroke-width='1'/><text x='70.0' y='66.0' font-size='12' fill='var(--muted)' text-anchor='middle'>1 m</text><rect x='40' y='96' width='240' height='8' rx='2' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><text x='34.0' y='104.0' font-size='13' fill='var(--ink)' text-anchor='end' font-weight='bold'>A</text><text x='286.0' y='104.0' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='bold'>B</text><line x1='44.0' y1='150.0' x2='44.0' y2='106.0' stroke='var(--c3)' stroke-width='3' marker-end='url(#tork-13)'/><text x='30.0' y='166.0' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='bold'>N₁ = 65 N</text><line x1='276.0' y1='150.0' x2='276.0' y2='106.0' stroke='var(--c3)' stroke-width='3' marker-end='url(#tork-13)'/><text x='290.0' y='166.0' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='bold'>N₂ = 35 N</text><line x1='100.0' y1='104.0' x2='100.0' y2='150.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-14)'/><text x='108.0' y='146.0' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='bold'>60 N</text><circle cx='160' cy='100' r='3' fill='var(--c2)'/><line x1='160.0' y1='104.0' x2='160.0' y2='136.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-14)'/><text x='168.0' y='132.0' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='bold'>40 N</text><text x='160.0' y='190.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>A’ya göre: N₂·4 = 40·2 + 60·1</text></svg>",
-        "key": "Dönme noktasını bilinmeyen bir kuvvetin üstüne koy; o kuvvetin torku sıfır olur."
+        "key": "Örnek: 4 m'lik 40 N çubukta 60 N yük A'dan 1 m uzakta. A'ya göre N₂·4 = 40·2 + 60·1, N₂ = 35 N; ΣF = 0'dan N₁ = 65 N."
       },
       {
         "h": "İp gerilmesi",
-        "p": "Duvara menteşeli, 100 N'luk düzgün yatay çubuğun ucu, çubukla 30° açı yapan iple tutuluyor. Menteşeye göre tork al: T·L·sin30° = 100·L/2, buradan <b>T = 100 N</b>. Menteşenin uyguladığı kuvveti bilmesen de olur, çünkü bu noktaya göre torku sıfırdır.",
+        "p": "Menteşeli çubukta ip gerilmesini bulmak için <b>menteşeye göre</b> tork al: menteşe kuvvetinin torku sıfırdır. İpin torku T·L·sinα, çubuğunki G·L/2'dir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tork-15' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='tork-16' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><rect x='26' y='4' width='14' height='192' fill='var(--muted)' fill-opacity='0.25'/><line x1='40.0' y1='4.0' x2='40.0' y2='196.0' stroke='var(--ink)' stroke-width='1.5'/><rect x='40' y='136' width='220' height='8' rx='2' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><line x1='260.0' y1='140.0' x2='40.0' y2='13.0' stroke='var(--ink)' stroke-width='1.5'/><circle cx='40' cy='140' r='5' fill='var(--ink)'/><line x1='260.0' y1='140.0' x2='206.3' y2='109.0' stroke='var(--c1)' stroke-width='3' marker-end='url(#tork-15)'/><text x='226.0' y='100.0' font-size='14' fill='var(--c1)' text-anchor='start' font-weight='bold'>T</text><path d='M236,140 A24,24 0 0,1 239.2,128.0' fill='none' stroke='var(--c4)' stroke-width='1.5'/><text x='214.0' y='135.0' font-size='11' fill='var(--c4)' text-anchor='end' font-weight='bold'>30°</text><circle cx='150' cy='140' r='3' fill='var(--c2)'/><line x1='150.0' y1='144.0' x2='150.0' y2='180.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-16)'/><text x='158.0' y='176.0' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='bold'>G = 100 N</text><text x='48.0' y='162.0' font-size='11' fill='var(--muted)' text-anchor='start'>menteşe</text><text x='232.0' y='26.0' font-size='12' fill='var(--muted)' text-anchor='middle'>menteşeye göre:</text><text x='232.0' y='44.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>T·L·sin30° = G·L/2</text><text x='232.0' y='62.0' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='bold'>T = G = 100 N</text></svg>",
-        "key": "Gerilme, ipin çubukla yaptığı açıya bağlıdır: açı küçüldükçe T büyür."
+        "key": "Gerilme, ipin çubukla yaptığı açıya bağlıdır: açı küçüldükçe T büyür.",
+        "once": {
+          "soru": "Duvara menteşeli 100 N'luk yatay çubuğun ucu, çubukla 30° açı yapan iple tutuluyor. İpteki gerilme kaç N?",
+          "secenekler": [
+            {
+              "yazi": "100",
+              "neden": "Menteşeye göre: T·L·sin30° = 100·L/2, buradan T = 100 N.",
+              "dogru": true
+            },
+            {
+              "yazi": "50",
+              "neden": "Ağırlık ortadan etki eder ama ip açılı çeker; sin30° = 0,5 hesaba girer."
+            },
+            {
+              "yazi": "200",
+              "neden": "Çubuğun ağırlığı ucundan değil, ortasından etki eder."
+            }
+          ]
+        }
       },
       {
         "h": "Kütle merkezi ve ağırlık merkezi",
-        "p": "<b>Kütle merkezi</b>, cismin tüm kütlesi oradaymış gibi davrandığı noktadır; ağırlığın etki ettiği nokta ise <b>ağırlık merkezidir</b>. Düzgün çekim alanında ikisi aynı noktadır. Türdeş, simetrik cisimlerde bu nokta geometrik merkezdedir; halkadaki gibi boşlukta bile olabilir.",
+        "p": "<b>Kütle merkezi</b>, cismin tüm kütlesi oradaymış gibi davrandığı noktadır. Düzgün çekimde ağırlık da oradan etki eder: <b>ağırlık merkezi</b>. Halkada bu nokta boşluktadır.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='20' y='56' width='70' height='8' rx='2' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.2'/><circle cx='55' cy='60' r='4' fill='var(--c2)'/><text x='55.0' y='100.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>çubuk</text><text x='55.0' y='114.0' font-size='11' fill='var(--muted)' text-anchor='middle'>orta nokta</text><rect x='127' y='32' width='66' height='52' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.2'/><line x1='127.0' y1='32.0' x2='193.0' y2='84.0' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><line x1='193.0' y1='32.0' x2='127.0' y2='84.0' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><circle cx='160' cy='58' r='4' fill='var(--c2)'/><text x='160.0' y='100.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>dikdörtgen</text><text x='160.0' y='114.0' font-size='11' fill='var(--muted)' text-anchor='middle'>köşegenler kesişimi</text><polygon points='235,84 295,84 265,32' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.2'/><line x1='235.0' y1='84.0' x2='280.0' y2='58.0' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><line x1='295.0' y1='84.0' x2='250.0' y2='58.0' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><line x1='265.0' y1='32.0' x2='265.0' y2='84.0' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><circle cx='265' cy='66.7' r='4' fill='var(--c2)'/><text x='265.0' y='100.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>üçgen</text><text x='265.0' y='114.0' font-size='11' fill='var(--muted)' text-anchor='middle'>kenarortaylar</text><circle cx='100' cy='150' r='22' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.2'/><circle cx='100' cy='150' r='4' fill='var(--c2)'/><text x='100.0' y='190.0' font-size='12' fill='var(--ink)' text-anchor='middle'>disk: merkez</text><circle cx='220' cy='150' r='20' fill='none' stroke='var(--c1)' stroke-width='5' stroke-opacity='0.6'/><circle cx='220' cy='150' r='4' fill='var(--c2)'/><text x='220.0' y='190.0' font-size='12' fill='var(--ink)' text-anchor='middle'>halka: merkez (boşlukta)</text></svg>",
-        "key": "Türdeş cisimde kütle merkezi simetri ekseni ya da merkezi üzerindedir."
+        "key": "Türdeş cisimde kütle merkezi simetri ekseni ya da merkezi üzerindedir.",
+        "once": {
+          "soru": "Türdeş bir halkanın kütle merkezi nerededir?",
+          "secenekler": [
+            {
+              "yazi": "Ortadaki boşlukta",
+              "neden": "Halka simetriktir; kütle merkezi geometrik merkezdedir, orada madde olmasa da.",
+              "dogru": true
+            },
+            {
+              "yazi": "Halkanın üstünde",
+              "neden": "Halkanın her noktası simetrik; hiçbir nokta öne çıkmaz."
+            },
+            {
+              "yazi": "Kütle merkezi yoktur",
+              "neden": "Her cismin bir kütle merkezi vardır."
+            }
+          ]
+        }
       },
       {
         "h": "Parçalı cisimlerin kütle merkezi",
-        "p": "Parçaların kütle merkezleriyle: <b>x<sub>KM</sub> = Σm·x / Σm</b>. Çubuktaki 3 kg (x = 0) ve 1 kg (x = 4 m) için x<sub>KM</sub> = 4 / 4 = 1 m. Parçası çıkarılmış levhada çıkarılan parça <b>negatif kütle</b> gibi hesaba girer.",
+        "p": "Parçalı cisimde: <b>x<sub>KM</sub> = Σm·x / Σm</b>. Kütle merkezi ağır parçaya daha yakındır. Çıkarılmış parça <b>negatif kütle</b> gibi hesaba girer.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160.0' y='32.0' font-size='16' fill='var(--acc)' text-anchor='middle' font-weight='bold'>x<tspan font-size='11' dy='3'>KM</tspan><tspan dy='-3'> = Σm·x / Σm</tspan></text><line x1='40.0' y1='110.0' x2='280.0' y2='110.0' stroke='var(--ink)' stroke-width='2'/><line x1='40.0' y1='104.0' x2='40.0' y2='116.0' stroke='var(--muted)' stroke-width='1'/><text x='40.0' y='138.0' font-size='11' fill='var(--muted)' text-anchor='middle'>0</text><line x1='100.0' y1='104.0' x2='100.0' y2='116.0' stroke='var(--muted)' stroke-width='1'/><text x='100.0' y='138.0' font-size='11' fill='var(--muted)' text-anchor='middle'>1</text><line x1='160.0' y1='104.0' x2='160.0' y2='116.0' stroke='var(--muted)' stroke-width='1'/><text x='160.0' y='138.0' font-size='11' fill='var(--muted)' text-anchor='middle'>2</text><line x1='220.0' y1='104.0' x2='220.0' y2='116.0' stroke='var(--muted)' stroke-width='1'/><text x='220.0' y='138.0' font-size='11' fill='var(--muted)' text-anchor='middle'>3</text><line x1='280.0' y1='104.0' x2='280.0' y2='116.0' stroke='var(--muted)' stroke-width='1'/><text x='280.0' y='138.0' font-size='11' fill='var(--muted)' text-anchor='middle'>4 m</text><circle cx='40' cy='110' r='17' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.5'/><circle cx='280' cy='110' r='11' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)' stroke-width='1.5'/><text x='40.0' y='82.0' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>3 kg</text><text x='280.0' y='88.0' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='bold'>1 kg</text><polygon points='100,114 92,128 108,128' fill='var(--c2)'/><circle cx='100' cy='110' r='4' fill='var(--c2)'/><text x='100.0' y='92.0' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>KM</text><text x='160.0' y='170.0' font-size='13' fill='var(--ink)' text-anchor='middle'>x = (3·0 + 1·4) / (3 + 1)</text><text x='160.0' y='190.0' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='bold'>x = 4 / 4 = 1 m</text></svg>",
-        "key": "İki parçalı sistemde kütle merkezi ağır parçaya daha yakındır."
+        "key": "Örnek: 3 kg x = 0'da, 1 kg x = 4 m'de ise xKM = (0 + 4) / 4 = 1 m."
       },
       {
         "h": "Destek yüzeyi ve devrilme",
-        "p": "Ağırlık merkezinden inen düşey doğru <b>destek yüzeyinin</b> içine düşüyorsa cisim devrilmez; dışına çıkarsa ağırlığın torku cismi devirir. Ağırlık merkezi alçak, tabanı geniş cisim daha zor devrilir: yarış arabalarının basık olması bundandır.",
+        "p": "Ağırlık merkezinden inen düşey doğru <b>destek yüzeyinin</b> içindeyse cisim devrilmez, dışına çıkarsa devrilir. Alçak ağırlık merkezi ve geniş taban devrilmeyi zorlaştırır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tork-17' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><line x1='10.0' y1='150.0' x2='310.0' y2='150.0' stroke='var(--ink)' stroke-width='2'/><g transform='rotate(15,100,150)'><rect x='60' y='70' width='40' height='80' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/></g><circle cx='91.0' cy='106.2' r='4' fill='var(--ink)'/><line x1='91.0' y1='106.2' x2='91.0' y2='150.0' stroke='var(--ink)' stroke-width='1.5' stroke-dasharray='4 3' marker-end='url(#tork-17)'/><circle cx='100' cy='150' r='3' fill='var(--c4)'/><g transform='rotate(40,240,150)'><rect x='200' y='70' width='40' height='80' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/></g><circle cx='250.4' cy='106.5' r='4' fill='var(--ink)'/><line x1='250.4' y1='106.5' x2='250.4' y2='150.0' stroke='var(--ink)' stroke-width='1.5' stroke-dasharray='4 3' marker-end='url(#tork-17)'/><circle cx='240' cy='150' r='3' fill='var(--c4)'/><text x='80.0' y='172.0' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>düşey doğru tabanda</text><text x='80.0' y='188.0' font-size='11' fill='var(--c3)' text-anchor='middle'>geri döner</text><text x='235.0' y='172.0' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>düşey doğru dışarıda</text><text x='235.0' y='188.0' font-size='11' fill='var(--c2)' text-anchor='middle'>devrilir</text><text x='160.0' y='22.0' font-size='12' fill='var(--muted)' text-anchor='middle'>ağırlık merkezinden düşey doğru</text></svg>",
-        "key": "Devrilme sınırı: ağırlık merkezinin düşeyi tam destek kenarından geçtiği an."
+        "key": "Devrilme sınırı: ağırlık merkezinin düşeyi tam destek kenarından geçtiği an. Yarış arabaları bu yüzden basıktır."
       },
       {
         "h": "Kayar mı, devrilir mi?",
-        "p": "Eğik düzlemdeki kutu için iki sınır vardır. tanα > μ<sub>s</sub> olunca kutu <b>kayar</b>. Ağırlık merkezinin düşeyi alt kenarın dışına çıkınca, yani tanα > b/h olunca <b>devrilir</b> (b taban genişliği, h yükseklik). Açı artarken hangi sınıra önce varılırsa o olur.",
-        "key": "μs &lt; b/h ise kutu devrilmeden kayar; μs &gt; b/h ise kaymadan devrilir.",
-        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><defs><marker id='tork-kd' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><polygon points='20,175 240,175 240,72.4' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><line x1='10' y1='175' x2='310' y2='175' stroke='var(--ink)' stroke-width='2'/><g transform='rotate(-25,130,123.7)'><rect x='110' y='63.7' width='40' height='60' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><text x='130' y='137' font-size='11' fill='var(--c3)' text-anchor='middle'>b</text><text x='103' y='97' font-size='11' fill='var(--c3)' text-anchor='end'>h</text></g><circle cx='117.3' cy='96.5' r='4' fill='var(--ink)'/><line x1='117.3' y1='96.5' x2='117.3' y2='128' stroke='var(--ink)' stroke-width='1.5' stroke-dasharray='4 3' marker-end='url(#tork-kd)'/><circle cx='111.9' cy='132.2' r='3' fill='var(--c4)'/><path d='M60 175 A40 40 0 0 0 56.3 158.1' fill='none' stroke='var(--ink)' stroke-width='1.5'/><text x='64' y='170' font-size='12' fill='var(--ink)'>α</text><text x='310' y='26' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>tanα &gt; μs → kayar</text><text x='310' y='46' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='bold'>tanα &gt; b/h → devrilir</text><text x='160' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>düşey doğru hâlâ tabanda: kutu devrilmiyor</text></svg>"
+        "p": "Eğik düzlemdeki kutu <b>tanα > μ<sub>s</sub></b> olunca kayar, <b>tanα > b/h</b> olunca devrilir (b taban, h yükseklik). Açı artarken önce hangi sınıra varılırsa o olur.",
+        "key": "μs < b/h ise kutu devrilmeden kayar; μs > b/h ise kaymadan devrilir.",
+        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><defs><marker id='tork-kd' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><polygon points='20,175 240,175 240,72.4' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><line x1='10' y1='175' x2='310' y2='175' stroke='var(--ink)' stroke-width='2'/><g transform='rotate(-25,130,123.7)'><rect x='110' y='63.7' width='40' height='60' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><text x='130' y='137' font-size='11' fill='var(--c3)' text-anchor='middle'>b</text><text x='103' y='97' font-size='11' fill='var(--c3)' text-anchor='end'>h</text></g><circle cx='117.3' cy='96.5' r='4' fill='var(--ink)'/><line x1='117.3' y1='96.5' x2='117.3' y2='128' stroke='var(--ink)' stroke-width='1.5' stroke-dasharray='4 3' marker-end='url(#tork-kd)'/><circle cx='111.9' cy='132.2' r='3' fill='var(--c4)'/><path d='M60 175 A40 40 0 0 0 56.3 158.1' fill='none' stroke='var(--ink)' stroke-width='1.5'/><text x='64' y='170' font-size='12' fill='var(--ink)'>α</text><text x='310' y='26' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>tanα &gt; μs → kayar</text><text x='310' y='46' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='bold'>tanα &gt; b/h → devrilir</text><text x='160' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>düşey doğru hâlâ tabanda: kutu devrilmiyor</text></svg>",
+        "once": {
+          "soru": "Buzlu bir rampaya geniş tabanlı, basık bir kutu koydun. Rampa yavaşça dikleşirse kutu önce ne yapar?",
+          "secenekler": [
+            {
+              "yazi": "Kayar",
+              "neden": "Buzda sürtünme çok az; kayma sınırı erken gelir. Basık kutunun devrilmesi için rampa çok dik olmalı.",
+              "dogru": true
+            },
+            {
+              "yazi": "Devrilir",
+              "neden": "Basık kutunun ağırlık merkezi alçakta; devrilmesi için rampa çok dikleşmeli."
+            },
+            {
+              "yazi": "Yerinde kalır",
+              "neden": "Buzda sürtünme az; rampa biraz dikleşince kutu harekete geçer."
+            }
+          ]
+        }
       },
       {
         "h": "Kararlı, kararsız, nötr denge",
-        "p": "<b>Kararlı</b>: biraz itilince cisim eski yerine döner; ağırlık merkezi yükselmiştir (çukurdaki top, aşağı sarkan sarkaç). <b>Kararsız</b>: uzaklaşır; ağırlık merkezi alçalır (tepedeki top). <b>Nötr</b>: yeni yerinde kalır; ağırlık merkezinin yüksekliği değişmez (düz zemindeki top).",
+        "p": "Biraz itilince cisim geri dönüyorsa <b>kararlı</b>, uzaklaşıyorsa <b>kararsız</b>, yeni yerinde kalıyorsa <b>nötr</b> dengededir. Kararlı dengede ağırlık merkezi en alçaktadır.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M15,80 Q55,150 95,80' fill='none' stroke='var(--ink)' stroke-width='2'/><circle cx='55' cy='105' r='10' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)' stroke-width='1.5'/><path d='M120,130 Q160,70 200,130' fill='none' stroke='var(--ink)' stroke-width='2'/><circle cx='160' cy='90' r='10' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)' stroke-width='1.5'/><line x1='225.0' y1='115.0' x2='305.0' y2='115.0' stroke='var(--ink)' stroke-width='2'/><circle cx='265' cy='105' r='10' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.5'/><text x='55.0' y='150.0' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='bold'>kararlı</text><text x='55.0' y='167.0' font-size='11' fill='var(--ink)' text-anchor='middle'>geri döner</text><text x='55.0' y='183.0' font-size='10' fill='var(--muted)' text-anchor='middle'>aşağı sarkan sarkaç</text><text x='160.0' y='150.0' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='bold'>kararsız</text><text x='160.0' y='167.0' font-size='11' fill='var(--ink)' text-anchor='middle'>uzaklaşır</text><text x='160.0' y='183.0' font-size='10' fill='var(--muted)' text-anchor='middle'>ters duran sarkaç</text><text x='265.0' y='150.0' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='bold'>nötr</text><text x='265.0' y='167.0' font-size='11' fill='var(--ink)' text-anchor='middle'>yeni yerde kalır</text><text x='265.0' y='183.0' font-size='10' fill='var(--muted)' text-anchor='middle'>düz zemindeki top</text><text x='160.0' y='26.0' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>topu biraz it: ne olur?</text></svg>",
-        "key": "Kararlı dengede ağırlık merkezi, yakın konumlara göre en alçak yerdedir.",
+        "key": "Çukurdaki top kararlı, tepedeki top kararsız, düz zemindeki top nötr dengededir. İtilince ağırlık merkezi kararlıda yükselir, kararsızda alçalır.",
         "etk": {
           "tur": "ayir",
           "soru": "Biraz itilince ne olur? Denge türünü seç.",
@@ -4320,6 +4410,24 @@
               2,
               "Döndükçe ağırlık merkezi yerinden oynamaz."
             ]
+          ]
+        },
+        "once": {
+          "soru": "Bir çukurun dibindeki topu biraz itiyorsun. Ne olur?",
+          "secenekler": [
+            {
+              "yazi": "Geri döner",
+              "neden": "İtilince top yükselir; ağırlığı onu en alçak noktaya geri çeker.",
+              "dogru": true
+            },
+            {
+              "yazi": "Uzaklaşır",
+              "neden": "Tepedeki top uzaklaşırdı; çukurdaki top yukarı çıkamaz."
+            },
+            {
+              "yazi": "Yeni yerinde kalır",
+              "neden": "Düz zemindeki top öyle yapardı; çukurda yer kenarlara doğru yükselir."
+            }
           ]
         }
       },

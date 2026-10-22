@@ -3966,13 +3966,31 @@
     "cards": [
       {
         "h": "Asit ve bazı tanımak",
-        "p": "Limon ve sirke asit içerdiği için <b>ekşidir</b>; bazların sulu çözeltisi acı ve kaygandır. Rengi ortama göre değişen boyalara <b>indikatör</b> denir: turnusol asitte kırmızı, bazda mavidir. Asitler kireç taşından (CaCO₃) CO₂ çıkarır; kireç çözücü böyle çalışır.",
+        "p": "Asitler <b>ekşidir</b>, bazların çözeltisi acı ve kaygandır. Renk değiştiren boyalara <b>indikatör</b> denir: turnusol asitte kırmızı, bazda mavidir.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='8' width='304' height='24' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='56' y='25' font-size='12' fill='var(--muted)' text-anchor='middle' font-weight='700'>Özellik</text><text x='170' y='25' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Asit</text><text x='266' y='25' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Baz</text><text x='14' y='52' font-size='12' fill='var(--muted)' text-anchor='start'>Tat</text><text x='170' y='52' font-size='12' fill='var(--ink)' text-anchor='middle'>ekşi (limon)</text><text x='266' y='52' font-size='12' fill='var(--ink)' text-anchor='middle'>acı, kaygan his</text><line x1='8' y1='60' x2='312' y2='60' stroke='var(--line)' stroke-width='1'/><text x='14' y='75' font-size='12' fill='var(--muted)' text-anchor='start'>Turnusol</text><circle cx='126' cy='71' r='5' fill='var(--c2)' fill-opacity='0.85'/><circle cx='224' cy='71' r='5' fill='var(--c1)' fill-opacity='0.85'/><text x='170' y='75' font-size='12' fill='var(--ink)' text-anchor='middle'>kırmızı</text><text x='266' y='75' font-size='12' fill='var(--ink)' text-anchor='middle'>mavi</text><line x1='8' y1='83' x2='312' y2='83' stroke='var(--line)' stroke-width='1'/><text x='14' y='98' font-size='12' fill='var(--muted)' text-anchor='start'>Fenolftalein</text><circle cx='224' cy='94' r='5' fill='var(--c5)' fill-opacity='0.85'/><text x='170' y='98' font-size='12' fill='var(--ink)' text-anchor='middle'>renksiz</text><text x='266' y='98' font-size='12' fill='var(--ink)' text-anchor='middle'>pembe</text><line x1='8' y1='106' x2='312' y2='106' stroke='var(--line)' stroke-width='1'/><text x='14' y='121' font-size='12' fill='var(--muted)' text-anchor='start'>Metil oranj</text><circle cx='126' cy='117' r='5' fill='var(--c2)' fill-opacity='0.85'/><circle cx='224' cy='117' r='5' fill='var(--c4)' fill-opacity='0.85'/><text x='170' y='121' font-size='12' fill='var(--ink)' text-anchor='middle'>kırmızı</text><text x='266' y='121' font-size='12' fill='var(--ink)' text-anchor='middle'>sarı</text><line x1='8' y1='129' x2='312' y2='129' stroke='var(--line)' stroke-width='1'/><text x='14' y='144' font-size='12' fill='var(--muted)' text-anchor='start'>CaCO₃ ile</text><text x='170' y='144' font-size='12' fill='var(--ink)' text-anchor='middle'>CO₂ çıkar</text><text x='266' y='144' font-size='12' fill='var(--ink)' text-anchor='middle'>tepkime yok</text><line x1='8' y1='152' x2='312' y2='152' stroke='var(--line)' stroke-width='1'/><text x='14' y='167' font-size='12' fill='var(--muted)' text-anchor='start'>Sulu çözelti</text><text x='170' y='167' font-size='12' fill='var(--ink)' text-anchor='middle'>elektrik iletir</text><text x='266' y='167' font-size='12' fill='var(--ink)' text-anchor='middle'>elektrik iletir</text><line x1='8' y1='175' x2='312' y2='175' stroke='var(--line)' stroke-width='1'/><text x='160' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>İndikatör rengi belli bir pH aralığında değişir.</text></svg>",
-        "key": "Laboratuvarda hiçbir madde tadılmaz; tat bilgisi yalnız limon gibi gıdalardan gelir."
+        "key": "Limon ve sirke asit içerir. Asitler kireç taşından (CaCO₃) CO₂ çıkarır; kireç çözücü böyle çalışır. Laboratuvarda hiçbir madde tadılmaz.",
+        "once": {
+          "soru": "Limon suyuna turnusol kâğıdı batırıyorsun. Kâğıt hangi renge döner?",
+          "secenekler": [
+            {
+              "yazi": "Kırmızı",
+              "neden": "Limon asit içerir; turnusol asitte kırmızıdır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Mavi",
+              "neden": "Turnusol bazda maviye döner; limon ise asidiktir."
+            },
+            {
+              "yazi": "Renk değişmez",
+              "neden": "Turnusol bir indikatördür; asitte rengi değişir."
+            }
+          ]
+        }
       },
       {
         "h": "Arrhenius tanımı",
-        "p": "Arrhenius'a göre <b>asit</b>, suda çözününce H<sup>+</sup> iyonu verir. H<sup>+</sup> suda yalnız kalmaz, H₂O'ya bağlanıp <b>H₃O<sup>+</sup></b> (hidronyum) olur. <b>Baz</b> ise suda OH<sup>−</sup> iyonu verir. NH₃ yapısında OH taşımaz, ama suyla tepkimeye girip OH<sup>−</sup> oluşturduğu için bazdır.",
+        "p": "Arrhenius'a göre <b>asit</b> suda H<sup>+</sup> verir; H<sup>+</sup> suya bağlanıp <b>H₃O<sup>+</sup></b> olur. <b>Baz</b> suda OH<sup>−</sup> verir. NH₃ suyla OH<sup>−</sup> oluşturduğu için bazdır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='asit-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='10' y='12' width='300' height='76' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)'/><text x='20' y='32' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='700'>Asit: suda H⁺ verir</text><text x='20' y='56' font-size='13' fill='var(--ink)' text-anchor='start'>HCl(suda) → H⁺ + Cl⁻</text><text x='20' y='78' font-size='13' fill='var(--ink)' text-anchor='start'>H⁺ + H₂O → H₃O⁺ (hidronyum)</text><rect x='10' y='98' width='300' height='76' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)'/><text x='20' y='118' font-size='13' fill='var(--c1)' text-anchor='start' font-weight='700'>Baz: suda OH⁻ verir</text><text x='20' y='142' font-size='13' fill='var(--ink)' text-anchor='start'>NaOH(k) → Na⁺(suda) + OH⁻(suda)</text><text x='20' y='164' font-size='13' fill='var(--ink)' text-anchor='start'>NH₃ + H₂O ⇌ NH₄⁺ + OH⁻</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>Tanım yalnızca sulu çözeltiler içindir.</text></svg>",
         "etk": {
           "tur": "ayir",
@@ -4018,25 +4036,79 @@
             ]
           ]
         },
-        "key": "Arrhenius tanımı yalnızca sulu çözeltiler için geçerlidir."
+        "key": "H₃O⁺ hidronyum iyonudur. Arrhenius tanımı yalnızca sulu çözeltiler için geçerlidir.",
+        "once": {
+          "soru": "HCl suda çözününce hangi iyonu verir?",
+          "secenekler": [
+            {
+              "yazi": "H⁺",
+              "neden": "HCl suda H⁺ ve Cl⁻ iyonlarına ayrışır; suda H⁺ veren madde asittir.",
+              "dogru": true
+            },
+            {
+              "yazi": "OH⁻",
+              "neden": "HCl'de OH grubu yok; OH⁻ veren maddeler bazdır."
+            },
+            {
+              "yazi": "Hiç iyon vermez",
+              "neden": "HCl suda neredeyse tamamen iyonlarına ayrışır."
+            }
+          ]
+        }
       },
       {
         "h": "Brønsted–Lowry ve eşlenik çiftler",
-        "p": "Brønsted–Lowry'ye göre asit <b>proton (H<sup>+</sup>) verir</b>, baz proton alır; su şart değildir. Proton veren asit geride <b>eşlenik bazını</b> bırakır: CH₃COOH / CH₃COO<sup>−</sup>. Bir çiftin üyeleri yalnız bir H<sup>+</sup> farklıdır. Su proton hem verebilir hem alabilir: <b>amfiprotiktir</b> (amfoter).",
+        "p": "Brønsted–Lowry'ye göre asit <b>proton (H<sup>+</sup>) verir</b>, baz proton alır. Proton veren asit geride <b>eşlenik bazını</b> bırakır: CH₃COOH / CH₃COO<sup>−</sup>.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='asit-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='asit-3b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><text x='160' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Proton (H⁺) aktarımı</text><text x='40' y='78' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>NH₃</text><text x='78' y='78' font-size='14' fill='var(--muted)' text-anchor='middle'>+</text><text x='116' y='78' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>H₂O</text><text x='160' y='78' font-size='15' fill='var(--muted)' text-anchor='middle'>⇌</text><text x='204' y='78' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>NH₄⁺</text><text x='244' y='78' font-size='14' fill='var(--muted)' text-anchor='middle'>+</text><text x='282' y='78' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>OH⁻</text><text x='40' y='100' font-size='11' fill='var(--c1)' text-anchor='middle'>baz</text><text x='116' y='100' font-size='11' fill='var(--c2)' text-anchor='middle'>asit</text><text x='204' y='100' font-size='11' fill='var(--c2)' text-anchor='middle'>eşlenik asit</text><text x='282' y='100' font-size='11' fill='var(--c1)' text-anchor='middle'>eşlenik baz</text><path d='M116 58 C116 40 52 40 44 56' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#asit-3)'/><text x='80' y='40' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>H⁺</text><path d='M40 108 V122 H204 V108' fill='none' stroke='var(--c1)' stroke-width='1.2'/><path d='M116 108 V132 H282 V108' fill='none' stroke='var(--c2)' stroke-width='1.2'/><text x='90' y='146' font-size='11' fill='var(--c1)' text-anchor='middle'>çift 1: NH₃ / NH₄⁺</text><text x='230' y='146' font-size='11' fill='var(--c2)' text-anchor='middle'>çift 2: H₂O / OH⁻</text><rect x='10' y='158' width='300' height='34' rx='6' fill='var(--panel)' fill-opacity='1'/><text x='160' y='179' font-size='12' fill='var(--ink)' text-anchor='middle'>HCl(g) + NH₃(g) → NH₄Cl(k): su yok, yine asit–baz</text></svg>",
-        "key": "Asit ne kadar kuvvetliyse eşlenik bazı o kadar zayıftır."
+        "key": "Çiftin üyeleri bir H⁺ farklıdır. Su hem proton verir hem alır: amfiprotiktir. Asit ne kadar kuvvetliyse eşlenik bazı o kadar zayıftır.",
+        "once": {
+          "soru": "NH₃ + H₂O → NH₄⁺ + OH⁻ tepkimesinde su ne yapar?",
+          "secenekler": [
+            {
+              "yazi": "Proton verir",
+              "neden": "Su NH₃'e H⁺ verir ve OH⁻ olur; burada asit gibi davranır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Proton alır",
+              "neden": "Proton alan NH₃'tür; NH₄⁺ olur."
+            },
+            {
+              "yazi": "Tepkimeye katılmaz",
+              "neden": "Su tepkimeye girer: H⁺ kaybedip OH⁻ olur."
+            }
+          ]
+        }
       },
       {
         "h": "Suyun iyonlaşması: Ksu",
-        "p": "<b>Denge</b>: ileri ve geri tepkime aynı hızda yürür. Saf su az iyonlaşır ve dengeye ulaşır: 2H₂O ⇌ H₃O⁺ + OH⁻. 25 °C'de Ksu = [H₃O⁺][OH⁻] = 1×10⁻¹⁴; saf suda ikisi de 10⁻⁷ M. Asit eklenince [H₃O⁺] artar, [OH⁻] azalır; çarpım değişmez.",
+        "p": "Saf su az iyonlaşır ve dengeye ulaşır: 2H₂O ⇌ H₃O⁺ + OH⁻. 25 °C'de <b>Ksu = [H₃O⁺][OH⁻] = 10⁻¹⁴</b>; saf suda ikisi de 10⁻⁷ M.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>2H₂O ⇌ H₃O⁺ + OH⁻</text><line x1='20' y1='160' x2='300' y2='160' stroke='var(--ink)' stroke-width='1.2'/><rect x='30' y='61' width='24' height='99' fill='var(--c2)' fill-opacity='0.55'/><text x='42' y='56' font-size='10' fill='var(--c2)' text-anchor='middle'>10⁻³</text><rect x='60' y='133' width='24' height='27' fill='var(--c1)' fill-opacity='0.55'/><text x='72' y='128' font-size='10' fill='var(--c1)' text-anchor='middle'>10⁻¹¹</text><text x='57' y='177' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>asidik</text><rect x='133' y='97' width='24' height='63' fill='var(--c2)' fill-opacity='0.55'/><text x='145' y='92' font-size='10' fill='var(--c2)' text-anchor='middle'>10⁻⁷</text><rect x='163' y='97' width='24' height='63' fill='var(--c1)' fill-opacity='0.55'/><text x='175' y='92' font-size='10' fill='var(--c1)' text-anchor='middle'>10⁻⁷</text><text x='160' y='177' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>nötr</text><rect x='236' y='133' width='24' height='27' fill='var(--c2)' fill-opacity='0.55'/><text x='248' y='128' font-size='10' fill='var(--c2)' text-anchor='middle'>10⁻¹¹</text><rect x='266' y='61' width='24' height='99' fill='var(--c1)' fill-opacity='0.55'/><text x='278' y='56' font-size='10' fill='var(--c1)' text-anchor='middle'>10⁻³</text><text x='263' y='177' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>bazik</text><rect x='24' y='34' width='10' height='10' fill='var(--c2)' fill-opacity='0.55'/><text x='39' y='43' font-size='11' fill='var(--muted)' text-anchor='start'>[H₃O⁺]</text><rect x='92' y='34' width='10' height='10' fill='var(--c1)' fill-opacity='0.55'/><text x='107' y='43' font-size='11' fill='var(--muted)' text-anchor='start'>[OH⁻]</text><text x='160' y='195' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>25 °C'de çarpım hep 1×10⁻¹⁴ M²</text></svg>",
-        "key": "Ksu sıcaklıkla artar; 25 °C dışında nötr suyun pH'ı tam 7 değildir."
+        "key": "Denge: ileri ve geri tepkime aynı hızda yürür. Ksu sıcaklıkla artar; 25 °C dışında nötr suyun pH'ı tam 7 değildir.",
+        "once": {
+          "soru": "Saf suya biraz asit ekleniyor. [OH⁻] ne olur?",
+          "secenekler": [
+            {
+              "yazi": "Azalır",
+              "neden": "25 °C'de [H₃O⁺][OH⁻] sabittir; H₃O⁺ artınca OH⁻ azalır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Artar",
+              "neden": "Asit H₃O⁺ ekler; çarpım sabit kaldığından OH⁻ artamaz."
+            },
+            {
+              "yazi": "Değişmez",
+              "neden": "Çarpım sabit; biri artınca öbürü azalmak zorunda."
+            }
+          ]
+        }
       },
       {
         "h": "pH, pOH ve pH ölçeği",
-        "p": "pH = −log[H₃O⁺], yani [H₃O⁺] = 10<sup>−pH</sup> M: [H₃O⁺] = 10⁻³ M ise pH = 3. Benzer biçimde pOH = −log[OH⁻]. 25 °C'de pH + pOH = 14; pH 7 nötr, altı asidik, üstü baziktir.",
+        "p": "<b>pH = −log[H₃O⁺]</b>: [H₃O⁺] = 10⁻³ M ise pH = 3. 25 °C'de pH + pOH = 14; 7 nötr, altı asidik, üstü baziktir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='90' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>pH = −log[H₃O⁺]</text><text x='235' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>pH + pOH = 14</text><text x='160' y='40' font-size='11' fill='var(--muted)' text-anchor='middle'>(25 °C)</text><rect x='20' y='86' width='19' height='24' fill='var(--c2)' fill-opacity='0.71'/><text x='29.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>0</text><rect x='39' y='86' width='19' height='24' fill='var(--c2)' fill-opacity='0.63'/><text x='48.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>1</text><rect x='58' y='86' width='19' height='24' fill='var(--c2)' fill-opacity='0.55'/><text x='67.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>2</text><rect x='77' y='86' width='19' height='24' fill='var(--c2)' fill-opacity='0.47'/><text x='86.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>3</text><rect x='96' y='86' width='19' height='24' fill='var(--c2)' fill-opacity='0.39'/><text x='105.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>4</text><rect x='115' y='86' width='19' height='24' fill='var(--c2)' fill-opacity='0.31'/><text x='124.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>5</text><rect x='134' y='86' width='19' height='24' fill='var(--c2)' fill-opacity='0.23'/><text x='143.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>6</text><rect x='153' y='86' width='19' height='24' fill='var(--c3)' fill-opacity='0.5'/><text x='162.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>7</text><rect x='172' y='86' width='19' height='24' fill='var(--c1)' fill-opacity='0.23'/><text x='181.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>8</text><rect x='191' y='86' width='19' height='24' fill='var(--c1)' fill-opacity='0.31'/><text x='200.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>9</text><rect x='210' y='86' width='19' height='24' fill='var(--c1)' fill-opacity='0.39'/><text x='219.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>10</text><rect x='229' y='86' width='19' height='24' fill='var(--c1)' fill-opacity='0.47'/><text x='238.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>11</text><rect x='248' y='86' width='19' height='24' fill='var(--c1)' fill-opacity='0.55'/><text x='257.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>12</text><rect x='267' y='86' width='19' height='24' fill='var(--c1)' fill-opacity='0.63'/><text x='276.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>13</text><rect x='286' y='86' width='19' height='24' fill='var(--c1)' fill-opacity='0.71'/><text x='295.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>14</text><line x1='48.5' y1='76' x2='48.5' y2='86' stroke='var(--muted)' stroke-width='1'/><text x='48' y='70' font-size='11' fill='var(--ink)' text-anchor='middle'>mide ≈1,5</text><line x1='115' y1='76' x2='115' y2='86' stroke='var(--muted)' stroke-width='1'/><text x='115' y='70' font-size='11' fill='var(--ink)' text-anchor='middle'>kahve ≈5</text><line x1='210' y1='76' x2='210' y2='86' stroke='var(--muted)' stroke-width='1'/><text x='210' y='70' font-size='11' fill='var(--ink)' text-anchor='middle'>sabun ≈10</text><line x1='286' y1='76' x2='286' y2='86' stroke='var(--muted)' stroke-width='1'/><text x='286' y='58' font-size='11' fill='var(--ink)' text-anchor='middle'>lavabo</text><text x='286' y='70' font-size='11' fill='var(--ink)' text-anchor='middle'>açıcı ≈14</text><line x1='61.8' y1='110' x2='61.8' y2='120' stroke='var(--muted)' stroke-width='1'/><text x='61.8' y='132' font-size='11' fill='var(--ink)' text-anchor='middle'>limon ≈2</text><line x1='153' y1='110' x2='153' y2='120' stroke='var(--muted)' stroke-width='1'/><text x='156' y='132' font-size='11' fill='var(--ink)' text-anchor='end'>saf su 7</text><line x1='160.6' y1='110' x2='160.6' y2='120' stroke='var(--muted)' stroke-width='1'/><text x='161' y='132' font-size='11' fill='var(--ink)' text-anchor='start'>kan ≈7,4</text><line x1='238.5' y1='110' x2='238.5' y2='140' stroke='var(--muted)' stroke-width='1'/><text x='244' y='152' font-size='11' fill='var(--ink)' text-anchor='middle'>amonyaklı ≈11</text><text x='70' y='172' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>← asidik</text><text x='250' y='172' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>bazik →</text><text x='160' y='192' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>1 birim pH = 10 kat [H₃O⁺] farkı</text></svg>",
-        "key": "pH bir birim düşerse [H₃O⁺] 10 kat artar; 2 birim düşerse 100 kat.",
+        "key": "pOH = −log[OH⁻]. pH bir birim düşerse [H₃O⁺] 10 kat artar; 2 birim düşerse 100 kat.",
         "etk": {
           "tur": "formul",
           "soru": "25 °C'de [H₃O⁺] = a × 10<sup>−b</sup> M. Derişimi değiştir: pH ve pOH nasıl değişiyor?",
@@ -4090,63 +4162,153 @@
       },
       {
         "h": "Kuvvetli ve zayıf asit, baz",
-        "p": "Az önce gördüğün gibi kuvvetli asit ve bazlar suda tamamen iyonlaşır: HCl, HNO₃, H₂SO₄ (ilk protonu); NaOH, KOH. Zayıflar az iyonlaşır, moleküllerin çoğu sağlam kalır: CH₃COOH (sirke), NH₃. Aynı derişimde kuvvetli asidin pH'ı daha düşüktür.",
+        "p": "Kuvvetli asit ve bazlar suda <b>tamamen</b> iyonlaşır: HCl, HNO₃, NaOH, KOH. Zayıflar <b>az</b> iyonlaşır: CH₃COOH (sirke), NH₃. Kuvvetli, derişik demek değildir.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M18 40 V150 H148 V40' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M172 40 V150 H302 V40' fill='none' stroke='var(--ink)' stroke-width='1.5'/><circle cx='38' cy='62' r='9' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='38' y='66' font-size='11' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='70' cy='76' r='9' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><text x='70' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>−</text><circle cx='104' cy='58' r='9' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='104' y='62' font-size='11' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='128' cy='86' r='9' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><text x='128' y='90' font-size='11' fill='var(--ink)' text-anchor='middle'>−</text><circle cx='44' cy='104' r='9' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='44' y='108' font-size='11' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='82' cy='120' r='9' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><text x='82' y='124' font-size='11' fill='var(--ink)' text-anchor='middle'>−</text><circle cx='118' cy='128' r='9' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='118' y='132' font-size='11' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='60' cy='136' r='9' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><text x='60' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>−</text><rect x='181' y='53' width='26' height='18' rx='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='194' y='66' font-size='10' fill='var(--ink)' text-anchor='middle'>HA</text><rect x='227' y='49' width='26' height='18' rx='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='240' y='62' font-size='10' fill='var(--ink)' text-anchor='middle'>HA</text><rect x='269' y='61' width='26' height='18' rx='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='282' y='74' font-size='10' fill='var(--ink)' text-anchor='middle'>HA</text><rect x='191' y='91' width='26' height='18' rx='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='204' y='104' font-size='10' fill='var(--ink)' text-anchor='middle'>HA</text><rect x='243' y='87' width='26' height='18' rx='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='256' y='100' font-size='10' fill='var(--ink)' text-anchor='middle'>HA</text><rect x='183' y='125' width='26' height='18' rx='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='196' y='138' font-size='10' fill='var(--ink)' text-anchor='middle'>HA</text><rect x='269' y='119' width='26' height='18' rx='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='282' y='132' font-size='10' fill='var(--ink)' text-anchor='middle'>HA</text><circle cx='232' cy='138' r='9' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='232' y='142' font-size='11' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='256' cy='128' r='9' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><text x='256' y='132' font-size='11' fill='var(--ink)' text-anchor='middle'>−</text><text x='83' y='26' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>0,1 M HCl</text><text x='237' y='26' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>0,1 M CH₃COOH</text><text x='83' y='168' font-size='12' fill='var(--c2)' text-anchor='middle'>tamamen iyon</text><text x='237' y='168' font-size='12' fill='var(--c5)' text-anchor='middle'>≈ %1 iyon</text><text x='83' y='188' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>pH = 1</text><text x='237' y='188' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>pH ≈ 2,9</text></svg>",
-        "key": "Kuvvetli ≠ derişik. Seyreltik HCl de kuvvetli asittir."
+        "key": "H₂SO₄ ilk protonunu tamamen verir. Aynı derişimde kuvvetli asidin pH'ı daha düşüktür. Seyreltik HCl de kuvvetli asittir."
       },
       {
         "h": "Ka ve Kb: kuvvetin ölçüsü",
-        "p": "<b>Denge</b>: ileri ve geri tepkime aynı hızda yürür. Zayıf asidin iyonlaşması böyle bir dengedir; derişimler artık değişmez: Ka = [H₃O⁺][A⁻] / [HA]; saf sıvı olan su ifadeye yazılmaz. Ka büyüdükçe asit kuvvetlenir. Bazlar için Kb aynı mantıkla yazılır.",
+        "p": "Zayıf asidin iyonlaşması bir dengedir: <b>Ka = [H₃O⁺][A⁻] / [HA]</b>. Su ifadeye yazılmaz. Ka büyüdükçe asit kuvvetlenir; bazlar için Kb aynı mantıkla yazılır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='asit-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--acc)'/></marker></defs><text x='160' y='24' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>HA + H₂O ⇌ H₃O⁺ + A⁻</text><text x='160' y='50' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>K<tspan font-size='10' baseline-shift='sub'>a</tspan> = [H₃O⁺][A⁻] / [HA]</text><path d='M20 92 H300' stroke='var(--acc)' stroke-width='1.5' fill='none' marker-end='url(#asit-7)'/><text x='160' y='80' font-size='12' fill='var(--muted)' text-anchor='middle'>K<tspan font-size='10' baseline-shift='sub'>a</tspan> büyür → asit kuvvetlenir</text><circle cx='50' cy='92' r='4' fill='var(--c2)' fill-opacity='0.85'/><text x='50' y='112' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>HCN</text><text x='50' y='127' font-size='11' fill='var(--muted)' text-anchor='middle'>6,2×10⁻¹⁰</text><circle cx='160' cy='92' r='4' fill='var(--c2)' fill-opacity='0.85'/><text x='160' y='112' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₃COOH</text><text x='160' y='127' font-size='11' fill='var(--muted)' text-anchor='middle'>1,8×10⁻⁵</text><circle cx='262' cy='92' r='4' fill='var(--c2)' fill-opacity='0.85'/><text x='262' y='112' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>HF</text><text x='262' y='127' font-size='11' fill='var(--muted)' text-anchor='middle'>≈7×10⁻⁴</text><rect x='10' y='142' width='300' height='52' rx='6' fill='var(--panel)' fill-opacity='1'/><text x='160' y='162' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Eşlenik çift (25 °C): K<tspan font-size='10' baseline-shift='sub'>a</tspan>·K<tspan font-size='10' baseline-shift='sub'>b</tspan> = K<tspan font-size='10' baseline-shift='sub'>su</tspan></text><text x='160' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>CH₃COO⁻ için K<tspan font-size='10' baseline-shift='sub'>b</tspan> = 10⁻¹⁴ / 1,8×10⁻⁵ ≈ 5,6×10⁻¹⁰</text></svg>",
-        "key": "Ka büyükse asit kuvvetli, eşlenik bazının Kb'si küçüktür."
+        "key": "Ka büyükse asit kuvvetli, eşlenik bazının Kb'si küçüktür.",
+        "once": {
+          "soru": "Ka değerleri: HF için 7×10⁻⁴, CH₃COOH için 1,8×10⁻⁵. Hangisi daha kuvvetli asittir?",
+          "secenekler": [
+            {
+              "yazi": "HF",
+              "neden": "Ka'sı büyük olan daha çok iyonlaşır; HF'nin Ka'sı daha büyük.",
+              "dogru": true
+            },
+            {
+              "yazi": "CH₃COOH",
+              "neden": "Onun Ka'sı daha küçük; daha az iyonlaşır."
+            },
+            {
+              "yazi": "İkisi eşit",
+              "neden": "Ka değerleri farklı; büyük olan daha kuvvetlidir."
+            }
+          ]
+        }
       },
       {
         "h": "pH hesabı: kuvvetli ve zayıf",
-        "p": "Kuvvetli tek protonlu asitte [H₃O<sup>+</sup>] asidin derişimine eşittir: 0,01 M HCl → pH = 2. Kuvvetli bazda önce pOH bulunur. Zayıf asitte iyonlaşma azsa <b>[H₃O<sup>+</sup>] ≈ √(K<sub>a</sub>·C)</b> yaklaşımı kullanılır.",
+        "p": "Kuvvetli tek protonlu asitte [H₃O⁺] asit derişimine eşittir: 0,01 M HCl → pH 2. Zayıf asitte <b>[H₃O⁺] ≈ √(Ka·C)</b> kullanılır.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='10' width='148' height='180' rx='6' fill='var(--c2)' fill-opacity='0.07' stroke='var(--c2)'/><text x='82' y='30' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Kuvvetli asit</text><text x='82' y='56' font-size='12' fill='var(--ink)' text-anchor='middle'>0,01 M HCl</text><text x='82' y='78' font-size='12' fill='var(--ink)' text-anchor='middle'>[H₃O⁺] = 10⁻² M</text><text x='82' y='100' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>pH = 2</text><line x1='20' y1='116' x2='144' y2='116' stroke='var(--line)' stroke-width='1'/><text x='82' y='136' font-size='12' fill='var(--ink)' text-anchor='middle'>0,01 M NaOH</text><text x='82' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>pOH = 2</text><text x='82' y='180' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>pH = 14 − 2 = 12</text><rect x='164' y='10' width='148' height='180' rx='6' fill='var(--c5)' fill-opacity='0.07' stroke='var(--c5)'/><text x='238' y='30' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Zayıf asit</text><text x='238' y='56' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>[H₃O⁺] ≈ √(K<tspan font-size='10' baseline-shift='sub'>a</tspan>·C)</text><text x='238' y='82' font-size='12' fill='var(--ink)' text-anchor='middle'>K<tspan font-size='10' baseline-shift='sub'>a</tspan> = 1×10⁻⁵</text><text x='238' y='105' font-size='12' fill='var(--ink)' text-anchor='middle'>C = 0,1 M</text><text x='238' y='127' font-size='12' fill='var(--ink)' text-anchor='middle'>√(10⁻⁶) = 10⁻³ M</text><text x='238' y='150' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>pH = 3</text><text x='238' y='172' font-size='11' fill='var(--muted)' text-anchor='middle'>iyonlaşan: %1</text></svg>",
-        "key": "Kuvvetli asidi 10 kat seyreltirsen pH 1 artar: 0,01 M HCl pH 2, 0,001 M HCl pH 3."
+        "key": "Kuvvetli bazda önce pOH bulunur. Kuvvetli asidi 10 kat seyreltirsen pH 1 artar: 0,01 M HCl pH 2, 0,001 M HCl pH 3.",
+        "once": {
+          "soru": "0,001 M HCl çözeltisinin pH'ı kaçtır?",
+          "secenekler": [
+            {
+              "yazi": "3",
+              "neden": "HCl tamamen iyonlaşır: [H₃O⁺] = 10⁻³ M, pH = 3.",
+              "dogru": true
+            },
+            {
+              "yazi": "0,001",
+              "neden": "Bu derişimdir; pH onun eksi logaritmasıdır."
+            },
+            {
+              "yazi": "11",
+              "neden": "11 pOH değeridir; asidin pH'ı 7'nin altındadır."
+            }
+          ]
+        }
       },
       {
         "h": "Nötralleşme",
-        "p": "Asit ile baz tepkimeye girince <b>tuz ve su</b> oluşur. Asıl olay H₃O<sup>+</sup> ile OH<sup>−</sup> iyonlarının suya dönüşmesidir; ısı açığa çıkar. Midede HCl fazlalaşınca Mg(OH)₂ ya da NaHCO₃ içeren <b>antasitler</b> asidin bir kısmını nötralleştirir ve ekşime azalır.",
+        "p": "Asit ile baz tepkimeye girince <b>tuz ve su</b> oluşur. Asıl olay H₃O⁺ ile OH⁻'nin suya dönüşmesidir; ısı açığa çıkar. Mide ilaçları (<b>antasit</b>) böyle çalışır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='asit-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='24' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>HCl + NaOH → NaCl + H₂O</text><text x='160' y='44' font-size='12' fill='var(--muted)' text-anchor='middle'>asit + baz → tuz + su</text><rect x='40' y='56' width='240' height='36' rx='6' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)'/><text x='160' y='79' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>net: H₃O⁺ + OH⁻ → 2H₂O + ısı</text><text x='160' y='116' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Mide ekşimesinde antasit:</text><text x='160' y='140' font-size='12' fill='var(--ink)' text-anchor='middle'>Mg(OH)₂ + 2HCl → MgCl₂ + 2H₂O</text><text x='160' y='162' font-size='12' fill='var(--ink)' text-anchor='middle'>NaHCO₃ + HCl → NaCl + H₂O + CO₂</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>Nötralleşme ekzotermiktir.</text></svg>",
-        "key": "Nötralleşme her zaman pH 7 vermez; sonuç oluşan tuza bağlıdır."
+        "key": "Antasitlerde Mg(OH)₂ ya da NaHCO₃ bulunur. Nötralleşme her zaman pH 7 vermez; sonuç oluşan tuza bağlıdır."
       },
       {
         "h": "Çok protonlu asit ve bazlar",
-        "p": "H₂SO₄ iki, H₃PO₄ üç H<sup>+</sup> verebilir; Ca(OH)₂ iki OH<sup>−</sup> verir. Tam nötralleşmede <b>n(H<sup>+</sup>) = n(OH<sup>−</sup>)</b> olmalıdır. 100 mL 0,1 M H₂SO₄ 0,02 mol H<sup>+</sup> verir; bunu 0,2 M NaOH'tan 100 mL nötralleştirir.",
+        "p": "H₂SO₄ iki, H₃PO₄ üç H⁺ verebilir; Ca(OH)₂ iki OH⁻ verir. Tam nötralleşmede <b>n(H⁺) = n(OH⁻)</b> olmalıdır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='24' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O</text><rect x='40' y='38' width='240' height='34' rx='6' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)'/><text x='160' y='60' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>n(H⁺) = n(OH⁻)</text><text x='160' y='94' font-size='12' fill='var(--ink)' text-anchor='middle'>M<tspan font-size='9' baseline-shift='sub'>a</tspan> · V<tspan font-size='9' baseline-shift='sub'>a</tspan> · (H⁺ sayısı) = M<tspan font-size='9' baseline-shift='sub'>b</tspan> · V<tspan font-size='9' baseline-shift='sub'>b</tspan> · (OH⁻ sayısı)</text><text x='160' y='118' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>0,1 · 100 · 2 = 0,2 · V · 1  →  V = 100 mL</text><line x1='16' y1='132' x2='304' y2='132' stroke='var(--line)' stroke-width='1'/><text x='16' y='152' font-size='12' fill='var(--c2)' text-anchor='start'>HCl 1</text><text x='88' y='152' font-size='12' fill='var(--c2)' text-anchor='start'>H₂SO₄ 2</text><text x='176' y='152' font-size='12' fill='var(--c2)' text-anchor='start'>H₃PO₄ 3</text><text x='16' y='172' font-size='12' fill='var(--c1)' text-anchor='start'>NaOH 1</text><text x='88' y='172' font-size='12' fill='var(--c1)' text-anchor='start'>Ca(OH)₂ 2</text><text x='176' y='172' font-size='12' fill='var(--c1)' text-anchor='start'>Al(OH)₃ 3</text><text x='160' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>CH₃COOH 4 H taşır ama yalnız 1 H⁺ verir.</text></svg>",
-        "key": "Asitlikte sayılan, formüldeki bütün H'ler değil, verilebilen H⁺ sayısıdır: CH₃COOH yalnız bir H⁺ verir."
+        "key": "Örnek: 100 mL 0,1 M H₂SO₄ 0,02 mol H⁺ verir; bunu 0,2 M NaOH'tan 100 mL nötralleştirir. CH₃COOH yalnız bir H⁺ verir.",
+        "once": {
+          "soru": "0,1 mol H₂SO₄'ü tam nötralleştirmek için kaç mol NaOH gerekir?",
+          "secenekler": [
+            {
+              "yazi": "0,2",
+              "neden": "H₂SO₄ iki H⁺ verir: 0,2 mol H⁺ için 0,2 mol OH⁻ gerekir.",
+              "dogru": true
+            },
+            {
+              "yazi": "0,1",
+              "neden": "Her H₂SO₄ iki H⁺ verir; bir NaOH yalnız bir OH⁻ verir."
+            },
+            {
+              "yazi": "0,05",
+              "neden": "Asit iki protonlu; baz daha az değil, daha çok gerekir."
+            }
+          ]
+        }
       },
       {
         "h": "Tuzlar: asidik, bazik, nötr",
-        "p": "<b>Denge</b>: ileri ve geri tepkime aynı hızda yürür. Az önceki asetat gibi zayıf asidin anyonu ya da zayıf bazın katyonu suyla böyle bir dengeye girer: <b>hidroliz</b>. Tuzun pH'ı bu yüzden asit ve bazın kuvvetine bağlıdır; ikisi de zayıfsa Ka ile Kb karşılaştırılır.",
+        "p": "Zayıf asidin anyonu ya da zayıf bazın katyonu suyla dengeye girer: <b>hidroliz</b>. Bu yüzden tuzun pH'ı, asit ve bazın kuvvetine bağlıdır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Tuzun çözeltisi (25 °C)</text><rect x='8' y='30' width='304' height='34' rx='6' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.2'/><text x='18' y='44' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>kuvvetli asit + kuvvetli baz</text><text x='18' y='58' font-size='11' fill='var(--muted)' text-anchor='start'>NaCl, KNO₃</text><text x='302' y='58' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='700'>nötr, pH = 7</text><rect x='8' y='68' width='304' height='34' rx='6' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1.2'/><text x='18' y='82' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>zayıf asit + kuvvetli baz</text><text x='18' y='96' font-size='11' fill='var(--muted)' text-anchor='start'>CH₃COONa, sabun</text><text x='302' y='96' font-size='12' fill='var(--c1)' text-anchor='end' font-weight='700'>bazik, pH &gt; 7</text><rect x='8' y='106' width='304' height='34' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)' stroke-width='1.2'/><text x='18' y='120' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>kuvvetli asit + zayıf baz</text><text x='18' y='134' font-size='11' fill='var(--muted)' text-anchor='start'>NH₄Cl</text><text x='302' y='134' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>asidik, pH &lt; 7</text><rect x='8' y='144' width='304' height='34' rx='6' fill='var(--c5)' fill-opacity='0.1' stroke='var(--c5)' stroke-width='1.2'/><text x='18' y='158' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>zayıf asit + zayıf baz</text><text x='18' y='172' font-size='11' fill='var(--muted)' text-anchor='start'>NH₄CN (bazik)</text><text x='302' y='166' font-size='12' fill='var(--c5)' text-anchor='end' font-weight='700'>K<tspan font-size='9' baseline-shift='sub'>a</tspan> ile K<tspan font-size='9' baseline-shift='sub'>b</tspan>'ye bağlı</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻ (hidroliz)</text></svg>",
-        "key": "Hangi taraf kuvvetliyse tuz onun karakterini taşır: NH₄Cl asidik, CH₃COONa baziktir."
+        "key": "Hangi taraf kuvvetliyse tuz onun karakterini taşır: NH₄Cl asidik, CH₃COONa baziktir. İkisi de zayıfsa Ka ile Kb karşılaştırılır."
       },
       {
         "h": "Titrasyon ve eşdeğerlik noktası",
-        "p": "Derişimi bilinmeyen bir asidi, derişimi bilinen bazla büretten damla damla nötralleştirmeye <b>titrasyon</b> denir. Eklenen baz, asidin <b>tamamıyla</b> tepkime oranına göre eşleşince <b>eşdeğerlik noktasına</b> ulaşılır ve pH hızla sıçrar. Zayıf asitte de yalnız serbest H<sub>3</sub>O<sup>+</sup> değil, toplam asit sayılır.",
+        "p": "Derişimi bilinmeyen asidi, bilinen bazla damla damla nötralleştirmeye <b>titrasyon</b> denir. Asit tam tükenince <b>eşdeğerlik noktasına</b> varılır ve pH hızla sıçrar.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M60 26 V166 H300' fill='none' stroke='var(--ink)' stroke-width='1.2'/><line x1='56' y1='96' x2='60' y2='96' stroke='var(--ink)' stroke-width='1'/><text x='52' y='100' font-size='11' fill='var(--muted)' text-anchor='end'>7</text><line x1='56' y1='46' x2='60' y2='46' stroke='var(--ink)' stroke-width='1'/><text x='52' y='50' font-size='11' fill='var(--muted)' text-anchor='end'>12</text><line x1='56' y1='146' x2='60' y2='146' stroke='var(--ink)' stroke-width='1'/><text x='52' y='150' font-size='11' fill='var(--muted)' text-anchor='end'>2</text><line x1='210' y1='166' x2='210' y2='170' stroke='var(--ink)' stroke-width='1'/><text x='210' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>25</text><path d='M60.0 156.0 L61.2 155.9 L62.4 155.9 L63.6 155.8 L64.8 155.7 L66.0 155.7 L67.2 155.6 L68.4 155.5 L69.6 155.4 L70.8 155.4 L72.0 155.3 L73.2 155.2 L74.4 155.2 L75.6 155.1 L76.8 155.0 L78.0 155.0 L79.2 154.9 L80.4 154.8 L81.6 154.7 L82.8 154.7 L84.0 154.6 L85.2 154.5 L86.4 154.5 L87.6 154.4 L88.8 154.3 L90.0 154.2 L91.2 154.2 L92.4 154.1 L93.6 154.0 L94.8 153.9 L96.0 153.9 L97.2 153.8 L98.4 153.7 L99.6 153.7 L100.8 153.6 L102.0 153.5 L103.2 153.4 L104.4 153.3 L105.6 153.3 L106.8 153.2 L108.0 153.1 L109.2 153.0 L110.4 153.0 L111.6 152.9 L112.8 152.8 L114.0 152.7 L115.2 152.6 L116.4 152.6 L117.6 152.5 L118.8 152.4 L120.0 152.3 L121.2 152.2 L122.4 152.2 L123.6 152.1 L124.8 152.0 L126.0 151.9 L127.2 151.8 L128.4 151.7 L129.6 151.6 L130.8 151.5 L132.0 151.5 L133.2 151.4 L134.4 151.3 L135.6 151.2 L136.8 151.1 L138.0 151.0 L139.2 150.9 L140.4 150.8 L141.6 150.7 L142.8 150.6 L144.0 150.5 L145.2 150.4 L146.4 150.3 L147.6 150.2 L148.8 150.1 L150.0 150.0 L151.2 149.9 L152.4 149.8 L153.6 149.6 L154.8 149.5 L156.0 149.4 L157.2 149.3 L158.4 149.2 L159.6 149.1 L160.8 148.9 L162.0 148.8 L163.2 148.7 L164.4 148.5 L165.6 148.4 L166.8 148.3 L168.0 148.1 L169.2 148.0 L170.4 147.8 L171.6 147.7 L172.8 147.5 L174.0 147.3 L175.2 147.2 L176.4 147.0 L177.6 146.8 L178.8 146.6 L180.0 146.5 L181.2 146.3 L182.4 146.1 L183.6 145.8 L184.8 145.6 L186.0 145.4 L187.2 145.2 L188.4 144.9 L189.6 144.6 L190.8 144.3 L192.0 144.1 L193.2 143.7 L194.4 143.4 L195.6 143.0 L196.8 142.6 L198.0 142.2 L199.2 141.7 L200.4 141.2 L201.6 140.6 L202.8 139.9 L204.0 139.1 L205.2 138.1 L206.4 136.8 L207.6 135.1 L208.8 132.0 L210.0 96.0 L211.2 60.0 L212.4 57.0 L213.6 55.3 L214.8 54.0 L216.0 53.1 L217.2 52.3 L218.4 51.6 L219.6 51.1 L220.8 50.6 L222.0 50.1 L223.2 49.8 L224.4 49.4 L225.6 49.1 L226.8 48.8 L228.0 48.5 L229.2 48.2 L230.4 48.0 L231.6 47.7 L232.8 47.5 L234.0 47.3 L235.2 47.1 L236.4 46.9 L237.6 46.7 L238.8 46.6 L240.0 46.4 L241.2 46.3 L242.4 46.1 L243.6 46.0 L244.8 45.8 L246.0 45.7 L247.2 45.6 L248.4 45.5 L249.6 45.3 L250.8 45.2 L252.0 45.1 L253.2 45.0 L254.4 44.9 L255.6 44.8 L256.8 44.7 L258.0 44.6 L259.2 44.5 L260.4 44.4 L261.6 44.3 L262.8 44.2 L264.0 44.2 L265.2 44.1 L266.4 44.0 L267.6 43.9 L268.8 43.9 L270.0 43.8 L271.2 43.7 L272.4 43.6 L273.6 43.6 L274.8 43.5 L276.0 43.4 L277.2 43.4 L278.4 43.3 L279.6 43.3 L280.8 43.2 L282.0 43.1 L283.2 43.1 L284.4 43.0 L285.6 43.0 L286.8 42.9 L288.0 42.9 L289.2 42.8 L290.4 42.7 L291.6 42.7 L292.8 42.6 L294.0 42.6 L295.2 42.6 L296.4 42.5 L297.6 42.5 L298.8 42.4 L300.0 42.4' fill='none' stroke='var(--acc)' stroke-width='2'/><line x1='210' y1='96' x2='210' y2='166' stroke='var(--muted)' stroke-dasharray='3 3'/><circle cx='210' cy='96' r='4' fill='var(--c5)' fill-opacity='0.85'/><text x='218' y='100' font-size='11' fill='var(--c5)' text-anchor='start' font-weight='700'>eşdeğerlik noktası</text><text x='16' y='20' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>pH</text><text x='298' y='196' font-size='11' fill='var(--muted)' text-anchor='end'>eklenen NaOH (mL)</text><text x='102' y='132' font-size='11' fill='var(--c2)' text-anchor='middle'>asidik bölge</text><text x='258' y='58' font-size='11' fill='var(--c1)' text-anchor='middle'>bazik bölge</text><text x='120' y='20' font-size='11' fill='var(--muted)' text-anchor='start'>25 mL 0,1 M HCl + 0,1 M NaOH</text><text x='120' y='36' font-size='10' fill='var(--c4)' text-anchor='start'>25 mL 0,1 M CH₃COOH de 25 mL ister</text></svg>",
-        "key": "Kuvvetli asit–kuvvetli baz: eşdeğerlikte pH 7. Zayıf asit–kuvvetli baz: pH > 7."
+        "key": "Zayıf asitte de toplam asit sayılır. Kuvvetli asit–kuvvetli baz: eşdeğerlikte pH 7. Zayıf asit–kuvvetli baz: pH > 7.",
+        "once": {
+          "soru": "25 mL HCl'yi nötralleştirmek için aynı derişimde NaOH'tan kaç mL gerekir?",
+          "secenekler": [
+            {
+              "yazi": "25",
+              "neden": "Derişimler eşitse eşit hacimde eşit mol vardır; 25 mL yeter.",
+              "dogru": true
+            },
+            {
+              "yazi": "50",
+              "neden": "Bu iki kat baz olur; asit yarıda tükenir, gerisi fazla kalır."
+            },
+            {
+              "yazi": "12,5",
+              "neden": "Bu yarısı olur; asidin yarısı nötralleşmeden kalır."
+            }
+          ]
+        }
       },
       {
         "h": "Tampon çözelti",
-        "p": "<b>Denge</b>: ileri ve geri tepkime aynı hızda yürür. Zayıf asit ile eşlenik bazını (CH₃COOH / CH₃COONa) ya da zayıf baz ile eşlenik asidini içeren çözelti <b>tampondur</b>. Az asit ya da baz eklenince pH çok az değişir. Kanı H₂CO₃ / HCO₃⁻ tamponu korur.",
+        "p": "Zayıf asit ile eşlenik bazını (CH₃COOH / CH₃COONa) içeren çözelti <b>tampondur</b>: az asit ya da baz eklenince pH çok az değişir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='asit-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>1 L çözeltiye 0,01 mol HCl eklenirse</text><rect x='10' y='34' width='140' height='80' rx='6' fill='var(--c2)' fill-opacity='0.07' stroke='var(--c2)'/><rect x='170' y='34' width='140' height='80' rx='6' fill='var(--c3)' fill-opacity='0.07' stroke='var(--c3)'/><text x='80' y='54' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Saf su</text><text x='80' y='80' font-size='15' fill='var(--c2)' text-anchor='middle' font-weight='700'>pH 7 → 2</text><text x='80' y='102' font-size='11' fill='var(--muted)' text-anchor='middle'>büyük değişim</text><text x='240' y='54' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Asetik tampon</text><text x='240' y='80' font-size='15' fill='var(--c3)' text-anchor='middle' font-weight='700'>pH 4,74 → 4,66</text><text x='240' y='102' font-size='11' fill='var(--muted)' text-anchor='middle'>çok küçük değişim</text><text x='160' y='136' font-size='11' fill='var(--muted)' text-anchor='middle'>0,1 M CH₃COOH + 0,1 M CH₃COONa</text><text x='160' y='160' font-size='12' fill='var(--ink)' text-anchor='middle'>eklenen H₃O⁺ + CH₃COO⁻ → CH₃COOH + H₂O</text><text x='160' y='182' font-size='12' fill='var(--ink)' text-anchor='middle'>eklenen OH⁻ + CH₃COOH → CH₃COO⁻ + H₂O</text></svg>",
-        "key": "Tampon pH değişimini küçültür ama kapasitesi sınırlıdır."
+        "key": "Zayıf baz ile eşlenik asidi de tampon yapar. Kanı H₂CO₃ / HCO₃⁻ tamponu korur. Tamponun kapasitesi sınırlıdır."
       },
       {
         "h": "Asitler, bazlar ve metaller",
-        "p": "Aktif metaller asitle <b>tuz ve H₂</b> verir. Cu, Ag ve Au ise HCl ile H₂ vermez. <b>Amfoter</b> metaller (Al, Zn) hem asitlerle hem de NaOH gibi kuvvetli bazlarla tepkimeye girip H₂ çıkarır. Seyreltirken daima <b>asit suya</b> eklenir, su aside eklenmez.",
+        "p": "Aktif metaller asitle <b>tuz ve H₂</b> verir; Cu, Ag ve Au HCl ile H₂ vermez. <b>Amfoter</b> metaller (Al, Zn) kuvvetli bazlarla da H₂ çıkarır.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='8' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='16' y='26' font-size='12' fill='var(--muted)' text-anchor='start' font-weight='700'>Metal</text><text x='212' y='26' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>+ HCl</text><text x='276' y='26' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>+ NaOH</text><text x='16' y='58' font-size='12' fill='var(--ink)' text-anchor='start'>Mg, Fe (aktif)</text><text x='212' y='58' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>tuz + H₂</text><text x='276' y='58' font-size='12' fill='var(--muted)' text-anchor='middle'>—</text><line x1='8' y1='68' x2='312' y2='68' stroke='var(--line)' stroke-width='1'/><text x='16' y='88' font-size='12' fill='var(--ink)' text-anchor='start'>Cu, Ag, Au (soy, yarı soy)</text><text x='212' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>—</text><text x='276' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>—</text><line x1='8' y1='98' x2='312' y2='98' stroke='var(--line)' stroke-width='1'/><text x='16' y='118' font-size='12' fill='var(--ink)' text-anchor='start'>Al, Zn (amfoter)</text><text x='212' y='118' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>tuz + H₂</text><text x='276' y='118' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>tuz + H₂</text><line x1='8' y1='128' x2='312' y2='128' stroke='var(--line)' stroke-width='1'/><text x='160' y='156' font-size='12' fill='var(--ink)' text-anchor='middle'>Zn + 2HCl → ZnCl₂ + H₂</text><text x='160' y='178' font-size='12' fill='var(--ink)' text-anchor='middle'>Zn + 2NaOH → Na₂ZnO₂ + H₂</text><text x='160' y='196' font-size='10' fill='var(--muted)' text-anchor='middle'>(— : H₂ çıkmaz)</text></svg>",
-        "key": "Cu ve Ag, HNO₃ ile tepkimeye girer ama H₂ değil, NO ya da NO₂ çıkar."
+        "key": "Seyreltirken daima asit suya eklenir, su aside eklenmez. Cu ve Ag, HNO₃ ile tepkimeye girer ama H₂ değil, NO ya da NO₂ çıkar."
       },
       {
         "h": "Asidik, bazik ve amfoter oksitler",
-        "p": "Ametal oksitlerinin çoğu <b>asidiktir</b>: CO₂ ve SO₂ suyla asit oluşturur, bazlarla tepkimeye girer. Aktif metal oksitleri <b>baziktir</b>: Na₂O ve CaO suyla baz oluşturur. Al₂O₃ ve ZnO <b>amfoterdir</b>; hem asitle hem bazla tepkimeye girer. CO, NO ve N₂O ise <b>nötrdür</b>.",
+        "p": "Ametal oksitlerinin çoğu <b>asidiktir</b> (CO₂, SO₂); aktif metal oksitleri <b>baziktir</b> (Na₂O, CaO). Al₂O₃ ve ZnO <b>amfoterdir</b>; CO, NO, N₂O <b>nötrdür</b>.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='8' width='148' height='88' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)' stroke-width='1.2'/><rect x='164' y='8' width='148' height='88' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)' stroke-width='1.2'/><rect x='8' y='104' width='148' height='88' rx='6' fill='var(--c5)' fill-opacity='0.08' stroke='var(--c5)' stroke-width='1.2'/><rect x='164' y='104' width='148' height='88' rx='6' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)' stroke-width='1.2'/><text x='82' y='28' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Asidik oksit</text><text x='82' y='46' font-size='11' fill='var(--muted)' text-anchor='middle'>ametal: CO₂, SO₂, SO₃</text><text x='82' y='68' font-size='12' fill='var(--ink)' text-anchor='middle'>CO₂ + H₂O → H₂CO₃</text><text x='82' y='86' font-size='11' fill='var(--muted)' text-anchor='middle'>baz ile tuz verir</text><text x='238' y='28' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Bazik oksit</text><text x='238' y='46' font-size='11' fill='var(--muted)' text-anchor='middle'>aktif metal: Na₂O, CaO</text><text x='238' y='68' font-size='12' fill='var(--ink)' text-anchor='middle'>CaO + H₂O → Ca(OH)₂</text><text x='238' y='86' font-size='11' fill='var(--muted)' text-anchor='middle'>asit ile tuz verir</text><text x='82' y='124' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Amfoter oksit</text><text x='82' y='142' font-size='11' fill='var(--muted)' text-anchor='middle'>Al₂O₃, ZnO</text><text x='82' y='164' font-size='12' fill='var(--ink)' text-anchor='middle'>hem asitle</text><text x='82' y='182' font-size='12' fill='var(--ink)' text-anchor='middle'>hem bazla tepkime</text><text x='238' y='124' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Nötr oksit</text><text x='238' y='142' font-size='11' fill='var(--muted)' text-anchor='middle'>CO, NO, N₂O</text><text x='238' y='164' font-size='12' fill='var(--ink)' text-anchor='middle'>su, asit ve bazla</text><text x='238' y='182' font-size='12' fill='var(--ink)' text-anchor='middle'>tuz oluşturmaz</text></svg>",
-        "key": "Asit yağmuru, havaya karışan SO₂ ve NO₂'nin yağmur suyunda asit oluşturmasıdır."
+        "key": "Asidik oksit suyla asit, bazik oksit suyla baz oluşturur. Asit yağmuru: havadaki SO₂ ve NO₂ yağmur suyunda asit oluşturur.",
+        "once": {
+          "soru": "CO₂ suda çözününce çözelti nasıl olur?",
+          "secenekler": [
+            {
+              "yazi": "Asidik",
+              "neden": "CO₂ suyla karbonik asit oluşturur; gazozun hafif ekşiliği buradan gelir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Bazik",
+              "neden": "Bazik çözelti metal oksitlerinden oluşur; C bir ametaldir."
+            },
+            {
+              "yazi": "Nötr",
+              "neden": "CO₂ suyla tepkimeye girip asit oluşturur."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",

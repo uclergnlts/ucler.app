@@ -3,11 +3,11 @@
  "ders": "kimya",
  "konu": "asit-baz",
  "baslik": "Asitler, bazlar ve tuzlar",
- "ozet": "pH ölçeğini gez, asidi bazla nötralleştir, tamponun pH'ı nasıl koruduğunu gör.",
+ "ozet": "Önce dene, sonra adını öğren: pH ölçeğini gez, asidi bazla nötralleştir, tamponu sına.",
  "adimlar": [
   {
    "baslik": "pH ölçeği",
-   "metin": "Ölçekte gez ve turnusolu <b>maviye</b> çeviren bir madde bul.",
+   "metin": "pH 7 nötrdür. Ölçekte gez ve turnusolu <b>maviye</b> çeviren bir madde bul.",
    "sahne": {
     "tur": "kim6-ph"
    },
@@ -33,13 +33,7 @@
     },
     "tamam": "pH 7'nin üstündeki maddeler baziktir ve turnusolu maviye çevirir: sabun, amonyak, çamaşır suyu."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "p": 2
-    },
-    "not": "pH 2: limon suyu <b>asidik</b>, turnusolu kırmızıya çevirir. pH 7'nin altındaki her madde asidiktir."
-   }
+   "kart": 5
   },
   {
    "baslik": "pH laboratuvarı",
@@ -161,17 +155,17 @@
       "neden": "CH₃COOH'ta 4 H var ama yalnız biri proton olarak verilebilir. Kuvvet, verilen protonun oranıyla ilgilidir."
      },
      {
-      "yazi": "Moleküllerinin çoğunun iyonlaşmaması",
+      "yazi": "Az iyonlaşması",
       "neden": "0,1 M sirke asidinin yalnızca yüzde 1 kadarı iyonlaşır; çözeltide az H₃O⁺ olur, pH ≈ 2,9 ve lamba sönüktür. HCl'nin tamamı iyonlaşır: pH 1.",
       "dogru": true
      }
     ]
    },
-   "kart": 5
+   "kart": 6
   },
   {
    "baslik": "Nötralleşme",
-   "metin": "Büretten 0,1 M NaOH ekleyerek 25 mL 0,1 M HCl'yi tam <b>eşdeğerlik noktasına</b> getir. Kapta fenolftalein var.",
+   "metin": "Büretten 0,1 M NaOH ekleyerek 25 mL 0,1 M HCl'yi tam nötralleştir: asit ve bazın mol sayıları <b>eşit</b> olsun. Kapta fenolftalein var.",
    "sahne": {
     "tur": "kim6-titrasyon"
    },
@@ -197,13 +191,7 @@
     "ipucu": "Asit ve bazın mol sayıları eşit olmalı: 25 mL × 0,1 M = 2,5 mmol.",
     "tamam": "2,5 mmol NaOH, 2,5 mmol HCl'yi tam nötralleştirdi: NaCl + H₂O, pH 7. Eşdeğerliğin hemen ardından pH hızla sıçrar ve fenolftalein pembeleşir. Bu yönteme <b>titrasyon</b> denir."
    },
-   "kart": 10,
-   "goster": {
-    "deger": {
-     "V": 10
-    },
-    "not": "10 mL NaOH 1 mmol HCl'yi nötralleştirdi; 1,5 mmol asit hâlâ duruyor: pH ≈ 1,4, çözelti hâlâ asidik."
-   }
+   "kart": 9
   },
   {
    "baslik": "Tuz her zaman nötr mü?",
@@ -231,11 +219,11 @@
      }
     ]
    },
-   "kart": 10
+   "kart": 11
   },
   {
    "baslik": "Tampon",
-   "metin": "İki kaba aynı miktarda HCl ekle ve pH'larının nasıl değiştiğine bak.",
+   "metin": "Kaplardan birinde sirke asidi ile sodyum asetat karışımı, yani bir <b>tampon</b> var. İki kaba aynı miktarda HCl ekle ve pH'larının nasıl değiştiğine bak.",
    "sahne": {
     "tur": "kim6-tampon"
    },
@@ -256,7 +244,7 @@
     "soru": "Tamponun pH'ı neden bu kadar az değişiyor?",
     "secenekler": [
      {
-      "yazi": "Asetat iyonu eklenen H₃O⁺'yu tutuyor",
+      "yazi": "Asetat iyonu H₃O⁺'yu tutuyor",
       "neden": "CH₃COO⁻ + H₃O⁺ → CH₃COOH + H₂O. Eklenen asit zayıf aside dönüşür, bu yüzden pH çok az düşer.",
       "dogru": true
      },
@@ -298,7 +286,7 @@
      }
     ]
    },
-   "kart": 13
+   "kart": 14
   }
  ],
  "kapanis": [
@@ -307,5 +295,6 @@
   "Kuvvetli asitler tamamen, zayıflar kısmen iyonlaşır; kuvvetli ile derişik aynı şey değildir.",
   "Asit + baz → tuz + su; tuz çözeltisi her zaman nötr değildir, tampon pH değişimini küçültür.",
   "Aktif metal + asit → tuz + H₂; Cu, Ag ve Au HCl ile H₂ vermez."
- ]
+ ],
+ "soruOnce": true
 }

@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "tork-denge",
  "baslik": "Tork, denge ve kütle merkezi",
- "ozet": "Kapıyı it, tahterevalliyi dengele, çubuğu kütle merkezinden as ve kutuları devir.",
+ "ozet": "Önce dene, sonra adını öğren: kapıyı it, tahterevalliyi dengele, çubuğu as ve kutuyu devir.",
  "adimlar": [
   {
    "baslik": "Tork: döndürme etkisi",
-   "metin": "Bu kapıyı açmak için 12 N·m tork gerekiyor. Elini öyle yerleştir ki <b>20 N</b> yetsin.",
+   "metin": "Döndürme etkisi, yani <b>tork</b> = kuvvet × menteşeye uzaklık. Bu kapıyı açmak için 12 N·m tork gerekiyor. Elini öyle yerleştir ki <b>20 N</b> yetsin.",
    "sahne": {
     "tur": "fiz7-kapi"
    },
@@ -34,13 +34,7 @@
     },
     "tamam": "d = 0,6 m'de F = 12 / 0,6 = 20 N yetiyor, daha uzakta daha da azı. Menteşeye 0,2 m yakın itersen 60 N gerekir."
    },
-   "kart": 1,
-   "goster": {
-    "deger": {
-     "d": 3
-    },
-    "not": "Elin menteşeden 0,3 m uzakta: 12 / 0,3 = <b>40 N</b> gerekiyor."
-   }
+   "kart": 1
   },
   {
    "baslik": "Açı da önemli",
@@ -71,13 +65,7 @@
     },
     "tamam": "θ = 90°'de τ = 20 · 0,5 · 1 = 10 N·m. Kuvvet anahtara dikken kuvvet kolu en uzundur (d = r)."
    },
-   "kart": 1,
-   "goster": {
-    "deger": {
-     "theta": 150
-    },
-    "not": "θ = 150°'de τ = 20 · 0,5 · sin150° = <b>5 N·m</b>: kuvvet kolu yalnızca 0,25 m."
-   }
+   "kart": 2
   },
   {
    "baslik": "Doğrultu menteşeden geçerse",
@@ -110,11 +98,11 @@
      }
     ]
    },
-   "kart": 1
+   "kart": 2
   },
   {
    "baslik": "Tahterevalli",
-   "metin": "Soldaki 300 N'luk çocuk destekten 2 m uzakta. 400 N'luk çocuğu tahterevalli <b>dengede</b> kalacak yere oturt.",
+   "metin": "Soldaki 300 N'luk çocuk destekten 2 m uzakta. Dengede iki yöndeki torklar eşittir. 400 N'luk çocuğu tahterevalli <b>dengede</b> kalacak yere oturt.",
    "sahne": {
     "tur": "fiz7-tahterevalli"
    },
@@ -138,17 +126,11 @@
     },
     "tamam": "400 · 1,5 = 600 N·m = 300 · 2. Zıt yönlü torklar eşit, Στ = 0. Ağır çocuk desteğe daha yakın oturur. Tahtanın ağırlığını saymazsak destek de 700 N yukarı iter, böylece ΣF = 0 olur."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "d": 8
-    },
-    "not": "400 N'luk çocuk 2 m'de: 400 · 2 = 800 N·m, soldaki 300 · 2 = 600 N·m'den büyük; tahterevalli onun tarafına iner."
-   }
+   "kart": 5
   },
   {
    "baslik": "Destek kuvvetleri",
-   "metin": "Aynı çubuk: 4 m, 40 N, iki ucundan destekli. 60 N'luk yükü kaydır ve B desteğinin taşıdığı kuvveti <b>65 N</b> yap.",
+   "metin": "4 m'lik, 40 N'luk düzgün çubuk iki ucundan destekli; ağırlığı ortasından etki eder. 60 N'luk yükü kaydır ve B desteğinin taşıdığı kuvveti <b>65 N</b> yap.",
    "sahne": {
     "tur": "fiz7-cubuk"
    },
@@ -172,13 +154,7 @@
     },
     "tamam": "A'ya göre: N<sub>B</sub> · 4 = 40 · 2 + 60 · 3, yani N<sub>B</sub> = 65 N. ΣF = 0'dan N<sub>A</sub> = 100 − 65 = 35 N: yük B'ye yaklaştıkça B daha çok taşır."
    },
-   "kart": 6,
-   "goster": {
-    "deger": {
-     "x": 2
-    },
-    "not": "Karttaki durum (yük A'dan 1 m): N<sub>B</sub> · 4 = 40 · 2 + 60 · 1, yani N<sub>B</sub> = <b>35 N</b>."
-   }
+   "kart": 6
   },
   {
    "baslik": "Kütle merkezi",
@@ -206,13 +182,7 @@
     },
     "tamam": "x<sub>KM</sub> = (2·0 + 6·4) / (2 + 6) = 3 m. Kütle merkezinden asılan çubuk dengede durur. Kütle merkezi ağır parçaya daha yakındır."
    },
-   "kart": 9,
-   "goster": {
-    "deger": {
-     "m": 3
-    },
-    "not": "Sağda 3 kg varken x<sub>KM</sub> = 3 · 4 / (2 + 3) = <b>2,4 m</b>. Asma noktası 3 m'de olduğu için çubuk sola yatıyor."
-   }
+   "kart": 9
   },
   {
    "baslik": "Ne zaman devrilir?",
@@ -240,7 +210,7 @@
      }
     ]
    },
-   "kart": 9
+   "kart": 10
   }
  ],
  "kapanis": [
@@ -249,5 +219,6 @@
   "Denge için <b>ΣF = 0</b> ve <b>Στ = 0</b> birlikte gerekir. Düzgün çubuğun ağırlığı ortasından etki eder.",
   "Kütle merkezi x<sub>KM</sub> = Σm·x / Σm; ağır parçaya daha yakındır.",
   "Ağırlık merkezinin düşeyi tabandan çıkarsa cisim devrilir. Alçak ağırlık merkezi ve geniş taban devrilmeyi zorlaştırır."
- ]
+ ],
+ "soruOnce": true
 }
