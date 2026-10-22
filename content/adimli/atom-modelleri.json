@@ -3,7 +3,7 @@
  "ders": "kimya",
  "konu": "atom-modelleri",
  "baslik": "Atom modellerinin tarihi",
- "ozet": "Katot ışınından altın levhaya, atom modellerini değiştiren deneyleri kendin yap.",
+ "ozet": "Önce dene, sonra adını öğren: katot ışınını saptır, altın levhaya ateş et, elektronu katman indir.",
  "adimlar": [
   {
    "baslik": "Katot ışınları",
@@ -31,7 +31,7 @@
      }
     ]
    },
-   "kart": 3
+   "kart": 4
   },
   {
    "baslik": "Üzümlü kek",
@@ -58,13 +58,7 @@
     },
     "tamam": "6 eksi yük, 6 artı yükü dengeler; atom bir bütün olarak yüksüzdür. Thomson'a göre artı yük kürenin her yerine yayılmıştı."
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "e": 4
-    },
-    "not": "4 elektron: eksi yük −4, artı yük +6. Atomun toplam yükü <b>+2</b>, yani nötr değil."
-   }
+   "kart": 4
   },
   {
    "baslik": "Altın levha deneyi",
@@ -78,7 +72,7 @@
     "soru": "Sence tanecikler ne yaptı?",
     "secenekler": [
      {
-      "yazi": "Çoğu düz geçti, bazıları saptı, çok azı geri döndü",
+      "yazi": "Çoğu geçti, azı geri döndü",
       "dogru": true,
       "neden": "Çoğunun düz geçmesi, atomun büyük kısmının boşluk olduğunu gösterir. Çizimde geri dönenler abartıldı: gerçekte yaklaşık 8000 taneciğin 1'i döndü."
      },
@@ -92,7 +86,7 @@
      }
     ]
    },
-   "kart": 5
+   "kart": 6
   },
   {
    "baslik": "Çekirdeğe nişan al",
@@ -124,13 +118,7 @@
     "tamam": "Yalnızca çekirdeğe çok yaklaşan tanecik, çekirdeğin artı yüküyle itilip geri döner. Çekirdek atomdan yaklaşık 100.000 kat küçük olduğu için bu çok nadirdir; taneciklerin çoğu boşluktan geçer.",
     "ipucu": "Uzaklığı azaltıp yeniden oynat."
    },
-   "kart": 7,
-   "goster": {
-    "deger": {
-     "b": 20
-    },
-    "not": "Tanecik çekirdeğin 20 birim uzağından geçti: itme zayıf kaldı, yalnızca yaklaşık <b>33°</b> saptı, geri dönmedi."
-   }
+   "kart": 7
   },
   {
    "baslik": "Bohr'un katmanları",
@@ -157,13 +145,7 @@
     },
     "tamam": "Elektron alt katmana inerken aradaki enerji farkını belirli bir renkte ışık olarak verdi: 3 → 2 inişi kırmızı (656 nm), 4 → 2 inişi mavi-yeşildir (486 nm). Bohr hidrojenin çizgi spektrumunu böyle açıkladı."
    },
-   "kart": 9,
-   "goster": {
-    "deger": {
-     "n": 4
-    },
-    "not": "Elektron 3. katmandan 4. katmana çıktı: bunun için enerji <b>aldı</b>. Işık, elektron alt katmana inerken yayılır."
-   }
+   "kart": 9
   },
   {
    "baslik": "Elektron bulutu",
@@ -188,12 +170,12 @@
     "soru": "Modern modele göre elektron için hangisi doğru?",
     "secenekler": [
      {
-      "yazi": "Yalnızca bir bölgede bulunma olasılığı bilinir",
+      "yazi": "Yeri yalnızca olasılıkla bilinir",
       "dogru": true,
       "neden": "Kuantum mekaniğine göre elektronun yeri ve hızı aynı anda kesin bilinemez; bu yüzden yalnız olasılık hesaplanır. Bulutun koyu yerlerinde bulunma olasılığı yüksektir."
      },
      {
-      "yazi": "Belirli bir çember üzerinde döner",
+      "yazi": "Bir çember üzerinde döner",
       "neden": "Bu Bohr'un fikriydi. Modern modelde kesin bir yörünge yoktur."
      },
      {
@@ -202,7 +184,7 @@
      }
     ]
    },
-   "kart": 9
+   "kart": 10
   }
  ],
  "kapanis": [
@@ -211,5 +193,6 @@
   "<b>Rutherford</b>: altın levha deneyi, atomun çoğunlukla boşluk olduğunu ve kütlenin küçük, artı yüklü bir çekirdekte toplandığını gösterdi (1909-1911).",
   "<b>Bohr</b> (1913): elektronlar belirli enerji katmanlarında dolanır; alt katmana inen elektron belirli renkte ışık yayar.",
   "<b>Modern model</b>: elektronun yeri kesin bilinemez; yalnızca bulunma olasılığı (orbital) hesaplanır."
- ]
+ ],
+ "soruOnce": true
 }

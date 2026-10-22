@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "kaldirma-kuvveti",
  "baslik": "Sıvıların kaldırma kuvveti",
- "ozet": "Taşı suya daldır, gemiyi yükle, denizaltıyı daldır, balonu uçur: Arşimet ilkesini yaparak öğren.",
+ "ozet": "Önce dene, sonra adını öğren: taşı suya daldır, gemiyi yükle, balonu kaldır.",
  "adimlar": [
   {
    "baslik": "Su neden yukarı iter?",
@@ -62,13 +62,7 @@
     },
     "tamam": "Gösterge 3 N'a indi: F<sub>k</sub> = 5 − 3 = 2 N. Sağlaması: V<sub>batan</sub>·d<sub>sıvı</sub>·g = 0,0002 m³ (200 cm³) × 1000 kg/m³ × 10 m/s² = 2 N."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "V": 100
-    },
-    "not": "Taşın 100 cm³'ü suda: F<sub>k</sub> = 0,0001 × 1000 × 10 = 1 N, gösterge 5 − 1 = <b>4 N</b>."
-   }
+   "kart": 3
   },
   {
    "baslik": "Derine in",
@@ -108,7 +102,7 @@
      }
     ]
    },
-   "kart": 3
+   "kart": 4
   },
   {
    "baslik": "Aynı cisim, farklı sıvılar",
@@ -136,13 +130,7 @@
     },
     "tamam": "0,6 / 1,2 = 1/2: küpün yarısı batık. Yüzdüğü her sıvıda F<sub>k</sub> = G = 6 N kalır; değişen yalnızca batan hacimdir, yoğun sıvıda cisim az batar."
    },
-   "kart": 6,
-   "goster": {
-    "deger": {
-     "dl": 15
-    },
-    "not": "1,5 g/cm³'lük sıvıda V<sub>batan</sub> / V = 0,6 / 1,5 = 0,4: küpün <b>%40</b>'ı batık."
-   }
+   "kart": 6
   },
   {
    "baslik": "Gemiyi yükle",
@@ -169,13 +157,7 @@
     },
     "tamam": "Her konteyner gemiyi biraz daha batırdı: artan ağırlığı dengelemek için gemi daha çok su yerinden etmeli. Yükleme çizgisi, gemiyi güvenle ne kadar batırabileceğini gösterir."
    },
-   "kart": 9,
-   "goster": {
-    "deger": {
-     "n": 2
-    },
-    "not": "2 konteynerle F<sub>k</sub> = 2000 + 600 = 2600 kN. Gemi biraz daha battı ama su henüz yükleme çizgisinde değil."
-   }
+   "kart": 9
   },
   {
    "baslik": "Denizaltı",
@@ -237,13 +219,7 @@
     },
     "tamam": "4 m³'te F<sub>k</sub> = 48 N, toplam ağırlık 40 + 6,8 = 46,8 N: balon yükselir. Her m³ helyum net yaklaşık 10 N kaldırır."
    },
-   "kart": 11,
-   "goster": {
-    "deger": {
-     "V": 3
-    },
-    "not": "3 m³'lük balonda F<sub>k</sub> ≈ 36 N, toplam ağırlık ≈ 40 + 5,1 = 45,1 N: balon yerden kalkmıyor."
-   }
+   "kart": 11
   }
  ],
  "kapanis": [
@@ -252,5 +228,6 @@
   "Tamamen batmış cismi derine indirmek F<sub>k</sub>'yı değiştirmez.",
   "Yüzen ve askıdaki cisimde F<sub>k</sub> = G; yüzen cisimde V<sub>batan</sub> / V = d<sub>cisim</sub> / d<sub>sıvı</sub>.",
   "Gemi çok su yerinden ederek yüzer, denizaltı ağırlığını değiştirerek dalar, balon havadan kaldırma kuvveti alarak uçar."
- ]
+ ],
+ "soruOnce": true
 }
