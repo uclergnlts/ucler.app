@@ -3,7 +3,7 @@
  "ders": "kimya",
  "konu": "kimya-bilimi",
  "baslik": "Kimyanın dili ve güvenliği",
- "ozet": "Formül kur, sembol çöz, tehlike işaretlerini tanı ve asidi güvenle seyrelt.",
+ "ozet": "Önce dene, sonra adını öğren: formül kur, sembol çöz, tehlike işaretlerini tanı.",
  "adimlar": [
   {
    "baslik": "Formülü kendin kur",
@@ -58,13 +58,7 @@
     },
     "tamam": "İki hidrojen, bir oksijen: H₂O. Oksijenin indisi 1 olduğu için yazılmaz. Su molekülü düz değil, açılıdır."
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "O": 3
-    },
-    "not": "Üç oksijen atomu: <b>O₃</b>, yani ozon. İndis 3, molekülde üç O atomu olduğunu söyler."
-   }
+   "kart": 4
   },
   {
    "baslik": "Bir atom, büyük fark",
@@ -111,17 +105,11 @@
     },
     "tamam": "CO₂: karbon dioksit. Tek bir oksijen farkı büyük: CO kandaki hemoglobine yapışıp oksijen taşınmasını engeller, CO₂ ise soluduğun havada zaten vardır."
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "O": 0
-    },
-    "not": "Oksijeni çıkarınca geriye yalnızca <b>C</b>, karbon atomu kalır. Her atom maddenin kimliğini değiştirir."
-   }
+   "kart": 4
   },
   {
    "baslik": "Sembolü çöz",
-   "metin": "Bazı semboller elementin Latince adından gelir. Kartta görmediğin bir sembolü çöz.",
+   "metin": "Bazı semboller elementin Latince adından gelir: demir Fe (<i>ferrum</i>), altın Au (<i>aurum</i>). Şu sembolü çöz.",
    "sahne": {
     "tur": "element-sembol",
     "sembol": "Sn",
@@ -279,7 +267,7 @@
      }
     ]
    },
-   "kart": 7
+   "kart": 8
   }
  ],
  "kapanis": [
@@ -288,5 +276,6 @@
   "Bazı semboller Latince addan gelir: Fe (<i>ferrum</i>), Au (<i>aurum</i>), Pb (<i>plumbum</i>).",
   "Kırmızı çerçeveli baklava işaretler tehlikeyi anlatır: alev yanıcı, alevli daire yakıcı (oksitleyici) maddedir.",
   "Asit seyreltilirken <b>asit suya</b> yavaşça eklenir, tersi yapılmaz."
- ]
+ ],
+ "soruOnce": true
 }

@@ -3,34 +3,63 @@
  "ders": "biyoloji",
  "konu": "biyomolekuller",
  "baslik": "Biyomoleküller",
- "ozet": "Glikozlardan zincir kur ve suyla parçala, yağın enerjisini tart, proteinin şeklini ve DNA ile RNA'yı karşılaştır.",
+ "ozet": "Önce dene, sonra adını öğren: zincir kur ve parçala, yağı tart, proteini boz, DNA ile RNA'yı karşılaştır.",
  "adimlar": [
   {
    "baslik": "Birleşirken su çıkar",
    "metin": "Glikoz ekleyerek <b>5 glikozluk</b> bir zincir kur ve her bağda ne olduğuna bak.",
-   "sahne": { "tur": "polimer" },
-   "deger": { "n": 1, "su": 0 },
-   "kontroller": [ { "ad": "n", "etiket": "Glikoz", "min": 1, "max": 8, "tur": "sayac" } ],
+   "sahne": {
+    "tur": "polimer"
+   },
+   "deger": {
+    "n": 1,
+    "su": 0
+   },
+   "kontroller": [
+    {
+     "ad": "n",
+     "etiket": "Glikoz",
+     "min": 1,
+     "max": 8,
+     "tur": "sayac"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "n": 5 },
+    "hedef": {
+     "n": 5
+    },
     "tamam": "5 glikoz arasında 4 bağ kuruldu ve her bağda bir su molekülü ayrıldı."
    },
-   "kart": 2,
-   "goster": { "deger": { "n": 3 }, "not": "3 glikoz arasında 2 bağ kuruldu ve her bağda bir su ayrıldı: <b>2 su</b>." }
+   "kart": 2
   },
   {
    "baslik": "Kaç su?",
    "metin": "Kural hep aynı: her bağ için bir su.",
-   "sahne": { "tur": "polimer" },
-   "deger": { "n": 6, "su": 0 },
+   "sahne": {
+    "tur": "polimer"
+   },
+   "deger": {
+    "n": 6,
+    "su": 0
+   },
    "gorev": {
     "tur": "secim",
     "soru": "100 glikozluk düz bir zincir kurulurken kaç su molekülü çıkar?",
     "secenekler": [
-     { "yazi": "99", "dogru": true, "neden": "Düz bir zincirde bağ sayısı birim sayısından bir eksiktir: 100 − 1 = 99 bağ, 99 su." },
-     { "yazi": "100", "neden": "Ekrandaki 6 glikoza bak: kaç bağ var? Bağ sayısı birim sayısından bir eksik." },
-     { "yazi": "50", "neden": "Su, her iki komşu birim arasındaki bağda çıkar; birimleri ikişer ikişer saymıyoruz." }
+     {
+      "yazi": "99",
+      "dogru": true,
+      "neden": "Düz bir zincirde bağ sayısı birim sayısından bir eksiktir: 100 − 1 = 99 bağ, 99 su."
+     },
+     {
+      "yazi": "100",
+      "neden": "Ekrandaki 6 glikoza bak: kaç bağ var? Bağ sayısı birim sayısından bir eksik."
+     },
+     {
+      "yazi": "50",
+      "neden": "Su, her iki komşu birim arasındaki bağda çıkar; birimleri ikişer ikişer saymıyoruz."
+     }
     ]
    },
    "kart": 4
@@ -38,12 +67,27 @@
   {
    "baslik": "Hidroliz",
    "metin": "Şimdi tersini yap: zincire <b>su ekle</b>.",
-   "sahne": { "tur": "polimer" },
-   "deger": { "n": 5, "su": 0 },
-   "kontroller": [ { "ad": "su", "etiket": "Su ekle", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "sahne": {
+    "tur": "polimer"
+   },
+   "deger": {
+    "n": 5,
+    "su": 0
+   },
+   "kontroller": [
+    {
+     "ad": "su",
+     "etiket": "Su ekle",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "su": 1 },
+    "hedef": {
+     "su": 1
+    },
     "tamam": "4 su girdi, 4 bağ kırıldı ve 5 glikoz serbest kaldı. Sindirimde nişasta böyle glikoza ayrılır."
    },
    "kart": 2
@@ -51,47 +95,104 @@
   {
    "baslik": "Yağ: yoğun enerji",
    "metin": "Alttaki çubuk 25 g karbonhidratın verdiği 100 kcal. Aynı enerji için kaç gram yağ gerekir? Sürgüyü <b>100 kcal</b>'a en yakın yere getir.",
-   "sahne": { "tur": "enerji-yag" },
-   "deger": { "g": 0 },
-   "kontroller": [ { "ad": "g", "etiket": "Yağ", "min": 0, "max": 30, "birim": "g" } ],
+   "sahne": {
+    "tur": "enerji-yag"
+   },
+   "deger": {
+    "g": 0
+   },
+   "kontroller": [
+    {
+     "ad": "g",
+     "etiket": "Yağ",
+     "min": 0,
+     "max": 30,
+     "birim": "g"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "g": 11 },
+    "hedef": {
+     "g": 11
+    },
     "tamam": "11 g yağ ≈ 99 kcal, karbonhidratta ise 25 g gerekiyor: aynı enerjiyi yarıdan az kütleyle taşırsın. Uzun süreli depo bu yüzden yağdır."
    },
-   "kart": 5,
-   "goster": { "deger": { "g": 5 }, "not": "5 g yağ × 9 kcal = <b>45 kcal</b>: karbonhidratın 100 kcal'ine henüz yetmiyor." }
+   "kart": 5
   },
   {
    "baslik": "Proteinin şekli",
-   "metin": "Hemoglobinin β zincirindeki 6. amino asidi (glutamik asit) değiştir.",
-   "sahne": { "tur": "protein" },
-   "deger": { "deg": 0 },
-   "kontroller": [ { "ad": "deg", "etiket": "6. amino asidi değiştir", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "metin": "Proteinler, amino asitlerin dizildiği zincirlerdir. Kanda oksijen taşıyan hemoglobinin bir zincirinde 6. amino asidi değiştir.",
+   "sahne": {
+    "tur": "protein"
+   },
+   "deger": {
+    "deg": 0
+   },
+   "kontroller": [
+    {
+     "ad": "deg",
+     "etiket": "6. amino asidi değiştir",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
    "gorev": {
     "tur": "secim",
     "soru": "Tek bir amino asit değişince ne oldu?",
     "secenekler": [
-     { "yazi": "Proteinin şekli ve görevi bozuldu", "dogru": true, "neden": "Bu, <b>orak hücre anemisidir</b>: glutamik asit yerine valin gelince hemoglobinler birbirine yapışır. Alyuvar orak biçimini alır ve oksijen taşıması aksar." },
-     { "yazi": "Hiçbir şey değişmedi", "neden": "Değiştirince alyuvara ne oldu? Sıra değişirse şekil de değişebilir." },
-     { "yazi": "Protein yağa dönüştü", "neden": "Hâlâ bir protein; değişen yalnızca sırası, dolayısıyla şekli ve görevi." }
+     {
+      "yazi": "Şekli ve görevi bozuldu",
+      "dogru": true,
+      "neden": "Bu, <b>orak hücre anemisidir</b>: glutamik asit yerine valin gelince hemoglobinler birbirine yapışır. Alyuvar orak biçimini alır ve oksijen taşıması aksar."
+     },
+     {
+      "yazi": "Hiçbir şey değişmedi",
+      "neden": "Değiştirince alyuvara ne oldu? Sıra değişirse şekil de değişebilir."
+     },
+     {
+      "yazi": "Yağa dönüştü",
+      "neden": "Hâlâ bir protein; değişen yalnızca sırası, dolayısıyla şekli ve görevi."
+     }
     ]
    },
    "kart": 8
   },
   {
    "baslik": "DNA ve RNA",
-   "metin": "RNA'ya geç ve bazları karşılaştır.",
-   "sahne": { "tur": "nukleik" },
-   "deger": { "tur": 0 },
-   "kontroller": [ { "ad": "tur", "etiket": "RNA'yı göster", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "metin": "Kalıtsal bilgiyi iki molekül taşır: DNA ve RNA. Ekranda DNA'nın bazları var; RNA'ya geç ve bazları karşılaştır.",
+   "sahne": {
+    "tur": "nukleik"
+   },
+   "deger": {
+    "tur": 0
+   },
+   "kontroller": [
+    {
+     "ad": "tur",
+     "etiket": "RNA'yı göster",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
    "gorev": {
     "tur": "secim",
     "soru": "Hangi baz yalnızca RNA'da bulunur?",
     "secenekler": [
-     { "yazi": "Urasil (U)", "dogru": true, "neden": "Urasil de timin gibi adeninle eşleşir; timinden yalnızca bir metil grubu eksiktir." },
-     { "yazi": "Timin (T)", "neden": "Timin DNA'ya özgüdür. RNA'da onun yerinde hangi baz var?" },
-     { "yazi": "Adenin (A)", "neden": "Adenin hem DNA'da hem RNA'da bulunur." }
+     {
+      "yazi": "Urasil (U)",
+      "dogru": true,
+      "neden": "Urasil de timin gibi adeninle eşleşir; timinden yalnızca bir metil grubu eksiktir."
+     },
+     {
+      "yazi": "Timin (T)",
+      "neden": "Timin DNA'ya özgüdür. RNA'da onun yerinde hangi baz var?"
+     },
+     {
+      "yazi": "Adenin (A)",
+      "neden": "Adenin hem DNA'da hem RNA'da bulunur."
+     }
     ]
    },
    "kart": 10
@@ -103,5 +204,6 @@
   "Yağ gramda yaklaşık 9 kcal, karbonhidrat yaklaşık 4 kcal verir; yağ uzun süreli depodur.",
   "Protein: amino asit sırası → katlanma → şekil → görev. Tek bir değişiklik görevi bozabilir.",
   "DNA çift zincir, deoksiriboz, A-T-G-C; RNA genelde tek zincir, riboz, T yerine U."
- ]
+ ],
+ "soruOnce": true
 }

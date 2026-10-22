@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "madde-ozellikleri",
  "baslik": "Madde ve özellikleri",
- "ozet": "Tart, dök, karıştır: özkütleyi ve maddeyi tanıtan özellikleri keşfet.",
+ "ozet": "Önce dene, sonra adını öğren: tart, dök, karıştır ve özkütleyi kendin bul.",
  "adimlar": [
   {
    "baslik": "Hangisi ağır basar?",
@@ -60,13 +60,7 @@
     },
     "tamam": "50 cm³ su 50 g geldi. Hacim değişince kütle de aynı oranda değişti, ama m / V hep 1 g/cm³ kaldı: özkütle, maddenin miktarına bağlı değildir."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "V": 30
-    },
-    "not": "30 cm³ su 30 g geliyor: m / V = 30 / 30 = <b>1 g/cm³</b>."
-   }
+   "kart": 3
   },
   {
    "baslik": "Kütle-hacim grafiği",
@@ -93,11 +87,11 @@
      }
     ]
    },
-   "kart": 3
+   "kart": 4
   },
   {
    "baslik": "Yüzer mi, batar mı?",
-   "metin": "Özkütle, bir cismin suda yüzüp yüzmeyeceğini de söyler. Cismin özkütlesini değiştir ve onu suyun içinde askıda bırak.",
+   "metin": "Cismin özkütlesini değiştir ve onu suyun içinde askıda bırak.",
    "sahne": {
     "tur": "fiz-yuzme"
    },
@@ -121,13 +115,7 @@
     },
     "tamam": "Cismin (ortalama) özkütlesi suyunkine eşit olunca askıda kalır; küçükse yüzer, büyükse batar. İçi boş cisimde ortalama özkütle sayılır: çelik gemi bu yüzden yüzer, ayrıntısı Kaldırma kuvveti konusunda."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "d": 15
-    },
-    "not": "Özkütlesi 1,5 g/cm³ olan cisim sudan (1 g/cm³) yoğun olduğu için <b>batıyor</b>."
-   }
+   "kart": 4
   },
   {
    "baslik": "Karışımın özkütlesi",
@@ -156,17 +144,11 @@
     },
     "tamam": "Eşit hacimde karıştırınca sonuç iki özkütlenin ortalaması olur: (100 + 80) g ÷ 200 cm³ = 0,9 g/cm³."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "a": 50
-    },
-    "not": "50 cm³ alkolle: (100 + 40) g ÷ 150 cm³ ≈ <b>0,93 g/cm³</b>. Sonuç, hacmi çok olan suya daha yakın."
-   }
+   "kart": 5
   },
   {
    "baslik": "Kılcallık",
-   "metin": "Az önce gördüğün gibi su cama, kendini tuttuğundan daha güçlü yapışır. Üç cam boruyu suya daldırıyorsun.",
+   "metin": "Su cama, kendi taneciklerini tuttuğundan daha güçlü yapışır. Üç cam boruyu suya daldırıyorsun.",
    "sahne": {
     "tur": "fiz-kilcal",
     "sure": 3
@@ -199,5 +181,6 @@
   "<b>Ortalama</b> özkütlesi sudan küçük cisim yüzer, eşit olan askıda kalır, büyük olan batar.",
   "Karışımın özkütlesi d = m<sub>toplam</sub> / V<sub>son</sub>; sonuç iki özkütle arasındadır.",
   "Yapışma ile tutmanın farkı <b>kılcallığı</b> doğurur; ince boruda su daha çok yükselir."
- ]
+ ],
+ "soruOnce": true
 }
