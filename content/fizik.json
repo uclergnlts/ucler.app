@@ -3830,69 +3830,159 @@
     "cards": [
       {
         "h": "Momentum: kütle × hız",
-        "p": "<b>Momentum</b> <em>(momentum)</em>, kütle ile hızın çarpımıdır: <b>p = m·v</b>. Birimi kg·m/s'dir. Yavaş giden bir kamyonu durdurmak, hızlı atılan bir topu tutmaktan çok daha zordur: kamyonun kütlesi büyük olduğu için momentumu da büyüktür.",
+        "p": "<b>Momentum</b> kütle ile hızın çarpımıdır: <b>p = m·v</b>, birimi kg·m/s. Yavaş kamyonu durdurmak hızlı topu tutmaktan zordur: kütlesi büyük olduğundan momentumu büyüktür.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='mom-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><text x='160' y='32' font-size='22' fill='var(--acc)' text-anchor='middle' font-weight='bold'>p = m·v</text><rect x='30' y='62' width='60' height='30' rx='3' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><rect x='90' y='70' width='22' height='22' rx='3' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1.5'/><circle cx='48' cy='98' r='6' fill='var(--ink)' fill-opacity='0.6' stroke='var(--ink)' stroke-width='1.5'/><circle cx='98' cy='98' r='6' fill='var(--ink)' fill-opacity='0.6' stroke='var(--ink)' stroke-width='1.5'/><line x1='122' y1='78' x2='162' y2='78' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#mom-1)'/><text x='142' y='68' font-size='12' fill='var(--c1)' text-anchor='middle'>2 m/s</text><text x='70' y='120' font-size='12' fill='var(--muted)' text-anchor='middle'>kamyon</text><text x='178' y='74' font-size='12' fill='var(--ink)' text-anchor='start'>2000 kg × 2 m/s</text><text x='178' y='92' font-size='13' fill='var(--c1)' text-anchor='start' font-weight='bold'>p = 4000 kg·m/s</text><circle cx='70' cy='145' r='10' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1.5'/><text x='40' y='149' font-size='12' fill='var(--muted)' text-anchor='end'>top</text><line x1='88' y1='145' x2='160' y2='145' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#mom-2)'/><text x='124' y='135' font-size='12' fill='var(--c2)' text-anchor='middle'>20 m/s</text><text x='178' y='141' font-size='12' fill='var(--ink)' text-anchor='start'>0,4 kg × 20 m/s</text><text x='178' y='159' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='bold'>p = 8 kg·m/s</text><text x='160' y='190' font-size='12' fill='var(--muted)' text-anchor='middle'>yavaş ama ağır kamyonun momentumu çok büyük</text></svg>",
         "key": "p = m·v; birimi kg·m/s. Hızlı olmak tek başına büyük momentum demek değildir."
       },
       {
         "h": "Momentum bir vektördür",
-        "p": "Momentum, hızla <b>aynı yöndedir</b>. Tek boyutta bir yönü + seç, tersini − say. Momentumlar <b>vektörel</b> toplanır: aynı büyüklükte momentumla zıt yönlerde giden iki cismin toplam momentumu sıfırdır, oysa ikisi de hareket ediyordur.",
+        "p": "Momentum hızla <b>aynı yöndedir</b>: bir yönü + seç, tersini − say. Momentumlar <b>vektörel</b> toplanır; eşit ve zıt momentumlu iki cismin toplamı sıfırdır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='mom-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><text x='160' y='28' font-size='12' fill='var(--muted)' text-anchor='middle'>sağ yön: +, sol yön: −</text><rect x='50' y='65' width='40' height='34' rx='3' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><text x='70' y='87' font-size='12' fill='var(--ink)' text-anchor='middle'>2 kg</text><line x1='92' y1='82' x2='142' y2='82' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#mom-3)'/><text x='117' y='72' font-size='12' fill='var(--c1)' text-anchor='middle'>3 m/s</text><rect x='230' y='65' width='40' height='34' rx='3' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.5'/><text x='250' y='87' font-size='12' fill='var(--ink)' text-anchor='middle'>3 kg</text><line x1='228' y1='82' x2='178' y2='82' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#mom-4)'/><text x='203' y='72' font-size='12' fill='var(--c2)' text-anchor='middle'>2 m/s</text><text x='70' y='125' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='bold'>p₁ = +6 kg·m/s</text><text x='250' y='125' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='bold'>p₂ = −6 kg·m/s</text><text x='160' y='160' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='bold'>toplam: (+6) + (−6) = 0</text><text x='160' y='186' font-size='12' fill='var(--muted)' text-anchor='middle'>ikisi de hareketli, toplam momentum yine sıfır</text></svg>",
-        "key": "Hesaba başlamadan + yönü seç; zıt yöndeki hız ve momentum eksi işaretli olur."
+        "key": "Hesaba başlamadan + yönü seç; zıt yöndeki hız ve momentum eksi işaretli olur.",
+        "once": {
+          "soru": "1 kg'lık iki top birbirine doğru 3 m/s ile geliyor. Toplam momentum kaç kg·m/s?",
+          "secenekler": [
+            {
+              "yazi": "0",
+              "neden": "Momentumlar zıt yönlü: +3 ve −3'ün toplamı sıfır.",
+              "dogru": true
+            },
+            {
+              "yazi": "6",
+              "neden": "Zıt yönlü momentumlar toplanmaz, birbirini götürür."
+            },
+            {
+              "yazi": "3",
+              "neden": "İki top eşit büyüklükte, zıt yönlü momentum taşır."
+            }
+          ]
+        }
       },
       {
         "h": "İtme: I = F·Δt = Δp",
-        "p": "Net kuvvetin bir süre boyunca etki etmesine <b>itme</b> <em>(impulse)</em> denir: <b>I = F·Δt</b>. İtme, cismin momentum değişimine eşittir: <b>I = Δp</b>. Birimi N·s'dir ve kg·m/s ile aynıdır. Kuvvet değişiyorsa ortalama kuvveti kullan.",
+        "p": "Net kuvvetin bir süre etki etmesi <b>itmedir</b>: <b>I = F·Δt</b>. İtme momentum değişimine eşittir: <b>I = Δp</b>. Birimi N·s, yani kg·m/s.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker><marker id='mom-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker></defs><text x='160' y='28' font-size='12' fill='var(--muted)' text-anchor='middle'>0,5 kg top, sürtünmesiz yüzey</text><circle cx='45' cy='85' r='14' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><text x='45' y='125' font-size='12' fill='var(--ink)' text-anchor='middle'>önce: v = 0</text><line x1='70' y1='85' x2='140' y2='85' stroke='var(--c2)' stroke-width='3' marker-end='url(#mom-5)'/><text x='105' y='72' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>F = 50 N</text><text x='105' y='106' font-size='12' fill='var(--c2)' text-anchor='middle'>Δt = 0,1 s</text><circle cx='185' cy='85' r='14' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><line x1='205' y1='85' x2='275' y2='85' stroke='var(--c3)' stroke-width='2.5' marker-end='url(#mom-6)'/><text x='240' y='72' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>10 m/s</text><text x='210' y='125' font-size='12' fill='var(--ink)' text-anchor='middle'>sonra: v = 10 m/s</text><line x1='20' y1='140' x2='300' y2='140' stroke='var(--line)' stroke-width='1'/><text x='160' y='162' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>I = F·Δt = 50 × 0,1 = 5 N·s</text><text x='160' y='186' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='bold'>Δp = 0,5 × 10 − 0 = 5 kg·m/s</text></svg>",
-        "key": "İtme de vektördür; yönü net kuvvetin, yani Δp'nin yönüdür."
+        "key": "İtme de vektördür; yönü net kuvvetin, yani Δp'nin yönüdür. Kuvvet değişiyorsa ortalama kuvveti kullan.",
+        "once": {
+          "soru": "Duran bir topa 0,1 s boyunca 50 N kuvvet uygulanıyor. Momentumu kaç kg·m/s olur?",
+          "secenekler": [
+            {
+              "yazi": "5",
+              "neden": "I = F·Δt = 50·0,1 = 5 N·s; momentum değişimi buna eşittir.",
+              "dogru": true
+            },
+            {
+              "yazi": "500",
+              "neden": "Kuvvet süreyle çarpılır, bölünmez."
+            },
+            {
+              "yazi": "50",
+              "neden": "Kuvvet tek başına momentum değildir; süreyle çarpılır."
+            }
+          ]
+        }
       },
       {
         "h": "F–t grafiğinin altı = itme",
-        "p": "Kuvvet zamanla değişiyorsa itmeyi <b>F–t grafiğinin altındaki alan</b> verir; bu alan momentum değişimine eşittir. Zaman ekseninin altında kalan alan ters yönde itmedir, toplamdan çıkarılır. Sabit kuvvette alan bir dikdörtgendir: F·Δt.",
+        "p": "Kuvvet değişiyorsa itmeyi <b>F–t grafiğinin altındaki alan</b> verir. Eksenin altında kalan alan ters yönde itmedir, çıkarılır. Sabit kuvvette alan dikdörtgendir: F·Δt.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><polygon points='40,160 110,70 180,70 250,160' fill='var(--acc)' fill-opacity='0.2' stroke='var(--acc)' stroke-width='2.5'/><line x1='40' y1='160' x2='295' y2='160' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#mom-7)'/><line x1='40' y1='160' x2='40' y2='22' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#mom-7)'/><text x='48' y='26' font-size='12' fill='var(--muted)' text-anchor='start'>F (N)</text><text x='300' y='190' font-size='12' fill='var(--muted)' text-anchor='end'>t (s)</text><line x1='40' y1='70' x2='110' y2='70' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><text x='34' y='74' font-size='12' fill='var(--muted)' text-anchor='end'>20</text><text x='110' y='176' font-size='12' fill='var(--muted)' text-anchor='middle'>2</text><text x='180' y='176' font-size='12' fill='var(--muted)' text-anchor='middle'>4</text><text x='250' y='176' font-size='12' fill='var(--muted)' text-anchor='middle'>6</text><text x='145' y='120' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>alan = itme</text><text x='145' y='140' font-size='12' fill='var(--ink)' text-anchor='middle'>20 + 40 + 20 = 80 N·s</text><text x='300' y='40' font-size='13' fill='var(--acc)' text-anchor='end' font-weight='bold'>I = Δp = 80 N·s</text></svg>",
-        "key": "F–t alanı = itme = Δp. (F–x alanı ise iştir; ikisini karıştırma.)"
+        "key": "F–t alanı = itme = Δp. (F–x alanı ise iştir; ikisini karıştırma.)",
+        "once": {
+          "soru": "F–t grafiğinde kuvvet 4 s boyunca 0'dan 10 N'a düzgün artıyor. İtme kaç N·s?",
+          "secenekler": [
+            {
+              "yazi": "20",
+              "neden": "Alan bir üçgen: ½ · 4 · 10 = 20 N·s.",
+              "dogru": true
+            },
+            {
+              "yazi": "40",
+              "neden": "Bu dikdörtgen olurdu; kuvvet hep 10 N değil."
+            },
+            {
+              "yazi": "10",
+              "neden": "İtme kuvvet değil, alandır; süreyi de hesaba kat."
+            }
+          ]
+        }
       },
       {
         "h": "Süreyi uzat, kuvveti azalt",
-        "p": "Hızlı giden bir cismi durdurmak için gereken Δp bellidir. <b>F = Δp / Δt</b> olduğundan çarpışma süresi uzarsa ortalama kuvvet küçülür. Hava yastığı, kasktaki köpük ve yere atlarken dizlerini bükmen bu yüzden seni korur.",
+        "p": "Durdurmak için gereken Δp bellidir. <b>F = Δp / Δt</b> olduğundan süre uzarsa kuvvet küçülür. Hava yastığı, kask köpüğü ve diz bükmek bu yüzden korur.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><polygon points='50,170 65,50 80,170' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='2'/><polygon points='110,170 155,130 200,170' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='2'/><line x1='40' y1='170' x2='300' y2='170' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#mom-8)'/><line x1='40' y1='170' x2='40' y2='22' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#mom-8)'/><text x='48' y='26' font-size='12' fill='var(--muted)' text-anchor='start'>F</text><text x='300' y='190' font-size='12' fill='var(--muted)' text-anchor='end'>t</text><text x='74' y='64' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='bold'>sert zemin</text><text x='170' y='128' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='bold'>hava yastığı</text><text x='300' y='30' font-size='12' fill='var(--ink)' text-anchor='end'>iki alan eşit → aynı Δp</text><text x='300' y='50' font-size='12' fill='var(--c2)' text-anchor='end'>kısa Δt → büyük F</text><text x='300' y='70' font-size='12' fill='var(--c3)' text-anchor='end'>uzun Δt → küçük F</text></svg>",
         "key": "Hava yastığı itmeyi (Δp'yi) azaltmaz; süreyi uzatıp kuvveti azaltır."
       },
       {
         "h": "2. yasanın momentum hâli",
-        "p": "Newton'un 2. yasasının genel hâli: <b>F<sub>net</sub> = Δp / Δt</b>. Net kuvvet, momentumun ne hızla değiştiğini söyler. Kütle sabitse Δp = m·Δv olur ve Δv / Δt = a olduğundan tanıdık <b>F = m·a</b> çıkar. Net kuvvet sıfırsa momentum değişmez.",
+        "p": "2. yasanın genel hâli: <b>F<sub>net</sub> = Δp / Δt</b>. Kütle sabitse Δp = m·Δv olur ve <b>F = m·a</b> çıkar. Net kuvvet sıfırsa momentum değişmez.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--muted)'/></marker></defs><rect x='85' y='22' width='150' height='36' rx='6' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.5'/><text x='160' y='46' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='bold'>F<tspan font-size='10' dy='3'>net</tspan><tspan dy='-3'> = Δp / Δt</tspan></text><line x1='160' y1='60' x2='160' y2='82' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#mom-9)'/><text x='172' y='76' font-size='12' fill='var(--muted)' text-anchor='start'>m sabitse Δp = m·Δv</text><rect x='85' y='86' width='150' height='36' rx='6' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><text x='160' y='110' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='bold'>F = m·Δv / Δt</text><line x1='160' y1='124' x2='160' y2='146' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#mom-9)'/><text x='172' y='140' font-size='12' fill='var(--muted)' text-anchor='start'>Δv / Δt = a</text><rect x='85' y='150' width='150' height='36' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='160' y='174' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='bold'>F = m·a</text><text x='12' y='46' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='bold'>genel</text><text x='12' y='174' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='bold'>özel</text><text x='12' y='190' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='bold'>hâl</text><text x='12' y='62' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='bold'>hâl</text></svg>",
-        "key": "F = m·a, F = Δp/Δt'nin kütle sabitken aldığı biçimdir."
+        "key": "F = m·a, F = Δp/Δt'nin kütle sabitken aldığı biçimdir.",
+        "once": {
+          "soru": "Bir cisme etki eden net kuvvet sıfırsa momentumu ne olur?",
+          "secenekler": [
+            {
+              "yazi": "Değişmez",
+              "neden": "Fnet = Δp/Δt; kuvvet sıfırsa Δp de sıfırdır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Azalır",
+              "neden": "Azalması için harekete zıt bir net kuvvet gerekir."
+            },
+            {
+              "yazi": "Sıfır olur",
+              "neden": "Hareket eden cismin momentumu, kuvvet yoksa korunur."
+            }
+          ]
+        }
       },
       {
         "h": "Duvardan geri seken top",
-        "p": "Yön değişince işarete dikkat. Duvara <b>v</b> hızıyla dik çarpıp aynı büyüklükte hızla geri seken topta Δp = m(−v) − m(v) = <b>−2mv</b>, büyüklüğü 2mv'dir. Top duvara yapışsaydı Δp yalnızca mv olurdu; sekmede itme iki katıdır.",
+        "p": "Yön değişince işarete dikkat. Duvara v ile çarpıp aynı hızla seken topta Δp = m(−v) − m(v) = <b>−2mv</b>. Yapışsaydı Δp yalnız mv olurdu.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='mom-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><rect x='272' y='30' width='14' height='120' rx='0' fill='var(--muted)' fill-opacity='0.35' stroke='var(--muted)' stroke-width='1.5'/><line x1='286' y1='36' x2='296' y2='44' stroke='var(--muted)' stroke-width='1'/><line x1='286' y1='52' x2='296' y2='60' stroke='var(--muted)' stroke-width='1'/><line x1='286' y1='68' x2='296' y2='76' stroke='var(--muted)' stroke-width='1'/><line x1='286' y1='84' x2='296' y2='92' stroke='var(--muted)' stroke-width='1'/><line x1='286' y1='100' x2='296' y2='108' stroke='var(--muted)' stroke-width='1'/><line x1='286' y1='116' x2='296' y2='124' stroke='var(--muted)' stroke-width='1'/><line x1='286' y1='132' x2='296' y2='140' stroke='var(--muted)' stroke-width='1'/><line x1='286' y1='148' x2='296' y2='156' stroke='var(--muted)' stroke-width='1'/><text x='70' y='66' font-size='12' fill='var(--muted)' text-anchor='start'>önce</text><circle cx='120' cy='62' r='12' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.5'/><line x1='140' y1='62' x2='210' y2='62' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#mom-10)'/><text x='175' y='52' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>+v</text><text x='175' y='82' font-size='12' fill='var(--c1)' text-anchor='middle'>p = +mv</text><text x='70' y='122' font-size='12' fill='var(--muted)' text-anchor='start'>sonra</text><circle cx='240' cy='118' r='12' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1.5'/><line x1='220' y1='118' x2='150' y2='118' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#mom-11)'/><text x='185' y='108' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>−v</text><text x='185' y='138' font-size='12' fill='var(--c2)' text-anchor='middle'>p = −mv</text><text x='150' y='170' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Δp = (−mv) − (+mv) = −2mv</text><text x='150' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>0,5 kg, 10 m/s → |Δp| = 10 kg·m/s</text></svg>",
-        "key": "Sık hata: geri seken topta Δp'yi sıfır sanmak. Hızlar zıt yönlü, farkları 2v."
+        "key": "Sekmede itme iki katıdır. Sık hata: geri seken topta Δp'yi sıfır sanmak."
       },
       {
         "h": "Momentumun korunumu",
-        "p": "Bir sisteme etki eden <b>dış kuvvetlerin toplamı sıfırsa</b> (yalıtılmış sistem) toplam momentum değişmez. Çarpışan cisimlerin birbirine uyguladığı kuvvetler etki–tepki çiftidir; eşit ve zıt itmeler toplamda birbirini götürür. Yani cisimlerden birinin kazandığı momentumu diğeri kaybeder.",
+        "p": "Dış kuvvetlerin toplamı sıfırsa sistemin toplam momentumu <b>korunur</b>. Çarpışan cisimlerin birbirine uyguladığı kuvvetler etki–tepkidir; eşit ve zıt itmeler birbirini götürür.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><rect x='30' y='34' width='260' height='100' rx='8' fill='none' stroke='var(--acc)' stroke-width='1.5' stroke-dasharray='6 4'/><text x='42' y='52' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='bold'>yalıtılmış sistem</text><circle cx='135' cy='92' r='22' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><circle cx='185' cy='92' r='22' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.5'/><text x='135' y='96' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>1</text><text x='185' y='96' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>2</text><line x1='112' y1='92' x2='62' y2='92' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#mom-12)'/><line x1='208' y1='92' x2='258' y2='92' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#mom-12)'/><text x='86' y='82' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>−F</text><text x='234' y='82' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>+F</text><text x='160' y='124' font-size='12' fill='var(--muted)' text-anchor='middle'>iç kuvvetler: eşit ve zıt</text><text x='160' y='160' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='bold'>m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'</text><text x='160' y='186' font-size='12' fill='var(--muted)' text-anchor='middle'>dış kuvvetlerin toplamı 0 → toplam p sabit</text></svg>",
-        "key": "Çarpışma çok kısa sürdüğünde sürtünme gibi dış kuvvetlerin etkisi genellikle ihmal edilir."
+        "key": "Birinin kazandığı momentumu öbürü kaybeder. Çarpışma kısa sürdüğünden sürtünme gibi dış kuvvetler genellikle ihmal edilir.",
+        "once": {
+          "soru": "Buz pistinde duran iki patenci birbirini itiyor. Toplam momentumları ne olur?",
+          "secenekler": [
+            {
+              "yazi": "Sıfır kalır",
+              "neden": "Dış kuvvet yok; başta sıfır olan toplam momentum sıfır kalır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Artar",
+              "neden": "İkisi de hareket eder ama momentumları zıt yönlüdür."
+            },
+            {
+              "yazi": "Azalır",
+              "neden": "Başta zaten sıfırdı; momentum korunur."
+            }
+          ]
+        }
       },
       {
         "h": "Esnek çarpışma",
-        "p": "<b>Esnek çarpışmada</b> hem momentum hem kinetik enerji korunur. Bilardo topları ve çelik bilyeler buna çok yakındır. Az önce gördüğün hız değiş tokuşu yalnız <b>eşit kütlelerde</b> olur. Hafif top duran ağır topa esnek çarparsa geri seker; ağır top hafife çarparsa ikisi de ileri gider.",
+        "p": "<b>Esnek çarpışmada</b> momentum da kinetik enerji de korunur; bilardo topları buna yakındır. Az önce gördüğün hız değiş tokuşu yalnız <b>eşit kütlelerde</b> olur.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='mom-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker></defs><text x='14' y='64' font-size='12' fill='var(--muted)' text-anchor='start'>önce</text><circle cx='90' cy='60' r='16' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><text x='90' y='64' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>m</text><line x1='110' y1='60' x2='165' y2='60' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#mom-13)'/><text x='137' y='48' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>4 m/s</text><circle cx='210' cy='60' r='16' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.5'/><text x='210' y='64' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>m</text><text x='210' y='94' font-size='12' fill='var(--muted)' text-anchor='middle'>v = 0</text><line x1='14' y1='108' x2='306' y2='108' stroke='var(--line)' stroke-width='1'/><text x='14' y='140' font-size='12' fill='var(--muted)' text-anchor='start'>sonra</text><circle cx='90' cy='136' r='16' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><text x='90' y='140' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>m</text><text x='90' y='170' font-size='12' fill='var(--muted)' text-anchor='middle'>v = 0</text><circle cx='210' cy='136' r='16' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.5'/><text x='210' y='140' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>m</text><line x1='230' y1='136' x2='285' y2='136' stroke='var(--c3)' stroke-width='2.5' marker-end='url(#mom-14)'/><text x='257' y='124' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>4 m/s</text><text x='160' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>p ve KE korunur → eşit kütleler hızları değişir</text></svg>",
-        "key": "Eşit kütle + esnek + kafa kafaya → hızlar yer değiştirir (Newton beşiği)."
+        "key": "Hafif top duran ağır topa esnek çarparsa geri seker; ağır top hafife çarparsa ikisi de ileri gider."
       },
       {
         "h": "Esnek olmayan çarpışma",
-        "p": "Gerçek çarpışmaların çoğu <b>esnek değildir</b>: momentum korunur ama kinetik enerjinin bir kısmı ısıya, sese ve kalıcı şekil değişikliğine gider. Toplam enerji yine korunur; azalan yalnızca <b>kinetik</b> enerjidir. Trafik kazasında ezilen kaportalar buna örnektir.",
+        "p": "Çoğu çarpışma <b>esnek değildir</b>: momentum korunur ama kinetik enerjinin bir kısmı ısıya, sese ve şekil değişikliğine gider. Toplam enerji yine korunur.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='14' width='300' height='152' rx='6' fill='var(--panel)' stroke='var(--line)' stroke-width='1.5'/><text x='80' y='34' font-size='12' fill='var(--muted)' text-anchor='middle' font-weight='bold'>çarpışma</text><text x='182' y='34' font-size='13' fill='var(--muted)' text-anchor='middle' font-weight='bold'>p</text><text x='263' y='34' font-size='13' fill='var(--muted)' text-anchor='middle' font-weight='bold'>KE</text><line x1='10' y1='44' x2='310' y2='44' stroke='var(--line)' stroke-width='1.5'/><text x='80' y='68' font-size='12' fill='var(--ink)' text-anchor='middle'>esnek</text><text x='182' y='68' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>korunur</text><text x='263' y='68' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>korunur</text><line x1='10' y1='82' x2='310' y2='82' stroke='var(--line)' stroke-width='1'/><text x='80' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>esnek olmayan</text><text x='182' y='106' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>korunur</text><text x='263' y='106' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>azalır</text><line x1='10' y1='120' x2='310' y2='120' stroke='var(--line)' stroke-width='1'/><text x='80' y='138' font-size='12' fill='var(--ink)' text-anchor='middle'>tamamen esnek</text><text x='80' y='154' font-size='12' fill='var(--ink)' text-anchor='middle'>olmayan (yapışma)</text><text x='182' y='146' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>korunur</text><text x='263' y='146' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>en çok azalır</text><line x1='150' y1='14' x2='150' y2='166' stroke='var(--line)' stroke-width='1'/><line x1='215' y1='14' x2='215' y2='166' stroke='var(--line)' stroke-width='1'/><text x='160' y='188' font-size='12' fill='var(--muted)' text-anchor='middle'>dış kuvvet yoksa p her çarpışmada korunur</text></svg>",
         "key": "KE azaldı diye momentum da azaldı sanma: dış kuvvet yoksa p yine korunur."
       },
       {
         "h": "Yapışma: ortak hız",
-        "p": "Cisimler çarpışıp <b>birlikte hareket ederse</b> çarpışma tamamen esnek değildir; kinetik enerji kaybı olabilecek en büyük değerdedir. Ortak hız korunumdan bulunur: <b>m<sub>1</sub>v<sub>1</sub> + m<sub>2</sub>v<sub>2</sub> = (m<sub>1</sub> + m<sub>2</sub>)·v</b>. Kütleleri toplamayı unutma.",
+        "p": "Cisimler çarpışıp <b>birlikte</b> giderse kinetik enerji kaybı en büyüktür. Ortak hız: <b>m<sub>1</sub>v<sub>1</sub> + m<sub>2</sub>v<sub>2</sub> = (m<sub>1</sub> + m<sub>2</sub>)·v</b>.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-15' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='mom-16' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--acc)'/></marker></defs><text x='10' y='60' font-size='12' fill='var(--muted)' text-anchor='start'>önce</text><rect x='50' y='38' width='38' height='32' rx='3' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><text x='69' y='59' font-size='12' fill='var(--ink)' text-anchor='middle'>2 kg</text><line x1='92' y1='54' x2='142' y2='54' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#mom-15)'/><text x='117' y='44' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>6 m/s</text><rect x='170' y='42' width='30' height='28' rx='3' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='1.5'/><text x='185' y='60' font-size='11' fill='var(--ink)' text-anchor='middle'>1 kg</text><text x='240' y='60' font-size='12' fill='var(--muted)' text-anchor='middle'>durgun</text><text x='10' y='112' font-size='12' fill='var(--muted)' text-anchor='start'>sonra</text><rect x='100' y='90' width='38' height='32' rx='3' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><rect x='138' y='94' width='30' height='28' rx='3' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='1.5'/><text x='134' y='138' font-size='12' fill='var(--muted)' text-anchor='middle'>3 kg, birlikte</text><line x1='172' y1='106' x2='222' y2='106' stroke='var(--acc)' stroke-width='2.5' marker-end='url(#mom-16)'/><text x='197' y='96' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='bold'>4 m/s</text><text x='160' y='160' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>p: 2·6 + 1·0 = 3·4 = 12 kg·m/s</text><text x='160' y='178' font-size='12' fill='var(--ink)' text-anchor='middle'>KE: ½·2·6² = 36 J → ½·3·4² = 24 J</text><text x='160' y='195' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>12 J ısıya, sese, şekil değişimine gider</text></svg>",
-        "key": "Yapışmada ortak hız v = toplam p / toplam m.",
+        "key": "Ortak hız = toplam momentum / toplam kütle. Kütleleri toplamayı unutma.",
         "etk": {
           "tur": "formul",
           "soru": "Hareketli cisim duran cisme çarpıp yapışıyor. Kütleleri ve hızı değiştir.",
@@ -3950,21 +4040,57 @@
       },
       {
         "h": "Patlama ve geri tepme",
-        "p": "Başta duran bir sistem iki parçaya ayrılırsa toplam momentum <b>sıfır kalır</b>: parçalar eşit büyüklükte, zıt yönlü momentumla ayrılır. Tüfeğin geri tepmesi budur. Roket de gazı geriye iterek ileri gider, havaya ihtiyacı yoktur. Patlamada kinetik enerji artar; bu enerji yakıttan ya da sıkışmış yaydan gelir.",
+        "p": "Başta duran sistem parçalanırsa toplam momentum <b>sıfır kalır</b>: parçalar eşit ve zıt momentumla ayrılır. Tüfeğin geri tepmesi ve roket böyle çalışır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-17' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c4)'/></marker><marker id='mom-18' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><polygon points='70,70 190,70 190,82 110,82 96,98 70,98' fill='var(--muted)' fill-opacity='0.3' stroke='var(--ink)' stroke-width='1.5'/><ellipse cx='222' cy='76' rx='9' ry='4' fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)' stroke-width='1.5'/><line x1='238' y1='76' x2='300' y2='76' stroke='var(--c4)' stroke-width='2.5' marker-end='url(#mom-17)'/><text x='269' y='64' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='bold'>400 m/s</text><line x1='64' y1='84' x2='16' y2='84' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#mom-18)'/><text x='40' y='72' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>1 m/s</text><text x='130' y='118' font-size='12' fill='var(--ink)' text-anchor='middle'>tüfek 4 kg</text><text x='240' y='100' font-size='12' fill='var(--ink)' text-anchor='middle'>mermi 10 g</text><text x='160' y='146' font-size='12' fill='var(--muted)' text-anchor='middle'>önce her şey durgun: toplam p = 0</text><text x='160' y='168' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>0 = 0,01·400 + 4·v → v = −1 m/s</text><text x='160' y='190' font-size='12' fill='var(--c2)' text-anchor='middle'>eksi işaret: tüfek geriye teper</text></svg>",
-        "key": "KE = p²/2m: momentumları eşit iki parçadan hafif olanın KE'si büyüktür."
+        "key": "Roketin havaya ihtiyacı yoktur. Patlamada KE artar (yakıt ya da yay). KE = p²/2m: hafif parçanın KE'si büyüktür."
       },
       {
         "h": "Kütle merkezinin hızı",
-        "p": "<b>Kütle merkezi</b>, sistemin bütün kütlesi tek noktada toplanmış gibi davranan ortalama konumdur. Hızı <b>v<sub>KM</sub> = Σp / Σm</b>'dir. Dış kuvvet yoksa Σp sabittir, v<sub>KM</sub> de sabit kalır. Havada patlayan havai fişeğin parçalarının kütle merkezi, patlama olmasaydı izleyeceği yolu izler.",
-        "key": "Çarpışma ya da patlama iç olaydır: kütle merkezinin hızını değiştirmez.",
-        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='10' y1='180' x2='310' y2='180' stroke='var(--ink)' stroke-width='1.5'/><path d='M20 180 Q160 -60 300 180' fill='none' stroke='var(--c1)' stroke-width='1.5' stroke-dasharray='5 4'/><path d='M110 75 Q190 70 245 126' fill='none' stroke='var(--c2)' stroke-width='2'/><path d='M110 75 Q115 20 131 6' fill='none' stroke='var(--c4)' stroke-width='2'/><polygon points='110,63 113,72 122,75 113,78 110,87 107,78 98,75 107,72' fill='var(--c3)'/><line x1='245' y1='124' x2='131' y2='6' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='245' cy='124' r='5' fill='var(--c2)'/><circle cx='131' cy='6' r='5' fill='var(--c4)'/><circle cx='188' cy='65' r='5' fill='none' stroke='var(--c1)' stroke-width='2'/><text x='198' y='60' font-size='12' fill='var(--c1)' font-weight='bold'>KM</text><text x='255' y='130' font-size='11' fill='var(--c2)'>m</text><text x='141' y='12' font-size='11' fill='var(--c4)'>m</text><text x='310' y='24' font-size='13' fill='var(--ink)' text-anchor='end' font-weight='bold'>v(KM) = Σp / Σm</text><text x='160' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>KM, patlama olmasaydı izleyeceği yolda kalır</text></svg>"
+        "p": "<b>Kütle merkezinin</b> hızı v<sub>KM</sub> = Σp / Σm'dir. Dış kuvvet yoksa v<sub>KM</sub> sabittir. Havada patlayan fişeğin parçalarının kütle merkezi, eski yolunu izler.",
+        "key": "Kütle merkezi, bütün kütle tek noktada toplanmış gibi davranan ortalama konumdur.",
+        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='10' y1='180' x2='310' y2='180' stroke='var(--ink)' stroke-width='1.5'/><path d='M20 180 Q160 -60 300 180' fill='none' stroke='var(--c1)' stroke-width='1.5' stroke-dasharray='5 4'/><path d='M110 75 Q190 70 245 126' fill='none' stroke='var(--c2)' stroke-width='2'/><path d='M110 75 Q115 20 131 6' fill='none' stroke='var(--c4)' stroke-width='2'/><polygon points='110,63 113,72 122,75 113,78 110,87 107,78 98,75 107,72' fill='var(--c3)'/><line x1='245' y1='124' x2='131' y2='6' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='245' cy='124' r='5' fill='var(--c2)'/><circle cx='131' cy='6' r='5' fill='var(--c4)'/><circle cx='188' cy='65' r='5' fill='none' stroke='var(--c1)' stroke-width='2'/><text x='198' y='60' font-size='12' fill='var(--c1)' font-weight='bold'>KM</text><text x='255' y='130' font-size='11' fill='var(--c2)'>m</text><text x='141' y='12' font-size='11' fill='var(--c4)'>m</text><text x='310' y='24' font-size='13' fill='var(--ink)' text-anchor='end' font-weight='bold'>v(KM) = Σp / Σm</text><text x='160' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>KM, patlama olmasaydı izleyeceği yolda kalır</text></svg>",
+        "once": {
+          "soru": "Havada uçan bir havai fişek patlıyor. Parçaların kütle merkezi nasıl hareket eder?",
+          "secenekler": [
+            {
+              "yazi": "Eski yolunda devam eder",
+              "neden": "Patlama iç olaydır; kütle merkezinin hareketini değiştirmez.",
+              "dogru": true
+            },
+            {
+              "yazi": "Olduğu yerde durur",
+              "neden": "Patlama momentumu yok etmez."
+            },
+            {
+              "yazi": "Rastgele savrulur",
+              "neden": "Parçalar dağılır ama kütle merkezi eski yolu izler."
+            }
+          ]
+        }
       },
       {
         "h": "İki boyutta çarpışma",
-        "p": "Çarpışma bir düzlemde olursa momentum <b>her bileşende ayrı ayrı</b> korunur: x yönündeki toplam da y yönündeki toplam da sabit kalır. Gelen top yalnızca x yönünde gidiyor ve vurulan top başta duruyorsa, çarpışmadan sonra iki topun y momentumları eşit büyüklükte ve zıt yönlüdür.",
+        "p": "Düzlemde çarpışmada momentum <b>her bileşende ayrı</b> korunur. Gelen top yalnız x yönünde gidiyorsa, çarpışmadan sonra iki topun y momentumları eşit ve zıt yönlüdür.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-19' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='mom-20' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker></defs><circle cx='40' cy='110' r='12' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.5'/><line x1='56' y1='110' x2='128' y2='110' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#mom-19)'/><text x='92' y='100' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>p</text><circle cx='145' cy='110' r='12' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><line x1='145' y1='110' x2='290' y2='110' stroke='var(--line)' stroke-width='1' stroke-dasharray='4 3'/><line x1='155' y1='104' x2='248' y2='52' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#mom-19)'/><line x1='155' y1='116' x2='248' y2='168' stroke='var(--c3)' stroke-width='2.5' marker-end='url(#mom-20)'/><line x1='250' y1='52' x2='250' y2='110' stroke='var(--c1)' stroke-width='1.5' stroke-dasharray='4 3'/><line x1='250' y1='168' x2='250' y2='110' stroke='var(--c3)' stroke-width='1.5' stroke-dasharray='4 3'/><text x='258' y='88' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='bold'>+p<tspan font-size='10' dy='3'>y</tspan></text><text x='258' y='142' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='bold'>−p<tspan font-size='10' dy='3'>y</tspan></text><text x='10' y='26' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='bold'>x: p = p<tspan font-size='10' dy='3'>1x</tspan><tspan dy='-3'> + p</tspan><tspan font-size='10' dy='3'>2x</tspan></text><text x='10' y='46' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='bold'>y: 0 = p<tspan font-size='10' dy='3'>1y</tspan><tspan dy='-3'> + p</tspan><tspan font-size='10' dy='3'>2y</tspan></text><text x='10' y='190' font-size='12' fill='var(--muted)' text-anchor='start'>önce y momentumu yok → sonra y'ler zıt ve eşit</text></svg>",
-        "key": "Hızları değil, momentum bileşenlerini topla: p_x ve p_y ayrı denklemlerdir."
+        "key": "Hızları değil momentum bileşenlerini topla: x ve y ayrı denklemlerdir.",
+        "once": {
+          "soru": "Bilardoda beyaz top x yönünde gelip duran topa çarpıyor. Çarpışmadan sonra toplam y momentumu kaçtır?",
+          "secenekler": [
+            {
+              "yazi": "Sıfır",
+              "neden": "Başta y momentumu yoktu; her bileşen ayrı korunur.",
+              "dogru": true
+            },
+            {
+              "yazi": "Beyaz topunki kadar",
+              "neden": "x momentumu korunur; y toplamı sıfır kalır."
+            },
+            {
+              "yazi": "Artar",
+              "neden": "Dış kuvvet olmadan y momentumu ortaya çıkamaz."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",

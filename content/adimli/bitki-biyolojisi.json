@@ -3,7 +3,7 @@
  "ders": "biyoloji",
  "konu": "bitki-biyolojisi",
  "baslik": "Bitki biyolojisi",
- "ozet": "Suyu ağacın tepesine çek, stomayı aç, şekerin yönünü bul, halkaları say, tepeyi buda, fideyi ışığa eğ, tohumu çimlendir.",
+ "ozet": "Önce dene, sonra adını öğren: suyu tepeye çek, stomayı aç, tepeyi buda, tohumu çimlendir.",
  "adimlar": [
   {
    "baslik": "Su yukarı nasıl çıkar?",
@@ -32,17 +32,17 @@
       "neden": "Kök basıncı suyu biraz iter ama uzun ağaçlar için tek başına yetmez."
      },
      {
-      "yazi": "ATP harcayan su pompaları",
+      "yazi": "Su pompaları",
       "neden": "Ksilemde su pompası yoktur; bitki suyu taşımak için ATP harcamaz."
      },
      {
-      "yazi": "Yapraktaki terlemenin çekişi",
+      "yazi": "Terlemenin çekişi",
       "dogru": true,
       "neden": "Stomalardan buharlaşan su, ksilemdeki su sütununu yukarı çeker. Kök basıncı yalnızca yardımcıdır."
      }
     ]
    },
-   "kart": 6
+   "kart": 7
   },
   {
    "baslik": "Stomayı aç",
@@ -78,13 +78,7 @@
     },
     "tamam": "Işık ve su birlikte: K⁺ bekçi hücrelerine girdi, su izledi ve stoma açıldı."
    },
-   "kart": 8,
-   "goster": {
-    "deger": {
-     "su": 1
-    },
-    "not": "Toprakta su var ama ortam karanlık: K⁺ bekçi hücrelerine girmiyor, stoma kapalı kalıyor."
-   }
+   "kart": 8
   },
   {
    "baslik": "Şeker nereye gider?",
@@ -153,13 +147,7 @@
     },
     "tamam": "5 halka = 5 yaş. Halkalar ksilemdir, yani odun; floem ince kalır ve dışa doğru itilir."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "yil": 3
-    },
-    "not": "3 yaşındaki gövde: kambiyum her yıl içe yeni bir ksilem bandı ekledi, <b>3 halka</b> var."
-   }
+   "kart": 3
   },
   {
    "baslik": "Tepeyi buda",
@@ -173,15 +161,15 @@
     "soru": "Tepe budanınca ne olur?",
     "secenekler": [
      {
-      "yazi": "Bitki boyca daha hızlı uzar",
+      "yazi": "Boyca hızlı uzar",
       "neden": "Boyca uzamayı sağlayan uç kesildi."
      },
      {
-      "yazi": "Bitki kurur",
+      "yazi": "Kurur",
       "neden": "Budama bitkiyi öldürmez; bahçıvanlar bunu her yıl yapar."
      },
      {
-      "yazi": "Yan tomurcuklar büyür, bitki dallanır",
+      "yazi": "Dallanır",
       "dogru": true,
       "neden": "Oksinin baskısı kalkar; kökten gelen sitokinin yan tomurcukları uyarır ve bitki dallanır."
      }
@@ -268,13 +256,7 @@
     },
     "tamam": "Su, oksijen ve uygun sıcaklık yetti. Su alan tohumda enzimler çalışır, depo besin solunumla harcanır; solunum için oksijen gerekir. Çoğu tohum ışık istemez, bazıları ister. Yaprak açıp fotosenteze başlayana dek tohumun kuru kütlesi azalır."
    },
-   "kart": 13,
-   "goster": {
-    "deger": {
-     "isik": 1
-    },
-    "not": "Işık tek başına yetmiyor: toprak kuru, soğuk ve havasız olduğu için tohum hâlâ bekliyor."
-   }
+   "kart": 13
   }
  ],
  "kapanis": [
@@ -283,5 +265,6 @@
   "<b>Ksilem</b> (ölü) suyu yukarı, <b>floem</b> (canlı) şekeri kaynaktan havuza, iki yönde de taşır.",
   "Kambiyum gövdeyi kalınlaştırır; her yıl bir halka oluşur. <b>Oksin</b> tepe baskınlığını ve ışığa yönelmeyi yönetir.",
   "Çimlenme için <b>su, oksijen ve uygun sıcaklık</b> gerekir."
- ]
+ ],
+ "soruOnce": true
 }

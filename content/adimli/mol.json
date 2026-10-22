@@ -3,7 +3,7 @@
  "ders": "kimya",
  "konu": "mol",
  "baslik": "Mol kavramı ve kimyasal hesaplamalar",
- "ozet": "Maddeyi tart, gazı ölç, denklemden ürün hesapla: mol ile tanecik saymayı öğren.",
+ "ozet": "Önce dene, sonra adını öğren: maddeyi tart, gazı ölç, denklemden ürün hesapla.",
  "adimlar": [
   {
    "baslik": "Kimyanın düzinesi",
@@ -72,17 +72,11 @@
     },
     "tamam": "45 g / 18 g/mol = 2,5 mol su; içinde 2,5 × 6,02×10²³ ≈ 1,5×10²⁴ molekül var. Kütleden tanecik sayısına giderken arada hep mol vardır."
    },
-   "kart": 2,
-   "goster": {
-    "deger": {
-     "n": 1.5
-    },
-    "not": "1,5 mol su: 1,5 × 18 = <b>27 g</b>. İçinde 1,5 × 6,02×10²³ = 9,03×10²³ molekül var."
-   }
+   "kart": 2
   },
   {
    "baslik": "Gazlarda hacim",
-   "metin": "Şırıngada normal koşulda (NK) 11,2 L gaz olsun. Koşulu ve mol sayısını ayarla.",
+   "metin": "Normal koşulda (NK: 0 °C, 1 atm) 1 mol gaz 22,4 L yer kaplar. Şırıngada NK'de 11,2 L gaz olsun: koşulu ve mol sayısını ayarla.",
    "sahne": {
     "tur": "kim6-gaz"
    },
@@ -117,14 +111,7 @@
     "ipucu": "Önce koşulu NK'ye al, sonra mol sayısını ayarla.",
     "tamam": "NK'de 11,2 / 22,4 = 0,5 mol. Oda koşulunda aynı 0,5 mol gaz 12,25 L yer kaplar. 22,4 L/mol yalnız gazlar ve NK içindir; koşulu hep kontrol et."
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "n": 2,
-     "k": 1
-    },
-    "not": "Oda koşulunda 1 mol gaz 24,5 L'dir: 2 mol gaz <b>49 L</b> yer kaplar."
-   }
+   "kart": 4
   },
   {
    "baslik": "Molekül mü, atom mu?",
@@ -163,7 +150,7 @@
      }
     ]
    },
-   "kart": 4
+   "kart": 5
   },
   {
    "baslik": "Stokiyometri: üç adım",
@@ -192,13 +179,7 @@
     },
     "tamam": "33 g CO₂ = 0,75 mol. Katsayılar 1 : 1 olduğu için 0,75 mol CH₄ gerekir: 0,75 × 16 = 12 g. Kütleden kütleye doğrudan geçilmez; arada mol ve katsayı oranı vardır."
    },
-   "kart": 10,
-   "goster": {
-    "deger": {
-     "m": 4
-    },
-    "not": "4 g CH₄ = 0,25 mol. Katsayılar 1 : 1, öyleyse 0,25 mol CO₂ oluşur: 0,25 × 44 = <b>11 g</b>."
-   }
+   "kart": 10
   },
   {
    "baslik": "Hangisi önce biter?",
@@ -226,7 +207,7 @@
      }
     ]
    },
-   "kart": 10
+   "kart": 11
   }
  ],
  "kapanis": [
@@ -235,5 +216,6 @@
   "1 mol H₂O'da 3 mol atom vardır: molekül ve atom sayısını karıştırma.",
   "NK'de (0 °C, 1 atm) 1 mol gaz 22,4 L kaplar.",
   "Hesapta önce mole çevir, katsayıları kullan; ürünü tükenen (sınırlayıcı) bileşen belirler."
- ]
+ ],
+ "soruOnce": true
 }
