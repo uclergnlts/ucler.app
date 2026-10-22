@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "cembersel-hareket",
  "baslik": "Çembersel ve dönme hareketi",
- "ozet": "Dönen topun hızını izle, dönme dolapta hızları karşılaştır, ipi kopar, virajı savrulmadan al.",
+ "ozet": "Önce dene, sonra adını öğren: dönen topu izle, dönme dolapta hızları karşılaştır, virajı savrulmadan al.",
  "adimlar": [
   {
    "baslik": "Sürat sabit, hız değişiyor",
@@ -17,7 +17,7 @@
     "soru": "Bu ivme hangi yönü gösterir?",
     "secenekler": [
      {
-      "yazi": "Hızla aynı yönde, çembere teğet",
+      "yazi": "Hızla aynı yönde",
       "neden": "Teğet bir ivme sürati değiştirirdi; oysa sürat sabit."
      },
      {
@@ -26,7 +26,7 @@
       "dogru": true
      },
      {
-      "yazi": "Merkezden dışarı doğru",
+      "yazi": "Merkezden dışarı",
       "neden": "Dışarı doğru bir ivme topu çemberden uzaklaştırırdı. Topu çember üzerinde bükmek için ivme hangi yöne bakmalı?"
      }
     ]
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Periyot ve frekans",
-   "metin": "Çamaşır makinesinin tamburunu <b>25 Hz</b>'e ayarla.",
+   "metin": "Frekans, saniyedeki tur sayısıdır (Hz). Çamaşır makinesinin tamburunu <b>25 Hz</b>'e ayarla.",
    "sahne": {
     "tur": "fiz7-tambur"
    },
@@ -59,13 +59,7 @@
     },
     "tamam": "Dakikada 1500 tur, saniyede 1500 / 60 = 25 tur eder: f = 25 Hz. Bir tur T = 1/25 = 0,04 s sürer."
    },
-   "kart": 2,
-   "goster": {
-    "deger": {
-     "rpm": 900
-    },
-    "not": "Dakikada 900 tur, saniyede 900 / 60 = 15 tur: f = 15 Hz, bir tur T = 1/15 ≈ 0,067 s sürer."
-   }
+   "kart": 2
   },
   {
    "baslik": "İç koltuk, dış koltuk",
@@ -93,7 +87,7 @@
      }
     ]
    },
-   "kart": 2
+   "kart": 3
   },
   {
    "baslik": "İp koparsa",
@@ -107,16 +101,16 @@
     "soru": "İp kopunca taş nereye gider?",
     "secenekler": [
      {
-      "yazi": "Doğuya, teğet boyunca düz gider",
+      "yazi": "Teğet boyunca düz gider",
       "neden": "Merkeze çeken kuvvet kalkınca taş, 1. yasa gereği o anki hızıyla <b>teğet boyunca</b> düz gider. Çekiç atan atlet de çekici bu anı kollayarak bırakır.",
       "dogru": true
      },
      {
-      "yazi": "Kuzeye, merkezden uzağa fırlar",
+      "yazi": "Merkezden dışarı fırlar",
       "neden": "Dışarı iten bir kuvvet yoktur; “merkezkaç kuvveti” bir yanılgıdır."
      },
      {
-      "yazi": "Çember boyunca dönmeye devam eder",
+      "yazi": "Dönmeye devam eder",
       "neden": "Taşı çemberde tutan ip gerilmesiydi. O kalkınca yol düzleşir."
      }
     ]
@@ -125,7 +119,7 @@
   },
   {
    "baslik": "Merkezcil kuvvet",
-   "metin": "1000 kg'lık araba 50 m yarıçaplı virajda. Hızı değiştir ve gereken merkezcil kuvveti <b>8000 N</b> yap.",
+   "metin": "Gereken merkezcil kuvvet F = m·v²/r. 1000 kg'lık araba 50 m yarıçaplı virajda. Hızı değiştir ve kuvveti <b>8000 N</b> yap.",
    "sahne": {
     "tur": "fiz7-merkezcil"
    },
@@ -149,17 +143,11 @@
     },
     "tamam": "1000 · 20² / 50 = 8000 N. Hız 10'dan 20 m/s'ye iki katına çıkınca gereken kuvvet dört katına çıkar. Bu yeni bir kuvvet değildir; burada onu lastiklerle yol arasındaki sürtünme sağlar."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "v": 15
-    },
-    "not": "15 m/s'de gereken kuvvet 1000 · 15² / 50 = 4500 N."
-   }
+   "kart": 5
   },
   {
    "baslik": "Islak virajda",
-   "metin": "Araban 15 m/s ile 50 m'lik virajı alacak. Yol yüzeyini seç ve virajı <b>savrulmadan</b> al.",
+   "metin": "Virajda en büyük güvenli hız √(μ·g·r); μ, yüzeyin sürtünme katsayısı. Araban 15 m/s ile 50 m'lik virajı alacak. Yol yüzeyini seç ve virajı <b>savrulmadan</b> al.",
    "sahne": {
     "tur": "fiz7-viraj",
     "sure": 4
@@ -186,13 +174,7 @@
     },
     "tamam": "μ = 0,5'te sınır √(0,5 · 9,8 · 50) ≈ 15,7 m/s, yani 15 m/s güvenli. Yağmurda μ düşer, sınır da iner; ıslak yolda bu yüzden yavaşlanır."
    },
-   "kart": 6,
-   "goster": {
-    "deger": {
-     "mu": 4
-    },
-    "not": "Islak yol, μ = 0,4: en büyük güvenli hız √(0,4 · 9,8 · 50) = 14 m/s. 15 m/s ile giren araba savruluyor."
-   }
+   "kart": 6
   },
   {
    "baslik": "Patenci",
@@ -220,7 +202,7 @@
      }
     ]
    },
-   "kart": 11
+   "kart": 12
   }
  ],
  "kapanis": [
@@ -229,5 +211,6 @@
   "<b>F = m·v²/r</b> yeni bir kuvvet değil, merkeze yönelen net kuvvettir: ip gerilmesi, sürtünme ya da kütle çekimi sağlar.",
   "Kuvvet kalkınca cisim teğet boyunca düz gider. Düz virajda güvenli hız v ≤ √(μ·g·r).",
   "Dış tork yoksa açısal momentum <b>L = I·ω</b> korunur."
- ]
+ ],
+ "soruOnce": true
 }

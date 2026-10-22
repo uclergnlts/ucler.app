@@ -3,7 +3,7 @@
  "ders": "kimya",
  "konu": "kimya-her-yerde",
  "baslik": "Kimya her yerde",
- "ozet": "Sabunun kiri nasıl taşıdığını, sert suyu, plastikleri ve etiketleri kendin dene.",
+ "ozet": "Önce dene, sonra adını öğren: sabunu, sert suyu, plastikleri ve etiketleri kendin sına.",
  "adimlar": [
   {
    "baslik": "Sabun nasıl temizler?",
@@ -42,7 +42,7 @@
      }
     ]
    },
-   "kart": 1
+   "kart": 2
   },
   {
    "baslik": "Çaydanlıktaki kireç",
@@ -64,7 +64,7 @@
       "neden": "Sirke bir asittir (asetik asit), kireç ise karbonattır; ikisi tepkimeye girer."
      },
      {
-      "yazi": "Kireç çözülür, gaz kabarcıkları çıkar",
+      "yazi": "Kireç köpürerek çözülür",
       "neden": "CaCO₃ asitte çözünür: çözünen bir tuz, su ve CO₂ gazı oluşur. Kireç çözücüler de aynı nedenle asitlidir.",
       "dogru": true
      }
@@ -107,13 +107,7 @@
     "ipucu": "Su sert kalmalı; temizleyiciyi değiştir.",
     "tamam": "Sentetik <b>deterjan</b> Ca²⁺ ve Mg²⁺ ile çökelek yapmaz, bu yüzden sert suda da köpürür."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "sert": 0
-    },
-    "not": "Yumuşak suda sabun bol köpürür. Sorun sabunun kendisi değil, sert sudaki Ca²⁺ ve Mg²⁺ iyonlarıdır."
-   }
+   "kart": 4
   },
   {
    "baslik": "Asla karıştırma",
@@ -127,25 +121,25 @@
     "soru": "Çamaşır suyu ile tuz ruhunu karıştırırsan ne olur?",
     "secenekler": [
      {
-      "yazi": "Zehirli klor gazı çıkar",
+      "yazi": "Zehirli gaz çıkar",
       "neden": "NaOCl ile HCl tepkimeye girer ve zehirli Cl₂ gazı çıkar; solunum yolunu yakar. Temizleyicileri ayrı kullan, ortamı havalandır.",
       "dogru": true
      },
      {
-      "yazi": "Daha güçlü bir temizleyici olur",
+      "yazi": "Daha iyi temizler",
       "neden": "Karıştırmak daha iyi temizlemez; iki madde tepkimeye girip zehirli gaz üretir."
      },
      {
-      "yazi": "Birbirini nötrleyip su olur",
+      "yazi": "Nötrleşip su olur",
       "neden": "Bu karışım yalnızca nötrleşmez: klor gazı da açığa çıkar."
      }
     ]
    },
-   "kart": 4
+   "kart": 5
   },
   {
    "baslik": "Monomerden polimere",
-   "metin": "Monomeri değiştir ve yapışmaz tavalardaki teflonu elde et.",
+   "metin": "Polimer, küçük <b>monomerlerin</b> zincir gibi bağlanmasıyla oluşur. Monomeri değiştir ve yapışmaz tavalardaki teflonu elde et.",
    "sahne": {
     "tur": "kim7-polimer"
    },
@@ -168,13 +162,7 @@
     },
     "tamam": "Tetrafloroetenden teflon (PTFE) oluşur. C–F bağları çok sağlam ve apolar olduğu için teflona neredeyse hiçbir şey yapışmaz."
    },
-   "kart": 6,
-   "goster": {
-    "deger": {
-     "m": 2
-    },
-    "not": "Vinil klorürün (CH₂=CHCl) çift bağı açılıp uç uca bağlanınca <b>PVC</b> oluşur: su borusu."
-   }
+   "kart": 6
   },
   {
    "baslik": "Etiketi oku",
@@ -203,13 +191,7 @@
     },
     "tamam": "200 g × 25 / 100 = 50 g şeker. Etiketteki değeri yediğin kütleye göre hesapla. Kozmetikte de içerikler çoktan aza doğru sıralanır."
    },
-   "kart": 10,
-   "goster": {
-    "deger": {
-     "g": 100
-    },
-    "not": "100 g bisküvide etiketteki değer aynen geçerli: 25 g şeker, günlük sınırın yarısı."
-   }
+   "kart": 10
   }
  ],
  "kapanis": [
@@ -218,5 +200,6 @@
   "Çamaşır suyunu asitli ya da amonyaklı temizleyiciyle <b>karıştırma</b>: zehirli gaz çıkar.",
   "Plastikler monomerlerden oluşan sentetik <b>polimerlerdir</b> ve doğada uzun süre kalır.",
   "Etiketteki değerler 100 g içindir; ilaçta da doza ve kullanım süresine uy."
- ]
+ ],
+ "soruOnce": true
 }
