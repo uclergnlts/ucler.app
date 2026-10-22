@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "is-enerji-guc",
  "baslik": "İş, enerji ve güç",
- "ozet": "İpin açısını değiştir, topu düşür, kaydıraktan kay, merdiveni koşarak çık; işi, enerjiyi ve gücü hesapla.",
+ "ozet": "Önce dene, sonra adını öğren: ipin açısını değiştir, topu düşür, merdiveni koşarak çık.",
  "adimlar": [
   {
    "baslik": "İş",
-   "metin": "Bu kez kutuyu <b>40 N</b> ile <b>5 m</b> çekiyorsun. İpin açısını ayarla ve işi <b>100 J</b> yap.",
+   "metin": "İş, kuvvetin hareket yönündeki parçası ile yolun çarpımıdır. Kutuyu <b>40 N</b> ile <b>5 m</b> çekiyorsun. İpin açısını ayarla ve işi <b>100 J</b> yap.",
    "sahne": {
     "tur": "fiz5-is",
     "F": 40,
@@ -33,13 +33,7 @@
     },
     "tamam": "W = 40 · 5 · cos60° = 200 · 0,5 = 100 J. Açı büyüdükçe kuvvetin hareket yönündeki payı küçülür; 90°'de sıfır olur."
    },
-   "kart": 1,
-   "goster": {
-    "deger": {
-     "a": 30
-    },
-    "not": "30°'de W = 40 · 5 · cos30° ≈ 173 J. İşi yalnızca kuvvetin hareket yönündeki bileşeni yapar."
-   }
+   "kart": 1
   },
   {
    "baslik": "Sıfır iş",
@@ -98,13 +92,7 @@
     },
     "tamam": "30 m/s'de ½ · 1000 · 30² = 450 000 J: hız 3 kat, enerji 3² = 9 kat. Hızlı giden aracı durdurmak bu yüzden çok daha zordur."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "v": 20
-    },
-    "not": "20 m/s'de KE = ½ · 1000 · 20² = 200 000 J: hız 2 kat, enerji 4 kat."
-   }
+   "kart": 3
   },
   {
    "baslik": "Enerji biçim değiştirir",
@@ -132,7 +120,7 @@
      }
     ]
    },
-   "kart": 5
+   "kart": 6
   },
   {
    "baslik": "Rampa laboratuvarı",
@@ -235,7 +223,7 @@
   },
   {
    "baslik": "Güç",
-   "metin": "Aynı merdiven: 50 kg, 3 m, iş ≈ 1470 J. Çıkış süresini ayarla, güç <b>210 W</b> olsun.",
+   "metin": "Güç = iş / süre. Aynı merdiven: 50 kg, 3 m, iş ≈ 1470 J. Çıkış süresini ayarla, güç <b>210 W</b> olsun.",
    "sahne": {
     "tur": "fiz5-guc"
    },
@@ -259,17 +247,11 @@
     },
     "tamam": "1470 / 7 = 210 W. Aynı iş daha kısa sürede yapılırsa güç artar. Elektrik faturasındaki 1 kWh = 3,6 milyon J'dür."
    },
-   "kart": 10,
-   "goster": {
-    "deger": {
-     "t": 10
-    },
-    "not": "10 s'de çıkarsan güç 1470 / 10 = 147 W olur."
-   }
+   "kart": 10
   },
   {
    "baslik": "Yay ve F–x grafiği",
-   "metin": "Yayın sabiti k = 200 N/m. Yayı ger ve içine <b>4 J</b> enerji depola.",
+   "metin": "Yayın sabiti k = 200 N/m; yayda depolanan enerji ½·k·x². Yayı ger ve içine <b>4 J</b> enerji depola.",
    "sahne": {
     "tur": "fiz5-yay"
    },
@@ -293,13 +275,7 @@
     },
     "tamam": "x = 0,2 m'de F = 200 · 0,2 = 40 N; üçgenin alanı ½ · 0,2 · 40 = 4 J. Uzama 2 kat (10 → 20 cm), enerji 4 kat (1 → 4 J)."
    },
-   "kart": 8,
-   "goster": {
-    "deger": {
-     "x": 5
-    },
-    "not": "x = 5 cm'de F = 200 · 0,05 = 10 N. Üçgenin alanı ½ · 0,05 · 10 = 0,25 J."
-   }
+   "kart": 8
   }
  ],
  "kapanis": [
@@ -308,5 +284,6 @@
   "Yalnız yer çekimi iş yapıyorsa KE + PE sabittir; sürtünme mekanik enerjinin bir kısmını ısıya çevirir, toplam enerji yine korunur.",
   "Güç P = W / t (watt): aynı iş daha kısa sürede yapılırsa güç artar.",
   "F–x grafiğinin altındaki alan iştir; yayda depolanan enerji ½·k·x²."
- ]
+ ],
+ "soruOnce": true
 }

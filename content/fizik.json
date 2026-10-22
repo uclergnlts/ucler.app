@@ -3146,37 +3146,73 @@
     "cards": [
       {
         "h": "İş: kuvvet yol aldırınca",
-        "p": "Fizikte <b>iş</b> <em>(work)</em>, kuvvet cismi yer değiştirdiğinde yapılır: W = F·d·cosθ. θ, kuvvetle yer değiştirme arasındaki açıdır. Birimi <b>joule</b>: 1 J = 1 N·m. 50 N, 60° açıyla 4 m: W = 50·4·cos60° = 50·4·0,5 = 100 J (cos60° = 0,5).",
+        "p": "<b>İş</b>, kuvvet cismi yer değiştirince yapılır: W = F·d·cosθ; θ kuvvetle yer değiştirme arasındaki açıdır. Birimi <b>joule</b>: 1 J = 1 N·m.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='150' x2='300' y2='150' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='50' y='110' width='50' height='40' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><rect x='210' y='110' width='50' height='40' fill='none' stroke='var(--muted)' stroke-width='1.5' stroke-dasharray='5 4'/><line x1='150' y1='110' x2='150' y2='23.4' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><line x1='100' y1='110' x2='143' y2='110' stroke='var(--c1)' stroke-width='2' fill='none' stroke-dasharray='5 4'/><polygon points='150,110 140,114.5 140,105.5' fill='var(--c1)'/><line x1='100' y1='110' x2='146.5' y2='29.5' stroke='var(--c1)' stroke-width='3' fill='none'/><polygon points='150,23.4 148.9,34.3 141.1,29.8' fill='var(--c1)'/><path d='M125 110 A25 25 0 0 0 112.5 88.3' fill='none' stroke='var(--acc)' stroke-width='1.5'/><text x='127' y='100' font-size='12' fill='var(--acc)'>θ</text><text x='158' y='40' font-size='12' fill='var(--c1)' font-weight='bold'>F = 50 N</text><text x='155' y='106' font-size='12' fill='var(--c1)'>F·cosθ</text><line x1='79.9' y1='170' x2='230.1' y2='170' stroke='var(--acc)' stroke-width='1.5' fill='none'/><polygon points='235,170 228,173.2 228,166.8' fill='var(--acc)'/><polygon points='75,170 82,166.8 82,173.2' fill='var(--acc)'/><text x='155' y='190' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>d = 4 m</text><text x='310' y='75' font-size='13' fill='var(--ink)' text-anchor='end' font-weight='bold'>W = 100 J</text><text x='310' y='95' font-size='12' fill='var(--ink)' text-anchor='end'>θ = 60°</text></svg>",
-        "key": "W = F·d·cosθ   (1 J = 1 N·m)"
+        "key": "50 N, 60° açıyla 4 m: W = 50·4·0,5 = 100 J (cos60° = 0,5)."
       },
       {
         "h": "Pozitif, sıfır, negatif iş",
-        "p": "Kuvvet harekete yardım ediyorsa iş pozitif, karşı koyuyorsa (sürtünme gibi) negatiftir. Kuvvet harekete dikse (θ = 90°) ya da cisim hiç kımıldamıyorsa iş <b>sıfırdır</b>: duvarı ne kadar itsen, yorulsan da fiziksel iş yapmazsın.",
+        "p": "Kuvvet harekete yardım ediyorsa iş pozitif, karşı koyuyorsa (sürtünme) negatiftir. Kuvvet harekete dikse ya da cisim kımıldamıyorsa iş <b>sıfırdır</b>.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='20' width='100' height='170' fill='var(--panel)' rx='8'/><rect x='40' y='98' width='30' height='24' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><line x1='25' y1='150' x2='79.4' y2='150' stroke='var(--muted)' stroke-width='1.5' fill='none'/><polygon points='85,150 77,153.6 77,146.4' fill='var(--muted)'/><text x='55' y='168' font-size='12' fill='var(--muted)' text-anchor='middle'>hareket</text><text x='55' y='45' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W &gt; 0</text><text x='55' y='186' font-size='12' fill='var(--ink)' text-anchor='middle'>θ = 0°</text><rect x='110' y='20' width='100' height='170' fill='var(--panel)' rx='8'/><rect x='145' y='98' width='30' height='24' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><line x1='130' y1='150' x2='184.4' y2='150' stroke='var(--muted)' stroke-width='1.5' fill='none'/><polygon points='190,150 182,153.6 182,146.4' fill='var(--muted)'/><text x='160' y='168' font-size='12' fill='var(--muted)' text-anchor='middle'>hareket</text><text x='160' y='45' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W = 0</text><text x='160' y='186' font-size='12' fill='var(--ink)' text-anchor='middle'>θ = 90°</text><rect x='215' y='20' width='100' height='170' fill='var(--panel)' rx='8'/><rect x='250' y='98' width='30' height='24' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><line x1='235' y1='150' x2='289.4' y2='150' stroke='var(--muted)' stroke-width='1.5' fill='none'/><polygon points='295,150 287,153.6 287,146.4' fill='var(--muted)'/><text x='265' y='168' font-size='12' fill='var(--muted)' text-anchor='middle'>hareket</text><text x='265' y='45' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W &lt; 0</text><text x='265' y='186' font-size='12' fill='var(--ink)' text-anchor='middle'>θ = 180°</text><line x1='70' y1='110' x2='93' y2='110' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='100,110 90,114.5 90,105.5' fill='var(--c3)'/><line x1='160' y1='98' x2='160' y2='65' stroke='var(--c4)' stroke-width='3' fill='none'/><polygon points='160,58 164.5,68 155.5,68' fill='var(--c4)'/><line x1='250' y1='110' x2='227' y2='110' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='220,110 230,105.5 230,114.5' fill='var(--c2)'/></svg>",
-        "key": "cos0° = 1, cos90° = 0, cos180° = −1"
+        "key": "cos0° = 1, cos90° = 0, cos180° = −1. Duvarı itip yorulsan da fiziksel iş yapmazsın."
       },
       {
         "h": "Kinetik enerji",
-        "p": "Hareket eden her cismin <b>kinetik enerjisi</b> vardır: KE = ½·m·v². Hız karesiyle girdiği için hız 2 katına çıkınca enerji 4 katına çıkar. 1000 kg'lık araba 20 m/s'de: ½·1000·20² = 200 000 J.",
+        "p": "Hareket eden cismin <b>kinetik enerjisi</b> vardır: KE = ½·m·v². Hız karesiyle girer: hız 2 katına çıkınca enerji 4 katına çıkar.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='10' y='18' font-size='12' fill='var(--muted)'>1000 kg araba</text><line x1='40' y1='170' x2='300' y2='170' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='60' y='155' width='50' height='15' fill='var(--c3)' fill-opacity='0.6'/><rect x='140' y='110' width='50' height='60' fill='var(--c3)' fill-opacity='0.6'/><rect x='220' y='35' width='50' height='135' fill='var(--c3)' fill-opacity='0.6'/><text x='85' y='148' font-size='12' fill='var(--ink)' text-anchor='middle'>50 kJ</text><text x='165' y='103' font-size='12' fill='var(--ink)' text-anchor='middle'>200 kJ</text><text x='245' y='28' font-size='12' fill='var(--ink)' text-anchor='middle'>450 kJ</text><text x='165' y='145' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>×4</text><text x='245' y='110' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>×9</text><text x='85' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>10 m/s</text><text x='165' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>20 m/s</text><text x='245' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>30 m/s</text></svg>",
-        "key": "KE = ½·m·v²  →  hız 2 kat, enerji 4 kat"
+        "key": "1000 kg'lık araba 20 m/s'de: ½·1000·20² = 200 000 J."
       },
       {
         "h": "Potansiyel enerji",
-        "p": "Yerden h kadar yükseğe kaldırılan cisim <b>çekim potansiyel enerjisi</b> kazanır: PE = m·g·h. h'yi seçtiğin bir sıfır seviyesine göre ölçersin. 2 kg'lık kitap 1,5 m'lik rafta: 2·9,8·1,5 = 29,4 J. (g = 9,8 m/s²; sorularda çoğu zaman g = 10 alınır.)",
+        "p": "Yükseğe kaldırılan cisim <b>potansiyel enerji</b> kazanır: PE = m·g·h. h, seçtiğin sıfır seviyesinden ölçülür. 2 kg'lık kitap 1,5 m'lik rafta: 29,4 J.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='180' x2='300' y2='180' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='262' y1='30' x2='262' y2='180' stroke='var(--muted)' stroke-width='2' fill='none'/><rect x='140' y='60' width='122' height='8' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><rect x='180' y='36' width='40' height='24' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)' stroke-width='1.5'/><text x='200' y='53' font-size='12' fill='var(--ink)' text-anchor='middle'>2 kg</text><line x1='110' y1='60' x2='180' y2='60' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><line x1='110' y1='173.1' x2='110' y2='66.9' stroke='var(--acc)' stroke-width='1.5' fill='none'/><polygon points='110,62 113.2,69 106.8,69' fill='var(--acc)'/><polygon points='110,178 106.8,171 113.2,171' fill='var(--acc)'/><text x='102' y='125' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>h = 1,5 m</text><text x='200' y='25' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='bold'>PE = 29,4 J</text><text x='160' y='196' font-size='12' fill='var(--muted)' text-anchor='middle'>sıfır seviyesi (PE = 0)</text></svg>",
-        "key": "PE = m·g·h  (h: seçilen sıfır seviyesinden yükseklik)"
+        "key": "2·9,8·1,5 = 29,4 J. g = 9,8 m/s²; sorularda çoğu zaman g = 10 alınır.",
+        "once": {
+          "soru": "Aynı kitabı iki kat yükseğe koyarsan potansiyel enerjisi ne olur?",
+          "secenekler": [
+            {
+              "yazi": "İki katına çıkar",
+              "neden": "PE = m·g·h; h iki katına çıkınca PE de iki katına çıkar.",
+              "dogru": true
+            },
+            {
+              "yazi": "Dört katına çıkar",
+              "neden": "Kare yalnız hızda var (KE); PE yükseklikle doğru orantılı."
+            },
+            {
+              "yazi": "Değişmez",
+              "neden": "Yükseklik arttıkça PE artar."
+            }
+          ]
+        }
       },
       {
         "h": "İş–enerji teoremi",
-        "p": "Cisme yapılan <b>net iş</b>, kinetik enerjisindeki değişime eşittir: W<sub>net</sub> = ΔKE. Durgun 2 kg'lık arabaya 10 N net kuvvet 5 m boyunca etki ederse W = 50 J olur; araba ≈ 7,1 m/s hıza ulaşır.",
+        "p": "Cisme yapılan <b>net iş</b>, kinetik enerjideki değişime eşittir: W<sub>net</sub> = ΔKE. 10 N, 5 m boyunca itilen durgun araba 50 J KE kazanır.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='15' y1='120' x2='305' y2='120' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='30' y='90' width='40' height='22' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5' rx='3'/><circle cx='38' cy='116' r='4' fill='var(--ink)'/><circle cx='62' cy='116' r='4' fill='var(--ink)'/><rect x='230' y='90' width='40' height='22' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5' rx='3'/><circle cx='238' cy='116' r='4' fill='var(--ink)'/><circle cx='262' cy='116' r='4' fill='var(--ink)'/><line x1='70' y1='101' x2='103' y2='101' stroke='var(--c1)' stroke-width='3' fill='none'/><polygon points='110,101 100,105.5 100,96.5' fill='var(--c1)'/><text x='72' y='84' font-size='12' fill='var(--c1)' font-weight='bold'>F = 10 N</text><text x='28' y='84' font-size='12' fill='var(--ink)'>v = 0</text><line x1='270' y1='101' x2='298' y2='101' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='305,101 295,105.5 295,96.5' fill='var(--c3)'/><text x='305' y='84' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='bold'>v ≈ 7,1 m/s</text><line x1='54.9' y1='140' x2='245.1' y2='140' stroke='var(--acc)' stroke-width='1.5' fill='none'/><polygon points='250,140 243,143.2 243,136.8' fill='var(--acc)'/><polygon points='50,140 57,136.8 57,143.2' fill='var(--acc)'/><text x='150' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>d = 5 m</text><text x='50' y='185' font-size='12' fill='var(--ink)' text-anchor='middle'>KE = 0</text><text x='150' y='185' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W = 10·5 = 50 J</text><text x='255' y='185' font-size='12' fill='var(--ink)' text-anchor='middle'>KE = 50 J</text></svg>",
-        "key": "Wnet = KEson − KEilk"
+        "key": "Wnet = KEson − KEilk. 2 kg'lık araba 50 J ile ≈ 7,1 m/s hıza ulaşır.",
+        "once": {
+          "soru": "Duran bir arabaya 200 J net iş yapılıyor. Kinetik enerjisi kaç J olur?",
+          "secenekler": [
+            {
+              "yazi": "200 J",
+              "neden": "Net iş, kinetik enerjideki değişime eşittir: 0 + 200 = 200 J.",
+              "dogru": true
+            },
+            {
+              "yazi": "0 J",
+              "neden": "Net iş yapıldığı için araba hızlanır."
+            },
+            {
+              "yazi": "100 J",
+              "neden": "Net işin tamamı kinetik enerjiye gider."
+            }
+          ]
+        }
       },
       {
         "h": "Mekanik enerjinin korunumu",
-        "p": "Az önce topta gördüğün gibi PE azalırken KE aynı miktarda artar. <b>Mekanik enerji</b> = KE + PE. Yalnızca yer çekimi iş yapıyorsa (sürtünme, hava direnci, itme yoksa) bu toplam <b>sabit</b> kalır; buna <b>mekanik enerjinin korunumu</b> denir.",
+        "p": "Az önce topta gördüğün gibi PE azalırken KE aynı miktarda artar. <b>Mekanik enerji</b> = KE + PE; yalnız yer çekimi iş yaparsa toplam <b>sabittir</b>.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='187' x2='100' y2='187' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='60' y1='37' x2='60' y2='173' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><circle cx='60' cy='30' r='7' fill='var(--c1)'/><circle cx='60' cy='105' r='7' fill='var(--c1)' fill-opacity='0.6'/><circle cx='60' cy='180' r='7' fill='var(--c1)'/><text x='45' y='34' font-size='12' fill='var(--ink)' text-anchor='end'>5 m</text><text x='45' y='109' font-size='12' fill='var(--ink)' text-anchor='end'>2,5 m</text><text x='45' y='184' font-size='12' fill='var(--ink)' text-anchor='end'>0 m</text><text x='110' y='14' font-size='12' fill='var(--ink)' font-weight='bold'>Toplam hep 98 J</text><rect x='110' y='22' width='120' height='16' fill='var(--c2)' fill-opacity='0.45'/><text x='170' y='34' font-size='12' fill='var(--ink)' text-anchor='middle'>PE = 98 J</text><text x='236' y='34' font-size='12' fill='var(--ink)'>v = 0</text><rect x='110' y='97' width='60' height='16' fill='var(--c2)' fill-opacity='0.45'/><rect x='170' y='97' width='60' height='16' fill='var(--c3)' fill-opacity='0.45'/><text x='140' y='109' font-size='12' fill='var(--ink)' text-anchor='middle'>PE 49 J</text><text x='200' y='109' font-size='12' fill='var(--ink)' text-anchor='middle'>KE 49 J</text><text x='236' y='109' font-size='12' fill='var(--ink)'>v ≈ 7 m/s</text><rect x='110' y='172' width='120' height='16' fill='var(--c3)' fill-opacity='0.45'/><text x='170' y='184' font-size='12' fill='var(--ink)' text-anchor='middle'>KE = 98 J</text><text x='236' y='184' font-size='12' fill='var(--ink)'>v ≈ 9,9 m/s</text></svg>",
         "key": "KE + PE = sabit (yalnız yer çekimi iş yaparsa). Dışarıdan iş (itme) yapılırsa mekanik enerji değişir.",
         "etk": {
@@ -3220,38 +3256,92 @@
       },
       {
         "h": "Sürtünme: enerji ısıya döner",
-        "p": "Sürtünme varsa mekanik enerjinin bir kısmı <b>ısıya</b> (iç enerjiye) dönüşür. Kaydıraktan inen çocuk bu yüzden beklenenden yavaş iner, kaydırak da hafifçe ısınır. Isıya giden enerji sürtünmenin işine eşittir: <b>F<sub>s</sub>·d = E<sub>ilk</sub> − E<sub>son</sub></b>. Enerji yok olmaz; toplam enerji korunur.",
+        "p": "Sürtünme varsa mekanik enerjinin bir kısmı <b>ısıya</b> dönüşür; kaydıraktan inen çocuk yavaşlar, kaydırak ısınır. Isıya giden enerji sürtünmenin işine eşittir; toplam enerji korunur.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='25' y1='50' x2='150' y2='170' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='15' y1='170' x2='160' y2='170' stroke='var(--ink)' stroke-width='1.5' fill='none'/><circle cx='28' cy='40' r='7' fill='var(--c1)'/><circle cx='150' cy='163' r='7' fill='var(--c1)' fill-opacity='0.6'/><text x='40' y='150' font-size='12' fill='var(--c4)' font-weight='bold'>ısınır</text><text x='165' y='40' font-size='12' fill='var(--ink)' font-weight='bold'>başta</text><rect x='165' y='48' width='150' height='18' fill='var(--c2)' fill-opacity='0.45'/><text x='240' y='61' font-size='12' fill='var(--ink)' text-anchor='middle'>PE = 100 J</text><text x='240' y='100' font-size='12' fill='var(--muted)' text-anchor='middle'>toplam yine 100 J</text><text x='165' y='125' font-size='12' fill='var(--ink)' font-weight='bold'>sonda</text><rect x='165' y='133' width='105' height='18' fill='var(--c3)' fill-opacity='0.45'/><rect x='270' y='133' width='45' height='18' fill='var(--c4)' fill-opacity='0.55'/><text x='217.5' y='146' font-size='12' fill='var(--ink)' text-anchor='middle'>KE = 70 J</text><text x='292.5' y='168' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='bold'>ısı 30 J</text></svg>",
-        "key": "100 J ile başlayıp 70 J ile biten kaykaycıda sürtünme 30 J iş yaptı."
+        "key": "Fs·d = Eilk − Eson. 100 J ile başlayıp 70 J ile biten kaykaycıda sürtünme 30 J iş yaptı."
       },
       {
         "h": "F–x grafiği ve yay enerjisi",
-        "p": "Kuvvet–yer değiştirme grafiğinin altındaki alan yapılan işi verir. Yayı germek için gereken kuvvet uzamayla artar: F = k·x. Grafik bir üçgen olur; alanı, yayda depolanan esneklik potansiyel enerjisidir: <b>PE = ½·k·x²</b>. k = 200 N/m, x = 0,1 m ise 1 J.",
+        "p": "F–x grafiğinin altındaki alan işi verir. Yayda F = k·x olduğundan grafik üçgendir; alanı yayda depolanan enerjidir: <b>PE = ½·k·x²</b>.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M40 170 H180 M40 170 V30' stroke='var(--ink)' stroke-width='1.5'/><path d='M40 170 L160 50 V170 Z' fill='var(--acc)' fill-opacity='0.2' stroke='var(--acc)' stroke-width='2'/><text x='185' y='184' font-size='12' fill='var(--muted)' text-anchor='end'>x</text><text x='32' y='36' font-size='12' fill='var(--muted)' text-anchor='end'>F</text><text x='118' y='150' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>alan = iş</text><text x='76' y='90' font-size='12' fill='var(--acc)' text-anchor='middle'>F = k·x</text><path d='M210 60 h10 l6 -10 l12 20 l12 -20 l12 20 l12 -20 l6 10 h10' fill='none' stroke='var(--ink)' stroke-width='2'/><rect x='200' y='40' width='8' height='40' fill='var(--muted)'/><rect x='290' y='48' width='18' height='24' rx='3' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='250' y='105' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>PE = ½·k·x²</text><text x='250' y='128' font-size='11' fill='var(--muted)' text-anchor='middle'>k = 200 N/m, x = 0,1 m</text><text x='250' y='146' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>PE = 1 J</text></svg>",
-        "key": "F–x grafiğinin altındaki alan = iş"
+        "key": "k = 200 N/m, x = 0,1 m ise ½·200·0,01 = 1 J."
       },
       {
         "h": "Verim",
-        "p": "Çoğu makinede enerjinin bir kısmı istenmeyen ısıya gider. <b>Verim = yararlı enerji / harcanan enerji × 100</b>. 100 J elektrik enerjisinin 20 J'ünü ışığa çeviren LED ampulün verimi %20'dir. Verim %100'ü hiçbir zaman aşmaz.",
-        "svg": "<svg viewBox='0 0 320 200'><rect x='20' y='70' width='80' height='60' rx='8' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='60' y='96' font-size='12' fill='var(--ink)' text-anchor='middle'>harcanan</text><text x='60' y='114' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>100 J</text><path d='M100 100 H150' stroke='var(--muted)' stroke-width='14' stroke-opacity='0.35'/><path d='M150 100 Q200 100 210 60 H240' fill='none' stroke='var(--c3)' stroke-width='6'/><path d='M150 100 Q200 100 210 140 H240' fill='none' stroke='var(--c2)' stroke-width='12' stroke-opacity='0.6'/><text x='246' y='58' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>yararlı: 20 J</text><text x='246' y='74' font-size='11' fill='var(--muted)' text-anchor='start'>(ışık)</text><text x='246' y='140' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>kayıp: 80 J</text><text x='246' y='156' font-size='11' fill='var(--muted)' text-anchor='start'>(ısı)</text><text x='160' y='30' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>verim = yararlı / harcanan × 100</text><text x='120' y='186' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>ampulün verimi %20</text></svg>"
+        "p": "Makinelerde enerjinin bir kısmı istenmeyen ısıya gider. <b>Verim = yararlı enerji / harcanan enerji × 100</b>. Verim %100'ü hiçbir zaman aşmaz.",
+        "svg": "<svg viewBox='0 0 320 200'><rect x='20' y='70' width='80' height='60' rx='8' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='60' y='96' font-size='12' fill='var(--ink)' text-anchor='middle'>harcanan</text><text x='60' y='114' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>100 J</text><path d='M100 100 H150' stroke='var(--muted)' stroke-width='14' stroke-opacity='0.35'/><path d='M150 100 Q200 100 210 60 H240' fill='none' stroke='var(--c3)' stroke-width='6'/><path d='M150 100 Q200 100 210 140 H240' fill='none' stroke='var(--c2)' stroke-width='12' stroke-opacity='0.6'/><text x='246' y='58' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>yararlı: 20 J</text><text x='246' y='74' font-size='11' fill='var(--muted)' text-anchor='start'>(ışık)</text><text x='246' y='140' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>kayıp: 80 J</text><text x='246' y='156' font-size='11' fill='var(--muted)' text-anchor='start'>(ısı)</text><text x='160' y='30' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>verim = yararlı / harcanan × 100</text><text x='120' y='186' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>ampulün verimi %20</text></svg>",
+        "once": {
+          "soru": "100 J elektrik enerjisinin 20 J'ünü ışığa çeviren ampulün verimi yüzde kaçtır?",
+          "secenekler": [
+            {
+              "yazi": "%20",
+              "neden": "Yararlı / harcanan = 20 / 100 = 0,2, yani %20.",
+              "dogru": true
+            },
+            {
+              "yazi": "%80",
+              "neden": "%80 ısıya giden kısımdır, yararlı değil."
+            },
+            {
+              "yazi": "%120",
+              "neden": "Verim %100'ü aşamaz."
+            }
+          ]
+        }
       },
       {
         "h": "Güç: işin ne hızla yapıldığı",
-        "p": "<b>Güç</b> <em>(power)</em> birim zamanda yapılan iştir: P = W / t (ortalama güç). Birimi <b>watt</b>: 1 W = 1 J/s. 50 kg'lık biri 3 m'lik merdiveni çıkınca ≈ 1470 J iş yapar; 5 s'de koşarsa güç 294 W, 10 s'de yürürse 147 W olur.",
+        "p": "<b>Güç</b>, birim zamanda yapılan iştir: P = W / t. Birimi <b>watt</b>: 1 W = 1 J/s. Merdiveni koşarak çıkan, yürüyerek çıkandan fazla güç harcar.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><path d='M20 170 h20 v-20 h20 v-20 h20 v-20 h20 v-20 h20 v-20 h20 v-20 h30 V170 Z' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><text x='20' y='30' font-size='12' fill='var(--ink)' font-weight='bold'>W = 1470 J (ikisi de)</text><line x1='180' y1='165.1' x2='180' y2='54.9' stroke='var(--acc)' stroke-width='1.5' fill='none'/><polygon points='180,50 183.2,57 176.8,57' fill='var(--acc)'/><polygon points='180,170 176.8,163 183.2,163' fill='var(--acc)'/><text x='186' y='114' font-size='12' fill='var(--ink)'>3 m</text><line x1='205' y1='170' x2='312' y2='170' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='212' y='52.4' width='45' height='117.6' fill='var(--c1)' fill-opacity='0.5'/><rect x='264' y='111.2' width='45' height='58.8' fill='var(--c3)' fill-opacity='0.5'/><text x='234.5' y='46' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>294 W</text><text x='286.5' y='105' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>147 W</text><text x='234.5' y='160' font-size='12' fill='var(--ink)' text-anchor='middle'>koşan</text><text x='286.5' y='160' font-size='12' fill='var(--ink)' text-anchor='middle'>yürüyen</text><text x='234.5' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>5 s</text><text x='286.5' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>10 s</text></svg>",
-        "key": "P = W / t;  1 kWh = 3,6 milyon J"
+        "key": "50 kg, 3 m: iş ≈ 1470 J; 5 s'de 294 W, 10 s'de 147 W. 1 kWh = 3,6 milyon J."
       },
       {
         "h": "Güç ve hız: P = F·v",
-        "p": "Cisim, hareket yönündeki F kuvvetiyle sabit v hızında gidiyorsa t sürede d = v·t yol alır. Güç P = W/t = F·d/t = <b>F·v</b> olur. Kasayı 500 N'luk sürtünmeye karşı 2 m/s sabit hızla itersen 500 N uygularsın: P = 500·2 = 1000 W.",
-        "key": "Aynı güçte büyük kuvvet ancak düşük hızda verilir: yokuşta küçük vitese geçilir.",
-        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='20' y='30' font-size='13' fill='var(--ink)' font-weight='bold'>P = F·v = 500·2 = 1000 W</text><line x1='10' y1='140' x2='310' y2='140' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='130' y='90' width='70' height='50' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.5'/><text x='165' y='120' font-size='12' fill='var(--ink)' text-anchor='middle'>kasa</text><line x1='50' y1='115' x2='122' y2='115' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='130,115 121,110.5 121,119.5' fill='var(--acc)'/><text x='86' y='106' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='bold'>F = 500 N</text><line x1='190' y1='150' x2='138' y2='150' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='130,150 139,145.5 139,154.5' fill='var(--c2)'/><text x='196' y='155' font-size='12' fill='var(--c2)'>sürtünme 500 N</text><line x1='140' y1='72' x2='182' y2='72' stroke='var(--muted)' stroke-width='2' fill='none'/><polygon points='190,72 181,67.5 181,76.5' fill='var(--muted)'/><text x='198' y='76' font-size='12' fill='var(--ink)'>v = 2 m/s (sabit)</text><text x='160' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>net kuvvet sıfır, ama iten 1 s'de 1000 J iş yapar</text></svg>"
+        "p": "Cisim F kuvvetiyle sabit v hızında gidiyorsa güç <b>P = F·v</b> olur. Kasayı 500 N'la 2 m/s sabit hızla itersen P = 1000 W.",
+        "key": "P = W/t = F·d/t = F·v. Yokuşta küçük vitese geçilir: büyük kuvvet, düşük hız.",
+        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='20' y='30' font-size='13' fill='var(--ink)' font-weight='bold'>P = F·v = 500·2 = 1000 W</text><line x1='10' y1='140' x2='310' y2='140' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='130' y='90' width='70' height='50' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.5'/><text x='165' y='120' font-size='12' fill='var(--ink)' text-anchor='middle'>kasa</text><line x1='50' y1='115' x2='122' y2='115' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='130,115 121,110.5 121,119.5' fill='var(--acc)'/><text x='86' y='106' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='bold'>F = 500 N</text><line x1='190' y1='150' x2='138' y2='150' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='130,150 139,145.5 139,154.5' fill='var(--c2)'/><text x='196' y='155' font-size='12' fill='var(--c2)'>sürtünme 500 N</text><line x1='140' y1='72' x2='182' y2='72' stroke='var(--muted)' stroke-width='2' fill='none'/><polygon points='190,72 181,67.5 181,76.5' fill='var(--muted)'/><text x='198' y='76' font-size='12' fill='var(--ink)'>v = 2 m/s (sabit)</text><text x='160' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>net kuvvet sıfır, ama iten 1 s'de 1000 J iş yapar</text></svg>",
+        "once": {
+          "soru": "Motor gücü sabit bir araba yokuşa girince daha büyük kuvvet gerekir. Hızı ne olur?",
+          "secenekler": [
+            {
+              "yazi": "Azalır",
+              "neden": "P = F·v sabitse F büyüyünce v küçülür.",
+              "dogru": true
+            },
+            {
+              "yazi": "Artar",
+              "neden": "Güç sabitken kuvvet artarsa hız artamaz."
+            },
+            {
+              "yazi": "Değişmez",
+              "neden": "F·v sabit; F değişince v de değişir."
+            }
+          ]
+        }
       },
       {
         "h": "Enerjinin biçimleri",
-        "p": "Enerji birçok biçimde bulunur: hareket (kinetik), konum (potansiyel), ısı (iç enerji), bağlarda saklı kimyasal enerji, elektrik, ışık, ses ve çekirdekteki nükleer enerji. Hepsi joule ile ölçülür ve birbirine dönüşebilir; toplam korunur. Farkları, nasıl depolandıkları ve ne kadar kolay kullanıldıklarıdır.",
+        "p": "Enerji birçok biçimdedir: kinetik, potansiyel, ısı, kimyasal, elektrik, ışık, ses, nükleer. Hepsi joule ile ölçülür, birbirine dönüşebilir; toplam korunur.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kart-enerji-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--muted)'/></marker></defs><rect x='10' y='36' width='68' height='52' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='44' y='58' font-size='11.5' fill='var(--c1)' text-anchor='middle' font-weight='700'>potansiyel</text><text x='44' y='76' font-size='10.5' fill='var(--muted)' text-anchor='middle'>baraj gölü</text><rect x='88' y='36' width='68' height='52' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='122' y='58' font-size='11.5' fill='var(--c3)' text-anchor='middle' font-weight='700'>kinetik</text><text x='122' y='76' font-size='10.5' fill='var(--muted)' text-anchor='middle'>türbin</text><rect x='166' y='36' width='68' height='52' rx='6' fill='var(--c4)' fill-opacity='0.14' stroke='var(--c4)' stroke-width='1.5'/><text x='200' y='58' font-size='11.5' fill='var(--c4)' text-anchor='middle' font-weight='700'>elektrik</text><text x='200' y='76' font-size='10.5' fill='var(--muted)' text-anchor='middle'>jeneratör</text><rect x='244' y='36' width='68' height='52' rx='6' fill='var(--c2)' fill-opacity='0.14' stroke='var(--c2)' stroke-width='1.5'/><text x='278' y='58' font-size='11.5' fill='var(--c2)' text-anchor='middle' font-weight='700'>ışık + ısı</text><text x='278' y='76' font-size='10.5' fill='var(--muted)' text-anchor='middle'>lamba</text><line x1='79' y1='62' x2='87' y2='62' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#kart-enerji-1)'/><line x1='157' y1='62' x2='165' y2='62' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#kart-enerji-1)'/><line x1='235' y1='62' x2='243' y2='62' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#kart-enerji-1)'/><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Enerji bir biçimden ötekine geçer, toplamı korunur</text><rect x='6' y='104' width='308' height='90' rx='8' fill='var(--panel)'/><text x='160' y='126' font-size='12' fill='var(--muted)' text-anchor='middle' font-weight='700'>Diğer biçimler</text><text x='84' y='150' font-size='11.5' fill='var(--ink)' text-anchor='middle'>ısı (iç enerji)</text><text x='236' y='150' font-size='11.5' fill='var(--ink)' text-anchor='middle'>kimyasal (bağlarda)</text><text x='84' y='174' font-size='11.5' fill='var(--ink)' text-anchor='middle'>ses</text><text x='236' y='174' font-size='11.5' fill='var(--ink)' text-anchor='middle'>nükleer (çekirdekte)</text></svg>",
-        "key": "Baraj: potansiyel → kinetik (türbin) → elektrik (jeneratör) → ışık ve ısı (lamba)."
+        "key": "Baraj: potansiyel → kinetik (türbin) → elektrik (jeneratör) → ışık ve ısı (lamba).",
+        "once": {
+          "soru": "Barajda suyun enerjisi sırasıyla nasıl dönüşür?",
+          "secenekler": [
+            {
+              "yazi": "Potansiyel → kinetik → elektrik",
+              "neden": "Yüksekteki su düşerken hızlanır, türbini çevirir, jeneratör elektrik üretir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Kimyasal → ısı → elektrik",
+              "neden": "Bu bir termik santraldir; barajda yakıt yanmaz."
+            },
+            {
+              "yazi": "Nükleer → ısı → elektrik",
+              "neden": "Bu bir nükleer santraldir."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",
