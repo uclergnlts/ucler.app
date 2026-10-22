@@ -1213,31 +1213,49 @@
     "cards": [
       {
         "h": "Sıcaklık nedir?",
-        "p": "Maddenin tanecikleri durmadan hareket eder. <b>Sıcaklık</b>, bu taneciklerin <b>ortalama kinetik enerjisinin</b> (hareketten gelen enerji) ölçüsüdür. Çay ısındıkça tanecikleri daha hızlı hareket eder. Sıcaklık madde miktarına bağlı değildir: 1 atm’de kaynayan bir damla su da bir kova su da 100 °C’dir.",
+        "p": "<b>Sıcaklık</b>, taneciklerin <b>ortalama kinetik enerjisinin</b> ölçüsüdür. Çay ısındıkça tanecikleri hızlanır. Sıcaklık madde miktarına bağlı değildir: kaynayan damla da kova da 100 °C'dir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='isi-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><defs><marker id='isi-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><rect x='20' y='24' width='130' height='126' rx='8' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1.5'/><rect x='170' y='24' width='130' height='126' rx='8' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)' stroke-width='1.5'/><circle cx='45' cy='50' r='6' fill='var(--c1)'/><path d='M53 50 l8 0' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#isi-1)'/><circle cx='95' cy='45' r='6' fill='var(--c1)'/><path d='M95 53 l0 8' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#isi-1)'/><circle cx='60' cy='95' r='6' fill='var(--c1)'/><path d='M52 95 l-8 0' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#isi-1)'/><circle cx='120' cy='90' r='6' fill='var(--c1)'/><path d='M120 82 l0 -8' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#isi-1)'/><circle cx='80' cy='130' r='6' fill='var(--c1)'/><path d='M88 138 l8 8' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#isi-1)'/><circle cx='40' cy='125' r='6' fill='var(--c1)'/><path d='M48 117 l8 -8' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#isi-1)'/><circle cx='195' cy='50' r='6' fill='var(--c2)'/><path d='M203 50 l18 0' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#isi-2)'/><circle cx='255' cy='45' r='6' fill='var(--c2)'/><path d='M255 53 l0 18' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#isi-2)'/><circle cx='215' cy='95' r='6' fill='var(--c2)'/><path d='M207 95 l-18 0' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#isi-2)'/><circle cx='280' cy='95' r='6' fill='var(--c2)'/><path d='M280 87 l0 -18' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#isi-2)'/><circle cx='240' cy='130' r='6' fill='var(--c2)'/><path d='M248 138 l18 18' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#isi-2)'/><circle cx='195' cy='125' r='6' fill='var(--c2)'/><path d='M203 117 l18 -18' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#isi-2)'/><text x='85' y='172' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>düşük sıcaklık</text><text x='85' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>tanecikler yavaş</text><text x='235' y='172' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>yüksek sıcaklık</text><text x='235' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>tanecikler hızlı</text></svg>",
         "key": "Sıcaklık enerji değildir, ortalama enerjinin ölçüsüdür; termometreyle ölçülür."
       },
       {
         "h": "Isı ve iç enerji",
-        "p": "<b>Isı</b>, sıcaklık farkı yüzünden sıcak cisimden soğuk cisme aktarılan enerjidir; cisim ısı içermez. <b>İç enerji</b> ise taneciklerin kinetik ve potansiyel enerjilerinin toplamıdır ve madde miktarına bağlıdır. Isının birimi joule (J) ya da kaloridir (cal).",
+        "p": "<b>Isı</b>, sıcaklık farkı yüzünden sıcaktan soğuğa aktarılan enerjidir; cisim ısı içermez. <b>İç enerji</b> taneciklerin toplam enerjisidir, miktara bağlıdır. Birim: joule ya da kalori.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='isi-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><text x='160' y='26' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Isı: sıcaklığı yüksekten düşüğe</text><text x='160' y='46' font-size='11' fill='var(--muted)' text-anchor='middle'>iç enerjisi büyükten küçüğe değil</text><path d='M20 70 V150 H170 V70' fill='none' stroke='var(--ink)' stroke-width='2'/><rect x='21' y='80' width='148' height='69' fill='var(--c1)' fill-opacity='0.25'/><text x='95' y='120' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>40 °C</text><path d='M240 100 V150 H290 V100' fill='none' stroke='var(--ink)' stroke-width='2'/><rect x='241' y='106' width='48' height='43' fill='var(--c2)' fill-opacity='0.3'/><text x='265' y='133' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>90 °C</text><path d='M234 128 H180' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#isi-3)'/><text x='207' y='118' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>ısı</text><text x='95' y='172' font-size='11' fill='var(--ink)' text-anchor='middle'>küvet: çok su, ılık</text><text x='95' y='189' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>iç enerjisi büyük</text><text x='265' y='172' font-size='11' fill='var(--ink)' text-anchor='middle'>bardak: az su</text><text x='265' y='189' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>sıcaklığı yüksek</text></svg>",
-        "key": "Isı, iç enerjisi büyükten değil, sıcaklığı yüksekten düşüğe akar."
+        "key": "Isı, iç enerjisi büyükten değil, sıcaklığı yüksekten düşüğe akar.",
+        "once": {
+          "soru": "Sıcak çayın içine soğuk bir kaşık koyuyorsun. Isı hangi yöne akar?",
+          "secenekler": [
+            {
+              "yazi": "Çaydan kaşığa",
+              "neden": "Isı, sıcaklık farkı yüzünden sıcaktan soğuğa aktarılan enerjidir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Kaşıktan çaya",
+              "neden": "Soğuk kaşık çayı ısıtmaz; ısı hep sıcaktan soğuğa akar."
+            },
+            {
+              "yazi": "Hiç akmaz",
+              "neden": "Sıcaklıklar farklı olduğu sürece ısı akar."
+            }
+          ]
+        }
       },
       {
         "h": "Termometre ve sıcaklık ölçekleri",
-        "p": "Termometre, cıva ya da alkol gibi bir sıvının ısınınca genleşmesinden yararlanır. Su 1 atm’de Celsius’ta 0 °C’de donar, 100 °C’de kaynar; Fahrenheit’ta 32 ve 212, Kelvin’de 273 ve 373’tür. <b>T = t + 273</b> ve <b>F = 1,8·t + 32</b>.",
+        "p": "Termometre bir sıvının ısınınca genleşmesinden yararlanır. Su 1 atm'de 0 °C'de donar, 100 °C'de kaynar. <b>T = t + 273</b>, <b>F = 1,8·t + 32</b>.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M70 50 H300 M70 150 H300' stroke='var(--line)' stroke-dasharray='4 3'/><text x='10' y='54' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>su kaynar</text><text x='10' y='154' font-size='11' fill='var(--c1)' text-anchor='start' font-weight='700'>su donar</text><text x='10' y='70' font-size='10' fill='var(--muted)' text-anchor='start'>(1 atm)</text><rect x='105' y='36' width='10' height='122' rx='5' fill='var(--panel)' stroke='var(--ink)'/><circle cx='110' cy='162' r='8' fill='var(--c2)'/><rect x='108' y='100' width='4' height='58' fill='var(--c2)'/><text x='110' y='26' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>°C</text><text x='119' y='46' font-size='11' fill='var(--ink)' text-anchor='start'>100</text><text x='119' y='146' font-size='11' fill='var(--ink)' text-anchor='start'>0</text><rect x='185' y='36' width='10' height='122' rx='5' fill='var(--panel)' stroke='var(--ink)'/><circle cx='190' cy='162' r='8' fill='var(--c2)'/><rect x='188' y='100' width='4' height='58' fill='var(--c2)'/><text x='190' y='26' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>°F</text><text x='199' y='46' font-size='11' fill='var(--ink)' text-anchor='start'>212</text><text x='199' y='146' font-size='11' fill='var(--ink)' text-anchor='start'>32</text><rect x='265' y='36' width='10' height='122' rx='5' fill='var(--panel)' stroke='var(--ink)'/><circle cx='270' cy='162' r='8' fill='var(--c2)'/><rect x='268' y='100' width='4' height='58' fill='var(--c2)'/><text x='270' y='26' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>K</text><text x='279' y='46' font-size='11' fill='var(--ink)' text-anchor='start'>373</text><text x='279' y='146' font-size='11' fill='var(--ink)' text-anchor='start'>273</text><text x='160' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>C / 100 = (F − 32) / 180 = (T − 273) / 100</text></svg>",
         "key": "Fark olarak 1 °C = 1 K = 1,8 °F. Kelvin’de eksi değer yok: 0 K ≈ −273 °C."
       },
       {
         "h": "Öz ısı ve ısı sığası",
-        "p": "Az önce gördüğün farkın adı <b>öz ısı</b>dır (c): 1 g maddenin sıcaklığını 1 °C artıran ısı. Suyunki 1 cal/g·°C’dir ve çoğu maddeden büyüktür; denizler bu yüzden geç ısınıp geç soğur. Alınan ısı <b>Q = m·c·ΔT</b>, ısı sığası ise <b>C = m·c</b>’dir.",
+        "p": "Bu farkın adı <b>öz ısı</b>dır (c): 1 g maddeyi 1 °C ısıtan ısı. Suyunki 1 cal/g·°C, çoğu maddeden büyük. Alınan ısı <b>Q = m·c·ΔT</b>.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='38' font-size='24' fill='var(--ink)' text-anchor='middle' font-weight='800'>Q = m · c · ΔT</text><rect x='20' y='60' width='135' height='80' rx='8' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='87' y='82' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>su</text><text x='87' y='102' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>c = 1 cal/g·°C</text><text x='87' y='124' font-size='11' fill='var(--muted)' text-anchor='middle'>geç ısınır, geç soğur</text><rect x='165' y='60' width='135' height='80' rx='8' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.5'/><text x='232' y='82' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>demir</text><text x='232' y='102' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>c ≈ 0,11 cal/g·°C</text><text x='232' y='124' font-size='11' fill='var(--muted)' text-anchor='middle'>çabuk ısınır</text><text x='160' y='166' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>ısı sığası: C = m · c  (cal/°C)</text><text x='160' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>1 cal ≈ 4,18 J</text></svg>",
         "key": "Öz ısı maddeyi tanıtır; ısı sığası kütleye bağlıdır, ayırt edici değildir."
       },
       {
         "h": "Isıl denge ve karışım",
-        "p": "Sıcaklıkları farklı cisimler temas edince ısı, sıcaklıklar eşitlenene kadar akar: <b>ısıl denge</b>. Dışarıya ısı kaybı ve hâl değişimi yoksa <b>alınan ısı = verilen ısı</b>. 60 °C’de 300 g su ile 20 °C’de 100 g su karışınca denge 50 °C olur.",
+        "p": "Farklı sıcaklıktaki cisimler temas edince ısı, sıcaklıklar eşitlenene kadar akar: <b>ısıl denge</b>. Dışarı kayıp yoksa <b>alınan ısı = verilen ısı</b>.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M50 20 V170 H300' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M52 42 Q120 64 200 66 H295' fill='none' stroke='var(--c2)' stroke-width='2.5'/><path d='M52 138 Q120 70 200 66' fill='none' stroke='var(--c1)' stroke-width='2.5'/><text x='44' y='46' font-size='11' fill='var(--c2)' text-anchor='end' font-weight='700'>60</text><text x='44' y='142' font-size='11' fill='var(--c1)' text-anchor='end' font-weight='700'>20</text><text x='44' y='70' font-size='11' fill='var(--acc)' text-anchor='end' font-weight='700'>50</text><path d='M50 66 H195' stroke='var(--line)' stroke-dasharray='3 3'/><text x='250' y='84' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>ısıl denge</text><text x='190' y='32' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>alınan ısı = verilen ısı</text><text x='190' y='50' font-size='10' fill='var(--muted)' text-anchor='middle'>(ısı kaybı yok)</text><text x='130' y='140' font-size='11' fill='var(--c1)' text-anchor='start'>100 g, 20 °C</text><text x='56' y='20' font-size='10' fill='var(--muted)' text-anchor='start'>T (°C)</text><text x='60' y='84' font-size='11' fill='var(--c2)' text-anchor='start'>300 g, 60 °C</text><text x='298' y='188' font-size='11' fill='var(--muted)' text-anchor='end'>zaman</text></svg>",
         "key": "Denge sıcaklığı iki ilk sıcaklığın arasındadır; aynı maddede kütlesi büyüğe yakındır.",
         "etk": {
@@ -1291,13 +1309,13 @@
       },
       {
         "h": "Hâl değişimi ve gizli ısı",
-        "p": "Saf madde hâl değiştirirken aldığı ısı, tanecikler arasındaki çekimi yenmeye harcanır; ortalama kinetik enerji, yani sıcaklık değişmez. Gereken ısı <b>Q = m·L</b>’dir; L erime ya da buharlaşma ısısıdır. Donan ya da yoğuşan madde aynı miktarda ısıyı geri verir.",
+        "p": "Hâl değiştirirken alınan ısı tanecikler arası çekimi yenmeye gider; sıcaklık değişmez. Gereken ısı <b>Q = m·L</b> (L: erime ya da buharlaşma ısısı).",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='isi-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='isi-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><text x='160' y='34' font-size='22' fill='var(--ink)' text-anchor='middle' font-weight='800'>Q = m · L</text><rect x='15' y='50' width='70' height='36' rx='6' fill='var(--panel)' stroke='var(--ink)'/><text x='50' y='73' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>buz</text><rect x='125' y='50' width='70' height='36' rx='6' fill='var(--panel)' stroke='var(--ink)'/><text x='160' y='73' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>su</text><rect x='235' y='50' width='70' height='36' rx='6' fill='var(--panel)' stroke='var(--ink)'/><text x='270' y='73' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>buhar</text><path d='M88 60 H120' stroke='var(--c2)' stroke-width='2' marker-end='url(#isi-4)'/><path d='M120 77 H88' stroke='var(--c1)' stroke-width='2' marker-end='url(#isi-5)'/><path d='M198 60 H230' stroke='var(--c2)' stroke-width='2' marker-end='url(#isi-4)'/><path d='M230 77 H198' stroke='var(--c1)' stroke-width='2' marker-end='url(#isi-5)'/><text x='160' y='106' font-size='10' fill='var(--muted)' text-anchor='middle'>kırmızı: ısı alır · mavi: ısı verir</text><text x='160' y='130' font-size='12' fill='var(--ink)' text-anchor='middle'>erime ısısı (buz): 80 cal/g ≈ 334 J/g</text><text x='160' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>buharlaşma ısısı (su): 540 cal/g ≈ 2260 J/g</text><text x='160' y='176' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>hâl değişirken sıcaklık sabit kalır</text><text x='160' y='194' font-size='10' fill='var(--muted)' text-anchor='middle'>1 atm, saf su</text></svg>",
         "key": "0 °C’deki 25 g buzu eritmek 25 × 80 = 2000 cal ister; oluşan su hâlâ 0 °C’dir."
       },
       {
         "h": "Isıtma eğrisi",
-        "p": "Buzu sabit güçle ısıtırsan sıcaklık-zaman grafiği basamaklı çıkar. Eğik kısımlarda sıcaklık artar (Q = m·c·ΔT), <b>düz kısımlarda</b> hâl değişir (Q = m·L). Buzun öz ısısı suyunkinin yaklaşık yarısıdır, bu yüzden buzun doğrusu daha diktir. Kaynama düzlüğü erimeninkinden uzundur.",
+        "p": "Sabit güçle ısıtılan buzun sıcaklık-zaman grafiği basamaklıdır. Eğik kısımda sıcaklık artar (Q = m·c·ΔT), <b>düz kısımda</b> hâl değişir (Q = m·L).",
         "svg": "<svg viewBox='0 0 320 200'><path d='M50 20 V170 H300' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M50 140 H60 M50 70 H200' stroke='var(--line)' stroke-dasharray='3 3'/><path d='M50 154 L60 140 H100 L200 70 H280 L292 50' fill='none' stroke='var(--acc)' stroke-width='2.5'/><path d='M60 140 H100 M200 70 H280' stroke='var(--c2)' stroke-width='4'/><text x='44' y='144' font-size='11' fill='var(--ink)' text-anchor='end'>0</text><text x='44' y='74' font-size='11' fill='var(--ink)' text-anchor='end'>100</text><text x='80' y='130' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>erime</text><text x='240' y='60' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>kaynama</text><text x='62' y='162' font-size='10' fill='var(--muted)' text-anchor='start'>buz</text><text x='160' y='126' font-size='10' fill='var(--muted)' text-anchor='start'>su ısınır</text><text x='300' y='38' font-size='10' fill='var(--muted)' text-anchor='end'>buhar</text><text x='58' y='24' font-size='11' fill='var(--muted)' text-anchor='start'>T (°C)</text><text x='52' y='188' font-size='10' fill='var(--muted)' text-anchor='start'>sabit güçle ısıtma, 1 atm</text><text x='300' y='188' font-size='11' fill='var(--muted)' text-anchor='end'>zaman</text></svg>",
         "key": "Düz kısımda ısı alınır ve iç enerji artar, ama sıcaklık sabit kalır.",
         "etk": {
@@ -1335,53 +1353,197 @@
               "acik": "Suyun hepsi buhara dönünce sıcaklık yeniden artar."
             }
           ]
+        },
+        "once": {
+          "soru": "Buzu sabit güçle ısıtıyorsun. Buz erirken sıcaklık-zaman grafiği nasıl görünür?",
+          "secenekler": [
+            {
+              "yazi": "Yatay bir çizgi",
+              "neden": "Erirken alınan ısı hâl değişimine gider; sıcaklık sabit kalır, grafik düzleşir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Yükselen bir çizgi",
+              "neden": "Erime bitene kadar sıcaklık artmaz."
+            },
+            {
+              "yazi": "Alçalan bir çizgi",
+              "neden": "Isı alan buzun sıcaklığı düşmez."
+            }
+          ]
         }
       },
       {
         "h": "Karışımda buz kalır mı?",
-        "p": "Isıları karşılaştır: 20 °C'de 200 g su 0 °C'ye inerken en çok 200·1·20 = 4000 cal verir. 0 °C'de 100 g buzu eritmek için 100·80 = 8000 cal gerekir (L = 80 cal/g). 4000 &lt; 8000: yalnızca 50 g buz erir, denge 0 °C olur.",
-        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>0 °C'de 100 g buz + 20 °C'de 200 g su</text><text x='20' y='56' font-size='11' fill='var(--muted)'>su 20 → 0 °C inerken verebileceği</text><rect x='20' y='63' width='140' height='22' rx='4' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><text x='168' y='79' font-size='12' fill='var(--c2)' font-weight='bold'>200·1·20 = 4000 cal</text><text x='20' y='110' font-size='11' fill='var(--muted)'>buzun hepsini eritmek için gereken</text><rect x='20' y='117' width='280' height='22' rx='4' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><text x='160' y='133' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>100·80 = 8000 cal</text><text x='160' y='168' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>4000 &lt; 8000 → 4000 / 80 = 50 g buz erir</text><text x='160' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>denge 0 °C; 50 g buz kalır</text></svg>"
+        "p": "Karışımda buz kalıp kalmayacağını bulmak için ısıları karşılaştır: suyun 0 °C'ye inerken verebileceği ısı, buzu eritmeye yetmezse denge <b>0 °C</b> olur ve buz kalır.",
+        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>0 °C'de 100 g buz + 20 °C'de 200 g su</text><text x='20' y='56' font-size='11' fill='var(--muted)'>su 20 → 0 °C inerken verebileceği</text><rect x='20' y='63' width='140' height='22' rx='4' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><text x='168' y='79' font-size='12' fill='var(--c2)' font-weight='bold'>200·1·20 = 4000 cal</text><text x='20' y='110' font-size='11' fill='var(--muted)'>buzun hepsini eritmek için gereken</text><rect x='20' y='117' width='280' height='22' rx='4' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><text x='160' y='133' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>100·80 = 8000 cal</text><text x='160' y='168' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>4000 &lt; 8000 → 4000 / 80 = 50 g buz erir</text><text x='160' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>denge 0 °C; 50 g buz kalır</text></svg>",
+        "once": {
+          "soru": "0 °C'de 100 g buzu 20 °C'de 200 g suya atıyorsun. Su 0 °C'ye inerken 4000 cal verir; buzun hepsini eritmek 8000 cal ister. Sonunda ne olur?",
+          "secenekler": [
+            {
+              "yazi": "Buzun bir kısmı kalır",
+              "neden": "4000 cal ancak 50 g buzu eritir (L = 80 cal/g). Denge 0 °C olur ve 50 g buz kalır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Buzun hepsi erir",
+              "neden": "Bunun için 8000 cal gerekir; su en çok 4000 cal verebilir."
+            },
+            {
+              "yazi": "Suyun hepsi donar",
+              "neden": "Su donmak için ısı vermeli, ama buz 0 °C'de olduğu için o ısıyı alamaz."
+            }
+          ]
+        }
       },
       {
         "h": "Buharlaşma ve kaynama",
-        "p": "<b>Buharlaşma</b> her sıcaklıkta, yalnızca yüzeyde olur; en hızlı tanecikler kaçtığı için sıvı soğur, ter bu yüzden serinletir. <b>Kaynama</b> belirli bir sıcaklıkta, sıvının her yerinde kabarcıklarla olur. Basınç konusunda gördüğün gibi, dış basınç düşünce kaynama noktası da düşer.",
+        "p": "<b>Buharlaşma</b> her sıcaklıkta, yüzeyde olur; hızlı tanecikler kaçtığı için sıvı soğur. <b>Kaynama</b> belirli sıcaklıkta, sıvının her yerinde kabarcıklarla olur; dış basınç düşünce kaynama noktası düşer.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='14' width='300' height='176' rx='8' fill='var(--panel)' stroke='var(--line)'/><path d='M160 14 V190 M10 44 H310' stroke='var(--line)' stroke-width='1.5'/><text x='85' y='34' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Buharlaşma</text><text x='235' y='34' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Kaynama</text><text x='85' y='72' font-size='12' fill='var(--ink)' text-anchor='middle'>her sıcaklıkta</text><text x='235' y='72' font-size='12' fill='var(--ink)' text-anchor='middle'>belirli sıcaklıkta</text><path d='M10 87 H310' stroke='var(--line)'/><text x='85' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>yalnız yüzeyden</text><text x='235' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>sıvının her yerinden</text><path d='M10 121 H310' stroke='var(--line)'/><text x='85' y='140' font-size='12' fill='var(--ink)' text-anchor='middle'>sıvıyı soğutur</text><text x='235' y='140' font-size='12' fill='var(--ink)' text-anchor='middle'>kabarcıklar oluşur</text><path d='M10 155 H310' stroke='var(--line)'/><text x='85' y='174' font-size='12' fill='var(--ink)' text-anchor='middle'>rüzgârla hızlanır</text><text x='235' y='174' font-size='12' fill='var(--ink)' text-anchor='middle'>dış basınca bağlı</text></svg>",
-        "key": "Safsızlık donma noktasını düşürür, kaynama noktasını yükseltir: kışın yola tuz atılır."
+        "key": "Safsızlık donma noktasını düşürür, kaynama noktasını yükseltir: kışın yola tuz atılır.",
+        "once": {
+          "soru": "Terledikten sonra rüzgârda üşürsün. Neden?",
+          "secenekler": [
+            {
+              "yazi": "Buharlaşan ter ısı alır",
+              "neden": "Buharlaşırken en hızlı tanecikler kaçar; geride kalan ter ve deri soğur.",
+              "dogru": true
+            },
+            {
+              "yazi": "Rüzgâr soğuk getirir",
+              "neden": "Ilık rüzgârda da ıslak deri üşür; asıl neden buharlaşmadır."
+            },
+            {
+              "yazi": "Ter soğuktur",
+              "neden": "Ter vücut sıcaklığındadır; soğutan, buharlaşmasıdır."
+            }
+          ]
+        }
       },
       {
         "h": "Isı aktarımı ve yalıtım",
-        "p": "<b>İletim</b>: ısı tanecikten taneciğe geçer, en çok katılarda; metaller iyi iletir. <b>Konveksiyon</b>: sıvı ve gazda ısınan akışkan yükselir, soğuğu iner; ısı madde akımıyla taşınır. <b>Işıma</b>: ısı, elektromanyetik dalgayla boşlukta da yayılır. Hava, köpük ve yün iyi yalıtır.",
+        "p": "<b>İletim</b>: ısı tanecikten taneciğe geçer, metaller iyi iletir. <b>Konveksiyon</b>: ısınan akışkan yükselir, ısıyı taşır. <b>Işıma</b>: ısı boşlukta da dalgayla yayılır. Hava, yün yalıtır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='isi-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='isi-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><defs><marker id='isi-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker></defs><path d='M107 14 V186 M213 14 V186' stroke='var(--line)'/><text x='55' y='26' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>İletim</text><text x='160' y='26' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>Konveksiyon</text><text x='265' y='26' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>Işıma</text><rect x='14' y='80' width='86' height='10' rx='2' fill='var(--c4)' fill-opacity='0.6' stroke='var(--ink)'/><path d='M24 120 Q16 108 24 96 Q32 108 24 120 z' fill='var(--c2)' fill-opacity='0.8'/><path d='M34 66 H92' stroke='var(--c2)' stroke-width='2' marker-end='url(#isi-6)'/><path d='M125 50 V136 H195 V50' fill='none' stroke='var(--ink)' stroke-width='1.5'/><rect x='126' y='58' width='68' height='77' fill='var(--c1)' fill-opacity='0.18'/><path d='M160 126 V72' stroke='var(--c2)' stroke-width='2' marker-end='url(#isi-6)'/><path d='M152 68 Q136 68 136 84 V110 Q136 124 150 126' fill='none' stroke='var(--c1)' stroke-width='2' marker-end='url(#isi-7)'/><path d='M168 68 Q184 68 184 84 V110 Q184 124 170 126' fill='none' stroke='var(--c1)' stroke-width='2' marker-end='url(#isi-7)'/><path d='M160 158 Q152 148 160 140 Q168 148 160 158 z' fill='var(--c2)' fill-opacity='0.8'/><circle cx='238' cy='62' r='16' fill='var(--c4)' fill-opacity='0.8'/><path d='M252 76 q6 2 8 8 t8 8 t8 8 t8 8' fill='none' stroke='var(--c4)' stroke-width='2' marker-end='url(#isi-8)'/><path d='M238 82 q5 4 3 10 t3 10 t3 10' fill='none' stroke='var(--c4)' stroke-width='2' marker-end='url(#isi-8)'/><rect x='236' y='120' width='66' height='14' rx='3' fill='var(--muted)' fill-opacity='0.4'/><text x='55' y='172' font-size='10' fill='var(--ink)' text-anchor='middle'>katıda, temasla</text><text x='160' y='172' font-size='10' fill='var(--ink)' text-anchor='middle'>akışkan akımıyla</text><text x='265' y='172' font-size='10' fill='var(--ink)' text-anchor='middle'>boşlukta da olur</text><text x='55' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>metal kaşık</text><text x='160' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>kalorifer, meltem</text><text x='265' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>Güneş’in ısısı</text></svg>",
-        "key": "Termos: vakum iletimi ve konveksiyonu, parlak yüzey ışımayı azaltır."
+        "key": "Termos: vakum iletimi ve konveksiyonu, parlak yüzey ışımayı azaltır.",
+        "once": {
+          "soru": "Aynı odadaki metal kapı kolu, tahta masadan daha soğuk gelir. Neden?",
+          "secenekler": [
+            {
+              "yazi": "Metal ısıyı hızlı iletir",
+              "neden": "İkisi de oda sıcaklığında. Metal elinden ısıyı hızla çeker, bu yüzden soğuk hissedersin.",
+              "dogru": true
+            },
+            {
+              "yazi": "Metalin sıcaklığı düşüktür",
+              "neden": "Aynı odada ikisi de aynı sıcaklıktadır; fark iletimdedir."
+            },
+            {
+              "yazi": "Tahta ısı üretir",
+              "neden": "Tahta ısı üretmez; ısıyı yavaş iletir."
+            }
+          ]
+        }
       },
       {
         "h": "İletim hızı neye bağlı?",
-        "p": "Bir çubuktan ya da duvardan birim zamanda iletilen ısı; iki yüzey arasındaki <b>sıcaklık farkı</b> ve <b>kesit alanı</b> büyüdükçe artar, <b>kalınlık</b> arttıkça azalır. Maddenin cinsi de önemlidir: bakır, camdan çok daha iyi iletir. Kalın duvar ve çift cam arasındaki hava bu yüzden ısı kaybını azaltır.",
-        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='26' font-size='14' fill='var(--c3)' text-anchor='middle' font-weight='bold'>Q / t = k·A·(T₁ − T₂) / L</text><rect x='20' y='60' width='50' height='90' rx='4' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><text x='45' y='110' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>T₁</text><text x='45' y='168' font-size='11' fill='var(--c2)' text-anchor='middle'>sıcak</text><rect x='250' y='60' width='50' height='90' rx='4' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><text x='275' y='110' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>T₂</text><text x='275' y='168' font-size='11' fill='var(--c1)' text-anchor='middle'>soğuk</text><rect x='70' y='90' width='180' height='30' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><line x1='95' y1='105' x2='218' y2='105' stroke='var(--c2)' stroke-width='2' fill='none'/><polygon points='225,105 215,109.5 215,100.5' fill='var(--c2)'/><text x='160' y='84' font-size='11' fill='var(--muted)' text-anchor='middle'>kesit alanı A</text><line x1='76' y1='136' x2='244' y2='136' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='250,136 242,139.5 242,132.5' fill='var(--ink)'/><polygon points='70,136 78,139.5 78,132.5' fill='var(--ink)'/><text x='160' y='152' font-size='11' fill='var(--ink)' text-anchor='middle'>uzunluk (kalınlık) L</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>k: maddenin ısı iletkenliği (bakırda büyük)</text></svg>"
+        "p": "İletilen ısı <b>sıcaklık farkı</b> ve <b>kesit alanı</b> büyüdükçe artar, <b>kalınlık</b> arttıkça azalır. Maddenin cinsi de önemlidir: bakır camdan çok daha iyi iletir.",
+        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='26' font-size='14' fill='var(--c3)' text-anchor='middle' font-weight='bold'>Q / t = k·A·(T₁ − T₂) / L</text><rect x='20' y='60' width='50' height='90' rx='4' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><text x='45' y='110' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>T₁</text><text x='45' y='168' font-size='11' fill='var(--c2)' text-anchor='middle'>sıcak</text><rect x='250' y='60' width='50' height='90' rx='4' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><text x='275' y='110' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>T₂</text><text x='275' y='168' font-size='11' fill='var(--c1)' text-anchor='middle'>soğuk</text><rect x='70' y='90' width='180' height='30' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><line x1='95' y1='105' x2='218' y2='105' stroke='var(--c2)' stroke-width='2' fill='none'/><polygon points='225,105 215,109.5 215,100.5' fill='var(--c2)'/><text x='160' y='84' font-size='11' fill='var(--muted)' text-anchor='middle'>kesit alanı A</text><line x1='76' y1='136' x2='244' y2='136' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='250,136 242,139.5 242,132.5' fill='var(--ink)'/><polygon points='70,136 78,139.5 78,132.5' fill='var(--ink)'/><text x='160' y='152' font-size='11' fill='var(--ink)' text-anchor='middle'>uzunluk (kalınlık) L</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>k: maddenin ısı iletkenliği (bakırda büyük)</text></svg>",
+        "once": {
+          "soru": "Evin dış duvarı kalınlaştırılırsa duvardan kaçan ısı ne olur?",
+          "secenekler": [
+            {
+              "yazi": "Azalır",
+              "neden": "Isı daha uzun bir yol iletilmek zorunda kalır; kalınlık arttıkça iletilen ısı azalır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Artar",
+              "neden": "Kalın duvar ısıyı daha çok değil, daha az iletir."
+            },
+            {
+              "yazi": "Değişmez",
+              "neden": "İletilen ısı kalınlığa bağlıdır; kalın duvar ısıyı tutar."
+            }
+          ]
+        }
       },
       {
         "h": "Boyca genleşme",
-        "p": "Isınan katının tanecikleri daha geniş titreşir, cisim uzar: <b>ΔL = L₀·λ·ΔT</b>. λ boyca genleşme katsayısıdır ve maddeyi tanıtır; çelikte yaklaşık 1,2·10<sup>−5</sup> 1/°C’dir. 10 m’lik bir ray 40 °C ısınınca yaklaşık 4,8 mm uzar. Soğuyan cisim kısalır.",
+        "p": "Isınan katı uzar: <b>ΔL = L₀·λ·ΔT</b>. λ boyca genleşme katsayısıdır, maddeyi tanıtır; çelikte ≈ 1,2·10<sup>−5</sup> 1/°C. Soğuyan cisim kısalır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='34' font-size='22' fill='var(--ink)' text-anchor='middle' font-weight='800'>ΔL = L₀ · λ · ΔT</text><rect x='30' y='58' width='170' height='16' rx='3' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><text x='210' y='71' font-size='11' fill='var(--c1)' text-anchor='start' font-weight='700'>L₀ (soğuk)</text><rect x='30' y='100' width='200' height='16' rx='3' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><text x='240' y='113' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>ısınmış</text><path d='M200 54 V136' stroke='var(--muted)' stroke-dasharray='3 3'/><path d='M200 130 H230 M200 125 V135 M230 125 V135 M230 120 V135' stroke='var(--ink)' stroke-width='1.5'/><text x='215' y='150' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>ΔL</text><text x='160' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>çelik ray: L₀ = 10 m, ΔT = 40 °C → ΔL ≈ 4,8 mm</text><text x='160' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>λ (çelik) ≈ 1,2 · 10⁻⁵ 1/°C</text></svg>",
         "key": "Uzama miktarı ilk boyla ve sıcaklık değişimiyle doğru orantılıdır."
       },
       {
         "h": "Yüzeyce, hacimce ve sıvılarda",
-        "p": "Isınan levha her yönde genleşir: ΔA ≈ A₀·2λ·ΔT; katı cisimde ΔV ≈ V₀·3λ·ΔT. Levhadaki delik de büyür. Sıvılar yalnızca hacimce incelenir ve genellikle katılardan çok genleşir. Gazlar en çok genleşir; aynı koşulda bütün gazlar yaklaşık aynı oranda genleşir.",
+        "p": "Isınan levha her yönde genleşir: ΔA ≈ A₀·2λ·ΔT; içindeki delik de büyür. Sıvılar katılardan, gazlar hepsinden çok genleşir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='24' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>yüzeyce: ΔA ≈ A₀ · 2λ · ΔT</text><text x='160' y='44' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>hacimce: ΔV ≈ V₀ · 3λ · ΔT</text><path d='M150 60 V190' stroke='var(--line)'/><rect x='30' y='72' width='100' height='66' fill='var(--c4)' fill-opacity='0.35' stroke='var(--ink)'/><rect x='24' y='67' width='112' height='76' fill='none' stroke='var(--c2)' stroke-dasharray='4 3'/><circle cx='80' cy='105' r='14' fill='var(--panel)' stroke='var(--ink)'/><circle cx='80' cy='105' r='17' fill='none' stroke='var(--c2)' stroke-dasharray='3 3'/><text x='80' y='166' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>delik de büyür</text><text x='80' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>levhanın her yeri genleşir</text><path d='M205 76 V146 H275 V76' fill='none' stroke='var(--ink)' stroke-width='2'/><rect x='206' y='78' width='68' height='67' fill='var(--c1)' fill-opacity='0.3'/><path d='M206 78 Q240 70 274 78' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><path d='M276 76 q8 2 8 14 v20' fill='none' stroke='var(--c1)' stroke-width='2'/><circle cx='284' cy='116' r='3' fill='var(--c1)'/><text x='240' y='166' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>dolu kap ısınınca taşar</text><text x='240' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>sıvı kaptan çok genleşir</text></svg>",
-        "key": "Ağzına kadar dolu kap ısıtılınca taşar: sıvı, kaptan daha çok genleşir."
+        "key": "Ağzına kadar dolu kap ısıtılınca taşar: sıvı, kaptan daha çok genleşir.",
+        "once": {
+          "soru": "Ortasında delik olan metal bir levhayı ısıtıyorsun. Delik ne olur?",
+          "secenekler": [
+            {
+              "yazi": "Büyür",
+              "neden": "Levha her yönde genleşir; deliğin kenarı da dışa doğru uzar ve delik büyür.",
+              "dogru": true
+            },
+            {
+              "yazi": "Küçülür",
+              "neden": "Sezgi böyle der, ama levhanın her parçası, deliğin kenarı da dahil, uzar."
+            },
+            {
+              "yazi": "Değişmez",
+              "neden": "Deliğin kenarı da metaldir ve genleşir."
+            }
+          ]
+        }
       },
       {
         "h": "Suyun 4 °C anomalisi",
-        "p": "Su 0 °C’den 4 °C’ye ısıtılınca genleşmez, <b>büzülür</b>; 4 °C’de hacmi en küçük, özkütlesi en büyüktür. Kışın gölün yüzeyi soğudukça yoğunlaşan su dibe iner. Her yer 4 °C olunca yüzey 0 °C’ye iner ve donar; buz yalıtır, dipte 4 °C’ye yakın su kalır.",
+        "p": "Su 0 °C'den 4 °C'ye ısınınca <b>büzülür</b>; 4 °C'de özkütlesi en büyüktür. Soğuyan yüzey suyu dibe iner; sonunda yüzey donar, dipte 4 °C'lik su kalır.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M40 20 V150 H170' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M45 60 Q70 120 93 120 Q125 120 165 66' fill='none' stroke='var(--c1)' stroke-width='2.5'/><circle cx='93' cy='120' r='3.5' fill='var(--acc)'/><path d='M93 146 V154' stroke='var(--ink)'/><text x='34' y='30' font-size='12' fill='var(--muted)' text-anchor='end'>V</text><text x='93' y='166' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>4 °C</text><text x='170' y='166' font-size='10' fill='var(--muted)' text-anchor='end'>t (°C)</text><text x='93' y='140' font-size='10' fill='var(--muted)' text-anchor='middle'>hacim en küçük</text><text x='105' y='16' font-size='11' fill='var(--ink)' text-anchor='middle'>suyun hacmi</text><text x='105' y='188' font-size='10' fill='var(--c1)' text-anchor='middle'>0 → 4 °C: ısınınca büzülür</text><rect x='190' y='36' width='120' height='120' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)'/><rect x='190' y='36' width='120' height='18' fill='var(--panel)' stroke='var(--c1)'/><text x='250' y='49' font-size='10' fill='var(--ink)' text-anchor='middle'>buz, 0 °C</text><text x='250' y='84' font-size='11' fill='var(--ink)' text-anchor='middle'>0-4 °C su</text><rect x='191' y='118' width='118' height='37' fill='var(--c1)' fill-opacity='0.2'/><text x='250' y='142' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>dipte ≈ 4 °C</text><text x='250' y='180' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>göl üstten donar</text></svg>",
-        "key": "Su donarken hacmi yaklaşık %9 artar: kışın borular ve kayalar çatlar."
+        "key": "Su donarken hacmi yaklaşık %9 artar: kışın borular ve kayalar çatlar.",
+        "once": {
+          "soru": "Kışın bir göl donarken buz nerede oluşur?",
+          "secenekler": [
+            {
+              "yazi": "Yüzeyde",
+              "neden": "Su 4 °C'de en yoğundur; soğuyan yüzey suyu dibe iner, en son yüzey 0 °C'ye ulaşıp donar. Buz yalıtır, altında canlılar yaşar.",
+              "dogru": true
+            },
+            {
+              "yazi": "Dipte",
+              "neden": "Buz sudan az yoğun olduğu için dipte kalamaz."
+            },
+            {
+              "yazi": "Her yerde aynı anda",
+              "neden": "Dipte 4 °C'ye yakın su kalır; donma yüzeyde olur."
+            }
+          ]
+        }
       },
       {
         "h": "Günlük hayatta genleşme",
-        "p": "Yazın elektrik telleri sarkar, köprülerdeki <b>genleşme derzleri</b> daralır. <b>Bimetal</b>, genleşme katsayıları farklı iki metal şeridin birleştirilmesidir; ısınınca az genleşen metale doğru bükülür. Termostat ve ütüde anahtar olarak çalışır.",
+        "p": "Yazın teller sarkar, köprü derzleri daralır. <b>Bimetal</b>, genleşme katsayıları farklı iki metal şerittir; ısınınca az genleşene doğru bükülür. Termostat ve ütüde anahtardır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='80' y='24' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>bimetal şerit</text><rect x='20' y='36' width='112' height='7' fill='var(--c4)'/><rect x='20' y='43' width='112' height='7' fill='var(--c5)' fill-opacity='0.7'/><text x='80' y='66' font-size='10' fill='var(--muted)' text-anchor='middle'>soğuk: düz</text><path d='M20 90 Q80 90 128 128' fill='none' stroke='var(--c4)' stroke-width='7'/><path d='M20 97 Q76 97 122 133' fill='none' stroke='var(--c5)' stroke-opacity='0.7' stroke-width='7'/><text x='20' y='160' font-size='10' fill='var(--c4)' text-anchor='start' font-weight='700'>pirinç (λ büyük)</text><text x='20' y='176' font-size='10' fill='var(--c5)' text-anchor='start' font-weight='700'>demir (λ küçük)</text><text x='20' y='193' font-size='10' fill='var(--muted)' text-anchor='start'>ısınınca demire bükülür</text><path d='M160 14 V190' stroke='var(--line)'/><rect x='176' y='40' width='62' height='12' fill='var(--muted)' fill-opacity='0.5'/><rect x='246' y='40' width='62' height='12' fill='var(--muted)' fill-opacity='0.5'/><text x='242' y='72' font-size='10' fill='var(--ink)' text-anchor='middle'>raylar arası boşluk</text><path d='M184 100 V160 M300 100 V160' stroke='var(--ink)' stroke-width='3'/><path d='M184 104 Q242 116 300 104' fill='none' stroke='var(--c1)' stroke-width='1.5'/><path d='M184 104 Q242 140 300 104' fill='none' stroke='var(--c2)' stroke-width='1.5'/><text x='242' y='98' font-size='10' fill='var(--c1)' text-anchor='middle'>kış</text><text x='242' y='150' font-size='10' fill='var(--c2)' text-anchor='middle'>yaz: sarkık</text><text x='242' y='178' font-size='11' fill='var(--ink)' text-anchor='middle'>elektrik teli</text></svg>",
-        "key": "Sıkışan metal kavanoz kapağını sıcak suya tut: metal camdan çok genleşir."
+        "key": "Sıkışan metal kavanoz kapağını sıcak suya tut: metal camdan çok genleşir.",
+        "once": {
+          "soru": "Sıkışmış metal kavanoz kapağını sıcak suya tutunca kolayca açılıyor. Neden?",
+          "secenekler": [
+            {
+              "yazi": "Metal camdan çok genleşir",
+              "neden": "Isınan metal kapak, cam ağızdan daha çok genleşir ve gevşer.",
+              "dogru": true
+            },
+            {
+              "yazi": "Cam erir",
+              "neden": "Sıcak su camı eritmez."
+            },
+            {
+              "yazi": "Kapak yumuşar",
+              "neden": "Metal bu sıcaklıkta yumuşamaz; yalnızca biraz büyür."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",

@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "isi-sicaklik",
  "baslik": "Isı, sıcaklık ve genleşme",
- "ozet": "Çayı ısıt, termometreyi oku, suları karıştır, buzu erit ve rayı uzat: ısıyı yaparak öğren.",
+ "ozet": "Önce dene, sonra adını öğren: termometreyi ayarla, su ile demiri ısıt, buzu erit, rayı genleştir.",
  "adimlar": [
   {
    "baslik": "Damla mı, kova mı?",
@@ -34,7 +34,7 @@
   },
   {
    "baslik": "Üç ölçek",
-   "metin": "Termometreyi 300 K'e getir.",
+   "metin": "Kelvin ölçeğinde sıcaklık, Celsius'a 273 eklenerek bulunur. Termometreyi 300 K'e getir.",
    "sahne": {
     "tur": "fiz3-termometre"
    },
@@ -58,13 +58,7 @@
     "ipucu": "T = t + 273 ise t = 300 − 273.",
     "tamam": "300 − 273 = 27 °C; Fahrenheit'ta 1,8 × 27 + 32 = 80,6 °F."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "t": 50
-    },
-    "not": "50 °C = 50 + 273 = <b>323 K</b>. Celsius'taki her derece Kelvin'de de bir derecedir."
-   }
+   "kart": 3
   },
   {
    "baslik": "Öz ısı",
@@ -92,7 +86,7 @@
      }
     ]
    },
-   "kart": 3
+   "kart": 4
   },
   {
    "baslik": "Isıl denge",
@@ -120,13 +114,7 @@
     },
     "tamam": "200·(80 − 44) = 7200 cal verildi, 300·(44 − 20) = 7200 cal alındı. Soğuk su daha çok olduğu için denge 20 °C'ye daha yakın."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "m": 200
-    },
-    "not": "200 g soğuk suyla kütleler eşit: denge tam ortada, (80 + 20) / 2 = <b>50 °C</b>."
-   }
+   "kart": 5
   },
   {
    "baslik": "Gizli ısı",
@@ -154,13 +142,7 @@
     },
     "tamam": "10 g × 80 cal/g = 800 cal. Erime boyunca sıcaklık hep 0 °C kaldı; bundan sonra verilen ısı suyu ısıtır."
    },
-   "kart": 6,
-   "goster": {
-    "deger": {
-     "Q": 400
-    },
-    "not": "400 cal, 400 / 80 = <b>5 g</b> buzu eritir. Buzun yarısı eridi, sıcaklık hâlâ 0 °C."
-   }
+   "kart": 6
   },
   {
    "baslik": "Ray uzar",
@@ -188,13 +170,7 @@
     },
     "tamam": "10.000 mm × 1,2·10⁻⁵ × 50 = 6 mm. Daha sıcak bir günde boşluk yetmez ve raylar eğrilir. Raylar arasına boşluk, köprülere genleşme derzi bu yüzden bırakılır."
    },
-   "kart": 12,
-   "goster": {
-    "deger": {
-     "dT": 20
-    },
-    "not": "20 °C ısınınca ray 10.000 mm × 1,2·10⁻⁵ × 20 = <b>2,4 mm</b> uzar; boşluk henüz kapanmadı."
-   }
+   "kart": 12
   }
  ],
  "kapanis": [
@@ -203,5 +179,6 @@
   "Hâl değişmiyorsa <b>Q = m·c·ΔT</b>; öz ısısı büyük madde geç ısınır. Isıl dengede alınan ısı = verilen ısı.",
   "Hâl değişirken <b>Q = m·L</b>; sıcaklık sabit kalır.",
   "Isınan katı uzar: <b>ΔL = L₀·λ·ΔT</b>."
- ]
+ ],
+ "soruOnce": true
 }
