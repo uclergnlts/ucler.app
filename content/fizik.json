@@ -5996,31 +5996,67 @@
     "cards": [
       {
         "h": "Elektrik enerjisi dönüşür",
-        "p": "Prizden aldığın elektrik enerjisi cihazda başka bir enerjiye dönüşür: lamba ışığa, motor hareket enerjisine, ısıtıcı ısıya, şarj olan pil kimyasal enerjiye çevirir. Enerji korunur; ama cihazlar istenen türün yanında genellikle bir kısmını da ısıya çevirir.",
+        "p": "Cihaz elektrik enerjisini başka bir enerjiye çevirir: lamba ışığa, motor harekete, ısıtıcı ısıya. Enerji korunur, ama bir kısmı genellikle ısıya gider.",
         "svg": "<svg viewBox='0 0 320 200'><marker id='eguc-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><rect x='100' y='78' width='120' height='44' fill='var(--acc)' fill-opacity='0.2' stroke='var(--acc)' stroke-width='1.5' rx='8'/><text x='160' y='97' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Elektrik</text><text x='160' y='113' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>enerjisi</text><rect x='8' y='12' width='120' height='44' fill='var(--c4)' fill-opacity='0.15' stroke='none' stroke-width='1.5' rx='8'/><text x='68' y='31' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Lamba</text><text x='68' y='48' font-size='12' fill='var(--muted)' text-anchor='middle'>→ ışık + ısı</text><rect x='192' y='12' width='120' height='44' fill='var(--c1)' fill-opacity='0.15' stroke='none' stroke-width='1.5' rx='8'/><text x='252' y='31' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Motor, fan</text><text x='252' y='48' font-size='12' fill='var(--muted)' text-anchor='middle'>→ hareket</text><rect x='8' y='144' width='120' height='44' fill='var(--c2)' fill-opacity='0.15' stroke='none' stroke-width='1.5' rx='8'/><text x='68' y='163' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Isıtıcı, ütü</text><text x='68' y='180' font-size='12' fill='var(--muted)' text-anchor='middle'>→ ısı</text><rect x='192' y='144' width='120' height='44' fill='var(--c3)' fill-opacity='0.15' stroke='none' stroke-width='1.5' rx='8'/><text x='252' y='163' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Şarj olan pil</text><text x='252' y='180' font-size='12' fill='var(--muted)' text-anchor='middle'>→ kimyasal</text><line x1='118' y1='78' x2='96' y2='59' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#eguc-1)'/><line x1='202' y1='78' x2='224' y2='59' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#eguc-1)'/><line x1='118' y1='122' x2='96' y2='141' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#eguc-1)'/><line x1='202' y1='122' x2='224' y2='141' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#eguc-1)'/></svg>",
-        "key": "Enerji yok olmaz, yalnızca biçim değiştirir."
+        "key": "Enerji yok olmaz, yalnızca biçim değiştirir. Şarj olan pil elektriği kimyasal enerjiye çevirir.",
+        "once": {
+          "soru": "Prize takılı bir vantilatör elektrik enerjisini çoğunlukla neye çevirir?",
+          "secenekler": [
+            {
+              "yazi": "Hareket enerjisi",
+              "neden": "Motor pervaneyi döndürür; enerjinin bir kısmı da ısıya gider.",
+              "dogru": true
+            },
+            {
+              "yazi": "Işık enerjisi",
+              "neden": "Işığa çeviren cihaz lambadır."
+            },
+            {
+              "yazi": "Kimyasal enerji",
+              "neden": "Kimyasal enerjiye çeviren, şarj olan pildir."
+            }
+          ]
+        }
       },
       {
         "h": "Elektriksel enerji: W = V·I·t",
-        "p": "Gerilim, iki nokta arasında 1 C yüke aktarılan enerjidir: 1 V = 1 J/C. t sürede q = I·t yük geçer; harcanan enerji W = q·V = V·I·t. Dizüstü şarjı 20 V, 3 A ile 30 dakika: W = 20·3·1800 = 108 000 J.",
+        "p": "Gerilim 1 C yüke aktarılan enerjidir: 1 V = 1 J/C. t sürede q = I·t yük geçer, harcanan enerji <b>W = V·I·t</b> olur.",
         "svg": "<svg viewBox='0 0 320 200'><marker id='eguc-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--acc)'/></marker><line x1='25' y1='40' x2='185' y2='40' stroke='var(--ink)' stroke-width='1.5'/><line x1='185' y1='40' x2='185' y2='160' stroke='var(--ink)' stroke-width='1.5'/><line x1='185' y1='160' x2='25' y2='160' stroke='var(--ink)' stroke-width='1.5'/><line x1='25' y1='160' x2='25' y2='40' stroke='var(--ink)' stroke-width='1.5'/><rect x='22' y='94' width='6' height='12' fill='var(--panel)' stroke='none' stroke-width='1.5'/><line x1='13' y1='96' x2='37' y2='96' stroke='var(--ink)' stroke-width='2'/><line x1='19' y1='104' x2='31' y2='104' stroke='var(--ink)' stroke-width='3.5'/><text x='40' y='104' font-size='12' fill='var(--ink)' font-weight='bold'>20 V</text><rect x='179' y='78' width='12' height='44' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><text x='173' y='104' font-size='12' fill='var(--ink)' text-anchor='end'>R</text><line x1='90' y1='40' x2='120' y2='40' stroke='var(--acc)' stroke-width='2.5' marker-end='url(#eguc-2)'/><text x='105' y='30' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='bold'>I = 3 A</text><text x='105' y='92' font-size='12' fill='var(--ink)' text-anchor='middle'>q = I·t</text><text x='105' y='112' font-size='12' fill='var(--ink)' text-anchor='middle'>W = q·V</text><text x='105' y='182' font-size='12' fill='var(--muted)' text-anchor='middle'>t = 30 dk = 1800 s</text><rect x='205' y='50' width='110' height='100' fill='var(--panel)' stroke='none' stroke-width='1.5' rx='8'/><text x='260' y='78' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='bold'>W = V·I·t</text><text x='260' y='104' font-size='12' fill='var(--ink)' text-anchor='middle'>= 20·3·1800</text><text x='260' y='128' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>= 108 000 J</text></svg>",
-        "key": "W = V·I·t   (volt · amper · saniye = joule)"
+        "key": "Dizüstü şarjı 20 V, 3 A, 30 dakika: W = 20 · 3 · 1800 = 108 000 J."
       },
       {
         "h": "Güç: P = V·I ve iki kardeşi",
-        "p": "<b>Güç</b>, birim zamanda harcanan enerjidir: P = W/t = V·I, birimi watt (W). İş, enerji ve güç konusundaki P = W/t'nin aynısı. Ohm yasasını (V = I·R) yerine koyunca P = I²·R ve P = V²/R çıkar; üçü aynı sonucu verir.",
+        "p": "<b>Güç</b> birim zamanda harcanan enerjidir: P = W/t = V·I, birimi watt. V = I·R yerine konunca <b>P = I²·R</b> ve <b>P = V²/R</b> çıkar.",
         "svg": "<svg viewBox='0 0 320 200'><marker id='eguc-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker><rect x='80' y='10' width='160' height='38' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.5' rx='8'/><text x='160' y='35' font-size='16' fill='var(--ink)' text-anchor='middle' font-weight='bold'>P = W/t = V·I</text><line x1='135' y1='48' x2='92' y2='92' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#eguc-3)'/><line x1='185' y1='48' x2='228' y2='92' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#eguc-3)'/><text x='100' y='66' font-size='11' fill='var(--muted)' text-anchor='end'>V yerine I·R</text><text x='220' y='66' font-size='11' fill='var(--muted)'>I yerine V/R</text><rect x='20' y='95' width='120' height='36' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5' rx='8'/><text x='80' y='119' font-size='16' fill='var(--ink)' text-anchor='middle' font-weight='bold'>P = I²·R</text><rect x='180' y='95' width='120' height='36' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.5' rx='8'/><text x='240' y='119' font-size='16' fill='var(--ink)' text-anchor='middle' font-weight='bold'>P = V²/R</text><text x='160' y='160' font-size='12' fill='var(--muted)' text-anchor='middle'>Örnek: 12 V, 3 Ω → I = 4 A</text><text x='160' y='182' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>12·4 = 4²·3 = 12²/3 = 48 W</text></svg>",
-        "key": "P = V·I = I²·R = V²/R   (1 W = 1 J/s)"
+        "key": "P = V·I = I²·R = V²/R   (1 W = 1 J/s)",
+        "once": {
+          "soru": "Aynı 220 V prizde 100 W'lık ampul mü 60 W'lık mı daha çok akım çeker?",
+          "secenekler": [
+            {
+              "yazi": "100 W'lık",
+              "neden": "I = P/V: gerilim aynıyken büyük güç büyük akım demektir.",
+              "dogru": true
+            },
+            {
+              "yazi": "60 W'lık",
+              "neden": "Gerilim aynı; daha az güç daha az akım demektir."
+            },
+            {
+              "yazi": "Eşit",
+              "neden": "Güçleri farklı olduğu için akımları da farklıdır."
+            }
+          ]
+        }
       },
       {
         "h": "Seride I²R, paralelde V²/R",
-        "p": "Seri bağlı dirençlerden <b>aynı akım</b> geçer; P = I²·R kullan: büyük direnç daha çok güç harcar. Paralel kollarda <b>gerilim aynıdır</b>; P = V²/R kullan: küçük direnç daha çok güç harcar. Eşdeğer direnci Elektrik akımı ve devreler konusunda gördün.",
+        "p": "Seride akım ortaktır: P = I²·R, büyük direnç çok güç harcar. Paralelde gerilim ortaktır: P = V²/R, küçük direnç çok güç harcar.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='5' y='5' width='150' height='190' fill='var(--panel)' stroke='none' stroke-width='1.5' rx='8'/><rect x='165' y='5' width='150' height='190' fill='var(--panel)' stroke='none' stroke-width='1.5' rx='8'/><text x='80' y='22' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='bold'>SERİ: I ortak</text><text x='240' y='22' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='bold'>PARALEL: V ortak</text><line x1='25' y1='56' x2='135' y2='56' stroke='var(--ink)' stroke-width='1.5'/><line x1='135' y1='56' x2='135' y2='120' stroke='var(--ink)' stroke-width='1.5'/><line x1='135' y1='120' x2='25' y2='120' stroke='var(--ink)' stroke-width='1.5'/><line x1='25' y1='120' x2='25' y2='56' stroke='var(--ink)' stroke-width='1.5'/><rect x='35' y='50' width='30' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><text x='50.0' y='44' font-size='12' fill='var(--ink)' text-anchor='middle'>2 Ω</text><rect x='95' y='50' width='30' height='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><text x='110.0' y='44' font-size='12' fill='var(--ink)' text-anchor='middle'>4 Ω</text><rect x='74' y='117' width='12' height='6' fill='var(--panel)' stroke='none' stroke-width='1.5'/><line x1='76' y1='108' x2='76' y2='132' stroke='var(--ink)' stroke-width='2'/><line x1='84' y1='114' x2='84' y2='126' stroke='var(--ink)' stroke-width='3.5'/><text x='80' y='100' font-size='12' fill='var(--ink)' text-anchor='middle'>12 V</text><text x='80' y='150' font-size='11' fill='var(--muted)' text-anchor='middle'>I = 2 A, P = I²R</text><text x='80' y='168' font-size='12' fill='var(--ink)' text-anchor='middle'>2 Ω: 8 W</text><text x='80' y='186' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>4 Ω: 16 W</text><line x1='185' y1='45' x2='275' y2='45' stroke='var(--ink)' stroke-width='1.5'/><line x1='185' y1='120' x2='275' y2='120' stroke='var(--ink)' stroke-width='1.5'/><line x1='185' y1='45' x2='185' y2='120' stroke='var(--ink)' stroke-width='1.5'/><line x1='230' y1='45' x2='230' y2='120' stroke='var(--ink)' stroke-width='1.5'/><line x1='275' y1='45' x2='275' y2='120' stroke='var(--ink)' stroke-width='1.5'/><rect x='182' y='77' width='6' height='12' fill='var(--panel)' stroke='none' stroke-width='1.5'/><line x1='173' y1='79' x2='197' y2='79' stroke='var(--ink)' stroke-width='2'/><line x1='179' y1='87' x2='191' y2='87' stroke='var(--ink)' stroke-width='3.5'/><text x='191' y='113' font-size='11' fill='var(--ink)'>12 V</text><rect x='224' y='68' width='12' height='30' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><rect x='269' y='68' width='12' height='30' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><text x='239' y='87' font-size='11' fill='var(--ink)'>2 Ω</text><text x='284' y='87' font-size='11' fill='var(--ink)'>4 Ω</text><text x='240' y='150' font-size='11' fill='var(--muted)' text-anchor='middle'>V = 12 V, P = V²/R</text><text x='240' y='168' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>2 Ω: 72 W</text><text x='240' y='186' font-size='12' fill='var(--ink)' text-anchor='middle'>4 Ω: 36 W</text></svg>",
         "key": "Seri bağlı 40 W ve 100 W'lık ampullerden 40 W'lık olan daha parlak yanar."
       },
       {
         "h": "Joule ısınması",
-        "p": "Akım geçen dirençte elektronlar atomlara çarpar, elektrik enerjisi ısıya dönüşür: <b>Joule ısınması</b>, Q = I²·R·t. Su ısıtıcısında bu ısı istenir: 1 kg suyu 10 °C ısıtmak için m·c·ΔT = 42 000 J gerekir; 1000 W'lık ısıtıcı bunu kayıpsız 42 s'de verir. Kablolarda ise kayıptır.",
+        "p": "Akım geçen dirençte elektronlar atomlara çarpar, elektrik enerjisi ısıya döner: <b>Joule ısınması</b>, Q = I²·R·t. Isıtıcıda istenir, kablolarda kayıptır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='24' font-size='16' fill='var(--acc)' text-anchor='middle' font-weight='bold'>Q = I²·R·t</text><path d='M15 120 L35 120 L40 110 L50 130 L60 110 L70 130 L80 110 L90 130 L100 110 L110 130 L120 110 L125 120 L145 120' fill='none' stroke='var(--c2)' stroke-width='2'/><path d='M60 100 q-4 -5 0 -10 q4 -5 0 -10' fill='none' stroke='var(--c2)' stroke-width='1.5'/><path d='M74 100 q-4 -5 0 -10 q4 -5 0 -10' fill='none' stroke='var(--c2)' stroke-width='1.5'/><path d='M88 100 q-4 -5 0 -10 q4 -5 0 -10' fill='none' stroke='var(--c2)' stroke-width='1.5'/><path d='M102 100 q-4 -5 0 -10 q4 -5 0 -10' fill='none' stroke='var(--c2)' stroke-width='1.5'/><text x='80' y='155' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>ısıtıcı teli</text><text x='80' y='172' font-size='12' fill='var(--c3)' text-anchor='middle'>ısı istenir</text><line x1='160' y1='45' x2='160' y2='190' stroke='var(--line)' stroke-width='1'/><line x1='180' y1='70' x2='300' y2='70' stroke='var(--ink)' stroke-width='1.5'/><path d='M220 60 q-4 -5 0 -10 q4 -5 0 -10' fill='none' stroke='var(--c2)' stroke-width='1.5'/><path d='M234 60 q-4 -5 0 -10 q4 -5 0 -10' fill='none' stroke='var(--c2)' stroke-width='1.5'/><path d='M248 60 q-4 -5 0 -10 q4 -5 0 -10' fill='none' stroke='var(--c2)' stroke-width='1.5'/><text x='240' y='88' font-size='11' fill='var(--ink)' text-anchor='middle'>ince kablo, R büyük</text><text x='240' y='103' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='bold'>→ çok ısınır</text><line x1='180' y1='132' x2='300' y2='132' stroke='var(--ink)' stroke-width='7'/><text x='240' y='155' font-size='11' fill='var(--ink)' text-anchor='middle'>kalın kablo, R küçük</text><text x='240' y='170' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='bold'>→ az ısınır</text><text x='240' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>(aynı akımda)</text></svg>",
         "key": "Isı akımın karesiyle büyür; elektrik bu yüzden yüksek gerilim, düşük akımla taşınır."
       },
@@ -6028,13 +6064,31 @@
         "h": "Üretecin gücü ve iç direnç",
         "p": "Üreteç devreye <b>P = ε·I</b> güç verir. Bunun I²·r kadarı iç dirençte ısıya dönüşür, I²·R kadarı dış dirence ulaşır: ε·I = I²·R + I²·r.",
         "key": "İleri bilgi: dış dirence giden güç R = r iken en büyüktür; kısa devrede (R ≈ 0) sıfırdır.",
-        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='16' y='66' width='48' height='86' fill='none' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><text x='70' y='168' font-size='11' fill='var(--muted)'>üreteç</text><line x1='40' y1='50' x2='40' y2='80' stroke='var(--ink)' stroke-width='2'/><line x1='26' y1='80' x2='54' y2='80' stroke='var(--ink)' stroke-width='2.5'/><line x1='33' y1='90' x2='47' y2='90' stroke='var(--ink)' stroke-width='4'/><line x1='40' y1='90' x2='40' y2='108' stroke='var(--ink)' stroke-width='2'/><rect x='33' y='108' width='14' height='30' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1.8'/><line x1='40' y1='138' x2='40' y2='190' stroke='var(--ink)' stroke-width='2'/><line x1='40' y1='190' x2='170' y2='190' stroke='var(--ink)' stroke-width='2'/><line x1='40' y1='50' x2='95' y2='50' stroke='var(--ink)' stroke-width='2'/><rect x='95' y='43' width='50' height='14' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.8'/><line x1='145' y1='50' x2='170' y2='50' stroke='var(--ink)' stroke-width='2'/><line x1='170' y1='50' x2='170' y2='190' stroke='var(--ink)' stroke-width='2'/><text x='120' y='36' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='bold'>R = 4 Ω</text><text x='66' y='89' font-size='12' fill='var(--ink)' font-weight='bold'>ε = 12 V</text><text x='66' y='128' font-size='12' fill='var(--c2)' font-weight='bold'>r = 2 Ω</text><text x='188' y='50' font-size='12' fill='var(--ink)' font-weight='bold'>I = 12/(4 + 2) = 2 A</text><text x='188' y='76' font-size='12' fill='var(--ink)'>üreteç: ε·I = 24 W</text><text x='188' y='100' font-size='12' fill='var(--c2)'>iç direnç: I²r = 8 W</text><text x='188' y='124' font-size='12' fill='var(--c4)'>dış direnç: I²R = 16 W</text><text x='188' y='160' font-size='11' fill='var(--muted)'>R = r olsaydı dış güç</text><text x='188' y='176' font-size='11' fill='var(--muted)'>en büyük: 18 W</text></svg>"
+        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='16' y='66' width='48' height='86' fill='none' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><text x='70' y='168' font-size='11' fill='var(--muted)'>üreteç</text><line x1='40' y1='50' x2='40' y2='80' stroke='var(--ink)' stroke-width='2'/><line x1='26' y1='80' x2='54' y2='80' stroke='var(--ink)' stroke-width='2.5'/><line x1='33' y1='90' x2='47' y2='90' stroke='var(--ink)' stroke-width='4'/><line x1='40' y1='90' x2='40' y2='108' stroke='var(--ink)' stroke-width='2'/><rect x='33' y='108' width='14' height='30' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1.8'/><line x1='40' y1='138' x2='40' y2='190' stroke='var(--ink)' stroke-width='2'/><line x1='40' y1='190' x2='170' y2='190' stroke='var(--ink)' stroke-width='2'/><line x1='40' y1='50' x2='95' y2='50' stroke='var(--ink)' stroke-width='2'/><rect x='95' y='43' width='50' height='14' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.8'/><line x1='145' y1='50' x2='170' y2='50' stroke='var(--ink)' stroke-width='2'/><line x1='170' y1='50' x2='170' y2='190' stroke='var(--ink)' stroke-width='2'/><text x='120' y='36' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='bold'>R = 4 Ω</text><text x='66' y='89' font-size='12' fill='var(--ink)' font-weight='bold'>ε = 12 V</text><text x='66' y='128' font-size='12' fill='var(--c2)' font-weight='bold'>r = 2 Ω</text><text x='188' y='50' font-size='12' fill='var(--ink)' font-weight='bold'>I = 12/(4 + 2) = 2 A</text><text x='188' y='76' font-size='12' fill='var(--ink)'>üreteç: ε·I = 24 W</text><text x='188' y='100' font-size='12' fill='var(--c2)'>iç direnç: I²r = 8 W</text><text x='188' y='124' font-size='12' fill='var(--c4)'>dış direnç: I²R = 16 W</text><text x='188' y='160' font-size='11' fill='var(--muted)'>R = r olsaydı dış güç</text><text x='188' y='176' font-size='11' fill='var(--muted)'>en büyük: 18 W</text></svg>",
+        "once": {
+          "soru": "Uzun süre çalışan bir pil neden ısınır?",
+          "secenekler": [
+            {
+              "yazi": "İç direnci yüzünden",
+              "neden": "Akım pilin iç direncinden de geçer; I²·r kadar enerji pilin içinde ısıya döner.",
+              "dogru": true
+            },
+            {
+              "yazi": "Dış ortam yüzünden",
+              "neden": "Isı pilin kendi içinde oluşur."
+            },
+            {
+              "yazi": "Gerilimi arttığı için",
+              "neden": "Pilin gerilimi kullanıldıkça artmaz."
+            }
+          ]
+        }
       },
       {
         "h": "Kilowatt-saat ve fatura",
-        "p": "Faturada enerji <b>kilowatt-saat</b> (kWh) ile ölçülür: 1 kW güçle 1 saat çalışmak 1 kWh'tir. 1 kWh = 1000 W·3600 s = 3,6×10<sup>6</sup> J. 2 kW'lık ısıtıcı günde 3 saat, 30 gün: 2·3·30 = 180 kWh. Birim fiyat 3 TL ise tutar 540 TL.",
+        "p": "Faturada enerji <b>kilowatt-saat</b> ile ölçülür: 1 kW güçle 1 saat çalışmak 1 kWh'tir. Tutar = kWh × birim fiyat.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='10' width='300' height='70' fill='var(--acc)' fill-opacity='0.12' stroke='none' stroke-width='1.5' rx='8'/><text x='160' y='36' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='bold'>1 kW × 1 h = 1 kWh</text><text x='160' y='62' font-size='13' fill='var(--ink)' text-anchor='middle'>= 1000 W × 3600 s = 3,6×10⁶ J</text><rect x='10' y='92' width='300' height='100' fill='var(--panel)' stroke='none' stroke-width='1.5' rx='8'/><text x='22' y='114' font-size='12' fill='var(--ink)'>Isıtıcı: 2 kW · 3 h/gün · 30 gün</text><text x='22' y='138' font-size='12' fill='var(--ink)'>Enerji = 2·3·30</text><text x='298' y='138' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>180 kWh</text><text x='22' y='160' font-size='12' fill='var(--muted)'>Birim fiyat (örnek)</text><text x='298' y='160' font-size='12' fill='var(--muted)' text-anchor='end'>3 TL/kWh</text><line x1='22' y1='168' x2='298' y2='168' stroke='var(--line)' stroke-width='1'/><text x='22' y='185' font-size='12' fill='var(--ink)' font-weight='bold'>Tutar = 180·3</text><text x='298' y='185' font-size='13' fill='var(--c2)' text-anchor='end' font-weight='bold'>540 TL</text></svg>",
-        "key": "kWh güç değil, enerji birimidir: kW × saat.",
+        "key": "1 kWh = 3,6 milyon J. 2 kW'lık ısıtıcı günde 3 saat, 30 gün: 180 kWh; 3 TL'den 540 TL.",
         "etk": {
           "tur": "formul",
           "soru": "Cihazın gücünü, günlük kullanımı ve birim fiyatı değiştir. 30 günlük faturan ne olur?",
@@ -6085,39 +6139,93 @@
       },
       {
         "h": "Cihaz etiketini okumak",
-        "p": "Etikette <b>220 V, 1100 W</b> yazıyorsa cihaz 220 V'a bağlanınca 1100 W harcar. Akım I = P/V = 5 A, direnç R = V²/P = 44 Ω olur. Direnci sabit sayarsak 110 V'ta güç 110²/44 = 275 W, yani dörtte birine düşer.",
+        "p": "Etiketteki <b>220 V, 1100 W</b>, 220 V'ta 1100 W harcandığını söyler. I = P/V = 5 A ve R = V²/P = 44 Ω bulunur.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='15' y='15' width='130' height='95' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5' rx='6'/><text x='80' y='38' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>ISITICI</text><line x1='25' y1='47' x2='135' y2='47' stroke='var(--line)' stroke-width='1'/><text x='80' y='70' font-size='12' fill='var(--ink)' text-anchor='middle'>220 V ~ 50 Hz</text><text x='80' y='95' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='bold'>1100 W</text><text x='160' y='32' font-size='12' fill='var(--muted)'>Akım:</text><text x='160' y='50' font-size='13' fill='var(--ink)' font-weight='bold'>I = P/V = 5 A</text><text x='160' y='80' font-size='12' fill='var(--muted)'>Direnç:</text><text x='160' y='98' font-size='13' fill='var(--ink)' font-weight='bold'>R = V²/P = 44 Ω</text><rect x='15' y='125' width='295' height='65' fill='var(--c4)' fill-opacity='0.15' stroke='none' stroke-width='1.5' rx='8'/><text x='162' y='148' font-size='12' fill='var(--ink)' text-anchor='middle'>110 V'a bağlarsan (R sabit):</text><text x='162' y='174' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='bold'>P = 110²/44 = 275 W → dörtte bir</text></svg>",
         "key": "Etiketteki güç yalnızca etiketteki gerilimde geçerlidir."
       },
       {
         "h": "Parlaklık = harcanan güç",
-        "p": "Ampulün parlaklığını harcadığı <b>güç</b> belirler. Özdeş, direnci sabit ampuller ve ideal üreteç düşün. Tek ampul P ile yanar. İki ampul seri bağlanınca her biri V/2 alır: P/4, sönük. Paralelde her biri V alır: yine P, ama üreteç iki kat akım verir.",
+        "p": "Ampulün parlaklığını harcadığı <b>güç</b> belirler. Özdeş iki ampul seride V/2 alır, her biri P/4 ile sönük yanar; paralelde her biri P ile yanar.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='5' y='5' width='100' height='190' fill='var(--panel)' stroke='none' stroke-width='1.5' rx='8'/><rect x='110' y='5' width='100' height='190' fill='var(--panel)' stroke='none' stroke-width='1.5' rx='8'/><rect x='215' y='5' width='100' height='190' fill='var(--panel)' stroke='none' stroke-width='1.5' rx='8'/><text x='55' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Tek ampul</text><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Seri</text><text x='265' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Paralel</text><line x1='25' y1='60' x2='85' y2='60' stroke='var(--ink)' stroke-width='1.5'/><line x1='85' y1='60' x2='85' y2='130' stroke='var(--ink)' stroke-width='1.5'/><line x1='85' y1='130' x2='25' y2='130' stroke='var(--ink)' stroke-width='1.5'/><line x1='25' y1='130' x2='25' y2='60' stroke='var(--ink)' stroke-width='1.5'/><circle cx='55' cy='60' r='20' fill='var(--c4)' fill-opacity='0.35' stroke='none' stroke-width='1.5'/><circle cx='55' cy='60' r='9' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><line x1='48.7' y1='53.7' x2='61.3' y2='66.3' stroke='var(--ink)' stroke-width='1.2'/><line x1='48.7' y1='66.3' x2='61.3' y2='53.7' stroke='var(--ink)' stroke-width='1.2'/><rect x='49' y='127' width='12' height='6' fill='var(--panel)' stroke='none' stroke-width='1.5'/><line x1='51' y1='118' x2='51' y2='142' stroke='var(--ink)' stroke-width='2'/><line x1='59' y1='124' x2='59' y2='136' stroke='var(--ink)' stroke-width='3.5'/><text x='55' y='162' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='bold'>P</text><text x='55' y='180' font-size='11' fill='var(--muted)' text-anchor='middle'>parlak</text><line x1='125' y1='60' x2='195' y2='60' stroke='var(--ink)' stroke-width='1.5'/><line x1='195' y1='60' x2='195' y2='130' stroke='var(--ink)' stroke-width='1.5'/><line x1='195' y1='130' x2='125' y2='130' stroke='var(--ink)' stroke-width='1.5'/><line x1='125' y1='130' x2='125' y2='60' stroke='var(--ink)' stroke-width='1.5'/><circle cx='145' cy='60' r='12' fill='var(--c4)' fill-opacity='0.35' stroke='none' stroke-width='1.5'/><circle cx='145' cy='60' r='9' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><line x1='138.7' y1='53.7' x2='151.3' y2='66.3' stroke='var(--ink)' stroke-width='1.2'/><line x1='138.7' y1='66.3' x2='151.3' y2='53.7' stroke='var(--ink)' stroke-width='1.2'/><circle cx='175' cy='60' r='12' fill='var(--c4)' fill-opacity='0.35' stroke='none' stroke-width='1.5'/><circle cx='175' cy='60' r='9' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><line x1='168.7' y1='53.7' x2='181.3' y2='66.3' stroke='var(--ink)' stroke-width='1.2'/><line x1='168.7' y1='66.3' x2='181.3' y2='53.7' stroke='var(--ink)' stroke-width='1.2'/><rect x='154' y='127' width='12' height='6' fill='var(--panel)' stroke='none' stroke-width='1.5'/><line x1='156' y1='118' x2='156' y2='142' stroke='var(--ink)' stroke-width='2'/><line x1='164' y1='124' x2='164' y2='136' stroke='var(--ink)' stroke-width='3.5'/><text x='160' y='162' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>P/4 her biri</text><text x='160' y='180' font-size='11' fill='var(--muted)' text-anchor='middle'>sönük</text><line x1='230' y1='55' x2='300' y2='55' stroke='var(--ink)' stroke-width='1.5'/><line x1='230' y1='95' x2='300' y2='95' stroke='var(--ink)' stroke-width='1.5'/><line x1='230' y1='55' x2='230' y2='130' stroke='var(--ink)' stroke-width='1.5'/><line x1='300' y1='55' x2='300' y2='130' stroke='var(--ink)' stroke-width='1.5'/><line x1='300' y1='130' x2='230' y2='130' stroke='var(--ink)' stroke-width='1.5'/><circle cx='265' cy='55' r='17' fill='var(--c4)' fill-opacity='0.35' stroke='none' stroke-width='1.5'/><circle cx='265' cy='55' r='9' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><line x1='258.7' y1='48.7' x2='271.3' y2='61.3' stroke='var(--ink)' stroke-width='1.2'/><line x1='258.7' y1='61.3' x2='271.3' y2='48.7' stroke='var(--ink)' stroke-width='1.2'/><circle cx='265' cy='95' r='17' fill='var(--c4)' fill-opacity='0.35' stroke='none' stroke-width='1.5'/><circle cx='265' cy='95' r='9' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><line x1='258.7' y1='88.7' x2='271.3' y2='101.3' stroke='var(--ink)' stroke-width='1.2'/><line x1='258.7' y1='101.3' x2='271.3' y2='88.7' stroke='var(--ink)' stroke-width='1.2'/><rect x='259' y='127' width='12' height='6' fill='var(--panel)' stroke='none' stroke-width='1.5'/><line x1='261' y1='118' x2='261' y2='142' stroke='var(--ink)' stroke-width='2'/><line x1='269' y1='124' x2='269' y2='136' stroke='var(--ink)' stroke-width='3.5'/><text x='265' y='162' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>P her biri</text><text x='265' y='180' font-size='11' fill='var(--muted)' text-anchor='middle'>parlak</text></svg>",
-        "key": "Seride bir ampul kısa devre edilirse kalan ampuller daha parlak yanar."
+        "key": "Seride bir ampul kısa devre edilirse kalan ampuller daha parlak yanar.",
+        "once": {
+          "soru": "Özdeş iki ampulü paralel bağlıyorsun. Her biri tek ampule göre nasıl yanar?",
+          "secenekler": [
+            {
+              "yazi": "Aynı",
+              "neden": "Her ampul yine üretecin tam gerilimini alır; gücü P kalır. Üreteç iki kat akım verir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Daha sönük",
+              "neden": "Sönükleşme seri bağlamada olur."
+            },
+            {
+              "yazi": "Daha parlak",
+              "neden": "Gerilim artmadığı için güç de artmaz."
+            }
+          ]
+        }
       },
       {
         "h": "Evdeki tesisat paraleldir",
-        "p": "Evdeki prizler ve lambalar <b>paralel</b> bağlıdır. Böylece her cihaz aynı 220 V'u alır ve ötekilerden bağımsız açılıp kapanır. Ama açtığın her cihaz toplam akımı artırır: I = I<sub>1</sub> + I<sub>2</sub> + I<sub>3</sub>. Tek prize çok cihaz takmak bu yüzden tehlikelidir.",
+        "p": "Evde prizler ve lambalar <b>paralel</b> bağlıdır: her cihaz 220 V alır, ayrı açılıp kapanır. Açılan her cihaz toplam akımı artırır.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='27' y1='50' x2='285' y2='50' stroke='var(--c2)' stroke-width='2.5'/><line x1='27' y1='150' x2='285' y2='150' stroke='var(--c1)' stroke-width='2.5'/><line x1='27' y1='50' x2='27' y2='80' stroke='var(--c2)' stroke-width='2.5'/><line x1='27' y1='120' x2='27' y2='150' stroke='var(--c1)' stroke-width='2.5'/><rect x='8' y='80' width='38' height='40' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.5' rx='4'/><text x='27' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>ana</text><text x='27' y='112' font-size='11' fill='var(--ink)' text-anchor='middle'>hat</text><text x='50' y='40' font-size='12' fill='var(--c2)' font-weight='bold'>faz</text><text x='50' y='168' font-size='12' fill='var(--c1)' font-weight='bold'>nötr</text><text x='310' y='40' font-size='11' fill='var(--muted)' text-anchor='end'>her cihaza 220 V</text><line x1='105' y1='50' x2='105' y2='78' stroke='var(--c2)' stroke-width='1.5'/><line x1='105' y1='126' x2='105' y2='150' stroke='var(--c1)' stroke-width='1.5'/><rect x='69' y='78' width='72' height='48' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5' rx='6'/><text x='105' y='94' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Fırın</text><text x='105' y='108' font-size='11' fill='var(--ink)' text-anchor='middle'>2200 W</text><text x='105' y='121' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='bold'>10 A</text><line x1='190' y1='50' x2='190' y2='78' stroke='var(--c2)' stroke-width='1.5'/><line x1='190' y1='126' x2='190' y2='150' stroke='var(--c1)' stroke-width='1.5'/><rect x='154' y='78' width='72' height='48' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5' rx='6'/><text x='190' y='94' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Ütü</text><text x='190' y='108' font-size='11' fill='var(--ink)' text-anchor='middle'>1100 W</text><text x='190' y='121' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='bold'>5 A</text><line x1='275' y1='50' x2='275' y2='78' stroke='var(--c2)' stroke-width='1.5'/><line x1='275' y1='126' x2='275' y2='150' stroke='var(--c1)' stroke-width='1.5'/><rect x='239' y='78' width='72' height='48' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5' rx='6'/><text x='275' y='94' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Lamba</text><text x='275' y='108' font-size='11' fill='var(--ink)' text-anchor='middle'>110 W</text><text x='275' y='121' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='bold'>0,5 A</text><text x='160' y='190' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>I = 10 + 5 + 0,5 = 15,5 A</text></svg>",
-        "key": "Çok cihaz açtıkça eşdeğer direnç azalır, toplam akım artar."
+        "key": "Çok cihaz açtıkça eşdeğer direnç azalır, toplam akım artar. Tek prize çok cihaz takmak bu yüzden tehlikelidir.",
+        "once": {
+          "soru": "Salondaki lambayı kapatıyorsun; buzdolabı çalışmaya devam ediyor. Neden?",
+          "secenekler": [
+            {
+              "yazi": "Paralel bağlılar",
+              "neden": "Her cihazın kendi kolu var; biri açılıp kapanınca öteki etkilenmez.",
+              "dogru": true
+            },
+            {
+              "yazi": "Seri bağlılar",
+              "neden": "Seride lamba kapanınca devre kopar, buzdolabı da dururdu."
+            },
+            {
+              "yazi": "Farklı gerilim alıyorlar",
+              "neden": "Evdeki bütün cihazlar aynı 220 V'u alır."
+            }
+          ]
+        }
       },
       {
         "h": "Sigorta: aşırı akıma karşı",
-        "p": "<b>Sigorta</b> faz hattına seri bağlanır ve akım sınırı (ör. 16 A) aşılınca devreyi keser. Aşırı yük ya da <b>kısa devre</b> (direnci neredeyse sıfır bir yol, akım çok büyür) kabloları ısıtıp yangın çıkarabilir. Eski sigortanın teli erir, otomatik sigorta kendini açar.",
+        "p": "<b>Sigorta</b> faz hattına seri bağlanır, akım sınırı (ör. 16 A) aşılınca devreyi keser. Aşırı yük ya da <b>kısa devre</b> kabloları ısıtıp yangın çıkarabilir.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='20' y1='40' x2='140' y2='40' stroke='var(--c2)' stroke-width='2'/><line x1='180' y1='40' x2='300' y2='40' stroke='var(--c2)' stroke-width='2'/><rect x='140' y='32' width='40' height='16' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5' rx='3'/><line x1='140' y1='40' x2='180' y2='40' stroke='var(--ink)' stroke-width='1.2'/><text x='160' y='24' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>sigorta 16 A</text><text x='20' y='30' font-size='11' fill='var(--c2)'>faz</text><text x='300' y='30' font-size='11' fill='var(--muted)' text-anchor='end'>cihazlara</text><text x='160' y='72' font-size='11' fill='var(--muted)' text-anchor='middle'>aşırı yük ya da kısa devre → akım sınırı aşar</text><text x='104' y='115' font-size='12' fill='var(--ink)' text-anchor='end'>3 cihaz</text><text x='104' y='151' font-size='12' fill='var(--ink)' text-anchor='end'>+ 2200 W</text><rect x='110' y='101' width='93.0' height='20' fill='var(--c3)' fill-opacity='0.35' stroke='none' stroke-width='1.5'/><rect x='110' y='137' width='153.0' height='20' fill='var(--c2)' fill-opacity='0.35' stroke='none' stroke-width='1.5'/><text x='115' y='115' font-size='11' fill='var(--ink)'>15,5 A</text><text x='115' y='151' font-size='11' fill='var(--ink)'>25,5 A</text><line x1='206' y1='88' x2='206' y2='168' stroke='var(--ink)' stroke-width='1.5' stroke-dasharray='4 3'/><text x='206' y='184' font-size='11' fill='var(--ink)' text-anchor='middle'>16 A sınırı</text><text x='214' y='115' font-size='12' fill='var(--c3)' font-weight='bold'>çalışır</text><text x='268.0' y='151' font-size='12' fill='var(--c2)' font-weight='bold'>atar</text></svg>",
-        "key": "Atan sigortayı daha yüksek amperlisiyle değiştirme; kablo onu taşıyamayabilir."
+        "key": "Kısa devre: direnci neredeyse sıfır bir yol, akım çok büyür. Atan sigortayı daha yüksek amperlisiyle değiştirme."
       },
       {
         "h": "Kaçak akım rölesi ve topraklama",
-        "p": "<b>Kaçak akım rölesi</b> fazdan giden ve nötrden dönen akımı karşılaştırır; fark yaklaşık 30 mA'e ulaşırsa akım bir yere, belki bir insana kaçıyordur ve devreyi anında keser. <b>Topraklama</b> metal kasayı toprağa bağlar; kaçak akım senin yerine bu yoldan akar.",
+        "p": "<b>Kaçak akım rölesi</b> giden ve dönen akımı karşılaştırır; fark ~30 mA olursa devreyi keser. <b>Topraklama</b> metal kasadaki kaçak akımı toprağa akıtır.",
         "svg": "<svg viewBox='0 0 320 200'><marker id='eguc-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><rect x='5' y='5' width='150' height='190' fill='var(--panel)' stroke='none' stroke-width='1.5' rx='8'/><rect x='165' y='5' width='150' height='190' fill='var(--panel)' stroke='none' stroke-width='1.5' rx='8'/><text x='80' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Kaçak akım rölesi</text><text x='240' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Topraklama</text><line x1='15' y1='50' x2='145' y2='50' stroke='var(--c2)' stroke-width='2'/><line x1='15' y1='68' x2='145' y2='68' stroke='var(--c1)' stroke-width='2'/><rect x='55' y='38' width='50' height='42' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.5' rx='4'/><line x1='112' y1='50' x2='140' y2='50' stroke='var(--c2)' stroke-width='2' marker-end='url(#eguc-4)'/><line x1='48' y1='68' x2='20' y2='68' stroke='var(--c1)' stroke-width='2' marker-end='url(#eguc-4)'/><text x='80' y='100' font-size='12' fill='var(--ink)' text-anchor='middle'>giden = dönen</text><text x='80' y='117' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>→ çalışır</text><text x='80' y='148' font-size='12' fill='var(--ink)' text-anchor='middle'>fark ≈ 30 mA</text><text x='80' y='165' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>→ anında keser</text><rect x='195' y='40' width='70' height='48' fill='var(--muted)' fill-opacity='0.2' stroke='var(--ink)' stroke-width='1.5' rx='4'/><text x='230' y='61' font-size='11' fill='var(--ink)' text-anchor='middle'>metal</text><text x='230' y='76' font-size='11' fill='var(--ink)' text-anchor='middle'>kasa</text><line x1='255' y1='88' x2='255' y2='132' stroke='var(--c3)' stroke-width='2.5'/><line x1='240' y1='132' x2='270' y2='132' stroke='var(--ink)' stroke-width='2'/><line x1='245' y1='138' x2='265' y2='138' stroke='var(--ink)' stroke-width='2'/><line x1='250' y1='144' x2='260' y2='144' stroke='var(--ink)' stroke-width='2'/><text x='275' y='112' font-size='11' fill='var(--c3)'>toprak</text><text x='275' y='126' font-size='11' fill='var(--c3)'>hattı</text><text x='240' y='168' font-size='11' fill='var(--ink)' text-anchor='middle'>kaçak akım senin yerine</text><text x='240' y='184' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>topraktan akar</text></svg>",
-        "key": "Islak elle prize dokunma, hasarlı kablo kullanma, çoklu prizi aşırı yükleme."
+        "key": "Islak elle prize dokunma, hasarlı kablo kullanma, çoklu prizi aşırı yükleme.",
+        "once": {
+          "soru": "Çamaşır makinesinin metal kasasına akım kaçtı. Kasa topraklıysa akım nereye gider?",
+          "secenekler": [
+            {
+              "yazi": "Toprak hattına",
+              "neden": "Topraklama direnci çok küçük bir yoldur; kaçak akım senin yerine oradan akar.",
+              "dogru": true
+            },
+            {
+              "yazi": "Dokunan kişiye",
+              "neden": "Topraklı kasada akım, direnci çok küçük olan toprak hattını seçer."
+            },
+            {
+              "yazi": "Hiçbir yere",
+              "neden": "Kaçan akım bir yol bulur; topraklama o yolu güvenli kılar."
+            }
+          ]
+        }
       },
       {
         "h": "Verim ve enerji tasarrufu",
-        "p": "<b>Verim</b> = faydalı enerji / harcanan enerji. Akkor ampul enerjinin yalnızca yaklaşık %5'ini ışığa çevirir, gerisi ısıdır. LED aynı ışığı çok daha az güçle verir: 60 W akkor yerine yaklaşık 9 W LED.",
+        "p": "<b>Verim</b> = faydalı enerji / harcanan enerji. Akkor ampul enerjinin ~%5'ini ışığa çevirir. LED aynı ışığı çok daha az güçle verir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='88' y='52' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>Akkor 60 W</text><rect x='95' y='36' width='10.5' height='24' fill='var(--c4)' fill-opacity='0.8' stroke='none' stroke-width='1.5'/><rect x='105.5' y='36' width='199.5' height='24' fill='var(--c2)' fill-opacity='0.3' stroke='none' stroke-width='1.5'/><text x='215' y='52' font-size='12' fill='var(--ink)' text-anchor='middle'>≈ %95 ısı</text><text x='88' y='102' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>LED ≈ 9 W</text><rect x='95' y='86' width='10.5' height='24' fill='var(--c4)' fill-opacity='0.8' stroke='none' stroke-width='1.5'/><rect x='105.5' y='86' width='21.0' height='24' fill='var(--c2)' fill-opacity='0.3' stroke='none' stroke-width='1.5'/><text x='134.5' y='102' font-size='12' fill='var(--ink)'>aynı ışık, çok daha az ısı</text><rect x='95' y='126' width='12' height='12' fill='var(--c4)' fill-opacity='0.8' stroke='none' stroke-width='1.5'/><text x='112' y='136' font-size='11' fill='var(--ink)'>ışık (faydalı)</text><rect x='200' y='126' width='12' height='12' fill='var(--c2)' fill-opacity='0.3' stroke='none' stroke-width='1.5'/><text x='217' y='136' font-size='11' fill='var(--ink)'>ısı (kayıp)</text><text x='160' y='165' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Verim = faydalı enerji / harcanan enerji</text><text x='160' y='186' font-size='12' fill='var(--muted)' text-anchor='middle'>akkorda ≈ %5, LED'de çok daha yüksek</text></svg>",
-        "key": "Verim hiçbir zaman %100'ü geçemez."
+        "key": "Verim hiçbir zaman %100'ü geçemez. 60 W akkor yerine yaklaşık 9 W LED yeter."
       },
       {
         "h": "Özet",

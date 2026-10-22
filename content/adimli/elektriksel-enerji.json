@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Enerji = V · I · t",
-   "metin": "Şarj aleti 5 V, 2 A veriyor. Telefona <b>36 000 J</b> aktar.",
+   "metin": "Aktarılan enerji <b>W = V · I · t</b>. Şarj aleti 5 V, 2 A veriyor. Telefona <b>36 000 J</b> aktar.",
    "sahne": {
     "tur": "fiz9-sarj"
    },
@@ -33,13 +33,7 @@
     "tamam": "W = 5 · 2 · 3600 = <b>36 000 J</b>. 1 saat 3600 saniyedir; dakikayı saniyeye çevirmeyi unutma.",
     "ipucu": "36 000 / (5 · 2) saniye kaç dakika?"
    },
-   "kart": 2,
-   "goster": {
-    "deger": {
-     "t": 30
-    },
-    "not": "30 dakika = 1800 s: W = 5 · 2 · 1800 = 18 000 J."
-   }
+   "kart": 2
   },
   {
    "baslik": "Hangisi parlak?",
@@ -81,11 +75,11 @@
      }
     ]
    },
-   "kart": 3
+   "kart": 4
   },
   {
    "baslik": "Joule ısınması",
-   "metin": "10 Ω'luk tel 1 dakikada 1 A ile 600 J ısı verir. Isıyı <b>4 katına</b> çıkar.",
+   "metin": "Isı <b>Q = I² · R · t</b>. 10 Ω'luk tel 1 dakikada 1 A ile 600 J ısı verir. Isıyı <b>4 katına</b> çıkar.",
    "sahne": {
     "tur": "fiz9-joule"
    },
@@ -110,13 +104,7 @@
     "tamam": "Akım 2 katı, ısı 2² = <b>4 katı</b>: 2² · 10 · 60 = 2400 J. Sigortalar ve kablo kalınlığı bu yüzden önemlidir.",
     "ipucu": "Isı akımın karesiyle artar."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "I": 3
-    },
-    "not": "Akım 3 katı: ısı 3² = 9 katı, 3² · 10 · 60 = 5400 J."
-   }
+   "kart": 5
   },
   {
    "baslik": "Etiketi oku",
@@ -144,11 +132,11 @@
      }
     ]
    },
-   "kart": 7
+   "kart": 8
   },
   {
    "baslik": "Faturayı düşür",
-   "metin": "1,5 kW klima, 30 gün, 1 kWh = 3 TL. Günlük kullanımı ayarla: aylık tutar <b>270 TL</b>'yi geçmesin.",
+   "metin": "Enerji (kWh) = güç (kW) × süre (saat). 1,5 kW klima, 30 gün, 1 kWh = 3 TL. Günlük kullanımı ayarla: aylık tutar <b>270 TL</b>'yi geçmesin.",
    "sahne": {
     "tur": "fiz9-fatura"
    },
@@ -175,13 +163,7 @@
     "tamam": "Günde 2 saat: 1,5 · 2 · 30 = 90 kWh, 90 · 3 = <b>270 TL</b>. Süreyi yarıya indirmek faturayı da yarıya indirir.",
     "ipucu": "270 TL / 3 TL = 90 kWh; 90 / (1,5 · 30) kaç saat?"
    },
-   "kart": 7,
-   "goster": {
-    "deger": {
-     "h": 3
-    },
-    "not": "Günde 3 saat: 1,5 · 3 · 30 = 135 kWh, 135 · 3 = 405 TL."
-   }
+   "kart": 7
   },
   {
    "baslik": "Sigortayı attırma",
@@ -275,5 +257,6 @@
   "Isı Q = I² · R · t; akım iki katına çıkınca ısı dört katına çıkar.",
   "kWh enerji birimidir; fatura = güç · süre · birim fiyat.",
   "Ev tesisatı paraleldir; sigorta toplam akımı sınırlar. LED aynı ışığı çok daha az enerjiyle verir."
- ]
+ ],
+ "soruOnce": true
 }

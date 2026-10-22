@@ -7,97 +7,197 @@
  "adimlar": [
   {
    "baslik": "Hedef hücre",
-   "metin": "Hormon kanla bütün vücuda dağılır. Oynat ve hangi hücrelerin yanıt verdiğine bak.",
-   "sahne": { "tur": "biy9-hedef", "sure": 5 },
+   "metin": "Hormon kanla bütün vücuda dağılır. Bazı hücrelerin yüzeyinde onu tanıyan <b>reseptörler</b> var. Oynat ve hangi hücrelerin yanıt verdiğine bak.",
+   "sahne": {
+    "tur": "biy9-hedef",
+    "sure": 5
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Hormon hangi hücrelerde etki gösterir?",
     "secenekler": [
-     { "yazi": "Kanın ulaştığı bütün hücrelerde", "neden": "Hormon her hücreye ulaşır, ama reseptörü olmayan hücre onu tanımaz." },
-     { "yazi": "Yalnızca uygun reseptörü olan hücrelerde", "dogru": true, "neden": "Hormon, reseptörüne anahtar-kilit gibi bağlanır. Reseptörü olmayan hücre hormondan etkilenmez." },
-     { "yazi": "Yalnızca bezin yanındaki hücrelerde", "neden": "Hormon kanla taşındığı için uzaktaki hücreleri de etkileyebilir." }
+     {
+      "yazi": "Bütün hücrelerde",
+      "neden": "Hormon her hücreye ulaşır, ama reseptörü olmayan hücre onu tanımaz."
+     },
+     {
+      "yazi": "Reseptörü olanlarda",
+      "dogru": true,
+      "neden": "Hormon, reseptörüne anahtar-kilit gibi bağlanır. Reseptörü olmayan hücre hormondan etkilenmez."
+     },
+     {
+      "yazi": "Bezin yakınındakilerde",
+      "neden": "Hormon kanla taşındığı için uzaktaki hücreleri de etkileyebilir."
+     }
     ]
    },
-   "kart": 1
+   "kart": 2
   },
   {
    "baslik": "Hız ve süre",
    "metin": "Sinir sistemi ve endokrin sistem birlikte çalışır ama farklı hızdadır. İkisinin etkisini yarıştır.",
-   "sahne": { "tur": "biy9-hiz", "sure": 6 },
+   "sahne": {
+    "tur": "biy9-hiz",
+    "sure": 6
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Hangi etki daha uzun sürer?",
     "secenekler": [
-     { "yazi": "Hormonal etki", "dogru": true, "neden": "Hormon kanla yavaş gelir ama kanda bir süre kalır; etkisi geç başlar, uzun sürer." },
-     { "yazi": "Sinirsel etki", "neden": "Sinirsel etki çok hızlı başlar ama kısa sürer." },
-     { "yazi": "İkisi eşit sürer", "neden": "Süreleri belirgin biçimde farklıdır: sinirsel kısa, hormonal uzun." }
+     {
+      "yazi": "Hormonal etki",
+      "dogru": true,
+      "neden": "Hormon kanla yavaş gelir ama kanda bir süre kalır; etkisi geç başlar, uzun sürer."
+     },
+     {
+      "yazi": "Sinirsel etki",
+      "neden": "Sinirsel etki çok hızlı başlar ama kısa sürer."
+     },
+     {
+      "yazi": "İkisi eşit sürer",
+      "neden": "Süreleri belirgin biçimde farklıdır: sinirsel kısa, hormonal uzun."
+     }
     ]
    },
-   "kart": 3
+   "kart": 4
   },
   {
    "baslik": "Yemekten sonra",
    "metin": "Yemekten sonra kan şekeri yükselir. Pankreasın <b>β hücreleri</b> <b>insülin</b> salgılar. Önce insülinsiz oynat, sonra insülini aç.",
-   "sahne": { "tur": "biy9-insulin", "sure": 5 },
-   "deger": { "ins": 0 },
-   "kontroller": [ { "ad": "ins", "etiket": "İnsülin", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "sahne": {
+    "tur": "biy9-insulin",
+    "sure": 5
+   },
+   "deger": {
+    "ins": 0
+   },
+   "kontroller": [
+    {
+     "ad": "ins",
+     "etiket": "İnsülin",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "ins": 1 },
+    "hedef": {
+     "ins": 1
+    },
     "ipucu": "İnsülini aç ve yeniden oynat.",
     "tamam": "İnsülin hücrelerin glikoz almasını sağladı ve karaciğer fazlayı glikojen olarak depoladı; şeker normale döndü."
    },
-   "kart": 10,
-   "goster": { "oynat": true, "not": "İnsülin yokken hücreler glikozu alamıyor: yemekten sonra kan şekeri yükseliyor ve normale inmiyor." }
+   "kart": 11
   },
   {
    "baslik": "İki zıt hormon",
    "metin": "Kan şekeri normalde yaklaşık <b>70–110 mg/dL</b> arasında tutulur. Şekeri değiştir ve pankreasın yanıtını izle.",
-   "sahne": { "tur": "biy9-pankreas" },
-   "deger": { "mg": 90 },
-   "kontroller": [ { "ad": "mg", "etiket": "Kan şekeri", "min": 40, "max": 200, "adim": 10, "birim": "mg/dL", "tur": "surgu" } ],
+   "sahne": {
+    "tur": "biy9-pankreas"
+   },
+   "deger": {
+    "mg": 90
+   },
+   "kontroller": [
+    {
+     "ad": "mg",
+     "etiket": "Kan şekeri",
+     "min": 40,
+     "max": 200,
+     "adim": 10,
+     "birim": "mg/dL",
+     "tur": "surgu"
+    }
+   ],
    "gorev": {
     "tur": "secim",
     "soru": "Uzun açlıkta şeker 60 mg/dL'ye düştü. Hangi hormon salgılanır?",
     "secenekler": [
-     { "yazi": "İnsülin", "neden": "İnsülin şekeri düşürür; şeker zaten düşükken salgılanmaz." },
-     { "yazi": "Glukagon", "dogru": true, "neden": "Pankreasın α hücreleri glukagon salgılar; karaciğer glikojeni yıkarak kana glikoz verir." },
-     { "yazi": "ADH", "neden": "ADH hipofizden salınır ve böbrekte su geri emilimini artırır; kan şekerini ayarlamaz." }
+     {
+      "yazi": "İnsülin",
+      "neden": "İnsülin şekeri düşürür; şeker zaten düşükken salgılanmaz."
+     },
+     {
+      "yazi": "Glukagon",
+      "dogru": true,
+      "neden": "Pankreasın α hücreleri glukagon salgılar; karaciğer glikojeni yıkarak kana glikoz verir."
+     },
+     {
+      "yazi": "ADH",
+      "neden": "ADH hipofizden salınır ve böbrekte su geri emilimini artırır; kan şekerini ayarlamaz."
+     }
     ]
    },
-   "kart": 10,
-   "goster": { "deger": { "mg": 160 }, "not": "Kan şekeri 160 mg/dL: β hücreleri insülin salgılıyor, karaciğer ve kaslar glikojen depoluyor." }
+   "kart": 11
   },
   {
    "baslik": "Kendini frenleyen zincir",
    "metin": "Hipotalamus <b>TRH</b>, hipofiz <b>TSH</b> salgılar; TSH tiroiti <b>tiroksin</b> yapmaya yönlendirir. Tiroksini artır ve yukarıdaki hormonları izle.",
-   "sahne": { "tur": "biy9-tiroit" },
-   "deger": { "tx": 2 },
-   "kontroller": [ { "ad": "tx", "etiket": "Tiroksin", "min": 1, "max": 5, "adim": 1, "tur": "surgu" } ],
+   "sahne": {
+    "tur": "biy9-tiroit"
+   },
+   "deger": {
+    "tx": 2
+   },
+   "kontroller": [
+    {
+     "ad": "tx",
+     "etiket": "Tiroksin",
+     "min": 1,
+     "max": 5,
+     "adim": 1,
+     "tur": "surgu"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "tx": 5 },
+    "hedef": {
+     "tx": 5
+    },
     "tamam": "Tiroksin arttıkça TRH ve TSH azaldı. Buna negatif geri bildirim denir: ürün, kendisini üreten zinciri frenler ve düzey sabit kalır."
    },
-   "kart": 5,
-   "goster": { "deger": { "tx": 1 }, "not": "Tiroksin azalınca fren zayıflıyor: TRH ve TSH artıyor, tiroit daha çok uyarılıyor." }
+   "kart": 5
   },
   {
    "baslik": "İyot eksikliği",
    "metin": "Tiroit tiroksin yapmak için <b>iyot</b> kullanır. İyot eksikliğini aç ve zincire ne olduğuna bak.",
-   "sahne": { "tur": "biy9-tiroit" },
-   "deger": { "tx": 3, "eksik": 0 },
-   "kontroller": [ { "ad": "eksik", "etiket": "İyot eksikliği", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "sahne": {
+    "tur": "biy9-tiroit"
+   },
+   "deger": {
+    "tx": 3,
+    "eksik": 0
+   },
+   "kontroller": [
+    {
+     "ad": "eksik",
+     "etiket": "İyot eksikliği",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
    "gorev": {
     "tur": "secim",
     "soru": "İyot eksikliğinde tiroit neden büyür (guatr)?",
     "secenekler": [
-     { "yazi": "İyot birikip bezi şişirir", "neden": "Sorun iyodun fazlası değil eksikliğidir." },
-     { "yazi": "Tiroksin çok artar", "neden": "İyot olmadan tiroksin yapılamaz; tiroksin azalır." },
-     { "yazi": "TSH artar ve bezi büyütür", "dogru": true, "neden": "Tiroksin düşünce hipotalamus ve hipofiz frenlenmez. Artan TSH tiroiti sürekli uyarır ve bez büyür." }
+     {
+      "yazi": "İyot birikir",
+      "neden": "Sorun iyodun fazlası değil eksikliğidir."
+     },
+     {
+      "yazi": "Tiroksin artar",
+      "neden": "İyot olmadan tiroksin yapılamaz; tiroksin azalır."
+     },
+     {
+      "yazi": "TSH artar",
+      "dogru": true,
+      "neden": "Tiroksin düşünce hipotalamus ve hipofiz frenlenmez. Artan TSH tiroiti sürekli uyarır ve bez büyür."
+     }
     ]
    },
-   "kart": 7
+   "kart": 8
   }
  ],
  "kapanis": [
@@ -106,5 +206,6 @@
   "İnsülin kan şekerini düşürür, glukagon yükseltir.",
   "Tiroksin TRH ve TSH'yi frenler: negatif geri bildirim.",
   "İyot eksikliğinde fren kalkar, TSH artar ve guatr oluşur."
- ]
+ ],
+ "soruOnce": true
 }

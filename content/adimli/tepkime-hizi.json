@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Katsayılar ve hız",
-   "metin": "N₂ + 3H₂ → 2NH₃ tepkimesinde H₂ <b>0,6 M/s</b> hızla harcanıyor. NH₃'ün oluşma hızını ayarla.",
+   "metin": "Hızlar katsayılarla orantılıdır. N₂ + 3H₂ → 2NH₃ tepkimesinde H₂ <b>0,6 M/s</b> hızla harcanıyor. NH₃'ün oluşma hızını ayarla.",
    "sahne": {
     "tur": "kim9-katsayi"
    },
@@ -65,7 +65,7 @@
   },
   {
    "baslik": "Etkin çarpışma",
-   "metin": "AB + C → A + BC tepkimesinde Ea = 60 kJ. Enerjiyi ve yönelimi ayarla, oynat.",
+   "metin": "Ea, çarpışmanın ürün vermesi için gereken en düşük enerjidir. AB + C → A + BC tepkimesinde Ea = 60 kJ. Enerjiyi ve yönelimi ayarla, oynat.",
    "sahne": {
     "tur": "kim9-carpisma",
     "sure": 3
@@ -103,15 +103,7 @@
     },
     "tamam": "Enerji Ea'ya ulaştı ve C, B ucuna çarptı: <b>etkin çarpışma</b>. Çarpışmaların çok azı etkindir; bu yüzden her çarpışma ürün vermez."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "yon": 0,
-     "e": 80
-    },
-    "not": "Enerji yeterli (80 kJ), ama C molekülün <b>A ucuna</b> çarptı: tanecikler geri sekti, ürün yok.",
-    "oynat": true
-   }
+   "kart": 4
   },
   {
    "baslik": "Sıcaklık",
@@ -152,7 +144,7 @@
      }
     ]
    },
-   "kart": 11
+   "kart": 12
   },
   {
    "baslik": "Temas yüzeyi",
@@ -323,7 +315,7 @@
      }
     ]
    },
-   "kart": 7
+   "kart": 8
   }
  ],
  "kapanis": [
@@ -332,5 +324,6 @@
   "Sıcaklık Ea'yı aşan tanecik oranını artırır; temas yüzeyi heterojen tepkimeleri hızlandırır.",
   "<b>Katalizör</b> iki yönün Ea'sını eşit düşürür; ΔH değişmez.",
   "<b>hız = k[A]ˣ[B]ʸ</b>: derişim 2 kat olunca hız 4 kat oluyorsa o maddeye göre derece 2'dir."
- ]
+ ],
+ "soruOnce": true
 }
