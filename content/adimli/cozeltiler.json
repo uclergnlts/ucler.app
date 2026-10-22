@@ -3,7 +3,7 @@
  "ders": "kimya",
  "konu": "cozeltiler",
  "baslik": "Çözeltiler",
- "ozet": "Tuzu çöz, derişimi ayarla, seyrelt, dondur: çözeltileri kendi elinle hazırla.",
+ "ozet": "Önce dene, sonra adını öğren: tuzu çöz, derişimi ayarla, seyrelt, dondur.",
  "adimlar": [
   {
    "baslik": "İyonik mi, moleküler mi?",
@@ -28,16 +28,16 @@
     "soru": "Tuzlu su elektriği neden iletir?",
     "secenekler": [
      {
-      "yazi": "Su tek başına elektriği iyi iletir",
+      "yazi": "Su tek başına iletir",
       "neden": "Saf su çok az iyon içerir, ampulü yakmaz. Şekerli suda da ampul sönük kaldı."
      },
      {
-      "yazi": "Tuz suda iyonlarına ayrışır",
+      "yazi": "Tuz iyonlarına ayrışır",
       "neden": "NaCl suda Na⁺ ve Cl⁻ iyonlarına ayrışır (<b>iyonik çözünme</b>). Şeker ise molekül olarak dağılır, iyon vermez (<b>moleküler çözünme</b>). Suda iyonlarına ayrışıp çözeltisini iletken yapan maddelere <b>elektrolit</b> denir.",
       "dogru": true
      },
      {
-      "yazi": "Tuz kristalleri suda olduğu gibi durur",
+      "yazi": "Tuz kristali olduğu gibi durur",
       "neden": "Kristal suda dağılır; su molekülleri iyonları sarar ve birbirinden ayırır. Çözünmeyen kristal yükü taşıyamaz."
      }
     ]
@@ -46,7 +46,7 @@
   },
   {
    "baslik": "Kütlece yüzde",
-   "metin": "Bardakta 20 g tuz var. Suyu ayarla ve çözeltiyi kütlece <b>%40</b> yap.",
+   "metin": "Kütlece yüzde = çözünen kütlesi / çözelti kütlesi × 100. Bardakta 20 g tuz var. Suyu ayarla ve çözeltiyi kütlece <b>%40</b> yap.",
    "sahne": {
     "tur": "kim8-yuzde"
    },
@@ -71,17 +71,11 @@
     },
     "tamam": "20 g tuz + 30 g su = 50 g çözelti; 20 / 50 = <b>%40</b>. Payda yine çözeltinin kütlesidir: suya bölseydin %67 bulurdun."
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "su": 60
-    },
-    "not": "60 g suyla çözelti 20 + 60 = 80 g olur: 20 / 80 = <b>%25</b>. Payda çözeltinin kütlesidir."
-   }
+   "kart": 4
   },
   {
    "baslik": "Molarite",
-   "metin": "Balonda 0,1 mol NaOH var. Hacmi değiştirerek çözeltiyi <b>0,5 M</b> yap.",
+   "metin": "Molarite = mol sayısı / litre çözelti. Balonda 0,1 mol NaOH var. Hacmi değiştirerek çözeltiyi <b>0,5 M</b> yap.",
    "sahne": {
     "tur": "kim8-molarite"
    },
@@ -106,13 +100,7 @@
     },
     "tamam": "V = n / M = 0,1 / 0,5 = 0,2 L = <b>200 mL</b>. Aynı mol daha az hacimde daha derişik olur."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "V": 1000
-    },
-    "not": "0,1 mol NaOH 1000 mL, yani 1 L çözeltide: M = 0,1 / 1 = <b>0,1 M</b>."
-   }
+   "kart": 5
   },
   {
    "baslik": "Seyreltme",
@@ -141,13 +129,7 @@
     },
     "tamam": "Su eklemek mol sayısını değiştirmez, hep 0,2 mol: 2 · 100 = 0,8 · V₂, yani V₂ = <b>250 mL</b>. 150 mL su ekledin."
    },
-   "kart": 7,
-   "goster": {
-    "deger": {
-     "V": 200
-    },
-    "not": "Hacim 200 mL'ye çıktı, mol sayısı hâlâ 0,2: M = 0,2 / 0,2 = <b>1 M</b>. Hacim iki katına çıkınca derişim yarıya iner."
-   }
+   "kart": 7
   },
   {
    "baslik": "İyon derişimi",
@@ -216,7 +198,7 @@
      }
     ]
    },
-   "kart": 10
+   "kart": 11
   },
   {
    "baslik": "Gazoz neden köpürür?",
@@ -251,21 +233,21 @@
     "soru": "Gazoz açılınca neden köpürür?",
     "secenekler": [
      {
-      "yazi": "Şişe açılınca sıvı ısınır, su kaynar",
+      "yazi": "Sıvı ısınır, su kaynar",
       "neden": "Gazozun sıcaklığı açınca değişmez; kabarcıklar su buharı değil, CO₂'dir."
      },
      {
-      "yazi": "Hava gazoza girip kabarcık yapar",
+      "yazi": "Hava girip kabarcık yapar",
       "neden": "Kabarcıklar dışarıdan giren hava değil, sıvıdan ayrılan CO₂'dir."
      },
      {
-      "yazi": "Üstteki gaz basıncı düşer, CO₂'nin çözünürlüğü azalır",
+      "yazi": "Basınç düşer, CO₂ çözünürlüğü azalır",
       "neden": "Gazın çözünürlüğü üstündeki kısmi basınçla orantılıdır (Henry yasası). Kapak açılınca basınç düşer, fazla CO₂ kabarcık olarak çıkar.",
       "dogru": true
      }
     ]
    },
-   "kart": 13
+   "kart": 14
   },
   {
    "baslik": "Çözünürlük laboratuvarı",
@@ -384,5 +366,6 @@
   "Seyreltmede mol değişmez: <b>M₁·V₁ = M₂·V₂</b>. İyon derişimi için formüldeki iyon sayısını çarp.",
   "Koligatif özellikler tanecik sayısına bağlıdır: <b>ΔT = K·m·i</b>. Daha çok iyon, daha düşük donma noktası.",
   "Gazların çözünürlüğü <b>basınçla artar</b>, <b>sıcaklıkla azalır</b>."
- ]
+ ],
+ "soruOnce": true
 }
