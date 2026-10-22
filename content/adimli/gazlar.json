@@ -3,7 +3,7 @@
  "ders": "kimya",
  "konu": "gazlar",
  "baslik": "Gazlar",
- "ozet": "Pistonu it, gazı ısıt, mol ekle: gaz yasalarını kendi elinle bul.",
+ "ozet": "Önce dene, sonra adını öğren: pistonu it, gazı ısıt, mol ekle; yasaları kendin bul.",
  "adimlar": [
   {
    "baslik": "Boyle: sıkıştır",
@@ -31,13 +31,7 @@
     },
     "tamam": "Hacim yarıya inince basınç iki katına çıktı: P·V hep 4. Bu <b>Boyle yasasıdır</b>: P₁·V₁ = P₂·V₂."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "V": 8
-    },
-    "not": "Hacim 8 L'ye, yani iki katına çıkınca basınç yarıya iner: <b>0,5 atm</b>. P·V yine 4."
-   }
+   "kart": 3
   },
   {
    "baslik": "Charles: ısıt",
@@ -66,13 +60,7 @@
     },
     "tamam": "Hacmi 6 L'den 8 L'ye, yani 4/3 katına çıkarmak için kelvin sıcaklığı da 4/3 katına çıkmalı: 300 K → 400 K, yani 127 °C. <b>Charles yasası</b>: V₁/T₁ = V₂/T₂."
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "t": -73
-    },
-    "not": "−73 °C = 200 K. Kelvin sıcaklığı 300 K'den 200 K'e inince hacim 6 L'den <b>4 L</b>'ye iner."
-   }
+   "kart": 4
   },
   {
    "baslik": "Gay-Lussac: kapalı kap",
@@ -90,12 +78,12 @@
       "neden": "Hacim sabit ama tanecikler hızlanır, çeperlere daha sık ve sert çarpar."
      },
      {
-      "yazi": "İki katına çıkar (2 atm)",
+      "yazi": "2 atm olur",
       "neden": "Kelvin sıcaklığı 300 K'den 600 K'e, yani iki katına çıktı. Hacim sabitken basınç kelvin sıcaklığıyla doğru orantılıdır: P₁/T₁ = P₂/T₂. Sprey kutusu bu yüzden ateşe atılmaz.",
       "dogru": true
      },
      {
-      "yazi": "12 katına çıkar",
+      "yazi": "12 atm olur",
       "neden": "27'den 327'ye 12 kat gibi görünür ama gaz hesaplarında sıcaklık her zaman kelvindir: 300 K → 600 K."
      }
     ]
@@ -260,12 +248,12 @@
       "neden": "Ortada oluşması için iki gazın eşit hızda yayılması gerekirdi; oysa mol kütleleri farklı."
      },
      {
-      "yazi": "HCl ucuna daha yakın",
+      "yazi": "HCl ucuna yakın",
       "neden": "Hafif gaz daha hızlı yayılır: r₁/r₂ = √(M₂/M₁). NH₃ (17 g/mol), HCl'den (36,5 g/mol) yaklaşık 1,47 kat hızlıdır ve yolun %59'unu alır. Bu <b>Graham yasasıdır</b>.",
       "dogru": true
      },
      {
-      "yazi": "NH₃ ucuna daha yakın",
+      "yazi": "NH₃ ucuna yakın",
       "neden": "Bu, HCl'nin daha hızlı olduğu anlamına gelirdi; oysa HCl daha ağırdır."
      }
     ]
@@ -274,7 +262,7 @@
   },
   {
    "baslik": "Dalton: kısmi basınç",
-   "metin": "Kapta 2 mol N₂ var ve 1 atm basınç yapıyor. O₂ ekle: O₂'nin basıncı toplamın yarısı olsun.",
+   "metin": "Karışımdaki her gaz kendi basıncını yapar. Kapta 2 mol N₂ var ve 1 atm basınç yapıyor. O₂ ekle: O₂'nin basıncı toplamın yarısı olsun.",
    "sahne": {
     "tur": "kim7-dalton"
    },
@@ -298,13 +286,7 @@
     },
     "tamam": "2 mol O₂ de 1 atm yapar: P(top) = 1 + 1 = 2 atm. Kısmi basınç mol kesriyle orantılıdır: P(O₂) = X(O₂) · P(top) = ½ · 2 = 1 atm. Bu <b>Dalton yasasıdır</b>: P(top) = P(A) + P(B)."
    },
-   "kart": 12,
-   "goster": {
-    "deger": {
-     "o": 1
-    },
-    "not": "1 mol O₂ eklendi: 3 mol gazda P(top) = 1,5 atm, P(O₂) = ⅓ · 1,5 = <b>0,5 atm</b>, toplamın üçte biri."
-   }
+   "kart": 12
   }
  ],
  "kapanis": [
@@ -313,5 +295,6 @@
   "Hepsi <b>P·V = n·R·T</b> denkleminde birleşir (R = 0,082 L·atm/mol·K).",
   "Ortalama kinetik enerji yalnızca mutlak sıcaklığa bağlıdır. <b>Graham</b>: hafif gaz daha hızlı yayılır, r ∝ 1/√M.",
   "<b>Dalton</b>: karışımda P(top) = ΣP(i); her gazın kısmi basıncı mol kesriyle orantılıdır."
- ]
+ ],
+ "soruOnce": true
 }

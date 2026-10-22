@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "kutle-cekimi",
  "baslik": "Kütle çekimi",
- "ozet": "Çekim kuvvetini kütle ve uzaklıkla ayarla, elmayı düşür, Newton'un topunu yörüngeye oturt, asansörün halatını kes.",
+ "ozet": "Önce dene, sonra adını öğren: çekimi kütle ve uzaklıkla ayarla, topu yörüngeye oturt, asansörün halatını kes.",
  "adimlar": [
   {
    "baslik": "Kütle ve uzaklık",
@@ -42,14 +42,7 @@
     "tamam": "Uzaklık 2 katına çıkınca kuvvet 2² = 4'te birine iner. Kütleyi 4 katına çıkarınca kuvvet yeniden F₀ olur. Buna <b>ters kare yasası</b> denir.",
     "ipucu": "Önce uzaklığı 2 yap; kuvvetin kaçta birine indiğine bak."
    },
-   "kart": 2,
-   "goster": {
-    "deger": {
-     "m": 1,
-     "r": 3
-    },
-    "not": "Uzaklık 3 katına çıkınca kuvvet 3² = 9'da birine iner: F ≈ <b>0,11 F₀</b>."
-   }
+   "kart": 2
   },
   {
    "baslik": "Elma Dünya'yı da çeker",
@@ -72,12 +65,12 @@
       "dogru": true
      },
      {
-      "yazi": "Çok daha küçük bir kuvvetle",
+      "yazi": "Çok daha küçük",
       "neden": "Kuvvetler eşittir. Küçük olan Dünya'nın <b>ivmesidir</b>, kuvveti değil."
      }
     ]
    },
-   "kart": 2
+   "kart": 3
   },
   {
    "baslik": "Yükseldikçe g azalır",
@@ -107,13 +100,7 @@
     "tamam": "12 800 km yukarıda r = 3R: g, 3² = 9'da birine iner (≈ 1,09 m/s²); ağırlık 784 / 9 ≈ 87 N. Kütle ise hep 80 kg.",
     "ipucu": "Ağırlığın 9'da birine inmesi için merkeze uzaklık 3 katına çıkmalı."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "h": 1
-    },
-    "not": "6400 km yukarıda r = 2R: g dörtte birine iner, ağırlık 784 / 4 = <b>196 N</b>."
-   }
+   "kart": 5
   },
   {
    "baslik": "Kepler'in alanlar yasası",
@@ -131,17 +118,17 @@
       "neden": "Güneş'e yakınken çekim artar ve gezegen hızlanır."
      },
      {
-      "yazi": "Güneş'ten en uzakken (günöte)",
+      "yazi": "Günötede",
       "neden": "Günötede en yavaştır. Eşit sürede taradığı alan aynı kalsın diye yavaş gitmesi gerekir."
      },
      {
-      "yazi": "Güneş'e en yakınken (günberi)",
+      "yazi": "Günberide",
       "neden": "Yakında yarıçap kısadır: eşit sürede eşit alanı taramak için gezegen daha hızlı gitmeli.",
       "dogru": true
      }
     ]
    },
-   "kart": 6
+   "kart": 7
   },
   {
    "baslik": "Newton'un topu",
@@ -175,13 +162,7 @@
     "tamam": "Yaklaşık <b>7,9 km/s</b> ile top Dünya'nın çevresinde döner. Uydu da hep düşer, ama Dünya'yı hep ıskalar. Çekim kuvveti merkezcil kuvvet olur: v = √(GM/r).",
     "ipucu": "Hızı 7,9 km/s'nin biraz üstüne çıkar ve oynat."
    },
-   "kart": 9,
-   "goster": {
-    "deger": {
-     "v": 60
-    },
-    "not": "6 km/s yetmiyor: top ilerlerken düşüyor, yüzey yeterince eğilmeden Dünya'ya çarpıyor."
-   }
+   "kart": 9
   },
   {
    "baslik": "Kurtulma hızı",
@@ -215,13 +196,7 @@
     "tamam": "Yeryüzünden kurtulma hızı yaklaşık <b>11,2 km/s</b>'dir: yörünge hızının √2 katı (7,9 × 1,41). Bu hızla atılan cisim bir daha geri dönmez.",
     "ipucu": "Kurtulma hızı yörünge hızının yaklaşık 1,41 katıdır."
    },
-   "kart": 12,
-   "goster": {
-    "deger": {
-     "v": 95
-    },
-    "not": "9,5 km/s ile top uzun bir elips çizip geri dönüyor: hız, 11,2 km/s'lik kurtulma hızının altında."
-   }
+   "kart": 12
   },
   {
    "baslik": "Ağırlıksızlık",
@@ -249,7 +224,7 @@
     },
     "tamam": "Kişi ve tartı birlikte serbest düşer, tartı 0 gösterir. Çekim hâlâ var: düşmelerinin nedeni zaten o."
    },
-   "kart": 10
+   "kart": 11
   }
  ],
  "kapanis": [
@@ -258,5 +233,6 @@
   "g = GM/r²: yükseldikçe azalır. r = 2R'de 9,8'in 4'te biri olur.",
   "Gezegenler eşit sürede eşit alan tarar; Güneş'e yakınken hızlanır.",
   "Yörünge hızı ≈ 7,9 km/s, kurtulma hızı ≈ 11,2 km/s. Uydular ve astronotlar sürekli düşer."
- ]
+ ],
+ "soruOnce": true
 }

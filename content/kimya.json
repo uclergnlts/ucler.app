@@ -4689,49 +4689,121 @@
     "cards": [
       {
         "h": "Gazlar ve dört nicelik",
-        "p": "Gazlar kolayca sıkıştırılır, kabı tamamen doldurur, birbiriyle her oranda homojen karışır ve yoğunlukları düşüktür. Bir gaz örneğini dört nicelik tanımlar: basınç <b>P</b>, hacim <b>V</b>, sıcaklık <b>T</b> ve mol sayısı <b>n</b>. Gaz hesaplarında sıcaklık her zaman kelvindir.",
+        "p": "Gazlar kolay sıkışır, kabı doldurur, her oranda karışır. Bir gazı dört nicelik tanımlar: basınç <b>P</b>, hacim <b>V</b>, sıcaklık <b>T</b>, mol sayısı <b>n</b>. Sıcaklık hep kelvindir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><path d='M30 40 V172 H130 V40' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='31' y='84' width='98' height='87' fill='var(--c1)' fill-opacity='0.12'/><rect x='31' y='72' width='98' height='12' fill='var(--muted)' fill-opacity='0.6'/><path d='M80 72 V50' stroke='var(--muted)' stroke-width='4' fill='none'/><path d='M80 22 V44' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#gaz-1)'/><text x='92' y='36' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='700'>P</text><circle cx='50' cy='100' r='4.5' fill='var(--c1)'/><circle cx='85' cy='95' r='4.5' fill='var(--c1)'/><circle cx='112' cy='110' r='4.5' fill='var(--c1)'/><circle cx='65' cy='128' r='4.5' fill='var(--c1)'/><circle cx='100' cy='140' r='4.5' fill='var(--c1)'/><circle cx='48' cy='155' r='4.5' fill='var(--c1)'/><circle cx='118' cy='158' r='4.5' fill='var(--c1)'/><circle cx='80' cy='160' r='4.5' fill='var(--c1)'/><text x='172' y='52' font-size='15' fill='var(--c2)' text-anchor='middle' font-weight='700'>P</text><text x='188' y='52' font-size='12' fill='var(--ink)' text-anchor='start'>basınç</text><text x='308' y='52' font-size='11' fill='var(--muted)' text-anchor='end'>atm, mmHg</text><text x='172' y='82' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>V</text><text x='188' y='82' font-size='12' fill='var(--ink)' text-anchor='start'>hacim</text><text x='308' y='82' font-size='11' fill='var(--muted)' text-anchor='end'>L</text><text x='172' y='112' font-size='15' fill='var(--c4)' text-anchor='middle' font-weight='700'>T</text><text x='188' y='112' font-size='12' fill='var(--ink)' text-anchor='start'>sıcaklık</text><text x='308' y='112' font-size='11' fill='var(--muted)' text-anchor='end'>K</text><text x='172' y='142' font-size='15' fill='var(--c3)' text-anchor='middle' font-weight='700'>n</text><text x='188' y='142' font-size='12' fill='var(--ink)' text-anchor='start'>mol sayısı</text><text x='308' y='142' font-size='11' fill='var(--muted)' text-anchor='end'>mol</text><path d='M160 64 H310 M160 94 H310 M160 124 H310' stroke='var(--line)' stroke-width='1' fill='none'/><text x='235' y='180' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>T (K) = t (°C) + 273</text></svg>",
-        "key": "T (K) = t (°C) + 273. 0 °C sıfır değil, 273 K'dir."
+        "key": "T (K) = t (°C) + 273. 0 °C sıfır değil, 273 K'dir. Gazların yoğunluğu düşüktür.",
+        "once": {
+          "soru": "Gaz hesaplarında 27 °C kaç kelvin alınır?",
+          "secenekler": [
+            {
+              "yazi": "300",
+              "neden": "T (K) = t (°C) + 273 = 300 K.",
+              "dogru": true
+            },
+            {
+              "yazi": "27",
+              "neden": "Gaz yasaları kelvinle çalışır; Celsius'a 273 eklenir."
+            },
+            {
+              "yazi": "246",
+              "neden": "273 eklenir, çıkarılmaz."
+            }
+          ]
+        }
       },
       {
         "h": "Basınç birimleri ve manometre",
-        "p": "<b>1 atm = 76 cmHg = 760 mmHg ≈ 101,3 kPa</b> (1 mmHg = 1 torr). Gaz basıncını <b>manometre</b> ölçer. Kapalı uçluda P<sub>gaz</sub> = h. Açık uçluda cıva gaz kolunda alçaksa P<sub>gaz</sub> = P<sub>0</sub> + h, yüksekse P<sub>0</sub> − h.",
+        "p": "<b>1 atm = 760 mmHg ≈ 101,3 kPa</b>. Gaz basıncını <b>manometre</b> ölçer: cıva gaz kolunda alçaksa P<sub>gaz</sub> = P<sub>0</sub> + h.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='18' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>1 atm = 76 cmHg = 760 mmHg ≈ 101,3 kPa</text><rect x='14' y='44' width='36' height='36' rx='6' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><text x='32' y='66' font-size='11' fill='var(--c1)' text-anchor='middle'>gaz</text><path d='M50 62 H70 V140 Q70 156 90 156 Q110 156 110 140 V38' stroke='var(--line)' stroke-width='12' fill='none'/><path d='M70 125 V140 Q70 156 90 156 Q110 156 110 140 V75' stroke='var(--muted)' stroke-width='8' fill='none'/><path d='M103 38 H117' stroke='var(--ink)' stroke-width='2.5' fill='none'/><path d='M118 75 H134 M78 125 H134' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 2'/><path d='M128 77 V123' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-start='url(#gaz-2)' marker-end='url(#gaz-2)'/><text x='135' y='104' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>h</text><text x='124' y='48' font-size='10' fill='var(--muted)' text-anchor='start'>boşluk</text><rect x='174' y='44' width='36' height='36' rx='6' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><text x='192' y='66' font-size='11' fill='var(--c1)' text-anchor='middle'>gaz</text><path d='M210 62 H230 V140 Q230 156 250 156 Q270 156 270 140 V38' stroke='var(--line)' stroke-width='12' fill='none'/><path d='M230 125 V140 Q230 156 250 156 Q270 156 270 140 V75' stroke='var(--muted)' stroke-width='8' fill='none'/><path d='M278 75 H294 M238 125 H294' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 2'/><path d='M288 77 V123' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-start='url(#gaz-2)' marker-end='url(#gaz-2)'/><text x='295' y='104' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>h</text><text x='284' y='48' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>P₀</text><text x='80' y='172' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Kapalı uçlu</text><text x='80' y='190' font-size='12' fill='var(--c1)' text-anchor='middle'>P<tspan font-size='10' baseline-shift='sub'>gaz</tspan> = h</text><text x='240' y='172' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Açık uçlu</text><text x='240' y='190' font-size='12' fill='var(--c1)' text-anchor='middle'>P<tspan font-size='10' baseline-shift='sub'>gaz</tspan> = P₀ + h</text></svg>",
-        "key": "Açık uçlu manometrede hangi koldaki cıva aşağıdaysa o taraftaki basınç büyüktür."
+        "key": "1 atm = 76 cmHg; 1 mmHg = 1 torr. Cıva gaz kolunda yüksekse Pgaz = P0 − h; kapalı uçluda Pgaz = h.",
+        "once": {
+          "soru": "Açık uçlu manometrede cıva, gaz tarafındaki kolda 10 cm daha aşağıda. Dış basınç 76 cmHg. Gazın basıncı kaç cmHg?",
+          "secenekler": [
+            {
+              "yazi": "86",
+              "neden": "Gaz cıvayı dış havadan daha çok itiyor: 76 + 10 = 86.",
+              "dogru": true
+            },
+            {
+              "yazi": "66",
+              "neden": "Cıva gaz tarafında alçak; gaz daha güçlü itiyor."
+            },
+            {
+              "yazi": "10",
+              "neden": "Bu, kapalı uçlu manometrede geçerli olurdu."
+            }
+          ]
+        }
       },
       {
         "h": "Boyle yasası: P·V sabit",
-        "p": "Sabit sıcaklıkta ve sabit mol sayısında gazın basıncı ile hacmi ters orantılıdır: <b>P₁·V₁ = P₂·V₂</b>. Pistonu itip hacmi yarıya indirirsen tanecikler çeperlere iki kat sık çarpar, basınç iki katına çıkar. P–V grafiği hiperbol, P–1/V grafiği ise orijinden geçen doğrudur.",
+        "p": "Sabit sıcaklık ve mol sayısında basınç ile hacim ters orantılıdır: <b>P₁·V₁ = P₂·V₂</b>. Hacim yarıya inerse basınç iki katına çıkar.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='95' y='18' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>P–V: hiperbol</text><text x='250' y='18' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>P–1/V: doğru</text><path d='M30 170 H165' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-3)'/><path d='M30 170 V28' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-3)'/><text x='24' y='40' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>P</text><text x='165' y='186' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>V</text><path d='M55.5 28.8 L57.0 36.7 L58.5 43.7 L60.0 50.0 L61.5 55.7 L63.0 60.9 L64.5 65.7 L66.0 70.0 L67.5 74.0 L69.0 77.7 L70.5 81.1 L72.0 84.3 L73.5 87.2 L75.0 90.0 L76.5 92.6 L78.0 95.0 L79.5 97.3 L81.0 99.4 L82.5 101.4 L84.0 103.3 L85.5 105.1 L87.0 106.8 L88.5 108.5 L90.0 110.0 L91.5 111.5 L93.0 112.9 L94.5 114.2 L96.0 115.5 L97.5 116.7 L99.0 117.8 L100.5 118.9 L102.0 120.0 L103.5 121.0 L105.0 122.0 L106.5 122.9 L108.0 123.8 L109.5 124.7 L111.0 125.6 L112.5 126.4 L114.0 127.1 L115.5 127.9 L117.0 128.6 L118.5 129.3 L120.0 130.0 L121.5 130.7 L123.0 131.3 L124.5 131.9 L126.0 132.5 L127.5 133.1 L129.0 133.6 L130.5 134.2 L132.0 134.7 L133.5 135.2 L135.0 135.7 L136.5 136.2 L138.0 136.7 L139.5 137.1 L141.0 137.6 L142.5 138.0 L144.0 138.4 L145.5 138.8 L147.0 139.2 L148.5 139.6 L150.0 140.0 L151.5 140.4 L153.0 140.7 L154.5 141.1 L156.0 141.4 L157.5 141.8 L159.0 142.1' stroke='var(--c1)' stroke-width='2.5' fill='none'/><path d='M60 170 V50 H30 M90 170 V110 H30 M150 170 V140 H30' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><circle cx='60' cy='50' r='3.5' fill='var(--c2)'/><circle cx='90' cy='110' r='3.5' fill='var(--c2)'/><circle cx='150' cy='140' r='3.5' fill='var(--c2)'/><text x='60' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>1</text><text x='90' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>2</text><text x='150' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>4</text><text x='20' y='54' font-size='11' fill='var(--muted)' text-anchor='end'>4</text><text x='20' y='114' font-size='11' fill='var(--muted)' text-anchor='end'>2</text><text x='20' y='144' font-size='11' fill='var(--muted)' text-anchor='end'>1</text><text x='115' y='70' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>P·V = 4</text><path d='M195 170 H305' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-3)'/><path d='M195 170 V28' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-3)'/><text x='189' y='40' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>P</text><text x='305' y='186' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>1/V</text><path d='M195 170 L292 50' stroke='var(--c1)' stroke-width='2.5' fill='none'/><text x='250' y='150' font-size='11' fill='var(--muted)' text-anchor='start'>sabit T ve n</text></svg>",
-        "key": "Tüplü dalgıç yüzeye çıkarken nefesini tutmaz: basınç azalır, ciğerdeki hava genleşir."
+        "key": "Tanecikler çeperlere iki kat sık çarpar. P–V grafiği hiperboldür. Tüplü dalgıç yüzeye çıkarken nefesini tutmaz: ciğerdeki hava genleşir."
       },
       {
         "h": "Charles yasası ve mutlak sıfır",
-        "p": "Sabit basınçta ve sabit mol sayısında gazın hacmi kelvin sıcaklığıyla doğru orantılıdır: <b>V₁/T₁ = V₂/T₂</b>. V–t(°C) doğrularını geriye uzatırsan hepsi −273 °C'de (tam değeri −273,15 °C) sıfır hacme iner. Bu sıcaklığa <b>mutlak sıfır</b> denir: 0 K.",
+        "p": "Sabit basınç ve mol sayısında hacim kelvin sıcaklığıyla doğru orantılıdır: <b>V₁/T₁ = V₂/T₂</b>. Hacmin sıfıra indiği sıcaklık <b>mutlak sıfırdır</b>: 0 K = −273 °C.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M30 160 H305' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-4)'/><path d='M200 160 V30' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-4)'/><text x='208' y='38' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>V</text><text x='305' y='176' font-size='11' fill='var(--ink)' text-anchor='end'>t (°C)</text><text x='200' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>0</text><text x='250.0' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>100</text><path d='M63.5 160 L170.0 100.0' stroke='var(--c1)' stroke-width='1.5' fill='none' stroke-dasharray='4 3'/><path d='M170.0 100.0 L250.0 55.0' stroke='var(--c1)' stroke-width='2.5' fill='none'/><path d='M63.5 160 L170.0 128.6' stroke='var(--c1)' stroke-width='1.5' fill='none' stroke-dasharray='4 3'/><path d='M170.0 128.6 L250.0 105.0' stroke='var(--c1)' stroke-width='2.5' fill='none'/><circle cx='63.5' cy='160' r='4' fill='var(--c2)'/><text x='63.5' y='176' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>−273 °C</text><text x='63.5' y='193' font-size='11' fill='var(--c2)' text-anchor='middle'>mutlak sıfır = 0 K</text><text x='95' y='50' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>V / T = sabit</text><text x='95' y='68' font-size='11' fill='var(--muted)' text-anchor='middle'>sabit P ve n</text></svg>",
         "key": "27 °C'den 54 °C'ye ısıtmak hacmi iki katına çıkarmaz: 300 K → 327 K, yalnız %9 artar."
       },
       {
         "h": "Gay-Lussac yasası: P ∝ T",
-        "p": "Sabit hacimde ve sabit mol sayısında gazın basıncı kelvin sıcaklığıyla doğru orantılıdır: <b>P₁/T₁ = P₂/T₂</b>. Isınan tanecikler daha hızlı hareket eder, çeperlere daha sık ve daha sert çarpar. Uzun yolda araç lastiğinin basıncı bu yüzden artar; sprey kutusu ateşe atılmaz.",
+        "p": "Sabit hacim ve mol sayısında basınç kelvin sıcaklığıyla doğru orantılıdır: <b>P₁/T₁ = P₂/T₂</b>. Isınan tanecikler çeperlere daha sık ve sert çarpar.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><defs><marker id='gaz-5b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><text x='70' y='22' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>P / T = sabit</text><rect x='30' y='40' width='80' height='90' rx='8' fill='var(--c4)' fill-opacity='0.15' stroke='var(--ink)' stroke-width='2'/><circle cx='50' cy='62' r='4.5' fill='var(--c4)'/><circle cx='88' cy='58' r='4.5' fill='var(--c4)'/><circle cx='70' cy='82' r='4.5' fill='var(--c4)'/><circle cx='100' cy='95' r='4.5' fill='var(--c4)'/><circle cx='45' cy='105' r='4.5' fill='var(--c4)'/><circle cx='80' cy='115' r='4.5' fill='var(--c4)'/><path d='M55 66 L64 58' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-5b)'/><path d='M92 99 L104 106' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-5b)'/><path d='M45 109 L38 118' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-5b)'/><path d='M70 168 C58 160 60 150 66 142 C67 150 72 150 70 140 C80 148 84 158 70 168 Z' fill='var(--c2)' fill-opacity='0.7'/><text x='86' y='162' font-size='11' fill='var(--c2)' text-anchor='start'>ısıt</text><text x='70' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>sabit V ve n</text><path d='M170 165 H305' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-5)'/><path d='M170 165 V30' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-5)'/><text x='164' y='42' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>P</text><text x='305' y='181' font-size='11' fill='var(--ink)' text-anchor='end'>T (K)</text><text x='170' y='181' font-size='11' fill='var(--muted)' text-anchor='middle'>0</text><path d='M170 165 L298 51' stroke='var(--c4)' stroke-width='2.5' fill='none'/><circle cx='230' cy='111.5625' r='4' fill='var(--c2)'/><circle cx='290' cy='58.125' r='4' fill='var(--c2)'/><text x='240' y='128' font-size='11' fill='var(--ink)' text-anchor='start'>300 K → 2 atm</text><text x='282' y='40' font-size='11' fill='var(--ink)' text-anchor='end'>600 K → 4 atm</text></svg>",
-        "key": "Bu yasayı Gay-Lussac'ın birleşen hacimler kanunuyla (temel kanunlar) karıştırma."
+        "key": "Uzun yolda lastik basıncı bu yüzden artar; sprey kutusu ateşe atılmaz. Bu yasayı birleşen hacimler kanunuyla karıştırma."
       },
       {
         "h": "Avogadro yasası: V ∝ n",
-        "p": "Mol konusunda gördüğün gibi aynı sıcaklık ve basınçta eşit hacimdeki gazlar eşit sayıda tanecik içerir. Buna göre sabit T ve P'de hacim mol sayısıyla doğru orantılıdır: V₁/n₁ = V₂/n₂. Balonu üfleyince hacmi artar, çünkü içeri mol eklersin.",
+        "p": "Aynı sıcaklık ve basınçta eşit hacimdeki gazlar eşit sayıda tanecik içerir. Sabit T ve P'de hacim mol sayısıyla doğru orantılıdır: <b>V₁/n₁ = V₂/n₂</b>.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>aynı T, P ve V → aynı sayıda tanecik</text><rect x='15' y='32' width='90' height='92' rx='6' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='42' cy='60' r='5' fill='var(--c1)'/><circle cx='77' cy='56' r='5' fill='var(--c1)'/><circle cx='59' cy='83' r='5' fill='var(--c1)'/><circle cx='87' cy='90' r='5' fill='var(--c1)'/><circle cx='39' cy='108' r='5' fill='var(--c1)'/><circle cx='72' cy='113' r='5' fill='var(--c1)'/><text x='60' y='142' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>He</text><rect x='115' y='32' width='90' height='92' rx='6' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='138' cy='60' r='4.5' fill='var(--c3)'/><circle cx='146' cy='60' r='4.5' fill='var(--c3)'/><circle cx='173' cy='56' r='4.5' fill='var(--c3)'/><circle cx='181' cy='56' r='4.5' fill='var(--c3)'/><circle cx='155' cy='83' r='4.5' fill='var(--c3)'/><circle cx='163' cy='83' r='4.5' fill='var(--c3)'/><circle cx='183' cy='90' r='4.5' fill='var(--c3)'/><circle cx='191' cy='90' r='4.5' fill='var(--c3)'/><circle cx='135' cy='108' r='4.5' fill='var(--c3)'/><circle cx='143' cy='108' r='4.5' fill='var(--c3)'/><circle cx='168' cy='113' r='4.5' fill='var(--c3)'/><circle cx='176' cy='113' r='4.5' fill='var(--c3)'/><text x='160' y='142' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>N₂</text><rect x='215' y='32' width='90' height='92' rx='6' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='235' cy='60' r='3.5' fill='var(--c2)'/><circle cx='249' cy='60' r='3.5' fill='var(--c2)'/><circle cx='242' cy='60' r='4.5' fill='var(--ink)'/><circle cx='270' cy='56' r='3.5' fill='var(--c2)'/><circle cx='284' cy='56' r='3.5' fill='var(--c2)'/><circle cx='277' cy='56' r='4.5' fill='var(--ink)'/><circle cx='252' cy='83' r='3.5' fill='var(--c2)'/><circle cx='266' cy='83' r='3.5' fill='var(--c2)'/><circle cx='259' cy='83' r='4.5' fill='var(--ink)'/><circle cx='280' cy='90' r='3.5' fill='var(--c2)'/><circle cx='294' cy='90' r='3.5' fill='var(--c2)'/><circle cx='287' cy='90' r='4.5' fill='var(--ink)'/><circle cx='232' cy='108' r='3.5' fill='var(--c2)'/><circle cx='246' cy='108' r='3.5' fill='var(--c2)'/><circle cx='239' cy='108' r='4.5' fill='var(--ink)'/><circle cx='265' cy='113' r='3.5' fill='var(--c2)'/><circle cx='279' cy='113' r='3.5' fill='var(--c2)'/><circle cx='272' cy='113' r='4.5' fill='var(--ink)'/><text x='260' y='142' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CO₂</text><text x='160' y='170' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>N₂ + 3H₂ → 2NH₃</text><text x='160' y='190' font-size='12' fill='var(--muted)' text-anchor='middle'>hacim oranı = mol oranı = 1 : 3 : 2</text></svg>",
-        "key": "Gaz mol sayısı azalan tepkimede (N₂ + 3H₂ → 2NH₃) sabit T ve P'de hacim de azalır."
+        "key": "Balonu üfleyince içeri mol eklediğin için hacmi artar. N₂ + 3H₂ → 2NH₃ gibi gaz mol sayısı azalan tepkimede hacim de azalır.",
+        "once": {
+          "soru": "Aynı koşullarda 1 L H₂ ile 1 L O₂'nin hangisinde daha çok molekül vardır?",
+          "secenekler": [
+            {
+              "yazi": "Eşit",
+              "neden": "Aynı koşulda eşit hacimdeki gazlar eşit sayıda tanecik içerir.",
+              "dogru": true
+            },
+            {
+              "yazi": "O₂'de",
+              "neden": "O₂ daha ağırdır ama tanecik sayısı aynıdır."
+            },
+            {
+              "yazi": "H₂'de",
+              "neden": "H₂ hafiftir ama tanecik sayısı aynıdır."
+            }
+          ]
+        }
       },
       {
         "h": "Birleşik gaz denklemi",
-        "p": "Mol sayısı sabitse üç yasa tek denklemde birleşir: <b>P₁V₁/T₁ = P₂V₂/T₂</b>. Değişmeyen niceliği iki taraftan sadeleştirirsin. Örnek: 27 °C ve 1 atm'de 6 L olan gaz 127 °C'de 2 atm'ye getirilirse V₂ = 1·6·400 / (300·2) = 4 L olur.",
+        "p": "Mol sayısı sabitse üç yasa birleşir: <b>P₁V₁/T₁ = P₂V₂/T₂</b>. Değişmeyen niceliği iki taraftan sadeleştirirsin. Sıcaklık mutlaka kelvin olmalıdır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='15' y='28' width='112' height='92' rx='8' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1.5'/><text x='71' y='48' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Durum 1</text><text x='71' y='72' font-size='12' fill='var(--ink)' text-anchor='middle'>P₁ = 1 atm</text><text x='71' y='91' font-size='12' fill='var(--ink)' text-anchor='middle'>V₁ = 6 L</text><text x='71' y='110' font-size='12' fill='var(--ink)' text-anchor='middle'>T₁ = 300 K</text><rect x='193' y='28' width='112' height='92' rx='8' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.5'/><text x='249' y='48' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Durum 2</text><text x='249' y='72' font-size='12' fill='var(--ink)' text-anchor='middle'>P₂ = 2 atm</text><text x='249' y='91' font-size='12' fill='var(--ink)' text-anchor='middle'>V₂ = ?</text><text x='249' y='110' font-size='12' fill='var(--ink)' text-anchor='middle'>T₂ = 400 K</text><path d='M134 82 H186' stroke='var(--ink)' stroke-width='2' fill='none' marker-end='url(#gaz-7)'/><text x='160' y='72' font-size='11' fill='var(--muted)' text-anchor='middle'>n sabit</text><text x='160' y='146' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>P₁V₁ / T₁ = P₂V₂ / T₂</text><text x='160' y='170' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>V₂ = 1·6·400 / (300·2) = 4 L</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>27 °C → 300 K,  127 °C → 400 K</text></svg>",
-        "key": "Sıcaklığı kelvine çevir; P ve V'de ise iki tarafta aynı birim yeterlidir."
+        "key": "Örnek: 27 °C ve 1 atm'de 6 L gaz, 127 °C ve 2 atm'de V₂ = 1·6·400 / (300·2) = 4 L olur. P ve V'de iki tarafta aynı birim yeterlidir.",
+        "once": {
+          "soru": "Bir gazın hem basıncı hem kelvin sıcaklığı iki katına çıkıyor. Hacmi ne olur?",
+          "secenekler": [
+            {
+              "yazi": "Değişmez",
+              "neden": "Basınç iki kat olunca hacim yarıya iner, sıcaklık iki kat olunca iki katına çıkar; etkiler birbirini götürür.",
+              "dogru": true
+            },
+            {
+              "yazi": "4 katına çıkar",
+              "neden": "Basınç artışı hacmi küçültür; iki etki zıt yönlüdür."
+            },
+            {
+              "yazi": "Yarıya iner",
+              "neden": "Sıcaklık artışı da hacmi büyütür; ikisi birbirini götürür."
+            }
+          ]
+        }
       },
       {
         "h": "İdeal gaz denklemi: PV = nRT",
-        "p": "<b>P·V = n·R·T</b> dört niceliği tek denklemde bağlar. P atm, V litre, T kelvin ise <b>R = 0,082 L·atm/(mol·K)</b> olur; SI'da 8,314 J/(mol·K). Örnek: 27 °C'de 4,1 L'lik kapta 0,5 mol gaz varsa P = 0,5·0,082·300 / 4,1 = 3 atm.",
+        "p": "<b>P·V = n·R·T</b> dört niceliği bağlar. P atm, V litre, T kelvin ise <b>R = 0,082</b> L·atm/(mol·K); SI'da 8,314 J/(mol·K).",
         "svg": "<svg viewBox='0 0 320 200'><text x='48' y='62' font-size='24' fill='var(--c2)' text-anchor='middle' font-weight='700'>P</text><text x='48' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>atm</text><text x='102' y='62' font-size='24' fill='var(--c1)' text-anchor='middle' font-weight='700'>V</text><text x='102' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>L</text><text x='164' y='62' font-size='24' fill='var(--c3)' text-anchor='middle' font-weight='700'>n</text><text x='164' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>mol</text><text x='218' y='62' font-size='24' fill='var(--c5)' text-anchor='middle' font-weight='700'>R</text><text x='218' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>0,082</text><text x='272' y='62' font-size='24' fill='var(--c4)' text-anchor='middle' font-weight='700'>T</text><text x='272' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>K</text><text x='75' y='62' font-size='24' fill='var(--ink)' text-anchor='middle'>·</text><text x='133' y='62' font-size='24' fill='var(--ink)' text-anchor='middle'>=</text><text x='191' y='62' font-size='24' fill='var(--ink)' text-anchor='middle'>·</text><text x='245' y='62' font-size='24' fill='var(--ink)' text-anchor='middle'>·</text><rect x='40' y='108' width='240' height='84' rx='8' fill='var(--panel)' stroke='var(--line)'/><text x='160' y='128' font-size='12' fill='var(--ink)' text-anchor='middle'>0,5 mol gaz · 4,1 L · 27 °C</text><text x='160' y='154' font-size='13' fill='var(--ink)' text-anchor='middle'>P = 0,5 · 0,082 · 300 / 4,1</text><text x='160' y='180' font-size='14' fill='var(--c3)' text-anchor='middle' font-weight='700'>P = 3 atm</text></svg>",
         "etk": {
           "tur": "formul",
@@ -4781,37 +4853,73 @@
             }
           ]
         },
-        "key": "Basınç kPa ise R = 8,314 L·kPa/(mol·K) kullan; birimleri R'ye uydur."
+        "key": "Örnek: 27 °C'de 4,1 L kapta 0,5 mol gaz: P = 0,5·0,082·300 / 4,1 = 3 atm. Basınç kPa ise R = 8,314 L·kPa/(mol·K)."
       },
       {
         "h": "Gaz yoğunluğu ve mol kütlesi",
-        "p": "n = m/M'yi ideal gaz denkleminde yerine koyarsan <b>P·M = d·R·T</b>, yani <b>d = P·M/(R·T)</b> çıkar. Gaz yoğunluğu basınçla ve mol kütlesiyle artar, sıcaklıkla azalır. Ölçtüğün yoğunluktan bilinmeyen bir gazın mol kütlesini de bulursun: M = d·R·T/P.",
+        "p": "n = m/M'yi yerine koyarsan <b>d = P·M/(R·T)</b> çıkar. Gaz yoğunluğu basınç ve mol kütlesiyle artar, sıcaklıkla azalır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='36' font-size='20' fill='var(--acc)' text-anchor='middle' font-weight='700'>d = P·M / (R·T)</text><rect x='18' y='56' width='118' height='28' rx='6' fill='var(--panel)' stroke='var(--line)'/><rect x='18' y='92' width='118' height='28' rx='6' fill='var(--panel)' stroke='var(--line)'/><rect x='18' y='128' width='118' height='28' rx='6' fill='var(--panel)' stroke='var(--line)'/><text x='77' y='75' font-size='13' fill='var(--ink)' text-anchor='middle'>P ↑  →  d ↑</text><text x='77' y='111' font-size='13' fill='var(--ink)' text-anchor='middle'>M ↑  →  d ↑</text><text x='77' y='147' font-size='13' fill='var(--c2)' text-anchor='middle'>T ↑  →  d ↓</text><rect x='156' y='56' width='150' height='100' rx='8' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)'/><text x='231' y='76' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>O₂ · 0 °C · 1 atm</text><text x='231' y='102' font-size='12' fill='var(--ink)' text-anchor='middle'>d = 1·32 / (0,082·273)</text><text x='231' y='132' font-size='14' fill='var(--c1)' text-anchor='middle' font-weight='700'>d ≈ 1,43 g/L</text><text x='160' y='186' font-size='13' fill='var(--ink)' text-anchor='middle'>mol kütlesi:  M = d·R·T / P</text></svg>",
-        "key": "Sıcak hava balonu: aynı basınçta ısınan hava seyrelir, yoğunluğu azalır ve balon yükselir."
+        "key": "Yoğunluktan bilinmeyen gazın mol kütlesi bulunur: M = d·R·T/P.",
+        "once": {
+          "soru": "Sıcak hava balonu neden yükselir?",
+          "secenekler": [
+            {
+              "yazi": "İçindeki hava seyrelir",
+              "neden": "Isınan havanın yoğunluğu azalır; çevredeki soğuk hava onu yukarı iter.",
+              "dogru": true
+            },
+            {
+              "yazi": "Sıcak hava kütlesizdir",
+              "neden": "Sıcak havanın da kütlesi vardır; yalnız aynı hacimde daha azdır."
+            },
+            {
+              "yazi": "Alev balonu iter",
+              "neden": "Alev havayı ısıtır; balonu kaldıran yoğunluk farkıdır."
+            }
+          ]
+        }
       },
       {
         "h": "Kinetik teori",
-        "p": "<b>Kinetik teoriye</b> göre ideal gaz tanecikleri sürekli, rastgele ve doğrusal hareket eder. Taneciklerin kendi hacmi kabın hacmi yanında ihmal edilir, aralarında çekim ya da itme yoktur, çarpışmalar esnektir. Ortalama kinetik enerji yalnızca mutlak sıcaklığa bağlıdır ve onunla doğru orantılıdır.",
+        "p": "<b>Kinetik teoriye</b> göre ideal gaz tanecikleri rastgele hareket eder, hacimleri ihmal edilir, birbirini çekmez. Ortalama kinetik enerji mutlak sıcaklıkla doğru orantılıdır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='gaz-10b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='18' y='30' width='132' height='130' rx='6' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='40' cy='55' r='5' fill='var(--c1)'/><path d='M40 55 L54 47' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10)'/><circle cx='95' cy='50' r='5' fill='var(--c1)'/><path d='M95 50 L82 62' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10)'/><circle cx='125' cy='80' r='5' fill='var(--c1)'/><path d='M125 80 L138 70' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10)'/><circle cx='60' cy='95' r='5' fill='var(--c1)'/><path d='M60 95 L48 108' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10)'/><circle cx='105' cy='115' r='5' fill='var(--c1)'/><path d='M105 115 L120 122' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10)'/><circle cx='45' cy='140' r='5' fill='var(--c1)'/><path d='M45 140 L60 132' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10)'/><circle cx='90' cy='145' r='5' fill='var(--c1)'/><path d='M90 145 L104 140' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10)'/><text x='84' y='20' font-size='11' fill='var(--muted)' text-anchor='middle'>rastgele, doğrusal hareket</text><text x='160' y='188' font-size='11' fill='var(--ink)' text-anchor='middle'>tanecik hacmi ≈ 0 · çekim yok · çarpışmalar esnek</text><path d='M185 150 H305' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10b)'/><path d='M185 150 V30' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10b)'/><text x='191' y='36' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>ort. E<tspan font-size='10' baseline-shift='sub'>k</tspan></text><text x='305' y='166' font-size='11' fill='var(--ink)' text-anchor='end'>T (K)</text><path d='M185 150 L296 48' stroke='var(--c5)' stroke-width='2.5' fill='none'/><text x='268' y='118' font-size='11' fill='var(--c5)' text-anchor='middle'>bütün gazlar</text><text x='268' y='133' font-size='11' fill='var(--c5)' text-anchor='middle'>aynı doğru</text></svg>",
-        "key": "Aynı sıcaklıkta her gazın ortalama kinetik enerjisi eşittir; hafif gaz daha hızlıdır."
+        "key": "Çarpışmalar esnektir. Aynı sıcaklıkta her gazın ortalama kinetik enerjisi eşittir; hafif gaz daha hızlıdır."
       },
       {
         "h": "Graham yasası: difüzyon ve efüzyon",
-        "p": "Gazın başka bir gaz içinde yayılmasına <b>difüzyon</b>, küçük bir delikten dışarı kaçmasına <b>efüzyon</b> denir. Aynı sıcaklıkta hız, mol kütlesinin kareköküyle ters orantılıdır: <b>r₁/r₂ = √(M₂/M₁)</b>. Bu yüzden H₂ (2 g/mol), O₂'den (32 g/mol) 4 kat hızlı yayılır.",
+        "p": "Gazın başka gaz içinde yayılması <b>difüzyon</b>, delikten kaçması <b>efüzyondur</b>. Hız, mol kütlesinin kareköküyle ters orantılıdır: <b>r₁/r₂ = √(M₂/M₁)</b>.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><defs><marker id='gaz-11b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='gaz-11c' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='160' y='28' font-size='18' fill='var(--acc)' text-anchor='middle' font-weight='700'>r₁ / r₂ = √(M₂ / M₁)</text><rect x='30' y='82' width='260' height='24' rx='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><rect x='180.5' y='83' width='9' height='22' fill='var(--muted)' fill-opacity='0.55'/><path d='M42 72 H177' stroke='var(--c1)' stroke-width='2' fill='none' marker-end='url(#gaz-11)'/><path d='M278 72 H195' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#gaz-11b)'/><text x='100' y='62' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>NH₃ (17 g/mol)</text><text x='240' y='62' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>HCl (36,5)</text><text x='184.53550114450263' y='124' font-size='11' fill='var(--ink)' text-anchor='middle'>NH₄Cl halkası</text><path d='M32 144 H183' stroke='var(--muted)' stroke-width='1' fill='none' marker-start='url(#gaz-11c)' marker-end='url(#gaz-11c)'/><path d='M187 144 H288' stroke='var(--muted)' stroke-width='1' fill='none' marker-start='url(#gaz-11c)' marker-end='url(#gaz-11c)'/><text x='107.26775057225132' y='160' font-size='11' fill='var(--muted)' text-anchor='middle'>≈ 59 cm</text><text x='237.26775057225132' y='160' font-size='11' fill='var(--muted)' text-anchor='middle'>≈ 41 cm</text><text x='160' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>H₂, O₂'den √(32/2) = 4 kat hızlı yayılır</text></svg>",
-        "key": "NH₃–HCl borusunda beyaz halka, ağır olan HCl'nin ucuna daha yakın oluşur."
+        "key": "H₂ (2 g/mol), O₂'den (32 g/mol) 4 kat hızlı yayılır. Karşılaştırma aynı sıcaklıkta yapılır."
       },
       {
         "h": "Dalton yasası ve su üstünde gaz",
-        "p": "Tepkimeye girmeyen karışımda her gaz, kabı tek başına doldurmuş gibi basınç yapar: <b>P<sub>top</sub> = P<sub>A</sub> + P<sub>B</sub></b>. Kısmi basınç <b>P<sub>A</sub> = X<sub>A</sub>·P<sub>top</sub></b> (X<sub>A</sub>: mol kesri). Su üstünde toplanan gazdan su buharı basıncı çıkarılır.",
+        "p": "Karışımda her gaz, kabı tek başına doldurmuş gibi basınç yapar: <b>P<sub>top</sub> = P<sub>A</sub> + P<sub>B</sub></b>. Kısmi basınç <b>P<sub>A</sub> = X<sub>A</sub>·P<sub>top</sub></b>.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='15' y='30' width='120' height='108' rx='6' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='40' cy='60' r='6' fill='var(--c1)'/><circle cx='100' cy='105' r='6' fill='var(--c1)'/><circle cx='70' cy='50' r='6' fill='var(--c2)'/><circle cx='115' cy='62' r='6' fill='var(--c2)'/><circle cx='35' cy='100' r='6' fill='var(--c2)'/><circle cx='70' cy='88' r='6' fill='var(--c2)'/><circle cx='60' cy='122' r='6' fill='var(--c2)'/><circle cx='112' cy='128' r='6' fill='var(--c2)'/><text x='75' y='20' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>1 mol A + 3 mol B</text><text x='75' y='156' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>P<tspan font-size='10' baseline-shift='sub'>top</tspan> = 4 atm</text><text x='75' y='174' font-size='11' fill='var(--c1)' text-anchor='middle'>X<tspan font-size='10' baseline-shift='sub'>A</tspan> = 1/4 → P<tspan font-size='10' baseline-shift='sub'>A</tspan> = 1 atm</text><text x='75' y='192' font-size='11' fill='var(--c2)' text-anchor='middle'>X<tspan font-size='10' baseline-shift='sub'>B</tspan> = 3/4 → P<tspan font-size='10' baseline-shift='sub'>B</tspan> = 3 atm</text><text x='242' y='18' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>P<tspan font-size='10' baseline-shift='sub'>H₂</tspan> = P<tspan font-size='10' baseline-shift='sub'>atm</tspan> − P<tspan font-size='10' baseline-shift='sub'>su</tspan></text><rect x='176' y='126' width='133' height='53' fill='var(--c1)' fill-opacity='0.25'/><rect x='226' y='34' width='32' height='92' fill='var(--c5)' fill-opacity='0.1'/><path d='M175 104 V180 H310 V104' stroke='var(--ink)' stroke-width='2' fill='none'/><path d='M225 160 V36 Q225 31 230 31 H254 Q259 31 259 36 V160' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='236' cy='50' r='4' fill='var(--c5)'/><circle cx='249' cy='70' r='4' fill='var(--c5)'/><circle cx='236' cy='92' r='4' fill='var(--c5)'/><circle cx='249' cy='108' r='4' fill='var(--c5)'/><circle cx='242' cy='60' r='3' fill='var(--c1)' fill-opacity='0.6'/><circle cx='242' cy='100' r='3' fill='var(--c1)' fill-opacity='0.6'/><text x='220' y='52' font-size='11' fill='var(--c5)' text-anchor='end'>H₂ +</text><text x='220' y='67' font-size='11' fill='var(--c5)' text-anchor='end'>su buharı</text><text x='242' y='195' font-size='10' fill='var(--muted)' text-anchor='middle'>iç ve dış su düzeyi eşit</text></svg>",
-        "key": "25 °C'de su buharı ≈ 24 mmHg: 760 mmHg'de toplanan H₂ için P = 736 mmHg."
+        "key": "XA mol kesridir. Su üstünde toplanan gazdan su buharı basıncı çıkarılır: 25 °C'de ≈ 24 mmHg, yani 760 mmHg'de toplanan H₂ için P = 736 mmHg."
       },
       {
         "h": "Gerçek gazlar ve sıvılaştırma",
-        "p": "Gerçek gaz taneciklerinin hacmi ve aralarında çekim vardır; yüksek basınç ve düşük sıcaklıkta ideallikten saparlar. Her gazın bir <b>kritik sıcaklığı</b> vardır: bunun üstünde gaz ne kadar sıkıştırılsa da sıvılaşmaz. Kritik sıcaklığın altındaki gaza <b>buhar</b> denir; buhar sıkıştırılınca sıvılaşır.",
+        "p": "Gerçek gaz taneciklerinin hacmi ve aralarında çekim vardır; yüksek basınç ve düşük sıcaklıkta ideallikten saparlar. <b>Kritik sıcaklığın</b> üstündeki gaz sıkıştırılsa da sıvılaşmaz.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M40 170 H305' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-13)'/><path d='M40 170 V22' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-13)'/><text x='46' y='28' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>PV / nRT</text><text x='305' y='186' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>P</text><text x='34' y='114' font-size='11' fill='var(--muted)' text-anchor='end'>1</text><path d='M40 110 H300' stroke='var(--muted)' stroke-width='1.5' fill='none' stroke-dasharray='5 4'/><text x='296' y='126' font-size='11' fill='var(--muted)' text-anchor='end'>ideal</text><path d='M40 110 C90 149.0 150 152.0 200 110 S270 56.0 300 38.0' stroke='var(--c2)' stroke-width='2.5' fill='none'/><path d='M40 110 C80 117.2 130 117.2 170 110 S260 89.0 300 80.0' stroke='var(--c3)' stroke-width='2.5' fill='none'/><text x='130' y='160' font-size='11' fill='var(--muted)' text-anchor='middle'>çekim etkisi: &lt; 1</text><text x='296' y='30.0' font-size='11' fill='var(--c2)' text-anchor='end'>düşük T</text><text x='296' y='101' font-size='11' fill='var(--c3)' text-anchor='end'>yüksek T</text></svg>",
-        "key": "İdeale en yakın: düşük basınç, yüksek sıcaklık, He ve H₂ gibi küçük, apolar gazlar."
+        "key": "Kritik sıcaklığın altındaki gaza buhar denir; buhar sıkıştırılınca sıvılaşır. İdeale en yakın gazlar He ve H₂ gibi küçük, apolar gazlardır.",
+        "once": {
+          "soru": "Bir gaz hangi koşulda ideal gaza en çok benzer?",
+          "secenekler": [
+            {
+              "yazi": "Düşük basınç, yüksek sıcaklık",
+              "neden": "Tanecikler uzak ve hızlı; hacimleri ve çekimleri önemsizleşir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Yüksek basınç, düşük sıcaklık",
+              "neden": "Bu koşulda tanecikler sıkışır, çekim etkili olur."
+            },
+            {
+              "yazi": "Yüksek basınç, yüksek sıcaklık",
+              "neden": "Yüksek basınçta taneciklerin kendi hacmi önem kazanır."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",
