@@ -5844,9 +5844,9 @@
     "cards": [
       {
         "h": "Nöronun yapısı",
-        "p": "Sinir hücresine <b>nöron</b> denir. Gövdeden çıkan kısa, dallı uzantılar <b>dendrit</b>, tek ve uzun uzantı <b>akson</b>dur. <b>Hücre gövdesi</b> çekirdeği taşır. Aksonu saran yağlı <b>miyelin kılıf</b> yalıtır; kılıfın kesildiği yerler <b>Ranvier boğumu</b>dur. Aksonun dallanan sonu <b>akson ucu</b>dur.",
+        "p": "Sinir hücresi <b>nörondur</b>. Kısa dallı uzantılar <b>dendrit</b>, tek uzun uzantı <b>aksondur</b>. Aksonu saran yağlı <b>miyelin</b> yalıtır; aralıklar <b>Ranvier boğumudur</b>.",
         "svg": "<svg viewBox='0 0 320 200'><g stroke='var(--c3)' stroke-width='2.5' fill='none' stroke-linecap='round'><line x1='40' y1='88' x2='18' y2='62'/><line x1='26' y1='71' x2='14' y2='74'/><line x1='50' y1='80' x2='44' y2='52'/><line x1='46' y1='62' x2='34' y2='54'/><line x1='36' y1='108' x2='14' y2='122'/><line x1='22' y1='117' x2='18' y2='134'/><line x1='48' y1='120' x2='40' y2='142'/></g><circle cx='55' cy='100' r='22' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='2'/><circle cx='55' cy='100' r='8' fill='var(--c5)' fill-opacity='0.6' stroke='var(--c5)'/><line x1='77' y1='100' x2='258' y2='100' stroke='var(--c3)' stroke-width='3'/><g fill='var(--c4)' fill-opacity='0.45' stroke='var(--c4)' stroke-width='1.5'><rect x='95' y='92' width='35' height='16' rx='7'/><rect x='140' y='92' width='35' height='16' rx='7'/><rect x='185' y='92' width='35' height='16' rx='7'/><rect x='230' y='92' width='22' height='16' rx='7'/></g><g stroke='var(--c3)' stroke-width='2.5' fill='none'><line x1='258' y1='100' x2='288' y2='78'/><line x1='258' y1='100' x2='292' y2='100'/><line x1='258' y1='100' x2='288' y2='122'/></g><g fill='var(--c3)'><circle cx='290' cy='77' r='5'/><circle cx='294' cy='100' r='5'/><circle cx='290' cy='123' r='5'/></g><g stroke='var(--muted)' stroke-width='1'><line x1='86' y1='66' x2='86' y2='96'/><line x1='160' y1='64' x2='158' y2='90'/><line x1='180' y1='104' x2='180' y2='132'/><line x1='55' y1='124' x2='55' y2='136'/><line x1='290' y1='130' x2='290' y2='140'/></g><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='86' y='60'>akson</text><text x='162' y='58'>miyelin kılıf</text><text x='180' y='146'>Ranvier boğumu</text><text x='55' y='150'>hücre gövdesi</text><text x='282' y='154'>akson ucu</text></g><text x='8' y='40' font-size='12' fill='var(--ink)'>dendrit</text></svg>",
-        "key": "Miyelin aksonu sarar, dendriti sarmaz.",
+        "key": "Hücre gövdesi çekirdeği taşır; aksonun dallanan sonu akson ucudur. Miyelin aksonu sarar, dendriti sarmaz.",
         "etk": {
           "tur": "isaretle",
           "soru": "Nöronun bölümlerine dokun.",
@@ -5892,87 +5892,231 @@
       },
       {
         "h": "Nöron türleri ve glia hücreleri",
-        "p": "<b>Duyu nöronu</b> reseptörden gelen uyarıyı merkezi sinir sistemine (MSS) taşır. <b>Ara nöron</b> beyin ve omurilikte bilgiyi işler, bağlantı kurar. <b>Motor nöron</b> emri kasa ya da beze götürür. Nöronları besleyen, koruyan ve miyelin kılıfı yapan hücrelere <b>glia</b> (nöroglia) denir.",
+        "p": "<b>Duyu nöronu</b> uyarıyı merkezi sinir sistemine taşır, <b>ara nöron</b> bilgiyi işler, <b>motor nöron</b> emri kasa ya da beze götürür. Nöronları <b>glia</b> hücreleri destekler.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='sin-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><rect x='108' y='34' width='104' height='122' rx='8' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-dasharray='4 3'/><text x='160' y='24' font-size='11' fill='var(--acc)' text-anchor='middle'>MSS (beyin, omurilik)</text><g stroke-width='1.5'><rect x='8' y='55' width='84' height='40' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)'/><rect x='118' y='55' width='84' height='40' rx='6' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)'/><rect x='228' y='55' width='84' height='40' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/></g><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='50' y='79'>duyu nöronu</text><text x='160' y='79'>ara nöron</text><text x='270' y='79'>motor nöron</text></g><g stroke='var(--ink)' stroke-width='1.5' marker-end='url(#sin-2)'><line x1='93' y1='75' x2='116' y2='75'/><line x1='203' y1='75' x2='226' y2='75'/></g><g font-size='11' fill='var(--muted)' text-anchor='middle'><text x='50' y='118'>reseptörden</text><text x='50' y='132'>MSS'ye taşır</text><text x='160' y='118'>bilgiyi işler,</text><text x='160' y='132'>bağlantı kurar</text><text x='270' y='118'>MSS'den kas</text><text x='270' y='132'>ya da beze</text></g><text x='160' y='184' font-size='12' fill='var(--ink)' text-anchor='middle'>uyarı → reseptör → duyu → ara → motor → efektör</text></svg>",
-        "key": "Olgun nöronlar genellikle bölünmez; glia hücreleri bölünebilir."
+        "key": "Glia besler, korur ve miyelin kılıfı yapar. Olgun nöronlar genellikle bölünmez; glia hücreleri bölünebilir.",
+        "once": {
+          "soru": "Kolundaki kasa 'kasıl' emrini hangi nöron götürür?",
+          "secenekler": [
+            {
+              "yazi": "Motor nöron",
+              "neden": "Motor nöron emri kasa ya da beze götürür.",
+              "dogru": true
+            },
+            {
+              "yazi": "Duyu nöronu",
+              "neden": "Duyu nöronu uyarıyı merkeze taşır."
+            },
+            {
+              "yazi": "Ara nöron",
+              "neden": "Ara nöron beyin ve omurilikte bilgiyi işler."
+            }
+          ]
+        }
       },
       {
         "h": "Dinlenme potansiyeli",
-        "p": "Uyarılmayan nöronda zarın dışı <b>+</b>, içi <b>−</b> yüklüdür (yaklaşık −70 mV). <b>Na⁺-K⁺ pompası</b> her ATP ile 3 Na⁺'yı dışarı, 2 K⁺'yı içeri taşır. Zar ayrıca K⁺'ya daha geçirgendir; K⁺ dışarı sızar. Sonuç: dışta Na⁺, içte K⁺ fazladır. Zarın bu hâline <b>polarizasyon</b> denir.",
+        "p": "Dinlenen nöronda zarın dışı +, içi − yüklüdür (≈ −70 mV). <b>Na⁺-K⁺ pompası</b> ATP harcayarak 3 Na⁺'yı dışarı, 2 K⁺'yı içeri taşır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='sin-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c4)'/></marker><marker id='sin-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker></defs><rect x='0' y='90' width='320' height='25' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)'/><g font-size='13' fill='var(--c2)' text-anchor='middle'><text x='30' y='84'>+</text><text x='55' y='84'>+</text><text x='80' y='84'>+</text><text x='105' y='84'>+</text><text x='130' y='84'>+</text><text x='155' y='84'>+</text><text x='180' y='84'>+</text><text x='205' y='84'>+</text></g><g font-size='13' fill='var(--c1)' text-anchor='middle'><text x='30' y='130'>−</text><text x='55' y='130'>−</text><text x='80' y='130'>−</text><text x='105' y='130'>−</text><text x='130' y='130'>−</text><text x='155' y='130'>−</text><text x='180' y='130'>−</text><text x='205' y='130'>−</text></g><g fill='var(--c4)'><circle cx='40' cy='52' r='5'/><circle cx='70' cy='62' r='5'/><circle cx='100' cy='48' r='5'/><circle cx='130' cy='60' r='5'/><circle cx='160' cy='50' r='5'/><circle cx='190' cy='62' r='5'/><circle cx='55' cy='70' r='5'/><circle cx='145' cy='72' r='5'/></g><g fill='var(--c3)'><circle cx='40' cy='150' r='5'/><circle cx='75' cy='160' r='5'/><circle cx='110' cy='148' r='5'/><circle cx='140' cy='162' r='5'/><circle cx='175' cy='152' r='5'/><circle cx='60' cy='170' r='5'/><circle cx='195' cy='168' r='5'/></g><rect x='214' y='86' width='30' height='33' rx='8' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)'/><line x1='222' y1='140' x2='222' y2='45' stroke='var(--c4)' stroke-width='2' marker-end='url(#sin-3)'/><line x1='236' y1='45' x2='236' y2='160' stroke='var(--c3)' stroke-width='2' marker-end='url(#sin-4)'/><g font-size='12' fill='var(--ink)'><text x='252' y='50'>3 Na⁺</text><text x='252' y='64'>dışarı</text><text x='252' y='150'>2 K⁺</text><text x='252' y='164'>içeri</text></g><text x='252' y='107' font-size='11' fill='var(--c5)'>ATP</text><g font-size='12' fill='var(--ink)'><text x='10' y='30'>dış (+): Na⁺ fazla</text><text x='10' y='192'>iç (−): K⁺ fazla</text></g><text x='312' y='192' font-size='13' fill='var(--c1)' text-anchor='end'>≈ −70 mV</text></svg>",
-        "key": "Dinlenen nöron da ATP harcar: pompa hiç durmadan çalışır."
+        "key": "Zar K⁺'ya daha geçirgendir; K⁺ dışarı sızar. Sonuç: dışta Na⁺, içte K⁺ fazladır; bu hâle polarizasyon denir.",
+        "once": {
+          "soru": "Dinlenmekte olan bir nöron ATP harcar mı?",
+          "secenekler": [
+            {
+              "yazi": "Evet",
+              "neden": "Na⁺-K⁺ pompası hiç durmadan ATP harcar.",
+              "dogru": true
+            },
+            {
+              "yazi": "Hayır, yalnız uyarılınca",
+              "neden": "Pompa dinlenmede de çalışır; uyarıdaki iyon akışları ise ATP harcamaz."
+            },
+            {
+              "yazi": "Hayır, hiç harcamaz",
+              "neden": "Pompa her turda bir ATP harcar."
+            }
+          ]
+        }
       },
       {
         "h": "Aksiyon potansiyeli",
-        "p": "Uyarı eşiği aşınca Na⁺ kanalları açılır, Na⁺ hücreye girer ve iç taraf + olur: <b>depolarizasyon</b>. Ardından K⁺ kanalları açılır, K⁺ dışarı çıkar ve iç yine − olur: <b>repolarizasyon</b>. Bu iyon akışları difüzyonla olur; sonra pompa iyonları eski yerlerine taşır.",
+        "p": "Uyarı eşiği aşınca Na⁺ hücreye girer, iç + olur: <b>depolarizasyon</b>. Sonra K⁺ dışarı çıkar, iç yine − olur: <b>repolarizasyon</b>. Bu akışlar ATP harcamaz.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='40' y1='25' x2='40' y2='178' stroke='var(--ink)'/><line x1='40' y1='178' x2='308' y2='178' stroke='var(--ink)'/><line x1='40' y1='77' x2='305' y2='77' stroke='var(--line)' stroke-dasharray='3 3'/><line x1='40' y1='141' x2='305' y2='141' stroke='var(--c2)' stroke-dasharray='5 4'/><path d='M40,158 L120,158 Q132,156 140,141 L163,45 Q170,32 177,45 L195,158 Q202,172 215,166 Q230,159 245,158 L305,158' fill='none' stroke='var(--c1)' stroke-width='2.5'/><g font-size='11' fill='var(--muted)' text-anchor='end'><text x='35' y='45'>+30</text><text x='35' y='81'>0</text><text x='35' y='162'>−70</text><text x='35' y='20'>mV</text></g><g font-size='11' text-anchor='end'><text x='144' y='95' fill='var(--c4)'>depolarizasyon</text><text x='144' y='109' fill='var(--c4)'>Na⁺ girer</text></g><g font-size='11'><text x='192' y='100' fill='var(--c3)'>repolarizasyon</text><text x='192' y='114' fill='var(--c3)'>K⁺ çıkar</text></g><text x='305' y='135' font-size='11' fill='var(--c2)' text-anchor='end'>eşik ≈ −55</text><text x='48' y='152' font-size='11' fill='var(--muted)'>dinlenme</text><text x='305' y='192' font-size='11' fill='var(--muted)' text-anchor='end'>zaman (≈ birkaç ms)</text></svg>",
-        "key": "Na⁺ girer → depolarizasyon; K⁺ çıkar → repolarizasyon. Bu akışlarda ATP harcanmaz."
+        "key": "İyonlar kanallardan difüzyonla geçer; sonra pompa onları eski yerlerine taşır."
       },
       {
         "h": "Eşik değer ve ya hep ya hiç",
-        "p": "Uyarı <b>eşik değerin</b> altındaysa impuls oluşmaz. Eşiğe ulaşınca tam büyüklükte impuls oluşur; daha güçlü uyarı impulsu büyütmez, yalnızca impuls <b>sıklığını</b> artırır. Buna <b>ya hep ya hiç</b> kuralı denir. Bir sinir (nöron demeti) ise güçlü uyarıda daha çok nöronla yanıt verir.",
+        "p": "Eşiğin altındaki uyarı impuls oluşturmaz; eşiğe ulaşınca tam boy impuls oluşur. Güçlü uyarı impulsu büyütmez, <b>sıklığını</b> artırır: <b>ya hep ya hiç</b>.",
         "svg": "<svg viewBox='0 0 320 200'><text x='10' y='20' font-size='11' fill='var(--muted)'>tepki (impuls)</text><g fill='none' stroke='var(--c1)' stroke-width='2.5'><line x1='20' y1='85' x2='90' y2='85'/><path d='M125,85 L150,85 L160,35 L170,85 L195,85'/><path d='M230,85 L255,85 L265,35 L275,85 L300,85'/></g><text x='55' y='72' font-size='12' fill='var(--c2)' text-anchor='middle'>impuls yok</text><text x='10' y='108' font-size='11' fill='var(--muted)'>uyarı</text><line x1='20' y1='160' x2='300' y2='160' stroke='var(--ink)'/><g fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)'><rect x='45' y='140' width='20' height='20'/><rect x='150' y='120' width='20' height='40'/><rect x='255' y='100' width='20' height='60'/></g><line x1='20' y1='120' x2='282' y2='120' stroke='var(--c2)' stroke-dasharray='5 4'/><text x='312' y='124' font-size='11' fill='var(--c2)' text-anchor='end'>eşik</text><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='55' y='178'>eşik altı</text><text x='160' y='178'>eşik değeri</text><text x='265' y='178'>daha güçlü</text></g><text x='212' y='28' font-size='11' fill='var(--muted)' text-anchor='middle'>aynı büyüklük</text></svg>",
-        "key": "Kural tek nöron içindir; sinir demetinde tepki, uyarı şiddetiyle artabilir."
+        "key": "Kural tek nöron içindir; sinir demeti güçlü uyarıda daha çok nöronla yanıt verir."
       },
       {
         "h": "Miyelin ve sıçrayarak iletim",
-        "p": "Miyelin kılıf yalıtkandır; iyon akışı yalnızca <b>Ranvier boğumlarında</b> olur. İmpuls boğumdan boğuma <b>sıçrar</b>. Bu yüzden miyelinli aksonda iletim çok daha hızlıdır ve daha az enerji harcanır. Akson çapı arttıkça da iletim hızlanır.",
+        "p": "Miyelin yalıtkandır; iyon akışı yalnız <b>Ranvier boğumlarında</b> olur. İmpuls boğumdan boğuma <b>sıçrar</b>: iletim hızlanır, daha az enerji harcanır. Kalın akson da hızlıdır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='sin-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><text x='10' y='22' font-size='12' fill='var(--ink)'>miyelinsiz akson: her noktadan, yavaş</text><line x1='20' y1='60' x2='300' y2='60' stroke='var(--c3)' stroke-width='6'/><path d='M20,52 q10,-12 20,0 q10,-12 20,0 q10,-12 20,0 q10,-12 20,0 q10,-12 20,0 q10,-12 20,0 q10,-12 20,0 q10,-12 20,0 q10,-12 20,0 q10,-12 20,0 q10,-12 20,0 q10,-12 20,0 q10,-12 20,0 q10,-12 20,0 ' fill='none' stroke='var(--c2)' stroke-width='1.5'/><line x1='0' y1='82' x2='320' y2='82' stroke='var(--line)'/><line x1='20' y1='135' x2='300' y2='135' stroke='var(--c3)' stroke-width='6'/><g fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)' stroke-width='1.5'><rect x='30' y='125' width='50' height='20' rx='8'/><rect x='90' y='125' width='50' height='20' rx='8'/><rect x='150' y='125' width='50' height='20' rx='8'/><rect x='210' y='125' width='50' height='20' rx='8'/></g><g fill='none' stroke='var(--c2)' stroke-width='2' marker-end='url(#sin-5)'><path d='M85,122 Q115,92 143,121'/><path d='M145,122 Q175,92 203,121'/><path d='M205,122 Q235,92 263,121'/></g><line x1='145' y1='148' x2='145' y2='160' stroke='var(--muted)'/><text x='145' y='173' font-size='11' fill='var(--ink)' text-anchor='middle'>Ranvier boğumu</text><text x='10' y='194' font-size='12' fill='var(--ink)'>miyelinli akson: boğumdan boğuma sıçrar, hızlı</text></svg>",
         "key": "MS'te miyelin kılıf bozulur; iletim yavaşlar ya da kesilir."
       },
       {
         "h": "Sinaps ve nörotransmitterler",
-        "p": "İki hücrenin bağlantı yerine <b>sinaps</b> denir. İmpuls akson ucuna gelince keseciklerdeki <b>nörotransmitter</b> boşluğa salınır ve sonraki hücrenin reseptörlerine bağlanır. Kesecikler yalnızca akson ucunda olduğundan iletim <b>tek yönlüdür</b>. Örnekler: asetilkolin (kas kasılması), dopamin (hareket, ödül), serotonin (ruh hali).",
+        "p": "İki hücrenin bağlantı yeri <b>sinapstır</b>. Akson ucu boşluğa <b>nörotransmitter</b> salar, o da sonraki hücreye bağlanır. Kesecikler yalnız akson ucunda: iletim <b>tek yönlüdür</b>.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='sin-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><path d='M80,8 L80,45 Q80,95 130,95 Q180,95 180,45 L180,8' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='2'/><g fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)'><circle cx='105' cy='55' r='8'/><circle cx='130' cy='68' r='8'/><circle cx='155' cy='52' r='8'/><circle cx='118' cy='83' r='6'/></g><g fill='var(--c5)'><circle cx='103' cy='53' r='1.8'/><circle cx='107' cy='57' r='1.8'/><circle cx='128' cy='66' r='1.8'/><circle cx='132' cy='70' r='1.8'/><circle cx='153' cy='50' r='1.8'/><circle cx='157' cy='54' r='1.8'/><circle cx='112' cy='103' r='2'/><circle cx='124' cy='108' r='2'/><circle cx='136' cy='102' r='2'/><circle cx='146' cy='109' r='2'/></g><rect x='60' y='120' width='140' height='40' fill='var(--c1)' fill-opacity='0.12'/><line x1='60' y1='120' x2='200' y2='120' stroke='var(--c1)' stroke-width='2.5'/><g fill='var(--c3)'><rect x='106' y='113' width='8' height='7'/><rect x='126' y='113' width='8' height='7'/><rect x='146' y='113' width='8' height='7'/></g><g stroke='var(--muted)'><line x1='182' y1='30' x2='220' y2='30'/><line x1='164' y1='56' x2='220' y2='62'/><line x1='158' y1='106' x2='220' y2='100'/><line x1='156' y1='116' x2='220' y2='122'/></g><g font-size='11' fill='var(--ink)'><text x='224' y='34'>akson ucu</text><text x='224' y='66'>kesecik</text><text x='224' y='104'>sinaps boşluğu</text><text x='224' y='126'>reseptör</text><text x='224' y='148'>sonraki hücre</text></g><line x1='30' y1='25' x2='30' y2='150' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#sin-6)'/><text x='160' y='186' font-size='12' fill='var(--ink)' text-anchor='middle'>akson ucundan sonraki hücreye: tek yön</text></svg>",
-        "key": "Nöron içinde iletim elektriksel, çoğu sinapsta kimyasaldır; sinaps iletimi biraz yavaşlatır."
+        "key": "Örnekler: asetilkolin (kas kasılması), dopamin (hareket, ödül), serotonin (ruh hali). Nöron içinde iletim elektriksel, çoğu sinapsta kimyasaldır."
       },
       {
         "h": "Uç beyin ve lobları",
-        "p": "Beynin en büyük bölümü <b>uç beyin</b>dir (serebrum). Sağ ve sol yarım küreden oluşur; ikisini <b>nasırlı cisim</b> (korpus kallozum) bağlar. Dış kabuğu gri maddedir. Düşünme, öğrenme, bellek, konuşma ve istemli hareketler burada yönetilir. Her yarım küre genellikle vücudun karşı tarafını kontrol eder.",
+        "p": "Beynin en büyük bölümü <b>uç beyindir</b>; iki yarım küresini <b>nasırlı cisim</b> bağlar. Düşünme, bellek, konuşma ve istemli hareket burada yönetilir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><clipPath id='sin-7'><path d='M18,112 Q12,52 70,40 Q130,28 158,68 Q172,98 152,122 Q140,136 112,133 L45,135 Q20,132 18,112 Z'/></clipPath></defs><g clip-path='url(#sin-7)'><rect x='0' y='0' width='72' height='200' fill='var(--c1)' fill-opacity='0.3'/><rect x='72' y='0' width='58' height='200' fill='var(--c4)' fill-opacity='0.35'/><rect x='130' y='0' width='60' height='200' fill='var(--c5)' fill-opacity='0.3'/><ellipse cx='92' cy='122' rx='48' ry='15' fill='var(--c3)' fill-opacity='0.45'/></g><path d='M18,112 Q12,52 70,40 Q130,28 158,68 Q172,98 152,122 Q140,136 112,133 L45,135 Q20,132 18,112 Z' fill='none' stroke='var(--ink)' stroke-width='2'/><ellipse cx='138' cy='142' rx='18' ry='9' fill='var(--muted)' fill-opacity='0.25' stroke='var(--muted)'/><path d='M108,133 L112,165' stroke='var(--muted)' stroke-width='8' fill='none'/><g font-size='13' text-anchor='middle'><text x='42' y='85' fill='var(--c1)'>1</text><text x='100' y='72' fill='var(--c4)'>2</text><text x='146' y='95' fill='var(--c5)'>3</text><text x='86' y='127' fill='var(--c3)'>4</text></g><text x='20' y='26' font-size='11' fill='var(--muted)'>ön</text><text x='128' y='24' font-size='11' fill='var(--muted)'>arka</text><g font-size='12'><text x='174' y='38' fill='var(--c1)'>1 alın (frontal)</text><text x='174' y='76' fill='var(--c4)'>2 çeper (parietal)</text><text x='174' y='114' fill='var(--c5)'>3 art kafa (oksipital)</text><text x='174' y='152' fill='var(--c3)'>4 şakak (temporal)</text></g><g font-size='11' fill='var(--ink)'><text x='186' y='52'>karar, istemli hareket</text><text x='186' y='90'>dokunma, ağrı, sıcaklık</text><text x='186' y='128'>görme</text><text x='186' y='166'>işitme, bellek</text></g><text x='10' y='192' font-size='11' fill='var(--muted)'>kabuk gri madde; sağ yarım küre sol tarafı yönetir</text></svg>",
-        "key": "Görme art kafa lobunda, işitme şakak lobunda; istemli hareket alın lobunda başlar."
+        "key": "Dış kabuğu gri maddedir. Görme art kafa, işitme şakak lobunda; istemli hareket alın lobunda başlar.",
+        "once": {
+          "soru": "Beyninin sol yarım küresi zarar gören birinde felç genellikle hangi tarafta görülür?",
+          "secenekler": [
+            {
+              "yazi": "Sağ tarafta",
+              "neden": "Her yarım küre genellikle vücudun karşı tarafını yönetir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Sol tarafta",
+              "neden": "Sinir yolları çaprazlanır; sol yarım küre sağ tarafı yönetir."
+            },
+            {
+              "yazi": "İki tarafta da",
+              "neden": "Bir yarım küre çoğunlukla tek tarafı yönetir."
+            }
+          ]
+        }
       },
       {
         "h": "Beyincik ve ara beyin",
-        "p": "<b>Beyincik</b> dengeyi ve hareketlerin uyumunu sağlar. Ara beyindeki <b>talamus</b> koku dışındaki duyuları kabuğa aktarır. <b>Hipotalamus</b> vücut sıcaklığını, su dengesini, açlık ve susuzluğu düzenler; hipofizi yöneterek sinir sistemiyle hormonları birbirine bağlar.",
+        "p": "<b>Beyincik</b> denge ve hareket uyumunu sağlar. <b>Talamus</b> koku dışındaki duyuları kabuğa aktarır. <b>Hipotalamus</b> vücut sıcaklığını, su dengesini, açlık ve susuzluğu düzenler.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='sin-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='10' y='14' width='300' height='40' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1'/><text x='24' y='39' font-size='13' fill='var(--ink)' font-weight='700'>beyincik</text><text x='120' y='39' font-size='12' fill='var(--ink)'>denge ve kas uyumu</text><rect x='10' y='64' width='300' height='86' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1'/><text x='24' y='82' font-size='11' fill='var(--muted)'>ara beyin</text><text x='24' y='108' font-size='13' fill='var(--ink)' font-weight='700'>talamus</text><text x='120' y='108' font-size='12' fill='var(--ink)'>duyuları kabuğa aktarır</text><text x='24' y='136' font-size='13' fill='var(--ink)' font-weight='700'>hipotalamus</text><text x='120' y='136' font-size='12' fill='var(--ink)'>sıcaklık, su, açlık-tokluk</text><line x1='60' y1='154' x2='60' y2='184' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#sin-11)'/><text x='74' y='176' font-size='12' fill='var(--c4)'>hipofizi yönetir (hormon köprüsü)</text></svg>",
-        "key": "Beyincik hasarı felç yapmaz; kişi hareket eder ama dengesi ve uyumu bozulur."
+        "key": "Talamus ve hipotalamus ara beyindedir. Hipotalamus hipofizi yöneterek sinirlerle hormonları bağlar. Beyincik hasarı felç yapmaz.",
+        "once": {
+          "soru": "Alkol alan birinin düz yürüyememesi en çok hangi bölümün etkilendiğini gösterir?",
+          "secenekler": [
+            {
+              "yazi": "Beyincik",
+              "neden": "Denge ve hareket uyumu beyincikte yönetilir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Soğanilik",
+              "neden": "Soğanilik kalp atışını ve solunumu yönetir."
+            },
+            {
+              "yazi": "Hipotalamus",
+              "neden": "Hipotalamus vücut sıcaklığını, açlık ve susuzluğu düzenler."
+            }
+          ]
+        }
       },
       {
         "h": "Beyin sapı",
-        "p": "<b>Beyin sapı</b>; orta beyin, pons ve soğanilikten oluşur, beyni omuriliğe bağlar. <b>Orta beyin</b> göz ve kulakla ilgili refleksleri, <b>pons</b> beyin ile beyincik arasındaki bağlantıyı yönetir. <b>Soğanilik</b> kalp atışı, solunum, yutma ve öksürük gibi yaşamsal işleri yönetir.",
+        "p": "<b>Beyin sapı</b> orta beyin, pons ve soğanilikten oluşur, beyni omuriliğe bağlar. <b>Soğanilik</b> kalp atışı, solunum, yutma ve öksürüğü yönetir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='sin-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='10' y='10' width='300' height='36' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1'/><text x='22' y='33' font-size='13' fill='var(--ink)' font-weight='700'>orta beyin</text><text x='112' y='33' font-size='12' fill='var(--ink)'>göz ve kulak refleksleri</text><rect x='10' y='52' width='300' height='36' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1'/><text x='22' y='75' font-size='13' fill='var(--ink)' font-weight='700'>pons</text><text x='112' y='75' font-size='12' fill='var(--ink)'>beyin ile beyincik bağlantısı</text><rect x='10' y='94' width='300' height='36' rx='6' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1'/><text x='22' y='117' font-size='13' fill='var(--ink)' font-weight='700'>soğanilik</text><text x='112' y='117' font-size='12' fill='var(--ink)'>kalp atışı, solunum, yutma</text><line x1='160' y1='134' x2='160' y2='156' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#sin-12)'/><text x='160' y='172' font-size='12' fill='var(--ink)' text-anchor='middle'>omuriliğe bağlanır</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>beyin sapı = orta beyin + pons + soğanilik</text></svg>",
-        "key": "Soğanilik hasarı yaşamı doğrudan tehdit eder: kalp ve solunum merkezi oradadır."
+        "key": "Orta beyin göz ve kulak reflekslerini, pons beyin ile beyincik arasındaki bağlantıyı yönetir. Soğanilik hasarı yaşamı doğrudan tehdit eder.",
+        "once": {
+          "soru": "Kalp atışını ve solunumu yöneten merkez nerededir?",
+          "secenekler": [
+            {
+              "yazi": "Soğanilik",
+              "neden": "Kalp ve solunum merkezleri beyin sapındaki soğaniliktedir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Uç beyin",
+              "neden": "Uç beyin istemli işleri yönetir; kalp atışı istemsizdir."
+            },
+            {
+              "yazi": "Beyincik",
+              "neden": "Beyincik denge ve hareket uyumunu sağlar."
+            }
+          ]
+        }
       },
       {
         "h": "Omurilik ve refleks yayı",
-        "p": "<b>Omurilik</b> beyinle vücut arasında yol oluşturur, refleks merkezidir. Beynin tersine gri madde içte, ak madde dıştadır. <b>Refleks yayı</b>: reseptör → duyu nöronu → ara nöron → motor nöron → efektör. <b>Diz refleksinin</b> temel yayında ara nöron yoktur; duyu nöronu doğrudan motor nöronla sinaps yapar.",
+        "p": "<b>Omurilik</b> beyinle vücut arasında yoldur ve refleks merkezidir. <b>Refleks yayı</b>: reseptör → duyu nöronu → ara nöron → motor nöron → efektör.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='sin-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='4' markerHeight='4' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='sin-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='4' markerHeight='4' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><circle cx='210' cy='95' r='45' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><path d='M190,70 Q203,84 210,84 Q217,84 230,70 Q242,80 232,95 Q242,111 230,120 Q217,104 210,104 Q203,104 190,120 Q178,111 188,95 Q178,80 190,70 Z' fill='var(--muted)' fill-opacity='0.35' stroke='var(--muted)'/><circle cx='30' cy='48' r='6' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)'/><path d='M36,48 L150,48 Q186,48 200,72' fill='none' stroke='var(--c1)' stroke-width='2' marker-end='url(#sin-8)'/><circle cx='150' cy='48' r='6' fill='var(--c1)'/><line x1='207' y1='80' x2='207' y2='106' stroke='var(--c5)' stroke-width='3'/><path d='M204,110 Q185,150 150,150 L64,150' fill='none' stroke='var(--c2)' stroke-width='2' marker-end='url(#sin-9)'/><rect x='18' y='136' width='44' height='28' rx='8' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='40' y='155' font-size='11' fill='var(--ink)' text-anchor='middle'>kas</text><g font-size='11' fill='var(--ink)'><text x='8' y='32'>reseptör</text><text x='80' y='38'>duyu nöronu</text><text x='80' y='168'>motor nöron</text></g><line x1='214' y1='97' x2='226' y2='152' stroke='var(--muted)'/><text x='232' y='162' font-size='11' fill='var(--c5)'>ara nöron</text><g stroke='var(--muted)'><line x1='232' y1='88' x2='260' y2='82'/><line x1='250' y1='122' x2='260' y2='126'/></g><g font-size='11' fill='var(--ink)'><text x='263' y='80'>gri madde</text><text x='263' y='93' fill='var(--muted)'>(içte)</text><text x='263' y='126'>ak madde</text><text x='263' y='139' fill='var(--muted)'>(dışta)</text></g><text x='10' y='192' font-size='11' fill='var(--muted)'>refleks merkezi omurilik; beyin olayı sonra fark eder</text></svg>",
-        "key": "Duyu nöronu omuriliğe arka kökten girer, motor nöron ön kökten çıkar."
+        "key": "Omurilikte gri madde içte, ak madde dıştadır. Diz refleksinde ara nöron yoktur. Duyu nöronu arka kökten girer, motor nöron ön kökten çıkar."
       },
       {
         "h": "Beyin zarları ve beyin-omurilik sıvısı",
-        "p": "Beyni kafatası, omuriliği omurlar korur. İkisini de üç <b>beyin zarı</b> sarar: dıştan içe <b>sert zar</b>, <b>örümcek ağı zar</b> ve <b>ince zar</b>. Örümcek ağı zar ile ince zar arasındaki <b>beyin-omurilik sıvısı</b> darbelere karşı tampon olur, besin ve atık taşır. Zarların iltihabına <b>menenjit</b> denir.",
+        "p": "Beyni kafatası, omuriliği omurlar korur. Üç <b>beyin zarı</b> sarar: sert zar, örümcek ağı zar, ince zar. Aradaki <b>beyin-omurilik sıvısı</b> darbeleri sönümler.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='20' width='170' height='26' fill='var(--c4)' fill-opacity='0.35'/><path d='M180 33.0 L190 32' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='194' y='36' font-size='11' fill='var(--c4)' text-anchor='start' font-weight='700'>kafatası (kemik)</text><rect x='10' y='46' width='170' height='12' fill='var(--c2)' fill-opacity='0.35'/><path d='M180 52.0 L190 50' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='194' y='54' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>sert zar</text><rect x='10' y='58' width='170' height='8' fill='var(--c5)' fill-opacity='0.4'/><path d='M180 62.0 L190 67' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='194' y='71' font-size='11' fill='var(--c5)' text-anchor='start' font-weight='700'>örümcek ağı zar</text><rect x='10' y='66' width='170' height='26' fill='var(--c1)' fill-opacity='0.18'/><path d='M180 79.0 L190 84' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='194' y='88' font-size='11' fill='var(--c1)' text-anchor='start' font-weight='700'>beyin-omurilik sıvısı</text><rect x='10' y='92' width='170' height='6' fill='var(--c3)' fill-opacity='0.55'/><path d='M180 95.0 L190 101' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='194' y='105' font-size='11' fill='var(--c3)' text-anchor='start' font-weight='700'>ince zar</text><rect x='10' y='98' width='170' height='52' fill='var(--muted)' fill-opacity='0.15'/><path d='M180 124.0 L190 124' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='194' y='128' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>beyin (gri madde)</text><path d='M24 66 L24 92' stroke='var(--c5)' stroke-width='1' stroke-dasharray='2 2'/><path d='M46 66 L46 92' stroke='var(--c5)' stroke-width='1' stroke-dasharray='2 2'/><path d='M68 66 L68 92' stroke='var(--c5)' stroke-width='1' stroke-dasharray='2 2'/><path d='M90 66 L90 92' stroke='var(--c5)' stroke-width='1' stroke-dasharray='2 2'/><path d='M112 66 L112 92' stroke='var(--c5)' stroke-width='1' stroke-dasharray='2 2'/><path d='M134 66 L134 92' stroke='var(--c5)' stroke-width='1' stroke-dasharray='2 2'/><path d='M156 66 L156 92' stroke='var(--c5)' stroke-width='1' stroke-dasharray='2 2'/><path d='M178 66 L178 92' stroke='var(--c5)' stroke-width='1' stroke-dasharray='2 2'/><path d='M10 20 H180 V150 H10 Z' fill='none' stroke='var(--line)' stroke-width='1'/><text x='10' y='174' font-size='11' fill='var(--ink)' text-anchor='start'>Sıvı darbeleri yumuşatır, besin ve atık taşır.</text><text x='10' y='191' font-size='11' fill='var(--c2)' text-anchor='start'>Zarların iltihaplanması: menenjit</text></svg>",
-        "key": "Beyin-omurilik sıvısı beynin içindeki boşlukları (karıncıkları) da doldurur."
+        "key": "Sıvı örümcek ağı zar ile ince zar arasındadır; besin ve atık da taşır, beyin karıncıklarını doldurur.",
+        "once": {
+          "soru": "Beyin zarlarının iltihaplanmasına ne denir?",
+          "secenekler": [
+            {
+              "yazi": "Menenjit",
+              "neden": "Beyin zarlarının iltihabına menenjit denir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Epilepsi",
+              "neden": "Epilepside nöronlar düzensiz ve aşırı ateşlenir."
+            },
+            {
+              "yazi": "Felç",
+              "neden": "Felç, bir bölgenin hareket yeteneğini kaybetmesidir."
+            }
+          ]
+        }
       },
       {
         "h": "Çevresel sinir sistemi",
-        "p": "Beyin ve omurilik dışındaki sinirler (12 çift kafa, 31 çift omurilik siniri) <b>çevresel sinir sistemini</b> (ÇSS) oluşturur. <b>Somatik</b> bölüm iskelet kaslarını yönetir, çoğunlukla istemlidir. <b>Otonom</b> bölüm kalp kası, düz kas ve bezleri istemsiz yönetir; birbirine zıt iki kolu vardır: sempatik ve parasempatik.",
+        "p": "Beyin ve omurilik dışındaki sinirler <b>çevresel sinir sistemidir</b>. <b>Somatik</b> bölüm iskelet kaslarını, <b>otonom</b> bölüm kalp, düz kas ve bezleri istemsiz yönetir.",
         "svg": "<svg viewBox='0 0 320 200'><g stroke='var(--muted)' stroke-width='1.2'><line x1='160' y1='32' x2='60' y2='52'/><line x1='160' y1='32' x2='200' y2='52'/><line x1='200' y1='74' x2='130' y2='98'/><line x1='200' y1='74' x2='255' y2='98'/><line x1='255' y1='120' x2='194' y2='148'/><line x1='255' y1='120' x2='275' y2='148'/></g><rect x='105' y='10' width='110' height='22' rx='5' fill='var(--ink)' fill-opacity='0.2' stroke='var(--ink)'/><text x='160' y='25' font-size='12' fill='var(--ink)' text-anchor='middle'>sinir sistemi</text><rect x='25' y='52' width='70' height='22' rx='5' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><text x='60' y='67' font-size='12' fill='var(--ink)' text-anchor='middle'>MSS</text><rect x='165' y='52' width='70' height='22' rx='5' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)'/><text x='200' y='67' font-size='12' fill='var(--ink)' text-anchor='middle'>ÇSS</text><rect x='95' y='98' width='70' height='22' rx='5' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)'/><text x='130' y='113' font-size='12' fill='var(--ink)' text-anchor='middle'>somatik</text><rect x='220' y='98' width='70' height='22' rx='5' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='255' y='113' font-size='12' fill='var(--ink)' text-anchor='middle'>otonom</text><rect x='160' y='148' width='68' height='22' rx='5' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)'/><text x='194' y='163' font-size='11' fill='var(--ink)' text-anchor='middle'>sempatik</text><rect x='232' y='148' width='86' height='22' rx='5' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)'/><text x='275' y='163' font-size='11' fill='var(--ink)' text-anchor='middle'>parasempatik</text><g font-size='11' fill='var(--muted)' text-anchor='middle'><text x='60' y='90'>beyin + omurilik</text><text x='130' y='136'>iskelet kasları</text></g><text x='10' y='192' font-size='11' fill='var(--muted)'>otonom: kalp kası, düz kas, bezler; istemsiz</text></svg>",
-        "key": "Diz refleksi istemsizdir ama iskelet kasıyla yapılır, yani somatiktir."
+        "key": "12 çift kafa, 31 çift omurilik siniri vardır. Diz refleksi istemsizdir ama iskelet kasıyla yapılır, yani somatiktir.",
+        "once": {
+          "soru": "Kalp atışını isteyerek durduramazsın. Kalbi hangi bölüm yönetir?",
+          "secenekler": [
+            {
+              "yazi": "Otonom",
+              "neden": "Otonom bölüm kalp, düz kas ve bezleri istemsiz yönetir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Somatik",
+              "neden": "Somatik bölüm iskelet kaslarını yönetir."
+            },
+            {
+              "yazi": "Uç beyin",
+              "neden": "Uç beyin istemli işleri yönetir."
+            }
+          ]
+        }
       },
       {
         "h": "Sempatik ve parasempatik",
-        "p": "Çoğu iç organa iki koldan da sinir gelir ve etkileri genellikle zıttır. <b>Sempatik</b> sistem stres ve heyecanda vücudu harekete hazırlar. <b>Parasempatik</b> sistem dinlenmede vücudu normale döndürür, sindirimi destekler. Sınav öncesi kalbinin hızlanması sempatik etkidir.",
+        "p": "Çoğu iç organa iki koldan sinir gelir, etkileri zıttır. <b>Sempatik</b> sistem vücudu harekete hazırlar; <b>parasempatik</b> dinlenmede normale döndürür, sindirimi destekler.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='112' y='18' width='96' height='154' rx='6' fill='var(--c2)' fill-opacity='0.08'/><rect x='214' y='18' width='96' height='154' rx='6' fill='var(--c3)' fill-opacity='0.08'/><g font-size='13' text-anchor='middle'><text x='160' y='36' fill='var(--c2)'>sempatik</text><text x='262' y='36' fill='var(--c3)'>parasempatik</text></g><line x1='8' y1='44' x2='312' y2='44' stroke='var(--ink)'/><text x='10' y='62' font-size='12' fill='var(--ink)'>kalp atışı</text><text x='160' y='62' font-size='12' fill='var(--ink)' text-anchor='middle'>hızlanır</text><text x='262' y='62' font-size='12' fill='var(--ink)' text-anchor='middle'>yavaşlar</text><line x1='8' y1='70' x2='312' y2='70' stroke='var(--line)'/><text x='10' y='86' font-size='12' fill='var(--ink)'>göz bebeği</text><text x='160' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>büyür</text><text x='262' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>küçülür</text><line x1='8' y1='94' x2='312' y2='94' stroke='var(--line)'/><text x='10' y='110' font-size='12' fill='var(--ink)'>bronşlar</text><text x='160' y='110' font-size='12' fill='var(--ink)' text-anchor='middle'>genişler</text><text x='262' y='110' font-size='12' fill='var(--ink)' text-anchor='middle'>daralır</text><line x1='8' y1='118' x2='312' y2='118' stroke='var(--line)'/><text x='10' y='134' font-size='12' fill='var(--ink)'>sindirim</text><text x='160' y='134' font-size='12' fill='var(--ink)' text-anchor='middle'>yavaşlar</text><text x='262' y='134' font-size='12' fill='var(--ink)' text-anchor='middle'>hızlanır</text><line x1='8' y1='142' x2='312' y2='142' stroke='var(--line)'/><text x='10' y='158' font-size='12' fill='var(--ink)'>tükürük</text><text x='160' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>azalır</text><text x='262' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>artar</text><line x1='8' y1='166' x2='312' y2='166' stroke='var(--line)'/><g font-size='11' fill='var(--muted)' text-anchor='middle'><text x='160' y='190'>savaş ya da kaç</text><text x='262' y='190'>dinlen ve sindir</text></g></svg>",
-        "key": "Parasempatik uçlar asetilkolin, sempatik uçlar genellikle noradrenalin salar."
+        "key": "Sınav öncesi kalbinin hızlanması sempatik etkidir. Parasempatik uçlar asetilkolin, sempatik uçlar genellikle noradrenalin salar."
       },
       {
         "h": "Sinir sistemi sağlığı",
-        "p": "<b>Alzheimer</b>da beyinde nöronlar giderek kaybolur, bellek zayıflar. <b>Parkinson</b>da orta beyindeki dopamin üreten nöronlar azalır; titreme ve hareket yavaşlığı görülür. <b>MS</b>'te bağışıklık sistemi MSS'deki miyelin kılıfa saldırır. <b>Epilepside</b> nöronlar düzensiz ve aşırı ateşlenir: nöbet. Alkol, nikotin ve uyuşturucular sinapsları etkiler; <b>bağımlılık</b> gelişebilir.",
+        "p": "<b>Alzheimer</b>'da nöronlar kaybolur, <b>Parkinson</b>'da dopamin üreten nöronlar azalır, <b>MS</b>'te miyelin bozulur, <b>epilepside</b> nöronlar aşırı ateşlenir.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='12' width='96' height='108' rx='8' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)'/><text x='56' y='36' font-size='13' fill='var(--c5)' text-anchor='middle'>Alzheimer</text><text x='56' y='62' font-size='11' fill='var(--ink)' text-anchor='middle'>nöronlar</text><text x='56' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>giderek ölür,</text><text x='56' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>bellek zayıflar</text><rect x='112' y='12' width='96' height='108' rx='8' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)'/><text x='160' y='36' font-size='13' fill='var(--c4)' text-anchor='middle'>Parkinson</text><text x='160' y='62' font-size='11' fill='var(--ink)' text-anchor='middle'>dopamin üreten</text><text x='160' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>nöronlar azalır,</text><text x='160' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>titreme</text><rect x='216' y='12' width='96' height='108' rx='8' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)'/><text x='264' y='36' font-size='13' fill='var(--c1)' text-anchor='middle'>MS</text><text x='264' y='62' font-size='11' fill='var(--ink)' text-anchor='middle'>bağışıklık</text><text x='264' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>miyelini bozar,</text><text x='264' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>iletim aksar</text><rect x='8' y='132' width='304' height='60' rx='8' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)'/><text x='20' y='152' font-size='13' fill='var(--c2)'>Bağımlılık</text><g font-size='11' fill='var(--ink)'><text x='20' y='169'>madde, dopaminli ödül sistemini aşırı uyarır;</text><text x='20' y='184'>beyin alışır, aynı etki için daha fazlasını ister</text></g></svg>",
-        "key": "Bağımlılıkta aynı etki için giderek daha çok madde gerekir: buna tolerans denir."
+        "key": "Alzheimer'da bellek zayıflar. MS'te bağışıklık sistemi miyeline saldırır. Alkol, nikotin ve uyuşturucular sinapsları etkiler; bağımlılıkta aynı etki için giderek daha çok madde gerekir.",
+        "once": {
+          "soru": "Parkinson hastalığında hangi maddeyi üreten nöronlar azalır?",
+          "secenekler": [
+            {
+              "yazi": "Dopamin",
+              "neden": "Orta beyindeki dopamin üreten nöronlar azalır; titreme ve yavaşlık görülür.",
+              "dogru": true
+            },
+            {
+              "yazi": "Serotonin",
+              "neden": "Serotonin daha çok ruh hâliyle ilgilidir."
+            },
+            {
+              "yazi": "Asetilkolin",
+              "neden": "Asetilkolin kas kasılmasında görev alır; Parkinson'da azalan dopamindir."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",

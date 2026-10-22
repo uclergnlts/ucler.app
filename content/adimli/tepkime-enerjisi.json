@@ -3,7 +3,7 @@
  "ders": "kimya",
  "konu": "tepkime-enerjisi",
  "baslik": "Tepkimelerde enerji",
- "ozet": "Kabın soğumasını izle, enerji diyagramını kur, Hess ile ΔH hesapla, kalorimetrede ölç.",
+ "ozet": "Önce dene, sonra adını öğren: kabın soğumasını izle, enerji diyagramını kur, Hess ile hesapla, kalorimetrede ölç.",
  "adimlar": [
   {
    "baslik": "Soğuk kompres",
@@ -60,13 +60,7 @@
     },
     "tamam": "ΔH = H(ürünler) − H(girenler) = 110 − 200 = <b>−90 kJ</b>. Ürünler aşağıda: enerji dışarı verildi, tepkime <b>ekzotermik</b>. Başta ürünler yukarıdaydı (ΔH = +100 kJ), yani endotermikti."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "u": 250
-    },
-    "not": "Ürünler 250 kJ'de: ΔH = 250 − 200 = <b>+50 kJ</b>. Ürünler girenlerden yukarıda, tepkime endotermik."
-   }
+   "kart": 5
   },
   {
    "baslik": "Aktifleşme enerjisi",
@@ -135,7 +129,7 @@
     },
     "tamam": "4 H atomu için 2 H₂O gerekir. ΔH = [−393,5 + 2·(−285,8)] − (−74,8) = <b>−890,3 kJ</b>. O₂ elementtir, oluşum entalpisi sıfırdır. Doğal gaz bu yüzden iyi bir yakıttır."
    },
-   "kart": 6
+   "kart": 7
   },
   {
    "baslik": "Hess yasası",
@@ -190,11 +184,11 @@
      }
     ]
    },
-   "kart": 9
+   "kart": 10
   },
   {
    "baslik": "Kalorimetre",
-   "metin": "Bir tepkime kalorimetredeki suya <b>8360 J</b> ısı veriyor. Su 20 °C'de. Suyun kütlesini ayarla ve sıcaklığı <b>10 °C</b> artır.",
+   "metin": "Suyun aldığı ısı q = m·c·ΔT; su için c = 4,18 J/g·°C. Bir tepkime kalorimetredeki suya <b>8360 J</b> ısı veriyor. Su 20 °C'de. Suyun kütlesini ayarla ve sıcaklığı <b>10 °C</b> artır.",
    "sahne": {
     "tur": "kim8-kalorimetre"
    },
@@ -219,13 +213,7 @@
     },
     "tamam": "q = m·c·ΔT, yani 8360 = 200 · 4,18 · 10. Su <b>20 °C'den 30 °C'ye</b> çıktı. Aynı ısı daha çok suya dağılınca sıcaklık daha az artar. Besinlerin kalorisi de böyle ölçülür."
    },
-   "kart": 11,
-   "goster": {
-    "deger": {
-     "m": 400
-    },
-    "not": "400 g su: ΔT = 8360 / (400 · 4,18) = <b>5 °C</b>, su 25 °C'ye çıktı."
-   }
+   "kart": 11
   }
  ],
  "kapanis": [
@@ -234,5 +222,6 @@
   "Oluşum entalpileriyle: ΔH = ΣΔH°f(ürünler) − ΣΔH°f(girenler); elementlerin ΔH°f'si sıfırdır.",
   "<b>Hess</b>: denklemler toplanırsa ΔH'ler de toplanır; ters çevirince işaret değişir. Bağlarla: ΔH = Σ(kırılan) − Σ(oluşan).",
   "Kalorimetrede <b>q = m·c·ΔT</b> ile ölçülür; suyun öz ısısı 4,18 J/g·°C."
- ]
+ ],
+ "soruOnce": true
 }

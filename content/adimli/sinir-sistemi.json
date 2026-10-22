@@ -3,19 +3,32 @@
  "ders": "biyoloji",
  "konu": "sinir-sistemi",
  "baslik": "Sinir sistemi",
- "ozet": "İmpulsun nöronda izlediği yolu gör, zarı eşiğe taşı, miyelinin hızını yarıştır ve refleksin beyni neden beklemediğini izle.",
+ "ozet": "Önce dene, sonra adını öğren: impulsun yolunu izle, zarı eşiğe taşı, miyelini yarıştır, refleksi gör.",
  "adimlar": [
   {
    "baslik": "Nöronda yol",
    "metin": "Nöronu oynat ve impulsun izlediği yolu takip et.",
-   "sahne": { "tur": "biy9-noron", "sure": 4 },
+   "sahne": {
+    "tur": "biy9-noron",
+    "sure": 4
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "İmpuls nöronda hangi yolu izler?",
     "secenekler": [
-     { "yazi": "Akson → gövde → dendrit", "neden": "Bu ters yöndür. Akson impulsu gövdeden uzaklaştırır, dendrit ise uyarıyı alır." },
-     { "yazi": "Dendrit → gövde → akson → akson ucu", "dogru": true, "neden": "Uyarı dendritte alınır, gövdeden geçer, akson boyunca ilerler ve akson ucunda sonraki hücreye aktarılır." },
-     { "yazi": "Gövde → dendrit → akson ucu", "neden": "Dendritler uyarıyı gövdeye getirir; impuls gövdeden dendrite gitmez." }
+     {
+      "yazi": "Akson → gövde → dendrit",
+      "neden": "Bu ters yöndür. Akson impulsu gövdeden uzaklaştırır, dendrit ise uyarıyı alır."
+     },
+     {
+      "yazi": "Dendrit → gövde → akson → akson ucu",
+      "dogru": true,
+      "neden": "Uyarı dendritte alınır, gövdeden geçer, akson boyunca ilerler ve akson ucunda sonraki hücreye aktarılır."
+     },
+     {
+      "yazi": "Gövde → dendrit → akson ucu",
+      "neden": "Dendritler uyarıyı gövdeye getirir; impuls gövdeden dendrite gitmez."
+     }
     ]
    },
    "kart": 1
@@ -23,32 +36,78 @@
   {
    "baslik": "Eşiği aş",
    "metin": "Dinlenen zarın içi dışına göre <b>−70 mV</b>'tur. Uyarı zarı <b>−55 mV</b> eşiğine taşırsa impuls doğar. Uyarıyı ayarla ve oynat.",
-   "sahne": { "tur": "biy9-aksiyon", "sure": 4 },
-   "deger": { "u": 5 },
-   "kontroller": [ { "ad": "u", "etiket": "Uyarı", "min": 0, "max": 30, "adim": 5, "birim": "mV", "onek": "+", "tur": "surgu" } ],
+   "sahne": {
+    "tur": "biy9-aksiyon",
+    "sure": 4
+   },
+   "deger": {
+    "u": 5
+   },
+   "kontroller": [
+    {
+     "ad": "u",
+     "etiket": "Uyarı",
+     "min": 0,
+     "max": 30,
+     "adim": 5,
+     "birim": "mV",
+     "onek": "+",
+     "tur": "surgu"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "u": [15, 30] },
+    "hedef": {
+     "u": [
+      15,
+      30
+     ]
+    },
     "ipucu": "Zarı −70'ten −55'e çıkarmak için en az +15 mV gerekir.",
     "tamam": "Eşik aşıldı: Na⁺ kanalları açıldı, Na⁺ içeri girdi ve zar +30 mV'a çıktı (depolarizasyon). Sonra K⁺ dışarı çıktı ve zar eski hâline döndü (repolarizasyon). Bu akışlar ATP harcamaz."
    },
-   "kart": 4,
-   "goster": { "deger": { "u": 10 }, "not": "+10 mV uyarı zarı yalnızca −60 mV'a çıkarıyor. −55 mV eşiğine ulaşmadığı için <b>impuls oluşmuyor</b>." }
+   "kart": 4
   },
   {
    "baslik": "Ya hep ya hiç",
    "metin": "Eşiği geçtin. Şimdi uyarıyı <b>güçlendir</b> ve iki farklı değerle oynat. Tepe noktasını karşılaştır.",
-   "sahne": { "tur": "biy9-aksiyon", "sure": 4 },
-   "deger": { "u": 20 },
-   "kontroller": [ { "ad": "u", "etiket": "Uyarı", "min": 15, "max": 30, "adim": 5, "birim": "mV", "onek": "+", "tur": "surgu" } ],
+   "sahne": {
+    "tur": "biy9-aksiyon",
+    "sure": 4
+   },
+   "deger": {
+    "u": 20
+   },
+   "kontroller": [
+    {
+     "ad": "u",
+     "etiket": "Uyarı",
+     "min": 15,
+     "max": 30,
+     "adim": 5,
+     "birim": "mV",
+     "onek": "+",
+     "tur": "surgu"
+    }
+   ],
    "gorev": {
     "tur": "secim",
     "kosu": 2,
     "soru": "Uyarı güçlenince impulsun tepe değeri ne oldu?",
     "secenekler": [
-     { "yazi": "Uyarıyla birlikte büyüdü", "neden": "Tepe hep +30 mV'ta kaldı. Eşik aşılınca impuls hep aynı büyüklükte olur." },
-     { "yazi": "Küçüldü", "neden": "Tepe küçülmedi; iki koşuda da +30 mV'a ulaştı." },
-     { "yazi": "Değişmedi", "dogru": true, "neden": "Ya hep ya hiç: eşik aşılırsa impuls tam boyda oluşur. Güçlü uyarı impulsu büyütmez, daha sık impuls üretir." }
+     {
+      "yazi": "Uyarıyla birlikte büyüdü",
+      "neden": "Tepe hep +30 mV'ta kaldı. Eşik aşılınca impuls hep aynı büyüklükte olur."
+     },
+     {
+      "yazi": "Küçüldü",
+      "neden": "Tepe küçülmedi; iki koşuda da +30 mV'a ulaştı."
+     },
+     {
+      "yazi": "Değişmedi",
+      "dogru": true,
+      "neden": "Ya hep ya hiç: eşik aşılırsa impuls tam boyda oluşur. Güçlü uyarı impulsu büyütmez, daha sık impuls üretir."
+     }
     ]
    },
    "kart": 5
@@ -56,64 +115,125 @@
   {
    "baslik": "Miyelin yarışı",
    "metin": "Bazı aksonlar <b>miyelin</b> kılıfla sarılıdır. İmpuls kılıfın aralarındaki <b>Ranvier boğumlarında</b> yeniden oluşur. Oynat.",
-   "sahne": { "tur": "biy9-miyelin", "sure": 5 },
+   "sahne": {
+    "tur": "biy9-miyelin",
+    "sure": 5
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "İmpuls hangi aksonun ucuna önce ulaşır?",
     "secenekler": [
-     { "yazi": "Miyelinli akson", "dogru": true, "neden": "İmpuls boğumdan boğuma atlar. Kalın miyelinli aksonda hız 100 m/s'yi geçer; miyelinsizde yaklaşık 1 m/s'dir." },
-     { "yazi": "Miyelinsiz akson", "neden": "Miyelinsiz aksonda impuls zarın her noktasında yeniden oluşmak zorundadır; bu yavaştır." },
-     { "yazi": "İkisi aynı anda", "neden": "Miyelin hızı belirgin biçimde artırır; uçlara aynı anda ulaşmazlar." }
-    ]
-   },
-   "kart": 5
-  },
-  {
-   "baslik": "Sinaps",
-   "metin": "Nöronlar birbirine dokunmaz; aralarında <b>sinaps</b> boşluğu vardır. Akson ucuna gelen impulsla ne olduğunu izle.",
-   "sahne": { "tur": "biy9-sinaps", "sure": 5 },
-   "gorev": {
-    "tur": "tahmin",
-    "soru": "İmpuls sinaps boşluğunu nasıl geçer?",
-    "secenekler": [
-     { "yazi": "Elektrik akımı boşluktan atlar", "neden": "Çoğu sinapsta boşluğu elektrik atlamaz; aktarım kimyasaldır." },
-     { "yazi": "Nörotransmitter salgılanır", "dogru": true, "neden": "Akson ucundaki kesecikler boşluğa kimyasal bir haberci (nörotransmitter) bırakır." },
-     { "yazi": "Akson ucu sonraki nöronla kaynaşır", "neden": "Nöronlar kaynaşmaz; aralarındaki boşluk korunur." }
+     {
+      "yazi": "Miyelinli akson",
+      "dogru": true,
+      "neden": "İmpuls boğumdan boğuma atlar. Kalın miyelinli aksonda hız 100 m/s'yi geçer; miyelinsizde yaklaşık 1 m/s'dir."
+     },
+     {
+      "yazi": "Miyelinsiz akson",
+      "neden": "Miyelinsiz aksonda impuls zarın her noktasında yeniden oluşmak zorundadır; bu yavaştır."
+     },
+     {
+      "yazi": "İkisi aynı anda",
+      "neden": "Miyelin hızı belirgin biçimde artırır; uçlara aynı anda ulaşmazlar."
+     }
     ]
    },
    "kart": 6
   },
   {
+   "baslik": "Sinaps",
+   "metin": "Nöronlar birbirine dokunmaz; aralarında <b>sinaps</b> boşluğu vardır. Akson ucuna gelen impulsla ne olduğunu izle.",
+   "sahne": {
+    "tur": "biy9-sinaps",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "İmpuls sinaps boşluğunu nasıl geçer?",
+    "secenekler": [
+     {
+      "yazi": "Elektrik akımı boşluktan atlar",
+      "neden": "Çoğu sinapsta boşluğu elektrik atlamaz; aktarım kimyasaldır."
+     },
+     {
+      "yazi": "Nörotransmitter salgılanır",
+      "dogru": true,
+      "neden": "Akson ucundaki kesecikler boşluğa kimyasal bir haberci (nörotransmitter) bırakır."
+     },
+     {
+      "yazi": "Akson ucu sonraki nöronla kaynaşır",
+      "neden": "Nöronlar kaynaşmaz; aralarındaki boşluk korunur."
+     }
+    ]
+   },
+   "kart": 7
+  },
+  {
    "baslik": "Refleks yayı",
    "metin": "Elin sıcak ocağa değiyor. Sinyalin yolunu oynat.",
-   "sahne": { "tur": "biy9-refleks", "sure": 6 },
+   "sahne": {
+    "tur": "biy9-refleks",
+    "sure": 6
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Eli çekme emri nereden gelir?",
     "secenekler": [
-     { "yazi": "Beyinden", "neden": "Beyin acıyı sonradan fark eder. El ondan önce çekilir." },
-     { "yazi": "Beyincikten", "neden": "Beyincik denge ve hareket uyumunu yönetir; bu refleksi başlatmaz." },
-     { "yazi": "Omurilikten", "dogru": true, "neden": "Ara nöron omuriliktedir. Sinyal beyne gitmeden motor nörona aktarılır; bu yüzden refleks çok hızlıdır." }
+     {
+      "yazi": "Beyinden",
+      "neden": "Beyin acıyı sonradan fark eder. El ondan önce çekilir."
+     },
+     {
+      "yazi": "Beyincikten",
+      "neden": "Beyincik denge ve hareket uyumunu yönetir; bu refleksi başlatmaz."
+     },
+     {
+      "yazi": "Omurilikten",
+      "dogru": true,
+      "neden": "Ara nöron omuriliktedir. Sinyal beyne gitmeden motor nörona aktarılır; bu yüzden refleks çok hızlıdır."
+     }
     ]
    },
-   "kart": 10
+   "kart": 11
   },
   {
    "baslik": "Otonom sinir sistemi",
    "metin": "Kalp atışı ve sindirim istemsiz yönetilir. <b>Sempatik</b> sistem vücudu tehlikeye, <b>parasempatik</b> dinlenmeye hazırlar. Düğmeyle iki sistem arasında geç.",
-   "sahne": { "tur": "biy9-otonom" },
-   "deger": { "sem": 0 },
-   "kontroller": [ { "ad": "sem", "etiket": "Sempatik", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "sahne": {
+    "tur": "biy9-otonom"
+   },
+   "deger": {
+    "sem": 0
+   },
+   "kontroller": [
+    {
+     "ad": "sem",
+     "etiket": "Sempatik",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
    "gorev": {
     "tur": "secim",
     "soru": "Hangisi parasempatik sistemin etkisidir?",
     "secenekler": [
-     { "yazi": "Kalbin hızlanması", "neden": "Kalbi hızlandıran sempatik sistemdir." },
-     { "yazi": "Sindirimin hızlanması", "dogru": true, "neden": "Parasempatik sistem dinlenme ve sindirim sistemidir; asetilkolinle sindirimi hızlandırır, kalbi yavaşlatır." },
-     { "yazi": "Göz bebeğinin büyümesi", "neden": "Göz bebeğini büyüten sempatik sistemdir; daha çok ışık girer." }
+     {
+      "yazi": "Kalbin hızlanması",
+      "neden": "Kalbi hızlandıran sempatik sistemdir."
+     },
+     {
+      "yazi": "Sindirimin hızlanması",
+      "dogru": true,
+      "neden": "Parasempatik sistem dinlenme ve sindirim sistemidir; asetilkolinle sindirimi hızlandırır, kalbi yavaşlatır."
+     },
+     {
+      "yazi": "Göz bebeğinin büyümesi",
+      "neden": "Göz bebeğini büyüten sempatik sistemdir; daha çok ışık girer."
+     }
     ]
    },
-   "kart": 13
+   "kart": 14
   }
  ],
  "kapanis": [
@@ -122,5 +242,6 @@
   "Miyelinli aksonda impuls boğumdan boğuma atlar ve çok daha hızlıdır.",
   "Sinapsta aktarım kimyasaldır ve tek yönlüdür.",
   "Refleks omurilikte işlenir; beyin acıyı sonradan fark eder."
- ]
+ ],
+ "soruOnce": true
 }

@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "elektrik-akimi",
  "baslik": "Elektrik Akımı",
- "ozet": "Anahtarı kapat, Ohm yasasını grafikte gör, teli uzat, ampulleri seri ve paralel bağla, karışık devrenin akımını bul.",
+ "ozet": "Önce dene, sonra adını öğren: anahtarı kapat, teli uzat, ampulleri seri ve paralel bağla, karışık devreyi çöz.",
  "adimlar": [
   {
    "baslik": "Akım nedir?",
@@ -60,13 +60,7 @@
     "tamam": "V = I · R = 2 · 4 = <b>8 V</b>. Gerilim iki katına çıkarsa akım da iki katına çıkar; V–I grafiği bir doğrudur.",
     "ipucu": "I = V / R; 2 A için V = 2 · 4."
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "V": 4
-    },
-    "not": "4 V'ta akım I = V / R = 4 / 4 = 1 A."
-   }
+   "kart": 4
   },
   {
    "baslik": "Grafiğin eğimi",
@@ -97,7 +91,7 @@
   },
   {
    "baslik": "Telin direnci",
-   "metin": "Tel iki kat uzun. Kesiti ayarla, direnç yine R₀ olsun.",
+   "metin": "Telin direnci boyla artar, kesitle azalır. Tel iki kat uzun. Kesiti ayarla, direnç yine R₀ olsun.",
    "sahne": {
     "tur": "fiz9-tel"
    },
@@ -123,13 +117,7 @@
     "tamam": "Boy 2 kat, kesit 2 kat: R = 2/2 · R₀ = R₀. Uzun bir uzatma kablosu bu yüzden daha kalın yapılır.",
     "ipucu": "L / A oranı 1 olmalı."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "A": 4
-    },
-    "not": "Boy 2 kat, kesit 4 kat: R = 2/4 · R₀ = R₀/2. Kalın tel akımı kolay geçirir."
-   }
+   "kart": 3
   },
   {
    "baslik": "Seri mi, paralel mi?",
@@ -162,11 +150,11 @@
     "soru": "Bir ampul sökülünce öteki hangi bağlamada yanmaya devam eder?",
     "secenekler": [
      {
-      "yazi": "Seri bağlamada",
+      "yazi": "Seride",
       "neden": "Seride tek yol vardır; bir ampul sökülünce devre açılır ve hepsi söner."
      },
      {
-      "yazi": "Paralel bağlamada",
+      "yazi": "Paralelde",
       "neden": "Paralelde her ampulün kendi kolu vardır; biri sökülse öteki (ideal üreteçte) aynı 12 V'u alır ve aynı parlaklıkta yanar. Evlerdeki tesisat bu yüzden paraleldir.",
       "dogru": true
      },
@@ -198,7 +186,7 @@
       "neden": "İç direnci ≈ 0 olan bir yol açıldı; akım o yolu seçer."
      },
      {
-      "yazi": "Lamba söner, çok büyük akım geçer",
+      "yazi": "Lamba söner, büyük akım geçer",
       "neden": "Ampermetrenin iç direnci neredeyse sıfırdır. Lambanın üzerinden bir <b>kısa devre</b> yolu açılır: lamba söner, pilden çok büyük akım çekilir ve ampermetre yanabilir.",
       "dogru": true
      }
@@ -234,13 +222,7 @@
     "tamam": "Paralel kısım 6·3/(6+3) = 2 Ω, R<sub>eş</sub> = 6 Ω; V = 3 · 6 = <b>18 V</b>. Paralel uçlarda 6 V düşer: 6 Ω'dan 1 A, 3 Ω'dan 2 A, toplam yine 3 A (düğüm kuralı).",
     "ipucu": "Önce paralel kısmı tek dirence indir: 6·3/(6+3)."
    },
-   "kart": 10,
-   "goster": {
-    "deger": {
-     "V": 12
-    },
-    "not": "12 V'ta ana akım 12 / 6 = 2 A. Paralel uçlarda 2 · 2 = 4 V düşer, 4 Ω'da 8 V."
-   }
+   "kart": 10
   }
  ],
  "kapanis": [
@@ -249,5 +231,6 @@
   "R = ρ · L / A. İki kat uzatılan telin direnci 4 kat olur.",
   "Seride akım ortaktır, Reş toplamdır. Paralelde gerilim ortaktır, Reş en küçük dirençten küçüktür.",
   "Ampermetre seri (iç direnci ≈ 0), voltmetre paralel (iç direnci çok büyük) bağlanır."
- ]
+ ],
+ "soruOnce": true
 }
