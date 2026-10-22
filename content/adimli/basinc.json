@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "basinc",
  "baslik": "Basınç",
- "ozet": "Tuğlayı süngere koy, kara bas, denize dal, arabayı kaldır: basıncı yaparak öğren.",
+ "ozet": "Önce dene, sonra adını öğren: tuğlayı bırak, kara bas, dalgıcı indir, arabayı kaldır.",
  "adimlar": [
   {
    "baslik": "Hangisi daha çok gömülür?",
@@ -62,17 +62,11 @@
     },
     "tamam": "600 N ÷ 0,2 m² = 3000 Pa. Kar ayakkabısı ağırlığını değiştirmez, onu geniş alana yayar."
    },
-   "kart": 2,
-   "goster": {
-    "deger": {
-     "A": 10
-    },
-    "not": "Taban alanı 0,1 m²: basınç 600 ÷ 0,1 = 6000 Pa, karın taşıyabildiğinin iki katı. Bu alanla kara gömülürsün."
-   }
+   "kart": 2
   },
   {
    "baslik": "Derine dal",
-   "metin": "Suyun özkütlesi 1000 kg/m³, g ≈ 10 m/s². Dalgıcı, suyun basıncının 200.000 Pa olduğu derinliğe indir.",
+   "metin": "Suyun özkütlesi 1000 kg/m³, g ≈ 10 m/s². Dalgıcı aşağı indir, basıncı izle ve onu suyun basıncının 200.000 Pa olduğu derinlikte durdur.",
    "sahne": {
     "tur": "fiz2-derinlik"
    },
@@ -96,13 +90,7 @@
     },
     "tamam": "20 × 1000 × 10 = 200.000 Pa: derinlik iki katına çıkınca sıvı basıncı da iki katına çıktı."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "h": 10
-    },
-    "not": "10 m derinlikte suyun basıncı 10 × 1000 × 10 = 100.000 Pa."
-   }
+   "kart": 3
   },
   {
    "baslik": "Kabın şekli",
@@ -158,13 +146,7 @@
     },
     "tamam": "500 cm², küçüğün 50 katı: 200 N × 50 = 10.000 N. Ama yoldan kaybedersin: küçük pistonu 50 cm itersen araba yalnızca 1 cm yükselir."
    },
-   "kart": 6,
-   "goster": {
-    "deger": {
-     "A2": 300
-    },
-    "not": "Büyük piston 300 cm², küçüğün 30 katı: kuvvet 200 N × 30 = 6000 N. Araba için yetmiyor."
-   }
+   "kart": 6
   },
   {
    "baslik": "Dağa tırman",
@@ -192,13 +174,7 @@
     },
     "tamam": "Yaklaşık 6000 m'de dış basınç o kadar düşer ki su 80 °C'de kaynar. Bu yüzden yüksek dağlarda yemek geç pişer."
    },
-   "kart": 8,
-   "goster": {
-    "deger": {
-     "r": 3000
-    },
-    "not": "3000 m'de açık hava basıncı düşer, cıva yaklaşık 53 cm'ye iner. Su burada yaklaşık 90 °C'de kaynar."
-   }
+   "kart": 8
   }
  ],
  "kapanis": [
@@ -207,5 +183,6 @@
   "Sıvı basıncı <b>P = h·d·g</b>; derinlikle artar, kabın şekline ve sıvının miktarına bağlı değildir.",
   "<b>Pascal ilkesi</b>: kapalı sıvıda basınç her yere iletilir. Hidrolikte F₁ / A₁ = F₂ / A₂.",
   "Açık hava basıncı deniz seviyesinde 76 cmHg (1 atm) olur; yükseldikçe azalır ve su daha düşük sıcaklıkta kaynar."
- ]
+ ],
+ "soruOnce": true
 }

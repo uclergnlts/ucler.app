@@ -637,19 +637,19 @@
     "cards": [
       {
         "h": "Basınç nedir?",
-        "p": "Basınç, birim yüzeye dik etki eden kuvvetin büyüklüğüdür: <b>P = F / A</b>. Kuvvet newton, alan metrekare ise basıncın birimi <b>pascal</b> olur: 1 Pa = 1 N/m².",
+        "p": "Basınç, birim yüzeye dik etki eden kuvvettir: <b>P = F / A</b>. Kuvvet newton, alan m² ise birim <b>pascal</b>dır: 1 Pa = 1 N/m².",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='basinc-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='38' font-size='24' fill='var(--ink)' text-anchor='middle' font-weight='700'>P = F / A</text><text x='160' y='58' font-size='11' fill='var(--muted)' text-anchor='middle'>basınç = dik kuvvet / yüzey alanı</text><path d='M20 160 H300' stroke='var(--ink)' stroke-width='1.5'/><rect x='60' y='80' width='40' height='80' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><rect x='180' y='125' width='100' height='35' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><path d='M80 100 V140' stroke='var(--ink)' stroke-width='2' marker-end='url(#basinc-1)'/><text x='90' y='124' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>G</text><path d='M230 128 V156' stroke='var(--ink)' stroke-width='2' marker-end='url(#basinc-1)'/><text x='240' y='148' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>G</text><rect x='60' y='161' width='40' height='5' fill='var(--c2)'/><rect x='180' y='161' width='100' height='5' fill='var(--c1)'/><text x='80' y='186' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>aynı G, küçük A</text><text x='230' y='186' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>aynı G, büyük A</text></svg>",
         "key": "Basınç skalerdir (yönü yok); basınç kuvveti F = P·A ise vektördür."
       },
       {
         "h": "Katı basıncı: alan oyunu",
-        "p": "Yatay zemindeki bir cismin basıncı P = G / A'dır. Bıçağın keskin ağzı ve raptiyenin sivri ucu küçük alanla büyük basınç yaratır. Kar ayakkabısı ve tank paleti ise ağırlığı geniş alana yayar; basınç azalır, kara gömülmezsin.",
+        "p": "Bıçağın ağzı ve raptiyenin ucu küçük alanla büyük basınç yapar. Kar ayakkabısı ve tank paleti ağırlığı geniş alana yayar, basıncı azaltır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='basinc-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='14' y='110' width='292' height='60' fill='var(--c1)' fill-opacity='0.12'/><path d='M14 110 H60 M90 110 H306' stroke='var(--c1)' stroke-width='1.5'/><path d='M60 110 V140 H90 V110' fill='none' stroke='var(--muted)' stroke-dasharray='3 3'/><rect x='60' y='72' width='30' height='68' rx='3' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)' stroke-width='1.5'/><rect x='225' y='70' width='30' height='34' rx='3' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)' stroke-width='1.5'/><rect x='185' y='104' width='110' height='6' rx='3' fill='var(--c3)'/><path d='M75 36 V66' stroke='var(--ink)' stroke-width='2' marker-end='url(#basinc-2)'/><text x='83' y='56' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>G</text><path d='M240 36 V64' stroke='var(--ink)' stroke-width='2' marker-end='url(#basinc-2)'/><text x='248' y='56' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>G</text><text x='75' y='24' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>bot</text><text x='240' y='24' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>kar ayakkabısı</text><text x='75' y='160' font-size='11' fill='var(--muted)' text-anchor='middle'>küçük alan</text><text x='240' y='135' font-size='11' fill='var(--muted)' text-anchor='middle'>büyük alan</text><text x='75' y='190' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>battı: P büyük</text><text x='240' y='190' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>batmadı: P küçük</text></svg>",
         "key": "Düzgün katıda P = G/A = h·d·g; katı kuvveti, kapalı sıvı ise basıncı iletir."
       },
       {
         "h": "Sıvı basıncı: P = h·d·g",
-        "p": "Sıvının kendi ağırlığından doğan basınç <b>P = h·d·g</b>'dir. h, serbest yüzeyden aşağı derinlik; d, sıvının özkütlesidir. Bu konuda g ≈ 10 m/s² alıyoruz. Derine indikçe basınç doğrusal artar; bu yüzden baraj duvarları altta daha kalındır.",
+        "p": "Sıvının ağırlığından doğan basınç <b>P = h·d·g</b> (h derinlik, d özkütle). Kabın şekli ve sıvı miktarı fark etmez. Derindeki basınç büyüktür; barajlar altta kalındır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='basinc-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='31' y='50' width='99' height='120' fill='var(--c1)' fill-opacity='0.2'/><path d='M30 30 V170 H130 V30' fill='none' stroke='var(--ink)' stroke-width='2'/><path d='M31 50 H129' stroke='var(--c1)' stroke-width='1.5'/><path d='M50 52 V148' stroke='var(--ink)' stroke-width='1.5' marker-start='url(#basinc-3)' marker-end='url(#basinc-3)'/><text x='58' y='104' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>h</text><path d='M130 80 Q144 80 152 100' fill='none' stroke='var(--c1)' stroke-width='2'/><path d='M130 115 Q156 115 168 145' fill='none' stroke='var(--c1)' stroke-width='2.5'/><path d='M130 150 Q170 150 186 178' fill='none' stroke='var(--c1)' stroke-width='3'/><text x='80' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>derin delik: daha güçlü</text><path d='M215 40 V170 H300' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M215 170 L292 62' stroke='var(--c2)' stroke-width='2.5'/><text x='207' y='46' font-size='12' fill='var(--muted)' text-anchor='end'>P</text><text x='300' y='188' font-size='12' fill='var(--muted)' text-anchor='end'>h</text><text x='258' y='26' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>P = h·d·g</text><text x='268' y='150' font-size='11' fill='var(--muted)' text-anchor='middle'>d sabit</text></svg>",
         "key": "Suda (d = 1000 kg/m³) her 10 m derinlik yaklaşık 100 000 Pa ekler.",
         "etk": {
@@ -693,50 +693,158 @@
       },
       {
         "h": "Tabana etki eden kuvvet",
-        "p": "Kabın şekli tabandaki basıncı değil, toplam kuvveti değiştirir. Sıvının tabana uyguladığı kuvvet <b>F = P·A = h·d·g·A</b>'dır; sıvının ağırlığına eşit olmak zorunda değildir. Düz kapta F = G, yukarı genişleyen kapta F &lt; G, daralan kapta F &gt; G.",
+        "p": "Tabandaki kuvvet <b>F = P·A</b>'dır, sıvının ağırlığına eşit olmayabilir. Düz kapta F = G, yukarı genişleyende F &lt; G, daralanda F &gt; G.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><path d='M10 60 H310' stroke='var(--acc)' stroke-dasharray='4 3'/><text x='310' y='54' font-size='11' fill='var(--acc)' text-anchor='end'>aynı h</text><rect x='36' y='60' width='48' height='90' fill='var(--c1)' fill-opacity='0.2'/><path d='M35 36 V150 H85 V36' fill='none' stroke='var(--ink)' stroke-width='2'/><polygon points='113.6,60 130,150 180,150 196.4,60' fill='var(--c1)' fill-opacity='0.2'/><path d='M108.4 36 L130 150 H180 L201.6 36' fill='none' stroke='var(--ink)' stroke-width='2'/><polygon points='247.3,60 235,150 285,150 272.7,60' fill='var(--c1)' fill-opacity='0.2'/><path d='M250.5 36 L235 150 H285 L269.5 36' fill='none' stroke='var(--ink)' stroke-width='2'/><line x1='18' y1='68' x2='18' y2='142' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='18,148 14.5,140 21.5,140' fill='var(--ink)'/><polygon points='18,62 14.5,70 21.5,70' fill='var(--ink)'/><text x='10' y='109' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>h</text><text x='60' y='170' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='bold'>F = G</text><text x='155' y='170' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='bold'>F &lt; G</text><text x='260' y='170' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='bold'>F &gt; G</text><text x='160' y='192' font-size='12' fill='var(--ink)' text-anchor='middle'>taban alanları eşit: F = h·d·g·A hepsinde aynı</text></svg>",
-        "key": "Yan yüzeye kuvvet ortalama basınçla bulunur: F = (h/2)·d·g·A."
+        "key": "Yan yüzeye kuvvet ortalama basınçla bulunur: F = (h/2)·d·g·A.",
+        "once": {
+          "soru": "Tabanları eşit iki kapta su aynı yükseklikte. Biri yukarı doğru genişliyor, daha çok su alıyor. Hangisinin tabanına etki eden kuvvet büyük?",
+          "secenekler": [
+            {
+              "yazi": "İkisi eşit",
+              "neden": "F = P·A: derinlik aynı olduğu için basınç aynı, taban alanı da aynı; kuvvet eşit. Geniş kaptaki fazla suyun ağırlığını eğik duvarlar taşır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Geniş kabın",
+              "neden": "Fazla suyun ağırlığı eğik duvarlara biner; tabana düşen kuvvet P·A'dır."
+            },
+            {
+              "yazi": "Düz kabın",
+              "neden": "Basınç ve taban alanı aynı; kuvvet de aynı."
+            }
+          ]
+        }
       },
       {
         "h": "Bileşik kaplar",
-        "p": "Tabandan birbirine bağlı kaplara <b>bileşik kaplar</b> denir. İçlerine tek bir sıvı koyarsan, sıvı durgunken bütün kollarda yüzey aynı yatay seviyede olur; kolların şekli önemli değildir. Çaydanlık ağzı ve şehir su depoları bu ilkeyle çalışır.",
+        "p": "Tabandan bağlı kaplara <b>bileşik kaplar</b> denir. Tek bir sıvı durgunken bütün kollarda yüzey aynı seviyededir. Çaydanlık ve su depoları bu ilkeyle çalışır.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M10 70 H310' stroke='var(--acc)' stroke-dasharray='4 3'/><path d='M30 170 H290 V145 H285 V70 H265 V145 H205 L232.6 70 H212.6 L185 145 H145 V70 H95 V145 H60 V70 H40 V145 H30 Z' fill='var(--c1)' fill-opacity='0.25'/><path d='M285 40 V145 H290 V170 H30 V145 H40 V40 M60 40 V145 H95 V40 M145 40 V145 H185 L223.7 40 M243.7 40 L205 145 H265 V40' fill='none' stroke='var(--ink)' stroke-width='2' stroke-linejoin='round'/><text x='160' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>tek sıvı → bütün kollarda aynı seviye</text><text x='160' y='26' font-size='11' fill='var(--acc)' text-anchor='middle'>aynı yatay düzey</text></svg>",
-        "key": "U borusunda karışmayan iki sıvı: ortak düzeyin üstünde h₁·d₁ = h₂·d₂."
+        "key": "U borusunda karışmayan iki sıvı: ortak düzeyin üstünde h₁·d₁ = h₂·d₂.",
+        "once": {
+          "soru": "U şeklindeki bir boruya su döküyorsun; bir kolu ince, öbürü kalın. Su durgunken yüzeyler nasıl olur?",
+          "secenekler": [
+            {
+              "yazi": "Aynı seviyede",
+              "neden": "Aynı derinlikteki noktalarda basınç eşit olmalı; bu yüzden yüzeyler aynı yataydadır. Kolun kalınlığı fark etmez.",
+              "dogru": true
+            },
+            {
+              "yazi": "İncede daha yüksek",
+              "neden": "İnce kolda daha az su var, ama basınç yalnız derinliğe bağlıdır."
+            },
+            {
+              "yazi": "Kalında daha yüksek",
+              "neden": "Kalın kolda su daha çok, ama basınç yalnız derinliğe bağlıdır."
+            }
+          ]
+        }
       },
       {
         "h": "Pascal ilkesi ve hidrolik",
-        "p": "Kapalı bir kaptaki sıvıya uyguladığın basınç, sıvının her noktasına aynen iletilir (<b>Pascal ilkesi</b>). Hidrolik kaldıraçta iki pistondaki basınç eşittir: <b>F₁ / A₁ = F₂ / A₂</b>. Büyük pistonun alanı kaç katsa, kuvvet de o kadar kat olur.",
+        "p": "Kapalı sıvıya uygulanan basınç her noktaya aynen iletilir: <b>Pascal ilkesi</b>. Hidrolikte <b>F₁ / A₁ = F₂ / A₂</b>: alan kaç katsa kuvvet o kadar kat.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='basinc-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M41 90 H79 V150 H169 V110 H289 V175 H41 Z' fill='var(--c1)' fill-opacity='0.25'/><path d='M40 70 V176 H290 V90 M170 90 V150 H80 V70' fill='none' stroke='var(--ink)' stroke-width='2'/><rect x='41' y='82' width='38' height='8' fill='var(--muted)'/><rect x='171' y='102' width='118' height='8' fill='var(--muted)'/><rect x='205' y='68' width='50' height='34' rx='4' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='230' y='90' font-size='12' fill='var(--ink)' text-anchor='middle'>yük</text><path d='M60 36 V78' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#basinc-6)'/><text x='70' y='56' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='700'>F₁</text><path d='M180 98 V66' stroke='var(--c3)' stroke-width='2.5' marker-end='url(#basinc-6)'/><text x='188' y='74' font-size='13' fill='var(--c3)' text-anchor='start' font-weight='700'>F₂</text><text x='230' y='34' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>F₁ / A₁ = F₂ / A₂</text><text x='125' y='168' font-size='10' fill='var(--muted)' text-anchor='middle'>basınç her yere aynen iletilir</text><text x='60' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>A₁ küçük</text><text x='230' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>A₂ büyük</text></svg>",
         "key": "Kuvvetten kazanırsın, yoldan kaybedersin: büyük piston, alan oranı kadar az yükselir."
       },
       {
         "h": "Açık hava basıncı: Torricelli",
-        "p": "Havanın da ağırlığı vardır ve bize basınç yapar. Torricelli cıva dolu bir tüpü cıva çanağına ters çevirdi: deniz seviyesinde cıva 76 cm'de durdu. Yani <b>1 atm = 76 cmHg ≈ 101 325 Pa</b>. Tüpün kalınlığı ya da eğikliği bu düşey yüksekliği değiştirmez.",
+        "p": "Havanın da ağırlığı vardır. Torricelli cıvalı tüpü ters çevirdi: deniz seviyesinde cıva 76 cm'de durdu. <b>1 atm = 76 cmHg ≈ 101 325 Pa</b>.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='basinc-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M40 140 V185 H210 V140' fill='none' stroke='var(--ink)' stroke-width='2'/><rect x='41' y='160' width='168' height='24' fill='var(--muted)' fill-opacity='0.45'/><rect x='121' y='55' width='18' height='120' fill='var(--muted)' fill-opacity='0.45'/><path d='M120 175 V25 H140 V175' fill='none' stroke='var(--ink)' stroke-width='2'/><path d='M141 38 H148' stroke='var(--muted)'/><text x='151' y='42' font-size='11' fill='var(--muted)' text-anchor='start'>boşluk</text><path d='M144 55 H176 M144 160 H176' stroke='var(--muted)' stroke-dasharray='3 3'/><path d='M168 57 V158' stroke='var(--c2)' stroke-width='1.5' marker-start='url(#basinc-7)' marker-end='url(#basinc-7)'/><text x='174' y='112' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='700'>76 cm</text><path d='M62 112 V156' stroke='var(--c1)' stroke-width='2' marker-end='url(#basinc-7)'/><path d='M92 112 V156' stroke='var(--c1)' stroke-width='2' marker-end='url(#basinc-7)'/><text x='77' y='104' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>P₀</text><text x='190' y='178' font-size='10' fill='var(--ink)' text-anchor='middle'>cıva</text><rect x='222' y='70' width='92' height='72' rx='8' fill='var(--panel)'/><text x='268' y='92' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>1 atm</text><text x='268' y='112' font-size='12' fill='var(--ink)' text-anchor='middle'>= 76 cmHg</text><text x='268' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>≈ 101 325 Pa</text><text x='268' y='162' font-size='10' fill='var(--muted)' text-anchor='middle'>deniz seviyesi, 0 °C</text></svg>",
-        "key": "Cıva yerine su kullansaydın sütun yaklaşık 10,3 m olurdu."
+        "key": "Cıva yerine su kullansaydın sütun yaklaşık 10,3 m olurdu.",
+        "once": {
+          "soru": "Su dolu bir bardağın ağzına karton koyup bardağı ters çeviriyorsun. Su dökülmüyor. Kartonu tutan ne?",
+          "secenekler": [
+            {
+              "yazi": "Havanın basıncı",
+              "neden": "Havanın da ağırlığı var; alttan kartona yaptığı basınç, bardaktaki suyun basıncından çok büyüktür.",
+              "dogru": true
+            },
+            {
+              "yazi": "Suyun yapışması",
+              "neden": "Yapışma tek başına kartonu tutamaz; asıl işi havanın basıncı yapar."
+            },
+            {
+              "yazi": "Kartonun hafifliği",
+              "neden": "Hafif bir karton da kendiliğinden düşerdi; onu alttan iten bir şey var."
+            }
+          ]
+        }
       },
       {
         "h": "Yükseklik ve kaynama",
-        "p": "Yukarı çıktıkça üstündeki hava azalır, açık hava basıncı düşer. Basınç düşünce su daha düşük sıcaklıkta kaynar: Everest zirvesinde yaklaşık 70 °C'de. Düdüklü tencere ise içerideki basıncı artırır; su 100 °C'nin üstünde kaynar, yemek çabuk pişer.",
+        "p": "Yükseldikçe açık hava basıncı düşer ve su daha düşük sıcaklıkta kaynar: Everest'te yaklaşık 70 °C. Düdüklü tencere basıncı artırır; su 100 °C'nin üstünde kaynar.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M50 22 V165 H300' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M50 45 C110 80 180 108 275 124' fill='none' stroke='var(--c1)' stroke-width='2.5'/><circle cx='50' cy='45' r='4' fill='var(--c2)'/><circle cx='275' cy='124' r='4' fill='var(--c2)'/><text x='60' y='40' font-size='11' fill='var(--ink)' text-anchor='start'>deniz: 1 atm, su 100 °C'de kaynar</text><text x='285' y='143' font-size='11' fill='var(--ink)' text-anchor='end'>Everest: ≈ 0,33 atm</text><text x='285' y='157' font-size='11' fill='var(--c2)' text-anchor='end' font-weight='700'>su ≈ 70 °C'de kaynar</text><text x='42' y='30' font-size='12' fill='var(--muted)' text-anchor='end'>P</text><text x='300' y='182' font-size='11' fill='var(--muted)' text-anchor='end'>yükseklik</text><text x='50' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>0</text><text x='62' y='152' font-size='11' fill='var(--c1)' text-anchor='start'>yükseldikçe P azalır</text></svg>",
         "key": "Kaynama: sıvının buhar basıncı (buharının yaptığı basınç) dış basınca eşitlenir."
       },
       {
         "h": "Gaz basıncı",
-        "p": "Kapalı kaptaki gaz tanecikleri sürekli hareket eder ve çeperlere çarpar; bu çarpmalar <b>gaz basıncını</b> oluşturur. Gazın ağırlığı çok küçük olduğundan basınç kabın her yerinde eşittir. Hacim sabitken tanecik sayısı ya da sıcaklık artarsa basınç da artar.",
+        "p": "Gaz tanecikleri sürekli hareket edip çeperlere çarpar; bu çarpmalar <b>gaz basıncı</b>dır ve kabın her yerinde eşittir. Hacim sabitken tanecik ya da sıcaklık artarsa basınç artar.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='basinc-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c5)'/></marker></defs><rect x='20' y='50' width='110' height='115' rx='10' fill='var(--panel)' stroke='var(--ink)' stroke-width='2'/><circle cx='45' cy='75' r='5' fill='var(--c5)' fill-opacity='0.6'/><path d='M45 75 l15 -8' stroke='var(--c5)' stroke-width='1.5' marker-end='url(#basinc-9)'/><circle cx='90' cy='70' r='5' fill='var(--c5)' fill-opacity='0.6'/><path d='M90 70 l-12 10' stroke='var(--c5)' stroke-width='1.5' marker-end='url(#basinc-9)'/><circle cx='60' cy='115' r='5' fill='var(--c5)' fill-opacity='0.6'/><path d='M60 115 l14 10' stroke='var(--c5)' stroke-width='1.5' marker-end='url(#basinc-9)'/><circle cx='105' cy='120' r='5' fill='var(--c5)' fill-opacity='0.6'/><path d='M105 120 l-10 -12' stroke='var(--c5)' stroke-width='1.5' marker-end='url(#basinc-9)'/><circle cx='45' cy='145' r='5' fill='var(--c5)' fill-opacity='0.6'/><path d='M45 145 l14 -6' stroke='var(--c5)' stroke-width='1.5' marker-end='url(#basinc-9)'/><circle cx='100' cy='150' r='5' fill='var(--c5)' fill-opacity='0.6'/><path d='M100 150 l-14 -4' stroke='var(--c5)' stroke-width='1.5' marker-end='url(#basinc-9)'/><circle cx='75' cy='92' r='5' fill='var(--c5)' fill-opacity='0.6'/><path d='M75 92 l0 15' stroke='var(--c5)' stroke-width='1.5' marker-end='url(#basinc-9)'/><text x='75' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>gaz: P her yerde eşit</text><path d='M130 80 H190 V158 A25 25 0 0 0 240 158 V40' fill='none' stroke='var(--ink)' stroke-width='16' stroke-linejoin='round'/><path d='M128 80 H190 V158 A25 25 0 0 0 240 158 V38' fill='none' stroke='var(--panel)' stroke-width='12' stroke-linejoin='round'/><path d='M190 130 V158 A25 25 0 0 0 240 158 V90' fill='none' stroke='var(--c1)' stroke-opacity='0.7' stroke-width='12'/><path d='M248 90 H286 M200 130 H286' stroke='var(--muted)' stroke-dasharray='3 3'/><defs><marker id='basinc-9b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M278 92 V128' stroke='var(--ink)' stroke-width='1.5' marker-start='url(#basinc-9b)' marker-end='url(#basinc-9b)'/><text x='290' y='114' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>h</text><text x='240' y='22' font-size='11' fill='var(--muted)' text-anchor='middle'>P₀ (açık uç)</text><text x='196' y='62' font-size='11' fill='var(--muted)' text-anchor='middle'>manometre</text></svg>",
-        "key": "Manometrede sıvı gaz tarafında h kadar alçaksa: P gaz = P₀ + h·d·g."
+        "key": "Manometrede sıvı gaz tarafında h kadar alçaksa: P gaz = P₀ + h·d·g.",
+        "once": {
+          "soru": "Kapalı bir kaptaki gazı ısıtıyorsun; hacim değişmiyor. Gazın basıncı ne olur?",
+          "secenekler": [
+            {
+              "yazi": "Artar",
+              "neden": "Isınan tanecikler hızlanır, çeperlere daha sık ve daha sert çarpar; basınç artar.",
+              "dogru": true
+            },
+            {
+              "yazi": "Azalır",
+              "neden": "Tanecikler yavaşlamaz, hızlanır; çarpmalar güçlenir."
+            },
+            {
+              "yazi": "Değişmez",
+              "neden": "Tanecik sayısı aynı, ama hızları arttığı için çarpmalar güçlenir."
+            }
+          ]
+        }
       },
       {
         "h": "Basınçlar toplanır",
-        "p": "Bir noktadaki toplam basınç, üstündeki bütün basınçların toplamıdır. Açık kapta h derinliğinde <b>P = P₀ + h·d·g</b> olur. Kapalı kapta sıvının üstünde gaz varsa P₀ yerine gaz basıncını yazarsın: <b>P = P<sub>gaz</sub> + h·d·g</b>. Üst üste iki sıvıda her katmanın h·d·g'si eklenir.",
-        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='31' y='70' width='98' height='99' fill='var(--c1)' fill-opacity='0.2'/><path d='M30 40 V170 H130 V40' fill='none' stroke='var(--ink)' stroke-width='2'/><path d='M31 70 H129' stroke='var(--c1)' stroke-width='1.5'/><line x1='70' y1='18' x2='70' y2='59' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='70,66 65.5,56 74.5,56' fill='var(--c3)'/><text x='78' y='34' font-size='12' fill='var(--c3)' font-weight='bold'>P₀</text><circle cx='70' cy='140' r='4' fill='var(--c2)'/><path d='M74 140 H120' stroke='var(--muted)' stroke-dasharray='3 3'/><line x1='112' y1='78' x2='112' y2='132' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='112,138 108.5,130 115.5,130' fill='var(--ink)'/><polygon points='112,72 108.5,80 115.5,80' fill='var(--ink)'/><text x='117' y='110' font-size='12' fill='var(--ink)' font-weight='bold'>h</text><text x='80' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>açık: P = P₀ + h·d·g</text><rect x='190' y='40' width='110' height='130' fill='none' stroke='var(--ink)' stroke-width='2'/><rect x='191' y='41' width='108' height='39' fill='var(--c5)' fill-opacity='0.15'/><text x='225' y='65' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='bold'>gaz: P<tspan font-size='9' baseline-shift='sub'>gaz</tspan></text><rect x='191' y='80' width='108' height='89' fill='var(--c1)' fill-opacity='0.2'/><path d='M191 80 H299' stroke='var(--c1)' stroke-width='1.5'/><circle cx='230' cy='145' r='4' fill='var(--c2)'/><path d='M234 145 H280' stroke='var(--muted)' stroke-dasharray='3 3'/><line x1='272' y1='88' x2='272' y2='137' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='272,143 268.5,135 275.5,135' fill='var(--ink)'/><polygon points='272,82 268.5,90 275.5,90' fill='var(--ink)'/><text x='278' y='117' font-size='12' fill='var(--ink)' font-weight='bold'>h</text><text x='245' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>kapalı: P = P<tspan font-size='9' baseline-shift='sub'>gaz</tspan> + h·d·g</text></svg>"
+        "p": "Bir noktadaki basınç, üstündeki bütün basınçların toplamıdır. Açık kapta <b>P = P₀ + h·d·g</b>. Sıvının üstünde gaz varsa P₀ yerine gaz basıncını yazarsın.",
+        "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='31' y='70' width='98' height='99' fill='var(--c1)' fill-opacity='0.2'/><path d='M30 40 V170 H130 V40' fill='none' stroke='var(--ink)' stroke-width='2'/><path d='M31 70 H129' stroke='var(--c1)' stroke-width='1.5'/><line x1='70' y1='18' x2='70' y2='59' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='70,66 65.5,56 74.5,56' fill='var(--c3)'/><text x='78' y='34' font-size='12' fill='var(--c3)' font-weight='bold'>P₀</text><circle cx='70' cy='140' r='4' fill='var(--c2)'/><path d='M74 140 H120' stroke='var(--muted)' stroke-dasharray='3 3'/><line x1='112' y1='78' x2='112' y2='132' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='112,138 108.5,130 115.5,130' fill='var(--ink)'/><polygon points='112,72 108.5,80 115.5,80' fill='var(--ink)'/><text x='117' y='110' font-size='12' fill='var(--ink)' font-weight='bold'>h</text><text x='80' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>açık: P = P₀ + h·d·g</text><rect x='190' y='40' width='110' height='130' fill='none' stroke='var(--ink)' stroke-width='2'/><rect x='191' y='41' width='108' height='39' fill='var(--c5)' fill-opacity='0.15'/><text x='225' y='65' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='bold'>gaz: P<tspan font-size='9' baseline-shift='sub'>gaz</tspan></text><rect x='191' y='80' width='108' height='89' fill='var(--c1)' fill-opacity='0.2'/><path d='M191 80 H299' stroke='var(--c1)' stroke-width='1.5'/><circle cx='230' cy='145' r='4' fill='var(--c2)'/><path d='M234 145 H280' stroke='var(--muted)' stroke-dasharray='3 3'/><line x1='272' y1='88' x2='272' y2='137' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='272,143 268.5,135 275.5,135' fill='var(--ink)'/><polygon points='272,82 268.5,90 275.5,90' fill='var(--ink)'/><text x='278' y='117' font-size='12' fill='var(--ink)' font-weight='bold'>h</text><text x='245' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>kapalı: P = P<tspan font-size='9' baseline-shift='sub'>gaz</tspan> + h·d·g</text></svg>",
+        "once": {
+          "soru": "Açık bir havuzda 10 m derinliktesin. Üstteki havanın basıncı ≈ 100.000 Pa, 10 m suyun basıncı 100.000 Pa. Toplam basınç kaç?",
+          "secenekler": [
+            {
+              "yazi": "200.000 Pa",
+              "neden": "Basınçlar toplanır: hava 100.000 Pa, su 100.000 Pa; toplam 200.000 Pa, yaklaşık 2 atm.",
+              "dogru": true
+            },
+            {
+              "yazi": "100.000 Pa",
+              "neden": "Bu yalnızca suyun basıncı; suyun üstündeki havayı da eklemelisin."
+            },
+            {
+              "yazi": "50.000 Pa",
+              "neden": "Basınçlar toplanır, ortalaması alınmaz."
+            }
+          ]
+        }
       },
       {
         "h": "Akan akışkanda basınç",
-        "p": "Borudan akan bir akışkan, boru daralınca hızlanır. <b>Bernoulli ilkesine</b> göre akışkanın hızlandığı yerde basıncı düşer. İki kâğıdın arasına üflersen kâğıtlar birbirine yaklaşır. Fırtınada çatının üstünden hızlı esen rüzgâr basıncı düşürür; içerideki havanın basıncı çatıyı yukarı itebilir.",
+        "p": "Akışkan dar yerde hızlanır ve <b>Bernoulli ilkesine</b> göre hızlandığı yerde basıncı düşer. Fırtınada çatının üstünde hızlı esen rüzgâr basıncı düşürür; içerideki hava çatıyı itebilir.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><path d='M20 90 H110 L140 110 H180 L210 90 H300 V150 H210 L180 130 H140 L110 150 H20 Z' fill='var(--c1)' fill-opacity='0.2'/><path d='M20 90 H110 L140 110 H180 L210 90 H300 M20 150 H110 L140 130 H180 L210 150 H300' fill='none' stroke='var(--ink)' stroke-width='2'/><path d='M55 90 V30 M65 90 V30 M155 110 V30 M165 110 V30' fill='none' stroke='var(--ink)' stroke-width='1.5'/><rect x='56' y='45' width='8' height='46' fill='var(--c1)' fill-opacity='0.6'/><rect x='156' y='78' width='8' height='33' fill='var(--c1)' fill-opacity='0.6'/><path d='M70 45 H150' stroke='var(--muted)' stroke-dasharray='3 3'/><line x1='36' y1='120' x2='57' y2='120' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='64,120 54,124.5 54,115.5' fill='var(--c3)'/><line x1='142' y1='120' x2='189' y2='120' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='196,120 186,124.5 186,115.5' fill='var(--c3)'/><line x1='236' y1='120' x2='257' y2='120' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='264,120 254,124.5 254,115.5' fill='var(--c3)'/><text x='300' y='20' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>hız artınca basınç azalır</text><text x='60' y='172' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>geniş</text><text x='60' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>yavaş, P büyük</text><text x='160' y='172' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>dar</text><text x='160' y='188' font-size='11' fill='var(--c2)' text-anchor='middle'>hızlı, P küçük</text></svg>",
-        "key": "Hızlı tren geçerken peronda çizginin gerisinde dur: tren yanındaki hızlı hava basıncı düşürür."
+        "key": "Hızlı tren geçerken peronda çizginin gerisinde dur: tren yanındaki hızlı hava basıncı düşürür.",
+        "once": {
+          "soru": "İki kâğıdı yüz yüze tutup aralarına üflüyorsun. Kâğıtlar ne yapar?",
+          "secenekler": [
+            {
+              "yazi": "Birbirine yaklaşır",
+              "neden": "Arada hızlanan havanın basıncı düşer; dıştaki durgun havanın basıncı kâğıtları içe iter.",
+              "dogru": true
+            },
+            {
+              "yazi": "Birbirinden uzaklaşır",
+              "neden": "Sezgi böyle der, ama hızlanan havanın basıncı düşer."
+            },
+            {
+              "yazi": "Kıpırdamaz",
+              "neden": "Arada basınç düştüğü için kâğıtlar hareket eder."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",

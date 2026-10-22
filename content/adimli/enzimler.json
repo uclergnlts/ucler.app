@@ -3,21 +3,43 @@
  "ders": "biyoloji",
  "konu": "enzimler",
  "baslik": "Enzimler",
- "ozet": "Enerji eşiğini düşür, substratı aktif bölgeye oturt, sıcaklık ve pH ile oyna, inhibitörle yarış.",
+ "ozet": "Önce dene, sonra adını öğren: enzimi ekle, ısıt, pH'yi değiştir, substratla oyna.",
  "adimlar": [
   {
    "baslik": "Enerji eşiği",
-   "metin": "<b>Enzimi</b> ekle ve grafiğe bak.",
-   "sahne": {"tur": "biy2-aktivasyon"},
-   "deger": {"enzim": 0},
-   "kontroller": [{"ad": "enzim", "etiket": "Enzim ekle", "min": 0, "max": 1, "tur": "anahtar"}],
+   "metin": "Bir tepkimenin başlaması için önce bir enerji tepesinin aşılması gerekir: <b>aktivasyon enerjisi</b>. <b>Enzimi</b> ekle ve grafiğe bak.",
+   "sahne": {
+    "tur": "biy2-aktivasyon"
+   },
+   "deger": {
+    "enzim": 0
+   },
+   "kontroller": [
+    {
+     "ad": "enzim",
+     "etiket": "Enzim ekle",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
    "gorev": {
     "tur": "secim",
     "soru": "Enzim neyi değiştirdi?",
     "secenekler": [
-     {"yazi": "Yalnızca aktivasyon enerjisini", "dogru": true, "neden": "Tepe alçalınca çarpışan moleküllerin çok daha büyük kısmı eşiği aşar; tepkime bu yüzden hızlanır."},
-     {"yazi": "Oluşan ürünü", "neden": "Grafiğin sağ ucuna bak: ürün aynı yerde. Enzim yalnızca yolu kolaylaştırır."},
-     {"yazi": "Substratla ürün arasındaki enerji farkını", "neden": "Mor oka bak: enzimli de enzimsiz de enerji farkı aynı. Değişen yalnızca tepenin yüksekliği."}
+     {
+      "yazi": "Yalnızca aktivasyon enerjisini",
+      "dogru": true,
+      "neden": "Tepe alçalınca çarpışan moleküllerin çok daha büyük kısmı eşiği aşar; tepkime bu yüzden hızlanır."
+     },
+     {
+      "yazi": "Oluşan ürünü",
+      "neden": "Grafiğin sağ ucuna bak: ürün aynı yerde. Enzim yalnızca yolu kolaylaştırır."
+     },
+     {
+      "yazi": "Toplam enerji farkını",
+      "neden": "Mor oka bak: enzimli de enzimsiz de enerji farkı aynı. Değişen yalnızca tepenin yüksekliği."
+     }
     ]
    },
    "kart": 1
@@ -25,79 +47,234 @@
   {
    "baslik": "Enzim-substrat kompleksi",
    "metin": "Enzim, etki ettiği maddeyi (<b>substrat</b>) yakalayıp dönüştürüyor. Oynatmadan önce tahmin et.",
-   "sahne": {"tur": "biy2-enzim-substrat", "sure": 5},
+   "sahne": {
+    "tur": "biy2-enzim-substrat",
+    "sure": 5
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Tepkime bitince enzime ne olur?",
     "secenekler": [
-     {"yazi": "Değişmeden çıkar, yeniden kullanılır", "dogru": true, "neden": "Ürünler ayrılınca aktif bölge boşalır ve enzim yeni bir substrat bağlar. Bu yüzden hücre az miktarda enzimle çok iş görür."},
-     {"yazi": "Ürünle birlikte harcanır", "neden": "Enzim katalizördür, tepkimede tükenmez."},
-     {"yazi": "Kendisi ürüne dönüşür", "neden": "Ürüne dönüşen substrattır; enzim yalnızca bu dönüşümü hızlandırır."}
+     {
+      "yazi": "Değişmeden çıkar",
+      "dogru": true,
+      "neden": "Ürünler ayrılınca aktif bölge boşalır ve enzim yeni bir substrat bağlar. Bu yüzden hücre az miktarda enzimle çok iş görür."
+     },
+     {
+      "yazi": "Ürünle harcanır",
+      "neden": "Enzim katalizördür, tepkimede tükenmez."
+     },
+     {
+      "yazi": "Ürüne dönüşür",
+      "neden": "Ürüne dönüşen substrattır; enzim yalnızca bu dönüşümü hızlandırır."
+     }
     ]
    },
-   "kart": 1
+   "kart": 2
   },
   {
    "baslik": "Her enzimin kendi substratı",
    "metin": "Bu enzim <b>laktaz</b>. Üç maddeden hangisi aktif bölgesine oturur?",
-   "sahne": {"tur": "biy2-ozgulluk", "sure": 3, "maddeler": [{"ad": "yağ", "sekil": "zincir"}, {"ad": "laktoz", "sekil": "sivri"}, {"ad": "maltoz", "sekil": "kare"}]},
+   "sahne": {
+    "tur": "biy2-ozgulluk",
+    "sure": 3,
+    "maddeler": [
+     {
+      "ad": "yağ",
+      "sekil": "zincir"
+     },
+     {
+      "ad": "laktoz",
+      "sekil": "sivri"
+     },
+     {
+      "ad": "maltoz",
+      "sekil": "kare"
+     }
+    ]
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Laktaz hangisine etki eder?",
     "secenekler": [
-     {"yazi": "Yağ", "neden": "Yağları lipaz parçalar; laktazın aktif bölgesi yağa uymaz."},
-     {"yazi": "Laktoz", "dogru": true, "neden": "Laktoz, laktazın aktif bölgesine tam oturur. Laktazı az olan kişiler sütteki laktozu sindiremez."},
-     {"yazi": "Maltoz", "neden": "Maltozu maltaz parçalar. Benzer bir şeker olsa da laktazın aktif bölgesine uymaz."}
+     {
+      "yazi": "Yağ",
+      "neden": "Yağları lipaz parçalar; laktazın aktif bölgesi yağa uymaz."
+     },
+     {
+      "yazi": "Laktoz",
+      "dogru": true,
+      "neden": "Laktoz, laktazın aktif bölgesine tam oturur. Laktazı az olan kişiler sütteki laktozu sindiremez."
+     },
+     {
+      "yazi": "Maltoz",
+      "neden": "Maltozu maltaz parçalar. Benzer bir şeker olsa da laktazın aktif bölgesine uymaz."
+     }
     ]
    },
-   "kart": 3
+   "kart": 4
   },
   {
    "baslik": "Enzim laboratuvarı",
    "metin": "Tüpte bir insan enzimi substratı parçalıyor. Sıcaklığı değiştir ve enzimlere, ürün sayısına ve grafiğe bak. Enzim bozulursa <b>Taze enzim koy</b> ile yenisini ekleyebilirsin.",
-   "sahne": {"tur": "sim-enzim"},
-   "deger": {"T": 20, "bozuk": 0, "yeni": 0},
+   "sahne": {
+    "tur": "sim-enzim"
+   },
+   "deger": {
+    "T": 20,
+    "bozuk": 0,
+    "yeni": 0
+   },
    "kontroller": [
-    {"ad": "T", "etiket": "Sıcaklık", "min": 0, "max": 80, "birim": "°C"},
-    {"ad": "yeni", "etiket": "Taze enzim koy", "min": 0, "max": 1, "tur": "dugme"}
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": 0,
+     "max": 80,
+     "birim": "°C"
+    },
+    {
+     "ad": "yeni",
+     "etiket": "Taze enzim koy",
+     "min": 0,
+     "max": 1,
+     "tur": "dugme"
+    }
    ],
-   "gorev": {"tur": "kesfet", "bulgular": [
-    {"yazi": "Enzimin <b>en hızlı</b> çalıştığı sıcaklığı bul.", "hedef": {"T": [36, 38], "bozuk": 0}, "coz": [{"T": 37, "yeni": 1}],
-     "tamam": "İnsan enzimlerinin <b>optimum sıcaklığı</b> yaklaşık 37 °C: aktif bölgeler en sık dolup boşalıyor."},
-    {"yazi": "Enzimi <b>5 °C</b>'ye soğut, sonra yeniden <b>37 °C</b>'ye ısıt.", "hedef": [{"T": [0, 5], "bozuk": 0}, {"T": [36, 38], "bozuk": 0}], "sirali": true, "coz": [{"T": 5, "yeni": 1}, {"T": 37}],
-     "tamam": "Soğukta enzim yavaşladı ama bozulmadı; ısınınca eski hızına döndü. Soğuk enzimi bozmaz, yalnızca yavaşlatır."},
-    {"yazi": "Şimdi <b>60 °C</b>'ye çık, sonra yeniden <b>37 °C</b>'ye soğut.", "hedef": {"T": [36, 38], "bozuk": 1}, "coz": [{"T": 60}, {"T": 37}],
-     "tamam": "55 °C'yi geçince enzimin 3 boyutlu şekli bozuldu: <b>denatürasyon</b>. Soğutsan da aktif bölge geri gelmedi; pişen yumurta akı da çiğe dönmez."}
-   ]},
+   "gorev": {
+    "tur": "kesfet",
+    "bulgular": [
+     {
+      "yazi": "Enzimin <b>en hızlı</b> çalıştığı sıcaklığı bul.",
+      "hedef": {
+       "T": [
+        36,
+        38
+       ],
+       "bozuk": 0
+      },
+      "coz": [
+       {
+        "T": 37,
+        "yeni": 1
+       }
+      ],
+      "tamam": "İnsan enzimlerinin <b>optimum sıcaklığı</b> yaklaşık 37 °C: aktif bölgeler en sık dolup boşalıyor."
+     },
+     {
+      "yazi": "Enzimi <b>5 °C</b>'ye soğut, sonra yeniden <b>37 °C</b>'ye ısıt.",
+      "hedef": [
+       {
+        "T": [
+         0,
+         5
+        ],
+        "bozuk": 0
+       },
+       {
+        "T": [
+         36,
+         38
+        ],
+        "bozuk": 0
+       }
+      ],
+      "sirali": true,
+      "coz": [
+       {
+        "T": 5,
+        "yeni": 1
+       },
+       {
+        "T": 37
+       }
+      ],
+      "tamam": "Soğukta enzim yavaşladı ama bozulmadı; ısınınca eski hızına döndü. Soğuk enzimi bozmaz, yalnızca yavaşlatır."
+     },
+     {
+      "yazi": "Şimdi <b>60 °C</b>'ye çık, sonra yeniden <b>37 °C</b>'ye soğut.",
+      "hedef": {
+       "T": [
+        36,
+        38
+       ],
+       "bozuk": 1
+      },
+      "coz": [
+       {
+        "T": 60
+       },
+       {
+        "T": 37
+       }
+      ],
+      "tamam": "55 °C'yi geçince enzimin 3 boyutlu şekli bozuldu: <b>denatürasyon</b>. Soğutsan da aktif bölge geri gelmedi; pişen yumurta akı da çiğe dönmez."
+     }
+    ]
+   },
    "kart": 5
   },
   {
    "baslik": "pH",
    "metin": "Mide asidiktir, ince bağırsak hafif baziktir. pH'yi değiştir ve <b>pepsini</b> en hızlı çalıştığı yere getir.",
-   "sahne": {"tur": "biy2-ph"},
-   "deger": {"ph": 7},
-   "kontroller": [{"ad": "ph", "etiket": "pH", "min": 0, "max": 14}],
+   "sahne": {
+    "tur": "biy2-ph"
+   },
+   "deger": {
+    "ph": 7
+   },
+   "kontroller": [
+    {
+     "ad": "ph",
+     "etiket": "pH",
+     "min": 0,
+     "max": 14
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": {"ph": 2},
+    "hedef": {
+     "ph": 2
+    },
     "tamam": "Pepsin midenin asidinde (pH ≈ 2) en hızlıdır; pH 8'de neredeyse durur, orada tripsin çalışır."
    },
-   "kart": 5,
-   "goster": { "deger": { "ph": 8 }, "not": "pH 8'de tripsin en hızlı çalışıyor, pepsin ise neredeyse hiç çalışmıyor." }
+   "kart": 6
   },
   {
    "baslik": "Substrat miktarı",
    "metin": "Burada 4 enzim var ve sayıları değişmiyor. Substrat ekle ve hızın nasıl değiştiğine bak.",
-   "sahne": {"tur": "biy2-doygunluk"},
-   "deger": {"s": 1},
-   "kontroller": [{"ad": "s", "etiket": "Substrat", "min": 0, "max": 12, "tur": "sayac"}],
+   "sahne": {
+    "tur": "biy2-doygunluk"
+   },
+   "deger": {
+    "s": 1
+   },
+   "kontroller": [
+    {
+     "ad": "s",
+     "etiket": "Substrat",
+     "min": 0,
+     "max": 12,
+     "tur": "sayac"
+    }
+   ],
    "gorev": {
     "tur": "secim",
     "soru": "Substratı 8'den 12'ye çıkarırsan hız ne olur?",
     "secenekler": [
-     {"yazi": "Değişmez", "dogru": true, "neden": "4 enzimin 4 aktif bölgesi 4. substratta dolmuştu; fazlası sırada bekler."},
-     {"yazi": "Artar", "neden": "Substratı 4'ün üstüne çıkar ve hız çubuğuna bak. Aktif bölgeler dolunca ne oluyor?"},
-     {"yazi": "Azalır", "neden": "Substrat çoğalınca hız düşmez. Ama dolu enzimler daha fazlasını aynı anda işleyemez."}
+     {
+      "yazi": "Değişmez",
+      "dogru": true,
+      "neden": "4 enzimin 4 aktif bölgesi 4. substratta dolmuştu; fazlası sırada bekler."
+     },
+     {
+      "yazi": "Artar",
+      "neden": "Substratı 4'ün üstüne çıkar ve hız çubuğuna bak. Aktif bölgeler dolunca ne oluyor?"
+     },
+     {
+      "yazi": "Azalır",
+      "neden": "Substrat çoğalınca hız düşmez. Ama dolu enzimler daha fazlasını aynı anda işleyemez."
+     }
     ]
    },
    "kart": 7
@@ -105,12 +282,30 @@
   {
    "baslik": "Yarışmalı inhibitör",
    "metin": "Şu an 4 enzimin 2'sinin aktif bölgesini <b>yarışmalı inhibitör</b> kapatmış. Substrat ekleyerek en az <b>3 enzimi</b> yeniden çalıştır.",
-   "sahne": {"tur": "biy2-inhibitor"},
-   "deger": {"s": 4},
-   "kontroller": [{"ad": "s", "etiket": "Substrat", "min": 4, "max": 16, "adim": 4, "tur": "sayac"}],
+   "sahne": {
+    "tur": "biy2-inhibitor"
+   },
+   "deger": {
+    "s": 4
+   },
+   "kontroller": [
+    {
+     "ad": "s",
+     "etiket": "Substrat",
+     "min": 4,
+     "max": 16,
+     "adim": 4,
+     "tur": "sayac"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": {"s": [8, 16]},
+    "hedef": {
+     "s": [
+      8,
+      16
+     ]
+    },
     "tamam": "Substrat çoğalınca aktif bölgeyi kapma şansı artar ve inhibitörün etkisi azalır. Yarışmasız inhibitöre karşı bu yol işe yaramaz, çünkü o aktif bölgeye bağlanmaz."
    },
    "kart": 9
@@ -122,5 +317,6 @@
   "Aktif bölge esnektir (<b>uyarılmış uyum</b>) ve her enzim belirli substratlara etki eder (<b>özgüllük</b>).",
   "Her enzimin <b>optimum sıcaklığı</b> ve <b>pH'si</b> vardır; aşırı sıcak ve uygunsuz pH enzimi denatüre eder.",
   "Aktif bölgeler dolunca hız sabitlenir (doygunluk). <b>Yarışmalı inhibitörün</b> etkisi substrat artınca azalır."
- ]
+ ],
+ "soruOnce": true
 }

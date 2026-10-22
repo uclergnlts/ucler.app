@@ -733,55 +733,91 @@
     "cards": [
       {
         "h": "Enzim: biyolojik katalizör",
-        "p": "Enzimler, hücredeki tepkimeleri hızlandıran ve çoğu protein yapılı moleküllerdir. Her tepkimenin başlaması için aşılması gereken bir enerji eşiği vardır: <b>aktivasyon enerjisi</b>. Enzim bu eşiği düşürür; tepkimenin ürününü ve toplam enerji farkını değiştirmez.",
+        "p": "Enzimler hücredeki tepkimeleri hızlandıran, çoğu protein yapılı moleküllerdir. <b>Aktivasyon enerjisini</b> düşürür; ürünü ve toplam enerji farkını değiştirmez.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='35' y1='25' x2='35' y2='170' stroke='var(--ink)'/><line x1='35' y1='170' x2='300' y2='170' stroke='var(--ink)'/><path d='M45,110 L90,110 C120,110 130,40 160,40 C190,40 200,150 230,150 L295,150' fill='none' stroke='var(--c2)' stroke-width='2.5'/><path d='M45,110 L90,110 C120,110 130,85 160,85 C190,85 200,150 230,150 L295,150' fill='none' stroke='var(--c3)' stroke-width='2.5' stroke-dasharray='6 4'/><text x='112' y='40' font-size='12' fill='var(--c2)' text-anchor='end'>enzimsiz</text><text x='160' y='102' font-size='12' fill='var(--c3)' text-anchor='middle'>enzimli</text><text x='45' y='104' font-size='12' fill='var(--ink)'>substrat</text><text x='262' y='144' font-size='12' fill='var(--ink)' text-anchor='middle'>ürün</text><text x='40' y='20' font-size='12' fill='var(--muted)'>enerji</text><text x='300' y='188' font-size='12' fill='var(--muted)' text-anchor='end'>tepkime ilerleyişi</text></svg>",
         "key": "Enzim = aktivasyon enerjisini düşüren biyolojik katalizör"
       },
       {
         "h": "Substrat ve aktif bölge",
-        "p": "Enzimin etki ettiği madde <b>substrat</b>tır. Az önce gördüğün gibi substrat, enzimin <b>aktif bölge</b>sine bağlanır ve <b>enzim-substrat kompleksi</b> oluşur. Tepkime gerçekleşir, ürünler ayrılır. Enzim değişmeden çıkar ve tekrar tekrar kullanılır.",
+        "p": "Enzimin etki ettiği madde <b>substrat</b>tır. Substrat <b>aktif bölge</b>ye bağlanır, <b>enzim-substrat kompleksi</b> oluşur. Ürünler ayrılınca enzim değişmeden çıkar, tekrar kullanılır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='enzimler-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><g fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='2'><path d='M10,100 L30,100 L30,112 L50,112 L50,100 L70,100 L70,140 Q40,155 10,140 Z'/><path d='M120,100 L140,100 L140,112 L160,112 L160,100 L180,100 L180,140 Q150,155 120,140 Z'/><path d='M230,100 L250,100 L250,112 L270,112 L270,100 L290,100 L290,140 Q260,155 230,140 Z'/></g><g fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)' stroke-width='2'><rect x='15' y='45' width='20' height='24'/><rect x='140' y='88' width='20' height='24'/><rect x='245' y='62' width='10' height='22'/><rect x='268' y='58' width='10' height='22'/></g><text x='75' y='70' font-size='12' fill='var(--muted)'>aktif bölge</text><line x1='73' y1='72' x2='45' y2='104' stroke='var(--muted)'/><g stroke='var(--ink)' stroke-width='1.5' marker-end='url(#enzimler-2)'><line x1='78' y1='125' x2='112' y2='125'/><line x1='188' y1='125' x2='222' y2='125'/></g><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='40' y='175'>E + S</text><text x='150' y='175'>ES kompleksi</text><text x='260' y='175'>E + ürünler</text></g><text x='260' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>enzim aynen kalır</text></svg>",
         "key": "E + S → ES → E + Ürün"
       },
       {
         "h": "Anahtar-kilit mi, uyarılmış uyum mu?",
-        "p": "<b>Anahtar-kilit modeli</b>: aktif bölge, substratın şekline önceden tam uyar. <b>Uyarılmış uyum modeli</b> (bugün daha çok kabul gören): aktif bölge esnektir; substrat bağlanınca enzim şeklini biraz değiştirip onu sıkıca sarar, eldivenin ele oturması gibi.",
+        "p": "<b>Anahtar-kilit modeli</b>: aktif bölge substrata önceden tam uyar. <b>Uyarılmış uyum</b> (bugün kabul gören): aktif bölge esnektir, substratı eldivenin ele oturması gibi sarar.",
         "svg": "<svg viewBox='0 0 320 210'><defs><marker id='enzimler-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><text x='10' y='20' font-size='13' fill='var(--ink)'>Anahtar-kilit</text><g fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='2'><path d='M40,50 L70,50 L80,65 L90,50 L120,50 L120,85 L40,85 Z'/><path d='M190,50 L220,50 L230,65 L240,50 L270,50 L270,85 L190,85 Z'/></g><g fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)' stroke-width='2'><polygon points='70,28 90,28 80,43'/><polygon points='220,50 240,50 230,65'/></g><line x1='135' y1='65' x2='172' y2='65' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#enzimler-3)'/><text x='230' y='102' font-size='12' fill='var(--muted)' text-anchor='middle'>önceden tam uyar</text><text x='10' y='124' font-size='13' fill='var(--ink)'>Uyarılmış uyum</text><g fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='2'><path d='M40,150 L65,150 Q80,170 95,150 L120,150 L120,185 L40,185 Z'/><path d='M190,150 L214,150 L219,137 C219,160 241,160 241,137 L246,150 L270,150 L270,185 L190,185 Z'/></g><g fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)' stroke-width='2'><circle cx='80' cy='134' r='9'/><circle cx='230' cy='146' r='9'/></g><line x1='135' y1='165' x2='172' y2='165' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#enzimler-3)'/><text x='230' y='202' font-size='12' fill='var(--muted)' text-anchor='middle'>enzim şekil değiştirip sarar</text></svg>",
-        "key": "Uyarılmış uyum: aktif bölge esnektir, substrata göre biçim alır."
+        "key": "Uyarılmış uyum: aktif bölge esnektir, substrata göre biçim alır.",
+        "once": {
+          "soru": "Substrat bağlanırken enzimin aktif bölgesinin biraz şekil değiştirdiği görüldü. Aktif bölge nasıl bir yapıdadır?",
+          "secenekler": [
+            {
+              "yazi": "Esnek",
+              "neden": "Aktif bölge esnektir; substrat bağlanınca onu eldiven gibi sarar. Buna uyarılmış uyum denir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Taş gibi sert",
+              "neden": "Sert olsaydı şekil değiştiremezdi; eski anahtar-kilit modeli böyle düşünüyordu."
+            },
+            {
+              "yazi": "Şekilsiz",
+              "neden": "Belirli bir şekli vardır; olmasaydı her maddeye bağlanırdı."
+            }
+          ]
+        }
       },
       {
         "h": "Özgüllük",
-        "p": "Her enzim genellikle yalnızca belirli bir substrata ya da benzer bir gruba etki eder: <b>özgüllük</b>. Az önce gördüğün gibi laktaz yalnızca laktozu parçalar, yağa ve maltoza dokunmaz. Enzim adlarının çoğu, substrat adına <em>-az</em> eki getirilerek yapılır.",
+        "p": "Her enzim genellikle yalnız belirli bir substrata etki eder: <b>özgüllük</b>. Adların çoğu substrat adına <em>-az</em> eki getirilerek yapılır: laktoz → laktaz.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='enzimler-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><path d='M110,110 L145,110 L145,128 L175,128 L175,110 L210,110 L210,150 L110,150 Z' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='2'/><text x='160' y='143' font-size='12' fill='var(--ink)' text-anchor='middle'>enzim</text><rect x='40' y='60' width='30' height='18' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)' stroke-width='2'/><polygon points='240,78 270,78 255,55' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)' stroke-width='2'/><line x1='72' y1='80' x2='140' y2='115' stroke='var(--c3)' stroke-width='2' marker-end='url(#enzimler-4)'/><line x1='245' y1='85' x2='205' y2='105' stroke='var(--c2)' stroke-width='2' stroke-dasharray='4 3'/><path d='M45,40 L52,48 L66,32' fill='none' stroke='var(--c3)' stroke-width='3'/><g stroke='var(--c2)' stroke-width='3'><line x1='276' y1='34' x2='290' y2='48'/><line x1='290' y1='34' x2='276' y2='48'/></g><g font-size='12' text-anchor='middle'><text x='55' y='100' fill='var(--c3)'>uyar</text><text x='270' y='105' fill='var(--c2)'>uymaz</text></g><text x='160' y='182' font-size='12' fill='var(--muted)' text-anchor='middle'>laktaz yalnızca laktozu parçalar</text></svg>",
         "key": "laktoz → laktaz, maltoz → maltaz, lipit → lipaz"
       },
       {
         "h": "Sıcaklık ve denatürasyon",
-        "p": "Sıcaklık arttıkça hız artar ve <b>optimum sıcaklıkta</b> en yüksek olur (insan enzimlerinde ≈37 °C). Daha sıcakta enzimin 3 boyutlu şekli bozulur: <b>denatürasyon</b>. Aktif bölge çalışmaz ve bu çoğunlukla geri dönmez (pişen yumurta akı gibi). Soğuk enzimi bozmaz, yalnızca yavaşlatır.",
+        "p": "Hız <b>optimum sıcaklıkta</b> en yüksektir (insanda ≈37 °C). Daha sıcakta enzimin şekli bozulur: <b>denatürasyon</b>, çoğunlukla geri dönmez. Soğuk ise yalnızca yavaşlatır.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='40' y1='25' x2='40' y2='170' stroke='var(--ink)'/><line x1='40' y1='170' x2='305' y2='170' stroke='var(--ink)'/><path d='M40,162 C90,155 140,120 165,55 C170,43 178,43 185,60 L220,166' fill='none' stroke='var(--c2)' stroke-width='2.5'/><line x1='172' y1='48' x2='172' y2='170' stroke='var(--muted)' stroke-dasharray='3 3'/><text x='172' y='36' font-size='12' fill='var(--ink)' text-anchor='middle'>optimum ≈37 °C</text><text x='225' y='100' font-size='12' fill='var(--c2)'>denatürasyon</text><text x='80' y='135' font-size='12' fill='var(--c1)' text-anchor='middle'>soğukta yavaş</text><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='40' y='186'>0</text><text x='172' y='186'>37</text><text x='254' y='186'>60</text></g><text x='44' y='20' font-size='12' fill='var(--muted)'>tepkime hızı</text><text x='232' y='158' font-size='12' fill='var(--muted)'>sıcaklık °C</text></svg>",
         "key": "Soğuk yavaşlatır (geri döner), aşırı sıcak bozar (çoğunlukla dönmez)."
       },
       {
         "h": "pH: her enzimin sevdiği ortam",
-        "p": "Az önce gördüğün gibi her enzimin en iyi çalıştığı bir pH vardır. Midedeki <b>pepsin</b> asidik ortamda (pH ≈ 2), ince bağırsaktaki <b>tripsin</b> hafif bazik ortamda (pH ≈ 8) en hızlıdır. Uygun olmayan pH aktif bölgenin şeklini bozar; aşırısı denatürasyona yol açar.",
+        "p": "Her enzimin sevdiği bir pH vardır: midedeki <b>pepsin</b> pH ≈ 2'de, bağırsaktaki <b>tripsin</b> pH ≈ 8'de en hızlıdır. Aşırı pH şekli bozar.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='40' y1='25' x2='40' y2='170' stroke='var(--ink)'/><line x1='40' y1='170' x2='305' y2='170' stroke='var(--ink)'/><path d='M40,165 C60,160 65,50 77,50 C89,50 95,160 115,165' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='2.5'/><path d='M150,165 C170,160 177,50 189,50 C201,50 208,160 228,165' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='2.5'/><text x='77' y='40' font-size='12' fill='var(--c2)' text-anchor='middle'>pepsin (mide)</text><text x='189' y='40' font-size='12' fill='var(--c1)' text-anchor='middle'>tripsin (ince bağırsak)</text><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='40' y='186'>0</text><text x='77' y='186'>2</text><text x='189' y='186'>8</text><text x='296' y='186'>14</text></g><text x='300' y='155' font-size='12' fill='var(--muted)' text-anchor='end'>pH</text><text x='44' y='20' font-size='12' fill='var(--muted)'>hız</text></svg>",
         "key": "Pepsin asidi, tripsin hafif bazı sever."
       },
       {
         "h": "Substrat ve enzim miktarı",
-        "p": "Enzim miktarı sabitken substrat arttıkça hız artar; tüm aktif bölgeler dolunca hız sabitlenir (<b>doygunluk</b>). Substrat bolsa, enzim miktarını artırmak hızı doğru orantılı artırır. Substrat sabitse enzim eklemek toplam ürün miktarını artırmaz; aynı ürüne daha kısa sürede ulaşılır.",
+        "p": "Enzim sabitken substrat arttıkça hız artar, aktif bölgeler dolunca durur: <b>doygunluk</b>. Enzim eklemek hızı artırır; substrat sabitse ürün aynı kalır, yalnız çabuk oluşur.",
         "svg": "<svg viewBox='0 0 320 205'><g stroke='var(--ink)'><line x1='25' y1='40' x2='25' y2='160'/><line x1='25' y1='160' x2='150' y2='160'/><line x1='180' y1='40' x2='180' y2='160'/><line x1='180' y1='160' x2='305' y2='160'/></g><line x1='25' y1='58' x2='150' y2='58' stroke='var(--muted)' stroke-dasharray='4 3'/><path d='M25,160 C55,80 90,62 150,60' fill='none' stroke='var(--c3)' stroke-width='2.5'/><line x1='180' y1='160' x2='300' y2='50' stroke='var(--c1)' stroke-width='2.5'/><text x='100' y='50' font-size='12' fill='var(--muted)' text-anchor='middle'>doygunluk</text><g font-size='12' fill='var(--muted)'><text x='28' y='32'>hız</text><text x='183' y='32'>hız</text></g><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='88' y='180'>substrat miktarı</text><text x='243' y='180'>enzim miktarı</text></g><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='88' y='196'>(enzim sabit)</text><text x='243' y='196'>(substrat bol)</text></g></svg>",
         "key": "Doygunlukta hızı sınırlayan substrat değil, enzim sayısıdır."
       },
       {
         "h": "Kofaktör ve koenzim",
-        "p": "Bazı enzimler yardımcı olmadan çalışamaz. Protein kısmına <b>apoenzim</b>, yardımcıya <b>kofaktör</b> denir. Kofaktör Mg<sup>2+</sup>, Zn<sup>2+</sup> gibi bir mineral iyonu ya da organik bir molekül olabilir; organik olana <b>koenzim</b> denir, çoğu vitaminlerden (B grubu) yapılır.",
+        "p": "Bazı enzimler yardımcıyla çalışır. Protein kısmı <b>apoenzim</b>, yardımcı <b>kofaktör</b>dür: Mg²⁺, Zn²⁺ gibi bir iyon ya da organik <b>koenzim</b> (çoğu B vitamininden).",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='enzimler-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><path d='M20,70 L45,70 L45,85 L60,85 L60,70 L85,70 L85,110 Q52,125 20,110 Z' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='2'/><text x='103' y='98' font-size='15' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='125' cy='92' r='10' fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)' stroke-width='2'/><line x1='145' y1='92' x2='205' y2='92' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#enzimler-8)'/><path d='M215,70 L240,70 L240,85 L255,85 L255,70 L280,70 L280,110 Q247,125 215,110 Z' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='2'/><circle cx='247.5' cy='78' r='7' fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)' stroke-width='2'/><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='52' y='140'>Apoenzim</text><text x='125' y='140'>Kofaktör</text><text x='247' y='140'>Holoenzim</text></g><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='52' y='56'>protein</text><text x='247' y='56'>çalışan enzim</text></g><g font-size='12' fill='var(--ink)'><text x='20' y='170'>İnorganik kofaktör: Mg²⁺, Zn²⁺, Fe²⁺</text><text x='20' y='190'>Organik olan = koenzim (B vitaminleri)</text></g></svg>",
-        "key": "Apoenzim + kofaktör = holoenzim (çalışan enzim)"
+        "key": "Apoenzim + kofaktör = holoenzim (çalışan enzim)",
+        "once": {
+          "soru": "Bazı enzimler küçük bir yardımcı olmadan çalışmaz. Bu yardımcılar çoğunlukla nereden gelir?",
+          "secenekler": [
+            {
+              "yazi": "Vitamin ve minerallerden",
+              "neden": "Mg²⁺, Zn²⁺ gibi mineraller ve B vitaminlerinden yapılan koenzimler enzimlere yardım eder. Vitaminlerin az da olsa gerekli olmasının bir nedeni budur.",
+              "dogru": true
+            },
+            {
+              "yazi": "Yağlardan",
+              "neden": "Yağlar enerji deposudur; enzim yardımcısı değildir."
+            },
+            {
+              "yazi": "Selülozdan",
+              "neden": "Selüloz bitki hücre duvarını yapar; insan onu sindiremez bile."
+            }
+          ]
+        }
       },
       {
         "h": "İnhibitörler: enzim frenleri",
-        "p": "Enzimi yavaşlatan ya da durduran maddelere <b>inhibitör</b> denir. <b>Yarışmalı</b> inhibitör substrata benzer, aktif bölgeyi kapar; substrat çoğalınca etkisi azalır. <b>Yarışmasız</b> inhibitör başka bir yere bağlanıp enzimin şeklini bozar. Birçok ilaç ve zehir böyle etki eder.",
+        "p": "Enzimi frenleyen maddeye <b>inhibitör</b> denir. <b>Yarışmalı</b> olan substrata benzer, aktif bölgeyi kapar. <b>Yarışmasız</b> olan başka yere bağlanıp şekli bozar.",
         "svg": "<svg viewBox='0 0 320 205'><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='60' y='30'>Yarışmalı</text><text x='230' y='30'>Yarışmasız</text></g><line x1='150' y1='20' x2='150' y2='200' stroke='var(--line)'/><path d='M20,110 L50,110 L50,125 L70,125 L70,110 L100,110 L100,150 Q60,165 20,150 Z' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='2'/><rect x='50' y='103' width='20' height='22' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)' stroke-width='2'/><text x='60' y='119' font-size='12' fill='var(--ink)' text-anchor='middle'>İ</text><rect x='75' y='60' width='20' height='22' fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)' stroke-width='2'/><text x='85' y='76' font-size='12' fill='var(--ink)' text-anchor='middle'>S</text><g stroke='var(--c2)' stroke-width='2.5'><line x1='102' y1='62' x2='112' y2='72'/><line x1='112' y1='62' x2='102' y2='72'/></g><path d='M180,110 L210,110 L215,122 L225,118 L235,110 L265,110 L265,150 Q222,165 180,150 Z' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='2'/><circle cx='272' cy='132' r='9' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)' stroke-width='2'/><text x='272' y='136' font-size='12' fill='var(--ink)' text-anchor='middle'>İ</text><rect x='212' y='60' width='20' height='22' fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)' stroke-width='2'/><text x='222' y='76' font-size='12' fill='var(--ink)' text-anchor='middle'>S</text><g stroke='var(--c2)' stroke-width='2.5'><line x1='238' y1='62' x2='248' y2='72'/><line x1='248' y1='62' x2='238' y2='72'/></g><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='70' y='182'>aktif bölgeyi kapar</text><text x='230' y='182'>başka yere bağlanır</text></g><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='70' y='198'>substrata benzer</text><text x='230' y='198'>aktif bölge bozulur</text></g></svg>",
         "key": "Yarışmalı: aktif bölge için yarışır. Yarışmasız: şekli bozar.",
         "etk": {
@@ -823,15 +859,51 @@
       },
       {
         "h": "Aktivatörler ve tersinir tepkimeler",
-        "p": "Enzimin etkinliğini artıran maddelere <b>aktivatör</b> denir: Cl<sup>−</sup> iyonu tükürükteki amilazı hızlandırır, mide asidi (HCl) etkisiz pepsinojeni pepsine çevirir. Tersinir bir tepkimede enzim <b>iki yönü de</b> hızlandırır; denge daha çabuk kurulur ama dengedeki madde oranları değişmez.",
+        "p": "Enzimi hızlandıran maddeye <b>aktivatör</b> denir: Cl⁻ tükürük amilazını, mide asidi pepsini çalıştırır. Tersinir tepkimede enzim iki yönü de hızlandırır; denge oranı değişmez.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='enzimler-akt' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='78' y='24'>Aktivatör</text><text x='240' y='24'>Tersinir tepkime</text></g><line x1='160' y1='12' x2='160' y2='196' stroke='var(--line)'/><path d='M30,60 L55,60 L55,75 L70,75 L70,60 L95,60 L95,100 Q62,115 30,100 Z' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='2'/><circle cx='112' cy='92' r='12' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)' stroke-width='2'/><text x='112' y='96' font-size='11' fill='var(--ink)' text-anchor='middle'>Cl⁻</text><rect x='52' y='38' width='21' height='16' rx='3' fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)' stroke-width='2'/><g font-size='12' text-anchor='middle'><text x='78' y='134' fill='var(--ink)'>amilaz + Cl⁻</text><text x='78' y='150' fill='var(--muted)'>daha hızlı çalışır</text><text x='78' y='176' fill='var(--ink)'>pepsinojen → pepsin</text><text x='78' y='192' fill='var(--muted)'>(mide asidiyle)</text></g><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='240' y='60'>CO₂ + H₂O</text><text x='240' y='126'>H₂CO₃</text></g><g stroke='var(--ink)' stroke-width='1.5' marker-end='url(#enzimler-akt)'><line x1='228' y1='70' x2='228' y2='108'/><line x1='252' y1='108' x2='252' y2='70'/></g><g font-size='12' text-anchor='middle'><text x='240' y='150' fill='var(--c5)'>karbonik anhidraz</text><text x='240' y='168' fill='var(--muted)'>iki yönü de hızlandırır</text><text x='240' y='186' fill='var(--muted)'>dengeyi değiştirmez</text></g></svg>",
-        "key": "Aktivatör enzimi hızlandırır, inhibitör yavaşlatır."
+        "key": "Aktivatör enzimi hızlandırır, inhibitör yavaşlatır.",
+        "once": {
+          "soru": "Mide, pepsini önce etkisiz pepsinojen olarak salgılar. Onu çalışan pepsine ne çevirir?",
+          "secenekler": [
+            {
+              "yazi": "Mide asidi",
+              "neden": "Mide asidi (HCl) pepsinojeni pepsine çevirir. Etkisiz salgılanması mide duvarını korur.",
+              "dogru": true
+            },
+            {
+              "yazi": "Tükürük",
+              "neden": "Tükürük midede değil ağızda iş görür; içinde amilaz vardır."
+            },
+            {
+              "yazi": "Safra",
+              "neden": "Safra ince bağırsakta yağları küçük damlalara ayırır."
+            }
+          ]
+        }
       },
       {
         "h": "Hücre dışında da çalışır",
-        "p": "Enzimler yalnızca hücre içinde değil, uygun sıcaklık ve pH bulunca hücre dışında da çalışır: sindirim enzimleri bağırsak boşluğunda, deterjandaki enzimler çamaşırda iş görür. Tepkime için <b>su</b> gerekir; kuru tohumda enzimler neredeyse durur, tohum su alınca çalışmaya başlar.",
+        "p": "Enzimler uygun sıcaklık ve pH bulunca hücre dışında da çalışır: sindirim enzimleri bağırsakta, deterjan enzimleri çamaşırda. Tepkime için <b>su</b> gerekir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='enzimler-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='82' y='28'>hücre dışında</text><text x='238' y='28'>su gerekir</text></g><rect x='54' y='80' width='56' height='70' fill='var(--c1)' fill-opacity='0.15'/><path d='M52,45 L52,140 Q52,152 64,152 L100,152 Q112,152 112,140 L112,45' fill='none' stroke='var(--ink)' stroke-width='1.5'/><ellipse cx='82' cy='120' rx='16' ry='12' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><rect x='77' y='98' width='10' height='8' rx='2' fill='var(--c4)'/><g font-size='11' text-anchor='middle'><text x='82' y='172' fill='var(--ink)'>tüpte de çalışır</text><text x='82' y='188' fill='var(--muted)'>sindirim, deterjan</text></g><line x1='160' y1='40' x2='160' y2='180' stroke='var(--line)'/><ellipse cx='200' cy='110' rx='22' ry='14' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><line x1='226' y1='110' x2='248' y2='110' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#enzimler-11)'/><text x='237' y='100' font-size='11' fill='var(--c1)' text-anchor='middle'>su</text><ellipse cx='276' cy='110' rx='24' ry='16' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='1.5'/><path d='M276,94 q-2,-20 6,-34' fill='none' stroke='var(--c3)' stroke-width='2'/><ellipse cx='290' cy='64' rx='9' ry='4' fill='var(--c3)' fill-opacity='0.5' transform='rotate(-30 290 64)'/><g font-size='11' text-anchor='middle'><text x='200' y='150' fill='var(--ink)'>kuru tohum</text><text x='200' y='166' fill='var(--muted)'>enzim yavaş</text><text x='276' y='150' fill='var(--ink)'>ıslak tohum</text><text x='276' y='166' fill='var(--muted)'>enzim çalışır</text></g></svg>",
-        "key": "Enzimin çalışması için canlı hücre değil, uygun ortam ve su gerekir."
+        "key": "Enzimin çalışması için canlı hücre değil, uygun ortam ve su gerekir.",
+        "once": {
+          "soru": "Kuru bir tohumda enzimler neredeyse hiç çalışmaz. Tohum ne alınca çalışmaya başlar?",
+          "secenekler": [
+            {
+              "yazi": "Su",
+              "neden": "Enzim tepkimeleri suda gerçekleşir; tohum su alınca enzimler çalışır ve tohum çimlenir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Işık",
+              "neden": "Çimlenme toprağın altında, karanlıkta da başlar; asıl gereken sudur."
+            },
+            {
+              "yazi": "Karbon dioksit",
+              "neden": "CO₂ fotosentez için gerekir; çimlenmeyi başlatan sudur."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",
