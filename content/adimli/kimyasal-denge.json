@@ -21,7 +21,7 @@
       "neden": "Dışarıdan durmuş görünür, ama moleküller dönüşmeye devam eder. Denge durgun değil, dinamiktir."
      },
      {
-      "yazi": "Tepkime iki yönde eşit hızla sürer",
+      "yazi": "İki yönde eşit hızla sürer",
       "neden": "Dönüşüm sürer ama iki yön birbirini dengeler: <b>dinamik denge</b>. Yalnız NO₂ ile başlasan da dengeye ulaşırdın.",
       "dogru": true
      },
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Kc hesabı",
-   "metin": "Şimdi sen: 1 L kaba 1'er mol H₂ ve I₂ koyduk. Dengede 1,6 mol HI ölçüldü. Tabloyu buna göre ayarla.",
+   "metin": "1 L kaba 1'er mol H₂ ve I₂ koyduk. Dengede 1,6 mol HI ölçüldü. Tabloyu buna göre ayarla.",
    "sahne": {
     "tur": "kim9-bdd"
    },
@@ -62,17 +62,11 @@
     "ipucu": "2x mol HI oluşurken x mol H₂ ve x mol I₂ harcanır.",
     "tamam": "2x = 1,6 → x = 0,8. Dengede 0,2 M H₂, 0,2 M I₂, 1,6 M HI. Kc = 1,6² / (0,2 · 0,2) = <b>64</b>."
    },
-   "kart": 7,
-   "goster": {
-    "deger": {
-     "hi": 6
-    },
-    "not": "0,6 mol HI oluşsaydı 0,3'er mol H₂ ve I₂ harcanır, 0,7'şer mol kalırdı: Kc = 0,6² / 0,7² ≈ <b>0,73</b> olurdu; bu, başka bir sıcaklık demektir."
-   }
+   "kart": 7
   },
   {
    "baslik": "Q ile K",
-   "metin": "Aynı tepkimede K = 64. Kapta [H₂] = [I₂] = 0,1 M. Tepkime bölümü Q'yu K'ya eşitleyecek HI derişimini bul.",
+   "metin": "K ifadesine o anki derişimleri yazınca <b>Q</b> bulunur. H₂ + I₂ ⇌ 2HI için K = 64; kapta [H₂] = [I₂] = 0,1 M. Q'yu K'ya eşitleyecek HI derişimini bul.",
    "sahne": {
     "tur": "kim9-q"
    },
@@ -97,13 +91,7 @@
     },
     "tamam": "Q = 0,8² / (0,1 · 0,1) = 64 = K: sistem <b>dengede</b>. Q < K ise tepkime ileri, Q > K ise geri yürür."
    },
-   "kart": 7,
-   "goster": {
-    "deger": {
-     "hi": 4
-    },
-    "not": "[HI] = 0,4 M iken Q = 0,4² / (0,1 · 0,1) = <b>16</b>. Q < K olduğu için tepkime ileri yönde yürür."
-   }
+   "kart": 6
   },
   {
    "baslik": "Hacmi küçült",
@@ -131,7 +119,7 @@
      }
     ]
    },
-   "kart": 8
+   "kart": 9
   },
   {
    "baslik": "Denge laboratuvarı",
@@ -245,7 +233,7 @@
     "soru": "Katalizör dengeyi nasıl etkiler?",
     "secenekler": [
      {
-      "yazi": "Dengeye daha çabuk ulaşılır, miktarlar aynı kalır",
+      "yazi": "Dengeye daha çabuk ulaşılır",
       "neden": "Katalizör ileri ve geri tepkimeyi eşit hızlandırır. Denge derişimi ve K değişmez, yalnızca dengeye varış kısalır.",
       "dogru": true
      },
@@ -259,7 +247,7 @@
      }
     ]
    },
-   "kart": 9
+   "kart": 10
   },
   {
    "baslik": "Haber yöntemi",
@@ -310,7 +298,7 @@
      }
     ]
    },
-   "kart": 10
+   "kart": 11
   }
  ],
  "kapanis": [
@@ -319,5 +307,6 @@
   "<b>Q < K</b> ise tepkime ileri, <b>Q > K</b> ise geri yürür; Q = K dengedir.",
   "Le Chatelier: sistem zorlamayı azaltır. Basınç artınca az gaz mollü tarafa, ısıtınca endotermik yöne kayar.",
   "K'yı yalnızca sıcaklık değiştirir; katalizör dengeye varışı hızlandırır, dengeyi kaydırmaz."
- ]
+ ],
+ "soruOnce": true
 }

@@ -44,21 +44,21 @@
     "soru": "Mıknatıs ortadan kırılınca parçalar ne olur?",
     "secenekler": [
      {
-      "yazi": "Bir parça yalnız N, öteki yalnız S olur",
+      "yazi": "Biri yalnız N, öteki yalnız S olur",
       "neden": "Kutuplar ayrılamaz; her parçanın kırık ucunda yeni bir kutup oluşur."
      },
      {
-      "yazi": "Parçalar mıknatıslığını kaybeder",
+      "yazi": "Mıknatıslık kaybolur",
       "neden": "Mıknatıslık atom ölçeğindeki küçük mıknatıslardan gelir; kırmak onları bozmaz."
      },
      {
-      "yazi": "Her parça N ve S kutuplu tam bir mıknatıs olur",
+      "yazi": "İkisi de tam mıknatıs olur",
       "dogru": true,
       "neden": "Kırık uçlarda hemen yeni kutuplar oluşur: sol parçanın sağ ucu N, sağ parçanın sol ucu S olur."
      }
     ]
    },
-   "kart": 1
+   "kart": 2
   },
   {
    "baslik": "Alan çizgileri",
@@ -88,7 +88,7 @@
       "neden": "Çizgiler kutuplarda toplanıp sıklaşır; alan (B) en güçlü oradadır."
      },
      {
-      "yazi": "Mıknatısın ortasının hemen üstünde",
+      "yazi": "Ortanın hemen üstünde",
       "neden": "Orta bölgede çizgiler seyrektir; 2. yerde alan yalnızca orta güçtedir."
      },
      {
@@ -101,7 +101,7 @@
   },
   {
    "baslik": "Akımlı tel",
-   "metin": "Oersted'in deneyi: tel ekrana dik duruyor. Akımı aç, sonra yönünü çevir ve pusulalara bak.",
+   "metin": "Oersted'in deneyi: tel ekrana dik duruyor. <b>Sağ el kuralı:</b> başparmak akım yönünde, kıvrılan parmaklar alan yönünde. Akımı aç, yönünü çevir ve pusulalara bak.",
    "sahne": {
     "tur": "fiz10-oersted"
    },
@@ -139,7 +139,7 @@
       "neden": "Sağ el kuralı: başparmak akım yönünde (ekrana doğru), kıvrılan parmaklar saat yönünde döner."
      },
      {
-      "yazi": "Telden dışarı, ışın gibi",
+      "yazi": "Telden dışarı doğru",
       "neden": "Telin alan çizgileri teli saran çemberlerdir; pusulalar çembere teğet durur."
      }
     ]
@@ -182,14 +182,7 @@
     "tamam": "Demir çekirdekli 40 sarım 8 ataç çekti. Çekirdek bobinin alanında kendisi mıknatıslanır ve alana katkı yapar.",
     "ipucu": "Çekirdeksiz bobin zayıftır. Önce demir çekirdeği koy, sonra sarımı ayarla."
    },
-   "kart": 9,
-   "goster": {
-    "deger": {
-     "N": 50,
-     "c": 0
-    },
-    "not": "Çekirdeksiz bobin 50 sarımla bile yalnızca <b>2 ataç</b> çekiyor: demir çekirdek olmadan alan zayıf."
-   }
+   "kart": 9
   },
   {
    "baslik": "Tele etkiyen kuvvet",
@@ -219,17 +212,11 @@
     "tamam": "F = 0,2 · 5 · 0,5 · sin30° = 0,5 · 0,5 = <b>0,25 N</b>. Tel alana dikken kuvvet en büyük (0,5 N), alana paralelken sıfırdır.",
     "ipucu": "0,2 · 5 · 0,5 = 0,5 N; sinθ = 0,5 olmalı."
    },
-   "kart": 10,
-   "goster": {
-    "deger": {
-     "a": 60
-    },
-    "not": "θ = 60°'de F = 0,2 · 5 · 0,5 · sin60° ≈ <b>0,43 N</b>. Açı küçüldükçe kuvvet azalır."
-   }
+   "kart": 10
   },
   {
    "baslik": "Elektrik motoru",
-   "metin": "Bu motorda <b>komütatör</b> yok: akım bobinden hep aynı yönde geçiyor.",
+   "metin": "<b>Komütatör</b>, her yarım turda bobindeki akımın yönünü çeviren parçadır. Bu motorda komütatör yok: akım hep aynı yönde geçiyor.",
    "sahne": {
     "tur": "fiz10-motor",
     "sure": 4
@@ -239,12 +226,12 @@
     "soru": "Komütatör olmasaydı bobin ne yapardı?",
     "secenekler": [
      {
-      "yazi": "Bir süre salınıp durur",
+      "yazi": "Salınıp durur",
       "dogru": true,
       "neden": "Çerçeve düzlemi alana dik olunca kenarlara etkiyen kuvvetler aynı doğrultuda kalır, tork sıfırdır. Bobin bu konumun çevresinde salınıp durur."
      },
      {
-      "yazi": "Aynı yönde sürekli döner",
+      "yazi": "Sürekli döner",
       "neden": "Çerçeve düzlemi alana dik konumu geçince kuvvetler bobini geri çeker; sürekli dönüş için akımın çevrilmesi gerekir."
      },
      {
@@ -262,5 +249,6 @@
   "Akımlı tel çevresinde alan oluşturur: B = 2k·I/d. Yönü sağ el kuralıyla bulunur.",
   "Elektromıknatıs sarım, akım ve demir çekirdekle güçlenir.",
   "Alandaki tele F = B·I·L·sinθ kuvveti etkir; motor bunu komütatörle sürekli dönüşe çevirir."
- ]
+ ],
+ "soruOnce": true
 }

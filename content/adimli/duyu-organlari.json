@@ -8,14 +8,27 @@
   {
    "baslik": "Uyarıdan algıya",
    "metin": "Gözü ve görme siniri sağlam, ama beynindeki <b>görme merkezi</b> zarar görmüş birini düşün. Tahmin et, sonra oynat.",
-   "sahne": { "tur": "biy10-yol", "sure": 4 },
+   "sahne": {
+    "tur": "biy10-yol",
+    "sure": 4
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Bu kişi görebilir mi?",
     "secenekler": [
-     { "yazi": "Görür", "neden": "Göz ışığı impulsa çevirir, ama impulsu yorumlayıp görüntüye dönüştüren beyindir." },
-     { "yazi": "Yalnızca renkleri göremez", "neden": "Renkleri retinadaki koniler ayırt eder; görme merkezi bozulunca ise hiçbir görüntü algılanmaz." },
-     { "yazi": "Göremez", "dogru": true, "neden": "Algı reseptörde değil beyindeki merkezde oluşur. Bu yüzden beyin hasarı sağlam gözü de kör eder." }
+     {
+      "yazi": "Görür",
+      "neden": "Göz ışığı impulsa çevirir, ama impulsu yorumlayıp görüntüye dönüştüren beyindir."
+     },
+     {
+      "yazi": "Yalnızca renkleri göremez",
+      "neden": "Renkleri retinadaki koniler ayırt eder; görme merkezi bozulunca ise hiçbir görüntü algılanmaz."
+     },
+     {
+      "yazi": "Göremez",
+      "dogru": true,
+      "neden": "Algı reseptörde değil beyindeki merkezde oluşur. Bu yüzden beyin hasarı sağlam gözü de kör eder."
+     }
     ]
    },
    "kart": 1
@@ -23,78 +36,168 @@
   {
    "baslik": "Göz bebeği",
    "metin": "<b>İris</b>, içindeki kaslarla <b>göz bebeğinin</b> çapını ayarlar. Işığı değiştir ve göz bebeğini en geniş hâline getir.",
-   "sahne": { "tur": "biy10-bebek" },
-   "deger": { "isik": 4 },
-   "kontroller": [ { "ad": "isik", "etiket": "Işık", "min": 1, "max": 5, "adim": 1, "tur": "surgu" } ],
+   "sahne": {
+    "tur": "biy10-bebek"
+   },
+   "deger": {
+    "isik": 4
+   },
+   "kontroller": [
+    {
+     "ad": "isik",
+     "etiket": "Işık",
+     "min": 1,
+     "max": 5,
+     "adim": 1,
+     "tur": "surgu"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "isik": 1 },
+    "hedef": {
+     "isik": 1
+    },
     "ipucu": "Az ışıkta göz bebeği büyür ki retinaya daha çok ışık girsin.",
     "tamam": "Loşta göz bebeği büyüdü; çok ışıkta küçülür. Bu bir reflekstir ve retinayı fazla ışıktan korur."
    },
-   "kart": 3,
-   "goster": { "deger": { "isik": 5 }, "not": "Işık en parlak: iris göz bebeğini en dar hâline getirdi, retinaya daha az ışık giriyor." }
+   "kart": 3
   },
   {
    "baslik": "Yakına bak",
    "metin": "Merceği <b>askı bağları</b> kirpiksi cisme bağlar. Anahtarla yakına bak; kası, bağları ve merceği izle.",
-   "sahne": { "tur": "biy10-uyum" },
-   "deger": { "yakin": 0 },
-   "kontroller": [ { "ad": "yakin", "etiket": "Yakına bak", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "sahne": {
+    "tur": "biy10-uyum"
+   },
+   "deger": {
+    "yakin": 0
+   },
+   "kontroller": [
+    {
+     "ad": "yakin",
+     "etiket": "Yakına bak",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
    "gorev": {
     "tur": "secim",
     "soru": "Yakına bakarken mercek nasıl kalınlaşır?",
     "secenekler": [
-     { "yazi": "Kirpiksi kas kasılır, askı bağları gevşer", "dogru": true, "neden": "Bağlar gevşeyince esnek mercek kendiliğinden kalınlaşır ve ışığı daha çok kırar. Yakın nesnenin ışığı böylece retinaya odaklanır." },
-     { "yazi": "Kirpiksi kas gevşer, askı bağları gerilir", "neden": "Bu uzağa bakarken olur. Gergin bağlar merceği çeker ve inceltir." },
-     { "yazi": "İris kasılır ve merceği sıkıştırır", "neden": "İris yalnızca göz bebeğinin çapını ayarlar; merceğin şeklini kirpiksi kaslar değiştirir." }
+     {
+      "yazi": "Kas kasılır, bağlar gevşer",
+      "dogru": true,
+      "neden": "Bağlar gevşeyince esnek mercek kendiliğinden kalınlaşır ve ışığı daha çok kırar. Yakın nesnenin ışığı böylece retinaya odaklanır."
+     },
+     {
+      "yazi": "Kas gevşer, bağlar gerilir",
+      "neden": "Bu uzağa bakarken olur. Gergin bağlar merceği çeker ve inceltir."
+     },
+     {
+      "yazi": "İris merceği sıkıştırır",
+      "neden": "İris yalnızca göz bebeğinin çapını ayarlar; merceğin şeklini kirpiksi kaslar değiştirir."
+     }
     ]
    },
-   "kart": 4
+   "kart": 5
   },
   {
    "baslik": "Miyop göz",
    "metin": "Miyop gözde göz küresi uzundur. Uzaktaki nesnenin ışığı <b>retinanın önünde</b> odaklanır ve görüntü bulanıklaşır. Gözlük camını seç ve odağı retinaya taşı.",
-   "sahne": { "tur": "biy10-mercek", "kusur": "miyop" },
-   "deger": { "d": 0 },
-   "kontroller": [ { "ad": "d", "etiket": "Gözlük", "min": -3, "max": 3, "adim": 1, "birim": "D", "tur": "surgu" } ],
+   "sahne": {
+    "tur": "biy10-mercek",
+    "kusur": "miyop"
+   },
+   "deger": {
+    "d": 0
+   },
+   "kontroller": [
+    {
+     "ad": "d",
+     "etiket": "Gözlük",
+     "min": -3,
+     "max": 3,
+     "adim": 1,
+     "birim": "D",
+     "tur": "surgu"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "d": -2 },
+    "hedef": {
+     "d": -2
+    },
     "ipucu": "Odak öne düşüyor. Işığı biraz dağıtan eksi numaralı mercek odağı geriye iter.",
     "tamam": "Kalın kenarlı (ıraksak) mercek ışığı dağıttı ve odak retinaya geldi. Miyoplar uzağı bulanık görür ve eksi numaralı gözlük takar."
    },
-   "kart": 7,
-   "goster": { "deger": { "d": 1 }, "not": "+1 D ince kenarlı (yakınsak) cam ışığı daha çok topladı: odak retinanın daha da önüne kaydı." }
+   "kart": 8
   },
   {
    "baslik": "Hipermetrop göz",
    "metin": "Hipermetrop gözde göz küresi kısadır ve odak <b>retinanın arkasına</b> düşer. Yakını bulanık görür. Camları dene.",
-   "sahne": { "tur": "biy10-mercek", "kusur": "hiper" },
-   "deger": { "d": 0 },
-   "kontroller": [ { "ad": "d", "etiket": "Gözlük", "min": -3, "max": 3, "adim": 1, "birim": "D", "tur": "surgu" } ],
+   "sahne": {
+    "tur": "biy10-mercek",
+    "kusur": "hiper"
+   },
+   "deger": {
+    "d": 0
+   },
+   "kontroller": [
+    {
+     "ad": "d",
+     "etiket": "Gözlük",
+     "min": -3,
+     "max": 3,
+     "adim": 1,
+     "birim": "D",
+     "tur": "surgu"
+    }
+   ],
    "gorev": {
     "tur": "secim",
     "soru": "Hipermetropu hangi mercek düzeltir?",
     "secenekler": [
-     { "yazi": "Kalın kenarlı (ıraksak) mercek", "neden": "Bu mercek ışığı dağıtır ve odağı daha da geriye iter. Miyopu düzeltir, hipermetropu kötüleştirir." },
-     { "yazi": "İnce kenarlı (yakınsak) mercek", "dogru": true, "neden": "Yakınsak mercek ışığı önceden toplar ve odağı öne, retinaya çeker. Hipermetroplar artı numaralı gözlük takar." },
-     { "yazi": "Silindirik mercek", "neden": "Silindirik mercek astigmatizmi, yani korneadaki eğrilik bozukluğunu düzeltir. Odağı öne almaz." }
+     {
+      "yazi": "Kalın kenarlı mercek",
+      "neden": "Bu mercek ışığı dağıtır ve odağı daha da geriye iter. Miyopu düzeltir, hipermetropu kötüleştirir."
+     },
+     {
+      "yazi": "İnce kenarlı mercek",
+      "dogru": true,
+      "neden": "Yakınsak mercek ışığı önceden toplar ve odağı öne, retinaya çeker. Hipermetroplar artı numaralı gözlük takar."
+     },
+     {
+      "yazi": "Silindirik mercek",
+      "neden": "Silindirik mercek astigmatizmi, yani korneadaki eğrilik bozukluğunu düzeltir. Odağı öne almaz."
+     }
     ]
    },
-   "kart": 7
+   "kart": 8
   },
   {
    "baslik": "Sesin yolu",
    "metin": "Bir hastada kulak zarı ve salyangoz sağlam, ama orta kulaktaki kemikçikler kireçlenip hareketsiz kalmış. Tahmin et, sonra oynat.",
-   "sahne": { "tur": "biy10-kulak", "sure": 5 },
+   "sahne": {
+    "tur": "biy10-kulak",
+    "sure": 5
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Ses bu kulakta nerede takılır?",
     "secenekler": [
-     { "yazi": "Kulak zarında", "neden": "Zar sağlam olduğu için titreşir; sorun, titreşimi taşıyacak kemikçiklerdedir." },
-     { "yazi": "Orta kulakta", "dogru": true, "neden": "Hareketsiz üzengi oval pencereyi titreştiremez. Salyangoz ve sinir sağlam olsa da uyarı iç kulağa ulaşmaz; buna iletim tipi işitme kaybı denir." },
-     { "yazi": "İşitme sinirinde", "neden": "Sinir sağlam; ama salyangoz uyarılmadığı için taşıyacak impuls oluşmaz." }
+     {
+      "yazi": "Kulak zarında",
+      "neden": "Zar sağlam olduğu için titreşir; sorun, titreşimi taşıyacak kemikçiklerdedir."
+     },
+     {
+      "yazi": "Orta kulakta",
+      "dogru": true,
+      "neden": "Hareketsiz üzengi oval pencereyi titreştiremez. Salyangoz ve sinir sağlam olsa da uyarı iç kulağa ulaşmaz; buna iletim tipi işitme kaybı denir."
+     },
+     {
+      "yazi": "İşitme sinirinde",
+      "neden": "Sinir sağlam; ama salyangoz uyarılmadığı için taşıyacak impuls oluşmaz."
+     }
     ]
    },
    "kart": 10
@@ -102,14 +205,27 @@
   {
    "baslik": "Denge",
    "metin": "Dönme dolaptan indin; durduğun hâlde başın dönüyor. Tahmin et, sonra oynat.",
-   "sahne": { "tur": "biy10-denge", "sure": 4 },
+   "sahne": {
+    "tur": "biy10-denge",
+    "sure": 4
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Durduğun hâlde başın neden döner?",
     "secenekler": [
-     { "yazi": "Salyangoz fazla uyarıldı", "neden": "Salyangoz işitme içindir; ses titreşimini algılar, dönmeyi değil." },
-     { "yazi": "Östaki borusundaki basınç değişti", "neden": "Östaki borusu yalnızca kulak zarının iki yanındaki basıncı eşitler; dönme algılamaz." },
-     { "yazi": "Kanallardaki sıvı dönmeyi sürdürüyor", "dogru": true, "neden": "Kanal seninle durur, ama sıvı eylemsizlikle bir süre daha akar. Tüylü hücreler beyinciğe hâlâ dönüyorsun der, gözlerin ise durduğunu söyler." }
+     {
+      "yazi": "Salyangoz uyarıldı",
+      "neden": "Salyangoz işitme içindir; ses titreşimini algılar, dönmeyi değil."
+     },
+     {
+      "yazi": "Östaki borusunda basınç değişti",
+      "neden": "Östaki borusu yalnızca kulak zarının iki yanındaki basıncı eşitler; dönme algılamaz."
+     },
+     {
+      "yazi": "Kanallardaki sıvı hâlâ dönüyor",
+      "dogru": true,
+      "neden": "Kanal seninle durur, ama sıvı eylemsizlikle bir süre daha akar. Tüylü hücreler beyinciğe hâlâ dönüyorsun der, gözlerin ise durduğunu söyler."
+     }
     ]
    },
    "kart": 12
@@ -121,5 +237,6 @@
   "Miyopta odak retinanın önündedir, kalın kenarlı mercek gerekir; hipermetropta arkasındadır, ince kenarlı mercek gerekir.",
   "Ses kulak zarı → çekiç, örs, üzengi → salyangoz yolunu izler. Dönmeyi yarım daire kanalları, eğilmeyi tulumcuk ve kesecik algılar.",
   "Loşta çubuklar çalışır ve renk görülmez; renkleri parlak ışıkta koniler ayırt eder."
- ]
+ ],
+ "soruOnce": true
 }

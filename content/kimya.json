@@ -6012,37 +6012,109 @@
     "cards": [
       {
         "h": "Tersinir tepkime ve denge",
-        "p": "Kapalı kapta birçok tepkime iki yönde yürür (⇌). Başta ileri hız büyüktür; ürün biriktikçe geri hız artar. Hızlar eşitlenince <b>denge</b> kurulur: renk, basınç ve derişimler artık değişmez, ama birbirine eşit olmak zorunda değildir. Kapalı kaptaki su–buhar dengesi ve doymuş çözelti ise <b>fiziksel dengedir</b>.",
+        "p": "Kapalı kapta birçok tepkime iki yönde yürür (⇌). İleri ve geri hız eşitlenince <b>denge</b> kurulur: derişimler artık değişmez, ama eşit olmak zorunda değildir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='12' fill='var(--muted)' text-anchor='middle'>Kapalı kap, sabit sıcaklık</text><line x1='30' y1='40' x2='30' y2='160' stroke='var(--ink)' stroke-width='1.2'/><line x1='30' y1='160' x2='150' y2='160' stroke='var(--ink)' stroke-width='1.2'/><text x='34' y='38' font-size='11' fill='var(--muted)' text-anchor='start'>hız</text><line x1='100' y1='52' x2='100' y2='160' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><path d='M30 50 C55 92 75 112 100 115 L150 115' stroke='var(--c1)' stroke-width='2.2' fill='none'/><path d='M30 160 C55 132 75 118 100 115 L150 115' stroke='var(--c2)' stroke-width='2.2' fill='none'/><text x='48' y='62' font-size='11' fill='var(--c1)' text-anchor='start' font-weight='700'>ileri</text><text x='48' y='150' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>geri</text><text x='125' y='106' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>eşit</text><text x='100' y='46' font-size='11' fill='var(--ink)' text-anchor='middle'>denge</text><text x='150' y='174' font-size='11' fill='var(--muted)' text-anchor='end'>zaman</text><line x1='180' y1='40' x2='180' y2='160' stroke='var(--ink)' stroke-width='1.2'/><line x1='180' y1='160' x2='300' y2='160' stroke='var(--ink)' stroke-width='1.2'/><text x='184' y='38' font-size='11' fill='var(--muted)' text-anchor='start'>derişim</text><line x1='250' y1='52' x2='250' y2='160' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><path d='M180 52 C205 90 225 104 250 107 L300 107' stroke='var(--c4)' stroke-width='2.2' fill='none'/><path d='M180 160 C205 138 225 131 250 129 L300 129' stroke='var(--c3)' stroke-width='2.2' fill='none'/><text x='300' y='99' font-size='11' fill='var(--c4)' text-anchor='end' font-weight='700'>girenler</text><text x='300' y='145' font-size='11' fill='var(--c3)' text-anchor='end' font-weight='700'>ürünler</text><text x='250' y='46' font-size='11' fill='var(--ink)' text-anchor='middle'>denge</text><text x='300' y='174' font-size='11' fill='var(--muted)' text-anchor='end'>zaman</text><text x='160' y='194' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>Hızlar eşit; derişimler sabit ama eşit değil</text></svg>",
-        "key": "Denge ancak kapalı sistemde kurulur; açık kapta kaçan gaz geri dönemez."
+        "key": "Denge ancak kapalı sistemde kurulur. Su–buhar dengesi ve doymuş çözelti fiziksel dengedir."
       },
       {
         "h": "Denge sabiti Kc",
-        "p": "aA + bB ⇌ cC + dD için <b>K<sub>c</sub> = [C]<sup>c</sup>[D]<sup>d</sup> / [A]<sup>a</sup>[B]<sup>b</sup></b>. Ürünler paya, girenler paydaya; katsayılar üs olur. <b>Katılar ve saf sıvılar</b> yazılmaz, derişimleri sabittir. Sıcaklık değişmedikçe K<sub>c</sub> sabittir.",
+        "p": "aA + bB ⇌ cC + dD için <b>K<sub>c</sub> = [C]<sup>c</sup>[D]<sup>d</sup> / [A]<sup>a</sup>[B]<sup>b</sup></b>. Ürünler paya, girenler paydaya yazılır; katılar ve saf sıvılar yazılmaz.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='26' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>aA(g) + bB(g) ⇌ cC(g) + dD(g)</text><text x='58' y='90' font-size='22' fill='var(--acc)' text-anchor='middle' font-weight='700'>K<tspan font-size='14' baseline-shift='sub'>c</tspan></text><text x='96' y='88' font-size='20' fill='var(--ink)' text-anchor='middle'>=</text><text x='185' y='70' font-size='18' fill='var(--c3)' text-anchor='middle' font-weight='700'>[C]ᶜ [D]ᵈ</text><line x1='130' y1='79' x2='240' y2='79' stroke='var(--ink)' stroke-width='1.5'/><text x='185' y='104' font-size='18' fill='var(--c4)' text-anchor='middle' font-weight='700'>[A]ᵃ [B]ᵇ</text><text x='250' y='68' font-size='11' fill='var(--c3)' text-anchor='start'>ürünler</text><text x='250' y='102' font-size='11' fill='var(--c4)' text-anchor='start'>girenler</text><rect x='10' y='124' width='300' height='50' rx='6' fill='var(--panel)' fill-opacity='1'/><text x='160' y='144' font-size='13' fill='var(--ink)' text-anchor='middle'>CaCO₃(k) ⇌ CaO(k) + CO₂(g)</text><text x='160' y='164' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>K<tspan font-size='10' baseline-shift='sub'>c</tspan> = [CO₂]</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>Katı (k) ve saf sıvı (s) ifadeye yazılmaz.</text></svg>",
-        "key": "İfadeye gazlar ve (suda) türler girer; (k) ve (s) girmez."
+        "key": "Sıcaklık değişmedikçe Kc sabittir. İfadeye gazlar ve (suda) türler girer; (k) ve (s) girmez.",
+        "once": {
+          "soru": "CaCO₃(k) ⇌ CaO(k) + CO₂(g) için Kc ifadesinde hangi madde yer alır?",
+          "secenekler": [
+            {
+              "yazi": "Yalnız CO₂",
+              "neden": "Katıların derişimi sabittir, ifadeye yazılmaz: Kc = [CO₂].",
+              "dogru": true
+            },
+            {
+              "yazi": "Üçü de",
+              "neden": "CaCO₃ ve CaO katıdır; K ifadesine girmez."
+            },
+            {
+              "yazi": "Yalnız katılar",
+              "neden": "Katılar yazılmaz; gazlar yazılır."
+            }
+          ]
+        }
       },
       {
         "h": "Kp ve Kc ilişkisi",
-        "p": "Gaz tepkimelerinde denge sabiti <b>kısmi basınçlarla</b> (gazın karışımda tek başına yapacağı basınç) da yazılır: K<sub>p</sub>. Bağıntı: <b>K<sub>p</sub> = K<sub>c</sub>·(RT)<sup>Δn</sup></b>. Δn = ürün gaz molleri − giren gaz molleri. Δn = 0 ise K<sub>p</sub> = K<sub>c</sub> olur.",
+        "p": "Gaz tepkimelerinde K, <b>kısmi basınçlarla</b> da yazılır: K<sub>p</sub>. <b>K<sub>p</sub> = K<sub>c</sub>·(RT)<sup>Δn</sup></b>; Δn = ürün gaz molleri − giren gaz molleri.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='40' font-size='20' fill='var(--acc)' text-anchor='middle' font-weight='700'>K<tspan font-size='10' baseline-shift='sub'>p</tspan> = K<tspan font-size='10' baseline-shift='sub'>c</tspan> · (RT)<tspan font-size='13' baseline-shift='super'>Δn</tspan></text><text x='160' y='66' font-size='12' fill='var(--ink)' text-anchor='middle'>Δn = ürün gaz molleri − giren gaz molleri</text><text x='160' y='84' font-size='11' fill='var(--muted)' text-anchor='middle'>R = 0,082 L·atm/(mol·K), T kelvin cinsinden</text><rect x='8' y='98' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='14' y='116' font-size='11' fill='var(--ink)' text-anchor='start'>N₂(g) + 3H₂(g) ⇌ 2NH₃(g)</text><text x='196' y='116' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>Δn = −2</text><text x='308' y='116' font-size='12' fill='var(--ink)' text-anchor='end'>K<tspan font-size='10' baseline-shift='sub'>p</tspan> = K<tspan font-size='10' baseline-shift='sub'>c</tspan>(RT)⁻²</text><rect x='8' y='126' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='0.4'/><text x='14' y='144' font-size='11' fill='var(--ink)' text-anchor='start'>H₂(g) + I₂(g) ⇌ 2HI(g)</text><text x='196' y='144' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>Δn = 0</text><text x='308' y='144' font-size='12' fill='var(--ink)' text-anchor='end'>K<tspan font-size='10' baseline-shift='sub'>p</tspan> = K<tspan font-size='10' baseline-shift='sub'>c</tspan></text><rect x='8' y='154' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='14' y='172' font-size='11' fill='var(--ink)' text-anchor='start'>CaCO₃(k) ⇌ CaO(k) + CO₂(g)</text><text x='196' y='172' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>Δn = +1</text><text x='308' y='172' font-size='12' fill='var(--ink)' text-anchor='end'>K<tspan font-size='10' baseline-shift='sub'>p</tspan> = K<tspan font-size='10' baseline-shift='sub'>c</tspan>·RT</text><text x='160' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>Katı ve sıvılar Δn'ye katılmaz.</text></svg>",
-        "key": "T kelvin cinsinden yazılır; Δn'de yalnız gazların katsayıları sayılır."
+        "key": "T kelvin cinsinden yazılır; Δn'de yalnız gazlar sayılır. Kısmi basınç, gazın karışımda tek başına yapacağı basınçtır.",
+        "once": {
+          "soru": "H₂ + I₂ ⇌ 2HI tepkimesinde gaz mol sayısı iki yanda eşit. Kp ile Kc arasında ne ilişki var?",
+          "secenekler": [
+            {
+              "yazi": "Eşittir",
+              "neden": "Δn = 2 − 2 = 0; (RT)⁰ = 1, yani Kp = Kc.",
+              "dogru": true
+            },
+            {
+              "yazi": "Kp büyüktür",
+              "neden": "Bu, Δn > 0 iken olabilir."
+            },
+            {
+              "yazi": "Kp küçüktür",
+              "neden": "Bu, Δn < 0 iken olabilir."
+            }
+          ]
+        }
       },
       {
         "h": "K'nın büyüklüğü ne söyler?",
-        "p": "K çok büyükse (kabaca 10<sup>3</sup>'ten büyük) dengede <b>ürünler</b> baskındır; tepkime neredeyse tamamlanır. K çok küçükse girenler pek değişmeden kalır. K, 1'e yakınsa ikisi de belirgin miktardadır. K, dengeye <b>ne kadar hızlı</b> ulaşılacağını söylemez; o, tepkime hızının konusudur.",
+        "p": "K çok büyükse dengede <b>ürünler</b> baskındır, tepkime neredeyse tamamlanır. K çok küçükse girenler çoğunlukta kalır. K, tepkimenin <b>hızını</b> söylemez.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--muted)' text-anchor='middle'>Dengede ne baskın?</text><rect x='30' y='46' width='91' height='16' fill='var(--c4)' fill-opacity='0.35'/><rect x='121' y='46' width='78' height='16' fill='var(--c5)' fill-opacity='0.2'/><rect x='199' y='46' width='91' height='16' fill='var(--c3)' fill-opacity='0.35'/><text x='75' y='40' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>girenler baskın</text><text x='160' y='40' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>ikisi de var</text><text x='245' y='40' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>ürünler baskın</text><line x1='30' y1='62' x2='30' y2='68' stroke='var(--ink)' stroke-width='1'/><text x='30' y='80' font-size='10' fill='var(--ink)' text-anchor='middle'>10⁻¹⁰</text><line x1='121' y1='62' x2='121' y2='68' stroke='var(--ink)' stroke-width='1'/><text x='121' y='80' font-size='10' fill='var(--ink)' text-anchor='middle'>10⁻³</text><line x1='160' y1='62' x2='160' y2='68' stroke='var(--ink)' stroke-width='1'/><text x='160' y='80' font-size='10' fill='var(--ink)' text-anchor='middle'>1</text><line x1='199' y1='62' x2='199' y2='68' stroke='var(--ink)' stroke-width='1'/><text x='199' y='80' font-size='10' fill='var(--ink)' text-anchor='middle'>10³</text><line x1='290' y1='62' x2='290' y2='68' stroke='var(--ink)' stroke-width='1'/><text x='290' y='80' font-size='10' fill='var(--ink)' text-anchor='middle'>10¹⁰</text><line x1='30' y1='62' x2='290' y2='62' stroke='var(--ink)' stroke-width='1.2'/><text x='160' y='96' font-size='10' fill='var(--muted)' text-anchor='middle'>K (logaritmik ölçek)</text><rect x='57' y='108' width='36' height='52' fill='var(--c4)' fill-opacity='0.6'/><rect x='57' y='160' width='36' height='4' fill='var(--c3)' fill-opacity='0.6'/><rect x='142' y='108' width='36' height='28' fill='var(--c4)' fill-opacity='0.6'/><rect x='142' y='136' width='36' height='28' fill='var(--c3)' fill-opacity='0.6'/><rect x='227' y='108' width='36' height='4' fill='var(--c4)' fill-opacity='0.6'/><rect x='227' y='112' width='36' height='52' fill='var(--c3)' fill-opacity='0.6'/><rect x='104' y='172' width='10' height='10' fill='var(--c4)' fill-opacity='0.6'/><text x='118' y='181' font-size='11' fill='var(--muted)' text-anchor='start'>giren</text><rect x='176' y='172' width='10' height='10' fill='var(--c3)' fill-opacity='0.6'/><text x='190' y='181' font-size='11' fill='var(--muted)' text-anchor='start'>ürün</text><text x='160' y='197' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>K tepkimenin hızı hakkında bilgi vermez.</text></svg>",
-        "key": "Büyük K, çok ürün demektir; hızlı tepkime demek değildir."
+        "key": "Kabaca K > 10³ ise ürün baskındır. Büyük K, çok ürün demektir; hızlı tepkime demek değildir.",
+        "once": {
+          "soru": "Bir tepkimenin K'sı 10¹⁰. Bu tepkime için ne söylenebilir?",
+          "secenekler": [
+            {
+              "yazi": "Dengede ürün çoktur",
+              "neden": "Büyük K, payın yani ürünlerin baskın olduğunu gösterir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Çok hızlıdır",
+              "neden": "K hız hakkında bilgi vermez; dengeye ulaşmak yıllar sürebilir."
+            },
+            {
+              "yazi": "Hiç ilerlemez",
+              "neden": "Bu, K çok küçükken olur."
+            }
+          ]
+        }
       },
       {
         "h": "Denklem değişince K",
-        "p": "Denklem <b>ters çevrilirse</b> yeni sabit 1/K olur. Katsayılar <b>n ile çarpılırsa</b> K<sup>n</sup> olur; ikiye bölünürse √K. İki denklem <b>toplanırsa</b> sabitleri çarpılır: K<sub>1</sub>·K<sub>2</sub>. Bir denklem çıkarılırsa, yani ters çevrilip eklenirse, sabitler bölünür.",
+        "p": "Denklem <b>ters çevrilirse</b> 1/K, katsayılar <b>n ile çarpılırsa</b> K<sup>n</sup> olur. İki denklem <b>toplanırsa</b> sabitler çarpılır: K<sub>1</sub>·K<sub>2</sub>.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Başlangıç:  A ⇌ B,  sabiti K</text><text x='40' y='44' font-size='11' fill='var(--muted)' text-anchor='start'>Denklemde yapılan</text><text x='262' y='44' font-size='11' fill='var(--muted)' text-anchor='middle'>Yeni sabit</text><rect x='10' y='51' width='300' height='24' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='22' y='68' font-size='12' fill='var(--ink)' text-anchor='start'>Ters çevir:  B ⇌ A</text><text x='262' y='68' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>1 / K</text><rect x='10' y='77' width='300' height='24' rx='4' fill='var(--panel)' fill-opacity='0.4'/><text x='22' y='94' font-size='12' fill='var(--ink)' text-anchor='start'>2 ile çarp:  2A ⇌ 2B</text><text x='262' y='94' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>K²</text><rect x='10' y='103' width='300' height='24' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='22' y='120' font-size='12' fill='var(--ink)' text-anchor='start'>2'ye böl:  ½A ⇌ ½B</text><text x='262' y='120' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>√K</text><rect x='10' y='129' width='300' height='24' rx='4' fill='var(--panel)' fill-opacity='0.4'/><text x='22' y='146' font-size='12' fill='var(--ink)' text-anchor='start'>Topla:  (1) + (2)</text><text x='262' y='146' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>K₁ · K₂</text><rect x='10' y='155' width='300' height='24' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='22' y='172' font-size='12' fill='var(--ink)' text-anchor='start'>Çıkar:  (1) − (2)</text><text x='262' y='172' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>K₁ / K₂</text><text x='160' y='194' font-size='10' fill='var(--muted)' text-anchor='middle'>(1) ve (2) sabitleri K₁ ve K₂ olan iki denklemdir.</text></svg>",
-        "key": "Denklemler toplanınca K'lar toplanmaz, çarpılır."
+        "key": "Katsayılar ikiye bölünürse √K olur. Denklemler toplanınca K'lar toplanmaz, çarpılır.",
+        "once": {
+          "soru": "A ⇌ B için K = 4. B ⇌ A tepkimesinin K'sı kaçtır?",
+          "secenekler": [
+            {
+              "yazi": "1/4",
+              "neden": "Ters tepkimede pay ile payda yer değiştirir: K' = 1/K.",
+              "dogru": true
+            },
+            {
+              "yazi": "4",
+              "neden": "Denklem ters dönünce ifade de ters döner."
+            },
+            {
+              "yazi": "−4",
+              "neden": "K negatif olamaz; derişimlerin oranıdır."
+            }
+          ]
+        }
       },
       {
         "h": "Tepkime oranı Q",
-        "p": "Dengede olup olmadığını bilmediğin bir anda, K ifadesine o anki derişimleri yazarsan <b>Q</b>'yu bulursun. <b>Q &lt; K</b> ise ürün azdır, tepkime ileri yönde yürür. <b>Q &gt; K</b> ise geri yönde yürür. <b>Q = K</b> ise sistem dengededir.",
+        "p": "K ifadesine o anki derişimleri yazınca <b>Q</b> bulunur. <b>Q &lt; K</b> ise ileri, <b>Q &gt; K</b> ise geri yürür; Q = K ise dengededir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='deng-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><defs><marker id='deng-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle'>Q: K ifadesine o anki derişimler yazılır</text><line x1='20' y1='90' x2='300' y2='90' stroke='var(--ink)' stroke-width='1.5'/><line x1='160' y1='80' x2='160' y2='100' stroke='var(--acc)' stroke-width='2.5'/><text x='160' y='72' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='700'>K</text><text x='85' y='76' font-size='14' fill='var(--c3)' text-anchor='middle' font-weight='700'>Q &lt; K</text><text x='235' y='76' font-size='14' fill='var(--c2)' text-anchor='middle' font-weight='700'>Q &gt; K</text><path d='M50 114 L140 114' stroke='var(--c3)' stroke-width='2' fill='none' marker-end='url(#deng-1)'/><path d='M270 114 L180 114' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#deng-2)'/><text x='85' y='136' font-size='11' fill='var(--muted)' text-anchor='middle'>ürün az</text><text x='85' y='152' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>ileri yönde yürür</text><text x='235' y='136' font-size='11' fill='var(--muted)' text-anchor='middle'>ürün fazla</text><text x='235' y='152' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>geri yönde yürür</text><rect x='70' y='166' width='180' height='26' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)'/><text x='160' y='184' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>Q = K: sistem dengede</text></svg>",
         "etk": {
           "tur": "formul",
@@ -6103,19 +6175,37 @@
       },
       {
         "h": "Denge hesabı: BDD tablosu",
-        "p": "2 L'lik kaba 2'şer mol H₂ ve I₂ konuyor; dengede 2,4 mol HI var. <b>Başlangıç–değişim–denge</b> tablosu: Değişimler katsayılarla orantılı: −x, −x, +2x. 2x = 2,4'ten x = 1,2. Dengede 0,8'er mol H₂ ve I₂ kalır: 0,4 M; K<sub>c</sub> = 1,2² / 0,4² = 9.",
+        "p": "Denge hesabında <b>başlangıç–değişim–denge</b> tablosu kurulur. Değişimler katsayılarla orantılıdır: H₂ + I₂ ⇌ 2HI için −x, −x, +2x. K'ya derişim yazılır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>H₂(g) + I₂(g) ⇌ 2HI(g)   (2 L kap)</text><text x='140' y='44' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>H₂</text><text x='200' y='44' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>I₂</text><text x='266' y='44' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>HI</text><rect x='8' y='52' width='304' height='25' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='16' y='70' font-size='12' fill='var(--muted)' text-anchor='start' font-weight='700'>Başlangıç</text><text x='140' y='70' font-size='13' fill='var(--ink)' text-anchor='middle'>2</text><text x='200' y='70' font-size='13' fill='var(--ink)' text-anchor='middle'>2</text><text x='266' y='70' font-size='13' fill='var(--ink)' text-anchor='middle'>0</text><rect x='8' y='78' width='304' height='25' rx='4' fill='var(--panel)' fill-opacity='0.4'/><text x='16' y='96' font-size='12' fill='var(--muted)' text-anchor='start' font-weight='700'>Değişim</text><text x='140' y='96' font-size='13' fill='var(--c5)' text-anchor='middle'>−x</text><text x='200' y='96' font-size='13' fill='var(--c5)' text-anchor='middle'>−x</text><text x='266' y='96' font-size='13' fill='var(--c5)' text-anchor='middle'>+2x</text><rect x='8' y='104' width='304' height='25' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='16' y='122' font-size='12' fill='var(--muted)' text-anchor='start' font-weight='700'>Denge</text><text x='140' y='122' font-size='13' fill='var(--ink)' text-anchor='middle'>2 − x</text><text x='200' y='122' font-size='13' fill='var(--ink)' text-anchor='middle'>2 − x</text><text x='266' y='122' font-size='13' fill='var(--ink)' text-anchor='middle'>2x</text><text x='160' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>Dengede HI = 2,4 mol → 2x = 2,4 → x = 1,2</text><text x='160' y='168' font-size='12' fill='var(--ink)' text-anchor='middle'>[H₂] = [I₂] = 0,8 / 2 = 0,4 M,  [HI] = 2,4 / 2 = 1,2 M</text><text x='160' y='192' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>K<tspan font-size='10' baseline-shift='sub'>c</tspan> = 1,2² / (0,4 · 0,4) = 9</text></svg>",
-        "key": "K'ya mol değil derişim (mol/L) yazılır; kap 1 L değilse molü hacme böl."
+        "key": "Kap 1 L değilse molü hacme böl. 2 L'de 2'şer mol H₂ ve I₂, dengede 2,4 mol HI: x = 1,2 ve Kc = 1,2² / 0,4² = 9."
       },
       {
         "h": "Le Chatelier: derişim",
-        "p": "<b>Le Chatelier ilkesi</b>: Dengedeki bir sisteme dışarıdan etki yapılırsa denge, bu etkiyi azaltan yöne kayar. Bir madde eklenirse onu harcayan yöne, ortamdan çekilirse onu üreten yöne kayar. Sıcaklık sabitse K değişmez. Katı ya da saf sıvı eklemek dengeyi kaydırmaz.",
+        "p": "<b>Le Chatelier ilkesi</b>: dengedeki sisteme etki yapılırsa denge bu etkiyi azaltan yöne kayar. Eklenen maddeyi harcayan, çekilen maddeyi üreten yöne kayar.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>N₂ + 3H₂ ⇌ 2NH₃  (sabit V ve T)</text><line x1='40' y1='34' x2='40' y2='170' stroke='var(--ink)' stroke-width='1.2'/><line x1='40' y1='170' x2='272' y2='170' stroke='var(--ink)' stroke-width='1.2'/><text x='44' y='40' font-size='10' fill='var(--muted)' text-anchor='start'>derişim</text><line x1='120' y1='46' x2='120' y2='170' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><path d='M40 100 L120 100 L120 62 C140 72 170 81 200 83 L270 83' stroke='var(--c1)' stroke-width='2.2' fill='none'/><path d='M40 112 L120 112 C140 116 170 118 200 119 L270 119' stroke='var(--c4)' stroke-width='2.2' fill='none'/><path d='M40 152 L120 152 C140 144 170 139 200 138 L270 138' stroke='var(--c3)' stroke-width='2.2' fill='none'/><text x='276' y='86' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>H₂</text><text x='276' y='123' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>N₂</text><text x='276' y='142' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>NH₃</text><text x='120' y='42' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>H₂ eklendi</text><text x='214' y='60' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>denge sağa kayar</text><text x='80' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>eski denge</text><text x='196' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>yeni denge</text><text x='160' y='198' font-size='10' fill='var(--muted)' text-anchor='middle'>Sıcaklık aynı olduğu için K değişmez.</text></svg>",
-        "key": "Eklenen maddenin derişimi azalır ama eski değerine tam dönmez."
+        "key": "Sıcaklık sabitse K değişmez. Katı ya da saf sıvı eklemek dengeyi kaydırmaz.",
+        "once": {
+          "soru": "Dengedeki bir kaba girenlerden biraz daha ekliyorsun. Denge hangi yöne kayar?",
+          "secenekler": [
+            {
+              "yazi": "İleri",
+              "neden": "Denge eklenen maddeyi harcayan yöne, yani ileri kayar.",
+              "dogru": true
+            },
+            {
+              "yazi": "Geri",
+              "neden": "Geri yön girenleri üretir; fazlayı artırırdı."
+            },
+            {
+              "yazi": "Kaymaz",
+              "neden": "Gaz ya da çözünmüş bir giren eklemek dengeyi kaydırır."
+            }
+          ]
+        }
       },
       {
         "h": "Basınç, hacim ve inert gaz",
-        "p": "Az önce gördüğün gibi, sabit sıcaklıkta hacim küçültülürse basınç artar; denge <b>gaz mol sayısı az</b> olan tarafa kayar. Hacim büyütülürse çok mol tarafına kayar. İki yanda gaz mol sayısı eşitse kayma olmaz. Sabit hacimde He gibi <b>inert gaz</b> eklemek kısmi basınçları değiştirmez; denge kaymaz.",
+        "p": "Sabit sıcaklıkta hacim küçülünce basınç artar; denge <b>gaz mol sayısı az</b> tarafa kayar. Mol sayıları eşitse kayma olmaz. Sabit hacimde inert gaz dengeyi kaydırmaz.",
         "svg": "<svg viewBox='0 0 320 200'><text x='108' y='22' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>N₂O₄(g)</text><text x='160' y='22' font-size='14' fill='var(--muted)' text-anchor='middle'>⇌</text><text x='212' y='22' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>2NO₂(g)</text><text x='108' y='40' font-size='11' fill='var(--c1)' text-anchor='middle'>1 mol gaz</text><text x='212' y='40' font-size='11' fill='var(--c2)' text-anchor='middle'>2 mol gaz</text><rect x='8' y='52' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='16' y='70' font-size='12' fill='var(--ink)' text-anchor='start'>Hacim küçülür (P artar)</text><text x='304' y='70' font-size='12' fill='var(--c1)' text-anchor='end' font-weight='700'>← az mol tarafı</text><rect x='8' y='82' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='0.4'/><text x='16' y='100' font-size='12' fill='var(--ink)' text-anchor='start'>Hacim büyür (P azalır)</text><text x='304' y='100' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>→ çok mol tarafı</text><rect x='8' y='112' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='16' y='130' font-size='12' fill='var(--ink)' text-anchor='start'>Sabit V'de He eklenir</text><text x='304' y='130' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='700'>kayma yok</text><rect x='8' y='142' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='0.4'/><text x='16' y='160' font-size='12' fill='var(--ink)' text-anchor='start'>Δn = 0  (H₂ + I₂ ⇌ 2HI)</text><text x='304' y='160' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='700'>kayma yok</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>Mol sayısında yalnız gazlar sayılır.</text></svg>",
         "etk": {
           "tur": "ayir",
@@ -6169,27 +6259,63 @@
       },
       {
         "h": "Sıcaklık ve katalizör",
-        "p": "Aynı denklem için K'yı <b>yalnızca sıcaklık</b> değiştirir. Isıyı bir madde gibi düşün: sıcaklık artınca denge ısı alan, yani endotermik yöne kayar. Bu yüzden <b>ekzotermik</b> tepkimede sıcaklık artınca K azalır, endotermikte artar. Denediğin gibi <b>katalizör</b> dengeyi kaydırmaz.",
+        "p": "K'yı <b>yalnız sıcaklık</b> değiştirir. Isıtınca denge endotermik yöne kayar: <b>ekzotermik</b> tepkimede K azalır, endotermikte artar. <b>Katalizör</b> dengeyi kaydırmaz.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='36' y1='34' x2='36' y2='150' stroke='var(--ink)' stroke-width='1.2'/><line x1='36' y1='150' x2='176' y2='150' stroke='var(--ink)' stroke-width='1.2'/><text x='26' y='42' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>K</text><text x='182' y='154' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>T</text><path d='M40 48 C80 98 120 124 172 134' stroke='var(--c2)' stroke-width='2.2' fill='none'/><path d='M40 140 C80 132 120 104 172 50' stroke='var(--c1)' stroke-width='2.2' fill='none'/><text x='36' y='170' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>ekzotermik: T↑ ise K↓</text><text x='36' y='188' font-size='11' fill='var(--c1)' text-anchor='start' font-weight='700'>endotermik: T↑ ise K↑</text><rect x='196' y='30' width='116' height='152' rx='8' fill='var(--panel)' fill-opacity='1'/><text x='254' y='52' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Katalizör</text><text x='254' y='76' font-size='11' fill='var(--ink)' text-anchor='middle'>ileri ve geri hızı</text><text x='254' y='92' font-size='11' fill='var(--ink)' text-anchor='middle'>aynı oranda artırır</text><text x='254' y='116' font-size='11' fill='var(--ink)' text-anchor='middle'>dengeye daha</text><text x='254' y='132' font-size='11' fill='var(--ink)' text-anchor='middle'>çabuk ulaşılır</text><text x='254' y='160' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>denge kaymaz</text><text x='254' y='176' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>K değişmez</text></svg>",
         "key": "Ekzotermik tepkimede ısıtmak hızı artırır ama K'yı küçültür."
       },
       {
         "h": "Haber yöntemi",
-        "p": "Endüstride amonyak N₂ ve H₂'den böyle üretilir. Tepkime ekzotermiktir ve gaz mol sayısı azalır; bu yüzden <b>yüksek basınç</b> verimi artırır. Düşük sıcaklık da verimi artırır ama tepkime çok yavaşlar; ≈450 °C ve <b>demir katalizör</b> bir uzlaşmadır. Oluşan NH₃ soğutulup ortamdan ayrılır.",
+        "p": "Amonyak N₂ ve H₂'den üretilir. Tepkime ekzotermiktir, gaz molü azalır: <b>yüksek basınç</b> verimi artırır. ≈450 °C ve <b>demir katalizör</b> hızla verim arasında uzlaşmadır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='deng-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><defs><marker id='deng-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><text x='160' y='20' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>N₂(g) + 3H₂(g) ⇌ 2NH₃(g)   ΔH = −92 kJ</text><text x='26' y='92' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>N₂, H₂</text><path d='M48 88 L80 88' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#deng-3)'/><rect x='82' y='54' width='100' height='72' rx='8' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)'/><text x='132' y='72' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>reaktör</text><text x='132' y='88' font-size='11' fill='var(--ink)' text-anchor='middle'>≈200 atm</text><text x='132' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>≈450 °C</text><text x='132' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>Fe katalizör</text><path d='M182 88 L210 88' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#deng-3)'/><rect x='212' y='64' width='96' height='48' rx='8' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)'/><text x='260' y='84' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>soğutucu</text><text x='260' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>NH₃ sıvılaşır</text><path d='M260 112 L260 138' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#deng-3)'/><text x='260' y='152' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>NH₃(s) ayrılır</text><path d='M260 64 V44 H132 V52' stroke='var(--c3)' stroke-width='1.5' fill='none' stroke-dasharray='4 3' marker-end='url(#deng-4)'/><text x='196' y='38' font-size='10' fill='var(--c3)' text-anchor='middle'>girmeyen N₂ ve H₂ geri döner</text><text x='160' y='176' font-size='11' fill='var(--ink)' text-anchor='middle'>Yüksek P: az mol tarafına (NH₃) kayar, verim artar</text><text x='160' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>Düşük T verimi artırır ama yavaştır: 450 °C uzlaşma</text></svg>",
-        "key": "NH₃'ü ortamdan çekmek de dengeyi ürünlere doğru iter."
+        "key": "Düşük sıcaklık verimi artırır ama tepkime çok yavaşlar. NH₃'ü soğutup ortamdan çekmek dengeyi ürünlere iter."
       },
       {
         "h": "Çözünürlük çarpımı Kçç",
-        "p": "Az çözünen tuz, doymuş çözeltisinde iyonlarıyla dengededir. Katı yazılmadığından AgCl için <b>K<sub>çç</sub> = [Ag<sup>+</sup>][Cl<sup>−</sup>]</b> olur (K<sub>sp</sub>). Molar çözünürlük s ise AB tipi tuzda K<sub>çç</sub> = s², AB₂ tipinde K<sub>çç</sub> = 4s³ olur.",
+        "p": "Az çözünen tuz, doymuş çözeltide iyonlarıyla dengededir. AgCl için <b>K<sub>çç</sub> = [Ag<sup>+</sup>][Cl<sup>−</sup>]</b>. Çözünürlük s ise AB tipinde K<sub>çç</sub> = s², AB₂ tipinde 4s³.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='24' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>AgCl(k) ⇌ Ag⁺(suda) + Cl⁻(suda)</text><text x='160' y='46' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>K<tspan font-size='10' baseline-shift='sub'>çç</tspan> = [Ag⁺][Cl⁻]</text><rect x='10' y='58' width='145' height='98' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)'/><text x='82' y='78' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>AB tipi (AgCl)</text><text x='82' y='99' font-size='11' fill='var(--ink)' text-anchor='middle'>[A⁺] = s,  [B⁻] = s</text><text x='82' y='123' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>K<tspan font-size='10' baseline-shift='sub'>çç</tspan> = s²</text><text x='82' y='143' font-size='12' fill='var(--muted)' text-anchor='middle'>s = √K<tspan font-size='10' baseline-shift='sub'>çç</tspan></text><rect x='165' y='58' width='145' height='98' rx='6' fill='var(--c5)' fill-opacity='0.08' stroke='var(--c5)'/><text x='237' y='78' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>AB₂ tipi (CaF₂)</text><text x='237' y='99' font-size='11' fill='var(--ink)' text-anchor='middle'>[Ca²⁺] = s,  [F⁻] = 2s</text><text x='237' y='123' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>K<tspan font-size='10' baseline-shift='sub'>çç</tspan> = s·(2s)² = 4s³</text><text x='237' y='143' font-size='12' fill='var(--muted)' text-anchor='middle'>s = ∛(K<tspan font-size='10' baseline-shift='sub'>çç</tspan> / 4)</text><text x='160' y='175' font-size='11' fill='var(--ink)' text-anchor='middle'>25 °C'de AgCl: K<tspan font-size='10' baseline-shift='sub'>çç</tspan> = 1,8×10⁻¹⁰</text><text x='160' y='196' font-size='11' fill='var(--ink)' text-anchor='middle'>s ≈ 1,3×10⁻⁵ mol/L</text></svg>",
-        "key": "Kçç ile çözünürlüğü yalnız aynı tipteki tuzlarda doğrudan karşılaştırabilirsin."
+        "key": "Kçç'ye Ksp de denir. Kçç ile çözünürlüğü yalnız aynı tipteki tuzlarda doğrudan karşılaştırabilirsin.",
+        "once": {
+          "soru": "AgCl(k) ⇌ Ag⁺ + Cl⁻ dengesinde AgCl neden Kçç ifadesine yazılmaz?",
+          "secenekler": [
+            {
+              "yazi": "Katı olduğu için",
+              "neden": "Katının derişimi sabittir; K ifadesine yazılmaz.",
+              "dogru": true
+            },
+            {
+              "yazi": "Az çözündüğü için",
+              "neden": "Az çözünmesi değil, katı olması nedeniyle yazılmaz."
+            },
+            {
+              "yazi": "Tuz olduğu için",
+              "neden": "Çözünmüş iyonları yazılır; yazılmayan, katı hâlidir."
+            }
+          ]
+        }
       },
       {
         "h": "Çökelme ve ortak iyon",
-        "p": "İki çözelti karışınca iyon çarpımı Q hesaplanır. <b>Q &gt; K<sub>çç</sub></b> ise çökelek oluşur; eşitse çözelti doymuştur. Tuzun iyonlarından biri çözeltide zaten varsa (<b>ortak iyon</b>), denge sola kayar ve tuz daha az çözünür: AgCl, NaCl çözeltisinde saf sudakinden çok daha az çözünür.",
+        "p": "Karışımda iyon çarpımı Q &gt; K<sub>çç</sub> ise <b>çökelek</b> oluşur. Tuzun iyonlarından biri çözeltide zaten varsa (<b>ortak iyon</b>), tuz daha az çözünür.",
         "svg": "<svg viewBox='0 0 320 200'><circle cx='18' cy='22' r='5' fill='var(--c3)' fill-opacity='0.85'/><text x='30' y='26' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>Q &lt; K<tspan font-size='10' baseline-shift='sub'>çç</tspan></text><text x='110' y='26' font-size='12' fill='var(--ink)' text-anchor='start'>doymamış: çökelme yok</text><circle cx='18' cy='44' r='5' fill='var(--c5)' fill-opacity='0.85'/><text x='30' y='48' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>Q = K<tspan font-size='10' baseline-shift='sub'>çç</tspan></text><text x='110' y='48' font-size='12' fill='var(--ink)' text-anchor='start'>doymuş: denge</text><circle cx='18' cy='66' r='5' fill='var(--c2)' fill-opacity='0.85'/><text x='30' y='70' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>Q &gt; K<tspan font-size='10' baseline-shift='sub'>çç</tspan></text><text x='110' y='70' font-size='12' fill='var(--ink)' text-anchor='start'>çökelek oluşur</text><line x1='10' y1='92' x2='310' y2='92' stroke='var(--line)' stroke-width='1'/><text x='160' y='112' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Ortak iyon etkisi: AgCl çözünürlüğü (25 °C)</text><text x='14' y='138' font-size='11' fill='var(--muted)' text-anchor='start'>saf su</text><rect x='86' y='126' width='160' height='16' rx='3' fill='var(--c1)' fill-opacity='0.55'/><text x='252' y='138' font-size='11' fill='var(--ink)' text-anchor='start'>1,3×10⁻⁵ M</text><text x='14' y='166' font-size='11' fill='var(--muted)' text-anchor='start'>0,1 M NaCl</text><rect x='86' y='154' width='4' height='16' rx='1' fill='var(--c2)' fill-opacity='0.8'/><text x='96' y='166' font-size='11' fill='var(--ink)' text-anchor='start'>1,8×10⁻⁹ M  (yaklaşık 7000 kat az)</text><text x='160' y='192' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>Fazla Cl⁻ dengeyi sola iter, AgCl daha az çözünür.</text></svg>",
-        "key": "Karıştırınca hacim artar: Q'yu seyrelmiş yeni derişimlerle hesapla."
+        "key": "Q = Kçç ise çözelti doymuştur. Karıştırınca hacim artar: Q'yu seyrelmiş derişimlerle hesapla.",
+        "once": {
+          "soru": "AgCl'yi saf suda mı, NaCl çözeltisinde mi daha çok çözebilirsin?",
+          "secenekler": [
+            {
+              "yazi": "Saf suda",
+              "neden": "NaCl'deki Cl⁻ dengeyi sola iter; AgCl orada daha az çözünür.",
+              "dogru": true
+            },
+            {
+              "yazi": "NaCl çözeltisinde",
+              "neden": "Ortak Cl⁻ iyonu çözünmeyi azaltır, artırmaz."
+            },
+            {
+              "yazi": "İkisinde eşit",
+              "neden": "Ortak iyon çözünürlüğü düşürür."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",
