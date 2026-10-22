@@ -54,7 +54,10 @@ export function dogruMu(q: Question, c: Cevap): boolean {
   return false;
 }
 
-const sayiYaz = (x: number) => x.toLocaleString("tr-TR", { maximumFractionDigits: 3 }).replace("-", "−");
+/** Doğru cevabı gösterir. Binlik ayracı nokta olunca "2.700" ondalık "2,7" sanılabiliyor; bu yüzden 9999'a kadar
+ *  ayraç konmaz (2700), daha büyük sayılar boşlukla gruplanır (103 000). Ondalık ayracı virgüldür. */
+const sayiYaz = (x: number) =>
+  x.toLocaleString("tr-TR", { maximumFractionDigits: 3, useGrouping: Math.abs(x) >= 10000 }).replace(/\./g, "\u202f").replace("-", "−");
 
 /** Değerlendirmeden sonra alttaki çubuğun başlığı. */
 export function geriBaslik(q: Question, ok: boolean): string {
@@ -265,7 +268,7 @@ function Sayi({ q, yazi, setYazi, sonuc }: { q: Of<"sayi">; yazi: string; setYaz
         />
         {q.birim && <Html className="text-[18px] font-bold" html={q.birim} />}
       </label>
-      {sonuc === null && <p className="text-center text-[13px] font-semibold text-muted-foreground">Ondalık virgülle: 2,5 · Binlik: 2.700 ya da 2700</p>}
+      {sonuc === null && <p className="text-center text-[13px] font-semibold text-muted-foreground">Ondalık için virgül: 2,5 · Binlik ayraç koyma: 2700</p>}
     </div>
   );
 }

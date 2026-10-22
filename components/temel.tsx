@@ -158,5 +158,10 @@ export function Row({ e, done }: { e: Entry; done?: boolean }) {
 
 /** İçerik metinleri küçük HTML parçaları taşır (<em>, <b>, <sub>...). İçerik bizim yazdığımız, doğrulanmış metindir. */
 export const Html = ({ as: Tag = "span", html, className }: { as?: "span" | "h2" | "p" | "div"; html: string; className?: string }) => (
-  <Tag className={className} dangerouslySetInnerHTML={{ __html: html }} />
+  <Tag className={className} dangerouslySetInnerHTML={{ __html: birimBagla(html) }} />
 );
+
+/** Sayı ile birimi aynı satırda tutar ("2,7 g/cm³" kırılıp "2,7" bir satırda, "g/cm³" ötekinde kalmasın).
+ *  Yalnızca etiket dışındaki metne dokunur; SVG ve öznitelikler değişmez. */
+const birimBagla = (html: string) =>
+  html.includes("<svg") ? html : html.replace(/(^|>)([^<]+)/g, (_, a: string, t: string) => a + t.replace(/(\d) (?=[a-zA-ZµμΩ°%‰Å])/g, "$1\u00a0"));
