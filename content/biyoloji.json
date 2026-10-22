@@ -3644,21 +3644,57 @@
     "cards": [
       {
         "h": "Ekosistem: bileşenler ve düzeyler",
-        "p": "<b>Ekosistem</b>, bir alandaki canlılarla (<b>biyotik</b>: üretici, tüketici, ayrıştırıcı) cansız çevrenin (<b>abiyotik</b>: ışık, sıcaklık, su, toprak, mineraller) etkileşimidir. Düzeyler: birey → <b>popülasyon</b> (aynı türün bir alandaki bireyleri) → <b>komünite</b> (o alandaki tüm popülasyonlar) → ekosistem → <b>biyosfer</b>.",
+        "p": "<b>Ekosistem</b>, canlılarla (<b>biyotik</b>) cansız çevrenin (<b>abiyotik</b>: ışık, su, toprak) etkileşimidir. Düzeyler: birey → <b>popülasyon</b> → <b>komünite</b> → ekosistem → biyosfer.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='65' y='16' font-size='11' fill='var(--muted)' text-anchor='middle'>düzeyler</text><rect x='10' y='24' width='110' height='22' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='65' y='39' font-size='12' fill='var(--ink)' text-anchor='middle'>birey</text><path d='M65 47 V55' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-1)'/><rect x='10' y='56' width='110' height='22' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='65' y='71' font-size='12' fill='var(--ink)' text-anchor='middle'>popülasyon</text><path d='M65 79 V87' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-1)'/><rect x='10' y='88' width='110' height='22' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='65' y='103' font-size='12' fill='var(--ink)' text-anchor='middle'>komünite</text><path d='M65 111 V119' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-1)'/><rect x='10' y='120' width='110' height='22' rx='6' fill='var(--acc)' fill-opacity='0.3' stroke='var(--acc)' stroke-width='1.5'/><text x='65' y='135' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>ekosistem</text><path d='M65 143 V151' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-1)'/><rect x='10' y='152' width='110' height='22' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='65' y='167' font-size='12' fill='var(--ink)' text-anchor='middle'>biyosfer</text><path d='M121 131 H150 M150 62 V148 M150 62 H164 M150 148 H164' stroke='var(--muted)' stroke-width='1.2' fill='none'/><rect x='165' y='24' width='147' height='76' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='238' y='43' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Biyotik (canlı)</text><text x='238' y='64' font-size='12' fill='var(--ink)' text-anchor='middle'>üretici, tüketici,</text><text x='238' y='82' font-size='12' fill='var(--ink)' text-anchor='middle'>ayrıştırıcı</text><rect x='165' y='110' width='147' height='76' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.5'/><text x='238' y='129' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>Abiyotik (cansız)</text><text x='238' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>ışık, sıcaklık, su,</text><text x='238' y='168' font-size='12' fill='var(--ink)' text-anchor='middle'>toprak, mineraller</text><text x='160' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>ekosistem = komünite + abiyotik çevre</text></svg>",
-        "key": "Popülasyon tek tür, komünite çok tür; ekosisteme cansız çevre de girer."
+        "key": "Popülasyon: aynı türün bir alandaki bireyleri. Komünite: o alandaki tüm popülasyonlar. Ekosisteme cansız çevre de girer.",
+        "once": {
+          "soru": "Bir göldeki bütün sazan balıkları hangi düzeyi oluşturur?",
+          "secenekler": [
+            {
+              "yazi": "Popülasyon",
+              "neden": "Aynı türün bir alanda yaşayan bireyleri popülasyondur.",
+              "dogru": true
+            },
+            {
+              "yazi": "Komünite",
+              "neden": "Komünite göldeki bütün türleri kapsar."
+            },
+            {
+              "yazi": "Ekosistem",
+              "neden": "Ekosisteme cansız çevre de girer."
+            }
+          ]
+        }
       },
       {
         "h": "Habitat ve ekolojik niş",
-        "p": "<b>Habitat</b>, bir canlının yaşadığı yerdir; onun adresidir. <b>Ekolojik niş</b> ise o canlının ekosistemdeki rolüdür: ne yediği, ne zaman beslendiği, hangi kaynakları kullandığı; yani mesleğidir. Aynı ağaçta yaşayan türlerin habitatı ortak, nişleri farklı olabilir.",
+        "p": "<b>Habitat</b> canlının yaşadığı yerdir, adresidir. <b>Ekolojik niş</b> ise rolüdür, mesleğidir: ne yediği, ne zaman beslendiği, hangi kaynakları kullandığı.",
         "svg": "<svg viewBox='0 0 320 200'><text x='10' y='16' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>Habitat: orman (ortak adres)</text><rect x='60' y='105' width='14' height='80' fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)'/><circle cx='67' cy='72' r='46' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><path d='M10 185 H125' stroke='var(--ink)' stroke-width='1.2' fill='none'/><circle cx='80' cy='48' r='4' fill='var(--c5)'/><path d='M84 48 H135' stroke='var(--muted)' stroke-width='1' fill='none'/><circle cx='98' cy='92' r='4' fill='var(--c1)'/><path d='M102 92 H135' stroke='var(--muted)' stroke-width='1' fill='none'/><circle cx='67' cy='150' r='4' fill='var(--c2)'/><path d='M71 150 L100 140 H135' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='140' y='44' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>baykuş</text><text x='140' y='58' font-size='11' fill='var(--ink)' text-anchor='start'>gece fare avlar</text><text x='140' y='88' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>sincap</text><text x='140' y='102' font-size='11' fill='var(--ink)' text-anchor='start'>tohum, ceviz toplar</text><text x='140' y='136' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>ağaçkakan</text><text x='140' y='150' font-size='11' fill='var(--ink)' text-anchor='start'>kabuktaki böcekleri yer</text><text x='140' y='176' font-size='11' fill='var(--muted)' text-anchor='start'>Niş farklı → rekabet az</text><text x='140' y='192' font-size='11' fill='var(--muted)' text-anchor='start'>Niş aynı → rekabet çok</text></svg>",
-        "key": "Habitat = adres, niş = meslek. Nişi örtüşen türler arasında rekabet artar."
+        "key": "Habitat = adres, niş = meslek. Nişi örtüşen türler arasında rekabet artar.",
+        "once": {
+          "soru": "Aynı ağaçta biri gündüz böcek, öbürü gece meyve yiyen iki kuş yaşıyor. Neleri farklıdır?",
+          "secenekler": [
+            {
+              "yazi": "Nişleri",
+              "neden": "Ne yedikleri ve ne zaman beslendikleri, yani rolleri farklıdır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Habitatları",
+              "neden": "İkisi de aynı ağaçta yaşıyor; adresleri ortak."
+            },
+            {
+              "yazi": "Hiçbiri",
+              "neden": "Beslenme biçimleri farklı olduğu için nişleri farklıdır."
+            }
+          ]
+        }
       },
       {
         "h": "Üretici, tüketici, ayrıştırıcı",
-        "p": "<b>Üreticiler</b> (ototrof) inorganik maddeden besin yapar: <b>fotosentetikler</b> ışıkla, <b>kemosentetikler</b> inorganik maddeleri yükseltgeyerek elde ettikleri kimyasal enerjiyle. <b>Tüketiciler</b> (heterotrof) hazır besin alır: otçul, etçil, hepçil, leşçil. <b>Ayrıştırıcılar</b> (çürükçül/saprofit bakteri ve mantarlar) ölü artıkları parçalayıp mineralleri toprağa geri verir.",
+        "p": "<b>Üreticiler</b> inorganik maddeden besin yapar (fotosentez ya da kemosentez). <b>Tüketiciler</b> hazır besin alır. <b>Ayrıştırıcılar</b> (bakteri, mantar) ölü artıkları parçalayıp mineralleri toprağa verir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='14' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>grup</text><text x='100' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>enerji / besin</text><text x='206' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>örnek</text><rect x='6' y='24.0' width='308' height='21' rx='4' fill='var(--c3)' fill-opacity='0.12'/><text x='14' y='39.0' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>fotosentetik</text><text x='100' y='39.0' font-size='12' fill='var(--ink)' text-anchor='start'>ışık enerjisi</text><text x='206' y='39.0' font-size='11' fill='var(--ink)' text-anchor='start'>bitki, alg</text><rect x='6' y='48.5' width='308' height='21' rx='4' fill='var(--c3)' fill-opacity='0.12'/><text x='14' y='63.5' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>kemosentetik</text><text x='100' y='63.5' font-size='12' fill='var(--ink)' text-anchor='start'>kimyasal enerji</text><text x='206' y='63.5' font-size='11' fill='var(--ink)' text-anchor='start'>nitrifikasyon bkt.</text><rect x='6' y='73.0' width='308' height='21' rx='4' fill='var(--c4)' fill-opacity='0.12'/><text x='14' y='88.0' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>otçul</text><text x='100' y='88.0' font-size='12' fill='var(--ink)' text-anchor='start'>bitki</text><text x='206' y='88.0' font-size='11' fill='var(--ink)' text-anchor='start'>tavşan, çekirge</text><rect x='6' y='97.5' width='308' height='21' rx='4' fill='var(--c4)' fill-opacity='0.12'/><text x='14' y='112.5' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>etçil</text><text x='100' y='112.5' font-size='12' fill='var(--ink)' text-anchor='start'>hayvan</text><text x='206' y='112.5' font-size='11' fill='var(--ink)' text-anchor='start'>kurt, kartal</text><rect x='6' y='122.0' width='308' height='21' rx='4' fill='var(--c4)' fill-opacity='0.12'/><text x='14' y='137.0' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>hepçil</text><text x='100' y='137.0' font-size='12' fill='var(--ink)' text-anchor='start'>bitki + hayvan</text><text x='206' y='137.0' font-size='11' fill='var(--ink)' text-anchor='start'>ayı, insan</text><rect x='6' y='146.5' width='308' height='21' rx='4' fill='var(--c4)' fill-opacity='0.12'/><text x='14' y='161.5' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>leşçil</text><text x='100' y='161.5' font-size='12' fill='var(--ink)' text-anchor='start'>ölü hayvan</text><text x='206' y='161.5' font-size='11' fill='var(--ink)' text-anchor='start'>akbaba</text><rect x='6' y='171.0' width='308' height='21' rx='4' fill='var(--c5)' fill-opacity='0.12'/><text x='14' y='186.0' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>ayrıştırıcı</text><text x='100' y='186.0' font-size='12' fill='var(--ink)' text-anchor='start'>ölü → mineral</text><text x='206' y='186.0' font-size='11' fill='var(--ink)' text-anchor='start'>bakteri, mantar</text></svg>",
-        "key": "Leşçil (akbaba) bir tüketicidir; ölüyü minerale çeviren ayrıştırıcılardır.",
+        "key": "Tüketiciler: otçul, etçil, hepçil, leşçil. Kemosentetikler inorganik maddeleri yükseltgeyerek enerji alır.",
         "etk": {
           "tur": "ayir",
           "soru": "Canlıyı ekosistemdeki rolüne göre yerleştir.",
@@ -3708,17 +3744,53 @@
               2
             ]
           ]
+        },
+        "once": {
+          "soru": "Ormanda ölü yaprakları minerale çeviren canlılar hangileridir?",
+          "secenekler": [
+            {
+              "yazi": "Ayrıştırıcılar",
+              "neden": "Çürükçül bakteri ve mantarlar ölü artıkları parçalar.",
+              "dogru": true
+            },
+            {
+              "yazi": "Üreticiler",
+              "neden": "Üreticiler besin yapar; ölüleri parçalamaz."
+            },
+            {
+              "yazi": "Leşçiller",
+              "neden": "Leşçiller ölüyü yer ama minerale kadar parçalayan ayrıştırıcılardır."
+            }
+          ]
         }
       },
       {
         "h": "Besin zinciri ve besin ağı",
-        "p": "<b>Besin zinciri</b>, besinin ve enerjinin kimden kime geçtiğini tek hat olarak gösterir. Her halka bir <b>beslenme basamağıdır</b>: üretici, birincil tüketici (otçul), ikincil tüketici... Doğada türler birden çok şey yer; zincirler birbirine bağlanıp <b>besin ağı</b> oluşturur. Ağ karmaşıklaştıkça ekosistem genellikle daha dengeli olur.",
+        "p": "<b>Besin zinciri</b>, besinin ve enerjinin kimden kime geçtiğini gösterir; her halka bir <b>beslenme basamağıdır</b>. Zincirler birbirine bağlanınca <b>besin ağı</b> oluşur.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><marker id='eko-4b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><text x='10' y='14' font-size='11' fill='var(--muted)' text-anchor='start'>besin zinciri</text><text x='22' y='38' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>ot</text><text x='22' y='54' font-size='10' fill='var(--muted)' text-anchor='middle'>üretici</text><path d='M34 34 H60' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-4)'/><text x='88' y='38' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>çekirge</text><text x='88' y='54' font-size='10' fill='var(--muted)' text-anchor='middle'>1. tüketici</text><path d='M116 34 H130' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-4)'/><text x='160' y='38' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>kurbağa</text><text x='160' y='54' font-size='10' fill='var(--muted)' text-anchor='middle'>2. tüketici</text><path d='M190 34 H212' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-4)'/><text x='232' y='38' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>yılan</text><text x='232' y='54' font-size='10' fill='var(--muted)' text-anchor='middle'>3. tüketici</text><path d='M252 34 H268' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-4)'/><text x='292' y='38' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>kartal</text><text x='292' y='54' font-size='10' fill='var(--muted)' text-anchor='middle'>4. tüketici</text><path d='M10 66 H310' stroke='var(--line)' stroke-width='1' fill='none'/><text x='10' y='84' font-size='11' fill='var(--muted)' text-anchor='start'>besin ağı</text><text x='160' y='190' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>bitki</text><text x='70' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>tavşan</text><text x='160' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>fare</text><text x='250' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>çekirge</text><text x='70' y='108' font-size='12' fill='var(--ink)' text-anchor='middle'>tilki</text><text x='160' y='108' font-size='12' fill='var(--ink)' text-anchor='middle'>kartal</text><text x='250' y='108' font-size='12' fill='var(--ink)' text-anchor='middle'>kurbağa</text><path d='M144 176 L86 155' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/><path d='M160 176 L160 155' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/><path d='M176 176 L234 155' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/><path d='M70 136 L70 113' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/><path d='M144 136 L86 113' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/><path d='M86 136 L144 113' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/><path d='M160 136 L160 113' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/><path d='M250 136 L250 113' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/></svg>",
-        "key": "Oklar 'yenen → yiyen' yönündedir; yani enerjinin akış yönünü gösterir."
+        "key": "Ağ karmaşıklaştıkça ekosistem genellikle daha dengeli olur.",
+        "once": {
+          "soru": "Ot → çekirge → kurbağa zincirinde oklar neyi gösterir?",
+          "secenekler": [
+            {
+              "yazi": "Enerjinin akışını",
+              "neden": "Ok yenenden yiyene doğrudur; enerji o yönde geçer.",
+              "dogru": true
+            },
+            {
+              "yazi": "Avcıdan avı",
+              "neden": "Ok avcıdan ava değil, yenenden yiyene çizilir."
+            },
+            {
+              "yazi": "Boy sırasını",
+              "neden": "Okların büyüklükle ilgisi yoktur."
+            }
+          ]
+        }
       },
       {
         "h": "Enerji akışı ve %10 kuralı",
-        "p": "Ekosisteme enerji çoğunlukla güneş ışığı olarak girer; üreticiler onu besine bağlar. Her basamakta enerjinin büyük kısmı solunumla <b>ısı</b> olarak kaybolur, bir kısmı sindirilmez. Bir üst basamağa ortalama yalnızca <b>≈ %10</b>'u geçer. Enerji tek yönlü akar, geri dönmez; madde ise döngüye girer.",
+        "p": "Enerji ekosisteme güneş ışığıyla girer. Her basamakta çoğu solunumla <b>ısı</b> olarak kaybolur; üst basamağa yalnız <b>≈ %10</b>'u geçer. Enerji akar, madde döner.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker><marker id='eko-5b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><text x='10' y='18' font-size='11' fill='var(--muted)' text-anchor='start'>her basamakta ≈ %90 kaybolur (solunum ısısı, atık)</text><rect x='95' y='34' width='46' height='24' rx='4' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='88' y='50' font-size='12' fill='var(--ink)' text-anchor='end'>üst etçil</text><text x='118.0' y='50' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>10 kJ</text><rect x='95' y='74' width='70' height='24' rx='4' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.5'/><text x='88' y='90' font-size='12' fill='var(--ink)' text-anchor='end'>etçil</text><text x='130.0' y='90' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>100 kJ</text><path d='M110 73 V59' stroke='var(--c4)' stroke-width='2' fill='none' marker-end='url(#eko-5)'/><rect x='95' y='114' width='120' height='24' rx='4' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='88' y='130' font-size='12' fill='var(--ink)' text-anchor='end'>otçul</text><text x='155.0' y='130' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>1 000 kJ</text><path d='M110 113 V99' stroke='var(--c4)' stroke-width='2' fill='none' marker-end='url(#eko-5)'/><rect x='95' y='154' width='200' height='24' rx='4' fill='var(--c4)' fill-opacity='0.45000000000000007' stroke='var(--c4)' stroke-width='1.5'/><text x='88' y='170' font-size='12' fill='var(--ink)' text-anchor='end'>üretici</text><text x='195.0' y='170' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>10 000 kJ</text><path d='M110 153 V139' stroke='var(--c4)' stroke-width='2' fill='none' marker-end='url(#eko-5)'/><path d='M169 86 H199' stroke='var(--c2)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-5b)'/><text x='203' y='90' font-size='11' fill='var(--c2)' text-anchor='start'>ısı</text><path d='M219 126 H249' stroke='var(--c2)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-5b)'/><text x='253' y='130' font-size='11' fill='var(--c2)' text-anchor='start'>ısı</text><text x='10' y='196' font-size='11' fill='var(--muted)' text-anchor='start'>güneş ışığı → üretici</text></svg>",
         "key": "Enerji akar, madde döner. %10 ortalamadır; gerçek oran genellikle %5-20 arasıdır.",
         "etk": {
@@ -3762,63 +3834,153 @@
       },
       {
         "h": "Ekolojik piramitler",
-        "p": "Az önce gezdiğin piramitler: <b>enerji piramidi</b> her zaman düzdür. <b>Birey sayısı piramidi</b> ters olabilir: tek bir ağaçta binlerce tırtıl yaşar. <b>Biyokütle piramidi</b> de ters olabilir: okyanusta hızla çoğalan fitoplanktonun anlık kütlesi, zooplanktondan az olabilir.",
+        "p": "Az önce gezdiğin <b>enerji piramidi</b> her zaman düzdür. <b>Birey sayısı</b> piramidi ters olabilir: bir ağaçta binlerce tırtıl. <b>Biyokütle</b> piramidi de okyanusta ters olabilir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='55' y='18' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>enerji</text><text x='160' y='18' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>birey sayısı</text><text x='265' y='18' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>biyokütle</text><rect x='38.0' y='54' width='34' height='22' rx='2' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.2'/><rect x='26.0' y='80' width='58' height='22' rx='2' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.2'/><rect x='14.0' y='106' width='82' height='22' rx='2' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.2'/><rect x='5.0' y='132' width='100' height='22' rx='2' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.2'/><text x='55' y='147' font-size='10' fill='var(--ink)' text-anchor='middle'>üretici</text><rect x='138.0' y='80' width='44' height='22' rx='2' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.2'/><text x='160' y='95' font-size='10' fill='var(--ink)' text-anchor='middle'>kuş</text><rect x='112.0' y='106' width='96' height='22' rx='2' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.2'/><text x='160' y='121' font-size='10' fill='var(--ink)' text-anchor='middle'>tırtıllar</text><rect x='143.0' y='132' width='34' height='22' rx='2' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.2'/><text x='160' y='147' font-size='10' fill='var(--ink)' text-anchor='middle'>ağaç</text><rect x='217.0' y='106' width='96' height='22' rx='2' fill='var(--c5)' fill-opacity='0.25' stroke='var(--c5)' stroke-width='1.2'/><text x='265' y='121' font-size='10' fill='var(--ink)' text-anchor='middle'>zooplankton</text><rect x='245.0' y='132' width='40' height='22' rx='2' fill='var(--c5)' fill-opacity='0.25' stroke='var(--c5)' stroke-width='1.2'/><text x='265' y='147' font-size='10' fill='var(--ink)' text-anchor='middle'>fito.</text><path d='M108 30 V170 M213 30 V170' stroke='var(--line)' stroke-width='1' fill='none'/><text x='55' y='172' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>hep düz</text><text x='160' y='172' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>ters olabilir</text><text x='265' y='172' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>ters olabilir</text><text x='160' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>tek meşe ağacı</text><text x='265' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>okyanus (anlık)</text><text x='55' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>ısı kaybı yüzünden</text></svg>",
-        "key": "Piramidin tabanında hep üreticiler bulunur; enerji azaldığı için basamak sayısı 4-5'i geçmez."
+        "key": "Okyanusta hızla çoğalan fitoplanktonun anlık kütlesi zooplanktondan az olabilir. Enerji azaldığı için basamak sayısı 4-5'i geçmez."
       },
       {
         "h": "Biyolojik birikim",
-        "p": "DDT, cıva, kurşun gibi bazı maddeler vücuttan zor atılır, dokularda birikir. Her tüketici çok sayıda av yediği için derişim üst basamaklara doğru katlanarak artar: <b>biyolojik birikim</b> (biyomagnifikasyon). En çok üst tüketiciler zarar görür; DDT yırtıcı kuşların yumurta kabuğunu inceltmiş, cıva Minamata'da insanları zehirlemiştir.",
+        "p": "DDT, cıva gibi zor atılan maddeler dokularda birikir. Her tüketici çok av yediğinden derişim yukarı katlanır: <b>biyolojik birikim</b>. En çok üst tüketiciler zarar görür.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><text x='10' y='18' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>DDT derişimi (ppm)</text><text x='310' y='18' font-size='10' fill='var(--muted)' text-anchor='end'>çubuk: log ölçek</text><text x='10' y='44' font-size='12' fill='var(--ink)' text-anchor='start'>balıkçıl kuş</text><rect x='105' y='32' width='118' height='14' rx='2' fill='var(--c2)' fill-opacity='0.63' stroke='var(--c2)' stroke-width='1.2'/><text x='310' y='44' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>25</text><text x='10' y='72' font-size='12' fill='var(--ink)' text-anchor='start'>büyük balık</text><rect x='105' y='60' width='101' height='14' rx='2' fill='var(--c2)' fill-opacity='0.51' stroke='var(--c2)' stroke-width='1.2'/><text x='310' y='72' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>2</text><text x='10' y='100' font-size='12' fill='var(--ink)' text-anchor='start'>küçük balık</text><rect x='105' y='88' width='91' height='14' rx='2' fill='var(--c2)' fill-opacity='0.39' stroke='var(--c2)' stroke-width='1.2'/><text x='310' y='100' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>0,5</text><text x='10' y='128' font-size='12' fill='var(--ink)' text-anchor='start'>zooplankton</text><rect x='105' y='116' width='74' height='14' rx='2' fill='var(--c2)' fill-opacity='0.27' stroke='var(--c2)' stroke-width='1.2'/><text x='310' y='128' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>0,04</text><text x='10' y='156' font-size='12' fill='var(--ink)' text-anchor='start'>su</text><rect x='105' y='144' width='8' height='14' rx='2' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.2'/><text x='310' y='156' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>0,000003</text><path d='M245 150 V40' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#eko-7)'/><text x='10' y='192' font-size='11' fill='var(--muted)' text-anchor='start'>su → kuş: yaklaşık 8 milyon kat artış</text></svg>",
-        "key": "Enerji yukarı çıktıkça azalır, zehir yukarı çıktıkça artar."
+        "key": "Enerji yukarı çıktıkça azalır, zehir artar. DDT yırtıcı kuşların yumurta kabuğunu inceltti; cıva Minamata'da insanları zehirledi."
       },
       {
         "h": "Su ve karbon döngüsü",
-        "p": "Madde ekosistemde döner. <b>Su döngüsü</b>: buharlaşma, bitkilerden terleme, yoğuşma ve yağış. <b>Karbon döngüsü</b>: fotosentez CO<sub>2</sub>'yi organik maddeye bağlar; solunum, ayrışma ve yanma onu havaya geri verir. Fosil yakıtlar, milyonlarca yıl önce gömülmüş canlıların karbonudur; yakıldıkça havadaki CO<sub>2</sub> artar.",
+        "p": "Madde ekosistemde döner. <b>Su döngüsü</b>: buharlaşma, terleme, yoğuşma, yağış. <b>Karbon döngüsü</b>: fotosentez CO<sub>2</sub>'yi bağlar; solunum, ayrışma ve yanma geri verir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker><marker id='eko-8b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker><marker id='eko-8c' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><ellipse cx='85' cy='30' rx='72' ry='17' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)'/><text x='85' y='34' font-size='11' fill='var(--c1)' text-anchor='middle'>bulut (yoğuşma)</text><rect x='6' y='160' width='74' height='26' rx='2' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1'/><text x='43' y='177' font-size='11' fill='var(--ink)' text-anchor='middle'>deniz</text><rect x='80' y='160' width='78' height='26' rx='2' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)' stroke-width='1'/><text x='119' y='177' font-size='11' fill='var(--ink)' text-anchor='middle'>kara</text><rect x='147' y='135' width='5' height='25' fill='var(--c4)'/><circle cx='149' cy='128' r='10' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)'/><path d='M20 157 V50' stroke='var(--c1)' stroke-width='1.5' fill='none' marker-end='url(#eko-8)'/><text x='26' y='100' font-size='11' fill='var(--c1)' text-anchor='start'>buharlaşma</text><path d='M100 49 V156' stroke='var(--c1)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-8)'/><text x='106' y='80' font-size='11' fill='var(--c1)' text-anchor='start'>yağış</text><path d='M149 116 V50' stroke='var(--c1)' stroke-width='1.5' fill='none' marker-end='url(#eko-8)'/><text x='143' y='108' font-size='10' fill='var(--c3)' text-anchor='end'>terleme</text><text x='80' y='197' font-size='11' fill='var(--muted)' text-anchor='middle'>su döngüsü</text><path d='M166 8 V192' stroke='var(--line)' stroke-width='1' fill='none'/><rect x='178' y='12' width='130' height='26' rx='4' fill='var(--muted)' fill-opacity='0.12' stroke='var(--muted)' stroke-width='1'/><text x='243' y='30' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CO₂ (atmosfer)</text><text x='195' y='120' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>bitki</text><text x='275' y='120' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>hayvan</text><path d='M190 40 V104' stroke='var(--c3)' stroke-width='1.5' fill='none' marker-end='url(#eko-8b)'/><text x='196' y='72' font-size='11' fill='var(--c3)' text-anchor='start'>fotosentez</text><path d='M285 104 V40' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#eko-8c)'/><text x='279' y='92' font-size='11' fill='var(--c2)' text-anchor='end'>solunum</text><path d='M215 116 H248' stroke='var(--c3)' stroke-width='1.5' fill='none' marker-end='url(#eko-8b)'/><text x='240' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>ölüler → ayrıştırıcı → CO₂</text><text x='240' y='170' font-size='11' fill='var(--c2)' text-anchor='middle'>fosil yakıt yanması → CO₂</text><text x='240' y='197' font-size='11' fill='var(--muted)' text-anchor='middle'>karbon döngüsü</text></svg>",
-        "key": "Okyanuslar da CO₂ çözer; okyanus ve ormanlar en büyük karbon depolarıdır."
+        "key": "Fosil yakıtlar eski canlıların karbonudur; yakıldıkça havadaki CO₂ artar. Okyanus ve ormanlar en büyük karbon depolarıdır."
       },
       {
         "h": "Azot ve fosfor döngüsü",
-        "p": "<b>Azot bağlayan bakteriler</b> (baklagil köklerindeki <em>Rhizobium</em>) N<sub>2</sub>'yi amonyağa çevirir. Ayrıştırıcılar ölü canlılardaki azotu da amonyağa çevirir: <b>amonifikasyon</b>. <b>Nitrifikasyon</b> bakterileri amonyağı nitrite, sonra nitrata; <b>denitrifikasyon</b> bakterileri nitratı N<sub>2</sub>'ye çevirir. <b>Fosforun</b> gaz evresi yoktur: kayaçtan toprak ve suya, oradan canlılara geçer.",
+        "p": "<b>Azot bağlayan bakteriler</b> (<em>Rhizobium</em>) N<sub>2</sub>'yi amonyağa çevirir. <b>Nitrifikasyon</b> amonyağı nitrata, <b>denitrifikasyon</b> nitratı N<sub>2</sub>'ye çevirir. Fosforun gaz evresi yoktur.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><marker id='eko-9b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker><marker id='eko-9c' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><marker id='eko-9d' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c5)'/></marker></defs><rect x='105' y='10' width='120' height='26' rx='4' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='165' y='28' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>N₂ (havanın ≈%78)</text><rect x='10' y='116' width='60' height='26' rx='4' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.5'/><text x='40' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>NH₃</text><rect x='100' y='116' width='60' height='26' rx='4' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.5'/><text x='130' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>NO₂⁻</text><rect x='190' y='116' width='60' height='26' rx='4' fill='var(--c3)' fill-opacity='0.18' stroke='var(--c3)' stroke-width='1.5'/><text x='220' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>NO₃⁻</text><rect x='268' y='116' width='46' height='26' rx='4' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.5'/><text x='291' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>bitki</text><path d='M108 37 L48 113' stroke='var(--c3)' stroke-width='1.8' fill='none' marker-end='url(#eko-9b)'/><text x='8' y='58' font-size='11' fill='var(--c3)' text-anchor='start' font-weight='700'>azot bağlama</text><text x='8' y='72' font-size='10' fill='var(--muted)' text-anchor='start'><tspan font-style='italic'>Rhizobium</tspan></text><path d='M71 129 H97' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-9)'/><path d='M161 129 H187' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-9)'/><path d='M251 129 H265' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-9)'/><text x='130' y='160' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>nitrifikasyon bakterileri</text><path d='M222 113 L190 39' stroke='var(--c2)' stroke-width='1.8' fill='none' marker-end='url(#eko-9c)'/><text x='214' y='70' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>denitrifikasyon</text><path d='M291 143 V184 H40 V146' stroke='var(--c5)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-9d)'/><text x='165' y='178' font-size='11' fill='var(--c5)' text-anchor='middle'>ölü canlı, atık → ayrıştırıcılar</text></svg>",
-        "key": "Bitki azotu çoğunlukla nitrat olarak kökle alır; protein ve DNA yapımında kullanır."
+        "key": "Ayrıştırıcılar ölü canlıdaki azotu amonyağa çevirir: amonifikasyon. Bitki azotu çoğunlukla nitrat olarak alır. Fosfor kayaçtan toprağa, oradan canlılara geçer."
       },
       {
         "h": "Kirlilik ve asit yağmuru",
-        "p": "Fosil yakıtlar havaya SO<sub>2</sub> ve azot oksitler (NO<sub>x</sub>) verir; bunlar nemle sülfürik ve nitrik aside dönüşür: <b>asit yağmuru</b>. Göl, toprak ve ormana zarar verir, mermeri aşındırır. Atıklar, gübre ve ilaçlar da su ile toprağı kirletir.",
+        "p": "Fosil yakıtlar havaya SO<sub>2</sub> ve azot oksitler verir; bunlar nemle aside dönüşür: <b>asit yağmuru</b>. Göl, toprak ve ormana zarar verir, mermeri aşındırır.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='8.0' width='308' height='27' rx='4' fill='var(--muted)' fill-opacity='0.13'/><text x='14' y='26.0' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>hava</text><text x='108' y='26.0' font-size='11' fill='var(--ink)' text-anchor='start'>fosil yakıt: SO₂, NOₓ, CO, partikül</text><rect x='6' y='39.5' width='308' height='27' rx='4' fill='var(--c2)' fill-opacity='0.13'/><text x='14' y='57.5' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>asit yağmuru</text><text x='108' y='57.5' font-size='11' fill='var(--ink)' text-anchor='start'>havada H₂SO₄ ve HNO₃ oluşur</text><rect x='6' y='71.0' width='308' height='27' rx='4' fill='var(--c1)' fill-opacity='0.13'/><text x='14' y='89.0' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>su</text><text x='108' y='89.0' font-size='11' fill='var(--ink)' text-anchor='start'>sanayi atığı, kanalizasyon, gübre</text><rect x='6' y='102.5' width='308' height='27' rx='4' fill='var(--c4)' fill-opacity='0.13'/><text x='14' y='120.5' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>toprak</text><text x='108' y='120.5' font-size='11' fill='var(--ink)' text-anchor='start'>tarım ilacı, katı atık, ağır metal</text><rect x='6' y='134.0' width='308' height='27' rx='4' fill='var(--c5)' fill-opacity='0.13'/><text x='14' y='152.0' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>nükleer</text><text x='108' y='152.0' font-size='11' fill='var(--ink)' text-anchor='start'>radyoaktif sızıntı (Çernobil 1986)</text><rect x='6' y='165.5' width='308' height='27' rx='4' fill='var(--c3)' fill-opacity='0.13'/><text x='14' y='183.5' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>ışık, gürültü</text><text x='108' y='183.5' font-size='11' fill='var(--ink)' text-anchor='start'>göç yönü şaşar, stres, işitme</text></svg>",
-        "key": "Normal yağmur da hafif asidiktir (pH ≈ 5,6); asit yağmurunun pH'ı bundan düşüktür."
+        "key": "Normal yağmur da hafif asidiktir (pH ≈ 5,6); asit yağmurunun pH'ı daha düşüktür. Atık, gübre ve ilaçlar da su ile toprağı kirletir.",
+        "once": {
+          "soru": "Asit yağmurunun ana kaynağı hangisidir?",
+          "secenekler": [
+            {
+              "yazi": "Fosil yakıtların yanması",
+              "neden": "Kömür ve petrol yanınca çıkan SO₂ ve azot oksitler nemle aside dönüşür.",
+              "dogru": true
+            },
+            {
+              "yazi": "Ozon tabakasının incelmesi",
+              "neden": "Ozon incelmesi UV ile ilgilidir, asitle değil."
+            },
+            {
+              "yazi": "Ormanların fotosentezi",
+              "neden": "Fotosentez CO₂ bağlar, asit üretmez."
+            }
+          ]
+        }
       },
       {
         "h": "Sera etkisi, iklim ve ozon",
-        "p": "<b>Sera etkisi</b> doğaldır: CO<sub>2</sub>, metan ve su buharı yerden yayılan ısıyı tutar; o olmasa Dünya ortalaması ≈ −18 °C olurdu. Fosil yakıt ve ormansızlaşma bu gazları artırınca <b>küresel iklim değişikliği</b> başlar: buzullar erir, deniz yükselir. <b>Ozon incelmesi</b> ayrı sorundur: CFC'ler UV kalkanını zayıflatır.",
+        "p": "<b>Sera etkisi</b> doğaldır: CO<sub>2</sub>, metan ve su buharı ısıyı tutar. Bu gazlar artınca <b>iklim değişikliği</b> başlar. <b>Ozon incelmesi</b> ayrıdır: CFC'ler UV kalkanını zayıflatır.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='6' width='150' height='26' rx='4' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)' stroke-width='1.5'/><text x='81' y='24' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Sera etkisi ↑</text><rect x='164' y='6' width='150' height='26' rx='4' fill='var(--c5)' fill-opacity='0.18' stroke='var(--c5)' stroke-width='1.5'/><text x='239' y='24' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Ozon incelmesi</text><text x='160' y='52' font-size='10' fill='var(--muted)' text-anchor='middle'>nerede?</text><text x='81' y='68' font-size='11' fill='var(--ink)' text-anchor='middle'>troposfer (alt atmosfer)</text><text x='239' y='68' font-size='11' fill='var(--ink)' text-anchor='middle'>stratosfer (≈15-35 km)</text><text x='160' y='90' font-size='10' fill='var(--muted)' text-anchor='middle'>neden?</text><text x='81' y='106' font-size='11' fill='var(--ink)' text-anchor='middle'>CO₂, CH₄, N₂O artışı</text><text x='239' y='106' font-size='11' fill='var(--ink)' text-anchor='middle'>CFC'deki klor O₃'ü yıkar</text><path d='M6 80 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='160' y='128' font-size='10' fill='var(--muted)' text-anchor='middle'>sonuç?</text><text x='81' y='144' font-size='11' fill='var(--ink)' text-anchor='middle'>ısı tutulur, iklim ısınır</text><text x='239' y='144' font-size='11' fill='var(--ink)' text-anchor='middle'>UV artar: cilt kanseri</text><path d='M6 118 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='160' y='166' font-size='10' fill='var(--muted)' text-anchor='middle'>önlem</text><text x='81' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>Paris Anlaşması (2015)</text><text x='239' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>Montreal Prot. (1987)</text><path d='M6 156 H314' stroke='var(--line)' stroke-width='1' fill='none'/></svg>",
-        "key": "Ozon incelmesi küresel ısınmanın nedeni değildir; ikisini karıştırma."
+        "key": "Fosil yakıt ve ormansızlaşma sera gazlarını artırır: buzullar erir, deniz yükselir. Ozon incelmesi küresel ısınmanın nedeni değildir.",
+        "once": {
+          "soru": "Hiç sera etkisi olmasaydı Dünya nasıl olurdu?",
+          "secenekler": [
+            {
+              "yazi": "Çok daha soğuk",
+              "neden": "Gazlar ısıyı tutmasa ortalama sıcaklık ≈ −18 °C olurdu.",
+              "dogru": true
+            },
+            {
+              "yazi": "Çok daha sıcak",
+              "neden": "Sera gazları ısıyı tutar; yokluğu soğutur."
+            },
+            {
+              "yazi": "Aynı",
+              "neden": "Sera etkisi doğaldır ve hayat için gereklidir."
+            }
+          ]
+        }
       },
       {
         "h": "Ötrofikasyon, erozyon, tür kaybı",
-        "p": "Adımda gördüğün <b>ötrofikasyonu</b> gübre ve deterjandaki azot ile fosfor başlatır. Bitki örtüsü yok olunca toprak su ve rüzgârla taşınır: <b>erozyon</b>. Habitat kaybı, istilacı türler ve aşırı avlanma <b>biyoçeşitliliği</b> azaltır.",
+        "p": "Az önce gördüğün <b>ötrofikasyonu</b> gübredeki azot ve fosfor başlatır. Bitki örtüsü yok olunca toprak taşınır: <b>erozyon</b>. Habitat kaybı ve aşırı avlanma <b>biyoçeşitliliği</b> azaltır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='10' y='12' width='92' height='34' rx='5' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='56' y='34' font-size='11' fill='var(--ink)' text-anchor='middle'>gübre: N ve P</text><rect x='115' y='12' width='92' height='34' rx='5' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='161' y='34' font-size='11' fill='var(--ink)' text-anchor='middle'>alg patlaması</text><rect x='220' y='12' width='92' height='34' rx='5' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='266' y='34' font-size='11' fill='var(--ink)' text-anchor='middle'>ölü alg ayrışır</text><rect x='220' y='70' width='92' height='34' rx='5' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='266' y='92' font-size='11' fill='var(--ink)' text-anchor='middle'>O₂ azalır</text><rect x='115' y='70' width='92' height='34' rx='5' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='161' y='92' font-size='11' fill='var(--ink)' text-anchor='middle'>balıklar ölür</text><path d='M103 29 H112' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-12)'/><path d='M208 29 H217' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-12)'/><path d='M266 47 V67' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-12)'/><path d='M217 87 H210' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-12)'/><text x='60' y='92' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>ötrofikasyon</text><path d='M6 116 H314' stroke='var(--line)' stroke-width='1' fill='none'/><rect x='6' y='124' width='150' height='70' rx='5' fill='var(--c4)' fill-opacity='0.14' stroke='var(--c4)' stroke-width='1.5'/><text x='81' y='144' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>Erozyon</text><text x='81' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>bitki örtüsü yok olur</text><text x='81' y='178' font-size='11' fill='var(--ink)' text-anchor='middle'>→ toprak taşınır</text><rect x='164' y='124' width='150' height='70' rx='5' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='239' y='144' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Biyoçeşitlilik ↓</text><text x='239' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>habitat kaybı, istilacı</text><text x='239' y='178' font-size='11' fill='var(--ink)' text-anchor='middle'>tür, aşırı avlanma</text></svg>",
-        "key": "İstilacı tür, yeni yerinde doğal düşmanı olmadığı için hızla yayılır (Akdeniz'de aslan balığı)."
+        "key": "İstilacı türler de biyoçeşitliliği azaltır: yeni yerinde doğal düşmanı olmadığı için hızla yayılır (Akdeniz'de aslan balığı)."
       },
       {
         "h": "Türkiye'nin biyoçeşitliliği",
-        "p": "<b>Endemik tür</b>, doğal olarak yalnızca belirli bir bölgede yaşayan türdür; orada yok olursa dünyadan silinir. Türkiye'deki bitki türlerinin yaklaşık üçte biri endemiktir (Kazdağı göknarı); Van Gölü'nün inci kefali de endemiktir. Üç bitki coğrafyası bölgesinin kesişmesi, farklı iklim ve yer şekilleri bu zenginliği yaratır.",
+        "p": "<b>Endemik tür</b> yalnız belirli bir bölgede doğal yaşar; orada yok olursa dünyadan silinir. Türkiye'deki bitki türlerinin yaklaşık üçte biri endemiktir: Kazdağı göknarı.",
         "svg": "<svg viewBox='0 0 320 200'><text x='100' y='14' font-size='11' fill='var(--muted)' text-anchor='middle'>üç bitki coğrafyası bölgesi</text><circle cx='72' cy='72' r='46' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><circle cx='128' cy='72' r='46' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><circle cx='100' cy='120' r='46' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)' stroke-width='1.5'/><text x='54' y='56' font-size='10' fill='var(--c3)' text-anchor='middle' font-weight='700'>Avrupa-</text><text x='54' y='69' font-size='10' fill='var(--c3)' text-anchor='middle' font-weight='700'>Sibirya</text><text x='146' y='62' font-size='10' fill='var(--c1)' text-anchor='middle' font-weight='700'>Akdeniz</text><text x='100' y='148' font-size='10' fill='var(--c4)' text-anchor='middle' font-weight='700'>İran-Turan</text><rect x='75' y='84' width='50' height='16' rx='4' fill='var(--panel)' fill-opacity='0.9'/><text x='100' y='96' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>Türkiye</text><circle cx='258' cy='78' r='42' fill='var(--c3)' fill-opacity='0.18' stroke='var(--c3)' stroke-width='1.5'/><path d='M258 78 L258 36 A42 42 0 0 1 294.4 99 Z' fill='var(--c2)' fill-opacity='0.45' stroke='var(--c2)' stroke-width='1.5'/><text x='276' y='70' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>≈ 1/3</text><text x='258' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>bitki türlerinin</text><text x='258' y='155' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>≈ üçte biri endemik</text><text x='160' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>endemik örnekler: Kazdağı göknarı, inci kefali</text></svg>",
-        "key": "Buğday ve nohudun yabani ataları Anadolu'da yaşar: Türkiye önemli bir gen merkezidir."
+        "key": "Üç bitki coğrafyası bölgesinin kesişmesi bu zenginliği yaratır. Buğday ve nohudun yabani ataları Anadolu'da yaşar.",
+        "once": {
+          "soru": "Van Gölü'nün inci kefali yalnız orada yaşar. Böyle türlere ne denir?",
+          "secenekler": [
+            {
+              "yazi": "Endemik",
+              "neden": "Doğal olarak yalnız belirli bir bölgede yaşayan türdür.",
+              "dogru": true
+            },
+            {
+              "yazi": "İstilacı",
+              "neden": "İstilacı tür, yeni bir yere gelip hızla yayılan türdür."
+            },
+            {
+              "yazi": "Öncü",
+              "neden": "Öncü türler çıplak alana ilk yerleşenlerdir."
+            }
+          ]
+        }
       },
       {
         "h": "Çözümler ve ekolojik ayak izi",
-        "p": "<b>Sürdürülebilirlik</b>: bugünün ihtiyaçlarını gelecek kuşakların imkânını tüketmeden karşılamak. <b>Ekolojik ayak izi</b>, tüketimini karşılamak ve atığını yok etmek için gereken verimli alandır; küçülmesi iyidir. Geri dönüşüm, yenilenebilir enerji, toplu taşıma, korunan alanlar ve uluslararası anlaşmalar başlıca çözümlerdir.",
+        "p": "<b>Sürdürülebilirlik</b>: bugünün ihtiyaçlarını gelecek kuşakların imkânını tüketmeden karşılamak. <b>Ekolojik ayak izi</b>, tüketimin ve atığın gerektirdiği verimli alandır; küçülmesi iyidir.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='6' width='150' height='90' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='81' y='32' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Sürdürülebilirlik</text><text x='81' y='58' font-size='11' fill='var(--ink)' text-anchor='middle'>bugünü karşıla,</text><text x='81' y='76' font-size='11' fill='var(--ink)' text-anchor='middle'>geleceği tüketme</text><rect x='164' y='6' width='150' height='90' rx='6' fill='var(--c4)' fill-opacity='0.14' stroke='var(--c4)' stroke-width='1.5'/><text x='239' y='32' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>Ekolojik ayak izi</text><text x='239' y='58' font-size='11' fill='var(--ink)' text-anchor='middle'>tüketimin gerektirdiği</text><text x='239' y='76' font-size='11' fill='var(--ink)' text-anchor='middle'>alan (küresel hektar)</text><rect x='6' y='104' width='150' height='90' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='81' y='130' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Geri dönüşüm</text><text x='81' y='156' font-size='11' fill='var(--ink)' text-anchor='middle'>kâğıt, cam, metal, plastik</text><text x='81' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>kaynak, enerji tasarrufu</text><rect x='164' y='104' width='150' height='90' rx='6' fill='var(--c5)' fill-opacity='0.14' stroke='var(--c5)' stroke-width='1.5'/><text x='239' y='130' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Korunan alanlar</text><text x='239' y='156' font-size='11' fill='var(--ink)' text-anchor='middle'>milli park, sulak alan,</text><text x='239' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>tabiat parkı, tabiat anıtı</text></svg>",
-        "key": "Ayak izi büyüdükçe doğaya yük artar; tüketimi azaltmak onu küçültür."
+        "key": "Geri dönüşüm, yenilenebilir enerji, toplu taşıma, korunan alanlar ve uluslararası anlaşmalar başlıca çözümlerdir.",
+        "once": {
+          "soru": "Hangisi ekolojik ayak izini küçültür?",
+          "secenekler": [
+            {
+              "yazi": "Toplu taşıma kullanmak",
+              "neden": "Kişi başına düşen yakıt ve salım azalır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Sık sık yeni eşya almak",
+              "neden": "Tüketim arttıkça ayak izi büyür."
+            },
+            {
+              "yazi": "Tek kullanımlık ürünler",
+              "neden": "Atık arttıkça ayak izi büyür."
+            }
+          ]
+        }
       },
       {
         "h": "Atık yönetimi",
-        "p": "Atık yönetimi önce <b>önlemekle</b> başlar: az tüket, yeniden kullan. Kalan atık kaynağında ayrılır: kâğıt, plastik, cam ve metal geri dönüşüme, yemek artıkları <b>kompost</b>a, pil ve elektronik atık ayrı kutulara gider. Türkiye'nin <b>Sıfır Atık</b> projesi bu sırayı yaygınlaştırır. Çöp sahası en son seçenektir.",
+        "p": "Atık yönetimi <b>önlemekle</b> başlar: az tüket, yeniden kullan. Kalan atık kaynağında ayrılır: geri dönüşüm, <b>kompost</b>, pil kutusu. Çöp sahası en son seçenektir.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='10.0' y='26' width='300' height='26' rx='6' fill='var(--c3)' fill-opacity='0.18' stroke='var(--c3)' stroke-width='1.5'/><text x='160' y='44' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>önle, azalt</text><rect x='35.0' y='57' width='250' height='26' rx='6' fill='var(--c3)' fill-opacity='0.18' stroke='var(--c3)' stroke-width='1.5'/><text x='160' y='75' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>yeniden kullan</text><rect x='60.0' y='88' width='200' height='26' rx='6' fill='var(--c1)' fill-opacity='0.18' stroke='var(--c1)' stroke-width='1.5'/><text x='160' y='106' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>geri dönüştür, kompost</text><rect x='85.0' y='119' width='150' height='26' rx='6' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.5'/><text x='160' y='137' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>enerji kazan</text><rect x='110.0' y='150' width='100' height='26' rx='6' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)' stroke-width='1.5'/><text x='160' y='168' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>çöp sahası</text><text x='160' y='16' font-size='10.5' fill='var(--muted)' text-anchor='middle'>yukarıdan aşağı: en iyiden en sona</text><text x='160' y='196' font-size='10.5' fill='var(--muted)' text-anchor='middle'>kaynağında ayır: kâğıt · plastik · cam · metal · pil</text></svg>",
-        "key": "Sıra önemlidir: önle, yeniden kullan, geri dönüştür; gömmek en son çaredir."
+        "key": "Sıra: önle, yeniden kullan, geri dönüştür; gömmek en son çaredir. Türkiye'nin Sıfır Atık projesi bu sırayı yaygınlaştırır.",
+        "once": {
+          "soru": "Atık yönetiminde ilk tercih hangisidir?",
+          "secenekler": [
+            {
+              "yazi": "Atığı önlemek",
+              "neden": "Hiç oluşmayan atık en iyi atıktır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Geri dönüştürmek",
+              "neden": "Geri dönüşüm iyidir ama önlemekten sonra gelir."
+            },
+            {
+              "yazi": "Çöp sahasına gömmek",
+              "neden": "Gömmek en son çaredir."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",

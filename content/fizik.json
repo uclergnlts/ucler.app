@@ -3420,21 +3420,57 @@
     "cards": [
       {
         "h": "Basit makine nedir?",
-        "p": "<b>Basit makine</b> işini kolaylaştıran araçtır: kuvvetin <b>büyüklüğünü</b>, <b>yönünü</b> ya da etkisinin <b>yolunu ve hızını</b> değiştirir. Kaldıraç, makara, eğik düzlem, çıkrık, vida ve dişli birer basit makinedir. Aksi söylenmedikçe makaraları ve çubukları ağırlıksız, ortamı sürtünmesiz alıyoruz.",
+        "p": "<b>Basit makine</b> kuvvetin büyüklüğünü, yönünü ya da yolunu değiştirerek işi kolaylaştırır: kaldıraç, makara, eğik düzlem, çıkrık, vida, dişli.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='5' y='15' width='100' height='180' fill='var(--panel)' rx='8'/><rect x='110' y='15' width='100' height='180' fill='var(--panel)' rx='8'/><rect x='215' y='15' width='100' height='180' fill='var(--panel)' rx='8'/><text x='55' y='38' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Büyüklük</text><text x='160' y='38' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Yön</text><text x='265' y='38' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Yol / hız</text><polygon points='15,160 95,160 95,100' fill='var(--line)' fill-opacity='0.6' stroke='var(--ink)' stroke-width='1.5'/><rect x='-10' y='-20' width='20' height='20' transform='translate(50,133.75) rotate(-36.87)' fill='var(--c4)' fill-opacity='0.4' stroke='var(--c4)' stroke-width='1.5'/><line x1='62' y1='118' x2='78.9' y2='105.3' stroke='var(--c1)' stroke-width='2'/><polygon points='84,101.5 80,109.5 75.2,103.1' fill='var(--c1)'/><text x='72' y='95' font-size='12' fill='var(--c1)' font-weight='bold'>F</text><text x='55' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>küçük F, büyük yük</text><line x1='140' y1='58' x2='180' y2='58' stroke='var(--ink)' stroke-width='2'/><line x1='144' y1='58' x2='138' y2='51' stroke='var(--muted)' stroke-width='1'/><line x1='154' y1='58' x2='148' y2='51' stroke='var(--muted)' stroke-width='1'/><line x1='164' y1='58' x2='158' y2='51' stroke='var(--muted)' stroke-width='1'/><line x1='174' y1='58' x2='168' y2='51' stroke='var(--muted)' stroke-width='1'/><line x1='160' y1='58' x2='160' y2='80' stroke='var(--ink)' stroke-width='1.5'/><circle cx='160' cy='80' r='15' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='160' cy='80' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='145' y1='80' x2='145' y2='125' stroke='var(--ink)' stroke-width='1.5'/><line x1='175' y1='80' x2='175' y2='130' stroke='var(--ink)' stroke-width='1.5'/><rect x='132' y='125' width='26' height='22' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><line x1='175' y1='130' x2='175' y2='151.6' stroke='var(--c1)' stroke-width='2.5'/><polygon points='175,158 171,150 179,150' fill='var(--c1)'/><text x='183' y='152' font-size='12' fill='var(--c1)' font-weight='bold'>F</text><line x1='125' y1='145' x2='125' y2='123.6' stroke='var(--c3)' stroke-width='2'/><polygon points='125,118 128.5,125 121.5,125' fill='var(--c3)'/><text x='160' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>aşağı çek, yük çıksın</text><line x1='232' y1='115' x2='306.3' y2='104.6' stroke='var(--muted)' stroke-width='2' stroke-dasharray='4 3'/><polygon points='232,115 225,127.6 239,127.6' fill='var(--muted)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1.2'/><line x1='232' y1='115' x2='291.1' y2='68.8' stroke='var(--ink)' stroke-width='3'/><path d='M306.3 104.6 A75 75 0 0 0 291.1 68.8' fill='none' stroke='var(--c3)' stroke-width='2'/><path d='M249.8 112.5 A18 18 0 0 0 246.2 103.9' fill='none' stroke='var(--c3)' stroke-width='2'/><line x1='250' y1='138' x2='250' y2='110.4' stroke='var(--c1)' stroke-width='2.5'/><polygon points='250,104 254,112 246,112' fill='var(--c1)'/><text x='257' y='136' font-size='12' fill='var(--c1)' font-weight='bold'>F</text><text x='265' y='160' font-size='10' fill='var(--muted)' text-anchor='middle'>el az, uç çok</text><text x='265' y='174' font-size='10' fill='var(--muted)' text-anchor='middle'>yol alır</text></svg>",
-        "key": "Hesaplarda varsayım: makara ve çubuk ağırlıksız, sürtünme yok."
+        "key": "Hesaplarda varsayım: makara ve çubuk ağırlıksız, sürtünme yok.",
+        "once": {
+          "soru": "Bayrak direğinin tepesindeki makara ne işe yarar?",
+          "secenekler": [
+            {
+              "yazi": "Kuvvetin yönünü değiştirir",
+              "neden": "İpi aşağı çekerek bayrağı yukarı çıkarırsın.",
+              "dogru": true
+            },
+            {
+              "yazi": "Kuvveti azaltır",
+              "neden": "Sabit makara kuvvetten kazandırmaz."
+            },
+            {
+              "yazi": "İşi azaltır",
+              "neden": "Hiçbir makine işten kazandırmaz."
+            }
+          ]
+        }
       },
       {
         "h": "Kuvvetten kazanç, yoldan kayıp",
-        "p": "<b>Kuvvet kazancı</b> (mekanik avantaj) = Y / F. Kazanç 4 ise 400 N'luk yükü 100 N ile kaldırırsın, ipi 4 kat uzun çekersin. İdeal makinede F·x<sub>F</sub> = Y·x<sub>Y</sub> olur (x<sub>F</sub>: kuvvetin, x<sub>Y</sub>: yükün aldığı yol): <b>işten kazanç olmaz</b>.",
+        "p": "<b>Kuvvet kazancı</b> = Y / F. Kazanç 4 ise 400 N'luk yükü 100 N ile kaldırırsın ama ipi 4 kat uzun çekersin: <b>işten kazanç olmaz</b>.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='10' width='145' height='185' fill='var(--panel)' rx='8'/><rect x='165' y='10' width='145' height='185' fill='var(--panel)' rx='8'/><text x='82' y='30' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Doğrudan kaldırma</text><text x='237' y='30' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Kazancı 4 olan makine</text><rect x='35' y='50' width='40' height='100' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.5'/><rect x='90' y='125' width='40' height='25' fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)' stroke-width='1.5'/><text x='55' y='44' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>400 N</text><text x='110' y='119' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>1 m</text><text x='55' y='165' font-size='11' fill='var(--muted)' text-anchor='middle'>kuvvet</text><text x='110' y='165' font-size='11' fill='var(--muted)' text-anchor='middle'>yol</text><line x1='27' y1='150' x2='138' y2='150' stroke='var(--ink)' stroke-width='1.2'/><rect x='190' y='125' width='40' height='25' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.5'/><rect x='245' y='50' width='40' height='100' fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)' stroke-width='1.5'/><text x='210' y='119' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>100 N</text><text x='265' y='44' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>4 m</text><text x='210' y='165' font-size='11' fill='var(--muted)' text-anchor='middle'>kuvvet</text><text x='265' y='165' font-size='11' fill='var(--muted)' text-anchor='middle'>yol</text><line x1='182' y1='150' x2='293' y2='150' stroke='var(--ink)' stroke-width='1.2'/><text x='82' y='185' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>İş = 400 J</text><text x='237' y='185' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>İş = 400 J</text></svg>",
-        "key": "Kuvvetten kazanırsan yoldan kaybedersin; yapılan iş değişmez."
+        "key": "İdeal makinede F·xF = Y·xY: kuvvetten kazanırsan yoldan kaybedersin.",
+        "once": {
+          "soru": "Bir makine 400 N'luk yükü 100 N ile kaldırıyor. Yük 1 m yükselirken ipi kaç m çekersin?",
+          "secenekler": [
+            {
+              "yazi": "4 m",
+              "neden": "Kuvvetten 4 kat kazanırsan yoldan 4 kat kaybedersin: 100·4 = 400·1.",
+              "dogru": true
+            },
+            {
+              "yazi": "1 m",
+              "neden": "Kuvvet azalınca yol uzar; iş aynı kalır."
+            },
+            {
+              "yazi": "0,25 m",
+              "neden": "Yol kısalsaydı işten kazanırdın; bu olmaz."
+            }
+          ]
+        }
       },
       {
         "h": "Kaldıraç ve denge koşulu",
-        "p": "<b>Kaldıraç</b>, bir destek çevresinde dönebilen sert çubuktur. Desteğin kuvvete dik uzaklığı <b>kuvvet kolu</b> (d<sub>F</sub>), yüke dik uzaklığı <b>yük kolu</b> (d<sub>Y</sub>) olur. Dengede iki döndürme etkisi (tork) eşittir: <b>F·d<sub>F</sub> = Y·d<sub>Y</sub></b>. Kazanç d<sub>F</sub>/d<sub>Y</sub>'dir.",
+        "p": "<b>Kaldıraç</b> bir destek çevresinde dönen çubuktur. Desteğin kuvvete dik uzaklığı <b>kuvvet kolu</b>, yüke uzaklığı <b>yük koludur</b>. Dengede: <b>F·d<sub>F</sub> = Y·d<sub>Y</sub></b>.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='15' y1='125' x2='305' y2='125' stroke='var(--line)' stroke-width='1'/><polygon points='110,100 98,121.6 122,121.6' fill='var(--muted)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1.2'/><line x1='30' y1='100' x2='295' y2='100' stroke='var(--ink)' stroke-width='4'/><rect x='35' y='72' width='30' height='28' fill='var(--c4)' fill-opacity='0.4' stroke='var(--c4)' stroke-width='1.5'/><text x='50' y='63' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Y = 600 N</text><line x1='285' y1='48' x2='285' y2='89' stroke='var(--c2)' stroke-width='3'/><polygon points='285,97 280,87 290,87' fill='var(--c2)'/><text x='278' y='44' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='bold'>F = 200 N</text><line x1='50' y1='135' x2='50' y2='152' stroke='var(--muted)' stroke-width='1'/><line x1='110' y1='135' x2='110' y2='152' stroke='var(--muted)' stroke-width='1'/><line x1='285' y1='135' x2='285' y2='152' stroke='var(--muted)' stroke-width='1'/><line x1='56.8' y1='145' x2='103.2' y2='145' stroke='var(--acc)' stroke-width='1.5'/><polygon points='108,145 102,148 102,142' fill='var(--acc)'/><polygon points='52,145 58,148 58,142' fill='var(--acc)'/><line x1='116.8' y1='145' x2='278.2' y2='145' stroke='var(--acc)' stroke-width='1.5'/><polygon points='283,145 277,148 277,142' fill='var(--acc)'/><polygon points='112,145 118,148 118,142' fill='var(--acc)'/><text x='80' y='165' font-size='12' fill='var(--ink)' text-anchor='middle'>0,5 m</text><text x='197' y='165' font-size='12' fill='var(--ink)' text-anchor='middle'>1,5 m</text><text x='80' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>yük kolu</text><text x='197' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>kuvvet kolu</text><text x='160' y='30' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='bold'>F·1,5 = 600·0,5</text></svg>",
-        "key": "Kol, desteğin kuvvet doğrultusuna dik uzaklığıdır; çubuğun boyu değil.",
+        "key": "Kazanç dF / dY. Kol, desteğin kuvvet doğrultusuna dik uzaklığıdır; çubuğun boyu değil.",
         "etk": {
           "tur": "formul",
           "soru": "Kolları değiştir: F·d<sub>F</sub> = Y·d<sub>Y</sub>. Kuvvet kolu uzadıkça ne olur?",
@@ -3485,7 +3521,7 @@
       },
       {
         "h": "Kaldıracın üç türü",
-        "p": "Destek (D), yük (Y) ve kuvvetin (F) sırasına göre üç tür kaldıraç vardır. <b>Destek ortada</b>: tahterevalli; kazanç kollara bağlıdır. <b>Yük ortada</b>: el arabası; kuvvet kolu hep uzundur, kazanç 1'den büyük. <b>Kuvvet ortada</b>: cımbız; kazanç 1'den küçük, ama uç daha çok yol alır.",
+        "p": "Destek, yük ve kuvvetin sırası türü belirler. <b>Destek ortada</b>: tahterevalli. <b>Yük ortada</b>: el arabası, kazanç 1'den büyük. <b>Kuvvet ortada</b>: cımbız, kazanç 1'den küçük.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='5' y='15' width='100' height='180' fill='var(--panel)' rx='8'/><text x='55' y='36' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Destek ortada</text><polygon points='55,95 47,109.4 63,109.4' fill='var(--muted)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1.2'/><line x1='15' y1='95' x2='95' y2='95' stroke='var(--ink)' stroke-width='3'/><rect x='17' y='77' width='18' height='18' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><line x1='87' y1='57' x2='87' y2='85.6' stroke='var(--c2)' stroke-width='2.5'/><polygon points='87,92 83,84 91,84' fill='var(--c2)'/><text x='26' y='71' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Y</text><text x='78' y='67' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='bold'>F</text><text x='55' y='125' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>D</text><text x='55' y='148' font-size='11' fill='var(--muted)' text-anchor='middle'>tahterevalli,</text><text x='55' y='162' font-size='11' fill='var(--muted)' text-anchor='middle'>makas, pense</text><text x='55' y='184' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='bold'>kazanç &gt;1, =1, &lt;1</text><rect x='110' y='15' width='100' height='180' fill='var(--panel)' rx='8'/><text x='160' y='36' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Yük ortada</text><polygon points='125,95 117,109.4 133,109.4' fill='var(--muted)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1.2'/><line x1='120' y1='95' x2='200' y2='95' stroke='var(--ink)' stroke-width='3'/><rect x='150' y='77' width='18' height='18' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><line x1='192' y1='130' x2='192' y2='104.4' stroke='var(--c2)' stroke-width='2.5'/><polygon points='192,98 196,106 188,106' fill='var(--c2)'/><text x='159' y='71' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Y</text><text x='182' y='125' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='bold'>F</text><text x='125' y='125' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>D</text><text x='160' y='148' font-size='11' fill='var(--muted)' text-anchor='middle'>el arabası,</text><text x='160' y='162' font-size='11' fill='var(--muted)' text-anchor='middle'>ceviz kıracağı</text><text x='160' y='184' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='bold'>kazanç hep &gt;1</text><rect x='215' y='15' width='100' height='180' fill='var(--panel)' rx='8'/><text x='265' y='36' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Kuvvet ortada</text><polygon points='230,95 222,109.4 238,109.4' fill='var(--muted)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1.2'/><line x1='225' y1='95' x2='305' y2='95' stroke='var(--ink)' stroke-width='3'/><rect x='285' y='77' width='18' height='18' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><line x1='263' y1='130' x2='263' y2='104.4' stroke='var(--c2)' stroke-width='2.5'/><polygon points='263,98 267,106 259,106' fill='var(--c2)'/><text x='294' y='71' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Y</text><text x='273' y='125' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='bold'>F</text><text x='230' y='125' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>D</text><text x='265' y='148' font-size='11' fill='var(--muted)' text-anchor='middle'>cımbız, maşa,</text><text x='265' y='162' font-size='11' fill='var(--muted)' text-anchor='middle'>olta</text><text x='265' y='184' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='bold'>kazanç hep &lt;1</text></svg>",
         "key": "Vücudundaki kaldıraçların çoğu (ön kol gibi) kuvvet ortada türdendir: hareketi büyütür.",
         "etk": {
@@ -3546,63 +3582,171 @@
       },
       {
         "h": "Sabit makara",
-        "p": "<b>Sabit makara</b> tavana bağlıdır, yükle birlikte hareket etmez. Kuvvetten kazanç sağlamaz: F = Y, kazanç 1'dir. İşe yaramasının nedeni <b>yönü değiştirmesidir</b>: yükü yukarı kaldırmak için ipi aşağı çekersin, kendi ağırlığından da yararlanırsın. İpi h çekersen yük h yükselir.",
+        "p": "<b>Sabit makara</b> tavana bağlıdır, yükle hareket etmez. Kazancı 1'dir: F = Y. Yararı <b>yönü değiştirmesidir</b>; ipi aşağı çekip yükü kaldırırsın.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='80' y1='15' x2='140' y2='15' stroke='var(--ink)' stroke-width='2'/><line x1='84' y1='15' x2='78' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='94' y1='15' x2='88' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='104' y1='15' x2='98' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='114' y1='15' x2='108' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='124' y1='15' x2='118' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='134' y1='15' x2='128' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='110' y1='15' x2='110' y2='45' stroke='var(--ink)' stroke-width='1.5'/><circle cx='110' cy='60' r='25' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='110' cy='60' r='3' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='85' y1='60' x2='85' y2='125' stroke='var(--ink)' stroke-width='1.5'/><line x1='135' y1='60' x2='135' y2='120' stroke='var(--ink)' stroke-width='1.5'/><rect x='65' y='125' width='40' height='35' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><text x='85' y='147' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Y</text><line x1='135' y1='120' x2='135' y2='157' stroke='var(--c2)' stroke-width='3'/><polygon points='135,165 130,155 140,155' fill='var(--c2)'/><text x='145' y='160' font-size='13' fill='var(--c2)' font-weight='bold'>F</text><line x1='55' y1='160' x2='55' y2='131.4' stroke='var(--c3)' stroke-width='2'/><polygon points='55,125 59,133 51,133' fill='var(--c3)'/><text x='47' y='180' font-size='10' fill='var(--c3)'>yük çıkar</text><text x='185' y='50' font-size='15' fill='var(--ink)' font-weight='bold'>F = Y</text><text x='185' y='75' font-size='13' fill='var(--ink)'>Kazanç = 1</text><text x='185' y='100' font-size='12' fill='var(--acc)' font-weight='bold'>Yalnızca yön değişir</text><text x='185' y='130' font-size='12' fill='var(--muted)'>İp h çekilir</text><text x='185' y='148' font-size='12' fill='var(--muted)'>→ yük h yükselir</text></svg>",
-        "key": "Sabit makara kuvvetten de yoldan da kazandırmaz; yalnızca yönü değiştirir."
+        "key": "Sabit makara kuvvetten de yoldan da kazandırmaz; yalnızca yönü değiştirir.",
+        "once": {
+          "soru": "Sabit makarayla 200 N'luk yükü dengelemek için ipi kaç N ile çekersin?",
+          "secenekler": [
+            {
+              "yazi": "200 N",
+              "neden": "Sabit makara kuvvetten kazandırmaz: F = Y.",
+              "dogru": true
+            },
+            {
+              "yazi": "100 N",
+              "neden": "Yarıya indiren hareketli makaradır."
+            },
+            {
+              "yazi": "400 N",
+              "neden": "Sabit makara kuvveti artırmaz; yalnız yön değiştirir."
+            }
+          ]
+        }
       },
       {
         "h": "Hareketli makara",
-        "p": "<b>Hareketli makara</b> yükle birlikte yükselir. Yükü iki ip kolu taşır; ipler paralelse her biri Y/2 çeker, yani <b>F = Y/2</b>, kazanç 2'dir. Bedeli: yükü h kaldırmak için ipi <b>2h</b> çekersin. Makaranın ağırlığı P ise F = (Y + P)/2 olur.",
+        "p": "<b>Hareketli makara</b> yükle yükselir; yükü iki ip kolu taşır: <b>F = Y/2</b>, kazanç 2. Bedeli: yükü h kaldırmak için ipi <b>2h</b> çekersin.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='60' y1='15' x2='105' y2='15' stroke='var(--ink)' stroke-width='2'/><line x1='64' y1='15' x2='58' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='74' y1='15' x2='68' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='84' y1='15' x2='78' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='94' y1='15' x2='88' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='104' y1='15' x2='98' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='85' y1='15' x2='85' y2='110' stroke='var(--ink)' stroke-width='1.5'/><circle cx='110' cy='110' r='25' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='110' cy='110' r='3' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='135' y1='110' x2='135' y2='70' stroke='var(--ink)' stroke-width='1.5'/><line x1='135' y1='72' x2='135' y2='30' stroke='var(--c2)' stroke-width='3'/><polygon points='135,22 140,32 130,32' fill='var(--c2)'/><text x='145' y='35' font-size='13' fill='var(--c2)' font-weight='bold'>F</text><line x1='110' y1='110' x2='110' y2='145' stroke='var(--ink)' stroke-width='1.5'/><rect x='90' y='145' width='40' height='35' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><text x='110' y='167' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Y</text><text x='78' y='80' font-size='11' fill='var(--muted)' text-anchor='end'>Y/2</text><text x='143' y='90' font-size='11' fill='var(--muted)'>Y/2</text><text x='185' y='50' font-size='15' fill='var(--ink)' font-weight='bold'>F = Y / 2</text><text x='185' y='75' font-size='13' fill='var(--ink)'>Kazanç = 2</text><text x='185' y='100' font-size='12' fill='var(--acc)' font-weight='bold'>Yük h → ip 2h</text><text x='185' y='130' font-size='11' fill='var(--muted)'>Makara ağırlığı P ise</text><text x='185' y='147' font-size='12' fill='var(--muted)'>F = (Y + P) / 2</text></svg>",
-        "key": "İp kolları paralel değilse kazanç 2'den küçük olur."
+        "key": "Makaranın ağırlığı P ise F = (Y + P)/2. İp kolları paralel değilse kazanç 2'den küçük olur.",
+        "once": {
+          "soru": "Ağırlıksız hareketli makarayla 300 N'luk yükü kaç N ile kaldırırsın?",
+          "secenekler": [
+            {
+              "yazi": "150 N",
+              "neden": "Yükü iki ip kolu paylaşır: 300 / 2 = 150 N.",
+              "dogru": true
+            },
+            {
+              "yazi": "300 N",
+              "neden": "Bu sabit makarada olur."
+            },
+            {
+              "yazi": "600 N",
+              "neden": "Hareketli makara kuvveti yarıya indirir."
+            }
+          ]
+        }
       },
       {
         "h": "Palanga",
-        "p": "<b>Palanga</b>, sabit ve hareketli makaraların birleşimidir. Hareketli bloğu (yükü) taşıyan ip kolu sayısı n ise <b>F = Y/n</b>, kazanç n'dir. Yük h yükselince ipi n·h çekersin. Hareketli makaraların ağırlığı (P) varsa yüke eklenir: F = (Y + P)/n.",
+        "p": "<b>Palanga</b> sabit ve hareketli makaraların birleşimidir. Hareketli bloğu taşıyan ip kolu sayısı n ise <b>F = Y/n</b>; yük h yükselince ipi n·h çekersin.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='80' y1='15' x2='215' y2='15' stroke='var(--ink)' stroke-width='2'/><line x1='84' y1='15' x2='78' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='94' y1='15' x2='88' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='104' y1='15' x2='98' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='114' y1='15' x2='108' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='124' y1='15' x2='118' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='134' y1='15' x2='128' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='144' y1='15' x2='138' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='154' y1='15' x2='148' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='164' y1='15' x2='158' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='174' y1='15' x2='168' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='184' y1='15' x2='178' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='194' y1='15' x2='188' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='204' y1='15' x2='198' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='214' y1='15' x2='208' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='136' y1='15' x2='136' y2='38' stroke='var(--ink)' stroke-width='1.5'/><circle cx='136' cy='50' r='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='136' cy='50' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='184' y1='15' x2='184' y2='38' stroke='var(--ink)' stroke-width='1.5'/><circle cx='184' cy='50' r='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='184' cy='50' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='112' y1='120' x2='112' y2='140' stroke='var(--ink)' stroke-width='1.5'/><circle cx='112' cy='120' r='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='112' cy='120' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='160' y1='120' x2='160' y2='140' stroke='var(--ink)' stroke-width='1.5'/><circle cx='160' cy='120' r='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='160' cy='120' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='100' y1='15' x2='100' y2='120' stroke='var(--c1)' stroke-width='2'/><line x1='124' y1='50' x2='124' y2='120' stroke='var(--c1)' stroke-width='2'/><line x1='148' y1='50' x2='148' y2='120' stroke='var(--c1)' stroke-width='2'/><line x1='172' y1='50' x2='172' y2='120' stroke='var(--c1)' stroke-width='2'/><line x1='196' y1='50' x2='196' y2='135' stroke='var(--ink)' stroke-width='1.5'/><line x1='106' y1='140' x2='166' y2='140' stroke='var(--ink)' stroke-width='3'/><line x1='136' y1='140' x2='136' y2='148' stroke='var(--ink)' stroke-width='1.5'/><rect x='116' y='148' width='40' height='30' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><text x='136' y='168' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Y</text><line x1='196' y1='135' x2='196' y2='172' stroke='var(--c2)' stroke-width='3'/><polygon points='196,180 191,170 201,170' fill='var(--c2)'/><text x='204' y='176' font-size='13' fill='var(--c2)' font-weight='bold'>F</text><text x='225' y='50' font-size='15' fill='var(--ink)' font-weight='bold'>n = 4</text><text x='225' y='73' font-size='13' fill='var(--ink)'>F = Y / 4</text><text x='225' y='98' font-size='12' fill='var(--acc)' font-weight='bold'>Yük h →</text><text x='225' y='114' font-size='12' fill='var(--acc)' font-weight='bold'>ip 4h</text><text x='225' y='140' font-size='11' fill='var(--c1)'>mavi: taşıyan</text><text x='225' y='154' font-size='11' fill='var(--c1)'>ip kolları</text></svg>",
-        "key": "n'yi sayarken yalnızca hareketli bloğa bağlı ip kollarını say."
+        "key": "n'yi sayarken yalnız hareketli bloğa bağlı ip kollarını say. Hareketli makaraların ağırlığı P ise F = (Y + P)/n."
       },
       {
         "h": "Eğik düzlem",
-        "p": "Yükü dikey kaldırmak yerine eğimli bir yüzeyde itersin. Sürtünmesiz ve kuvvet eğime paralelse <b>F·L = G·h</b> olur; L eğik düzlemin boyu, h yüksekliğidir. Kazanç L/h'dir. Aynı yüksekliğe daha uzun ve yatık bir rampayla çıkarsan kuvvet azalır, yol uzar.",
+        "p": "Yükü eğimli bir yüzeyde itersen, sürtünmesiz durumda <b>F·L = G·h</b> olur (L: rampa boyu, h: yükseklik). Rampa uzadıkça kuvvet azalır, yol uzar.",
         "svg": "<svg viewBox='0 0 320 200'><polygon points='30,165 236,165 236,75' fill='var(--line)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1.5'/><rect x='-14' y='-24' width='28' height='24' transform='translate(122.7,124.5) rotate(-23.6)' fill='var(--c4)' fill-opacity='0.4' stroke='var(--c4)' stroke-width='1.5'/><line x1='130.7' y1='107.9' x2='158.9' y2='95.6' stroke='var(--c2)' stroke-width='3'/><polygon points='165.5,92.7 159.1,100.4 155.5,92.2' fill='var(--c2)'/><text x='172' y='88' font-size='13' fill='var(--c2)' font-weight='bold'>F</text><line x1='117.9' y1='113.5' x2='117.9' y2='145.1' stroke='var(--c1)' stroke-width='2.5'/><polygon points='117.9,151.5 113.9,143.5 121.9,143.5' fill='var(--c1)'/><text x='125.9' y='151.5' font-size='12' fill='var(--c1)' font-weight='bold'>G = 500 N</text><text x='244' y='125' font-size='12' fill='var(--ink)' font-weight='bold'>h = 2 m</text><text x='20' y='30' font-size='15' fill='var(--ink)' font-weight='bold'>F·L = G·h</text><text x='20' y='50' font-size='12' fill='var(--ink)'>F = 500·2 / 5 = 200 N</text><text x='20' y='68' font-size='12' fill='var(--acc)'>Kazanç = L / h = 2,5</text><text x='38' y='132' font-size='12' fill='var(--ink)' font-weight='bold'>L = 5 m</text></svg>",
-        "key": "Yükseklik aynıyken rampa uzarsa F azalır; G·h işi değişmez."
+        "key": "Kazanç L/h. Yükseklik aynıyken G·h işi değişmez."
       },
       {
         "h": "Çıkrık",
-        "p": "<b>Çıkrık</b>, aynı mile bağlı büyük yarıçaplı bir kol ile küçük yarıçaplı bir silindirdir. Kuvvet kolun ucuna, yük silindire sarılı ipe etki eder: <b>F·R = Y·r</b>, kazanç R/r'dir. Kuyu çıkrığı, kapı kolu, direksiyon ve tornavida bu ilkeyle çalışır.",
+        "p": "<b>Çıkrık</b>, aynı mile bağlı büyük bir kol ile küçük bir silindirdir: <b>F·R = Y·r</b>, kazanç R/r. Kapı kolu, direksiyon ve tornavida böyle çalışır.",
         "svg": "<svg viewBox='0 0 320 200'><circle cx='100' cy='85' r='60' fill='none' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='4 4'/><circle cx='100' cy='85' r='20' fill='var(--c5)' fill-opacity='0.25' stroke='var(--ink)' stroke-width='1.5'/><circle cx='100' cy='85' r='2.5' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='100' y1='85' x2='160' y2='85' stroke='var(--ink)' stroke-width='3'/><circle cx='160' cy='85' r='4' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='160' y1='89' x2='160' y2='127' stroke='var(--c2)' stroke-width='3'/><polygon points='160,135 155,125 165,125' fill='var(--c2)'/><text x='168' y='133' font-size='13' fill='var(--c2)' font-weight='bold'>F</text><line x1='80' y1='85' x2='80' y2='150' stroke='var(--ink)' stroke-width='1.5'/><rect x='62' y='150' width='36' height='30' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><text x='80' y='170' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Y</text><text x='130' y='79' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>R</text><line x1='100' y1='85' x2='86' y2='71' stroke='var(--c5)' stroke-width='1.5'/><text x='82' y='61' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='bold'>r</text><text x='185' y='40' font-size='15' fill='var(--ink)' font-weight='bold'>F·R = Y·r</text><text x='185' y='62' font-size='12' fill='var(--acc)' font-weight='bold'>Kazanç = R / r</text><text x='185' y='95' font-size='11' fill='var(--ink)'>R = 40 cm, r = 10 cm</text><text x='185' y='113' font-size='11' fill='var(--ink)'>Y = 200 N</text><text x='185' y='131' font-size='12' fill='var(--ink)' font-weight='bold'>→ F = 50 N</text><text x='185' y='160' font-size='11' fill='var(--muted)'>1 turda: F yolu 2πR,</text><text x='185' y='176' font-size='11' fill='var(--muted)'>yük yolu 2πr</text></svg>",
-        "key": "Bir turda kuvvet 2πR, yük 2πr yol alır; kazanç yine R/r."
+        "key": "Kuyu çıkrığı da böyledir. Bir turda kuvvet 2πR, yük 2πr yol alır.",
+        "once": {
+          "soru": "Kalın saplı tornavida, ince saplıya göre vidayı neden daha kolay çevirir?",
+          "secenekler": [
+            {
+              "yazi": "Sap yarıçapı büyük",
+              "neden": "Çıkrıkta kazanç R/r: büyük sap aynı döndürme etkisini daha az kuvvetle verir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Daha ağırdır",
+              "neden": "Ağırlık çevirmeyi kolaylaştırmaz."
+            },
+            {
+              "yazi": "Daha uzundur",
+              "neden": "Kolaylığı sapın uzunluğu değil, yarıçapı sağlar."
+            }
+          ]
+        }
       },
       {
         "h": "Birleşik sistemler",
-        "p": "Basit makineler art arda bağlanınca kazançlar <b>çarpılır</b>. 800 N'luk yük hareketli makaraya asılı; ip 400 N çeker. İpin ucu R = 4r olan çıkrığa sarılı: F = 400·r/R = 100 N. Toplam kazanç 2·4 = 8; yük h kalkarken kolun ucu 8h yol alır.",
+        "p": "Basit makineler bağlanınca kazançlar <b>çarpılır</b>. Hareketli makara (2) ile R = 4r çıkrık (4) birleşince kazanç 8 olur: 800 N'luk yük 100 N ile kalkar.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='60' y1='12' x2='130' y2='12' stroke='var(--ink)' stroke-width='2'/><line x1='70' y1='12' x2='64' y2='5' stroke='var(--muted)' stroke-width='1'/><line x1='85' y1='12' x2='79' y2='5' stroke='var(--muted)' stroke-width='1'/><line x1='100' y1='12' x2='94' y2='5' stroke='var(--muted)' stroke-width='1'/><line x1='115' y1='12' x2='109' y2='5' stroke='var(--muted)' stroke-width='1'/><line x1='130' y1='12' x2='124' y2='5' stroke='var(--muted)' stroke-width='1'/><line x1='75' y1='12' x2='75' y2='47' stroke='var(--ink)' stroke-width='1.5'/><circle cx='75' cy='55' r='30' fill='none' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='4 4'/><circle cx='75' cy='55' r='8' fill='var(--c5)' fill-opacity='0.25' stroke='var(--ink)' stroke-width='1.5'/><line x1='75' y1='55' x2='45' y2='55' stroke='var(--ink)' stroke-width='3'/><text x='60' y='49' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>R</text><line x1='45' y1='58' x2='45' y2='84' stroke='var(--c2)' stroke-width='3'/><polygon points='45,92 40,82 50,82' fill='var(--c2)'/><text x='45' y='108' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>F</text><line x1='83' y1='55' x2='83' y2='135' stroke='var(--ink)' stroke-width='1.5'/><line x1='113' y1='12' x2='113' y2='135' stroke='var(--ink)' stroke-width='1.5'/><circle cx='98' cy='135' r='15' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='98' cy='135' r='2.5' fill='var(--ink)'/><text x='119' y='100' font-size='11' fill='var(--muted)'>400 N</text><line x1='98' y1='135' x2='98' y2='158' stroke='var(--ink)' stroke-width='1.5'/><rect x='76' y='158' width='44' height='30' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><text x='98' y='178' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>800 N</text><text x='165' y='36' font-size='13' fill='var(--ink)' font-weight='bold'>Kazançlar çarpılır</text><text x='165' y='62' font-size='12' fill='var(--ink)'>Hareketli makara: ×2</text><text x='165' y='80' font-size='11' fill='var(--muted)'>ip = 800 / 2 = 400 N</text><text x='165' y='106' font-size='12' fill='var(--ink)'>Çıkrık (R = 4r): ×4</text><text x='165' y='124' font-size='11' fill='var(--muted)'>F = 400 · r / R = 100 N</text><text x='165' y='154' font-size='12' fill='var(--acc)' font-weight='bold'>Toplam kazanç</text><text x='165' y='172' font-size='12' fill='var(--acc)' font-weight='bold'>2 · 4 = 8</text></svg>",
-        "key": "Sürtünme yoksa birleşik sistemde de iş değişmez: F·xF = Y·xY."
+        "key": "Yük h kalkarken kolun ucu 8h yol alır. Sürtünme yoksa birleşik sistemde de iş değişmez.",
+        "once": {
+          "soru": "Kazancı 2 olan makara, kazancı 3 olan çıkrığa bağlı. Toplam kazanç kaçtır?",
+          "secenekler": [
+            {
+              "yazi": "6",
+              "neden": "Art arda bağlı makinelerde kazançlar çarpılır: 2 · 3.",
+              "dogru": true
+            },
+            {
+              "yazi": "5",
+              "neden": "Kazançlar toplanmaz, çarpılır."
+            },
+            {
+              "yazi": "1,5",
+              "neden": "Kazançlar bölünmez; her biri kuvveti yeniden küçültür."
+            }
+          ]
+        }
       },
       {
         "h": "Vida ve vida adımı",
-        "p": "<b>Vida</b>, bir silindirin çevresine sarılmış eğik düzlemdir. İki komşu diş arasındaki uzaklık <b>vida adımıdır</b> (a); vida bir tur dönünce a kadar ilerler. Kuvveti R uzunluğundaki kolla uygularsan, sürtünmesiz durumda <b>F·2πR = Y·a</b>. Kriko ve mengene böyle çalışır.",
+        "p": "<b>Vida</b>, silindire sarılmış eğik düzlemdir. Komşu dişler arası <b>vida adımıdır</b> (a); bir turda a kadar ilerler. Sürtünmesiz: <b>F·2πR = Y·a</b>.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='20' y1='40' x2='140' y2='40' stroke='var(--ink)' stroke-width='4'/><circle cx='140' cy='40' r='4' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><rect x='65' y='45' width='30' height='125' fill='var(--muted)' fill-opacity='0.15' stroke='var(--ink)' stroke-width='1.5'/><polygon points='65,170 95,170 80,190' fill='var(--muted)' fill-opacity='0.15' stroke='var(--ink)' stroke-width='1.5'/><line x1='65' y1='55' x2='95' y2='65' stroke='var(--ink)' stroke-width='1.5'/><line x1='65' y1='75' x2='95' y2='85' stroke='var(--ink)' stroke-width='1.5'/><line x1='65' y1='95' x2='95' y2='105' stroke='var(--ink)' stroke-width='1.5'/><line x1='65' y1='115' x2='95' y2='125' stroke='var(--ink)' stroke-width='1.5'/><line x1='65' y1='135' x2='95' y2='145' stroke='var(--ink)' stroke-width='1.5'/><line x1='65' y1='155' x2='95' y2='165' stroke='var(--ink)' stroke-width='1.5'/><line x1='98' y1='85' x2='118' y2='85' stroke='var(--muted)' stroke-width='1'/><line x1='98' y1='105' x2='118' y2='105' stroke='var(--muted)' stroke-width='1'/><line x1='112' y1='91' x2='112' y2='99' stroke='var(--acc)' stroke-width='1.5'/><polygon points='112,103 109.5,98 114.5,98' fill='var(--acc)'/><polygon points='112,87 109.5,92 114.5,92' fill='var(--acc)'/><text x='122' y='99' font-size='13' fill='var(--acc)' font-weight='bold'>a</text><text x='110' y='32' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>R</text><path d='M25.5 44.1 A58 12 0 0 0 134.5 44.1' fill='none' stroke='var(--c2)' stroke-width='2'/><polygon points='141.5,40.1 130.9,40.8 135.4,48.6' fill='var(--c2)'/><text x='140' y='66' font-size='13' fill='var(--c2)' font-weight='bold'>F</text><text x='175' y='40' font-size='12' fill='var(--acc)' font-weight='bold'>1 tur → a ilerler</text><text x='175' y='72' font-size='15' fill='var(--ink)' font-weight='bold'>F·2πR = Y·a</text><text x='175' y='96' font-size='12' fill='var(--ink)'>Kazanç = 2πR / a</text><text x='175' y='130' font-size='11' fill='var(--muted)'>Adım küçük, kol uzun</text><text x='175' y='146' font-size='11' fill='var(--muted)'>→ daha küçük F</text><text x='175' y='178' font-size='11' fill='var(--muted)'>kriko, mengene</text></svg>",
-        "key": "Gerçek vidada sürtünme büyüktür; bu yüzden çoğu vida kendiliğinden geri dönmez."
+        "key": "R: kolun uzunluğu. Kriko ve mengene böyle çalışır. Gerçek vidada sürtünme büyüktür; bu yüzden vida kendiliğinden geri dönmez.",
+        "once": {
+          "soru": "Vida bir tam tur dönünce ne kadar ilerler?",
+          "secenekler": [
+            {
+              "yazi": "Bir vida adımı",
+              "neden": "Bir turda vida, iki komşu diş arasındaki uzaklık kadar ilerler.",
+              "dogru": true
+            },
+            {
+              "yazi": "Kendi boyu",
+              "neden": "Vidayı sonuna kadar çakmak için çok tur gerekir."
+            },
+            {
+              "yazi": "Kendi çevresi",
+              "neden": "Çevre, kolun ucunun aldığı yoldur; vidanın ilerlemesi değil."
+            }
+          ]
+        }
       },
       {
         "h": "Dişliler ve kasnaklar",
-        "p": "Birbirine geçen dişlilerde ve kayışla bağlı kasnaklarda temas eden kenarlar aynı hızla gider. Bu yüzden tur sayısı (n) yarıçapla ters orantılıdır: <b>n₁·r₁ = n₂·r₂</b>. Dişlide r yerine diş sayısı da yazılır. Geçen dişliler <b>zıt</b> yönde döner; düz kayış yönü korur, çapraz kayış çevirir.",
+        "p": "Birbirine geçen dişlilerde kenarlar aynı hızla gider; tur sayısı yarıçapla ters orantılıdır: <b>n₁·r₁ = n₂·r₂</b>. Geçen dişliler <b>zıt</b> yönde döner.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='5' y='10' width='150' height='185' fill='var(--panel)' rx='8'/><rect x='165' y='10' width='150' height='185' fill='var(--panel)' rx='8'/><text x='80' y='30' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Dişliler</text><text x='240' y='30' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Kasnaklar</text><circle cx='55' cy='90' r='32' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='6' stroke-dasharray='4 3'/><circle cx='55' cy='90' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='118' cy='90' r='16' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='6' stroke-dasharray='4 3'/><circle cx='118' cy='90' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><path d='M15.5 75.6 A42 42 0 0 1 62.3 48.6' fill='none' stroke='var(--c1)' stroke-width='2'/><polygon points='64.3,49 53.7,51.2 55.1,43.3' fill='var(--c1)'/><path d='M142.4 81.1 A26 26 0 0 0 113.5 64.4' fill='none' stroke='var(--c4)' stroke-width='2'/><polygon points='111.5,64.7 120.7,59.1 122.1,66.9' fill='var(--c4)'/><text x='55' y='142' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='bold'>2r</text><text x='118' y='122' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='bold'>r</text><text x='80' y='160' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='bold'>zıt yönde döner</text><text x='80' y='180' font-size='11' fill='var(--muted)' text-anchor='middle'>küçük olan 2 kat tur</text><circle cx='200' cy='65' r='14' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='280' cy='65' r='14' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><line x1='200' y1='51' x2='280' y2='51' stroke='var(--c5)' stroke-width='2'/><line x1='200' y1='79' x2='280' y2='79' stroke='var(--c5)' stroke-width='2'/><text x='240' y='98' font-size='11' fill='var(--muted)' text-anchor='middle'>düz kayış: aynı yön</text><circle cx='200' cy='140' r='14' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='280' cy='140' r='14' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><line x1='200' y1='126' x2='280' y2='154' stroke='var(--c5)' stroke-width='2'/><line x1='200' y1='154' x2='280' y2='126' stroke='var(--c5)' stroke-width='2'/><text x='240' y='173' font-size='11' fill='var(--muted)' text-anchor='middle'>çapraz kayış: zıt yön</text></svg>",
-        "key": "Aynı mile bağlı dişliler aynı yönde ve aynı sayıda tur atar."
+        "key": "r yerine diş sayısı da yazılır. Düz kayış yönü korur, çapraz kayış çevirir. Aynı mildeki dişliler aynı turda döner.",
+        "once": {
+          "soru": "20 dişli bir dişli, 10 dişliyle geçmiş. Büyük dişli 1 tur atınca küçük kaç tur atar?",
+          "secenekler": [
+            {
+              "yazi": "2",
+              "neden": "1·20 = n·10: küçük dişli iki kat hızlı döner.",
+              "dogru": true
+            },
+            {
+              "yazi": "½",
+              "neden": "Küçük dişli daha çok tur atar, daha az değil."
+            },
+            {
+              "yazi": "1",
+              "neden": "Diş sayıları farklı olduğu için tur sayıları da farklıdır."
+            }
+          ]
+        }
       },
       {
         "h": "Bisiklet: dişliler iş başında",
-        "p": "Pedal ile ön dişli aynı mildedir; zincir onu arka dişliye bağlar, arka dişli de tekerlekle aynı mildedir. Ön dişli 48, arka 16 dişliyse pedalın bir turunda tekerlek 3 tur atar. Yokuşta büyük arka dişliye geçersin: tekerlek daha az döner, pedal kolaylaşır.",
+        "p": "Pedal ön dişliyle, arka dişli tekerlekle aynı mildedir; zincir ikisini bağlar. Ön 48, arka 16 dişliyse pedalın bir turunda tekerlek 3 tur atar.",
         "svg": "<svg viewBox='0 0 320 200'><circle cx='225' cy='125' r='52' fill='none' stroke='var(--muted)' stroke-width='2'/><circle cx='225' cy='125' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='95' cy='125' r='30' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='5' stroke-dasharray='4 3'/><circle cx='225' cy='125' r='10' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)' stroke-width='4' stroke-dasharray='3 2'/><line x1='95' y1='94' x2='225' y2='114' stroke='var(--ink)' stroke-width='1.5'/><line x1='95' y1='156' x2='225' y2='136' stroke='var(--ink)' stroke-width='1.5'/><line x1='95' y1='125' x2='73' y2='165' stroke='var(--ink)' stroke-width='3'/><rect x='61' y='163' width='24' height='6' fill='var(--ink)' fill-opacity='0.6' stroke='var(--ink)' stroke-width='1' rx='1'/><circle cx='95' cy='125' r='2.5' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><text x='160' y='25' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Pedal 1 tur → tekerlek 3 tur</text><text x='160' y='45' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='bold'>48 / 16 = 3</text><text x='137' y='173' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='bold'>48 diş</text><text x='225' y='153' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='bold'>16 diş</text><text x='150' y='88' font-size='10' fill='var(--muted)' text-anchor='middle'>zincir</text><text x='265' y='70' font-size='10' fill='var(--muted)'>tekerlek</text></svg>",
-        "key": "Zincirle bağlı dişliler aynı yönde döner; zincir düz kayış gibidir."
+        "key": "Yokuşta büyük arka dişliye geçersin: tekerlek az döner, pedal kolaylaşır. Zincirle bağlı dişliler aynı yönde döner."
       },
       {
         "h": "Verim ve sürtünme",
-        "p": "Gerçek makinede sürtünme ve makara ağırlığı yüzünden harcadığın işin bir kısmı ısıya gider. <b>Verim = yararlı iş / harcanan iş × 100</b>. 600 N'luk yükü 4 m'lik rampayla 1 m yükseltirken 200 N uygularsan verim 600 J / 800 J = %75 olur.",
+        "p": "Gerçek makinede sürtünme yüzünden işin bir kısmı ısıya gider. <b>Verim = yararlı iş / harcanan iş × 100</b>; hep %100'ün altındadır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='28' font-size='11' fill='var(--muted)' text-anchor='middle'>Rampa: G = 600 N, h = 1 m, L = 4 m, F = 200 N</text><text x='30' y='62' font-size='12' fill='var(--ink)' font-weight='bold'>Harcanan iş: F·L = 200·4 = 800 J</text><rect x='30' y='72' width='195' height='34' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)' stroke-width='1.5'/><rect x='225' y='72' width='65' height='34' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)' stroke-width='1.5'/><text x='127' y='94' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>yararlı 600 J</text><text x='257' y='94' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>ısı 200 J</text><text x='30' y='128' font-size='12' fill='var(--c3)' font-weight='bold'>Yararlı iş: G·h = 600·1 = 600 J</text><text x='160' y='160' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='bold'>Verim = 600 / 800 = %75</text><text x='160' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>Sürtünmesiz olsaydı F = 150 N yeterdi</text></svg>",
-        "key": "Gerçek makinede verim %100'ün altındadır; hiçbir makine işten kazandırmaz."
+        "key": "600 N'luk yükü 4 m'lik rampayla 1 m yükseltirken 200 N uygularsan verim 600 J / 800 J = %75."
       },
       {
         "h": "Özet",
