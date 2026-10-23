@@ -34,6 +34,8 @@ import { dogruMu, geriBaslik, geriMetin, hazir, ilkCevap, TestGovde, yonerge, ty
 import AsamaYolu, { type YolDugum } from "./AsamaYolu";
 import { Konfeti, Madalya, PuanRozet } from "./Kutlama";
 import KayitDavet from "./KayitDavet";
+import Bildir from "./Bildir";
+import type { BildirimYer } from "@/lib/bildirim";
 
 /** Akıştaki öğe: konu kartı ya da etkileşimli adım. */
 type Oge = { tur: "kart"; k: number } | { tur: "adim"; a: Adim; n: number };
@@ -183,7 +185,7 @@ export default function Lesson({
   stepRef.current = play ? () => {} : step;
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if ((e.target as Element | null)?.closest?.("input")) return; // sürgüdeki ok tuşları kart değiştirmesin
+      if ((e.target as Element | null)?.closest?.("input,textarea") || document.querySelector('[data-slot="sheet-content"]')) return; // sürgüdeki ya da yazı alanındaki ok tuşları kart değiştirmesin
       if (e.key === "ArrowRight") stepRef.current(1);
       if (e.key === "ArrowLeft") stepRef.current(-1);
     };
@@ -195,6 +197,15 @@ export default function Lesson({
   const sonKartOge = akista ? ogeler.slice(ilkOge, s.i + 1).filter((o) => o.tur === "kart").pop() : undefined;
   const sonKartNo = sonKartOge?.tur === "kart" ? sonKartOge.k + 1 : 0;
   const anlamadimMi = !!sonKartNo && anlamadim.includes(`${ders}.${id}.${sonKartNo}`);
+  // Bildirim penceresinin yeri: akıştaki sayfa (kart ya da adım) veya test sorusu.
+  const suanki = akista ? ogeler[s.i] : undefined;
+  const bildirYer: BildirimYer | undefined = suanki?.tur === "kart"
+    ? { ders, konu: id, yer: `kart ${suanki.k + 1}`, ozet: t.cards[suanki.k].h }
+    : suanki?.tur === "adim"
+      ? { ders, konu: id, yer: `adım ${suanki.n + 1}`, ozet: suanki.a.baslik }
+      : s.q >= 0 && s.q < nQuiz
+        ? { ders, konu: id, yer: `test sorusu ${s.q + 1}`, ozet: t.quiz[s.q].q }
+        : undefined;
   let body: React.ReactNode, controls: React.ReactNode = null, key: string;
   const SoruI = Icon.soru;
 
@@ -332,7 +343,7 @@ export default function Lesson({
         </AnimatePresence>
         {!bildirim && s.i === ilkOge + 1 && !ipucu.includes("akis") && (
           // Bir kez gösterilir: önceki sayfaya üstteki geri okuyla dönülür, anlamadım simgesi sağ üstte.
-          <p className="pb-2.5 text-[13px] text-muted-foreground">Önceki sayfaya üstteki okla dönebilirsin. Anlamadığın kartta sağ üstteki ? simgesine dokun.</p>
+          <p className="pb-2.5 text-[13px] text-muted-foreground">Önceki sayfaya üstteki okla dönebilirsin. Anlamadığın ya da hata gördüğün yerde sağ üstteki ? simgesine dokun.</p>
         )}
         <Button className="w-full" data-next disabled={kilitli} onClick={() => step(1)}>{kilitli ? (soruBekler(s.i) ? "Bir cevap seç" : gorevYazisi(ogeler[s.i])) : last ? "Aşamayı bitir" : "Devam"}</Button>
       </Alt>
@@ -486,22 +497,25 @@ export default function Lesson({
             prog[konuKey] && s.q < 0 ? 1 : s.q >= 0 ? (s.q + (s.sonuc !== null ? 1 : 0)) / nQuiz : 0,
           ]} />
         </div>
-        {akista && sonKartNo > 0 && (
-          // Son okunan kartı "anlamadım" diye işaretler (Profil'de listelenir).
-          <Button
-            variant="ghost"
-            size="icon"
-            className={cn("-mr-1", anlamadimMi ? "text-acc" : "text-muted-foreground")}
-            aria-pressed={anlamadimMi}
-            aria-label={anlamadimMi ? "Bu kartı anlamadım (işaretli)" : "Bu kartı anlamadım"}
-            title="Bunu anlamadım"
-            onClick={() => {
+        {bildirYer && (
+          // Anlamadım / Hata var: ekibe bildirilir. "Anlamadım" son okunan kartı ayrıca Anlamadıklarım'a ekler.
+          <Bildir
+            yer={bildirYer}
+            anlamadim={sonKartNo > 0 ? () => {
               const k = `${ders}.${id}.${sonKartNo}`;
-              if (toggleAnlamadim(k)) olay("anlamadim", { kart: k });
-            }}
+              if (!anlamadim.includes(k) && toggleAnlamadim(k)) olay("anlamadim", { kart: k });
+            } : undefined}
           >
-            <SoruI />
-          </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className={cn("-mr-1", anlamadimMi ? "text-acc" : "text-muted-foreground")}
+              aria-label="Anlamadım ya da hata var"
+              title="Anlamadım / Hata var"
+            >
+              <SoruI />
+            </Button>
+          </Bildir>
         )}
         <Button
           variant="ghost"

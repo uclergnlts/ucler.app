@@ -15,6 +15,7 @@ import { dogruMu, geriBaslik, geriMetin, hazir, ilkCevap, TestGovde, yonerge, ty
 import { Html, href } from "./temel";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
+import Bildir from "./Bildir";
 
 export function karistir<T>(l: T[]) {
   for (let a = l.length - 1; a > 0; a--) { const b = Math.floor(Math.random() * (a + 1)); [l[a], l[b]] = [l[b], l[a]]; }
@@ -58,7 +59,7 @@ export default function KarisikTest({ ders, baslik, cikis, sorular, sec, giris, 
   const [cevap, setCevapS] = useState<Cevap>(null);
   const [sonuc, setSonuc] = useState<boolean | null>(null);
   const [dogru, setDogru] = useState<Record<string, boolean>>({});
-  const Close = Icon.kapat;
+  const Close = Icon.kapat, Soru = Icon.soru;
 
   const basla = useCallback(() => {
     const l = sec();
@@ -133,6 +134,11 @@ export default function KarisikTest({ ders, baslik, cikis, sorular, sec, giris, 
           <span className="truncate font-display text-[15px] font-extrabold">{baslik}</span>
           <Progress value={n ? (100 * Math.min(i + (sonuc !== null ? 1 : 0), n)) / n : 0} />
         </div>
+        {key && Q && (
+          <Bildir yer={{ ders: Q.ders, konu: Q.konu, yer: `test sorusu ${Number(key.split(".").pop()) + 1} (${baslik})`, ozet: Q.q }}>
+            <Button variant="ghost" size="icon" className="-mr-2 text-muted-foreground" aria-label="Anlamadım ya da hata var" title="Anlamadım / Hata var"><Soru /></Button>
+          </Bildir>
+        )}
       </header>
       <main className="view gap-0 pt-1 pb-0">
         <motion.div key={`${liste ? 1 : 0}.${i}`} initial={{ opacity: 0, x: 28 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.16, ease: "easeOut" }} className="pb-6">

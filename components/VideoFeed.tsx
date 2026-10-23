@@ -19,6 +19,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { PageHead, UstBar } from "./temel";
 import { Button } from "./ui/button";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
+import Bildir from "./Bildir";
 
 // Öğrenci bu oturumda sesi açtı mı (ya da bir video sesli oynayabildi mi). Açtıysa akıştaki sonraki videolar
 // da sesli başlar; sayfa içinde gezinip Videolar'a dönünce de (bileşen yeniden kurulsa bile) sesli kalır.
@@ -150,6 +151,7 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
   useEffect(() => {
     if (!active || cevap) return;
     const onKey = (e: KeyboardEvent) => {
+      if ((e.target as Element)?.closest?.("textarea,input")) return; // bildirim penceresinde yazarken
       if (e.key === " " && !(e.target as Element)?.closest?.("button,a")) { e.preventDefault(); toggle(); }
       if (e.key === "m") sesDugmesi();
     };
@@ -214,6 +216,9 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
           <button className="reel-ic" onClick={() => { toggleSaved(key); o.toast(saved ? "Kaydedilenlerden çıkarıldı" : "Konu kaydedildi"); }} aria-pressed={saved} aria-label="Konuyu kaydet">
             <I.kayit />
           </button>
+          <Bildir yer={{ ders: y.ders, konu: y.konu, yer: `video ${v.id}`, ozet: v.baslik }}>
+            <button className="reel-ic" aria-label="Anlamadım ya da hata var" title="Anlamadım / Hata var"><I.soru /></button>
+          </Bildir>
           <button className="reel-ic" onClick={paylas} aria-label="Paylaş"><I.paylas /></button>
           <button className="reel-ic" onClick={sesDugmesi} aria-pressed={!sessiz} aria-label={sessiz ? "Sesi aç" : "Sesi kapat"}>
             {sessiz ? <I.sesKapali /> : <I.sesAcik />}
@@ -269,7 +274,7 @@ export default function VideoFeed({ konular }: { konular: Record<string, string>
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const f = feed.current;
-      if (!f || !["ArrowDown", "ArrowUp"].includes(e.key)) return;
+      if (!f || !["ArrowDown", "ArrowUp"].includes(e.key) || (e.target as Element)?.closest?.("textarea")) return;
       e.preventDefault();
       // Cevap penceresi açıkken oklar videoyu değiştirmez; uzun cevapta pencerenin kendisini kaydırır.
       const sheet = document.querySelector<HTMLElement>('[data-slot="sheet-content"]');

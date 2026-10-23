@@ -18,6 +18,7 @@ import { dogruMu, geriBaslik, geriMetin, hazir, ilkCevap, TestGovde, yonerge, ty
 import { Html, href, Logo } from "./temel";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
+import Bildir from "./Bildir";
 
 type Oge = { key: string; s: number };
 /** Karışık testte kaç soru sorulur. */
@@ -44,7 +45,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
   const [ogrenilen, setOgrenilen] = useState(0);
   const tekrar = useTekrar(), prog = useProg();
   const [karisik, setKarisik] = useState(false);
-  const Close = Icon.kapat;
+  const Close = Icon.kapat, Soru = Icon.soru;
 
   /** Soruları seçer: tekrarda bugün sırası gelenler, karışık testte bitirilen konulardan rastgele KARISIK soru. */
   const kur = useCallback((k: boolean) => {
@@ -194,6 +195,11 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
           {/* Sorulacak soru yoksa ilerleme çubuğu gösterilmez. */}
           {n > 0 && <Progress value={(100 * Math.min(i + (sonuc !== null ? 1 : 0), n)) / n} />}
         </div>
+        {cur && Q && (
+          <Bildir yer={{ ders: Q.ders, konu: Q.konu, yer: `test sorusu ${Number(cur.key.split(".").pop()) + 1} (${karisik ? "karışık test" : "tekrar"})`, ozet: Q.q }}>
+            <Button variant="ghost" size="icon" className="-mr-2 text-muted-foreground" aria-label="Anlamadım ya da hata var" title="Anlamadım / Hata var"><Soru /></Button>
+          </Bildir>
+        )}
       </header>
       <main className="view gap-0 pt-1 pb-0">
         <motion.div key={i} initial={{ opacity: 0, x: 28 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.16, ease: "easeOut" }} className="pb-6">
