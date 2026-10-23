@@ -62,7 +62,7 @@
   },
   {
    "baslik": "Pil kur",
-   "metin": "E° değeri büyük olan yarı hücre katot olur. Anot ve katodu seçerek <b>1,56 V</b> veren pili kur.",
+   "metin": "<b>E°pil = E°katot − E°anot</b>; E° değeri büyük olan yarı hücre katot olur. Anot ve katodu seçerek <b>1,56 V</b> veren pili kur.",
    "sahne": {
     "tur": "kim10-potansiyel"
    },
@@ -95,14 +95,7 @@
     "ipucu": "E°pil = E°katot − E°anot. Şu an Zn–Cu: 1,10 V.",
     "tamam": "Zn anot, Ag katot: 0,80 − (−0,76) = <b>1,56 V</b>. Tablo standart hidrojen elektroduna (0 V) göre ölçülür; E° negatif çıksaydı pil kendiliğinden çalışmazdı."
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "a": 3,
-     "k": 6
-    },
-    "not": "Fe anot, Ag katot: E°pil = 0,80 − (−0,44) = <b>1,24 V</b>. E°'si büyük olan katot olur."
-   }
+   "kart": 4
   },
   {
    "baslik": "Katsayı E°'yi değiştirir mi?",
@@ -143,7 +136,7 @@
     "soru": "Gazlar nasıl toplanır?",
     "secenekler": [
      {
-      "yazi": "Anotta H₂, katotta O₂, eşit hacimde",
+      "yazi": "Anotta H₂, katotta O₂",
       "neden": "Yerler ters: H₂, elektron alınan katotta çıkar. Hacimler de eşit değil."
      },
      {
@@ -151,13 +144,13 @@
       "neden": "Katotta indirgenme (H₂), anotta yükseltgenme (O₂) olur; gazlar farklıdır."
      },
      {
-      "yazi": "Katotta H₂, anotta O₂; H₂ iki kat hacimde",
+      "yazi": "Katotta H₂, anotta O₂; H₂ iki kat",
       "neden": "Katotta su indirgenir ve H₂ çıkar, anotta yükseltgenir ve O₂ çıkar. 2H₂O → 2H₂ + O₂ olduğu için H₂ hacmi O₂'nin <b>2 katıdır</b>.",
       "dogru": true
      }
     ]
    },
-   "kart": 8
+   "kart": 9
   },
   {
    "baslik": "Faraday hesabı",
@@ -187,13 +180,7 @@
     "ipucu": "0,1 mol Cu için 0,2 mol elektron gerekir: Q = 0,2 · 96 500 C.",
     "tamam": "Q = 0,2 · 96 500 = 19 300 C; t = Q / I = 19 300 / 4 = <b>4825 s</b>. Katotta 6,35 g bakır birikir. Kaplamada kaplanacak eşya katot yapılır."
    },
-   "kart": 12,
-   "goster": {
-    "deger": {
-     "t": 965
-    },
-    "not": "965 s'de Q = 4 · 965 = 3860 C, yani 0,04 mol e⁻ geçer. Cu²⁺ iki elektron aldığı için 0,02 mol (≈ 1,27 g) bakır birikir."
-   }
+   "kart": 12
   },
   {
    "baslik": "Korozyon",
@@ -207,7 +194,7 @@
     "soru": "Ne olur?",
     "secenekler": [
      {
-      "yazi": "Kalay kaplı çivi paslanır, çinko kaplı korunur",
+      "yazi": "Kalay kaplı paslanır",
       "neden": "Zn demirden aktiftir; kendisi yükseltgenir ve demiri korur. Sn demirden az aktiftir; çizilince demir anot olur ve <b>daha hızlı</b> paslanır.",
       "dogru": true
      },
@@ -216,12 +203,12 @@
       "neden": "Kaplama yalnızca bütünken engel olur. Çizikte hangi metalin anot olduğu belirleyicidir."
      },
      {
-      "yazi": "Çinko kaplı paslanır, kalay kaplı korunur",
+      "yazi": "Çinko kaplı paslanır",
       "neden": "Tersi olur: çinko demirden aktif olduğu için önce o yükseltgenir. Gemilerde Mg veya Zn bloklar bu yüzden <b>kurban anot</b> olarak kullanılır."
      }
     ]
    },
-   "kart": 12
+   "kart": 13
   }
  ],
  "kapanis": [
@@ -230,5 +217,6 @@
   "<b>E°pil = E°katot − E°anot</b>; katsayılar E°'yi değiştirmez. Zn–Cu 1,10 V, Cu–Ag 0,46 V.",
   "Elektrolizde anot +, katot − uçtur; suyun elektrolizinde katotta H₂, anotta yarı hacimde O₂ toplanır.",
   "<b>Q = I·t</b> ve 1 F ≈ 96 500 C ile biriken madde hesaplanır; aktif metal kaplama ve kurban anot demiri korozyondan korur."
- ]
+ ],
+ "soruOnce": true
 }

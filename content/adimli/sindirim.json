@@ -8,47 +8,96 @@
   {
    "baslik": "Lokmanın yolculuğu",
    "metin": "Besin, ağızdan anüse uzanan tek yönlü bir kanalda ilerler. Yanında <b>yardımcı organlar</b> vardır. Tahmin et, sonra lokmayı izle.",
-   "sahne": { "tur": "biy11-kanal", "sure": 7 },
+   "sahne": {
+    "tur": "biy11-kanal",
+    "sure": 7
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Lokma hangisinin içinden geçmez?",
     "secenekler": [
-     { "yazi": "Mide", "neden": "Mide sindirim kanalının parçasıdır; lokma burada asitle çalkalanıp bulamaca (kimus) dönüşür." },
-     { "yazi": "Yemek borusu", "neden": "Yemek borusu lokmayı peristaltik hareketle mideye iter; lokma içinden geçer." },
-     { "yazi": "Pankreas", "dogru": true, "neden": "Pankreas yardımcı organdır. Besin içinden geçmez; pankreas sıvısını onikiparmak bağırsağına döker. Karaciğer de böyledir." }
+     {
+      "yazi": "Mide",
+      "neden": "Mide sindirim kanalının parçasıdır; lokma burada asitle çalkalanıp bulamaca (kimus) dönüşür."
+     },
+     {
+      "yazi": "Yemek borusu",
+      "neden": "Yemek borusu lokmayı peristaltik hareketle mideye iter; lokma içinden geçer."
+     },
+     {
+      "yazi": "Pankreas",
+      "dogru": true,
+      "neden": "Pankreas yardımcı organdır. Besin içinden geçmez; pankreas sıvısını onikiparmak bağırsağına döker. Karaciğer de böyledir."
+     }
     ]
    },
-   "kart": 1
+   "kart": 2
   },
   {
    "baslik": "Çiğne",
    "metin": "Lokmayı parçalara böl ve yüzeyini 4 katına çıkar.",
-   "sahne": { "tur": "biy11-yuzey" },
-   "deger": { "n": 1 },
-   "kontroller": [ { "ad": "n", "etiket": "Bölme", "min": 1, "max": 4, "tur": "sayac" } ],
+   "sahne": {
+    "tur": "biy11-yuzey"
+   },
+   "deger": {
+    "n": 1
+   },
+   "kontroller": [
+    {
+     "ad": "n",
+     "etiket": "Bölme",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "n": 4 },
+    "hedef": {
+     "n": 4
+    },
     "ipucu": "Her kenarı daha çok parçaya böldükçe toplam yüzey artar.",
     "tamam": "64 parça, 4 kat yüzey: amilazın değdiği yer arttı, ama madde hâlâ nişasta."
    },
-   "kart": 3,
-   "goster": { "deger": { "n": 2 }, "not": "Her kenarı ikiye bölünce 8 parça çıkıyor ve toplam yüzey <b>2 katına</b> çıkıyor; madde hâlâ nişasta." }
+   "kart": 3
   },
   {
    "baslik": "Kim nerede başlar?",
    "metin": "Besini değiştir ve üçünü de oynat; sonra şu durumu düşün.",
-   "sahne": { "tur": "biy11-baslangic", "sure": 5 },
-   "deger": { "b": 1 },
-   "kontroller": [ { "ad": "b", "etiket": "Besin", "min": 1, "max": 3, "tur": "sayac" } ],
+   "sahne": {
+    "tur": "biy11-baslangic",
+    "sure": 5
+   },
+   "deger": {
+    "b": 1
+   },
+   "kontroller": [
+    {
+     "ad": "b",
+     "etiket": "Besin",
+     "min": 1,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
    "gorev": {
     "tur": "secim",
     "kosu": 3,
     "soru": "Tükürük bezleri çalışmayan birinde nişastanın kimyasal sindirimi ne olur?",
     "secenekler": [
-     { "yazi": "Hiç gerçekleşmez", "neden": "Pankreas sıvısında da amilaz var; nişasta ince bağırsakta yine sindirilir." },
-     { "yazi": "İnce bağırsakta başlar", "dogru": true, "neden": "Ağızdaki ön sindirim olmaz; ama pankreas amilazı ve maltaz nişastayı ince bağırsakta yine glikoza kadar ayırır." },
-     { "yazi": "Midede pepsinle başlar", "neden": "Pepsin yalnız proteinlere etki eder; nişastayı parçalayan enzim amilazdır." }
+     {
+      "yazi": "Hiç gerçekleşmez",
+      "neden": "Pankreas sıvısında da amilaz var; nişasta ince bağırsakta yine sindirilir."
+     },
+     {
+      "yazi": "İnce bağırsakta başlar",
+      "dogru": true,
+      "neden": "Ağızdaki ön sindirim olmaz; ama pankreas amilazı ve maltaz nişastayı ince bağırsakta yine glikoza kadar ayırır."
+     },
+     {
+      "yazi": "Midede pepsinle başlar",
+      "neden": "Pepsin yalnız proteinlere etki eder; nişastayı parçalayan enzim amilazdır."
+     }
     ]
    },
    "kart": 10
@@ -56,62 +105,114 @@
   {
    "baslik": "Enzim ve pH",
    "metin": "Pepsin ve tripsin farklı pH'lerde çalışır. pH'yi değiştir ve pepsinin en hızlı çalıştığı yeri bul.",
-   "sahne": { "tur": "biy11-ph" },
-   "deger": { "ph": 7 },
-   "kontroller": [ { "ad": "ph", "etiket": "pH", "min": 1, "max": 9 } ],
+   "sahne": {
+    "tur": "biy11-ph"
+   },
+   "deger": {
+    "ph": 7
+   },
+   "kontroller": [
+    {
+     "ad": "ph",
+     "etiket": "pH",
+     "min": 1,
+     "max": 9
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "ph": 2 },
+    "hedef": {
+     "ph": 2
+    },
     "ipucu": "Pepsin midede çalışır. Mide asidi pH'yi çok düşürür.",
     "tamam": "pH 2'de pepsin en hızlı, tripsin neredeyse durmuş. Her enzimin kendi optimum pH'si vardır; ortam değişince biri durur, öbürü çalışır."
    },
-   "kart": 6,
-   "goster": { "deger": { "ph": 8 }, "not": "pH 8'de tripsin en hızlı çalışıyor, pepsin ise neredeyse durmuş: bu, ince bağırsağın ortamı." }
+   "kart": 6
   },
   {
    "baslik": "Safra",
    "metin": "Yağ suda büyük damlalar yapar; <b>lipaz</b> yalnızca damlanın yüzeyinde çalışır. Karaciğerin ürettiği <b>safra</b> onikiparmağa dökülür. Safrayı aç ve oynat.",
-   "sahne": { "tur": "biy11-safra", "sure": 4 },
-   "deger": { "safra": 0 },
-   "kontroller": [ { "ad": "safra", "etiket": "Safra dökülsün", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "sahne": {
+    "tur": "biy11-safra",
+    "sure": 4
+   },
+   "deger": {
+    "safra": 0
+   },
+   "kontroller": [
+    {
+     "ad": "safra",
+     "etiket": "Safra dökülsün",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "safra": 1 },
+    "hedef": {
+     "safra": 1
+    },
     "ipucu": "Safra yağı küçük damlacıklara ayırır. Yüzey artınca lipaz hızlanır.",
     "tamam": "Safra yağı damlacıklara ayırdı; yüzey arttıkça lipaz hızlandı ve aynı sürede yağın hepsini parçaladı."
    },
-   "kart": 8,
-   "goster": { "not": "Safra yokken lipaz yalnızca büyük damlanın yüzeyinde çalışıyor: aynı sürede yağın ancak <b>%30</b>'u sindirildi.", "oynat": true }
+   "kart": 8
   },
   {
    "baslik": "Villuslar",
    "metin": "Emilimin çoğu <b>ince bağırsakta</b> olur. Düz bir boru olsaydı yüzey çok küçük kalırdı. Duvarı kıvır, villusları ve mikrovillusları ekle.",
-   "sahne": { "tur": "biy11-villus" },
-   "deger": { "k": 0 },
-   "kontroller": [ { "ad": "k", "etiket": "Yüzey düzeyi", "min": 0, "max": 3, "tur": "sayac" } ],
+   "sahne": {
+    "tur": "biy11-villus"
+   },
+   "deger": {
+    "k": 0
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Yüzey düzeyi",
+     "min": 0,
+     "max": 3,
+     "tur": "sayac"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "k": 3 },
+    "hedef": {
+     "k": 3
+    },
     "ipucu": "Son düzeyde her epitel hücresinin zarı fırça gibi çıkıntılar yapar.",
     "tamam": "Kıvrımlar, villuslar ve mikrovilluslar birlikte yüzeyi yüzlerce kat artırır. Mikrovillus zarındaki maltaz, laktaz ve peptidazlar sindirimin son adımını da burada atar."
    },
-   "kart": 10,
-   "goster": { "deger": { "k": 1 }, "not": "Duvarın kıvrılması tek başına iç yüzeyi <b>3 katına</b> çıkarıyor." }
+   "kart": 11
   },
   {
    "baslik": "Kana mı, lenfe mi?",
    "metin": "Her villusun içinde bir <b>kılcal kan damarı</b> ağı ve ortada ucu kapalı bir <b>lenf kılcalı</b> vardır. Tahmin et, sonra oynat.",
-   "sahne": { "tur": "biy11-emilim", "sure": 4 },
+   "sahne": {
+    "tur": "biy11-emilim",
+    "sure": 4
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Yağ asidi ve gliserolün çoğu villusta nereye geçer?",
     "secenekler": [
-     { "yazi": "Lenf kılcalına", "dogru": true, "neden": "Yağ asidi ve gliserol epitel hücresinde yeniden yağa dönüşür ve çoğu lenfe geçer. A, D, E, K vitaminleri de bu yolu izler; lenf sonra kana katılır." },
-     { "yazi": "Kılcal kana", "neden": "Kılcal kana glikoz, amino asit, su ve suda çözünen vitaminler geçer; bu kan önce karaciğere gider. Yağların çoğu bu yolu izlemez." },
-     { "yazi": "Kalın bağırsağa", "neden": "Kalın bağırsak sindirim enzimi salgılamaz; su ve mineral emer. Yağın sindirimi ve emilimi ince bağırsakta tamamlanır." }
+     {
+      "yazi": "Lenf kılcalına",
+      "dogru": true,
+      "neden": "Yağ asidi ve gliserol epitel hücresinde yeniden yağa dönüşür ve çoğu lenfe geçer. A, D, E, K vitaminleri de bu yolu izler; lenf sonra kana katılır."
+     },
+     {
+      "yazi": "Kılcal kana",
+      "neden": "Kılcal kana glikoz, amino asit, su ve suda çözünen vitaminler geçer; bu kan önce karaciğere gider. Yağların çoğu bu yolu izlemez."
+     },
+     {
+      "yazi": "Kalın bağırsağa",
+      "neden": "Kalın bağırsak sindirim enzimi salgılamaz; su ve mineral emer. Yağın sindirimi ve emilimi ince bağırsakta tamamlanır."
+     }
     ]
    },
-   "kart": 10
+   "kart": 11
   }
  ],
  "kapanis": [
@@ -120,5 +221,6 @@
   "Kimyasal sindirim karbonhidratta ağızda, proteinde midede, yağda ince bağırsakta başlar; hepsi ince bağırsakta biter.",
   "Pepsin asitte, pankreas enzimleri bikarbonatın nötrlediği ortamda çalışır. Safra enzim değildir, yağı emülsiyonlaştırır.",
   "Villus ve mikrovilluslar yüzeyi çok artırır: glikoz ve amino asit kana, yağların çoğu lenfe geçer."
- ]
+ ],
+ "soruOnce": true
 }
