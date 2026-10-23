@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Basamağı hesapla",
-   "metin": "H₂SO₄'te H +1, O −2. Kükürdün basamağını ayarla.",
+   "metin": "Nötr bileşikte basamakların toplamı 0'dır. H₂SO₄'te H +1, O −2. Kükürdün basamağını ayarla.",
    "sahne": {
     "tur": "kim10-basamak",
     "formul": "h2so4"
@@ -32,13 +32,7 @@
     "ipucu": "2(+1) + x + 4(−2) = 0 denklemini çöz.",
     "tamam": "2 − 8 + x = 0 → S <b>+6</b>. Kükürt en yüksek basamağındadır; H₂S'de ise −2'ye kadar iner."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "x": 4
-    },
-    "not": "S için +4 denersen toplam 2(+1) + 4 + 4(−2) = <b>−2</b> olur; nötr bileşikte toplam 0 olmalı."
-   }
+   "kart": 3
   },
   {
    "baslik": "İyonda toplam",
@@ -81,7 +75,7 @@
     "soru": "Ne gözlersin?",
     "secenekler": [
      {
-      "yazi": "Şeridin üstünde bakır birikir, mavi renk solar",
+      "yazi": "Şeritte bakır birikir, mavi solar",
       "neden": "Zn elektron verip Zn²⁺ olarak çözünür; Cu²⁺ bu elektronları alıp metal bakır olarak şeride çöker. Mavi rengi veren Cu²⁺ azaldığı için renk solar.",
       "dogru": true
      },
@@ -90,7 +84,7 @@
       "neden": "Zn, Cu'dan daha kolay elektron verir; Cu²⁺'yı kendiliğinden indirger (bu sıralamayı aktiflik sırasında göreceksin)."
      },
      {
-      "yazi": "Çözelti koyulaşır, şerit kalınlaşır",
+      "yazi": "Çözelti koyulaşır",
       "neden": "Mavi rengi Cu²⁺ verir ve bu iyon harcanır. Şerit de çözünerek incelir; üstündeki kırmızı-kahve tabaka bakırdır."
      }
     ]
@@ -99,7 +93,7 @@
   },
   {
    "baslik": "Kim verdi, kim aldı?",
-   "metin": "Yarı tepkimelere bak: biri elektron veriyor, öteki alıyor.",
+   "metin": "Yarı tepkimelere bak: biri elektron veriyor, öteki alıyor. Elektron vererek karşısındakini indirgeyen maddeye <b>indirgen</b> denir.",
    "sahne": {
     "tur": "kim10-zncu",
     "son": true
@@ -154,13 +148,7 @@
     "ipucu": "Sırada Cu'nun sağındaki metallere bak.",
     "tamam": "Ag ve Au, Cu'dan daha az aktiftir; Cu²⁺'ya elektron veremez. Tersine, Cu bu metallerin iyonlarını indirger."
    },
-   "kart": 13,
-   "goster": {
-    "deger": {
-     "m": 6
-    },
-    "not": "Demir, Cu'dan aktif: Cu²⁺ iyonuna elektron verir, şeridin üstünde <b>bakır birikir</b>. Fe + Cu²⁺ → Fe²⁺ + Cu."
-   }
+   "kart": 13
   },
   {
    "baslik": "Redoks mu?",
@@ -208,5 +196,6 @@
   "Kendisi yükseltgenen tür <b>indirgen</b>, kendisi indirgenen tür <b>yükseltgen</b>dir: Zn + Cu²⁺ tepkimesinde indirgen Zn'dir.",
   "Aktiflik sırasında önde olan metal, arkadaki metalin iyonunu indirger; tersi kendiliğinden olmaz.",
   "Basamak değişmiyorsa redoks yoktur: nötralleşme ve çökelme redoks değildir; yanma, paslanma ve solunum redokstur."
- ]
+ ],
+ "soruOnce": true
 }
