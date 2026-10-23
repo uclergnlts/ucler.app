@@ -240,3 +240,27 @@ a.btn{display:grid;place-items:center;text-align:center}
 .etk-nokta:focus{outline:none}
 .etk-bilgi b{color:var(--ink);margin-right:4px}
 }
+
+/* bilimsel yöntem akışı (etk "yontem"): sade kutular, aralarında kendiliğinden çizilen oklar */
+.etk[data-tur=yontem]{border:0;padding:0;background:none}
+.yt{display:grid;gap:6px;justify-items:center}
+.yt-kutu{width:100%;display:grid;gap:2px;padding:12px 14px;border-radius:14px;border:1.5px solid var(--line);background:var(--surface);font-size:15px;line-height:1.4;text-align:center}
+.yt-kutu b{font-family:var(--f-display);font-size:17px;font-weight:800}
+.yt-kutu.on{border-color:var(--acc)}
+.yt-ok{display:flex;align-items:center;gap:8px;height:46px;padding-left:28px}
+.yt-ok svg{width:20px;height:44px}
+.yt-ok span{font-size:13px;font-weight:700;color:var(--muted)}
+.yt-dugme{margin-top:8px;min-height:48px;padding:0 22px;border-radius:999px;border:1.5px solid var(--acc);background:#fff;color:var(--acc);font:inherit;font-weight:800;font-size:16px}
+.yt-sec{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}
+.yt-sec button{min-height:46px;border-radius:12px;border:1.5px solid var(--line-2);background:#fff;font:inherit;font-weight:700;font-size:15px;color:var(--ink)}
+.yt-sec button.on{border-color:var(--acc);background:var(--acc-soft)}
+.yt-geri{margin:2px 0 0;width:100%;overflow:hidden;font-size:14px;line-height:1.45;color:var(--ink);text-align:center}
+.yt-geri span{font-weight:800}
+.yt-dal{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+
+/* eşleştirmede düğmeler telefonda büyük olsun: çerçevesiz, geniş, iri yazı */
+.etk[data-tur=eslestir]{border:0;padding:0;background:none}
+.etk-esle{gap:10px}
+.etk-esle>div{gap:10px}
+.etk-esle .etk-oge{min-height:56px;padding:10px 12px;font-size:16px;justify-content:center;text-align:center}
+.yt-dal .yt-kutu{align-content:start}

@@ -38,7 +38,7 @@
   },
   {
    "baslik": "Farkı yaratan ne?",
-   "metin": "Günlük hayatta tüy yine de yavaş düşer. Bir <b>hipotez</b>, yani test edilebilir bir tahmin kur: farkı hava yaratıyor. Test etmek için tüpe havayı geri ver ve deneyi tekrarla.",
+   "metin": "Günlük hayatta tüy yine de yavaş düşer. Bir <b>hipotez</b>, yani test edilebilir bir tahmin kur: farkı hava yaratıyor. Sınamak için aşağıdan <b>Hava var</b>'ı seç.",
    "sahne": {
     "tur": "fiz-dusme",
     "sure": 2
@@ -52,7 +52,11 @@
      "etiket": "Tüpte hava",
      "min": 0,
      "max": 1,
-     "tur": "anahtar"
+     "tur": "anahtar",
+     "yazilar": [
+      "Hava yok",
+      "Hava var"
+     ]
     }
    ],
    "gorev": {
@@ -60,8 +64,8 @@
     "hedef": {
      "hava": 1
     },
-    "ipucu": "Tüpteki havayı aç ve yeniden oynat.",
-    "tamam": "Bilye neredeyse hiç etkilenmedi, tüy ise yavaşladı: farkı hava direnci yaratıyor. Hipotezin deneyle sınandı. Defalarca doğrulanan sonuçlardan <b>yasa</b> ne olduğunu söyler, <b>teori</b> nedenini açıklar."
+    "ipucu": "Aşağıdan “Hava var”ı seç; deney kendiliğinden yeniden oynar.",
+    "tamam": "Bilye neredeyse hiç etkilenmedi, tüy ise yavaşladı: farkı hava direnci yaratıyor. Hipotezin deneyle doğrulandı."
    },
    "kart": 2
   },
@@ -105,15 +109,15 @@
      {
       "yazi": "Uzunluk ve zamandan türetilir",
       "dogru": true,
-      "neden": "m/s, uzunluk (m) ve zaman (s) birimlerinin birleşimidir; temel birimlerden kurulan böyle büyüklüklere <b>türetilmiş</b> denir."
+      "neden": "Sürat, uzunluk (m) ve zamandan (s) kurulur: birimi m/s'dir. Temel büyüklüklerden kurulan böyle büyüklüklere <b>türetilmiş</b> denir."
      },
      {
       "yazi": "Sürat ölçülemez",
       "neden": "Sürat ölçülebilir; arabadaki hız göstergesi bunu yapar. Birimine bak: m/s neyden oluşuyor?"
      },
      {
-      "yazi": "m/s bir SI birimi değil",
-      "neden": "m/s bir SI birimidir, yalnızca temel değildir. Hangi iki temel birimden oluştuğuna bak."
+      "yazi": "Sürat SI'da yer almaz",
+      "neden": "Sürat SI'da yer alır, birimi m/s'dir; yalnızca temel değildir. Hangi iki temel büyüklükten kurulduğuna bak."
      }
     ]
    },

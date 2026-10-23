@@ -143,6 +143,15 @@ export function Kontroller({ liste, v, set, kapali }: { liste: Kontrol[]; v: Deg
         const x = v[k.ad] ?? k.min, adim = k.adim ?? 1;
         if (k.tur === "dugme")
           return <button key={k.ad} className="ad-dugme" disabled={kapali} onClick={() => set(k.ad, 1)}>{k.etiket}</button>;
+        if (k.tur === "anahtar" && k.yazilar)
+          // İki büyük düğme: telefonda bulunması ve basılması kolay.
+          return (
+            <div key={k.ad} className="ad-iki" role="group" aria-label={k.etiket}>
+              {k.yazilar.map((y, i) => (
+                <button key={i} className={x === i ? "acik" : ""} aria-pressed={x === i} disabled={kapali} onClick={() => x !== i && set(k.ad, i)}>{y}</button>
+              ))}
+            </div>
+          );
         if (k.tur === "anahtar")
           return (
             <button key={k.ad} className={`ad-anahtar ${x ? "acik" : ""}`} aria-pressed={x === 1} disabled={kapali} onClick={() => set(k.ad, x ? 0 : 1)}>
@@ -230,6 +239,12 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
     },
     [kayit, o.oynuyor, o.sifirla, faz],
   );
+
+  // İki düğmeli anahtar seçilince sahne kendiliğinden oynar: öğrenci ayrıca "Oynat"ı aramaz.
+  const kontrolSet = (ad: string, x: number) => {
+    set(ad, x);
+    if (sure && !o.oynuyor && faz === "sen" && a.kontroller?.some((k) => k.ad === ad && k.yazilar)) o.basla();
+  };
 
   // Keşif: her bulgunun alt hedeflerinden hangilerine uğrandı. Hedefler kontrollere ve sahnenin ölçümlerine bakar.
   const bulgular = g.tur === "kesfet" ? g.bulgular : null;
@@ -352,7 +367,7 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
         </div>
       )}
 
-      {a.kontroller && <Kontroller liste={a.kontroller} v={v} set={set} kapali={o.oynuyor || ornekte} />}
+      {a.kontroller && <Kontroller liste={a.kontroller} v={v} set={kontrolSet} kapali={o.oynuyor || ornekte} />}
 
       {ornekte ? (
         <div className="ad-ornek-acts">

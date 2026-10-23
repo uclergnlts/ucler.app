@@ -2,8 +2,8 @@
 // Ders ekranı: konu girişi (aşamalar) -> aşama aşama kartlar -> 4 soruluk mini test -> sonuç.
 // Kartlar 2-4 aşamaya bölünür (lib/asama.ts). Aşamalar sırayla açılır; konunun ortasında çıkan öğrenci kaldığı
 // karttan devam eder (lib/store.ts "yer"). Mini test aşamalar bitmeden de istenirse çözülebilir.
-// Kartlar slayt gibi yer değiştirmez: "Devam" ile bir sonraki kart altta belirir ve sayfa ona kayar
-// (Brilliant gibi akış). Yeni kartta görsel parça parça çizilir, yazı cümle cümle gelir.
+// Her "Devam" yeni bir sayfa açar (Üçler 2026-10-23): kartlar alt alta birikmez, telefonda uzun kaydırma olmaz.
+// Üstteki geri okuyla bir önceki sayfaya dönülür. Yeni kartta görsel parça parça çizilir, yazı cümle cümle gelir.
 // Etkileşimli adımları "kart" alanıyla yerleştirilmiş konularda adımlar anlatımın içinde, ilgili karttan hemen
 // sonra gelir: kısa açıklama (kart) → örnek (sahne kendisi oynar) → sıra sende (görev). Görev bitmeden "Devam" açılmaz.
 import Link from "next/link";
@@ -37,11 +37,11 @@ import { Konfeti, Madalya, PuanRozet } from "./Kutlama";
 /** Akıştaki öğe: konu kartı ya da etkileşimli adım. */
 type Oge = { tur: "kart"; k: number } | { tur: "adim"; a: Adim; n: number };
 
-/** a: aşama (-1: konu girişi), ara: aşama bitti ekranı, i: akıştaki öğe, q: test sorusu (-1: test başlamadı),
+/** a: aşama (-1: konu girişi), ara: aşama bitti ekranı, i: akıştaki öğe (o an açık sayfa), en: aşamada açılmış en ileri öğe, q: test sorusu (-1: test başlamadı),
  * cevap: test sorusunda öğrencinin kurduğu cevap, sonuc: değerlendirildiyse doğru mu (null: henüz değil),
  * odul: aşama ya da konu bitince kazanılan puan (ilk kez bitiyorsa), cevaplar: testte her sorunun doğru olup olmadığı. */
-type State = { a: number; ara: boolean; i: number; q: number; cevap: Cevap; sonuc: boolean | null; right: number; odul: number; cevaplar: boolean[] };
-const START: State = { a: -1, ara: false, i: 0, q: -1, cevap: null, sonuc: null, right: 0, odul: 0, cevaplar: [] };
+type State = { a: number; ara: boolean; i: number; en: number; q: number; cevap: Cevap; sonuc: boolean | null; right: number; odul: number; cevaplar: boolean[] };
+const START: State = { a: -1, ara: false, i: 0, en: 0, q: -1, cevap: null, sonuc: null, right: 0, odul: 0, cevaplar: [] };
 
 export default function Lesson({
   ders, id, t, next, adimli, on = [], list,
@@ -90,7 +90,7 @@ export default function Lesson({
   const kayitliYer = yerler[konuKey];
   const yer = kayitliYer && kayitliYer.a >= 0 && kayitliYer.a < nAsama && kayitliYer.i > asamaOge[kayitliYer.a][0] && kayitliYer.i < asamaOge[kayitliYer.a][1] ? kayitliYer : undefined;
   const [ilkOge, sonOge] = s.a >= 0 && s.a < nAsama ? asamaOge[s.a] : [0, 0];
-  const Close = Icon.kapat, Bookmark = Icon.kayit;
+  const Close = Icon.kapat, Bookmark = Icon.kayit, Geri = Icon.back;
 
   // Konular sırayla açılır (lib/kilit.ts). Sunucuda ve ilk çizimde cihazdaki ilerleme bilinmediği için konu açık sayılır;
   // bu yüzden ilerleme yazan her şey ayrıca "acikKesin"i bekler (kilitli konu kendi yan etkisiyle açılmasın).
@@ -106,15 +106,11 @@ export default function Lesson({
     if (kapali) return;
     const k = Number(new URLSearchParams(location.search).get("kart"));
     const j = ogeler.findIndex((o) => o.tur === "kart" && o.k === k - 1);
-    if (Number.isInteger(k) && k > 0 && j >= 0) setS({ ...START, a: kartinAsamasi(nKart, k - 1), i: j });
+    if (Number.isInteger(k) && k > 0 && j >= 0) setS({ ...START, a: kartinAsamasi(nKart, k - 1), i: j, en: j });
   }, [ogeler, nKart, tarayici, kapali]);
   useEffect(() => { if (tarayici && !kapali) setProg({ _last: `${ders}.${id}` }); }, [ders, id, tarayici, kapali]);
-  useEffect(() => { window.scrollTo(0, 0); }, [s.q, s.a, s.ara]);
-  // Yeni kart altta belirince sayfa ona kayar.
-  const sonKart = useRef<HTMLElement>(null);
-  useEffect(() => {
-    if (s.q < 0 && s.a >= 0 && !s.ara && s.i > ilkOge) sonKart.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [s.i, s.q, s.a, s.ara, ilkOge]);
+  // Her sayfa en üstten açılır.
+  useEffect(() => { window.scrollTo(0, 0); }, [s.q, s.a, s.ara, s.i]);
   useEffect(() => {
     if (acikKesin && s.q === nQuiz) setProg({ [`${ders}.${id}`]: `${s.right}/${nQuiz} doğru` });
   }, [acikKesin, s.q, s.right, nQuiz, ders, id]);
@@ -132,14 +128,15 @@ export default function Lesson({
   const asamaAc = (a: number) => {
     yon.current = 1;
     setBildirim(null);
-    if (a < nAsama && yer?.a === a) return setS({ ...START, a, i: yer.i });
-    setS(a < nAsama ? { ...START, a, i: asamaOge[a][0] } : { ...START, a: nAsama, q: 0, cevap: ilkCevap(t.quiz[0]) });
+    if (a < nAsama && yer?.a === a) return setS({ ...START, a, i: yer.i, en: yer.i });
+    setS(a < nAsama ? { ...START, a, i: asamaOge[a][0], en: asamaOge[a][0] } : { ...START, a: nAsama, q: 0, cevap: ilkCevap(t.quiz[0]) });
   };
-  /** Sol ok: akışta sayfayı bir önceki karta kaydırır (kartlar yer değiştirmez, öncekiler yukarıda durur). */
+  /** Geri: aşamanın içinde bir önceki sayfa; aşamanın ilk sayfasında konu girişi (aşama yolu). */
   function geri() {
-    const kartlar = [...document.querySelectorAll<HTMLElement>("[data-akis]")];
-    const onceki = kartlar.filter((k) => k.getBoundingClientRect().top < 70).pop();
-    onceki?.scrollIntoView({ behavior: "smooth", block: "start" });
+    yon.current = -1;
+    setBildirim(null);
+    if (s.i > ilkOge) setS({ ...s, i: s.i - 1 });
+    else setS(START);
   }
   // Puan yan etkileri setS'in dışında, olay anında yazılır.
   function step(dir: 1 | -1) {
@@ -152,7 +149,7 @@ export default function Lesson({
     if (s.ara) return asamaAc(s.a + 1);
     if (akista) {
       if (ogeler[s.i].tur === "kart") kaydet("kart", 1, PUAN.kart);
-      if (s.i < sonOge - 1) return setS({ ...s, i: s.i + 1 });
+      if (s.i < sonOge - 1) return setS({ ...s, i: s.i + 1, en: Math.max(s.en, s.i + 1) });
       // Puan yalnızca aşama ilk kez bittiğinde; görev sayacı tekrarda da ilerler.
       const ilk = s.a === bitenA && asamaBitir(konuKey, s.a);
       kaydet("asama", 1, ilk ? PUAN.asama : 0);
@@ -289,40 +286,28 @@ export default function Lesson({
     );
   } else if (s.q < 0) {
     const last = s.i === sonOge - 1;
-    key = `a${s.a}`;
+    // Tek sayfa: yalnızca açık öğe. Geri dönülen sayfada cevaplanmış soru cevaplı, görsel canlandırmasız görünür.
+    const o = ogeler[s.i], j = s.i, yeni = j >= s.en;
+    key = `a${s.a}.${j}`;
     body = (
-      <div className="flex flex-col gap-14" aria-live="polite">
-        {ogeler.slice(ilkOge, s.i + 1).map((o, jj) => {
-          const j = ilkOge + jj;
-          return o.tur === "kart" ? (
-            <AkisKart
-              key={j}
-              ref={j === s.i ? sonKart : undefined}
-              c={t.cards[o.k]}
-              vids={kartVideolari(ders, id, o.k + 1)}
-              canli={j === s.i}
-              oynat={setPlay}
-              cevaplandi={biten.has(j) || j < s.i}
-              soruGoster={biten.has(j) || j === s.i}
-              tamam={tamamlar[j]}
-              bildir={j === s.i ? bildir : yoksay}
-            />
-          ) : (
-            <motion.article
-              key={j}
-              ref={j === s.i ? sonKart : undefined}
-              data-akis
-              className="ad-kart ad-akista scroll-mt-20"
-              inert={j < s.i}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, ease: "easeOut" }}
-            >
-              <SiraliMetin className="ad-metin" html={o.a.metin} gecikme={0.1} />
-              <AdimGorunum a={o.a} tamam={tamamlar[j]} bildir={j === s.i ? bildir : yoksay} />
-            </motion.article>
-          );
-        })}
+      <div aria-live="polite">
+        {o.tur === "kart" ? (
+          <AkisKart
+            c={t.cards[o.k]}
+            vids={kartVideolari(ders, id, o.k + 1)}
+            canli={yeni}
+            oynat={setPlay}
+            cevaplandi={biten.has(j) || j < s.en}
+            soruGoster
+            tamam={tamamlar[j]}
+            bildir={bildir}
+          />
+        ) : (
+          <article data-akis className="ad-kart ad-akista">
+            <SiraliMetin className="ad-metin" html={o.a.metin} gecikme={yeni ? 0.1 : 0} aralik={yeni ? 0.35 : 0} />
+            <AdimGorunum a={o.a} tamam={tamamlar[j]} bildir={bildir} />
+          </article>
+        )}
       </div>
     );
     controls = (
@@ -344,8 +329,8 @@ export default function Lesson({
           )}
         </AnimatePresence>
         {!bildirim && s.i === ilkOge + 1 && !ipucu.includes("akis") && (
-          // Bir kez gösterilir: akışta geri gitmek kaydırmakla olur, anlamadım simgesi sağ üstte.
-          <p className="pb-2.5 text-[13px] text-muted-foreground">Önceki kartlar yukarıda duruyor. Anlamadığın kartta sağ üstteki ? simgesine dokun.</p>
+          // Bir kez gösterilir: önceki sayfaya üstteki geri okuyla dönülür, anlamadım simgesi sağ üstte.
+          <p className="pb-2.5 text-[13px] text-muted-foreground">Önceki sayfaya üstteki okla dönebilirsin. Anlamadığın kartta sağ üstteki ? simgesine dokun.</p>
         )}
         <Button className="w-full" data-next disabled={kilitli} onClick={() => step(1)}>{kilitli ? (soruBekler(s.i) ? "Bir cevap seç" : gorevYazisi(ogeler[s.i])) : last ? "Aşamayı bitir" : "Devam"}</Button>
       </Alt>
@@ -485,7 +470,12 @@ export default function Lesson({
   return (
     <div className="app" data-ders={ders}>
       <header className="top gap-3">
-        <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={href(ders)} aria-label="Konudan çık"><Close /></Link></Button>
+        {akista ? (
+          // Ders sayfalarında solda geri (önceki sayfa), sağda çıkış.
+          <Button variant="ghost" size="icon" className="-ml-2 text-muted-foreground" aria-label="Önceki sayfa" onClick={geri}><Geri /></Button>
+        ) : (
+          <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={href(ders)} aria-label="Konudan çık"><Close /></Link></Button>
+        )}
         <div className="grid min-w-0 flex-1 gap-1.5">
           <span className="truncate font-display text-[15px] font-extrabold">{t.title}</span>
           <AsamaCubugu dolu={[
@@ -514,7 +504,7 @@ export default function Lesson({
         <Button
           variant="ghost"
           size="icon"
-          className={cn("-mr-2", saved ? "text-acc [&_svg]:fill-current" : "text-muted-foreground")}
+          className={cn(akista ? "" : "-mr-2", saved ? "text-acc [&_svg]:fill-current" : "text-muted-foreground")}
           aria-pressed={saved}
           aria-label="Konuyu kaydet"
           title="Konuyu kaydet"
@@ -522,6 +512,7 @@ export default function Lesson({
         >
           <Bookmark />
         </Button>
+        {akista && <Button asChild variant="ghost" size="icon" className="-mr-2 text-muted-foreground"><Link href={href(ders)} aria-label="Konudan çık"><Close /></Link></Button>}
       </header>
       <main className="view gap-0 pt-1 pb-0">
         <AnimatePresence mode="wait" custom={yon.current}>
@@ -548,8 +539,6 @@ export default function Lesson({
     </div>
   );
 }
-
-const yoksay = () => {};
 
 /** Görevi bitmemiş adımda pasif "Devam" düğmesinin yazısı: öğrenciye ne yapması gerektiğini söyler. */
 function gorevYazisi(o: Oge | undefined) {
@@ -586,6 +575,8 @@ function AkisKart({ c, vids, canli, oynat, ref, cevaplandi, soruGoster, tamam, b
   const n = c.p.split(/[.!?…]\s/).length;
   const metinBitti = ilk ? 0.55 + n * 0.35 : 0;
   const baslik = <Html as="h2" className="text-[22px]" html={c.h} />;
+  // Yöntem akışı anlatımın devamıdır: önce yazı, altında akış.
+  const sonraGorsel = !c.once && c.etk?.tur === "yontem";
   // Soru cevaplanınca açılan görsel ve anlatım ekrana gelsin.
   const acilan = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -595,7 +586,7 @@ function AkisKart({ c, vids, canli, oynat, ref, cevaplandi, soruGoster, tamam, b
   }, [c.once, cevaplandi, ilk]);
   const gorsel = c.etk ? (
     <div ref={ilk ? etkRef : undefined}><Etk e={c.etk} svg={c.svg} /></div>
-  ) : ilk ? (
+  ) : !c.svg ? null : ilk ? (
     <CanliSvg className="visual" html={c.svg} />
   ) : (
     <div className="visual" dangerouslySetInnerHTML={{ __html: c.svg }} />
@@ -611,10 +602,10 @@ function AkisKart({ c, vids, canli, oynat, ref, cevaplandi, soruGoster, tamam, b
               <KartSoru soru={c.once.soru} secenekler={c.once.secenekler} tamam={tamam} bildir={bildir} />
             </Kap>
           )}
-          {cevaplandi && <div ref={acilan} className="scroll-mt-20">{gorsel}</div>}
+          {cevaplandi && gorsel && <div ref={acilan} className="scroll-mt-20">{gorsel}</div>}
         </>
       ) : (
-        gorsel
+        !sonraGorsel && gorsel
       )}
       {(!c.once || cevaplandi) && (
         <>
@@ -643,6 +634,7 @@ function AkisKart({ c, vids, canli, oynat, ref, cevaplandi, soruGoster, tamam, b
           ))}
         </>
       )}
+      {sonraGorsel && <Kap on={ilk} d={metinBitti}>{gorsel}</Kap>}
     </article>
   );
 }

@@ -96,3 +96,10 @@ body:has(.ad-sayfa){background:#fff}
 .ad-nabiz-hafif{animation-name:ad-nabiz-hafif}
 @keyframes ad-nabiz-hafif{0%{opacity:.8;transform:scale(1)}100%{opacity:0;transform:scale(1.12,1.3)}}
 @media (prefers-reduced-motion:reduce){.ad-nabiz{animation:none;opacity:.6}}
+
+/* iki düğmeli anahtar (ör. "Hava yok / Hava var"): büyük, yan yana, seçili olan dolu */
+.ad-iki{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ad-iki button{min-height:52px;border-radius:14px;border:1.5px solid var(--line-2);background:#fff;font:inherit;font-size:16px;font-weight:700;color:var(--ink);cursor:pointer;transition:background .15s,border-color .15s}
+.ad-iki button.acik{border-color:var(--acc);background:var(--acc);color:#fff}
+.ad-iki button:disabled{opacity:.6;cursor:default}
+.ad-iki button:focus-visible{outline:3px solid var(--glow);outline-offset:2px}

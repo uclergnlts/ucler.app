@@ -60,6 +60,12 @@ def etk_denetle(ders, tid, i, e):
         for k, (lo, hi) in SAYI[tur].items():
             if not isinstance(e.get(k), (int, float)) or not lo <= e[k] <= hi: err(*yer, k, "eksik ya da aralık dışı")
         return
+    if tur == "yontem":
+        # bilimsel yöntem akışı: beş kısa metin (components/EtkGenel.tsx Yontem)
+        for k in ("hipotez", "deney", "curut", "yasa", "teori"):
+            if not e.get(k): err(*yer, "yontem:", k, "boş")
+            elif len(e[k].split()) > 14: err(*yer, "yontem:", k, "14 kelimeyi aşıyor")
+        return
     if tur not in ("sirala", "eslestir", "ayir", "isaretle", "formul"): return err(*yer, "bilinmeyen tür", tur)
     if tur != "formul" and not e.get("soru"): err(*yer, "soru yok")
     if tur == "sirala":
@@ -123,15 +129,18 @@ for ders, topics in d.items():
             w = len(re.sub("<[^>]+>", " ", c.get("p", "")).split())
             if w > 55: err(ders, tid, i, "uzun metin", w, "kelime")
             elif w > 45: warn.append(f"{ders} {tid} {i}: {w} kelime (hedef 45)")
+            # svg isteğe bağlı (Üçler 2026-10-23: görsel gerekmeyen kartta yalnız yazı); varsa denetlenir.
             s = c.get("svg", "")
-            if not s: err(ders, tid, i, "svg yok"); continue
-            try: ET.fromstring(s)
-            except Exception as e: err(ders, tid, i, "svg XML hatası", e)
-            if re.search(r"#[0-9a-fA-F]{3,6}\b|rgb\(|(fill|stroke)='(white|black|red|blue|green|yellow|gray|grey)'", s):
-                err(ders, tid, i, "yasak renk (yalnız var(--...) kullanılır)")
-            if re.search(r"<svg[^>]*\s(width|height)=", s): err(ders, tid, i, "svg width/height özniteliği")
-            if re.search(r"<(script|style|foreignObject|image)\b", s): err(ders, tid, i, "svg içinde yasak etiket")
-            ids += re.findall(r"\sid='([^']+)'", s)
+            if "svg" in c and not s: err(ders, tid, i, "svg boş (gerekmiyorsa alanı kaldır)")
+            if s:
+                try: ET.fromstring(s)
+                except Exception as e: err(ders, tid, i, "svg XML hatası", e)
+                if re.search(r"#[0-9a-fA-F]{3,6}\b|rgb\(|(fill|stroke)='(white|black|red|blue|green|yellow|gray|grey)'", s):
+                    err(ders, tid, i, "yasak renk (yalnız var(--...) kullanılır)")
+                if re.search(r"<svg[^>]*\s(width|height)=", s): err(ders, tid, i, "svg width/height özniteliği")
+                if re.search(r"<(script|style|foreignObject|image)\b", s): err(ders, tid, i, "svg içinde yasak etiket")
+                ids += re.findall(r"\sid='([^']+)'", s)
+            if c.get("etk", {}).get("tur") == "isaretle" and not s: err(ders, tid, i, "isaretle için svg gerekli")
             if "etk" in c: etk_denetle(ders, tid, i, c["etk"])
             if "once" in c:
                 # soru önce kartı: önce soru, cevaptan sonra anlatım (lib/dersler.ts Card.once)
@@ -260,6 +269,7 @@ for f in sorted(glob.glob(os.path.join(CONTENT, "adimli", "*.json"))):
         for k in kont.values():
             if k.get("tur", "surgu") not in ("surgu", "sayac", "anahtar", "dugme", "surukle"): err("adımlı", yer, "bilinmeyen kontrol türü:", k.get("tur"))
             if k["ad"] not in deger: err("adımlı", yer, "kontrolün başlangıç değeri yok:", k["ad"])
+            if "yazilar" in k and (k.get("tur") != "anahtar" or len(k["yazilar"]) != 2): err("adımlı", yer, "yazilar yalnız anahtarda ve iki tane olur:", k["ad"])
             elif not k["min"] <= deger[k["ad"]] <= k["max"]: err("adımlı", yer, k["ad"], "başlangıç değeri sınırların dışında")
         # konu anlatımına yerleştirme: kart numarası ve "göster" örneği
         if "kart" in s:

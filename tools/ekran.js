@@ -103,6 +103,8 @@ server.listen(0, async () => {
     return devam.isEnabled();
   }
   async function kontrolDegistir(d, tur) {
+    const iki = d.locator('.ad-iki button:not(.acik):not([disabled])');
+    if (await iki.count()) { await iki.first().click(); return; }
     const anahtar = d.locator('.ad-anahtar:not([disabled])');
     if (await anahtar.count()) { await anahtar.nth(tur % (await anahtar.count())).click(); return; }
     const artir = d.locator('.ad-sayac button[aria-label$="artır"]:not([disabled])');

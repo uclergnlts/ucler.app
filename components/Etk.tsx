@@ -4,13 +4,13 @@
 import { useState } from "react";
 import type { Etk as EtkT } from "@/lib/dersler";
 import { ELEMENTLER, katmanlar, yer } from "@/lib/elementler";
-import { Ayir, Eslestir, Formul, Isaretle, Sirala } from "./EtkGenel";
+import { Ayir, Eslestir, Formul, Isaretle, Sirala, Yontem } from "./EtkGenel";
 
 const sayi = (x: number) => x.toLocaleString("tr-TR", { maximumFractionDigits: 2 }).replace("-", "−");
 const yaklasik = (x: number) => (Math.abs(x * 100 - Math.round(x * 100)) > 1e-6 ? "≈" : "=");
 const yuk = (q: number) => (q === 0 ? "" : `${Math.abs(q) > 1 ? Math.abs(q) : ""}${q > 0 ? "+" : "−"}`);
 
-export default function Etk({ e, svg }: { e: EtkT; svg: string }) {
+export default function Etk({ e, svg = "" }: { e: EtkT; svg?: string }) {
   return (
     <div className="visual etk" data-tur={e.tur}>
       {e.tur === "atom" && <Atom p0={e.p} n0={e.n} e0={e.e} />}
@@ -21,6 +21,7 @@ export default function Etk({ e, svg }: { e: EtkT; svg: string }) {
       {e.tur === "ayir" && <Ayir e={e} />}
       {e.tur === "isaretle" && <Isaretle e={e} svg={svg} />}
       {e.tur === "formul" && <Formul e={e} />}
+      {e.tur === "yontem" && <Yontem e={e} />}
     </div>
   );
 }

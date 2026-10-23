@@ -16,12 +16,14 @@ export type Etk =
       girdiler: { ad: string; etiket: string; birim?: string; min: number; max: number; adim: number; deger: number }[];
       ciktilar: { ad: string; ifade: string; birim?: string; basamak?: number; max?: number }[];
       yorum?: [number | null, string][];
-    };
+    }
+  /** Bilimsel yöntem akışı: hipotez → deney → (doğrularsa) yasa / teori; çürütürse yeni hipotez. Dokundukça açılır. */
+  | { tur: "yontem"; hipotez: string; deney: string; curut: string; yasa: string; teori: string };
 /**
  * Kart. once yazılırsa kart "soru önce" açılır: başlık ve soru gelir, öğrenci cevaplayınca görsel ve anlatım belirir
  * (Brilliant gibi önce düşün, sonra adını öğren). Şıkların "neden"i cevaptan sonra alttaki çubukta çıkar.
  */
-export type Card = { h: string; p: string; svg: string; key?: string; etk?: Etk; once?: KartSorusu };
+export type Card = { h: string; p: string; svg?: string; key?: string; etk?: Etk; once?: KartSorusu };
 export type KartSorusu = { soru: string; secenekler: { yazi: string; dogru?: boolean; neden: string }[] };
 /**
  * Konu sonu testinin sorusu. tur yazılmazsa çoktan seçmelidir (o: şıklar, a: doğru şıkkın sırası,

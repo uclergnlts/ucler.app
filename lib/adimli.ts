@@ -99,6 +99,8 @@ export type Secenek = { yazi: string; etiket?: string; dogru?: boolean; neden: s
 export type Kontrol = {
   ad: string; etiket: string; min: number; max: number; adim?: number;
   birim?: string; onek?: string; carpan?: number; tur?: "surgu" | "sayac" | "anahtar" | "dugme" | "surukle";
+  /** Yalnızca anahtar: iki büyük düğme olarak gösterilir ([kapalı, açık] yazıları). Seçince sahne kendiliğinden oynar. */
+  yazilar?: [string, string];
 };
 
 /** Hedef: değer adı → tam değer ya da [en az, en çok]. Adlar kontroller ya da sahnenin ölçtüğü değerler (olc) olabilir. */

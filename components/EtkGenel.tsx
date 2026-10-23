@@ -1,9 +1,10 @@
 "use client";
-// İçerikten tanımlanan genel etkileşimler: sırala, eşleştir, ayır, işaretle, formül.
+// İçerikten tanımlanan genel etkileşimler: sırala, eşleştir, ayır, işaretle, formül, yöntem akışı.
 // Her konu bunları yeni kod yazmadan kullanır. Biçim: docs/ICERIK-SPEC.md ("Etkileşimli kart").
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Etk } from "@/lib/dersler";
 import { hesapla } from "@/lib/ifade";
+import { AnimatePresence, motion } from "motion/react";
 import { Html } from "./temel";
 
 type Of<T extends Etk["tur"]> = Extract<Etk, { tur: T }>;
@@ -206,5 +207,70 @@ export function Formul({ e }: { e: Of<"formul"> }) {
         ))}
       </div>
     </>
+  );
+}
+
+/* ---------- bilimsel yöntem akışı ---------- */
+
+/** Aşağı doğru kendiliğinden çizilen ok; yanında küçük bir not. */
+function AsagiOk({ yazi }: { yazi?: string }) {
+  return (
+    <div className="yt-ok">
+      <svg viewBox="0 0 20 44" aria-hidden="true">
+        <motion.path d="M10 2V40" stroke="var(--ink)" strokeWidth={2.4} fill="none" strokeLinecap="round"
+          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.45, ease: "easeOut" }} />
+        <motion.path d="M3 33L10 41L17 33" stroke="var(--ink)" strokeWidth={2.4} fill="none" strokeLinecap="round" strokeLinejoin="round"
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4, duration: 0.2 }} />
+      </svg>
+      {yazi && <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>{yazi}</motion.span>}
+    </div>
+  );
+}
+
+function Kutu({ ad, html, d = 0, vurgu }: { ad: string; html: string; d?: number; vurgu?: boolean }) {
+  return (
+    <motion.div className={`yt-kutu ${vurgu ? "on" : ""}`} initial={{ opacity: 0, y: 10, scale: 0.97 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ delay: d, duration: 0.35, ease: "easeOut" }}>
+      <b>{ad}</b>
+      <Html html={html} />
+    </motion.div>
+  );
+}
+
+/** Hipotez → deney → yasa / teori. Öğrenci dokundukça bir sonraki kutu okla açılır; deneyin iki sonucu da denenebilir. */
+export function Yontem({ e }: { e: Of<"yontem"> }) {
+  // n: 0 yalnız hipotez, 1 deney açık. dogru / curuk: deneyin hangi sonucu açıldı.
+  const [n, setN] = useState(0), [dogru, setDogru] = useState(false), [curuk, setCuruk] = useState(false);
+  return (
+    <div className="yt">
+      <Kutu ad="Hipotez" html={e.hipotez} vurgu={n === 0} />
+      {n === 0 ? (
+        <button className="yt-dugme" onClick={() => setN(1)}>Deneyle sına</button>
+      ) : (
+        <>
+          <AsagiOk yazi="sına" />
+          <Kutu ad="Deney" html={e.deney} d={0.35} vurgu={!dogru && !curuk} />
+          <motion.div className="yt-sec" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>
+            <button className={curuk ? "on" : ""} aria-pressed={curuk} onClick={() => setCuruk(true)}>Çürütürse</button>
+            <button className={dogru ? "on" : ""} aria-pressed={dogru} onClick={() => setDogru(true)}>Doğrularsa</button>
+          </motion.div>
+          <AnimatePresence>
+            {curuk && (
+              <motion.p key="curuk" className="yt-geri" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }}>
+                <span aria-hidden="true">↺</span> <Html html={e.curut} />
+              </motion.p>
+            )}
+          </AnimatePresence>
+          {dogru && (
+            <>
+              <AsagiOk yazi="defalarca doğrulanınca" />
+              <div className="yt-dal">
+                <Kutu ad="Yasa" html={e.yasa} d={0.4} vurgu />
+                <Kutu ad="Teori" html={e.teori} d={0.6} vurgu />
+              </div>
+            </>
+          )}
+        </>
+      )}
+    </div>
   );
 }

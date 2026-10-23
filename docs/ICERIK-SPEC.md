@@ -25,7 +25,7 @@ Videolar ayrı bir dosyada durur: `content/videolar.json` (biçim `docs/VIDEOLAR
   cards: [                       // 8-12 kart önerilir; geniş konular 16 karta kadar çıkabilir (doğrulayıcı 6-16)
     { h: "Başlık (≤ 40 karakter)",
       p: "Metin: en fazla 45 kelime (doğrulayıcı 45'i aşanı uyarır, 55'i aşanı hata sayar). <b>, <em>, <sub>, <sup>, <br> kullanılabilir.",
-      svg: "<svg viewBox='0 0 320 200'>...</svg>",   // her kartta ZORUNLU
+      svg: "<svg viewBox='0 0 320 200'>...</svg>",   // isteğe bağlı: görsel bir şey anlatmıyorsa yazma (Üçler 2026-10-23: görsel sade olsun)
       key: "İsteğe bağlı 'akılda kalsın' cümlesi (≤ 90 karakter)" }
   ],
   quiz: [ { q: "Soru?", o: ["A","B","C","D"], a: 2, e: "Neden doğru (1-2 cümle)" } ]   // tam 4 soru; etkileşimli türler için "Konu sonu testi"
@@ -53,7 +53,7 @@ Videolar ayrı bir dosyada durur: `content/videolar.json` (biçim `docs/VIDEOLAR
 - Görsel süs değildir; konuyu anlatır (şema, karşılaştırma, grafik, model).
 
 ## Etkileşimli kart
-Bir karta `etk` alanı eklenirse o kartta durağan SVG yerine öğrencinin dokunup değiştirebildiği bir görsel çıkar (`components/Etk.tsx`, `components/EtkGenel.tsx`). `svg` yine zorunludur: yedek görseldir, `isaretle` türünde de zemin olarak kullanılır. Kart metni, başlığı ve testi değişmez. Her konuda en az bir etkileşimli kart olur; Özet kartı tercih edilmez.
+Bir karta `etk` alanı eklenirse o kartta durağan SVG yerine öğrencinin dokunup değiştirebildiği bir görsel çıkar (`components/Etk.tsx`, `components/EtkGenel.tsx`). `isaretle` türünde `svg` zemin olarak gerekir; diğer türlerde gerekmez. Kart metni, başlığı ve testi değişmez. Her konuda en az bir etkileşimli kart olur; Özet kartı tercih edilmez.
 
 Metinlerde kartlardaki gibi `<b>`, `<em>`, `<sub>`, `<sup>` kullanılabilir. Öğrenciye "sen" diye hitap edilir.
 
@@ -75,6 +75,8 @@ Metinlerde kartlardaki gibi `<b>`, `<em>`, `<sub>`, `<sup>` kullanılabilir. Ö�
    "yorum": [[7, "Asidik"], [7.0001, "Nötr"], [null, "Bazik"]]}
   ```
   1-3 girdi, 1-3 çıktı. `ifade` içinde yalnızca sayılar, girdi adları, `+ - * / ^ ( )`, `pi`, `e` ve `sqrt abs sin cos tan ln log exp` kullanılır; açılar **derecedir**, `log` 10 tabanlıdır. `max` verilirse çıktının altında dolan bir çubuk çıkar. `yorum` isteğe bağlıdır: ilk çıktının değeri listedeki ilk sınırdan küçükse o metin gösterilir; son satır `[null, "metin"]` olur. Birimler SI ya da derste kullanılan birimdir; sonuçlar gerçek değerlerle tutarlı olmalıdır.
+
+- `yontem`: Bilimsel yöntem akışı. Hipotez kutusu görünür; "Deneyle sına"ya dokununca ok çizilir ve deney kutusu açılır. Öğrenci "Çürütürse" (yeni hipotez döngüsü) ve "Doğrularsa" (ok, ardından yan yana yasa ve teori) sonuçlarını açar. `{"tur": "yontem", "hipotez": "…", "deney": "…", "curut": "…", "yasa": "…", "teori": "…"}`; her metin en fazla 14 kelime.
 
 Yeni konuya özel tür eklemek kod işidir. Doğrulayıcı (`tools/check.py`) her türün biçimini, sayı aralıklarını ve formüllerin girdilerin en küçük, başlangıç ve en büyük değerinde hesaplanabildiğini denetler.
 
@@ -117,10 +119,11 @@ Her MEB öğrenme çıktısı (Türkiye Yüzyılı Maarif Modeli, 2024; Fizik, K
 ## Adımlı ders (deneme, `/ornek/`)
 Brilliant tarzı örnek dersler `content/adimli/<konu>.json` dosyalarındadır; tipler `lib/adimli.ts`, motor `components/DersMotoru.tsx`, sahneler `components/sahne/` içindedir.
 - Ders: `id`, `ders`, `konu` (konunun normal sayfası), `baslik`, `ozet`, `adimlar`, `kapanis` (bitişte gösterilen özet maddeleri).
-- Adım: `baslik`, `metin` (kısa, HTML olabilir), `sahne` (`tur` = sahne kütüphanesindeki ad; `sure` verilirse sahne "Oynat" ile oynar), isteğe bağlı `deger` ve `kontroller` (sürgü, − / + sayaç ya da aç/kapa anahtar), `gorev`.
+- Adım: `baslik`, `metin` (kısa, HTML olabilir), `sahne` (`tur` = sahne kütüphanesindeki ad; `sure` verilirse sahne "Oynat" ile oynar), isteğe bağlı `deger` ve `kontroller` (sürgü, − / + sayaç ya da aç/kapa anahtar), `gorev`. Anahtara `"yazilar": ["Hava yok", "Hava var"]` yazılırsa yan yana iki büyük düğme olur ve seçilince sahne kendiliğinden oynar (telefonda en kolay kullanım).
 - Görev türleri: `devam`, `oynat`, `secim` (her yanlış şıkta "neden" ipucu çıkar; `kosu` ile soru, sahne o kadar farklı değerle oynatılınca açılır), `tahmin` (önce tahmin, sonra sahne oynar ve doğrusu açıklanır), `ayarla` (değerleri `hedef`e getir; sahne oynayabiliyorsa hedef değerle oynatılmalıdır).
 - `tools/check.py` bu dosyaları da denetler: sahne adı, tek doğru şık, görsel şıkta `etiket`, kontrol sınırları ve hedefin ulaşılabilirliği.
 - Her adımda öğrenci bir şey yapar; geri bildirim alttaki çubukta çıkar, "Devam" görev bitince açılır.
+- **Her "Devam" yeni sayfa (Üçler, 2026-10-23):** Konu anlatımında kartlar ve adımlar alt alta birikmez; her biri kendi sayfasında açılır. Üstte solda geri oku (önceki sayfa; aşamanın ilk sayfasında aşama yoluna döner), sağda çıkış vardır. Sayfa içinde yazı cümle cümle, görsel parça parça gelmeye devam eder.
 - Görünüm sade tutulur (Üçler, 2026-10-18): beyaz sayfa, adım başlığı yok, kısa metin, ortada tek görsel, sahnelerde süs arka planı yok.
 - **Konu anlatımının içinde (Üçler, 2026-10-18):** Adımlara `kart` (1'den başlar) yazılırsa adım, konu sayfasında o karttan hemen sonra akışa girer; ayrı "Önce yaparak öğren" bağlantısı çıkmaz. `kart` ya her adımda olur ya hiçbirinde. Görev bitmeden "Devam" açılmaz.
 - **Göster → sen dene:** İsteğe bağlı `goster` alanı (`deger`: kontrollerin örnekte gideceği değerler, görevin cevabı olmamalı; `not`: kısa açıklama; `oynat: false` sahneyi oynatmaz). Adım önce örneği kendisi oynatır, öğrenci "Şimdi sen dene"ye basınca değerler başa döner. Tahmin adımlarında `goster` kullanılmaz (tahmini bozar).
