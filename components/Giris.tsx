@@ -4,25 +4,32 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { hataMetni, sb, useOturum } from "@/lib/bulut";
+import { donusAl, googleIleGir, hataMetni, sb, useGoogle, useOturum } from "@/lib/bulut";
+import { olay } from "@/lib/olay";
 import { setAd, useAd } from "@/lib/store";
 import { adres } from "@/lib/site";
 import { GeriTop, Govde, PageHead } from "./temel";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import { GoogleDugme } from "./KayitDavet";
 
 type Mod = "kayit" | "giris" | "unuttum";
 
 export default function Giris() {
-  const oturum = useOturum(), router = useRouter(), kayitliAd = useAd();
+  const oturum = useOturum(), router = useRouter(), kayitliAd = useAd(), google = useGoogle();
   const [mod, setMod] = useState<Mod>("kayit");
   const [ad, setAdS] = useState(""), [eposta, setEposta] = useState(""), [sifre, setSifre] = useState("");
   const [hata, setHata] = useState(""), [bilgi, setBilgi] = useState(""), [bekle, setBekle] = useState(false);
 
-  useEffect(() => { if (new URLSearchParams(location.search).has("giris")) setMod("giris"); }, []);
+  useEffect(() => {
+    const p = new URLSearchParams(location.search);
+    if (p.has("giris")) setMod("giris");
+    // Google'dan hata ile dönüldüyse (ör. öğrenci vazgeçti).
+    if (p.has("error") || new URLSearchParams(location.hash.slice(1)).has("error")) setHata("Google ile giriş tamamlanamadı. Yeniden dene ya da e-postayla devam et.");
+  }, []);
   useEffect(() => { if (kayitliAd) setAdS((a) => a || kayitliAd); }, [kayitliAd]);
-  // Giriş yapılmışsa (ya da e-posta bağlantısıyla gelindiyse) Profil'e geç.
-  useEffect(() => { if (oturum) router.replace("/profil/"); }, [oturum, router]);
+  // Giriş yapılmışsa (e-posta bağlantısıyla ya da Google'dan gelindiyse) kayıt davetinin açıldığı konuya, yoksa Profil'e geç.
+  useEffect(() => { if (oturum) router.replace(donusAl() ?? "/profil/"); }, [oturum, router]);
 
   const geri = typeof window !== "undefined" ? adres("/giris/") : undefined;
   async function gonder(e: React.FormEvent) {
@@ -37,6 +44,7 @@ export default function Giris() {
         if (error) return setHata(hataMetni(error));
         // Aynı e-postayla doğrulanmış hesap varsa Supabase hata vermez ama kimlik listesi boş gelir.
         if (data.user && !data.user.identities?.length) return setHata(hataMetni({ code: "user_already_exists" }));
+        olay("kayit_gonder");
         if (!data.session) setBilgi(`${eposta.trim()} adresine bir doğrulama bağlantısı gönderdik. Bağlantıya dokununca hesabın açılır ve ilerlemen hesabına taşınır.`);
       } else if (mod === "giris") {
         const { error } = await a.signInWithPassword({ email: eposta.trim(), password: sifre });
@@ -62,6 +70,12 @@ export default function Giris() {
       <GeriTop to="/profil/" label="Profil'e dön" />
       <Govde>
         <PageHead title={baslik} text={metin} />
+        {google && mod !== "unuttum" && (
+          <div className="grid gap-3">
+            <GoogleDugme disabled={bekle} onClick={() => { setHata(""); googleIleGir().catch((e) => setHata(hataMetni(e))); }} />
+            <p className="flex items-center gap-3 text-[13px] text-muted-foreground before:h-px before:flex-1 before:bg-border after:h-px after:flex-1 after:bg-border">ya da e-postayla</p>
+          </div>
+        )}
         <form onSubmit={gonder} className="grid gap-3" noValidate>
           {mod === "kayit" && (
             <label className="grid gap-1.5">

@@ -33,6 +33,7 @@ import { Alt } from "./Soru";
 import { dogruMu, geriBaslik, geriMetin, hazir, ilkCevap, TestGovde, yonerge, type Cevap } from "./TestSoru";
 import AsamaYolu, { type YolDugum } from "./AsamaYolu";
 import { Konfeti, Madalya, PuanRozet } from "./Kutlama";
+import KayitDavet from "./KayitDavet";
 
 /** Akıştaki öğe: konu kartı ya da etkileşimli adım. */
 type Oge = { tur: "kart"; k: number } | { tur: "adim"; a: Adim; n: number };
@@ -277,6 +278,7 @@ export default function Lesson({
           {sonAsama ? "Bütün kartları gördün. Şimdi öğrendiklerini mini testte dene." : s.a + 2 === nAsama ? "Sırada son aşama var." : `Sırada ${s.a + 2}. aşama var.`}
         </p>
         {s.odul > 0 && <PuanRozet puan={s.odul} />}
+        <KayitDavet donus={href(ders, id)} />
       </article>
     );
     controls = (

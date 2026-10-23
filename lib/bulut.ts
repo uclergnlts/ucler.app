@@ -3,10 +3,13 @@
 // verisi ayrıca "ilerleme" tablosundaki tek satırına yazılır. Buluttaki veriyle cihazdaki veri birleştirilir
 // (kurallar lib/esitle.ts), böylece öğrenci telefon değiştirse de, hesabı açmadan önce çalıştıklarını da kaybetmez.
 // Adres ve anahtar herkese açık (publishable) değerlerdir; tabloyu satır düzeyi güvenlik (RLS) korur.
-import { useSyncExternalStore } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
+import { Capacitor } from "@capacitor/core";
 import { createClient, type Session, type SupabaseClient } from "@supabase/supabase-js";
 import { ayni, birlestir3, ESIT, type Veri } from "./esitle";
 import type { Puan } from "./puan";
+import { olay } from "./olay";
+import { adres } from "./site";
 import { KEYS, read, subscribe, write } from "./store";
 
 const URL = "https://ergxksjvcykgmckpsrlw.supabase.co";
@@ -186,6 +189,18 @@ function durdur() {
 /** Cihaz hesaptan ayrılınca temel de silinir; sonraki girişte veri yeniden birleştirilir, silme sayılmaz. */
 const temelSil = () => { uygulaniyor = true; try { write(TEMEL, null); } finally { uygulaniyor = false; } };
 
+/** Hesap az önce açıldıysa kayıt olayını bir kez sayar (lib/olay.ts). Google'da hesap girişle açılır;
+ *  e-postada hesap, doğrulama bağlantısına dokunulunca (ilk girişte) açılmış sayılır. */
+function yeniHesapSay(s: Session) {
+  const acilis = Date.parse(s.user.email_confirmed_at ?? s.user.created_at ?? "");
+  if (!(Date.now() - acilis < 10 * 60_000)) return;
+  try {
+    if (localStorage.getItem("tf-kayit-sayildi") === s.user.id) return;
+    localStorage.setItem("tf-kayit-sayildi", s.user.id);
+  } catch {}
+  olay("kayit_tamam", { yol: s.user.app_metadata?.provider === "google" ? "google" : "eposta" });
+}
+
 let kuruldu = false;
 /** Uygulama açılınca bir kez çağrılır (components/Bulut.tsx). */
 export function bulutKur() {
@@ -197,11 +212,12 @@ export function bulutKur() {
     yay();
     if (data.session) baslat(data.session.user.id, data.session.user.user_metadata?.ad);
   });
-  c.auth.onAuthStateChange((olay, s) => {
+  c.auth.onAuthStateChange((tur, s) => {
     oturum = s;
     yay();
-    if (s && (olay === "SIGNED_IN" || olay === "INITIAL_SESSION")) baslat(s.user.id, s.user.user_metadata?.ad);
-    if (olay === "SIGNED_OUT") { durdur(); temelSil(); }
+    if (s && (tur === "SIGNED_IN" || tur === "INITIAL_SESSION")) baslat(s.user.id, s.user.user_metadata?.ad);
+    if (s && tur === "SIGNED_IN") yeniHesapSay(s);
+    if (tur === "SIGNED_OUT") { durdur(); temelSil(); }
   });
   // Sekme kapanırken bekleyen yazışı hemen gönder; bağlantı dönünce başarısız eşitlemeyi hemen yeniden dene.
   document.addEventListener("visibilitychange", () => {
@@ -261,4 +277,46 @@ export function hataMetni(e: { message?: string; code?: string } | null | undefi
   if (m.includes("invalid") && m.includes("email")) return "Bu e-posta adresi geçerli görünmüyor.";
   if (m.includes("fetch") || m.includes("network")) return "İnternet bağlantısı yok gibi görünüyor.";
   return "Bir sorun oldu. Biraz sonra yeniden dene.";
+}
+
+// ---- Google ile giriş ----
+// Düğme yalnızca Supabase panelinde Google girişi açıksa görünür (ayar Auth'un herkese açık ayarlarından okunur).
+// Telefon uygulamasında şimdilik yok: Google'dan dönüş uygulamaya derin bağlantı ister.
+let googleSoz: Promise<boolean> | null = null;
+function googleAcik(): Promise<boolean> {
+  if (Capacitor.isNativePlatform()) return Promise.resolve(false);
+  return (googleSoz ??= fetch(`${URL}/auth/v1/settings`, { headers: { apikey: ANAHTAR } })
+    .then((r) => (r.ok ? r.json() : null))
+    .then((j) => !!j?.external?.google)
+    .catch(() => { googleSoz = null; return false; }));
+}
+export function useGoogle() {
+  const [acik, setAcik] = useState(false);
+  useEffect(() => {
+    let canli = true;
+    void googleAcik().then((v) => { if (canli) setAcik(v); });
+    return () => { canli = false; };
+  }, []);
+  return acik;
+}
+
+// Girişten sonra dönülecek sayfa (ör. kayıt davetinin açıldığı konu). Eşitlenmez, yalnızca bu cihazda durur.
+const DONUS = "tf-donus";
+export function donusYaz(yol: string) { try { localStorage.setItem(DONUS, yol); } catch {} }
+/** Kayıtlı dönüş sayfasını verir ve siler. Yalnızca site içi adres kabul edilir. */
+export function donusAl(): string | null {
+  try {
+    const y = localStorage.getItem(DONUS);
+    localStorage.removeItem(DONUS);
+    return y && y.startsWith("/") && !y.startsWith("//") ? y : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Google'a gönderir; Google /giris/ sayfasına geri getirir, oturum orada açılır ve öğrenci dönüş sayfasına geçer. */
+export async function googleIleGir(donus?: string) {
+  if (donus) donusYaz(donus);
+  const { error } = await sb().auth.signInWithOAuth({ provider: "google", options: { redirectTo: adres("/giris/") } });
+  if (error) throw error;
 }
