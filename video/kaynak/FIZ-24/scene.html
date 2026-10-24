@@ -1,0 +1,148 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#2f7cf6}
+.head .sub i{display:block;width:44px;height:6px;background:#2f7cf6;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#2f7cf6;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#2f7cf6;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>FİZİK</div><div class="brand">ucler<b>.</b></div></div>
+
+<div class="scene" data-s="-1" data-e="2.29">
+ <div class="title">Fren yapan otobüs<br><em>seni itmiyor</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><rect x="80" y="470" width="920" height="360" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="4"/><text x="130" y="545" text-anchor="start" font-family="Manrope" font-size="42" font-weight="800" fill="#5f6f88">Sen:</text><text x="130" y="605" text-anchor="start" font-size="40" font-weight="700" fill="#5f6f88">"otobüs beni öne attı"</text><g transform="translate(760 800) rotate(22) scale(0.75)"><path d="M-22 0 L0 -90 L22 0" fill="none" stroke="#5f6f88" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -90 V-190" stroke="#5f6f88" stroke-width="14" stroke-linecap="round"/><path d="M0 -170 L35 -120" stroke="#5f6f88" stroke-width="11" stroke-linecap="round"/><circle cx="0" cy="-225" r="32" fill="#fff" stroke="#5f6f88" stroke-width="10"/></g><path d="M820 640 H906" stroke="#d63c63" stroke-width="8" stroke-linecap="round"/><path d="M930 640 l-32 -18 v36 Z" fill="#d63c63"/><text x="925" y="600" text-anchor="middle" font-family="Manrope" font-size="56" font-weight="800" fill="#d63c63">?</text></g><g data-in="-1"><rect x="80" y="860" width="920" height="420" rx="18" fill="#fff" stroke="#2f7cf6" stroke-width="5"/><text x="130" y="935" text-anchor="start" font-family="Manrope" font-size="42" font-weight="800" fill="#2f7cf6">Fizik:</text><text x="130" y="995" text-anchor="start" font-family="Manrope" font-size="40" font-weight="800" fill="#1d3557">"sen sadece durmadın"</text><g transform="translate(300 1230) rotate(0) scale(0.75)"><path d="M-22 0 L0 -90 L22 0" fill="none" stroke="#1d3557" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -90 V-190" stroke="#1d3557" stroke-width="14" stroke-linecap="round"/><path d="M0 -170 L35 -120" stroke="#1d3557" stroke-width="11" stroke-linecap="round"/><circle cx="0" cy="-225" r="32" fill="#fff" stroke="#1d3557" stroke-width="10"/></g><path d="M370 1090 H546" stroke="#2f7cf6" stroke-width="9" stroke-linecap="round"/><path d="M570 1090 l-32 -18 v36 Z" fill="#2f7cf6"/><text x="470.0" y="1068" text-anchor="middle" font-size="30" font-weight="800" fill="#2f7cf6">aynı hız</text><g transform="translate(800 1170) scale(0.32)"><rect x="-330" y="-150" width="660" height="260" rx="34" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="7"/><rect x="-290" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="-150" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="-10" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="130" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="250" y="-115" width="55" height="170" rx="10" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><circle cx="-200" cy="110" r="44" fill="#1d3557"/><circle cx="-200" cy="110" r="16" fill="#fff"/><circle cx="200" cy="110" r="44" fill="#1d3557"/><circle cx="200" cy="110" r="16" fill="#fff"/></g></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="2.29" data-e="14.46">
+ <div class="title">Otobüsle<br><em>aynı hızdasın</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="2.3"><path d="M60 1010 H1020" stroke="#c9d3e1" stroke-width="8" stroke-dasharray="40 26"/><g transform="translate(540 850) scale(1.0)"><rect x="-330" y="-150" width="660" height="260" rx="34" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="7"/><rect x="-290" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="-150" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="-10" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="130" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="250" y="-115" width="55" height="170" rx="10" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><circle cx="-200" cy="110" r="44" fill="#1d3557"/><circle cx="-200" cy="110" r="16" fill="#fff"/><circle cx="200" cy="110" r="44" fill="#1d3557"/><circle cx="200" cy="110" r="16" fill="#fff"/></g><g transform="translate(470 950) rotate(0) scale(0.7)"><path d="M-22 0 L0 -90 L22 0" fill="none" stroke="#1d3557" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -90 V-190" stroke="#1d3557" stroke-width="14" stroke-linecap="round"/><path d="M0 -170 L35 -120" stroke="#1d3557" stroke-width="11" stroke-linecap="round"/><circle cx="0" cy="-225" r="32" fill="#fff" stroke="#1d3557" stroke-width="10"/></g></g><g data-in="2.6" data-out="6.2"><path d="M240 560 H436" stroke="#2f7cf6" stroke-width="10" stroke-linecap="round"/><path d="M460 560 l-32 -18 v36 Z" fill="#2f7cf6"/><text x="350.0" y="538" text-anchor="middle" font-size="30" font-weight="800" fill="#2f7cf6">otobüs</text></g><g data-in="3.6" data-out="6.2"><path d="M600 560 H796" stroke="#1d3557" stroke-width="10" stroke-linecap="round"/><path d="M820 560 l-32 -18 v36 Z" fill="#1d3557"/><text x="710.0" y="538" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">sen</text></g><g data-in="6.2"><path d="M220 560 H316" stroke="#2f7cf6" stroke-width="10" stroke-linecap="round"/><path d="M340 560 l-32 -18 v36 Z" fill="#2f7cf6"/><text x="280.0" y="538" text-anchor="middle" font-size="30" font-weight="800" fill="#2f7cf6">otobüs</text><path d="M720 660 H564" stroke="#d63c63" stroke-width="10" stroke-linecap="round"/><path d="M540 660 l32 -18 v36 Z" fill="#d63c63"/><text x="630.0" y="638" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">fren kuvveti</text><path d="M600 560 H796" stroke="#1d3557" stroke-width="10" stroke-linecap="round"/><path d="M820 560 l-32 -18 v36 Z" fill="#1d3557"/><text x="710.0" y="538" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">sen</text></g><g data-in="11.0"><rect x="100" y="1120" width="880" height="120" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><circle cx="170" cy="1180" r="26" fill="#d63c63"/><path d="M160 1170 l20 20 M180 1170 l-20 20" stroke="#fff" stroke-width="6" stroke-linecap="round"/><text x="220" y="1192" text-anchor="start" font-size="36" font-weight="800" fill="#1d3557">seni öne iten bir kuvvet yok</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="14.46" data-e="21.23">
+ <div class="title">Sen devam<br><em>edersin</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="14.5"><path d="M60 1010 H1020" stroke="#c9d3e1" stroke-width="8" stroke-dasharray="40 26"/><g transform="translate(480 850) scale(1.0)"><rect x="-330" y="-150" width="660" height="260" rx="34" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="7"/><rect x="-290" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="-150" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="-10" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="130" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="250" y="-115" width="55" height="170" rx="10" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><circle cx="-200" cy="110" r="44" fill="#1d3557"/><circle cx="-200" cy="110" r="16" fill="#fff"/><circle cx="200" cy="110" r="44" fill="#1d3557"/><circle cx="200" cy="110" r="16" fill="#fff"/></g><g transform="translate(600 950) rotate(18) scale(0.7)"><path d="M-22 0 L0 -90 L22 0" fill="none" stroke="#1d3557" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -90 V-190" stroke="#1d3557" stroke-width="14" stroke-linecap="round"/><path d="M0 -170 L35 -120" stroke="#1d3557" stroke-width="11" stroke-linecap="round"/><circle cx="0" cy="-225" r="32" fill="#fff" stroke="#1d3557" stroke-width="10"/></g><path d="M660 560 H856" stroke="#1d3557" stroke-width="10" stroke-linecap="round"/><path d="M880 560 l-32 -18 v36 Z" fill="#1d3557"/><text x="770.0" y="538" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">sen: aynı hız</text><path d="M150 560 H226" stroke="#2f7cf6" stroke-width="10" stroke-linecap="round"/><path d="M250 560 l-32 -18 v36 Z" fill="#2f7cf6"/><text x="200.0" y="538" text-anchor="middle" font-size="30" font-weight="800" fill="#2f7cf6">otobüs</text></g><g data-in="17.5"><rect x="100" y="1290" width="880" height="90" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1348" text-anchor="middle" font-size="36" font-weight="800" fill="#2f7cf6">otobüs altından yavaşlar</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="21.23" data-e="34.24">
+ <div class="title">Eylemsizlik:<br><em>Newton&#39;un 1. yasası</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="21.3" data-out="25.4"><circle cx="540" cy="700" r="70" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="6"/><text x="540" y="880" text-anchor="middle" font-family="Manrope" font-size="72" font-weight="800" fill="#2f7cf6">eylemsizlik</text><text x="540" y="950" text-anchor="middle" font-size="34" font-weight="700" fill="#5f6f88">hızını koruma eğilimi</text></g><g data-in="21.3" data-out="33.9"><rect x="250" y="1190" width="580" height="76" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1240" text-anchor="middle" font-size="30" font-weight="800" fill="#2f7cf6">Konunun tamamı: ucler.app</text></g><g data-in="25.5"><rect x="80" y="500" width="920" height="130" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="585" text-anchor="middle" font-family="Manrope" font-size="52" font-weight="800" fill="#2f7cf6">F<tspan font-size="30" dy="10">net</tspan><tspan dy="-10"> = 0 ise</tspan></text></g><g data-in="28.3"><rect x="80" y="670" width="920" height="230" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><circle cx="220" cy="785" r="40" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="6"/><text x="330" y="770" text-anchor="start" font-size="38" font-weight="800" fill="#1d3557">duran cisim</text><text x="330" y="825" text-anchor="start" font-size="38" font-weight="800" fill="#5f6f88">durur</text></g><g data-in="29.6"><rect x="80" y="930" width="920" height="230" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><circle cx="220" cy="1045" r="40" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="6"/><path d="M280 1045 H376" stroke="#2f7cf6" stroke-width="10" stroke-linecap="round"/><path d="M400 1045 l-32 -18 v36 Z" fill="#2f7cf6"/><text x="450" y="1030" text-anchor="start" font-size="38" font-weight="800" fill="#1d3557">hareket eden cisim</text><text x="450" y="1085" text-anchor="start" font-size="38" font-weight="800" fill="#5f6f88">aynı hızla düz gider</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="34.24" data-e="46.08">
+ <div class="title">Ayakların durur,<br><em>gövden gider</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="34.3"><path d="M180 1020 H900" stroke="#1d3557" stroke-width="8"/></g><g data-in="34.3" data-out="37.9"><g transform="translate(540 1020) rotate(0) scale(1.4)"><path d="M-22 0 L0 -90 L22 0" fill="none" stroke="#1d3557" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -90 V-190" stroke="#1d3557" stroke-width="14" stroke-linecap="round"/><path d="M0 -170 L35 -120" stroke="#1d3557" stroke-width="11" stroke-linecap="round"/><circle cx="0" cy="-225" r="32" fill="#fff" stroke="#1d3557" stroke-width="10"/></g></g><g data-in="34.6"><path d="M470 1060 H344" stroke="#d63c63" stroke-width="9" stroke-linecap="round"/><path d="M320 1060 l32 -18 v36 Z" fill="#d63c63"/><text x="400" y="1120" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">sürtünme ayakları yavaşlatır</text></g><g data-in="37.9" data-out="41.6"><g transform="translate(540 1020) rotate(24) scale(1.4)"><path d="M-22 0 L0 -90 L22 0" fill="none" stroke="#1d3557" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -90 V-190" stroke="#1d3557" stroke-width="14" stroke-linecap="round"/><path d="M0 -170 L35 -120" stroke="#1d3557" stroke-width="11" stroke-linecap="round"/><circle cx="0" cy="-225" r="32" fill="#fff" stroke="#1d3557" stroke-width="10"/></g></g><g data-in="37.9" data-out="41.6"><path d="M720 640 H866" stroke="#1d3557" stroke-width="10" stroke-linecap="round"/><path d="M890 640 l-32 -18 v36 Z" fill="#1d3557"/><text x="805.0" y="618" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">gövde devam eder</text></g><g data-in="41.6"><g transform="translate(540 1020) rotate(10) scale(1.4)"><path d="M-22 0 L0 -90 L22 0" fill="none" stroke="#1d3557" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -90 V-190" stroke="#1d3557" stroke-width="14" stroke-linecap="round"/><path d="M0 -170 L35 -120" stroke="#1d3557" stroke-width="11" stroke-linecap="round"/><circle cx="0" cy="-225" r="32" fill="#fff" stroke="#1d3557" stroke-width="10"/><path d="M-30 -175 L30 -110" stroke="#f08a24" stroke-width="12" stroke-linecap="round"/></g><text x="800" y="820" text-anchor="middle" font-size="32" font-weight="800" fill="#f08a24">kemer / tutamak</text></g><g data-in="40.1"><rect x="100" y="1290" width="880" height="90" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1348" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">bu yüzden öne eğilirsin</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="46.08" data-e="53.61">
+ <div class="title">Ani kalkış:<br><em>geriye savrulursun</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="46.1"><path d="M60 1010 H1020" stroke="#c9d3e1" stroke-width="8" stroke-dasharray="40 26"/><g transform="translate(560 850) scale(1.0)"><rect x="-330" y="-150" width="660" height="260" rx="34" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="7"/><rect x="-290" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="-150" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="-10" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="130" y="-115" width="110" height="90" rx="12" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><rect x="250" y="-115" width="55" height="170" rx="10" fill="#fff" stroke="#2f7cf6" stroke-width="4"/><circle cx="-200" cy="110" r="44" fill="#1d3557"/><circle cx="-200" cy="110" r="16" fill="#fff"/><circle cx="200" cy="110" r="44" fill="#1d3557"/><circle cx="200" cy="110" r="16" fill="#fff"/></g><g transform="translate(560 950) rotate(-18) scale(0.7)"><path d="M-22 0 L0 -90 L22 0" fill="none" stroke="#1d3557" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -90 V-190" stroke="#1d3557" stroke-width="14" stroke-linecap="round"/><path d="M0 -170 L35 -120" stroke="#1d3557" stroke-width="11" stroke-linecap="round"/><circle cx="0" cy="-225" r="32" fill="#fff" stroke="#1d3557" stroke-width="10"/></g><path d="M560 560 H766" stroke="#2f7cf6" stroke-width="10" stroke-linecap="round"/><path d="M790 560 l-32 -18 v36 Z" fill="#2f7cf6"/><text x="675.0" y="538" text-anchor="middle" font-size="30" font-weight="800" fill="#2f7cf6">otobüs hızlanır</text></g><g data-in="51.3"><rect x="100" y="1290" width="880" height="90" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1348" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">beden olduğu yerde kalmak ister</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="53.61" data-e="59.6">
+ <div class="q"><small>DÜŞÜN</small>Otobüs sola keskin viraj alırken neden <em>sağa itildiğini</em> hissedersin?</div>
+</div>
+
+<div class="scene" data-s="59.4" data-e="99">
+ <div class="title">Kısaca<br><em>hatırla</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><rect x="80" y="500" width="920" height="740" rx="18" fill="#fff" stroke="#2f7cf6" stroke-width="5"/><text x="140" y="590" text-anchor="start" font-size="32" font-weight="800" fill="#2f7cf6">ÖZET</text><circle cx="160" cy="680" r="14" fill="#2f7cf6"/><text x="200" y="694" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">Net kuvvet sıfırsa</text><text x="200" y="744" text-anchor="start" font-size="40" font-weight="800" fill="#2f7cf6">hız değişmez</text><circle cx="160" cy="840" r="14" fill="#2f7cf6"/><text x="200" y="854" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">Frende otobüs yavaşlar,</text><text x="200" y="904" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">sen devam edersin</text><circle cx="160" cy="1000" r="14" fill="#2f7cf6"/><text x="200" y="1014" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">Seni durduran: kemer,</text><text x="200" y="1064" text-anchor="start" font-size="40" font-weight="800" fill="#2f7cf6">tutamak, sürtünme</text><path d="M140 1110 H940" stroke="#dbe3ee" stroke-width="3"/><path d="M160 1140 h40 v70 l-20 -16 l-20 16 Z" fill="#2f7cf6"/><text x="230" y="1190" text-anchor="start" font-family="Manrope" font-size="42" font-weight="800" fill="#2f7cf6">Kaydet, sınavdan önce bak</text></g>
+ </svg>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;                 // ses hızlandırılmadı
+const DUR = 61.6;           // ses süresi
+const PH = [
+ [0.00,1.98,"Fren yapan otobüs seni itmiyor."],
+ [2.29,5.93,"Otobüs hızla giderken sen de onunla aynı hızla gidiyorsun."],
+ [6.18,10.75,"Şoför frene basınca fren kuvveti otobüse etki eder ve otobüs yavaşlar."],
+ [11.04,14.15,"Ama senin bedenini öne doğru iten bir kuvvet yoktur."],
+ [14.46,17.50,"Sen sadece aynı hızla gitmeye devam edersin."],
+ [17.50,21.02,"Otobüs altından yavaşladığı için öne savrulduğunu sanırsın."],
+ [21.23,22.79,"Buna eylemsizlik denir."],
+ [23.10,25.12,"Newton'un birinci yasası şöyle der:"],
+ [25.47,28.30,"Bir cisme etki eden net kuvvet sıfırsa,"],
+ [28.30,29.60,"duran cisim durur,"],
+ [29.60,33.87,"hareket eden cisim ise aynı hızla düz bir çizgide gitmeye devam eder."],
+ [34.24,37.68,"Ayakların zemine sürtündüğü için otobüsle birlikte yavaşlar,"],
+ [37.94,39.79,"ama gövden gitmeye devam eder."],
+ [40.07,41.44,"Bu yüzden öne eğilirsin."],
+ [41.66,45.80,"Seni tamamen durduran, tuttuğun tutamak ya da emniyet kemeridir."],
+ [46.08,49.70,"Otobüs aniden kalktığında ise bu kez geriye savrulursun."],
+ [49.70,51.07,"Sebep yine aynıdır:"],
+ [51.31,53.27,"bedenin olduğu yerde kalmak ister."],
+ [53.61,59.32,"Peki sence, otobüs sola keskin bir viraj alırken neden sağa doğru itildiğini hissedersin?"]
+];
+
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  cap.style.opacity = t > 59.3 ? 0 : 1;
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
