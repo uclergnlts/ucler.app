@@ -1,6 +1,7 @@
 // Hoş geldin e-postası. pg_cron 10 dakikada bir çağırır: e-postası onaylanmış (Google ile girenler dahil) ve henüz
 // karşılanmamış yeni hesaplara bir kez teşekkür + ucler'in ne olduğu + sıradaki özellikler e-postası gider.
-// Gönderilenler public.hos_geldin tablosuna yazılır; aynı kişiye ikinci kez gitmez. Tek seferlik olduğu için kapatma bağlantısı yok.
+// Gönderilenler public.hos_geldin tablosuna yazılır; aynı kişiye ikinci kez gitmez. Altındaki "tüm e-postalardan çık" bağlantısı
+// ve List-Unsubscribe başlığı seri-hatirlat fonksiyonuna gider (seri hatırlatması + yeni içerik e-postalarını kapatır).
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
 
@@ -8,7 +9,15 @@ const URL_ = Deno.env.get("SUPABASE_URL")!;
 const SERVIS = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const SITE = "https://ucler.app";
 const INSTAGRAM = "https://www.instagram.com/ucler.app/";
+const CIK = `${URL_}/functions/v1/seri-hatirlat`;
 const json = (b: unknown, status = 200) => new Response(JSON.stringify(b), { status, headers: { "Content-Type": "application/json" } });
+
+/** "Tüm e-postalardan çık" imzası: "hepsi:" + kimliğin servis anahtarıyla HMAC'i (seri-hatirlat doğrular). */
+async function imza(id: string) {
+  const k = await crypto.subtle.importKey("raw", new TextEncoder().encode(SERVIS), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const s = new Uint8Array(await crypto.subtle.sign("HMAC", k, new TextEncoder().encode(`hepsi:${id}`)));
+  return Array.from(s, (b) => b.toString(16).padStart(2, "0")).join("").slice(0, 32);
+}
 
 const kacis = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
 
@@ -24,7 +33,7 @@ const SIRADA = [
   "Her hafta yeni konular ve videolar",
 ];
 
-function eposta(ad: string, konu: number, ders: string[]) {
+function eposta(ad: string, konu: number, ders: string[], cik: string) {
   const selam = ad ? `Merhaba ${kacis(ad)},` : "Merhaba,";
   const bugun = konu && ders.length ? `Şu an ${ders.join(", ").replace(/, ([^,]*)$/, " ve $1")} derslerinde ${konu} konu seni bekliyor.` : "";
   const madde = (b: string, a: string) => `<tr><td style="padding:12px 0;border-top:1px solid #e3e8ef;">
@@ -53,7 +62,7 @@ ${h2("Sırada ne var?")}
 </td></tr></table>
 <p style="margin:24px 0 0;font-size:15px;line-height:1.6;color:#475569;">Bir önerin ya da takıldığın bir yer olursa Instagram'da <a href="${INSTAGRAM}" style="color:#1d3557;font-weight:700;">@ucler.app</a> hesabına yazabilirsin. Her mesajı okuyoruz.</p>
 </td></tr>
-<tr><td style="padding:20px 4px 0;font-family:Inter,'Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.6;color:#94a3b8;">Bu e-postayı ucler.app'te hesap açtığın için bir kez gönderdik.</td></tr>
+<tr><td style="padding:20px 4px 0;font-family:Inter,'Segoe UI',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#64748b;">Bu e-postayı ucler.app'te hesap açtığın için bir kez gönderdik. Bizden hiç e-posta almak istemiyorsan <a href="${cik}" style="color:#475569;font-weight:700;">tüm e-postalardan çık</a>.</td></tr>
 </table></td></tr></table>
 </body></html>`;
   const text = `${ad ? `Merhaba ${ad},` : "Merhaba,"} ucler'e katıldığın için teşekkür ederiz.
@@ -72,7 +81,8 @@ Yeni bir ders ya da video eklendiğinde sana kısa bir e-postayla haber vereceğ
 
 Bir önerin ya da takıldığın bir yer olursa Instagram'da @ucler.app hesabına yazabilirsin: ${INSTAGRAM}
 
-Bu e-postayı ucler.app'te hesap açtığın için bir kez gönderdik.`;
+Bu e-postayı ucler.app'te hesap açtığın için bir kez gönderdik.
+Tüm e-postalardan çık: ${cik}`;
   return { html, text };
 }
 
@@ -110,8 +120,12 @@ async function gonder(deneme?: string) {
     const { data: k } = await db.auth.admin.getUserById(id);
     const e = k?.user?.email;
     if (!e || !k.user.email_confirmed_at) continue;
-    const { html, text } = eposta(adBul(k.user.user_metadata, profiller?.find((p) => p.user_id === id)?.ad), konu, ders);
-    postalar.push({ kisi: id, posta: { from: "ucler <noreply@ucler.app>", to: [e], subject: "ucler'e hoş geldin", html, text } });
+    const t = await imza(id);
+    const { html, text } = eposta(adBul(k.user.user_metadata, profiller?.find((p) => p.user_id === id)?.ad), konu, ders, `${SITE}/hatirlatma/?tur=hepsi&u=${id}&t=${t}`);
+    postalar.push({ kisi: id, posta: {
+      from: "ucler <noreply@ucler.app>", to: [e], subject: "ucler'e hoş geldin", html, text,
+      headers: { "List-Unsubscribe": `<${CIK}?hepsi=1&u=${id}&t=${t}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" },
+    } });
   }
   let giden = 0;
   const hatalar: string[] = [];

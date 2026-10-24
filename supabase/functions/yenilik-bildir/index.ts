@@ -20,10 +20,10 @@ const json = (b: unknown, status = 200) => new Response(JSON.stringify(b), { sta
 type Oge = { id: string; tur: "ders" | "konu" | "video"; ad: string; ders?: string; yol: string };
 const TUR: Record<Oge["tur"], string> = { ders: "Yeni ders", konu: "Yeni konu", video: "Yeni video" };
 
-/** Kapatma bağlantısının imzası: "yenilik:" + kullanıcı kimliğinin servis anahtarıyla HMAC'i (ilk 32 karakter). */
-async function imza(id: string) {
+/** Kapatma bağlantısının imzası: "yenilik:" ("tüm e-postalardan çık" için "hepsi:", seri-hatirlat doğrular) + kullanıcı kimliğinin servis anahtarıyla HMAC'i (ilk 32 karakter). */
+async function imza(id: string, on = "yenilik") {
   const k = await crypto.subtle.importKey("raw", new TextEncoder().encode(SERVIS), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
-  const s = new Uint8Array(await crypto.subtle.sign("HMAC", k, new TextEncoder().encode(`yenilik:${id}`)));
+  const s = new Uint8Array(await crypto.subtle.sign("HMAC", k, new TextEncoder().encode(`${on}:${id}`)));
   return Array.from(s, (b) => b.toString(16).padStart(2, "0")).join("").slice(0, 32);
 }
 
@@ -34,7 +34,7 @@ function konuBasligi(yeni: Oge[]) {
   return `ucler'de ${yeni.length} yenilik var`;
 }
 
-function eposta(ad: string, yeni: Oge[], kapat: string) {
+function eposta(ad: string, yeni: Oge[], kapat: string, hepsi: string) {
   const selam = ad ? `Merhaba ${kacis(ad)}, ` : "Merhaba, ";
   const goster = yeni.slice(0, 8), kalan = yeni.length - goster.length;
   const satirlar = goster.map((o) => `<tr><td style="padding:14px 0;border-top:1px solid #e3e8ef;">
@@ -57,10 +57,10 @@ ${kalan > 0 ? `<p style="margin:8px 0 0;font-size:14px;color:#64748b;">ve ${kala
 <a href="${SITE}${goster[0].yol}" style="display:inline-block;padding:14px 26px;font-family:Inter,'Segoe UI',Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:12px;">Göz at</a>
 </td></tr></table>
 </td></tr>
-<tr><td style="padding:20px 4px 0;font-family:Inter,'Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.6;color:#94a3b8;">Bu e-postayı ucler.app hesabındaki yeni içerik bildirimi için gönderdik. İstemiyorsan <a href="${kapat}" style="color:#94a3b8;">bu bildirimleri kapat</a>.</td></tr>
+<tr><td style="padding:20px 4px 0;font-family:Inter,'Segoe UI',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#64748b;">Bu e-postayı ucler.app hesabındaki yeni içerik bildirimi için gönderdik. İstemiyorsan <a href="${kapat}" style="color:#475569;font-weight:700;">bu bildirimleri kapat</a> ya da <a href="${hepsi}" style="color:#475569;font-weight:700;">tüm e-postalardan çık</a>.</td></tr>
 </table></td></tr></table>
 </body></html>`;
-  const text = `${selam}ucler'de yeni içerik var:\n\n${goster.map((o) => `${TUR[o.tur]}: ${o.ad}\n${SITE}${o.yol}`).join("\n\n")}${kalan > 0 ? `\n\nve ${kalan} yenilik daha.` : ""}\n\nBu bildirimleri kapat: ${kapat}`;
+  const text = `${selam}ucler'de yeni içerik var:\n\n${goster.map((o) => `${TUR[o.tur]}: ${o.ad}\n${SITE}${o.yol}`).join("\n\n")}${kalan > 0 ? `\n\nve ${kalan} yenilik daha.` : ""}\n\nBu bildirimleri kapat: ${kapat}\nTüm e-postalardan çık: ${hepsi}`;
   return { html, text };
 }
 
@@ -114,7 +114,8 @@ async function gonder(deneme?: { kullanici: string; ogeler?: string[] }) {
     const e = k?.user?.email;
     if (!e || !k.user.email_confirmed_at) continue;
     const t = await imza(r.user_id);
-    const { html, text } = eposta(r.ad || (k.user.user_metadata?.ad ?? ""), ona, `${SITE}/hatirlatma/?tur=yenilik&u=${r.user_id}&t=${t}`);
+    const { html, text } = eposta(r.ad || (k.user.user_metadata?.ad ?? ""), ona, `${SITE}/hatirlatma/?tur=yenilik&u=${r.user_id}&t=${t}`,
+      `${SITE}/hatirlatma/?tur=hepsi&u=${r.user_id}&t=${await imza(r.user_id, "hepsi")}`);
     postalar.push({
       kisi: r.user_id,
       ogeler: ona.map((o) => o.id),
