@@ -5,6 +5,7 @@ import { bildirimOku, bildirimYaz, cikisYap, hesabiSil, useEsitleme, useOturum, 
 import { girisYap } from "@/lib/puan";
 import { resetAll, setAd } from "@/lib/store";
 import { ses, sesAyarla, useSesAcik } from "@/lib/ses";
+import { oyunAyarla, useOyunAcik } from "@/lib/oyun";
 import { Icon } from "../icons";
 import { Bolum, INSTAGRAM, Liste, Ok, Satir, UstEylem } from "../temel";
 import { Button } from "../ui/button";
@@ -60,7 +61,10 @@ export default function Ayarlar() {
         )}
       </Bolum>
       <Bolum title="Ders">
-        <SesAnahtari />
+        <div className="grid gap-2">
+          <SesAnahtari />
+          <OyunAnahtari />
+        </div>
       </Bolum>
       <Bolum title="ucler">
         <Liste>
@@ -156,6 +160,27 @@ function SesAnahtari() {
       <span>
         <b className="block font-semibold leading-snug">Ses ve titreşim</b>
         <span className="block text-[13px] text-muted-foreground">Doğru ve yanlış cevapta kısa bir ses</span>
+      </span>
+      <i aria-hidden="true" className={`relative h-7 w-[46px] flex-none rounded-full transition-colors ${acik ? "bg-acc" : "bg-secondary"}`}>
+        <i className={`absolute top-[3px] left-[3px] size-[22px] rounded-full bg-white shadow transition-transform ${acik ? "translate-x-[18px]" : ""}`} />
+      </i>
+    </button>
+  );
+}
+
+/** Puan, seri, lig ve konfeti: isteyen kapatır, yalnızca konular ve testler kalır. */
+function OyunAnahtari() {
+  const acik = useOyunAcik();
+  return (
+    <button
+      role="switch"
+      aria-checked={acik}
+      className="flex w-full items-center justify-between gap-3 rounded-2xl border border-border bg-card px-4 py-3 text-left"
+      onClick={() => oyunAyarla(!acik)}
+    >
+      <span>
+        <b className="block font-semibold leading-snug">Puan, seri ve kutlamalar</b>
+        <span className="block text-[13px] text-muted-foreground">Kapatırsan puan, seri, lig ve konfeti görünmez</span>
       </span>
       <i aria-hidden="true" className={`relative h-7 w-[46px] flex-none rounded-full transition-colors ${acik ? "bg-acc" : "bg-secondary"}`}>
         <i className={`absolute top-[3px] left-[3px] size-[22px] rounded-full bg-white shadow transition-transform ${acik ? "translate-x-[18px]" : ""}`} />

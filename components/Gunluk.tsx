@@ -5,12 +5,14 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { girisYap, odulDinle, type Odul } from "@/lib/puan";
+import { useOyunAcik } from "@/lib/oyun";
 
 export default function Gunluk() {
   const [liste, setListe] = useState<Odul[]>([]);
   // Ders ve tekrar ekranında öğrenci dikkatini dağıtmasın: puan oradaki bitiş ekranında zaten görünür.
   const yol = usePathname() ?? "";
-  const sessiz = /^\/(fizik|kimya|biyoloji)\/[^/]+\/?$/.test(yol) || yol.startsWith("/tekrar") || yol.startsWith("/unite");
+  const oyun = useOyunAcik();
+  const sessiz = !oyun || /^\/(fizik|kimya|biyoloji)\/[^/]+\/?$/.test(yol) || yol.startsWith("/tekrar") || yol.startsWith("/unite");
 
   useEffect(() => {
     const kapat = odulDinle((o) => {

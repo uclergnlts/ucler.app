@@ -3,6 +3,7 @@
 // Alt ekranlar components/profil/ altında: İstatistikler, Kaydedilenler, Anlamadıklarım, Ayarlar.
 import type { DersId, Entry } from "@/lib/dersler";
 import { seri } from "@/lib/puan";
+import { useOyunAcik } from "@/lib/oyun";
 import { gunAdi, setAd, useAd, useStorageOk, useTekrar } from "@/lib/store";
 import { useOturum } from "@/lib/bulut";
 import Link from "next/link";
@@ -14,6 +15,7 @@ import { useAnlamadiklarim, useKaydedilenler, useProfil } from "./profil/veri";
 
 export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[]>; basliklar: Record<string, string[]> }) {
   const { puan, done, yeni } = useProfil();
+  const oyun = useOyunAcik();
   const storageOk = useStorageOk(), ad = useAd(), oturum = useOturum();
   const kayitli = useKaydedilenler(all).length, anlamadim = useAnlamadiklarim(all, basliklar).length;
   const tekrar = useTekrar();
@@ -64,10 +66,10 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
         {yeni ? (
           <Bos>İlk konunu bitirdiğinde puanın, serin ve ilerlemen burada görünür.</Bos>
         ) : (
-          <Card className="grid grid-cols-3 gap-0 py-0 [&>div:not(:first-child)]:border-l [&>div]:border-border">
+          <Card className="grid auto-cols-fr grid-flow-col gap-0 py-0 [&>div:not(:first-child)]:border-l [&>div]:border-border">
             {([
               [puan.toplam ?? 0, "puan", "#e08a00"], [`${seri(puan)} gün`, "seri", seri(puan) ? "var(--c2)" : undefined], [done.length, "konu bitti", "var(--c3)"],
-            ] as const).map(([b, l, renk]) => (
+            ] as const).filter(([, l]) => oyun || l === "konu bitti").map(([b, l, renk]) => (
               <div key={l} className="px-2 py-3.5 text-center">
                 <b className="block font-display text-2xl leading-tight font-extrabold" style={{ color: renk }}>{b}</b>
                 <span className="text-xs font-semibold text-muted-foreground">{l}</span>
@@ -87,7 +89,7 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
           {done.length > 0 && (
             <Satir href="/tekrar/?karisik" renk="var(--c5)" icon={<Kitap />} title="Karışık test" sub="Bitirdiğin konulardan rastgele 10 soru" tag={<Ok />} />
           )}
-          <Satir href="/lig/" renk="#e08a00" icon={<Kupa />} title="Haftalık lig" sub="Bu haftaki puanınla sıralamadaki yerin" tag={<Ok />} />
+          {oyun && <Satir href="/lig/" renk="#e08a00" icon={<Kupa />} title="Haftalık lig" sub="Bu haftaki puanınla sıralamadaki yerin" tag={<Ok />} />}
           <Satir href="/profil/istatistikler/" renk="var(--c3)" icon={<Grafik />} title="İstatistikler" sub="Puan, seri, son 7 gün ve doğru oranı" tag={<Ok />} />
           <Satir href="/profil/kaydedilenler/" renk="#d63c63" icon={<Kayit />} title="Kaydedilenler" sub={kayitli ? `${kayitli} konu` : "Kaydettiğin konular burada durur"} tag={<Ok />} />
           <Satir href="/profil/anlamadiklarim/" renk="var(--c2)" icon={<Soru />} title="Anlamadıklarım" sub={anlamadim ? `${anlamadim} kart` : "Anlamadım diye işaretlediğin kartlar"} tag={<Ok />} />

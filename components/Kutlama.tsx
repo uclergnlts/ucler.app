@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { animate, motion, useReducedMotion } from "motion/react";
 import { Icon } from "./icons";
+import { useOyunAcik } from "@/lib/oyun";
 
 const RENK = ["var(--acc)", "var(--glow)", "var(--c1)", "var(--c3)", "var(--c5)", "var(--c2)"];
 
@@ -17,9 +18,9 @@ function parcalar(n: number) {
 }
 
 export function Konfeti() {
-  const az = useReducedMotion();
+  const az = useReducedMotion(), oyun = useOyunAcik();
   const p = useMemo(() => parcalar(42), []);
-  if (az) return null;
+  if (az || !oyun) return null;
   return (
     <div className="pointer-events-none fixed inset-0 z-20 overflow-hidden" aria-hidden="true">
       {p.map((q, k) => (
@@ -37,7 +38,8 @@ export function Konfeti() {
 }
 
 /** Ortadaki madalya: büyüyerek gelir, etrafında ışık halkası. */
-export function Madalya({ kupa }: { kupa?: boolean }) {
+export function Madalya({ kupa: kupaIste }: { kupa?: boolean }) {
+  const oyun = useOyunAcik(), kupa = kupaIste && oyun;
   const Check = Icon.check, Kupa = Icon.kupa;
   return (
     <div className="relative grid size-32 place-items-center">
@@ -70,11 +72,13 @@ export function Madalya({ kupa }: { kupa?: boolean }) {
 /** "+10 puan" gibi sayarak artan puan rozeti. */
 export function PuanRozet({ puan }: { puan: number }) {
   const [n, setN] = useState(0);
+  const oyun = useOyunAcik();
   useEffect(() => {
     const a = animate(0, puan, { duration: 0.8, delay: 0.5, ease: "easeOut", onUpdate: (v) => setN(Math.round(v)) });
     return () => a.stop();
   }, [puan]);
   const Yildiz = Icon.yildiz;
+  if (!oyun) return null;
   return (
     <motion.span
       className="inline-flex items-center gap-1.5 rounded-full bg-[var(--glow-soft)] px-4 py-2 text-[17px] font-extrabold tabular-nums text-[#7a5200] [&_svg]:size-5 [&_svg]:fill-[var(--glow)] [&_svg]:stroke-[var(--glow-deep)]"

@@ -43,6 +43,8 @@ Sıralama `content/dersler.json` dosyasındadır. Fizik 28, kimya 26, biyoloji 2
 - Yayın için **Vercel** düşünülüyor; `ucler.app` alan adı oraya bağlanacak. Her PR için önizleme adresi çıkar.
 - İleride hesap ve ilerleme için Supabase, ödeme için iyzico veya Stripe değerlendirilecek (karar değil).
 
+- **Puan ve seriyi gizleme (Üçler, 2026-10-24):** Ayarlar'da "Puan, seri ve kutlamalar" anahtarı var (varsayılan açık). Kapalıyken puan, seri, lig, konfeti, kupa ve ödül bildirimleri görünmez; puan arka planda sayılmaya devam eder.
+
 ## Şimdilik bekleyenler
 - Ücretli üyelik, kayıt ve giriş. Bunlar için sunucu, veritabanı ve ödeme altyapısı gerekiyor.
 - Konularla ilgili oyunlar ve konu anlatımında etkileşimli öğeler (2026-10-15). Bunlar ayrıca planlanacak; ayrıntı için `docs/YOL-HARITASI.md` dosyasına bak.

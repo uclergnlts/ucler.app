@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { aktif, gorevAdi, PUAN, seri, useGorev, usePuan, type GorevId } from "@/lib/puan";
 import { gun } from "@/lib/store";
+import { useOyunAcik } from "@/lib/oyun";
 import { cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { Icon } from "./icons";
@@ -29,7 +30,7 @@ const gorevYeri = (id: GorevId, konuHref: string) =>
   id === "oyun" ? "/oyunlar/" : id === "video" ? "/videolar/" : id === "tekrar" ? "/tekrar/" : konuHref;
 
 export default function Bugun({ konuHref }: { konuHref: string }) {
-  const p = usePuan(), gk = useGorev();
+  const p = usePuan(), gk = useGorev(), oyun = useOyunAcik();
   const gunler = p.gunler ?? {};
   const bugun = gunler[gun()] ?? {};
   const n = seri(p), bugunAktif = aktif(bugun), tehlikede = n > 0 && !bugunAktif;
@@ -46,6 +47,7 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
 
   return (
     <div className="ml-auto flex items-center gap-2" aria-label="Bugün">
+      {oyun && <>
       <Link href="/lig/" className={cn(rozet, "px-2 text-[var(--c5)] [&_svg]:size-5 [&_svg]:fill-[#e9dcfb]")} aria-label="Haftalık lig">
         <Kupa />
       </Link>
@@ -102,6 +104,7 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
       </div>
         </SheetContent>
       </Sheet>
+      </>}
 
       <Sheet>
         <SheetTrigger className={rozet} aria-label={`Günün görevleri: ${biten}/${gorevler.length || 3}`}>
