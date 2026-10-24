@@ -1,14 +1,13 @@
 "use client";
 // Bir dersin konuları: ünite ünite, konu içindeki aşama yolu gibi kıvrılan yollar. Her ünitenin sonunda ünite testi.
 // Konular sırayla açılır (lib/kilit.ts). Bir konuya dokununca alttan kısa özet ve "Başla" penceresi açılır;
-// kilitli konuda pencere neden kilitli olduğunu ve ünite testiyle nasıl atlanacağını söyler.
+// kilitli konuda pencere neden kilitli olduğunu söyler ve seviye testiyle doğrudan o konuya geçmeyi önerir.
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { DERSLER, type DersId, type Entry } from "@/lib/dersler";
-import { acik, atlamaUnitesi, bekledigi, GECME, siradaki, uniteAcik, uniteGecti, uniteHref, uniteler, type Unitem } from "@/lib/kilit";
+import { acik, bekledigi, GECME, seviyeHref, siradaki, uniteAcik, uniteGecti, uniteHref, uniteler, type Unitem } from "@/lib/kilit";
 import { useDurumlar } from "@/lib/store";
 import { asamaSayisi } from "@/lib/asama";
-import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
 import { Govde, Html, href, UstBar, UstEylem } from "./temel";
 import { Button } from "./ui/button";
@@ -99,7 +98,7 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
           <div className="grid gap-2 pb-2">
             <SheetTitle className="text-[22px]">Bu ders nasıl ilerler?</SheetTitle>
             <SheetDescription className="text-[15px] text-muted-foreground">
-              Konular sırayla açılır; her konu bir öncekinin üzerine kurulu. Bir üniteyi zaten biliyorsan ünite testinden en az {GECME} alarak o üniteyi atlayabilirsin. Başladığın konular hep açık kalır.
+              Konular sırayla açılır; her konu bir öncekinin üzerine kurulu. Bir üniteyi zaten biliyorsan ünite testinden en az {GECME} alarak o üniteyi atlayabilirsin. Kilitli bir konuya dokunursan seviye testi çıkar: o konudan önceki konulardan karışık sorularda en az {GECME} alırsan doğrudan o konuya geçersin. Başladığın konular hep açık kalır.
             </SheetDescription>
             <Button className="mt-2" onClick={() => setYardim(false)}>Anladım</Button>
           </div>
@@ -120,7 +119,6 @@ function KonuPencere({ ders, list, e, sira }: { ders: DersId; list: Entry[]; e: 
   const k = `${ders}.${e.id}`, res = d.prog[k], ac = acik(list, e.id!, d);
   const nA = asamaSayisi(e.cardCount ?? 0), bitenA = res ? nA : Math.min(d.asama[k] ?? 0, nA);
   const once = bekledigi(list, e.id!);
-  const testU = atlamaUnitesi(list, e, d);
   const Kilit = Icon.kilit;
   return (
     <div className="grid gap-3 pb-1">
@@ -141,10 +139,10 @@ function KonuPencere({ ders, list, e, sira }: { ders: DersId; list: Entry[]; e: 
         <>
           <p className="flex items-start gap-2.5 rounded-xl bg-secondary p-3 text-[15px] [&_svg]:mt-0.5 [&_svg]:size-4 [&_svg]:flex-none">
             <Kilit />
-            <span>Bu konu, {once ? <b>“{once.title}”</b> : "önceki konu"} bitince açılır.{testU && <> Bu bölümü zaten biliyorsan <b>{testU.no}. ünite testinden</b> en az {GECME} alarak ilerleyebilirsin.</>}</span>
+            <span>Bu konu, {once ? <b>“{once.title}”</b> : "önceki konu"} bitince açılır. Öncesini zaten biliyorsan <b>seviye testinden</b> en az {GECME} alarak doğrudan bu konuya geçebilirsin.</span>
           </p>
-          {sira && <Button asChild className="mt-1 w-full"><Link href={href(ders, sira.id)}>Sıradaki konuya git</Link></Button>}
-          {testU && <Button asChild variant="outline" className={cn("w-full", !sira && "mt-1")}><Link href={uniteHref(ders, testU.no)}>{testU.no}. ünite testini çöz</Link></Button>}
+          <Button asChild className="mt-1 w-full"><Link href={seviyeHref(ders, e.id!)}>Seviye testini çöz</Link></Button>
+          {sira && <Button asChild variant="outline" className="w-full"><Link href={href(ders, sira.id)}>Sıradaki konuya git</Link></Button>}
         </>
       )}
     </div>

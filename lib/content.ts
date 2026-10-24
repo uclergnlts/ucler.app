@@ -37,6 +37,17 @@ export function uniteSorulari(d: DersId, u: number): Record<string, TekrarSoru> 
   return out;
 }
 
+/** Bir dersin bütün test soruları (seviye testi bunlardan konunun öncesini seçer); anahtar tekrar ile aynı. */
+export function dersSorulari(d: DersId): Record<string, TekrarSoru> {
+  const out: Record<string, TekrarSoru> = {};
+  for (const e of entries(d)) {
+    if (!e.id) continue;
+    const t = topic(d, e.id)!;
+    t.quiz.forEach((q, j) => { out[`${d}.${e.id}.${j}`] = { ...q, ders: d, konu: e.id!, baslik: t.title }; });
+  }
+  return out;
+}
+
 export const allEntries = () => Object.fromEntries(DERS_IDS.map((d) => [d, entries(d)])) as Record<DersId, Entry[]>;
 
 /** Aynı dersteki bir sonraki hazır konu. */

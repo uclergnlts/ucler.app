@@ -8,9 +8,9 @@
 // Sıfırlama ayrıca "sifir" damgasıyla işaretlenir (store.resetAll). Temelden beri bir tarafta yeni sıfırlama
 // olduysa o tarafın verisi bütünüyle kazanır; diğer cihazın sıfırlamadan önceki verisi üzerine birleştirilmez.
 import type { Gun, Puan } from "./puan";
-import type { Asama, Prog, Tekrar, Unite, Yer } from "./store";
+import type { Asama, Prog, Seviye, Tekrar, Unite, Yer } from "./store";
 
-export const ESIT = ["prog", "saved", "ad", "tekrar", "anlamadim", "asama", "puan", "gorev", "yer", "ipucu", "unite", "izlenen", "sifir"] as const;
+export const ESIT = ["prog", "saved", "ad", "tekrar", "anlamadim", "asama", "puan", "gorev", "yer", "ipucu", "unite", "seviye", "izlenen", "sifir"] as const;
 export type Veri = Partial<Record<(typeof ESIT)[number], unknown>>;
 
 /** Anahtar sırasından bağımsız karşılaştırma (Postgres jsonb anahtarları yeniden sıralar). */
@@ -65,6 +65,7 @@ export function birlestir(b: Veri, c: Veri): Veri {
     tekrar: { ...((b.tekrar as Tekrar) ?? {}), ...((c.tekrar as Tekrar) ?? {}) },
     asama: enBuyuk(b.asama as Asama, c.asama as Asama),
     unite: enBuyuk(b.unite as Unite, c.unite as Unite),
+    seviye: enBuyuk(b.seviye as Seviye, c.seviye as Seviye),
     yer: { ...((b.yer as Yer) ?? {}), ...((c.yer as Yer) ?? {}) },
     puan: puanBirlestir(b.puan as Puan, c.puan as Puan),
     gorev: c.gorev ?? b.gorev ?? {},
@@ -120,6 +121,7 @@ export function birlestir3(b: Veri, c: Veri, t: Veri | null): Veri {
     tekrar: sozluk3(b.tekrar, c.tekrar, t.tekrar, cihazinki),
     asama: sozluk3(b.asama, c.asama, t.asama, buyuk),
     unite: sozluk3(b.unite, c.unite, t.unite, buyuk),
+    seviye: sozluk3(b.seviye, c.seviye, t.seviye, buyuk),
     yer: sozluk3(b.yer, c.yer, t.yer, cihazinki),
     puan: deger3(b.puan, c.puan, t.puan, (x, y) => puanBirlestir(x as Puan, y as Puan)) ?? {},
     gorev: deger3(b.gorev, c.gorev, t.gorev, cihazOnce) ?? {},

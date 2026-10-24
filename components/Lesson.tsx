@@ -14,7 +14,7 @@ import {
   yanlisKaydet, yerYaz,
 } from "@/lib/store";
 import { asamalar, kartinAsamasi, sureDk } from "@/lib/asama";
-import { acik, atlamaUnitesi, bekledigi, GECME, siradaki, uniteHref } from "@/lib/kilit";
+import { acik, bekledigi, GECME, seviyeHref, siradaki } from "@/lib/kilit";
 import { kaydet, PUAN } from "@/lib/puan";
 import { olay } from "@/lib/olay";
 import { kartVideolari, sureYaz, type Video } from "@/lib/videolar";
@@ -442,7 +442,7 @@ export default function Lesson({
   }
 
   if (kapali) {
-    const bu = list.find((e) => e.id === id)!, once = bekledigi(list, id), sira = siradaki(list, durumlar), testU = atlamaUnitesi(list, bu, durumlar);
+    const once = bekledigi(list, id), sira = siradaki(list, durumlar);
     const Kilit = Icon.kilit;
     return (
       <div className="app" data-ders={ders}>
@@ -456,11 +456,11 @@ export default function Lesson({
             <h1 className="text-[24px]">Bu konu henüz kilitli</h1>
             <p className="text-[15px] text-muted-foreground">
               Konular birbirinin üzerine kurulu. {once ? <><b className="text-foreground">“{once.title}”</b> konusunu bitirince bu konu açılır.</> : null}
-              {testU && <> Bu bölümü zaten biliyorsan {testU.no}. ünite testinden en az {GECME} alarak ilerleyebilirsin.</>}
+              {once && <> Öncesini zaten biliyorsan seviye testinden en az {GECME} alarak doğrudan bu konuya geçebilirsin.</>}
             </p>
             <div className="mt-3 grid w-full gap-2">
-              {sira && <Button asChild><Link href={href(ders, sira.id)}>Sıradaki konuya git: {sira.title}</Link></Button>}
-              {testU && <Button asChild variant="outline"><Link href={uniteHref(ders, testU.no)}>{testU.no}. ünite testini çöz</Link></Button>}
+              {once && <Button asChild><Link href={seviyeHref(ders, id)}>Seviye testini çöz</Link></Button>}
+              {sira && <Button asChild variant="outline"><Link href={href(ders, sira.id)}>Sıradaki konuya git: {sira.title}</Link></Button>}
               <Button asChild variant="ghost"><Link href={href(ders)}>{DERSLER[ders].ad} konularına dön</Link></Button>
             </div>
           </article>

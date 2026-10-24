@@ -8,7 +8,7 @@ export type Prog = Record<string, string>; // "ders.konu" -> "3/4 doğru", "_las
 export const KEYS = {
   prog: "tf-prog", saved: "tf-saved", ad: "tf-ad", tekrar: "tf-tekrar", anlamadim: "tf-anlamadim",
   asama: "tf-asama", puan: "tf-puan", gorev: "tf-gorev", yer: "tf-yer", ipucu: "tf-ipucu", unite: "tf-unite",
-  sifir: "tf-sifir", izlenen: "tf-izlenen",
+  seviye: "tf-seviye", sifir: "tf-sifir", izlenen: "tf-izlenen",
 } as const;
 const listeners = new Set<() => void>();
 const cache: Record<string, { raw: string | null; val: unknown }> = {};
@@ -76,6 +76,7 @@ export function resetAll() {
   write(KEYS.gorev, {});
   write(KEYS.yer, {});
   write(KEYS.unite, {});
+  write(KEYS.seviye, {});
   write(KEYS.izlenen, []);
   // Sıfırlama damgası: hesaba bağlı başka cihazın eski verisi bu sıfırlamanın üzerine birleştirilmez (lib/esitle.ts).
   write(KEYS.sifir, Date.now());
@@ -188,12 +189,21 @@ export function uniteKaydet(key: string, puan: number) {
   if ((s[key] ?? -1) < puan) write(KEYS.unite, { ...s, [key]: puan });
 }
 
+// Seviye testleri: en yüksek puan (0-100). Anahtar "ders.konu". 80 ve üstü o konuyu ve öncesini açar (lib/kilit.ts).
+export type Seviye = Record<string, number>;
+const EMPTY_SEVIYE: Seviye = {};
+export const useSeviye = () => useSyncExternalStore(subscribe, () => read<Seviye>(KEYS.seviye, EMPTY_SEVIYE), () => EMPTY_SEVIYE);
+export function seviyeKaydet(key: string, puan: number) {
+  const s = read<Seviye>(KEYS.seviye, EMPTY_SEVIYE);
+  if ((s[key] ?? -1) < puan) write(KEYS.seviye, { ...s, [key]: puan });
+}
+
 /** Sayfa tarayıcıda açıldı mı (sunucuda ve ilk çizimde false). Cihazdaki ilerlemeye bağlı kararlar için. */
 const hep = () => () => {};
 export const useTarayici = () => useSyncExternalStore(hep, () => true, () => false);
 
 /** Konu kilitleri için gereken bütün durumlar (lib/kilit.ts). */
 export function useDurumlar() {
-  const prog = useProg(), asama = useAsama(), yer = useYer(), unite = useUnite();
-  return useMemo(() => ({ prog, asama, yer, unite }), [prog, asama, yer, unite]);
+  const prog = useProg(), asama = useAsama(), yer = useYer(), unite = useUnite(), seviye = useSeviye();
+  return useMemo(() => ({ prog, asama, yer, unite, seviye }), [prog, asama, yer, unite, seviye]);
 }
