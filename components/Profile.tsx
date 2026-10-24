@@ -66,10 +66,10 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
         ) : (
           <Card className="grid grid-cols-3 gap-0 py-0 [&>div:not(:first-child)]:border-l [&>div]:border-border">
             {([
-              [puan.toplam ?? 0, "puan"], [`${seri(puan)} gün`, "seri"], [done.length, "konu bitti"],
-            ] as const).map(([b, l]) => (
+              [puan.toplam ?? 0, "puan", "#e08a00"], [`${seri(puan)} gün`, "seri", seri(puan) ? "var(--c2)" : undefined], [done.length, "konu bitti", "var(--c3)"],
+            ] as const).map(([b, l, renk]) => (
               <div key={l} className="px-2 py-3.5 text-center">
-                <b className="block font-display text-2xl leading-tight font-extrabold">{b}</b>
+                <b className="block font-display text-2xl leading-tight font-extrabold" style={{ color: renk }}>{b}</b>
                 <span className="text-xs font-semibold text-muted-foreground">{l}</span>
               </div>
             ))}
@@ -78,19 +78,20 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
         <Liste>
           <Satir
             href="/tekrar/"
+            renk="var(--c1)"
             icon={<TekrarI />}
             title="Tekrar sırası"
             sub={kalan ? `${kalan} soru · ilki ${gunAdi(sira[0])}` : "Testte yanlış yaptığın sorular burada toplanır"}
             tag={<Ok />}
           />
           {done.length > 0 && (
-            <Satir href="/tekrar/?karisik" icon={<Kitap />} title="Karışık test" sub="Bitirdiğin konulardan rastgele 10 soru" tag={<Ok />} />
+            <Satir href="/tekrar/?karisik" renk="var(--c5)" icon={<Kitap />} title="Karışık test" sub="Bitirdiğin konulardan rastgele 10 soru" tag={<Ok />} />
           )}
-          <Satir href="/lig/" icon={<Kupa />} title="Haftalık lig" sub="Bu haftaki puanınla sıralamadaki yerin" tag={<Ok />} />
-          <Satir href="/profil/istatistikler/" icon={<Grafik />} title="İstatistikler" sub="Puan, seri, son 7 gün ve doğru oranı" tag={<Ok />} />
-          <Satir href="/profil/kaydedilenler/" icon={<Kayit />} title="Kaydedilenler" sub={kayitli ? `${kayitli} konu` : "Kaydettiğin konular burada durur"} tag={<Ok />} />
-          <Satir href="/profil/anlamadiklarim/" icon={<Soru />} title="Anlamadıklarım" sub={anlamadim ? `${anlamadim} kart` : "Anlamadım diye işaretlediğin kartlar"} tag={<Ok />} />
-          <Satir href="/profil/ayarlar/" icon={<Ayar />} title="Ayarlar" sub="Hesap, hakkında, gizlilik, iletişim" tag={<Ok />} />
+          <Satir href="/lig/" renk="#e08a00" icon={<Kupa />} title="Haftalık lig" sub="Bu haftaki puanınla sıralamadaki yerin" tag={<Ok />} />
+          <Satir href="/profil/istatistikler/" renk="var(--c3)" icon={<Grafik />} title="İstatistikler" sub="Puan, seri, son 7 gün ve doğru oranı" tag={<Ok />} />
+          <Satir href="/profil/kaydedilenler/" renk="#d63c63" icon={<Kayit />} title="Kaydedilenler" sub={kayitli ? `${kayitli} konu` : "Kaydettiğin konular burada durur"} tag={<Ok />} />
+          <Satir href="/profil/anlamadiklarim/" renk="var(--c2)" icon={<Soru />} title="Anlamadıklarım" sub={anlamadim ? `${anlamadim} kart` : "Anlamadım diye işaretlediğin kartlar"} tag={<Ok />} />
+          <Satir href="/profil/ayarlar/" renk="#64748b" icon={<Ayar />} title="Ayarlar" sub="Hesap, hakkında, gizlilik, iletişim" tag={<Ok />} />
         </Liste>
       </Govde>
     </div>

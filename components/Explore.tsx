@@ -48,6 +48,7 @@ export default function Explore({ all }: { all: Record<DersId, Entry[]> }) {
               key={k}
               size="sm"
               variant={filter === k ? "default" : "outline"}
+              data-ders={k === "all" ? undefined : k}
               aria-pressed={filter === k}
               onClick={() => setFilter((memo.filter = k))}
             >

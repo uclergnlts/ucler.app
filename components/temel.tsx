@@ -3,6 +3,8 @@
 // hareket Motion ile. Sade: beyaz zemin, 1px çizgiler, renk yalnızca küçük vurgularda (docs/KARARLAR.md).
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { sekmeRengi } from "./Tabs";
 import { motion, type HTMLMotionProps } from "motion/react";
 import { DERSLER, type Entry } from "@/lib/dersler";
 import { INSTAGRAM } from "@/lib/site";
@@ -60,12 +62,15 @@ export function UstBar({ geri, baslik, sag }: {
 export function UstEylem({ icon, label, href: to, onClick, aktif, external }: {
   icon: React.ReactNode; label: string; href?: string; onClick?: () => void; aktif?: boolean; external?: boolean;
 }) {
-  const cls = cn(aktif ? "text-acc" : "text-muted-foreground", "hover:text-foreground");
+  // Simge bulunduğu sekmenin rengini alır (alt menüyle aynı); ders sayfasında dersin rengi.
+  const renk = sekmeRengi(usePathname()) ?? "var(--acc)";
+  const cls = cn("hover:bg-secondary", aktif && "[&_svg]:fill-current");
+  const style = { color: renk };
   if (to && external)
-    return <Button asChild variant="ghost" size="icon" className={cls}><a href={to} target="_blank" rel="noopener noreferrer" aria-label={label} title={label}>{icon}</a></Button>;
+    return <Button asChild variant="ghost" size="icon" className={cls}><a href={to} target="_blank" rel="noopener noreferrer" aria-label={label} title={label} style={style}>{icon}</a></Button>;
   if (to)
-    return <Button asChild variant="ghost" size="icon" className={cls}><Link href={to} aria-label={label} title={label}>{icon}</Link></Button>;
-  return <Button variant="ghost" size="icon" className={cls} aria-label={label} title={label} onClick={onClick}>{icon}</Button>;
+    return <Button asChild variant="ghost" size="icon" className={cls}><Link href={to} aria-label={label} title={label} style={style}>{icon}</Link></Button>;
+  return <Button variant="ghost" size="icon" className={cls} aria-label={label} title={label} style={style} onClick={onClick}>{icon}</Button>;
 }
 
 /** Eski ad: yalnızca geri düğmesi olan üst çubuk. */
@@ -110,8 +115,9 @@ export const Bos = ({ children }: { children: React.ReactNode }) => (
 );
 
 /** Satırın solundaki küçük simge kutusu; dersin rengini alır. */
-export const Simge = ({ children, soluk, className }: { children: React.ReactNode; soluk?: boolean; className?: string }) => (
+export const Simge = ({ children, soluk, className, renk }: { children: React.ReactNode; soluk?: boolean; className?: string; renk?: string }) => (
   <span
+    style={renk && !soluk ? { color: renk, backgroundColor: `color-mix(in srgb, ${renk} 13%, white)` } : undefined}
     className={cn(
       "grid size-10 flex-none place-items-center rounded-xl [&_svg]:size-5",
       soluk ? "bg-secondary text-muted-foreground" : "bg-acc-soft text-acc",
@@ -126,12 +132,12 @@ const satir = "flex w-full items-center gap-3 px-4 py-3 text-left";
 
 /** Liste satırı: simge, başlık, alt yazı, sağda kısa etiket. href yoksa (yakında) soluk ve tıklanmaz. */
 export function Satir({
-  ders, icon, title, sub, tag, href: to, soluk, external,
+  ders, icon, title, sub, tag, href: to, soluk, external, renk,
 }: {
   ders?: string; icon: React.ReactNode; title: React.ReactNode; sub?: React.ReactNode; tag?: React.ReactNode;
-  href?: string; soluk?: boolean; external?: boolean;
+  href?: string; soluk?: boolean; external?: boolean; renk?: string;
 }) {
-  const ic = <Simge soluk={soluk}>{icon}</Simge>;
+  const ic = <Simge soluk={soluk} renk={renk}>{icon}</Simge>;
   const body = (
     <>
       {ic}

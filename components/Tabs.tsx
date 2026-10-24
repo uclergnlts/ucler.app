@@ -17,15 +17,24 @@ const TABS = [
   { k: "profil", href: "/profil/", label: "Profil", renk: "var(--c5)" },
 ] as const;
 
+/** Sayfanın ait olduğu sekme. Ders haritası (/fizik/) ve bulunamayan sayfalar hiçbir sekmeye ait değil. */
+function sekme(parts: string[]): string | undefined {
+  return parts.length === 0
+    ? "home"
+    : ({ kesfet: "kesfet", kaydedilenler: "profil", profil: "profil", hakkinda: "profil", gizlilik: "profil", lig: "profil", videolar: "video", oyunlar: "oyun" } as Record<string, string>)[parts[0]];
+}
+
+/** Sayfanın sekme rengi (üst çubuk düğmeleri de bunu kullanır). */
+export function sekmeRengi(path: string): string | undefined {
+  const k = sekme(path.split("/").filter(Boolean));
+  return TABS.find((t) => t.k === k)?.renk;
+}
+
 export default function Tabs() {
   const parts = usePathname().split("/").filter(Boolean);
   // Profil'in alt ekranları (/profil/istatistikler/ ...) alt menüyü gösterir, Profil seçili kalır.
   if ((parts.length >= 2 && parts[0] !== "profil") || parts[0] === "tekrar") return null;
-  // Ders haritası (/fizik/) ve bulunamayan sayfalar hiçbir sekmeye ait değil: hiçbiri seçili görünmez.
-  const cur: string | undefined =
-    parts.length === 0
-      ? "home"
-      : ({ kesfet: "kesfet", kaydedilenler: "profil", profil: "profil", hakkinda: "profil", gizlilik: "profil", videolar: "video", oyunlar: "oyun" } as Record<string, string>)[parts[0]];
+  const cur = sekme(parts);
   return (
     <div className="fixed inset-x-0 bottom-0 z-10 border-t border-border bg-card pb-[env(safe-area-inset-bottom,0px)]">
       <nav aria-label="Bölümler" className="mx-auto grid h-[var(--nav)] max-w-[520px] grid-cols-5">
