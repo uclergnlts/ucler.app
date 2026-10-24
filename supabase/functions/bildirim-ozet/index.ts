@@ -11,7 +11,7 @@ const SITE = "https://ucler.app";
 const json = (b: unknown, status = 200) => new Response(JSON.stringify(b), { status, headers: { "Content-Type": "application/json" } });
 const kacis = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
 
-type Satir = { id: string; olusturma: string; tur: "anlamadim" | "hata"; ders: string; konu: string | null; yer: string; ozet: string | null; not: string | null; platform: string | null };
+type Satir = { id: string; olusturma: string; tur: "anlamadim" | "hata"; ders: string; konu: string | null; yer: string; ozet: string | null; notu: string | null; platform: string | null };
 const TUR = { anlamadim: "Anlamadım", hata: "Hata var" };
 
 /** Bildirimin geldiği yere giden bağlantı (kart numarası biliniyorsa o karttan açılır). */
@@ -27,7 +27,7 @@ function eposta(liste: Satir[]) {
   const satirlar = liste.map((r) => `<tr><td style="padding:12px 0;border-top:1px solid #e3e8ef;">
 <p style="margin:0 0 2px;font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:${r.tur === "hata" ? "#e2483b" : "#64748b"};">${TUR[r.tur]} · ${kacis(r.ders)}${r.konu ? ` / ${kacis(r.konu)}` : ""} · ${kacis(r.yer)}</p>
 <a href="${baglanti(r)}" style="font-size:15px;font-weight:700;color:#1d3557;text-decoration:none;">${kacis(r.ozet || r.yer)}</a>
-${r.not ? `<p style="margin:4px 0 0;font-size:15px;line-height:1.5;color:#334155;">“${kacis(r.not)}”</p>` : ""}
+${r.notu ? `<p style="margin:4px 0 0;font-size:15px;line-height:1.5;color:#334155;">“${kacis(r.notu)}”</p>` : ""}
 </td></tr>`).join("\n");
   const html = `<!doctype html>
 <html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Öğrenci bildirimleri</title></head>
@@ -39,7 +39,7 @@ ${r.not ? `<p style="margin:4px 0 0;font-size:15px;line-height:1.5;color:#334155
 <p style="margin:0 0 12px;font-size:14px;color:#64748b;">${hata} hata, ${liste.length - hata} anlamadım. Başlığa dokununca o yer açılır.</p>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">${satirlar}</table>
 </td></tr></table></td></tr></table></body></html>`;
-  const text = liste.map((r) => `[${TUR[r.tur]}] ${r.ders}/${r.konu ?? ""} ${r.yer}: ${r.ozet ?? ""}${r.not ? `\n  "${r.not}"` : ""}\n  ${baglanti(r)}`).join("\n\n");
+  const text = liste.map((r) => `[${TUR[r.tur]}] ${r.ders}/${r.konu ?? ""} ${r.yer}: ${r.ozet ?? ""}${r.notu ? `\n  "${r.notu}"` : ""}\n  ${baglanti(r)}`).join("\n\n");
   return { html, text };
 }
 
@@ -53,7 +53,7 @@ Deno.serve(async (req: Request) => {
   const { data: alici } = await db.rpc("bildirim_alici");
   if (!anahtar || !alici) return json({ hata: "alici ya da RESEND_API_KEY yok" }, 200);
 
-  const { data, error } = await db.from("bildirim").select("id, olusturma, tur, ders, konu, yer, ozet, not, platform")
+  const { data, error } = await db.from("bildirim").select("id, olusturma, tur, ders, konu, yer, ozet, notu:not, platform")
     .is("gonderildi", null).order("olusturma").limit(200);
   if (error) return json({ hata: error.message }, 500);
   const liste = (data ?? []) as Satir[];
