@@ -1,0 +1,162 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#d63c63}
+.head .sub i{display:block;width:44px;height:6px;background:#d63c63;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#d63c63;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#d63c63;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>KİMYA</div><div class="brand">ucler<b>.</b></div></div>
+
+<div class="scene" data-s="-1" data-e="2.78">
+ <div class="title">Bu kırmızı toz<br><em>bir zamanlar demirdi</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><rect x="80" y="470" width="920" height="220" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="4"/><text x="130" y="550" text-anchor="start" font-family="Manrope" font-size="42" font-weight="800" fill="#5f6f88">Herkes:</text><text x="130" y="625" text-anchor="start" font-size="42" font-weight="700" fill="#5f6f88">"pas = demir eskidi"</text></g><g data-in="-1"><rect x="80" y="720" width="920" height="560" rx="18" fill="#fff" stroke="#d63c63" stroke-width="5"/><text x="130" y="800" text-anchor="start" font-family="Manrope" font-size="42" font-weight="800" fill="#d63c63">Kimya:</text><text x="130" y="860" text-anchor="start" font-family="Manrope" font-size="40" font-weight="800" fill="#1d3557">"pas = demir elektron kaybetti"</text><rect x="150" y="960" width="520" height="190" rx="14" fill="#e6eaf0" stroke="#8d99ae" stroke-width="6"/><ellipse cx="301" cy="1060" rx="21" ry="15" fill="#b5562b" opacity=".75"/><ellipse cx="453" cy="1069" rx="15" ry="11" fill="#b5562b" opacity=".75"/><ellipse cx="207" cy="1093" rx="19" ry="13" fill="#b5562b" opacity=".75"/><ellipse cx="299" cy="1112" rx="23" ry="16" fill="#b5562b" opacity=".75"/><ellipse cx="550" cy="1052" rx="27" ry="19" fill="#b5562b" opacity=".75"/><ellipse cx="265" cy="1070" rx="31" ry="22" fill="#b5562b" opacity=".75"/><ellipse cx="420" cy="1083" rx="27" ry="19" fill="#b5562b" opacity=".75"/><ellipse cx="229" cy="1084" rx="26" ry="18" fill="#b5562b" opacity=".75"/><ellipse cx="327" cy="1002" rx="31" ry="22" fill="#b5562b" opacity=".75"/><circle cx="760" cy="950" r="17" fill="#3a86c8"/><path d="M752 950 H768" stroke="#fff" stroke-width="3"/><circle cx="840" cy="1010" r="17" fill="#3a86c8"/><path d="M832 1010 H848" stroke="#fff" stroke-width="3"/><circle cx="800" cy="1100" r="17" fill="#3a86c8"/><path d="M792 1100 H808" stroke="#fff" stroke-width="3"/><circle cx="900" cy="1080" r="17" fill="#3a86c8"/><path d="M892 1080 H908" stroke="#fff" stroke-width="3"/><circle cx="870" cy="940" r="17" fill="#3a86c8"/><path d="M862 940 H878" stroke="#fff" stroke-width="3"/><path d="M680 1000 C720 980 740 970 750 960" fill="none" stroke="#3a86c8" stroke-width="4" stroke-dasharray="10 8"/></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="2.78" data-e="14.8">
+ <div class="title">Yağmurda kalan<br><em>bir bisiklet zinciri</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="2.8"><rect x="145" y="792" width="110" height="56" rx="28" fill="none" stroke="#8d99ae" stroke-width="14"/><rect x="240" y="792" width="110" height="56" rx="28" fill="none" stroke="#8d99ae" stroke-width="14"/><rect x="335" y="792" width="110" height="56" rx="28" fill="none" stroke="#8d99ae" stroke-width="14"/><rect x="430" y="792" width="110" height="56" rx="28" fill="none" stroke="#8d99ae" stroke-width="14"/><rect x="525" y="792" width="110" height="56" rx="28" fill="none" stroke="#8d99ae" stroke-width="14"/><rect x="620" y="792" width="110" height="56" rx="28" fill="none" stroke="#8d99ae" stroke-width="14"/><rect x="715" y="792" width="110" height="56" rx="28" fill="none" stroke="#8d99ae" stroke-width="14"/><rect x="810" y="792" width="110" height="56" rx="28" fill="none" stroke="#8d99ae" stroke-width="14"/><path d="M260 598 C276 620 274 636 260 636 C246 636 244 620 260 598 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="3"/><path d="M420 658 C436 680 434 696 420 696 C406 696 404 680 420 658 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="3"/><path d="M600 578 C616 600 614 616 600 616 C586 616 584 600 600 578 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="3"/><path d="M780 638 C796 660 794 676 780 676 C766 676 764 660 780 638 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="3"/><path d="M900 588 C916 610 914 626 900 626 C886 626 884 610 900 588 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="3"/><path d="M340 698 C356 720 354 736 340 736 C326 736 324 720 340 698 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="3"/></g><g data-in="4.6"><rect x="145" y="792" width="110" height="56" rx="28" fill="none" stroke="#b5562b" stroke-width="14"/><rect x="240" y="792" width="110" height="56" rx="28" fill="none" stroke="#8d99ae" stroke-width="14"/><rect x="335" y="792" width="110" height="56" rx="28" fill="none" stroke="#b5562b" stroke-width="14"/><rect x="430" y="792" width="110" height="56" rx="28" fill="none" stroke="#8d99ae" stroke-width="14"/><rect x="525" y="792" width="110" height="56" rx="28" fill="none" stroke="#b5562b" stroke-width="14"/><rect x="620" y="792" width="110" height="56" rx="28" fill="none" stroke="#8d99ae" stroke-width="14"/><rect x="715" y="792" width="110" height="56" rx="28" fill="none" stroke="#b5562b" stroke-width="14"/><rect x="810" y="792" width="110" height="56" rx="28" fill="none" stroke="#8d99ae" stroke-width="14"/><ellipse cx="255" cy="850" rx="22" ry="14" fill="#b5562b" opacity=".8"/><ellipse cx="445" cy="790" rx="22" ry="14" fill="#b5562b" opacity=".8"/><ellipse cx="640" cy="845" rx="22" ry="14" fill="#b5562b" opacity=".8"/><ellipse cx="830" cy="800" rx="22" ry="14" fill="#b5562b" opacity=".8"/></g><g data-in="9.0"><text x="540" y="990" text-anchor="middle" font-family="Manrope" font-size="72" font-weight="800" fill="#b5562b">pas</text></g><g data-in="9.7"><rect x="100" y="1080" width="880" height="170" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1150" text-anchor="middle" font-size="36" font-weight="800" fill="#5f6f88">kirlenme değil:</text><text x="540" y="1205" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">demir yeni bir maddeye dönüştü</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="14.8" data-e="30.48">
+ <div class="title">Olan şey:<br><em>elektron alışverişi</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="17.4"><circle cx="220" cy="700" r="95" fill="#e6eaf0" stroke="#8d99ae" stroke-width="6"/><text x="220" y="718.81" text-anchor="middle" font-family="Manrope" font-size="52" font-weight="800" fill="#1d3557">Fe</text></g><g data-in="18.6"><path d="M330 700 H432" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M450 700 l-26 -15 v30 Z" fill="#3a86c8"/><circle cx="560" cy="700" r="80" fill="#e6eaf0" stroke="#8d99ae" stroke-width="6"/><text x="560" y="714.4" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#1d3557">Fe²⁺</text><circle cx="690" cy="650" r="15" fill="#3a86c8"/><path d="M682 650 H698" stroke="#fff" stroke-width="3"/><circle cx="690" cy="750" r="15" fill="#3a86c8"/><path d="M682 750 H698" stroke="#fff" stroke-width="3"/><text x="560" y="830" text-anchor="middle" font-size="28" font-weight="700" fill="#5f6f88">artı yüklü demir iyonu</text></g><g data-in="21.8"><path d="M720 650 C800 620 830 640 860 680" fill="none" stroke="#3a86c8" stroke-width="5" stroke-dasharray="12 9"/><circle cx="900" cy="720" r="70" fill="#fde2ea" stroke="#d63c63" stroke-width="6"/><text x="900" y="733.86" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#1d3557">O</text><text x="900" y="830" text-anchor="middle" font-size="28" font-weight="800" fill="#d63c63">oksijen alır</text></g><g data-in="24.2"><path d="M540 911.6 C575.2 960 570.8 995.2 540 995.2 C509.2 995.2 504.8 960 540 911.6 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="3"/><text x="640" y="975" text-anchor="start" font-size="34" font-weight="800" fill="#3a86c8">su da gerekir</text></g><g data-in="25.9"><rect x="100" y="1100" width="880" height="150" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><rect x="150" y="1135" width="80" height="80" rx="14" fill="#b5562b"/><text x="270" y="1170" text-anchor="start" font-size="34" font-weight="800" fill="#1d3557">Fe iyonu + oksijen + su</text><text x="270" y="1220" text-anchor="start" font-family="Manrope" font-size="38" font-weight="800" fill="#b5562b">= pas</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="30.48" data-e="40.16">
+ <div class="title">Yükseltgenme ve<br><em>indirgenme</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="30.5"><rect x="80" y="520" width="440" height="500" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="300" y="600" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#d63c63">Yükseltgenme</text><circle cx="240" cy="780" r="70" fill="#e6eaf0" stroke="#8d99ae" stroke-width="6"/><text x="240" y="793.86" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#1d3557">A</text><path d="M320 780 H422" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M440 780 l-26 -15 v30 Z" fill="#3a86c8"/><circle cx="470" cy="780" r="15" fill="#3a86c8"/><path d="M462 780 H478" stroke="#fff" stroke-width="3"/><text x="300" y="940" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">elektron VERİR</text></g><g data-in="33.8"><rect x="560" y="520" width="440" height="500" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="780" y="600" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#3a86c8">İndirgenme</text><circle cx="620" cy="780" r="15" fill="#3a86c8"/><path d="M612 780 H628" stroke="#fff" stroke-width="3"/><path d="M650 780 H742" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M760 780 l-26 -15 v30 Z" fill="#3a86c8"/><circle cx="850" cy="780" r="70" fill="#e3f0fb" stroke="#3a86c8" stroke-width="6"/><text x="850" y="793.86" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#1d3557">B</text><text x="780" y="940" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">elektron ALIR</text></g><g data-in="36.6"><rect x="80" y="1060" width="440" height="120" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="300" y="1135" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">demir yükseltgenir</text></g><g data-in="38.7"><rect x="560" y="1060" width="440" height="120" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="780" y="1135" text-anchor="middle" font-size="34" font-weight="800" fill="#3a86c8">oksijen indirgenir</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="40.16" data-e="50.81">
+ <div class="title">İkisi hep<br><em>birlikte olur</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="40.2"><circle cx="220" cy="700" r="85" fill="#e6eaf0" stroke="#8d99ae" stroke-width="6"/><text x="220" y="716.83" text-anchor="middle" font-family="Manrope" font-size="46" font-weight="800" fill="#1d3557">Fe</text><circle cx="860" cy="700" r="85" fill="#fde2ea" stroke="#d63c63" stroke-width="6"/><text x="860" y="716.83" text-anchor="middle" font-family="Manrope" font-size="46" font-weight="800" fill="#1d3557">O</text></g><g data-in="42.1"><path d="M330 700 H722" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M740 700 l-26 -15 v30 Z" fill="#3a86c8"/><circle cx="535" cy="660" r="18" fill="#3a86c8"/><path d="M526 660 H544" stroke="#fff" stroke-width="4"/><text x="540" y="800" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">verilen elektron yok olamaz</text></g><g data-in="46.6"><rect x="80" y="900" width="920" height="330" rx="18" fill="#fff" stroke="#d63c63" stroke-width="5"/><text x="540" y="990" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="700" fill="#5f6f88">reduction + oxidation</text><text x="540" y="1040" text-anchor="middle" font-size="30" font-weight="700" fill="#5f6f88">(indirgenme + yükseltgenme)</text><text x="540" y="1160" text-anchor="middle" font-family="Manrope" font-size="64" font-weight="800" fill="#d63c63">RED + OKS = REDOKS</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="50.81" data-e="68.35">
+ <div class="title">Redoks<br><em>her yerde</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="52.5"><rect x="80" y="480" width="430" height="360" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><circle cx="190" cy="610" r="48" fill="#e6eaf0" stroke="#8d99ae" stroke-width="6"/><text x="190" y="622.24" text-anchor="middle" font-family="Manrope" font-size="34" font-weight="800" fill="#1d3557">Na</text><path d="M250 610 H302" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M320 610 l-26 -15 v30 Z" fill="#3a86c8"/><circle cx="285" cy="575" r="12" fill="#3a86c8"/><path d="M279 575 H291" stroke="#fff" stroke-width="2"/><circle cx="390" cy="610" r="48" fill="#e1f5ea" stroke="#1fa463" stroke-width="6"/><text x="390" y="622.24" text-anchor="middle" font-family="Manrope" font-size="34" font-weight="800" fill="#1d3557">Cl</text><text x="295" y="770" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">sofra tuzu</text><text x="295" y="813" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6f88">Na verir, Cl alır</text></g><g data-in="56.5"><rect x="570" y="480" width="430" height="360" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><g transform="translate(785 640) scale(1.3)"><path d="M0 -70 C30 -30 45 -10 40 20 C35 50 -35 50 -40 20 C-45 -10 -15 -20 0 -70 Z" fill="#ffd6a5" stroke="#f08a24" stroke-width="5"/><path d="M0 -20 C15 0 18 15 14 28 C10 40 -10 40 -14 28 C-18 15 -8 5 0 -20 Z" fill="#f08a24"/></g><text x="785" y="770" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">yanma</text><text x="785" y="813" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6f88">yakıt yükseltgenir</text></g><g data-in="60.3"><rect x="80" y="870" width="430" height="360" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><g transform="translate(295 1000)"><circle cx="40" cy="0" r="9" fill="#1fa463"/><circle cx="20" cy="35" r="9" fill="#1fa463"/><circle cx="-20" cy="35" r="9" fill="#1fa463"/><circle cx="-40" cy="-0" r="9" fill="#1fa463"/><circle cx="-20" cy="-35" r="9" fill="#1fa463"/><circle cx="20" cy="-35" r="9" fill="#1fa463"/><polygon points="40,0 20,35 -20,35 -40,-0 -20,-35 20,-35" fill="none" stroke="#1fa463" stroke-width="5"/></g><text x="295" y="1160" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">hücrende</text><text x="295" y="1203" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6f88">glikoz yükseltgenir</text></g><g data-in="63.9"><rect x="570" y="870" width="430" height="360" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><rect x="740" y="950" width="90" height="130" rx="12" fill="#fff" stroke="#1d3557" stroke-width="5"/><rect x="767" y="936" width="36" height="14" rx="4" fill="#1d3557"/><text x="785" y="995" text-anchor="middle" font-size="36" font-weight="800" fill="#d63c63">+</text><text x="785" y="1060" text-anchor="middle" font-size="36" font-weight="800" fill="#3a86c8">−</text><text x="785" y="1160" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">pil</text><text x="785" y="1203" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6f88">elektronlar telden geçer</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="68.35" data-e="74.44">
+ <div class="title">Çinko<br><em>kalkanı</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="68.4"><rect x="140" y="600" width="800" height="200" rx="20" fill="#6c8ebf" opacity=".35"/><rect x="170" y="630" width="740" height="140" rx="14" fill="#e6eaf0" stroke="#8d99ae" stroke-width="6"/><text x="540" y="715" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#1d3557">demir</text><text x="540" y="860" text-anchor="middle" font-size="34" font-weight="800" fill="#6c8ebf">çinko kaplama</text></g><g data-in="71.7"><rect x="80" y="960" width="920" height="260" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1030" text-anchor="middle" font-size="32" font-weight="700" fill="#5f6f88">daha kolay elektron veren:</text><text x="300" y="1130" text-anchor="middle" font-family="Manrope" font-size="72" font-weight="800" fill="#6c8ebf">Zn</text><text x="540" y="1125" text-anchor="middle" font-family="Manrope" font-size="60" font-weight="800" fill="#1d3557">></text><text x="780" y="1130" text-anchor="middle" font-family="Manrope" font-size="72" font-weight="800" fill="#8d99ae">Fe</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="74.44" data-e="79.98">
+ <div class="q"><small>DÜŞÜN</small>Çinko kaplı demirin yüzeyi çizilirse, önce hangisi <em>yükseltgenir?</em></div>
+</div>
+
+<div class="scene" data-s="79.78" data-e="99">
+ <div class="title">Kısaca<br><em>hatırla</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><rect x="80" y="500" width="920" height="700" rx="18" fill="#fff" stroke="#d63c63" stroke-width="5"/><text x="140" y="590" text-anchor="start" font-size="32" font-weight="800" fill="#d63c63">ÖZET</text><circle cx="160" cy="680" r="14" fill="#d63c63"/><text x="200" y="694" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">Yükseltgenme:</text><text x="200" y="744" text-anchor="start" font-size="40" font-weight="800" fill="#d63c63">elektron verir</text><circle cx="160" cy="830" r="14" fill="#d63c63"/><text x="200" y="844" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">İndirgenme:</text><text x="200" y="894" text-anchor="start" font-size="40" font-weight="800" fill="#3a86c8">elektron alır</text><circle cx="160" cy="980" r="14" fill="#d63c63"/><text x="200" y="994" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">İkisi hep birlikte:</text><text x="200" y="1044" text-anchor="start" font-size="40" font-weight="800" fill="#d63c63">redoks</text><path d="M140 1080 H940" stroke="#dbe3ee" stroke-width="3"/><path d="M160 1110 h40 v70 l-20 -16 l-20 16 Z" fill="#d63c63"/><text x="230" y="1160" text-anchor="start" font-family="Manrope" font-size="42" font-weight="800" fill="#d63c63">Kaydet, sınavdan önce bak</text></g>
+ </svg>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;                 // ses hızlandırılmadı
+const DUR = 82.2;           // ses süresi
+const PH = [
+ [0.00,2.54,"Bu kırmızı toz, bir zamanlar demirdi."],
+ [2.78,4.34,"Bir bisikleti yağmurda bırak."],
+ [4.56,8.70,"Birkaç hafta sonra zincirinde kırmızı kahverengi bir katman görürsün:"],
+ [9.05,9.40,"pas."],
+ [9.71,14.49,"Pas, demirin kirlenmesi değildir. Demir atomları başka bir maddeye dönüşmüştür."],
+ [14.80,17.12,"Olan şey bir elektron alışverişidir."],
+ [17.37,21.45,"Demir atomları elektron verir ve artı yüklü demir iyonlarına dönüşür."],
+ [21.76,24.01,"Havadaki oksijen bu elektronları alır."],
+ [24.22,25.63,"Bunun için su da gerekir."],
+ [25.87,30.12,"Sonunda demir iyonları oksijen ve suyla birleşir ve pas oluşur."],
+ [30.48,33.62,"Bir atomun elektron vermesine yükseltgenme denir."],
+ [33.84,36.32,"Elektron almasına ise indirgenme denir."],
+ [36.56,38.52,"Paslanmada demir yükseltgenir,"],
+ [38.73,39.95,"oksijen indirgenir."],
+ [40.16,41.81,"İkisi her zaman birlikte olur."],
+ [42.08,46.37,"Çünkü verilen elektron yok olamaz; mutlaka başka bir atom onu alır."],
+ [46.58,50.48,"Bu yüzden bu tepkimelere, iki adın birleşimiyle redoks denir."],
+ [50.81,52.25,"Redoks her yerdedir."],
+ [52.48,56.28,"Sofra tuzu oluşurken sodyum bir elektron verir, klor alır."],
+ [56.51,58.66,"Odun yanarken yakıt yükseltgenir,"],
+ [58.87,60.08,"oksijen indirgenir."],
+ [60.33,63.67,"Hücrelerinde glikoz yükseltgenir ve sana enerji verir."],
+ [63.88,68.11,"Pil de elektronları bir telden geçirerek çalışan bir redoks düzeneğidir."],
+ [68.35,71.45,"Demiri korumanın bir yolu, onu çinkoyla kaplamaktır."],
+ [71.66,74.22,"Çinko, demirden daha kolay elektron verir."],
+ [74.44,79.68,"Peki sence, çinko kaplı bir demirin yüzeyi çizilirse, önce hangisi yükseltgenir?"]
+];
+
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  cap.style.opacity = t > 79.6 ? 0 : 1;
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
