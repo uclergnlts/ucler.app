@@ -8,7 +8,7 @@ import { useOturum } from "@/lib/bulut";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Icon } from "./icons";
-import { Bos, Govde, Liste, Ok, PageHead, Satir, Top } from "./temel";
+import { Bos, Govde, Liste, Ok, Satir, UstBar, UstEylem } from "./temel";
 import { Card } from "./ui/card";
 import { useAnlamadiklarim, useKaydedilenler, useProfil } from "./profil/veri";
 
@@ -22,9 +22,8 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
 
   return (
     <div className="app">
-      <Top />
+      <UstBar baslik="Profil" sag={<UstEylem href="/profil/ayarlar/" label="Ayarlar" icon={<Ayar />} />} />
       <Govde>
-        <PageHead title="Profil" />
         <section className="flex items-center gap-3.5">
           <span className="grid size-14 flex-none place-items-center rounded-full bg-secondary text-muted-foreground [&_svg]:size-7"><User /></span>
           <span className="min-w-0 flex-1">

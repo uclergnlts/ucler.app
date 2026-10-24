@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { DersId, Entry } from "@/lib/dersler";
 import { toggleAnlamadim } from "@/lib/store";
 import { Icon } from "../icons";
-import { Bos, href, Html, Liste, Simge } from "../temel";
+import { Bos, href, Html, Liste, Simge, UstEylem } from "../temel";
 import Kabuk from "./Kabuk";
 import { useAnlamadiklarim } from "./veri";
 
@@ -11,7 +11,7 @@ export default function Anlamadiklarim({ all, basliklar }: { all: Record<DersId,
   const list = useAnlamadiklarim(all, basliklar);
   const Soru = Icon.soru, Kapat = Icon.kapat;
   return (
-    <Kabuk title="Anlamadıklarım" text={list.length ? "İşaretlediğin kartlar. Karta dokunup yeniden bakabilirsin." : undefined}>
+    <Kabuk title="Anlamadıklarım" sag={<UstEylem href="/tekrar/" label="Tekrar et" icon={<Icon.tekrar />} />} text={list.length ? "İşaretlediğin kartlar. Karta dokunup yeniden bakabilirsin." : undefined}>
       {list.length ? (
         <Liste>
           {list.map(({ k, e, no, h }) => (

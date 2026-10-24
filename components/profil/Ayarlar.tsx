@@ -6,7 +6,7 @@ import { girisYap } from "@/lib/puan";
 import { resetAll, setAd } from "@/lib/store";
 import { ses, sesAyarla, useSesAcik } from "@/lib/ses";
 import { Icon } from "../icons";
-import { Bolum, INSTAGRAM, Liste, Ok, Satir } from "../temel";
+import { Bolum, INSTAGRAM, Liste, Ok, Satir, UstEylem } from "../temel";
 import { Button } from "../ui/button";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "../ui/dialog";
 import Kabuk from "./Kabuk";
@@ -19,7 +19,7 @@ export default function Ayarlar() {
   const temizle = () => { resetAll(); setAd(""); girisYap(); };
   const Insta = Icon.instagram, Bulb = Icon.bulb, Kilit = Icon.kilit;
   return (
-    <Kabuk title="Ayarlar">
+    <Kabuk title="Ayarlar" sag={<UstEylem href="/hakkinda/" label="Hakkında" icon={<Icon.soru />} />}>
       <Bolum title="Hesap">
         {oturum ? (
           <div className="grid gap-3">

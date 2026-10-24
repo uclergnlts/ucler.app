@@ -2,7 +2,8 @@
 import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
 import { seri, type Gun } from "@/lib/puan";
 import { gun, useSaved } from "@/lib/store";
-import { Bolum, Bos } from "../temel";
+import { Icon } from "../icons";
+import { Bolum, Bos, UstEylem } from "../temel";
 import { Card } from "../ui/card";
 import { Progress } from "../ui/progress";
 import Kabuk from "./Kabuk";
@@ -25,12 +26,12 @@ export default function Istatistikler({ all }: { all: Record<DersId, Entry[]> })
 
   if (yeni)
     return (
-      <Kabuk title="İstatistikler">
+      <Kabuk title="İstatistikler" sag={<UstEylem href="/lig/" label="Haftalık lig" icon={<Icon.kupa />} />}>
         <Bos>İlk konunu bitirdiğinde puanın, serin ve doğru oranın burada görünür.</Bos>
       </Kabuk>
     );
   return (
-    <Kabuk title="İstatistikler">
+    <Kabuk title="İstatistikler" sag={<UstEylem href="/lig/" label="Haftalık lig" icon={<Icon.kupa />} />}>
       <Card className="grid grid-cols-3 gap-0 py-0 [&>div]:border-border [&>div:nth-child(-n+3)]:border-b [&>div:not(:nth-child(3n+1))]:border-l">
         {([
           [puan.toplam ?? 0, "puan"], [`${seri(puan)} gün`, "seri"], [`${puan.enUzun ?? 0} gün`, "en uzun seri"],

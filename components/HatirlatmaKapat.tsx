@@ -27,9 +27,9 @@ export default function HatirlatmaKapat() {
       : ["Bağlantı çalışmadı", "E-posta bildirimlerini Profil > Ayarlar'dan da kapatabilirsin."];
   return (
     <div className="app">
-      <GeriTop to="/profil/" label="Profil'e dön" />
+      <GeriTop to="/profil/" label="Profil'e dön" baslik={baslik} />
       <Govde>
-        <PageHead title={baslik} text={metin} />
+        <PageHead text={metin} />
         {durum !== "bekle" && <Button asChild><Link href="/profil/ayarlar/">{"Ayarlar'a git"}</Link></Button>}
       </Govde>
     </div>

@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { kaydet, PUAN } from "@/lib/puan";
 import { ELEMENTLER, grup18, katmanlar, yer } from "@/lib/elementler";
 import { Icon } from "./icons";
-import { href } from "./temel";
+import { href, UstBar, UstEylem } from "./temel";
 
 type Mod = "z" | "ezber";
 type Durum = { mod: Mod; sira: number[]; i: number; secim: [number, number] | null; sonuc: Record<number, boolean>; dogru: number };
@@ -38,7 +38,6 @@ function enIyi(): number {
 export default function PeriyodikOyun() {
   const [d, setD] = useState<Durum | null>(null);
   const [rekor, setRekor] = useState(0);
-  const Back = Icon.back;
   useEffect(() => setRekor(enIyi()), []);
 
   const bitti = d !== null && d.i >= TUR;
@@ -147,10 +146,11 @@ export default function PeriyodikOyun() {
 
   return (
     <div className="app" data-ders="kimya">
-      <header className="top">
-        <Link className="back" href="/oyunlar/" aria-label="Oyunlara dön"><Back /></Link>
-        <div className="ttl">Periyodik tabloda yerini bul</div>
-      </header>
+      <UstBar
+        geri={{ to: "/oyunlar/", label: "Oyunlara dön" }}
+        baslik="Periyodik tabloda yerini bul"
+        sag={d && <UstEylem label="Baştan başla" icon={<Icon.tekrar />} onClick={() => setD(null)} />}
+      />
       <main className="view lesson">{govde}</main>
     </div>
   );

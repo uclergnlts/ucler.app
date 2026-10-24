@@ -67,9 +67,9 @@ export default function Giris() {
     : mod === "giris" ? "Hesabına gir, ilerlemen bu cihaza gelsin." : "Hesabının e-posta adresini yaz, yenileme bağlantısı gönderelim.";
   return (
     <div className="app">
-      <GeriTop to="/profil/" label="Profil'e dön" />
+      <GeriTop to="/profil/" label="Profil'e dön" baslik={baslik} />
       <Govde>
-        <PageHead title={baslik} text={metin} />
+        <PageHead text={metin} />
         {google && mod !== "unuttum" && (
           <div className="grid gap-3">
             <GoogleDugme disabled={bekle} onClick={() => { setHata(""); googleIleGir().catch((e) => setHata(hataMetni(e))); }} />

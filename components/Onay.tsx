@@ -35,9 +35,9 @@ export default function Onay() {
       : ["Bağlantı çalışmadı", "Bu bağlantının süresi dolmuş ya da daha önce kullanılmış. Hesabını zaten onayladıysan giriş yapabilirsin."];
   return (
     <div className="app">
-      <GeriTop to="/profil/" label="Profil'e dön" />
+      <GeriTop to="/profil/" label="Profil'e dön" baslik={baslik} />
       <Govde>
-        <PageHead title={baslik} text={metin} />
+        <PageHead text={metin} />
         {durum === "tamam" && <Button asChild><Link href="/">Derslere başla</Link></Button>}
         {durum === "hata" && <Button asChild><Link href="/giris/?giris">Giriş yap</Link></Button>}
       </Govde>

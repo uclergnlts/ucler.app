@@ -16,7 +16,7 @@ import { VIDEOLAR, yerHref, type Video } from "@/lib/videolar";
 import { adres } from "@/lib/site";
 import { Icon } from "./icons";
 import { AnimatePresence, motion } from "motion/react";
-import { PageHead, Top } from "./temel";
+import { PageHead, UstBar } from "./temel";
 import { Button } from "./ui/button";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
 
@@ -283,9 +283,9 @@ export default function VideoFeed({ konular }: { konular: Record<string, string>
   if (!VIDEOLAR.length)
     return (
       <div className="app">
-        <Top />
+        <UstBar baslik="Videolar" />
         <main className="view">
-          <PageHead title="Videolar" text="Kısa, dikey konu videoları çok yakında burada. Her videodan ilgili konuya geçebileceksin." />
+          <PageHead text="Kısa, dikey konu videoları çok yakında burada. Her videodan ilgili konuya geçebileceksin." />
         </main>
       </div>
     );

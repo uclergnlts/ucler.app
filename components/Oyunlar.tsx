@@ -4,14 +4,14 @@ import { DERSLER } from "@/lib/dersler";
 import { OYUNLAR } from "@/lib/oyunlar";
 import { Icon } from "./icons";
 import { Badge } from "./ui/badge";
-import { Govde, Liste, PageHead, Satir, Top } from "./temel";
+import { Govde, Liste, PageHead, Satir, UstBar, UstEylem } from "./temel";
 
 export default function Oyunlar() {
   return (
     <div className="app">
-      <Top />
+      <UstBar baslik="Oyunlar" sag={<UstEylem href="/lig/" label="Haftalık lig" icon={<Icon.kupa />} />} />
       <Govde>
-        <PageHead title="Oyunlar"text="Konularda öğrendiğini kısa oyunlarla dene." />
+        <PageHead text="Konularda öğrendiğini kısa oyunlarla dene." />
         <Liste>
           {OYUNLAR.map((o) => {
             const I = Icon[o.ders];

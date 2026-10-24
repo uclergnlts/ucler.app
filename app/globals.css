@@ -64,6 +64,12 @@ img{display:block}
 .logo i{font-style:normal;color:#d63c63}
 .back{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line-2);flex:none;color:var(--ink)}
 .back svg{width:20px;height:20px}
+/* uygulama üst çubuğu: geri + başlık + eylemler tek satırda; kaydırınca alt çizgi */
+.ust-bar{gap:2px;margin-inline:-16px;padding-left:max(8px, env(safe-area-inset-left, 0px));padding-right:max(8px, env(safe-area-inset-right, 0px));min-height:calc(52px + env(safe-area-inset-top, 0px));padding-top:calc(6px + env(safe-area-inset-top, 0px));padding-bottom:6px;transition:box-shadow .15s}
+.ust-bar.kaydi{box-shadow:0 1px 0 var(--line)}
+.ust-bar.ust-kok{padding-left:max(16px, env(safe-area-inset-left, 0px))}
+.ust-baslik{flex:1;min-width:0;margin:0 0 0 4px;font-family:var(--f-display);font-weight:800;font-size:18px;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ust-kok .ust-baslik{margin-left:0;font-size:22px}
 .top .ttl{font-family:var(--f-display);font-weight:800;font-size:16px;min-width:0;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 /* ders ekranı ve oyunlar: oyunlar bu ortak sınıfları kullanır; görünüm components/ui/ ile aynıdır */

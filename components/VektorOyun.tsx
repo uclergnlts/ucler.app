@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { kaydet, PUAN } from "@/lib/puan";
 import { Icon } from "./icons";
-import { href } from "./temel";
+import { href, UstBar, UstEylem } from "./temel";
 
 type Mod = "cizim" | "kafadan";
 type V = { x: number; y: number };
@@ -103,7 +103,6 @@ function enIyi(): number {
 export default function VektorOyun() {
   const [d, setD] = useState<Durum | null>(null);
   const [rekor, setRekor] = useState(0);
-  const Back = Icon.back;
   useEffect(() => setRekor(enIyi()), []);
 
   const bitti = d !== null && d.i >= TUR;
@@ -221,10 +220,11 @@ export default function VektorOyun() {
 
   return (
     <div className="app" data-ders="fizik">
-      <header className="top">
-        <Link className="back" href="/oyunlar/" aria-label="Oyunlara dön"><Back /></Link>
-        <div className="ttl">Vektörle hedefi vur</div>
-      </header>
+      <UstBar
+        geri={{ to: "/oyunlar/", label: "Oyunlara dön" }}
+        baslik="Vektörle hedefi vur"
+        sag={d && <UstEylem label="Baştan başla" icon={<Icon.tekrar />} onClick={() => setD(null)} />}
+      />
       <main className="view lesson">{govde}</main>
     </div>
   );

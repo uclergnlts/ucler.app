@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Bolum, GeriTop, Govde, PageHead } from "@/components/temel";
+import { Bolum, GeriTop, Govde, UstEylem } from "@/components/temel";
+import { Icon } from "@/components/icons";
 import { INSTAGRAM } from "@/lib/site";
 
 export const metadata = { title: "Hakkında", description: "ucler nedir, nasıl kullanılır." };
@@ -8,9 +9,8 @@ export const metadata = { title: "Hakkında", description: "ucler nedir, nasıl 
 export default function Page() {
   return (
     <div className="app">
-      <GeriTop to="/profil/" label="Profil'e dön" />
+      <GeriTop to="/profil/" label="Profil'e dön" baslik="Hakkında" sag={<UstEylem external href={INSTAGRAM.url} label={`Instagram: ${INSTAGRAM.ad}`} icon={<Icon.instagram />} />} />
       <Govde className="text-[15px] leading-relaxed">
-        <PageHead title="Hakkında" />
         <p>
           ucler, fizik, kimya ve biyolojiyi en temelden anlatan bir öğrenme sitesi. Konular kısa, görselli kartlarla anlatılır;
           9. sınıftan üniversitenin ilk yıllarına kadar herkes için yazıldı ve YKS&apos;nin konularını kapsamayı amaçlar.

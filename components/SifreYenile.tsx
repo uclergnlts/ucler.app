@@ -20,9 +20,9 @@ export default function SifreYenile() {
   }
   return (
     <div className="app">
-      <GeriTop to="/profil/" label="Profil'e dön" />
+      <GeriTop to="/profil/" label="Profil'e dön" baslik="Yeni şifre" />
       <Govde>
-        <PageHead title="Yeni şifre" text={oturum === null ? "Bu bağlantının süresi dolmuş ya da kullanılmış. Yeni bir bağlantı iste." : "Hesabın için yeni bir şifre belirle."} />
+        <PageHead text={oturum === null ? "Bu bağlantının süresi dolmuş ya da kullanılmış. Yeni bir bağlantı iste." : "Hesabın için yeni bir şifre belirle."} />
         {tamam ? (
           <>
             <p role="status" className="rounded-xl bg-good-soft px-3.5 py-2.5 text-[14px] font-medium">Şifren değişti.</p>

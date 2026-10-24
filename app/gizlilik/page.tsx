@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Bolum, GeriTop, Govde, PageHead } from "@/components/temel";
+import { Bolum, GeriTop, Govde, UstEylem } from "@/components/temel";
+import { Icon } from "@/components/icons";
 import { INSTAGRAM } from "@/lib/site";
 
 export const metadata = { title: "Gizlilik", description: "ucler'de verilerin nerede tutulduğu." };
@@ -8,9 +9,8 @@ export const metadata = { title: "Gizlilik", description: "ucler'de verilerin ne
 export default function Page() {
   return (
     <div className="app">
-      <GeriTop to="/profil/" label="Profil'e dön" />
+      <GeriTop to="/profil/" label="Profil'e dön" baslik="Gizlilik" sag={<UstEylem href="/profil/ayarlar/" label="Ayarlar" icon={<Icon.ayar />} />} />
       <Govde className="text-[15px] leading-relaxed">
-        <PageHead title="Gizlilik" />
         <Bolum title="Hesap isteğe bağlı">
           <p>ucler&apos;i hesap açmadan da kullanabilirsin. Hesap açarsan yalnızca e-posta adresini, şifreni ve istersen adını alırız.</p>
         </Bolum>

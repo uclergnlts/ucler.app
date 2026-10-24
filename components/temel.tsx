@@ -2,6 +2,7 @@
 // Sayfaların ortak parçaları: logo, üst çubuk, sayfa başlığı, liste satırı. Görünüm shadcn/ui + Tailwind,
 // hareket Motion ile. Sade: beyaz zemin, 1px çizgiler, renk yalnızca küçük vurgularda (docs/KARARLAR.md).
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { motion, type HTMLMotionProps } from "motion/react";
 import { DERSLER, type Entry } from "@/lib/dersler";
 import { INSTAGRAM } from "@/lib/site";
@@ -25,15 +26,52 @@ export const Top = ({ children }: { children?: React.ReactNode }) => (
   </header>
 );
 
-/** Alt sayfaların üst çubuğu: geri düğmesi (Profil'den açılan Hakkında, Gizlilik gibi). */
-export const GeriTop = ({ to, label }: { to: string; label: string }) => {
+/**
+ * Uygulama üst çubuğu (iOS/Android gibi): solda geri, yanında başlık, sağda o ekranın işi olan düğmeler.
+ * Sayfa kaydırılınca altında ince çizgi belirir. Başlık sayfanın h1'idir.
+ */
+export function UstBar({ geri, baslik, sag }: {
+  geri?: { to: string; label: string };
+  baslik: React.ReactNode;
+  sag?: React.ReactNode;
+}) {
   const Back = Icon.back;
+  const [kaydi, setKaydi] = useState(false);
+  useEffect(() => {
+    const f = () => setKaydi(window.scrollY > 4);
+    f();
+    window.addEventListener("scroll", f, { passive: true });
+    return () => window.removeEventListener("scroll", f);
+  }, []);
   return (
-    <header className="top">
-      <Button asChild variant="outline" size="icon"><Link href={to} aria-label={label}><Back /></Link></Button>
+    <header className={cn("top ust-bar", !geri && "ust-kok", kaydi && "kaydi")}>
+      {geri && (
+        <Button asChild variant="ghost" size="icon" className="flex-none text-foreground">
+          <Link href={geri.to} aria-label={geri.label}><Back /></Link>
+        </Button>
+      )}
+      <h1 className="ust-baslik">{baslik}</h1>
+      {sag && <div className="flex flex-none items-center">{sag}</div>}
     </header>
   );
-};
+}
+
+/** Üst çubuğun sağındaki simge düğmesi: href verilirse bağlantı, yoksa düğme. */
+export function UstEylem({ icon, label, href: to, onClick, aktif, external }: {
+  icon: React.ReactNode; label: string; href?: string; onClick?: () => void; aktif?: boolean; external?: boolean;
+}) {
+  const cls = cn(aktif ? "text-acc" : "text-muted-foreground", "hover:text-foreground");
+  if (to && external)
+    return <Button asChild variant="ghost" size="icon" className={cls}><a href={to} target="_blank" rel="noopener noreferrer" aria-label={label} title={label}>{icon}</a></Button>;
+  if (to)
+    return <Button asChild variant="ghost" size="icon" className={cls}><Link href={to} aria-label={label} title={label}>{icon}</Link></Button>;
+  return <Button variant="ghost" size="icon" className={cls} aria-label={label} title={label} onClick={onClick}>{icon}</Button>;
+}
+
+/** Eski ad: yalnızca geri düğmesi olan üst çubuk. */
+export const GeriTop = ({ to, label, baslik, sag }: { to: string; label: string; baslik: React.ReactNode; sag?: React.ReactNode }) => (
+  <UstBar geri={{ to, label }} baslik={baslik} sag={sag} />
+);
 
 /** Sayfa gövdesi: açılırken hafifçe yukarı kayarak belirir. */
 export const Govde = ({ className, ...props }: HTMLMotionProps<"main">) => (
@@ -46,12 +84,9 @@ export const Govde = ({ className, ...props }: HTMLMotionProps<"main">) => (
   />
 );
 
-export const PageHead = ({ title, text }: { title: string; text?: string }) => (
-  <section className="grid gap-1">
-    <h1 className="text-[28px]">{title}</h1>
-    {text && <p className="text-[15px] text-muted-foreground">{text}</p>}
-  </section>
-);
+/** Sayfanın kısa açıklaması (başlık üst çubukta, UstBar). */
+export const PageHead = ({ text }: { text?: string }) =>
+  text ? <p className="text-[15px] text-muted-foreground">{text}</p> : null;
 
 export const Bolum = ({ title, more, children, id }: { title?: string; more?: React.ReactNode; children: React.ReactNode; id?: string }) => (
   <section className="grid gap-2.5" id={id}>

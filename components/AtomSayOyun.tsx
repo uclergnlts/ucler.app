@@ -7,7 +7,7 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import { kaydet, PUAN } from "@/lib/puan";
 import { coz, FORMULLER, katkiDegeri, say, toplam, yanlisSay } from "@/lib/formul";
 import { Icon } from "./icons";
-import { href } from "./temel";
+import { href, UstBar, UstEylem } from "./temel";
 
 type Soru = { f: string; ad: string; el: string | null; dogru: number; secenek: number[] };
 type Durum = { sorular: Soru[]; i: number; secim: number | null; dogru: number };
@@ -93,7 +93,6 @@ function enIyi(): number {
 export default function AtomSayOyun() {
   const [d, setD] = useState<Durum | null>(null);
   const [rekor, setRekor] = useState(0);
-  const Back = Icon.back;
   useEffect(() => setRekor(enIyi()), []);
 
   const bitti = d !== null && d.i >= TUR;
@@ -178,10 +177,11 @@ export default function AtomSayOyun() {
 
   return (
     <div className="app" data-ders="kimya">
-      <header className="top">
-        <Link className="back" href="/oyunlar/" aria-label="Oyunlara dön"><Back /></Link>
-        <div className="ttl">Formülde atom say</div>
-      </header>
+      <UstBar
+        geri={{ to: "/oyunlar/", label: "Oyunlara dön" }}
+        baslik="Formülde atom say"
+        sag={d && <UstEylem label="Baştan başla" icon={<Icon.tekrar />} onClick={() => setD(null)} />}
+      />
       <main className="view lesson">{govde}</main>
     </div>
   );

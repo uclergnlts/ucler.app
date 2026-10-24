@@ -3,7 +3,7 @@ import { useState } from "react";
 import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
 import { useProg } from "@/lib/store";
 import { Icon } from "./icons";
-import { Bos, Govde, Liste, PageHead, Row, Top } from "./temel";
+import { Bos, Govde, Liste, PageHead, Row, UstBar, UstEylem } from "./temel";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 
@@ -28,9 +28,9 @@ export default function Explore({ all }: { all: Record<DersId, Entry[]> }) {
 
   return (
     <div className="app">
-      <Top />
+      <UstBar baslik="Keşfet" sag={<UstEylem href="/profil/kaydedilenler/" label="Kaydedilenler" icon={<Icon.kayit />} />} />
       <Govde>
-        <PageHead title="Keşfet" text="Bütün konular tek yerde. Ara ya da derse göre süz." />
+        <PageHead text="Bütün konular tek yerde. Ara ya da derse göre süz." />
         <label className="relative block">
           <span className="pointer-events-none absolute top-1/2 left-4 -translate-y-1/2 text-muted-foreground [&_svg]:size-5"><Search /></span>
           <Input

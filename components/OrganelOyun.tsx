@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { kaydet, PUAN } from "@/lib/puan";
 import { Icon } from "./icons";
-import { href } from "./temel";
+import { href, UstBar, UstEylem } from "./temel";
 
 type Mod = "hayvan" | "bitki";
 type Org = { ad: string; gorev: string; not: string };
@@ -198,7 +198,6 @@ function enIyi(): number {
 export default function OrganelOyun() {
   const [d, setD] = useState<Durum | null>(null);
   const [rekor, setRekor] = useState(0);
-  const Back = Icon.back;
   useEffect(() => setRekor(enIyi()), []);
 
   const bitti = d !== null && d.i >= TUR;
@@ -292,10 +291,11 @@ export default function OrganelOyun() {
 
   return (
     <div className="app" data-ders="biyoloji">
-      <header className="top">
-        <Link className="back" href="/oyunlar/" aria-label="Oyunlara dön"><Back /></Link>
-        <div className="ttl">Organeli bul</div>
-      </header>
+      <UstBar
+        geri={{ to: "/oyunlar/", label: "Oyunlara dön" }}
+        baslik="Organeli bul"
+        sag={d && <UstEylem label="Baştan başla" icon={<Icon.tekrar />} onClick={() => setD(null)} />}
+      />
       <main className="view lesson">{govde}</main>
     </div>
   );

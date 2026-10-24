@@ -1,13 +1,13 @@
 "use client";
-// Profil'in alt ekranlarının ortak çerçevesi: üstte Profil'e dönen geri düğmesi, altında başlık ve içerik.
+// Profil'in alt ekranlarının ortak çerçevesi: üst çubukta Profil'e dönen geri, başlık ve sağda ekranın düğmesi.
 import { GeriTop, Govde, PageHead } from "../temel";
 
-export default function Kabuk({ title, text, children }: { title: string; text?: string; children: React.ReactNode }) {
+export default function Kabuk({ title, text, sag, children }: { title: string; text?: string; sag?: React.ReactNode; children: React.ReactNode }) {
   return (
     <div className="app">
-      <GeriTop to="/profil/" label="Profil'e dön" />
+      <GeriTop to="/profil/" label="Profil'e dön" baslik={title} sag={sag} />
       <Govde>
-        <PageHead title={title} text={text} />
+        <PageHead text={text} />
         {children}
       </Govde>
     </div>

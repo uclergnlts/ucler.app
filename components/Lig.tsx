@@ -8,7 +8,7 @@ import { useOturum } from "@/lib/bulut";
 import { kalanSure, ligOku, type Lig as LigVeri, type LigSatir } from "@/lib/lig";
 import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
-import { Govde, Top } from "./temel";
+import { Govde, UstBar, UstEylem } from "./temel";
 import { Button } from "./ui/button";
 
 const RENKLER = ["var(--c1)", "var(--c2)", "var(--c3)", "var(--c4)", "var(--c5)", "#0ea5a4"];
@@ -127,11 +127,11 @@ export default function Lig() {
 
   return (
     <div className="app">
-      <Top />
+      <UstBar geri={{ to: "/", label: "Ana sayfa" }} baslik="Haftalık lig" sag={<UstEylem label="Yenile" icon={<Icon.tekrar />} onClick={yukle} />} />
       <Govde className="gap-4 pb-28">
         <section className="relative grid gap-1 overflow-hidden rounded-3xl bg-[linear-gradient(135deg,#8d55e0,#2f7cf6)] p-5 text-white">
           <span className="absolute -top-6 -right-6 grid size-32 place-items-center rounded-full bg-white/10 [&_svg]:size-16 [&_svg]:stroke-white/70" aria-hidden="true"><Kupa /></span>
-          <h1 className="font-display text-[28px] leading-tight font-extrabold">Haftalık lig</h1>
+          <h2 className="font-display text-[26px] leading-tight font-extrabold">Bu hafta</h2>
           <p className="text-[15px] font-semibold text-white/85">Bu hafta kazandığın puanlarla sıralan.</p>
           <div className="mt-2 flex flex-wrap gap-2 text-[13px] font-bold">
             <span className="rounded-full bg-white/20 px-3 py-1">{veri ? `Bitmesine ${kalanSure(veri.bitis, simdi)}` : "Hafta pazar gece biter"}</span>

@@ -10,7 +10,7 @@ import { useDurumlar } from "@/lib/store";
 import { asamaSayisi } from "@/lib/asama";
 import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
-import { Govde, Html, href } from "./temel";
+import { Govde, Html, href, UstBar, UstEylem } from "./temel";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "./ui/sheet";
@@ -25,23 +25,24 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
   const uler = uniteler(list);
   const ready = list.filter((e) => e.id), done = ready.filter((e) => d.prog[`${ders}.${e.id}`]).length;
   const [secim, setSecimHam] = useState<Secim>(null);
+  const [yardim, setYardim] = useState(false);
   // Pencere bir SheetTrigger'dan açılmıyor; kapanınca odak açan düğmeye dönsün diye o düğme saklanır.
   const acan = useRef<HTMLElement | null>(null);
   const setSecim = (x: Secim) => {
     if (x) acan.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     setSecimHam(x);
   };
-  const Back = Icon.back;
   return (
     <div className="app" data-ders={ders}>
-      <header className="top">
-        <Button asChild variant="outline" size="icon"><Link href="/" aria-label="Ana sayfa"><Back /></Link></Button>
-      </header>
+      <UstBar
+        geri={{ to: "/", label: "Ana sayfa" }}
+        baslik={s.ad}
+        sag={<UstEylem label="Bu ders nasıl ilerler?" icon={<Icon.soru />} onClick={() => setYardim(true)} />}
+      />
       <Govde>
         <section className="grid gap-1.5">
-          <h1 className="text-[28px]">{s.ad}</h1>
-          <p className="text-[15px] text-muted-foreground">{s.yol}. Konular sırayla açılır. Bir üniteyi zaten biliyorsan ünite testinden en az {GECME} alarak atlayabilirsin.</p>
-          <Progress className="mt-2.5" value={ready.length ? (100 * done) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti`} />
+          <p className="text-[15px] text-muted-foreground">{s.yol}.</p>
+          <Progress className="mt-1.5" value={ready.length ? (100 * done) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti`} />
           <span className="text-[13px] font-semibold text-muted-foreground">{done} / {ready.length} konu bitti</span>
         </section>
         {uler.map((u) => {
@@ -93,6 +94,17 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
           );
         })}
       </Govde>
+      <Sheet open={yardim} onOpenChange={setYardim}>
+        <SheetContent data-ders={ders}>
+          <div className="grid gap-2 pb-2">
+            <SheetTitle className="text-[22px]">Bu ders nasıl ilerler?</SheetTitle>
+            <SheetDescription className="text-[15px] text-muted-foreground">
+              Konular sırayla açılır; her konu bir öncekinin üzerine kurulu. Bir üniteyi zaten biliyorsan ünite testinden en az {GECME} alarak o üniteyi atlayabilirsin. Başladığın konular hep açık kalır.
+            </SheetDescription>
+            <Button className="mt-2" onClick={() => setYardim(false)}>Anladım</Button>
+          </div>
+        </SheetContent>
+      </Sheet>
       <Sheet open={!!secim} onOpenChange={(o) => { if (!o) setSecim(null); }}>
         <SheetContent data-ders={ders} onCloseAutoFocus={(e) => { if (acan.current?.isConnected) { e.preventDefault(); acan.current.focus(); } }}>
           {secim?.tur === "konu" && <KonuPencere ders={ders} list={list} e={secim.e} sira={sira} />}
