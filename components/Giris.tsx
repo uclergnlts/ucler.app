@@ -95,16 +95,16 @@ export default function Giris() {
           )}
           {hata && <p role="alert" className="rounded-xl bg-bad-soft px-3.5 py-2.5 text-[14px] font-medium text-bad">{hata}</p>}
           {bilgi && <p role="status" className="rounded-xl bg-good-soft px-3.5 py-2.5 text-[14px] font-medium">{bilgi}</p>}
-          <Button type="submit" className="mt-1 w-full" disabled={bekle || !eposta.trim() || (mod !== "unuttum" && !sifre)}>
+          <Button type="submit" variant="hesap" className="mt-1 w-full" disabled={bekle || !eposta.trim() || (mod !== "unuttum" && !sifre)}>
             {bekle ? "Bekle..." : mod === "kayit" ? "Hesap aç" : mod === "giris" ? "Giriş yap" : "Bağlantı gönder"}
           </Button>
         </form>
         <div className="grid justify-items-center gap-1 text-[15px]">
-          {mod === "kayit" && <Degis onClick={() => setMod("giris")}>Zaten hesabın var mı? <b>Giriş yap</b></Degis>}
+          {mod === "kayit" && <Degis onClick={() => setMod("giris")}>Zaten hesabın var mı? <b className="text-[var(--c1)]">Giriş yap</b></Degis>}
           {mod === "giris" && (
             <>
               <Degis onClick={() => setMod("unuttum")}>Şifreni mi unuttun?</Degis>
-              <Degis onClick={() => setMod("kayit")}>Hesabın yok mu? <b>Hesap aç</b></Degis>
+              <Degis onClick={() => setMod("kayit")}>Hesabın yok mu? <b className="text-[var(--c1)]">Hesap aç</b></Degis>
             </>
           )}
           {mod === "unuttum" && <Degis onClick={() => setMod("giris")}>Giriş ekranına dön</Degis>}

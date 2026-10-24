@@ -15,6 +15,9 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-foreground hover:bg-secondary/70",
         ghost: "text-foreground hover:bg-secondary",
         link: "text-primary underline-offset-4 hover:underline",
+        // Hesap aç / Giriş yap: her yerde aynı mavi, ders renginden bağımsız.
+        hesap: "bg-[var(--c1)] text-white hover:bg-[color-mix(in_srgb,var(--c1)_88%,black)] disabled:bg-secondary disabled:text-muted-foreground disabled:opacity-100",
+        hesapCizgi: "border-[1.5px] border-[var(--c1)] bg-card text-[var(--c1)] hover:bg-[color-mix(in_srgb,var(--c1)_8%,white)]",
       },
       size: {
         default: "h-12 px-5 text-base",

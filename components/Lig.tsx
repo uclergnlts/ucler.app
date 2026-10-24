@@ -172,8 +172,8 @@ export default function Lig() {
               <p className="text-[14px] text-muted-foreground">Ligde yalnızca hesabı olanlar yarışır. Bu cihazda kazandığın puanlar da hesabına taşınır.</p>
             </div>
             <div className="grid grid-cols-2 gap-2">
-              <Button asChild><Link href="/giris/">Hesap aç</Link></Button>
-              <Button asChild variant="outline"><Link href="/giris/?giris">Giriş yap</Link></Button>
+              <Button asChild variant="hesap"><Link href="/giris/">Hesap aç</Link></Button>
+              <Button asChild variant="hesapCizgi"><Link href="/giris/?giris">Giriş yap</Link></Button>
             </div>
           </section>
         )}

@@ -39,7 +39,7 @@ export default function Onay() {
       <Govde>
         <PageHead text={metin} />
         {durum === "tamam" && <Button asChild><Link href="/">Derslere başla</Link></Button>}
-        {durum === "hata" && <Button asChild><Link href="/giris/?giris">Giriş yap</Link></Button>}
+        {durum === "hata" && <Button asChild variant="hesap"><Link href="/giris/?giris">Giriş yap</Link></Button>}
       </Govde>
     </div>
   );
