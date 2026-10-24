@@ -2,6 +2,7 @@
 // Haftalık lig: pazartesi 00:00 - pazar 23:59 (Türkiye saati) arasında kazanılan puanlar.
 // Liste sunucuda kurulur (supabase/migrations/20261021_haftalik_lig.sql, haftalik_lig fonksiyonu): yalnızca hesabı olan ve
 // "Haftalık ligde görün" anahtarı açık öğrenciler; dönen yalnızca ad, puan, sıra. Günlük puan en çok 600 sayılır.
+// Listeye ayrıca hesabı olmayan örnek öğrenciler de katılır (20261024_lig_ornek.sql); kapatmak sunucuda tek satır.
 import { sb, simdiEsitle } from "./bulut";
 
 /** madalya: geçen haftanın ilk üçündeyse 1, 2 ya da 3. */
