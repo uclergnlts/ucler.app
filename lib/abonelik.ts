@@ -21,7 +21,7 @@ export const ABONELIK = process.env.NEXT_PUBLIC_ABONELIK === "1";
 /** RevenueCat'teki yetkinin (entitlement) kimliği. */
 export const PLUS = "plus";
 /** RevenueCat herkese açık SDK anahtarları (Project settings > API keys). Gizli değildir. */
-const RC_ANAHTAR: Record<string, string> = { ios: "", android: "" };
+const RC_ANAHTAR: Record<string, string> = { ios: "appl_IMBjbhZXcvipjXsRaIStPfjTXgf", android: "" };
 /** Mağaza sayfaları; uygulama yayınlanınca doldurulur. Boşsa sitede o düğme görünmez. */
 export const MAGAZA = { ios: "", android: "" };
 /** Apple'ın standart kullanım lisansı (App Store'da abonelik ekranında bağlantısı istenir). */
