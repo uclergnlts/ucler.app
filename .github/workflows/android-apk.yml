@@ -3,7 +3,7 @@ name: Android APK
 on:
   workflow_dispatch:
   push:
-    branches: [main, claude/project-thread-cvcf8d]
+    branches: [main]
     paths-ignore:
       - "denetim/**"
       - "docs/**"
@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: 21

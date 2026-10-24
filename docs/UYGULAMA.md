@@ -27,6 +27,8 @@ npm run app        # next build + cap sync: out/ klasörünü iki projeye kopyal
 2. Telefonda **Geliştirici seçenekleri > USB hata ayıklama**yı aç, kabloyla bağla, ▶ düğmesine bas.
 Google Play hesabı yalnızca mağazaya yüklemek için gerekir; denemek için gerekmez.
 
+Bilgisayarsız yol: `main`'e her gönderimde GitHub **Actions > Android APK** iş akışı deneme APK'sı üretir (`ucler-apk`, 30 gün saklanır). APK'yı Android telefona indir, "bilinmeyen kaynaklardan yükleme"ye izin ver, kur. Telefon yoksa Android Studio'daki **Device Manager**'dan sanal telefon açılır; APK'yı ekranına sürükleyip bırakmak yeter.
+
 ## Bilinen sınırlar
 - Videolar şimdilik uygulamanın içinde (yaklaşık 60 MB). Video sayısı artınca Cloudflare R2'den akışla gelecek.
 - Hesap e-postalarındaki bağlantılar (doğrulama, şifre yenileme) siteyi açar. Öğrenci sonra uygulamada e-posta ve şifresiyle girer.
