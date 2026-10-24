@@ -244,7 +244,10 @@ export async function hesabiSil(sil: () => void) {
   const id = kullanici, ad = kayitAdi;
   durdur();
   const { error } = await sb().functions.invoke("hesap-sil", { method: "POST" });
-  if (error) { const s = (await sb().auth.getSession()).data.session; if (s) baslat(s.user.id, ad); else if (id) baslat(id, ad); return false; }
+  // Hesap sunucuda silindi ama yanıt yolda kaybolduysa yeniden denemek hep "oturum" hatası verir: hesap artık yoksa
+  // silme başarılı sayılır, yoksa öğrenci silinmiş bir hesapta takılı kalırdı.
+  const yok = error && (await sb().auth.getUser()).error?.code === "user_not_found";
+  if (error && !yok) { const s = (await sb().auth.getSession()).data.session; if (s) baslat(s.user.id, ad); else if (id) baslat(id, ad); return false; }
   temelSil();
   await sb().auth.signOut({ scope: "local" });
   sil();
