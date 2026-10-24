@@ -66,6 +66,17 @@ export function toggleSaved(key: string) {
   const s = read<string[]>(KEYS.saved, EMPTY_SAVED);
   write(KEYS.saved, s.includes(key) ? s.filter((k) => k !== key) : [key, ...s]);
 }
+// Hesapsız öğrencinin kaydetmek istediği konu: hesap açılınca Kaydedilenler'e eklenir. Eşitlenmez, yalnızca bu cihazda durur.
+const BEKLEYEN_KAYIT = "tf-bekleyen-kayit";
+export function bekleyenKayitYaz(key: string) { try { localStorage.setItem(BEKLEYEN_KAYIT, key); } catch {} }
+/** Bekleyen kayıt varsa Kaydedilenler'e ekler (zaten varsa dokunmaz) ve siler. */
+export function bekleyenKayitUygula() {
+  let key: string | null = null;
+  try { key = localStorage.getItem(BEKLEYEN_KAYIT); localStorage.removeItem(BEKLEYEN_KAYIT); } catch {}
+  if (!key) return;
+  const s = read<string[]>(KEYS.saved, EMPTY_SAVED);
+  if (!s.includes(key)) write(KEYS.saved, [key, ...s]);
+}
 export function resetAll() {
   write(KEYS.prog, {});
   write(KEYS.saved, []);

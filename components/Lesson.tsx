@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { DERSLER, secmeli, type DersId, type Entry, type Topic } from "@/lib/dersler";
 import {
-  asamaBitir, ipucuGoruldu, setProg, toggleAnlamadim, toggleSaved, useAnlamadim, useAsama, useDurumlar, useIpucu, useProg, useSaved, useTarayici, useYer,
+  asamaBitir, ipucuGoruldu, setProg, toggleAnlamadim, useAnlamadim, useAsama, useDurumlar, useIpucu, useProg, useTarayici, useYer,
   yanlisKaydet, yerYaz,
 } from "@/lib/store";
 import { asamalar, kartinAsamasi, sureDk } from "@/lib/asama";
@@ -33,7 +33,7 @@ import { Alt } from "./Soru";
 import { dogruMu, geriBaslik, geriMetin, hazir, ilkCevap, TestGovde, yonerge, type Cevap } from "./TestSoru";
 import AsamaYolu, { type YolDugum } from "./AsamaYolu";
 import { Konfeti, Madalya, PuanRozet } from "./Kutlama";
-import KayitDavet from "./KayitDavet";
+import KayitDavet, { useKaydet } from "./KayitDavet";
 import Bildir from "./Bildir";
 import type { BildirimYer } from "@/lib/bildirim";
 
@@ -75,7 +75,7 @@ export default function Lesson({
   }), [ogeler]);
   const [play, setPlay] = useState<Video | null>(null);
   const yon = useRef<1 | -1>(1); // kart geçişinin yönü (kayma animasyonu için)
-  const saved = useSaved().includes(`${ders}.${id}`);
+  const { saved, kaydet: konuKaydet, davet } = useKaydet(`${ders}.${id}`, href(ders, id));
   const prog = useProg(), anlamadim = useAnlamadim(), yerler = useYer(), ipucu = useIpucu();
   const eksik = on.filter((o) => !prog[`${ders}.${o.id}`]);
   const nCards = ogeler.length, nQuiz = t.quiz.length, nKart = t.cards.length;
@@ -524,10 +524,11 @@ export default function Lesson({
           aria-pressed={saved}
           aria-label="Konuyu kaydet"
           title="Konuyu kaydet"
-          onClick={() => toggleSaved(`${ders}.${id}`)}
+          onClick={konuKaydet}
         >
           <Bookmark />
         </Button>
+        {davet}
         {akista && <Button asChild variant="ghost" size="icon" className="-mr-2 text-muted-foreground"><Link href={href(ders)} aria-label="Konudan çık"><Close /></Link></Button>}
       </header>
       <main className="view gap-0 pt-1 pb-0">

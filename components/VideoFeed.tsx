@@ -10,7 +10,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { DERSLER } from "@/lib/dersler";
-import { KEYS, read, toggleSaved, useSaved, write } from "@/lib/store";
+import { KEYS, read, write } from "@/lib/store";
 import { kaydet, PUAN } from "@/lib/puan";
 import { VIDEOLAR, yerHref, type Video } from "@/lib/videolar";
 import { adres } from "@/lib/site";
@@ -20,6 +20,7 @@ import { PageHead, UstBar } from "./temel";
 import { Button } from "./ui/button";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
 import Bildir from "./Bildir";
+import { useKaydet } from "./KayitDavet";
 
 // Öğrenci bu oturumda sesi açtı mı (ya da bir video sesli oynayabildi mi). Açtıysa akıştaki sonraki videolar
 // da sesli başlar; sayfa içinde gezinip Videolar'a dönünce de (bileşen yeniden kurulsa bile) sesli kalır.
@@ -72,7 +73,7 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
   const [pct, setPct] = useState(0);
   const [hint, setHint] = useState(false);
   const y = v.yerler[0], key = `${y.ders}.${y.konu}`;
-  const saved = useSaved().includes(key);
+  const { saved, kaydet: konuKaydet, davet } = useKaydet(key, typeof window === "undefined" ? "/videolar/" : location.pathname + location.search + location.hash);
   const sessiz = o.muted || zorla;
   const I = Icon;
 
@@ -213,9 +214,10 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
             </Sheet>
           )}
           <span className="sp" />
-          <button className="reel-ic" onClick={() => { toggleSaved(key); o.toast(saved ? "Kaydedilenlerden çıkarıldı" : "Konu kaydedildi"); }} aria-pressed={saved} aria-label="Konuyu kaydet">
+          <button className="reel-ic" onClick={() => { if (konuKaydet()) o.toast(saved ? "Kaydedilenlerden çıkarıldı" : "Konu kaydedildi"); }} aria-pressed={saved} aria-label="Konuyu kaydet">
             <I.kayit />
           </button>
+          {davet}
           <Bildir yer={{ ders: y.ders, konu: y.konu, yer: `video ${v.id}`, ozet: v.baslik }}>
             <button className="reel-ic" aria-label="Anlamadım ya da hata var" title="Anlamadım / Hata var"><I.soru /></button>
           </Bildir>
