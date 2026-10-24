@@ -8,12 +8,13 @@ import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
 
+// Her sekmenin kendi rengi: seçili sekmenin simgesi ve adı bu renge döner, simgenin arkasında açık renkli zemin belirir.
 const TABS = [
-  { k: "home", href: "/", label: "Ana sayfa" },
-  { k: "kesfet", href: "/kesfet/", label: "Keşfet" },
-  { k: "video", href: "/videolar/", label: "Videolar" },
-  { k: "oyun", href: "/oyunlar/", label: "Oyunlar" },
-  { k: "profil", href: "/profil/", label: "Profil" },
+  { k: "home", href: "/", label: "Ana sayfa", renk: "var(--c1)" },
+  { k: "kesfet", href: "/kesfet/", label: "Keşfet", renk: "var(--c3)" },
+  { k: "video", href: "/videolar/", label: "Videolar", renk: "#d63c63" },
+  { k: "oyun", href: "/oyunlar/", label: "Oyunlar", renk: "#e08a00" },
+  { k: "profil", href: "/profil/", label: "Profil", renk: "var(--c5)" },
 ] as const;
 
 export default function Tabs() {
@@ -35,20 +36,24 @@ export default function Tabs() {
               key={t.k}
               href={t.href}
               aria-current={on ? "page" : undefined}
+              style={on ? { color: t.renk } : undefined}
               className={cn(
                 "relative grid content-center justify-items-center gap-0.5 text-[11px] transition-colors [&_svg]:size-6",
-                on ? "font-bold text-foreground [&_svg]:stroke-[2.4]" : "font-semibold text-muted-foreground",
+                on ? "font-bold [&_svg]:stroke-[2.4]" : "font-semibold text-muted-foreground",
               )}
             >
-              {on && (
-                <motion.span
-                  layoutId="sekme"
-                  aria-hidden="true"
-                  className="absolute top-0 h-0.5 w-8 rounded-full bg-foreground"
-                  transition={{ type: "spring", stiffness: 500, damping: 40 }}
-                />
-              )}
-              <I />
+              <span className="relative grid h-8 w-14 place-items-center">
+                {on && (
+                  <motion.span
+                    layoutId="sekme"
+                    aria-hidden="true"
+                    className="absolute inset-0 rounded-full"
+                    style={{ backgroundColor: `color-mix(in srgb, ${t.renk} 14%, white)` }}
+                    transition={{ type: "spring", stiffness: 500, damping: 40 }}
+                  />
+                )}
+                <span className="relative"><I /></span>
+              </span>
               <span>{t.label}</span>
             </Link>
           );
