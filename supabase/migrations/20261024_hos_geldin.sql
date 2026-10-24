@@ -1,4 +1,4 @@
--- Hoş geldin e-postası (supabase/functions/hos-geldin). Tablo ve fonksiyon uygulandı: 2026-10-24.
+-- Hoş geldin e-postası (supabase/functions/hos-geldin). Uygulandı: 2026-10-24 (zamanlama Üçler onayından sonra).
 -- Karşılanan hesaplar. Var olan hesaplar "eski" olarak işaretlenir, onlara gönderilmez (silinirse gönderilir).
 create table if not exists public.hos_geldin (
   user_id uuid primary key references auth.users(id) on delete cascade,
@@ -20,7 +20,7 @@ $$;
 revoke all on function public.hos_geldin_bekleyen() from public, anon, authenticated;
 grant execute on function public.hos_geldin_bekleyen() to service_role;
 
--- 10 dakikada bir. Üçler metni onaylayınca açılır.
+-- 10 dakikada bir.
 select cron.schedule('hos-geldin', '*/10 * * * *', $cron$
   select net.http_post(
     url := 'https://ergxksjvcykgmckpsrlw.supabase.co/functions/v1/hos-geldin',
