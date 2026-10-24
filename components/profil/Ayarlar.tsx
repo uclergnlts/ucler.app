@@ -6,6 +6,7 @@ import { girisYap } from "@/lib/puan";
 import { resetAll, setAd } from "@/lib/store";
 import { ses, sesAyarla, useSesAcik } from "@/lib/ses";
 import { oyunAyarla, useOyunAcik } from "@/lib/oyun";
+import { ABONELIK } from "@/lib/abonelik";
 import { Icon } from "../icons";
 import { Bolum, INSTAGRAM, Liste, Ok, Satir, UstEylem } from "../temel";
 import { Button } from "../ui/button";
@@ -39,6 +40,7 @@ export default function Ayarlar() {
                 <DialogTitle>Hesabın silinsin mi?</DialogTitle>
                 <DialogDescription>
                   Hesabın, e-posta adresin ve buluttaki bütün ilerlemen kalıcı olarak silinir; bu cihazdaki ilerleme de temizlenir. Bu geri alınamaz.
+                  {ABONELIK && " Hesabını silmek ucler Plus aboneliğini iptal etmez; aboneliğin varsa App Store ya da Google Play ayarlarından iptal et."}
                 </DialogDescription>
                 {silHata && <p role="alert" className="text-[14px] font-medium text-bad">Hesap silinemedi. İnternet bağlantını kontrol edip yeniden dene.</p>}
                 <div className="mt-2 grid gap-2">
@@ -70,6 +72,7 @@ export default function Ayarlar() {
         <Liste>
           <Satir href="/hakkinda/" icon={<Bulb />} title="Hakkında" sub="ucler nedir, nasıl kullanılır" tag={<Ok />} />
           <Satir href="/gizlilik/" icon={<Kilit />} title="Gizlilik" sub="Verilerin nerede tutulur" tag={<Ok />} />
+          <Satir href="/kosullar/" icon={<Icon.kitap />} title="Kullanım koşulları" sub="ucler'i ve Plus'ı kullanma koşulları" tag={<Ok />} />
           <Satir external href={INSTAGRAM.url} icon={<Insta />} title="İletişim" sub={`Instagram'da ${INSTAGRAM.ad}`} tag={<Ok />} />
         </Liste>
       </Bolum>

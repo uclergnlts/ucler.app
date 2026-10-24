@@ -14,6 +14,7 @@ import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "./ui/sheet";
 import AsamaYolu, { type YolDugum } from "./AsamaYolu";
+import { useOdemeli } from "@/lib/abonelik";
 
 type Secim = { tur: "konu"; e: Entry } | { tur: "test"; u: Unitem } | null;
 
@@ -119,7 +120,8 @@ function KonuPencere({ ders, list, e, sira }: { ders: DersId; list: Entry[]; e: 
   const k = `${ders}.${e.id}`, res = d.prog[k], ac = acik(list, e.id!, d);
   const nA = asamaSayisi(e.cardCount ?? 0), bitenA = res ? nA : Math.min(d.asama[k] ?? 0, nA);
   const once = bekledigi(list, e.id!);
-  const Kilit = Icon.kilit;
+  const odemeli = useOdemeli(list, e.id!);
+  const Kilit = Icon.kilit, Yildiz = Icon.yildiz;
   return (
     <div className="grid gap-3 pb-1">
       <span className="text-[13px] font-bold text-acc">{e.unite}. ünite · {e.no}. konu</span>
@@ -129,7 +131,14 @@ function KonuPencere({ ders, list, e, sira }: { ders: DersId; list: Entry[]; e: 
         <span>{nA} aşama + mini test</span>
         {e.dk && <span>yaklaşık {e.dk} dk</span>}
       </p>
-      {ac ? (
+      {ac && odemeli ? (
+        <>
+          <p className="flex items-start gap-2.5 rounded-xl bg-secondary p-3 text-[15px] [&_svg]:mt-0.5 [&_svg]:size-4 [&_svg]:flex-none [&_svg]:text-[var(--c1)]">
+            <Yildiz /><span>Bu konu <b>ucler Plus</b>&apos;ta. Her dersin ilk konusu ücretsiz; Plus ile bütün konular açılır.</span>
+          </p>
+          <Button asChild variant="hesap" className="mt-1 w-full"><Link href={href(ders, e.id)}>Plus ile aç</Link></Button>
+        </>
+      ) : ac ? (
         <>
           {!res && bitenA > 0 && <Progress value={(100 * bitenA) / nA} label={`${nA} aşamadan ${bitenA} tanesi bitti`} />}
           {res && <p className="text-[14px] font-semibold">Bitirdin: {res}</p>}

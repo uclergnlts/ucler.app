@@ -27,10 +27,12 @@ export function sb() {
 let oturum: Session | null | undefined;
 const dinleyen = new Set<() => void>();
 const yay = () => dinleyen.forEach((l) => l());
-function oturumDinle(l: () => void) {
+export function oturumDinle(l: () => void) {
   dinleyen.add(l);
   return () => { dinleyen.delete(l); };
 }
+/** Şu anki oturum (bileşen dışından okumak için; lib/abonelik.ts). */
+export const oturumAl = () => oturum;
 export const useOturum = () => useSyncExternalStore(oturumDinle, () => oturum, () => undefined);
 
 // ---- Eşitleme ----

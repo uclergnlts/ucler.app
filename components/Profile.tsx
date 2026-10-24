@@ -6,6 +6,7 @@ import { seri } from "@/lib/puan";
 import { useOyunAcik } from "@/lib/oyun";
 import { gunAdi, setAd, useAd, useStorageOk, useTekrar } from "@/lib/store";
 import { useOturum } from "@/lib/bulut";
+import { ABONELIK, usePlus } from "@/lib/abonelik";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Icon } from "./icons";
@@ -18,9 +19,9 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
   const oyun = useOyunAcik();
   const storageOk = useStorageOk(), ad = useAd(), oturum = useOturum();
   const kayitli = useKaydedilenler(all).length, anlamadim = useAnlamadiklarim(all, basliklar).length;
-  const tekrar = useTekrar();
+  const tekrar = useTekrar(), plus = usePlus();
   const sira = Object.values(tekrar).map((x) => x.g).sort(), kalan = sira.length;
-  const User = Icon.profil, TekrarI = Icon.tekrar, Kitap = Icon.kitap, Grafik = Icon.grafik, Kayit = Icon.kayit, Soru = Icon.soru, Ayar = Icon.ayar, Kupa = Icon.kupa;
+  const User = Icon.profil, TekrarI = Icon.tekrar, Kitap = Icon.kitap, Grafik = Icon.grafik, Kayit = Icon.kayit, Soru = Icon.soru, Ayar = Icon.ayar, Kupa = Icon.kupa, Yildiz = Icon.yildiz;
 
   return (
     <div className="app">
@@ -78,6 +79,9 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
           </Card>
         )}
         <Liste>
+          {ABONELIK && (
+            <Satir href="/plus/" renk="var(--c1)" icon={<Yildiz />} title="ucler Plus" sub={plus ? "Aboneliğin açık, bütün konular senin" : "Bütün konuları aç"} tag={<Ok />} />
+          )}
           <Satir
             href="/tekrar/"
             renk="var(--c1)"

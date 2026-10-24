@@ -35,6 +35,8 @@ import AsamaYolu, { type YolDugum } from "./AsamaYolu";
 import { Konfeti, Madalya, PuanRozet } from "./Kutlama";
 import KayitDavet, { useKaydet } from "./KayitDavet";
 import Bildir from "./Bildir";
+import PlusEkran from "./Plus";
+import { useOdemeli } from "@/lib/abonelik";
 import type { BildirimYer } from "@/lib/bildirim";
 
 /** Akıştaki öğe: konu kartı ya da etkileşimli adım. */
@@ -99,19 +101,21 @@ export default function Lesson({
   // bu yüzden ilerleme yazan her şey ayrıca "acikKesin"i bekler (kilitli konu kendi yan etkisiyle açılmasın).
   const durumlar = useDurumlar(), tarayici = useTarayici();
   const kapali = tarayici && !acik(list, id, durumlar);
-  const acikKesin = tarayici && !kapali;
+  // Her dersin ilk konusundan sonrası Plus ister (lib/abonelik.ts); Plus'ı olmayana konunun yerinde Plus ekranı çıkar.
+  const odemeli = useOdemeli(list, id);
+  const acikKesin = tarayici && !kapali && !odemeli;
 
   // Videodan gelen bağlantı (?kart=3) dersi o karttan açar; geçersiz değerde ilk kart. Kilitli konuda uygulanmaz.
   const kartUygulandi = useRef(false);
   useEffect(() => {
-    if (!tarayici || kartUygulandi.current) return;
+    if (!tarayici || kartUygulandi.current || odemeli) return; // Plus sonradan açılırsa bağlantı o zaman uygulanır
     kartUygulandi.current = true;
     if (kapali) return;
     const k = Number(new URLSearchParams(location.search).get("kart"));
     const j = ogeler.findIndex((o) => o.tur === "kart" && o.k === k - 1);
     if (Number.isInteger(k) && k > 0 && j >= 0) setS({ ...START, a: kartinAsamasi(nKart, k - 1), i: j, en: j });
-  }, [ogeler, nKart, tarayici, kapali]);
-  useEffect(() => { if (tarayici && !kapali) setProg({ _last: `${ders}.${id}` }); }, [ders, id, tarayici, kapali]);
+  }, [ogeler, nKart, tarayici, kapali, odemeli]);
+  useEffect(() => { if (acikKesin) setProg({ _last: `${ders}.${id}` }); }, [ders, id, acikKesin]);
   // Her sayfa en üstten açılır.
   useEffect(() => { window.scrollTo(0, 0); }, [s.q, s.a, s.ara, s.i]);
   useEffect(() => {
@@ -476,6 +480,18 @@ export default function Lesson({
             </div>
           </article>
         </main>
+      </div>
+    );
+  }
+
+  if (odemeli) {
+    return (
+      <div className="app" data-ders={ders}>
+        <header className="top gap-3">
+          <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={href(ders)} aria-label="Konulara dön"><Close /></Link></Button>
+          <span className="truncate font-display text-[15px] font-extrabold">{t.title}</span>
+        </header>
+        <main className="view pt-6"><PlusEkran konu={t.title} donus={href(ders, id)} /></main>
       </div>
     );
   }

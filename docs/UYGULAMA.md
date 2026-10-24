@@ -33,3 +33,4 @@ Bilgisayarsız yol: `main`'e her gönderimde GitHub **Actions > Android APK** i�
 - Videolar şimdilik uygulamanın içinde (yaklaşık 60 MB). Video sayısı artınca Cloudflare R2'den akışla gelecek.
 - Hesap e-postalarındaki bağlantılar (doğrulama, şifre yenileme) siteyi açar. Öğrenci sonra uygulamada e-posta ve şifresiyle girer.
 - Uygulama her açılışta ana sayfadan başlar.
+- Abonelik (ucler Plus, RevenueCat): docs/ABONELIK.md

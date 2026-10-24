@@ -53,9 +53,17 @@ export default function Page() {
         </Bolum>
         <Bolum title="Kullanım sayımı">
           <p>
-            Şu an hiçbir kullanım verisi toplanmıyor. İleride sitenin nasıl kullanıldığını anlamak için anonim bir sayım
-            (ör. hangi kartların &quot;anlamadım&quot; diye işaretlendiği) eklenebilir. Bu sayımda adın ya da kim olduğunu
-            gösteren bir bilgi gönderilmez. Sayım eklenirse burada yazılır.
+            Sitenin ve uygulamanın nasıl kullanıldığını anlamak için Umami ile toplu, anonim bir sayım yapılır (ör. hangi
+            sayfaların açıldığı, hangi kartların &quot;anlamadım&quot; diye işaretlendiği). Çerez kullanılmaz; adın, e-posta adresin ya da
+            kim olduğunu gösteren bir bilgi gönderilmez.
+          </p>
+        </Bolum>
+        <Bolum title="ucler Plus aboneliği">
+          <p>
+            Plus aboneliği telefon uygulamasında App Store ya da Google Play üzerinden alınır. Ödeme bilgilerin (kart numaran
+            dahil) yalnızca Apple ya da Google&apos;da kalır; biz görmeyiz. Aboneliğin açık olup olmadığını ve ne zaman bittiğini
+            RevenueCat üzerinden öğreniriz. Hesabınla giriş yaptıysan bu bilgi, web sitesinde de açılabilmesi için hesabına
+            kaydedilir. Hesabını silmek aboneliği iptal etmez; aboneliği mağaza ayarlarından iptal etmen gerekir.
           </p>
         </Bolum>
         <Bolum title="Soruların için">
