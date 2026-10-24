@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { kaydet, PUAN } from "@/lib/puan";
 import { Icon } from "./icons";
 import { href, UstBar, UstEylem } from "./temel";
+import { ses } from "@/lib/ses";
 
 type Mod = "cizim" | "kafadan";
 type V = { x: number; y: number };
@@ -110,7 +111,7 @@ export default function VektorOyun() {
   const sayilan = useRef<Durum | null>(null);
   useEffect(() => {
     if (!bitti || !d) return;
-    if (sayilan.current !== d) { sayilan.current = d; kaydet("oyun", 1, PUAN.oyun); }
+    if (sayilan.current !== d) { sayilan.current = d; kaydet("oyun", 1, PUAN.oyun); ses("asama"); }
     if (d.dogru > enIyi()) {
       try { localStorage.setItem(KAYIT, String(d.dogru)); } catch {}
       setRekor(d.dogru);
@@ -150,13 +151,15 @@ export default function VektorOyun() {
     const gerek = { x: t.hedef.x - t.bas.x, y: t.hedef.y - t.bas.y };
     const R = topla(sec.map((j) => t.vek[j]));
     const ekle = (j: number) => setD((o) => (!o || o.sonuc !== null || o.secili.includes(j) ? o : { ...o, secili: [...o.secili, j] }));
-    const kontrolEt = () =>
+    const kontrolEt = () => {
+      if (d.sonuc === null && sec.length) ses(R.x === gerek.x && R.y === gerek.y ? "dogru" : "yanlis");
       setD((o) => {
         if (!o || o.sonuc !== null || !o.secili.length) return o;
         const r = topla(o.secili.map((j) => t.vek[j]));
         const ok = r.x === gerek.x && r.y === gerek.y;
         return { ...o, sonuc: ok, dogru: o.dogru + (ok ? 1 : 0) };
       });
+    };
     const adlar = (s: number[]) => s.map((j) => AD[j]).join(" + ");
     const bilesen = (s: number[]) => (
       <>R<sub>x</sub> = {toplamYaz(s.map((j) => t.vek[j].x))}, R<sub>y</sub> = {toplamYaz(s.map((j) => t.vek[j].y))}</>

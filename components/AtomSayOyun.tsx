@@ -8,6 +8,7 @@ import { kaydet, PUAN } from "@/lib/puan";
 import { coz, FORMULLER, katkiDegeri, say, toplam, yanlisSay } from "@/lib/formul";
 import { Icon } from "./icons";
 import { href, UstBar, UstEylem } from "./temel";
+import { ses } from "@/lib/ses";
 
 type Soru = { f: string; ad: string; el: string | null; dogru: number; secenek: number[] };
 type Durum = { sorular: Soru[]; i: number; secim: number | null; dogru: number };
@@ -100,7 +101,7 @@ export default function AtomSayOyun() {
   const sayilan = useRef<Durum | null>(null);
   useEffect(() => {
     if (!bitti || !d) return;
-    if (sayilan.current !== d) { sayilan.current = d; kaydet("oyun", 1, PUAN.oyun); }
+    if (sayilan.current !== d) { sayilan.current = d; kaydet("oyun", 1, PUAN.oyun); ses("asama"); }
     if (d.dogru > enIyi()) {
       try { localStorage.setItem(KAYIT, String(d.dogru)); } catch {}
       setRekor(d.dogru);
@@ -137,8 +138,10 @@ export default function AtomSayOyun() {
   } else {
     const s = d.sorular[d.i], sec = d.secim;
     const bildi = sec === s.dogru;
-    const cevapla = (n: number) =>
+    const cevapla = (n: number) => {
+      if (sec === null) ses(n === s.dogru ? "dogru" : "yanlis");
       setD((o) => (!o || o.secim !== null ? o : { ...o, secim: n, dogru: o.dogru + (n === s.dogru ? 1 : 0) }));
+    };
     govde = (
       <>
         <div className="oyun-ust">

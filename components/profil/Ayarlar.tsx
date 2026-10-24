@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { bildirimOku, bildirimYaz, cikisYap, hesabiSil, useEsitleme, useOturum, type Bildirim } from "@/lib/bulut";
 import { girisYap } from "@/lib/puan";
 import { resetAll, setAd } from "@/lib/store";
-import { ses, sesAyarla, useSesAcik } from "@/lib/ses";
+import { animSes, animSesAyarla, ses, sesAyarla, useAnimSesAcik, useSesAcik } from "@/lib/ses";
 import { oyunAyarla, useOyunAcik } from "@/lib/oyun";
 import { ABONELIK } from "@/lib/abonelik";
 import { Icon } from "../icons";
@@ -150,19 +150,18 @@ function Bildirimler({ kimlik }: { kimlik: string }) {
   );
 }
 
-/** Derslerde doğru/yanlış sesi ve titreşimi. */
-function SesAnahtari() {
-  const acik = useSesAcik();
+/** Ayarlar'daki aç/kapa satırı. */
+function Anahtar({ acik, ayarla, baslik, metin }: { acik: boolean; ayarla: (v: boolean) => void; baslik: string; metin: string }) {
   return (
     <button
       role="switch"
       aria-checked={acik}
       className="flex w-full items-center justify-between gap-3 rounded-2xl border border-border bg-card px-4 py-3 text-left"
-      onClick={() => { sesAyarla(!acik); if (!acik) ses("dogru"); }}
+      onClick={() => ayarla(!acik)}
     >
       <span>
-        <b className="block font-semibold leading-snug">Ses ve titreşim</b>
-        <span className="block text-[13px] text-muted-foreground">Doğru ve yanlış cevapta kısa bir ses</span>
+        <b className="block font-semibold leading-snug">{baslik}</b>
+        <span className="block text-[13px] text-muted-foreground">{metin}</span>
       </span>
       <i aria-hidden="true" className={`relative h-7 w-[46px] flex-none rounded-full transition-colors ${acik ? "bg-acc" : "bg-secondary"}`}>
         <i className={`absolute top-[3px] left-[3px] size-[22px] rounded-full bg-white shadow transition-transform ${acik ? "translate-x-[18px]" : ""}`} />
@@ -171,23 +170,23 @@ function SesAnahtari() {
   );
 }
 
+/** Ses ve titreşim; açıksa altında animasyon sesleri ayrıca kapatılabilir. */
+function SesAnahtari() {
+  const acik = useSesAcik(), anim = useAnimSesAcik();
+  return (
+    <>
+      <Anahtar acik={acik} baslik="Ses ve titreşim" metin="Doğru ve yanlış cevapta, aşama ve konu bitince kısa bir ses"
+        ayarla={(v) => { sesAyarla(v); if (v) ses("dogru"); }} />
+      {acik && (
+        <Anahtar acik={anim} baslik="Animasyon sesleri" metin="Görseller çizilirken, madalya, konfeti ve puan gelirken hafif sesler"
+          ayarla={(v) => { animSesAyarla(v); if (v) animSes("madalya"); }} />
+      )}
+    </>
+  );
+}
+
 /** Puan, seri, lig ve konfeti: isteyen kapatır, yalnızca konular ve testler kalır. */
 function OyunAnahtari() {
   const acik = useOyunAcik();
-  return (
-    <button
-      role="switch"
-      aria-checked={acik}
-      className="flex w-full items-center justify-between gap-3 rounded-2xl border border-border bg-card px-4 py-3 text-left"
-      onClick={() => oyunAyarla(!acik)}
-    >
-      <span>
-        <b className="block font-semibold leading-snug">Puan, seri ve kutlamalar</b>
-        <span className="block text-[13px] text-muted-foreground">Kapatırsan puan, seri, lig ve konfeti görünmez</span>
-      </span>
-      <i aria-hidden="true" className={`relative h-7 w-[46px] flex-none rounded-full transition-colors ${acik ? "bg-acc" : "bg-secondary"}`}>
-        <i className={`absolute top-[3px] left-[3px] size-[22px] rounded-full bg-white shadow transition-transform ${acik ? "translate-x-[18px]" : ""}`} />
-      </i>
-    </button>
-  );
+  return <Anahtar acik={acik} ayarla={oyunAyarla} baslik="Puan, seri ve kutlamalar" metin="Kapatırsan puan, seri, lig ve konfeti görünmez" />;
 }

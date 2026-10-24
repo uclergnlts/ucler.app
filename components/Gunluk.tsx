@@ -1,11 +1,12 @@
 "use client";
 // Her sayfada çalışır: günün ilk açılışında giriş puanını verir ve kazanılan ödülleri alt menünün hemen üstünde
 // kısaca gösterir (üstte başlığın üstüne binmesin).
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { girisYap, odulDinle, type Odul } from "@/lib/puan";
 import { useOyunAcik } from "@/lib/oyun";
+import { animSes } from "@/lib/ses";
 
 export default function Gunluk() {
   const [liste, setListe] = useState<Odul[]>([]);
@@ -14,9 +15,12 @@ export default function Gunluk() {
   const oyun = useOyunAcik();
   const sessiz = !oyun || /^\/(fizik|kimya|biyoloji)\/[^/]+\/?$/.test(yol) || yol.startsWith("/tekrar") || yol.startsWith("/unite");
 
+  const sessizRef = useRef(sessiz);
+  sessizRef.current = sessiz;
   useEffect(() => {
     const kapat = odulDinle((o) => {
       setListe((l) => [...l.slice(-2), o]);
+      if (!sessizRef.current) animSes("odul");
       setTimeout(() => setListe((l) => l.filter((x) => x.id !== o.id)), 2600);
     });
     girisYap();

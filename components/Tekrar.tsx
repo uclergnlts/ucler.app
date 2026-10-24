@@ -19,6 +19,7 @@ import { Html, href, Logo } from "./temel";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
 import Bildir from "./Bildir";
+import { ses } from "@/lib/ses";
 
 type Oge = { key: string; s: number };
 /** Karışık testte kaç soru sorulur. */
@@ -75,6 +76,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
   const degerlendir = (c: Cevap) => {
     if (!cur || !Q || sonuc !== null) return;
     const ok = dogruMu(Q, c);
+    ses(ok ? "dogru" : "yanlis");
     setCevap(c);
     setSonuc(ok);
     if (ok) setRight((r) => r + 1);

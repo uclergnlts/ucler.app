@@ -16,6 +16,7 @@ import { Html, href } from "./temel";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
 import Bildir from "./Bildir";
+import { ses } from "@/lib/ses";
 
 export function karistir<T>(l: T[]) {
   for (let a = l.length - 1; a > 0; a--) { const b = Math.floor(Math.random() * (a + 1)); [l[a], l[b]] = [l[b], l[a]]; }
@@ -76,6 +77,7 @@ export default function KarisikTest({ ders, baslik, cikis, sorular, sec, giris, 
   const degerlendir = (c: Cevap) => {
     if (!key || !Q || sonuc !== null) return;
     const ok = dogruMu(Q, c);
+    ses(ok ? "dogru" : "yanlis");
     setCevapS(c); setSonuc(ok);
     setDogru((d) => ({ ...d, [key]: ok }));
     if (!ok) yanlisKaydet(key);

@@ -4,6 +4,7 @@
 import { motion } from "motion/react";
 import { useEffect, useRef } from "react";
 import { Html } from "./temel";
+import { animSes } from "@/lib/ses";
 
 const azHareket = () => typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -15,6 +16,7 @@ export function svgCanlandir(svg: SVGSVGElement | null, gecikme = 0) {
   while (kok.children.length === 1 && kok.firstElementChild?.tagName.toLowerCase() === "g") kok = kok.firstElementChild;
   const parcalar = [...kok.children].filter((e) => !["defs", "style", "title", "desc"].includes(e.tagName.toLowerCase()));
   const n = parcalar.length, toplam = Math.min(1100, n * 70);
+  if (n > 1) setTimeout(() => animSes("cizim", toplam + 400), gecikme);
   parcalar.forEach((el, i) => {
     const delay = gecikme + (n > 1 ? (i / (n - 1)) * toplam : 0);
     const tag = el.tagName.toLowerCase();

@@ -12,7 +12,7 @@ import { seviyeKaydet, useDurumlar, useTarayici } from "@/lib/store";
 import { Alt } from "./Soru";
 import { href } from "./temel";
 import { Button } from "./ui/button";
-import { Konfeti, Madalya } from "./Kutlama";
+import { Konfeti, Madalya, SesCal } from "./Kutlama";
 import KarisikTest, { karistir, konuGruplari, sirayla } from "./KarisikTest";
 
 /** Konular dersin başından bu konuya kadar eşit temsil edilsin: konu sırası SEVIYE_SORU dilime bölünür,
@@ -101,6 +101,7 @@ function Test({ ders, id, list, onceki, hepsi }: { ders: DersId; id: string; lis
         return (
           <article className="flex flex-col items-center gap-2 pt-4 text-center">
             {gecti && <Konfeti />}
+            {gecti && <SesCal tur="seviye" />}
             {gecti && <Madalya kupa />}
             <div className="font-display text-[56px] leading-none font-extrabold text-acc">{puan}</div>
             <span className="text-[14px] font-semibold text-muted-foreground">{n} sorudan {right} doğru</span>

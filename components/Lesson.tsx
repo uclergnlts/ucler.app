@@ -160,13 +160,14 @@ export default function Lesson({
       // Puan yalnızca aşama ilk kez bittiğinde; görev sayacı tekrarda da ilerler.
       const ilk = s.a === bitenA && asamaBitir(konuKey, s.a);
       kaydet("asama", 1, ilk ? PUAN.asama : 0);
-      ses("bitti");
+      ses("asama");
       return setS({ ...s, ara: true, odul: ilk ? PUAN.asama : 0 });
     }
     if (s.q >= 0 && s.q < nQuiz && s.sonuc !== null) {
       if (s.q === nQuiz - 1) {
         const ilk = !prog[konuKey];
         kaydet("konu", 1, ilk ? PUAN.konu : 0);
+        ses("seviye");
         return setS({ ...s, q: s.q + 1, cevap: null, sonuc: null, odul: ilk ? PUAN.konu : 0 });
       }
       setS({ ...s, q: s.q + 1, cevap: ilkCevap(t.quiz[s.q + 1]), sonuc: null });

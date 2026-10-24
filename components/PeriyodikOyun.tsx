@@ -7,6 +7,7 @@ import { kaydet, PUAN } from "@/lib/puan";
 import { ELEMENTLER, grup18, katmanlar, yer } from "@/lib/elementler";
 import { Icon } from "./icons";
 import { href, UstBar, UstEylem } from "./temel";
+import { ses } from "@/lib/ses";
 
 type Mod = "z" | "ezber";
 type Durum = { mod: Mod; sira: number[]; i: number; secim: [number, number] | null; sonuc: Record<number, boolean>; dogru: number };
@@ -45,7 +46,7 @@ export default function PeriyodikOyun() {
   const sayilan = useRef<Durum | null>(null);
   useEffect(() => {
     if (!bitti || !d) return;
-    if (sayilan.current !== d) { sayilan.current = d; kaydet("oyun", 1, PUAN.oyun); }
+    if (sayilan.current !== d) { sayilan.current = d; kaydet("oyun", 1, PUAN.oyun); ses("asama"); }
     if (d.dogru > enIyi()) {
       try { localStorage.setItem(KAYIT, String(d.dogru)); } catch {}
       setRekor(d.dogru);
@@ -83,12 +84,14 @@ export default function PeriyodikOyun() {
   } else {
     const z = d.sira[d.i], e = ELEMENTLER[z - 1], dogruYer = yer(z), s = d.secim;
     const bildi = s !== null && s[0] === dogruYer.periyot && s[1] === dogruYer.grup;
-    const sec = (p: number, g: number) =>
+    const sec = (p: number, g: number) => {
+      if (!s) ses(p === dogruYer.periyot && g === dogruYer.grup ? "dogru" : "yanlis");
       setD((o) => {
         if (!o || o.secim) return o;
         const ok = p === dogruYer.periyot && g === dogruYer.grup;
         return { ...o, secim: [p, g], sonuc: { ...o.sonuc, [z]: ok }, dogru: o.dogru + (ok ? 1 : 0) };
       });
+    };
     govde = (
       <>
         <div className="oyun-ust">

@@ -1,9 +1,27 @@
 "use client";
-// Aşama ya da konu bitince: konfeti, ortada büyük bir madalya ve sayarak artan puan.
-import { useEffect, useMemo, useState } from "react";
+// Aşama ya da konu bitince: konfeti, ortada büyük bir madalya ve sayarak artan puan. Her biri kendi kısık sesiyle gelir.
+import { useEffect, useMemo, useRef, useState } from "react";
 import { animate, motion, useReducedMotion } from "motion/react";
 import { Icon } from "./icons";
 import { useOyunAcik } from "@/lib/oyun";
+import { animSes, ses, type AnimSes, type SesTuru } from "@/lib/ses";
+
+/** Ekrana gelince bir kez ses çalar (geliştirmedeki çift çalıştırmada da bir kez). */
+function useBirKez(cal: (() => void) | false) {
+  const calindi = useRef(false);
+  useEffect(() => {
+    if (!cal || calindi.current) return;
+    calindi.current = true;
+    cal();
+  });
+}
+const useAnimSes = (tur: AnimSes, ac = true) => useBirKez(ac && (() => animSes(tur)));
+
+/** Görünmez: bir bitiş sesini ekrana geldiğinde çalar (ör. ünite testi geçilince "seviye"). */
+export function SesCal({ tur }: { tur: SesTuru }) {
+  useBirKez(() => ses(tur));
+  return null;
+}
 
 const RENK = ["var(--acc)", "var(--glow)", "var(--c1)", "var(--c3)", "var(--c5)", "var(--c2)"];
 
@@ -20,6 +38,7 @@ function parcalar(n: number) {
 export function Konfeti() {
   const az = useReducedMotion(), oyun = useOyunAcik();
   const p = useMemo(() => parcalar(42), []);
+  useAnimSes("konfeti", !az && oyun);
   if (az || !oyun) return null;
   return (
     <div className="pointer-events-none fixed inset-0 z-20 overflow-hidden" aria-hidden="true">
@@ -41,6 +60,7 @@ export function Konfeti() {
 export function Madalya({ kupa: kupaIste }: { kupa?: boolean }) {
   const oyun = useOyunAcik(), kupa = kupaIste && oyun;
   const Check = Icon.check, Kupa = Icon.kupa;
+  useAnimSes("madalya");
   return (
     <div className="relative grid size-32 place-items-center">
       <motion.span
@@ -74,9 +94,17 @@ export function PuanRozet({ puan }: { puan: number }) {
   const [n, setN] = useState(0);
   const oyun = useOyunAcik();
   useEffect(() => {
-    const a = animate(0, puan, { duration: 0.8, delay: 0.5, ease: "easeOut", onUpdate: (v) => setN(Math.round(v)) });
+    let son = 0;
+    const a = animate(0, puan, {
+      duration: 0.8, delay: 0.5, ease: "easeOut",
+      onUpdate: (v) => {
+        const r = Math.round(v);
+        setN(r);
+        if (r !== son && oyun) { son = r; animSes("puan", r / puan); }
+      },
+    });
     return () => a.stop();
-  }, [puan]);
+  }, [puan, oyun]);
   const Yildiz = Icon.yildiz;
   if (!oyun) return null;
   return (

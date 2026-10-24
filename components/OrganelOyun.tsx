@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { kaydet, PUAN } from "@/lib/puan";
 import { Icon } from "./icons";
 import { href, UstBar, UstEylem } from "./temel";
+import { ses } from "@/lib/ses";
 
 type Mod = "hayvan" | "bitki";
 type Org = { ad: string; gorev: string; not: string };
@@ -205,7 +206,7 @@ export default function OrganelOyun() {
   const sayilan = useRef<Durum | null>(null);
   useEffect(() => {
     if (!bitti || !d) return;
-    if (sayilan.current !== d) { sayilan.current = d; kaydet("oyun", 1, PUAN.oyun); }
+    if (sayilan.current !== d) { sayilan.current = d; kaydet("oyun", 1, PUAN.oyun); ses("asama"); }
     if (d.dogru > enIyi()) {
       try { localStorage.setItem(KAYIT, String(d.dogru)); } catch {}
       setRekor(d.dogru);
@@ -244,8 +245,10 @@ export default function OrganelOyun() {
   } else {
     const sahne = SAHNE[d.mod], hedef = d.sira[d.i], s = d.secim, o = ORG[hedef];
     const bildi = s === hedef;
-    const sec = (id: string) =>
+    const sec = (id: string) => {
+      if (s === null) ses(id === hedef ? "dogru" : "yanlis");
       setD((x) => (!x || x.secim !== null ? x : { ...x, secim: id, dogru: x.dogru + (id === hedef ? 1 : 0) }));
+    };
     govde = (
       <>
         <div className="oyun-ust">
