@@ -158,7 +158,7 @@ server.listen(0, async () => {
         if (await devam.isEnabled()) {
           await devam.click(); await ileri(600);
           // Aşama sonu ekranı: görüntüsünü al, sonraki aşamaya (ya da teste) geç.
-          if (await p.getByRole('heading', { name: /aşama bitti$/ }).count()) { await cek(`${ad}-ara`); await devam.click(); await ileri(600); }
+          if (await p.getByRole('heading', { name: /aşama bitti$/ }).count()) { await cek(`${ad}-ara`); const sonra = p.getByRole('button', { name: 'Şimdi değil' }); if (await sonra.count()) { await sonra.click(); await ileri(400); } await devam.click(); await ileri(600); }
         }
       }
       // Konu sonu testi: her soruyu cevapla (çoğu zaman yanlış; amaç geri bildirim ekranlarını görmek).

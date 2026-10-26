@@ -32,13 +32,7 @@
     "ipucu": "Kesik çizgiler boşta kalan bağlardır.",
     "tamam": "CH₄, metan: en basit organik bileşik. Dört bağ, düzgün dörtyüzlünün köşelerine yönelir."
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "h": 2
-    },
-    "not": "İki H bağlandı: karbonun 4 bağından <b>2'si boşta</b> kaldı."
-   }
+   "kart": 4
   },
   {
    "baslik": "İkili bağ da sayılır",
@@ -67,13 +61,7 @@
     "ipucu": "İkili bağ 2 bağ sayılır; 4'e tamamla.",
     "tamam": "C₂H₄, eten: ikili bağ 2, iki H de 2 bağ eder. Üçlü bağlı etinde (C₂H₂) her karbona tek H kalır."
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "h": 3
-    },
-    "not": "Her karbona 3 H bağlarsan C=C ile birlikte <b>5 bağ</b> olur; karbon en çok 4 bağ yapar."
-   }
+   "kart": 4
   },
   {
    "baslik": "Hibrit ve açı",
@@ -116,7 +104,7 @@
   },
   {
    "baslik": "σ ve π say",
-   "metin": "Propindeki (CH₃–C≡CH) σ ve π bağlarını say.",
+   "metin": "Tekli bağ 1σ, üçlü bağ 1σ + 2π'dir. Propindeki (CH₃–C≡CH) σ ve π bağlarını say.",
    "sahne": {
     "tur": "kim11-sigmapi"
    },
@@ -213,11 +201,11 @@
     "soru": "Bütan ile 2-metilpropan için hangisi doğrudur?",
     "secenekler": [
      {
-      "yazi": "Kapalı formülleri farklıdır, izomer değildirler",
+      "yazi": "İzomer değildirler",
       "neden": "İkisinde de 4 C ve 10 H var: kapalı formül C₄H₁₀, yani aynı."
      },
      {
-      "yazi": "Aynı maddedir, yalnızca farklı çizilmiştir",
+      "yazi": "Aynı maddedir",
       "neden": "Kaynama noktaları farklıdır (−0,5 °C ve −11,7 °C), demek ki farklı maddelerdir. Biri düz, öteki dallı zincirdir."
      },
      {
@@ -231,7 +219,7 @@
   },
   {
    "baslik": "Cis mi, trans mı?",
-   "metin": "Sağ karbona Cl koy ve o karbonu çevir: trans-1,2-dikloroeteni kur.",
+   "metin": "Trans izomerde iki Cl ikili bağın zıt taraflarındadır. Sağ karbona Cl koy ve o karbonu çevir: trans-1,2-dikloroeteni kur.",
    "sahne": {
     "tur": "kim11-cistrans"
    },
@@ -264,13 +252,7 @@
     "ipucu": "Trans: iki Cl zıt taraflarda.",
     "tamam": "Trans-1,2-dikloroeten: iki Cl zıt tarafta, dipoller birbirini götürür, molekül apolar. Cis'in kaynama noktası bu yüzden daha yüksektir."
    },
-   "kart": 15,
-   "goster": {
-    "deger": {
-     "m": 1
-    },
-    "not": "Sağ karbona Cl gelince <b>cis-1,2-dikloroeten</b> oluştu: iki Cl aynı tarafta, molekül polar."
-   }
+   "kart": 15
   }
  ],
  "kapanis": [
@@ -279,5 +261,6 @@
   "Tekli bağ 1σ, ikili 1σ + 1π, üçlü 1σ + 2π'dir; C–H bağları da σ'dır.",
   "Kapalı formül atom sayılarını, basit formül en küçük oranı verir: C₂H₂ ile C₆H₆'nın basit formülü aynıdır (CH).",
   "<b>İzomerler</b> aynı kapalı formüllü, farklı yapılı maddelerdir: bütan ile 2-metilpropan zincir izomeri, cis ve trans dikloroeten geometrik izomerdir."
- ]
+ ],
+ "soruOnce": true
 }
