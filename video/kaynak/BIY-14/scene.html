@@ -1,0 +1,155 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#1fa463}
+.head .sub i{display:block;width:44px;height:6px;background:#1fa463;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#1fa463;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#1fa463;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>BİYOLOJİ</div><div class="brand">ucler<b>.</b></div></div>
+
+<div class="scene" data-s="-1" data-e="2.06">
+ <div class="title">Damara<br><em>saf su verilmez</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><rect x="80" y="470" width="920" height="330" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="4"/><text x="130" y="545" text-anchor="start" font-family="Manrope" font-size="42" font-weight="800" fill="#5f6f88">Sen:</text><text x="130" y="605" text-anchor="start" font-size="40" font-weight="700" fill="#5f6f88">"su masumdur"</text><path d="M800 624.0 C842.0 680 836.4 722.0 800 722.0 C763.6 722.0 758.0 680 800 624.0 Z" fill="#e3f0fb" stroke="#3a86c8" stroke-width="5"/></g><g data-in="-1"><rect x="80" y="830" width="920" height="450" rx="18" fill="#fff" stroke="#d63c63" stroke-width="5"/><text x="130" y="905" text-anchor="start" font-family="Manrope" font-size="42" font-weight="800" fill="#d63c63">Alyuvar, saf suda:</text><path d="M655 1092 A116 116 0 0 1 636 1145" fill="none" stroke="#d94a5a" stroke-width="6" stroke-linecap="round"/><path d="M613 1170 A116 116 0 0 1 562 1194" fill="none" stroke="#d94a5a" stroke-width="6" stroke-linecap="round"/><path d="M528 1195 A116 116 0 0 1 475 1176" fill="none" stroke="#d94a5a" stroke-width="6" stroke-linecap="round"/><path d="M450 1153 A116 116 0 0 1 426 1102" fill="none" stroke="#d94a5a" stroke-width="6" stroke-linecap="round"/><path d="M425 1068 A116 116 0 0 1 444 1015" fill="none" stroke="#d94a5a" stroke-width="6" stroke-linecap="round"/><path d="M467 990 A116 116 0 0 1 518 966" fill="none" stroke="#d94a5a" stroke-width="6" stroke-linecap="round"/><path d="M552 965 A116 116 0 0 1 605 984" fill="none" stroke="#d94a5a" stroke-width="6" stroke-linecap="round"/><path d="M630 1007 A116 116 0 0 1 654 1058" fill="none" stroke="#d94a5a" stroke-width="6" stroke-linecap="round"/><path d="M660 1124 l26 10" stroke="#d63c63" stroke-width="6" stroke-linecap="round"/><path d="M594 1196 l12 25" stroke="#d63c63" stroke-width="6" stroke-linecap="round"/><path d="M496 1200 l-10 26" stroke="#d63c63" stroke-width="6" stroke-linecap="round"/><path d="M424 1134 l-25 12" stroke="#d63c63" stroke-width="6" stroke-linecap="round"/><path d="M420 1036 l-26 -10" stroke="#d63c63" stroke-width="6" stroke-linecap="round"/><path d="M486 964 l-12 -25" stroke="#d63c63" stroke-width="6" stroke-linecap="round"/><path d="M584 960 l10 -26" stroke="#d63c63" stroke-width="6" stroke-linecap="round"/><path d="M656 1026 l25 -12" stroke="#d63c63" stroke-width="6" stroke-linecap="round"/><circle cx="540" cy="1080" r="93" fill="#f6b3bd" opacity=".35"/></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="2.06" data-e="8.29">
+ <div class="title">Serumda<br><em>neden tuz var?</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="2.1"><rect x="210" y="630" width="180" height="260" rx="30" fill="#e3f0fb" stroke="#3a86c8" stroke-width="6"/><path d="M300 890 V1040" stroke="#3a86c8" stroke-width="6"/><rect x="286" y="600" width="28" height="30" rx="6" fill="#3a86c8"/><text x="300" y="740" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#3a86c8">%0,9</text><text x="300" y="790" text-anchor="middle" font-size="32" font-weight="800" fill="#3a86c8">tuz</text><text x="300" y="1100" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">serum</text></g><g data-in="5.7"><circle cx="640" cy="700" r="60" fill="#f6b3bd" stroke="#d94a5a" stroke-width="5"/><circle cx="640" cy="700" r="25" fill="#fbe1e5"/><circle cx="800" cy="800" r="60" fill="#f6b3bd" stroke="#d94a5a" stroke-width="5"/><circle cx="800" cy="800" r="25" fill="#fbe1e5"/><circle cx="660" cy="900" r="60" fill="#f6b3bd" stroke="#d94a5a" stroke-width="5"/><circle cx="660" cy="900" r="25" fill="#fbe1e5"/><text x="730" y="1030" text-anchor="middle" font-size="32" font-weight="800" fill="#d94a5a">alyuvarlar</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="8.29" data-e="17.52">
+ <div class="title">Alyuvar ve<br><em>osmoz</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="8.3"><circle cx="540" cy="800" r="150" fill="#f6b3bd" stroke="#d94a5a" stroke-width="12"/><circle cx="540" cy="800" r="63" fill="#fbe1e5"/><text x="540" y="1030" text-anchor="middle" font-size="30" font-weight="800" fill="#1fa463">seçici geçirgen zar</text></g><g data-in="9.8"><path d="M300 700 L380 732" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M400 740 L375 743 L384 721 Z" fill="#3a86c8"/><path d="M780 900 L700 868" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M680 860 L705 857 L696 879 Z" fill="#3a86c8"/><path d="M720 690 L780 660" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M800 650 L786 671 L775 649 Z" fill="#3a86c8"/><path d="M360 900 L300 930" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M280 940 L294 919 L305 941 Z" fill="#3a86c8"/></g><g data-in="12.6"><rect x="100" y="1100" width="880" height="120" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1150" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">su: çözüneni az taraftan</text><text x="540" y="1195" text-anchor="middle" font-size="32" font-weight="800" fill="#3a86c8">çözüneni çok tarafa</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="17.52" data-e="26.79">
+ <div class="title">İzotonik:<br><em>denge</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="17.6"><path d="M280.0 560.0 V1020.0 Q280.0 1040.0 300.0 1040.0 H780.0 Q800.0 1040.0 800.0 1020.0 V560.0" fill="#e3f0fb" stroke="#1d3557" stroke-width="5"/><circle cx="540" cy="820" r="110" fill="#f6b3bd" stroke="#d94a5a" stroke-width="9"/><circle cx="540" cy="820" r="46" fill="#fbe1e5"/><path d="M390 700 L432 728" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M450 740 L425 738 L438 718 Z" fill="#3a86c8"/><path d="M690 940 L648 912" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M630 900 L655 902 L642 922 Z" fill="#3a86c8"/><path d="M640 710 L682 682" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M700 670 L688 692 L675 672 Z" fill="#3a86c8"/><path d="M440 940 L398 968" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M380 980 L392 958 L405 978 Z" fill="#3a86c8"/></g><g data-in="20.6"><text x="540" y="1120" text-anchor="middle" font-family="Manrope" font-size="60" font-weight="800" fill="#1fa463">izotonik</text></g><g data-in="20.0" data-out="26.5"><rect x="250" y="1190" width="580" height="76" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1240" text-anchor="middle" font-size="30" font-weight="800" fill="#1fa463">Konunun tamamı: ucler.app</text></g><g data-in="22.7"><text x="540" y="515" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">giren su = çıkan su</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="26.79" data-e="43.61">
+ <div class="title">Saf su:<br><em>hipotonik</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="26.8" data-out="39.5"><path d="M230.0 530.0 V970.0 Q230.0 990.0 250.0 990.0 H830.0 Q850.0 990.0 850.0 970.0 V530.0" fill="#eef6ff" stroke="#1d3557" stroke-width="5"/><text x="540" y="580" text-anchor="middle" font-size="32" font-weight="800" fill="#3a86c8">saf su</text></g><g data-in="28.9" data-out="30.9"><circle cx="540" cy="780" r="100" fill="#f6b3bd" stroke="#d94a5a" stroke-width="8"/><circle cx="540" cy="780" r="42" fill="#fbe1e5"/><path d="M674 914 L637 877" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M621 861 L645 868 L628 885 Z" fill="#3a86c8"/><path d="M406 914 L443 877" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M459 861 L452 885 L435 868 Z" fill="#3a86c8"/><path d="M406 646 L443 683" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M459 699 L435 692 L452 675 Z" fill="#3a86c8"/><path d="M674 646 L637 683" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M621 699 L628 675 L645 692 Z" fill="#3a86c8"/></g><g data-in="30.9" data-out="35.4"><circle cx="540" cy="780" r="135" fill="#f9cdd4" stroke="#d94a5a" stroke-width="7"/><path d="M699 939 L662 902" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M646 886 L670 893 L653 910 Z" fill="#3a86c8"/><path d="M381 939 L418 902" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M434 886 L427 910 L410 893 Z" fill="#3a86c8"/><path d="M381 621 L418 658" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M434 674 L410 667 L427 650 Z" fill="#3a86c8"/><path d="M699 621 L662 658" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M646 674 L653 650 L670 667 Z" fill="#3a86c8"/></g><g data-in="31.2" data-out="39.5"><rect x="100" y="1060" width="880" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1123" text-anchor="middle" font-size="34" font-weight="800" fill="#1d3557">hayvan hücresinde duvar yok</text></g><g data-in="35.4" data-out="39.5"><path d="M684 795 A145 145 0 0 1 660 861" fill="none" stroke="#d94a5a" stroke-width="7" stroke-linecap="round"/><path d="M631 893 A145 145 0 0 1 568 922" fill="none" stroke="#d94a5a" stroke-width="7" stroke-linecap="round"/><path d="M525 924 A145 145 0 0 1 459 900" fill="none" stroke="#d94a5a" stroke-width="7" stroke-linecap="round"/><path d="M427 871 A145 145 0 0 1 398 808" fill="none" stroke="#d94a5a" stroke-width="7" stroke-linecap="round"/><path d="M396 765 A145 145 0 0 1 420 699" fill="none" stroke="#d94a5a" stroke-width="7" stroke-linecap="round"/><path d="M449 667 A145 145 0 0 1 512 638" fill="none" stroke="#d94a5a" stroke-width="7" stroke-linecap="round"/><path d="M555 636 A145 145 0 0 1 621 660" fill="none" stroke="#d94a5a" stroke-width="7" stroke-linecap="round"/><path d="M653 689 A145 145 0 0 1 682 752" fill="none" stroke="#d94a5a" stroke-width="7" stroke-linecap="round"/><path d="M688 834 l33 12" stroke="#d63c63" stroke-width="7" stroke-linecap="round"/><path d="M606 922 l15 32" stroke="#d63c63" stroke-width="7" stroke-linecap="round"/><path d="M486 928 l-12 33" stroke="#d63c63" stroke-width="7" stroke-linecap="round"/><path d="M398 846 l-32 15" stroke="#d63c63" stroke-width="7" stroke-linecap="round"/><path d="M392 726 l-33 -12" stroke="#d63c63" stroke-width="7" stroke-linecap="round"/><path d="M474 638 l-15 -32" stroke="#d63c63" stroke-width="7" stroke-linecap="round"/><path d="M594 632 l12 -33" stroke="#d63c63" stroke-width="7" stroke-linecap="round"/><path d="M682 714 l32 -15" stroke="#d63c63" stroke-width="7" stroke-linecap="round"/><circle cx="540" cy="780" r="116" fill="#f6b3bd" opacity=".35"/></g><g data-in="38.0"><text x="540" y="1230" text-anchor="middle" font-family="Manrope" font-size="64" font-weight="800" fill="#d63c63">hemoliz</text></g><g data-in="39.6"><path d="M340 640 V920 A40 40 0 0 0 420 920 V640" fill="#c9384a" fill-opacity="1" stroke="#1d3557" stroke-width="5"/><circle cx="404" cy="752" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="384" cy="813" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="399" cy="783" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="394" cy="885" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="386" cy="734" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="377" cy="863" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="367" cy="734" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="383" cy="887" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="403" cy="913" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="403" cy="901" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="386" cy="901" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="373" cy="902" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="364" cy="789" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="401" cy="668" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="372" cy="926" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="374" cy="875" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="384" cy="829" r="7" fill="#f6b3bd" opacity=".8"/><circle cx="362" cy="829" r="7" fill="#f6b3bd" opacity=".8"/><text x="380" y="1010" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">önce: bulanık</text><path d="M470 800 H590" stroke="#1d3557" stroke-width="6" stroke-linecap="round"/><path d="M610 800 l-26 -15 v30 Z" fill="#1d3557"/><path d="M660 640 V920 A40 40 0 0 0 740 920 V640" fill="#e0566a" fill-opacity="0.55" stroke="#1d3557" stroke-width="5"/><text x="700" y="1010" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">sonra: berrak</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="43.61" data-e="50.7">
+ <div class="title">Çok tuzlu:<br><em>hipertonik</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="43.7"><path d="M230.0 550.0 V990.0 Q230.0 1010.0 250.0 1010.0 H830.0 Q850.0 1010.0 850.0 990.0 V550.0" fill="#f3f5f8" stroke="#1d3557" stroke-width="5"/><rect x="514" y="647" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(6 521 654)"/><rect x="724" y="629" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(23 731 635)"/><rect x="741" y="633" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(25 747 639)"/><rect x="594" y="631" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(17 601 637)"/><rect x="639" y="651" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(33 646 658)"/><rect x="355" y="640" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(5 362 647)"/><rect x="537" y="675" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(27 543 681)"/><rect x="676" y="648" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(34 683 654)"/><rect x="326" y="643" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(30 333 650)"/><rect x="651" y="650" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(4 657 656)"/><rect x="412" y="639" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(13 419 645)"/><rect x="694" y="638" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(40 701 645)"/><rect x="731" y="631" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(17 737 638)"/><rect x="529" y="630" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(19 536 636)"/><rect x="745" y="634" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(27 751 641)"/><rect x="337" y="657" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(40 343 664)"/><rect x="379" y="629" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(4 386 635)"/><rect x="554" y="629" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(4 561 636)"/><rect x="532" y="675" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(19 538 681)"/><rect x="481" y="660" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(4 487 667)"/><rect x="575" y="637" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(27 581 644)"/><rect x="772" y="631" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(25 778 638)"/><rect x="589" y="636" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(12 595 642)"/><rect x="791" y="678" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(5 797 685)"/><rect x="640" y="676" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(11 647 683)"/><rect x="591" y="631" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(16 598 637)"/><rect x="624" y="658" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(35 631 665)"/><rect x="319" y="646" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(39 325 652)"/><rect x="577" y="651" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(18 584 658)"/><rect x="786" y="657" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(1 793 664)"/><rect x="689" y="645" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(20 696 651)"/><rect x="384" y="651" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(15 391 657)"/><rect x="320" y="660" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(5 326 666)"/><rect x="681" y="630" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(35 688 636)"/><rect x="693" y="653" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(32 700 660)"/><rect x="403" y="665" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(19 409 672)"/><rect x="394" y="677" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(18 400 683)"/><rect x="467" y="671" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(17 474 678)"/><rect x="621" y="637" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(38 627 644)"/><rect x="408" y="631" width="13" height="13" fill="#fff" stroke="#5f6f88" stroke-width="3" transform="rotate(44 415 638)"/><text x="540" y="515" text-anchor="middle" font-size="34" font-weight="800" fill="#5f6f88">çok tuzlu</text></g><g data-in="47.6"><polygon points="622,820 606,835 614,856 593,862 591,885 569,881 558,900 540,888 522,900 511,881 489,885 487,862 466,856 474,835 458,820 474,805 466,784 487,778 489,755 511,759 522,740 540,752 558,740 569,759 591,755 593,778 614,784 606,805" fill="#e98a98" stroke="#d94a5a" stroke-width="8" stroke-linejoin="round"/><path d="M589 869 L637 917" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M653 933 L629 926 L646 909 Z" fill="#3a86c8"/><path d="M491 869 L443 917" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M427 933 L434 909 L451 926 Z" fill="#3a86c8"/><path d="M491 771 L443 723" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M427 707 L451 714 L434 731 Z" fill="#3a86c8"/><path d="M589 771 L637 723" stroke="#3a86c8" stroke-width="6" stroke-linecap="round"/><path d="M653 707 L646 731 L629 714 Z" fill="#3a86c8"/></g><g data-in="48.2"><text x="540" y="1120" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#d94a5a">alyuvar büzüşür</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="50.7" data-e="56.45">
+ <div class="title">Aynı hücre,<br><em>üç ortam</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="50.8"><circle cx="220" cy="800" r="94" fill="#f9cdd4" stroke="#d94a5a" stroke-width="5"/><text x="220" y="960" text-anchor="middle" font-size="32" font-weight="800" fill="#3a86c8">hipotonik</text><text x="220" y="1005" text-anchor="middle" font-size="30" font-weight="700" fill="#5f6f88">şişer</text></g><g data-in="52.6"><polygon points="912,800 902,810 907,823 894,827 893,841 879,839 872,851 860,843 848,851 841,839 827,841 826,827 813,823 818,810 808,800 818,790 813,777 826,773 827,759 841,761 848,749 860,757 872,749 879,761 893,759 894,773 907,777 902,790" fill="#e98a98" stroke="#d94a5a" stroke-width="5" stroke-linejoin="round"/><text x="860" y="960" text-anchor="middle" font-size="32" font-weight="800" fill="#5f6f88">hipertonik</text><text x="860" y="1005" text-anchor="middle" font-size="30" font-weight="700" fill="#5f6f88">büzüşür</text></g><g data-in="54.1"><circle cx="540" cy="800" r="70" fill="#f6b3bd" stroke="#d94a5a" stroke-width="6"/><circle cx="540" cy="800" r="29" fill="#fbe1e5"/><text x="540" y="960" text-anchor="middle" font-size="32" font-weight="800" fill="#1fa463">izotonik</text><text x="540" y="1005" text-anchor="middle" font-size="30" font-weight="700" fill="#5f6f88">aynı kalır</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="56.45" data-e="61.82">
+ <div class="q"><small>DÜŞÜN</small>Deniz suyu içmek susuzluğu neden gidermez, <em>tersine artırır?</em></div>
+</div>
+
+<div class="scene" data-s="61.62" data-e="99">
+ <div class="title">Kısaca<br><em>hatırla</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><rect x="80" y="500" width="920" height="740" rx="18" fill="#fff" stroke="#1fa463" stroke-width="5"/><text x="140" y="590" text-anchor="start" font-size="32" font-weight="800" fill="#1fa463">ÖZET</text><circle cx="160" cy="680" r="14" fill="#1fa463"/><text x="200" y="694" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">İzotonik:</text><text x="200" y="744" text-anchor="start" font-size="40" font-weight="800" fill="#1fa463">net su geçişi yok</text><circle cx="160" cy="840" r="14" fill="#1fa463"/><text x="200" y="854" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">Hipotonik: su girer,</text><text x="200" y="904" text-anchor="start" font-size="40" font-weight="800" fill="#d63c63">alyuvar patlar (hemoliz)</text><circle cx="160" cy="1000" r="14" fill="#1fa463"/><text x="200" y="1014" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">Hipertonik: su çıkar,</text><text x="200" y="1064" text-anchor="start" font-size="40" font-weight="800" fill="#d94a5a">alyuvar büzüşür</text><path d="M140 1110 H940" stroke="#dbe3ee" stroke-width="3"/><path d="M160 1140 h40 v70 l-20 -16 l-20 16 Z" fill="#1fa463"/><text x="230" y="1190" text-anchor="start" font-family="Manrope" font-size="42" font-weight="800" fill="#1fa463">Kaydet, sınavdan önce bak</text></g>
+ </svg>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;                 // ses hızlandırılmadı
+const DUR = 63.8;           // ses süresi
+const PH = [
+ [0.00,1.77,"Damara saf su verilmez."],
+ [2.06,5.39,"Hastanede en çok kullanılan serumun içinde tuz vardır."],
+ [5.71,7.92,"Sebebi, kanındaki alyuvarlardır."],
+ [8.29,12.23,"Alyuvarın zarı seçici geçirgendir ve osmozla su alıp verir."],
+ [12.55,17.17,"Su her zaman çözüneni az olan taraftan çözüneni çok olan tarafa geçer."],
+ [17.52,20.39,"Bu serum, alyuvarın içiyle aynı derişimdedir."],
+ [20.64,22.28,"Buna izotonik ortam denir."],
+ [22.65,26.37,"Hücreye giren ve çıkan su eşittir, alyuvar şeklini korur."],
+ [26.79,28.57,"Saf su ise hipotoniktir."],
+ [28.87,30.60,"Su, alyuvarın içine dolar."],
+ [30.94,35.19,"Bitki hücresinin aksine hayvan hücresinin onu tutacak bir duvarı yoktur."],
+ [35.46,37.68,"Alyuvar şişer ve sonunda patlar."],
+ [38.01,39.24,"Buna hemoliz denir."],
+ [39.60,43.30,"Deney tüpünde kan, bulanık kırmızıdan berrak kırmızıya döner."],
+ [43.61,47.26,"Çok tuzlu, yani hipertonik bir ortamda ise tersi olur."],
+ [47.62,50.37,"Su alyuvardan çıkar ve hücre büzüşür."],
+ [50.70,53.86,"Yani aynı hücre, bulunduğu sıvıya göre şişer,"],
+ [54.08,56.00,"büzüşür ya da olduğu gibi kalır."],
+ [56.45,61.52,"Peki sence, deniz suyu içmek susuzluğu neden gidermez, tersine artırır?"]
+];
+
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  cap.style.opacity = t > 61.5 ? 0 : 1;
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
