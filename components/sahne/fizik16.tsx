@@ -215,7 +215,7 @@ function Gunes({ v }: SahneProps) {
   const isin = Math.round(oran * 7);
   return (
     <svg viewBox="0 0 340 240" role="img" aria-label={`Işık ${Math.round(I)} watt bölü metrekare, panelin gücü ${Math.round(P)} watt`}>
-      <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">Işık {Math.round(I)} W/m² → panel {Math.round(P)} W</text>
+      <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">Işınım {Math.round(I)} W/m² → panel {Math.round(P)} W</text>
       {/* güneş */}
       <circle cx={40} cy={54} r={16} fill="var(--c4)" fillOpacity={0.2 + 0.7 * oran} />
       {Array.from({ length: isin }, (_, k) => {

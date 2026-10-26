@@ -196,6 +196,149 @@
     ]
    },
    "kart": 10
+  },
+  {
+   "baslik": "Besin laboratuvarı",
+   "metin": "Bir besin ve bir ayraç seç, tüpteki renge bak. Her besinde neyin olduğunu kendin göster.",
+   "sahne": {
+    "tur": "deney-besin"
+   },
+   "deger": {
+    "b": 0,
+    "r": 0
+   },
+   "kontroller": [
+    {
+     "ad": "b",
+     "etiket": "Besin",
+     "min": 0,
+     "max": 5,
+     "tur": "surukle"
+    },
+    {
+     "ad": "r",
+     "etiket": "Ayraç",
+     "min": 0,
+     "max": 4,
+     "tur": "surukle"
+    }
+   ],
+   "gorev": {
+    "tur": "kesfet",
+    "bulgular": [
+     {
+      "yazi": "Balda <b>şeker</b> olduğunu göster.",
+      "hedef": {
+       "b": 4,
+       "r": 2
+      },
+      "coz": [
+       {
+        "b": 4,
+        "r": 2
+       }
+      ],
+      "tamam": "Benedict ısıtınca kiremit kırmızısına döndü: balda glikoz ve früktoz gibi indirgen şekerler var."
+     },
+     {
+      "yazi": "Yumurta akında <b>protein</b> olduğunu göster.",
+      "hedef": {
+       "b": 2,
+       "r": 3
+      },
+      "coz": [
+       {
+        "b": 2,
+        "r": 3
+       }
+      ],
+      "tamam": "Biüre mora döndü: peptit bağları, yani protein var."
+     },
+     {
+      "yazi": "Zeytinyağında <b>yağ</b> olduğunu göster.",
+      "hedef": {
+       "b": 3,
+       "r": 4
+      },
+      "coz": [
+       {
+        "b": 3,
+        "r": 4
+       }
+      ],
+      "tamam": "Sudan III yağda çözünür; üstte kırmızı yağ tabakası oluştu."
+     },
+     {
+      "yazi": "<b>Saf suyla</b> kontrol tüpü yap: bir ayraç dene.",
+      "hedef": {
+       "b": 5,
+       "r": [
+        1,
+        4
+       ]
+      },
+      "coz": [
+       {
+        "b": 5,
+        "r": 1
+       }
+      ],
+      "tamam": "Saf suda hiçbir ayraç olumlu renk vermez. Kontrol tüpü, renk değişiminin besinden geldiğini gösterir."
+     }
+    ]
+   },
+   "kart": 12
+  },
+  {
+   "baslik": "Bilinmeyen besin",
+   "metin": "Bir arkadaşın aynı dört ayracı bilinmeyen bir besinde denedi. Sonuçları oku.",
+   "sahne": {
+    "tur": "deney-tablo",
+    "baslik": "Bilinmeyen besin",
+    "sutunlar": [
+     "Ayraç",
+     "Sonuç"
+    ],
+    "satirlar": [
+     [
+      "İyot",
+      "sarı-kahve kaldı"
+     ],
+     [
+      "Benedict (ısıt)",
+      "kiremit kırmızısı"
+     ],
+     [
+      "Biüre",
+      "mor"
+     ],
+     [
+      "Sudan III",
+      "tabaka yok"
+     ]
+    ],
+    "not": "Kontrol tüpünde (saf su) hiçbir renk değişmedi."
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Bu besinde hangileri var?",
+    "secenekler": [
+     {
+      "yazi": "Şeker ve protein",
+      "dogru": true,
+      "neden": "Benedict kırmızı: şeker; biüre mor: protein. İyot ve Sudan III değişmedi: nişasta ve yağ yok ya da ayracın gösteremeyeceği kadar az."
+     },
+     {
+      "yazi": "Nişasta ve protein",
+      "neden": "Nişasta iyotu mavi-siyaha çevirirdi; iyot sarı-kahve kaldı."
+     },
+     {
+      "yazi": "Şeker ve yağ",
+      "neden": "Yağ olsaydı Sudan III ile kırmızı tabaka oluşurdu."
+     }
+    ]
+   },
+   "kart": 12
   }
  ],
  "kapanis": [
@@ -203,7 +346,8 @@
   "Düz bir zincirde bağ ve çıkan su sayısı, birim sayısından bir eksiktir.",
   "Yağ gramda yaklaşık 9 kcal, karbonhidrat yaklaşık 4 kcal verir; yağ uzun süreli depodur.",
   "Protein: amino asit sırası → katlanma → şekil → görev. Tek bir değişiklik görevi bozabilir.",
-  "DNA çift zincir, deoksiriboz, A-T-G-C; RNA genelde tek zincir, riboz, T yerine U."
+  "DNA çift zincir, deoksiriboz, A-T-G-C; RNA genelde tek zincir, riboz, T yerine U.",
+  "Besin testi: iyot nişastayı, Benedict şekeri, biüre proteini, Sudan III yağı gösterir; saf su kontrol tüpüdür."
  ],
  "soruOnce": true
 }

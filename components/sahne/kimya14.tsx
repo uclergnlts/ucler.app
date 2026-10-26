@@ -140,7 +140,7 @@ function Gumus({ t, oynuyor, s }: SahneProps) {
 
 /* ================= 4. Besin zincirinde ağır metal ================= */
 
-// Suda çok az cıva var. Her basamak bir alttakinden çok sayıda yer ve cıvayı atamaz: derişim katlanır.
+// Suda çok az cıva var. Her basamak bir alttakinden çok sayıda yer ve cıvayı yavaş atar: derişim katlanır.
 // Temsilî: her basamakta yaklaşık 10 kat.
 const ZINCIR = ["su", "plankton", "küçük balık", "büyük balık", "insan"];
 function Birikim({ t, oynuyor, s }: SahneProps) {
@@ -175,7 +175,7 @@ function Birikim({ t, oynuyor, s }: SahneProps) {
 
 // Gliserol oranı (nişastanın kütlesine göre %): az olursa film kırılgan, çok olursa yapışkan ve dayanıksız.
 // Esnek ve sağlam film yaklaşık %20-40 arası.
-const filmDurum = (g: number) => (g < 15 ? "kırılgan" : g <= 40 ? "esnek" : "yapışkan");
+const filmDurum = (g: number) => (g < 20 ? "kırılgan" : g <= 40 ? "esnek" : "yapışkan");
 function Film({ v }: SahneProps) {
   const g = sinir(v.g ?? 0, 0, 60), d = filmDurum(g);
   const renk = d === "esnek" ? "var(--c3)" : "var(--c2)";

@@ -134,12 +134,35 @@ export function Soru({ soru, secenekler, tamam, bildir }: { soru: string; secene
 }
 
 export function Kontroller({ liste, v, set, kapali }: { liste: Kontrol[]; v: Degerler; set: (ad: string, x: number) => void; kapali: boolean }) {
-  // "surukle" değerleri sahnenin içinde değişir; altta düğmesi çıkmaz.
+  // "surukle" değerleri sahnenin içinde değişir; altta düğmesi çıkmaz. Klavye kullananlar için aynı değerin
+  // sürgüsü gizli durur ve Tab ile odaklanınca görünür (ok tuşlarıyla değiştirilir).
   const gorunen = liste.filter((k) => k.tur !== "surukle");
-  if (!gorunen.length) return null;
+  const klavye = liste.filter((k) => k.tur === "surukle");
+  return (
+    <>
+      {klavye.length > 0 && (
+        <div className="ad-klavye">
+          {klavye.map((k) => {
+            const x = v[k.ad] ?? k.min;
+            return (
+              <label key={k.ad} className="ad-surgu">
+                <span>{k.etiket}</span>
+                <b>{gosterim(k, x)}</b>
+                <input type="range" min={k.min} max={k.max} step={k.adim ?? 1} value={x} disabled={kapali} onChange={(e) => set(k.ad, Number(e.target.value))} />
+              </label>
+            );
+          })}
+        </div>
+      )}
+      {gorunen.length > 0 && <KontrolListesi liste={gorunen} v={v} set={set} kapali={kapali} />}
+    </>
+  );
+}
+
+function KontrolListesi({ liste, v, set, kapali }: { liste: Kontrol[]; v: Degerler; set: (ad: string, x: number) => void; kapali: boolean }) {
   return (
     <div className="ad-kontroller">
-      {gorunen.map((k) => {
+      {liste.map((k) => {
         const x = v[k.ad] ?? k.min, adim = k.adim ?? 1;
         if (k.tur === "dugme")
           return <button key={k.ad} className="ad-dugme" disabled={kapali} onClick={() => set(k.ad, 1)}>{k.etiket}</button>;

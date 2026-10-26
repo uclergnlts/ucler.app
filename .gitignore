@@ -7,6 +7,8 @@ next-env.d.ts
 .vercel
 __pycache__/
 *.mp3
+# Ders sesleri (earshot, MIT; docs/SESLER.md): uygulamayla dağıtılır
+!public/ses/*.mp3
 *.mp4
 *.srt
 frames/

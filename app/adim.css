@@ -103,3 +103,6 @@ body:has(.ad-sayfa){background:#fff}
 .ad-iki button.acik{border-color:var(--acc);background:var(--acc);color:#fff}
 .ad-iki button:disabled{opacity:.6;cursor:default}
 .ad-iki button:focus-visible{outline:3px solid var(--glow);outline-offset:2px}
+/* Sürüklenen değerlerin klavye eşdeğeri: Tab ile odaklanınca görünür, fareyle/dokunarak kullananlara görünmez. */
+.ad-klavye{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.ad-klavye:focus-within{position:static;width:auto;height:auto;overflow:visible;clip-path:none;white-space:normal;display:grid;gap:14px;margin-bottom:14px}

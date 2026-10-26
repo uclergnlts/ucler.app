@@ -105,6 +105,238 @@
    "kart": 4
   },
   {
+   "baslik": "Bakır nanoparçacık planı",
+   "metin": "Gümüşte gördüğün yolla nar kabuğundan <b>bakır nanoparçacık</b> elde edeceksin. Deney planını kur.",
+   "sahne": {
+    "tur": "deney-plan",
+    "baslik": "Bakır nanoparçacık deney planı",
+    "satirlar": [
+     {
+      "ad": "tuz",
+      "etiket": "Metal tuzu",
+      "dogru": 1,
+      "secenekler": [
+       {
+        "yazi": "Bakır(II) sülfat"
+       },
+       {
+        "yazi": "Gümüş nitrat",
+        "neden": "Gümüş nitrat gümüş nanoparçacık verir; bakır için bakır tuzu gerekir."
+       },
+       {
+        "yazi": "Sofra tuzu",
+        "neden": "Sodyum iyonunu bitki özütü metale indirgeyemez."
+       }
+      ]
+     },
+     {
+      "ad": "ozut",
+      "etiket": "İndirgen",
+      "dogru": 2,
+      "secenekler": [
+       {
+        "yazi": "Saf su",
+        "neden": "Saf suda Cu²⁺'yı indirgeyecek polifenol yok."
+       },
+       {
+        "yazi": "Nar kabuğu özütü"
+       },
+       {
+        "yazi": "Zeytinyağı",
+        "neden": "Yağ suda çözünmez; indirgen özüt sulu olmalı."
+       }
+      ]
+     },
+     {
+      "ad": "kosul",
+      "etiket": "Koşul",
+      "dogru": 1,
+      "secenekler": [
+       {
+        "yazi": "70 °C, karıştır"
+       },
+       {
+        "yazi": "Soğukta beklet",
+        "neden": "Soğukta indirgenme çok yavaşlar."
+       },
+       {
+        "yazi": "Kaynatıp kurut",
+        "neden": "Kuruyunca parçacıklar topaklanır ve yükseltgenir."
+       }
+      ]
+     },
+     {
+      "ad": "olcum",
+      "etiket": "Ölçüm",
+      "dogru": 3,
+      "secenekler": [
+       {
+        "yazi": "Kütle tartımı",
+        "neden": "Oluşan miktar tartılamayacak kadar az; soğurma ölçülür."
+       },
+       {
+        "yazi": "420 nm soğurma",
+        "neden": "420 nm gümüşün tepesidir; bakırınki yaklaşık 570 nm."
+       },
+       {
+        "yazi": "~570 nm soğurma"
+       }
+      ]
+     }
+    ]
+   },
+   "deger": {
+    "tuz": 0,
+    "ozut": 0,
+    "kosul": 0,
+    "olcum": 0
+   },
+   "kontroller": [
+    {
+     "ad": "tuz",
+     "etiket": "Metal tuzu",
+     "min": 0,
+     "max": 3,
+     "tur": "surukle"
+    },
+    {
+     "ad": "ozut",
+     "etiket": "İndirgen",
+     "min": 0,
+     "max": 3,
+     "tur": "surukle"
+    },
+    {
+     "ad": "kosul",
+     "etiket": "Koşul",
+     "min": 0,
+     "max": 3,
+     "tur": "surukle"
+    },
+    {
+     "ad": "olcum",
+     "etiket": "Ölçüm",
+     "min": 0,
+     "max": 3,
+     "tur": "surukle"
+    }
+   ],
+   "gorev": {
+    "tur": "ayarla",
+    "hedef": {
+     "tuz": 1,
+     "ozut": 2,
+     "kosul": 1,
+     "olcum": 3
+    },
+    "tamam": "Nar kabuğundaki polifenoller Cu²⁺ iyonlarını Cu atomuna indirger, ısı tepkimeyi hızlandırır. Bakır nanoparçacıkların soğurma tepesi ≈ 570 nm'dedir. Bakır havada kolay yükseltgendiği için ölçüm hemen yapılır.",
+    "ipucu": "Gümüş deneyindeki adımları bakıra uyarla."
+   },
+   "kart": 4
+  },
+  {
+   "baslik": "Sonuçları karşılaştır",
+   "metin": "Üç atığın özütü aynı miktar, sıcaklık ve sürede gümüş nitratla karıştırıldı. Sonuçları karşılaştır.",
+   "sahne": {
+    "tur": "deney-tablo",
+    "baslik": "Gümüş nanoparçacık",
+    "sutunlar": [
+     "Atık özütü",
+     "Tepe",
+     "Soğurma"
+    ],
+    "satirlar": [
+     [
+      "Çay posası",
+      "421 nm",
+      "0,62"
+     ],
+     [
+      "Nar kabuğu",
+      "423 nm",
+      "0,95"
+     ],
+     [
+      "Portakal kabuğu",
+      "420 nm",
+      "0,31"
+     ]
+    ],
+    "not": "Soğurmalardan körün (yalnız özüt) değeri çıkarıldı."
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangi özüt en çok gümüş nanoparçacık oluşturdu?",
+    "secenekler": [
+     {
+      "yazi": "Nar kabuğu",
+      "dogru": true,
+      "neden": "Koşullar aynı, tepeler aynı yerde (boyutlar benzer); körü çıkarılmış en büyük soğurma en çok parçacık demektir."
+     },
+     {
+      "yazi": "Çay posası",
+      "neden": "Çay posasının soğurması (0,62) nar kabuğundan (0,95) küçük."
+     },
+     {
+      "yazi": "Portakal kabuğu",
+      "neden": "En küçük soğurma (0,31) portakal kabuğunda; en az parçacık onda."
+     }
+    ]
+   },
+   "kart": 5
+  },
+  {
+   "baslik": "Bakırda tuhaf bir sonuç",
+   "metin": "Aynı karşılaştırma bakır sülfatla yapıldı. Bir sonuç diğerlerinden farklı.",
+   "sahne": {
+    "tur": "deney-tablo",
+    "baslik": "Bakır nanoparçacık",
+    "sutunlar": [
+     "Atık özütü",
+     "Tepe",
+     "Soğurma"
+    ],
+    "satirlar": [
+     [
+      "Çay posası",
+      "572 nm",
+      "0,48"
+     ],
+     [
+      "Nar kabuğu",
+      "575 nm",
+      "0,30"
+     ],
+     [
+      "Portakal kabuğu",
+      "640 nm",
+      "0,52"
+     ]
+    ],
+    "not": "Portakal kabuğu tüpü bir gün sonra yeşilimsi görünüyordu."
+   },
+   "gorev": {
+    "tur": "secim",
+    "soru": "Hangi sonuç diğerleriyle doğrudan karşılaştırılamaz?",
+    "secenekler": [
+     {
+      "yazi": "Portakal kabuğu",
+      "dogru": true,
+      "neden": "Tepesi 640 nm'ye kaymış: parçacıkların boyutu ya da türü farklı (ör. yükseltgenmiş bakır). Soğurması büyük olsa da miktarı doğrudan kıyaslanamaz."
+     },
+     {
+      "yazi": "Çay posası",
+      "neden": "Tepesi bakır aralığında (≈ 570 nm); diğerleriyle kıyaslanabilir."
+     },
+     {
+      "yazi": "Nar kabuğu",
+      "neden": "Tepesi bakır aralığında (≈ 570 nm); soğurması küçük ama kıyaslanabilir."
+     }
+    ]
+   },
+   "kart": 5
+  },
+  {
    "baslik": "Cıva nerede birikir?",
    "metin": "Bir göle az miktarda cıvalı atık karıştı. Besin zincirini izle.",
    "sahne": {
@@ -118,7 +350,7 @@
      {
       "yazi": "Zincirin tepesinde, insanda",
       "dogru": true,
-      "neden": "Her canlı, yediği çok sayıdaki canlının cıvasını vücudunda toplar ve atamaz. Basamak arttıkça derişim katlanır."
+      "neden": "Her canlı çok sayıda av yer ve cıvayı aldığından çok daha yavaş atar. Basamak arttıkça derişim katlanır: biyolojik büyütme."
      },
      {
       "yazi": "Suda",
@@ -126,7 +358,7 @@
      },
      {
       "yazi": "Her yerde eşit",
-      "neden": "Cıva vücuttan atılamadığı için yukarı basamaklarda yoğunlaşır."
+      "neden": "Cıva vücuttan yavaş atıldığı için yukarı basamaklarda yoğunlaşır."
      }
     ]
    },
@@ -216,7 +448,8 @@
  "kapanis": [
   "Atığı önlemek, temizlemekten iyidir; mikro ölçek bunu laboratuvarda sağlar.",
   "Küçüldükçe yüzey büyür; nano ölçekte madde farklı davranır.",
-  "Ağır metal besin zincirinde basamak basamak birikir.",
+  "Atık özütüyle gümüş ve bakır nanoparçacık yapılır; karşılaştırmada tek değişken atık türüdür, tepe yeri aynıysa körü çıkarılmış soğurma kıyaslanır.",
+  "Ağır metal canlıda birikir; cıva besin zincirinde basamak basamak derişir.",
   "Biyobozunur film ve atıktan hidrojen, bileşen ve koşul seçimine bağlıdır."
  ],
  "soruOnce": true

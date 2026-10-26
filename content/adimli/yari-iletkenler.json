@@ -175,7 +175,7 @@
   },
   {
    "baslik": "Panelden 150 W",
-   "metin": "Işık şiddetini ayarla: 1 m² panelden <b>150 W</b> al. Panelin verimi %20.",
+   "metin": "Panele düşen ışınımı (metrekareye düşen ışık gücü, W/m²) ayarla: 1 m² panelden <b>150 W</b> al. Panelin verimi %20.",
    "sahne": {
     "tur": "fiz16-gunes"
    },
@@ -185,7 +185,7 @@
    "kontroller": [
     {
      "ad": "I",
-     "etiket": "Işık",
+     "etiket": "Işınım",
      "min": 0,
      "max": 1000,
      "adim": 10,
@@ -201,14 +201,14 @@
       760
      ]
     },
-    "tamam": "0,20 × 750 = <b>150 W</b>. Açık bir yaz öğlesinde güneş ışığı ≈ 1000 W/m²; bu panel en çok ≈ 200 W verir.",
-    "ipucu": "Güç = 0,20 × ışık. 150 ÷ 0,20 = ?"
+    "tamam": "0,20 × 750 W/m² × 1 m² = <b>150 W</b>. Açık bir yaz öğlesinde güneş ışınımı ≈ 1000 W/m²; bu panel en çok ≈ 200 W verir.",
+    "ipucu": "Güç = 0,20 × ışınım × 1 m². 150 ÷ 0,20 = ?"
    },
    "kart": 7
   },
   {
    "baslik": "Transistörle 3 mA",
-   "metin": "Taban akımını ayarla: toplayıcıdan <b>3 mA</b> geçsin. Bu transistör akımı 100 kat büyütüyor.",
+   "metin": "Bu klasik (BJT) transistörde taban akımını ayarla: toplayıcıdan <b>3 mA</b> geçsin. Akım 100 kat büyüyor.",
    "sahne": {
     "tur": "fiz16-transistor"
    },
@@ -305,8 +305,8 @@
  "kapanis": [
   "Katkı türü akımı kimin taşıdığını belirler: n'de elektron, p'de boşluk.",
   "Diyot akımı yalnız ileri yönde geçirir; LED'in rengini enerji aralığı belirler.",
-  "Transistör küçük taban akımıyla büyük akımı yönetir.",
-  "Süper iletken kritik sıcaklığın altında sıfır dirence iner ve manyetik alanı dışarı iter."
+  "Transistör küçük bir sinyalle (taban akımı ya da kapı gerilimi) büyük akımı yönetir.",
+  "Süper iletken kritik sıcaklık, kritik alan ve kritik akımın altında sıfır dirence iner ve manyetik alanı dışarı iter."
  ],
  "soruOnce": true
 }

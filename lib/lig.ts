@@ -2,11 +2,12 @@
 // Haftalık lig: pazartesi 00:00 - pazar 23:59 (Türkiye saati) arasında kazanılan puanlar.
 // Liste sunucuda kurulur (supabase/migrations/20261021_haftalik_lig.sql, haftalik_lig fonksiyonu): yalnızca hesabı olan ve
 // "Haftalık ligde görün" anahtarı açık öğrenciler; dönen yalnızca ad, puan, sıra. Günlük puan en çok 600 sayılır.
-// Listeye ayrıca hesabı olmayan örnek öğrenciler de katılır (20261024_lig_ornek.sql); kapatmak sunucuda tek satır.
+// Listede ayrıca hesabı olmayan örnek öğrenciler görünür (20261024_lig_ornek.sql); "ornek" ile işaretlidir, sıra numarası
+// almaz, kişi sayısına ve madalyalara girmez (20261026_lig_ornek_etiket.sql). Kapatmak sunucuda tek satır.
 import { sb, simdiEsitle } from "./bulut";
 
-/** madalya: geçen haftanın ilk üçündeyse 1, 2 ya da 3. */
-export type LigSatir = { sira: number; ad: string; puan: number; ben?: boolean | null; madalya?: number | null };
+/** madalya: geçen haftanın ilk üçündeyse 1, 2 ya da 3. ornek: hesabı olmayan örnek öğrenci (sira null). */
+export type LigSatir = { sira: number | null; ad: string; puan: number; ben?: boolean | null; madalya?: number | null; ornek?: boolean | null };
 export type Lig = {
   bas: string;
   /** Haftanın bittiği an (gelecek pazartesi 00:00, Türkiye). */
@@ -14,7 +15,7 @@ export type Lig = {
   kisi: number;
   liste: LigSatir[];
   /** Giriş yapan öğrencinin satırı; ligde: listede görünüyor mu. */
-  ben: (LigSatir & { ligde: boolean }) | null;
+  ben: (LigSatir & { sira: number; ligde: boolean }) | null;
 };
 
 /** Ligi okur. Giriş yapılmışsa önce bekleyen puanı buluta yazar. Okunamazsa null. */

@@ -198,12 +198,15 @@ export default function Lesson({
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
-  // Akışta en son açılan kart (anlamadım düğmesi bunu işaretler).
-  const sonKartOge = akista ? ogeler.slice(ilkOge, s.i + 1).filter((o) => o.tur === "kart").pop() : undefined;
-  const sonKartNo = sonKartOge?.tur === "kart" ? sonKartOge.k + 1 : 0;
-  const anlamadimMi = !!sonKartNo && anlamadim.includes(`${ders}.${id}.${sonKartNo}`);
   // Bildirim penceresinin yeri: akıştaki sayfa (kart ya da adım) veya test sorusu.
   const suanki = akista ? ogeler[s.i] : undefined;
+  // "Anlamadım"ın işaretlediği kart: kart sayfasında kartın kendisi, adımda adımın bağlı olduğu kart
+  // (soru önce düzeninde adım kartından önce gelir). Kartı yazılmamış adımda akıştaki son kart.
+  const sonKartOge = akista ? ogeler.slice(ilkOge, s.i + 1).filter((o) => o.tur === "kart").pop() : undefined;
+  const sonKartNo = suanki?.tur === "kart" ? suanki.k + 1
+    : suanki?.tur === "adim" && suanki.a.kart ? suanki.a.kart
+    : sonKartOge?.tur === "kart" ? sonKartOge.k + 1 : 0;
+  const anlamadimMi = !!sonKartNo && anlamadim.includes(`${ders}.${id}.${sonKartNo}`);
   const bildirYer: BildirimYer | undefined = suanki?.tur === "kart"
     ? { ders, konu: id, yer: `kart ${suanki.k + 1}`, ozet: t.cards[suanki.k].h }
     : suanki?.tur === "adim"

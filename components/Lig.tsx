@@ -1,5 +1,6 @@
 "use client";
-// Haftalık lig ekranı: renkli başlık ve geri sayım, ilk üç için kürsü, ilk 50 kişi, öğrencinin kendi satırı.
+// Haftalık lig ekranı: renkli başlık ve geri sayım, gerçek ilk üç için kürsü, liste, öğrencinin kendi satırı.
+// Örnek öğrenciler listede "örnek" etiketiyle, sıra numarası olmadan görünür; kürsüye ve madalyaya girmez.
 // Veri lib/lig.ts'den; liste sunucuda kurulur. Hesabı olmayan öğrenci listeyi görür, kendi yeri için hesap açmaya çağrılır.
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
@@ -97,12 +98,12 @@ function Satir({ s, i }: { s: LigSatir; i: number }) {
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.25, delay: Math.min(i, 12) * 0.03 }}
     >
-      <span className="w-7 flex-none text-center font-display text-[16px] font-extrabold tabular-nums text-muted-foreground">{s.sira}</span>
+      <span className="w-7 flex-none text-center font-display text-[16px] font-extrabold tabular-nums text-muted-foreground">{s.ornek ? "–" : s.sira}</span>
       <Avatar ad={s.ad} />
       <span className="flex min-w-0 flex-1 items-center gap-1.5 text-[15px] font-semibold">
         <span className="truncate">{s.ad}</span>
         {s.ben && <span className="flex-none text-[13px] font-bold text-[var(--c5)]">(sen)</span>}
-        <Madalya n={s.madalya} />
+        {s.ornek ? <span className="flex-none rounded-full bg-secondary px-2 py-0.5 text-[12px] font-bold text-muted-foreground">örnek</span> : <Madalya n={s.madalya} />}
       </span>
       <Puan n={s.puan} className="text-[15px]" />
     </motion.li>
@@ -122,6 +123,11 @@ export default function Lig() {
 
   const Kupa = Icon.kupa;
   const liste = veri?.liste ?? [];
+  // Kürsüde yalnız gerçek öğrenciler; geri kalan herkes (örnekler dahil) puan sırasıyla altta.
+  const gercek = liste.filter((s) => !s.ornek);
+  const kursu = gercek.slice(0, 3);
+  const alt = liste.filter((s) => !kursu.includes(s));
+  const ornekVar = liste.some((s) => s.ornek);
   const ben = veri?.ben;
   const listede = liste.some((s) => s.ben);
 
@@ -156,10 +162,10 @@ export default function Lig() {
           </div>
         ) : (
           <>
-            <Kursu liste={liste} />
-            {liste.length > 3 && (
+            <Kursu liste={kursu} />
+            {alt.length > 0 && (
               <ol className="grid gap-1.5 rounded-3xl bg-secondary p-1.5">
-                {liste.slice(3).map((s, i) => <Satir key={`${s.sira}-${i}`} s={s} i={i} />)}
+                {alt.map((s, i) => <Satir key={`${s.sira}-${i}`} s={s} i={i} />)}
               </ol>
             )}
           </>
@@ -182,6 +188,12 @@ export default function Lig() {
           <p className="rounded-2xl bg-secondary p-3.5 text-[14px] text-muted-foreground">
             Listede görünmüyorsun; sıranı yalnızca sen görüyorsun. Görünmek için{" "}
             <Link href="/profil/ayarlar/" className="font-bold text-foreground underline">Ayarlar</Link>&apos;da &quot;Haftalık ligde görün&quot;ü aç.
+          </p>
+        )}
+
+        {ornekVar && (
+          <p className="rounded-2xl bg-secondary p-3.5 text-[14px] text-muted-foreground">
+            &quot;Örnek&quot; yazan satırlar, lig yeniyken nasıl göründüğünü göstermek için eklenen örnek öğrencilerdir. Hesapları yoktur; sıraya, kişi sayısına ve madalyalara girmezler.
           </p>
         )}
 
