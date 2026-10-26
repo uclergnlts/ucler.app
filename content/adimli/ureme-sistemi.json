@@ -8,14 +8,27 @@
   {
    "baslik": "Spermin yolu",
    "metin": "Bir erkeğe vazektomi yapılıyor: iki <b>sperm kanalı</b> kesilip bağlanıyor. Tahmin et, sonra spermin yolunu izle.",
-   "sahne": { "tur": "biy13-sperm", "sure": 6 },
+   "sahne": {
+    "tur": "biy13-sperm",
+    "sure": 6
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Bu kişide ne olur?",
     "secenekler": [
-     { "yazi": "Testis sperm üretmeyi bırakır", "neden": "Testis spermi ve testosteronu üretmeyi sürdürür; yalnız sperm dışarı giden yola çıkamaz." },
-     { "yazi": "Meni oluşur ama içinde sperm bulunmaz", "dogru": true, "neden": "Meninin sıvısını kesecik ve bezler yapar; kanal kesik olduğu için epididimdeki sperm bu sıvıya katılamaz." },
-     { "yazi": "Hiç meni oluşmaz", "neden": "Seminal kesecik, prostat ve bulbouretral bez kanalın ilerisindedir; salgıları yine meniyi oluşturur." }
+     {
+      "yazi": "Testis sperm üretmeyi bırakır",
+      "neden": "Testis spermi ve testosteronu üretmeyi sürdürür; yalnız sperm dışarı giden yola çıkamaz."
+     },
+     {
+      "yazi": "Meni oluşur ama içinde sperm bulunmaz",
+      "dogru": true,
+      "neden": "Meninin sıvısını kesecik ve bezler yapar; kanal kesik olduğu için epididimdeki sperm bu sıvıya katılamaz."
+     },
+     {
+      "yazi": "Hiç meni oluşmaz",
+      "neden": "Seminal kesecik, prostat ve bulbouretral bez kanalın ilerisindedir; salgıları yine meniyi oluşturur."
+     }
     ]
    },
    "kart": 1
@@ -23,84 +36,177 @@
   {
    "baslik": "Testiste iki hormon",
    "metin": "Hipofiz testise <b>FSH</b> ve <b>LH</b> gönderir. Sperm üretimini tam çalıştır.",
-   "sahne": { "tur": "biy13-testis" },
-   "deger": { "f": 0, "l": 0 },
+   "sahne": {
+    "tur": "biy13-testis"
+   },
+   "deger": {
+    "f": 0,
+    "l": 0
+   },
    "kontroller": [
-    { "ad": "f", "etiket": "FSH", "min": 0, "max": 1, "tur": "anahtar" },
-    { "ad": "l", "etiket": "LH", "min": 0, "max": 1, "tur": "anahtar" }
+    {
+     "ad": "f",
+     "etiket": "FSH",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "l",
+     "etiket": "LH",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
    ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "f": 1, "l": 1 },
+    "hedef": {
+     "f": 1,
+     "l": 1
+    },
     "ipucu": "Sertoli hücreleri gelişen spermi besler; Leydig hücrelerinin testosteronu da üretimi sürdürür. İkisi birlikte gerekir.",
     "tamam": "İki hormon birlikte: Sertoli spermi besledi, Leydig'in testosteronu üretimi tam hıza çıkardı."
    },
-   "kart": 2,
-   "goster": { "deger": { "f": 1, "l": 0 }, "not": "Yalnız FSH: Sertoli hücreleri spermi besliyor, ama Leydig hücreleri testosteron salgılamadığı için sperm üretimi <b>zayıf</b>." }
+   "kart": 2
   },
   {
    "baslik": "Sperm ve yumurta oluşumu",
    "metin": "Sperm de yumurta da <b>mayozla</b> oluşur ama sonuç farklıdır. Önce spermatositi, sonra oositi bölünürken izle.",
-   "sahne": { "tur": "biy13-mayoz", "sure": 5 },
-   "deger": { "k": 0 },
-   "kontroller": [ { "ad": "k", "etiket": "Kadında (oosit)", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "sahne": {
+    "tur": "biy13-mayoz",
+    "sure": 5
+   },
+   "deger": {
+    "k": 0
+   },
+   "kontroller": [
+    {
+     "ad": "k",
+     "etiket": "Kadında (oosit)",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
    "gorev": {
     "tur": "secim",
     "kosu": 2,
     "soru": "Bir kadında 25 birincil oosit mayozu tamamlıyor. En fazla kaç yumurta oluşur?",
     "secenekler": [
-     { "yazi": "25", "dogru": true, "neden": "Her birincil oosit yalnızca 1 yumurta verir. Sitoplazma eşit bölünmez; besin yumurtada kalır, kutup hücreleri yok olur." },
-     { "yazi": "100", "neden": "Bu, spermde olur: bir birincil spermatosit 4 sperm verir. Oositte 4 hücreden yalnızca biri yumurtadır." },
-     { "yazi": "50", "neden": "Mayoz I'de oluşan iki hücreden küçük olanı kutup hücresidir, yumurta olamaz. Sonunda her oositten 1 yumurta kalır." }
+     {
+      "yazi": "25",
+      "dogru": true,
+      "neden": "Her birincil oosit yalnızca 1 yumurta verir. Sitoplazma eşit bölünmez; besin yumurtada kalır, kutup hücreleri yok olur."
+     },
+     {
+      "yazi": "100",
+      "neden": "Bu, spermde olur: bir birincil spermatosit 4 sperm verir. Oositte 4 hücreden yalnızca biri yumurtadır."
+     },
+     {
+      "yazi": "50",
+      "neden": "Mayoz I'de oluşan iki hücreden küçük olanı kutup hücresidir, yumurta olamaz. Sonunda her oositten 1 yumurta kalır."
+     }
     ]
    },
-   "kart": 5,
-   "goster": { "not": "Erkekte bir birincil spermatosit mayozla eşit bölünüyor ve <b>4 sperm</b> veriyor.", "oynat": true }
+   "kart": 5
   },
   {
    "baslik": "Döngünün ortası",
-   "metin": "Günü kaydır ve ovulasyonu bul.",
-   "sahne": { "tur": "biy13-dongu" },
-   "deger": { "g": 3 },
-   "kontroller": [ { "ad": "g", "etiket": "Gün", "min": 1, "max": 28, "adim": 1 } ],
+   "metin": "Ovulasyonu hipofizin LH hormonundaki ani artış tetikler. Günü kaydır ve ovulasyonu bul.",
+   "sahne": {
+    "tur": "biy13-dongu"
+   },
+   "deger": {
+    "g": 3
+   },
+   "kontroller": [
+    {
+     "ad": "g",
+     "etiket": "Gün",
+     "min": 1,
+     "max": 28,
+     "adim": 1
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "g": [13, 14] },
+    "hedef": {
+     "g": [
+      13,
+      14
+     ]
+    },
     "ipucu": "Mor LH eğrisinin birden yükseldiği günü ara. Ovulasyonu LH tepesi tetikler.",
     "tamam": "LH tepesi ovulasyonu tetikledi. Östrojenin en yüksek olduğu gün, LH tepesinden hemen öncedir."
    },
-   "kart": 7,
-   "goster": { "deger": { "g": 10 }, "not": "10. gün folikül evresi: folikül büyüyor, östrojen yükselip iç zarı kalınlaştırıyor; LH hâlâ düşük." }
+   "kart": 7
   },
   {
    "baslik": "hCG",
    "metin": "Döllenme olmazsa <b>sarı cisim</b> (korpus luteum) körelir. Embriyo rahme yerleşirse <b>hCG</b> salgılar; gebelik testleri bu hormonu arar. İki durumu da oynat.",
-   "sahne": { "tur": "biy13-hcg", "sure": 5 },
-   "deger": { "e": 0 },
-   "kontroller": [ { "ad": "e", "etiket": "Embriyo yerleşti", "min": 0, "max": 1, "tur": "anahtar" } ],
+   "sahne": {
+    "tur": "biy13-hcg",
+    "sure": 5
+   },
+   "deger": {
+    "e": 0
+   },
+   "kontroller": [
+    {
+     "ad": "e",
+     "etiket": "Embriyo yerleşti",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
+   ],
    "gorev": {
     "tur": "secim",
     "kosu": 2,
     "soru": "hCG olunca menstruasyon neden olmaz?",
     "secenekler": [
-     { "yazi": "hCG iç zarı doğrudan kalınlaştırır", "neden": "İç zarı koruyan hormon progesterondur. hCG bunu dolaylı yoldan sağlar." },
-     { "yazi": "hCG sarı cismi yaşatır, progesteron düşmez", "dogru": true, "neden": "hCG sarı cismin körelmesini önler. Progesteron yüksek kalır, iç zar dökülmez." },
-     { "yazi": "hCG FSH'yi artırır, yeni folikül olgunlaşır", "neden": "Gebelikte yeni folikül olgunlaşmaz; yüksek progesteron FSH ve LH'yi baskılar." }
+     {
+      "yazi": "hCG iç zarı doğrudan kalınlaştırır",
+      "neden": "İç zarı koruyan hormon progesterondur. hCG bunu dolaylı yoldan sağlar."
+     },
+     {
+      "yazi": "hCG sarı cismi yaşatır, progesteron düşmez",
+      "dogru": true,
+      "neden": "hCG sarı cismin körelmesini önler. Progesteron yüksek kalır, iç zar dökülmez."
+     },
+     {
+      "yazi": "hCG FSH'yi artırır, yeni folikül olgunlaşır",
+      "neden": "Gebelikte yeni folikül olgunlaşmaz; yüksek progesteron FSH ve LH'yi baskılar."
+     }
     ]
    },
-   "kart": 12
+   "kart": 13
   },
   {
    "baslik": "Zigottan implantasyona",
    "metin": "Zigot rahme giderken mitozla hızla bölünür. Tahmin et, sonra izle.",
-   "sahne": { "tur": "biy13-zigot", "sure": 7 },
+   "sahne": {
+    "tur": "biy13-zigot",
+    "sure": 7
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Segmentasyonda hücre sayısı artar. Embriyonun toplam boyutu ne olur?",
     "secenekler": [
-     { "yazi": "Hücre sayısıyla aynı oranda büyür", "neden": "Bölünmeler arasında hücreler büyümeye zaman bulamaz. Toplam boyut büyümez." },
-     { "yazi": "Yarıya iner", "neden": "Bölünme madde kaybettirmez; dış boyut korunur." },
-     { "yazi": "Pek değişmez", "dogru": true, "neden": "Bölünmeler arasında hücreler büyümeye zaman bulamaz; her bölünmede hücreler küçülür, toplam boyut aynı kalır." }
+     {
+      "yazi": "Hücre sayısıyla aynı oranda büyür",
+      "neden": "Bölünmeler arasında hücreler büyümeye zaman bulamaz. Toplam boyut büyümez."
+     },
+     {
+      "yazi": "Yarıya iner",
+      "neden": "Bölünme madde kaybettirmez; dış boyut korunur."
+     },
+     {
+      "yazi": "Pek değişmez",
+      "dogru": true,
+      "neden": "Bölünmeler arasında hücreler büyümeye zaman bulamaz; her bölünmede hücreler küçülür, toplam boyut aynı kalır."
+     }
     ]
    },
    "kart": 9
@@ -108,16 +214,38 @@
   {
    "baslik": "Üç germ tabakası",
    "metin": "Germ tabakalarının organlarını gez, sonra soruyu yanıtla.",
-   "sahne": { "tur": "biy13-germ" },
-   "deger": { "o": 1 },
-   "kontroller": [ { "ad": "o", "etiket": "Organ", "min": 1, "max": 5, "tur": "sayac" } ],
+   "sahne": {
+    "tur": "biy13-germ"
+   },
+   "deger": {
+    "o": 1
+   },
+   "kontroller": [
+    {
+     "ad": "o",
+     "etiket": "Organ",
+     "min": 1,
+     "max": 5,
+     "tur": "sayac"
+    }
+   ],
    "gorev": {
     "tur": "secim",
     "soru": "Akciğerdeki hava keselerinin iç yüzeyi hangi tabakadan gelişir?",
     "secenekler": [
-     { "yazi": "Endoderm", "dogru": true, "neden": "Endoderm iç yüzeyleri yapar: sindirim ve solunum yollarının örtüsü, karaciğer, pankreas. Akciğer, ilkel bağırsaktan tomurcuklanır." },
-     { "yazi": "Mezoderm", "neden": "Mezoderm kas, kemik, kalp ve kanı yapar. Akciğerin çevresindeki kas ve damarlar mezodermdendir, iç yüzeyi değil." },
-     { "yazi": "Ektoderm", "neden": "Ektoderm dış yüzü (epidermis) ve sinir sistemini yapar. Hava keselerinin örtüsü içte kalır." }
+     {
+      "yazi": "Endoderm",
+      "dogru": true,
+      "neden": "Endoderm iç yüzeyleri yapar: sindirim ve solunum yollarının örtüsü, karaciğer, pankreas. Akciğer, ilkel bağırsaktan tomurcuklanır."
+     },
+     {
+      "yazi": "Mezoderm",
+      "neden": "Mezoderm kas, kemik, kalp ve kanı yapar. Akciğerin çevresindeki kas ve damarlar mezodermdendir, iç yüzeyi değil."
+     },
+     {
+      "yazi": "Ektoderm",
+      "neden": "Ektoderm dış yüzü (epidermis) ve sinir sistemini yapar. Hava keselerinin örtüsü içte kalır."
+     }
     ]
    },
    "kart": 10
@@ -129,5 +257,6 @@
   "Bir spermatosit 4 sperm, bir oosit 1 yumurta verir; mayoz II döllenmede tamamlanır.",
   "Yüksek östrojen LH artışını, LH ovulasyonu tetikler. hCG sarı cismi yaşatır.",
   "Zigot → morula → blastosist → implantasyon → gastrula; üç germ tabakası organlara farklılaşır."
- ]
+ ],
+ "soruOnce": true
 }

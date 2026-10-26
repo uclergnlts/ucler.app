@@ -7750,31 +7750,49 @@
     "cards": [
       {
         "h": "Işık doğrusal yayılır: gölge",
-        "p": "Işık aynı ortamda doğrular boyunca yayılır; bu yüzden saydam olmayan bir engelin arkasında gölge oluşur. Noktasal kaynak yalnızca <b>tam gölge</b> verir. Geniş kaynakta, kaynağın bir kısmını gören bölgelerde <b>yarı gölge</b> de oluşur. Ay ve Güneş tutulmaları bu şekilde açıklanır.",
+        "p": "Işık doğrular boyunca yayılır; saydam olmayan engelin arkasında <b>gölge</b> oluşur. Noktasal kaynak <b>tam gölge</b>, geniş kaynak ayrıca <b>yarı gölge</b> verir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='optik-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><polygon points='120,70 220,53.3 220,146.7 120,130' fill='var(--ink)' fill-opacity='0.22'/><polygon points='120,70 220,20 220,53.3' fill='var(--ink)' fill-opacity='0.08'/><polygon points='120,130 220,180 220,146.7' fill='var(--ink)' fill-opacity='0.08'/><path d='M30.0 85.0 L220.0 53.3' stroke='var(--c4)' stroke-width='1' fill='none'/><path d='M30.0 115.0 L220.0 20.0' stroke='var(--c4)' stroke-width='1' fill='none'/><path d='M30.0 115.0 L220.0 146.7' stroke='var(--c4)' stroke-width='1' fill='none'/><path d='M30.0 85.0 L220.0 180.0' stroke='var(--c4)' stroke-width='1' fill='none'/><rect x='24' y='85' width='12' height='30' rx='3' fill='var(--c4)'/><rect x='116' y='70' width='8' height='60' fill='var(--ink)'/><rect x='220' y='14' width='6' height='172' fill='var(--panel)' stroke='var(--muted)'/><rect x='220' y='53.3' width='6' height='93.4' fill='var(--ink)'/><rect x='220' y='20' width='6' height='33.3' fill='var(--ink)' fill-opacity='0.35'/><rect x='220' y='146.7' width='6' height='33.3' fill='var(--ink)' fill-opacity='0.35'/><text x='30' y='76' font-size='11' fill='var(--muted)' text-anchor='middle'>kaynak</text><text x='120' y='60' font-size='11' fill='var(--muted)' text-anchor='middle'>engel</text><text x='223' y='198' font-size='11' fill='var(--muted)' text-anchor='middle'>perde</text><text x='234' y='41' font-size='11' fill='var(--muted)' text-anchor='start'>yarı gölge</text><text x='234' y='104' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>tam gölge</text><text x='234' y='167' font-size='11' fill='var(--muted)' text-anchor='start'>yarı gölge</text></svg>",
-        "key": "Tam gölgeye kaynağın hiçbir noktasından ışık ulaşmaz; yarı gölgeye kaynağın yalnızca bir kısmından ulaşır."
+        "key": "Tam gölgeye kaynağın hiçbir noktasından ışık ulaşmaz, yarı gölgeye bir kısmından ulaşır. Tutulmalar böyle olur."
       },
       {
         "h": "Işık şiddeti ve aydınlanma",
-        "p": "Kaynağın her saniye yaydığı ışık miktarına <b>ışık akısı</b> denir (lümen). Kaynaktan uzaklaştıkça aynı akı daha geniş alana yayılır, <b>aydınlanma</b> azalır: E = I·cosθ/d². I ışık şiddeti, θ ışınla yüzeyin normali arasındaki açıdır. Uzaklık 2 katına çıkarsa aydınlanma dörtte birine iner.",
+        "p": "Uzaklaştıkça ışık daha geniş alana yayılır, <b>aydınlanma</b> azalır: E = I·cosθ/d². Uzaklık 2 katına çıkınca aydınlanma dörtte birine iner.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M30 100 L110 80 M30 100 L110 120' stroke='var(--c4)' stroke-width='1' fill='none'/><path d='M110 80 L190 60 M110 120 L190 140' stroke='var(--c4)' stroke-width='1' stroke-dasharray='4 3' fill='none'/><circle cx='30' cy='100' r='7' fill='var(--c4)'/><text x='30' y='88' font-size='11' fill='var(--muted)' text-anchor='middle'>kaynak</text><rect x='108' y='80' width='5' height='40' fill='var(--c4)' fill-opacity='0.8'/><rect x='188' y='60' width='5' height='80' fill='var(--c4)' fill-opacity='0.4'/><path d='M30 160 H110' stroke='var(--ink)' stroke-width='1' fill='none'/><text x='70' y='154' font-size='11' fill='var(--ink)' text-anchor='middle'>d</text><path d='M30 180 H190' stroke='var(--ink)' stroke-width='1' fill='none'/><text x='110' y='194' font-size='11' fill='var(--ink)' text-anchor='middle'>2d</text><text x='110' y='72' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>E</text><text x='190' y='158' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>E/4</text><text x='210' y='104' font-size='10' fill='var(--muted)'>aynı akı</text><text x='210' y='118' font-size='10' fill='var(--muted)'>4 kat alana</text><rect x='196' y='12' width='114' height='54' rx='8' fill='var(--panel)'/><text x='253' y='35' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>E = I·cosθ / d²</text><text x='253' y='55' font-size='10' fill='var(--muted)' text-anchor='middle'>1 lüks = 1 lümen / m²</text></svg>",
-        "key": "Birimler: ışık şiddeti kandela, ışık akısı lümen, aydınlanma lüks (1 lüks = 1 lümen/m²)."
+        "key": "I ışık şiddeti (kandela), θ ışınla normal arası açı. Işık akısı lümen, aydınlanma lüks (lümen/m²).",
+        "once": {
+          "soru": "Masa lambasını kitaptan 2 kat uzağa çekersen kitap ne kadar aydınlanır?",
+          "secenekler": [
+            {
+              "yazi": "Dörtte biri kadar",
+              "neden": "Aynı ışık 4 kat alana yayılır; aydınlanma uzaklığın karesiyle azalır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Yarısı kadar",
+              "neden": "Uzaklık 2 kat ama ışığın yayıldığı alan 4 kat büyür."
+            },
+            {
+              "yazi": "Aynı",
+              "neden": "Uzaklaştıkça ışık daha geniş alana dağılır."
+            }
+          ]
+        }
       },
       {
         "h": "Yansıma yasaları",
-        "p": "Yüzeye çarpan ışığın geri dönmesine yansıma denir. <b>Gelme açısı yansıma açısına eşittir</b>; iki açı da yüzeye dik çizilen <b>normal</b>den ölçülür. Gelen ışın, normal ve yansıyan ışın aynı düzlemdedir. Pürüzsüz yüzeyde <b>düzgün</b>, pürüzlü yüzeyde <b>dağınık</b> yansıma olur.",
+        "p": "Yansımada <b>gelme açısı yansıma açısına eşittir</b>; açılar yüzeye dik <b>normalden</b> ölçülür. Pürüzsüz yüzeyde <b>düzgün</b>, pürüzlüde <b>dağınık</b> yansıma olur.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='optik-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><path d='M20.0 150.0 L180.0 150.0' stroke='var(--ink)' stroke-width='2' fill='none'/><path d='M30 150 l-8 8 M50 150 l-8 8 M70 150 l-8 8 M90 150 l-8 8 M110 150 l-8 8 M130 150 l-8 8 M150 150 l-8 8 M170 150 l-8 8' stroke='var(--muted)'/><path d='M100.0 46.0 L100.0 150.0' stroke='var(--muted)' stroke-width='1.2' fill='none' stroke-dasharray='4 3'/><path d='M40.0 60.0 L99.0 148.5' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#optik-2)'/><path d='M100.0 150.0 L158.0 63.0' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#optik-2)'/><path d='M100 120 A30 30 0 0 0 83.4 125.0' fill='none' stroke='var(--ink)'/><path d='M100 120 A30 30 0 0 1 116.6 125.0' fill='none' stroke='var(--ink)'/><text x='91' y='114' font-size='12' fill='var(--ink)' text-anchor='middle'>α</text><text x='110' y='114' font-size='12' fill='var(--ink)' text-anchor='middle'>β</text><text x='100' y='38' font-size='11' fill='var(--muted)' text-anchor='middle'>normal</text><text x='40' y='50' font-size='11' fill='var(--c2)' text-anchor='middle'>gelen</text><text x='160' y='50' font-size='11' fill='var(--c2)' text-anchor='middle'>yansıyan</text><text x='100' y='182' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>α = β</text><path d='M200.0 40.0 L229.0 73.0' stroke='var(--c1)' stroke-width='1.3' fill='none'/><path d='M230.0 75.0 L255.0 42.0' stroke='var(--c1)' stroke-width='1.3' fill='none'/><path d='M220.0 40.0 L249.0 73.0' stroke='var(--c1)' stroke-width='1.3' fill='none'/><path d='M250.0 75.0 L275.0 42.0' stroke='var(--c1)' stroke-width='1.3' fill='none'/><path d='M240.0 40.0 L269.0 73.0' stroke='var(--c1)' stroke-width='1.3' fill='none'/><path d='M270.0 75.0 L295.0 42.0' stroke='var(--c1)' stroke-width='1.3' fill='none'/><path d='M195.0 76.0 L310.0 76.0' stroke='var(--ink)' stroke-width='2' fill='none'/><text x='252' y='96' font-size='11' fill='var(--ink)' text-anchor='middle'>düzgün yansıma</text><path d='M215.0 118.0 L226.0 152.0' stroke='var(--c1)' stroke-width='1.3' fill='none'/><path d='M245.0 118.0 L248.0 148.0' stroke='var(--c1)' stroke-width='1.3' fill='none'/><path d='M275.0 118.0 L272.0 150.0' stroke='var(--c1)' stroke-width='1.3' fill='none'/><path d='M226.0 152.0 L204.0 128.0' stroke='var(--c1)' stroke-width='1.3' fill='none'/><path d='M248.0 148.0 L262.0 122.0' stroke='var(--c1)' stroke-width='1.3' fill='none'/><path d='M272.0 150.0 L304.0 136.0' stroke='var(--c1)' stroke-width='1.3' fill='none'/><path d='M195 158 L205 151 L215 160 L226 152 L236 162 L248 148 L260 160 L272 150 L284 161 L296 152 L310 158' stroke='var(--ink)' stroke-width='2' fill='none'/><text x='252' y='186' font-size='11' fill='var(--ink)' text-anchor='middle'>dağınık yansıma</text></svg>",
-        "key": "Dağınık yansımada da her ışın α = β kuralına uyar; yalnızca normaller farklı yöndedir."
+        "key": "Gelen ışın, normal ve yansıyan ışın aynı düzlemdedir. Dağınık yansımada da her ışın bu kurala uyar."
       },
       {
         "h": "Düz ayna",
-        "p": "Düz aynada görüntü <b>sanal</b>, <b>düz</b> ve cisimle <b>eşit boydadır</b>; aynanın arkasında, cisimle aynı uzaklıkta oluşur. Ayna α kadar döndürülürse yansıyan ışın <b>2α</b> döner. Gözün görüş alanını bulmak için gözün görüntüsünden aynanın iki kenarına çizgi çizersin; aradaki bölge görülür.",
+        "p": "Düz aynada görüntü <b>sanal, düz, eşit boydadır</b>; aynanın arkasında cisimle aynı uzaklıktadır. Ayna α döndürülürse yansıyan ışın <b>2α</b> döner.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='optik-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><marker id='optik-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M160.0 40.0 L160.0 160.0' stroke='var(--ink)' stroke-width='2.5' fill='none'/><path d='M160 50 l7 -7 M160 70 l7 -7 M160 90 l7 -7 M160 110 l7 -7 M160 130 l7 -7 M160 150 l7 -7' stroke='var(--muted)'/><path d='M100.0 150.0 L100.0 93.0' stroke='var(--c1)' stroke-width='3' fill='none' marker-end='url(#optik-4)'/><path d='M220 150 L220 100' stroke='var(--c1)' stroke-width='2' stroke-dasharray='4 3' fill='none'/><polygon points='214,101 220,90 226,101' fill='none' stroke='var(--c1)' stroke-width='1.5' stroke-dasharray='3 2'/><path d='M100.0 90.0 L159.0 80.2' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#optik-3)'/><path d='M160.0 80.0 L44.0 60.7' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#optik-3)'/><path d='M160.0 80.0 L220.0 90.0' stroke='var(--c2)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><ellipse cx='36' cy='59' rx='9' ry='5' fill='none' stroke='var(--ink)' stroke-width='1.5'/><circle cx='36' cy='59' r='2.5' fill='var(--ink)'/><text x='36' y='44' font-size='11' fill='var(--muted)' text-anchor='middle'>göz</text><text x='160' y='30' font-size='11' fill='var(--muted)' text-anchor='middle'>düz ayna</text><text x='100' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>cisim</text><text x='222' y='166' font-size='11' fill='var(--c1)' text-anchor='middle'>görüntü: sanal</text><path d='M102 180 H158' stroke='var(--muted)' stroke-width='1.2' marker-start='url(#optik-4)' marker-end='url(#optik-4)' fill='none'/><path d='M162 180 H218' stroke='var(--muted)' stroke-width='1.2' marker-start='url(#optik-4)' marker-end='url(#optik-4)' fill='none'/><text x='130' y='196' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>d</text><text x='190' y='196' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>d</text><text x='236' y='56' font-size='11' fill='var(--ink)' text-anchor='start'>düz, eşit boy</text><text x='236' y='72' font-size='11' fill='var(--ink)' text-anchor='start'>aynaya göre</text><text x='236' y='88' font-size='11' fill='var(--ink)' text-anchor='start'>simetrik</text></svg>",
-        "key": "Ayna aslında sağ-solu değil, ön-arkayı ters çevirir."
+        "key": "Ayna aslında sağ-solu değil, ön-arkayı ters çevirir. Görüş alanı, gözün görüntüsünden aynanın kenarlarına çizilen çizgilerin arasıdır."
       },
       {
         "h": "Çukur ayna: odak ve özel ışınlar",
-        "p": "Küresel aynanın eğrilik merkezi <b>M</b>, odağı <b>F</b>'dir ve odak uzaklığı yarıçapın yarısıdır: <b>f = r/2</b>. Yansıtıcı yüzü içte olan <b>çukur ayna</b> ışığı toplar. Görüntüyü bulmak için özel ışınlardan ikisini çizmen yeter; yansıyan ışınların kesiştiği yer görüntüdür.",
+        "p": "Küresel aynada eğrilik merkezi <b>M</b>, odak <b>F</b>'dir: <b>f = r/2</b>. <b>Çukur ayna</b> ışığı toplar; görüntü, yansıyan iki özel ışının kesiştiği yerdedir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='optik-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker><marker id='optik-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><marker id='optik-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><path d='M20.0 110.0 L262.0 110.0' stroke='var(--muted)' stroke-width='1' fill='none'/><path d='M243.9 40 A160 160 0 0 1 243.9 180' fill='none' stroke='var(--ink)' stroke-width='3'/><path d='M30.0 80.0 L256.2 80.0' stroke='var(--c1)' stroke-width='1.6' fill='none' marker-end='url(#optik-5)'/><path d='M257.2 80.0 L120.0 133.3' stroke='var(--c1)' stroke-width='1.6' fill='none' marker-end='url(#optik-5)'/><path d='M120.0 86.7 L256.2 139.6' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-end='url(#optik-6)'/><path d='M257.2 140.0 L30.0 140.0' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-end='url(#optik-6)'/><path d='M40.0 129.7 L250.5 60.4' stroke='var(--c3)' stroke-width='1.6' fill='none' marker-end='url(#optik-7)'/><path d='M252.0 60.0 L150.0 94.3' stroke='var(--c3)' stroke-width='1.6' fill='none' marker-end='url(#optik-7)'/><circle cx='100' cy='110' r='3' fill='var(--ink)'/><circle cx='180' cy='110' r='3' fill='var(--ink)'/><text x='100' y='128' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>M</text><text x='180' y='128' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>F</text><text x='70' y='40' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>f = r / 2</text><text x='240' y='28' font-size='11' fill='var(--muted)' text-anchor='middle'>çukur ayna</text><text x='16' y='162' font-size='11' fill='var(--c1)' text-anchor='start'>① eksene paralel gelen → F’den geçer</text><text x='16' y='178' font-size='11' fill='var(--c2)' text-anchor='start'>② F’den gelen → eksene paralel döner</text><text x='16' y='194' font-size='11' fill='var(--c3)' text-anchor='start'>③ M’den gelen → kendi üstüne döner</text></svg>",
         "key": "Yansıyan ışınlar kesişirse görüntü gerçek, yalnızca uzantıları kesişirse sanaldır.",
         "etk": {
@@ -7812,43 +7830,97 @@
               "acik": "Çukur aynada yansıtan yüz içtedir; ışığı toplar."
             }
           ]
+        },
+        "once": {
+          "soru": "Güneş ışığını çukur aynayla bir noktada toplayıp kâğıdı yakabilirsin. O noktanın adı nedir?",
+          "secenekler": [
+            {
+              "yazi": "Odak",
+              "neden": "Paralel gelen ışınlar yansıyınca odakta toplanır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Eğrilik merkezi",
+              "neden": "Eğrilik merkezi odaktan iki kat uzaktadır; ışınlar orada toplanmaz."
+            },
+            {
+              "yazi": "Aynanın tepesi",
+              "neden": "Tepe aynanın üzerindeki noktadır; ışınlar önünde toplanır."
+            }
+          ]
         }
       },
       {
         "h": "Küresel aynada görüntü",
-        "p": "Çukur aynada cisim F'nin dışındaysa görüntü <b>gerçek ve ters</b> olur; cisim aynaya yaklaştıkça görüntü büyür. Cisim F'deyse görüntü oluşmaz. F ile ayna arasında görüntü <b>sanal, düz, büyüktür</b>. <b>Tümsek ayna</b> her durumda sanal, düz, küçük görüntü verir; geniş görüş alanı sağladığı için dikiz aynası olur.",
+        "p": "Çukur aynada cisim F'nin dışındaysa görüntü <b>gerçek, ters</b>; F ile ayna arasındaysa <b>sanal, düz, büyüktür</b>. <b>Tümsek ayna</b> hep sanal, düz, küçük görüntü verir.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='8' width='304' height='184' rx='8' fill='var(--panel)'/><text x='18' y='26.0' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Cisim nerede?</text><text x='160' y='26.0' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Görüntü</text><path d='M14.0 34.3 L306.0 34.3' stroke='var(--line)' stroke-width='1' fill='none'/><text x='18' y='52.3' font-size='12' fill='var(--ink)' text-anchor='start'>M’nin dışında</text><text x='160' y='52.3' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>gerçek, ters, küçük</text><path d='M14.0 60.6 L306.0 60.6' stroke='var(--line)' stroke-width='1' fill='none'/><text x='18' y='78.6' font-size='12' fill='var(--ink)' text-anchor='start'>M’de</text><text x='160' y='78.6' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>gerçek, ters, eşit boy</text><path d='M14.0 86.9 L306.0 86.9' stroke='var(--line)' stroke-width='1' fill='none'/><text x='18' y='104.9' font-size='12' fill='var(--ink)' text-anchor='start'>M ile F arasında</text><text x='160' y='104.9' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>gerçek, ters, büyük</text><path d='M14.0 113.2 L306.0 113.2' stroke='var(--line)' stroke-width='1' fill='none'/><text x='18' y='131.2' font-size='12' fill='var(--ink)' text-anchor='start'>F’de</text><text x='160' y='131.2' font-size='12' fill='var(--muted)' text-anchor='start'>oluşmaz (ışınlar paralel)</text><path d='M14.0 139.5 L306.0 139.5' stroke='var(--line)' stroke-width='1' fill='none'/><text x='18' y='157.5' font-size='12' fill='var(--ink)' text-anchor='start'>F ile ayna arasında</text><text x='160' y='157.5' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>sanal, düz, büyük</text><path d='M14.0 165.8 L306.0 165.8' stroke='var(--line)' stroke-width='1' fill='none'/><rect x='8' y='165.8' width='304' height='26.3' fill='var(--c4)' fill-opacity='0.15'/><text x='18' y='183.8' font-size='12' fill='var(--ink)' text-anchor='start'>tümsek ayna (her yer)</text><text x='160' y='183.8' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>sanal, düz, küçük</text><path d='M152.0 14.0 L152.0 186.0' stroke='var(--line)' stroke-width='1' fill='none'/></svg>",
-        "key": "Tümsek aynada F ve M aynanın arkasındadır; odak uzaklığı negatif alınır."
+        "key": "Cisim F'deyse görüntü oluşmaz. Tümsek ayna geniş görüş alanı için dikiz aynası olur; odak uzaklığı negatif alınır."
       },
       {
         "h": "Kırılma ve Snell yasası",
-        "p": "Işık bir ortamdan ötekine eğik geçerken hızı değiştiği için yönü değişir: <b>kırılma</b>. Kırılma indisi <b>n = c/v</b>'dir; boşlukta 1, suda yaklaşık 1,33. <b>Snell yasası:</b> n₁·sinθ₁ = n₂·sinθ₂. İndisi küçük ortamdan büyük ortama (<b>optikçe</b> az yoğundan çok yoğuna) geçen ışık normale yaklaşır.",
+        "p": "Işık başka ortama eğik geçerken hızı değiştiği için kırılır. İndis <b>n = c/v</b>: suda 1,33. <b>Snell:</b> n₁·sinθ₁ = n₂·sinθ₂; indisi büyük ortamda ışın normale yaklaşır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='optik-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><rect x='10' y='100' width='300' height='90' fill='var(--c1)' fill-opacity='0.15'/><path d='M10.0 100.0 L310.0 100.0' stroke='var(--c1)' stroke-width='1.5' fill='none'/><path d='M160.0 22.0 L160.0 182.0' stroke='var(--muted)' stroke-width='1.2' fill='none' stroke-dasharray='4 3'/><path d='M90.0 30.0 L159.3 99.3' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#optik-8)'/><path d='M160.0 100.0 L210.2 180.0' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#optik-8)'/><path d='M160 72 A28 28 0 0 0 140.2 80.2' fill='none' stroke='var(--ink)'/><path d='M160 128 A28 28 0 0 0 174.9 123.7' fill='none' stroke='var(--ink)'/><text x='149' y='64' font-size='12' fill='var(--ink)' text-anchor='middle'>θ₁</text><text x='172' y='146' font-size='12' fill='var(--ink)' text-anchor='middle'>θ₂</text><text x='16' y='90' font-size='12' fill='var(--ink)' text-anchor='start'>hava  n₁ = 1</text><text x='16' y='120' font-size='12' fill='var(--ink)' text-anchor='start'>su  n₂ ≈ 1,33</text><text x='244' y='36' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>n₁·sinθ₁ = n₂·sinθ₂</text><text x='244' y='58' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>n = c / v</text><text x='252' y='152' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>normale yaklaşır</text><text x='252' y='168' font-size='11' fill='var(--muted)' text-anchor='middle'>(θ₂ &lt; θ₁)</text></svg>",
         "key": "Optik yoğunluk kütle yoğunluğu değildir: yağ sudan hafiftir ama kırılma indisi daha büyüktür."
       },
       {
         "h": "Tam yansıma ve sınır açı",
-        "p": "Işık indisi büyük ortamdan küçüğe geçerken normalden uzaklaşır. Kırılma açısını 90° yapan gelme açısına <b>sınır açı</b> denir: sin θs = n₂/n₁. Gelme açısı sınır açıyı aşarsa ışık hiç çıkmaz, tamamen geri yansır: <b>tam yansıma</b>. Fiber optik kablo ve elmasın parıltısı buna dayanır.",
+        "p": "İndisi büyük ortamdan küçüğe geçen ışık normalden uzaklaşır. Gelme açısı <b>sınır açıyı</b> aşınca ışık çıkamaz, tamamen geri yansır: <b>tam yansıma</b>.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='optik-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker><marker id='optik-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker><marker id='optik-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><rect x='10' y='90' width='300' height='105' fill='var(--c1)' fill-opacity='0.15'/><path d='M10.0 90.0 L310.0 90.0' stroke='var(--c1)' stroke-width='1.5' fill='none'/><path d='M97.4 62.0 L97.4 118.0' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><path d='M209.8 62.0 L209.8 118.0' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><path d='M261.7 62.0 L261.7 118.0' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><path d='M130.0 160.0 L97.9 91.0' stroke='var(--c3)' stroke-width='1.8' fill='none'/><path d='M97.4 90.0 L58.0 32.1' stroke='var(--c3)' stroke-width='1.8' fill='none' marker-end='url(#optik-9)'/><path d='M130.0 160.0 L209.3 91.0' stroke='var(--c4)' stroke-width='1.8' fill='none'/><path d='M209.8 90.0 L247.8 90.0' stroke='var(--c4)' stroke-width='1.8' fill='none' marker-end='url(#optik-10)'/><path d='M130.0 160.0 L261.1 90.5' stroke='var(--c2)' stroke-width='1.8' fill='none'/><path d='M261.7 90.0 L304.0 112.5' stroke='var(--c2)' stroke-width='1.8' fill='none' marker-end='url(#optik-11)'/><circle cx='130' cy='160' r='4' fill='var(--c4)'/><text x='130' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>ışık kaynağı</text><text x='60' y='20' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>θ &lt; θs: kırılır</text><text x='233.8197020717284' y='82' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>θ = θs</text><text x='194' y='150' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>θ &gt; θs: tam yansıma</text><text x='16' y='82' font-size='11' fill='var(--muted)' text-anchor='start'>hava</text><text x='16' y='108' font-size='11' fill='var(--muted)' text-anchor='start'>su</text><text x='244' y='30' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>sin θs = n₂ / n₁</text><text x='244' y='48' font-size='11' fill='var(--muted)' text-anchor='middle'>su → hava: θs ≈ 49°</text></svg>",
-        "key": "Fiber kabloda ışık, cam çekirdekte tam yansıyarak ilerler: internet ve endoskop böyle çalışır."
+        "key": "sin θs = n₂/n₁. Fiber kabloda ışık cam çekirdekte tam yansıyarak ilerler; elmasın parıltısı da buradan gelir."
       },
       {
         "h": "Görünür derinlik",
-        "p": "Suyun dibindeki bir cisimden gelen ışık, havaya çıkarken normalden uzaklaşır. Gözün ışınları geriye doğru düz uzattığı için cismi olduğundan yukarıda görürsün. Bu yüzden havuz sığ görünür: 2 m derinlikteki bir havuz, yukarıdan dik bakınca yaklaşık 1,5 m gibi görünür.",
+        "p": "Sudaki cisimden gelen ışık havaya çıkarken normalden uzaklaşır. Göz ışınları düz uzattığı için cismi yukarıda görür: havuz olduğundan <b>sığ</b> görünür.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='optik-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><marker id='optik-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><rect x='14' y='70' width='292' height='120' fill='var(--c1)' fill-opacity='0.15'/><path d='M14.0 70.0 L306.0 70.0' stroke='var(--c1)' stroke-width='1.5' fill='none'/><path d='M200.0 175.0 L170.3 71.0' stroke='var(--c2)' stroke-width='1.6' fill='none'/><path d='M170.0 70.0 L152.0 22.6' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-end='url(#optik-12)'/><path d='M200.0 175.0 L155.3 71.0' stroke='var(--c2)' stroke-width='1.6' fill='none'/><path d='M155.0 70.0 L128.0 22.6' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-end='url(#optik-12)'/><path d='M170.0 70.0 L200.0 149.0' stroke='var(--c2)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><path d='M155.0 70.0 L200.0 149.0' stroke='var(--c2)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><ellipse cx='200' cy='175' rx='10' ry='4' fill='var(--c4)'/><ellipse cx='200' cy='149' rx='10' ry='4' fill='none' stroke='var(--c4)' stroke-dasharray='3 2' stroke-width='1.5'/><ellipse cx='140' cy='13' rx='12' ry='5' fill='none' stroke='var(--ink)' stroke-width='1.5'/><circle cx='140' cy='13' r='2.5' fill='var(--ink)'/><text x='120' y='17' font-size='11' fill='var(--muted)' text-anchor='end'>göz</text><text x='214' y='153' font-size='11' fill='var(--ink)' text-anchor='start'>görünen</text><text x='214' y='179' font-size='11' fill='var(--ink)' text-anchor='start'>gerçek</text><path d='M266 72 V147' stroke='var(--muted)' stroke-width='1.2' marker-start='url(#optik-13)' marker-end='url(#optik-13)' fill='none'/><path d='M296 72 V173' stroke='var(--muted)' stroke-width='1.2' marker-start='url(#optik-13)' marker-end='url(#optik-13)' fill='none'/><text x='278' y='114' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>h’</text><text x='301' y='128' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>h</text><text x='24' y='62' font-size='11' fill='var(--muted)' text-anchor='start'>hava</text><text x='24' y='88' font-size='11' fill='var(--muted)' text-anchor='start'>su</text><text x='240' y='32' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>h’ ≈ h / 1,33</text><text x='240' y='50' font-size='11' fill='var(--muted)' text-anchor='middle'>(yukarıdan dik bakınca)</text></svg>",
-        "key": "Sudaki balık ise havadaki kuşu olduğundan daha yukarıda (uzakta) görür."
+        "key": "2 m derin havuz dik bakınca yaklaşık 1,5 m görünür. Sudaki balık havadaki kuşu daha yukarıda görür.",
+        "once": {
+          "soru": "Havuzun dibindeki bir bozuk paraya yukarıdan bakıyorsun. Para nerede görünür?",
+          "secenekler": [
+            {
+              "yazi": "Daha yukarıda",
+              "neden": "Işık sudan çıkarken kırılır; göz onu düz uzatır ve parayı yukarıda görür.",
+              "dogru": true
+            },
+            {
+              "yazi": "Olduğu yerde",
+              "neden": "Işık su yüzeyinde kırıldığı için yeri değişmiş görünür."
+            },
+            {
+              "yazi": "Daha derinde",
+              "neden": "Kırılma parayı yukarı kaldırmış gibi gösterir."
+            }
+          ]
+        }
       },
       {
         "h": "İnce mercekler",
-        "p": "Havadaki cam merceklerde <b>ince kenarlı</b> mercek ışığı toplar (yakınsak), <b>kalın kenarlı</b> mercek dağıtır (ıraksak). Eksene paralel gelen ışın odaktan geçer (ıraksakta uzantısı geçer); merceğin merkezinden geçen ışın sapmaz. Görüntü türü bakımından yakınsak mercek çukur aynaya, ıraksak mercek tümsek aynaya benzer.",
+        "p": "<b>İnce kenarlı</b> mercek ışığı toplar (yakınsak), <b>kalın kenarlı</b> dağıtır (ıraksak). Eksene paralel ışın odaktan geçer; merkezden geçen ışın sapmaz.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='optik-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker><marker id='optik-15' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c5)'/></marker></defs><path d='M10.0 100.0 L170.0 100.0' stroke='var(--muted)' stroke-width='1' fill='none'/><path d='M180.0 100.0 L310.0 100.0' stroke='var(--muted)' stroke-width='1' fill='none'/><path d='M90 48 Q108 100 90 152 Q72 100 90 48 Z' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><path d='M14.0 70.0 L90.0 70.0' stroke='var(--c1)' stroke-width='1.5' fill='none'/><path d='M14.0 100.0 L90.0 100.0' stroke='var(--c1)' stroke-width='1.5' fill='none'/><path d='M14.0 130.0 L90.0 130.0' stroke='var(--c1)' stroke-width='1.5' fill='none'/><path d='M90.0 70.0 L163.0 113.8' stroke='var(--c1)' stroke-width='1.5' fill='none' marker-end='url(#optik-14)'/><path d='M90.0 100.0 L163.0 100.0' stroke='var(--c1)' stroke-width='1.5' fill='none' marker-end='url(#optik-14)'/><path d='M90.0 130.0 L163.0 86.2' stroke='var(--c1)' stroke-width='1.5' fill='none' marker-end='url(#optik-14)'/><circle cx='140' cy='100' r='3' fill='var(--ink)'/><text x='140' y='86' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>F</text><path d='M224 48 H246 Q237 100 246 152 H224 Q233 100 224 48 Z' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)' stroke-width='1.5'/><path d='M184.0 70.0 L235.0 70.0' stroke='var(--c5)' stroke-width='1.5' fill='none'/><path d='M184.0 100.0 L235.0 100.0' stroke='var(--c5)' stroke-width='1.5' fill='none'/><path d='M184.0 130.0 L235.0 130.0' stroke='var(--c5)' stroke-width='1.5' fill='none'/><path d='M235.0 70.0 L298.0 22.8' stroke='var(--c5)' stroke-width='1.5' fill='none' marker-end='url(#optik-15)'/><path d='M235.0 100.0 L302.0 100.0' stroke='var(--c5)' stroke-width='1.5' fill='none' marker-end='url(#optik-15)'/><path d='M235.0 130.0 L298.0 177.2' stroke='var(--c5)' stroke-width='1.5' fill='none' marker-end='url(#optik-15)'/><path d='M235.0 70.0 L195.0 100.0' stroke='var(--c5)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><path d='M235.0 130.0 L195.0 100.0' stroke='var(--c5)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><circle cx='195' cy='100' r='3' fill='var(--ink)'/><text x='195' y='124' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>F</text><text x='88' y='30' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>ince kenarlı</text><text x='235' y='30' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>kalın kenarlı</text><text x='88' y='190' font-size='11' fill='var(--ink)' text-anchor='middle'>yakınsak: toplar</text><text x='235' y='190' font-size='11' fill='var(--ink)' text-anchor='middle'>ıraksak: dağıtır</text></svg>",
-        "key": "Yakınsakta cisim F ile mercek arasındaysa görüntü sanal, düz, büyük: büyüteç budur."
+        "key": "Yakınsak mercek çukur aynaya, ıraksak tümsek aynaya benzer. Cisim F ile yakınsak mercek arasındaysa görüntü sanal, büyük: büyüteç.",
+        "once": {
+          "soru": "Büyüteçle güneş ışığını bir noktada toplayabilirsin. Büyütecin kenarları nasıldır?",
+          "secenekler": [
+            {
+              "yazi": "İnce",
+              "neden": "Ortası kalın, kenarı ince mercek ışığı toplar.",
+              "dogru": true
+            },
+            {
+              "yazi": "Kalın",
+              "neden": "Kenarı kalın mercek ışığı dağıtır."
+            },
+            {
+              "yazi": "Ortasıyla aynı",
+              "neden": "Düz cam ışığı toplamaz."
+            }
+          ]
+        }
       },
       {
         "h": "Ayna ve mercek denklemi",
-        "p": "Ayna ve mercek için: <b>1/f = 1/d<sub>c</sub> + 1/d<sub>g</sub></b> (c: cisim, g: görüntü uzaklığı). Büyütme <b>m = −d<sub>g</sub>/d<sub>c</sub></b>; boy oranı h<sub>g</sub>/h<sub>c</sub> = |m|. Sanal görüntüde d<sub>g</sub>, tümsek ayna ve ıraksak mercekte f negatif alınır.",
+        "p": "Ayna ve mercekte <b>1/f = 1/d<sub>c</sub> + 1/d<sub>g</sub></b>. Büyütme <b>m = −d<sub>g</sub>/d<sub>c</sub></b>; m negatifse görüntü ters, pozitifse düzdür.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='6' width='300' height='40' rx='8' fill='var(--panel)'/><text x='160' y='33' font-size='19' fill='var(--ink)' text-anchor='middle' font-weight='700'>1/f = 1/d<tspan dy='4' font-size='11'>c</tspan><tspan dy='-4'> + 1/d</tspan><tspan dy='4' font-size='11'>g</tspan></text><text x='160' y='66' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>m = −d<tspan dy='3' font-size='9'>g</tspan><tspan dy='-3'> / d</tspan><tspan dy='3' font-size='9'>c</tspan><tspan dy='-3'></tspan><tspan>   ·   boy oranı = |m|</tspan></text><text x='160' y='84' font-size='10' fill='var(--muted)' text-anchor='middle'>sanal görüntü: d<tspan dy='3' font-size='9'>g</tspan><tspan dy='-3'> &lt; 0   ·   tümsek ayna, ıraksak mercek: f &lt; 0</tspan></text><rect x='10' y='96' width='146' height='98' rx='8' fill='var(--c2)' fill-opacity='0.10' stroke='var(--c2)' stroke-width='1.2'/><rect x='164' y='96' width='146' height='98' rx='8' fill='var(--c1)' fill-opacity='0.10' stroke='var(--c1)' stroke-width='1.2'/><text x='83' y='114' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Çukur ayna</text><text x='83' y='132' font-size='11' fill='var(--ink)' text-anchor='middle'>f = 10 cm, cisim 30 cm</text><text x='83' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>d<tspan dy='3' font-size='9'>g</tspan><tspan dy='-3'> = +15 cm</tspan></text><text x='83' y='168' font-size='11' fill='var(--ink)' text-anchor='middle'>m = −15/30 = −0,5</text><text x='83' y='186' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>gerçek, ters, yarı boy</text><text x='237' y='114' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>Yakınsak mercek</text><text x='237' y='132' font-size='11' fill='var(--ink)' text-anchor='middle'>f = 10 cm, cisim 5 cm</text><text x='237' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>d<tspan dy='3' font-size='9'>g</tspan><tspan dy='-3'> = −10 cm</tspan></text><text x='237' y='168' font-size='11' fill='var(--ink)' text-anchor='middle'>m = −(−10)/5 = +2</text><text x='237' y='186' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>sanal, düz, 2 kat büyük</text></svg>",
-        "key": "m negatifse görüntü ters, pozitifse düz; |m| > 1 ise büyük, |m| < 1 ise küçüktür.",
+        "key": "c: cisim, g: görüntü uzaklığı. Sanal görüntüde dg negatif alınır; |m| > 1 ise görüntü büyüktür.",
         "etk": {
           "tur": "formul",
           "soru": "Çukur ayna ya da yakınsak mercek (f &gt; 0). Cismi yaklaştırıp uzaklaştır; görüntü nerede?",
@@ -7896,31 +7968,85 @@
               "Gerçek, ters görüntü: cisim F'nin dışında."
             ]
           ]
+        },
+        "once": {
+          "soru": "1/f = 1/dc + 1/dg. Çukur aynada f = 10 cm, cisim 15 cm uzakta. Görüntü kaç cm uzakta?",
+          "secenekler": [
+            {
+              "yazi": "30 cm",
+              "neden": "1/dg = 1/10 − 1/15 = 1/30.",
+              "dogru": true
+            },
+            {
+              "yazi": "25 cm",
+              "neden": "Uzaklıklar toplanmaz; tersleri çıkarılır: 1/10 − 1/15."
+            },
+            {
+              "yazi": "5 cm",
+              "neden": "15 − 10 değil; 1/dg = 1/10 − 1/15 = 1/30."
+            }
+          ]
         }
       },
       {
         "h": "Tümsek ayna ve ıraksak mercekte hesap",
-        "p": "Bu ayna ve merceklerde f negatif alınır. f = −10 cm olan tümsek aynanın 15 cm önündeki cisim için 1/d<sub>g</sub> = −1/10 − 1/15 = −1/6, yani d<sub>g</sub> = −6 cm. Görüntü aynanın 6 cm arkasında; sanal, düz, küçüktür: m = 0,4.",
+        "p": "Tümsek ayna ve ıraksak mercekte f negatiftir. f = −10 cm, cisim 15 cm'deyse d<sub>g</sub> = −6 cm: sanal, düz, küçük.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='6' width='300' height='40' rx='8' fill='var(--panel)'/><text x='160' y='33' font-size='17' fill='var(--ink)' text-anchor='middle' font-weight='700'>1/d<tspan dy='4' font-size='11'>g</tspan><tspan dy='-4'> = 1/f − 1/d</tspan><tspan dy='4' font-size='11'>c</tspan></text><text x='160' y='70' font-size='11' fill='var(--muted)' text-anchor='middle'>f &lt; 0 olduğundan d<tspan dy='3' font-size='9'>g</tspan><tspan dy='-3'> hep negatif: görüntü hep sanal</tspan></text><rect x='10' y='86' width='146' height='108' rx='8' fill='var(--c3)' fill-opacity='0.10' stroke='var(--c3)' stroke-width='1.2'/><rect x='164' y='86' width='146' height='108' rx='8' fill='var(--c1)' fill-opacity='0.10' stroke='var(--c1)' stroke-width='1.2'/><text x='83' y='105' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Tümsek ayna</text><text x='83' y='124' font-size='11' fill='var(--ink)' text-anchor='middle'>f = −10 cm, cisim 15 cm</text><text x='83' y='143' font-size='11' fill='var(--ink)' text-anchor='middle'>−1/10 − 1/15 = −1/6</text><text x='83' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>d<tspan dy='3' font-size='9'>g</tspan><tspan dy='-3'> = −6 cm, m = +0,4</tspan></text><text x='83' y='183' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>sanal, düz, küçük</text><text x='237' y='105' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>Iraksak mercek</text><text x='237' y='124' font-size='11' fill='var(--ink)' text-anchor='middle'>f = −20 cm, cisim 20 cm</text><text x='237' y='143' font-size='11' fill='var(--ink)' text-anchor='middle'>−1/20 − 1/20 = −1/10</text><text x='237' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>d<tspan dy='3' font-size='9'>g</tspan><tspan dy='-3'> = −10 cm, m = +0,5</tspan></text><text x='237' y='183' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>sanal, düz, yarı boy</text></svg>",
-        "key": "Cisim nerede olursa olsun tümsek ayna ve ıraksak mercek sanal, düz, küçük görüntü verir."
+        "key": "1/dg = −1/10 − 1/15 = −1/6, m = 0,4. Cisim nerede olursa olsun bu ikisi sanal, düz, küçük görüntü verir.",
+        "once": {
+          "soru": "Arabanın yan aynasında \"Nesneler göründüğünden yakındır\" yazar. Neden?",
+          "secenekler": [
+            {
+              "yazi": "Tümsek ayna küçük gösterir",
+              "neden": "Tümsek ayna sanal, küçük görüntü verir; araç uzakmış gibi görünür.",
+              "dogru": true
+            },
+            {
+              "yazi": "Ayna kirlidir",
+              "neden": "Uyarı aynanın biçimi yüzündendir."
+            },
+            {
+              "yazi": "Ayna büyük gösterir",
+              "neden": "Büyük gösterseydi nesneler yakın görünürdü."
+            }
+          ]
+        }
       },
       {
         "h": "Prizma ve gökkuşağı",
-        "p": "Camın kırılma indisi renge göre biraz değişir. Bu yüzden beyaz ışık prizmada renklerine ayrılır: <b>kırmızı en az, mor en çok</b> kırılır. Gökkuşağında güneş ışığı yağmur damlasına girerken kırılır, damlanın içinde yansır, çıkarken yeniden kırılır. Gökkuşağını görmek için Güneş arkanda olmalı.",
+        "p": "Camın indisi renge göre değişir; beyaz ışık prizmada renklerine ayrılır: <b>kırmızı en az, mor en çok</b> kırılır. Gökkuşağı yağmur damlasında kırılma ve yansımayla oluşur.",
         "svg": "<svg viewBox='0 0 320 200'><polygon points='160,30 100,150 220,150' fill='var(--c1)' fill-opacity='0.12' stroke='var(--ink)' stroke-width='1.5'/><path d='M14.0 120.0 L130.0 90.0' stroke='var(--ink)' stroke-width='2.5' fill='none'/><path d='M130.0 90.0 L190.0 90.0' stroke='var(--c2)' stroke-width='1.3' fill='none'/><path d='M190.0 90.0 L300.0 128.0' stroke='var(--c2)' stroke-width='2' fill='none'/><path d='M130.0 90.0 L192.1 94.2' stroke='var(--c4)' stroke-width='1.3' fill='none'/><path d='M192.1 94.2 L300.0 140.5' stroke='var(--c4)' stroke-width='2' fill='none'/><path d='M130.0 90.0 L194.2 98.4' stroke='var(--c3)' stroke-width='1.3' fill='none'/><path d='M194.2 98.4 L300.0 153.0' stroke='var(--c3)' stroke-width='2' fill='none'/><path d='M130.0 90.0 L196.3 102.6' stroke='var(--c1)' stroke-width='1.3' fill='none'/><path d='M196.3 102.6 L300.0 165.5' stroke='var(--c1)' stroke-width='2' fill='none'/><path d='M130.0 90.0 L198.4 106.8' stroke='var(--c5)' stroke-width='1.3' fill='none'/><path d='M198.4 106.8 L300.0 178.0' stroke='var(--c5)' stroke-width='2' fill='none'/><text x='50' y='140' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>beyaz ışık</text><text x='252' y='62' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>kırmızı en az kırılır</text><text x='240' y='196' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>mor en çok kırılır</text></svg>",
-        "key": "Camda mor ışık kırmızıdan yavaş ilerler; bu yüzden onun kırılma indisi daha büyüktür."
+        "key": "Camda mor ışık kırmızıdan yavaş ilerler; bu yüzden kırılma indisi daha büyüktür.",
+        "once": {
+          "soru": "Gökkuşağını görmek için Güneş nerede olmalı?",
+          "secenekler": [
+            {
+              "yazi": "Arkanda",
+              "neden": "Işık önündeki damlalarda kırılıp yansıyarak sana döner.",
+              "dogru": true
+            },
+            {
+              "yazi": "Önünde",
+              "neden": "Güneşe bakınca damlalardan yansıyan ışık sana gelmez."
+            },
+            {
+              "yazi": "Tam tepende",
+              "neden": "Güneş çok yüksekteyken gökkuşağı ufkun altında kalır."
+            }
+          ]
+        }
       },
       {
         "h": "Işıkta ve boyada renkler",
-        "p": "Işığın ana renkleri <b>kırmızı, yeşil, mavi</b>dir; üçü eşit şiddette birleşince beyaz olur (toplamsal karışım). Boyada ise renkler soğurularak çıkarılır; ana boyalar camgöbeği, eflatun (magenta) ve sarıdır. Bir cisim, üzerine düşen ışıktan <b>yansıttığı</b> ışığın renginde görünür. Renkli filtre yalnızca kendi rengini geçirir.",
+        "p": "Işığın ana renkleri <b>kırmızı, yeşil, mavidir</b>; üçü birleşince beyaz olur. Cisim, üzerine düşen ışıktan <b>yansıttığı</b> renkte görünür; filtre yalnız kendi rengini geçirir.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='8' width='304' height='88' rx='8' fill='var(--panel)'/><text x='18' y='26' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>Işıkta: toplamsal karışım</text><circle cx='40' cy='52' r='12' fill='var(--c2)' fill-opacity='0.6'/><text x='64' y='57' font-size='14' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='88' cy='52' r='12' fill='var(--c3)' fill-opacity='0.6'/><text x='112' y='57' font-size='14' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='136' cy='52' r='12' fill='var(--c1)' fill-opacity='0.6'/><text x='160' y='57' font-size='14' fill='var(--ink)' text-anchor='middle'>=</text><circle cx='184' cy='52' r='12' fill='none' stroke='var(--ink)'/><text x='204' y='57' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>beyaz</text><text x='18' y='86' font-size='11' fill='var(--ink)' text-anchor='start'>kırmızı+yeşil = sarı · kırmızı+mavi = eflatun</text><text x='302' y='57' font-size='10' fill='var(--muted)' text-anchor='end'>(TV, ekran)</text><rect x='8' y='104' width='304' height='88' rx='8' fill='var(--panel)'/><text x='18' y='122' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>Boyada: çıkarmalı karışım</text><text x='18' y='142' font-size='11' fill='var(--ink)' text-anchor='start'>Boya bazı renkleri soğurur, kalanını yansıtır.</text><text x='18' y='160' font-size='11' fill='var(--ink)' text-anchor='start'>sarı + camgöbeği = yeşil</text><text x='18' y='178' font-size='11' fill='var(--ink)' text-anchor='start'>camgöbeği + eflatun + sarı = siyaha yakın</text></svg>",
-        "key": "Kırmızı elma mavi ışıkta siyah görünür; kırmızı filtrenin ardı da mavi ışıkta karanlıktır."
+        "key": "Boyada ana renkler camgöbeği, eflatun ve sarıdır. Kırmızı elma mavi ışıkta siyah görünür."
       },
       {
         "h": "Göz ve göz kusurları",
-        "p": "Göz, kornea ve göz merceğiyle yakınsak bir mercek sistemi gibi çalışır; retinada gerçek, ters, küçük görüntü oluşur. Az önce gördüğün gibi <b>miyop</b> göz uzağı net göremez: <b>ıraksak</b> mercek takılır. <b>Hipermetrop</b> göz yakını net göremez, görüntü retinanın arkasına düşer: <b>yakınsak</b> mercek takılır.",
+        "p": "Göz yakınsak mercek gibidir; retinada gerçek, ters, küçük görüntü oluşur. <b>Miyop</b> uzağı göremez: <b>ıraksak</b> mercek. <b>Hipermetrop</b> yakını göremez: <b>yakınsak</b> mercek.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='optik-16' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><circle cx='55' cy='80' r='34' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><path d='M79 56 A34 34 0 0 1 79 104' fill='none' stroke='var(--c2)' stroke-width='3'/><ellipse cx='27' cy='80' rx='4' ry='14' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><path d='M5.0 70.0 L27.0 70.0' stroke='var(--c4)' stroke-width='1.4' fill='none'/><path d='M27.0 70.0 L89.0 80.0' stroke='var(--c4)' stroke-width='1.4' fill='none'/><path d='M5.0 90.0 L27.0 90.0' stroke='var(--c4)' stroke-width='1.4' fill='none'/><path d='M27.0 90.0 L89.0 80.0' stroke='var(--c4)' stroke-width='1.4' fill='none'/><circle cx='89' cy='80' r='2.5' fill='var(--c2)'/><text x='55' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>normal göz</text><text x='55' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>görüntü retinada</text><text x='55' y='172' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>gözlük gerekmez</text><circle cx='160' cy='80' r='34' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><path d='M184 56 A34 34 0 0 1 184 104' fill='none' stroke='var(--c2)' stroke-width='3'/><ellipse cx='132' cy='80' rx='4' ry='14' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><path d='M110.0 70.0 L132.0 70.0' stroke='var(--c4)' stroke-width='1.4' fill='none'/><path d='M132.0 70.0 L174.0 80.0' stroke='var(--c4)' stroke-width='1.4' fill='none'/><path d='M174.0 80.0 L193.0 84.5' stroke='var(--c4)' stroke-width='1.4' fill='none'/><path d='M110.0 90.0 L132.0 90.0' stroke='var(--c4)' stroke-width='1.4' fill='none'/><path d='M132.0 90.0 L174.0 80.0' stroke='var(--c4)' stroke-width='1.4' fill='none'/><path d='M174.0 80.0 L193.0 75.5' stroke='var(--c4)' stroke-width='1.4' fill='none'/><circle cx='174' cy='80' r='2.5' fill='var(--c2)'/><text x='160' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>miyopi</text><text x='160' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>retinanın önünde</text><text x='160' y='172' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>ıraksak mercek</text><circle cx='265' cy='80' r='34' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><path d='M289 56 A34 34 0 0 1 289 104' fill='none' stroke='var(--c2)' stroke-width='3'/><ellipse cx='237' cy='80' rx='4' ry='14' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><path d='M215.0 70.0 L237.0 70.0' stroke='var(--c4)' stroke-width='1.4' fill='none'/><path d='M237.0 70.0 L297.0 78.1' stroke='var(--c4)' stroke-width='1.4' fill='none'/><path d='M297.0 78.1 L311.0 80.0' stroke='var(--c4)' stroke-width='1' fill='none' stroke-dasharray='2 2'/><path d='M215.0 90.0 L237.0 90.0' stroke='var(--c4)' stroke-width='1.4' fill='none'/><path d='M237.0 90.0 L297.0 81.9' stroke='var(--c4)' stroke-width='1.4' fill='none'/><path d='M297.0 81.9 L311.0 80.0' stroke='var(--c4)' stroke-width='1' fill='none' stroke-dasharray='2 2'/><circle cx='311' cy='80' r='2.5' fill='var(--c2)'/><text x='265' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>hipermetropi</text><text x='265' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>retina arkasında</text><text x='265' y='172' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>yakınsak mercek</text><text x='160' y='194' font-size='10' fill='var(--c2)' text-anchor='middle'>kırmızı yay: retina</text></svg>",
-        "key": "Miyopi uzak, hipermetropi yakın; miyopa kalın kenarlı, hipermetropa ince kenarlı mercek."
+        "key": "Miyopta görüntü retinanın önüne, hipermetropta arkasına düşer. Miyopa kalın kenarlı, hipermetropa ince kenarlı mercek."
       },
       {
         "h": "Özet",

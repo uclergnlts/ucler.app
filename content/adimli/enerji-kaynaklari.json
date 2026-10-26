@@ -34,13 +34,7 @@
     "ipucu": "Benzin, kulenin üst kısmından alınır: küçük moleküller.",
     "tamam": "Benzin yaklaşık C₅–C₁₀ moleküllerinden oluşur. Molekül küçüldükçe kaynama noktası düşer ve kulenin daha yukarısında yoğunlaşır."
    },
-   "kart": 1,
-   "goster": {
-    "deger": {
-     "c": 15
-    },
-    "not": "C₁₅ benzinden büyük bir molekül: kaynama noktası daha yüksek (175–275 °C), bu yüzden daha aşağıdaki <b>gazyağı</b> rafında sıvılaşır."
-   }
+   "kart": 2
   },
   {
    "baslik": "Hangi yakıt daha az CO₂ verir?",
@@ -68,13 +62,7 @@
     "ipucu": "Çubuğu en kısa olanı ara.",
     "tamam": "Doğal gaz (çoğu metan) en az CO₂ salan fosil yakıttır. Yine de sıfır değildir: doğal gaz da fosil yakıttır."
    },
-   "kart": 2,
-   "goster": {
-    "deger": {
-     "y": 1
-    },
-    "not": "Petrol aynı 1 MJ ısı için yaklaşık 73 g CO₂ salıyor; kömür ise 95 g."
-   }
+   "kart": 3
   },
   {
    "baslik": "Sera etkisi",
@@ -145,7 +133,7 @@
   },
   {
    "baslik": "Santraller",
-   "metin": "Her santral bir enerji türünü elektriğe çevirir. Santralleri tek tek seç ve dönüşüm zincirine bak.",
+   "metin": "Her santral bir enerji türünü elektriğe çevirir; yakıt pili H₂ ile O₂'den doğrudan elektrik üretir. Santralleri tek tek seç ve dönüşüm zincirine bak.",
    "sahne": {
     "tur": "kim12-santral"
    },
@@ -184,7 +172,7 @@
   },
   {
    "baslik": "Atom ekonomisi",
-   "metin": "Etanolü üç farklı yoldan elde edebiliriz. Atom ekonomisi %100 olan yolu bul.",
+   "metin": "Atom ekonomisi, girenlerin atomlarının ne kadarının istenen ürüne geçtiğidir. Etanolü üç farklı yoldan elde edebiliriz. Atom ekonomisi %100 olan yolu bul.",
    "sahne": {
     "tur": "kim12-atomeko"
    },
@@ -208,13 +196,7 @@
     "ipucu": "Hiç yan ürün çıkmayan tepkimeyi ara.",
     "tamam": "Katılma tepkimesinde girenlerin bütün atomları etanole geçer: %100. Yer değiştirme yolu ise NaBr atığıyla %31'de kalır."
    },
-   "kart": 11,
-   "goster": {
-    "deger": {
-     "y": 0
-    },
-    "not": "Fermantasyonda 2 CO₂ atık olarak çıkar: atom ekonomisi 92 / 180 ≈ <b>%51</b>."
-   }
+   "kart": 11
   },
   {
    "baslik": "Nano boyut",
@@ -242,13 +224,7 @@
     "ipucu": "Her kenarı 2 parçaya bölmek yüzeyi 2 katına çıkarır.",
     "tamam": "27 küçük küp: toplam yüzey 3 katı. Yüzey/hacim oranı büyüyen madde daha etkin tepkimeye girer; nano parçacıklar bu yüzden iyi katalizördür."
    },
-   "kart": 12,
-   "goster": {
-    "deger": {
-     "n": 2
-    },
-    "not": "Her kenar 2 parçaya bölündü: 8 küçük küp. Toplam hacim aynı, toplam yüzey <b>2 katı</b>."
-   }
+   "kart": 12
   }
  ],
  "kapanis": [
@@ -258,5 +234,6 @@
   "Temiz yağmurun pH'ı ≈ 5,6'dır; SO₂ ve azot oksitler onu daha da düşürür.",
   "Güneş pili ve yakıt pili elektriği türbinsiz üretir; diğer santraller türbin ve jeneratör kullanır.",
   "Yeşil kimya atığı baştan önler; nano boyutta yüzey/hacim oranı büyür."
- ]
+ ],
+ "soruOnce": true
 }

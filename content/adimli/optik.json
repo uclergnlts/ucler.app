@@ -41,17 +41,11 @@
     "tamam": "Noktasal kaynakla: lambadan topa 40 cm, perdeye 120 cm: üç kat uzaklık, üç kat gölge, yani <b>30 cm</b>. Benzer üçgenler bunu söyler.",
     "ipucu": "Gölge, lambadan perdeye uzaklığın lambadan topa uzaklığa oranı kadar büyür: 120 / d = 3."
    },
-   "kart": 1,
-   "goster": {
-    "deger": {
-     "d": 30
-    },
-    "not": "Top lambadan 30 cm uzakta: perde 4 kat uzakta, gölgenin çapı 4 × 10 = <b>40 cm</b>."
-   }
+   "kart": 1
   },
   {
    "baslik": "Yansıma yasası",
-   "metin": "Lazerin açısını değiştir ve yansıyan ışını hedefe gönder.",
+   "metin": "Yansımada gelme açısı yansıma açısına eşittir. Lazerin açısını değiştir ve yansıyan ışını hedefe gönder.",
    "sahne": {
     "tur": "fiz12-yansima"
    },
@@ -77,13 +71,7 @@
     "tamam": "40° ile gelen ışın normalin öbür yanından <b>40° ile</b> yansıdı ve hedefe çarptı.",
     "ipucu": "Hedef lazerle aynı yükseklikte. Işın aynaya gidip aynı açıyla geri çıkıyor; hedef, ayna noktasının iki katı uzakta olmalı."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "a": 30
-    },
-    "not": "30° ile gelen ışın normalin öbür yanından <b>30°</b> ile yansıyor, ama hedefi ıskalıyor."
-   }
+   "kart": 3
   },
   {
    "baslik": "Açılı iki ayna",
@@ -142,17 +130,11 @@
     "tamam": "Cisim F ile M arasında (15 cm): yansıyan ışınlar M'nin ötesinde kesişti, görüntü <b>gerçek, ters ve 2 kat büyük</b>. Bunu hesapla bulmayı Kart 11'de göreceksin.",
     "ipucu": "Cisim F'nin dışında olmalı ama M'den yakın: F ile M arasında görüntü gerçek, ters ve büyüktür."
    },
-   "kart": 6,
-   "goster": {
-    "deger": {
-     "d": 30
-    },
-    "not": "Cisim 30 cm'de, M'nin dışında: ışınlar F ile M arasında kesişiyor. Görüntü gerçek, ters ve <b>yarı boyda</b>."
-   }
+   "kart": 6
   },
   {
    "baslik": "Kırılma ve Snell yasası",
-   "metin": "Işık havadan 53° ile geliyor (sin 53° ≈ 0,8). Ortamın kırılma indisini ayarla: kırılma açısı <b>30°</b> olsun.",
+   "metin": "Snell yasası: n₁·sinθ₁ = n₂·sinθ₂ (havada n = 1). Işık havadan 53° ile geliyor (sin 53° ≈ 0,8). Ortamın kırılma indisini ayarla: kırılma açısı <b>30°</b> olsun.",
    "sahne": {
     "tur": "fiz12-snell"
    },
@@ -177,13 +159,7 @@
     "tamam": "1 · 0,8 = n · 0,5, yani <b>n = 1,6</b>. Işık bu ortamda c/1,6 ≈ 1,9·10⁸ m/s hızla ilerler; indis büyüdükçe daha çok kırılır.",
     "ipucu": "sin 30° = 0,5. 1 · 0,8 = n · 0,5 eşitliğinden n'yi bul."
    },
-   "kart": 7,
-   "goster": {
-    "deger": {
-     "n": 2
-    },
-    "not": "n = 2 olunca sin θ₂ = 0,8 / 2 = 0,4, kırılma açısı ≈ <b>24°</b>: ışık normale daha çok yaklaşıyor."
-   }
+   "kart": 7
   },
   {
    "baslik": "Işık laboratuvarı",
@@ -356,7 +332,7 @@
      }
     ]
    },
-   "kart": 14
+   "kart": 15
   }
  ],
  "kapanis": [
@@ -366,5 +342,6 @@
   "Ayna ve mercekte 1/f = 1/d<sub>c</sub> + 1/d<sub>g</sub>, büyütme m = −d<sub>g</sub>/d<sub>c</sub>.",
   "n₁·sinθ₁ = n₂·sinθ₂; çok yoğundan az yoğuna geçerken sınır açı aşılırsa tam yansıma olur.",
   "Cisim yansıttığı ışığın renginde görünür; miyop göze kalın kenarlı, hipermetrop göze ince kenarlı cam takılır."
- ]
+ ],
+ "soruOnce": true
 }
