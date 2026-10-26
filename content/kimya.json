@@ -7631,25 +7631,43 @@
     "cards": [
       {
         "h": "Hidrokarbon nedir?",
-        "p": "Yalnızca karbon ve hidrojenden oluşan bileşiklere <b>hidrokarbon</b> denir. İki aileye ayrılır: <b>alifatik</b> (alkan, alken, alkin, sikloalkan) ve <b>aromatik</b> (benzen halkası içerenler). Doğal gaz ve ham petrol başlıca hidrokarbon kaynaklarıdır. Yakıtlardan plastiklere kadar pek çok ürünün hammaddesidir.",
+        "p": "Yalnız karbon ve hidrojenden oluşan bileşiklere <b>hidrokarbon</b> denir. <b>Alifatik</b> (alkan, alken, alkin) ve <b>aromatik</b> (benzen halkalı) diye ikiye ayrılır.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='70' y='6' width='180' height='28' rx='6' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.2'/><text x='160' y='25' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Hidrokarbon: yalnız C ve H</text><path d='M130 34 L90 48' stroke='var(--muted)' stroke-width='1.2'/><path d='M190 34 L245 48' stroke='var(--muted)' stroke-width='1.2'/><text x='90' y='62' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Alifatik</text><text x='245' y='62' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Aromatik</text><rect x='8' y='72' width='164' height='23' rx='4' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1'/><text x='16' y='88' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>alkan</text><text x='164' y='88' font-size='12' fill='var(--ink)' text-anchor='end'>C–C · C<tspan font-size='10' baseline-shift='sub'>n</tspan>H<tspan font-size='10' baseline-shift='sub'>2n+2</tspan></text><rect x='8' y='100' width='164' height='23' rx='4' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1'/><text x='16' y='116' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>alken</text><text x='164' y='116' font-size='12' fill='var(--ink)' text-anchor='end'>C=C · C<tspan font-size='10' baseline-shift='sub'>n</tspan>H<tspan font-size='10' baseline-shift='sub'>2n</tspan></text><rect x='8' y='128' width='164' height='23' rx='4' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1'/><text x='16' y='144' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>alkin</text><text x='164' y='144' font-size='12' fill='var(--ink)' text-anchor='end'>C≡C · C<tspan font-size='10' baseline-shift='sub'>n</tspan>H<tspan font-size='10' baseline-shift='sub'>2n−2</tspan></text><rect x='8' y='156' width='164' height='23' rx='4' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1'/><text x='16' y='172' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>sikloalkan</text><text x='164' y='172' font-size='12' fill='var(--ink)' text-anchor='end'>halka · C<tspan font-size='10' baseline-shift='sub'>n</tspan>H<tspan font-size='10' baseline-shift='sub'>2n</tspan></text><path d='M245.0 82.0 L271.0 97.0 L271.0 127.0 L245.0 142.0 L219.0 127.0 L219.0 97.0 Z' stroke='var(--c5)' stroke-width='1.6' fill='none'/><circle cx='245' cy='112' r='17' stroke='var(--c5)' stroke-width='1.4' fill='none'/><text x='245' y='164' font-size='11' fill='var(--muted)' text-anchor='middle'>benzen halkası içerir</text><text x='245' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>benzen, toluen, naftalin</text></svg>",
-        "key": "Yapıda O, N ya da Cl gibi başka bir atom varsa artık hidrokarbon değildir."
+        "key": "Doğal gaz ve ham petrol başlıca kaynaklarıdır. Yapıda O, N ya da Cl varsa artık hidrokarbon değildir.",
+        "once": {
+          "soru": "Hangisi hidrokarbondur?",
+          "secenekler": [
+            {
+              "yazi": "Propan (C₃H₈)",
+              "neden": "Yalnız C ve H içerir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Etanol (C₂H₅OH)",
+              "neden": "Oksijen içerdiği için hidrokarbon değildir."
+            },
+            {
+              "yazi": "Kloroform (CHCl₃)",
+              "neden": "Klor içerdiği için hidrokarbon değildir."
+            }
+          ]
+        }
       },
       {
         "h": "Alkanlar ve ilk 10 alkan",
-        "p": "<b>Alkanlar</b> yalnız tek bağ içerir; her karbon dört atoma bağlıdır, yani hidrojenle <b>doymuştur</b>. Genel formül C<sub>n</sub>H<sub>2n+2</sub>. Denediğin gibi düz zincirli alkanlar 25 °C ve 1 atm'de metandan bütana kadar gaz, pentandan dekana kadar sıvıdır. Adların sonu hep <b>-an</b> ekidir.",
+        "p": "<b>Alkanlar</b> yalnız tek bağ içerir, hidrojenle <b>doymuştur</b>: C<sub>n</sub>H<sub>2n+2</sub>. Metandan bütana gaz, pentandan dekana sıvıdır. Adları <b>-an</b> ile biter.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='12' fill='var(--muted)' text-anchor='middle'>İlk 10 alkan (n = C sayısı)</text><rect x='8' y='30' width='148' height='24' rx='4' fill='var(--c1)' fill-opacity='0.15'/><text x='20' y='47' font-size='12' fill='var(--muted)' text-anchor='middle'>1</text><text x='36' y='47' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>metan</text><text x='148' y='47' font-size='12' fill='var(--ink)' text-anchor='end'>CH₄</text><rect x='8' y='58' width='148' height='24' rx='4' fill='var(--c1)' fill-opacity='0.15'/><text x='20' y='75' font-size='12' fill='var(--muted)' text-anchor='middle'>2</text><text x='36' y='75' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>etan</text><text x='148' y='75' font-size='12' fill='var(--ink)' text-anchor='end'>C₂H₆</text><rect x='8' y='86' width='148' height='24' rx='4' fill='var(--c1)' fill-opacity='0.15'/><text x='20' y='103' font-size='12' fill='var(--muted)' text-anchor='middle'>3</text><text x='36' y='103' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>propan</text><text x='148' y='103' font-size='12' fill='var(--ink)' text-anchor='end'>C₃H₈</text><rect x='8' y='114' width='148' height='24' rx='4' fill='var(--c1)' fill-opacity='0.15'/><text x='20' y='131' font-size='12' fill='var(--muted)' text-anchor='middle'>4</text><text x='36' y='131' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>bütan</text><text x='148' y='131' font-size='12' fill='var(--ink)' text-anchor='end'>C₄H₁₀</text><rect x='8' y='142' width='148' height='24' rx='4' fill='var(--c3)' fill-opacity='0.15'/><text x='20' y='159' font-size='12' fill='var(--muted)' text-anchor='middle'>5</text><text x='36' y='159' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>pentan</text><text x='148' y='159' font-size='12' fill='var(--ink)' text-anchor='end'>C₅H₁₂</text><rect x='164' y='30' width='148' height='24' rx='4' fill='var(--c3)' fill-opacity='0.15'/><text x='176' y='47' font-size='12' fill='var(--muted)' text-anchor='middle'>6</text><text x='192' y='47' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>hekzan</text><text x='304' y='47' font-size='12' fill='var(--ink)' text-anchor='end'>C₆H₁₄</text><rect x='164' y='58' width='148' height='24' rx='4' fill='var(--c3)' fill-opacity='0.15'/><text x='176' y='75' font-size='12' fill='var(--muted)' text-anchor='middle'>7</text><text x='192' y='75' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>heptan</text><text x='304' y='75' font-size='12' fill='var(--ink)' text-anchor='end'>C₇H₁₆</text><rect x='164' y='86' width='148' height='24' rx='4' fill='var(--c3)' fill-opacity='0.15'/><text x='176' y='103' font-size='12' fill='var(--muted)' text-anchor='middle'>8</text><text x='192' y='103' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>oktan</text><text x='304' y='103' font-size='12' fill='var(--ink)' text-anchor='end'>C₈H₁₈</text><rect x='164' y='114' width='148' height='24' rx='4' fill='var(--c3)' fill-opacity='0.15'/><text x='176' y='131' font-size='12' fill='var(--muted)' text-anchor='middle'>9</text><text x='192' y='131' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>nonan</text><text x='304' y='131' font-size='12' fill='var(--ink)' text-anchor='end'>C₉H₂₀</text><rect x='164' y='142' width='148' height='24' rx='4' fill='var(--c3)' fill-opacity='0.15'/><text x='176' y='159' font-size='12' fill='var(--muted)' text-anchor='middle'>10</text><text x='192' y='159' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>dekan</text><text x='304' y='159' font-size='12' fill='var(--ink)' text-anchor='end'>C₁₀H₂₂</text><rect x='60' y='179' width='14' height='12' rx='2' fill='var(--c1)' fill-opacity='0.35'/><text x='80' y='189' font-size='11' fill='var(--ink)' text-anchor='start'>gaz</text><rect x='130' y='179' width='14' height='12' rx='2' fill='var(--c3)' fill-opacity='0.35'/><text x='150' y='189' font-size='11' fill='var(--ink)' text-anchor='start'>sıvı (25 °C, 1 atm)</text></svg>",
         "key": "Kökler: met, et, prop, büt, pent, hekz, hept, okt, non, dek."
       },
       {
         "h": "Alkanları adlandırma (IUPAC)",
-        "p": "1) En uzun zinciri bul; ana adı o verir. 2) Dala en yakın uçtan numarala. 3) Dalı numarasıyla yaz: CH₃– <b>metil</b>, C₂H₅– <b>etil</b>, Cl– <b>kloro</b>; tekrar eden dala di-, tri- eklenir: 2,2-dimetilpropan. 4) Farklı dallar <b>alfabetik</b> sırayla yazılır (di/tri sayılmaz): 3-etil-2-metilpentan.",
+        "p": "En uzun zinciri bul, dala yakın uçtan numarala. Dalı numarasıyla yaz: <b>metil</b>, <b>etil</b>; tekrar edene di-, tri- ekle. Farklı dallar <b>alfabetik</b> sıralanır.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='36' y='54' width='226' height='30' rx='6' fill='var(--acc)' fill-opacity='0.12'/><text x='120' y='30' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>CH₃</text><text x='146' y='30' font-size='11' fill='var(--c5)' text-anchor='start'>metil (dal)</text><path d='M120 36 L120 58' stroke='var(--c5)' stroke-width='1.5'/><text x='60' y='74' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₃</text><path d='M74 69 L108 69' stroke='var(--ink)' stroke-width='1.5'/><text x='120' y='74' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH</text><path d='M132 69 L166 69' stroke='var(--ink)' stroke-width='1.5'/><text x='180' y='74' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₂</text><path d='M194 69 L226 69' stroke='var(--ink)' stroke-width='1.5'/><text x='240' y='74' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₃</text><text x='60' y='104' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>1</text><text x='120' y='104' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>2</text><text x='180' y='104' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>3</text><text x='240' y='104' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>4</text><text x='272' y='104' font-size='11' fill='var(--c3)' text-anchor='start'>doğru</text><text x='60' y='124' font-size='13' fill='var(--c2)' text-anchor='middle'>4</text><text x='120' y='124' font-size='13' fill='var(--c2)' text-anchor='middle'>3</text><text x='180' y='124' font-size='13' fill='var(--c2)' text-anchor='middle'>2</text><text x='240' y='124' font-size='13' fill='var(--c2)' text-anchor='middle'>1</text><text x='272' y='124' font-size='11' fill='var(--c2)' text-anchor='start'>yanlış</text><text x='300' y='72' font-size='11' fill='var(--acc)' text-anchor='end'>4 C</text><rect x='70' y='140' width='180' height='30' rx='6' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.2'/><text x='160' y='161' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='700'>2-metilbütan</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>dalın yeri – dalın adı + ana zincirin adı</text></svg>",
-        "key": "Dal en küçük numarayı almalı: 3-metilbütan değil, 2-metilbütan."
+        "key": "Örnek: 2,2-dimetilpropan, 3-etil-2-metilpentan. Cl dalı kloro diye yazılır. Dal en küçük numarayı almalı: 3-metilbütan değil, 2-metilbütan."
       },
       {
         "h": "Kaynama noktası: zincir ve dal",
-        "p": "Alkanlar apolardır; molekülleri yalnız London kuvvetleriyle çekişir. Zincir uzadıkça bu çekim artar, kaynama noktası yükselir. Az önce gördüğün gibi, aynı formüllü izomerlerde dallanma arttıkça molekül küreye yaklaşır, temas yüzeyi küçülür ve kaynama noktası düşer. Alkanlar suda çözünmez, sudan hafiftir.",
+        "p": "Alkan molekülleri yalnız London kuvvetiyle çekişir. Zincir uzadıkça kaynama noktası <b>yükselir</b>; aynı formülde dallanma arttıkça temas yüzeyi küçülür, kaynama noktası <b>düşer</b>.",
         "svg": "<svg viewBox='0 0 320 200'><text x='8' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>Kaynama noktası (°C) – C sayısı</text><path d='M44 176 L196 176' stroke='var(--line)' stroke-width='1'/><path d='M44 34 L44 176' stroke='var(--line)' stroke-width='1'/><path d='M44 104.0 L196 104.0' stroke='var(--line)' stroke-width='1'/><path d='M44 62.0 L196 62.0' stroke='var(--line)' stroke-width='0.8'/><path d='M44 146.0 L196 146.0' stroke='var(--line)' stroke-width='0.8'/><text x='40' y='108.0' font-size='10' fill='var(--muted)' text-anchor='end'>0</text><text x='40' y='66.0' font-size='10' fill='var(--muted)' text-anchor='end'>100</text><text x='40' y='150.0' font-size='10' fill='var(--muted)' text-anchor='end'>−100</text><polyline points='52,172.0 72,141.4 92,121.6 112,104.4 132,88.9 152,75.0 172,62.8 192,51.1' fill='none' stroke='var(--c1)' stroke-width='1.8'/><circle cx='52' cy='172.0' r='3' fill='var(--c1)'/><text x='52' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>1</text><circle cx='72' cy='141.4' r='3' fill='var(--c1)'/><text x='72' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>2</text><circle cx='92' cy='121.6' r='3' fill='var(--c1)'/><text x='92' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>3</text><circle cx='112' cy='104.4' r='3' fill='var(--c1)'/><text x='112' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>4</text><circle cx='132' cy='88.9' r='3' fill='var(--c1)'/><text x='132' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>5</text><circle cx='152' cy='75.0' r='3' fill='var(--c1)'/><text x='152' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>6</text><circle cx='172' cy='62.8' r='3' fill='var(--c1)'/><text x='172' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>7</text><circle cx='192' cy='51.1' r='3' fill='var(--c1)'/><text x='192' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>8</text><path d='M206 24 L206 194' stroke='var(--line)' stroke-width='1'/><text x='263' y='16' font-size='11' fill='var(--muted)' text-anchor='middle'>C₅H₁₂ izomerleri</text><rect x='218' y='66.39999999999999' width='24' height='93.60000000000001' rx='2' fill='var(--c4)' fill-opacity='0.6'/><text x='230' y='60.39999999999999' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>36</text><text x='230' y='175' font-size='10' fill='var(--muted)' text-anchor='middle'>düz</text><rect x='250' y='87.2' width='24' height='72.8' rx='2' fill='var(--c4)' fill-opacity='0.6'/><text x='262' y='81.2' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>28</text><text x='262' y='175' font-size='10' fill='var(--muted)' text-anchor='middle'>1 dal</text><rect x='282' y='134.0' width='24' height='26.0' rx='2' fill='var(--c4)' fill-opacity='0.6'/><text x='294' y='128.0' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>10</text><text x='294' y='175' font-size='10' fill='var(--muted)' text-anchor='middle'>2 dal</text><text x='263' y='192' font-size='10' fill='var(--c2)' text-anchor='middle'>dal arttı → kn düştü</text></svg>",
         "etk": {
           "tur": "sirala",
@@ -7662,67 +7680,175 @@
             "Hekzan"
           ]
         },
-        "key": "C₁₈ ve üstü düz alkanlar 25 °C'de katıdır; mum parafini bunların karışımıdır."
+        "key": "Alkanlar apolardır, suda çözünmez ve sudan hafiftir. C₁₈ ve üstü düz alkanlar katıdır; mum parafini bunların karışımıdır."
       },
       {
         "h": "Alkanlar: yanma ve yer değiştirme",
-        "p": "Alkanlar az etkindir; iki tepkimeleri öne çıkar. <b>Yanma:</b> yeterli oksijenle CO<sub>2</sub> ve H<sub>2</sub>O verir, ısı açığa çıkar; oksijen azsa zehirli CO da oluşur. <b>Yer değiştirme (sübstitüsyon):</b> ışık altında halojen, bir H atomunun yerine geçer.",
+        "p": "Alkanlar az etkindir. Yeterli oksijenle <b>yanar</b>, CO<sub>2</sub> ve H<sub>2</sub>O verir; oksijen azsa zehirli CO oluşur. Işıkta halojen bir H'nin <b>yerine geçer</b>.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hidk-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='8' y='8' width='304' height='82' rx='6' fill='var(--c4)' fill-opacity='0.1' stroke='var(--c4)' stroke-width='1.2'/><text x='20' y='28' font-size='13' fill='var(--c4)' text-anchor='start' font-weight='700'>Yanma</text><text x='160' y='56' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₄ + 2O₂ → CO₂ + 2H₂O + ısı</text><text x='160' y='78' font-size='11' fill='var(--muted)' text-anchor='middle'>tüpteki propan: C₃H₈ + 5O₂ → 3CO₂ + 4H₂O</text><rect x='8' y='100' width='304' height='92' rx='6' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.2'/><text x='20' y='120' font-size='13' fill='var(--c3)' text-anchor='start' font-weight='700'>Yer değiştirme (sübstitüsyon)</text><text x='20' y='155' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>CH₃–<tspan fill='var(--c2)'>H</tspan></text><text x='78' y='155' font-size='13' fill='var(--ink)' text-anchor='middle'>+</text><text x='90' y='155' font-size='13' fill='var(--c3)' text-anchor='start' font-weight='700'>Cl–Cl</text><path d='M132 150 H178' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#hidk-5)'/><text x='155' y='142' font-size='11' fill='var(--muted)' text-anchor='middle'>ışık</text><text x='186' y='155' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>CH₃–<tspan fill='var(--c3)'>Cl</tspan></text><text x='246' y='155' font-size='13' fill='var(--ink)' text-anchor='middle'>+</text><text x='258' y='155' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'><tspan fill='var(--c2)'>H</tspan>–<tspan fill='var(--c3)'>Cl</tspan></text><text x='160' y='180' font-size='11' fill='var(--muted)' text-anchor='middle'>H çıkar, Cl girer; sürerse CH₂Cl₂, CHCl₃, CCl₄</text></svg>",
         "key": "Alkanlar doymuştur: katılma değil, yer değiştirme tepkimesi verir."
       },
       {
         "h": "Sikloalkanlar: halkalı alkanlar",
-        "p": "Karbon zincirinin iki ucu birleşip halka kurarsa <b>sikloalkan</b> oluşur. Yalnız tek bağ vardır, doymuştur; ama halka iki H eksiltir: C<sub>n</sub>H<sub>2n</sub>. En küçüğü siklopropandır; açıları dar olduğu için gergin ve etkindir; halkası açılarak katılma tepkimesi verebilir. Siklohekzan gergin değildir, kararlıdır.",
+        "p": "Zincirin iki ucu birleşirse <b>sikloalkan</b> oluşur: C<sub>n</sub>H<sub>2n</sub>, doymuş. Dar açılı siklopropan gergin ve etkindir; siklohekzan kararlıdır.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M60.0 58.0 L36.0 100.0 L84.0 100.0 Z' stroke='var(--c1)' stroke-width='1.6' fill='none'/><path d='M140.0 60.0 L180.0 60.0 L180.0 100.0 L140.0 100.0 Z' stroke='var(--c1)' stroke-width='1.6' fill='none'/><path d='M262.0 54.0 L284.5 67.0 L284.5 93.0 L262.0 106.0 L239.5 93.0 L239.5 67.0 Z' stroke='var(--c1)' stroke-width='1.6' fill='none'/><text x='60' y='130' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>siklopropan</text><text x='60' y='148' font-size='12' fill='var(--muted)' text-anchor='middle'>C₃H₆</text><text x='160' y='130' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>siklobütan</text><text x='160' y='148' font-size='12' fill='var(--muted)' text-anchor='middle'>C₄H₈</text><text x='262' y='130' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>siklohekzan</text><text x='262' y='148' font-size='12' fill='var(--muted)' text-anchor='middle'>C₆H₁₂</text><text x='160' y='24' font-size='12' fill='var(--muted)' text-anchor='middle'>İskelet formül: her köşe bir CH₂</text><rect x='20' y='162' width='280' height='30' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.2'/><text x='160' y='182' font-size='12' fill='var(--ink)' text-anchor='middle'>C₃H₆: siklopropan ile propen izomerdir</text></svg>",
-        "key": "Bromlu su siklohekzanı alkenden ayırır; siklopropan ise uygun koşulda Br₂ katabilir."
+        "key": "Bromlu su siklohekzanı alkenden ayırır; siklopropan ise uygun koşulda Br₂ katabilir.",
+        "once": {
+          "soru": "Hekzanın (C₆H₁₄) iki ucu birleşip halka kurarsa formülü ne olur?",
+          "secenekler": [
+            {
+              "yazi": "C₆H₁₂",
+              "neden": "Uçlar birleşirken her uçtan bir H ayrılır; halka iki H eksiltir.",
+              "dogru": true
+            },
+            {
+              "yazi": "C₆H₁₄",
+              "neden": "Uçlardaki karbonlar birbirine bağlanınca birer H bırakmak zorundadır."
+            },
+            {
+              "yazi": "C₆H₁₀",
+              "neden": "Halka yalnız iki H eksiltir; tek bağlar korunur."
+            }
+          ]
+        }
       },
       {
         "h": "Alkenler: çift bağ",
-        "p": "<b>Alkenler</b> en az bir C=C çift bağı içerir, doymamıştır. Tek çift bağlıların genel formülü C<sub>n</sub>H<sub>2n</sub>'dir (n ≥ 2). Ad, alkanın -an eki -en yapılarak kurulur: eten (etilen), propen. Zincir çift bağa yakın uçtan numaralanır: 1-büten, 2-büten.",
+        "p": "<b>Alkenler</b> C=C çift bağı içerir, doymamıştır: C<sub>n</sub>H<sub>2n</sub>. Adı -an yerine <b>-en</b> ile kurulur: eten, propen. Numara çift bağa yakın uçtan başlar.",
         "svg": "<svg viewBox='0 0 320 200'><text x='12' y='36' font-size='12' fill='var(--muted)' text-anchor='start'>eten</text><text x='118' y='36' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₂</text><text x='176' y='36' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₂</text><path d='M135 28 L159 28' stroke='var(--c2)' stroke-width='1.5'/><path d='M135 34 L159 34' stroke='var(--c2)' stroke-width='1.5'/><text x='204' y='36' font-size='11' fill='var(--muted)' text-anchor='start'>(etilen)</text><text x='12' y='84' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>1-büten</text><text x='118' y='84' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₂</text><text x='176' y='84' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH</text><text x='234' y='84' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₂</text><text x='292' y='84' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₃</text><path d='M135 76 L159 76' stroke='var(--c2)' stroke-width='1.5'/><path d='M135 82 L159 82' stroke='var(--c2)' stroke-width='1.5'/><path d='M193 79 L217 79' stroke='var(--ink)' stroke-width='1.5'/><path d='M251 79 L275 79' stroke='var(--ink)' stroke-width='1.5'/><text x='118' y='104' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>1</text><text x='176' y='104' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>2</text><text x='234' y='104' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>3</text><text x='292' y='104' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>4</text><text x='12' y='144' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>2-büten</text><text x='118' y='144' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₃</text><text x='176' y='144' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH</text><text x='234' y='144' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH</text><text x='292' y='144' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₃</text><path d='M135 139 L159 139' stroke='var(--ink)' stroke-width='1.5'/><path d='M193 136 L217 136' stroke='var(--c2)' stroke-width='1.5'/><path d='M193 142 L217 142' stroke='var(--c2)' stroke-width='1.5'/><path d='M251 139 L275 139' stroke='var(--ink)' stroke-width='1.5'/><text x='118' y='164' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>1</text><text x='176' y='164' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>2</text><text x='234' y='164' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>3</text><text x='292' y='164' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>4</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>Numara çift bağa en yakın uçtan başlar.</text></svg>",
-        "key": "1-büten ile 2-büten konum izomeridir: formül aynı, çift bağın yeri farklı."
+        "key": "1-büten ile 2-büten konum izomeridir: formül aynı, çift bağın yeri farklı.",
+        "once": {
+          "soru": "Etenin formülü C₂H₄, etanınki C₂H₆. Etende ne farklıdır?",
+          "secenekler": [
+            {
+              "yazi": "Çift bağ",
+              "neden": "İki karbon çift bağla bağlanınca iki H'ye yer kalmaz.",
+              "dogru": true
+            },
+            {
+              "yazi": "Halka",
+              "neden": "İki karbon halka kuramaz."
+            },
+            {
+              "yazi": "Oksijen",
+              "neden": "İkisi de yalnız C ve H içerir."
+            }
+          ]
+        }
       },
       {
         "h": "Cis-trans (geometrik) izomerlik",
-        "p": "Organik girişte gördüğün cis-trans izomerliğinin alkenlerdeki tipik örneği 2-bütendir: iki CH<sub>3</sub> aynı tarafta (<b>cis</b>) ya da zıt tarafta (<b>trans</b>) durur. İkisi farklı maddelerdir: cis-2-büten yaklaşık 4 °C'de, trans-2-büten 1 °C'de kaynar.",
+        "p": "2-bütende iki CH<sub>3</sub> çift bağın aynı tarafındaysa <b>cis</b>, zıt tarafındaysa <b>trans</b> izomerdir. İkisi farklı maddedir, kaynama noktaları farklıdır.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M160 14 L160 170' stroke='var(--line)' stroke-width='1'/><text x='64' y='85' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>C</text><text x='96' y='85' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>C</text><path d='M72 77 L88 77' stroke='var(--c2)' stroke-width='1.5'/><path d='M72 83 L88 83' stroke='var(--c2)' stroke-width='1.5'/><path d='M58 73 L46 58' stroke='var(--ink)' stroke-width='1.5'/><path d='M58 87 L46 102' stroke='var(--ink)' stroke-width='1.5'/><path d='M102 73 L114 58' stroke='var(--ink)' stroke-width='1.5'/><path d='M102 87 L114 102' stroke='var(--ink)' stroke-width='1.5'/><text x='40' y='52' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>CH₃</text><text x='40' y='120' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><text x='120' y='52' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>CH₃</text><text x='120' y='120' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><text x='224' y='85' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>C</text><text x='256' y='85' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>C</text><path d='M232 77 L248 77' stroke='var(--c2)' stroke-width='1.5'/><path d='M232 83 L248 83' stroke='var(--c2)' stroke-width='1.5'/><path d='M218 73 L206 58' stroke='var(--ink)' stroke-width='1.5'/><path d='M218 87 L206 102' stroke='var(--ink)' stroke-width='1.5'/><path d='M262 73 L274 58' stroke='var(--ink)' stroke-width='1.5'/><path d='M262 87 L274 102' stroke='var(--ink)' stroke-width='1.5'/><text x='200' y='52' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>CH₃</text><text x='200' y='120' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><text x='280' y='52' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><text x='280' y='120' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>CH₃</text><path d='M50 38 Q80 26 110 38' stroke='var(--c3)' stroke-width='1.2' stroke-dasharray='3 3' fill='none'/><text x='80' y='146' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>cis-2-büten</text><text x='80' y='164' font-size='11' fill='var(--muted)' text-anchor='middle'>aynı taraf · kn ≈ 4 °C</text><text x='240' y='146' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>trans-2-büten</text><text x='240' y='164' font-size='11' fill='var(--muted)' text-anchor='middle'>zıt taraf · kn ≈ 1 °C</text><text x='160' y='190' font-size='12' fill='var(--ink)' text-anchor='middle'>Koşul: iki C'nin her birinde iki farklı grup</text></svg>",
-        "key": "Cis izomer biraz polar olduğu için kaynama noktası trans'tan yüksektir."
+        "key": "Cis-2-büten yaklaşık 4 °C'de, trans-2-büten 1 °C'de kaynar; cis biraz polardır.",
+        "once": {
+          "soru": "Çift bağ dönemez. 2-bütende iki CH₃ aynı ya da zıt tarafta durabilir. Bunlar aynı madde mi?",
+          "secenekler": [
+            {
+              "yazi": "Hayır, farklı",
+              "neden": "Dönemeyen bağ iki düzeni ayırır; özellikleri farklı iki izomer olur.",
+              "dogru": true
+            },
+            {
+              "yazi": "Evet, aynı",
+              "neden": "Tek bağda dönme düzeni değiştirirdi; çift bağda dönme olmaz."
+            },
+            {
+              "yazi": "Yalnız gazken farklı",
+              "neden": "Fark molekülün yapısındadır, hâline bağlı değildir."
+            }
+          ]
+        }
       },
       {
         "h": "Alkenlerde katılma tepkimeleri",
-        "p": "Çift bağın bir bağı açılır, iki karbona birer atom ya da grup eklenir. H<sub>2</sub> katalizörle alkan verir; Br<sub>2</sub> katılınca bromlu suyun rengi gider. HX katılmasında H, hidrojeni fazla olan karbona bağlanır (<b>Markovnikov</b>): propen + HBr → 2-bromopropan.",
+        "p": "Çift bağın bir bağı açılır, iki karbona birer atom eklenir: <b>katılma</b>. H<sub>2</sub> alkan verir, Br<sub>2</sub> bromlu suyun rengini giderir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='24' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₂=CH₂ + <tspan fill='var(--c2)'>H₂</tspan> → CH₃–CH₃</text><text x='160' y='40' font-size='10' fill='var(--muted)' text-anchor='middle'>Ni ya da Pt katalizör · etan</text><text x='160' y='66' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₂=CH₂ + <tspan fill='var(--c2)'>Br₂</tspan> → CH₂<tspan fill='var(--c2)'>Br</tspan>–CH₂<tspan fill='var(--c2)'>Br</tspan></text><text x='160' y='82' font-size='10' fill='var(--muted)' text-anchor='middle'>turuncu bromlu su renksizleşir</text><text x='160' y='108' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₂=CH₂ + <tspan fill='var(--c2)'>H₂O</tspan> → CH₃–CH₂<tspan fill='var(--c2)'>OH</tspan></text><text x='160' y='124' font-size='10' fill='var(--muted)' text-anchor='middle'>asit katalizör · etanol</text><rect x='8' y='136' width='304' height='58' rx='6' fill='var(--c4)' fill-opacity='0.1' stroke='var(--c4)' stroke-width='1.2'/><text x='160' y='158' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₂=CH–CH₃ + <tspan fill='var(--c2)'>HBr</tspan> → CH₃–CH<tspan fill='var(--c2)'>Br</tspan>–CH₃</text><text x='160' y='176' font-size='10' fill='var(--ink)' text-anchor='middle'>Markovnikov: H, H'si fazla olan C'ye; Br ortadaki C'ye</text><text x='160' y='189' font-size='10' fill='var(--muted)' text-anchor='middle'>ana ürün 2-bromopropan</text></svg>",
-        "key": "Eten simetrik olduğu için HBr katılınca tek ürün verir; Markovnikov propende önemlidir."
+        "key": "HX katılmasında H, hidrojeni fazla olan karbona bağlanır (Markovnikov): propen + HBr → 2-bromopropan."
       },
       {
         "h": "Polimerleşme: etenden poşete",
-        "p": "Alkenler katılmayla zincir kurabilir: binlerce eten molekülünün çift bağı açılır ve uç uca bağlanarak <b>polietilen</b> oluşur. Küçük birime <b>monomer</b>, dev moleküle <b>polimer</b> denir. Vinil klorürden PVC, tetrafloroetenden teflon elde edilir. Polimer zincirinde artık çift bağ kalmaz.",
+        "p": "Binlerce etenin çift bağı açılıp uç uca bağlanır: <b>polietilen</b>. Küçük birime <b>monomer</b>, dev moleküle <b>polimer</b> denir. Polimerde çift bağ kalmaz.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hidk-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='160' y='24' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₂=CH₂ + CH₂=CH₂ + CH₂=CH₂ + …</text><path d='M160 32 V50' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#hidk-10)'/><text x='170' y='46' font-size='10' fill='var(--muted)' text-anchor='start'>çift bağlar açılır</text><text x='160' y='68' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>…–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–…</text><path d='M10 82 L310 82' stroke='var(--line)' stroke-width='1'/><text x='16' y='100' font-size='10' fill='var(--muted)' text-anchor='start'>monomer</text><text x='170' y='100' font-size='10' fill='var(--muted)' text-anchor='middle'>polimer</text><text x='304' y='100' font-size='10' fill='var(--muted)' text-anchor='end'>kullanım</text><text x='16' y='124' font-size='12' fill='var(--ink)' text-anchor='start'>CH₂=CH₂ (eten)</text><text x='170' y='124' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>polietilen</text><text x='304' y='124' font-size='12' fill='var(--ink)' text-anchor='end'>poşet, şişe</text><text x='16' y='150' font-size='12' fill='var(--ink)' text-anchor='start'>CH₂=CHCl</text><text x='170' y='150' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>PVC</text><text x='304' y='150' font-size='12' fill='var(--ink)' text-anchor='end'>boru, kablo</text><text x='16' y='176' font-size='12' fill='var(--ink)' text-anchor='start'>CF₂=CF₂</text><text x='170' y='176' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>teflon</text><text x='304' y='176' font-size='12' fill='var(--ink)' text-anchor='end'>yapışmaz tava</text><text x='160' y='194' font-size='10' fill='var(--muted)' text-anchor='middle'>n monomer → (–monomer–)ₙ</text></svg>",
-        "key": "n CH₂=CH₂ → (–CH₂–CH₂–)ₙ : monomerdeki çift bağ polimerde tek bağa döner."
+        "key": "Vinil klorürden PVC, tetrafloroetenden teflon yapılır.",
+        "once": {
+          "soru": "Poşetlerin plastiği polietilen hangi küçük molekülden yapılır?",
+          "secenekler": [
+            {
+              "yazi": "Eten",
+              "neden": "Etenin çift bağı açılır ve moleküller uç uca bağlanır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Metan",
+              "neden": "Metan doymuştur; açılacak çift bağı yoktur."
+            },
+            {
+              "yazi": "Benzen",
+              "neden": "Benzen halkası kararlıdır; polietilenin birimi değildir."
+            }
+          ]
+        }
       },
       {
         "h": "Alkinler: üçlü bağ",
-        "p": "<b>Alkinler</b> C≡C üçlü bağı içerir; genel formül C<sub>n</sub>H<sub>2n−2</sub>. En basiti etin (asetilen), C<sub>2</sub>H<sub>2</sub>; karpitin suyla tepkimesinden elde edilir. Oksijenle 3000 °C'yi aşan alev verir, metal kaynağında kullanılır. Katılma iki basamaklıdır: alkin → alken → alkan.",
+        "p": "<b>Alkinler</b> C≡C üçlü bağı içerir: C<sub>n</sub>H<sub>2n−2</sub>. En basiti etin (asetilen), C<sub>2</sub>H<sub>2</sub>; oksijenle 3000 °C'yi aşan kaynak alevi verir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hidk-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='160' y='38' font-size='20' fill='var(--ink)' text-anchor='middle' font-weight='700'>H–C<tspan fill='var(--c2)'>≡</tspan>C–H</text><text x='160' y='58' font-size='11' fill='var(--muted)' text-anchor='middle'>etin (asetilen) · doğrusal, 180°</text><rect x='8' y='70' width='304' height='40' rx='6' fill='var(--c4)' fill-opacity='0.1' stroke='var(--c4)' stroke-width='1.2'/><text x='160' y='88' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CaC₂ + 2H₂O → C₂H₂ + Ca(OH)₂</text><text x='160' y='104' font-size='10' fill='var(--muted)' text-anchor='middle'>karpit + su → asetilen</text><text x='46' y='146' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>HC≡CH</text><path d='M76 142 H110' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#hidk-11)'/><text x='93' y='134' font-size='10' fill='var(--c2)' text-anchor='middle'>+H₂</text><text x='152' y='146' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₂=CH₂</text><path d='M186 142 H220' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#hidk-11)'/><text x='203' y='134' font-size='10' fill='var(--c2)' text-anchor='middle'>+H₂</text><text x='262' y='146' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₃–CH₃</text><text x='46' y='164' font-size='11' fill='var(--muted)' text-anchor='middle'>alkin</text><text x='152' y='164' font-size='11' fill='var(--muted)' text-anchor='middle'>alken</text><text x='262' y='164' font-size='11' fill='var(--muted)' text-anchor='middle'>alkan</text><text x='160' y='190' font-size='11' fill='var(--ink)' text-anchor='middle'>1 mol etin, 2 mol H₂ ile tamamen doyar</text></svg>",
-        "key": "1 mol alkin doymak için 2 mol H₂ ya da 2 mol Br₂ harcar; alken 1 mol."
+        "key": "Katılma iki basamaklıdır: alkin → alken → alkan. 1 mol alkin 2 mol H₂ ya da 2 mol Br₂ harcar; alken 1 mol."
       },
       {
         "h": "Alkin adları ve uç alkin testi",
-        "p": "Alkinler, alkan adındaki <b>-an</b> eki <b>-in</b> yapılarak adlandırılır: etin, propin. Zincir üçlü bağa yakın uçtan numaralanır: 1-bütin, 2-bütin. Üçlü bağ zincirin ucundaysa (<b>uç alkin</b>) ≡C–H hidrojeni amonyaklı AgNO₃ ya da CuCl ile <b>çökelek</b> verir. 2-bütin vermez.",
+        "p": "Alkin adları <b>-in</b> ile biter: etin, propin, 1-bütin. Üçlü bağ uçtaysa (<b>uç alkin</b>) ≡C–H, amonyaklı AgNO<sub>3</sub> ile <b>çökelek</b> verir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='11' fill='var(--muted)' text-anchor='middle'>Ad: alkan kökü + -in · etin, propin, bütin</text><text x='12' y='58' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>1-bütin</text><text x='12' y='74' font-size='10' fill='var(--muted)' text-anchor='start'>uç alkin</text><text x='170' y='64' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>H–C<tspan fill='var(--c2)'>≡</tspan>C–CH₂–CH₃</text><text x='306' y='64' font-size='11' fill='var(--c3)' text-anchor='end' font-weight='700'>çökelek var</text><text x='12' y='110' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>2-bütin</text><text x='12' y='126' font-size='10' fill='var(--muted)' text-anchor='start'>iç alkin</text><text x='170' y='116' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₃–C<tspan fill='var(--c2)'>≡</tspan>C–CH₃</text><text x='306' y='116' font-size='11' fill='var(--muted)' text-anchor='end' font-weight='700'>çökelek yok</text><rect x='8' y='146' width='304' height='50' rx='6' fill='var(--c4)' fill-opacity='0.1' stroke='var(--c4)' stroke-width='1.2'/><text x='160' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>Amonyaklı AgNO₃ → beyaz çökelek</text><text x='160' y='185' font-size='11' fill='var(--ink)' text-anchor='middle'>Amonyaklı CuCl → kırmızı-kahve çökelek</text></svg>",
-        "key": "Etin iki ucunda da ≡C–H taşıdığı için çökelek verir; çökelek testi uç ve iç alkini ayırt eder."
+        "key": "2-bütin çökelek vermez; test uç ve iç alkini ayırır. CuCl ile de çökelek oluşur.",
+        "once": {
+          "soru": "1-bütin ve 2-bütin aynı formüllüdür. Hangisinin ucunda ≡C–H vardır?",
+          "secenekler": [
+            {
+              "yazi": "1-bütin",
+              "neden": "Üçlü bağ 1. karbondadır; uçtaki karbon bir H taşır.",
+              "dogru": true
+            },
+            {
+              "yazi": "2-bütin",
+              "neden": "Üçlü bağ ortadadır; iki ucunda da CH₃ vardır."
+            },
+            {
+              "yazi": "İkisinin de",
+              "neden": "2-bütinde üçlü bağ uçta değildir."
+            }
+          ]
+        }
       },
       {
         "h": "Benzen ve aromatik halka",
-        "p": "Az önce gördüğün gibi benzende (C<sub>6</sub>H<sub>6</sub>) çift bağlar sabit durmaz: 6 π elektronu düzlemsel halkaya yayılır (<b>delokalize</b>), tüm C–C bağları eşittir. Bu kararlılık yüzünden benzen katılma yerine <b>yer değiştirme</b> yapar. Toluen de aromatiktir.",
+        "p": "Benzende (C<sub>6</sub>H<sub>6</sub>) 6 π elektronu halkaya yayılır (<b>delokalize</b>), bütün C–C bağları eşittir. Bu kararlılıkla benzen katılma yerine <b>yer değiştirme</b> yapar.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M48.0 24.0 L72.2 38.0 L72.2 66.0 L48.0 80.0 L23.8 66.0 L23.8 38.0 Z' stroke='var(--ink)' stroke-width='1.6' fill='none'/><path d='M50.8 31.8 L64.1 39.4' stroke='var(--ink)' stroke-width='1.4'/><path d='M64.1 64.6 L50.8 72.2' stroke='var(--ink)' stroke-width='1.4'/><path d='M29.1 59.6 L29.1 44.4' stroke='var(--ink)' stroke-width='1.4'/><text x='94' y='57' font-size='15' fill='var(--muted)' text-anchor='middle'>↔</text><path d='M140.0 24.0 L164.2 38.0 L164.2 66.0 L140.0 80.0 L115.8 66.0 L115.8 38.0 Z' stroke='var(--ink)' stroke-width='1.6' fill='none'/><path d='M158.9 44.4 L158.9 59.6' stroke='var(--ink)' stroke-width='1.4'/><path d='M137.2 72.2 L123.9 64.6' stroke='var(--ink)' stroke-width='1.4'/><path d='M123.9 39.4 L137.2 31.8' stroke='var(--ink)' stroke-width='1.4'/><text x='186' y='57' font-size='15' fill='var(--muted)' text-anchor='middle'>=</text><path d='M240.0 24.0 L264.2 38.0 L264.2 66.0 L240.0 80.0 L215.8 66.0 L215.8 38.0 Z' stroke='var(--c5)' stroke-width='1.6' fill='none'/><circle cx='240' cy='52' r='16' stroke='var(--c5)' stroke-width='1.4' fill='none'/><text x='94' y='102' font-size='11' fill='var(--muted)' text-anchor='middle'>rezonans yapıları</text><text x='240' y='102' font-size='11' fill='var(--c5)' text-anchor='middle'>delokalize 6 π e⁻</text><path d='M10 114 L310 114' stroke='var(--line)' stroke-width='1'/><path d='M60.0 128.0 L79.1 139.0 L79.1 161.0 L60.0 172.0 L40.9 161.0 L40.9 139.0 Z' stroke='var(--ink)' stroke-width='1.6' fill='none'/><circle cx='60' cy='150' r='12' stroke='var(--ink)' stroke-width='1.2' fill='none'/><path d='M79 139 L94 130' stroke='var(--ink)' stroke-width='1.5'/><text x='110' y='132' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₃</text><text x='72' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>toluen (metilbenzen)</text><text x='146' y='134' font-size='11' fill='var(--c5)' text-anchor='start' font-weight='700'>İki grup taşıyan halka:</text><text x='146' y='154' font-size='11' fill='var(--ink)' text-anchor='start'>1,2 → orto: o-dimetilbenzen</text><text x='146' y='172' font-size='11' fill='var(--ink)' text-anchor='start'>1,3 → meta: m-dimetilbenzen</text><text x='146' y='190' font-size='11' fill='var(--ink)' text-anchor='start'>1,4 → para: p-dimetilbenzen</text></svg>",
-        "key": "İki grup taşıyan benzende konumlar: orto (1,2), meta (1,3), para (1,4)."
+        "key": "Toluen de aromatiktir. İki grup taşıyan halkada konumlar: orto (1,2), meta (1,3), para (1,4)."
       },
       {
         "h": "Benzin ve oktan sayısı",
-        "p": "Benzin, ham petrolden ayrılan yaklaşık C<sub>5</sub>–C<sub>10</sub> hidrokarbonlarıdır (petrolün damıtılmasını enerji kaynakları konusunda göreceksin). Motorda erken tutuşmaya (<b>vuruntu</b>) direnç <b>oktan sayısıyla</b> ölçülür: izooktan (2,2,4-trimetilpentan) 100, n-heptan 0 kabul edilir. Dallı alkanların oktan sayısı yüksektir.",
+        "p": "Benzin, petrolden ayrılan C<sub>5</sub>–C<sub>10</sub> hidrokarbonlarıdır. Motordaki erken tutuşmaya (<b>vuruntu</b>) direnç <b>oktan sayısıyla</b> ölçülür; dallı alkanlarınki yüksektir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Oktan sayısı: vuruntuya direnç</text><text x='160' y='42' font-size='11' fill='var(--c1)' text-anchor='middle'>Dallanma arttıkça oktan sayısı yükselir.</text><rect x='30' y='80' width='260' height='12' rx='6' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1'/><line x1='30' y1='76' x2='30' y2='96' stroke='var(--ink)' stroke-width='1.2'/><line x1='160' y1='76' x2='160' y2='96' stroke='var(--ink)' stroke-width='1.2'/><line x1='290' y1='76' x2='290' y2='96' stroke='var(--ink)' stroke-width='1.2'/><text x='30' y='110' font-size='11' fill='var(--muted)' text-anchor='middle'>0</text><text x='160' y='110' font-size='11' fill='var(--muted)' text-anchor='middle'>50</text><text x='290' y='110' font-size='11' fill='var(--muted)' text-anchor='middle'>100</text><path d='M277 78 L271 66 L283 66 Z' fill='var(--acc)'/><text x='265' y='66' font-size='11' fill='var(--acc)' text-anchor='end' font-weight='700'>95 oktanlı benzin</text><rect x='8' y='122' width='148' height='70' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)' stroke-width='1'/><text x='82' y='142' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>n-heptan = 0</text><text x='82' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>CH₃(CH₂)₅CH₃</text><text x='82' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>düz zincir: kolay vuruntu</text><rect x='164' y='122' width='148' height='70' rx='6' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)' stroke-width='1'/><text x='238' y='142' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>izooktan = 100</text><text x='238' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>(CH₃)₃C–CH₂–CH(CH₃)₂</text><text x='238' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>çok dallı: vuruntuya dirençli</text></svg>",
-        "key": "95 oktanlı benzin, %95 izooktan + %5 n-heptan karışımı gibi davranır."
+        "key": "İzooktan 100, n-heptan 0 kabul edilir. 95 oktanlı benzin, %95 izooktan + %5 n-heptan gibi davranır.",
+        "once": {
+          "soru": "Pompada \"95 oktan\" yazar. Oktan sayısı neyi gösterir?",
+          "secenekler": [
+            {
+              "yazi": "Vuruntuya direnci",
+              "neden": "Oktan sayısı yüksek benzin motorda erken tutuşmaz.",
+              "dogru": true
+            },
+            {
+              "yazi": "Enerji miktarını",
+              "neden": "Benzinlerin enerjisi birbirine yakındır; oktan erken tutuşmayı ölçer."
+            },
+            {
+              "yazi": "Kükürt miktarını",
+              "neden": "Kükürt ayrı ölçülür; oktan vuruntuya dirençtir."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",

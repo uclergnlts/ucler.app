@@ -48,7 +48,7 @@
   },
   {
    "baslik": "Fazla elektron nereye?",
-   "metin": "Fosfor katkılı silisyuma pil bağlandı: sol uç −, sağ uç +.",
+   "metin": "Silisyuma <b>fosfor</b> katıldı: fosforun 5. elektronu bağa girmez, serbest kalır. Pil bağlandı: sol uç −, sağ uç +.",
    "sahne": {
     "tur": "fiz16-kristal",
     "sure": 5
@@ -106,7 +106,7 @@
      }
     ]
    },
-   "kart": 3
+   "kart": 4
   },
   {
    "baslik": "Ters bağlı diyot",
@@ -138,11 +138,11 @@
      }
     ]
    },
-   "kart": 4
+   "kart": 5
   },
   {
    "baslik": "Mavi LED",
-   "metin": "LED malzemesinin enerji aralığını değiştir: <b>mavi</b> ışık veren malzemeyi bul.",
+   "metin": "LED'de enerji aralığı büyüdükçe ışık kırmızıdan maviye kayar. Aralığı değiştir: <b>mavi</b> ışık veren malzemeyi bul.",
    "sahne": {
     "tur": "fiz16-led"
    },
@@ -170,13 +170,6 @@
     },
     "tamam": "Mavi ışık ≈ 450-490 nm, enerji aralığı ≈ 2,5-2,8 eV. Bu kadar büyük aralıklı, kaliteli galyum nitrür kristali yapmak zordu; mavi LED bu yüzden en son geldi.",
     "ipucu": "Kırmızıdan maviye gittikçe enerji aralığı büyür."
-   },
-   "goster": {
-    "deger": {
-     "E": 2.2
-    },
-    "oynat": false,
-    "not": "2,2 eV ≈ 564 nm: yeşil. Enerji aralığı büyüdükçe dalga boyu kısalır."
    },
    "kart": 6
   },
@@ -243,13 +236,6 @@
     },
     "tamam": "30 µA × 100 = 3000 µA = <b>3 mA</b>. Küçük taban akımı, 100 kat büyük akımı yönetiyor: yükselteç.",
     "ipucu": "3 mA = 3000 µA. 3000 ÷ 100 = ?"
-   },
-   "goster": {
-    "deger": {
-     "ib": 60
-    },
-    "oynat": false,
-    "not": "60 µA'de akım 5 mA'de durur: devre daha fazlasına izin vermez. Transistör artık tam açık bir anahtardır."
    },
    "kart": 8
   },
@@ -321,5 +307,6 @@
   "Diyot akımı yalnız ileri yönde geçirir; LED'in rengini enerji aralığı belirler.",
   "Transistör küçük taban akımıyla büyük akımı yönetir.",
   "Süper iletken kritik sıcaklığın altında sıfır dirence iner ve manyetik alanı dışarı iter."
- ]
+ ],
+ "soruOnce": true
 }

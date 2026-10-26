@@ -31,17 +31,11 @@
     "ipucu": "Kaynama noktası 25 °C çizgisini geçen ilk alkanı ara.",
     "tamam": "Pentan 36 °C'de kaynar. Zincir uzadıkça London kuvvetleri artar, kaynama noktası yükselir."
    },
-   "kart": 1,
-   "goster": {
-    "deger": {
-     "n": 3
-    },
-    "not": "Propan (C₃H₈) −42 °C'de kaynar: oda sıcaklığında <b>gazdır</b>."
-   }
+   "kart": 2
   },
   {
    "baslik": "En uzun zinciri say",
-   "metin": "Zincir düz çizilmek zorunda değil. Zinciri kıvır ve karbonları say.",
+   "metin": "Adlandırma: en uzun zincir ana adı verir (5 C pentan), dal en yakın uçtan numaralanır. Zinciri kıvır ve karbonları say.",
    "sahne": {
     "tur": "kim11-adlandir"
    },
@@ -104,7 +98,7 @@
      }
     ]
    },
-   "kart": 3
+   "kart": 4
   },
   {
    "baslik": "Etini doyur",
@@ -132,13 +126,7 @@
     "ipucu": "Üçlü bağda iki π bağı var.",
     "tamam": "Alkin → alken → alkan: katılma iki basamaktır."
    },
-   "kart": 10,
-   "goster": {
-    "deger": {
-     "h": 1
-    },
-    "not": "1 mol H₂ bir π bağını açtı: etin, <b>eten</b> (C₂H₄) oldu. Çift bağ kaldığı için hâlâ doymamış."
-   }
+   "kart": 11
   },
   {
    "baslik": "Bromlu su testi",
@@ -166,7 +154,7 @@
      }
     ]
    },
-   "kart": 8
+   "kart": 9
   },
   {
    "baslik": "Benzen neden farklı?",
@@ -205,11 +193,11 @@
      }
     ]
    },
-   "kart": 12
+   "kart": 13
   },
   {
    "baslik": "Pentanı yak",
-   "metin": "Pentanın (C₅H₁₂) yanma denklemini O₂ katsayısıyla denkleştir.",
+   "metin": "Pentan (C₅H₁₂) yanınca CO₂ ve H₂O oluşur. Denklemi O₂ katsayısıyla denkleştir.",
    "sahne": {
     "tur": "kim11-yanma"
    },
@@ -233,13 +221,7 @@
     "ipucu": "Sağda kaç O atomu var? Her O₂ iki O getirir.",
     "tamam": "C₅H₁₂ + 8O₂ → 5CO₂ + 6H₂O. Oksijen az olursa yanma eksik kalır; zehirli CO ve is oluşur. Yanma bir redoks tepkimesidir."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "o": 6
-    },
-    "not": "6 O₂ solda 12 O atomu verir; sağdaki 5CO₂ + 6H₂O ise 16 O ister. Denklem henüz denk değil."
-   }
+   "kart": 5
   }
  ],
  "kapanis": [
@@ -248,5 +230,6 @@
   "Alkin → alken → alkan: 1 mol alkin 2 mol, 1 mol alken 1 mol H₂ ya da Br₂ katar.",
   "Bromlu suyu alken ve alkin renksizleştirir; alkan ve benzen renksizleştirmez.",
   "Benzenin 6 π elektronu halkaya yayılmıştır; bu kararlılık yüzünden katılma yerine <b>yer değiştirme</b> yapar."
- ]
+ ],
+ "soruOnce": true
 }

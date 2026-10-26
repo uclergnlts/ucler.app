@@ -8,110 +8,216 @@
   {
    "baslik": "Havanın yolu",
    "metin": "Soluduğun hava burundan <b>alveole</b> kadar bir dizi borudan geçer. Yutak hem hava hem besin yoludur. Tahmin et, sonra havayı izle.",
-   "sahne": { "tur": "biy12-yol", "sure": 7 },
+   "sahne": {
+    "tur": "biy12-yol",
+    "sure": 7
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Hava hangisinin içinden geçmez?",
     "secenekler": [
-     { "yazi": "Gırtlak", "neden": "Hava yutaktan gırtlağa, oradan soluk borusuna geçer. Ses telleri gırtlaktadır." },
-     { "yazi": "Yemek borusu", "dogru": true, "neden": "Yemek borusu besinin yoludur. Yutkunurken epiglot gırtlağı kapatır; soluk alırken açıktır ve hava soluk borusuna gider." },
-     { "yazi": "Bronş", "neden": "Soluk borusu ikiye ayrılır: her bronş bir akciğere girer ve bronşçuklara dallanır. Hava bronştan geçer." }
+     {
+      "yazi": "Gırtlak",
+      "neden": "Hava yutaktan gırtlağa, oradan soluk borusuna geçer. Ses telleri gırtlaktadır."
+     },
+     {
+      "yazi": "Yemek borusu",
+      "dogru": true,
+      "neden": "Yemek borusu besinin yoludur. Yutkunurken epiglot gırtlağı kapatır; soluk alırken açıktır ve hava soluk borusuna gider."
+     },
+     {
+      "yazi": "Bronş",
+      "neden": "Soluk borusu ikiye ayrılır: her bronş bir akciğere girer ve bronşçuklara dallanır. Hava bronştan geçer."
+     }
     ]
    },
-   "kart": 1
+   "kart": 2
   },
   {
    "baslik": "Soluk alma",
    "metin": "İki kası da çalıştır ve havayı içeri al.",
-   "sahne": { "tur": "biy12-gogus" },
-   "deger": { "d": 0, "k": 0 },
+   "sahne": {
+    "tur": "biy12-gogus"
+   },
+   "deger": {
+    "d": 0,
+    "k": 0
+   },
    "kontroller": [
-    { "ad": "d", "etiket": "Diyafram kasılsın", "min": 0, "max": 1, "tur": "anahtar" },
-    { "ad": "k", "etiket": "Kaburga kasları kasılsın", "min": 0, "max": 1, "tur": "anahtar" }
+    {
+     "ad": "d",
+     "etiket": "Diyafram kasılsın",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    },
+    {
+     "ad": "k",
+     "etiket": "Kaburga kasları kasılsın",
+     "min": 0,
+     "max": 1,
+     "tur": "anahtar"
+    }
    ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "d": 1, "k": 1 },
+    "hedef": {
+     "d": 1,
+     "k": 1
+    },
     "ipucu": "Diyafram düzleşince göğüs aşağı, dış kaburgalar arası kaslar kasılınca yukarı ve dışa genişler.",
     "tamam": "Göğüs hem aşağı hem yukarı ve dışa genişledi; basınç atmosferin altına inince hava kendiliğinden içeri aktı."
    },
-   "kart": 5,
-   "goster": { "deger": { "d": 1, "k": 0 }, "not": "Yalnız diyafram kasıldı: göğüs boşluğu aşağı doğru genişledi, basınç biraz düştü ve hava girmeye başladı." }
+   "kart": 5
   },
   {
    "baslik": "Kısmi basınç",
    "metin": "Deniz düzeyinde hava basıncı 760 mmHg, havanın %21'i O₂'dir. O₂'nin <b>kısmi basıncı</b> 760 × 0,21 ≈ 160 mmHg'dir. Dağa tırman ve PO₂'yi yarıya indir.",
-   "sahne": { "tur": "biy12-kismi" },
-   "deger": { "h": 0 },
-   "kontroller": [ { "ad": "h", "etiket": "Yükseklik", "min": 0, "max": 8, "adim": 0.5, "birim": "km" } ],
+   "sahne": {
+    "tur": "biy12-kismi"
+   },
+   "deger": {
+    "h": 0
+   },
+   "kontroller": [
+    {
+     "ad": "h",
+     "etiket": "Yükseklik",
+     "min": 0,
+     "max": 8,
+     "adim": 0.5,
+     "birim": "km"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "h": [5, 6] },
+    "hedef": {
+     "h": [
+      5,
+      6
+     ]
+    },
     "ipucu": "Yükseldikçe hava basıncı azalır. PO₂ 80 mmHg dolayına inene kadar çık.",
     "tamam": "Yaklaşık 5,5 km'de hava basıncı da PO₂ de yarıya (≈80 mmHg) iner. O₂ oranı hâlâ %21."
    },
-   "kart": 13,
-   "goster": { "deger": { "h": 2 }, "not": "2 km'de hava basıncı yaklaşık 592 mmHg. O₂ oranı yine %21, PO₂ ise yaklaşık <b>124 mmHg</b>." }
+   "kart": 13
   },
   {
    "baslik": "Alveolde gaz değişimi",
    "metin": "Alveol ve kılcal duvarı tek kat hücredir. Gazlar <b>kısmi basıncı</b> yüksek olan yerden düşük olan yere geçer. Tahmin et, sonra oynat.",
-   "sahne": { "tur": "biy12-alveol", "sure": 5 },
+   "sahne": {
+    "tur": "biy12-alveol",
+    "sure": 5
+   },
    "gorev": {
     "tur": "tahmin",
     "soru": "Kılcala gelen kanda PO₂ 40, alveolde 100 mmHg. O₂ nereye geçer?",
     "secenekler": [
-     { "yazi": "Alveolden kana", "dogru": true, "neden": "O₂ alveolde daha yüksek basınçtadır, difüzyonla kana geçer. CO₂ ise kanda yüksektir (45), alveole geçer. ATP harcanmaz." },
-     { "yazi": "Kandan alveole", "neden": "Gaz, kısmi basıncının yüksek olduğu yerden düşük olduğu yere geçer. Kanda PO₂ daha düşük, yani O₂ kana gelir." },
-     { "yazi": "ATP ile kana pompalanır", "neden": "Gaz değişimi difüzyondur; enerji gerekmez. İtici güç kısmi basınç farkıdır." }
+     {
+      "yazi": "Alveolden kana",
+      "dogru": true,
+      "neden": "O₂ alveolde daha yüksek basınçtadır, difüzyonla kana geçer. CO₂ ise kanda yüksektir (45), alveole geçer. ATP harcanmaz."
+     },
+     {
+      "yazi": "Kandan alveole",
+      "neden": "Gaz, kısmi basıncının yüksek olduğu yerden düşük olduğu yere geçer. Kanda PO₂ daha düşük, yani O₂ kana gelir."
+     },
+     {
+      "yazi": "ATP ile kana pompalanır",
+      "neden": "Gaz değişimi difüzyondur; enerji gerekmez. İtici güç kısmi basınç farkıdır."
+     }
     ]
    },
-   "kart": 6
+   "kart": 7
   },
   {
    "baslik": "Hemoglobin O₂ bırakır",
    "metin": "PO₂ düştükçe <b>hemoglobin</b> O₂ bırakır. Hemoglobine O₂'sinin yarısından çoğunu bıraktır.",
-   "sahne": { "tur": "biy12-hb" },
-   "deger": { "p": 100 },
-   "kontroller": [ { "ad": "p", "etiket": "PO₂", "min": 10, "max": 100, "adim": 10, "birim": "mmHg" } ],
+   "sahne": {
+    "tur": "biy12-hb"
+   },
+   "deger": {
+    "p": 100
+   },
+   "kontroller": [
+    {
+     "ad": "p",
+     "etiket": "PO₂",
+     "min": 10,
+     "max": 100,
+     "adim": 10,
+     "birim": "mmHg"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "p": [10, 20] },
+    "hedef": {
+     "p": [
+      10,
+      20
+     ]
+    },
     "ipucu": "Dinlenen dokuda PO₂ 40 mmHg'dir; hemoglobin orada yalnızca 1 O₂ bırakır. Çalışan kas O₂'yi çok daha hızlı harcar.",
     "tamam": "Çalışan kasta PO₂ 10-20 mmHg'ye iner ve hemoglobin O₂'nin çoğunu bırakır. Dinlenen dokuda yalnız 1'ini bırakır; kalanı yedek kalır."
-   },
-   "kart": 9,
-   "goster": { "deger": { "p": 40 }, "not": "Dinlenen dokuda PO₂ 40 mmHg: hemoglobin 4 O₂'nin yalnızca <b>1</b>'ini bırakıyor." }
-  },
-  {
-   "baslik": "CO₂'nin yolculuğu",
-   "metin": "Dokuda oluşan CO₂ kana geçer ve akciğere taşınır. Alyuvarda bir enzim, <b>karbonik anhidraz</b>, CO₂'yi suyla hızla birleştirir. Tahmin et, sonra oynat.",
-   "sahne": { "tur": "biy12-co2", "sure": 5 },
-   "gorev": {
-    "tur": "tahmin",
-    "soru": "CO₂'nin çoğu kanda hangi biçimde taşınır?",
-    "secenekler": [
-     { "yazi": "Hemoglobine bağlı", "neden": "Hemoglobine bağlanan CO₂ yaklaşık %23'tür. Çoğu başka biçimde taşınır." },
-     { "yazi": "Plazmada çözünmüş gaz", "neden": "Plazmada gaz olarak çözünen CO₂ yalnızca %7 kadardır." },
-     { "yazi": "Plazmada bikarbonat iyonu", "dogru": true, "neden": "Karbonik asit H⁺ ve HCO₃⁻'e ayrışır; bikarbonat plazmaya geçer. Akciğerde tepkime tersine döner ve CO₂ dışarı verilir." }
-    ]
    },
    "kart": 9
   },
   {
+   "baslik": "CO₂'nin yolculuğu",
+   "metin": "Dokuda oluşan CO₂ kana geçer ve akciğere taşınır. Alyuvarda bir enzim, <b>karbonik anhidraz</b>, CO₂'yi suyla hızla birleştirir. Tahmin et, sonra oynat.",
+   "sahne": {
+    "tur": "biy12-co2",
+    "sure": 5
+   },
+   "gorev": {
+    "tur": "tahmin",
+    "soru": "CO₂'nin çoğu kanda hangi biçimde taşınır?",
+    "secenekler": [
+     {
+      "yazi": "Hemoglobine bağlı",
+      "neden": "Hemoglobine bağlanan CO₂ yaklaşık %23'tür. Çoğu başka biçimde taşınır."
+     },
+     {
+      "yazi": "Plazmada çözünmüş gaz",
+      "neden": "Plazmada gaz olarak çözünen CO₂ yalnızca %7 kadardır."
+     },
+     {
+      "yazi": "Plazmada bikarbonat iyonu",
+      "dogru": true,
+      "neden": "Karbonik asit H⁺ ve HCO₃⁻'e ayrışır; bikarbonat plazmaya geçer. Akciğerde tepkime tersine döner ve CO₂ dışarı verilir."
+     }
+    ]
+   },
+   "kart": 10
+  },
+  {
    "baslik": "Egzersizde soluk",
-   "metin": "Koşarken kasların CO₂ üretimi 3 katına çıktı. Soluğu ayarla, PCO₂'yi 40'ta tut.",
-   "sahne": { "tur": "biy12-egzersiz" },
-   "deger": { "s": 1 },
-   "kontroller": [ { "ad": "s", "etiket": "Soluk", "min": 1, "max": 4, "tur": "sayac", "onek": "×" } ],
+   "metin": "Kandaki CO₂ soluğu yönetir: soluk hızlanınca daha çok CO₂ atılır. Koşarken kasların CO₂ üretimi 3 katına çıktı. Soluğu ayarla, PCO₂'yi 40'ta tut.",
+   "sahne": {
+    "tur": "biy12-egzersiz"
+   },
+   "deger": {
+    "s": 1
+   },
+   "kontroller": [
+    {
+     "ad": "s",
+     "etiket": "Soluk",
+     "min": 1,
+     "max": 4,
+     "tur": "sayac",
+     "onek": "×"
+    }
+   ],
    "gorev": {
     "tur": "ayarla",
-    "hedef": { "s": 3 },
+    "hedef": {
+     "s": 3
+    },
     "ipucu": "Atılan CO₂, üretilen CO₂'ye eşit olmalı. Çok hızlı solursan CO₂ fazla atılır.",
     "tamam": "Soluk 3 katına çıkınca üretilen CO₂ kadarı atıldı; PCO₂ 40'ta, pH 7,4'te kaldı."
    },
-   "kart": 13,
-   "goster": { "deger": { "s": 2 }, "not": "Soluk ×2 yetmiyor: üretilen CO₂'nin hepsi atılamıyor, PCO₂ 50 mmHg'ye çıkıyor ve pH 7,32'ye düşüyor." }
+   "kart": 12
   }
  ],
  "kapanis": [
@@ -120,5 +226,6 @@
   "Gazlar kısmi basınç farkıyla, difüzyonla geçer. Yüksekte O₂ oranı değil, kısmi basıncı düşer.",
   "O₂'nin çoğu hemoglobinle taşınır; hemoglobin PO₂'nin düşük olduğu dokuda O₂'yi bırakır.",
   "CO₂'nin çoğu bikarbonat olarak taşınır. Soluğu en çok kandaki CO₂ artışı hızlandırır."
- ]
+ ],
+ "soruOnce": true
 }
