@@ -8562,75 +8562,165 @@
     "cards": [
       {
         "h": "Yeşil kimya",
-        "p": "Yeşil kimya, ürünleri ve süreçleri baştan zararsız tasarlamaktır. 1998'de yazılan 12 ilkenin ilki: <b>atığı önlemek, oluştuktan sonra temizlemekten iyidir</b>. Daha az ve güvenli madde, az enerji, yenilenebilir hammadde ve doğada parçalanan ürün de ilkeler arasındadır.",
+        "p": "<b>Yeşil kimya</b>, ürün ve süreçleri baştan zararsız tasarlamaktır. 12 ilkenin ilki: <b>atığı önlemek, oluştuktan sonra temizlemekten iyidir</b>.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='yesil-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--muted)'/></marker></defs><rect x='14' y='40' width='136' height='110' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='82' y='64' font-size='15' fill='var(--c3)' text-anchor='middle' font-weight='700'>önle</text><text x='82' y='92' font-size='11' fill='var(--ink)' text-anchor='middle'>az ve güvenli madde</text><text x='82' y='110' font-size='11' fill='var(--ink)' text-anchor='middle'>az enerji</text><text x='82' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>yenilenebilir hammadde</text><rect x='170' y='40' width='136' height='110' rx='6' fill='var(--c2)' fill-opacity='0.14' stroke='var(--c2)' stroke-width='1.5'/><text x='238' y='64' font-size='15' fill='var(--c2)' text-anchor='middle' font-weight='700'>sonra temizle</text><text x='238' y='92' font-size='11' fill='var(--ink)' text-anchor='middle'>atık oluşur</text><text x='238' y='110' font-size='11' fill='var(--ink)' text-anchor='middle'>arıtma maliyeti</text><text x='238' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>kaçak riski</text><text x='160' y='180' font-size='12.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>12 ilkenin ilki: atığı baştan önle</text><text x='160' y='22' font-size='12' fill='var(--muted)' text-anchor='middle'>Yeşil kimya</text></svg>",
-        "key": "En temiz atık, hiç oluşmayan atıktır."
+        "key": "Az ve güvenli madde, az enerji, yenilenebilir hammadde ve doğada parçalanan ürün de ilkeler arasındadır. En temiz atık, hiç oluşmayan atıktır.",
+        "once": {
+          "soru": "Bir fabrika için hangisi daha yeşil bir çözümdür?",
+          "secenekler": [
+            {
+              "yazi": "Atığı hiç oluşturmamak",
+              "neden": "Oluşmayan atık için arıtma, enerji ve risk de gerekmez.",
+              "dogru": true
+            },
+            {
+              "yazi": "Atığı arıtıp temizlemek",
+              "neden": "Arıtma iyidir ama enerji harcar; atığı baştan önlemek daha iyidir."
+            },
+            {
+              "yazi": "Atığı uzağa taşımak",
+              "neden": "Taşımak atığı yok etmez, yalnız yerini değiştirir."
+            }
+          ]
+        }
       },
       {
         "h": "Mikro ölçekli deney",
-        "p": "Aynı tepkimeyi beherde değil, kuyucuklu plakada birkaç damlayla yapabilirsin. Gözlem çoğu zaman aynıdır ama kimyasal, yıkama suyu ve atık onlarca kat azalır. Deney hızlanır, güvenli ve ucuz olur. Karşılaştırmanın üç ölçütü: kimyasal miktarı, su miktarı ve oluşan kirlilik.",
+        "p": "Aynı tepkimeyi beherde değil, kuyucuklu plakada birkaç damlayla yapabilirsin. Gözlem aynıdır ama kimyasal, yıkama suyu ve atık onlarca kat azalır.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M30 40 V150 Q30 158 38 158 H102 Q110 158 110 150 V40' fill='none' stroke='var(--ink)' stroke-width='1.8'/><path d='M31 80 H109 V150 Q109 157 102 157 H38 Q31 157 31 150 Z' fill='var(--acc)' fill-opacity='0.3'/><text x='70' y='178' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>beher: 50 mL</text><rect x='170' y='70' width='130' height='80' rx='8' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.4'/><circle cx='190' cy='90' r='8' fill='var(--line)' fill-opacity='1' stroke='var(--muted)' stroke-width='0.8'/><circle cx='220' cy='90' r='8' fill='var(--line)' fill-opacity='1' stroke='var(--muted)' stroke-width='0.8'/><circle cx='250' cy='90' r='8' fill='var(--line)' fill-opacity='1' stroke='var(--muted)' stroke-width='0.8'/><circle cx='280' cy='90' r='8' fill='var(--line)' fill-opacity='1' stroke='var(--muted)' stroke-width='0.8'/><circle cx='190' cy='112' r='8' fill='var(--line)' fill-opacity='1' stroke='var(--muted)' stroke-width='0.8'/><circle cx='220' cy='112' r='8' fill='var(--acc)' fill-opacity='0.6' stroke='var(--muted)' stroke-width='0.8'/><circle cx='250' cy='112' r='8' fill='var(--line)' fill-opacity='1' stroke='var(--muted)' stroke-width='0.8'/><circle cx='280' cy='112' r='8' fill='var(--line)' fill-opacity='1' stroke='var(--muted)' stroke-width='0.8'/><circle cx='190' cy='134' r='8' fill='var(--line)' fill-opacity='1' stroke='var(--muted)' stroke-width='0.8'/><circle cx='220' cy='134' r='8' fill='var(--line)' fill-opacity='1' stroke='var(--muted)' stroke-width='0.8'/><circle cx='250' cy='134' r='8' fill='var(--line)' fill-opacity='1' stroke='var(--muted)' stroke-width='0.8'/><circle cx='280' cy='134' r='8' fill='var(--line)' fill-opacity='1' stroke='var(--muted)' stroke-width='0.8'/><text x='235' y='178' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>kuyucuk: birkaç damla</text><text x='160' y='22' font-size='12' fill='var(--muted)' text-anchor='middle'>Aynı tepkime, çok daha az kimyasal ve atık</text></svg>",
-        "key": "Mikro ölçek, okul laboratuvarında yeşil kimyanın en kolay uygulamasıdır."
+        "key": "Deney hızlı, güvenli ve ucuz olur. Mikro ölçek, okul laboratuvarında yeşil kimyanın en kolay uygulamasıdır."
       },
       {
         "h": "Nano ölçek",
-        "p": "1 nanometre, metrenin milyarda biridir; bir saç teli yaklaşık 80 000 nm kalınlığındadır. 1-100 nm boyutundaki parçacıklara <b>nanoparçacık</b> denir. Bu boyutta yüzey alanı çok büyür ve özellikler değişir: altın nanoparçacıklar sarı değil, kırmızıdır.",
+        "p": "1 nm metrenin milyarda biridir; saç teli ≈80 000 nm kalınlığındadır. 1-100 nm parçacıklara <b>nanoparçacık</b> denir; bu boyutta yüzey büyür, özellikler değişir.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='20' y1='110' x2='300' y2='110' stroke='var(--ink)' stroke-width='2'/><line x1='30' y1='102' x2='30' y2='118' stroke='var(--muted)' stroke-width='2'/><text x='30' y='94' font-size='11.5' fill='var(--muted)' text-anchor='middle' font-weight='700'>1 nm</text><text x='30' y='136' font-size='11' fill='var(--ink)' text-anchor='middle'>molekül</text><line x1='96' y1='102' x2='96' y2='118' stroke='var(--acc)' stroke-width='2'/><text x='96' y='94' font-size='11.5' fill='var(--acc)' text-anchor='middle' font-weight='700'>10 nm</text><text x='96' y='136' font-size='11' fill='var(--ink)' text-anchor='middle'>nanoparçacık</text><line x1='162' y1='102' x2='162' y2='118' stroke='var(--c5)' stroke-width='2'/><text x='162' y='94' font-size='11.5' fill='var(--c5)' text-anchor='middle' font-weight='700'>100 nm</text><text x='162' y='136' font-size='11' fill='var(--ink)' text-anchor='middle'>virüs</text><line x1='222' y1='102' x2='222' y2='118' stroke='var(--c3)' stroke-width='2'/><text x='222' y='94' font-size='11.5' fill='var(--c3)' text-anchor='middle' font-weight='700'>10 µm</text><text x='222' y='136' font-size='11' fill='var(--ink)' text-anchor='middle'>hücre</text><line x1='280' y1='102' x2='280' y2='118' stroke='var(--c4)' stroke-width='2'/><text x='280' y='94' font-size='11.5' fill='var(--c4)' text-anchor='middle' font-weight='700'>80 µm</text><text x='280' y='136' font-size='11' fill='var(--ink)' text-anchor='middle'>saç teli</text><rect x='22' y='60' width='148' height='16' rx='8' fill='var(--acc)' fill-opacity='0.18'/><text x='96' y='72' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>nano: 1-100 nm</text><circle cx='90' cy='172' r='12' fill='var(--c2)' fill-opacity='0.75'/><text x='110' y='176' font-size='11.5' fill='var(--ink)' text-anchor='start' font-weight='700'>altın nanoparçacık: kırmızı</text><text x='160' y='22' font-size='11' fill='var(--muted)' text-anchor='middle'>Her çentik bir öncekinden büyük (ölçek eşit değil)</text></svg>",
-        "key": "Madde aynı, boyut farklı: nano ölçekte renk ve tepkime hızı değişebilir."
+        "key": "Altın nanoparçacıklar sarı değil kırmızıdır. Madde aynı, boyut farklı: renk ve tepkime hızı değişebilir."
       },
       {
         "h": "Atıktan gümüş nanoparçacık",
-        "p": "Çay posası ya da nar kabuğu suda kaynatılınca özüte <b>polifenoller</b> geçer. Özüt gümüş nitrat çözeltisine katılınca Ag⁺ iyonlarını Ag atomuna <b>indirger</b>; atomlar nanoparçacık olarak toplanır ve renksiz çözelti sarı-kahverengiye döner. Bakır nanoparçacık da Cu²⁺ tuzundan benzer yolla elde edilir.",
+        "p": "Çay posası özütündeki <b>polifenoller</b> gümüş nitrattaki Ag⁺ iyonlarını Ag atomuna <b>indirger</b>; atomlar nanoparçacık olarak toplanır, çözelti sarı-kahverengiye döner.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='yesil-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--ink)'/></marker></defs><rect x='10' y='50' width='86' height='70' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='53' y='76' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>çay posası,</text><text x='53' y='92' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>meyve kabuğu</text><text x='53' y='108' font-size='11' fill='var(--muted)' text-anchor='middle'>özütü</text><line x1='100' y1='85' x2='126' y2='85' stroke='var(--ink)' stroke-width='1.6' marker-end='url(#yesil-4)'/><path d='M136 44 V116 Q136 124 144 124 H188 Q196 124 196 116 V44' fill='none' stroke='var(--ink)' stroke-width='1.6'/><path d='M137 70 H195 V116 Q195 123 188 123 H144 Q137 123 137 116 Z' fill='var(--line)'/><text x='166' y='142' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>AgNO₃</text><line x1='204' y1='85' x2='230' y2='85' stroke='var(--ink)' stroke-width='1.6' marker-end='url(#yesil-4)'/><path d='M240 44 V116 Q240 124 248 124 H292 Q300 124 300 116 V44' fill='none' stroke='var(--ink)' stroke-width='1.6'/><path d='M241 70 H299 V116 Q299 123 292 123 H248 Q241 123 241 116 Z' fill='var(--c4)' fill-opacity='0.55'/><text x='270' y='142' font-size='11.5' fill='var(--c4)' text-anchor='middle' font-weight='700'>sarı-kahve</text><rect x='40' y='160' width='240' height='30' rx='6' fill='var(--panel)'/><text x='160' y='180' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Ag⁺ + e⁻ → Ag (polifenoller indirger)</text></svg>",
-        "key": "Özüt hem indirger hem de parçacıkları kaplayıp topaklanmasını önler."
+        "key": "Özüt parçacıkları kaplayıp topaklanmayı da önler. Nar kabuğu da işe yarar; bakır nanoparçacık da benzer yolla yapılır."
       },
       {
         "h": "Hangi atık daha iyi?",
-        "p": "Atıkları karşılaştırırken yalnız <b>atık türünü</b> değiştirirsin; özüt ve çözelti miktarı, sıcaklık ve süre aynı kalır. Nanoparçacık miktarı rengin koyuluğundan anlaşılır: spektrofotometre, gümüşte yaklaşık 420 nm'deki soğurmayı ölçer. Soğurma büyükse nanoparçacık çoktur.",
+        "p": "Atıkları karşılaştırırken yalnız <b>atık türünü</b> değiştirirsin; miktar, sıcaklık ve süre aynı kalır. Gümüşün 420 nm'deki soğurması büyükse nanoparçacık çoktur.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='40' y1='160' x2='300' y2='160' stroke='var(--ink)'/><line x1='40' y1='30' x2='40' y2='160' stroke='var(--ink)'/><path d='M50 158 C 120 158, 130 60, 170 60 C 210 60, 230 156, 290 158' fill='none' stroke='var(--c3)' stroke-width='2.4'/><path d='M50 158 C 120 158, 130 90, 170 90 C 210 90, 230 156, 290 158' fill='none' stroke='var(--c4)' stroke-width='2.4'/><path d='M50 158 C 120 158, 130 120, 170 120 C 210 120, 230 156, 290 158' fill='none' stroke='var(--c5)' stroke-width='2.4'/><text x='296' y='46' font-size='11' fill='var(--c3)' text-anchor='end' font-weight='700'>nar kabuğu</text><text x='296' y='62' font-size='11' fill='var(--c4)' text-anchor='end' font-weight='700'>çay posası</text><text x='296' y='78' font-size='11' fill='var(--c5)' text-anchor='end' font-weight='700'>portakal kabuğu</text><line x1='170' y1='160' x2='170' y2='168' stroke='var(--ink)'/><text x='170' y='180' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>≈ 420 nm</text><text x='46' y='30' font-size='11' fill='var(--muted)' text-anchor='start'>soğurma</text><text x='300' y='196' font-size='10.5' fill='var(--muted)' text-anchor='end'>örnek veri: aynı süre, sıcaklık ve miktar</text></svg>",
-        "key": "Bağımsız değişken atık türü, bağımlı değişken soğurmadır."
+        "key": "Bağımsız değişken atık türü, bağımlı değişken soğurmadır. Soğurmayı spektrofotometre ölçer.",
+        "once": {
+          "soru": "Çay posası ile nar kabuğu özütünü karşılaştırıyorsun. Neyi değiştirebilirsin?",
+          "secenekler": [
+            {
+              "yazi": "Yalnız atık türünü",
+              "neden": "Adil deneyde tek değişken olur; gerisi sabit tutulur.",
+              "dogru": true
+            },
+            {
+              "yazi": "Atığı ve sıcaklığı",
+              "neden": "İki şey birden değişirse farkın nedeni anlaşılmaz."
+            },
+            {
+              "yazi": "Her şeyi",
+              "neden": "Her şey değişirse sonuçlar karşılaştırılamaz."
+            }
+          ]
+        }
       },
       {
         "h": "Ağır metaller ekosistemde",
-        "p": "Kurşun, cıva ve kadmiyum gibi <b>ağır metaller</b> parçalanmaz; toprakta ve suda birikir. Canlı onları atamadığı için besin zincirinde her basamakta derişim artar: <b>biyolojik birikim</b>. 1950'lerde Minamata'da (Japonya) cıvalı atık balıklarda birikti, binlerce kişi zehirlendi. Atık piller ve eski lehimler de kaynaktır.",
+        "p": "Kurşun, cıva, kadmiyum gibi <b>ağır metaller</b> parçalanmaz, birikir. Canlı onları atamaz; besin zincirinde her basamakta derişim artar: <b>biyolojik birikim</b>.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='16' y='140' width='62' height='20' rx='4' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)' stroke-width='1.2'/><circle cx='24' cy='153' r='2.6' fill='var(--c2)'/><text x='47' y='180' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>su</text><rect x='92' y='104' width='62' height='56' rx='4' fill='var(--c2)' fill-opacity='0.22' stroke='var(--c2)' stroke-width='1.2'/><circle cx='100' cy='153' r='2.6' fill='var(--c2)'/><circle cx='109' cy='153' r='2.6' fill='var(--c2)'/><circle cx='118' cy='153' r='2.6' fill='var(--c2)'/><text x='123' y='180' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>plankton</text><rect x='168' y='68' width='62' height='92' rx='4' fill='var(--c2)' fill-opacity='0.33999999999999997' stroke='var(--c2)' stroke-width='1.2'/><circle cx='176' cy='153' r='2.6' fill='var(--c2)'/><circle cx='185' cy='153' r='2.6' fill='var(--c2)'/><circle cx='194' cy='153' r='2.6' fill='var(--c2)'/><circle cx='203' cy='153' r='2.6' fill='var(--c2)'/><circle cx='212' cy='153' r='2.6' fill='var(--c2)'/><circle cx='221' cy='153' r='2.6' fill='var(--c2)'/><circle cx='176' cy='144' r='2.6' fill='var(--c2)'/><circle cx='185' cy='144' r='2.6' fill='var(--c2)'/><text x='199' y='180' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>küçük balık</text><rect x='244' y='32' width='62' height='128' rx='4' fill='var(--c2)' fill-opacity='0.45999999999999996' stroke='var(--c2)' stroke-width='1.2'/><circle cx='252' cy='153' r='2.6' fill='var(--c2)'/><circle cx='261' cy='153' r='2.6' fill='var(--c2)'/><circle cx='270' cy='153' r='2.6' fill='var(--c2)'/><circle cx='279' cy='153' r='2.6' fill='var(--c2)'/><circle cx='288' cy='153' r='2.6' fill='var(--c2)'/><circle cx='297' cy='153' r='2.6' fill='var(--c2)'/><circle cx='252' cy='144' r='2.6' fill='var(--c2)'/><circle cx='261' cy='144' r='2.6' fill='var(--c2)'/><circle cx='270' cy='144' r='2.6' fill='var(--c2)'/><circle cx='279' cy='144' r='2.6' fill='var(--c2)'/><circle cx='288' cy='144' r='2.6' fill='var(--c2)'/><circle cx='297' cy='144' r='2.6' fill='var(--c2)'/><circle cx='252' cy='135' r='2.6' fill='var(--c2)'/><circle cx='261' cy='135' r='2.6' fill='var(--c2)'/><circle cx='270' cy='135' r='2.6' fill='var(--c2)'/><circle cx='279' cy='135' r='2.6' fill='var(--c2)'/><circle cx='288' cy='135' r='2.6' fill='var(--c2)'/><circle cx='297' cy='135' r='2.6' fill='var(--c2)'/><circle cx='252' cy='126' r='2.6' fill='var(--c2)'/><circle cx='261' cy='126' r='2.6' fill='var(--c2)'/><text x='275' y='180' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>büyük balık</text><text x='160' y='22' font-size='12' fill='var(--muted)' text-anchor='middle'>Cıva atılamaz, her basamakta derişim artar</text></svg>",
-        "key": "Atık pili toplama kutusuna atmak, metali zincire girmeden yakalar."
+        "key": "1950'lerde Minamata'da cıvalı atık balıklarda birikti, binlerce kişi zehirlendi. Atık pili toplama kutusuna atmak metali zincire girmeden yakalar."
       },
       {
         "h": "Nanoparçacıklar suda",
-        "p": "Gümüş nanoparçacıklar mikrop öldürdüğü için çoraplara ve kaplara katılır. Yıkamayla suya geçer; arıtma tesisleri bu küçüklükteki parçacıkların hepsini tutamaz. Doğaya ulaşan gümüş, arıtmada ve toprakta işe yarayan bakterilere de zarar verebilir. Çözüm, gereksiz kullanımı azaltmak ve ürünü baştan güvenli tasarlamaktır.",
+        "p": "Gümüş nanoparçacıklar mikrop öldürdüğü için çoraplara katılır. Yıkamayla suya geçer; arıtma hepsini tutamaz. Doğada yararlı bakterilere de zarar verebilir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='yesil-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--muted)'/></marker></defs><rect x='14' y='60' width='88' height='60' rx='6' fill='var(--c5)' fill-opacity='0.14' stroke='var(--c5)' stroke-width='1.5'/><text x='58' y='95' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>gümüşlü çorap</text><rect x='116' y='60' width='88' height='60' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='160' y='95' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>arıtma tesisi</text><rect x='218' y='60' width='88' height='60' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='262' y='95' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>nehir</text><line x1='104' y1='90' x2='114' y2='90' stroke='var(--muted)' stroke-width='1.6' marker-end='url(#yesil-7)'/><line x1='206' y1='90' x2='216' y2='90' stroke='var(--muted)' stroke-width='1.6' marker-end='url(#yesil-7)'/><circle cx='240' cy='108' r='2.4' fill='var(--c5)'/><circle cx='251' cy='102' r='2.4' fill='var(--c5)'/><circle cx='262' cy='108' r='2.4' fill='var(--c5)'/><circle cx='273' cy='102' r='2.4' fill='var(--c5)'/><circle cx='284' cy='108' r='2.4' fill='var(--c5)'/><text x='58' y='140' font-size='11' fill='var(--muted)' text-anchor='middle'>suya geçer</text><text x='160' y='140' font-size='11' fill='var(--muted)' text-anchor='middle'>hepsini tutamaz</text><text x='262' y='140' font-size='11' fill='var(--muted)' text-anchor='middle'>bakteriye zarar</text><text x='160' y='180' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>çözüm: gereksiz kullanma, güvenli tasarla</text></svg>",
-        "key": "Nano boyut, parçacığı sudan ayırmayı zorlaştırır."
+        "key": "Nano boyut parçacığı sudan ayırmayı zorlaştırır. Çözüm gereksiz kullanımı azaltmak ve ürünü baştan güvenli tasarlamaktır.",
+        "once": {
+          "soru": "Gümüş nanoparçacıklı çorap yıkanınca gümüşün bir kısmı nereye gider?",
+          "secenekler": [
+            {
+              "yazi": "Atık suya",
+              "neden": "Her yıkamada parçacıkların bir kısmı suya geçer.",
+              "dogru": true
+            },
+            {
+              "yazi": "Çorapta kalır",
+              "neden": "Parçacıklar lifte sıkı tutunmaz; yıkadıkça azalır."
+            },
+            {
+              "yazi": "Buharlaşır",
+              "neden": "Gümüş buharlaşmaz; suyla taşınır."
+            }
+          ]
+        }
       },
       {
         "h": "Nano ürün seçerken",
-        "p": "Güneş kremindeki nano çinko oksit cilde beyaz iz bırakmadan UV'yi tutar; nano kaplamalı cam kendini temizler; lipit nanoparçacıklar mRNA aşılarını hücreye taşır. Ama solunabilen tozlar, uzun vadesi bilinmeyen etkiler ve etiketsiz kullanım sorundur. Sağlık, güvenlik, etik ve sürdürülebilirlik birlikte düşünülür.",
+        "p": "Nano çinko oksit güneş kreminde iz bırakmadan UV'yi tutar; lipit nanoparçacıklar mRNA aşılarını taşır. Ama solunabilen tozlar ve uzun vadeli etkiler sorundur.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='14' y='30' width='140' height='136' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='84' y='52' font-size='12.5' fill='var(--c3)' text-anchor='middle' font-weight='700'>olası fayda</text><text x='84' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>UV tutan krem</text><text x='84' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>kendini temizleyen cam</text><text x='84' y='120' font-size='11' fill='var(--ink)' text-anchor='middle'>ilaç ve aşı taşıyıcı</text><text x='84' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>hafif, sağlam malzeme</text><rect x='166' y='30' width='140' height='136' rx='6' fill='var(--c2)' fill-opacity='0.14' stroke='var(--c2)' stroke-width='1.5'/><text x='236' y='52' font-size='12.5' fill='var(--c2)' text-anchor='middle' font-weight='700'>sorulacak</text><text x='236' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>solunabilir mi?</text><text x='236' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>uzun vadede ne olur?</text><text x='236' y='120' font-size='11' fill='var(--ink)' text-anchor='middle'>etikette yazıyor mu?</text><text x='236' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>atığı nereye gider?</text><text x='160' y='190' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>kanıta ve kullanım amacına bak</text></svg>",
-        "key": "\"Nano\" yazması ürünü iyi ya da kötü yapmaz; kanıta ve amaca bakılır."
+        "key": "Nano kaplamalı cam kendini temizler. \"Nano\" yazması ürünü iyi ya da kötü yapmaz; kanıta ve amaca bakılır.",
+        "once": {
+          "soru": "Bir ürünün üstünde \"nano\" yazıyor. Bu, ürünün güvenli olduğunu gösterir mi?",
+          "secenekler": [
+            {
+              "yazi": "Hayır, kanıta bakılır",
+              "neden": "\"Nano\" yalnız boyutu anlatır; güvenliği araştırmalar gösterir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Evet",
+              "neden": "Nano boyut bazen yeni riskler de getirir."
+            },
+            {
+              "yazi": "Evet, doğaldır",
+              "neden": "Nano olmak doğal ya da güvenli olmak demek değildir."
+            }
+          ]
+        }
       },
       {
         "h": "Mikroplastik ve nanoplastik",
-        "p": "5 mm'den küçük plastik parçalara <b>mikroplastik</b>, 1 mikrometreden küçüklere <b>nanoplastik</b> denir. Sentetik giysilerin yıkanması, lastik aşınması ve parçalanan ambalajlar başlıca kaynaklardır. Denizden tuza ve içme suyuna kadar her yerde bulundu, insan kanında da saptandı. Sağlığa etkisi hâlâ araştırılıyor.",
+        "p": "5 mm'den küçük plastiğe <b>mikroplastik</b>, 1 µm'den küçüğe <b>nanoplastik</b> denir. Sentetik giysi yıkama ve lastik aşınması başlıca kaynaktır; insan kanında da bulundu.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='20' y='60' width='120' height='70' rx='6' fill='var(--c1)' fill-opacity='0.18' stroke='var(--c1)'/><text x='80' y='100' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>şişe</text><line x1='146' y1='95' x2='166' y2='95' stroke='var(--muted)' stroke-width='1.6'/><rect x='172' y='80' width='8' height='8' fill='var(--c1)' fill-opacity='0.6'/><rect x='186' y='80' width='8' height='8' fill='var(--c1)' fill-opacity='0.6'/><rect x='200' y='80' width='8' height='8' fill='var(--c1)' fill-opacity='0.6'/><rect x='214' y='80' width='8' height='8' fill='var(--c1)' fill-opacity='0.6'/><rect x='172' y='94' width='8' height='8' fill='var(--c1)' fill-opacity='0.6'/><rect x='186' y='94' width='8' height='8' fill='var(--c1)' fill-opacity='0.6'/><rect x='200' y='94' width='8' height='8' fill='var(--c1)' fill-opacity='0.6'/><rect x='214' y='94' width='8' height='8' fill='var(--c1)' fill-opacity='0.6'/><rect x='172' y='108' width='8' height='8' fill='var(--c1)' fill-opacity='0.6'/><rect x='186' y='108' width='8' height='8' fill='var(--c1)' fill-opacity='0.6'/><rect x='200' y='108' width='8' height='8' fill='var(--c1)' fill-opacity='0.6'/><rect x='214' y='108' width='8' height='8' fill='var(--c1)' fill-opacity='0.6'/><text x='198' y='140' font-size='11.5' fill='var(--c1)' text-anchor='middle' font-weight='700'>mikro</text><text x='198' y='156' font-size='11' fill='var(--muted)' text-anchor='middle'>&lt; 5 mm</text><line x1='236' y1='95' x2='252' y2='95' stroke='var(--muted)' stroke-width='1.6'/><circle cx='262' cy='84' r='1.6' fill='var(--c1)'/><circle cx='269' cy='84' r='1.6' fill='var(--c1)'/><circle cx='276' cy='84' r='1.6' fill='var(--c1)'/><circle cx='283' cy='84' r='1.6' fill='var(--c1)'/><circle cx='290' cy='84' r='1.6' fill='var(--c1)'/><circle cx='297' cy='84' r='1.6' fill='var(--c1)'/><circle cx='262' cy='91' r='1.6' fill='var(--c1)'/><circle cx='269' cy='91' r='1.6' fill='var(--c1)'/><circle cx='276' cy='91' r='1.6' fill='var(--c1)'/><circle cx='283' cy='91' r='1.6' fill='var(--c1)'/><circle cx='290' cy='91' r='1.6' fill='var(--c1)'/><circle cx='297' cy='91' r='1.6' fill='var(--c1)'/><circle cx='262' cy='98' r='1.6' fill='var(--c1)'/><circle cx='269' cy='98' r='1.6' fill='var(--c1)'/><circle cx='276' cy='98' r='1.6' fill='var(--c1)'/><circle cx='283' cy='98' r='1.6' fill='var(--c1)'/><circle cx='290' cy='98' r='1.6' fill='var(--c1)'/><circle cx='297' cy='98' r='1.6' fill='var(--c1)'/><circle cx='262' cy='105' r='1.6' fill='var(--c1)'/><circle cx='269' cy='105' r='1.6' fill='var(--c1)'/><circle cx='276' cy='105' r='1.6' fill='var(--c1)'/><circle cx='283' cy='105' r='1.6' fill='var(--c1)'/><circle cx='290' cy='105' r='1.6' fill='var(--c1)'/><circle cx='297' cy='105' r='1.6' fill='var(--c1)'/><text x='280' y='140' font-size='11.5' fill='var(--c1)' text-anchor='middle' font-weight='700'>nano</text><text x='280' y='156' font-size='11' fill='var(--muted)' text-anchor='middle'>&lt; 1 µm</text><text x='160' y='22' font-size='12' fill='var(--muted)' text-anchor='middle'>Plastik kaybolmaz, parçalanıp küçülür</text><text x='160' y='188' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>kaynak: sentetik giysi, lastik, ambalaj</text></svg>",
-        "key": "Plastik kaybolmaz, küçülür; küçüldükçe canlının içine girmesi kolaylaşır."
+        "key": "Parçalanan ambalajlar da kaynaktır; sağlık etkisi araştırılıyor. Plastik kaybolmaz, küçülür; küçüldükçe canlının içine girmesi kolaylaşır.",
+        "once": {
+          "soru": "Denizdeki plastik şişe zamanla ne olur?",
+          "secenekler": [
+            {
+              "yazi": "Küçük parçalara ayrılır",
+              "neden": "Güneş ve dalga plastiği parçalar; parçalar küçülür ama kaybolmaz.",
+              "dogru": true
+            },
+            {
+              "yazi": "Tamamen yok olur",
+              "neden": "Plastik doğada yüzlerce yıl kalır."
+            },
+            {
+              "yazi": "Suda çözünür",
+              "neden": "Plastik suda çözünmez."
+            }
+          ]
+        }
       },
       {
         "h": "Biyobozunur polimerler",
-        "p": "<b>PLA</b> için mısır nişastası şekere, şeker fermantasyonla laktik aside çevrilir, laktik asit de polimerleşir. Bazı bakteriler hücrelerinde <b>PHA</b> denen polimeri biriktirir. Evde nişasta, su, sirke ve <b>gliserolle</b> esnek film yapılabilir. Dikkat: PLA çoğunlukla ancak sanayi tipi kompostta hızla bozunur.",
+        "p": "<b>PLA</b> mısır nişastasından yapılır: nişasta şekere, şeker fermantasyonla laktik aside döner, o da polimerleşir. Evde nişasta, su, sirke ve <b>gliserolle</b> film yapılır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='yesil-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--muted)'/></marker></defs><rect x='12' y='50' width='68' height='40' rx='6' fill='var(--c4)' fill-opacity='0.14' stroke='var(--c4)' stroke-width='1.5'/><text x='46' y='74' font-size='10.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>nişasta</text><line x1='81' y1='70' x2='88' y2='70' stroke='var(--muted)' stroke-width='1.6' marker-end='url(#yesil-10)'/><rect x='89' y='50' width='68' height='40' rx='6' fill='var(--c4)' fill-opacity='0.14' stroke='var(--c4)' stroke-width='1.5'/><text x='123' y='74' font-size='10.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>şeker</text><line x1='158' y1='70' x2='165' y2='70' stroke='var(--muted)' stroke-width='1.6' marker-end='url(#yesil-10)'/><rect x='166' y='50' width='68' height='40' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='200' y='74' font-size='10.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>laktik asit</text><line x1='235' y1='70' x2='242' y2='70' stroke='var(--muted)' stroke-width='1.6' marker-end='url(#yesil-10)'/><rect x='243' y='50' width='68' height='40' rx='6' fill='var(--acc)' fill-opacity='0.14' stroke='var(--acc)' stroke-width='1.5'/><text x='277' y='74' font-size='10.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>PLA</text><text x='127' y='108' font-size='10.5' fill='var(--c3)' text-anchor='middle' font-weight='700'>fermantasyon</text><text x='204' y='108' font-size='10.5' fill='var(--acc)' text-anchor='middle' font-weight='700'>polimerleşme</text><rect x='30' y='130' width='260' height='54' rx='8' fill='var(--panel)'/><text x='160' y='152' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>evde: nişasta + su + sirke + gliserol</text><text x='160' y='172' font-size='11' fill='var(--muted)' text-anchor='middle'>gliserol filmi esnek yapar</text></svg>",
-        "key": "Gliserol plastikleştiricidir: zincirlerin arasına girip filmi esnek yapar."
+        "key": "Gliserol zincirlerin arasına girip filmi esnek yapar. Bazı bakteriler PHA biriktirir. PLA çoğunlukla ancak sanayi kompostunda hızla bozunur."
       },
       {
         "h": "Atıktan yeşil hidrojen",
-        "p": "Bazı bakteriler oksijensiz ortamda meyve-sebze artığı gibi şekerli atıkları parçalar ve <b>hidrojen</b> çıkarır: <b>karanlık fermantasyon</b>. Bir glikozdan en çok 4 H₂ elde edilir. Hidrojen yanınca yalnızca su oluşur. Elde edilen gaz atığın türüne, pH'a, sıcaklığa ve süreye bağlıdır.",
+        "p": "Bazı bakteriler oksijensiz ortamda şekerli atıkları parçalayıp <b>hidrojen</b> çıkarır: <b>karanlık fermantasyon</b>. Bir glikozdan en çok 4 H₂ çıkar; hidrojen yanınca yalnız su oluşur.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='yesil-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--muted)'/></marker></defs><rect x='14' y='50' width='96' height='70' rx='6' fill='var(--c4)' fill-opacity='0.14' stroke='var(--c4)' stroke-width='1.5'/><text x='62' y='80' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>şekerli atık</text><text x='62' y='98' font-size='10.5' fill='var(--muted)' text-anchor='middle'>(meyve, sebze)</text><line x1='112' y1='85' x2='132' y2='85' stroke='var(--muted)' stroke-width='1.6' marker-end='url(#yesil-11)'/><rect x='136' y='50' width='80' height='70' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='176' y='80' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>bakteriler</text><text x='176' y='98' font-size='10.5' fill='var(--muted)' text-anchor='middle'>oksijensiz</text><line x1='218' y1='85' x2='238' y2='85' stroke='var(--muted)' stroke-width='1.6' marker-end='url(#yesil-11)'/><circle cx='272' cy='85' r='30' fill='var(--c1)' fill-opacity='0.16' stroke='var(--c1)' stroke-width='1.5'/><text x='272' y='90' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>H₂</text><text x='160' y='150' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>etkenler: atık türü, pH, sıcaklık, süre</text><text x='160' y='176' font-size='11.5' fill='var(--muted)' text-anchor='middle'>yanınca yalnızca su: 2H₂ + O₂ → 2H₂O</text></svg>",
-        "key": "C₆H₁₂O₆ + 2H₂O → 2CH₃COOH + 2CO₂ + 4H₂"
+        "key": "C₆H₁₂O₆ + 2H₂O → 2CH₃COOH + 2CO₂ + 4H₂. Verim atık türüne, pH'a, sıcaklığa ve süreye bağlıdır."
       },
       {
         "h": "Boyaya duyarlı güneş pili",
-        "p": "1991'de Grätzel ve O'Regan'ın geliştirdiği bu pilde ışığı silisyum değil, titanyum dioksit nanoparçacıklarına tutunmuş bir <b>boya</b> soğurur. Ucuzdur, renkli ve yarı saydam yapılabilir, loş ışıkta iyi çalışır. Verimi en iyi örneklerde %13-15'tir; silisyumdan düşüktür, ömrü de daha kısadır.",
+        "p": "<b>Boyaya duyarlı güneş pilinde</b> ışığı silisyum değil, TiO₂ nanoparçacıklarına tutunmuş bir <b>boya</b> soğurur. Ucuz, renkli, yarı saydamdır; verimi silisyumdan düşüktür.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='30' y='40' width='180' height='16' fill='var(--line-2)'/><text x='120' y='52' font-size='10' fill='var(--ink)' text-anchor='middle'>cam + iletken kaplama</text><rect x='30' y='56' width='180' height='34' fill='var(--muted)' fill-opacity='0.15'/><circle cx='40' cy='70' r='6' fill='var(--panel)' stroke='var(--muted)'/><circle cx='44' cy='66' r='2.4' fill='var(--c2)'/><circle cx='54' cy='76' r='6' fill='var(--panel)' stroke='var(--muted)'/><circle cx='58' cy='72' r='2.4' fill='var(--c2)'/><circle cx='68' cy='70' r='6' fill='var(--panel)' stroke='var(--muted)'/><circle cx='72' cy='66' r='2.4' fill='var(--c2)'/><circle cx='82' cy='76' r='6' fill='var(--panel)' stroke='var(--muted)'/><circle cx='86' cy='72' r='2.4' fill='var(--c2)'/><circle cx='96' cy='70' r='6' fill='var(--panel)' stroke='var(--muted)'/><circle cx='100' cy='66' r='2.4' fill='var(--c2)'/><circle cx='110' cy='76' r='6' fill='var(--panel)' stroke='var(--muted)'/><circle cx='114' cy='72' r='2.4' fill='var(--c2)'/><circle cx='124' cy='70' r='6' fill='var(--panel)' stroke='var(--muted)'/><circle cx='128' cy='66' r='2.4' fill='var(--c2)'/><circle cx='138' cy='76' r='6' fill='var(--panel)' stroke='var(--muted)'/><circle cx='142' cy='72' r='2.4' fill='var(--c2)'/><circle cx='152' cy='70' r='6' fill='var(--panel)' stroke='var(--muted)'/><circle cx='156' cy='66' r='2.4' fill='var(--c2)'/><circle cx='166' cy='76' r='6' fill='var(--panel)' stroke='var(--muted)'/><circle cx='170' cy='72' r='2.4' fill='var(--c2)'/><circle cx='180' cy='70' r='6' fill='var(--panel)' stroke='var(--muted)'/><circle cx='184' cy='66' r='2.4' fill='var(--c2)'/><circle cx='194' cy='76' r='6' fill='var(--panel)' stroke='var(--muted)'/><circle cx='198' cy='72' r='2.4' fill='var(--c2)'/><rect x='30' y='90' width='180' height='26' fill='var(--c4)' fill-opacity='0.2'/><text x='120' y='107' font-size='10.5' fill='var(--ink)' text-anchor='middle'>elektrolit (iyot)</text><rect x='30' y='116' width='180' height='16' fill='var(--line-2)'/><text x='120' y='128' font-size='10' fill='var(--ink)' text-anchor='middle'>karşı elektrot</text><text x='218' y='70' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>TiO₂ + boya</text><rect x='224' y='96' width='88' height='56' rx='6' fill='var(--panel)'/><text x='268' y='116' font-size='11' fill='var(--muted)' text-anchor='middle'>verim</text><text x='268' y='138' font-size='14' fill='var(--c2)' text-anchor='middle' font-weight='700'>%13-15</text><text x='160' y='166' font-size='11.5' fill='var(--muted)' text-anchor='middle'>silisyum paneller: ≈ %20-23</text><text x='160' y='190' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>ucuz, renkli, loş ışıkta iyi</text><text x='160' y='24' font-size='11.5' fill='var(--muted)' text-anchor='middle'>Işığı boya soğurur, elektron TiO₂'ye geçer</text></svg>",
-        "key": "Verim = elektrik gücü ÷ gelen ışık gücü × 100",
+        "key": "Verim = elektrik gücü ÷ gelen ışık gücü × 100. En iyi örneklerde %13-15; loş ışıkta iyi çalışır ama ömrü kısadır.",
         "etk": {
           "tur": "formul",
           "soru": "1 cm² pile 100 mW ışık düşüyor. Pilin verdiği akımı ve gerilimi değiştir; verim kaç?",
@@ -8670,13 +8760,49 @@
               "max": 20
             }
           ]
+        },
+        "once": {
+          "soru": "Pile 100 mW ışık düşüyor, pil 10 mW elektrik veriyor. Verim yüzde kaçtır?",
+          "secenekler": [
+            {
+              "yazi": "%10",
+              "neden": "10 ÷ 100 × 100 = %10.",
+              "dogru": true
+            },
+            {
+              "yazi": "%90",
+              "neden": "%90 elektriğe dönüşmeyen kısımdır."
+            },
+            {
+              "yazi": "%1",
+              "neden": "Verim = elektrik gücü ÷ ışık gücü × 100."
+            }
+          ]
         }
       },
       {
         "h": "Yapay zekâ ve sürdürülebilirlik",
-        "p": "Yapay zekâ modellerini eğitmek ve çalıştırmak büyük veri merkezleri ister; bunlar çok elektrik ve soğutma suyu tüketir. Öte yandan yapay zekâ yeni pil ve katalizör malzemelerini hızla tarayabilir, şebekeyi ve sulamayı verimli yönetebilir. Etki, hangi enerjiyle ve ne amaçla kullanıldığına bağlıdır.",
+        "p": "Yapay zekâ veri merkezleri çok elektrik ve soğutma suyu tüketir. Öte yandan yapay zekâ yeni pil ve katalizör malzemelerini hızla tarayabilir, şebekeyi verimli yönetebilir.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='14' y='30' width='140' height='130' rx='6' fill='var(--c2)' fill-opacity='0.14' stroke='var(--c2)' stroke-width='1.5'/><text x='84' y='54' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>maliyet</text><text x='84' y='84' font-size='11.5' fill='var(--ink)' text-anchor='middle'>elektrik</text><text x='84' y='106' font-size='11.5' fill='var(--ink)' text-anchor='middle'>soğutma suyu</text><text x='84' y='128' font-size='11.5' fill='var(--ink)' text-anchor='middle'>donanım atığı</text><rect x='166' y='30' width='140' height='130' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='236' y='54' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>katkı</text><text x='236' y='84' font-size='11.5' fill='var(--ink)' text-anchor='middle'>yeni malzeme keşfi</text><text x='236' y='106' font-size='11.5' fill='var(--ink)' text-anchor='middle'>akıllı şebeke</text><text x='236' y='128' font-size='11.5' fill='var(--ink)' text-anchor='middle'>verimli sulama</text><text x='160' y='186' font-size='12.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>hangisi ağır basıyor?</text></svg>",
-        "key": "Sorulacak soru: kazanılan tasarruf, harcanan enerjiden büyük mü?"
+        "key": "Etki, hangi enerjiyle ve ne amaçla kullanıldığına bağlıdır. Sorulacak soru: kazanılan tasarruf, harcanan enerjiden büyük mü?",
+        "once": {
+          "soru": "Bir yapay zekâ projesinin çevreye yararlı olup olmadığını nasıl anlarsın?",
+          "secenekler": [
+            {
+              "yazi": "Tasarrufla harcamayı kıyaslayarak",
+              "neden": "Kazandırdığı enerji, harcadığından büyükse yararlıdır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Hızına bakarak",
+              "neden": "Hızlı çalışmak çevreye yararı göstermez."
+            },
+            {
+              "yazi": "Yeniliğine bakarak",
+              "neden": "Yeni olmak çevre dostu olmak demek değildir."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",
