@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Siyah cisim ışıması",
-   "metin": "Sıcaklığı ayarla: eğrinin tepesi <b>500 nm</b>'de olsun.",
+   "metin": "Wien yasası: λ<sub>max</sub>·T ≈ 2,9·10⁶ nm·K. Sıcaklığı ayarla: eğrinin tepesi <b>500 nm</b>'de olsun.",
    "sahne": {
     "tur": "fiz13-siyah"
    },
@@ -33,13 +33,7 @@
     "tamam": "Wien: λ<sub>max</sub> = 2,9·10⁶ / 5800 = <b>500 nm</b>. Bu, Güneş'in yüzey sıcaklığıdır.",
     "ipucu": "λ<sub>max</sub>·T ≈ 2,9·10⁶ nm·K. T = 2,9·10⁶ / 500."
    },
-   "kart": 1,
-   "goster": {
-    "deger": {
-     "T": 2900
-    },
-    "not": "2900 K'de tepe 2,9·10⁶ / 2900 = <b>1000 nm</b>'de, yani kızılötesinde. Sıcaklık artarsa tepe kısa dalga boyuna kayar."
-   }
+   "kart": 1
   },
   {
    "baslik": "Fotoelektrik olay: eşik",
@@ -91,18 +85,11 @@
      }
     ]
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "lam": 450,
-     "s": 1
-    },
-    "not": "450 nm'lik fotonun enerjisi 1240 / 450 ≈ <b>2,76 eV</b>; W = 2,3 eV'tan büyük olduğu için elektron kopuyor."
-   }
+   "kart": 4
   },
   {
    "baslik": "Einstein denklemi ve durdurma gerilimi",
-   "metin": "En hızlı elektronu durduran ters gerilim <b>V<sub>0</sub></b>'dır: e·V<sub>0</sub> = E<sub>k,max</sub>. Dalga boyunu ayarla: V<sub>0</sub> = <b>0,8 V</b> olsun.",
+   "metin": "Kopan elektronun en büyük kinetik enerjisi E<sub>k,max</sub> = h·f − W; foton enerjisi E(eV) ≈ 1240/λ(nm), sodyumda W = 2,3 eV. En hızlı elektronu durduran ters gerilim <b>V<sub>0</sub></b>'dır: e·V<sub>0</sub> = E<sub>k,max</sub>. Dalga boyunu ayarla: V<sub>0</sub> = <b>0,8 V</b> olsun.",
    "sahne": {
     "tur": "fiz13-durdur"
    },
@@ -128,13 +115,7 @@
     "tamam": "400 nm'de foton 1240/400 = <b>3,1 eV</b>; E<sub>k,max</sub> = 3,1 − 2,3 = <b>0,8 eV</b>, V<sub>0</sub> = 0,8 V.",
     "ipucu": "h·f = 2,3 + 0,8 = 3,1 eV olmalı. λ = 1240 / 3,1."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "lam": 350
-    },
-    "not": "350 nm'de foton ≈ 3,54 eV; E<sub>k,max</sub> ≈ 3,54 − 2,3 = 1,24 eV, yani V<sub>0</sub> ≈ <b>1,24 V</b>."
-   }
+   "kart": 5
   },
   {
    "baslik": "Şiddet ve akım",
@@ -162,7 +143,7 @@
      }
     ]
    },
-   "kart": 5
+   "kart": 6
   },
   {
    "baslik": "Compton olayı",
@@ -190,7 +171,7 @@
      }
     ]
    },
-   "kart": 7
+   "kart": 8
   },
   {
    "baslik": "Madde dalgası",
@@ -218,11 +199,11 @@
      }
     ]
    },
-   "kart": 8
+   "kart": 9
   },
   {
    "baslik": "Bohr modeli ve spektrum",
-   "metin": "Hidrojende <b>E<sub>n</sub> = −13,6/n² eV</b>. <b>2,55 eV</b>'lik mavi-yeşil fotonu veren geçişi bul.",
+   "metin": "Elektron alt düzeye inerken iki düzeyin farkı kadar enerjili bir foton yayar. Hidrojende <b>E<sub>n</sub> = −13,6/n² eV</b>. <b>2,55 eV</b>'lik mavi-yeşil fotonu veren geçişi bul.",
    "sahne": {
     "tur": "fiz13-bohr"
    },
@@ -257,14 +238,7 @@
     "tamam": "E<sub>4</sub> − E<sub>2</sub> = −0,85 − (−3,4) = <b>2,55 eV</b>, λ = 1240/2,55 ≈ <b>486 nm</b>. n = 2'ye inen geçişlerin çoğu görünür bölgededir (Balmer serisi); n = 1'e inenler morötesindedir (Lyman serisi).",
     "ipucu": "Düzeyler: −13,6; −3,4; −1,51; −0,85 eV. Farkı 2,55 olan ikiliyi ara."
    },
-   "kart": 12,
-   "goster": {
-    "deger": {
-     "ust": 3,
-     "alt": 2
-    },
-    "not": "3 → 2 geçişi: −1,51 − (−3,4) = <b>1,89 eV</b>, yani yaklaşık 656 nm'lik kırmızı bir foton."
-   }
+   "kart": 12
   }
  ],
  "kapanis": [
@@ -274,5 +248,6 @@
   "Compton: foton momentum taşır, p = h/λ; saçılan fotonun dalga boyu uzar.",
   "Madde dalgası λ = h/(m·v); elektronlar girişim yapar.",
   "Hidrojende En = −13,6/n² eV; yayılan foton düzey farkını taşır."
- ]
+ ],
+ "soruOnce": true
 }

@@ -40,14 +40,7 @@
     "tamam": "6 proton ve 8 nötron: <sup>14</sup><sub>6</sub>C. Z aynı kaldığı için hâlâ karbon; yalnızca A değişti: bu, karbonun bir <b>izotopudur</b>.",
     "ipucu": "Elementi proton sayısı belirler; karbonda Z = 6 kalmalı. A = 14 için nötron sayısını değiştir."
    },
-   "kart": 1,
-   "goster": {
-    "deger": {
-     "p": 6,
-     "n": 7
-    },
-    "not": "6 proton, 7 nötron: A = 13, yani <b>karbon-13</b>. Z = 6 olduğu için yine karbon."
-   }
+   "kart": 1
   },
   {
    "baslik": "Güçlü çekirdek kuvveti",
@@ -88,7 +81,7 @@
      }
     ]
    },
-   "kart": 1
+   "kart": 2
   },
   {
    "baslik": "Kütle açığı",
@@ -116,7 +109,7 @@
      }
     ]
    },
-   "kart": 2
+   "kart": 3
   },
   {
    "baslik": "En sıkı bağlı çekirdek",
@@ -148,17 +141,11 @@
     "tamam": "Tepe A ≈ 56-62 civarında, nükleon başına ≈ 8,8 MeV: <b>demir-56</b> ve nikel-62 en kararlı çekirdeklerdendir.",
     "ipucu": "Eğri hafiflerde hızla yükseliyor, ağırlarda yavaşça düşüyor. Ortadaki en yüksek noktayı ara."
    },
-   "kart": 3,
-   "goster": {
-    "deger": {
-     "A": 238
-    },
-    "not": "Uranyum-238'de nükleon başına ≈ <b>7,6 MeV</b>: ağır çekirdekler tepedekiler kadar sıkı bağlı değil."
-   }
+   "kart": 4
   },
   {
    "baslik": "Uranyumdan kurşuna",
-   "metin": "<sup>238</sup>U art arda bozunarak kararlı <sup>206</sup>Pb'ye iniyor. Kaç α ve kaç β⁻ gerekir?",
+   "metin": "α bozunması A'yı 4, Z'yi 2 azaltır; β⁻ bozunması Z'yi 1 artırır. <sup>238</sup>U art arda bozunarak kararlı <sup>206</sup>Pb'ye iniyor. Kaç α ve kaç β⁻ gerekir?",
    "sahne": {
     "tur": "fiz14-zincir"
    },
@@ -191,14 +178,7 @@
     "tamam": "A farkı 238 − 206 = 32; A'yı yalnızca α değiştirir, yani 32 / 4 = <b>8 α</b>. 8 α, Z'yi 16 azaltıp 76'ya indirir; 82'ye çıkmak için <b>6 β⁻</b> gerekir.",
     "ipucu": "Önce α sayısını A farkından bul: 238 − 206 = 32. Sonra Z'yi β⁻ ile düzelt."
    },
-   "kart": 7,
-   "goster": {
-    "deger": {
-     "a": 1,
-     "b": 0
-    },
-    "not": "Bir α bozunması: A = 238 − 4 = 234, Z = 92 − 2 = 90, yani <b>toryum-234</b>."
-   }
+   "kart": 7
   },
   {
    "baslik": "Işımaları ayır",
@@ -226,7 +206,7 @@
      }
     ]
    },
-   "kart": 7
+   "kart": 8
   },
   {
    "baslik": "Yarı ömür",
@@ -256,13 +236,7 @@
     "tamam": "120 → 60 → 30 → 15: üç yarı ömür, yani <b>12 gün</b>.",
     "ipucu": "120'yi kaç kez yarıya bölersen 15 olur? Her bölme 4 gün sürer."
    },
-   "kart": 9,
-   "goster": {
-    "deger": {
-     "t": 8
-    },
-    "not": "8 gün = 2 yarı ömür: 120 → 60 → <b>30 g</b>."
-   }
+   "kart": 9
   },
   {
    "baslik": "Zincirleme tepkime",
@@ -290,13 +264,7 @@
     "tamam": "Her bölünme tam <b>bir</b> yeni bölünme başlatırsa tepkime sabit hızla sürer; nükleer santraller böyle çalışır. 2 ya da 3 olursa sayı her kuşakta katlanır ve tepkime denetimden çıkar; 0 olursa söner.",
     "ipucu": "Kuşaklardaki bölünme sayısı her adımda aynı kalmalı."
    },
-   "kart": 11,
-   "goster": {
-    "deger": {
-     "k": 2
-    },
-    "not": "Her bölünme 2 yeni bölünme başlatırsa sayı her kuşakta ikiye katlanır: 1, 2, 4, 8, 16…"
-   }
+   "kart": 11
   }
  ],
  "kapanis": [
@@ -306,5 +274,6 @@
   "α: A − 4, Z − 2; β⁻: Z + 1; β⁺: Z − 1; γ: A ve Z değişmez.",
   "Elektrik alanda β⁻ en çok sapar, γ sapmaz; giricilik γ > β > α.",
   "N = N₀ / 2ⁿ; fisyon böler, füzyon birleştirir, ikisi de enerji verir."
- ]
+ ],
+ "soruOnce": true
 }

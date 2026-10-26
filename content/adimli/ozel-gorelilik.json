@@ -34,13 +34,7 @@
     "tamam": "30 + 20 = <b>50 m/s</b>. Klasik fizikte hızlar böyle toplanır ve günlük hızlarda bu doğrudur. Peki trenin farından çıkan ışık yere göre <b>c + v</b> ile mi gider?",
     "ipucu": "Yere göre topun hızı = trenin hızı + 20. Bu toplam 50 olmalı."
    },
-   "kart": 1,
-   "goster": {
-    "deger": {
-     "v": 20
-    },
-    "not": "Tren 20 m/s ile giderken top yere göre 20 + 20 = <b>40 m/s</b> ile gidiyor."
-   }
+   "kart": 1
   },
   {
    "baslik": "Işık hızı herkes için c",
@@ -100,7 +94,7 @@
   },
   {
    "baslik": "Işık saati ve zaman genişlemesi",
-   "metin": "Gemideki ışık saatinde ışık iki ayna arasında <b>dik</b> gider. Dünya'dan bakınca ayna kayar, ışık <b>eğik ve daha uzun</b> yol alır; ama hızı yine c. Gemide 6 yıl geçiyor. Hızı ayarla: Dünya'da <b>10 yıl</b> geçsin.",
+   "metin": "Hareketli gözlemcinin ölçtüğü süre Δt = γ·Δt₀, γ = 1/√(1 − v²/c²). Gemideki ışık saatinde ışık iki ayna arasında <b>dik</b> gider; Dünya'dan bakınca <b>eğik ve daha uzun</b> yol alır, hızı yine c. Gemide 6 yıl geçiyor. Hızı ayarla: Dünya'da <b>10 yıl</b> geçsin.",
    "sahne": {
     "tur": "fiz13-saat"
    },
@@ -126,17 +120,11 @@
     "tamam": "0,8c'de γ = 1/√(1 − 0,64) = <b>5/3</b>. Δt = γ·Δt<sub>0</sub> = 5/3 · 6 = <b>10 yıl</b>. Olayların aynı yerde olduğu gemideki süre <b>öz zamandır</b>; en kısa süre odur, başka sistemlerden hep daha uzun ölçülür.",
     "ipucu": "10 / 6 = 5/3 olmalı. γ = 1/√(1 − v²/c²): v/c'yi büyüttükçe γ artar."
    },
-   "kart": 4,
-   "goster": {
-    "deger": {
-     "b": 0.5
-    },
-    "not": "0,5c'de γ = 1/√(1 − 0,25) ≈ 1,15: gemideki 6 yıl, Dünya'dan ≈ <b>6,9 yıl</b> ölçülür."
-   }
+   "kart": 4
   },
   {
    "baslik": "γ çarpanı",
-   "metin": "Hızı ayarla: hareketli saat Dünya'dan bakınca <b>yarı hızda</b> işlesin, yani γ = 2 olsun.",
+   "metin": "γ = 1/√(1 − v²/c²). Hızı ayarla: hareketli saat Dünya'dan bakınca <b>yarı hızda</b> işlesin, yani γ = 2 olsun.",
    "sahne": {
     "tur": "fiz13-gama"
    },
@@ -165,13 +153,7 @@
     "tamam": "γ = 2 için 1 − v²/c² = 1/4, yani v = (√3/2)c ≈ <b>0,866c</b>.",
     "ipucu": "γ = 2 için √(1 − v²/c²) = 1/2 olmalı. Hızı 0,8c'nin biraz üstüne çıkar."
    },
-   "kart": 5,
-   "goster": {
-    "deger": {
-     "b": 0.7
-    },
-    "not": "0,7c'de γ = 1/√(1 − 0,49) ≈ <b>1,4</b>: hareketli saat Dünya'dan bakınca yaklaşık 0,71 hızla işliyor."
-   }
+   "kart": 5
   },
   {
    "baslik": "Müonlar yere nasıl ulaşıyor?",
@@ -229,13 +211,7 @@
     "tamam": "0,8c'de γ = 1/√(1 − 0,64) = <b>5/3</b>, L = 100 / (5/3) = <b>60 m</b>. Geminin yüksekliği 20 m kalır; gemideki astronot ise kendi gemisini hep 100 m ölçer.",
     "ipucu": "100 / 60 = 5/3 olmalı, yani γ = 5/3. Hızı azar azar artır."
    },
-   "kart": 6,
-   "goster": {
-    "deger": {
-     "b": 0.6
-    },
-    "not": "0,6c'de γ = 1,25: 100 m'lik gemi Dünya'dan 100 / 1,25 = <b>80 m</b> ölçülür."
-   }
+   "kart": 6
   },
   {
    "baslik": "c sınırı",
@@ -276,7 +252,7 @@
      }
     ]
    },
-   "kart": 6
+   "kart": 7
   }
  ],
  "kapanis": [
@@ -286,5 +262,6 @@
   "Boy yalnız hareket yönünde kısalır: L = L₀/γ.",
   "Kütleli cisim c'ye ulaşamaz; durgun enerji E₀ = m·c².",
   "v ≪ c iken γ ≈ 1 ve görelilik Newton fiziğine dönüşür."
- ]
+ ],
+ "soruOnce": true
 }
