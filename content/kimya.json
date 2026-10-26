@@ -7949,7 +7949,7 @@
     "cards": [
       {
         "h": "Fonksiyonel grup nedir?",
-        "p": "Organik bir bileşiğin tepkimelerini ve özelliklerinin çoğunu belirleyen atom ya da atom grubuna <b>fonksiyonel grup</b> denir. Karbon iskeleti çoğu zaman taşıyıcıdır; asıl karakteri grup verir. Tek bir H'nin yerine bir grup koymak, maddenin hâlini ve çözünürlüğünü tümüyle değiştirebilir. Formüllerde <b>R</b>, hidrokarbon kısmıdır.",
+        "p": "Bileşiğin tepkimelerini ve özelliklerini belirleyen atom grubuna <b>fonksiyonel grup</b> denir. Karbon iskeleti taşıyıcıdır, karakteri grup verir. Formüllerde <b>R</b> hidrokarbon kısmıdır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle'>Aynı karbon iskeleti, farklı grup</text><rect x='12' y='32' width='140' height='132' rx='6' fill='var(--c4)' fill-opacity='0.1' stroke='var(--c4)'/><rect x='168' y='32' width='140' height='132' rx='6' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)'/><text x='82' y='54' font-size='13' fill='var(--muted)' text-anchor='middle'>Etan</text><text x='238' y='54' font-size='13' fill='var(--muted)' text-anchor='middle'>Etanol</text><text x='82' y='82' font-size='15' fill='var(--ink)' text-anchor='middle'>CH₃−CH₃</text><text x='238' y='82' font-size='15' fill='var(--ink)' text-anchor='middle'>CH₃−CH₂−<tspan fill='var(--c2)'>OH</tspan></text><text x='82' y='110' font-size='11' fill='var(--ink)' text-anchor='middle'>25 °C'de gaz</text><text x='238' y='110' font-size='11' fill='var(--ink)' text-anchor='middle'>25 °C'de sıvı</text><text x='82' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>kaynama: −89 °C</text><text x='238' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>kaynama: 78 °C</text><text x='82' y='146' font-size='11' fill='var(--ink)' text-anchor='middle'>suda çok az çözünür</text><text x='238' y='146' font-size='11' fill='var(--ink)' text-anchor='middle'>suyla karışır</text><text x='160' y='186' font-size='11' fill='var(--ink)' text-anchor='middle'>R−OH: R hidrokarbon kısmı, <tspan fill='var(--c2)'>−OH</tspan> fonksiyonel grup</text></svg>",
         "etk": {
           "tur": "eslestir",
@@ -7985,75 +7985,183 @@
       },
       {
         "h": "Alkoller: ad ve sınıf",
-        "p": "−OH grubu doymuş (sp³) bir karbona bağlı bileşikler <b>alkoldür</b>. Adı, alkanın adına <b>-ol</b> eklenerek verilir: etanol, <b>2-propanol</b>. −OH'nin bağlı olduğu C, 1, 2 ya da 3 karbona bağlıysa alkol <b>birincil (1°)</b>, <b>ikincil (2°)</b> ya da <b>üçüncül (3°)</b> olur.",
+        "p": "−OH doymuş karbona bağlıysa bileşik <b>alkoldür</b>: etanol, 2-propanol. −OH'li karbon 1, 2 ya da 3 karbona bağlıysa alkol <b>1°, 2°, 3°</b> olur.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--ink)' text-anchor='middle'>Kırmızı C: −OH'nin bağlı olduğu karbon</text><text x='62' y='56' font-size='12' fill='var(--c1)' text-anchor='middle'>OH</text><line x1='62' y1='62' x2='62' y2='72' stroke='var(--ink)' stroke-width='1.2'/><text x='69' y='86' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>CH₂</text><text x='22' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃</text><line x1='36' y1='82' x2='49' y2='82' stroke='var(--ink)' stroke-width='1.2'/><text x='168' y='56' font-size='12' fill='var(--c1)' text-anchor='middle'>OH</text><line x1='168' y1='62' x2='168' y2='72' stroke='var(--ink)' stroke-width='1.2'/><text x='172' y='86' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>CH</text><text x='128' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃</text><line x1='142' y1='82' x2='155' y2='82' stroke='var(--ink)' stroke-width='1.2'/><line x1='168' y1='92' x2='168' y2='104' stroke='var(--ink)' stroke-width='1.2'/><text x='168' y='118' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃</text><text x='262' y='56' font-size='12' fill='var(--c1)' text-anchor='middle'>OH</text><line x1='262' y1='62' x2='262' y2='72' stroke='var(--ink)' stroke-width='1.2'/><text x='262' y='86' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>C</text><text x='222' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃</text><line x1='236' y1='82' x2='249' y2='82' stroke='var(--ink)' stroke-width='1.2'/><text x='302' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃</text><line x1='275' y1='82' x2='288' y2='82' stroke='var(--ink)' stroke-width='1.2'/><line x1='262' y1='92' x2='262' y2='104' stroke='var(--ink)' stroke-width='1.2'/><text x='262' y='118' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃</text><line x1='107' y1='132' x2='107' y2='192' stroke='var(--line)' stroke-width='1'/><line x1='213' y1='132' x2='213' y2='192' stroke='var(--line)' stroke-width='1'/><text x='55' y='146' font-size='11' fill='var(--ink)' text-anchor='middle'>etanol</text><text x='160' y='146' font-size='11' fill='var(--ink)' text-anchor='middle'>2-propanol</text><text x='264' y='146' font-size='11' fill='var(--ink)' text-anchor='middle'>2-metil-2-propanol</text><text x='55' y='166' font-size='12' fill='var(--c3)' text-anchor='middle'>1° (birincil)</text><text x='160' y='166' font-size='12' fill='var(--c4)' text-anchor='middle'>2° (ikincil)</text><text x='264' y='166' font-size='12' fill='var(--c5)' text-anchor='middle'>3° (üçüncül)</text><text x='55' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>1 C'ye bağlı</text><text x='160' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>2 C'ye bağlı</text><text x='264' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>3 C'ye bağlı</text></svg>",
-        "key": "Fenolde −OH benzen halkasına, asetik asitte C=O karbonuna bağlıdır: ikisi de alkol değil."
+        "key": "Adı alkan adına -ol eklenerek kurulur. Fenolde −OH benzen halkasına, asetik asitte C=O karbonuna bağlıdır: ikisi de alkol değil.",
+        "once": {
+          "soru": "Kolonyadaki etanolün (C₂H₅OH) adı neden -ol ile biter?",
+          "secenekler": [
+            {
+              "yazi": "−OH grubu taşır",
+              "neden": "Alkollerin adı alkan adına -ol eklenerek kurulur.",
+              "dogru": true
+            },
+            {
+              "yazi": "Oksijen gazı içerir",
+              "neden": "Molekülde O₂ gazı yoktur; O, −OH grubunun içindedir."
+            },
+            {
+              "yazi": "Sıvı olduğu için",
+              "neden": "Ad, maddenin hâline değil grubuna göre verilir."
+            }
+          ]
+        }
       },
       {
         "h": "Hidrojen bağı ve çözünürlük",
-        "p": "Alkol molekülleri −OH grupları arasında <b>hidrojen bağı</b> kurar; kaynama noktaları benzer kütleli alkanlardan çok yüksektir. Suyla da hidrojen bağı yaparlar; denediğin gibi zincir uzadıkça apolar kısım büyür, çözünürlük azalır. Sulu çözeltileri nötrdür.",
+        "p": "Alkoller −OH grupları arasında <b>hidrojen bağı</b> kurar; benzer alkanlardan çok yüksekte kaynar. Suyla da bağ kurar, ama zincir uzadıkça çözünürlük azalır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='80' y='20' font-size='12' fill='var(--ink)' text-anchor='middle'>Etanol ile su arasında</text><text x='98' y='50' font-size='11' fill='var(--c1)' text-anchor='middle'>hidrojen bağı</text><text x='14' y='72' font-size='13' fill='var(--ink)' text-anchor='start'>C₂H₅−O−H</text><line x1='86' y1='68' x2='110' y2='68' stroke='var(--c1)' stroke-width='1.5' stroke-dasharray='3 3'/><text x='114' y='72' font-size='13' fill='var(--ink)' text-anchor='start'>O−H</text><line x1='119' y1='76' x2='119' y2='86' stroke='var(--ink)' stroke-width='1.2'/><text x='119' y='100' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><text x='10' y='130' font-size='11' fill='var(--muted)' text-anchor='start'>Kaynama noktası:</text><text x='10' y='148' font-size='11' fill='var(--ink)' text-anchor='start'>etanol (46 g/mol): 78 °C</text><text x='10' y='166' font-size='11' fill='var(--ink)' text-anchor='start'>propan (44 g/mol): −42 °C</text><line x1='158' y1='30' x2='158' y2='170' stroke='var(--line)' stroke-width='1'/><text x='240' y='20' font-size='12' fill='var(--ink)' text-anchor='middle'>Suda çözünürlük</text><rect x='166' y='33' width='146' height='21' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='172' y='48' font-size='11' fill='var(--ink)' text-anchor='start'>metanol</text><text x='306' y='48' font-size='11' fill='var(--c1)' text-anchor='end'>her oranda</text><rect x='166' y='57' width='146' height='21' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='172' y='72' font-size='11' fill='var(--ink)' text-anchor='start'>etanol</text><text x='306' y='72' font-size='11' fill='var(--c1)' text-anchor='end'>her oranda</text><rect x='166' y='81' width='146' height='21' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='172' y='96' font-size='11' fill='var(--ink)' text-anchor='start'>1-propanol</text><text x='306' y='96' font-size='11' fill='var(--c1)' text-anchor='end'>her oranda</text><rect x='166' y='105' width='146' height='21' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='172' y='120' font-size='11' fill='var(--ink)' text-anchor='start'>1-bütanol</text><text x='306' y='120' font-size='11' fill='var(--c2)' text-anchor='end'>az</text><rect x='166' y='129' width='146' height='21' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='172' y='144' font-size='11' fill='var(--ink)' text-anchor='start'>1-hekzanol</text><text x='306' y='144' font-size='11' fill='var(--c2)' text-anchor='end'>çok az</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>C sayısı arttıkça çözünürlük azalır</text></svg>",
-        "key": "Alkol Na ile H₂ verir (2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂); eter vermez."
+        "key": "Sulu çözeltileri nötrdür. Alkol Na ile H₂ verir (2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂); eter vermez."
       },
       {
         "h": "Alkollerin yükseltgenmesi",
-        "p": "KMnO₄ ya da K₂Cr₂O₇ gibi yükseltgenler, −OH'nin H'sini ve o karbondaki bir H'yi koparır. Birincil alkol önce aldehite, sonra karboksilik aside dönüşür. İkincil alkol ketona dönüşür. Üçüncül alkol, denediğin gibi, yükseltgenmez.",
+        "p": "Yükseltgenler −OH'nin H'sini ve o karbondaki bir H'yi koparır. 1° alkol aldehite, sonra karboksilik aside; 2° alkol ketona dönüşür; 3° alkol yükseltgenmez.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='fonk-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='18' font-size='12' fill='var(--muted)' text-anchor='middle'>[O]: KMnO₄ ya da K₂Cr₂O₇ (asitli ortam)</text><rect x='6' y='34' width='308' height='46' rx='6' fill='var(--c3)' fill-opacity='0.08'/><rect x='6' y='88' width='308' height='46' rx='6' fill='var(--c4)' fill-opacity='0.08'/><rect x='6' y='142' width='308' height='46' rx='6' fill='var(--c5)' fill-opacity='0.08'/><text x='50' y='56' font-size='12' fill='var(--ink)' text-anchor='middle'>R−CH₂OH</text><line x1='88' y1='52' x2='114' y2='52' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#fonk-1)'/><text x='101' y='44' font-size='10' fill='var(--muted)' text-anchor='middle'>[O]</text><text x='152' y='56' font-size='12' fill='var(--ink)' text-anchor='middle'>R−CHO</text><line x1='186' y1='52' x2='212' y2='52' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#fonk-1)'/><text x='199' y='44' font-size='10' fill='var(--muted)' text-anchor='middle'>[O]</text><text x='260' y='56' font-size='12' fill='var(--ink)' text-anchor='middle'>R−COOH</text><text x='50' y='73' font-size='11' fill='var(--c3)' text-anchor='middle'>1° alkol</text><text x='152' y='73' font-size='11' fill='var(--muted)' text-anchor='middle'>aldehit</text><text x='260' y='73' font-size='11' fill='var(--muted)' text-anchor='middle'>karboksilik asit</text><text x='50' y='110' font-size='12' fill='var(--ink)' text-anchor='middle'>R−CHOH−R′</text><line x1='92' y1='106' x2='118' y2='106' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#fonk-1)'/><text x='105' y='98' font-size='10' fill='var(--muted)' text-anchor='middle'>[O]</text><text x='160' y='110' font-size='12' fill='var(--ink)' text-anchor='middle'>R−CO−R′</text><text x='262' y='110' font-size='11' fill='var(--muted)' text-anchor='middle'>burada durur</text><text x='50' y='127' font-size='11' fill='var(--c4)' text-anchor='middle'>2° alkol</text><text x='160' y='127' font-size='11' fill='var(--muted)' text-anchor='middle'>keton</text><text x='50' y='164' font-size='12' fill='var(--ink)' text-anchor='middle'>R₃C−OH</text><text x='96' y='164' font-size='11' fill='var(--c2)' text-anchor='start'>yükseltgenmez (o C'de H yok)</text><text x='50' y='181' font-size='11' fill='var(--c5)' text-anchor='middle'>3° alkol</text></svg>",
-        "key": "Etanol → etanal → asetik asit; 2-propanol → aseton (propanon)."
+        "key": "KMnO₄ ve K₂Cr₂O₇ yükseltgendir. Etanol → etanal → asetik asit; 2-propanol → aseton."
       },
       {
         "h": "Etanol, metanol ve fermantasyon",
-        "p": "<b>Etanol</b>, şekerin maya enzimleriyle oksijensiz ortamda parçalanmasıyla, yani <b>fermantasyonla</b> elde edilir. Kolonya, dezenfektan ve yakıt katkısı olarak kullanılır. <b>Metanol</b> ise çok zehirlidir: vücutta formaldehit ve formik aside dönüşür; küçük bir miktarı bile körlüğe ya da ölüme yol açabilir.",
+        "p": "<b>Etanol</b>, şekerin mayayla oksijensiz parçalanmasıyla (<b>fermantasyon</b>) elde edilir. <b>Metanol</b> çok zehirlidir: az miktarı bile körlük ya da ölüm yapabilir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--muted)' text-anchor='middle'>Fermantasyon (maya, oksijensiz ortam)</text><text x='160' y='48' font-size='14' fill='var(--ink)' text-anchor='middle'>C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂</text><text x='160' y='66' font-size='11' fill='var(--muted)' text-anchor='middle'>glikoz → etanol + karbon dioksit</text><rect x='12' y='80' width='140' height='108' rx='6' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)'/><rect x='168' y='80' width='140' height='108' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)'/><text x='82' y='102' font-size='12' fill='var(--c3)' text-anchor='middle'>Etanol (C₂H₅OH)</text><text x='238' y='102' font-size='12' fill='var(--c2)' text-anchor='middle'>Metanol (CH₃OH)</text><text x='82' y='126' font-size='11' fill='var(--ink)' text-anchor='middle'>içkilerdeki alkol</text><text x='82' y='144' font-size='11' fill='var(--ink)' text-anchor='middle'>kolonya, dezenfektan</text><text x='82' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>yakıt katkısı</text><text x='238' y='126' font-size='11' fill='var(--c2)' text-anchor='middle'>çok zehirli</text><text x='238' y='144' font-size='11' fill='var(--ink)' text-anchor='middle'>vücutta formaldehit ve</text><text x='238' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>formik aside dönüşür</text><text x='238' y='180' font-size='11' fill='var(--c2)' text-anchor='middle'>körlük, ölüm</text></svg>",
-        "key": "Metanol, etanolden koku ya da görünüşle ayırt edilemez; sahte içkideki zehir odur."
+        "key": "Metanol vücutta formaldehit ve formik aside döner. Etanolden koku ya da görünüşle ayırt edilemez; sahte içkideki zehir odur.",
+        "once": {
+          "soru": "Hamura maya katılınca hamur kabarır. Maya şekeri parçalarken ne oluşur?",
+          "secenekler": [
+            {
+              "yazi": "Etanol ve CO₂",
+              "neden": "Fermantasyonda şeker etanol ve CO₂'ye döner; CO₂ hamuru kabartır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Metanol ve su",
+              "neden": "Maya metanol üretmez; ürün etanoldür."
+            },
+            {
+              "yazi": "Yalnız su",
+              "neden": "Hamuru kabartan bir gazdır: CO₂."
+            }
+          ]
+        }
       },
       {
         "h": "Çok değerli alkoller",
-        "p": "Birden çok −OH taşıyan alkollere <b>çok değerli alkol</b> denir. <b>Etilen glikol</b> (2 OH) suyun donma noktasını düşürür; radyatörlerde <b>antifrizdir</b>, tatlı ama zehirlidir. <b>Gliserol</b> (gliserin, 3 OH) nem tutar, kozmetikte kullanılır ve yağların yapısında bulunur. −OH sayısı arttıkça kaynama noktası yükselir.",
+        "p": "Birden çok −OH taşıyanlar <b>çok değerli alkoldür</b>. <b>Etilen glikol</b> (2 OH) antifrizdir, zehirlidir. <b>Gliserol</b> (3 OH) nem tutar ve yağların yapısındadır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='80' y='22' font-size='12' fill='var(--muted)' text-anchor='middle'>Çok değerli alkoller</text><text x='80' y='50' font-size='12' fill='var(--ink)' text-anchor='middle'><tspan fill='var(--c1)'>HO</tspan>−CH₂−CH₂−<tspan fill='var(--c1)'>OH</tspan></text><text x='80' y='68' font-size='11' fill='var(--ink)' text-anchor='middle'>etilen glikol: antifriz</text><text x='36' y='104' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₂</text><line x1='36' y1='110' x2='36' y2='122' stroke='var(--ink)' stroke-width='1.2'/><text x='36' y='136' font-size='12' fill='var(--c1)' text-anchor='middle'>OH</text><text x='80' y='104' font-size='12' fill='var(--ink)' text-anchor='middle'>CH</text><line x1='80' y1='110' x2='80' y2='122' stroke='var(--ink)' stroke-width='1.2'/><text x='80' y='136' font-size='12' fill='var(--c1)' text-anchor='middle'>OH</text><text x='124' y='104' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₂</text><line x1='124' y1='110' x2='124' y2='122' stroke='var(--ink)' stroke-width='1.2'/><text x='124' y='136' font-size='12' fill='var(--c1)' text-anchor='middle'>OH</text><line x1='50' y1='100' x2='70' y2='100' stroke='var(--ink)' stroke-width='1.2'/><line x1='91' y1='100' x2='110' y2='100' stroke='var(--ink)' stroke-width='1.2'/><text x='80' y='160' font-size='11' fill='var(--ink)' text-anchor='middle'>gliserol: nem tutucu</text><line x1='160' y1='30' x2='160' y2='186' stroke='var(--line)' stroke-width='1'/><text x='240' y='22' font-size='12' fill='var(--muted)' text-anchor='middle'>Kaynama noktası</text><line x1='170' y1='170' x2='312' y2='170' stroke='var(--muted)' stroke-width='1'/><rect x='175' y='139' width='30' height='31' rx='2' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><text x='190' y='133' font-size='11' fill='var(--ink)' text-anchor='middle'>78 °C</text><text x='190' y='186' font-size='11' fill='var(--ink)' text-anchor='middle'>etanol</text><rect x='225' y='91' width='30' height='79' rx='2' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><text x='240' y='85' font-size='11' fill='var(--ink)' text-anchor='middle'>197 °C</text><text x='240' y='186' font-size='11' fill='var(--ink)' text-anchor='middle'>glikol</text><rect x='275' y='54' width='30' height='116' rx='2' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><text x='290' y='48' font-size='11' fill='var(--ink)' text-anchor='middle'>290 °C</text><text x='290' y='186' font-size='11' fill='var(--ink)' text-anchor='middle'>gliserol</text><text x='80' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>OH arttıkça H bağı artar</text></svg>",
-        "key": "Gliserolün adı yağlarda karşına çıkacak: yağ = gliserol + 3 yağ asidi."
+        "key": "−OH sayısı arttıkça kaynama noktası yükselir. Yağ = gliserol + 3 yağ asidi.",
+        "once": {
+          "soru": "Kışın radyatördeki su donmasın diye suya ne katılır?",
+          "secenekler": [
+            {
+              "yazi": "Etilen glikol",
+              "neden": "Suyun donma noktasını düşürür; antifrizin ana maddesidir.",
+              "dogru": true
+            },
+            {
+              "yazi": "Tuz",
+              "neden": "Tuz da donmayı geciktirir ama metali paslandırır."
+            },
+            {
+              "yazi": "Şeker",
+              "neden": "Şeker radyatörde kullanılmaz; çöker ve tıkar."
+            }
+          ]
+        }
       },
       {
         "h": "Eterler ve grup izomerliği",
-        "p": "<b>Eterlerde</b> bir O atomu iki karbon grubunu bağlar: R−O−R′. <b>Dietil eter</b> uçucu ve çok yanıcı bir çözücüdür; eskiden anestezik olarak kullanılırdı. Eterde O−H bağı yoktur; molekülleri kendi aralarında hidrojen bağı kuramaz. Etanol ile dimetil eter aynı formüle (C₂H₆O) sahip <b>fonksiyonel grup izomerleridir</b>.",
+        "p": "<b>Eterde</b> bir O iki karbon grubunu bağlar: R−O−R′. O−H bağı yoktur, kendi arasında hidrojen bağı kurmaz. Etanol ile dimetil eter <b>fonksiyonel grup izomeridir</b>.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--ink)' text-anchor='middle'>Eter: R−<tspan fill='var(--c2)'>O</tspan>−R′ (O, iki C grubuna bağlı)</text><text x='160' y='40' font-size='11' fill='var(--muted)' text-anchor='middle'>dietil eter: C₂H₅−O−C₂H₅, kaynama 35 °C</text><rect x='8' y='56' width='304' height='22' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='14' y='71' font-size='11' fill='var(--muted)' text-anchor='start'>C₂H₆O</text><text x='168' y='71' font-size='12' fill='var(--c1)' text-anchor='middle'>etanol</text><text x='266' y='71' font-size='12' fill='var(--c5)' text-anchor='middle'>dimetil eter</text><text x='14' y='98' font-size='11' fill='var(--muted)' text-anchor='start'>yapı</text><text x='168' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>CH₃−CH₂−OH</text><text x='266' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>CH₃−O−CH₃</text><text x='14' y='119' font-size='11' fill='var(--muted)' text-anchor='start'>grup</text><text x='168' y='119' font-size='11' fill='var(--ink)' text-anchor='middle'>alkol (−OH)</text><text x='266' y='119' font-size='11' fill='var(--ink)' text-anchor='middle'>eter (−O−)</text><text x='14' y='140' font-size='11' fill='var(--muted)' text-anchor='start'>kaynama</text><text x='168' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>78 °C</text><text x='266' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>−24 °C</text><text x='14' y='161' font-size='11' fill='var(--muted)' text-anchor='start'>H bağı (kendi arası)</text><text x='168' y='161' font-size='11' fill='var(--ink)' text-anchor='middle'>var</text><text x='266' y='161' font-size='11' fill='var(--ink)' text-anchor='middle'>yok</text><text x='14' y='182' font-size='11' fill='var(--muted)' text-anchor='start'>Na ile</text><text x='168' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>H₂ verir</text><text x='266' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>tepkime yok</text></svg>",
-        "key": "Aldehit–keton ve karboksilik asit–ester çiftleri de fonksiyonel grup izomeri olabilir."
+        "key": "Dietil eter uçucu, çok yanıcı bir çözücüdür. Aldehit–keton ve asit–ester çiftleri de grup izomeri olabilir."
       },
       {
         "h": "Aldehit ve keton: karbonil grubu",
-        "p": "C=O grubuna <b>karbonil</b> denir. Karbonil zincirin ucundaysa (−CHO) bileşik <b>aldehit</b>, iki karbonun arasındaysa <b>ketondur</b>. Aldehit adı alkan adına -al (etanal), keton adı -on (propanon) eklenerek kurulur. Metanalin %37'lik sulu çözeltisi formalindir; propanon (aseton) oje çıkarıcıdır.",
+        "p": "C=O grubuna <b>karbonil</b> denir. Zincir ucundaysa (−CHO) <b>aldehit</b>, iki karbon arasındaysa <b>keton</b> olur. Adları -al (etanal) ve -on (propanon) ile biter.",
         "svg": "<svg viewBox='0 0 320 200'><text x='80' y='22' font-size='12' fill='var(--c1)' text-anchor='middle'>Aldehit (−CHO)</text><text x='240' y='22' font-size='12' fill='var(--c5)' text-anchor='middle'>Keton (C=O içeride)</text><text x='80' y='52' font-size='15' fill='var(--c2)' text-anchor='middle'>O</text><line x1='77' y1='58' x2='77' y2='75' stroke='var(--c2)' stroke-width='1.2'/><line x1='83' y1='58' x2='83' y2='75' stroke='var(--c2)' stroke-width='1.2'/><text x='80' y='90' font-size='15' fill='var(--c2)' text-anchor='middle'>C</text><text x='46' y='90' font-size='15' fill='var(--ink)' text-anchor='middle'>R</text><line x1='54' y1='85' x2='72' y2='85' stroke='var(--ink)' stroke-width='1.2'/><text x='114' y='90' font-size='15' fill='var(--ink)' text-anchor='middle'>H</text><line x1='88' y1='85' x2='106' y2='85' stroke='var(--ink)' stroke-width='1.2'/><text x='240' y='52' font-size='15' fill='var(--c2)' text-anchor='middle'>O</text><line x1='237' y1='58' x2='237' y2='75' stroke='var(--c2)' stroke-width='1.2'/><line x1='243' y1='58' x2='243' y2='75' stroke='var(--c2)' stroke-width='1.2'/><text x='240' y='90' font-size='15' fill='var(--c2)' text-anchor='middle'>C</text><text x='206' y='90' font-size='15' fill='var(--ink)' text-anchor='middle'>R</text><line x1='214' y1='85' x2='232' y2='85' stroke='var(--ink)' stroke-width='1.2'/><text x='274' y='90' font-size='15' fill='var(--ink)' text-anchor='middle'>R′</text><line x1='248' y1='85' x2='266' y2='85' stroke='var(--ink)' stroke-width='1.2'/><line x1='160' y1='14' x2='160' y2='190' stroke='var(--line)' stroke-width='1'/><text x='80' y='122' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>HCHO</text><text x='240' y='122' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₃COCH₃</text><text x='80' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>formaldehit (metanal)</text><text x='240' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>aseton (propanon)</text><text x='80' y='162' font-size='11' fill='var(--muted)' text-anchor='middle'>formalin: ≈ %37'lik</text><text x='240' y='162' font-size='11' fill='var(--muted)' text-anchor='middle'>oje çıkarıcı, çözücü</text><text x='80' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>sulu çözelti</text><text x='240' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>en az 3 C gerekir</text></svg>",
-        "key": "Aldehitte karbonil C'si en az bir H taşır; ketonda iki yanında da C vardır."
+        "key": "Formalin metanalin %37'lik çözeltisidir; aseton (propanon) oje çıkarıcıdır.",
+        "once": {
+          "soru": "Oje çıkarıcıdaki aseton bir ketondur. Ketonda C=O nerededir?",
+          "secenekler": [
+            {
+              "yazi": "İki karbonun arasında",
+              "neden": "Ketonda karbonil karbonunun iki yanında da karbon vardır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Zincirin ucunda",
+              "neden": "Uçtaki C=O (−CHO) aldehittir."
+            },
+            {
+              "yazi": "Halkanın içinde",
+              "neden": "Aseton halkasız, üç karbonlu bir moleküldür."
+            }
+          ]
+        }
       },
       {
         "h": "Tollens ve Fehling testleri",
-        "p": "Az önce gördüğün gibi aldehitler kolay yükseltgenir; ketonlar bu ılımlı ayıraçlarla yükseltgenmez. <b>Tollens</b> ayıracı aldehitle ısıtılınca gümüş aynası oluşur. Mavi <b>Fehling</b> çözeltisi alifatik aldehitle kiremit kırmızısı Cu₂O çöktürür. Benzaldehit ise Tollens'i verir, Fehling'i vermez.",
+        "p": "Aldehit kolay yükseltgenir, keton yükseltgenmez. <b>Tollens</b> aldehitle gümüş aynası, mavi <b>Fehling</b> alifatik aldehitle kiremit kırmızısı çökelek verir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='77' y='18' font-size='13' fill='var(--ink)' text-anchor='middle'>Tollens</text><text x='77' y='34' font-size='10' fill='var(--muted)' text-anchor='middle'>Ag⁺ + NH₃</text><text x='242' y='18' font-size='13' fill='var(--ink)' text-anchor='middle'>Fehling</text><text x='242' y='34' font-size='10' fill='var(--muted)' text-anchor='middle'>Cu²⁺ (mavi)</text><line x1='160' y1='10' x2='160' y2='186' stroke='var(--line)' stroke-width='1'/><path d='M30 92 L30 130 A10 10 0 0 0 50 130 L50 92 Z' fill='var(--panel)' fill-opacity='1'/><path d='M30 92 L30 130 A10 10 0 0 0 50 130 L50 92' fill='none' stroke='var(--muted)' stroke-width='4'/><path d='M30 46 L30 130 A10 10 0 0 0 50 130 L50 46' fill='none' stroke='var(--ink)' stroke-width='1.2'/><path d='M105 92 L105 130 A10 10 0 0 0 125 130 L125 92 Z' fill='var(--panel)' fill-opacity='1'/><path d='M105 46 L105 130 A10 10 0 0 0 125 130 L125 46' fill='none' stroke='var(--ink)' stroke-width='1.2'/><path d='M195 92 L195 130 A10 10 0 0 0 215 130 L215 92 Z' fill='var(--c1)' fill-opacity='0.25'/><path d='M195 128 A10 10 0 0 0 215 128 Z' fill='var(--c2)' fill-opacity='0.85'/><path d='M195 46 L195 130 A10 10 0 0 0 215 130 L215 46' fill='none' stroke='var(--ink)' stroke-width='1.2'/><path d='M270 92 L270 130 A10 10 0 0 0 290 130 L290 92 Z' fill='var(--c1)' fill-opacity='0.4'/><path d='M270 46 L270 130 A10 10 0 0 0 290 130 L290 46' fill='none' stroke='var(--ink)' stroke-width='1.2'/><text x='40' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>aldehit</text><text x='115' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>keton</text><text x='205' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>alifatik ald.</text><text x='280' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>keton</text><text x='40' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>gümüş aynası</text><text x='115' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>değişim yok</text><text x='205' y='182' font-size='11' fill='var(--c2)' text-anchor='middle'>Cu₂O çöker</text><text x='280' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>mavi kalır</text><text x='160' y='198' font-size='10' fill='var(--c4)' text-anchor='middle'>benzaldehit: Tollens +, Fehling −</text></svg>",
-        "key": "Testte yükseltgenen aldehittir; kendisi karboksilik aside (tuzuna) dönüşür."
+        "key": "Benzaldehit Tollens'i verir, Fehling'i vermez. Testte aldehit karboksilik aside yükseltgenir."
       },
       {
         "h": "Karboksilik asitler",
-        "p": "Karboksil grubu (−COOH) taşıyan bileşikler <b>karboksilik asittir</b>; adı alkan adına -oik asit eklenerek kurulur. Formik asit (metanoik asit) karıncada, asetik asit (etanoik asit) sirkede bulunur. Zayıf asitlerdir: bazlarla tuz ve su, aktif metallerle H₂, karbonatlarla CO₂ verir.",
+        "p": "Karboksil grubu (−COOH) taşıyanlar <b>karboksilik asittir</b>: karıncadaki formik asit, sirkedeki asetik asit. Zayıf asittir; bazla tuz ve su, aktif metalle H₂ verir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='80' y='30' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>HCOOH</text><text x='240' y='30' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₃COOH</text><text x='80' y='48' font-size='11' fill='var(--muted)' text-anchor='middle'>formik asit (karınca)</text><text x='240' y='48' font-size='11' fill='var(--muted)' text-anchor='middle'>asetik asit (sirke)</text><text x='160' y='84' font-size='13' fill='var(--ink)' text-anchor='middle'>CH₃COOH + H₂O ⇌ CH₃COO⁻ + H₃O⁺</text><text x='160' y='104' font-size='11' fill='var(--muted)' text-anchor='middle'>zayıf asit: denge büyük ölçüde solda</text><rect x='20' y='120' width='280' height='20' rx='3' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)'/><rect x='296' y='120' width='4' height='20' fill='var(--c2)'/><text x='20' y='160' font-size='11' fill='var(--c1)' text-anchor='start'>≈ %99 CH₃COOH molekülü</text><text x='300' y='160' font-size='11' fill='var(--c2)' text-anchor='end'>≈ %1 iyon</text><text x='160' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>0,1 M asetik asit, 25 °C</text></svg>",
-        "key": "HCOOH, −CHO benzeri yapısı yüzünden asit olduğu hâlde Tollens'i verir."
+        "key": "Adları -oik asit ile biter: etanoik asit. Karbonatlarla CO₂ verir. HCOOH, −CHO benzeri yapısıyla Tollens'i verir.",
+        "once": {
+          "soru": "Sirkeye biraz karbonat atınca köpürür. Sirkedeki asit hangi grubu taşır?",
+          "secenekler": [
+            {
+              "yazi": "−COOH",
+              "neden": "Karboksil grubu H⁺ verir; karbonatla CO₂ köpüğü çıkar.",
+              "dogru": true
+            },
+            {
+              "yazi": "−OH",
+              "neden": "Alkolün −OH'si nötrdür; karbonatı köpürtmez."
+            },
+            {
+              "yazi": "−CHO",
+              "neden": "Aldehit grubu asit değildir."
+            }
+          ]
+        }
       },
       {
         "h": "Esterler ve esterleşme",
-        "p": "Karboksilik asit ile alkol, derişik H₂SO₄ ile ısıtılınca <b>ester ve su</b> oluşur: <b>asit + alkol ⇌ ester + su</b>. Ester grubu −COO−'dur. Tepkime tersinirdir; tersine <b>ester hidrolizi</b> denir. Küçük esterler meyve kokuludur: izoamil asetat muz, etil bütanoat ananas kokusu verir.",
+        "p": "Karboksilik asit ve alkol, derişik H₂SO₄ ile ısıtılınca <b>ester ve su</b> oluşur. Tepkime tersinirdir; tersine <b>ester hidrolizi</b> denir. Küçük esterler meyve kokuludur.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--muted)' text-anchor='middle'>Esterleşme (derişik H₂SO₄, ısı)</text><text x='85' y='56' font-size='14' fill='var(--ink)' text-anchor='middle'>CH₃−CO<tspan fill='var(--c2)'>OH</tspan></text><text x='160' y='56' font-size='14' fill='var(--ink)' text-anchor='middle'>+</text><text x='235' y='56' font-size='14' fill='var(--ink)' text-anchor='middle'><tspan fill='var(--c2)'>H</tspan>O−C₂H₅</text><text x='85' y='74' font-size='11' fill='var(--muted)' text-anchor='middle'>asetik asit</text><text x='235' y='74' font-size='11' fill='var(--muted)' text-anchor='middle'>etanol</text><text x='160' y='106' font-size='15' fill='var(--ink)' text-anchor='middle'>⇌</text><text x='176' y='105' font-size='10' fill='var(--muted)' text-anchor='start'>tersinir</text><text x='85' y='140' font-size='14' fill='var(--ink)' text-anchor='middle'>CH₃<tspan fill='var(--c1)'>−COO−</tspan>C₂H₅</text><text x='170' y='140' font-size='14' fill='var(--ink)' text-anchor='middle'>+</text><text x='235' y='140' font-size='14' fill='var(--ink)' text-anchor='middle'><tspan fill='var(--c2)'>H₂O</tspan></text><text x='85' y='158' font-size='11' fill='var(--muted)' text-anchor='middle'>etil asetat (ester)</text><text x='235' y='158' font-size='11' fill='var(--muted)' text-anchor='middle'>su</text><text x='160' y='186' font-size='11' fill='var(--c2)' text-anchor='middle'>Su: asidin −OH'si + alkolün H'si</text></svg>",
-        "key": "Ad: önce alkolün alkili, sonra asidin -oat'ı: etil etanoat (etil asetat)."
+        "key": "Ad: önce alkolün alkili, sonra asidin -oat'ı: etil etanoat. İzoamil asetat muz, etil bütanoat ananas kokar."
       },
       {
         "h": "Yağlar ve sabunlaşma",
-        "p": "Yağlar (<b>trigliseritler</b>), gliserolün üç −OH'sinin üç yağ asidiyle oluşturduğu esterlerdir. Yağ NaOH ile ısıtılınca ester bağları kopar; gliserol ve yağ asidinin sodyum tuzu, yani <b>sabun</b> oluşur. Buna <b>sabunlaşma</b> denir. KOH ile daha yumuşak (sıvı) sabun elde edilir.",
+        "p": "Yağlar, gliserolün üç −OH'siyle üç yağ asidinin oluşturduğu esterlerdir. NaOH ile ısıtılınca gliserol ve <b>sabun</b> oluşur: <b>sabunlaşma</b>.",
         "svg": "<svg viewBox='0 0 320 200'><text x='40' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>yağ</text><text x='68' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>+</text><text x='106' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>3 NaOH</text><text x='148' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>→</text><text x='196' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>gliserol</text><text x='238' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>+</text><text x='280' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>3 sabun</text><text x='40' y='48' font-size='10' fill='var(--muted)' text-anchor='middle'>(trigliserit)</text><text x='280' y='48' font-size='10' fill='var(--muted)' text-anchor='middle'>(RCOO⁻Na⁺)</text><path d='M30 112 L46 104 L62 112 L78 104 L94 112 L110 104 L126 112 L142 104 L158 112 L174 104 L190 112' fill='none' stroke='var(--c4)' stroke-width='2.5'/><circle cx='202' cy='106' r='11' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)'/><text x='202' y='84' font-size='11' fill='var(--c2)' text-anchor='middle'>COO⁻</text><text x='240' y='110' font-size='12' fill='var(--c1)' text-anchor='middle'>Na⁺</text><text x='110' y='136' font-size='11' fill='var(--c4)' text-anchor='middle'>apolar kuyruk: yağı sever</text><text x='222' y='156' font-size='11' fill='var(--c2)' text-anchor='middle'>iyonik baş: suyu sever</text><text x='160' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>Kuyruklar kire gömülür, başlar suya döner.</text></svg>",
-        "key": "1 mol trigliserit, 3 mol NaOH ile sabunlaşır."
+        "key": "1 mol trigliserit 3 mol NaOH ile sabunlaşır. KOH ile daha yumuşak sabun elde edilir."
       },
       {
         "h": "Aminler ve amitler",
-        "p": "<b>Aminler</b>, amonyağın H'leri yerine karbon grubu geçmiş türevleridir: metilamin (CH₃NH₂). N'deki ortaklanmamış elektron çifti H⁺ aldığı için aminler <b>zayıf bazdır</b>. <b>Amitlerde</b> N, karbonil karbonuna bağlıdır (−CONH−). Proteinlerdeki <b>peptit bağı</b> bir amit bağıdır. Amitler belirgin bazik özellik göstermez.",
+        "p": "<b>Aminler</b> amonyağın H'si yerine karbon grubu geçmiş türevlerdir; <b>zayıf bazdır</b>. <b>Amitte</b> N, karbonil karbonuna bağlıdır (−CONH−); proteinlerdeki <b>peptit bağı</b> amittir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='80' y='24' font-size='12' fill='var(--c1)' text-anchor='middle'>Amin (−NH₂)</text><text x='240' y='24' font-size='12' fill='var(--c3)' text-anchor='middle'>Amit (−CONH−)</text><line x1='160' y1='12' x2='160' y2='190' stroke='var(--line)' stroke-width='1'/><text x='80' y='52' font-size='14' fill='var(--ink)' text-anchor='middle'>CH₃−NH₂</text><text x='80' y='70' font-size='11' fill='var(--muted)' text-anchor='middle'>metilamin</text><text x='80' y='102' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃NH₂ + H₂O ⇌</text><text x='80' y='122' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃NH₃⁺ + OH⁻</text><text x='80' y='150' font-size='11' fill='var(--c1)' text-anchor='middle'>N, H⁺ alır: bazik</text><text x='80' y='170' font-size='11' fill='var(--muted)' text-anchor='middle'>balık kokusu aminlerden</text><text x='220' y='64' font-size='14' fill='var(--c3)' text-anchor='middle'>O</text><line x1='217' y1='70' x2='217' y2='88' stroke='var(--c3)' stroke-width='1.2'/><line x1='223' y1='70' x2='223' y2='88' stroke='var(--c3)' stroke-width='1.2'/><text x='220' y='104' font-size='14' fill='var(--c3)' text-anchor='middle'>C</text><text x='256' y='104' font-size='14' fill='var(--c3)' text-anchor='middle'>N</text><line x1='228' y1='99' x2='248' y2='99' stroke='var(--c3)' stroke-width='1.2'/><line x1='194' y1='99' x2='212' y2='99' stroke='var(--ink)' stroke-width='1.2'/><line x1='264' y1='99' x2='284' y2='99' stroke='var(--ink)' stroke-width='1.2'/><line x1='256' y1='108' x2='256' y2='122' stroke='var(--ink)' stroke-width='1.2'/><text x='256' y='136' font-size='14' fill='var(--ink)' text-anchor='middle'>H</text><text x='240' y='162' font-size='11' fill='var(--c3)' text-anchor='middle'>peptit bağı = amit bağı</text><text x='240' y='180' font-size='11' fill='var(--muted)' text-anchor='middle'>proteinlerde, naylonda</text></svg>",
-        "key": "Amin + karboksilik asit → amit + su; peptit bağı da böyle, su çıkarak kurulur."
+        "key": "Metilamin CH₃NH₂. Amin + karboksilik asit → amit + su; peptit bağı da su çıkarak kurulur.",
+        "once": {
+          "soru": "Balığın kötü kokusu aminlerden gelir. Üstüne limon sıkınca koku azalır. Neden?",
+          "secenekler": [
+            {
+              "yazi": "Asit aminle tuz yapar",
+              "neden": "Amin bazdır; limondaki asitle uçmayan bir tuza döner.",
+              "dogru": true
+            },
+            {
+              "yazi": "Limon kokuyu örter",
+              "neden": "Limon kokusu yardım eder ama asıl etki aminin tuza dönmesidir."
+            },
+            {
+              "yazi": "Limon balığı pişirir",
+              "neden": "Limon balığı pişirmez; asit, bazik amini nötrler."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",

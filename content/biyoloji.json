@@ -8642,51 +8642,141 @@
     "cards": [
       {
         "h": "Boşaltım ve iç denge",
-        "p": "Hücrelerde metabolizma sürekli atık üretir: CO<sub>2</sub>, azotlu atıklar, fazla su ve tuzlar. <b>Boşaltım</b>, bu atıkların vücuttan uzaklaştırılmasıdır. Asıl amaç, kanın su, tuz ve pH değerlerini dar sınırlar içinde sabit tutmaktır. Bu iç dengeye <b>homeostazi</b> denir.",
+        "p": "Metabolizma sürekli atık üretir: CO<sub>2</sub>, azotlu atık, fazla su ve tuz. <b>Boşaltım</b> bunları atarak kanın su, tuz ve pH dengesini korur: <b>homeostazi</b>.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bos-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='22' font-size='12' fill='var(--muted)' text-anchor='middle'>atık: CO₂, azotlu atık, fazla su ve tuz</text><rect x='10' y='38' width='88' height='52' rx='6' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.2'/><text x='54' y='60' font-size='12' fill='var(--ink)' text-anchor='middle'>hücreler</text><text x='54' y='78' font-size='11' fill='var(--muted)' text-anchor='middle'>atık üretir</text><rect x='116' y='38' width='88' height='52' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.2'/><text x='160' y='60' font-size='12' fill='var(--ink)' text-anchor='middle'>kan</text><text x='160' y='78' font-size='11' fill='var(--muted)' text-anchor='middle'>iç ortam</text><rect x='222' y='38' width='88' height='52' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.2'/><text x='266' y='60' font-size='12' fill='var(--ink)' text-anchor='middle'>boşaltım</text><text x='266' y='78' font-size='11' fill='var(--muted)' text-anchor='middle'>organları atar</text><path d='M98 64 L114 64' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#bos-1)'/><path d='M204 64 L220 64' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#bos-1)'/><rect x='30' y='126' width='280' height='30' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-dasharray='4 3'/><path d='M30 141 Q 52 131 74 141 T 118 141 T 162 141 T 206 141 T 250 141 T 294 141' stroke='var(--c1)' stroke-width='2' fill='none'/><text x='30' y='118' font-size='11' fill='var(--muted)' text-anchor='start'>su · tuz · pH</text><text x='310' y='118' font-size='11' fill='var(--c3)' text-anchor='end'>normal aralık</text><text x='160' y='184' font-size='12' fill='var(--ink)' text-anchor='middle'>değerler dar aralıkta tutulur: homeostazi</text></svg>",
-        "key": "Boşaltım yalnızca atık atmak değil, kanın bileşimini ayarlamaktır."
+        "key": "Boşaltım yalnızca atık atmak değil, kanın bileşimini ayarlamaktır.",
+        "once": {
+          "soru": "Çok su içince idrarın artar. Böbrek fazla suyu neden atar?",
+          "secenekler": [
+            {
+              "yazi": "Kanın dengesini korumak için",
+              "neden": "Kanın su ve tuz oranı dar sınırlarda tutulur; fazlası atılır.",
+              "dogru": true
+            },
+            {
+              "yazi": "Su zararlı olduğu için",
+              "neden": "Su zararlı değildir; yalnız fazlası dengeyi bozar."
+            },
+            {
+              "yazi": "Kese çalışsın diye",
+              "neden": "İdrar kesesi yalnız depolar; atma kararı kanın dengesine göredir."
+            }
+          ]
+        }
       },
       {
         "h": "Üç azotlu atık",
-        "p": "Amino asitler yıkılırken amino grubu ayrılır ve <b>amonyak</b> (NH<sub>3</sub>) oluşur. Amonyak çok zehirlidir; seyreltmek için bol su gerekir. Canlılar onu daha az zehirli <b>üre</b>ye ya da <b>ürik asit</b>e çevirerek su tasarrufu yapar, ama bu dönüşümün enerji bedeli vardır.",
+        "p": "Amino asit yıkılınca zehirli <b>amonyak</b> oluşur; seyreltmek için bol su gerekir. Canlılar onu daha az zehirli <b>üre</b> ya da <b>ürik asite</b> çevirir; bu enerji ister.",
         "svg": "<svg viewBox='0 0 320 200'><text x='140' y='28' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>amonyak</text><text x='215' y='28' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>üre</text><text x='282' y='28' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>ürik asit</text><path d='M8 38 L312 38' stroke='var(--ink)' stroke-width='1'/><text x='8' y='64' font-size='11' fill='var(--muted)' text-anchor='start'>zehir etkisi</text><text x='140' y='64' font-size='12' fill='var(--ink)' text-anchor='middle'>çok yüksek</text><text x='215' y='64' font-size='12' fill='var(--ink)' text-anchor='middle'>az</text><text x='282' y='64' font-size='12' fill='var(--ink)' text-anchor='middle'>en az</text><path d='M8 77 L312 77' stroke='var(--line)' stroke-width='1'/><text x='8' y='98' font-size='11' fill='var(--muted)' text-anchor='start'>çözünürlük</text><text x='140' y='98' font-size='12' fill='var(--ink)' text-anchor='middle'>çok yüksek</text><text x='215' y='98' font-size='12' fill='var(--ink)' text-anchor='middle'>yüksek</text><text x='282' y='98' font-size='12' fill='var(--ink)' text-anchor='middle'>çok düşük</text><path d='M8 111 L312 111' stroke='var(--line)' stroke-width='1'/><text x='8' y='132' font-size='11' fill='var(--muted)' text-anchor='start'>gereken su</text><text x='140' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>çok</text><text x='215' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>orta</text><text x='282' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>çok az</text><path d='M8 145 L312 145' stroke='var(--line)' stroke-width='1'/><text x='8' y='166' font-size='11' fill='var(--muted)' text-anchor='start'>üretim enerjisi</text><text x='140' y='166' font-size='12' fill='var(--ink)' text-anchor='middle'>en az</text><text x='215' y='166' font-size='12' fill='var(--ink)' text-anchor='middle'>orta</text><text x='282' y='166' font-size='12' fill='var(--ink)' text-anchor='middle'>en çok</text><text x='160' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>amonyak → üre → ürik asit: su tasarrufu artar</text></svg>",
-        "key": "Zehir ve su ihtiyacı: amonyak > üre > ürik asit. Enerji maliyeti tam tersi."
+        "key": "Zehir ve su ihtiyacı: amonyak > üre > ürik asit. Enerji maliyeti tam tersi.",
+        "once": {
+          "soru": "Proteinler yıkılınca, karbonhidratlardan farklı olarak hangi atık oluşur?",
+          "secenekler": [
+            {
+              "yazi": "Azotlu atık",
+              "neden": "Amino asitlerdeki amino grubu azot taşır; yıkılınca amonyak oluşur.",
+              "dogru": true
+            },
+            {
+              "yazi": "Yalnız CO₂ ve su",
+              "neden": "Bunlar karbonhidrat ve yağ yıkımında da oluşur; proteinde ek olarak azotlu atık çıkar."
+            },
+            {
+              "yazi": "Glikoz",
+              "neden": "Glikoz atık değil, yakıttır."
+            }
+          ]
+        }
       },
       {
         "h": "Su yaşamı, kara yaşamı",
-        "p": "Atık türü, canlının suya ne kadar ulaşabildiğine bağlıdır. Çoğu kemikli balık ve sucul omurgasız <b>amonyak</b>, memeliler ve ergin kurbağalar <b>üre</b>, kuşlar, sürüngenlerin çoğu ve böcekler <b>ürik asit</b> atar.",
+        "p": "Atık türü suya ulaşmaya bağlıdır. Çoğu kemikli balık <b>amonyak</b>, memeliler <b>üre</b>, kuşlar, sürüngenlerin çoğu ve böcekler <b>ürik asit</b> atar.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bos-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='10' y='14' width='92' height='128' rx='6' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='56' y='34' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>amonyak</text><text x='56' y='60' font-size='11' fill='var(--ink)' text-anchor='middle'>kemikli balıklar</text><text x='56' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>iribaş</text><text x='56' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>sucul</text><text x='56' y='120' font-size='11' fill='var(--ink)' text-anchor='middle'>omurgasızlar</text><rect x='114' y='14' width='92' height='128' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><text x='160' y='34' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>üre</text><text x='160' y='60' font-size='11' fill='var(--ink)' text-anchor='middle'>memeliler</text><text x='160' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>ergin kurbağa</text><text x='160' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>köpekbalıkları</text><rect x='218' y='14' width='92' height='128' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.2'/><text x='264' y='34' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>ürik asit</text><text x='264' y='60' font-size='11' fill='var(--ink)' text-anchor='middle'>kuşlar</text><text x='264' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>çoğu sürüngen</text><text x='264' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>böcekler</text><text x='264' y='120' font-size='11' fill='var(--ink)' text-anchor='middle'>kara salyangozu</text><path d='M20 162 L300 162' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#bos-3)'/><text x='14' y='184' font-size='11' fill='var(--muted)' text-anchor='start'>su bol</text><text x='306' y='184' font-size='11' fill='var(--muted)' text-anchor='end'>su kısıtlı</text><text x='160' y='184' font-size='11' fill='var(--ink)' text-anchor='middle'>atılan suyun miktarı azalır</text></svg>",
-        "key": "Kurbağa yavrusu (iribaş) suda amonyak atar, karaya çıkan ergin kurbağa üre atar."
+        "key": "Ergin kurbağa da üre atar; suda yaşayan iribaş amonyak atar."
       },
       {
         "h": "Üre karaciğerde yapılır",
-        "p": "Fazla amino asitler yıkılırken amonyak oluşur. <b>Karaciğer</b> amonyağı CO<sub>2</sub> ile birleştirip daha az zehirli <b>üre</b>ye çevirir (ornitin döngüsü, ATP harcanır). Üre kana geçer, böbrekte süzülür ve idrarla atılır. Böbrek üreyi üretmez, yalnızca kandan ayırıp atar.",
+        "p": "<b>Karaciğer</b> amonyağı CO<sub>2</sub> ile birleştirip <b>üreye</b> çevirir (ornitin döngüsü, ATP harcanır). Üre kana geçer, böbrekte süzülür. Böbrek üreyi üretmez, atar.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bos-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='8' y='30' width='84' height='36' rx='6' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.2'/><text x='50' y='53' font-size='12' fill='var(--ink)' text-anchor='middle'>amino asit</text><rect x='118' y='30' width='52' height='36' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><text x='144' y='53' font-size='12' fill='var(--ink)' text-anchor='middle'>NH₃</text><path d='M92 48 L116 48' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#bos-4)'/><text x='100' y='84' font-size='10' fill='var(--muted)' text-anchor='middle'>amino grubu ayrılır</text><path d='M170 48 L210 48' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#bos-4)'/><text x='190' y='40' font-size='11' fill='var(--muted)' text-anchor='middle'>+ CO₂</text><rect x='212' y='20' width='100' height='58' rx='6' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)' stroke-width='1.2'/><text x='262' y='44' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>karaciğer</text><text x='262' y='64' font-size='11' fill='var(--ink)' text-anchor='middle'>NH₃ + CO₂ → üre</text><path d='M262 78 L262 126' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#bos-4)'/><text x='254' y='106' font-size='10' fill='var(--muted)' text-anchor='end'>ATP harcanır</text><rect x='222' y='128' width='80' height='36' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.2'/><text x='262' y='151' font-size='12' fill='var(--ink)' text-anchor='middle'>kan</text><rect x='110' y='128' width='80' height='36' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.2'/><text x='150' y='151' font-size='12' fill='var(--ink)' text-anchor='middle'>böbrek</text><rect x='8' y='128' width='76' height='36' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.2'/><text x='46' y='151' font-size='12' fill='var(--ink)' text-anchor='middle'>idrar</text><path d='M222 146 L192 146' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#bos-4)'/><path d='M110 146 L86 146' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#bos-4)'/><text x='160' y='190' font-size='12' fill='var(--muted)' text-anchor='middle'>üre karaciğerde yapılır, böbrekte atılır</text></svg>",
         "key": "Karaciğer yetmezliğinde amonyak üreye çevrilemez; kanda birikir ve beyni etkiler."
       },
       {
         "h": "Böbreğe yardım eden organlar",
-        "p": "<b>Akciğer</b> CO<sub>2</sub> ve su buharını, <b>deri</b> ter bezleriyle su, tuz ve az miktarda üreyi atar. <b>Karaciğer</b> yıkılan alyuvarlardan gelen pigmentleri safraya katar. <b>Kalın bağırsak</b> safra pigmentlerini ve fazla kalsiyum, demir gibi bazı mineralleri dışkıyla atar.",
+        "p": "<b>Akciğer</b> CO<sub>2</sub> ve su buharını, <b>deri</b> terle su ve tuzu atar. <b>Karaciğer</b> safraya pigment katar; <b>kalın bağırsak</b> pigment ve bazı mineralleri atar.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='10' width='148' height='85' rx='6' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='82' y='34' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>akciğer</text><text x='82' y='58' font-size='11' fill='var(--ink)' text-anchor='middle'>CO₂</text><text x='82' y='78' font-size='11' fill='var(--ink)' text-anchor='middle'>su buharı</text><rect x='164' y='10' width='148' height='85' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.2'/><text x='238' y='34' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>deri (ter)</text><text x='238' y='58' font-size='11' fill='var(--ink)' text-anchor='middle'>su, tuz</text><text x='238' y='78' font-size='11' fill='var(--ink)' text-anchor='middle'>az miktarda üre</text><rect x='8' y='105' width='148' height='85' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.2'/><text x='82' y='129' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>karaciğer</text><text x='82' y='153' font-size='11' fill='var(--ink)' text-anchor='middle'>üre üretir</text><text x='82' y='173' font-size='11' fill='var(--ink)' text-anchor='middle'>safra pigmentleri</text><rect x='164' y='105' width='148' height='85' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><text x='238' y='129' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>kalın bağırsak</text><text x='238' y='153' font-size='11' fill='var(--ink)' text-anchor='middle'>safra pigmentleri</text><text x='238' y='173' font-size='11' fill='var(--ink)' text-anchor='middle'>bazı mineraller (Ca, Fe)</text></svg>",
-        "key": "Sindirilmeyen besinin dışkıyla atılması boşaltım değil, dışkılamadır."
+        "key": "Safra pigmentleri yıkılan alyuvarlardan gelir. Sindirilmeyen besinin atılması boşaltım değil, dışkılamadır.",
+        "once": {
+          "soru": "Böbrek dışında hangi organ da boşaltım yapar?",
+          "secenekler": [
+            {
+              "yazi": "Akciğer",
+              "neden": "Kandaki CO₂'yi ve su buharını dışarı atar.",
+              "dogru": true
+            },
+            {
+              "yazi": "Mide",
+              "neden": "Mide sindirim yapar, boşaltım yapmaz."
+            },
+            {
+              "yazi": "Kalp",
+              "neden": "Kalp kanı pompalar; atık atmaz."
+            }
+          ]
+        }
       },
       {
         "h": "İdrarın yolu",
-        "p": "İnsanda iki <b>böbrek</b>, belin iki yanında karın boşluğunun arka duvarındadır. Böbrekte oluşan idrar <b>üreter</b>lerle (idrar borusu) <b>idrar kesesi</b>ne iner ve orada birikir. Kese dolunca idrar <b>üretra</b> (idrar kanalı) ile atılır. Kese çıkışındaki iç büzgen istemsiz, dış büzgen istemli kastır.",
+        "p": "İdrar <b>böbrekte</b> oluşur, <b>üreterle</b> <b>idrar kesesine</b> iner ve birikir. Kese dolunca <b>üretrayla</b> atılır. İç büzgen istemsiz, dış büzgen istemlidir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bos-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker></defs><text x='160' y='18' font-size='12' fill='var(--muted)' text-anchor='middle'>böbrek → üreter → idrar kesesi → üretra</text><ellipse cx='95' cy='68' rx='24' ry='36' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.5'/><ellipse cx='225' cy='68' rx='24' ry='36' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.5'/><path d='M114 84 Q 140 105 146 132' stroke='var(--c4)' stroke-width='3' fill='none' marker-end='url(#bos-6)'/><path d='M206 84 Q 180 105 174 132' stroke='var(--c4)' stroke-width='3' fill='none' marker-end='url(#bos-6)'/><ellipse cx='160' cy='150' rx='30' ry='20' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><path d='M160 170 L160 196' stroke='var(--c4)' stroke-width='3' fill='none' marker-end='url(#bos-6)'/><text x='40' y='72' font-size='12' fill='var(--ink)' text-anchor='middle'>böbrek</text><text x='280' y='72' font-size='12' fill='var(--ink)' text-anchor='middle'>böbrek</text><text x='120' y='126' font-size='12' fill='var(--ink)' text-anchor='end'>üreter</text><text x='200' y='126' font-size='12' fill='var(--ink)' text-anchor='start'>üreter</text><text x='196' y='154' font-size='12' fill='var(--ink)' text-anchor='start'>idrar kesesi</text><text x='170' y='192' font-size='12' fill='var(--ink)' text-anchor='start'>üretra</text></svg>",
-        "key": "Üreter: böbrekten keseye (iki tane). Üretra: keseden dışarı (bir tane)."
+        "key": "Böbrekler belin iki yanındadır. Üreter böbrekten keseye (iki tane), üretra keseden dışarı (bir tane).",
+        "once": {
+          "soru": "İdrarını bir süre tutabilirsin. Bunu ne sağlar?",
+          "secenekler": [
+            {
+              "yazi": "İstemli büzgen kası",
+              "neden": "Kese çıkışındaki dış büzgen istemlidir; sen kasarsın.",
+              "dogru": true
+            },
+            {
+              "yazi": "Böbreğin durması",
+              "neden": "Böbrek idrar yapmayı sürdürür; idrar kesede birikir."
+            },
+            {
+              "yazi": "Üreterin kapanması",
+              "neden": "Üreter böbrekten keseye taşır; çıkışı büzgen kapatır."
+            }
+          ]
+        }
       },
       {
         "h": "Böbreğin iç yapısı",
-        "p": "Böbrek boyuna kesilince üç bölge görülür: en dışta <b>kabuk</b> (korteks), ortada piramitler hâlinde <b>öz</b> (medulla), içte idrarın toplandığı <b>havuzcuk</b> (pelvis). Her böbrekte yaklaşık bir milyon <b>nefron</b> bulunur. Glomerul ve Bowman kapsülü kabuktadır; Henle kulpu öze uzanır.",
+        "p": "Böbrekte dışta <b>kabuk</b>, ortada <b>öz</b>, içte idrarın toplandığı <b>havuzcuk</b> vardır. Her böbrekte yaklaşık bir milyon süzme birimi, <b>nefron</b> bulunur.",
         "svg": "<svg viewBox='0 0 320 200'><ellipse cx='125' cy='100' rx='90' ry='82' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.5'/><polygon points='80,40 115,30 150,90' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><polygon points='50,80 52,118 146,98' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><polygon points='56,130 76,160 148,108' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><polygon points='100,170 138,172 152,114' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><ellipse cx='176' cy='100' rx='16' ry='28' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><path d='M186 120 Q 204 160 214 196' stroke='var(--c1)' stroke-width='4' fill='none'/><path d='M234 32 L178 40' stroke='var(--muted)' stroke-width='1'/><text x='238' y='36' font-size='12' fill='var(--ink)' text-anchor='start'>kabuk</text><path d='M234 64 L122 52' stroke='var(--muted)' stroke-width='1'/><text x='238' y='68' font-size='12' fill='var(--ink)' text-anchor='start'>öz (piramit)</text><path d='M234 104 L190 100' stroke='var(--muted)' stroke-width='1'/><text x='238' y='108' font-size='12' fill='var(--ink)' text-anchor='start'>havuzcuk</text><text x='226' y='172' font-size='12' fill='var(--ink)' text-anchor='start'>üreter</text></svg>",
-        "key": "İdrar havuzcukta toplanır ve üreterle böbrekten çıkar."
+        "key": "Glomerul ve Bowman kapsülü kabukta, Henle kulpu özdedir. İdrar havuzcuktan üreterle çıkar.",
+        "once": {
+          "soru": "Bir böbrekte yaklaşık kaç süzme birimi vardır?",
+          "secenekler": [
+            {
+              "yazi": "1 milyon",
+              "neden": "Her böbrekte yaklaşık bir milyon nefron vardır.",
+              "dogru": true
+            },
+            {
+              "yazi": "10",
+              "neden": "Çok daha fazla; böbrek kanı çok sayıda küçük birimde süzer."
+            },
+            {
+              "yazi": "1000",
+              "neden": "Gerçek sayı bunun yaklaşık bin katıdır."
+            }
+          ]
+        }
       },
       {
         "h": "Nefron: böbreğin süzme birimi",
-        "p": "Kan, kılcal yumağı olan <b>glomerul</b>e gelir; onu çanak gibi saran <b>Bowman kapsülü</b> süzüntüyü toplar. Süzüntü sırayla <b>proksimal tüp</b>, <b>Henle kulpu</b> ve <b>distal tüp</b>ten geçer. Birçok nefron ortak bir <b>toplama kanalı</b>na açılır; oradan idrar havuzcuğa akar.",
+        "p": "Kan, kılcal yumak <b>glomerule</b> gelir; <b>Bowman kapsülü</b> süzüntüyü toplar. Süzüntü <b>proksimal tüp</b>, <b>Henle kulpu</b>, <b>distal tüp</b> ve <b>toplama kanalından</b> geçer.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bos-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><path d='M8 108 L222 108' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><path d='M238 108 L312 108' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><text x='312' y='102' font-size='11' fill='var(--muted)' text-anchor='end'>kabuk</text><text x='312' y='124' font-size='11' fill='var(--muted)' text-anchor='end'>öz</text><circle cx='48' cy='55' r='22' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='2'/><circle cx='48' cy='55' r='12' fill='var(--c2)' fill-opacity='0.45' stroke='var(--c2)'/><path d='M10 82 L38 64' stroke='var(--c2)' stroke-width='2'/><text x='45' y='18' font-size='11' fill='var(--c5)' text-anchor='middle'>Bowman kapsülü</text><text x='48' y='94' font-size='11' fill='var(--c2)' text-anchor='middle'>glomerul</text><path d='M70 55 C 82 35, 92 75, 104 55 S 124 40 130 62 L130 165 A15 15 0 0 0 160 165 L160 72' stroke='var(--c4)' stroke-width='4' fill='none'/><path d='M160 72 C 170 47, 180 85, 192 62 S 212 50 228 55' stroke='var(--c1)' stroke-width='4' fill='none'/><text x='135' y='28' font-size='11' fill='var(--c4)' text-anchor='middle'>proksimal tüp</text><text x='196' y='92' font-size='11' fill='var(--c1)' text-anchor='middle'>distal tüp</text><text x='145' y='194' font-size='11' fill='var(--c4)' text-anchor='middle'>Henle kulpu</text><path d='M230 20 L230 188' stroke='var(--c3)' stroke-width='2.5' fill='none' marker-end='url(#bos-8)'/><text x='240' y='150' font-size='11' fill='var(--c3)' text-anchor='start'>toplama</text><text x='240' y='165' font-size='11' fill='var(--c3)' text-anchor='start'>kanalı</text></svg>",
-        "key": "Sıra: glomerul ve Bowman → proksimal → Henle → distal → toplama kanalı.",
+        "key": "Birçok nefron ortak bir toplama kanalına açılır; oradan idrar havuzcuğa akar.",
         "etk": {
           "tur": "isaretle",
           "soru": "Nefronun bölümlerine dokun; süzüntünün yolunu izle.",
@@ -8728,49 +8818,121 @@
               "acik": "Birçok nefronun ortak kanalı; ADH burada su geri emilimini artırır."
             }
           ]
+        },
+        "once": {
+          "soru": "Böbrekte kan ilk olarak nerede süzülür?",
+          "secenekler": [
+            {
+              "yazi": "Kılcal damar yumağında",
+              "neden": "Bu yumağa glomerul denir; plazma buradan kapsüle süzülür.",
+              "dogru": true
+            },
+            {
+              "yazi": "İdrar kesesinde",
+              "neden": "Kese yalnız biriktirir; süzme böbrekte olur."
+            },
+            {
+              "yazi": "Üreterde",
+              "neden": "Üreter hazır idrarı taşır."
+            }
+          ]
         }
       },
       {
         "h": "1. adım: süzülme",
-        "p": "Glomerula kan getiren damar, götürenden geniştir; oluşan yüksek basınç plazmanın bir kısmını Bowman kapsülüne iter. Su, glikoz, amino asit, tuzlar, vitaminler ve üre geçer; <b>kan hücreleri ve büyük proteinler geçmez</b>. İki böbrekte günde yaklaşık 180 L süzüntü oluşur. ATP harcanmaz; itici güç basınçtır.",
+        "p": "Glomerulda yüksek basınç plazmayı kapsüle iter. Su, glikoz, amino asit, tuz ve üre geçer; <b>kan hücreleri ve büyük proteinler geçmez</b>. ATP harcanmaz.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bos-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><text x='80' y='22' font-size='12' fill='var(--c2)' text-anchor='middle'>glomerul kılcalı</text><text x='240' y='22' font-size='12' fill='var(--c5)' text-anchor='middle'>Bowman kapsülü</text><rect x='10' y='30' width='140' height='112' rx='6' fill='var(--c2)' fill-opacity='0.06' stroke='var(--c2)' stroke-width='1.2'/><rect x='170' y='30' width='140' height='112' rx='6' fill='var(--c5)' fill-opacity='0.06' stroke='var(--c5)' stroke-width='1.2'/><line x1='160' y1='30' x2='160' y2='142' stroke='var(--ink)' stroke-width='6' stroke-dasharray='10 5'/><circle cx='40' cy='60' r='11' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)'/><circle cx='60' cy='112' r='11' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)'/><circle cx='134' cy='62' r='11' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)'/><circle cx='95' cy='52' r='7' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)'/><circle cx='136' cy='120' r='7' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)'/><circle cx='90' cy='128' r='7' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)'/><circle cx='30' cy='92' r='3' fill='var(--c1)' fill-opacity='0.8'/><circle cx='78' cy='82' r='3' fill='var(--c1)' fill-opacity='0.8'/><circle cx='110' cy='100' r='3' fill='var(--c1)' fill-opacity='0.8'/><circle cx='55' cy='40' r='3' fill='var(--c1)' fill-opacity='0.8'/><circle cx='120' cy='136' r='3' fill='var(--c1)' fill-opacity='0.8'/><circle cx='100' cy='72' r='3' fill='var(--c1)' fill-opacity='0.8'/><circle cx='24' cy='130' r='3' fill='var(--c1)' fill-opacity='0.8'/><circle cx='200' cy='50' r='3' fill='var(--c1)' fill-opacity='0.8'/><circle cx='230' cy='120' r='3' fill='var(--c1)' fill-opacity='0.8'/><circle cx='260' cy='70' r='3' fill='var(--c1)' fill-opacity='0.8'/><circle cx='290' cy='110' r='3' fill='var(--c1)' fill-opacity='0.8'/><circle cx='280' cy='45' r='3' fill='var(--c1)' fill-opacity='0.8'/><circle cx='215' cy='85' r='3' fill='var(--c1)' fill-opacity='0.8'/><circle cx='250' cy='100' r='3' fill='var(--c1)' fill-opacity='0.8'/><circle cx='295' cy='75' r='3' fill='var(--c1)' fill-opacity='0.8'/><path d='M118 96 L200 96' stroke='var(--c3)' stroke-width='2' fill='none' marker-end='url(#bos-9)'/><circle cx='16' cy='166' r='6' fill='var(--c2)' fill-opacity='0.6'/><text x='26' y='170' font-size='11' fill='var(--ink)' text-anchor='start'>kan hücresi</text><circle cx='100' cy='166' r='5' fill='var(--c5)' fill-opacity='0.6'/><text x='109' y='170' font-size='11' fill='var(--ink)' text-anchor='start'>büyük protein</text><circle cx='200' cy='166' r='3' fill='var(--c1)' fill-opacity='0.8'/><text x='208' y='170' font-size='11' fill='var(--ink)' text-anchor='start'>küçük maddeler</text><text x='160' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>itici güç: kan basıncı (ATP harcanmaz)</text></svg>",
-        "key": "Kan basıncı çok düşerse (ör. ağır kanamada) glomerulda süzülme ve idrar azalır."
+        "key": "Getiren damar götürenden geniştir; basınç buradan gelir. Günde yaklaşık 180 L süzüntü oluşur. Ağır kanamada basınç düşer, süzülme azalır."
       },
       {
         "h": "2. adım: geri emilim",
-        "p": "Süzüntüdeki yararlı maddeler tüplerden kana geri döner. Normalde glikoz ve amino asitlerin tamamı, suyun ve Na<sup>+</sup>'nın büyük kısmı geri emilir; bunun çoğu <b>proksimal tüp</b>te olur. Glikoz, amino asit ve Na<sup>+</sup> aktif taşımayla, su osmozla geçer. Süzüntünün yaklaşık %99'u kana döner.",
+        "p": "Yararlı maddeler tüplerden kana döner: glikoz ve amino asitlerin tamamı, suyun ve Na<sup>+</sup>'nın çoğu. Çoğu <b>proksimal tüpte</b> olur; süzüntünün ≈%99'u geri emilir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bos-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><rect x='8' y='28' width='304' height='28' rx='12' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)' stroke-width='1.2'/><text x='160' y='47' font-size='12' fill='var(--ink)' text-anchor='middle'>kılcal damar (kan)</text><rect x='8' y='122' width='304' height='28' rx='12' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.2'/><text x='160' y='141' font-size='12' fill='var(--ink)' text-anchor='middle'>nefron tüpü (süzüntü)</text><path d='M40 118 L40 60' stroke='var(--c3)' stroke-width='2' fill='none' marker-end='url(#bos-10)'/><text x='47' y='88' font-size='12' fill='var(--ink)' text-anchor='start'>glikoz</text><text x='47' y='106' font-size='10' fill='var(--muted)' text-anchor='start'>aktif</text><path d='M115 118 L115 60' stroke='var(--c3)' stroke-width='2' fill='none' marker-end='url(#bos-10)'/><text x='122' y='88' font-size='12' fill='var(--ink)' text-anchor='start'>amino asit</text><text x='122' y='106' font-size='10' fill='var(--muted)' text-anchor='start'>aktif</text><path d='M198 118 L198 60' stroke='var(--c3)' stroke-width='2' fill='none' marker-end='url(#bos-10)'/><text x='205' y='88' font-size='12' fill='var(--ink)' text-anchor='start'>Na⁺</text><text x='205' y='106' font-size='10' fill='var(--muted)' text-anchor='start'>aktif</text><path d='M262 118 L262 60' stroke='var(--c3)' stroke-width='2' fill='none' marker-end='url(#bos-10)'/><text x='269' y='88' font-size='12' fill='var(--ink)' text-anchor='start'>su</text><text x='269' y='106' font-size='10' fill='var(--muted)' text-anchor='start'>osmoz</text><text x='160' y='172' font-size='12' fill='var(--ink)' text-anchor='middle'>tüpten kana · çoğu proksimal tüpte</text><text x='160' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>180 L süzüntü → yaklaşık 1,8 L idrar</text></svg>",
-        "key": "Geri emilim tüpten kana, salgılama kandan tüpe olur. Yönleri karıştırma."
+        "key": "Glikoz, amino asit ve Na⁺ aktif taşımayla, su osmozla geçer. Geri emilim tüpten kana, salgılama kandan tüpe olur."
       },
       {
         "h": "3. adım: salgılama ve pH",
-        "p": "<b>Salgılama</b>, geri emilimin tersidir: bazı maddeler kandan tüpe, çoğunlukla aktif taşımayla aktarılır. H<sup>+</sup>, K<sup>+</sup>, amonyak ve bazı ilaçlar böyle atılır. Kan asitleşince daha çok H<sup>+</sup> salgılanır, HCO<sub>3</sub><sup>−</sup> geri emilir; böylece böbrek kan pH'sını yaklaşık 7,4'te tutar.",
+        "p": "<b>Salgılamada</b> bazı maddeler kandan tüpe aktarılır: H<sup>+</sup>, K<sup>+</sup>, amonyak, bazı ilaçlar. Kan asitleşince daha çok H<sup>+</sup> salgılanır; pH ≈7,4'te kalır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bos-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><rect x='8' y='28' width='304' height='28' rx='12' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)' stroke-width='1.2'/><text x='160' y='47' font-size='12' fill='var(--ink)' text-anchor='middle'>kılcal damar (kan)</text><rect x='8' y='122' width='304' height='28' rx='12' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.2'/><text x='160' y='141' font-size='12' fill='var(--ink)' text-anchor='middle'>nefron tüpü (idrar olacak sıvı)</text><path d='M40 60 L40 118' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#bos-11)'/><text x='47' y='94' font-size='12' fill='var(--ink)' text-anchor='start'>H⁺</text><path d='M110 60 L110 118' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#bos-11)'/><text x='117' y='94' font-size='12' fill='var(--ink)' text-anchor='start'>K⁺</text><path d='M180 60 L180 118' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#bos-11)'/><text x='187' y='94' font-size='12' fill='var(--ink)' text-anchor='start'>NH₃</text><path d='M250 60 L250 118' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#bos-11)'/><text x='257' y='94' font-size='12' fill='var(--ink)' text-anchor='start'>bazı ilaçlar</text><text x='160' y='172' font-size='12' fill='var(--ink)' text-anchor='middle'>kan asitleşince daha çok H⁺ salgılanır</text><text x='160' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>HCO₃⁻ geri emilir → kan pH'sı ≈ 7,4</text></svg>",
-        "key": "Salgılama, glomerulda süzülmeden kanda kalan maddeleri de idrara katar."
+        "key": "Aynı anda HCO₃⁻ geri emilir. Salgılama, süzülmeden kanda kalan maddeleri de idrara katar."
       },
       {
         "h": "Henle kulpu ve derişik idrar",
-        "p": "Henle kulpunda süzüntü inen ve çıkan kolda zıt yönde akar: <b>karşı akım</b>. <b>Çıkan kol</b> suyu geçirmez, tuzu (NaCl) öz bölgesine verir; öz derinlere doğru tuzlulaşır. <b>İnen koldan</b> su osmozla çıkar. ADH varken toplama kanalı da bu tuzlu bölgede su kaybeder, idrar derişikleşir.",
+        "p": "Henle kulpunda <b>çıkan kol</b> tuzu öz bölgesine verir, suyu geçirmez; öz derine doğru tuzlulaşır. <b>İnen koldan</b> ve toplama kanalından su osmozla çıkar, idrar derişir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bos-h1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker><marker id='bos-h2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker><marker id='bos-h3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><rect x='4' y='26' width='312' height='34' fill='var(--muted)' fill-opacity='0.06'/><rect x='4' y='60' width='312' height='36' fill='var(--c4)' fill-opacity='0.08'/><rect x='4' y='96' width='312' height='36' fill='var(--c4)' fill-opacity='0.16'/><rect x='4' y='132' width='312' height='36' fill='var(--c4)' fill-opacity='0.26'/><text x='8' y='46' font-size='10' fill='var(--muted)' text-anchor='start'>kabuk</text><text x='8' y='82' font-size='10' fill='var(--muted)' text-anchor='start'>öz</text><text x='8' y='162' font-size='10' fill='var(--c4)' text-anchor='start' font-weight='700'>daha tuzlu</text><path d='M110 30 V150 Q110 166 130 166 Q150 166 150 150 V30' stroke='var(--c5)' stroke-width='9' fill='none' stroke-opacity='0.45'/><path d='M100 40 V60' stroke='var(--muted)' stroke-width='1.2' marker-end='url(#bos-h3)'/><path d='M160 60 V40' stroke='var(--muted)' stroke-width='1.2' marker-end='url(#bos-h3)'/><text x='110' y='20' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>inen kol</text><text x='158' y='20' font-size='10' fill='var(--ink)' text-anchor='start' font-weight='700'>çıkan kol</text><path d='M104 80 H78' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#bos-h1)'/><path d='M104 112 H78' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#bos-h1)'/><path d='M104 144 H78' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#bos-h1)'/><text x='60' y='116' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>H₂O</text><path d='M156 80 H182' stroke='var(--c4)' stroke-width='1.5' marker-end='url(#bos-h2)'/><path d='M156 112 H182' stroke='var(--c4)' stroke-width='1.5' marker-end='url(#bos-h2)'/><path d='M156 144 H182' stroke='var(--c4)' stroke-width='1.5' marker-end='url(#bos-h2)'/><text x='200' y='116' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>NaCl</text><path d='M262 30 V168' stroke='var(--c3)' stroke-width='9' fill='none' stroke-opacity='0.45'/><path d='M262 150 V172' stroke='var(--muted)' stroke-width='1.2' marker-end='url(#bos-h3)'/><text x='262' y='20' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>toplama kanalı</text><path d='M268 96 H294' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#bos-h1)'/><path d='M268 128 H294' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#bos-h1)'/><text x='300' y='116' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>H₂O</text><text x='240' y='66' font-size='10' fill='var(--c3)' text-anchor='end' font-weight='700'>ADH</text><text x='160' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>çıkan kol suyu geçirmez, tuzu öz bölgesine verir</text></svg>",
-        "key": "Henle kulpu uzun olan çöl hayvanları (kanguru faresi) çok derişik idrar yapar."
+        "key": "İki kolda akış zıttır: karşı akım. Toplama kanalından su çıkışı ADH varken olur.",
+        "once": {
+          "soru": "Çölde yaşayan kanguru faresi neredeyse hiç su içmez. Böbreğinin hangi bölümü çok uzundur?",
+          "secenekler": [
+            {
+              "yazi": "Henle kulpu",
+              "neden": "Uzun kulp özü çok tuzlu yapar; su geri kazanılır, idrar çok derişik olur.",
+              "dogru": true
+            },
+            {
+              "yazi": "Üreter",
+              "neden": "Üreter yalnız taşır; suyu geri kazanmaz."
+            },
+            {
+              "yazi": "İdrar kesesi",
+              "neden": "Kese depolar; idrarın derişikliğini belirlemez."
+            }
+          ]
+        }
       },
       {
         "h": "ADH ve aldosteron",
-        "p": "Az su içip terlersen kan derişikleşir. Hipotalamusta üretilen <b>ADH</b> (antidiüretik hormon) hipofiz arka lobundan salınır; toplama kanalında su geri emilimi artar, idrar azalıp koyulaşır. Kan basıncı düşünce böbrek <b>renin</b> salar; zincirin sonunda böbreküstü kabuğundan <b>aldosteron</b> salınır: distal tüpte Na<sup>+</sup> geri emilir, su onu izler.",
+        "p": "Az su içince hipofizden <b>ADH</b> salınır; toplama kanalı daha çok su geri emer, idrar azalır. Kan basıncı düşünce <b>aldosteron</b> distal tüpte Na<sup>+</sup> geri emilimini artırır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bos-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='82' y='16' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>ADH (hipofiz arka lob)</text><text x='238' y='16' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>Aldosteron (böbreküstü)</text><rect x='12' y='26' width='140' height='28' rx='6' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='82' y='45' font-size='11' fill='var(--ink)' text-anchor='middle'>su az, kan derişik</text><path d='M82 54 L82 68' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#bos-12)'/><rect x='12' y='70' width='140' height='28' rx='6' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='82' y='89' font-size='11' fill='var(--ink)' text-anchor='middle'>ADH artar</text><path d='M82 98 L82 112' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#bos-12)'/><rect x='12' y='114' width='140' height='28' rx='6' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='82' y='133' font-size='11' fill='var(--ink)' text-anchor='middle'>su geri emilimi ↑</text><path d='M82 142 L82 156' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#bos-12)'/><rect x='12' y='158' width='140' height='28' rx='6' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='82' y='177' font-size='11' fill='var(--ink)' text-anchor='middle'>idrar az ve koyu</text><rect x='168' y='26' width='140' height='28' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.2'/><text x='238' y='45' font-size='11' fill='var(--ink)' text-anchor='middle'>kan basıncı ya da Na⁺ ↓</text><path d='M238 54 L238 68' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#bos-12)'/><rect x='168' y='70' width='140' height='28' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.2'/><text x='238' y='89' font-size='11' fill='var(--ink)' text-anchor='middle'>aldosteron artar</text><path d='M238 98 L238 112' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#bos-12)'/><rect x='168' y='114' width='140' height='28' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.2'/><text x='238' y='133' font-size='11' fill='var(--ink)' text-anchor='middle'>Na⁺ geri emilimi ↑</text><path d='M238 142 L238 156' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#bos-12)'/><rect x='168' y='158' width='140' height='28' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.2'/><text x='238' y='177' font-size='11' fill='var(--ink)' text-anchor='middle'>su Na⁺'yı izler</text></svg>",
-        "key": "ADH suyu, aldosteron Na⁺'yı geri kazandırır. Alkol ADH'yi baskılar, idrar artar."
+        "key": "ADH hipotalamusta üretilir. Aldosteronu böbreğin saldığı renin başlatır. Alkol ADH'yi baskılar, idrar artar."
       },
       {
         "h": "Böbrekten geçen kan nasıl değişir?",
-        "p": "Kan böbreğe <b>atardamarla</b> gelir, <b>toplardamarla</b> çıkar. Çıkan kanda üre azalmış, su ve tuz dengelenmiştir. Böbrek hücreleri solunum yaptığı için O<sub>2</sub> ve glikoz azalır, CO<sub>2</sub> artar. Glomerulda gaz alışverişi olmaz: glomeruldan çıkan kan hâlâ <b>oksijenlidir</b>; O<sub>2</sub>'yi tüp çevresindeki kılcallarda bırakır.",
+        "p": "Böbrekten çıkan kanda üre azalmış, su ve tuz dengelenmiştir. Böbrek hücreleri solunum yaptığı için O<sub>2</sub> ve glikoz azalır, CO<sub>2</sub> artar.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bos-k1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='6' y='8' width='110' height='28' rx='5' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.4'/><text x='61' y='26' font-size='10.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>böbrek atardamarı</text><path d='M120 22 H196' stroke='var(--ink)' stroke-width='1.4' marker-end='url(#bos-k1)'/><text x='158' y='16' font-size='9.5' fill='var(--muted)' text-anchor='middle'>böbrekten geçiş</text><rect x='200' y='8' width='114' height='28' rx='5' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.4'/><text x='257' y='26' font-size='10.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>böbrek toplardamarı</text><rect x='6' y='44' width='308' height='22' rx='4' fill='var(--muted)' fill-opacity='0.08'/><text x='14' y='59' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>üre</text><text x='257' y='59' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>↓ azalır</text><rect x='6' y='70' width='308' height='22' rx='4' fill='var(--muted)' fill-opacity='0.08'/><text x='14' y='85' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>O₂ ve glikoz</text><text x='257' y='85' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>↓ azalır</text><rect x='6' y='96' width='308' height='22' rx='4' fill='var(--muted)' fill-opacity='0.08'/><text x='14' y='111' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>CO₂</text><text x='257' y='111' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>↑ artar</text><rect x='6' y='122' width='308' height='22' rx='4' fill='var(--muted)' fill-opacity='0.08'/><text x='14' y='137' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>su ve tuz</text><text x='257' y='137' font-size='11' fill='var(--muted)' text-anchor='middle' font-weight='700'>dengelenir</text><rect x='6' y='152' width='308' height='44' rx='6' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.2'/><text x='160' y='170' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>glomeruldan çıkan kan hâlâ oksijenlidir</text><text x='160' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>O₂'yi tüp çevresindeki kılcallarda bırakır</text></svg>",
-        "key": "Vücutta üresi en az olan kan böbrek toplardamarında, en çok olan karaciğer toplardamarındadır."
+        "key": "Glomeruldan çıkan kan hâlâ oksijenlidir. Üresi en az kan böbrek toplardamarında, en çok kan karaciğer toplardamarındadır.",
+        "once": {
+          "soru": "Böbrek toplardamarındaki kanda, atardamara göre ne azalmıştır?",
+          "secenekler": [
+            {
+              "yazi": "Üre",
+              "neden": "Üre süzülüp idrarla atılır.",
+              "dogru": true
+            },
+            {
+              "yazi": "CO₂",
+              "neden": "Böbrek hücreleri solunum yapar; CO₂ artar."
+            },
+            {
+              "yazi": "Alyuvar",
+              "neden": "Alyuvar süzülmez; sayısı değişmez."
+            }
+          ]
+        }
       },
       {
         "h": "Böbrek sağlığı",
-        "p": "Az su içmek, idrardaki tuzların çökelip <b>böbrek taşı</b> oluşturmasını kolaylaştırır. Böbrekler çalışmazsa (<b>böbrek yetmezliği</b>) üre ve K<sup>+</sup> kanda birikir; kan <b>diyaliz</b> makinesinde yarı geçirgen zardan geçirilerek temizlenir ya da böbrek <b>nakli</b> yapılır.",
+        "p": "Az su içmek <b>böbrek taşına</b> yol açabilir. Böbrek çalışmazsa üre ve K<sup>+</sup> kanda birikir; kan <b>diyalizle</b> temizlenir ya da <b>nakil</b> yapılır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bos-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='bos-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><defs><marker id='bos-15' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><text x='160' y='18' font-size='12' fill='var(--muted)' text-anchor='middle'>diyaliz: yarı geçirgen zardan difüzyon</text><rect x='40' y='34' width='240' height='108' rx='8' fill='var(--muted)' fill-opacity='0.06' stroke='var(--muted)' stroke-width='1.2'/><path d='M40 88 L280 88' stroke='var(--ink)' stroke-width='2' stroke-dasharray='6 4'/><path d='M52 52 L268 52' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#bos-13)'/><path d='M268 128 L52 128' stroke='var(--c1)' stroke-width='2' fill='none' marker-end='url(#bos-14)'/><text x='34' y='56' font-size='12' fill='var(--c2)' text-anchor='end'>kan</text><text x='34' y='132' font-size='12' fill='var(--c1)' text-anchor='end'>sıvı</text><circle cx='70' cy='72' r='5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)'/><circle cx='155' cy='72' r='5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)'/><circle cx='245' cy='72' r='5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)'/><path d='M115 66 L115 108' stroke='var(--c3)' stroke-width='2' fill='none' marker-end='url(#bos-15)'/><path d='M200 66 L200 108' stroke='var(--c3)' stroke-width='2' fill='none' marker-end='url(#bos-15)'/><text x='122' y='108' font-size='11' fill='var(--ink)' text-anchor='start'>üre</text><text x='207' y='108' font-size='11' fill='var(--ink)' text-anchor='start'>K⁺, tuz</text><text x='160' y='166' font-size='11' fill='var(--muted)' text-anchor='middle'>kan hücreleri ve proteinler zardan geçmez</text><text x='160' y='188' font-size='11' fill='var(--ink)' text-anchor='middle'>sıvıda üre yok, bu yüzden üre kandan sıvıya geçer</text></svg>",
-        "key": "Diyaliz zarından üre ve fazla tuz geçer; kan hücreleri ve proteinler geçmez."
+        "key": "Diyalizde üre ve fazla tuz zardan geçer; kan hücreleri ve proteinler geçmez.",
+        "once": {
+          "soru": "Diyaliz makinesi kanı yarı geçirgen bir zardan geçirir. Zardan ne geçmemeli?",
+          "secenekler": [
+            {
+              "yazi": "Kan hücreleri",
+              "neden": "Kan hücreleri ve proteinler kanda kalmalı; zar onları geçirmez.",
+              "dogru": true
+            },
+            {
+              "yazi": "Üre",
+              "neden": "Üre zardan geçer; diyalizin amacı onu atmaktır."
+            },
+            {
+              "yazi": "Fazla tuz",
+              "neden": "Fazla tuz da zardan geçip atılır."
+            }
+          ]
+        }
       },
       {
         "h": "Özet",

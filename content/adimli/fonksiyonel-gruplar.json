@@ -31,13 +31,7 @@
     "ipucu": "Hangi grup suyla hidrojen bağı kurabilir?",
     "tamam": "H'nin yerine gelen −OH, gaz hâlindeki etanı 78 °C'de kaynayan ve suyla her oranda karışan etanole çevirdi: −OH suyla hidrojen bağı kurar."
    },
-   "kart": 1,
-   "goster": {
-    "deger": {
-     "g": 2
-    },
-    "not": "−Br eklenince bromoetan oluşur: 38 °C'de kaynayan bir sıvı, ama suyla karışmaz, dibe çöker."
-   }
+   "kart": 1
   },
   {
    "baslik": "Zincir uzarsa",
@@ -65,13 +59,7 @@
     "ipucu": "Çubuğun mavi kaldığı son alkolü ara.",
     "tamam": "Propanole kadar alkoller suyla her oranda karışır; bütanolden sonra çözünürlük hızla düşer."
    },
-   "kart": 2,
-   "goster": {
-    "deger": {
-     "n": 2
-    },
-    "not": "Etanolde (2 C) apolar zincir kısa, −OH baskın: suyla her oranda karışır."
-   }
+   "kart": 3
   },
   {
    "baslik": "Aynı formül, farklı grup",
@@ -138,7 +126,7 @@
      }
     ]
    },
-   "kart": 3
+   "kart": 4
   },
   {
    "baslik": "Aldehit mi, keton mu?",
@@ -179,11 +167,11 @@
      }
     ]
    },
-   "kart": 8
+   "kart": 9
   },
   {
    "baslik": "Ester yap",
-   "metin": "Asidi ve alkolü seçerek ananas kokulu etil bütanoatı yap.",
+   "metin": "Asit + alkol ⇌ ester + su. Ester adında önce alkolün alkili, sonra asidin -oat'ı gelir. Asidi ve alkolü seçerek ananas kokulu etil bütanoatı yap.",
    "sahne": {
     "tur": "kim12-ester"
    },
@@ -216,17 +204,11 @@
     "ipucu": "Adın ilk kısmı alkolden (etil), ikinci kısmı asitten (bütanoat) gelir.",
     "tamam": "Bütanoik asit + etanol ⇌ etil bütanoat + su. Tepkime tersinirdir; ester suyla geri parçalanabilir (ester hidrolizi)."
    },
-   "kart": 11,
-   "goster": {
-    "deger": {
-     "b": 2
-    },
-    "not": "Asetik asit + izoamil alkol → <b>izoamil asetat</b> + su: muz kokusu. Adın ilk kısmı alkolden, ikinci kısmı asitten gelir."
-   }
+   "kart": 11
   },
   {
    "baslik": "Sabun yap",
-   "metin": "NaOH her ester bağını koparır. 1 mol yağı tamamen sabunlaştır, NaOH artmasın.",
+   "metin": "Yağda gliserol üç yağ asidine ester bağıyla bağlıdır. NaOH her ester bağını koparır. 1 mol yağı tamamen sabunlaştır, NaOH artmasın.",
    "sahne": {
     "tur": "kim12-sabun"
    },
@@ -250,13 +232,7 @@
     "ipucu": "Kaç ester bağı var?",
     "tamam": "1 mol trigliserit + 3 mol NaOH → 1 mol gliserol + 3 mol sabun. Sabun, yağ asidinin sodyum tuzudur."
    },
-   "kart": 12,
-   "goster": {
-    "deger": {
-     "n": 1
-    },
-    "not": "1 mol NaOH yalnızca bir ester bağını koparır: 1 mol sabun oluşur, iki ester bağı sağlam kalır."
-   }
+   "kart": 12
   }
  ],
  "kapanis": [
@@ -266,5 +242,6 @@
   "1° alkol → aldehit → asit, 2° alkol → keton; 3° alkol yükseltgenmez.",
   "Aldehit Tollens'i verir, keton vermez; benzaldehit Fehling'i vermez.",
   "Asit + alkol ⇌ ester + su; 1 mol yağ 3 mol NaOH ile sabunlaşır."
- ]
+ ],
+ "soruOnce": true
 }

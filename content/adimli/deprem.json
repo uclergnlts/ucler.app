@@ -63,11 +63,11 @@
      }
     ]
    },
-   "kart": 3
+   "kart": 4
   },
   {
    "baslik": "Uzaklık ve süre farkı",
-   "metin": "İstasyonu öyle bir yere koy ki P ile S arasında <b>10 saniye</b> olsun. Sonra oynat.",
+   "metin": "P ile S arasındaki her saniyelik fark yaklaşık 8 km uzaklık demektir. İstasyonu öyle bir yere koy ki P ile S arasında <b>10 saniye</b> olsun. Sonra oynat.",
    "sahne": {
     "tur": "fiz15-istasyon",
     "sure": 6
@@ -97,17 +97,11 @@
     "tamam": "Yaklaşık <b>84 km</b>: P 14 s'de, S 24 s'de gelir. Her saniyelik fark ≈ 8,4 km eder; bu yüzden kural d ≈ 8 km × Δt.",
     "ipucu": "Her 1 s fark yaklaşık 8 km uzaklık demek."
    },
-   "goster": {
-    "deger": {
-     "d": 160
-    },
-    "not": "160 km'de fark yaklaşık 19 s: uzaklık iki katına çıkınca fark da iki katına çıkar."
-   },
    "kart": 6
   },
   {
    "baslik": "Büyüklük ve enerji",
-   "metin": "Büyüklüğü artır. Kare, açığa çıkan enerjiyi temsil ediyor.",
+   "metin": "Büyüklük 1 artınca enerji yaklaşık 32 kat artar. Büyüklüğü artır; kare, açığa çıkan enerjiyi temsil ediyor.",
    "sahne": {
     "tur": "fiz15-buyukluk"
    },
@@ -135,17 +129,11 @@
     "tamam": "M = 7: 5'liğin yaklaşık <b>1000 katı</b> enerji (32 × 32). Büyüklükteki küçük bir fark, enerjide dev bir farktır.",
     "ipucu": "Her +1 yaklaşık 32 kat. 32 × 32 ≈ 1000."
    },
-   "goster": {
-    "deger": {
-     "M": 6
-    },
-    "not": "M = 6: yaklaşık 32 kat enerji."
-   },
    "kart": 7
   },
   {
    "baslik": "Hangi bina sallanır?",
-   "metin": "Masa yavaş sallanacak: periyot 2 s (0,5 Hz). Binaların doğal periyotları altta yazıyor.",
+   "metin": "Her binanın kendi salınım periyodu vardır. Masa yavaş sallanacak: periyot 2 s (0,5 Hz). Binaların doğal periyotları altta yazıyor.",
    "sahne": {
     "tur": "fiz15-sarsma",
     "sure": 6
@@ -172,11 +160,11 @@
      }
     ]
    },
-   "kart": 8
+   "kart": 9
   },
   {
    "baslik": "Rezonansı yakala",
-   "metin": "Sarsıntının frekansını ayarla: <b>3 katlı binayı</b> rezonansa sok ve oynat.",
+   "metin": "Bina, sarsıntının frekansı kendi frekansına (f = 1/T) eşit olunca rezonansa girer. Frekansı ayarla: <b>3 katlı binayı</b> rezonansa sok ve oynat.",
    "sahne": {
     "tur": "fiz15-sarsma",
     "sure": 6
@@ -205,13 +193,6 @@
     },
     "tamam": "3 katlının periyodu ≈ 0,3 s, yani f ≈ 3,3 Hz. Kısa periyotlu, sert zemindeki sarsıntı alçak binaları zorlar.",
     "ipucu": "f = 1 / T; T ≈ 0,1 × 3 = 0,3 s."
-   },
-   "goster": {
-    "deger": {
-     "f": 1
-    },
-    "oynat": true,
-    "not": "1 Hz'de 10 katlı bina rezonansta: periyodu ≈ 1 s."
    },
    "kart": 10
   },
@@ -262,5 +243,6 @@
   "P ile S arasındaki her saniye yaklaşık 8 km uzaklık demektir.",
   "+1 büyüklük ≈ 32 kat enerji.",
   "Sarsıntının periyodu binanın doğal periyoduna yakınsa rezonans olur; izolatör bunu önler."
- ]
+ ],
+ "soruOnce": true
 }
