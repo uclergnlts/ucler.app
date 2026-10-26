@@ -2,8 +2,9 @@
 // Ses ve titreşim. Cevap sesleri: doğruda kısa, yükselen iki nota; yanlışta alçak, yumuşak bir ton. Bitiş sesleri: aşama
 // bitince küçük bir arpej, konu, ünite ya da seviye testi bitince ondan ayrı, daha dolgun bir kapanış. Animasyon sesleri
 // (görsel çizilirken hafif bir hışırtı, madalya, konfeti, sayarak artan puan, görev rozeti) ayrıca kapatılabilir.
-// Sesler dosya değil, Web Audio ile burada üretilir; lisans gerekmez. Titreşim uygulamada Capacitor Haptics ile,
-// tarayıcıda (destekliyorsa) navigator.vibrate ile olur. İkisi de Ayarlar'dan kapatılır.
+// Sesler public/ses/ altındaki kısa mp3'ler: earshot'un (MIT) koddan ürettiği ses bankasından seçildi (docs/SESLER.md).
+// Dosya henüz yüklenmediyse ya da yüklenemezse aynı olay burada Web Audio ile üretilen sade sesle çalar.
+// Titreşim uygulamada Capacitor Haptics ile, tarayıcıda (destekliyorsa) navigator.vibrate ile olur. İkisi de Ayarlar'dan kapatılır.
 import { useSyncExternalStore } from "react";
 import { Haptics, ImpactStyle, NotificationType } from "@capacitor/haptics";
 import { read, subscribe, write } from "./store";
@@ -29,12 +30,45 @@ function baglam() {
     k.threshold.value = -18; k.ratio.value = 4;
     k.connect(ctx.destination);
     cikis = k;
+    yukle(ctx);
   }
   // iOS bağlamı arka plana geçince "interrupted", diğerleri "suspended" yapar.
   if (ctx.state !== "running") ctx.resume().catch(() => {});
   return ctx;
 }
-// iOS sesi ancak bir dokunuşun içinde açar: ilk dokunuşta bağlamı hazırla.
+
+/** Dosya adı -> ses düzeyi. Düzeyler dosyaların ölçülen yüksekliğine göre birbirine yakın duyulsun diye ayarlandı. */
+const DOSYA = {
+  dogru: 0.5, yanlis: 0.55, asama: 0.3, seviye: 0.55,
+  cizim: 0.5, madalya: 0.35, konfeti: 0.28, puan: 0.1, odul: 0.3,
+} as const;
+type Dosya = keyof typeof DOSYA;
+const tampon: Partial<Record<Dosya, AudioBuffer>> = {};
+let yuklendi = false;
+function yukle(c: AudioContext) {
+  if (yuklendi) return;
+  yuklendi = true;
+  for (const ad of Object.keys(DOSYA) as Dosya[]) {
+    fetch(`/ses/${ad}.mp3`)
+      .then((r) => (r.ok ? r.arrayBuffer() : Promise.reject()))
+      .then((b) => new Promise<AudioBuffer>((ok, hata) => c.decodeAudioData(b, ok, hata)))
+      .then((b) => { tampon[ad] = b; })
+      .catch(() => {}); // yüklenemezse üretilen ses çalar
+  }
+}
+/** Yüklenmiş dosyayı bas saniye sonra çalar; yoksa false döner. hiz perdeyi de değiştirir (puan tıkı yükselir). */
+function cal(c: AudioContext, ad: Dosya, hiz = 1, bas = 0) {
+  const b = tampon[ad];
+  if (!b) return false;
+  const s = c.createBufferSource(), g = c.createGain();
+  s.buffer = b;
+  s.playbackRate.value = hiz;
+  g.gain.value = DOSYA[ad];
+  s.connect(g).connect(cikis!);
+  s.start(c.currentTime + bas);
+  return true;
+}
+// iOS sesi ancak bir dokunuşun içinde açar: ilk dokunuşta bağlamı hazırla (dosyalar o an yüklenmeye başlar).
 if (typeof window !== "undefined") window.addEventListener("pointerdown", () => baglam(), { once: true, passive: true });
 
 /** f Hz'lik bir nota: bas saniye sonra başlar, sure saniye sürer. kay verilirse frekans sona doğru oraya kayar. */
@@ -81,7 +115,7 @@ export type SesTuru = "dogru" | "yanlis" | "asama" | "seviye";
 export function ses(tur: SesTuru) {
   if (!sesAcik()) return;
   const c = baglam();
-  if (c) {
+  if (c && !cal(c, tur)) {
     if (tur === "dogru") { nota(c, 784, 0, 0.12, 0.09); nota(c, 1175, 0.08, 0.2, 0.08); }
     else if (tur === "yanlis") { nota(c, 233, 0, 0.18, 0.07, "triangle"); nota(c, 196, 0.1, 0.22, 0.06, "triangle"); }
     else if (tur === "asama") [523, 659, 784, 1047].forEach((f, i) => nota(c, f, i * 0.09, 0.28, 0.07));
@@ -110,7 +144,10 @@ export function animSes(tur: AnimSes, deger = 0) {
     // Aynı anda çizilen birkaç görsel tek hışırtı versin. deger: çizimin süresi (ms).
     if (simdi - sonCizim < 0.5) return;
     sonCizim = simdi;
+    if (cal(c, "cizim", deger > 1100 ? 0.9 : 1.1)) return;
     hisirti(c, Math.min(1.4, Math.max(0.35, deger / 1000)), 0.03);
+  } else if (tur !== "puan" && cal(c, tur, 1, tur === "madalya" ? 0.12 : 0)) {
+    return;
   } else if (tur === "madalya") {
     nota(c, 660, 0.12, 0.18, 0.06, "sine", 990);
     nota(c, 1320, 0.2, 0.25, 0.025);
@@ -122,6 +159,7 @@ export function animSes(tur: AnimSes, deger = 0) {
     // Sayarak artan puanda tık; sıklığı sınırlı, deger 0..1 arası ilerleme (perde yükselir).
     if (simdi - sonPuan < 0.07) return;
     sonPuan = simdi;
+    if (cal(c, "puan", 0.85 + deger * 0.5)) return;
     nota(c, 1100 + deger * 700, 0, 0.04, 0.03, "triangle");
   } else {
     nota(c, 988, 0, 0.12, 0.04); nota(c, 1319, 0.07, 0.2, 0.035);
