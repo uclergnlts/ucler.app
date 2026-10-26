@@ -166,7 +166,7 @@ function Birikim({ t, oynuyor, s }: SahneProps) {
           </g>
         );
       })}
-      <text x={326} y={234} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="end">her basamakta ≈ 10 kat (temsilî)</text>
+      {zt > 0 && <text x={326} y={234} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="end">her basamakta ≈ 10 kat (temsilî)</text>}
     </svg>
   );
 }

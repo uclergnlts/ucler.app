@@ -349,12 +349,14 @@ function Denizalti({ v, t, oynuyor }: SahneProps) {
         <rect x={116} y={y - 6} width={36} height={14} rx={5} fill={dolu ? "var(--c1)" : "#fff"} opacity={dolu ? 0.85 : 0.7} />
         <rect x={188} y={y - 6} width={36} height={14} rx={5} fill={dolu ? "var(--c1)" : "#fff"} opacity={dolu ? 0.85 : 0.7} />
       </g>
+      {u > 0 && <>
       <Ok x1={56} y1={y - 4} x2={56} y2={y - 34} renk="var(--c3)" />
       <Ok x1={56} y1={y + 4} x2={56} y2={y + (dolu ? 46 : 24)} renk="var(--c2)" />
       <g fontSize={12} fontWeight={700}>
         <text x={64} y={y - 30} fill="var(--c3)">F<tspan fontSize={9} dy={3}>k</tspan></text>
         <text x={64} y={y + 40} fill="var(--c2)">G</text>
       </g>
+      </>}
       <text x={170} y={242} fontSize={13} fontWeight={800} textAnchor="middle" fill={bitti ? "var(--good)" : "var(--muted)"}>
         {bitti ? (
           <>{dolu ? "G > F" : "G < F"}<tspan fontSize={9} dy={3}>k</tspan><tspan dy={-3}>{dolu ? ": denizaltı dalıyor" : ": denizaltı yükseliyor"}</tspan></>

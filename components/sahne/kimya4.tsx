@@ -63,7 +63,7 @@ function Erime({ s, t, oynuyor }: SahneProps) {
         <text x={20} y={22}>Tuz <tspan fontWeight={600} fill="var(--muted)">(kristal)</tspan></text>
         <text x={186} y={22}>Cam <tspan fontWeight={600} fill="var(--muted)">(amorf)</tspan></text>
       </g>
-      <MiniGrafik x={24} f={tuzT} u={u} renk="var(--kimya)" cizgi="801 °C" />
+      <MiniGrafik x={24} f={tuzT} u={u} renk="var(--kimya)" cizgi={u > 0 ? "801 °C" : undefined} />
       <MiniGrafik x={190} f={camT} u={u} renk="var(--c1)" />
       <g>
         <line x1={20} x2={150} y1={208} y2={208} stroke="var(--line-2)" strokeWidth={2} />

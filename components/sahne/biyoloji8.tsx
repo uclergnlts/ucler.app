@@ -383,15 +383,15 @@ function Glikoliz({ t, oynuyor, s }: SahneProps) {
         <text x={170} y={114} fontSize={11.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">{bol ? "2 pirüvat (3C + 3C)" : "glikoz (6C)"}</text>
       </g>
       <g fontSize={13} fontWeight={800}>
-        <g opacity={harca ? 1 : 0.25}>
+        <g opacity={harca ? 1 : 0}>
           <text x={40} y={150} fill="var(--c2)">−2 ATP</text>
           <text x={40} y={166} fontSize={11} fontWeight={600} fill="var(--muted)">başta harcanır</text>
         </g>
-        <g opacity={uret ? 1 : 0.25}>
+        <g opacity={uret ? 1 : 0}>
           <text x={150} y={150} fill={YESIL}>+4 ATP</text>
           <text x={150} y={166} fontSize={11} fontWeight={600} fill="var(--muted)">sonra üretilir</text>
         </g>
-        <g opacity={uret ? 1 : 0.25}>
+        <g opacity={uret ? 1 : 0}>
           <text x={250} y={150} fill="var(--c1)">+2 NADH</text>
         </g>
       </g>

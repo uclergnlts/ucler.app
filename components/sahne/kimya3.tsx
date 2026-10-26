@@ -43,7 +43,7 @@ function Mendeleyev({ s, t, oynuyor }: SahneProps) {
             <g key={i}>
               <rect x={x} y={52} width={52} height={74} rx={10} fill={ge ? "#e6f6ed" : "#fff"} stroke={bos ? (ge ? "var(--c3)" : "var(--kimya)") : "var(--line-2)"} strokeWidth={1.8} strokeDasharray={bos && !ge ? "5 4" : undefined} />
               <text x={x + 26} y={90} fontSize={22} fontWeight={800} textAnchor="middle" fill={bos ? (ge ? "var(--c3)" : "var(--kimya)") : "var(--ink)"} fontFamily="var(--f-display)">{ge ? "Ge" : sb}</text>
-              <text x={x + 26} y={113} fontSize={12} textAnchor="middle" fill="var(--muted)">{ge ? "72,6" : m}</text>
+              <text x={x + 26} y={113} fontSize={12} textAnchor="middle" fill="var(--muted)">{ge ? "72,6" : bos && u <= 0 ? "" : m}</text>
             </g>
           );
         })}

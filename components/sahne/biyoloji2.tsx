@@ -101,7 +101,7 @@ function EnzimSubstrat({ t, s }: SahneProps) {
         </g>
       )}
       <text x={170} y={24} fontSize={14} fontWeight={800} fill="var(--ink)" textAnchor="middle">{evre}</text>
-      <text x={170} y={222} fontSize={13} fontWeight={700} fill="var(--muted)" textAnchor="middle">E + S → ES → E + ürünler</text>
+      {u > 0 && <text x={170} y={222} fontSize={13} fontWeight={700} fill="var(--muted)" textAnchor="middle">E + S → ES → E + ürünler</text>}
     </svg>
   );
 }

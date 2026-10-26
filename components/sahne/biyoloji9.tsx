@@ -255,7 +255,7 @@ function Refleks({ t, oynuyor, s }: SahneProps) {
   const Y = refleksYol(e);
   const sinyal = u <= 0 || u >= 1 ? null : u < 0.25 ? yolNokta(Y.duyu, d) : u < 0.33 ? yolNokta(Y.ara, a) : u < 0.55 ? yolNokta(Y.motor, m) : null;
   const beyinS = u > 0.3 && u < 0.9 ? yolNokta(BEYIN, b) : null;
-  const kasIs = u >= 0.55;
+  const kasIs = u >= 0.55, once = u <= 0;
   return (
     <svg viewBox="0 0 340 240" role="img" aria-label={u >= 1 ? "El sobadan çekildi; acı sonra hissedildi" : "Sıcak sobaya dokunan el, omurilik ve beyin"}>
       <g>
@@ -276,19 +276,19 @@ function Refleks({ t, oynuyor, s }: SahneProps) {
         <text x={290} y={36} fontSize={11.5} fontWeight={700} fill={MOR} textAnchor="middle">beyin</text>
       </g>
       <g fill="none" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round">
-        <polyline points={nokta(Y.duyu)} stroke={MAVI} />
-        <polyline points={nokta(Y.ara)} stroke={SARI} />
-        <polyline points={nokta(Y.motor)} stroke={KIRMIZI} />
+        <polyline points={nokta(Y.duyu)} stroke={once ? "var(--line-2)" : MAVI} />
+        <polyline points={nokta(Y.ara)} stroke={once ? "var(--line-2)" : SARI} />
+        <polyline points={nokta(Y.motor)} stroke={once ? "var(--line-2)" : KIRMIZI} />
         <polyline points={nokta(BEYIN)} stroke="var(--muted)" strokeDasharray="4 4" />
       </g>
-      <g fontSize={11} fontWeight={700} fill="var(--ink)">
+      {!once && <g fontSize={11} fontWeight={700} fill="var(--ink)">
         {REFLEKS_ANAHTAR.map(([yazi, renk], i) => (
           <g key={yazi}>
             <line x1={196} x2={212} y1={200 + i * 14} y2={200 + i * 14} stroke={renk} strokeWidth={3} strokeLinecap="round" />
             <text x={218} y={204 + i * 14}>{yazi}</text>
           </g>
         ))}
-      </g>
+      </g>}
       {sinyal && <circle cx={sinyal[0]} cy={sinyal[1]} r={5.5} fill={u < 0.25 ? MAVI : u < 0.33 ? SARI : KIRMIZI} stroke="#fff" strokeWidth={1.5} />}
       {beyinS && <circle cx={beyinS[0]} cy={beyinS[1]} r={4.5} fill="var(--muted)" />}
       <g fontSize={12} fontWeight={800}>
@@ -375,10 +375,10 @@ function Hedef({ t, oynuyor, s }: SahneProps) {
           })}
         </g>
       )}
-      <g fontSize={11.5} fontWeight={700}>
+      {u > 0 && <g fontSize={11.5} fontWeight={700}>
         <text x={10} y={218} fill={YESIL}>uyan reseptör</text>
         <text x={330} y={218} fill="var(--muted)" textAnchor="end">uymayan reseptör</text>
-      </g>
+      </g>}
     </svg>
   );
 }
@@ -420,7 +420,7 @@ function Hiz({ t, oynuyor, s }: SahneProps) {
         {u > 0.08 && zaman(0.08, 0.24, 186, KIRMIZI)}
         {u > 0.45 && zaman(0.45, 1, 202, YESIL)}
       </g>
-      <text x={170} y={226} fontSize={11.5} fontWeight={600} fill="var(--muted)" textAnchor="middle">Sinirsel: milisaniyeler · Hormonal: dakikalar, günler</text>
+      {u > 0 && <text x={170} y={226} fontSize={11.5} fontWeight={600} fill="var(--muted)" textAnchor="middle">Sinirsel: milisaniyeler · Hormonal: dakikalar, günler</text>}
     </svg>
   );
 }

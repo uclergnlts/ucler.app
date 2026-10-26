@@ -337,7 +337,7 @@ function Co2({ t, oynuyor, s }: SahneProps) {
       <text x={30} y={22} fontSize={10.5} fontWeight={700} fill={KIRMIZI}>alyuvar</text>
       <text x={296} y={22} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">plazma</text>
       {satir.map((r, i) => (
-        <text key={i} x={140} y={r.y} fontSize={13} fontWeight={800} fill={r.renk} textAnchor="middle" opacity={adim > i ? 1 : 0.12}>{r.yazi}</text>
+        <text key={i} x={140} y={r.y} fontSize={13} fontWeight={800} fill={r.renk} textAnchor="middle" opacity={adim > i ? 1 : u > 0 ? 0.12 : 0}>{r.yazi}</text>
       ))}
       {adim >= 3 && (
         <g>

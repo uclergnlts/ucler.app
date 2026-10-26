@@ -392,11 +392,11 @@ function Ortam({ t, oynuyor, s }: SahneProps) {
           <text x={242} y={72} fill="var(--c2)">kısa λ</text>
         </g>
       )}
-      <g fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">
+      {zt > 0 && <g fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">
         <text x={(X0 + J) / 2} y={Y + 64}>ince ip: hızlı</text>
         <text x={(J + X1) / 2} y={Y + 64}>kalın ip: yavaş</text>
-      </g>
-      <text x={326} y={206} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="end">{bitti ? "frekansı kaynak, hızı ortam belirler" : "aynı kaynak, aynı frekans"}</text>
+      </g>}
+      {zt > 0 && <text x={326} y={206} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="end">{bitti ? "frekansı kaynak, hızı ortam belirler" : "aynı kaynak, aynı frekans"}</text>}
     </svg>
   );
 }

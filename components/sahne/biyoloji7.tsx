@@ -281,10 +281,10 @@ function Catal({ s, t, oynuyor }: SahneProps) {
         <circle cx={kayik(alt(0.71), -9).x} cy={kayik(alt(0.71), -9).y} r={5} fill="var(--c2)" />
       </g>
       <g fontSize={12} fontWeight={700}>
-        <text x={fx + 2} y={88} fill="#b47f0c" textAnchor="middle">helikaz</text>
-        <line x1={fx + 2} y1={92} x2={fx + 2} y2={106} stroke="#b47f0c" strokeWidth={1.2} />
+        {u > 0 && <text x={fx + 2} y={88} fill="#b47f0c" textAnchor="middle">helikaz</text>}
+        {u > 0 && <line x1={fx + 2} y1={92} x2={fx + 2} y2={106} stroke="#b47f0c" strokeWidth={1.2} />}
         <text x={fx - 95} y={124} fill="var(--c1)" textAnchor="middle" opacity={sinir((u - 0.5) * 4, 0, 1)}>DNA polimeraz</text>
-        <text x={kayik(alt(0.71), -9).x + 10} y={alt(0.71).y + 16} fill="var(--c2)">ligaz</text>
+        {u > 0 && <text x={kayik(alt(0.71), -9).x + 10} y={alt(0.71).y + 16} fill="var(--c2)">ligaz</text>}
         <text x={322} y={152} fill="var(--muted)" textAnchor="end" fontWeight={600}>açılmamış DNA</text>
       </g>
       <g fontSize={11.5} fontWeight={700}>

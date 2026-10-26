@@ -451,7 +451,7 @@ function Tuz({ s, t, oynuyor }: SahneProps) {
       <g>
         <rect x={238} y={62} width={76} height={104} rx={12} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
         <text x={276} y={88} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">pH metre</text>
-        <text x={276} y={124} fontSize={22} fontWeight={800} textAnchor="middle" fill={p > 7.05 ? "var(--c1)" : "var(--ink)"}>{virgul(p, 1)}</text>
+        <text x={276} y={124} fontSize={22} fontWeight={800} textAnchor="middle" fill={p > 7.05 ? "var(--c1)" : "var(--ink)"}>{u > 0 ? virgul(p, 1) : "?"}</text>
         <line x1={276} x2={276} y1={166} y2={186} stroke="var(--ink)" strokeWidth={1.6} />
         <line x1={276} x2={206} y1={186} y2={186} stroke="var(--ink)" strokeWidth={1.6} />
       </g>

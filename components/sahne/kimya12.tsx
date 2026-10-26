@@ -164,7 +164,7 @@ function Dikromat({ s, t, oynuyor }: SahneProps) {
     <svg viewBox="0 0 340 246" role="img" aria-label={bitti ? "1° ve 2° alkol dikromatı yeşile çevirdi; 3° alkolde renk turuncu kaldı" : "Üç tüpte turuncu dikromat çözeltisi"}>
       {ALK.map((d, i) => {
         const x = 58 + i * 112, tepki = d.h > 0;
-        const renk = tepki && k > 0.5 ? KROM3 : DIKROMAT, op = tepki ? 0.75 - 0.25 * Math.abs(1 - 2 * k) : 0.75;
+        const renk = tepki && k > 0.5 ? KROM3 : DIKROMAT, op = tepki && u > 0 ? 0.75 - 0.25 * Math.abs(1 - 2 * k) : 0.75;
         return (
           <g key={d.ad}>
             <Tup x={x} renk={renk} op={op} ust={84} alt={150} />

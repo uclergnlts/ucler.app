@@ -134,12 +134,14 @@ function Su({ t, oynuyor, s }: SahneProps) {
         <text x={78} y={24}>iletim demeti yok</text>
         <text x={258} y={24}>iletim demeti var</text>
       </g>
+      {u > 0 && (
       <g fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">
         <text x={78} y={226}>{u > 0.95 ? "yavaş geçen su" : "su hücreden hücreye"}</text>
         <text x={78} y={241} fill={u > 0.95 ? "var(--bad)" : undefined} fontWeight={u > 0.95 ? 800 : 600}>{u > 0.95 ? "tepeye ulaşamadı" : "yavaşça geçer"}</text>
         <text x={258} y={226}>ksilem borusu suyu</text>
         <text x={258} y={241}>hızla yukarı taşır</text>
       </g>
+      )}
     </svg>
   );
 }

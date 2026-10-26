@@ -75,8 +75,8 @@ function Elma({ t, oynuyor, s, secim }: SahneProps) {
       <circle cx={160} cy={y} r={9} fill="var(--c2)" />
       <Ok x1={186} y1={y - 16} x2={186} y2={y + 14} renk="var(--c2)" kalin={2.5} />
       <text x={194} y={y + 2} fontSize={12} fontWeight={800} fill="var(--c2)">1 N</text>
-      <Ok x1={140} y1={214} x2={140} y2={188} renk="var(--c1)" kalin={2.5} />
-      <text x={132} y={212} fontSize={12} fontWeight={800} fill="var(--c1)" textAnchor="end">1 N</text>
+      {u > 0 && <Ok x1={140} y1={214} x2={140} y2={188} renk="var(--c1)" kalin={2.5} />}
+      {u > 0 && <text x={132} y={212} fontSize={12} fontWeight={800} fill="var(--c1)" textAnchor="end">1 N</text>}
       <text x={326} y={226} fontSize={11.5} fontWeight={800} fill="var(--c3)" textAnchor="end">Dünya</text>
       <g fontSize={12.5} fontWeight={800}>
         <text x={326} y={22} fill="var(--c2)" textAnchor="end">elma: 0,1 kg</text>

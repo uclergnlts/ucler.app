@@ -357,7 +357,8 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
 
   return (
     <>
-      <div className="ad-sahne" ref={sahneRef}>
+      {/* Tahminden önce sahnenin ekran okuyucu açıklaması gizli: çoğu sonucu anlatıyor. */}
+      <div className="ad-sahne" ref={sahneRef} aria-hidden={tahminOncesi || undefined}>
         <C s={a.sahne} v={v} set={set} t={o.t} oynuyor={o.oynuyor} kosular={kosular} secim={secim} saat={saat} />
       </div>
 
