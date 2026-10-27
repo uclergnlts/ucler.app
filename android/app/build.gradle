@@ -8,7 +8,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         // Mağaza derlemesinde (android-aab.yml) sürüm numarası iş akışından gelir; her yükleme bir öncekinden büyük olmalı.
-        versionCode (System.getenv("SURUM_KODU") ?: "1").toInteger()
+        versionCode Integer.parseInt(System.getenv("SURUM_KODU") ?: "1")
         versionName System.getenv("SURUM_ADI") ?: "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
