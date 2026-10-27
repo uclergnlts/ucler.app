@@ -1,0 +1,312 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#e30a17}
+.head .sub i{display:block;width:44px;height:6px;background:#e30a17;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#e30a17}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+.title.big{font-size:104px;letter-spacing:-2.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:88px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#e30a17;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#e30a17;border-radius:3px}
+[data-in],[data-w]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>29 EKİM ÖZEL</div><div class="brand">ucler<b>.</b></div></div>
+
+<!-- Sahne zamanları kelimeye bağlı: data-sw="kelime" (sahne başı), data-w="kelime" (öğe belirir), data-wout="kelime" (öğe söner).
+     "kelime#2" ikinci geçişi, "kelime+0.4" kaydırmayı gösterir. Yeni ses gelince yalnızca PH değişir. -->
+
+<!-- 0: kanca (kapak karesi) -->
+<div class="scene" data-s="-1" data-ew="28">
+ <div class="title big">Cumhuriyet bir<br><em>sofrada başladı</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-in="-1">
+   <!-- bayrak -->
+   <g transform="translate(540 610)">
+    <rect x="-210" y="-140" width="420" height="280" rx="10" fill="#e30a17"/>
+    <circle cx="-62" cy="0" r="70" fill="#fff"/><circle cx="-44" cy="0" r="56" fill="#e30a17"/>
+    <path transform="translate(32 0) rotate(-18)" d="M0,-35 L8.2,-11.3 L33.3,-10.8 L13.3,4.3 L20.6,28.3 L0,14 L-20.6,28.3 L-13.3,4.3 L-33.3,-10.8 L-8.2,-11.3 Z" fill="#fff"/>
+   </g>
+   <!-- sofra -->
+   <path d="M200 1010 H880" stroke="#1d3557" stroke-width="8" stroke-linecap="round"/>
+   <path d="M250 1010 V1130 M830 1010 V1130" stroke="#1d3557" stroke-width="8" stroke-linecap="round"/>
+   <ellipse cx="380" cy="992" rx="78" ry="16" fill="#fff" stroke="#9aa6b6" stroke-width="5"/>
+   <ellipse cx="700" cy="992" rx="78" ry="16" fill="#fff" stroke="#9aa6b6" stroke-width="5"/>
+   <rect x="532" y="900" width="16" height="96" rx="4" fill="#fff" stroke="#1d3557" stroke-width="4"/>
+   <path class="alev" d="M540 868 C556 886 552 898 540 900 C528 898 524 886 540 868 Z" fill="#ffd95a" stroke="#f08a24" stroke-width="3"/>
+   <text x="540" y="1220" text-anchor="middle" font-family="Manrope" font-size="54" font-weight="800" fill="#e30a17">Cumhuriyetin ilanı · 1923</text>
+  </g>
+ </svg>
+</div>
+
+<!-- 1: 28 Ekim akşamı, Çankaya -->
+<div class="scene" data-sw="28" data-ew="Neden">
+ <div class="title">28 Ekim 1923 akşamı<br><em>Çankaya</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-w="28">
+   <!-- köşk silueti -->
+   <path d="M300 760 V600 L540 470 L780 600 V760 Z" fill="#fff" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/>
+   <path d="M260 612 L540 452 L820 612" fill="none" stroke="#1d3557" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+   <rect x="350" y="630" width="70" height="90" rx="6" fill="#eef2f7" stroke="#9aa6b6" stroke-width="4"/>
+   <rect x="660" y="630" width="70" height="90" rx="6" fill="#eef2f7" stroke="#9aa6b6" stroke-width="4"/>
+   <rect x="505" y="640" width="70" height="120" rx="6" fill="#ffd95a" stroke="#1d3557" stroke-width="4"/>
+      <text x="540" y="820" text-anchor="middle" font-size="34" font-weight="700" fill="#5f6f88">Ankara · Çankaya</text>
+  </g>
+  <g data-w="Mustafa">
+   <path d="M200 1010 H880" stroke="#1d3557" stroke-width="8" stroke-linecap="round"/>
+   <path d="M250 1010 V1110 M830 1010 V1110" stroke="#1d3557" stroke-width="8" stroke-linecap="round"/>
+   <g fill="#fff" stroke="#1d3557" stroke-width="6"><path d="M282 1004 C282 950 378 950 378 1004"/><circle cx="330" cy="912" r="28"/><path d="M412 1004 C412 950 508 950 508 1004"/><circle cx="460" cy="904" r="28"/><path d="M572 1004 C572 950 668 950 668 1004"/><circle cx="620" cy="904" r="28"/><path d="M702 1004 C702 950 798 950 798 1004"/><circle cx="750" cy="912" r="28"/></g>
+  </g>
+  <g data-w="Efendiler,">
+   <rect x="110" y="1170" width="860" height="200" rx="26" fill="#fff" stroke="#e30a17" stroke-width="5"/>
+   <path d="M420 1170 L460 1120 L480 1170" fill="#fff" stroke="#e30a17" stroke-width="5" stroke-linejoin="round"/><path d="M424 1172 H476" stroke="#fff" stroke-width="8"/>
+   <text x="540" y="1252" text-anchor="middle" font-family="Manrope" font-size="46" font-weight="800" fill="#1d3557">"Efendiler, yarın</text>
+   <text x="540" y="1318" text-anchor="middle" font-family="Manrope" font-size="46" font-weight="800" fill="#e30a17">cumhuriyeti ilan edeceğiz."</text>
+  </g>
+ </svg>
+</div>
+
+<!-- 2: hükümet bunalımı -->
+<div class="scene" data-sw="Neden" data-ew="Üstelik">
+ <div class="title">Ankara'da<br><em>hükümet bunalımı</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-w="Çünkü">
+   <rect x="330" y="470" width="420" height="130" rx="18" fill="#fff" stroke="#1d3557" stroke-width="5"/>
+   <text x="540" y="552" text-anchor="middle" font-family="Manrope" font-size="50" font-weight="800" fill="#1d3557">Meclis</text>
+   <g stroke="#9aa6b6" stroke-width="5" stroke-linecap="round"><path d="M450 600 L230 720 M540 600 V720 M630 600 L850 720"/></g>
+   <text x="540" y="930" text-anchor="middle" font-size="32" font-weight="700" fill="#5f6f88">Meclis her bakanı tek tek oylar</text>
+  </g>
+  <g data-w="tek">
+   <g transform="translate(230 800)"><rect x="-120" y="-70" width="240" height="140" rx="16" fill="#fff" stroke="#dbe3ee" stroke-width="4"/><text y="-10" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">Bakan 1</text><text y="38" text-anchor="middle" font-size="28" font-weight="700" fill="#5f6f88">oylama</text></g>
+   <g transform="translate(540 800)"><rect x="-120" y="-70" width="240" height="140" rx="16" fill="#fff" stroke="#dbe3ee" stroke-width="4"/><text y="-10" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">Bakan 2</text><text y="38" text-anchor="middle" font-size="28" font-weight="700" fill="#5f6f88">oylama</text></g>
+   <g transform="translate(850 800)"><rect x="-120" y="-70" width="240" height="140" rx="16" fill="#fff" stroke="#dbe3ee" stroke-width="4"/><text y="-10" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">Bakan 3</text><text y="38" text-anchor="middle" font-size="28" font-weight="700" fill="#5f6f88">oylama</text></g>
+  </g>
+  <g data-w="Günlerdir">
+   <circle cx="340" cy="735" r="34" fill="#e30a17"/><text x="340" y="755" text-anchor="middle" font-family="Manrope" font-size="50" font-weight="800" fill="#fff" class="sall">?</text><circle cx="650" cy="735" r="34" fill="#e30a17"/><text x="650" y="755" text-anchor="middle" font-family="Manrope" font-size="50" font-weight="800" fill="#fff" class="sall">?</text><circle cx="960" cy="735" r="34" fill="#e30a17"/><text x="960" y="755" text-anchor="middle" font-family="Manrope" font-size="50" font-weight="800" fill="#fff" class="sall">?</text>
+  </g>
+  <g data-w="kurulamıyordu.">
+   <rect x="110" y="1000" width="860" height="140" rx="18" fill="#fff" stroke="#e30a17" stroke-width="5"/>
+   <circle cx="190" cy="1070" r="32" fill="#e30a17"/><path d="M176 1056 l28 28 M204 1056 l-28 28" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+   <text x="250" y="1086" text-anchor="start" font-family="Manrope" font-size="46" font-weight="800" fill="#1d3557">hükümet kurulamıyor</text>
+  </g>
+ </svg>
+</div>
+
+<!-- 3: saltanat kalktı, adı yok -->
+<div class="scene" data-sw="Üstelik" data-ew="Ertesi">
+ <div class="title">Padişah gitti,<br><em>adı konmadı</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-w="saltanat">
+   <rect x="110" y="470" width="860" height="330" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="4"/>
+   <g transform="translate(260 640)">
+    <path d="M-80 40 L-90 -50 L-45 -10 L0 -70 L45 -10 L90 -50 L80 40 Z" fill="#ffd95a" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="-82" y="40" width="164" height="26" rx="6" fill="#ffd95a" stroke="#1d3557" stroke-width="5"/>
+   </g>
+   <path d="M160 540 L360 740" stroke="#e30a17" stroke-width="12" stroke-linecap="round" data-draw="saltanat" data-dur="0.5"/>
+   <text x="420" y="610" text-anchor="start" font-size="34" font-weight="700" fill="#5f6f88">1 Kasım 1922</text>
+   <text x="420" y="670" text-anchor="start" font-family="Manrope" font-size="44" font-weight="800" fill="#1d3557">Saltanat</text>
+   <text x="420" y="722" text-anchor="start" font-family="Manrope" font-size="44" font-weight="800" fill="#1d3557">kaldırıldı</text>
+  </g>
+  <g data-w="biçiminin">
+   <rect x="110" y="850" width="860" height="300" rx="18" fill="#fff" stroke="#e30a17" stroke-width="5"/>
+   <text x="540" y="945" text-anchor="middle" font-size="36" font-weight="700" fill="#5f6f88">Devletin yönetim biçimi:</text>
+   <text x="540" y="1090" text-anchor="middle" font-family="Manrope" font-size="140" font-weight="800" fill="#e30a17" class="sall">?</text>
+  </g>
+ </svg>
+</div>
+
+<!-- 4: anayasa değişti -->
+<div class="scene" data-sw="Ertesi" data-ew="Artık">
+ <div class="title">29 Ekim 1923<br><em>tek cümle eklendi</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-w="Ertesi">
+   <rect x="300" y="470" width="480" height="120" rx="18" fill="#fff" stroke="#1d3557" stroke-width="5"/>
+   <text x="540" y="545" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#1d3557">TBMM · Ankara</text>
+  </g>
+  <g data-w="anayasayı">
+   <path d="M170 640 H830 L910 720 V1250 H170 Z" fill="#fff" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/>
+   <path d="M830 640 V720 H910" fill="#eef2f7" stroke="#1d3557" stroke-width="5" stroke-linejoin="round"/>
+   <text x="230" y="730" text-anchor="start" font-size="30" font-weight="700" fill="#5f6f88">Teşkilat-ı Esasiye Kanunu</text>
+   <text x="230" y="790" text-anchor="start" font-family="Manrope" font-size="38" font-weight="800" fill="#1d3557">Madde 1</text>
+   <g stroke="#dbe3ee" stroke-width="10" stroke-linecap="round"><path d="M230 850 H850 M230 900 H780"/></g>
+  </g>
+  <g data-w="Birinci">
+   <text x="230" y="1000" text-anchor="start" font-family="Manrope" font-size="46" font-weight="800" fill="#1d3557" data-type="Türkiye#2" data-tdur="1.6">"Türkiye Devletinin</text>
+   <text x="230" y="1064" text-anchor="start" font-family="Manrope" font-size="46" font-weight="800" fill="#1d3557" data-type="Türkiye#2+1.0" data-tdur="1.0">hükümet şekli</text>
+   <text x="230" y="1140" text-anchor="start" font-family="Manrope" font-size="58" font-weight="800" fill="#e30a17" data-type="cumhuriyettir." data-tdur="0.9">cumhuriyettir."</text>
+  </g>
+  <path d="M225 1160 H700" stroke="#ffd95a" stroke-width="14" stroke-linecap="round" data-draw="cumhuriyettir.+0.6" data-dur="0.6" opacity=".9"/>
+ </svg>
+</div>
+
+<!-- 5: yeni düzen -->
+<div class="scene" data-sw="Artık" data-ew="Aynı">
+ <div class="title">Yeni düzen:<br><em>kabineyi kim kurar?</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-w="Artık">
+   <rect x="110" y="470" width="860" height="150" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="4"/>
+   <text x="160" y="540" text-anchor="start" font-size="30" font-weight="700" fill="#5f6f88">Eskiden</text>
+   <text x="160" y="590" text-anchor="start" font-family="Manrope" font-size="38" font-weight="800" fill="#1d3557">Meclis → bakanlar tek tek</text>
+   <path d="M150 578 H940" stroke="#e30a17" stroke-width="8" stroke-linecap="round" data-draw="seçmeyecekti." data-dur="0.5"/>
+  </g>
+  <g data-w="Cumhurbaşkanı">
+   <rect x="290" y="680" width="500" height="120" rx="18" fill="#fff" stroke="#e30a17" stroke-width="5"/>
+   <text x="540" y="755" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#e30a17">Cumhurbaşkanı</text>
+   <path d="M540 800 V858" stroke="#1d3557" stroke-width="6" stroke-linecap="round"/><path d="M540 880 l-16 -26 h32 Z" fill="#1d3557"/>
+   <text x="570" y="850" text-anchor="start" font-size="26" font-weight="700" fill="#5f6f88">seçer</text>
+  </g>
+  <g data-w="başbakan">
+   <rect x="290" y="890" width="500" height="120" rx="18" fill="#fff" stroke="#1d3557" stroke-width="5"/>
+   <text x="540" y="965" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#1d3557">Başbakan</text>
+  </g>
+  <g data-w="kabinesini">
+   <path d="M540 1010 V1068" stroke="#1d3557" stroke-width="6" stroke-linecap="round"/><path d="M540 1090 l-16 -26 h32 Z" fill="#1d3557"/>
+   <text x="570" y="1060" text-anchor="start" font-size="26" font-weight="700" fill="#5f6f88">kurar</text>
+   <rect x="190" y="1100" width="700" height="130" rx="18" fill="#fff" stroke="#1d3557" stroke-width="5"/>
+   <g fill="#eef2f7" stroke="#9aa6b6" stroke-width="4"><circle cx="300" cy="1165" r="26"/><circle cx="410" cy="1165" r="26"/><circle cx="520" cy="1165" r="26"/><circle cx="630" cy="1165" r="26"/><circle cx="740" cy="1165" r="26"/></g>
+   <text x="540" y="1280" text-anchor="middle" font-size="28" font-weight="700" fill="#5f6f88">Kabine · Meclis onaylar</text>
+  </g>
+ </svg>
+</div>
+
+<!-- 6: ilk cumhurbaşkanı, 101 pare top -->
+<div class="scene" data-sw="Aynı" data-ew="Peki">
+ <div class="title">İlk cumhurbaşkanı:<br><em>Mustafa Kemal</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g data-w="Aynı">
+   <rect x="110" y="470" width="860" height="260" rx="18" fill="#fff" stroke="#e30a17" stroke-width="5"/>
+   <text x="160" y="550" text-anchor="start" font-size="30" font-weight="700" fill="#5f6f88">29 Ekim 1923 akşamı</text>
+   <text x="160" y="620" text-anchor="start" font-family="Manrope" font-size="50" font-weight="800" fill="#1d3557">Cumhurbaşkanı</text>
+   <text x="160" y="685" text-anchor="start" font-family="Manrope" font-size="50" font-weight="800" fill="#e30a17">Mustafa Kemal</text>
+  </g>
+  <g data-w="oy">
+   <rect x="660" y="520" width="260" height="160" rx="16" fill="#fff7d6" stroke="#ffd95a" stroke-width="4"/>
+   <text x="790" y="600" text-anchor="middle" font-family="Manrope" font-size="52" font-weight="800" fill="#1d3557">158 oy</text>
+   <text x="790" y="648" text-anchor="middle" font-size="28" font-weight="700" fill="#5f6f88">oy birliği</text>
+  </g>
+  <g data-w="İsmet">
+   <rect x="110" y="770" width="860" height="130" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="4"/>
+   <text x="160" y="850" text-anchor="start" font-size="34" font-weight="700" fill="#5f6f88">Başbakan:</text>
+   <text x="360" y="852" text-anchor="start" font-family="Manrope" font-size="44" font-weight="800" fill="#1d3557">İsmet Paşa</text>
+  </g>
+  <g data-w="pare">
+   <g class="burst" transform="translate(540 1110)">
+    <circle r="100" fill="none" stroke="#e30a17" stroke-width="5"/><circle r="130" fill="none" stroke="#ffd95a" stroke-width="5"/><circle r="160" fill="none" stroke="#e30a17" stroke-width="4" opacity=".5"/>
+   </g>
+   <text x="540" y="1130" text-anchor="middle" font-family="Manrope" font-size="72" font-weight="800" fill="#e30a17">101</text>
+   <text x="540" y="1370" text-anchor="middle" font-family="Manrope" font-size="40" font-weight="800" fill="#1d3557">pare top atışı</text>
+  </g>
+ </svg>
+</div>
+
+<!-- 7: soru -->
+<div class="scene" data-sw="Peki" data-ew="@END">
+ <div class="q"><small>DÜŞÜN</small>Cumhuriyet ilan edilmeseydi devletin başında <em>kim olacaktı?</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <text x="540" y="1250" text-anchor="middle" font-size="34" font-weight="700" fill="#5f6f88">Padişah bir yıl önce gitmişti.</text>
+  <text x="540" y="1310" text-anchor="middle" font-size="34" font-weight="700" fill="#5f6f88">Cevabını yorumlara yaz.</text>
+ </svg>
+</div>
+
+<!-- 8: özet kartı (sessiz 2 sn) -->
+<div class="scene" data-sw="@END" data-e="99">
+ <div class="title">Kısaca<br><em>hatırla</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+  <g>
+   <rect x="80" y="480" width="920" height="780" rx="18" fill="#fff" stroke="#e30a17" stroke-width="5"/>
+   <text x="140" y="570" text-anchor="start" font-size="32" font-weight="800" fill="#e30a17">ÖZET</text>
+   <circle cx="160" cy="660" r="14" fill="#e30a17"/><text x="200" y="674" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">29 Ekim 1923:</text><text x="200" y="724" text-anchor="start" font-size="40" font-weight="800" fill="#e30a17">Cumhuriyet ilan edildi</text>
+   <circle cx="160" cy="820" r="14" fill="#e30a17"/><text x="200" y="834" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">Anayasaya tek cümle:</text><text x="200" y="884" text-anchor="start" font-size="40" font-weight="800" fill="#e30a17">"Hükümet şekli cumhuriyettir"</text>
+   <circle cx="160" cy="980" r="14" fill="#e30a17"/><text x="200" y="994" text-anchor="start" font-size="40" font-weight="800" fill="#1d3557">İlk cumhurbaşkanı:</text><text x="200" y="1044" text-anchor="start" font-size="40" font-weight="800" fill="#e30a17">Mustafa Kemal, oy birliğiyle</text>
+   <path d="M140 1100 H940" stroke="#dbe3ee" stroke-width="3"/>
+   <path d="M160 1135 h40 v70 l-20 -16 l-20 16 Z" fill="#e30a17"/>
+   <text x="230" y="1185" text-anchor="start" font-family="Manrope" font-size="40" font-weight="800" fill="#e30a17">Kaydet, paylaş · 29 Ekim kutlu olsun</text>
+  </g>
+ </svg>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;                 // ses hızlandırılmadı
+const DUR = 72.00;           // ses süresi (TAHMİNİ; mp3 gelince hizala.py çıktısıyla değişir)
+const PH = [
+/*PH*/
+];
+const END = PH[PH.length-1][1] + 0.3;   // soru bitti, sessiz özet kartı
+
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+// "kelime", "kelime#2", "kelime+0.4" -> saniye
+function wt(spec) {
+  if (spec === '@END') return END;
+  const m = spec.match(/^(.+?)(?:#(\d+))?([+-][0-9.]+)?$/); let n = +(m[2]||1);
+  const o = W.find(o => o.w === m[1] && --n === 0);
+  if (!o) throw new Error('kelime yok: ' + spec);
+  return o.t + +(m[3]||0);
+}
+document.querySelectorAll('[data-sw]').forEach(s => { if (s.dataset.s === undefined) s.dataset.s = wt(s.dataset.sw) - 0.15; });
+document.querySelectorAll('[data-ew]').forEach(s => s.dataset.e = wt(s.dataset.ew) - 0.15 + 0.4);
+document.querySelectorAll('[data-w]').forEach(el => el.dataset.in = wt(el.dataset.w) - 0.1);
+document.querySelectorAll('[data-draw]').forEach(el => { if (isNaN(+el.dataset.draw)) el.dataset.draw = wt(el.dataset.draw); });
+document.querySelectorAll('[data-type]').forEach(el => { el.dataset.full = el.textContent; el.dataset.t0 = wt(el.dataset.type); el.textContent = ''; });
+
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; p.style.strokeDashoffset = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5);
+    el.style.opacity = k; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(p => {
+    const k = ease((t - +p.dataset.draw)/ +p.dataset.dur); p.style.strokeDashoffset = p.dataset.len*(1-k);
+  });
+  document.querySelectorAll('[data-type]').forEach(el => {
+    const f = el.dataset.full, k = Math.max(0, Math.min(1, (t - +el.dataset.t0)/ +el.dataset.tdur));
+    el.textContent = f.slice(0, Math.round(f.length*k));
+  });
+  // sürekli küçük hareketler: mum alevi, soru işaretleri, top atışı halkaları
+  document.querySelectorAll('.alev').forEach(a => a.setAttribute('transform', `translate(540 900) scale(${1+0.06*Math.sin(t*9)} ${1+0.1*Math.sin(t*7)}) translate(-540 -900)`));
+  document.querySelectorAll('.sall').forEach((q,i) => q.setAttribute('transform', `rotate(${6*Math.sin(t*3+i)} ${q.getAttribute('x')} ${+q.getAttribute('y')-30})`));
+  document.querySelectorAll('.burst').forEach(b => { const p = ((t*1.2)%1); b.querySelectorAll('circle').forEach((c,i) => c.setAttribute('transform', `scale(${1+0.3*((p+i/3)%1)})`)); });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  cap.style.opacity = t > END - 0.1 ? 0 : 1;
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
