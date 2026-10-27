@@ -1,0 +1,45 @@
+name: Android mağaza paketi
+# Google Play'e yüklenecek imzalı AAB üretir. Actions > Android mağaza paketi > Run workflow.
+# Gereken sırlar: ANDROID_ANAHTAR (keystore'un base64 hali), ANDROID_ANAHTAR_SIFRESI. Ayrıntı: docs/MAGAZA.md
+on:
+  workflow_dispatch:
+    inputs:
+      surum:
+        description: "Sürüm adı (mağazada görünür)"
+        default: "1.0"
+      abonelik:
+        description: "Ödeme duvarı açık mı (Play faturalandırma kurulunca 1)"
+        default: "0"
+jobs:
+  aab:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+      - run: npm ci
+      - run: npm run app
+        env:
+          NEXT_PUBLIC_ABONELIK: ${{ inputs.abonelik }}
+      - name: Yükleme anahtarı
+        run: echo "${{ secrets.ANDROID_ANAHTAR }}" | base64 -d > "$RUNNER_TEMP/ucler-yukleme.jks"
+      - run: chmod +x gradlew && ./gradlew bundleRelease --no-daemon
+        working-directory: android
+        env:
+          ANAHTAR_DOSYASI: ${{ runner.temp }}/ucler-yukleme.jks
+          ANAHTAR_SIFRESI: ${{ secrets.ANDROID_ANAHTAR_SIFRESI }}
+          ANAHTAR_ADI: ucler
+          SURUM_KODU: ${{ github.run_number }}
+          SURUM_ADI: ${{ inputs.surum }}
+      - run: mv android/app/build/outputs/bundle/release/app-release.aab ucler-${{ inputs.surum }}-${{ github.run_number }}.aab
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ucler-aab
+          path: ucler-*.aab
+          retention-days: 30

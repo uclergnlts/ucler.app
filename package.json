@@ -8,7 +8,7 @@
     "start": "npx serve out",
     "check": "python3 tools/check.py",
     "lint": "tsc --noEmit",
-    "app": "next build && cap sync"
+    "app": "next build && rm -f out/videolar/*.mp4 out/videolar/*.jpg && cap sync"
   },
   "dependencies": {
     "@capacitor/android": "^7.6.9",

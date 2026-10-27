@@ -7,8 +7,9 @@ android {
         applicationId "app.ucler"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        // Mağaza derlemesinde (android-aab.yml) sürüm numarası iş akışından gelir; her yükleme bir öncekinden büyük olmalı.
+        versionCode (System.getenv("SURUM_KODU") ?: "1").toInteger()
+        versionName System.getenv("SURUM_ADI") ?: "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -16,8 +17,20 @@ android {
             ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    // Yükleme anahtarı yalnızca iş akışında ortam değişkeninden gelir; depoda anahtar yok. Ayrıntı: docs/MAGAZA.md
+    signingConfigs {
+        release {
+            if (System.getenv("ANAHTAR_DOSYASI")) {
+                storeFile file(System.getenv("ANAHTAR_DOSYASI"))
+                storePassword System.getenv("ANAHTAR_SIFRESI")
+                keyAlias System.getenv("ANAHTAR_ADI")
+                keyPassword System.getenv("ANAHTAR_SIFRESI")
+            }
+        }
+    }
     buildTypes {
         release {
+            if (System.getenv("ANAHTAR_DOSYASI")) signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

@@ -30,7 +30,8 @@ Google Play hesabı yalnızca mağazaya yüklemek için gerekir; denemek için g
 Bilgisayarsız yol: `main`'e her gönderimde GitHub **Actions > Android APK** iş akışı deneme APK'sı üretir (`ucler-apk`, 30 gün saklanır). APK'yı Android telefona indir, "bilinmeyen kaynaklardan yükleme"ye izin ver, kur. Telefon yoksa Android Studio'daki **Device Manager**'dan sanal telefon açılır; APK'yı ekranına sürükleyip bırakmak yeter.
 
 ## Bilinen sınırlar
-- Videolar şimdilik uygulamanın içinde (yaklaşık 60 MB). Video sayısı artınca Cloudflare R2'den akışla gelecek.
+- Videolar pakete girmez, ucler.app/video/ üzerinden (Cloudflare R2) akar.
 - Hesap e-postalarındaki bağlantılar (doğrulama, şifre yenileme) siteyi açar. Öğrenci sonra uygulamada e-posta ve şifresiyle girer.
 - Uygulama her açılışta ana sayfadan başlar.
 - Abonelik (ucler Plus, RevenueCat): docs/ABONELIK.md
+- Mağaza derlemeleri (TestFlight, Google Play): docs/MAGAZA.md
