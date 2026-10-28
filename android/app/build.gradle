@@ -4,7 +4,8 @@ android {
     namespace "app.ucler"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "app.ucler"
+        // Play'de "app.ucler" başkasına ait; Android paket adı farklı, iOS kimliği app.ucler kalır.
+        applicationId "app.ucler.android"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         // Mağaza derlemesinde (android-aab.yml) sürüm numarası iş akışından gelir; her yükleme bir öncekinden büyük olmalı.
