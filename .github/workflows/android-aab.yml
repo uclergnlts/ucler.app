@@ -28,7 +28,14 @@ jobs:
         env:
           NEXT_PUBLIC_ABONELIK: ${{ inputs.abonelik }}
       - name: Yükleme anahtarı
-        run: echo "${{ secrets.ANDROID_ANAHTAR }}" | base64 -d > "$RUNNER_TEMP/ucler-yukleme.jks"
+        # PKCS12'yi JKS'ye çevir: Gradle'ın paket imzalayıcısı yeni PKCS12 biçimini okuyamıyor ("Tag number over 30").
+        run: |
+          echo "${{ secrets.ANDROID_ANAHTAR }}" | base64 -d > "$RUNNER_TEMP/ucler.p12"
+          keytool -importkeystore -noprompt -srckeystore "$RUNNER_TEMP/ucler.p12" -srcstoretype PKCS12 \
+            -srcstorepass "$SIFRE" -destkeystore "$RUNNER_TEMP/ucler-yukleme.jks" -deststoretype JKS \
+            -deststorepass "$SIFRE" -destkeypass "$SIFRE" -srcalias ucler -destalias ucler
+        env:
+          SIFRE: ${{ secrets.ANDROID_ANAHTAR_SIFRESI }}
       - run: chmod +x gradlew && ./gradlew bundleRelease --no-daemon
         working-directory: android
         env:
