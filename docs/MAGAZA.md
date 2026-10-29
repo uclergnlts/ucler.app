@@ -25,7 +25,7 @@ Derler, imzalar, App Store Connect'e yükler; birkaç dakika sonra TestFlight'ta
 
 - Play App Signing açık kalır: Google uygulamayı kendi anahtarıyla imzalar, bizimki yalnızca yükleme anahtarıdır. Kaybolursa Play Console'dan sıfırlanabilir.
 - `abonelik` girdisi Play faturalandırma ve RevenueCat Android anahtarı (lib/abonelik.ts `RC_ANAHTAR.android`) hazır olana kadar 0 kalmalı; yoksa satın alınamayan bir ödeme duvarı çıkar.
-- Play paket adı `app.ucler.android` (`app.ucler` Play'de başkasına ait). iOS kimliği `app.ucler`.
+- Play'deki uygulama: "Ucler - Öğren, Eğlen", paket `app.ucler` (iOS ile aynı).
 - `targetSdk 36`: Google Play 31 Ağustos 2026'dan beri yeni uygulamalarda Android 16 hedefini istiyor.
 
 Deneme APK'sı (`android-apk.yml`) ayrı ve imzasızdır; her main gönderiminde çalışmaya devam eder.
