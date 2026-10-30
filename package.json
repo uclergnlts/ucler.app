@@ -12,7 +12,10 @@
     "app": "next build && rm -f out/videolar/*.mp4 out/videolar/*.jpg && cap sync"
   },
   "dependencies": {
+    "@capacitor-community/apple-sign-in": "^7.1.0",
     "@capacitor/android": "^7.6.9",
+    "@capacitor/app": "^7.1.2",
+    "@capacitor/browser": "^7.0.5",
     "@capacitor/core": "^7.6.9",
     "@capacitor/haptics": "^7.0.5",
     "@capacitor/ios": "^7.6.9",

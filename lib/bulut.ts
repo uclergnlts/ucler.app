@@ -10,7 +10,7 @@ import { ayni, birlestir3, ESIT, type Veri } from "./esitle";
 import type { Puan } from "./puan";
 import { olay } from "./olay";
 import { adres } from "./site";
-import { KEYS, read, subscribe, write } from "./store";
+import { KEYS, read, setAd, subscribe, write } from "./store";
 
 const URL = "https://ergxksjvcykgmckpsrlw.supabase.co";
 const ANAHTAR = "sb_publishable_TJpZ-0YfaA4NJnI-JxF2Ow_PeAoqLlt";
@@ -191,7 +191,7 @@ function durdur() {
 /** Cihaz hesaptan ayrılınca temel de silinir; sonraki girişte veri yeniden birleştirilir, silme sayılmaz. */
 const temelSil = () => { uygulaniyor = true; try { write(TEMEL, null); } finally { uygulaniyor = false; } };
 
-/** Hesap az önce açıldıysa kayıt olayını bir kez sayar (lib/olay.ts). Google'da hesap girişle açılır;
+/** Hesap az önce açıldıysa kayıt olayını bir kez sayar (lib/olay.ts). Google ve Apple'da hesap girişle açılır;
  *  e-postada hesap, doğrulama bağlantısına dokunulunca (ilk girişte) açılmış sayılır. */
 function yeniHesapSay(s: Session) {
   const acilis = Date.parse(s.user.email_confirmed_at ?? s.user.created_at ?? "");
@@ -200,7 +200,8 @@ function yeniHesapSay(s: Session) {
     if (localStorage.getItem("tf-kayit-sayildi") === s.user.id) return;
     localStorage.setItem("tf-kayit-sayildi", s.user.id);
   } catch {}
-  olay("kayit_tamam", { yol: s.user.app_metadata?.provider === "google" ? "google" : "eposta" });
+  const p = String(s.user.app_metadata?.provider ?? "");
+  olay("kayit_tamam", { yol: p === "google" || p === "apple" ? p : "eposta" });
 }
 
 let kuruldu = false;
@@ -284,22 +285,26 @@ export function hataMetni(e: { message?: string; code?: string } | null | undefi
   return "Bir sorun oldu. Biraz sonra yeniden dene.";
 }
 
-// ---- Google ile giriş ----
-// Düğme yalnızca Supabase panelinde Google girişi açıksa görünür (ayar Auth'un herkese açık ayarlarından okunur).
-// Telefon uygulamasında şimdilik yok: Google'dan dönüş uygulamaya derin bağlantı ister.
-let googleSoz: Promise<boolean> | null = null;
-function googleAcik(): Promise<boolean> {
-  if (Capacitor.isNativePlatform()) return Promise.resolve(false);
-  return (googleSoz ??= fetch(`${URL}/auth/v1/settings`, { headers: { apikey: ANAHTAR } })
+// ---- Google ve Apple ile giriş ----
+// Düğmeler yalnızca Supabase panelinde ilgili giriş açıksa görünür (ayar Auth'un herkese açık ayarlarından okunur).
+// Sitede Google/Apple sayfasına gidilir, dönüş /giris/ sayfasınadır. Telefon uygulamasında giriş sayfası uygulama içi
+// tarayıcıda açılır, dönüş app.ucler://giris derin bağlantısıyla uygulamaya gelir (components/Yerel.tsx).
+// iPhone'da Apple ile giriş telefonun kendi Apple ekranıyla yapılır (tarayıcı açılmaz). Kurulum: docs/GIRIS.md
+export const UYGULAMA_DONUS = "app.ucler://giris";
+type Yollar = { google: boolean; apple: boolean };
+let yolSoz: Promise<Yollar> | null = null;
+function yollar(): Promise<Yollar> {
+  return (yolSoz ??= fetch(`${URL}/auth/v1/settings`, { headers: { apikey: ANAHTAR } })
     .then((r) => (r.ok ? r.json() : null))
-    .then((j) => !!j?.external?.google)
-    .catch(() => { googleSoz = null; return false; }));
+    .then((j) => ({ google: !!j?.external?.google, apple: !!j?.external?.apple }))
+    .catch(() => { yolSoz = null; return { google: false, apple: false }; }));
 }
-export function useGoogle() {
-  const [acik, setAcik] = useState(false);
+/** Açık giriş yolları: { google, apple }. */
+export function useGirisYollari() {
+  const [acik, setAcik] = useState<Yollar>({ google: false, apple: false });
   useEffect(() => {
     let canli = true;
-    void googleAcik().then((v) => { if (canli) setAcik(v); });
+    void yollar().then((v) => { if (canli) setAcik(v); });
     return () => { canli = false; };
   }, []);
   return acik;
@@ -319,9 +324,43 @@ export function donusAl(): string | null {
   }
 }
 
-/** Google'a gönderir; Google /giris/ sayfasına geri getirir, oturum orada açılır ve öğrenci dönüş sayfasına geçer. */
-export async function googleIleGir(donus?: string) {
+/** Google ya da Apple sayfasına gönderir. Sitede dönüş /giris/ sayfasınadır, oturum orada açılır ve öğrenci dönüş
+ *  sayfasına geçer. Uygulamada sayfa uygulama içi tarayıcıda açılır; dönüşü uygulamaDonusu karşılar. */
+async function disGiris(provider: "google" | "apple", donus?: string) {
   if (donus) donusYaz(donus);
-  const { error } = await sb().auth.signInWithOAuth({ provider: "google", options: { redirectTo: adres("/giris/") } });
+  if (!Capacitor.isNativePlatform()) {
+    const { error } = await sb().auth.signInWithOAuth({ provider, options: { redirectTo: adres("/giris/") } });
+    if (error) throw error;
+    return;
+  }
+  const { data, error } = await sb().auth.signInWithOAuth({ provider, options: { redirectTo: UYGULAMA_DONUS, skipBrowserRedirect: true } });
   if (error) throw error;
+  const { Browser } = await import("@capacitor/browser");
+  await Browser.open({ url: data.url, presentationStyle: "popover" });
+}
+export const googleIleGir = (donus?: string) => disGiris("google", donus);
+
+/** Apple ile giriş. iPhone uygulamasında telefonun Apple ekranı açılır ve gelen kimlik Supabase'e verilir;
+ *  sitede ve Android'de Google gibi tarayıcıdan gidilir. Apple adı yalnızca ilk girişte verir; ad boşsa yazılır. */
+export async function appleIleGir(donus?: string) {
+  if (Capacitor.getPlatform() !== "ios") return disGiris("apple", donus);
+  if (donus) donusYaz(donus);
+  const { SignInWithApple } = await import("@capacitor-community/apple-sign-in");
+  const ham = crypto.randomUUID();
+  const ozet = [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(ham)))]
+    .map((b) => b.toString(16).padStart(2, "0")).join("");
+  const { response: r } = await SignInWithApple.authorize({ clientId: "app.ucler", redirectURI: `${URL}/auth/v1/callback`, scopes: "email name", nonce: ozet });
+  const { error } = await sb().auth.signInWithIdToken({ provider: "apple", token: r.identityToken, nonce: ham });
+  if (error) throw error;
+  if (r.givenName && !read<string>(KEYS.ad, "")) setAd(r.givenName);
+}
+
+/** Uygulamaya derin bağlantıyla dönülünce (app.ucler://giris?code=...) oturumu açar. Hata varsa mesajını döner. */
+export async function uygulamaDonusu(url: string): Promise<string | null> {
+  const q = new globalThis.URL(url.replace("#", "?")).searchParams;
+  if (q.get("error")) return "Giriş tamamlanamadı. Yeniden dene ya da e-postayla devam et.";
+  const kod = q.get("code");
+  if (!kod) return null;
+  const { error } = await sb().auth.exchangeCodeForSession(kod);
+  return error ? hataMetni(error) : null;
 }

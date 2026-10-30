@@ -12,7 +12,7 @@ export default function Page() {
       <GeriTop to="/profil/" label="Profil'e dön" baslik="Gizlilik" sag={<UstEylem href="/profil/ayarlar/" label="Ayarlar" icon={<Icon.ayar />} />} />
       <Govde className="text-[15px] leading-relaxed">
         <Bolum title="Hesap isteğe bağlı">
-          <p>ucler&apos;i hesap açmadan da kullanabilirsin. Hesap açarsan yalnızca e-posta adresini, şifreni ve istersen adını alırız.</p>
+          <p>ucler&apos;i hesap açmadan da kullanabilirsin. Hesap açarsan yalnızca e-posta adresini, şifreni ve istersen adını alırız. Google ya da Apple ile girersen şifre almayız; bu hizmetler bize yalnızca e-posta adresini ve adını verir (Apple ile girerken e-postanı gizlemeyi seçebilirsin).</p>
         </Bolum>
         <Bolum title="Veriler nerede tutulur">
           <p>

@@ -1,9 +1,14 @@
 "use client";
-// Yalnızca telefon uygulamasında (Capacitor) çalışır: üst çubuk yazıları koyu olsun; açılışta logo animasyonu oynasın.
+// Yalnızca telefon uygulamasında (Capacitor) çalışır: üst çubuk yazıları koyu olsun; açılışta logo animasyonu oynasın;
+// Google/Apple girişinden app.ucler://giris bağlantısıyla dönülünce oturum açılsın (lib/bulut.ts uygulamaDonusu).
 // Animasyon: telefonun sabit açılış ekranındaki "u." ile başlar, nokta sağa kayarken c, l, e, r harfleri noktanın
 // geçtiği yerde tek tek, yumuşakça belirir ve "ucler." olur. Sitede `?acilis` ile önizlenir. "Hareketi azalt" açıksa oynamaz.
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import { App } from "@capacitor/app";
+import { Browser } from "@capacitor/browser";
 import { Capacitor } from "@capacitor/core";
+import { donusAl, UYGULAMA_DONUS, uygulamaDonusu } from "@/lib/bulut";
 import { SplashScreen } from "@capacitor/splash-screen";
 import { StatusBar, Style } from "@capacitor/status-bar";
 
@@ -11,6 +16,17 @@ const BEKLE = 350, KAYMA = 1100, DUR = 500, SONME = 380;
 
 export default function Yerel() {
   const [acilis, setAcilis] = useState(false);
+  const router = useRouter();
+  useEffect(() => {
+    if (!Capacitor.isNativePlatform()) return;
+    const dinle = App.addListener("appUrlOpen", async ({ url }) => {
+      if (!url.startsWith(UYGULAMA_DONUS)) return;
+      void Browser.close().catch(() => {});
+      const hata = await uygulamaDonusu(url);
+      router.replace(hata ? "/giris/?error=1" : donusAl() ?? "/profil/");
+    });
+    return () => { void dinle.then((d) => d.remove()); };
+  }, [router]);
   useEffect(() => {
     const yerel = Capacitor.isNativePlatform();
     const onizleme = new URLSearchParams(location.search).has("acilis");

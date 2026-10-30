@@ -4,19 +4,19 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { donusAl, googleIleGir, hataMetni, sb, useGoogle, useOturum } from "@/lib/bulut";
+import { donusAl, hataMetni, sb, useGirisYollari, useOturum } from "@/lib/bulut";
 import { olay } from "@/lib/olay";
 import { setAd, useAd } from "@/lib/store";
 import { adres } from "@/lib/site";
 import { GeriTop, Govde, PageHead } from "./temel";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { GoogleDugme } from "./KayitDavet";
+import { DisGiris } from "./KayitDavet";
 
 type Mod = "kayit" | "giris" | "unuttum";
 
 export default function Giris() {
-  const oturum = useOturum(), router = useRouter(), kayitliAd = useAd(), google = useGoogle();
+  const oturum = useOturum(), router = useRouter(), kayitliAd = useAd(), yol = useGirisYollari();
   const [mod, setMod] = useState<Mod>("kayit");
   const [ad, setAdS] = useState(""), [eposta, setEposta] = useState(""), [sifre, setSifre] = useState("");
   const [hata, setHata] = useState(""), [bilgi, setBilgi] = useState(""), [bekle, setBekle] = useState(false);
@@ -25,7 +25,7 @@ export default function Giris() {
     const p = new URLSearchParams(location.search);
     if (p.has("giris")) setMod("giris");
     // Google'dan hata ile dönüldüyse (ör. öğrenci vazgeçti).
-    if (p.has("error") || new URLSearchParams(location.hash.slice(1)).has("error")) setHata("Google ile giriş tamamlanamadı. Yeniden dene ya da e-postayla devam et.");
+    if (p.has("error") || new URLSearchParams(location.hash.slice(1)).has("error")) setHata("Giriş tamamlanamadı. Yeniden dene ya da e-postayla devam et.");
   }, []);
   useEffect(() => { if (kayitliAd) setAdS((a) => a || kayitliAd); }, [kayitliAd]);
   // Giriş yapılmışsa (e-posta bağlantısıyla ya da Google'dan gelindiyse) kayıt davetinin açıldığı konuya, yoksa Profil'e geç.
@@ -70,9 +70,9 @@ export default function Giris() {
       <GeriTop to="/profil/" label="Profil'e dön" baslik={baslik} />
       <Govde>
         <PageHead text={metin} />
-        {google && mod !== "unuttum" && (
+        {(yol.google || yol.apple) && mod !== "unuttum" && (
           <div className="grid gap-3">
-            <GoogleDugme disabled={bekle} onClick={() => { setHata(""); googleIleGir().catch((e) => setHata(hataMetni(e))); }} />
+            <DisGiris disabled={bekle} setHata={setHata} />
             <p className="flex items-center gap-3 text-[13px] text-muted-foreground before:h-px before:flex-1 before:bg-border after:h-px after:flex-1 after:bg-border">ya da e-postayla</p>
           </div>
         )}
