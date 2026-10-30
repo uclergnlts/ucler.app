@@ -84,7 +84,7 @@ function gorevSec(g: string): Gorev[] {
   const due = bugunku(read<Tekrar>(KEYS.tekrar, {})).length;
   const l: Gorev[] = [r() < 0.5 ? { id: "asama", hedef: 1 } : { id: "kart", hedef: 8 }];
   if (due > 0) l.push({ id: "tekrar", hedef: Math.min(due, 3) });
-  const havuz: Gorev[] = [{ id: "adim", hedef: 3 }, { id: "dogru", hedef: 3 }, { id: "konu", hedef: 1 }, { id: "oyun", hedef: 1 }, { id: "video", hedef: 1 }];
+  const havuz: Gorev[] = [{ id: "adim", hedef: 3 }, { id: "dogru", hedef: 3 }, { id: "konu", hedef: 1 }, { id: "video", hedef: 1 }];
   while (l.length < 3) l.push(havuz.splice(Math.floor(r() * havuz.length), 1)[0]);
   return l;
 }

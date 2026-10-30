@@ -29,6 +29,10 @@ export const Icon = {
   kesfet: () => (
     <svg {...base} strokeLinecap="round"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></svg>
   ),
+  // Deneme sınavı: içinde işaretli satırlar olan kâğıt.
+  deneme: () => (
+    <svg {...base} strokeLinecap="round" strokeLinejoin="round"><path d="M6 3h9l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" /><path d="M14 3v5h5" /><path d="M8.5 12.5l1.5 1.5 2.5-2.5M8.5 17.5l1.5 1.5 2.5-2.5M14.5 13h2M14.5 18h2" /></svg>
+  ),
   video: () => (
     <svg {...base} strokeLinejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="3" /><path d="M10 9v6l5-3z" fill="currentColor" /></svg>
   ),

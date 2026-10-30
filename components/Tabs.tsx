@@ -1,5 +1,6 @@
 "use client";
-// Alt menü: Ana sayfa, Keşfet, Videolar, Oyunlar, Profil (ders adları değil; bkz. docs/KARARLAR.md).
+// Alt menü: Ana sayfa, Keşfet, Videolar, Deneme, Profil (ders adları değil; bkz. docs/KARARLAR.md).
+// Oyunlar 2026-10-30'da menüden çıktı (Üçler: şimdilik geri planda); /oyunlar/ sayfaları duruyor, hiçbir sekmeye bağlı değil.
 // Kaydedilenler Profil'in içindedir.
 // Ders ekranında (/ders/konu/), tekrar ve günün sorusu ekranında gizlenir.
 import Link from "next/link";
@@ -13,7 +14,7 @@ const TABS = [
   { k: "home", href: "/", label: "Ana sayfa", renk: "var(--c1)" },
   { k: "kesfet", href: "/kesfet/", label: "Keşfet", renk: "var(--c3)" },
   { k: "video", href: "/videolar/", label: "Videolar", renk: "#d63c63" },
-  { k: "oyun", href: "/oyunlar/", label: "Oyunlar", renk: "#e08a00" },
+  { k: "deneme", href: "/deneme/", label: "Deneme", renk: "#e08a00" },
   { k: "profil", href: "/profil/", label: "Profil", renk: "var(--c5)" },
 ] as const;
 
@@ -21,7 +22,7 @@ const TABS = [
 function sekme(parts: string[]): string | undefined {
   return parts.length === 0
     ? "home"
-    : ({ kesfet: "kesfet", kaydedilenler: "profil", profil: "profil", hakkinda: "profil", gizlilik: "profil", lig: "profil", videolar: "video", oyunlar: "oyun" } as Record<string, string>)[parts[0]];
+    : ({ kesfet: "kesfet", kaydedilenler: "profil", profil: "profil", hakkinda: "profil", gizlilik: "profil", lig: "profil", videolar: "video", deneme: "deneme" } as Record<string, string>)[parts[0]];
 }
 
 /** Sayfanın sekme rengi (üst çubuk düğmeleri de bunu kullanır). */
