@@ -29,7 +29,7 @@ if "--rapor" in sys.argv: RAPOR = os.path.abspath(sys.argv[sys.argv.index("--rap
 # Eşikler (gerekirse buradan ayarla)
 UZUN_CUMLE = 20          # kelime: bunu aşan cümle "bir göz at"
 COK_UZUN_CUMLE = 28      # kelime: bunu aşan cümle "kesin bölünmeli"
-AGIR_KELIME = 5          # hece: bu kadar ve üstü heceli kelime "ağır" sayılır
+AGIR_KELIME = 6          # hece: bu kadar ve üstü heceli kelime "ağır" sayılır
 AGIR_YIGIN = 3           # bir cümlede bu kadar ağır kelime varsa uyarı
 ATESMAN_ZOR = 40         # kartın Ateşman puanı bunun altındaysa "zor metin"
 ILK_KART_FARK = 15       # ilk kart, konu ortancasından bu kadar zorsa uyarı
@@ -47,11 +47,12 @@ def duz(html):
     s = re.sub(r"<br\s*/?>", ". ", s)
     s = re.sub(r"<[^>]+>", "", s)
     s = s.replace("&nbsp;", " ").replace("•", ". ")
-    return re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r"\s+", " ", s)
+    return re.sub(r"([.!?])(\s*\.)+", r"\1", s).strip(" .") + ("." if s.strip(" .") else "")
 
 def cumleler(metin):
-    # 3.5 gibi ondalıkları bölme; noktadan sonra büyük harf, rakam ya da tırnak gelince böl.
-    parcalar = re.split(r"(?<=[.!?…])\s+(?=[\"“'(A-ZÇĞİÖŞÜ0-9])", metin)
+    # Noktadan sonra boşluk gelince böl; "1. yasa" gibi sıra sayılarında (noktadan önce rakam) bölme.
+    parcalar = re.split(r"(?<=[^\d\s][.!?…])\s+", metin)
     return [p.strip() for p in parcalar if re.search(f"[{HARF}]", p)]
 
 def kelimeler(cumle):
@@ -128,8 +129,17 @@ def kok(ifade):
     k = " ".join(s.split()[:-1] + [son])
     return k if len(k.replace(" ", "")) >= 5 else None
 
-def gecis_ara(kok_, metin_kucuk):
-    return re.search(rf"(?<![{HARF}]){re.escape(kok_)}", metin_kucuk) is not None
+def gecis_ara(kok_, metin_kucuk, anahtar=""):
+    """Terim açıklanmadan geçiyor mu? Hemen ardından parantezle açıklanan ("jeotermal (yer altı ısısı)"),
+    parantez içinde adı verilen ("sitoplazmanın bölünmesi (sitokinez)") ya da kartın akılda kalsın satırında
+    "Terim: ..." diye tanımlanan kullanım açıklanmış sayılır."""
+    if re.search(rf"(?<![{HARF}]){re.escape(kok_)}[{HARF}]*:", anahtar): return False
+    for m in re.finditer(rf"(?<![{HARF}]){re.escape(kok_)}[{HARF}'’]*", metin_kucuk):
+        once = metin_kucuk[:m.start()]
+        if once.count("(") > once.count(")"): continue
+        if metin_kucuk[m.end():m.end() + 2] in (" (", "("): continue
+        return True
+    return False
 
 def main():
     dersler = json.load(open(os.path.join(CONTENT, "dersler.json"), encoding="utf-8"))
@@ -144,7 +154,7 @@ def main():
             for i, c in enumerate(t["cards"]):
                 ozet = i == len(t["cards"]) - 1 and tr_lower(c["h"]).startswith("özet")
                 metin = duz(c["p"])
-                k = {"ders": ders, "konu": kb["id"], "konu_ad": t["title"], "i": i, "h": c["h"], "html": c["p"],
+                k = {"ders": ders, "konu": kb["id"], "konu_ad": t["title"], "i": i, "h": c["h"], "html": c["p"], "key": tr_lower(c.get("key", "")),
                      "metin": metin, "ozet": ozet, "o": olc(metin)}
                 kartlar.append(k); konular[(ders, kb["id"])]["kartlar"].append(k)
     for f in sorted(os.listdir(os.path.join(CONTENT, "adimli"))):
@@ -175,7 +185,7 @@ def main():
         for (ders, r), tanim in terim_ilk.items():
             if ders != k["ders"] or tanim is k: continue
             tk, kk = konular[(ders, tanim["konu"])], konular[(ders, k["konu"])]
-            if (kk["sira"], k["i"]) < (tk["sira"], tanim["i"]) and gecis_ara(r, kucuk):
+            if (kk["sira"], k["i"]) < (tk["sira"], tanim["i"]) and gecis_ara(r, kucuk, k["key"]):
                 kullanim.setdefault((ders, r), []).append(k)
     # Tanımından önce 3+ farklı konuda geçen kelime gündelik kelimedir (ağırlık, sıcaklık): sayılmaz.
     erken = []
@@ -188,7 +198,9 @@ def main():
         a = k["o"]["atesman"] if k["o"]["atesman"] is not None else 50
         metin_p = min(100, max(0, 100 - a))
         terim_p = min(100, len(k["yeni_terim"]) * 25)
-        formul = len(re.findall(r"=|<sub>|<sup>|[×·÷√∝Δ]|\d", k["html"]))
+        # Sayılar tek tek rakam değil grup olarak sayılır; yıllar (1869) formül yükü değildir.
+        sayilar = [n for n in re.findall(r"\d+(?:[.,]\d+)?", duz(k["html"])) if not re.fullmatch(r"1[0-9]\d\d|20\d\d", n)]
+        formul = len(re.findall(r"=|<sub>|<sup>|[×·÷√∝Δ]", k["html"])) + len(sayilar)
         formul_p = min(100, formul * 6)
         uzun_p = min(100, max(0, (k["o"]["kelime"] - 15) * 2.5))
         k["zor"] = round(0.45 * metin_p + 0.25 * terim_p + 0.15 * formul_p + 0.15 * uzun_p, 1)
@@ -254,7 +266,7 @@ def main():
 
     w("## 3. Konu sırası\n")
     w("### Zordan kolaya giden konular\n")
-    w("Kartların zorluğu konu ilerledikçe azalıyor (eğilim −1'e yakınsa belirgin). Zor kartları sona almak ya da ilk kartları sadeleştirmek düşünülebilir.\n")
+    w("Kartların zorluğu konu ilerledikçe azalıyor (eğilim −1'e yakınsa belirgin). Çoğu zaman sebep, temel kavramları tanıtan ilk kartlarda yeni terimin yoğun olmasıdır; bu “önce temel, sonra uygulama” sırası doğrudur. Kart sırasını değiştirmek yerine yoğun kartlarda terimleri iki karta yaymak ya da cümleleri kısaltmak düşünülebilir.\n")
     for kb in sorted(ters_konu, key=lambda x: x["egim"]):
         w(f"- **{kb['ders']}/{kb['id']}** “{kb['ad']}”: eğilim {kb['egim']}, kart zorlukları {[k['zor'] for k in kb['kartlar'] if not k['ozet']]}")
     if not ters_konu: w("Yok.")
