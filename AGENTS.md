@@ -35,6 +35,7 @@ Senin görevin **denetlemek**. Yeniden tasarlamak, ürünün yönünü değişti
 | `content/fizik.json`, `kimya.json`, `biyoloji.json` | Konu içerikleri (kartlar, SVG görseller, 4 soruluk testler). |
 | `app/`, `components/`, `lib/` | Mobil öncelikli site (Next.js + React + TypeScript). Arayüz shadcn/ui (`components/ui/`) + Tailwind + Motion; renkler `app/globals.css` içindedir. |
 | `tools/check.py` | İçerik doğrulayıcı. |
+| `tools/okunabilirlik.py` | Türkçe anlaşılırlık (Ateşman, Bezirci-Yılmaz) ve kolaydan zora sıra raporu; `npm run okunabilirlik` → `denetim/OKUNABILIRLIK.md`. Yalnızca okur, CI’da çalışmaz. |
 | `tools/ekran.js` | Her sayfanın ve kartın telefon boyutunda ekran görüntüsünü alır. |
 | `video/` | Kısa dikey video şablonu, senaryolar, üretim adımları. |
 | `docs/` | Mimari, içerik kuralları, kararlar, yol haritası, denetim listesi. |
