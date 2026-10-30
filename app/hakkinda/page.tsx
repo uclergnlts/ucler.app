@@ -13,7 +13,7 @@ export default function Page() {
       <Govde className="text-[15px] leading-relaxed">
         <p>
           ucler, fizik, kimya ve biyolojiyi en temelden anlatan bir öğrenme sitesi. Konular kısa, görselli kartlarla anlatılır;
-          9. sınıftan üniversitenin ilk yıllarına kadar herkes için yazıldı ve YKS&apos;nin konularını kapsamayı amaçlar.
+          9. sınıftan üniversitenin ilk yıllarına kadar herkes için yazıldı ve lise müfredatının bütün konularını kapsamayı amaçlar.
           Site şu an deneme sürümünde; içerik ve görünüm geliştirilmeye devam ediyor.
         </p>
         <Bolum title="Nasıl kullanılır?">

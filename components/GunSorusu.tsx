@@ -228,6 +228,8 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
             )}
             {oyun && !!s.seri && <p className="flex items-center gap-2 [&_svg]:size-4 [&_svg]:text-acc"><Seri />Günün sorusu serin: {s.seri} gün</p>}
           </div>
+        ) : girisli && !kayit.misafir ? (
+          <p className="rounded-2xl bg-secondary px-4 py-3 text-[14px]">Bağlantı kurulamadığı için sonucun sunucuya kaydedilemedi.</p>
         ) : girisli ? (
           <p className="rounded-2xl bg-secondary px-4 py-3 text-[14px]">Bu soruyu hesabına girmeden başlattığın için puanı kaydedilmedi. Yarından itibaren puanların lige eklenecek.</p>
         ) : (
