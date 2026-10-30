@@ -1,6 +1,6 @@
 import Home from "@/components/Home";
-import { allEntries } from "@/lib/content";
+import { allEntries, gunSorusuHavuzu } from "@/lib/content";
 
 export default function Page() {
-  return <Home all={allEntries()} />;
+  return <Home all={allEntries()} gunHavuz={Object.keys(gunSorusuHavuzu())} />;
 }

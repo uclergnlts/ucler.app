@@ -35,3 +35,10 @@ Bilgisayarsız yol: `main`'e her gönderimde GitHub **Actions > Android APK** i�
 - Uygulama her açılışta ana sayfadan başlar.
 - Abonelik (ucler Plus, RevenueCat): docs/ABONELIK.md
 - Mağaza derlemeleri (TestFlight, Google Play): docs/MAGAZA.md
+
+## Günün sorusu (2026-10-30)
+Ana sayfanın üstünde "Günün sorusu" kartı, ekran `/gunun-sorusu/` (components/GunSorusu.tsx, lib/gunsoru.ts).
+Herkese aynı soru; gün Türkiye saatiyle 00:00'da değişir, dersler sırayla döner. Soru konu testlerindeki etkileşimli
+sorulardan seçilir (lib/content.ts `gunSorusuHavuzu`). Tek deneme; doğru cevap 100 puan + hız bonusu (ilk 10 sn +50,
+60. saniyeye kadar azalarak 0). Hesabı olanın süresi ve puanı sunucuda (supabase/migrations/20261030_gunun_sorusu.sql)
+tutulur ve haftalık lige eklenir; hesabı olmayan çözebilir ama puanı kaydedilmez.

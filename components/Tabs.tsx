@@ -1,7 +1,7 @@
 "use client";
 // Alt menü: Ana sayfa, Keşfet, Videolar, Oyunlar, Profil (ders adları değil; bkz. docs/KARARLAR.md).
 // Kaydedilenler Profil'in içindedir.
-// Ders ekranında (/ders/konu/) ve tekrar ekranında gizlenir.
+// Ders ekranında (/ders/konu/), tekrar ve günün sorusu ekranında gizlenir.
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
@@ -33,7 +33,7 @@ export function sekmeRengi(path: string): string | undefined {
 export default function Tabs() {
   const parts = usePathname().split("/").filter(Boolean);
   // Profil'in alt ekranları (/profil/istatistikler/ ...) alt menüyü gösterir, Profil seçili kalır.
-  if ((parts.length >= 2 && parts[0] !== "profil") || parts[0] === "tekrar") return null;
+  if ((parts.length >= 2 && parts[0] !== "profil") || parts[0] === "tekrar" || parts[0] === "gunun-sorusu") return null;
   const cur = sekme(parts);
   return (
     <div className="fixed inset-x-0 bottom-0 z-10 border-t border-border bg-card pb-[env(safe-area-inset-bottom,0px)]">

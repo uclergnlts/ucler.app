@@ -10,6 +10,7 @@ import { Icon } from "./icons";
 import { motion } from "motion/react";
 import { Progress } from "./ui/progress";
 import Bugun from "./Bugun";
+import { GunSorusuKart } from "./GunSorusu";
 import { Bolum, Govde, href, Simge, Top } from "./temel";
 import { Button } from "./ui/button";
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "./ui/sheet";
@@ -19,7 +20,7 @@ import { cn } from "@/lib/utils";
 const YAKINDA = [["matematik", "Matematik"], ["tarih", "Tarih"], ["cografya", "Coğrafya"], ["hukuk", "Hukuk"]] as const;
 const dersKart = "flex min-h-[160px] flex-col justify-between gap-3 rounded-3xl border border-border bg-card p-4 transition-transform active:scale-[.98]";
 
-export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
+export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; gunHavuz: string[] }) {
   const prog = useProg(), ad = useAd(), tekrar = useTekrar(), asama = useAsama(), yer = useYer();
   const bugun = bugunku(tekrar).length, kalan = Object.keys(tekrar).length;
   const sonraki = Object.values(tekrar).map((x) => x.g).sort()[0];
@@ -55,6 +56,8 @@ export default function Home({ all }: { all: Record<DersId, Entry[]> }) {
             <p className="text-[15px] text-muted-foreground">Fizik, kimya ve biyoloji en temelden: kısa, görselli kartlar ve her konunun sonunda 4 soruluk bir test.</p>
           ) : doneAll > 0 && <p className="text-[15px] text-muted-foreground">Şimdiye kadar {doneAll} konu bitirdin.</p>}
         </section>
+
+        <GunSorusuKart havuz={gunHavuz} />
 
         {yeni && ilk && (
           <Link

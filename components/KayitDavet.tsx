@@ -58,7 +58,7 @@ export function useKaydet(key: string, donus: string) {
   return { saved, kaydet, davet };
 }
 
-function KayitSayfasi({ acik, setAcik, donus, baslik, aciklama }: {
+export function KayitSayfasi({ acik, setAcik, donus, baslik, aciklama }: {
   acik: boolean; setAcik: (a: boolean) => void; donus: string; baslik: string; aciklama: string;
 }) {
   const google = useGoogle();

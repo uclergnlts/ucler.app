@@ -10,10 +10,10 @@ import { animSes } from "@/lib/ses";
 
 export default function Gunluk() {
   const [liste, setListe] = useState<Odul[]>([]);
-  // Ders ve tekrar ekranında öğrenci dikkatini dağıtmasın: puan oradaki bitiş ekranında zaten görünür.
+  // Ders, tekrar ve günün sorusu ekranında öğrenci dikkatini dağıtmasın: puan oradaki bitiş ekranında zaten görünür.
   const yol = usePathname() ?? "";
   const oyun = useOyunAcik();
-  const sessiz = !oyun || /^\/(fizik|kimya|biyoloji)\/[^/]+\/?$/.test(yol) || yol.startsWith("/tekrar") || yol.startsWith("/unite");
+  const sessiz = !oyun || /^\/(fizik|kimya|biyoloji)\/[^/]+\/?$/.test(yol) || yol.startsWith("/tekrar") || yol.startsWith("/unite") || yol.startsWith("/gunun-sorusu");
 
   const sessizRef = useRef(sessiz);
   sessizRef.current = sessiz;

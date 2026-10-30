@@ -76,3 +76,15 @@ export function tumSorular(): Record<string, TekrarSoru> {
 export function kartBasliklari(): Record<string, string[]> {
   return Object.fromEntries(readyTopics().map(({ ders, id }) => [`${ders}.${id}`, topic(ders, id)!.cards.map((c) => c.h)]));
 }
+
+/** Günün sorusu havuzu: konu testlerindeki etkileşimli sorular (sırala, eşleştir, ayır, sayı). Sahne sorusu ve
+ *  kartlara/şekle gönderme yapan sorular kart olmadan anlaşılmayacağı için dışarıda kalır. Seçim: lib/gunsoru.ts. */
+export function gunSorusuHavuzu(): Record<string, TekrarSoru> {
+  const out: Record<string, TekrarSoru> = {};
+  for (const [key, q] of Object.entries(tumSorular())) {
+    if (q.tur !== "sirala" && q.tur !== "eslestir" && q.tur !== "ayir" && q.tur !== "sayi") continue;
+    if (/yukarı|şekil|grafik|tablo|kartta|bu konu/i.test(q.q)) continue;
+    out[key] = q;
+  }
+  return out;
+}
