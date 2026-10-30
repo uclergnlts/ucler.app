@@ -164,6 +164,25 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
           </div>
         </Bolum>
 
+        {/* Deneme sınavı henüz yok: kart görünür, dokununca "yakında" der. */}
+        <Sheet>
+          <SheetTrigger className="flex items-center gap-3.5 rounded-2xl border border-border bg-card p-4 text-left transition-transform active:scale-[.99]">
+            <Simge soluk className="size-11 [&_svg]:size-5"><Icon.kupa /></Simge>
+            <span className="min-w-0 flex-1">
+              <b className="block font-bold">Deneme sınavı</b>
+              <span className="block text-[13px] font-semibold text-muted-foreground">Yakında</span>
+            </span>
+          </SheetTrigger>
+          <SheetContent>
+            <div className="grid justify-items-center gap-3 py-4 text-center">
+              <Simge soluk className="size-16 rounded-2xl [&_svg]:size-8"><Icon.kupa /></Simge>
+              <SheetTitle className="text-[22px]">Deneme sınavı yakında</SheetTitle>
+              <SheetDescription className="text-muted-foreground">Bütün derslerden karışık, süreli bir deneme sınavı hazırlıyoruz. Hazır olunca burada açılacak.</SheetDescription>
+              <SheetClose asChild><Button className="mt-2 w-full">Tamam</Button></SheetClose>
+            </div>
+          </SheetContent>
+        </Sheet>
+
         {VIDEOLAR.length > 0 && (
           <Bolum title="Kısa videolar" more={<Link className="text-sm font-bold text-muted-foreground" href="/videolar/">Tümü</Link>}>
             <div className="-mx-4 flex snap-x snap-mandatory gap-2.5 overflow-x-auto px-4 [scrollbar-width:none]">
