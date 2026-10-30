@@ -8,8 +8,8 @@ on:
         description: "Sürüm adı (mağazada görünür)"
         default: "1.0"
       abonelik:
-        description: "Ödeme duvarı açık mı (1 = ucler Plus satın alma görünür)"
-        default: "1"
+        description: "Ödeme duvarı açık mı (1 = ucler Plus satın alma görünür; App Store çıkışına kadar 0)"
+        default: "0"
 jobs:
   testflight:
     runs-on: macos-26
