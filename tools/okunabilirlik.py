@@ -51,8 +51,9 @@ def duz(html):
     return re.sub(r"([.!?])(\s*\.)+", r"\1", s).strip(" .") + ("." if s.strip(" .") else "")
 
 def cumleler(metin):
-    # Noktadan sonra boşluk gelince böl; "1. yasa" gibi sıra sayılarında (noktadan önce rakam) bölme.
-    parcalar = re.split(r"(?<=[^\d\s][.!?…])\s+", metin)
+    # Noktadan sonra boşluk gelince böl. Noktadan önce rakam varsa ("1. yasa", "kazanç 2. Bedeli")
+    # yalnızca ardından büyük harf gelince böl: sıra sayısı cümleyi bitirmez.
+    parcalar = re.split(r"(?<=[^\d\s][.!?…])\s+|(?<=\d[.!?…])\s+(?=[A-ZÇĞİÖŞÜ])", metin)
     return [p.strip() for p in parcalar if re.search(f"[{HARF}]", p)]
 
 def kelimeler(cumle):
@@ -83,7 +84,8 @@ def olc(metin):
             n = hece(k); say += 1; hec += n
             if n >= 3: H[min(n, 6) - 3] += 1
             if n >= AGIR_KELIME: agir.append(k)
-        if len(ks) > UZUN_CUMLE: uzun.append((len(ks), c))
+        # Virgülle sıralanan liste ("kireç taşı CaCO₃, tuz ruhu HCl, ...") uzun cümle sayılmaz.
+        if len(ks) > UZUN_CUMLE and c.count(",") < 5: uzun.append((len(ks), c))
         if len(agir) >= AGIR_YIGIN: yigin.append((agir, c))
     nc = max(1, len(cs))
     oks = kel / nc
