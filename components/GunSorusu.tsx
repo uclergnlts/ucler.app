@@ -13,6 +13,7 @@ import {
   bonus, gunKayitOku, gunKayitYaz, gunPuan, gununSorusu, sunucuBasla, sunucuBitir, sunucuDurum, sunucuSonuc, trGun,
   useGunKayit, yeniSoruya, type GunKayit, type GunSonuc, type SunucuDurum,
 } from "@/lib/gunsoru";
+import { soruIzi } from "@/lib/iz";
 import { useOyunAcik } from "@/lib/oyun";
 import { kaydet } from "@/lib/puan";
 import { olay } from "@/lib/olay";
@@ -134,7 +135,7 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
     let sonuc: GunSonuc = { dogru: ok, ms, puan: ok ? gunPuan(ms) : 0, kayitli: false };
     if (sunucuyla) {
       setBekle(true);
-      try { sonuc = sunucuSonuc(await sunucuBitir(ok)) ?? sonuc; } catch { /* bağlantı yok: sonuç bu cihazda kalır, kaydedilmedi */ }
+      try { sonuc = sunucuSonuc(await sunucuBitir(cevap, soruIzi(Q.q), ok)) ?? sonuc; } catch { /* bağlantı yok: sonuç bu cihazda kalır, kaydedilmedi */ }
       setBekle(false);
     }
     gunKayitYaz({ ...kayit, sonuc });
@@ -212,14 +213,15 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
           transition={{ duration: 0.25 }}
         >
           <h2 className={cn("text-[22px]", ok ? "text-good" : "text-bad")}>{ok ? "Doğru!" : "Bu sefer olmadı"}</h2>
-          {oyun && ok && <div className="font-display text-[52px] leading-none font-extrabold tabular-nums">+{s.puan}</div>}
-          {oyun && ok && <p className="text-[14px] font-semibold text-muted-foreground">100 doğru cevap{s.puan > 100 ? ` + ${s.puan - 100} hız bonusu` : ""}</p>}
+          {oyun && ok && s.puan > 0 && <div className="font-display text-[52px] leading-none font-extrabold tabular-nums">+{s.puan}</div>}
+          {oyun && ok && s.puan > 0 && <p className="text-[14px] font-semibold text-muted-foreground">100 doğru cevap{s.puan > 100 ? ` + ${s.puan - 100} hız bonusu` : ""}</p>}
           <p className="text-[15px] font-semibold">Süre: {sureYazi(s.ms)}</p>
         </motion.div>
 
         {s.kayitli ? (
           <div className="grid gap-2 rounded-2xl border border-border bg-card p-4 text-[15px]">
-            {oyun && ok && <p className="flex items-center gap-2 [&_svg]:size-4 [&_svg]:text-acc"><Kupa />Puanın haftalık lige eklendi.</p>}
+            {oyun && ok && s.puan > 0 && <p className="flex items-center gap-2 [&_svg]:size-4 [&_svg]:text-acc"><Kupa />Puanın haftalık lige eklendi.</p>}
+            {ok && s.puan === 0 && <p>Uygulaman eski bir sürümde olduğu için bu sorunun puanı sayılmadı. Uygulamayı güncelleyince puanların yine lige eklenir.</p>}
             {s.ist && s.ist.kisi > 0 && (
               <p>
                 Bugün {s.ist.kisi} kişi çözdü, {s.ist.dogru} kişi doğru yaptı.

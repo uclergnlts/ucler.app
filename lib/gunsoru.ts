@@ -2,7 +2,7 @@
 // Günün sorusu: herkese aynı etkileşimli soru; gün Türkiye saatiyle 00:00'da değişir, dersler sırayla döner
 // (fizik, kimya, biyoloji). Soru konu testlerindeki etkileşimli sorulardan seçilir (havuz: lib/content.ts gunSorusuHavuzu).
 // Tek deneme hakkı vardır. Hesabı olan öğrencinin süresi ve puanı sunucuda tutulur ve haftalık lige eklenir
-// (supabase/migrations/20261030_gunun_sorusu.sql). Hesabı olmayan da çözebilir; süre cihazda ölçülür, puan kaydedilmez.
+// (supabase/migrations/20261030_gunun_sorusu.sql). Cevabın doğruluğuna sunucu karar verir (supabase/functions/gunun-sorusu). Hesabı olmayan da çözebilir; süre cihazda ölçülür, puan kaydedilmez.
 // Bu cihazdaki son kayıt (yalnızca bugünün) ana sayfadaki kartı besler ve hesapsız ikinci denemeyi engeller.
 import { useSyncExternalStore } from "react";
 import { sb } from "./bulut";
@@ -70,7 +70,13 @@ async function cagir(ad: string, arg?: Record<string, unknown>): Promise<SunucuD
 }
 export const sunucuDurum = () => cagir("gunun_sorusu_durum");
 export const sunucuBasla = (soru: string) => cagir("gunun_sorusu_basla", { p_soru: soru });
-export const sunucuBitir = (dogru: boolean) => cagir("gunun_sorusu_bitir", { p_dogru: dogru });
+/** Cevabı sunucuya gönderir; doğru olup olmadığına sunucu karar verir (supabase/functions/gunun-sorusu).
+ *  iz: soru metninin izi (eski uygulama sürümünü ayırt etmek için); dogru yalnızca o durumda kullanılır, puan verilmez. */
+export async function sunucuBitir(cevap: unknown, iz: string, dogru: boolean): Promise<SunucuDurum> {
+  const { data, error } = await sb().functions.invoke("gunun-sorusu", { body: { cevap, iz, dogru } });
+  if (error || !data?.gun) throw error ?? new Error("bos");
+  return data as SunucuDurum;
+}
 
 /** Sunucunun bitmiş kaydından sonuç. */
 export const sunucuSonuc = (d: SunucuDurum): GunSonuc | undefined =>
