@@ -258,7 +258,8 @@ for f in sorted(glob.glob(os.path.join(CONTENT, "adimli", "*.json"))):
             for i, c in enumerate(kk):
                 if c.get("h") == "Özet": continue
                 w = len(re.sub("<[^>]+>", "", c.get("p", "")).split())
-                if w > 25: err("adımlı", ad, f"soruOnce: kart {i + 1} metni {w} kelime (en çok 25)")
+                # 25 kelime sınırı metinleri devrik ve eksik cümlelere itiyordu; tam cümle için 40 (Üçler, 2026-10-31).
+                if w > 40: err("adımlı", ad, f"soruOnce: kart {i + 1} metni {w} kelime (en çok 40)")
                 if i + 1 not in kartlar and "once" not in c: err("adımlı", ad, f"soruOnce: kart {i + 1} ne adımla ne soruyla açılıyor")
     for n, s in enumerate(a.get("adimlar", []), 1):
         yer = f"{ad} adım {n}"

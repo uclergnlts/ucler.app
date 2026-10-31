@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Kaç su?",
-   "metin": "Kural hep aynı: her bağ için bir su.",
+   "metin": "Kural hep aynıdır: her bağ için bir su molekülü çıkar.",
    "sahne": {
     "tur": "polimer"
    },
@@ -50,15 +50,15 @@
      {
       "yazi": "99",
       "dogru": true,
-      "neden": "Düz bir zincirde bağ sayısı birim sayısından bir eksiktir: 100 − 1 = 99 bağ, 99 su."
+      "neden": "Düz bir zincirde bağ sayısı, birim sayısından bir eksiktir. 100 − 1 = 99 bağ kurulur ve 99 su çıkar."
      },
      {
       "yazi": "100",
-      "neden": "Ekrandaki 6 glikoza bak: kaç bağ var? Bağ sayısı birim sayısından bir eksik."
+      "neden": "Ekrandaki 6 glikoza bak ve bağları say. Bağ sayısı, birim sayısından bir eksiktir."
      },
      {
       "yazi": "50",
-      "neden": "Su, her iki komşu birim arasındaki bağda çıkar; birimleri ikişer ikişer saymıyoruz."
+      "neden": "Su, iki komşu birim arasındaki her bağda çıkar. Birimleri ikişer ikişer saymıyoruz."
      }
     ]
    },
@@ -115,7 +115,7 @@
     "hedef": {
      "g": 11
     },
-    "tamam": "11 g yağ ≈ 99 kcal, karbonhidratta ise 25 g gerekiyor: aynı enerjiyi yarıdan az kütleyle taşırsın. Uzun süreli depo bu yüzden yağdır."
+    "tamam": "11 g yağ yaklaşık 99 kcal verir; karbonhidratta aynı enerji için 25 g gerekir. Yağ aynı enerjiyi yarıdan az kütleyle taşır. Bu yüzden uzun süreli depo yağdır."
    },
    "kart": 5
   },
@@ -148,11 +148,11 @@
      },
      {
       "yazi": "Hiçbir şey değişmedi",
-      "neden": "Değiştirince alyuvara ne oldu? Sıra değişirse şekil de değişebilir."
+      "neden": "Değiştirdiğinde alyuvara ne olduğuna bak. Sıra değişirse şekil de değişebilir."
      },
      {
       "yazi": "Yağa dönüştü",
-      "neden": "Hâlâ bir protein; değişen yalnızca sırası, dolayısıyla şekli ve görevi."
+      "neden": "Hâlâ bir proteindir. Değişen yalnızca amino asit sırası, dolayısıyla şekli ve görevidir."
      }
     ]
    },
@@ -238,7 +238,7 @@
         "r": 2
        }
       ],
-      "tamam": "Benedict ısıtınca kiremit kırmızısına döndü: balda glikoz ve früktoz gibi indirgen şekerler var."
+      "tamam": "Benedict ısıtılınca kiremit kırmızısına döndü. Demek ki balda glikoz ve fruktoz gibi indirgen şekerler var."
      },
      {
       "yazi": "Yumurta akında <b>protein</b> olduğunu göster.",
@@ -252,7 +252,7 @@
         "r": 3
        }
       ],
-      "tamam": "Biüre mora döndü: peptit bağları, yani protein var."
+      "tamam": "Biüre mora döndü. Bu renk, peptit bağlarının, yani proteinin varlığını gösterir."
      },
      {
       "yazi": "Zeytinyağında <b>yağ</b> olduğunu göster.",
@@ -266,7 +266,7 @@
         "r": 4
        }
       ],
-      "tamam": "Sudan III yağda çözünür; üstte kırmızı yağ tabakası oluştu."
+      "tamam": "Sudan III yağda çözünür ve üstte kırmızı bir yağ tabakası oluştu."
      },
      {
       "yazi": "<b>Saf suyla</b> kontrol tüpü yap: bir ayraç dene.",
@@ -326,15 +326,15 @@
      {
       "yazi": "Şeker ve protein",
       "dogru": true,
-      "neden": "Benedict kırmızı: şeker; biüre mor: protein. İyot ve Sudan III değişmedi: nişasta ve yağ yok ya da ayracın gösteremeyeceği kadar az."
+      "neden": "Benedict kırmızıya döndüğü için şeker, biüre mor olduğu için protein vardır. İyot ve Sudan III değişmediği için nişasta ve yağ ya yoktur ya da ayracın gösteremeyeceği kadar azdır."
      },
      {
       "yazi": "Nişasta ve protein",
-      "neden": "Nişasta iyotu mavi-siyaha çevirirdi; iyot sarı-kahve kaldı."
+      "neden": "Nişasta olsaydı iyot mavi-siyaha dönerdi, ama iyot sarı-kahve kaldı."
      },
      {
       "yazi": "Şeker ve yağ",
-      "neden": "Yağ olsaydı Sudan III ile kırmızı tabaka oluşurdu."
+      "neden": "Yağ olsaydı Sudan III ile kırmızı bir tabaka oluşurdu."
      }
     ]
    },
@@ -345,9 +345,9 @@
   "Monomerler <b>dehidrasyonla</b> (su çıkarak) birleşir, polimerler <b>hidrolizle</b> (su eklenerek) parçalanır.",
   "Düz bir zincirde bağ ve çıkan su sayısı, birim sayısından bir eksiktir.",
   "Yağ gramda yaklaşık 9 kcal, karbonhidrat yaklaşık 4 kcal verir; yağ uzun süreli depodur.",
-  "Protein: amino asit sırası → katlanma → şekil → görev. Tek bir değişiklik görevi bozabilir.",
-  "DNA çift zincir, deoksiriboz, A-T-G-C; RNA genelde tek zincir, riboz, T yerine U.",
-  "Besin testi: iyot nişastayı, Benedict şekeri, biüre proteini, Sudan III yağı gösterir; saf su kontrol tüpüdür."
+  "Proteinde amino asit sırası katlanmayı, katlanma şekli, şekil de görevi belirler. Tek bir değişiklik görevi bozabilir.",
+  "DNA çift zincirlidir, deoksiriboz ve A, T, G, C bazlarını taşır. RNA genellikle tek zincirlidir, riboz taşır ve T yerine U bulunur.",
+  "Besin testlerinde iyot nişastayı, Benedict şekeri, biüre proteini, Sudan III yağı gösterir. Saf su kontrol tüpüdür."
  ],
  "soruOnce": true
 }

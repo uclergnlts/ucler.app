@@ -360,37 +360,37 @@
     "cards": [
       {
         "h": "Su ve mineraller",
-        "p": "<b>Su</b> hücre kütlesinin yaklaşık %70'idir; çözücüdür, sıcaklığı dengeler. <b>Mineraller</b> enerji vermez, düzenler. İkisi <b>inorganiktir</b>; karbon iskeletli öbür biyomoleküller <b>organiktir</b>.",
+        "p": "<b>Su</b>, hücre kütlesinin yaklaşık %70'ini oluşturur. Maddeleri çözer ve vücut sıcaklığını dengeler. <b>Mineraller</b> enerji vermez, vücuttaki işleri düzenler. Su ve mineraller <b>inorganik</b> maddelerdir. Karbon iskeleti olan diğer biyomoleküller ise <b>organiktir</b>.",
         "svg": "<svg viewBox='0 0 320 200'><text x='70' y='28' font-size='14' fill='var(--ink)' text-anchor='middle'>Su</text><line x1='70' y1='80' x2='45' y2='108' stroke='var(--ink)' stroke-width='3'/><line x1='70' y1='80' x2='95' y2='108' stroke='var(--ink)' stroke-width='3'/><circle cx='70' cy='78' r='22' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='2'/><circle cx='45' cy='110' r='12' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='2'/><circle cx='95' cy='110' r='12' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='2'/><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='70' y='83'>O</text><text x='45' y='115'>H</text><text x='95' y='115'>H</text></g><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='108' y='58'>δ−</text><text x='30' y='138'>δ+</text><text x='110' y='138'>δ+</text><text x='70' y='160'>polar molekül</text><text x='70' y='177'>iyi çözücü</text><text x='70' y='194'>ısıyı dengeler</text></g><line x1='150' y1='20' x2='150' y2='190' stroke='var(--line)'/><text x='241' y='28' font-size='14' fill='var(--ink)' text-anchor='middle'>Mineraller</text><g fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)'><rect x='170' y='40' width='68' height='50' rx='6'/><rect x='242' y='40' width='68' height='50' rx='6'/><rect x='170' y='98' width='68' height='50' rx='6'/><rect x='242' y='98' width='68' height='50' rx='6'/></g><g font-size='15' fill='var(--ink)' text-anchor='middle'><text x='204' y='62'>Ca</text><text x='276' y='62'>Fe</text><text x='204' y='120'>I</text><text x='276' y='120'>Na, K</text></g><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='204' y='80'>kemik, diş</text><text x='276' y='80'>hemoglobin</text><text x='204' y='138'>tiroit</text><text x='276' y='138'>sinir</text><text x='240' y='175'>enerji vermez, düzenler</text></g></svg>",
-        "key": "Su, mineral ve vitaminler sindirilmeden emilir; su ve minerali canlı hazır alır.",
+        "key": "Su, mineraller ve vitaminler sindirilmeden emilir. Canlı, su ve minerali dışarıdan hazır alır.",
         "once": {
           "soru": "Terlerken su ve tuz (mineral) kaybedersin. Mineraller vücuda enerji verir mi?",
           "secenekler": [
             {
               "yazi": "Vermez",
-              "neden": "Mineraller enerji vermez, düzenler: Ca kemik, Fe hemoglobin, Na ve K sinir iletimi için gerekir.",
+              "neden": "Mineraller enerji vermez, düzenleyici görev yapar. Örneğin kalsiyum kemik, demir hemoglobin, sodyum ve potasyum sinir iletimi için gerekir.",
               "dogru": true
             },
             {
               "yazi": "Çok verir",
-              "neden": "Enerji karbonhidrat, yağ ve proteinden gelir; mineraller düzenleyicidir."
+              "neden": "Enerji karbonhidrat, yağ ve proteinden gelir. Mineraller ise düzenleyicidir."
             },
             {
               "yazi": "Az verir",
-              "neden": "Mineraller hiç enerji vermez; işleri düzenlemektir."
+              "neden": "Mineraller hiç enerji vermez. Görevleri vücuttaki işleri düzenlemektir."
             }
           ]
         }
       },
       {
         "h": "Birleşirken su çıkar, ayrılırken girer",
-        "p": "Küçük birimler (<em>monomer</em>) birleşip <em>polimer</em> olurken su çıkar: <b>dehidrasyon sentezi</b>. Tersinde su eklenip bağ kırılır: <b>hidroliz</b>. Sindirim, hidrolizdir.",
+        "p": "Küçük birimler (<em>monomer</em>) birleşip büyük moleküller (<em>polimer</em>) oluşturur. Bu birleşmede su açığa çıkar ve buna <b>dehidrasyon sentezi</b> denir. Tersinde su eklenir ve bağ kırılır; buna da <b>hidroliz</b> denir. Sindirim bir hidroliz olayıdır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='biyomolekuller-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><circle cx='35' cy='70' r='16' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='2'/><text x='62' y='75' font-size='15' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='90' cy='70' r='16' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='2'/><line x1='112' y1='70' x2='162' y2='70' stroke='var(--c2)' stroke-width='2' marker-end='url(#biyomolekuller-2)'/><text x='137' y='45' font-size='12' fill='var(--c2)' text-anchor='middle'>dehidrasyon</text><circle cx='185' cy='70' r='16' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='2'/><circle cx='217' cy='70' r='16' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='2'/><text x='245' y='75' font-size='14' fill='var(--c2)'>+ H₂O</text><circle cx='35' cy='140' r='16' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='2'/><circle cx='67' cy='140' r='16' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='2'/><text x='92' y='145' font-size='14' fill='var(--c1)'>+ H₂O</text><line x1='148' y1='140' x2='198' y2='140' stroke='var(--c1)' stroke-width='2' marker-end='url(#biyomolekuller-2)'/><text x='173' y='118' font-size='12' fill='var(--c1)' text-anchor='middle'>hidroliz</text><circle cx='225' cy='140' r='16' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='2'/><circle cx='275' cy='140' r='16' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='2'/><text x='160' y='188' font-size='12' fill='var(--muted)' text-anchor='middle'>Birleşirken su çıkar, ayrılırken su harcanır</text></svg>",
-        "key": "Dehidrasyon: birimler birleşir, su çıkar. Hidroliz: su eklenir, bağ kırılır."
+        "key": "Dehidrasyonda birimler birleşir ve su çıkar. Hidrolizde su eklenir ve bağ kırılır."
       },
       {
         "h": "Karbonhidratlar: tek ve çift şekerler",
-        "p": "Karbonhidratlar C, H, O'dan oluşur; öncelikli enerji kaynağıdır. <b>Monosakkarit</b>: glikoz, fruktoz, galaktoz, riboz, deoksiriboz. İkisi birleşince <b>disakkarit</b>: maltoz, sükroz, laktoz.",
+        "p": "Karbonhidratlar karbon, hidrojen ve oksijenden oluşur ve canlının ilk tercih ettiği enerji kaynağıdır. Glikoz, fruktoz, galaktoz, riboz ve deoksiriboz birer <b>monosakkarittir</b>. İki monosakkarit birleşince <b>disakkarit</b> oluşur: maltoz, sükroz ve laktoz.",
         "svg": "<svg viewBox='0 0 320 200'><polygon points='66,50 58,63.9 42,63.9 34,50 42,36.1 58,36.1' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='2'/><polygon points='110,34 125.2,45.1 119.4,62.9 100.6,62.9 94.8,45.1' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='2'/><polygon points='186,50 178,63.9 162,63.9 154,50 162,36.1 178,36.1' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='2'/><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='50' y='84'>glikoz</text><text x='110' y='84'>fruktoz</text><text x='170' y='84'>galaktoz</text></g><text x='300' y='55' font-size='12' fill='var(--muted)' text-anchor='end'>monosakkarit</text><text x='160' y='108' font-size='12' fill='var(--muted)' text-anchor='middle'>disakkarit (2 birim)</text><polygon points='53,135 45,148.9 29,148.9 21,135 29,121.1 45,121.1' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='2'/><polygon points='89,135 81,148.9 65,148.9 57,135 65,121.1 81,121.1' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='2'/><line x1='53' y1='135' x2='57' y2='135' stroke='var(--ink)' stroke-width='2'/><polygon points='158,135 150,148.9 134,148.9 126,135 134,121.1 150,121.1' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='2'/><polygon points='178,119 193.2,130.1 187.4,147.9 168.6,147.9 162.8,130.1' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='2'/><line x1='158' y1='135' x2='163' y2='131' stroke='var(--ink)' stroke-width='2'/><polygon points='263,135 255,148.9 239,148.9 231,135 239,121.1 255,121.1' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='2'/><polygon points='299,135 291,148.9 275,148.9 267,135 275,121.1 291,121.1' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='2'/><line x1='263' y1='135' x2='267' y2='135' stroke='var(--ink)' stroke-width='2'/><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='55' y='172'>maltoz</text><text x='160' y='172'>sükroz</text><text x='265' y='172'>laktoz</text></g><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='55' y='189'>glikoz+glikoz</text><text x='160' y='189'>glikoz+fruktoz</text><text x='265' y='189'>glikoz+galaktoz</text></g></svg>",
         "key": "Bu üç disakkaritin hepsinde glikoz vardır.",
         "once": {
@@ -398,120 +398,120 @@
           "secenekler": [
             {
               "yazi": "Su",
-              "neden": "Her birleşmede bir su çıkar: glikoz + fruktoz → sükroz + su. İki monosakkarit birleşince disakkarit olur.",
+              "neden": "Her birleşmede bir su molekülü çıkar: glikoz + fruktoz → sükroz + su. İki monosakkarit birleşince bir disakkarit oluşur.",
               "dogru": true
             },
             {
               "yazi": "Karbon dioksit",
-              "neden": "CO₂, şekerler yakılırken (solunumda) çıkar; birleşirken değil."
+              "neden": "CO₂, şekerler birleşirken değil, solunumda yakılırken çıkar."
             },
             {
               "yazi": "Oksijen",
-              "neden": "Birleşmede ayrılan, bir su molekülüdür."
+              "neden": "Birleşme sırasında ayrılan molekül oksijen değil, sudur."
             }
           ]
         }
       },
       {
         "h": "Polisakkaritler",
-        "p": "Çok sayıda glikoz <b>polisakkarit</b> oluşturur: <b>nişasta</b> bitkide, <b>glikojen</b> hayvanda depo; <b>selüloz</b> bitki hücre duvarında, insan sindiremez. <b>Kitin</b> böcek kabuğunu yapar.",
+        "p": "Çok sayıda glikoz birleşerek <b>polisakkaritleri</b> oluşturur. <b>Nişasta</b> bitkilerde, <b>glikojen</b> hayvanlarda depo görevi yapar. <b>Selüloz</b> bitki hücre duvarını oluşturur ve insan onu sindiremez. <b>Kitin</b> ise böceklerin dış iskeletini yapan bir polisakkarittir.",
         "svg": "<svg viewBox='0 0 320 200'><g font-size='13' fill='var(--ink)'><text x='10' y='44'>Nişasta</text><text x='10' y='104'>Glikojen</text><text x='10' y='164'>Selüloz</text></g><g font-size='12' fill='var(--muted)' text-anchor='end'><text x='310' y='44'>bitki deposu</text><text x='310' y='104'>hayvan deposu</text><text x='310' y='164'>hücre duvarı</text></g><line x1='95' y1='40' x2='215' y2='40' stroke='var(--c4)' stroke-width='12' stroke-linecap='round' stroke-dasharray='0 12' fill='none'/><line x1='155' y1='40' x2='179' y2='18' stroke='var(--c4)' stroke-width='12' stroke-linecap='round' stroke-dasharray='0 16' fill='none'/><g fill='none' stroke='var(--c2)' stroke-width='12' stroke-linecap='round' stroke-dasharray='0 12'><line x1='95' y1='100' x2='215' y2='100'/><line x1='119' y1='100' x2='131' y2='78'/><line x1='107' y1='100' x2='119' y2='122'/><line x1='155' y1='100' x2='167' y2='122'/><line x1='191' y1='100' x2='203' y2='78'/></g><g fill='none' stroke='var(--c3)' stroke-dasharray='2 4'><line x1='95' y1='152' x2='95' y2='168'/><line x1='131' y1='152' x2='131' y2='168'/><line x1='167' y1='152' x2='167' y2='168'/><line x1='203' y1='152' x2='203' y2='168'/></g><g fill='none' stroke='var(--c3)' stroke-width='12' stroke-linecap='round' stroke-dasharray='0 12'><line x1='95' y1='150' x2='215' y2='150'/><line x1='95' y1='170' x2='215' y2='170'/></g><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='155' y='66'>az dallı</text><text x='225' y='126'>çok dallı</text><text x='155' y='194'>düz, yan yana lifler</text></g></svg>",
-        "key": "Glikojen çok dallıdır: birçok uçtan aynı anda glikoz koparılır, enerji hızlı gelir."
+        "key": "Glikojen çok dallıdır. Bu yüzden birçok uçtan aynı anda glikoz koparılır ve enerji hızlı sağlanır."
       },
       {
         "h": "Yağlar: yoğun enerji deposu",
-        "p": "Lipitler suda çözünmez. Yağ (<em>trigliserit</em>) 1 gliserol + 3 yağ asididir. Gramı, karbonhidratın iki katından fazla enerji verir; uzun süreli depo ve yalıtım sağlar.",
+        "p": "Lipitler suda çözünmez. Bir yağ molekülü (<em>trigliserit</em>), 1 gliserol ve 3 yağ asidinden oluşur. Yağın bir gramı, karbonhidratın iki katından fazla enerji verir. Bu yüzden yağ uzun süreli depo olarak kullanılır ve vücudu soğuğa karşı yalıtır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='24' font-size='13' fill='var(--ink)' text-anchor='middle'>1 gliserol + 3 yağ asidi = trigliserit</text><rect x='40' y='45' width='40' height='110' rx='6' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='2'/><g fill='none' stroke='var(--c2)' stroke-width='2.5' stroke-linejoin='round'><polyline points='80,62 95,54 110,62 125,54 140,62 155,54 170,62 185,54 200,62 215,54 230,62'/><polyline points='80,100 95,92 110,100 125,92 140,100 155,92 170,100 185,92 200,100 215,92 230,100'/><polyline points='80,138 95,130 110,138 125,130 140,138 155,130 170,138 185,130 200,138 215,130 230,138'/></g><g font-size='12' fill='var(--ink)'><text x='238' y='62'>yağ asidi</text><text x='238' y='100'>yağ asidi</text><text x='238' y='138'>yağ asidi</text></g><text x='60' y='178' font-size='12' fill='var(--ink)' text-anchor='middle'>gliserol</text><text x='300' y='178' font-size='12' fill='var(--muted)' text-anchor='end'>≈9 kcal/g (karbonhidrat ≈4)</text></svg>",
-        "key": "Yağ yıkılınca karbonhidrattan daha çok metabolik su da çıkar (deve, kış uykusu)."
+        "key": "Yağ yıkılınca karbonhidrattan daha çok metabolik su da açığa çıkar. Develer ve kış uykusuna yatan hayvanlar bu suyu kullanır."
       },
       {
         "h": "Doymuş ve doymamış yağ asitleri",
-        "p": "<b>Doymuş</b> yağ asitlerinde yalnız tek bağ var, zincir düz, sıkı dizilir: tereyağı katıdır. <b>Doymamış</b>larda çift bağ zinciri büker: zeytinyağı sıvıdır.",
+        "p": "<b>Doymuş</b> yağ asitlerinde karbonlar arasında yalnızca tek bağ bulunur. Zincirleri düz olduğu için sıkı dizilirler; bu yüzden tereyağı katıdır. <b>Doymamış</b> yağ asitlerindeki çift bağ zinciri büker. Bükük zincirler sıkı dizilemez; bu yüzden zeytinyağı sıvıdır.",
         "svg": "<svg viewBox='0 0 320 200'><g font-size='14' fill='var(--ink)' text-anchor='middle'><text x='80' y='24'>Doymuş</text><text x='240' y='24'>Doymamış</text></g><line x1='160' y1='12' x2='160' y2='164' stroke='var(--line)'/><g fill='none' stroke='var(--c4)' stroke-width='2.5' stroke-linejoin='round'><polyline points='30,50 40,44 50,50 60,44 70,50 80,44 90,50 100,44 110,50 120,44 130,50'/><polyline points='30,66 40,60 50,66 60,60 70,66 80,60 90,66 100,60 110,66 120,60 130,66'/><polyline points='30,82 40,76 50,82 60,76 70,82 80,76 90,82 100,76 110,82 120,76 130,82'/></g><g font-size='12' text-anchor='middle'><text x='80' y='112' fill='var(--ink)'>tek bağlar, düz zincir</text><text x='80' y='130' fill='var(--muted)'>sıkı dizilir: katı</text><text x='80' y='152' fill='var(--ink)'>tereyağı, iç yağı</text></g><g fill='none' stroke='var(--c4)' stroke-width='2.5' stroke-linejoin='round'><polyline points='190,46 200,40 210,46 220,40 230,46 236,56 246,58 252,68 262,70 268,80'/><polyline points='190,74 200,68 210,74 220,68 230,74 236,84 246,86 252,96 262,98 268,108'/></g><g stroke='var(--c2)' stroke-width='2'><line x1='233' y1='44' x2='239' y2='54'/><line x1='233' y1='72' x2='239' y2='82'/></g><text x='246' y='44' font-size='10' fill='var(--c2)'>çift bağ</text><g font-size='12' text-anchor='middle'><text x='240' y='130' fill='var(--muted)'>bükük: gevşek, sıvı</text><text x='240' y='152' fill='var(--ink)'>zeytinyağı</text></g><line x1='15' y1='170' x2='305' y2='170' stroke='var(--line)'/><text x='160' y='190' font-size='12' fill='var(--ink)' text-anchor='middle'>Zorunlu yağ asitleri besinle alınmalı</text></svg>",
-        "key": "Omega-3 ve omega-6 zorunludur: vücut yapamaz, besinle alınır.",
+        "key": "Omega-3 ve omega-6 yağ asitleri zorunludur. Vücut bunları yapamaz, besinle almamız gerekir.",
         "once": {
           "soru": "Tereyağı oda sıcaklığında katı, zeytinyağı sıvıdır. Farkın kaynağı ne?",
           "secenekler": [
             {
               "yazi": "Yağ asitlerinin şekli",
-              "neden": "Tereyağındaki doymuş yağ asitleri düz zincirlidir, sıkı dizilir. Zeytinyağındakilerde çift bağ zinciri büker, sıkı dizilemezler.",
+              "neden": "Tereyağındaki doymuş yağ asitlerinin zinciri düzdür ve sıkı dizilir. Zeytinyağındakilerde ise çift bağ zinciri büker, bu yüzden sıkı dizilemezler.",
               "dogru": true
             },
             {
               "yazi": "Renkleri",
-              "neden": "Renk erime noktasını belirlemez."
+              "neden": "Renk, yağın erime noktasını belirlemez."
             },
             {
               "yazi": "Kütleleri",
-              "neden": "Aynı kütlede de biri katı, öbürü sıvıdır; fark moleküllerin şeklindedir."
+              "neden": "Aynı kütlede de biri katı, öbürü sıvıdır. Fark, moleküllerin şeklindedir."
             }
           ]
         }
       },
       {
         "h": "Fosfolipit ve steroitler",
-        "p": "<b>Fosfolipit</b>: suyu seven bir baş, suyu sevmeyen iki kuyruk; çift sıra dizilip hücre zarını kurar. <b>Steroitler</b> dört halkalıdır: kolesterol, östrojen, testosteron, D vitamini.",
+        "p": "<b>Fosfolipitin</b> suyu seven bir başı ve suyu sevmeyen iki kuyruğu vardır. Fosfolipitler çift sıra dizilerek hücre zarını oluşturur. <b>Steroitler</b> ise dört halkalı moleküllerdir. Kolesterol, östrojen, testosteron ve D vitamini birer steroittir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='80' y='24' font-size='14' fill='var(--ink)' text-anchor='middle'>Fosfolipit</text><g stroke='var(--c4)' stroke-width='3'><line x1='31' y1='62' x2='31' y2='110'/><line x1='39' y1='62' x2='39' y2='110'/></g><circle cx='35' cy='52' r='12' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='2'/><g font-size='12'><text x='56' y='50' fill='var(--c1)'>baş: suyu sever</text><text x='56' y='92' fill='var(--c4)'>kuyruk: sevmez</text></g><line x1='15' y1='140' x2='150' y2='140' stroke='var(--c1)' stroke-width='10' stroke-linecap='round' stroke-dasharray='0 13' fill='none'/><line x1='15' y1='184' x2='150' y2='184' stroke='var(--c1)' stroke-width='10' stroke-linecap='round' stroke-dasharray='0 13' fill='none'/><line x1='15' y1='162' x2='150' y2='162' stroke='var(--c4)' stroke-width='30' stroke-dasharray='1.5 11.5' fill='none' stroke-opacity='0.6'/><text x='80' y='126' font-size='12' fill='var(--muted)' text-anchor='middle'>zarda çift sıra</text><line x1='165' y1='20' x2='165' y2='190' stroke='var(--line)'/><text x='245' y='24' font-size='14' fill='var(--ink)' text-anchor='middle'>Steroit</text><g fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)' stroke-width='2'><polygon points='200,76 212.1,83 212.1,97 200,104 187.9,97 187.9,83'/><polygon points='224.2,76 236.3,83 236.3,97 224.2,104 212.1,97 212.1,83'/><polygon points='236.3,55 248.4,62 248.4,76 236.3,83 224.2,76 224.2,62'/><polygon points='248.4,62 262,58 270,69 262,80 248.4,76'/></g><g font-size='12' text-anchor='middle'><text x='240' y='125' fill='var(--muted)'>4 halkalı iskelet</text><text x='240' y='148' fill='var(--ink)'>kolesterol</text><text x='240' y='166' fill='var(--ink)'>testosteron, östrojen</text><text x='240' y='184' fill='var(--ink)'>D vitamini</text></g></svg>",
-        "key": "Zarın iskeleti fosfolipit; kolesterol hayvan zarının akışkanlığını dengeler.",
+        "key": "Hücre zarının iskeletini fosfolipitler oluşturur. Kolesterol ise hayvan hücresi zarının akışkanlığını dengeler.",
         "once": {
           "soru": "Hücre zarını kuran molekülün bir ucu suyu sever, öbür ucu sevmez. Hücrenin içi de dışı da su. Bu moleküller nasıl dizilir?",
           "secenekler": [
             {
               "yazi": "Başlar suya, kuyruklar içe",
-              "neden": "Suyu seven başlar iki yüzde de suya bakar, suyu sevmeyen kuyruklar ortada birbirine döner: çift sıra fosfolipit.",
+              "neden": "Suyu seven başlar iki yüzde de suya bakar. Suyu sevmeyen kuyruklar ise ortada birbirine döner ve çift sıra fosfolipit oluşur.",
               "dogru": true
             },
             {
               "yazi": "Kuyruklar suya, başlar içe",
-              "neden": "Kuyruklar suyu sevmez; suya bakmaktan kaçınırlar."
+              "neden": "Kuyruklar suyu sevmez, bu yüzden suya bakmaktan kaçınırlar."
             },
             {
               "yazi": "Rastgele dağılır",
-              "neden": "Su seven ve sevmeyen uçlar düzenli bir çift tabaka kurar."
+              "neden": "Moleküller rastgele dağılmaz. Suyu seven ve sevmeyen uçlar düzenli bir çift tabaka kurar."
             }
           ]
         }
       },
       {
         "h": "Proteinler: amino asit zinciri",
-        "p": "Proteinin birimi <b>amino asit</b>tir (20 çeşit). Aralarında su çıkarak <b>peptit bağı</b> kurulur. Zincir katlanır; sıra şekli, şekil de görevi belirler.",
+        "p": "Proteinlerin yapı birimi <b>amino asittir</b> ve 20 çeşit amino asit vardır. Amino asitler arasında su çıkarak <b>peptit bağı</b> kurulur. Oluşan zincir katlanır. Amino asitlerin sırası proteinin şeklini, şekli de görevini belirler.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='biyomolekuller-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><g font-size='14' fill='var(--ink)'><text x='95' y='65' text-anchor='end'>H₂N</text><text x='120' y='65' text-anchor='middle'>C</text><text x='145' y='65'>COOH</text><text x='120' y='32' text-anchor='middle' fill='var(--c2)'>R</text><text x='120' y='96' text-anchor='middle'>H</text></g><g stroke='var(--ink)' stroke-width='1.5'><line x1='98' y1='60' x2='112' y2='60'/><line x1='128' y1='60' x2='142' y2='60'/><line x1='120' y1='50' x2='120' y2='38'/><line x1='120' y1='70' x2='120' y2='83'/></g><text x='250' y='50' font-size='13' fill='var(--ink)' text-anchor='middle'>amino asit</text><text x='250' y='70' font-size='12' fill='var(--c2)' text-anchor='middle'>R: 20 farklı yan grup</text><line x1='30' y1='140' x2='140' y2='140' stroke='var(--ink)' stroke-width='2'/><g stroke-width='1.5'><circle cx='30' cy='140' r='9' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)'/><circle cx='52' cy='140' r='9' fill='var(--c2)' fill-opacity='0.4' stroke='var(--c2)'/><circle cx='74' cy='140' r='9' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)'/><circle cx='96' cy='140' r='9' fill='var(--c4)' fill-opacity='0.4' stroke='var(--c4)'/><circle cx='118' cy='140' r='9' fill='var(--c5)' fill-opacity='0.4' stroke='var(--c5)'/><circle cx='140' cy='140' r='9' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)'/></g><line x1='85' y1='163' x2='85' y2='147' stroke='var(--muted)'/><text x='85' y='177' font-size='12' fill='var(--muted)' text-anchor='middle'>peptit bağı</text><line x1='156' y1='140' x2='198' y2='140' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#biyomolekuller-7)'/><path d='M212,140 C212,110 252,105 257,125 S292,160 272,168 S222,170 232,150 S262,128 284,128' fill='none' stroke='var(--c5)' stroke-width='3'/><text x='252' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>katlanmış protein</text></svg>",
-        "key": "Dizi → katlanma → 3B şekil → görev. Şekil bozulursa görev biter."
+        "key": "Amino asit sırası katlanmayı, katlanma üç boyutlu şekli, şekil de görevi belirler. Şekil bozulursa protein görevini yapamaz."
       },
       {
         "h": "Proteinlerin görevleri",
-        "p": "Proteinler iş görür: <b>enzim</b>, <b>yapı</b> (keratin), <b>taşıma</b> (hemoglobin), <b>savunma</b> (antikor), <b>hormon</b> (insülin), <b>hareket</b>. Isı ya da aşırı pH şekli bozarsa (<b>denatürasyon</b>) görev biter.",
+        "p": "Proteinler vücutta birçok iş görür. <b>Enzim</b> olarak tepkimeleri hızlandırır, keratin gibi <b>yapı</b> oluşturur, hemoglobin gibi <b>taşıma</b> yapar. Antikorlarla <b>savunma</b>, insülinle <b>hormon</b> görevi yapar ve <b>hareketi</b> sağlar. Isı ya da aşırı pH şekli bozarsa (<b>denatürasyon</b>) protein görevini yapamaz.",
         "svg": "<svg viewBox='0 0 320 200'><g stroke='var(--line)' stroke-width='1.5'><line x1='160' y1='100' x2='160' y2='45'/><line x1='160' y1='100' x2='225' y2='78'/><line x1='160' y1='100' x2='225' y2='128'/><line x1='160' y1='100' x2='160' y2='155'/><line x1='160' y1='100' x2='95' y2='128'/><line x1='160' y1='100' x2='95' y2='78'/></g><circle cx='160' cy='100' r='30' fill='var(--acc)' fill-opacity='0.25' stroke='var(--acc)' stroke-width='2'/><text x='160' y='105' font-size='14' fill='var(--ink)' text-anchor='middle'>Protein</text><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='160' y='20'>Enzim</text><text x='262' y='62'>Taşıma</text><text x='262' y='128'>Savunma</text><text x='160' y='172'>Hormon</text><text x='58' y='128'>Hareket</text><text x='58' y='62'>Yapı</text></g><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='160' y='36'>amilaz</text><text x='262' y='78'>hemoglobin</text><text x='262' y='144'>antikor</text><text x='160' y='188'>insülin</text><text x='58' y='144'>aktin, miyozin</text><text x='58' y='78'>keratin, kolajen</text></g></svg>",
         "once": {
           "soru": "Yumurta pişince akı beyazlaşıp katılaşıyor ve bir daha eski hâline dönmüyor. Akın proteinine ne oldu?",
           "secenekler": [
             {
               "yazi": "Şekli bozuldu",
-              "neden": "Isı, proteinin katlanmış şeklini bozdu: denatürasyon. Şekli bozulan protein görevini yapamaz.",
+              "neden": "Isı, proteinin katlanmış şeklini bozdu; buna denatürasyon denir. Şekli bozulan protein görevini yapamaz.",
               "dogru": true
             },
             {
               "yazi": "Yağa dönüştü",
-              "neden": "Hâlâ protein; değişen yalnızca şekli."
+              "neden": "Yumurta akı hâlâ proteindir; değişen yalnızca şeklidir."
             },
             {
               "yazi": "Yalnızca suyunu kaybetti",
-              "neden": "Kurutmak akı beyazlatmaz; ısı proteinin yapısını değiştirdi."
+              "neden": "Kurutmak akı beyazlatmaz. Isı, proteinin yapısını değiştirdi."
             }
           ]
         }
       },
       {
         "h": "Nükleik asitler: DNA ve RNA",
-        "p": "Birim <b>nükleotit</b>: fosfat + şeker + baz. <b>DNA</b> çift zincir, deoksiriboz, A-T-G-C; bilgiyi saklar. <b>RNA</b> genelde tek zincir, riboz, T yerine U; bilgiyi kullanır.",
+        "p": "Nükleik asitlerin birimi <b>nükleotittir</b>; bir fosfat, bir şeker ve bir bazdan oluşur. <b>DNA</b> çift zincirlidir, deoksiriboz şekeri ve A, T, G, C bazlarını taşır, bilgiyi saklar. <b>RNA</b> genellikle tek zincirlidir, riboz taşır, T yerine U bulunur ve bilgiyi kullanır.",
         "svg": "<svg viewBox='0 0 320 200'><text x='80' y='28' font-size='13' fill='var(--ink)' text-anchor='middle'>Nükleotit</text><line x1='40' y1='62' x2='85' y2='70' stroke='var(--ink)' stroke-width='1.5'/><line x1='85' y1='70' x2='118' y2='70' stroke='var(--ink)' stroke-width='1.5'/><circle cx='40' cy='62' r='14' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='2'/><text x='40' y='67' font-size='13' fill='var(--ink)' text-anchor='middle'>P</text><polygon points='85,53 101.2,64.7 95,83.8 75,83.8 68.8,64.7' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='2'/><rect x='115' y='58' width='34' height='24' rx='3' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='2'/><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='40' y='105'>fosfat</text><text x='85' y='105'>şeker</text><text x='132' y='105'>baz</text></g><g font-size='12' fill='var(--ink)'><text x='10' y='145'>DNA: A–T, G–C eşleşir</text><text x='10' y='165'>RNA: T yerine U</text></g><g stroke-width='4'><line x1='190' y1='45' x2='214' y2='45' stroke='var(--c1)'/><line x1='214' y1='45' x2='240' y2='45' stroke='var(--c2)'/><line x1='190' y1='70' x2='214' y2='70' stroke='var(--c3)'/><line x1='214' y1='70' x2='240' y2='70' stroke='var(--c4)'/><line x1='190' y1='95' x2='214' y2='95' stroke='var(--c2)'/><line x1='214' y1='95' x2='240' y2='95' stroke='var(--c1)'/><line x1='190' y1='120' x2='214' y2='120' stroke='var(--c4)'/><line x1='214' y1='120' x2='240' y2='120' stroke='var(--c3)'/><line x1='190' y1='145' x2='214' y2='145' stroke='var(--c1)'/><line x1='214' y1='145' x2='240' y2='145' stroke='var(--c2)'/></g><g stroke='var(--ink)' stroke-width='3'><line x1='190' y1='30' x2='190' y2='160'/><line x1='240' y1='30' x2='240' y2='160'/><line x1='285' y1='30' x2='285' y2='160'/></g><g stroke-width='4'><line x1='265' y1='45' x2='285' y2='45' stroke='var(--c1)'/><line x1='265' y1='70' x2='285' y2='70' stroke='var(--c5)'/><line x1='265' y1='95' x2='285' y2='95' stroke='var(--c3)'/><line x1='265' y1='120' x2='285' y2='120' stroke='var(--c4)'/><line x1='265' y1='145' x2='285' y2='145' stroke='var(--c5)'/></g><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='215' y='182'>DNA</text><text x='280' y='182'>RNA</text></g></svg>",
-        "key": "DNA = bilgi arşivi, RNA = bilginin işçi kopyası"
+        "key": "DNA bilginin arşivi, RNA ise bu bilginin iş gören kopyasıdır."
       },
       {
         "h": "Vitaminler",
-        "p": "Vitaminler enerji vermez, az miktarda gerekir. <b>Yağda çözünenler</b> (A, D, E, K) depolanır. <b>Suda çözünenlerin</b> (B, C) çoğu depolanmaz, idrarla atılır.",
+        "p": "Vitaminler enerji vermez ve az miktarda gerekir. <b>Yağda çözünen</b> vitaminler (A, D, E, K) vücutta depolanır. <b>Suda çözünen</b> vitaminlerin (B, C) çoğu ise depolanmaz, fazlası idrarla atılır.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='14' y='20' width='140' height='150' rx='8' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='84' y='44' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Yağda çözünen</text><circle cx='44' cy='76' r='9' fill='var(--c4)' fill-opacity='0.35'/><text x='44' y='80' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><circle cx='64' cy='76' r='9' fill='var(--c4)' fill-opacity='0.35'/><text x='64' y='80' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>D</text><circle cx='84' cy='76' r='9' fill='var(--c4)' fill-opacity='0.35'/><text x='84' y='80' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>E</text><circle cx='104' cy='76' r='9' fill='var(--c4)' fill-opacity='0.35'/><text x='104' y='80' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>K</text><text x='84' y='112' font-size='12' fill='var(--ink)' text-anchor='middle'>depolanabilir</text><text x='84' y='132' font-size='10' fill='var(--muted)' text-anchor='middle'>fazlası zararlı olabilir</text><rect x='166' y='20' width='140' height='150' rx='8' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='236' y='44' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Suda çözünen</text><text x='236' y='80' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>B grubu, C</text><text x='236' y='112' font-size='12' fill='var(--ink)' text-anchor='middle'>çoğu depolanmaz</text><text x='236' y='132' font-size='10' fill='var(--muted)' text-anchor='middle'>istisna: B₁₂ depolanır</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>D vitamini güneş ışığıyla deride de üretilir</text></svg>",
-        "key": "Yağda çözünen dörtlü: A, D, E, K",
+        "key": "Yağda çözünen vitaminler A, D, E ve K'dir.",
         "etk": {
           "tur": "ayir",
           "soru": "Vitamini doğru gruba koy: yağda mı çözünür, suda mı?",
@@ -562,25 +562,25 @@
           "secenekler": [
             {
               "yazi": "A vitamini",
-              "neden": "A vitamini yağda çözünür ve vücutta birikir; fazlası zehirlenmeye yol açabilir.",
+              "neden": "A vitamini yağda çözünür ve vücutta birikir. Fazlası zehirlenmeye yol açabilir.",
               "dogru": true
             },
             {
               "yazi": "C vitamini",
-              "neden": "C vitamini suda çözünür; fazlası idrarla atılır."
+              "neden": "C vitamini suda çözünür ve fazlası idrarla atılır."
             },
             {
               "yazi": "İkisi aynı",
-              "neden": "Fark, çözündükleri yerde: yağda çözünen birikir, suda çözünen atılır."
+              "neden": "Fark, çözündükleri yerdedir: yağda çözünen birikir, suda çözünen atılır."
             }
           ]
         }
       },
       {
         "h": "Besinde ne var? Testler",
-        "p": "<b>İyot</b> nişastayla mavi-mor, <b>Benedict</b> indirgen şekerle ısıtılınca kiremit kırmızısı, <b>biüre</b> proteinle mor olur. <b>Sudan III</b> yağı kırmızıya boyar.",
+        "p": "Besinlerdeki maddeler ayraçlarla bulunur. <b>İyot</b> nişastayla mavi-mor renk verir. <b>Benedict</b> çözeltisi indirgen şekerle ısıtılınca kiremit kırmızısına döner. <b>Biüre</b> proteinle mor olur. <b>Sudan III</b> ise yağı kırmızıya boyar.",
         "svg": "<svg viewBox='0 0 320 200'><text x='40' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>iyot</text><text x='40' y='38' font-size='10.5' fill='var(--muted)' text-anchor='middle'>+ nişasta</text><path d='M18 52 V128 A8 8 0 0 0 34 128 V52' fill='none' stroke='var(--line-2)' stroke-width='2'/><path d='M20 92 V128 A6 6 0 0 0 32 128 V92 Z' fill='var(--c4)' fill-opacity='0.45'/><path d='M46 52 V128 A8 8 0 0 0 62 128 V52' fill='none' stroke='var(--line-2)' stroke-width='2'/><path d='M48 92 V128 A6 6 0 0 0 60 128 V92 Z' fill='var(--c5)' fill-opacity='0.85'/><text x='26' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>önce</text><text x='54' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>sonra</text><text x='120' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Benedict</text><text x='120' y='38' font-size='10.5' fill='var(--muted)' text-anchor='middle'>+ glikoz</text><path d='M98 52 V128 A8 8 0 0 0 114 128 V52' fill='none' stroke='var(--line-2)' stroke-width='2'/><path d='M100 92 V128 A6 6 0 0 0 112 128 V92 Z' fill='var(--c1)' fill-opacity='0.45'/><path d='M126 52 V128 A8 8 0 0 0 142 128 V52' fill='none' stroke='var(--line-2)' stroke-width='2'/><path d='M128 92 V128 A6 6 0 0 0 140 128 V92 Z' fill='var(--c2)' fill-opacity='0.85'/><text x='106' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>önce</text><text x='134' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>sonra</text><text x='200' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>biüre</text><text x='200' y='38' font-size='10.5' fill='var(--muted)' text-anchor='middle'>+ protein</text><path d='M178 52 V128 A8 8 0 0 0 194 128 V52' fill='none' stroke='var(--line-2)' stroke-width='2'/><path d='M180 92 V128 A6 6 0 0 0 192 128 V92 Z' fill='var(--c1)' fill-opacity='0.45'/><path d='M206 52 V128 A8 8 0 0 0 222 128 V52' fill='none' stroke='var(--line-2)' stroke-width='2'/><path d='M208 92 V128 A6 6 0 0 0 220 128 V92 Z' fill='var(--c5)' fill-opacity='0.85'/><text x='186' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>önce</text><text x='214' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>sonra</text><text x='280' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Sudan III</text><text x='280' y='38' font-size='10.5' fill='var(--muted)' text-anchor='middle'>+ yağ</text><path d='M258 52 V128 A8 8 0 0 0 274 128 V52' fill='none' stroke='var(--line-2)' stroke-width='2'/><path d='M260 92 V128 A6 6 0 0 0 272 128 V92 Z' fill='var(--c2)' fill-opacity='0.45'/><path d='M286 52 V128 A8 8 0 0 0 302 128 V52' fill='none' stroke='var(--line-2)' stroke-width='2'/><path d='M288 92 V128 A6 6 0 0 0 300 128 V92 Z' fill='var(--c2)' fill-opacity='0.85'/><text x='266' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>önce</text><text x='294' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>sonra</text><text x='40' y='172' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>mavi-mor</text><text x='120' y='172' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>kiremit kırmızı</text><text x='200' y='172' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>mor</text><text x='280' y='172' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>kırmızı</text><text x='160' y='194' font-size='10.5' fill='var(--muted)' text-anchor='middle'>Benedict ısıtılarak yapılır</text></svg>",
-        "key": "Sakkaroz Benedict'in rengini değiştirmez; indirgen şeker değildir.",
+        "key": "Sakkaroz indirgen şeker değildir, bu yüzden Benedict'in rengini değiştirmez.",
         "once": {
           "soru": "Patates dilimine iyot damlatınca rengi mavi-mora döndü. Patateste ne var?",
           "secenekler": [
@@ -591,18 +591,18 @@
             },
             {
               "yazi": "Protein",
-              "neden": "Proteini biüre gösterir, rengi mordur ama iyotla değil."
+              "neden": "Proteini biüre gösterir ve rengi mora çevirir; iyot proteini göstermez."
             },
             {
               "yazi": "Yağ",
-              "neden": "Yağı Sudan III kırmızıya boyar."
+              "neden": "Yağı Sudan III kırmızıya boyar; iyot yağı göstermez."
             }
           ]
         }
       },
       {
         "h": "Özet",
-        "p": "• Su ve mineraller: çözücü ortam, düzenleme.<br>• Karbonhidrat hızlı enerji; yağ uzun süreli depo; fosfolipit zar yapar.<br>• Protein: yapı ve iş (enzim, taşıma, savunma).<br>• Nükleik asit: kalıtsal bilgi; vitaminler düzenler.<br>• Büyük moleküller dehidrasyonla kurulur, hidrolizle yıkılır.",
+        "p": "• Su maddeleri çözer, mineraller vücuttaki işleri düzenler.<br>• Karbonhidratlar hızlı enerji verir, yağlar uzun süreli depodur, fosfolipitler zarı yapar.<br>• Proteinler yapı oluşturur ve iş görür: enzim, taşıma, savunma.<br>• Nükleik asitler kalıtsal bilgiyi taşır, vitaminler düzenleyicidir.<br>• Büyük moleküller dehidrasyonla kurulur, hidrolizle yıkılır.",
         "svg": "<svg viewBox='0 0 320 200'><g stroke-width='1.5'><rect x='10' y='12' width='145' height='58' rx='8' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)'/><rect x='165' y='12' width='145' height='58' rx='8' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)'/><rect x='10' y='78' width='145' height='58' rx='8' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><rect x='165' y='78' width='145' height='58' rx='8' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><rect x='10' y='144' width='300' height='44' rx='8' fill='var(--panel)' stroke='var(--line)'/></g><g font-size='14' fill='var(--ink)' text-anchor='middle'><text x='82' y='36'>Karbonhidrat</text><text x='237' y='36'>Lipit</text><text x='82' y='102'>Protein</text><text x='237' y='102'>Nükleik asit</text><text x='160' y='164'>Su + mineraller</text></g><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='82' y='56'>hızlı enerji</text><text x='237' y='56'>depo, zar, hormon</text><text x='82' y='122'>yapı, enzim, taşıma</text><text x='237' y='122'>kalıtsal bilgi</text><text x='160' y='180'>ortam ve düzenleme</text></g></svg>"
       }
     ],
@@ -649,7 +649,7 @@
             2
           ]
         ],
-        "e": "Nişasta, selüloz ve laktoz şekerlerden oluşan karbonhidratlardır. Kolesterol ve testosteron steroit, fosfolipit zar lipitidir. Keratin ve antikor amino asit zincirinden oluşan proteinlerdir."
+        "e": "Nişasta, selüloz ve laktoz şekerlerden oluşan karbonhidratlardır. Kolesterol ve testosteron birer steroittir, fosfolipit ise zarın lipitidir. Keratin ve antikor, amino asit zincirinden oluşan proteinlerdir."
       },
       {
         "tur": "eslestir",
@@ -672,14 +672,14 @@
             "Sinir iletimi"
           ]
         ],
-        "e": "Ca kemik ve dişte, Fe hemoglobinde, I tiroit hormonunda bulunur. Na ve K sinir iletimi için gerekir. Mineraller enerji vermez, düzenler."
+        "e": "Kalsiyum kemik ve dişte, demir hemoglobinde, iyot tiroit hormonunda bulunur. Sodyum ve potasyum sinir iletimi için gerekir. Mineraller enerji vermez, düzenleyicidir."
       },
       {
         "tur": "sayi",
         "q": "Her biri 10 amino asitten oluşan, düz zincirli 3 ayrı peptit yapılıyor. Toplam kaç molekül su açığa çıkar?",
         "cevap": 27,
         "birim": "molekül su",
-        "e": "Her zincirde 10 − 1 = 9 peptit bağı kurulur ve her bağda bir su çıkar. Üç ayrı zincir: 3 × 9 = 27 su."
+        "e": "Her zincirde 10 − 1 = 9 peptit bağı kurulur ve her bağda bir su çıkar. Üç ayrı zincirde toplam 3 × 9 = 27 su çıkar."
       },
       {
         "tur": "ayir",
@@ -723,7 +723,7 @@
             2
           ]
         ],
-        "e": "Deoksiriboz ve timin DNA'ya, riboz ve urasil RNA'ya özgüdür. Fosfat ile A, G, C bazları ikisinde de bulunur."
+        "e": "Deoksiriboz ve timin yalnızca DNA'da, riboz ve urasil yalnızca RNA'da bulunur. Fosfat ile adenin, guanin ve sitozin bazları ikisinde de vardır."
       }
     ]
   },
