@@ -18,7 +18,7 @@ import { dogruMu, geriBaslik, geriMetin, hazir, ilkCevap, TestGovde, yonerge, ty
 import { Html, href, Logo } from "./temel";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
-import Bildir from "./Bildir";
+import Bildir, { BildirDugme } from "./Bildir";
 import { ses } from "@/lib/ses";
 
 type Oge = { key: string; s: number };
@@ -46,7 +46,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
   const [ogrenilen, setOgrenilen] = useState(0);
   const tekrar = useTekrar(), prog = useProg();
   const [karisik, setKarisik] = useState(false);
-  const Close = Icon.kapat, Soru = Icon.soru;
+  const Close = Icon.kapat;
 
   /** Soruları seçer: tekrarda bugün sırası gelenler, karışık testte bitirilen konulardan rastgele KARISIK soru. */
   const kur = useCallback((k: boolean) => {
@@ -199,7 +199,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
         </div>
         {cur && Q && (
           <Bildir yer={{ ders: Q.ders, konu: Q.konu, yer: `test sorusu ${Number(cur.key.split(".").pop()) + 1} (${karisik ? "karışık test" : "tekrar"})`, ozet: Q.q }}>
-            <Button variant="ghost" size="icon" className="-mr-2 text-muted-foreground" aria-label="Anlamadım ya da hata var" title="Anlamadım / Hata var"><Soru /></Button>
+            <BildirDugme className="-mr-1" />
           </Bildir>
         )}
       </header>

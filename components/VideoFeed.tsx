@@ -19,7 +19,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { PageHead, UstBar } from "./temel";
 import { Button } from "./ui/button";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
-import Bildir from "./Bildir";
+import Bildir, { BildirDugme } from "./Bildir";
 import { useKaydet } from "./KayitDavet";
 
 // Öğrenci bu oturumda sesi açtı mı (ya da bir video sesli oynayabildi mi). Açtıysa akıştaki sonraki videolar
@@ -199,7 +199,12 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
 
       <div className="reel-info">
         <span className="reel-prog" aria-hidden="true"><i style={{ width: `${pct}%` }} /></span>
-        <span className="k"><b>{DERSLER[y.ders].ad}</b> · {konu || v.baslik}</span>
+        <div className="flex items-center gap-2">
+          <span className="k min-w-0 flex-1 truncate"><b>{DERSLER[y.ders].ad}</b> · {konu || v.baslik}</span>
+          <Bildir yer={{ ders: y.ders, konu: y.konu, yer: `video ${v.id}`, ozet: v.baslik }}>
+            <BildirDugme className="-mr-2 h-7" />
+          </Bildir>
+        </div>
         <div className="reel-acts">
           <Link className="reel-go" href={yerHref(y)}>Konuya git<I.ileri /></Link>
           {v.cevap && (
@@ -218,9 +223,6 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
             <I.kayit />
           </button>
           {davet}
-          <Bildir yer={{ ders: y.ders, konu: y.konu, yer: `video ${v.id}`, ozet: v.baslik }}>
-            <button className="reel-ic" aria-label="Anlamadım ya da hata var" title="Anlamadım / Hata var"><I.soru /></button>
-          </Bildir>
           <button className="reel-ic" onClick={paylas} aria-label="Paylaş"><I.paylas /></button>
           <button className="reel-ic" onClick={sesDugmesi} aria-pressed={!sessiz} aria-label={sessiz ? "Sesi aç" : "Sesi kapat"}>
             {sessiz ? <I.sesKapali /> : <I.sesAcik />}

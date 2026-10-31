@@ -34,7 +34,7 @@ import { dogruMu, geriBaslik, geriMetin, hazir, ilkCevap, TestGovde, yonerge, ty
 import AsamaYolu, { type YolDugum } from "./AsamaYolu";
 import { Konfeti, Madalya, PuanRozet } from "./Kutlama";
 import KayitDavet, { useKaydet } from "./KayitDavet";
-import Bildir from "./Bildir";
+import Bildir, { BildirDugme } from "./Bildir";
 import PlusEkran from "./Plus";
 import { useOdemeli } from "@/lib/abonelik";
 import type { BildirimYer } from "@/lib/bildirim";
@@ -215,7 +215,6 @@ export default function Lesson({
         ? { ders, konu: id, yer: `test sorusu ${s.q + 1}`, ozet: t.quiz[s.q].q }
         : undefined;
   let body: React.ReactNode, controls: React.ReactNode = null, key: string;
-  const SoruI = Icon.soru;
 
   if (s.q < 0 && s.a < 0) {
     // Konu girişi: aşamalar sırayla açılır.
@@ -526,15 +525,7 @@ export default function Lesson({
               if (!anlamadim.includes(k) && toggleAnlamadim(k)) olay("anlamadim", { kart: k });
             } : undefined}
           >
-            <Button
-              variant="ghost"
-              size="icon"
-              className={cn("-mr-1", anlamadimMi ? "text-acc" : "text-muted-foreground")}
-              aria-label="Anlamadım ya da hata var"
-              title="Anlamadım / Hata var"
-            >
-              <SoruI />
-            </Button>
+            <BildirDugme className={cn(anlamadimMi && "text-acc")} />
           </Bildir>
         )}
         <Button

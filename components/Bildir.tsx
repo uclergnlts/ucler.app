@@ -1,6 +1,7 @@
 "use client";
 // "Anlamadım / Hata var" penceresi: öğrenci sorunu yaşadığı yerde (kart, adım, test sorusu, video) ekibe bildirir.
 // Not isteğe bağlıdır. "Anlamadım" seçilince kart ayrıca Profil > Anlamadıklarım listesine eklenir (anlamadim verilirse).
+// Açan düğme her ekranda aynıdır: üst çubuğun sağında küçük "Hata bildir" yazısı (BildirDugme; Üçler 2026-10-31).
 import { useState } from "react";
 import { bildirimGonder, type BildirimTur, type BildirimYer } from "@/lib/bildirim";
 import { cn } from "@/lib/utils";
@@ -82,5 +83,18 @@ export default function Bildir({ yer, anlamadim, children }: { yer: BildirimYer;
         )}
       </SheetContent>
     </Sheet>
+  );
+}
+
+/** Üst çubuğun sağındaki küçük "Hata bildir" yazısı. Bildir'in içine konur (SheetTrigger asChild). */
+export function BildirDugme({ className, ...p }: React.ComponentProps<"button">) {
+  return (
+    <button
+      type="button"
+      className={cn("h-8 flex-none rounded-full px-2.5 text-[13px] font-semibold whitespace-nowrap text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground", className)}
+      {...p}
+    >
+      Hata bildir
+    </button>
   );
 }

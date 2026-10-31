@@ -5,9 +5,7 @@ import { useEffect } from "react";
 import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
 import { bugunku, doneKeys, gunAdi, useAd, useAsama, useProg, useTekrar, useYer } from "@/lib/store";
 import { asamaSayisi } from "@/lib/asama";
-import { sureYaz, VIDEOLAR } from "@/lib/videolar";
 import { Icon } from "./icons";
-import { motion } from "motion/react";
 import { Progress } from "./ui/progress";
 import Bugun from "./Bugun";
 import { GunSorusuKart } from "./GunSorusu";
@@ -164,26 +162,6 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
           </div>
         </Bolum>
 
-        {VIDEOLAR.length > 0 && (
-          <Bolum title="Kısa videolar" more={<Link className="text-sm font-bold text-muted-foreground" href="/videolar/">Tümü</Link>}>
-            <div className="-mx-4 flex snap-x snap-mandatory gap-2.5 overflow-x-auto px-4 [scrollbar-width:none]">
-              {VIDEOLAR.map((v, k) => (
-                <motion.div
-                  key={v.id}
-                  className="w-[118px] flex-none snap-start"
-                  initial={{ opacity: 0, x: 12 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: Math.min(k, 6) * 0.04 }}
-                >
-                  <Link href={`/videolar/#${v.id}`} aria-label={`${v.baslik} (${sureYaz(v.sure)})`} className="relative block aspect-[9/16] overflow-hidden rounded-xl border border-border bg-secondary">
-                    {v.poster && <img src={v.poster} alt="" loading="lazy" className="size-full object-cover" />}
-                    <span className="absolute right-1.5 bottom-1.5 rounded-md bg-white/90 px-1.5 text-[11px] font-bold">{sureYaz(v.sure)}</span>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </Bolum>
-        )}
 
       </Govde>
     </div>

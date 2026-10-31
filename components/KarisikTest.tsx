@@ -15,7 +15,7 @@ import { dogruMu, geriBaslik, geriMetin, hazir, ilkCevap, TestGovde, yonerge, ty
 import { Html, href } from "./temel";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
-import Bildir from "./Bildir";
+import Bildir, { BildirDugme } from "./Bildir";
 import { ses } from "@/lib/ses";
 
 export function karistir<T>(l: T[]) {
@@ -60,7 +60,7 @@ export default function KarisikTest({ ders, baslik, cikis, sorular, sec, giris, 
   const [cevap, setCevapS] = useState<Cevap>(null);
   const [sonuc, setSonuc] = useState<boolean | null>(null);
   const [dogru, setDogru] = useState<Record<string, boolean>>({});
-  const Close = Icon.kapat, Soru = Icon.soru;
+  const Close = Icon.kapat;
 
   const basla = useCallback(() => {
     const l = sec();
@@ -138,7 +138,7 @@ export default function KarisikTest({ ders, baslik, cikis, sorular, sec, giris, 
         </div>
         {key && Q && (
           <Bildir yer={{ ders: Q.ders, konu: Q.konu, yer: `test sorusu ${Number(key.split(".").pop()) + 1} (${baslik})`, ozet: Q.q }}>
-            <Button variant="ghost" size="icon" className="-mr-2 text-muted-foreground" aria-label="Anlamadım ya da hata var" title="Anlamadım / Hata var"><Soru /></Button>
+            <BildirDugme className="-mr-1" />
           </Bildir>
         )}
       </header>

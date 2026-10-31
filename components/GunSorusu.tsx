@@ -21,6 +21,7 @@ import { ses } from "@/lib/ses";
 import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
 import { KayitSayfasi } from "./KayitDavet";
+import Bildir, { BildirDugme } from "./Bildir";
 import { Alt } from "./Soru";
 import { dogruMu, geriBaslik, geriMetin, hazir, ilkCevap, TestGovde, yonerge, type Cevap } from "./TestSoru";
 import { Govde, Html, href, UstBar } from "./temel";
@@ -265,7 +266,13 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
 
   return (
     <div className="app">
-      <UstBar geri={{ to: "/", label: "Ana sayfaya dön" }} baslik="Günün sorusu" />
+      <UstBar
+        geri={{ to: "/", label: "Ana sayfaya dön" }}
+        baslik="Günün sorusu"
+        sag={Q && (durum === "soru" || durum === "sonuc") ? (
+          <Bildir yer={{ ders: Q.ders, konu: Q.konu, yer: `günün sorusu (${key})`, ozet: Q.q }}><BildirDugme /></Bildir>
+        ) : undefined}
+      />
       <Govde className="pb-0">
         <AnimatePresence mode="wait">
           <motion.div key={durum} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.18 }} className="pb-6">
