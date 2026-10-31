@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "kuantum",
  "baslik": "Kuantum Fiziğine Giriş",
- "ozet": "Cismi ısıtıp rengini değiştir, metalden elektron koparmayı dene, durdurma gerilimini bul, şiddeti artır, X ışını saçtır, elektronları çift yarıktan geçir ve hidrojenin rengini bul.",
+ "ozet": "Cismi ısıt ve rengini değiştir. Metalden elektron koparmayı dene, durdurma gerilimini bul ve şiddeti artır. X ışını saçtır, elektronları çift yarıktan geçir ve hidrojenin rengini bul.",
  "adimlar": [
   {
    "baslik": "Siyah cisim ışıması",
-   "metin": "Wien yasası: λ<sub>max</sub>·T ≈ 2,9·10⁶ nm·K. Sıcaklığı ayarla: eğrinin tepesi <b>500 nm</b>'de olsun.",
+   "metin": "Wien yasasına göre λ<sub>max</sub>·T ≈ 2,9·10⁶ nm·K olur. Sıcaklığı ayarla ve eğrinin tepesinin <b>500 nm</b>'de olmasını sağla.",
    "sahne": {
     "tur": "fiz13-siyah"
    },
@@ -30,14 +30,14 @@
     "hedef": {
      "T": 5800
     },
-    "tamam": "Wien: λ<sub>max</sub> = 2,9·10⁶ / 5800 = <b>500 nm</b>. Bu, Güneş'in yüzey sıcaklığıdır.",
-    "ipucu": "λ<sub>max</sub>·T ≈ 2,9·10⁶ nm·K. T = 2,9·10⁶ / 500."
+    "tamam": "Wien yasasına göre λ<sub>max</sub> = 2,9·10⁶ / 5800 = <b>500 nm</b> olur. Bu sıcaklık, Güneş'in yüzey sıcaklığıdır.",
+    "ipucu": "λ<sub>max</sub>·T ≈ 2,9·10⁶ nm·K olduğu için T = 2,9·10⁶ / 500 olur."
    },
    "kart": 1
   },
   {
    "baslik": "Fotoelektrik olay: eşik",
-   "metin": "Metale ışık düşünce elektron kopabilir. Sodyumdan elektron koparmak için en az <b>W = 2,3 eV</b> gerekir. Rengi ve şiddeti değiştirip en az iki farklı deneme yap.",
+   "metin": "Bir metale ışık düşünce elektron kopabilir. Sodyumdan elektron koparmak için en az <b>W = 2,3 eV</b> gerekir. Rengi ve şiddeti değiştir ve en az iki farklı deneme yap.",
    "sahne": {
     "tur": "fiz13-esik",
     "sure": 2.5
@@ -76,12 +76,12 @@
      },
      {
       "yazi": "Işığın ne kadar süre düştüğü",
-      "neden": "Bir elektron tek bir fotonu soğurur; enerji birikmez. Eşik altında beklemek işe yaramaz."
+      "neden": "Bir elektron tek bir fotonu soğurur ve enerji birikmez. Bu yüzden eşiğin altında beklemek işe yaramaz."
      },
      {
       "yazi": "Işığın frekansı (rengi)",
       "dogru": true,
-      "neden": "Bir elektron tek bir fotonun enerjisini (h·f) alır; h·f &lt; W ise ışık ne kadar şiddetli olursa olsun elektron çıkmaz. Sodyum için eşik ≈ 540 nm."
+      "neden": "Bir elektron tek bir fotonun enerjisini (h·f) alır. h·f &lt; W ise ışık ne kadar şiddetli olursa olsun elektron çıkmaz. Sodyum için eşik yaklaşık 540 nm'dir."
      }
     ]
    },
@@ -89,7 +89,7 @@
   },
   {
    "baslik": "Einstein denklemi ve durdurma gerilimi",
-   "metin": "Kopan elektronun en büyük kinetik enerjisi E<sub>k,max</sub> = h·f − W; foton enerjisi E(eV) ≈ 1240/λ(nm), sodyumda W = 2,3 eV. En hızlı elektronu durduran ters gerilim <b>V<sub>0</sub></b>'dır: e·V<sub>0</sub> = E<sub>k,max</sub>. Dalga boyunu ayarla: V<sub>0</sub> = <b>0,8 V</b> olsun.",
+   "metin": "Kopan elektronun en büyük kinetik enerjisi E<sub>k,max</sub> = h·f − W olur. Foton enerjisi E(eV) ≈ 1240/λ(nm) ile bulunur ve sodyumda W = 2,3 eV'tur. En hızlı elektronu durduran ters gerilime <b>V<sub>0</sub></b> denir: e·V<sub>0</sub> = E<sub>k,max</sub>. Dalga boyunu ayarla ve V<sub>0</sub>'ın <b>0,8 V</b> olmasını sağla.",
    "sahne": {
     "tur": "fiz13-durdur"
    },
@@ -112,14 +112,14 @@
     "hedef": {
      "lam": 400
     },
-    "tamam": "400 nm'de foton 1240/400 = <b>3,1 eV</b>; E<sub>k,max</sub> = 3,1 − 2,3 = <b>0,8 eV</b>, V<sub>0</sub> = 0,8 V.",
-    "ipucu": "h·f = 2,3 + 0,8 = 3,1 eV olmalı. λ = 1240 / 3,1."
+    "tamam": "400 nm'de fotonun enerjisi 1240/400 = <b>3,1 eV</b> olur. E<sub>k,max</sub> = 3,1 − 2,3 = <b>0,8 eV</b> ve V<sub>0</sub> = 0,8 V olur.",
+    "ipucu": "h·f = 2,3 + 0,8 = 3,1 eV olmalıdır. Bu yüzden λ = 1240 / 3,1 olur."
    },
    "kart": 5
   },
   {
    "baslik": "Şiddet ve akım",
-   "metin": "Aynı 400 nm'lik ışığı sodyum levhaya düşürüyoruz. Sağdaki düzenekte ışığın <b>şiddeti iki katı</b>: saniyede iki kat foton geliyor.",
+   "metin": "Aynı 400 nm'lik ışığı sodyum levhaya düşürüyoruz. Sağdaki düzenekte ışığın <b>şiddeti iki katıdır</b>, yani saniyede iki kat foton gelir.",
    "sahne": {
     "tur": "fiz13-siddet",
     "sure": 3
@@ -130,12 +130,12 @@
     "secenekler": [
      {
       "yazi": "E<sub>k,max</sub> iki katına çıkar",
-      "neden": "Her fotonun enerjisi h·f'dir; şiddet foton sayısını artırır, fotonun enerjisini değil."
+      "neden": "Her fotonun enerjisi h·f'dir. Şiddet fotonun enerjisini değil, foton sayısını artırır."
      },
      {
       "yazi": "Akım artar, E<sub>k,max</sub> aynı kalır",
       "dogru": true,
-      "neden": "İki kat foton, iki kat elektron koparır: <b>akım</b> büyür. Her elektron yine tek fotonun enerjisini alır, en fazla 0,8 eV ile çıkar."
+      "neden": "İki kat foton, iki kat elektron koparır ve <b>akım</b> büyür. Her elektron yine tek bir fotonun enerjisini alır ve en fazla 0,8 eV ile çıkar."
      },
      {
       "yazi": "Akım da E<sub>k,max</sub> da iki katına çıkar",
@@ -147,7 +147,7 @@
   },
   {
    "baslik": "Compton olayı",
-   "metin": "Compton 1923'te X ışını fotonlarını elektronlara çarptırdı. Fotonun kütlesi yoktur ama momentumu vardır: <b>p = h/λ</b>. Foton elektrona çarpıp saçılacak.",
+   "metin": "Compton, 1923'te X ışını fotonlarını elektronlara çarptırdı. Fotonun kütlesi yoktur, ama momentumu vardır: <b>p = h/λ</b>. Foton şimdi elektrona çarpıp saçılacak.",
    "sahne": {
     "tur": "fiz13-compton",
     "sure": 3
@@ -159,15 +159,15 @@
      {
       "yazi": "Uzar",
       "dogru": true,
-      "neden": "Foton enerjisinin bir kısmını elektrona verir: enerjisi azalır, <b>λ büyür</b>, f küçülür. Hızı yine c'dir."
+      "neden": "Foton enerjisinin bir kısmını elektrona verir. Enerjisi azalır, <b>λ büyür</b> ve f küçülür. Fotonun hızı ise yine c'dir."
      },
      {
       "yazi": "Kısalır",
-      "neden": "Kısalması fotonun enerji kazanması demek olurdu; oysa enerjinin bir kısmı geri tepen elektrona gider."
+      "neden": "Dalga boyunun kısalması, fotonun enerji kazanması demek olurdu. Oysa enerjinin bir kısmı geri tepen elektrona gider."
      },
      {
       "yazi": "Değişmez",
-      "neden": "Elektron geri teptiğine göre bir miktar enerji almıştır; o enerji fotondan gelir."
+      "neden": "Elektron geri teptiğine göre bir miktar enerji almıştır. Bu enerji fotondan gelir."
      }
     ]
    },
@@ -175,7 +175,7 @@
   },
   {
    "baslik": "Madde dalgası",
-   "metin": "de Broglie her parçacığın dalga boyu olduğunu söyledi: <b>λ = h/(m·v)</b>. Şimdi elektronları <b>tek tek</b> iki yarıktan geçirip perdeye gönderiyoruz.",
+   "metin": "de Broglie, her parçacığın bir dalga boyu olduğunu söyledi: <b>λ = h/(m·v)</b>. Şimdi elektronları <b>tek tek</b> iki yarıktan geçirip perdeye gönderiyoruz.",
    "sahne": {
     "tur": "fiz13-elektron",
     "sure": 4
@@ -186,16 +186,16 @@
     "secenekler": [
      {
       "yazi": "Yarıkların karşısında iki şerit",
-      "neden": "Elektronlar yalnız küçük toplar gibi davransaydı böyle olurdu; ama iki yarıktan gelen dalgalar girişim yapar."
+      "neden": "Elektronlar yalnızca küçük toplar gibi davransaydı böyle olurdu. Ama iki yarıktan gelen dalgalar girişim yapar."
      },
      {
       "yazi": "Rastgele dağılmış noktalar",
-      "neden": "Tek tek bakınca noktalar rastgele görünür; ama binlercesi birikince düzenli bir desen ortaya çıkar."
+      "neden": "Tek tek bakınca noktalar rastgele görünür. Ama binlercesi birikince düzenli bir desen ortaya çıkar."
      },
      {
       "yazi": "Aydınlık-karanlık girişim saçakları",
       "dogru": true,
-      "neden": "Her elektron perdeye <b>tek nokta</b> olarak düşer (parçacık), ama noktalar birikince <b>girişim saçakları</b> çıkar (dalga). Buna <b>dalga-parçacık ikiliği</b> denir."
+      "neden": "Her elektron perdeye <b>tek bir nokta</b> olarak düşer ve bu bir parçacık davranışıdır. Ama noktalar birikince <b>girişim saçakları</b> çıkar ve bu bir dalga davranışıdır. Buna <b>dalga-parçacık ikiliği</b> denir."
      }
     ]
    },
@@ -203,7 +203,7 @@
   },
   {
    "baslik": "Bohr modeli ve spektrum",
-   "metin": "Elektron alt düzeye inerken iki düzeyin farkı kadar enerjili bir foton yayar. Hidrojende <b>E<sub>n</sub> = −13,6/n² eV</b>. <b>2,55 eV</b>'lik mavi-yeşil fotonu veren geçişi bul.",
+   "metin": "Elektron alt düzeye inerken iki düzeyin farkı kadar enerjili bir foton yayar. Hidrojende <b>E<sub>n</sub> = −13,6/n² eV</b> olur. <b>2,55 eV</b>'lik mavi-yeşil fotonu veren geçişi bul.",
    "sahne": {
     "tur": "fiz13-bohr"
    },
@@ -235,19 +235,19 @@
      "ust": 4,
      "alt": 2
     },
-    "tamam": "E<sub>4</sub> − E<sub>2</sub> = −0,85 − (−3,4) = <b>2,55 eV</b>, λ = 1240/2,55 ≈ <b>486 nm</b>. n = 2'ye inen geçişlerin çoğu görünür bölgededir (Balmer serisi); n = 1'e inenler morötesindedir (Lyman serisi).",
-    "ipucu": "Düzeyler: −13,6; −3,4; −1,51; −0,85 eV. Farkı 2,55 olan ikiliyi ara."
+    "tamam": "E<sub>4</sub> − E<sub>2</sub> = −0,85 − (−3,4) = <b>2,55 eV</b> ve λ = 1240/2,55 ≈ <b>486 nm</b> olur. n = 2'ye inen geçişlerin çoğu görünür bölgededir ve bunlara Balmer serisi denir. n = 1'e inenler ise morötesindedir ve bunlara Lyman serisi denir.",
+    "ipucu": "Düzeylerin enerjileri −13,6, −3,4, −1,51 ve −0,85 eV'tur. Farkı 2,55 olan ikiliyi ara."
    },
    "kart": 12
   }
  ],
  "kapanis": [
-  "Enerji kuantlıdır: E = h·f = h·c/λ; E(eV) ≈ 1240 / λ(nm).",
-  "Siyah cisimde tepe dalga boyu: λmax·T ≈ 2,9·10⁻³ m·K.",
-  "Fotoelektrik: Ek,max = h·f − W = e·V₀; eşiği frekans belirler, şiddet yalnız akımı değiştirir.",
-  "Compton: foton momentum taşır, p = h/λ; saçılan fotonun dalga boyu uzar.",
-  "Madde dalgası λ = h/(m·v); elektronlar girişim yapar.",
-  "Hidrojende En = −13,6/n² eV; yayılan foton düzey farkını taşır."
+  "Enerji kuantlıdır: E = h·f = h·c/λ. Elektronvolt cinsinden E(eV) ≈ 1240 / λ(nm) olur.",
+  "Siyah cisimde tepe dalga boyu λmax·T ≈ 2,9·10⁻³ m·K bağıntısıyla bulunur.",
+  "Fotoelektrik olayda Ek,max = h·f − W = e·V₀ olur. Eşiği frekans belirler, şiddet ise yalnızca akımı değiştirir.",
+  "Compton olayında foton momentum taşır: p = h/λ. Saçılan fotonun dalga boyu uzar.",
+  "Madde dalgasının boyu λ = h/(m·v) ile bulunur. Elektronlar da girişim yapar.",
+  "Hidrojende En = −13,6/n² eV olur. Yayılan foton, düzeyler arasındaki enerji farkını taşır."
  ],
  "soruOnce": true
 }

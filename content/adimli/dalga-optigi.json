@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "dalga-optigi",
  "baslik": "Işığın Girişimi ve Kırınımı",
- "ozet": "Dalgayı dar aralıktan geçir, Young deneyinde saçak bul, yol farkını çöz, saçak aralığını değiştir, düzeneği suya daldır, tek yarığı daralt ve ışığı polarizörle kes.",
+ "ozet": "Dalgayı dar bir aralıktan geçir ve Young deneyinde saçak bul. Yol farkını çöz, saçak aralığını değiştir ve düzeneği suya daldır. Tek yarığı daralt ve ışığı polarizörle kes.",
  "adimlar": [
   {
    "baslik": "Huygens ilkesi",
-   "metin": "Düz dalga engeldeki aralıktan geçiyor. Aralığı daralt: dalganın <b>her yöne yayıldığını</b> gör.",
+   "metin": "Düz bir dalga engeldeki aralıktan geçiyor. Aralığı daralt ve dalganın <b>her yöne yayıldığını</b> gör.",
    "sahne": {
     "tur": "fiz12-huygens"
    },
@@ -29,14 +29,14 @@
     "hedef": {
      "w": 1
     },
-    "tamam": "Aralık dalga boyu kadar daralınca orada tek bir dalgacık kaynağı kalır ve dalga yarım çember gibi yayılır: <b>kırınım</b>. Geniş aralıkta dalgacıkların ortak teğeti yine düz bir cephedir; dalga yalnızca kenarlarda biraz bükülür.",
+    "tamam": "Aralık dalga boyu kadar daralınca orada tek bir dalgacık kaynağı kalır ve dalga yarım çember gibi yayılır. Buna <b>kırınım</b> denir. Geniş aralıkta dalgacıkların ortak teğeti yine düz bir cephedir ve dalga yalnızca kenarlarda biraz bükülür.",
     "ipucu": "Kırınım, aralık dalga boyuyla kıyaslanabilir olduğunda belirgindir."
    },
    "kart": 1
   },
   {
    "baslik": "Young deneyi",
-   "metin": "Aydınlık saçakta yol farkı λ'nın tam katıdır. P noktasına S₁ ve S₂'den gelen ışınların <b>yol farkı</b> Δ = d·x/L. P'yi kaydır ve <b>2. aydınlık saçağı</b> bul.",
+   "metin": "Aydınlık saçakta yol farkı λ'nın tam katıdır. P noktasına S₁ ve S₂'den gelen ışınların <b>yol farkı</b> Δ = d·x/L olur. P'yi kaydır ve <b>2. aydınlık saçağı</b> bul.",
    "sahne": {
     "tur": "fiz12-young"
    },
@@ -59,14 +59,14 @@
     "hedef": {
      "x": 6
     },
-    "tamam": "x = 6 mm'de Δ = 1200 nm = <b>2λ</b>: dalgalar tepe tepeye buluşur, <b>yapıcı girişim</b>. Bu düzenekte saçak aralığı 3 mm, bu yüzden 2. aydınlık merkezden 2 · 3 = 6 mm uzakta.",
-    "ipucu": "Yol farkı dalga boyunun tam 2 katı olmalı: Δ = 1200 nm."
+    "tamam": "x = 6 mm'de Δ = 1200 nm = <b>2λ</b> olur. Dalgalar tepe tepeye buluşur ve <b>yapıcı girişim</b> yapar. Bu düzenekte saçak aralığı 3 mm'dir. Bu yüzden 2. aydınlık saçak merkezden 2 · 3 = 6 mm uzaktadır.",
+    "ipucu": "Yol farkı dalga boyunun tam 2 katı olmalıdır: Δ = 1200 nm."
    },
    "kart": 5
   },
   {
    "baslik": "Aydınlık mı, karanlık mı?",
-   "metin": "Yol farkı λ'nın tam katıysa aydınlık, yarım katıysa karanlık saçak oluşur. λ = 500 nm. P'ye S₂'den gelen ışık, S₁'den gelenden <b>1750 nm</b> daha uzun yol alıyor.",
+   "metin": "Yol farkı λ'nın tam katıysa aydınlık, yarım katıysa karanlık saçak oluşur. Burada λ = 500 nm'dir. P'ye S₂'den gelen ışık, S₁'den gelen ışıktan <b>1750 nm</b> daha uzun yol alıyor.",
    "sahne": {
     "tur": "fiz12-faz",
     "sure": 4
@@ -77,16 +77,16 @@
     "secenekler": [
      {
       "yazi": "3. aydınlık saçak",
-      "neden": "Aydınlık için Δ dalga boyunun tam katı olmalı; 1750 / 500 = 3,5 tam sayı değil."
+      "neden": "Aydınlık saçak için Δ dalga boyunun tam katı olmalıdır. 1750 / 500 = 3,5 ise bir tam sayı değildir."
      },
      {
       "yazi": "3. karanlık saçak",
-      "neden": "3. karanlıkta Δ = (3 − ½)·λ = 2,5λ = 1250 nm olurdu."
+      "neden": "3. karanlık saçakta Δ = (3 − ½)·λ = 2,5λ = 1250 nm olurdu."
      },
      {
       "yazi": "4. karanlık saçak",
       "dogru": true,
-      "neden": "Δ/λ = 3,5 = 4 − ½: tepe çukurla buluşur, <b>yıkıcı girişim</b>. Karanlık saçak koşulu Δ = (n − ½)·λ olduğu için n = 4."
+      "neden": "Δ/λ = 3,5 = 4 − ½ olur. Tepe çukurla buluşur ve <b>yıkıcı girişim</b> olur. Karanlık saçak koşulu Δ = (n − ½)·λ olduğu için n = 4'tür."
      }
     ]
    },
@@ -94,7 +94,7 @@
   },
   {
    "baslik": "Saçak aralığı",
-   "metin": "Saçak aralığı Δx = λ·L/d. Dalga boyunu, perde uzaklığını ve yarık aralığını değiştir; her seferinde ışığı yakıp deseni gör.",
+   "metin": "Saçak aralığı Δx = λ·L/d ile bulunur. Dalga boyunu, perde uzaklığını ve yarık aralığını değiştir. Her seferinde ışığı yak ve deseni gör.",
    "sahne": {
     "tur": "fiz12-sacak",
     "sure": 1.5
@@ -145,11 +145,11 @@
      },
      {
       "yazi": "Kırmızı ışık kullanmak",
-      "neden": "Kırmızının dalga boyu daha uzundur; λ büyüyünce Δx de büyür, saçaklar açılır."
+      "neden": "Kırmızının dalga boyu daha uzundur. λ büyüyünce Δx de büyür ve saçaklar açılır."
      },
      {
       "yazi": "Işığı daha parlak yapmak",
-      "neden": "Işık şiddeti Δx'i değiştirmez; saçaklar yalnızca parlar."
+      "neden": "Işık şiddeti Δx'i değiştirmez. Saçaklar yalnızca daha parlak olur."
      }
     ]
    },
@@ -157,7 +157,7 @@
   },
   {
    "baslik": "Düzenek suya daldırılırsa",
-   "metin": "Havada saçak aralığı 4 mm. Şimdi bütün düzeneği kırılma indisi 1,33 olan suya daldıracağız.",
+   "metin": "Havada saçak aralığı 4 mm'dir. Şimdi bütün düzeneği kırılma indisi 1,33 olan suya daldıracağız.",
    "sahne": {
     "tur": "fiz12-sivi",
     "sure": 4
@@ -169,15 +169,15 @@
      {
       "yazi": "Sıklaşır",
       "dogru": true,
-      "neden": "Suda ışığın dalga boyu 1,33 kat küçülür; saçak aralığı da aynı oranda küçülür: 4 / 1,33 ≈ <b>3 mm</b>."
+      "neden": "Suda ışığın dalga boyu 1,33 kat küçülür. Saçak aralığı da aynı oranda küçülür: 4 / 1,33 ≈ <b>3 mm</b>."
      },
      {
       "yazi": "Seyrekleşir",
-      "neden": "Saçakları açmak için dalga boyu büyümeliydi; suda dalga boyu küçülür."
+      "neden": "Saçakların açılması için dalga boyunun büyümesi gerekirdi. Ama suda dalga boyu küçülür."
      },
      {
       "yazi": "Değişmez",
-      "neden": "Frekans aynı kalsa da Δx = λL/d dalga boyuna bağlıdır; suda λ küçülür."
+      "neden": "Frekans aynı kalsa da Δx = λL/d dalga boyuna bağlıdır. Suda λ küçülür."
      }
     ]
    },
@@ -185,7 +185,7 @@
   },
   {
    "baslik": "Tek yarıkta kırınım",
-   "metin": "Merkezi aydınlık saçağın genişliği <b>2λL/w</b> (λ = 500 nm, L = 1 m). Yarığı ayarla: merkezi saçak <b>20 mm</b> genişliğinde olsun.",
+   "metin": "Merkezi aydınlık saçağın genişliği <b>2λL/w</b> olur (λ = 500 nm, L = 1 m). Yarığı ayarla ve merkezi saçağın <b>20 mm</b> genişliğinde olmasını sağla.",
    "sahne": {
     "tur": "fiz12-tekyarik"
    },
@@ -208,8 +208,8 @@
     "hedef": {
      "w": 50
     },
-    "tamam": "w = 50 μm için 2 · 500 nm · 1 m / 50 μm = <b>20 mm</b>. Yarık daraldıkça desen <b>genişler</b>.",
-    "ipucu": "Merkezi saçağın genişliği w ile ters orantılı: genişletmek için yarığı daralt."
+    "tamam": "w = 50 μm için 2 · 500 nm · 1 m / 50 μm = <b>20 mm</b> olur. Yarık daraldıkça desen <b>genişler</b>.",
+    "ipucu": "Merkezi saçağın genişliği w ile ters orantılıdır. Saçağı genişletmek için yarığı daralt."
    },
    "kart": 11
   },
@@ -238,18 +238,18 @@
     "hedef": {
      "a": 90
     },
-    "tamam": "İkinci polarizör birinciye <b>90°</b> çevrikken ışık tamamen kesilir; ara açılarda ışığın bir kısmı geçer.",
+    "tamam": "İkinci polarizör birinciye göre <b>90°</b> çevrikken ışık tamamen kesilir. Ara açılarda ise ışığın bir kısmı geçer.",
     "ipucu": "Geçen ışık, iki polarizörün doğrultuları birbirine dik olunca söner."
    },
    "kart": 14
   }
  ],
  "kapanis": [
-  "Huygens ilkesi: cephenin her noktası yeni bir kaynaktır; dar aralıkta dalga kırınıma uğrar.",
+  "Huygens ilkesine göre cephenin her noktası yeni bir kaynaktır. Dar bir aralıkta dalga kırınıma uğrar.",
   "Young deneyi ışığın dalga olduğunu gösterir.",
-  "Aydınlık saçak: Δ = n·λ; karanlık saçak: Δ = (n − ½)·λ.",
-  "Saçak aralığı Δx = λL/d; düzenek sıvıya daldırılırsa Δx/n olur.",
-  "Tek yarıkta merkezi saçak 2λL/w genişliğindedir; yarık daralınca desen genişler.",
+  "Aydınlık saçakta Δ = n·λ, karanlık saçakta ise Δ = (n − ½)·λ olur.",
+  "Saçak aralığı Δx = λL/d ile bulunur. Düzenek bir sıvıya daldırılırsa saçak aralığı Δx/n olur.",
+  "Tek yarıkta merkezi saçağın genişliği 2λL/w olur. Yarık daralınca desen genişler.",
   "Polarizasyon ışığın enine dalga olduğunu kanıtlar."
  ],
  "soruOnce": true
