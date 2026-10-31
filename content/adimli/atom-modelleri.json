@@ -3,7 +3,7 @@
  "ders": "kimya",
  "konu": "atom-modelleri",
  "baslik": "Atom modellerinin tarihi",
- "ozet": "Önce dene, sonra adını öğren: katot ışınını saptır, altın levhaya ateş et, elektronu katman indir.",
+ "ozet": "Önce dene, sonra adını öğren. Katot ışınını saptır, altın levhaya tanecik gönder ve elektronu alt katmana indir.",
  "adimlar": [
   {
    "baslik": "Katot ışınları",
@@ -19,7 +19,7 @@
      {
       "yazi": "Artı (+) yüklü levhaya",
       "dogru": true,
-      "neden": "Işın artı levhaya çekildi; demek ki eksi yüklü taneciklerden oluşuyor: elektron. Elektron atomdan geldiğine göre atom bölünebilir; Dalton'un içi dolu küresi yetmez."
+      "neden": "Işın artı levhaya çekildi, demek ki eksi yüklü taneciklerden oluşuyor. Bu taneciklere elektron denir. Elektron atomdan geldiğine göre atom bölünebilir ve Dalton'un içi dolu küresi yetersiz kalır."
      },
      {
       "yazi": "Eksi (−) yüklü levhaya",
@@ -27,7 +27,7 @@
      },
      {
       "yazi": "Hiç sapmaz",
-      "neden": "Yüksüz bir ışın sapmazdı; bu ışın yüklü taneciklerden oluşuyor."
+      "neden": "Yüksüz bir ışın sapmazdı. Bu ışın yüklü taneciklerden oluşuyor."
      }
     ]
    },
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Üzümlü kek",
-   "metin": "Thomson'ın kek modelinde bu kürede 6 birim artı yük var. Elektron ekleyerek atomu nötr yap.",
+   "metin": "Thomson'ın kek modelindeki bu kürede 6 birim artı yük var. Elektron ekleyerek atomu nötr hâle getir.",
    "sahne": {
     "tur": "kim2-thomson"
    },
@@ -56,7 +56,7 @@
     "hedef": {
      "e": 6
     },
-    "tamam": "6 eksi yük, 6 artı yükü dengeler; atom bir bütün olarak yüksüzdür. Thomson'a göre artı yük kürenin her yerine yayılmıştı."
+    "tamam": "6 eksi yük, 6 artı yükü dengeler ve atom bir bütün olarak yüksüz olur. Thomson'a göre artı yük kürenin her yerine yayılmıştı."
    },
    "kart": 4
   },
@@ -74,7 +74,7 @@
      {
       "yazi": "Çoğu geçti, azı geri döndü",
       "dogru": true,
-      "neden": "Çoğunun düz geçmesi, atomun büyük kısmının boşluk olduğunu gösterir. Çizimde geri dönenler abartıldı: gerçekte yaklaşık 8000 taneciğin 1'i döndü."
+      "neden": "Taneciklerin çoğunun düz geçmesi, atomun büyük kısmının boşluk olduğunu gösterir. Çizimde geri dönen tanecikler abartıldı. Gerçekte yaklaşık 8000 tanecikten yalnızca 1'i geri döndü."
      },
      {
       "yazi": "Hepsi düz geçti",
@@ -82,7 +82,7 @@
      },
      {
       "yazi": "Çoğu geri döndü",
-      "neden": "Levha çok ince ve atom çoğunlukla boşluk; taneciklerin çoğu hiçbir engele çarpmaz."
+      "neden": "Levha çok incedir ve atom çoğunlukla boşluktur. Bu yüzden taneciklerin çoğu hiçbir engele çarpmaz."
      }
     ]
    },
@@ -115,14 +115,14 @@
       5
      ]
     },
-    "tamam": "Yalnızca çekirdeğe çok yaklaşan tanecik, çekirdeğin artı yüküyle itilip geri döner. Çekirdek atomdan yaklaşık 100.000 kat küçük olduğu için bu çok nadirdir; taneciklerin çoğu boşluktan geçer.",
-    "ipucu": "Uzaklığı azaltıp yeniden oynat."
+    "tamam": "Yalnızca çekirdeğe çok yaklaşan tanecik, çekirdeğin artı yüküyle itilerek geri döner. Çekirdek atomdan yaklaşık 100.000 kat küçük olduğu için bu durum çok nadir görülür. Taneciklerin çoğu boşluktan geçer.",
+    "ipucu": "Uzaklığı azalt ve yeniden oynat."
    },
    "kart": 7
   },
   {
    "baslik": "Bohr'un katmanları",
-   "metin": "Bohr'a göre hidrojenin elektronu yalnızca belirli katmanlarda bulunabilir. Elektron 3. katmanda; onu 2. katmana indir.",
+   "metin": "Bohr'a göre hidrojenin elektronu yalnızca belirli katmanlarda bulunabilir. Elektron şu an 3. katmanda. Onu 2. katmana indir.",
    "sahne": {
     "tur": "kim2-bohr"
    },
@@ -143,13 +143,13 @@
     "hedef": {
      "n": 2
     },
-    "tamam": "Elektron alt katmana inerken aradaki enerji farkını belirli bir renkte ışık olarak verdi: 3 → 2 inişi kırmızı (656 nm), 4 → 2 inişi mavi-yeşildir (486 nm). Bohr hidrojenin çizgi spektrumunu böyle açıkladı."
+    "tamam": "Elektron alt katmana inerken aradaki enerji farkını belirli renkte bir ışık olarak verdi. 3. katmandan 2. katmana iniş kırmızı (656 nm), 4. katmandan 2. katmana iniş ise mavi-yeşil (486 nm) ışık verir. Bohr hidrojenin çizgi spektrumunu böyle açıkladı."
    },
    "kart": 9
   },
   {
    "baslik": "Elektron bulutu",
-   "metin": "1920'lerde kuantum mekaniği kuruldu. Anahtarla Bohr'un yörüngesinden modern modele geç.",
+   "metin": "1920'lerde kuantum mekaniği kuruldu. Anahtarı kullanarak Bohr'un yörüngesinden modern modele geç.",
    "sahne": {
     "tur": "kim2-bulut"
    },
@@ -172,7 +172,7 @@
      {
       "yazi": "Yeri yalnızca olasılıkla bilinir",
       "dogru": true,
-      "neden": "Kuantum mekaniğine göre elektronun yeri ve hızı aynı anda kesin bilinemez; bu yüzden yalnız olasılık hesaplanır. Bulutun koyu yerlerinde bulunma olasılığı yüksektir."
+      "neden": "Kuantum mekaniğine göre elektronun yeri ve hızı aynı anda kesin olarak bilinemez. Bu yüzden yalnızca olasılık hesaplanır. Bulutun koyu yerlerinde bulunma olasılığı yüksektir."
      },
      {
       "yazi": "Bir çember üzerinde döner",
@@ -180,7 +180,7 @@
      },
      {
       "yazi": "Çekirdeğin içinde durur",
-      "neden": "Çekirdekte proton ve nötronlar vardır; elektronlar çekirdeğin çevresindedir."
+      "neden": "Çekirdekte proton ve nötronlar bulunur. Elektronlar ise çekirdeğin çevresindedir."
      }
     ]
    },
@@ -188,11 +188,11 @@
   }
  ],
  "kapanis": [
-  "<b>Dalton</b> (1803-1808): atom bölünemez, içi dolu bir küredir.",
-  "<b>Thomson</b>: katot ışınları eksi yüklü elektronlardan oluşur (1897); atom, elektronların gömülü olduğu artı yüklü bir küredir (üzümlü kek, 1904).",
-  "<b>Rutherford</b>: altın levha deneyi, atomun çoğunlukla boşluk olduğunu ve kütlenin küçük, artı yüklü bir çekirdekte toplandığını gösterdi (1909-1911).",
-  "<b>Bohr</b> (1913): elektronlar belirli enerji katmanlarında dolanır; alt katmana inen elektron belirli renkte ışık yayar.",
-  "<b>Modern model</b>: elektronun yeri kesin bilinemez; yalnızca bulunma olasılığı (orbital) hesaplanır."
+  "<b>Dalton</b>'a (1803-1808) göre atom bölünemeyen, içi dolu bir küredir.",
+  "<b>Thomson</b> 1897'de katot ışınlarının eksi yüklü elektronlardan oluştuğunu gösterdi. 1904'te önerdiği üzümlü kek modelinde atom, elektronların gömülü olduğu artı yüklü bir küredir.",
+  "<b>Rutherford</b>'un altın levha deneyi (1909-1911), atomun çoğunlukla boşluk olduğunu gösterdi. Kütle küçük ve artı yüklü bir çekirdekte toplanmıştır.",
+  "<b>Bohr</b>'a (1913) göre elektronlar belirli enerji katmanlarında dolanır. Alt katmana inen elektron belirli renkte ışık yayar.",
+  "<b>Modern modelde</b> elektronun yeri kesin olarak bilinemez. Yalnızca bulunma olasılığı, yani orbitali hesaplanır."
  ],
  "soruOnce": true
 }

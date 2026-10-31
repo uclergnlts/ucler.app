@@ -3,7 +3,7 @@
  "ders": "kimya",
  "konu": "maddenin-halleri",
  "baslik": "Maddenin halleri",
- "ozet": "Önce dene, sonra adını öğren: katıyı erit, balı akıt, suyu farklı basınçlarda kaynat.",
+ "ozet": "Önce dene, sonra adını öğren. Katıyı erit, balı akıt ve suyu farklı basınçlarda kaynat.",
  "adimlar": [
   {
    "baslik": "Kristal ve amorf",
@@ -18,7 +18,7 @@
     "secenekler": [
      {
       "yazi": "Cam",
-      "neden": "Cam amorftur: belirli bir erime noktası yoktur, önce yumuşar."
+      "neden": "Cam amorf bir katıdır. Belirli bir erime noktası yoktur ve önce yumuşar."
      },
      {
       "yazi": "Tuz",
@@ -61,14 +61,14 @@
       60
      ]
     },
-    "ipucu": "Balı ısıtıp yeniden oynat.",
-    "tamam": "Isınan balda tanecikler çekimi daha kolay yener ve birbirinin üzerinden hızla kayar: viskozite azalır."
+    "ipucu": "Balı ısıt ve yeniden oynat.",
+    "tamam": "Isınan balda tanecikler çekimi daha kolay yener ve birbirinin üzerinden hızla kayar. Bu yüzden viskozite azalır."
    },
    "kart": 4
   },
   {
    "baslik": "Buhar basıncı",
-   "metin": "Kapalı kapta sıvıdan kopan moleküller buhar oluşturur; bu buharın yaptığı basınca buhar basıncı denir. Sıcaklığı ve sıvı miktarını değiştir.",
+   "metin": "Kapalı kapta sıvıdan kopan moleküller buhar oluşturur. Bu buharın yaptığı basınca buhar basıncı denir. Sıcaklığı ve sıvı miktarını değiştir.",
    "sahne": {
     "tur": "kim4-buhar"
    },
@@ -99,7 +99,7 @@
     "secenekler": [
      {
       "yazi": "Artar",
-      "neden": "Sıvı miktarını artır ve göstergeye bak: değer kıpırdıyor mu?"
+      "neden": "Sıvı miktarını artır ve göstergeye bak. Değerin değişip değişmediğini kontrol et."
      },
      {
       "yazi": "Azalır",
@@ -107,7 +107,7 @@
      },
      {
       "yazi": "Değişmez",
-      "neden": "Buhar basıncı yalnızca sıcaklığa ve sıvının cinsine bağlıdır; miktar, kap hacmi ve yüzey alanı onu değiştirmez. Sıcaklıkla ise hızla artar: su için 40 °C'de 55, 100 °C'de 760 mmHg.",
+      "neden": "Buhar basıncı yalnızca sıcaklığa ve sıvının cinsine bağlıdır. Sıvı miktarı, kabın hacmi ve yüzey alanı onu değiştirmez. Sıcaklıkla ise hızla artar. Su için 40 °C'de 55 mmHg, 100 °C'de 760 mmHg'dir.",
       "dogru": true
      }
     ]
@@ -116,7 +116,7 @@
   },
   {
    "baslik": "Kaynama laboratuvarı",
-   "metin": "Kaptaki suyu ısıt; sıcaklığı, grafiği ve iki basıncı izle. Dış basıncı da değiştirebilirsin. Aşağıdakileri kendin bul.",
+   "metin": "Kaptaki suyu ısıt ve sıcaklığı, grafiği ve iki basıncı izle. Dış basıncı da değiştirebilirsin. Aşağıdakileri kendin bul.",
    "sahne": {
     "tur": "sim-kaynama"
    },
@@ -162,7 +162,7 @@
         "isit": 1
        }
       ],
-      "tamam": "Su 100 °C'de kaynadı ve sıcaklık sabit kaldı: verilen ısı artık sıcaklığı artırmıyor, sıvıyı buhara çeviriyor. 1 atm'deki bu sıcaklığa <b>normal kaynama noktası</b> denir."
+      "tamam": "Su 100 °C'de kaynadı ve sıcaklık sabit kaldı. Verilen ısı artık sıcaklığı artırmıyor, sıvıyı buhara çeviriyor. 1 atm'deki bu sıcaklığa <b>normal kaynama noktası</b> denir."
      },
      {
       "yazi": "Yüksek bir dağdaymışsın gibi dış basıncı <b>0,5 atm</b>'ye indir. Su kaç derecede kaynıyor?",
@@ -183,7 +183,7 @@
         "p": 5
        }
       ],
-      "tamam": "Yaklaşık 81 °C: buhar basıncının dış basınca yetişmesi için daha az ısınmak yetti. Everest'te (≈ 0,3 atm) su yaklaşık 70 °C'de kaynar; makarna zor pişer."
+      "tamam": "Su yaklaşık 81 °C'de kaynadı. Buhar basıncının dış basınca yetişmesi için daha az ısınmak yetti. Everest'te (yaklaşık 0,3 atm) su yaklaşık 70 °C'de kaynar ve makarna zor pişer."
      },
      {
       "yazi": "Düdüklü tencere gibi dış basıncı <b>2 atm</b>'ye çıkar ve yeniden kaynat.",
@@ -204,7 +204,7 @@
         "p": 20
        }
       ],
-      "tamam": "Yaklaşık 121 °C'de kaynadı: dış basınç artınca kaynama noktası yükselir. Yemek daha sıcak suda olduğu için daha çabuk pişer."
+      "tamam": "Su yaklaşık 121 °C'de kaynadı, çünkü dış basınç artınca kaynama noktası yükselir. Yemek daha sıcak suda olduğu için daha çabuk pişer."
      }
     ]
    },
@@ -234,7 +234,7 @@
     "secenekler": [
      {
       "yazi": "Buharlaşma deriden ısı alır",
-      "neden": "Buharlaşma endotermiktir: gereken ısıyı derinden alır, derin soğur. Nem yüksekse ter zor buharlaşır, bu yüzden serinleyemezsin.",
+      "neden": "Buharlaşma endotermik bir değişimdir ve gereken ısıyı deriden alır, bu yüzden deri soğur. Nem yüksekse ter zor buharlaşır ve serinleyemezsin.",
       "dogru": true
      },
      {
@@ -251,7 +251,7 @@
   },
   {
    "baslik": "Faz diyagramı",
-   "metin": "1 atm'de kuru buz (katı CO₂) erimez, doğrudan gaza döner. −20 °C'deki CO₂'yi basınçla sıvı yap.",
+   "metin": "Kuru buz (katı CO₂) 1 atm'de erimez, doğrudan gaza dönüşür. −20 °C'deki CO₂'yi basınç uygulayarak sıvı hâle getir.",
    "sahne": {
     "tur": "kim4-faz",
     "T": -20
@@ -276,17 +276,17 @@
       80
      ]
     },
-    "tamam": "−20 °C'de yaklaşık 20 atm'nin üstünde CO₂ sıvılaşır. Üçlü noktası 5,1 atm'de olduğu için 1 atm'de sıvı CO₂ olamaz; kuru buz bu yüzden süblimleşir. Kritik sıcaklığın (31 °C) üstünde ise hiçbir basınç onu sıvılaştıramaz."
+    "tamam": "CO₂ −20 °C'de yaklaşık 20 atm'nin üstünde sıvılaşır. Üçlü noktası 5,1 atm'de olduğu için 1 atm'de sıvı CO₂ olamaz ve kuru buz bu yüzden süblimleşir. Kritik sıcaklığın (31 °C) üstünde ise hiçbir basınç onu sıvılaştıramaz."
    },
    "kart": 12
   }
  ],
  "kapanis": [
-  "Kristal katı belirli bir sıcaklıkta keskin erir; <b>amorf</b> katı (cam, plastik) yumuşayarak erir.",
-  "<b>Viskozite</b> akmaya karşı dirençtir; moleküller arası çekim güçlüyse yüksektir, ısınınca azalır.",
-  "<b>Buhar basıncı</b> sıcaklıkla artar ve sıvının cinsine bağlıdır; sıvı miktarına bağlı değildir.",
-  "Buhar basıncı dış basınca eşitlenince sıvı kaynar: dağda 100 °C'nin altında, düdüklü tencerede üstünde.",
-  "Erime, buharlaşma ve süblimleşme ısı alır; donma, yoğuşma ve kırağılaşma ısı verir."
+  "Kristal katılar belirli bir sıcaklıkta keskin bir şekilde erir. Cam ve plastik gibi <b>amorf</b> katılar ise yumuşayarak erir.",
+  "<b>Viskozite</b> akmaya karşı dirençtir. Moleküller arası çekim güçlüyse viskozite yüksektir ve ısınınca azalır.",
+  "<b>Buhar basıncı</b> sıcaklıkla artar ve sıvının cinsine bağlıdır. Sıvı miktarına bağlı değildir.",
+  "Buhar basıncı dış basınca eşitlenince sıvı kaynar. Dağda su 100 °C'nin altında, düdüklü tencerede ise üstünde kaynar.",
+  "Erime, buharlaşma ve süblimleşme ısı alır. Donma, yoğuşma ve kırağılaşma ise ısı verir."
  ],
  "soruOnce": true
 }

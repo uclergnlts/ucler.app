@@ -3,7 +3,7 @@
  "ders": "kimya",
  "konu": "asit-baz",
  "baslik": "Asitler, bazlar ve tuzlar",
- "ozet": "Önce dene, sonra adını öğren: pH ölçeğini gez, asidi bazla nötralleştir, tamponu sına.",
+ "ozet": "Önce dene, sonra adını öğren. pH ölçeğini gez, asidi bazla nötralleştir ve tamponu sına.",
  "adimlar": [
   {
    "baslik": "pH ölçeği",
@@ -31,13 +31,13 @@
       14
      ]
     },
-    "tamam": "pH 7'nin üstündeki maddeler baziktir ve turnusolu maviye çevirir: sabun, amonyak, çamaşır suyu."
+    "tamam": "pH'ı 7'nin üstünde olan maddeler baziktir ve turnusolu maviye çevirir. Sabun, amonyak ve çamaşır suyu buna örnektir."
    },
    "kart": 5
   },
   {
    "baslik": "pH laboratuvarı",
-   "metin": "Kapta 1 L saf su var (pH 7). Damlalıklarla 1 M HCl ve 1 M NaOH ekle; pH ölçer, renk ve iyonlar anında değişir. Aşağıdakileri kendin bul.",
+   "metin": "Kapta 1 L saf su var ve pH'ı 7. Damlalıklarla 1 M HCl ve 1 M NaOH ekle. pH ölçer, renk ve iyonlar anında değişir. Aşağıdakileri kendin bul.",
    "sahne": {
     "tur": "sim-ph"
    },
@@ -81,7 +81,7 @@
         "A": 1
        }
       ],
-      "tamam": "1 mL 1 M HCl, 1 L suda [H₃O⁺] = 1×10⁻³ M yapar: pH = −log(10⁻³) = 3. [OH⁻] ise 1×10⁻¹¹ M'ye düştü; çarpım yine 1×10⁻¹⁴."
+      "tamam": "1 mL 1 M HCl, 1 L suda [H₃O⁺] değerini 1×10⁻³ M yapar ve pH = −log(10⁻³) = 3 olur. [OH⁻] ise 1×10⁻¹¹ M'ye düştü ve çarpım yine 1×10⁻¹⁴ oldu."
      },
      {
       "yazi": "Şimdi pH'ı <b>2</b>'ye indir. Ne kadar asit gerekti?",
@@ -98,7 +98,7 @@
         "A": 10
        }
       ],
-      "tamam": "pH'ı yalnızca 1 birim düşürmek için asidi <b>10 katına</b> çıkardın (1 → 10 mL). pH ölçeği logaritmiktir: her birim [H₃O⁺]'te 10 kat demek."
+      "tamam": "pH'ı yalnızca 1 birim düşürmek için asidi <b>10 katına</b> çıkardın (1 mL'den 10 mL'ye). pH ölçeği logaritmiktir, yani her birim [H₃O⁺]'te 10 kat fark demektir."
      },
      {
       "yazi": "NaOH ekleyerek kabı <b>bazik</b> yap: pH 11.",
@@ -118,7 +118,7 @@
         "B": 11
        }
       ],
-      "tamam": "OH⁻ iyonları önce H₃O⁺ iyonlarıyla suya dönüştü; fazlası pH'ı 11 yaptı (pOH = 3, pH + pOH = 14). Eşit miktarın çevresinde tek damla pH'ı birkaç birim sıçratır."
+      "tamam": "OH⁻ iyonları önce H₃O⁺ iyonlarıyla birleşip suya dönüştü. Fazlası pH'ı 11 yaptı (pOH = 3, pH + pOH = 14). Eşit miktarın çevresinde tek bir damla pH'ı birkaç birim sıçratır."
      }
     ]
    },
@@ -126,7 +126,7 @@
   },
   {
    "baslik": "Kuvvetli ve zayıf",
-   "metin": "Aynı derişimde (0,1 M) HCl ile sirke asidini karşılaştır: iyonlara ve lambaya bak.",
+   "metin": "Aynı derişimdeki (0,1 M) HCl ile sirke asidini karşılaştır. İyonlara ve lambaya bak.",
    "sahne": {
     "tur": "kim6-kuvvet"
    },
@@ -148,7 +148,7 @@
     "secenekler": [
      {
       "yazi": "Derişiminin düşük olması",
-      "neden": "Kuvvetli ile derişik aynı şey değildir. İkisi de 0,1 M; seyreltik HCl de kuvvetli asittir."
+      "neden": "Kuvvetli ile derişik aynı şey değildir. İkisi de 0,1 M'dir ve seyreltik HCl de kuvvetli bir asittir."
      },
      {
       "yazi": "Formülünde az H olması",
@@ -156,7 +156,7 @@
      },
      {
       "yazi": "Az iyonlaşması",
-      "neden": "0,1 M sirke asidinin yalnızca yüzde 1 kadarı iyonlaşır; çözeltide az H₃O⁺ olur, pH ≈ 2,9 ve lamba sönüktür. HCl'nin tamamı iyonlaşır: pH 1.",
+      "neden": "0,1 M sirke asidinin yalnızca yüzde 1 kadarı iyonlaşır. Çözeltide az H₃O⁺ bulunur, pH yaklaşık 2,9'dur ve lamba sönüktür. HCl'nin ise tamamı iyonlaşır ve pH'ı 1'dir.",
       "dogru": true
      }
     ]
@@ -188,8 +188,8 @@
     "hedef": {
      "V": 25
     },
-    "ipucu": "Asit ve bazın mol sayıları eşit olmalı: 25 mL × 0,1 M = 2,5 mmol.",
-    "tamam": "2,5 mmol NaOH, 2,5 mmol HCl'yi tam nötralleştirdi: NaCl + H₂O, pH 7. Eşdeğerliğin hemen ardından pH hızla sıçrar ve fenolftalein pembeleşir. Bu yönteme <b>titrasyon</b> denir."
+    "ipucu": "Asit ve bazın mol sayıları eşit olmalı. 25 mL × 0,1 M = 2,5 mmol eder.",
+    "tamam": "2,5 mmol NaOH, 2,5 mmol HCl'yi tamamen nötralleştirdi. NaCl ve su oluştu ve pH 7 oldu. Eşdeğerlik noktasının hemen ardından pH hızla sıçrar ve fenolftalein pembeleşir. Bu yönteme <b>titrasyon</b> denir."
    },
    "kart": 9
   },
@@ -214,7 +214,7 @@
      },
      {
       "yazi": "7'den büyük",
-      "neden": "Asetat iyonu (CH₃COO⁻) zayıf asidin eşlenik bazıdır ve sudan proton alır: CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻. Oluşan OH⁻ yüzünden pH ≈ 8,7 olur.",
+      "neden": "Asetat iyonu (CH₃COO⁻) zayıf asidin eşlenik bazıdır ve sudan proton alır (CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻). Oluşan OH⁻ yüzünden pH yaklaşık 8,7 olur.",
       "dogru": true
      }
     ]
@@ -245,16 +245,16 @@
     "secenekler": [
      {
       "yazi": "Asetat iyonu H₃O⁺'yu tutuyor",
-      "neden": "CH₃COO⁻ + H₃O⁺ → CH₃COOH + H₂O. Eklenen asit zayıf aside dönüşür, bu yüzden pH çok az düşer.",
+      "neden": "CH₃COO⁻ + H₃O⁺ → CH₃COOH + H₂O tepkimesi gerçekleşir. Eklenen asit zayıf bir aside dönüştüğü için pH çok az düşer.",
       "dogru": true
      },
      {
       "yazi": "Tampon asidi seyreltiyor",
-      "neden": "İki kapta da hacim aynı (100 mL). Fark seyreltmede değil, tepkimede."
+      "neden": "İki kapta da hacim aynıdır (100 mL). Fark seyreltmede değil, tepkimededir."
      },
      {
       "yazi": "Tamponda hiç H₃O⁺ yok",
-      "neden": "Tampon zaten asidik (pH 4,74), içinde H₃O⁺ var. Önemli olan eklenen asidin neye dönüştüğü."
+      "neden": "Tampon zaten asidiktir (pH 4,74) ve içinde H₃O⁺ vardır. Önemli olan, eklenen asidin neye dönüştüğüdür."
      }
     ]
    },
@@ -262,7 +262,7 @@
   },
   {
    "baslik": "Metaller ve asit",
-   "metin": "Aktif metaller asitle tepkimeye girip tuz ve hidrojen gazı verir: Mg + 2HCl → MgCl₂ + H₂. Üç tüpe magnezyum, çinko ve bakır koyacaksın.",
+   "metin": "Aktif metaller asitle tepkimeye girerek tuz ve hidrojen gazı oluşturur (Mg + 2HCl → MgCl₂ + H₂). Üç tüpe magnezyum, çinko ve bakır koyacaksın.",
    "sahne": {
     "tur": "kim6-metal",
     "sure": 4
@@ -273,16 +273,16 @@
     "secenekler": [
      {
       "yazi": "Magnezyum",
-      "neden": "Magnezyum çok aktiftir; en hızlı o kabarcık çıkarır."
+      "neden": "Magnezyum çok aktiftir ve en hızlı kabarcık çıkaran odur."
      },
      {
       "yazi": "Bakır",
-      "neden": "Bakır hidrojenden daha az aktiftir; HCl ile H₂ vermez (gümüş ve altın da).",
+      "neden": "Bakır hidrojenden daha az aktiftir ve HCl ile H₂ vermez. Gümüş ve altın da H₂ vermez.",
       "dogru": true
      },
      {
       "yazi": "Çinko",
-      "neden": "Çinko da asitle H₂ verir, yalnız magnezyumdan daha yavaş."
+      "neden": "Çinko da asitle H₂ verir, ama magnezyumdan daha yavaş."
      }
     ]
    },
@@ -290,11 +290,11 @@
   }
  ],
  "kapanis": [
-  "pH 7 nötr, altı asidik, üstü baziktir; turnusol asitte kırmızı, bazda mavidir.",
-  "pH logaritmiktir: bir birim düşüş [H₃O⁺]'yu 10 kat artırır; 25 °C'de pH + pOH = 14.",
-  "Kuvvetli asitler tamamen, zayıflar kısmen iyonlaşır; kuvvetli ile derişik aynı şey değildir.",
-  "Asit + baz → tuz + su; tuz çözeltisi her zaman nötr değildir, tampon pH değişimini küçültür.",
-  "Aktif metal + asit → tuz + H₂; Cu, Ag ve Au HCl ile H₂ vermez."
+  "pH 7 nötrdür, altı asidik, üstü ise baziktir. Turnusol asitte kırmızı, bazda ise mavi olur.",
+  "pH logaritmiktir ve bir birimlik düşüş [H₃O⁺]'yu 10 kat artırır. 25 °C'de pH + pOH = 14'tür.",
+  "Kuvvetli asitler tamamen, zayıf asitler ise kısmen iyonlaşır. Kuvvetli ile derişik aynı şey değildir.",
+  "Asit ile baz tuz ve su oluşturur. Tuz çözeltisi her zaman nötr değildir. Tampon ise pH değişimini küçültür.",
+  "Aktif metaller asitle tuz ve H₂ oluşturur. Cu, Ag ve Au ise HCl ile H₂ vermez."
  ],
  "soruOnce": true
 }

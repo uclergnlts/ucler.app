@@ -3,11 +3,11 @@
  "ders": "kimya",
  "konu": "mol",
  "baslik": "Mol kavramı ve kimyasal hesaplamalar",
- "ozet": "Önce dene, sonra adını öğren: maddeyi tart, gazı ölç, denklemden ürün hesapla.",
+ "ozet": "Önce dene, sonra adını öğren. Maddeyi tart, gazı ölç ve denklemden ürün hesapla.",
  "adimlar": [
   {
    "baslik": "Kimyanın düzinesi",
-   "metin": "Bir düzine yumurta da bir düzine karpuz da 12 tanedir ama ağırlıkları çok farklıdır. Mol sayısını değiştir ve kefelere bak.",
+   "metin": "Bir düzine yumurta da bir düzine karpuz da 12 tanedir, ama ağırlıkları çok farklıdır. Mol sayısını değiştir ve kefelere bak.",
    "sahne": {
     "tur": "kim6-paket"
    },
@@ -30,15 +30,15 @@
     "secenekler": [
      {
       "yazi": "Kütleleri",
-      "neden": "Kefelere bak: 12 g, 18 g ve 56 g. Taneciklerin kütlesi farklı olduğu için paketin kütlesi de farklıdır."
+      "neden": "Kefelere bak, kütleler 12 g, 18 g ve 56 g. Taneciklerin kütlesi farklı olduğu için paketin kütlesi de farklıdır."
      },
      {
       "yazi": "Hacimleri",
-      "neden": "Karbonun (katı), suyun (sıvı) ve demirin (katı) hacmi tanecik boyutuna ve dizilişine bağlıdır; mol bunu eşitlemez."
+      "neden": "Katı karbonun, sıvı suyun ve katı demirin hacmi tanecik boyutuna ve dizilişine bağlıdır. Mol bunu eşitlemez."
      },
      {
       "yazi": "Tanecik sayıları",
-      "neden": "Hepsinde 6,02×10²³ tanecik var: karbon ve demirde atom, suda molekül. Mol bir sayma birimidir, kütle birimi değildir.",
+      "neden": "Hepsinde 6,02×10²³ tanecik vardır. Karbon ve demirde bunlar atom, suda ise moleküldür. Mol bir sayma birimidir, kütle birimi değildir.",
       "dogru": true
      }
     ]
@@ -47,7 +47,7 @@
   },
   {
    "baslik": "Molden grama",
-   "metin": "1 mol maddenin gram cinsinden kütlesi <b>mol kütlesidir</b> (M): n = m / M. Beherdeki suyu ayarla ve teraziye <b>45 g</b> su koy.",
+   "metin": "1 mol maddenin gram cinsinden kütlesine <b>mol kütlesi</b> (M) denir ve n = m / M ile hesaplanır. Beherdeki suyu ayarla ve teraziye <b>45 g</b> su koy.",
    "sahne": {
     "tur": "kim6-su"
    },
@@ -70,13 +70,13 @@
     "hedef": {
      "n": 2.5
     },
-    "tamam": "45 g / 18 g/mol = 2,5 mol su; içinde 2,5 × 6,02×10²³ ≈ 1,5×10²⁴ molekül var. Kütleden tanecik sayısına giderken arada hep mol vardır."
+    "tamam": "45 g / 18 g/mol = 2,5 mol su eder. İçinde 2,5 × 6,02×10²³, yani yaklaşık 1,5×10²⁴ molekül vardır. Kütleden tanecik sayısına giderken arada her zaman mol bulunur."
    },
    "kart": 2
   },
   {
    "baslik": "Gazlarda hacim",
-   "metin": "Normal koşulda (NK: 0 °C, 1 atm) 1 mol gaz 22,4 L yer kaplar. Şırıngada NK'de 11,2 L gaz olsun: koşulu ve mol sayısını ayarla.",
+   "metin": "Normal koşulda (NK: 0 °C, 1 atm) 1 mol gaz 22,4 L yer kaplar. Şırıngada NK'de 11,2 L gaz olsun. Koşulu ve mol sayısını ayarla.",
    "sahne": {
     "tur": "kim6-gaz"
    },
@@ -109,13 +109,13 @@
      "k": 0
     },
     "ipucu": "Önce koşulu NK'ye al, sonra mol sayısını ayarla.",
-    "tamam": "NK'de 11,2 / 22,4 = 0,5 mol. Oda koşulunda aynı 0,5 mol gaz 12,25 L yer kaplar. 22,4 L/mol yalnız gazlar ve NK içindir; koşulu hep kontrol et."
+    "tamam": "NK'de 11,2 / 22,4 = 0,5 mol eder. Oda koşulunda aynı 0,5 mol gaz 12,25 L yer kaplar. 22,4 L/mol değeri yalnızca gazlar ve NK için geçerlidir, bu yüzden koşulu her zaman kontrol et."
    },
    "kart": 4
   },
   {
    "baslik": "Molekül mü, atom mu?",
-   "metin": "Formüldeki alt indis, bir moleküldeki atom sayısını söyler. Molekülleri atomlarına ayır ve say.",
+   "metin": "Formüldeki alt indis, bir moleküldeki atom sayısını gösterir. Molekülleri atomlarına ayır ve say.",
    "sahne": {
     "tur": "kim6-atom"
    },
@@ -141,7 +141,7 @@
      },
      {
       "yazi": "2 mol",
-      "neden": "Yalnız hidrojenleri saydın: 2 mol H. Oksijeni de ekle."
+      "neden": "Yalnızca hidrojenleri saydın ve 2 mol H buldun. Oksijeni de ekle."
      },
      {
       "yazi": "3 mol",
@@ -154,7 +154,7 @@
   },
   {
    "baslik": "Stokiyometri: üç adım",
-   "metin": "Metan yanınca CO₂ çıkar: CH₄ + 2O₂ → CO₂ + 2H₂O. <b>33 g</b> CO₂ elde edecek kadar metan yak (CH₄ = 16, CO₂ = 44 g/mol).",
+   "metin": "Metan yanınca CO₂ açığa çıkar (CH₄ + 2O₂ → CO₂ + 2H₂O). <b>33 g</b> CO₂ elde edecek kadar metan yak. CH₄'ün mol kütlesi 16, CO₂'ninki 44 g/mol'dür.",
    "sahne": {
     "tur": "kim6-stok"
    },
@@ -177,13 +177,13 @@
     "hedef": {
      "m": 12
     },
-    "tamam": "33 g CO₂ = 0,75 mol. Katsayılar 1 : 1 olduğu için 0,75 mol CH₄ gerekir: 0,75 × 16 = 12 g. Kütleden kütleye doğrudan geçilmez; arada mol ve katsayı oranı vardır."
+    "tamam": "33 g CO₂ 0,75 mol eder. Katsayılar 1 : 1 olduğu için 0,75 mol CH₄ gerekir ve bu 0,75 × 16 = 12 g'dır. Kütleden kütleye doğrudan geçilmez, arada mol ve katsayı oranı vardır."
    },
    "kart": 10
   },
   {
    "baslik": "Hangisi önce biter?",
-   "metin": "Kapta 6 g H₂ (3 mol) ve 32 g O₂ (1 mol) var: 2H₂ + O₂ → 2H₂O. Girenler katsayı oranında değilse biri önce biter ve ürünü o belirler.",
+   "metin": "Kapta 6 g H₂ (3 mol) ve 32 g O₂ (1 mol) var ve tepkime 2H₂ + O₂ → 2H₂O'dur. Girenler katsayı oranında değilse biri önce biter ve ürün miktarını o belirler.",
    "sahne": {
     "tur": "kim6-sinir",
     "sure": 4
@@ -194,15 +194,15 @@
     "secenekler": [
      {
       "yazi": "H₂ tükenir, O₂ artar",
-      "neden": "Oksijenin kütlesi büyük ama karar molle verilir. 3 mol H₂ için 1,5 mol O₂ gerekirdi; elimizde 1 mol var."
+      "neden": "Oksijenin kütlesi büyüktür, ama karar mol sayısına göre verilir. 3 mol H₂ için 1,5 mol O₂ gerekirdi, elimizde ise 1 mol var."
      },
      {
       "yazi": "İkisi de tamamen biter",
-      "neden": "Bunun için mol oranı 2 : 1 olmalıydı. Burada 3 : 1."
+      "neden": "Bunun için mol oranının 2 : 1 olması gerekirdi. Burada oran 3 : 1'dir."
      },
      {
       "yazi": "O₂ tükenir, H₂ artar",
-      "neden": "1 mol O₂, 2 mol H₂ ile tepkimeye girer ve 2 mol (36 g) su oluşur. 1 mol (2 g) H₂ artar. Sınırlayıcı bileşen O₂'dir: mol / katsayı oranı küçük olan tükenir.",
+      "neden": "1 mol O₂, 2 mol H₂ ile tepkimeye girer ve 2 mol (36 g) su oluşur. 1 mol (2 g) H₂ artar. Sınırlayıcı bileşen O₂'dir, çünkü mol sayısının katsayıya oranı küçük olan madde tükenir.",
       "dogru": true
      }
     ]
@@ -211,11 +211,11 @@
   }
  ],
  "kapanis": [
-  "1 mol = 6,02×10²³ taneciktir (Avogadro sayısı); mol bir sayma birimidir.",
-  "n = m / M = N / N<sub>A</sub>; 1 mol suyun kütlesi 18 g'dır.",
-  "1 mol H₂O'da 3 mol atom vardır: molekül ve atom sayısını karıştırma.",
+  "1 mol, 6,02×10²³ taneciktir ve bu sayıya Avogadro sayısı denir. Mol bir sayma birimidir.",
+  "Mol sayısı n = m / M = N / N<sub>A</sub> ile bulunur. 1 mol suyun kütlesi 18 g'dır.",
+  "1 mol H₂O'da 3 mol atom vardır. Molekül sayısını atom sayısıyla karıştırma.",
   "NK'de (0 °C, 1 atm) 1 mol gaz 22,4 L kaplar.",
-  "Hesapta önce mole çevir, katsayıları kullan; ürünü tükenen (sınırlayıcı) bileşen belirler."
+  "Hesaplarda önce mole çevir ve katsayıları kullan. Ürün miktarını tükenen, yani sınırlayıcı bileşen belirler."
  ],
  "soruOnce": true
 }

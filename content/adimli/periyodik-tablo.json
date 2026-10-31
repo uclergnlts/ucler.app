@@ -3,11 +3,11 @@
  "ders": "kimya",
  "konu": "periyodik-tablo",
  "baslik": "Periyodik tablo",
- "ozet": "Önce dene, sonra adını öğren: Mendeleyev'in boşluğunu doldur, elementi bul, atomları büyüt.",
+ "ozet": "Önce dene, sonra adını öğren. Mendeleyev'in bıraktığı boşluğu doldur, elementi bul ve atomları büyüt.",
  "adimlar": [
   {
    "baslik": "Mendeleyev'in boşluğu",
-   "metin": "Silisyum ile kalay arasına uyan bir element yoktu; Mendeleyev oraya bir boşluk bıraktı.",
+   "metin": "Silisyum ile kalay arasına uyan bir element yoktu. Bu yüzden Mendeleyev oraya bir boşluk bıraktı.",
    "sahne": {
     "tur": "kim3-mendeleyev",
     "sure": 4
@@ -18,12 +18,12 @@
     "secenekler": [
      {
       "yazi": "Kalaydan daha ağır",
-      "neden": "Sütunda kütle yukarıdan aşağı artıyor; boşluk silisyumla kalayın arasında."
+      "neden": "Sütunda kütle yukarıdan aşağıya doğru artıyor. Boşluk silisyum ile kalayın arasındadır."
      },
      {
       "yazi": "Silisyuma benzer, araya uyan",
       "dogru": true,
-      "neden": "Mendeleyev boşluğa kütlesi yaklaşık 72 olan, silisyuma benzeyen bir element koydu. 1886'da germanyum bulundu: kütlesi 72,6. Tahmin tuttu ve tablo güven kazandı."
+      "neden": "Mendeleyev boşluğa kütlesi yaklaşık 72 olan ve silisyuma benzeyen bir element koydu. 1886'da kütlesi 72,6 olan germanyum bulundu. Tahmin tuttu ve tablo güven kazandı."
      },
      {
       "yazi": "Hiçbir element",
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Tablodaki yer",
-   "metin": "Periyot (satır) numarası katman sayısını, A grubu numarası son katmandaki elektron sayısını verir. 3. periyottaki 7A elementini bul.",
+   "metin": "Periyot (satır) numarası katman sayısını, A grubu numarası ise son katmandaki elektron sayısını verir. 3. periyottaki 7A elementini bul.",
    "sahne": {
     "tur": "kim3-tablo"
    },
@@ -56,14 +56,14 @@
     "hedef": {
      "z": 17
     },
-    "ipucu": "3 katman ve son katmanda 7 elektron: 2-8-7.",
-    "tamam": "Klor: 2-8-7. Üç katman → 3. periyot; son katmanda 7 elektron → 7A grubu (1-18 numaralamasında 17. grup)."
+    "ipucu": "Bu elementin 3 katmanı vardır ve son katmanında 7 elektron bulunur. Yani elektronları 2-8-7 şeklinde dizilir.",
+    "tamam": "Bu element klordur ve elektronları 2-8-7 şeklinde dizilir. Üç katmanı olduğu için 3. periyotta, son katmanında 7 elektron olduğu için 7A grubundadır. 1-18 numaralamasında ise 17. gruptadır."
    },
    "kart": 3
   },
   {
    "baslik": "Aynı grup, benzer özellik",
-   "metin": "Oksijen seçili; atom numarasını değiştirip komşularına bak.",
+   "metin": "Oksijen seçili. Atom numarasını değiştir ve komşularına bak.",
    "sahne": {
     "tur": "kim3-tablo"
    },
@@ -85,16 +85,16 @@
     "secenekler": [
      {
       "yazi": "Azot (N)",
-      "neden": "Azot oksijenin komşusu ama 5A grubunda: 5 değerlik elektronu var, oksijenin 6."
+      "neden": "Azot oksijenin komşusudur, ama 5A grubundadır. Azotun 5, oksijenin ise 6 değerlik elektronu vardır."
      },
      {
       "yazi": "Flor (F)",
-      "neden": "Flor aynı periyotta ama 7A grubunda. Benzerlik periyotta değil, grupta aranır."
+      "neden": "Flor aynı periyottadır, ama 7A grubundadır. Benzerlik periyotta değil, grupta aranır."
      },
      {
       "yazi": "Kükürt (S)",
       "dogru": true,
-      "neden": "Kükürt (2-8-6) de oksijen (2-6) gibi 6A grubunda: ikisinin de 6 değerlik elektronu var. İkisi de iki elektron alıp −2 yüklü iyon oluşturmaya yatkındır."
+      "neden": "Kükürt (2-8-6) de oksijen (2-6) gibi 6A grubundadır ve ikisinin de 6 değerlik elektronu vardır. İkisi de iki elektron alarak −2 yüklü iyon oluşturmaya yatkındır."
      }
     ]
    },
@@ -114,7 +114,7 @@
     "secenekler": [
      {
       "yazi": "Sağ üstte",
-      "neden": "Sağ üst bölge ametallerindir: oksijen, kükürt gibi. Çoğu elektriği iletmez."
+      "neden": "Sağ üst bölge, oksijen ve kükürt gibi ametallere aittir. Ametallerin çoğu elektriği iletmez."
      },
      {
       "yazi": "Solda ve ortada",
@@ -123,7 +123,7 @@
      },
      {
       "yazi": "En sağ sütunda",
-      "neden": "En sağ sütun soy gazlardır; neredeyse hiç tepkimeye girmezler."
+      "neden": "En sağdaki sütun soy gazlardır. Soy gazlar neredeyse hiç tepkimeye girmez."
      }
     ]
    },
@@ -131,7 +131,7 @@
   },
   {
    "baslik": "Atom yarıçapı",
-   "metin": "Daireler atomların büyüklüğünü gösteriyor. İlk 20 element içinde en büyük atomu bul.",
+   "metin": "Daireler atomların büyüklüğünü gösteriyor. İlk 20 element arasında en büyük atomu bul.",
    "sahne": {
     "tur": "kim3-tablo",
     "mod": "yaricap"
@@ -154,7 +154,7 @@
      "z": 19
     },
     "ipucu": "En çok katmanı olan periyoda in, sonra o periyodun en soluna git.",
-    "tamam": "Potasyum (K) en büyüğü: 4 katmanı var ve periyodunun en solunda. En büyük atomlar sol altta, en küçükler sağ üsttedir."
+    "tamam": "En büyük atom potasyumdur (K). 4 katmanı vardır ve periyodunun en solundadır. En büyük atomlar sol altta, en küçük atomlar ise sağ üstte bulunur."
    },
    "kart": 6
   },
@@ -171,16 +171,16 @@
     "secenekler": [
      {
       "yazi": "Soy gazlar (8A)",
-      "neden": "Soy gazlar tam tersine her periyodun zirvesinde: dolu dış katmanlarından elektron koparmak çok zordur."
+      "neden": "Soy gazlar tam tersine her periyodun en yüksek değerine sahiptir. Dolu dış katmanlarından elektron koparmak çok zordur."
      },
      {
       "yazi": "Halojenler (7A)",
-      "neden": "Halojenlerin değeri yüksektir; elektron vermek yerine almaya yatkındırlar."
+      "neden": "Halojenlerin iyonlaşma enerjisi yüksektir. Elektron vermek yerine almaya yatkındırlar."
      },
      {
       "yazi": "Alkali metaller (1A)",
       "dogru": true,
-      "neden": "Li, Na ve K her periyodun en düşük değerleridir: tek değerlik elektronları kolayca kopar. Periyotta sağa değer genellikle artar, grupta aşağı azalır."
+      "neden": "Li, Na ve K her periyodun en düşük değerlerine sahiptir, çünkü tek değerlik elektronları kolayca kopar. Periyotta sağa doğru değer genellikle artar, grupta aşağı doğru ise azalır."
      }
     ]
    },
@@ -188,11 +188,11 @@
   }
  ],
  "kapanis": [
-  "Modern tablo <b>atom numarasına</b> göre dizilir: 7 periyot, 18 grup.",
-  "<b>Periyot</b> numarası katman sayısını, ana <b>grup</b> numarası değerlik elektron sayısını verir; aynı gruptakiler benzer davranır.",
+  "Modern tablo <b>atom numarasına</b> göre dizilir ve 7 periyot ile 18 gruptan oluşur.",
+  "<b>Periyot</b> numarası katman sayısını, ana <b>grup</b> numarası ise değerlik elektron sayısını verir. Aynı gruptaki elementler benzer davranır.",
   "Solda ve ortada <b>metaller</b>, sağ üstte <b>ametaller</b>, sınırda yarı metaller, en sağda <b>soy gazlar</b> bulunur.",
   "<b>Atom yarıçapı</b> grupta aşağı artar, periyotta sağa azalır.",
-  "<b>İyonlaşma enerjisi</b> ve elektronegatiflik genellikle sağa ve yukarı doğru artar; en elektronegatif element flordur."
+  "<b>İyonlaşma enerjisi</b> ve elektronegatiflik genellikle sağa ve yukarı doğru artar. En elektronegatif element flordur."
  ],
  "soruOnce": true
 }

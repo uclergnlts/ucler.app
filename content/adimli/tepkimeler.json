@@ -3,11 +3,11 @@
  "ders": "kimya",
  "konu": "tepkimeler",
  "baslik": "Kimyasal tepkimeler ve denklemler",
- "ozet": "Önce dene, sonra adını öğren: atomları düzenle, denklemi denkleştir, eksik yanmayı gör.",
+ "ozet": "Önce dene, sonra adını öğren. Atomları düzenle, denklemi denkleştir ve eksik yanmayı gör.",
  "adimlar": [
   {
    "baslik": "Tepkime nedir?",
-   "metin": "Hidrojen ile oksijenden su oluşacak. Tahmin et, sonra atomları izle.",
+   "metin": "Hidrojen ile oksijenden su oluşacak. Önce tahmin et, sonra atomları izle.",
    "sahne": {
     "tur": "kim5-bag",
     "sure": 5
@@ -22,12 +22,12 @@
      },
      {
       "yazi": "Yeniden düzenlenir",
-      "neden": "Bağlar kopar, atomlar yeniden düzenlenip yeni bağlar kurar. Atomlar aynı kalır; değişen, kime bağlı oldukları. Bu yüzden atom sayısı ve toplam kütle korunur.",
+      "neden": "Bağlar kopar, atomlar yeniden düzenlenir ve yeni bağlar kurar. Atomlar aynı kalır, değişen yalnızca hangi atomlara bağlı oldukları. Bu yüzden atom sayısı ve toplam kütle korunur.",
       "dogru": true
      },
      {
       "yazi": "Başka atomlara dönüşür",
-      "neden": "Kimyasal tepkimede çekirdekler değişmez: hidrojen hidrojen, oksijen oksijen olarak kalır."
+      "neden": "Kimyasal tepkimede çekirdekler değişmez. Hidrojen hidrojen, oksijen de oksijen olarak kalır."
      }
     ]
    },
@@ -51,15 +51,15 @@
     "secenekler": [
      {
       "yazi": "H₂O'yu H₂O₂ yapmak",
-      "neden": "İndis maddenin kimliğidir. H₂O₂ su değil, hidrojen peroksittir; başka bir madde yazmış olursun."
+      "neden": "İndis maddenin kimliğini belirler. H₂O₂ su değil, hidrojen peroksittir. Yani başka bir madde yazmış olursun."
      },
      {
       "yazi": "O₂'yi O yapmak",
-      "neden": "Oksijen gazı O₂ moleküllerinden oluşur; formülünü değiştiremezsin."
+      "neden": "Oksijen gazı O₂ moleküllerinden oluşur ve formülünü değiştiremezsin."
      },
      {
       "yazi": "H₂O'nun önüne 2 yazmak",
-      "neden": "Katsayı molekül sayısıdır: 2H₂O iki su molekülü demek. Yalnızca katsayılar değişir, indisler değişmez.",
+      "neden": "Katsayı molekül sayısını gösterir, 2H₂O iki su molekülü demektir. Yalnızca katsayılar değişir, indisler değişmez.",
       "dogru": true
      }
     ]
@@ -68,7 +68,7 @@
   },
   {
    "baslik": "Denkleştir",
-   "metin": "Şimdi katsayıları sen ayarla. <b>H₂ + O₂ → H₂O</b> denkleminde her atom iki yanda eşit olsun.",
+   "metin": "Şimdi katsayıları sen ayarla. <b>H₂ + O₂ → H₂O</b> denkleminde her atom iki yanda eşit sayıda olsun.",
    "sahne": {
     "tur": "kim5-denklestir",
     "denklem": "su"
@@ -108,13 +108,13 @@
      "k1": 1,
      "k2": 2
     },
-    "tamam": "2H₂ + O₂ → 2H₂O: iki yanda da 4 H ve 2 O. Katsayılar en küçük tam sayılar olmalı; 4H₂ + 2O₂ → 4H₂O da denktir ama sadeleşir."
+    "tamam": "Denklem 2H₂ + O₂ → 2H₂O olur ve iki yanda da 4 H ile 2 O vardır. Katsayılar en küçük tam sayılar olmalıdır. 4H₂ + 2O₂ → 4H₂O da denktir, ama sadeleşir."
    },
    "kart": 5
   },
   {
    "baslik": "Metanın yanması",
-   "metin": "Doğal gaz (metan) yanınca CO₂ ve su oluşur. Önce C'yi, sonra H'yi eşitle; tek element olan O₂'yi en sona bırak.",
+   "metin": "Doğal gaz (metan) yanınca CO₂ ve su oluşur. Önce C'yi, sonra H'yi eşitle. Tek element olan O₂'yi en sona bırak.",
    "sahne": {
     "tur": "kim5-denklestir",
     "denklem": "metan"
@@ -163,7 +163,7 @@
      "k2": 1,
      "k3": 2
     },
-    "tamam": "CH₄ + 2O₂ → CO₂ + 2H₂O. İki yanda 1 C, 4 H ve 4 O var. Tepkimede atom türü ve sayısı, kütle ve yük korunur; molekül sayısı korunmak zorunda değildir."
+    "tamam": "Denklem CH₄ + 2O₂ → CO₂ + 2H₂O olur. İki yanda da 1 C, 4 H ve 4 O vardır. Tepkimede atom türü ve sayısı, kütle ve yük korunur. Molekül sayısının korunması ise gerekmez."
    },
    "kart": 5
   },
@@ -181,15 +181,15 @@
     "secenekler": [
      {
       "yazi": "Yalnızca CO₂ ve su",
-      "neden": "Bu tam yanmadır; bunun için yeterli oksijen gerekir."
+      "neden": "Bu tam yanmadır ve bunun için yeterli oksijen gerekir."
      },
      {
       "yazi": "Yalnızca su buharı",
-      "neden": "Metandaki karbon da bir yere gitmeli: CO₂, CO ya da is olarak."
+      "neden": "Metandaki karbon da bir yere gitmelidir. CO₂, CO ya da is olarak açığa çıkar."
      },
      {
       "yazi": "Karbon monoksit ve is",
-      "neden": "Eksik yanmada CO ve is (karbon) oluşur. CO renksiz ve kokusuzdur, hemoglobine oksijenden çok daha sıkı bağlanır; dedektör ve havalandırma hayat kurtarır.",
+      "neden": "Eksik yanmada CO ve is (karbon) oluşur. CO renksiz ve kokusuzdur ve hemoglobine oksijenden çok daha sıkı bağlanır. Dedektör ve havalandırma bu yüzden hayat kurtarır.",
       "dogru": true
      }
     ]
@@ -198,7 +198,7 @@
   },
   {
    "baslik": "Tepkime türleri",
-   "metin": "Kireç taşı ısıtılınca sönmemiş kireç ve karbon dioksit oluşur. Bir tepkimenin türünü bulurken giren ve çıkan madde sayısına bak.",
+   "metin": "Kireç taşı ısıtılınca sönmemiş kireç ve karbon dioksit oluşur. Bir tepkimenin türünü bulurken giren ve çıkan maddelerin sayısına bak.",
    "sahne": {
     "tur": "kim5-analiz"
    },
@@ -212,7 +212,7 @@
      },
      {
       "yazi": "Analiz (ayrışma)",
-      "neden": "Bir bileşik daha basit maddelere ayrılıyor: bir → çok. Analiz çoğu zaman ısı ya da elektrik ister; burada ısı.",
+      "neden": "Burada bir bileşik daha basit maddelere ayrılıyor, yani tek maddeden birden çok ürün oluşuyor. Analiz çoğu zaman ısı ya da elektrik ister, burada ısı gerekir.",
       "dogru": true
      },
      {
@@ -236,7 +236,7 @@
     "secenekler": [
      {
       "yazi": "Beyaz bir katı dibe çöker",
-      "neden": "Ag⁺ ile Cl⁻ birleşip suda çözünmeyen AgCl'yi oluşturur: beyaz çökelek. Na⁺ ve NO₃⁻ çözeltide değişmeden kalır.",
+      "neden": "Ag⁺ ile Cl⁻ birleşerek suda çözünmeyen AgCl'yi, yani beyaz çökeleği oluşturur. Na⁺ ve NO₃⁻ ise çözeltide değişmeden kalır.",
       "dogru": true
      },
      {
@@ -245,7 +245,7 @@
      },
      {
       "yazi": "Gaz kabarcıkları çıkar",
-      "neden": "Burada gaz oluşturacak bir iyon çifti yok; oluşan ürün bir katı."
+      "neden": "Burada gaz oluşturacak bir iyon çifti yoktur. Oluşan ürün bir katıdır."
      }
     ]
    },
@@ -254,10 +254,10 @@
  ],
  "kapanis": [
   "Tepkimede bağlar kopar, atomlar yeniden düzenlenir ve yeni maddeler oluşur.",
-  "Denkleştirmede yalnızca katsayılar değişir, indisler değişmez; katsayılar en küçük tam sayılar olmalı.",
-  "Atom türü ve sayısı, kütle ve yük korunur; molekül sayısı ve gaz hacmi değişebilir.",
-  "Yanma oksijenle olur ve ısı verir. Oksijen azsa eksik yanma olur; zehirli CO ve is oluşur.",
-  "Türler: yanma, sentez (çok → bir), analiz (bir → çok), çökelme, asit-baz ve redoks."
+  "Denkleştirmede yalnızca katsayılar değişir, indisler değişmez. Katsayılar en küçük tam sayılar olmalıdır.",
+  "Atom türü ve sayısı, kütle ve yük korunur. Molekül sayısı ve gaz hacmi ise değişebilir.",
+  "Yanma oksijenle gerçekleşir ve ısı verir. Oksijen azsa eksik yanma olur ve zehirli CO ile is oluşur.",
+  "Tepkime türleri yanma, sentez, analiz, çökelme, asit-baz ve redokstur. Sentezde maddeler birleşir, analizde ise bir madde ayrışır."
  ],
  "soruOnce": true
 }
