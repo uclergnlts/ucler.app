@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "elektrostatik",
  "baslik": "Elektrostatik",
- "ozet": "Önce dene, sonra adını öğren: camı sürt, küreleri dokundur, topraklayarak yükle, Coulomb kuvvetini ayarla.",
+ "ozet": "Önce dene, sonra adını öğren. Camı sürt, küreleri dokundur, topraklayarak yükle ve Coulomb kuvvetini ayarla.",
  "adimlar": [
   {
    "baslik": "Sürtünme ile elektriklenme",
-   "metin": "Yük yoktan var olmaz, yalnızca <b>elektron</b> bir cisimden ötekine geçer. Cam çubuğu ipek kumaşla sürt.",
+   "metin": "Yük yoktan var olmaz. Yalnızca <b>elektronlar</b> bir cisimden ötekine geçer. Cam çubuğu ipek kumaşla sürt.",
    "sahne": {
     "tur": "fiz8-surtunme",
     "sure": 4
@@ -27,7 +27,7 @@
      },
      {
       "yazi": "Nötr kalır",
-      "neden": "İki elektron ipeğe geçti; cam artık nötr değil."
+      "neden": "İki elektron ipeğe geçti. Cam artık nötr değildir."
      }
     ]
    },
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Dokunma ile paylaşım",
-   "metin": "Dokunan küreler yükü yarıçaplarıyla orantılı paylaşır. A küresi 12 μC yüklü, B nötr. B'nin yarıçapını seç: dokunduktan sonra B'ye <b>8 μC</b> düşsün.",
+   "metin": "Birbirine dokunan küreler yükü yarıçaplarıyla orantılı olarak paylaşır. A küresi 12 μC yüklü, B ise nötr. B'nin yarıçapını seç ve dokunduktan sonra B'ye <b>8 μC</b> düşmesini sağla.",
    "sahne": {
     "tur": "fiz8-dokunma",
     "sure": 4
@@ -58,7 +58,7 @@
     "hedef": {
      "r": 2
     },
-    "tamam": "Yarıçaplar 1 : 2 olunca 12 μC de 4 : 8 bölünür. Toplam yük yine 12 μC; dokunmada yük korunur ve iki küre <b>aynı işaretli</b> olur.",
+    "tamam": "Yarıçaplar 1 : 2 olunca 12 μC de 4 : 8 olarak bölünür. Toplam yük yine 12 μC'dur. Dokunmada yük korunur ve iki küre <b>aynı işaretle</b> yüklenir.",
     "ipucu": "B, toplamın 2/3'ünü almalı."
    },
    "kart": 4
@@ -84,7 +84,7 @@
      },
      {
       "yazi": "(+) olur",
-      "neden": "Elektronlar itilir ve uzak yüze geçer. Yakın yüz <b>(+)</b>, uzak yüz <b>(−)</b> olur. Küre toplamda hâlâ nötrdür; buna <b>kutuplanma</b> denir.",
+      "neden": "Elektronlar itilir ve uzak yüze geçer. Yakın yüz <b>(+)</b>, uzak yüz <b>(−)</b> olur. Küre toplamda hâlâ nötrdür. Buna <b>kutuplanma</b> denir.",
       "dogru": true
      }
     ]
@@ -93,7 +93,7 @@
   },
   {
    "baslik": "Topraklama ile yükleme",
-   "metin": "Şimdi sıra şöyle: çubuğu yaklaştır, küreyi toprağa bağla, bağı kes, çubuğu uzaklaştır. Sırayı izle.",
+   "metin": "Şimdi sıra şöyle: çubuğu yaklaştır, küreyi toprağa bağla, bağı kes ve çubuğu uzaklaştır. Bu sırayı izle.",
    "sahne": {
     "tur": "fiz8-etki",
     "sure": 6,
@@ -114,7 +114,7 @@
      },
      {
       "yazi": "Nötr",
-      "neden": "Dokunmadan da yük geçer: elektronlar toprağa aktı."
+      "neden": "Dokunmadan da yük geçebilir. Burada elektronlar toprağa aktı."
      }
     ]
    },
@@ -150,7 +150,7 @@
      },
      {
       "yazi": "Açık kalır",
-      "neden": "Elektroskoba yük geçmedi; etki bitince yapraklar eski hâline döner."
+      "neden": "Elektroskoba yük geçmedi. Etki bitince yapraklar eski hâline döner."
      },
      {
       "yazi": "Kapanır",
@@ -163,7 +163,7 @@
   },
   {
    "baslik": "Coulomb kuvveti",
-   "metin": "İki yük arasındaki kuvvet F = k·q₁·q₂ / r². q₁ = +4 μC. q₂'yi ve uzaklığı ayarla: kuvvet <b>0,1 N çekme</b> olsun (k ≈ 9·10⁹ N·m²/C²).",
+   "metin": "İki yük arasındaki kuvvet F = k·q₁·q₂ / r² ile bulunur. q₁ = +4 μC. q₂'yi ve uzaklığı ayarla ve kuvveti <b>0,1 N çekme</b> yap (k ≈ 9·10⁹ N·m²/C²).",
    "sahne": {
     "tur": "fiz8-coulomb"
    },
@@ -196,8 +196,8 @@
      "q": -1,
      "r": 2
     },
-    "tamam": "q₂ = −1 μC, r = 60 cm: F = 9·10⁹ · 4·10⁻⁶ · 1·10⁻⁶ / 0,36 = 0,1 N. Zıt işaretli yükler <b>çeker</b>, aynı işaretliler iter.",
-    "ipucu": "Çekme için q₂ (−) olmalı. 30 cm'de −1 μC 0,4 N verir; uzaklığı 2 katına çıkar."
+    "tamam": "q₂ = −1 μC ve r = 60 cm için F = 9·10⁹ · 4·10⁻⁶ · 1·10⁻⁶ / 0,36 = 0,1 N olur. Zıt işaretli yükler <b>çeker</b>, aynı işaretliler ise iter.",
+    "ipucu": "Çekme için q₂ (−) olmalı. 30 cm'de −1 μC 0,4 N verir. Uzaklığı 2 katına çıkar."
    },
    "kart": 8
   },
@@ -230,7 +230,7 @@
      },
      {
       "yazi": "(−)'den çıkar, (+)'ya girer",
-      "neden": "Yön, (+) deneme yükünün itileceği yöndür; (+) yükten uzağa bakar."
+      "neden": "Alanın yönü, (+) deneme yükünün itileceği yöndür. Bu yön (+) yükten uzağa bakar."
      },
      {
       "yazi": "Yalnız iki yük arasında olur",
@@ -242,10 +242,10 @@
   }
  ],
  "kapanis": [
-  "Yük kuantlıdır (e = 1,6·10⁻¹⁹ C) ve korunur; elektriklenmede yalnızca elektron geçer.",
+  "Yük kuantlıdır (e = 1,6·10⁻¹⁹ C) ve korunur. Elektriklenmede yalnızca elektronlar geçer.",
   "Sürtünmede cam (+), ipek (−) olur. Dokunmada yük yarıçapla orantılı ve aynı işaretle paylaşılır.",
-  "Etki ile topraklamada cisim çubuğa zıt işaretli yükle kalır; bağ, çubuk uzaklaşmadan kesilmeli.",
-  "Coulomb: F = k·q₁·q₂ / r². Zıt yükler çeker, aynı yükler iter.",
+  "Etki ve topraklamayla yüklenen cisim, çubuğa zıt işaretle yüklenir. Bunun için bağ, çubuk uzaklaşmadan kesilmelidir.",
+  "Coulomb yasasına göre F = k·q₁·q₂ / r² olur. Zıt yükler çeker, aynı yükler iter.",
   "Alan çizgileri (+)'dan çıkar, (−)'ye girer ve birbirini kesmez."
  ],
  "soruOnce": true

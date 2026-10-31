@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "kutle-cekimi",
  "baslik": "Kütle çekimi",
- "ozet": "Önce dene, sonra adını öğren: çekimi kütle ve uzaklıkla ayarla, topu yörüngeye oturt, asansörün halatını kes.",
+ "ozet": "Önce dene, sonra adını öğren. Çekimi kütle ve uzaklıkla ayarla, topu yörüngeye oturt ve asansörün halatını kes.",
  "adimlar": [
   {
    "baslik": "Kütle ve uzaklık",
-   "metin": "Uzaklığı iki katına çıkar, sonra B'nin kütlesini ayarlayıp kuvveti yine <b>F₀</b> yap.",
+   "metin": "Uzaklığı iki katına çıkar. Sonra B'nin kütlesini ayarla ve kuvveti yine <b>F₀</b> yap.",
    "sahne": {
     "tur": "fiz8-cekim"
    },
@@ -40,7 +40,7 @@
      "m": 4
     },
     "tamam": "Uzaklık 2 katına çıkınca kuvvet 2² = 4'te birine iner. Kütleyi 4 katına çıkarınca kuvvet yeniden F₀ olur. Buna <b>ters kare yasası</b> denir.",
-    "ipucu": "Önce uzaklığı 2 yap; kuvvetin kaçta birine indiğine bak."
+    "ipucu": "Önce uzaklığı 2 yap ve kuvvetin kaçta birine indiğine bak."
    },
    "kart": 2
   },
@@ -61,7 +61,7 @@
      },
      {
       "yazi": "1 N",
-      "neden": "Etki ve tepki: kuvvetler <b>eşit büyüklükte</b> ve zıt yönlüdür.",
+      "neden": "Etki ve tepki kuvvetleri <b>eşit büyüklükte</b> ve zıt yönlüdür.",
       "dogru": true
      },
      {
@@ -97,14 +97,14 @@
     "hedef": {
      "h": 2
     },
-    "tamam": "12 800 km yukarıda r = 3R: g, 3² = 9'da birine iner (≈ 1,09 m/s²); ağırlık 784 / 9 ≈ 87 N. Kütle ise hep 80 kg.",
+    "tamam": "12 800 km yukarıda r = 3R olur ve g, 3² = 9'da birine iner (yaklaşık 1,09 m/s²). Ağırlık 784 / 9 ≈ 87 N olur. Kütle ise hep 80 kg'dır.",
     "ipucu": "Ağırlığın 9'da birine inmesi için merkeze uzaklık 3 katına çıkmalı."
    },
    "kart": 5
   },
   {
    "baslik": "Kepler'in alanlar yasası",
-   "metin": "Gezegeni elips yörüngesinde bir tur izle.",
+   "metin": "Gezegeni elips biçimli yörüngesinde bir tur boyunca izle.",
    "sahne": {
     "tur": "fiz8-kepler",
     "sure": 6
@@ -123,7 +123,7 @@
      },
      {
       "yazi": "Günberide",
-      "neden": "Yakında yarıçap kısadır: eşit sürede eşit alanı taramak için gezegen daha hızlı gitmeli.",
+      "neden": "Güneş'e yakınken yarıçap kısadır. Eşit sürede eşit alanı taramak için gezegen daha hızlı gitmelidir.",
       "dogru": true
      }
     ]
@@ -132,7 +132,7 @@
   },
   {
    "baslik": "Newton'un topu",
-   "metin": "Dağın tepesinden yatay atılan top hem düşer hem ilerler. Yeterince hızlı atarsan yüzey de topun altından eğilip gider. Topu <b>yörüngeye</b> oturt.",
+   "metin": "Dağın tepesinden yatay olarak atılan top hem düşer hem ilerler. Yeterince hızlı atarsan yüzey de topun altından eğilip gider. Topu <b>yörüngeye</b> oturt.",
    "sahne": {
     "tur": "fiz8-newton",
     "sure": 5
@@ -159,7 +159,7 @@
       111
      ]
     },
-    "tamam": "Yaklaşık <b>7,9 km/s</b> ile top Dünya'nın çevresinde döner. Uydu da hep düşer, ama Dünya'yı hep ıskalar. Çekim kuvveti merkezcil kuvvet olur: v = √(GM/r).",
+    "tamam": "Yaklaşık <b>7,9 km/s</b> hızla atılan top Dünya'nın çevresinde döner. Uydu da hep düşer, ama Dünya'yı hep ıskalar. Çekim kuvveti merkezcil kuvvet görevini görür ve v = √(GM/r) olur.",
     "ipucu": "Hızı 7,9 km/s'nin biraz üstüne çıkar ve oynat."
    },
    "kart": 9
@@ -193,14 +193,14 @@
       130
      ]
     },
-    "tamam": "Yeryüzünden kurtulma hızı yaklaşık <b>11,2 km/s</b>'dir: yörünge hızının √2 katı (7,9 × 1,41). Bu hızla atılan cisim bir daha geri dönmez.",
+    "tamam": "Yeryüzünden kurtulma hızı yaklaşık <b>11,2 km/s</b>'dir ve yörünge hızının √2 katıdır (7,9 × 1,41). Bu hızla atılan bir cisim bir daha geri dönmez.",
     "ipucu": "Kurtulma hızı yörünge hızının yaklaşık 1,41 katıdır."
    },
    "kart": 12
   },
   {
    "baslik": "Ağırlıksızlık",
-   "metin": "60 kg'lık kişi asansördeki tartının üstünde; tartı 588 N gösteriyor. Halatı kes ve oynat.",
+   "metin": "60 kg'lık bir kişi asansördeki tartının üstünde duruyor ve tartı 588 N gösteriyor. Halatı kes ve oynat.",
    "sahne": {
     "tur": "fiz8-asansor",
     "sure": 3
@@ -222,17 +222,17 @@
     "hedef": {
      "kes": 1
     },
-    "tamam": "Kişi ve tartı birlikte serbest düşer, tartı 0 gösterir. Çekim hâlâ var: düşmelerinin nedeni zaten o."
+    "tamam": "Kişi ve tartı birlikte serbest düşer ve tartı 0 gösterir. Çekim hâlâ vardır, çünkü düşmelerinin nedeni zaten çekimdir."
    },
    "kart": 11
   }
  ],
  "kapanis": [
-  "Her iki kütle birbirini çeker: F = G·m₁·m₂ / r². Uzaklık 2 katına çıkınca kuvvet 4'te birine iner.",
-  "Çekim kuvvetleri eşit ve zıttır; elma da Dünya'yı 1 N ile çeker.",
-  "g = GM/r²: yükseldikçe azalır. r = 2R'de 9,8'in 4'te biri olur.",
-  "Gezegenler eşit sürede eşit alan tarar; Güneş'e yakınken hızlanır.",
-  "Yörünge hızı ≈ 7,9 km/s, kurtulma hızı ≈ 11,2 km/s. Uydular ve astronotlar sürekli düşer."
+  "Her iki kütle birbirini çeker ve F = G·m₁·m₂ / r² olur. Uzaklık 2 katına çıkınca kuvvet dörtte birine iner.",
+  "Çekim kuvvetleri eşit ve zıt yönlüdür. Elma da Dünya'yı 1 N ile çeker.",
+  "g = GM/r² olduğu için yükseldikçe azalır. r = 2R'de g, 9,8'in dörtte biri olur.",
+  "Gezegenler eşit sürede eşit alan tarar ve Güneş'e yakınken hızlanır.",
+  "Yörünge hızı yaklaşık 7,9 km/s, kurtulma hızı ise yaklaşık 11,2 km/s'dir. Uydular ve astronotlar sürekli düşer."
  ],
  "soruOnce": true
 }

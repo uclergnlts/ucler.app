@@ -4842,24 +4842,24 @@
     "cards": [
       {
         "h": "Evrensel çekim yasası",
-        "p": "Kütlesi olan her cisim diğerini çeker: <b>F = G·m<sub>1</sub>·m<sub>2</sub>/r<sup>2</sup></b>. r, iki cismin <b>merkezleri</b> arasındaki uzaklıktır. G çok küçüktür.",
+        "p": "Kütlesi olan her cisim diğer cisimleri çeker ve bu kuvvet <b>F = G·m<sub>1</sub>·m<sub>2</sub>/r<sup>2</sup></b> ile bulunur. Buradaki r, iki cismin <b>merkezleri</b> arasındaki uzaklıktır. G ise çok küçük bir sayıdır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kcek-1' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker><marker id='kcek-2' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='var(--muted)'/></marker></defs><text x='160' y='34' font-size='20' fill='var(--ink)' text-anchor='middle' font-weight='700'>F = G · m₁ · m₂ / r²</text><circle cx='70' cy='95' r='24' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><circle cx='250' cy='95' r='15' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><text x='70' y='100' font-size='13' fill='var(--ink)' text-anchor='middle'>m₁</text><text x='250' y='100' font-size='12' fill='var(--ink)' text-anchor='middle'>m₂</text><line x1='97' y1='95' x2='140' y2='95' stroke='var(--c2)' stroke-width='3' marker-end='url(#kcek-1)'/><line x1='232' y1='95' x2='190' y2='95' stroke='var(--c2)' stroke-width='3' marker-end='url(#kcek-1)'/><text x='118' y='84' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>F</text><text x='212' y='84' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>F</text><line x1='70' y1='135' x2='70' y2='150' stroke='var(--muted)' stroke-width='1'/><line x1='250' y1='135' x2='250' y2='150' stroke='var(--muted)' stroke-width='1'/><line x1='73' y1='142' x2='247' y2='142' stroke='var(--muted)' stroke-width='1.2' marker-start='url(#kcek-2)' marker-end='url(#kcek-2)'/><text x='160' y='162' font-size='12' fill='var(--muted)' text-anchor='middle'>r: merkezden merkeze uzaklık</text><text x='160' y='188' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>G ≈ 6,67×10⁻¹¹ N·m²/kg²</text></svg>",
-        "key": "G ≈ 6,67×10⁻¹¹ N·m²/kg². r yüzeyler arası değil, merkezler arası uzaklıktır.",
+        "key": "G yaklaşık 6,67×10⁻¹¹ N·m²/kg²'dir. r, yüzeyler arasındaki değil, merkezler arasındaki uzaklıktır.",
         "once": {
           "soru": "Yanında oturan arkadaşın seni çekiyor mu?",
           "secenekler": [
             {
               "yazi": "Evet, çok az",
-              "neden": "Kütlesi olan her cisim çeker; G çok küçük olduğundan bu kuvvet hissedilmez.",
+              "neden": "Kütlesi olan her cisim çeker. G çok küçük olduğu için bu kuvvet hissedilmez.",
               "dogru": true
             },
             {
               "yazi": "Hayır",
-              "neden": "Çekim yalnız gezegenlere özgü değildir; her kütle çeker."
+              "neden": "Çekim yalnızca gezegenlere özgü değildir. Her kütle çeker."
             },
             {
               "yazi": "Yalnız dokununca",
-              "neden": "Çekim uzaktan etki eder; dokunmak gerekmez."
+              "neden": "Çekim uzaktan etki eder ve dokunmak gerekmez."
             }
           ]
         }
@@ -4868,17 +4868,17 @@
         "h": "Ters kare: uzaklık her şey",
         "p": "Kuvvet kütlelerle doğru, uzaklığın <b>karesiyle ters</b> orantılıdır. Uzaklık 2 katına çıkarsa kuvvet 1/4'üne, 3 katına çıkarsa 1/9'una düşer.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='50' y1='165' x2='300' y2='165' stroke='var(--ink)' stroke-width='1.5'/><line x1='50' y1='165' x2='50' y2='22' stroke='var(--ink)' stroke-width='1.5'/><polyline points='102.2,32.0 105.0,45.0 107.8,56.2 110.5,65.8 113.2,74.3 116.0,81.7 118.8,88.2 121.5,94.0 124.2,99.2 127.0,103.8 129.8,107.9 132.5,111.7 135.2,115.1 138.0,118.1 140.8,120.9 143.5,123.5 146.2,125.8 149.0,128.0 151.8,129.9 154.5,131.8 157.2,133.4 160.0,135.0 162.8,136.4 165.5,137.8 168.2,139.0 171.0,140.2 173.8,141.3 176.5,142.3 179.2,143.3 182.0,144.2 184.8,145.0 187.5,145.8 190.2,146.5 193.0,147.2 195.8,147.9 198.5,148.5 201.2,149.1 204.0,149.7 206.8,150.2 209.5,150.7 212.2,151.2 215.0,151.7 217.8,152.1 220.5,152.5 223.3,152.9 226.0,153.3 228.8,153.6 231.5,154.0 234.3,154.3 237.0,154.6 239.8,154.9 242.5,155.2 245.2,155.5 248.0,155.7 250.8,156.0 253.5,156.2 256.2,156.5 259.0,156.7 261.8,156.9 264.5,157.1 267.2,157.3 270.0,157.5 272.8,157.7 275.5,157.9 278.2,158.0 281.0,158.2 283.8,158.4 286.5,158.5 289.2,158.7 292.0,158.8' fill='none' stroke='var(--acc)' stroke-width='2.5'/><line x1='105' y1='165' x2='105' y2='45.0' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='105' cy='45' r='4' fill='var(--c2)' fill-opacity='1' stroke='var(--c2)' stroke-width='1'/><text x='105' y='181' font-size='12' fill='var(--muted)' text-anchor='middle'>r</text><text x='113' y='36' font-size='13' fill='var(--c2)' font-weight='700'>F</text><line x1='160' y1='165' x2='160' y2='135.0' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='160' cy='135' r='4' fill='var(--c2)' fill-opacity='1' stroke='var(--c2)' stroke-width='1'/><text x='160' y='181' font-size='12' fill='var(--muted)' text-anchor='middle'>2r</text><text x='168' y='126' font-size='13' fill='var(--c2)' font-weight='700'>F/4</text><line x1='215' y1='165' x2='215' y2='151.7' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='215' cy='151.667' r='4' fill='var(--c2)' fill-opacity='1' stroke='var(--c2)' stroke-width='1'/><text x='215' y='181' font-size='12' fill='var(--muted)' text-anchor='middle'>3r</text><text x='223' y='142.667' font-size='13' fill='var(--c2)' font-weight='700'>F/9</text><line x1='270' y1='165' x2='270' y2='157.5' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='270' cy='157.5' r='4' fill='var(--c2)' fill-opacity='1' stroke='var(--c2)' stroke-width='1'/><text x='270' y='181' font-size='12' fill='var(--muted)' text-anchor='middle'>4r</text><text x='278' y='148.5' font-size='13' fill='var(--c2)' font-weight='700'>F/16</text><text x='40' y='30' font-size='13' fill='var(--ink)' text-anchor='end' font-weight='700'>F</text><text x='305' y='181' font-size='13' fill='var(--ink)' text-anchor='end' font-weight='700'>r</text><text x='300' y='40' font-size='12' fill='var(--ink)' text-anchor='end'>uzaklık 2 kat → kuvvet 1/4</text><text x='300' y='58' font-size='12' fill='var(--ink)' text-anchor='end'>uzaklık 3 kat → kuvvet 1/9</text></svg>",
-        "key": "Kütlelerden biri 2 katına çıkarsa kuvvet de 2 katına çıkar. r → r/2 ise F → 4F."
+        "key": "Kütlelerden biri 2 katına çıkarsa kuvvet de 2 katına çıkar. Uzaklık yarıya inerse kuvvet 4 katına çıkar."
       },
       {
         "h": "Çekim karşılıklıdır",
-        "p": "İki cisim birbirini <b>aynı büyüklükte, zıt yönde</b> çeker. İvmeler a = F/m ile bulunur: elma 9,8 m/s² ile düşer, Dünya'nın ivmesi ≈ 10<sup>−25</sup> m/s².",
+        "p": "İki cisim birbirini <b>aynı büyüklükte ve zıt yönde</b> çeker. İvmeler a = F/m ile bulunur. Elma 9,8 m/s² ivmeyle düşer, Dünya'nın ivmesi ise yaklaşık 10<sup>−25</sup> m/s²'dir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kcek-3' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker><marker id='kcek-4' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker></defs><text x='160' y='22' font-size='12' fill='var(--muted)' text-anchor='middle'>eşit büyüklük, zıt yön, farklı cisimler</text><circle cx='85' cy='100' r='55' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><text x='85' y='140' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Dünya</text><circle cx='260' cy='100' r='10' fill='var(--c2)' fill-opacity='0.4' stroke='var(--c2)' stroke-width='1.5'/><text x='260' y='128' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>elma</text><line x1='248' y1='100' x2='200' y2='100' stroke='var(--c2)' stroke-width='3' marker-end='url(#kcek-3)'/><text x='224' y='90' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>≈ 1 N</text><line x1='85' y1='100' x2='133' y2='100' stroke='var(--c1)' stroke-width='3' marker-end='url(#kcek-4)'/><text x='103' y='90' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>≈ 1 N</text><text x='85' y='182' font-size='12' fill='var(--ink)' text-anchor='middle'>a ≈ 2×10⁻²⁵ m/s²</text><text x='250' y='182' font-size='12' fill='var(--ink)' text-anchor='middle'>a ≈ 9,8 m/s²</text></svg>",
-        "key": "Newton'un 3. yasası. Kuvvetler eşittir, ivmeler eşit değildir: kütlesi küçük olan hızlanır."
+        "key": "Bu, Newton'un 3. yasasıdır. Kuvvetler eşittir, ama ivmeler eşit değildir. Kütlesi küçük olan cisim daha çok hızlanır."
       },
       {
         "h": "Çekim alanı ve g",
-        "p": "Kütle çevresinde <b>çekim alanı</b> oluşturur: g = F/m. Buradan <b>g = G·M/r<sup>2</sup></b>; düşen cismin kütlesine bağlı değildir, yüzeyde ≈ 9,8 m/s².",
+        "p": "Her kütle çevresinde bir <b>çekim alanı</b> oluşturur ve g = F/m olur. Buradan <b>g = G·M/r<sup>2</sup></b> bulunur. g, düşen cismin kütlesine bağlı değildir ve yüzeyde yaklaşık 9,8 m/s²'dir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kcek-5' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker></defs><circle cx='85' cy='100' r='32' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><text x='85' y='105' font-size='14' fill='var(--c1)' text-anchor='middle' font-weight='700'>M</text><line x1='157.063' y1='129.849' x2='121.955' y2='115.307' stroke='var(--c3)' stroke-width='2' marker-end='url(#kcek-5)'/><line x1='114.849' y1='172.063' x2='100.307' y2='136.955' stroke='var(--c3)' stroke-width='2' marker-end='url(#kcek-5)'/><line x1='55.1507' y1='172.063' x2='69.6927' y2='136.955' stroke='var(--c3)' stroke-width='2' marker-end='url(#kcek-5)'/><line x1='12.9374' y1='129.849' x2='48.0448' y2='115.307' stroke='var(--c3)' stroke-width='2' marker-end='url(#kcek-5)'/><line x1='12.9374' y1='70.1507' x2='48.0448' y2='84.6927' stroke='var(--c3)' stroke-width='2' marker-end='url(#kcek-5)'/><line x1='55.1507' y1='27.9374' x2='69.6927' y2='63.0448' stroke='var(--c3)' stroke-width='2' marker-end='url(#kcek-5)'/><line x1='114.849' y1='27.9374' x2='100.307' y2='63.0448' stroke='var(--c3)' stroke-width='2' marker-end='url(#kcek-5)'/><line x1='157.063' y1='70.1507' x2='121.955' y2='84.6927' stroke='var(--c3)' stroke-width='2' marker-end='url(#kcek-5)'/><text x='185' y='55' font-size='18' fill='var(--ink)' font-weight='700'>g = G·M / r²</text><text x='185' y='85' font-size='13' fill='var(--ink)'>g = F / m</text><text x='185' y='105' font-size='12' fill='var(--muted)'>birim: N/kg = m/s²</text><text x='185' y='135' font-size='13' fill='var(--c3)' font-weight='700'>yüzeyde ≈ 9,8 m/s²</text><text x='185' y='160' font-size='12' fill='var(--muted)'>M: gezegenin kütlesi</text><text x='185' y='178' font-size='12' fill='var(--muted)'>r: merkezden uzaklık</text></svg>",
         "key": "Çekim alanı, birim kütleye düşen çekim kuvvetidir. g yalnız gezegenin kütlesine (M) ve merkezden uzaklığa (r) bağlıdır.",
         "once": {
@@ -4886,7 +4886,7 @@
           "secenekler": [
             {
               "yazi": "4 katı",
-              "neden": "g = GM/r²: r yarıya inince r² dörtte birine iner, g 4 katına çıkar.",
+              "neden": "g = GM/r² olduğu için r yarıya inince r² dörtte birine iner ve g 4 katına çıkar.",
               "dogru": true
             },
             {
@@ -4895,14 +4895,14 @@
             },
             {
               "yazi": "Değişmez",
-              "neden": "Kütle aynı ama yüzey merkeze yaklaştı; g uzaklığa bağlıdır."
+              "neden": "Kütle aynıdır, ama yüzey merkeze yaklaştı. g uzaklığa bağlıdır."
             }
           ]
         }
       },
       {
         "h": "g her yerde aynı değil",
-        "p": "Merkezden uzaklaştıkça g azalır; Ay'da g ≈ 1,6 m/s². <b>Kütlen</b> (kg) her yerde aynıdır; <b>ağırlığın</b> (N) m·g olduğundan yere göre değişir.",
+        "p": "Merkezden uzaklaştıkça g azalır ve Ay'da g yaklaşık 1,6 m/s²'dir. <b>Kütlen</b> (kg) her yerde aynıdır. <b>Ağırlığın</b> (N) ise m·g'ye eşit olduğu için yere göre değişir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='200' y='18' font-size='12' fill='var(--muted)' text-anchor='middle'>g (m/s²)</text><text x='12' y='47' font-size='12' fill='var(--ink)'>Dünya yüzeyi</text><rect x='125' y='33' width='137.2' height='18' rx='3' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><text x='268.2' y='47' font-size='12' fill='var(--ink)' font-weight='700'>9,8</text><text x='12' y='77' font-size='12' fill='var(--ink)'>400 km (ISS)</text><rect x='125' y='63' width='121.8' height='18' rx='3' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)' stroke-width='1'/><text x='252.8' y='77' font-size='12' fill='var(--ink)' font-weight='700'>≈ 8,7</text><text x='12' y='107' font-size='12' fill='var(--ink)'>h = R (r = 2R)</text><rect x='125' y='93' width='34.3' height='18' rx='3' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1'/><text x='165.3' y='107' font-size='12' fill='var(--ink)' font-weight='700'>≈ 2,45</text><text x='12' y='137' font-size='12' fill='var(--ink)'>Ay yüzeyi</text><rect x='125' y='123' width='22.68' height='18' rx='3' fill='var(--muted)' fill-opacity='0.35' stroke='var(--muted)' stroke-width='1'/><text x='153.68' y='137' font-size='12' fill='var(--ink)' font-weight='700'>≈ 1,6</text><line x1='10' y1='160' x2='310' y2='160' stroke='var(--line)' stroke-width='1'/><text x='160' y='180' font-size='12' fill='var(--ink)' text-anchor='middle'>m = 50 kg: ağırlık Dünya'da 490 N, Ay'da ≈ 80 N</text></svg>",
         "key": "Yerden R kadar yükselince r = 2R olur, g dörtte birine (≈ 2,45 m/s²) iner.",
         "etk": {
@@ -4947,7 +4947,7 @@
       },
       {
         "h": "Kepler 1: yörünge elipstir",
-        "p": "Gezegenler Güneş'in çevresinde <b>elips</b> yörüngelerde dolanır; Güneş elipsin bir <b>odağındadır</b>. En yakın nokta <b>günberi</b>, en uzak nokta <b>günöte</b>.",
+        "p": "Gezegenler Güneş'in çevresinde <b>elips</b> biçimli yörüngelerde dolanır ve Güneş elipsin bir <b>odağındadır</b>. Güneş'e en yakın noktaya <b>günberi</b>, en uzak noktaya <b>günöte</b> denir.",
         "svg": "<svg viewBox='0 0 320 200'><ellipse cx='160' cy='105' rx='110' ry='75' fill='none' stroke='var(--ink)' stroke-width='1.5'/><circle cx='79.5326' cy='105' r='9' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1.5'/><text x='94.5326' y='109' font-size='12' fill='var(--c4)' font-weight='700'>Güneş (odak)</text><line x1='236.467' y1='101' x2='244.467' y2='109' stroke='var(--muted)' stroke-width='1.5'/><line x1='236.467' y1='109' x2='244.467' y2='101' stroke='var(--muted)' stroke-width='1.5'/><text x='240.467' y='93' font-size='11' fill='var(--muted)' text-anchor='middle'>boş odak</text><circle cx='215' cy='40.0481' r='6' fill='var(--c1)' fill-opacity='0.9' stroke='var(--c1)' stroke-width='1'/><text x='225' y='28.0481' font-size='12' fill='var(--c1)' font-weight='700'>gezegen</text><text x='46' y='109' font-size='11' fill='var(--ink)' text-anchor='end'>günberi</text><text x='274' y='109' font-size='11' fill='var(--ink)'>günöte</text><text x='12' y='20' font-size='12' fill='var(--ink)' font-weight='700'>1. yasa: yörünge elipstir</text><text x='160' y='193' font-size='11' fill='var(--muted)' text-anchor='middle'>gerçek yörüngeler çembere çok yakındır (çizim abartılı)</text></svg>",
         "key": "Güneş elipsin merkezinde değil, bir odağındadır. Dünya'nın yörüngesi neredeyse çemberdir.",
         "once": {
@@ -4955,29 +4955,29 @@
           "secenekler": [
             {
               "yazi": "Elips",
-              "neden": "Çembere çok yakın bir elipstir; Güneş bir odaktadır.",
+              "neden": "Dünya'nın yörüngesi çembere çok yakın bir elipstir ve Güneş bir odaktadır.",
               "dogru": true
             },
             {
               "yazi": "Tam çember",
-              "neden": "Çembere yakındır ama tam çember değildir; uzaklık yıl boyunca biraz değişir."
+              "neden": "Yörünge çembere yakındır, ama tam çember değildir. Uzaklık yıl boyunca biraz değişir."
             },
             {
               "yazi": "Güneş'e doğru sarmal",
-              "neden": "Yörünge kapalıdır; Dünya Güneş'e düşmez."
+              "neden": "Yörünge kapalıdır ve Dünya Güneş'e düşmez."
             }
           ]
         }
       },
       {
         "h": "Kepler 2: eşit alanlar",
-        "p": "Günberide hızlanma <b>Kepler'in 2. yasasıdır</b>: Güneş–gezegen doğrusu eşit sürelerde eşit alanlar tarar. Mevsimleri uzaklık değil, <b>eksen eğikliği</b> belirler.",
+        "p": "Gezegenin günberide hızlanması <b>Kepler'in 2. yasasıyla</b> açıklanır. Bu yasaya göre Güneş ile gezegeni birleştiren doğru eşit sürelerde eşit alanlar tarar. Mevsimleri ise uzaklık değil, <b>eksen eğikliği</b> belirler.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kcek-6' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker><marker id='kcek-7' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker></defs><polygon points='79.5,105 89.3,47.5 84.5,50.4 80.0,53.5 75.7,56.8 71.8,60.2 68.1,63.8 64.7,67.5 61.7,71.3 59.0,75.3 56.6,79.3 54.6,83.5 53.0,87.7 51.7,92.0 50.7,96.3 50.2,100.6 50.0,105.0 50.2,109.4 50.7,113.7 51.7,118.0 53.0,122.3 54.6,126.5 56.6,130.7 59.0,134.7 61.7,138.7 64.7,142.5 68.1,146.2 71.8,149.8 75.7,153.2 80.0,156.5 84.5,159.6 89.3,162.5' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1'/><polygon points='79.5,105 268.2,118.5 268.4,117.6 268.7,116.7 268.9,115.8 269.0,114.9 269.2,114.0 269.4,113.1 269.5,112.2 269.6,111.3 269.7,110.4 269.8,109.5 269.9,108.6 269.9,107.7 270.0,106.8 270.0,105.9 270.0,105.0 270.0,104.1 270.0,103.2 269.9,102.3 269.9,101.4 269.8,100.5 269.7,99.6 269.6,98.7 269.5,97.8 269.4,96.9 269.2,96.0 269.0,95.1 268.9,94.2 268.7,93.3 268.4,92.4 268.2,91.5' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1'/><ellipse cx='160' cy='105' rx='110' ry='75' fill='none' stroke='var(--ink)' stroke-width='1.5'/><circle cx='79.5326' cy='105' r='8' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1.5'/><text x='10' y='22' font-size='12' fill='var(--c3)' font-weight='700'>günberi: hızlı</text><text x='310' y='22' font-size='12' fill='var(--c1)' text-anchor='end' font-weight='700'>günöte: yavaş</text><text x='63.5326' y='110' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><text x='252' y='110' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><line x1='36' y1='70' x2='36' y2='140' stroke='var(--c3)' stroke-width='3' marker-end='url(#kcek-6)'/><line x1='286' y1='113' x2='286' y2='97' stroke='var(--c1)' stroke-width='3' marker-end='url(#kcek-7)'/><text x='160' y='193' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>eşit sürede taranan alanlar eşit</text></svg>",
-        "key": "Bu, açısal momentumun (L = m·r·v⊥) korunmasıdır. Dünya günberiye ocak başında ulaşır; o sırada kuzey yarım kürede kıştır."
+        "key": "Bu yasa, açısal momentumun (L = m·r·v⊥) korunmasından gelir. Dünya günberiye ocak başında ulaşır ve o sırada kuzey yarım kürede kış yaşanır."
       },
       {
         "h": "Kepler 3: T² ∝ r³",
-        "p": "Dolanım süresinin karesi, ortalama uzaklığın küpüyle orantılıdır: <b>T²/r³ = sabit</b>. Sabit merkezdeki kütleye bağlıdır. Uzaktaki gezegenin yılı daha uzundur.",
+        "p": "Dolanım süresinin karesi, ortalama uzaklığın küpüyle orantılıdır ve <b>T²/r³ = sabit</b> olur. Bu sabit, merkezdeki kütleye bağlıdır. Uzaktaki bir gezegenin yılı daha uzundur.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='32' font-size='18' fill='var(--ink)' text-anchor='middle' font-weight='700'>T² / r³ = sabit</text><rect x='15' y='48' width='290' height='26' rx='4' fill='var(--panel)'/><text x='55' y='66' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>gezegen</text><text x='135' y='66' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>r (AU)</text><text x='205' y='66' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>T (yıl)</text><text x='272' y='66' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>T²/r³</text><text x='55' y='96' font-size='12' fill='var(--ink)' text-anchor='middle'>Dünya</text><text x='135' y='96' font-size='12' fill='var(--ink)' text-anchor='middle'>1</text><text x='205' y='96' font-size='12' fill='var(--ink)' text-anchor='middle'>1</text><text x='272' y='96' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>1</text><text x='55' y='120' font-size='12' fill='var(--ink)' text-anchor='middle'>Mars</text><text x='135' y='120' font-size='12' fill='var(--ink)' text-anchor='middle'>1,52</text><text x='205' y='120' font-size='12' fill='var(--ink)' text-anchor='middle'>1,88</text><text x='272' y='120' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>≈ 1</text><text x='55' y='144' font-size='12' fill='var(--ink)' text-anchor='middle'>Jüpiter</text><text x='135' y='144' font-size='12' fill='var(--ink)' text-anchor='middle'>5,20</text><text x='205' y='144' font-size='12' fill='var(--ink)' text-anchor='middle'>11,9</text><text x='272' y='144' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>≈ 1</text><line x1='15' y1='160' x2='305' y2='160' stroke='var(--line)' stroke-width='1'/><text x='160' y='184' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>r 4 kat → T² 64 kat → T 8 kat</text></svg>",
         "key": "r, elipsin yarı büyük eksenidir. Sabit yalnız aynı merkez cismin çevresinde dolananlar için aynıdır.",
         "etk": {
@@ -4997,7 +4997,7 @@
           "secenekler": [
             {
               "yazi": "8",
-              "neden": "T² ∝ r³: 4³ = 64, √64 = 8.",
+              "neden": "T² ∝ r³ olduğu için 4³ = 64 olur ve √64 = 8 bulunur.",
               "dogru": true
             },
             {
@@ -5006,69 +5006,69 @@
             },
             {
               "yazi": "16",
-              "neden": "16 = 4²; oysa uzaklığın küpü sürenin karesine eşitlenir."
+              "neden": "16, 4²'dir. Oysa uzaklığın küpü, sürenin karesiyle orantılıdır."
             }
           ]
         }
       },
       {
         "h": "Uydu: hep düşen cisim",
-        "p": "Uyduyu yörüngede tutan <b>çekim kuvvetidir</b>: G·M·m/r² = m·v²/r, buradan <b>v = √(G·M/r)</b>. Uydunun kütlesi sadeleşir; yörünge alçaldıkça hız artar.",
+        "p": "Uyduyu yörüngede tutan kuvvet <b>çekim kuvvetidir</b>. G·M·m/r² = m·v²/r eşitliğinden <b>v = √(G·M/r)</b> bulunur. Uydunun kütlesi sadeleşir ve yörünge alçaldıkça hız artar.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kcek-8' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker><marker id='kcek-9' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><circle cx='85' cy='100' r='30' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><text x='85' y='105' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>M</text><circle cx='85' cy='100' r='70' fill='none' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='4 4'/><circle cx='85' cy='30' r='6' fill='var(--c5)' fill-opacity='0.9' stroke='var(--c5)' stroke-width='1'/><line x1='93' y1='30' x2='143' y2='30' stroke='var(--c3)' stroke-width='2.5' marker-end='url(#kcek-8)'/><text x='147' y='26' font-size='13' fill='var(--c3)' font-weight='700'>v</text><line x1='85' y1='38' x2='85' y2='65' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#kcek-9)'/><text x='91' y='56' font-size='13' fill='var(--c2)' font-weight='700'>F</text><text x='175' y='58' font-size='12' fill='var(--ink)'>çekim = merkezcil</text><text x='175' y='88' font-size='13' fill='var(--ink)'>G·M·m/r² = m·v²/r</text><text x='175' y='130' font-size='18' fill='var(--acc)' font-weight='700'>v = √(G·M/r)</text><text x='175' y='160' font-size='12' fill='var(--c2)' font-weight='700'>m sadeleşir</text><text x='160' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>yörünge hızı uydunun kütlesine bağlı değil</text></svg>",
         "key": "Çekim merkezcil kuvvet görevini yapar (bkz. Çembersel ve dönme hareketi). Aynı yörüngedeki ağır ve hafif uydu aynı hızla dolanır."
       },
       {
         "h": "Yer eşzamanlı ve yer durağan uydu",
-        "p": "Dolanım süresi Dünya'nın dönüşüne (24 saat) eşit uydu <b>yer eşzamanlıdır</b>. Ekvator üstünde dolananı <b>yer durağandır</b>: ≈ 36 000 km'de hep aynı noktanın üstünde durur.",
+        "p": "Dolanım süresi Dünya'nın dönüş süresine (24 saat) eşit olan uyduya <b>yer eşzamanlı</b> uydu denir. Ekvatorun üstünde dolanan böyle bir uyduya ise <b>yer durağan</b> uydu denir. Yaklaşık 36 000 km yükseklikte hep aynı noktanın üstünde durur.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kcek-10' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='kcek-11' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='var(--c5)'/></marker></defs><text x='12' y='20' font-size='11' fill='var(--muted)'>kuzey kutbundan bakış (ölçeksiz)</text><circle cx='85' cy='105' r='64' fill='none' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='4 4'/><circle cx='85' cy='105' r='26' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><path d='M 99 93 A 18 18 0 1 0 100 115' fill='none' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#kcek-10)'/><line x1='111' y1='105' x2='143' y2='105' stroke='var(--c4)' stroke-width='1.2' stroke-dasharray='2 2'/><circle cx='111' cy='105' r='3' fill='var(--c2)' fill-opacity='1' stroke='var(--c2)' stroke-width='1'/><circle cx='149' cy='105' r='6' fill='var(--c5)' fill-opacity='0.9' stroke='var(--c5)' stroke-width='1'/><line x1='149' y1='113' x2='149' y2='71' stroke='var(--c5)' stroke-width='2' marker-end='url(#kcek-11)'/><text x='165' y='58' font-size='14' fill='var(--ink)' font-weight='700'>T ≈ 24 saat</text><text x='165' y='85' font-size='12' fill='var(--ink)'>ekvator düzleminde</text><text x='165' y='107' font-size='12' fill='var(--ink)'>Dünya ile aynı yönde</text><text x='165' y='129' font-size='12' fill='var(--ink)'>yerden ≈ 36 000 km</text><text x='165' y='160' font-size='12' fill='var(--c5)' font-weight='700'>gökyüzünde sabit</text><text x='165' y='178' font-size='12' fill='var(--c5)' font-weight='700'>görünür</text></svg>",
-        "key": "Yer durağan uydu dairesel yörüngede, Dünya ile aynı yönde döner; TV ve iletişim uyduları böyledir. Periyodu 24 saat olan dairesel yörüngenin yarıçapı tektir.",
+        "key": "Yer durağan uydu dairesel bir yörüngede, Dünya ile aynı yönde döner. TV ve iletişim uyduları böyledir. Periyodu 24 saat olan dairesel yörüngenin yarıçapı tektir.",
         "once": {
           "soru": "Çatıdaki uydu çanağı neden hiç döndürülmeden hep aynı yöne bakar?",
           "secenekler": [
             {
               "yazi": "Uydu Dünya ile birlikte döner",
-              "neden": "Uydu 24 saatte bir tur atar; Dünya ile aynı hızda döndüğü için gökte sabit görünür.",
+              "neden": "Uydu 24 saatte bir tur atar. Dünya ile aynı hızda döndüğü için gökte sabit görünür.",
               "dogru": true
             },
             {
               "yazi": "Uydu hiç hareket etmez",
-              "neden": "Dursaydı Dünya'ya düşerdi; saniyede yaklaşık 3 km hızla dolanır."
+              "neden": "Uydu dursaydı Dünya'ya düşerdi. Aslında saniyede yaklaşık 3 km hızla dolanır."
             },
             {
               "yazi": "Sinyal her yönden gelir",
-              "neden": "Sinyal tek bir uydudan gelir; çanak ona dönük olmalı."
+              "neden": "Sinyal tek bir uydudan gelir ve çanak ona dönük olmalıdır."
             }
           ]
         }
       },
       {
         "h": "Ağırlıksızlık bir his",
-        "p": "Uzay istasyonunda (≈ 400 km) g hâlâ ≈ 8,7 m/s²'dir; çekim <b>vardır</b>. İstasyon ve astronot birlikte <b>serbest düşer</b>; tartı bu yüzden 0 gösterir.",
+        "p": "Uzay istasyonunda (yaklaşık 400 km yükseklikte) g hâlâ yaklaşık 8,7 m/s²'dir, yani çekim <b>vardır</b>. İstasyon ve astronot birlikte <b>serbest düşer</b>. Tartı bu yüzden 0 gösterir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kcek-12' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker><marker id='kcek-13' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><circle cx='160' cy='480' r='300' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><circle cx='160' cy='480' r='355' fill='none' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='4 4'/><rect x='144' y='118' width='32' height='14' rx='3' fill='var(--c5)' fill-opacity='0.4' stroke='var(--c5)' stroke-width='1.5'/><line x1='176' y1='125' x2='236' y2='125' stroke='var(--c3)' stroke-width='2.5' marker-end='url(#kcek-12)'/><text x='242' y='129' font-size='12' fill='var(--c3)' font-weight='700'>v ≈ 7,7 km/s</text><line x1='160' y1='134' x2='160' y2='168' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#kcek-13)'/><text x='168' y='160' font-size='12' fill='var(--c2)' font-weight='700'>g ≈ 8,7 m/s²</text><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle'>≈ 400 km yükseklikte çekim yok değil</text><text x='160' y='48' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>istasyon ve astronot birlikte serbest düşer</text><text x='160' y='70' font-size='12' fill='var(--ink)' text-anchor='middle'>tartı 0 gösterir → ağırlıksızlık hissi</text><text x='160' y='108' font-size='11' fill='var(--muted)' text-anchor='middle'>istasyon</text><text x='160' y='196' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>Dünya</text></svg>",
-        "key": "Yana hızları sayesinde Dünya'yı hep ıskalarlar. Ağırlıksızlık = serbest düşüş; çekimin yokluğu değil."
+        "key": "İstasyon ve astronot, yana doğru hızları sayesinde Dünya'yı hep ıskalar. Ağırlıksızlık çekimin yokluğu değil, serbest düşüştür."
       },
       {
         "h": "Kurtulma hızı",
-        "p": "Gezegenin çekiminden kurtulup geri dönmemek için gereken en küçük hız <b>kurtulma hızıdır</b>: v = √(2·G·M/R). Dünya için ≈ <b>11,2 km/s</b>.",
+        "p": "Gezegenin çekiminden kurtulup geri dönmemek için gereken en küçük hıza <b>kurtulma hızı</b> denir ve v = √(2·G·M/R) ile bulunur. Dünya için bu hız yaklaşık <b>11,2 km/s</b>'dir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kcek-14' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='5' markerHeight='5' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker></defs><circle cx='80' cy='115' r='60' fill='none' stroke='var(--c1)' stroke-width='1.5' stroke-dasharray='4 4'/><circle cx='80' cy='115' r='34' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><text x='80' y='120' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>Dünya</text><path d='M 80 55 Q 108 57 106.0 93.0' fill='none' stroke='var(--c2)' stroke-width='2.5'/><path d='M 80 55 Q 175 50 225 18' fill='none' stroke='var(--c3)' stroke-width='2.5' marker-end='url(#kcek-14)'/><circle cx='80' cy='55' r='4' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='1'/><line x1='160' y1='96' x2='180' y2='96' stroke='var(--c2)' stroke-width='2.5'/><text x='186' y='100' font-size='12' fill='var(--ink)'>küçük hız: geri düşer</text><line x1='160' y1='120' x2='180' y2='120' stroke='var(--c1)' stroke-width='2.5' stroke-dasharray='4 4'/><text x='186' y='124' font-size='12' fill='var(--ink)'>≈ 7,9 km/s: yörünge</text><line x1='160' y1='144' x2='180' y2='144' stroke='var(--c3)' stroke-width='2.5'/><text x='186' y='148' font-size='12' fill='var(--ink)'>≥ 11,2 km/s: kaçar</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>v(kurtulma) = √(2·G·M/R)   (hava direnci yok sayıldı)</text></svg>",
-        "key": "Cismin kütlesine bağlı değildir. Yüzeye yakın yörünge hızının √2 katıdır (7,9 → 11,2 km/s)."
+        "key": "Kurtulma hızı cismin kütlesine bağlı değildir. Yüzeye yakın yörünge hızının √2 katıdır (7,9 km/s'den 11,2 km/s'ye)."
       },
       {
         "h": "Yörüngedeki uydunun enerjisi",
-        "p": "Çekim potansiyel enerjisi <b>Eₚ = −G·M·m/r</b>; sonsuzda sıfırdır. Yörüngede toplam enerji <b>E = −G·M·m/(2r)</b>. Alçalan uydu <b>hızlanır</b> ama toplam enerjisi <b>azalır</b>.",
-        "key": "Eₚ yaklaştıkça azaldığı için negatiftir. KE = G·M·m/(2r). Bağlı yörüngede E < 0; KE = −E ve Eₚ = 2E.",
+        "p": "Çekim potansiyel enerjisi <b>Eₚ = −G·M·m/r</b> ile bulunur ve sonsuzda sıfırdır. Yörüngedeki toplam enerji ise <b>E = −G·M·m/(2r)</b> olur. Alçalan uydu <b>hızlanır</b>, ama toplam enerjisi <b>azalır</b>.",
+        "key": "Eₚ, cisimler yaklaştıkça azaldığı için negatiftir ve KE = G·M·m/(2r) olur. Bağlı bir yörüngede E < 0'dır. Ayrıca KE = −E ve Eₚ = 2E olur.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='100' x2='300' y2='100' stroke='var(--ink)' stroke-width='1.5'/><text x='24' y='104' font-size='12' fill='var(--ink)' text-anchor='end'>0</text><rect x='50' y='60' width='60' height='40' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)' stroke-width='1.5'/><text x='80' y='52' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>KE = +GMm/2r</text><rect x='130' y='100' width='60' height='80' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)' stroke-width='1.5'/><text x='160' y='195' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Eₚ = −GMm/r</text><rect x='210' y='100' width='60' height='40' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.5'/><text x='240' y='156' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>E = −GMm/2r</text><text x='310' y='26' font-size='13' fill='var(--ink)' text-anchor='end' font-weight='bold'>E = KE + Eₚ &lt; 0</text><text x='310' y='44' font-size='11' fill='var(--muted)' text-anchor='end'>bağlı yörünge</text></svg>",
         "once": {
           "soru": "Bir uydu daha alçak bir yörüngeye iniyor. Hızı ne olur?",
           "secenekler": [
             {
               "yazi": "Artar",
-              "neden": "v = √(GM/r): r küçülünce hız artar.",
+              "neden": "v = √(GM/r) olduğu için r küçülünce hız artar.",
               "dogru": true
             },
             {
               "yazi": "Azalır",
-              "neden": "Alçakta çekim güçlüdür; yörüngede kalmak için daha hızlı gitmeli."
+              "neden": "Alçakta çekim güçlüdür. Yörüngede kalmak için uydu daha hızlı gitmelidir."
             },
             {
               "yazi": "Değişmez",
@@ -5079,7 +5079,7 @@
       },
       {
         "h": "Gelgit",
-        "p": "Ay'ın çekimi Dünya'nın Ay'a yakın yüzünde güçlü, uzak yüzünde zayıftır. Bu fark iki su <b>kabarması</b> yaratır; çoğu kıyıda günde iki kez sular yükselir.",
+        "p": "Ay'ın çekimi, Dünya'nın Ay'a yakın yüzünde güçlü, uzak yüzünde zayıftır. Bu fark iki su <b>kabarması</b> oluşturur. Bu yüzden çoğu kıyıda günde iki kez sular yükselir.",
         "svg": "<svg viewBox='0 0 320 200'><ellipse cx='145' cy='100' rx='62' ry='45' fill='var(--c1)' fill-opacity='0.18' stroke='var(--c1)' stroke-width='1.5'/><circle cx='145' cy='100' r='38' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.5'/><text x='145' y='105' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Dünya</text><circle cx='285' cy='100' r='12' fill='var(--muted)' fill-opacity='0.4' stroke='var(--muted)' stroke-width='1.5'/><text x='285' y='130' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Ay</text><text x='78' y='104' font-size='12' fill='var(--c1)' text-anchor='end' font-weight='700'>kabarma</text><text x='212' y='92' font-size='12' fill='var(--c1)' font-weight='700'>kabarma</text><text x='145' y='46' font-size='12' fill='var(--muted)' text-anchor='middle'>çekilme</text><text x='145' y='163' font-size='12' fill='var(--muted)' text-anchor='middle'>çekilme</text><text x='12' y='20' font-size='12' fill='var(--ink)'>Ay'a yakın yüz daha çok, uzak yüz daha az çekilir</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>çoğu kıyıda günde ≈ 2 kabarma, 2 çekilme (çizim abartılı)</text></svg>",
         "key": "Yakın yüzde su Ay'a doğru çekilir, uzak yüzde geride kalır. Gelgiti çekimin kendisi değil, uzaklığa göre farkı yaratır.",
         "once": {
@@ -5087,7 +5087,7 @@
           "secenekler": [
             {
               "yazi": "İki",
-              "neden": "Dünya'nın iki yanında birer kabarma var; Dünya döndükçe her kıyı ikisinden de geçer.",
+              "neden": "Dünya'nın iki yanında birer kabarma vardır. Dünya döndükçe her kıyı ikisinden de geçer.",
               "dogru": true
             },
             {
@@ -5096,14 +5096,14 @@
             },
             {
               "yazi": "Dört",
-              "neden": "Kabarma iki tanedir: biri Ay'a bakan, biri karşı yüzde."
+              "neden": "Kabarma iki tanedir. Biri Ay'a bakan yüzde, öteki karşı yüzdedir."
             }
           ]
         }
       },
       {
         "h": "Özet",
-        "p": "• F = G·m₁·m₂/r²; r 2 kat → F/4.<br>• g = G·M/r²: yüzeyde ≈ 9,8 m/s², Ay'da ≈ 1,6.<br>• Kepler: elips, eşit alan, T² ∝ r³.<br>• Uydu: v = √(G·M/r), E = −GMm/2r; ağırlıksızlık serbest düşüştür.<br>• Kurtulma hızı: Dünya'da 11,2 km/s.",
+        "p": "• Çekim kuvveti F = G·m₁·m₂/r²'dir ve r 2 kat olunca F dörtte birine iner.<br>• g = G·M/r² olur. Yüzeyde yaklaşık 9,8 m/s², Ay'da 1,6 m/s²'dir.<br>• Kepler yasaları elips yörünge, eşit alan ve T² ∝ r³'tür.<br>• Uyduda v = √(G·M/r) olur ve ağırlıksızlık serbest düşüştür.<br>• Dünya'nın kurtulma hızı 11,2 km/s'dir.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='10' width='145' height='85' rx='8' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.5'/><text x='82.5' y='42' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Çekim yasası</text><text x='82.5' y='70' font-size='13' fill='var(--ink)' text-anchor='middle'>F = G·m₁·m₂/r²</text><rect x='165' y='10' width='145' height='85' rx='8' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='237.5' y='42' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Çekim ivmesi</text><text x='237.5' y='70' font-size='13' fill='var(--ink)' text-anchor='middle'>g = G·M/r²</text><rect x='10' y='105' width='145' height='85' rx='8' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.5'/><text x='82.5' y='137' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Kepler 3</text><text x='82.5' y='165' font-size='13' fill='var(--ink)' text-anchor='middle'>T²/r³ = sabit</text><rect x='165' y='105' width='145' height='85' rx='8' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.5'/><text x='237.5' y='137' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Yörünge hızı</text><text x='237.5' y='165' font-size='13' fill='var(--ink)' text-anchor='middle'>v = √(G·M/r)</text></svg>"
       }
     ],
@@ -5113,7 +5113,7 @@
         "q": "İki cisim arasındaki çekim kuvveti 90 N'dur. Aradaki uzaklık 3 katına, kütlelerden biri de 2 katına çıkarılırsa yeni kuvvet kaç N olur?",
         "cevap": 20,
         "birim": "N",
-        "e": "Kuvvet kütleyle doğru, uzaklığın karesiyle ters orantılıdır: F' = 90·2/3² = 180/9 = 20 N."
+        "e": "Kuvvet kütleyle doğru, uzaklığın karesiyle ters orantılıdır. Bu yüzden F' = 90·2/3² = 180/9 = 20 N olur."
       },
       {
         "tur": "sirala",
@@ -5124,14 +5124,14 @@
           "Uzay istasyonunun yüksekliği (≈ 400 km)",
           "Dünya yüzeyi"
         ],
-        "e": "Ay'da g ≈ 1,6 m/s², r = 2R'de g dörtte bire iner (≈ 2,45 m/s²), uzay istasyonunda ≈ 8,7 m/s², Dünya yüzeyinde ≈ 9,8 m/s²'dir."
+        "e": "Ay'da g yaklaşık 1,6 m/s²'dir. r = 2R'de g dörtte bire iner ve yaklaşık 2,45 m/s² olur. Uzay istasyonunda g yaklaşık 8,7 m/s², Dünya yüzeyinde ise yaklaşık 9,8 m/s²'dir."
       },
       {
         "tur": "sayi",
         "q": "Aynı gezegenin çevresinde dolanan bir uydunun yörünge yarıçapı 4 katına çıkarılıyor. Dolanım süresi kaç katına çıkar?",
         "cevap": 8,
         "birim": "kat",
-        "e": "Kepler 3: T²/r³ sabit. r 4 kat olunca T² 4³ = 64 kat, T √64 = 8 kat olur."
+        "e": "Kepler'in 3. yasasına göre T²/r³ sabittir. r 4 kat olunca T² 4³ = 64 kat, T ise √64 = 8 kat olur."
       },
       {
         "q": "Aynı yarıçaplı çembersel yörüngelerde dolanan iki uydudan birinin kütlesi diğerinin 2 katıdır. Yörünge hızları için ne söylenir?",
@@ -5142,11 +5142,11 @@
           "Hızları eşittir"
         ],
         "a": 3,
-        "e": "v = √(G·M/r) bağıntısında uydunun kütlesi yoktur; hız yalnızca gezegenin kütlesine ve yörünge yarıçapına bağlıdır.",
+        "e": "v = √(G·M/r) bağıntısında uydunun kütlesi yoktur. Hız yalnızca gezegenin kütlesine ve yörünge yarıçapına bağlıdır.",
         "y": [
-          "Yörünge hızı v = √(GM/r) ile bulunur; uydunun kendi kütlesi formülde yer almaz.",
-          "Uydunun kütlesi hem çekim kuvvetinde hem eylemsizlikte yer alır ve sadeleşir; √2 farkı oluşmaz.",
-          "Hafif uydu daha hızlı dolanmaz; aynı yarıçapta hız yalnızca gezegenin kütlesine bağlıdır.",
+          "Yörünge hızı v = √(GM/r) ile bulunur. Uydunun kendi kütlesi formülde yer almaz.",
+          "Uydunun kütlesi hem çekim kuvvetinde hem eylemsizlikte yer alır ve sadeleşir. Bu yüzden √2 farkı oluşmaz.",
+          "Hafif uydu daha hızlı dolanmaz. Aynı yarıçapta hız yalnızca gezegenin kütlesine bağlıdır.",
           ""
         ]
       }
@@ -5158,9 +5158,9 @@
     "cards": [
       {
         "h": "Elektrik yükü: (+) ve (−)",
-        "p": "Protonlar (+), elektronlar (−) yüklüdür; sayıları eşit cisim <b>nötrdür</b>. Aynı işaretli yükler iter, zıt işaretliler çeker. Yük <b>q = n·e</b>, birimi coulomb.",
+        "p": "Protonlar (+), elektronlar (−) yüklüdür. Proton ve elektron sayıları eşit olan cisim <b>nötrdür</b>. Aynı işaretli yükler birbirini iter, zıt işaretliler çeker. Yük <b>q = n·e</b> ile bulunur ve birimi coulombdur.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='estat-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><circle cx='55' cy='45' r='11' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M50.05 45 H59.95 M55 40.05 V49.95' stroke='var(--c2)' stroke-width='2'/><circle cx='110' cy='45' r='11' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M105.05 45 H114.95 M110 40.05 V49.95' stroke='var(--c2)' stroke-width='2'/><path d='M42 45 H20' stroke='var(--ink)' stroke-width='2' fill='none' marker-end='url(#estat-1)'/><path d='M123 45 H145' stroke='var(--ink)' stroke-width='2' fill='none' marker-end='url(#estat-1)'/><text x='155' y='49' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>itme</text><circle cx='55' cy='100' r='11' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><path d='M50.05 100 H59.95' stroke='var(--c1)' stroke-width='2'/><circle cx='110' cy='100' r='11' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><path d='M105.05 100 H114.95' stroke='var(--c1)' stroke-width='2'/><path d='M42 100 H20' stroke='var(--ink)' stroke-width='2' fill='none' marker-end='url(#estat-1)'/><path d='M123 100 H145' stroke='var(--ink)' stroke-width='2' fill='none' marker-end='url(#estat-1)'/><text x='155' y='104' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>itme</text><circle cx='55' cy='155' r='11' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M50.05 155 H59.95 M55 150.05 V159.95' stroke='var(--c2)' stroke-width='2'/><circle cx='110' cy='155' r='11' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><path d='M105.05 155 H114.95' stroke='var(--c1)' stroke-width='2'/><path d='M68 155 H80' stroke='var(--ink)' stroke-width='2' fill='none' marker-end='url(#estat-1)'/><path d='M97 155 H85' stroke='var(--ink)' stroke-width='2' fill='none' marker-end='url(#estat-1)'/><text x='155' y='159' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>çekme</text><rect x='200' y='40' width='110' height='120' rx='8' fill='var(--panel)' stroke='var(--line)'/><text x='255' y='88' font-size='22' fill='var(--acc)' text-anchor='middle' font-weight='700'>q = n·e</text><text x='255' y='114' font-size='12' fill='var(--ink)' text-anchor='middle'>e = 1,6×10⁻¹⁹ C</text><text x='255' y='136' font-size='11' fill='var(--muted)' text-anchor='middle'>n: tam sayı</text><text x='255' y='30' font-size='11' fill='var(--muted)' text-anchor='middle'>yük kuantlıdır</text></svg>",
-        "key": "Yük kuantlıdır: e = 1,6×10⁻¹⁹ C ve n tam sayı; bir cismin yükü 1,5e olamaz.",
+        "key": "Yük kuantlıdır. e = 1,6×10⁻¹⁹ C'dur ve n bir tam sayıdır. Bu yüzden bir cismin yükü 1,5e olamaz.",
         "once": {
           "soru": "Nötr bir cisim 3 elektron kaybediyor. Yükü ne olur?",
           "secenekler": [
@@ -5184,7 +5184,7 @@
         "h": "İletken ve yalıtkan",
         "p": "<b>İletkenlerde</b> serbest elektronlar vardır, yük cismin her yerine yayılır. <b>Yalıtkanlarda</b> yük konduğu yerde kalır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='estat-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='80' y='26' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>iletken (metal)</text><text x='240' y='26' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>yalıtkan (plastik)</text><rect x='20' y='60' width='120' height='34' rx='6' fill='var(--muted)' fill-opacity='0.2' stroke='var(--muted)' stroke-width='1.5'/><rect x='180' y='60' width='120' height='34' rx='6' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)' stroke-width='1.5'/><path d='M30 77 H38' stroke='var(--c1)' stroke-width='1.8'/><path d='M54 77 H62' stroke='var(--c1)' stroke-width='1.8'/><path d='M78 77 H86' stroke='var(--c1)' stroke-width='1.8'/><path d='M102 77 H110' stroke='var(--c1)' stroke-width='1.8'/><path d='M124 77 H132' stroke='var(--c1)' stroke-width='1.8'/><path d='M192 70 H200' stroke='var(--c1)' stroke-width='1.8'/><path d='M208 70 H216' stroke='var(--c1)' stroke-width='1.8'/><path d='M192 85 H200' stroke='var(--c1)' stroke-width='1.8'/><path d='M208 85 H216' stroke='var(--c1)' stroke-width='1.8'/><path d='M40 50 H120' stroke='var(--muted)' stroke-width='1.2' fill='none' marker-start='url(#estat-2)' marker-end='url(#estat-2)'/><text x='80' y='44' font-size='11' fill='var(--muted)' text-anchor='middle'>yük yayılır</text><text x='250' y='50' font-size='11' fill='var(--muted)' text-anchor='middle'>yük yerinde kalır</text><text x='80' y='122' font-size='11' fill='var(--ink)' text-anchor='middle'>metaller, grafit,</text><text x='80' y='138' font-size='11' fill='var(--ink)' text-anchor='middle'>tuzlu su, insan vücudu</text><text x='240' y='122' font-size='11' fill='var(--ink)' text-anchor='middle'>cam, plastik, ebonit,</text><text x='240' y='138' font-size='11' fill='var(--ink)' text-anchor='middle'>kuru tahta, kuru hava</text><path d='M160 40 V150' stroke='var(--line)'/><text x='80' y='175' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>serbest elektron var</text><text x='240' y='175' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>serbest elektron çok az</text></svg>",
-        "key": "Metalde hareket eden elektronlardır; protonlar çekirdekte sabit kalır.",
+        "key": "Metalde hareket eden parçacıklar elektronlardır. Protonlar çekirdekte sabit kalır.",
         "etk": {
           "tur": "ayir",
           "soru": "Bu madde iletken mi, yalıtkan mı?",
@@ -5244,7 +5244,7 @@
           "secenekler": [
             {
               "yazi": "Yük vücudundan toprağa kaçar",
-              "neden": "Metal ve vücut iletkendir; oluşan yük toprağa akar.",
+              "neden": "Metal ve vücut iletkendir. Oluşan yük toprağa akar.",
               "dogru": true
             },
             {
@@ -5253,40 +5253,40 @@
             },
             {
               "yazi": "Yün elektron vermez",
-              "neden": "Sürtünmede elektron geçer; sorun yükün kaçmasıdır."
+              "neden": "Sürtünmede elektron geçer. Sorun, yükün kaçmasıdır."
             }
           ]
         }
       },
       {
         "h": "Sürtünmeyle elektriklenme",
-        "p": "Sürtülen iki cisim arasında <b>elektron</b> geçer: veren (+), alan (−) yüklenir. Yükler eşit büyüklükte, zıt işaretlidir. Yüne sürtülen plastik çubuk (−) olur.",
+        "p": "Birbirine sürtülen iki cisim arasında <b>elektron</b> geçer. Elektron veren cisim (+), alan cisim (−) yüklenir. Yükler eşit büyüklükte ve zıt işaretlidir. Yüne sürtülen plastik çubuk (−) yüklenir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='estat-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><rect x='20' y='55' width='110' height='70' rx='8' fill='var(--c1)' fill-opacity='0.08' stroke='var(--ink)' stroke-width='1.5'/><rect x='190' y='55' width='110' height='70' rx='8' fill='var(--c5)' fill-opacity='0.12' stroke='var(--ink)' stroke-width='1.5'/><text x='75' y='45' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>cam</text><text x='245' y='45' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>ipek</text><circle cx='42' cy='75' r='8' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M38.4 75 H45.6 M42 71.4 V78.6' stroke='var(--c2)' stroke-width='2'/><circle cx='75' cy='75' r='8' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M71.4 75 H78.6 M75 71.4 V78.6' stroke='var(--c2)' stroke-width='2'/><circle cx='108' cy='75' r='8' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M104.4 75 H111.6 M108 71.4 V78.6' stroke='var(--c2)' stroke-width='2'/><circle cx='58' cy='105' r='8' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><path d='M54.4 105 H61.6' stroke='var(--c1)' stroke-width='2'/><circle cx='212' cy='75' r='8' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M208.4 75 H215.6 M212 71.4 V78.6' stroke='var(--c2)' stroke-width='2'/><circle cx='245' cy='75' r='8' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M241.4 75 H248.6 M245 71.4 V78.6' stroke='var(--c2)' stroke-width='2'/><circle cx='278' cy='75' r='8' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M274.4 75 H281.6 M278 71.4 V78.6' stroke='var(--c2)' stroke-width='2'/><circle cx='205' cy='105' r='7' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><path d='M201.85 105 H208.15' stroke='var(--c1)' stroke-width='2'/><circle cx='225' cy='105' r='7' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><path d='M221.85 105 H228.15' stroke='var(--c1)' stroke-width='2'/><circle cx='245' cy='105' r='7' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><path d='M241.85 105 H248.15' stroke='var(--c1)' stroke-width='2'/><circle cx='265' cy='105' r='7' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><path d='M261.85 105 H268.15' stroke='var(--c1)' stroke-width='2'/><circle cx='285' cy='105' r='7' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><path d='M281.85 105 H288.15' stroke='var(--c1)' stroke-width='2'/><path d='M135 90 H183' stroke='var(--c1)' stroke-width='2' fill='none' marker-end='url(#estat-3)'/><text x='160' y='80' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>e⁻</text><text x='75' y='145' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>net +2 birim</text><text x='245' y='145' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>net −2 birim</text><text x='160' y='172' font-size='11' fill='var(--muted)' text-anchor='middle'>protonlar yerinde kalır</text><text x='160' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>toplam yük: önce 0, sonra 0 (korunur)</text></svg>",
-        "key": "Genellikle iki yalıtkan sürtülür; hangisinin elektron vereceği maddelere bağlıdır. Yükün korunumu: yalıtılmış sistemde toplam yük değişmez."
+        "key": "Genellikle iki yalıtkan birbirine sürtülür ve hangisinin elektron vereceği maddelere bağlıdır. Yükün korunumuna göre yalıtılmış bir sistemde toplam yük değişmez."
       },
       {
         "h": "Dokunmayla elektriklenme",
-        "p": "Yüklü iletken başka iletkene dokunursa toplam yük paylaşılır, ikisi de <b>aynı işaretli</b> olur. Yük yarıçapla orantılı bölünür: <b>q₁/q₂ = r₁/r₂</b>.",
+        "p": "Yüklü bir iletken başka bir iletkene dokunursa toplam yük paylaşılır ve ikisi de <b>aynı işaretle</b> yüklenir. Yük, yarıçaplarla orantılı olarak bölünür (<b>q₁/q₂ = r₁/r₂</b>).",
         "svg": "<svg viewBox='0 0 320 200'><text x='14' y='64' font-size='12' fill='var(--muted)' text-anchor='start' font-weight='700'>önce</text><text x='14' y='154' font-size='12' fill='var(--muted)' text-anchor='start' font-weight='700'>sonra</text><circle cx='80' cy='60' r='16' fill='var(--c2)' fill-opacity='0.15' stroke='var(--ink)' stroke-width='1.5'/><text x='80' y='64' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>+6q</text><circle cx='150' cy='60' r='32' fill='var(--muted)' fill-opacity='0.15' stroke='var(--ink)' stroke-width='1.5'/><text x='150' y='64' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>0</text><text x='80' y='92' font-size='12' fill='var(--muted)' text-anchor='middle'>r</text><text x='150' y='106' font-size='12' fill='var(--muted)' text-anchor='middle'>2r</text><circle cx='80' cy='150' r='16' fill='var(--c2)' fill-opacity='0.15' stroke='var(--ink)' stroke-width='1.5'/><text x='80' y='154' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>+2q</text><circle cx='150' cy='150' r='32' fill='var(--c2)' fill-opacity='0.15' stroke='var(--ink)' stroke-width='1.5'/><text x='150' y='154' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>+4q</text><path d='M96 150 H118' stroke='var(--ink)' stroke-width='2'/><rect x='200' y='40' width='112' height='120' rx='8' fill='var(--panel)' stroke='var(--line)'/><text x='256' y='68' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>q₁ / q₂ = r₁ / r₂</text><text x='256' y='96' font-size='11' fill='var(--muted)' text-anchor='middle'>toplam korunur:</text><text x='256' y='114' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>6q = 2q + 4q</text><text x='256' y='142' font-size='11' fill='var(--muted)' text-anchor='middle'>işaret aynı kalır</text><text x='110' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>tel ile bağlanan iletken küreler</text></svg>",
-        "key": "Dokunan küreler aynı potansiyele gelir; özdeş kürelerde yük eşit bölünür. Toplam yük sıfırsa iki küre de nötr olur."
+        "key": "Dokunan küreler aynı potansiyele gelir ve özdeş kürelerde yük eşit bölünür. Toplam yük sıfırsa iki küre de nötr olur."
       },
       {
         "h": "Etkiyle elektriklenme, topraklama",
-        "p": "Yüklü çubuk dokunmadan yaklaşınca elektronlar kayar: <b>kutuplanma</b>. Toprağa bağlayıp önce bağı, sonra çubuğu çekersen iletken çubuğa <b>zıt</b> işaretle yüklenir.",
+        "p": "Yüklü bir çubuk dokunmadan yaklaşınca iletkendeki elektronlar kayar. Buna <b>kutuplanma</b> denir. İletkeni toprağa bağlayıp önce bağı, sonra çubuğu çekersen iletken çubuğa <b>zıt</b> işaretle yüklenir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='estat-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><text x='55' y='24' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>1. yaklaştır</text><rect x='12' y='55' width='12' height='70' rx='3' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M14.5 68 H21.5 M18 64.5 V71.5' stroke='var(--c2)' stroke-width='1.8'/><path d='M14.5 90 H21.5 M18 86.5 V93.5' stroke='var(--c2)' stroke-width='1.8'/><path d='M14.5 112 H21.5 M18 108.5 V115.5' stroke='var(--c2)' stroke-width='1.8'/><circle cx='65' cy='90' r='24' fill='var(--muted)' fill-opacity='0.12' stroke='var(--ink)' stroke-width='1.5'/><path d='M44.5 78 H51.5' stroke='var(--c1)' stroke-width='1.8'/><path d='M78.5 78 H85.5 M82 74.5 V81.5' stroke='var(--c2)' stroke-width='1.8'/><path d='M44.5 90 H51.5' stroke='var(--c1)' stroke-width='1.8'/><path d='M78.5 90 H85.5 M82 86.5 V93.5' stroke='var(--c2)' stroke-width='1.8'/><path d='M44.5 102 H51.5' stroke='var(--c1)' stroke-width='1.8'/><path d='M78.5 102 H85.5 M82 98.5 V105.5' stroke='var(--c2)' stroke-width='1.8'/><text x='55' y='145' font-size='11' fill='var(--muted)' text-anchor='middle'>kutuplanma</text><text x='160' y='24' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>2. toprakla</text><rect x='117' y='55' width='12' height='70' rx='3' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M119.5 68 H126.5 M123 64.5 V71.5' stroke='var(--c2)' stroke-width='1.8'/><path d='M119.5 90 H126.5 M123 86.5 V93.5' stroke='var(--c2)' stroke-width='1.8'/><path d='M119.5 112 H126.5 M123 108.5 V115.5' stroke='var(--c2)' stroke-width='1.8'/><circle cx='170' cy='90' r='24' fill='var(--muted)' fill-opacity='0.12' stroke='var(--ink)' stroke-width='1.5'/><path d='M149.5 78 H156.5' stroke='var(--c1)' stroke-width='1.8'/><path d='M149.5 90 H156.5' stroke='var(--c1)' stroke-width='1.8'/><path d='M149.5 102 H156.5' stroke='var(--c1)' stroke-width='1.8'/><path d='M166.5 82 H173.5' stroke='var(--c1)' stroke-width='1.8'/><path d='M170 114 V150 M158 150 H182 M162 155 H178 M166 160 H174' stroke='var(--ink)' stroke-width='1.5'/><path d='M186 148 V122' stroke='var(--c1)' stroke-width='1.8' fill='none' marker-end='url(#estat-4)'/><text x='196' y='140' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>e⁻</text><text x='265' y='20' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>3. bağı kes,</text><text x='265' y='36' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>çubuğu uzaklaştır</text><circle cx='265' cy='90' r='24' fill='var(--muted)' fill-opacity='0.12' stroke='var(--ink)' stroke-width='1.5'/><path d='M276.5 90.0 H283.5' stroke='var(--c1)' stroke-width='1.8'/><path d='M269.0 103.0 H276.0' stroke='var(--c1)' stroke-width='1.8'/><path d='M254.0 103.0 H261.0' stroke='var(--c1)' stroke-width='1.8'/><path d='M246.5 90.0 H253.5' stroke='var(--c1)' stroke-width='1.8'/><path d='M254.0 77.0 H261.0' stroke='var(--c1)' stroke-width='1.8'/><path d='M269.0 77.0 H276.0' stroke='var(--c1)' stroke-width='1.8'/><text x='265' y='145' font-size='11' fill='var(--muted)' text-anchor='middle'>net (−) yük</text><path d='M110 40 V150 M215 40 V150' stroke='var(--line)'/><text x='160' y='188' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>sonuç: çubuğa zıt işaretli yük</text></svg>",
-        "key": "Bağı kesmeden çubuğu uzaklaştırırsan yük topraktan geri akar, iletken nötr kalır. Çubuk yük kaybetmez; yük topraktan gelir ya da toprağa gider."
+        "key": "Bağı kesmeden çubuğu uzaklaştırırsan yük topraktan geri akar ve iletken nötr kalır. Çubuk yük kaybetmez. Yük topraktan gelir ya da toprağa gider."
       },
       {
         "h": "Elektroskop",
-        "p": "Elektroskop yükü gösterir. Topuza yüklü cisim dokunursa yük yapraklara yayılır; <b>aynı işaretle</b> yüklenen yapraklar birbirini iter, açılır.",
+        "p": "Elektroskop yükü gösteren bir alettir. Topuza yüklü bir cisim dokunursa yük yapraklara yayılır. <b>Aynı işaretle</b> yüklenen yapraklar birbirini iter ve açılır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='estat-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M45 100 V185 H135 V100' fill='none' stroke='var(--muted)' stroke-width='1.5'/><rect x='78' y='92' width='24' height='12' rx='2' fill='var(--c4)' fill-opacity='0.4' stroke='var(--c4)'/><circle cx='90' cy='48' r='14' fill='var(--muted)' fill-opacity='0.2' stroke='var(--ink)' stroke-width='1.5'/><path d='M90 62 V138' stroke='var(--ink)' stroke-width='2.5'/><path d='M90 138 L66 172 M90 138 L114 172' stroke='var(--c4)' stroke-width='3' stroke-linecap='round'/><path d='M80.5 44 H87.5 M84 40.5 V47.5' stroke='var(--c2)' stroke-width='1.8'/><path d='M92.5 52 H99.5 M96 48.5 V55.5' stroke='var(--c2)' stroke-width='1.8'/><path d='M57.5 160 H64.5 M61 156.5 V163.5' stroke='var(--c2)' stroke-width='1.8'/><path d='M115.5 160 H122.5 M119 156.5 V163.5' stroke='var(--c2)' stroke-width='1.8'/><path d='M58 172 H40' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#estat-5)'/><path d='M122 172 H140' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#estat-5)'/><text x='70' y='34' font-size='11' fill='var(--muted)' text-anchor='end'>topuz</text><text x='50' y='124' font-size='11' fill='var(--muted)' text-anchor='start'>yaprak</text><path d='M66 129 L76 152' stroke='var(--muted)' stroke-width='0.8'/><rect x='170' y='20' width='142' height='160' rx='8' fill='var(--panel)' stroke='var(--line)'/><text x='241' y='40' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Yüklü elektroskoba</text><text x='241' y='70' font-size='11' fill='var(--ink)' text-anchor='middle'>aynı işaret yaklaşırsa</text><text x='241' y='88' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>daha çok açılır</text><text x='241' y='120' font-size='11' fill='var(--ink)' text-anchor='middle'>zıt işaret yaklaşırsa</text><text x='241' y='138' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>kapanmaya başlar</text><text x='241' y='166' font-size='11' fill='var(--muted)' text-anchor='middle'>(dokunmadan)</text></svg>",
         "key": "Yüklü elektroskoba aynı işaretli cisim yaklaşınca yapraklar daha çok açılır, zıt işaretli yaklaşınca kapanmaya başlar. Yaprakların açılması tek başına işareti göstermez."
       },
       {
         "h": "Yük dış yüzeyde, sivri uçta",
-        "p": "Yüklü iletkende fazla yük <b>dış yüzeye</b> dağılır; içeride alan sıfırdır. Yük <b>sivri uçlarda</b> yoğunlaşır; paratoner yıldırımı bu ilkeyle toprağa iletir.",
+        "p": "Yüklü bir iletkende fazla yük <b>dış yüzeye</b> dağılır ve içeride alan sıfırdır. Yük <b>sivri uçlarda</b> yoğunlaşır. Paratoner yıldırımı bu ilkeyle toprağa iletir.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M60 60 C20 60 20 130 60 130 C95 130 125 110 155 95 C125 80 95 60 60 60 Z' fill='var(--muted)' fill-opacity='0.12' stroke='var(--ink)' stroke-width='1.5'/><path d='M31.6 62.2 H37.6 M34.6 59.2 V65.2' stroke='var(--c2)' stroke-width='1.8'/><path d='M19.0 95.0 H25.0 M22.0 92.0 V98.0' stroke='var(--c2)' stroke-width='1.8'/><path d='M31.6 127.8 H37.6 M34.6 124.8 V130.8' stroke='var(--c2)' stroke-width='1.8'/><path d='M102.3 127.9 H108.3 M105.3 124.9 V130.9' stroke='var(--c2)' stroke-width='1.8'/><path d='M132.6 111.2 H138.6 M135.6 108.2 V114.2' stroke='var(--c2)' stroke-width='1.8'/><path d='M147.3 102.3 H153.3 M150.3 99.3 V105.3' stroke='var(--c2)' stroke-width='1.8'/><path d='M160.0 95.0 H166.0 M163.0 92.0 V98.0' stroke='var(--c2)' stroke-width='1.8'/><path d='M147.3 87.7 H153.3 M150.3 84.7 V90.7' stroke='var(--c2)' stroke-width='1.8'/><path d='M132.6 78.8 H138.6 M135.6 75.8 V81.8' stroke='var(--c2)' stroke-width='1.8'/><path d='M102.3 62.1 H108.3 M105.3 59.1 V65.1' stroke='var(--c2)' stroke-width='1.8'/><text x='68' y='100' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>E = 0</text><text x='85' y='162' font-size='11' fill='var(--muted)' text-anchor='middle'>yük dış yüzeyde,</text><text x='85' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>sivri uçta daha yoğun</text><rect x='210' y='110' width='50' height='70' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><path d='M235 110 V58' stroke='var(--ink)' stroke-width='2.5'/><path d='M231 62 L235 50 L239 62 Z' fill='var(--ink)'/><path d='M235 70 H272 V184' fill='none' stroke='var(--c4)' stroke-width='2'/><path d='M190 180 H310' stroke='var(--ink)' stroke-width='1.5'/><path d='M262 186 H282 M266 190 H278 M270 194 H274' stroke='var(--ink)' stroke-width='1.5'/><path d='M305 8 L284 30 L294 32 L241 49' fill='none' stroke='var(--c4)' stroke-width='2.5' stroke-linejoin='round'/><text x='226' y='66' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>paratoner</text><text x='296' y='120' font-size='11' fill='var(--muted)' text-anchor='middle'>kalın</text><text x='296' y='134' font-size='11' fill='var(--muted)' text-anchor='middle'>tel</text><text x='240' y='196' font-size='11' fill='var(--muted)' text-anchor='end'>toprak</text></svg>",
-        "key": "Sivri uçtan yük havaya boşalabilir. Fırtınada metal gövdeli arabanın içi güvenlidir: yük dış yüzeyden akıp gider.",
+        "key": "Sivri uçtan yük havaya boşalabilir. Fırtınada metal gövdeli bir arabanın içi güvenlidir, çünkü yük dış yüzeyden akıp gider.",
         "once": {
           "soru": "Yüklü bir metal kürenin fazla yükü nerede toplanır?",
           "secenekler": [
@@ -5297,20 +5297,20 @@
             },
             {
               "yazi": "Merkezde",
-              "neden": "Aynı işaretli yükler birbirini iter; merkezde toplanamaz."
+              "neden": "Aynı işaretli yükler birbirini iter. Bu yüzden merkezde toplanamazlar."
             },
             {
               "yazi": "Her yere eşit dağılır",
-              "neden": "İletkende yükler serbestçe kayar ve yüzeye itilir; içi yüksüz kalır."
+              "neden": "İletkende yükler serbestçe kayar ve yüzeye itilir. İletkenin içi yüksüz kalır."
             }
           ]
         }
       },
       {
         "h": "Coulomb yasası",
-        "p": "İki noktasal yük arasındaki kuvvet <b>F = k·q₁·q₂ / r²</b>; k ≈ 9×10⁹ N·m²/C². İki yük birbirine <b>eşit büyüklükte, zıt yönlü</b> kuvvet uygular.",
+        "p": "İki noktasal yük arasındaki kuvvet <b>F = k·q₁·q₂ / r²</b> ile bulunur ve k yaklaşık 9×10⁹ N·m²/C²'dir. İki yük birbirine <b>eşit büyüklükte ve zıt yönlü</b> kuvvet uygular.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='estat-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><marker id='estat-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='160' y='34' font-size='22' fill='var(--acc)' text-anchor='middle' font-weight='700'>F = k·q₁·q₂ / r²</text><text x='160' y='58' font-size='11' fill='var(--muted)' text-anchor='middle'>k ≈ 9×10⁹ N·m²/C² (boşlukta)</text><circle cx='125' cy='110' r='12' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M119.6 110 H130.4 M125 104.6 V115.4' stroke='var(--c2)' stroke-width='2'/><circle cx='195' cy='110' r='12' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M189.6 110 H200.4 M195 104.6 V115.4' stroke='var(--c2)' stroke-width='2'/><path d='M111 110 H76' stroke='var(--c2)' stroke-width='2.2' fill='none' marker-end='url(#estat-6)'/><path d='M209 110 H244' stroke='var(--c2)' stroke-width='2.2' fill='none' marker-end='url(#estat-6)'/><text x='92' y='100' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>F</text><text x='228' y='100' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>F</text><text x='125' y='138' font-size='12' fill='var(--ink)' text-anchor='middle'>q₁</text><text x='195' y='138' font-size='12' fill='var(--ink)' text-anchor='middle'>q₂</text><path d='M127 150 H193' stroke='var(--muted)' stroke-width='1.2' fill='none' marker-start='url(#estat-7)' marker-end='url(#estat-7)'/><text x='160' y='166' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>r</text><text x='160' y='190' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>eşit büyüklük, zıt yön (q₁ ≠ q₂ olsa da)</text></svg>",
-        "key": "Kuvvet yüklerin çarpımıyla doğru, uzaklığın karesiyle ters orantılıdır: uzaklık 2 katına çıkarsa kuvvet 4'te 1'ine iner.",
+        "key": "Kuvvet, yüklerin çarpımıyla doğru, uzaklığın karesiyle ters orantılıdır. Uzaklık 2 katına çıkarsa kuvvet dörtte birine iner.",
         "etk": {
           "tur": "formul",
           "soru": "Yükleri ve uzaklığı değiştir. F &gt; 0 itme, F &lt; 0 çekme demek. Uzaklık 2 katına çıkınca ne olur?",
@@ -5358,7 +5358,7 @@
             ],
             [
               1e-12,
-              "Yüklerden biri sıfır: kuvvet yok."
+              "Yüklerden biri sıfır olduğu için kuvvet yoktur."
             ],
             [
               null,
@@ -5369,21 +5369,21 @@
       },
       {
         "h": "Elektrik alan ve alan çizgileri",
-        "p": "Yük çevresinde bir <b>elektrik alan</b> oluşturur: <b>E = F / q</b> (N/C), vektördür. Noktasal yükte E = k·q / r². Çizgiler sıksa alan güçlüdür.",
+        "p": "Bir yük çevresinde <b>elektrik alan</b> oluşturur. Alan <b>E = F / q</b> (N/C) ile bulunur ve vektördür. Noktasal yükte E = k·q / r² olur. Alan çizgileri sıksa alan güçlüdür.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='estat-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><marker id='estat-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><path d='M97.0 85.0 L135.0 85.0' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-end='url(#estat-8)'/><path d='M92.0 97.0 L118.9 123.9' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-end='url(#estat-8)'/><path d='M80.0 102.0 L80.0 140.0' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-end='url(#estat-8)'/><path d='M68.0 97.0 L41.1 123.9' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-end='url(#estat-8)'/><path d='M63.0 85.0 L25.0 85.0' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-end='url(#estat-8)'/><path d='M68.0 73.0 L41.1 46.1' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-end='url(#estat-8)'/><path d='M80.0 68.0 L80.0 30.0' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-end='url(#estat-8)'/><path d='M92.0 73.0 L118.9 46.1' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-end='url(#estat-8)'/><circle cx='80' cy='85' r='12' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M74.6 85 H85.4 M80 79.6 V90.4' stroke='var(--c2)' stroke-width='2'/><path d='M295.0 85.0 L257.0 85.0' stroke='var(--c1)' stroke-width='1.6' fill='none' marker-end='url(#estat-9)'/><path d='M278.9 123.9 L252.0 97.0' stroke='var(--c1)' stroke-width='1.6' fill='none' marker-end='url(#estat-9)'/><path d='M240.0 140.0 L240.0 102.0' stroke='var(--c1)' stroke-width='1.6' fill='none' marker-end='url(#estat-9)'/><path d='M201.1 123.9 L228.0 97.0' stroke='var(--c1)' stroke-width='1.6' fill='none' marker-end='url(#estat-9)'/><path d='M185.0 85.0 L223.0 85.0' stroke='var(--c1)' stroke-width='1.6' fill='none' marker-end='url(#estat-9)'/><path d='M201.1 46.1 L228.0 73.0' stroke='var(--c1)' stroke-width='1.6' fill='none' marker-end='url(#estat-9)'/><path d='M240.0 30.0 L240.0 68.0' stroke='var(--c1)' stroke-width='1.6' fill='none' marker-end='url(#estat-9)'/><path d='M278.9 46.1 L252.0 73.0' stroke='var(--c1)' stroke-width='1.6' fill='none' marker-end='url(#estat-9)'/><circle cx='240' cy='85' r='12' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><path d='M234.6 85 H245.4' stroke='var(--c1)' stroke-width='2'/><text x='80' y='162' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>(+) yükten çıkar</text><text x='240' y='162' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>(−) yüke girer</text><text x='90' y='190' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>E = F / q</text><text x='230' y='190' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>E = k·q / r²</text></svg>",
         "key": "(+) yük alan yönünde, (−) yük alana ters yönde kuvvet görür."
       },
       {
         "h": "Elektriksel potansiyel ve gerilim",
-        "p": "<b>Potansiyel</b>, birim yük başına potansiyel enerjidir: <b>V = k·q / r</b>, birimi volt. V skalerdir. İki nokta arasındaki farka <b>gerilim</b> denir; iş <b>W = q·ΔV</b>.",
+        "p": "<b>Potansiyel</b>, birim yük başına düşen potansiyel enerjidir. <b>V = k·q / r</b> ile bulunur, birimi volttur ve skalerdir. İki nokta arasındaki farka <b>gerilim</b> denir ve iş <b>W = q·ΔV</b> olur.",
         "svg": "<svg viewBox='0 0 320 200'><circle cx='80' cy='110' r='25' fill='none' stroke='var(--c5)' stroke-width='1.2' stroke-dasharray='4 3'/><circle cx='80' cy='110' r='50' fill='none' stroke='var(--c5)' stroke-width='1.2' stroke-dasharray='4 3'/><circle cx='80' cy='110' r='75' fill='none' stroke='var(--c5)' stroke-width='1.2' stroke-dasharray='4 3'/><circle cx='80' cy='110' r='11' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><path d='M75.05 110 H84.95 M80 105.05 V114.95' stroke='var(--c2)' stroke-width='2'/><text x='106.2' y='87.8' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>V</text><text x='123.8' y='70.2' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>V/2</text><text x='141.5' y='52.5' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>V/3</text><rect x='180' y='22' width='132' height='160' rx='8' fill='var(--panel)' stroke='var(--line)'/><text x='246' y='52' font-size='16' fill='var(--acc)' text-anchor='middle' font-weight='700'>V = k·q / r</text><text x='246' y='72' font-size='11' fill='var(--muted)' text-anchor='middle'>birim: volt (J/C)</text><text x='246' y='90' font-size='11' fill='var(--muted)' text-anchor='middle'>skaler, işaretiyle</text><text x='246' y='132' font-size='16' fill='var(--acc)' text-anchor='middle' font-weight='700'>W = q·ΔV</text><text x='246' y='152' font-size='11' fill='var(--muted)' text-anchor='middle'>ΔV: potansiyel fark</text><text x='246' y='168' font-size='11' fill='var(--muted)' text-anchor='middle'>= gerilim</text></svg>",
-        "key": "Volt = J/C. V'nin yönü yoktur; yükün işaretiyle yazılıp toplanır.",
+        "key": "Volt, J/C'ye eşittir. V'nin yönü yoktur ve yükün işaretiyle yazılıp toplanır.",
         "once": {
           "soru": "2 C'luk yükü 6 V'luk gerilimden geçirmek kaç J iş ister?",
           "secenekler": [
             {
               "yazi": "12",
-              "neden": "W = q·ΔV = 2 · 6 = 12 J.",
+              "neden": "W = q·ΔV = 2 · 6 = 12 J olur.",
               "dogru": true
             },
             {
@@ -5399,20 +5399,20 @@
       },
       {
         "h": "İki yükün alanı ve potansiyeli",
-        "p": "Alanlar <b>vektörel</b>, potansiyeller <b>skaler</b> toplanır. +q ile −q'nun ortasında alanlar toplanır ama potansiyeller birbirini götürür: <b>V = 0</b>.",
+        "p": "Alanlar <b>vektörel</b>, potansiyeller ise <b>skaler</b> olarak toplanır. +q ile −q'nun ortasında alanlar toplanır, ama potansiyeller birbirini götürür ve <b>V = 0</b> olur.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='28' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='bold'>Alan vektörel, potansiyel skaler</text><line x1='70' y1='100' x2='250' y2='100' stroke='var(--line)' stroke-width='1.2' stroke-dasharray='4 4'/><circle cx='70' cy='100' r='14' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><text x='70' y='105' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='bold'>+q</text><circle cx='250' cy='100' r='14' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><text x='250' y='105' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='bold'>−q</text><circle cx='160' cy='100' r='3.5' fill='var(--ink)'/><line x1='160' y1='84' x2='196' y2='84' stroke='var(--c2)' stroke-width='2.5'/><polygon points='204,84 194,79 194,89' fill='var(--c2)'/><text x='210' y='88' font-size='12' fill='var(--c2)' font-weight='bold'>E₁</text><line x1='160' y1='68' x2='196' y2='68' stroke='var(--c1)' stroke-width='2.5'/><polygon points='204,68 194,63 194,73' fill='var(--c1)'/><text x='210' y='72' font-size='12' fill='var(--c1)' font-weight='bold'>E₂</text><text x='115' y='122' font-size='12' fill='var(--muted)' text-anchor='middle'>r</text><text x='205' y='122' font-size='12' fill='var(--muted)' text-anchor='middle'>r</text><text x='160' y='152' font-size='12' fill='var(--ink)' text-anchor='middle'>Ortada: E = E₁ + E₂, −q'ya doğru</text><text x='160' y='174' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>V = kq/r + k(−q)/r = 0</text></svg>",
-        "key": "İki eşit +q'nun ortasında E = 0 ama V ≠ 0. E = 0 olan yerde V sıfır olmak zorunda değildir.",
+        "key": "İki eşit +q yükün ortasında E = 0'dır, ama V ≠ 0'dır. E'nin sıfır olduğu yerde V'nin sıfır olması gerekmez.",
         "once": {
           "soru": "İki eşit +q yükün tam ortasında elektrik alan nedir?",
           "secenekler": [
             {
               "yazi": "Sıfır",
-              "neden": "İki alan eşit büyüklükte ve zıt yönlü; birbirini götürür.",
+              "neden": "İki alan eşit büyüklükte ve zıt yönlüdür. Bu yüzden birbirini götürür.",
               "dogru": true
             },
             {
               "yazi": "Tek yükünkinin iki katı",
-              "neden": "Alanlar vektördür; zıt yönlüler toplanmaz, çıkarılır."
+              "neden": "Alanlar vektördür. Zıt yönlü alanlar toplanmaz, çıkarılır."
             },
             {
               "yazi": "Tek yükünkine eşit",
@@ -5423,15 +5423,15 @@
       },
       {
         "h": "Paralel levhalar: düzgün alan",
-        "p": "Zıt yüklü paralel levhalar arasında alan <b>düzgündür</b>: <b>E = V / d</b>. Yük F = q·E kuvveti görür, V gerilimini geçince <b>KE = q·V</b> kazanır.",
+        "p": "Zıt yüklü paralel levhalar arasında alan <b>düzgündür</b> ve <b>E = V / d</b> olur. Yük F = q·E kuvvetine maruz kalır. V gerilimini geçen yük <b>KE = q·V</b> kadar enerji kazanır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='estat-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><marker id='estat-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='160' y='26' font-size='18' fill='var(--acc)' text-anchor='middle' font-weight='700'>E = V / d</text><rect x='86' y='40' width='8' height='120' fill='var(--c2)' fill-opacity='0.6'/><rect x='226' y='40' width='8' height='120' fill='var(--c1)' fill-opacity='0.6'/><path d='M70 52 H78 M74 48 V56' stroke='var(--c2)' stroke-width='1.8'/><path d='M242 52 H250' stroke='var(--c1)' stroke-width='1.8'/><path d='M70 76 H78 M74 72 V80' stroke='var(--c2)' stroke-width='1.8'/><path d='M242 76 H250' stroke='var(--c1)' stroke-width='1.8'/><path d='M70 100 H78 M74 96 V104' stroke='var(--c2)' stroke-width='1.8'/><path d='M242 100 H250' stroke='var(--c1)' stroke-width='1.8'/><path d='M70 124 H78 M74 120 V128' stroke='var(--c2)' stroke-width='1.8'/><path d='M242 124 H250' stroke='var(--c1)' stroke-width='1.8'/><path d='M70 148 H78 M74 144 V152' stroke='var(--c2)' stroke-width='1.8'/><path d='M242 148 H250' stroke='var(--c1)' stroke-width='1.8'/><path d='M100 55 H220' stroke='var(--ink)' stroke-width='1.4' fill='none' marker-end='url(#estat-10)'/><path d='M100 80 H220' stroke='var(--ink)' stroke-width='1.4' fill='none' marker-end='url(#estat-10)'/><path d='M100 105 H220' stroke='var(--ink)' stroke-width='1.4' fill='none' marker-end='url(#estat-10)'/><path d='M100 130 H220' stroke='var(--ink)' stroke-width='1.4' fill='none' marker-end='url(#estat-10)'/><text x='160' y='152' font-size='11' fill='var(--muted)' text-anchor='middle'>düzgün alan</text><path d='M92 172 H228' stroke='var(--muted)' stroke-width='1.2' fill='none' marker-start='url(#estat-11)' marker-end='url(#estat-11)'/><text x='160' y='192' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>d</text><text x='36' y='104' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>V</text><text x='36' y='122' font-size='11' fill='var(--muted)' text-anchor='middle'>gerilim</text><text x='284' y='98' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>F = q·E</text><text x='284' y='114' font-size='11' fill='var(--muted)' text-anchor='middle'>her yerde</text></svg>",
-        "key": "Alan her yerde aynı ve (+)'dan (−)'ye yönlüdür. İvme a = q·E / m. Bir elektron 1 V'luk gerilimde 1,6×10⁻¹⁹ J (1 eV) kazanır.",
+        "key": "Alan her yerde aynıdır ve (+) levhadan (−) levhaya yönlüdür. İvme a = q·E / m olur. Bir elektron 1 V'luk gerilimde 1,6×10⁻¹⁹ J (1 eV) enerji kazanır.",
         "once": {
           "soru": "Levhalar arası gerilim 100 V, uzaklık 0,02 m. Alan kaç V/m?",
           "secenekler": [
             {
               "yazi": "5000",
-              "neden": "E = V / d = 100 / 0,02 = 5000 V/m.",
+              "neden": "E = V / d = 100 / 0,02 = 5000 V/m olur.",
               "dogru": true
             },
             {
@@ -5440,22 +5440,22 @@
             },
             {
               "yazi": "100",
-              "neden": "Gerilim alan değildir; uzaklığa bölünür."
+              "neden": "Gerilim alan değildir. Alanı bulmak için gerilim uzaklığa bölünür."
             }
           ]
         }
       },
       {
         "h": "Sığaç (kondansatör)",
-        "p": "<b>Sığaç</b>, arasında yalıtkan olan iki iletken levhadır; yük biriktirip enerji depolar. Sığa <b>C = Q / V</b> (farad). Düzlem sığaçta <b>C = ε·A / d</b>.",
+        "p": "<b>Sığaç</b>, arasında yalıtkan bulunan iki iletken levhadır ve yük biriktirerek enerji depolar. Sığa <b>C = Q / V</b> ile bulunur ve birimi faraddır. Düzlem sığaçta <b>C = ε·A / d</b> olur.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='estat-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><rect x='62' y='50' width='56' height='100' fill='var(--c5)' fill-opacity='0.15'/><rect x='54' y='45' width='8' height='110' fill='var(--c2)' fill-opacity='0.6'/><rect x='118' y='45' width='8' height='110' fill='var(--c1)' fill-opacity='0.6'/><text x='58' y='36' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>+Q</text><text x='122' y='36' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>−Q</text><text x='90' y='104' font-size='15' fill='var(--c5)' text-anchor='middle' font-weight='700'>ε</text><path d='M62 166 H118' stroke='var(--muted)' stroke-width='1.2' fill='none' marker-start='url(#estat-12)' marker-end='url(#estat-12)'/><text x='90' y='184' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>d</text><text x='30' y='98' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><text x='30' y='114' font-size='11' fill='var(--muted)' text-anchor='middle'>alan</text><rect x='160' y='22' width='152' height='160' rx='8' fill='var(--panel)' stroke='var(--line)'/><text x='236' y='50' font-size='16' fill='var(--acc)' text-anchor='middle' font-weight='700'>C = Q / V</text><text x='236' y='68' font-size='11' fill='var(--muted)' text-anchor='middle'>birim: farad (F)</text><text x='236' y='100' font-size='16' fill='var(--acc)' text-anchor='middle' font-weight='700'>C = ε·A / d</text><text x='236' y='118' font-size='11' fill='var(--muted)' text-anchor='middle'>ε: aradaki yalıtkan</text><text x='236' y='150' font-size='16' fill='var(--acc)' text-anchor='middle' font-weight='700'>U = ½·Q·V</text><text x='236' y='168' font-size='11' fill='var(--muted)' text-anchor='middle'>= ½·C·V²</text></svg>",
-        "key": "ε aradaki yalıtkanın geçirgenliğidir. Depolanan enerji ½·Q·V. C yalnız sığacın yapısına bağlıdır; Q ya da V'yi değiştirmek C'yi değiştirmez.",
+        "key": "ε, aradaki yalıtkanın geçirgenliğidir ve depolanan enerji ½·Q·V'dir. C yalnızca sığacın yapısına bağlıdır. Q ya da V'yi değiştirmek C'yi değiştirmez.",
         "once": {
           "soru": "Düzlem sığacın levhalarını birbirine yaklaştırırsan sığası ne olur?",
           "secenekler": [
             {
               "yazi": "Artar",
-              "neden": "C = ε·A / d: d küçülünce C büyür.",
+              "neden": "C = ε·A / d olduğu için d küçülünce C büyür.",
               "dogru": true
             },
             {
@@ -5471,15 +5471,15 @@
       },
       {
         "h": "Sığaçlar seri ve paralel",
-        "p": "<b>Paralel</b> sığaçların gerilimi aynıdır, yükleri toplanır: C<sub>eş</sub> = C₁ + C₂. <b>Seride</b> yük aynıdır, gerilimler toplanır: 1/C<sub>eş</sub> = 1/C₁ + 1/C₂.",
+        "p": "<b>Paralel</b> bağlı sığaçların gerilimi aynıdır ve yükleri toplanır (C<sub>eş</sub> = C₁ + C₂). <b>Seri</b> bağlı sığaçlarda ise yük aynıdır ve gerilimler toplanır (1/C<sub>eş</sub> = 1/C₁ + 1/C₂).",
         "svg": "<svg viewBox='0 0 320 200'><text x='80' y='24' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>seri</text><path d='M15 70 H56 M64 70 H96 M104 70 H145' stroke='var(--ink)' stroke-width='1.5'/><path d='M56 59 V81 M64 59 V81' stroke='var(--ink)' stroke-width='2.5'/><text x='60' y='50' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>C₁</text><path d='M96 59 V81 M104 59 V81' stroke='var(--ink)' stroke-width='2.5'/><text x='100' y='50' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>C₂</text><text x='80' y='116' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>1/C = 1/C₁ + 1/C₂</text><text x='80' y='138' font-size='11' fill='var(--muted)' text-anchor='middle'>her birinde aynı Q</text><text x='80' y='154' font-size='11' fill='var(--muted)' text-anchor='middle'>gerilimler toplanır</text><path d='M160 36 V160' stroke='var(--line)'/><text x='240' y='24' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>paralel</text><path d='M172 70 H192 V50 H236 M244 50 H288 V90 H244 M236 90 H192 V70 M288 70 H308' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M236 39 V61 M244 39 V61' stroke='var(--ink)' stroke-width='2.5'/><text x='262' y='40' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>C₁</text><path d='M236 79 V101 M244 79 V101' stroke='var(--ink)' stroke-width='2.5'/><text x='262' y='110' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>C₂</text><text x='240' y='132' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>C = C₁ + C₂</text><text x='240' y='152' font-size='11' fill='var(--muted)' text-anchor='middle'>her birinde aynı V</text><text x='240' y='168' font-size='11' fill='var(--muted)' text-anchor='middle'>yükler toplanır</text><text x='160' y='192' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Seride C küçülür, paralelde büyür.</text></svg>",
-        "key": "Seride eşdeğer sığa en küçük sığadan da küçüktür. İki özdeş C: seride C/2, paralelde 2C.",
+        "key": "Seri bağlamada eşdeğer sığa, en küçük sığadan da küçüktür. İki özdeş C sığacı seride C/2, paralelde ise 2C eder.",
         "once": {
           "soru": "İki özdeş 4 μF sığaç paralel bağlanıyor. Eşdeğer sığa kaç μF?",
           "secenekler": [
             {
               "yazi": "8",
-              "neden": "Paralelde sığalar toplanır: 4 + 4 = 8 μF.",
+              "neden": "Paralel bağlamada sığalar toplanır ve 4 + 4 = 8 μF olur.",
               "dogru": true
             },
             {
@@ -5495,7 +5495,7 @@
       },
       {
         "h": "Faraday kafesi",
-        "p": "İletkenin içinde alan sıfırdır. Metal bir kafes de içini dış alandan korur: <b>Faraday kafesi</b>. Yıldırım çarpan arabadakiler bu yüzden güvendedir.",
+        "p": "İletkenin içinde alan sıfırdır. Metal bir kafes de içini dış alandan korur ve buna <b>Faraday kafesi</b> denir. Yıldırım çarpan bir arabanın içindekiler bu yüzden güvendedir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kart-faraday-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c1)'/></marker></defs><line x1='10' y1='40' x2='88' y2='40' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#kart-faraday-1)'/><line x1='232' y1='40' x2='300' y2='40' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#kart-faraday-1)'/><line x1='10' y1='70' x2='88' y2='70' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#kart-faraday-1)'/><line x1='232' y1='70' x2='300' y2='70' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#kart-faraday-1)'/><line x1='10' y1='130' x2='88' y2='130' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#kart-faraday-1)'/><line x1='232' y1='130' x2='300' y2='130' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#kart-faraday-1)'/><line x1='10' y1='160' x2='88' y2='160' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#kart-faraday-1)'/><line x1='232' y1='160' x2='300' y2='160' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#kart-faraday-1)'/><path d='M10 100 L88 100' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#kart-faraday-1)'/><path d='M232 100 L300 100' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#kart-faraday-1)'/><rect x='100' y='30' width='120' height='140' rx='8' fill='var(--panel)' stroke='var(--ink)' stroke-width='2.5' stroke-dasharray='6 4'/><text x='94' y='48' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>−</text><text x='226' y='48' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>+</text><text x='94' y='70' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>−</text><text x='226' y='70' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>+</text><text x='94' y='92' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>−</text><text x='226' y='92' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>+</text><text x='94' y='114' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>−</text><text x='226' y='114' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>+</text><text x='94' y='136' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>−</text><text x='226' y='136' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>+</text><text x='94' y='158' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>−</text><text x='226' y='158' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>+</text><text x='160' y='92' font-size='12' fill='var(--muted)' text-anchor='middle'>içeride</text><text x='160' y='114' font-size='15' fill='var(--c3)' text-anchor='middle' font-weight='700'>E = 0</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>metal kafes dış alanı içine sokmaz</text></svg>",
         "key": "Mikrodalga fırının metal kapağı da buna dayanır. Delikleri dalga boyundan küçük ızgara dalgayı geçirmez.",
         "once": {
@@ -5519,7 +5519,7 @@
       },
       {
         "h": "Özet",
-        "p": "• Yük kuantlıdır ve korunur; katılarda yalnızca elektron taşınır.<br>• Sürtünme zıt, dokunma aynı, topraklı etki zıt işaretli yük verir.<br>• İletkende yük dış yüzeyde, sivri uçta toplanır.<br>• Coulomb kuvveti 1/r² ile azalır; E vektör, V skalerdir.<br>• Sığaç: C = Q/V = ε·A/d.",
+        "p": "• Yük kuantlıdır ve korunur. Katılarda yalnızca elektron taşınır.<br>• Sürtünme zıt, dokunma aynı, topraklı etki ise zıt işaretli yük verir.<br>• İletkende yük dış yüzeyde ve sivri uçlarda toplanır.<br>• Coulomb kuvveti 1/r² ile azalır. E vektör, V skalerdir.<br>• Sığa C = Q/V = ε·A/d ile bulunur.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='18' width='145' height='74' rx='8' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.5'/><text x='82.5' y='44' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Coulomb</text><text x='82.5' y='70' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>F = k·q₁·q₂ / r²</text><rect x='165' y='18' width='145' height='74' rx='8' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.5'/><text x='237.5' y='44' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>Alan (vektör)</text><text x='237.5' y='70' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>E = k·q / r²</text><rect x='10' y='108' width='145' height='74' rx='8' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.5'/><text x='82.5' y='134' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>Potansiyel (skaler)</text><text x='82.5' y='160' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>V = k·q / r</text><rect x='165' y='108' width='145' height='74' rx='8' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='237.5' y='134' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Sığaç</text><text x='237.5' y='160' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>C = Q / V</text></svg>"
       }
     ],
@@ -5529,7 +5529,7 @@
         "q": "2 μC ve 5 μC'luk iki noktasal yük arasında 0,3 m uzaklık var. Aralarındaki elektriksel kuvvet kaç N'dur? (k = 9×10<sup>9</sup> N·m²/C², 1 μC = 10<sup>−6</sup> C)",
         "cevap": 1,
         "birim": "N",
-        "e": "F = k·q₁·q₂/r² = 9×10<sup>9</sup>·2×10<sup>−6</sup>·5×10<sup>−6</sup>/0,09 = 0,09/0,09 = 1 N."
+        "e": "F = k·q₁·q₂/r² = 9×10<sup>9</sup>·2×10<sup>−6</sup>·5×10<sup>−6</sup>/0,09 = 0,09/0,09 = 1 N olur."
       },
       {
         "tur": "ayir",
@@ -5564,14 +5564,14 @@
             1
           ]
         ],
-        "e": "Elektron kaybeden ya da protonu elektronundan çok olan cisim (+) yüklüdür. Cam ipeğe sürtülünce elektron verir (+), ipek o elektronu alır (−); yüne sürtülen plastik çubuk (−) olur."
+        "e": "Elektron kaybeden ya da proton sayısı elektron sayısından fazla olan cisim (+) yüklüdür. Cam ipeğe sürtülünce elektron verir ve (+) yüklenir. İpek o elektronu alır ve (−) yüklenir. Yüne sürtülen plastik çubuk da (−) yüklenir."
       },
       {
         "tur": "sayi",
         "q": "Aralarında 2 cm bulunan paralel levhalara 100 V gerilim uygulanıyor. Levhaların arasındaki 2 μC'luk yüke etki eden elektriksel kuvvet kaç N'dur?",
         "cevap": 0.01,
         "birim": "N",
-        "e": "E = V / d = 100 / 0,02 = 5000 V/m. F = q·E = 2×10<sup>−6</sup>·5000 = 0,01 N; levhalar arasında her yerde aynıdır."
+        "e": "E = V / d = 100 / 0,02 = 5000 V/m olur. F = q·E = 2×10<sup>−6</sup>·5000 = 0,01 N bulunur ve bu kuvvet levhalar arasında her yerde aynıdır."
       },
       {
         "q": "Sığası 6 μF olan iki özdeş sığaç seri bağlanıp uçlarına 12 V gerilim uygulanıyor. Hangisi doğrudur?",
@@ -5582,12 +5582,12 @@
           "Eşdeğer sığa 6 μF, her sığacın gerilimi 6 V'tur."
         ],
         "a": 2,
-        "e": "Seride 1/C = 1/6 + 1/6, yani C = 3 μF. Yükler eşit, sığalar eşit olduğundan 12 V iki sığaca 6'şar volt bölünür.",
+        "e": "Seri bağlamada 1/C = 1/6 + 1/6 olur, yani C = 3 μF'dir. Yükler ve sığalar eşit olduğu için 12 V iki sığaca 6'şar volt olarak bölünür.",
         "y": [
-          "Seri bağlamada sığalar toplanmaz, terslerin toplamı alınır: 1/C = 1/6 + 1/6 olur.",
-          "Seri bağlı özdeş sığaçlar toplam gerilimi paylaşır; her birinin gerilimi 12/2 = 6 V olur.",
+          "Seri bağlamada sığalar toplanmaz, terslerinin toplamı alınır: 1/C = 1/6 + 1/6.",
+          "Seri bağlı özdeş sığaçlar toplam gerilimi paylaşır. Her birinin gerilimi 12/2 = 6 V olur.",
           "",
-          "Seri bağlamada eşdeğer sığa tek sığaçtan küçük olur: 6·6/(6+6) = 3 μF."
+          "Seri bağlamada eşdeğer sığa tek bir sığaçtan küçük olur ve 6·6/(6+6) = 3 μF'dir."
         ]
       }
     ]
@@ -5598,21 +5598,21 @@
     "cards": [
       {
         "h": "Elektrik akımı: I = q/t",
-        "p": "Kesitten birim zamanda geçen yüke <b>akım</b> denir: <b>I = q/t</b>, birimi amper (C/s). <b>Geleneksel akım</b> yönü, elektron akışının tersidir.",
+        "p": "Bir kesitten birim zamanda geçen yüke <b>akım</b> denir. Akım <b>I = q/t</b> ile bulunur ve birimi amperdir (C/s). <b>Geleneksel akımın</b> yönü, elektronların akış yönünün tersidir.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><defs><marker id='akim-1' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><defs><marker id='akim-2' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><text x='160' y='34' font-size='22' fill='var(--acc)' text-anchor='middle' font-weight='bold'>I = q / t</text><text x='305' y='34' font-size='12' fill='var(--muted)' text-anchor='end'>1 A = 1 C/s</text><rect x='30' y='70' width='260' height='50' rx='25' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><ellipse cx='160' cy='95' rx='8' ry='25' fill='none' stroke='var(--acc)' stroke-width='1.5' stroke-dasharray='4 3'/><text x='160' y='62' font-size='11' fill='var(--acc)' text-anchor='middle'>kesit</text><circle cx='65' cy='95' r='10' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><text x='65' y='100' font-size='14' fill='var(--c1)' text-anchor='middle' font-weight='bold'>−</text><circle cx='110' cy='95' r='10' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><text x='110' y='100' font-size='14' fill='var(--c1)' text-anchor='middle' font-weight='bold'>−</text><circle cx='210' cy='95' r='10' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><text x='210' y='100' font-size='14' fill='var(--c1)' text-anchor='middle' font-weight='bold'>−</text><circle cx='255' cy='95' r='10' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><text x='255' y='100' font-size='14' fill='var(--c1)' text-anchor='middle' font-weight='bold'>−</text><text x='17' y='101' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='bold'>+</text><text x='303' y='101' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='bold'>−</text><line x1='140' y1='142' x2='42' y2='142' stroke='var(--c1)' stroke-width='2.5' fill='none' marker-end='url(#akim-1)'/><text x='152' y='146' font-size='12' fill='var(--c1)'>elektron akışı (− → +)</text><line x1='42' y1='172' x2='140' y2='172' stroke='var(--c2)' stroke-width='2.5' fill='none' marker-end='url(#akim-2)'/><text x='152' y='176' font-size='12' fill='var(--c2)' font-weight='bold'>geleneksel akım I (+ → −)</text></svg>",
-        "key": "Metal telde yükü elektronlar taşır. 10 s'de kesitten 20 C geçerse I = 2 A."
+        "key": "Metal telde yükü elektronlar taşır. 10 saniyede kesitten 20 C yük geçerse akım 2 A olur."
       },
       {
         "h": "Potansiyel fark ve üreteç",
-        "p": "Yükleri hareket ettiren <b>potansiyel farktır</b> (gerilim), birimi volt (J/C). Pil gibi <b>üreteçler</b> başka bir enerjiyi elektriğe çevirip bu farkı korur.",
+        "p": "Yükleri hareket ettiren şey <b>potansiyel farktır</b>. Buna gerilim de denir ve birimi volttur (J/C). Pil gibi <b>üreteçler</b> başka bir enerjiyi elektrik enerjisine çevirir ve bu farkı korur.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><defs><marker id='akim-3' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><rect x='5' y='10' width='150' height='185' rx='8' fill='var(--panel)'/><text x='80' y='30' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>kapalı devre</text><line x1='25' y1='55' x2='68' y2='55' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='92' y1='55' x2='135' y2='55' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='80' cy='55' r='12' fill='var(--c4)' fill-opacity='0.55' stroke='var(--ink)' stroke-width='2'/><line x1='71.6' y1='46.6' x2='88.4' y2='63.4' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='71.6' y1='63.4' x2='88.4' y2='46.6' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='25' y1='55' x2='25' y2='140' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='135' y1='55' x2='135' y2='140' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='25' y1='140' x2='75' y2='140' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='85' y1='140' x2='135' y2='140' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='75' y1='126' x2='75' y2='154' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='85' y1='133' x2='85' y2='147' stroke='var(--ink)' stroke-width='4' fill='none'/><text x='68' y='124' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>+</text><text x='93' y='126' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>−</text><text x='80' y='170' font-size='11' fill='var(--muted)' text-anchor='middle'>üreteç</text><text x='80' y='188' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>akım var</text><rect x='165' y='10' width='150' height='185' rx='8' fill='var(--panel)'/><text x='240' y='30' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>açık devre</text><line x1='185' y1='55' x2='228' y2='55' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='252' y1='55' x2='295' y2='55' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='240' cy='55' r='12' fill='var(--panel)' fill-opacity='1' stroke='var(--ink)' stroke-width='2'/><line x1='231.6' y1='46.6' x2='248.4' y2='63.4' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='231.6' y1='63.4' x2='248.4' y2='46.6' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='185' y1='55' x2='185' y2='140' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='295' y1='55' x2='295' y2='85' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='295' y1='110' x2='295' y2='140' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='295' cy='110' r='2.5' fill='var(--ink)'/><line x1='295' y1='110' x2='282' y2='88' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='185' y1='140' x2='235' y2='140' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='245' y1='140' x2='295' y2='140' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='235' y1='126' x2='235' y2='154' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='245' y1='133' x2='245' y2='147' stroke='var(--ink)' stroke-width='4' fill='none'/><text x='228' y='124' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>+</text><text x='253' y='126' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>−</text><text x='240' y='170' font-size='11' fill='var(--muted)' text-anchor='middle'>üreteç</text><text x='240' y='188' font-size='12' fill='var(--muted)' text-anchor='middle' font-weight='bold'>akım yok</text><line x1='25' y1='125' x2='25' y2='78' stroke='var(--c2)' stroke-width='3' fill='none' marker-end='url(#akim-3)'/><text x='35' y='105' font-size='13' fill='var(--c2)' font-weight='bold'>I</text></svg>",
-        "key": "Akım için iki şart var: potansiyel fark ve kapalı devre.",
+        "key": "Akım oluşması için iki şart vardır. Bir potansiyel fark olmalı ve devre kapalı olmalıdır.",
         "once": {
           "soru": "Pili bir ampule bağladın ama tellerden biri kopuk. Ampul yanar mı?",
           "secenekler": [
             {
               "yazi": "Hayır",
-              "neden": "Akım için devrenin kapalı olması gerekir; kopuk telden yük geçemez.",
+              "neden": "Akım için devrenin kapalı olması gerekir. Kopuk telden yük geçemez.",
               "dogru": true
             },
             {
@@ -5621,26 +5621,26 @@
             },
             {
               "yazi": "Evet, normal",
-              "neden": "Gerilim var ama kapalı yol yok; akım oluşmaz."
+              "neden": "Burada gerilim var, ama kapalı bir yol yok. Bu yüzden akım oluşmaz."
             }
           ]
         }
       },
       {
         "h": "Direnç: R = ρ·L/A",
-        "p": "<b>Direnç</b> akıma karşı koymadır, birimi ohm. Telde <b>R = ρ·L/A</b>: boy uzadıkça artar, kesit büyüdükçe azalır. ρ, malzemeye bağlı <b>özdirençtir</b>.",
+        "p": "Bir maddenin akıma karşı koymasına <b>direnç</b> denir ve birimi ohmdur. Telin direnci <b>R = ρ·L/A</b> ile bulunur. Boy uzadıkça direnç artar, kesit büyüdükçe azalır. ρ, malzemeye bağlı olan <b>özdirençtir</b>.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='32' font-size='20' fill='var(--acc)' text-anchor='middle' font-weight='bold'>R = ρ · L / A</text><text x='10' y='76' font-size='12' fill='var(--muted)'>temel tel</text><rect x='95' y='65.0' width='80' height='14' rx='3' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='310' y='77' font-size='14' fill='var(--ink)' text-anchor='end' font-weight='bold'>R</text><text x='10' y='116' font-size='12' fill='var(--muted)'>boy 2 kat</text><rect x='95' y='105.0' width='160' height='14' rx='3' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='310' y='117' font-size='14' fill='var(--ink)' text-anchor='end' font-weight='bold'>2R</text><text x='10' y='161' font-size='12' fill='var(--muted)'>kesit 2 kat</text><rect x='95' y='143.0' width='80' height='28' rx='3' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='310' y='162' font-size='14' fill='var(--ink)' text-anchor='end' font-weight='bold'>R/2</text><text x='160' y='194' font-size='12' fill='var(--muted)' text-anchor='middle'>metallerde sıcaklık artınca R artar</text></svg>",
-        "key": "Özdirenç sıcaklığa da bağlıdır; metallerde sıcaklık artınca direnç artar. Tel çekilip boyu 2 katına çıkarsa kesiti yarıya iner, direnç 4 katına çıkar."
+        "key": "Özdirenç sıcaklığa da bağlıdır. Metallerde sıcaklık artınca direnç de artar. Tel çekilip boyu 2 katına çıkarılırsa kesiti yarıya iner ve direnci 4 katına çıkar."
       },
       {
         "h": "Ohm yasası ve V–I grafiği",
-        "p": "Sabit sıcaklıkta metal telde akım gerilimle doğru orantılıdır: <b>V = I·R</b>. V–I grafiği doğrudur, eğimi R'dir. Isınan ampul <b>ohmik değildir</b>.",
+        "p": "Sabit sıcaklıktaki bir metal telde akım, gerilimle doğru orantılıdır: <b>V = I·R</b>. Bu telin V–I grafiği bir doğrudur ve eğimi R'yi verir. Isınan bir ampul ise <b>ohmik değildir</b>.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><defs><marker id='akim-4' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><defs><marker id='akim-5' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><line x1='50' y1='172' x2='205' y2='172' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#akim-4)'/><line x1='50' y1='172' x2='50' y2='22' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#akim-5)'/><text x='40' y='30' font-size='13' fill='var(--ink)' text-anchor='end' font-weight='bold'>V</text><text x='205' y='190' font-size='13' fill='var(--ink)' text-anchor='end' font-weight='bold'>I</text><line x1='50' y1='172' x2='150' y2='42' stroke='var(--c1)' stroke-width='2.5' fill='none'/><text x='158' y='40' font-size='12' fill='var(--c1)' font-weight='bold'>metal tel</text><path d='M50 172 Q170 162 195 62' fill='none' stroke='var(--c2)' stroke-width='2.5'/><text x='165' y='150' font-size='12' fill='var(--c2)' font-weight='bold'>ampul</text><line x1='90' y1='120' x2='120' y2='120' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><line x1='120' y1='120' x2='120' y2='81' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><text x='124' y='106' font-size='11' fill='var(--muted)'>eğim</text><text x='312' y='55' font-size='16' fill='var(--acc)' text-anchor='end' font-weight='bold'>V = I·R</text><text x='312' y='80' font-size='12' fill='var(--ink)' text-anchor='end'>eğim = V/I = R</text><text x='312' y='115' font-size='12' fill='var(--ink)' text-anchor='end'>12 V, 4 Ω</text><text x='312' y='135' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>I = 12/4 = 3 A</text></svg>",
-        "key": "Ampul teli ısındıkça direnci artar, grafiği eğrilir. Ampulün direnci soğukken küçüktür; açıldığı an en büyük akımı çeker."
+        "key": "Ampulün teli ısındıkça direnci artar ve grafiği eğrilir. Ampulün direnci soğukken küçüktür. Bu yüzden ampul açıldığı anda en büyük akımı çeker."
       },
       {
         "h": "Devre sembolleri",
-        "p": "Üreteçte <b>uzun çizgi + kutup</b>, kısa çizgi − kutuptur. Ampul daire içinde çarpı, ampermetre (akım ölçer) daire içinde A, voltmetre (gerilim ölçer) daire içinde V'dir.",
+        "p": "Üreteç simgesinde <b>uzun çizgi + kutbu</b>, kısa çizgi ise − kutbu gösterir. Ampul, daire içinde bir çarpıyla gösterilir. Akımı ölçen ampermetre daire içinde A, gerilimi ölçen voltmetre ise daire içinde V ile gösterilir.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='15' width='100' height='80' rx='8' fill='var(--panel)'/><text x='55' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>üreteç</text><line x1='15' y1='60' x2='50' y2='60' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='60' y1='60' x2='95' y2='60' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='50' y1='46' x2='50' y2='74' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='60' y1='53' x2='60' y2='67' stroke='var(--ink)' stroke-width='4' fill='none'/><text x='40' y='48' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>+</text><text x='70' y='50' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>−</text><rect x='110' y='15' width='100' height='80' rx='8' fill='var(--panel)'/><text x='160' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>direnç</text><line x1='120' y1='60' x2='140' y2='60' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='180' y1='60' x2='200' y2='60' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='140' y='53.0' width='40' height='14' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.8'/><rect x='215' y='15' width='100' height='80' rx='8' fill='var(--panel)'/><text x='265' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>ampul</text><line x1='225' y1='60' x2='253' y2='60' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='277' y1='60' x2='305' y2='60' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='265' cy='60' r='12' fill='var(--panel)' fill-opacity='1' stroke='var(--ink)' stroke-width='2'/><line x1='256.6' y1='51.6' x2='273.4' y2='68.4' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='256.6' y1='68.4' x2='273.4' y2='51.6' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='5' y='100' width='100' height='80' rx='8' fill='var(--panel)'/><text x='55' y='173' font-size='12' fill='var(--muted)' text-anchor='middle'>anahtar (açık)</text><line x1='15' y1='145' x2='40' y2='145' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='70' y1='145' x2='95' y2='145' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='40' y1='145' x2='67' y2='129' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='40' cy='145' r='2.5' fill='var(--ink)'/><circle cx='70' cy='145' r='2.5' fill='var(--ink)'/><rect x='110' y='100' width='100' height='80' rx='8' fill='var(--panel)'/><text x='160' y='173' font-size='12' fill='var(--muted)' text-anchor='middle'>ampermetre</text><line x1='120' y1='145' x2='148' y2='145' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='172' y1='145' x2='200' y2='145' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='160' cy='145' r='12' fill='var(--panel)' stroke='var(--c5)' stroke-width='2'/><text x='160' y='150' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='bold'>A</text><rect x='215' y='100' width='100' height='80' rx='8' fill='var(--panel)'/><text x='265' y='173' font-size='12' fill='var(--muted)' text-anchor='middle'>voltmetre</text><line x1='225' y1='145' x2='253' y2='145' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='277' y1='145' x2='305' y2='145' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='265' cy='145' r='12' fill='var(--panel)' stroke='var(--c5)' stroke-width='2'/><text x='265' y='150' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='bold'>V</text><text x='160' y='195' font-size='11' fill='var(--ink)' text-anchor='middle'>uzun çizgi: + kutup, kısa çizgi: − kutup</text></svg>",
         "key": "Direnç kutu ya da zikzak çizilir. Bağlantı tellerinin direnci genellikle sıfır kabul edilir.",
         "once": {
@@ -5664,7 +5664,7 @@
       },
       {
         "h": "Seri bağlama",
-        "p": "Dirençler tek yol oluşturacak şekilde bağlanırsa <b>seridir</b>. Hepsinden <b>aynı akım</b> geçer, gerilim R'lerle orantılı paylaşılır: R<sub>eş</sub> = R₁ + R₂.",
+        "p": "Dirençler tek bir yol oluşturacak biçimde bağlanırsa bu bağlamaya <b>seri</b> bağlama denir. Hepsinden <b>aynı akım</b> geçer. Gerilim dirençlerle orantılı olarak paylaşılır: R<sub>eş</sub> = R₁ + R₂.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><defs><marker id='akim-6' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><line x1='40' y1='50' x2='70' y2='50' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='70' y='43.0' width='40' height='14' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.8'/><line x1='110' y1='50' x2='130' y2='50' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='130' y='43.0' width='40' height='14' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.8'/><line x1='170' y1='50' x2='200' y2='50' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='200' y1='50' x2='200' y2='160' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='40' y1='160' x2='200' y2='160' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='40' y1='50' x2='40' y2='100' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='40' y1='110' x2='40' y2='160' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='26' y1='100' x2='54' y2='100' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='33' y1='110' x2='47' y2='110' stroke='var(--ink)' stroke-width='4' fill='none'/><text x='30' y='96' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>+</text><text x='57' y='112' font-size='12' fill='var(--ink)'>12 V</text><text x='90' y='36' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>2 Ω</text><text x='150' y='36' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>4 Ω</text><text x='90' y='76' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>4 V</text><text x='150' y='76' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>8 V</text><line x1='160' y1='160' x2='95' y2='160' stroke='var(--c2)' stroke-width='3' fill='none' marker-end='url(#akim-6)'/><text x='120' y='182' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>her yerde I = 2 A</text><text x='214' y='60' font-size='12' fill='var(--ink)' font-weight='bold'>Reş = 2 + 4 = 6 Ω</text><text x='214' y='84' font-size='12' fill='var(--ink)'>I = 12/6 = 2 A</text><text x='214' y='108' font-size='12' fill='var(--ink)'>V₁ = 2·2 = 4 V</text><text x='214' y='132' font-size='12' fill='var(--ink)'>V₂ = 2·4 = 8 V</text><text x='214' y='156' font-size='12' fill='var(--ink)'>4 + 8 = 12 V</text></svg>",
         "key": "Büyük dirence büyük gerilim düşer.",
         "once": {
@@ -5672,7 +5672,7 @@
           "secenekler": [
             {
               "yazi": "Daha sönük",
-              "neden": "Eşdeğer direnç artar, akım azalır; her ampul daha sönük yanar.",
+              "neden": "Eşdeğer direnç artar ve akım azalır. Bu yüzden her ampul daha sönük yanar.",
               "dogru": true
             },
             {
@@ -5681,14 +5681,14 @@
             },
             {
               "yazi": "Aynı",
-              "neden": "Toplam direnç değişti; akım da değişir."
+              "neden": "Toplam direnç değiştiği için akım da değişir."
             }
           ]
         }
       },
       {
         "h": "Reosta: ayarlanabilir direnç",
-        "p": "<b>Reosta</b>, sürgüsüyle direnci ayarlanan bir dirençtir. Sürgü akımın geçtiği telin boyunu değiştirir; tel uzarsa direnç artar, devre akımı azalır.",
+        "p": "Sürgüsüyle direnci ayarlanabilen dirence <b>reosta</b> denir. Sürgü, akımın geçtiği telin boyunu değiştirir. Tel uzarsa direnç artar ve devredeki akım azalır.",
         "key": "Ses düğmesindeki potansiyometre de böyle çalışır.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='50' x2='98' y2='50' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='110' cy='50' r='12' fill='var(--c4)' fill-opacity='0.3' stroke='var(--ink)' stroke-width='1.5'/><line x1='101.5' y1='41.5' x2='118.5' y2='58.5' stroke='var(--ink)' stroke-width='1.2'/><line x1='101.5' y1='58.5' x2='118.5' y2='41.5' stroke='var(--ink)' stroke-width='1.2'/><line x1='122' y1='50' x2='170' y2='50' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='170' y='43' width='80' height='14' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.8'/><line x1='182' y1='74' x2='233' y2='29' stroke='var(--c2)' stroke-width='2' fill='none'/><polygon points='239,24 235.6,32.9 229.6,26.2' fill='var(--c2)'/><line x1='250' y1='50' x2='280' y2='50' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='280' y1='50' x2='280' y2='160' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='40' y1='160' x2='280' y2='160' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='40' y1='50' x2='40' y2='100' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='40' y1='110' x2='40' y2='160' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='26' y1='100' x2='54' y2='100' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='33' y1='110' x2='47' y2='110' stroke='var(--ink)' stroke-width='4' fill='none'/><text x='30' y='96' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>+</text><text x='110' y='82' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>lamba</text><text x='210' y='94' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>reosta</text><text x='160' y='130' font-size='12' fill='var(--muted)' text-anchor='middle'>R = ρ·L/A</text><text x='160' y='184' font-size='11' fill='var(--c2)' text-anchor='middle'>sürgü: L artar → R artar → I azalır → lamba sönük</text></svg>",
         "once": {
@@ -5705,16 +5705,16 @@
             },
             {
               "yazi": "Değişmez",
-              "neden": "Reosta lambaya seri; akım ikisinden de geçer."
+              "neden": "Reosta lambaya seri bağlıdır. Bu yüzden akım ikisinden de geçer."
             }
           ]
         }
       },
       {
         "h": "Paralel bağlama",
-        "p": "Dirençler aynı iki nokta arasına ayrı kollarla bağlanırsa <b>paraleldir</b>. Hepsinde <b>aynı gerilim</b> vardır; akım dirençle ters orantılı paylaşılır: 1/R<sub>eş</sub> = 1/R₁ + 1/R₂.",
+        "p": "Dirençler aynı iki nokta arasına ayrı kollarla bağlanırsa bu bağlamaya <b>paralel</b> bağlama denir. Hepsinde <b>aynı gerilim</b> bulunur. Akım dirençle ters orantılı paylaşılır: 1/R<sub>eş</sub> = 1/R₁ + 1/R₂.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><defs><marker id='akim-7' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><line x1='25' y1='40' x2='160' y2='40' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='25' y1='170' x2='160' y2='170' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='25' y1='40' x2='25' y2='100' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='25' y1='110' x2='25' y2='170' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='11' y1='100' x2='39' y2='100' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='18' y1='110' x2='32' y2='110' stroke='var(--ink)' stroke-width='4' fill='none'/><text x='42' y='112' font-size='12' fill='var(--ink)'>12 V</text><line x1='95' y1='40' x2='95' y2='88' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='88.0' y='88' width='14' height='34' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.8'/><line x1='95' y1='122' x2='95' y2='170' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='160' y1='40' x2='160' y2='88' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='153.0' y='88' width='14' height='34' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.8'/><line x1='160' y1='122' x2='160' y2='170' stroke='var(--ink)' stroke-width='2' fill='none'/><text x='106' y='110' font-size='12' fill='var(--ink)' font-weight='bold'>3 Ω</text><text x='171' y='110' font-size='12' fill='var(--ink)' font-weight='bold'>6 Ω</text><text x='106' y='150' font-size='12' fill='var(--c2)' font-weight='bold'>4 A</text><text x='171' y='150' font-size='12' fill='var(--c2)' font-weight='bold'>2 A</text><line x1='32' y1='40' x2='78' y2='40' stroke='var(--c2)' stroke-width='3' fill='none' marker-end='url(#akim-7)'/><text x='55' y='30' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>I = 6 A</text><text x='212' y='55' font-size='12' fill='var(--ink)'>Reş = 3·6/(3+6)</text><text x='240' y='79' font-size='12' fill='var(--ink)' font-weight='bold'>= 2 Ω</text><text x='212' y='103' font-size='12' fill='var(--ink)'>I₁ = 12/3 = 4 A</text><text x='212' y='127' font-size='12' fill='var(--ink)'>I₂ = 12/6 = 2 A</text><text x='212' y='151' font-size='12' fill='var(--ink)'>I = 4 + 2 = 6 A</text><text x='260' y='190' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>her kolda 12 V</text></svg>",
-        "key": "İki direnç için Reş = R₁·R₂/(R₁ + R₂). Paralelde eşdeğer direnç en küçük kol direncinden de küçüktür. Evlerdeki tesisat paraleldir.",
+        "key": "İki direnç için Reş = R₁·R₂/(R₁ + R₂) olur. Paralel bağlamada eşdeğer direnç, en küçük kol direncinden de küçüktür. Evlerdeki elektrik tesisatı paralel bağlıdır.",
         "etk": {
           "tur": "formul",
           "soru": "İki direnci paralel bağla. Akım hangi koldan daha çok geçer?",
@@ -5771,15 +5771,15 @@
       },
       {
         "h": "Kısa devre",
-        "p": "Bir direncin uçları dirençsiz telle birleşirse akım telden geçer, dirençten geçmez: <b>kısa devre</b>. Pilin iki ucu birleşirse çok büyük akım geçer.",
+        "p": "Bir direncin uçları dirençsiz bir telle birleştirilirse akım dirençten değil telden geçer. Buna <b>kısa devre</b> denir. Pilin iki ucu birleştirilirse devreden çok büyük bir akım geçer.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><defs><marker id='akim-8' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><line x1='40' y1='70' x2='88' y2='70' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='100' cy='70' r='12' fill='var(--c4)' fill-opacity='0.55' stroke='var(--ink)' stroke-width='2'/><line x1='91.6' y1='61.6' x2='108.4' y2='78.4' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='91.6' y1='78.4' x2='108.4' y2='61.6' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='112' y1='70' x2='168' y2='70' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='180' cy='70' r='12' fill='var(--panel)' fill-opacity='1' stroke='var(--ink)' stroke-width='2'/><line x1='171.6' y1='61.6' x2='188.4' y2='78.4' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='171.6' y1='78.4' x2='188.4' y2='61.6' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='192' y1='70' x2='230' y2='70' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='230' y1='70' x2='230' y2='150' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='40' y1='70' x2='40' y2='150' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='40' y1='150' x2='135' y2='150' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='145' y1='150' x2='230' y2='150' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='135' y1='136' x2='135' y2='164' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='145' y1='143' x2='145' y2='157' stroke='var(--ink)' stroke-width='4' fill='none'/><path d='M145 70 L145 35 L215 35 L215 70' fill='none' stroke='var(--c2)' stroke-width='3'/><line x1='160' y1='35' x2='200' y2='35' stroke='var(--c2)' stroke-width='3' fill='none' marker-end='url(#akim-8)'/><text x='180' y='24' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>dirençsiz tel</text><text x='100' y='102' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>L₁ yanar</text><text x='180' y='102' font-size='12' fill='var(--muted)' text-anchor='middle' font-weight='bold'>L₂ söner</text><text x='242' y='100' font-size='12' fill='var(--ink)'>L₂'nin</text><text x='242' y='116' font-size='12' fill='var(--ink)'>uçları</text><text x='242' y='132' font-size='12' fill='var(--ink)'>arası V = 0</text><text x='160' y='188' font-size='12' fill='var(--muted)' text-anchor='middle'>akım dirençsiz yolu izler</text></svg>",
-        "key": "Uçları arasında potansiyel fark kalmayan dirençten akım geçmez. Kısa devrede pil ısınır; sigortalar bu yüzden kullanılır.",
+        "key": "Uçları arasında potansiyel fark kalmayan bir dirençten akım geçmez. Kısa devrede pil ısınır. Sigortalar bu yüzden kullanılır.",
         "once": {
           "soru": "Bir ampulün iki ucunu dirençsiz bir telle birleştiriyorsun. Ampul ne olur?",
           "secenekler": [
             {
               "yazi": "Söner",
-              "neden": "Akım dirençsiz teli seçer; ampule uğramaz.",
+              "neden": "Akım dirençsiz teli seçer ve ampule uğramaz.",
               "dogru": true
             },
             {
@@ -5788,16 +5788,16 @@
             },
             {
               "yazi": "Değişmez",
-              "neden": "Uçları aynı potansiyele geldi; ampulden akım geçmez."
+              "neden": "Ampulün uçları aynı potansiyele geldi. Bu yüzden ampulden akım geçmez."
             }
           ]
         }
       },
       {
         "h": "Karışık devre adım adım",
-        "p": "Karışık devreyi içten dışa çöz. Paralel grupları tek dirence indir, serileri topla. <b>I = V/R<sub>eş</sub></b> ile ana akımı bul. Sonra gerilimleri ve kol akımlarını bul.",
+        "p": "Karışık bir devreyi içten dışa doğru çözersin. Önce paralel grupları tek dirence indirir, sonra seri dirençleri toplarsın. Ana akımı <b>I = V/R<sub>eş</sub></b> ile bulursun. Ardından gerilimleri ve kol akımlarını hesaplarsın.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='40' x2='45' y2='40' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='45' y='33.0' width='40' height='14' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.8'/><line x1='85' y1='40' x2='150' y2='40' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='20' y1='40' x2='20' y2='100' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='20' y1='110' x2='20' y2='170' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='6' y1='100' x2='34' y2='100' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='13' y1='110' x2='27' y2='110' stroke='var(--ink)' stroke-width='4' fill='none'/><line x1='20' y1='170' x2='150' y2='170' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='110' y1='40' x2='110' y2='88' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='103.0' y='88' width='14' height='34' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.8'/><line x1='110' y1='122' x2='110' y2='170' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='150' y1='40' x2='150' y2='88' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='143.0' y='88' width='14' height='34' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.8'/><line x1='150' y1='122' x2='150' y2='170' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='110' cy='40' r='3' fill='var(--ink)'/><circle cx='110' cy='170' r='3' fill='var(--ink)'/><text x='65' y='28' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>2 Ω</text><text x='31' y='112' font-size='12' fill='var(--ink)'>12 V</text><text x='97' y='110' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>3 Ω</text><text x='161' y='110' font-size='12' fill='var(--ink)' font-weight='bold'>6 Ω</text><rect x='90' y='62' width='82' height='84' rx='6' fill='none' stroke='var(--acc)' stroke-width='1.2' stroke-dasharray='4 3'/><text x='188' y='40' font-size='12' fill='var(--acc)'>1) 3∥6 → 18/9 = 2 Ω</text><text x='188' y='65' font-size='12' fill='var(--acc)'>2) Reş = 2 + 2 = 4 Ω</text><text x='188' y='90' font-size='12' fill='var(--ink)' font-weight='bold'>3) I = 12/4 = 3 A</text><text x='188' y='115' font-size='12' fill='var(--ink)'>4) V(2 Ω) = 6 V</text><text x='204' y='140' font-size='12' fill='var(--ink)'>V(∥) = 6 V</text><text x='188' y='165' font-size='12' fill='var(--ink)'>5) I₃ = 2 A, I₆ = 1 A</text></svg>",
-        "key": "Kontrol et: seri parçaların gerilimleri toplamı üreteç gerilimine eşit olmalı.",
+        "key": "Sonucu kontrol et. Seri parçaların gerilimlerinin toplamı, üretecin gerilimine eşit olmalıdır.",
         "etk": {
           "tur": "sirala",
           "soru": "Karışık bir devreyi çözerken adımları doğru sıraya koy.",
@@ -5820,12 +5820,12 @@
           "secenekler": [
             {
               "yazi": "Hiç",
-              "neden": "Akım için potansiyel fark gerekir: V = 0 ise I = 0.",
+              "neden": "Akım için potansiyel fark gerekir. V = 0 ise I da 0 olur.",
               "dogru": true
             },
             {
               "yazi": "Çok büyük",
-              "neden": "Kısa devre teli değil, direnç; uçları arasında fark yok."
+              "neden": "Kısa devre olan tel değil, dirençtir. Direncin uçları arasında fark yoktur."
             },
             {
               "yazi": "Direncine bağlı",
@@ -5842,20 +5842,20 @@
       },
       {
         "h": "Emk ve iç direnç",
-        "p": "Üretecin birim yüke kazandırdığı enerji <b>emk</b>'dır (ε). Pilin <b>iç direnci</b> (r) vardır: uç gerilimi <b>V = ε − I·r</b>, akım I = ε/(R + r).",
+        "p": "Üretecin birim yüke kazandırdığı enerjiye <b>emk</b> (ε) denir. Pilin bir <b>iç direnci</b> (r) vardır. Uç gerilimi <b>V = ε − I·r</b>, akım ise I = ε/(R + r) olur.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><defs><marker id='akim-9' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><line x1='25' y1='50' x2='85' y2='50' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='85' y='43.0' width='40' height='14' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.8'/><line x1='125' y1='50' x2='185' y2='50' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='25' y1='50' x2='25' y2='150' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='185' y1='50' x2='185' y2='150' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='25' y1='150' x2='60' y2='150' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='60' y1='136' x2='60' y2='164' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='70' y1='143' x2='70' y2='157' stroke='var(--ink)' stroke-width='4' fill='none'/><line x1='70' y1='150' x2='95' y2='150' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='95' y='144.0' width='30' height='12' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1.8'/><line x1='125' y1='150' x2='185' y2='150' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='48' y='128' width='88' height='42' rx='6' fill='none' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='4 3'/><text x='105' y='36' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>R = 5 Ω</text><text x='92' y='186' font-size='12' fill='var(--muted)' text-anchor='middle'>pil: ε = 12 V, r = 1 Ω</text><text x='110' y='124' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>r</text><line x1='185' y1='75' x2='185' y2='120' stroke='var(--c2)' stroke-width='3' fill='none' marker-end='url(#akim-9)'/><text x='170' y='102' font-size='13' fill='var(--c2)' text-anchor='end' font-weight='bold'>I</text><text x='200' y='60' font-size='12' fill='var(--acc)' font-weight='bold'>I = ε / (R + r)</text><text x='200' y='86' font-size='12' fill='var(--ink)'>= 12 / 6 = 2 A</text><text x='200' y='126' font-size='12' fill='var(--acc)' font-weight='bold'>V = ε − I·r</text><text x='200' y='152' font-size='12' fill='var(--ink)'>= 12 − 2·1 = 10 V</text></svg>",
-        "key": "Akım yoksa V = ε. Pil akım verirken uç gerilimi emk'dan I·r kadar küçüktür.",
+        "key": "Devrede akım yoksa V = ε olur. Pil akım verirken uç gerilimi emk'dan I·r kadar küçüktür.",
         "once": {
           "soru": "Emk'sı 12 V, iç direnci 1 Ω olan pil 2 A akım veriyor. Uç gerilimi kaç V?",
           "secenekler": [
             {
               "yazi": "10",
-              "neden": "V = ε − I·r = 12 − 2·1 = 10 V.",
+              "neden": "V = ε − I·r = 12 − 2·1 = 10 V olur.",
               "dogru": true
             },
             {
               "yazi": "12",
-              "neden": "İç dirençte 2 V harcanır; uç gerilimi emk'dan küçüktür."
+              "neden": "İç dirençte 2 V harcanır. Bu yüzden uç gerilimi emk'dan küçüktür."
             },
             {
               "yazi": "14",
@@ -5866,15 +5866,15 @@
       },
       {
         "h": "Üreteçlerin bağlanması",
-        "p": "Özdeş pilleri <b>seri</b> bağlarsan emk'lar ve iç dirençler toplanır: n pil n·ε verir. <b>Paralel</b> bağlı özdeş pillerin emk'sı tek pilinki kadardır.",
+        "p": "Özdeş pilleri <b>seri</b> bağlarsan emk'lar ve iç dirençler toplanır. Yani n tane pil n·ε verir. <b>Paralel</b> bağlı özdeş pillerin emk'sı ise tek bir pilinkine eşittir.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='8' width='150' height='186' rx='8' fill='var(--panel)'/><rect x='165' y='8' width='150' height='186' rx='8' fill='var(--panel)'/><text x='80' y='28' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>seri</text><text x='240' y='28' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>paralel</text><line x1='15' y1='85' x2='40' y2='85' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='50' y1='85' x2='75' y2='85' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='85' y1='85' x2='110' y2='85' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='120' y1='85' x2='145' y2='85' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='40' y1='71' x2='40' y2='99' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='50' y1='78' x2='50' y2='92' stroke='var(--ink)' stroke-width='4' fill='none'/><line x1='75' y1='71' x2='75' y2='99' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='85' y1='78' x2='85' y2='92' stroke='var(--ink)' stroke-width='4' fill='none'/><line x1='110' y1='71' x2='110' y2='99' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='120' y1='78' x2='120' y2='92' stroke='var(--ink)' stroke-width='4' fill='none'/><text x='33' y='68' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>+</text><text x='125' y='70' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>−</text><text x='80' y='128' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='bold'>εeş = 3ε</text><text x='80' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>reş = 3r</text><text x='80' y='180' font-size='12' fill='var(--muted)' text-anchor='middle'>gerilim artar</text><line x1='195' y1='50' x2='195' y2='130' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='285' y1='50' x2='285' y2='130' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='195' y1='55' x2='235' y2='55' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='235' y1='44' x2='235' y2='66' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='244' y1='49' x2='244' y2='61' stroke='var(--ink)' stroke-width='4' fill='none'/><line x1='244' y1='55' x2='285' y2='55' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='195' cy='55' r='2.5' fill='var(--ink)'/><circle cx='285' cy='55' r='2.5' fill='var(--ink)'/><line x1='195' y1='90' x2='235' y2='90' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='235' y1='79' x2='235' y2='101' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='244' y1='84' x2='244' y2='96' stroke='var(--ink)' stroke-width='4' fill='none'/><line x1='244' y1='90' x2='285' y2='90' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='195' cy='90' r='2.5' fill='var(--ink)'/><circle cx='285' cy='90' r='2.5' fill='var(--ink)'/><line x1='195' y1='125' x2='235' y2='125' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='235' y1='114' x2='235' y2='136' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='244' y1='119' x2='244' y2='131' stroke='var(--ink)' stroke-width='4' fill='none'/><line x1='244' y1='125' x2='285' y2='125' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='195' cy='125' r='2.5' fill='var(--ink)'/><circle cx='285' cy='125' r='2.5' fill='var(--ink)'/><text x='240' y='150' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='bold'>εeş = ε,  reş = r/3</text><text x='240' y='180' font-size='12' fill='var(--muted)' text-anchor='middle'>daha uzun süre yanar</text></svg>",
-        "key": "Paralelde aynı lamba daha uzun süre yanar: εeş = ε, reş = r/n. Seride ters bağlanan pilin emk'sı çıkarılır, iç direnci yine eklenir.",
+        "key": "Paralel bağlı pillerle aynı lamba daha uzun süre yanar. Bu durumda εeş = ε ve reş = r/n olur. Seride ters bağlanan pilin emk'sı çıkarılır, ama iç direnci yine eklenir.",
         "once": {
           "soru": "1,5 V'luk üç pili seri bağlıyorsun. Toplam emk kaç V?",
           "secenekler": [
             {
               "yazi": "4,5",
-              "neden": "Seride emk'lar toplanır: 3 × 1,5 = 4,5 V.",
+              "neden": "Seri bağlamada emk'lar toplanır: 3 × 1,5 = 4,5 V.",
               "dogru": true
             },
             {
@@ -5890,31 +5890,31 @@
       },
       {
         "h": "Kirchhoff kuralları",
-        "p": "<b>Düğüm kuralı:</b> bir noktaya giren akımların toplamı çıkanlara eşittir. <b>İlmek kuralı:</b> kapalı yolda üreteçlerin gerilimi, dirençlerde düşen gerilimlerin toplamına eşittir.",
+        "p": "<b>Düğüm kuralına</b> göre bir noktaya giren akımların toplamı, çıkan akımların toplamına eşittir. <b>İlmek kuralına</b> göre kapalı bir yolda üreteçlerin gerilimi, dirençlerde düşen gerilimlerin toplamına eşittir.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><defs><marker id='akim-10' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='akim-11' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><defs><marker id='akim-12' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><rect x='5' y='8' width='170' height='186' rx='8' fill='var(--panel)'/><rect x='180' y='8' width='135' height='186' rx='8' fill='var(--panel)'/><text x='90' y='28' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>düğüm kuralı</text><text x='247' y='28' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>ilmek kuralı</text><line x1='15' y1='105' x2='64' y2='105' stroke='var(--c2)' stroke-width='3' fill='none' marker-end='url(#akim-10)'/><circle cx='70' cy='105' r='4' fill='var(--ink)'/><line x1='73' y1='102' x2='120' y2='62' stroke='var(--c3)' stroke-width='3' fill='none' marker-end='url(#akim-11)'/><line x1='73' y1='108' x2='120' y2='148' stroke='var(--c3)' stroke-width='3' fill='none' marker-end='url(#akim-12)'/><text x='38' y='95' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>5 A</text><text x='126' y='64' font-size='12' fill='var(--c3)' font-weight='bold'>3 A</text><text x='126' y='154' font-size='12' fill='var(--c3)' font-weight='bold'>2 A</text><text x='90' y='184' font-size='12' fill='var(--ink)' text-anchor='middle'>giren = çıkan: 5 = 3 + 2</text><line x1='200' y1='60' x2='235' y2='60' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='235' y='53.0' width='40' height='14' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.8'/><line x1='275' y1='60' x2='295' y2='60' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='295' y1='60' x2='295' y2='92' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='288.0' y='92' width='14' height='36' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.8'/><line x1='295' y1='128' x2='295' y2='150' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='200' y1='150' x2='295' y2='150' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='200' y1='60' x2='200' y2='100' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='200' y1='110' x2='200' y2='150' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='186' y1='100' x2='214' y2='100' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='193' y1='110' x2='207' y2='110' stroke='var(--ink)' stroke-width='4' fill='none'/><text x='255' y='46' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>4 V</text><text x='282' y='114' font-size='12' fill='var(--c1)' text-anchor='end' font-weight='bold'>8 V</text><text x='212' y='112' font-size='12' fill='var(--ink)'>12 V</text><text x='247' y='175' font-size='12' fill='var(--ink)' text-anchor='middle'>12 − 4 − 8 = 0</text></svg>",
-        "key": "Düğüm kuralı yükün, ilmek kuralı enerjinin korunumudur. Akım dirençte tükenmez; dirençten çıkan akım girene eşittir.",
+        "key": "Düğüm kuralı yükün, ilmek kuralı ise enerjinin korunumunu anlatır. Akım dirençte tükenmez. Dirençten çıkan akım, dirence giren akıma eşittir.",
         "once": {
           "soru": "Bir düğüme 5 A ve 3 A giriyor, tek bir telden çıkıyor. Çıkan akım kaç A?",
           "secenekler": [
             {
               "yazi": "8",
-              "neden": "Giren akımların toplamı çıkana eşittir: 5 + 3.",
+              "neden": "Giren akımların toplamı çıkan akıma eşittir: 5 + 3.",
               "dogru": true
             },
             {
               "yazi": "2",
-              "neden": "İki akım da giriyor; çıkarılmaz, toplanır."
+              "neden": "İki akım da düğüme giriyor. Bu yüzden çıkarılmaz, toplanır."
             },
             {
               "yazi": "5",
-              "neden": "Yük korunur; 3 A da çıkmak zorunda."
+              "neden": "Yük korunur. Bu yüzden 3 A da düğümden çıkmak zorundadır."
             }
           ]
         }
       },
       {
         "h": "Özet",
-        "p": "• I = q/t; geleneksel akım, elektron akışının tersi yönündedir.<br>• R = ρ·L/A ve V = I·R; V–I grafiğinin eğimi R'dir.<br>• Seride akım, paralelde gerilim aynıdır.<br>• Ampermetre seri, voltmetre paralel bağlanır.<br>• Gerçek pilde uç gerilimi V = ε − I·r.",
+        "p": "• I = q/t olur. Geleneksel akım elektronlara ters yöndedir.<br>• R = ρ·L/A ve V = I·R olur.<br>• V–I grafiğinin eğimi direnci verir.<br>• Seride akım, paralelde gerilim aynıdır.<br>• Ampermetre seri, voltmetre paralel bağlanır.<br>• Gerçek pilde uç gerilimi V = ε − I·r olur.",
         "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='105' y='12' width='100' height='32' rx='5' fill='var(--acc)' fill-opacity='0.15'/><text x='155.0' y='33' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>seri</text><rect x='210' y='12' width='105' height='32' rx='5' fill='var(--acc)' fill-opacity='0.15'/><text x='262.5' y='33' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>paralel</text><rect x='10' y='48' width='95' height='32' rx='5' fill='var(--panel)' fill-opacity='1'/><text x='57.5' y='69' font-size='11' fill='var(--muted)' text-anchor='middle'>akım</text><rect x='105' y='48' width='100' height='32' rx='5' fill='var(--panel)' fill-opacity='1'/><text x='155.0' y='69' font-size='12' fill='var(--ink)' text-anchor='middle'>aynı</text><rect x='210' y='48' width='105' height='32' rx='5' fill='var(--panel)' fill-opacity='1'/><text x='262.5' y='69' font-size='12' fill='var(--ink)' text-anchor='middle'>paylaşılır</text><rect x='10' y='84' width='95' height='32' rx='5' fill='var(--panel)' fill-opacity='1'/><text x='57.5' y='105' font-size='11' fill='var(--muted)' text-anchor='middle'>gerilim</text><rect x='105' y='84' width='100' height='32' rx='5' fill='var(--panel)' fill-opacity='1'/><text x='155.0' y='105' font-size='12' fill='var(--ink)' text-anchor='middle'>paylaşılır</text><rect x='210' y='84' width='105' height='32' rx='5' fill='var(--panel)' fill-opacity='1'/><text x='262.5' y='105' font-size='12' fill='var(--ink)' text-anchor='middle'>aynı</text><rect x='10' y='120' width='95' height='32' rx='5' fill='var(--panel)' fill-opacity='1'/><text x='57.5' y='141' font-size='11' fill='var(--muted)' text-anchor='middle'>Reş</text><rect x='105' y='120' width='100' height='32' rx='5' fill='var(--panel)' fill-opacity='1'/><text x='155.0' y='141' font-size='12' fill='var(--ink)' text-anchor='middle'>R₁ + R₂</text><rect x='210' y='120' width='105' height='32' rx='5' fill='var(--panel)' fill-opacity='1'/><text x='262.5' y='141' font-size='12' fill='var(--ink)' text-anchor='middle'>R₁R₂/(R₁+R₂)</text><text x='160' y='172' font-size='11' fill='var(--ink)' text-anchor='middle'>paralelde Reş, en küçük dirençten bile küçük</text><text x='160' y='194' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='bold'>ampermetre seri, voltmetre paralel</text></svg>"
       }
     ],
@@ -5924,7 +5924,7 @@
         "q": "6 Ω'luk bir direnç, birbirine paralel bağlı 4 Ω ve 12 Ω'luk dirençlerden oluşan gruba seri bağlanıyor. Devre iç direnci önemsiz 18 V'luk üretece bağlanırsa ana koldan geçen akım kaç amper olur?",
         "cevap": 2,
         "birim": "A",
-        "e": "Paralel kısım 4·12/(4 + 12) = 3 Ω olur; R<sub>eş</sub> = 6 + 3 = 9 Ω ve I = 18/9 = 2 A."
+        "e": "Paralel kısmın direnci 4·12/(4 + 12) = 3 Ω olur. Eşdeğer direnç 6 + 3 = 9 Ω, akım ise 18/9 = 2 A olur."
       },
       {
         "tur": "ayir",
@@ -5967,14 +5967,14 @@
             1
           ]
         ],
-        "e": "Seride akımın tek yolu vardır, akım ortaktır ve dirençler toplanır; ampermetre bu yüzden seri bağlanır. Paralelde her kolun gerilimi aynıdır, akım kollara bölünür; voltmetre paralel bağlanır."
+        "e": "Seri bağlamada akımın tek yolu vardır. Akım ortaktır ve dirençler toplanır. Ampermetre bu yüzden seri bağlanır. Paralel bağlamada her kolun gerilimi aynıdır ve akım kollara bölünür. Voltmetre bu yüzden paralel bağlanır."
       },
       {
         "tur": "sayi",
         "q": "Emk'sı 12 V, iç direnci 1 Ω olan bir pil 5 Ω'luk dirence bağlanıyor. Pilin uçları arasındaki gerilim kaç V olur?",
         "cevap": 10,
         "birim": "V",
-        "e": "I = ε/(R + r) = 12/6 = 2 A. Uç gerilimi V = ε − I·r = 12 − 2·1 = 10 V; 2 V pilin içinde harcanır."
+        "e": "Akım I = ε/(R + r) = 12/6 = 2 A olur. Uç gerilimi V = ε − I·r = 12 − 2·1 = 10 V olur. Kalan 2 V pilin içinde harcanır."
       },
       {
         "q": "Bir metal tel, hacmi değişmeden çekilerek boyu 3 katına çıkarılıyor. Sıcaklık değişmediğine göre telin yeni direnci ilk direncin kaç katıdır?",
@@ -5987,9 +5987,9 @@
         "a": 3,
         "e": "Hacim sabit kaldığı için boy 3 katına çıkınca kesit alanı üçte birine iner. R = ρ·L/A'da L 3 kat, A ⅓ kat olduğundan R 9 katına çıkar.",
         "y": [
-          "Yalnızca boyu hesaba kattın; uzayan tel incelir, kesit de üçte birine iner.",
-          "Uzayan tel incelir; hem L artar hem A azalır, direnç azalmaz artar.",
-          "Hacim sabit olsa da boy ve kesit değişir; R = ρL/A ile direnç değişir.",
+          "Yalnızca boyu hesaba kattın. Uzayan tel incelir ve kesiti de üçte birine iner.",
+          "Uzayan tel incelir. Hem L artar hem A azalır, bu yüzden direnç azalmaz, artar.",
+          "Hacim sabit kalsa da boy ve kesit değişir. R = ρL/A olduğu için direnç de değişir.",
           ""
         ]
       }

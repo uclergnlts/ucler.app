@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "elektrik-akimi",
  "baslik": "Elektrik Akımı",
- "ozet": "Önce dene, sonra adını öğren: anahtarı kapat, teli uzat, ampulleri seri ve paralel bağla, karışık devreyi çöz.",
+ "ozet": "Önce dene, sonra adını öğren. Anahtarı kapat, teli uzat, ampulleri seri ve paralel bağla ve karışık devreyi çöz.",
  "adimlar": [
   {
    "baslik": "Akım nedir?",
-   "metin": "Elektronlar (−) kutuptan çıkar; geleneksel akım ters yöndedir. Anahtarı kapat.",
+   "metin": "Elektronlar (−) kutuptan çıkar ve geleneksel akım bunun tersi yöndedir. Anahtarı kapat.",
    "sahne": {
     "tur": "fiz9-devre"
    },
@@ -28,13 +28,13 @@
     "hedef": {
      "k": 1
     },
-    "tamam": "Devre tamamlandı. Kesitten 1 dakikada 30 C geçiyorsa I = 30 / 60 = <b>0,5 A</b>. Açık devrede akım olmaz."
+    "tamam": "Devre tamamlandı. Kesitten 1 dakikada 30 C yük geçiyorsa akım I = 30 / 60 = <b>0,5 A</b> olur. Açık devrede akım oluşmaz."
    },
    "kart": 1
   },
   {
    "baslik": "Ohm yasası",
-   "metin": "Direnç 4 Ω. Gerilimi artır ve <b>2 A</b> akım elde et: <b>V = I · R</b>.",
+   "metin": "Direnç 4 Ω'dur. Gerilimi artır ve <b>2 A</b> akım elde et. Bunun için <b>V = I · R</b> bağıntısını kullan.",
    "sahne": {
     "tur": "fiz9-ohm",
     "R": 4
@@ -57,8 +57,8 @@
     "hedef": {
      "V": 8
     },
-    "tamam": "V = I · R = 2 · 4 = <b>8 V</b>. Gerilim iki katına çıkarsa akım da iki katına çıkar; V–I grafiği bir doğrudur.",
-    "ipucu": "I = V / R; 2 A için V = 2 · 4."
+    "tamam": "V = I · R = 2 · 4 = <b>8 V</b> olur. Gerilim iki katına çıkarsa akım da iki katına çıkar. Bu yüzden V–I grafiği bir doğrudur.",
+    "ipucu": "I = V / R olduğu için 2 A elde etmek üzere V = 2 · 4 olmalıdır."
    },
    "kart": 4
   },
@@ -74,15 +74,15 @@
     "secenekler": [
      {
       "yazi": "Y'nin",
-      "neden": "Y daha yatık; aynı akım için daha az gerilim ister, direnci küçüktür."
+      "neden": "Y daha yatıktır. Aynı akım için daha az gerilim ister, yani direnci küçüktür."
      },
      {
       "yazi": "İkisi eşit",
-      "neden": "Eğimler farklı; eşit dirençli iletkenlerin doğruları üst üste olurdu."
+      "neden": "Eğimler farklıdır. Eşit dirençli iletkenlerin doğruları üst üste olurdu."
      },
      {
       "yazi": "X'in",
-      "neden": "X daha dik: aynı akım için daha çok gerilim ister, R = V / I büyüktür. Paralel bağlanınca daha çok akımı Y taşır.",
+      "neden": "X daha diktir. Aynı akım için daha çok gerilim ister, yani R = V / I değeri büyüktür. Paralel bağlanınca daha çok akımı Y taşır.",
       "dogru": true
      }
     ]
@@ -114,14 +114,14 @@
     "hedef": {
      "A": 2
     },
-    "tamam": "Boy 2 kat, kesit 2 kat: R = 2/2 · R₀ = R₀. Uzun bir uzatma kablosu bu yüzden daha kalın yapılır.",
+    "tamam": "Boy 2 katına, kesit de 2 katına çıktı. Bu yüzden R = 2/2 · R₀ = R₀ olur. Uzun bir uzatma kablosu bu nedenle daha kalın yapılır.",
     "ipucu": "L / A oranı 1 olmalı."
    },
    "kart": 3
   },
   {
    "baslik": "Seri mi, paralel mi?",
-   "metin": "Önce paralel bağla, sonra bir ampulü sök; seride de dene.",
+   "metin": "Ampulleri önce paralel bağla ve sonra bir ampulü sök. Aynısını seri bağlamada da dene.",
    "sahne": {
     "tur": "fiz9-iki-ampul"
    },
@@ -151,16 +151,16 @@
     "secenekler": [
      {
       "yazi": "Seride",
-      "neden": "Seride tek yol vardır; bir ampul sökülünce devre açılır ve hepsi söner."
+      "neden": "Seri bağlamada tek bir yol vardır. Bir ampul sökülünce devre açılır ve hepsi söner."
      },
      {
       "yazi": "Paralelde",
-      "neden": "Paralelde her ampulün kendi kolu vardır; biri sökülse öteki (ideal üreteçte) aynı 12 V'u alır ve aynı parlaklıkta yanar. Evlerdeki tesisat bu yüzden paraleldir.",
+      "neden": "Paralel bağlamada her ampulün kendi kolu vardır. Biri sökülse de öteki (ideal üreteçte) aynı 12 V'u alır ve aynı parlaklıkta yanar. Evlerdeki tesisat bu yüzden paraleldir.",
       "dogru": true
      },
      {
       "yazi": "İkisinde de söner",
-      "neden": "Paralelde öteki kolun yolu açık kalır; sahnede sökünce de yandığını görebilirsin."
+      "neden": "Paralel bağlamada öteki kolun yolu açık kalır. Sahnede ampulü sökünce de ötekinin yandığını görebilirsin."
      }
     ]
    },
@@ -179,15 +179,15 @@
     "secenekler": [
      {
       "yazi": "Lamba daha parlak yanar",
-      "neden": "Akım lambaya uğramaz; neredeyse hiç direnci olmayan ampermetreden geçer."
+      "neden": "Akım lambaya uğramaz. Neredeyse hiç direnci olmayan ampermetreden geçer."
      },
      {
       "yazi": "Hiçbir şey değişmez",
-      "neden": "İç direnci ≈ 0 olan bir yol açıldı; akım o yolu seçer."
+      "neden": "İç direnci yaklaşık sıfır olan bir yol açıldı. Akım bu yolu seçer."
      },
      {
       "yazi": "Lamba söner, büyük akım geçer",
-      "neden": "Ampermetrenin iç direnci neredeyse sıfırdır. Lambanın üzerinden bir <b>kısa devre</b> yolu açılır: lamba söner, pilden çok büyük akım çekilir ve ampermetre yanabilir.",
+      "neden": "Ampermetrenin iç direnci neredeyse sıfırdır. Bu yüzden lambanın üzerinden bir <b>kısa devre</b> yolu açılır. Lamba söner, pilden çok büyük bir akım çekilir ve ampermetre yanabilir.",
       "dogru": true
      }
     ]
@@ -196,7 +196,7 @@
   },
   {
    "baslik": "Karışık devre",
-   "metin": "4 Ω, paralel bağlı 6 Ω ve 3 Ω'a seri. Üreteci ayarla: ana koldan <b>3 A</b> geçsin.",
+   "metin": "4 Ω'luk direnç, paralel bağlı 6 Ω ve 3 Ω'luk dirençlere seri bağlıdır. Üreteci ayarla ve ana koldan <b>3 A</b> geçmesini sağla.",
    "sahne": {
     "tur": "fiz9-karisik"
    },
@@ -219,16 +219,16 @@
     "hedef": {
      "V": 18
     },
-    "tamam": "Paralel kısım 6·3/(6+3) = 2 Ω, R<sub>eş</sub> = 6 Ω; V = 3 · 6 = <b>18 V</b>. Paralel uçlarda 6 V düşer: 6 Ω'dan 1 A, 3 Ω'dan 2 A, toplam yine 3 A (düğüm kuralı).",
+    "tamam": "Paralel kısmın direnci 6·3/(6+3) = 2 Ω, eşdeğer direnç ise 6 Ω olur. Buna göre V = 3 · 6 = <b>18 V</b> olur. Paralel uçlarda 6 V düşer. 6 Ω'dan 1 A, 3 Ω'dan 2 A geçer ve toplam yine 3 A olur. Bu, düğüm kuralıdır.",
     "ipucu": "Önce paralel kısmı tek dirence indir: 6·3/(6+3)."
    },
    "kart": 10
   }
  ],
  "kapanis": [
-  "Akım, birim zamanda geçen yüktür: I = q / t. Geleneksel akım elektronlara ters yöndedir.",
-  "Ohm yasası V = I · R; V–I grafiğinin eğimi direnci verir.",
-  "R = ρ · L / A. İki kat uzatılan telin direnci 4 kat olur.",
+  "Akım, birim zamanda geçen yüktür ve I = q / t ile bulunur. Geleneksel akım elektronlara ters yöndedir.",
+  "Ohm yasasına göre V = I · R olur. V–I grafiğinin eğimi direnci verir.",
+  "Telin direnci R = ρ · L / A ile bulunur. İki kat uzatılan telin direnci 4 kat olur.",
   "Seride akım ortaktır, Reş toplamdır. Paralelde gerilim ortaktır, Reş en küçük dirençten küçüktür.",
   "Ampermetre seri (iç direnci ≈ 0), voltmetre paralel (iç direnci çok büyük) bağlanır."
  ],
