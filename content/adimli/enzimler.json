@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Enerji eşiği",
-   "metin": "Bir tepkimenin başlaması için önce bir enerji tepesinin aşılması gerekir: <b>aktivasyon enerjisi</b>. <b>Enzimi</b> ekle ve grafiğe bak.",
+   "metin": "Bir tepkimenin başlaması için önce bir enerji tepesinin aşılması gerekir. Bu tepeye <b>aktivasyon enerjisi</b> denir. <b>Enzimi</b> ekle ve grafiğe bak.",
    "sahne": {
     "tur": "biy2-aktivasyon"
    },
@@ -30,7 +30,7 @@
      {
       "yazi": "Yalnızca aktivasyon enerjisini",
       "dogru": true,
-      "neden": "Tepe alçalınca çarpışan moleküllerin çok daha büyük kısmı eşiği aşar; tepkime bu yüzden hızlanır."
+      "neden": "Tepe alçalınca çarpışan moleküllerin çok daha büyük bir kısmı eşiği aşar. Tepkime bu yüzden hızlanır."
      },
      {
       "yazi": "Oluşan ürünü",
@@ -38,7 +38,7 @@
      },
      {
       "yazi": "Toplam enerji farkını",
-      "neden": "Mor oka bak: enzimli de enzimsiz de enerji farkı aynı. Değişen yalnızca tepenin yüksekliği."
+      "neden": "Mor oka bak: enerji farkı enzimli ve enzimsiz durumda aynıdır. Değişen yalnızca tepenin yüksekliğidir."
      }
     ]
    },
@@ -46,7 +46,7 @@
   },
   {
    "baslik": "Enzim-substrat kompleksi",
-   "metin": "Enzim, etki ettiği maddeyi (<b>substrat</b>) yakalayıp dönüştürüyor. Oynatmadan önce tahmin et.",
+   "metin": "Enzim, etki ettiği maddeyi (<b>substrat</b>) yakalayıp dönüştürüyor. Oynatmadan önce ne olacağını tahmin et.",
    "sahne": {
     "tur": "biy2-enzim-substrat",
     "sure": 5
@@ -62,11 +62,11 @@
      },
      {
       "yazi": "Ürünle harcanır",
-      "neden": "Enzim katalizördür, tepkimede tükenmez."
+      "neden": "Enzim bir katalizördür ve tepkimede tükenmez."
      },
      {
       "yazi": "Ürüne dönüşür",
-      "neden": "Ürüne dönüşen substrattır; enzim yalnızca bu dönüşümü hızlandırır."
+      "neden": "Ürüne dönüşen madde substrattır. Enzim yalnızca bu dönüşümü hızlandırır."
      }
     ]
    },
@@ -99,7 +99,7 @@
     "secenekler": [
      {
       "yazi": "Yağ",
-      "neden": "Yağları lipaz parçalar; laktazın aktif bölgesi yağa uymaz."
+      "neden": "Yağları lipaz parçalar. Laktazın aktif bölgesi yağa uymaz."
      },
      {
       "yazi": "Laktoz",
@@ -108,7 +108,7 @@
      },
      {
       "yazi": "Maltoz",
-      "neden": "Maltozu maltaz parçalar. Benzer bir şeker olsa da laktazın aktif bölgesine uymaz."
+      "neden": "Maltozu maltaz parçalar. Maltoz benzer bir şeker olsa da laktazın aktif bölgesine uymaz."
      }
     ]
    },
@@ -159,7 +159,7 @@
         "yeni": 1
        }
       ],
-      "tamam": "İnsan enzimlerinin <b>optimum sıcaklığı</b> yaklaşık 37 °C: aktif bölgeler en sık dolup boşalıyor."
+      "tamam": "İnsan enzimlerinin <b>optimum sıcaklığı</b> yaklaşık 37 °C'dir. Bu sıcaklıkta aktif bölgeler en sık dolup boşalır."
      },
      {
       "yazi": "Enzimi <b>5 °C</b>'ye soğut, sonra yeniden <b>37 °C</b>'ye ısıt.",
@@ -208,7 +208,7 @@
         "T": 37
        }
       ],
-      "tamam": "55 °C'yi geçince enzimin 3 boyutlu şekli bozuldu: <b>denatürasyon</b>. Soğutsan da aktif bölge geri gelmedi; pişen yumurta akı da çiğe dönmez."
+      "tamam": "Sıcaklık 55 °C'yi geçince enzimin üç boyutlu şekli bozuldu; buna <b>denatürasyon</b> denir. Soğutsan da aktif bölge geri gelmedi. Pişen yumurta akı da aynı şekilde çiğ hâline dönmez."
      }
     ]
    },
@@ -216,7 +216,7 @@
   },
   {
    "baslik": "pH",
-   "metin": "Mide asidiktir, ince bağırsak hafif baziktir. pH'yi değiştir ve <b>pepsini</b> en hızlı çalıştığı yere getir.",
+   "metin": "Mide asidik, ince bağırsak ise hafif baziktir. pH'yi değiştir ve <b>pepsini</b> en hızlı çalıştığı yere getir.",
    "sahne": {
     "tur": "biy2-ph"
    },
@@ -236,7 +236,7 @@
     "hedef": {
      "ph": 2
     },
-    "tamam": "Pepsin midenin asidinde (pH ≈ 2) en hızlıdır; pH 8'de neredeyse durur, orada tripsin çalışır."
+    "tamam": "Pepsin midenin asidinde (pH ≈ 2) en hızlı çalışır. pH 8'de ise neredeyse durur; orada tripsin çalışır."
    },
    "kart": 6
   },
@@ -265,11 +265,11 @@
      {
       "yazi": "Değişmez",
       "dogru": true,
-      "neden": "4 enzimin 4 aktif bölgesi 4. substratta dolmuştu; fazlası sırada bekler."
+      "neden": "4 enzimin 4 aktif bölgesi, 4. substratta dolmuştu. Fazla substrat sırada bekler."
      },
      {
       "yazi": "Artar",
-      "neden": "Substratı 4'ün üstüne çıkar ve hız çubuğuna bak. Aktif bölgeler dolunca ne oluyor?"
+      "neden": "Substratı 4'ün üstüne çıkar ve hız çubuğuna bak. Aktif bölgeler dolunca ne olduğunu gör."
      },
      {
       "yazi": "Azalır",
@@ -281,7 +281,7 @@
   },
   {
    "baslik": "Yarışmalı inhibitör",
-   "metin": "Şu an 4 enzimin 2'sinin aktif bölgesini <b>yarışmalı inhibitör</b> kapatmış. Substrat ekleyerek en az <b>3 enzimi</b> yeniden çalıştır.",
+   "metin": "Şu an 4 enzimden 2'sinin aktif bölgesini bir <b>yarışmalı inhibitör</b> kapatmış. Substrat ekleyerek en az <b>3 enzimi</b> yeniden çalıştır.",
    "sahne": {
     "tur": "biy2-inhibitor"
    },
@@ -312,11 +312,11 @@
   }
  ],
  "kapanis": [
-  "Enzimler <b>aktivasyon enerjisini</b> düşürerek tepkimeyi hızlandırır; ürünü ve enerji farkını değiştirmez.",
-  "Substrat aktif bölgeye bağlanır (E + S → ES → E + ürün); enzim değişmeden çıkar ve tekrar kullanılır.",
+  "Enzimler <b>aktivasyon enerjisini</b> düşürerek tepkimeyi hızlandırır. Ürünü ve enerji farkını ise değiştirmezler.",
+  "Substrat aktif bölgeye bağlanır (E + S → ES → E + ürün). Enzim tepkimeden değişmeden çıkar ve tekrar kullanılır.",
   "Aktif bölge esnektir (<b>uyarılmış uyum</b>) ve her enzim belirli substratlara etki eder (<b>özgüllük</b>).",
-  "Her enzimin <b>optimum sıcaklığı</b> ve <b>pH'si</b> vardır; aşırı sıcak ve uygunsuz pH enzimi denatüre eder.",
-  "Aktif bölgeler dolunca hız sabitlenir (doygunluk). <b>Yarışmalı inhibitörün</b> etkisi substrat artınca azalır."
+  "Her enzimin bir <b>optimum sıcaklığı</b> ve <b>pH'si</b> vardır. Aşırı sıcak ve uygunsuz pH enzimi bozar.",
+  "Aktif bölgeler dolunca hız sabitlenir; buna doygunluk denir. <b>Yarışmalı inhibitörün</b> etkisi ise substrat artınca azalır."
  ],
  "soruOnce": true
 }
