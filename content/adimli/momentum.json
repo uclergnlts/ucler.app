@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "momentum",
  "baslik": "Momentum ve çarpışmalar",
- "ozet": "Önce dene, sonra adını öğren: momentumları eşitle, topu sektir, arabaları çarpıştır.",
+ "ozet": "Önce dene, sonra adını öğren. Momentumları eşitle, topu sektir ve arabaları çarpıştır.",
  "adimlar": [
   {
    "baslik": "Momentum",
@@ -29,13 +29,13 @@
     "hedef": {
      "v": 20
     },
-    "tamam": "1000 · 20 = 4000 · 5 = 20 000 kg·m/s. Kütle 4 kat küçükse hız 4 kat büyük olmalı. Yavaş giden kamyonu durdurmak bu yüzden zordur."
+    "tamam": "1000 · 20 = 4000 · 5 = 20 000 kg·m/s olur. Kütle 4 kat küçükse hız 4 kat büyük olmalıdır. Yavaş giden bir kamyonu durdurmak bu yüzden zordur."
    },
    "kart": 1
   },
   {
    "baslik": "Duvardan geri seken top",
-   "metin": "0,2 kg'lık top duvara 10 m/s ile çarpıyor. Önce yapışsın, sonra geri seksin: <b>iki durumu da oynat</b> ve momentum değişimini karşılaştır.",
+   "metin": "0,2 kg'lık top duvara 10 m/s hızla çarpıyor. Önce yapışsın, sonra geri seksin. <b>İki durumu da oynat</b> ve momentum değişimini karşılaştır.",
    "sahne": {
     "tur": "fiz6-duvar",
     "sure": 4
@@ -63,7 +63,7 @@
      },
      {
       "yazi": "2",
-      "neden": "Bu, topun yapıştığı durum. Sekince hız +10'dan −10'a iner."
+      "neden": "Bu, topun yapıştığı durumdur. Top sekince hız +10'dan −10'a iner."
      },
      {
       "yazi": "4",
@@ -76,7 +76,7 @@
   },
   {
    "baslik": "Hava yastığı",
-   "metin": "70 kg'lık sürücü 15 m/s'den duruyor: Δp hep 1050 N·s. Durma süresini uzat, kuvveti <b>10 000 N'un altına</b> indir.",
+   "metin": "70 kg'lık sürücü 15 m/s hızdan duruyor ve Δp hep 1050 N·s. Durma süresini uzat ve kuvveti <b>10 000 N'un altına</b> indir.",
    "sahne": {
     "tur": "fiz6-yastik"
    },
@@ -101,13 +101,13 @@
       200
      ]
     },
-    "tamam": "Grafiğin altındaki alan (itme) hep 1050 N·s. Süre uzayınca dikdörtgen yayılır, yüksekliği yani kuvvet azalır: 150 ms'de 1050 / 0,15 = 7000 N."
+    "tamam": "Grafiğin altındaki alan, yani itme hep 1050 N·s'dir. Süre uzayınca dikdörtgen yayılır ve yüksekliği, yani kuvvet azalır. 150 ms'de kuvvet 1050 / 0,15 = 7000 N olur."
    },
    "kart": 5
   },
   {
    "baslik": "Esnek çarpışma",
-   "metin": "Bu çarpışma <b>esnek</b>: momentumla birlikte kinetik enerji de korunur. 1 kg'lık A arabası 4 m/s ile duran 1 kg'lık B'ye çarpacak.",
+   "metin": "Bu çarpışma <b>esnek</b>. Yani momentumla birlikte kinetik enerji de korunur. 1 kg'lık A arabası 4 m/s hızla, duran 1 kg'lık B arabasına çarpacak.",
    "sahne": {
     "tur": "fiz6-carpisma",
     "sure": 4,
@@ -122,11 +122,11 @@
     "secenekler": [
      {
       "yazi": "Birlikte 2 m/s ile giderler",
-      "neden": "Bu, yapışan arabalarda olur; o zaman kinetik enerji azalır. Esnek çarpışmada KE korunur."
+      "neden": "Bu, yapışan arabalarda olur ve o zaman kinetik enerji azalır. Esnek çarpışmada ise kinetik enerji korunur."
      },
      {
       "yazi": "A geri seker, B yavaş gider",
-      "neden": "Bu, hafif bir cisim ağır bir cisme çarpınca olur. Burada kütleler eşit."
+      "neden": "Bu, hafif bir cisim ağır bir cisme çarpınca olur. Burada ise kütleler eşittir."
      },
      {
       "yazi": "A durur, B 4 m/s ile gider",
@@ -139,7 +139,7 @@
   },
   {
    "baslik": "Yapışan arabalar",
-   "metin": "Şimdi arabalar çarpışınca birbirine yapışıyor: m1·v1 = (m1 + m2)·v. B'nin kütlesini seç ve oynat; ortak hız <b>1 m/s</b> olsun.",
+   "metin": "Şimdi arabalar çarpışınca birbirine yapışıyor ve m1·v1 = (m1 + m2)·v oluyor. B'nin kütlesini seç ve oynat. Ortak hız <b>1 m/s</b> olsun.",
    "sahne": {
     "tur": "fiz6-carpisma",
     "sure": 4,
@@ -164,13 +164,13 @@
     "hedef": {
      "m2": 3
     },
-    "tamam": "1 · 4 = (1 + 3) · v, yani v = 1 m/s. Momentum 4 kg·m/s olarak korundu; yalnızca 4 kg'lık kütleye yayıldı."
+    "tamam": "1 · 4 = (1 + 3) · v olduğu için v = 1 m/s olur. Momentum 4 kg·m/s olarak korundu ve yalnızca 4 kg'lık bir kütleye yayıldı."
    },
    "kart": 11
   },
   {
    "baslik": "Enerji nereye gitti?",
-   "metin": "1 kg'lık A, 4 m/s ile duran 1 kg'lık B'ye çarpıp <b>yapışıyor</b>. Oynat ve alttaki toplam kinetik enerjiyi izle.",
+   "metin": "1 kg'lık A arabası 4 m/s hızla, duran 1 kg'lık B arabasına çarpıp <b>yapışıyor</b>. Oynat ve alttaki toplam kinetik enerjiyi izle.",
    "sahne": {
     "tur": "fiz6-carpisma",
     "sure": 4,
@@ -197,7 +197,7 @@
     "secenekler": [
      {
       "yazi": "Momentum da azaldı",
-      "neden": "Toplam momentum önce de sonra da 4 kg·m/s. Dış kuvvet yoksa momentum korunur."
+      "neden": "Toplam momentum önce de sonra da 4 kg·m/s'dir. Dış kuvvet yoksa momentum korunur."
      },
      {
       "yazi": "Enerji yok oldu",
@@ -205,7 +205,7 @@
      },
      {
       "yazi": "4 J ısıya ve sese gitti",
-      "neden": "Ortak hız 2 m/s, KE = ½ · 2 · 2² = 4 J. Momentum korunur, toplam enerji de korunur; azalan yalnızca kinetik kısımdır.",
+      "neden": "Ortak hız 2 m/s'dir ve KE = ½ · 2 · 2² = 4 J olur. Momentum korunur, toplam enerji de korunur. Azalan yalnızca kinetik kısımdır.",
       "dogru": true
      }
     ]
@@ -214,7 +214,7 @@
   },
   {
    "baslik": "Geri tepme",
-   "metin": "4 kg'lık tüfek, 0,01 kg'lık mermiyi 400 m/s ile fırlatacak.",
+   "metin": "4 kg'lık tüfek, 0,01 kg'lık mermiyi 400 m/s hızla fırlatacak.",
    "sahne": {
     "tur": "fiz6-patlama",
     "sure": 4
@@ -229,7 +229,7 @@
      },
      {
       "yazi": "1 m/s",
-      "neden": "Mermi 0,01 · 400 = 4 kg·m/s ileri, tüfek 4 kg·m/s geri alır: 4 / 4 = 1 m/s. KE'ler ise 800 J ve 2 J: enerjinin çoğu hafif mermiye gider.",
+      "neden": "Mermi 0,01 · 400 = 4 kg·m/s momentumla ileri gider ve tüfek de 4 kg·m/s momentumla geri teper. Tüfeğin hızı 4 / 4 = 1 m/s olur. Kinetik enerjiler ise 800 J ve 2 J'dür, yani enerjinin çoğu hafif mermiye gider.",
       "dogru": true
      },
      {
@@ -242,11 +242,11 @@
   }
  ],
  "kapanis": [
-  "Momentum p = m·v bir vektördür; birimi kg·m/s.",
-  "İtme I = F·Δt = Δp; F–t grafiğinin altındaki alandır. Aynı Δp için süre uzarsa kuvvet azalır.",
+  "Momentum p = m·v bir vektördür ve birimi kg·m/s'dir.",
+  "İtme I = F·Δt = Δp'dir ve kuvvet-zaman grafiğinin altındaki alana eşittir. Aynı Δp için süre uzarsa kuvvet azalır.",
   "Geri seken cisimde Δp, yapışan cisminkinin iki katıdır.",
-  "Dış kuvvet yoksa toplam momentum korunur: çarpışmada da patlamada da.",
-  "Esnek çarpışmada KE korunur; yapışmada en çok azalır; patlamada artar."
+  "Dış kuvvet yoksa toplam momentum hem çarpışmada hem de patlamada korunur.",
+  "Esnek çarpışmada kinetik enerji korunur. Yapışmada en çok azalır, patlamada ise artar."
  ],
  "soruOnce": true
 }

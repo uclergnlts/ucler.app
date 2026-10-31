@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "cembersel-hareket",
  "baslik": "Çembersel ve dönme hareketi",
- "ozet": "Önce dene, sonra adını öğren: dönen topu izle, dönme dolapta hızları karşılaştır, virajı savrulmadan al.",
+ "ozet": "Önce dene, sonra adını öğren. Dönen topu izle, dönme dolapta hızları karşılaştır ve virajı savrulmadan al.",
  "adimlar": [
   {
    "baslik": "Sürat sabit, hız değişiyor",
@@ -18,11 +18,11 @@
     "secenekler": [
      {
       "yazi": "Hızla aynı yönde",
-      "neden": "Teğet bir ivme sürati değiştirirdi; oysa sürat sabit."
+      "neden": "Teğet bir ivme sürati değiştirirdi. Oysa sürat sabittir."
      },
      {
       "yazi": "Merkeze doğru",
-      "neden": "Sürati değil yalnızca yönü değiştiren ivme hıza diktir ve her an merkeze doğrudur (kırmızı ok). Buna <b>merkezcil ivme</b> denir.",
+      "neden": "Sürati değil, yalnızca yönü değiştiren ivme hıza diktir ve her an merkeze doğrudur (kırmızı ok). Buna <b>merkezcil ivme</b> denir.",
       "dogru": true
      },
      {
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Periyot ve frekans",
-   "metin": "Frekans, saniyedeki tur sayısıdır (Hz). Çamaşır makinesinin tamburunu <b>25 Hz</b>'e ayarla.",
+   "metin": "Frekans, saniyedeki tur sayısıdır ve birimi hertz'dir. Çamaşır makinesinin tamburunu <b>25 Hz</b>'e ayarla.",
    "sahne": {
     "tur": "fiz7-tambur"
    },
@@ -57,13 +57,13 @@
     "hedef": {
      "rpm": 1500
     },
-    "tamam": "Dakikada 1500 tur, saniyede 1500 / 60 = 25 tur eder: f = 25 Hz. Bir tur T = 1/25 = 0,04 s sürer."
+    "tamam": "Dakikada 1500 tur, saniyede 1500 / 60 = 25 tur eder ve f = 25 Hz olur. Bir tur T = 1/25 = 0,04 s sürer."
    },
    "kart": 2
   },
   {
    "baslik": "İç koltuk, dış koltuk",
-   "metin": "Dönme dolap 20 saniyede bir tur atıyor. Sen merkezden 8 m uzaktaki dış koltuktasın, arkadaşın 4 m'deki iç koltukta.",
+   "metin": "Dönme dolap 20 saniyede bir tur atıyor. Sen merkezden 8 m uzaktaki dış koltuktasın, arkadaşın ise 4 m uzaktaki iç koltukta.",
    "sahne": {
     "tur": "fiz7-dolap",
     "sure": 6
@@ -74,11 +74,11 @@
     "secenekler": [
      {
       "yazi": "Aynı hızla gideriz",
-      "neden": "Aynı sürede tur atarsınız, yani açısal hızınız aynı. Ama dış koltuk daha uzun yol alır."
+      "neden": "İkiniz de aynı sürede tur atarsınız, yani açısal hızınız aynıdır. Ama dış koltuk daha uzun yol alır."
      },
      {
       "yazi": "Dış koltuk",
-      "neden": "Bir turda dış koltuk 2π·8 ≈ 50 m, iç koltuk ≈ 25 m yol alır; ikisi de 20 s'de. Yol iki kat, süre aynı: hız da iki kat.",
+      "neden": "Bir turda dış koltuk 2π·8 ≈ 50 m, iç koltuk ise yaklaşık 25 m yol alır ve ikisi de bunu 20 s'de yapar. Yol iki kat, süre aynı olduğu için hız da iki kattır.",
       "dogru": true
      },
      {
@@ -91,7 +91,7 @@
   },
   {
    "baslik": "İp koparsa",
-   "metin": "Taşı ipe bağlayıp yatay düzlemde döndürüyorsun; yukarıdan bakıyoruz. İp, taş en kuzeydeyken ve doğuya doğru giderken kopacak.",
+   "metin": "Taşı ipe bağlayıp yatay düzlemde döndürüyorsun ve biz yukarıdan bakıyoruz. Taş en kuzeydeyken ve doğuya doğru giderken ip kopacak.",
    "sahne": {
     "tur": "fiz7-ip",
     "sure": 5
@@ -102,12 +102,12 @@
     "secenekler": [
      {
       "yazi": "Teğet boyunca düz gider",
-      "neden": "Merkeze çeken kuvvet kalkınca taş, 1. yasa gereği o anki hızıyla <b>teğet boyunca</b> düz gider. Çekiç atan atlet de çekici bu anı kollayarak bırakır.",
+      "neden": "Merkeze çeken kuvvet ortadan kalkınca taş, 1. yasa gereği o anki hızıyla <b>teğet boyunca</b> düz gider. Çekiç atan atlet de çekici bu anı kollayarak bırakır.",
       "dogru": true
      },
      {
       "yazi": "Merkezden dışarı fırlar",
-      "neden": "Dışarı iten bir kuvvet yoktur; “merkezkaç kuvveti” bir yanılgıdır."
+      "neden": "Dışarı iten bir kuvvet yoktur. Merkezkaç kuvveti bir yanılgıdır."
      },
      {
       "yazi": "Dönmeye devam eder",
@@ -119,7 +119,7 @@
   },
   {
    "baslik": "Merkezcil kuvvet",
-   "metin": "Gereken merkezcil kuvvet F = m·v²/r. 1000 kg'lık araba 50 m yarıçaplı virajda. Hızı değiştir ve kuvveti <b>8000 N</b> yap.",
+   "metin": "Gereken merkezcil kuvvet F = m·v²/r ile bulunur. 1000 kg'lık araba 50 m yarıçaplı bir virajda. Hızı değiştir ve kuvveti <b>8000 N</b> yap.",
    "sahne": {
     "tur": "fiz7-merkezcil"
    },
@@ -141,13 +141,13 @@
     "hedef": {
      "v": 20
     },
-    "tamam": "1000 · 20² / 50 = 8000 N. Hız 10'dan 20 m/s'ye iki katına çıkınca gereken kuvvet dört katına çıkar. Bu yeni bir kuvvet değildir; burada onu lastiklerle yol arasındaki sürtünme sağlar."
+    "tamam": "1000 · 20² / 50 = 8000 N olur. Hız 10 m/s'den 20 m/s'ye, yani iki katına çıkınca gereken kuvvet dört katına çıkar. Bu yeni bir kuvvet değildir. Burada onu lastiklerle yol arasındaki sürtünme sağlar."
    },
    "kart": 5
   },
   {
    "baslik": "Islak virajda",
-   "metin": "Virajda en büyük güvenli hız √(μ·g·r); μ, yüzeyin sürtünme katsayısı. Araban 15 m/s ile 50 m'lik virajı alacak. Yol yüzeyini seç ve virajı <b>savrulmadan</b> al.",
+   "metin": "Virajda en büyük güvenli hız √(μ·g·r) ile bulunur ve μ yüzeyin sürtünme katsayısıdır. Araban 15 m/s hızla 50 m'lik virajı alacak. Yol yüzeyini seç ve virajı <b>savrulmadan</b> al.",
    "sahne": {
     "tur": "fiz7-viraj",
     "sure": 4
@@ -172,13 +172,13 @@
       8
      ]
     },
-    "tamam": "μ = 0,5'te sınır √(0,5 · 9,8 · 50) ≈ 15,7 m/s, yani 15 m/s güvenli. Yağmurda μ düşer, sınır da iner; ıslak yolda bu yüzden yavaşlanır."
+    "tamam": "μ = 0,5'te sınır √(0,5 · 9,8 · 50) ≈ 15,7 m/s olur, yani 15 m/s güvenlidir. Yağmurda μ düşer ve sınır da iner. Islak yolda bu yüzden yavaşlanır."
    },
    "kart": 6
   },
   {
    "baslik": "Patenci",
-   "metin": "Patenci kolları açık dönüyor; dış tork yok. Kollarını gövdesine çekince eylemsizlik momenti I yarıya inecek.",
+   "metin": "Patenci kolları açık olarak dönüyor ve dış tork yok. Kollarını gövdesine çekince eylemsizlik momenti I yarıya inecek.",
    "sahne": {
     "tur": "fiz7-patenci",
     "sure": 6
@@ -193,12 +193,12 @@
      },
      {
       "yazi": "İki kat hızlı döner",
-      "neden": "I·ω (açısal momentum) sabit kalır: 4 · 2 = 2 · 4. I yarıya inince ω iki katına çıkar.",
+      "neden": "I·ω çarpımı, yani açısal momentum sabit kalır ve 4 · 2 = 2 · 4 olur. I yarıya inince ω iki katına çıkar.",
       "dogru": true
      },
      {
       "yazi": "Hızı değişmez",
-      "neden": "Hız değişmeseydi I yarıya inince L de yarıya inerdi; dış tork olmadan L değişemez."
+      "neden": "Hız değişmeseydi I yarıya inince L de yarıya inerdi. Ama dış tork olmadan L değişemez."
      }
     ]
    },
@@ -206,9 +206,9 @@
   }
  ],
  "kapanis": [
-  "Düzgün çembersel harekette sürat sabittir ama hızın yönü değişir: cisim <b>ivmelidir</b> ve ivme her an merkeze doğrudur.",
-  "f = 1/T ve v = ω·r = 2πr/T. Aynı dönen cisimde ω her noktada aynıdır, v yarıçapla artar.",
-  "<b>F = m·v²/r</b> yeni bir kuvvet değil, merkeze yönelen net kuvvettir: ip gerilmesi, sürtünme ya da kütle çekimi sağlar.",
+  "Düzgün çembersel harekette sürat sabittir, ama hızın yönü değişir. Bu yüzden cisim <b>ivmelidir</b> ve ivme her an merkeze doğrudur.",
+  "f = 1/T ve v = ω·r = 2πr/T olur. Dönen bir cisimde ω her noktada aynıdır, v ise yarıçapla artar.",
+  "<b>F = m·v²/r</b> yeni bir kuvvet değil, merkeze yönelen net kuvvettir. Bu kuvveti ip gerilmesi, sürtünme ya da kütle çekimi sağlar.",
   "Kuvvet kalkınca cisim teğet boyunca düz gider. Düz virajda güvenli hız v ≤ √(μ·g·r).",
   "Dış tork yoksa açısal momentum <b>L = I·ω</b> korunur."
  ],

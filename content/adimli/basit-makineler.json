@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "basit-makineler",
  "baslik": "Basit makineler",
- "ozet": "Önce dene, sonra adını öğren: kaldıracı dengele, palangayla yük kaldır, dişliyi değiştir.",
+ "ozet": "Önce dene, sonra adını öğren. Kaldıracı dengele, palangayla yük kaldır ve dişliyi değiştir.",
  "adimlar": [
   {
    "baslik": "Kaldıraç",
-   "metin": "400 N'luk yük desteğe 0,5 m uzakta. Desteğin iki yanında kuvvet × uzaklık eşit olunca çubuk dengelenir. 2 m uzaktan uyguladığın kuvvetle çubuğu <b>dengele</b>.",
+   "metin": "400 N'luk yük desteğe 0,5 m uzakta. Desteğin iki yanında kuvvet ile uzaklığın çarpımı eşit olunca çubuk dengelenir. 2 m uzaktan uyguladığın kuvvetle çubuğu <b>dengele</b>.",
    "sahne": {
     "tur": "fiz6-kaldirac",
     "Y": 400,
@@ -33,7 +33,7 @@
     "hedef": {
      "F": 100
     },
-    "tamam": "400 · 0,5 = 100 · 2 = 200 N·m. Kuvvet kolu yük kolunun 4 katı, bu yüzden kuvvet 4 kat küçük: kazanç dF / dY = 4."
+    "tamam": "400 · 0,5 = 100 · 2 = 200 N·m olur. Kuvvet kolu yük kolunun 4 katı olduğu için kuvvet 4 kat küçüktür. Yani kazanç dF / dY = 4'tür."
    },
    "kart": 3
   },
@@ -49,15 +49,15 @@
     "secenekler": [
      {
       "yazi": "Tahterevalli",
-      "neden": "Destek ortada olunca kazanç kolların boyuna bağlıdır; 1'den büyük de olabilir."
+      "neden": "Destek ortada olunca kazanç kolların boyuna bağlıdır ve 1'den büyük de olabilir."
      },
      {
       "yazi": "El arabası",
-      "neden": "Yük ortada: kuvvet kolu hep yük kolundan uzundur, kazanç 1'den büyük."
+      "neden": "Yük ortadayken kuvvet kolu her zaman yük kolundan uzundur. Bu yüzden kazanç 1'den büyüktür."
      },
      {
       "yazi": "Cımbız",
-      "neden": "Kuvvet ortada: kuvvet kolu yük kolundan hep kısadır, kazanç 1'den küçük. Karşılığında uç daha çok yol alır.",
+      "neden": "Kuvvet ortadayken kuvvet kolu her zaman yük kolundan kısadır ve kazanç 1'den küçüktür. Bunun karşılığında uç daha çok yol alır.",
       "dogru": true
      }
     ]
@@ -87,7 +87,7 @@
     "hedef": {
      "n": 4
     },
-    "tamam": "4 kol yükü paylaşır: 400 / 4 = 100 N. Ama yük 1 m kalkınca ipi 4 m çekersin: kuvvetten kazanırsın, yoldan kaybedersin. İş yine 400 J."
+    "tamam": "4 ip kolu yükü paylaşır ve 400 / 4 = 100 N olur. Ama yük 1 m kalkınca ipi 4 m çekersin. Yani kuvvetten kazanırsın, yoldan kaybedersin. İş yine 400 J'dür."
    },
    "kart": 7
   },
@@ -115,13 +115,13 @@
     "hedef": {
      "L": 4
     },
-    "tamam": "600 · 1 / 4 = 150 N. Rampa 4 kat uzun, kuvvet 4 kat küçük. İş hep 600 J: makine işi azaltmaz, yalnızca kolaylaştırır."
+    "tamam": "600 · 1 / 4 = 150 N olur. Rampa 4 kat uzun olduğu için kuvvet 4 kat küçüktür. İş ise hep 600 J'dür. Makine işi azaltmaz, yalnızca kolaylaştırır."
    },
    "kart": 8
   },
   {
    "baslik": "Bisiklet dişlileri",
-   "metin": "Ön dişli 48 diş. Pedalın bir turunda tekerlek <b>4 tur</b> atsın: arka dişliyi seç ve oynat.",
+   "metin": "Ön dişlide 48 diş var. Pedalın bir turunda tekerleğin <b>4 tur</b> atmasını sağla. Arka dişliyi seç ve oynat.",
    "sahne": {
     "tur": "fiz6-bisiklet",
     "sure": 4,
@@ -145,13 +145,13 @@
     "hedef": {
      "z": 12
     },
-    "tamam": "48 / 12 = 4: tekerlek 4 tur atar. Tekerleğin çevresi 2 m ise pedalın bir turunda bisiklet 8 m gider; hızlıdır ama pedal ağırlaşır."
+    "tamam": "48 / 12 = 4 olduğu için tekerlek 4 tur atar. Tekerleğin çevresi 2 m ise pedalın bir turunda bisiklet 8 m gider. Bisiklet hızlıdır, ama pedal ağırlaşır."
    },
    "kart": 13
   },
   {
    "baslik": "Verim",
-   "metin": "Gerçek rampada sürtünme vardır. Verim = yararlı iş / harcanan iş. 600 N'luk yükü <b>5 m</b>'lik rampayla 1 m yükseltmek için <b>150 N</b> uygulamak gerekti.",
+   "metin": "Gerçek bir rampada sürtünme vardır. Verim, yararlı işin harcanan işe oranıdır. 600 N'luk yükü <b>5 m</b>'lik bir rampayla 1 m yükseltmek için <b>150 N</b> uygulamak gerekti.",
    "sahne": {
     "tur": "fiz6-rampa",
     "L": 5,
@@ -163,11 +163,11 @@
     "secenekler": [
      {
       "yazi": "%125",
-      "neden": "Verim %100'ü geçemez. Harcanan işi yararlı işe böldün; tersini yap."
+      "neden": "Verim %100'ü geçemez. Harcanan işi yararlı işe böldün, tersini yap."
      },
      {
       "yazi": "%80",
-      "neden": "Yararlı iş 600 · 1 = 600 J, harcanan iş 150 · 5 = 750 J: 600 / 750 = %80. Kalan 150 J ısıya gitti.",
+      "neden": "Yararlı iş 600 · 1 = 600 J, harcanan iş 150 · 5 = 750 J'dür. Verim 600 / 750 = %80 olur. Kalan 150 J ısıya dönüştü.",
       "dogru": true
      },
      {
@@ -180,11 +180,11 @@
   }
  ],
  "kapanis": [
-  "Kuvvet kazancı = Y / F. Kuvvetten kazanırsan yoldan kaybedersin; ideal makinede iş değişmez.",
-  "Kaldıraç dengesi: F·dF = Y·dY. Cımbızda kuvvet ortadadır ve kazanç 1'den küçüktür.",
-  "Makara kazancı: sabit 1, hareketli 2, palangada taşıyan kol sayısı n.",
-  "Eğik düzlem: F·L = G·h. Dişliler: n₁·r₁ = n₂·r₂.",
-  "Verim = yararlı iş / harcanan iş; gerçek makinede %100'ün altındadır."
+  "Kuvvet kazancı Y / F'dir. Kuvvetten kazanırsan yoldan kaybedersin ve ideal makinede iş değişmez.",
+  "Kaldıraç dengesinde F·dF = Y·dY olur. Cımbızda kuvvet ortadadır ve kazanç 1'den küçüktür.",
+  "Sabit makaranın kazancı 1, hareketli makaranın kazancı 2'dir. Palangada kazanç, yükü taşıyan ip kolu sayısına (n) eşittir.",
+  "Eğik düzlemde F·L = G·h olur. Dişlilerde ise n₁·r₁ = n₂·r₂'dir.",
+  "Verim, yararlı işin harcanan işe oranıdır ve gerçek makinede %100'ün altındadır."
  ],
  "soruOnce": true
 }

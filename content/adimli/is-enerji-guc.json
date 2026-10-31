@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "is-enerji-guc",
  "baslik": "İş, enerji ve güç",
- "ozet": "Önce dene, sonra adını öğren: ipin açısını değiştir, topu düşür, merdiveni koşarak çık.",
+ "ozet": "Önce dene, sonra adını öğren. İpin açısını değiştir, topu düşür ve merdiveni koşarak çık.",
  "adimlar": [
   {
    "baslik": "İş",
-   "metin": "İş, kuvvetin hareket yönündeki parçası ile yolun çarpımıdır. Kutuyu <b>40 N</b> ile <b>5 m</b> çekiyorsun. İpin açısını ayarla ve işi <b>100 J</b> yap.",
+   "metin": "İş, kuvvetin hareket yönündeki parçası ile yolun çarpımıdır. Kutuyu <b>40 N</b>'luk kuvvetle <b>5 m</b> çekiyorsun. İpin açısını ayarla ve işi <b>100 J</b> yap.",
    "sahne": {
     "tur": "fiz5-is",
     "F": 40,
@@ -31,13 +31,13 @@
     "hedef": {
      "a": 60
     },
-    "tamam": "W = 40 · 5 · cos60° = 200 · 0,5 = 100 J. Açı büyüdükçe kuvvetin hareket yönündeki payı küçülür; 90°'de sıfır olur."
+    "tamam": "W = 40 · 5 · cos60° = 200 · 0,5 = 100 J olur. Açı büyüdükçe kuvvetin hareket yönündeki payı küçülür ve 90°'de sıfır olur."
    },
    "kart": 1
   },
   {
    "baslik": "Sıfır iş",
-   "metin": "Ağır bir çantayı tutarak yatay yolda <b>sabit hızla</b> yürüyorsun. Kolun çantayı yukarı tutar, çanta yatay ilerler: θ = 90°.",
+   "metin": "Ağır bir çantayı tutarak yatay yolda <b>sabit hızla</b> yürüyorsun. Kolun çantayı yukarı doğru tutuyor, çanta ise yatay olarak ilerliyor. Yani θ = 90°.",
    "sahne": {
     "tur": "fiz5-is",
     "F": 50,
@@ -54,12 +54,12 @@
      },
      {
       "yazi": "Negatif",
-      "neden": "Negatif iş için kuvvet harekete karşı koymalı (sürtünme gibi). Burada kuvvet harekete dik."
+      "neden": "Negatif iş için kuvvet, sürtünme gibi harekete karşı koymalıdır. Burada ise kuvvet harekete diktir."
      },
      {
       "yazi": "Sıfır",
       "dogru": true,
-      "neden": "cos90° = 0. Yorgunluğun kaslarının içinde harcanan enerjiden gelir, çantaya aktarılan işten değil."
+      "neden": "cos90° = 0'dır. Yorgunluğun, çantaya aktarılan işten değil, kaslarının içinde harcanan enerjiden gelir."
      }
     ]
    },
@@ -67,7 +67,7 @@
   },
   {
    "baslik": "Kinetik enerji",
-   "metin": "1000 kg'lık araba <b>10 m/s</b> ile gidiyor: KE = 50 000 J. Hızı ayarla, kinetik enerji <b>9 katına</b> çıksın.",
+   "metin": "1000 kg'lık araba <b>10 m/s</b> hızla gidiyor ve kinetik enerjisi 50 000 J. Hızı ayarla ve kinetik enerjiyi <b>9 katına</b> çıkar.",
    "sahne": {
     "tur": "fiz5-ke"
    },
@@ -90,13 +90,13 @@
     "hedef": {
      "v": 30
     },
-    "tamam": "30 m/s'de ½ · 1000 · 30² = 450 000 J: hız 3 kat, enerji 3² = 9 kat. Hızlı giden aracı durdurmak bu yüzden çok daha zordur."
+    "tamam": "30 m/s'de kinetik enerji ½ · 1000 · 30² = 450 000 J olur. Hız 3 kat, enerji ise 3² = 9 kat arttı. Hızlı giden bir aracı durdurmak bu yüzden çok daha zordur."
    },
    "kart": 3
   },
   {
    "baslik": "Enerji biçim değiştirir",
-   "metin": "2 kg'lık top 5 m'den bırakılıyor: PE = 2 · 9,8 · 5 = 98 J. Üzerinde yalnızca yer çekimi iş yapıyor.",
+   "metin": "2 kg'lık top 5 m yükseklikten bırakılıyor ve potansiyel enerjisi 2 · 9,8 · 5 = 98 J. Üzerinde yalnızca yer çekimi iş yapıyor.",
    "sahne": {
     "tur": "fiz5-dusme",
     "sure": 2
@@ -107,7 +107,7 @@
     "secenekler": [
      {
       "yazi": "0 J",
-      "neden": "Yere değerken top en hızlıdır; kinetik enerjisi en büyüktür."
+      "neden": "Top yere değerken en hızlıdır ve kinetik enerjisi en büyüktür."
      },
      {
       "yazi": "49 J",
@@ -116,7 +116,7 @@
      {
       "yazi": "98 J",
       "dogru": true,
-      "neden": "Yerde PE sıfırdır; kaybolan 98 J'ün tamamı KE'ye geçti. ½ · 2 · v² = 98 J'den top yere ≈ 9,9 m/s ile çarpar."
+      "neden": "Yerde potansiyel enerji sıfırdır ve kaybolan 98 J'ün tamamı kinetik enerjiye geçmiştir. ½ · 2 · v² = 98 J olduğu için top yere yaklaşık 9,9 m/s hızla çarpar."
      }
     ]
    },
@@ -124,7 +124,7 @@
   },
   {
    "baslik": "Rampa laboratuvarı",
-   "metin": "Kaykaycıyı rampanın ucundan bırakıyorsun (g = 10 m/s²). Yüksekliği, kütleyi ve sürtünmeyi değiştir; alttaki çubuk enerjinin nasıl biçim değiştirdiğini gösterir. Aşağıdakileri kendin bul.",
+   "metin": "Kaykaycıyı rampanın ucundan bırakıyorsun (g = 10 m/s²). Yüksekliği, kütleyi ve sürtünmeyi değiştir. Alttaki çubuk enerjinin nasıl biçim değiştirdiğini gösterir. Aşağıdakileri kendin bul.",
    "sahne": {
     "tur": "sim-rampa"
    },
@@ -175,7 +175,7 @@
         "h": 5
        }
       ],
-      "tamam": "m·g·h = ½·m·v² olduğundan v = √(2gh) = √(2·10·5) = 10 m/s. Kaykaycı karşı tarafta yine 5 m'ye çıkıyor: KE + PE hep aynı."
+      "tamam": "m·g·h = ½·m·v² olduğu için v = √(2gh) = √(2·10·5) = 10 m/s olur. Kaykaycı karşı tarafta yine 5 m'ye çıkıyor, çünkü KE + PE hep aynı kalır."
      },
      {
       "yazi": "5 m'de kütleyi önce <b>40</b>, sonra <b>80 kg</b> yap. En alttaki hız değişiyor mu?",
@@ -202,7 +202,7 @@
         "m": 80
        }
       ],
-      "tamam": "Hız değişmedi (10 m/s): m iki tarafta da var ve sadeleşir. Ama enerji 2 katına çıktı: 2000 J yerine 4000 J."
+      "tamam": "Hız değişmedi (10 m/s), çünkü m iki tarafta da bulunur ve sadeleşir. Ama enerji 2 katına çıktı ve 2000 J yerine 4000 J oldu."
      },
      {
       "yazi": "Sürtünmeyi aç ve kaykaycı durana kadar izle. Enerji nereye gitti?",
@@ -215,7 +215,7 @@
         "sur": 1
        }
       ],
-      "tamam": "Mekanik enerji (KE + PE) azaldı ama çubuğun boyu değişmedi: azalan kısım <b>ısıya</b> dönüştü. Enerji yok olmaz, biçim değiştirir."
+      "tamam": "Mekanik enerji (KE + PE) azaldı, ama çubuğun boyu değişmedi. Azalan kısım <b>ısıya</b> dönüştü. Enerji yok olmaz, yalnızca biçim değiştirir."
      }
     ]
    },
@@ -223,7 +223,7 @@
   },
   {
    "baslik": "Güç",
-   "metin": "Güç = iş / süre. Aynı merdiven: 50 kg, 3 m, iş ≈ 1470 J. Çıkış süresini ayarla, güç <b>210 W</b> olsun.",
+   "metin": "Güç, işin süreye bölünmesiyle bulunur. Aynı merdivende 50 kg'lık kişi 3 m çıkıyor ve yaklaşık 1470 J iş yapıyor. Çıkış süresini ayarla ve gücü <b>210 W</b> yap.",
    "sahne": {
     "tur": "fiz5-guc"
    },
@@ -245,13 +245,13 @@
     "hedef": {
      "t": 7
     },
-    "tamam": "1470 / 7 = 210 W. Aynı iş daha kısa sürede yapılırsa güç artar. Elektrik faturasındaki 1 kWh = 3,6 milyon J'dür."
+    "tamam": "1470 / 7 = 210 W olur. Aynı iş daha kısa sürede yapılırsa güç artar. Elektrik faturasındaki 1 kWh, 3,6 milyon J'dür."
    },
    "kart": 10
   },
   {
    "baslik": "Yay ve F–x grafiği",
-   "metin": "Yayın sabiti k = 200 N/m; yayda depolanan enerji ½·k·x². Yayı ger ve içine <b>4 J</b> enerji depola.",
+   "metin": "Yayın sabiti k = 200 N/m ve yayda depolanan enerji ½·k·x² ile bulunur. Yayı ger ve içine <b>4 J</b> enerji depola.",
    "sahne": {
     "tur": "fiz5-yay"
    },
@@ -273,17 +273,17 @@
     "hedef": {
      "x": 20
     },
-    "tamam": "x = 0,2 m'de F = 200 · 0,2 = 40 N; üçgenin alanı ½ · 0,2 · 40 = 4 J. Uzama 2 kat (10 → 20 cm), enerji 4 kat (1 → 4 J)."
+    "tamam": "x = 0,2 m'de kuvvet F = 200 · 0,2 = 40 N olur ve üçgenin alanı ½ · 0,2 · 40 = 4 J'dür. Uzama 2 kat (10 cm'den 20 cm'ye), enerji ise 4 kat (1 J'den 4 J'e) arttı."
    },
    "kart": 8
   }
  ],
  "kapanis": [
-  "İş: W = F·d·cosθ (joule). Kuvvet harekete dikse ya da cisim kımıldamıyorsa iş sıfırdır.",
-  "Kinetik enerji KE = ½·m·v²: hız 2 kat, enerji 4 kat. Potansiyel enerji PE = m·g·h.",
-  "Yalnız yer çekimi iş yapıyorsa KE + PE sabittir; sürtünme mekanik enerjinin bir kısmını ısıya çevirir, toplam enerji yine korunur.",
-  "Güç P = W / t (watt): aynı iş daha kısa sürede yapılırsa güç artar.",
-  "F–x grafiğinin altındaki alan iştir; yayda depolanan enerji ½·k·x²."
+  "İş W = F·d·cosθ ile bulunur ve birimi joule'dür. Kuvvet harekete dikse ya da cisim kımıldamıyorsa iş sıfırdır.",
+  "Kinetik enerji KE = ½·m·v² ile bulunur ve hız 2 kat artınca enerji 4 kat artar. Potansiyel enerji ise PE = m·g·h ile bulunur.",
+  "Yalnızca yer çekimi iş yapıyorsa KE + PE sabit kalır. Sürtünme mekanik enerjinin bir kısmını ısıya çevirir, ama toplam enerji yine korunur.",
+  "Güç P = W / t ile bulunur ve birimi watt'tır. Aynı iş daha kısa sürede yapılırsa güç artar.",
+  "Kuvvet-uzama grafiğinin altındaki alan işi verir. Yayda depolanan enerji ½·k·x² ile bulunur."
  ],
  "soruOnce": true
 }
