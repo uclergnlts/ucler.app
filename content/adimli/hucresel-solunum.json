@@ -3,11 +3,11 @@
  "ders": "biyoloji",
  "konu": "hucresel-solunum",
  "baslik": "Hücresel solunum",
- "ozet": "Önce dene, sonra adını öğren: glikozu adım adım yık, ATP'yi say, oksijeni kes.",
+ "ozet": "Önce dene, sonra adını öğren. Glikozu adım adım yık, ATP'leri say ve oksijeni kes.",
  "adimlar": [
   {
    "baslik": "Glikozdan ATP'ye",
-   "metin": "Oksijenli solunumda glikoz CO₂ ve suya kadar yıkılır. Evreler: <b>glikoliz</b> (sitoplazma), <b>Krebs</b> (matriks) ve <b>ETS</b> (iç zar). Oynat.",
+   "metin": "Oksijenli solunumda glikoz CO₂ ve suya kadar yıkılır. Evreler sitoplazmadaki <b>glikoliz</b>, matriksteki <b>Krebs döngüsü</b> ve iç zardaki <b>ETS</b>'dir. Oynat.",
    "sahne": {
     "tur": "biy8-solunum",
     "sure": 8
@@ -18,16 +18,16 @@
     "secenekler": [
      {
       "yazi": "Glikolizde",
-      "neden": "Glikolizde yalnız birkaç ATP çıkar; asıl kazanç sonra gelir."
+      "neden": "Glikolizde yalnızca birkaç ATP elde edilir. Asıl kazanç daha sonra gelir."
      },
      {
       "yazi": "Krebs döngüsünde",
-      "neden": "Krebs iki turda yalnız 2 ATP verir."
+      "neden": "Krebs döngüsü iki turda yalnızca 2 ATP verir."
      },
      {
       "yazi": "ETS'de",
       "dogru": true,
-      "neden": "Glikozdan kopan elektronların enerjisiyle ATP'nin çoğu (≈ 26-28) ETS'de yapılır."
+      "neden": "Glikozdan kopan elektronların enerjisiyle ATP'nin çoğu, yani yaklaşık 26-28 tanesi ETS'de yapılır."
      }
     ]
    },
@@ -42,20 +42,20 @@
    },
    "gorev": {
     "tur": "tahmin",
-    "soru": "Glikoliz 4 ATP üretir. Net kazanç neden 2 ATP?",
+    "soru": "Glikoliz 4 ATP üretir. Net kazanç neden 2 ATP'dir?",
     "secenekler": [
      {
       "yazi": "Başta 2 ATP harcanır",
       "dogru": true,
-      "neden": "Glikozu tepkimeye hazırlamak için önce 2 ATP harcanır: 4 − 2 = 2."
+      "neden": "Glikozu tepkimeye hazırlamak için önce 2 ATP harcanır. Bu yüzden 4 − 2 = 2 ATP kalır."
      },
      {
       "yazi": "2 ATP CO₂ ile dışarı atılır",
-      "neden": "ATP CO₂ ile atılmaz. Glikolizde CO₂ de çıkmaz; ilk CO₂ pirüvat oksidasyonunda çıkar."
+      "neden": "ATP, CO₂ ile atılmaz. Glikolizde CO₂ de çıkmaz; ilk CO₂ pirüvat oksidasyonunda açığa çıkar."
      },
      {
       "yazi": "2 ATP NADH'ye dönüşür",
-      "neden": "NADH, NAD⁺'nın indirgenmiş hâlidir; ATP'den oluşmaz."
+      "neden": "NADH, NAD⁺'nın indirgenmiş hâlidir ve ATP'den oluşmaz."
      }
     ]
    },
@@ -63,7 +63,7 @@
   },
   {
    "baslik": "Karbonlar CO₂ olur",
-   "metin": "O₂ varsa pirüvat mitokondriye girer. Önce pirüvat oksidasyonu, sonra iki Krebs turu döner. Aşamaları ilerlet ve sayaçları izle.",
+   "metin": "O₂ varsa pirüvat mitokondriye girer. Önce pirüvat oksidasyonu olur, sonra Krebs döngüsü iki tur döner. Aşamaları ilerlet ve sayaçları izle.",
    "sahne": {
     "tur": "biy8-krebs"
    },
@@ -84,7 +84,7 @@
     "hedef": {
      "a": 3
     },
-    "tamam": "Glikozun 6 karbonunun hepsi CO₂ oldu: 2'si pirüvat oksidasyonunda, 4'ü Krebs'te. Toplam 10 NADH ve 2 FADH₂ birikti; bunların enerjisi ETS'de ATP'ye çevrilecek."
+    "tamam": "Glikozun 6 karbonunun hepsi CO₂'ye dönüştü. Bunların 2'si pirüvat oksidasyonunda, 4'ü Krebs döngüsünde açığa çıktı. Toplam 10 NADH ve 2 FADH₂ birikti ve bunların enerjisi ETS'de ATP'ye çevrilecek."
    },
    "kart": 5
   },
@@ -101,17 +101,17 @@
     "soru": "O₂ yoksa ne olur?",
     "secenekler": [
      {
-      "yazi": "ETS yavaşlar, ATP sürer",
-      "neden": "Son alıcı yoksa elektronlar zincirde birikir; zincir tamamen durur."
+      "yazi": "ETS yavaşlar, ATP üretimi sürer",
+      "neden": "Son elektron alıcısı yoksa elektronlar zincirde birikir ve zincir tamamen durur."
      },
      {
       "yazi": "Krebs hızlanır",
-      "neden": "Krebs NAD⁺ ister; NAD⁺ azalınca hızlanmaz, durur."
+      "neden": "Krebs döngüsü NAD⁺'ya ihtiyaç duyar. NAD⁺ azalınca döngü hızlanmaz, durur."
      },
      {
-      "yazi": "Zincir tıkanır, NAD⁺ tükenir",
+      "yazi": "Zincir tıkanır ve NAD⁺ tükenir",
       "dogru": true,
-      "neden": "Elektronları alacak O₂ yoksa NADH, NAD⁺'ya dönemez. NAD⁺ biterse Krebs ve glikoliz de durur."
+      "neden": "Elektronları alacak O₂ yoksa NADH, NAD⁺'ya dönemez. NAD⁺ biterse Krebs döngüsü ve glikoliz de durur."
      }
     ]
    },
@@ -139,20 +139,20 @@
    "gorev": {
     "tur": "secim",
     "kosu": 2,
-    "soru": "İki fermantasyonun farkı ne?",
+    "soru": "İki fermantasyon arasındaki fark nedir?",
     "secenekler": [
      {
       "yazi": "Kasta daha çok ATP çıkar",
-      "neden": "İkisinde de ATP yalnız glikolizden gelir: glikoz başına net 2 ATP."
+      "neden": "İkisinde de ATP yalnızca glikolizden gelir ve bir glikozdan net 2 ATP elde edilir."
      },
      {
-      "yazi": "Yalnız mayada CO₂ çıkar",
+      "yazi": "Yalnızca mayada CO₂ çıkar",
       "dogru": true,
-      "neden": "Maya pirüvatı etil alkol ve CO₂'ye, kas hücresi laktik aside çevirir."
+      "neden": "Maya pirüvatı etil alkole ve CO₂'ye, kas hücresi ise laktik aside çevirir."
      },
      {
-      "yazi": "Yalnız kasta NAD⁺ geri kazanılır",
-      "neden": "İki fermantasyonun da amacı NAD⁺'yı geri kazanıp glikolizi sürdürmektir."
+      "yazi": "Yalnızca kasta NAD⁺ geri kazanılır",
+      "neden": "İki fermantasyonun da amacı NAD⁺'yı geri kazanmak ve glikolizi sürdürmektir."
      }
     ]
    },
@@ -160,7 +160,7 @@
   },
   {
    "baslik": "Verim",
-   "metin": "Fermantasyon glikoz başına net 2 ATP verir; ürünleri hâlâ enerji taşır. Oksijenli solunum bir glikozdan yaklaşık 30 ATP çıkarır. Fermantasyonun aynı ATP'yi vermesi için kaç glikoz gerekir?",
+   "metin": "Fermantasyon bir glikozdan net 2 ATP verir ve ürünleri hâlâ enerji taşır. Oksijenli solunum ise bir glikozdan yaklaşık 30 ATP elde eder. Fermantasyonun aynı miktarda ATP vermesi için kaç glikoz gerekir?",
    "sahne": {
     "tur": "biy8-verim"
    },
@@ -181,14 +181,14 @@
     "hedef": {
      "g": 15
     },
-    "ipucu": "Her glikoz 2 ATP verir; 30 ATP için 30 ÷ 2.",
-    "tamam": "15 glikoz × 2 ATP = 30 ATP. Aynı ATP için fermantasyon yapan hücre yaklaşık 15 kat fazla glikoz harcar."
+    "ipucu": "Her glikoz 2 ATP verir. 30 ATP için 30'u 2'ye böl.",
+    "tamam": "15 glikoz × 2 ATP = 30 ATP eder. Yani fermantasyon yapan bir hücre, aynı ATP için yaklaşık 15 kat fazla glikoz harcar."
    },
    "kart": 11
   },
   {
    "baslik": "Bitki gece ve gündüz",
-   "metin": "Bitki hücresi hem fotosentez hem solunum yapar. Gündüz ile gece arasında gaz alışverişini karşılaştır.",
+   "metin": "Bitki hücresi hem fotosentez hem de solunum yapar. Gündüz ve gece gaz alışverişini karşılaştır.",
    "sahne": {
     "tur": "biy8-gece"
    },
@@ -206,20 +206,20 @@
    ],
    "gorev": {
     "tur": "secim",
-    "soru": "Gündüz bitki dışarıya neden O₂ verir?",
+    "soru": "Bitki gündüz dışarıya neden O₂ verir?",
     "secenekler": [
      {
       "yazi": "Gündüz solunum yapmaz",
-      "neden": "Solunum canlı hücrede gece gündüz sürer; gündüz de durmaz."
+      "neden": "Solunum canlı hücrede gece gündüz sürer ve gündüz de durmaz."
      },
      {
-      "yazi": "Solunum yalnız gece O₂ kullanır",
-      "neden": "Oksijenli solunum her an O₂ kullanır; ETS'nin son elektron alıcısı O₂'dir."
+      "yazi": "Solunum yalnızca gece O₂ kullanır",
+      "neden": "Oksijenli solunum her an O₂ kullanır, çünkü ETS'nin son elektron alıcısı O₂'dir."
      },
      {
       "yazi": "Fotosentez solunumdan hızlı",
       "dogru": true,
-      "neden": "Gündüz ikisi birlikte yürür ama fotosentezin ürettiği O₂, solunumun harcadığından fazladır."
+      "neden": "Gündüz iki süreç birlikte yürür. Ancak fotosentezin ürettiği O₂, solunumun harcadığından fazladır."
      }
     ]
    },
@@ -227,11 +227,11 @@
   }
  ],
  "kapanis": [
-  "Glikoliz sitoplazmada net 2 ATP verir; O₂ gerektirmez.",
-  "Glikozun karbonları pirüvat oksidasyonunda ve Krebs'te CO₂ olarak çıkar.",
-  "ATP'nin çoğu ETS'de yapılır; son elektron alıcısı O₂'dir. Toplam ≈30-32 ATP.",
-  "O₂ yoksa fermantasyon NAD⁺'yı geri kazanır; verim yalnız 2 ATP.",
-  "Bitki gece gündüz solunum yapar; ışıkta fotosentez daha hızlıdır."
+  "Glikoliz sitoplazmada gerçekleşir, O₂ gerektirmez ve net 2 ATP verir.",
+  "Glikozun karbonları, pirüvat oksidasyonunda ve Krebs döngüsünde CO₂ olarak açığa çıkar.",
+  "ATP'nin çoğu ETS'de yapılır ve son elektron alıcısı O₂'dir. Toplam yaklaşık 30-32 ATP elde edilir.",
+  "O₂ yoksa fermantasyon NAD⁺'yı geri kazanır, ama yalnızca 2 ATP verir.",
+  "Bitki gece gündüz solunum yapar. Işıkta ise fotosentez solunumdan daha hızlıdır."
  ],
  "soruOnce": true
 }

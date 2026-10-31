@@ -3,11 +3,11 @@
  "ders": "biyoloji",
  "konu": "protein-sentezi",
  "baslik": "Protein sentezi",
- "ozet": "Önce dene, sonra adını öğren: DNA'dan mRNA yaz, kodonları oku, ribozomda zinciri uzat.",
+ "ozet": "Önce dene, sonra adını öğren. DNA'dan mRNA yaz, kodonları oku ve ribozomda zinciri uzat.",
  "adimlar": [
   {
    "baslik": "DNA'dan mRNA'ya",
-   "metin": "Bilgi önce DNA'dan RNA'ya kopyalanır: <b>transkripsiyon</b>. RNA polimeraz yalnızca kalıp ipliği okur ve tamamlayıcı RNA nükleotitlerini ekler.",
+   "metin": "Bilgi önce DNA'dan RNA'ya kopyalanır; buna <b>transkripsiyon</b> denir. RNA polimeraz yalnızca kalıp ipliği okur ve tamamlayıcı RNA nükleotitlerini ekler.",
    "sahne": {
     "tur": "biy7-transkripsiyon",
     "sure": 5
@@ -18,16 +18,16 @@
     "secenekler": [
      {
       "yazi": "T",
-      "neden": "T yalnızca DNA'da bulunur; RNA'da onun yerini başka bir baz alır."
+      "neden": "T yalnızca DNA'da bulunur. RNA'da onun yerini başka bir baz alır."
      },
      {
       "yazi": "U",
       "dogru": true,
-      "neden": "RNA'da timin yoktur; A'nın karşısına urasil (U) gelir."
+      "neden": "RNA'da timin yoktur. A'nın karşısına urasil (U) gelir."
      },
      {
       "yazi": "A",
-      "neden": "Baz kendisiyle eşleşmez; A'nın eşi bir pirimidindir."
+      "neden": "Bir baz kendisiyle eşleşmez. A'nın eşi bir pirimidindir."
      }
     ]
    },
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Üç harfli kelimeler",
-   "metin": "mRNA üçer üçer okunur; her üçlü bir <b>kodondur</b>. UAA, UAG ve UGA dur kodonudur. Kodonları sırayla oku ve dur kodonuna kadar git.",
+   "metin": "mRNA üçer üçer okunur ve her üçlüye <b>kodon</b> denir. UAA, UAG ve UGA dur kodonlarıdır. Kodonları sırayla oku ve dur kodonuna kadar git.",
    "sahne": {
     "tur": "biy7-kodon"
    },
@@ -56,13 +56,13 @@
     "hedef": {
      "k": 5
     },
-    "tamam": "5 kodondan 4 amino asit çıktı (Met-Ala-Trp-Lys); aralarında 3 peptit bağı var."
+    "tamam": "5 kodondan 4 amino asit çıktı: Met, Ala, Trp ve Lys. Bunların arasında 3 peptit bağı vardır."
    },
    "kart": 4
   },
   {
    "baslik": "Ribozomda çeviri",
-   "metin": "Ribozomu oynat; tRNA'ların A, P ve E bölgelerinden geçişini izle.",
+   "metin": "Ribozomu oynat ve tRNA'ların A, P ve E bölgelerinden nasıl geçtiğini izle.",
    "sahne": {
     "tur": "biy7-ribozom",
     "sure": 6
@@ -73,16 +73,16 @@
     "secenekler": [
      {
       "yazi": "A bölgesinden",
-      "neden": "A bölgesi yeni gelen tRNA'nın girdiği yerdir."
+      "neden": "A bölgesi, yeni gelen tRNA'nın girdiği yerdir."
      },
      {
       "yazi": "P bölgesinden",
-      "neden": "P bölgesi zinciri taşıyan tRNA'nın durduğu yerdir; kaymadan sonra oraya A'daki tRNA geçer."
+      "neden": "P bölgesi, zinciri taşıyan tRNA'nın durduğu yerdir. Kaymadan sonra oraya A'daki tRNA geçer."
      },
      {
       "yazi": "E bölgesinden",
       "dogru": true,
-      "neden": "Boşalan tRNA E (exit, çıkış) bölgesinden ayrılır."
+      "neden": "Boşalan tRNA, E (exit, çıkış) bölgesinden ayrılır."
      }
     ]
    },
@@ -90,7 +90,7 @@
   },
   {
    "baslik": "Kodon ve bağ hesabı",
-   "metin": "Her amino asidi bir kodon şifreler, sonda bir de dur kodonu vardır; her kodon 3 nükleotittir. Amino asit sayısını değiştir; mRNA'nın kodlayan bölgesi <b>453</b> nükleotit olsun.",
+   "metin": "Her amino asidi bir kodon şifreler ve sonda bir de dur kodonu bulunur. Her kodon 3 nükleotittir. Amino asit sayısını değiştir ve mRNA'nın kodlayan bölgesini <b>453</b> nükleotit yap.",
    "sahne": {
     "tur": "biy7-hesap"
    },
@@ -111,13 +111,13 @@
     "hedef": {
      "n": 150
     },
-    "tamam": "150 amino asit + dur kodonu = 151 kodon, 3 · 151 = 453 nükleotit. Zincirde 150 − 1 = 149 peptit bağı var ve her bağda bir su açığa çıktı."
+    "tamam": "150 amino asit ve bir dur kodonu 151 kodon eder; 3 · 151 = 453 nükleotit olur. Zincirde 150 − 1 = 149 peptit bağı vardır ve her bağda bir su açığa çıkmıştır."
    },
    "kart": 12
   },
   {
    "baslik": "Tek baz, başka protein",
-   "metin": "Hemoglobinin β-globin zincirinde 6. amino asit glutamik asittir (Glu). Kodonundaki ortanca bazı değiştir ve alyuvara ne olduğuna bak.",
+   "metin": "Hemoglobinin β-globin zincirinde 6. amino asit glutamik asittir (Glu). Bu amino asidin kodonundaki ortanca bazı değiştir ve alyuvara ne olduğuna bak.",
    "sahne": {
     "tur": "biy7-mutasyon"
    },
@@ -138,13 +138,13 @@
     "hedef": {
      "b2": 1
     },
-    "tamam": "GAG kodonu GUG oldu ve glutamik asidin yerine valin (Val) geldi. Bu tek değişim hemoglobinin şeklini bozar, alyuvarlar orak biçimini alır: orak hücre anemisi. Buna yanlış anlamlı nokta mutasyonu denir."
+    "tamam": "GAG kodonu GUG'ye dönüştü ve glutamik asidin yerine valin (Val) geldi. Bu tek değişiklik hemoglobinin şeklini bozar ve alyuvarlar orak biçimini alır; buna orak hücre anemisi denir. Bu bir yanlış anlamlı nokta mutasyonudur."
    },
    "kart": 13
   },
   {
    "baslik": "Sessiz mutasyon",
-   "metin": "Şimdi aynı kodonun üçüncü bazını değiştir: GAG → GAA.",
+   "metin": "Şimdi aynı kodonun üçüncü bazını değiştir: GAG, GAA'ya dönüşsün.",
    "sahne": {
     "tur": "biy7-mutasyon"
    },
@@ -166,17 +166,17 @@
     "soru": "Bu baz değişimi proteini neden etkilemedi?",
     "secenekler": [
      {
-      "yazi": "Yalnız ilk baz önemlidir",
-      "neden": "Orak hücrede değişen ortanca bazdı ve protein değişti. Konum değil, yeni kodonun anlamı belirleyicidir."
+      "yazi": "Yalnızca ilk baz önemlidir",
+      "neden": "Orak hücrede değişen ortanca bazdı ve protein değişti. Belirleyici olan bazın konumu değil, yeni kodonun anlamıdır."
      },
      {
       "yazi": "GAA da Glu'yu şifreler",
       "dogru": true,
-      "neden": "Kod dejeneredir: bir amino asidi birden çok kodon şifreleyebilir. GAG ve GAA ikisi de Glu'dur, bu yüzden protein aynı kalır. Buna sessiz mutasyon denir."
+      "neden": "Genetik kod dejeneredir; bir amino asidi birden fazla kodon şifreleyebilir. GAG ve GAA ikisi de Glu'yu şifreler, bu yüzden protein aynı kalır. Buna sessiz mutasyon denir."
      },
      {
       "yazi": "Kodon birkaç amino asit şifreler",
-      "neden": "Tersi doğru: bir kodon hep tek bir amino asidi belirtir, ama bir amino asidin birden çok kodonu olabilir."
+      "neden": "Tersi doğrudur. Bir kodon her zaman tek bir amino asidi belirtir, ama bir amino asidin birden fazla kodonu olabilir."
      }
     ]
    },
@@ -210,12 +210,12 @@
      },
      {
       "yazi": "Protein değişmedi",
-      "neden": "Anahtarı açınca zincirin kısaldığını görüyorsun."
+      "neden": "Anahtarı açınca zincirin kısaldığını görebilirsin."
      },
      {
-      "yazi": "Çerçeve kaydı, zincir kısaldı",
+      "yazi": "Çerçeve kaydı ve zincir kısaldı",
       "dogru": true,
-      "neden": "Okuma çerçevesi bir harf kaydı: GCU'dan sonra UAA dur kodonu oluştu ve protein 2 amino asitte kaldı."
+      "neden": "Okuma çerçevesi bir harf kaydı. GCU'dan sonra UAA dur kodonu oluştu ve protein 2 amino asitte kaldı."
      }
     ]
    },
@@ -223,11 +223,11 @@
   }
  ],
  "kapanis": [
-  "Bilgi akışı: DNA → mRNA (transkripsiyon) → protein (translasyon).",
-  "mRNA, kalıp ipliğin tamamlayıcısıdır; A'nın karşısına U gelir.",
-  "64 kodon: AUG başlar (Met); UAA, UAG, UGA durdurur; kalan 61 kodon 20 amino asidi şifreler.",
-  "n amino asit: n + 1 kodon, 3(n + 1) mRNA nükleotidi, n − 1 peptit bağı ve su.",
-  "Mutasyon sessiz, yanlış anlamlı (orak hücre), anlamsız ya da çerçeve kayması olabilir."
+  "Bilgi DNA'dan mRNA'ya (transkripsiyon), mRNA'dan da proteine (translasyon) akar.",
+  "mRNA, kalıp ipliğin tamamlayıcısıdır. Kalıptaki A'nın karşısına U gelir.",
+  "64 kodon vardır. AUG sentezi başlatır ve metiyonini şifreler. UAA, UAG ve UGA sentezi durdurur, kalan 61 kodon da 20 amino asidi şifreler.",
+  "n amino asitlik bir zincir için n + 1 kodon ve 3(n + 1) mRNA nükleotidi gerekir. Zincirde n − 1 peptit bağı oluşur ve n − 1 su açığa çıkar.",
+  "Mutasyon sessiz, yanlış anlamlı (orak hücre), anlamsız ya da çerçeve kayması şeklinde olabilir."
  ],
  "soruOnce": true
 }

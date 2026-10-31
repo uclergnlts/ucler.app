@@ -3,11 +3,11 @@
  "ders": "biyoloji",
  "konu": "dna-genetik-kod",
  "baslik": "DNA, eşlenme ve biyoteknoloji",
- "ozet": "Önce dene, sonra adını öğren: bazları eşleştir, Chargaff kuralıyla hesapla, DNA'nın kopyalanışını izle.",
+ "ozet": "Önce dene, sonra adını öğren. Bazları eşleştir, Chargaff kuralıyla hesapla ve DNA'nın kopyalanışını izle.",
  "adimlar": [
   {
    "baslik": "DNA'nın harfleri",
-   "metin": "DNA'nın dört bazı var: A, G, T, C. Halkalarını say. Hangileri çift halkalı?",
+   "metin": "DNA'nın dört bazı vardır: A, G, T ve C. Halkalarını say ve hangilerinin çift halkalı olduğunu bul.",
    "sahne": {
     "tur": "biy7-nukleotit"
    },
@@ -17,16 +17,16 @@
     "secenekler": [
      {
       "yazi": "T ve C",
-      "neden": "T ve C tek halkalıdır; bunlar pirimidindir."
+      "neden": "T ve C tek halkalıdır. Bunlar pirimidindir."
      },
      {
       "yazi": "A ve G",
       "dogru": true,
-      "neden": "Adenin ve guanin çift halkalı pürinlerdir. Timin ve sitozin tek halkalı pirimidinlerdir; RNA'daki urasil de tek halkalıdır."
+      "neden": "Adenin ve guanin çift halkalı pürinlerdir. Timin ve sitozin ise tek halkalı pirimidinlerdir. RNA'daki urasil de tek halkalıdır."
      },
      {
       "yazi": "A ve T",
-      "neden": "A çift halkalı ama T tek halkalı. Halkaları yeniden say."
+      "neden": "A çift halkalıdır, ama T tek halkalıdır. Halkaları yeniden say."
      }
     ]
    },
@@ -34,27 +34,27 @@
   },
   {
    "baslik": "Baz eşleşmesi",
-   "metin": "İki iplik bazlarından hidrojen bağlarıyla tutunur: A hep T ile, G hep C ile eşleşir. İplikler zıt yönlüdür. Üstteki ipliğin eşini tahmin et.",
+   "metin": "İki iplik, bazları arasındaki hidrojen bağlarıyla birbirine tutunur. A her zaman T ile, G de her zaman C ile eşleşir. İplikler zıt yönlüdür. Üstteki ipliğin eşini tahmin et.",
    "sahne": {
     "tur": "biy7-eslesme",
     "sure": 4
    },
    "gorev": {
     "tur": "tahmin",
-    "soru": "5'-ATGCAG-3' ipliğinin karşısındaki iplik hangisi?",
+    "soru": "5'-ATGCAG-3' ipliğinin karşısındaki iplik hangisidir?",
     "secenekler": [
      {
       "yazi": "3'-ATGCAG-5'",
-      "neden": "Bu, aynı dizinin kopyası; eşleşme kuralını uygulamıyor."
+      "neden": "Bu, aynı dizinin bir kopyasıdır ve eşleşme kuralına uymaz."
      },
      {
       "yazi": "3'-UACGUC-5'",
-      "neden": "U yalnızca RNA'da bulunur; DNA'da A'nın karşısına T gelir."
+      "neden": "U yalnızca RNA'da bulunur. DNA'da A'nın karşısına T gelir."
      },
      {
       "yazi": "3'-TACGTC-5'",
       "dogru": true,
-      "neden": "A'nın karşısına T, T'nin karşısına A, G'nin karşısına C, C'nin karşısına G gelir. Yön de zıttır: 3'→5'. A=T arasında iki, G≡C arasında üç hidrojen bağı var."
+      "neden": "A'nın karşısına T, T'nin karşısına A, G'nin karşısına C, C'nin karşısına da G gelir. Yön de zıttır, yani 3'→5'tir. A ile T arasında iki, G ile C arasında üç hidrojen bağı vardır."
      }
     ]
    },
@@ -62,7 +62,7 @@
   },
   {
    "baslik": "Chargaff kuralı",
-   "metin": "A–T çiftinde 2, G–C çiftinde 3 hidrojen bağı var. Bu 100 baz çiftlik DNA'da adenin sayısını değiştir; hidrojen bağı sayısını <b>270</b> yap.",
+   "metin": "A–T çiftinde 2, G–C çiftinde 3 hidrojen bağı vardır. Bu 100 baz çiftlik DNA'da adenin sayısını değiştir ve hidrojen bağı sayısını <b>270</b> yap.",
    "sahne": {
     "tur": "biy7-chargaff"
    },
@@ -84,13 +84,13 @@
     "hedef": {
      "A": 30
     },
-    "tamam": "30 adenin varsa T = 30, G = C = 70 olur. Hidrojen bağı 2·30 + 3·70 = 270. G–C çifti çoğaldıkça bağ sayısı artar ve iplikleri ayırmak zorlaşır."
+    "tamam": "30 adenin varsa T = 30, G ve C ise 70'er olur. Hidrojen bağı sayısı 2·30 + 3·70 = 270'tir. G–C çifti çoğaldıkça bağ sayısı artar ve iplikleri ayırmak zorlaşır."
    },
    "kart": 4
   },
   {
    "baslik": "Eşlenme yarı korunumludur",
-   "metin": "DNA kopyalanırken iki iplik ayrılır ve her biri yeni ipliğe kalıp olur. Meselson ve Stahl, ağır ¹⁵N'li DNA'yı hafif ¹⁴N ortamında iki kez eşledi.",
+   "metin": "DNA kopyalanırken iki iplik birbirinden ayrılır ve her biri yeni ipliğe kalıp olur. Meselson ve Stahl, ağır ¹⁵N içeren DNA'yı hafif ¹⁴N ortamında iki kez eşledi.",
    "sahne": {
     "tur": "biy7-eslenme",
     "sure": 6
@@ -101,16 +101,16 @@
     "secenekler": [
      {
       "yazi": "4'ünde",
-      "neden": "Eski iplikler yalnızca iki tanedir ve parçalanmaz; ancak iki moleküle girebilir."
+      "neden": "Eski iplikler yalnızca iki tanedir ve parçalanmaz. Bu yüzden ancak iki moleküle girebilir."
      },
      {
       "yazi": "Hiçbirinde",
-      "neden": "Eski iplikler kaybolmaz; her eşlenmede kalıp olarak yeni moleküllerin içinde kalır."
+      "neden": "Eski iplikler kaybolmaz. Her eşlenmede kalıp olarak yeni moleküllerin içinde kalır."
      },
      {
       "yazi": "2'sinde",
       "dogru": true,
-      "neden": "İki eski iplik iki ayrı moleküle gider: 2 hibrit + 2 hafif DNA. 1. eşlenmede ise hepsi hibritti. Her yeni molekülde bir eski, bir yeni iplik bulunur: yarı korunumlu eşlenme."
+      "neden": "İki eski iplik iki ayrı moleküle gider; böylece 2 karma ve 2 hafif DNA oluşur. İlk eşlenmede ise moleküllerin hepsi karmadır. Her yeni molekülde bir eski ve bir yeni iplik bulunur; buna yarı korunumlu eşlenme denir."
      }
     ]
    },
@@ -125,20 +125,20 @@
    },
    "gorev": {
     "tur": "tahmin",
-    "soru": "İki iplik arasındaki hidrojen bağlarını koparıp iplikleri ayıran enzim hangisi?",
+    "soru": "İki iplik arasındaki hidrojen bağlarını koparıp iplikleri ayıran enzim hangisidir?",
     "secenekler": [
      {
       "yazi": "Ligaz",
-      "neden": "Ligaz parçaları birbirine yapıştırır; iplikleri ayırmaz."
+      "neden": "Ligaz parçaları birbirine yapıştırır, iplikleri ayırmaz."
      },
      {
       "yazi": "DNA polimeraz",
-      "neden": "DNA polimeraz kalıba uygun nükleotitleri ekleyip yeni ipliği örer; açma işi ondan önce yapılır."
+      "neden": "DNA polimeraz, kalıba uygun nükleotitleri ekleyerek yeni ipliği örer. İpliklerin açılması ondan önce olur."
      },
      {
       "yazi": "Helikaz",
       "dogru": true,
-      "neden": "Helikaz çatalın ucunda ilerler ve hidrojen bağlarını koparıp iki ipliği açar."
+      "neden": "Helikaz çatalın ucunda ilerler, hidrojen bağlarını koparır ve iki ipliği açar."
      }
     ]
    },
@@ -146,7 +146,7 @@
   },
   {
    "baslik": "PCR: tüpte kopyalama",
-   "metin": "PCR bir DNA parçasını tüpte çoğaltır: ısıt, iplikleri ayır, primer bağla, ör. Her döngüde kopya sayısı ikiye katlanır. Döngü sayısını artır ve en az <b>1000</b> kopya elde et.",
+   "metin": "PCR, bir DNA parçasını tüpte çoğaltır. Önce DNA ısıtılır ve iplikler ayrılır, sonra primer bağlanır ve yeni iplik örülür. Her döngüde kopya sayısı ikiye katlanır. Döngü sayısını artır ve en az <b>1000</b> kopya elde et.",
    "sahne": {
     "tur": "biy7-pcr"
    },
@@ -170,17 +170,17 @@
       12
      ]
     },
-    "tamam": "10 döngüde 2¹⁰ = 1024 kopya olur. Bu yüzden suç yerindeki tek bir saç kökünden ya da kan lekesinden bile DNA parmak izi çıkarılabilir."
+    "tamam": "10 döngüde 2¹⁰ = 1024 kopya oluşur. Bu yüzden suç yerindeki tek bir saç kökünden ya da kan lekesinden bile DNA parmak izi çıkarılabilir."
    },
    "kart": 12
   }
  ],
  "kapanis": [
-  "Nükleotit: fosfat + deoksiriboz + baz. Pürinler (A, G) çift, pirimidinler (T, C) tek halkalıdır.",
-  "A = T (iki hidrojen bağı), G ≡ C (üç hidrojen bağı); iki iplik zıt yönlüdür.",
-  "Çift iplikli DNA'da A sayısı T'ye, G sayısı C'ye eşittir (Chargaff).",
-  "Eşlenme yarı korunumludur: helikaz açar, DNA polimeraz örer, ligaz birleştirir.",
-  "PCR'da her döngü kopya sayısını ikiye katlar: n döngüde 2ⁿ kopya."
+  "Nükleotit fosfattan, deoksiriboz şekerinden ve bir bazdan oluşur. Pürinler (A, G) çift halkalı, pirimidinler (T, C) tek halkalıdır.",
+  "A ile T arasında iki, G ile C arasında üç hidrojen bağı vardır. İki iplik birbirine zıt yönlüdür.",
+  "Chargaff kuralına göre çift iplikli DNA'da A sayısı T'ye, G sayısı da C'ye eşittir.",
+  "Eşlenme yarı korunumludur. Helikaz iplikleri açar, DNA polimeraz örer, ligaz da parçaları birleştirir.",
+  "PCR'da her döngü kopya sayısını ikiye katlar; n döngüde 2ⁿ kopya oluşur."
  ],
  "soruOnce": true
 }

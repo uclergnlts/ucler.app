@@ -3,11 +3,11 @@
  "ders": "biyoloji",
  "konu": "fotosentez",
  "baslik": "Fotosentez",
- "ozet": "Önce dene, sonra adını öğren: oksijenin kaynağını izle, klorofilin rengini bul, ışığı kapat, sınırlayan faktörü ara.",
+ "ozet": "Önce dene, sonra adını öğren. Oksijenin kaynağını izle, klorofilin rengini bul, ışığı kapat ve sınırlayan faktörü ara.",
  "adimlar": [
   {
    "baslik": "Oksijen nereden geliyor?",
-   "metin": "Fotosentezde CO₂ ve su, ışık enerjisiyle glikoza dönüşür; O₂ açığa çıkar. Suyun oksijenini ¹⁸O ile işaretledik (kırmızı). Oynat ve atomları izle.",
+   "metin": "Fotosentezde CO₂ ve su, ışık enerjisiyle glikoza dönüşür ve O₂ açığa çıkar. Suyun oksijenini ¹⁸O ile işaretledik ve kırmızıyla gösterdik. Oynat ve atomları izle.",
    "sahne": {
     "tur": "biy8-denklem",
     "sure": 5
@@ -23,11 +23,11 @@
      {
       "yazi": "Sudan",
       "dogru": true,
-      "neden": "Işığa bağımlı evrede su parçalanır (fotoliz) ve O₂ açığa çıkar. İşaretli su verilince işaretli O₂ çıkar."
+      "neden": "Işığa bağımlı evrede su parçalanır ve O₂ açığa çıkar; buna fotoliz denir. Bu yüzden işaretli su verilince işaretli O₂ açığa çıkar."
      },
      {
       "yazi": "Yarısı CO₂'den, yarısı sudan",
-      "neden": "İşaretli oksijenin hepsi O₂'de göründü; CO₂'nin oksijeni hiç O₂'ye geçmedi."
+      "neden": "İşaretli oksijenin hepsi O₂'de göründü. CO₂'nin oksijeni hiç O₂'ye geçmedi."
      }
     ]
    },
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Klorofil hangi rengi yakalar?",
-   "metin": "Klorofil her rengi aynı ölçüde soğurmaz. Dalga boyunu değiştir ve eğrinin ikinci tepesini, <b>kırmızıdaki</b> zirveyi bul.",
+   "metin": "Klorofil her rengi aynı ölçüde soğurmaz. Dalga boyunu değiştir ve eğrinin <b>kırmızıdaki</b> ikinci tepesini bul.",
    "sahne": {
     "tur": "biy8-renk"
    },
@@ -60,14 +60,14 @@
       680
      ]
     },
-    "ipucu": "Kırmızı ışık spektrumun sağ ucundadır, 650 nm'nin üstü.",
-    "tamam": "İki tepe var: mavi-mor ve kırmızı. Arada yeşil (≈550 nm) en az soğurulan renk."
+    "ipucu": "Kırmızı ışık, spektrumun sağ ucunda, 650 nm'nin üstündedir.",
+    "tamam": "Eğride iki tepe vardır: mavi-mor ve kırmızı. Aradaki yeşil (yaklaşık 550 nm), en az soğurulan renktir."
    },
    "kart": 4
   },
   {
    "baslik": "Engelmann deneyi",
-   "metin": "1880'lerde Engelmann ipliksi bir yeşil algi prizmadan geçen ışıkla aydınlattı, yanına oksijen arayan (aerobik) bakteriler koydu. Bakteriler O₂'nin çok üretildiği yere toplanır.",
+   "metin": "Engelmann 1880'lerde ipliksi bir yeşil algi, prizmadan geçen ışıkla aydınlattı. Yanına da oksijen arayan (aerobik) bakteriler koydu. Bu bakteriler, O₂'nin çok üretildiği yerlerde toplanır.",
    "sahne": {
     "tur": "biy8-engelmann",
     "sure": 5
@@ -78,16 +78,16 @@
     "secenekler": [
      {
       "yazi": "Yeşil bölgede",
-      "neden": "Yeşil en az soğurulan renktir; orada fotosentez ve O₂ üretimi en düşüktür."
+      "neden": "Yeşil en az soğurulan renktir. Orada fotosentez ve O₂ üretimi en düşük düzeydedir."
      },
      {
       "yazi": "Her yerde eşit",
-      "neden": "Fotosentez hızı dalga boyuna göre değişir; O₂ her bölgede aynı miktarda üretilmez."
+      "neden": "Fotosentez hızı dalga boyuna göre değişir. Bu yüzden O₂ her bölgede aynı miktarda üretilmez."
      },
      {
       "yazi": "Mavi-mor ve kırmızıda",
       "dogru": true,
-      "neden": "O₂ en çok bu renklerde üretilir. Deney, fotosentez hızının dalga boyuna göre değişimini (etki spektrumu) gösterdi."
+      "neden": "O₂ en çok bu renklerde üretilir. Bu deney, fotosentez hızının dalga boyuna göre nasıl değiştiğini, yani etki spektrumunu gösterdi."
      }
     ]
    },
@@ -95,7 +95,7 @@
   },
   {
    "baslik": "Işığı kapat",
-   "metin": "Calvin döngüsü, ışık evresinin ATP ve NADPH'ıyla CO₂'yi şekere çevirir. Işık açıkken döngü dönüyor. Işığı kapat ve oynat.",
+   "metin": "Calvin döngüsü, ışık evresinde üretilen ATP ve NADPH'yi kullanarak CO₂'yi şekere çevirir. Işık açıkken döngü dönüyor. Işığı kapat ve oynat.",
    "sahne": {
     "tur": "biy8-evreler",
     "sure": 6
@@ -117,13 +117,13 @@
     "hedef": {
      "isik": 0
     },
-    "tamam": "Işık kapanınca yeni ATP ve NADPH gelmedi; eldekiler bitince Calvin döngüsü de durdu."
+    "tamam": "Işık kapanınca yeni ATP ve NADPH gelmedi. Eldekiler bitince Calvin döngüsü de durdu."
    },
    "kart": 8
   },
   {
    "baslik": "Fotosentez laboratuvarı",
-   "metin": "Su bitkisi fotosentez yaptıkça O₂ kabarcıkları çıkarır. Işığı, CO₂'yi ve sıcaklığı değiştir; kabarcıklar ve grafik anında değişir. Aşağıdakileri kendin bul.",
+   "metin": "Su bitkisi, fotosentez yaptıkça O₂ kabarcıkları çıkarır. Işığı, CO₂'yi ve sıcaklığı değiştir; kabarcıklar ve grafik anında değişir. Aşağıdakileri kendin bul.",
    "sahne": {
     "tur": "sim-foto"
    },
@@ -161,7 +161,7 @@
     "tur": "kesfet",
     "bulgular": [
      {
-      "yazi": "CO₂ %30'dayken ışığı artır: hız nerede <b>artmayı bırakıyor</b>?",
+      "yazi": "CO₂ %30'dayken ışığı artır. Hız hangi noktada <b>artmayı bırakıyor</b>?",
       "hedef": {
        "co2": 30,
        "isik": [
@@ -175,7 +175,7 @@
         "isik": 50
        }
       ],
-      "tamam": "Işık %30'u geçince hız artmadı: artık en kıt faktör CO₂. Grafiğin düz kısmında ışığı artırmak işe yaramaz."
+      "tamam": "Işık %30'u geçince hız artmadı, çünkü artık en kıt faktör CO₂'dir. Grafiğin düz kısmında ışığı artırmak işe yaramaz."
      },
      {
       "yazi": "Fotosentezi <b>en hızlı</b> hâle getir.",
@@ -192,10 +192,10 @@
         "T": 30
        }
       ],
-      "tamam": "Işık ve CO₂ yeterli, sıcaklık optimumda (≈ 30 °C): hiçbir faktör sınırlamıyor. Hızı her an en kıt faktör belirler."
+      "tamam": "Işık ve CO₂ yeterli, sıcaklık da optimumda (yaklaşık 30 °C), yani hiçbir faktör hızı sınırlamıyor. Hızı her an en kıt faktör belirler."
      },
      {
-      "yazi": "En hızlıyken sıcaklığı <b>40 °C</b>'nin üstüne çıkar.",
+      "yazi": "Fotosentez en hızlıyken sıcaklığı <b>40 °C</b>'nin üstüne çıkar.",
       "hedef": {
        "T": [
         41,
@@ -217,7 +217,7 @@
         "T": 44
        }
       ],
-      "tamam": "Işık ve CO₂ bol olduğu hâlde hız düştü: Calvin döngüsü enzimlerle yürür, optimumun üstünde enzimler bozulur."
+      "tamam": "Işık ve CO₂ bol olduğu hâlde hız düştü. Çünkü Calvin döngüsü enzimlerle yürür ve optimumun üstündeki sıcaklıkta enzimler bozulur."
      }
     ]
    },
@@ -225,7 +225,7 @@
   },
   {
    "baslik": "Sıcaklık",
-   "metin": "Calvin döngüsü enzimlerle yürür. Su bitkisinin çıkardığı kabarcıkları say ve sıcaklığı en hızlı fotosentezin olduğu değere getir.",
+   "metin": "Calvin döngüsü enzimlerle yürür. Su bitkisinin çıkardığı kabarcıkları say ve sıcaklığı, fotosentezin en hızlı olduğu değere getir.",
    "sahne": {
     "tur": "biy8-sicaklik"
    },
@@ -247,18 +247,18 @@
     "hedef": {
      "s": 30
     },
-    "ipucu": "Sıcaklığı adım adım artır; kabarcıklar azalmaya başlayınca bir adım geri gel.",
-    "tamam": "Hız optimum sıcaklıkta en yüksektir. Daha sıcakta enzimler bozulur ve hız hızla düşer."
+    "ipucu": "Sıcaklığı adım adım artır. Kabarcıklar azalmaya başlayınca bir adım geri gel.",
+    "tamam": "Fotosentez hızı optimum sıcaklıkta en yüksektir. Daha yüksek sıcaklıkta enzimler bozulur ve hız hızla düşer."
    },
    "kart": 9
   }
  ],
  "kapanis": [
   "Fotosentezde açığa çıkan O₂ sudan gelir.",
-  "Klorofil mavi-mor ve kırmızıyı soğurur, yeşili yansıtır.",
-  "Işığa bağımlı evre ATP ve NADPH yapar; Calvin döngüsü bunlar bitince durur.",
-  "Hızı en kıt faktör sınırlar: ışık, CO₂, sıcaklık.",
-  "Sıcaklık eğrisi çan biçimlidir; çok sıcakta enzimler bozulur."
+  "Klorofil mavi-mor ve kırmızı ışığı soğurur, yeşil ışığı ise yansıtır.",
+  "Işığa bağımlı evre ATP ve NADPH yapar. Calvin döngüsü, bunlar bitince durur.",
+  "Fotosentezin hızını en kıt faktör sınırlar; bu faktör ışık, CO₂ ya da sıcaklık olabilir.",
+  "Sıcaklık eğrisi çan biçimlidir. Çok yüksek sıcaklıkta enzimler bozulur."
  ],
  "soruOnce": true
 }
