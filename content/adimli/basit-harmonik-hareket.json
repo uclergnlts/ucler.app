@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "basit-harmonik-hareket",
  "baslik": "Basit Harmonik Hareket",
- "ozet": "Yayı çekip geri getirici kuvveti gör, salınımı izle, konum-zaman grafiğini oku, periyodu ayarla, sarkacı Ay'a götür, enerjinin paylaşımını bul ve salıncakla rezonansı yakala.",
+ "ozet": "Yayı çek ve geri getirici kuvveti gör. Salınımı izle, konum-zaman grafiğini oku ve periyodu ayarla. Sarkacı Ay'a götür, enerjinin paylaşımını bul ve salıncakla rezonansı yakala.",
  "adimlar": [
   {
    "baslik": "Geri getirici kuvvet",
-   "metin": "Yay, dengeden x kadar çekilen cismi <b>F = −k · x</b> ile geri çeker. k = 50 N/m. Cismi öyle bir yere götür ki yay onu <b>5 N ile sola</b> çeksin.",
+   "metin": "Yay, dengeden x kadar çekilen cismi <b>F = −k · x</b> kuvvetiyle geri çeker. Burada k = 50 N/m'dir. Cismi, yayın onu <b>5 N ile sola</b> çekeceği bir yere götür.",
    "sahne": {
     "tur": "fiz11-geri"
    },
@@ -29,14 +29,14 @@
     "hedef": {
      "x": 10
     },
-    "tamam": "x = +0,1 m için F = −50 · 0,1 = <b>−5 N</b>. Cisim dengenin sağında, kuvvet solda: yay onu hep dengeye çeker.",
-    "ipucu": "Kuvvetin sola olması için cisim dengenin sağında olmalı. 5 / 50 = 0,1 m."
+    "tamam": "x = +0,1 m için F = −50 · 0,1 = <b>−5 N</b> olur. Cisim dengenin sağında, kuvvet ise sola doğrudur. Yay cismi her zaman dengeye doğru çeker.",
+    "ipucu": "Kuvvetin sola olması için cisim dengenin sağında olmalıdır. 5 / 50 = 0,1 m eder."
    },
    "kart": 1
   },
   {
    "baslik": "Bırakınca ne olur?",
-   "metin": "Cismi 10 cm çekip bırakıyorsun. Ortamda sürtünme yok. Kırmızı ok ivmeyi, yeşil ok hızı gösterecek.",
+   "metin": "Cismi 10 cm çekip bırakıyorsun ve ortamda sürtünme yok. Kırmızı ok ivmeyi, yeşil ok ise hızı gösterecek.",
    "sahne": {
     "tur": "fiz11-salinim",
     "sure": 4
@@ -47,16 +47,16 @@
     "secenekler": [
      {
       "yazi": "Dengede durur",
-      "neden": "Dengede kuvvet sıfırdır ama cisim o an en hızlıdır; hızının etkisiyle dengeyi geçer."
+      "neden": "Dengede kuvvet sıfırdır, ama cisim o anda en hızlıdır. Bu yüzden hızının etkisiyle dengeyi geçer."
      },
      {
       "yazi": "Dengeyi biraz geçip durur",
-      "neden": "Bu sönümlü salınımdır: sürtünme enerjiyi ısıya çevirir. Burada sürtünme yok."
+      "neden": "Bu, sönümlü salınımdır. Sönümlü salınımda sürtünme enerjiyi ısıya çevirir, ama burada sürtünme yok."
      },
      {
       "yazi": "İki uç arasında gidip gelir",
       "dogru": true,
-      "neden": "Dengede hız en büyük, ivme sıfırdır; uçlarda tersi. Sürtünme yoksa genlik hep 10 cm kalır."
+      "neden": "Dengede hız en büyük, ivme ise sıfırdır. Uçlarda bunun tersi olur. Sürtünme olmadığı için genlik hep 10 cm kalır."
      }
     ]
    },
@@ -64,7 +64,7 @@
   },
   {
    "baslik": "Konum-zaman grafiği",
-   "metin": "Düşey yaydaki cisim t = 0'da +A'dan bırakıldı. Periyot T = 2 s, grafik <b>x = A·cos(ωt)</b> eğrisi. Zamanı kaydır ve cismin <b>−A'ya ilk vardığı</b> anı bul.",
+   "metin": "Düşey yaydaki cisim t = 0 anında +A konumundan bırakıldı. Periyot T = 2 s'dir ve grafik <b>x = A·cos(ωt)</b> eğrisidir. Zamanı kaydır ve cismin <b>−A konumuna ilk vardığı</b> anı bul.",
    "sahne": {
     "tur": "fiz11-grafik"
    },
@@ -88,13 +88,13 @@
      "t": 1
     },
     "tamam": "Cisim −A'ya <b>T/2 = 1 s</b>'de varır. T/4 = 0,5 s'de dengeden geçer, T = 2 s'de başa döner.",
-    "ipucu": "Bir tam gidiş-geliş T sürer; −A'ya varmak bunun yarısıdır."
+    "ipucu": "Bir tam gidiş-geliş T kadar sürer. −A konumuna varmak bunun yarısı kadar sürer."
    },
    "kart": 4
   },
   {
    "baslik": "Yay laboratuvarı",
-   "metin": "Cisim yayın ucunda sürtünmesiz salınıyor; altta konum-zaman grafiği akıyor. Yay sabitini, kütleyi ve genliği değiştir: salınım anında değişir. Aşağıdakileri kendin bul.",
+   "metin": "Cisim yayın ucunda sürtünmesiz salınıyor ve altta konum-zaman grafiği akıyor. Yay sabitini, kütleyi ve genliği değiştirdiğinde salınım hemen değişir. Aşağıdakileri kendin bul.",
    "sahne": {
     "tur": "sim-yay"
    },
@@ -160,7 +160,7 @@
         "A": 20
        }
       ],
-      "tamam": "Periyot hep 0,99 s: genlik 2 katına çıkınca cisim 2 kat uzağa gider ama 2 kat hızlı gider. Periyot genliğe bağlı değildir."
+      "tamam": "Periyot hep 0,99 s kalır. Genlik 2 katına çıkınca cisim 2 kat uzağa gider, ama 2 kat hızlı gider. Yani periyot genliğe bağlı değildir."
      },
      {
       "yazi": "Periyodu <b>2 katına</b> (≈ 2 s) çıkaran bir yol bul.",
@@ -176,7 +176,7 @@
         "m": 4
        }
       ],
-      "tamam": "T = 2π√(m/k) karekök içerir: periyodu 2 katına çıkarmak için kütleyi 4 katına çıkarmak (ya da k'yı 4'te birine indirmek) gerekir."
+      "tamam": "T = 2π√(m/k) bağıntısı karekök içerir. Bu yüzden periyodu 2 katına çıkarmak için kütleyi 4 katına çıkarmak ya da k'yı 4'te birine indirmek gerekir."
      },
      {
       "yazi": "Şimdi periyodu <b>0,5 s</b>'ye indir.",
@@ -192,7 +192,7 @@
         "k": 80
        }
       ],
-      "tamam": "Hafif kütle ve sert yay: m = 0,5 kg, k = 80 N/m ile T = 2π√(0,5/80) ≈ 0,5 s. Yay sertleşince geri getirici kuvvet büyür, salınım hızlanır."
+      "tamam": "Hafif bir kütle ve sert bir yay seçmelisin. m = 0,5 kg ve k = 80 N/m için T = 2π√(0,5/80) ≈ 0,5 s olur. Yay sertleşince geri getirici kuvvet büyür ve salınım hızlanır."
      }
     ]
    },
@@ -200,7 +200,7 @@
   },
   {
    "baslik": "Basit sarkaç",
-   "metin": "Küçük açılarla salınan bir sarkaç. İpin boyunu ve topun kütlesini değiştirip en az iki kez oynat.",
+   "metin": "Bu sarkaç küçük açılarla salınıyor. İpin boyunu ve topun kütlesini değiştir ve en az iki kez oynat.",
    "sahne": {
     "tur": "fiz11-sarkac",
     "sure": 4
@@ -243,7 +243,7 @@
      {
       "yazi": "İpin boyuna",
       "dogru": true,
-      "neden": "Periyot ipin boyunun kareköküyle büyür: ip 4 kat uzayınca periyot 2 katına çıkar. Kütle periyodu değiştirmez."
+      "neden": "Periyot, ipin boyunun kareköküyle büyür. İp 4 kat uzayınca periyot 2 katına çıkar. Kütle ise periyodu değiştirmez."
      }
     ]
    },
@@ -251,7 +251,7 @@
   },
   {
    "baslik": "Ay'da sarkaç",
-   "metin": "Aynı 1 m'lik sarkaç Dünya'da ve Ay'da salınacak. Ay'da g yaklaşık 1,6 m/s², Dünya'dakinin altıda biri kadar.",
+   "metin": "Aynı 1 m'lik sarkaç Dünya'da ve Ay'da salınacak. Ay'da g yaklaşık 1,6 m/s²'dir, yani Dünya'dakinin altıda biri kadardır.",
    "sahne": {
     "tur": "fiz11-ay",
     "sure": 6.5
@@ -271,7 +271,7 @@
      {
       "yazi": "Yaklaşık 2,5 katına çıkar",
       "dogru": true,
-      "neden": "g altıda birine inince periyot √6 ≈ 2,45 katına çıkar: 2 s yerine yaklaşık 4,9 s. Sarkaçlı saat Ay'da geri kalır."
+      "neden": "g altıda birine inince periyot √6 ≈ 2,45 katına çıkar. Yani periyot 2 s yerine yaklaşık 4,9 s olur. Bu yüzden sarkaçlı saat Ay'da geri kalır."
      }
     ]
    },
@@ -279,7 +279,7 @@
   },
   {
    "baslik": "Enerji paylaşımı",
-   "metin": "Potansiyel enerji <b>½ · k · x²</b>, toplam enerji ½ · k · A². Yay sabiti k = 50 N/m, genlik A = 10 cm. Cismi öyle bir yere getir ki enerjinin <b>%75'i kinetik</b> olsun.",
+   "metin": "Potansiyel enerji <b>½ · k · x²</b>, toplam enerji ise ½ · k · A² olur. Yay sabiti k = 50 N/m, genlik A = 10 cm'dir. Cismi, enerjinin <b>%75'inin kinetik</b> olacağı bir yere getir.",
    "sahne": {
     "tur": "fiz11-enerji"
    },
@@ -301,14 +301,14 @@
     "hedef": {
      "x": 5
     },
-    "tamam": "x = A/2 = 5 cm'de E<sub>p</sub> = ½ · 50 · 0,05² = 0,0625 J, toplamın (0,25 J) dörtte biri. Kalan %75 kinetiktir; hız burada en büyük hızın yaklaşık %87'si.",
-    "ipucu": "Potansiyel pay %25 olmalı: x²/A² = 1/4."
+    "tamam": "x = A/2 = 5 cm'de E<sub>p</sub> = ½ · 50 · 0,05² = 0,0625 J olur. Bu, toplam enerjinin (0,25 J) dörtte biridir. Kalan %75 kinetiktir. Buradaki hız, en büyük hızın yaklaşık %87'sidir.",
+    "ipucu": "Potansiyel enerjinin payı %25 olmalıdır: x²/A² = 1/4."
    },
    "kart": 12
   },
   {
    "baslik": "Rezonans",
-   "metin": "Salıncağı düzenli aralıklarla hep aynı yöne it. Salınımın en çok büyüdüğü itme aralığını bul.",
+   "metin": "Salıncağı düzenli aralıklarla hep aynı yöne doğru it. Salınımın en çok büyüdüğü itme aralığını bul.",
    "sahne": {
     "tur": "fiz11-rezonans",
     "sure": 10
@@ -332,7 +332,7 @@
     "hedef": {
      "p": 2
     },
-    "tamam": "Salıncağın kendi periyodu 2 s, yani <b>doğal frekansı</b> 0,5 Hz. Her itme salıncak aynı yöne giderken geldi ve genlik büyüdü: <b>rezonans</b>. Dış itmenin frekansı doğal frekansa eşit olmalı. Sürtünme genliği sınırlar.",
+    "tamam": "Salıncağın kendi periyodu 2 s, yani <b>doğal frekansı</b> 0,5 Hz'dir. Her itme salıncak aynı yöne giderken geldi ve genlik büyüdü. Buna <b>rezonans</b> denir. Dış itmenin frekansı doğal frekansa eşit olmalıdır. Sürtünme ise genliği sınırlar.",
     "ipucu": "İtmeler salıncağın bir tam gidiş-gelişine denk gelmeli."
    },
    "kart": 13
@@ -340,10 +340,10 @@
  ],
  "kapanis": [
   "Geri getirici kuvvet F = −k·x hep dengeye yöneliktir.",
-  "Hız dengede en büyüktür (ωA), ivme uçlarda en büyüktür (ω²A).",
-  "Yay sarkacında T = 2π√(m/k), basit sarkaçta T = 2π√(L/g); periyot genliğe bağlı değildir.",
-  "Sarkacın periyodu kütleye bağlı değildir; g küçülünce uzar. Yay sarkacının periyodu g'ye bağlı değildir.",
-  "Toplam enerji E = ½kA² sabittir; uçta hepsi potansiyel, dengede hepsi kinetiktir."
+  "Hız dengede en büyüktür (ωA). İvme ise uçlarda en büyüktür (ω²A).",
+  "Yay sarkacında T = 2π√(m/k), basit sarkaçta ise T = 2π√(L/g) olur. Periyot genliğe bağlı değildir.",
+  "Sarkacın periyodu kütleye bağlı değildir ve g küçülünce uzar. Yay sarkacının periyodu ise g'ye bağlı değildir.",
+  "Toplam enerji E = ½kA² olur ve sabittir. Uçta enerjinin hepsi potansiyel, dengede ise hepsi kinetiktir."
  ],
  "soruOnce": true
 }

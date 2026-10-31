@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Enine ve boyuna dalga",
-   "metin": "Önce ipte, sonra yayda bir dalga gönder. Kırmızı tanecikleri izle.",
+   "metin": "Önce ipte, sonra yayda bir dalga gönder ve kırmızı tanecikleri izle.",
    "sahne": {
     "tur": "fiz11-tur",
     "sure": 4
@@ -31,12 +31,12 @@
     "secenekler": [
      {
       "yazi": "Evet, sağa ilerler",
-      "neden": "Kesik çizgiye bak: tanecik başladığı yerin çevresinde kalıyor."
+      "neden": "Kesik çizgiye bak. Tanecik, başladığı yerin çevresinde kalıyor."
      },
      {
       "yazi": "Hayır, yerinde titreşir",
       "dogru": true,
-      "neden": "Dalga enerji taşır, madde taşımaz: suya taş atınca halkalar ilerler ama yüzen yaprak yerinde iner çıkar."
+      "neden": "Dalga enerji taşır, madde taşımaz. Suya taş atınca halkalar ilerler, ama yüzen yaprak yerinde iner ve çıkar."
      },
      {
       "yazi": "Yalnız boyuna dalgada ilerler",
@@ -48,7 +48,7 @@
   },
   {
    "baslik": "Başka bir ortama geçiş",
-   "metin": "Dalganın hızı <b>v = λ · f</b>. Dalga ince ipten kalın ipe geçecek.",
+   "metin": "Dalganın hızı <b>v = λ · f</b> ile bulunur. Dalga şimdi ince ipten kalın ipe geçecek.",
    "sahne": {
     "tur": "fiz11-ortam",
     "sure": 5
@@ -64,7 +64,7 @@
      },
      {
       "yazi": "f azalır, λ aynı",
-      "neden": "Frekansı kaynak belirler; dalga başka ortama geçince f değişmez."
+      "neden": "Frekansı kaynak belirler. Dalga başka bir ortama geçince f değişmez."
      },
      {
       "yazi": "Hiçbir şey değişmez",
@@ -76,7 +76,7 @@
   },
   {
    "baslik": "Genlik",
-   "metin": "Genlik, dengeden tepeye yüksekliktir. İki ip aynı; üstteki dalganın genliği A, alttakinin 3A.",
+   "metin": "Genlik, dengeden tepeye olan yüksekliktir. İki ip aynıdır. Üstteki dalganın genliği A, alttakinin ise 3A'dır.",
    "sahne": {
     "tur": "fiz11-genlik",
     "sure": 4
@@ -91,12 +91,12 @@
      },
      {
       "yazi": "Küçük genlikli",
-      "neden": "Küçük genlik dalgayı hızlandırmaz; iki dalga aynı ortamda."
+      "neden": "Küçük genlik dalgayı hızlandırmaz. İki dalga da aynı ortamdadır."
      },
      {
       "yazi": "İkisi yan yana",
       "dogru": true,
-      "neden": "İki dalga aynı ipte, aynı hızla gider: hızı ortam belirler, genlik değil."
+      "neden": "İki dalga aynı ipte aynı hızla gider. Hızı genlik değil, ortam belirler."
      }
     ]
    },
@@ -104,7 +104,7 @@
   },
   {
    "baslik": "Dalga laboratuvarı",
-   "metin": "Kaynak ipi titreştiriyor; dalga sağa ilerliyor. Üçgen bir tepeyi izliyor, kırmızı nokta ise ipin bir parçası. Frekansı, dalga hızını (ipin gerginliğini) ve genliği değiştir. Aşağıdakileri kendin bul.",
+   "metin": "Kaynak ipi titreştiriyor ve dalga sağa ilerliyor. Üçgen bir tepeyi izliyor, kırmızı nokta ise ipin bir parçasıdır. Frekansı, dalga hızını (ipin gerginliğini) ve genliği değiştir. Aşağıdakileri kendin bul.",
    "sahne": {
     "tur": "sim-dalga"
    },
@@ -165,7 +165,7 @@
         "f": 2
        }
       ],
-      "tamam": "λ 4 m'den 2 m'ye indi. Aynı ipte hız değişmez; frekans 2 katına çıkınca dalga boyu yarıya iner: <b>v = λ·f</b>."
+      "tamam": "λ 4 m'den 2 m'ye indi. Aynı ipte hız değişmez. Bu yüzden frekans 2 katına çıkınca dalga boyu yarıya iner: <b>v = λ·f</b>."
      },
      {
       "yazi": "Frekansı <b>4 Hz</b> yap ama dalga boyu <b>2 m</b>'de kalsın.",
@@ -179,7 +179,7 @@
         "f": 4
        }
       ],
-      "tamam": "Dalga boyu aynı kalsın diye hızın da 2 katına çıkması gerekti: ipi gerdin. Hızı ortam belirler, frekansı kaynak."
+      "tamam": "Dalga boyunun aynı kalması için hızın da 2 katına çıkması gerekti, bu yüzden ipi gerdin. Hızı ortam, frekansı ise kaynak belirler."
      },
      {
       "yazi": "Dalga boyunu <b>0,5 m</b>'ye indir ve kırmızı noktayı izle.",
@@ -192,7 +192,7 @@
         "f": 4
        }
       ],
-      "tamam": "2 m/s ve 4 Hz'de λ = 0,5 m. Dalga sağa ilerlerken kırmızı nokta yalnızca aşağı yukarı titreşti: dalga enerji taşır, madde taşımaz."
+      "tamam": "2 m/s hızda ve 4 Hz frekansta λ = 0,5 m olur. Dalga sağa ilerlerken kırmızı nokta yalnızca aşağı yukarı titreşti. Yani dalga enerji taşır, madde taşımaz."
      }
     ]
    },
@@ -229,7 +229,7 @@
      {
       "yazi": "Sabit uçta",
       "dogru": true,
-      "neden": "Atma duvarı yukarı çeker, duvar da ipi aşağı çeker (etki-tepki): tepe çukur olarak döner."
+      "neden": "Atma duvarı yukarı çeker, duvar da ipi aşağı çeker. Bu bir etki-tepki çiftidir. Bu yüzden tepe çukur olarak geri döner."
      },
      {
       "yazi": "İkisinde de ters döner",
@@ -263,18 +263,18 @@
     "hedef": {
      "c": 1
     },
-    "tamam": "Tepe, eşit bir çukurla buluşunca yer değiştirmeler birbirini götürdü: <b>yıkıcı girişim</b>.",
+    "tamam": "Tepe eşit bir çukurla buluşunca yer değiştirmeler birbirini götürdü. Buna <b>yıkıcı girişim</b> denir.",
     "ipucu": "Bir tepeyi sıfırlamak için ona eşit bir çukur gerekir."
    },
    "kart": 5
   }
  ],
  "kapanis": [
-  "Dalga enerji taşır, madde taşımaz; ortamın tanecikleri yerinde titreşir.",
+  "Dalga enerji taşır, madde taşımaz. Ortamın tanecikleri yerinde titreşir.",
   "Enine dalgada titreşim yayılma yönüne dik, boyuna dalgada paraleldir. Ses boyuna dalgadır.",
-  "v = λ·f. Hızı ortam, frekansı kaynak belirler; genlik hızı değil, enerjiyi değiştirir.",
+  "Dalganın hızı v = λ·f ile bulunur. Hızı ortam, frekansı kaynak belirler. Genlik hızı değil, enerjiyi değiştirir.",
   "Sabit uçta atma ters, serbest uçta düz yansır. Buluşan dalgaların yer değiştirmeleri toplanır.",
-  "Doğal frekansta yapılan itmeler genliği büyütür: rezonans."
+  "Doğal frekansta yapılan itmeler genliği büyütür. Buna rezonans denir."
  ],
  "soruOnce": true
 }

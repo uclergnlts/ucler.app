@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "manyetizma",
  "baslik": "Manyetizma",
- "ozet": "Mıknatısları it ve çek, bir mıknatısı kır, pusulayla alanı keşfet, akımlı telin çevresine bak, elektromıknatıs yap ve tele etkiyen kuvveti ölç.",
+ "ozet": "Mıknatısları it ve çek, sonra bir mıknatısı kır. Pusulayla alanı keşfet ve akımlı telin çevresine bak. Bir elektromıknatıs yap ve tele etki eden kuvveti ölç.",
  "adimlar": [
   {
    "baslik": "Kutuplar",
@@ -28,13 +28,13 @@
     "hedef": {
      "c": 1
     },
-    "tamam": "Zıt kutuplar çeker, aynı kutuplar iter. Dikkat: bir cismin mıknatıs olduğunu <b>itme</b> kanıtlar. Çekme kanıt değildir, çünkü mıknatıs demir çiviyi de çeker."
+    "tamam": "Zıt kutuplar birbirini çeker, aynı kutuplar ise iter. Bir cismin mıknatıs olduğunu <b>itme</b> kanıtlar. Çekme bir kanıt değildir, çünkü mıknatıs demir çiviyi de çeker."
    },
    "kart": 1
   },
   {
    "baslik": "Kırık mıknatıs",
-   "metin": "Çubuk mıknatısın sol yarısı S, sağ yarısı N. Onu tam ortasından kırarsan ne olur?",
+   "metin": "Çubuk mıknatısın sol yarısı S, sağ yarısı ise N kutbudur. Onu tam ortasından kırarsan ne olur?",
    "sahne": {
     "tur": "fiz10-kirik",
     "sure": 3
@@ -45,16 +45,16 @@
     "secenekler": [
      {
       "yazi": "Biri yalnız N, öteki yalnız S olur",
-      "neden": "Kutuplar ayrılamaz; her parçanın kırık ucunda yeni bir kutup oluşur."
+      "neden": "Kutuplar birbirinden ayrılamaz. Her parçanın kırık ucunda yeni bir kutup oluşur."
      },
      {
       "yazi": "Mıknatıslık kaybolur",
-      "neden": "Mıknatıslık atom ölçeğindeki küçük mıknatıslardan gelir; kırmak onları bozmaz."
+      "neden": "Mıknatıslık, atom ölçeğindeki küçük mıknatıslardan gelir. Mıknatısı kırmak onları bozmaz."
      },
      {
       "yazi": "İkisi de tam mıknatıs olur",
       "dogru": true,
-      "neden": "Kırık uçlarda hemen yeni kutuplar oluşur: sol parçanın sağ ucu N, sağ parçanın sol ucu S olur."
+      "neden": "Kırık uçlarda hemen yeni kutuplar oluşur. Sol parçanın sağ ucu N, sağ parçanın sol ucu ise S olur."
      }
     ]
    },
@@ -62,7 +62,7 @@
   },
   {
    "baslik": "Alan çizgileri",
-   "metin": "Pusulayı numaralı yerlere taşı ve iğneyi izle.",
+   "metin": "Pusulayı numaralı yerlere taşı ve iğnenin nasıl döndüğünü izle.",
    "sahne": {
     "tur": "fiz10-alan"
    },
@@ -85,15 +85,15 @@
      {
       "yazi": "Kutupların yakınında",
       "dogru": true,
-      "neden": "Çizgiler kutuplarda toplanıp sıklaşır; alan (B) en güçlü oradadır."
+      "neden": "Çizgiler kutuplarda toplanır ve sıklaşır. Alan (B) en güçlü orada olur."
      },
      {
       "yazi": "Ortanın hemen üstünde",
-      "neden": "Orta bölgede çizgiler seyrektir; 2. yerde alan yalnızca orta güçtedir."
+      "neden": "Orta bölgede çizgiler seyrektir. Bu yüzden 2. yerde alan yalnızca orta güçtedir."
      },
      {
       "yazi": "Mıknatıstan uzakta",
-      "neden": "Seyrek çizgi zayıf alan demektir; 1. ve 6. yerlerde alan zayıftır."
+      "neden": "Seyrek çizgiler zayıf alan demektir. 1. ve 6. yerlerde alan zayıftır."
      }
     ]
    },
@@ -101,7 +101,7 @@
   },
   {
    "baslik": "Akımlı tel",
-   "metin": "Oersted'in deneyi: tel ekrana dik duruyor. <b>Sağ el kuralı:</b> başparmak akım yönünde, kıvrılan parmaklar alan yönünde. Akımı aç, yönünü çevir ve pusulalara bak.",
+   "metin": "Bu, Oersted'in deneyidir ve tel ekrana dik durmaktadır. <b>Sağ el kuralında</b> başparmak akım yönünü, kıvrılan parmaklar alan yönünü gösterir. Akımı aç, yönünü çevir ve pusulalara bak.",
    "sahne": {
     "tur": "fiz10-oersted"
    },
@@ -136,11 +136,11 @@
      {
       "yazi": "Saat yönünde",
       "dogru": true,
-      "neden": "Sağ el kuralı: başparmak akım yönünde (ekrana doğru), kıvrılan parmaklar saat yönünde döner."
+      "neden": "Sağ el kuralına göre başparmak akım yönünü (ekrana doğru) gösterir. Kıvrılan parmaklar ise saat yönünde döner."
      },
      {
       "yazi": "Telden dışarı doğru",
-      "neden": "Telin alan çizgileri teli saran çemberlerdir; pusulalar çembere teğet durur."
+      "neden": "Telin alan çizgileri, teli saran çemberlerdir. Pusulalar bu çemberlere teğet durur."
      }
     ]
    },
@@ -148,7 +148,7 @@
   },
   {
    "baslik": "Elektromıknatıs",
-   "metin": "Bobinden 2 A geçiyor. Tam <b>8 ataç</b> çekecek bir elektromıknatıs yap.",
+   "metin": "Bobinden 2 A akım geçiyor. Tam <b>8 ataç</b> çekecek bir elektromıknatıs yap.",
    "sahne": {
     "tur": "fiz10-elektromiknatis"
    },
@@ -180,13 +180,13 @@
      "c": 1
     },
     "tamam": "Demir çekirdekli 40 sarım 8 ataç çekti. Çekirdek bobinin alanında kendisi mıknatıslanır ve alana katkı yapar.",
-    "ipucu": "Çekirdeksiz bobin zayıftır. Önce demir çekirdeği koy, sonra sarımı ayarla."
+    "ipucu": "Çekirdeksiz bir bobin zayıftır. Önce demir çekirdeği koy, sonra sarım sayısını ayarla."
    },
    "kart": 9
   },
   {
    "baslik": "Tele etkiyen kuvvet",
-   "metin": "Alandaki akımlı tele kuvvet etkir: <b>F = B·I·L·sinθ</b>. Burada B = 0,2 T, I = 5 A, L = 0,5 m. Açıyı ayarla, kuvvet <b>0,25 N</b> olsun.",
+   "metin": "Alandaki akımlı tele <b>F = B·I·L·sinθ</b> kadar kuvvet etki eder. Burada B = 0,2 T, I = 5 A ve L = 0,5 m'dir. Açıyı ayarla ve kuvvetin <b>0,25 N</b> olmasını sağla.",
    "sahne": {
     "tur": "fiz10-kuvvet"
    },
@@ -209,14 +209,14 @@
     "hedef": {
      "a": 30
     },
-    "tamam": "F = 0,2 · 5 · 0,5 · sin30° = 0,5 · 0,5 = <b>0,25 N</b>. Tel alana dikken kuvvet en büyük (0,5 N), alana paralelken sıfırdır.",
-    "ipucu": "0,2 · 5 · 0,5 = 0,5 N; sinθ = 0,5 olmalı."
+    "tamam": "F = 0,2 · 5 · 0,5 · sin30° = 0,5 · 0,5 = <b>0,25 N</b> olur. Tel alana dikken kuvvet en büyüktür (0,5 N). Tel alana paralelken ise kuvvet sıfırdır.",
+    "ipucu": "0,2 · 5 · 0,5 = 0,5 N eder. Bu yüzden sinθ = 0,5 olmalıdır."
    },
    "kart": 10
   },
   {
    "baslik": "Elektrik motoru",
-   "metin": "<b>Komütatör</b>, her yarım turda bobindeki akımın yönünü çeviren parçadır. Bu motorda komütatör yok: akım hep aynı yönde geçiyor.",
+   "metin": "<b>Komütatör</b>, her yarım turda bobindeki akımın yönünü çeviren parçadır. Bu motorda komütatör yoktur ve akım hep aynı yönde geçer.",
    "sahne": {
     "tur": "fiz10-motor",
     "sure": 4
@@ -232,11 +232,11 @@
      },
      {
       "yazi": "Sürekli döner",
-      "neden": "Çerçeve düzlemi alana dik konumu geçince kuvvetler bobini geri çeker; sürekli dönüş için akımın çevrilmesi gerekir."
+      "neden": "Çerçevenin düzlemi alana dik konumu geçince kuvvetler bobini geri çeker. Sürekli dönüş için akımın yönünün çevrilmesi gerekir."
      },
      {
       "yazi": "Hiç dönmez",
-      "neden": "Başlangıçta kuvvetler bir tork oluşturur; bobin dönmeye başlar ama sürekli dönemez."
+      "neden": "Başlangıçta kuvvetler bir tork oluşturur ve bobin dönmeye başlar. Ama bobin sürekli dönemez."
      }
     ]
    },
@@ -244,11 +244,11 @@
   }
  ],
  "kapanis": [
-  "Aynı kutuplar iter, zıt kutuplar çeker. Mıknatıs olduğunu itme kanıtlar; tek kutuplu mıknatıs yoktur.",
-  "Alan çizgileri dışarıda N'den S'ye gider; sık oldukları yerde alan güçlüdür. Pusulanın N ucu alan yönünü gösterir.",
-  "Akımlı tel çevresinde alan oluşturur: B = 2k·I/d. Yönü sağ el kuralıyla bulunur.",
+  "Aynı kutuplar birbirini iter, zıt kutuplar çeker. Bir cismin mıknatıs olduğunu itme kanıtlar. Tek kutuplu mıknatıs yoktur.",
+  "Alan çizgileri dışarıda N'den S'ye gider. Çizgilerin sık olduğu yerde alan güçlüdür. Pusulanın N ucu alanın yönünü gösterir.",
+  "Akım geçen tel çevresinde bir alan oluşturur: B = 2k·I/d. Alanın yönü sağ el kuralıyla bulunur.",
   "Elektromıknatıs sarım, akım ve demir çekirdekle güçlenir.",
-  "Alandaki tele F = B·I·L·sinθ kuvveti etkir; motor bunu komütatörle sürekli dönüşe çevirir."
+  "Alandaki tele F = B·I·L·sinθ kadar kuvvet etki eder. Motor, komütatör sayesinde bu kuvveti sürekli dönüşe çevirir."
  ],
  "soruOnce": true
 }

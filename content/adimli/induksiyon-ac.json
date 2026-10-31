@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "induksiyon-ac",
  "baslik": "İndüksiyon ve Alternatif Akım",
- "ozet": "Mıknatısı bobine it, Lenz kuralını gör, raylarda çubuk kaydır, jeneratörü döndür, şebeke gerilimini oku, transformatörü ayarla ve iletim kaybını azalt.",
+ "ozet": "Mıknatısı bobine it ve Lenz kuralını gör. Raylarda çubuk kaydır ve jeneratörü döndür. Şebeke gerilimini oku, transformatörü ayarla ve iletim kaybını azalt.",
  "adimlar": [
   {
    "baslik": "Mıknatıs ve bobin",
-   "metin": "Bobinden geçen manyetik akı değişince bobinde akım oluşur: <b>elektromanyetik indüksiyon</b>. Mıknatısı farklı hızlarla bobine it ve galvanometreye bak.",
+   "metin": "Bobinden geçen manyetik akı değişince bobinde akım oluşur. Buna <b>elektromanyetik indüksiyon</b> denir. Mıknatısı farklı hızlarla bobine it ve galvanometreye bak.",
    "sahne": {
     "tur": "fiz10-faraday",
     "sure": 3
@@ -37,11 +37,11 @@
      {
       "yazi": "Mıknatısın hızına",
       "dogru": true,
-      "neden": "Mıknatıs hızlandıkça bobinden geçen akı daha kısa sürede değişir; akı ne kadar hızlı değişirse gerilim o kadar büyük olur."
+      "neden": "Mıknatıs hızlandıkça bobinden geçen akı daha kısa sürede değişir. Akı ne kadar hızlı değişirse gerilim o kadar büyük olur."
      },
      {
       "yazi": "Hiçbir şeye",
-      "neden": "Denemelerin soluk izlerine bak: hız artınca sapma da artıyor."
+      "neden": "Denemelerin soluk izlerine bak. Hız arttıkça sapma da artıyor."
      }
     ]
    },
@@ -77,7 +77,7 @@
   },
   {
    "baslik": "Kayan çubuk",
-   "metin": "Kayan çubukta <b>ε = B · L · v</b>. B = 0,5 T, çubuğun boyu L = 0,4 m. Hızı ayarla, gerilim <b>0,8 V</b> olsun.",
+   "metin": "Kayan çubukta <b>ε = B · L · v</b> olur. B = 0,5 T ve çubuğun boyu L = 0,4 m'dir. Hızı ayarla ve gerilimin <b>0,8 V</b> olmasını sağla.",
    "sahne": {
     "tur": "fiz10-cubuk"
    },
@@ -99,8 +99,8 @@
     "hedef": {
      "v": 4
     },
-    "tamam": "ε = 0,5 · 0,4 · 4 = <b>0,8 V</b>. Çubuk durunca devrenin yüzey alanı (A) artık değişmez; akı sabit kalır, akım kesilir.",
-    "ipucu": "0,5 · 0,4 = 0,2; 0,8 V için v = 0,8 / 0,2."
+    "tamam": "ε = 0,5 · 0,4 · 4 = <b>0,8 V</b> olur. Çubuk durunca devrenin yüzey alanı (A) artık değişmez. Akı sabit kalır ve akım kesilir.",
+    "ipucu": "0,5 · 0,4 = 0,2 eder. 0,8 V için v = 0,8 / 0,2 olmalıdır."
    },
    "kart": 6
   },
@@ -130,16 +130,16 @@
     "secenekler": [
      {
       "yazi": "Yalnız frekans artar",
-      "neden": "Grafikte tepeler de yükseliyor: εmax = N·B·A·ω, dönme hızıyla artar."
+      "neden": "Grafikte tepeler de yükseliyor. εmax = N·B·A·ω olduğu için tepe değer dönme hızıyla artar."
      },
      {
       "yazi": "Yalnız tepe artar",
-      "neden": "Grafikte dalgalar da sıklaşıyor: frekans, saniyedeki tur sayısıdır."
+      "neden": "Grafikte dalgalar da sıklaşıyor. Frekans, saniyedeki tur sayısıdır."
      },
      {
       "yazi": "İkisi de iki katına çıkar",
       "dogru": true,
-      "neden": "εmax = N·B·A·ω: hız iki kat olunca tepe iki kat olur. Frekans da saniyedeki tur sayısı olduğu için iki katına çıkar."
+      "neden": "εmax = N·B·A·ω olduğu için hız iki katına çıkınca tepe değer de iki katına çıkar. Frekans da saniyedeki tur sayısı olduğu için iki katına çıkar."
      }
     ]
    },
@@ -147,7 +147,7 @@
   },
   {
    "baslik": "Prizdeki gerilim",
-   "metin": "Türkiye'de şebeke <b>50 Hz</b>: bir periyot T = 1/50 s = 20 ms. Zamanı kaydır ve gerilimin tepe değerine ilk ulaştığı anı bul.",
+   "metin": "Türkiye'de şebeke frekansı <b>50 Hz</b>'dir. Yani bir periyot T = 1/50 s = 20 ms sürer. Zamanı kaydır ve gerilimin tepe değerine ilk ulaştığı anı bul.",
    "sahne": {
     "tur": "fiz10-sebeke"
    },
@@ -169,14 +169,14 @@
     "hedef": {
      "t": 5
     },
-    "tamam": "T/4 = 5 ms'de tepe: <b>325 V</b>. Prizdeki 230 V ise <b>etkin değerdir</b>: 325 / √2 ≈ 230 V. Gerilim her periyotta iki kez yön değiştirir, yani saniyede 100 kez.",
-    "ipucu": "Tepeye çeyrek periyotta ulaşılır: 20 / 4."
+    "tamam": "Gerilim T/4 = 5 ms'de tepe değeri olan <b>325 V</b>'a ulaşır. Prizdeki 230 V ise <b>etkin değerdir</b>: 325 / √2 ≈ 230 V. Gerilim her periyotta iki kez, yani saniyede 100 kez yön değiştirir.",
+    "ipucu": "Gerilim tepe değerine çeyrek periyotta ulaşır: 20 / 4."
    },
    "kart": 9
   },
   {
    "baslik": "Transformatör",
-   "metin": "Gerilim oranı sarım oranına eşittir: <b>V₁/V₂ = N₁/N₂</b>. Birincil bobin 1000 sarım ve 230 V'a bağlı. Telefon şarj cihazı için çıkışı <b>11,5 V</b> yap. Sonra pili de dene.",
+   "metin": "Gerilimlerin oranı sarım sayılarının oranına eşittir: <b>V₁/V₂ = N₁/N₂</b>. Birincil bobin 1000 sarımlıdır ve 230 V'a bağlıdır. Telefon şarj cihazı için çıkışı <b>11,5 V</b> yap. Sonra pili de dene.",
    "sahne": {
     "tur": "fiz10-trafo"
    },
@@ -207,14 +207,14 @@
      "N2": 50,
      "d": 0
     },
-    "tamam": "V₂ = 230 · 50 / 1000 = <b>11,5 V</b>. Pili bağlayınca çıkış 0 olur: sabit akımın akısı değişmez.",
-    "ipucu": "11,5 / 230 = 1/20; N₂ = 1000 / 20."
+    "tamam": "V₂ = 230 · 50 / 1000 = <b>11,5 V</b> olur. Pili bağlayınca çıkış 0 olur, çünkü sabit akımın akısı değişmez.",
+    "ipucu": "11,5 / 230 = 1/20 eder. Bu yüzden N₂ = 1000 / 20 olmalıdır."
    },
    "kart": 11
   },
   {
    "baslik": "Uzak şehre iletim",
-   "metin": "Santral 10 MW gönderiyor, hattın direnci 10 Ω. Hatta ısı olarak kaybolan güç <b>I²·R</b>'dir. Gerilimi yükselt ve kaybı <b>100'de birine</b> indir.",
+   "metin": "Santral 10 MW güç gönderiyor ve hattın direnci 10 Ω'dur. Hatta ısı olarak kaybolan güç <b>I²·R</b>'dir. Gerilimi yükselt ve kaybı <b>100'de birine</b> indir.",
    "sahne": {
     "tur": "fiz10-iletim"
    },
@@ -244,10 +244,10 @@
   }
  ],
  "kapanis": [
-  "Bobinden geçen akı değişince indüksiyon gerilimi oluşur: ε = −N·ΔΦ/Δt. Değişim ne kadar hızlıysa gerilim o kadar büyüktür.",
-  "Lenz: indüksiyon akımı kendisini oluşturan değişime karşı koyar; bu, enerjinin korunumudur.",
-  "Jeneratör alternatif akım üretir: εmax = N·B·A·ω. Şebeke 50 Hz; 230 V etkin, ≈ 325 V tepe değeridir.",
-  "Transformatör: V₁ / V₂ = N₁ / N₂. Doğru akımla çalışmaz.",
+  "Bobinden geçen akı değişince bir indüksiyon gerilimi oluşur: ε = −N·ΔΦ/Δt. Değişim ne kadar hızlıysa gerilim o kadar büyük olur.",
+  "Lenz yasasına göre indüksiyon akımı, kendisini oluşturan değişime karşı koyar. Bu, enerjinin korunumudur.",
+  "Jeneratör alternatif akım üretir: εmax = N·B·A·ω. Şebeke 50 Hz'dir. 230 V etkin değer, yaklaşık 325 V ise tepe değerdir.",
+  "Transformatörde V₁ / V₂ = N₁ / N₂ olur. Transformatör doğru akımla çalışmaz.",
   "Gerilim 10 katına çıkınca iletim kaybı 100'de birine iner."
  ],
  "soruOnce": true
