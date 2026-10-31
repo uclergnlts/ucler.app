@@ -9143,35 +9143,35 @@
   },
   "radyoaktivite": {
     "title": "Atom çekirdeği ve radyoaktivite",
-    "summary": "Çekirdek, bağlanma enerjisi, α-β-γ, yarı ömür, fisyon ve füzyon.",
+    "summary": "Çekirdeği, bağlanma enerjisini, α-β-γ ışımalarını, yarı ömrü, fisyonu ve füzyonu öğren.",
     "cards": [
       {
         "h": "Çekirdek: nükleonlar ve gösterim",
-        "p": "Çekirdekteki proton ve nötronlara <b>nükleon</b> denir. Z proton, A nükleon sayısıdır; N = A − Z. Z'si aynı, A'sı farklı çekirdekler <b>izotoptur</b>: <sup>12</sup>C ve <sup>14</sup>C.",
+        "p": "Çekirdekteki proton ve nötronlara <b>nükleon</b> denir. Z proton sayısını, A ise nükleon sayısını gösterir ve N = A − Z olur. Z'si aynı, A'sı farklı çekirdeklere <b>izotop</b> denir. <sup>12</sup>C ve <sup>14</sup>C buna örnektir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Karbon-14 çekirdeği</text><text x='70' y='72' font-size='15' fill='var(--c1)' text-anchor='end' font-weight='700'>14</text><text x='73' y='96' font-size='24' fill='var(--ink)' text-anchor='start' font-weight='700'>C</text><text x='70' y='106' font-size='15' fill='var(--c2)' text-anchor='end' font-weight='700'>6</text><text x='100' y='72' font-size='11' fill='var(--c1)' text-anchor='start'>← A: nükleon sayısı</text><text x='100' y='108' font-size='11' fill='var(--c2)' text-anchor='start'>← Z: proton sayısı</text><circle cx='266' cy='92' r='8' fill='var(--c2)' fill-opacity='0.75' stroke='var(--panel)'/><circle cx='282' cy='92' r='8' fill='var(--muted)' fill-opacity='0.75' stroke='var(--panel)'/><circle cx='250' cy='92' r='8' fill='var(--c2)' fill-opacity='0.75' stroke='var(--panel)'/><circle cx='274' cy='106' r='8' fill='var(--c2)' fill-opacity='0.75' stroke='var(--panel)'/><circle cx='258' cy='106' r='8' fill='var(--muted)' fill-opacity='0.75' stroke='var(--panel)'/><circle cx='274' cy='78' r='8' fill='var(--muted)' fill-opacity='0.75' stroke='var(--panel)'/><circle cx='258' cy='78' r='8' fill='var(--c2)' fill-opacity='0.75' stroke='var(--panel)'/><circle cx='290' cy='106' r='8' fill='var(--muted)' fill-opacity='0.75' stroke='var(--panel)'/><circle cx='242' cy='106' r='8' fill='var(--muted)' fill-opacity='0.75' stroke='var(--panel)'/><circle cx='290' cy='78' r='8' fill='var(--c2)' fill-opacity='0.75' stroke='var(--panel)'/><circle cx='242' cy='78' r='8' fill='var(--muted)' fill-opacity='0.75' stroke='var(--panel)'/><circle cx='266' cy='120' r='8' fill='var(--c2)' fill-opacity='0.75' stroke='var(--panel)'/><circle cx='266' cy='64' r='8' fill='var(--muted)' fill-opacity='0.75' stroke='var(--panel)'/><circle cx='298' cy='92' r='8' fill='var(--muted)' fill-opacity='0.75' stroke='var(--panel)'/><circle cx='196' cy='150' r='6' fill='var(--c2)' fill-opacity='0.75'/><text x='207' y='154' font-size='11' fill='var(--ink)' text-anchor='start'>6 proton</text><circle cx='260' cy='150' r='6' fill='var(--muted)' fill-opacity='0.75'/><text x='271' y='154' font-size='11' fill='var(--ink)' text-anchor='start'>8 nötron</text><rect x='20' y='138' width='150' height='50' rx='6' fill='var(--acc)' fill-opacity='0.12' stroke='var(--acc)'/><text x='95' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>N = A − Z = 14 − 6 = 8</text><text x='95' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>izotopu: ¹²C (6 nötron)</text></svg>",
-        "key": "Elementi Z belirler: A değişirse izotop, Z değişirse başka element olur."
+        "key": "Elementi Z belirler. A değişirse izotop oluşur, Z değişirse ise başka bir element oluşur."
       },
       {
         "h": "Güçlü çekirdek kuvveti",
-        "p": "Protonları bir arada tutan <b>güçlü çekirdek kuvvetidir</b>; bütün nükleonlar arasında, yükten bağımsız etkir. Menzili çok kısadır: ≈1 fm'de itmeyi yener, biraz ötede sıfırlanır.",
+        "p": "Protonları bir arada tutan kuvvete <b>güçlü çekirdek kuvveti</b> denir. Bu kuvvet bütün nükleonlar arasında, yükten bağımsız olarak etki eder. Menzili çok kısadır. Yaklaşık 1 fm'de itmeyi yener, biraz ötede ise sıfıra iner.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='radyo-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M40 30 V170 H300' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M46 42 C72 42 86 56 96 112 C103 150 116 167 160 169' fill='none' stroke='var(--c3)' stroke-width='3'/><path d='M52 104 C80 132 130 150 296 162' fill='none' stroke='var(--c2)' stroke-width='2.5'/><path d='M96 170 V175' stroke='var(--ink)'/><text x='48' y='26' font-size='11' fill='var(--muted)' text-anchor='start'>kuvvet büyüklüğü</text><text x='300' y='188' font-size='11' fill='var(--muted)' text-anchor='end'>uzaklık</text><text x='96' y='188' font-size='11' fill='var(--ink)' text-anchor='middle'>≈ 10⁻¹⁵ m</text><text x='120' y='52' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>güçlü çekirdek kuvveti</text><text x='120' y='68' font-size='11' fill='var(--c3)' text-anchor='start'>(çeker, çok kısa menzil)</text><text x='196' y='126' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>elektriksel itme (p–p)</text><text x='196' y='142' font-size='11' fill='var(--c2)' text-anchor='start'>(uzun menzil)</text></svg>",
-        "key": "1 fm = 10⁻¹⁵ m. Nötronlar itme eklemeden çekim ekler; çekirdeğin kararlılığı için önemlidir."
+        "key": "1 fm = 10⁻¹⁵ m'dir. Nötronlar itme eklemeden çekim ekler. Bu yüzden çekirdeğin kararlılığı için önemlidir."
       },
       {
         "h": "Kütle açığı ve bağlanma enerjisi",
-        "p": "Çekirdeğin kütlesi, nükleonlarının toplam kütlesinden biraz <b>küçüktür</b>: <b>kütle açığı</b> (Δm). Çekirdek oluşurken bu kütle E = Δm·c² enerji olarak salınır: <b>bağlanma enerjisi</b>.",
+        "p": "Çekirdeğin kütlesi, nükleonlarının toplam kütlesinden biraz <b>küçüktür</b>. Bu farka <b>kütle açığı</b> (Δm) denir. Çekirdek oluşurken bu kütle E = Δm·c² kadar enerji olarak salınır. Bu enerjiye <b>bağlanma enerjisi</b> denir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='radyo-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='36' font-size='22' fill='var(--ink)' text-anchor='middle' font-weight='700'>E = Δm·c²</text><circle cx='59' cy='66' r='8' fill='var(--c2)' fill-opacity='0.75'/><circle cx='91' cy='66' r='8' fill='var(--muted)' fill-opacity='0.75'/><circle cx='59' cy='98' r='8' fill='var(--muted)' fill-opacity='0.75'/><circle cx='91' cy='98' r='8' fill='var(--c2)' fill-opacity='0.75'/><circle cx='237' cy='74' r='8' fill='var(--c2)' fill-opacity='0.75'/><circle cx='253' cy='74' r='8' fill='var(--muted)' fill-opacity='0.75'/><circle cx='237' cy='90' r='8' fill='var(--muted)' fill-opacity='0.75'/><circle cx='253' cy='90' r='8' fill='var(--c2)' fill-opacity='0.75'/><path d='M118 82 H198' stroke='var(--ink)' stroke-width='2' marker-end='url(#radyo-2)'/><text x='158' y='74' font-size='11' fill='var(--muted)' text-anchor='middle'>birleşir</text><text x='75' y='126' font-size='12' fill='var(--ink)' text-anchor='middle'>2 p + 2 n (ayrı)</text><text x='75' y='143' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>4,0319 u</text><text x='245' y='126' font-size='12' fill='var(--ink)' text-anchor='middle'>⁴He çekirdeği</text><text x='245' y='143' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>4,0015 u</text><rect x='45' y='158' width='230' height='32' rx='6' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)'/><text x='160' y='179' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Δm = 0,0304 u  →  E ≈ 28,3 MeV</text></svg>",
-        "key": "Çekirdeği ayırmak için aynı enerjiyi vermek gerekir. 1 u kütle açığı ≈ 931,5 MeV'dir."
+        "key": "Çekirdeği parçalarına ayırmak için aynı enerjiyi vermek gerekir. 1 u kütle açığı yaklaşık 931,5 MeV'e karşılık gelir."
       },
       {
         "h": "Nükleon başına bağlanma enerjisi",
-        "p": "Bağlanma enerjisinin nükleon sayısına oranı çekirdeğin ne kadar sıkı bağlı olduğunu gösterir. Eğri A ≈ 56-62'de tepe yapar (≈8,8 MeV); ağırlarda yavaşça düşer.",
+        "p": "Bağlanma enerjisinin nükleon sayısına oranı, çekirdeğin ne kadar sıkı bağlı olduğunu gösterir. Bu eğri A ≈ 56-62 civarında tepe yapar (yaklaşık 8,8 MeV). Ağır çekirdeklerde ise yavaşça düşer.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='radyo-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker></defs><defs><marker id='radyo-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c5)'/></marker></defs><path d='M40 30 V170 H300' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M40 49.7 H300' stroke='var(--line)' stroke-dasharray='3 3'/><path d='M42.2 154.8 L42.5 150.2 L42.9 143.8 L43.4 136.3 L43.9 127.9 L44.5 119.4 L45.2 111.1 L45.8 103.5 L46.5 97.1 L47.2 91.6 L48.0 86.6 L48.9 81.9 L49.8 77.6 L50.6 73.8 L51.5 70.4 L52.3 67.4 L53.0 64.9 L53.6 63.0 L54.1 61.9 L54.6 61.3 L55.0 61.1 L55.5 61.1 L56.0 61.1 L56.6 61.1 L57.3 60.8 L58.2 60.3 L59.0 59.8 L59.9 59.3 L60.9 58.9 L61.9 58.4 L63.1 57.9 L64.5 57.5 L66.0 57.0 L67.8 56.5 L69.7 56.0 L71.9 55.5 L74.1 54.9 L76.5 54.4 L78.8 53.9 L81.1 53.5 L83.3 53.0 L85.4 52.5 L87.2 52.0 L89.0 51.5 L90.8 51.0 L92.7 50.6 L95.0 50.2 L97.6 49.9 L100.7 49.7 L104.4 49.6 L108.6 49.6 L113.2 49.7 L118.1 49.9 L123.1 50.1 L128.1 50.3 L133.0 50.6 L137.5 50.8 L141.8 51.1 L145.9 51.4 L150.0 51.7 L154.0 52.0 L158.0 52.4 L162.0 52.8 L166.0 53.2 L170.0 53.5 L173.9 53.9 L177.6 54.4 L181.2 54.8 L184.9 55.2 L188.7 55.7 L192.9 56.1 L197.4 56.6 L202.5 57.1 L208.3 57.6 L214.8 58.2 L221.8 58.8 L229.0 59.4 L236.4 60.0 L243.5 60.6 L250.4 61.2 L256.7 61.8 L262.7 62.4 L268.8 63.0 L274.9 63.7 L280.6 64.4 L286.0 65.0 L290.7 65.6 L294.7 66.1 L297.8 66.4' fill='none' stroke='var(--acc)' stroke-width='2.5'/><circle cx='100.7' cy='49.7' r='4.5' fill='var(--c3)'/><circle cx='297.8' cy='66.4' r='4' fill='var(--c5)'/><text x='101' y='70' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>Fe-56: ≈ 8,8 MeV</text><text x='296' y='84' font-size='11' fill='var(--c5)' text-anchor='end'>U-238: ≈ 7,6</text><text x='48' y='22' font-size='11' fill='var(--muted)' text-anchor='start'>MeV / nükleon</text><text x='300' y='188' font-size='11' fill='var(--muted)' text-anchor='end'>A (nükleon sayısı)</text><text x='34' y='54' font-size='10' fill='var(--muted)' text-anchor='end'>8,8</text><path d='M70 150 H112' stroke='var(--c4)' stroke-width='2' marker-end='url(#radyo-3)'/><text x='72' y='142' font-size='11' fill='var(--c4)' text-anchor='start' font-weight='700'>füzyon</text><path d='M262 150 H178' stroke='var(--c5)' stroke-width='2' marker-end='url(#radyo-4)'/><text x='260' y='142' font-size='11' fill='var(--c5)' text-anchor='end' font-weight='700'>fisyon</text><text x='160' y='120' font-size='11' fill='var(--ink)' text-anchor='middle'>tepeye yaklaşan tepkime enerji verir</text></svg>",
-        "key": "Hafifler birleşerek, ağırlar bölünerek tepeye yaklaşır; bu sırada enerji açığa çıkar."
+        "key": "Hafif çekirdekler birleşerek, ağır çekirdekler ise bölünerek tepeye yaklaşır. Bu sırada enerji açığa çıkar."
       },
       {
         "h": "Alfa, beta, gama: ne değişir?",
-        "p": "<b>Alfa (α)</b> helyum çekirdeğidir. <b>β⁻</b>'de nötron protona, <b>β⁺</b>'da proton nötrona döner. <b>Gama (γ)</b> yüksek enerjili fotondur; element değişmez.",
+        "p": "<b>Alfa (α)</b> ışıması bir helyum çekirdeğidir. <b>β⁻</b> bozunmasında nötron protona, <b>β⁺</b> bozunmasında ise proton nötrona dönüşür. <b>Gama (γ)</b> yüksek enerjili bir fotondur ve gama ışımasında element değişmez.",
         "svg": "<svg viewBox='0 0 320 200'><text x='40' y='30' font-size='12' fill='var(--muted)' text-anchor='middle'>ışıma</text><text x='130' y='30' font-size='12' fill='var(--muted)' text-anchor='middle'>ne çıkar?</text><text x='225' y='30' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>A</text><text x='285' y='30' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Z</text><path d='M10 40 H310' stroke='var(--ink)'/><rect x='22' y='50' width='36' height='26' rx='6' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)'/><text x='40' y='68' font-size='15' fill='var(--c4)' text-anchor='middle' font-weight='700'>α</text><text x='130' y='68' font-size='13' fill='var(--ink)' text-anchor='middle'>⁴₂He çekirdeği</text><text x='225' y='68' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>A − 4</text><text x='285' y='68' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Z − 2</text><path d='M10 82 H310' stroke='var(--line)'/><rect x='22' y='86' width='36' height='26' rx='6' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><text x='40' y='104' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>β⁻</text><text x='130' y='104' font-size='13' fill='var(--ink)' text-anchor='middle'>elektron</text><text x='225' y='104' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>aynı</text><text x='285' y='104' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Z + 1</text><path d='M10 118 H310' stroke='var(--line)'/><rect x='22' y='122' width='36' height='26' rx='6' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)'/><text x='40' y='140' font-size='15' fill='var(--c2)' text-anchor='middle' font-weight='700'>β⁺</text><text x='130' y='140' font-size='13' fill='var(--ink)' text-anchor='middle'>pozitron</text><text x='225' y='140' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>aynı</text><text x='285' y='140' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Z − 1</text><path d='M10 154 H310' stroke='var(--line)'/><rect x='22' y='158' width='36' height='26' rx='6' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='40' y='176' font-size='15' fill='var(--c5)' text-anchor='middle' font-weight='700'>γ</text><text x='130' y='176' font-size='13' fill='var(--ink)' text-anchor='middle'>foton</text><text x='225' y='176' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>aynı</text><text x='285' y='176' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>aynı</text></svg>",
         "key": "β⁻'de elektron ve antinötrino, β⁺'da pozitron (artı yüklü karşıt elektron) ve nötrino çıkar.",
         "etk": {
@@ -9217,15 +9217,15 @@
       },
       {
         "h": "Kararlılık: nötron/proton oranı",
-        "p": "Hafif kararlı çekirdeklerde N/Z ≈ 1'dir. Ağırlarda protonların itmesini dengelemek için daha çok nötron gerekir, oran 1,5'e yaklaşır. Kurşundan ağır bütün çekirdekler radyoaktiftir.",
+        "p": "Hafif ve kararlı çekirdeklerde N/Z ≈ 1'dir. Ağır çekirdeklerde protonların itmesini dengelemek için daha çok nötron gerekir ve bu oran 1,5'e yaklaşır. Kurşundan ağır bütün çekirdekler radyoaktiftir.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M40 30 V175 H290' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M40 175 L280.3 75.1' stroke='var(--muted)' stroke-dasharray='5 4'/><path d='M40.0 175.0 L42.9 173.8 L46.9 172.2 L51.7 170.2 L56.8 168.1 L61.9 165.9 L66.7 163.9 L71.2 162.0 L75.6 160.0 L80.1 158.1 L84.5 156.0 L89.0 153.9 L93.4 151.7 L97.9 149.3 L102.3 146.9 L106.8 144.3 L111.2 141.7 L115.7 139.0 L120.1 136.2 L124.5 133.2 L129.0 130.1 L133.4 126.9 L137.9 123.6 L142.3 120.4 L146.8 117.3 L151.2 114.3 L155.7 111.3 L160.2 108.3 L164.6 105.4 L169.1 102.5 L173.5 99.5 L177.9 96.6 L182.4 93.8 L186.8 90.9 L191.3 88.0 L195.8 85.0 L200.2 81.8 L204.6 78.3 L208.9 74.8 L213.2 71.1 L217.6 67.3 L222.1 63.4 L226.9 59.6 L232.3 55.3 L238.4 50.7 L244.6 46.0 L250.4 41.6 L255.4 37.8 L258.9 35.1' fill='none' stroke='var(--c3)' stroke-width='12' stroke-opacity='0.35' stroke-linecap='round'/><text x='284' y='79' font-size='11' fill='var(--muted)' text-anchor='start'>N = Z</text><text x='30' y='34' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>N</text><text x='300' y='190' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>Z</text><text x='52' y='48' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>nötron fazla → β⁻</text><text x='150' y='162' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>proton fazla → β⁺</text><text x='140' y='100' font-size='11' fill='var(--c3)' text-anchor='end' font-weight='700'>kararlılık kuşağı</text><text x='250' y='28' font-size='11' fill='var(--c5)' text-anchor='end'>Z > 82: hepsi radyoaktif</text><text x='222' y='128' font-size='11' fill='var(--ink)' text-anchor='start'>ağırda N/Z ≈ 1,5</text></svg>",
-        "key": "Nötron fazlası → β⁻, proton fazlası → β⁺, çok ağır çekirdek → genellikle α.",
+        "key": "Nötron fazlası olan çekirdek β⁻, proton fazlası olan çekirdek β⁺ yapar. Çok ağır çekirdekler ise genellikle α yapar.",
         "once": {
           "soru": "Nötronu fazla olan bir çekirdek kararlı olmak için ne yapar?",
           "secenekler": [
             {
               "yazi": "Nötronu protona çevirir",
-              "neden": "β⁻ bozunmasıyla N azalır, Z artar; oran düzelir.",
+              "neden": "β⁻ bozunmasıyla N azalır ve Z artar. Böylece oran düzelir.",
               "dogru": true
             },
             {
@@ -9234,28 +9234,28 @@
             },
             {
               "yazi": "Gama yayar",
-              "neden": "Gama N ve Z'yi değiştirmez; yalnız enerji atar."
+              "neden": "Gama ışıması N ve Z'yi değiştirmez, yalnızca enerji atar."
             }
           ]
         }
       },
       {
         "h": "Denklemde A ve Z korunur",
-        "p": "Bozunma denkleminde iki tarafın A toplamı ve Z toplamı eşittir. <b>α</b>: A−4, Z−2; <b>β⁻</b>: Z+1. Önce α sayısını A farkından, sonra β sayısını Z'den bulursun.",
+        "p": "Bozunma denkleminde iki tarafın A toplamı ve Z toplamı eşittir. <b>α</b> bozunması A'yı 4, Z'yi 2 azaltır. <b>β⁻</b> bozunması ise Z'yi 1 artırır. Önce α sayısını A farkından, sonra β sayısını Z'den bulursun.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='radyo-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='22' font-size='12' fill='var(--muted)' text-anchor='middle'>alfa bozunması</text><text x='45' y='59.0' font-size='11' fill='var(--c1)' text-anchor='end'>226</text><text x='45' y='75' font-size='11' fill='var(--c2)' text-anchor='end'>88</text><text x='47' y='70' font-size='20' fill='var(--ink)' text-anchor='start' font-weight='700'>Ra</text><path d='M86 63 H122' stroke='var(--ink)' stroke-width='2' marker-end='url(#radyo-5)'/><text x='155' y='59.0' font-size='11' fill='var(--c1)' text-anchor='end'>222</text><text x='155' y='75' font-size='11' fill='var(--c2)' text-anchor='end'>86</text><text x='157' y='70' font-size='20' fill='var(--ink)' text-anchor='start' font-weight='700'>Rn</text><text x='208' y='70' font-size='16' fill='var(--ink)' text-anchor='middle'>+</text><text x='239' y='59.0' font-size='11' fill='var(--c1)' text-anchor='end'>4</text><text x='239' y='75' font-size='11' fill='var(--c2)' text-anchor='end'>2</text><text x='241' y='70' font-size='20' fill='var(--ink)' text-anchor='start' font-weight='700'>He</text><text x='160' y='108' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>A:  226 = 222 + 4</text><text x='160' y='128' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Z:  88 = 86 + 2</text><rect x='20' y='146' width='280' height='44' rx='6' fill='var(--panel)' stroke='var(--line)'/><text x='160' y='164' font-size='12' fill='var(--ink)' text-anchor='middle'>²³²Th → ²⁰⁸Pb:  ΔA = 24 → 24 / 4 = 6 α</text><text x='160' y='182' font-size='12' fill='var(--ink)' text-anchor='middle'>Z: 90 − 12 = 78;  82’ye çıkmak için 4 β⁻</text></svg>",
-        "key": "²³²Th'dan ²⁰⁸Pb'ye: 6 α ve 4 β⁻. β ve γ A'yı değiştirmez."
+        "key": "²³²Th'dan ²⁰⁸Pb'ye inmek için 6 α ve 4 β⁻ gerekir. β ve γ ışımaları A'yı değiştirmez."
       },
       {
         "h": "Giricilik ve elektrik alanda sapma",
-        "p": "α kâğıtla, β alüminyumla durur; γ en giricidir. Alanda α ile β⁻ zıt yönlere sapar, hafif β daha çok sapar; γ sapmaz.",
+        "p": "α ışıması kâğıtla, β ışıması alüminyumla durur. γ ise en girici ışımadır. Manyetik alanda α ile β⁻ zıt yönlere sapar ve hafif olan β daha çok sapar. γ ise sapmaz.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='radyo-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker></defs><defs><marker id='radyo-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><defs><marker id='radyo-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c5)'/></marker></defs><rect x='12' y='60' width='14' height='80' rx='3' fill='var(--ink)' fill-opacity='0.25'/><path d='M26 72 H60' stroke='var(--c4)' stroke-width='2.5'/><path d='M26 100 H96' stroke='var(--c1)' stroke-width='2.5'/><path d='M26 128 H150' stroke='var(--c5)' stroke-width='2.5'/><path d='M150 128 H160' stroke='var(--c5)' stroke-width='1' stroke-dasharray='2 2'/><rect x='60' y='52' width='3' height='96' fill='var(--muted)'/><rect x='96' y='52' width='8' height='96' fill='var(--c1)' fill-opacity='0.35'/><rect x='130' y='52' width='20' height='96' fill='var(--ink)' fill-opacity='0.45'/><text x='40' y='66' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>α</text><text x='40' y='94' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>β</text><text x='40' y='122' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>γ</text><text x='60' y='44' font-size='11' fill='var(--muted)' text-anchor='middle'>kâğıt</text><text x='100' y='164' font-size='11' fill='var(--muted)' text-anchor='middle'>alüminyum</text><text x='140' y='44' font-size='11' fill='var(--muted)' text-anchor='middle'>kurşun</text><text x='85' y='188' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>giricilik: γ > β > α</text><path d='M168 20 V176' stroke='var(--line)'/><rect x='196' y='38' width='110' height='5' fill='var(--c2)'/><rect x='196' y='150' width='110' height='5' fill='var(--c1)'/><text x='188' y='45' font-size='15' fill='var(--c2)' text-anchor='middle' font-weight='700'>+</text><text x='188' y='157' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>−</text><circle cx='186' cy='96' r='5' fill='var(--ink)'/><path d='M190 96 Q240 96 286 128' fill='none' stroke='var(--c4)' stroke-width='2.5' marker-end='url(#radyo-6)'/><path d='M190 96 Q216 96 248 50' fill='none' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#radyo-7)'/><path d='M190 96 H300' stroke='var(--c5)' stroke-width='2.5' marker-end='url(#radyo-8)'/><text x='282' y='144' font-size='12' fill='var(--c4)' text-anchor='end' font-weight='700'>α</text><text x='262' y='64' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>β⁻</text><text x='300' y='88' font-size='12' fill='var(--c5)' text-anchor='end' font-weight='700'>γ</text><text x='240' y='188' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>elektrik alanda sapma</text></svg>",
-        "key": "Giricilik: γ > β > α. İyonlaştırma tam tersi: α > β > γ. Kurşun γ'yı ancak zayıflatır."
+        "key": "Giricilik sırası γ > β > α şeklindedir. İyonlaştırma sırası ise tam tersidir: α > β > γ. Kurşun γ ışımasını ancak zayıflatır."
       },
       {
         "h": "Yarı ömür",
-        "p": "Çekirdeklerin yarısının bozunma süresi <b>yarı ömürdür</b> (T<sub>½</sub>). n = t / T<sub>½</sub> ise kalan <b>N = N₀ / 2<sup>n</sup></b>.",
+        "p": "Çekirdeklerin yarısının bozunması için geçen süreye <b>yarı ömür</b> (T<sub>½</sub>) denir. n = t / T<sub>½</sub> ise kalan miktar <b>N = N₀ / 2<sup>n</sup></b> olur.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M40 30 V170 H300' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M40 105.0 H100.0 V170' fill='none' stroke='var(--muted)' stroke-dasharray='3 3'/><text x='100' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>1T</text><circle cx='100.0' cy='105.0' r='3.5' fill='var(--c2)'/><path d='M40 137.5 H160.0 V170' fill='none' stroke='var(--muted)' stroke-dasharray='3 3'/><text x='160' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>2T</text><circle cx='160.0' cy='137.5' r='3.5' fill='var(--c2)'/><path d='M40 153.8 H220.0 V170' fill='none' stroke='var(--muted)' stroke-dasharray='3 3'/><text x='220' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>3T</text><circle cx='220.0' cy='153.8' r='3.5' fill='var(--c2)'/><text x='35' y='44' font-size='11' fill='var(--ink)' text-anchor='end'>N₀</text><text x='35' y='109' font-size='11' fill='var(--ink)' text-anchor='end'>N₀/2</text><text x='35' y='142' font-size='11' fill='var(--ink)' text-anchor='end'>N₀/4</text><text x='35' y='158' font-size='11' fill='var(--ink)' text-anchor='end'>N₀/8</text><path d='M40.0 40.0 L46.0 48.7 L52.0 56.8 L58.0 64.4 L64.0 71.5 L70.0 78.1 L76.0 84.2 L82.0 90.0 L88.0 95.3 L94.0 100.3 L100.0 105.0 L106.0 109.4 L112.0 113.4 L118.0 117.2 L124.0 120.7 L130.0 124.0 L136.0 127.1 L142.0 130.0 L148.0 132.7 L154.0 135.2 L160.0 137.5 L166.0 139.7 L172.0 141.7 L178.0 143.6 L184.0 145.4 L190.0 147.0 L196.0 148.6 L202.0 150.0 L208.0 151.3 L214.0 152.6 L220.0 153.8 L226.0 154.8 L232.0 155.9 L238.0 156.8 L244.0 157.7 L250.0 158.5 L256.0 159.3 L262.0 160.0 L268.0 160.7 L274.0 161.3 L280.0 161.9 L286.0 162.4 L292.0 162.9' fill='none' stroke='var(--acc)' stroke-width='2.5'/><text x='232' y='46' font-size='16' fill='var(--ink)' text-anchor='middle' font-weight='700'>N = N₀ / 2ⁿ</text><text x='232' y='66' font-size='12' fill='var(--muted)' text-anchor='middle'>n = t / T½</text><text x='300' y='186' font-size='11' fill='var(--muted)' text-anchor='end'>t</text></svg>",
-        "key": "Örnek: 80 g, yarı ömür 5 gün: 15 günde 10 g kalır. 2 yarı ömürde madde bitmez, dörtte biri kalır. Yarı ömür sıcaklıkla değişmez.",
+        "key": "Yarı ömrü 5 gün olan 80 g maddeden 15 gün sonra 10 g kalır. 2 yarı ömür sonunda madde bitmez, dörtte biri kalır. Yarı ömür sıcaklıkla değişmez.",
         "etk": {
           "tur": "formul",
           "soru": "Başlangıç miktarını, yarı ömrü ve geçen süreyi değiştir: N = N<sub>0</sub> / 2<sup>t/T½</sup>.",
@@ -9307,7 +9307,7 @@
       },
       {
         "h": "Karbon-14 ile yaş tayini",
-        "p": "Canlı ölünce yeni <sup>14</sup>C almaz; var olan ≈5730 yıllık yarı ömürle azalır. <sup>14</sup>C/<sup>12</sup>C oranı dörtte bire inmişse ≈11 460 yıl geçmiştir.",
+        "p": "Bir canlı ölünce yeni <sup>14</sup>C almaz. Var olan <sup>14</sup>C ise yaklaşık 5730 yıllık yarı ömürle azalır. <sup>14</sup>C/<sup>12</sup>C oranı dörtte bire inmişse yaklaşık 11 460 yıl geçmiştir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>ölümden sonra kalan ¹⁴C oranı</text><path d='M30 168 H300' stroke='var(--ink)' stroke-width='1.5'/><rect x='50' y='58.0' width='40' height='110.0' fill='var(--c4)' fill-opacity='0.75'/><text x='70' y='52' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>%100</text><text x='70' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>0</text><rect x='116' y='113.0' width='40' height='55.0' fill='var(--c4)' fill-opacity='0.63'/><text x='136' y='107' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>%50</text><text x='136' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>5730</text><rect x='182' y='140.5' width='40' height='27.5' fill='var(--c4)' fill-opacity='0.51'/><text x='202' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>%25</text><text x='202' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>11 460</text><rect x='248' y='154.2' width='40' height='13.8' fill='var(--c4)' fill-opacity='0.39'/><text x='268' y='148' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>%12,5</text><text x='268' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>17 190</text><text x='300' y='198' font-size='10' fill='var(--muted)' text-anchor='end'>yıl</text></svg>",
         "key": "Yaşarken oran atmosferdekine yakındır. Yöntem yalnız bir zamanlar canlı olan örneklerde, ≈50 000 yıla kadar güvenilirdir.",
         "once": {
@@ -9315,12 +9315,12 @@
           "secenekler": [
             {
               "yazi": "≈5730 yıl",
-              "neden": "Oran bir kez yarıya inmiş: bir yarı ömür.",
+              "neden": "Oran bir kez yarıya inmiştir. Bu, bir yarı ömür demektir.",
               "dogru": true
             },
             {
               "yazi": "≈11 460 yıl",
-              "neden": "Bu iki yarı ömürdür; oran dörtte bire inerdi."
+              "neden": "Bu iki yarı ömürdür ve oran dörtte bire inerdi."
             },
             {
               "yazi": "≈2865 yıl",
@@ -9331,13 +9331,13 @@
       },
       {
         "h": "Fisyon ve füzyon",
-        "p": "<b>Fisyonda</b> <sup>235</sup>U gibi ağır çekirdek nötron yutup bölünür, 2-3 nötron salar: <b>zincirleme tepkime</b>. <b>Füzyonda</b> hafif çekirdekler birleşir. İkisinde de enerji açığa çıkar.",
+        "p": "<b>Fisyonda</b> <sup>235</sup>U gibi ağır bir çekirdek nötron yutar, bölünür ve 2-3 nötron salar. Bu nötronlar <b>zincirleme tepkime</b> başlatır. <b>Füzyonda</b> ise hafif çekirdekler birleşir. İkisinde de enerji açığa çıkar.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='radyo-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><defs><marker id='radyo-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker></defs><text x='80' y='22' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>fisyon (bölünme)</text><text x='240' y='22' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>füzyon (birleşme)</text><path d='M163 14 V188' stroke='var(--line)'/><circle cx='12' cy='100' r='4' fill='var(--muted)'/><path d='M17 100 H34' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#radyo-9)'/><circle cx='52' cy='100' r='15' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)'/><text x='52' y='104' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>U</text><path d='M62 89 L82 64' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#radyo-9)'/><path d='M62 111 L82 136' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#radyo-9)'/><circle cx='92' cy='54' r='10' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='92' y='58' font-size='10' fill='var(--ink)' text-anchor='middle'>Ba</text><circle cx='92' cy='146' r='10' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='92' y='150' font-size='10' fill='var(--ink)' text-anchor='middle'>Kr</text><path d='M68 96 L120 80 M68 100 H120 M68 104 L120 120' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='3 2'/><circle cx='120' cy='80' r='3.5' fill='var(--muted)'/><circle cx='120' cy='100' r='3.5' fill='var(--muted)'/><circle cx='120' cy='120' r='3.5' fill='var(--muted)'/><circle cx='145' cy='80' r='9' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)'/><circle cx='145' cy='100' r='9' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)'/><circle cx='145' cy='120' r='9' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)'/><text x='80' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>3 nötron → yeni bölünmeler</text><text x='80' y='190' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>zincirleme tepkime</text><circle cx='188' cy='80' r='6' fill='var(--c2)' fill-opacity='0.75'/><circle cx='204' cy='80' r='6' fill='var(--c2)' fill-opacity='0.75'/><circle cx='188' cy='100' r='6' fill='var(--c2)' fill-opacity='0.75'/><circle cx='204' cy='100' r='6' fill='var(--c2)' fill-opacity='0.75'/><path d='M216 90 H246' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#radyo-9)'/><circle cx='264' cy='83' r='6' fill='var(--c2)' fill-opacity='0.75'/><circle cx='276' cy='83' r='6' fill='var(--muted)' fill-opacity='0.75'/><circle cx='264' cy='97' r='6' fill='var(--muted)' fill-opacity='0.75'/><circle cx='276' cy='97' r='6' fill='var(--c2)' fill-opacity='0.75'/><path d='M286 76 L298 64 M290 90 H304 M286 104 L298 116' stroke='var(--c4)' stroke-width='2'/><text x='196' y='126' font-size='11' fill='var(--ink)' text-anchor='middle'>4 ¹H</text><text x='270' y='126' font-size='11' fill='var(--ink)' text-anchor='middle'>⁴He</text><text x='240' y='158' font-size='11' fill='var(--muted)' text-anchor='middle'>+ 2 pozitron + 2 nötrino</text><text x='240' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>+ ≈ 26,7 MeV enerji</text><text x='240' y='190' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>Güneş’in merkezinde</text></svg>",
-        "key": "Santraller fisyonu denetimli yürütür. Güneş hidrojeni helyuma çevirir; füzyon milyonlarca kelvin ister."
+        "key": "Nükleer santraller fisyonu denetimli olarak yürütür. Güneş hidrojeni helyuma çevirir. Füzyon için milyonlarca kelvin sıcaklık gerekir."
       },
       {
         "h": "Kullanım alanları ve korunma",
-        "p": "Tıpta görüntüleme ve tümör tedavisinde, gıda saklamada ve sanayide kullanılır; ışınlanan gıda radyoaktif olmaz. Korunma: <b>kısa süre</b>, <b>uzak dur</b>, araya <b>zırh</b> koy.",
+        "p": "Radyasyon tıpta görüntüleme ve tümör tedavisinde, gıda saklamada ve sanayide kullanılır. Işınlanan gıda radyoaktif olmaz. Korunmak için <b>kısa süre</b> kal, <b>uzak dur</b> ve araya <b>zırh</b> koy.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='12' fill='var(--muted)' text-anchor='middle'>kullanım alanları</text><rect x='10' y='26' width='96' height='62' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)'/><text x='58.0' y='46' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>tıp</text><text x='58.0' y='64' font-size='10.5' fill='var(--ink)' text-anchor='middle'>görüntüleme</text><text x='58.0' y='79' font-size='10.5' fill='var(--ink)' text-anchor='middle'>tümör tedavisi</text><rect x='112' y='26' width='96' height='62' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='160.0' y='46' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>tarım</text><text x='160.0' y='64' font-size='10.5' fill='var(--ink)' text-anchor='middle'>gıda ışınlama</text><text x='160.0' y='79' font-size='10.5' fill='var(--ink)' text-anchor='middle'>zararlı kontrolü</text><rect x='214' y='26' width='96' height='62' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)'/><text x='262.0' y='46' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>sanayi</text><text x='262.0' y='64' font-size='10.5' fill='var(--ink)' text-anchor='middle'>kalınlık ölçme</text><text x='262.0' y='79' font-size='10.5' fill='var(--ink)' text-anchor='middle'>kaynak kontrolü</text><text x='160' y='112' font-size='12' fill='var(--muted)' text-anchor='middle'>korunmanın üç kuralı</text><rect x='10' y='120' width='96' height='62' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='58.0' y='140' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>zaman</text><text x='58.0' y='158' font-size='10.5' fill='var(--ink)' text-anchor='middle'>kaynak yanında</text><text x='58.0' y='173' font-size='10.5' fill='var(--ink)' text-anchor='middle'>kısa kal</text><rect x='112' y='120' width='96' height='62' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='160.0' y='140' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>mesafe</text><text x='160.0' y='158' font-size='10.5' fill='var(--ink)' text-anchor='middle'>uzak dur</text><text x='160.0' y='173' font-size='10.5' fill='var(--ink)' text-anchor='middle'>nokta kaynak: 1/r²</text><rect x='214' y='120' width='96' height='62' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='262.0' y='140' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>zırh</text><text x='262.0' y='158' font-size='10.5' fill='var(--ink)' text-anchor='middle'>kurşun, beton</text><text x='262.0' y='173' font-size='10.5' fill='var(--ink)' text-anchor='middle'>araya koy</text></svg>",
         "key": "Aletler ışınla sterilize edilir, kaynak hataları aranır. Nokta kaynaktan uzaklığı 2 katına çıkarınca ışınım yaklaşık 4'te birine iner.",
         "once": {
@@ -9354,14 +9354,14 @@
             },
             {
               "yazi": "Birkaç gün olur",
-              "neden": "Işın kesilince etkisi biter; çilek ışıma yapmaz."
+              "neden": "Işın kesilince etkisi biter ve çilek ışıma yapmaz."
             }
           ]
         }
       },
       {
         "h": "Aktivite, doz ve bulaşma",
-        "p": "Saniyedeki bozunma sayısı <b>aktivitedir</b>; birimi becquerel (Bq). Işınlanan kişi radyoaktif olmaz. Radyoaktif madde üstüne ya da içine girerse <b>bulaşma</b> olur.",
+        "p": "Saniyedeki bozunma sayısına <b>aktivite</b> denir ve birimi becquereldir (Bq). Işınlanan bir kişi radyoaktif olmaz. Radyoaktif madde vücudun üstüne ya da içine girerse <b>bulaşma</b> olur.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='12' fill='var(--muted)' text-anchor='middle'>ölçülen büyüklükler</text><rect x='10' y='26' width='96' height='62' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)'/><text x='58' y='46' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>aktivite</text><text x='58' y='64' font-size='10.5' fill='var(--ink)' text-anchor='middle'>becquerel (Bq)</text><text x='58' y='79' font-size='10.5' fill='var(--ink)' text-anchor='middle'>bozunma / s</text><rect x='112' y='26' width='96' height='62' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='160' y='46' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>soğurulan doz</text><text x='160' y='64' font-size='10.5' fill='var(--ink)' text-anchor='middle'>gray (Gy)</text><text x='160' y='79' font-size='10.5' fill='var(--ink)' text-anchor='middle'>1 Gy = 1 J/kg</text><rect x='214' y='26' width='96' height='62' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)'/><text x='262' y='46' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>eşdeğer doz</text><text x='262' y='64' font-size='10.5' fill='var(--ink)' text-anchor='middle'>sievert (Sv)</text><text x='262' y='79' font-size='10.5' fill='var(--ink)' text-anchor='middle'>biyolojik etki</text><text x='160' y='112' font-size='12' fill='var(--muted)' text-anchor='middle'>ışınlanma mı, bulaşma mı?</text><rect x='10' y='120' width='148' height='62' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='84' y='140' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>ışınlanma</text><text x='84' y='158' font-size='10.5' fill='var(--ink)' text-anchor='middle'>kaynaktan uzaklaşınca biter</text><text x='84' y='173' font-size='10.5' fill='var(--ink)' text-anchor='middle'>kişi radyoaktif olmaz</text><rect x='162' y='120' width='148' height='62' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='236' y='140' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>bulaşma</text><text x='236' y='158' font-size='10.5' fill='var(--ink)' text-anchor='middle'>madde üstünde ya da içinde</text><text x='236' y='173' font-size='10.5' fill='var(--ink)' text-anchor='middle'>temizlenene dek ışır</text></svg>",
         "key": "Aktivite her yarı ömürde yarıya iner. Doz gray (Gy), biyolojik etki sievert (Sv) ile ölçülür.",
         "once": {
@@ -9385,7 +9385,7 @@
       },
       {
         "h": "Temel parçacıklar",
-        "p": "Proton ve nötron <b>kuarklardan</b> oluşur: u +2/3, d −1/3 yüklüdür; proton uud, nötron udd. Elektron ve nötrino bölünmediği bilinen <b>leptonlardır</b>.",
+        "p": "Proton ve nötron <b>kuarklardan</b> oluşur. u kuarkı +2/3, d kuarkı −1/3 yüklüdür. Proton uud, nötron ise udd kuarklarından oluşur. Elektron ve nötrino, bölünmediği bilinen <b>leptonlardır</b>.",
         "svg": "<svg viewBox='0 0 320 200'><circle cx='80' cy='88' r='48' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='2'/><circle cx='62' cy='76' r='12' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)'/><text x='62' y='81' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>u</text><circle cx='98' cy='76' r='12' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)'/><text x='98' y='81' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>u</text><circle cx='80' cy='106' r='12' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='80' y='111' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>d</text><text x='80' y='26' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>proton = uud</text><text x='80' y='154' font-size='11.5' fill='var(--ink)' text-anchor='middle'>⅔ + ⅔ − ⅓ = +1</text><circle cx='240' cy='88' r='48' fill='var(--muted)' fill-opacity='0.12' stroke='var(--muted)' stroke-width='2'/><circle cx='222' cy='76' r='12' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)'/><text x='222' y='81' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>u</text><circle cx='258' cy='76' r='12' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='258' y='81' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>d</text><circle cx='240' cy='106' r='12' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='240' y='111' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>d</text><text x='240' y='26' font-size='13' fill='var(--muted)' text-anchor='middle' font-weight='700'>nötron = udd</text><text x='240' y='154' font-size='11.5' fill='var(--ink)' text-anchor='middle'>⅔ − ⅓ − ⅓ = 0</text><rect x='10' y='168' width='300' height='26' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='160' y='186' font-size='11.5' fill='var(--ink)' text-anchor='middle'>leptonlar: elektron, müon, tau ve nötrinolar</text><text x='160' y='92' font-size='11' fill='var(--c2)' text-anchor='middle'>u: +⅔</text><text x='160' y='108' font-size='11' fill='var(--c1)' text-anchor='middle'>d: −⅓</text></svg>",
         "key": "β⁻ bozunmasında aslında bir d kuarkı u'ya döner. Kuarklar tek başına bulunmaz.",
         "once": {
@@ -9393,7 +9393,7 @@
           "secenekler": [
             {
               "yazi": "+1",
-              "neden": "2/3 + 2/3 − 1/3 = +1.",
+              "neden": "2/3 + 2/3 − 1/3 = +1 olur.",
               "dogru": true
             },
             {
@@ -9409,15 +9409,15 @@
       },
       {
         "h": "Dört temel kuvvet",
-        "p": "Dört temel kuvvet: <b>güçlü</b>, <b>elektromanyetik</b>, <b>zayıf</b> (β bozunması) ve <b>kütleçekim</b>. Kuvvetleri gluon, foton, W ve Z bozonları taşır; graviton henüz gözlenmedi.",
+        "p": "Dört temel kuvvet vardır: <b>güçlü</b>, <b>elektromanyetik</b>, <b>zayıf</b> ve <b>kütle çekim</b> kuvveti. β bozunmasını zayıf kuvvet yönetir. Kuvvetleri gluon, foton, W ve Z bozonları taşır. Graviton ise henüz gözlenmedi.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='10' width='304' height='150' rx='8' fill='var(--panel)'/><text x='20' y='32' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>kuvvet</text><text x='150' y='32' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>taşıyıcı</text><text x='245' y='32' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>menzil</text><path d='M16 42 H304' fill='none' stroke='var(--line)' stroke-width='1'/><text x='20' y='66' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>güçlü</text><text x='150' y='66' font-size='12' fill='var(--ink)' text-anchor='start'>gluon</text><text x='245' y='66' font-size='12' fill='var(--muted)' text-anchor='start'>çok kısa</text><text x='20' y='92' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>elektromanyetik</text><text x='150' y='92' font-size='12' fill='var(--ink)' text-anchor='start'>foton</text><text x='245' y='92' font-size='12' fill='var(--muted)' text-anchor='start'>sonsuz</text><text x='20' y='118' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>zayıf</text><text x='150' y='118' font-size='12' fill='var(--ink)' text-anchor='start'>W ve Z</text><text x='245' y='118' font-size='12' fill='var(--muted)' text-anchor='start'>çok kısa</text><text x='20' y='144' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>kütleçekim</text><text x='150' y='144' font-size='12' fill='var(--ink)' text-anchor='start'>graviton (?)</text><text x='245' y='144' font-size='12' fill='var(--muted)' text-anchor='start'>sonsuz</text><text x='160' y='186' font-size='12' fill='var(--ink)' text-anchor='middle'>karşıt madde: elektron (−) ↔ pozitron (+)</text></svg>",
-        "key": "Her parçacığın bir karşıt parçacığı vardır; elektronunki pozitrondur. Foton kendi karşıt parçacığıdır.",
+        "key": "Her parçacığın bir karşıt parçacığı vardır. Elektronun karşıt parçacığı pozitrondur. Foton ise kendi karşıt parçacığıdır.",
         "once": {
           "soru": "Çekirdeği bir arada tutan kuvvet hangisidir?",
           "secenekler": [
             {
               "yazi": "Güçlü kuvvet",
-              "neden": "Kısa menzilli ama çok güçlüdür; protonların itmesini yener.",
+              "neden": "Güçlü kuvvet kısa menzillidir, ama çok güçlüdür. Bu yüzden protonların itmesini yener.",
               "dogru": true
             },
             {
@@ -9433,7 +9433,7 @@
       },
       {
         "h": "Özet",
-        "p": "• Z proton, A−Z nötron; güçlü kuvvet kısa menzillidir.<br>• E = Δm·c²; en kararlı bölge demir civarı.<br>• α: A−4, Z−2; β⁻: Z+1; β⁺: Z−1; γ: değişmez.<br>• N = N₀/2ⁿ; ¹⁴C ile yaş bulunur.<br>• Fisyon böler, füzyon birleştirir; ikisi de enerji verir.",
+        "p": "• Z proton, A−Z nötron sayısıdır.<br>• Güçlü kuvvet kısa menzillidir.<br>• E = Δm·c² olur ve demir civarı en kararlıdır.<br>• α: A−4, Z−2; β⁻: Z+1; β⁺: Z−1 olur.<br>• N = N₀/2ⁿ olur ve ¹⁴C ile yaş bulunur.<br>• Fisyon ve füzyon enerji verir.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='14' width='145' height='80' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)'/><text x='82.5' y='34' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>çekirdek</text><text x='82.5' y='52' font-size='10.5' fill='var(--ink)' text-anchor='middle'>A = p + n,  N = A − Z</text><text x='82.5' y='67' font-size='10.5' fill='var(--ink)' text-anchor='middle'>E = Δm·c²</text><rect x='165' y='14' width='145' height='80' rx='6' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)'/><text x='237.5' y='34' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>bozunma</text><text x='237.5' y='52' font-size='10.5' fill='var(--ink)' text-anchor='middle'>α: A−4, Z−2;  β⁻: Z+1</text><text x='237.5' y='67' font-size='10.5' fill='var(--ink)' text-anchor='middle'>β⁺: Z−1;  γ: değişmez</text><rect x='10' y='106' width='145' height='80' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)'/><text x='82.5' y='126' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>yarı ömür</text><text x='82.5' y='144' font-size='10.5' fill='var(--ink)' text-anchor='middle'>N = N₀ / 2ⁿ</text><text x='82.5' y='159' font-size='10.5' fill='var(--ink)' text-anchor='middle'>¹⁴C: ≈ 5730 yıl</text><rect x='165' y='106' width='145' height='80' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='237.5' y='126' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>enerji</text><text x='237.5' y='144' font-size='10.5' fill='var(--ink)' text-anchor='middle'>fisyon: ağır bölünür</text><text x='237.5' y='159' font-size='10.5' fill='var(--ink)' text-anchor='middle'>füzyon: hafif birleşir</text></svg>"
       }
     ],
@@ -9443,7 +9443,7 @@
         "q": "Yarı ömrü 2 saat olan 64 g radyoaktif maddenin 8 saat sonra kaç gramı bozunmadan kalır?",
         "cevap": 4,
         "birim": "g",
-        "e": "n = 8/2 = 4 yarı ömür geçer; kalan 64/2<sup>4</sup> = 4 g olur."
+        "e": "n = 8/2 = 4 yarı ömür geçer. Kalan miktar 64/2<sup>4</sup> = 4 g olur."
       },
       {
         "tur": "ayir",
@@ -9487,7 +9487,7 @@
             2
           ]
         ],
-        "e": "Alfa bir helyum çekirdeğidir, kâğıtla durur ve A'yı 4, Z'yi 2 azaltır. Beta eksi elektrondur: Z 1 artar, pozitif plakaya sapar. Gama yüksüz bir fotondur; sapmaz, A ve Z'yi değiştirmez."
+        "e": "Alfa bir helyum çekirdeğidir, kâğıtla durur ve A'yı 4, Z'yi 2 azaltır. Beta eksi bir elektrondur. Z'yi 1 artırır ve pozitif plakaya sapar. Gama ise yüksüz bir fotondur. Sapmaz ve A ile Z'yi değiştirmez."
       },
       {
         "tur": "ayir",
@@ -9522,7 +9522,7 @@
             1
           ]
         ],
-        "e": "Eğrinin tepesi demir civarındadır. Tepeye yaklaşan tepkime (hafiflerin birleşmesi, ağırların bölünmesi) enerji verir; tepedeki demiri bölmek, birleştirmek ya da bir çekirdeği nükleonlarına ayırmak enerji ister."
+        "e": "Eğrinin tepesi demir civarındadır. Tepeye yaklaştıran tepkimeler enerji verir. Hafif çekirdeklerin birleşmesi ve ağır çekirdeklerin bölünmesi buna örnektir. Tepedeki demiri bölmek ya da birleştirmek enerji ister. Bir çekirdeği nükleonlarına ayırmak da enerji ister."
       },
       {
         "q": "Bir X çekirdeği önce bir alfa, sonra art arda iki beta eksi ışıması yapıp Y çekirdeğine dönüşüyor. Y için hangisi doğrudur?",
@@ -9533,11 +9533,11 @@
           "X'in izotopudur"
         ],
         "a": 3,
-        "e": "Alfa A'yı 4, Z'yi 2 azaltır; iki beta eksi Z'yi 2 artırır. Z aynı kalır, A 4 azalır: aynı element, farklı kütle numarası, yani izotop.",
+        "e": "Alfa ışıması A'yı 4, Z'yi 2 azaltır. İki beta eksi ışıması ise Z'yi 2 artırır. Sonuçta Z aynı kalır ve A 4 azalır. Element aynı, kütle numarası farklı olduğu için yeni çekirdek bir izotoptur.",
         "y": [
-          "Alfa ışıması kütle numarasını 4 azaltır; beta ışımaları onu değiştirmez, toplamda 4 azalır.",
-          "Alfa atom numarasını 2 azaltır, iki beta eksi 2 artırır; atom numarası değişmez.",
-          "İzobar aynı kütle numarası demektir; alfa ışıması kütle numarasını 4 azalttığı için izobar olmaz.",
+          "Alfa ışıması kütle numarasını 4 azaltır. Beta ışımaları ise onu değiştirmez. Bu yüzden toplamda kütle numarası 4 azalır.",
+          "Alfa ışıması atom numarasını 2 azaltır, iki beta eksi ışıması ise 2 artırır. Bu yüzden atom numarası değişmez.",
+          "İzobar, kütle numarası aynı olan çekirdek demektir. Alfa ışıması kütle numarasını 4 azalttığı için izobar oluşmaz.",
           ""
         ]
       }
@@ -9549,7 +9549,7 @@
     "cards": [
       {
         "h": "Deprem nedir?",
-        "p": "Fay boyunca kayalar sürtünmeyle kilitlenir ve gerilme yıllarca birikir. Dayanım aşılınca bloklar bir anda kayar; enerji <b>deprem dalgaları</b> olarak yayılır.",
+        "p": "Fay boyunca kayalar sürtünmeyle kilitlenir ve gerilme yıllarca birikir. Kayaların dayanımı aşılınca bloklar bir anda kayar. Biriken enerji de <b>deprem dalgaları</b> olarak yayılır.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='deprem-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c1)'/></marker></defs><rect x='20' y='40' width='140' height='110' fill='var(--c4)' fill-opacity='0.14'/><rect x='160' y='40' width='140' height='110' fill='var(--c4)' fill-opacity='0.24'/><line x1='160' y1='34' x2='160' y2='156' stroke='var(--ink)' stroke-width='2.5' stroke-dasharray='7 5'/><path d='M20 95 L120 95 Q160 95 160 112' fill='none' stroke='var(--ink)' stroke-width='6' stroke-linecap='round' opacity='0.85'/><path d='M160 78 Q160 95 200 95 L300 95' fill='none' stroke='var(--ink)' stroke-width='6' stroke-linecap='round' opacity='0.85'/><line x1='60' y1='130' x2='60' y2='106' stroke='var(--c1)' stroke-width='2' marker-end='url(#deprem-1)'/><line x1='260' y1='60' x2='260' y2='84' stroke='var(--c1)' stroke-width='2' marker-end='url(#deprem-1)'/><text x='160' y='24' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Kilitli fayda gerilme birikir</text><text x='168' y='150' font-size='11' fill='var(--muted)' text-anchor='start'>fay</text><rect x='20' y='164' width='280' height='30' rx='6' fill='var(--panel)'/><text x='160' y='184' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>dayanım aşılınca kaya bir anda kayar: deprem</text></svg>",
         "key": "Yer kabuğu levhalardan oluşur, levhalar yılda birkaç cm kayar. Deprem, yavaş biriken gerilmenin saniyeler içinde boşalmasıdır."
       },
@@ -9563,7 +9563,7 @@
           "secenekler": [
             {
               "yazi": "Kırılmanın başladığı nokta",
-              "neden": "Bu noktaya odak denir; derinlik odağın yüzeyden uzaklığıdır.",
+              "neden": "Bu noktaya odak denir. Derinlik ise odağın yüzeyden uzaklığıdır.",
               "dogru": true
             },
             {
@@ -9579,20 +9579,20 @@
       },
       {
         "h": "Türkiye neden deprem ülkesi?",
-        "p": "Arap levhası Anadolu'yu sıkıştırır, Anadolu batıya kaçar. Kayma <b>Kuzey Anadolu</b> ve <b>Doğu Anadolu</b> faylarında olur; 1999 ve 2023 depremleri buradaydı.",
+        "p": "Arap levhası Anadolu'yu sıkıştırır ve Anadolu batıya doğru kaçar. Bu kayma <b>Kuzey Anadolu</b> ve <b>Doğu Anadolu</b> faylarında olur. 1999 ve 2023 depremleri bu faylarda meydana geldi.",
         "svg": "<svg viewBox='0 0 320 200'><path d='M30 80 Q60 60 110 66 Q170 56 230 64 Q280 60 300 76 Q306 120 290 150 Q230 170 160 166 Q90 172 40 156 Q20 120 30 80 Z' fill='var(--panel)' stroke='var(--line-2)' stroke-width='1.5'/><path d='M60 92 Q120 78 180 84 Q230 86 262 100' fill='none' stroke='var(--c2)' stroke-width='3.5'/><path d='M262 100 Q236 124 212 152' fill='none' stroke='var(--c5)' stroke-width='3.5'/><path d='M44 116 L84 112 M42 132 L82 130 M46 148 L80 146' stroke='var(--c4)' stroke-width='3'/><text x='160' y='70' font-size='11.5' fill='var(--c2)' text-anchor='middle' font-weight='700'>Kuzey Anadolu Fayı</text><text x='250' y='140' font-size='11.5' fill='var(--c5)' text-anchor='end' font-weight='700'>Doğu Anadolu Fayı</text><text x='92' y='164' font-size='11' fill='var(--c4)' text-anchor='start' font-weight='700'>Batı Anadolu</text><text x='160' y='24' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Anadolu levhası batıya doğru sıkışıp kayıyor</text><text x='160' y='190' font-size='10.5' fill='var(--muted)' text-anchor='middle'>şematik; gerçek haritada daha çok fay var</text></svg>",
-        "key": "17 Ağustos 1999 (7,4), 6 Şubat 2023 (7,7 ve 7,6). Fay haritası nerede deprem olacağını gösterir, ne zaman olacağını söyleyemez.",
+        "key": "17 Ağustos 1999 depremi 7,4 büyüklüğündeydi. 6 Şubat 2023'te ise 7,7 ve 7,6 büyüklüğünde iki deprem oldu. Fay haritası depremin nerede olacağını gösterir, ama ne zaman olacağını söyleyemez.",
         "once": {
           "soru": "Türkiye'de neden sık deprem olur?",
           "secenekler": [
             {
               "yazi": "Levhalar arasında sıkışır",
-              "neden": "Arap levhası kuzeye iter; Anadolu fayları boyunca batıya kayar.",
+              "neden": "Arap levhası kuzeye doğru iter. Anadolu da faylar boyunca batıya kayar.",
               "dogru": true
             },
             {
               "yazi": "Yer altında çok mağara var",
-              "neden": "Mağara çökmeleri çok küçük sarsıntılar yapar; büyük depremler faylarda olur."
+              "neden": "Mağara çökmeleri çok küçük sarsıntılar oluşturur. Büyük depremler ise faylarda olur."
             },
             {
               "yazi": "Çok volkan var",
@@ -9609,20 +9609,20 @@
       },
       {
         "h": "Yüzey dalgaları",
-        "p": "Cisim dalgaları yüzeye ulaşınca <b>yüzey dalgaları</b> oluşur. En yavaş onlardır ama genlikleri büyüktür; binalardaki hasarın büyük payı onlardandır.",
+        "p": "Cisim dalgaları yüzeye ulaşınca <b>yüzey dalgaları</b> oluşur. Bu dalgalar en yavaş dalgalardır, ama genlikleri büyüktür. Binalardaki hasarın büyük bölümü yüzey dalgalarından kaynaklanır.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='20' y1='100' x2='300' y2='100' stroke='var(--line-2)'/><path d='M20 100.0 L21 100.0 L22 100.0 L23 100.0 L24 100.0 L25 100.0 L26 100.0 L27 100.0 L28 100.0 L29 100.0 L30 100.0 L31 100.0 L32 100.0 L33 100.0 L34 100.0 L35 100.0 L36 100.0 L37 100.0 L38 100.0 L39 100.0 L40 100.0 L41 100.0 L42 100.0 L43 100.0 L44 100.0 L45 100.0 L46 100.0 L47 100.0 L48 100.0 L49 100.0 L50 100.0 L51 100.0 L52 100.0 L53 100.0 L54 100.0 L55 100.0 L56 100.0 L57 100.0 L58 95.6 L59 95.2 L60 101.5 L61 105.3 L62 101.4 L63 95.9 L64 96.4 L65 101.9 L66 104.4 L67 100.6 L68 96.3 L69 97.4 L70 102.1 L71 103.5 L72 100.0 L73 96.7 L74 98.2 L75 102.1 L76 102.8 L77 99.5 L78 97.2 L79 98.9 L80 102.0 L81 102.2 L82 99.3 L83 97.6 L84 99.4 L85 101.9 L86 101.6 L87 99.1 L88 98.0 L89 99.8 L90 101.7 L91 101.2 L92 99.0 L93 98.4 L94 100.0 L95 101.5 L96 100.8 L97 99.0 L98 98.7 L99 100.2 L100 101.3 L101 100.5 L102 99.1 L103 99.0 L104 100.3 L105 101.1 L106 100.3 L107 99.1 L108 99.3 L109 100.4 L110 100.9 L111 100.1 L112 99.2 L113 99.5 L114 93.3 L115 87.6 L116 89.2 L117 97.3 L118 107.2 L119 112.4 L120 109.4 L121 100.4 L122 91.6 L123 89.0 L124 93.3 L125 101.2 L126 107.6 L127 109.1 L128 105.4 L129 98.7 L130 92.8 L131 91.4 L132 95.5 L133 102.5 L134 107.6 L135 107.6 L136 102.7 L137 96.6 L138 93.2 L139 94.1 L140 98.3 L141 103.2 L142 106.1 L143 105.3 L144 101.3 L145 96.5 L146 94.0 L147 95.5 L148 99.8 L149 104.0 L150 105.3 L151 103.3 L152 99.5 L153 96.3 L154 95.5 L155 97.3 L156 100.7 L157 103.6 L158 104.2 L159 102.2 L160 98.8 L161 96.3 L162 96.4 L163 98.7 L164 101.6 L165 103.3 L166 102.9 L167 100.9 L168 98.4 L169 97.0 L170 89.8 L171 81.7 L172 76.3 L173 73.0 L174 71.4 L175 72.0 L176 75.9 L177 83.3 L178 93.6 L179 105.0 L180 115.1 L181 122.2 L182 125.5 L183 125.0 L184 121.9 L185 117.2 L186 111.8 L187 105.8 L188 99.1 L189 91.9 L190 85.0 L191 79.8 L192 77.6 L193 78.8 L194 83.0 L195 89.3 L196 96.1 L197 102.4 L198 107.5 L199 111.4 L200 114.2 L201 116.0 L202 116.5 L203 115.0 L204 111.4 L205 106.0 L206 99.8 L207 94.0 L208 89.5 L209 86.9 L210 86.2 L211 87.1 L212 89.0 L213 91.5 L214 94.7 L215 98.5 L216 102.8 L217 106.9 L218 110.3 L219 112.1 L220 112.1 L221 110.4 L222 107.5 L223 104.0 L224 100.5 L225 97.4 L226 94.9 L227 92.8 L228 91.3 L229 90.6 L230 91.0 L231 92.6 L232 95.3 L233 98.6 L234 101.9 L235 104.7 L236 106.5 L237 107.4 L238 107.4 L239 106.8 L240 105.6 L241 104.0 L242 102.0 L243 99.5 L244 97.1 L245 95.0 L246 93.6 L247 93.2 L248 93.8 L249 95.1 L250 96.9 L251 98.7 L252 100.5 L253 102.1 L254 103.5 L255 104.6 L256 105.2 L257 105.3 L258 104.6 L259 103.3 L260 101.6 L261 99.7 L262 98.1 L263 96.9 L264 96.2 L265 95.9 L266 96.0 L267 96.4 L268 97.2 L269 98.3 L270 99.6 L271 101.1 L272 102.3 L273 103.3 L274 103.7 L275 103.6 L276 103.0 L277 102.2 L278 101.3 L279 100.3 L280 99.3 L281 98.4 L282 97.7 L283 97.2 L284 97.0 L285 97.2 L286 97.8 L287 98.7 L288 99.7 L289 100.6 L290 101.4 L291 101.9 L292 102.2 L293 102.3 L294 102.2 L295 101.8 L296 101.3 L297 100.6 L298 99.8 L299 99.0 L300 98.4' fill='none' stroke='var(--ink)' stroke-width='1.4'/><line x1='57' y1='44' x2='57' y2='156' stroke='var(--c1)' stroke-dasharray='3 3'/><text x='57' y='38' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>P</text><line x1='113' y1='44' x2='113' y2='156' stroke='var(--c2)' stroke-dasharray='3 3'/><text x='113' y='38' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>S</text><line x1='169' y1='44' x2='169' y2='156' stroke='var(--c5)' stroke-dasharray='3 3'/><text x='169' y='38' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>yüzey</text><text x='160' y='20' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Sismogram: üç dalga sırayla gelir</text><rect x='20' y='166' width='280' height='28' rx='6' fill='var(--panel)'/><text x='160' y='185' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>yüzey dalgaları en yavaş, genliği en büyük</text></svg>",
-        "key": "Varış sırası: önce P, sonra S, en son yüzey dalgaları.",
+        "key": "Dalgalar şu sırayla ulaşır: önce P, sonra S, en son da yüzey dalgaları.",
         "once": {
           "soru": "Depremde önce hafif bir titreme, sonra güçlü sallanma olur. Güçlü sallanmayı en çok hangi dalgalar yapar?",
           "secenekler": [
             {
               "yazi": "Yüzey dalgaları",
-              "neden": "En son gelirler ama genlikleri en büyüktür; yeri hem yana hem aşağı yukarı sallarlar.",
+              "neden": "Yüzey dalgaları en son gelir, ama genlikleri en büyüktür. Yeri hem yana hem de aşağı yukarı sallarlar.",
               "dogru": true
             },
             {
               "yazi": "P dalgaları",
-              "neden": "P en önce gelir; ilk hafif titreme odur."
+              "neden": "P dalgası en önce gelir. İlk hafif titreme odur."
             },
             {
               "yazi": "S dalgaları",
@@ -9633,7 +9633,7 @@
       },
       {
         "h": "Merkez üssünü bulmak",
-        "p": "S dalgası P'nin gerisinde kalır; aradaki süre (Δt) uzaklıkla artar, her saniye ≈<b>8 km</b> eder. Üç istasyonun çemberleri merkez üssünde kesişir.",
+        "p": "S dalgası P dalgasının gerisinde kalır. Aradaki süre (Δt) uzaklıkla artar ve her saniye yaklaşık <b>8 km</b> eder. Üç istasyonun çizdiği çemberler merkez üssünde kesişir.",
         "svg": "<svg viewBox='0 0 320 200'><circle cx='110' cy='80' r='58' fill='var(--c1)' fill-opacity='0.06' stroke='var(--c1)' stroke-width='1.6'/><path d='M104 85 L110 74 L116 85 Z' fill='var(--c1)'/><circle cx='230' cy='95' r='72' fill='var(--c3)' fill-opacity='0.06' stroke='var(--c3)' stroke-width='1.6'/><path d='M224 100 L230 89 L236 100 Z' fill='var(--c3)'/><circle cx='175' cy='150' r='43' fill='var(--c5)' fill-opacity='0.06' stroke='var(--c5)' stroke-width='1.6'/><path d='M169 155 L175 144 L181 155 Z' fill='var(--c5)'/><line x1='222' y1='180' x2='165' y2='114' stroke='var(--c2)' stroke-width='1.2'/><circle cx='160' cy='110' r='6' fill='var(--c2)'/><text x='226' y='188' font-size='11.5' fill='var(--c2)' text-anchor='start' font-weight='700'>merkez üssü</text><rect x='6' y='168' width='120' height='26' rx='6' fill='var(--panel)'/><text x='66' y='186' font-size='12.5' fill='var(--acc)' text-anchor='middle' font-weight='700'>d ≈ 8 km × Δt</text></svg>",
         "etk": {
           "tur": "formul",
@@ -9681,13 +9681,13 @@
       },
       {
         "h": "Büyüklük ve şiddet",
-        "p": "<b>Büyüklük</b>, açığa çıkan enerjinin ölçüsüdür; +1 birim ≈<b>32 kat</b> enerji. <b>Şiddet</b> bir yerdeki sarsıntı ve hasardır, I-XII; uzaklığa ve zemine bağlıdır.",
+        "p": "<b>Büyüklük</b>, açığa çıkan enerjinin ölçüsüdür. Büyüklük 1 birim artınca enerji yaklaşık <b>32 kat</b> artar. <b>Şiddet</b> ise bir yerdeki sarsıntıyı ve hasarı gösterir. I-XII arasında ölçülür ve uzaklığa ve zemine bağlıdır.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='6' width='150' height='188' rx='6' fill='var(--c2)' fill-opacity='0.14' stroke='var(--c2)' stroke-width='1.5'/><rect x='164' y='6' width='150' height='188' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='81' y='30' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Büyüklük</text><text x='239' y='30' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Şiddet</text><text x='81' y='52' font-size='11' fill='var(--ink)' text-anchor='middle'>açığa çıkan enerji</text><text x='81' y='68' font-size='10.5' fill='var(--muted)' text-anchor='middle'>her deprem için tek değer</text><text x='239' y='52' font-size='11' fill='var(--ink)' text-anchor='middle'>bir yerdeki sarsıntı</text><text x='239' y='68' font-size='10.5' fill='var(--muted)' text-anchor='middle'>yere göre değişir</text><rect x='20' y='164' width='18' height='6' fill='var(--c2)' fill-opacity='0.25'/><text x='29' y='186' font-size='10.5' fill='var(--muted)' text-anchor='middle'>5</text><rect x='44' y='156' width='18' height='14' fill='var(--c2)' fill-opacity='0.37'/><text x='53' y='186' font-size='10.5' fill='var(--muted)' text-anchor='middle'>6</text><rect x='68' y='140' width='18' height='30' fill='var(--c2)' fill-opacity='0.49'/><text x='77' y='186' font-size='10.5' fill='var(--muted)' text-anchor='middle'>7</text><rect x='92' y='106' width='18' height='64' fill='var(--c2)' fill-opacity='0.61'/><text x='101' y='186' font-size='10.5' fill='var(--muted)' text-anchor='middle'>8</text><rect x='116' y='80' width='18' height='90' fill='var(--c2)' fill-opacity='0.73'/><text x='70' y='92' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>+1 → ×32 enerji</text><text x='239' y='100' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>I ··· XII</text><text x='239' y='124' font-size='10.5' fill='var(--muted)' text-anchor='middle'>hasara ve hissedilene</text><text x='239' y='138' font-size='10.5' fill='var(--muted)' text-anchor='middle'>göre ölçülür</text><text x='239' y='170' font-size='11' fill='var(--ink)' text-anchor='middle'>uzaklık ve zemin</text><text x='239' y='184' font-size='11' fill='var(--ink)' text-anchor='middle'>şiddeti değiştirir</text></svg>",
         "key": "7 büyüklüğünde deprem, 5'liğin yaklaşık 1000 katı enerji açığa çıkarır."
       },
       {
         "h": "Sismograf",
-        "p": "<b>Sismograf</b> eylemsizliğe dayanır: yaya asılı ağır kütle yerinde kalmaya çalışır, gövde yerle sallanır. Aradaki farkın kaydı <b>sismogramdır</b>.",
+        "p": "<b>Sismograf</b> eylemsizliğe dayanır. Yaya asılı ağır kütle yerinde kalmaya çalışır, gövde ise yerle birlikte sallanır. Aradaki farkın kaydına <b>sismogram</b> denir.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='40' y='140' width='240' height='14' fill='var(--c4)' fill-opacity='0.5'/><line x1='80' y1='140' x2='80' y2='40' stroke='var(--ink)' stroke-width='3'/><line x1='80' y1='40' x2='190' y2='40' stroke='var(--ink)' stroke-width='3'/><path d='M180 40 L180 52 l-6 4 l12 6 l-12 6 l12 6 l-6 4 L180 86' fill='none' stroke='var(--muted)' stroke-width='2'/><rect x='166' y='86' width='28' height='24' rx='3' fill='var(--c1)'/><line x1='194' y1='100' x2='228' y2='100' stroke='var(--ink)' stroke-width='1.5'/><rect x='228' y='70' width='50' height='66' fill='var(--panel)' stroke='var(--line-2)'/><path d='M232 100 L238 100 L241 92 L244 108 L247 88 L250 112 L253 96 L256 104 L260 100 L274 100' fill='none' stroke='var(--c2)' stroke-width='1.4'/><text x='150' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Kütle eylemsizlikle durur, gövde sarsılır</text><text x='150' y='124' font-size='11' fill='var(--c1)' text-anchor='end' font-weight='700'>kütle</text><text x='253' y='64' font-size='11' fill='var(--muted)' text-anchor='middle'>kayıt</text><text x='160' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>aradaki fark kaydedilir; bugünkü cihazlar elektronik</text></svg>",
         "key": "Kütle büyük, yay yumuşaksa cihaz daha duyarlıdır. AFAD ve Kandilli istasyonları Türkiye'yi sürekli izler.",
         "once": {
@@ -9695,7 +9695,7 @@
           "secenekler": [
             {
               "yazi": "Eylemsizlik",
-              "neden": "Ağır kütle yerinde kalmaya çalışır; yerle sallanan gövdeye göre fark kaydedilir.",
+              "neden": "Ağır kütle yerinde kalmaya çalışır. Yerle birlikte sallanan gövdeye göre aradaki fark kaydedilir.",
               "dogru": true
             },
             {
@@ -9704,56 +9704,56 @@
             },
             {
               "yazi": "Kaldırma kuvveti",
-              "neden": "Kaldırma kuvveti sıvı ve gazlarda olur; sismograf eylemsizliğe dayanır."
+              "neden": "Kaldırma kuvveti sıvılarda ve gazlarda olur. Sismograf ise eylemsizliğe dayanır."
             }
           ]
         }
       },
       {
         "h": "Doğal periyot ve rezonans",
-        "p": "Her binanın bir <b>doğal periyodu</b> vardır: kabaca kat sayısı × 0,1 s. Yerin sarsılma periyodu buna yaklaşırsa salınım büyür: <b>rezonans</b>.",
+        "p": "Her binanın bir <b>doğal periyodu</b> vardır ve bu periyot kabaca kat sayısının 0,1 s ile çarpımıdır. Yerin sarsılma periyodu buna yaklaşırsa salınım büyür. Buna <b>rezonans</b> denir.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='40' y1='170' x2='290' y2='170' stroke='var(--ink)' stroke-width='1.4'/><line x1='40' y1='170' x2='40' y2='24' stroke='var(--ink)' stroke-width='1.4'/><path d='M40 142.9 L41 142.8 L42 142.7 L43 142.6 L44 142.5 L45 142.3 L46 142.2 L47 142.0 L48 141.9 L49 141.7 L50 141.6 L51 141.4 L52 141.2 L53 141.0 L54 140.8 L55 140.6 L56 140.4 L57 140.2 L58 139.9 L59 139.7 L60 139.4 L61 139.2 L62 138.9 L63 138.6 L64 138.3 L65 138.0 L66 137.6 L67 137.3 L68 136.9 L69 136.6 L70 136.2 L71 135.8 L72 135.3 L73 134.9 L74 134.4 L75 134.0 L76 133.5 L77 132.9 L78 132.4 L79 131.8 L80 131.2 L81 130.6 L82 129.9 L83 129.2 L84 128.5 L85 127.7 L86 126.9 L87 126.0 L88 125.1 L89 124.2 L90 123.2 L91 122.2 L92 121.0 L93 119.9 L94 118.6 L95 117.3 L96 115.9 L97 114.4 L98 112.8 L99 111.1 L100 109.3 L101 107.4 L102 105.3 L103 103.1 L104 100.8 L105 98.2 L106 95.5 L107 92.6 L108 89.6 L109 86.2 L110 82.7 L111 79.0 L112 75.0 L113 70.8 L114 66.5 L115 62.1 L116 57.7 L117 53.3 L118 49.3 L119 45.6 L120 42.6 L121 40.5 L122 39.5 L123 39.5 L124 40.8 L125 43.2 L126 46.5 L127 50.6 L128 55.3 L129 60.3 L130 65.4 L131 70.5 L132 75.5 L133 80.3 L134 84.9 L135 89.2 L136 93.3 L137 97.1 L138 100.6 L139 103.9 L140 107.0 L141 109.9 L142 112.6 L143 115.0 L144 117.4 L145 119.5 L146 121.5 L147 123.4 L148 125.2 L149 126.9 L150 128.4 L151 129.9 L152 131.3 L153 132.6 L154 133.8 L155 135.0 L156 136.1 L157 137.1 L158 138.1 L159 139.1 L160 140.0 L161 140.8 L162 141.6 L163 142.4 L164 143.1 L165 143.9 L166 144.5 L167 145.2 L168 145.8 L169 146.4 L170 147.0 L171 147.5 L172 148.0 L173 148.5 L174 149.0 L175 149.5 L176 149.9 L177 150.4 L178 150.8 L179 151.2 L180 151.6 L181 151.9 L182 152.3 L183 152.7 L184 153.0 L185 153.3 L186 153.6 L187 154.0 L188 154.3 L189 154.5 L190 154.8 L191 155.1 L192 155.4 L193 155.6 L194 155.9 L195 156.1 L196 156.3 L197 156.6 L198 156.8 L199 157.0 L200 157.2 L201 157.4 L202 157.6 L203 157.8 L204 158.0 L205 158.2 L206 158.4 L207 158.5 L208 158.7 L209 158.9 L210 159.0 L211 159.2 L212 159.4 L213 159.5 L214 159.7 L215 159.8 L216 160.0 L217 160.1 L218 160.2 L219 160.4 L220 160.5 L221 160.6 L222 160.7 L223 160.9 L224 161.0 L225 161.1 L226 161.2 L227 161.3 L228 161.4 L229 161.5 L230 161.6 L231 161.7 L232 161.8 L233 161.9 L234 162.0 L235 162.1 L236 162.2 L237 162.3 L238 162.4 L239 162.5 L240 162.6 L241 162.7 L242 162.8 L243 162.8 L244 162.9 L245 163.0 L246 163.1 L247 163.1 L248 163.2 L249 163.3 L250 163.4 L251 163.4 L252 163.5 L253 163.6 L254 163.6 L255 163.7 L256 163.8 L257 163.8 L258 163.9 L259 164.0 L260 164.0 L261 164.1 L262 164.1 L263 164.2 L264 164.3 L265 164.3 L266 164.4 L267 164.4 L268 164.5 L269 164.5 L270 164.6 L271 164.6 L272 164.7 L273 164.7 L274 164.8 L275 164.8 L276 164.9 L277 164.9 L278 165.0 L279 165.0 L280 165.1' fill='none' stroke='var(--c2)' stroke-width='2.4'/><line x1='123' y1='170' x2='123' y2='30' stroke='var(--muted)' stroke-dasharray='3 3'/><text x='129.47826086956525' y='40' font-size='11.5' fill='var(--c2)' text-anchor='start' font-weight='700'>rezonans</text><text x='44' y='20' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>sallanma</text><text x='290' y='188' font-size='10.5' fill='var(--muted)' text-anchor='end'>sarsıntı periyodu / binanın periyodu</text><text x='123.47826086956523' y='188' font-size='10.5' fill='var(--muted)' text-anchor='middle'>1</text></svg>",
-        "key": "10 katlı bina yaklaşık 1 s. Rezonansta küçük ama doğru zamanlı itmeler büyük salınım yaratır; salıncak gibi."
+        "key": "10 katlı bir binanın periyodu yaklaşık 1 s'dir. Rezonansta küçük ama doğru zamanlı itmeler büyük bir salınım oluşturur. Salıncakta da durum böyledir."
       },
       {
         "h": "Zemin ve bina yüksekliği",
-        "p": "Gevşek, sulu zeminde sarsıntının genliği büyür, periyodu uzar: <b>zemin büyütmesi</b>. Zemin sıvı gibi de davranabilir: <b>sıvılaşma</b>; 1999'da Adapazarı'nda görüldü.",
+        "p": "Gevşek ve sulu zeminde sarsıntının genliği büyür ve periyodu uzar. Buna <b>zemin büyütmesi</b> denir. Zemin sıvı gibi de davranabilir ve buna <b>sıvılaşma</b> denir. Sıvılaşma 1999'da Adapazarı'nda görüldü.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='6' width='150' height='188' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><rect x='164' y='6' width='150' height='188' rx='6' fill='var(--c2)' fill-opacity='0.14' stroke='var(--c2)' stroke-width='1.5'/><text x='81' y='28' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Sağlam kaya</text><text x='239' y='28' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Gevşek, sulu zemin</text><path d='M20 120 Q35 112 50 120 T80 120 T110 120 T140 120' fill='none' stroke='var(--c3)' stroke-width='2'/><path d='M178 120 Q193 92 208 120 T238 120 T268 120 T298 120' fill='none' stroke='var(--c2)' stroke-width='2'/><text x='81' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>kısa periyotlu,</text><text x='81' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>küçük sallanma</text><text x='239' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>dalga yavaşlar, büyür;</text><text x='239' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>uzun periyot: yüksek</text><text x='239' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>binalar tehlikede</text><text x='81' y='60' font-size='10.5' fill='var(--muted)' text-anchor='middle'>zemin büyütmesi yok</text><text x='239' y='60' font-size='10.5' fill='var(--muted)' text-anchor='middle'>zemin büyütmesi var</text></svg>",
         "key": "Uzun periyot yüksek binaları zorlar. Aynı depremde iki komşu mahallenin hasarı zemin yüzünden çok farklı olabilir."
       },
       {
         "h": "Depreme dayanıklı yapı",
-        "p": "Dayanıklı yapı sağlam zemin, iyi beton ve doğru donatı ister. <b>Sismik izolatör</b> binayı zeminden ayırıp periyodunu uzatır; gökdelende <b>ayarlı kütle</b> salınımı söndürür.",
+        "p": "Dayanıklı bir yapı için sağlam zemin, iyi beton ve doğru donatı gerekir. <b>Sismik izolatör</b> binayı zeminden ayırır ve periyodunu uzatır. Gökdelenlerde ise <b>ayarlı kütle</b> salınımı söndürür.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='6' width='150' height='188' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><rect x='164' y='6' width='150' height='188' rx='6' fill='var(--c5)' fill-opacity='0.14' stroke='var(--c5)' stroke-width='1.5'/><text x='81' y='28' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Sismik izolatör</text><text x='239' y='28' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Ayarlı kütle</text><rect x='36' y='54' width='90' height='84' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><rect x='40' y='140' width='14' height='12' fill='var(--ink)' fill-opacity='0.55'/><rect x='64' y='140' width='14' height='12' fill='var(--ink)' fill-opacity='0.55'/><rect x='88' y='140' width='14' height='12' fill='var(--ink)' fill-opacity='0.55'/><rect x='112' y='140' width='14' height='12' fill='var(--ink)' fill-opacity='0.55'/><rect x='30' y='152' width='102' height='8' fill='var(--c4)' fill-opacity='0.6'/><text x='81' y='178' font-size='10.5' fill='var(--ink)' text-anchor='middle'>kauçuk-çelik yastık</text><text x='81' y='191' font-size='10.5' fill='var(--muted)' text-anchor='middle'>periyodu uzatır</text><path d='M216 160 L224 46 L254 46 L262 160 Z' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)'/><line x1='239' y1='50' x2='239' y2='70' stroke='var(--ink)'/><circle cx='239' cy='78' r='9' fill='var(--c5)'/><text x='239' y='178' font-size='10.5' fill='var(--ink)' text-anchor='middle'>tepede sarkaç kütle</text><text x='239' y='191' font-size='10.5' fill='var(--muted)' text-anchor='middle'>salınımı söndürür</text></svg>",
         "key": "Sabiha Gökçen terminali izolatörlüdür. Amaç binanın hiç sallanmaması değil, can kaybı olmadan ayakta kalmasıdır."
       },
       {
         "h": "Deprem anında",
-        "p": "Sarsıntıda <b>çök, kapan, tutun</b>: çömel, başını ve enseni koru, sağlam eşyaya tutun. Pencere, raf ve asansörden uzak dur; merdivene koşma.",
+        "p": "Sarsıntı sırasında <b>çök, kapan ve tutun</b>. Yani çömel, başını ve enseni koru ve sağlam bir eşyaya tutun. Pencereden, raftan ve asansörden uzak dur. Merdivene koşma.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='20' width='100' height='110' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='56' y='48' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>Çök</text><rect x='110' y='20' width='100' height='110' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='160' y='48' font-size='15' fill='var(--c3)' text-anchor='middle' font-weight='700'>Kapan</text><rect x='214' y='20' width='100' height='110' rx='6' fill='var(--c5)' fill-opacity='0.14' stroke='var(--c5)' stroke-width='1.5'/><text x='264' y='48' font-size='15' fill='var(--c5)' text-anchor='middle' font-weight='700'>Tutun</text><text x='56' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>dizlerinin</text><text x='56' y='96' font-size='11' fill='var(--ink)' text-anchor='middle'>üstüne</text><text x='160' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>başını ve</text><text x='160' y='96' font-size='11' fill='var(--ink)' text-anchor='middle'>enseni koru</text><text x='264' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>sağlam bir</text><text x='264' y='96' font-size='11' fill='var(--ink)' text-anchor='middle'>eşyaya tutun</text><rect x='6' y='140' width='308' height='54' rx='8' fill='var(--panel)'/><text x='160' y='162' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>pencere, raf ve asansörden uzak dur</text><text x='160' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>önceden: deprem çantası, eşyaları sabitle</text></svg>",
-        "key": "Önceden dolapları duvara sabitle, deprem çantası hazırla, buluşma yeri belirle. Hazırlık tek gerçek korunmadır.",
+        "key": "Dolapları önceden duvara sabitle, bir deprem çantası hazırla ve bir buluşma yeri belirle. Tek gerçek korunma yolu hazırlıktır.",
         "once": {
           "soru": "Evdesin ve sarsıntı başladı. İlk ne yaparsın?",
           "secenekler": [
             {
               "yazi": "Çök, kapan, tutun",
-              "neden": "Çömelip başını korur, sağlam bir eşyaya tutunursun; düşen eşyadan korunursun.",
+              "neden": "Çömelip başını korur ve sağlam bir eşyaya tutunursun. Böylece düşen eşyalardan korunursun.",
               "dogru": true
             },
             {
               "yazi": "Merdivenden koş",
-              "neden": "Sarsıntıda merdivende düşebilirsin; merdiven en çok zarar gören yerlerdendir."
+              "neden": "Sarsıntıda merdivende düşebilirsin. Merdiven, en çok zarar gören yerlerden biridir."
             },
             {
               "yazi": "Pencereye git",
-              "neden": "Camlar kırılabilir; pencereden uzak dur."
+              "neden": "Camlar kırılabilir. Bu yüzden pencereden uzak dur."
             }
           ]
         }
       },
       {
         "h": "Özet",
-        "p": "• Deprem, fay gerilmesinin ani boşalmasıdır.<br>• Önce P, sonra S, sonra yüzey dalgaları gelir; S sıvıdan geçmez.<br>• Uzaklık ≈ 8 km × Δt; üç istasyon merkez üssünü verir.<br>• +1 büyüklük ≈ 32 kat enerji.<br>• Sarsıntı ile binanın periyodu yakınsa rezonans olur.",
+        "p": "• Deprem, fay gerilmesinin aniden boşalmasıdır.<br>• Önce P, sonra S, sonra yüzey dalgaları gelir.<br>• S dalgası sıvıdan geçmez.<br>• Uzaklık yaklaşık 8 km × Δt olur.<br>• Büyüklük 1 artınca enerji yaklaşık 32 kat artar.<br>• Periyotlar yakınsa rezonans olur.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='40' y='8' width='240' height='32' rx='16' fill='var(--c4)' fill-opacity='0.16' stroke='var(--c4)' stroke-width='1.5'/><text x='160' y='29' font-size='12.5' fill='var(--c4)' text-anchor='middle' font-weight='700'>fay kırılır</text><rect x='40' y='46' width='240' height='32' rx='16' fill='var(--c1)' fill-opacity='0.16' stroke='var(--c1)' stroke-width='1.5'/><text x='160' y='67' font-size='12.5' fill='var(--c1)' text-anchor='middle' font-weight='700'>P, S, yüzey</text><rect x='40' y='84' width='240' height='32' rx='16' fill='var(--c3)' fill-opacity='0.16' stroke='var(--c3)' stroke-width='1.5'/><text x='160' y='105' font-size='12.5' fill='var(--c3)' text-anchor='middle' font-weight='700'>d ≈ 8·Δt</text><rect x='40' y='122' width='240' height='32' rx='16' fill='var(--c2)' fill-opacity='0.16' stroke='var(--c2)' stroke-width='1.5'/><text x='160' y='143' font-size='12.5' fill='var(--c2)' text-anchor='middle' font-weight='700'>+1 → ×32</text><rect x='40' y='160' width='240' height='32' rx='16' fill='var(--c5)' fill-opacity='0.16' stroke='var(--c5)' stroke-width='1.5'/><text x='160' y='181' font-size='12.5' fill='var(--c5)' text-anchor='middle' font-weight='700'>rezonans</text></svg>"
       }
     ],
@@ -9766,7 +9766,7 @@
           "S dalgası",
           "Yüzey dalgaları"
         ],
-        "e": "P en hızlıdır (≈ 6 km/s), S onu izler (≈ 3,5 km/s). Yüzey dalgaları en yavaştır ama genlikleri en büyüktür."
+        "e": "P dalgası en hızlı dalgadır (yaklaşık 6 km/s). S dalgası onu izler (yaklaşık 3,5 km/s). Yüzey dalgaları en yavaş dalgalardır, ama genlikleri en büyüktür."
       },
       {
         "tur": "sayi",
@@ -9774,7 +9774,7 @@
         "cevap": 96,
         "tolerans": 6,
         "birim": "km",
-        "e": "d ≈ 8 km × 12 = 96 km. Kesin yeri bulmak için en az üç istasyon gerekir."
+        "e": "Uzaklık yaklaşık 8 km × 12 = 96 km olur. Depremin kesin yerini bulmak için en az üç istasyon gerekir."
       },
       {
         "tur": "eslestir",
@@ -9797,7 +9797,7 @@
             "Bir yerdeki sarsıntı ve hasar"
           ]
         ],
-        "e": "Büyüklük her deprem için tektir; şiddet yerden yere değişir, merkez üssüne yakın ve gevşek zeminde büyüktür."
+        "e": "Her depremin tek bir büyüklüğü vardır. Şiddet ise yerden yere değişir. Merkez üssüne yakın yerlerde ve gevşek zeminde şiddet büyüktür."
       },
       {
         "q": "Bir depremde yerin sarsılma periyodu yaklaşık 1 s. Aynı sokaktaki hangi bina rezonansa en yakındır?",
@@ -9808,12 +9808,12 @@
           "Hepsi eşit sallanır"
         ],
         "a": 1,
-        "e": "Doğal periyot ≈ 0,1 × kat sayısı: 10 katlı bina ≈ 1 s. Sarsıntı periyodu buna eşit olduğu için en çok o sallanır.",
+        "e": "Doğal periyot yaklaşık 0,1 × kat sayısı kadardır. Buna göre 10 katlı binanın periyodu yaklaşık 1 s olur. Sarsıntının periyodu buna eşit olduğu için en çok bu bina sallanır.",
         "y": [
-          "3 katlının periyodu ≈ 0,3 s; 1 s'lik sarsıntıdan çok uzak.",
+          "3 katlı binanın periyodu yaklaşık 0,3 s'dir. Bu değer 1 s'lik sarsıntıdan çok uzaktır.",
           "",
-          "20 katlının periyodu ≈ 2 s; bu sarsıntının iki katı.",
-          "Her binanın doğal periyodu farklıdır; sarsıntıya tepkileri de farklıdır."
+          "20 katlı binanın periyodu yaklaşık 2 s'dir. Bu değer sarsıntının periyodunun iki katıdır.",
+          "Her binanın doğal periyodu farklıdır. Bu yüzden binaların sarsıntıya tepkileri de farklıdır."
         ]
       }
     ]
@@ -9824,7 +9824,7 @@
     "cards": [
       {
         "h": "İletken, yalıtkan, yarı iletken",
-        "p": "Metalde bazı elektronlar serbesttir, akımı kolay taşır; yalıtkanda serbest elektron yoktur. <b>Yarı iletkende</b> (silisyum, germanyum) azdır ve sayısı koşullarla değişir.",
+        "p": "Metalde bazı elektronlar serbesttir ve akımı kolayca taşır. Yalıtkanda ise serbest elektron yoktur. Silisyum ve germanyum gibi <b>yarı iletkenlerde</b> serbest elektron azdır ve sayısı koşullara göre değişir.",
         "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--muted)' text-anchor='middle'>Elektronu serbest bırakmak için gereken enerji</text><rect x='20' y='112' width='80' height='26' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><rect x='20' y='128' width='80' height='26' fill='var(--c2)' fill-opacity='0.16' stroke='var(--c2)'/><text x='60' y='104' font-size='10.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>bantlar örtüşür</text><text x='60' y='178' font-size='12.5' fill='var(--c4)' text-anchor='middle' font-weight='700'>metal</text><rect x='120' y='84' width='80' height='26' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><rect x='120' y='128' width='80' height='26' fill='var(--c2)' fill-opacity='0.16' stroke='var(--c2)'/><line x1='160' y1='112' x2='160' y2='126' stroke='var(--ink)' stroke-dasharray='3 3'/><text x='164' y='123' font-size='10.5' fill='var(--ink)' text-anchor='start' font-weight='700'>≈ 1,1 eV</text><text x='160' y='178' font-size='12.5' fill='var(--c5)' text-anchor='middle' font-weight='700'>silisyum</text><rect x='220' y='34' width='80' height='26' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><rect x='220' y='128' width='80' height='26' fill='var(--c2)' fill-opacity='0.16' stroke='var(--c2)'/><line x1='260' y1='62' x2='260' y2='126' stroke='var(--ink)' stroke-dasharray='3 3'/><text x='264' y='98' font-size='10.5' fill='var(--ink)' text-anchor='start' font-weight='700'>≈ 5,5 eV</text><text x='260' y='178' font-size='12.5' fill='var(--muted)' text-anchor='middle' font-weight='700'>elmas</text><text x='160' y='196' font-size='10.5' fill='var(--muted)' text-anchor='middle'>üst bant: serbest elektron · alt bant: bağlı elektron</text></svg>",
         "key": "Yarı iletkeni değerli kılan, iletkenliğinin bizim elimizde olmasıdır.",
         "once": {
@@ -9832,7 +9832,7 @@
           "secenekler": [
             {
               "yazi": "Koşula göre az ya da çok",
-              "neden": "Silisyum yarı iletkendir; sıcaklık, ışık ve katkıyla iletkenliği değişir.",
+              "neden": "Silisyum bir yarı iletkendir. İletkenliği sıcaklık, ışık ve katkıyla değişir.",
               "dogru": true
             },
             {
@@ -9841,7 +9841,7 @@
             },
             {
               "yazi": "Hiç iletmez",
-              "neden": "Oda sıcaklığında az sayıda serbest elektronu vardır; biraz iletir."
+              "neden": "Silisyumun oda sıcaklığında az sayıda serbest elektronu vardır. Bu yüzden biraz iletir."
             }
           ]
         }
@@ -9850,7 +9850,7 @@
         "h": "Isı ve ışıkla değişen direnç",
         "p": "Metal ısınınca atomlar çok titreşir, direnç <b>artar</b>. Yarı iletken ısınınca ya da ışık alınca elektron serbest kalır, direnç <b>azalır</b>.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='40' y1='170' x2='300' y2='170' stroke='var(--ink)'/><line x1='40' y1='30' x2='40' y2='170' stroke='var(--ink)'/><path d='M50 130 L290 60' fill='none' stroke='var(--c4)' stroke-width='3'/><path d='M50 40 C 90 110, 150 140, 290 152' fill='none' stroke='var(--c5)' stroke-width='3'/><text x='290' y='52' font-size='12' fill='var(--c4)' text-anchor='end' font-weight='700'>metal: direnç artar</text><text x='290' y='122' font-size='12' fill='var(--c5)' text-anchor='end' font-weight='700'>yarı iletken: azalır</text><text x='170' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>sıcaklık →</text><text x='34' y='100' font-size='11' fill='var(--muted)' text-anchor='end'>direnç</text></svg>",
-        "key": "Termistör sıcaklığı, fotodirenç ışığı böyle algılar; sokak lambası hava kararınca kendiliğinden yanar."
+        "key": "Termistör sıcaklığı, fotodirenç ise ışığı böyle algılar. Sokak lambası da hava kararınca bu sayede kendiliğinden yanar."
       },
       {
         "h": "Katkılama: n-tipi",
@@ -9860,9 +9860,9 @@
       },
       {
         "h": "p-tipi ve boşluk",
-        "p": "Az <b>bor</b> (3 elektron) katılınca bir bağda elektron eksik kalır: <b>boşluk</b>. Boşluk elektronların tersine ilerler, pozitif yük gibidir. Bu malzeme <b>p-tipidir</b>.",
+        "p": "Silisyuma biraz <b>bor</b> katılırsa bir bağda bir elektron eksik kalır, çünkü borun 3 elektronu vardır. Bu eksiğe <b>boşluk</b> denir. Boşluk elektronların tersine ilerler ve pozitif yük gibi davranır. Bu malzemeye <b>p-tipi</b> denir.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='yari-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c1)'/></marker></defs><line x1='70' y1='50' x2='250' y2='50' stroke='var(--line-2)' stroke-width='2'/><line x1='70' y1='100' x2='250' y2='100' stroke='var(--line-2)' stroke-width='2'/><line x1='70' y1='150' x2='250' y2='150' stroke='var(--line-2)' stroke-width='2'/><line x1='100' y1='22' x2='100' y2='178' stroke='var(--line-2)' stroke-width='2'/><line x1='160' y1='22' x2='160' y2='178' stroke='var(--line-2)' stroke-width='2'/><line x1='220' y1='22' x2='220' y2='178' stroke='var(--line-2)' stroke-width='2'/><circle cx='100' cy='50' r='15' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.4'/><text x='100' y='54' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>Si</text><circle cx='100' cy='100' r='15' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.4'/><text x='100' y='104' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>Si</text><circle cx='100' cy='150' r='15' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.4'/><text x='100' y='154' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>Si</text><circle cx='160' cy='50' r='15' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.4'/><text x='160' y='54' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>Si</text><circle cx='160' cy='100' r='15' fill='var(--panel)' stroke='var(--c2)' stroke-width='2.4'/><text x='160' y='104' font-size='11.5' fill='var(--c2)' text-anchor='middle' font-weight='700'>B</text><circle cx='160' cy='150' r='15' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.4'/><text x='160' y='154' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>Si</text><circle cx='220' cy='50' r='15' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.4'/><text x='220' y='54' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>Si</text><circle cx='220' cy='100' r='15' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.4'/><text x='220' y='104' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>Si</text><circle cx='220' cy='150' r='15' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.4'/><text x='220' y='154' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>Si</text><circle cx='130' cy='100' r='7' fill='var(--panel)' stroke='var(--c2)' stroke-width='2.2'/><text x='130' y='82' font-size='11.5' fill='var(--c2)' text-anchor='middle' font-weight='700'>boşluk</text><path d='M84 112 Q107 128 124 108' fill='none' stroke='var(--c1)' stroke-width='1.8' marker-end='url(#yari-4)'/><text x='4' y='128' font-size='10.5' fill='var(--c1)' text-anchor='start' font-weight='700'>komşu elektron atlar</text><text x='14' y='20' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='700'>p-tipi</text><text x='14' y='194' font-size='11' fill='var(--muted)' text-anchor='start'>B: 3 değerlik elektron</text></svg>",
-        "key": "Katkılı kristal yine yüksüzdür; n ve p, akımı taşıyan yükün işaretini anlatır."
+        "key": "Katkılı kristal yine yüksüzdür. n ve p harfleri, akımı taşıyan yükün işaretini anlatır."
       },
       {
         "h": "p-n eklemi: diyot",
@@ -9911,15 +9911,15 @@
       },
       {
         "h": "Güneş pili",
-        "p": "<b>Güneş pili</b> geniş bir p-n eklemidir. Işık elektron-boşluk çifti oluşturur; eklemin alanı onları ayırır ve devrede doğru akım geçer.",
+        "p": "<b>Güneş pili</b>, geniş bir p-n eklemidir. Işık elektron-boşluk çiftleri oluşturur. Eklemin elektrik alanı onları birbirinden ayırır ve devrede doğru akım geçer.",
         "svg": "<svg viewBox='0 0 320 200'><defs><marker id='yari-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c4)'/></marker></defs><circle cx='34' cy='34' r='16' fill='var(--c4)' fill-opacity='0.7'/><path d='M56 44 L120 92' stroke='var(--c4)' stroke-width='2' marker-end='url(#yari-7)'/><rect x='40' y='96' width='200' height='30' fill='var(--c1)' fill-opacity='0.16' stroke='var(--c1)'/><rect x='40' y='126' width='200' height='44' fill='var(--c2)' fill-opacity='0.14' stroke='var(--c2)'/><text x='48' y='116' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>n</text><text x='48' y='154' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>p</text><circle cx='130' cy='110' r='5' fill='var(--c1)'/><circle cx='130' cy='150' r='6' fill='none' stroke='var(--c2)' stroke-width='2'/><text x='140' y='114' font-size='10.5' fill='var(--c1)' text-anchor='start' font-weight='700'>elektron</text><text x='140' y='154' font-size='10.5' fill='var(--c2)' text-anchor='start' font-weight='700'>boşluk</text><path d='M240 104 H290 V82' fill='none' stroke='var(--ink)' stroke-width='2'/><path d='M240 160 H290 V114' fill='none' stroke='var(--ink)' stroke-width='2'/><circle cx='290' cy='98' r='15' fill='var(--c4)' fill-opacity='0.55' stroke='var(--ink)' stroke-width='1.5'/><text x='160' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>ışık → elektron-boşluk çifti → akım</text></svg>",
-        "key": "Silisyum panellerin verimi yaklaşık %20-23'tür; kalan ışık ısıya döner ya da yansır."
+        "key": "Silisyum panellerin verimi yaklaşık %20-23'tür. Kalan ışık ısıya dönüşür ya da yansır."
       },
       {
         "h": "Transistör",
-        "p": "<b>Transistör</b> küçük bir sinyalle büyük akımı yönetir: <b>yükseltir</b> ya da <b>anahtar</b> gibi açıp kapar. Klasik transistörde sinyal <b>taban akımı</b>, çiplerdekinde (MOSFET) <b>kapı gerilimidir</b>.",
+        "p": "<b>Transistör</b>, küçük bir sinyalle büyük bir akımı yönetir. Akımı <b>yükseltebilir</b> ya da bir <b>anahtar</b> gibi açıp kapatabilir. Klasik transistörde sinyal <b>taban akımıdır</b>. Çiplerdeki transistörde (MOSFET) ise sinyal <b>kapı gerilimidir</b>.",
         "svg": "<svg viewBox='0 0 320 200'><circle cx='90' cy='96' r='34' fill='none' stroke='var(--ink)' stroke-width='1.6'/><line x1='80' y1='76' x2='80' y2='116' stroke='var(--ink)' stroke-width='3.5'/><line x1='80' y1='86' x2='104' y2='66' stroke='var(--ink)' stroke-width='2'/><line x1='80' y1='106' x2='104' y2='126' stroke='var(--ink)' stroke-width='2'/><line x1='20' y1='96' x2='80' y2='96' stroke='var(--c5)' stroke-width='2'/><path d='M104 66 V30' stroke='var(--c1)' stroke-width='8'/><path d='M104 126 V170' stroke='var(--c1)' stroke-width='8'/><text x='4' y='114' font-size='10.5' fill='var(--c5)' text-anchor='start' font-weight='700'>küçük akım</text><text x='114' y='40' font-size='11' fill='var(--c1)' text-anchor='start' font-weight='700'>büyük akım</text><rect x='180' y='30' width='126' height='64' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='243' y='50' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>yükselteç</text><path d='M192 76 q6 -6 12 0 t12 0' fill='none' stroke='var(--c3)' stroke-width='1.5'/><path d='M232 76 l8 0' stroke='var(--muted)'/><path d='M246 76 q8 -14 16 0 t16 0 t16 0' fill='none' stroke='var(--c3)' stroke-width='2'/><rect x='180' y='106' width='126' height='64' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='243' y='126' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>anahtar</text><text x='243' y='154' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>kapalı 0 · açık 1</text></svg>",
-        "key": "Bilgisayardaki 0 ve 1 bu açık-kapalı durumlardır. Telefon işlemcisindeki on milyarlarca transistör, kapı gerilimiyle sürülen MOSFET'tir."
+        "key": "Bilgisayardaki 0 ve 1, bu açık ve kapalı durumlardır. Telefon işlemcisindeki on milyarlarca transistör, kapı gerilimiyle sürülen MOSFET'lerdir."
       },
       {
         "h": "Yarı iletkenler her yerde",
@@ -9947,13 +9947,13 @@
       },
       {
         "h": "Süper iletkenlik",
-        "p": "1911'de cıva 4,2 K'nin altına soğutulunca direnci birden <b>sıfır</b> oldu: <b>süper iletkenlik</b>. Bu sınıra <b>kritik sıcaklık</b> denir.",
+        "p": "1911'de cıva 4,2 K'nin altına soğutulunca direnci birden <b>sıfır</b> oldu. Buna <b>süper iletkenlik</b> denir. Bu sınır sıcaklığa da <b>kritik sıcaklık</b> denir.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='40' y1='160' x2='300' y2='160' stroke='var(--ink)'/><line x1='40' y1='30' x2='40' y2='160' stroke='var(--ink)'/><path d='M300 50 L130 96 L130 160 L44 160' fill='none' stroke='var(--c2)' stroke-width='3'/><path d='M300 60 L50 124' fill='none' stroke='var(--c4)' stroke-width='2.4' stroke-dasharray='6 4'/><text x='136' y='186' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>4,2 K</text><line x1='130' y1='160' x2='130' y2='172' stroke='var(--c2)'/><line x1='56' y1='40' x2='80' y2='40' stroke='var(--c2)' stroke-width='3'/><line x1='56' y1='58' x2='80' y2='58' stroke='var(--c4)' stroke-width='2.4' stroke-dasharray='6 4'/><text x='86' y='44' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>cıva: 4,2 K'de direnç tam sıfır</text><text x='86' y='62' font-size='11' fill='var(--c4)' text-anchor='start' font-weight='700'>sıradan metal: sıfır olmaz</text><text x='300' y='186' font-size='11' fill='var(--muted)' text-anchor='end'>sıcaklık →</text><text x='160' y='20' font-size='12' fill='var(--muted)' text-anchor='middle'>Onnes, 1911: kritik sıcaklık</text></svg>",
-        "key": "Direnç tam sıfırdır, ama sınırlar içinde: sıcaklık kritik sıcaklığı, manyetik alan <b>kritik alanı</b>, akım <b>kritik akımı</b> aşarsa süper iletkenlik bozulur."
+        "key": "Direnç tam olarak sıfırdır, ama belli sınırlar içinde. Sıcaklık kritik sıcaklığı, manyetik alan <b>kritik alanı</b> ya da akım <b>kritik akımı</b> aşarsa süper iletkenlik bozulur."
       },
       {
         "h": "Meissner etkisi",
-        "p": "Süper iletken içindeki manyetik alanı dışarı iter: <b>Meissner etkisi</b>. Bu yüzden üstüne indirilen mıknatıs havada asılı kalır.",
+        "p": "Süper iletken, içindeki manyetik alanı dışarı iter. Buna <b>Meissner etkisi</b> denir. Bu yüzden üstüne indirilen bir mıknatıs havada asılı kalır.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='48' y1='34' x2='48' y2='166' stroke='var(--c5)' stroke-width='1.4' stroke-dasharray='4 3'/><line x1='66' y1='34' x2='66' y2='166' stroke='var(--c5)' stroke-width='1.4' stroke-dasharray='4 3'/><line x1='84' y1='34' x2='84' y2='166' stroke='var(--c5)' stroke-width='1.4' stroke-dasharray='4 3'/><line x1='102' y1='34' x2='102' y2='166' stroke='var(--c5)' stroke-width='1.4' stroke-dasharray='4 3'/><line x1='120' y1='34' x2='120' y2='166' stroke='var(--c5)' stroke-width='1.4' stroke-dasharray='4 3'/><rect x='44' y='86' width='80' height='28' rx='4' fill='var(--muted)' fill-opacity='0.35'/><text x='84' y='186' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>normal: alan içinden geçer</text><path d='M200 34 C 200 76, 168.4 76, 168.4 100 C 168.4 124, 200 124, 200 166' fill='none' stroke='var(--c5)' stroke-width='1.4' stroke-dasharray='4 3'/><path d='M218 34 C 218 76, 179.2 76, 179.2 100 C 179.2 124, 218 124, 218 166' fill='none' stroke='var(--c5)' stroke-width='1.4' stroke-dasharray='4 3'/><path d='M236 34 C 236 76, 282.0 76, 282.0 100 C 282.0 124, 236 124, 236 166' fill='none' stroke='var(--c5)' stroke-width='1.4' stroke-dasharray='4 3'/><path d='M254 34 C 254 76, 292.8 76, 292.8 100 C 292.8 124, 254 124, 254 166' fill='none' stroke='var(--c5)' stroke-width='1.4' stroke-dasharray='4 3'/><path d='M272 34 C 272 76, 303.6 76, 303.6 100 C 303.6 124, 272 124, 272 166' fill='none' stroke='var(--c5)' stroke-width='1.4' stroke-dasharray='4 3'/><rect x='196' y='86' width='80' height='28' rx='4' fill='var(--c3)' fill-opacity='0.45'/><text x='236' y='186' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>süper iletken: alanı dışarı iter</text><text x='160' y='20' font-size='12.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>Meissner etkisi</text></svg>",
         "key": "Havada duran mıknatıs, süper iletkenliğin en bilinen gösterisidir.",
         "once": {
@@ -9961,12 +9961,12 @@
           "secenekler": [
             {
               "yazi": "Sıfır direnç ve alanı itmesi",
-              "neden": "İkisi birlikte gerekir; yalnız düşük direnç başka nedenle de görülebilir.",
+              "neden": "İki özellik birlikte gerekir. Yalnızca düşük direnç başka nedenlerle de görülebilir.",
               "dogru": true
             },
             {
               "yazi": "Yalnız sıfır direnç",
-              "neden": "Ölçüm hatası da sıfıra yakın direnç gösterebilir; alanı itme de aranır."
+              "neden": "Bir ölçüm hatası da sıfıra yakın direnç gösterebilir. Bu yüzden alanı itme özelliği de aranır."
             },
             {
               "yazi": "Yalnız çok soğuk olması",
@@ -9979,7 +9979,7 @@
         "h": "Yüksek sıcaklık süper iletkenleri",
         "p": "1987'de bulunan <b>YBCO</b> seramiği 92 K'nin altında süper iletkendir. Bu, ucuz sıvı azotla (77 K) soğutmaya yeter.",
         "svg": "<svg viewBox='0 0 320 200'><line x1='40' y1='100' x2='300' y2='100' stroke='var(--ink)' stroke-width='2'/><circle cx='44' cy='100' r='5' fill='var(--c2)'/><line x1='44' y1='95' x2='44' y2='70' stroke='var(--c2)'/><text x='43.64' y='62' font-size='11.5' fill='var(--c2)' text-anchor='start' font-weight='700'>cıva 4,2 K</text><text x='43.64' y='46' font-size='10.5' fill='var(--muted)' text-anchor='start'>1911</text><circle cx='107' cy='100' r='5' fill='var(--c1)'/><line x1='107' y1='105' x2='107' y2='130' stroke='var(--c1)'/><text x='106.73333333333333' y='144' font-size='11.5' fill='var(--c1)' text-anchor='middle' font-weight='700'>sıvı azot 77 K</text><text x='106.73333333333333' y='160' font-size='10.5' fill='var(--muted)' text-anchor='middle'>ucuz soğutucu</text><circle cx='120' cy='100' r='5' fill='var(--c3)'/><line x1='120' y1='95' x2='120' y2='70' stroke='var(--c3)'/><text x='119.73333333333333' y='62' font-size='11.5' fill='var(--c3)' text-anchor='start' font-weight='700'>YBCO ≈ 92 K</text><text x='119.73333333333333' y='46' font-size='10.5' fill='var(--muted)' text-anchor='start'>1987</text><circle cx='294' cy='100' r='5' fill='var(--muted)'/><line x1='294' y1='105' x2='294' y2='130' stroke='var(--muted)'/><text x='293.93333333333334' y='144' font-size='11.5' fill='var(--muted)' text-anchor='end' font-weight='700'>oda 293 K</text><text x='293.93333333333334' y='160' font-size='10.5' fill='var(--muted)' text-anchor='end'>henüz yok</text><text x='160' y='192' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>kritik sıcaklık 77 K'yi geçince sıvı azot yeter</text></svg>",
-        "key": "Oda sıcaklığında çalışan süper iletken hâlâ yok; en büyük engel soğutmanın maliyetidir."
+        "key": "Oda sıcaklığında çalışan bir süper iletken hâlâ yoktur. En büyük engel, soğutmanın maliyetidir."
       },
       {
         "h": "Süper iletkenler ne işe yarar?",
@@ -9991,23 +9991,23 @@
           "secenekler": [
             {
               "yazi": "Süper iletken olsunlar diye",
-              "neden": "Soğuk bobinin direnci sıfırdır; ısınmadan çok büyük akım taşır, güçlü alan üretir.",
+              "neden": "Soğuk bobinin direnci sıfırdır. Bobin ısınmadan çok büyük bir akım taşır ve güçlü bir alan üretir.",
               "dogru": true
             },
             {
               "yazi": "Mıknatıs erimesin diye",
-              "neden": "Bobin erimeye yakın ısınmaz; soğutmanın amacı direnci sıfırlamaktır."
+              "neden": "Bobin erimeye yakın ısınmaz. Soğutmanın amacı direnci sıfırlamaktır."
             },
             {
               "yazi": "Görüntü netleşsin diye",
-              "neden": "Görüntüyü güçlü manyetik alan sağlar; o alanı süper iletken bobin üretir."
+              "neden": "Görüntüyü güçlü bir manyetik alan sağlar. Bu alanı da süper iletken bobin üretir."
             }
           ]
         }
       },
       {
         "h": "Özet",
-        "p": "• Yarı iletkenin iletkenliği sıcaklık, ışık ve katkıyla değişir.<br>• n-tipinde elektron, p-tipinde boşluk akım taşır.<br>• Diyot tek yönlü kapıdır; LED ışık verir, güneş pili akım üretir.<br>• Transistör küçük sinyalle büyük akımı yönetir.<br>• Süper iletken kritik sınırların altında sıfır dirençlidir, alanı iter.",
+        "p": "• Yarı iletkenin iletkenliği sıcaklık, ışık ve katkıyla değişir.<br>• n-tipinde elektron, p-tipinde boşluk akım taşır.<br>• Diyot akımı tek yönde geçirir.<br>• LED ışık verir, güneş pili akım üretir.<br>• Transistör büyük akımı yönetir.<br>• Süper iletkenin direnci sıfırdır.",
         "svg": "<svg viewBox='0 0 320 200'><rect x='40' y='8' width='240' height='32' rx='16' fill='var(--c4)' fill-opacity='0.16' stroke='var(--c4)' stroke-width='1.5'/><text x='160' y='29' font-size='12.5' fill='var(--c4)' text-anchor='middle' font-weight='700'>ısı, ışık, katkı</text><rect x='40' y='46' width='240' height='32' rx='16' fill='var(--c1)' fill-opacity='0.16' stroke='var(--c1)' stroke-width='1.5'/><text x='160' y='67' font-size='12.5' fill='var(--c1)' text-anchor='middle' font-weight='700'>n: elektron · p: boşluk</text><rect x='40' y='84' width='240' height='32' rx='16' fill='var(--c5)' fill-opacity='0.16' stroke='var(--c5)' stroke-width='1.5'/><text x='160' y='105' font-size='12.5' fill='var(--c5)' text-anchor='middle' font-weight='700'>diyot, LED, güneş pili</text><rect x='40' y='122' width='240' height='32' rx='16' fill='var(--c3)' fill-opacity='0.16' stroke='var(--c3)' stroke-width='1.5'/><text x='160' y='143' font-size='12.5' fill='var(--c3)' text-anchor='middle' font-weight='700'>transistör</text><rect x='40' y='160' width='240' height='32' rx='16' fill='var(--c2)' fill-opacity='0.16' stroke='var(--c2)' stroke-width='1.5'/><text x='160' y='181' font-size='12.5' fill='var(--c2)' text-anchor='middle' font-weight='700'>R = 0, alan dışarı</text></svg>"
       }
     ],
@@ -10083,7 +10083,7 @@
           "Eklemdeki alan elektronu n'ye, boşluğu p'ye iter",
           "Dış devrede akım geçer"
         ],
-        "e": "Işık önce bir elektronu serbest bırakır ve geride boşluk kalır. Eklemin elektrik alanı bu ikisini ayırır; ayrılan yükler dış devreden dolaşarak akım oluşturur."
+        "e": "Işık önce bir elektronu serbest bırakır ve geride bir boşluk kalır. Eklemin elektrik alanı bu ikisini birbirinden ayırır. Ayrılan yükler dış devrede dolaşarak akım oluşturur."
       },
       {
         "q": "Bir malzeme soğutulunca direnci artıyor, ısıtılınca azalıyor. Bu malzeme büyük olasılıkla hangisidir?",
@@ -10096,10 +10096,10 @@
         "a": 1,
         "e": "Yarı iletken ısınınca daha çok elektron serbest kalır, direnci azalır. Metallerde tersi olur.",
         "y": [
-          "Metal ısınınca atomlar daha çok titreşir; direnç artar.",
+          "Metal ısınınca atomlar daha çok titreşir ve direnç artar.",
           "",
-          "Kritik sıcaklığın altında YBCO'nun direnci tam sıfırdır; değişmez.",
-          "Gümüş de metaldir; ısınınca direnci artar."
+          "Kritik sıcaklığın altında YBCO'nun direnci tam olarak sıfırdır ve değişmez.",
+          "Gümüş de bir metaldir ve ısınınca direnci artar."
         ]
       }
     ]

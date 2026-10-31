@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "yari-iletkenler",
  "baslik": "Yarı iletkenler ve süper iletkenler",
- "ozet": "Isıtınca direnci değiştir, katkılı silisyumda yükleri yürüt, diyodu ters bağla, LED'in rengini seç, güneş pilinden ve transistörden akım al, süper iletkeni soğutup mıknatısı havada tut.",
+ "ozet": "Isıtarak direnci değiştir ve katkılı silisyumda yükleri yürüt. Diyodu ters bağla, LED'in rengini seç, güneş pilinden ve transistörden akım al. Süper iletkeni soğut ve mıknatısı havada tut.",
  "adimlar": [
   {
    "baslik": "Soğutunca ne olur?",
@@ -32,7 +32,7 @@
      {
       "yazi": "Silisyum",
       "dogru": true,
-      "neden": "Soğuyan silisyumda serbest elektron azalır, akımı taşıyacak yük kalmaz; direnç artar."
+      "neden": "Soğuyan silisyumda serbest elektronlar azalır ve akımı taşıyacak yük kalmaz. Bu yüzden direnç artar."
      },
      {
       "yazi": "Bakır",
@@ -40,7 +40,7 @@
      },
      {
       "yazi": "İkisi de",
-      "neden": "Eğrilere bak: biri iner, biri çıkar. Metal ile yarı iletken ters davranır."
+      "neden": "Eğrilere bak, biri iniyor, öteki çıkıyor. Metal ile yarı iletken ters davranır."
      }
     ]
    },
@@ -48,7 +48,7 @@
   },
   {
    "baslik": "Fazla elektron nereye?",
-   "metin": "Silisyuma <b>fosfor</b> katıldı: fosforun 5. elektronu bağa girmez, serbest kalır. Pil bağlandı: sol uç −, sağ uç +.",
+   "metin": "Silisyuma <b>fosfor</b> katıldı. Fosforun 5. elektronu bağa girmez ve serbest kalır. Bir pil bağlandı ve sol uç −, sağ uç + oldu.",
    "sahne": {
     "tur": "fiz16-kristal",
     "sure": 5
@@ -67,7 +67,7 @@
      },
      {
       "yazi": "− uca",
-      "neden": "Aynı işaretli yükler birbirini iter; elektron − uçtan uzaklaşır."
+      "neden": "Aynı işaretli yükler birbirini iter. Bu yüzden elektron − uçtan uzaklaşır."
      },
      {
       "yazi": "Yerinde kalır",
@@ -79,7 +79,7 @@
   },
   {
    "baslik": "Boşluk nereye?",
-   "metin": "Şimdi fosfor yerine <b>bor</b>: bor 3 elektronla gelir, bir bağda elektron eksik kalır. Bu eksiğe <b>boşluk</b> denir.",
+   "metin": "Şimdi fosfor yerine <b>bor</b> katıldı. Bor 3 elektronla gelir ve bir bağda elektron eksik kalır. Bu eksiğe <b>boşluk</b> denir.",
    "sahne": {
     "tur": "fiz16-kristal",
     "sure": 5
@@ -94,15 +94,15 @@
      {
       "yazi": "− uca",
       "dogru": true,
-      "neden": "Komşu elektronlar + uca doğru boşluğa atlar; her atlayışta boşluk bir adım ters yöne, − uca kayar. Boşluk pozitif yük gibi davranır."
+      "neden": "Komşu elektronlar + uca doğru boşluğa atlar. Her atlayışta boşluk bir adım ters yöne, yani − uca kayar. Boşluk pozitif bir yük gibi davranır."
      },
      {
       "yazi": "+ uca",
-      "neden": "Elektronlar + uca gider; boşluk onların tersine ilerler."
+      "neden": "Elektronlar + uca doğru gider. Boşluk ise onların tersine ilerler."
      },
      {
       "yazi": "Yerinde kalır",
-      "neden": "Boşluk yerinde durmaz: komşu bir elektron ona atlayınca boşluk o elektronun eski yerine geçer."
+      "neden": "Boşluk yerinde durmaz. Komşu bir elektron ona atlayınca boşluk, o elektronun eski yerine geçer."
      }
     ]
    },
@@ -110,7 +110,7 @@
   },
   {
    "baslik": "Ters bağlı diyot",
-   "metin": "p ile n tipini birleştirdik: bu bir <b>diyot</b>. Pilin artısı <b>n</b> ucunda, gerilim 2,5 V.",
+   "metin": "p ve n tipini birleştirdik ve bir <b>diyot</b> elde ettik. Pilin artı ucu <b>n</b> tarafında ve gerilim 2,5 V'tur.",
    "sahne": {
     "tur": "fiz16-diyot",
     "sure": 4
@@ -130,11 +130,11 @@
      },
      {
       "yazi": "Evet, sönük yanar",
-      "neden": "Ters yönde akım neredeyse sıfırdır; lamba hiç yanmaz."
+      "neden": "Ters yönde akım neredeyse sıfırdır. Bu yüzden lamba hiç yanmaz."
      },
      {
       "yazi": "Evet, parlak yanar",
-      "neden": "Gerilim yüksek olsa da yön yanlış: diyot akımı yalnız p'den n'ye geçirir."
+      "neden": "Gerilim yüksek olsa da yön yanlıştır. Diyot akımı yalnızca p'den n'ye doğru geçirir."
      }
     ]
    },
@@ -142,7 +142,7 @@
   },
   {
    "baslik": "Mavi LED",
-   "metin": "LED'de enerji aralığı büyüdükçe ışık kırmızıdan maviye kayar. Aralığı değiştir: <b>mavi</b> ışık veren malzemeyi bul.",
+   "metin": "LED'de enerji aralığı büyüdükçe ışığın rengi kırmızıdan maviye kayar. Aralığı değiştir ve <b>mavi</b> ışık veren malzemeyi bul.",
    "sahne": {
     "tur": "fiz16-led"
    },
@@ -168,14 +168,14 @@
       2.75
      ]
     },
-    "tamam": "Mavi ışık ≈ 450-490 nm, enerji aralığı ≈ 2,5-2,8 eV. Bu kadar büyük aralıklı, kaliteli galyum nitrür kristali yapmak zordu; mavi LED bu yüzden en son geldi.",
+    "tamam": "Mavi ışığın dalga boyu yaklaşık 450-490 nm, enerji aralığı ise yaklaşık 2,5-2,8 eV'tur. Bu kadar büyük aralıklı, kaliteli galyum nitrür kristali yapmak zordu. Mavi LED bu yüzden en son geldi.",
     "ipucu": "Kırmızıdan maviye gittikçe enerji aralığı büyür."
    },
    "kart": 6
   },
   {
    "baslik": "Panelden 150 W",
-   "metin": "Panele düşen ışınımı (metrekareye düşen ışık gücü, W/m²) ayarla: 1 m² panelden <b>150 W</b> al. Panelin verimi %20.",
+   "metin": "Panele düşen ışınımı, yani metrekareye düşen ışık gücünü (W/m²) ayarla. 1 m²'lik panelden <b>150 W</b> güç al. Panelin verimi %20'dir.",
    "sahne": {
     "tur": "fiz16-gunes"
    },
@@ -201,14 +201,14 @@
       760
      ]
     },
-    "tamam": "0,20 × 750 W/m² × 1 m² = <b>150 W</b>. Açık bir yaz öğlesinde güneş ışınımı ≈ 1000 W/m²; bu panel en çok ≈ 200 W verir.",
-    "ipucu": "Güç = 0,20 × ışınım × 1 m². 150 ÷ 0,20 = ?"
+    "tamam": "0,20 × 750 W/m² × 1 m² = <b>150 W</b> olur. Açık bir yaz öğlesinde güneş ışınımı yaklaşık 1000 W/m²'dir. Bu panel en fazla yaklaşık 200 W verir.",
+    "ipucu": "Güç, 0,20 × ışınım × 1 m² ile bulunur. 150 ÷ 0,20 kaç eder?"
    },
    "kart": 7
   },
   {
    "baslik": "Transistörle 3 mA",
-   "metin": "Bu klasik (BJT) transistörde taban akımını ayarla: toplayıcıdan <b>3 mA</b> geçsin. Akım 100 kat büyüyor.",
+   "metin": "Bu klasik (BJT) transistörde taban akımını ayarla ve toplayıcıdan <b>3 mA</b> akım geçmesini sağla. Akım 100 kat büyüyor.",
    "sahne": {
     "tur": "fiz16-transistor"
    },
@@ -234,14 +234,14 @@
       30
      ]
     },
-    "tamam": "30 µA × 100 = 3000 µA = <b>3 mA</b>. Küçük taban akımı, 100 kat büyük akımı yönetiyor: yükselteç.",
-    "ipucu": "3 mA = 3000 µA. 3000 ÷ 100 = ?"
+    "tamam": "30 µA × 100 = 3000 µA = <b>3 mA</b> olur. Küçük taban akımı, 100 kat büyük bir akımı yönetiyor. Buna yükselteç denir.",
+    "ipucu": "3 mA, 3000 µA eder. 3000 ÷ 100 kaç eder?"
    },
    "kart": 8
   },
   {
    "baslik": "Soğuk disk, mıknatıs",
-   "metin": "Seramik disk (YBCO) sıvı azotla soğutulacak, sonra üstüne bir mıknatıs indirilecek.",
+   "metin": "Seramik disk (YBCO) sıvı azotla soğutulacak. Sonra diskin üstüne bir mıknatıs indirilecek.",
    "sahne": {
     "tur": "fiz16-meissner",
     "sure": 6
@@ -253,11 +253,11 @@
      {
       "yazi": "Havada asılı kalır",
       "dogru": true,
-      "neden": "Soğuyan disk süper iletken olur ve mıknatısın alanını içinden dışarı iter: Meissner etkisi. Mıknatıs diskin üstünde havada durur."
+      "neden": "Soğuyan disk süper iletken olur ve mıknatısın alanını içinden dışarı iter. Buna Meissner etkisi denir. Mıknatıs diskin üstünde havada durur."
      },
      {
       "yazi": "Diske yapışır",
-      "neden": "Seramik demir gibi çekilmez; süper iletken hâlde alanı tersine dışarı iter."
+      "neden": "Seramik demir gibi çekilmez. Süper iletken hâldeyken alanı tersine dışarı iter."
      },
      {
       "yazi": "Diske düşüp oturur",
@@ -269,7 +269,7 @@
   },
   {
    "baslik": "YBCO'nun sınırı",
-   "metin": "Sıcaklığı değiştir: YBCO'nun süper iletken kaldığı <b>en yüksek</b> sıcaklığı bul.",
+   "metin": "Sıcaklığı değiştir ve YBCO'nun süper iletken kaldığı <b>en yüksek</b> sıcaklığı bul.",
    "sahne": {
     "tur": "fiz16-direnc",
     "ybco": true
@@ -296,15 +296,15 @@
       91
      ]
     },
-    "tamam": "YBCO yaklaşık <b>92 K</b>'nin altında süper iletkendir. Sıvı azot (77 K) yeter; pahalı sıvı helyum gerekmez.",
+    "tamam": "YBCO yaklaşık <b>92 K</b>'nin altında süper iletkendir. Bunun için sıvı azot (77 K) yeterlidir ve pahalı sıvı helyum gerekmez.",
     "ipucu": "Yeşil eğrinin sıfıra düştüğü yerin hemen altına git."
    },
    "kart": 12
   }
  ],
  "kapanis": [
-  "Katkı türü akımı kimin taşıdığını belirler: n'de elektron, p'de boşluk.",
-  "Diyot akımı yalnız ileri yönde geçirir; LED'in rengini enerji aralığı belirler.",
+  "Katkının türü, akımı hangi yükün taşıdığını belirler. n-tipinde elektron, p-tipinde ise boşluk akım taşır.",
+  "Diyot akımı yalnızca ileri yönde geçirir. LED'in rengini ise enerji aralığı belirler.",
   "Transistör küçük bir sinyalle (taban akımı ya da kapı gerilimi) büyük akımı yönetir.",
   "Süper iletken kritik sıcaklık, kritik alan ve kritik akımın altında sıfır dirence iner ve manyetik alanı dışarı iter."
  ],

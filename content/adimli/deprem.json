@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "deprem",
  "baslik": "Deprem ve rezonans",
- "ozet": "Fayda biriken gerilmeyi boşalt, P ile S dalgasını istasyona yarıştır, büyüklüğü enerjiye çevir ve binaları sarsma masasında rezonansa sok.",
+ "ozet": "Fayda biriken gerilmeyi boşalt ve P ile S dalgasını istasyona doğru yarıştır. Büyüklüğü enerjiye çevir ve binaları sarsma masasında rezonansa sok.",
  "adimlar": [
   {
    "baslik": "Kilitli fay",
-   "metin": "Fayın iki yanı zıt yönde yavaşça itiliyor ama fay sürtünmeyle kilitli. Oynat ve yolu izle.",
+   "metin": "Fayın iki yanı zıt yönlerde yavaşça itiliyor, ama fay sürtünmeyle kilitli. Oynat ve yolu izle.",
    "sahne": {
     "tur": "fiz15-fay",
     "sure": 6
@@ -23,11 +23,11 @@
      },
      {
       "yazi": "Bükülü hâliyle kalır",
-      "neden": "Bükülme gerilmenin işaretidir; kırılınca gerilme boşalır ve yol düzelir."
+      "neden": "Yolun bükülmesi gerilmenin işaretidir. Fay kırılınca gerilme boşalır ve yol düzelir."
      },
      {
       "yazi": "Eski düz hâline, kaymadan döner",
-      "neden": "Bloklar bu sürede gerçekten yer değiştirdi; kırılma bu kaymayı bir anda tamamlar."
+      "neden": "Bloklar bu sürede gerçekten yer değiştirdi. Kırılma bu kaymayı bir anda tamamlar."
      }
     ]
    },
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Hangi dalga önce?",
-   "metin": "Odaktan iki tür dalga aynı anda çıkıyor: <b>P</b> ve <b>S</b>. İstasyon 120 km uzakta.",
+   "metin": "Odaktan <b>P</b> ve <b>S</b> olmak üzere iki tür dalga aynı anda çıkıyor. İstasyon 120 km uzaktadır.",
    "sahne": {
     "tur": "fiz15-istasyon",
     "sure": 6,
@@ -59,7 +59,7 @@
      },
      {
       "yazi": "İkisi aynı anda",
-      "neden": "Aynı anda çıkarlar ama hızları farklıdır; S geride kalır."
+      "neden": "İki dalga aynı anda çıkar, ama hızları farklıdır. Bu yüzden S geride kalır."
      }
     ]
    },
@@ -67,7 +67,7 @@
   },
   {
    "baslik": "Uzaklık ve süre farkı",
-   "metin": "P ile S arasındaki her saniyelik fark yaklaşık 8 km uzaklık demektir. İstasyonu öyle bir yere koy ki P ile S arasında <b>10 saniye</b> olsun. Sonra oynat.",
+   "metin": "P ile S arasındaki her saniyelik fark, yaklaşık 8 km uzaklık demektir. İstasyonu, P ile S arasında <b>10 saniye</b> olacak bir yere koy. Sonra oynat.",
    "sahne": {
     "tur": "fiz15-istasyon",
     "sure": 6
@@ -94,14 +94,14 @@
       88
      ]
     },
-    "tamam": "Yaklaşık <b>84 km</b>: P 14 s'de, S 24 s'de gelir. Her saniyelik fark ≈ 8,4 km eder; bu yüzden kural d ≈ 8 km × Δt.",
-    "ipucu": "Her 1 s fark yaklaşık 8 km uzaklık demek."
+    "tamam": "Uzaklık yaklaşık <b>84 km</b>'dir. P dalgası 14 saniyede, S dalgası ise 24 saniyede gelir. Her saniyelik fark yaklaşık 8,4 km eder. Bu yüzden kural d ≈ 8 km × Δt şeklindedir.",
+    "ipucu": "Her 1 saniyelik fark yaklaşık 8 km uzaklık demektir."
    },
    "kart": 6
   },
   {
    "baslik": "Büyüklük ve enerji",
-   "metin": "Büyüklük 1 artınca enerji yaklaşık 32 kat artar. Büyüklüğü artır; kare, açığa çıkan enerjiyi temsil ediyor.",
+   "metin": "Büyüklük 1 artınca enerji yaklaşık 32 kat artar. Büyüklüğü artır. Kare, açığa çıkan enerjiyi temsil ediyor.",
    "sahne": {
     "tur": "fiz15-buyukluk"
    },
@@ -126,14 +126,14 @@
       7.05
      ]
     },
-    "tamam": "M = 7: 5'liğin yaklaşık <b>1000 katı</b> enerji (32 × 32). Büyüklükteki küçük bir fark, enerjide dev bir farktır.",
-    "ipucu": "Her +1 yaklaşık 32 kat. 32 × 32 ≈ 1000."
+    "tamam": "7 büyüklüğündeki deprem, 5 büyüklüğündekinin yaklaşık <b>1000 katı</b> (32 × 32) enerji açığa çıkarır. Büyüklükteki küçük bir fark, enerjide dev bir farktır.",
+    "ipucu": "Her +1 büyüklük yaklaşık 32 kat enerji demektir. 32 × 32 yaklaşık 1000 eder."
    },
    "kart": 7
   },
   {
    "baslik": "Hangi bina sallanır?",
-   "metin": "Her binanın kendi salınım periyodu vardır. Masa yavaş sallanacak: periyot 2 s (0,5 Hz). Binaların doğal periyotları altta yazıyor.",
+   "metin": "Her binanın kendi salınım periyodu vardır. Masa yavaş sallanacak ve periyodu 2 s (0,5 Hz) olacak. Binaların doğal periyotları altta yazıyor.",
    "sahne": {
     "tur": "fiz15-sarsma",
     "sure": 6
@@ -147,16 +147,16 @@
     "secenekler": [
      {
       "yazi": "3 katlı",
-      "neden": "Onun periyodu ≈ 0,3 s; yavaş sarsıntıyla zemin gibi hareket eder, eğilmez."
+      "neden": "Bu binanın periyodu yaklaşık 0,3 s'dir. Yavaş sarsıntıda zeminle birlikte hareket eder ve eğilmez."
      },
      {
       "yazi": "10 katlı",
-      "neden": "Periyodu ≈ 1 s; 2 s'lik sarsıntıya uymaz."
+      "neden": "Bu binanın periyodu yaklaşık 1 s'dir ve 2 s'lik sarsıntıya uymaz."
      },
      {
       "yazi": "20 katlı",
       "dogru": true,
-      "neden": "Periyodu ≈ 2 s, sarsıntınınkine eşit: rezonans. Uzun periyotlu sarsıntı yüksek binalar için tehlikelidir."
+      "neden": "Bu binanın periyodu yaklaşık 2 s'dir ve sarsıntınınkine eşittir. Bu yüzden rezonansa girer. Uzun periyotlu sarsıntılar yüksek binalar için tehlikelidir."
      }
     ]
    },
@@ -164,7 +164,7 @@
   },
   {
    "baslik": "Rezonansı yakala",
-   "metin": "Bina, sarsıntının frekansı kendi frekansına (f = 1/T) eşit olunca rezonansa girer. Frekansı ayarla: <b>3 katlı binayı</b> rezonansa sok ve oynat.",
+   "metin": "Bina, sarsıntının frekansı kendi frekansına (f = 1/T) eşit olunca rezonansa girer. Frekansı ayarla, <b>3 katlı binayı</b> rezonansa sok ve oynat.",
    "sahne": {
     "tur": "fiz15-sarsma",
     "sure": 6
@@ -192,13 +192,13 @@
      ]
     },
     "tamam": "3 katlının periyodu ≈ 0,3 s, yani f ≈ 3,3 Hz. Kısa periyotlu, sert zemindeki sarsıntı alçak binaları zorlar.",
-    "ipucu": "f = 1 / T; T ≈ 0,1 × 3 = 0,3 s."
+    "ipucu": "f = 1 / T olur. 3 katlı binanın periyodu ise T ≈ 0,1 × 3 = 0,3 s'dir."
    },
    "kart": 10
   },
   {
    "baslik": "Sismik izolatör",
-   "metin": "Aynı bina, aynı sarsıntı. Önce izolatörsüz oynat, sonra izolatörü aç.",
+   "metin": "Bina ve sarsıntı aynıdır. Önce izolatörsüz oynat, sonra izolatörü aç.",
    "sahne": {
     "tur": "fiz15-izolator",
     "sure": 6
@@ -223,15 +223,15 @@
      {
       "yazi": "Binanın periyodunu uzatır, sarsıntı binaya az geçer",
       "dogru": true,
-      "neden": "Esnek yastıklar zemin hareketini emer; binanın periyodu sarsıntınınkinden çok uzaklaşır, rezonans önlenir."
+      "neden": "Esnek yastıklar zeminin hareketini emer. Binanın periyodu sarsıntınınkinden çok uzaklaşır ve rezonans önlenir."
      },
      {
       "yazi": "Binayı daha sert ve ağır yapar",
-      "neden": "Sertlik periyodu kısaltır; izolatör tam tersine binayı tabanda esnek yapar."
+      "neden": "Sertlik periyodu kısaltır. İzolatör ise tam tersine binayı tabanda esnek yapar."
      },
      {
       "yazi": "Deprem dalgalarını durdurur",
-      "neden": "Dalga yine gelir; zemin aynı sallanıyor. Değişen, sarsıntının binaya ne kadar aktarıldığıdır."
+      "neden": "Dalga yine gelir ve zemin aynı şekilde sallanır. Değişen, sarsıntının binaya ne kadar aktarıldığıdır."
      }
     ]
    },
@@ -241,8 +241,8 @@
  "kapanis": [
   "Deprem, kilitli fayda biriken gerilmenin aniden boşalmasıdır.",
   "P ile S arasındaki her saniye yaklaşık 8 km uzaklık demektir.",
-  "+1 büyüklük ≈ 32 kat enerji.",
-  "Sarsıntının periyodu binanın doğal periyoduna yakınsa rezonans olur; izolatör bunu önler."
+  "Büyüklük 1 artınca enerji yaklaşık 32 kat artar.",
+  "Sarsıntının periyodu binanın doğal periyoduna yakınsa rezonans olur. İzolatör bunu önler."
  ],
  "soruOnce": true
 }
