@@ -3,7 +3,7 @@
  "ders": "biyoloji",
  "konu": "evrim",
  "baslik": "Evrim ve doğal seçilim",
- "ozet": "Gen havuzunu kuşak kuşak izle, antibiyotiğin neyi seçtiğini gör, seçilim tiplerini karşılaştır, Hardy–Weinberg ile q'yu bul ve iki popülasyonu ayrı tür yap.",
+ "ozet": "Gen havuzunu kuşak kuşak izle ve antibiyotiğin neyi seçtiğini gör. Seçilim tiplerini karşılaştır, Hardy–Weinberg ile q'yu bul ve iki popülasyonu ayrı tür yap.",
  "adimlar": [
   {
    "baslik": "Gen havuzu",
@@ -29,16 +29,16 @@
     "secenekler": [
      {
       "yazi": "Bireylerin kendi genotipleri",
-      "neden": "Bir bireyin genotipi ömrü boyunca aynı kalır. Her kuşakta havuzu yeni bireyler oluşturur."
+      "neden": "Bir bireyin genotipi ömrü boyunca aynı kalır. Gen havuzunu her kuşakta yeni bireyler oluşturur."
      },
      {
       "yazi": "Popülasyondaki birey sayısı",
-      "neden": "Her kuşakta 5 birey var; sayı değişmedi. Değişen başka bir şey."
+      "neden": "Her kuşakta 5 birey var ve bu sayı değişmedi. Değişen başka bir şey."
      },
      {
       "yazi": "Gen havuzundaki alel frekansı",
       "dogru": true,
-      "neden": "A'nın payı 0,3'ten 0,8'e çıktı; birey sayısı aynı kalsa da gen havuzu değişti."
+      "neden": "A alelinin payı 0,3'ten 0,8'e çıktı. Birey sayısı aynı kalsa da gen havuzu değişti."
      }
     ]
    },
@@ -46,7 +46,7 @@
   },
   {
    "baslik": "Kazanılmış özellik",
-   "metin": "<b>Lamarck</b>, ömür boyu kazanılan bir özelliğin yavruya geçtiğini düşündü. Bir halterci yıllarca çalışıp kaslarını büyütüyor. Tahmin et, sonra oynat.",
+   "metin": "<b>Lamarck</b>, ömür boyu kazanılan bir özelliğin yavruya geçtiğini düşündü. Bir halterci yıllarca çalışarak kaslarını büyütüyor. Önce tahmin et, sonra oynat.",
    "sahne": {
     "tur": "biy14-lamarck",
     "sure": 6
@@ -62,7 +62,7 @@
      {
       "yazi": "Geçmez",
       "dogru": true,
-      "neden": "Çalışmayla büyüyen kas bir modifikasyondur: vücut hücrelerinde olur, gamete ulaşmaz."
+      "neden": "Çalışmayla büyüyen kas bir modifikasyondur. Bu değişim vücut hücrelerinde olur ve gamete ulaşmaz."
      },
      {
       "yazi": "Kısmen geçer",
@@ -74,7 +74,7 @@
   },
   {
    "baslik": "Antibiyotik direnci",
-   "metin": "Kapta 28 bakteri var. Mor olan 3'ü, ilaçtan önce rastgele bir <b>mutasyonla</b> dirençli olmuş. Tahmin et, sonra antibiyotiği ver.",
+   "metin": "Kapta 28 bakteri var. Mor renkli 3 bakteri, ilaç verilmeden önce rastgele bir <b>mutasyonla</b> dirençli hâle gelmiş. Önce tahmin et, sonra antibiyotiği ver.",
    "sahne": {
     "tur": "biy14-antibiyotik",
     "sure": 7
@@ -89,12 +89,12 @@
      },
      {
       "yazi": "Bakteriler ilaca alışır ve bunu yavrularına aktarır",
-      "neden": "Bu, Lamarckçı bir yanılgıdır. Ölen duyarlı bakteriler alışamaz; yaşayan dirençliler zaten dirençliydi."
+      "neden": "Bu, Lamarckçı bir yanılgıdır. Ölen duyarlı bakteriler ilaca alışamaz. Yaşayan dirençli bakteriler ise zaten dirençliydi."
      },
      {
       "yazi": "Önceden var olan dirençlileri seçer",
       "dogru": true,
-      "neden": "Antibiyotik duyarlıları öldürür; ilaçtan önce dirençli olan 3 bakteri hayatta kalıp bölünür ve kabı doldurur."
+      "neden": "Antibiyotik duyarlı bakterileri öldürür. İlaçtan önce dirençli olan 3 bakteri hayatta kalır, bölünür ve kabı doldurur."
      }
     ]
    },
@@ -102,7 +102,7 @@
   },
   {
    "baslik": "Seçilim tipleri",
-   "metin": "Doğal seçilim bir özelliğin dağılımını üç biçimde değiştirir. Kesikli çizgi önceki, yeşil alan sonraki dağılım. Üç tipe de bak.",
+   "metin": "Doğal seçilim bir özelliğin dağılımını üç farklı biçimde değiştirir. Kesikli çizgi önceki dağılımı, yeşil alan ise sonraki dağılımı gösterir. Üç tipe de bak.",
    "sahne": {
     "tur": "biy14-secilim"
    },
@@ -125,15 +125,15 @@
      {
       "yazi": "Dengeleyici seçilim",
       "dogru": true,
-      "neden": "İki uç elenir, ortalama ağırlık kayırılır. Dağılım daralır ama ortalama yerinde kalır."
+      "neden": "İki uç elenir ve ortalama ağırlık kayırılır. Dağılım daralır, ama ortalama yerinde kalır."
      },
      {
       "yazi": "Yönlendirici seçilim",
-      "neden": "Yönlendiricide yalnızca bir uç kayırılır ve ortalama kayar. Burada iki uç da dezavantajlı."
+      "neden": "Yönlendirici seçilimde yalnızca bir uç kayırılır ve ortalama kayar. Burada ise iki uç da dezavantajlıdır."
      },
      {
       "yazi": "Ayırıcı seçilim",
-      "neden": "Ayırıcıda iki uç kayırılır, ortadakiler elenir. Bebeklerde tam tersi oluyor."
+      "neden": "Ayırıcı seçilimde iki uç kayırılır, ortadakiler elenir. Bebeklerde ise bunun tam tersi görülür."
      }
     ]
    },
@@ -141,7 +141,7 @@
   },
   {
    "baslik": "Hardy–Weinberg",
-   "metin": "Dengede aa oranı q²'dir. Hardy–Weinberg dengesindeki bu popülasyonda bireylerin %16'sı aa. q'yu bul.",
+   "metin": "Dengedeki bir popülasyonda aa oranı q²'ye eşittir. Hardy–Weinberg dengesindeki bu popülasyonda bireylerin %16'sı aa genotipinde. q'yu bul.",
    "sahne": {
     "tur": "biy14-hw"
    },
@@ -164,13 +164,13 @@
      "q": 40
     },
     "ipucu": "aa oranı q²'dir. Karesi 0,16 eden sayıyı ara.",
-    "tamam": "q = √0,16 = 0,4 ve p = 0,6. Taşıyıcı (Aa) oranı 2pq = 2 · 0,6 · 0,4 = 0,48: çekinik alel çoğunlukla fark edilmeden taşıyıcılarda saklanır."
+    "tamam": "q = √0,16 = 0,4 ve p = 0,6 olur. Taşıyıcıların (Aa) oranı 2pq = 2 · 0,6 · 0,4 = 0,48 eder. Yani çekinik alel çoğunlukla fark edilmeden taşıyıcılarda saklanır."
    },
    "kart": 6
   },
   {
    "baslik": "Genetik sürüklenme",
-   "metin": "Alel frekansı yalnızca seçilimle değil, şansla da değişir: <b>genetik sürüklenme</b>. Her çizgi aynı başlangıçtan bir tekrar. Küçük ve büyük popülasyonu ayrı ayrı oynat.",
+   "metin": "Alel frekansı yalnızca seçilimle değil, şansla da değişir. Buna <b>genetik sürüklenme</b> denir. Her çizgi, aynı başlangıçtan yapılan bir tekrarı gösterir. Küçük ve büyük popülasyonu ayrı ayrı oynat.",
    "sahne": {
     "tur": "biy14-suruklenme",
     "sure": 5
@@ -194,16 +194,16 @@
     "secenekler": [
      {
       "yazi": "Büyük popülasyonda",
-      "neden": "500 bireyde çizgiler 0,5 dolayında kaldı. Büyük örneklemde şansın etkisi küçüktür."
+      "neden": "500 bireylik popülasyonda çizgiler 0,5 dolayında kaldı. Büyük bir örneklemde şansın etkisi küçüktür."
      },
      {
       "yazi": "Küçük popülasyonda",
       "dogru": true,
-      "neden": "10 bireyde birkaç bireyin şansı bütün havuzu değiştirir; bazı tekrarlarda bir alel tamamen kayboldu. Darboğaz ve kurucu etkisi de bu yüzden güçlüdür."
+      "neden": "10 bireylik popülasyonda birkaç bireyin şansı bütün havuzu değiştirir. Bazı tekrarlarda bir alel tamamen kayboldu. Darboğaz ve kurucu etkisinin güçlü olmasının nedeni de budur."
      },
      {
       "yazi": "İkisinde eşit",
-      "neden": "Grafiklere bak: küçük popülasyonda çizgiler çok daha çok savruluyor."
+      "neden": "Grafiklere bak. Küçük popülasyonda çizgiler çok daha fazla savruluyor."
      }
     ]
    },
@@ -211,7 +211,7 @@
   },
   {
    "baslik": "Seçilim laboratuvarı",
-   "metin": "İngiltere'de benekli güveler ağaç gövdelerinde dinlenir; kuşlar onları avlar. Koyu ve açık renk kalıtsaldır. Başta güvelerin çoğu açık renkli. Sanayi kirliliğini ve kuşları aç kapa; her saniye bir kuşak geçer. Aşağıdakileri kendin bul.",
+   "metin": "İngiltere'de benekli güveler ağaç gövdelerinde dinlenir ve kuşlar onları avlar. Koyu ve açık renk kalıtsaldır. Başlangıçta güvelerin çoğu açık renkli. Sanayi kirliliğini ve kuşları açıp kapat, her saniye bir kuşak geçer. Aşağıdakileri kendin bul.",
    "sahne": {
     "tur": "sim-guve"
    },
@@ -242,7 +242,7 @@
     "tur": "kesfet",
     "bulgular": [
      {
-      "yazi": "Kirliliği aç ve bekle. Koyu güvelerin oranı <b>%80</b>'i geçiyor mu?",
+      "yazi": "Kirliliği aç ve bekle. Koyu güvelerin oranının <b>%80</b>'i geçip geçmediğine bak.",
       "hedef": {
        "kirli": 1,
        "koyu": [
@@ -256,10 +256,10 @@
         "kus": 1
        }
       ],
-      "tamam": "Kurumla kararmış ağaçta kuşlar açık güveleri kolay gördü. Koyu güveler daha çok hayatta kalıp ürediği için koyu renk yayıldı: <b>doğal seçilim</b>."
+      "tamam": "Kurumla kararmış ağaçlarda kuşlar açık renkli güveleri kolayca gördü. Koyu güveler daha çok hayatta kalıp ürediği için koyu renk yayıldı. Buna <b>doğal seçilim</b> denir."
      },
      {
-      "yazi": "Kuşları kaldır ve birkaç kuşak bekle. Oran hâlâ değişiyor mu?",
+      "yazi": "Kuşları kaldır ve birkaç kuşak bekle. Oranın hâlâ değişip değişmediğine bak.",
       "hedef": {
        "kus": 0,
        "kusuz": [
@@ -272,10 +272,10 @@
         "kus": 0
        }
       ],
-      "tamam": "Avcı kalkınca oran neredeyse durdu; kalan çok yavaş kayma nadir mutasyonlardan gelir. Renkleri mutasyon üretir; hangi rengin hızla çoğalacağını çevredeki <b>seçici baskı</b> belirler."
+      "tamam": "Avcılar kalkınca oran neredeyse durdu. Kalan çok yavaş değişim nadir mutasyonlardan kaynaklanır. Renkleri mutasyon üretir, ama hangi rengin hızla çoğalacağını çevredeki <b>seçici baskı</b> belirler."
      },
      {
-      "yazi": "Kuşları geri getir ve kirliliği kapat (havayı temizle). Koyu güveler <b>%30</b>'un altına iniyor mu?",
+      "yazi": "Kuşları geri getir ve kirliliği kapatarak havayı temizle. Koyu güvelerin <b>%30</b>'un altına inip inmediğine bak.",
       "hedef": {
        "kus": 1,
        "kirli": 0,
@@ -291,7 +291,7 @@
         "kirli": 0
        }
       ],
-      "tamam": "Ağaçlar yeniden açılınca bu kez açık güveler avantajlı oldu ve koyu güveler azaldı. Seçilimin yönünü çevre belirler; İngiltere'de 1960'lardan sonra tam olarak bu gözlendi."
+      "tamam": "Ağaçlar yeniden açık renge dönünce bu kez açık renkli güveler avantajlı oldu ve koyu güveler azaldı. Seçilimin yönünü çevre belirler. İngiltere'de 1960'lardan sonra tam olarak bu gözlendi."
      }
     ]
    },
@@ -299,7 +299,7 @@
   },
   {
    "baslik": "Türleşme",
-   "metin": "Bir nehir popülasyonu ikiye bölerse iki grup arasında <b>gen akışı</b> kesilir. Binlerce kuşak geçer. Tahmin et, sonra oynat.",
+   "metin": "Bir nehir popülasyonu ikiye bölerse iki grup arasındaki <b>gen akışı</b> kesilir. Aradan binlerce kuşak geçer. Önce tahmin et, sonra oynat.",
    "sahne": {
     "tur": "biy14-turlesme",
     "sure": 8
@@ -310,16 +310,16 @@
     "secenekler": [
      {
       "yazi": "Renklerinin farklılaşmış olması",
-      "neden": "Aynı türün bireyleri çok farklı görünebilir; köpek ırklarını düşün. Ölçüt görünüş değil, üremedir."
+      "neden": "Aynı türün bireyleri çok farklı görünebilir, köpek ırklarını düşün. Tür ölçütü görünüş değil, üremedir."
      },
      {
       "yazi": "Uzun süre ayrı bölgelerde yaşamaları",
-      "neden": "Coğrafi ayrılık türleşmeyi başlatır ama kanıtlamaz. Yeniden karşılaştıklarında verimli yavru verirlerse hâlâ tek türdürler."
+      "neden": "Coğrafi ayrılık türleşmeyi başlatır, ama kanıtlamaz. Gruplar yeniden karşılaştıklarında verimli yavru verirlerse hâlâ tek türdürler."
      },
      {
       "yazi": "Aralarında verimli yavru oluşmaması",
       "dogru": true,
-      "neden": "Verimli yavru veremiyorlarsa üreme izolasyonu oluşmuştur: artık iki ayrı türdürler."
+      "neden": "Verimli yavru veremiyorlarsa aralarında üreme izolasyonu oluşmuştur. Artık iki ayrı türdürler."
      }
     ]
    },
@@ -327,7 +327,7 @@
   },
   {
    "baslik": "Homolog ve analog",
-   "metin": "İnsan kolu, yarasa kanadı ve balina yüzgeci aynı kemik planından gelişir: <b>homolog</b> yapılar. Sonra iki kanadı karşılaştır.",
+   "metin": "İnsan kolu, yarasa kanadı ve balina yüzgeci aynı kemik planından gelişir. Bu tür yapılara <b>homolog</b> yapılar denir. Şimdi iki kanadı karşılaştır.",
    "sahne": {
     "tur": "biy14-kanit"
    },
@@ -350,15 +350,15 @@
      {
       "yazi": "İkisi de uçmaya yarar ama kökenleri farklıdır",
       "dogru": true,
-      "neden": "Kuş kanadı kemikli bir ön üyedir, kelebek kanadı kemiksiz bir zardır. Benzer işlev, benzer ortama uyumdan doğmuştur."
+      "neden": "Kuş kanadı kemikli bir ön üyedir, kelebek kanadı ise kemiksiz bir zardır. Benzer işlev, benzer ortama uyum sağlamaktan doğmuştur."
      },
      {
       "yazi": "Aynı kemik planından gelişmişlerdir",
-      "neden": "Kelebek kanadında hiç kemik yok. Ortak kemik planı homolog yapıların özelliğidir."
+      "neden": "Kelebek kanadında hiç kemik yoktur. Ortak kemik planı homolog yapıların özelliğidir."
      },
      {
       "yazi": "İkisi de körelmiş organdır",
-      "neden": "İkisi de işlevini sürdürüyor. Körelmiş organ, atada işlevli olup küçülmüş yapıdır; insanda kuyruk sokumu gibi."
+      "neden": "İki kanat da işlevini sürdürüyor. Körelmiş organ, atada işlevli olup küçülmüş bir yapıdır. İnsandaki kuyruk sokumu buna örnektir."
      }
     ]
    },
@@ -366,11 +366,11 @@
   }
  ],
  "kapanis": [
-  "Evrim, gen havuzundaki alel frekansının kuşaklar boyunca değişmesidir; birey değil, popülasyon evrimleşir.",
-  "Kazanılmış özellikler kalıtılmaz; yavruya yalnızca gametteki DNA geçer.",
-  "Doğal seçilim yeni alel üretmez; var olan kalıtsal farklar arasından ortama uygun olanı seçer.",
-  "Hardy–Weinberg dengesinde p + q = 1 ve p² + 2pq + q² = 1; q'yu aa oranının karekökünden bulursun.",
-  "Sürüklenme küçük popülasyonda güçlüdür; gen akışı kesilip üreme izolasyonu oluşunca yeni tür doğar."
+  "Evrim, gen havuzundaki alel frekansının kuşaklar boyunca değişmesidir. Birey değil, popülasyon evrimleşir.",
+  "Kazanılmış özellikler kalıtılmaz. Yavruya yalnızca gametteki DNA geçer.",
+  "Doğal seçilim yeni alel üretmez. Var olan kalıtsal farklar arasından ortama uygun olanı seçer.",
+  "Hardy–Weinberg dengesinde p + q = 1 ve p² + 2pq + q² = 1'dir. q'yu, aa oranının karekökünü alarak bulursun.",
+  "Sürüklenme küçük popülasyonlarda güçlüdür. Gen akışı kesilip üreme izolasyonu oluşunca yeni bir tür ortaya çıkar."
  ],
  "soruOnce": true
 }

@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Lokmanın yolculuğu",
-   "metin": "Besin, ağızdan anüse uzanan tek yönlü bir kanalda ilerler. Yanında <b>yardımcı organlar</b> vardır. Tahmin et, sonra lokmayı izle.",
+   "metin": "Besin, ağızdan anüse uzanan tek yönlü bir kanalda ilerler. Bu kanalın yanında <b>yardımcı organlar</b> bulunur. Önce tahmin et, sonra lokmayı izle.",
    "sahne": {
     "tur": "biy11-kanal",
     "sure": 7
@@ -18,16 +18,16 @@
     "secenekler": [
      {
       "yazi": "Mide",
-      "neden": "Mide sindirim kanalının parçasıdır; lokma burada asitle çalkalanıp bulamaca (kimus) dönüşür."
+      "neden": "Mide sindirim kanalının bir parçasıdır. Lokma burada asitle çalkalanır ve kimus adı verilen bulamaca dönüşür."
      },
      {
       "yazi": "Yemek borusu",
-      "neden": "Yemek borusu lokmayı peristaltik hareketle mideye iter; lokma içinden geçer."
+      "neden": "Yemek borusu lokmayı peristaltik hareketle mideye iter. Yani lokma bu organın içinden geçer."
      },
      {
       "yazi": "Pankreas",
       "dogru": true,
-      "neden": "Pankreas yardımcı organdır. Besin içinden geçmez; pankreas sıvısını onikiparmak bağırsağına döker. Karaciğer de böyledir."
+      "neden": "Pankreas bir yardımcı organdır ve besin içinden geçmez. Pankreas, salgıladığı sıvıyı onikiparmak bağırsağına döker. Karaciğer de aynı şekilde çalışır."
      }
     ]
    },
@@ -57,13 +57,13 @@
      "n": 4
     },
     "ipucu": "Her kenarı daha çok parçaya böldükçe toplam yüzey artar.",
-    "tamam": "64 parça, 4 kat yüzey: amilazın değdiği yer arttı, ama madde hâlâ nişasta."
+    "tamam": "Lokmayı 64 parçaya böldün ve yüzeyi 4 katına çıkardın. Amilazın temas ettiği yüzey arttı, ama madde hâlâ nişasta olarak duruyor."
    },
    "kart": 3
   },
   {
    "baslik": "Kim nerede başlar?",
-   "metin": "Besini değiştir ve üçünü de oynat; sonra şu durumu düşün.",
+   "metin": "Besini değiştir ve üçünü de oynat. Sonra aşağıdaki durumu düşün.",
    "sahne": {
     "tur": "biy11-baslangic",
     "sure": 5
@@ -87,16 +87,16 @@
     "secenekler": [
      {
       "yazi": "Hiç gerçekleşmez",
-      "neden": "Pankreas sıvısında da amilaz var; nişasta ince bağırsakta yine sindirilir."
+      "neden": "Pankreas sıvısında da amilaz bulunur. Bu yüzden nişasta ince bağırsakta yine sindirilir."
      },
      {
       "yazi": "İnce bağırsakta başlar",
       "dogru": true,
-      "neden": "Ağızdaki ön sindirim olmaz; ama pankreas amilazı ve maltaz nişastayı ince bağırsakta yine glikoza kadar ayırır."
+      "neden": "Ağızdaki ön sindirim gerçekleşmez. Ancak pankreas amilazı ve maltaz, nişastayı ince bağırsakta yine glikoza kadar ayırır."
      },
      {
       "yazi": "Midede pepsinle başlar",
-      "neden": "Pepsin yalnız proteinlere etki eder; nişastayı parçalayan enzim amilazdır."
+      "neden": "Pepsin yalnızca proteinlere etki eder. Nişastayı parçalayan enzim amilazdır."
      }
     ]
    },
@@ -124,14 +124,14 @@
     "hedef": {
      "ph": 2
     },
-    "ipucu": "Pepsin midede çalışır. Mide asidi pH'yi çok düşürür.",
-    "tamam": "pH 2'de pepsin en hızlı, tripsin neredeyse durmuş. Her enzimin kendi optimum pH'si vardır; ortam değişince biri durur, öbürü çalışır."
+    "ipucu": "Pepsin midede çalışır. Mide asidi de pH'yi çok düşürür.",
+    "tamam": "pH 2'de pepsin en hızlı çalışıyor, tripsin ise neredeyse durmuş durumda. Her enzimin kendine ait bir optimum pH'si vardır. Ortam değişince biri durur, öbürü çalışmaya başlar."
    },
    "kart": 6
   },
   {
    "baslik": "Safra",
-   "metin": "Yağ suda büyük damlalar yapar; <b>lipaz</b> yalnızca damlanın yüzeyinde çalışır. Karaciğerin ürettiği <b>safra</b> onikiparmağa dökülür. Safrayı aç ve oynat.",
+   "metin": "Yağ, suyun içinde büyük damlalar oluşturur. <b>Lipaz</b> ise yalnızca damlanın yüzeyinde çalışabilir. Karaciğerin ürettiği <b>safra</b> onikiparmak bağırsağına dökülür. Safrayı aç ve oynat.",
    "sahne": {
     "tur": "biy11-safra",
     "sure": 4
@@ -153,14 +153,14 @@
     "hedef": {
      "safra": 1
     },
-    "ipucu": "Safra yağı küçük damlacıklara ayırır. Yüzey artınca lipaz hızlanır.",
-    "tamam": "Safra yağı damlacıklara ayırdı; yüzey arttıkça lipaz hızlandı ve aynı sürede yağın hepsini parçaladı."
+    "ipucu": "Safra yağı küçük damlacıklara ayırır. Yüzey artınca lipaz daha hızlı çalışır.",
+    "tamam": "Safra yağı küçük damlacıklara ayırdı. Yüzey arttıkça lipaz hızlandı ve aynı sürede yağın tamamını parçaladı."
    },
    "kart": 8
   },
   {
    "baslik": "Villuslar",
-   "metin": "Emilimin çoğu <b>ince bağırsakta</b> olur. Düz bir boru olsaydı yüzey çok küçük kalırdı. Duvarı kıvır, villusları ve mikrovillusları ekle.",
+   "metin": "Emilimin çoğu <b>ince bağırsakta</b> gerçekleşir. İnce bağırsak düz bir boru olsaydı yüzeyi çok küçük kalırdı. Duvarı kıvır, sonra villusları ve mikrovillusları ekle.",
    "sahne": {
     "tur": "biy11-villus"
    },
@@ -181,14 +181,14 @@
     "hedef": {
      "k": 3
     },
-    "ipucu": "Son düzeyde her epitel hücresinin zarı fırça gibi çıkıntılar yapar.",
-    "tamam": "Kıvrımlar, villuslar ve mikrovilluslar birlikte yüzeyi yüzlerce kat artırır. Mikrovillus zarındaki maltaz, laktaz ve peptidazlar sindirimin son adımını da burada atar."
+    "ipucu": "Son düzeyde her epitel hücresinin zarı, fırça gibi çıkıntılar oluşturur.",
+    "tamam": "Kıvrımlar, villuslar ve mikrovilluslar birlikte yüzeyi yüzlerce kat artırır. Mikrovillus zarındaki maltaz, laktaz ve peptidazlar sindirimin son adımını da burada gerçekleştirir."
    },
    "kart": 11
   },
   {
    "baslik": "Kana mı, lenfe mi?",
-   "metin": "Her villusun içinde bir <b>kılcal kan damarı</b> ağı ve ortada ucu kapalı bir <b>lenf kılcalı</b> vardır. Tahmin et, sonra oynat.",
+   "metin": "Her villusun içinde bir <b>kılcal kan damarı</b> ağı ve ortada ucu kapalı bir <b>lenf kılcalı</b> bulunur. Önce tahmin et, sonra oynat.",
    "sahne": {
     "tur": "biy11-emilim",
     "sure": 4
@@ -200,15 +200,15 @@
      {
       "yazi": "Lenf kılcalına",
       "dogru": true,
-      "neden": "Yağ asidi ve gliserol epitel hücresinde yeniden yağa dönüşür ve çoğu lenfe geçer. A, D, E, K vitaminleri de bu yolu izler; lenf sonra kana katılır."
+      "neden": "Yağ asidi ve gliserol epitel hücresinde yeniden yağa dönüşür ve çoğu lenfe geçer. A, D, E ve K vitaminleri de bu yolu izler. Lenf daha sonra kana katılır."
      },
      {
       "yazi": "Kılcal kana",
-      "neden": "Kılcal kana glikoz, amino asit, su ve suda çözünen vitaminler geçer; bu kan önce karaciğere gider. Yağların çoğu bu yolu izlemez."
+      "neden": "Kılcal kana glikoz, amino asit, su ve suda çözünen vitaminler geçer. Bu kan önce karaciğere gider. Yağların çoğu ise bu yolu izlemez."
      },
      {
       "yazi": "Kalın bağırsağa",
-      "neden": "Kalın bağırsak sindirim enzimi salgılamaz; su ve mineral emer. Yağın sindirimi ve emilimi ince bağırsakta tamamlanır."
+      "neden": "Kalın bağırsak sindirim enzimi salgılamaz, yalnızca su ve mineral emer. Yağın sindirimi ve emilimi ince bağırsakta tamamlanır."
      }
     ]
    },
@@ -216,11 +216,11 @@
   }
  ],
  "kapanis": [
-  "Besin tek yönlü bir kanalda ilerler; karaciğer ve pankreas kanalın parçası değildir, salgılarını döker.",
-  "Mekanik sindirim yüzeyi artırır; molekülü yalnızca enzimler hidrolizle değiştirir.",
-  "Kimyasal sindirim karbonhidratta ağızda, proteinde midede, yağda ince bağırsakta başlar; hepsi ince bağırsakta biter.",
-  "Pepsin asitte, pankreas enzimleri bikarbonatın nötrlediği ortamda çalışır. Safra enzim değildir, yağı emülsiyonlaştırır.",
-  "Villus ve mikrovilluslar yüzeyi çok artırır: glikoz ve amino asit kana, yağların çoğu lenfe geçer."
+  "Besin tek yönlü bir kanalda ilerler. Karaciğer ve pankreas kanalın parçası değildir, yalnızca salgılarını kanala döker.",
+  "Mekanik sindirim yüzeyi artırır. Molekülü ise yalnızca enzimler hidrolizle değiştirir.",
+  "Kimyasal sindirim karbonhidratlarda ağızda, proteinlerde midede, yağlarda ince bağırsakta başlar. Hepsinin sindirimi ince bağırsakta biter.",
+  "Pepsin asitli ortamda, pankreas enzimleri ise bikarbonatın nötrlediği ortamda çalışır. Safra enzim değildir, yağı emülsiyonlaştırır.",
+  "Villus ve mikrovilluslar yüzeyi çok artırır. Glikoz ve amino asitler kana, yağların çoğu ise lenfe geçer."
  ],
  "soruOnce": true
 }

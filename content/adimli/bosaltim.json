@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Üç azotlu atık",
-   "metin": "Üç atığı karşılaştır; sonra kabuklu yumurtadaki embriyoyu düşün.",
+   "metin": "Üç atığı karşılaştır. Sonra kabuklu yumurtadaki embriyoyu düşün.",
    "sahne": {
     "tur": "biy12-atik"
    },
@@ -38,7 +38,7 @@
      {
       "yazi": "Ürik asit",
       "dogru": true,
-      "neden": "Ürik asit az zehirlidir ve suda çözünmeyen kristaller yapar; neredeyse hiç su istemez. Kuş ve sürüngen embriyoları atığı böyle biriktirir."
+      "neden": "Ürik asit az zehirlidir ve suda çözünmeyen kristaller oluşturur. Bu yüzden neredeyse hiç su istemez. Kuş ve sürüngen embriyoları atıklarını bu şekilde biriktirir."
      }
     ]
    },
@@ -46,7 +46,7 @@
   },
   {
    "baslik": "Ürenin yolu",
-   "metin": "Fazla amino asitler yıkılınca amonyak oluşur. Bir organ onu CO₂ ile birleştirip üreye çevirir, başka bir organ da kandan süzüp atar. Tahmin et, sonra izle.",
+   "metin": "Fazla amino asitler yıkılınca amonyak oluşur. Bir organ amonyağı CO₂ ile birleştirip üreye çevirir, başka bir organ da üreyi kandan süzüp atar. Önce tahmin et, sonra izle.",
    "sahne": {
     "tur": "biy12-ure",
     "sure": 6
@@ -57,16 +57,16 @@
     "secenekler": [
      {
       "yazi": "Böbrek",
-      "neden": "Böbrek üreyi üretmez; kandan süzüp idrarla atar."
+      "neden": "Böbrek üreyi üretmez. Üreyi kandan süzer ve idrarla atar."
      },
      {
       "yazi": "Karaciğer",
       "dogru": true,
-      "neden": "Amonyak karaciğerde CO₂ ile birleşir; oluşan üre kanla böbreğe taşınır."
+      "neden": "Amonyak karaciğerde CO₂ ile birleşir. Oluşan üre kanla böbreğe taşınır."
      },
      {
       "yazi": "İdrar kesesi",
-      "neden": "İdrar kesesi yalnızca idrarı biriktirir; içinde üre üretilmez."
+      "neden": "İdrar kesesi yalnızca idrarı biriktirir ve içinde üre üretilmez."
      }
     ]
    },
@@ -74,7 +74,7 @@
   },
   {
    "baslik": "Süzülme",
-   "metin": "Kan basıncı plazmayı <b>glomeruldan</b> Bowman kapsülüne iter. Tahmin et, sonra oynat.",
+   "metin": "Kan basıncı plazmayı <b>glomeruldan</b> Bowman kapsülüne iter. Önce tahmin et, sonra oynat.",
    "sahne": {
     "tur": "biy12-suzme",
     "sure": 5
@@ -90,11 +90,11 @@
      },
      {
       "yazi": "Glikoz ve amino asit",
-      "neden": "Glikoz ve amino asit küçüktür, süzülür. Sonra tüplerde kana geri emilir."
+      "neden": "Glikoz ve amino asit küçük oldukları için süzülür. Daha sonra tüplerde kana geri emilirler."
      },
      {
       "yazi": "Üre ve tuzlar",
-      "neden": "Üre ve tuzlar küçüktür, süzüntüye geçer. Ürenin çoğu idrarla atılır."
+      "neden": "Üre ve tuzlar küçük oldukları için süzüntüye geçer. Ürenin çoğu idrarla atılır."
      }
     ]
    },
@@ -102,7 +102,7 @@
   },
   {
    "baslik": "Geri emilim",
-   "metin": "İki böbrekte günde yaklaşık <b>180 L</b> süzüntü oluşur, ama günde 1,8 L kadar idrar yaparsın. Yararlı maddeler ve suyun çoğu tüplerden kana döner. Geri emilimi ayarla.",
+   "metin": "İki böbrekte günde yaklaşık <b>180 L</b> süzüntü oluşur, ama sen günde yalnızca 1,8 L kadar idrar yaparsın. Yararlı maddeler ve suyun çoğu tüplerden kana döner. Geri emilimi ayarla.",
    "sahne": {
     "tur": "biy12-geri"
    },
@@ -124,13 +124,13 @@
      "g": 99
     },
     "ipucu": "Günde 1,8 L idrar, 180 L'nin yüzde kaçıdır? Geri kalanı kana döner.",
-    "tamam": "180 L'nin %99'u kana döndü, yalnızca 1,8 L idrar kaldı."
+    "tamam": "180 L süzüntünün %99'u kana döndü ve geriye yalnızca 1,8 L idrar kaldı."
    },
    "kart": 10
   },
   {
    "baslik": "Salgılama ve pH",
-   "metin": "Kan asitleşmiş, pH 7,22. Böbrek kandan tüpe H⁺ salgılayabilir. Böbreğe H⁺ salgılat ve pH'yi normale getir.",
+   "metin": "Kan asitleşmiş ve pH'sı 7,22'ye düşmüş. Böbrek kandan tüpe H⁺ salgılayabilir. Böbreğe H⁺ salgılat ve pH'yi normale getir.",
    "sahne": {
     "tur": "biy12-ph"
    },
@@ -152,7 +152,7 @@
      "n": 3
     },
     "ipucu": "Kanın normal pH'sı 7,35 ile 7,45 arasıdır. Fazla salgılarsan kan bazikleşir.",
-    "tamam": "3 birim H⁺ salgılanınca kan pH'sı 7,4'e döndü."
+    "tamam": "3 birim H⁺ salgılanınca kanın pH'sı 7,4'e döndü."
    },
    "kart": 11
   },
@@ -180,16 +180,16 @@
     "secenekler": [
      {
       "yazi": "ADH azalır, idrar bol ve açık olur",
-      "neden": "Bu, bol su içince olur. Terleyince kan derişikleşir ve vücut suyu tutmaya çalışır."
+      "neden": "Bu durum bol su içince görülür. Terleyince kan derişikleşir ve vücut suyu tutmaya çalışır."
      },
      {
       "yazi": "ADH artar, idrar az ve koyu olur",
       "dogru": true,
-      "neden": "Kan derişikleşince ADH artar, toplama kanalı daha çok su geri emer. İdrar azalır ve koyulaşır."
+      "neden": "Kan derişikleşince ADH artar ve toplama kanalı daha çok su geri emer. İdrar azalır ve koyulaşır."
      },
      {
       "yazi": "Süzülme durur, idrar hiç oluşmaz",
-      "neden": "Glomerulda süzülme sürer. Değişen, toplama kanalında ne kadar suyun geri emildiğidir."
+      "neden": "Glomerulda süzülme sürer. Değişen şey, toplama kanalında ne kadar suyun geri emildiğidir."
      }
     ]
    },
@@ -220,16 +220,16 @@
      "k": 190
     },
     "ipucu": "Taşıyıcılar dolana kadar glikozun hepsi kana döner. İdrara ilk glikozun kaçtığı değerde dur.",
-    "tamam": "Yaklaşık 180 mg/dL'ye kadar glikozun hepsi geri emilir; üstünde taşıyıcılar doyar ve fazlası idrara kaçar. İdrarda glikoz genellikle şeker hastalığının (diyabet) işaretidir."
+    "tamam": "Kan şekeri yaklaşık 180 mg/dL'ye kadar glikozun hepsi geri emilir. Bu değerin üstünde taşıyıcılar dolar ve fazla glikoz idrara kaçar. İdrarda glikoz bulunması genellikle şeker hastalığının (diyabet) işaretidir."
    },
    "kart": 10
   }
  ],
  "kapanis": [
-  "Amonyak suda, üre memelilerde, ürik asit kuş, sürüngen ve böceklerde baskın atıktır.",
-  "Üre karaciğerde yapılır, böbrekte atılır; idrar üreter, idrar kesesi ve üretradan geçer.",
-  "Glomerulda alyuvar ve büyük proteinler dışındaki plazma süzülür; süzüntünün %99'u geri emilir.",
-  "Salgılama kandan tüpe olur; böbrek H⁺ salgılayıp HCO₃⁻ geri emerek kan pH'sını 7,4'te tutar.",
+  "Amonyak suda yaşayan canlılarda, üre memelilerde, ürik asit ise kuş, sürüngen ve böceklerde baskın atıktır.",
+  "Üre karaciğerde yapılır ve böbrekte atılır. İdrar üreter, idrar kesesi ve üretradan geçer.",
+  "Glomerulda alyuvarlar ve büyük proteinler dışındaki plazma süzülür. Süzüntünün %99'u geri emilir.",
+  "Salgılama kandan tüpe doğru olur. Böbrek H⁺ salgılayıp HCO₃⁻ geri emerek kanın pH'sını 7,4'te tutar.",
   "ADH toplama kanalında su geri emilimini artırır. Glikoz taşıyıcıları doyunca glikoz idrara geçer."
  ],
  "soruOnce": true

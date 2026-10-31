@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Kapakçıklar",
-   "metin": "Kalpte kanı tek yöne akıtan <b>kapakçıklar</b> vardır. Bu kalbin kapakçıkları tam kapanmıyor. Oynat ve kana ne olduğunu gör, sonra onar.",
+   "metin": "Kalpte kanın tek yönde akmasını sağlayan <b>kapakçıklar</b> bulunur. Bu kalbin kapakçıkları tam kapanmıyor. Oynat ve kana ne olduğunu gör, sonra kapakçıkları onar.",
    "sahne": {
     "tur": "biy11-kapak",
     "sure": 3
@@ -29,8 +29,8 @@
     "hedef": {
      "k": 1
     },
-    "ipucu": "Karıncık kasılınca kulakçığa giden kapı kapanmalı, aorta giden kapı açılmalı.",
-    "tamam": "Karıncık kasılınca ikili kapakçık kapandı, yarım ay kapakçığı açıldı; kanın hepsi aorta gitti. Sağ tarafta da aynı işi üçlü kapakçık yapar."
+    "ipucu": "Karıncık kasılınca kulakçığa giden kapı kapanmalı, aorta giden kapı ise açılmalı.",
+    "tamam": "Karıncık kasılınca ikili kapakçık kapandı ve yarım ay kapakçığı açıldı. Böylece kanın hepsi aorta gitti. Sağ tarafta aynı işi üçlü kapakçık yapar."
    },
    "kart": 1
   },
@@ -59,13 +59,13 @@
      "n": 75
     },
     "ipucu": "Bir dakika 60 saniyedir. 60 saniyeye kaç tane 0,8 saniye sığar?",
-    "tamam": "60 ÷ 0,8 = 75 atım/dk. Kalbin sinirleri kesilse de kalp bu ritimle atmayı sürdürür; sinirler yalnızca hızı ayarlar."
+    "tamam": "60 ÷ 0,8 = 75 atım/dk eder. Kalbin sinirleri kesilse de kalp bu ritimle atmayı sürdürür. Sinirler yalnızca kalbin hızını ayarlar."
    },
    "kart": 2
   },
   {
    "baslik": "İki dolaşım",
-   "metin": "Kalbin sağ yarısı kanı <b>akciğere</b>, sol yarısı <b>vücuda</b> pompalar. Atardamar kanı kalpten götürür, toplardamar kalbe getirir. Tahmin et, sonra bir damla kanı izle.",
+   "metin": "Kalbin sağ yarısı kanı <b>akciğere</b>, sol yarısı ise <b>vücuda</b> pompalar. Atardamar kanı kalpten götürür, toplardamar da kalbe getirir. Önce tahmin et, sonra bir damla kanı izle.",
    "sahne": {
     "tur": "biy11-dolasim",
     "sure": 9
@@ -76,7 +76,7 @@
     "secenekler": [
      {
       "yazi": "Oksijenli",
-      "neden": "Atardamar kanı kalpten götüren damardır; oksijenli olmak zorunda değildir. Akciğere giden kan oksijenini dokularda bırakmıştır."
+      "neden": "Atardamar, kanı kalpten götüren damardır ve oksijenli olmak zorunda değildir. Akciğere giden kan oksijenini dokularda bırakmıştır."
      },
      {
       "yazi": "Oksijensiz",
@@ -85,7 +85,7 @@
      },
      {
       "yazi": "Karışık",
-      "neden": "İnsanda kalbin sağ ve sol yarısı birbirinden ayrıdır; oksijenli ve oksijensiz kan karışmaz."
+      "neden": "İnsanda kalbin sağ ve sol yarısı birbirinden ayrıdır. Bu yüzden oksijenli ve oksijensiz kan karışmaz."
      }
     ]
    },
@@ -93,7 +93,7 @@
   },
   {
    "baslik": "Kanın içinde ne var?",
-   "metin": "Bir tüp kanı döndürünce ikiye ayrılır: üstte sarımsı <b>plazma</b>, altta hücreler. Bileşenleri tek tek incele.",
+   "metin": "Bir tüp kan döndürülünce iki kısma ayrılır. Üstte sarımsı <b>plazma</b>, altta ise hücreler toplanır. Bileşenleri tek tek incele.",
    "sahne": {
     "tur": "biy11-kan"
    },
@@ -115,11 +115,11 @@
     "secenekler": [
      {
       "yazi": "Alyuvarda",
-      "neden": "Alyuvar hemoglobinle O₂ taşır. Zarında kan grubunu belirleyen antijenler vardır, antikor taşımaz."
+      "neden": "Alyuvar hemoglobinle oksijen taşır. Zarında kan grubunu belirleyen antijenler bulunur, ama antikor taşımaz."
      },
      {
       "yazi": "Akyuvarda",
-      "neden": "Antikoru B lenfositinden gelişen plazma hücreleri üretir, ama salgılanan antikor hücrede kalmaz; plazmada çözünmüş taşınır."
+      "neden": "Antikoru B lenfositinden gelişen plazma hücreleri üretir. Ancak salgılanan antikor hücrede kalmaz, plazmada çözünmüş olarak taşınır."
      },
      {
       "yazi": "Plazmada",
@@ -155,7 +155,7 @@
      {
       "yazi": "Toplam kesitleri en büyük",
       "dogru": true,
-      "neden": "Tek bir kılcal çok incedir, ama sayıları milyarlarcadır; toplam kesitleri aorttan kat kat geniştir. Kan geniş bir yatağa yayılır ve yavaşlar, alışverişe zaman kalır."
+      "neden": "Tek bir kılcal çok incedir, ama kılcalların sayısı milyarlarcadır. Bu yüzden toplam kesitleri aorttan kat kat geniştir. Kan geniş bir yatağa yayıldığı için yavaşlar ve madde alışverişine zaman kalır."
      },
      {
       "yazi": "Basınç sıfır",
@@ -163,7 +163,7 @@
      },
      {
       "yazi": "Duvarı kalın",
-      "neden": "Tam tersi: kılcal duvarı tek kat hücredir. İnce duvar, madde alışverişini kolaylaştırır."
+      "neden": "Durum tam tersidir, çünkü kılcalın duvarı tek kat hücreden oluşur. İnce duvar madde alışverişini kolaylaştırır."
      }
     ]
    },
@@ -171,7 +171,7 @@
   },
   {
    "baslik": "Kan grupları",
-   "metin": "Kan grubunu alyuvardaki <b>antijenler</b> belirler; plazmada karşıt <b>antikorlar</b> vardır. Alıcının grubu O. Ona uygun vericiyi bul.",
+   "metin": "Kan grubunu alyuvardaki <b>antijenler</b> belirler. Plazmada ise bunlara karşıt <b>antikorlar</b> bulunur. Alıcının kan grubu O. Ona uygun vericiyi bul.",
    "sahne": {
     "tur": "biy11-grup",
     "alici": "O"
@@ -194,13 +194,13 @@
      "g": 4
     },
     "ipucu": "O grubunun plazmasında hem anti-A hem anti-B vardır. Antijeni olmayan alyuvarı ara.",
-    "tamam": "Yalnız O grubu alyuvar çökelmedi; zarında A ya da B antijeni yoktur. Bu yüzden O grubu genel vericidir; Rh− ise Rh bakımından da herkese uyar. Yine de nakilden önce her zaman uygunluk testi yapılır."
+    "tamam": "Yalnızca O grubu alyuvarlar çökelmedi, çünkü zarlarında A ya da B antijeni yoktur. Bu yüzden O grubu genel vericidir. Rh− ise Rh bakımından da herkese uyar. Yine de nakilden önce her zaman uygunluk testi yapılır."
    },
    "kart": 9
   },
   {
    "baslik": "Aşı neden işe yarar?",
-   "metin": "Aşı, vücudu hastalık yapmayan bir <b>antijenle</b> tanıştırır. Tahmin et, sonra antikor grafiğini izle.",
+   "metin": "Aşı, vücudu hastalık yapmayan bir <b>antijenle</b> tanıştırır. Önce tahmin et, sonra antikor grafiğini izle.",
    "sahne": {
     "tur": "biy11-yanit",
     "sure": 6
@@ -211,16 +211,16 @@
     "secenekler": [
      {
       "yazi": "Birincisiyle aynı",
-      "neden": "İlk karşılaşmadan hafıza hücreleri kalır; vücut antijeni tanır ve yanıt aynı kalmaz."
+      "neden": "İlk karşılaşmadan sonra hafıza hücreleri kalır. Vücut antijeni tanıdığı için yanıt aynı kalmaz."
      },
      {
       "yazi": "Daha geç ve daha zayıf",
-      "neden": "Vücut antijene alışıp yanıtı azaltmaz. Hafıza hücreleri yanıtı tersine hızlandırır."
+      "neden": "Vücut antijene alışıp yanıtını azaltmaz. Hafıza hücreleri yanıtı tersine hızlandırır."
      },
      {
       "yazi": "Daha hızlı ve daha güçlü",
       "dogru": true,
-      "neden": "Hafıza hücreleri hemen çoğalır; antikor kısa sürede ve çok daha yüksek düzeye çıkar. Mikrop hastalık yapamadan etkisiz kalır. Aktif bağışıklık bu yüzden uzun sürer."
+      "neden": "Hafıza hücreleri hemen çoğalır ve antikor kısa sürede çok daha yüksek düzeye çıkar. Mikrop hastalık yapamadan etkisiz kalır. Aktif bağışıklığın uzun sürmesinin nedeni budur."
      }
     ]
    },
@@ -228,11 +228,11 @@
   }
  ],
  "kapanis": [
-  "Küçük dolaşımda kan akciğerde O₂ alır, büyük dolaşımda dokulara bırakır. Akciğer atardamarı oksijensiz kan taşır.",
-  "Kapakçıklar kanı tek yöne akıtır; dinlenmede bir döngü 0,8 s, yani dakikada 75 atımdır.",
-  "Kanın %55'i plazmadır; alyuvar O₂ taşır, akyuvar savunur, kan pulcuğu pıhtılaşmayı başlatır.",
-  "Basınç aorttan toplardamara düşer; kan, toplam kesiti en geniş olan kılcallarda en yavaş akar.",
-  "Alyuvar antijeni alıcının antikoruyla karşılaşırsa çökelme olur. Aşı hafıza hücresi bırakır; ikinci yanıt hızlı ve güçlüdür."
+  "Küçük dolaşımda kan akciğerde oksijen alır, büyük dolaşımda ise bu oksijeni dokulara bırakır. Akciğer atardamarı oksijensiz kan taşır.",
+  "Kapakçıklar kanın tek yönde akmasını sağlar. Dinlenmede bir kalp döngüsü 0,8 saniye sürer, bu da dakikada 75 atım eder.",
+  "Kanın %55'ini plazma oluşturur. Alyuvar oksijen taşır, akyuvar savunma yapar, kan pulcuğu ise pıhtılaşmayı başlatır.",
+  "Kan basıncı aorttan toplardamara doğru düşer. Kan, toplam kesiti en geniş olan kılcallarda en yavaş akar.",
+  "Alyuvardaki antijen alıcının antikoruyla karşılaşırsa çökelme olur. Aşı hafıza hücresi bırakır, bu yüzden ikinci yanıt hızlı ve güçlüdür."
  ],
  "soruOnce": true
 }
