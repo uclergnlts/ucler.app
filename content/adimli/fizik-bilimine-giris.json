@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "fizik-bilimine-giris",
  "baslik": "Fizik bilimine giriş",
- "ozet": "Önce dene, sonra adını öğren: deney yap, ölç, okun yönünü kendin çevir.",
+ "ozet": "Önce dene, sonra adını öğren. Deney yap, ölç ve okun yönünü kendin çevir.",
  "adimlar": [
   {
    "baslik": "Bir tahminle başla",
-   "metin": "İşe bir deneyle başlayalım: havası boşaltılmış tüpte çelik bilye ile tüy aynı anda bırakılıyor.",
+   "metin": "İşe bir deneyle başlayalım. Havası boşaltılmış bir tüpte çelik bilye ile tüy aynı anda bırakılıyor.",
    "sahne": {
     "tur": "fiz-dusme",
     "sure": 2
@@ -26,7 +26,7 @@
      },
      {
       "yazi": "Çelik bilye",
-      "neden": "Ağır olan önce düşer gibi gelir; ama havasız ortamda kütle, düşüşü hızlandırmaz."
+      "neden": "Ağır olan önce düşecekmiş gibi gelir. Ama havasız ortamda kütle düşüşü hızlandırmaz."
      },
      {
       "yazi": "Tüy",
@@ -38,7 +38,7 @@
   },
   {
    "baslik": "Farkı yaratan ne?",
-   "metin": "Günlük hayatta tüy yine de yavaş düşer. Bir <b>hipotez</b>, yani test edilebilir bir tahmin kur: farkı hava yaratıyor. Sınamak için aşağıdan <b>Hava var</b>'ı seç.",
+   "metin": "Günlük hayatta tüy yine de yavaş düşer. Bir <b>hipotez</b>, yani test edilebilir bir tahmin kur: farkı hava yaratıyor olabilir. Bunu sınamak için aşağıdan <b>Hava var</b> seçeneğini seç.",
    "sahne": {
     "tur": "fiz-dusme",
     "sure": 2
@@ -64,8 +64,8 @@
     "hedef": {
      "hava": 1
     },
-    "ipucu": "Aşağıdan “Hava var”ı seç; deney kendiliğinden yeniden oynar.",
-    "tamam": "Bilye neredeyse hiç etkilenmedi, tüy ise yavaşladı: farkı hava direnci yaratıyor. Hipotezin deneyle doğrulandı."
+    "ipucu": "Aşağıdan “Hava var” seçeneğini seç. Deney kendiliğinden yeniden oynar.",
+    "tamam": "Bilye neredeyse hiç etkilenmedi, tüy ise yavaşladı. Yani farkı hava direnci yaratıyor. Hipotezin deneyle doğrulandı."
    },
    "kart": 2
   },
@@ -92,13 +92,13 @@
     "hedef": {
      "n": 6
     },
-    "tamam": "Masa 6 çubuk, yani 150 cm = 1,5 m. 30 cm'lik çubukla ölçseydin 5 bulurdun: sayı birime bağlıdır. Bu yüzden sonuç hep <b>sayı + birim</b> yazılır ve herkes aynı birimleri, yani <b>SI</b> birimlerini kullanır."
+    "tamam": "Masa 6 çubuk, yani 150 cm (1,5 m) uzunluğunda. 30 cm'lik bir çubukla ölçseydin 5 bulurdun. Yani sayı birime bağlıdır. Bu yüzden sonuç her zaman <b>sayı ve birimle</b> yazılır ve herkes aynı birimleri, yani <b>SI</b> birimlerini kullanır."
    },
    "kart": 5
   },
   {
    "baslik": "Yedi temel büyüklük",
-   "metin": "SI'da yedi temel büyüklük var; diğer büyüklüklerin hepsi bunlardan kurulur. Tabloya bak.",
+   "metin": "SI'da yedi temel büyüklük vardır ve diğer bütün büyüklükler bunlardan kurulur. Tabloya bak.",
    "sahne": {
     "tur": "fiz-si-tablo"
    },
@@ -109,15 +109,15 @@
      {
       "yazi": "Uzunluk ve zamandan türetilir",
       "dogru": true,
-      "neden": "Sürat, uzunluk (m) ve zamandan (s) kurulur: birimi m/s'dir. Temel büyüklüklerden kurulan böyle büyüklüklere <b>türetilmiş</b> denir."
+      "neden": "Sürat, uzunluk (m) ve zamandan (s) kurulur ve birimi m/s'dir. Temel büyüklüklerden kurulan böyle büyüklüklere <b>türetilmiş</b> büyüklük denir."
      },
      {
       "yazi": "Sürat ölçülemez",
-      "neden": "Sürat ölçülebilir; arabadaki hız göstergesi bunu yapar. Birimine bak: m/s neyden oluşuyor?"
+      "neden": "Sürat ölçülebilir ve arabadaki hız göstergesi bunu yapar. Birimine bak: m/s neyden oluşuyor?"
      },
      {
       "yazi": "Sürat SI'da yer almaz",
-      "neden": "Sürat SI'da yer alır, birimi m/s'dir; yalnızca temel değildir. Hangi iki temel büyüklükten kurulduğuna bak."
+      "neden": "Sürat SI'da yer alır ve birimi m/s'dir, ama temel bir büyüklük değildir. Hangi iki temel büyüklükten kurulduğuna bak."
      }
     ]
    },
@@ -125,7 +125,7 @@
   },
   {
    "baslik": "Türetilmiş büyüklük",
-   "metin": "Bir koşucu 100 metre koşuyor; sürat = yol ÷ zaman. Süreyi değiştir, süratini 10 m/s yap.",
+   "metin": "Bir koşucu 100 metre koşuyor. Sürat, yolun zamana bölünmesiyle bulunur. Süreyi değiştir ve koşucunun süratini 10 m/s yap.",
    "sahne": {
     "tur": "fiz-kosu"
    },
@@ -147,13 +147,13 @@
     "hedef": {
      "t": 10
     },
-    "tamam": "100 m ÷ 10 s = 10 m/s: koşucu her saniye 10 m yol alıyor. Dünyanın en hızlı koşucuları 100 metreyi 10 saniyenin biraz altında koşar."
+    "tamam": "100 m ÷ 10 s = 10 m/s olur. Yani koşucu her saniye 10 m yol alıyor. Dünyanın en hızlı koşucuları 100 metreyi 10 saniyenin biraz altında koşar."
    },
    "kart": 7
   },
   {
    "baslik": "Yön gerekir mi?",
-   "metin": "\"3 km yürü\" dersem nereye varacağın belli değil. Okul, evin kuzeydoğusunda. Oku tutup çevir.",
+   "metin": "\"3 km yürü\" dersem nereye varacağın belli olmaz. Okul, evin kuzeydoğusunda. Oku tut ve çevir.",
    "sahne": {
     "tur": "fiz-yon",
     "surukle": true
@@ -177,17 +177,17 @@
     "hedef": {
      "yon": 45
     },
-    "tamam": "3 km, kuzeydoğu: artık nereye varacağın belli. Yer değiştirme, hız ve kuvvet gibi yön de isteyen büyüklüklere <b>vektörel</b> denir."
+    "tamam": "3 km kuzeydoğuya yürüyünce nereye varacağın artık bellidir. Yer değiştirme, hız ve kuvvet gibi yön de gerektiren büyüklüklere <b>vektörel</b> büyüklük denir."
    },
    "kart": 9
   }
  ],
  "kapanis": [
-  "Fizik; madde, enerji ve aralarındaki etkileşimi <b>gözlem, deney ve matematikle</b> inceler.",
+  "Fizik; maddeyi, enerjiyi ve bunlar arasındaki etkileşimi <b>gözlem, deney ve matematikle</b> inceler.",
   "<b>Hipotez</b> test edilebilir bir tahmindir. <b>Yasa</b> ne olduğunu söyler, <b>teori</b> nedenini açıklar.",
-  "Ölçmek, bilinen bir birimle karşılaştırmaktır; sonuç her zaman <b>sayı + birim</b>dir.",
-  "SI'da 7 <b>temel büyüklük</b> vardır; sürat (m/s) gibi diğerleri bunlardan <b>türetilir</b>.",
-  "<b>Skaler</b> büyüklükte yön yoktur; <b>vektörel</b> büyüklükte yön de gerekir."
+  "Ölçmek, bir büyüklüğü bilinen bir birimle karşılaştırmaktır. Sonuç her zaman <b>sayı ve birimden</b> oluşur.",
+  "SI'da 7 <b>temel büyüklük</b> vardır. Sürat (m/s) gibi diğer büyüklükler bunlardan <b>türetilir</b>.",
+  "<b>Skaler</b> büyüklükte yön yoktur. <b>Vektörel</b> büyüklükte ise yön de gerekir."
  ],
  "soruOnce": true
 }

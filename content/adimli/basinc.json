@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "basinc",
  "baslik": "Basınç",
- "ozet": "Önce dene, sonra adını öğren: tuğlayı bırak, kara bas, dalgıcı indir, arabayı kaldır.",
+ "ozet": "Önce dene, sonra adını öğren. Tuğlayı bırak, kara bas, dalgıcı indir ve arabayı kaldır.",
  "adimlar": [
   {
    "baslik": "Hangisi daha çok gömülür?",
-   "metin": "İki tuğla birbirinin aynısı, ikisi de 20 N. Biri <b>dik</b> duruyor, yani küçük yüzüyle süngere değecek. Öteki <b>yatık</b> duruyor ve geniş yüzüyle değecek.",
+   "metin": "İki tuğla birbirinin aynısı ve ikisinin de ağırlığı 20 N. Biri <b>dik</b> duruyor ve süngere küçük yüzüyle değecek. Öteki <b>yatık</b> duruyor ve geniş yüzüyle değecek.",
    "sahne": {
     "tur": "fiz2-tugla",
     "sure": 2
@@ -18,12 +18,12 @@
     "secenekler": [
      {
       "yazi": "Yatık duran",
-      "neden": "Yatık tuğla daha geniş bir yere değiyor; ağırlığı geniş alana yayılır."
+      "neden": "Yatık tuğla daha geniş bir yere değiyor. Ağırlığı geniş bir alana yayılır."
      },
      {
       "yazi": "Dik duran",
       "dogru": true,
-      "neden": "Kuvvet aynı, ama dik tuğla onu 4 kat küçük alana yığar; alan küçülünce basınç büyür. Dik tuğla 4000 Pa, yatık tuğla 1000 Pa yapar."
+      "neden": "Kuvvet aynıdır, ama dik tuğla onu 4 kat küçük bir alana yığar. Alan küçülünce basınç büyür. Dik tuğla 4000 Pa, yatık tuğla ise 1000 Pa basınç yapar."
      },
      {
       "yazi": "İkisi eşit gömülür",
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Kara gömülme",
-   "metin": "Ağırlığın 600 N ve karın üstündesin. Bu kar en çok 3000 Pa taşıyabiliyor. Ayakkabılarının yere değen alanını büyüt ve <b>kara gömülme</b>.",
+   "metin": "Ağırlığın 600 N ve karın üstündesin. Bu kar en çok 3000 Pa basınç taşıyabiliyor. Ayakkabılarının yere değen alanını büyüt ve <b>kara gömülme</b>.",
    "sahne": {
     "tur": "fiz2-kar"
    },
@@ -60,13 +60,13 @@
       30
      ]
     },
-    "tamam": "600 N ÷ 0,2 m² = 3000 Pa. Kar ayakkabısı ağırlığını değiştirmez, onu geniş alana yayar."
+    "tamam": "600 N ÷ 0,2 m² = 3000 Pa olur. Kar ayakkabısı ağırlığını değiştirmez, onu geniş bir alana yayar."
    },
    "kart": 2
   },
   {
    "baslik": "Derine dal",
-   "metin": "Suyun özkütlesi 1000 kg/m³, g ≈ 10 m/s². Dalgıcı aşağı indir, basıncı izle ve onu suyun basıncının 200.000 Pa olduğu derinlikte durdur.",
+   "metin": "Suyun özkütlesi 1000 kg/m³ ve g yaklaşık 10 m/s². Dalgıcı aşağı indir ve basıncı izle. Onu, suyun basıncının 200.000 Pa olduğu derinlikte durdur.",
    "sahne": {
     "tur": "fiz2-derinlik"
    },
@@ -88,13 +88,13 @@
     "hedef": {
      "h": 20
     },
-    "tamam": "20 × 1000 × 10 = 200.000 Pa: derinlik iki katına çıkınca sıvı basıncı da iki katına çıktı."
+    "tamam": "20 × 1000 × 10 = 200.000 Pa olur. Derinlik iki katına çıkınca sıvı basıncı da iki katına çıktı."
    },
    "kart": 3
   },
   {
    "baslik": "Kabın şekli",
-   "metin": "Geniş, dar ve huni biçimli üç kabı 20 cm yüksekliğe kadar suyla dolduracağız. Huni en çok suyu alıyor, dar kap en azını.",
+   "metin": "Geniş, dar ve huni biçimli üç kabı 20 cm yüksekliğe kadar suyla dolduracağız. Huni en çok suyu, dar kap en az suyu alıyor.",
    "sahne": {
     "tur": "fiz2-kaplar",
     "sure": 3
@@ -105,7 +105,7 @@
     "secenekler": [
      {
       "yazi": "Hunide",
-      "neden": "Hunide en çok su var, ama formül P = h·d·g: içinde miktar yok."
+      "neden": "Hunide en çok su var, ama formül P = h·d·g'dir ve içinde miktar yoktur."
      },
      {
       "yazi": "Geniş kapta",
@@ -114,7 +114,7 @@
      {
       "yazi": "Üçünde de eşit",
       "dogru": true,
-      "neden": "Sıvı basıncı yalnızca derinliğe ve özkütleye bağlıdır: 0,2 × 1000 × 10 = 2000 Pa; kabın şekli ve su miktarı fark etmez. Buna <b>hidrostatik paradoks</b> denir."
+      "neden": "Sıvı basıncı yalnızca derinliğe ve özkütleye bağlıdır ve 0,2 × 1000 × 10 = 2000 Pa olur. Kabın şekli ve su miktarı fark etmez. Buna <b>hidrostatik paradoks</b> denir."
      }
     ]
    },
@@ -122,7 +122,7 @@
   },
   {
    "baslik": "Hidrolik kaldıraç",
-   "metin": "Küçük pistonun alanı 10 cm² ve ona 200 N uyguluyorsun. 10.000 N'luk arabayı taşıyabilen en küçük büyük pistonu bul.",
+   "metin": "Küçük pistonun alanı 10 cm² ve ona 200 N kuvvet uyguluyorsun. 10.000 N'luk arabayı taşıyabilen en küçük büyük pistonu bul.",
    "sahne": {
     "tur": "fiz2-hidrolik"
    },
@@ -144,7 +144,7 @@
     "hedef": {
      "A2": 500
     },
-    "tamam": "500 cm², küçüğün 50 katı: 200 N × 50 = 10.000 N. Ama yoldan kaybedersin: küçük pistonu 50 cm itersen araba yalnızca 1 cm yükselir."
+    "tamam": "Büyük pistonun alanı 500 cm², yani küçüğün 50 katı olmalı. 200 N × 50 = 10.000 N eder. Ama yoldan kaybedersin. Küçük pistonu 50 cm itersen araba yalnızca 1 cm yükselir."
    },
    "kart": 6
   },
@@ -178,11 +178,11 @@
   }
  ],
  "kapanis": [
-  "<b>Basınç</b>, birim yüzeye dik etki eden kuvvetin büyüklüğüdür: P = F / A. Skalerdir; birimi pascal (1 Pa = 1 N/m²).",
-  "Kuvvet aynıysa alan küçüldükçe basınç büyür: bıçak keser, kar ayakkabısı gömülmez.",
-  "Sıvı basıncı <b>P = h·d·g</b>; derinlikle artar, kabın şekline ve sıvının miktarına bağlı değildir.",
-  "<b>Pascal ilkesi</b>: kapalı sıvıda basınç her yere iletilir. Hidrolikte F₁ / A₁ = F₂ / A₂.",
-  "Açık hava basıncı deniz seviyesinde 76 cmHg (1 atm) olur; yükseldikçe azalır ve su daha düşük sıcaklıkta kaynar."
+  "<b>Basınç</b>, birim yüzeye dik etki eden kuvvetin büyüklüğüdür ve P = F / A ile bulunur. Skalerdir ve birimi pascaldır (1 Pa = 1 N/m²).",
+  "Kuvvet aynıysa alan küçüldükçe basınç büyür. Bıçak bu yüzden keser, kar ayakkabısı ise bu yüzden gömülmez.",
+  "Sıvı basıncı <b>P = h·d·g</b> ile bulunur. Derinlikle artar ve kabın şekline ya da sıvının miktarına bağlı değildir.",
+  "<b>Pascal ilkesine</b> göre kapalı bir sıvıda basınç her yere iletilir. Hidrolik sistemde F₁ / A₁ = F₂ / A₂ olur.",
+  "Açık hava basıncı deniz seviyesinde 76 cmHg (1 atm) olur. Yükseldikçe azalır ve su daha düşük sıcaklıkta kaynar."
  ],
  "soruOnce": true
 }

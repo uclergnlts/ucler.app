@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "madde-ozellikleri",
  "baslik": "Madde ve özellikleri",
- "ozet": "Önce dene, sonra adını öğren: tart, dök, karıştır ve özkütleyi kendin bul.",
+ "ozet": "Önce dene, sonra adını öğren. Tart, dök, karıştır ve özkütleyi kendin bul.",
  "adimlar": [
   {
    "baslik": "Hangisi ağır basar?",
@@ -19,15 +19,15 @@
      {
       "yazi": "Terazi dengede kalır",
       "dogru": true,
-      "neden": "Eşit kollu terazi kütleleri karşılaştırır ve ikisi de 1 kg (havanın kaldırma etkisini yok sayarsak). Pamuk çok daha fazla yer kaplar, ama büyük hacim büyük kütle demek değildir."
+      "neden": "Eşit kollu terazi kütleleri karşılaştırır ve ikisi de 1 kg'dır (havanın kaldırma etkisini yok sayarsak). Pamuk çok daha fazla yer kaplar, ama büyük hacim büyük kütle demek değildir."
      },
      {
       "yazi": "Demir tarafı iner",
-      "neden": "Demir küçük bir yere sığdığı için ağır görünür, ama kütleler eşit."
+      "neden": "Demir küçük bir yere sığdığı için ağır görünür, ama kütleler eşittir."
      },
      {
       "yazi": "Pamuk tarafı iner",
-      "neden": "Pamuk daha çok yer kaplar; ama büyük hacim, büyük kütle demek değildir."
+      "neden": "Pamuk daha çok yer kaplar. Ama büyük hacim, büyük kütle demek değildir."
      }
     ]
    },
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Özkütle",
-   "metin": "Dereceli silindire su döküyorsun; terazi yalnızca suyun kütlesini gösteriyor. Suyun hacmini değiştir ve kütleyi <b>50 g</b> yap. Bu arada m / V oranına bak.",
+   "metin": "Dereceli silindire su döküyorsun ve terazi yalnızca suyun kütlesini gösteriyor. Suyun hacmini değiştir ve kütleyi <b>50 g</b> yap. Bu arada m / V oranına bak.",
    "sahne": {
     "tur": "fiz-silindir"
    },
@@ -58,13 +58,13 @@
     "hedef": {
      "V": 50
     },
-    "tamam": "50 cm³ su 50 g geldi. Hacim değişince kütle de aynı oranda değişti, ama m / V hep 1 g/cm³ kaldı: özkütle, maddenin miktarına bağlı değildir."
+    "tamam": "50 cm³ su 50 g geldi. Hacim değişince kütle de aynı oranda değişti, ama m / V oranı hep 1 g/cm³ kaldı. Yani özkütle, maddenin miktarına bağlı değildir."
    },
    "kart": 3
   },
   {
    "baslik": "Kütle-hacim grafiği",
-   "metin": "Üç maddenin kütlesini hacmine göre çizdik; her biri başlangıçtan geçen bir doğru.",
+   "metin": "Üç maddenin kütlesini hacmine göre çizdik. Her biri başlangıç noktasından geçen bir doğru oluşturuyor.",
    "sahne": {
     "tur": "fiz-mv-grafik"
    },
@@ -75,15 +75,15 @@
      {
       "yazi": "A",
       "dogru": true,
-      "neden": "Doğrusu en dik olan A: aynı hacimde en çok kütle onda. A alüminyum (2,7 g/cm³), B su (1 g/cm³), C tahta (yaklaşık 0,5 g/cm³)."
+      "neden": "Doğrusu en dik olan A'dır ve aynı hacimde en çok kütle ondadır. A alüminyum (2,7 g/cm³), B su (1 g/cm³), C ise tahtadır (yaklaşık 0,5 g/cm³)."
      },
      {
       "yazi": "B",
-      "neden": "B'nin doğrusu orta eğimde. Aynı hacimde, örneğin 20 cm³'te, hangisinin kütlesi daha büyük?"
+      "neden": "B'nin doğrusu orta eğimdedir. Aynı hacimde, örneğin 20 cm³'te, hangisinin kütlesi daha büyük?"
      },
      {
       "yazi": "C",
-      "neden": "C'nin doğrusu en yatık: aynı hacimde en az kütle onda, yani özkütlesi en küçük."
+      "neden": "C'nin doğrusu en yatık olanıdır. Aynı hacimde en az kütle ondadır, yani özkütlesi en küçüktür."
      }
     ]
    },
@@ -113,13 +113,13 @@
     "hedef": {
      "d": 10
     },
-    "tamam": "Cismin (ortalama) özkütlesi suyunkine eşit olunca askıda kalır; küçükse yüzer, büyükse batar. İçi boş cisimde ortalama özkütle sayılır: çelik gemi bu yüzden yüzer, ayrıntısı Kaldırma kuvveti konusunda."
+    "tamam": "Cismin (ortalama) özkütlesi suyunkine eşit olunca cisim askıda kalır. Küçükse yüzer, büyükse batar. İçi boş cisimlerde ortalama özkütle hesaba katılır. Çelik gemi bu yüzden yüzer ve ayrıntısını Kaldırma kuvveti konusunda göreceksin."
    },
    "kart": 4
   },
   {
    "baslik": "Karışımın özkütlesi",
-   "metin": "100 cm³ suya (1 g/cm³) alkol (0,8 g/cm³) ekliyorsun. Alkolü ayarla ve karışımı 0,9 g/cm³ yap.",
+   "metin": "100 cm³ suya (1 g/cm³) alkol (0,8 g/cm³) ekliyorsun. Alkol miktarını ayarla ve karışımın özkütlesini 0,9 g/cm³ yap.",
    "sahne": {
     "tur": "fiz-karisim"
    },
@@ -142,7 +142,7 @@
     "hedef": {
      "a": 100
     },
-    "tamam": "Eşit hacimde karıştırınca sonuç iki özkütlenin ortalaması olur: (100 + 80) g ÷ 200 cm³ = 0,9 g/cm³."
+    "tamam": "Eşit hacimlerde karıştırınca sonuç iki özkütlenin ortalaması olur. (100 + 80) g ÷ 200 cm³ = 0,9 g/cm³ eder."
    },
    "kart": 5
   },
@@ -160,11 +160,11 @@
      {
       "yazi": "En ince boruda",
       "dogru": true,
-      "neden": "Su cama yapışarak yükselir ve boru inceldikçe yükselme artar: buna <b>kılcallık</b> denir, bitkide suyun yükselmesi ve kâğıt havlunun ıslanması bundandır. Cama yapışmayan cıva ise ince boruda alçalır."
+      "neden": "Su cama yapışarak yükselir ve boru inceldikçe yükselme artar. Buna <b>kılcallık</b> denir. Bitkide suyun yükselmesi ve kâğıt havlunun ıslanması bundan kaynaklanır. Cama yapışmayan cıva ise ince boruda alçalır."
      },
      {
       "yazi": "En kalın boruda",
-      "neden": "Kalın boruda yukarı çekilecek su çok daha ağırdır; yapışma onu yukarıda tutamaz."
+      "neden": "Kalın boruda yukarı çekilecek su çok daha ağırdır. Yapışma onu yukarıda tutamaz."
      },
      {
       "yazi": "Hepsinde aynı",
@@ -176,11 +176,11 @@
   }
  ],
  "kapanis": [
-  "Kütle ve hacim her maddede bulunan <b>ortak</b> özelliklerdir; <b>özkütle</b> ise maddeyi tanıtan <b>ayırt edici</b> özelliktir.",
-  "<b>d = m / V</b>; kütle-hacim grafiğinde doğrunun eğimi özkütledir, daha dik doğru daha yoğun madde demektir.",
+  "Kütle ve hacim her maddede bulunan <b>ortak</b> özelliklerdir. <b>Özkütle</b> ise maddeyi tanıtan <b>ayırt edici</b> bir özelliktir.",
+  "Özkütle <b>d = m / V</b> ile bulunur. Kütle-hacim grafiğinde doğrunun eğimi özkütleyi verir ve daha dik doğru daha yoğun madde demektir.",
   "<b>Ortalama</b> özkütlesi sudan küçük cisim yüzer, eşit olan askıda kalır, büyük olan batar.",
-  "Karışımın özkütlesi d = m<sub>toplam</sub> / V<sub>son</sub>; sonuç iki özkütle arasındadır.",
-  "Yapışma ile tutmanın farkı <b>kılcallığı</b> doğurur; ince boruda su daha çok yükselir."
+  "Karışımın özkütlesi d = m<sub>toplam</sub> / V<sub>son</sub> ile bulunur. Sonuç iki özkütlenin arasında çıkar.",
+  "Yapışma ile tutma arasındaki fark <b>kılcallığa</b> yol açar. İnce boruda su daha çok yükselir."
  ],
  "soruOnce": true
 }

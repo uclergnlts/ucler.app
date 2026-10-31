@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "isi-sicaklik",
  "baslik": "Isı, sıcaklık ve genleşme",
- "ozet": "Önce dene, sonra adını öğren: termometreyi ayarla, su ile demiri ısıt, buzu erit, rayı genleştir.",
+ "ozet": "Önce dene, sonra adını öğren. Termometreyi ayarla, su ile demiri ısıt, buzu erit ve rayı genleştir.",
  "adimlar": [
   {
    "baslik": "Damla mı, kova mı?",
-   "metin": "1 atm'de kaynayan bir damla su ile bir kova suyun ikisi de 100 °C. <b>İç enerji</b>, bütün taneciklerin enerjilerinin toplamıdır.",
+   "metin": "1 atm'de kaynayan bir damla su ile bir kova suyun ikisi de 100 °C'dedir. <b>İç enerji</b>, bütün taneciklerin enerjilerinin toplamıdır.",
    "sahne": {
     "tur": "fiz3-damla-kova"
    },
@@ -17,7 +17,7 @@
     "secenekler": [
      {
       "yazi": "İkisininki eşit",
-      "neden": "Sıcaklıklar eşit, yani ortalama enerji eşit. Ama iç enerji bir ortalama değil, toplamdır."
+      "neden": "Sıcaklıklar eşittir, yani ortalama enerji eşittir. Ama iç enerji bir ortalama değil, bir toplamdır."
      },
      {
       "yazi": "Kovanın",
@@ -55,14 +55,14 @@
     "hedef": {
      "t": 27
     },
-    "ipucu": "T = t + 273 ise t = 300 − 273.",
-    "tamam": "300 − 273 = 27 °C; Fahrenheit'ta 1,8 × 27 + 32 = 80,6 °F."
+    "ipucu": "T = t + 273 olduğu için t = 300 − 273 olur.",
+    "tamam": "300 − 273 = 27 °C bulunur. Bu sıcaklık Fahrenheit ölçeğinde 1,8 × 27 + 32 = 80,6 °F'tir."
    },
    "kart": 3
   },
   {
    "baslik": "Öz ısı",
-   "metin": "100 g su ve 100 g demir aynı ısıtıcılara konuyor. İkisi de aynı ısıyı, 1000 cal alacak. Başlangıçta ikisi de 20 °C.",
+   "metin": "100 g su ve 100 g demir aynı ısıtıcılara konuyor. İkisi de aynı miktarda, 1000 cal ısı alacak. Başlangıçta ikisi de 20 °C'de.",
    "sahne": {
     "tur": "fiz3-ozisi",
     "sure": 3
@@ -73,7 +73,7 @@
     "secenekler": [
      {
       "yazi": "Su",
-      "neden": "Suyun öz ısısı çok büyüktür; aynı ısıyla az ısınır."
+      "neden": "Suyun öz ısısı çok büyüktür. Bu yüzden aynı ısıyla az ısınır."
      },
      {
       "yazi": "İkisi eşit artar",
@@ -82,7 +82,7 @@
      {
       "yazi": "Demir",
       "dogru": true,
-      "neden": "Demirin 1 g'ını 1 °C ısıtmak yaklaşık 0,11 cal ister, suyunkini 1 cal. Aynı 1000 cal suyu 10 °C, demiri yaklaşık 91 °C ısıtır."
+      "neden": "Demirin 1 g'ını 1 °C ısıtmak yaklaşık 0,11 cal, suyunkini ise 1 cal gerektirir. Aynı 1000 cal suyu 10 °C, demiri ise yaklaşık 91 °C ısıtır."
      }
     ]
    },
@@ -90,7 +90,7 @@
   },
   {
    "baslik": "Isıl denge",
-   "metin": "80 °C'deki 200 g su ile 20 °C'deki soğuk su karışıyor. Karışımı 44 °C yapacak soğuk suyu bul.",
+   "metin": "80 °C'deki 200 g su ile 20 °C'deki soğuk su karışıyor. Karışımı 44 °C yapacak soğuk su miktarını bul.",
    "sahne": {
     "tur": "fiz3-karisim"
    },
@@ -118,7 +118,7 @@
   },
   {
    "baslik": "Gizli ısı",
-   "metin": "0 °C'de 10 g buz var; buzun erime ısısı L = 80 cal/g. Buzun hepsini erit ama suyu ısıtma.",
+   "metin": "0 °C'de 10 g buz var ve buzun erime ısısı L = 80 cal/g. Buzun hepsini erit, ama suyu ısıtma.",
    "sahne": {
     "tur": "fiz3-erime"
    },
@@ -140,13 +140,13 @@
     "hedef": {
      "Q": 800
     },
-    "tamam": "10 g × 80 cal/g = 800 cal. Erime boyunca sıcaklık hep 0 °C kaldı; bundan sonra verilen ısı suyu ısıtır."
+    "tamam": "10 g × 80 cal/g = 800 cal gerekir. Erime boyunca sıcaklık hep 0 °C'de kaldı. Bundan sonra verilen ısı suyu ısıtır."
    },
    "kart": 6
   },
   {
    "baslik": "Ray uzar",
-   "metin": "10 m'lik çelik raylar arasında 6 mm boşluk var; çelikte λ ≈ 1,2·10⁻⁵ 1/°C. Sıcaklığı artır ve boşluğun tam kapandığı anı bul.",
+   "metin": "10 m'lik çelik raylar arasında 6 mm boşluk var ve çelikte λ yaklaşık 1,2·10⁻⁵ 1/°C. Sıcaklığı artır ve boşluğun tam kapandığı anı bul.",
    "sahne": {
     "tur": "fiz3-ray"
    },
@@ -168,17 +168,17 @@
     "hedef": {
      "dT": 50
     },
-    "tamam": "10.000 mm × 1,2·10⁻⁵ × 50 = 6 mm. Daha sıcak bir günde boşluk yetmez ve raylar eğrilir. Raylar arasına boşluk, köprülere genleşme derzi bu yüzden bırakılır."
+    "tamam": "10.000 mm × 1,2·10⁻⁵ × 50 = 6 mm eder. Daha sıcak bir günde boşluk yetmez ve raylar eğrilir. Raylar arasına boşluk, köprülere de genleşme derzi bu yüzden bırakılır."
    },
    "kart": 12
   }
  ],
  "kapanis": [
-  "<b>Sıcaklık</b> taneciklerin ortalama kinetik enerjisinin ölçüsüdür; madde miktarına bağlı değildir. <b>Isı</b> sıcaktan soğuğa aktarılan enerjidir.",
-  "<b>T = t + 273</b>, F = 1,8·t + 32.",
-  "Hâl değişmiyorsa <b>Q = m·c·ΔT</b>; öz ısısı büyük madde geç ısınır. Isıl dengede alınan ısı = verilen ısı.",
-  "Hâl değişirken <b>Q = m·L</b>; sıcaklık sabit kalır.",
-  "Isınan katı uzar: <b>ΔL = L₀·λ·ΔT</b>."
+  "<b>Sıcaklık</b>, taneciklerin ortalama kinetik enerjisinin ölçüsüdür ve madde miktarına bağlı değildir. <b>Isı</b> ise sıcaktan soğuğa aktarılan enerjidir.",
+  "Kelvin değeri <b>T = t + 273</b>, Fahrenheit değeri ise F = 1,8·t + 32 ile bulunur.",
+  "Hâl değişmiyorsa alınan ısı <b>Q = m·c·ΔT</b> ile bulunur ve öz ısısı büyük madde geç ısınır. Isıl dengede alınan ısı verilen ısıya eşittir.",
+  "Hâl değişirken alınan ısı <b>Q = m·L</b> ile bulunur ve sıcaklık sabit kalır.",
+  "Isınan bir katı uzar ve uzama <b>ΔL = L₀·λ·ΔT</b> ile bulunur."
  ],
  "soruOnce": true
 }

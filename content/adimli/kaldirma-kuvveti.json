@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "kaldirma-kuvveti",
  "baslik": "Sıvıların kaldırma kuvveti",
- "ozet": "Önce dene, sonra adını öğren: taşı suya daldır, gemiyi yükle, balonu kaldır.",
+ "ozet": "Önce dene, sonra adını öğren. Taşı suya daldır, gemiyi yükle ve balonu kaldır.",
  "adimlar": [
   {
    "baslik": "Su neden yukarı iter?",
@@ -25,7 +25,7 @@
      {
       "yazi": "Alt yüze",
       "dogru": true,
-      "neden": "Alt yüz daha derinde, sıvı basıncı derinlikle artar. Alttan gelen itme üstten gelenden 10 N büyük. Bu fark, yukarı yönlü <b>kaldırma kuvvetidir</b> (F<sub>k</sub>)."
+      "neden": "Alt yüz daha derindedir ve sıvı basıncı derinlikle artar. Alttan gelen itme, üstten gelenden 10 N büyüktür. Bu fark, yukarı yönlü <b>kaldırma kuvvetidir</b> (F<sub>k</sub>)."
      },
      {
       "yazi": "İkisine eşit",
@@ -37,7 +37,7 @@
   },
   {
    "baslik": "Taşı tart",
-   "metin": "Dinamometreye asılı taş havada <b>5 N</b> gösteriyor; hacmi 200 cm³. Taşı yavaşça suya indir ve <b>tamamen</b> daldır. Göstergeye bak.",
+   "metin": "Dinamometreye asılı taş havada <b>5 N</b> gösteriyor ve hacmi 200 cm³. Taşı yavaşça suya indir ve <b>tamamen</b> daldır. Sonra göstergeye bak.",
    "sahne": {
     "tur": "fiz2-dinamometre"
    },
@@ -60,13 +60,13 @@
     "hedef": {
      "V": 200
     },
-    "tamam": "Gösterge 3 N'a indi: F<sub>k</sub> = 5 − 3 = 2 N. Sağlaması: V<sub>batan</sub>·d<sub>sıvı</sub>·g = 0,0002 m³ (200 cm³) × 1000 kg/m³ × 10 m/s² = 2 N."
+    "tamam": "Gösterge 3 N'a indi. Yani F<sub>k</sub> = 5 − 3 = 2 N'dur. Sağlamasını yapalım: V<sub>batan</sub>·d<sub>sıvı</sub>·g = 0,0002 m³ × 1000 kg/m³ × 10 m/s² = 2 N eder."
    },
    "kart": 3
   },
   {
    "baslik": "Derine in",
-   "metin": "Baştaki 10 cm'lik küp tamamen suyun içinde. Onu yukarı aşağı oynat: üst ve alt yüzlerdeki kuvvetler nasıl değişiyor?",
+   "metin": "Baştaki 10 cm'lik küp tamamen suyun içinde. Onu yukarı aşağı oynat. Üst ve alt yüzlerdeki kuvvetler nasıl değişiyor?",
    "sahne": {
     "tur": "fiz2-basinc-fark"
    },
@@ -89,7 +89,7 @@
     "secenekler": [
      {
       "yazi": "Artar",
-      "neden": "Basınçlar artıyor, doğru. Ama ikisi birlikte artıyor; farka bak."
+      "neden": "Basınçların arttığı doğrudur. Ama ikisi birlikte artıyor. Farka bak."
      },
      {
       "yazi": "Azalır",
@@ -98,7 +98,7 @@
      {
       "yazi": "Değişmez",
       "dogru": true,
-      "neden": "İki yüzün kuvveti de aynı miktarda artar; aradaki fark hep 10 N kalır. F<sub>k</sub> batan hacme bağlıdır, derinliğe değil."
+      "neden": "İki yüzün kuvveti de aynı miktarda artar ve aradaki fark hep 10 N kalır. F<sub>k</sub> derinliğe değil, batan hacme bağlıdır."
      }
     ]
    },
@@ -128,13 +128,13 @@
     "hedef": {
      "dl": 12
     },
-    "tamam": "0,6 / 1,2 = 1/2: küpün yarısı batık. Yüzdüğü her sıvıda F<sub>k</sub> = G = 6 N kalır; değişen yalnızca batan hacimdir, yoğun sıvıda cisim az batar."
+    "tamam": "0,6 / 1,2 = 1/2 olduğu için küpün yarısı batıktır. Küpün yüzdüğü her sıvıda F<sub>k</sub> = G = 6 N kalır. Değişen yalnızca batan hacimdir ve yoğun sıvıda cisim daha az batar."
    },
    "kart": 6
   },
   {
    "baslik": "Gemiyi yükle",
-   "metin": "Gemiye konteyner yükle; su, gövdedeki yükleme çizgisine (sarı daire) gelince dur.",
+   "metin": "Gemiye konteyner yükle. Su, gövdedeki yükleme çizgisine (sarı daire) gelince dur.",
    "sahne": {
     "tur": "fiz2-gemi"
    },
@@ -155,13 +155,13 @@
     "hedef": {
      "n": 4
     },
-    "tamam": "Her konteyner gemiyi biraz daha batırdı: artan ağırlığı dengelemek için gemi daha çok su yerinden etmeli. Yükleme çizgisi, gemiyi güvenle ne kadar batırabileceğini gösterir."
+    "tamam": "Her konteyner gemiyi biraz daha batırdı. Artan ağırlığı dengelemek için gemi daha çok suyu yerinden etmelidir. Yükleme çizgisi, geminin güvenle ne kadar batabileceğini gösterir."
    },
    "kart": 9
   },
   {
    "baslik": "Denizaltı",
-   "metin": "Denizaltının hacmi değişmez; tamamen battığında F<sub>k</sub> de sabittir. Balast tanklarına deniz suyu aldı.",
+   "metin": "Denizaltının hacmi değişmez ve tamamen battığında F<sub>k</sub> de sabittir. Denizaltı balast tanklarına deniz suyu aldı.",
    "sahne": {
     "tur": "fiz2-denizalti",
     "sure": 3
@@ -180,7 +180,7 @@
      {
       "yazi": "Dalar",
       "dogru": true,
-      "neden": "Denizaltı hacmini değil ağırlığını değiştirir: su alınca G &gt; F<sub>k</sub> olur ve dalar, su basınçlı havayla atılınca G &lt; F<sub>k</sub> olur ve yükselir. G = F<sub>k</sub> olursa askıda kalır."
+      "neden": "Denizaltı hacmini değil, ağırlığını değiştirir. Su alınca G &gt; F<sub>k</sub> olur ve denizaltı dalar. Su basınçlı havayla atılınca G &lt; F<sub>k</sub> olur ve denizaltı yükselir. G = F<sub>k</sub> olursa askıda kalır."
      },
      {
       "yazi": "Olduğu yerde kalır",
@@ -192,7 +192,7 @@
   },
   {
    "baslik": "Balonu uçur",
-   "metin": "1 m³ helyum havadan yaklaşık 12 N kaldırma kuvveti alır; kendi ağırlığı yaklaşık 1,7 N. Sepet ve balonun zarı 40 N. Balonu büyüt ve yerden kaldır.",
+   "metin": "1 m³ helyum havadan yaklaşık 12 N kaldırma kuvveti alır ve kendi ağırlığı yaklaşık 1,7 N'dur. Sepet ile balonun zarı 40 N ağırlığında. Balonu büyüt ve yerden kaldır.",
    "sahne": {
     "tur": "fiz2-balon"
    },
@@ -217,16 +217,16 @@
       8
      ]
     },
-    "tamam": "4 m³'te F<sub>k</sub> = 48 N, toplam ağırlık 40 + 6,8 = 46,8 N: balon yükselir. Her m³ helyum net yaklaşık 10 N kaldırır."
+    "tamam": "4 m³'te F<sub>k</sub> = 48 N, toplam ağırlık ise 40 + 6,8 = 46,8 N olur. Bu yüzden balon yükselir. Her m³ helyum net olarak yaklaşık 10 N kaldırır."
    },
    "kart": 11
   }
  ],
  "kapanis": [
-  "Kaldırma kuvvetinin nedeni basınç farkıdır: alt yüz daha derinde olduğu için daha çok itilir.",
-  "<b>Arşimet ilkesi</b>: F<sub>k</sub> = V<sub>batan</sub>·d<sub>sıvı</sub>·g; görünür ağırlık = G − F<sub>k</sub>.",
+  "Kaldırma kuvvetinin nedeni basınç farkıdır. Alt yüz daha derinde olduğu için daha çok itilir.",
+  "<b>Arşimet ilkesine</b> göre F<sub>k</sub> = V<sub>batan</sub>·d<sub>sıvı</sub>·g olur. Görünür ağırlık ise G − F<sub>k</sub>'ye eşittir.",
   "Tamamen batmış cismi derine indirmek F<sub>k</sub>'yı değiştirmez.",
-  "Yüzen ve askıdaki cisimde F<sub>k</sub> = G; yüzen cisimde V<sub>batan</sub> / V = d<sub>cisim</sub> / d<sub>sıvı</sub>.",
+  "Yüzen ve askıdaki cisimde F<sub>k</sub> = G olur. Yüzen cisimde V<sub>batan</sub> / V = d<sub>cisim</sub> / d<sub>sıvı</sub> eşitliği geçerlidir.",
   "Gemi çok su yerinden ederek yüzer, denizaltı ağırlığını değiştirerek dalar, balon havadan kaldırma kuvveti alarak uçar."
  ],
  "soruOnce": true
