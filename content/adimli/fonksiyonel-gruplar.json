@@ -3,11 +3,11 @@
  "ders": "kimya",
  "konu": "fonksiyonel-gruplar",
  "baslik": "Fonksiyonel gruplar",
- "ozet": "Etana grup ekle, alkolleri suda çöz, etanolle eteri karşılaştır, alkolleri yükselt, aldehiti test et, ester ve sabun yap.",
+ "ozet": "Etana grup ekle ve alkolleri suda çöz. Etanolle eteri karşılaştır, alkolleri yükseltge, aldehiti test et, sonra ester ve sabun yap.",
  "adimlar": [
   {
    "baslik": "Grubu değiştir",
-   "metin": "Etandaki bir H'nin yerine farklı gruplar koy. Etanı suyla karışan bir sıvıya çevir.",
+   "metin": "Etandaki bir H'nin yerine farklı gruplar koy. Etanı suyla karışan bir sıvıya dönüştür.",
    "sahne": {
     "tur": "kim12-grup"
    },
@@ -29,13 +29,13 @@
      "g": 3
     },
     "ipucu": "Hangi grup suyla hidrojen bağı kurabilir?",
-    "tamam": "H'nin yerine gelen −OH, gaz hâlindeki etanı 78 °C'de kaynayan ve suyla her oranda karışan etanole çevirdi: −OH suyla hidrojen bağı kurar."
+    "tamam": "H'nin yerine gelen −OH, gaz hâlindeki etanı etanole dönüştürdü. Etanol 78 °C'de kaynar ve suyla her oranda karışır. Bunun nedeni −OH grubunun suyla hidrojen bağı kurmasıdır."
    },
    "kart": 1
   },
   {
    "baslik": "Zincir uzarsa",
-   "metin": "Alkolün −OH ucu polardır, karbon zinciri apolardır. Zinciri uzat ve suda çözünürlüğü izle. Suyla <b>her oranda karışan en uzun alkolü</b> bul.",
+   "metin": "Alkolün −OH ucu polar, karbon zinciri ise apolardır. Zinciri uzat ve suda çözünürlüğü izle. Suyla <b>her oranda karışan en uzun alkolü</b> bul.",
    "sahne": {
     "tur": "kim12-cozunur"
    },
@@ -57,13 +57,13 @@
      "n": 3
     },
     "ipucu": "Çubuğun mavi kaldığı son alkolü ara.",
-    "tamam": "Propanole kadar alkoller suyla her oranda karışır; bütanolden sonra çözünürlük hızla düşer."
+    "tamam": "Propanole kadar olan alkoller suyla her oranda karışır. Bütanolden sonra çözünürlük hızla düşer."
    },
    "kart": 3
   },
   {
    "baslik": "Aynı formül, farklı grup",
-   "metin": "Etanol ve dimetil eterin ikisi de C₂H₆O'dur: <b>fonksiyonel grup izomerleri</b>. Anahtarla ikisini karşılaştır.",
+   "metin": "Etanolün de dimetil eterin de formülü C₂H₆O'dur. Bu yüzden ikisi <b>fonksiyonel grup izomeridir</b>. Anahtarla ikisini karşılaştır.",
    "sahne": {
     "tur": "kim12-hbag"
    },
@@ -85,16 +85,16 @@
     "secenekler": [
      {
       "yazi": "Etanolün mol kütlesi daha büyüktür",
-      "neden": "İkisi de C₂H₆O'dur; mol kütleleri aynıdır (46 g/mol)."
+      "neden": "İkisinin de formülü C₂H₆O'dur ve mol kütleleri aynıdır (46 g/mol)."
      },
      {
       "yazi": "Etanol molekülleri birbirine hidrojen bağıyla tutunur",
-      "neden": "Etanolün O−H'si komşu molekülün O'suna hidrojen bağı kurar. Eterde O−H yoktur; molekülleri birbirini zayıf çeker.",
+      "neden": "Etanolün O−H grubu, komşu molekülün O atomuyla hidrojen bağı kurar. Eterde O−H yoktur ve molekülleri birbirini zayıf çeker.",
       "dogru": true
      },
      {
       "yazi": "Eterde atomlar arasındaki bağlar zayıftır",
-      "neden": "Kaynarken molekül içindeki bağlar kopmaz; aşılan, moleküller arası çekimdir."
+      "neden": "Kaynarken molekül içindeki bağlar kopmaz. Aşılan, moleküller arasındaki çekimdir."
      }
     ]
    },
@@ -113,15 +113,15 @@
     "secenekler": [
      {
       "yazi": "Etanol",
-      "neden": "Etanol birincil alkoldür; −OH'li karbonunda 2 H vardır. Önce etanale, sonra asetik aside yükseltgenir."
+      "neden": "Etanol birincil alkoldür ve −OH taşıyan karbonunda 2 H vardır. Önce etanale, sonra asetik aside yükseltgenir."
      },
      {
       "yazi": "2-propanol",
-      "neden": "2-propanol ikincildir; −OH'li karbonunda 1 H vardır. Propanona (asetona) yükseltgenir."
+      "neden": "2-propanol ikincil alkoldür ve −OH taşıyan karbonunda 1 H vardır. Propanona (asetona) yükseltgenir."
      },
      {
       "yazi": "2-metil-2-propanol",
-      "neden": "Üçüncül alkolün −OH'li karbonunda hiç H yoktur; koparılacak H olmadığı için bu koşullarda yükseltgenmez.",
+      "neden": "Üçüncül alkolün −OH taşıyan karbonunda hiç H yoktur. Koparılacak H olmadığı için bu koşullarda yükseltgenmez.",
       "dogru": true
      }
     ]
@@ -154,15 +154,15 @@
     "secenekler": [
      {
       "yazi": "Benzaldehit",
-      "neden": "Benzaldehit bir aldehittir; Tollens'le gümüş aynası verir."
+      "neden": "Benzaldehit bir aldehittir ve Tollens ayıracıyla gümüş aynası verir."
      },
      {
       "yazi": "Propanal",
-      "neden": "Propanal alifatik bir aldehittir; iki testi de verir."
+      "neden": "Propanal alifatik bir aldehittir ve iki testi de verir."
      },
      {
       "yazi": "Propanon",
-      "neden": "Propanon ketondur; karbonil C'sinde koparılacak H yoktur, ne gümüş aynası ne Cu₂O oluşur.",
+      "neden": "Propanon bir ketondur ve karbonil karbonunda koparılacak H yoktur. Bu yüzden ne gümüş aynası ne de Cu₂O oluşur.",
       "dogru": true
      }
     ]
@@ -171,7 +171,7 @@
   },
   {
    "baslik": "Ester yap",
-   "metin": "Asit + alkol ⇌ ester + su. Ester adında önce alkolün alkili, sonra asidin -oat'ı gelir. Asidi ve alkolü seçerek ananas kokulu etil bütanoatı yap.",
+   "metin": "Asit ile alkolden ester ve su oluşur. Esterin adında önce alkolün alkil grubu, sonra asidin -oat eki gelir. Asidi ve alkolü seçerek ananas kokulu etil bütanoatı yap.",
    "sahne": {
     "tur": "kim12-ester"
    },
@@ -202,7 +202,7 @@
      "b": 1
     },
     "ipucu": "Adın ilk kısmı alkolden (etil), ikinci kısmı asitten (bütanoat) gelir.",
-    "tamam": "Bütanoik asit + etanol ⇌ etil bütanoat + su. Tepkime tersinirdir; ester suyla geri parçalanabilir (ester hidrolizi)."
+    "tamam": "Bütanoik asit ile etanolden etil bütanoat ve su oluşur. Tepkime tersinirdir ve ester suyla geri parçalanabilir. Buna ester hidrolizi denir."
    },
    "kart": 11
   },
@@ -230,18 +230,18 @@
      "n": 3
     },
     "ipucu": "Kaç ester bağı var?",
-    "tamam": "1 mol trigliserit + 3 mol NaOH → 1 mol gliserol + 3 mol sabun. Sabun, yağ asidinin sodyum tuzudur."
+    "tamam": "1 mol trigliserit ile 3 mol NaOH'tan 1 mol gliserol ve 3 mol sabun oluşur. Sabun, yağ asidinin sodyum tuzudur."
    },
    "kart": 12
   }
  ],
  "kapanis": [
-  "Bileşiğin karakterini fonksiyonel grup belirler: etana eklenen tek bir −OH, bu gazı suyla karışan bir sıvıya çevirir.",
-  "İlk üç alkol suyla her oranda karışır; zincir uzadıkça çözünürlük azalır.",
-  "Etanol ile dimetil eter fonksiyonel grup izomeridir; etanol hidrojen bağı kurduğu için çok daha yüksekte kaynar.",
-  "1° alkol → aldehit → asit, 2° alkol → keton; 3° alkol yükseltgenmez.",
-  "Aldehit Tollens'i verir, keton vermez; benzaldehit Fehling'i vermez.",
-  "Asit + alkol ⇌ ester + su; 1 mol yağ 3 mol NaOH ile sabunlaşır."
+  "Bileşiğin karakterini fonksiyonel grup belirler. Etana eklenen tek bir −OH, bu gazı suyla karışan bir sıvıya dönüştürür.",
+  "İlk üç alkol suyla her oranda karışır. Zincir uzadıkça çözünürlük azalır.",
+  "Etanol ile dimetil eter fonksiyonel grup izomeridir. Etanol hidrojen bağı kurduğu için çok daha yüksek sıcaklıkta kaynar.",
+  "1° alkol önce aldehite, sonra aside dönüşür. 2° alkol ketona dönüşür. 3° alkol ise yükseltgenmez.",
+  "Aldehit Tollens testini verir, keton vermez. Benzaldehit ise Fehling testini vermez.",
+  "Asit ile alkolden ester ve su oluşur. 1 mol yağ, 3 mol NaOH ile sabunlaşır."
  ],
  "soruOnce": true
 }

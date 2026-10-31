@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Beher mi, damla mı?",
-   "metin": "Aynı tepkimeyi önce beherde, sonra kuyucuklu plakada yap. Anahtarla karşılaştır.",
+   "metin": "Aynı tepkimeyi önce beherde, sonra kuyucuklu plakada yap. Anahtarla ikisini karşılaştır.",
    "sahne": {
     "tur": "kim14-mikro"
    },
@@ -30,15 +30,15 @@
      {
       "yazi": "100 kat",
       "dogru": true,
-      "neden": "Atık 50 mL'den 0,5 mL'ye indi: 50 ÷ 0,5 = 100. Kimyasal da 100 kat, yıkama suyu 25 kat azaldı."
+      "neden": "Atık 50 mL'den 0,5 mL'ye indi ve 50 ÷ 0,5 = 100 olur. Kimyasal da 100 kat, yıkama suyu ise 25 kat azaldı."
      },
      {
       "yazi": "10 kat",
-      "neden": "50 ÷ 0,5 işlemini yap: 10'dan çok daha büyük."
+      "neden": "50 ÷ 0,5 işlemini yap. Sonuç 10'dan çok daha büyüktür."
      },
      {
       "yazi": "2 kat",
-      "neden": "Çubuklara bak: mikro ölçekteki atık neredeyse görünmüyor."
+      "neden": "Çubuklara bak. Mikro ölçekteki atık neredeyse görünmüyor."
      }
     ]
    },
@@ -46,7 +46,7 @@
   },
   {
    "baslik": "Küpü böl",
-   "metin": "1 cm³'lük küpü gittikçe küçük küplere böl. Toplam yüzey <b>yaklaşık 60 m²</b>, yani bir sınıf tabanı kadar olsun.",
+   "metin": "1 cm³'lük küpü gittikçe daha küçük küplere böl. Toplam yüzey <b>yaklaşık 60 m²</b>, yani bir sınıfın tabanı kadar olsun.",
    "sahne": {
     "tur": "kim14-nano"
    },
@@ -71,14 +71,14 @@
       5
      ]
     },
-    "tamam": "Kenar <b>100 nm</b> olunca 1 cm³ maddenin yüzeyi 60 m²'yi bulur. Nanoparçacıkların bu kadar etkin olmasının nedeni budur: tepkime yüzeyde olur.",
+    "tamam": "Kenar <b>100 nm</b> olunca 1 cm³ maddenin yüzeyi 60 m²'yi bulur. Tepkimeler yüzeyde olduğu için nanoparçacıklar bu kadar etkindir.",
     "ipucu": "Kenar her 10'a bölündüğünde yüzey 10 kat artar."
    },
    "kart": 3
   },
   {
    "baslik": "Özüt damlat",
-   "metin": "Gümüş nitrat çözeltisine çay posasından hazırlanan özüt damlatılacak.",
+   "metin": "Gümüş nitrat çözeltisine, çay posasından hazırlanan özüt damlatılacak.",
    "sahne": {
     "tur": "kim14-gumus",
     "sure": 6
@@ -90,15 +90,15 @@
      {
       "yazi": "Renk sarı-kahverengiye döner",
       "dogru": true,
-      "neden": "Özütteki polifenoller Ag⁺ iyonlarını Ag'ye indirger; oluşan gümüş nanoparçacıklar ışığı soğurup çözeltiye sarı-kahve renk verir."
+      "neden": "Özütteki polifenoller Ag⁺ iyonlarını Ag'ye indirger. Oluşan gümüş nanoparçacıklar ışığı soğurur ve çözeltiye sarı-kahve renk verir."
      },
      {
       "yazi": "Mavi olur",
-      "neden": "Mavi renk bakır(II) iyonlarına özgüdür; burada gümüş var."
+      "neden": "Mavi renk bakır(II) iyonlarına özgüdür. Burada ise gümüş var."
      },
      {
       "yazi": "Hiçbir şey değişmez",
-      "neden": "Özüt indirgendir; Ag⁺ ile tepkimeye girer ve renk değişir."
+      "neden": "Özüt bir indirgendir. Ag⁺ ile tepkimeye girer ve renk değişir."
      }
     ]
    },
@@ -229,7 +229,7 @@
      "kosul": 1,
      "olcum": 3
     },
-    "tamam": "Nar kabuğundaki polifenoller Cu²⁺ iyonlarını Cu atomuna indirger, ısı tepkimeyi hızlandırır. Bakır nanoparçacıkların soğurma tepesi ≈ 570 nm'dedir. Bakır havada kolay yükseltgendiği için ölçüm hemen yapılır.",
+    "tamam": "Nar kabuğundaki polifenoller Cu²⁺ iyonlarını Cu atomuna indirger ve ısı tepkimeyi hızlandırır. Bakır nanoparçacıkların soğurma tepesi yaklaşık 570 nm'dedir. Bakır havada kolay yükseltgendiği için ölçüm hemen yapılır.",
     "ipucu": "Gümüş deneyindeki adımları bakıra uyarla."
    },
    "kart": 4
@@ -271,15 +271,15 @@
      {
       "yazi": "Nar kabuğu",
       "dogru": true,
-      "neden": "Koşullar aynı, tepeler aynı yerde (boyutlar benzer); körü çıkarılmış en büyük soğurma en çok parçacık demektir."
+      "neden": "Koşullar aynıdır ve tepeler aynı yerdedir, yani boyutlar benzerdir. Körü çıkarılmış en büyük soğurma, en çok parçacık demektir."
      },
      {
       "yazi": "Çay posası",
-      "neden": "Çay posasının soğurması (0,62) nar kabuğundan (0,95) küçük."
+      "neden": "Çay posasının soğurması (0,62), nar kabuğununkinden (0,95) küçüktür."
      },
      {
       "yazi": "Portakal kabuğu",
-      "neden": "En küçük soğurma (0,31) portakal kabuğunda; en az parçacık onda."
+      "neden": "En küçük soğurma (0,31) portakal kabuğundadır. En az parçacık da ondadır."
      }
     ]
    },
@@ -322,15 +322,15 @@
      {
       "yazi": "Portakal kabuğu",
       "dogru": true,
-      "neden": "Tepesi 640 nm'ye kaymış: parçacıkların boyutu ya da türü farklı (ör. yükseltgenmiş bakır). Soğurması büyük olsa da miktarı doğrudan kıyaslanamaz."
+      "neden": "Bu örneğin tepesi 640 nm'ye kaymış. Yani parçacıkların boyutu ya da türü farklıdır (örneğin yükseltgenmiş bakır). Soğurması büyük olsa da miktarı doğrudan kıyaslanamaz."
      },
      {
       "yazi": "Çay posası",
-      "neden": "Tepesi bakır aralığında (≈ 570 nm); diğerleriyle kıyaslanabilir."
+      "neden": "Bu örneğin tepesi bakır aralığındadır (yaklaşık 570 nm). Bu yüzden diğerleriyle kıyaslanabilir."
      },
      {
       "yazi": "Nar kabuğu",
-      "neden": "Tepesi bakır aralığında (≈ 570 nm); soğurması küçük ama kıyaslanabilir."
+      "neden": "Bu örneğin tepesi bakır aralığındadır (yaklaşık 570 nm). Soğurması küçüktür, ama kıyaslanabilir."
      }
     ]
    },
@@ -350,11 +350,11 @@
      {
       "yazi": "Zincirin tepesinde, insanda",
       "dogru": true,
-      "neden": "Her canlı çok sayıda av yer ve cıvayı aldığından çok daha yavaş atar. Basamak arttıkça derişim katlanır: biyolojik büyütme."
+      "neden": "Her canlı çok sayıda av yer ve cıvayı aldığından çok daha yavaş atar. Basamak arttıkça derişim katlanır. Buna biyolojik büyütme denir."
      },
      {
       "yazi": "Suda",
-      "neden": "Suda derişim en düşüktür; cıva canlılara geçip orada birikir."
+      "neden": "Suda derişim en düşüktür. Cıva canlılara geçer ve orada birikir."
      },
      {
       "yazi": "Her yerde eşit",
@@ -366,7 +366,7 @@
   },
   {
    "baslik": "Esnek film",
-   "metin": "10 g nişastayla film yapıyorsun. Gliserol oranını ayarla: film <b>esnek</b> olsun, ne kırılsın ne yapışsın.",
+   "metin": "10 g nişastayla film yapıyorsun. Gliserol oranını ayarla. Film <b>esnek</b> olsun, ne kırılsın ne yapışsın.",
    "sahne": {
     "tur": "kim14-film"
    },
@@ -392,14 +392,14 @@
       40
      ]
     },
-    "tamam": "Gliserol nişasta zincirlerinin arasına girer, onları biraz ayırır: film bükülür ama dağılmaz. Polimer tasarımı, bileşenleri amaca göre seçmektir.",
-    "ipucu": "Kırılıyorsa gliserolü artır, yapışıyorsa azalt."
+    "tamam": "Gliserol nişasta zincirlerinin arasına girer ve onları biraz ayırır. Böylece film bükülür, ama dağılmaz. Polimer tasarımı, bileşenleri amaca göre seçmektir.",
+    "ipucu": "Film kırılıyorsa gliserolü artır, yapışıyorsa azalt."
    },
    "kart": 10
   },
   {
    "baslik": "Bakteriye uygun ortam",
-   "metin": "pH'ı ve sıcaklığı ayarla, sonra oynat: balonda <b>en çok hidrojeni</b> topla.",
+   "metin": "pH'ı ve sıcaklığı ayarla, sonra oynat. Balonda <b>en çok hidrojeni</b> topla.",
    "sahne": {
     "tur": "kim14-hidrojen",
     "sure": 5
@@ -440,16 +440,16 @@
      ]
     },
     "tamam": "Hafif asidik (pH ≈ 5,5) ve ılık (≈ 35 °C) ortam bu bakteriler için en uygunudur. Gerçek deneyde atık türü, miktar ve süre sabit tutulur.",
-    "ipucu": "Ortamı hafif asidik yap; sıcaklığı vücut sıcaklığına yaklaştır."
+    "ipucu": "Ortamı hafif asidik yap ve sıcaklığı vücut sıcaklığına yaklaştır."
    },
    "kart": 11
   }
  ],
  "kapanis": [
-  "Atığı önlemek, temizlemekten iyidir; mikro ölçek bunu laboratuvarda sağlar.",
-  "Küçüldükçe yüzey büyür; nano ölçekte madde farklı davranır.",
-  "Atık özütüyle gümüş ve bakır nanoparçacık yapılır; karşılaştırmada tek değişken atık türüdür, tepe yeri aynıysa körü çıkarılmış soğurma kıyaslanır.",
-  "Ağır metal canlıda birikir; cıva besin zincirinde basamak basamak derişir.",
+  "Atığı önlemek, temizlemekten iyidir. Mikro ölçek bunu laboratuvarda sağlar.",
+  "Madde küçüldükçe yüzeyi büyür. Nano ölçekte madde farklı davranır.",
+  "Atık özütüyle gümüş ve bakır nanoparçacık yapılır. Karşılaştırmada tek değişken atık türüdür. Tepe yeri aynıysa körü çıkarılmış soğurmalar kıyaslanır.",
+  "Ağır metaller canlıda birikir. Cıva besin zincirinde basamak basamak derişir.",
   "Biyobozunur film ve atıktan hidrojen, bileşen ve koşul seçimine bağlıdır."
  ],
  "soruOnce": true

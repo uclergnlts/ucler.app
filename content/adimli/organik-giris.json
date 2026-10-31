@@ -30,7 +30,7 @@
      "h": 4
     },
     "ipucu": "Kesik çizgiler boşta kalan bağlardır.",
-    "tamam": "CH₄, metan: en basit organik bileşik. Dört bağ, düzgün dörtyüzlünün köşelerine yönelir."
+    "tamam": "Bu bileşik CH₄, yani metandır ve en basit organik bileşiktir. Dört bağ, düzgün bir dörtyüzlünün köşelerine yönelir."
    },
    "kart": 4
   },
@@ -58,14 +58,14 @@
     "hedef": {
      "h": 2
     },
-    "ipucu": "İkili bağ 2 bağ sayılır; 4'e tamamla.",
-    "tamam": "C₂H₄, eten: ikili bağ 2, iki H de 2 bağ eder. Üçlü bağlı etinde (C₂H₂) her karbona tek H kalır."
+    "ipucu": "İkili bağ 2 bağ sayılır. Bağ sayısını 4'e tamamla.",
+    "tamam": "Bu bileşik C₂H₄, yani etendir. İkili bağ 2, iki H de 2 bağ eder. Üçlü bağlı etinde (C₂H₂) ise her karbona tek H kalır."
    },
    "kart": 4
   },
   {
    "baslik": "Hibrit ve açı",
-   "metin": "Bağ türü, karbonun çevresindeki geometriyi belirler. Bağ türünü değiştir; hibriti ve bağ açısını izle.",
+   "metin": "Bağ türü, karbonun çevresindeki geometriyi belirler. Bağ türünü değiştir ve hibriti ile bağ açısını izle.",
    "sahne": {
     "tur": "kim11-hibrit"
    },
@@ -91,11 +91,11 @@
      },
      {
       "yazi": "sp², 120°, düzlem üçgen",
-      "neden": "sp² karbonun üç komşusu olur: bir ikili ve iki tekli bağ. CO₂'de karbonun yalnızca iki O komşusu var."
+      "neden": "sp² hibritleşmiş karbonun üç komşusu olur. Bunlar bir ikili ve iki tekli bağdır. CO₂'de ise karbonun yalnızca iki O komşusu vardır."
      },
      {
       "yazi": "sp, 180°, doğrusal",
-      "neden": "Üçlü bağ ya da iki ikili bağ yapan karbon sp'dir: O=C=O 180° doğrusaldır. Bu yüzden iki C=O dipolü birbirini götürür; CO₂ apolardır.",
+      "neden": "Üçlü bağ ya da iki ikili bağ yapan karbon sp hibritleşir. O=C=O molekülü 180° açıyla doğrusaldır. Bu yüzden iki C=O dipolü birbirini götürür ve CO₂ apolardır.",
       "dogru": true
      }
     ]
@@ -104,7 +104,7 @@
   },
   {
    "baslik": "σ ve π say",
-   "metin": "Tekli bağ 1σ, üçlü bağ 1σ + 2π'dir. Propindeki (CH₃–C≡CH) σ ve π bağlarını say.",
+   "metin": "Tekli bağ 1σ, üçlü bağ 1σ + 2π'den oluşur. Propindeki (CH₃–C≡CH) σ ve π bağlarını say.",
    "sahne": {
     "tur": "kim11-sigmapi"
    },
@@ -134,14 +134,14 @@
      "s": 6,
      "p": 2
     },
-    "ipucu": "C–H bağlarını da say: her biri bir σ'dır.",
-    "tamam": "4 C–H + 2 C–C = <b>6σ</b>; üçlü bağ fazladan <b>2π</b> katar."
+    "ipucu": "C–H bağlarını da say. Her biri bir σ bağıdır.",
+    "tamam": "4 C–H ve 2 C–C bağı toplam <b>6σ</b> eder. Üçlü bağ ayrıca <b>2π</b> ekler."
    },
    "kart": 8
   },
   {
    "baslik": "Formül türleri",
-   "metin": "Aynı molekül farklı biçimlerde yazılır. Bütanın formüllerini gez; üstteki sekmelere de dokunabilirsin.",
+   "metin": "Aynı molekül farklı biçimlerde yazılabilir. Bütanın formüllerini gez. Üstteki sekmelere de dokunabilirsin.",
    "sahne": {
     "tur": "kim11-formul"
    },
@@ -163,16 +163,16 @@
     "secenekler": [
      {
       "yazi": "CH₄ ve C₂H₆",
-      "neden": "CH₄'ün basit formülü CH₄, C₂H₆'nınki CH₃'tür; C:H oranları farklı."
+      "neden": "CH₄'ün basit formülü CH₄, C₂H₆'nınki ise CH₃'tür. C:H oranları farklıdır."
      },
      {
       "yazi": "C₂H₂ ve C₆H₆",
-      "neden": "İkisinde de C:H oranı 1:1, basit formül CH'dir. Onları ayırmak için mol kütlesi gerekir: 26 ve 78 g/mol.",
+      "neden": "İkisinde de C:H oranı 1:1'dir ve basit formül CH'dir. Onları ayırmak için mol kütlesi gerekir. Mol kütleleri 26 ve 78 g/mol'dür.",
       "dogru": true
      },
      {
       "yazi": "C₂H₄ ve C₂H₆",
-      "neden": "C₂H₄'ün basit formülü CH₂, C₂H₆'nınki CH₃'tür. Karbon sayısı aynı olsa da oran farklı."
+      "neden": "C₂H₄'ün basit formülü CH₂, C₂H₆'nınki ise CH₃'tür. Karbon sayısı aynı olsa da oran farklıdır."
      }
     ]
    },
@@ -202,7 +202,7 @@
     "secenekler": [
      {
       "yazi": "İzomer değildirler",
-      "neden": "İkisinde de 4 C ve 10 H var: kapalı formül C₄H₁₀, yani aynı."
+      "neden": "İkisinde de 4 C ve 10 H vardır. Yani kapalı formül aynıdır (C₄H₁₀)."
      },
      {
       "yazi": "Aynı maddedir",
@@ -210,7 +210,7 @@
      },
      {
       "yazi": "Zincir izomeridirler",
-      "neden": "Kapalı formül aynı (C₄H₁₀), karbon iskeleti farklı: bu zincir izomerliğidir. Yapı değişince özellikler de değişir.",
+      "neden": "Kapalı formül aynıdır (C₄H₁₀), ama karbon iskeleti farklıdır. Buna zincir izomerliği denir. Yapı değişince özellikler de değişir.",
       "dogru": true
      }
     ]
@@ -219,7 +219,7 @@
   },
   {
    "baslik": "Cis mi, trans mı?",
-   "metin": "Trans izomerde iki Cl ikili bağın zıt taraflarındadır. Sağ karbona Cl koy ve o karbonu çevir: trans-1,2-dikloroeteni kur.",
+   "metin": "Trans izomerde iki Cl, ikili bağın zıt taraflarındadır. Sağdaki karbona Cl koy ve o karbonu çevirerek trans-1,2-dikloroeteni kur.",
    "sahne": {
     "tur": "kim11-cistrans"
    },
@@ -249,18 +249,18 @@
      "m": 1,
      "y": 1
     },
-    "ipucu": "Trans: iki Cl zıt taraflarda.",
-    "tamam": "Trans-1,2-dikloroeten: iki Cl zıt tarafta, dipoller birbirini götürür, molekül apolar. Cis'in kaynama noktası bu yüzden daha yüksektir."
+    "ipucu": "Trans izomerde iki Cl zıt taraflardadır.",
+    "tamam": "Trans-1,2-dikloroeteni kurdun. İki Cl zıt taraftadır, dipoller birbirini götürür ve molekül apolardır. Cis izomerin kaynama noktası bu yüzden daha yüksektir."
    },
    "kart": 15
   }
  ],
  "kapanis": [
-  "Kararlı organik bileşiklerde karbon <b>dört bağ</b> yapar; C=C iki, C≡C üç bağ sayılır.",
-  "Hep tekli bağ → <b>sp³</b> (109,5°); bir ikili → <b>sp²</b> (120°); üçlü ya da iki ikili → <b>sp</b> (180°).",
-  "Tekli bağ 1σ, ikili 1σ + 1π, üçlü 1σ + 2π'dir; C–H bağları da σ'dır.",
-  "Kapalı formül atom sayılarını, basit formül en küçük oranı verir: C₂H₂ ile C₆H₆'nın basit formülü aynıdır (CH).",
-  "<b>İzomerler</b> aynı kapalı formüllü, farklı yapılı maddelerdir: bütan ile 2-metilpropan zincir izomeri, cis ve trans dikloroeten geometrik izomerdir."
+  "Kararlı organik bileşiklerde karbon <b>dört bağ</b> yapar. C=C iki bağ, C≡C üç bağ sayılır.",
+  "Yalnızca tekli bağ yapan karbon <b>sp³</b> (109,5°), bir ikili bağ yapan <b>sp²</b> (120°), üçlü ya da iki ikili bağ yapan ise <b>sp</b> (180°) hibritleşir.",
+  "Tekli bağ 1σ, ikili bağ 1σ + 1π, üçlü bağ 1σ + 2π'den oluşur. C–H bağları da σ bağıdır.",
+  "Kapalı formül atom sayılarını, basit formül en küçük oranı gösterir. Örneğin C₂H₂ ile C₆H₆'nın basit formülü aynıdır (CH).",
+  "Kapalı formülü aynı, yapısı farklı maddelere <b>izomer</b> denir. Bütan ile 2-metilpropan zincir izomeridir. Cis ve trans dikloroeten ise geometrik izomerdir."
  ],
  "soruOnce": true
 }

@@ -3,11 +3,11 @@
  "ders": "kimya",
  "konu": "enerji-kaynaklari",
  "baslik": "Enerji kaynakları ve bilimsel gelişmeler",
- "ozet": "Ham petrolü damıt, yakıtların CO₂'sini karşılaştır, sera gazlarını kaldır, asit yağmurunu izle, santralleri incele, atom ekonomisini ve nano yüzeyi hesapla.",
+ "ozet": "Ham petrolü damıt ve yakıtların CO₂ salımını karşılaştır. Sera gazlarını kaldır, asit yağmurunu izle ve santralleri incele. Son olarak atom ekonomisini ve nano yüzeyi hesapla.",
  "adimlar": [
   {
    "baslik": "Ham petrolü ayır",
-   "metin": "Ham petrol kulenin altında ısıtılır. Buhar yükseldikçe soğur; her molekül kaynama noktasına uygun rafta sıvılaşır: buna <b>ayrımsal damıtma</b> denir. <b>Benzine gidecek</b> bir molekül seç.",
+   "metin": "Ham petrol kulenin altında ısıtılır. Buhar yükseldikçe soğur ve her molekül kaynama noktasına uygun rafta sıvılaşır. Buna <b>ayrımsal damıtma</b> denir. <b>Benzine gidecek</b> bir molekül seç.",
    "sahne": {
     "tur": "kim12-kule"
    },
@@ -31,14 +31,14 @@
       10
      ]
     },
-    "ipucu": "Benzin, kulenin üst kısmından alınır: küçük moleküller.",
+    "ipucu": "Benzin kulenin üst kısmından alınır ve küçük moleküllerden oluşur.",
     "tamam": "Benzin yaklaşık C₅–C₁₀ moleküllerinden oluşur. Molekül küçüldükçe kaynama noktası düşer ve kulenin daha yukarısında yoğunlaşır."
    },
    "kart": 2
   },
   {
    "baslik": "Hangi yakıt daha az CO₂ verir?",
-   "metin": "Fosil yakıt tam yanınca CO₂ ve su çıkar. Aynı ısıyı (1 MJ) üç yakıtla üret; en az CO₂ salanı bul.",
+   "metin": "Fosil yakıt tam yanınca CO₂ ve su çıkar. Aynı ısıyı (1 MJ) üç yakıtla üret ve en az CO₂ salanı bul.",
    "sahne": {
     "tur": "kim12-co2"
    },
@@ -59,8 +59,8 @@
     "hedef": {
      "y": 2
     },
-    "ipucu": "Çubuğu en kısa olanı ara.",
-    "tamam": "Doğal gaz (çoğu metan) en az CO₂ salan fosil yakıttır. Yine de sıfır değildir: doğal gaz da fosil yakıttır."
+    "ipucu": "Çubuğu en kısa olan yakıtı ara.",
+    "tamam": "Doğal gaz (çoğunlukla metan) en az CO₂ salan fosil yakıttır. Yine de salımı sıfır değildir, çünkü doğal gaz da bir fosil yakıttır."
    },
    "kart": 3
   },
@@ -77,16 +77,16 @@
     "secenekler": [
      {
       "yazi": "≈ 15 °C'de kalır",
-      "neden": "Gelen güneş ışığı aynı kalsa da yayılan ısı tutulmadan uzaya kaçar; yeryüzü soğur."
+      "neden": "Gelen güneş ışığı aynı kalsa da yayılan ısı tutulmadan uzaya kaçar. Bu yüzden yeryüzü soğur."
      },
      {
       "yazi": "≈ −18 °C'ye düşer",
-      "neden": "Yeryüzünün yaydığı kızılötesi ışın tutulmadan uzaya kaçar; ortalama sıcaklık ≈ 15 °C'den ≈ −18 °C'ye iner.",
+      "neden": "Yeryüzünün yaydığı kızılötesi ışınlar tutulmadan uzaya kaçar. Ortalama sıcaklık yaklaşık 15 °C'den −18 °C'ye iner.",
       "dogru": true
      },
      {
       "yazi": "≈ 40 °C'ye çıkar",
-      "neden": "Sera gazları ısıyı tutar; onları kaldırmak ısınmaya değil, soğumaya yol açar."
+      "neden": "Sera gazları ısıyı tutar. Onları kaldırmak ısınmaya değil, soğumaya yol açar."
      }
     ]
    },
@@ -94,7 +94,7 @@
   },
   {
    "baslik": "Asit yağmuru",
-   "metin": "Havadaki SO₂'yi artır; yağmurun pH'ını ve mermeri izle.",
+   "metin": "Havadaki SO₂ miktarını artır. Yağmurun pH'ını ve mermeri izle.",
    "sahne": {
     "tur": "kim12-asit"
    },
@@ -116,15 +116,15 @@
     "secenekler": [
      {
       "yazi": "Havadaki SO₂ her yağmuru asitlendirir",
-      "neden": "SO₂ yokken bile pH 5,6'dır. SO₂ ancak pH'ı 5,6'nın altına indirir; asıl asit yağmurunu o yapar."
+      "neden": "SO₂ yokken bile yağmurun pH'ı 5,6'dır. SO₂ ise pH'ı 5,6'nın altına indirir ve asıl asit yağmurunu oluşturur."
      },
      {
       "yazi": "Yağmur suyu bazik tozlar taşır",
-      "neden": "Bazik maddeler pH'ı yükseltirdi; yağmur ise hafif asidiktir."
+      "neden": "Bazik maddeler pH'ı yükseltirdi. Yağmur ise hafif asidiktir."
      },
      {
       "yazi": "Havadaki CO₂'yi çözer",
-      "neden": "CO₂ + H₂O ⇌ H₂CO₃; bu zayıf asit pH'ı ≈ 5,6'ya indirir. SO₂ güçlü H₂SO₄ verdiği için pH'ı daha da düşürür.",
+      "neden": "CO₂ suyla H₂CO₃ oluşturur ve bu zayıf asit pH'ı yaklaşık 5,6'ya indirir. SO₂ ise güçlü H₂SO₄ verdiği için pH'ı daha da düşürür.",
       "dogru": true
      }
     ]
@@ -133,7 +133,7 @@
   },
   {
    "baslik": "Santraller",
-   "metin": "Her santral bir enerji türünü elektriğe çevirir; yakıt pili H₂ ile O₂'den doğrudan elektrik üretir. Santralleri tek tek seç ve dönüşüm zincirine bak.",
+   "metin": "Her santral bir enerji türünü elektriğe dönüştürür. Yakıt pili ise H₂ ile O₂'den doğrudan elektrik üretir. Santralleri tek tek seç ve dönüşüm zincirine bak.",
    "sahne": {
     "tur": "kim12-santral"
    },
@@ -155,12 +155,12 @@
     "secenekler": [
      {
       "yazi": "Güneş pili ve yakıt pili",
-      "neden": "Güneş pilinde ışık yarı iletkendeki elektronları doğrudan harekete geçirir; yakıt pilinde H₂ ile O₂ elektrotlarda tepkimeye girer. İkisinde de dönen parça yoktur.",
+      "neden": "Güneş pilinde ışık, yarı iletkendeki elektronları doğrudan harekete geçirir. Yakıt pilinde ise H₂ ile O₂ elektrotlarda tepkimeye girer. İkisinde de dönen bir parça yoktur.",
       "dogru": true
      },
      {
       "yazi": "Rüzgâr ve hidroelektrik",
-      "neden": "İkisi de hareket enerjisiyle türbin döndürür; elektriği jeneratör üretir."
+      "neden": "İkisi de hareket enerjisiyle türbin döndürür ve elektriği jeneratör üretir."
      },
      {
       "yazi": "Nükleer ve güneş pili",
@@ -172,7 +172,7 @@
   },
   {
    "baslik": "Atom ekonomisi",
-   "metin": "Atom ekonomisi, girenlerin atomlarının ne kadarının istenen ürüne geçtiğidir. Etanolü üç farklı yoldan elde edebiliriz. Atom ekonomisi %100 olan yolu bul.",
+   "metin": "Atom ekonomisi, girenlerin atomlarının ne kadarının istenen ürüne geçtiğini gösterir. Etanolü üç farklı yoldan elde edebiliriz. Atom ekonomisi %100 olan yolu bul.",
    "sahne": {
     "tur": "kim12-atomeko"
    },
@@ -194,13 +194,13 @@
      "y": 2
     },
     "ipucu": "Hiç yan ürün çıkmayan tepkimeyi ara.",
-    "tamam": "Katılma tepkimesinde girenlerin bütün atomları etanole geçer: %100. Yer değiştirme yolu ise NaBr atığıyla %31'de kalır."
+    "tamam": "Katılma tepkimesinde girenlerin bütün atomları etanole geçer ve atom ekonomisi %100 olur. Yer değiştirme yolu ise NaBr atığı yüzünden %31'de kalır."
    },
    "kart": 11
   },
   {
    "baslik": "Nano boyut",
-   "metin": "Küpü küçük küplere böl. Toplam yüzeyi 3 katına çıkar.",
+   "metin": "Küpü küçük küplere böl ve toplam yüzeyi 3 katına çıkar.",
    "sahne": {
     "tur": "kim12-nano"
    },
@@ -222,18 +222,18 @@
      "n": 3
     },
     "ipucu": "Her kenarı 2 parçaya bölmek yüzeyi 2 katına çıkarır.",
-    "tamam": "27 küçük küp: toplam yüzey 3 katı. Yüzey/hacim oranı büyüyen madde daha etkin tepkimeye girer; nano parçacıklar bu yüzden iyi katalizördür."
+    "tamam": "27 küçük küp elde ettin ve toplam yüzey 3 katına çıktı. Yüzey/hacim oranı büyüyen madde daha etkin tepkimeye girer. Nano parçacıklar bu yüzden iyi katalizördür."
    },
    "kart": 12
   }
  ],
  "kapanis": [
-  "Ham petrol ayrımsal damıtmayla ayrılır; küçük moleküller kulenin üstünden çıkar.",
+  "Ham petrol ayrımsal damıtmayla bileşenlerine ayrılır. Küçük moleküller kulenin üst kısmından çıkar.",
   "Aynı ısı için en az CO₂'yi doğal gaz verir, ama o da fosil yakıttır.",
-  "Sera etkisi olmasaydı ortalama sıcaklık ≈ −18 °C olurdu; fazla CO₂ onu güçlendirir.",
-  "Temiz yağmurun pH'ı ≈ 5,6'dır; SO₂ ve azot oksitler onu daha da düşürür.",
-  "Güneş pili ve yakıt pili elektriği türbinsiz üretir; diğer santraller türbin ve jeneratör kullanır.",
-  "Yeşil kimya atığı baştan önler; nano boyutta yüzey/hacim oranı büyür."
+  "Sera etkisi olmasaydı ortalama sıcaklık yaklaşık −18 °C olurdu. Fazla CO₂ bu etkiyi güçlendirir.",
+  "Temiz yağmurun pH'ı yaklaşık 5,6'dır. SO₂ ve azot oksitler bu değeri daha da düşürür.",
+  "Güneş pili ve yakıt pili elektriği türbinsiz üretir. Diğer santraller ise türbin ve jeneratör kullanır.",
+  "Yeşil kimya atığı baştan önler. Nano boyutta ise yüzey/hacim oranı büyür."
  ],
  "soruOnce": true
 }
