@@ -3,7 +3,7 @@
  "ders": "kimya",
  "konu": "tepkime-hizi",
  "baslik": "Tepkime hızı",
- "ozet": "Derişim eğrisini izle, molekülleri çarpıştır, sıcaklığı ve katalizörü dene, deneyden hız denklemini bul.",
+ "ozet": "Derişim eğrisini izle ve molekülleri çarpıştır. Sıcaklığı ve katalizörü dene, sonra deneyden hız denklemini bul.",
  "adimlar": [
   {
    "baslik": "Hız yavaşlar mı?",
@@ -18,7 +18,7 @@
     "secenekler": [
      {
       "yazi": "Artar",
-      "neden": "Hız girenlerin derişimine bağlıdır. A harcandıkça çarpışacak tanecik azalır; hız artmaz."
+      "neden": "Hız, girenlerin derişimine bağlıdır. A harcandıkça çarpışacak tanecik azalır, bu yüzden hız artmaz."
      },
      {
       "yazi": "Azalır",
@@ -58,14 +58,14 @@
     "hedef": {
      "nh3": 4
     },
-    "ipucu": "Hızlar katsayılarla orantılıdır: 3 mol H₂ harcanırken 2 mol NH₃ oluşur.",
-    "tamam": "0,6 × 2/3 = <b>0,4 M/s</b>. Hızlar katsayılarla orantılı: N₂ 0,2, H₂ 0,6, NH₃ 0,4 M/s. Her birini katsayısına bölünce aynı tepkime hızı çıkar: 0,2 M/s."
+    "ipucu": "Hızlar katsayılarla orantılıdır. 3 mol H₂ harcanırken 2 mol NH₃ oluşur.",
+    "tamam": "0,6 × 2/3 = <b>0,4 M/s</b> olur. Hızlar katsayılarla orantılıdır ve N₂ için 0,2, H₂ için 0,6, NH₃ için 0,4 M/s'dir. Her birini katsayısına bölünce aynı tepkime hızı çıkar ve bu hız 0,2 M/s'dir."
    },
    "kart": 3
   },
   {
    "baslik": "Etkin çarpışma",
-   "metin": "Ea, çarpışmanın ürün vermesi için gereken en düşük enerjidir. AB + C → A + BC tepkimesinde Ea = 60 kJ. Enerjiyi ve yönelimi ayarla, oynat.",
+   "metin": "Ea, çarpışmanın ürün vermesi için gereken en düşük enerjidir. AB + C → A + BC tepkimesinde Ea = 60 kJ'dir. Enerjiyi ve yönelimi ayarla, sonra oynat.",
    "sahne": {
     "tur": "kim9-carpisma",
     "sure": 3
@@ -101,13 +101,13 @@
       100
      ]
     },
-    "tamam": "Enerji Ea'ya ulaştı ve C, B ucuna çarptı: <b>etkin çarpışma</b>. Çarpışmaların çok azı etkindir; bu yüzden her çarpışma ürün vermez."
+    "tamam": "Enerji Ea'ya ulaştı ve C, B ucuna çarptı. Bu bir <b>etkin çarpışmadır</b>. Çarpışmaların çok azı etkindir ve bu yüzden her çarpışma ürün vermez."
    },
    "kart": 4
   },
   {
    "baslik": "Sıcaklık",
-   "metin": "Eğri, taneciklerin enerjilere göre dağılımı. Boyalı alan Ea'yı aşanlar. Sıcaklığı artır ve neyin değiştiğine bak.",
+   "metin": "Eğri, taneciklerin enerjilerine göre dağılımını gösteriyor. Boyalı alan Ea'yı aşan tanecikleri gösterir. Sıcaklığı artır ve neyin değiştiğine bak.",
    "sahne": {
     "tur": "kim9-maxwell"
    },
@@ -131,11 +131,11 @@
     "secenekler": [
      {
       "yazi": "Ea küçülür",
-      "neden": "Ea çizgisi yerinden oynamadı; sıcaklık eşiği kaydırmaz, eşiğin sağına geçen tanecikleri çoğaltır."
+      "neden": "Ea çizgisi yerinden oynamadı. Sıcaklık eşiği kaydırmaz, eşiğin sağına geçen tanecikleri çoğaltır."
      },
      {
       "yazi": "Tanecik sayısı artar",
-      "neden": "Kaptaki tanecik sayısı aynı; eğrinin altındaki toplam alan değişmiyor."
+      "neden": "Kaptaki tanecik sayısı aynıdır. Bu yüzden eğrinin altındaki toplam alan değişmez."
      },
      {
       "yazi": "Ea'yı aşan tanecik oranı artar",
@@ -148,7 +148,7 @@
   },
   {
    "baslik": "Temas yüzeyi",
-   "metin": "Aynı kütlede mermer (CaCO₃) HCl'ye atılıyor: bir kapta parça, ötekinde toz. Çıkan CO₂ balonları şişirecek.",
+   "metin": "Aynı kütlede mermer (CaCO₃) HCl'ye atılıyor. Bir kapta mermer parça hâlinde, ötekinde toz hâlinde. Çıkan CO₂ balonları şişirecek.",
    "sahne": {
     "tur": "kim9-yuzey",
     "sure": 5
@@ -176,7 +176,7 @@
   },
   {
    "baslik": "Çarpışma laboratuvarı",
-   "metin": "Kapta A ve B tanecikleri çarpışıyor; turuncu parlama, ürün veren <b>etkin çarpışmadır</b>. Sağdaki eğri taneciklerin enerji dağılımı, boyalı kısım Ea'yı aşanlar. Derişimi, sıcaklığı ve katalizörü değiştir.",
+   "metin": "Kapta A ve B tanecikleri çarpışıyor. Turuncu parlama, ürün veren <b>etkin çarpışmayı</b> gösterir. Sağdaki eğri taneciklerin enerji dağılımıdır ve boyalı kısım Ea'yı aşanları gösterir. Derişimi, sıcaklığı ve katalizörü değiştir.",
    "sahne": {
     "tur": "sim-carpisma"
    },
@@ -227,7 +227,7 @@
         "n": 2
        }
       ],
-      "tamam": "Hız 4 kat oldu: A da B de 2 kat, A–B çarpışmaları 2 × 2 = 4 kat. Bu tepkime için hız = k[A][B]."
+      "tamam": "Hız 4 kat oldu. A da B de 2 kat olduğu için A–B çarpışmaları 2 × 2 = 4 kat arttı. Bu tepkime için hız = k[A][B] olur."
      },
      {
       "yazi": "Derişim 1'de sıcaklığı <b>300 K</b>'den yalnızca <b>310 K</b>'ye çıkar.",
@@ -254,7 +254,7 @@
         "T": 310
        }
       ],
-      "tamam": "10 K'de hız ≈ 1,9 kat oldu. Tanecikler biraz hızlandı ama asıl neden, eğrinin Ea'yı aşan kısmının büyümesi."
+      "tamam": "Sıcaklık 10 K artınca hız yaklaşık 1,9 kat oldu. Tanecikler biraz hızlandı, ama asıl neden eğrinin Ea'yı aşan kısmının büyümesidir."
      },
      {
       "yazi": "300 K ve derişim 1'de <b>katalizör</b> ekle.",
@@ -270,7 +270,7 @@
         "kat": 1
        }
       ],
-      "tamam": "Katalizör Ea'yı 50'den 40 kJ'e indirdi: eşik sola kaydı, sıcaklık değişmeden hız ≈ 55 kat oldu. Katalizör tepkimeden değişmeden çıkar."
+      "tamam": "Katalizör Ea'yı 50 kJ'den 40 kJ'e indirdi ve eşik sola kaydı. Sıcaklık değişmeden hız yaklaşık 55 kat oldu. Katalizör tepkimeden değişmeden çıkar."
      }
     ]
    },
@@ -278,7 +278,7 @@
   },
   {
    "baslik": "Deneyden hız denklemi",
-   "metin": "[X] sabit. [Y]'yi artır ve hızın kaç kat olduğunu izle.",
+   "metin": "[X] sabit tutuluyor. [Y]'yi artır ve hızın kaç kat olduğunu izle.",
    "sahne": {
     "tur": "kim9-derece"
    },
@@ -310,7 +310,7 @@
      },
      {
       "yazi": "2",
-      "neden": "[Y] 2 kat → hız 4 kat, 3 kat → 9 kat. Hız [Y]²'yle orantılı: y = 2.",
+      "neden": "[Y] 2 kat olunca hız 4 kat, 3 kat olunca 9 kat oldu. Hız [Y]² ile orantılıdır, yani y = 2'dir.",
       "dogru": true
      }
     ]
@@ -319,11 +319,11 @@
   }
  ],
  "kapanis": [
-  "Tepkime hızı, birim zamandaki derişim değişimidir: <b>hız = −Δ[giren]/Δt</b>; maddelerin hızları katsayılarla orantılıdır.",
-  "Tepkime için çarpışma <b>etkin</b> olmalı: enerji Ea'yı aşmalı, yönelim uygun olmalı.",
-  "Sıcaklık Ea'yı aşan tanecik oranını artırır; temas yüzeyi heterojen tepkimeleri hızlandırır.",
-  "<b>Katalizör</b> iki yönün Ea'sını eşit düşürür; ΔH değişmez.",
-  "<b>hız = k[A]ˣ[B]ʸ</b>: derişim 2 kat olunca hız 4 kat oluyorsa o maddeye göre derece 2'dir."
+  "Tepkime hızı, birim zamandaki derişim değişimidir (<b>hız = −Δ[giren]/Δt</b>). Maddelerin hızları katsayılarla orantılıdır.",
+  "Tepkime olması için çarpışmanın <b>etkin</b> olması gerekir. Bunun için enerji Ea'yı aşmalı ve yönelim uygun olmalıdır.",
+  "Sıcaklık, Ea'yı aşan taneciklerin oranını artırır. Temas yüzeyinin büyümesi ise heterojen tepkimeleri hızlandırır.",
+  "<b>Katalizör</b> iki yönün Ea'sını eşit miktarda düşürür ve ΔH'yi değiştirmez.",
+  "Hız denklemi <b>hız = k[A]ˣ[B]ʸ</b> şeklindedir. Derişim 2 kat olunca hız 4 kat oluyorsa o maddeye göre derece 2'dir."
  ],
  "soruOnce": true
 }

@@ -3,7 +3,7 @@
  "ders": "kimya",
  "konu": "cozeltiler",
  "baslik": "Çözeltiler",
- "ozet": "Önce dene, sonra adını öğren: tuzu çöz, derişimi ayarla, seyrelt, dondur.",
+ "ozet": "Önce dene, sonra adını öğren. Tuzu çöz, derişimi ayarla, çözeltiyi seyrelt ve dondur.",
  "adimlar": [
   {
    "baslik": "İyonik mi, moleküler mi?",
@@ -38,7 +38,7 @@
      },
      {
       "yazi": "Tuz kristali olduğu gibi durur",
-      "neden": "Kristal suda dağılır; su molekülleri iyonları sarar ve birbirinden ayırır. Çözünmeyen kristal yükü taşıyamaz."
+      "neden": "Kristal suda dağılır. Su molekülleri iyonları sarar ve birbirinden ayırır. Çözünmeyen kristal ise yükü taşıyamaz."
      }
     ]
    },
@@ -46,7 +46,7 @@
   },
   {
    "baslik": "Kütlece yüzde",
-   "metin": "Kütlece yüzde = çözünen kütlesi / çözelti kütlesi × 100. Bardakta 20 g tuz var. Suyu ayarla ve çözeltiyi kütlece <b>%40</b> yap.",
+   "metin": "Kütlece yüzde, çözünen kütlesinin çözelti kütlesine bölünüp 100 ile çarpılmasıyla bulunur. Bardakta 20 g tuz var. Suyu ayarla ve çözeltiyi kütlece <b>%40</b> yap.",
    "sahne": {
     "tur": "kim8-yuzde"
    },
@@ -69,13 +69,13 @@
     "hedef": {
      "su": 30
     },
-    "tamam": "20 g tuz + 30 g su = 50 g çözelti; 20 / 50 = <b>%40</b>. Payda yine çözeltinin kütlesidir: suya bölseydin %67 bulurdun."
+    "tamam": "20 g tuz ile 30 g su, 50 g çözelti eder. 20 / 50 = <b>%40</b> olur. Payda yine çözeltinin kütlesidir. Suya bölseydin %67 bulurdun."
    },
    "kart": 4
   },
   {
    "baslik": "Molarite",
-   "metin": "Molarite = mol sayısı / litre çözelti. Balonda 0,1 mol NaOH var. Hacmi değiştirerek çözeltiyi <b>0,5 M</b> yap.",
+   "metin": "Molarite, mol sayısının litre cinsinden çözelti hacmine bölünmesiyle bulunur. Balonda 0,1 mol NaOH var. Hacmi değiştirerek çözeltiyi <b>0,5 M</b> yap.",
    "sahne": {
     "tur": "kim8-molarite"
    },
@@ -98,7 +98,7 @@
     "hedef": {
      "V": 200
     },
-    "tamam": "V = n / M = 0,1 / 0,5 = 0,2 L = <b>200 mL</b>. Aynı mol daha az hacimde daha derişik olur."
+    "tamam": "V = n / M = 0,1 / 0,5 = 0,2 L, yani <b>200 mL</b> olur. Aynı miktar madde daha az hacimde daha derişik olur."
    },
    "kart": 5
   },
@@ -127,13 +127,13 @@
     "hedef": {
      "V": 250
     },
-    "tamam": "Su eklemek mol sayısını değiştirmez, hep 0,2 mol: 2 · 100 = 0,8 · V₂, yani V₂ = <b>250 mL</b>. 150 mL su ekledin."
+    "tamam": "Su eklemek mol sayısını değiştirmez ve madde miktarı hep 0,2 mol kalır. 2 · 100 = 0,8 · V₂ olduğundan V₂ = <b>250 mL</b> bulunur. Yani 150 mL su ekledin."
    },
    "kart": 7
   },
   {
    "baslik": "İyon derişimi",
-   "metin": "CaCl₂ suda <b>bir Ca²⁺ ve iki Cl⁻</b> iyonuna ayrışır. Derişimi değiştir; iyon çubuklarına bak.",
+   "metin": "CaCl₂ suda <b>bir Ca²⁺ ve iki Cl⁻</b> iyonuna ayrışır. Derişimi değiştir ve iyon çubuklarına bak.",
    "sahne": {
     "tur": "kim8-iyon"
    },
@@ -161,11 +161,11 @@
      },
      {
       "yazi": "1 M",
-      "neden": "Bu yalnızca Cl⁻ derişimi (2 · 0,5). Ca²⁺ iyonlarını da eklemelisin."
+      "neden": "Bu yalnızca Cl⁻ derişimidir (2 · 0,5). Ca²⁺ iyonlarını da eklemelisin."
      },
      {
       "yazi": "1,5 M",
-      "neden": "CaCl₂ → Ca²⁺ + 2Cl⁻. [Ca²⁺] = 0,5 M, [Cl⁻] = 1 M; toplam <b>1,5 M</b>. Bir formül birimi 3 iyon verir.",
+      "neden": "CaCl₂ suda Ca²⁺ ve 2Cl⁻ iyonlarına ayrışır. [Ca²⁺] = 0,5 M, [Cl⁻] = 1 M olduğu için toplam <b>1,5 M</b> olur. Bir formül birimi 3 iyon verir.",
       "dogru": true
      }
     ]
@@ -185,7 +185,7 @@
     "secenekler": [
      {
       "yazi": "Şekerli su",
-      "neden": "Şeker iyonlaşmaz, her molekül tek tanecik kalır (i = 1). Donma noktası yalnızca 1,86 °C düşer."
+      "neden": "Şeker iyonlaşmaz ve her molekül tek tanecik olarak kalır (i = 1). Bu yüzden donma noktası yalnızca 1,86 °C düşer."
      },
      {
       "yazi": "Tuzlu su (NaCl)",
@@ -193,7 +193,7 @@
      },
      {
       "yazi": "CaCl₂ çözeltisi",
-      "neden": "CaCl₂ üç iyon verir (i = 3), en çok tanecik onda: donma noktası 1,86 · 3 ≈ 5,6 °C düşer. Kışın yollara bu yüzden tuz serpilir.",
+      "neden": "CaCl₂ üç iyon verir (i = 3) ve en çok tanecik bu çözeltide bulunur. Donma noktası 1,86 · 3 ≈ 5,6 °C düşer. Kışın yollara bu yüzden tuz serpilir.",
       "dogru": true
      }
     ]
@@ -202,7 +202,7 @@
   },
   {
    "baslik": "Gazoz neden köpürür?",
-   "metin": "Gazozda basınç altında çözünmüş CO₂ var. Kapağı aç ve sıcaklığı değiştir; çözünmüş CO₂ çubuğuna bak.",
+   "metin": "Gazozda basınç altında çözünmüş CO₂ var. Kapağı aç, sıcaklığı değiştir ve çözünmüş CO₂ çubuğuna bak.",
    "sahne": {
     "tur": "kim8-gazoz"
    },
@@ -234,7 +234,7 @@
     "secenekler": [
      {
       "yazi": "Sıvı ısınır, su kaynar",
-      "neden": "Gazozun sıcaklığı açınca değişmez; kabarcıklar su buharı değil, CO₂'dir."
+      "neden": "Kapak açılınca gazozun sıcaklığı değişmez. Kabarcıklar da su buharı değil, CO₂'dir."
      },
      {
       "yazi": "Hava girip kabarcık yapar",
@@ -294,7 +294,7 @@
         "tuz": 50
        }
       ],
-      "tamam": "20 °C'de 100 g suda yaklaşık 32 g çözündü, fazlası dipte kaldı. Bu çözelti <b>doymuş</b>: o sıcaklıkta daha fazla KNO₃ çözemez."
+      "tamam": "20 °C'de 100 g suda yaklaşık 32 g KNO₃ çözündü ve fazlası dipte kaldı. Bu çözelti <b>doymuştur</b>, yani o sıcaklıkta daha fazla KNO₃ çözemez."
      },
      {
       "yazi": "Dipteki katıyı <b>ısıtarak</b> çözündür (en az 40 g KNO₃ ile).",
@@ -315,7 +315,7 @@
         "T": 45
        }
       ],
-      "tamam": "KNO₃'ün çözünürlüğü sıcaklıkla hızla artar: 45 °C'de 50 g'ın hepsi çözündü. Katıların çoğu böyledir; gazlar ise sıcakta daha az çözünür."
+      "tamam": "KNO₃'ün çözünürlüğü sıcaklıkla hızla artar ve 45 °C'de 50 g'ın hepsi çözündü. Katıların çoğu böyle davranır. Gazlar ise sıcakta daha az çözünür."
      },
      {
       "yazi": "Hepsi çözünmüşken çözeltiyi <b>25 °C'nin altına</b> soğut ve dibi izle.",
@@ -361,10 +361,10 @@
   }
  ],
  "kapanis": [
-  "Tuz suda <b>iyonlarına</b> ayrışır ve elektrik iletir; şeker <b>molekül</b> olarak dağılır.",
-  "Kütlece % = çözünen / <b>çözelti</b> · 100. Molarite: <b>M = n / V</b> (V litre).",
-  "Seyreltmede mol değişmez: <b>M₁·V₁ = M₂·V₂</b>. İyon derişimi için formüldeki iyon sayısını çarp.",
-  "Koligatif özellikler tanecik sayısına bağlıdır: <b>ΔT = K·m·i</b>. Daha çok iyon, daha düşük donma noktası.",
+  "Tuz suda <b>iyonlarına</b> ayrışır ve çözeltisi elektrik iletir. Şeker ise <b>molekül</b> olarak dağılır.",
+  "Kütlece yüzde, çözünen kütlesinin <b>çözelti</b> kütlesine oranıdır. Molarite ise <b>M = n / V</b> ile bulunur ve V litre cinsindendir.",
+  "Seyreltmede mol sayısı değişmez: <b>M₁·V₁ = M₂·V₂</b>. İyon derişimini bulmak için tuz derişimini formüldeki iyon sayısıyla çarp.",
+  "Koligatif özellikler tanecik sayısına bağlıdır (<b>ΔT = K·m·i</b>). İyon sayısı arttıkça donma noktası düşer.",
   "Gazların çözünürlüğü <b>basınçla artar</b>, <b>sıcaklıkla azalır</b>."
  ],
  "soruOnce": true

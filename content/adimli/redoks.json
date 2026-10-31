@@ -7,7 +7,7 @@
  "adimlar": [
   {
    "baslik": "Basamağı hesapla",
-   "metin": "Nötr bileşikte basamakların toplamı 0'dır. H₂SO₄'te H +1, O −2. Kükürdün basamağını ayarla.",
+   "metin": "Nötr bir bileşikte basamakların toplamı 0'dır. H₂SO₄'te H +1, O −2'dir. Kükürdün basamağını ayarla.",
    "sahne": {
     "tur": "kim10-basamak",
     "formul": "h2so4"
@@ -30,7 +30,7 @@
      "x": 6
     },
     "ipucu": "2(+1) + x + 4(−2) = 0 denklemini çöz.",
-    "tamam": "2 − 8 + x = 0 → S <b>+6</b>. Kükürt en yüksek basamağındadır; H₂S'de ise −2'ye kadar iner."
+    "tamam": "2 − 8 + x = 0 olduğu için S'nin basamağı <b>+6</b>'dır. Kükürt burada en yüksek basamağındadır. H₂S'de ise −2'ye kadar iner."
    },
    "kart": 3
   },
@@ -58,8 +58,8 @@
     "hedef": {
      "x": -3
     },
-    "ipucu": "x + 4(+1) = +1.",
-    "tamam": "x + 4 = +1 → N <b>−3</b>. Azot, bileşiğine göre −3'ten +5'e kadar farklı basamaklar alabilir."
+    "ipucu": "x + 4(+1) = +1 eşitliğini kullan.",
+    "tamam": "x + 4 = +1 olduğu için N'nin basamağı <b>−3</b>'tür. Azot, bileşiğine göre −3'ten +5'e kadar farklı basamaklar alabilir."
    },
    "kart": 3
   },
@@ -76,16 +76,16 @@
     "secenekler": [
      {
       "yazi": "Şeritte bakır birikir, mavi solar",
-      "neden": "Zn elektron verip Zn²⁺ olarak çözünür; Cu²⁺ bu elektronları alıp metal bakır olarak şeride çöker. Mavi rengi veren Cu²⁺ azaldığı için renk solar.",
+      "neden": "Zn elektron verir ve Zn²⁺ olarak çözünür. Cu²⁺ bu elektronları alır ve metal bakır olarak şeride çöker. Mavi rengi veren Cu²⁺ azaldığı için renk solar.",
       "dogru": true
      },
      {
       "yazi": "Hiçbir şey olmaz",
-      "neden": "Zn, Cu'dan daha kolay elektron verir; Cu²⁺'yı kendiliğinden indirger (bu sıralamayı aktiflik sırasında göreceksin)."
+      "neden": "Zn, Cu'dan daha kolay elektron verir ve Cu²⁺'yı kendiliğinden indirger. Bu sıralamayı aktiflik sırasında göreceksin."
      },
      {
       "yazi": "Çözelti koyulaşır",
-      "neden": "Mavi rengi Cu²⁺ verir ve bu iyon harcanır. Şerit de çözünerek incelir; üstündeki kırmızı-kahve tabaka bakırdır."
+      "neden": "Mavi rengi Cu²⁺ verir ve bu iyon harcanır. Şerit de çözünerek incelir. Şeridin üstündeki kırmızı-kahve tabaka bakırdır."
      }
     ]
    },
@@ -93,7 +93,7 @@
   },
   {
    "baslik": "Kim verdi, kim aldı?",
-   "metin": "Yarı tepkimelere bak: biri elektron veriyor, öteki alıyor. Elektron vererek karşısındakini indirgeyen maddeye <b>indirgen</b> denir.",
+   "metin": "Yarı tepkimelere bak. Biri elektron veriyor, öteki elektron alıyor. Elektron vererek karşısındakini indirgeyen maddeye <b>indirgen</b> denir.",
    "sahne": {
     "tur": "kim10-zncu",
     "son": true
@@ -104,11 +104,11 @@
     "secenekler": [
      {
       "yazi": "Cu²⁺",
-      "neden": "Cu²⁺ elektron alıp indirgenir; Zn'yi yükseltgediği için <b>yükseltgen</b>dir."
+      "neden": "Cu²⁺ elektron alır ve indirgenir. Zn'yi yükseltgediği için <b>yükseltgendir</b>."
      },
      {
       "yazi": "SO₄²⁻",
-      "neden": "Sülfat iyonu tepkimede değişmez; seyirci iyondur."
+      "neden": "Sülfat iyonu tepkimede değişmez. Bu yüzden seyirci iyondur."
      },
      {
       "yazi": "Zn",
@@ -121,7 +121,7 @@
   },
   {
    "baslik": "Aktiflik sırası",
-   "metin": "Cu²⁺ çözeltisinde tepkime vermeyen bir metal seç; listedeki metale dokunabilirsin.",
+   "metin": "Cu²⁺ çözeltisinde tepkime vermeyen bir metal seç. Listedeki metallere dokunabilirsin.",
    "sahne": {
     "tur": "kim10-aktiflik"
    },
@@ -145,14 +145,14 @@
       12
      ]
     },
-    "ipucu": "Sırada Cu'nun sağındaki metallere bak.",
-    "tamam": "Ag ve Au, Cu'dan daha az aktiftir; Cu²⁺'ya elektron veremez. Tersine, Cu bu metallerin iyonlarını indirger."
+    "ipucu": "Aktiflik sırasında Cu'nun sağındaki metallere bak.",
+    "tamam": "Ag ve Au, Cu'dan daha az aktiftir ve Cu²⁺'ya elektron veremez. Tersine, Cu bu metallerin iyonlarını indirger."
    },
    "kart": 13
   },
   {
    "baslik": "Redoks mu?",
-   "metin": "Üç tepkime var. Basamakları göster ve değişen var mı bak.",
+   "metin": "Üç tepkime var. Basamakları göster ve değişen bir basamak olup olmadığına bak.",
    "sahne": {
     "tur": "kim10-redoksmu"
    },
@@ -174,16 +174,16 @@
     "secenekler": [
      {
       "yazi": "Zn + 2HCl → ZnCl₂ + H₂",
-      "neden": "Zn 0'dan +2'ye yükseltgenir, H +1'den 0'a indirgenir: redokstur."
+      "neden": "Zn, 0'dan +2'ye yükseltgenir. H ise +1'den 0'a indirgenir. Bu yüzden tepkime redokstur."
      },
      {
       "yazi": "HCl + NaOH → NaCl + H₂O",
-      "neden": "Nötralleşmede hiçbir elementin basamağı değişmez; elektron alışverişi yoktur. Çökelme tepkimeleri de böyledir.",
+      "neden": "Nötralleşmede hiçbir elementin basamağı değişmez ve elektron alışverişi olmaz. Çökelme tepkimeleri de böyledir.",
       "dogru": true
      },
      {
       "yazi": "CH₄ + 2O₂ → CO₂ + 2H₂O",
-      "neden": "Yanma bir redokstur: C −4'ten +4'e yükseltgenir, O 0'dan −2'ye indirgenir."
+      "neden": "Yanma bir redoks tepkimesidir. C, −4'ten +4'e yükseltgenir. O ise 0'dan −2'ye indirgenir."
      }
     ]
    },
@@ -191,11 +191,11 @@
   }
  ],
  "kapanis": [
-  "<b>Yükseltgenme</b> elektron vermek, basamağın artmasıdır; <b>indirgenme</b> elektron almak, basamağın azalmasıdır.",
-  "Basamakların toplamı nötr bileşikte 0, iyonda iyonun yüküdür: H₂SO₄'te S +6, NH₄⁺'da N −3.",
-  "Kendisi yükseltgenen tür <b>indirgen</b>, kendisi indirgenen tür <b>yükseltgen</b>dir: Zn + Cu²⁺ tepkimesinde indirgen Zn'dir.",
-  "Aktiflik sırasında önde olan metal, arkadaki metalin iyonunu indirger; tersi kendiliğinden olmaz.",
-  "Basamak değişmiyorsa redoks yoktur: nötralleşme ve çökelme redoks değildir; yanma, paslanma ve solunum redokstur."
+  "<b>Yükseltgenme</b> elektron vermektir ve basamak artar. <b>İndirgenme</b> ise elektron almaktır ve basamak azalır.",
+  "Basamakların toplamı nötr bileşikte 0, iyonda ise iyonun yüküdür. Örneğin H₂SO₄'te S +6, NH₄⁺'da N −3'tür.",
+  "Kendisi yükseltgenen türe <b>indirgen</b>, kendisi indirgenen türe <b>yükseltgen</b> denir. Zn + Cu²⁺ tepkimesinde indirgen Zn'dir.",
+  "Aktiflik sırasında önde olan metal, arkadaki metalin iyonunu indirger. Bunun tersi kendiliğinden olmaz.",
+  "Basamak değişmiyorsa redoks yoktur. Nötralleşme ve çökelme redoks değildir. Yanma, paslanma ve solunum ise redoks tepkimeleridir."
  ],
  "soruOnce": true
 }

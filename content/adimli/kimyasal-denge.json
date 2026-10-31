@@ -3,11 +3,11 @@
  "ders": "kimya",
  "konu": "kimyasal-denge",
  "baslik": "Kimyasal denge",
- "ozet": "Dengenin kuruluşunu izle, Kc hesapla, Q ile K'yı karşılaştır, dengeyi basınç, sıcaklık ve katalizörle zorla.",
+ "ozet": "Dengenin kuruluşunu izle ve Kc'yi hesapla. Q ile K'yı karşılaştır, sonra dengeyi basınç, sıcaklık ve katalizörle zorla.",
  "adimlar": [
   {
    "baslik": "Denge nasıl kurulur?",
-   "metin": "Kapalı kaba yalnızca N₂O₄ koyuyoruz: N₂O₄ ⇌ 2NO₂. İleri ve geri tepkimenin hızlarını izle.",
+   "metin": "Kapalı kaba yalnızca N₂O₄ koyuyoruz ve N₂O₄ ⇌ 2NO₂ tepkimesi başlıyor. İleri ve geri tepkimenin hızlarını izle.",
    "sahne": {
     "tur": "kim9-denge",
     "sure": 6
@@ -22,7 +22,7 @@
      },
      {
       "yazi": "İki yönde eşit hızla sürer",
-      "neden": "Dönüşüm sürer ama iki yön birbirini dengeler: <b>dinamik denge</b>. Yalnız NO₂ ile başlasan da dengeye ulaşırdın.",
+      "neden": "Dönüşüm sürer, ama iki yön birbirini dengeler. Buna <b>dinamik denge</b> denir. Yalnızca NO₂ ile başlasan da dengeye ulaşırdın.",
       "dogru": true
      },
      {
@@ -60,13 +60,13 @@
      "hi": 16
     },
     "ipucu": "2x mol HI oluşurken x mol H₂ ve x mol I₂ harcanır.",
-    "tamam": "2x = 1,6 → x = 0,8. Dengede 0,2 M H₂, 0,2 M I₂, 1,6 M HI. Kc = 1,6² / (0,2 · 0,2) = <b>64</b>."
+    "tamam": "2x = 1,6 olduğu için x = 0,8'dir. Dengede 0,2 M H₂, 0,2 M I₂ ve 1,6 M HI bulunur. Kc = 1,6² / (0,2 · 0,2) = <b>64</b> olur."
    },
    "kart": 7
   },
   {
    "baslik": "Q ile K",
-   "metin": "K ifadesine o anki derişimleri yazınca <b>Q</b> bulunur. H₂ + I₂ ⇌ 2HI için K = 64; kapta [H₂] = [I₂] = 0,1 M. Q'yu K'ya eşitleyecek HI derişimini bul.",
+   "metin": "K ifadesine o anki derişimler yazılınca <b>Q</b> bulunur. H₂ + I₂ ⇌ 2HI için K = 64'tür ve kapta [H₂] = [I₂] = 0,1 M'dir. Q'yu K'ya eşitleyecek HI derişimini bul.",
    "sahne": {
     "tur": "kim9-q"
    },
@@ -89,13 +89,13 @@
     "hedef": {
      "hi": 8
     },
-    "tamam": "Q = 0,8² / (0,1 · 0,1) = 64 = K: sistem <b>dengede</b>. Q < K ise tepkime ileri, Q > K ise geri yürür."
+    "tamam": "Q = 0,8² / (0,1 · 0,1) = 64 olur ve K'ya eşittir. Yani sistem <b>dengededir</b>. Q < K ise tepkime ileri, Q > K ise geri yürür."
    },
    "kart": 6
   },
   {
    "baslik": "Hacmi küçült",
-   "metin": "N₂O₄ ⇌ 2NO₂ dengede. Pistonu iterek hacmi yarıya indiriyoruz.",
+   "metin": "N₂O₄ ⇌ 2NO₂ tepkimesi dengede. Pistonu iterek hacmi yarıya indiriyoruz.",
    "sahne": {
     "tur": "kim9-hacim",
     "sure": 4
@@ -106,7 +106,7 @@
     "secenekler": [
      {
       "yazi": "NO₂ tarafına (sağa)",
-      "neden": "Sağda 2 mol gaz var. Oraya kayış gaz molünü ve basıncı artırırdı; sistem bunun tersini yapar."
+      "neden": "Sağda 2 mol gaz var. Denge oraya kaysaydı gaz mol sayısı ve basınç artardı. Sistem bunun tersini yapar."
      },
      {
       "yazi": "Kaymaz",
@@ -114,7 +114,7 @@
      },
      {
       "yazi": "N₂O₄ tarafına (sola)",
-      "neden": "Sistem basıncı azaltmak için gaz molünü azaltır: 2 mol NO₂ → 1 mol N₂O₄. Zorlamayı tümüyle silmez; NO₂ derişimi yine başlangıçtakinden yüksek kalır.",
+      "neden": "Sistem basıncı azaltmak için gaz mol sayısını azaltır ve 2 mol NO₂, 1 mol N₂O₄'e dönüşür. Ama zorlamayı tümüyle silmez. NO₂ derişimi yine başlangıçtakinden yüksek kalır.",
       "dogru": true
      }
     ]
@@ -123,7 +123,7 @@
   },
   {
    "baslik": "Denge laboratuvarı",
-   "metin": "Kapalı kaba 1 M N₂O₄ koyduk: N₂O₄ + ısı ⇌ 2NO₂. NO₂ kahverengidir. Molekülleri ve derişim grafiğini izle; kaba N₂O₄ ekle ya da kabı ısıt.",
+   "metin": "Kapalı kaba 1 M N₂O₄ koyduk ve N₂O₄ + ısı ⇌ 2NO₂ tepkimesi başladı. NO₂ kahverengidir. Molekülleri ve derişim grafiğini izle. Sonra kaba N₂O₄ ekle ya da kabı ısıt.",
    "sahne": {
     "tur": "sim-denge"
    },
@@ -163,7 +163,7 @@
         "T": 300
        }
       ],
-      "tamam": "İleri ve geri hız eşitlendi: tepkime durmadı, iki yönde aynı hızla yürüyor. Bu yüzden derişimler sabit kaldı: <b>dinamik denge</b>."
+      "tamam": "İleri ve geri hız eşitlendi. Tepkime durmadı, iki yönde aynı hızla yürüyor. Bu yüzden derişimler sabit kaldı ve <b>dinamik denge</b> kuruldu."
      },
      {
       "yazi": "Dengedeyken kaba <b>N₂O₄ ekle</b> ve yeni dengeyi bekle.",
@@ -188,7 +188,7 @@
         "ekle": 1
        }
       ],
-      "tamam": "Eklenen N₂O₄'ün bir kısmı NO₂'ye dönüştü: denge, eklenen maddeyi harcayan <b>ileri</b> yöne kaydı (Le Chatelier). Q yeniden K'ya eşit oldu; K değişmedi."
+      "tamam": "Eklenen N₂O₄'ün bir kısmı NO₂'ye dönüştü. Denge, eklenen maddeyi harcayan <b>ileri</b> yöne kaydı (Le Chatelier). Q yeniden K'ya eşit oldu ve K değişmedi."
      },
      {
       "yazi": "Kabı <b>360 K</b>'nin üstüne ısıt ve yeni dengeyi bekle.",
@@ -204,7 +204,7 @@
         "T": 380
        }
       ],
-      "tamam": "İleri yön ısı alır: ısıtınca denge ileri kaydı, kap kahverengileşti ve <b>Kc büyüdü</b>. K'yı yalnızca sıcaklık değiştirir."
+      "tamam": "İleri yön ısı alır. Bu yüzden ısıtınca denge ileri kaydı, kap kahverengileşti ve <b>Kc büyüdü</b>. K'yı yalnızca sıcaklık değiştirir."
      }
     ]
    },
@@ -251,7 +251,7 @@
   },
   {
    "baslik": "Haber yöntemi",
-   "metin": "N₂ + 3H₂ ⇌ 2NH₃ + ısı. Basıncı ve sıcaklığı değiştir; NH₃ verimine ve hıza bak.",
+   "metin": "N₂ + 3H₂ ⇌ 2NH₃ + ısı tepkimesine bak. Basıncı ve sıcaklığı değiştir, sonra NH₃ verimine ve hıza bak.",
    "sahne": {
     "tur": "kim9-haber"
    },
@@ -289,7 +289,7 @@
      },
      {
       "yazi": "Basıncı artırmak",
-      "neden": "4 mol gaz → 2 mol gaz: basınç dengeyi az mollü NH₃ tarafına kaydırır. Gazlar sıkışınca çarpışma da artar, hız düşmez.",
+      "neden": "Tepkimede 4 mol gaz, 2 mol gaza dönüşür. Bu yüzden basınç dengeyi mol sayısı az olan NH₃ tarafına kaydırır. Gazlar sıkışınca çarpışmalar da artar ve hız düşmez.",
       "dogru": true
      },
      {
@@ -302,11 +302,11 @@
   }
  ],
  "kapanis": [
-  "Kapalı kapta ileri ve geri hız eşitlenince <b>dinamik denge</b> kurulur; derişimler sabittir, dönüşüm sürer.",
-  "<b>Kc</b> = ürünler / girenler, üs olarak katsayılar; katılar ve saf sıvılar yazılmaz.",
-  "<b>Q < K</b> ise tepkime ileri, <b>Q > K</b> ise geri yürür; Q = K dengedir.",
-  "Le Chatelier: sistem zorlamayı azaltır. Basınç artınca az gaz mollü tarafa, ısıtınca endotermik yöne kayar.",
-  "K'yı yalnızca sıcaklık değiştirir; katalizör dengeye varışı hızlandırır, dengeyi kaydırmaz."
+  "Kapalı kapta ileri ve geri hız eşitlenince <b>dinamik denge</b> kurulur. Derişimler sabit kalır, ama dönüşüm sürer.",
+  "<b>Kc</b>, ürün derişimlerinin giren derişimlerine oranıdır ve üsler katsayılardır. Katılar ve saf sıvılar ifadeye yazılmaz.",
+  "<b>Q < K</b> ise tepkime ileri, <b>Q > K</b> ise geri yürür. Q = K ise sistem dengededir.",
+  "Le Chatelier ilkesine göre sistem zorlamayı azaltır. Basınç artınca denge gaz mol sayısı az olan tarafa, ısıtınca endotermik yöne kayar.",
+  "K'yı yalnızca sıcaklık değiştirir. Katalizör dengeye varışı hızlandırır, ama dengeyi kaydırmaz."
  ],
  "soruOnce": true
 }

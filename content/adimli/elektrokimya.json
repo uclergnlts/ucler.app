@@ -3,11 +3,11 @@
  "ders": "kimya",
  "konu": "elektrokimya",
  "baslik": "Elektrokimya",
- "ozet": "Daniell pilinde elektronları izle, tuz köprüsünü çıkar, standart potansiyellerden pil kur, suyu elektrolizle ve Faraday hesabı yap.",
+ "ozet": "Daniell pilinde elektronları izle ve tuz köprüsünü çıkar. Standart potansiyellerden pil kur, suyu elektroliz et ve Faraday hesabı yap.",
  "adimlar": [
   {
    "baslik": "Daniell pili",
-   "metin": "Zn şerit ZnSO₄'te, Cu şerit CuSO₄'te. Tel ve tuz köprüsüyle bağladık; pil bir süre çalışacak.",
+   "metin": "Zn şerit ZnSO₄ çözeltisinde, Cu şerit ise CuSO₄ çözeltisinde duruyor. Onları bir tel ve tuz köprüsüyle bağladık. Pil bir süre çalışacak.",
    "sahne": {
     "tur": "kim10-daniell",
     "sure": 4
@@ -18,7 +18,7 @@
     "secenekler": [
      {
       "yazi": "Zn incelir, Cu kalınlaşır",
-      "neden": "Zn atomları elektron verip Zn²⁺ olarak çözeltiye geçer; şerit incelir. Elektronlar telden Cu'ya gider, orada Cu²⁺ iyonları Cu olarak birikir. Cu²⁺ azaldıkça mavi renk de açılır.",
+      "neden": "Zn atomları elektron verir ve Zn²⁺ olarak çözeltiye geçer. Bu yüzden şerit incelir. Elektronlar telden Cu'ya gider ve orada Cu²⁺ iyonları Cu olarak birikir. Cu²⁺ azaldıkça mavi renk de açılır.",
       "dogru": true
      },
      {
@@ -56,13 +56,13 @@
     "hedef": {
      "k": 0
     },
-    "tamam": "Köprü olmadan devre tamamlanmaz: anot kabında + yük, katot kabında − yük birikir ve akım <b>durur</b>."
+    "tamam": "Köprü olmadan devre tamamlanmaz. Anot kabında + yük, katot kabında − yük birikir ve akım <b>durur</b>."
    },
    "kart": 2
   },
   {
    "baslik": "Pil kur",
-   "metin": "<b>E°pil = E°katot − E°anot</b>; E° değeri büyük olan yarı hücre katot olur. Anot ve katodu seçerek <b>1,56 V</b> veren pili kur.",
+   "metin": "Pilin gerilimi <b>E°pil = E°katot − E°anot</b> ile bulunur. E° değeri büyük olan yarı hücre katot olur. Anodu ve katodu seçerek <b>1,56 V</b> veren pili kur.",
    "sahne": {
     "tur": "kim10-potansiyel"
    },
@@ -92,14 +92,14 @@
      "a": 2,
      "k": 6
     },
-    "ipucu": "E°pil = E°katot − E°anot. Şu an Zn–Cu: 1,10 V.",
-    "tamam": "Zn anot, Ag katot: 0,80 − (−0,76) = <b>1,56 V</b>. Tablo standart hidrojen elektroduna (0 V) göre ölçülür; E° negatif çıksaydı pil kendiliğinden çalışmazdı."
+    "ipucu": "E°pil = E°katot − E°anot ile hesapla. Şu anki Zn–Cu pili 1,10 V veriyor.",
+    "tamam": "Zn anot, Ag katot olunca 0,80 − (−0,76) = <b>1,56 V</b> elde edilir. Tablodaki değerler standart hidrojen elektroduna (0 V) göre ölçülür. E° negatif çıksaydı pil kendiliğinden çalışmazdı."
    },
    "kart": 4
   },
   {
    "baslik": "Katsayı E°'yi değiştirir mi?",
-   "metin": "Ag⁺ tek elektron alır; elektronları eşitlemek için Ag yarı tepkimesini 2 ile çarptık.",
+   "metin": "Ag⁺ tek elektron alır. Elektronları eşitlemek için Ag yarı tepkimesini 2 ile çarptık.",
    "sahne": {
     "tur": "kim10-katsayi"
    },
@@ -109,16 +109,16 @@
     "secenekler": [
      {
       "yazi": "0,46 V",
-      "neden": "0,80 − 0,34 = 0,46 V. E° maddenin miktarına bağlı değildir; katsayıyla çarpılmaz.",
+      "neden": "0,80 − 0,34 = 0,46 V olur. E° maddenin miktarına bağlı değildir ve katsayıyla çarpılmaz.",
       "dogru": true
      },
      {
       "yazi": "1,26 V",
-      "neden": "2 · 0,80 − 0,34 aldın. E° miktara bağlı değildir; yarı tepkimeyi 2 ile çarpmak E°'yi değiştirmez."
+      "neden": "2 · 0,80 − 0,34 aldın. E° miktara bağlı değildir. Yarı tepkimeyi 2 ile çarpmak E°'yi değiştirmez."
      },
      {
       "yazi": "1,14 V",
-      "neden": "0,80 + 0,34 aldın. Fark alınır: E°katot − E°anot."
+      "neden": "0,80 + 0,34 aldın. Oysa fark alınır: E°katot − E°anot."
      }
     ]
    },
@@ -137,15 +137,15 @@
     "secenekler": [
      {
       "yazi": "Anotta H₂, katotta O₂",
-      "neden": "Yerler ters: H₂, elektron alınan katotta çıkar. Hacimler de eşit değil."
+      "neden": "Yerler terstir. H₂, elektronların alındığı katotta çıkar. Hacimler de eşit değildir."
      },
      {
       "yazi": "İki elektrotta da aynı gaz",
-      "neden": "Katotta indirgenme (H₂), anotta yükseltgenme (O₂) olur; gazlar farklıdır."
+      "neden": "Katotta indirgenme olur ve H₂ çıkar. Anotta yükseltgenme olur ve O₂ çıkar. Yani gazlar farklıdır."
      },
      {
       "yazi": "Katotta H₂, anotta O₂; H₂ iki kat",
-      "neden": "Katotta su indirgenir ve H₂ çıkar, anotta yükseltgenir ve O₂ çıkar. 2H₂O → 2H₂ + O₂ olduğu için H₂ hacmi O₂'nin <b>2 katıdır</b>.",
+      "neden": "Katotta su indirgenir ve H₂ çıkar. Anotta ise su yükseltgenir ve O₂ çıkar. 2H₂O → 2H₂ + O₂ olduğu için H₂ hacmi O₂'nin <b>2 katıdır</b>.",
       "dogru": true
      }
     ]
@@ -177,14 +177,14 @@
     "hedef": {
      "t": 4825
     },
-    "ipucu": "0,1 mol Cu için 0,2 mol elektron gerekir: Q = 0,2 · 96 500 C.",
-    "tamam": "Q = 0,2 · 96 500 = 19 300 C; t = Q / I = 19 300 / 4 = <b>4825 s</b>. Katotta 6,35 g bakır birikir. Kaplamada kaplanacak eşya katot yapılır."
+    "ipucu": "0,1 mol Cu için 0,2 mol elektron gerekir. Yani Q = 0,2 · 96 500 C olur.",
+    "tamam": "Q = 0,2 · 96 500 = 19 300 C olur. t = Q / I = 19 300 / 4 = <b>4825 s</b> bulunur. Katotta 6,35 g bakır birikir. Kaplamada kaplanacak eşya katot yapılır."
    },
    "kart": 12
   },
   {
    "baslik": "Korozyon",
-   "metin": "Biri kalayla, biri çinkoyla kaplanmış iki demir çivinin kaplaması çizildi; çizikler tuzlu suyla ıslanıyor.",
+   "metin": "İki demir çividen biri kalayla, öteki çinkoyla kaplanmış. İki çivinin de kaplaması çizildi ve çizikler tuzlu suyla ıslanıyor.",
    "sahne": {
     "tur": "kim10-korozyon",
     "sure": 5
@@ -195,7 +195,7 @@
     "secenekler": [
      {
       "yazi": "Kalay kaplı paslanır",
-      "neden": "Zn demirden aktiftir; kendisi yükseltgenir ve demiri korur. Sn demirden az aktiftir; çizilince demir anot olur ve <b>daha hızlı</b> paslanır.",
+      "neden": "Zn demirden aktiftir. Kendisi yükseltgenir ve demiri korur. Sn ise demirden az aktiftir. Kaplama çizilince demir anot olur ve <b>daha hızlı</b> paslanır.",
       "dogru": true
      },
      {
@@ -204,7 +204,7 @@
      },
      {
       "yazi": "Çinko kaplı paslanır",
-      "neden": "Tersi olur: çinko demirden aktif olduğu için önce o yükseltgenir. Gemilerde Mg veya Zn bloklar bu yüzden <b>kurban anot</b> olarak kullanılır."
+      "neden": "Tersi olur. Çinko demirden aktif olduğu için önce o yükseltgenir. Gemilerde Mg ya da Zn bloklar bu yüzden <b>kurban anot</b> olarak kullanılır."
      }
     ]
    },
@@ -212,11 +212,11 @@
   }
  ],
  "kapanis": [
-  "Galvanik pilde anot (−) yükseltgenir, katot (+) indirgenir; elektronlar dış devrede anottan katoda akar.",
-  "Tuz köprüsü çözeltileri nötr tutar; köprü olmadan akım durur.",
-  "<b>E°pil = E°katot − E°anot</b>; katsayılar E°'yi değiştirmez. Zn–Cu 1,10 V, Cu–Ag 0,46 V.",
-  "Elektrolizde anot +, katot − uçtur; suyun elektrolizinde katotta H₂, anotta yarı hacimde O₂ toplanır.",
-  "<b>Q = I·t</b> ve 1 F ≈ 96 500 C ile biriken madde hesaplanır; aktif metal kaplama ve kurban anot demiri korozyondan korur."
+  "Galvanik pilde anot (−) yükseltgenir, katot (+) indirgenir. Elektronlar dış devrede anottan katoda akar.",
+  "Tuz köprüsü çözeltileri nötr tutar. Köprü olmadan akım durur.",
+  "Pilin gerilimi <b>E°pil = E°katot − E°anot</b> ile bulunur ve katsayılar E°'yi değiştirmez. Zn–Cu pili 1,10 V, Cu–Ag pili 0,46 V verir.",
+  "Elektrolizde anot +, katot − uçtur. Suyun elektrolizinde katotta H₂, anotta ise bunun yarısı hacminde O₂ toplanır.",
+  "Biriken madde miktarı <b>Q = I·t</b> ve 1 F ≈ 96 500 C ile hesaplanır. Aktif metal kaplama ve kurban anot, demiri korozyondan korur."
  ],
  "soruOnce": true
 }
