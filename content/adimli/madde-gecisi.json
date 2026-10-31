@@ -3,7 +3,7 @@
  "ders": "biyoloji",
  "konu": "madde-gecisi",
  "baslik": "Hücre zarından madde geçişi",
- "ozet": "Önce dene, sonra adını öğren: tanecikleri zara gönder, alyuvarı farklı sulara koy.",
+ "ozet": "Önce dene, sonra adını öğren. Tanecikleri zara gönder ve alyuvarı farklı sulara koy.",
  "adimlar": [
   {
    "baslik": "Hücre zarı",
@@ -18,15 +18,15 @@
      {
       "yazi": "Baş kısımları",
       "dogru": true,
-      "neden": "Fosfolipitin başı suyu sever (hidrofilik), kuyrukları suyu sevmez (hidrofobik). Bu yüzden başlar dışa, iki yandaki suya; kuyruklar içe, birbirine bakar."
+      "neden": "Fosfolipitin başı suyu sever (hidrofilik), kuyrukları ise suyu sevmez (hidrofobik). Bu yüzden başlar dışa, iki yandaki suya bakar. Kuyruklar ise içe, birbirine döner."
      },
      {
       "yazi": "Kuyrukları",
-      "neden": "Kuyruklar yağ benzeridir ve suyu sevmez. Görselde kuyruklar nereye bakıyor?"
+      "neden": "Kuyruklar yağa benzer ve suyu sevmez. Görselde kuyrukların nereye baktığına dikkat et."
      },
      {
       "yazi": "Rastgele dizilirler",
-      "neden": "Görsele bak: iki sıra da aynı düzende. Su seven kısım hep suya döner."
+      "neden": "Görsele bak, iki sıra da aynı düzendedir. Suyu seven kısım her zaman suya döner."
      }
     ]
    },
@@ -34,7 +34,7 @@
   },
   {
    "baslik": "Seçici geçirgenlik",
-   "metin": "Soldaki taneciklere dokunup her birini zara gönder. Hangisi geçebiliyor, nasıl geçiyor?",
+   "metin": "Soldaki taneciklere dokun ve her birini zara gönder. Hangisinin geçebildiğine ve nasıl geçtiğine bak.",
    "sahne": {
     "tur": "so-zar-dene"
    },
@@ -91,7 +91,7 @@
         "glikoz": 1
        }
       ],
-      "tamam": "Glikoz yağ tabakasından geçemedi; zardaki taşıyıcı proteinin içinden geçti."
+      "tamam": "Glikoz yağ tabakasından geçemedi. Zardaki taşıyıcı proteinin içinden geçti."
      },
      {
       "yazi": "Proteini zara gönder",
@@ -103,7 +103,7 @@
         "protein": 1
        }
       ],
-      "tamam": "Protein çok büyük: ne fosfolipitlerin arasından ne taşıyıcıdan geçebildi. Böyle büyük maddeler keseciklerle taşınır."
+      "tamam": "Protein çok büyük olduğu için ne fosfolipitlerin arasından ne de taşıyıcıdan geçebildi. Böyle büyük maddeler keseciklerle taşınır."
      }
     ]
    },
@@ -111,7 +111,7 @@
   },
   {
    "baslik": "Difüzyon",
-   "metin": "Zarın iki yanında farklı sayıda oksijen (O₂) molekülü var. Küçük ve yüksüz O₂, fosfolipitlerin arasından kolayca geçebilir.",
+   "metin": "Zarın iki yanında farklı sayıda oksijen (O₂) molekülü var. Küçük ve yüksüz O₂ molekülleri fosfolipitlerin arasından kolayca geçebilir.",
    "sahne": {
     "tur": "gecis",
     "sure": 5,
@@ -134,11 +134,11 @@
      {
       "yazi": "Çok olan taraftan az olana geçer, sayılar eşitlenir",
       "dogru": true,
-      "neden": "Tanecikler hep hareket eder; çok olan taraftan zara daha çok tanecik çarpar ve geçer. Eşitlenince geçiş iki yönde sürer ama net geçiş durur."
+      "neden": "Tanecikler sürekli hareket eder ve çok oldukları taraftan zara daha fazla tanecik çarpıp geçer. Sayılar eşitlenince geçiş iki yönde sürer, ama net geçiş durur."
      },
      {
       "yazi": "Az olan taraftan çok olana geçer",
-      "neden": "Bu, kendiliğinden olmaz; enerji ister. Sonraki adımlarda göreceksin."
+      "neden": "Bu kendiliğinden olmaz, enerji gerektirir. Bunu sonraki adımlarda göreceksin."
      },
      {
       "yazi": "Hiç geçmez",
@@ -150,7 +150,7 @@
   },
   {
    "baslik": "Zar laboratuvarı",
-   "metin": "Zarın solunda O₂ molekülleri ve Na⁺ iyonları var; hepsi sürekli rastgele hareket ediyor. Sayılara ve geçişlere bak. Gerekirse zara bir kanal proteini koy ya da kabı yeniden doldur.",
+   "metin": "Zarın solunda O₂ molekülleri ve Na⁺ iyonları var ve hepsi sürekli rastgele hareket ediyor. Sayılara ve geçişlere bak. Gerekirse zara bir kanal proteini koy ya da kabı yeniden doldur.",
    "sahne": {
     "tur": "sim-zar"
    },
@@ -193,7 +193,7 @@
         "kanal": 0
        }
       ],
-      "tamam": "O₂ çok olduğu yerden az olduğu yere yayıldı: <b>difüzyon</b>, ATP harcanmadı. Eşitlenince moleküller yine geçiyor ama iki yöne yaklaşık eşit sayıda; <b>net</b> geçiş durdu."
+      "tamam": "O₂ çok olduğu yerden az olduğu yere yayıldı. Buna <b>difüzyon</b> denir ve ATP harcanmaz. Eşitlenince moleküller yine geçiyor, ama iki yöne yaklaşık eşit sayıda geçtikleri için <b>net</b> geçiş durdu."
      },
      {
       "yazi": "Na⁺ iyonlarını zarın <b>sağına</b> geçir.",
@@ -209,7 +209,7 @@
         "kanal": 1
        }
       ],
-      "tamam": "Yüklü Na⁺ fosfolipitlerin yağlı ortasından geçemez. Kanal proteini açılınca çoktan aza geçti, yine ATP harcanmadı: <b>kolaylaştırılmış difüzyon</b>."
+      "tamam": "Yüklü Na⁺ iyonları, fosfolipitlerin yağlı ortasından geçemez. Kanal proteini açılınca çoktan aza geçtiler ve yine ATP harcanmadı. Buna <b>kolaylaştırılmış difüzyon</b> denir."
      }
     ]
    },
@@ -230,15 +230,15 @@
      {
       "yazi": "Şişer",
       "dogru": true,
-      "neden": "Dışarıda çözünen yok, su bol: su net olarak alyuvarın içine geçer ve hücre şişer. Çok şişerse patlayabilir."
+      "neden": "Dışarıda çözünen madde yoktur ve su boldur. Bu yüzden su net olarak alyuvarın içine geçer ve hücre şişer. Çok şişerse patlayabilir."
      },
      {
       "yazi": "Büzüşür",
-      "neden": "Büzüşmesi için suyun dışarı çıkması gerekirdi. Su, suyun bol olduğu taraftan az olduğu tarafa geçer."
+      "neden": "Büzüşmesi için suyun dışarı çıkması gerekirdi. Oysa su, bol olduğu taraftan az olduğu tarafa geçer."
      },
      {
       "yazi": "Değişmez",
-      "neden": "İçi ve dışı farklı derişimde; su bu farkı dengelemeye doğru akar."
+      "neden": "Hücrenin içi ve dışı farklı derişimdedir. Su, bu farkı dengeleyecek yönde akar."
      }
     ]
    },
@@ -246,7 +246,7 @@
   },
   {
    "baslik": "Osmoz",
-   "metin": "Şimdi sen ayarla: dış ortamı, alyuvar su kaybedip büzüşecek kadar tuzlu yap.",
+   "metin": "Şimdi sen ayarla. Dış ortamı, alyuvar su kaybedip büzüşecek kadar tuzlu yap.",
    "sahne": {
     "tur": "osmoz"
    },
@@ -271,7 +271,7 @@
       20
      ]
     },
-    "tamam": "Dışarısı içeriden daha tuzlu: <b>hipertonik</b> ortam. Su hücreden dışarı çıkar ve alyuvar büzüşür."
+    "tamam": "Dış ortam artık hücrenin içinden daha tuzlu; buna <b>hipertonik</b> ortam denir. Su hücreden dışarı çıkar ve alyuvar büzüşür."
    },
    "kart": 6
   },
@@ -303,15 +303,15 @@
      {
       "yazi": "Enerji (ATP)",
       "dogru": true,
-      "neden": "Az olduğu yerden çok olduğu yere taşımak yokuş yukarı itmek gibidir; bu enerjiyi ATP verir."
+      "neden": "Bir maddeyi az olduğu yerden çok olduğu yere taşımak, yokuş yukarı bir şey itmeye benzer. Bunun için gereken enerjiyi ATP sağlar."
      },
      {
       "yazi": "Hiçbir şey",
-      "neden": "Kendiliğinden geçiş hep çoktan aza doğrudur. Burada yön ters."
+      "neden": "Kendiliğinden geçiş her zaman çoktan aza doğrudur. Burada ise yön terstir."
      },
      {
       "yazi": "Yalnızca bir kanalın açılması",
-      "neden": "Kanal yalnızca kapı açar; tanecikler yine çoktan aza geçer."
+      "neden": "Kanal yalnızca bir kapı açar. Tanecikler yine çoktan aza doğru geçer."
      }
     ]
    },
@@ -319,11 +319,11 @@
   }
  ],
  "kapanis": [
-  "Hücre zarı fosfolipit çift katman ve içinde yüzen proteinlerden oluşur (<b>akıcı mozaik model</b>).",
-  "<b>Difüzyon</b>: tanecikler çoktan aza, enerji harcamadan geçer. Küçük, yüksüz tanecikler doğrudan geçer.",
-  "<b>Kolaylaştırılmış difüzyon</b>: iyonlar gibi tanecikler kanal ya da taşıyıcı proteinle, yine çoktan aza geçer.",
-  "<b>Aktif taşıma</b>: pompa proteinleri ATP harcayarak tanecikleri azdan çoğa taşır.",
-  "<b>Osmoz</b>: su, az tuzlu ortamdan çok tuzlu ortama geçer. Hipotonikte alyuvar şişer, hipertonikte büzüşür."
+  "Hücre zarı, fosfolipit çift katmandan ve bu katmanda yüzen proteinlerden oluşur. Buna <b>akıcı mozaik model</b> denir.",
+  "<b>Difüzyonda</b> tanecikler çoktan aza ve enerji harcamadan geçer. Küçük ve yüksüz tanecikler zardan doğrudan geçer.",
+  "<b>Kolaylaştırılmış difüzyonda</b> iyonlar gibi tanecikler kanal ya da taşıyıcı proteinlerle, yine çoktan aza geçer.",
+  "<b>Aktif taşımada</b> pompa proteinleri ATP harcar ve tanecikleri azdan çoğa taşır.",
+  "<b>Osmozda</b> su, az tuzlu ortamdan çok tuzlu ortama geçer. Alyuvar hipotonik ortamda şişer, hipertonik ortamda büzüşür."
  ],
  "soruOnce": true
 }

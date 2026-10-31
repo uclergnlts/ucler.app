@@ -3,7 +3,7 @@
  "ders": "biyoloji",
  "konu": "mitoz",
  "baslik": "Mitoz ve eşeysiz üreme",
- "ozet": "Önce dene, sonra adını öğren: DNA'yı eşle, mitozu oynat, hücreyi böl.",
+ "ozet": "Önce dene, sonra adını öğren. DNA'yı eşle, mitozu oynat ve hücreyi böl.",
  "adimlar": [
   {
    "baslik": "Hücre döngüsü",
@@ -32,7 +32,7 @@
       55
      ]
     },
-    "tamam": "DNA <b>S evresinde</b> 2 birimden 4 birime çıkar. Mitozda yeni DNA yapılmaz."
+    "tamam": "DNA miktarı <b>S evresinde</b> 2 birimden 4 birime çıkar. Mitoz sırasında yeni DNA yapılmaz."
    },
    "kart": 1
   },
@@ -60,16 +60,16 @@
     "secenekler": [
      {
       "yazi": "8",
-      "neden": "8 olan kromatit sayısı. Kromozomları sayarken sentromerleri say."
+      "neden": "8, kromatit sayısıdır. Kromozomları sayarken sentromerleri saymalısın."
      },
      {
       "yazi": "4",
-      "neden": "4 sentromer, 4 kromozom demektir; kromatit sayısı ise 8'dir.",
+      "neden": "4 sentromer, 4 kromozom demektir. Kromatit sayısı ise 8'dir.",
       "dogru": true
      },
      {
       "yazi": "2",
-      "neden": "Hücrede iki çift, yani 4 kromozom var: 2n = 4."
+      "neden": "Hücrede iki çift, yani 4 kromozom vardır: 2n = 4."
      }
     ]
    },
@@ -77,7 +77,7 @@
   },
   {
    "baslik": "Mitozun evreleri",
-   "metin": "Mitoz dört evrede ilerler: <b>profaz, metafaz, anafaz, telofaz</b>. Bu hücrede 2n = 4 ve DNA çoktan eşlendi. Mitozu oynatmadan önce tahmin et.",
+   "metin": "Mitoz dört evrede ilerler: <b>profaz, metafaz, anafaz ve telofaz</b>. Bu hücrede 2n = 4'tür ve DNA çoktan eşlenmiştir. Mitozu oynatmadan önce tahmin et.",
    "sahne": {
     "tur": "biy4-mitoz",
     "sure": 8
@@ -88,15 +88,15 @@
     "secenekler": [
      {
       "yazi": "Profaz",
-      "neden": "Profazda kromozomlar yalnızca kısalıp kalınlaşır ve görünür olur; sayı 4'tür."
+      "neden": "Profazda kromozomlar yalnızca kısalıp kalınlaşır ve görünür hâle gelir. Sayıları 4'tür."
      },
      {
       "yazi": "Metafaz",
-      "neden": "Metafazda kromozomlar ekvatorda dizilir ama kardeş kromatitler hâlâ bağlıdır: 4 kromozom."
+      "neden": "Metafazda kromozomlar ekvatorda dizilir, ama kardeş kromatitler hâlâ birbirine bağlıdır. Bu yüzden 4 kromozom vardır."
      },
      {
       "yazi": "Anafaz",
-      "neden": "Sentromerler ayrılınca her kromatit ayrı bir kromozom sayılır: 4'ten 8'e. DNA miktarı ise değişmez.",
+      "neden": "Sentromerler ayrılınca her kromatit ayrı bir kromozom sayılır ve sayı 4'ten 8'e çıkar. DNA miktarı ise değişmez.",
       "dogru": true
      }
     ]
@@ -105,7 +105,7 @@
   },
   {
    "baslik": "Kromozomları saymak",
-   "metin": "Karyotip için kromozomların en kısa, en belirgin olduğu ve tek sıra dizildiği evre gerekir. Evreleri değiştir ve o evreyi bul.",
+   "metin": "Karyotip çıkarmak için kromozomların en kısa ve en belirgin olduğu, tek sıra dizildiği evre gerekir. Evreleri değiştir ve o evreyi bul.",
    "sahne": {
     "tur": "biy4-mitoz"
    },
@@ -126,7 +126,7 @@
     "hedef": {
      "e": 2
     },
-    "tamam": "<b>Metafaz</b>: kromozomlar ekvatorda tek sıra dizildi. İnsanın 2n = 46 kromozomu da bu evrede sayılır."
+    "tamam": "Bu evre <b>metafazdır</b> ve kromozomlar ekvatorda tek sıra dizilmiştir. İnsanın 46 kromozomu da bu evrede sayılır."
    },
    "kart": 4
   },
@@ -154,13 +154,13 @@
     "hedef": {
      "b": 1
     },
-    "tamam": "Bitkide Golgi kesecikleri ortada birleşir; <b>hücre plağı</b> içten kenarlara doğru büyüyerek iki hücreyi ayırır."
+    "tamam": "Bitkide Golgi kesecikleri hücrenin ortasında birleşir. <b>Hücre plağı</b> içten kenarlara doğru büyür ve iki hücreyi birbirinden ayırır."
    },
    "kart": 6
   },
   {
    "baslik": "Eşeysiz üreme: bölünme",
-   "metin": "Bakteri sayısı nasıl artar? Oynatmadan önce tahmin et.",
+   "metin": "Bakterilerin sayısı nasıl artar? Oynatmadan önce tahmin et.",
    "sahne": {
     "tur": "biy4-bakteri",
     "sure": 6
@@ -171,15 +171,15 @@
     "secenekler": [
      {
       "yazi": "12",
-      "neden": "Her bölünmede sayı 1 değil, 2 katı artar."
+      "neden": "Her bölünmede sayı 1 artmaz, iki katına çıkar."
      },
      {
       "yazi": "6",
-      "neden": "2 saatte 6 bölünme olur; ama bakteri sayısı bölünme sayısı değildir."
+      "neden": "2 saatte 6 bölünme olur. Ancak bakteri sayısı, bölünme sayısına eşit değildir."
      },
      {
       "yazi": "64",
-      "neden": "120 / 20 = 6 bölünme; her birinde sayı ikiye katlanır: 2⁶ = 64.",
+      "neden": "120 dakikada 6 bölünme olur ve her bölünmede sayı ikiye katlanır. Sonuç 2⁶ = 64 bakteridir.",
       "dogru": true
      }
     ]
@@ -199,15 +199,15 @@
     "secenekler": [
      {
       "yazi": "Anaç gibi ekşi",
-      "neden": "Anaç kökü ve gövdeyi verir; dal ve meyveler kalemden gelişir."
+      "neden": "Anaç kökü ve gövdeyi verir. Dal ve meyveler ise kalemden gelişir."
      },
      {
       "yazi": "İkisinin karışımı",
-      "neden": "Aşıda döllenme yoktur, kalıtım karışmaz. Dal, kalemin kendi hücrelerinden mitozla büyür."
+      "neden": "Aşıda döllenme olmaz ve kalıtım karışmaz. Dal, kalemin kendi hücrelerinden mitozla büyür."
      },
      {
       "yazi": "Kalem gibi tatlı",
-      "neden": "Dal ve meyveler kalemin hücrelerinden mitozla gelişir, kalemle kalıtsal olarak özdeştir. Bahçıvanlar sevdikleri çeşidi aşıyla, tohum beklemeden çoğaltır.",
+      "neden": "Dal ve meyveler kalemin hücrelerinden mitozla gelişir ve kalemle kalıtsal olarak aynıdır. Bahçıvanlar sevdikleri çeşidi aşıyla, tohum beklemeden çoğaltır.",
       "dogru": true
      }
     ]
@@ -216,11 +216,11 @@
   }
  ],
  "kapanis": [
-  "Hücre döngüsü: interfaz (G1, S, G2), mitoz ve sitokinez. DNA <b>S evresinde</b> eşlenir.",
-  "Kromozom sayısı sentromer sayısıdır; eşlenmiş kromozom iki kardeş kromatit taşır.",
-  "Profaz, metafaz, anafaz, telofaz: kromozom sayısı yalnız anafaz ve telofazda iki katıdır. Mitoz sonunda iki tane 2n hücre çıkar.",
-  "Sitokinez hayvan hücresinde boğumlanmayla, bitki hücresinde hücre plağıyla olur.",
-  "Eşeysiz üremede yavrular atayla özdeştir. Bakterinin ikiye bölünmesi mitoz değildir; aşıda meyve kalemin özelliğini taşır."
+  "Hücre döngüsü interfaz (G1, S, G2), mitoz ve sitokinezden oluşur. DNA <b>S evresinde</b> eşlenir.",
+  "Kromozom sayısı sentromer sayısına eşittir. Eşlenmiş bir kromozom iki kardeş kromatit taşır.",
+  "Mitozun evreleri profaz, metafaz, anafaz ve telofazdır. Kromozom sayısı yalnızca anafaz ve telofazda iki katıdır. Mitozun sonunda iki tane 2n hücre oluşur.",
+  "Sitokinez hayvan hücresinde boğumlanmayla, bitki hücresinde ise hücre plağıyla gerçekleşir.",
+  "Eşeysiz üremede yavrular atayla genetik olarak aynıdır. Bakterinin ikiye bölünmesi mitoz değildir. Aşıda meyve, kalemin özelliğini taşır."
  ],
  "soruOnce": true
 }

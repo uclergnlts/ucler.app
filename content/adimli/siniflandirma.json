@@ -3,11 +3,11 @@
  "ders": "biyoloji",
  "konu": "siniflandirma",
  "baslik": "Canlıların sınıflandırılması",
- "ozet": "Önce dene, sonra adını öğren: basamaklarda in, katırı izle, adı düzelt, canlıyı anahtarla bul.",
+ "ozet": "Önce dene, sonra adını öğren. Basamaklarda in, katırı izle, adı düzelt ve canlıyı anahtarla bul.",
  "adimlar": [
   {
    "baslik": "Basamaklarda aşağı",
-   "metin": "Canlılar iç içe gruplara ayrılır; en dar gruplardan biri <b>cins</b>tir. Basamakları ev kedisine doğru in. <b>Ev kedisiyle aynı cinsteki</b> canlıyı bulunca dur.",
+   "metin": "Canlılar iç içe gruplara ayrılır ve en dar gruplardan biri <b>cinstir</b>. Basamakları ev kedisine doğru in. <b>Ev kedisiyle aynı cinsteki</b> canlıyı bulunca dur.",
    "sahne": {
     "tur": "biy3-basamak"
    },
@@ -28,13 +28,13 @@
     "hedef": {
      "k": 7
     },
-    "tamam": "Cins <i>Felis</i>: ev kedisi ile yaban kedisi. Aslan bile dışarıda kaldı."
+    "tamam": "Bu cinsin adı <i>Felis</i>'tir ve ev kedisi ile yaban kedisini içerir. Aslan bile bu cinsin dışında kaldı."
    },
    "kart": 3
   },
   {
    "baslik": "Aynı familya, aynı cins değil",
-   "metin": "Aslan ile ev kedisi aynı familyadadır: kedigiller. Basamakları yukarı ve aşağı gezerek ikisinin hangi gruplarda birlikte olduğuna bak.",
+   "metin": "Aslan ile ev kedisi aynı familyadadır, yani ikisi de kedigillerdendir. Basamakları yukarı ve aşağı gezerek ikisinin hangi gruplarda birlikte olduğuna bak.",
    "sahne": {
     "tur": "biy3-basamak"
    },
@@ -56,12 +56,12 @@
     "secenekler": [
      {
       "yazi": "Aynı cinstendirler",
-      "neden": "Familyanın altında cins var. Aslan <i>Panthera</i>, ev kedisi <i>Felis</i> cinsindedir."
+      "neden": "Familyanın altında cins basamağı vardır. Aslan <i>Panthera</i>, ev kedisi ise <i>Felis</i> cinsindedir."
      },
      {
       "yazi": "Aynı takımdadırlar",
       "dogru": true,
-      "neden": "Bir alt basamakta birlikte olanlar, onun üstündeki bütün basamakları da paylaşır: takım, sınıf, şube, âlem. Tersi doğru değildir."
+      "neden": "Bir basamakta birlikte olan canlılar, onun üstündeki bütün basamakları da paylaşır: takım, sınıf, şube ve âlem. Bunun tersi doğru değildir."
      },
      {
       "yazi": "Verimli yavru verebilirler",
@@ -84,16 +84,16 @@
     "secenekler": [
      {
       "yazi": "Evet",
-      "neden": "Katır yeni bir tür değildir; at ile eşeğin kısır melezidir."
+      "neden": "Katır yeni bir tür değildir. At ile eşeğin kısır bir melezidir."
      },
      {
       "yazi": "Yalnızca atla çiftleşirse",
-      "neden": "Sorun eşte değil, katırın kendisindedir: düzgün üreme hücresi yapamaz."
+      "neden": "Sorun eşte değil, katırın kendisindedir. Katır düzgün üreme hücresi yapamaz."
      },
      {
       "yazi": "Hayır",
       "dogru": true,
-      "neden": "Atın 64, eşeğin 62 kromozomu vardır; 63 kromozomlu katır bu yüzden düzgün üreme hücresi yapamaz."
+      "neden": "Atın 64, eşeğin 62 kromozomu vardır. Katırın 63 kromozomu olduğu için düzgün üreme hücresi yapamaz."
      }
     ]
    },
@@ -101,7 +101,7 @@
   },
   {
    "baslik": "İkili adlandırma",
-   "metin": "Her türün iki kelimelik Latince bir adı vardır: önce cins, sonra tanımlayıcı ad. Cins büyük, tanımlayıcı ad küçük harfle başlar; ad italik yazılır. Kurdun adını düzelt.",
+   "metin": "Her türün iki kelimelik Latince bir adı vardır: önce cins, sonra tanımlayıcı ad yazılır. Cins büyük, tanımlayıcı ad küçük harfle başlar ve ad italik yazılır. Şimdi kurdun adını düzelt.",
    "sahne": {
     "tur": "biy3-ad"
    },
@@ -140,14 +140,14 @@
      "tb": 0,
      "it": 1
     },
-    "tamam": "<i>Canis lupus</i>: önce cins (<i>Canis</i>), sonra türü belirleyen tanımlayıcı ad (<i>lupus</i>). Köpek de kurtla aynı cinstedir: <i>Canis</i>. Elle yazarken italik yerine iki kelimenin altı ayrı ayrı çizilir.",
+    "tamam": "Doğru yazım <i>Canis lupus</i>'tur. Önce cins (<i>Canis</i>), sonra türü belirleyen tanımlayıcı ad (<i>lupus</i>) gelir. Köpek de kurtla aynı cinstendir. Elle yazarken italik yerine iki kelimenin altı ayrı ayrı çizilir.",
     "ipucu": "Üç kuralı da kontrol et."
    },
    "kart": 6
   },
   {
    "baslik": "Âlem anahtarı",
-   "metin": "Hücre yapısına dair sorularla âlemi bulabilirsin. Ekmek küfü çekirdeklidir ve hücre duvarında <b>kitin</b> vardır.",
+   "metin": "Hücre yapısıyla ilgili sorularla bir canlının âlemini bulabilirsin. Ekmek küfü çekirdeklidir ve hücre duvarında <b>kitin</b> bulunur.",
    "sahne": {
     "tur": "biy3-anahtar",
     "sure": 3,
@@ -159,16 +159,16 @@
     "secenekler": [
      {
       "yazi": "Bitkiler",
-      "neden": "Bitkilerin duvarı selülozdur ve fotosentez yaparlar; küf yapmaz."
+      "neden": "Bitkilerin hücre duvarı selülozdandır ve bitkiler fotosentez yapar. Küf ise fotosentez yapmaz."
      },
      {
       "yazi": "Mantarlar",
       "dogru": true,
-      "neden": "Çekirdekli ve kitin duvarlı canlı mantardır; küf, maya ve şapkalı mantar aynı âlemdedir."
+      "neden": "Çekirdekli ve kitin duvarlı bir canlı mantardır. Küf, maya ve şapkalı mantar aynı âlemdedir."
      },
      {
       "yazi": "Bakteriler",
-      "neden": "Bakterilerde çekirdek yoktur; küfün hücrelerinde ise çekirdek vardır."
+      "neden": "Bakterilerde çekirdek yoktur. Küfün hücrelerinde ise çekirdek vardır."
      }
     ]
    },
@@ -176,7 +176,7 @@
   },
   {
    "baslik": "Arkeler bakteri değildir",
-   "metin": "Bir kaplıcada tek hücreli bir canlı bulundu. Hücresinde çekirdek yok ve hücre duvarında <b>peptidoglikan bulunmuyor</b>. Anahtarı kullan.",
+   "metin": "Bir kaplıcada tek hücreli bir canlı bulundu. Bu canlının hücresinde çekirdek yok ve hücre duvarında <b>peptidoglikan bulunmuyor</b>. Anahtarı kullanarak grubunu bul.",
    "sahne": {
     "tur": "biy3-anahtar"
    },
@@ -186,16 +186,16 @@
     "secenekler": [
      {
       "yazi": "Bakteriler",
-      "neden": "Bakterilerin hücre duvarında peptidoglikan bulunur; bu canlıda yok."
+      "neden": "Bakterilerin hücre duvarında peptidoglikan bulunur. Bu canlının duvarında ise yoktur."
      },
      {
       "yazi": "Mantarlar",
-      "neden": "Mantarlar ökaryottur, hücrelerinde çekirdek vardır."
+      "neden": "Mantarlar ökaryottur ve hücrelerinde çekirdek vardır."
      },
      {
       "yazi": "Arkeler",
       "dogru": true,
-      "neden": "Çekirdeksiz ama peptidoglikansız: arke. Kaplıcanın sıcağı da arkelerin öne çıktığı aşırı ortamlardandır."
+      "neden": "Çekirdeksiz olup duvarında peptidoglikan bulunmayan canlı bir arkedir. Kaplıcanın sıcaklığı da arkelerin yaşadığı aşırı ortamlardan biridir."
      }
     ]
    },
@@ -203,11 +203,11 @@
   }
  ],
  "kapanis": [
-  "Bilim, akrabalığa (ortak ataya) dayanan <b>doğal sınıflandırmayı</b> kullanır.",
-  "Basamaklar: üst âlem > âlem > şube > sınıf > takım > familya > cins > <b>tür</b>. Türe indikçe tür sayısı azalır, ortak özellik ve akrabalık artar.",
-  "<b>Tür</b>: kendi aralarında verimli yavru verebilenler. Katır kısır olduğu için at ve eşek ayrı türlerdir.",
-  "İkili ad italik yazılır; cins büyük, tanımlayıcı küçük harfle başlar: <i>Homo sapiens</i>.",
-  "Üç üst âlem: Bakteriler, Arkeler, Ökaryotlar. Virüsler hücre olmadığı için hiçbir âleme girmez."
+  "Bilim, akrabalığa yani ortak ataya dayanan <b>doğal sınıflandırmayı</b> kullanır.",
+  "Basamaklar genişten dara doğru üst âlem, âlem, şube, sınıf, takım, familya, cins ve <b>türdür</b>. Türe inildikçe tür sayısı azalır, ortak özellik ve akrabalık artar.",
+  "Kendi aralarında verimli yavru verebilen bireyler aynı <b>türdendir</b>. Katır kısır olduğu için at ve eşek ayrı türlerdir.",
+  "İkili ad italik yazılır. Cins adı büyük, tanımlayıcı ad küçük harfle başlar: <i>Homo sapiens</i>.",
+  "Üç üst âlem vardır: Bakteriler, Arkeler ve Ökaryotlar. Virüsler hücre olmadığı için hiçbir âleme girmez."
  ],
  "soruOnce": true
 }
