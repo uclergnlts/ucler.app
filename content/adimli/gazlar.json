@@ -3,11 +3,11 @@
  "ders": "kimya",
  "konu": "gazlar",
  "baslik": "Gazlar",
- "ozet": "Önce dene, sonra adını öğren: pistonu it, gazı ısıt, mol ekle; yasaları kendin bul.",
+ "ozet": "Önce dene, sonra adını öğren. Pistonu it, gazı ısıt, mol ekle ve yasaları kendin bul.",
  "adimlar": [
   {
    "baslik": "Boyle: sıkıştır",
-   "metin": "Sıcaklık ve mol sayısı sabitken pistonu iterek hacmi azalt. Tanecikler çeperlere daha sık çarpar. Basıncı <b>2 atm</b> yap.",
+   "metin": "Sıcaklık ve mol sayısı sabitken pistonu iterek hacmi azalt. Tanecikler çeperlere daha sık çarpacak. Basıncı <b>2 atm</b> yap.",
    "sahne": {
     "tur": "kim7-boyle"
    },
@@ -29,13 +29,13 @@
     "hedef": {
      "V": 2
     },
-    "tamam": "Hacim yarıya inince basınç iki katına çıktı: P·V hep 4. Bu <b>Boyle yasasıdır</b>: P₁·V₁ = P₂·V₂."
+    "tamam": "Hacim yarıya inince basınç iki katına çıktı ve P·V her zaman 4 kaldı. Buna <b>Boyle yasası</b> denir ve P₁·V₁ = P₂·V₂ ile gösterilir."
    },
    "kart": 3
   },
   {
    "baslik": "Charles: ısıt",
-   "metin": "Şimdi basınç sabit, piston serbest. 27 °C'deki gaz 6 L. Gazı ısıt ve hacmini <b>8 L</b> yap. Sıcaklığın kelvin karşılığına da bak.",
+   "metin": "Şimdi basınç sabit ve piston serbest. 27 °C'deki gazın hacmi 6 L. Gazı ısıt ve hacmini <b>8 L</b> yap. Sıcaklığın kelvin karşılığına da bak.",
    "sahne": {
     "tur": "kim7-charles"
    },
@@ -58,13 +58,13 @@
     "hedef": {
      "t": 127
     },
-    "tamam": "Hacmi 6 L'den 8 L'ye, yani 4/3 katına çıkarmak için kelvin sıcaklığı da 4/3 katına çıkmalı: 300 K → 400 K, yani 127 °C. <b>Charles yasası</b>: V₁/T₁ = V₂/T₂."
+    "tamam": "Hacmi 6 L'den 8 L'ye, yani 4/3 katına çıkarmak için kelvin sıcaklığının da 4/3 katına çıkması gerekir. Sıcaklık 300 K'den 400 K'ye, yani 127 °C'ye çıkar. Buna <b>Charles yasası</b> denir ve V₁/T₁ = V₂/T₂ ile gösterilir."
    },
    "kart": 4
   },
   {
    "baslik": "Gay-Lussac: kapalı kap",
-   "metin": "Bu sefer kap kapalı ve hacmi değişmez. İçindeki gaz 27 °C'de 1 atm. Kabı 327 °C'ye kadar ısıtacağız.",
+   "metin": "Bu sefer kap kapalı ve hacmi değişmiyor. İçindeki gaz 27 °C'de ve 1 atm basınçta. Kabı 327 °C'ye kadar ısıtacağız.",
    "sahne": {
     "tur": "kim7-gay-lussac",
     "sure": 4
@@ -79,12 +79,12 @@
      },
      {
       "yazi": "2 atm olur",
-      "neden": "Kelvin sıcaklığı 300 K'den 600 K'e, yani iki katına çıktı. Hacim sabitken basınç kelvin sıcaklığıyla doğru orantılıdır: P₁/T₁ = P₂/T₂. Sprey kutusu bu yüzden ateşe atılmaz.",
+      "neden": "Kelvin sıcaklığı 300 K'den 600 K'ye, yani iki katına çıktı. Hacim sabitken basınç kelvin sıcaklığıyla doğru orantılıdır (P₁/T₁ = P₂/T₂). Sprey kutusu bu yüzden ateşe atılmaz.",
       "dogru": true
      },
      {
       "yazi": "12 atm olur",
-      "neden": "27'den 327'ye 12 kat gibi görünür ama gaz hesaplarında sıcaklık her zaman kelvindir: 300 K → 600 K."
+      "neden": "27'den 327'ye çıkmak 12 kat artış gibi görünür. Ama gaz hesaplarında sıcaklık her zaman kelvindir ve 300 K'den 600 K'ye çıkar."
      }
     ]
    },
@@ -92,7 +92,7 @@
   },
   {
    "baslik": "Gaz laboratuvarı",
-   "metin": "Pistonlu kapta 1 mol gaz var: 27 °C, 24,6 L, 1 atm. Hacmi, sıcaklığı ve mol sayısını değiştir; tanecikler ve basınç anında değişir. Basıncı 2 katına çıkarmanın üç yolunu bul.",
+   "metin": "Pistonlu kapta 1 mol gaz var. Gaz 27 °C'de, 24,6 L hacimde ve 1 atm basınçta. Hacmi, sıcaklığı ve mol sayısını değiştir, tanecikler ve basınç anında değişir. Basıncı 2 katına çıkarmanın üç yolunu bul.",
    "sahne": {
     "tur": "sim-gaz"
    },
@@ -147,7 +147,7 @@
         "V": 12.3
        }
       ],
-      "tamam": "Hacmi yarıya (12,3 L) indirdin, basınç 2 katına çıktı: P·V sabit (<b>Boyle</b>). Tanecikler çeperlere daha sık çarpıyor."
+      "tamam": "Hacmi yarıya (12,3 L) indirdin ve basınç 2 katına çıktı. P·V sabit kaldı, bu <b>Boyle</b> yasasıdır. Tanecikler çeperlere daha sık çarpıyor."
      },
      {
       "yazi": "Hacmi 24,6 L'de tut ve gazı <b>327 °C</b>'ye ısıt. Basınç kaç oldu?",
@@ -166,7 +166,7 @@
         "T": 327
        }
       ],
-      "tamam": "300 K'den 600 K'ye: kelvin sıcaklık 2 katı, basınç da 2 katı (<b>Gay-Lussac</b>). Celsius 27'den 327'ye 12 kat arttı ama hesapta kelvin geçer."
+      "tamam": "Sıcaklık 300 K'den 600 K'ye çıktı. Kelvin sıcaklığı 2 katına çıkınca basınç da 2 katına çıktı ve bu <b>Gay-Lussac</b> yasasıdır. Celsius değeri 27'den 327'ye çıktı ve 12 kat arttı, ama hesapta kelvin kullanılır."
      },
      {
       "yazi": "27 °C ve 24,6 L'de basıncı 2 atm yapmanın <b>üçüncü yolunu</b> bul.",
@@ -185,7 +185,7 @@
         "n": 2
        }
       ],
-      "tamam": "Mol sayısını 2 yaptın: aynı hacimde 2 kat tanecik, çeperlere 2 kat çarpma. Üç yasa da <b>P·V = n·R·T</b> içinde."
+      "tamam": "Mol sayısını 2 yaptın. Aynı hacimde 2 kat tanecik olduğu için çeperlere 2 kat daha çok çarpma oldu. Üç yasa da <b>P·V = n·R·T</b> bağıntısının içindedir."
      }
     ]
    },
@@ -193,7 +193,7 @@
   },
   {
    "baslik": "Tanecikler ne yapıyor?",
-   "metin": "Sıcaklığı değiştir; okların ve çubukların nasıl değiştiğine bak.",
+   "metin": "Sıcaklığı değiştir ve okların ve çubukların nasıl değiştiğine bak.",
    "sahne": {
     "tur": "kim7-kinetik"
    },
@@ -221,11 +221,11 @@
      },
      {
       "yazi": "Değişmez",
-      "neden": "Kinetik enerji yalnızca mutlak sıcaklığa bağlıdır; sıcaklık değişince o da değişir."
+      "neden": "Kinetik enerji yalnızca mutlak sıcaklığa bağlıdır. Sıcaklık değişince o da değişir."
      },
      {
       "yazi": "İki katına çıkar",
-      "neden": "Ortalama kinetik enerji mutlak sıcaklıkla doğru orantılıdır. Hız ise √T ile artar: 600 K'de yaklaşık 1,41 kat.",
+      "neden": "Ortalama kinetik enerji mutlak sıcaklıkla doğru orantılıdır. Hız ise √T ile artar ve 600 K'de yaklaşık 1,41 kat olur.",
       "dogru": true
      }
     ]
@@ -245,16 +245,16 @@
     "secenekler": [
      {
       "yazi": "Tam ortada",
-      "neden": "Ortada oluşması için iki gazın eşit hızda yayılması gerekirdi; oysa mol kütleleri farklı."
+      "neden": "Halkanın ortada oluşması için iki gazın eşit hızda yayılması gerekirdi. Oysa mol kütleleri farklıdır."
      },
      {
       "yazi": "HCl ucuna yakın",
-      "neden": "Hafif gaz daha hızlı yayılır: r₁/r₂ = √(M₂/M₁). NH₃ (17 g/mol), HCl'den (36,5 g/mol) yaklaşık 1,47 kat hızlıdır ve yolun %59'unu alır. Bu <b>Graham yasasıdır</b>.",
+      "neden": "Hafif gaz daha hızlı yayılır ve r₁/r₂ = √(M₂/M₁) bağıntısı geçerlidir. NH₃ (17 g/mol), HCl'den (36,5 g/mol) yaklaşık 1,47 kat hızlıdır ve yolun %59'unu alır. Buna <b>Graham yasası</b> denir.",
       "dogru": true
      },
      {
       "yazi": "NH₃ ucuna yakın",
-      "neden": "Bu, HCl'nin daha hızlı olduğu anlamına gelirdi; oysa HCl daha ağırdır."
+      "neden": "Bu, HCl'nin daha hızlı olduğu anlamına gelirdi. Oysa HCl daha ağırdır."
      }
     ]
    },
@@ -262,7 +262,7 @@
   },
   {
    "baslik": "Dalton: kısmi basınç",
-   "metin": "Karışımdaki her gaz kendi basıncını yapar. Kapta 2 mol N₂ var ve 1 atm basınç yapıyor. O₂ ekle: O₂'nin basıncı toplamın yarısı olsun.",
+   "metin": "Karışımdaki her gaz kendi basıncını yapar. Kapta 2 mol N₂ var ve 1 atm basınç yapıyor. O₂ ekle ve O₂'nin basıncını toplamın yarısı yap.",
    "sahne": {
     "tur": "kim7-dalton"
    },
@@ -284,17 +284,17 @@
     "hedef": {
      "o": 2
     },
-    "tamam": "2 mol O₂ de 1 atm yapar: P(top) = 1 + 1 = 2 atm. Kısmi basınç mol kesriyle orantılıdır: P(O₂) = X(O₂) · P(top) = ½ · 2 = 1 atm. Bu <b>Dalton yasasıdır</b>: P(top) = P(A) + P(B)."
+    "tamam": "2 mol O₂ de 1 atm basınç yapar ve toplam basınç 1 + 1 = 2 atm olur. Kısmi basınç mol kesriyle orantılıdır, yani P(O₂) = X(O₂) · P(top) = ½ · 2 = 1 atm'dir. Buna <b>Dalton yasası</b> denir ve P(top) = P(A) + P(B) ile gösterilir."
    },
    "kart": 12
   }
  ],
  "kapanis": [
-  "Gaz hesaplarında sıcaklık her zaman <b>kelvindir</b>: T = t + 273.",
-  "<b>Boyle</b>: P·V sabit. <b>Charles</b>: V ∝ T. <b>Gay-Lussac</b>: P ∝ T. <b>Avogadro</b>: V ∝ n.",
-  "Hepsi <b>P·V = n·R·T</b> denkleminde birleşir (R = 0,082 L·atm/mol·K).",
-  "Ortalama kinetik enerji yalnızca mutlak sıcaklığa bağlıdır. <b>Graham</b>: hafif gaz daha hızlı yayılır, r ∝ 1/√M.",
-  "<b>Dalton</b>: karışımda P(top) = ΣP(i); her gazın kısmi basıncı mol kesriyle orantılıdır."
+  "Gaz hesaplarında sıcaklık her zaman <b>kelvin</b> cinsindendir ve T = t + 273 ile bulunur.",
+  "<b>Boyle</b> yasasına göre P·V sabittir. <b>Charles</b> yasasına göre V, <b>Gay-Lussac</b> yasasına göre P sıcaklıkla doğru orantılıdır. <b>Avogadro</b>'ya göre de V mol sayısıyla orantılıdır.",
+  "Bu yasaların hepsi <b>P·V = n·R·T</b> denkleminde birleşir ve R = 0,082 L·atm/(mol·K)'dir.",
+  "Ortalama kinetik enerji yalnızca mutlak sıcaklığa bağlıdır. <b>Graham</b> yasasına göre hafif gaz daha hızlı yayılır ve hız √M ile ters orantılıdır.",
+  "<b>Dalton</b> yasasına göre karışımın toplam basıncı kısmi basınçların toplamıdır. Her gazın kısmi basıncı mol kesriyle orantılıdır."
  ],
  "soruOnce": true
 }
