@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "bir-boyutta-hareket",
  "baslik": "Bir boyutta hareket",
- "ozet": "Önce dene, sonra adını öğren: arabayı sür, grafiği sürükle, topu at.",
+ "ozet": "Önce dene, sonra adını öğren. Arabayı sür, grafiği sürükle ve topu at.",
  "adimlar": [
   {
    "baslik": "Konum",
@@ -36,7 +36,7 @@
   },
   {
    "baslik": "Yer değiştirme ve yol",
-   "metin": "Bir yolculuğu iki şekilde ölçebilirsin: nereden nereye vardığın ve toplam ne kadar gittiğin.",
+   "metin": "Bir yolculuğu iki şekilde ölçebilirsin. Biri nereden nereye vardığın, öteki toplam ne kadar gittiğindir.",
    "sahne": {
     "tur": "yer-degistirme",
     "sure": 4
@@ -48,15 +48,15 @@
      {
       "yazi": "+10 m",
       "dogru": true,
-      "neden": "Yer değiştirme yalnızca ilk ve son konuma bakar: Δx = 10 − 0 = +10 m. Gidilen toplam mesafe ise <b>yol</b>dur: 40 + 30 = 70 m."
+      "neden": "Yer değiştirme yalnızca ilk ve son konuma bakar ve Δx = 10 − 0 = +10 m olur. Gidilen toplam mesafe ise <b>yoldur</b> ve 40 + 30 = 70 m eder."
      },
      {
       "yazi": "+70 m",
-      "neden": "70 m arabanın gittiği toplam mesafe, yani yol."
+      "neden": "70 m, arabanın gittiği toplam mesafedir, yani yoldur."
      },
      {
       "yazi": "−30 m",
-      "neden": "−30 m yalnızca geri dönüşteki yer değiştirme; ilk 40 m'yi unutma."
+      "neden": "−30 m yalnızca geri dönüşteki yer değiştirmedir. İlk 40 m'yi unutma."
      }
     ]
    },
@@ -64,7 +64,7 @@
   },
   {
    "baslik": "Hız",
-   "metin": "Kamera her saniye bir kare çekiyor. A her saniye <b>5 m</b> gidiyor. B'nin hızını ayarla, oynat: yan yana gitsinler.",
+   "metin": "Kamera her saniye bir kare çekiyor. A her saniye <b>5 m</b> gidiyor. B'nin hızını ayarla ve oynat. İki araba yan yana gitsin.",
    "sahne": {
     "tur": "hiz-serit",
     "sure": 5,
@@ -87,7 +87,7 @@
     "hedef": {
      "vB": 5
     },
-    "tamam": "İkisi de her saniye 5 m gidiyor: v = Δx / Δt = 25 m / 5 s = 5 m/s. Aynı hız, aynı aralıklı kareler demek."
+    "tamam": "İkisi de her saniye 5 m gidiyor ve v = Δx / Δt = 25 m / 5 s = 5 m/s olur. Aynı hız, aynı aralıklı kareler demektir."
    },
    "kart": 2
   },
@@ -122,7 +122,7 @@
      },
      {
       "yazi": "Daha yatık",
-      "neden": "Grafiklerine bak: hangi çizgi 5. saniyede daha yukarıda?"
+      "neden": "Grafiklerine bak. Hangi çizgi 5. saniyede daha yukarıda?"
      },
      {
       "yazi": "İkisi aynı eğimde",
@@ -158,7 +158,7 @@
     "secenekler": [
      {
       "yazi": "<svg viewBox=\"0 0 200 20\" class=\"ad-serit\" aria-hidden=\"true\"><line x1=\"6\" x2=\"194\" y1=\"10\" y2=\"10\" stroke=\"var(--line-2)\" stroke-width=\"2\"/><circle cx=\"6\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"53\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"100\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"147\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"194\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/></svg>",
-      "neden": "Eşit aralıklar sabit hız demek. Hızlanan arabanın her saniye aldığı yol artar.",
+      "neden": "Eşit aralıklar sabit hız demektir. Hızlanan arabanın her saniye aldığı yol artar.",
       "etiket": "Kareler eşit aralıklı"
      },
      {
@@ -206,7 +206,7 @@
     "hedef": {
      "t": 4
     },
-    "tamam": "4 s'de 20 m. Boyalı dikdörtgenin alanı da 5 · 4 = 20: hız-zaman grafiğinin altındaki alan, alınan yolu verir."
+    "tamam": "Araba 4 s'de 20 m gitti. Boyalı dikdörtgenin alanı da 5 · 4 = 20'dir. Yani hız-zaman grafiğinin altındaki alan, alınan yolu verir."
    },
    "kart": 5
   },
@@ -240,7 +240,7 @@
     "hedef": {
      "t": 4
     },
-    "tamam": "4 s'de hız 8 m/s oldu. Boyalı üçgenin alanı ½ · 8 · 4 = 16 m: alan kuralı hızlanan arabada da geçerli."
+    "tamam": "4 s'de hız 8 m/s oldu. Boyalı üçgenin alanı ½ · 8 · 4 = 16 m'dir. Alan kuralı hızlanan arabada da geçerlidir."
    },
    "kart": 6
   },
@@ -257,7 +257,7 @@
     "secenekler": [
      {
       "yazi": "Gülle",
-      "neden": "Gülle daha büyük kuvvetle çekilir ama kütlesi de o oranda büyüktür; ivmesi tüyünkiyle aynıdır."
+      "neden": "Gülle daha büyük bir kuvvetle çekilir, ama kütlesi de o oranda büyüktür. Bu yüzden ivmesi tüyünkiyle aynıdır."
      },
      {
       "yazi": "Tüy",
@@ -266,7 +266,7 @@
      {
       "yazi": "Aynı anda",
       "dogru": true,
-      "neden": "Hava yokken her cisim aynı ivmeyle düşer. İkisi de 2 s'de 20 m düştü; izlerin arası her seferinde açıldı, yani düşerken hızlandılar."
+      "neden": "Hava yokken her cisim aynı ivmeyle düşer. İkisi de 2 s'de 20 m düştü. İzlerin arası her seferinde açıldı, yani düşerken hızlandılar."
      }
     ]
    },
@@ -274,7 +274,7 @@
   },
   {
    "baslik": "Yukarı atış",
-   "metin": "Hız okunu yukarı sürükleyip atış hızını seç, sonra oynat. Top tam <b>20 m</b>'ye çıksın.",
+   "metin": "Hız okunu yukarı sürükleyerek atış hızını seç, sonra oynat. Top tam <b>20 m</b> yüksekliğe çıksın.",
    "sahne": {
     "tur": "so-yukari",
     "sure": 6,
@@ -305,7 +305,7 @@
   },
   {
    "baslik": "Grafikten hareketi oku",
-   "metin": "Bu kez grafik hazır: oynat ve arabayı izle. Sarı bölgede ne oluyor?",
+   "metin": "Bu kez grafik hazır. Oynat ve arabayı izle. Sarı bölgede ne oluyor?",
    "sahne": {
     "tur": "grafik-oku",
     "sure": 6
@@ -317,15 +317,15 @@
      {
       "yazi": "Duruyor",
       "dogru": true,
-      "neden": "Konum değişmiyor, x hep 30 m. Yatay çizginin eğimi sıfırdır, yani hız sıfır. Son kısımda çizgi iniyor: araba geri dönüyor."
+      "neden": "Konum değişmiyor ve x hep 30 m. Yatay çizginin eğimi sıfırdır, yani hız sıfırdır. Son kısımda çizgi iniyor, yani araba geri dönüyor."
      },
      {
       "yazi": "Sabit hızla gidiyor",
-      "neden": "Sabit hızla giden arabanın konumu her saniye değişir, çizgi eğik olur. Burada x değişiyor mu?"
+      "neden": "Sabit hızla giden arabanın konumu her saniye değişir ve çizgi eğik olur. Burada x değişiyor mu?"
      },
      {
       "yazi": "Hızlanıyor",
-      "neden": "Hızlanan arabanın konum grafiği giderek dikleşen bir eğridir. Oynatıp arabaya bak."
+      "neden": "Hızlanan arabanın konum grafiği giderek dikleşen bir eğridir. Oynat ve arabaya bak."
      }
     ]
    },
@@ -333,10 +333,10 @@
   }
  ],
  "kapanis": [
-  "<b>Konum</b> başlangıca göre yerin, <b>yer değiştirme</b> Δx = x<sub>son</sub> − x<sub>ilk</sub>.",
-  "<b>Yol</b> gidilen toplam mesafe; geri dönersen Δx'ten büyük olur.",
-  "<b>Hız</b> = yer değiştirme / süre (v = Δx / Δt); konum-zaman grafiğinin eğimidir. Toplam yolun süreye oranı ise <b>sürat</b>tir; geri dönülen bir yolculukta ikisi farklıdır.",
-  "<b>İvme</b> hızın her saniyedeki değişimi; hızlanan arabada kareler giderek açılır.",
+  "<b>Konum</b>, başlangıca göre bulunulan yerdir. <b>Yer değiştirme</b> ise Δx = x<sub>son</sub> − x<sub>ilk</sub> ile bulunur.",
+  "<b>Yol</b>, gidilen toplam mesafedir. Geri dönersen yol Δx'ten büyük olur.",
+  "<b>Hız</b>, yer değiştirmenin süreye bölünmesiyle bulunur (v = Δx / Δt) ve konum-zaman grafiğinin eğimidir. Toplam yolun süreye oranına ise <b>sürat</b> denir. Geri dönülen bir yolculukta ikisi farklıdır.",
+  "<b>İvme</b>, hızın her saniyedeki değişimidir. Hızlanan arabada kareler giderek açılır.",
   "Konum-zaman grafiği yatay ise araba duruyor, aşağı iniyorsa geri gidiyor."
  ],
  "soruOnce": true

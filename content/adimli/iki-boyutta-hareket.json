@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "iki-boyutta-hareket",
  "baslik": "İki boyutta hareket ve atışlar",
- "ozet": "Önce dene, sonra adını öğren: topları düşür, yardan taş at, açıyı ayarla.",
+ "ozet": "Önce dene, sonra adını öğren. Topları düşür, yardan taş at ve açıyı ayarla.",
  "adimlar": [
   {
    "baslik": "Hangisi önce düşer?",
@@ -18,16 +18,16 @@
     "secenekler": [
      {
       "yazi": "Serbest bırakılan",
-      "neden": "Daha kısa yol alması fark etmez: düşey hareketi yalnızca yerçekimi belirler."
+      "neden": "Daha kısa yol alması fark etmez. Düşey hareketi yalnızca yerçekimi belirler."
      },
      {
       "yazi": "Fırlatılan",
-      "neden": "Yatay hız düşmeyi hızlandırmaz; ikisi de aynı g ile düşer."
+      "neden": "Yatay hız düşmeyi hızlandırmaz. İkisi de aynı g ile düşer."
      },
      {
       "yazi": "Aynı anda değerler",
       "dogru": true,
-      "neden": "Her an aynı yükseklikteler: yatay hız düşmeyi ne hızlandırır ne yavaşlatır. Yatay ve düşey hareket birbirinden bağımsızdır."
+      "neden": "İki top her an aynı yükseklikte. Yatay hız düşmeyi ne hızlandırır ne yavaşlatır. Yatay ve düşey hareket birbirinden bağımsızdır."
      }
     ]
    },
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Yatay atış",
-   "metin": "19,6 m'lik yardan taşı yatay atacaksın; taş 2 s'de yere iner. Hızı ayarla ve taşı 40 m ötedeki bayrağa düşür.",
+   "metin": "19,6 m'lik bir yardan taşı yatay olarak atacaksın ve taş 2 s'de yere inecek. Hızı ayarla ve taşı 40 m ötedeki bayrağa düşür.",
    "sahne": {
     "tur": "fiz4-yatay",
     "sure": 2
@@ -58,7 +58,7 @@
     "hedef": {
      "v": 20
     },
-    "tamam": "Düşüş 2 s sürdü: h = ½·g·t² → 19,6 = 4,9·t² → t = 2 s. Bu sürede taş yatayda x = 20 × 2 = 40 m gitti."
+    "tamam": "Düşüş 2 s sürdü, çünkü h = ½·g·t² olduğundan 19,6 = 4,9·t² ve t = 2 s'dir. Bu sürede taş yatayda x = 20 × 2 = 40 m gitti."
    },
    "kart": 3
   },
@@ -89,12 +89,12 @@
     "secenekler": [
      {
       "yazi": "Uzar",
-      "neden": "Taş daha uzağa gider ama daha uzun sürede değil. Sürelere bak."
+      "neden": "Taş daha uzağa gider, ama daha uzun sürede değil. Sürelere bak."
      },
      {
       "yazi": "Değişmez",
       "dogru": true,
-      "neden": "Her atış 2 s sürdü: uçuş süresi yalnızca yüksekliğe bağlıdır, t = √(2h / g). Hız yalnızca ne kadar uzağa gidileceğini değiştirir."
+      "neden": "Her atış 2 s sürdü. Uçuş süresi yalnızca yüksekliğe bağlıdır ve t = √(2h / g) ile bulunur. Hız yalnızca ne kadar uzağa gidileceğini değiştirir."
      },
      {
       "yazi": "Kısalır",
@@ -120,11 +120,11 @@
     "secenekler": [
      {
       "yazi": "0",
-      "neden": "Tepede yalnızca düşey hız sıfırdır; top hâlâ yatay gidiyor."
+      "neden": "Tepede yalnızca düşey hız sıfırdır. Top hâlâ yatay olarak gidiyor."
      },
      {
       "yazi": "20",
-      "neden": "Bu atış hızı. Yükselirken düşey hız azaldı."
+      "neden": "Bu, atış hızıdır. Top yükselirken düşey hız azaldı."
      },
      {
       "yazi": "10",
@@ -137,7 +137,7 @@
   },
   {
    "baslik": "Atış laboratuvarı",
-   "metin": "Bu bir atış laboratuvarı. Açıyı ve hızı değiştir ya da namlunun ucunu sürükle: yol, menzil ve tepe yüksekliği anında değişir. Hava direnci yok. Aşağıdakileri kendin bul.",
+   "metin": "Bu bir atış laboratuvarı. Açıyı ve hızı değiştir ya da namlunun ucunu sürükle. Yol, menzil ve tepe yüksekliği anında değişir. Hava direnci yok. Aşağıdakileri kendin bul.",
    "sahne": {
     "tur": "sim-atis"
    },
@@ -178,7 +178,7 @@
         "a": 45
        }
       ],
-      "tamam": "45°'de menzil R = v0²·sin2θ / g = 400 × 1 / 9,8 ≈ 41 m; en büyüğü bu. Hava direnci yoksa ve top atıldığı seviyeye inerse en uzun menzil 45°'dedir."
+      "tamam": "45°'de menzil R = v0²·sin2θ / g = 400 × 1 / 9,8 ≈ 41 m olur ve en büyük menzil budur. Hava direnci yoksa ve top atıldığı seviyeye inerse en uzun menzil 45°'de elde edilir."
      },
      {
       "yazi": "Aynı hızla önce <b>30°</b>, sonra <b>60°</b> ile at. Menzilleri karşılaştır.",
@@ -202,7 +202,7 @@
         "a": 60
        }
       ],
-      "tamam": "İkisi de ≈ 35 m. Toplamı 90° olan açılarda sin2θ aynıdır (sin60° = sin120°). 60° daha yükseğe çıkar ve uzun uçar ama yatayda yavaştır."
+      "tamam": "İkisinde de menzil yaklaşık 35 m'dir. Toplamı 90° olan açılarda sin2θ aynıdır (sin60° = sin120°). 60° ile atılan top daha yükseğe çıkar ve uzun uçar, ama yatayda yavaştır."
      },
      {
       "yazi": "45°'de hızı önce <b>10</b>, sonra <b>20 m/s</b> yap. Menzil kaç katına çıktı?",
@@ -226,7 +226,7 @@
         "v": 20
        }
       ],
-      "tamam": "10 m/s ile ≈ 10,2 m, 20 m/s ile ≈ 40,8 m: hız 2 katına çıkınca menzil <b>4 katına</b> çıktı, çünkü R = v0²·sin2θ / g hızın karesiyle büyür."
+      "tamam": "10 m/s ile menzil yaklaşık 10,2 m, 20 m/s ile yaklaşık 40,8 m olur. Hız 2 katına çıkınca menzil <b>4 katına</b> çıktı, çünkü R = v0²·sin2θ / g hızın karesiyle büyür."
      }
     ]
    },
@@ -234,11 +234,11 @@
   }
  ],
  "kapanis": [
-  "Yatay ve düşey hareket bağımsızdır: yatayda hız sabit, düşeyde ivme g.",
-  "Yatay atışta uçuş süresi yalnızca yüksekliğe bağlıdır: t = √(2h / g); gidilen yol x = v0·t.",
-  "Eğik atışta vx = v0·cosθ sabittir, vy = v0·sinθ − g·t; tepede vy = 0 ama hız vx'tir.",
-  "Menzil R = v0²·sin2θ / g. Havasız ortamda en büyük menzil 45°'dedir; 30° ile 60° aynı menzili verir.",
-  "Gerçekte hava direnci menzili ve yüksekliği azaltır; en uzun menzil açısı genelde 45°'den biraz küçüktür."
+  "Yatay ve düşey hareket birbirinden bağımsızdır. Yatayda hız sabittir, düşeyde ivme g'dir.",
+  "Yatay atışta uçuş süresi yalnızca yüksekliğe bağlıdır ve t = √(2h / g) olur. Gidilen yatay yol ise x = v0·t'dir.",
+  "Eğik atışta vx = v0·cosθ sabittir ve vy = v0·sinθ − g·t olur. Tepede vy = 0'dır, ama cismin hızı vx'e eşittir.",
+  "Menzil R = v0²·sin2θ / g ile bulunur. Havasız ortamda en büyük menzil 45°'dedir ve 30° ile 60° aynı menzili verir.",
+  "Gerçekte hava direnci menzili ve yüksekliği azaltır. En uzun menzil açısı genellikle 45°'den biraz küçüktür."
  ],
  "soruOnce": true
 }

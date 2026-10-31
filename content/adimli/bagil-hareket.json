@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "bagil-hareket",
  "baslik": "Bağıl hareket",
- "ozet": "Önce dene, sonra adını öğren: gözlemciyi değiştir, arabalardan ve kayıktan hıza bak.",
+ "ozet": "Önce dene, sonra adını öğren. Gözlemciyi değiştir, arabalardan ve kayıktan hıza bak.",
  "adimlar": [
   {
    "baslik": "Kime göre?",
-   "metin": "Tren yere göre 20 m/s ile gidiyor. Gözlemciyi değiştir: önce perondan, sonra trendeki arkadaşın yerinden bak.",
+   "metin": "Tren yere göre 20 m/s hızla gidiyor. Gözlemciyi değiştir. Önce perondan, sonra trendeki arkadaşının yerinden bak.",
    "sahne": {
     "tur": "fiz5-gozlemci"
    },
@@ -29,16 +29,16 @@
     "secenekler": [
      {
       "yazi": "Evet",
-      "neden": "Perondaki kişiye göre doğru. Ama trendeki arkadaşına göre yolcu yerinden kımıldamıyor."
+      "neden": "Bu, perondaki kişiye göre doğrudur. Ama trendeki arkadaşına göre yolcu yerinden kımıldamıyor."
      },
      {
       "yazi": "Kime göre baktığına bağlı",
       "dogru": true,
-      "neden": "Perona göre 20 m/s ile gider, arkadaşına göre durgundur. Hareketi ölçtüğün gözlemciye <b>referans sistemi</b> denir; referansı söylemeden hız eksik kalır."
+      "neden": "Yolcu perona göre 20 m/s hızla gider, arkadaşına göre ise durgundur. Hareketi ölçtüğün gözlemciye <b>referans sistemi</b> denir. Referansı söylemeden hız eksik kalır."
      },
      {
       "yazi": "Hayır",
-      "neden": "Arkadaşına göre doğru. Peki perondaki kişi onu nasıl görür?"
+      "neden": "Bu, arkadaşına göre doğrudur. Peki perondaki kişi onu nasıl görür?"
      }
     ]
    },
@@ -46,7 +46,7 @@
   },
   {
    "baslik": "Bağıl hız",
-   "metin": "A doğuya 90 km/h gidiyor. B'nin hızını ayarla: A'daki sürücü B'yi durgun görsün.",
+   "metin": "A doğuya 90 km/h hızla gidiyor. B'nin hızını ayarla ve A'daki sürücünün B'yi durgun görmesini sağla.",
    "sahne": {
     "tur": "fiz5-iki-arac"
    },
@@ -96,13 +96,13 @@
     "hedef": {
      "b": -60
     },
-    "tamam": "A'ya göre B: −60 − 90 = −150 km/h, yani batıya 150 km/h: zıt yönde hızlar toplanır."
+    "tamam": "A'ya göre B'nin hızı −60 − 90 = −150 km/h, yani batıya doğru 150 km/h olur. Zıt yöndeki hızlar toplanır."
    },
    "kart": 5
   },
   {
    "baslik": "Yürüyen merdiven",
-   "metin": "24 m'lik merdiven 1 m/s ile çıkıyor; üstünde durursan 24 s'de çıkarsın. Duran merdivende 0,5 m/s yürürsen 48 s sürer.",
+   "metin": "24 m'lik yürüyen merdiven 1 m/s hızla çıkıyor ve üstünde durursan 24 s'de çıkarsın. Duran merdivende 0,5 m/s hızla yürürsen ise çıkış 48 s sürer.",
    "sahne": {
     "tur": "fiz5-merdiven",
     "sure": 6
@@ -113,16 +113,16 @@
     "secenekler": [
      {
       "yazi": "72 s",
-      "neden": "Merdiven de sen de yukarı gidiyorsun; birlikte, tek başınıza olduğunuzdan daha hızlısınız."
+      "neden": "Merdiven de sen de yukarı gidiyorsun. Birlikte, tek başınıza olduğunuzdan daha hızlısınız."
      },
      {
       "yazi": "36 s",
-      "neden": "Hem merdiven hem sen yukarı gidiyorsun; ikisinin tek başına olduğundan hızlı olmalısın."
+      "neden": "Hem merdiven hem sen yukarı gidiyorsun. Bu yüzden ikisinin tek başına olduğundan daha hızlı olmalısın."
      },
      {
       "yazi": "16 s",
       "dogru": true,
-      "neden": "Yere göre hızın 1 + 0,5 = 1,5 m/s olur: 24 / 1,5 = 16 s; hızlar toplanır, süreler toplanmaz. Ters yönde yürüseydin 1 − 0,5 = 0,5 m/s ile 48 s sürerdi."
+      "neden": "Yere göre hızın 1 + 0,5 = 1,5 m/s olur ve çıkış 24 / 1,5 = 16 s sürer. Hızlar toplanır, süreler toplanmaz. Ters yönde yürüseydin hızın 1 − 0,5 = 0,5 m/s olurdu ve çıkış 48 s sürerdi."
      }
     ]
    },
@@ -130,7 +130,7 @@
   },
   {
    "baslik": "Nehirde kayık",
-   "metin": "Kayık suya göre 4 m/s ile, burnu kıyıya dik gidiyor; nehir 80 m. Akıntıyı değiştir ve en az iki kez oynat.",
+   "metin": "Kayık suya göre 4 m/s hızla ve burnu kıyıya dik olarak gidiyor. Nehir 80 m genişliğinde. Akıntıyı değiştir ve en az iki kez oynat.",
    "sahne": {
     "tur": "fiz5-nehir",
     "sure": 4,
@@ -158,16 +158,16 @@
     "secenekler": [
      {
       "yazi": "Uzadı",
-      "neden": "Akıntı kıyıya paraleldir; kıyıya dik ilerlemeyi yavaşlatmaz."
+      "neden": "Akıntı kıyıya paraleldir. Bu yüzden kıyıya dik ilerlemeyi yavaşlatmaz."
      },
      {
       "yazi": "Kısaldı",
-      "neden": "Akıntı kayığı yalnızca yana sürükler; karşıya yaklaştırmaz."
+      "neden": "Akıntı kayığı yalnızca yana sürükler ve karşıya yaklaştırmaz."
      },
      {
       "yazi": "Değişmedi",
       "dogru": true,
-      "neden": "Süre = genişlik / kıyıya dik hız = 80 / 4 = 20 s. Akıntı süreyi değiştirmez, yalnızca sürüklenmeyi artırır: 3 m/s'de 3 · 20 = 60 m."
+      "neden": "Geçiş süresi, genişliğin kıyıya dik hıza bölünmesiyle bulunur ve 80 / 4 = 20 s olur. Akıntı süreyi değiştirmez, yalnızca sürüklenmeyi artırır. 3 m/s akıntıda sürüklenme 3 · 20 = 60 m olur."
      }
     ]
    },
@@ -175,7 +175,7 @@
   },
   {
    "baslik": "Tam karşıya çık",
-   "metin": "Nehir 60 m, kayık 5 m/s, akıntı 3 m/s. Burnu akıntıya karşı çevir ve kayığı <b>tam karşıya</b> çıkar. Açıyı ayarla, sonra oynat.",
+   "metin": "Nehir 60 m genişliğinde, kayığın hızı 5 m/s, akıntının hızı 3 m/s. Burnu akıntıya karşı çevir ve kayığı <b>tam karşıya</b> çıkar. Açıyı ayarla, sonra oynat.",
    "sahne": {
     "tur": "fiz5-nehir",
     "sure": 4,
@@ -201,13 +201,13 @@
      "aci": 37
     },
     "ipucu": "Kayığın akıntıya karşı bileşeni akıntıyı (3 m/s) tam dengelemeli.",
-    "tamam": "Yaklaşık 37°'de (sin37° = 0,6) akıntıya karşı bileşen 5 · 0,6 = 3 m/s olur ve akıntıyı dengeler. Kıyıya dik bileşen 5 · 0,8 = 4 m/s kalır: 60 / 4 = 15 s."
+    "tamam": "Yaklaşık 37°'de (sin37° = 0,6) akıntıya karşı bileşen 5 · 0,6 = 3 m/s olur ve akıntıyı dengeler. Kıyıya dik bileşen 5 · 0,8 = 4 m/s kalır ve geçiş 60 / 4 = 15 s sürer."
    },
    "kart": 12
   },
   {
    "baslik": "Arabadan yağmur",
-   "metin": "Rüzgârsız havada yağmur 8 m/s ile düşey düşüyor. Arabayı hızlandır: arabadakine göre damlalar <b>10 m/s</b> ile gelsin.",
+   "metin": "Rüzgârsız havada yağmur 8 m/s hızla düşey olarak düşüyor. Arabayı hızlandır ve arabadakine göre damlaların <b>10 m/s</b> hızla gelmesini sağla.",
    "sahne": {
     "tur": "fiz5-yagmur"
    },
@@ -230,15 +230,15 @@
     "hedef": {
      "v": 6
     },
-    "tamam": "Arabadakine göre yağmur 8 m/s aşağı ve 6 m/s geriye gelir: √(8² + 6²) = 10 m/s, düşeyle tanθ = 6/8 = 0,75, yani θ ≈ 37°."
+    "tamam": "Arabadakine göre yağmur 8 m/s aşağı ve 6 m/s geriye doğru gelir. Hızı √(8² + 6²) = 10 m/s olur. Düşeyle yaptığı açı için tanθ = 6/8 = 0,75'tir, yani θ ≈ 37°'dir."
    },
    "kart": 13
   }
  ],
  "kapanis": [
-  "Hız gözlemciye göredir; referansı söylemeden hız eksik kalır.",
-  "Bağıl hız = cismin hızı − gözlemcinin hızı (vektörel). Aynı yönde hızlar çıkarılır, zıt yönde toplanır.",
-  "Yere göre hız = araca göre hız + aracın yere göre hızı; hızlar toplanır, süreler toplanmaz.",
+  "Hız gözlemciye göre ölçülür. Referansı söylemeden hız eksik kalır.",
+  "Bağıl hız, cismin hızından gözlemcinin hızının vektörel olarak çıkarılmasıyla bulunur. Aynı yöndeki hızlar çıkarılır, zıt yöndeki hızlar toplanır.",
+  "Yere göre hız, araca göre hız ile aracın yere göre hızının toplamıdır. Hızlar toplanır, süreler toplanmaz.",
   "Nehirde geçiş süresi = genişlik / kıyıya dik hız. Akıntı süreyi değiştirmez, kayığı sürükler.",
   "Araçtan bakınca yağmur, bağıl hızıyla eğik görünür."
  ],

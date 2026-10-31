@@ -3,7 +3,7 @@
  "ders": "fizik",
  "konu": "vektorler",
  "baslik": "Vektörler",
- "ozet": "Önce dene, sonra adını öğren: vektör çiz, döndürüp topla, bileşenlerine ayır.",
+ "ozet": "Önce dene, sonra adını öğren. Vektör çiz, döndürüp topla ve bileşenlerine ayır.",
  "adimlar": [
   {
    "baslik": "Ok ile çiz",
@@ -38,13 +38,13 @@
      "L": 3,
      "a": 135
     },
-    "tamam": "135° = 90° + 45°: ok sol üste bakar."
+    "tamam": "135° = 90° + 45° olduğu için ok sol üste bakar."
    },
    "kart": 2
   },
   {
    "baslik": "Uç uca topla",
-   "metin": "A = 3, B = 4 birim. B'yi döndür ve bileşkeyi tam 5 birim yap.",
+   "metin": "A 3 birim, B 4 birim uzunluğunda. B'yi döndür ve bileşkeyi tam 5 birim yap.",
    "sahne": {
     "tur": "fiz3-toplama"
    },
@@ -66,7 +66,7 @@
     "hedef": {
      "b": 90
     },
-    "tamam": "A ile B dik olunca bir dik üçgen oluşur: R = √(3² + 4²) = 5. Bileşkenin büyüklüğü, vektörlerin arasındaki açıya bağlıdır; sayıları toplamak yetmez."
+    "tamam": "A ile B dik olunca bir dik üçgen oluşur ve R = √(3² + 4²) = 5 olur. Bileşkenin büyüklüğü vektörlerin arasındaki açıya bağlıdır. Sayıları toplamak yetmez."
    },
    "kart": 3
   },
@@ -104,7 +104,7 @@
      },
      {
       "yazi": "3 ile 4 arasında",
-      "neden": "B'yi 0° yap: bileşke 7 olur, 4'ten büyük."
+      "neden": "B'yi 0° yap. Bileşke 7 olur ve 4'ten büyüktür."
      }
     ]
    },
@@ -112,7 +112,7 @@
   },
   {
    "baslik": "Sayıyla çarp",
-   "metin": "A'nın iki katı uzunlukta ama ters yönde bir vektör yap.",
+   "metin": "A'nın iki katı uzunlukta, ama ters yönde bir vektör yap.",
    "sahne": {
     "tur": "fiz3-carpma"
    },
@@ -134,13 +134,13 @@
     "hedef": {
      "k": -2
     },
-    "tamam": "−2A: boyu iki kat, yönü ters."
+    "tamam": "Bu vektör −2A'dır. Boyu iki kat, yönü terstir."
    },
    "kart": 5
   },
   {
    "baslik": "Bileşenler",
-   "metin": "V = 10 birim. Açıyı değiştir ve düşey bileşeni 5 yap.",
+   "metin": "V 10 birim uzunluğunda. Açıyı değiştir ve düşey bileşeni 5 yap.",
    "sahne": {
     "tur": "fiz3-bilesen"
    },
@@ -162,7 +162,7 @@
     "hedef": {
      "a": 30
     },
-    "tamam": "sin30° = 0,5, yani V<sub>y</sub> = 10 × 0,5 = 5; V<sub>x</sub> = 10 × cos30° ≈ 8,66."
+    "tamam": "sin30° = 0,5 olduğu için V<sub>y</sub> = 10 × 0,5 = 5 olur. Yatay bileşen ise V<sub>x</sub> = 10 × cos30° ≈ 8,66'dır."
    },
    "kart": 8
   },
@@ -189,16 +189,16 @@
     "hedef": {
      "k": 4
     },
-    "tamam": "√(3² + 4²) = 5. Toplam 7 adım yürüdün ama yer değiştirmen 5 adım: yürüdüğün toplam mesafe (<b>yol</b>) skalerdir, yer değiştirme vektördür."
+    "tamam": "√(3² + 4²) = 5 olur. Toplam 7 adım yürüdün, ama yer değiştirmen 5 adım oldu. Yürüdüğün toplam mesafe (<b>yol</b>) skalerdir, yer değiştirme ise vektördür."
    },
    "kart": 9
   }
  ],
  "kapanis": [
-  "<b>Skaler</b>: sayı + birim (kütle, sıcaklık, zaman). <b>Vektör</b>: sayı + birim + yön (kuvvet, hız, yer değiştirme).",
-  "Bileşke, uç uca eklenen vektörlerde ilk kuyruktan son uca çizilen oktur; daima |A − B| ile A + B arasındadır.",
-  "<b>kA</b>: boy |k| katı; k negatifse yön ters. A − B = A + (−B).",
-  "<b>Vx = V·cosθ</b>, <b>Vy = V·sinθ</b>; büyüklük <b>V = √(Vx² + Vy²)</b>."
+  "<b>Skaler</b> bir büyüklük sayı ve birimle verilir (kütle, sıcaklık, zaman). <b>Vektörel</b> bir büyüklük için yön de gerekir (kuvvet, hız, yer değiştirme).",
+  "Uç uca eklenen vektörlerde bileşke, ilk kuyruktan son uca çizilen oktur. Bileşke her zaman |A − B| ile A + B arasındadır.",
+  "<b>kA</b> vektörünün boyu A'nın |k| katıdır ve k negatifse yön terstir. A − B ise A + (−B) demektir.",
+  "Bileşenler <b>Vx = V·cosθ</b> ve <b>Vy = V·sinθ</b> ile bulunur. Büyüklük ise <b>V = √(Vx² + Vy²)</b> olur."
  ],
  "soruOnce": true
 }

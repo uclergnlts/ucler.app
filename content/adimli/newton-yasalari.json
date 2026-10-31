@@ -3,11 +3,11 @@
  "ders": "fizik",
  "konu": "newton-yasalari",
  "baslik": "Newton'un hareket yasaları",
- "ozet": "Önce dene, sonra adını öğren: örtü çek, kutu it, kaykayda itiş.",
+ "ozet": "Önce dene, sonra adını öğren. Örtüyü çek, kutuyu it ve kaykayda itiş.",
  "adimlar": [
   {
    "baslik": "Net kuvvet",
-   "metin": "Net kuvvet, cisme etki eden bütün kuvvetlerin toplamıdır. Soldaki 30 N ile sağa itiyor; sağdakini ayarla, net kuvvet sıfır olsun.",
+   "metin": "Net kuvvet, cisme etki eden bütün kuvvetlerin toplamıdır. Soldaki kişi 30 N ile sağa itiyor. Sağdakinin kuvvetini ayarla ve net kuvveti sıfır yap.",
    "sahne": {
     "tur": "fiz4-net"
    },
@@ -29,7 +29,7 @@
     "hedef": {
      "F": 30
     },
-    "tamam": "30 N sağa, 30 N sola: net kuvvet 0. Kuvvetler var ama kutunun hızı değişmez; bunun nedenini 1. yasa anlatıyor."
+    "tamam": "30 N sağa, 30 N sola etki ediyor ve net kuvvet 0 oluyor. Kuvvetler var, ama kutunun hızı değişmez. Bunun nedenini 1. yasa anlatıyor."
    },
    "kart": 1
   },
@@ -51,7 +51,7 @@
      {
       "yazi": "Masada yerinde kalır",
       "dogru": true,
-      "neden": "Duran tabaklar durgun kalmayı sürdürür. Sürtünme çok kısa etki ettiği için hızları neredeyse hiç değişmez: eylemsizlik."
+      "neden": "Duran tabaklar durgun kalmayı sürdürür. Sürtünme çok kısa süre etki ettiği için hızları neredeyse hiç değişmez. Buna eylemsizlik denir."
      },
      {
       "yazi": "Havaya fırlar",
@@ -63,7 +63,7 @@
   },
   {
    "baslik": "F = m·a",
-   "metin": "İvme, hızın her saniye ne kadar değiştiğidir. 10 kg'lık arabayı it: ivmesi 2 m/s² olsun, sonra oynat.",
+   "metin": "İvme, hızın her saniye ne kadar değiştiğini gösterir. 10 kg'lık arabayı it ve ivmesini 2 m/s² yap, sonra oynat.",
    "sahne": {
     "tur": "fiz4-fma",
     "sure": 2,
@@ -87,7 +87,7 @@
     "hedef": {
      "F": 20
     },
-    "tamam": "a = 20 N / 10 kg = 2 m/s². Hız her saniye 2 m/s artar, 2 s'de araba ½ · 2 · 2² = 4 m yol alır."
+    "tamam": "a = 20 N / 10 kg = 2 m/s² olur. Hız her saniye 2 m/s artar ve araba 2 s'de ½ · 2 · 2² = 4 m yol alır."
    },
    "kart": 4
   },
@@ -124,12 +124,12 @@
      },
      {
       "yazi": "Değişmez",
-      "neden": "a = F / m: m değişince a da değişir."
+      "neden": "a = F / m olduğu için m değişince a da değişir."
      },
      {
       "yazi": "Yarıya iner",
       "dogru": true,
-      "neden": "20 N ile 10 kg'da 2 m/s², 20 kg'da 1 m/s²: a = F / m, yani ivme kütleyle ters orantılıdır."
+      "neden": "20 N ile 10 kg'da ivme 2 m/s², 20 kg'da ise 1 m/s² olur. a = F / m olduğu için ivme kütleyle ters orantılıdır."
      }
     ]
    },
@@ -137,7 +137,7 @@
   },
   {
    "baslik": "Etki–tepki",
-   "metin": "Kaykayda duruyorsun; kütlen 60 kg. 30 kg'lık kardeşini 60 N'luk bir kuvvetle iteceksin.",
+   "metin": "Kaykayda duruyorsun ve kütlen 60 kg. 30 kg'lık kardeşini 60 N'luk bir kuvvetle iteceksin.",
    "sahne": {
     "tur": "fiz4-etki-tepki",
     "sure": 3
@@ -149,11 +149,11 @@
      {
       "yazi": "İkiniz de, zıt yönlere",
       "dogru": true,
-      "neden": "Kardeşin de seni eşit (60 N) ve zıt yönde iter; kuvvetler farklı cisimlere etki ettiği için birbirini yok etmez. Kardeşinin kütlesi yarı olduğu için iki kat hızlı uzaklaşır (a = F / m)."
+      "neden": "Kardeşin de seni eşit büyüklükte (60 N) ve zıt yönde iter. Kuvvetler farklı cisimlere etki ettiği için birbirini yok etmez. Kardeşinin kütlesi yarı olduğu için senden iki kat hızlı uzaklaşır (a = F / m)."
      },
      {
       "yazi": "Yalnızca kardeşin",
-      "neden": "Kardeşin de sana eşit büyüklükte bir kuvvet uygular; sen de geri kayarsın."
+      "neden": "Kardeşin de sana eşit büyüklükte bir kuvvet uygular. Bu yüzden sen de geri kayarsın."
      },
      {
       "yazi": "Yalnızca sen",
@@ -165,7 +165,7 @@
   },
   {
    "baslik": "Ağırlık ≠ kütle",
-   "metin": "60 kg'lık astronotu Ay'a götür. Bu sahnede gerçek değerler var: Dünya'da g ≈ 9,8, Ay'da g ≈ 1,62 m/s².",
+   "metin": "60 kg'lık astronotu Ay'a götür. Bu sahnede gerçek değerler kullanılıyor. Dünya'da g ≈ 9,8, Ay'da ise g ≈ 1,62 m/s²'dir.",
    "sahne": {
     "tur": "fiz4-agirlik"
    },
@@ -192,7 +192,7 @@
   },
   {
    "baslik": "Sürtünme laboratuvarı",
-   "metin": "Zeminde bir kutu var; μs = 0,5, μk = 0,3 ve g = 10 m/s². İtmeyi ve kütleyi değiştir: kuvvet okları, hız ve ivme anında değişir. Aşağıdakileri kendin bul.",
+   "metin": "Zeminde bir kutu var. μs = 0,5, μk = 0,3 ve g = 10 m/s². İtmeyi ve kütleyi değiştir. Kuvvet okları, hız ve ivme anında değişir. Aşağıdakileri kendin bul.",
    "sahne": {
     "tur": "sim-surtunme"
    },
@@ -236,7 +236,7 @@
         "F": 105
        }
       ],
-      "tamam": "Statik sürtünmenin sınırı μs·N = 0,5 × 200 = 100 N. İtme bunu aşınca kutu kaydı; artık kinetik sürtünme μk·N = 0,3 × 200 = 60 N etkiyor."
+      "tamam": "Statik sürtünmenin sınırı μs·N = 0,5 × 200 = 100 N'dur. İtme bunu aşınca kutu kaydı. Artık kinetik sürtünme etki ediyor ve μk·N = 0,3 × 200 = 60 N'dur."
      },
      {
       "yazi": "Kutu kayarken itmeyi <b>60 N</b>'a indir. Hızına bak.",
@@ -254,7 +254,7 @@
         "F": 60
        }
       ],
-      "tamam": "İtme kinetik sürtünmeye eşit: net kuvvet sıfır, kutu <b>sabit hızla</b> gidiyor (1. yasa). Başlatmak 100 N'dan fazlasını istedi, sürdürmeye 60 N yetiyor."
+      "tamam": "İtme kinetik sürtünmeye eşit. Net kuvvet sıfır olduğu için kutu <b>sabit hızla</b> gidiyor (1. yasa). Hareketi başlatmak 100 N'dan fazlasını gerektirdi, ama sürdürmeye 60 N yetiyor."
      },
      {
       "yazi": "Kütleyi <b>40 kg</b> yap ve kutuyu kaydıran en küçük itmeyi yeniden bul.",
@@ -269,7 +269,7 @@
         "F": 205
        }
       ],
-      "tamam": "Kütle 2 katına çıkınca N = 400 N oldu ve sınır da 2 katına çıktı: μs·N = 200 N. Sürtünme normal kuvvetle orantılıdır."
+      "tamam": "Kütle 2 katına çıkınca N = 400 N oldu ve sınır da 2 katına çıkarak μs·N = 200 N oldu. Sürtünme normal kuvvetle orantılıdır."
      }
     ]
    },
@@ -277,11 +277,11 @@
   }
  ],
  "kapanis": [
-  "<b>1. yasa:</b> net kuvvet sıfırsa hız değişmez (durmak da sabit hızdır: v = 0).",
-  "<b>2. yasa:</b> Fnet = m·a. Aynı kuvvette kütle iki katına çıkarsa ivme yarıya iner. 1 N = 1 kg·m/s².",
-  "<b>3. yasa:</b> etki ve tepki eşit, zıt ve farklı cisimlerdedir; bu yüzden birbirini yok etmez.",
-  "Ağırlık G = m·g (N); kütle (kg) her yerde aynıdır.",
-  "Durgunken sürtünme itmeyi μs·N'ye kadar dengeler; kayarken fk = μk·N."
+  "<b>1. yasaya</b> göre net kuvvet sıfırsa hız değişmez. Durmak da sabit hızdır (v = 0).",
+  "<b>2. yasaya</b> göre Fnet = m·a olur. Aynı kuvvette kütle iki katına çıkarsa ivme yarıya iner. 1 N = 1 kg·m/s²'dir.",
+  "<b>3. yasaya</b> göre etki ve tepki eşit, zıt yönlü ve farklı cisimlerdedir. Bu yüzden birbirini yok etmez.",
+  "Ağırlık G = m·g (N) ile bulunur. Kütle (kg) ise her yerde aynıdır.",
+  "Durgun cisimde sürtünme, itmeyi μs·N'ye kadar dengeler. Kayan cisimde ise fk = μk·N olur."
  ],
  "soruOnce": true
 }
