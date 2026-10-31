@@ -3,7 +3,7 @@
  "ders": "biyoloji",
  "konu": "sinir-sistemi",
  "baslik": "Sinir sistemi",
- "ozet": "Önce dene, sonra adını öğren: impulsun yolunu izle, zarı eşiğe taşı, miyelini yarıştır, refleksi gör.",
+ "ozet": "Önce dene, sonra adını öğren. İmpulsun yolunu izle, zarı eşiğe taşı, miyelinli aksonu yarıştır ve refleksi gör.",
  "adimlar": [
   {
    "baslik": "Nöronda yol",
@@ -23,11 +23,11 @@
      {
       "yazi": "Dendrit → gövde → akson → akson ucu",
       "dogru": true,
-      "neden": "Uyarı dendritte alınır, gövdeden geçer, akson boyunca ilerler ve akson ucunda sonraki hücreye aktarılır."
+      "neden": "Uyarı dendritte alınır ve gövdeden geçer. Sonra akson boyunca ilerler ve akson ucunda sonraki hücreye aktarılır."
      },
      {
       "yazi": "Gövde → dendrit → akson ucu",
-      "neden": "Dendritler uyarıyı gövdeye getirir; impuls gövdeden dendrite gitmez."
+      "neden": "Dendritler uyarıyı gövdeye getirir. İmpuls gövdeden dendrite gitmez."
      }
     ]
    },
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Eşiği aş",
-   "metin": "Dinlenen zarın içi dışına göre <b>−70 mV</b>'tur. Uyarı zarı <b>−55 mV</b> eşiğine taşırsa impuls doğar. Uyarıyı ayarla ve oynat.",
+   "metin": "Dinlenen zarın içi, dışına göre <b>−70 mV</b>'tur. Uyarı zarı <b>−55 mV</b> eşiğine taşırsa bir impuls oluşur. Uyarıyı ayarla ve oynat.",
    "sahne": {
     "tur": "biy9-aksiyon",
     "sure": 4
@@ -64,13 +64,13 @@
      ]
     },
     "ipucu": "Zarı −70'ten −55'e çıkarmak için en az +15 mV gerekir.",
-    "tamam": "Eşik aşıldı: Na⁺ kanalları açıldı, Na⁺ içeri girdi ve zar +30 mV'a çıktı (depolarizasyon). Sonra K⁺ dışarı çıktı ve zar eski hâline döndü (repolarizasyon). Bu akışlar ATP harcamaz."
+    "tamam": "Eşik aşıldı. Na⁺ kanalları açıldı, Na⁺ iyonları içeri girdi ve zar +30 mV'a çıktı; buna depolarizasyon denir. Sonra K⁺ iyonları dışarı çıktı ve zar eski hâline döndü; buna da repolarizasyon denir. Bu akışlar ATP harcamaz."
    },
    "kart": 4
   },
   {
    "baslik": "Ya hep ya hiç",
-   "metin": "Eşiği geçtin. Şimdi uyarıyı <b>güçlendir</b> ve iki farklı değerle oynat. Tepe noktasını karşılaştır.",
+   "metin": "Eşiği geçtin. Şimdi uyarıyı <b>güçlendir</b> ve iki farklı değerle oynat. Sonra tepe noktalarını karşılaştır.",
    "sahne": {
     "tur": "biy9-aksiyon",
     "sure": 4
@@ -97,16 +97,16 @@
     "secenekler": [
      {
       "yazi": "Uyarıyla birlikte büyüdü",
-      "neden": "Tepe hep +30 mV'ta kaldı. Eşik aşılınca impuls hep aynı büyüklükte olur."
+      "neden": "Tepe her seferinde +30 mV'ta kaldı. Eşik aşılınca impuls hep aynı büyüklükte olur."
      },
      {
       "yazi": "Küçüldü",
-      "neden": "Tepe küçülmedi; iki koşuda da +30 mV'a ulaştı."
+      "neden": "Tepe küçülmedi. İki denemede de +30 mV'a ulaştı."
      },
      {
       "yazi": "Değişmedi",
       "dogru": true,
-      "neden": "Ya hep ya hiç: eşik aşılırsa impuls tam boyda oluşur. Güçlü uyarı impulsu büyütmez, daha sık impuls üretir."
+      "neden": "Ya hep ya hiç kuralına göre eşik aşılırsa impuls tam boyda oluşur. Güçlü bir uyarı impulsu büyütmez, daha sık impuls üretir."
      }
     ]
    },
@@ -114,7 +114,7 @@
   },
   {
    "baslik": "Miyelin yarışı",
-   "metin": "Bazı aksonlar <b>miyelin</b> kılıfla sarılıdır. İmpuls kılıfın aralarındaki <b>Ranvier boğumlarında</b> yeniden oluşur. Oynat.",
+   "metin": "Bazı aksonlar <b>miyelin</b> kılıfla sarılıdır. İmpuls, kılıfın aralarındaki <b>Ranvier boğumlarında</b> yeniden oluşur. Oynat.",
    "sahne": {
     "tur": "biy9-miyelin",
     "sure": 5
@@ -126,15 +126,15 @@
      {
       "yazi": "Miyelinli akson",
       "dogru": true,
-      "neden": "İmpuls boğumdan boğuma atlar. Kalın miyelinli aksonda hız 100 m/s'yi geçer; miyelinsizde yaklaşık 1 m/s'dir."
+      "neden": "İmpuls boğumdan boğuma atlar. Kalın ve miyelinli bir aksonda hız 100 m/s'yi geçer, miyelinsiz aksonda ise yaklaşık 1 m/s'dir."
      },
      {
       "yazi": "Miyelinsiz akson",
-      "neden": "Miyelinsiz aksonda impuls zarın her noktasında yeniden oluşmak zorundadır; bu yavaştır."
+      "neden": "Miyelinsiz aksonda impuls, zarın her noktasında yeniden oluşmak zorundadır. Bu da iletimi yavaşlatır."
      },
      {
       "yazi": "İkisi aynı anda",
-      "neden": "Miyelin hızı belirgin biçimde artırır; uçlara aynı anda ulaşmazlar."
+      "neden": "Miyelin iletim hızını belirgin biçimde artırır. Bu yüzden impulslar uçlara aynı anda ulaşmaz."
      }
     ]
    },
@@ -142,7 +142,7 @@
   },
   {
    "baslik": "Sinaps",
-   "metin": "Nöronlar birbirine dokunmaz; aralarında <b>sinaps</b> boşluğu vardır. Akson ucuna gelen impulsla ne olduğunu izle.",
+   "metin": "Nöronlar birbirine dokunmaz; aralarında <b>sinaps</b> adı verilen bir boşluk vardır. Akson ucuna impuls gelince ne olduğunu izle.",
    "sahne": {
     "tur": "biy9-sinaps",
     "sure": 5
@@ -153,16 +153,16 @@
     "secenekler": [
      {
       "yazi": "Elektrik akımı boşluktan atlar",
-      "neden": "Çoğu sinapsta boşluğu elektrik atlamaz; aktarım kimyasaldır."
+      "neden": "Çoğu sinapsta elektrik boşluktan atlamaz. Aktarım kimyasaldır."
      },
      {
       "yazi": "Nörotransmitter salgılanır",
       "dogru": true,
-      "neden": "Akson ucundaki kesecikler boşluğa kimyasal bir haberci (nörotransmitter) bırakır."
+      "neden": "Akson ucundaki kesecikler, boşluğa nörotransmitter adı verilen kimyasal bir haberci bırakır."
      },
      {
       "yazi": "Akson ucu sonraki nöronla kaynaşır",
-      "neden": "Nöronlar kaynaşmaz; aralarındaki boşluk korunur."
+      "neden": "Nöronlar birbiriyle kaynaşmaz ve aralarındaki boşluk korunur."
      }
     ]
    },
@@ -170,7 +170,7 @@
   },
   {
    "baslik": "Refleks yayı",
-   "metin": "Elin sıcak ocağa değiyor. Sinyalin yolunu oynat.",
+   "metin": "Elin sıcak bir ocağa değiyor. Sinyalin yolunu oynat.",
    "sahne": {
     "tur": "biy9-refleks",
     "sure": 6
@@ -181,16 +181,16 @@
     "secenekler": [
      {
       "yazi": "Beyinden",
-      "neden": "Beyin acıyı sonradan fark eder. El ondan önce çekilir."
+      "neden": "Beyin acıyı sonradan fark eder. El bundan önce çekilir."
      },
      {
       "yazi": "Beyincikten",
-      "neden": "Beyincik denge ve hareket uyumunu yönetir; bu refleksi başlatmaz."
+      "neden": "Beyincik dengeyi ve hareket uyumunu yönetir. Bu refleksi başlatmaz."
      },
      {
       "yazi": "Omurilikten",
       "dogru": true,
-      "neden": "Ara nöron omuriliktedir. Sinyal beyne gitmeden motor nörona aktarılır; bu yüzden refleks çok hızlıdır."
+      "neden": "Ara nöron omurilikte bulunur ve sinyal beyne gitmeden motor nörona aktarılır. Bu yüzden refleks çok hızlıdır."
      }
     ]
    },
@@ -198,7 +198,7 @@
   },
   {
    "baslik": "Otonom sinir sistemi",
-   "metin": "Kalp atışı ve sindirim istemsiz yönetilir. <b>Sempatik</b> sistem vücudu tehlikeye, <b>parasempatik</b> dinlenmeye hazırlar. Düğmeyle iki sistem arasında geç.",
+   "metin": "Kalp atışı ve sindirim istemsiz olarak yönetilir. <b>Sempatik</b> sistem vücudu tehlikeye, <b>parasempatik</b> sistem ise dinlenmeye hazırlar. Düğmeyle iki sistem arasında geçiş yap.",
    "sahne": {
     "tur": "biy9-otonom"
    },
@@ -225,11 +225,11 @@
      {
       "yazi": "Sindirimin hızlanması",
       "dogru": true,
-      "neden": "Parasempatik sistem dinlenme ve sindirim sistemidir; asetilkolinle sindirimi hızlandırır, kalbi yavaşlatır."
+      "neden": "Parasempatik sistem, dinlenme ve sindirim sistemidir. Asetilkolinle sindirimi hızlandırır ve kalbi yavaşlatır."
      },
      {
       "yazi": "Göz bebeğinin büyümesi",
-      "neden": "Göz bebeğini büyüten sempatik sistemdir; daha çok ışık girer."
+      "neden": "Göz bebeğini büyüten sempatik sistemdir. Böylece göze daha fazla ışık girer."
      }
     ]
    },
@@ -237,11 +237,11 @@
   }
  ],
  "kapanis": [
-  "İmpuls dendrit → gövde → akson → akson ucu yolunu izler.",
-  "Zar −55 mV eşiğini aşınca Na⁺ girer, sonra K⁺ çıkar; impuls ya hep ya hiç kuralına uyar.",
-  "Miyelinli aksonda impuls boğumdan boğuma atlar ve çok daha hızlıdır.",
+  "İmpuls dendritten gövdeye, oradan aksona ve akson ucuna doğru ilerler.",
+  "Zar −55 mV eşiğini aşınca önce Na⁺ girer, sonra K⁺ çıkar. İmpuls ya hep ya hiç kuralına uyar.",
+  "Miyelinli aksonda impuls boğumdan boğuma atlar ve çok daha hızlı ilerler.",
   "Sinapsta aktarım kimyasaldır ve tek yönlüdür.",
-  "Refleks omurilikte işlenir; beyin acıyı sonradan fark eder."
+  "Refleks omurilikte işlenir. Beyin acıyı sonradan fark eder."
  ],
  "soruOnce": true
 }

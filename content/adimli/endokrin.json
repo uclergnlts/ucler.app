@@ -3,11 +3,11 @@
  "ders": "biyoloji",
  "konu": "endokrin",
  "baslik": "Endokrin sistem",
- "ozet": "Hormonun hangi hücreyi etkilediğini gör, sinirsel ve hormonal hızı yarıştır, kan şekerini insülinle dengele ve tiroitteki freni izle.",
+ "ozet": "Hormonun hangi hücreyi etkilediğini gör, sinirsel ve hormonal düzenlemeyi yarıştır, kan şekerini insülinle dengele ve tiroitteki freni izle.",
  "adimlar": [
   {
    "baslik": "Hedef hücre",
-   "metin": "Hormon kanla bütün vücuda dağılır. Bazı hücrelerin yüzeyinde onu tanıyan <b>reseptörler</b> var. Oynat ve hangi hücrelerin yanıt verdiğine bak.",
+   "metin": "Hormon kanla bütün vücuda dağılır. Bazı hücrelerin yüzeyinde onu tanıyan <b>reseptörler</b> bulunur. Oynat ve hangi hücrelerin yanıt verdiğine bak.",
    "sahne": {
     "tur": "biy9-hedef",
     "sure": 5
@@ -23,7 +23,7 @@
      {
       "yazi": "Reseptörü olanlarda",
       "dogru": true,
-      "neden": "Hormon, reseptörüne anahtar-kilit gibi bağlanır. Reseptörü olmayan hücre hormondan etkilenmez."
+      "neden": "Hormon, reseptörüne anahtar ile kilit gibi bağlanır. Reseptörü olmayan hücre hormondan etkilenmez."
      },
      {
       "yazi": "Bezin yakınındakilerde",
@@ -35,7 +35,7 @@
   },
   {
    "baslik": "Hız ve süre",
-   "metin": "Sinir sistemi ve endokrin sistem birlikte çalışır ama farklı hızdadır. İkisinin etkisini yarıştır.",
+   "metin": "Sinir sistemi ve endokrin sistem birlikte çalışır, ama farklı hızlardadır. İki sistemin etkisini yarıştır.",
    "sahne": {
     "tur": "biy9-hiz",
     "sure": 6
@@ -47,15 +47,15 @@
      {
       "yazi": "Hormonal etki",
       "dogru": true,
-      "neden": "Hormon kanla yavaş gelir ama kanda bir süre kalır; etkisi geç başlar, uzun sürer."
+      "neden": "Hormon kanla yavaş gelir, ama kanda bir süre kalır. Bu yüzden etkisi geç başlar ve uzun sürer."
      },
      {
       "yazi": "Sinirsel etki",
-      "neden": "Sinirsel etki çok hızlı başlar ama kısa sürer."
+      "neden": "Sinirsel etki çok hızlı başlar, ama kısa sürer."
      },
      {
       "yazi": "İkisi eşit sürer",
-      "neden": "Süreleri belirgin biçimde farklıdır: sinirsel kısa, hormonal uzun."
+      "neden": "Süreleri belirgin biçimde farklıdır. Sinirsel etki kısa, hormonal etki uzun sürer."
      }
     ]
    },
@@ -63,7 +63,7 @@
   },
   {
    "baslik": "Yemekten sonra",
-   "metin": "Yemekten sonra kan şekeri yükselir. Pankreasın <b>β hücreleri</b> <b>insülin</b> salgılar. Önce insülinsiz oynat, sonra insülini aç.",
+   "metin": "Yemekten sonra kan şekeri yükselir ve pankreasın <b>β hücreleri</b> <b>insülin</b> salgılar. Önce insülin olmadan oynat, sonra insülini aç.",
    "sahne": {
     "tur": "biy9-insulin",
     "sure": 5
@@ -86,13 +86,13 @@
      "ins": 1
     },
     "ipucu": "İnsülini aç ve yeniden oynat.",
-    "tamam": "İnsülin hücrelerin glikoz almasını sağladı ve karaciğer fazlayı glikojen olarak depoladı; şeker normale döndü."
+    "tamam": "İnsülin, hücrelerin glikoz almasını sağladı ve karaciğer fazla glikozu glikojen olarak depoladı. Böylece kan şekeri normale döndü."
    },
    "kart": 11
   },
   {
    "baslik": "İki zıt hormon",
-   "metin": "Kan şekeri normalde yaklaşık <b>70–110 mg/dL</b> arasında tutulur. Şekeri değiştir ve pankreasın yanıtını izle.",
+   "metin": "Kan şekeri normalde yaklaşık <b>70–110 mg/dL</b> arasında tutulur. Kan şekerini değiştir ve pankreasın yanıtını izle.",
    "sahne": {
     "tur": "biy9-pankreas"
    },
@@ -112,20 +112,20 @@
    ],
    "gorev": {
     "tur": "secim",
-    "soru": "Uzun açlıkta şeker 60 mg/dL'ye düştü. Hangi hormon salgılanır?",
+    "soru": "Uzun süren açlıkta kan şekeri 60 mg/dL'ye düştü. Hangi hormon salgılanır?",
     "secenekler": [
      {
       "yazi": "İnsülin",
-      "neden": "İnsülin şekeri düşürür; şeker zaten düşükken salgılanmaz."
+      "neden": "İnsülin kan şekerini düşürür. Şeker zaten düşükken salgılanmaz."
      },
      {
       "yazi": "Glukagon",
       "dogru": true,
-      "neden": "Pankreasın α hücreleri glukagon salgılar; karaciğer glikojeni yıkarak kana glikoz verir."
+      "neden": "Pankreasın α hücreleri glukagon salgılar. Karaciğer de glikojeni yıkarak kana glikoz verir."
      },
      {
       "yazi": "ADH",
-      "neden": "ADH hipofizden salınır ve böbrekte su geri emilimini artırır; kan şekerini ayarlamaz."
+      "neden": "ADH hipofizden salgılanır ve böbrekte suyun geri emilimini artırır. Kan şekerini ayarlamaz."
      }
     ]
    },
@@ -133,7 +133,7 @@
   },
   {
    "baslik": "Kendini frenleyen zincir",
-   "metin": "Hipotalamus <b>TRH</b>, hipofiz <b>TSH</b> salgılar; TSH tiroiti <b>tiroksin</b> yapmaya yönlendirir. Tiroksini artır ve yukarıdaki hormonları izle.",
+   "metin": "Hipotalamus <b>TRH</b>, hipofiz <b>TSH</b> salgılar ve TSH tiroidi <b>tiroksin</b> yapmaya yönlendirir. Tiroksini artır ve yukarıdaki hormonları izle.",
    "sahne": {
     "tur": "biy9-tiroit"
    },
@@ -155,13 +155,13 @@
     "hedef": {
      "tx": 5
     },
-    "tamam": "Tiroksin arttıkça TRH ve TSH azaldı. Buna negatif geri bildirim denir: ürün, kendisini üreten zinciri frenler ve düzey sabit kalır."
+    "tamam": "Tiroksin arttıkça TRH ve TSH azaldı. Buna negatif geri bildirim denir. Ürün, kendisini üreten zinciri frenler ve böylece düzeyi sabit kalır."
    },
    "kart": 5
   },
   {
    "baslik": "İyot eksikliği",
-   "metin": "Tiroit tiroksin yapmak için <b>iyot</b> kullanır. İyot eksikliğini aç ve zincire ne olduğuna bak.",
+   "metin": "Tiroit, tiroksin yapmak için <b>iyot</b> kullanır. İyot eksikliğini aç ve zincire ne olduğuna bak.",
    "sahne": {
     "tur": "biy9-tiroit"
    },
@@ -184,16 +184,16 @@
     "secenekler": [
      {
       "yazi": "İyot birikir",
-      "neden": "Sorun iyodun fazlası değil eksikliğidir."
+      "neden": "Sorun iyodun fazlalığı değil, eksikliğidir."
      },
      {
       "yazi": "Tiroksin artar",
-      "neden": "İyot olmadan tiroksin yapılamaz; tiroksin azalır."
+      "neden": "İyot olmadan tiroksin yapılamaz ve tiroksin azalır."
      },
      {
       "yazi": "TSH artar",
       "dogru": true,
-      "neden": "Tiroksin düşünce hipotalamus ve hipofiz frenlenmez. Artan TSH tiroiti sürekli uyarır ve bez büyür."
+      "neden": "Tiroksin düşünce hipotalamus ve hipofiz frenlenmez. Artan TSH tiroidi sürekli uyarır ve bez büyür."
      }
     ]
    },
@@ -201,11 +201,11 @@
   }
  ],
  "kapanis": [
-  "Hormon kanla her yere gider ama yalnızca reseptörü olan hücreyi etkiler.",
-  "Sinirsel etki hızlı ve kısa, hormonal etki yavaş ve uzundur.",
-  "İnsülin kan şekerini düşürür, glukagon yükseltir.",
-  "Tiroksin TRH ve TSH'yi frenler: negatif geri bildirim.",
-  "İyot eksikliğinde fren kalkar, TSH artar ve guatr oluşur."
+  "Hormon kanla her yere gider, ama yalnızca reseptörü olan hücreleri etkiler.",
+  "Sinirsel etki hızlı ve kısa, hormonal etki ise yavaş ve uzun sürelidir.",
+  "İnsülin kan şekerini düşürür, glukagon ise yükseltir.",
+  "Tiroksin, TRH ve TSH'yi frenler; buna negatif geri bildirim denir.",
+  "İyot eksikliğinde bu fren ortadan kalkar, TSH artar ve guatr oluşur."
  ],
  "soruOnce": true
 }
