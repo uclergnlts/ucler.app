@@ -1,0 +1,163 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#2f7cf6}
+.head .sub i{display:block;width:44px;height:6px;background:#2f7cf6;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#2f7cf6;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#2f7cf6;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>FİZİK</div><div class="brand">ucler<b>.</b></div></div>
+
+<div class="scene" data-s="-1" data-e="3.28">
+ <div class="title">Telefonun, Einstein olmadan<br><em>seni kaybederdi</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><g transform="translate(540 560) scale(1.0)"><rect x="-150" y="-26" width="100" height="52" rx="6" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="5"/><path d="M-117 -26 V26 M-84 -26 V26" stroke="#2f7cf6" stroke-width="3"/><rect x="50" y="-26" width="100" height="52" rx="6" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="5"/><path d="M84 -26 V26 M117 -26 V26" stroke="#2f7cf6" stroke-width="3"/><path d="M-50 0 H-35 M35 0 H50" stroke="#1d3557" stroke-width="5"/><rect x="-35" y="-38" width="70" height="76" rx="10" fill="#fff" stroke="#1d3557" stroke-width="5"/><path d="M0 38 V58" stroke="#1d3557" stroke-width="5"/><circle cx="0" cy="64" r="8" fill="#1d3557"/></g><path d="M540 640 L540 820" stroke="#2f7cf6" stroke-width="5" stroke-dasharray="14 14"/><g transform="translate(540 1060) scale(1.0)"><rect x="-120" y="-220" width="240" height="440" rx="34" fill="#fff" stroke="#1d3557" stroke-width="7"/><rect x="-100" y="-180" width="200" height="350" rx="10" fill="#eef3f9"/><path d="M-100 -60 C-40 -80 20 -20 100 -40 M-60 -180 C-40 -60 -80 60 -40 170 M-100 80 C0 60 40 120 100 90" stroke="#c9d3e0" stroke-width="10" fill="none"/><g transform="translate(0 -10)"><path d="M0 -40 C-26 -40 -40 -20 -40 0 C-40 26 0 62 0 62 C0 62 40 26 40 0 C40 -20 26 -40 0 -40 Z" fill="#d63c63"/><circle cx="0" cy="-2" r="14" fill="#fff"/></g><rect x="-30" y="-205" width="60" height="10" rx="5" fill="#1d3557"/></g><text x="800" y="1000" font-family="Manrope" font-size="90" font-weight="800" fill="#d63c63">?</text><text x="230" y="1000" font-family="Manrope" font-size="90" font-weight="800" fill="#d63c63">?</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="3.28" data-e="20.95">
+ <div class="title">Konumunu<br><em>uydular bulur</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="3.3"><g transform="translate(540 1120) scale(0.8)"><rect x="-120" y="-220" width="240" height="440" rx="34" fill="#fff" stroke="#1d3557" stroke-width="7"/><rect x="-100" y="-180" width="200" height="350" rx="10" fill="#eef3f9"/><path d="M-100 -60 C-40 -80 20 -20 100 -40 M-60 -180 C-40 -60 -80 60 -40 170 M-100 80 C0 60 40 120 100 90" stroke="#c9d3e0" stroke-width="10" fill="none"/><g transform="translate(0 -10)"><path d="M0 -40 C-26 -40 -40 -20 -40 0 C-40 26 0 62 0 62 C0 62 40 26 40 0 C40 -20 26 -40 0 -40 Z" fill="#d63c63"/><circle cx="0" cy="-2" r="14" fill="#fff"/></g><rect x="-30" y="-205" width="60" height="10" rx="5" fill="#1d3557"/></g></g><g data-in="3.6"><g transform="translate(540 560) scale(0.9)"><rect x="-150" y="-26" width="100" height="52" rx="6" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="5"/><path d="M-117 -26 V26 M-84 -26 V26" stroke="#2f7cf6" stroke-width="3"/><rect x="50" y="-26" width="100" height="52" rx="6" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="5"/><path d="M84 -26 V26 M117 -26 V26" stroke="#2f7cf6" stroke-width="3"/><path d="M-50 0 H-35 M35 0 H50" stroke="#1d3557" stroke-width="5"/><rect x="-35" y="-38" width="70" height="76" rx="10" fill="#fff" stroke="#1d3557" stroke-width="5"/><path d="M0 38 V58" stroke="#1d3557" stroke-width="5"/><circle cx="0" cy="64" r="8" fill="#1d3557"/></g></g><path data-draw="4.6" data-dur="1.2" d="M540 640 L540 920" stroke="#2f7cf6" stroke-width="6" fill="none"/><g data-in="7.5"><g transform="translate(820 560)"><circle r="56" fill="#fff" stroke="#2f7cf6" stroke-width="6"/><path d="M0 -48 V-36" stroke="#2f7cf6" stroke-width="5" transform="rotate(0)"/><path d="M0 -48 V-36" stroke="#2f7cf6" stroke-width="5" transform="rotate(30)"/><path d="M0 -48 V-36" stroke="#2f7cf6" stroke-width="5" transform="rotate(60)"/><path d="M0 -48 V-36" stroke="#2f7cf6" stroke-width="5" transform="rotate(90)"/><path d="M0 -48 V-36" stroke="#2f7cf6" stroke-width="5" transform="rotate(120)"/><path d="M0 -48 V-36" stroke="#2f7cf6" stroke-width="5" transform="rotate(150)"/><path d="M0 -48 V-36" stroke="#2f7cf6" stroke-width="5" transform="rotate(180)"/><path d="M0 -48 V-36" stroke="#2f7cf6" stroke-width="5" transform="rotate(210)"/><path d="M0 -48 V-36" stroke="#2f7cf6" stroke-width="5" transform="rotate(240)"/><path d="M0 -48 V-36" stroke="#2f7cf6" stroke-width="5" transform="rotate(270)"/><path d="M0 -48 V-36" stroke="#2f7cf6" stroke-width="5" transform="rotate(300)"/><path d="M0 -48 V-36" stroke="#2f7cf6" stroke-width="5" transform="rotate(330)"/><path class="hand" id="h1" d="M0 6 V-34" stroke="#2f7cf6" stroke-width="7" stroke-linecap="round"/><circle r="8" fill="#2f7cf6"/></g><text x="820" y="665" text-anchor="middle" font-size="28" font-weight="800" fill="#2f7cf6">atom saati</text></g><g data-in="12.6" data-out="17.7"><rect x="620" y="760" width="380" height="110" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="810" y="805" text-anchor="middle" font-size="30" font-weight="800" fill="#5f6f88">sinyal süresi</text><text x="810" y="850" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">→ uzaklık</text></g><g data-in="17.8"><g transform="translate(200 760) scale(0.5)"><rect x="-150" y="-26" width="100" height="52" rx="6" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="5"/><path d="M-117 -26 V26 M-84 -26 V26" stroke="#2f7cf6" stroke-width="3"/><rect x="50" y="-26" width="100" height="52" rx="6" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="5"/><path d="M84 -26 V26 M117 -26 V26" stroke="#2f7cf6" stroke-width="3"/><path d="M-50 0 H-35 M35 0 H50" stroke="#1d3557" stroke-width="5"/><rect x="-35" y="-38" width="70" height="76" rx="10" fill="#fff" stroke="#1d3557" stroke-width="5"/><path d="M0 38 V58" stroke="#1d3557" stroke-width="5"/><circle cx="0" cy="64" r="8" fill="#1d3557"/></g><g transform="translate(880 760) scale(0.5)"><rect x="-150" y="-26" width="100" height="52" rx="6" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="5"/><path d="M-117 -26 V26 M-84 -26 V26" stroke="#2f7cf6" stroke-width="3"/><rect x="50" y="-26" width="100" height="52" rx="6" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="5"/><path d="M84 -26 V26 M117 -26 V26" stroke="#2f7cf6" stroke-width="3"/><path d="M-50 0 H-35 M35 0 H50" stroke="#1d3557" stroke-width="5"/><rect x="-35" y="-38" width="70" height="76" rx="10" fill="#fff" stroke="#1d3557" stroke-width="5"/><path d="M0 38 V58" stroke="#1d3557" stroke-width="5"/><circle cx="0" cy="64" r="8" fill="#1d3557"/></g><g transform="translate(180 1000) scale(0.45)"><rect x="-150" y="-26" width="100" height="52" rx="6" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="5"/><path d="M-117 -26 V26 M-84 -26 V26" stroke="#2f7cf6" stroke-width="3"/><rect x="50" y="-26" width="100" height="52" rx="6" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="5"/><path d="M84 -26 V26 M117 -26 V26" stroke="#2f7cf6" stroke-width="3"/><path d="M-50 0 H-35 M35 0 H50" stroke="#1d3557" stroke-width="5"/><rect x="-35" y="-38" width="70" height="76" rx="10" fill="#fff" stroke="#1d3557" stroke-width="5"/><path d="M0 38 V58" stroke="#1d3557" stroke-width="5"/><circle cx="0" cy="64" r="8" fill="#1d3557"/></g><path d="M230 800 L470 1000 M850 800 L610 1000 M230 1020 L440 1100" stroke="#2f7cf6" stroke-width="4" stroke-dasharray="12 12"/><text x="540" y="1420" text-anchor="middle" font-family="Manrope" font-size="48" font-weight="800" fill="#2f7cf6">en az 4 uydu</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="20.95" data-e="29.42">
+ <div class="title">Küçük bir saat hatası<br><em>büyük bir yanılgı</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="21.0"><text x="540" y="560" text-anchor="middle" font-size="36" font-weight="800" fill="#5f6f88">sinyal ışık hızıyla gider</text><path d="M120 640 H960" stroke="#1d3557" stroke-width="6"/><path d="M120 620 V660" stroke="#1d3557" stroke-width="4"/><path d="M204 620 V660" stroke="#1d3557" stroke-width="4"/><path d="M288 620 V660" stroke="#1d3557" stroke-width="4"/><path d="M372 620 V660" stroke="#1d3557" stroke-width="4"/><path d="M456 620 V660" stroke="#1d3557" stroke-width="4"/><path d="M540 620 V660" stroke="#1d3557" stroke-width="4"/><path d="M624 620 V660" stroke="#1d3557" stroke-width="4"/><path d="M708 620 V660" stroke="#1d3557" stroke-width="4"/><path d="M792 620 V660" stroke="#1d3557" stroke-width="4"/><path d="M876 620 V660" stroke="#1d3557" stroke-width="4"/><path d="M960 620 V660" stroke="#1d3557" stroke-width="4"/><path data-draw="21.3" data-dur="1.4" d="M120 700 H960" stroke="#e09a00" stroke-width="14" stroke-linecap="round" fill="none"/></g><g data-in="23.2"><rect x="100" y="780" width="880" height="300" rx="18" fill="#fff" stroke="#2f7cf6" stroke-width="5"/><text x="540" y="870" text-anchor="middle" font-size="40" font-weight="800" fill="#5f6f88">saatte milyonda bir saniye hata</text><text x="540" y="990" text-anchor="middle" font-family="Manrope" font-size="96" font-weight="800" fill="#d63c63">≈ 300 m</text><text x="540" y="1050" text-anchor="middle" font-size="32" font-weight="700" fill="#5f6f88">konum hatası</text></g><g data-in="21.0" data-out="29.1"><rect x="250" y="1300" width="580" height="76" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1350" text-anchor="middle" font-size="30" font-weight="800" fill="#2f7cf6">Konunun tamamı: ucler.app</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="29.42" data-e="42.97">
+ <div class="title">Özel görelilik:<br><em>hızlı saat yavaşlar</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="29.5"><circle cx="540" cy="930" r="160" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="6"/><text x="540" y="945" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#2f7cf6">Dünya</text><circle cx="540" cy="930" r="320" fill="none" stroke="#c9d3e0" stroke-width="5" stroke-dasharray="18 14"/><g id="orb1"><g transform="translate(0 0) scale(0.42)"><rect x="-150" y="-26" width="100" height="52" rx="6" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="5"/><path d="M-117 -26 V26 M-84 -26 V26" stroke="#2f7cf6" stroke-width="3"/><rect x="50" y="-26" width="100" height="52" rx="6" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="5"/><path d="M84 -26 V26 M117 -26 V26" stroke="#2f7cf6" stroke-width="3"/><path d="M-50 0 H-35 M35 0 H50" stroke="#1d3557" stroke-width="5"/><rect x="-35" y="-38" width="70" height="76" rx="10" fill="#fff" stroke="#1d3557" stroke-width="5"/><path d="M0 38 V58" stroke="#1d3557" stroke-width="5"/><circle cx="0" cy="64" r="8" fill="#1d3557"/></g></g></g><g data-in="31.8"><rect x="100" y="470" width="440" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="320" y="535" text-anchor="middle" font-size="40" font-weight="800" fill="#1d3557">14 000 km/sa</text></g><g data-in="35.1"><g transform="translate(850 520)"><circle r="64" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="6"/><path d="M0 -56 V-44" stroke="#2f7cf6" stroke-width="5" transform="rotate(0)"/><path d="M0 -56 V-44" stroke="#2f7cf6" stroke-width="5" transform="rotate(30)"/><path d="M0 -56 V-44" stroke="#2f7cf6" stroke-width="5" transform="rotate(60)"/><path d="M0 -56 V-44" stroke="#2f7cf6" stroke-width="5" transform="rotate(90)"/><path d="M0 -56 V-44" stroke="#2f7cf6" stroke-width="5" transform="rotate(120)"/><path d="M0 -56 V-44" stroke="#2f7cf6" stroke-width="5" transform="rotate(150)"/><path d="M0 -56 V-44" stroke="#2f7cf6" stroke-width="5" transform="rotate(180)"/><path d="M0 -56 V-44" stroke="#2f7cf6" stroke-width="5" transform="rotate(210)"/><path d="M0 -56 V-44" stroke="#2f7cf6" stroke-width="5" transform="rotate(240)"/><path d="M0 -56 V-44" stroke="#2f7cf6" stroke-width="5" transform="rotate(270)"/><path d="M0 -56 V-44" stroke="#2f7cf6" stroke-width="5" transform="rotate(300)"/><path d="M0 -56 V-44" stroke="#2f7cf6" stroke-width="5" transform="rotate(330)"/><path class="hand" id="h2" d="M0 6 V-42" stroke="#2f7cf6" stroke-width="7" stroke-linecap="round"/><circle r="8" fill="#2f7cf6"/></g><text x="850" y="625" text-anchor="middle" font-size="28" font-weight="800" fill="#2f7cf6">yavaş işler</text></g><g data-in="38.7"><rect x="100" y="1310" width="880" height="120" rx="18" fill="#fff" stroke="#2f7cf6" stroke-width="5"/><text x="540" y="1390" text-anchor="middle" font-family="Manrope" font-size="56" font-weight="800" fill="#2f7cf6">günde 7 μs geri</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="42.97" data-e="56.47">
+ <div class="title">Genel görelilik:<br><em>yukarıda zaman hızlı</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="43.0"><path d="M60 1130 Q540 1030 1020 1130 V1180 H60 Z" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="6"/><text x="540" y="1142" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#2f7cf6">Dünya</text><g transform="translate(540 560) scale(0.6)"><rect x="-150" y="-26" width="100" height="52" rx="6" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="5"/><path d="M-117 -26 V26 M-84 -26 V26" stroke="#2f7cf6" stroke-width="3"/><rect x="50" y="-26" width="100" height="52" rx="6" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="5"/><path d="M84 -26 V26 M117 -26 V26" stroke="#2f7cf6" stroke-width="3"/><path d="M-50 0 H-35 M35 0 H50" stroke="#1d3557" stroke-width="5"/><rect x="-35" y="-38" width="70" height="76" rx="10" fill="#fff" stroke="#1d3557" stroke-width="5"/><path d="M0 38 V58" stroke="#1d3557" stroke-width="5"/><circle cx="0" cy="64" r="8" fill="#1d3557"/></g><path d="M820 600 V1050" stroke="#1d3557" stroke-width="4"/><path d="M800 600 H840 M800 1050 H840" stroke="#1d3557" stroke-width="4"/><text x="850" y="820" font-size="34" font-weight="800" fill="#1d3557">20 000</text><text x="850" y="865" font-size="34" font-weight="800" fill="#1d3557">km</text></g><g data-in="46.9"><path d="M260 1020 V940" stroke="#d63c63" stroke-width="12" stroke-linecap="round"/><path d="M260 1050 l-22 -36 h44 Z" fill="#d63c63"/><text x="260" y="910" text-anchor="middle" font-size="28" font-weight="800" fill="#d63c63">güçlü çekim</text><path d="M260 720 V700" stroke="#d63c63" stroke-width="6" stroke-linecap="round" opacity=".55"/><path d="M260 734 l-11 -18 h22 Z" fill="#d63c63" opacity=".55"/><text x="260" y="670" text-anchor="middle" font-size="28" font-weight="800" fill="#d63c63" opacity=".7">zayıf çekim</text></g><g data-in="49.0"><g transform="translate(540 800)"><circle r="64" fill="#fff7dc" stroke="#e09a00" stroke-width="6"/><path d="M0 -56 V-44" stroke="#e09a00" stroke-width="5" transform="rotate(0)"/><path d="M0 -56 V-44" stroke="#e09a00" stroke-width="5" transform="rotate(30)"/><path d="M0 -56 V-44" stroke="#e09a00" stroke-width="5" transform="rotate(60)"/><path d="M0 -56 V-44" stroke="#e09a00" stroke-width="5" transform="rotate(90)"/><path d="M0 -56 V-44" stroke="#e09a00" stroke-width="5" transform="rotate(120)"/><path d="M0 -56 V-44" stroke="#e09a00" stroke-width="5" transform="rotate(150)"/><path d="M0 -56 V-44" stroke="#e09a00" stroke-width="5" transform="rotate(180)"/><path d="M0 -56 V-44" stroke="#e09a00" stroke-width="5" transform="rotate(210)"/><path d="M0 -56 V-44" stroke="#e09a00" stroke-width="5" transform="rotate(240)"/><path d="M0 -56 V-44" stroke="#e09a00" stroke-width="5" transform="rotate(270)"/><path d="M0 -56 V-44" stroke="#e09a00" stroke-width="5" transform="rotate(300)"/><path d="M0 -56 V-44" stroke="#e09a00" stroke-width="5" transform="rotate(330)"/><path class="hand" id="h3" d="M0 6 V-42" stroke="#e09a00" stroke-width="7" stroke-linecap="round"/><circle r="8" fill="#e09a00"/></g><text x="540" y="910" text-anchor="middle" font-size="28" font-weight="800" fill="#e09a00">hızlı akar</text></g><g data-in="52.1"><rect x="100" y="1230" width="880" height="120" rx="18" fill="#fff" stroke="#e09a00" stroke-width="5"/><text x="540" y="1310" text-anchor="middle" font-family="Manrope" font-size="56" font-weight="800" fill="#e09a00">günde 45 μs ileri</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="56.47" data-e="72.27">
+ <div class="title">Her gün<br><em>38 μs ileri</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="56.5"><rect x="100" y="480" width="880" height="170" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="590" text-anchor="middle" font-family="Manrope" font-size="68" font-weight="800" fill="#1d3557"><tspan fill="#e09a00">+45</tspan> <tspan fill="#2f7cf6">− 7</tspan> = <tspan fill="#d63c63">+38 μs</tspan></text></g><g data-in="61.2"><text x="540" y="820" text-anchor="middle" font-family="Manrope" font-size="54" font-weight="800" fill="#d63c63">günde ≈ 10 km hata</text><path d="M140 1020 H940" stroke="#c9d3e0" stroke-width="8" stroke-dasharray="30 18"/><g transform="translate(220 960)"><path d="M0 -40 C-26 -40 -40 -20 -40 0 C-40 26 0 62 0 62 C0 62 40 26 40 0 C40 -20 26 -40 0 -40 Z" fill="#1d3557"/><circle cx="0" cy="-2" r="14" fill="#fff"/></g><text x="220" y="1100" text-anchor="middle" font-size="30" font-weight="800" fill="#1d3557">gerçek yer</text><g id="drift"><g transform="translate(220 960)"><path d="M0 -40 C-26 -40 -40 -20 -40 0 C-40 26 0 62 0 62 C0 62 40 26 40 0 C40 -20 26 -40 0 -40 Z" fill="#d63c63"/><circle cx="0" cy="-2" r="14" fill="#fff"/></g></g><text x="840" y="1100" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">telefonun sandığı</text></g><g data-in="65.9"><rect x="100" y="1200" width="880" height="200" rx="18" fill="#fff" stroke="#2f7cf6" stroke-width="5"/><g transform="translate(220 1300)"><circle r="54" fill="#fff" stroke="#2f7cf6" stroke-width="6"/><path d="M0 -46 V-34" stroke="#2f7cf6" stroke-width="5" transform="rotate(0)"/><path d="M0 -46 V-34" stroke="#2f7cf6" stroke-width="5" transform="rotate(30)"/><path d="M0 -46 V-34" stroke="#2f7cf6" stroke-width="5" transform="rotate(60)"/><path d="M0 -46 V-34" stroke="#2f7cf6" stroke-width="5" transform="rotate(90)"/><path d="M0 -46 V-34" stroke="#2f7cf6" stroke-width="5" transform="rotate(120)"/><path d="M0 -46 V-34" stroke="#2f7cf6" stroke-width="5" transform="rotate(150)"/><path d="M0 -46 V-34" stroke="#2f7cf6" stroke-width="5" transform="rotate(180)"/><path d="M0 -46 V-34" stroke="#2f7cf6" stroke-width="5" transform="rotate(210)"/><path d="M0 -46 V-34" stroke="#2f7cf6" stroke-width="5" transform="rotate(240)"/><path d="M0 -46 V-34" stroke="#2f7cf6" stroke-width="5" transform="rotate(270)"/><path d="M0 -46 V-34" stroke="#2f7cf6" stroke-width="5" transform="rotate(300)"/><path d="M0 -46 V-34" stroke="#2f7cf6" stroke-width="5" transform="rotate(330)"/><path class="hand" id="h4" d="M0 6 V-32" stroke="#2f7cf6" stroke-width="7" stroke-linecap="round"/><circle r="8" fill="#2f7cf6"/></g><text x="320" y="1290" font-size="36" font-weight="800" fill="#1d3557">fırlatmadan önce saat</text><text x="320" y="1345" font-size="36" font-weight="800" fill="#2f7cf6">biraz yavaş ayarlanır</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="72.27" data-e="76.37">
+ <div class="title">Einstein<br><em>cebinde çalışıyor</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="72.3"><g transform="translate(540 920) scale(1.1)"><rect x="-120" y="-220" width="240" height="440" rx="34" fill="#fff" stroke="#1d3557" stroke-width="7"/><rect x="-100" y="-180" width="200" height="350" rx="10" fill="#eef3f9"/><path d="M-100 -60 C-40 -80 20 -20 100 -40 M-60 -180 C-40 -60 -80 60 -40 170 M-100 80 C0 60 40 120 100 90" stroke="#c9d3e0" stroke-width="10" fill="none"/><g transform="translate(0 -10)"><path d="M0 -40 C-26 -40 -40 -20 -40 0 C-40 26 0 62 0 62 C0 62 40 26 40 0 C40 -20 26 -40 0 -40 Z" fill="#d63c63"/><circle cx="0" cy="-2" r="14" fill="#fff"/></g><rect x="-30" y="-205" width="60" height="10" rx="5" fill="#1d3557"/></g><rect x="260" y="1290" width="560" height="90" rx="45" fill="#eaf2ff" stroke="#2f7cf6" stroke-width="4"/><text x="540" y="1348" text-anchor="middle" font-size="34" font-weight="800" fill="#2f7cf6">görelilik düzeltmesi ✓</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="76.37" data-e="82.1">
+ <div class="q"><small>DÜŞÜN</small>Uydular çok daha alçakta dolaşsaydı saatleri yine <em>ileri mi</em> giderdi?</div>
+</div>
+
+<div class="scene" data-s="81.9" data-e="99">
+ <div class="title">Kısaca<br><em>hatırla</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><rect x="80" y="500" width="920" height="740" rx="18" fill="#fff" stroke="#2f7cf6" stroke-width="5"/><text x="140" y="590" font-size="32" font-weight="800" fill="#2f7cf6">ÖZET</text><circle cx="160" cy="680" r="14" fill="#2f7cf6"/><text x="200" y="694" font-size="40" font-weight="800" fill="#1d3557">Hız saati yavaşlatır:</text><text x="200" y="744" font-size="40" font-weight="800" fill="#2f7cf6">günde −7 μs</text><circle cx="160" cy="840" r="14" fill="#2f7cf6"/><text x="200" y="854" font-size="40" font-weight="800" fill="#1d3557">Zayıf çekim hızlandırır:</text><text x="200" y="904" font-size="40" font-weight="800" fill="#2f7cf6">günde +45 μs</text><circle cx="160" cy="1000" r="14" fill="#2f7cf6"/><text x="200" y="1014" font-size="40" font-weight="800" fill="#1d3557">Düzeltme olmasa:</text><text x="200" y="1064" font-size="40" font-weight="800" fill="#2f7cf6">günde ≈ 10 km hata</text><path d="M140 1110 H940" stroke="#dbe3ee" stroke-width="3"/><path d="M160 1140 h40 v70 l-20 -16 l-20 16 Z" fill="#2f7cf6"/><text x="230" y="1190" font-family="Manrope" font-size="42" font-weight="800" fill="#2f7cf6">Kaydet, sınavdan önce bak</text></g>
+ </svg>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;
+const DUR = 84.0;           // ses süresi
+const PH = [
+ [0.00,0.65,"Telefonun,"],
+ [0.87,2.94,"Einstein olmadan seni kaybederdi."],
+ [3.28,7.23,"Haritayı açtığında telefonun, gökyüzündeki uydulardan sinyal alır."],
+ [7.48,12.24,"Her uydu, sinyali ne zaman gönderdiğini içindeki atom saatine göre bildirir."],
+ [12.56,17.41,"Telefonun sinyalin kaç saniyede geldiğini hesaplar ve uyduya olan uzaklığını bulur."],
+ [17.76,20.71,"Konumun, en az dört uydunun sinyaliyle belirlenir."],
+ [20.95,22.96,"Ama sinyal ışık hızıyla yol alır."],
+ [23.18,29.13,"Saatteki milyonda bir saniyelik hata bile, yaklaşık üç yüz metrelik bir konum hatası demektir."],
+ [29.42,31.46,"Görelilik tam burada devreye girer."],
+ [31.76,34.83,"Uydular saatte on dört bin kilometre hızla döner."],
+ [35.11,38.37,"Özel göreliliğe göre hızlı giden saat yavaş işler."],
+ [38.65,42.66,"Bu yüzden uydunun saati her gün yedi mikrosaniye geri kalır."],
+ [42.97,46.63,"Öte yandan uydular yerden yirmi bin kilometre yüksektedir."],
+ [46.92,51.86,"Genel göreliliğe göre kütle çekiminin zayıf olduğu yerde zaman daha hızlı akar."],
+ [52.12,56.17,"Bu yüzden aynı saat her gün kırk beş mikrosaniye ileri gider."],
+ [56.47,60.92,"Sonuçta uydunun saati her gün otuz sekiz mikrosaniye ileri kaçar."],
+ [61.20,72.02,"Bu düzeltilmeseydi, konum hatası her gün yaklaşık on kilometre birikirdi. Mühendisler bu yüzden uydu saatlerini, fırlatmadan önce biraz yavaş çalışacak şekilde ayarlar."],
+ [72.27,76.15,"Yani Einstein'ın denklemleri her gün senin cebinde çalışıyor."],
+ [76.37,81.87,"Peki sence, uydular çok daha alçakta dolaşsaydı saatleri yine ileri mi giderdi?"]
+];
+
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+
+function tick(t){
+  const o=document.getElementById('orb1'); const a=-Math.PI/2+(t-29.4)*0.45; o.setAttribute('transform',`translate(${540+320*Math.cos(a)} ${930+320*Math.sin(a)})`);
+  const rot=(id,sp)=>{const h=document.getElementById(id); if(h) h.setAttribute('transform',`rotate(${(t*sp)%360})`)};
+  rot('h1',60); rot('h2',25); rot('h3',140); rot('h4',40);
+  const k=Math.max(0,Math.min(1,(t-61.6)/4)); const e=1-Math.pow(1-k,3); document.getElementById('drift').setAttribute('transform',`translate(${e*620} 0)`);
+}
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  cap.style.opacity = t > 81.9 ? 0 : 1;
+  tick(t);
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
