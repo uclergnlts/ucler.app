@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Manrope } from "next/font/google";
 import Script from "next/script";
 import Tabs from "@/components/Tabs";
 import Gunluk from "@/components/Gunluk";
@@ -8,9 +7,6 @@ import Yerel from "@/components/Yerel";
 import { UMAMI_ID } from "@/lib/olay";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
-
-const manrope = Manrope({ subsets: ["latin", "latin-ext"], weight: ["600", "700", "800"], variable: "--font-manrope" });
-const inter = Inter({ subsets: ["latin", "latin-ext"], weight: ["400", "500", "600", "700", "800"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -28,7 +24,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="tr" className={`${manrope.variable} ${inter.variable}`}>
+    <html lang="tr">
       <body>
         {children}
         <Tabs />
