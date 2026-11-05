@@ -1,0 +1,160 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#d63c63}
+.head .sub i{display:block;width:44px;height:6px;background:#d63c63;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#d63c63;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#d63c63;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>KİMYA</div><div class="brand">ucler<b>.</b></div></div>
+
+<div class="scene" data-s="-1" data-e="2.97">
+ <div class="title">İki temizlik ürünü,<br><em>bir zehirli gaz</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><g transform="translate(330 1130) rotate(0) scale(1.3)"><rect x="-70" y="-120" width="140" height="240" rx="26" fill="#fff" stroke="#1d3557" stroke-width="7"/><rect x="-30" y="-170" width="60" height="55" rx="8" fill="#d63c63" stroke="#1d3557" stroke-width="6"/><rect x="-55" y="-40" width="110" height="90" rx="10" fill="#d63c63" opacity=".25"/><text y="0" text-anchor="middle" font-family="Manrope" font-size="26" font-weight="800" fill="#1d3557"><tspan x="0" dy="0">çamaşır</tspan><tspan x="0" dy="30">suyu</tspan></text></g><g transform="translate(750 1130) rotate(0) scale(1.3)"><rect x="-70" y="-120" width="140" height="240" rx="26" fill="#fff" stroke="#1d3557" stroke-width="7"/><rect x="-30" y="-170" width="60" height="55" rx="8" fill="#9aa6b6" stroke="#1d3557" stroke-width="6"/><rect x="-55" y="-40" width="110" height="90" rx="10" fill="#9aa6b6" opacity=".25"/><text y="0" text-anchor="middle" font-family="Manrope" font-size="26" font-weight="800" fill="#1d3557"><tspan x="0" dy="0">tuz</tspan><tspan x="0" dy="30">ruhu</tspan></text></g><text x="540" y="1150" text-anchor="middle" font-family="Manrope" font-size="90" font-weight="800" fill="#1d3557">+</text><g transform="translate(540 680) scale(1.5)"><path d="M-160 40 C-200 40 -200 -30 -150 -35 C-150 -90 -70 -100 -50 -60 C-30 -110 60 -110 70 -55 C120 -80 180 -40 160 10 C200 20 190 60 150 60 H-150 Z" fill="#eef5d6" stroke="#8fb020" stroke-width="6" stroke-dasharray="16 12"/><text x="0" y="22" text-anchor="middle" font-family="Manrope" font-size="62" font-weight="800" fill="#8fb020">Cl₂</text></g></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="2.97" data-e="13.06">
+ <div class="title">Daha güçlü temizler<br><em>sanılır</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="3.0"><path d="M100 1160 H980" stroke="#c9d3e0" stroke-width="6"/><path d="M100 1160 V1260" stroke="#e1e7ef" stroke-width="4"/><path d="M210 1160 V1260" stroke="#e1e7ef" stroke-width="4"/><path d="M320 1160 V1260" stroke="#e1e7ef" stroke-width="4"/><path d="M430 1160 V1260" stroke="#e1e7ef" stroke-width="4"/><path d="M540 1160 V1260" stroke="#e1e7ef" stroke-width="4"/><path d="M650 1160 V1260" stroke="#e1e7ef" stroke-width="4"/><path d="M760 1160 V1260" stroke="#e1e7ef" stroke-width="4"/><path d="M870 1160 V1260" stroke="#e1e7ef" stroke-width="4"/><path d="M980 1160 V1260" stroke="#e1e7ef" stroke-width="4"/><path d="M420 980 H660 L630 1150 H450 Z" fill="#eef3f9" stroke="#1d3557" stroke-width="7"/><path d="M430 1000 C480 960 600 960 650 1000" stroke="#1d3557" stroke-width="5" fill="none"/></g><g data-in="3.5"><g transform="translate(300 780) rotate(40) scale(0.85)"><rect x="-70" y="-120" width="140" height="240" rx="26" fill="#fff" stroke="#1d3557" stroke-width="7"/><rect x="-30" y="-170" width="60" height="55" rx="8" fill="#d63c63" stroke="#1d3557" stroke-width="6"/><rect x="-55" y="-40" width="110" height="90" rx="10" fill="#d63c63" opacity=".25"/><text y="0" text-anchor="middle" font-family="Manrope" font-size="26" font-weight="800" fill="#1d3557"><tspan x="0" dy="0">çamaşır</tspan><tspan x="0" dy="30">suyu</tspan></text></g></g><g data-in="5.8"><g transform="translate(780 780) rotate(-40) scale(0.85)"><rect x="-70" y="-120" width="140" height="240" rx="26" fill="#fff" stroke="#1d3557" stroke-width="7"/><rect x="-30" y="-170" width="60" height="55" rx="8" fill="#9aa6b6" stroke="#1d3557" stroke-width="6"/><rect x="-55" y="-40" width="110" height="90" rx="10" fill="#9aa6b6" opacity=".25"/><text y="0" text-anchor="middle" font-family="Manrope" font-size="26" font-weight="800" fill="#1d3557"><tspan x="0" dy="0">tuz</tspan><tspan x="0" dy="30">ruhu</tspan></text></g></g><g data-in="8.05"><text x="540" y="560" text-anchor="middle" font-family="Manrope" font-size="56" font-weight="800" fill="#5f6f88">daha güçlü temizler mi?</text></g><g data-in="9.85"><path d="M540 1300 L620 1440 H460 Z" fill="#d63c63"/><text x="540" y="1420" text-anchor="middle" font-family="Manrope" font-size="72" font-weight="800" fill="#fff">!</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="13.06" data-e="22.19">
+ <div class="title">İkisi karşılaşınca<br><em>klor gazı çıkar</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="13.1"><rect x="100" y="490" width="420" height="230" rx="18" fill="#fff" stroke="#d63c63" stroke-width="5"/><text x="310" y="590" text-anchor="middle" font-family="Manrope" font-size="64" font-weight="800" fill="#d63c63">NaOCl</text><text x="310" y="660" text-anchor="middle" font-size="30" font-weight="800" fill="#5f6f88">sodyum hipoklorit</text></g><g data-in="16.7"><rect x="560" y="490" width="420" height="230" rx="18" fill="#fff" stroke="#1d3557" stroke-width="5"/><text x="770" y="590" text-anchor="middle" font-family="Manrope" font-size="64" font-weight="800" fill="#1d3557">HCl</text><text x="770" y="660" text-anchor="middle" font-size="30" font-weight="800" fill="#5f6f88">hidroklorik asit</text></g><g data-in="19.3"><rect x="80" y="790" width="920" height="150" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="885" text-anchor="middle" font-family="Manrope" font-size="46" font-weight="800" fill="#1d3557">NaOCl + 2HCl → NaCl + H₂O + <tspan fill="#8fb020">Cl₂</tspan></text><g transform="translate(540 1110) scale(1.0)"><path d="M-160 40 C-200 40 -200 -30 -150 -35 C-150 -90 -70 -100 -50 -60 C-30 -110 60 -110 70 -55 C120 -80 180 -40 160 10 C200 20 190 60 150 60 H-150 Z" fill="#eef5d6" stroke="#8fb020" stroke-width="6" stroke-dasharray="16 12"/><text x="0" y="22" text-anchor="middle" font-family="Manrope" font-size="62" font-weight="800" fill="#8fb020">Cl₂</text></g></g><g data-in="19.3" data-out="27.9"><rect x="250" y="1300" width="580" height="76" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1350" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">Konunun tamamı: ucler.app</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="22.19" data-e="34.01">
+ <div class="title">Klor gazı<br><em>yere çöker</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="22.2"><g transform="translate(540 640) scale(1.3)"><path d="M-160 40 C-200 40 -200 -30 -150 -35 C-150 -90 -70 -100 -50 -60 C-30 -110 60 -110 70 -55 C120 -80 180 -40 160 10 C200 20 190 60 150 60 H-150 Z" fill="#eef5d6" stroke="#8fb020" stroke-width="6" stroke-dasharray="16 12"/><text x="0" y="22" text-anchor="middle" font-family="Manrope" font-size="62" font-weight="800" fill="#8fb020">Cl₂</text></g></g><g data-in="22.8"><rect x="100" y="820" width="880" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540.0" y="883" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">sarımsı yeşil · keskin kokulu</text></g><g data-in="26.0"><path d="M100 1160 H980" stroke="#1d3557" stroke-width="6"/><path d="M120 1160 C160 1080 260 1100 300 1110 C360 1060 480 1080 520 1110 C600 1070 720 1090 760 1110 C840 1080 940 1100 960 1160 Z" fill="#eef5d6" stroke="#8fb020" stroke-width="5" stroke-dasharray="14 10"/><text x="540" y="1230" text-anchor="middle" font-size="34" font-weight="800" fill="#8fb020">havadan ağır: yerde birikir</text></g><g data-in="28.8"><rect x="100" y="1280" width="880" height="100" rx="18" fill="#fff" stroke="#d63c63" stroke-width="5"/><text x="540.0" y="1343" text-anchor="middle" font-size="36" font-weight="800" fill="#d63c63">1915 · ilk kimyasal silahlardan</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="34.01" data-e="46.96">
+ <div class="title">Akciğerde<br><em>asit oluşur</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="34.0"><path d="M540 520 V650 M540 650 C520 660 500 680 480 700 M540 650 C560 660 580 680 600 700" stroke="#1d3557" stroke-width="10" fill="none" stroke-linecap="round"/><g transform="translate(450 760) scale(1 1)"><path d="M20 -150 C-60 -140 -140 -40 -140 100 C-140 170 -60 180 10 150 C30 140 30 -40 20 -150 Z" fill="#fde8ec" stroke="#d63c63" stroke-width="7"/></g><g transform="translate(630 760) scale(-1 1)"><path d="M20 -150 C-60 -140 -140 -40 -140 100 C-140 170 -60 180 10 150 C30 140 30 -40 20 -150 Z" fill="#fde8ec" stroke="#d63c63" stroke-width="7"/></g></g><g data-in="35.5"><rect x="100" y="980" width="880" height="100" rx="18" fill="#fff" stroke="#d63c63" stroke-width="5"/><text x="540.0" y="1044" text-anchor="middle" font-size="40" font-weight="800" fill="#d63c63">nem + Cl₂ → asit</text></g><g data-in="39.8"><rect x="100" y="1120" width="280" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="240.0" y="1182" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">göz yanar</text></g><g data-in="41.0"><rect x="400" y="1120" width="280" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540.0" y="1182" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">öksürük</text></g><g data-in="42.6"><rect x="700" y="1120" width="280" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="840.0" y="1182" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">nefes darlığı</text></g><g data-in="44.6"><rect x="100" y="1260" width="880" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540.0" y="1323" text-anchor="middle" font-size="36" font-weight="800" fill="#d63c63">kapalı banyoda çok hızlı</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="46.96" data-e="57.61">
+ <div class="title">Yalnız tuz ruhu<br><em>değil</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="48.3"><rect x="80" y="500" width="920" height="260" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="580" text-anchor="middle" font-size="38" font-weight="800" fill="#1d3557">asitli kireç sökücü</text><text x="540" y="635" text-anchor="middle" font-size="34" font-weight="800" fill="#5f6f88">+ çamaşır suyu</text><text x="540" y="715" text-anchor="middle" font-family="Manrope" font-size="52" font-weight="800" fill="#8fb020">→ klor gazı</text></g><g data-in="52.4"><rect x="80" y="820" width="920" height="260" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="900" text-anchor="middle" font-size="38" font-weight="800" fill="#1d3557">amonyaklı temizleyici</text><text x="540" y="955" text-anchor="middle" font-size="34" font-weight="800" fill="#5f6f88">+ çamaşır suyu</text><text x="540" y="1035" text-anchor="middle" font-family="Manrope" font-size="52" font-weight="800" fill="#d63c63">→ kloramin</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="57.61" data-e="68.4">
+ <div class="title">Kural<br><em>basit</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="57.6"><rect x="80" y="500" width="920" height="300" rx="18" fill="#d63c63"/><path d="M180 590 l100 100 M280 590 l-100 100" stroke="#fff" stroke-width="16" stroke-linecap="round"/><text x="330" y="630" font-family="Manrope" font-size="50" font-weight="800" fill="#fff">çamaşır suyunu</text><text x="330" y="700" font-family="Manrope" font-size="50" font-weight="800" fill="#fff">hiçbir ürünle</text><text x="330" y="770" font-family="Manrope" font-size="50" font-weight="800" fill="#fff">karıştırma</text></g><g data-in="62.0"><rect x="80" y="860" width="920" height="380" rx="18" fill="#fff" stroke="#d63c63" stroke-width="6"/><text x="540" y="940" text-anchor="middle" font-size="32" font-weight="800" fill="#d63c63">KESKİN KOKU VARSA</text><text x="540" y="1030" text-anchor="middle" font-family="Manrope" font-size="50" font-weight="800" fill="#1d3557">çık · camları aç</text><text x="540" y="1150" text-anchor="middle" font-family="Manrope" font-size="90" font-weight="800" fill="#d63c63">114</text><text x="540" y="1205" text-anchor="middle" font-size="30" font-weight="800" fill="#5f6f88">Zehir Danışma Merkezi</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="68.4" data-e="74.3">
+ <div class="q"><small>DÜŞÜN</small>Havuz suyunda da klor var; havuzda neden <em>zehirlenmeyiz?</em></div>
+</div>
+
+<div class="scene" data-s="74.1" data-e="99">
+ <div class="title">Kısaca<br><em>hatırla</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><rect x="80" y="500" width="920" height="740" rx="18" fill="#fff" stroke="#d63c63" stroke-width="5"/><text x="140" y="590" font-size="32" font-weight="800" fill="#d63c63">ÖZET</text><circle cx="160" cy="680" r="14" fill="#d63c63"/><text x="200" y="694" font-size="40" font-weight="800" fill="#1d3557">Çamaşır suyu + asit</text><text x="200" y="744" font-size="40" font-weight="800" fill="#d63c63">→ zehirli klor gazı</text><circle cx="160" cy="840" r="14" fill="#d63c63"/><text x="200" y="854" font-size="40" font-weight="800" fill="#1d3557">Amonyakla karışırsa</text><text x="200" y="904" font-size="40" font-weight="800" fill="#d63c63">→ zehirli kloramin</text><circle cx="160" cy="1000" r="14" fill="#d63c63"/><text x="200" y="1014" font-size="40" font-weight="800" fill="#1d3557">Koku varsa:</text><text x="200" y="1064" font-size="40" font-weight="800" fill="#d63c63">çık, camları aç, 114</text><path d="M140 1110 H940" stroke="#dbe3ee" stroke-width="3"/><path d="M160 1140 h40 v70 l-20 -16 l-20 16 Z" fill="#d63c63"/><text x="230" y="1190" font-family="Manrope" font-size="42" font-weight="800" fill="#d63c63">Kaydet, sınavdan önce bak</text></g>
+ </svg>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;
+const DUR = 76.2;           // ses süresi
+const PH = [
+ [0.00,1.28,"İki temizlik ürünü,"],
+ [1.50,2.55,"bir zehirli gaz."],
+ [2.97,7.77,"Banyoda kir inatçı olunca birçok kişi çamaşır suyunun üstüne tuz ruhu döker."],
+ [8.05,9.56,"Daha güçlü temizleyeceğini sanır."],
+ [9.85,12.67,"Oysa o anda tehlikeli bir tepkime başlar."],
+ [13.06,16.40,"Çamaşır suyundaki etken madde sodyum hipoklorittir."],
+ [16.69,17.62,"Tuz ruhu ise"],
+ [17.83,18.96,"hidroklorik asittir."],
+ [19.25,21.86,"İkisi karşılaşınca klor gazı açığa çıkar."],
+ [22.19,25.74,"Klor, sarımsı yeşil renkli ve keskin kokulu bir gazdır."],
+ [26.03,28.63,"Havadan ağır olduğu için yere yakın birikir."],
+ [28.83,33.63,"Birinci Dünya Savaşı'nda kimyasal silah olarak kullanılan ilk gazlardan biridir."],
+ [34.01,39.50,"Klor gazını soluduğunda gaz, akciğerindeki nemle tepkimeye girer ve asitler oluşturur."],
+ [39.79,40.69,"Gözlerin yanar,"],
+ [40.93,46.62,"öksürürsün ve nefes almakta zorlanırsın. Küçük ve kapalı bir banyoda bu çok hızlı olur."],
+ [46.96,52.09,"Tehlike yalnızca tuz ruhunda değildir. Asitli kireç sökücüler de aynı gazı çıkarır."],
+ [52.40,57.25,"Çamaşır suyu amonyaklı bir temizleyiciyle karışırsa da zehirli kloramin oluşur."],
+ [57.61,58.23,"Kural basit:"],
+ [58.58,61.74,"Çamaşır suyunu hiçbir temizlik ürünüyle karıştırma."],
+ [61.95,68.30,"Keskin bir koku fark edersen hemen ortamdan çık, camları aç ve 114'ü, yani Zehir Danışma Merkezi'ni ara."],
+ [68.40,69.31,"Peki sence,"],
+ [69.59,70.35,"havuz"],
+ [70.58,71.89,"suyunda da klor var;"],
+ [72.18,73.74,"havuzda neden zehirlenmeyiz?"]
+];
+
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  cap.style.opacity = t > 74.0 ? 0 : 1;
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
