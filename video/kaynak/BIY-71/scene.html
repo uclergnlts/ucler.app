@@ -1,0 +1,151 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:#1fa463}
+.head .sub i{display:block;width:44px;height:6px;background:#1fa463;border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:#d63c63}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(100px) scale(1.08);transform-origin:540px 960px}
+svg text{font-family:Inter;font-weight:600}
+.cap{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:50px;box-shadow:0 8px 24px rgba(29,53,87,.08);white-space:nowrap;overflow:hidden}
+.cap span{margin:0 7px}
+.cap span.on{background:linear-gradient(transparent 58%,#ffd95a 58%)}
+.q{position:absolute;left:80px;right:80px;top:520px;font-family:Manrope;font-weight:800;font-size:92px;line-height:1.1;letter-spacing:-2px}
+.q small{display:block;font-size:34px;letter-spacing:3px;color:#1fa463;margin-bottom:34px}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:#1fa463;border-radius:3px}
+[data-in]{opacity:0}
+</style></head><body><div id="stage"><div class="grid"></div>
+<div class="head"><div class="sub"><i></i>BİYOLOJİ</div><div class="brand">ucler<b>.</b></div></div>
+
+<div class="scene" data-s="-1" data-e="2.86">
+ <div class="title">Bu gazı göremezsin,<br><em>koklayamazsın da</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><g transform="translate(540 1150) scale(1.25)"><rect x="-110" y="-150" width="220" height="260" rx="18" fill="#fff" stroke="#1d3557" stroke-width="7"/><rect x="-70" y="-60" width="140" height="90" rx="10" fill="#fff2e6" stroke="#1d3557" stroke-width="5"/><path d="M-30 20 C-30 -10 -5 -20 0 -45 C10 -20 30 -10 30 20 Z" fill="#f08a24"/><path d="M-40 -150 V-200 H-10 V-420" stroke="#1d3557" stroke-width="7" fill="none"/><path d="M-90 110 V140 M90 110 V140" stroke="#1d3557" stroke-width="7"/></g><g transform="translate(540 690) scale(1.5)" opacity="1"><path d="M-160 40 C-200 40 -200 -30 -150 -35 C-150 -90 -70 -100 -50 -60 C-30 -110 60 -110 70 -55 C120 -80 180 -40 160 10 C200 20 190 60 150 60 H-150 Z" fill="none" stroke="#9aa6b6" stroke-width="6" stroke-dasharray="16 14"/><text x="0" y="20" text-anchor="middle" font-family="Manrope" font-size="64" font-weight="800" fill="#9aa6b6">CO</text></g></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="2.86" data-e="11.29">
+ <div class="title">Eksik yanma:<br><em>karbon monoksit</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="4.6"><g transform="translate(0 -60)"><g transform="translate(220 900) scale(0.6)"><rect x="-110" y="-150" width="220" height="260" rx="18" fill="#fff" stroke="#1d3557" stroke-width="7"/><rect x="-70" y="-60" width="140" height="90" rx="10" fill="#fff2e6" stroke="#1d3557" stroke-width="5"/><path d="M-30 20 C-30 -10 -5 -20 0 -45 C10 -20 30 -10 30 20 Z" fill="#f08a24"/><path d="M-40 -150 V-200 H-10 V-420" stroke="#1d3557" stroke-width="7" fill="none"/><path d="M-90 110 V140 M90 110 V140" stroke="#1d3557" stroke-width="7"/></g></g><text x="220" y="1020" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">soba</text><g transform="translate(540 760)"><rect x="-80" y="-120" width="160" height="230" rx="22" fill="#fff" stroke="#1d3557" stroke-width="6"/><circle cy="40" r="30" fill="#fff2e6" stroke="#1d3557" stroke-width="5"/><path d="M-10 52 C-10 35 0 30 0 20 C5 30 10 35 10 52 Z" fill="#f08a24"/><rect x="-50" y="-90" width="100" height="40" rx="8" fill="#eef3f9" stroke="#1d3557" stroke-width="4"/></g><text x="540" y="1020" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">şofben</text><g transform="translate(860 860)"><path d="M-110 -20 H110 L80 60 H-80 Z" fill="#fff" stroke="#1d3557" stroke-width="6"/><path d="M-90 -20 H90" stroke="#f08a24" stroke-width="12"/><path d="M-60 60 L-80 120 M60 60 L80 120" stroke="#1d3557" stroke-width="6"/></g><text x="860" y="1020" text-anchor="middle" font-size="32" font-weight="800" fill="#1d3557">mangal</text></g><g data-in="7.0"><rect x="100" y="1090" width="880" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1153" text-anchor="middle" font-size="38" font-weight="800" fill="#5f6f88">bol oksijen → CO₂</text></g><g data-in="9.5"><rect x="100" y="1220" width="880" height="110" rx="18" fill="#fff" stroke="#d63c63" stroke-width="5"/><text x="540" y="1290" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#d63c63">az oksijen → CO (eksik yanma)</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="11.29" data-e="25.46">
+ <div class="title">Hemoglobinde<br><em>yer kapma</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="11.3"><ellipse cx="540" cy="860" rx="330" ry="250" fill="#fde8ec" stroke="#d63c63" stroke-width="7"/><ellipse cx="540" cy="860" rx="170" ry="110" fill="none" stroke="#d63c63" stroke-width="4" stroke-dasharray="12 10" opacity=".6"/><text x="540" y="1170" text-anchor="middle" font-size="34" font-weight="800" fill="#d63c63">alyuvar · hemoglobin</text></g><g data-in="12.5" data-out="18.0"><g transform="translate(400 760)"><circle r="44" fill="#fff" stroke="#1fa463" stroke-width="7"/><text y="14" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#1fa463">O₂</text></g><g transform="translate(680 760)"><circle r="44" fill="#fff" stroke="#1fa463" stroke-width="7"/><text y="14" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#1fa463">O₂</text></g><g transform="translate(400 960)"><circle r="44" fill="#fff" stroke="#1fa463" stroke-width="7"/><text y="14" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#1fa463">O₂</text></g><g transform="translate(680 960)"><circle r="44" fill="#fff" stroke="#1fa463" stroke-width="7"/><text y="14" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#1fa463">O₂</text></g></g><g data-in="18.0"><g transform="translate(400 760)"><circle r="44" fill="#fff" stroke="#1d3557" stroke-width="7"/><text y="14" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#1d3557">CO</text></g><g transform="translate(680 760)"><circle r="44" fill="#fff" stroke="#1d3557" stroke-width="7"/><text y="14" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#1d3557">CO</text></g><g transform="translate(400 960)"><circle r="44" fill="#fff" stroke="#1d3557" stroke-width="7"/><text y="14" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#1d3557">CO</text></g><g transform="translate(680 960)"><circle r="44" fill="#fff" stroke="#1d3557" stroke-width="7"/><text y="14" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#1d3557">CO</text></g><rect x="300" y="460" width="480" height="100" rx="50" fill="#1d3557"/><text x="540" y="525" text-anchor="middle" font-family="Manrope" font-size="44" font-weight="800" fill="#fff">≈ 200 kat sıkı</text></g><g data-in="22.3"><g transform="translate(150 1290)"><circle r="44" fill="#fff" stroke="#9aa6b6" stroke-width="7"/><text y="14" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#9aa6b6">O₂</text></g><g transform="translate(300 1290)"><circle r="44" fill="#fff" stroke="#9aa6b6" stroke-width="7"/><text y="14" text-anchor="middle" font-family="Manrope" font-size="38" font-weight="800" fill="#9aa6b6">O₂</text></g><text x="390" y="1305" font-size="38" font-weight="800" fill="#5f6f88">yer bulamaz</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="25.46" data-e="34.01">
+ <div class="title">Kan akar,<br><em>oksijen gitmez</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="25.5"><path d="M100 700 C300 640 400 760 540 700 S800 640 980 700" stroke="#d63c63" stroke-width="22" fill="none" stroke-linecap="round"/><text x="540" y="620" text-anchor="middle" font-size="34" font-weight="800" fill="#5f6f88">kan akar, O₂ taşınmaz</text></g><g data-in="29.5"><g transform="translate(320 920) scale(1.3)"><path d="M-90 30 C-120 0 -110 -60 -70 -70 C-60 -110 0 -110 10 -80 C40 -110 100 -90 95 -50 C130 -30 120 30 80 40 C70 70 -60 70 -90 30 Z" fill="#eaf7ef" stroke="#1fa463" stroke-width="7"/><path d="M-40 -60 C-20 -30 -50 0 -20 20 M30 -70 C10 -40 50 -10 20 30" stroke="#1fa463" stroke-width="5" fill="none"/></g><text x="320" y="1060" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">beyin</text><rect x="210" y="1090" width="220" height="26" rx="13" fill="#e1e7ef"/><rect x="210" y="1090" width="50" height="26" rx="13" fill="#d63c63"/><text x="320" y="1160" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">oksijen az</text><g transform="translate(760 930) scale(1.3)"><path d="M0 60 C-90 0 -110 -50 -80 -80 C-50 -110 -10 -90 0 -60 C10 -90 50 -110 80 -80 C110 -50 90 0 0 60 Z" fill="#fde8ec" stroke="#d63c63" stroke-width="7"/></g><text x="760" y="1060" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">kalp</text><rect x="650" y="1090" width="220" height="26" rx="13" fill="#e1e7ef"/><rect x="650" y="1090" width="50" height="26" rx="13" fill="#d63c63"/><text x="760" y="1160" text-anchor="middle" font-size="30" font-weight="800" fill="#d63c63">oksijen az</text></g><g data-in="25.5" data-out="33.7"><rect x="250" y="1300" width="580" height="76" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="540" y="1350" text-anchor="middle" font-size="30" font-weight="800" fill="#1fa463">Konunun tamamı: ucler.app</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="34.01" data-e="48.62">
+ <div class="title">Belirtiler<br><em>grip sanılır</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="34.6"><rect x="100" y="480" width="420" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="310" y="542" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">baş ağrısı</text></g><g data-in="35.7"><rect x="100" y="600" width="420" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="310" y="662" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">baş dönmesi</text></g><g data-in="36.6"><rect x="100" y="720" width="420" height="100" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><text x="310" y="782" text-anchor="middle" font-size="36" font-weight="800" fill="#1d3557">bulantı</text></g><g data-in="37.9"><text x="790" y="560" text-anchor="middle" font-family="Manrope" font-size="54" font-weight="800" fill="#5f6f88">grip?</text><text x="790" y="660" text-anchor="middle" font-family="Manrope" font-size="54" font-weight="800" fill="#5f6f88">yorgunluk?</text></g><g data-in="40.8"><rect x="200" y="930" width="680" height="120" rx="20" fill="#fff" stroke="#1d3557" stroke-width="6"/><rect x="220" y="890" width="170" height="70" rx="20" fill="#eef3f9" stroke="#1d3557" stroke-width="5"/><path d="M200 1050 V1100 M880 1050 V1100" stroke="#1d3557" stroke-width="7"/><text x="700" y="880" font-family="Manrope" font-size="56" font-weight="800" fill="#5f6f88">z z z</text></g><g data-in="45.3"><rect x="100" y="1180" width="880" height="140" rx="18" fill="#d63c63"/><text x="540" y="1272" text-anchor="middle" font-family="Manrope" font-size="72" font-weight="800" fill="#fff">sessiz katil</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="48.62" data-e="66.3">
+ <div class="title">Nasıl<br><em>korunursun?</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="48.7"><rect x="100" y="475" width="880" height="110" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><circle cx="170" cy="530" r="32" fill="#1fa463"/><path d="M150 526 l16 16 l30 -32" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round"/><text x="230" y="543" font-size="38" font-weight="800" fill="#1d3557">bacayı her kış temizlet</text></g><g data-in="51.7"><rect x="100" y="605" width="880" height="110" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><circle cx="170" cy="660" r="32" fill="#d63c63"/><path d="M156 642 l28 28 M184 642 l-28 28" stroke="#fff" stroke-width="7" stroke-linecap="round"/><text x="230" y="673" font-size="38" font-weight="800" fill="#1d3557">gece soba havasını kısma</text></g><g data-in="54.0"><rect x="100" y="735" width="880" height="110" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><circle cx="170" cy="790" r="32" fill="#d63c63"/><path d="M156 772 l28 28 M184 772 l-28 28" stroke="#fff" stroke-width="7" stroke-linecap="round"/><text x="230" y="803" font-size="38" font-weight="800" fill="#1d3557">kapalı yerde mangal yakma</text></g><g data-in="56.6"><rect x="100" y="865" width="880" height="110" rx="18" fill="#fff" stroke="#dbe3ee" stroke-width="3"/><circle cx="170" cy="920" r="32" fill="#1fa463"/><path d="M150 916 l16 16 l30 -32" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round"/><text x="230" y="933" font-size="38" font-weight="800" fill="#1d3557">CO dedektörü tak</text></g><g data-in="60.3"><rect x="100" y="1060" width="880" height="270" rx="18" fill="#fff" stroke="#d63c63" stroke-width="6"/><text x="540" y="1130" text-anchor="middle" font-size="32" font-weight="800" fill="#d63c63">BELİRTİ VARSA</text><text x="540" y="1210" text-anchor="middle" font-family="Manrope" font-size="48" font-weight="800" fill="#1d3557">camları aç · temiz hava</text><text x="540" y="1295" text-anchor="middle" font-family="Manrope" font-size="64" font-weight="800" fill="#d63c63">112</text></g>
+ </svg>
+</div>
+
+<div class="scene" data-s="66.30" data-e="71.7">
+ <div class="q"><small>DÜŞÜN</small>Karbon monoksit zehirlenmesinde hastaya neden <em>saf oksijen</em> verilir?</div>
+</div>
+
+<div class="scene" data-s="71.5" data-e="99">
+ <div class="title">Kısaca<br><em>hatırla</em></div>
+ <svg class="v" viewBox="0 0 1080 1920">
+<g data-in="-1"><rect x="80" y="500" width="920" height="740" rx="18" fill="#fff" stroke="#1fa463" stroke-width="5"/><text x="140" y="590" font-size="32" font-weight="800" fill="#1fa463">ÖZET</text><circle cx="160" cy="680" r="14" fill="#1fa463"/><text x="200" y="694" font-size="40" font-weight="800" fill="#1d3557">CO renksiz, kokusuz:</text><text x="200" y="744" font-size="40" font-weight="800" fill="#1fa463">eksik yanmadan çıkar</text><circle cx="160" cy="840" r="14" fill="#1fa463"/><text x="200" y="854" font-size="40" font-weight="800" fill="#1d3557">Hemoglobine O₂'den</text><text x="200" y="904" font-size="40" font-weight="800" fill="#1fa463">≈ 200 kat sıkı bağlanır</text><circle cx="160" cy="1000" r="14" fill="#1fa463"/><text x="200" y="1014" font-size="40" font-weight="800" fill="#1d3557">Belirti varsa:</text><text x="200" y="1064" font-size="40" font-weight="800" fill="#1fa463">camı aç, temiz hava, 112</text><path d="M140 1110 H940" stroke="#dbe3ee" stroke-width="3"/><path d="M160 1140 h40 v70 l-20 -16 l-20 16 Z" fill="#1fa463"/><text x="230" y="1190" font-family="Manrope" font-size="42" font-weight="800" fill="#1fa463">Kaydet, sınavdan önce bak</text></g>
+ </svg>
+</div>
+
+<div class="cap" id="cap"></div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+<script>
+const S = 1;
+const DUR = 73.6;           // ses süresi
+const PH = [
+ [0.00,1.19,"Bu gazı göremezsin,"],
+ [1.50,2.51,"koklayamazsın da."],
+ [2.86,4.27,"Adı karbon monoksit."],
+ [4.63,9.21,"Soba, şofben ya da mangal yeterli oksijen olmadan yanarsa ortaya çıkar."],
+ [9.53,10.92,"Buna eksik yanma denir."],
+ [11.29,15.75,"Soluduğun oksijen, kanındaki alyuvarlarda hemoglobine bağlanarak taşınır."],
+ [16.10,16.81,"Sorun şu:"],
+ [17.07,21.94,"karbon monoksit hemoglobine oksijenden yaklaşık 200 kat daha sıkı bağlanır."],
+ [22.31,25.22,"Oksijenin yerini kapar ve kolay kolay bırakmaz."],
+ [25.46,26.91,"Kanın akmaya devam eder,"],
+ [27.11,29.30,"ama artık yeterli oksijen taşıyamaz."],
+ [29.54,33.68,"En çok etkilenen organlar, en çok oksijen harcayan beyin ve kalptir."],
+ [34.01,37.54,"İlk belirtiler baş ağrısı, baş dönmesi ve bulantıdır."],
+ [37.86,40.46,"Bunlar çoğu zaman grip ya da yorgunluk sanılır."],
+ [40.79,41.79,"Kişi uyumak ister."],
+ [42.12,44.96,"Uyurken zehirlenen biri ise hiç uyanmayabilir."],
+ [45.25,48.32,"Bu yüzden karbon monoksite sessiz katil denir."],
+ [48.62,51.45,"Korunmak için soba bacasını her kış temizlet,"],
+ [51.66,56.31,"gece sobanın havasını kısarak yatma ve kapalı yerde asla mangal yakma."],
+ [56.55,59.99,"En güvenlisi, evine bir karbon monoksit dedektörü takmaktır."],
+ [60.31,65.98,"Birinde bu belirtileri görürsen hemen camları aç, onu temiz havaya çıkar ve 112'yi ara."],
+ [66.30,71.17,"Peki sence, karbon monoksit zehirlenmesinde hastaya neden saf oksijen verilir?"]
+];
+
+// kelime zamanları (parça içinde harf sayısıyla orantılı) ve altyazı grupları (en çok 24 harf)
+const W = [], CH = [];
+PH.forEach(([a,b,txt]) => {
+  const ws = txt.split(' '), tot = ws.reduce((s,w)=>s+w.length+1,0); let acc = 0, grp = [], len = 0;
+  ws.forEach(w => { const st = a + (b-a)*acc/tot; acc += w.length+1;
+    if (grp.length && len + w.length + 1 > 24) { CH.push(grp); grp = []; len = 0; }
+    const o = {w, t: st, c: CH.length}; W.push(o); grp.push(o); len += w.length + 1; });
+  if (grp.length) CH.push(grp);
+});
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+const cap = document.getElementById('cap'), bar = document.getElementById('bar');
+document.querySelectorAll('[data-draw] path, path[data-draw]').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let lastC = -1;
+window.render = function (tv) {
+  const t = tv * S;
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = Math.min(ease((t-a)/0.4), 1 - ease((t-e+0.4)/0.4));
+  });
+  document.querySelectorAll('[data-in]').forEach(el => {
+    const k = ease((t - +el.dataset.in)/0.5), b = +(el.dataset.base||0), o = el.dataset.out ? 1 - ease((t - +el.dataset.out)/0.4) : 1;
+    el.style.opacity = (b + (1-b)*k) * o; el.style.transform = el.getAttribute('transform') ? '' : `translateY(${(1-k)*24}px)`;
+  });
+  document.querySelectorAll('[data-draw]').forEach(g => {
+    const k = ease((t - +g.dataset.draw)/ +g.dataset.dur);
+    (g.tagName==='path'?[g]:g.querySelectorAll('path')).forEach(p => p.style.strokeDashoffset = p.dataset.len*(1-k));
+  });
+  // altyazı
+  let i = W.findIndex(o => o.t > t); i = (i === -1 ? W.length : i) - 1; if (i < 0) i = 0;
+  const cur = W[i];
+  if (cur.c !== lastC) { cap.innerHTML = CH[cur.c].map(o => `<span>${o.w}</span>`).join(''); lastC = cur.c; cap.style.fontSize='50px';
+    if (cap.scrollWidth > 880) cap.style.fontSize = Math.floor(50*880/cap.scrollWidth)+'px'; }
+  [...cap.children].forEach((s, j) => s.className = CH[cur.c][j] === cur ? 'on' : '');
+  cap.style.opacity = t > 71.5 ? 0 : 1;
+  bar.style.width = Math.min(100, t/DUR*100) + '%';
+};
+render(0);
+</script></body></html>
