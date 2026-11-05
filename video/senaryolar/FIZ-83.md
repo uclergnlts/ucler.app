@@ -1,6 +1,6 @@
 # FIZ-83 · GPS görelilik olmadan neden şaşırır?
 
-Fizik › Özel görelilik › Kart 11: GPS ve görelilik · 1-3 dk · 175 kelime
+Fizik › Özel görelilik › Kart 10: GPS ve görelilik · 1-3 dk · 175 kelime
 
 ## Konuşma metni (ElevenLabs'a aynen yapıştırılır)
 
@@ -32,7 +32,7 @@ Meme açılışı (isteğe bağlı, kendi çizimimiz): "Telefon: Hedefe ulaştı
 
 Sahne planı (~7 sahne, ~90 sn): 1) kanca, telefon + uydu; 2) uydudan telefona sinyal, atom saati, 4 uydu kesişen küreler; 3) "1 μs = 300 m" ışık hızı cetveli; 4) uydu yörüngede hızla dönüyor, saat yavaşlıyor (−7 μs/gün, mavi); 5) yükseklik ve zayıf çekim, saat hızlanıyor (+45 μs/gün, sarı); 6) terazi: +45 − 7 = +38 μs/gün, harita iğnesi her gün 10 km kayıyor, mühendis saati yavaş ayarlıyor; 7) DÜŞÜN sorusu; ardından sessiz özet kartı.
 
-Kart 11 (GPS ve görelilik) ile uyumlu: hız yüzünden ~7 μs geri, zayıf çekim yüzünden ~45 μs ileri, düzeltilmezse günde ~10 km hata.
+Kart 10 (GPS ve görelilik) ile uyumlu: hız yüzünden ~7 μs geri, zayıf çekim yüzünden ~45 μs ileri, düzeltilmezse günde ~10 km hata.
 
 Kaynaklar: GPS uyduları ~20 200 km yükseklikte, ~3,87 km/s (≈ 14 000 km/sa), yörünge ~12 saat. Özel görelilik −7,2 μs/gün, genel görelilik +45,7 μs/gün, net ≈ +38 μs/gün; ışık 1 μs'de ~300 m yol alır, 38 μs ≈ 11 km (kartta "yaklaşık 10 km"). Uydu saat frekansı fırlatmadan önce 10,23 MHz yerine 10,22999999543 MHz'e ayarlanır. Konum için en az 4 uydu gerekir (3 boyut + alıcı saat hatası).
 
