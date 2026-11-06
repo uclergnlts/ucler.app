@@ -8,6 +8,7 @@
     "start": "npx serve out",
     "check": "python3 tools/check.py",
     "okunabilirlik": "python3 tools/okunabilirlik.py",
+    "dogal-turkce": "python3 tools/dogal-turkce.py",
     "lint": "tsc --noEmit",
     "app": "next build && rm -f out/videolar/*.mp4 out/videolar/*.jpg && cap sync"
   },

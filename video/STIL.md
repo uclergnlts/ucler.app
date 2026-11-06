@@ -46,3 +46,7 @@ Konuya gerçekten uyuyorsa ilk kare, tanıdık bir meme kalıbıyla açılabilir
 - Hazır meme görseli (film sahnesi, ünlü yüz, internetten tepki fotoğrafı) **kullanılmaz**: telif riski taşır ve sade stile aykırıdır.
 - Yalnız yazı kalıbı alınır ("X: sorun yok / Y 41 °C'de:" gibi), görsel bizim stilimizde çizilir.
 - Kanca kuralı geçerlidir: kare 0. saniyede tam görünür ve kapak karesi olur. Seslendirmedeki kanca cümlesi değişmez.
+
+## Dil
+
+Seslendirme metni `docs/DOGAL-TURKCE.md` kurallarına uyar. Klişe, sahneleme girişi ("Bu videoda ... öğreneceğiz"), "Öte yandan" gibi dolgu ve noktalı virgülle bağlanmış cümle olmaz. Yazdıktan sonra `npm run dogal-turkce` çalıştır, rapordaki "Video seslendirme" bölümüne bak.

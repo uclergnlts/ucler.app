@@ -118,6 +118,8 @@ Her MEB öğrenme çıktısı (Türkiye Yüzyılı Maarif Modeli, 2024; Fizik, K
 
 Yeni konu ya da çok sayıda kart yazınca `npm run okunabilirlik` de çalıştırılır. Rapor (`denetim/OKUNABILIRLIK.md`) 28 kelimeyi aşan cümleleri, ağır kelime yığılan cümleleri, tanıtılmadan önce kullanılan terimleri (terim, `<b>` ile ve tanım izi taşıyarak tanıtılır: başlıkta geçer, "denir/demektir" vardır ya da cümle terimle başlar) ve kolaydan zora gitmeyen konuları listeler. Puanlar yol göstericidir; hata sayılmaz.
 
+Her metin `docs/DOGAL-TURKCE.md` kurallarına uyar: klişe ve dolgu yok ("kritik bir rol oynar", "sadece X değil, aynı zamanda Y", "söz konusu"), noktalı virgülle iki cümle yapıştırılmaz, uzun çizgi kullanılmaz, ondalık virgülle yazılır. `npm run dogal-turkce` KESİN bulgu bırakmamalı.
+
 ## Adımlı ders (deneme, `/ornek/`)
 Brilliant tarzı örnek dersler `content/adimli/<konu>.json` dosyalarındadır; tipler `lib/adimli.ts`, motor `components/DersMotoru.tsx`, sahneler `components/sahne/` içindedir.
 - Ders: `id`, `ders`, `konu` (konunun normal sayfası), `baslik`, `ozet`, `adimlar`, `kapanis` (bitişte gösterilen özet maddeleri).

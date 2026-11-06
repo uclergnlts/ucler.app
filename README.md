@@ -13,6 +13,7 @@ npm run dev                                           # http://localhost:3000 ad
 npm run build                                         # out/ klasörüne statik site
 python3 tools/check.py                                # içerik doğrulama
 npm run okunabilirlik                                 # Türkçe anlaşılırlık ve zorluk sırası raporu (denetim/OKUNABILIRLIK.md)
+npm run dogal-turkce                                  # yapay zekâ Türkçesi ve TDK yazım taraması (denetim/DOGAL-TURKCE.md)
 NODE_PATH=$(npm root -g) node tools/ekran.js ekran     # ekran görüntüleri (önce build; playwright gerekir)
 ```
 
