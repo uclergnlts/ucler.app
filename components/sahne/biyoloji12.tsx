@@ -110,7 +110,7 @@ function Yol({ t, oynuyor, s }: SahneProps) {
         <text x={208} y={200} fill={yazi(6)}>alveol</text>
       </g>
       <text x={170} y={228} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {etkin < 0 ? "Hava burundan giriyor" : u >= 1 ? "Hava alveole ulaştı; yemek borusuna hiç girmedi" : HAVA[etkin].not}
+        {etkin < 0 ? "Hava burundan giriyor" : u >= 1 ? "Hava alveole ulaştı. Yemek borusuna hiç girmedi" : HAVA[etkin].not}
       </text>
     </svg>
   );
@@ -160,7 +160,7 @@ function Gogus({ v }: SahneProps) {
         <text x={214} y={172} fontSize={12} fontWeight={800} fill={P < 760 ? MAVI : "var(--muted)"}>{P < 760 ? "hava içeri akıyor" : "hava akmıyor"}</text>
       </g>
       <text x={170} y={214} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {P === 760 ? "Kaslar gevşek: basınçlar eşit, hava akmıyor" : d && k ? "İki kas da kasıldı: hacim en büyük, basınç en düşük" : "Hacim arttı, basınç düştü; ama hacim daha da artabilir"}
+        {P === 760 ? "Kaslar gevşek: basınçlar eşit, hava akmıyor" : d && k ? "İki kas da kasıldı: hacim en büyük, basınç en düşük" : "Hacim arttı, basınç düştü. Ama hacim daha da artabilir"}
       </text>
     </svg>
   );
@@ -255,7 +255,7 @@ function Alveol({ t, oynuyor, s }: SahneProps) {
         <text x={258} y={50} fill="var(--muted)">CO₂</text>
       </g>
       <text x={170} y={216} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {u <= 0 ? "Kan, alveolün kılcalına geliyor" : u < 1 ? "Gazlar yüksek kısmi basınçtan düşüğe geçiyor" : "Kan O₂ aldı, CO₂ verdi; ATP harcanmadı"}
+        {u <= 0 ? "Kan, alveolün kılcalına geliyor" : u < 1 ? "Gazlar yüksek kısmi basınçtan düşüğe geçiyor" : "Kan O₂ aldı, CO₂ verdi. ATP harcanmadı"}
       </text>
     </svg>
   );

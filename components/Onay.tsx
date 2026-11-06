@@ -31,7 +31,7 @@ export default function Onay() {
   const [baslik, metin] = durum === "bekle"
     ? ["Hesabın onaylanıyor", "Bir saniye..."]
     : durum === "tamam"
-      ? ["Hesabın hazır", "E-postanı doğruladın. İlerlemen artık hesabına kaydediliyor; başka bir cihazda aynı e-postayla giriş yaparsan kaldığın yerden devam edersin."]
+      ? ["Hesabın hazır", "E-postanı doğruladın. İlerlemen artık hesabına kaydediliyor. Başka bir cihazda aynı e-postayla giriş yaparsan kaldığın yerden devam edersin."]
       : ["Bağlantı çalışmadı", "Bu bağlantının süresi dolmuş ya da daha önce kullanılmış. Hesabını zaten onayladıysan giriş yapabilirsin."];
   return (
     <div className="app">

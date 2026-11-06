@@ -26,7 +26,7 @@ export default function Ayarlar() {
         {oturum ? (
           <div className="grid gap-3">
             <p className="text-[14px] text-muted-foreground"><b className="text-foreground">{oturum.user.email}</b> ile giriş yaptın.{" "}
-              {esitleme === "hata" ? "Şu an buluta kaydedilemedi; ilerlemen bu cihazda duruyor, bağlantı gelince yeniden denenecek." : "İlerlemen hesabına kaydediliyor."}</p>
+              {esitleme === "hata" ? "Şu an buluta kaydedilemedi. İlerlemen bu cihazda duruyor, bağlantı gelince yeniden denenecek." : "İlerlemen hesabına kaydediliyor."}</p>
             <Bildirimler kimlik={oturum.user.id} />
             <Button variant="outline" className="w-full" disabled={cikiyor} onClick={async () => { setCikiyor(true); setCikisHata(!(await cikisYap(temizle))); setCikiyor(false); }}>
               {cikiyor ? "Çıkış yapılıyor..." : "Çıkış yap"}
@@ -40,7 +40,7 @@ export default function Ayarlar() {
                 <DialogTitle>Hesabın silinsin mi?</DialogTitle>
                 <DialogDescription>
                   Hesabın, e-posta adresin ve buluttaki bütün ilerlemen kalıcı olarak silinir; bu cihazdaki ilerleme de temizlenir. Bu geri alınamaz.
-                  {ABONELIK && " Hesabını silmek ucler Plus aboneliğini iptal etmez; aboneliğin varsa App Store ya da Google Play ayarlarından iptal et."}
+                  {ABONELIK && " Hesabını silmek ucler Plus aboneliğini iptal etmez. Aboneliğin varsa App Store ya da Google Play ayarlarından iptal et."}
                 </DialogDescription>
                 {silHata && <p role="alert" className="text-[14px] font-medium text-bad">Hesap silinemedi. İnternet bağlantını kontrol edip yeniden dene.</p>}
                 <div className="mt-2 grid gap-2">

@@ -538,7 +538,7 @@ function Rezonans({ v, t, oynuyor, s, kosular }: SahneProps) {
 }
 const rezonansGeri = () => ({
   baslik: "Salınım büyümedi",
-  metin: "İtmeler salınıma uymadı: kimi itme salıncağı hızlandırdı, kimi frenledi. İlk itmeden sonraki tümsek yarım salınımdır; itmeler salıncağın bir tam gidiş-gelişine denk gelmeli.",
+  metin: "İtmeler salınıma uymadı: kimi itme salıncağı hızlandırdı, kimi frenledi. İlk itmeden sonraki tümsek yarım salınımdır. İtmeler salıncağın bir tam gidiş-gelişine denk gelmeli.",
 });
 
 export const FIZIK11: Record<string, SahneKaydi> = {

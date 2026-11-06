@@ -143,7 +143,7 @@ function Metabolizma({ v }: SahneProps) {
           {yap ? "Anabolizma (yapım)" : "Katabolizma (yıkım)"}
         </text>
         <text x={170} y={206} fontSize={12} fill="var(--muted)" textAnchor="middle">
-          {yap ? "Küçükten büyük molekül kurulur; ATP harcanır." : "Büyük moleküller böyle küçük parçalara ayrılır."}
+          {yap ? "Küçükten büyük molekül kurulur. ATP harcanır." : "Büyük moleküller böyle küçük parçalara ayrılır."}
         </text>
       </g>
     </svg>

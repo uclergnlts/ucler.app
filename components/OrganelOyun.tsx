@@ -15,19 +15,19 @@ const TUR = 10, KAYIT = "ucler-oyun-organel";
 
 const ORG: Record<string, Org> = {
   zar: { ad: "Hücre zarı", gorev: "Hücreyi çevreleyen sınır: neyin girip çıkacağını seçer (seçici geçirgen).", not: "Hücre zarı her hücrede bulunur. Bitkide zarın hemen dışında bir de hücre duvarı vardır." },
-  cekirdek: { ad: "Çekirdek", gorev: "DNA'yı taşır; hangi proteinin ne zaman üretileceğini belirleyerek hücreyi yönetir.", not: "Çekirdek porlu çift zarla çevrilidir; içinde DNA (kromatin) ve çekirdekçik bulunur." },
+  cekirdek: { ad: "Çekirdek", gorev: "DNA'yı taşır; hangi proteinin ne zaman üretileceğini belirleyerek hücreyi yönetir.", not: "Çekirdek porlu çift zarla çevrilidir. İçinde DNA (kromatin) ve çekirdekçik bulunur." },
   cekirdekcik: { ad: "Çekirdekçik", gorev: "Çekirdeğin içindeki koyu bölge: ribozom yapımına katılır.", not: "Çekirdekçik zarsızdır ve çekirdeğin içinde durur." },
   ribozom: { ad: "Ribozom", gorev: "Zarsız, çok küçük yapı: protein sentezler. Sitoplazmada serbest hâlde de bulunur.", not: "Ribozom bütün hücrelerde, bakterilerde bile bulunur. Granüllü ER'nin üstündeki noktalar da ribozomdur." },
-  ger: { ad: "Granüllü ER", gorev: "Üstü ribozomlarla kaplı kanal sistemi: salgılanacak ve zara gidecek proteinleri üretip taşır.", not: "Granüllü ER çekirdeğin hemen yanındadır; ürettiği proteinleri keseciklerle Golgi'ye yollar." },
-  gser: { ad: "Granülsüz ER", gorev: "Ribozomsuz kanal sistemi: lipit sentezler, karaciğerde zararlı maddeleri etkisizleştirir.", not: "Granülsüz ER ribozom taşımaz; kas hücresinde Ca²⁺ depolar." },
+  ger: { ad: "Granüllü ER", gorev: "Üstü ribozomlarla kaplı kanal sistemi: salgılanacak ve zara gidecek proteinleri üretip taşır.", not: "Granüllü ER çekirdeğin hemen yanındadır. Ürettiği proteinleri keseciklerle Golgi'ye yollar." },
+  gser: { ad: "Granülsüz ER", gorev: "Ribozomsuz kanal sistemi: lipit sentezler, karaciğerde zararlı maddeleri etkisizleştirir.", not: "Granülsüz ER ribozom taşımaz. Kas hücresinde Ca²⁺ depolar." },
   golgi: { ad: "Golgi aygıtı", gorev: "ER'den gelen proteinleri düzenler, paketler ve keseciklerle gideceği yere yollar.", not: "Golgi, üst üste dizili yassı keselerden oluşan kargo merkezidir." },
   mitokondri: { ad: "Mitokondri", gorev: "Hücrenin enerji santrali: oksijenli solunumla besinlerden ATP üretir.", not: "Mitokondri çift zarlıdır, iç zarı kıvrımlıdır; kendi DNA'sı ve ribozomu vardır. Kas hücrelerinde boldur." },
   lizozom: { ad: "Lizozom", gorev: "Sindirim enzimleriyle dolu kesecik: hücre içi sindirim yapar, eskiyen organelleri yıkar.", not: "Lizozom Golgi'den oluşur; özellikle hayvan hücrelerinde bulunur." },
-  peroksizom: { ad: "Peroksizom", gorev: "Zararlı hidrojen peroksiti (H₂O₂) katalaz enzimiyle su ve oksijene ayırır.", not: "Peroksizom küçük, tek zarlı bir kesecik; karaciğerde boldur, bitki hücresinde de bulunur." },
-  sentrozom: { ad: "Sentrozom", gorev: "Hücre bölünürken iğ ipliklerini düzenler; birbirine dik iki küçük silindirden oluşur.", not: "Sentrozom iki sentriolden oluşur. Hayvan hücresinde bulunur, bitki hücresinde yoktur." },
-  duvar: { ad: "Hücre duvarı", gorev: "Selülozdan yapılmış sağlam dış katman: hücreye destek ve koruma sağlar.", not: "Hücre duvarı zarın dışındadır. Bitkide selülozdandır; hayvan hücresinde yoktur." },
+  peroksizom: { ad: "Peroksizom", gorev: "Zararlı hidrojen peroksiti (H₂O₂) katalaz enzimiyle su ve oksijene ayırır.", not: "Peroksizom küçük, tek zarlı bir kesecik. Karaciğerde boldur, bitki hücresinde de bulunur." },
+  sentrozom: { ad: "Sentrozom", gorev: "Hücre bölünürken iğ ipliklerini düzenler. Birbirine dik iki küçük silindirden oluşur.", not: "Sentrozom iki sentriolden oluşur. Hayvan hücresinde bulunur, bitki hücresinde yoktur." },
+  duvar: { ad: "Hücre duvarı", gorev: "Selülozdan yapılmış sağlam dış katman: hücreye destek ve koruma sağlar.", not: "Hücre duvarı zarın dışındadır. Bitkide selülozdandır. Hayvan hücresinde yoktur." },
   kloroplast: { ad: "Kloroplast", gorev: "Klorofille ışık enerjisini yakalar, fotosentezle glikoz üretir.", not: "Kloroplast çift zarlıdır ve kendi DNA'sı vardır. Bitki ve alglerde bulunan bir plastittir." },
-  koful: { ad: "Merkezi koful", gorev: "Su, besin, pigment ve atık depolayan kese; su alınca bitki hücresini gergin tutar.", not: "Bitki hücresinde tek ve büyük bir merkezi koful vardır; hayvan hücresinin kofulları küçüktür." },
+  koful: { ad: "Merkezi koful", gorev: "Su, besin, pigment ve atık depolayan kese. Su alınca bitki hücresini gergin tutar.", not: "Bitki hücresinde tek ve büyük bir merkezi koful vardır. Hayvan hücresinin kofulları küçüktür." },
 };
 
 // Bir yayın (halka diliminin) yolu: merkez, yarıçap, başlangıç ve bitiş açısı (derece, saat yönünde).

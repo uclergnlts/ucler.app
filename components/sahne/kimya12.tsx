@@ -64,7 +64,7 @@ function Grup({ v, set }: SahneProps) {
       </g>
       <text x={170} y={206} fontSize={13} fontWeight={800} textAnchor="middle" fill={g === 3 ? "var(--good)" : "var(--ink)"}>{d.su}</text>
       <text x={170} y={226} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">
-        {g === 3 ? "−OH suyla hidrojen bağı kurar" : "İskelet hemen hemen aynı; fark gruptan geliyor"}
+        {g === 3 ? "−OH suyla hidrojen bağı kurar" : "İskelet hemen hemen aynı. Fark gruptan geliyor"}
       </text>
     </svg>
   );

@@ -465,15 +465,15 @@ type Karisim = { ad: string; dogru: number; ciktilar: [string, string]; neden: s
 const KARISIM: Record<string, Karisim> = {
   "demir-kukurt": {
     ad: "demir tozu + kükürt tozu", dogru: 1, ciktilar: ["demir tozu", "kükürt"],
-    neden: ["", "", "İki bileşen de katı toz; ikisi de süzgeç kâğıdında kalır.", "Ayırma hunisi birbirinde çözünmeyen sıvılar içindir; burada sıvı yok.", "Damıtma sıvıları kaynama noktası farkıyla ayırır; burada sıvı yok."],
+    neden: ["", "", "İki bileşen de katı toz. İkisi de süzgeç kâğıdında kalır.", "Ayırma hunisi birbirinde çözünmeyen sıvılar içindir. Burada sıvı yok.", "Damıtma sıvıları kaynama noktası farkıyla ayırır. Burada sıvı yok."],
   },
   "yag-su": {
     ad: "zeytinyağı + su", dogru: 3, ciktilar: ["su", "zeytinyağı"],
-    neden: ["", "Mıknatıs yalnızca demir, nikel ve kobaltı çeker; bu karışımda yok.", "İki sıvı da süzgeç kâğıdından geçer.", "", "Isıtmaya gerek yok: bu iki sıvı zaten iki katmana ayrılıyor. Katmanları ayıran daha basit yöntemi bul."],
+    neden: ["", "Mıknatıs yalnızca demir, nikel ve kobaltı çeker. Bu karışımda yok.", "İki sıvı da süzgeç kâğıdından geçer.", "", "Isıtmaya gerek yok: bu iki sıvı zaten iki katmana ayrılıyor. Katmanları ayıran daha basit yöntemi bul."],
   },
   "tuzlu-su": {
     ad: "tuzlu su", dogru: 4, ciktilar: ["saf su", "tuz"],
-    neden: ["", "Mıknatıs yalnızca demir, nikel ve kobaltı çeker; bu karışımda yok.", "Çözünmüş tuz suyla birlikte süzgeç kâğıdından geçer.", "Tuzlu su tek fazlı bir çözeltidir; katmanlara ayrılmaz.", ""],
+    neden: ["", "Mıknatıs yalnızca demir, nikel ve kobaltı çeker. Bu karışımda yok.", "Çözünmüş tuz suyla birlikte süzgeç kâğıdından geçer.", "Tuzlu su tek fazlı bir çözeltidir. Katmanlara ayrılmaz.", ""],
   },
 };
 

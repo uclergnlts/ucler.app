@@ -158,7 +158,7 @@ function Antibiyotik({ t, oynuyor, s }: SahneProps) {
   const bos = BAK.filter((b) => !b.direncli);
   const canli = 28 - Math.round(olum * 25) + yeniSayi;
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label="Petri kabında 28 bakteri, 3'ü önceden dirençli; antibiyotik duyarlıları öldürür, dirençliler çoğalır">
+    <svg viewBox="0 0 340 226" role="img" aria-label="Petri kabında 28 bakteri, 3'ü önceden dirençli. Antibiyotik duyarlıları öldürür, dirençliler çoğalır">
       <circle cx={170} cy={101} r={92} fill={MAVI} fillOpacity={0.1 * ilac} stroke="var(--line-2)" strokeWidth={1.6} />
       {BAK.map((b, i) => (b.direncli ? <Bakteri key={i} {...b} renk={MOR} /> : <Bakteri key={i} {...b} renk={YESIL} op={1 - olum * 0.85} />))}
       {bos.slice(0, yeniSayi).map((b, i) => (

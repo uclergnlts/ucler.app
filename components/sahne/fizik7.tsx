@@ -456,7 +456,7 @@ export const FIZIK7: Record<string, SahneKaydi> = {
     C: Viraj,
     geri: (v) => {
       const mu = (v.mu ?? 3) / 10, vm = vMax(mu);
-      return { baslik: "Savruldun", metin: `μ = ${say(mu)} iken en büyük güvenli hız √(${say(mu)} · 9,8 · 50) ≈ ${say(vm)} m/s. Araban 15 m/s ile gidiyor; sürtünme merkezcil kuvvete yetmedi, araba teğet boyunca kaydı.` };
+      return { baslik: "Savruldun", metin: `μ = ${say(mu)} iken en büyük güvenli hız √(${say(mu)} · 9,8 · 50) ≈ ${say(vm)} m/s. Araban 15 m/s ile gidiyor. Sürtünme merkezcil kuvvete yetmedi, araba teğet boyunca kaydı.` };
     },
   },
   "fiz7-patenci": { C: Patenci },

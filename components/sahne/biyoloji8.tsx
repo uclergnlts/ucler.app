@@ -512,7 +512,7 @@ function Fermantasyon({ v, t, oynuyor, s }: SahneProps) {
   const u = ilerleme(t, oynuyor, sure);
   const balon = kas ? 0 : u;
   return (
-    <svg viewBox="0 0 340 230" role="img" aria-label={kas ? "Kas hücresi: pirüvat laktik asite dönüşür, CO₂ çıkmaz" : `Maya: etil alkol ve CO₂; balon ${Math.round(balon * 100)}% şişti`}>
+    <svg viewBox="0 0 340 230" role="img" aria-label={kas ? "Kas hücresi: pirüvat laktik asite dönüşür, CO₂ çıkmaz" : `Maya: etil alkol ve CO₂. Balon ${Math.round(balon * 100)}% şişti`}>
       {!kas ? (
         <g>
           <ellipse cx={90} cy={58 - balon * 18} rx={10 + balon * 26} ry={10 + balon * 24} fill="var(--c2)" fillOpacity={0.25 + balon * 0.4} stroke="var(--c2)" strokeWidth={1.4} />
@@ -587,7 +587,7 @@ function Ok({ x1, y1, x2, y2, renk, kalin }: { x1: number; y1: number; x2: numbe
 function GeceGunduz({ v }: SahneProps) {
   const gece = (v.gece ?? 0) === 1;
   return (
-    <svg viewBox="0 0 340 230" role="img" aria-label={gece ? "Gece: yalnız solunum; O₂ alır, CO₂ verir" : "Gündüz: fotosentez solunumdan hızlı; net CO₂ alır, O₂ verir"}>
+    <svg viewBox="0 0 340 230" role="img" aria-label={gece ? "Gece: yalnız solunum; O₂ alır, CO₂ verir" : "Gündüz: fotosentez solunumdan hızlı. Net CO₂ alır, O₂ verir"}>
       {gece ? (
         <path d="M44 28 A16 16 0 1 0 62 52 A12 12 0 1 1 44 28 Z" fill="#8a96a8" />
       ) : (

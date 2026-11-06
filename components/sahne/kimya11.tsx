@@ -192,7 +192,7 @@ function SigmaPi({ v }: SahneProps) {
         Senin sayın: <tspan fill="var(--c1)">{s} σ</tspan> + <tspan fill="var(--c2)">{p} π</tspan>
       </text>
       <text x={170} y={204} fontSize={12} fontWeight={700} textAnchor="middle" fill={tamam ? "var(--good)" : "var(--muted)"}>
-        {tamam ? "Her bağda bir σ (mavi); üçlüde iki π (kırmızı)" : "İki atom arasındaki ilk bağ σ, fazlası π"}
+        {tamam ? "Her bağda bir σ (mavi). Üçlüde iki π (kırmızı)" : "İki atom arasındaki ilk bağ σ, fazlası π"}
       </text>
     </svg>
   );

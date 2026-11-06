@@ -114,7 +114,7 @@ function Sperm({ t, oynuyor, s }: SahneProps) {
       <path d={`M${p[0]} ${p[1]} q -5 -4 -9 0 t -9 0`} fill="none" stroke={MAVI} strokeWidth={1.4} transform={etkin === 0 || (etkin === 3 && p[0] >= 284) || etkin < 0 ? `rotate(-90 ${p[0]} ${p[1]})` : undefined} />
       <ellipse cx={p[0]} cy={p[1]} rx={4.5} ry={3.4} fill={MAVI} />
       <text x={170} y={222} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {etkin < 0 ? "Sperm testiste üretildi; nereye gidiyor?" : u >= 1 ? "Sperm testisten üretraya ulaştı" : SPERM[etkin].not}
+        {etkin < 0 ? "Sperm testiste üretildi. Nereye gidiyor?" : u >= 1 ? "Sperm testisten üretraya ulaştı" : SPERM[etkin].not}
       </text>
     </svg>
   );
@@ -248,7 +248,7 @@ function Mayoz({ v, t, oynuyor, s }: SahneProps) {
         {u <= 0
           ? "Oynat ve bölünmeyi izle"
           : u < 1
-            ? kadin ? "Sitoplazma eşit bölünmüyor; besin büyük hücrede kalıyor" : "Sitoplazma eşit bölünüyor"
+            ? kadin ? "Sitoplazma eşit bölünmüyor. Besin büyük hücrede kalıyor" : "Sitoplazma eşit bölünüyor"
             : kadin ? "1 oosit → 1 yumurta + 3 kutup hücresi" : "1 spermatosit → 4 sperm"}
       </text>
       {kadin && u >= 1 && <text x={170} y={36} fontSize={10} fill="var(--muted)" textAnchor="middle">Mayoz II yalnızca sperm girince tamamlanır</text>}
@@ -344,7 +344,7 @@ function Hcg({ v, t, oynuyor, s }: SahneProps) {
   zp.push(`${X(son)},178`);
   const sari = e ? 1 : 1 - sinir((son - 25) / 4);
   const durum =
-    u <= 0 ? "Ovulasyon oldu; oynat ve izle" :
+    u <= 0 ? "Ovulasyon oldu. Oynat ve izle" :
     e ? (son < 21 ? "Sarı cisim progesteron salgılıyor" : son < 26 ? "Embriyo yerleşti ve hCG salgılıyor" : "hCG sarı cismi yaşatıyor; kanama yok")
       : (son < 25 ? "Sarı cisim progesteron salgılıyor" : son < 29 ? "Döllenme yok: sarı cisim köreliyor" : "Progesteron düştü, iç zar döküldü");
   return (
@@ -553,7 +553,7 @@ function Akis({ v }: SahneProps) {
 /* ---------- dağılım tipleri ---------- */
 
 const DAGILIM = [
-  { ad: "Kümeli dağılım", neden: "Kaynak öbek öbek; sürü ya da aile hâlinde yaşam" },
+  { ad: "Kümeli dağılım", neden: "Kaynak öbek öbek. Sürü ya da aile hâlinde yaşam" },
   { ad: "Düzenli dağılım", neden: "Bölge savunması ya da kaynak rekabeti" },
   { ad: "Rastgele dağılım", neden: "Kaynak her yerde eşit, etkileşim zayıf" },
 ];
@@ -750,7 +750,7 @@ function AvAvci({ t, oynuyor, s }: SahneProps) {
   const durum =
     u <= 0 ? "Oynat ve iki popülasyonu izle" :
     u >= 1 ? "Avcının tepesi her döngüde avınkinden sonra geliyor" :
-    evre < 2.5 ? "Av çoğalıyor; avcının besini artıyor" :
+    evre < 2.5 ? "Av çoğalıyor. Avcının besini artıyor" :
     evre < 5 ? "Avcı çoğaldıkça av azalmaya başladı" :
     evre < 7.5 ? "Av azaldı; besini azalan avcı da azalıyor" : "Avcı azalınca av yeniden çoğalıyor";
   const tepeler = [2.5, 12.5].filter((y) => y <= son);
@@ -807,7 +807,7 @@ function Gause({ v, t, oynuyor, s }: SahneProps) {
   const durum =
     u <= 0 ? (ayni ? "İki tür aynı kapta, aynı besinle" : "İki tür ayrı kaplarda, aynı besinle") :
     !ayni ? (u < 1 ? "İkisi de çoğalıyor" : "Ayrı kaplarda ikisi de çoğaldı ve dengelendi") :
-    son < 6 ? "İkisi de çoğalıyor; besin azalıyor" : u < 1 ? "Besini paylaşamayan P. caudatum azalıyor" : "P. caudatum yok oldu, P. aurelia kaldı";
+    son < 6 ? "İkisi de çoğalıyor. Besin azalıyor" : u < 1 ? "Besini paylaşamayan P. caudatum azalıyor" : "P. caudatum yok oldu, P. aurelia kaldı";
   return (
     <svg viewBox="0 0 340 228" role="img" aria-label={ayni ? "Aynı kapta P. aurelia çoğalır, P. caudatum yok olur" : "Ayrı kaplarda iki Paramecium türü de çoğalır"}>
       <g fontSize={10.5} fontWeight={700}>

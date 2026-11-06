@@ -12,7 +12,7 @@ export default function Page() {
       <Govde className="text-[15px] leading-relaxed">
         <Bolum title="ucler">
           <p>ucler, konuları kısa kartlar, etkileşimli adımlar, testler ve videolarla anlatan bir öğrenme uygulamasıdır. Hesap açmadan da kullanılabilir.</p>
-          <p>İçerik (metinler, görseller, videolar) ucler&apos;indir. Kendi çalışman için kullanabilirsin; izin almadan kopyalayıp yayımlayamaz ya da satamazsın.</p>
+          <p>İçerik (metinler, görseller, videolar) ucler&apos;indir. Kendi çalışman için kullanabilirsin. İzin almadan kopyalayıp yayımlayamaz ya da satamazsın.</p>
         </Bolum>
         <Bolum title="Ücretsiz ve Plus">
           <p>Her dersin ilk konusu, videolar, oyunlar, ünite ve seviye testleri ücretsizdir. Öteki konular ucler Plus aboneliğiyle açılır.</p>
@@ -24,7 +24,7 @@ export default function Page() {
             Ödemeler ve abonelikler bölümünü kullan. İptal edersen Plus, ödediğin dönemin sonuna kadar açık kalır.
           </p>
           <p>İade istekleri Apple ya da Google&apos;ın kendi kurallarına göre, onların üzerinden yapılır. Hesabını silmek aboneliği iptal etmez.</p>
-          <p>Fiyat değişirse mağaza seni önceden bilgilendirir; yeni fiyat ancak senin onayınla ya da mağazanın kurallarına göre uygulanır.</p>
+          <p>Fiyat değişirse mağaza seni önceden bilgilendirir. Yeni fiyat ancak senin onayınla ya da mağazanın kurallarına göre uygulanır.</p>
         </Bolum>
         <Bolum title="Değişiklikler ve iletişim">
           <p>Konular ve özellikler zamanla eklenir, değişebilir. Bu koşullar değişirse bu sayfada yazılır.</p>

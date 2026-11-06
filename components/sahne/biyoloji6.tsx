@@ -537,7 +537,7 @@ function Foto({ s, t, oynuyor }: SahneProps) {
   const ux = GX + 58 * egil, uy = ALT - H + 18 * egil;
   const gov = `M${GX} ${ALT} Q${GX} ${ALT - H * 0.6} ${ux} ${uy}`;
   return (
-    <svg viewBox="0 0 340 250" role="img" aria-label={u >= 1 ? "Oksin gölge yüzde birikti; gölge yüzü uzadı, fide ışığa eğildi" : "Işık sağdan geliyor; oksin fidenin ucunda"}>
+    <svg viewBox="0 0 340 250" role="img" aria-label={u >= 1 ? "Oksin gölge yüzde birikti; gölge yüzü uzadı, fide ışığa eğildi" : "Işık sağdan geliyor. Oksin fidenin ucunda"}>
       <g>
         <circle cx={306} cy={60} r={16} fill="var(--c4)" />
         {[0, 1, 2].map((k) => <line key={k} x1={284} y1={56 + k * 14} x2={244} y2={50 + k * 22} stroke="var(--c4)" strokeWidth={2} strokeDasharray="5 5" />)}
@@ -575,7 +575,7 @@ function Cimlenme({ v }: SahneProps) {
   const eksik = [!su && "su", !o2 && "oksijen", !sicak && "uygun sıcaklık"].filter(Boolean).join(", ");
   const CX = 170, ZY = 168;
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label={ok ? "Tohum çimlendi" : `Tohum çimlenmedi; eksik: ${eksik}`}>
+    <svg viewBox="0 0 340 240" role="img" aria-label={ok ? "Tohum çimlendi" : `Tohum çimlenmedi. Eksik: ${eksik}`}>
       <rect x={60} y={ZY} width={220} height={44} rx={8} fill={su ? "#b08a63" : "#d9c4a8"} />
       {isik && <g><circle cx={300} cy={36} r={14} fill="var(--c4)" /><text x={300} y={66} fontSize={11} fontWeight={700} fill="#b47f0c" textAnchor="middle">ışık</text></g>}
       <g key={String(ok)} className="ad-belir">

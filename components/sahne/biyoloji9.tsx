@@ -576,7 +576,7 @@ export const BIYOLOJI9: Record<string, SahneKaydi> = {
   "biy9-insulin": {
     C: Insulin,
     geri: (v) =>
-      (v.ins ?? 0) === 1 ? null : { baslik: "Şeker düşmedi", metin: "İnsülin olmadan hücreler glikozu alamıyor; şeker kanda birikiyor. Tip 1 diyabette olan budur. İnsülini aç ve yeniden oynat." },
+      (v.ins ?? 0) === 1 ? null : { baslik: "Şeker düşmedi", metin: "İnsülin olmadan hücreler glikozu alamıyor. Şeker kanda birikiyor. Tip 1 diyabette olan budur. İnsülini aç ve yeniden oynat." },
   },
   "biy9-pankreas": { C: Pankreas },
   "biy9-tiroit": { C: Tiroit },

@@ -247,10 +247,10 @@ const nanoGeri = (v: Record<string, number>) => {
   const k = Math.round(sinir(v.k ?? 0, 0, 6));
   return { baslik: `Toplam yüzey ${yuzeyYazi(k)}`, metin: "Kenar her 10'a bölündüğünde toplam yüzey 10 kat artar. 60 m² = 600 000 cm² = 6 × 10⁵ cm²." };
 };
-const filmGeri = (v: Record<string, number>) => ({ baslik: `Film ${filmDurum(sinir(v.g ?? 0, 0, 60))}`, metin: "Gliserol az olursa zincirler sıkı kalır, film kırılır; çok olursa film yumuşar ve yapışır." });
+const filmGeri = (v: Record<string, number>) => ({ baslik: `Film ${filmDurum(sinir(v.g ?? 0, 0, 60))}`, metin: "Gliserol az olursa zincirler sıkı kalır, film kırılır. Çok olursa film yumuşar ve yapışır." });
 const hidrojenGeri = (v: Record<string, number>) => {
   const pH = sinir(v.pH ?? 7, 4, 8), T = sinir(v.T ?? 25, 20, 60);
-  return { baslik: "Bakteriler daha iyi çalışabilir", metin: pH > 6 ? "Ortam fazla bazik ya da nötr; biraz asitleştir." : pH < 5 ? "Ortam fazla asidik; bakteriler yavaşlar." : T > 38 ? "Sıcaklık fazla; bu bakteriler vücut sıcaklığına yakın sever." : "Sıcaklık düşük; biraz ısıt." };
+  return { baslik: "Bakteriler daha iyi çalışabilir", metin: pH > 6 ? "Ortam fazla bazik ya da nötr. Biraz asitleştir." : pH < 5 ? "Ortam fazla asidik. Bakteriler yavaşlar." : T > 38 ? "Sıcaklık fazla. Bu bakteriler vücut sıcaklığına yakın sever." : "Sıcaklık düşük. Biraz ısıt." };
 };
 
 export const KIMYA14: Record<string, SahneKaydi> = {

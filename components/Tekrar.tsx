@@ -177,7 +177,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
         <h2 className="text-[22px]">{karisik ? "Karışık test bitti" : "Bugünkü tekrar bitti"}</h2>
         <p className="font-medium text-muted-foreground">
           {karisik
-            ? n - right ? `Yanlış yaptığın ${n - right} soru tekrar sırana eklendi; yarın yeniden gelecek.` : "Hepsi doğru."
+            ? n - right ? `Yanlış yaptığın ${n - right} soru tekrar sırana eklendi. Yarın yeniden gelecek.` : "Hepsi doğru."
             : sonucMetni(n - right, right - ogrenilen, ogrenilen)}
         </p>
         <div className="mt-4 grid w-full gap-2">

@@ -488,7 +488,7 @@ export const FIZIK8: Record<string, SahneKaydi> = {
   },
   "fiz8-asansor": {
     C: Asansor,
-    geri: () => ({ baslik: "Tartı hâlâ 588 N", metin: "Halat sağlamken asansör duruyor; tartı ağırlığını gösteriyor. Halatı kes ve yeniden oynat." }),
+    geri: () => ({ baslik: "Tartı hâlâ 588 N", metin: "Halat sağlamken asansör duruyor. Tartı ağırlığını gösteriyor. Halatı kes ve yeniden oynat." }),
   },
   "fiz8-surtunme": { C: Surtunme },
   "fiz8-dokunma": {

@@ -72,7 +72,7 @@ function HizToplama({ v, t, oynuyor, s }: SahneProps) {
 }
 const hizGeri = (v: Record<string, number>) => {
   const vt = v.v ?? 10;
-  return { baslik: `Top yere göre ${vt + 20} m/s`, metin: `Top trene göre hep 20 m/s; yere göre hızı ${vt} + 20 oldu. 50 m/s için tren kaç m/s gitmeli?` };
+  return { baslik: `Top yere göre ${vt + 20} m/s`, metin: `Top trene göre hep 20 m/s. Yere göre hızı ${vt} + 20 oldu. 50 m/s için tren kaç m/s gitmeli?` };
 };
 
 // Işık hızı: 0,5c ile Dünya'ya yaklaşan gemi farını yakar. Işık 90 px/s, gemi 45 px/s.
@@ -226,7 +226,7 @@ function Muon({ t, oynuyor, s }: SahneProps) {
     </g>
   );
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label="Zaman genişlemesi olmasaydı müon 660 m'de bozunurdu; gerçekte yere ulaşıyor">
+    <svg viewBox="0 0 340 236" role="img" aria-label="Zaman genişlemesi olmasaydı müon 660 m'de bozunurdu. Gerçekte yere ulaşıyor">
       <text x={14} y={20} fontSize={13} fontWeight={800} fill={bitti ? "var(--c2)" : "var(--ink)"}>{bitti ? "Müon yere ulaştı: ömrü ≈ 10 kat uzadı" : zt > 0 ? "Müonlar iniyor…" : "6,6 km'de bir müon doğdu"}</text>
       <text x={14} y={38} fontSize={11.5} fontWeight={700} fill="var(--muted)">0,995c · durgun ömür 2,2 μs</text>
       {/* yükseklik ekseni */}

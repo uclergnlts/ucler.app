@@ -73,9 +73,9 @@ KURALLAR = [
     (r",\s*(?:ve|veya|ya\s+da|ile)\s", "Bağlaçtan önce virgül (ve / veya / ya da)", "Virgülü sil.", "GÖZ AT", I),
     (r",\s*(?:ama|fakat|lakin)\s", "Bağlaçtan önce virgül (ama / fakat)", "Virgülsüz daha doğal: 'Hızlı ama pahalı.' Yeni yazarken uy; eski metni toplu düzeltmeye gerek yok.", "ÜSLUP", I),
     (r"\b(?:birşey|herşey|hiçbirşey|yada|bir\s+çok\b|bir\s+kaç\b|pekçok|ard\s+arda|artarda|yanısıra|işbirliği|farketm\w*|farkettir\w*|terketm\w*|halbu\s+ki|oysa\s+ki|madem\s+ki|hiç\s+bir\b|her\s+hangi|herhangibir|yanyana|içiçe|başbaşa|kayıt\s+etm\w*|red\s+etm\w*|keşif\s+etm\w*)", "TDK yazım hatası", "birçok, birkaç, pek çok, art arda, yanı sıra, iş birliği, fark etmek, hiçbir, herhangi bir, ya da, bir şey, her şey...", "KESİN", I),
-    (r"(?<![\d.])(?:[01]?\d|2[0-3]):[0-5]\d(?![\d:])", "Saatte iki nokta (12:00)", "TDK: 12.00, 21.30.", "GÖZ AT", 0),
+    (r"(?<![\d.])(?:[01]?\d|2[0-3]):[0-5]\d(?![\d:])(?![^.]*\boran)", "Saatte iki nokta (12:00)", "TDK: 12.00, 21.30.", "GÖZ AT", 0),
     (r"%\s?\d+\.\d+|(?<![\d.\w])\d+\.(?!\d{3}(?!\d))\d+\s?(?:°C|K|m/s|kg|g|mol|L|mL|cm|mm|km|N|J|W|V|A|Ω|Pa|atm|eV|Hz|s\b|%)", "Ondalıkta nokta (9.8)", "Türkçede ondalık virgülle yazılır: 9,8 m/s².", "KESİN", 0),
-    (r"%\s\d", "Yüzde işaretinden sonra boşluk", "%25 (bitişik).", "GÖZ AT", 0),
+    (r"(?<![\w)\]\s])%\s\d|^%\s\d|(?<=[\s(])%\s\d(?!\d*\])", "Yüzde işaretinden sonra boşluk", "%25 (bitişik).", "GÖZ AT", 0),
     # 5. Sohbet artığı
     (r"\belbette[!,]|\bharika\s+(?:bir\s+)?soru|\bumarım\s+(?:bu|işine|faydalı)|\bbaşka\s+bir\s+(?:sorun|değişiklik)\s+(?:olursa|isterseniz)", "Sohbet artığı", "Sil.", "KESİN", I),
 ]
@@ -88,7 +88,7 @@ def duz(html):
     s = re.sub(r"<svg.*?</svg>", " ", html or "", flags=re.S)
     s = re.sub(r"<br\s*/?>", " ", s)
     s = re.sub(r"<[^>]+>", "", s)
-    s = s.replace("&nbsp;", " ").replace("&amp;", "&")
+    s = s.replace("&nbsp;", " ").replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">").replace("&quot;", '"').replace("&apos;", "'").replace("&#39;", "'")
     return re.sub(r"\s+", " ", s).strip()
 
 TR = re.compile(r"[A-Za-zÇĞİÖŞÜçğıöşü]{2,}\s+[A-Za-zÇĞİÖŞÜçğıöşü]{2,}")
@@ -171,6 +171,8 @@ def tara_metin(m):
         if seri == 3: out.append(("GÖZ AT", "Art arda 3 cümle aynı ekle bitiyor", b, "Birini geniş zamana çevir ya da cümleleri birleştir."))
     if ";" in m and not re.search(r"[a-zçğıöşü]\s*;\s*[a-zçğıöşü0-9]+\s*$", m):
         for e in re.finditer(r"[^;.!?]{12,};\s*[^;.!?]{12,}", m):
+            once = m[:e.start() + e.group(0).index(";")]
+            if once.count("(") > once.count(")"): continue
             out.append(("GÖZ AT", "Noktalı virgülle bağlanmış iki cümle", e.group(0)[:90], "İki ayrı cümle yaz."))
     return out
 

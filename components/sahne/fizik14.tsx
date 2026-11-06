@@ -279,7 +279,7 @@ function Isinim({ t, oynuyor, s }: SahneProps) {
       <text x={x + w / 2} y={ay} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{ad}</text>
     </g>
   );
-  const baslik = zt === 0 ? "Kaynak α, β⁻ ve γ saçıyor" : bitti ? "β⁻ en çok saptı; γ hiç sapmadı" : "Işımalar elektrik alandan geçiyor…";
+  const baslik = zt === 0 ? "Kaynak α, β⁻ ve γ saçıyor" : bitti ? "β⁻ en çok saptı. γ hiç sapmadı" : "Işımalar elektrik alandan geçiyor…";
   return (
     <svg viewBox="0 0 340 230" role="img" aria-label={bitti ? "Alfa negatif plakaya az, beta eksi pozitif plakaya çok saptı, gama sapmadı; alfa kâğıtta, beta alüminyumda durdu, gama kurşunda zayıfladı" : "Radyoaktif kaynak, elektrik alan ve üç engel"}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={bitti ? "var(--c3)" : "var(--ink)"}>{baslik}</text>

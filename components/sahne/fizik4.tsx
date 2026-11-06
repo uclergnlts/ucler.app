@@ -207,7 +207,7 @@ function EtkiTepki({ t, oynuyor }: SahneProps) {
         <text x={xB - 8} y={Y + 38} fill="var(--c2)">30 kg</text>
       </g>
       <text x={170} y={30} fontSize={12.5} fontWeight={700} textAnchor="middle" fill={bitti ? "var(--good)" : "var(--muted)"}>
-        {bitti ? "Kuvvetler eşitti; hafif olan iki kat hızlı" : itiyor ? "İtiyorsun: ikinize de 60 N" : oyn ? "İtme bitti, kayıyorsunuz" : "İkisi de duruyor"}
+        {bitti ? "Kuvvetler eşitti. Hafif olan iki kat hızlı" : itiyor ? "İtiyorsun: ikinize de 60 N" : oyn ? "İtme bitti, kayıyorsunuz" : "İkisi de duruyor"}
       </text>
     </svg>
   );
@@ -396,6 +396,6 @@ export const FIZIK4: Record<string, SahneKaydi> = {
   },
   "fiz4-egik": {
     C: Egik,
-    geri: (v, s) => ({ baslik: "Daha uzağa gidebilir", metin: `Menzil ${say(ucus(v.a ?? Number(s.aci ?? 45)).R)} m. Başka bir açı dene; en uzağa gideni bul.` }),
+    geri: (v, s) => ({ baslik: "Daha uzağa gidebilir", metin: `Menzil ${say(ucus(v.a ?? Number(s.aci ?? 45)).R)} m. Başka bir açı dene. En uzağa gideni bul.` }),
   },
 };

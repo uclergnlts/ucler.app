@@ -63,7 +63,7 @@ export default function Giris() {
 
   const baslik = mod === "kayit" ? "Hesap aç" : mod === "giris" ? "Giriş yap" : "Şifreni yenile";
   const metin = mod === "kayit"
-    ? "Hesabın olunca ilerlemen, puanın ve serin kaybolmaz; telefonunu değiştirsen de kaldığın yerden devam edersin."
+    ? "Hesabın olunca ilerlemen, puanın ve serin kaybolmaz. Telefonunu değiştirsen de kaldığın yerden devam edersin."
     : mod === "giris" ? "Hesabına gir, ilerlemen bu cihaza gelsin." : "Hesabının e-posta adresini yaz, yenileme bağlantısı gönderelim.";
   return (
     <div className="app">

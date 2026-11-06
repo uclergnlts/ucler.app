@@ -281,7 +281,7 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
         </AnimatePresence>
         {alt}
       </Govde>
-      <KayitSayfasi acik={davet} setAcik={setDavet} donus="/gunun-sorusu/" baslik="Puanını kaydet" aciklama="Ücretsiz hesap aç; yarından itibaren günün sorusu puanların haftalık lige eklensin." />
+      <KayitSayfasi acik={davet} setAcik={setDavet} donus="/gunun-sorusu/" baslik="Puanını kaydet" aciklama="Ücretsiz hesap aç. Yarından itibaren günün sorusu puanların haftalık lige eklensin." />
     </div>
   );
 }

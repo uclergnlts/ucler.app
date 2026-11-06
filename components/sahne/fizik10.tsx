@@ -243,7 +243,7 @@ function Oersted({ v }: SahneProps) {
   const i = (v.i ?? 0) === 1, giren = (v.y ?? 0) === 1, cx = 170, cy = 128;
   const yon = giren ? 1 : -1; // −1: saat yönünün tersi (ekranda)
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={!i ? "Akım yok: pusulalar kuzeyi gösteriyor" : `Akım ${giren ? "ekrana giriyor; alan saat yönünde" : "ekrandan çıkıyor; alan saat yönünün tersine"} dönüyor`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={!i ? "Akım yok: pusulalar kuzeyi gösteriyor" : `Akım ${giren ? "ekrana giriyor; alan saat yönünde" : "ekrandan çıkıyor. Alan saat yönünün tersine"} dönüyor`}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill={i ? "var(--c5)" : "var(--muted)"}>{!i ? "Akım yok: pusulalar kuzeyi gösteriyor" : giren ? "⊗ akım ekrana giriyor: alan saat yönünde" : "⊙ akım sana doğru: alan saat yönünün tersine"}</text>
       {i && (
         <g>

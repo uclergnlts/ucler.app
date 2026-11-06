@@ -134,7 +134,7 @@ function KonuPencere({ ders, list, e, sira }: { ders: DersId; list: Entry[]; e: 
       {ac && odemeli ? (
         <>
           <p className="flex items-start gap-2.5 rounded-xl bg-secondary p-3 text-[15px] [&_svg]:mt-0.5 [&_svg]:size-4 [&_svg]:flex-none [&_svg]:text-[var(--c1)]">
-            <Yildiz /><span>Bu konu <b>ucler Plus</b>&apos;ta. Her dersin ilk konusu ücretsiz; Plus ile bütün konular açılır.</span>
+            <Yildiz /><span>Bu konu <b>ucler Plus</b>&apos;ta. Her dersin ilk konusu ücretsiz. Plus ile bütün konular açılır.</span>
           </p>
           <Button asChild variant="hesap" className="mt-1 w-full"><Link href={href(ders, e.id)}>Plus ile aç</Link></Button>
         </>

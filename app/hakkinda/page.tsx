@@ -22,7 +22,7 @@ export default function Page() {
             <li>Her konu birkaç aşamadan oluşur. Kartları oku, aradaki küçük görevleri çöz.</li>
             <li>Konunun sonunda 4 soruluk mini test var. Konuyu biliyorsan teste doğrudan da geçebilirsin.</li>
             <li>Yanlış yaptığın sorular tekrar sırana girer ve birkaç gün arayla yeniden sorulur. Ana sayfada &quot;Tekrar zamanı&quot; olarak görünür.</li>
-            <li>Anlamadığın kartı sağ üstteki ? simgesiyle işaretle; Profil&apos;deki Anlamadıklarım ekranında listelenir.</li>
+            <li>Anlamadığın kartı sağ üstteki ? simgesiyle işaretle. Kart, Profil&apos;deki Anlamadıklarım ekranında listelenir.</li>
           </ol>
         </Bolum>
         <Bolum title="İletişim">

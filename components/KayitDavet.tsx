@@ -27,7 +27,7 @@ export default function KayitDavet({ donus }: { donus: string }) {
       setAcik={setAcik}
       donus={donus}
       baslik="İlerlemeni kaybetme"
-      aciklama="Ücretsiz hesap aç; bitirdiğin aşamalar, puanın ve serin her cihazda seninle olsun."
+      aciklama="Ücretsiz hesap aç. Bitirdiğin aşamalar, puanın ve serin her cihazda seninle olsun."
     />
   );
 }
@@ -52,7 +52,7 @@ export function useKaydet(key: string, donus: string) {
       setAcik={setAcik}
       donus={donus}
       baslik="Kaydetmek için hesap aç"
-      aciklama="Ücretsiz hesap aç; bu konu Kaydedilenler'e eklensin, ilerlemen her cihazda seninle olsun."
+      aciklama="Ücretsiz hesap aç. Bu konu Kaydedilenler'e eklensin, ilerlemen her cihazda seninle olsun."
     />
   );
   return { saved, kaydet, davet };

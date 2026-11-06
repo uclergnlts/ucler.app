@@ -138,7 +138,7 @@ function Yuzey({ v }: SahneProps) {
         <text x={204} y={184} fontSize={13} fontWeight={800} fill="var(--ink)">hâlâ nişasta</text>
       </g>
       <text x={170} y={212} fontSize={12.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {n === 1 ? "Tek parça lokma: enzim yalnızca dış yüzeye değer" : `Yüzey ${n} katına çıktı; enzimin değdiği yer arttı`}
+        {n === 1 ? "Tek parça lokma: enzim yalnızca dış yüzeye değer" : `Yüzey ${n} katına çıktı. Enzimin değdiği yer arttı`}
       </text>
     </svg>
   );
@@ -858,7 +858,7 @@ export const BIYOLOJI11: Record<string, SahneKaydi> = {
     C: Kapak,
     geri: (v) =>
       (v.k ?? 0) !== 1
-        ? { baslik: "Kan geri kaçtı", metin: "Karıncık kasılınca ikili kapakçık kapanmadı; kanın yarısı kulakçığa döndü. Kapakçıkları onar ve yeniden oynat." }
+        ? { baslik: "Kan geri kaçtı", metin: "Karıncık kasılınca ikili kapakçık kapanmadı. Kanın yarısı kulakçığa döndü. Kapakçıkları onar ve yeniden oynat." }
         : null,
   },
   "biy11-nabiz": { C: Nabiz },

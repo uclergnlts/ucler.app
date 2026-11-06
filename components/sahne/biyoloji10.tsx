@@ -606,7 +606,7 @@ export const BIYOLOJI10: Record<string, SahneKaydi> = {
     C: Kalsiyum,
     geri: (v) =>
       (v.ca ?? 0) !== 1
-        ? { baslik: "Kas kasılmadı", metin: "Ca²⁺ salınmadan aktindeki bağlanma yerleri kapalı kalır; miyozin tutunamaz. Ca²⁺'u aç ve yeniden oynat." }
+        ? { baslik: "Kas kasılmadı", metin: "Ca²⁺ salınmadan aktindeki bağlanma yerleri kapalı kalır. Miyozin tutunamaz. Ca²⁺'u aç ve yeniden oynat." }
         : (v.atp ?? 0) !== 1
           ? { baslik: "Kas kasılmadı", metin: "Miyozin başları aktini ATP'nin enerjisiyle çeker. ATP'yi aç ve yeniden oynat." }
           : null,

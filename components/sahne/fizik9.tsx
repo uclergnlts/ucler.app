@@ -245,7 +245,7 @@ function IkiAmpul({ v, s }: SahneProps) {
 function YanlisAmper({ t, oynuyor, s }: SahneProps) {
   const sure = Number(s.sure ?? 3), u = ilerleme(t, oynuyor, sure), bagli = u > 0.3;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={bagli ? "Ampermetre lambaya paralel bağlandı: kısa devre, lamba söndü" : "Lamba yanıyor; ampermetre lambaya paralel bağlanacak"}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={bagli ? "Ampermetre lambaya paralel bağlandı: kısa devre, lamba söndü" : "Lamba yanıyor. Ampermetre lambaya paralel bağlanacak"}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={bagli ? "var(--c2)" : "var(--ink)"}>{bagli ? "Kısa devre: lamba söndü" : "Ampermetre lambaya paralel bağlanıyor"}</text>
       <path d="M60 112 V62 H190 V104 M190 128 V182 H60 V128" fill="none" stroke="var(--ink)" strokeWidth={2.2} />
       <Pil x={60} y={120} />
