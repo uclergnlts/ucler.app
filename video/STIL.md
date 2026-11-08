@@ -71,3 +71,13 @@ Kurallar:
 - **WebGL kareleri:** Three.js ve PixiJS `preserveDrawingBuffer: true` ile kurulur, yoksa ekran görüntüsü boş çıkar.
 - **Manim kareleri** depoya konmaz (`.gitignore`). Sahne dosyası `.py` depodadır ve kareler `kareler.sh` ile yeniden üretilir.
 - **Örnek:** `video/ornek/kutuphaneler/scene.html` dört kütüphaneyi 24 saniyede gösterir: Manim ile hız-zaman grafiği, PixiJS ile ısınan gaz, Paper.js ile dalga boyu, Three.js ile su molekülü.
+
+## Yatay YouTube videoları (deneme, 2026-11-08)
+
+Üçler YouTube için ayrıca yatay, senaryolu ve konuşmasız videolar istedi. Kod `YT-nn`. İlk deneme: `kaynak/YT-01` ("Donan şişe", 60 sn).
+
+- **Kare:** 1920×1080, 30 fps. Zemin, renkler, kontur ve yazı tipleri dikey videolarla aynıdır. Altyazı şeridi ve ilerleme çubuğu yoktur.
+- **Konuşma ve yazı yok:** Hikâye karakterin hareketiyle, ses efektiyle ve müzikle anlatılır. Ekranda yalnız sayı, birim ve simge olur (20°C, 1,09 L, 0,92 g/cm³, ?, !). Böylece her dilde anlaşılır.
+- **Karakter:** `karakter/karakter.js`. Her yatay videoda aynı kişi oynar. Poz açılarla verilir; `pozAra` anahtar pozlar arasında geçiş yapar, `yuru` yürüme döngüsünü verir. Seçenekler `karakter/secenekler.html` sayfasındadır (A Çizgi, B Gölge, C Laborant). Seçim Üçler'dedir.
+- **Ses:** `kaynak/YT-01/ses.py` efektleri ve müziği koddan üretir (kayıt ve lisans sorunu yok). Gerekirse `public/ses/` içindeki MIT lisanslı earshot sesleri eklenir. Son kodlamada `loudnorm=I=-16` kullanılır.
+- **Çekim:** `SADE=1 GEN=1920 YUK=1080 node ../../sablon/shot.js frames 60`. `SADE=1` yazılım GPU bayraklarını kapatır; bu bayraklarla büyük yatay SVG sahnelerinde eski karenin parçaları görüntüye karışıyordu. Sonra `python3 ses.py` ve `ffmpeg -framerate 30 -i frames/f%05d.jpg -i ses.wav -af loudnorm=I=-16:TP=-1.5 -c:v libx264 -crf 18 -pix_fmt yuv420p -c:a aac -b:a 192k -shortest YT-01.mp4`.

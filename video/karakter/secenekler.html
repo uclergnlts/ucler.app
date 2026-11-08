@@ -1,0 +1,44 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#f6f8fb}
+#stage{position:relative;width:1920px;height:1080px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.ust{position:absolute;left:80px;right:80px;top:56px;display:flex;justify-content:space-between;font-family:Manrope;font-weight:800;font-size:40px}
+.ust b{color:#2f7cf6}
+.ad{position:absolute;top:900px;width:600px;text-align:center;font-family:Manrope;font-weight:800;font-size:44px}
+.not{position:absolute;top:962px;width:600px;text-align:center;font-size:24px;color:#5f6f88;font-weight:600}
+svg{position:absolute;left:0;top:0}
+</style></head><body>
+<div id="stage"><div class="grid"></div>
+<div class="ust"><div>Karakter seçenekleri</div><div>ucler<b>.</b></div></div>
+<div class="ad" style="left:40px">A · Çizgi</div><div class="not" style="left:40px">sarı kapüşonlu öğrenci</div>
+<div class="ad" style="left:660px">B · Gölge</div><div class="not" style="left:660px">dolu siluet, yalnız gözler</div>
+<div class="ad" style="left:1280px">C · Laborant</div><div class="not" style="left:1280px">önlük ve koruyucu gözlük</div>
+<svg id="s" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>
+</div>
+<script src="karakter.js"></script>
+<script>
+const pozlar = [
+  { kolO:[10,12], kolA:[-8,12], goz:'acik', kas:'duz', agiz:'gulus', yon:0 },
+  { kolO:[150,20], kolA:[140,30], goz:'iri', kas:'kalkik', agiz:'o', yon:1, egim:-8, zipla:14 },
+  { kolO:[40,130], kolA:[-6,14], goz:'kisik', kas:'soru', agiz:'duz', yon:-1, bas:-8 },
+];
+let svg = '';
+['A','B','C'].forEach((tip, i) => {
+  const ox = 40 + i * 620;
+  svg += `<line x1="${ox+20}" y1="840" x2="${ox+580}" y2="840" stroke="#c9d3e0" stroke-width="4" stroke-linecap="round"/>`;
+  pozlar.forEach((p, j) => {
+    const x = ox + 110 + j * 190;
+    svg += karakter(Object.assign({ tip, x, y: 836, olcek: j === 0 ? 1.12 : 0.92 }, p)).svg;
+  });
+  // düşünme balonu ve şaşkınlık işaretleri
+  svg += `<text x="${ox+330}" y="400" font-family="Manrope" font-weight="800" font-size="56" fill="#2f7cf6">!</text>`;
+  svg += `<text x="${ox+470}" y="420" font-family="Manrope" font-weight="800" font-size="50" fill="#9aa6b6">?</text>`;
+});
+document.getElementById('s').innerHTML = svg;
+window.render = () => {};
+</script>
+</body></html>
