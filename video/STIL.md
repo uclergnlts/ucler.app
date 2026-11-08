@@ -76,7 +76,8 @@ Kurallar:
 
 Üçler YouTube için ayrıca yatay, senaryolu ve konuşmasız videolar istedi. Kod `YT-nn`. İlk deneme: `kaynak/YT-01` ("Donan şişe", 60 sn).
 
-- **Kare:** 1920×1080, 30 fps. Zemin, renkler, kontur ve yazı tipleri dikey videolarla aynıdır. Altyazı şeridi ve ilerleme çubuğu yoktur.
+- **Kare:** 1920×1080, 30 fps. Altyazı şeridi ve ilerleme çubuğu yoktur.
+- **Sahneler dolu ve atmosferik olur (Üçler, 2026-11-08: "sahneler çok boş, çok basit").** Dikey videolardaki sade ızgara zemin burada kullanılmaz. Her sahne bir mekândır: gün batımı ya da gece göğü, pencereden şehir silueti ve yanan pencereler, eşyalı oda (raf, kitap, saksı, lamba, halı), sıcak ışık konusu ve kenar karartması. Gradyan ve yumuşak ışık burada serbesttir. Karakter ve nesneler yine lacivert konturlu düz çizimdir. Hazır parçalar `karakter/sahne-parcalari.js` dosyasında: `gok`, `sehir`, `pencere`, `oda`, `raf`, `saksi`, `lamba`, `kisManzara`, `kar`, `bokeh`, `isik`, `vinyet`, `golge`, `etiket`. Sayı ve birimler `etiket` ile beyaz kutuda yazılır, koyu zeminde de okunur.
 - **Konuşma ve yazı yok:** Hikâye karakterin hareketiyle, ses efektiyle ve müzikle anlatılır. Ekranda yalnız sayı, birim ve simge olur (20°C, 1,09 L, 0,92 g/cm³, ?, !). Böylece her dilde anlaşılır.
 - **Karakter:** `karakter/karakter.js`. Her yatay videoda aynı kişi oynar. Poz açılarla verilir; `pozAra` anahtar pozlar arasında geçiş yapar, `yuru` yürüme döngüsünü verir. Seçenekler `karakter/secenekler.html` sayfasındadır (A Çizgi, B Gölge, C Laborant). Seçim Üçler'dedir.
 - **Ses:** `kaynak/YT-01/ses.py` efektleri ve müziği koddan üretir (kayıt ve lisans sorunu yok). Gerekirse `public/ses/` içindeki MIT lisanslı earshot sesleri eklenir. Son kodlamada `loudnorm=I=-16` kullanılır.

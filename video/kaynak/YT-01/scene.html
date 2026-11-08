@@ -11,9 +11,12 @@ svg text{font-family:Manrope;font-weight:800}
 </style></head><body>
 <svg id="s" viewBox="0 0 1920 1080"></svg>
 <script src="../../karakter/karakter.js"></script>
+<script src="../../karakter/sahne-parcalari.js"></script>
 <script>
 const NAVY='#1d3557', MAVI='#2f7cf6', ACIK='#eaf2ff', SARI='#ffd95a', GRI='#9aa6b6', GRI2='#c9d3e0', ZEMIN='#f6f8fb', SU='#bcd8ff', BUZ='#e3f0ff', PEMBE='#e5466f';
 const SURE = 60;
+const S = window.sahne;
+
 const kl = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
 const ar = (t, a, b) => kl((t - a) / (b - a));            // 0..1 doğrusal
 const yu = (t, a, b) => { const u = ar(t, a, b); return u * u * (3 - 2 * u); };
@@ -29,7 +32,7 @@ function izgara(op = .55) {
   for (let y = 0; y <= 1080; y += 60) g += `<path d="M0 ${y}H1920"/>`;
   return g + '</g>';
 }
-function logo(op = 1) { return `<text x="1840" y="84" text-anchor="end" font-size="40" fill="${NAVY}" opacity="${op}">ucler<tspan fill="${MAVI}">.</tspan></text>`; }
+function logo(op = 1) { return `<text x="1840" y="84" text-anchor="end" font-size="40" fill="#fff" stroke="${NAVY}" stroke-opacity=".35" stroke-width="6" paint-order="stroke" opacity="${op}">ucler<tspan fill="${SARI}">.</tspan></text>`; }
 
 // şişe: x orta, y taban. dolu: su oranı. buz: 0..1 donma, kirik: 0..1 çatlak
 function sise(x, y, o = {}) {
@@ -56,7 +59,8 @@ function sise(x, y, o = {}) {
 // buzdolabı: kapak açıklığı 0..1
 function buzdolabi(t, acik, icerik) {
   const x0 = 1260, x1 = 1500, y0 = 410, ym = 590;
-  let g = `<rect x="${x0}" y="${y0}" width="${x1 - x0}" height="${Y - y0}" rx="16" fill="#fff" stroke="${NAVY}" stroke-width="5"/>`;
+  let g = S.golge(1380, Y, 150, .3) + `<rect x="${x0}" y="${y0}" width="${x1 - x0}" height="${Y - y0}" rx="16" fill="#eef3f8" stroke="${NAVY}" stroke-width="5"/>`;
+  g += `<rect x="${x1 - 40}" y="${y0 + 8}" width="30" height="${Y - y0 - 16}" rx="8" fill="#d5dfea"/>`;
   // dondurucu iç
   g += `<rect x="${x0 + 12}" y="${y0 + 12}" width="${x1 - x0 - 24}" height="${ym - y0 - 24}" rx="6" fill="${ACIK}"/>`;
   g += `<path d="M${x0 + 12} ${ym - 16} H${x1 - 12}" stroke="${GRI2}" stroke-width="4"/>`;
@@ -71,6 +75,10 @@ function buzdolabi(t, acik, icerik) {
   // alt kapı
   g += `<path d="M${x0} ${ym} H${x1}" stroke="${NAVY}" stroke-width="5"/>`;
   g += `<rect x="${x0 + 18}" y="${ym + 24}" width="10" height="70" rx="5" fill="${NAVY}"/>`;
+  // mıknatıslar, not kâğıdı, fotoğraf
+  g += `<g transform="rotate(-4 1330 680)"><rect x="1300" y="640" width="70" height="80" fill="#fff6b8"/><path d="M1312 664 h44 M1312 680 h36 M1312 696 h40" stroke="#c9b26a" stroke-width="4"/><circle cx="1335" cy="644" r="7" fill="#e5466f"/></g>`;
+  g += `<g transform="rotate(5 1420 720)"><rect x="1390" y="680" width="80" height="64" fill="#fff"/><rect x="1396" y="686" width="68" height="44" fill="#9fd3ff"/><path d="M1396 730 l20 -18 l14 10 l16 -16 l18 24 Z" fill="#5aa877"/><circle cx="1430" cy="684" r="7" fill="${MAVI}"/></g>`;
+  g += `<circle cx="1440" cy="820" r="12" fill="${SARI}" stroke="${NAVY}" stroke-width="3"/><rect x="1300" y="790" width="34" height="22" rx="5" fill="#6dbf8b" stroke="${NAVY}" stroke-width="3"/>`;
   return g;
 }
 
@@ -95,6 +103,7 @@ function termometre(x, y, derece, olcek = 1) { // derece: -20..30
   const h = 260, u = kl((derece + 20) / 50);
   const renk = derece > 0 ? PEMBE : MAVI;
   let g = `<g transform="translate(${x} ${y}) scale(${olcek})">`;
+  g += `<rect x="-46" y="${-h - 30}" width="${olcek < .6 ? 250 : 230}" height="${h + 96}" rx="26" fill="#fff" opacity=".9"/>`;
   g += `<rect x="-18" y="${-h}" width="36" height="${h}" rx="18" fill="#fff" stroke="${NAVY}" stroke-width="5"/>`;
   g += `<circle cx="0" cy="18" r="32" fill="${renk}" stroke="${NAVY}" stroke-width="5"/>`;
   g += `<rect x="-8" y="${-h * u * .92}" width="16" height="${h * u * .92 + 10}" fill="${renk}"/>`;
@@ -153,7 +162,7 @@ function molekul(x, y, aci, olcek = 1, op = 1) {
 // ---------- sahneler ----------
 // Mutfak (0-19.5 sn): soğuk açılış, geri sarma, akşam, gece, sabah
 function mutfak(t) {
-  let g = izgara();
+  let g = '';
   // saat ve pencere
   let dk, gece;
   if (t < 3) { dk = 7 * 60; gece = 0; }
@@ -161,11 +170,8 @@ function mutfak(t) {
   else if (t < 12.6) { dk = 22 * 60 + (t - 4.2) * 2; gece = 1; }
   else if (t < 15) { dk = lerp(22 * 60 + 17, 31 * 60, yu(t, 12.8, 14.8)); gece = t < 14.2 ? 1 : 0; }
   else { dk = 31 * 60 + (t - 15) * 2; gece = 0; }
-  g += pencere(gece) + saat(900, 250, dk);
-  g += `<path d="M0 ${Y} H1920" stroke="${GRI2}" stroke-width="5"/>`;
-  // tezgâh
-  g += `<rect x="1560" y="640" width="300" height="${Y - 640}" fill="#fff" stroke="${NAVY}" stroke-width="5"/><path d="M1540 640 H1880" stroke="${NAVY}" stroke-width="10" stroke-linecap="round"/>`;
-  g += `<path d="M1600 700 h220 M1600 780 h220" stroke="${GRI2}" stroke-width="4"/>`;
+  g += mutfakArka(t, gece);
+  g += saat(900, 250, dk);
 
   // dondurucu termometresi (gece boyunca düşer)
   let derece = 20;
@@ -223,7 +229,7 @@ function mutfak(t) {
 
   // şişe çizimi: rafta ya da elde
   let siseSvg = '', kisiSvg = '';
-  if (p) { const k = kisi(p); kisiSvg = k.svg; if (siseElde) siseSvg = sise(k.elO[0] + 6, k.elO[1] + 40, sis); }
+  if (p) { const k = kisi(p); kisiSvg = S.golge(p.x, Y, 60, .25) + k.svg; if (siseElde) siseSvg = sise(k.elO[0] + 6, k.elO[1] + 40, sis); }
   const rafta = !siseElde && t >= 3 ? true : t < 3;
   const icerik = rafta && sis ? sise(1380, 572, sis) : '';
   g += buzdolabi(t, kapak, icerik);
@@ -247,6 +253,38 @@ function mutfak(t) {
   return g;
 }
 
+function mutfakArka(t, gece) {
+  const pal = gece > .5 ? 'gece' : 'sabah';
+  let g = S.oda(pal);
+  // geniş pencere: şehir, ay ya da güneş
+  g += S.pencere(250, 120, 500, 400, pal, gece > .5 ? { yildiz: 40, ay: [640, 200, 34], t, tohum: 3, perdeRenk: '#b85c6e' } : { gunes: [380, 330, 38], bulut: 4, t, tohum: 3, perdeRenk: '#e58b8b' });
+  // sabah güneş huzmesi
+  if (gece < .5) g += `<path d="M260 140 L760 140 L1100 ${Y} L420 ${Y} Z" fill="#fff2c9" opacity=".22"/>`;
+  // duvar rafı (saat altında)
+  g += S.raf(810, 470, 360, 2, { t });
+  // üst dolaplar, fayans, tezgâh
+  g += `<rect x="1540" y="240" width="340" height="200" rx="8" fill="#c98f63"/><path d="M1710 250 V430" stroke="#8a5f40" stroke-width="5"/><circle cx="1690" cy="400" r="7" fill="#f3e7d9"/><circle cx="1730" cy="400" r="7" fill="#f3e7d9"/>`;
+  g += `<rect x="1540" y="440" width="340" height="200" fill="#e9eef5"/>`;
+  g += `<g stroke="#c9d3e0" stroke-width="3">`; for (let y = 480; y < 640; y += 40) g += `<path d="M1540 ${y} H1880"/>`; for (let x = 1580; x < 1880; x += 60) g += `<path d="M${x} 440 V640"/>`; g += '</g>';
+  g += `<rect x="1560" y="640" width="320" height="${Y - 640}" fill="#c98f63"/><path d="M1540 640 H1900" stroke="#f3e7d9" stroke-width="16" stroke-linecap="round"/>`;
+  g += `<rect x="1580" y="670" width="140" height="${Y - 690}" rx="6" fill="none" stroke="#8a5f40" stroke-width="4"/><rect x="1730" y="670" width="130" height="${Y - 690}" rx="6" fill="none" stroke="#8a5f40" stroke-width="4"/>`;
+  // tezgâh üstü: çaydanlık, kesme tahtası, saksı
+  g += `<g transform="translate(1640 632)"><path d="M-36 0 Q-40 -60 0 -62 Q40 -60 36 0 Z" fill="#e5466f" stroke="${NAVY}" stroke-width="4"/><path d="M36 -40 q24 -4 26 -24" stroke="${NAVY}" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M-20 -62 q20 -26 40 0" stroke="${NAVY}" stroke-width="5" fill="none"/></g>`;
+  g += `<rect x="1700" y="560" width="70" height="76" rx="10" fill="#e0b48a" stroke="#8a5f40" stroke-width="4" transform="rotate(8 1735 600)"/>`;
+  g += S.saksi(1830, 632, .55, '#4f9a6a', t);
+  // yemek masası (pencerenin önünde)
+  g += `<g opacity=".95"><rect x="320" y="720" width="380" height="20" rx="6" fill="#a0694a"/><path d="M350 740 V${Y} M670 740 V${Y}" stroke="#7a4f37" stroke-width="12"/>`;
+  g += `<path d="M300 ${Y} V640 q0 -20 20 -20 h0 V760 h80 V${Y}" fill="none" stroke="#7a4f37" stroke-width="10"/>`;
+  g += `<ellipse cx="560" cy="712" rx="56" ry="14" fill="#f3e7d9"/><circle cx="540" cy="700" r="16" fill="#f08a5d"/><circle cx="572" cy="698" r="15" fill="#f2c14e"/><circle cx="556" cy="688" r="13" fill="#6dbf8b"/>`;
+  g += `<rect x="430" y="684" width="34" height="36" rx="6" fill="#fff" stroke="${NAVY}" stroke-width="3"/></g>`;
+  // halı ve büyük saksı
+  g += `<ellipse cx="900" cy="${Y + 90}" rx="420" ry="46" fill="#b85c6e" opacity=".55"/><ellipse cx="900" cy="${Y + 90}" rx="380" ry="34" fill="none" stroke="#f3e7d9" stroke-width="4" opacity=".5"/>`;
+  g += S.saksi(150, Y + 6, 1.1, '#4f9a6a', t);
+  // gece lambası
+  g += S.lamba(560, 380, { acik: gece > .5 ? 1 : 0, yayilim: 320, taban: Y });
+  return g;
+}
+
 // Kamera: dünya noktası (cx, cy) ekran ortasına, s büyütme
 function kameraMutfak(t) {
   if (t < 3) return { s: lerp(1.45, 1.35, ar(t, 0, 3)), cx: 1250, cy: 560 };
@@ -259,14 +297,21 @@ function kameraMutfak(t) {
 
 // Mikro (19.8-34.6): sıvı su -> buz kafesi
 function mikro(t) {
-  let g = izgara();
+  const gid = S.yeniId('m');
+  let g = `<defs>${S.gradyan(gid, ['#0e2a5e', '#173f86', '#1f5aa8'])}</defs><rect width="1920" height="1080" fill="url(#${gid})"/>`;
+  // ışık huzmeleri ve süzülen kabarcıklar
+  for (let i = 0; i < 6; i++) { const x = 200 + i * 300 + Math.sin(t * .4 + i) * 40; g += `<path d="M${x} -20 L${x + 120} -20 L${x + 360} 1100 L${x + 160} 1100 Z" fill="#9cc8ff" opacity=".07"/>`; }
+  g += S.bokeh(t, 40, 21, '#bfe0ff', .22);
+  // camlı mercek paneli
+  g += S.isik(960, 520, 520, '#7fb6ff', .35, .7);
   const T = lerp(20, 0, yu(t, 21.2, 25.5)) + (t > 30 ? lerp(0, -18, yu(t, 30, 33)) : 0);
   g += termometre(250, 760, T, 1);
   const don = t < 25.5 ? 0 : 1;
   const genis = lerp(600, 654, yu(t, 26.6, 29.4)); // kutu genişler (yüzde 9)
   const { cx, cy, h } = KUTU;
   // kutu
-  g += `<rect x="${cx - genis / 2}" y="${cy - h / 2}" width="${genis}" height="${h}" rx="14" fill="#fff" stroke="${NAVY}" stroke-width="5"/>`;
+  g += `<rect x="${cx - genis / 2 - 14}" y="${cy - h / 2 - 14}" width="${genis + 28}" height="${h + 28}" rx="26" fill="#fff" opacity=".18"/>`;
+  g += `<rect x="${cx - genis / 2}" y="${cy - h / 2}" width="${genis}" height="${h}" rx="18" fill="#eef6ff" stroke="#fff" stroke-width="5"/>`;
   // hidrojen bağları
   const bagOp = yu(t, 27.6, 28.8);
   const kafesNokta = i => [cx + kafes[i][0] * KS * (genis / 654) * .62, cy + kafes[i][1] * KS * .62];
@@ -291,12 +336,12 @@ function mikro(t) {
   }
   // cetvel
   const cy2 = cy + h / 2 + 60;
-  g += `<path d="M${cx - 300} ${cy2} H${cx + 300}" stroke="${GRI}" stroke-width="5" stroke-linecap="round"/>`;
-  g += `<path d="M${cx - 300} ${cy2 - 14} v28 M${cx + 300} ${cy2 - 14} v28" stroke="${GRI}" stroke-width="5" stroke-linecap="round"/>`;
+  g += `<path d="M${cx - 300} ${cy2} H${cx + 300}" stroke="#cfe2ff" stroke-width="5" stroke-linecap="round"/>`;
+  g += `<path d="M${cx - 300} ${cy2 - 14} v28 M${cx + 300} ${cy2 - 14} v28" stroke="#cfe2ff" stroke-width="5" stroke-linecap="round"/>`;
   const ek = genis - 600;
   if (ek > 1) g += `<path d="M${cx + 300} ${cy2} H${cx - 300 + genis}" stroke="${PEMBE}" stroke-width="9" stroke-linecap="round"/>`;
   const yuzde = Math.round(100 + ek / 6);
-  g += `<text x="${cx}" y="${cy2 + 70}" text-anchor="middle" font-size="54" fill="${ek > 1 ? PEMBE : NAVY}">${yuzde}%</text>`;
+  g += S.etiket(cx, cy2 + 60, yuzde + '%', { hiza: 'orta', boyut: 50, renk: ek > 1 ? PEMBE : NAVY });
   // durum simgeleri: damla -> kar tanesi
   const ds = 1 - yu(t, 25.4, 25.9), ks = yu(t, 25.6, 26.1);
   g += `<g transform="translate(${cx} ${cy - h / 2 - 70})">`
@@ -304,6 +349,7 @@ function mikro(t) {
     + `<g stroke="${MAVI}" stroke-width="6" stroke-linecap="round" opacity="${ks}" transform="scale(${ks})"><path d="M0 -34V34M-29 -17L29 17M-29 17L29 -17"/><path d="M-8 -26 L0 -18 L8 -26 M-8 26 L0 18 L8 26" fill="none"/></g></g>`;
   // karakter: büyüteçle izler
   const tepki = t > 27 && t < 30.5;
+  g += S.isik(1640, 820, 260, '#ffe2a6', .45);
   const k = kisi({ x: 1640, y: 980, olcek: .72, yon: -1, kolO: [100, 30], goz: tepki ? 'iri' : 'acik', kas: tepki ? 'kalkik' : 'duz', agiz: tepki ? 'o' : 'yok', zipla: tepki ? Math.max(0, Math.sin((t - 27) * 7)) * 8 : 0 });
   g += k.svg;
   g += `<g transform="translate(${k.elO[0]} ${k.elO[1]})"><path d="M0 0 L-26 -26" stroke="${NAVY}" stroke-width="9" stroke-linecap="round"/><circle cx="-46" cy="-46" r="30" fill="${ACIK}" fill-opacity=".6" stroke="${NAVY}" stroke-width="6"/></g>`;
@@ -313,8 +359,16 @@ function mikro(t) {
 
 // Açıklama (34.6-41): ölçekli silindir, sonra şişe çatlar
 function aciklama(t) {
-  let g = izgara();
-  g += `<path d="M0 ${Y} H1920" stroke="${GRI2}" stroke-width="5"/>`;
+  let g = S.oda('alaca');
+  g += S.pencere(820, 110, 560, 330, 'alaca', { yildiz: 30, ay: [1290, 180, 26], t, tohum: 8, perde: false, cerceve: '#efe3d3' });
+  g += S.raf(1440, 300, 400, 5, { t }) + S.raf(1440, 470, 400, 6, { t });
+  // beyaz tahta
+  g += `<rect x="380" y="150" width="500" height="${Y - 150 - 40}" rx="12" fill="#fbfcfe" stroke="#cfd6e0" stroke-width="10"/><rect x="380" y="${Y - 50}" width="500" height="14" rx="4" fill="#9aa6b6"/>`;
+  g += `<path d="M420 200 q30 -20 60 0 t60 0" stroke="${MAVI}" stroke-width="4" fill="none" opacity=".35"/><text x="790" y="215" font-size="30" fill="#e5466f" opacity=".4">H₂O</text>`;
+  // masa (şişe masada)
+  g += `<rect x="960" y="${Y - 6}" width="520" height="22" rx="6" fill="#a0694a"/><path d="M990 ${Y + 16} V1080 M1450 ${Y + 16} V1080" stroke="#7a4f37" stroke-width="14"/>`;
+  g += S.lamba(1220, 520, { yayilim: 260, taban: Y, renk: '#4d8fd6' });
+  g += S.saksi(200, Y + 10, 1.2, '#4f9a6a', t);
   // dereceli silindir
   const x = 620, w = 150, top = 320;
   const don = yu(t, 35.6, 37.4);
@@ -327,7 +381,7 @@ function aciklama(t) {
   g += im(1, false);
   g += `<g opacity="${don}">${im(1.09, true)}</g>`;
   // simge: damla -> kar
-  g += `<g transform="translate(${x} 250)"><text text-anchor="middle" font-size="46" fill="${NAVY}">${don > .5 ? '−18°C' : '20°C'}</text></g>`;
+  g += `<g transform="translate(${x} 250)"><text text-anchor="middle" font-size="46" fill="${don > .5 ? MAVI : PEMBE}">${don > .5 ? '−18°C' : '20°C'}</text></g>`;
 
   // kapalı şişe: büyük
   const kir = yu(t, 38.4, 38.6);
@@ -343,17 +397,21 @@ function aciklama(t) {
     [38.7, { x: 1560, y: Y, yon: -1, kolO: [150, 30], kolA: [150, 30], goz: 'iri', kas: 'kalkik', agiz: 'o', zipla: 20 }],
     [39.2, { x: 1560, y: Y, yon: -1, kolO: [95, 0], goz: 'acik', kas: 'kalkik', agiz: 'gulus', zipla: 0 }],
   ], t, .3));
-  g += k.svg;
-  if (t > 39.2) g += ampul(1600, 330, yu(t, 39.2, 39.4));
+  g += S.golge(1560, Y, 60, .28) + k.svg;
+  if (t > 39.2) g += S.isik(1600, 300, 220, '#ffe08a', .5 * yu(t, 39.2, 39.4)) + ampul(1600, 330, yu(t, 39.2, 39.4));
   return g;
 }
 
 // Yüzen buz (41-47.5)
 function yuzen(t) {
-  let g = izgara();
-  g += `<path d="M0 ${Y} H1920" stroke="${GRI2}" stroke-width="5"/>`;
+  let g = S.oda('alaca');
+  g += S.pencere(420, 90, 1080, 520, 'alaca', { gunes: [1180, 470, 60], bulut: 5, t, tohum: 11, perdeRenk: '#d9708a' });
+  g += S.saksi(250, Y + 6, 1.3, '#4f9a6a', t) + S.saksi(1700, Y + 6, 1.0, '#5aa877', t);
+  g += S.lamba(1560, 300, { yayilim: 240, taban: Y, renk: '#f2c14e' });
+  g += S.bokeh(t, 18, 31, '#ffd9a6', .18);
   // masa
-  g += `<rect x="560" y="700" width="800" height="22" rx="8" fill="#fff" stroke="${NAVY}" stroke-width="5"/><path d="M620 722 V${Y} M1300 722 V${Y}" stroke="${NAVY}" stroke-width="10" stroke-linecap="round"/>`;
+  g += `<rect x="540" y="700" width="840" height="26" rx="8" fill="#a0694a"/><rect x="540" y="726" width="840" height="8" fill="#000" opacity=".15"/><path d="M600 734 V${Y} M1320 734 V${Y}" stroke="#7a4f37" stroke-width="16" stroke-linecap="round"/>`;
+  g += `<ellipse cx="960" cy="${Y + 60}" rx="560" ry="40" fill="#000" opacity=".12"/>`;
   // bardak
   const bx = 960, by = 700, bw = 220, bh = 300;
   const suY = by - 190;
@@ -372,8 +430,8 @@ function yuzen(t) {
   if (t > 43.3 && t < 44) { const u = ar(t, 43.3, 44); for (let i = 0; i < 5; i++) { const a = -Math.PI / 2 + (i - 2) * .45; g += `<circle cx="${bx - 10 + Math.cos(a) * 80 * u}" cy="${suY + Math.sin(a) * 110 * u + 140 * u * u}" r="${8 * (1 - u) + 2}" fill="${SU}" stroke="${NAVY}" stroke-width="3"/>`; } }
   // yoğunluk etiketleri
   const et = yu(t, 44.4, 45);
-  g += `<g opacity="${et}"><path d="M${bx + 60} ${cY - 20} L${bx + 230} ${cY - 110}" stroke="${GRI}" stroke-width="4"/><text x="${bx + 240}" y="${cY - 100}" font-size="44" fill="${NAVY}">0,92 <tspan font-size="30" fill="#5f6f88">g/cm³</tspan></text>`
-    + `<path d="M${bx - 60} ${by - 80} L${bx - 250} ${by - 20}" stroke="${GRI}" stroke-width="4"/><text x="${bx - 260}" y="${by - 4}" text-anchor="end" font-size="44" fill="${NAVY}">1,00 <tspan font-size="30" fill="#5f6f88">g/cm³</tspan></text></g>`;
+  g += `<g opacity="${et}"><path d="M${bx + 40} ${cY - 20} L${bx + 230} ${cY - 110}" stroke="#fff" stroke-width="4"/><path d="M${bx + 60} ${by - 80} L${bx + 250} ${by - 20}" stroke="#fff" stroke-width="4"/></g>`
+    + S.etiket(bx + 230, cY - 110, '0,92 g/cm³', { op: et, boyut: 38 }) + S.etiket(bx + 250, by - 20, '1,00 g/cm³', { op: et, boyut: 38 });
   // karakter: buzu bırakır
   const kp = pozAra([
     [41, { x: 760, y: 900, yon: 1, kolO: [150, 10], goz: 'acik', agiz: 'gulus' }],
@@ -383,6 +441,7 @@ function yuzen(t) {
     [46, { x: 760, y: 900, yon: 1, kolO: [120, 20], goz: 'acik', kas: 'kalkik', agiz: 'gulus' }],
   ], t, .35);
   const k = kisi(Object.assign(kp, { olcek: 1.05 }));
+  g += S.golge(kp.x, Y, 60, .28);
   // buz elde (42.8'e kadar): el konumuna bağla
   if (t < 42.8) {
     g = g.replace(/<g transform="translate\([^)]*\) rotate\([^)]*\)"><rect x="-42"[\s\S]*?<\/g>/, '');
@@ -393,14 +452,8 @@ function yuzen(t) {
 
 // Göl (47.5-54): buz üstte, balık altta; karakter buzda olta tutar
 function gol(t) {
-  let g = `<rect width="1920" height="1080" fill="${ZEMIN}"/>` + izgara(.35);
   const yuz = 470; // buz üst yüzeyi
-  // kıyılar
-  g += `<path d="M0 ${yuz} H180 Q300 ${yuz + 520} 960 ${yuz + 540} Q1620 ${yuz + 520} 1740 ${yuz} H1920 V1080 H0 Z" fill="#e7ddc9" stroke="${NAVY}" stroke-width="5"/>`;
-  // su
-  g += `<path d="M180 ${yuz} Q300 ${yuz + 520} 960 ${yuz + 540} Q1620 ${yuz + 520} 1740 ${yuz} Z" fill="${SU}"/>`;
-  // alt kat daha koyu (4 °C)
-  g += `<path d="M300 ${yuz + 330} Q960 ${yuz + 300} 1640 ${yuz + 330} Q1600 ${yuz + 520} 960 ${yuz + 536} Q330 ${yuz + 520} 300 ${yuz + 330} Z" fill="#9cc6ff" opacity=".7"/>`;
+  let g = golArka(t, yuz);
   // buz katmanı
   g += `<path d="M180 ${yuz} H1740 L1722 ${yuz + 56} H198 Z" fill="#cfe5ff" stroke="${NAVY}" stroke-width="5" stroke-linejoin="round"/>`;
   g += `<path d="M400 ${yuz + 18} l30 18 M900 ${yuz + 14} l40 20 M1400 ${yuz + 22} l26 14" stroke="#fff" stroke-width="6" stroke-linecap="round"/>`;
@@ -408,7 +461,7 @@ function gol(t) {
   g += `<ellipse cx="1060" cy="${yuz}" rx="44" ry="10" fill="${SU}" stroke="${NAVY}" stroke-width="4"/>`;
   // sıcaklık etiketleri
   const et = yu(t, 49.5, 50.2);
-  g += `<g opacity="${et}" font-family="Manrope"><text x="1500" y="${yuz + 120}" font-size="44" fill="${NAVY}">0°C</text><text x="1400" y="${yuz + 440}" font-size="44" fill="${NAVY}">4°C</text></g>`;
+  g += S.etiket(1480, yuz + 110, '0°C', { op: et, boyut: 40, renk: MAVI }) + S.etiket(1360, yuz + 430, '4°C', { op: et, boyut: 40, renk: MAVI });
   // balıklar
   const balik = (x, y, s, yon, renk) => `<g transform="translate(${x} ${y}) scale(${s * yon} ${s})"><path d="M-40 0 Q-10 -26 26 0 Q-10 26 -40 0 Z" fill="${renk}" stroke="${NAVY}" stroke-width="4" stroke-linejoin="round"/><path d="M-38 0 L-60 -16 L-60 16 Z" fill="${renk}" stroke="${NAVY}" stroke-width="4" stroke-linejoin="round"/><circle cx="12" cy="-4" r="4" fill="${NAVY}"/></g>`;
   const fx = 400 + ((t - 47.5) * 120) % 1300;
@@ -425,17 +478,31 @@ function gol(t) {
   const k = kisi({ x: 1262, y: yuz - 70 + 96, olcek: .95, yon: -1, egim: 6, kolO: [110, 30], kolA: [90, 40], bacakO: [80, 85], bacakA: [76, 85], goz: t > 50.5 && t < 51.4 ? 'kapali' : 'acik', agiz: 'gulus' });
   g += k.svg;
   g += `<path d="M${k.elO[0]} ${k.elO[1]} L1160 ${yuz - 230}" stroke="${NAVY}" stroke-width="6" stroke-linecap="round"/>`;
-  // kar taneleri
-  const R = rnd(3);
-  for (let i = 0; i < 26; i++) { const x0 = R() * 1920, hz = 40 + R() * 40; const yy = ((R() * 500 + t * hz) % 520) - 40; g += `<circle cx="${x0 + Math.sin(t + i) * 14}" cy="${yy}" r="${3 + R() * 3}" fill="#fff" stroke="${GRI2}" stroke-width="2"/>`; }
+  g += S.kar(t, 70, 3, yuz);
+  return g;
+}
+
+function golArka(t, yuz, kirmizi = 0) {
+  let g = S.kisManzara(yuz, t, 'alaca');
+  // karlı kıyı ve toprak kesiti
+  g += `<path d="M0 ${yuz - 10} H200 Q300 ${yuz + 520} 960 ${yuz + 540} Q1620 ${yuz + 520} 1720 ${yuz - 10} H1920 V1080 H0 Z" fill="#5a4366"/>`;
+  g += `<path d="M0 ${yuz - 14} H210 L196 ${yuz + 8} H0 Z M1710 ${yuz - 14} H1920 V${yuz + 8} H1724 Z" fill="#f2efff"/>`;
+  for (let i = 0; i < 18; i++) { const R = S.rnd(40 + i); g += `<ellipse cx="${R() * 1920}" cy="${yuz + 80 + R() * 520}" rx="${10 + R() * 26}" ry="${8 + R() * 14}" fill="#6e5580" opacity=".8"/>`; }
+  // su: derine indikçe koyulaşır
+  const gid = S.yeniId('su');
+  g += `<defs>${S.gradyan(gid, kirmizi ? ['#7fb0ec', '#3a4f9a', '#2a2a66'] : ['#a9d0ff', '#5d93e0', '#2f5fae'])}</defs>`;
+  g += `<path d="M190 ${yuz} Q300 ${yuz + 520} 960 ${yuz + 540} Q1620 ${yuz + 520} 1730 ${yuz} Z" fill="url(#${gid})"/>`;
+  for (let i = 0; i < 5; i++) { const x = 380 + i * 280 + Math.sin(t * .5 + i) * 30; g += `<path d="M${x} ${yuz + 50} L${x + 70} ${yuz + 50} L${x + 170} ${yuz + 480} L${x + 80} ${yuz + 480} Z" fill="#fff" opacity=".07"/>`; }
+  // dip: taşlar ve su bitkileri
+  [[520, 930], [760, 990], [1240, 985], [1440, 930]].forEach(([x, y], i) => g += `<ellipse cx="${x}" cy="${y}" rx="${50 + i * 8}" ry="26" fill="#4a5a86"/>`);
+  for (let i = 0; i < 9; i++) { const x = 420 + i * 125, y = 990 - Math.abs(i - 4) * 18, sal = Math.sin(t * 1.4 + i) * 14; g += `<path d="M${x} ${y} q${sal} -60 ${-sal * .3} -120 q${sal} -40 ${sal * .6} -70" stroke="#3f9c6d" stroke-width="9" fill="none" stroke-linecap="round" opacity=".85"/>`; }
   return g;
 }
 
 // Soru (54-58): buz batsaydı?
 function soruSahnesi(t) {
-  let g = `<rect width="1920" height="1080" fill="${ZEMIN}"/>` + izgara();
   const yuz = 470;
-  g += `<path d="M180 ${yuz} Q300 ${yuz + 520} 960 ${yuz + 540} Q1620 ${yuz + 520} 1740 ${yuz} Z" fill="${SU}" stroke="${NAVY}" stroke-width="5"/>`;
+  let g = golArka(t, yuz, 1);
   // buz parçası batar
   const u = yu(t, 54.4, 56);
   const by = lerp(yuz + 28, yuz + 470, u);
@@ -444,16 +511,16 @@ function soruSahnesi(t) {
   // şaşkın balık
   g += `<g transform="translate(760 ${yuz + 220}) scale(1.4)"><path d="M-40 0 Q-10 -26 26 0 Q-10 26 -40 0 Z" fill="${SARI}" stroke="${NAVY}" stroke-width="4"/><path d="M-38 0 L-60 -16 L-60 16 Z" fill="${SARI}" stroke="${NAVY}" stroke-width="4"/><circle cx="12" cy="-4" r="7" fill="#fff" stroke="${NAVY}" stroke-width="3"/><circle cx="13" cy="-4" r="3" fill="${NAVY}"/></g>`;
   g += isaret(960, 300, '?', yu(t, 56, 56.4), 3.2, PEMBE);
-  const k = kisi({ x: 1840, y: yuz, olcek: .8, yon: -1, kolO: [40, 130], kas: 'soru', agiz: 'duz' });
-  return g + k.svg;
+  const k = kisi({ x: 1820, y: yuz - 10, olcek: .8, yon: -1, kolO: [40, 130], kas: 'soru', agiz: 'duz' });
+  return g + S.kar(t, 50, 5, yuz) + k.svg;
 }
 
 function kapanis(t) {
-  let g = izgara();
+  let g = S.gok(0, 0, 1920, 1080, 'alaca', { yildiz: 60, t, tohum: 12, gunes: [1500, 820, 70] }) + S.sehir(0, 0, 1920, 1090, 'alaca', 6, t);
   const u = yu(t, 58, 58.4);
-  g += `<text x="960" y="600" text-anchor="middle" font-size="150" fill="${NAVY}" opacity="${u}">ucler<tspan fill="${MAVI}">.</tspan></text>`;
+  g += `<text x="960" y="560" text-anchor="middle" font-size="150" fill="#fff" opacity="${u}">ucler<tspan fill="${SARI}">.</tspan></text>`;
   const el = Math.sin((t - 58) * 9) * 20;
-  g += kisi({ x: 560, y: 760, olcek: .9, yon: 1, kolO: [160 + el, 20], goz: 'acik', agiz: 'gulus' }).svg;
+  g += S.isik(560, 620, 260, '#ffe2a6', .4) + kisi({ x: 560, y: 760, olcek: .9, yon: 1, kolO: [160 + el, 20], goz: 'acik', agiz: 'gulus' }).svg;
   return g;
 }
 
@@ -481,7 +548,7 @@ function render(t) {
   const eski = document.getElementById('s'), yeni = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   yeni.setAttribute('id', 's'); yeni.setAttribute('viewBox', '0 0 1920 1080');
   eski.replaceWith(yeni);
-  yeni.innerHTML = `<rect width="1920" height="1080" fill="${ZEMIN}"/>` + ic + (t < 58 ? logo(.9) : '')
+  yeni.innerHTML = `<rect width="1920" height="1080" fill="${ZEMIN}"/>` + ic + S.vinyet(.4) + (t < 58 ? logo(.9) : '')
 ;
 }
 window.render = render;
