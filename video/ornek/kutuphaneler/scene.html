@@ -1,0 +1,190 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;background:#f6f8fb;color:#1d3557;font-family:Inter,sans-serif;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#e6ecf3 1px,transparent 1px),linear-gradient(90deg,#e6ecf3 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.head{position:absolute;left:80px;right:80px;top:120px;display:flex;justify-content:space-between;align-items:center;font-family:Manrope;font-weight:800;font-size:30px;letter-spacing:3px}
+.head .sub{display:flex;align-items:center;gap:16px;color:var(--r)}
+.head .sub i{display:block;width:44px;height:6px;background:var(--r);border-radius:3px}
+.head .brand{letter-spacing:-0.5px;font-size:38px;color:#1d3557}
+.head .brand b{color:var(--r)}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;left:80px;right:80px;top:195px;font-family:Manrope;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.5px}
+em{font-style:normal;background:linear-gradient(transparent 62%,#ffd95a 62%)}
+.alan{position:absolute;left:0;width:1080px;top:520px;height:1000px}
+.alan canvas,.alan img{position:absolute;left:0;top:0;width:1080px;height:1000px}
+.not{position:absolute;left:80px;right:80px;top:1545px;text-align:center;font-size:32px;color:#5f6f88;font-weight:600}
+.kutu{position:absolute;left:80px;width:920px;top:1610px;height:110px;background:#fff;border:2px solid #dbe3ee;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:44px;box-shadow:0 8px 24px rgba(29,53,87,.08)}
+.prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
+.prog i{display:block;height:100%;width:0;background:var(--r);border-radius:3px}
+</style></head><body><div id="stage" data-no-timeline data-composition-id="kutuphaneler" data-start="0" data-duration="24" data-width="1080" data-height="1920" style="--r:#2f7cf6">
+<div class="grid"></div>
+<div class="head"><div class="sub"><i></i><span id="ders">FİZİK</span></div><div class="brand">ucler<b>.</b></div></div>
+
+<!-- 1. Manim: önceden çizilmiş saydam PNG kareleri -->
+<div class="scene" data-s="0" data-e="6">
+ <div class="title">Grafiğin altındaki<br><em>alan, yolu verir</em></div>
+ <div class="alan"><img id="manim" alt="" style="left:90px;width:900px;height:900px;top:60px"></div>
+ <div class="not">Manim · formül ve grafik</div>
+</div>
+
+<!-- 2. PixiJS: çok sayıda tanecik -->
+<div class="scene" data-s="6" data-e="12">
+ <div class="title">Gaz ısınınca<br><em>tanecikler hızlanır</em></div>
+ <div class="alan" id="pixi"></div>
+ <div class="not">PixiJS · yüzlerce hareketli tanecik</div>
+</div>
+
+<!-- 3. Paper.js: yumuşak eğriler -->
+<div class="scene" data-s="12" data-e="18">
+ <div class="title">Dalga boyu:<br><em>iki tepe arası</em></div>
+ <div class="alan"><canvas id="paper" width="1080" height="1000"></canvas></div>
+ <div class="not">Paper.js · yumuşak eğri ve vektör çizim</div>
+</div>
+
+<!-- 4. Three.js: 3B molekül, düz renk ve kontur -->
+<div class="scene" data-s="18" data-e="24.5">
+ <div class="title">Su molekülü<br><em>düz değil, bükük</em></div>
+ <div class="alan" id="three"></div>
+ <div class="not">Three.js · döndürülen 3B model</div>
+</div>
+
+<div class="kutu" id="kutu">Kütüphane denemesi</div>
+<div class="prog"><i id="bar"></i></div>
+</div>
+
+<script src="../../sablon/kopru.js"></script>
+<script src="../../node_modules/pixi.js/dist/pixi.min.js"></script>
+<script src="../../node_modules/paper/dist/paper-core.min.js"></script>
+<script type="importmap">{"imports":{"three":"../../node_modules/three/build/three.module.js","three/addons/":"../../node_modules/three/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+
+const DUR = 24;
+const LACIVERT = '#1d3557', SARI = '#ffd95a', GRI = '#9aa6b6';
+const ease = x => x < 0 ? 0 : x > 1 ? 1 : 1 - Math.pow(1 - x, 3);
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+// Ayna yansıması: kutu içinde gidip gelen konum (zamanın saf fonksiyonu, kare atlamaz)
+const yansit = (x, L) => { const m = ((x % (2 * L)) + 2 * L) % (2 * L); return m < L ? m : 2 * L - m; };
+// Tohumlu rastgele sayı: her çalıştırmada aynı tanecikler
+let tohum = 7; const rnd = () => { tohum = (tohum * 16807) % 2147483647; return tohum / 2147483647; };
+
+// ---------- 1. Manim kareleri ----------
+const MANIM_N = 172, img = document.getElementById('manim');
+const manimKare = i => `manim/m${String(clamp(i, 0, MANIM_N - 1)).padStart(4, '0')}.png`;
+// Kareleri önceden çöz: kare alınırken resim hazır olsun
+ucler.hazir(Promise.all(Array.from({ length: MANIM_N }, (_, i) => { const im = new Image(); im.src = manimKare(i); return im.decode().catch(() => {}); })));
+
+// ---------- 2. PixiJS ----------
+const pixi = new PIXI.Application();
+const W = 920, H = 860, X0 = 80, Y0 = 70, N = 260;
+const taneler = Array.from({ length: N }, () => ({ x: rnd() * W, y: rnd() * H, a: rnd() * Math.PI * 2, v: 60 + rnd() * 80 }));
+let noktalar = [], termo;
+ucler.hazir(pixi.init({ width: 1080, height: 1000, backgroundAlpha: 0, antialias: true, preserveDrawingBuffer: true, autoStart: false, resolution: 1 }).then(() => {
+  document.getElementById('pixi').appendChild(pixi.canvas);
+  const kap = new PIXI.Graphics().roundRect(X0 - 14, Y0 - 14, W + 28, H + 28, 24).fill({ color: 0xffffff }).stroke({ color: 0x1d3557, width: 5 });
+  pixi.stage.addChild(kap);
+  const doku = pixi.renderer.generateTexture(new PIXI.Graphics().circle(0, 0, 11).fill({ color: 0x2f7cf6 }).stroke({ color: 0x1d3557, width: 3 }));
+  noktalar = taneler.map(() => { const s = new PIXI.Sprite(doku); s.anchor.set(0.5); pixi.stage.addChild(s); return s; });
+  termo = new PIXI.Graphics(); pixi.stage.addChild(termo);
+}));
+function pixiCiz(t) {
+  const k = clamp(t / 6, 0, 1);              // 0 → 1: ısıtma
+  const yol = t + 1.6 * t * t / 2 / 6;        // hız (1 + 1,6·k) ile alınan yol: ∫ v dt
+  taneler.forEach((p, i) => {
+    noktalar[i].x = X0 + yansit(p.x + Math.cos(p.a) * p.v * yol, W);
+    noktalar[i].y = Y0 + yansit(p.y + Math.sin(p.a) * p.v * yol, H);
+  });
+  termo.clear().roundRect(X0 + W - 70, Y0 + 30, 40, 300, 20).fill({ color: 0xf6f8fb }).stroke({ color: 0x1d3557, width: 4 })
+    .roundRect(X0 + W - 62, Y0 + 38 + 284 * (1 - (0.25 + 0.75 * k)), 24, 284 * (0.25 + 0.75 * k), 12).fill({ color: 0xd63c63 });
+  pixi.renderer.render(pixi.stage);
+}
+
+// ---------- 3. Paper.js ----------
+const pc = document.getElementById('paper');
+paper.setup(pc); paper.view.autoUpdate = false;
+const P = paper;
+const eksen = new P.Path.Line({ from: [80, 500], to: [1000, 500], strokeColor: '#c9d3e0', strokeWidth: 3, dashArray: [10, 12] });
+const dalga = new P.Path({ strokeColor: '#2f7cf6', strokeWidth: 8, strokeCap: 'round' });
+const ok = new P.Group();
+const yazi = new P.PointText({ point: [540, 250], justification: 'center', fontFamily: 'Manrope', fontWeight: 800, fontSize: 48, fillColor: LACIVERT, content: 'λ' });
+const LAM = 460, A = 170;
+function paperCiz(t) {
+  const u = t - 12, uz = clamp(ease(u / 2.5), 0, 1), kay = u * 140;
+  dalga.removeSegments();
+  const son = 80 + 920 * uz;
+  for (let x = 80; x <= son; x += 20) dalga.add(new P.Point(x, 500 - A * Math.sin((x - 80 - kay) / LAM * 2 * Math.PI)));
+  dalga.smooth({ type: 'continuous' });
+  // Tepeler: sin = 1 olan yerler
+  ok.removeChildren();
+  const k = ease((u - 2.8) / 0.6);
+  if (k > 0) {
+    let x1 = 80 + kay + LAM / 4; while (x1 > 80 + LAM) x1 -= LAM; while (x1 < 80) x1 += LAM;
+    const x2 = x1 + LAM, y = 500 - A - 60;
+    ok.addChild(new P.Path.Line({ from: [x1, y], to: [x2, y], strokeColor: '#d63c63', strokeWidth: 6 }));
+    [x1, x2].forEach(x => { ok.addChild(new P.Path.Line({ from: [x, y - 22], to: [x, y + 22], strokeColor: '#d63c63', strokeWidth: 6 }));
+      ok.addChild(new P.Path.Circle({ center: [x, 500 - A], radius: 14, fillColor: SARI, strokeColor: LACIVERT, strokeWidth: 4 })); });
+    yazi.point = new P.Point((x1 + x2) / 2, y - 40);
+    ok.opacity = k;
+  }
+  yazi.opacity = k;
+  paper.view.update();
+}
+
+// ---------- 4. Three.js ----------
+const r3 = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+r3.setPixelRatio(1); r3.setSize(1080, 1000);
+document.getElementById('three').appendChild(r3.domElement);
+const sahne = new THREE.Scene();
+const kam = new THREE.PerspectiveCamera(32, 1080 / 1000, 1, 100); kam.position.set(0, 0.4, 15); kam.lookAt(0, 0, 0);
+const mol = new THREE.Group(); sahne.add(mol);
+// Düz renk + ters yüzlü lacivert kontur: sitedeki çizgi grafik stiline uyar (gölge, ışık, gradyan yok)
+function top(r, renk, p) {
+  const g = new THREE.SphereGeometry(r, 48, 32);
+  const m = new THREE.Mesh(g, new THREE.MeshBasicMaterial({ color: renk }));
+  const kontur = new THREE.Mesh(g, new THREE.MeshBasicMaterial({ color: LACIVERT, side: THREE.BackSide }));
+  kontur.scale.setScalar(1 + 0.09 / r);
+  const t = new THREE.Group(); t.add(m, kontur); t.position.copy(p); mol.add(t);
+}
+function bag(a, b) {
+  const d = b.clone().sub(a), g = new THREE.CylinderGeometry(0.16, 0.16, d.length(), 24);
+  const m = new THREE.Mesh(g, new THREE.MeshBasicMaterial({ color: GRI }));
+  m.position.copy(a.clone().add(b).multiplyScalar(0.5)); m.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), d.normalize()); mol.add(m);
+}
+const aci = 104.5 / 2 * Math.PI / 180, L3 = 2.9;
+const O = new THREE.Vector3(0, 1.2, 0), H1 = new THREE.Vector3(-L3 * Math.sin(aci), 1.2 - L3 * Math.cos(aci), 0), H2 = new THREE.Vector3(L3 * Math.sin(aci), 1.2 - L3 * Math.cos(aci), 0);
+bag(O, H1); bag(O, H2);
+top(1.0, '#d63c63', O); top(0.62, '#ffffff', H1); top(0.62, '#ffffff', H2);
+const aciYazi = document.createElement('div');
+aciYazi.style.cssText = 'position:absolute;left:0;right:0;top:830px;text-align:center;font-family:Manrope;font-weight:800;font-size:64px;color:#1d3557;opacity:0';
+aciYazi.innerHTML = '<em>104,5°</em>'; document.getElementById('three').appendChild(aciYazi);
+ucler.hazir(r3.compileAsync(sahne, kam));
+function threeCiz(t) {
+  const u = t - 18;
+  mol.rotation.y = 0.9 * Math.sin(u * 0.9);   // ±50°: bükük şekil hep görünür kalır
+  mol.rotation.x = 0.25 * Math.sin(u * 0.6);
+  aciYazi.style.opacity = ease((u - 2.5) / 0.5);
+  r3.render(sahne, kam);
+}
+
+// ---------- ortak ----------
+const KUTU = [[0, 'Manim'], [6, 'PixiJS'], [12, 'Paper.js'], [18, 'Three.js']];
+window.render = function (t) {
+  document.querySelectorAll('.scene').forEach(s => {
+    const a = +s.dataset.s, e = +s.dataset.e;
+    s.style.opacity = a === 0 ? Math.min(1, 1 - ease((t - e + 0.4) / 0.4)) : Math.min(ease((t - a) / 0.4), 1 - ease((t - e + 0.4) / 0.4));
+  });
+  document.getElementById('kutu').textContent = KUTU.filter(k => k[0] <= t + 0.001).pop()[1];
+  document.getElementById('bar').style.width = Math.min(100, t / DUR * 100) + '%';
+  let bekle = null;
+  if (t < 6.2) { img.src = manimKare(Math.round(t * 30)); bekle = img.decode().catch(() => {}); }
+  if (t >= 5.6 && t < 12.2) pixiCiz(t - 6 < 0 ? 0 : t - 6);
+  if (t >= 11.6 && t < 18.2) paperCiz(Math.max(t, 12));
+  if (t >= 17.6) threeCiz(Math.max(t, 18));
+  return bekle;
+};
+window.hazirOl().then(() => render(0));
+</script></body></html>

@@ -1,0 +1,15 @@
+{
+  "name": "ucler-video",
+  "private": true,
+  "description": "Video üretim araçları. Sitenin paketinden ayrıdır; siteye ve uygulamaya hiçbir şey eklemez.",
+  "scripts": {
+    "hf-render": "hyperframes render",
+    "hf-preview": "hyperframes preview"
+  },
+  "devDependencies": {
+    "hyperframes": "0.8.193",
+    "paper": "0.16.0",
+    "pixi.js": "8.22.0",
+    "three": "0.186.1"
+  }
+}

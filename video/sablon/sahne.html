@@ -24,7 +24,8 @@ svg text{font-family:Inter;font-weight:600}
 .prog{position:absolute;left:80px;width:920px;top:1755px;height:6px;background:#e1e7ef;border-radius:3px}
 .prog i{display:block;height:100%;width:0;background:#d63c63;border-radius:3px}
 [data-in]{opacity:0}
-</style></head><body><div id="stage"><div class="grid"></div>
+</style></head><body><!-- data-* öznitelikleri HyperFrames içindir (sablon/hf-render.sh); data-duration videonun süresi (sn). -->
+<div id="stage" data-composition-id="video" data-no-timeline data-start="0" data-duration="60" data-width="1080" data-height="1920"><div class="grid"></div>
 <div class="head"><div class="sub"><i></i>KİMYA</div><div class="brand">ucler<b>.</b></div></div>
 
 <!-- 1. Bağdat -->
@@ -148,9 +149,13 @@ svg text{font-family:Inter;font-weight:600}
  <div class="q"><small>DÜŞÜN</small>Hiç gerçekleşmeyen bir hayal, bilime nasıl bu kadar çok şey <em>kazandırmış</em> olabilir?</div>
 </div>
 
+<!-- HyperFrames ile tek adımda sesli MP4 için seslendirmeyi buraya bağla (shot.js yolunda gerekmez):
+<audio src="ses.mp3" data-start="0" data-duration="60" data-track-index="1" data-volume="1"></audio> -->
 <div class="cap" id="cap"></div>
 <div class="prog"><i id="bar"></i></div>
 </div>
+<!-- Köprü: kopyada href gibi bu da ../../sablon/kopru.js olur. Kütüphane kullanımı: STIL.md "Animasyon kütüphaneleri". -->
+<script src="kopru.js"></script>
 <script>
 const S = 1.08;              // ses 1,08 kat hızlandırıldı (64,8 sn -> 60 sn)
 const DUR = 64.76;           // asıl ses süresi

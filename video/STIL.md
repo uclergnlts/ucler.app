@@ -50,3 +50,24 @@ Konuya gerçekten uyuyorsa ilk kare, tanıdık bir meme kalıbıyla açılabilir
 ## Dil
 
 Seslendirme metni `docs/DOGAL-TURKCE.md` kurallarına uyar. Klişe, sahneleme girişi ("Bu videoda ... öğreneceğiz"), "Öte yandan" gibi dolgu ve noktalı virgülle bağlanmış cümle olmaz. Yazdıktan sonra `npm run dogal-turkce` çalıştır, rapordaki "Video seslendirme" bölümüne bak.
+
+## Animasyon kütüphaneleri (2026-11-08)
+
+Temel araç değişmedi: her video yine `sahne.html` kopyası ve SVG çizimdir. Aşağıdaki kütüphaneler yalnız SVG'nin zorlandığı sahnelerde, o sahne için kullanılır. Stil kuralları aynen geçerlidir: açık zemin, lacivert kontur, ders rengi ve sarı vurgu. Gölge, ışık, gradyan ve parıltı yoktur. Videoyu taşıyan senaryodur, kütüphane değil. Gösteriş için 3B ya da parçacık eklenmez.
+
+| Kütüphane | Ne zaman | Nasıl |
+|---|---|---|
+| **Manim** (Python) | Grafik, eksen, formül dönüşümü, alanın dolması, vektör toplama: fizikte ve kimya hesaplarında. | `video/manim/` içinde sahne yazılır, `kareler.sh` saydam PNG karelerine çevirir, `scene.html` bu kareleri `<img>` ile oynatır. |
+| **PixiJS** | Yüzlerce tanecik: gaz basıncı, difüzyon, ısı, tepkime hızı, kan hücreleri. SVG bu sayıda öğede yavaşlar. | `pixi.min.js`, `autoStart: false`; her karede `renderer.render(stage)`. |
+| **Paper.js** | Yumuşak eğri ve şekil: dalga, alan çizgileri, hücre zarı, organel kıvrımları, şekil kesişimi. | `paper-core.min.js`, `view.autoUpdate = false`; her karede yol yeniden kurulur, sonra `view.update()`. |
+| **Three.js** | Uzaydaki şeklin kendisi konuysa: molekül geometrisi, kristal kafes, DNA sarmalı, manyetik alan. | Düz renk (`MeshBasicMaterial`) ve ters yüzlü lacivert kontur. Işık ve gölge yoktur. Model en çok ±50° sallanır, tam dönmez. |
+| **HyperFrames** (HeyGen, Apache-2.0) | Sahneyi kare klasörü ve ayrı ffmpeg adımı olmadan doğrudan sesli MP4'e çevirmek. | `bash video/sablon/hf-render.sh kaynak/<KOD>`; ses `<audio>` etiketiyle bağlanır. |
+
+Kurallar:
+- **Kurulum:** `cd video && npm install` (Node 22+, ffmpeg). Bu paket sitenin paketinden ayrıdır, uygulamaya bir şey eklemez. Manim için `pip install manim` yeterlidir (Mac'te önce `brew install pango pkg-config`). LaTeX gerekmez, formüller `Text` ile ve `video/manim/fonts` içindeki Manrope ve Inter ile yazılır.
+- **Her kare zamanın fonksiyonudur.** `render(t)` yalnız `t`'ye bakarak çizer. `requestAnimationFrame`, zamanlayıcı ve önceki kareden süren durum kullanılmaz. Rastgelelik tohumlu olur. Hareket hesaplanır: örneğin kutudaki tanecik `yansıt(x0 + v·t)` ile bulunur, adım adım ilerletilmez.
+- **Köprü:** Kütüphane kullanan sahne `../../sablon/kopru.js` dosyasını yükler. Kurulum işleri `ucler.hazir(promise)` ile kaydedilir. `render(t)` resim çözme gibi bir bekleme varsa Promise döndürür. Böylece hem `shot.js` hem HyperFrames kareyi hazır olunca alır.
+- **Dosya yolları:** Kütüphaneler `../../node_modules/...` yolundan yüklenir. Three.js modül olduğundan sahne `file://` ile açılmaz. `shot.js` artık sahneyi küçük bir yerel sunucudan açar, eski videolar da aynı komutla çalışır.
+- **WebGL kareleri:** Three.js ve PixiJS `preserveDrawingBuffer: true` ile kurulur, yoksa ekran görüntüsü boş çıkar.
+- **Manim kareleri** depoya konmaz (`.gitignore`). Sahne dosyası `.py` depodadır ve kareler `kareler.sh` ile yeniden üretilir.
+- **Örnek:** `video/ornek/kutuphaneler/scene.html` dört kütüphaneyi 24 saniyede gösterir: Manim ile hız-zaman grafiği, PixiJS ile ısınan gaz, Paper.js ile dalga boyu, Three.js ile su molekülü.

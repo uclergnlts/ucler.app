@@ -7,7 +7,11 @@ Videolar dikey 9:16 (1080×1920) ve 1-3 dakikadır (ilk 10 kimya videosu 45-60 s
 - `sablon/sahne.html`: **Onaylı video şablonu** (KIM-01, Üçler 2026-10-16: "tüm videoları bu şekilde yapacağız"). Yeni video için `kaynak/<KOD>/scene.html` olarak kopyalanır; yerleşim, yazı tipleri, altyazı ve hareket motoru aynen kalır, yalnızca sahneler, başlıklar, ders adı/rengi ve konuşma zamanları (`PH`, `S`, `DUR`) değişir. Kopyada yazı tipi bağlantısı `href="../../sablon/fonts-local.css"` olarak değiştirilir; böylece sahne kendi klasöründen açıldığında da Manrope ve Inter yüklenir.
 - `kaynak/<KOD>/scene.html`: Her videonun kendi sahne dosyası.
 - `sablon/style.html`: "Sade bilgi grafiği" stilinin örnek kareleri. Manrope + Inter, ızgaralı açık zemin, sabit altyazı şeridi (y 1405-1515), altında ilerleme çubuğu, kapanışta "DÜŞÜN" kartı. Ders vurgu rengi kimya için #d63c63, sarı vurgu #ffd95a.
-- `sablon/shot.js`: Kare kare görüntü alma aracı.
+- `sablon/shot.js`: Kare kare görüntü alma aracı. Sahneyi yerel bir sunucudan açar.
+- `sablon/kopru.js`: Sahneyi `shot.js` ve HyperFrames ile çalıştıran köprü.
+- `sablon/hf-render.sh`: HyperFrames ile doğrudan MP4.
+- `manim/`: Manim stil dosyası (`ucler_stil.py`), yazı tipleri, örnek sahne ve kare üretme betiği (`kareler.sh`).
+- `package.json`: Video araçları (HyperFrames, Three.js, PixiJS, Paper.js). Sitenin paketinden ayrıdır.
 - `ornek/KIM-01-ornek-kareler.png`: Onaylanan stilin örneği.
 
 ## Senaryo kalıbı
@@ -27,10 +31,14 @@ Videolar dikey 9:16 (1080×1920) ve 1-3 dakikadır (ilk 10 kimya videosu 45-60 s
 1. Üçler mp3 ve srt dosyasını gönderir.
 2. Cümle zamanları sessizliklerden çıkarılır: `ffmpeg -i ses.mp3 -af silencedetect=n=-35dB:d=0.25 -f null -`
 3. Sahne dosyası (`scene.html`) `window.render(t)` fonksiyonunu dışa açar ve t saniyedeki kareyi çizer.
-4. Kareler alınır: `mkdir frames && NODE_PATH=$(npm root -g) node shot.js frames <saniye>` (kontrol için tek kareler: `node shot.js stills 1,10,30`).
+4. Kareler sahne klasöründe alınır: `mkdir frames && NODE_PATH=$(npm root -g) node ../../sablon/shot.js frames <saniye>` (kontrol için tek kareler: `node ../../sablon/shot.js stills 1,10,30`).
 5. Kareler sesle birleştirilir: `ffmpeg -framerate 30 -i frames/f%05d.jpg -i ses.mp3 -c:v libx264 -crf 20 -pix_fmt yuv420p -c:a aac -shortest -movflags +faststart cikti.mp4`
 
 Ses ve video dosyaları depoya konmaz, çünkü çok büyükler.
+
+**Kısa yol (HyperFrames):** Sahne `kopru.js` dosyasını yüklüyorsa ve sesi `<audio>` ile bağlıysa 4. ve 5. adımların yerine `bash video/sablon/hf-render.sh kaynak/<KOD>` tek komutla sesli MP4 üretir. Bir kez `cd video && npm install` gerekir.
+
+**Animasyon kütüphaneleri:** Manim, PixiJS, Paper.js, Three.js ve HyperFrames'in ne zaman ve nasıl kullanılacağı `STIL.md` içindeki "Animasyon kütüphaneleri" bölümündedir.
 
 ## Siteye ekleme
 Biten video video deposuna yüklenir ve `content/videolar.json` dosyasına konu ve kart numarasıyla yazılır. Ayrıntı: `docs/VIDEOLAR.md`.
