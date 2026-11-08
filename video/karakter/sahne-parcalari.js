@@ -78,12 +78,13 @@
     const P = PALET[palet] || palet, Y = o.zemin || 900;
     const g1 = yeniId('d'), g2 = yeniId('z');
     let s = `<defs>${gradyan(g1, P.duvar)}${gradyan(g2, P.zemin)}</defs>`;
-    s += `<rect width="1920" height="${Y}" fill="url(#${g1})"/>`;
+    // kamera yakınlaştığında kenar boş kalmasın diye oda ekranın dışına taşar
+    s += `<rect x="-960" width="3840" height="${Y}" fill="url(#${g1})"/>`;
     // duvar kâğıdı deseni
-    s += `<g opacity=".08" stroke="#fff" stroke-width="2">`; for (let x = 40; x < 1920; x += 80) s += `<path d="M${x} 0 V${Y}"/>`; s += '</g>';
-    s += `<rect y="${Y}" width="1920" height="${1080 - Y}" fill="url(#${g2})"/>`;
+    s += `<g opacity=".08" stroke="#fff" stroke-width="2">`; for (let x = -920; x < 2880; x += 80) s += `<path d="M${x} 0 V${Y}"/>`; s += '</g>';
+    s += `<rect x="-960" y="${Y}" width="3840" height="${1080 - Y + 200}" fill="url(#${g2})"/>`;
     s += `<g stroke="#000" stroke-opacity=".12" stroke-width="3">`; for (let x = -200; x < 2100; x += 150) s += `<path d="M${x} ${Y} L${960 + (x - 960) * 1.6} 1080"/>`; s += '</g>';
-    s += `<rect y="${Y - 26}" width="1920" height="26" fill="#000" opacity=".15"/>`;
+    s += `<rect x="-960" y="${Y - 26}" width="3840" height="26" fill="#000" opacity=".15"/>`;
     return s;
   }
 

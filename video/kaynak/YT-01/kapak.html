@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- YouTube kapağı (1280x720). Çekim: SADE=1 GEN=1280 YUK=720 OLCEK=1 node ../../sablon/shot.js stills 0 kapak.html -->
+<link rel="stylesheet" href="../../sablon/fonts-local.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1280px;height:720px;overflow:hidden;background:#000}
+iframe{position:absolute;left:10px;top:-200px;width:1920px;height:1080px;border:0;transform:scale(.97);transform-origin:0 0}
+.kat{position:absolute;inset:0;background:linear-gradient(90deg,rgba(29,20,60,.85) 0%,rgba(29,20,60,.6) 30%,rgba(29,20,60,0) 50%)}
+.yazi{position:absolute;left:56px;top:150px;font-family:Manrope;font-weight:800;font-size:150px;line-height:.95;letter-spacing:-4px;color:#fff;text-shadow:0 6px 0 rgba(0,0,0,.25)}
+.yazi b{color:#ffd95a;font-weight:800}
+.alt{position:absolute;left:62px;top:470px;font-family:Manrope;font-weight:800;font-size:58px;color:#fff;background:#e5466f;padding:6px 22px;border-radius:14px}
+.cer{position:absolute;inset:0;border:10px solid #ffd95a;border-radius:22px}
+</style></head><body>
+<iframe id="f" src="scene.html"></iframe>
+<div class="kat"></div>
+<div class="yazi">ICE<br><b>WON.</b></div>
+<div class="alt">−18°C → +9%</div>
+<div class="cer"></div>
+<script>
+window.hazirOl = () => new Promise(r => { const f = document.getElementById('f'); const dene = () => (f.contentWindow && f.contentWindow.render) ? (f.contentWindow.document.fonts.ready.then(r)) : setTimeout(dene, 50); dene(); });
+window.render = () => document.getElementById('f').contentWindow.render(18.1);
+</script>
+</body></html>
