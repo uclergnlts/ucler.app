@@ -70,11 +70,14 @@ MUSIC = [
  ("o01", "mystery", 0.45), ("n01", "calm", 0.4), ("n08", "tension", 0.55), ("m01", "playful", 0.5), ("x01", "wonder", 0.6),
  ("f01", "playful", 0.55), ("l01", "calm", 0.5), ("w01", "dark", 0.6), ("w06", "hopeful", 0.55), ("p01", "action", 0.6), ("e01", "triumph", 0.6),
 ]
+SC = json.load(open(os.path.join(D, "scales.json"))) if os.path.exists(os.path.join(D, "scales.json")) else {}   # narration fit (story/narration.py)
 shots, t, starts = [], 0.0, {}
 for (sid, d, note, tr, sfx, amb) in T:
+    k = SC.get(sid, 1.0); d = round(d * k, 3); sfx = [(a * k, n, gg, x) for (a, n, gg, x) in sfx]
     s = {"id": sid, "start": round(t, 3), "end": round(t + d, 3), "line": "", "scene": note, "bars": None,
          "in": {"type": tr[0], **({"dur": tr[1]} if len(tr) > 1 else {})},
-         "sfx": [{"at": a, "name": n, "gain": gg, **x} for (a, n, gg, x) in sfx], "notes": ""}
+         "sfx": [{"at": round(a, 3), "name": n, "gain": gg, **x} for (a, n, gg, x) in sfx], "notes": ""}
+    if k != 1.0: s["params"] = {"tscale": k}
     if amb: s["amb"] = {"name": amb[0], "gain": amb[1]}
     starts[sid] = t; shots.append(s); t += d
 total = round(t, 3)
