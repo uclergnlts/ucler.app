@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Vercel "Ignored Build Step" (vercel.json ignoreCommand). Çıkış 0: derleme atlanır, 1: derlenir.
 # Push yalnız siteyi etkilemeyen yolları değiştiriyorsa derleme atlanır (günlük deploy sınırı için).
+# Yalnız main yayına gider; başka dallar (ör. claude/...) hiç derlenmez.
+if [ -n "${VERCEL_GIT_COMMIT_REF:-}" ] && [ "$VERCEL_GIT_COMMIT_REF" != "main" ]; then exit 0; fi
 onceki=${VERCEL_GIT_PREVIOUS_SHA:-HEAD^}
 # Önceki deploy commit'i depoda yoksa (ör. dal yeniden yazıldıysa) derle.
 git cat-file -e "$onceki" 2>/dev/null || exit 1
