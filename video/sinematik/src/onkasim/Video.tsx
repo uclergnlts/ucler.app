@@ -62,7 +62,8 @@ const SHOTS = PLAN.map((p, i) => {
   return { ...p, from, dur: to - from, start: from / FPS - OFF };
 });
 
-/** Efektler: [ad, kelime, kaydırma sn, ses]. */
+/** Efektler: [ad, kelime, kaydırma sn, ses]. SFX: hepsinin ortak çarpanı (Üçler 9.11: efektler sirene göre çok yüksekti). */
+const SFX = 0.3;
 type Cue = [string, string, number, number];
 const CUES: Cue[] = [
   ['tick', 'Saat', 0, 0.5],
@@ -87,9 +88,9 @@ const CUES: Cue[] = [
 
 /** Müzik: [ad, başlangıç kelimesi, bitiş kelimesi (null = son), ses]. */
 const BEDS: [string, string, string | null, number][] = [
-  ['music-dark', 'Saat', 'Peki', 0.12],
-  ['music-dark', 'Peki', 'Siren', 0.1],
-  ['music-hope', 'Siren#2', null, 0.2],
+  ['music-dark', 'Saat', 'Peki', 0.07],
+  ['music-dark', 'Peki', 'Siren', 0.06],
+  ['music-hope', 'Siren#2', null, 0.1],
 ];
 
 const Bed: React.FC<{ src: string; dur: number; vol: number }> = ({ src, dur, vol }) => {
@@ -131,7 +132,7 @@ export const OnKasim: React.FC = () => (
     </Sequence>
     {CUES.map(([src, w, d, vol], i) => (
       <Sequence key={`c${i}`} from={Math.max(0, fr(sec(w) + d))} durationInFrames={FPS * 4}>
-        <Audio src={staticFile(`sfx/${src}.mp3`)} volume={vol} />
+        <Audio src={staticFile(`sfx/${src}.mp3`)} volume={vol * SFX} />
       </Sequence>
     ))}
     {BEDS.map(([src, a, b, vol], i) => {
