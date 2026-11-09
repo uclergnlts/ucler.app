@@ -16,14 +16,15 @@ Her video bir **gündelik gizem** etrafında kurulur. İzleyici karakterle birli
 
 | Bölüm | Süre | İçerik |
 |---|---|---|
-| Soğuk açılış (kanca) | 0-13 sn | Sonucu göster (çatlamış şişe), donma karesi, şok olmuş dev yüz, sonra "geri sar" (saat geri döner). |
-| Olaylar | 13-50 sn | Önceki gece: karakter olaya yol açan şeyi yapar. Zaman atlaması, gerilim ve doruk anı. |
-| Keşif | 50-70 sn | Karakter sonucu bulur, şaşırır, kafası karışır ("?"), büyüteçle ya da zoom ile içine dalar. |
-| Mikro dünya / açıklama | 70-105 sn | Olayın görünmeyen nedeni şema dünyasında, sayılarla (1,00 L → 1,09 L, +%9). |
-| Sonuçlar | 105-150 sn | Aynı ilkenin gündelik hayattaki ikinci, şaşırtıcı sonucu (buz yüzer, göller üstten donar). |
-| "Ya … olsaydı?" | 150-170 sn | Kural tersine dönseydi ne olurdu? Karanlık ruh hâli, felaket, sonra gerçeğe dönüş. |
-| Güç montajı | 170-185 sn | Hızlı 3 örnek (boru patlar, kaya yarılır, yol çöker). |
-| Çözüm ve kapanış | 185 sn-son | Karakter öğrendiğini uygular, göz kırpar. 8-10 sn bitiş kartı: logo, "?" ve YouTube bitiş ekranı kutuları için boş yer. |
+| Kanca | 0-3 sn | Sonucu hemen göster (çatlamış şişe, patlama sesi). İlk cümle 0. saniyede başlar ve soruyu sorar. |
+| Vaat | 3-12 sn | Neden izlemeye değer: "Bu küçük fark olmasa göller dibe kadar donardı." Büyük sonucu baştan ima et. Ardından kısa "geri sar". |
+| Olaylar | 12-35 sn | Önceki gece, hızlı kurgu. Hazırlık sahneleri kısa tutulur, her 2-3 sn'de yeni çekim. |
+| Keşif | 35-50 sn | Karakter sonucu bulur, şaşırır, içine dalar. |
+| Mikro dünya / açıklama | 50-90 sn | Görünmeyen neden, sayılarla. İlk "vay" bilgisi en geç burada. |
+| Sonuçlar | 90-140 sn | Aynı ilkenin gündelik hayattaki ikinci, şaşırtıcı sonucu (buz yüzer, göller üstten donar). |
+| "Ya … olsaydı?" | 140-165 sn | Kural tersine dönseydi ne olurdu? Karanlık ruh hâli, felaket, sonra gerçeğe dönüş. |
+| Güç montajı | 165-180 sn | Hızlı 3 örnek (boru patlar, kaya yarılır, yol çöker). |
+| Çözüm ve kapanış | 180 sn-son | Karakter öğrendiğini uygular, göz kırpar. 8-10 sn bitiş kartı: logo, "?" ve YouTube bitiş ekranı kutuları için boş yer. |
 
 Kurallar:
 - **Bilimsel doğruluk:** Ekrandaki her sayı doğru olmalı (ör. buz 0,92 g/cm³, suyun en yoğun hâli 4 °C, buzun yaklaşık %90'ı suyun altında). Emin olunmayan sayı kullanılmaz.
@@ -77,7 +78,16 @@ Akış:
 - **Ölçüm:** 48 saatte tıklama oranı %3'ün altındaysa kapak ya da başlık değiştirilir. İzlenme oranında hedef %50'nin üstü.
 - **Seri:** 2-3 tekrar eden seri ve her seri için tek kapak şablonu kullanılır.
 
-## 9. Üretim kontrol listesi
+## 9. YT-01'den çıkan dersler (ilk 10 saat verisi, 2026-11-09)
+İlk video: 807 gösterim, %2,2 tıklama oranı, ortalama izlenme 33 sn (%14). İzlenmelerin çoğu "Önerilen videolar"dan geldi; yani YouTube videoyu dağıtıyor, sorun ilk saniyelerde izleyiciyi tutamamak. Veri az olsa da yön net:
+- **Anlatımda boşluk yok.** İlk 30 saniyede iki cümle arasında en çok 1 sn sessizlik olur. YT-01'de 2. saniye ile 8. saniye arası boştu.
+- **Hazırlık kısa.** "Geri sar"dan sonra gelen gece sahneleri 40 sn sürdü; izleyici cevabı beklerken sıkıldı. Olaylar bölümü en çok 25 sn.
+- **Vaat cümlesi şart.** İlk 12 saniyede videonun en büyük sonucu ima edilir (gezegen donardı, balıklar ölürdü). Merak sadece "neden çatladı" ile sınırlı kalmaz.
+- **Görsel tempo:** İlk 30 saniyede her 2 saniyede bir kadraj değişir (kesme, zoom, yakın çekim).
+- **Kapak:** Tek nesne büyük, en çok 2 kelime, yüksek kontrast. Her videoda yayın anında 3 kapakla "Test et ve karşılaştır" başlatılır.
+- **Ölçüm:** 48 saat sonra tıklama oranı (hedef %4+) ve ortalama izlenme yüzdesi (hedef %40+) bakılır; 2-3 gün sonra kitleyi elde tutma grafiğinde düşüş anı bulunur ve bir sonraki videoya ders olarak buraya eklenir.
+
+## 10. Üretim kontrol listesi
 1. Konu: gündelik bir gizem, tek ana fikir, doğrulanmış sayılar.
 2. Çekim listesi tablosu (kimlik, süre, sahne notu, geçiş, efektler, ortam sesi), toplam 3-4 dk.
 3. Mekânlar ve karakter tek tek kurulur.
@@ -87,8 +97,9 @@ Akış:
 7. 2 Shorts.
 8. Kapak, başlık, açıklama, bölüm zamanları, dublajlar.
 9. Video sahibinin geri bildirimi kaydedilir ve sonraki videoda uygulanır.
+10. Yayından önce ilk 30 saniye ayrıca izlenir: anlatım boşluğu var mı, vaat cümlesi var mı, kadraj 2 sn'de bir değişiyor mu?
 
-## 10. Teknik not (Claude için)
+## 11. Teknik not (Claude için)
 ucler'de bu videolar, yerelde kurulan 2B canvas tabanlı bir sahne motoruyla yapıldı (Playwright ile kare kare çekim, ffmpeg ile kodlama, numpy ile efekt ve müzik sentezi). Bu motorun lisansı olmadığı için kodu buraya konmadı. Aynı sonuç için seçenekler:
 - Motor elinizde varsa yerelde kurun ve projenin deposuna koymayın. Yalnızca kendi sahne dosyalarınızı saklayın.
 - Yoksa aynı yapıyı kendiniz kurun: zamanın saf bir fonksiyonu olan `draw(g, t)` çekimleri, katmanlı kamera (derinliğe göre paralaks), poz anahtar kareleriyle çubuk karakter, efekt kütüphanesi (toz, kar, ışık huzmesi, halkalar, kıvılcım), Playwright ile kare çekimi, ffmpeg ile birleştirme. Alternatif olarak Remotion, Motion Canvas ya da Manim kullanılabilir.
