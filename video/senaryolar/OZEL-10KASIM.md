@@ -1,6 +1,6 @@
 # OZEL-10KASIM · Saat dokuzu beş geçe
 
-Özel video (10 Kasım anma, sosyal medya) · uygulamada ders yok, sitede gösterilmez · dikey 9:16 · ~70 sn · 122 kelime
+Özel video (10 Kasım anma, sosyal medya) · uygulamada ders yok, sitede gösterilmez · dikey 9:16 · ~104 sn · 182 kelime
 Görünüm: renkler grileşir, tek vurgu bayrak kırmızısı #e30a17; ince siyah kurdele, yarıya inmiş bayrak, Anıtkabir sade çizgi. Kişi çizimi/fotoğraf yok. Soru yok, anmayla biter (29 Ekim kuralı).
 Ses: sakin ve yavaş okuma (ElevenLabs: stability yüksek, hız ~0,9). Açılışta kısa siren sesi (kendi sentezimiz).
 
