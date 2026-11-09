@@ -61,7 +61,7 @@ const PLAN: Plan[] = [
   { w: 168, C: O.U3 },
 ];
 
-/** [ses, kelime, kayma sn, ses düzeyi] */
+/** [ses, kelime, kayma sn, ses düzeyi] — efektler anlatımın altında kalmalı (Üçler, 2026-11-09: "efektler fazla yüksek"). */
 type Cue = [string, number, number, number];
 const CUES: Cue[] = [
   ['tick', 0, 0, 0.5],
@@ -95,6 +95,9 @@ const BEDS: [string, number, number | null, number][] = [
   ['pad-yas', 25, 141, 0.55],
   ['music-hope', 141, null, 0.22],
 ];
+
+/** Efektlerin genel düzeyi (siren ve müzik hariç). */
+const FX = 0.3;
 
 const sec = (w: number) => ON_STARTS[w] + OFF;
 const fr = (s: number) => Math.round(s * FPS);
@@ -159,7 +162,7 @@ export const OnKasim: React.FC = () => (
     </Sequence>
     {CUES.map(([src, w, d, vol], i) => (
       <Sequence key={`c${i}`} from={Math.max(0, fr(sec(w) + d))} durationInFrames={FPS * 4}>
-        <Audio src={staticFile(`sfx/${src}.mp3`)} volume={vol} />
+        <Audio src={staticFile(`sfx/${src}.mp3`)} volume={vol * FX} />
       </Sequence>
     ))}
     {BEDS.map(([src, a, b, vol], i) => {
