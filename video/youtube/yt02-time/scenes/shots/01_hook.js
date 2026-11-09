@@ -6,7 +6,7 @@ import { lake, drifts, LGY } from '../sets/lake.js';
 import { hero, P } from '../hero.js';
 import { HERO } from '../cast.js';
 import { qmark } from '../props.js';
-import { lbl, mapView, phone, GOLD, PINK, CYAN } from '../kit.js';
+import { lbl, mapView, phone, ambient, GOLD, PINK, CYAN } from '../kit.js';
 
 export const SHORE = { x: 560, s: 2.2 };
 // hero on the snowy shore with the phone, lake behind
@@ -62,7 +62,8 @@ registerShot('h04', { draw(g, t) {
 // h05 — the promise: two clocks ticking at different speeds, the phone dot jumping between them
 registerShot('h05', { draw(g, t) {
   g.fillStyle = linGrad(g, 0, 0, 0, E.H, ['#0a0e26', '#1a1640', '#2a1e48']); g.fillRect(-E.W, -E.H, E.W * 3, E.H * 3);
-  FX.stars(g, t, { count: 120 }); const z = 1 + 0.04 * t;
+  FX.stars(g, t, { count: 120 }); ambient(g, t, { color: CYAN, color2: GOLD }); const z = 1 + 0.04 * t;
+  { const r = rng(11); for (let i = 0; i < 9; i++) { const x = (r() * E.W + t * (20 + r() * 40)) % (E.W + 200) - 100, y = r() * E.H, s = 22 + r() * 34; g.save(); g.globalAlpha = 0.28; FX.clock(g, x, y, s, t * (1 + r() * 8), {}); g.restore(); } }
   g.save(); g.translate(E.W / 2, E.H / 2); g.scale(z, z); g.translate(-E.W / 2, -E.H / 2);
   const a1 = ease.outBack(prog(t, 0.2, 0.6)), a2 = ease.outBack(prog(t, 0.6, 1.0));
   for (const [x, a, sp, col] of [[E.W / 2 - V(320, 200), a1, 1, GOLD], [E.W / 2 + V(320, 200), a2, 0.35, CYAN]]) {

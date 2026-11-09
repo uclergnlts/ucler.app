@@ -8,7 +8,7 @@ import { hero, P } from '../hero.js';
 import { HERO } from '../cast.js';
 import { qmark } from '../props.js';
 import { shoreScene } from './01_hook.js';
-import { lbl, mapView, phone, atomic, satellite, earth, space, GOLD, PINK, CYAN, LIGHT } from '../kit.js';
+import { lbl, mapView, phone, atomic, satellite, earth, space, ambient, GOLD, PINK, CYAN, LIGHT } from '../kit.js';
 
 const TRUE = [0.24, 0.8], LAKE = [0.56, 0.42];
 
@@ -70,6 +70,8 @@ registerShot('p05', { draw(g, t) {
 // p06 — the sum: −7 + 45 = +38 µs, every day
 registerShot('p06', { draw(g, t) {
   g.fillStyle = linGrad(g, 0, 0, 0, E.H, ['#060a1e', '#141238']); g.fillRect(-E.W, -E.H, E.W * 3, E.H * 3); FX.stars(g, t, { count: 140 });
+  earth(g, E.W / 2, E.H * 1.9, E.H * 1.05, t, { spin: 0.03 }); ambient(g, t, { gears: false, color: PINK, color2: GOLD });
+  for (let i = 0; i < 3; i++) { const a = -2.4 + i * 0.5 + t * 0.12; satellite(g, E.W / 2 + Math.cos(a) * E.W * 0.55, E.H * 1.9 + Math.sin(a) * E.H * 1.42, 0.16, { rot: a + 1.57 }); }
   if (E.crop) { // 9:16 Shorts: stack the sum vertically inside the crop window
     const cx = (E.crop[0] + E.crop[1]) / 2, a1 = ease.out(prog(t, 0.2, 0.5)), a2 = ease.out(prog(t, 0.7, 1.0)), a3 = ease.outBack(prog(t, 1.4, 1.9));
     lbl(g, '−7 µs', cx, 200, a1, 80, CYAN, 'center'); lbl(g, '+ 45 µs', cx, 340, a2, 80, GOLD, 'center'); seg(g, [[cx - 200, 430], [cx + 200, 430]], 4, alpha('#ffffff', a3));
@@ -107,7 +109,16 @@ registerShot('p08', { draw(g, t) {
 
 // p09 — engineers tune each satellite clock slower before launch
 registerShot('p09', { draw(g, t) {
-  UI.blueprint(g, { grid: 60, a: 0.07 });
+  g.fillStyle = linGrad(g, 0, 0, 0, E.H, ['#1a2442', '#24305a']); g.fillRect(-E.W, -E.H, E.W * 3, E.H * 3);
+  for (let x = 60; x < E.W; x += 240) { rr(g, x, 30, 160, 22, 8); g.fillStyle = alpha('#e8f4ff', 0.8); g.fill(); FX.lightCone(g, x + 80, 52, { len: 520, spread: 0.35, color: '#dff0ff', a: 0.06 }); }
+  for (let x = 0; x < E.W; x += 120) seg(g, [[x, 120], [x, E.H * 0.8]], 2, alpha('#9fb4e8', 0.08));
+  g.fillStyle = '#141a32'; g.fillRect(-E.W, E.H * 0.8, E.W * 3, E.H); FX.floorLines(g, E.H * 0.8, E.H, 'rgba(160,190,255,.08)');
+  // satellite on a stand, the stand stays when it lifts off
+  { const sx0 = E.W * 0.36; poly(g, [[sx0 - 60, E.H * 0.8], [sx0 + 60, E.H * 0.8], [sx0 + 20, E.H * 0.62], [sx0 - 20, E.H * 0.62]], '#2e3a62'); }
+  // control desk with the dial (right) and an engineer in a lab coat
+  rr(g, E.W * 0.58, E.H * 0.66, 520, 40, 10); g.fillStyle = '#3a4676'; g.fill(); seg(g, [[E.W * 0.6, E.H * 0.7], [E.W * 0.6, E.H * 0.8]], 10, '#2a3460'); seg(g, [[E.W * 0.58 + 500, E.H * 0.7], [E.W * 0.58 + 500, E.H * 0.8]], 10, '#2a3460');
+  FX.screen(g, { x: E.W * 0.82, y: E.H * 0.16, w: 220, h: 130 }, (g, x, y, w, h) => { for (let i = 0; i < 5; i++) seg(g, [[x + 16, y + 20 + i * 22], [x + 16 + (60 + ((i * 37 + Math.floor(t * 4) * 13) % 110)), y + 20 + i * 22]], 6, alpha('#7fe0c0', 0.7)); });
+  hero(g, { x: E.W * 0.89, y: E.H * 0.8, s: 2.1, facing: -1, t, outfit: { top: 'labcoat', color: '#ebe7f0', head: 'none', legs: '#26324f' }, pose: posesAt(t, [[0, POSES.relaxed], [0.3, POSES.reach]]), expr: 'determined', look: [-1, 0], rim: { color: '#dff0ff', dir: [0.7, -0.6], w: 4 } });
   const lift = t > 2.4 ? 400 * (t - 2.4) ** 2 : 0, sx = E.W * 0.36, sy = E.H * 0.52 - lift;
   satellite(g, sx, sy, 1.1, { clock: true });
   // tuning dial
@@ -115,7 +126,7 @@ registerShot('p09', { draw(g, t) {
   circle(g, dx, dy, 150, '#1a2238'); ring(g, dx, dy, 150, 6, alpha(CYAN, 0.8));
   for (let i = 0; i < 24; i++) { const a = -Math.PI * 1.25 + i * (Math.PI * 1.5 / 23); seg(g, [[dx + Math.cos(a) * 120, dy + Math.sin(a) * 120], [dx + Math.cos(a) * 140, dy + Math.sin(a) * 140]], 3, alpha(CYAN, 0.6)); }
   seg(g, [[dx, dy], [dx + Math.cos(an) * 110, dy + Math.sin(an) * 110]], 10, GOLD); circle(g, dx, dy, 18, GOLD);
-  lbl(g, '−38 µs', dx, dy + 220, ease.out(prog(t, 1.0, 1.4)), V(80, 76), CYAN, 'center');
+  lbl(g, '−38 µs', dx, dy - 215, ease.out(prog(t, 1.0, 1.4)), V(80, 76), CYAN, 'center');
   if (t > 2.4) { glow(g, sx, sy + 140, 120, '#ffb04a', 0.6); poly(g, [[sx - 30, sy + 80], [sx + 30, sy + 80], [sx, sy + 240]], alpha('#ffb04a', 0.8)); }
 } });
 

@@ -4,7 +4,7 @@ import { POSES, posesAt, bigFace } from '/engine/rig2d.js';
 import * as FX from '/engine/fx2d.js';
 import * as UI from '/engine/ui2d.js';
 import { hero, P } from '../hero.js';
-import { lbl, atomic, earth, space, GOLD, PINK, CYAN } from '../kit.js';
+import { lbl, atomic, earth, space, ambient, satellite, GOLD, PINK, CYAN } from '../kit.js';
 
 // perspective grid with a gravity well of depth k at the centre
 function well(g, t, k, o = {}) {
@@ -29,6 +29,8 @@ registerShot('g02', { draw(g, t) {
   space(g, t, { count: 180 }); const P2 = well(g, t, 1);
   const [px, py] = P2(0, 0); planetAt(g, t, px, py - 120, 120);
   const [ax, ay] = P2(-2.2, 0.6), [bx, by] = P2(8, -2);
+  { const oa = t * 0.9; for (const [rx, ry, ph, kind] of [[520, 150, 0, 0], [340, 100, 2.4, 1]]) { const a = oa * (kind ? 1.6 : 1) + ph, x = px + Math.cos(a) * rx, y = py - 120 + Math.sin(a) * ry; if (Math.sin(a) < 0) continue;
+    if (kind) satellite(g, x, y, 0.22, { rot: a }); else { circle(g, x, y, 26, '#d8dbe8'); circle(g, x - 8, y - 6, 6, '#b8bccc'); } } }
   FX.clock(g, ax, ay - 70, 56, t * 1.2, {}); FX.clock(g, bx, by - 70, 56, t * 5, {});
   const a = ease.out(prog(t, 0.8, 1.2)); lbl(g, '↓', ax - 90, ay - 70, a, V(80, 80), CYAN, 'center'); lbl(g, '↑', bx + 90, by - 70, a, V(80, 80), GOLD, 'center');
 } });
@@ -54,8 +56,16 @@ registerShot('g03', { draw(g, t) {
 
 // g04 — head clock vs feet clock: billionths of a second, measured by atomic clocks
 registerShot('g04', { draw(g, t) {
-  g.fillStyle = linGrad(g, 0, 0, 0, E.H, ['#0c1230', '#1c1a44']); g.fillRect(-E.W, -E.H, E.W * 3, E.H * 3);
-  glow(g, E.W * 0.42, E.H * 0.5, 600, '#ffb070', 0.12);
+  g.fillStyle = linGrad(g, 0, 0, 0, E.H, ['#2a2244', '#3a2c50']); g.fillRect(-E.W, -E.H, E.W * 3, E.H * 3);
+  // window with the night sky and moon (left), shelf with books, lamp, floor
+  const wx = 90, wy = 160, ww = 360, wh = 420; rr(g, wx, wy, ww, wh, 10); g.fillStyle = linGrad(g, 0, wy, 0, wy + wh, ['#0a0e2a', '#232058']); g.fill();
+  g.save(); g.beginPath(); g.rect(wx, wy, ww, wh); g.clip(); FX.stars(g, t, { count: 40, area: [wx, wy, ww, wh] }); FX.moon(g, wx + 250, wy + 110, 34); g.restore();
+  g.strokeStyle = '#4a3a5a'; g.lineWidth = 14; g.strokeRect(wx, wy, ww, wh); seg(g, [[wx + ww / 2, wy], [wx + ww / 2, wy + wh]], 8, '#4a3a5a'); seg(g, [[wx, wy + wh / 2], [wx + ww, wy + wh / 2]], 8, '#4a3a5a');
+  rr(g, E.W - 520, 260, 420, 18, 4); g.fillStyle = '#4a3446'; g.fill();
+  const bc = ['#e5466f', '#5fa8e8', '#ffd95a', '#7ac87a', '#c08ae8', '#e8a05a']; for (let i = 0; i < 11; i++) { const bw = 26 + (i * 7) % 14, bh = 80 + (i * 13) % 40; rr(g, E.W - 500 + i * 34, 260 - bh, bw, bh, 3); g.fillStyle = bc[i % 6]; g.fill(); }
+  FX.lampPost(g, E.W - 200, E.H * 0.94, 520, { light: '#ffd59a' }); glow(g, E.W - 200, E.H * 0.94 - 520, 300, '#ffd59a', 0.25);
+  g.fillStyle = '#2a1e30'; g.fillRect(-E.W, E.H * 0.9, E.W * 3, E.H); FX.floorLines(g, E.H * 0.9, E.H);
+  glow(g, E.W * 0.42, E.H * 0.5, 600, '#ffb070', 0.12); ambient(g, t, { gears: false, motes: 18, color: '#ffd59a' });
   const s = 2.9, fy = E.H * 0.94, x = E.W * 0.4;
   const h = hero(g, { x, y: fy, s, facing: 1, t, pose: POSES.relaxed, expr: t > 3.2 ? 'surprised' : 'neutral', look: [1, 0], rim: { color: '#ffc68a', dir: [-0.7, -0.6], w: 6 } });
   const a1 = ease.outBack(prog(t, 0.4, 0.8)), a2 = ease.outBack(prog(t, 0.9, 1.3));

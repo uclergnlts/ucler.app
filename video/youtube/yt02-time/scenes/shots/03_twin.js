@@ -4,7 +4,7 @@ import { POSES, posesAt, bigFace } from '/engine/rig2d.js';
 import * as FX from '/engine/fx2d.js';
 import { hero, P } from '../hero.js';
 import { HERO } from '../cast.js';
-import { lbl, rocket, twin, helmet, beard, cane, GOLD, PINK, CYAN } from '../kit.js';
+import { lbl, rocket, twin, helmet, aged, agedFace, stoop, cane2, GOLD, PINK, CYAN } from '../kit.js';
 
 const GY = () => E.H * 0.86, HS = 1.9;
 // launch site at dusk: desert flats, gantry, the rocket on the pad
@@ -47,16 +47,29 @@ registerShot('t02', { draw(g, t) {
 
 // t03 — on Earth 20 years fly by: seasons flicker, the hero grows a beard, +20
 registerShot('t03', { draw(g, t) {
-  const k = ease.inOut(prog(t, 0.3, 3.8)), cam = { z: 1.25, x: -260, y: 60 };
-  const night = 0.5 + 0.5 * Math.sin(t * 9);
-  launchSite(g, t, cam, { rocket: false, night: night * 0.8 });
+  const k = ease.inOut(prog(t, 0.3, 3.8)), cam = { z: 1.2, x: -200, y: 50 };
+  const night = 0.5 - 0.5 * Math.cos(t * 6), yr = t * 1.6, sea = yr % 1;   // sky cycles day/night, one season loop per year
+  launchSite(g, t, cam, { rocket: false, night: night * 0.75 });
   layer(g, cam, 1, (g) => {
-    const h = hero(g, { x: 760, y: GY(), s: HS, facing: 1, t, pose: P('relaxed', {}), expr: k > 0.6 ? 'sad' : 'neutral', look: [0.6, -0.6], rim: { color: '#ffc68a', dir: [-0.7, -0.6], w: 5 } });
-    beard(g, h, k, HS); cane(g, h, HS, clamp((k - 0.7) * 4));
+    // a tree grows from a sapling; leaves follow the seasons
+    const tx = 1180, gy = GY() - 20, gk = ease.out(prog(t, 0, 4.0)), th = lerp(50, 300, gk), cr = lerp(26, 150, gk), sw = Math.sin(t * 3) * 6 * gk;
+    seg(g, [[tx, gy], [tx + sw * 0.3, gy - th]], lerp(6, 26, gk), '#4a3226');
+    for (const [dx, dy, bl] of [[-0.6, 0.35, 0.5], [0.55, 0.45, 0.45], [0.1, 0.75, 0.4]]) seg(g, [[tx + sw * 0.2, gy - th * bl], [tx + cr * dx + sw, gy - th - cr * (dy - 0.6)]], lerp(3, 12, gk), '#4a3226');
+    const leaf = sea < 0.25 ? '#8fd46a' : sea < 0.5 ? '#3f9a4a' : sea < 0.75 ? '#e88a3a' : null;
+    if (leaf) for (const [dx, dy, q] of [[0, -0.2, 1], [-0.6, 0.15, 0.75], [0.6, 0.1, 0.8], [-0.3, -0.55, 0.7], [0.35, -0.5, 0.7]]) circle(g, tx + sw + cr * dx, gy - th + cr * dy, cr * 0.62 * q, leaf);
+    if (sea >= 0.5 && sea < 0.75) { const r = rng(9); for (let i = 0; i < 14; i++) { const ph = (r() + (sea - 0.5) * 4) % 1; circle(g, tx - cr + r() * cr * 2.4 + ph * 80, gy - th + ph * (th + 20), 7, '#e8913a'); } }
+    if (sea >= 0.75) { for (const [dx, dy] of [[0, -0.2], [-0.5, 0.1], [0.5, 0.05]]) { g.fillStyle = 'rgba(255,255,255,.85)'; g.beginPath(); g.ellipse(tx + cr * dx, gy - th + cr * dy - 6, cr * 0.35, 9, 0, 0, Math.PI * 2); g.fill(); } g.fillStyle = 'rgba(245,248,255,.8)'; g.fillRect(-E.W, GY() - 32, E.W * 3, 14); }
+    const h = hero(g, { x: 720, y: GY(), s: HS, facing: 1, t, pose: stoop(P('relaxed', {}), k), expr: k > 0.7 ? 'worried' : 'neutral', look: [0.6, -0.6], rim: { color: '#ffc68a', dir: [-0.7, -0.6], w: 5 } });
+    aged(g, h, k, HS, 1); cane2(g, h, HS, GY(), clamp((k - 0.6) * 4), 1);
   });
-  if (Math.sin(t * 4.5) > 0.6) FX.snow(g, t, { count: 80, speed: 60 });
+  if (sea >= 0.75) FX.snow(g, t, { count: 90, speed: 70 });
+  // calendar: pages tear off and fly away
+  const cx = V(230, 160), cy = V(200, 260), n = Math.floor(yr * 4);
+  rr(g, cx - 90, cy - 70, 180, 160, 14); g.fillStyle = '#f4efe6'; g.fill(); rr(g, cx - 90, cy - 70, 180, 44, 14); g.fillStyle = PINK; g.fill();
+  for (const dx of [-45, 45]) seg(g, [[cx + dx, cy - 84], [cx + dx, cy - 56]], 8, '#2a2238');
+  const rg = rng(3); for (let i = 0; i < 7; i++) for (let j = 0; j < 4; j++) if (rg() > 0.15) rr(g, cx - 72 + i * 21, cy - 10 + j * 22, 14, 14, 3), g.fillStyle = alpha('#2a2238', 0.35), g.fill();
+  for (let i = 0; i < 6; i++) { const ph = (yr * 4 - n + i / 6) % 1; if (n + i < 2) continue; g.save(); g.translate(cx + ph * 520, cy - ph * 160 + Math.sin(ph * 8 + i) * 30); g.rotate(ph * 4 + i); g.globalAlpha = 1 - ph; rr(g, -40, -36, 80, 72, 8); g.fillStyle = '#f4efe6'; g.fill(); g.restore(); }
   lbl(g, `+${Math.round(20 * k)}`, E.W - V(180, 120), V(160, 230), 1, V(110, 110), GOLD, 'right');
-  FX.clock(g, V(200, 140), V(170, 230), 70, t * 40, {});
 } });
 
 // t04 — touchdown in a cloud of dust
@@ -72,8 +85,8 @@ registerShot('t05', { draw(g, t) {
   launchSite(g, t, cam, { night: 0.3 }); const outer = g.getTransform(); let ah, bh;
   const q = ease.outBack(prog(t, 2.9, 3.3)), a1 = ease.out(prog(t, 0.5, 0.9)), a2 = ease.out(prog(t, 1.5, 1.9));
   layer(g, cam, 1, (g) => {
-    const a = hero(g, { x: 640, y: GY(), s: HS, facing: 1, t, pose: P('relaxed', {}), expr: t > 3 ? 'shocked' : 'surprised', look: [1, 0], rim: { color: '#ffc68a', dir: [-0.7, -0.6], w: 5 } });
-    beard(g, a, 1, HS); cane(g, a, HS, 1);
+    const a = hero(g, { x: 640, y: GY(), s: HS, facing: 1, t, pose: stoop(P('relaxed', {}), 1), expr: t > 3 ? 'shocked' : 'surprised', look: [1, 0], rim: { color: '#ffc68a', dir: [-0.7, -0.6], w: 5 } });
+    aged(g, a, 1, HS, 1); cane2(g, a, HS, GY(), 1, 1);
     const b = twin(g, { x: 1040, y: GY(), s: HS, facing: -1, t: t + 0.3, pose: posesAt(t, [[0, POSES.relaxed], [0.4, POSES.cheer]]), expr: 'joy', rim: { color: '#ffc68a', dir: [0.7, -0.6], w: 5 } });
     if (E.crop) { const m = outer.inverse().multiply(g.getTransform()); ah = m.transformPoint({ x: a.head[0], y: a.head[1] }); bh = m.transformPoint({ x: b.head[0], y: b.head[1] }); return; }
     lbl(g, '+20', a.head[0], a.head[1] - 150, a1, V(90, 90), GOLD, 'center');
@@ -92,5 +105,5 @@ registerShot('t06', { draw(g, t) {
   blurLayer(g, 14, (g) => launchSite(g, t, { z: 1.4, x: 0, y: 0 }, { night: 0.3 })); veil(g, '#14081e', 0.3);
   const r = V(300, 330) * (1 + 0.03 * t), cx = E.W / 2, cy = E.H * 0.6;
   bigFace(g, cx, cy, r, { outfit: HERO, expr: t < 1.2 ? 'shocked' : 'confused', rimColor: '#ffc68a', rimSide: -1 });
-  beard(g, { head: [cx, cy, r] }, 1, 1);
+  agedFace(g, cx, cy, r, 1);
 } });

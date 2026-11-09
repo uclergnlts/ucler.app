@@ -124,3 +124,68 @@ export function cane(g, h, s, a = 1) { if (a <= 0) return; g.save(); g.globalAlp
 export const SUIT = { top: 'tracksuit', color: '#eef0f6', head: 'none', legs: '#d8dce8' };
 export function helmet(g, h, s = 1) { const [x, y, r] = h.head; circle(g, x, y, r * 1.45, 'rgba(180,220,255,.18)'); ring(g, x, y, r * 1.45, 4 * s, 'rgba(230,245,255,.9)'); seg(g, [[x - r * 0.9, y - r * 0.7], [x - r * 0.5, y - r * 1.05]], 4 * s, 'rgba(255,255,255,.8)'); }
 export function twin(g, o) { const h = hero(g, { ...o, outfit: SUIT }); if (o.helmet !== false) helmet(g, h, o.s ?? 1); circle(g, h.head[0] + (o.facing ?? 1) * 0, h.head[1] + h.head[2] * 2.1, 6 * (o.s ?? 1), PINK); return h; }
+
+// ---- ageing (v2): stooped pose, grey hair, bushy brows, glasses, a real beard under the chin, a cane in the front hand ----
+const lp = (a, b, k) => [lerp(a[0], b[0], k), lerp(a[1], b[1], k)];
+const OLDP = { head: [18, -190], sh: [9, -163], hip: [0, -98], eF: [20, -128], hF: [30, -98], eB: [-6, -128], hB: [-10, -96], kF: [12, -47], fF: [12, 0], kB: [-2, -48], fB: [-12, 0] };
+export function stoop(pose, k) { const o = { ...pose }; if (k <= 0) return o; for (const j of Object.keys(OLDP)) if (pose[j]) o[j] = lp(pose[j], OLDP[j], k); return o; }
+const HAIR = '#dcdde4', HAIR_D = '#a9aab6';
+export function aged(g, h, k, s = 1, f = 1) {
+  if (k <= 0.02) return; const [hx, hy, r] = h.head, X = (u) => hx + f * u * r, Y = (v) => hy + v * r;
+  const hc = mix('#15131f', HAIR, clamp(k * 1.3));
+  // hair: back and top of the head (clipped to the head), plus tufts behind the ear
+  g.save(); g.beginPath(); g.arc(hx, hy, r * 1.01, 0, Math.PI * 2); g.clip();
+  g.fillStyle = hc; g.beginPath(); g.ellipse(X(-0.78), Y(-0.25), r * 0.62, r * 0.85, f * 0.4, 0, Math.PI * 2); g.fill(); g.beginPath(); g.ellipse(X(-0.25), Y(-1.0), r * 0.75, r * 0.26, f * 0.15, 0, Math.PI * 2); g.fill();
+  g.restore();
+  g.save(); g.globalAlpha *= clamp(k * 1.5);
+  for (const [u, v, rr_] of [[-0.95, -0.05, 0.2], [-0.82, 0.22, 0.17], [-0.9, -0.32, 0.18]]) circle(g, X(u), Y(v), r * rr_, hc);
+  g.strokeStyle = alpha(HAIR_D, 0.8); g.lineWidth = r * 0.05; g.lineCap = 'round';
+  for (const [a, b] of [[[-0.95, -0.2], [-0.6, -0.75]], [[-0.8, 0.15], [-0.5, -0.4]]]) { g.beginPath(); g.moveTo(X(a[0]), Y(a[1])); g.quadraticCurveTo(X((a[0] + b[0]) / 2), Y(Math.min(a[1], b[1]) - 0.12), X(b[0]), Y(b[1])); g.stroke(); }
+  g.restore();
+  // beard: hangs below the chin, grows with k
+  const bk = clamp((k - 0.15) / 0.85); if (bk > 0) {
+    g.save(); g.globalAlpha *= clamp(bk * 2);
+    g.fillStyle = HAIR; g.beginPath(); g.moveTo(X(-0.2), Y(0.55)); g.bezierCurveTo(X(0.2), Y(0.75), X(0.7), Y(0.62), X(0.95), Y(0.35));
+    g.bezierCurveTo(X(1.05), Y(0.8 + 0.35 * bk), X(0.85), Y(1.05 + 0.45 * bk), X(0.45), Y(1.15 + 0.5 * bk));
+    g.bezierCurveTo(X(0.1), Y(1.1 + 0.35 * bk), X(-0.2), Y(0.9 + 0.2 * bk), X(-0.2), Y(0.55)); g.fill();
+    g.strokeStyle = alpha(HAIR_D, 0.8); g.lineWidth = r * 0.04; g.lineCap = 'round';
+    for (const [u, L] of [[0.15, 0.25], [0.45, 0.4], [0.72, 0.3]]) { g.beginPath(); g.moveTo(X(u), Y(0.8)); g.quadraticCurveTo(X(u + 0.05), Y(0.8 + L * bk), X(u - 0.02), Y(0.85 + L * 1.4 * bk)); g.stroke(); }
+    g.restore();
+  }
+  // bushy brows + round glasses (profile eye positions match rig2d face())
+  const ey = Y(-0.16), ex = [X(0.08), X(0.66)];
+  if (k > 0.45) { g.save(); g.globalAlpha *= clamp((k - 0.45) * 4); g.strokeStyle = HAIR; g.lineWidth = r * 0.1; g.lineCap = 'round';
+    for (const x of ex) { g.beginPath(); g.moveTo(x - r * 0.14, ey - r * 0.26); g.lineTo(x + r * 0.14, ey - r * 0.3); g.stroke(); } g.restore(); }
+  if (k > 0.6) { g.save(); g.globalAlpha *= clamp((k - 0.6) * 4); g.strokeStyle = '#e9dcc0'; g.lineWidth = r * 0.06;
+    for (const x of ex) { g.beginPath(); g.arc(x, ey, r * 0.21, 0, Math.PI * 2); g.stroke(); }
+    g.beginPath(); g.moveTo(ex[0] + f * r * 0.21, ey); g.lineTo(ex[1] - f * r * 0.21, ey); g.stroke();
+    g.beginPath(); g.moveTo(ex[0] - f * r * 0.21, ey); g.lineTo(X(-0.55), Y(-0.05)); g.stroke(); g.restore(); }
+}
+// front-view version for bigFace close-ups (cx, cy, r = bigFace centre and radius)
+export function agedFace(g, cx, cy, r, k = 1) {
+  g.save(); g.beginPath(); g.arc(cx, cy, r * 1.01, 0, Math.PI * 2); g.clip();
+  g.fillStyle = HAIR; g.beginPath(); g.ellipse(cx, cy - r * 0.95, r * 1.05, r * 0.42, 0, 0, Math.PI * 2); g.fill(); g.restore();
+  for (const sd of [-1, 1]) for (const [u, v, q] of [[1.0, -0.2, 0.22], [0.98, 0.05, 0.18], [0.9, -0.45, 0.2]]) circle(g, cx + sd * u * r, cy + v * r, r * q, HAIR);
+  g.strokeStyle = HAIR_D; g.lineWidth = r * 0.03; for (const u of [-0.5, -0.15, 0.2, 0.55]) { g.beginPath(); g.moveTo(cx + u * r, cy - r * 0.62); g.quadraticCurveTo(cx + (u + 0.15) * r, cy - r * 0.8, cx + (u + 0.3) * r, cy - r * 0.72); g.stroke(); }
+  // beard under the chin, mouth stays visible
+  g.fillStyle = HAIR; g.beginPath(); g.moveTo(cx - r * 0.92, cy + r * 0.2); g.quadraticCurveTo(cx - r * 0.6, cy + r * 1.35, cx, cy + r * 1.55); g.quadraticCurveTo(cx + r * 0.6, cy + r * 1.35, cx + r * 0.92, cy + r * 0.2);
+  g.quadraticCurveTo(cx + r * 0.55, cy + r * 0.78, cx, cy + r * 0.8); g.quadraticCurveTo(cx - r * 0.55, cy + r * 0.78, cx - r * 0.92, cy + r * 0.2); g.fill();
+  g.strokeStyle = HAIR_D; g.lineWidth = r * 0.025; for (const u of [-0.45, -0.15, 0.15, 0.45]) { g.beginPath(); g.moveTo(cx + u * r, cy + r * 0.95); g.lineTo(cx + u * r * 0.8, cy + r * (1.3 - Math.abs(u) * 0.5)); g.stroke(); }
+  // brows + glasses (bigFace eyes at ±0.34r, -0.16r)
+  g.strokeStyle = HAIR; g.lineWidth = r * 0.09; g.lineCap = 'round'; for (const sd of [-1, 1]) { g.beginPath(); g.moveTo(cx + sd * r * 0.18, cy - r * 0.5); g.lineTo(cx + sd * r * 0.52, cy - r * 0.46); g.stroke(); }
+  g.strokeStyle = '#e9dcc0'; g.lineWidth = r * 0.045; for (const sd of [-1, 1]) { g.beginPath(); g.arc(cx + sd * r * 0.34, cy - r * 0.16, r * 0.25, 0, Math.PI * 2); g.stroke(); }
+  g.beginPath(); g.moveTo(cx - r * 0.09, cy - r * 0.18); g.quadraticCurveTo(cx, cy - r * 0.26, cx + r * 0.09, cy - r * 0.18); g.stroke();
+}
+export function cane2(g, h, s, gy, a = 1, f = 1) { if (a <= 0) return; g.save(); g.globalAlpha *= a; const [x, y] = h.hand;
+  seg(g, [[x, y], [x + f * 10 * s, gy]], 6 * s, '#7a5232'); g.strokeStyle = '#7a5232'; g.lineWidth = 6 * s; g.lineCap = 'round'; g.beginPath(); g.arc(x - f * 9 * s, y, 9 * s, Math.PI, 0, f < 0); g.stroke(); g.restore(); }
+
+// ---- ambient life for abstract shots: drifting light motes, slow faint gears, soft nebula ----
+export function ambient(g, t, o = {}) {
+  const { color = '#8fd8ff', color2 = '#ffd59a', gears = true, motes = 40, seed = 7 } = o, r = rng(seed);
+  glow(g, E.W * (0.2 + 0.05 * Math.sin(t * 0.3)), E.H * 0.25, 700, color, 0.08); glow(g, E.W * 0.85, E.H * (0.75 + 0.04 * Math.sin(t * 0.4)), 650, color2, 0.07);
+  if (gears) for (let i = 0; i < 4; i++) { const gx = r() * E.W, gy = r() * E.H, gr = 60 + r() * 110, sp = (r() - 0.5) * 0.6;
+    g.save(); g.translate(gx, gy); g.rotate(t * sp); g.strokeStyle = alpha('#cfe0ff', 0.06); g.lineWidth = 6; g.beginPath(); g.arc(0, 0, gr, 0, Math.PI * 2); g.stroke(); g.beginPath(); g.arc(0, 0, gr * 0.35, 0, Math.PI * 2); g.stroke();
+    for (let k = 0; k < 10; k++) { const a = k * Math.PI / 5; seg(g, [[Math.cos(a) * gr, Math.sin(a) * gr], [Math.cos(a) * (gr + 22), Math.sin(a) * (gr + 22)]], 14, alpha('#cfe0ff', 0.06)); } g.restore(); }
+  for (let i = 0; i < motes; i++) { const x = (r() * E.W + t * (10 + r() * 30)) % E.W, y = (r() * E.H - t * (8 + r() * 20) + E.H * 10) % E.H, s = 2 + r() * 4;
+    circle(g, x, y, s, alpha(r() > 0.5 ? color : color2, 0.15 + 0.25 * (0.5 + 0.5 * Math.sin(t * 2 + i)))); }
+}
