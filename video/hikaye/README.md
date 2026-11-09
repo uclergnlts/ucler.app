@@ -8,7 +8,7 @@ Videolar React ile koddan çizilir. Lisanslı bir motor gerekmez, her Mac'te ça
 - **Kahraman:** hardal sarısı kapüşonlu öğrenci (`src/hikaye/kit.tsx`, `Kahraman`, `DevYuz`).
 - **Altyazı:** seslendirmenin kelime zamanlarıyla akar (`src/components/Caption.tsx`).
 - **Kaynak künyesi:** sayı ya da tarih olan çekimde sol üstte küçük yazı. Sağ üstte "ucler.app".
-- **Sesler:** `public/sfx/` altındaki efektler ve müzikler koddan üretildi (telif yok). `siren`, `wind` ve `pad-yas` ffmpeg ile sentezlendi.
+- **Sesler:** `public/sfx/` depoya girmez (mp3). Üretmek için: `pip3 install numpy && python3 scripts/make_sfx.py` (genel efektler ve müzikler) ve `sh scripts/make_onkasim_sfx.sh` (siren, rüzgâr, yas müziği). Hepsi koddan sentezlenir, telif yok.
 
 ## Kurulum
 ```bash
