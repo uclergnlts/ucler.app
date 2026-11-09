@@ -1,0 +1,22 @@
+{
+  "name": "ucler-sinematik",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ucler sinematik hikâye videoları (Remotion). Sitenin paketinden ayrıdır.",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render $npm_config_comp out/ham.mp4 && ffmpeg -y -loglevel error -i out/ham.mp4 -c:v libx264 -profile:v high -pix_fmt yuv420p -color_range tv -crf 21 -c:a aac -b:a 160k -movflags +faststart out/$npm_config_comp.mp4",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.541",
+    "@remotion/fonts": "4.0.541",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.541"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "typescript": "7.0.2"
+  }
+}
