@@ -6,25 +6,25 @@ Ses: sakin ve yavaş okuma (ElevenLabs: stability yüksek, hız ~0,9). Açılı�
 
 ## Konuşma metni (ElevenLabs'a aynen yapıştırılır)
 
-Saat dokuzu beş geçe. Türkiye durur.
+Saat dokuzu beş geçe. <break time="1.0s" /> Türkiye durur. <break time="2.0s" />
 
-Sirenler çalar. Arabalar durur. Yürüyen herkes olduğu yerde kalır.
+Sirenler çalar. <break time="0.8s" /> Arabalar durur. <break time="0.8s" /> Yürüyen herkes olduğu yerde kalır. <break time="2.0s" />
 
-On Kasım bin dokuz yüz otuz sekiz, İstanbul, Dolmabahçe. Mustafa Kemal Atatürk, sabah dokuzu beş geçe gözlerini hayata yumdu. Odasındaki saat bugün hâlâ o dakikayı gösterir.
+On Kasım bin dokuz yüz otuz sekiz, <break time="0.5s" /> İstanbul, <break time="0.5s" /> Dolmabahçe. <break time="1.0s" /> Mustafa Kemal Atatürk, sabah dokuzu beş geçe gözlerini hayata yumdu. <break time="1.2s" /> Odasındaki saat bugün hâlâ o dakikayı gösterir. <break time="2.0s" />
 
-Peki geride ne bıraktı?
+Peki geride ne bıraktı? <break time="1.5s" />
 
-Bin dokuz yüz yirmi yedide bu topraklarda, her on kişiden yalnızca biri okuma yazma biliyordu.
+Bin dokuz yüz yirmi yedide bu topraklarda, <break time="0.5s" /> her on kişiden yalnızca biri okuma yazma biliyordu. <break time="1.5s" />
 
-Bir yıl sonra yeni harfler geldi. Millet Mektepleri açıldı. Genç yaşlı herkes sıraya oturdu ve tahtanın başında Başöğretmen vardı.
+Bir yıl sonra yeni harfler geldi. <break time="0.8s" /> Millet Mektepleri açıldı. <break time="0.8s" /> Genç yaşlı herkes sıraya oturdu <break time="0.5s" /> ve tahtanın başında Başöğretmen vardı. <break time="1.5s" />
 
-Kız çocukları okula gitti. Laboratuvarlar kuruldu, üniversiteler yenilendi.
+Kız çocukları okula gitti. <break time="0.8s" /> Laboratuvarlar kuruldu, <break time="0.5s" /> üniversiteler yenilendi. <break time="1.5s" />
 
-Bütün bunların yönünü tek bir sözle gösterdi: Hayatta en hakiki mürşit ilimdir.
+Bütün bunların yönünü tek bir sözle gösterdi: <break time="1.2s" /> Hayatta en hakiki mürşit ilimdir. <break time="2.0s" />
 
-Bugün bir şey öğrendiğin her an, onun açtığı yoldasın.
+Bugün bir şey öğrendiğin her an, <break time="0.5s" /> onun açtığı yoldasın. <break time="2.0s" />
 
-Ulu Önder Mustafa Kemal Atatürk'ü, aramızdan ayrılışının seksen sekizinci yılında saygı ve özlemle anıyoruz.
+Ulu Önder Mustafa Kemal Atatürk'ü, <break time="0.5s" /> aramızdan ayrılışının seksen sekizinci yılında <break time="0.5s" /> saygı ve özlemle anıyoruz.
 
 ## Kapanış
 
