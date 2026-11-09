@@ -1,0 +1,23 @@
+{
+  "name": "ucler-hikaye-video",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ucler.app sinematik hikâye videoları (Remotion, dikey 9:16)",
+  "scripts": {
+    "studio": "remotion studio",
+    "render:onkasim": "remotion render OnKasim out/onkasim-ham.mp4 && ffmpeg -y -loglevel error -i out/onkasim-ham.mp4 -c:v libx264 -profile:v high -pix_fmt yuv420p -color_range tv -crf 22 -af loudnorm=I=-14:TP=-1.5:LRA=11 -c:a aac -b:a 160k -ar 48000 -movflags +faststart out/OZEL-10KASIM-hikaye.mp4",
+    "still:onkasim": "remotion still OnKasim out/OZEL-10KASIM-hikaye.jpg --frame=2900",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.541",
+    "@remotion/fonts": "4.0.541",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "4.0.541"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "typescript": "^5.9.3"
+  }
+}
