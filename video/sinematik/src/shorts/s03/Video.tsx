@@ -8,10 +8,12 @@ import { interpolate, useCurrentFrame } from 'remotion';
 import type { Word } from '../../captions';
 import { fontDuz as fontFamily } from '../../fonts';
 import { clamp, INK } from '../../kit';
-import { ap, Cizgi, Kadraj, lerp, makeShort, pop, spring, useAt, useTt, Zerre } from '../ortak';
+import { ap, Cizgi, Kadraj, lerp, makeShort, pop, spring, useAt, useTt, Zerre , T, Sayi } from '../ortak';
 import raw from './words.json';
+import rawTr from './words-tr.json';
 
 const WORDS = raw as Word[];
+const WORDS_TR = rawTr as Word[];
 
 /* ---------------- nesneler ---------------- */
 
@@ -236,7 +238,7 @@ const S4: React.FC = () => {
         <Kule x={0} y={0} s={0.6} />
       </g>
       <text x={720} y={760 + d * 1300} fontFamily={fontFamily} fontWeight={800} fontSize={64} fill="#fff" stroke={INK} strokeWidth={6} paintOrder="stroke">
-        {Math.round(d * 12262 / 1).toLocaleString('en-US')} m
+        <Sayi n={Math.round(d * 12262 / 1)} /> m
       </text>
     </Kadraj>
   );
@@ -273,12 +275,12 @@ const S6: React.FC = () => {
       <g opacity={ap(t, 0.2, 0.5)}>
         <path d={`M180 520 L300 ${520 + 1230 * (8849 / 12262)} L420 520 Z`} fill="#E8F1FF" opacity={0.18} stroke="#E8F1FF" strokeWidth={4} strokeDasharray="14 10" />
         <text x={300} y={600} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={40} fill="#E8F1FF">
-          8,849 m
+          <T en="8,849 m" tr="8.849 m" />
         </text>
       </g>
       <g transform={`translate(780 ${520 + 1230 * u}) scale(${0.8 + 0.2 * u})`}>
         <text x={0} y={0} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={110} fill="#FFD54A" stroke={INK} strokeWidth={9} paintOrder="stroke">
-          12,262 m
+          <T en="12,262 m" tr="12.262 m" />
         </text>
       </g>
     </Kadraj>
@@ -395,10 +397,10 @@ const S10: React.FC = () => {
           12 km
         </text>
         <text x={540} y={1300} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={58} fill="#fff" stroke={INK} strokeWidth={6} paintOrder="stroke">
-          6,371 km
+          <T en="6,371 km" tr="6.371 km" />
         </text>
         <text x={540} y={1720} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={150} fill="#FFD54A" stroke={INK} strokeWidth={10} paintOrder="stroke" opacity={ap(t, 1.6, 0.3)}>
-          0.2%
+          <T en="0.2%" tr="%0,2" />
         </text>
       </g>
       {/* Çizgi tepede, tek kum tanesi atar */}
@@ -410,7 +412,7 @@ const S10: React.FC = () => {
   );
 };
 
-const short = makeShort({
+const AYAR: Parameters<typeof makeShort>[0] = {
   kod: 's03',
   words: WORDS,
   voiceLen: 19.98,
@@ -444,7 +446,21 @@ const short = makeShort({
     ['pop', 'percent.', 0, 0.3],
   ],
   muzik: ['music-dark', 0.08],
-});
+};
+const short = makeShort(AYAR);
 
 export const S03 = short.Comp;
 export const S03_FRAMES = short.frames;
+
+/** Türkçe sürüm (Instagram): aynı sahneler, Türkçe ses, çapalar EN kelime -> TR kelime. */
+const shortTr = makeShort({
+  ...AYAR,
+  kod: 's03tr',
+  words: WORDS_TR,
+  voiceLen: 21.4,
+  baslik: ["DÜNYA'YI", "DELİP GEÇELİM"],
+  dil: 'tr',
+  esle: {"Let's": "Hadi", "The": "Sovyetler", "In": "1970'te", "they": "sondaja", "they#2": "12", "Down": "Orada", "and": "ve", "It's": "Bu", "That's": "Ama", "go": "ilerleyemedi", "percent.": "ikisi"},
+});
+export const S03TR = shortTr.Comp;
+export const S03TR_FRAMES = shortTr.frames;

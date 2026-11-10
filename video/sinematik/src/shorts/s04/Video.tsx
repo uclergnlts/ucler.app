@@ -8,10 +8,12 @@ import { interpolate, useCurrentFrame } from 'remotion';
 import type { Word } from '../../captions';
 import { fontDuz as fontFamily } from '../../fonts';
 import { clamp, INK } from '../../kit';
-import { ap, Cizgi, Kadraj, Koni, lerp, makeShort, pop, ShotStart, spring, useAt, useTt, Zerre } from '../ortak';
+import { ap, Cizgi, Kadraj, Koni, lerp, makeShort, pop, ShotStart, spring, useAt, useTt, Zerre , T, Sayi } from '../ortak';
 import raw from './words.json';
+import rawTr from './words-tr.json';
 
 const WORDS = raw as Word[];
+const WORDS_TR = rawTr as Word[];
 const GOLD = '#F6C744';
 const LEAD = '#8C93A3';
 
@@ -386,7 +388,7 @@ const S9: React.FC = () => {
         <circle key={i} cx={p.x} cy={p.y} r={p.r} fill={GOLD} opacity={0.85} />
       ))}
       <text x={540} y={1330} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={100} fill="#fff" stroke={INK} strokeWidth={9} paintOrder="stroke">
-        {n},000,000,000
+        <T en={`${n},000,000,000`} tr={`${n}.000.000.000`} />
       </text>
     </Kadraj>
   );
@@ -407,7 +409,7 @@ const S10: React.FC = () => {
         <rect x={-260} y={0} width={520} height={120} rx={14} fill="#D9DEE8" stroke={INK} strokeWidth={6} />
         <rect x={-200} y={30} width={400} height={60} rx={6} fill="#1B2A20" />
         <text x={0} y={78} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={48} fill="#7CFF8A">
-          0.000 g
+          <T en="0.000 g" tr="0,000 g" />
         </text>
         <rect x={-220} y={-24} width={440} height={24} rx={8} fill="#B9C3D2" stroke={INK} strokeWidth={5} />
       </g>
@@ -418,13 +420,13 @@ const S10: React.FC = () => {
       <circle cx={540} cy={1090} r={30} fill={GOLD} opacity={0.35 + 0.15 * Math.sin(f / 4)} filter="url(#s-soft)" />
       <Cizgi x={860} y={1800} s={0.95} onluk goz={t > n29 ? 'sok' : 'acik'} agiz={t > n29 ? 'eksi' : 'duz'} kolSol={[70, 30]} bakis={[-1, 0.4]} elSol={<g transform="translate(-30 -10) rotate(-30) scale(0.45)"><circle r={100} fill="#BFE6FF" opacity={0.3} stroke={INK} strokeWidth={12} /><rect x={-14} y={95} width={28} height={140} rx={12} fill="#6B4A2E" stroke={INK} strokeWidth={6} /></g>} />
       <text x={540} y={700} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={66} fill={GOLD} stroke={INK} strokeWidth={7} paintOrder="stroke" opacity={ap(t, n29 - 0.1, 0.3)}>
-        0.000 000 000 029 g
+        <T en="0.000 000 000 029 g" tr="0,000 000 000 029 g" />
       </text>
     </Kadraj>
   );
 };
 
-const short = makeShort({
+const AYAR: Parameters<typeof makeShort>[0] = {
   kod: 's04',
   words: WORDS,
   voiceLen: 21.68,
@@ -458,7 +460,21 @@ const short = makeShort({
     ['tick', '29', 0, 0.3],
   ],
   muzik: ['music-hope', 0.08],
-});
+};
+const short = makeShort(AYAR);
 
 export const S04 = short.Comp;
 export const S04_FRAMES = short.frames;
+
+/** Türkçe sürüm (Instagram): aynı sahneler, Türkçe ses, çapalar EN kelime -> TR kelime. */
+const shortTr = makeShort({
+  ...AYAR,
+  kod: 's04tr',
+  words: WORDS_TR,
+  voiceLen: 22.2,
+  baslik: ["KURŞUNDAN", "ALTIN"],
+  dil: 'tr',
+  esle: {"Scientists": "Bilim", "Really?": "Gerçekten", "Alchemists": "Simyacılar", "In": "2025'te", "a": "CERN'deki", "Lead": "Kurşun", "Their": "Elektrik", "and": "ve", "Total": "Toplam", "gold.": "altına", "past": "yanından", "three": "3", "gold#2": "altına#2"},
+});
+export const S04TR = shortTr.Comp;
+export const S04TR_FRAMES = shortTr.frames;

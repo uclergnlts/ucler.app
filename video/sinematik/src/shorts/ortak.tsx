@@ -39,7 +39,18 @@ export const findWord = (words: Word[], spec: string) => {
   if (!o) throw new Error('kelime yok: ' + spec);
   return o.s;
 };
-export const useAt = (spec: string) => findWord(useContext(WordsCtx), spec) - useContext(ShotStart);
+/** Dil sürümü: EN kelime çapası -> o dildeki kelime (aynı sahneler, başka seslendirme). */
+export const EsleCtx = createContext<Record<string, string>>({});
+export const DilCtx = createContext<'en' | 'tr'>('en');
+/** Ekrandaki yazı: useT()('20 min', '20 dk') */
+export const useT = () => {
+  const d = useContext(DilCtx);
+  return (en: string, tr: string) => (d === 'tr' ? tr : en);
+};
+export const useAt = (spec: string) => {
+  const m = useContext(EsleCtx);
+  return findWord(useContext(WordsCtx), m[spec] ?? spec) - useContext(ShotStart);
+};
 /** Çekim içi saniye. */
 export const useTt = () => useCurrentFrame() / FPS;
 
@@ -332,10 +343,13 @@ export const makeShort = (o: {
   vurgu?: string;
   cues?: Cue[];
   muzik?: [string, number];
+  dil?: 'en' | 'tr';
+  esle?: Record<string, string>;
 }) => {
+  const esle = o.esle ?? {};
   const tail = o.tail ?? 0.7;
   const frames = Math.round((o.voiceLen + OFF + tail) * FPS);
-  const sec = (w: string) => (w === '@END' ? o.voiceLen + Math.max(0.05, tail - 0.6) : findWord(o.words, w)) + OFF;
+  const sec = (w: string) => (w === '@END' ? o.voiceLen + Math.max(0.05, tail - 0.6) : findWord(o.words, esle[w] ?? w)) + OFF;
   const fr = (s: number) => Math.round(s * FPS);
   const shots = o.plan.map((p, i) => {
     const from = i === 0 ? 0 : fr(sec(p.w) - 0.12);
@@ -347,6 +361,8 @@ export const makeShort = (o: {
     const titleO = interpolate(f, [frames - 8, frames], [1, 1], clamp);
     return (
       <AbsoluteFill style={{ background: '#0B0D16' }}>
+        <DilCtx.Provider value={o.dil ?? 'en'}>
+        <EsleCtx.Provider value={esle}>
         <WordsCtx.Provider value={o.words}>
           {shots.map((s, i) => (
             <Sequence key={i} from={s.from} durationInFrames={s.dur} name={`çekim ${i + 1}`}>
@@ -365,6 +381,8 @@ export const makeShort = (o: {
             </Sequence>
           ))}
         </WordsCtx.Provider>
+        </EsleCtx.Provider>
+        </DilCtx.Provider>
         {/* iki satır başlık (Shorts kapağı gibi okunur) */}
         <div style={{ position: 'absolute', left: 0, right: 0, top: 210, textAlign: 'center', fontFamily, fontWeight: 800, fontSize: 74, lineHeight: 1.02, letterSpacing: '-0.02em', color: '#fff', opacity: titleO, textShadow: `0 4px 0 ${INK}, 0 0 22px rgba(0,0,0,0.75)`, WebkitTextStroke: `3px ${INK}` }}>
           <div>{o.baslik[0]}</div>
@@ -392,3 +410,8 @@ export const makeShort = (o: {
   };
   return { Comp, frames };
 };
+
+/** Dile göre yazı: <T en="20 min" tr="20 dk" /> */
+export const T: React.FC<{ en: string; tr: string }> = ({ en, tr }) => <>{useT()(en, tr)}</>;
+/** Dile göre binlik ayraçlı sayı (12,262 / 12.262). */
+export const Sayi: React.FC<{ n: number }> = ({ n }) => <>{n.toLocaleString(useContext(DilCtx) === 'tr' ? 'tr-TR' : 'en-US')}</>;

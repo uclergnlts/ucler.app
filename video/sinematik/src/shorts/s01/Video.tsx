@@ -9,8 +9,10 @@ import { fontDuz as fontFamily } from '../../fonts';
 import { clamp, INK } from '../../kit';
 import { ap, Cizgi, HEAD, Kadraj, Koni, lerp, makeShort, outBack, pop, spring, useAt, useTt, Zerre } from '../ortak';
 import raw from './words.json';
+import rawTr from './words-tr.json';
 
 const WORDS = raw as Word[];
+const WORDS_TR = rawTr as Word[];
 const GREEN = '#63D86B';
 const GREEN_D = '#2E9B47';
 
@@ -512,7 +514,7 @@ const S9: React.FC = () => {
   );
 };
 
-const short = makeShort({
+const AYAR: Parameters<typeof makeShort>[0] = {
   kod: 's01',
   words: WORDS,
   voiceLen: 18.46,
@@ -546,7 +548,21 @@ const short = makeShort({
     ['coins', 'Prize.', 0.1, 0.25],
   ],
   muzik: ['music-happy', 0.08],
-});
+};
+const short = makeShort(AYAR);
 
 export const S01 = short.Comp;
 export const S01_FRAMES = short.frames;
+
+/** Türkçe sürüm (Instagram): aynı sahneler, Türkçe ses, çapalar EN kelime -> TR kelime. */
+const shortTr = makeShort({
+  ...AYAR,
+  kod: 's01tr',
+  words: WORDS_TR,
+  voiceLen: 19.42,
+  baslik: ["BİR DOKTOR", "BAKTERİ İÇTİ"],
+  dil: 'tr',
+  esle: {"A": "Bir", "On": "Hem", "In": "1984'te", "Nobody": "Kimse", "So": "O", "Days": "Birkaç", "that": "o", "bacteria.": "içti", "germ.": "mikrop", "drank#2": "içti#2", "Prize.": "Ödülü", "no,": "ise", "inflamed,": "iltihaplandı", "said#2": "dediği"},
+});
+export const S01TR = shortTr.Comp;
+export const S01TR_FRAMES = shortTr.frames;

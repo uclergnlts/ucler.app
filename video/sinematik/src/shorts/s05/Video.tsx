@@ -8,10 +8,12 @@ import { interpolate, useCurrentFrame } from 'remotion';
 import type { Word } from '../../captions';
 import { fontDuz as fontFamily } from '../../fonts';
 import { clamp, INK } from '../../kit';
-import { ap, Cizgi, Kadraj, lerp, makeShort, pop, spring, useAt, useTt, Zerre } from '../ortak';
+import { ap, Cizgi, Kadraj, lerp, makeShort, pop, spring, useAt, useTt, Zerre , T, Sayi } from '../ortak';
 import raw from './words.json';
+import rawTr from './words-tr.json';
 
 const WORDS = raw as Word[];
+const WORDS_TR = rawTr as Word[];
 const COPPER = '#D98A4E';
 
 /* ---------------- nesneler ---------------- */
@@ -157,7 +159,7 @@ const Gosterge: React.FC<{ x: number; y: number; v: number; esne?: boolean }> = 
       <path d="M0 0 V-170" stroke="#FF5A3A" strokeWidth={12} strokeLinecap="round" transform={`rotate(${a})`} />
       <circle r={22} fill="#FF5A3A" />
       <text x={0} y={120} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={56} fill="#fff">
-        {Math.round(v)} km/h
+        {Math.round(v)} <T en="km/h" tr="km/sa" />
       </text>
       {esne && <ellipse cx={0} cy={60} rx={30} ry={22} fill="#5A2230" />}
     </g>
@@ -264,7 +266,7 @@ const S4: React.FC = () => {
       <g opacity={ap(t, flat - 0.1, 0.3)}>
         <path d="M260 1120 h560" stroke="#FFD54A" strokeWidth={6} />
         <text x={540} y={1210} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={60} fill="#FFD54A" stroke={INK} strokeWidth={6} paintOrder="stroke">
-          1.5 mm
+          <T en="1.5 mm" tr="1,5 mm" />
         </text>
       </g>
     </Kadraj>
@@ -360,7 +362,7 @@ const S8: React.FC = () => {
         ))}
       </g>
       <text x={540} y={760} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={120} fill="#FFD54A" stroke={INK} strokeWidth={9} paintOrder="stroke" opacity={ap(t, 0.7, 0.3)}>
-        40 km/h
+        40 <T en="km/h" tr="km/sa" />
       </text>
     </Kadraj>
   );
@@ -390,7 +392,7 @@ const S9: React.FC = () => {
   );
 };
 
-const short = makeShort({
+const AYAR: Parameters<typeof makeShort>[0] = {
   kod: 's05',
   words: WORDS,
   voiceLen: 18.24,
@@ -422,7 +424,21 @@ const short = makeShort({
     ['coins', 'forehead.', 0.3, 0.25],
   ],
   muzik: ['music-happy', 0.08],
-});
+};
+const short = makeShort(AYAR);
 
 export const S05 = short.Comp;
 export const S05_FRAMES = short.frames;
+
+/** Türkçe sürüm (Instagram): aynı sahneler, Türkçe ses, çapalar EN kelime -> TR kelime. */
+const shortTr = makeShort({
+  ...AYAR,
+  kod: 's05tr',
+  words: WORDS_TR,
+  voiceLen: 17.98,
+  baslik: ["BU PARA", "ONU ÖLDÜRÜR MÜ?"],
+  dil: 'tr',
+  esle: {"This": "Bu", "Will": "Aşağıdaki", "Everyone": "Herkes", "but": "Ama", "It": "Düşerken", "After": "Yaklaşık", "it#2": "hızlanmayı", "Top": "En", "It#2": "Alnına", "flutters": "savrulur", "stops": "hızlanmayı", "flick": "fiske", "forehead.": "hissedersin", "flat.": "yassıdır", "leaf.": "yaprak"},
+});
+export const S05TR = shortTr.Comp;
+export const S05TR_FRAMES = shortTr.frames;

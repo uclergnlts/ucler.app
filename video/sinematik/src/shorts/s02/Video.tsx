@@ -8,10 +8,12 @@ import { interpolate, useCurrentFrame } from 'remotion';
 import type { Word } from '../../captions';
 import { fontDuz as fontFamily } from '../../fonts';
 import { clamp, INK } from '../../kit';
-import { ap, Cizgi, Kadraj, lerp, makeShort, pop, spring, useAt, useTt, Zerre } from '../ortak';
+import { ap, Cizgi, Kadraj, lerp, makeShort, pop, spring, useAt, useTt, Zerre , T } from '../ortak';
 import raw from './words.json';
+import rawTr from './words-tr.json';
 
 const WORDS = raw as Word[];
+const WORDS_TR = rawTr as Word[];
 const RAD = '#9BFF5A';
 
 /* ---------------- nesneler ---------------- */
@@ -246,7 +248,7 @@ const S4: React.FC = () => {
         <path d="M0 0 V-150" stroke={INK} strokeWidth={10} strokeLinecap="round" transform={`rotate(${lerp(0, 120, ap(t, every, 0.7))})`} />
         <circle r={14} fill={INK} />
         <text x={0} y={-230} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={70} fill="#FFD54A" opacity={ap(t, every + 0.3, 0.3)}>
-          20 min
+          <T en="20 min" tr="20 dk" />
         </text>
       </g>
       {/* bomba = 10 Mt */}
@@ -379,7 +381,7 @@ const S8: React.FC = () => {
   );
 };
 
-const short = makeShort({
+const AYAR: Parameters<typeof makeShort>[0] = {
   kod: 's02',
   words: WORDS,
   voiceLen: 16.7,
@@ -410,7 +412,21 @@ const short = makeShort({
     ['buzz', 'did.', 0, 0.2],
   ],
   muzik: ['music-dark', 0.09],
-});
+};
+const short = makeShort(AYAR);
 
 export const S02 = short.Comp;
 export const S02_FRAMES = short.frames;
+
+/** Türkçe sürüm (Instagram): aynı sahneler, Türkçe ses, çapalar EN kelime -> TR kelime. */
+const shortTr = makeShort({
+  ...AYAR,
+  kod: 's02tr',
+  words: WORDS_TR,
+  voiceLen: 16.2,
+  baslik: ["KASIRGAYA", "ATOM BOMBASI?"],
+  dil: 'tr',
+  esle: {"Why": "Kasırgayı", "So": "O", "A": "Büyük", "as": "her", "all": "Hem", "And": "Üstelik", "The": "Kasırga", "He": "Ama", "it.": "denedi", "every": "her", "notice.": "bile", "did.": "etti", "fallout": "serpintiyi"},
+});
+export const S02TR = shortTr.Comp;
+export const S02TR_FRAMES = shortTr.frames;
