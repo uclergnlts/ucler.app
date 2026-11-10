@@ -4,10 +4,10 @@
  * Kurallar: 12-25 sn, ilk kare tuhaf durum, cevap sonda, son kare ilk kareye döner (loop).
  */
 import React, { createContext, useContext, useMemo } from 'react';
-import { AbsoluteFill, Audio, Easing, interpolate, Sequence, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
+import { AbsoluteFill, Audio, Easing, Freeze, interpolate, Sequence, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
 import { Caption } from '../components/Caption';
 import type { Word } from '../captions';
-import { fontFamily } from '../fonts';
+import { fontDuz as fontFamily } from '../fonts';
 import { clamp, INK } from '../kit';
 
 export const FPS = 30;
@@ -350,9 +350,18 @@ export const makeShort = (o: {
         <WordsCtx.Provider value={o.words}>
           {shots.map((s, i) => (
             <Sequence key={i} from={s.from} durationInFrames={s.dur} name={`çekim ${i + 1}`}>
-              <ShotStart.Provider value={s.start}>
-                <s.C />
-              </ShotStart.Provider>
+              {s.w === '@END' ? (
+                // Döngü: son kareler ilk kareyle birebir aynı (çekim 1, kare 0'da dondurulmuş).
+                <Freeze frame={0}>
+                  <ShotStart.Provider value={shots[0].start}>
+                    <s.C />
+                  </ShotStart.Provider>
+                </Freeze>
+              ) : (
+                <ShotStart.Provider value={s.start}>
+                  <s.C />
+                </ShotStart.Provider>
+              )}
             </Sequence>
           ))}
         </WordsCtx.Provider>
@@ -365,8 +374,8 @@ export const makeShort = (o: {
           ucler<span style={{ color: '#F2C21A' }}>.</span>
         </div>
         <Sequence from={fr(OFF)} durationInFrames={fr(o.voiceLen + 0.1)}>
-          <div style={{ position: 'absolute', left: 60, right: 60, bottom: 560, display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
-            <Caption words={o.words} color="#fff" accent="#FFD54A" size={70} style={{ transformOrigin: 'center', textShadow: `0 4px 0 ${INK}, 0 0 20px rgba(0,0,0,0.9)`, WebkitTextStroke: `2px ${INK}` }} />
+          <div style={{ position: 'absolute', left: 60, right: 60, bottom: 400, display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+            <Caption words={o.words} color="#fff" accent="#FFD54A" size={70} style={{ fontFamily, transformOrigin: 'center', textShadow: `0 4px 0 ${INK}, 0 0 20px rgba(0,0,0,0.9)`, WebkitTextStroke: `2px ${INK}` }} />
           </div>
         </Sequence>
         <Sequence from={fr(OFF)}>

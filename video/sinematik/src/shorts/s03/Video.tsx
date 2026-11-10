@@ -6,7 +6,7 @@
 import React, { useMemo } from 'react';
 import { interpolate, useCurrentFrame } from 'remotion';
 import type { Word } from '../../captions';
-import { fontFamily } from '../../fonts';
+import { fontDuz as fontFamily } from '../../fonts';
 import { clamp, INK } from '../../kit';
 import { ap, Cizgi, Kadraj, lerp, makeShort, pop, spring, useAt, useTt, Zerre } from '../ortak';
 import raw from './words.json';

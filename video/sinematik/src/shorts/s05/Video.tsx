@@ -6,7 +6,7 @@
 import React, { useMemo } from 'react';
 import { interpolate, useCurrentFrame } from 'remotion';
 import type { Word } from '../../captions';
-import { fontFamily } from '../../fonts';
+import { fontDuz as fontFamily } from '../../fonts';
 import { clamp, INK } from '../../kit';
 import { ap, Cizgi, Kadraj, lerp, makeShort, pop, spring, useAt, useTt, Zerre } from '../ortak';
 import raw from './words.json';
@@ -201,7 +201,7 @@ const S1: React.FC = () => {
       <g opacity={ap(t, 0.8, 0.4)}>
         <path d="M900 700 V1900" stroke="#fff" strokeWidth={6} strokeDasharray="20 16" />
         <path d="M880 720 l20 -26 l20 26 M880 1880 l20 26 l20 -26" stroke="#fff" strokeWidth={6} fill="none" />
-        <text x={870} y={1560} textAnchor="end" fontFamily={fontFamily} fontWeight={800} fontSize={86} fill="#FFD54A" stroke={INK} strokeWidth={8} paintOrder="stroke">
+        <text x={870} y={1290} textAnchor="end" fontFamily={fontFamily} fontWeight={800} fontSize={86} fill="#FFD54A" stroke={INK} strokeWidth={8} paintOrder="stroke">
           380 m
         </text>
       </g>

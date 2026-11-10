@@ -6,7 +6,7 @@
 import React, { useContext, useMemo } from 'react';
 import { interpolate, useCurrentFrame } from 'remotion';
 import type { Word } from '../../captions';
-import { fontFamily } from '../../fonts';
+import { fontDuz as fontFamily } from '../../fonts';
 import { clamp, INK } from '../../kit';
 import { ap, Cizgi, Kadraj, Koni, lerp, makeShort, pop, ShotStart, spring, useAt, useTt, Zerre } from '../ortak';
 import raw from './words.json';
@@ -321,7 +321,7 @@ const S6: React.FC = () => {
       <HizCizgi y={1210} yon={-1} />
       <Cekirdek x={x1} y={860} s={1.3} yuz={yak ? 'goz-kirp' : 'acik'} />
       <Cekirdek x={x2} y={1200} s={1.3} yuz={yak ? 'goz-kirp' : 'acik'} />
-      <text x={540} y={1560} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={74} fill="#9FD3FF" opacity={ap(t, 0.3, 0.4)}>
+      <text x={540} y={540} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={74} fill="#9FD3FF" opacity={ap(t, 0.3, 0.4)}>
         ≈ c
       </text>
     </Kadraj>
@@ -348,7 +348,7 @@ const S7: React.FC = () => {
         const a = -Math.PI / 2 + (i - 1) * 0.9;
         return <Proton key={i} x={540 + Math.cos(a) * k * 520} y={1000 + Math.sin(a) * k * 520} s={1.2} />;
       })}
-      <text x={540} y={1480} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={160} fill="#fff" stroke={INK} strokeWidth={10} paintOrder="stroke">
+      <text x={540} y={1310} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={160} fill="#fff" stroke={INK} strokeWidth={10} paintOrder="stroke">
         {z}
       </text>
       <rect x={-400} y={-400} width={1900} height={2800} fill="#fff" opacity={fl} />
@@ -366,7 +366,7 @@ const S8: React.FC = () => {
       <rect x={-400} y={-400} width={1900} height={2800} fill="#0E0B05" />
       <circle cx={540} cy={1000} r={700} fill={GOLD} opacity={a * 0.25} filter="url(#s-glow)" />
       <Cekirdek x={540} y={1000} s={1.3 + spring(t, g) * 0.05} altin={a} yuz={a > 0.5 ? 'mutlu' : 'acik'} />
-      <text x={540} y={1460} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={150} fill={a > 0.5 ? GOLD : '#fff'} stroke={INK} strokeWidth={10} paintOrder="stroke">
+      <text x={540} y={1330} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={150} fill={a > 0.5 ? GOLD : '#fff'} stroke={INK} strokeWidth={10} paintOrder="stroke">
         {a > 0.5 ? 'Au' : 'Pb'}
       </text>
     </Kadraj>
@@ -385,7 +385,7 @@ const S9: React.FC = () => {
       {pts.slice(0, Math.round(u * pts.length)).map((p, i) => (
         <circle key={i} cx={p.x} cy={p.y} r={p.r} fill={GOLD} opacity={0.85} />
       ))}
-      <text x={540} y={1620} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={100} fill="#fff" stroke={INK} strokeWidth={9} paintOrder="stroke">
+      <text x={540} y={1330} textAnchor="middle" fontFamily={fontFamily} fontWeight={800} fontSize={100} fill="#fff" stroke={INK} strokeWidth={9} paintOrder="stroke">
         {n},000,000,000
       </text>
     </Kadraj>
