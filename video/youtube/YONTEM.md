@@ -7,9 +7,9 @@ Bu dosya, başka bir projede Claude'a verilmek üzere yazıldı. ucler.app'te "Y
 ## 1. Hedef ve format
 - **Amaç:** YouTube'da izlenme ve abone kazanmak, dünya çapında. Paketleme (başlık, açıklama, kapak) ana dilde yapılır, diğer diller YouTube Studio'dan çeviri olarak eklenir.
 - **Uzun video:** 16:9, 1920×1080, 24 fps, **3-4 dakika**. 60 saniye uzun video için kısadır, 8 dakikayı geçen şişirilmiş video da izlenme süresini düşürür.
-- **Shorts:** 9:16, 1080×1920, 40-55 saniye. Aynı animasyondan çıkarılır, ayrıca çizilmez (bkz. bölüm 7).
+- **Shorts:** 9:16, 1080×1920, en az 12, en fazla 25 saniye (Üçler kararı, 2026-11-10). Aynı animasyondan çıkarılır, ayrıca çizilmez (bkz. bölüm 7).
 - **Ekranda kelime yok.** Yalnızca sayı, birim ve sembol olur (°C, %, L, g/cm³, ?, ✓, ×5). Böylece görüntü her dilde aynı kalır ve dublajla tek video bütün dillere hizmet eder.
-- **Yayın ritmi önerisi:** haftada 1 uzun video ve 3 Shorts. Shorts, yüklemelerin %25-40'ı olunca uzun videoların izlenmesini artırıyor.
+- **Yayın ritmi (Üçler kararı, 2026-11-10):** her gün 1 Shorts, haftada 1 uzun video. Uzun videodan çıkan 2 Shorts'un dışındaki günler 12-25 sn'lik bağımsız, sesli "dene ve gör" Shorts'larıyla dolar.
 
 ## 2. Hikâye yapısı (3-4 dk için)
 Her video bir **gündelik gizem** etrafında kurulur. İzleyici karakterle birlikte bir şeyi yaşar, şaşırır ve sonra nedenini öğrenir.
