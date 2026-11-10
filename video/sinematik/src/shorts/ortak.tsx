@@ -335,7 +335,7 @@ export const makeShort = (o: {
 }) => {
   const tail = o.tail ?? 0.7;
   const frames = Math.round((o.voiceLen + OFF + tail) * FPS);
-  const sec = (w: string) => (w === '@END' ? o.voiceLen + 0.05 : findWord(o.words, w)) + OFF;
+  const sec = (w: string) => (w === '@END' ? o.voiceLen + Math.max(0.05, tail - 0.6) : findWord(o.words, w)) + OFF;
   const fr = (s: number) => Math.round(s * FPS);
   const shots = o.plan.map((p, i) => {
     const from = i === 0 ? 0 : fr(sec(p.w) - 0.12);
