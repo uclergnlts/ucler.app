@@ -8,7 +8,9 @@ import { lbl } from '../kit.js';
 import { qmark } from '../props.js';
 import * as SH from '../sets/show.js';
 const { GOLD, PINK, CYAN, DOORC } = SH;
-const DW = 230, DH = 380, DX = [E.W * 0.36, E.W * 0.53, E.W * 0.7];
+const DW = 230, DH = 380;
+// door x positions read E.W at draw time (the 9:16 Shorts wrapper swaps E.W while drawing)
+const DX = new Proxy([], { get: (_, k) => { const a = [E.W * 0.36, E.W * 0.53, E.W * 0.7], v = a[k]; return typeof v === 'function' ? v.bind(a) : v; } });
 const inside = (n, t, o = {}) => (g, cx, cy) => (n === 2 ? SH.car(g, cx + 40, cy - 6, 0.62, { t, shine: o.shine ?? 1 }) : SH.goat(g, cx - 10, cy, 1.05, { t: t + n, f: -1, bleat: o.bleat || 0 }));
 const heroAtPodium = (g, t, pose, expr, look = [1, -0.2]) => { const h = hero(g, { x: E.W * 0.14, y: SH.SGY(), s: 1.9, facing: 1, t, pose, expr, look, rim: { color: '#c8e6ff', dir: [-0.7, -0.6], w: 4 } }); SH.podium(g, E.W * 0.155, SH.SGY() + 6, 1.0); return h; };
 

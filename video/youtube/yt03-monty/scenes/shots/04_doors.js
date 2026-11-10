@@ -116,7 +116,7 @@ function garages(g, t, k, burst = 0) {
   const nS = Math.round(353 * k), nW = Math.round(647 * k);
   [[0.27, GSTAY, nS, '='], [0.73, GSW, nW, '⇄']].forEach(([fx, c, n, sym], j) => { const x = E.W * fx, cars = Math.floor(n / 50);
     SH.garage(g, x, E.H * 0.82, 560, 400, { color: c, inside: (g) => { for (let i = 0; i < cars; i++) SH.car(g, x - 190 + (i % 4) * 126, E.H * 0.82 - 10 - Math.floor(i / 4) * 92, 0.4, { t, color: DOORC[i % 3], shine: 0 }); } });
-    lbl(g, `${n}`, x, E.H * 0.16, 1, 110, j ? GOLD : CYAN, 'center'); text(g, sym, x, E.H * 0.82 - 440, { size: 90, font: 'Nunito', weight: 900, align: 'center', color: '#ffffff', stroke: 6, strokeColor: '#0c1430' }); });
+    text(g, `${n}`, x, E.H * 0.16 + 40, { size: 110, font: 'Nunito', weight: 900, align: 'center', color: j ? GOLD : CYAN, stroke: 7, strokeColor: '#0c1430' }); text(g, sym, x, E.H * 0.82 - 440, { size: 90, font: 'Nunito', weight: 900, align: 'center', color: '#ffffff', stroke: 6, strokeColor: '#0c1430' }); });
   if (burst > 0) { const r = rng(3); for (let i = 0; i < 12; i++) { const a = -Math.PI / 2 + (r() - 0.5) * 2.2, d = burst * (300 + r() * 300); SH.car(g, E.W * 0.73 + Math.cos(a) * d, E.H * 0.5 + Math.sin(a) * d + 600 * burst * burst, 0.3, { t, color: DOORC[i % 3], shine: 0 }); } FX.sparkle(g, E.W * 0.73, E.H * 0.4, 80 * (1 - burst), '#ffffff', 1); }
 }
 registerShot('y02', { draw(g, t) { garages(g, t, ease.inOut(prog(t, 0.3, 3.4))); } });
