@@ -7,10 +7,14 @@ import { resetAll, setAd } from "@/lib/store";
 import { animSes, animSesAyarla, ses, sesAyarla, useAnimSesAcik, useSesAcik } from "@/lib/ses";
 import { oyunAyarla, useOyunAcik } from "@/lib/oyun";
 import { ABONELIK } from "@/lib/abonelik";
+import { bildirimGonder } from "@/lib/bildirim";
+import { olay } from "@/lib/olay";
+import { magazaAdresi, uygulamayiPaylas } from "@/lib/yerel";
 import { Icon } from "../icons";
 import { Bolum, INSTAGRAM, Liste, Ok, Satir, UstEylem } from "../temel";
 import { Button } from "../ui/button";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "../ui/dialog";
+import { Sheet, SheetClose, SheetContent, SheetTitle } from "../ui/sheet";
 import Kabuk from "./Kabuk";
 
 export default function Ayarlar() {
@@ -19,7 +23,10 @@ export default function Ayarlar() {
   const [cikiyor, setCikiyor] = useState(false), [silHata, setSilHata] = useState(false), [cikisHata, setCikisHata] = useState(false);
   /** Çıkışta ve hesap silinince bu cihazdaki ilerleme ve ad temizlenir. */
   const temizle = () => { resetAll(); setAd(""); girisYap(); };
-  const Insta = Icon.instagram, Bulb = Icon.bulb, Kilit = Icon.kilit;
+  const Insta = Icon.instagram, Bulb = Icon.bulb, Kilit = Icon.kilit, Paylas = Icon.paylas, Yildiz = Icon.yildiz, Soru = Icon.soru;
+  // Mağaza sayfası yalnızca uygulamada bilinir; sayfa önce sitedeki gibi çizilir, satır sonra eklenir.
+  const [magaza, setMagaza] = useState<string | null>(null), [kopya, setKopya] = useState(false), [gorus, setGorus] = useState(false);
+  useEffect(() => setMagaza(magazaAdresi()), []);
   return (
     <Kabuk title="Ayarlar" sag={<UstEylem href="/hakkinda/" label="Hakkında" icon={<Icon.soru />} />}>
       <Bolum title="Hesap">
@@ -76,6 +83,22 @@ export default function Ayarlar() {
           <Satir external href={INSTAGRAM.url} icon={<Insta />} title="İletişim" sub={`Instagram'da ${INSTAGRAM.ad}`} tag={<Ok />} />
         </Liste>
       </Bolum>
+      <Bolum title="Destek ol">
+        <Liste>
+          <Satir
+            icon={<Paylas />}
+            title="Arkadaşına öner"
+            sub={kopya ? "Bağlantı kopyalandı" : "ucler'i arkadaşına gönder"}
+            tag={<Ok />}
+            onClick={async () => setKopya((await uygulamayiPaylas()) === "kopyalandi")}
+          />
+          {magaza && (
+            <Satir external href={magaza} icon={<Yildiz />} title="Uygulamayı puanla" sub="Google Play'de puan ver, yorum yaz" tag={<Ok />} />
+          )}
+          <Satir icon={<Soru />} title="Görüşünü yaz" sub="Eksik ya da istediğin şeyi bize ilet" tag={<Ok />} onClick={() => setGorus(true)} />
+        </Liste>
+        <Gorus acik={gorus} ayarla={setGorus} />
+      </Bolum>
       <Bolum title="İlerleme">
         <Dialog>
           <DialogTrigger asChild>
@@ -105,6 +128,51 @@ export default function Ayarlar() {
         </Dialog>
       </Bolum>
     </Kabuk>
+  );
+}
+
+/** "Görüşünü yaz" penceresi. Öğrenci bildirimi tablosuna düşer (ders "gorus"), günlük özet e-postasında görünür. */
+function Gorus({ acik, ayarla }: { acik: boolean; ayarla: (a: boolean) => void }) {
+  const [not, setNot] = useState("");
+  const [durum, setDurum] = useState<"bos" | "gidiyor" | "tamam" | "hata">("bos");
+  useEffect(() => { if (acik) { setNot(""); setDurum("bos"); } }, [acik]);
+  async function gonder() {
+    setDurum("gidiyor");
+    try {
+      await bildirimGonder("hata", { ders: "gorus", yer: "Ayarlar > Görüşünü yaz" }, not);
+      olay("gorus");
+      setDurum("tamam");
+    } catch { setDurum("hata"); }
+  }
+  return (
+    <Sheet open={acik} onOpenChange={ayarla}>
+      <SheetContent aria-describedby={undefined}>
+        {durum === "tamam" ? (
+          <>
+            <SheetTitle>Teşekkürler!</SheetTitle>
+            <p className="mb-1.5 text-base leading-relaxed text-muted-foreground">Görüşün ekibimize ulaştı. Hepsini okuyoruz.</p>
+            <SheetClose asChild><Button variant="outline">Kapat</Button></SheetClose>
+          </>
+        ) : (
+          <>
+            <SheetTitle>Görüşünü yaz</SheetTitle>
+            <textarea
+              value={not}
+              onChange={(e) => setNot(e.target.value)}
+              maxLength={600}
+              rows={4}
+              placeholder="Neyi beğendin, neyi eksik buldun, ne olsun isterdin?"
+              aria-label="Görüşün"
+              className="w-full resize-none rounded-xl border border-border-strong bg-card px-4 py-3 text-base text-foreground outline-none placeholder:text-muted-foreground focus-visible:border-foreground"
+            />
+            {durum === "hata" && <p role="alert" className="text-[14px] text-bad">Gönderilemedi. Bağlantını kontrol edip yeniden dene.</p>}
+            <Button className="mt-1" disabled={not.trim().length < 3 || durum === "gidiyor"} onClick={gonder}>
+              {durum === "gidiyor" ? "Gönderiliyor…" : "Gönder"}
+            </Button>
+          </>
+        )}
+      </SheetContent>
+    </Sheet>
   );
 }
 

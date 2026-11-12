@@ -27,6 +27,27 @@ export default function Yerel() {
     });
     return () => { void dinle.then((d) => d.remove()); };
   }, [router]);
+  // Android geri tuşu: açık bir pencere varsa onu kapatır; ana ekranda ilk basışta uyarır, iki saniye içinde ikinci
+  // basışta uygulamadan çıkar (yanlışlıkla kapanmasın); diğer ekranlarda bir önceki ekrana döner.
+  const [cikis, setCikis] = useState(false);
+  const sonGeri = useRef(0);
+  useEffect(() => {
+    if (Capacitor.getPlatform() !== "android") return;
+    let zaman: ReturnType<typeof setTimeout>;
+    const dinle = App.addListener("backButton", ({ canGoBack }) => {
+      const video = document.querySelector<HTMLDialogElement>("dialog[open]");
+      if (video) return video.close();
+      if (document.querySelector('[role="dialog"][data-state="open"]'))
+        return void document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", bubbles: true }));
+      if (!/^\/(index\.html)?$/.test(location.pathname)) return canGoBack ? history.back() : router.replace("/");
+      if (Date.now() - sonGeri.current < 2000) return void App.exitApp();
+      sonGeri.current = Date.now();
+      setCikis(true);
+      clearTimeout(zaman);
+      zaman = setTimeout(() => setCikis(false), 2000);
+    });
+    return () => { clearTimeout(zaman); void dinle.then((d) => d.remove()); };
+  }, [router]);
   useEffect(() => {
     const yerel = Capacitor.isNativePlatform();
     const onizleme = new URLSearchParams(location.search).has("acilis");
@@ -35,7 +56,12 @@ export default function Yerel() {
     if ((yerel || onizleme) && !azalt) setAcilis(true);
     else if (yerel) void SplashScreen.hide().catch(() => {});
   }, []);
-  return acilis ? <Acilis bitti={() => setAcilis(false)} /> : null;
+  return (
+    <>
+      {acilis && <Acilis bitti={() => setAcilis(false)} />}
+      {cikis && <div className="toast" role="status">Çıkmak için tekrar bas</div>}
+    </>
+  );
 }
 
 function Acilis({ bitti }: { bitti: () => void }) {

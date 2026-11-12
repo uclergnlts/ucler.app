@@ -7,6 +7,7 @@
 // kaydet, paylaş ve ses.
 // Sıra her açılışta karışıktır: önce izlenmemiş videolar, hepsi izlendikten sonra izlenenler yine karışık gelir.
 // %80'i izlenen video "izlendi" sayılır; liste tf-izlenen'de tutulur, hesaba eşitlenir.
+import { paylas as paylasimMenusu } from "@/lib/yerel";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { DERSLER } from "@/lib/dersler";
@@ -162,10 +163,7 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
 
   async function paylas() {
     const url = adres(`/videolar/#${v.id}`);
-    try {
-      if (navigator.share) await navigator.share({ title: v.baslik, url });
-      else { await navigator.clipboard.writeText(url); o.toast("Bağlantı kopyalandı"); }
-    } catch {}
+    if ((await paylasimMenusu({ baslik: v.baslik, url })) === "kopyalandi") o.toast("Bağlantı kopyalandı");
   }
 
   return (

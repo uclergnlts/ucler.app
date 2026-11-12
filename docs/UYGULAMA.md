@@ -42,3 +42,11 @@ Herkese aynı soru; gün Türkiye saatiyle 00:00'da değişir, dersler sırayla 
 sorulardan seçilir (lib/content.ts `gunSorusuHavuzu`). Tek deneme; doğru cevap 100 puan + hız bonusu (ilk 10 sn +50,
 60. saniyeye kadar azalarak 0). Hesabı olanın süresi ve puanı sunucuda (supabase/migrations/20261030_gunun_sorusu.sql)
 tutulur ve haftalık lige eklenir; hesabı olmayan çözebilir ama puanı kaydedilmez.
+
+## Puanlama, paylaşım, geri tuşu, görüş (2026-11-12)
+Kapalı test raporundaki öneriler üzerine eklendi. Yardımcılar `lib/yerel.ts` içindedir.
+- **Puanlama penceresi:** `@capacitor-community/in-app-review`. Ünite testi geçilince ya da en az üç konu bitirmiş öğrenci bir konu testini en çok bir yanlışla bitirince, kutlamadan 2,5 saniye sonra istenir (`components/Puanla.tsx`). En çok 60 günde bir denenir. Google pencereyi yalnızca Play'den kurulan sürümde gösterir; deneme APK'sında çıkmaz.
+- **Uygulamayı puanla satırı:** Ayarlar'da, yalnızca Android'de görünür. iOS'ta App Store sayfası yayımlanınca `magazaAdresi` içine eklenecek.
+- **Arkadaşına öner:** Ayarlar ve Profil'de. Uygulamada `@capacitor/share` (Android WebView'de `navigator.share` yok), sitede tarayıcı menüsü ya da pano. Video paylaşımı da aynı yardımcıyı kullanır.
+- **Android geri tuşu:** `components/Yerel.tsx`. Açık pencereyi kapatır; ana ekranda "Çıkmak için tekrar bas" uyarısından sonra iki saniye içinde ikinci basışta çıkar; diğer ekranlarda geri döner.
+- **Görüşünü yaz:** Ayarlar'da. `bildirim` tablosuna `tur = hata`, `ders = gorus` olarak düşer ve günlük özet e-postasında görünür (tablodaki tür kısıtı değiştirilmedi).

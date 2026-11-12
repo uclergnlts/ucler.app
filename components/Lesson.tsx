@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { DERSLER, secmeli, type DersId, type Entry, type Topic } from "@/lib/dersler";
 import {
-  asamaBitir, ipucuGoruldu, setProg, toggleAnlamadim, useAnlamadim, useAsama, useDurumlar, useIpucu, useProg, useTarayici, useYer,
+  asamaBitir, doneKeys, ipucuGoruldu, setProg, toggleAnlamadim, useAnlamadim, useAsama, useDurumlar, useIpucu, useProg, useTarayici, useYer,
   yanlisKaydet, yerYaz,
 } from "@/lib/store";
 import { asamalar, kartinAsamasi, sureDk } from "@/lib/asama";
@@ -35,6 +35,7 @@ import AsamaYolu, { type YolDugum } from "./AsamaYolu";
 import { Konfeti, Madalya, PuanRozet } from "./Kutlama";
 import KayitDavet, { useKaydet } from "./KayitDavet";
 import Bildir, { BildirDugme } from "./Bildir";
+import Puanla from "./Puanla";
 import PlusEkran from "./Plus";
 import { useOdemeli } from "@/lib/abonelik";
 import type { BildirimYer } from "@/lib/bildirim";
@@ -402,6 +403,8 @@ export default function Lesson({
       <article className="flex flex-col items-center gap-2 pt-4 text-center">
         {great && <Konfeti />}
         {iyi && <Madalya kupa />}
+        {/* Mağaza puanlaması yalnızca iyi bir sonucun ardından ve öğrenci en az üç konu bitirmişse istenir. */}
+        {iyi && doneKeys(prog).length >= 3 && <Puanla />}
         <motion.div
           className="font-display text-[56px] leading-none font-extrabold text-acc"
           initial={{ scale: 0.6, opacity: 0 }}

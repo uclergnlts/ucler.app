@@ -132,10 +132,10 @@ const satir = "flex w-full items-center gap-3 px-4 py-3 text-left";
 
 /** Liste satırı: simge, başlık, alt yazı, sağda kısa etiket. href yoksa (yakında) soluk ve tıklanmaz. */
 export function Satir({
-  ders, icon, title, sub, tag, href: to, soluk, external, renk,
+  ders, icon, title, sub, tag, href: to, soluk, external, renk, onClick,
 }: {
   ders?: string; icon: React.ReactNode; title: React.ReactNode; sub?: React.ReactNode; tag?: React.ReactNode;
-  href?: string; soluk?: boolean; external?: boolean; renk?: string;
+  href?: string; soluk?: boolean; external?: boolean; renk?: string; onClick?: () => void;
 }) {
   const ic = <Simge soluk={soluk} renk={renk}>{icon}</Simge>;
   const body = (
@@ -148,6 +148,7 @@ export function Satir({
       {tag}
     </>
   );
+  if (onClick) return <button type="button" className={cn(satir, "transition-colors active:bg-secondary")} data-ders={ders} onClick={onClick}>{body}</button>;
   if (!to) return <div className={satir} data-ders={ders}>{body}</div>;
   if (external)
     return <a className={cn(satir, "transition-colors active:bg-secondary")} data-ders={ders} href={to} target="_blank" rel="noopener noreferrer">{body}</a>;

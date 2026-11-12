@@ -7,6 +7,8 @@ import { useOyunAcik } from "@/lib/oyun";
 import { gunAdi, setAd, useAd, useStorageOk, useTekrar } from "@/lib/store";
 import { useOturum } from "@/lib/bulut";
 import { ABONELIK, usePlus } from "@/lib/abonelik";
+import { uygulamayiPaylas } from "@/lib/yerel";
+import { useState } from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Icon } from "./icons";
@@ -21,7 +23,8 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
   const kayitli = useKaydedilenler(all).length, anlamadim = useAnlamadiklarim(all, basliklar).length;
   const tekrar = useTekrar(), plus = usePlus();
   const sira = Object.values(tekrar).map((x) => x.g).sort(), kalan = sira.length;
-  const User = Icon.profil, TekrarI = Icon.tekrar, Kitap = Icon.kitap, Grafik = Icon.grafik, Kayit = Icon.kayit, Soru = Icon.soru, Ayar = Icon.ayar, Kupa = Icon.kupa, Yildiz = Icon.yildiz;
+  const User = Icon.profil, TekrarI = Icon.tekrar, Kitap = Icon.kitap, Grafik = Icon.grafik, Kayit = Icon.kayit, Soru = Icon.soru, Ayar = Icon.ayar, Kupa = Icon.kupa, Yildiz = Icon.yildiz, Paylas = Icon.paylas;
+  const [kopya, setKopya] = useState(false);
 
   return (
     <div className="app">
@@ -97,6 +100,14 @@ export default function Profile({ all, basliklar }: { all: Record<DersId, Entry[
           <Satir href="/profil/istatistikler/" renk="var(--c3)" icon={<Grafik />} title="İstatistikler" sub="Puan, seri, son 7 gün ve doğru oranı" tag={<Ok />} />
           <Satir href="/profil/kaydedilenler/" renk="#d63c63" icon={<Kayit />} title="Kaydedilenler" sub={kayitli ? `${kayitli} konu` : "Kaydettiğin konular burada durur"} tag={<Ok />} />
           <Satir href="/profil/anlamadiklarim/" renk="var(--c2)" icon={<Soru />} title="Anlamadıklarım" sub={anlamadim ? `${anlamadim} kart` : "Anlamadım diye işaretlediğin kartlar"} tag={<Ok />} />
+          <Satir
+            renk="var(--c4)"
+            icon={<Paylas />}
+            title="Arkadaşına öner"
+            sub={kopya ? "Bağlantı kopyalandı" : "ucler'i arkadaşına gönder"}
+            tag={<Ok />}
+            onClick={async () => setKopya((await uygulamayiPaylas()) === "kopyalandi")}
+          />
           <Satir href="/profil/ayarlar/" renk="#64748b" icon={<Ayar />} title="Ayarlar" sub="Hesap, hakkında, gizlilik, iletişim" tag={<Ok />} />
         </Liste>
       </Govde>
