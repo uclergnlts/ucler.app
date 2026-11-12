@@ -11,6 +11,7 @@ import { Alt } from "./Soru";
 import { href } from "./temel";
 import { Button } from "./ui/button";
 import { Konfeti, Madalya, SesCal } from "./Kutlama";
+import Puanla from "./Puanla";
 import KarisikTest, { karistir, konuGruplari, sirayla } from "./KarisikTest";
 
 export default function UniteTesti({ ders, no, list, sorular }: { ders: DersId; no: number; list: Entry[]; sorular: Record<string, TekrarSoru> }) {
@@ -60,6 +61,7 @@ export default function UniteTesti({ ders, no, list, sorular }: { ders: DersId; 
             {gecti && <Konfeti />}
             {gecti && <SesCal tur="seviye" />}
             {gecti && <Madalya kupa />}
+            {gecti && <Puanla />}
             <div className="font-display text-[56px] leading-none font-extrabold text-acc">{puan}</div>
             <span className="text-[14px] font-semibold text-muted-foreground">{n} sorudan {right} doğru</span>
             <h2 className="mt-1 text-[22px]">{gecti ? "Üniteyi geçtin!" : `Geçmek için en az ${GECME} gerekiyor.`}</h2>
