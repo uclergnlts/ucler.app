@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../sablon/fonts-local.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden}
+#stage{position:relative;width:1920px;height:1080px;background:linear-gradient(#2a1968,#120a33);color:#fff;font-family:Inter,sans-serif}
+.ust{position:absolute;left:80px;right:80px;top:50px;display:flex;justify-content:space-between;font-family:Manrope;font-weight:800;font-size:40px}
+.ust b{color:#ff5d8f}
+svg{position:absolute;left:0;top:0}
+</style></head><body>
+<div id="stage"><div class="ust"><div>Karakter: pozlar</div><div>ucler<b>.</b></div></div>
+<svg id="s" width="1920" height="1080" viewBox="0 0 1920 1080"></svg></div>
+<script src="karakter2.js"></script>
+<script>
+const pozlar = [
+  ['karşıdan', { yon:0, kolO:[10,12], kolA:[10,12], agiz:'gulus' }],
+  ['anlatıyor', { yon:1, kolO:[70,60], kolA:[-8,14], agiz:'konus', kas:'kalkik' }],
+  ['gösteriyor', { yon:1, kolO:[120,10], kolA:[20,40], agiz:'konus', goz:'iri', kas:'kalkik', egim:4 }],
+  ['deney yapıyor', { yon:-1, kolO:[70,30], kolA:[50,50], agiz:'duz', gozluk:'takili', egim:8, bas:6 }],
+  ['düşünüyor', { yon:-1, kolO:[40,130], kolA:[-6,14], goz:'kisik', kas:'soru', agiz:'duz', bas:-8 }],
+  ['şaşırdı', { yon:0, kolO:[150,20], kolA:[150,20], goz:'iri', kas:'kalkik', agiz:'o', zipla:14 }],
+];
+let svg = '<rect x="60" y="880" width="1800" height="8" rx="4" fill="#5a45b0"/>';
+pozlar.forEach(([ad, p], i) => {
+  const x = 200 + i * 304;
+  svg += `<ellipse cx="${x}" cy="884" rx="90" ry="10" fill="#0c0626" opacity=".5"/>`;
+  svg += karakter2(Object.assign({ x, y: 880, olcek: 1.15 }, p)).svg;
+  svg += `<text x="${x}" y="960" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="34" fill="#fff">${ad}</text>`;
+});
+document.getElementById('s').innerHTML = svg;
+window.render = () => {};
+</script></body></html>

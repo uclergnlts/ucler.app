@@ -42,8 +42,10 @@ svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px}
 </div>
 <script>window.KARAKTER_RENK={navy:'var(--kink)',sari:'var(--hirka)',beyaz:'var(--surface)',gri:'var(--gri)',arka:'var(--kol-arka)',kafaStil:'--kink:var(--yuz-cizgi);--surface:var(--yuz)'}</script>
 <script src="../karakter/karakter.js"></script>
+<script src="../karakter/karakter2.js"></script>
 <script>
-const K = o => karakter(Object.assign({tip:'A'}, o));
+// Açık ve koyu sürümde çizgi karakter, canlı sürümde ayrıntılı karakter (karakter2.js) kullanılır.
+const K = o => document.documentElement.dataset.tema === 'canli' ? karakter2(Object.assign({}, o, o.agiz === 'o' ? {agiz:'konus'} : {})) : karakter(Object.assign({tip:'A'}, o));
 const f = new URLSearchParams(location.search).get('f');
 const c = document.getElementById('c');
 const frames = {
