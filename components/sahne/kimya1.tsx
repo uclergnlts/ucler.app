@@ -3,7 +3,7 @@
 // bilimsel yöntem döngüsü, molekül kurma, element sembolü, tehlike işaretleri ve asidin seyreltilmesi.
 import { yumusak, type SahneKaydi, type SahneProps } from "./ortak";
 
-const SU = "#d6e8fb", ASIT = "#f4e1a1";
+const SU = "color-mix(in srgb, #3294ff 20%, var(--surface))", ASIT = "color-mix(in srgb, #e4b71f 40%, var(--surface))";
 const oran = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 0 ? Math.min(1, t / sure) : 0);
 const kes = (x: number) => Math.max(0, Math.min(1, x));
 
@@ -66,7 +66,7 @@ function Damitma({ t, oynuyor, s }: SahneProps) {
   return (
     <svg viewBox="0 0 340 228" role="img" aria-label={`Damıtma düzeneği, sıcaklık ${T} derece`}>
       <g>
-        <line x1={TUP.x1 + 26} y1={TUP.y1 + 10.4} x2={TUP.x2 - 26} y2={TUP.y2 - 10.4} stroke="#e4eef9" strokeWidth={24} strokeLinecap="round" />
+        <line x1={TUP.x1 + 26} y1={TUP.y1 + 10.4} x2={TUP.x2 - 26} y2={TUP.y2 - 10.4} stroke="color-mix(in srgb, #78b2fd 20%, var(--surface))" strokeWidth={24} strokeLinecap="round" />
         <line x1={TUP.x1} y1={TUP.y1} x2={TUP.x2} y2={TUP.y2} stroke="var(--line-2)" strokeWidth={7} strokeLinecap="round" />
         <text x={142} y={70} fontSize={11.5} fontWeight={700} fill="var(--c1)" transform="rotate(21.8 142 70)">soğutucu (soğuk su)</text>
       </g>
@@ -137,7 +137,7 @@ function Elektroliz({ t, oynuyor, s }: SahneProps) {
         <rect x={152} y={212} width={36} height={16} rx={3} fill="var(--ink)" />
         <text x={146} y={216} fontSize={13} fontWeight={800} textAnchor="end" fill="var(--ink)">−</text>
         <text x={194} y={217} fontSize={13} fontWeight={800} fill="var(--ink)">+</text>
-        <text x={170} y={224} fontSize={9.5} fontWeight={700} textAnchor="middle" fill="var(--on-btn)">pil</text>
+        <text x={170} y={224} fontSize={9.5} fontWeight={700} textAnchor="middle" fill="#fff">pil</text>
       </g>
       {u >= 1 && <text x={280} y={226} fontSize={11.5} fontWeight={700} textAnchor="end" fill="var(--muted)">hacim 2 : 1</text>}
     </svg>
@@ -225,11 +225,11 @@ function Dongu() {
 
 const ATOM: Record<string, { renk: string; r: number; yazi: string }> = {
   H: { renk: "var(--surface)", r: 15, yazi: "var(--ink)" },
-  O: { renk: "var(--c2)", r: 22, yazi: "var(--on-btn)" },
-  C: { renk: "#3b4656", r: 22, yazi: "var(--on-btn)" },
-  N: { renk: "var(--c1)", r: 21, yazi: "var(--on-btn)" },
-  Na: { renk: "var(--c5)", r: 24, yazi: "var(--on-btn)" },
-  Cl: { renk: "var(--c3)", r: 24, yazi: "var(--on-btn)" },
+  O: { renk: "var(--c2)", r: 22, yazi: "#fff" },
+  C: { renk: "var(--karbon)", r: 22, yazi: "#fff" },
+  N: { renk: "var(--c1)", r: 21, yazi: "#fff" },
+  Na: { renk: "var(--c5)", r: 24, yazi: "#fff" },
+  Cl: { renk: "var(--c3)", r: 24, yazi: "#fff" },
 };
 const ALT = "₀₁₂₃₄₅₆₇₈₉";
 const indis = (n: number) => (n === 1 ? "" : String(n).split("").map((c) => ALT[+c]).join(""));
@@ -280,7 +280,7 @@ function Molekul({ s, v }: SahneProps) {
           <line key={i} x1={parcalar[a].x} y1={parcalar[a].y} x2={parcalar[b].x} y2={parcalar[b].y} stroke="var(--line-2)" strokeWidth={6} strokeLinecap="round" />
         ))}
         {parcalar.map((p, i) => {
-          const A = ATOM[p.a] ?? { renk: "var(--muted)", r: 20, yazi: "var(--on-btn)" };
+          const A = ATOM[p.a] ?? { renk: "var(--muted)", r: 20, yazi: "#fff" };
           const yuk = iyonik && varolan.length > 1 ? (p.a === "Na" ? "+" : p.a === "Cl" ? "−" : "") : "";
           return (
             <g key={i}>

@@ -691,7 +691,7 @@ function YayLab({ v, saat = 0 }: SahneProps) {
       <text x={DENGE} y={Y - 38} fontSize={10} fill="var(--muted)" textAnchor="middle">denge</text>
       <polyline points={yay} fill="none" stroke="var(--ink)" strokeWidth={2} strokeLinejoin="round" />
       <rect x={bx - w2 / 2} y={Y - w2 / 2} width={w2} height={w2} rx={5} fill="var(--fizik)" />
-      <text x={bx} y={Y + 4} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">{say(m)} kg</text>
+      <text x={bx} y={Y + 4} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">{say(m)} kg</text>
       {/* konum-zaman grafiği: son 4 saniye */}
       <line x1={GY.x0} x2={GY.x1} y1={orta} y2={orta} stroke="var(--line-2)" />
       <polyline points={g.map((p) => `${izx(p.t).toFixed(1)},${izy(p.d).toFixed(1)}`).join(" ")} fill="none" stroke="var(--fizik)" strokeWidth={2.2} />

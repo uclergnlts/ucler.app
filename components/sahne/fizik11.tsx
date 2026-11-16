@@ -61,7 +61,7 @@ function Yatay({ x, soluk = [] }: { x: number; soluk?: number[] }) {
       {soluk.map((s) => <rect key={s} x={cmX(s) - BW / 2} y={ZEMIN - BH} width={BW} height={BH} rx={6} fill="none" stroke="var(--line-2)" strokeWidth={1.4} strokeDasharray="4 3" />)}
       <Yay x1={22} y1={ZEMIN - BH / 2} x2={cx - BW / 2} y2={ZEMIN - BH / 2} />
       <rect x={cx - BW / 2} y={ZEMIN - BH} width={BW} height={BH} rx={6} fill="var(--c1)" />
-      <text x={cx} y={ZEMIN - BH / 2 + 4.5} fontSize={13} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">m</text>
+      <text x={cx} y={ZEMIN - BH / 2 + 4.5} fontSize={13} fontWeight={800} fill="#fff" textAnchor="middle">m</text>
     </g>
   );
 }
@@ -174,7 +174,7 @@ function Periyot({ v, t, oynuyor, s, kosular }: SahneProps) {
       <g>
         <Yay x1={36} y1={52} x2={36} y2={by - bh / 2} n={7} h={8} />
         <rect x={36 - bw / 2} y={by - bh / 2} width={bw} height={bh} rx={5} fill="var(--c1)" />
-        <text x={36} y={by + 4} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">{m}</text>
+        <text x={36} y={by + 4} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">{m}</text>
       </g>
       <g>
         <line x1={GX0} x2={GX1 + 6} y1={GY} y2={GY} stroke="var(--ink)" strokeWidth={1.3} />

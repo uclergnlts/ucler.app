@@ -29,7 +29,7 @@ function ZarModel() {
       </g>
       <g>
         <path d="M74 72 Q72 64 82 62 L106 62 Q116 64 114 72 L114 158 Q116 168 106 168 L82 168 Q72 166 74 158 Z" fill="var(--c3)" opacity={0.9} />
-        <rect x={89} y={66} width={10} height={98} rx={5} fill="#f6f8fb" />
+        <rect x={89} y={66} width={10} height={98} rx={5} fill="color-mix(in srgb, #d2e4ff 20%, var(--surface))" />
         <ellipse cx={234} cy={115} rx={26} ry={44} fill="var(--c5)" opacity={0.85} />
         {[0, 1, 2, 3].map((i) => (
           <polygon key={i} points={hex(234 + (i % 2 ? 7 : -7), 60 - i * 12, 6)} fill="var(--kimya)" opacity={0.85} />
@@ -112,13 +112,13 @@ function Gecis({ s, v, t, oynuyor }: SahneProps) {
         {kanal && (
           <g>
             <rect x={ZX - 12} y={KANAL_Y - 16} width={24} height={32} rx={8} fill="var(--c3)" />
-            <rect x={ZX - 4} y={KANAL_Y - 16} width={8} height={32} fill="#f6f8fb" />
+            <rect x={ZX - 4} y={KANAL_Y - 16} width={8} height={32} fill="color-mix(in srgb, #d2e4ff 20%, var(--surface))" />
           </g>
         )}
         {pompa && (
           <g>
             <rect x={ZX - 18} y={POMPA_Y - 19} width={36} height={38} rx={10} fill="var(--c5)" />
-            <text x={ZX} y={POMPA_Y + 3} fontSize={8.5} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">pompa</text>
+            <text x={ZX} y={POMPA_Y + 3} fontSize={8.5} fontWeight={800} fill="#fff" textAnchor="middle">pompa</text>
             {oynuyor && <text x={ZX + 18} y={POMPA_Y + 30} fontSize={11} fontWeight={800} fill="var(--c5)">ATP → ADP</text>}
           </g>
         )}

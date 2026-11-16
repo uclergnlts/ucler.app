@@ -95,7 +95,7 @@ function Gruplar({ v }: SahneProps) {
         return (
           <g key={g.kisa}>
             <rect x={x} y={204} width={80} height={26} rx={13} fill={on ? YESIL : "none"} stroke={on ? YESIL : "var(--line-2)"} strokeWidth={1.4} />
-            <text x={x + 40} y={221} fontSize={11} fontWeight={700} fill={on ? "var(--on-btn)" : "var(--muted)"} textAnchor="middle">{g.kisa}</text>
+            <text x={x + 40} y={221} fontSize={11} fontWeight={700} fill={on ? "#fff" : "var(--muted)"} textAnchor="middle">{g.kisa}</text>
           </g>
         );
       })}
@@ -270,7 +270,7 @@ function Tohum({ t, oynuyor, s }: SahneProps) {
       <g>
         {[0, 1, 2, 3, 4].map((i) => {
           const a = ((i * 72 - 90) * Math.PI) / 180;
-          return <ellipse key={i} cx={250 + Math.cos(a) * (26 + 40 * dus)} cy={108 + Math.sin(a) * 26 + 70 * dus} rx={13} ry={9} fill="#f6c9d4" opacity={1 - dus} transform={`rotate(${i * 72} ${250 + Math.cos(a) * (26 + 40 * dus)} ${108 + Math.sin(a) * 26 + 70 * dus})`} />;
+          return <ellipse key={i} cx={250 + Math.cos(a) * (26 + 40 * dus)} cy={108 + Math.sin(a) * 26 + 70 * dus} rx={13} ry={9} fill="color-mix(in srgb, #e15080 30%, var(--surface))" opacity={1 - dus} transform={`rotate(${i * 72} ${250 + Math.cos(a) * (26 + 40 * dus)} ${108 + Math.sin(a) * 26 + 70 * dus})`} />;
         })}
         <circle cx={250} cy={118} r={r} fill={sis > 0.5 ? "var(--c2)" : "#9bd3a8"} fillOpacity={0.9} stroke={sis > 0.5 ? "#c23a28" : KOYU} strokeWidth={1.6} />
         <path d={`M250 ${118 - r} q2 -10 8 -12`} stroke={KAHVE} strokeWidth={2} fill="none" />
@@ -313,7 +313,7 @@ function Cenek({ v }: SahneProps) {
       <g>
         {Array.from({ length: p }, (_, i) => {
           const a = (i * 360) / p - 90, r = (a * Math.PI) / 180;
-          return <ellipse key={i} cx={90 + Math.cos(r) * 15} cy={42 + Math.sin(r) * 15} rx={13} ry={7.5} fill="#f6c9d4" stroke="#e5466f" strokeWidth={1} transform={`rotate(${a} ${90 + Math.cos(r) * 15} ${42 + Math.sin(r) * 15})`} />;
+          return <ellipse key={i} cx={90 + Math.cos(r) * 15} cy={42 + Math.sin(r) * 15} rx={13} ry={7.5} fill="color-mix(in srgb, #e15080 30%, var(--surface))" stroke="#e5466f" strokeWidth={1} transform={`rotate(${a} ${90 + Math.cos(r) * 15} ${42 + Math.sin(r) * 15})`} />;
         })}
         <circle cx={90} cy={42} r={6} fill="var(--c4)" />
       </g>
@@ -355,7 +355,7 @@ function Cenek({ v }: SahneProps) {
       </g>
       <g>
         <rect x={180} y={196} width={150} height={34} rx={17} fill={tek === 3 || tek === 0 ? renk : "none"} stroke={renk} strokeWidth={1.6} />
-        <text x={255} y={218} fontSize={13} fontWeight={800} fill={tek === 3 || tek === 0 ? "var(--on-btn)" : "var(--muted)"} textAnchor="middle">{sonuc}</text>
+        <text x={255} y={218} fontSize={13} fontWeight={800} fill={tek === 3 || tek === 0 ? "#fff" : "var(--muted)"} textAnchor="middle">{sonuc}</text>
       </g>
     </svg>
   );
@@ -578,7 +578,7 @@ function Sitokinez({ v, t, oynuyor, s }: SahneProps) {
   const plak = yumusak(u / 0.85);
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label="Bitki hücresinde Golgi keseciklerinden ortada hücre plağı kurulur">
-      <rect x={34} y={28} width={272} height={166} rx={4} fill="#f4fbf6" stroke={YESIL} strokeWidth={6} />
+      <rect x={34} y={28} width={272} height={166} rx={4} fill="color-mix(in srgb, #c8f3ee 20%, var(--surface))" stroke={YESIL} strokeWidth={6} />
       <g>
         {[100, 240].map((x) => <circle key={x} cx={x} cy={CY} r={30} fill="var(--c5)" fillOpacity={0.18} stroke="var(--c5)" strokeWidth={1.6} />)}
       </g>

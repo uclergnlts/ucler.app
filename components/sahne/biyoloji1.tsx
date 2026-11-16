@@ -88,7 +88,7 @@ function Atp({ t, s }: SahneProps) {
     <svg viewBox="0 0 340 210" role="img" aria-label={bitti ? "ATP, ADP ve fosfata ayrıldı; enerji açığa çıktı" : "ATP: adenin, riboz ve üç fosfat"}>
       <text x={170} y={30} fontSize={16} fontWeight={800} fill="var(--ink)" textAnchor="middle">{bitti ? "ADP + P + enerji" : "ATP (adenozin trifosfat)"}</text>
       <rect x={30} y={88} width={52} height={32} rx={8} fill="var(--c1)" />
-      <text x={56} y={109} fontSize={12} fontWeight={700} fill="var(--on-btn)" textAnchor="middle">adenin</text>
+      <text x={56} y={109} fontSize={12} fontWeight={700} fill="#fff" textAnchor="middle">adenin</text>
       <line x1={82} y1={104} x2={98} y2={104} stroke="var(--ink)" strokeWidth={2} />
       <polygon points="98,104 112,90 130,94 132,114 112,120" fill="var(--c4)" />
       <text x={115} y={140} fontSize={11.5} fill="var(--muted)" textAnchor="middle">riboz</text>
@@ -99,11 +99,11 @@ function Atp({ t, s }: SahneProps) {
         {[164, 208].map((x) => (
           <g key={x}>
             <circle cx={x} cy={104} r={14} fill="var(--c5)" />
-            <text x={x} y={109} fontSize={13} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">P</text>
+            <text x={x} y={109} fontSize={13} fontWeight={800} fill="#fff" textAnchor="middle">P</text>
           </g>
         ))}
         <circle cx={px + 14} cy={py} r={14} fill="var(--c5)" />
-        <text x={px + 14} y={py + 5} fontSize={13} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">P</text>
+        <text x={px + 14} y={py + 5} fontSize={13} fontWeight={800} fill="#fff" textAnchor="middle">P</text>
       </g>
       <g opacity={parlama} transform={`translate(232 96) scale(${0.6 + parlama * 0.6})`}>
         {Array.from({ length: 8 }, (_, i) => {
@@ -327,7 +327,7 @@ function Enerji({ v }: SahneProps) {
         {kcal <= 105 ? (
           <text x={X0 + kcal * S + 6} y={72} fontSize={13} fontWeight={800} fill="var(--ink)">{kcal} kcal</text>
         ) : (
-          <text x={X0 + Math.min(kcal, 130) * S - 8} y={72} fontSize={13} fontWeight={800} fill="var(--on-btn)" textAnchor="end">{kcal} kcal</text>
+          <text x={X0 + Math.min(kcal, 130) * S - 8} y={72} fontSize={13} fontWeight={800} fill="#fff" textAnchor="end">{kcal} kcal</text>
         )}
       </g>
       <g>
@@ -356,7 +356,7 @@ function Protein({ v }: SahneProps) {
           return (
             <g key={i}>
               <circle cx={30 + i * 40} cy={50} r={16} fill={ozel ? (deg ? "var(--c2)" : "var(--biyoloji)") : "var(--line-2)"} />
-              <text x={30 + i * 40} y={54} fontSize={11} fontWeight={700} fill={ozel ? "var(--on-btn)" : "var(--ink)"} textAnchor="middle">{a}</text>
+              <text x={30 + i * 40} y={54} fontSize={11} fontWeight={700} fill={ozel ? "#fff" : "var(--ink)"} textAnchor="middle">{a}</text>
             </g>
           );
         })}

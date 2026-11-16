@@ -426,7 +426,7 @@ export default function Lesson({
             return (
               <li key={j} className="flex items-start gap-3 px-3.5 py-3">
                 <span
-                  className={cn("mt-0.5 grid size-6 flex-none place-items-center rounded-full text-[var(--on-btn)] [&_svg]:size-3.5 [&_svg]:stroke-[3]", ok ? "bg-good" : "bg-bad")}
+                  className={cn("mt-0.5 grid size-6 flex-none place-items-center rounded-full text-white [&_svg]:size-3.5 [&_svg]:stroke-[3]", ok ? "bg-good" : "bg-bad")}
                   role="img"
                   aria-label={ok ? "Doğru" : "Yanlış"}
                 >

@@ -95,7 +95,7 @@ function Sperm({ t, oynuyor, s }: SahneProps) {
       <Kutu x={24} y={98} w={96} ad="epididim" etkin={etkin === 1} />
       <Kutu x={242} y={98} w={84} ad="üretra" etkin={etkin === 3} />
       {/* bezler */}
-      <rect x={134} y={14} width={104} height={58} rx={12} fill={meni || damla ? "#fdf3dc" : "var(--panel)"} stroke={meni || damla ? SARI : "var(--line-2)"} strokeWidth={1.4} />
+      <rect x={134} y={14} width={104} height={58} rx={12} fill={meni || damla ? "color-mix(in srgb, #f5cb6c 20%, var(--surface))" : "var(--panel)"} stroke={meni || damla ? SARI : "var(--line-2)"} strokeWidth={1.4} />
       <g fontSize={10.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">
         <text x={186} y={32}>seminal kesecik</text>
         <text x={186} y={47}>prostat</text>

@@ -8,7 +8,7 @@ import { rastgele, yumusak, type SahneKaydi, type SahneProps } from "./ortak";
 const oran = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 0 ? Math.min(1, t / sure) : 0);
 const kes = (x: number) => Math.max(0, Math.min(1, x));
 const ara = (a: number, b: number, u: number) => a + (b - a) * u;
-const SU = "#d6e8fb";
+const SU = "color-mix(in srgb, #3294ff 20%, var(--surface))";
 
 /** Sahne açıkken sürekli akan zaman (saniye); taneciklerin titreşmesi için. Az hareket isteyende durur. */
 function useSaat() {
@@ -28,7 +28,7 @@ function useSaat() {
 
 const O = ({ x, y }: { x: number; y: number }) => <circle cx={x} cy={y} r={6.5} fill="var(--c2)" />;
 const H = ({ x, y }: { x: number; y: number }) => <circle cx={x} cy={y} r={4.2} fill="var(--surface)" stroke="#8d9bb0" strokeWidth={1.3} />;
-const C = ({ x, y }: { x: number; y: number }) => <circle cx={x} cy={y} r={6.5} fill="#3b4656" />;
+const C = ({ x, y }: { x: number; y: number }) => <circle cx={x} cy={y} r={6.5} fill="var(--karbon)" />;
 
 function Su({ x, y, a = 0 }: { x: number; y: number; a?: number }) {
   return (
@@ -309,7 +309,7 @@ function Thomson({ v }: SahneProps) {
         {YUVA.slice(0, e).map(([x, y], i) => (
           <g key={i}>
             <circle cx={cx + x} cy={cy + y} r={9} fill="var(--c1)" />
-            <text x={cx + x} y={cy + y + 4.5} fontSize={13} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">−</text>
+            <text x={cx + x} y={cy + y + 4.5} fontSize={13} fontWeight={800} fill="#fff" textAnchor="middle">−</text>
           </g>
         ))}
       </g>

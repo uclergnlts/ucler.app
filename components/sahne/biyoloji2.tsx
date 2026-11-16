@@ -304,7 +304,7 @@ const Ribozomlar = ({ noktalar }: { noktalar: number[][] }) => (
 function Mitokondri({ x, y, aci = 0, s = 1 }: { x: number; y: number; aci?: number; s?: number }) {
   return (
     <g transform={`translate(${x} ${y}) rotate(${aci}) scale(${s})`}>
-      <ellipse rx={24} ry={12} fill="#fde3d6" stroke="var(--c2)" strokeWidth={2} />
+      <ellipse rx={24} ry={12} fill="color-mix(in srgb, #f57b4e 20%, var(--surface))" stroke="var(--c2)" strokeWidth={2} />
       <path d="M-16 6 L-12 -6 L-6 6 L0 -6 L6 6 L12 -6 L16 4" fill="none" stroke="var(--c2)" strokeWidth={1.4} />
     </g>
   );
@@ -313,7 +313,7 @@ function Mitokondri({ x, y, aci = 0, s = 1 }: { x: number; y: number; aci?: numb
 function Kloroplast({ x, y, aci = 0 }: { x: number; y: number; aci?: number }) {
   return (
     <g transform={`translate(${x} ${y}) rotate(${aci})`}>
-      <ellipse rx={20} ry={11} fill="#d4f0dd" stroke="var(--biyoloji)" strokeWidth={2} />
+      <ellipse rx={20} ry={11} fill="color-mix(in srgb, #28bc71 20%, var(--surface))" stroke="var(--biyoloji)" strokeWidth={2} />
       {[-9, 0, 9].map((d) => <rect key={d} x={d - 3} y={-5} width={6} height={10} rx={1.5} fill="var(--biyoloji)" />)}
     </g>
   );
@@ -330,7 +330,7 @@ function Golgi({ x, y }: { x: number; y: number }) {
 function Cekirdek({ x, y, r = 30 }: { x: number; y: number; r?: number }) {
   return (
     <g>
-      <circle cx={x} cy={y} r={r} fill="#e8e3f7" stroke="var(--c5)" strokeWidth={2} strokeDasharray="14 3" />
+      <circle cx={x} cy={y} r={r} fill="color-mix(in srgb, #8c7bf3 20%, var(--surface))" stroke="var(--c5)" strokeWidth={2} strokeDasharray="14 3" />
       <circle cx={x} cy={y} r={r - 4} fill="none" stroke="var(--c5)" strokeWidth={1} strokeDasharray="14 3" />
       <circle cx={x + 6} cy={y - 4} r={8} fill="var(--c5)" opacity={0.75} />
     </g>
@@ -361,7 +361,7 @@ function HayvanHucresi({ etiket, vurgu }: { etiket: boolean; vurgu: Record<strin
   };
   return (
     <g>
-      <ellipse cx={170} cy={120} rx={156} ry={96} fill="#fbf7ee" stroke="var(--c4)" strokeWidth={2.5} />
+      <ellipse cx={170} cy={120} rx={156} ry={96} fill="color-mix(in srgb, #ebdfc6 20%, var(--surface))" stroke="var(--c4)" strokeWidth={2.5} />
       <Cekirdek x={150} y={114} />
       {ER(190, 136)}
       <Ribozomlar noktalar={[[186, 112], [196, 96], [186, 80], [212, 126], [214, 90], [118, 60], [236, 196], [70, 128], [276, 120], [120, 198]]} />
@@ -371,7 +371,7 @@ function HayvanHucresi({ etiket, vurgu }: { etiket: boolean; vurgu: Record<strin
       <g>
         {[[252, 160], [276, 148]].map(([x, y]) => (
           <g key={x}>
-            <circle cx={x} cy={y} r={10} fill="#fdebf0" stroke="var(--kimya)" strokeWidth={1.8} />
+            <circle cx={x} cy={y} r={10} fill="color-mix(in srgb, #f5a3d0 20%, var(--surface))" stroke="var(--kimya)" strokeWidth={1.8} />
             <circle cx={x - 3} cy={y - 2} r={1.6} fill="var(--kimya)" /><circle cx={x + 3} cy={y + 2} r={1.6} fill="var(--kimya)" />
           </g>
         ))}
@@ -402,8 +402,8 @@ function BitkiHucresi({ etiket }: { etiket: boolean }) {
   return (
     <g>
       <rect x={18} y={20} width={304} height={200} rx={12} fill="none" stroke="var(--biyoloji)" strokeWidth={7} />
-      <rect x={26} y={28} width={288} height={184} rx={8} fill="#fbf7ee" stroke="var(--c4)" strokeWidth={2} />
-      <rect x={110} y={52} width={150} height={136} rx={30} fill="#e3f0fb" stroke="var(--c1)" strokeWidth={1.8} />
+      <rect x={26} y={28} width={288} height={184} rx={8} fill="color-mix(in srgb, #ebdfc6 20%, var(--surface))" stroke="var(--c4)" strokeWidth={2} />
+      <rect x={110} y={52} width={150} height={136} rx={30} fill="color-mix(in srgb, #73bcff 20%, var(--surface))" stroke="var(--c1)" strokeWidth={1.8} />
       <Cekirdek x={66} y={70} r={24} />
       <Kloroplast x={64} y={178} aci={-15} />
       <Kloroplast x={286} y={64} aci={25} />
@@ -428,7 +428,7 @@ function BakteriHucresi({ etiket }: { etiket: boolean }) {
   return (
     <g>
       <rect x={40} y={60} width={250} height={110} rx={55} fill="none" stroke="var(--c4)" strokeWidth={6} strokeOpacity={0.5} />
-      <rect x={45} y={65} width={240} height={100} rx={50} fill="#fbf7ee" stroke="var(--c4)" strokeWidth={2} />
+      <rect x={45} y={65} width={240} height={100} rx={50} fill="color-mix(in srgb, #ebdfc6 20%, var(--surface))" stroke="var(--c4)" strokeWidth={2} />
       <path d="M290 115 q14 -14 24 0 t20 0" fill="none" stroke="var(--c4)" strokeWidth={2} />
       <path d="M130 112 q10 -22 26 -6 t22 -2 t24 10 q-6 24 -30 14 t-26 4 t-16 -20" fill="none" stroke="var(--c5)" strokeWidth={2.4} />
       <Ribozomlar noktalar={[[86, 104], [96, 136], [240, 92], [252, 132], [126, 90], [236, 150], [76, 122], [264, 112]]} />

@@ -276,7 +276,7 @@ function CSiniri({ v }: SahneProps) {
       <text x={x0} y={y - 10} fontSize={11.5} fontWeight={800} fill={renk}>{ad}</text>
       <rect x={x0} y={y} width={x1 - x0} height={14} rx={7} fill="var(--panel)" />
       <rect x={x0} y={y} width={Math.max(0, ox(q) - x0)} height={14} rx={7} fill={renk} opacity={0.85} />
-      <text x={Math.min(ox(q), x1) - 4} y={y + 11} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="end">{q > 0.18 ? yazi : ""}</text>
+      <text x={Math.min(ox(q), x1) - 4} y={y + 11} fontSize={11} fontWeight={800} fill="#fff" textAnchor="end">{q > 0.18 ? yazi : ""}</text>
     </g>
   );
   return (
@@ -361,7 +361,7 @@ function Levha({ x0, x1, y, lam, n, u, w = W_NA, tohum = 7 }: { x0: number; x1: 
             {k > 0 && k < 1 && <circle cx={px} cy={py} r={3.6} fill={renk} />}
             {ek > 0 && ka > 0 && <g>
               <circle cx={p.hx + 0.35 * hiz * ka} cy={y - 4 - hiz * ka} r={4} fill="var(--c1)" />
-              <text x={p.hx + 0.35 * hiz * ka} y={y - 1 - hiz * ka} fontSize={7} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">−</text>
+              <text x={p.hx + 0.35 * hiz * ka} y={y - 1 - hiz * ka} fontSize={7} fontWeight={800} fill="#fff" textAnchor="middle">−</text>
             </g>}
           </g>
         );
@@ -404,9 +404,9 @@ function Durdurma({ v }: SahneProps) {
       <text x={x + 23} y={Y + 16} fontSize={11.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">h·f</text>
       {/* W + Ek çubuğu */}
       <rect x={x + 70} y={Y - wh} width={46} height={wh} rx={4} fill="#aab4c3" />
-      <text x={x + 93} y={Y - wh / 2 + 4} fontSize={11.5} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">W</text>
+      <text x={x + 93} y={Y - wh / 2 + 4} fontSize={11.5} fontWeight={800} fill="#fff" textAnchor="middle">W</text>
       {eh > 0 && <rect x={x + 70} y={Y - wh - eh} width={46} height={eh} rx={4} fill="var(--c3)" />}
-      {eh > 14 && <text x={x + 93} y={Y - wh - eh / 2 + 4} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">E<tspan fontSize={8} dy={2}>k</tspan></text>}
+      {eh > 14 && <text x={x + 93} y={Y - wh - eh / 2 + 4} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">E<tspan fontSize={8} dy={2}>k</tspan></text>}
       <text x={x + 93} y={Y + 16} fontSize={11.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">W + E<tspan fontSize={9} dy={3}>k</tspan></text>
       <line x1={x - 6} x2={x + 122} y1={Y - wh} y2={Y - wh} stroke="var(--muted)" strokeWidth={1} strokeDasharray="3 3" />
       {/* tüp ve gerilim */}
@@ -467,7 +467,7 @@ function Compton({ t, oynuyor, s }: SahneProps) {
         <text x={sx - 14} y={sy - 18} fontSize={11.5} fontWeight={800} fill="var(--c5)" textAnchor="middle" {...kenar}>λ′</text>
       </g>}
       <circle cx={sonra > 0 ? ex : EX} cy={sonra > 0 ? ey : EY} r={8} fill="var(--c1)" />
-      <text x={sonra > 0 ? ex : EX} y={(sonra > 0 ? ey : EY) + 4} fontSize={10} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">−</text>
+      <text x={sonra > 0 ? ex : EX} y={(sonra > 0 ? ey : EY) + 4} fontSize={10} fontWeight={800} fill="#fff" textAnchor="middle">−</text>
       {sonra > 0.5 && <text x={ex + 12} y={ey + 4} fontSize={11.5} fontWeight={800} fill="var(--c1)">elektron</text>}
       {bitti && <text x={14} y={214} fontSize={11.5} fontWeight={700} fill="var(--muted)">saçılan fotonun hızı yine c; frekansı küçüldü</text>}
     </svg>

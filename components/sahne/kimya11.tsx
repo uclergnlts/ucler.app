@@ -33,7 +33,7 @@ function Atom({ p, el, renk }: { p: Nokta; el: string; renk?: string }) {
   return (
     <g>
       <circle cx={p[0]} cy={p[1]} r={r} fill={dolgu} stroke={h && !renk ? "var(--line-2)" : "none"} strokeWidth={1.2} />
-      <text x={p[0]} y={p[1] + (h ? 4 : 4.5)} fontSize={h ? 11 : 12.5} fontWeight={800} textAnchor="middle" fill={h && !renk ? "var(--ink)" : "var(--on-btn)"}>{el}</text>
+      <text x={p[0]} y={p[1] + (h ? 4 : 4.5)} fontSize={h ? 11 : 12.5} fontWeight={800} textAnchor="middle" fill={h && !renk ? "var(--ink)" : "#fff"}>{el}</text>
     </g>
   );
 }
@@ -261,7 +261,7 @@ function Formul({ v, set }: SahneProps) {
         {FORMUL_TUR.map((ad, i) => (
           <g key={ad} onClick={() => set("f", i)} style={{ cursor: "pointer" }}>
             <rect x={10 + i * W + 2} y={8} width={W - 4} height={26} rx={13} fill={i === f ? "var(--kimya)" : "var(--panel)"} />
-            <text x={10 + i * W + W / 2} y={25} fontSize={11} fontWeight={800} textAnchor="middle" fill={i === f ? "var(--on-btn)" : "var(--ink)"}>{ad}</text>
+            <text x={10 + i * W + W / 2} y={25} fontSize={11} fontWeight={800} textAnchor="middle" fill={i === f ? "#fff" : "var(--ink)"}>{ad}</text>
           </g>
         ))}
       </g>
@@ -439,7 +439,7 @@ function Adlandir({ v }: SahneProps) {
           return (
             <g key={k}>
               <circle cx={p[0]} cy={p[1]} r={15} fill={ic ? "var(--kimya)" : "var(--panel)"} stroke={ic ? "none" : "var(--line-2)"} />
-              <text x={p[0]} y={p[1] + 4.5} fontSize={12.5} fontWeight={800} textAnchor="middle" fill={ic ? "var(--on-btn)" : "var(--ink)"}>C</text>
+              <text x={p[0]} y={p[1] + 4.5} fontSize={12.5} fontWeight={800} textAnchor="middle" fill={ic ? "#fff" : "var(--ink)"}>C</text>
               {n !== null && <text x={p[0]} y={p[1] < 100 ? p[1] - 22 : p[1] + 31} fontSize={12} fontWeight={800} textAnchor="middle" fill="var(--kimya)">{n}</text>}
             </g>
           );
@@ -597,7 +597,7 @@ function Yanma({ v }: SahneProps) {
       </g>
       <g>
         <path d="M290 142 C270 128 274 104 290 82 C306 104 310 128 290 142 Z" fill={alev} opacity={0.75} />
-        <path d="M290 140 C281 132 282 118 290 106 C298 118 299 132 290 140 Z" fill={az ? "#fde7a8" : "#cfe2ff"} />
+        <path d="M290 140 C281 132 282 118 290 106 C298 118 299 132 290 140 Z" fill={az ? "color-mix(in srgb, #fac630 40%, var(--surface))" : "color-mix(in srgb, #0f76ff 20%, var(--surface))"} />
         {az && <circle cx={300} cy={70} r={4} fill="var(--muted)" opacity={0.6} />}
         {az && <circle cx={284} cy={60} r={3} fill="var(--muted)" opacity={0.5} />}
       </g>

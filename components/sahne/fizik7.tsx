@@ -111,7 +111,7 @@ function Tahterevalli({ v }: SahneProps) {
     <g>
       <circle cx={x} cy={cy - 4 - w - 12} r={10} fill={renk} />
       <rect x={x - w / 2} y={cy - 4 - w} width={w} height={w} rx={6} fill={renk} />
-      <text x={x} y={cy - 4 - w / 2 + 4} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">{ad}</text>
+      <text x={x} y={cy - 4 - w / 2 + 4} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">{ad}</text>
     </g>
   );
   return (
@@ -151,7 +151,7 @@ function Cubuk({ v }: SahneProps) {
       <Ok x1={170} y1={Y + 5} x2={170} y2={Y + 5 + 40 * olc} renk="var(--muted)" kalin={2.5} />
       <text x={176} y={Y + 5 + 40 * olc} fontSize={11.5} fontWeight={700} fill="var(--muted)">40 N</text>
       <rect x={yx - 15} y={Y - 35} width={30} height={30} rx={4} fill="var(--c4)" />
-      <text x={yx} y={Y - 16} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">60 N</text>
+      <text x={yx} y={Y - 16} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">60 N</text>
       <Ok x1={AX + 14} y1={Y - 6} x2={AX + 14} y2={Y - 6 - NA * olc * 0.9} renk="var(--c1)" />
       <Ok x1={BX - 14} y1={Y - 6} x2={BX - 14} y2={Y - 6 - NB * olc * 0.9} renk="var(--c2)" />
       <g fontSize={12.5} fontWeight={800}>
@@ -177,9 +177,9 @@ function KutleMerkezi({ v }: SahneProps) {
       <g transform={`rotate(${aci} ${hx} ${Y})`}>
         <rect x={X0} y={Y - 3} width={4 * PX} height={6} rx={3} fill="var(--line-2)" />
         <circle cx={X0} cy={Y} r={r(2)} fill="var(--c1)" />
-        <text x={X0} y={Y + 4} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">2</text>
+        <text x={X0} y={Y + 4} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">2</text>
         <circle cx={X0 + 4 * PX} cy={Y} r={r(m)} fill="var(--c2)" />
-        <text x={X0 + 4 * PX} y={Y + 4} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">{m}</text>
+        <text x={X0 + 4 * PX} y={Y + 4} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">{m}</text>
         <path d={`M${X0 + xkm * PX} ${Y + 6} l-7 12 h14 Z`} fill="var(--c3)" />
         <text x={X0 + xkm * PX} y={Y + 32} fontSize={11.5} fontWeight={800} fill="var(--c3)" textAnchor="middle">KM</text>
       </g>
@@ -394,7 +394,7 @@ function Viraj({ v, t, oynuyor, s }: SahneProps) {
   const savruldu = !guvenli && u > 0.5;
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={`μ = ${say(mu)}: en büyük güvenli hız ${say(vm)} m/s; araba ${guvenli ? "virajı güvenle alır" : "savrulur"}`}>
-      <path d={`M${yer(a0).x} ${yer(a0).y} A${R} ${R} 0 0 1 ${yer(a1).x} ${yer(a1).y}`} fill="none" stroke={mu <= 0.15 ? "#dcebf7" : mu <= 0.45 ? "#d5dde8" : "var(--line)"} strokeWidth={30} />
+      <path d={`M${yer(a0).x} ${yer(a0).y} A${R} ${R} 0 0 1 ${yer(a1).x} ${yer(a1).y}`} fill="none" stroke={mu <= 0.15 ? "color-mix(in srgb, #50a3f3 20%, var(--surface))" : mu <= 0.45 ? "color-mix(in srgb, #2d5da8 20%, var(--surface))" : "var(--line)"} strokeWidth={30} />
       <path d={`M${yer(a0).x} ${yer(a0).y} A${R} ${R} 0 0 1 ${yer(a1).x} ${yer(a1).y}`} fill="none" stroke="var(--surface)" strokeWidth={1.6} strokeDasharray="8 7" />
       {savruldu && <line x1={yer(ak).x} y1={yer(ak).y} x2={p.x} y2={p.y} stroke="var(--c2)" strokeWidth={1.5} strokeDasharray="3 5" />}
       <rect x={sinir(p.x, 10, 330) - 15} y={p.y - 9} width={30} height={18} rx={5} fill="var(--c1)" transform={`rotate(${aci} ${sinir(p.x, 10, 330)} ${p.y})`} />

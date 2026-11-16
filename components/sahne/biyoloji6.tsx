@@ -9,7 +9,7 @@ const ilerleme = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 
 const ara = (a: number, b: number, u: number) => a + (b - a) * u;
 /** 10000 → "10 000" (kartlardaki yazım). */
 const sayi = (n: number) => n.toLocaleString("tr-TR", { maximumFractionDigits: 6 }).replace(/\./g, " ");
-const YESIL = "var(--biyoloji)", SU = "#cfe4fb", SU_K = "#7fb2ea";
+const YESIL = "var(--biyoloji)", SU = "color-mix(in srgb, #0f80ff 20%, var(--surface))", SU_K = "#7fb2ea";
 
 /* ---------- enerji piramidi: %10 kuralı ---------- */
 
@@ -179,7 +179,7 @@ function Karbon({ v }: SahneProps) {
       </g>
       <g transform="translate(212 196)">
         <path d="M-10 0 Q-10 -12 0 -14 Q10 -12 10 0 Z" fill="#d9a066" />
-        <rect x={-2.5} y={-8} width={5} height={8} fill="#efe2cf" />
+        <rect x={-2.5} y={-8} width={5} height={8} fill="color-mix(in srgb, #af762b 20%, var(--surface))" />
         {!ayr && <g fill="#a98a5a">{[-26, -14, -2, 10, 22].map((d) => <ellipse key={d} cx={d} cy={-3} rx={7} ry={3} transform={`rotate(${d} ${d} -3)`} />)}</g>}
       </g>
       <g transform="translate(288 196)">
@@ -354,7 +354,7 @@ function BekciHucre({ x, acik, sol }: { x: number; acik: number; sol: boolean })
   const d = sol ? -1 : 1, ic = 6 + 16 * acik, dis = 30 + 4 * acik;
   // Böbrek biçimi: iç kenar ortada açılır.
   const p = `M${x} 50 C${x + d * dis} 54 ${x + d * dis} 186 ${x} 190 C${x + d * (ic - 2)} 170 ${x + d * ic} 130 ${x + d * ic} 120 C${x + d * ic} 110 ${x + d * (ic - 2)} 70 ${x} 50 Z`;
-  return <path d={p} fill="#cfe9d6" stroke={YESIL} strokeWidth={1.6} />;
+  return <path d={p} fill="color-mix(in srgb, #0f994e 20%, var(--surface))" stroke={YESIL} strokeWidth={1.6} />;
 }
 
 function Stoma({ v }: SahneProps) {
@@ -460,15 +460,15 @@ function Halka({ v }: SahneProps) {
     <svg viewBox="0 0 340 252" role="img" aria-label={`${n} yıllık gövde kesiti: ${n} yıllık halka`}>
       <g key={n}>
         <circle cx={CX} cy={CY} r={ksilem + 18} fill="#b98a5e" />
-        <circle cx={CX} cy={CY} r={ksilem + 10} fill="#f0c48a" />
+        <circle cx={CX} cy={CY} r={ksilem + 10} fill="color-mix(in srgb, #e49530 55%, var(--surface))" />
         <circle cx={CX} cy={CY} r={ksilem + 4} fill="none" stroke={YESIL} strokeWidth={2.4} strokeDasharray="4 3" />
         {Array.from({ length: n }, (_, k) => n - 1 - k).map((i) => (
           <g key={i}>
-            <circle cx={CX} cy={CY} r={8 + (i + 1) * R} fill="#f3dfbf" />
+            <circle cx={CX} cy={CY} r={8 + (i + 1) * R} fill="color-mix(in srgb, #d7993a 30%, var(--surface))" />
             <circle cx={CX} cy={CY} r={8 + (i + 1) * R} fill="none" stroke="#b58d5c" strokeWidth={2.4} />
           </g>
         ))}
-        <circle cx={CX} cy={CY} r={8} fill="#e5cfa9" stroke="#b58d5c" strokeWidth={1.4} />
+        <circle cx={CX} cy={CY} r={8} fill="color-mix(in srgb, #be8a33 40%, var(--surface))" stroke="#b58d5c" strokeWidth={1.4} />
       </g>
       <g fontSize={11.5} fontWeight={700}>
         <line x1={CX + (ksilem + 15) * 0.7} y1={CY - (ksilem + 15) * 0.7} x2={232} y2={40} stroke="var(--muted)" />
@@ -581,7 +581,7 @@ function Cimlenme({ v }: SahneProps) {
       <g key={String(ok)} className="ad-belir">
         {ok ? (
           <g>
-            <path d={`M${CX} ${ZY + 12} Q${CX - 4} ${ZY + 26} ${CX + 2} ${ZY + 40}`} stroke="#e8dcc6" strokeWidth={3} fill="none" strokeLinecap="round" />
+            <path d={`M${CX} ${ZY + 12} Q${CX - 4} ${ZY + 26} ${CX + 2} ${ZY + 40}`} stroke="color-mix(in srgb, #8c5800 20%, var(--surface))" strokeWidth={3} fill="none" strokeLinecap="round" />
             <path d={`M${CX} ${ZY + 6} Q${CX + 4} ${ZY - 30} ${CX} ${ZY - 62}`} stroke="#7a9a5f" strokeWidth={4} fill="none" strokeLinecap="round" />
             <ellipse cx={CX - 14} cy={ZY - 66} rx={14} ry={6} fill={YESIL} transform={`rotate(-20 ${CX - 14} ${ZY - 66})`} />
             <ellipse cx={CX + 14} cy={ZY - 66} rx={14} ry={6} fill={YESIL} transform={`rotate(20 ${CX + 14} ${ZY - 66})`} />

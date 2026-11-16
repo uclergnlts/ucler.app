@@ -112,7 +112,7 @@ function Lamba({ x, y, p }: { x: number; y: number; p: number }) {
   return (
     <g>
       {q > 0.01 && <circle cx={x} cy={y} r={13 + 14 * q} fill="var(--c4)" opacity={0.12 + 0.3 * q} />}
-      <circle cx={x} cy={y} r={11} fill={q > 0.01 ? "#ffe8a3" : "var(--surface)"} stroke="var(--ink)" strokeWidth={2} />
+      <circle cx={x} cy={y} r={11} fill={q > 0.01 ? "color-mix(in srgb, #ffc924 40%, var(--surface))" : "var(--surface)"} stroke="var(--ink)" strokeWidth={2} />
       <path d={`M${x - 6} ${y + 7} V${y + 1} Q${x - 6} ${y - 6} ${x} ${y - 6} Q${x + 6} ${y - 6} ${x + 6} ${y + 1} V${y + 7}`} fill="none" stroke="var(--ink)" strokeWidth={1.5} />
     </g>
   );
@@ -338,9 +338,9 @@ function Motor({ t, oynuyor, s }: SahneProps) {
     <svg viewBox="0 0 340 236" role="img" aria-label={bitti ? "Bobin dik konumda salınıp durdu" : "Komütatörsüz bobin mıknatıslar arasında, akım hep aynı yönde"}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill={bitti ? "var(--c2)" : "var(--ink)"}>{bitti ? "Bobin dik durdu: tork sıfır" : "Komütatör yok: akım hep aynı yönde"}</text>
       <rect x={14} y={70} width={46} height={110} fill="var(--c2)" />
-      <text x={37} y={131} fontSize={17} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">N</text>
+      <text x={37} y={131} fontSize={17} fontWeight={800} fill="#fff" textAnchor="middle">N</text>
       <rect x={280} y={70} width={46} height={110} fill="var(--c1)" />
-      <text x={303} y={131} fontSize={17} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">S</text>
+      <text x={303} y={131} fontSize={17} fontWeight={800} fill="#fff" textAnchor="middle">S</text>
       <g>
         {[94, 124, 154].map((y) => <Ok key={y} x1={66} y1={y} x2={274} y2={y} renk="var(--c5)" kalin={1.2} />)}
       </g>
@@ -450,9 +450,9 @@ function Jenerator({ v, t, oynuyor, s, kosular }: SahneProps) {
     <svg viewBox="0 0 340 236" role="img" aria-label={`Bobin saniyede ${r} tur dönüyor; tepe gerilimi ${r} birim`}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">εmax = N·B·A·ω: <tspan fill="var(--c2)">{r} birim</tspan>, {r} tur/s</text>
       <rect x={10} y={84} width={20} height={96} fill="var(--c2)" />
-      <text x={20} y={137} fontSize={13} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">N</text>
+      <text x={20} y={137} fontSize={13} fontWeight={800} fill="#fff" textAnchor="middle">N</text>
       <rect x={94} y={84} width={20} height={96} fill="var(--c1)" />
-      <text x={104} y={137} fontSize={13} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">S</text>
+      <text x={104} y={137} fontSize={13} fontWeight={800} fill="#fff" textAnchor="middle">S</text>
       <ellipse cx={cx} cy={cy} rx={Math.max(1.5, Math.abs(Math.cos(aci)) * 26)} ry={40} fill="none" stroke="var(--c4)" strokeWidth={4} />
       <g>
         <line x1={GX0} x2={GX1} y1={GY} y2={GY} stroke="var(--ink)" strokeWidth={1.3} />
@@ -497,7 +497,7 @@ function Trafo({ v }: SahneProps) {
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={dc ? "Pil bağlı: akı değişmiyor, çıkış 0 V" : `İkincil ${N2} sarım: çıkış ${say(V2, 1)} V`}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{dc ? <>V₂ = <tspan fill="var(--c2)">0 V</tspan>: akı değişmiyor</> : <>V₂ = 230 · {N2} / 1000 = <tspan fill="var(--c2)">{say(V2, 1)} V</tspan></>}</text>
-      <path d="M110 58 H230 V194 H110 Z M128 76 V176 H212 V76 Z" fill="#c4ccd6" fillRule="evenodd" />
+      <path d="M110 58 H230 V194 H110 Z M128 76 V176 H212 V76 Z" fill="color-mix(in srgb, #3a5a87 30%, var(--surface))" fillRule="evenodd" />
       {!dc && (
         <path d="M119 126 V67 H221 V185 H119 Z" fill="none" stroke="var(--c5)" strokeWidth={1.6} strokeDasharray="5 6" opacity={0.7}>
           <animate attributeName="stroke-dashoffset" from="0" to="-22" dur="0.7s" repeatCount="indefinite" />

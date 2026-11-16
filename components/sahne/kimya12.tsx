@@ -17,7 +17,7 @@ function Sekmeler({ adlar, secili, sec, y = 8, x0 = 10, gen = 320 }: { adlar: st
       {adlar.map((ad, i) => (
         <g key={ad} onClick={() => sec(i)} style={{ cursor: "pointer" }}>
           <rect x={x0 + i * W + 2} y={y} width={W - 4} height={26} rx={13} fill={i === secili ? "var(--kimya)" : "var(--panel)"} />
-          <text x={x0 + i * W + W / 2} y={y + 17} fontSize={11} fontWeight={800} textAnchor="middle" fill={i === secili ? "var(--on-btn)" : "var(--ink)"}>{ad}</text>
+          <text x={x0 + i * W + W / 2} y={y + 17} fontSize={11} fontWeight={800} textAnchor="middle" fill={i === secili ? "#fff" : "var(--ink)"}>{ad}</text>
         </g>
       ))}
     </g>
@@ -198,7 +198,7 @@ function Ayirac({ v, set, s, t, oynuyor, kosular }: SahneProps) {
       <Sekmeler adlar={["Tollens", "Fehling"]} secili={r} sec={(i) => set("r", i)} x0={104} gen={200} />
       {ALDEHIT.map((d, i) => {
         const x = 116 + i * 88, olumlu = r ? d.fe : d.t;
-        const sivi = r ? FEHLING : "#d9dee6", op = r && olumlu ? 0.65 * (1 - 0.7 * k) : r ? 0.65 : 0.5;
+        const sivi = r ? FEHLING : "color-mix(in srgb, #41629e 20%, var(--surface))", op = r && olumlu ? 0.65 * (1 - 0.7 * k) : r ? 0.65 : 0.5;
         return (
           <g key={d.ad}>
             <Tup x={x} renk={sivi} op={op} ust={84} alt={146} />
@@ -508,7 +508,7 @@ function AtomEko({ v, set }: SahneProps) {
       <rect x={40} y={112} width={W} height={26} rx={8} fill="var(--panel)" />
       <rect x={40} y={112} width={(W * e) / 100} height={26} rx={8} fill="var(--c3)" />
       {e < 100 && <text x={40 + (W * e) / 100 + 8} y={130} fontSize={11.5} fontWeight={800} fill="var(--muted)">atık</text>}
-      <text x={48} y={130} fontSize={11.5} fontWeight={800} fill="var(--on-btn)">ürün</text>
+      <text x={48} y={130} fontSize={11.5} fontWeight={800} fill="#fff">ürün</text>
       <text x={170} y={170} fontSize={16} fontWeight={800} textAnchor="middle" fill={e === 100 ? "var(--good)" : "var(--ink)"}>Atom ekonomisi: %{e}</text>
       <text x={170} y={192} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">
         {d.urun} / {d.top} × 100 · ürünün kütlesi / girenlerin kütlesi
@@ -537,9 +537,9 @@ function Nano({ v }: SahneProps) {
     const pts = (q: [number, number][]) => q.map((r) => r.join(",")).join(" ");
     kup.push(
       <g key={`${x}${y}${z}`} stroke="var(--ink)" strokeWidth={0.8} strokeLinejoin="round">
-        <polygon points={pts(sag)} fill="#cdd6e3" />
-        <polygon points={pts(sol)} fill="#e3e9f1" />
-        <polygon points={pts(ust)} fill="#f6f8fb" />
+        <polygon points={pts(sag)} fill="color-mix(in srgb, #053a8f 20%, var(--surface))" />
+        <polygon points={pts(sol)} fill="color-mix(in srgb, #7399d5 20%, var(--surface))" />
+        <polygon points={pts(ust)} fill="color-mix(in srgb, #d2e4ff 20%, var(--surface))" />
       </g>,
     );
   }

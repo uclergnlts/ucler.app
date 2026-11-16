@@ -36,7 +36,7 @@ function Lamba({ x, y, p, sokuk = false }: { x: number; y: number; p: number; so
   return (
     <g>
       {q > 0.01 && <circle cx={x} cy={y} r={14 + 16 * q} fill="var(--c4)" opacity={0.12 + 0.3 * q} />}
-      <circle cx={x} cy={y} r={12} fill={q > 0.01 ? "#ffe8a3" : "var(--surface)"} stroke="var(--ink)" strokeWidth={2} />
+      <circle cx={x} cy={y} r={12} fill={q > 0.01 ? "color-mix(in srgb, #ffc924 40%, var(--surface))" : "var(--surface)"} stroke="var(--ink)" strokeWidth={2} />
       <path d={`M${x - 8.5} ${y - 8.5} L${x + 8.5} ${y + 8.5} M${x + 8.5} ${y - 8.5} L${x - 8.5} ${y + 8.5}`} stroke="var(--ink)" strokeWidth={1.6} />
     </g>
   );
@@ -456,7 +456,7 @@ function Verim({ v }: SahneProps) {
       <text x={14} y={42} fontSize={13} fontWeight={800} fill={led ? "var(--good)" : "var(--c2)"}>verim = ışık / harcanan = {isik} / {P} ≈ %{Math.round((100 * isik) / P)}</text>
       <g>
         <circle cx={58} cy={112} r={34} fill="var(--c4)" opacity={0.2} />
-        <circle cx={58} cy={112} r={20} fill="#ffe8a3" stroke="var(--ink)" strokeWidth={2} />
+        <circle cx={58} cy={112} r={20} fill="color-mix(in srgb, #ffc924 40%, var(--surface))" stroke="var(--ink)" strokeWidth={2} />
         <rect x={48} y={132} width={20} height={16} rx={3} fill="var(--line-2)" />
         {!led && [0, 1, 2].map((i) => (
           <path key={i} d={`M${40 + i * 18} 70 q-6 -8 0 -16 q6 -8 0 -16`} fill="none" stroke="var(--c2)" strokeWidth={2} opacity={0.7} />

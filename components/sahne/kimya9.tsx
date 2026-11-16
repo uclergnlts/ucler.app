@@ -171,10 +171,10 @@ function Yuzey({ s, t, oynuyor }: SahneProps) {
         const kalan = 1 - k.V / 40, R = 6 + (k.V / 40) * 26, kab = u > 0 && k.V < 39.5;
         return (
           <g key={i}>
-            <rect x={k.x - 38} y={112} width={76} height={68} fill="#eaf1fb" />
+            <rect x={k.x - 38} y={112} width={76} height={68} fill="color-mix(in srgb, #96c1ff 20%, var(--surface))" />
             {k.toz
-              ? tozlar.map((p, j) => (j / tozlar.length < kalan ? <circle key={j} cx={k.x + p.dx} cy={170 + p.dy * 0.6} r={2.4} fill="#cfd5dc" stroke="#9aa8ba" strokeWidth={0.6} /> : null))
-              : kalan > 0.02 && <rect x={k.x - 16 * Math.sqrt(kalan)} y={176 - 24 * Math.sqrt(kalan)} width={32 * Math.sqrt(kalan)} height={24 * Math.sqrt(kalan)} rx={4} fill="#cfd5dc" stroke="#9aa8ba" />}
+              ? tozlar.map((p, j) => (j / tozlar.length < kalan ? <circle key={j} cx={k.x + p.dx} cy={170 + p.dy * 0.6} r={2.4} fill="color-mix(in srgb, #0f356c 20%, var(--surface))" stroke="#9aa8ba" strokeWidth={0.6} /> : null))
+              : kalan > 0.02 && <rect x={k.x - 16 * Math.sqrt(kalan)} y={176 - 24 * Math.sqrt(kalan)} width={32 * Math.sqrt(kalan)} height={24 * Math.sqrt(kalan)} rx={4} fill="color-mix(in srgb, #0f356c 20%, var(--surface))" stroke="#9aa8ba" />}
             {kab && [0, 1, 2, 3].map((j) => {
               const hiz = k.toz ? 3 : 1, f = (u * hiz * 4 + j * 0.25) % 1;
               return <circle key={j} cx={k.x - 18 + j * 12} cy={168 - f * 50} r={2.6} fill="none" stroke="var(--c1)" strokeWidth={1.2} />;
@@ -279,7 +279,7 @@ function Tanecikler({ n24, n2, cx, cy, w, h, tohum }: { n24: number; n2: number;
   };
   return (
     <g>
-      {Array.from({ length: n24 }, (_, i) => { const p = yer(); return <g key={`a${i}`}><circle cx={p.x - 3.5} cy={p.y} r={4} fill="#d9dee5" stroke="#9aa8ba" /><circle cx={p.x + 3.5} cy={p.y} r={4} fill="#d9dee5" stroke="#9aa8ba" /></g>; })}
+      {Array.from({ length: n24 }, (_, i) => { const p = yer(); return <g key={`a${i}`}><circle cx={p.x - 3.5} cy={p.y} r={4} fill="color-mix(in srgb, #416299 20%, var(--surface))" stroke="#9aa8ba" /><circle cx={p.x + 3.5} cy={p.y} r={4} fill="color-mix(in srgb, #416299 20%, var(--surface))" stroke="#9aa8ba" /></g>; })}
       {Array.from({ length: n2 }, (_, i) => { const p = yer(); return <circle key={`b${i}`} cx={p.x} cy={p.y} r={4.5} fill={KAHVE} />; })}
     </g>
   );

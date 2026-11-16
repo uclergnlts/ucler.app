@@ -288,7 +288,7 @@ function Ayrilmama({ s, t, oynuyor }: SahneProps) {
   const II = [{ x: 280, y: 36, n: 24, p: 0 }, { x: 280, y: 96, n: 24, p: 0 }, { x: 280, y: 148, n: 22, p: 1 }, { x: 280, y: 208, n: 22, p: 1 }];
   const Hucre = ({ x, y, r, n, kotu, op }: { x: number; y: number; r: number; n: number; kotu: boolean; op: number }) => (
     <g opacity={op}>
-      <circle cx={x} cy={y} r={r} fill={kotu ? "#fdeeed" : "#f4f8fc"} stroke={kotu ? ANNE : "var(--ink)"} strokeWidth={1.6} />
+      <circle cx={x} cy={y} r={r} fill={kotu ? "color-mix(in srgb, #f5b2c1 20%, var(--surface))" : "color-mix(in srgb, #c8e4ff 20%, var(--surface))"} stroke={kotu ? ANNE : "var(--ink)"} strokeWidth={1.6} />
       <text x={x} y={y + 5} fontSize={14} fontWeight={800} fill="var(--ink)" textAnchor="middle">{n}</text>
     </g>
   );
@@ -396,7 +396,7 @@ function Simge({ m, f, x, y }: { m: Mod; f: Fen; x: number; y: number }) {
   if (m === "kan")
     return (
       <g>
-        <circle cx={x} cy={y} r={12} fill="#fdeeed" stroke={f.renk} strokeWidth={1.6} />
+        <circle cx={x} cy={y} r={12} fill="color-mix(in srgb, #f5b2c1 20%, var(--surface))" stroke={f.renk} strokeWidth={1.6} />
         <text x={x} y={y + 4} fontSize={f.ad.length > 1 ? 10 : 11.5} fontWeight={800} fill={f.renk} textAnchor="middle">{f.ad}</text>
       </g>
     );
@@ -553,7 +553,7 @@ function Test({ s, t, oynuyor }: SahneProps) {
       <text x={248} y={104} fontSize={14} fontWeight={800} fill="var(--ink)" textAnchor="middle">aa</text>
       <line x1={20} y1={120} x2={320} y2={120} stroke="var(--line)" />
       <text x={20} y={142} fontSize={11.5} fontWeight={700} fill="var(--muted)">yavrular</text>
-      {[{ ad: "mor", n: mor, renk: "var(--c5)", y: 158 }, { ad: "beyaz", n: beyaz, renk: "#e7ebf1", y: 196 }].map((b) => (
+      {[{ ad: "mor", n: mor, renk: "var(--c5)", y: 158 }, { ad: "beyaz", n: beyaz, renk: "color-mix(in srgb, #87a3d5 20%, var(--surface))", y: 196 }].map((b) => (
         <g key={b.ad}>
           <text x={20} y={b.y + 15} fontSize={12} fontWeight={700} fill="var(--ink)">{b.ad}</text>
           <rect x={70} y={b.y} width={W} height={22} rx={6} fill="none" stroke="var(--line)" />

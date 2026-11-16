@@ -172,7 +172,7 @@ function Anahtar({ s, t, oynuyor }: SahneProps) {
         return (
           <g key={ad}>
             <rect x={y.x - 31} y={YY - 12} width={62} height={24} rx={7} fill={ok ? "var(--biyoloji)" : "var(--biyoloji-soft)"} />
-            <text x={y.x} y={YY + 4} fontSize={11} fontWeight={800} fill={ok ? "var(--on-btn)" : "var(--ink)"} textAnchor="middle">{ad}</text>
+            <text x={y.x} y={YY + 4} fontSize={11} fontWeight={800} fill={ok ? "#fff" : "var(--ink)"} textAnchor="middle">{ad}</text>
           </g>
         );
       })}
@@ -291,7 +291,7 @@ function Kalp({ v }: SahneProps) {
         {odalar.map((d, i) => (
           <g key={i}>
             <rect x={d.x} y={d.y} width={d.w} height={d.h} rx={12} fill={d.renk} fillOpacity={0.85} />
-            <text x={d.x + d.w / 2} y={d.y + d.h / 2 + 4} fontSize={11} fontWeight={700} fill="var(--on-btn)" textAnchor="middle">{d.ad}</text>
+            <text x={d.x + d.w / 2} y={d.y + d.h / 2 + 4} fontSize={11} fontWeight={700} fill="#fff" textAnchor="middle">{d.ad}</text>
           </g>
         ))}
       </g>

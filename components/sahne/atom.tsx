@@ -99,7 +99,7 @@ function Atom({ s, v, set }: SahneProps) {
               <rect x={8 + i * 112} y={232} width={100} height={36} rx={18} fill="var(--surface)" stroke={renk} strokeWidth={2} />
               {!dokundu && <rect x={8 + i * 112} y={232} width={100} height={36} rx={18} fill="none" stroke="var(--acc)" strokeWidth={2} className="ad-nabiz ad-nabiz-hafif" />}
               <circle cx={30 + i * 112} cy={250} r={8} fill={renk} />
-              <text x={30 + i * 112} y={254} fontSize={12} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">+</text>
+              <text x={30 + i * 112} y={254} fontSize={12} fontWeight={800} fill="#fff" textAnchor="middle">+</text>
               <text x={44 + i * 112} y={255} fontSize={13} fontWeight={700} fill="var(--ink)">{ad}</text>
             </g>
           ))}

@@ -237,7 +237,7 @@ function Silindir({ v }: SahneProps) {
       <g>
         <rect x={84} y={ALT + 2} width={112} height={6} rx={2} fill="var(--ink)" />
         <rect x={92} y={ALT + 8} width={96} height={30} rx={6} fill="var(--ink)" />
-        <text x={140} y={ALT + 29} fontSize={15} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">{m} g</text>
+        <text x={140} y={ALT + 29} fontSize={15} fontWeight={800} fill="#fff" textAnchor="middle">{m} g</text>
       </g>
       <g fontSize={13} fontWeight={700}>
         <text x={224} y={78} fill="var(--c1)">V = {V} cm³</text>
@@ -296,7 +296,7 @@ function Yuzme({ v }: SahneProps) {
       <text x={272} y={SU + 18} fontSize={11.5} fontWeight={700} fill="var(--c1)" textAnchor="end">su: 1 g/cm³</text>
       <g>
         <rect x={170 - K / 2} y={ust} width={K} height={K} rx={4} fill="var(--c4)" />
-        <text x={170} y={ust + K / 2 + 5} fontSize={12} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">{say(d)}</text>
+        <text x={170} y={ust + K / 2 + 5} fontSize={12} fontWeight={800} fill="#fff" textAnchor="middle">{say(d)}</text>
       </g>
       <text x={170} y={230} fontSize={13.5} fontWeight={800} textAnchor="middle" fill={d === 1 ? "var(--good)" : "var(--ink)"}>{hal}</text>
     </svg>

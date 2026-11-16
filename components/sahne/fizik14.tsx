@@ -29,7 +29,7 @@ function Cekirdek({ x, y, p, n, r = 8 }: { x: number; y: number; p: number; n: n
       {toplar.reverse().map((b, i) => (
         <g key={i}>
           <circle cx={b.cx} cy={b.cy} r={r} fill={b.proton ? PROTON : NOTRON} stroke="var(--surface)" strokeWidth={1.4} />
-          {b.proton && <text x={b.cx} y={b.cy + 4} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">+</text>}
+          {b.proton && <text x={b.cx} y={b.cy + 4} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">+</text>}
         </g>
       ))}
     </g>
@@ -111,7 +111,7 @@ function Kuvvet({ v }: SahneProps) {
       {[x1, x2].map((x, i) => (
         <g key={i}>
           <circle cx={x} cy={Y} r={12} fill={PROTON} />
-          <text x={x} y={Y + 5} fontSize={14} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">+</text>
+          <text x={x} y={Y + 5} fontSize={14} fontWeight={800} fill="#fff" textAnchor="middle">+</text>
         </g>
       ))}
       <text x={cx} y={Y + 46} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">aralarında {say(r)} fm (1 fm = 10⁻¹⁵ m)</text>
@@ -289,7 +289,7 @@ function Isinim({ t, oynuyor, s }: SahneProps) {
       <text x={IS.P0 - 8} y={60} fontSize={14} fontWeight={800} fill="var(--c2)" textAnchor="end">+</text>
       <text x={IS.P0 - 8} y={171} fontSize={14} fontWeight={800} fill="var(--c1)" textAnchor="end">−</text>
       {/* engeller */}
-      {engel(208, 3, "#d9cbb0", "kâğıt", 204)}
+      {engel(208, 3, "color-mix(in srgb, #805608 30%, var(--surface))", "kâğıt", 204)}
       {engel(253, 5, "#b8c2cf", "alüminyum", 218)}
       {engel(298, 14, "#6b7280", "kurşun", 204)}
       {/* ışımalar */}

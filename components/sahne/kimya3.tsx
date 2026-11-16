@@ -9,7 +9,7 @@ const oran = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 0 ? 
 const kes = (x: number) => Math.max(0, Math.min(1, x));
 const ara = (a: number, b: number, u: number) => a + (b - a) * u;
 const eksi = (x: number) => `${x < 0 ? "−" : ""}${Math.abs(x)}`;
-const SU = "#d6e8fb";
+const SU = "color-mix(in srgb, #3294ff 20%, var(--surface))";
 
 /** Sahne açıkken sürekli akan zaman (saniye). Az hareket isteyende durur. */
 function useSaat() {
@@ -41,7 +41,7 @@ function Mendeleyev({ s, t, oynuyor }: SahneProps) {
           const ge = bos && bulundu;
           return (
             <g key={i}>
-              <rect x={x} y={52} width={52} height={74} rx={10} fill={ge ? "#e6f6ed" : "var(--surface)"} stroke={bos ? (ge ? "var(--c3)" : "var(--kimya)") : "var(--line-2)"} strokeWidth={1.8} strokeDasharray={bos && !ge ? "5 4" : undefined} />
+              <rect x={x} y={52} width={52} height={74} rx={10} fill={ge ? "color-mix(in srgb, #82dac1 20%, var(--surface))" : "var(--surface)"} stroke={bos ? (ge ? "var(--c3)" : "var(--kimya)") : "var(--line-2)"} strokeWidth={1.8} strokeDasharray={bos && !ge ? "5 4" : undefined} />
               <text x={x + 26} y={90} fontSize={22} fontWeight={800} textAnchor="middle" fill={bos ? (ge ? "var(--c3)" : "var(--kimya)") : "var(--ink)"} fontFamily="var(--f-display)">{ge ? "Ge" : sb}</text>
               <text x={x + 26} y={113} fontSize={12} textAnchor="middle" fill="var(--muted)">{ge ? "72,6" : bos && u <= 0 ? "" : m}</text>
             </g>
@@ -102,10 +102,10 @@ function Tablo({ s, v, t, oynuyor }: SahneProps) {
                 fillOpacity={sec && mod !== "yaricap" ? 1 : boya ? 0.22 * boya : 1}
                 stroke={sec ? "var(--kimya)" : "var(--line-2)"} strokeWidth={sec ? 2 : 1.2} />
               {mod === "yaricap" && r > 0 && (
-                <circle cx={x + CW / 2} cy={yy + CH / 2} r={2 + (r / 203) * 13.5} fill={sec ? "var(--kimya)" : "#fbd3de"} fillOpacity={sec ? 0.4 : 1} />
+                <circle cx={x + CW / 2} cy={yy + CH / 2} r={2 + (r / 203) * 13.5} fill={sec ? "var(--kimya)" : "color-mix(in srgb, #eb2b76 20%, var(--surface))"} fillOpacity={sec ? 0.4 : 1} />
               )}
               <text x={x + CW / 2} y={yy + CH / 2 + 4.5} fontSize={12.5} fontWeight={700} textAnchor="middle"
-                fill={sec && mod !== "yaricap" ? "var(--on-btn)" : "var(--ink)"}>{e.s}</text>
+                fill={sec && mod !== "yaricap" ? "#fff" : "var(--ink)"}>{e.s}</text>
             </g>
           );
         })}
@@ -158,7 +158,7 @@ function Iyonlasma({ s, t, oynuyor }: SahneProps) {
         {IE.map((e, k) => {
           const b = kes(u * 24 - k * 1.05);
           const z = k + 1;
-          const renk = !bitti ? "#b9c4d3" : [3, 11, 19].includes(z) ? "var(--kimya)" : SOY.includes(z) ? "var(--c5)" : "#c9d2de";
+          const renk = !bitti ? "#b9c4d3" : [3, 11, 19].includes(z) ? "var(--kimya)" : SOY.includes(z) ? "var(--c5)" : "color-mix(in srgb, #4b6ea1 30%, var(--surface))";
           const h = (IY1 - iy(e)) * yumusak(b);
           return <rect key={k} x={IX0 + k * SLOT + 2} y={IY1 - h} width={SLOT - 4} height={h} rx={2} fill={renk} />;
         })}
@@ -203,14 +203,14 @@ function Iyonik({ s, t, oynuyor }: SahneProps) {
         <Kabuk x={NX} y={CY} r={27} n={8} renk="var(--c1)" don={22} />
         {!iyon && <circle cx={NX} cy={CY} r={37} fill="none" stroke="var(--line-2)" strokeWidth={1.3} />}
         <circle cx={NX} cy={CY} r={10} fill="var(--c4)" />
-        <text x={NX} y={CY + 4} fontSize={11} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">Na</text>
+        <text x={NX} y={CY + 4} fontSize={11} fontWeight={800} textAnchor="middle" fill="#fff">Na</text>
       </g>
       <g>
         <Kabuk x={KX} y={CY} r={16} n={2} renk="var(--c1)" />
         <Kabuk x={KX} y={CY} r={25} n={8} renk="var(--c1)" don={22} />
         <Kabuk x={KX} y={CY} r={33} n={iyon ? 8 : 7} renk="var(--c1)" don={iyon ? 22 : 0} />
         <circle cx={KX} cy={CY} r={10} fill="var(--c3)" />
-        <text x={KX} y={CY + 4} fontSize={11} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">Cl</text>
+        <text x={KX} y={CY + 4} fontSize={11} fontWeight={800} textAnchor="middle" fill="#fff">Cl</text>
       </g>
       {!iyon && <circle cx={ex} cy={ey} r={4.2} fill="var(--kimya)" />}
       <g fontSize={13} fontWeight={700} textAnchor="middle">
@@ -277,7 +277,7 @@ function Polar({ v }: SahneProps) {
         <text x={HX} y={Y + 5} fontSize={14} fontWeight={800} textAnchor="middle" fill="var(--ink)">H</text>
       </g>
       <g>
-        <circle cx={KX} cy={Y} r={cl ? 27 : 17} fill={cl ? "#e6f6ed" : "var(--surface)"} stroke={cl ? "var(--c3)" : "#8d9bb0"} strokeWidth={1.6} style={{ transition: "r .5s" }} />
+        <circle cx={KX} cy={Y} r={cl ? 27 : 17} fill={cl ? "color-mix(in srgb, #82dac1 20%, var(--surface))" : "var(--surface)"} stroke={cl ? "var(--c3)" : "#8d9bb0"} strokeWidth={1.6} style={{ transition: "r .5s" }} />
         <text x={KX} y={Y + 5} fontSize={14} fontWeight={800} textAnchor="middle" fill="var(--ink)">{cl ? "Cl" : "H"}</text>
       </g>
       <g style={{ transform: `translateX(${kay}px)`, transition: "transform .6s ease" }}>
@@ -332,7 +332,7 @@ function Metal({ v }: SahneProps) {
           return (
             <g key={i}>
               <circle cx={x} cy={y} r={13} fill="var(--c4)" opacity={0.9} />
-              <text x={x} y={y + 5} fontSize={15} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">+</text>
+              <text x={x} y={y + 5} fontSize={15} fontWeight={800} textAnchor="middle" fill="#fff">+</text>
             </g>
           );
         })}

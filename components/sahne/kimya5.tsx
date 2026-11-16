@@ -8,14 +8,14 @@ const oran = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 0 ? 
 const kes = (x: number) => Math.max(0, Math.min(1, x));
 const ara = (a: number, b: number, u: number) => a + (b - a) * u;
 const virgul = (x: number, b = 1) => x.toLocaleString("tr-TR", { maximumFractionDigits: b, minimumFractionDigits: 0 });
-const SU = "#d6e8fb";
+const SU = "color-mix(in srgb, #3294ff 20%, var(--surface))";
 
 /* ---------- atom ve molekül çizimi ---------- */
 
 const ATOM: Record<string, { f: string; s: string; r: number; y: string }> = {
-  H: { f: "#eef2f7", s: "#9aa8ba", r: 9, y: "var(--ink)" },
-  O: { f: "var(--c2)", s: "var(--surface)", r: 11, y: "var(--on-btn)" },
-  C: { f: "#3b4656", s: "var(--surface)", r: 11, y: "var(--on-btn)" },
+  H: { f: "color-mix(in srgb, #aac6f3 20%, var(--surface))", s: "#9aa8ba", r: 9, y: "var(--ink)" },
+  O: { f: "var(--c2)", s: "var(--surface)", r: 11, y: "#fff" },
+  C: { f: "var(--karbon)", s: "var(--surface)", r: 11, y: "#fff" },
 };
 
 // Her molekülün atomları: [element, dx, dy]. Ortadaki atom en son çizilir, üstte kalır.
@@ -60,7 +60,7 @@ function Magnezyum({ s, t, oynuyor }: SahneProps) {
         {u >= 1 ? "2Mg + O₂ → 2MgO: havadaki oksijen katıldı" : alev ? "Magnezyum parlak bir alevle yanıyor" : "Magnezyum şerit, ağzı açık kapta"}
       </text>
       <g>
-        <rect x={70} y={160} width={200} height={10} rx={4} fill="#cfd8e3" />
+        <rect x={70} y={160} width={200} height={10} rx={4} fill="color-mix(in srgb, #0f448f 20%, var(--surface))" />
         <rect x={84} y={170} width={172} height={36} rx={8} fill="var(--panel)" />
         <rect x={124} y={177} width={92} height={22} rx={5} fill="var(--surface)" stroke="var(--line-2)" />
         <text x={170} y={193} fontSize={15} fontWeight={800} textAnchor="middle" fill={yan > 0.99 ? "var(--kimya)" : "var(--ink)"}>
@@ -68,11 +68,11 @@ function Magnezyum({ s, t, oynuyor }: SahneProps) {
         </text>
       </g>
       <path d="M96 160 L110 126 L230 126 L244 160 Z" fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} strokeLinejoin="round" />
-      {yan > 0.02 && <path d={`M${150 - 40 * yan} 126 Q150 ${126 - 40 * yan} ${150 + 40 * yan} 126 Z`} fill="#f6f8fb" stroke="#9aa8ba" strokeWidth={1.5} />}
+      {yan > 0.02 && <path d={`M${150 - 40 * yan} 126 Q150 ${126 - 40 * yan} ${150 + 40 * yan} 126 Z`} fill="color-mix(in srgb, #d2e4ff 20%, var(--surface))" stroke="#9aa8ba" strokeWidth={1.5} />}
       {yan < 0.99 && <rect x={uc} y={112} width={Math.max(0, 220 - uc)} height={8} rx={3} fill="#9aa8ba" />}
       {alev && (
         <g>
-          <ellipse cx={uc} cy={96} rx={22} ry={28} fill="#fff6d6" />
+          <ellipse cx={uc} cy={96} rx={22} ry={28} fill="color-mix(in srgb, #ffda4e 20%, var(--surface))" />
           <ellipse cx={uc} cy={102} rx={11} ry={15} fill="var(--surface)" stroke="var(--c4)" strokeWidth={1.8} />
         </g>
       )}
@@ -169,12 +169,12 @@ function Katli({ v }: SahneProps) {
     <g opacity={acik ? 1 : 0.35}>
       {acik ? <Molekul m={m} x={50} y={y + 9} /> : <text x={50} y={y + 14} fontSize={16} fontWeight={800} textAnchor="middle" fill="var(--muted)">?</text>}
       <text x={X} y={y - 8} fontSize={12.5} fontWeight={800} fill="var(--ink)">{ad}</text>
-      <rect x={X} y={y} width={12 * PX} height={18} rx={4} fill="#3b4656" />
-      <text x={X + 6 * PX} y={y + 13} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--on-btn)">C 12 g</text>
+      <rect x={X} y={y} width={12 * PX} height={18} rx={4} fill="var(--karbon)" />
+      <text x={X + 6 * PX} y={y + 13} fontSize={11} fontWeight={700} textAnchor="middle" fill="#fff">C 12 g</text>
       {acik ? (
         <g>
           <rect x={X + 12 * PX + 2} y={y} width={o * PX} height={18} rx={4} fill="var(--c2)" />
-          <text x={X + 12 * PX + 2 + (o * PX) / 2} y={y + 13} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--on-btn)">O {o} g</text>
+          <text x={X + 12 * PX + 2 + (o * PX) / 2} y={y + 13} fontSize={11} fontWeight={700} textAnchor="middle" fill="#fff">O {o} g</text>
         </g>
       ) : (
         <rect x={X + 12 * PX + 2} y={y} width={o * PX} height={18} rx={4} fill="none" stroke="var(--line-2)" strokeDasharray="4 3" />
@@ -211,7 +211,7 @@ function Hacim({ s, v, t, oynuyor }: SahneProps) {
   const oMol = yerlestir(oX, ["O2", "O2"]);
   const urun = yerlestir(pX, [...Array(Math.round(2 * w)).fill("H2O"), ...Array(Math.round(2 * artH)).fill("H2"), ...Array(Math.round(2 * artO)).fill("O2")]);
   const kutu = (x: number, L: number, renk: string, kesik = false) => (
-    <rect x={x} y={60} width={Math.max(8, LW * L)} height={74} rx={6} fill={kesik ? "none" : "#f6f8fb"} stroke={renk} strokeWidth={1.6} strokeDasharray={kesik ? "5 4" : undefined} />
+    <rect x={x} y={60} width={Math.max(8, LW * L)} height={74} rx={6} fill={kesik ? "none" : "color-mix(in srgb, #d2e4ff 20%, var(--surface))"} stroke={renk} strokeWidth={1.6} strokeDasharray={kesik ? "5 4" : undefined} />
   );
   const L = (x: number) => virgul(x);
   return (
@@ -342,7 +342,7 @@ function Denklestir({ s, v }: SahneProps) {
           const ok = x.sol === x.sag;
           return (
             <g key={x.e}>
-              <rect x={kutuX(i)} y={180} width={kutuW} height={30} rx={8} fill={ok ? "#eaf7ef" : "#fdeeed"} />
+              <rect x={kutuX(i)} y={180} width={kutuW} height={30} rx={8} fill={ok ? "color-mix(in srgb, #96dfcb 20%, var(--surface))" : "color-mix(in srgb, #f5b2c1 20%, var(--surface))"} />
               <circle cx={kutuX(i) + 16} cy={195} r={6.5} fill={ATOM[x.e].f} stroke={ATOM[x.e].s} strokeWidth={1.2} />
               <text x={kutuX(i) + 58} y={200} fontSize={13} fontWeight={800} textAnchor="middle" fill={ok ? "var(--good)" : "var(--bad)"}>
                 {x.e}: {x.sol} {ok ? "=" : "≠"} {x.sag}
@@ -374,7 +374,7 @@ function Yanma({ s, v, t, oynuyor }: SahneProps) {
       </g>
       {yaniyor && (
         <g>
-          <path d={`M170 ${bol ? 116 : 104} C186 140 184 170 170 176 C156 170 154 140 170 ${bol ? 116 : 104} Z`} fill={bol ? "#cfe0ff" : "#ffd79a"} />
+          <path d={`M170 ${bol ? 116 : 104} C186 140 184 170 170 176 C156 170 154 140 170 ${bol ? 116 : 104} Z`} fill={bol ? "color-mix(in srgb, #0f6cff 20%, var(--surface))" : "color-mix(in srgb, #ff9e0d 40%, var(--surface))"} />
           <path d="M170 140 C178 152 177 168 170 172 C163 168 162 152 170 140 Z" fill={bol ? "var(--c1)" : "var(--c4)"} />
         </g>
       )}
@@ -384,7 +384,7 @@ function Yanma({ s, v, t, oynuyor }: SahneProps) {
         if (m === "C")
           return (
             <g key={i} opacity={1 - p * 0.4}>
-              {[0, 1, 2].map((j) => <circle key={j} cx={x + (j - 1) * 6} cy={y + (j % 2) * 5} r={4} fill="#2b3340" />)}
+              {[0, 1, 2].map((j) => <circle key={j} cx={x + (j - 1) * 6} cy={y + (j % 2) * 5} r={4} fill="var(--karbon)" />)}
             </g>
           );
         return <Molekul key={i} m={m} x={x} y={y} k={0.7} op={1 - p * 0.4} />;
@@ -424,7 +424,7 @@ function Hap({ x, y, ad, renk, w = 38 }: { x: number; y: number; ad: string; ren
   return (
     <g>
       <rect x={x} y={y - 10} width={w} height={20} rx={10} fill={renk} />
-      <text x={x + w / 2} y={y + 4} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--on-btn)">{ad}</text>
+      <text x={x + w / 2} y={y + 4} fontSize={11} fontWeight={700} textAnchor="middle" fill="#fff">{ad}</text>
     </g>
   );
 }
@@ -475,11 +475,11 @@ function Analiz() {
     <svg viewBox="0 0 340 214" role="img" aria-label="Kireç taşı ısıtılınca sönmemiş kireç ve karbon dioksit oluşur">
       <text x={170} y={28} fontSize={16} fontWeight={800} textAnchor="middle" fill="var(--ink)">CaCO₃(k) → CaO(k) + CO₂(g)</text>
       <g>
-        <path d="M42 112 Q44 88 70 84 Q100 80 108 100 Q114 116 92 122 Q58 128 42 112 Z" fill="#f1f3f6" stroke="#9aa8ba" strokeWidth={1.6} />
+        <path d="M42 112 Q44 88 70 84 Q100 80 108 100 Q114 116 92 122 Q58 128 42 112 Z" fill="color-mix(in srgb, #b9cbee 20%, var(--surface))" stroke="#9aa8ba" strokeWidth={1.6} />
         <text x={76} y={176} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">kireç taşı</text>
       </g>
       <g>
-        <path d="M62 156 C70 144 68 138 76 130 C84 138 82 144 90 156 Z" fill="#ffd79a" />
+        <path d="M62 156 C70 144 68 138 76 130 C84 138 82 144 90 156 Z" fill="color-mix(in srgb, #ff9e0d 40%, var(--surface))" />
         <path d="M70 156 C74 150 74 146 76 142 C78 146 78 150 82 156 Z" fill="var(--c4)" />
       </g>
       <text x={150} y={110} fontSize={20} fontWeight={800} textAnchor="middle" fill="var(--muted)">→</text>

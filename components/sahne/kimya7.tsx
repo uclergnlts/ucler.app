@@ -8,8 +8,8 @@ const oran = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 0 ? 
 const kes = (x: number) => Math.max(0, Math.min(1, x));
 const ara = (a: number, b: number, u: number) => a + (b - a) * u;
 const virgul = (x: number, b = 1) => x.toLocaleString("tr-TR", { maximumFractionDigits: b, minimumFractionDigits: 0 });
-const SU = "#d6e8fb";
-const YAG = "#f2c94c";
+const SU = "color-mix(in srgb, #3294ff 20%, var(--surface))";
+const YAG = "color-mix(in srgb, #ecb302 70%, var(--surface))";
 
 /* ---------- sabun molekülü ve misel ---------- */
 
@@ -73,8 +73,8 @@ function SertSu({ v }: SahneProps) {
     <svg viewBox="0 0 340 214" role="img" aria-label={`${sert ? "Sert" : "Yumuşak"} su ve ${det ? "deterjan" : "sabun"}: ${kotu ? "az köpük, kaymak oluştu" : "bol köpük"}`}>
       <rect x={X} y={SUY} width={W} height={ALT - SUY} fill={SU} />
       <g>
-        {kab.map((b, i) => <circle key={i} cx={b.x} cy={b.y} r={b.r} fill="var(--surface)" stroke="#c5cfdc" strokeWidth={1.2} />)}
-        {kotu && <rect x={X + 4} y={SUY - kopuk} width={W - 8} height={kopuk} rx={3} fill="var(--surface)" stroke="#c5cfdc" />}
+        {kab.map((b, i) => <circle key={i} cx={b.x} cy={b.y} r={b.r} fill="var(--surface)" stroke="color-mix(in srgb, #3e649b 30%, var(--surface))" strokeWidth={1.2} />)}
+        {kotu && <rect x={X + 4} y={SUY - kopuk} width={W - 8} height={kopuk} rx={3} fill="var(--surface)" stroke="color-mix(in srgb, #3e649b 30%, var(--surface))" />}
       </g>
       {kotu && (
         <g fill="#b9c2ce">
@@ -108,9 +108,9 @@ function Kirec({ s, t, oynuyor }: SahneProps) {
   const kab = Array.from({ length: 14 }, () => ({ x: 104 + r() * 132, f: r() }));
   return (
     <svg viewBox="0 0 340 216" role="img" aria-label={u >= 1 ? "Sirke kireci çözdü, karbon dioksit gazı çıktı" : "Dibi kireç tutmuş çaydanlık"}>
-      <path d="M88 168 L98 72 Q100 58 116 58 L224 58 Q240 58 242 72 L252 168 Z" fill={sirke ? "#f6eedd" : "none"} />
-      <path d="M86 186 L88 168 L252 168 L254 186 Z" fill={sirke ? "#f6eedd" : "none"} />
-      <rect x={87} y={186 - kalin} width={166} height={kalin} fill="#e9ecef" stroke="#c8ced6" />
+      <path d="M88 168 L98 72 Q100 58 116 58 L224 58 Q240 58 242 72 L252 168 Z" fill={sirke ? "color-mix(in srgb, #d2b271 20%, var(--surface))" : "none"} />
+      <path d="M86 186 L88 168 L252 168 L254 186 Z" fill={sirke ? "color-mix(in srgb, #d2b271 20%, var(--surface))" : "none"} />
+      <rect x={87} y={186 - kalin} width={166} height={kalin} fill="color-mix(in srgb, #91a8cb 20%, var(--surface))" stroke="color-mix(in srgb, #486087 30%, var(--surface))" />
       {sirke && u < 1 && kab.map((b, i) => {
         const yy = 180 - ((u * 3 + b.f) % 1) * 130;
         return <circle key={i} cx={b.x} cy={yy} r={3 + b.f * 2.5} fill="none" stroke="#9aa8ba" strokeWidth={1.2} />;
@@ -146,10 +146,10 @@ function Karistir({ s, t, oynuyor }: SahneProps) {
     <svg viewBox="0 0 340 258" role="img" aria-label={u >= 1 ? "Karışımdan zehirli klor gazı çıktı" : "Çamaşır suyu ve tuz ruhu şişeleri"}>
       {sise(70, "NaOCl", "çamaşır suyu", "var(--c1)", false)}
       {sise(270, "HCl", "tuz ruhu", "var(--c2)", true)}
-      <path d="M120 140 L132 206 L208 206 L220 140 Z" fill={u > 0.3 ? "#eef2c4" : "none"} stroke="var(--ink)" strokeWidth={2} strokeLinejoin="round" />
+      <path d="M120 140 L132 206 L208 206 L220 140 Z" fill={u > 0.3 ? "color-mix(in srgb, #c6d84b 30%, var(--surface))" : "none"} stroke="var(--ink)" strokeWidth={2} strokeLinejoin="round" />
       <g opacity={gaz}>
         {[0, 1, 2, 3, 4].map((i) => (
-          <circle key={i} cx={150 + i * 10 + Math.sin(i * 2) * 6} cy={128 - gaz * (20 + i * 9)} r={12 + i * 3} fill="#c9d64a" opacity={0.55} />
+          <circle key={i} cx={150 + i * 10 + Math.sin(i * 2) * 6} cy={128 - gaz * (20 + i * 9)} r={12 + i * 3} fill="color-mix(in srgb, #b2c500 70%, var(--surface))" opacity={0.55} />
         ))}
       </g>
       {u >= 1 && (
@@ -170,9 +170,9 @@ const MONOMER = [
   { ad: "Tetrafloroeten", f: "CF₂=CF₂", p: "Teflon (PTFE)", k: "yapışmaz tava", s: ["F", "F", "F", "F"] },
 ];
 const YAN: Record<string, { f: string; r: number; y: string }> = {
-  H: { f: "#eef2f7", r: 5, y: "var(--ink)" },
-  Cl: { f: "var(--c3)", r: 7, y: "var(--on-btn)" },
-  F: { f: "#b9dc6b", r: 6, y: "var(--ink)" },
+  H: { f: "color-mix(in srgb, #aac6f3 20%, var(--surface))", r: 5, y: "var(--ink)" },
+  Cl: { f: "var(--c3)", r: 7, y: "#fff" },
+  F: { f: "color-mix(in srgb, #9bce2f 70%, var(--surface))", r: 6, y: "var(--ink)" },
 };
 
 /** İki karbonluk birim; (x, y) birimin sol karbonu, ara karbonlar arası uzaklık. */
@@ -195,7 +195,7 @@ function Birim({ x, y, s, ara: d, cift }: { x: number; y: number; s: string[]; a
             const yy = j ? y + 17 : y - 17, a = YAN[e];
             return <circle key={j} cx={cx} cy={yy} r={a.r} fill={a.f} stroke="#9aa8ba" strokeWidth={0.8} />;
           })}
-          <circle cx={cx} cy={y} r={6} fill="#3b4656" />
+          <circle cx={cx} cy={y} r={6} fill="var(--karbon)" />
         </g>
       ))}
     </g>
@@ -219,7 +219,7 @@ function Polimer({ v }: SahneProps) {
         <text x={14} y={100} fontSize={11.5} fontWeight={700} fill="var(--muted)">… binlerce birim zincir olur …</text>
       </g>
       <g fontSize={11} fontWeight={700} fill="var(--muted)">
-        <circle cx={96} cy={172} r={5} fill="#3b4656" /><text x={104} y={176}>C</text>
+        <circle cx={96} cy={172} r={5} fill="var(--karbon)" /><text x={104} y={176}>C</text>
         <circle cx={134} cy={172} r={5} fill={YAN.H.f} stroke="#9aa8ba" strokeWidth={0.8} /><text x={142} y={176}>H</text>
         <circle cx={172} cy={172} r={5} fill={YAN.Cl.f} /><text x={180} y={176}>Cl</text>
         <circle cx={214} cy={172} r={5} fill={YAN.F.f} /><text x={222} y={176}>F</text>

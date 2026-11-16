@@ -134,7 +134,7 @@ function Fma({ s, v, t, oynuyor, kosular }: SahneProps) {
         <rect x={px - 22} y={FMA.YOL - 36} width={44} height={26} rx={4} fill="var(--c1)" />
         <circle cx={px - 12} cy={FMA.YOL - 6} r={5.5} fill="var(--ink)" />
         <circle cx={px + 12} cy={FMA.YOL - 6} r={5.5} fill="var(--ink)" />
-        <text x={px} y={FMA.YOL - 18} fontSize={11.5} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">{m} kg</text>
+        <text x={px} y={FMA.YOL - 18} fontSize={11.5} fontWeight={800} fill="#fff" textAnchor="middle">{m} kg</text>
         {F > 0 && <Ok x1={px + 24} y1={FMA.YOL - 23} x2={px + 24 + F * 1.6} y2={FMA.YOL - 23} renk="var(--c2)" />}
         {F > 0 && <text x={px + 24 + F * 0.8} y={FMA.YOL - 34} fontSize={12} fontWeight={800} fill="var(--c2)" textAnchor="middle">{F} N</text>}
       </g>
@@ -225,7 +225,7 @@ function Surtunme({ v }: SahneProps) {
       <text x={bar(SINIR)} y={56} fontSize={11} fill="var(--ink)" fontWeight={700} textAnchor="middle">sınır μs·N ≈ 78 N</text>
       <line x1={14} x2={326} y1={Y} y2={Y} stroke="var(--ink)" strokeWidth={2} />
       <g>
-        <rect x={150} y={72} width={64} height={98} rx={3} fill="#dfe5ee" stroke="var(--ink)" strokeWidth={1.6} />
+        <rect x={150} y={72} width={64} height={98} rx={3} fill="color-mix(in srgb, #5f85c6 20%, var(--surface))" stroke="var(--ink)" strokeWidth={1.6} />
         <line x1={182} x2={182} y1={76} y2={166} stroke="var(--ink)" strokeWidth={1.2} />
         <circle cx={176} cy={122} r={2} fill="var(--ink)" />
         <circle cx={188} cy={122} r={2} fill="var(--ink)" />

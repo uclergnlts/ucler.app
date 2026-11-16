@@ -61,9 +61,9 @@ function BesinLab({ v, set }: SahneProps) {
         <path d="M0 0 V58 Q0 74 16 74 Q32 74 32 58 V0" fill="none" stroke="var(--ink)" strokeWidth={1.8} />
         {b > 0 && (
           s?.yag
-            ? <><path d="M1 40 H31 V58 Q31 73 16 73 Q1 73 1 58 Z" fill={b === 3 ? "#f3e7b3" : "#e8eef6"} />
+            ? <><path d="M1 40 H31 V58 Q31 73 16 73 Q1 73 1 58 Z" fill={b === 3 ? "color-mix(in srgb, #d7b412 30%, var(--surface))" : "color-mix(in srgb, #8cb2ee 20%, var(--surface))"} />
                 <rect x={1} y={s.arti ? 26 : 34} width={30} height={s.arti ? 14 : 6} fill={s.renk} fillOpacity={s.arti ? 0.9 : 0.5} /></>
-            : <path d="M1 26 H31 V58 Q31 73 16 73 Q1 73 1 58 Z" fill={s ? s.renk : b === 5 ? "#e8eef6" : "#efe6d2"} fillOpacity={s ? 0.85 : 1} />
+            : <path d="M1 26 H31 V58 Q31 73 16 73 Q1 73 1 58 Z" fill={s ? s.renk : b === 5 ? "color-mix(in srgb, #8cb2ee 20%, var(--surface))" : "color-mix(in srgb, #af8a3a 20%, var(--surface))"} fillOpacity={s ? 0.85 : 1} />
         )}
       </g>
       <text x={92} y={196} fontSize={12} fontWeight={800} fill={s ? (s.arti ? "var(--c3)" : "var(--muted)") : "var(--muted)"}>

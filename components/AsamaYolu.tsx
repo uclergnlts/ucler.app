@@ -96,7 +96,7 @@ export default function AsamaYolu({ dugumler, balon, ad = "Aşamalar", kaydir }:
                       ? "bg-secondary text-muted-foreground shadow-[0_6px_0_var(--line-2)]"
                       : g.test
                         ? "bg-[var(--glow)] text-[#7a5200] shadow-[0_6px_0_var(--glow-deep)]"
-                        : "bg-acc text-[var(--on-btn)] shadow-[0_6px_0_color-mix(in_srgb,var(--acc),#000_22%)]",
+                        : "bg-acc text-white shadow-[0_6px_0_color-mix(in_srgb,var(--acc),#000_22%)]",
                   )}
                 >
                   {g.durum === "kilitli" && !g.serbest ? <Kilit /> : g.test ? <Kupa /> : g.durum === "bitti" ? <Check /> : i + 1}

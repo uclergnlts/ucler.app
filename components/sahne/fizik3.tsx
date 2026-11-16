@@ -216,7 +216,7 @@ function Erime({ v }: SahneProps) {
           const kalan = Math.max(0, Math.min(1, buz - i));
           if (kalan <= 0) return null;
           const s = 22 * Math.sqrt(kalan);
-          return <rect key={i} x={k.x + (22 - s) / 2} y={k.y + (22 - s) / 2} width={s} height={s} rx={4} fill="#cfe3f7" stroke="var(--c1)" strokeWidth={1.4} />;
+          return <rect key={i} x={k.x + (22 - s) / 2} y={k.y + (22 - s) / 2} width={s} height={s} rx={4} fill="color-mix(in srgb, #0f7bf3 20%, var(--surface))" stroke="var(--c1)" strokeWidth={1.4} />;
         })}
       </g>
       <path d="M90 60 L90 170 L250 170 L250 60" fill="none" stroke="var(--ink)" strokeWidth={2} />

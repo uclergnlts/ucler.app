@@ -66,7 +66,7 @@ function Kar({ v }: SahneProps) {
       <line x1={20} x2={320} y1={KAR} y2={KAR} stroke="var(--line-2)" strokeWidth={2} />
       <g>
         <rect x={170 - 30} y={y - 82} width={60} height={70} rx={10} fill="var(--c1)" />
-        <text x={170} y={y - 42} fontSize={14} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">600 N</text>
+        <text x={170} y={y - 42} fontSize={14} fontWeight={800} fill="#fff" textAnchor="middle">600 N</text>
         <rect x={170 - w / 2} y={y - 12} width={w} height={12} rx={4} fill="var(--ink)" />
       </g>
       <Ok x1={170} y1={22} x2={170} y2={y - 88} renk="var(--c2)" />

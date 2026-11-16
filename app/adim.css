@@ -55,7 +55,7 @@ body:has(.ad-sayfa){background:var(--bg)}
 .ad-bulgular li i{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:13px;font-weight:800;border:1.5px solid var(--line-2);color:var(--muted);background:var(--surface)}
 .ad-bulgular li.simdi{color:var(--ink);font-weight:600}
 .ad-bulgular li.simdi i{border-color:var(--acc);color:var(--acc)}
-.ad-bulgular li.ok i{border-color:var(--good);background:var(--good);color:var(--on-btn)}
+.ad-bulgular li.ok i{border-color:var(--good);background:var(--good);color:#fff}
 
 /* göster → sen dene (DersMotoru ve konu anlatımı) */
 .ad-ornek{display:grid;gap:4px}
@@ -101,7 +101,7 @@ body:has(.ad-sayfa){background:var(--bg)}
 /* iki düğmeli anahtar (ör. "Hava yok / Hava var"): büyük, yan yana, seçili olan dolu */
 .ad-iki{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .ad-iki button{min-height:52px;border-radius:14px;border:1.5px solid var(--line-2);background:var(--surface);font:inherit;font-size:16px;font-weight:700;color:var(--ink);cursor:pointer;transition:background .15s,border-color .15s}
-.ad-iki button.acik{border-color:var(--acc);background:var(--acc);color:var(--on-btn)}
+.ad-iki button.acik{border-color:var(--acc);background:var(--acc);color:#fff}
 .ad-iki button:disabled{opacity:.6;cursor:default}
 .ad-iki button:focus-visible{outline:3px solid var(--glow);outline-offset:2px}
 /* Sürüklenen değerlerin klavye eşdeğeri: Tab ile odaklanınca görünür, fareyle/dokunarak kullananlara görünmez. */

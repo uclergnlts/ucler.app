@@ -10,9 +10,9 @@ const kes = (x: number) => Math.max(0, Math.min(1, x));
 const ara = (a: number, b: number, u: number) => a + (b - a) * u;
 const eksi = (x: number) => `${x < 0 ? "−" : ""}${Math.abs(x)}`;
 const virgul = (x: number, b = 1) => x.toLocaleString("tr-TR", { maximumFractionDigits: b, minimumFractionDigits: 0 });
-const SU = "#d6e8fb";
+const SU = "color-mix(in srgb, #3294ff 20%, var(--surface))";
 const BAL = "#e8a91c";
-const YAG = "#f3d36b";
+const YAG = "color-mix(in srgb, #eec12f 70%, var(--surface))";
 
 /** (x, y) noktalarından doğrusal ara değer. */
 function egri(noktalar: [number, number][], x: number) {
@@ -374,7 +374,7 @@ function Tup({ x, cozer, u, ad }: { x: number; cozer: boolean; u: number; ad: st
   const damla = Array.from({ length: 10 }, () => [r(), r()]);
   return (
     <g transform={`rotate(${aci} ${x} ${Y1})`}>
-      <path d={dolgu} fill={cozer ? "#fbfaf2" : SU} />
+      <path d={dolgu} fill={cozer ? "color-mix(in srgb, #ebeeda 20%, var(--surface))" : SU} />
       {yayil > 0 && <path d={dolgu} fill={YAG} opacity={0.55 * yayil} />}
       {!cozer && calk > 0 && katman < 1 && damla.map(([a, b], i) => <circle key={i} cx={x - W / 2 + 7 + a * (W - 14)} cy={sivi + 20 + b * 90} r={4} fill={YAG} opacity={(1 - katman) * kes(calk * 3)} />)}
       {!cozer && <rect x={x - W / 2} y={sivi - 4} width={W} height={18} fill={YAG} opacity={calk > 0 ? katman : 1} />}
@@ -502,7 +502,7 @@ function Aparat({ y, x }: { y: number; x: number }) {
     <g fill="none" stroke="var(--ink)" strokeWidth={2.2} strokeLinejoin="round">
       <circle cx={x - 34} cy={110} r={20} />
       <path d={`M${x - 34} 90 L${x - 34} 70 L${x + 30} 98`} />
-      <path d={`M${x - 20} 78 L${x + 36} 104`} strokeWidth={9} stroke="#cfe0f5" />
+      <path d={`M${x - 20} 78 L${x + 36} 104`} strokeWidth={9} stroke="color-mix(in srgb, #0f6ce9 20%, var(--surface))" />
       <path d={`M${x + 34} 108 L${x + 34} 140 L${x + 50} 140 L${x + 50} 112`} />
     </g>
   );
@@ -543,7 +543,7 @@ function Ayirma({ s, v, t, oynuyor }: SahneProps) {
             const x = 190 + i * 76;
             return (
               <g key={c}>
-                <rect x={x} y={222 - 26 * tasi} width={44} height={26 * tasi} fill={i === 0 ? (k === "demir-kukurt" ? "#4a5361" : SU) : k === "yag-su" ? YAG : k === "tuzlu-su" ? "#e3e8ef" : "var(--c4)"} stroke={k === "tuzlu-su" && i === 1 ? "var(--line-2)" : "none"} />
+                <rect x={x} y={222 - 26 * tasi} width={44} height={26 * tasi} fill={i === 0 ? (k === "demir-kukurt" ? "#4a5361" : SU) : k === "yag-su" ? YAG : k === "tuzlu-su" ? "color-mix(in srgb, #7394cb 20%, var(--surface))" : "var(--c4)"} stroke={k === "tuzlu-su" && i === 1 ? "var(--line-2)" : "none"} />
                 <path d={`M${x} 192 L${x} 222 L${x + 44} 222 L${x + 44} 192`} fill="none" stroke="var(--ink)" strokeWidth={1.8} />
                 <text x={x + 22} y={240} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--ink)">{c}</text>
               </g>

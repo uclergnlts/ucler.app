@@ -626,9 +626,9 @@ function Ph({ v }: SahneProps) {
 /* ---------- ADH ---------- */
 
 const ADH = [
-  { ad: "Normal gün", adh: 2, idrar: 0.45, renk: "#f2c94c", not: "ADH orta: idrar normal miktarda" },
-  { ad: "Bol su içtin", adh: 0, idrar: 1, renk: "#f7e7a6", not: "Kan seyreldi: ADH azaldı, idrar bol ve açık" },
-  { ad: "Alkol aldın", adh: 0, idrar: 0.95, renk: "#f7e7a6", not: "Alkol ADH'yi baskıladı: idrar bol" },
+  { ad: "Normal gün", adh: 2, idrar: 0.45, renk: "color-mix(in srgb, #ecb302 70%, var(--surface))", not: "ADH orta: idrar normal miktarda" },
+  { ad: "Bol su içtin", adh: 0, idrar: 1, renk: "color-mix(in srgb, #ebc62b 40%, var(--surface))", not: "Kan seyreldi: ADH azaldı, idrar bol ve açık" },
+  { ad: "Alkol aldın", adh: 0, idrar: 0.95, renk: "color-mix(in srgb, #ebc62b 40%, var(--surface))", not: "Alkol ADH'yi baskıladı: idrar bol" },
 ];
 
 function Adh({ v }: SahneProps) {
@@ -693,7 +693,7 @@ function Esik({ v }: SahneProps) {
       ))}
       {/* idrar */}
       <rect x={278} y={36} width={42} height={58} rx={6} fill="var(--panel)" stroke="var(--line-2)" />
-      <rect x={278} y={60} width={42} height={34} rx={6} fill="#f2c94c" fillOpacity={0.6} />
+      <rect x={278} y={60} width={42} height={34} rx={6} fill="color-mix(in srgb, #ecb302 70%, var(--surface))" fillOpacity={0.6} />
       {Array.from({ length: kacan }, (_, i) => (
         <circle key={i} cx={288 + (i % 3) * 11} cy={84 - Math.floor(i / 3) * 10} r={4} fill={SARI} stroke="#a77a06" strokeWidth={1} />
       ))}

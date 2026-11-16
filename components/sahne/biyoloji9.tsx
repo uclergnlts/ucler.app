@@ -487,8 +487,8 @@ function Pankreas({ v }: SahneProps) {
         <ellipse cx={150} cy={70} rx={50} ry={28} fill={SARI} fillOpacity={0.15} stroke={SARI} strokeWidth={1.6} />
         <circle cx={132} cy={70} r={12} fill={MAVI} fillOpacity={yuksek ? 0.75 : 0.2} />
         <circle cx={168} cy={70} r={12} fill={MOR} fillOpacity={dusuk ? 0.75 : 0.2} />
-        <text x={132} y={74} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">β</text>
-        <text x={168} y={74} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">α</text>
+        <text x={132} y={74} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">β</text>
+        <text x={168} y={74} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">α</text>
         <text x={150} y={30} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">Langerhans adacığı</text>
       </g>
       <g>

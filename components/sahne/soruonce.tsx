@@ -240,7 +240,7 @@ function ZarDene({ v, set }: SahneProps) {
         </g>
       ))}
       <rect x={ZD_X - 15} y={ZD_TASIYICI - 20} width={30} height={40} rx={11} fill="var(--c5)" />
-      <rect x={ZD_X - 5} y={ZD_TASIYICI - 20} width={10} height={40} fill="#f6f8fb" opacity={0.9} />
+      <rect x={ZD_X - 5} y={ZD_TASIYICI - 20} width={10} height={40} fill="color-mix(in srgb, #d2e4ff 20%, var(--surface))" opacity={0.9} />
       <text x={ZD_X + 18} y={ZD_TASIYICI - 24} fontSize={10.5} fontWeight={700} fill="var(--c5)">taşıyıcı protein</text>
       {TANECIK.map((k) => {
         const p = yer(k), bekliyor = !ucan || ucan.u >= 1;

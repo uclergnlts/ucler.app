@@ -52,7 +52,7 @@ export default function Ayarlar() {
                 </DialogDescription>
                 {silHata && <p role="alert" className="text-[14px] font-medium text-bad">Hesap silinemedi. İnternet bağlantını kontrol edip yeniden dene.</p>}
                 <div className="mt-2 grid gap-2">
-                  <Button className="bg-bad text-[var(--on-btn)] hover:bg-bad/90" disabled={cikiyor} onClick={async () => { setCikiyor(true); setSilHata(!(await hesabiSil(temizle))); setCikiyor(false); }}>
+                  <Button className="bg-bad text-white hover:bg-bad/90" disabled={cikiyor} onClick={async () => { setCikiyor(true); setSilHata(!(await hesabiSil(temizle))); setCikiyor(false); }}>
                     {cikiyor ? "Siliniyor..." : "Evet, hesabımı sil"}
                   </Button>
                   <DialogClose asChild><Button variant="ghost">Vazgeç</Button></DialogClose>
@@ -116,7 +116,7 @@ export default function Ayarlar() {
             <div className="mt-2 grid gap-2">
               <DialogClose asChild>
                 <Button
-                  className="bg-bad text-[var(--on-btn)] hover:bg-bad/90"
+                  className="bg-bad text-white hover:bg-bad/90"
                   onClick={() => {
                     resetAll();
                     // Sıfırlama yeni bir başlangıç: bugünün görevleri hemen yeniden kurulur, giriş puanı yeniden verilir.

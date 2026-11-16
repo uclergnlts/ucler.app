@@ -18,9 +18,9 @@ const renk = (ad: string) => RENKLER[[...ad].reduce((h, c) => (h * 31 + c.charCo
 
 /** Kürsü sırası (2, 1, 3) ve basamak görünümü. */
 const KURSU = [
-  { i: 1, h: "h-16", zemin: "bg-[#e4eaf2]", yazi: "text-[#5b6b80]" },
+  { i: 1, h: "h-16", zemin: "bg-secondary", yazi: "text-muted-foreground" },
   { i: 0, h: "h-24", zemin: "bg-[var(--glow)]", yazi: "text-[#7a5200]" },
-  { i: 2, h: "h-12", zemin: "bg-[#f3c6a4]", yazi: "text-[#8a4a1c]" },
+  { i: 2, h: "h-12", zemin: "bg-[color-mix(in_srgb,var(--c2)_28%,var(--surface))]", yazi: "text-foreground" },
 ];
 const MADALYA = ["", "#e0a400", "#8a9ab0", "#c0743c"];
 
@@ -74,7 +74,7 @@ function Kursu({ liste }: { liste: LigSatir[] }) {
                   <Avatar ad={s.ad} buyuk />
                   {i === 0 && <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-[#e0a400] [&_svg]:size-5 [&_svg]:fill-[var(--glow)]"><Icon.kupa /></span>}
                 </div>
-                <span className={cn("flex max-w-full items-center gap-1 truncate text-[14px] font-bold", s.ben && "text-[var(--c5)]")}>
+                <span className={cn("flex max-w-full items-center gap-1 truncate text-[14px] font-bold", s.ben && "text-mark")}>
                   <span className="truncate">{s.ben ? "Sen" : s.ad}</span><Madalya n={s.madalya} />
                 </span>
                 <Puan n={s.puan} className="text-[14px]" />
@@ -93,7 +93,7 @@ function Kursu({ liste }: { liste: LigSatir[] }) {
 function Satir({ s, i }: { s: LigSatir; i: number }) {
   return (
     <motion.li
-      className={cn("flex items-center gap-3 rounded-2xl px-3 py-2.5", s.ben ? "bg-[#f1eafd] ring-2 ring-[var(--c5)]" : "bg-card")}
+      className={cn("flex items-center gap-3 rounded-2xl px-3 py-2.5", s.ben ? "bg-card ring-2 ring-[var(--mark)]" : "bg-card")}
       initial={{ opacity: 0, x: -8 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.25, delay: Math.min(i, 12) * 0.03 }}
@@ -102,7 +102,7 @@ function Satir({ s, i }: { s: LigSatir; i: number }) {
       <Avatar ad={s.ad} />
       <span className="flex min-w-0 flex-1 items-center gap-1.5 text-[15px] font-semibold">
         <span className="truncate">{s.ad}</span>
-        {s.ben && <span className="flex-none text-[13px] font-bold text-[var(--c5)]">(sen)</span>}
+        {s.ben && <span className="flex-none text-[13px] font-bold text-mark">(sen)</span>}
         {s.ornek ? <span className="flex-none rounded-full bg-secondary px-2 py-0.5 text-[12px] font-bold text-muted-foreground">örnek</span> : <Madalya n={s.madalya} />}
       </span>
       <Puan n={s.puan} className="text-[15px]" />
@@ -135,13 +135,14 @@ export default function Lig() {
     <div className="app">
       <UstBar geri={{ to: "/", label: "Ana sayfa" }} baslik="Haftalık lig" sag={<UstEylem label="Yenile" icon={<Icon.tekrar />} onClick={yukle} />} />
       <Govde className="gap-4 pb-28">
-        <section className="relative grid gap-1 overflow-hidden rounded-3xl bg-[linear-gradient(135deg,#8d55e0,#2f7cf6)] p-5 text-white">
-          <span className="absolute -top-6 -right-6 grid size-32 place-items-center rounded-full bg-white/10 [&_svg]:size-16 [&_svg]:stroke-white/70" aria-hidden="true"><Kupa /></span>
-          <h2 className="font-display text-[26px] leading-tight font-extrabold">Bu hafta</h2>
-          <p className="text-[15px] font-semibold text-white/85">Bu hafta kazandığın puanlarla sıralan.</p>
+        <section className="relative grid gap-1 overflow-hidden rounded-lg border border-border bg-card p-4">
+          <span className="absolute top-4 right-4 text-mark [&_svg]:size-7" aria-hidden="true"><Kupa /></span>
+          <span className="text-[11px] font-bold tracking-[.14em] text-mark uppercase">Haftalık lig</span>
+          <h2 className="font-display text-[24px] leading-tight font-extrabold">Bu hafta</h2>
+          <p className="text-[15px] text-muted-foreground">Bu hafta kazandığın puanlarla sıralan.</p>
           <div className="mt-2 flex flex-wrap gap-2 text-[13px] font-bold">
-            <span className="rounded-full bg-white/20 px-3 py-1">{veri ? `Bitmesine ${kalanSure(veri.bitis, simdi)}` : "Hafta pazar gece biter"}</span>
-            {veri && veri.kisi > 0 && <span className="rounded-full bg-white/20 px-3 py-1">{veri.kisi} kişi</span>}
+            <span className="rounded-full bg-secondary px-3 py-1">{veri ? `Bitmesine ${kalanSure(veri.bitis, simdi)}` : "Hafta pazar gece biter"}</span>
+            {veri && veri.kisi > 0 && <span className="rounded-full bg-secondary px-3 py-1">{veri.kisi} kişi</span>}
           </div>
         </section>
 
@@ -205,8 +206,8 @@ export default function Lig() {
       {ben && veri && !listede && (
         // Öğrenci ilk 50'de değilse ya da listede görünmüyorsa kendi satırı altta hep görünür.
         <div className="fixed inset-x-0 bottom-[calc(var(--nav)+12px+env(safe-area-inset-bottom,0px))] z-10 mx-auto w-full max-w-[552px] px-4">
-          <div className="flex items-center gap-3 rounded-2xl bg-[#f1eafd] px-3 py-2.5 shadow-[0_6px_20px_rgba(29,53,87,.14)] ring-2 ring-[var(--c5)]">
-            <span className="w-7 flex-none text-center font-display text-[16px] font-extrabold tabular-nums text-[var(--c5)]">{ben.puan > 0 ? ben.sira : "–"}</span>
+          <div className="flex items-center gap-3 rounded-2xl bg-card px-3 py-2.5 shadow-[0_6px_20px_rgba(0,0,0,.18)] ring-2 ring-[var(--mark)]">
+            <span className="w-7 flex-none text-center font-display text-[16px] font-extrabold tabular-nums text-mark">{ben.puan > 0 ? ben.sira : "–"}</span>
             <Avatar ad={ben.ad} />
             <span className="min-w-0 flex-1 truncate text-[15px] font-semibold">
               {ben.puan > 0 ? "Senin sıran" : "Bu hafta puan al, listeye gir"}

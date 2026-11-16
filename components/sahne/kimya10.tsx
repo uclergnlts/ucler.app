@@ -124,12 +124,12 @@ function Aktiflik({ v, set }: SahneProps) {
         return (
           <g key={e} onClick={h ? undefined : () => set("m", mi)} style={{ cursor: h ? "default" : "pointer" }}>
             <rect x={x + 1} y={26} width={W - 2} height={28} rx={6} fill={sec ? "var(--kimya)" : h ? "none" : "var(--panel)"} stroke={e === "Cu" ? MAVI : "var(--line-2)"} strokeWidth={e === "Cu" ? 2 : 1} strokeDasharray={h ? "3 3" : undefined} />
-            <text x={x + W / 2} y={44} fontSize={11} fontWeight={800} textAnchor="middle" fill={sec ? "var(--on-btn)" : h ? "var(--muted)" : "var(--ink)"}>{e}</text>
+            <text x={x + W / 2} y={44} fontSize={11} fontWeight={800} textAnchor="middle" fill={sec ? "#fff" : h ? "var(--muted)" : "var(--ink)"}>{e}</text>
           </g>
         );
       })}
       <rect x={42} y={110} width={106} height={70} fill={MAVI} opacity={durum === "var" ? 0.2 : 0.4} />
-      <rect x={88} y={76} width={14} height={98} rx={2} fill={ad === "Au" ? "#e3b53b" : ad === "Ag" ? "#d5dbe3" : ad === "Cu" ? BAKIR : GRI} stroke="#8a95a3" />
+      <rect x={88} y={76} width={14} height={98} rx={2} fill={ad === "Au" ? "#e3b53b" : ad === "Ag" ? "color-mix(in srgb, #2d538f 20%, var(--surface))" : ad === "Cu" ? BAKIR : GRI} stroke="#8a95a3" />
       {durum === "var" && birikim.map((p, i) => <circle key={i} cx={95 + p.yan * 8} cy={p.y} r={3} fill={BAKIR} />)}
       {durum === "su" && [0, 1, 2, 3, 4].map((i) => <circle key={i} cx={112 + (i % 2) * 12} cy={160 - i * 10} r={3} fill="none" stroke="var(--c1)" strokeWidth={1.3} />)}
       <path d="M40 92 L40 180 Q40 186 46 186 L144 186 Q150 186 150 180 L150 92" fill="none" stroke="var(--ink)" strokeWidth={2} />
@@ -169,7 +169,7 @@ function RedoksMu({ v }: SahneProps) {
           <g key={k.harf}>
             <rect x={8} y={y} width={324} height={56} rx={10} fill="var(--panel)" />
             <circle cx={28} cy={y + 20} r={11} fill="var(--kimya)" />
-            <text x={28} y={y + 24} fontSize={12} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">{k.harf}</text>
+            <text x={28} y={y + 24} fontSize={12} fontWeight={800} textAnchor="middle" fill="#fff">{k.harf}</text>
             <text x={48} y={y + 25} fontSize={14} fontWeight={800} fill="var(--ink)">{k.d}</text>
             {goster ? (
               <>
@@ -223,14 +223,14 @@ function Daniell({ s, v, t, oynuyor }: SahneProps) {
       )}
       {/* tuz köprüsü */}
       {kopru ? (
-        <path d="M108 128 L108 90 L232 90 L232 128" fill="none" stroke="#d8dee6" strokeWidth={12} strokeLinejoin="round" />
+        <path d="M108 128 L108 90 L232 90 L232 128" fill="none" stroke="color-mix(in srgb, #3c629e 20%, var(--surface))" strokeWidth={12} strokeLinejoin="round" />
       ) : (
         <path d="M108 128 L108 90 L232 90 L232 128" fill="none" stroke="var(--line-2)" strokeWidth={1.5} strokeDasharray="4 4" />
       )}
       <text x={170} y={110} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">{kopru ? "tuz köprüsü" : "köprü yok"}</text>
       {kopru && <text x={170} y={124} fontSize={10.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">(KNO₃)</text>}
       {/* kaplar */}
-      <rect x={32} y={116} width={92} height={70} fill="#e8edf3" />
+      <rect x={32} y={116} width={92} height={70} fill="color-mix(in srgb, #8caddf 20%, var(--surface))" />
       <rect x={216} y={116} width={92} height={70} fill={MAVI} opacity={0.35 - 0.12 * (oynar ? u : 0)} />
       <rect x={80 - wZn / 2} y={70} width={wZn} height={108} rx={2} fill={GRI} stroke="#8a95a3" />
       <rect x={260 - wCu / 2} y={70} width={wCu} height={108} rx={2} fill={BAKIR} />
@@ -279,8 +279,8 @@ function Potansiyel({ v }: SahneProps) {
             <text x={22} y={y + 15} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">{i + 1}</text>
             <text x={40} y={y + 15} fontSize={12.5} fontWeight={800} fill="var(--ink)">{h.ad}</text>
             <text x={172} y={y + 15} fontSize={12.5} fontWeight={800} textAnchor="end" fill="var(--ink)">{isr(h.e)}</text>
-            {an && <><rect x={192} y={y + 3} width={56} height={15} rx={7} fill="var(--c2)" /><text x={220} y={y + 14} fontSize={10.5} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">anot</text></>}
-            {ka && <><rect x={256} y={y + 3} width={56} height={15} rx={7} fill="var(--c1)" /><text x={284} y={y + 14} fontSize={10.5} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">katot</text></>}
+            {an && <><rect x={192} y={y + 3} width={56} height={15} rx={7} fill="var(--c2)" /><text x={220} y={y + 14} fontSize={10.5} fontWeight={800} textAnchor="middle" fill="#fff">anot</text></>}
+            {ka && <><rect x={256} y={y + 3} width={56} height={15} rx={7} fill="var(--c1)" /><text x={284} y={y + 14} fontSize={10.5} fontWeight={800} textAnchor="middle" fill="#fff">katot</text></>}
           </g>
         );
       })}
@@ -325,10 +325,10 @@ function Su({ s, t, oynuyor }: SahneProps) {
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={bitti ? "Katotta 20 mL H₂, anotta 10 mL O₂" : "Suyun elektrolizi"}>
       <text x={170} y={16} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--ink)">2H₂O → 2H₂ + O₂</text>
-      <rect x={62} y={150} width={216} height={50} fill="#d7e8f7" />
+      <rect x={62} y={150} width={216} height={50} fill="color-mix(in srgb, #3794f3 20%, var(--surface))" />
       {tup.map((k, i) => (
         <g key={i}>
-          <rect x={k.x - 15} y={30} width={30} height={162} rx={13} fill="#d7e8f7" />
+          <rect x={k.x - 15} y={30} width={30} height={162} rx={13} fill="color-mix(in srgb, #3794f3 20%, var(--surface))" />
           {k.gaz > 0.5 && <rect x={k.x - 12} y={33} width={24} height={k.gaz} rx={10} fill="var(--surface)" />}
           {u > 0 && u < 1 && Array.from({ length: k.kab }, (_, j) => {
             const f = (t * 0.9 + j / k.kab) % 1, alt = 176, ust = 36 + k.gaz;
@@ -401,12 +401,12 @@ function Korozyon({ s, t, oynuyor }: SahneProps) {
     const bosluk = cinko ? 10 + k * 34 : 10; // çinko çizik çevresinde çözülür
     return (
       <g>
-        <ellipse cx={170} cy={y - 4} rx={58} ry={18} fill="#d7e8f7" opacity={0.8} />
+        <ellipse cx={170} cy={y - 4} rx={58} ry={18} fill="color-mix(in srgb, #3794f3 20%, var(--surface))" opacity={0.8} />
         <rect x={34} y={y - 10} width={260} height={20} rx={3} fill={renk} />
         <rect x={40} y={y - 6} width={248} height={12} fill={DEMIR} />
         <path d={`M294 ${y - 10} L316 ${y} L294 ${y + 10} Z`} fill={DEMIR} />
         <rect x={20} y={y - 16} width={16} height={32} rx={3} fill={DEMIR} />
-        <rect x={170 - bosluk} y={y - 11} width={bosluk * 2} height={6} fill="#d7e8f7" />
+        <rect x={170 - bosluk} y={y - 11} width={bosluk * 2} height={6} fill="color-mix(in srgb, #3794f3 20%, var(--surface))" />
         {!cinko && k > 0 && <ellipse cx={170} cy={y - 2} rx={6 + k * 34} ry={3 + k * 4} fill={BAKIR} opacity={0.9} />}
         {cinko && k > 0 && [0, 1, 2, 3].map((j) => <circle key={j} cx={140 + j * 20} cy={y - 16} r={3.5} fill="var(--surface)" stroke={DEMIR} strokeWidth={1.2} opacity={k} />)}
         <text x={20} y={y - 26} fontSize={12.5} fontWeight={800} fill="var(--ink)">{kaplama}</text>
@@ -415,7 +415,7 @@ function Korozyon({ s, t, oynuyor }: SahneProps) {
   };
   return (
     <svg viewBox="0 0 340 222" role="img" aria-label={bitti ? "Kalay kaplı çivi paslandı, çinko kaplı çivide çinko çözüldü, demir korundu" : "Çizilmiş kalay ve çinko kaplı çiviler tuzlu suda"}>
-      {civi(54, "kalay (Sn) kaplı, çizik", "#c9ced6", false)}
+      {civi(54, "kalay (Sn) kaplı, çizik", "color-mix(in srgb, #4b6087 30%, var(--surface))", false)}
       {civi(150, "çinko (Zn) kaplı, çizik", "#9fb3c8", true)}
       <g fontSize={11.5} fontWeight={800}>
         {bitti && <text x={20} y={88} fill="var(--bad)">Demir paslandı: Fe, Sn'den aktif, anot olur.</text>}

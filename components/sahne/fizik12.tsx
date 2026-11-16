@@ -637,8 +637,8 @@ function Polar({ v }: SahneProps) {
       {filtre(220, a, `2. (${a}°)`)}
       {ok(268, a, 22 * Math.cos(a * DER), "var(--c4)")}
       {/* perde */}
-      <rect x={300} y={Y - 40} width={14} height={80} rx={3} fill="#14161c" />
-      <rect x={300} y={Y - 40} width={14} height={80} rx={3} fill="#ffd34d" opacity={oran} />
+      <rect x={300} y={Y - 40} width={14} height={80} rx={3} fill="#14161c" stroke="var(--line-2)" />
+      <rect x={300} y={Y - 40} width={14} height={80} rx={3} fill="color-mix(in srgb, #ffc104 70%, var(--surface))" opacity={oran} />
       <text x={307} y={Y + 64} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">perde</text>
       <text x={14} y={206} fontSize={11.5} fontWeight={700} fill="var(--muted)">turuncu çizgiler: titreşim doğrultusu</text>
     </svg>

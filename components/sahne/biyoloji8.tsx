@@ -42,7 +42,7 @@ function AtomDaire({ x, y, el, isaret }: { x: number; y: number; el: string; isa
   return (
     <g>
       <circle cx={x} cy={y} r={r} fill={renk} stroke={el === "H" ? "var(--line-2)" : "none"} strokeWidth={1.2} />
-      {el !== "H" && <text x={x} y={y + 3.6} fontSize={9.5} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">{isaret ? "O*" : el}</text>}
+      {el !== "H" && <text x={x} y={y + 3.6} fontSize={9.5} fontWeight={800} fill="#fff" textAnchor="middle">{isaret ? "O*" : el}</text>}
     </g>
   );
 }
@@ -96,7 +96,7 @@ const g = (x: number, m: number, s: number) => Math.exp(-0.5 * ((x - m) / s) ** 
 const sogurma = (l: number) => sinir(0.05 + Math.max(g(l, 432, 18), 0.85 * g(l, 455, 14), 0.88 * g(l, 663, 13), 0.55 * g(l, 642, 10)));
 /** Dalga boyunun yaklaşık rengi. */
 function renk(l: number) {
-  const d: [number, string][] = [[400, "#7b3fd0"], [440, "#3b4ee8"], [480, "#1f9be0"], [510, "#18b06a"], [550, "#5cc23a"], [580, "#e8d02a"], [610, "#f39a1e"], [650, "#e6402e"], [700, "#b51e2a"]];
+  const d: [number, string][] = [[400, "#7b3fd0"], [440, "#3b4ee8"], [480, "#1f9be0"], [510, "#18b06a"], [550, "#5cc23a"], [580, "color-mix(in srgb, #debd00 70%, var(--surface))"], [610, "#f39a1e"], [650, "#e6402e"], [700, "#b51e2a"]];
   let r = d[0][1];
   for (const [x, c] of d) if (l >= x) r = c;
   return r;

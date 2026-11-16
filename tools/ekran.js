@@ -3,7 +3,7 @@
 // (gerekirse "Çözümü göster" ile) ve sonra "Devam" der. Oynamayan ayar görevinde "Çözümü göster" 25 sn sonra
 // çıkar; gezgin yalnızca bu bekleme süresini kısaltır, geri kalan her şey gerçek zamanda işler.
 // Önce derle:  npm run build          (out/ klasörünü üretir)
-// Kullanım:    NODE_PATH=$(npm root -g) node tools/ekran.js [cikti-klasoru] [ders/konu ...]
+// Kullanım:    [TEMA=koyu] NODE_PATH=$(npm root -g) node tools/ekran.js [cikti-klasoru] [ders/konu ...]
 //              Konu verilirse yalnızca o konular çekilir (ör. kimya/modern-atom-teorisi fizik).
 // Dosya adları: <ders>.<konu>.00-giris.png (aşama listesi), <ders>.<konu>.<sıra>-k<kart no>.png (kart),
 // <ders>.<konu>.<sıra>-a<adım no>[-bitti].png (adım), ...-ara.png (aşama bitti ekranı).
@@ -56,6 +56,8 @@ server.listen(0, async () => {
   // Konular sırayla açılır (lib/kilit.ts): her konunun ekranı alınabilsin diye bütün ünite testleri geçilmiş sayılır.
   const uniteler = Object.fromEntries(Object.entries(require(path.join(root, 'content/dersler.json'))).flatMap(([d, v]) => v.konular.filter((k) => k.unite).map((_, i) => [`${d}.${i + 1}`, 100])));
   await p.addInitScript((u) => { try { if (!localStorage.getItem('tf-unite')) localStorage.setItem('tf-unite', JSON.stringify(u)); } catch {} }, uniteler);
+  // TEMA=koyu ya da TEMA=acik verilirse görüntüler o görünümde alınır (lib/tema.ts); verilmezse açık.
+  await p.addInitScript((t) => { try { localStorage.setItem('tf-tema', JSON.stringify(t)); } catch {} }, process.env.TEMA === 'koyu' ? 'koyu' : 'acik');
   await p.addInitScript(() => { const st = window.setTimeout; window.setTimeout = (f, d, ...a) => st(f, d === 25000 ? 400 : d, ...a); });
   const ileri = (ms) => p.waitForTimeout(ms);
   const cek = async (ad) => { await ileri(1800); await p.screenshot({ path: path.join(out, `${ad}.png`) }); };

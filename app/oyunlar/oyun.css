@@ -26,7 +26,7 @@
 .vk-kart{min-height:58px;border-radius:16px;border:1px solid var(--line);border-top:5px solid var(--vk);background:var(--surface);display:grid;place-items:center;gap:0;padding:4px 2px;font-variant-numeric:tabular-nums}
 .vk-kart b{font-family:var(--f-display);font-size:18px;line-height:1.1;color:var(--vk)}
 .vk-kart span{font-size:15px;font-weight:700;white-space:nowrap}
-.vk-kart[aria-pressed="true"]{background:color-mix(in srgb, var(--vk) 14%, #fff);border-color:var(--vk)}
+.vk-kart[aria-pressed="true"]{background:color-mix(in srgb, var(--vk) 14%, var(--surface));border-color:var(--vk)}
 .vk-kart[disabled]{cursor:default}
 .vk-kart[disabled]:not([aria-pressed="true"]){opacity:.5}
 .vk-yol{margin:0;text-align:center;font-weight:700;font-size:16px;font-variant-numeric:tabular-nums}

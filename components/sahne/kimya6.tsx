@@ -16,14 +16,14 @@ const bilimsel = (x: number, b = 2) => {
   const n = Math.floor(Math.log10(x)), a = x / 10 ** n;
   return `${a.toLocaleString("tr-TR", { minimumFractionDigits: b, maximumFractionDigits: b })}×10${us(n)}`;
 };
-const SU = "#d6e8fb";
+const SU = "color-mix(in srgb, #3294ff 20%, var(--surface))";
 const NA = 6.02e23;
 
 /* ---------- atom ve molekül çizimi ---------- */
 
 const ATOM: Record<string, { f: string; s: string; r: number; y: string }> = {
-  H: { f: "#eef2f7", s: "#9aa8ba", r: 9, y: "var(--ink)" },
-  O: { f: "var(--c2)", s: "var(--surface)", r: 11, y: "var(--on-btn)" },
+  H: { f: "color-mix(in srgb, #aac6f3 20%, var(--surface))", s: "#9aa8ba", r: 9, y: "var(--ink)" },
+  O: { f: "var(--c2)", s: "var(--surface)", r: 11, y: "#fff" },
 };
 const MOL: Record<string, [string, number, number][]> = {
   H2: [["H", -7, 0], ["H", 7, 0]],
@@ -52,7 +52,7 @@ function Molekul({ m, x, y, k = 1, op = 1 }: { m: string; x: number; y: number; 
 /* ---------- mol paketleri: 1 mol C, 1 mol H₂O, 1 mol Fe ---------- */
 
 const PAKET = [
-  { ad: "Karbon (C)", M: 12, renk: "#3b4656", tan: "atom" },
+  { ad: "Karbon (C)", M: 12, renk: "var(--karbon)", tan: "atom" },
   { ad: "Su (H₂O)", M: 18, renk: "var(--c1)", tan: "molekül" },
   { ad: "Demir (Fe)", M: 56, renk: "#9aa8ba", tan: "atom" },
 ];
@@ -69,7 +69,7 @@ function Paket({ v }: SahneProps) {
         return (
           <g key={i}>
             <rect x={cx - 26} y={150 - h} width={52} height={h} rx={6} fill={p.renk} opacity={0.9} />
-            <rect x={cx - 42} y={150} width={84} height={8} rx={3} fill="#cfd8e3" />
+            <rect x={cx - 42} y={150} width={84} height={8} rx={3} fill="color-mix(in srgb, #0f448f 20%, var(--surface))" />
             <rect x={cx - 30} y={158} width={60} height={22} rx={6} fill="var(--panel)" />
             <text x={cx} y={174} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--ink)">{virgul(m)} g</text>
             <text x={cx} y={198} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">{p.ad}</text>
@@ -97,7 +97,7 @@ function SuTart({ v }: SahneProps) {
         ))}
       </g>
       <g>
-        <rect x={70} y={168} width={120} height={8} rx={3} fill="#cfd8e3" />
+        <rect x={70} y={168} width={120} height={8} rx={3} fill="color-mix(in srgb, #0f448f 20%, var(--surface))" />
         <rect x={84} y={176} width={92} height={28} rx={7} fill="var(--panel)" />
         <text x={130} y={195} fontSize={15} fontWeight={800} textAnchor="middle" fill="var(--ink)">{virgul(m)} g</text>
       </g>
@@ -351,7 +351,7 @@ function Kuvvet({ v }: SahneProps) {
         <rect x={188} y={26} width={18} height={16} fill="var(--surface)" />
         <line x1={192} x2={192} y1={26} y2={42} stroke="var(--ink)" strokeWidth={2} />
         <line x1={200} x2={200} y1={30} y2={38} stroke="var(--ink)" strokeWidth={3} />
-        <circle cx={268} cy={92} r={30} fill="#fff6d6" opacity={isik} />
+        <circle cx={268} cy={92} r={30} fill="color-mix(in srgb, #ffda4e 20%, var(--surface))" opacity={isik} />
         <circle cx={268} cy={92} r={16} fill="var(--surface)" stroke={zayif ? "#9aa8ba" : "var(--c4)"} strokeWidth={2.4} />
         <rect x={260} y={108} width={16} height={12} rx={2} fill="#9aa8ba" />
         <text x={268} y={146} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">{zayif ? "lamba sönük" : "lamba parlak"}</text>
@@ -483,7 +483,7 @@ function Tampon({ v }: SahneProps) {
   return (
     <svg viewBox="0 0 340 214" role="img" aria-label={`${x} mmol HCl eklendi: saf su pH ${virgul(pSu, 2)}, tampon pH ${virgul(pT, 2)}`}>
       {kap(88, "100 mL saf su", pSu, 7, SU)}
-      {kap(252, "100 mL tampon", pT, 4.74, "#efe6fb")}
+      {kap(252, "100 mL tampon", pT, 4.74, "color-mix(in srgb, #af8aff 20%, var(--surface))")}
       <text x={252} y={204} fontSize={11} textAnchor="middle" fill="var(--muted)">CH₃COOH / CH₃COO⁻ (0,1 M)</text>
       <text x={88} y={204} fontSize={11} textAnchor="middle" fill="var(--muted)">eklenen HCl: {x} mmol</text>
     </svg>

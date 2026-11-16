@@ -48,13 +48,13 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
   return (
     <div className="ml-auto flex items-center gap-2" aria-label="Bugün">
       {oyun && <>
-      <Link href="/lig/" className={cn(rozet, "px-2 text-[var(--c5)] [&_svg]:size-5 [&_svg]:fill-[#e9dcfb]")} aria-label="Haftalık lig">
+      <Link href="/lig/" className={cn(rozet, "px-2 text-[var(--c5)] [&_svg]:size-5 [&_svg]:fill-[color-mix(in_srgb,var(--c5)_25%,var(--surface))]")} aria-label="Haftalık lig">
         <Kupa />
       </Link>
       <Sheet>
-        <SheetTrigger className={cn(rozet, n > 0 ? "text-[#c25e00]" : "text-muted-foreground")} aria-label={`Seri: ${n} gün`}>
+        <SheetTrigger className={cn(rozet, n > 0 ? "text-foreground" : "text-muted-foreground")} aria-label={`Seri: ${n} gün`}>
           <motion.span
-            className={cn("grid [&_svg]:size-5", n > 0 ? "text-[#f07800] [&_svg]:fill-[#ffb020]" : "text-[#c9a27a]")}
+            className={cn("grid [&_svg]:size-5", n > 0 ? "text-[#f07800] [&_svg]:fill-[#ffb020]" : "text-muted-foreground")}
             animate={tehlikede ? { scale: [1, 1.15, 1] } : undefined}
             transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
           >
@@ -65,22 +65,22 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
         <SheetContent>
           <SheetTitle className="sr-only">Serin</SheetTitle>
           <SheetDescription className="sr-only">Seri, puan ve son 7 gün</SheetDescription>
-      <div className="grid gap-3.5 rounded-3xl bg-[linear-gradient(135deg,#fff3d1,#ffe6d6)] p-4">
+      <div className="grid gap-3.5 rounded-lg border border-border bg-secondary p-4">
         <div className="flex items-center gap-3.5">
           <motion.span
-            className={cn("grid size-14 flex-none place-items-center rounded-2xl [&_svg]:size-9", n > 0 ? "bg-white text-[#f07800] [&_svg]:fill-[#ffb020]" : "bg-white/70 text-[#c9a27a]")}
+            className={cn("grid size-14 flex-none place-items-center rounded-2xl [&_svg]:size-9", n > 0 ? "bg-card text-[#f07800] [&_svg]:fill-[#ffb020]" : "bg-card text-muted-foreground")}
             animate={bugunAktif ? { scale: [1, 1.08, 1] } : undefined}
             transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
           >
             <Seri />
           </motion.span>
           <span className="grid min-w-0 leading-tight">
-            <b className="font-display text-[30px] font-extrabold tabular-nums text-[#8a4300]">{n} gün</b>
-            <span className="text-[14px] font-semibold text-[#a0602a]">
+            <b className="font-display text-[30px] font-extrabold tabular-nums">{n} gün</b>
+            <span className="text-[14px] font-semibold text-muted-foreground">
               {n === 0 ? "Bugün bir şey öğren, serin başlasın" : tehlikede ? "Bugün bir şey öğren, serin bitmesin" : "Serin devam ediyor"}
             </span>
           </span>
-          <span className="ml-auto flex flex-none items-center gap-1.5 rounded-full bg-white/80 px-3 py-1.5 text-[15px] font-extrabold tabular-nums text-[#8a4300] [&_svg]:size-4 [&_svg]:fill-[var(--glow)] [&_svg]:stroke-[var(--glow-deep)]" aria-label={`${p.toplam ?? 0} puan`}>
+          <span className="ml-auto flex flex-none items-center gap-1.5 rounded-full bg-card px-3 py-1.5 text-[15px] font-extrabold tabular-nums [&_svg]:size-4 [&_svg]:fill-[var(--glow)] [&_svg]:stroke-[var(--glow-deep)]" aria-label={`${p.toplam ?? 0} puan`}>
             <Yildiz />{p.toplam ?? 0}
           </span>
         </div>
@@ -90,14 +90,14 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
               <span
                 className={cn(
                   "grid size-8 place-items-center rounded-full [&_svg]:size-4 [&_svg]:stroke-[3]",
-                  h.on ? "bg-[#f07800] text-white" : "bg-white/70",
+                  h.on ? "bg-[#f07800] text-white" : "bg-card",
                   h.bugun && !h.on && "border-2 border-dashed border-[#f0a060]",
                 )}
                 aria-label={`${h.ad}: ${h.on ? "çalıştın" : "çalışmadın"}`}
               >
                 {h.on && <Check />}
               </span>
-              <span className={cn("text-[11px] font-bold", h.bugun ? "text-[#8a4300]" : "text-[#b07a50]")}>{h.ad}</span>
+              <span className={cn("text-[11px] font-bold", h.bugun ? "text-foreground" : "text-muted-foreground")}>{h.ad}</span>
             </li>
           ))}
         </ol>
@@ -129,7 +129,7 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
                 <Link href={gorevYeri(g.id, konuHref)} className="-mx-1.5 flex items-center gap-3 rounded-xl px-1.5 py-0.5 transition-colors active:bg-secondary">
                 <span
                   className="grid size-10 flex-none place-items-center rounded-xl [&_svg]:size-5"
-                  style={{ background: tamam ? "var(--good)" : `color-mix(in srgb, ${renk} 14%, var(--surface))`, color: tamam ? "var(--on-btn)" : renk }}
+                  style={{ background: tamam ? "var(--good)" : `color-mix(in srgb, ${renk} 14%, var(--surface))`, color: tamam ? "white" : renk }}
                 >
                   {tamam ? <Check /> : <I />}
                 </span>

@@ -61,8 +61,8 @@ export function Araba({ x, y, renk = "var(--fizik)", soluk = false, ters = false
       <path d="M-5 -14 L-1 -19 L4 -19 L4 -14 Z M6 -19 L9 -19 L11 -14 L6 -14 Z" fill="var(--surface)" opacity={0.85} />
       <circle cx={-10} cy={-4} r={4.6} fill="var(--ink)" />
       <circle cx={11} cy={-4} r={4.6} fill="var(--ink)" />
-      <circle cx={-10} cy={-4} r={1.7} fill="#cfd8e3" />
-      <circle cx={11} cy={-4} r={1.7} fill="#cfd8e3" />
+      <circle cx={-10} cy={-4} r={1.7} fill="color-mix(in srgb, #0f448f 20%, var(--surface))" />
+      <circle cx={11} cy={-4} r={1.7} fill="color-mix(in srgb, #0f448f 20%, var(--surface))" />
     </g>
   );
 }
@@ -85,7 +85,7 @@ export function Balon({ x, y, yazi, renk = "var(--ink)" }: { x: number; y: numbe
     <g transform={`translate(${x} ${y})`}>
       <rect x={-w / 2} y={-22} width={w} height={22} rx={7} fill={renk} />
       <path d="M-5 0 L0 6 L5 0 Z" fill={renk} />
-      <text y={-7} fontSize={12} fontWeight={700} fill="var(--on-btn)" textAnchor="middle">{yazi}</text>
+      <text y={-7} fontSize={12} fontWeight={700} fill="#fff" textAnchor="middle">{yazi}</text>
     </g>
   );
 }
