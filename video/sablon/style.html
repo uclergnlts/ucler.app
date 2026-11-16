@@ -5,10 +5,18 @@
 /* Deney defteri (açık) ve karanlık oda (koyu): uygulamadaki app/globals.css ile aynı renkler.
    Koyu video için <html data-tema="koyu"> yazılır; önizlemede adrese ?tema=koyu eklemek de yeter.
    Ders rengi: #stage'e data-ders="fizik|kimya|biyoloji" yazılır. Çizimlerde hex yerine bu değişkenler kullanılır. */
-:root{--bg:#f6f4ef;--surface:#fffdf8;--grid:#e2dccf;--ink:#16181d;--muted:#5b616b;--line:#cdc5b5;--gri:#a8a296;--vurgu:#ffd95a;--vurgu-bas:62%;--altin:#b8860b;--on-vurgu:#16181d;--duvar:#ebe4d5;--duvar2:#e0d7c4;--zemin:#cfc4ad;--ahsap:#b98a5a;--ahsap2:#8a6238;--gok:#26324f;--isik:#ffc93c;--kol-arka:#4a505c;--yuz:#fffdf8;--yuz-cizgi:#16181d;--hirka:#ffd95a;
+:root{--bg:#f6f4ef;--surface:#fffdf8;--grid:#e2dccf;--ink:#16181d;--muted:#5b616b;--line:#cdc5b5;--gri:#a8a296;--vurgu:#ffd95a;--vurgu-bas:62%;--altin:#b8860b;--on-vurgu:#16181d;--kink:var(--ink);--duvar:#ebe4d5;--duvar2:#e0d7c4;--zemin:#cfc4ad;--ahsap:#b98a5a;--ahsap2:#8a6238;--gok:#26324f;--isik:#ffc93c;--kol-arka:#4a505c;--yuz:#fffdf8;--yuz-cizgi:#16181d;--hirka:#ffd95a;
  --c1:#2f6fd6;--c2:#c8344f;--c3:#1b8a52;--c4:#c98a00;--c5:#7a4fd0;--acc:#c8344f;--golge:0 8px 24px rgba(22,24,29,.08)}
 :root[data-tema="koyu"]{--bg:#0f1114;--surface:#171a1f;--grid:#20252c;--ink:#f1efe9;--muted:#a7aeb8;--line:#343a43;--gri:#6b7480;--vurgu:#f2b33d;--vurgu-bas:90%;--altin:#f2b33d;--duvar:#1b2027;--duvar2:#232a33;--zemin:#14181d;--ahsap:#7a5532;--ahsap2:#4f3620;--gok:#0a0d14;--isik:#f2b33d;--kol-arka:#9aa0aa;--yuz:#f1efe9;--hirka:#f2b33d;
  --c1:#4a8af0;--c2:#e8557c;--c3:#27a866;--c4:#e0a020;--c5:#9468e8;--acc:#f2b33d;--golge:none}
+:root[data-tema="canli"]{--bg:#1a1140;--surface:#efeaff;--grid:transparent;--ink:#ffffff;--kink:#1c1440;--muted:#cfc6f7;--line:#5a45b0;--gri:#a99ae0;--vurgu:#ffd166;--vurgu-bas:90%;--altin:#ffd166;
+ --c1:#4cc9f0;--c2:#ff5d8f;--c3:#5ee6a8;--c4:#ffd166;--c5:#b28dff;--acc:#ff5d8f;--golge:none;--duvar:#5536a8;--duvar2:#6142b8;--zemin:#2f1c6b;--ahsap:#ff9a62;--ahsap2:#d9573f;--gok:#ff7a59;--isik:#ffe08a;
+ --kol-arka:#3a2a78;--yuz:#fff1dc;--yuz-cizgi:#1c1440;--hirka:#ffd166;--karbonk:#1c1440}
+/* Canlı (düz renkli, kontursuz) deneme: sahne çizimlerindeki mürekkep konturları kalkar, karakter kendi koyu rengini (--kink) kullanır. */
+:root[data-tema="canli"] #stage{background:linear-gradient(#2a1968,#120a33)}
+:root[data-tema="canli"] svg.v [stroke="var(--ink)"]{stroke:none}
+:root[data-tema="canli"] .cap{background:#2a1c5e;border-color:#5a45b0}
+:root[data-tema="canli"] .head .sub,:root[data-tema="canli"] .head .sub i{--acc:#ff5d8f}
 [data-ders="fizik"]{--acc:var(--c1)}[data-ders="kimya"]{--acc:var(--c2)}[data-ders="biyoloji"]{--acc:var(--c3)}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1080px;height:1920px;overflow:hidden}
@@ -28,11 +36,11 @@ svg.v{position:absolute;left:0;top:0;width:1080px;height:1920px}
 .q small{display:block;font-size:34px;letter-spacing:3px;color:var(--acc);margin-bottom:34px}
 .prog{position:absolute;left:80px;width:860px;top:1545px;height:6px;background:var(--line);border-radius:3px}
 .prog i{display:block;height:100%;background:var(--acc);border-radius:3px}
-</style><script>if(new URLSearchParams(location.search).get("tema")==="koyu")document.documentElement.dataset.tema="koyu"</script></head><body><div id="stage" data-ders="kimya"><div class="grid"></div>
+</style><script>if(new URLSearchParams(location.search).get("tema"))document.documentElement.dataset.tema=new URLSearchParams(location.search).get("tema")</script></head><body><div id="stage" data-ders="kimya"><div class="grid"></div>
 <div class="head"><div class="sub"><i></i>KİMYA</div><div class="brand">ucler<b>.</b></div></div>
 <div id="c"></div>
 </div>
-<script>window.KARAKTER_RENK={navy:'var(--ink)',sari:'var(--hirka)',beyaz:'var(--surface)',gri:'var(--gri)',arka:'var(--kol-arka)',kafaStil:'--ink:var(--yuz-cizgi);--surface:var(--yuz)'}</script>
+<script>window.KARAKTER_RENK={navy:'var(--kink)',sari:'var(--hirka)',beyaz:'var(--surface)',gri:'var(--gri)',arka:'var(--kol-arka)',kafaStil:'--kink:var(--yuz-cizgi);--surface:var(--yuz)'}</script>
 <script src="../karakter/karakter.js"></script>
 <script>
 const K = o => karakter(Object.assign({tip:'A'}, o));
