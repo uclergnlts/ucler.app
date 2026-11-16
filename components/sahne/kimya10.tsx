@@ -65,7 +65,7 @@ function ZnCu({ s, t, oynuyor }: SahneProps) {
     <svg viewBox="0 0 340 236" role="img" aria-label={bitti ? "Çinko şeritte bakır birikti, mavi renk soldu" : "Çinko şerit mavi CuSO₄ çözeltisinde"}>
       <rect x={92} y={80} width={156} height={96} fill={MAVI} opacity={0.08 + 0.36 * (1 - 0.7 * u)} />
       {cuIyon.slice(0, nCu).map((p, i) => <circle key={`c${i}`} cx={p.x} cy={p.y} r={4} fill={MAVI} />)}
-      {znIyon.slice(0, nZn).map((p, i) => <circle key={`z${i}`} cx={p.x} cy={p.y} r={4} fill="#fff" stroke={DEMIR} strokeWidth={1.4} />)}
+      {znIyon.slice(0, nZn).map((p, i) => <circle key={`z${i}`} cx={p.x} cy={p.y} r={4} fill="var(--surface)" stroke={DEMIR} strokeWidth={1.4} />)}
       <rect x={170 - w / 2} y={30} width={w} height={136} rx={2} fill={GRI} stroke="#8a95a3" />
       {birikim.slice(0, nBir).map((p, i) => <circle key={`b${i}`} cx={170 + p.yan * (w / 2 + 1)} cy={p.y} r={p.r} fill={BAKIR} />)}
       <path d="M92 50 L92 176 Q92 182 98 182 L242 182 Q248 182 248 176 L248 50" fill="none" stroke="var(--ink)" strokeWidth={2} />
@@ -79,7 +79,7 @@ function ZnCu({ s, t, oynuyor }: SahneProps) {
       )}
       <g fontSize={11} fontWeight={700} fill="var(--muted)">
         <circle cx={262} cy={98} r={4} fill={MAVI} /><text x={270} y={102}>Cu²⁺</text>
-        <circle cx={262} cy={118} r={4} fill="#fff" stroke={DEMIR} strokeWidth={1.4} /><text x={270} y={122}>Zn²⁺</text>
+        <circle cx={262} cy={118} r={4} fill="var(--surface)" stroke={DEMIR} strokeWidth={1.4} /><text x={270} y={122}>Zn²⁺</text>
         <circle cx={262} cy={138} r={4} fill={BAKIR} /><text x={270} y={142}>Cu (katı)</text>
       </g>
       {bitti ? (
@@ -124,7 +124,7 @@ function Aktiflik({ v, set }: SahneProps) {
         return (
           <g key={e} onClick={h ? undefined : () => set("m", mi)} style={{ cursor: h ? "default" : "pointer" }}>
             <rect x={x + 1} y={26} width={W - 2} height={28} rx={6} fill={sec ? "var(--kimya)" : h ? "none" : "var(--panel)"} stroke={e === "Cu" ? MAVI : "var(--line-2)"} strokeWidth={e === "Cu" ? 2 : 1} strokeDasharray={h ? "3 3" : undefined} />
-            <text x={x + W / 2} y={44} fontSize={11} fontWeight={800} textAnchor="middle" fill={sec ? "#fff" : h ? "var(--muted)" : "var(--ink)"}>{e}</text>
+            <text x={x + W / 2} y={44} fontSize={11} fontWeight={800} textAnchor="middle" fill={sec ? "var(--on-btn)" : h ? "var(--muted)" : "var(--ink)"}>{e}</text>
           </g>
         );
       })}
@@ -169,7 +169,7 @@ function RedoksMu({ v }: SahneProps) {
           <g key={k.harf}>
             <rect x={8} y={y} width={324} height={56} rx={10} fill="var(--panel)" />
             <circle cx={28} cy={y + 20} r={11} fill="var(--kimya)" />
-            <text x={28} y={y + 24} fontSize={12} fontWeight={800} textAnchor="middle" fill="#fff">{k.harf}</text>
+            <text x={28} y={y + 24} fontSize={12} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">{k.harf}</text>
             <text x={48} y={y + 25} fontSize={14} fontWeight={800} fill="var(--ink)">{k.d}</text>
             {goster ? (
               <>
@@ -279,8 +279,8 @@ function Potansiyel({ v }: SahneProps) {
             <text x={22} y={y + 15} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">{i + 1}</text>
             <text x={40} y={y + 15} fontSize={12.5} fontWeight={800} fill="var(--ink)">{h.ad}</text>
             <text x={172} y={y + 15} fontSize={12.5} fontWeight={800} textAnchor="end" fill="var(--ink)">{isr(h.e)}</text>
-            {an && <><rect x={192} y={y + 3} width={56} height={15} rx={7} fill="var(--c2)" /><text x={220} y={y + 14} fontSize={10.5} fontWeight={800} textAnchor="middle" fill="#fff">anot</text></>}
-            {ka && <><rect x={256} y={y + 3} width={56} height={15} rx={7} fill="var(--c1)" /><text x={284} y={y + 14} fontSize={10.5} fontWeight={800} textAnchor="middle" fill="#fff">katot</text></>}
+            {an && <><rect x={192} y={y + 3} width={56} height={15} rx={7} fill="var(--c2)" /><text x={220} y={y + 14} fontSize={10.5} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">anot</text></>}
+            {ka && <><rect x={256} y={y + 3} width={56} height={15} rx={7} fill="var(--c1)" /><text x={284} y={y + 14} fontSize={10.5} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">katot</text></>}
           </g>
         );
       })}
@@ -329,7 +329,7 @@ function Su({ s, t, oynuyor }: SahneProps) {
       {tup.map((k, i) => (
         <g key={i}>
           <rect x={k.x - 15} y={30} width={30} height={162} rx={13} fill="#d7e8f7" />
-          {k.gaz > 0.5 && <rect x={k.x - 12} y={33} width={24} height={k.gaz} rx={10} fill="#ffffff" />}
+          {k.gaz > 0.5 && <rect x={k.x - 12} y={33} width={24} height={k.gaz} rx={10} fill="var(--surface)" />}
           {u > 0 && u < 1 && Array.from({ length: k.kab }, (_, j) => {
             const f = (t * 0.9 + j / k.kab) % 1, alt = 176, ust = 36 + k.gaz;
             return <circle key={j} cx={k.x - 6 + (j % 3) * 6} cy={alt - f * Math.max(0, alt - ust)} r={2.4} fill="none" stroke="var(--c1)" strokeWidth={1.2} />;
@@ -408,7 +408,7 @@ function Korozyon({ s, t, oynuyor }: SahneProps) {
         <rect x={20} y={y - 16} width={16} height={32} rx={3} fill={DEMIR} />
         <rect x={170 - bosluk} y={y - 11} width={bosluk * 2} height={6} fill="#d7e8f7" />
         {!cinko && k > 0 && <ellipse cx={170} cy={y - 2} rx={6 + k * 34} ry={3 + k * 4} fill={BAKIR} opacity={0.9} />}
-        {cinko && k > 0 && [0, 1, 2, 3].map((j) => <circle key={j} cx={140 + j * 20} cy={y - 16} r={3.5} fill="#fff" stroke={DEMIR} strokeWidth={1.2} opacity={k} />)}
+        {cinko && k > 0 && [0, 1, 2, 3].map((j) => <circle key={j} cx={140 + j * 20} cy={y - 16} r={3.5} fill="var(--surface)" stroke={DEMIR} strokeWidth={1.2} opacity={k} />)}
         <text x={20} y={y - 26} fontSize={12.5} fontWeight={800} fill="var(--ink)">{kaplama}</text>
       </g>
     );

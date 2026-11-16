@@ -90,7 +90,7 @@ function EnzimSubstrat({ t, s }: SahneProps) {
       <g>
         <rect x={lx - 9} y={ly - 12} width={18} height={24} rx={4} fill="var(--c4)" />
         <rect x={rx - 9} y={ry - 12} width={18} height={24} rx={4} fill={git > 0 ? "var(--c2)" : "var(--c4)"} />
-        <line x1={sx} y1={sy - 10} x2={sx} y2={sy + 10} stroke="#fff" strokeWidth={3} opacity={git > 0 ? 0 : 1 - bag} />
+        <line x1={sx} y1={sy - 10} x2={sx} y2={sy + 10} stroke="var(--surface)" strokeWidth={3} opacity={git > 0 ? 0 : 1 - bag} />
         <line x1={sx} y1={sy - 6} x2={sx} y2={sy + 6} stroke="var(--c4)" strokeWidth={4} opacity={git > 0 ? 0 : bag} />
       </g>
       {u < 0.3 && <text x={70} y={64} fontSize={12} fontWeight={700} fill="#b7800d" textAnchor="middle">substrat</text>}

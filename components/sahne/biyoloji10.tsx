@@ -90,7 +90,7 @@ function Bebek({ v }: SahneProps) {
         })}
       </g>
       <circle cx={170} cy={110} r={r} fill="var(--ink)" />
-      <circle cx={160} cy={100} r={4} fill="#fff" fillOpacity={0.8} />
+      <circle cx={160} cy={100} r={4} fill="var(--surface)" fillOpacity={0.8} />
       <g fontSize={11.5} fontWeight={700} fill="var(--muted)">
         <text x={232} y={66}>iris</text>
         <line x1={230} y1={70} x2={206} y2={86} stroke="var(--muted)" strokeWidth={1} />

@@ -50,7 +50,7 @@ export default function PlusEkran({ konu, donus }: { konu?: string; donus?: stri
   if (plus) {
     return (
       <article className="grid gap-3 text-center">
-        <span className="mx-auto grid size-16 place-items-center rounded-2xl bg-[color-mix(in_srgb,var(--c1)_12%,white)] text-[var(--c1)] [&_svg]:size-8"><Yildiz /></span>
+        <span className="mx-auto grid size-16 place-items-center rounded-2xl bg-[color-mix(in_srgb,var(--c1)_12%,var(--surface))] text-[var(--c1)] [&_svg]:size-8"><Yildiz /></span>
         <h1 className="text-[24px]">ucler Plus açık</h1>
         <p className="text-[15px] text-muted-foreground">
           Bütün konular açık.{" "}
@@ -70,7 +70,7 @@ export default function PlusEkran({ konu, donus }: { konu?: string; donus?: stri
   return (
     <article className="grid gap-4">
       <div className="grid gap-2 text-center">
-        <span className="mx-auto grid size-16 place-items-center rounded-2xl bg-[color-mix(in_srgb,var(--c1)_12%,white)] text-[var(--c1)] [&_svg]:size-8"><Yildiz /></span>
+        <span className="mx-auto grid size-16 place-items-center rounded-2xl bg-[color-mix(in_srgb,var(--c1)_12%,var(--surface))] text-[var(--c1)] [&_svg]:size-8"><Yildiz /></span>
         <h1 className="text-[24px]">{konu ? <>“{konu}” ucler Plus&apos;ta</> : "ucler Plus"}</h1>
         <p className="text-[15px] text-muted-foreground">Her dersin ilk konusu ücretsiz. Plus ile bütün konular açılır.</p>
       </div>

@@ -9,12 +9,13 @@ import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
 
-// Her sekmenin kendi rengi: seçili sekmenin simgesi ve adı bu renge döner, simgenin arkasında açık renkli zemin belirir.
+// Sekme renkleri yalnızca üst çubuktaki küçük düğmelerde kullanılır (sekmeRengi). Alt menü tek renktir:
+// seçili sekme mürekkep renginde ve kalın, altında küçük bir vurgu noktası durur (deney defteri, 2026-11-16).
 const TABS = [
   { k: "home", href: "/", label: "Ana sayfa", renk: "var(--c1)" },
   { k: "kesfet", href: "/kesfet/", label: "Keşfet", renk: "var(--c3)" },
-  { k: "video", href: "/videolar/", label: "Videolar", renk: "#d63c63" },
-  { k: "deneme", href: "/deneme/", label: "Deneme", renk: "#e08a00" },
+  { k: "video", href: "/videolar/", label: "Videolar", renk: "var(--kimya)" },
+  { k: "deneme", href: "/deneme/", label: "Deneme", renk: "var(--c4)" },
   { k: "profil", href: "/profil/", label: "Profil", renk: "var(--c5)" },
 ] as const;
 
@@ -37,7 +38,7 @@ export default function Tabs() {
   if ((parts.length >= 2 && parts[0] !== "profil") || parts[0] === "tekrar" || parts[0] === "gunun-sorusu") return null;
   const cur = sekme(parts);
   return (
-    <div className="fixed inset-x-0 bottom-0 z-10 border-t border-border bg-card pb-[env(safe-area-inset-bottom,0px)]">
+    <div className="fixed inset-x-0 bottom-0 z-10 border-t border-border bg-background pb-[env(safe-area-inset-bottom,0px)]">
       <nav aria-label="Bölümler" className="mx-auto grid h-[var(--nav)] max-w-[520px] grid-cols-5">
         {TABS.map((t) => {
           const I = Icon[t.k], on = cur === t.k;
@@ -46,25 +47,23 @@ export default function Tabs() {
               key={t.k}
               href={t.href}
               aria-current={on ? "page" : undefined}
-              style={on ? { color: t.renk } : undefined}
               className={cn(
                 "relative grid content-center justify-items-center gap-0.5 text-[11px] transition-colors [&_svg]:size-6",
-                on ? "font-bold [&_svg]:stroke-[2.4]" : "font-semibold text-muted-foreground",
+                on ? "font-bold text-foreground [&_svg]:stroke-[2.2]" : "font-medium text-muted-foreground",
               )}
             >
-              <span className="relative grid h-8 w-14 place-items-center">
+              <span className="relative grid h-7 place-items-center"><I /></span>
+              <span>{t.label}</span>
+              <span className="relative h-1 w-1">
                 {on && (
                   <motion.span
                     layoutId="sekme"
                     aria-hidden="true"
-                    className="absolute inset-0 rounded-full"
-                    style={{ backgroundColor: `color-mix(in srgb, ${t.renk} 14%, white)` }}
+                    className="absolute inset-0 rounded-full bg-mark"
                     transition={{ type: "spring", stiffness: 500, damping: 40 }}
                   />
                 )}
-                <span className="relative"><I /></span>
               </span>
-              <span>{t.label}</span>
             </Link>
           );
         })}

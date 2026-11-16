@@ -27,7 +27,7 @@ function useSaat() {
 /* ---------- atom ve molekül çizimleri ---------- */
 
 const O = ({ x, y }: { x: number; y: number }) => <circle cx={x} cy={y} r={6.5} fill="var(--c2)" />;
-const H = ({ x, y }: { x: number; y: number }) => <circle cx={x} cy={y} r={4.2} fill="#fff" stroke="#8d9bb0" strokeWidth={1.3} />;
+const H = ({ x, y }: { x: number; y: number }) => <circle cx={x} cy={y} r={4.2} fill="var(--surface)" stroke="#8d9bb0" strokeWidth={1.3} />;
 const C = ({ x, y }: { x: number; y: number }) => <circle cx={x} cy={y} r={6.5} fill="#3b4656" />;
 
 function Su({ x, y, a = 0 }: { x: number; y: number; a?: number }) {
@@ -70,7 +70,7 @@ function Hal({ v }: SahneProps) {
     <svg viewBox="0 0 340 224" role="img" aria-label={`${T} derecede su: ${hal}`}>
       <path d={`M${KAP.x0} ${KAP.y0 - 8} L${KAP.x0} ${KAP.y1} L${KAP.x1} ${KAP.y1} L${KAP.x1} ${KAP.y0 - 8}`} fill="none" stroke="var(--line-2)" strokeWidth={2.5} />
       <g>
-        {noktalar.map((p, i) => <circle key={i} cx={p.x} cy={p.y} r={7} fill="var(--c1)" stroke="#fff" strokeWidth={1.2} />)}
+        {noktalar.map((p, i) => <circle key={i} cx={p.x} cy={p.y} r={7} fill="var(--c1)" stroke="var(--surface)" strokeWidth={1.2} />)}
       </g>
       <g>
         <text x={KAP.x0} y={28} fontSize={20} fontWeight={800} fill="var(--ink)" fontFamily="var(--f-display)">{hal[0].toUpperCase() + hal.slice(1)}</text>
@@ -148,7 +148,7 @@ function Ornekler() {
       {kutu(228, "C", (x, y, i) => (i % 2 ? <O2 key={i} x={x} y={y} /> : <H2 key={i} x={x} y={y} />))}
       <g fontSize={11.5} fill="var(--muted)" fontWeight={600}>
         <circle cx={118} cy={210} r={6} fill="var(--c2)" /><text x={128} y={214}>oksijen</text>
-        <circle cx={192} cy={210} r={4.2} fill="#fff" stroke="#8d9bb0" strokeWidth={1.3} /><text x={202} y={214}>hidrojen</text>
+        <circle cx={192} cy={210} r={4.2} fill="var(--surface)" stroke="#8d9bb0" strokeWidth={1.3} /><text x={202} y={214}>hidrojen</text>
       </g>
     </svg>
   );
@@ -178,7 +178,7 @@ function Karistir({ t, oynuyor, s }: SahneProps) {
         <path d={bardak(L)} fill="none" stroke="var(--line-2)" strokeWidth={2.5} />
         {[0, 1, 2, 3].map((i) => {
           const k = 1 - karis, w = 13 * k;
-          return k > 0.02 && <rect key={i} x={L - 30 + i * 16 + (13 - w) / 2} y={190 - w} width={w} height={w} rx={2} fill="#fff" stroke="#b9c3d1" strokeWidth={1.2} />;
+          return k > 0.02 && <rect key={i} x={L - 30 + i * 16 + (13 - w) / 2} y={190 - w} width={w} height={w} rx={2} fill="var(--surface)" stroke="#b9c3d1" strokeWidth={1.2} />;
         })}
         {karis > 0 && rnd.map(([a, b], i) => <circle key={i} cx={L - 40 + a * 80} cy={98 + b * 90} r={1.8} fill="#9aa8ba" opacity={karis} />)}
       </g>
@@ -309,7 +309,7 @@ function Thomson({ v }: SahneProps) {
         {YUVA.slice(0, e).map(([x, y], i) => (
           <g key={i}>
             <circle cx={cx + x} cy={cy + y} r={9} fill="var(--c1)" />
-            <text x={cx + x} y={cy + y + 4.5} fontSize={13} fontWeight={800} fill="#fff" textAnchor="middle">−</text>
+            <text x={cx + x} y={cy + y + 4.5} fontSize={13} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">−</text>
           </g>
         ))}
       </g>
@@ -462,7 +462,7 @@ function Bohr({ v }: SahneProps) {
         ))}
       </g>
       <circle cx={BCX} cy={BCY} r={7} fill="var(--c2)" />
-      <circle cx={ex} cy={ey} r={6.5} fill="var(--c1)" stroke="#fff" strokeWidth={1.2} />
+      <circle cx={ex} cy={ey} r={6.5} fill="var(--c1)" stroke="var(--surface)" strokeWidth={1.2} />
       {inis && <path key={`${son![0]}${son![1]}`} className="ad-belir" d={dalga} fill="none" stroke={inis.renk} strokeWidth={2.5} strokeLinecap="round" />}
       <g fontSize={12.5} fontWeight={700}>
         <text x={212} y={44} fill="var(--ink)" fontSize={15} fontWeight={800}>{n}. katman</text>

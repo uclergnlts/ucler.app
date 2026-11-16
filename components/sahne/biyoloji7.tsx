@@ -544,7 +544,7 @@ function Mutasyon({ v }: SahneProps) {
         ) : (
           <g>
             <ellipse cx={170} cy={176} rx={40} ry={20} fill="var(--c2)" fillOpacity={0.75} />
-            <ellipse cx={170} cy={176} rx={17} ry={7} fill="#fff" fillOpacity={0.35} />
+            <ellipse cx={170} cy={176} rx={17} ry={7} fill="var(--surface)" fillOpacity={0.35} />
           </g>
         )}
       </g>

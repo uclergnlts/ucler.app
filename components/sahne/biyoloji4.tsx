@@ -51,7 +51,7 @@ function Cam() {
         <path key={i} d={`M170 ${20 + i * 28} L${132 - i * 10} ${70 + i * 24} L${208 + i * 10} ${70 + i * 24} Z`} fill={KOYU} />
       ))}
       <ellipse cx={196} cy={102} rx={7} ry={11} fill={KAHVE} />
-      <path d="M190 96 L202 96 M189 102 L203 102 M190 108 L202 108" stroke="#fff" strokeWidth={1} opacity={0.6} />
+      <path d="M190 96 L202 96 M189 102 L203 102 M190 108 L202 108" stroke="var(--surface)" strokeWidth={1} opacity={0.6} />
     </g>
   );
 }
@@ -63,7 +63,7 @@ function Elma() {
       <circle cx={170} cy={66} r={48} fill={YESIL} />
       {[[146, 56], [190, 80], [168, 90]].map(([x, y], i) => <circle key={i} cx={x} cy={y} r={7} fill="var(--c2)" />)}
       <g transform="translate(186 44)">
-        {[0, 1, 2, 3, 4].map((i) => <circle key={i} cx={Math.cos((i * 72 * Math.PI) / 180) * 5} cy={Math.sin((i * 72 * Math.PI) / 180) * 5} r={4.2} fill="#fff" />)}
+        {[0, 1, 2, 3, 4].map((i) => <circle key={i} cx={Math.cos((i * 72 * Math.PI) / 180) * 5} cy={Math.sin((i * 72 * Math.PI) / 180) * 5} r={4.2} fill="var(--surface)" />)}
         <circle r={2.4} fill="var(--c4)" />
       </g>
     </g>
@@ -95,7 +95,7 @@ function Gruplar({ v }: SahneProps) {
         return (
           <g key={g.kisa}>
             <rect x={x} y={204} width={80} height={26} rx={13} fill={on ? YESIL : "none"} stroke={on ? YESIL : "var(--line-2)"} strokeWidth={1.4} />
-            <text x={x + 40} y={221} fontSize={11} fontWeight={700} fill={on ? "#fff" : "var(--muted)"} textAnchor="middle">{g.kisa}</text>
+            <text x={x + 40} y={221} fontSize={11} fontWeight={700} fill={on ? "var(--on-btn)" : "var(--muted)"} textAnchor="middle">{g.kisa}</text>
           </g>
         );
       })}
@@ -123,7 +123,7 @@ function Su({ t, oynuyor, s }: SahneProps) {
       {hucreler(46, (i) => yavas - i)}
       {hucreler(226, (i) => (u > 0.45 ? yumusak((u - 0.45) / 0.4) : 0) * (boru > i ? 1 : 0))}
       <g>
-        <rect x={252} y={Y0 - N * H} width={12} height={N * H} fill="#fff" stroke="var(--c1)" strokeWidth={1.6} />
+        <rect x={252} y={Y0 - N * H} width={12} height={N * H} fill="var(--surface)" stroke="var(--c1)" strokeWidth={1.6} />
         <rect x={254} y={Y0 - boru * H} width={8} height={boru * H} fill="var(--c1)" />
       </g>
       <g>
@@ -181,7 +181,7 @@ function DolAlmasi({ t, oynuyor, s }: SahneProps) {
         const renk = d.p === "2n" ? N2 : N1, gecti = u > 0 && adim >= i;
         return (
           <g key={d.ad}>
-            <rect x={d.x - 44} y={d.y - 17} width={88} height={34} rx={10} fill="#fff" stroke={renk} strokeWidth={gecti ? 2.6 : 1.6} />
+            <rect x={d.x - 44} y={d.y - 17} width={88} height={34} rx={10} fill="var(--surface)" stroke={renk} strokeWidth={gecti ? 2.6 : 1.6} />
             <text x={d.x} y={d.y - 1} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{d.ad}</text>
             <text x={d.x} y={d.y + 12} fontSize={11} fontWeight={800} fill={renk} textAnchor="middle">{d.p}</text>
           </g>
@@ -262,7 +262,7 @@ function Tohum({ t, oynuyor, s }: SahneProps) {
         <path d="M30 150 Q36 96 84 84 Q132 96 138 150 Q84 164 30 150 Z" fill={KAHVE} fillOpacity={0.85} />
         {[64, 104].map((x) => (
           <g key={x}>
-            <ellipse cx={x} cy={128} rx={9} ry={6} fill="var(--c4)" stroke="#fff" strokeWidth={1.2} />
+            <ellipse cx={x} cy={128} rx={9} ry={6} fill="var(--c4)" stroke="var(--surface)" strokeWidth={1.2} />
             <ellipse cx={x + 6 + 11 * sis} cy={124 - 6 * sis} rx={2 + 11 * sis} ry={1 + 4.5 * sis} fill="var(--c4)" fillOpacity={0.55} stroke="var(--c4)" strokeWidth={1} opacity={sis} transform={`rotate(-28 ${x + 6 + 11 * sis} ${124 - 6 * sis})`} />
           </g>
         ))}
@@ -355,7 +355,7 @@ function Cenek({ v }: SahneProps) {
       </g>
       <g>
         <rect x={180} y={196} width={150} height={34} rx={17} fill={tek === 3 || tek === 0 ? renk : "none"} stroke={renk} strokeWidth={1.6} />
-        <text x={255} y={218} fontSize={13} fontWeight={800} fill={tek === 3 || tek === 0 ? "#fff" : "var(--muted)"} textAnchor="middle">{sonuc}</text>
+        <text x={255} y={218} fontSize={13} fontWeight={800} fill={tek === 3 || tek === 0 ? "var(--on-btn)" : "var(--muted)"} textAnchor="middle">{sonuc}</text>
       </g>
     </svg>
   );
@@ -413,7 +413,7 @@ function Dongu({ v }: SahneProps) {
       ))}
       <text x={CX} y={CY - 4} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">interfaz</text>
       <text x={CX} y={CY + 11} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">G1 + S + G2</text>
-      <circle cx={CX + R * Math.cos(ang)} cy={CY + R * Math.sin(ang)} r={9} fill="#fff" stroke="var(--ink)" strokeWidth={2.4} />
+      <circle cx={CX + R * Math.cos(ang)} cy={CY + R * Math.sin(ang)} r={9} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2.4} />
       <g>
         <circle cx={258} cy={116} r={62} fill="none" stroke="var(--line-2)" strokeWidth={1.6} strokeDasharray={yogun ? "4 5" : undefined} />
         {KR.map((c, i) => <Kromozom key={i} {...c} es={es} sentromer={es > 0.05} />)}
@@ -506,7 +506,7 @@ function Mitoz({ s, v, t, oynuyor }: SahneProps) {
   const kutupX = (d: number) => CX + d * 74 * ayril;
   return (
     <svg viewBox="0 0 340 260" role="img" aria-label={`${MITOZ[f].ad}: ${MITOZ[f].not}; kromozom sayısı ${sayi}`}>
-      <path d={zar} fill="#f4f8fc" stroke="var(--ink)" strokeWidth={1.8} />
+      <path d={zar} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.8} />
       <circle cx={CX} cy={CY} r={66} fill="none" stroke="var(--ink)" strokeWidth={1.4} strokeDasharray="5 5" opacity={1 - yumusak(x / 0.7)} />
       <g stroke="var(--c3)" strokeWidth={1} opacity={0.75 * (1 - tel)}>
         {x > 0.3 && govde.flatMap((k, i) => {
@@ -566,7 +566,7 @@ function Sitokinez({ v, t, oynuyor, s }: SahneProps) {
     const zar = `M40 ${CY} C40 36 160 28 170 ${30 + w} C180 28 300 36 300 ${CY} C300 184 180 192 170 ${190 - w} C160 192 40 184 40 ${CY} Z`;
     return (
       <svg viewBox="0 0 340 236" role="img" aria-label="Hayvan hücresinde sitoplazma ortadan boğumlanarak bölünür">
-        <path d={zar} fill="#f4f8fc" stroke="var(--ink)" strokeWidth={1.8} />
+        <path d={zar} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.8} />
         <g>
           {[100, 240].map((x) => <circle key={x} cx={x} cy={CY} r={30} fill="var(--c5)" fillOpacity={0.18} stroke="var(--c5)" strokeWidth={1.6} />)}
         </g>

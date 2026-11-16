@@ -30,7 +30,7 @@ export function Secenekler({ q, picked, pick }: { q: Secmeli; picked: number | n
             <span
               className={cn(
                 "grid size-7 flex-none place-items-center rounded-lg text-[13px] font-bold",
-                durum === "right" ? "bg-good text-white" : durum === "wrong" ? "bg-bad text-white" : "bg-secondary text-muted-foreground",
+                durum === "right" ? "bg-good text-[var(--on-btn)]" : durum === "wrong" ? "bg-bad text-[var(--on-btn)]" : "bg-secondary text-muted-foreground",
               )}
             >
               {"ABCD"[k]}

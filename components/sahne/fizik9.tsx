@@ -19,7 +19,7 @@ const ilerleme = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 
 function Pil({ x, y, etiket }: { x: number; y: number; etiket?: string }) {
   return (
     <g>
-      <rect x={x - 18} y={y - 8} width={36} height={16} fill="#fff" />
+      <rect x={x - 18} y={y - 8} width={36} height={16} fill="var(--surface)" />
       <line x1={x - 16} x2={x + 16} y1={y - 6} y2={y - 6} stroke="var(--ink)" strokeWidth={2.2} />
       <line x1={x - 8} x2={x + 8} y1={y + 6} y2={y + 6} stroke="var(--ink)" strokeWidth={5} />
       <text x={x + 22} y={y - 2} fontSize={13} fontWeight={800} fill="var(--c2)">+</text>
@@ -31,12 +31,12 @@ function Pil({ x, y, etiket }: { x: number; y: number; etiket?: string }) {
 
 /** Ampul simgesi (daire içinde çarpı). p: 0..1 parlaklık. */
 function Lamba({ x, y, p, sokuk = false }: { x: number; y: number; p: number; sokuk?: boolean }) {
-  if (sokuk) return <circle cx={x} cy={y} r={12} fill="#fff" stroke="var(--line-2)" strokeWidth={1.6} strokeDasharray="3 3" />;
+  if (sokuk) return <circle cx={x} cy={y} r={12} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={1.6} strokeDasharray="3 3" />;
   const q = sinir(p, 0, 1);
   return (
     <g>
       {q > 0.01 && <circle cx={x} cy={y} r={14 + 16 * q} fill="var(--c4)" opacity={0.12 + 0.3 * q} />}
-      <circle cx={x} cy={y} r={12} fill={q > 0.01 ? "#ffe8a3" : "#fff"} stroke="var(--ink)" strokeWidth={2} />
+      <circle cx={x} cy={y} r={12} fill={q > 0.01 ? "#ffe8a3" : "var(--surface)"} stroke="var(--ink)" strokeWidth={2} />
       <path d={`M${x - 8.5} ${y - 8.5} L${x + 8.5} ${y + 8.5} M${x + 8.5} ${y - 8.5} L${x - 8.5} ${y + 8.5}`} stroke="var(--ink)" strokeWidth={1.6} />
     </g>
   );
@@ -47,7 +47,7 @@ function Direnc({ x, y, yazi, dikey = false, renk = "var(--ink)" }: { x: number;
   const w = dikey ? 14 : 40, h = dikey ? 40 : 14;
   return (
     <g>
-      <rect x={x - w / 2} y={y - h / 2} width={w} height={h} rx={2} fill="#fff" stroke={renk} strokeWidth={2} />
+      <rect x={x - w / 2} y={y - h / 2} width={w} height={h} rx={2} fill="var(--surface)" stroke={renk} strokeWidth={2} />
       <text x={dikey ? x + 14 : x} y={dikey ? y + 4 : y - 13} fontSize={11.5} fontWeight={800} fill={renk} textAnchor={dikey ? "start" : "middle"}>{yazi}</text>
     </g>
   );
@@ -113,7 +113,7 @@ function Ohm({ v, s }: SahneProps) {
       <Pil x={30} y={120} />
       <text x={40} y={154} fontSize={12} fontWeight={800} fill="var(--ink)">{V} V</text>
       <Direnc x={80} y={64} yazi={`${R} Ω`} />
-      <circle cx={130} cy={124} r={15} fill="#fff" stroke="var(--ink)" strokeWidth={2} />
+      <circle cx={130} cy={124} r={15} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2} />
       <text x={130} y={129} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">A</text>
       <text x={130} y={204} fontSize={12} fontWeight={800} fill="var(--c2)" textAnchor="middle">{say(I, 2)} A</text>
       <Elektronlar d="M30 130 V182 H130 V139 M130 109 V64 H30 V110" hiz={I} />
@@ -252,7 +252,7 @@ function YanlisAmper({ t, oynuyor, s }: SahneProps) {
       {bagli && <circle cx={60} cy={120} r={24} fill="var(--c2)" opacity={0.15 + 0.15 * Math.sin(u * 30)} />}
       <Lamba x={190} y={116} p={bagli ? 0 : 1} />
       <path d="M190 62 H280 V100 M280 132 V182 H190" fill="none" stroke="var(--ink)" strokeWidth={2.2} strokeDasharray={bagli ? undefined : "5 5"} opacity={bagli ? 1 : 0.5} />
-      <circle cx={280} cy={116} r={16} fill="#fff" stroke="var(--ink)" strokeWidth={2} />
+      <circle cx={280} cy={116} r={16} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2} />
       <text x={280} y={121} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">A</text>
       {bagli && <Elektronlar d="M60 130 V182 H280 V134 M280 98 V62 H60 V110" hiz={4} />}
       {bagli && (
@@ -306,11 +306,11 @@ function Sarj({ v }: SahneProps) {
       <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)">W = V · I · t = 5 · 2 · {dk * 60} s</text>
       <text x={14} y={42} fontSize={13} fontWeight={800} fill={hedef ? "var(--good)" : "var(--c2)"}>W = {binlik(W)} J</text>
       <g>
-        <rect x={34} y={70} width={58} height={112} rx={10} fill="#fff" stroke="var(--ink)" strokeWidth={2.2} />
+        <rect x={34} y={70} width={58} height={112} rx={10} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2.2} />
         <rect x={42} y={82} width={42} height={88} rx={4} fill="var(--line)" />
         <rect x={42} y={82 + 88 * (1 - sinir(W / 36000, 0, 1))} width={42} height={88 * sinir(W / 36000, 0, 1)} rx={4} fill="var(--good)" opacity={0.75} />
         <path d="M63 182 V200 H150" fill="none" stroke="var(--ink)" strokeWidth={2} />
-        <rect x={150} y={190} width={44} height={22} rx={5} fill="#fff" stroke="var(--ink)" strokeWidth={2} />
+        <rect x={150} y={190} width={44} height={22} rx={5} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2} />
         <text x={172} y={205} fontSize={10.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">5 V 2 A</text>
       </g>
       <g>
@@ -361,7 +361,7 @@ function Etiket({ t, oynuyor, s }: SahneProps) {
       <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">R = V² / P = 220² / 2000 = 24,2 Ω</text>
       <text x={14} y={42} fontSize={13} fontWeight={800} fill={V === 110 ? "var(--c2)" : "var(--ink)"}>{V} V'ta P = {V}² / 24,2 = {Math.round(P)} W</text>
       <g>
-        <rect x={40} y={70} width={150} height={110} rx={12} fill="#fff" stroke="var(--ink)" strokeWidth={2.2} />
+        <rect x={40} y={70} width={150} height={110} rx={12} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2.2} />
         {[0, 1, 2, 3].map((i) => (
           <line key={i} x1={58} x2={172} y1={92 + i * 22} y2={92 + i * 22} stroke={`rgba(226, 72, 59, ${0.15 + 0.75 * parl})`} strokeWidth={6} strokeLinecap="round" />
         ))}
@@ -389,7 +389,7 @@ function Fatura({ v }: SahneProps) {
       <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)">E = 1,5 kW · {h} saat · 30 gün = {say(E)} kWh</text>
       <text x={14} y={42} fontSize={13} fontWeight={800} fill={iyi ? "var(--good)" : "var(--c2)"}>Tutar = {say(E)} kWh · 3 TL = {say(TL)} TL</text>
       <g>
-        <rect x={60} y={66} width={150} height={44} rx={10} fill="#fff" stroke="var(--ink)" strokeWidth={2.2} />
+        <rect x={60} y={66} width={150} height={44} rx={10} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2.2} />
         {[0, 1, 2].map((i) => <line key={i} x1={74} x2={196} y1={96 + i * 5} y2={96 + i * 5} stroke="var(--line-2)" strokeWidth={2} />)}
         <text x={135} y={86} fontSize={11} fontWeight={800} fill="var(--muted)" textAnchor="middle">klima · 1,5 kW</text>
         <text x={226} y={86} fontSize={12} fontWeight={800} fill="var(--ink)">günde {h} saat</text>
@@ -421,14 +421,14 @@ function Sigorta({ v }: SahneProps) {
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={atti ? "var(--c2)" : "var(--ink)"}>{atti ? "Sigorta attı: hat kesildi" : `Toplam akım: ${say(I)} A`}</text>
       <g>
         <path d="M30 60 H310" stroke="var(--ink)" strokeWidth={2.2} />
-        <rect x={40} y={50} width={44} height={20} rx={4} fill="#fff" stroke={atti ? "var(--c2)" : "var(--ink)"} strokeWidth={2} />
+        <rect x={40} y={50} width={44} height={20} rx={4} fill="var(--surface)" stroke={atti ? "var(--c2)" : "var(--ink)"} strokeWidth={2} />
         <text x={62} y={64} fontSize={10.5} fontWeight={800} fill={atti ? "var(--c2)" : "var(--ink)"} textAnchor="middle">16 A</text>
         {CIHAZ.map((c, i) => {
           const x = 130 + i * 80, on = acik[i] && !atti;
           return (
             <g key={c.k}>
               <line x1={x} x2={x} y1={60} y2={92} stroke="var(--ink)" strokeWidth={2} />
-              <rect x={x - 32} y={92} width={64} height={40} rx={8} fill={on ? "var(--c4)" : "#fff"} opacity={on ? 0.9 : 1} stroke="var(--ink)" strokeWidth={2} />
+              <rect x={x - 32} y={92} width={64} height={40} rx={8} fill={on ? "var(--c4)" : "var(--surface)"} opacity={on ? 0.9 : 1} stroke="var(--ink)" strokeWidth={2} />
               <text x={x} y={110} fontSize={10.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">{c.ad}</text>
               <text x={x} y={124} fontSize={10.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">{c.P} W</text>
               <text x={x} y={148} fontSize={10.5} fontWeight={800} fill={acik[i] ? "var(--ink)" : "var(--muted)"} textAnchor="middle">{acik[i] ? `${say(c.P / 220)} A` : "kapalı"}</text>

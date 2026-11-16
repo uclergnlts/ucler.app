@@ -129,7 +129,7 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
                 <Link href={gorevYeri(g.id, konuHref)} className="-mx-1.5 flex items-center gap-3 rounded-xl px-1.5 py-0.5 transition-colors active:bg-secondary">
                 <span
                   className="grid size-10 flex-none place-items-center rounded-xl [&_svg]:size-5"
-                  style={{ background: tamam ? "var(--good)" : `color-mix(in srgb, ${renk} 14%, white)`, color: tamam ? "white" : renk }}
+                  style={{ background: tamam ? "var(--good)" : `color-mix(in srgb, ${renk} 14%, var(--surface))`, color: tamam ? "var(--on-btn)" : renk }}
                 >
                   {tamam ? <Check /> : <I />}
                 </span>
@@ -170,7 +170,7 @@ function Halka({ oran, className }: { oran: number; className?: string }) {
   const r = 18, c = 2 * Math.PI * r;
   return (
     <svg viewBox="0 0 44 44" className={cn("size-8 flex-none -rotate-90", className)} aria-hidden="true">
-      <circle cx="22" cy="22" r={r} fill="white" stroke="#cfe0fb" strokeWidth="6" />
+      <circle cx="22" cy="22" r={r} fill="var(--surface)" stroke="var(--line-2)" strokeWidth="6" />
       <motion.circle
         cx="22" cy="22" r={r} fill="none" stroke="var(--fizik)" strokeWidth="6" strokeLinecap="round"
         strokeDasharray={c}

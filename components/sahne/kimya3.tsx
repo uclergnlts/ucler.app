@@ -41,7 +41,7 @@ function Mendeleyev({ s, t, oynuyor }: SahneProps) {
           const ge = bos && bulundu;
           return (
             <g key={i}>
-              <rect x={x} y={52} width={52} height={74} rx={10} fill={ge ? "#e6f6ed" : "#fff"} stroke={bos ? (ge ? "var(--c3)" : "var(--kimya)") : "var(--line-2)"} strokeWidth={1.8} strokeDasharray={bos && !ge ? "5 4" : undefined} />
+              <rect x={x} y={52} width={52} height={74} rx={10} fill={ge ? "#e6f6ed" : "var(--surface)"} stroke={bos ? (ge ? "var(--c3)" : "var(--kimya)") : "var(--line-2)"} strokeWidth={1.8} strokeDasharray={bos && !ge ? "5 4" : undefined} />
               <text x={x + 26} y={90} fontSize={22} fontWeight={800} textAnchor="middle" fill={bos ? (ge ? "var(--c3)" : "var(--kimya)") : "var(--ink)"} fontFamily="var(--f-display)">{ge ? "Ge" : sb}</text>
               <text x={x + 26} y={113} fontSize={12} textAnchor="middle" fill="var(--muted)">{ge ? "72,6" : bos && u <= 0 ? "" : m}</text>
             </g>
@@ -98,14 +98,14 @@ function Tablo({ s, v, t, oynuyor }: SahneProps) {
           return (
             <g key={e.z}>
               <rect x={x + 1.5} y={yy + 1.5} width={CW - 3} height={CH - 3} rx={6}
-                fill={sec && mod !== "yaricap" ? "var(--kimya)" : boya ? BOLGE[b].renk : "#fff"}
+                fill={sec && mod !== "yaricap" ? "var(--kimya)" : boya ? BOLGE[b].renk : "var(--surface)"}
                 fillOpacity={sec && mod !== "yaricap" ? 1 : boya ? 0.22 * boya : 1}
                 stroke={sec ? "var(--kimya)" : "var(--line-2)"} strokeWidth={sec ? 2 : 1.2} />
               {mod === "yaricap" && r > 0 && (
                 <circle cx={x + CW / 2} cy={yy + CH / 2} r={2 + (r / 203) * 13.5} fill={sec ? "var(--kimya)" : "#fbd3de"} fillOpacity={sec ? 0.4 : 1} />
               )}
               <text x={x + CW / 2} y={yy + CH / 2 + 4.5} fontSize={12.5} fontWeight={700} textAnchor="middle"
-                fill={sec && mod !== "yaricap" ? "#fff" : "var(--ink)"}>{e.s}</text>
+                fill={sec && mod !== "yaricap" ? "var(--on-btn)" : "var(--ink)"}>{e.s}</text>
             </g>
           );
         })}
@@ -203,14 +203,14 @@ function Iyonik({ s, t, oynuyor }: SahneProps) {
         <Kabuk x={NX} y={CY} r={27} n={8} renk="var(--c1)" don={22} />
         {!iyon && <circle cx={NX} cy={CY} r={37} fill="none" stroke="var(--line-2)" strokeWidth={1.3} />}
         <circle cx={NX} cy={CY} r={10} fill="var(--c4)" />
-        <text x={NX} y={CY + 4} fontSize={11} fontWeight={800} textAnchor="middle" fill="#fff">Na</text>
+        <text x={NX} y={CY + 4} fontSize={11} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">Na</text>
       </g>
       <g>
         <Kabuk x={KX} y={CY} r={16} n={2} renk="var(--c1)" />
         <Kabuk x={KX} y={CY} r={25} n={8} renk="var(--c1)" don={22} />
         <Kabuk x={KX} y={CY} r={33} n={iyon ? 8 : 7} renk="var(--c1)" don={iyon ? 22 : 0} />
         <circle cx={KX} cy={CY} r={10} fill="var(--c3)" />
-        <text x={KX} y={CY + 4} fontSize={11} fontWeight={800} textAnchor="middle" fill="#fff">Cl</text>
+        <text x={KX} y={CY + 4} fontSize={11} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">Cl</text>
       </g>
       {!iyon && <circle cx={ex} cy={ey} r={4.2} fill="var(--kimya)" />}
       <g fontSize={13} fontWeight={700} textAnchor="middle">
@@ -273,11 +273,11 @@ function Polar({ v }: SahneProps) {
   return (
     <svg viewBox="0 0 340 224" role="img" aria-label={cl ? "H–Cl bağı: ortak çift klora kaymış" : "H–H bağı: ortak çift ortada"}>
       <g>
-        <circle cx={HX} cy={Y} r={17} fill="#fff" stroke="#8d9bb0" strokeWidth={1.6} />
+        <circle cx={HX} cy={Y} r={17} fill="var(--surface)" stroke="#8d9bb0" strokeWidth={1.6} />
         <text x={HX} y={Y + 5} fontSize={14} fontWeight={800} textAnchor="middle" fill="var(--ink)">H</text>
       </g>
       <g>
-        <circle cx={KX} cy={Y} r={cl ? 27 : 17} fill={cl ? "#e6f6ed" : "#fff"} stroke={cl ? "var(--c3)" : "#8d9bb0"} strokeWidth={1.6} style={{ transition: "r .5s" }} />
+        <circle cx={KX} cy={Y} r={cl ? 27 : 17} fill={cl ? "#e6f6ed" : "var(--surface)"} stroke={cl ? "var(--c3)" : "#8d9bb0"} strokeWidth={1.6} style={{ transition: "r .5s" }} />
         <text x={KX} y={Y + 5} fontSize={14} fontWeight={800} textAnchor="middle" fill="var(--ink)">{cl ? "Cl" : "H"}</text>
       </g>
       <g style={{ transform: `translateX(${kay}px)`, transition: "transform .6s ease" }}>
@@ -332,7 +332,7 @@ function Metal({ v }: SahneProps) {
           return (
             <g key={i}>
               <circle cx={x} cy={y} r={13} fill="var(--c4)" opacity={0.9} />
-              <text x={x} y={y + 5} fontSize={15} fontWeight={800} textAnchor="middle" fill="#fff">+</text>
+              <text x={x} y={y + 5} fontSize={15} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">+</text>
             </g>
           );
         })}
@@ -364,7 +364,7 @@ function Kap({ x, ad, kutle, kn, T }: { x: number; ad: string; kutle: string; kn
     <g>
       <text x={x} y={46} fontSize={17} fontWeight={800} textAnchor="middle" fill="var(--ink)">{ad}</text>
       {sev > 0 && <rect x={x - w / 2 + 2} y={sY} width={w - 4} height={y1 - sY - 2} fill={SU} />}
-      {kayn && sev > 0 && [0, 1, 2].map((i) => <circle key={i} cx={x - 18 + i * 18} cy={y1 - 12 - ((T * 3 + i * 9) % 30)} r={3} fill="#fff" stroke="var(--c1)" />)}
+      {kayn && sev > 0 && [0, 1, 2].map((i) => <circle key={i} cx={x - 18 + i * 18} cy={y1 - 12 - ((T * 3 + i * 9) % 30)} r={3} fill="var(--surface)" stroke="var(--c1)" />)}
       {kayn && [0, 1, 2, 3].map((i) => <circle key={i} cx={x - 24 + i * 16} cy={sY - 8 - ((T * 2 + i * 13) % Math.max(8, sY - y0 - 14))} r={2.6} fill="var(--c1)" opacity={0.5} />)}
       <path d={`M${x - w / 2} ${y0} L${x - w / 2} ${y1} L${x + w / 2} ${y1} L${x + w / 2} ${y0}`} fill="none" stroke="var(--ink)" strokeWidth={2} />
       <text x={x} y={172} fontSize={12} textAnchor="middle" fill="var(--muted)">{kutle}</text>
@@ -417,7 +417,7 @@ function Kaynatma({ s, t, oynuyor }: SahneProps) {
         {yerler.map(([x, y], i) => (
           <g key={i}>
             {hler[i].map(([hx, hy], j) => <line key={j} x1={x} y1={y} x2={hx} y2={hy} stroke="var(--ink)" strokeWidth={2} />)}
-            {hler[i].map(([hx, hy], j) => <circle key={`h${j}`} cx={hx} cy={hy} r={4.6} fill="#fff" stroke="#8d9bb0" strokeWidth={1.3} />)}
+            {hler[i].map(([hx, hy], j) => <circle key={`h${j}`} cx={hx} cy={hy} r={4.6} fill="var(--surface)" stroke="#8d9bb0" strokeWidth={1.3} />)}
             <circle cx={x} cy={y} r={8} fill="var(--c2)" />
           </g>
         ))}

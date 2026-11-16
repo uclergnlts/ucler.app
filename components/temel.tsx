@@ -97,7 +97,7 @@ export const Bolum = ({ title, more, children, id }: { title?: string; more?: Re
   <section className="grid gap-2.5" id={id}>
     {title && (
       <div className="flex items-baseline justify-between">
-        <h2 className="text-[17px]">{title}</h2>
+        <h2 className="font-sans text-[11px] font-bold tracking-[.14em] text-muted-foreground uppercase">{title}</h2>
         {more}
       </div>
     )}
@@ -117,7 +117,7 @@ export const Bos = ({ children }: { children: React.ReactNode }) => (
 /** Satırın solundaki küçük simge kutusu; dersin rengini alır. */
 export const Simge = ({ children, soluk, className, renk }: { children: React.ReactNode; soluk?: boolean; className?: string; renk?: string }) => (
   <span
-    style={renk && !soluk ? { color: renk, backgroundColor: `color-mix(in srgb, ${renk} 13%, white)` } : undefined}
+    style={renk && !soluk ? { color: renk, backgroundColor: `color-mix(in srgb, ${renk} 14%, var(--surface))` } : undefined}
     className={cn(
       "grid size-10 flex-none place-items-center rounded-xl [&_svg]:size-5",
       soluk ? "bg-secondary text-muted-foreground" : "bg-acc-soft text-acc",

@@ -253,7 +253,7 @@ function Azot({ s, t, oynuyor }: SahneProps) {
       {AZOT.map((n, i) =>
         gorunur(i) ? (
           <g key={i} className={i > 0 && i < 4 ? "ad-belir" : undefined}>
-            <rect x={n.x - n.w / 2} y={n.y - 13} width={n.w} height={26} rx={8} fill="#fff" stroke={i === 4 ? YESIL : "var(--ink)"} strokeWidth={1.5} />
+            <rect x={n.x - n.w / 2} y={n.y - 13} width={n.w} height={26} rx={8} fill="var(--surface)" stroke={i === 4 ? YESIL : "var(--ink)"} strokeWidth={1.5} />
             <text x={n.x} y={n.y + 4.5} fontSize={11.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">{n.ad}</text>
           </g>
         ) : null,
@@ -296,7 +296,7 @@ function Gol({ s, t, oynuyor }: SahneProps) {
           <g key={k} transform={`translate(${x} ${olu ? YU + 10 : y}) rotate(${olu ? 180 : 0})`} fill={olu ? "#b9c2cc" : "#5f95cf"}>
             <ellipse cx={0} cy={0} rx={14} ry={7} />
             <path d="M12 0 L22 -7 L22 7 Z" />
-            <circle cx={-7} cy={-2} r={1.6} fill="#fff" />
+            <circle cx={-7} cy={-2} r={1.6} fill="var(--surface)" />
           </g>
         );
       })}
@@ -424,7 +424,7 @@ function Floem({ s, t, oynuyor }: SahneProps) {
         </g>
       )}
       <path d={`M${GX - 16} ${ALT + 4} Q${GX} ${ALT + 60} ${GX + 16} ${ALT + 4} Z`} fill="#e59a4b" />
-      {basladi && !bitti && <g fill="var(--c4)">{noktalar.map((y, k) => <circle key={k} cx={GX + (k % 2 ? 3 : -3)} cy={y} r={3.4} stroke="#fff" strokeWidth={1} />)}</g>}
+      {basladi && !bitti && <g fill="var(--c4)">{noktalar.map((y, k) => <circle key={k} cx={GX + (k % 2 ? 3 : -3)} cy={y} r={3.4} stroke="var(--surface)" strokeWidth={1} />)}</g>}
       {bitti && (
         <g className="ad-belir">
           {bahar ? <Ok x1={GX + 30} y1={ALT} x2={GX + 30} y2={UST + 30} renk="var(--c4)" /> : <Ok x1={GX - 26} y1={UST + 70} x2={GX - 26} y2={ALT - 12} renk="var(--c4)" />}
@@ -554,7 +554,7 @@ function Foto({ s, t, oynuyor }: SahneProps) {
           const tx = 2 * q * (P1x - GX) + 2 * p * (ux - P1x), ty = 2 * q * (P1y - ALT) + 2 * p * (uy - P1y);
           const L = Math.hypot(tx, ty) || 1, kay = ara(k % 2 ? -3 : 3, 5, top);
           const x = bx + (ty / L) * kay, y = by - (tx / L) * kay;
-          return <circle key={k} cx={x} cy={y} r={2.8} stroke="#fff" strokeWidth={0.8} />;
+          return <circle key={k} cx={x} cy={y} r={2.8} stroke="var(--surface)" strokeWidth={0.8} />;
         })}
       </g>
       <g fontSize={11} fontWeight={700}>

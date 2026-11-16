@@ -15,7 +15,7 @@ function Termometre({ x, ust, boy, deger, min, max }: { x: number; ust: number; 
   const h = kes((deger - min) / (max - min)) * boy;
   return (
     <g>
-      <rect x={x - 5} y={ust} width={10} height={boy + 6} rx={5} fill="#fff" stroke="var(--ink)" strokeWidth={1.5} />
+      <rect x={x - 5} y={ust} width={10} height={boy + 6} rx={5} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.5} />
       <rect x={x - 2.5} y={ust + boy - h + 3} width={5} height={Math.max(0, h)} fill="var(--c2)" />
       <circle cx={x} cy={ust + boy + 12} r={9} fill="var(--c2)" stroke="var(--ink)" strokeWidth={1.5} />
     </g>
@@ -35,13 +35,13 @@ function Cozunme({ v }: SahneProps) {
         {tuz
           ? yer.map((p, i) =>
               i % 2 ? (
-                <g key={i}><circle cx={p.x} cy={p.y} r={6.5} fill="var(--c3)" /><text x={p.x} y={p.y + 3.5} fontSize={11} fontWeight={800} textAnchor="middle" fill="#fff">−</text></g>
+                <g key={i}><circle cx={p.x} cy={p.y} r={6.5} fill="var(--c3)" /><text x={p.x} y={p.y + 3.5} fontSize={11} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">−</text></g>
               ) : (
-                <g key={i}><circle cx={p.x} cy={p.y} r={4.6} fill="var(--c5)" /><text x={p.x} y={p.y + 3} fontSize={8.5} fontWeight={800} textAnchor="middle" fill="#fff">+</text></g>
+                <g key={i}><circle cx={p.x} cy={p.y} r={4.6} fill="var(--c5)" /><text x={p.x} y={p.y + 3} fontSize={8.5} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">+</text></g>
               ),
             )
           : yer.slice(0, 7).map((p, i) => (
-              <polygon key={i} points={Array.from({ length: 6 }, (_, k) => `${(p.x + 7 * Math.cos((k * Math.PI) / 3)).toFixed(1)},${(p.y + 7 * Math.sin((k * Math.PI) / 3)).toFixed(1)}`).join(" ")} fill="#fff" stroke="#9aa8ba" strokeWidth={1.5} />
+              <polygon key={i} points={Array.from({ length: 6 }, (_, k) => `${(p.x + 7 * Math.cos((k * Math.PI) / 3)).toFixed(1)},${(p.y + 7 * Math.sin((k * Math.PI) / 3)).toFixed(1)}`).join(" ")} fill="var(--surface)" stroke="#9aa8ba" strokeWidth={1.5} />
             ))}
       </g>
       <path d="M62 64 L62 200 L198 200 L198 64" fill="none" stroke="var(--ink)" strokeWidth={2} />
@@ -55,7 +55,7 @@ function Cozunme({ v }: SahneProps) {
           const a = (-150 + k * 24) * (Math.PI / 180);
           return <line key={k} x1={130 + 16 * Math.cos(a)} y1={22 + 16 * Math.sin(a)} x2={130 + 24 * Math.cos(a)} y2={22 + 24 * Math.sin(a)} stroke="var(--c4)" strokeWidth={2} strokeLinecap="round" />;
         })}
-        <circle cx={130} cy={24} r={12} fill={tuz ? "#ffd75a" : "#fff"} stroke="var(--ink)" strokeWidth={2} />
+        <circle cx={130} cy={24} r={12} fill={tuz ? "#ffd75a" : "var(--surface)"} stroke="var(--ink)" strokeWidth={2} />
       </g>
       <g fontSize={12} fontWeight={700}>
         <text x={214} y={84} fill="var(--ink)" fontSize={13} fontWeight={800}>{tuz ? "Tuzlu su" : "Şekerli su"}</text>
@@ -244,10 +244,10 @@ function Gazoz({ v }: SahneProps) {
   const r = rastgele(3);
   return (
     <svg viewBox="0 0 340 222" role="img" aria-label={`Kapak ${acik ? "açık" : "kapalı"}, ${T} °C: çözünmüş CO₂ ${Math.round(coz * 100)}`}>
-      <path d="M78 206 L78 104 Q78 84 96 74 L102 70 L102 44 L128 44 L128 70 L134 74 Q152 84 152 104 L152 206 Z" fill="#fff" stroke="none" />
+      <path d="M78 206 L78 104 Q78 84 96 74 L102 70 L102 44 L128 44 L128 70 L134 74 Q152 84 152 104 L152 206 Z" fill="var(--surface)" stroke="none" />
       <rect x={80} y={96} width={70} height={108} fill="#efe3c8" />
       <g>
-        {Array.from({ length: kab }, (_, i) => <circle key={i} cx={86 + r() * 58} cy={100 + r() * 100} r={2 + r() * 2.5} fill="#fff" stroke="#b8a77f" strokeWidth={1} />)}
+        {Array.from({ length: kab }, (_, i) => <circle key={i} cx={86 + r() * 58} cy={100 + r() * 100} r={2 + r() * 2.5} fill="var(--surface)" stroke="#b8a77f" strokeWidth={1} />)}
       </g>
       <path d="M78 206 L78 104 Q78 84 96 74 L102 70 L102 44 L128 44 L128 70 L134 74 Q152 84 152 104 L152 206 Z" fill="none" stroke="var(--ink)" strokeWidth={2} strokeLinejoin="round" />
       {acik ? (
@@ -287,7 +287,7 @@ function Kap({ s, t, oynuyor }: SahneProps) {
     <svg viewBox="0 0 340 220" role="img" aria-label={`Amonyum nitrat suda çözünüyor, sıcaklık ${virgul(T)} °C`}>
       <rect x={100} y={96} width={120} height={104} fill={SU} />
       <g>
-        {Array.from({ length: Math.round(12 * (1 - u)) }, (_, i) => <rect key={i} x={110 + r() * 96} y={186 - r() * 10} width={6} height={6} fill="#fff" stroke="#9aa8ba" />)}
+        {Array.from({ length: Math.round(12 * (1 - u)) }, (_, i) => <rect key={i} x={110 + r() * 96} y={186 - r() * 10} width={6} height={6} fill="var(--surface)" stroke="#9aa8ba" />)}
       </g>
       <path d="M100 70 L100 200 L220 200 L220 70" fill="none" stroke="var(--ink)" strokeWidth={2} />
       <Termometre x={190} ust={40} boy={120} deger={T} min={0} max={40} />
@@ -474,8 +474,8 @@ function Bag({ s, t, oynuyor }: SahneProps) {
         <g fontSize={10.5} fontWeight={800} textAnchor="middle">
           <text x={h1x} y={h1y + 4} fill="var(--ink)">H</text>
           <text x={h2x} y={h2y + 4} fill="var(--ink)">H</text>
-          <text x={c1x} y={c1y + 4} fill="#fff">Cl</text>
-          <text x={c2x} y={c2y + 4} fill="#fff">Cl</text>
+          <text x={c1x} y={c1y + 4} fill="var(--on-btn)">Cl</text>
+          <text x={c2x} y={c2y + 4} fill="var(--on-btn)">Cl</text>
         </g>
       </g>
       <g fontSize={11} fontWeight={700} fill="var(--muted)">
@@ -508,7 +508,7 @@ function Kalorimetre({ v }: SahneProps) {
       <path d="M54 72 L54 194 L166 194 L166 72" fill="none" stroke="var(--ink)" strokeWidth={2} />
       <rect x={34} y={58} width={152} height={12} rx={4} fill="var(--ink)" />
       <rect x={82} y={150} width={50} height={30} rx={4} fill="var(--kimya)" opacity={0.8} />
-      <text x={107} y={169} fontSize={10} fontWeight={800} textAnchor="middle" fill="#fff">tepkime</text>
+      <text x={107} y={169} fontSize={10} fontWeight={800} textAnchor="middle" fill="var(--on-btn)">tepkime</text>
       <Termometre x={146} ust={24} boy={130} deger={T} min={10} max={50} />
       <g fontSize={12} fontWeight={700}>
         <text x={200} y={56} fill="var(--muted)">q = <tspan fill="var(--kimya)">8,36 kJ</tspan></text>

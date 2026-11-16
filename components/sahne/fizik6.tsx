@@ -62,7 +62,7 @@ function Kaldirac({ v, s }: SahneProps) {
       <g transform={`rotate(${aci} ${cx} ${cy})`}>
         <rect x={cx - 140} y={cy - 4} width={280} height={8} rx={4} fill="var(--c1)" />
         <rect x={xY - 18} y={cy - 40} width={36} height={36} rx={4} fill="var(--c4)" />
-        <text x={xY} y={cy - 17} fontSize={11.5} fontWeight={800} fill="#fff" textAnchor="middle">{Y} N</text>
+        <text x={xY} y={cy - 17} fontSize={11.5} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">{Y} N</text>
         <Ok x1={xF} y1={cy - 58} x2={xF} y2={cy - 6} renk="var(--c2)" />
         <text x={xF} y={cy - 64} fontSize={12} fontWeight={800} fill="var(--c2)" textAnchor="middle">F = {F} N</text>
       </g>
@@ -101,7 +101,7 @@ function Turler() {
               h === "D" ? (
                 <g key={h}><Destek x={xs[j]} y={y + 3} s={0.8} /><text x={xs[j]} y={y + 36} fontSize={11.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">D</text></g>
               ) : h === "Y" ? (
-                <g key={h}><rect x={xs[j] - 12} y={y - 28} width={24} height={24} rx={3} fill="var(--c4)" /><text x={xs[j]} y={y - 11} fontSize={11.5} fontWeight={800} fill="#fff" textAnchor="middle">Y</text></g>
+                <g key={h}><rect x={xs[j] - 12} y={y - 28} width={24} height={24} rx={3} fill="var(--c4)" /><text x={xs[j]} y={y - 11} fontSize={11.5} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">Y</text></g>
               ) : (
                 "asagi" in k ? (
                   <g key={h}><Ok x1={xs[j]} y1={y - 30} x2={xs[j]} y2={y - 6} renk="var(--c2)" kalin={2.5} /><text x={xs[j] + 10} y={y - 18} fontSize={11.5} fontWeight={800} fill="var(--c2)">F</text></g>
@@ -134,7 +134,7 @@ function Makara({ v, s }: SahneProps) {
           <line x1={108} x2={108} y1={sabitY} y2={hareketliY + 8} stroke="var(--c1)" strokeWidth={3} />
           <line x1={152} x2={152} y1={sabitY} y2={176} stroke="var(--ink)" strokeWidth={2} />
           <rect x={88} y={hareketliY + 8} width={40} height={36} rx={4} fill="var(--c4)" />
-          <text x={108} y={hareketliY + 31} fontSize={11.5} fontWeight={800} fill="#fff" textAnchor="middle">400 N</text>
+          <text x={108} y={hareketliY + 31} fontSize={11.5} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">400 N</text>
         </g>
       ) : (
         <g>
@@ -144,10 +144,10 @@ function Makara({ v, s }: SahneProps) {
             <line key={i} x1={kolX(i)} x2={kolX(i)} y1={sabitY} y2={hareketliY} stroke="var(--c1)" strokeWidth={3} />
           ))}
           <line x1={cekX} x2={cekX} y1={sabitY} y2={176} stroke="var(--ink)" strokeWidth={2} />
-          <rect x={kolX(0) - 10} y={hareketliY - 14} width={(n - 1) * 22 + 20} height={28} rx={12} fill="#fff" stroke="var(--fizik)" strokeWidth={2.5} />
+          <rect x={kolX(0) - 10} y={hareketliY - 14} width={(n - 1) * 22 + 20} height={28} rx={12} fill="var(--surface)" stroke="var(--fizik)" strokeWidth={2.5} />
           <line x1={kolX(0) + ((n - 1) * 22) / 2} x2={kolX(0) + ((n - 1) * 22) / 2} y1={hareketliY + 14} y2={hareketliY + 24} stroke="var(--ink)" strokeWidth={2} />
           <rect x={kolX(0) + ((n - 1) * 22) / 2 - 20} y={hareketliY + 24} width={40} height={36} rx={4} fill="var(--c4)" />
-          <text x={kolX(0) + ((n - 1) * 22) / 2} y={hareketliY + 47} fontSize={11.5} fontWeight={800} fill="#fff" textAnchor="middle">400 N</text>
+          <text x={kolX(0) + ((n - 1) * 22) / 2} y={hareketliY + 47} fontSize={11.5} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">400 N</text>
         </g>
       )}
       <Ok x1={cekX} y1={176} x2={cekX} y2={176 + 12 + F / 10} renk="var(--c2)" />
@@ -206,7 +206,7 @@ function Disli({ x, y, r, z, aci, renk }: { x: number; y: number; r: number; z: 
   return (
     <g transform={`translate(${x} ${y}) rotate(${aci})`}>
       <polygon points={d} fill={renk} />
-      <circle r={r * 0.55} fill="#fff" />
+      <circle r={r * 0.55} fill="var(--surface)" />
       <line x1={0} y1={0} x2={r * 0.55} y2={0} stroke="var(--ink)" strokeWidth={3} strokeLinecap="round" />
       <circle r={4} fill="var(--ink)" />
     </g>
@@ -329,9 +329,9 @@ function Carpisma({ v, t, oynuyor, s }: SahneProps) {
       <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{c.esnek ? "Esnek çarpışma" : "Çarpışınca yapışırlar"}</text>
       <line x1={4} x2={336} y1={yol + 1} y2={yol + 1} stroke="var(--ink)" strokeWidth={1.5} />
       <rect x={xAk} y={yol - 30} width={wA} height={30} rx={5} fill="var(--c1)" />
-      <text x={xAk + wA / 2} y={yol - 11} fontSize={11.5} fontWeight={800} fill="#fff" textAnchor="middle">A</text>
+      <text x={xAk + wA / 2} y={yol - 11} fontSize={11.5} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">A</text>
       <rect x={xBk} y={yol - 30} width={wB} height={30} rx={5} fill="var(--c2)" />
-      <text x={xBk + wB / 2} y={yol - 11} fontSize={11.5} fontWeight={800} fill="#fff" textAnchor="middle">B</text>
+      <text x={xBk + wB / 2} y={yol - 11} fontSize={11.5} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">B</text>
       {okA(xAk, wA, vA, "var(--c1)")}
       {okA(xBk, wB, vB, "var(--c2)")}
       <g fontSize={12} fontWeight={700}>

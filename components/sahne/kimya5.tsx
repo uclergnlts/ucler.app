@@ -14,8 +14,8 @@ const SU = "#d6e8fb";
 
 const ATOM: Record<string, { f: string; s: string; r: number; y: string }> = {
   H: { f: "#eef2f7", s: "#9aa8ba", r: 9, y: "var(--ink)" },
-  O: { f: "var(--c2)", s: "#fff", r: 11, y: "#fff" },
-  C: { f: "#3b4656", s: "#fff", r: 11, y: "#fff" },
+  O: { f: "var(--c2)", s: "var(--surface)", r: 11, y: "var(--on-btn)" },
+  C: { f: "#3b4656", s: "var(--surface)", r: 11, y: "var(--on-btn)" },
 };
 
 // Her molekülün atomları: [element, dx, dy]. Ortadaki atom en son çizilir, üstte kalır.
@@ -61,19 +61,19 @@ function Magnezyum({ s, t, oynuyor }: SahneProps) {
       </text>
       <g>
         <rect x={70} y={160} width={200} height={10} rx={4} fill="#cfd8e3" />
-        <rect x={84} y={170} width={172} height={36} rx={8} fill="#e6ebf2" />
-        <rect x={124} y={177} width={92} height={22} rx={5} fill="#fff" stroke="var(--line-2)" />
+        <rect x={84} y={170} width={172} height={36} rx={8} fill="var(--panel)" />
+        <rect x={124} y={177} width={92} height={22} rx={5} fill="var(--surface)" stroke="var(--line-2)" />
         <text x={170} y={193} fontSize={15} fontWeight={800} textAnchor="middle" fill={yan > 0.99 ? "var(--kimya)" : "var(--ink)"}>
           {m.toFixed(2).replace(".", ",")} g
         </text>
       </g>
-      <path d="M96 160 L110 126 L230 126 L244 160 Z" fill="#fff" stroke="var(--ink)" strokeWidth={1.6} strokeLinejoin="round" />
+      <path d="M96 160 L110 126 L230 126 L244 160 Z" fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} strokeLinejoin="round" />
       {yan > 0.02 && <path d={`M${150 - 40 * yan} 126 Q150 ${126 - 40 * yan} ${150 + 40 * yan} 126 Z`} fill="#f6f8fb" stroke="#9aa8ba" strokeWidth={1.5} />}
       {yan < 0.99 && <rect x={uc} y={112} width={Math.max(0, 220 - uc)} height={8} rx={3} fill="#9aa8ba" />}
       {alev && (
         <g>
           <ellipse cx={uc} cy={96} rx={22} ry={28} fill="#fff6d6" />
-          <ellipse cx={uc} cy={102} rx={11} ry={15} fill="#fff" stroke="var(--c4)" strokeWidth={1.8} />
+          <ellipse cx={uc} cy={102} rx={11} ry={15} fill="var(--surface)" stroke="var(--c4)" strokeWidth={1.8} />
         </g>
       )}
       {alev && [0, 1, 2].map((i) => {
@@ -154,7 +154,7 @@ function Grafik({ v }: SahneProps) {
       <g>
         <line x1={px} x2={px} y1={py} y2={y1} stroke="var(--muted)" strokeDasharray="4 3" />
         <line x1={x0} x2={px} y1={py} y2={py} stroke="var(--muted)" strokeDasharray="4 3" />
-        <circle cx={px} cy={py} r={7} fill="#fff" stroke="var(--kimya)" strokeWidth={3} />
+        <circle cx={px} cy={py} r={7} fill="var(--surface)" stroke="var(--kimya)" strokeWidth={3} />
       </g>
     </svg>
   );
@@ -170,11 +170,11 @@ function Katli({ v }: SahneProps) {
       {acik ? <Molekul m={m} x={50} y={y + 9} /> : <text x={50} y={y + 14} fontSize={16} fontWeight={800} textAnchor="middle" fill="var(--muted)">?</text>}
       <text x={X} y={y - 8} fontSize={12.5} fontWeight={800} fill="var(--ink)">{ad}</text>
       <rect x={X} y={y} width={12 * PX} height={18} rx={4} fill="#3b4656" />
-      <text x={X + 6 * PX} y={y + 13} fontSize={11} fontWeight={700} textAnchor="middle" fill="#fff">C 12 g</text>
+      <text x={X + 6 * PX} y={y + 13} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--on-btn)">C 12 g</text>
       {acik ? (
         <g>
           <rect x={X + 12 * PX + 2} y={y} width={o * PX} height={18} rx={4} fill="var(--c2)" />
-          <text x={X + 12 * PX + 2 + (o * PX) / 2} y={y + 13} fontSize={11} fontWeight={700} textAnchor="middle" fill="#fff">O {o} g</text>
+          <text x={X + 12 * PX + 2 + (o * PX) / 2} y={y + 13} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--on-btn)">O {o} g</text>
         </g>
       ) : (
         <rect x={X + 12 * PX + 2} y={y} width={o * PX} height={18} rx={4} fill="none" stroke="var(--line-2)" strokeDasharray="4 3" />
@@ -424,7 +424,7 @@ function Hap({ x, y, ad, renk, w = 38 }: { x: number; y: number; ad: string; ren
   return (
     <g>
       <rect x={x} y={y - 10} width={w} height={20} rx={10} fill={renk} />
-      <text x={x + w / 2} y={y + 4} fontSize={11} fontWeight={700} textAnchor="middle" fill="#fff">{ad}</text>
+      <text x={x + w / 2} y={y + 4} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--on-btn)">{ad}</text>
     </g>
   );
 }
@@ -441,7 +441,7 @@ function Cokelme({ s, t, oynuyor }: SahneProps) {
         <text x={236} y={34} fill={u > 0 ? "var(--muted)" : "var(--ink)"}>NaCl(suda)</text>
       </g>
       <rect x={42} y={54} width={256} height={142} fill={SU} />
-      {cok > 0 && <rect x={42} y={54} width={256} height={142} fill="#fff" opacity={0.35 * cok} />}
+      {cok > 0 && <rect x={42} y={54} width={256} height={142} fill="var(--surface)" opacity={0.35 * cok} />}
       <path d="M40 44 L40 198 L300 198 L300 44" fill="none" stroke="var(--ink)" strokeWidth={2.2} strokeLinejoin="round" />
       {bolme < 1 && <rect x={168} y={50 - 120 * bolme} width={4} height={148} fill="var(--ink)" opacity={1 - bolme} />}
       <g>
@@ -453,7 +453,7 @@ function Cokelme({ s, t, oynuyor }: SahneProps) {
         })}
         {cok > 0 && [62, 132, 202].map((x) => (
           <g key={x} opacity={cok}>
-            <rect x={x - 6} y={162} width={58} height={20} rx={10} fill="#fff" stroke="#9aa8ba" strokeWidth={1.4} />
+            <rect x={x - 6} y={162} width={58} height={20} rx={10} fill="var(--surface)" stroke="#9aa8ba" strokeWidth={1.4} />
             <text x={x + 23} y={176} fontSize={11} fontWeight={800} textAnchor="middle" fill="var(--ink)">AgCl(k)</text>
           </g>
         ))}
@@ -485,7 +485,7 @@ function Analiz() {
       <text x={150} y={110} fontSize={20} fontWeight={800} textAnchor="middle" fill="var(--muted)">→</text>
       <text x={150} y={132} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--c4)">ısı</text>
       <g>
-        <path d="M194 116 Q196 96 216 94 Q238 92 244 108 Q248 122 230 126 Q204 130 194 116 Z" fill="#fff" stroke="#b8c2cf" strokeWidth={1.6} />
+        <path d="M194 116 Q196 96 216 94 Q238 92 244 108 Q248 122 230 126 Q204 130 194 116 Z" fill="var(--surface)" stroke="#b8c2cf" strokeWidth={1.6} />
         <text x={220} y={150} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">sönmemiş kireç</text>
       </g>
       <g>

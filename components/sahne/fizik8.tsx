@@ -42,8 +42,8 @@ function Cekim({ v }: SahneProps) {
       <line x1={AX} x2={BX} y1={Y} y2={Y} stroke="var(--line-2)" strokeWidth={1.5} strokeDasharray="4 5" />
       <circle cx={AX} cy={Y} r={14} fill="var(--c1)" />
       <circle cx={BX} cy={Y} r={rB} fill="var(--c5)" />
-      <text x={AX} y={Y + 4} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">A</text>
-      <text x={BX} y={Y + 4} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">B</text>
+      <text x={AX} y={Y + 4} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">A</text>
+      <text x={BX} y={Y + 4} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">B</text>
       <Ok x1={AX} y1={Y - 30} x2={AX + ok} y2={Y - 30} renk="var(--c2)" />
       <Ok x1={BX} y1={Y - 34 - rB + 14} x2={BX - ok} y2={Y - 34 - rB + 14} renk="var(--c2)" />
       <g fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">
@@ -97,7 +97,7 @@ function Yukseklik({ v }: SahneProps) {
         <path key={k} d={`M${CX} ${CY - k * R} A${k * R} ${k * R} 0 0 1 ${CX + k * R} ${CY}`} fill="none" stroke="var(--line)" strokeWidth={1.2} strokeDasharray="3 5" />
       ))}
       <circle cx={CX} cy={CY} r={R} fill="var(--c1)" opacity={0.85} />
-      <text x={CX} y={CY + 20} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">Dünya</text>
+      <text x={CX} y={CY + 20} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">Dünya</text>
       <line x1={CX} y1={CY} x2={ax} y2={CY} stroke="var(--muted)" strokeWidth={1.2} strokeDasharray="4 4" />
       <g>
         <circle cx={ax} cy={CY - 22} r={7} fill="var(--c4)" />
@@ -234,7 +234,7 @@ function Yuk({ x, y, art, r = 7 }: { x: number; y: number; art: boolean; r?: num
   return (
     <g>
       <circle cx={x} cy={y} r={r} fill={art ? "var(--c2)" : "var(--c1)"} />
-      <text x={x} y={y + 4} fontSize={r * 1.6} fontWeight={800} fill="#fff" textAnchor="middle">{art ? "+" : "−"}</text>
+      <text x={x} y={y + 4} fontSize={r * 1.6} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">{art ? "+" : "−"}</text>
     </g>
   );
 }
@@ -276,8 +276,8 @@ function Dokunma({ v, t, oynuyor, s }: SahneProps) {
     <svg viewBox="0 0 340 236" role="img" aria-label={`A ${say(pay ? qA : Q)} μC, B ${say(pay ? qB : 0)} μC`}>
       <circle cx={AX} cy={Y} r={rA} fill="var(--c2)" opacity={pay ? 0.35 + 0.4 * (qA / Q) : 0.75} />
       <circle cx={BX} cy={Y} r={rB} fill={pay ? "var(--c2)" : "var(--line)"} opacity={pay ? 0.35 + 0.4 * (qB / Q) : 1} />
-      <text x={AX} y={Y + 4} fontSize={12} fontWeight={800} fill="#fff" textAnchor="middle">A</text>
-      <text x={BX} y={Y + 4} fontSize={12} fontWeight={800} fill={pay ? "#fff" : "var(--muted)"} textAnchor="middle">B</text>
+      <text x={AX} y={Y + 4} fontSize={12} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">A</text>
+      <text x={BX} y={Y + 4} fontSize={12} fontWeight={800} fill={pay ? "var(--on-btn)" : "var(--muted)"} textAnchor="middle">B</text>
       <g fontSize={12.5} fontWeight={800} textAnchor="middle">
         <text x={AX} y={Y - rA - 12} fill="var(--c2)">{say(pay ? qA : Q)} μC</text>
         <text x={BX} y={Y - rB - 12} fill={pay ? "var(--c2)" : "var(--muted)"}>{say(pay ? qB : 0)} μC</text>
@@ -331,7 +331,7 @@ function Etki({ t, oynuyor, s, secim }: SahneProps) {
       )}
       <g opacity={toprak && u > 0.55 ? yak : 1}>
         <rect x={rodX - 70} y={CY - 9} width={70} height={18} rx={9} fill="var(--c1)" opacity={0.85} />
-        {[0, 1, 2].map((i) => <text key={i} x={rodX - 56 + i * 20} y={CY + 5} fontSize={14} fontWeight={800} fill="#fff" textAnchor="middle">−</text>)}
+        {[0, 1, 2].map((i) => <text key={i} x={rodX - 56 + i * 20} y={CY + 5} fontSize={14} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">−</text>)}
       </g>
       <g fontSize={12.5} fontWeight={800}>
         <text x={14} y={22} fill="var(--ink)">
@@ -361,7 +361,7 @@ function Elektroskop({ v }: SahneProps) {
       <line x1={TX} y1={AY} x2={sag.x} y2={sag.y} stroke="var(--c4)" strokeWidth={5} strokeLinecap="round" />
       <g>
         <rect x={TX - 9} y={TY - 22 - d * 4.6 - 80} width={18} height={80} rx={9} fill="var(--c2)" opacity={0.85} />
-        {[0, 1, 2].map((i) => <text key={i} x={TX} y={TY - 22 - d * 4.6 - 58 + i * 22} fontSize={14} fontWeight={800} fill="#fff" textAnchor="middle">+</text>)}
+        {[0, 1, 2].map((i) => <text key={i} x={TX} y={TY - 22 - d * 4.6 - 58 + i * 22} fontSize={14} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">+</text>)}
       </g>
       {aci > 4 && (
         <g fontSize={12} fontWeight={800} fill="var(--c2)" textAnchor="middle">
@@ -467,7 +467,7 @@ function Alan({ v }: SahneProps) {
       </g>
       <Yuk x={YA.x} y={YA.y} art r={12} />
       <Yuk x={YB.x} y={YB.y} art={!eksi} r={12} />
-      <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)" stroke="#fff" strokeWidth={4} strokeLinejoin="round" paintOrder="stroke">
+      <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)" stroke="var(--surface)" strokeWidth={4} strokeLinejoin="round" paintOrder="stroke">
         {eksi ? "zıt yükler: çizgiler birbirine bağlanır" : "aynı işaretli yükler: çizgiler ayrılır"}
       </text>
     </svg>

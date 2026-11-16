@@ -426,7 +426,7 @@ export default function Lesson({
             return (
               <li key={j} className="flex items-start gap-3 px-3.5 py-3">
                 <span
-                  className={cn("mt-0.5 grid size-6 flex-none place-items-center rounded-full text-white [&_svg]:size-3.5 [&_svg]:stroke-[3]", ok ? "bg-good" : "bg-bad")}
+                  className={cn("mt-0.5 grid size-6 flex-none place-items-center rounded-full text-[var(--on-btn)] [&_svg]:size-3.5 [&_svg]:stroke-[3]", ok ? "bg-good" : "bg-bad")}
                   role="img"
                   aria-label={ok ? "Doğru" : "Yanlış"}
                 >
@@ -583,8 +583,8 @@ function AsamaCubugu({ dolu }: { dolu: number[] }) {
   return (
     <div className="flex gap-1" role="progressbar" aria-label="Konu ilerlemesi" aria-valuenow={Math.round((100 * toplam) / dolu.length)} aria-valuemin={0} aria-valuemax={100}>
       {dolu.map((v, k) => (
-        <div key={k} className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-secondary">
-          <motion.div className="h-full rounded-full bg-acc" initial={false} animate={{ width: `${Math.max(0, Math.min(1, v)) * 100}%` }} transition={{ type: "spring", stiffness: 260, damping: 32 }} />
+        <div key={k} className="relative h-[3px] flex-1 overflow-hidden bg-border-strong">
+          <motion.div className="h-full bg-foreground" initial={false} animate={{ width: `${Math.max(0, Math.min(1, v)) * 100}%` }} transition={{ type: "spring", stiffness: 260, damping: 32 }} />
         </div>
       ))}
     </div>

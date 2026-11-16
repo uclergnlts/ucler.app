@@ -76,7 +76,7 @@ function Kristal({ v, t, oynuyor, s }: SahneProps) {
       {!p && (
         <g>
           <circle cx={ex} cy={ey} r={5.5} fill="var(--c1)" />
-          <text x={ex} y={ey + 3} fontSize={9} fontWeight={800} fill="#fff" textAnchor="middle">−</text>
+          <text x={ex} y={ey + 3} fontSize={9} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">−</text>
           {zt === 0 && <text x={ex + 10} y={ey - 6} fontSize={11} fontWeight={700} fill="var(--c1)">fazla elektron</text>}
         </g>
       )}
@@ -350,7 +350,7 @@ function Meissner({ t, oynuyor, s }: SahneProps) {
         <path key={y} d={`M${170 + y * 14} ${altKenar} C ${170 + y * 30} ${altKenar + 22}, ${170 + y * 66} ${DY - 6}, ${170 + y * 64} ${altKenar - 30}`} fill="none" stroke="var(--c5)" strokeWidth={1.4} strokeDasharray="4 3" />
       ))}
       <rect x={150} y={altKenar - 22} width={40} height={22} rx={2} fill="var(--c2)" fillOpacity={0.8} />
-      <text x={170} y={altKenar - 7} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">N</text>
+      <text x={170} y={altKenar - 7} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">N</text>
       <text x={280} y={60} fontSize={11.5} fontWeight={700} fill={superIl ? "var(--c3)" : "var(--muted)"} textAnchor="end">T = {Math.round(T)} K</text>
       <text x={170} y={230} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">YBCO disk · kritik sıcaklık 92 K</text>
     </svg>

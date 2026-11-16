@@ -23,7 +23,7 @@ const NA = 6.02e23;
 
 const ATOM: Record<string, { f: string; s: string; r: number; y: string }> = {
   H: { f: "#eef2f7", s: "#9aa8ba", r: 9, y: "var(--ink)" },
-  O: { f: "var(--c2)", s: "#fff", r: 11, y: "#fff" },
+  O: { f: "var(--c2)", s: "var(--surface)", r: 11, y: "var(--on-btn)" },
 };
 const MOL: Record<string, [string, number, number][]> = {
   H2: [["H", -7, 0], ["H", 7, 0]],
@@ -70,7 +70,7 @@ function Paket({ v }: SahneProps) {
           <g key={i}>
             <rect x={cx - 26} y={150 - h} width={52} height={h} rx={6} fill={p.renk} opacity={0.9} />
             <rect x={cx - 42} y={150} width={84} height={8} rx={3} fill="#cfd8e3" />
-            <rect x={cx - 30} y={158} width={60} height={22} rx={6} fill="#e6ebf2" />
+            <rect x={cx - 30} y={158} width={60} height={22} rx={6} fill="var(--panel)" />
             <text x={cx} y={174} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--ink)">{virgul(m)} g</text>
             <text x={cx} y={198} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">{p.ad}</text>
             <text x={cx} y={214} fontSize={11} textAnchor="middle" fill="var(--kimya)">{bilimsel(n * NA)} {p.tan}</text>
@@ -98,7 +98,7 @@ function SuTart({ v }: SahneProps) {
       </g>
       <g>
         <rect x={70} y={168} width={120} height={8} rx={3} fill="#cfd8e3" />
-        <rect x={84} y={176} width={92} height={28} rx={7} fill="#e6ebf2" />
+        <rect x={84} y={176} width={92} height={28} rx={7} fill="var(--panel)" />
         <text x={130} y={195} fontSize={15} fontWeight={800} textAnchor="middle" fill="var(--ink)">{virgul(m)} g</text>
       </g>
       <g fontSize={12.5} fontWeight={700}>
@@ -152,7 +152,7 @@ function Gaz({ v }: SahneProps) {
     <svg viewBox="0 0 340 214" role="img" aria-label={`${virgul(n)} mol gaz, ${oda ? "oda koşulunda" : "normal koşullarda"}, ${virgul(V)} litre`}>
       <g>
         <rect x={70} y={Y0 - boy - 6} width={80} height={boy + 6} rx={4} fill="none" stroke="var(--ink)" strokeWidth={2} />
-        <rect x={72} y={y} width={76} height={Math.max(0, Y0 - y - 1)} fill="#eef2f7" />
+        <rect x={72} y={y} width={76} height={Math.max(0, Y0 - y - 1)} fill="var(--panel)" />
         {[20, 40, 60].map((L) => (
           <g key={L}>
             <line x1={136} x2={148} y1={Y0 - (L / 80) * boy} y2={Y0 - (L / 80) * boy} stroke="var(--muted)" strokeWidth={1.2} />
@@ -185,7 +185,7 @@ function Stok({ v }: SahneProps) {
   const m = v.m ?? 16, n = m / 16, mco2 = n * 44;
   const kutu = (x: number, y: number, ust: string, alt: string, renk: string) => (
     <g>
-      <rect x={x} y={y} width={132} height={52} rx={10} fill="#fff" stroke={renk} strokeWidth={1.8} />
+      <rect x={x} y={y} width={132} height={52} rx={10} fill="var(--surface)" stroke={renk} strokeWidth={1.8} />
       <text x={x + 66} y={y + 22} fontSize={14} fontWeight={800} textAnchor="middle" fill={renk}>{ust}</text>
       <text x={x + 66} y={y + 41} fontSize={11.5} fontWeight={600} textAnchor="middle" fill="var(--muted)">{alt}</text>
     </g>
@@ -338,7 +338,7 @@ function Kuvvet({ v }: SahneProps) {
           </g>
         ) : (
           <g key={i}>
-            <rect x={x - 4} y={y - 12} width={34} height={18} rx={9} fill="#fff" stroke="#9aa8ba" />
+            <rect x={x - 4} y={y - 12} width={34} height={18} rx={9} fill="var(--surface)" stroke="#9aa8ba" />
             <text x={x + 13} y={y + 1} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--ink)">HA</text>
           </g>
         );
@@ -348,11 +348,11 @@ function Kuvvet({ v }: SahneProps) {
         <rect x={152} y={50} width={6} height={36} fill="#9aa8ba" />
         <path d="M95 50 L95 34 L268 34 L268 76" fill="none" stroke="var(--ink)" strokeWidth={1.4} />
         <path d="M155 50 L155 42 L230 42 L230 116 L260 116" fill="none" stroke="var(--ink)" strokeWidth={1.4} />
-        <rect x={188} y={26} width={18} height={16} fill="#fff" />
+        <rect x={188} y={26} width={18} height={16} fill="var(--surface)" />
         <line x1={192} x2={192} y1={26} y2={42} stroke="var(--ink)" strokeWidth={2} />
         <line x1={200} x2={200} y1={30} y2={38} stroke="var(--ink)" strokeWidth={3} />
         <circle cx={268} cy={92} r={30} fill="#fff6d6" opacity={isik} />
-        <circle cx={268} cy={92} r={16} fill="#fff" stroke={zayif ? "#9aa8ba" : "var(--c4)"} strokeWidth={2.4} />
+        <circle cx={268} cy={92} r={16} fill="var(--surface)" stroke={zayif ? "#9aa8ba" : "var(--c4)"} strokeWidth={2.4} />
         <rect x={260} y={108} width={16} height={12} rx={2} fill="#9aa8ba" />
         <text x={268} y={146} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">{zayif ? "lamba sönük" : "lamba parlak"}</text>
       </g>
@@ -385,7 +385,7 @@ function Titrasyon({ v }: SahneProps) {
     <svg viewBox="0 0 340 226" role="img" aria-label={`${virgul(V)} mL NaOH eklendi, pH ${virgul(p, 1)}`}>
       <g>
         <rect x={76} y={16} width={16} height={110} rx={3} fill="none" stroke="var(--ink)" strokeWidth={1.6} />
-        <rect x={77.5} y={buret} width={13} height={Math.max(0, 124.5 - buret)} fill="#eef2f7" />
+        <rect x={77.5} y={buret} width={13} height={Math.max(0, 124.5 - buret)} fill="var(--panel)" />
         <path d="M80 126 L88 126 L85 140 L83 140 Z" fill="var(--ink)" />
         <text x={100} y={30} fontSize={11} fontWeight={700} fill="var(--muted)">0,1 M NaOH</text>
       </g>
@@ -406,7 +406,7 @@ function Titrasyon({ v }: SahneProps) {
         <text x={gx(0)} y={gy(14) - 8} fontSize={11} fontWeight={700} fill="var(--ink)">pH</text>
       </g>
       <path d={egri} fill="none" stroke="var(--kimya)" strokeWidth={2.4} />
-      <circle cx={gx(V)} cy={gy(p)} r={6} fill="#fff" stroke="var(--ink)" strokeWidth={2.4} />
+      <circle cx={gx(V)} cy={gy(p)} r={6} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2.4} />
       <text x={gx(50)} y={gy(14) - 8} fontSize={13} fontWeight={800} textAnchor="end" fill={Math.abs(p - 7) < 0.01 ? "var(--good)" : "var(--ink)"}>pH {virgul(p, 1)}</text>
     </svg>
   );
@@ -449,7 +449,7 @@ function Tuz({ s, t, oynuyor }: SahneProps) {
         );
       })}
       <g>
-        <rect x={238} y={62} width={76} height={104} rx={12} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
+        <rect x={238} y={62} width={76} height={104} rx={12} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
         <text x={276} y={88} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">pH metre</text>
         <text x={276} y={124} fontSize={22} fontWeight={800} textAnchor="middle" fill={p > 7.05 ? "var(--c1)" : "var(--ink)"}>{u > 0 ? virgul(p, 1) : "?"}</text>
         <line x1={276} x2={276} y1={166} y2={186} stroke="var(--ink)" strokeWidth={1.6} />
@@ -514,7 +514,7 @@ function MetalAsit({ s, t, oynuyor }: SahneProps) {
             <rect x={cx - 10} y={160} width={20} height={14} rx={3} fill={i === 2 ? "#c9773c" : "#9aa8ba"} />
             {u > 0 && Array.from({ length: sayi }, (_, j) => {
               const f = (u * (1.5 + m.hiz * 2) + rnd()) % 1;
-              return <circle key={j} cx={cx - 12 + rnd() * 24} cy={158 - f * 84} r={2.5 + rnd() * 2} fill="#fff" stroke="#9aa8ba" strokeWidth={1} />;
+              return <circle key={j} cx={cx - 12 + rnd() * 24} cy={158 - f * 84} r={2.5 + rnd() * 2} fill="var(--surface)" stroke="#9aa8ba" strokeWidth={1} />;
             })}
             <text x={cx} y={206} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--ink)">{m.ad}</text>
           </g>

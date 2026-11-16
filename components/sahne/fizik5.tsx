@@ -64,7 +64,7 @@ function Gozlemci({ v }: SahneProps) {
       <line x1={8} x2={332} y1={Y} y2={Y} stroke="var(--ink)" strokeWidth={2} />
       <g>
         <rect x={70} y={92} width={200} height={70} rx={10} fill="var(--fizik-soft)" stroke="var(--fizik)" strokeWidth={2} />
-        {[0, 1, 2].map((i) => <rect key={i} x={84 + i * 62} y={104} width={48} height={26} rx={4} fill="#fff" stroke="var(--fizik)" strokeWidth={1.5} />)}
+        {[0, 1, 2].map((i) => <rect key={i} x={84 + i * 62} y={104} width={48} height={26} rx={4} fill="var(--surface)" stroke="var(--fizik)" strokeWidth={1.5} />)}
         <circle cx={100} cy={166} r={8} fill="var(--ink)" />
         <circle cx={240} cy={166} r={8} fill="var(--ink)" />
       </g>

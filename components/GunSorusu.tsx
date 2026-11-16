@@ -60,14 +60,16 @@ export function GunSorusuKart({ havuz }: { havuz: string[] }) {
     <Link
       href="/gunun-sorusu/"
       data-ders={ders}
-      className={cn("flex items-center gap-3.5 rounded-2xl border-[1.5px] bg-card p-4 transition-transform active:scale-[.99]", s ? "border-border" : "border-acc")}
+      className="grid gap-1.5 rounded-lg border border-border bg-card p-4 transition-transform active:scale-[.99]"
     >
-      <span className={cn("grid size-11 flex-none place-items-center rounded-xl [&_svg]:size-5", s ? "bg-acc-soft text-acc" : "bg-acc text-white")}><Soru /></span>
-      <span className="min-w-0 flex-1">
-        <span className="block text-[13px] font-semibold text-muted-foreground">Günün sorusu · {DERSLER[ders].ad}</span>
-        <b className="block truncate font-bold">{alt}</b>
+      <span className="flex items-center gap-2 text-[11px] font-bold tracking-[.14em] text-mark uppercase">
+        <span className="[&_svg]:size-4"><Soru /></span>Günün sorusu · {DERSLER[ders].ad}
+        {!s && <span aria-hidden="true" className="ml-auto size-2 rounded-full bg-mark" />}
       </span>
-      <Next />
+      <span className="flex items-center gap-3">
+        <b className="min-w-0 flex-1 font-display text-[18px] leading-snug font-extrabold">{alt}</b>
+        <Next />
+      </span>
     </Link>
   );
 }

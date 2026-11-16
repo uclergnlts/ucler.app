@@ -17,7 +17,7 @@ function Sekmeler({ adlar, secili, sec, y = 8, x0 = 10, gen = 320 }: { adlar: st
       {adlar.map((ad, i) => (
         <g key={ad} onClick={() => sec(i)} style={{ cursor: "pointer" }}>
           <rect x={x0 + i * W + 2} y={y} width={W - 4} height={26} rx={13} fill={i === secili ? "var(--kimya)" : "var(--panel)"} />
-          <text x={x0 + i * W + W / 2} y={y + 17} fontSize={11} fontWeight={800} textAnchor="middle" fill={i === secili ? "#fff" : "var(--ink)"}>{ad}</text>
+          <text x={x0 + i * W + W / 2} y={y + 17} fontSize={11} fontWeight={800} textAnchor="middle" fill={i === secili ? "var(--on-btn)" : "var(--ink)"}>{ad}</text>
         </g>
       ))}
     </g>
@@ -508,7 +508,7 @@ function AtomEko({ v, set }: SahneProps) {
       <rect x={40} y={112} width={W} height={26} rx={8} fill="var(--panel)" />
       <rect x={40} y={112} width={(W * e) / 100} height={26} rx={8} fill="var(--c3)" />
       {e < 100 && <text x={40 + (W * e) / 100 + 8} y={130} fontSize={11.5} fontWeight={800} fill="var(--muted)">atık</text>}
-      <text x={48} y={130} fontSize={11.5} fontWeight={800} fill="#fff">ürün</text>
+      <text x={48} y={130} fontSize={11.5} fontWeight={800} fill="var(--on-btn)">ürün</text>
       <text x={170} y={170} fontSize={16} fontWeight={800} textAnchor="middle" fill={e === 100 ? "var(--good)" : "var(--ink)"}>Atom ekonomisi: %{e}</text>
       <text x={170} y={192} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">
         {d.urun} / {d.top} × 100 · ürünün kütlesi / girenlerin kütlesi

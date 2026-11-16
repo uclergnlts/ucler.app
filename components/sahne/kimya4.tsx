@@ -67,7 +67,7 @@ function Erime({ s, t, oynuyor }: SahneProps) {
       <MiniGrafik x={190} f={camT} u={u} renk="var(--c1)" />
       <g>
         <line x1={20} x2={150} y1={208} y2={208} stroke="var(--line-2)" strokeWidth={2} />
-        {kup > 1 && <rect x={85 - kup / 2} y={208 - kup} width={kup} height={kup} rx={2} fill="#fff" stroke="var(--kimya)" strokeWidth={1.8} />}
+        {kup > 1 && <rect x={85 - kup / 2} y={208 - kup} width={kup} height={kup} rx={2} fill="var(--surface)" stroke="var(--kimya)" strokeWidth={1.8} />}
         {eri > 0 && <ellipse cx={85} cy={207} rx={14 + 40 * eri} ry={2 + 3 * eri} fill="var(--kimya)" opacity={0.35} />}
       </g>
       <g>
@@ -183,13 +183,13 @@ function KaynamaNoktasi({ v }: SahneProps) {
       <g>
         <rect x={40} y={98} width={140} height={84} fill={SU} />
         <path d="M34 70 L40 70 L40 182 Q40 192 50 192 L170 192 Q180 192 180 182 L180 70 L186 70" fill="none" stroke="var(--ink)" strokeWidth={2.2} strokeLinejoin="round" />
-        {kab.map(([a, b, c], i) => <circle key={i} cx={52 + a * 116} cy={110 + b * 64} r={3 + c * 3} fill="#fff" stroke="var(--c1)" strokeWidth={1.2} />)}
+        {kab.map(([a, b, c], i) => <circle key={i} cx={52 + a * 116} cy={110 + b * 64} r={3 + c * 3} fill="var(--surface)" stroke="var(--c1)" strokeWidth={1.2} />)}
       </g>
       <g>
         {[0, 1, 2].map((i) => <path key={i} d={`M${82 + i * 28} 214 q-7 -9 0 -16 q7 9 0 16`} fill="var(--c2)" />)}
       </g>
       <g>
-        <rect x={246} y={56} width={14} height={146} rx={7} fill="#fff" stroke="var(--line-2)" strokeWidth={1.6} />
+        <rect x={246} y={56} width={14} height={146} rx={7} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={1.6} />
         <circle cx={253} cy={206} r={11} fill="var(--kimya)" />
         <rect x={250} y={th} width={6} height={206 - th} fill="var(--kimya)" />
         {[60, 80, 100, 120].map((d) => (
@@ -225,7 +225,7 @@ function HalKutu({ x, y, hal }: { x: number; y: number; hal: number }) {
   );
   return (
     <g>
-      <rect x={x - 26} y={y - 18} width={52} height={36} rx={8} fill="#fff" stroke="var(--line-2)" strokeWidth={1.5} />
+      <rect x={x - 26} y={y - 18} width={52} height={36} rx={8} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={1.5} />
       {nokta.map(([a, b], i) => <circle key={i} cx={a} cy={b} r={3.6} fill="var(--c1)" />)}
       <text x={x} y={hal === 2 ? y - 24 : y + 34} fontSize={12.5} fontWeight={700} textAnchor="middle" fill="var(--ink)">{HALLER[hal]}</text>
     </g>
@@ -311,7 +311,7 @@ function Faz({ s, v }: SahneProps) {
       </g>
       <g>
         <line x1={fx(T)} x2={fx(T)} y1={fy(80)} y2={196} stroke="var(--kimya)" strokeDasharray="3 4" opacity={0.6} />
-        <circle cx={fx(T)} cy={fy(P)} r={7} fill="var(--kimya)" stroke="#fff" strokeWidth={2} />
+        <circle cx={fx(T)} cy={fy(P)} r={7} fill="var(--kimya)" stroke="var(--surface)" strokeWidth={2} />
         <text x={318} y={14} fontSize={12.5} fontWeight={800} textAnchor="end" fill="var(--kimya)">{eksi(T)} °C, {P} atm: {hal}</text>
       </g>
     </svg>
@@ -336,8 +336,8 @@ function Tyndall({ s, t, oynuyor }: SahneProps) {
       </g>
       <g>
         <rect x={X1} y={64} width={W} height={124} fill={SU} />
-        <rect x={X2} y={64} width={W} height={124} fill="#eef2f7" />
-        {nokta.map(([a, b], i) => <circle key={i} cx={X2 + 4 + a * (W - 8)} cy={68 + b * 116} r={1.6} fill="#fff" />)}
+        <rect x={X2} y={64} width={W} height={124} fill="var(--panel)" />
+        {nokta.map(([a, b], i) => <circle key={i} cx={X2 + 4 + a * (W - 8)} cy={68 + b * 116} r={1.6} fill="var(--surface)" />)}
       </g>
       <g>
         {isikla(X2) > 0 && <rect x={X2} y={Y - 7} width={isikla(X2)} height={14} fill={YAG} opacity={0.95} />}
@@ -405,7 +405,7 @@ const cx = (T: number) => 46 + T * 2.72;
 const cy = (S: number) => 120 - (S / 250) * 96;
 
 function Kristal({ x, y, n, renk }: { x: number; y: number; n: number; renk: string }) {
-  return <g>{Array.from({ length: n }, (_, i) => <rect key={i} x={x + (i % 10) * 9} y={y - Math.floor(i / 10) * 8} width={7} height={6} rx={1} fill="#fff" stroke={renk} strokeWidth={1.4} />)}</g>;
+  return <g>{Array.from({ length: n }, (_, i) => <rect key={i} x={x + (i % 10) * 9} y={y - Math.floor(i / 10) * 8} width={7} height={6} rx={1} fill="var(--surface)" stroke={renk} strokeWidth={1.4} />)}</g>;
 }
 
 function Cozunurluk({ s, v }: SahneProps) {
@@ -523,7 +523,7 @@ function Ayirma({ s, v, t, oynuyor }: SahneProps) {
           const x = CIP_X[i], w = CIP_W[i], sec = i + 1 === y;
           return (
             <g key={ad}>
-              <rect x={x} y={6} width={w} height={26} rx={13} fill={sec ? "var(--kimya-soft)" : "#fff"} stroke={sec ? "var(--kimya)" : "var(--line-2)"} strokeWidth={1.5} />
+              <rect x={x} y={6} width={w} height={26} rx={13} fill={sec ? "var(--kimya-soft)" : "var(--surface)"} stroke={sec ? "var(--kimya)" : "var(--line-2)"} strokeWidth={1.5} />
               <text x={x + w / 2} y={23.5} fontSize={11} fontWeight={700} textAnchor="middle" fill={sec ? "var(--kimya)" : "var(--muted)"}>{i + 1}. {ad}</text>
             </g>
           );

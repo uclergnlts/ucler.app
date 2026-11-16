@@ -107,7 +107,7 @@ function Carpisma({ v, s, t, oynuyor }: SahneProps) {
         <circle cx={A.x} cy={A.y} r={14} fill="var(--c1)" />
         <circle cx={B.x} cy={B.y} r={12} fill="#9aa8ba" />
         <circle cx={C.x} cy={C.y} r={13} fill="var(--kimya)" />
-        <g fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">
+        <g fontSize={11} fontWeight={800} fill="var(--surface)" textAnchor="middle">
           <text x={A.x} y={A.y + 4}>A</text><text x={B.x} y={B.y + 4}>B</text><text x={C.x} y={C.y + 4}>C</text>
         </g>
       </g>

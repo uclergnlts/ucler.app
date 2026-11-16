@@ -27,10 +27,10 @@ export function Tutamac({ x, y, yon = "yatay", nabiz }: { x: number; y: number; 
   return (
     <g transform={`translate(${x} ${y})`} pointerEvents="none">
       {nabiz && <circle r={15} fill="none" stroke="var(--acc)" strokeWidth={2.5} className="ad-nabiz" />}
-      <circle r={13} fill="var(--acc)" stroke="#fff" strokeWidth={2.5} />
+      <circle r={13} fill="var(--acc)" stroke="var(--surface)" strokeWidth={2.5} />
       <path
         d={yon === "yatay" ? "M-7 0 L-3 -4 L-3 4 Z M7 0 L3 -4 L3 4 Z" : "M0 -7 L-4 -3 L4 -3 Z M0 7 L-4 3 L4 3 Z"}
-        fill="#fff"
+        fill="var(--surface)"
       />
     </g>
   );
@@ -86,7 +86,7 @@ function Dusme({ t, oynuyor, kosular }: SahneProps) {
   const Gulle = ({ yy, soluk }: { yy: number; soluk?: boolean }) => (
     <g opacity={soluk ? 0.2 : 1}>
       <circle cx={110} cy={yy} r={15} fill="var(--ink)" />
-      <circle cx={105} cy={yy - 5} r={4} fill="#fff" opacity={0.25} />
+      <circle cx={105} cy={yy - 5} r={4} fill="var(--surface)" opacity={0.25} />
     </g>
   );
   const Tuy = ({ yy, soluk }: { yy: number; soluk?: boolean }) => (
@@ -159,7 +159,7 @@ function YukariAtis({ s, v, set, t, oynuyor, kosular }: SahneProps) {
           </g>
         );
       })}
-      <rect x={50} y={YA_YER} width={270} height={12} rx={4} fill="#e6ebf2" />
+      <rect x={50} y={YA_YER} width={270} height={12} rx={4} fill="var(--panel)" />
       {!havada && tt === 0 && (
         <g>
           <line x1={YA_X} x2={YA_X} y1={YA_YER - 28} y2={ucY + 8} stroke="var(--c2)" strokeWidth={4} strokeLinecap="round" />
@@ -175,7 +175,7 @@ function YukariAtis({ s, v, set, t, oynuyor, kosular }: SahneProps) {
         </g>
       )}
       <circle cx={YA_X} cy={yTop} r={13} fill="var(--fizik)" />
-      <circle cx={YA_X - 4} cy={yTop - 4} r={3.5} fill="#fff" opacity={0.35} />
+      <circle cx={YA_X - 4} cy={yTop - 4} r={3.5} fill="var(--surface)" opacity={0.35} />
       {tt > 0 && <Balon x={YA_X - 52} y={yTop + 4} yazi={`v = ${Math.round(hiz)} m/s`} renk={Math.abs(hiz) < 0.6 ? "var(--good)" : "var(--ink)"} />}
     </svg>
   );

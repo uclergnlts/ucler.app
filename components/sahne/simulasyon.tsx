@@ -110,7 +110,7 @@ function AtisLab({ v, set, saat = 0 }: SahneProps) {
       <circle cx={bx} cy={Math.min(by, AT.Y0 - 6)} r={6} fill="var(--c1)" />
       <g className="ad-surukle" onPointerDown={(e) => { (e.currentTarget.ownerSVGElement ?? svgRef.current)?.setPointerCapture(e.pointerId); setTutuyor(true); }}>
         <circle cx={nx} cy={ny} r={18} fill="transparent" />
-        <circle cx={nx} cy={ny} r={7} fill="#fff" stroke="var(--ink)" strokeWidth={2.5} />
+        <circle cx={nx} cy={ny} r={7} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2.5} />
       </g>
     </svg>
   );
@@ -171,7 +171,7 @@ function PhLab({ v, saat = 0 }: SahneProps) {
         <g key={ad as string}>
           <text x={x as number} y={20} fontSize={11.5} fontWeight={800} fill={r as string} textAnchor="middle">{ad}</text>
           <rect x={(x as number) - 7} y={26} width={14} height={18} rx={4} fill={r as string} opacity={0.85} />
-          <path d={`M${(x as number) - 5} 44 L${(x as number) + 5} 44 L${(x as number) + 1.5} 62 L${(x as number) - 1.5} 62 Z`} fill="#fff" stroke="var(--line-2)" strokeWidth={1.4} />
+          <path d={`M${(x as number) - 5} 44 L${(x as number) + 5} 44 L${(x as number) + 1.5} 62 L${(x as number) - 1.5} 62 Z`} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={1.4} />
         </g>
       ))}
       {damla(son.current.tA, 92, "var(--c2)")}
@@ -391,7 +391,7 @@ function GazLab({ v, saat = 0 }: SahneProps) {
       </g>
 
       {/* manometre */}
-      <circle cx={GX} cy={GY} r={34} fill="#fff" stroke="var(--ink)" strokeWidth={2} />
+      <circle cx={GX} cy={GY} r={34} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2} />
       {[0, 1, 2, 3, 4, 5, 6].map((x) => {
         const aci = (x / 6) * Math.PI * 1.4 - Math.PI * 1.2;
         return <text key={x} x={GX + Math.cos(aci) * 24} y={GY + Math.sin(aci) * 24 + 3.5} fontSize={9} fill="var(--muted)" textAnchor="middle">{x}</text>;
@@ -639,7 +639,7 @@ function FotoLab({ v, saat = 0 }: SahneProps) {
           <ellipse cx={k % 2 ? 108 : 132} cy={y - 4} rx={11} ry={4} transform={`rotate(${k % 2 ? 20 : -20} ${k % 2 ? 108 : 132} ${y - 4})`} />
         </g>
       ))}
-      {d.k.map((b, i) => { const u = (saat - b.t) / 2.4; return <circle key={i} cx={b.x + Math.sin(u * 9 + i) * 3} cy={112 - u * 26} r={2.6} fill="#fff" stroke="var(--c1)" strokeWidth={1.2} opacity={1 - u} />; })}
+      {d.k.map((b, i) => { const u = (saat - b.t) / 2.4; return <circle key={i} cx={b.x + Math.sin(u * 9 + i) * 3} cy={112 - u * 26} r={2.6} fill="var(--surface)" stroke="var(--c1)" strokeWidth={1.2} opacity={1 - u} />; })}
       <g fontSize={11} fontWeight={700} fill="var(--muted)">
         <text x={124} y={230} textAnchor="middle">su bitkisi · {T} °C</text>
       </g>
@@ -691,7 +691,7 @@ function YayLab({ v, saat = 0 }: SahneProps) {
       <text x={DENGE} y={Y - 38} fontSize={10} fill="var(--muted)" textAnchor="middle">denge</text>
       <polyline points={yay} fill="none" stroke="var(--ink)" strokeWidth={2} strokeLinejoin="round" />
       <rect x={bx - w2 / 2} y={Y - w2 / 2} width={w2} height={w2} rx={5} fill="var(--fizik)" />
-      <text x={bx} y={Y + 4} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">{say(m)} kg</text>
+      <text x={bx} y={Y + 4} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">{say(m)} kg</text>
       {/* konum-zaman grafiği: son 4 saniye */}
       <line x1={GY.x0} x2={GY.x1} y1={orta} y2={orta} stroke="var(--line-2)" />
       <polyline points={g.map((p) => `${izx(p.t).toFixed(1)},${izy(p.d).toFixed(1)}`).join(" ")} fill="none" stroke="var(--fizik)" strokeWidth={2.2} />
@@ -894,7 +894,7 @@ function KaynamaLab({ v, set, saat = 0 }: SahneProps) {
       <path d="M36 92 L36 206 Q36 214 44 214 L156 214 Q164 214 164 206 L164 92" fill="none" stroke="var(--ink)" strokeWidth={2} />
       <rect x={37} y={112} width={126} height={101} fill={`rgb(${Math.round(47 + sicak * 160)},${Math.round(124 - sicak * 30)},${Math.round(246 - sicak * 150)})`} opacity={0.14} />
       <line x1={37} x2={163} y1={112} y2={112} stroke="var(--c1)" strokeWidth={1.5} />
-      {d.k.map((b, i) => { const u = (saat - b.t) / 1.1, yy = b.y - u * (b.y - 114); return <circle key={i} cx={b.x + Math.sin(u * 8 + i) * 2} cy={yy} r={2 + u * 3} fill="#fff" stroke="var(--c1)" strokeWidth={1.2} opacity={1 - u * 0.6} />; })}
+      {d.k.map((b, i) => { const u = (saat - b.t) / 1.1, yy = b.y - u * (b.y - 114); return <circle key={i} cx={b.x + Math.sin(u * 8 + i) * 2} cy={yy} r={2 + u * 3} fill="var(--surface)" stroke="var(--c1)" strokeWidth={1.2} opacity={1 - u * 0.6} />; })}
       {/* ocak */}
       <rect x={30} y={218} width={140} height={6} rx={3} fill="var(--ink)" />
       {isit && [52, 76, 100, 124, 148].map((x, i) => <path key={x} d={`M${x - 5} 218 Q${x} ${206 - Math.sin(saat * 9 + i) * 3} ${x + 5} 218 Z`} fill="var(--c2)" opacity={0.85} />)}
@@ -940,7 +940,7 @@ function CaprazLab({ v, set }: SahneProps) {
   const beklenen = Math.round((1 - p1 / 2) * (1 - p2 / 2) * 100);
   const cicek = (x: number, y: number, mor: boolean, rr: number) => (
     <g>
-      {[0, 1, 2, 3, 4].map((k) => { const a = (k * 2 * Math.PI) / 5 - Math.PI / 2; return <circle key={k} cx={x + Math.cos(a) * rr * 0.55} cy={y + Math.sin(a) * rr * 0.55} r={rr * 0.5} fill={mor ? MOR : "#fff"} stroke={mor ? MOR : "var(--line-2)"} strokeWidth={1.2} />; })}
+      {[0, 1, 2, 3, 4].map((k) => { const a = (k * 2 * Math.PI) / 5 - Math.PI / 2; return <circle key={k} cx={x + Math.cos(a) * rr * 0.55} cy={y + Math.sin(a) * rr * 0.55} r={rr * 0.5} fill={mor ? MOR : "var(--surface)"} stroke={mor ? MOR : "var(--line-2)"} strokeWidth={1.2} />; })}
       <circle cx={x} cy={y} r={rr * 0.3} fill="var(--c4)" />
     </g>
   );
@@ -962,7 +962,7 @@ function CaprazLab({ v, set }: SahneProps) {
         const gt = [a, b].sort().join(""), mor = gt.includes("A");
         return (
           <g key={`${i}${j}`}>
-            <rect x={PU.x + PU.h * (i + 1)} y={PU.y + PU.h * j} width={PU.h} height={PU.h} fill={mor ? "var(--biyoloji-soft)" : "#fff"} stroke="var(--line-2)" />
+            <rect x={PU.x + PU.h * (i + 1)} y={PU.y + PU.h * j} width={PU.h} height={PU.h} fill={mor ? "var(--biyoloji-soft)" : "var(--surface)"} stroke="var(--line-2)" />
             <text x={PU.x + PU.h * (i + 1) + PU.h / 2} y={PU.y + PU.h * j + PU.h / 2 + 5} fontSize={12} fontWeight={700} fill={mor ? MOR : "var(--muted)"} textAnchor="middle">{gt}</text>
           </g>
         );
@@ -976,7 +976,7 @@ function CaprazLab({ v, set }: SahneProps) {
       <text x={128} y={66} fontSize={10.5} fontWeight={700} fill="var(--muted)">{top ? `son 100 yavru · toplam ${top}` : "yavru üretmek için düğmeye bas"}</text>
       <rect x={124} y={72} width={208} height={156} rx={10} fill="var(--biyoloji-soft)" opacity={0.6} />
       {d.son.map((n, i) => (
-        <circle key={i} cx={136 + (i % 10) * 20.4} cy={84 + Math.floor(i / 10) * 14.8} r={5.2} fill={n ? MOR : "#fff"} stroke={n ? MOR : "var(--line-2)"} strokeWidth={1.2} />
+        <circle key={i} cx={136 + (i % 10) * 20.4} cy={84 + Math.floor(i / 10) * 14.8} r={5.2} fill={n ? MOR : "var(--surface)"} stroke={n ? MOR : "var(--line-2)"} strokeWidth={1.2} />
       ))}
     </svg>
   );
@@ -1007,7 +1007,7 @@ function KirilmaLab({ v, saat = 0 }: SahneProps) {
   const isin = (x2: number, y2: number, op: number, x1 = O.x, y1 = O.y) => (
     <g opacity={op}>
       <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="var(--c2)" strokeWidth={3} strokeLinecap="round" />
-      <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="#fff" strokeWidth={1.2} strokeDasharray="4 16" strokeDashoffset={akis} />
+      <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="var(--surface)" strokeWidth={1.2} strokeDasharray="4 16" strokeDashoffset={akis} />
     </g>
   );
   const yay = (a: number, asagi: boolean, r: number) => { const u = yon(a, asagi); return `M${O.x} ${O.y + (asagi ? r : -r)} A${r} ${r} 0 0 ${asagi === a > 0 ? 0 : 1} ${O.x + u.x * r} ${O.y + u.y * r}`; };
@@ -1032,9 +1032,9 @@ function KirilmaLab({ v, saat = 0 }: SahneProps) {
       {kir && k !== null && <path d={yay(k, !ters, 44)} fill="none" stroke="var(--fizik)" strokeWidth={1.5} />}
       {/* ortam adları ışınların üstünde, zeminli */}
       <g fontSize={11} fontWeight={700} textAnchor="end">
-        <rect x={252} y={O.y - 21} width={74} height={17} rx={8} fill="#fff" opacity={0.92} />
+        <rect x={252} y={O.y - 21} width={74} height={17} rx={8} fill="var(--surface)" opacity={0.92} />
         <text x={320} y={O.y - 8.5} fill="var(--muted)">hava · n = 1</text>
-        <rect x={326 - etiket.length * 6.4 - 10} y={O.y + 5} width={etiket.length * 6.4 + 10} height={17} rx={8} fill="#fff" opacity={0.92} />
+        <rect x={326 - etiket.length * 6.4 - 10} y={O.y + 5} width={etiket.length * 6.4 + 10} height={17} rx={8} fill="var(--surface)" opacity={0.92} />
         <text x={320} y={O.y + 17.5} fill="var(--fizik)">{etiket}</text>
       </g>
     </svg>
@@ -1071,7 +1071,7 @@ function CozunurlukLab({ v, set, saat = 0 }: SahneProps) {
       <rect x={31} y={84} width={148} height={129} fill="var(--kimya)" opacity={0.05 + Math.min(0.12, d.c / 1200)} />
       <line x1={31} x2={179} y1={84} y2={84} stroke="var(--c1)" strokeWidth={1.5} />
       {Array.from({ length: Math.min(110, nIyon) }, (_, i) => { const x = 40 + q() * 130, y = 92 + q() * 100, f = q() * 6, k = i % 2; return <circle key={i} cx={x + Math.sin(saat * 1.6 + f) * 3} cy={y + Math.cos(saat * 1.3 + f) * 3} r={k ? 2.4 : 3.2} fill={k ? "var(--c1)" : "var(--kimya)"} opacity={0.75} />; })}
-      {Array.from({ length: Math.min(60, nKristal) }, (_, i) => { const x = 40 + (i % 15) * 9 + (Math.floor(i / 15) % 2) * 4, y = 207 - Math.floor(i / 15) * 7; return <rect key={`k${i}`} x={x} y={y} width={7} height={6} rx={1} fill="#fff" stroke="var(--ink)" strokeWidth={1} />; })}
+      {Array.from({ length: Math.min(60, nKristal) }, (_, i) => { const x = 40 + (i % 15) * 9 + (Math.floor(i / 15) % 2) * 4, y = 207 - Math.floor(i / 15) * 7; return <rect key={`k${i}`} x={x} y={y} width={7} height={6} rx={1} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1} />; })}
       {/* ısıtıcı */}
       <rect x={24} y={218} width={162} height={6} rx={3} fill="var(--ink)" />
       <rect x={24} y={218} width={162 * (T / 80)} height={6} rx={3} fill="var(--c2)" opacity={0.8} />

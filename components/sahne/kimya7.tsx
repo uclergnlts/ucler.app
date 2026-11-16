@@ -73,8 +73,8 @@ function SertSu({ v }: SahneProps) {
     <svg viewBox="0 0 340 214" role="img" aria-label={`${sert ? "Sert" : "Yumuşak"} su ve ${det ? "deterjan" : "sabun"}: ${kotu ? "az köpük, kaymak oluştu" : "bol köpük"}`}>
       <rect x={X} y={SUY} width={W} height={ALT - SUY} fill={SU} />
       <g>
-        {kab.map((b, i) => <circle key={i} cx={b.x} cy={b.y} r={b.r} fill="#fff" stroke="#c5cfdc" strokeWidth={1.2} />)}
-        {kotu && <rect x={X + 4} y={SUY - kopuk} width={W - 8} height={kopuk} rx={3} fill="#fff" stroke="#c5cfdc" />}
+        {kab.map((b, i) => <circle key={i} cx={b.x} cy={b.y} r={b.r} fill="var(--surface)" stroke="#c5cfdc" strokeWidth={1.2} />)}
+        {kotu && <rect x={X + 4} y={SUY - kopuk} width={W - 8} height={kopuk} rx={3} fill="var(--surface)" stroke="#c5cfdc" />}
       </g>
       {kotu && (
         <g fill="#b9c2ce">
@@ -135,7 +135,7 @@ function Karistir({ s, t, oynuyor }: SahneProps) {
     const aci = (sag ? -1 : 1) * 70 * yumusak(dok);
     return (
       <g transform={`rotate(${aci} ${x} 70)`}>
-        <rect x={x - 18} y={40} width={36} height={60} rx={6} fill="#fff" stroke={renk} strokeWidth={2} />
+        <rect x={x - 18} y={40} width={36} height={60} rx={6} fill="var(--surface)" stroke={renk} strokeWidth={2} />
         <rect x={x - 7} y={30} width={14} height={10} fill={renk} />
         <text x={x} y={66} fontSize={10.5} fontWeight={800} textAnchor="middle" fill={renk}>{ad}</text>
         <text x={x} y={80} fontSize={9.5} textAnchor="middle" fill="var(--muted)">{alt}</text>
@@ -171,7 +171,7 @@ const MONOMER = [
 ];
 const YAN: Record<string, { f: string; r: number; y: string }> = {
   H: { f: "#eef2f7", r: 5, y: "var(--ink)" },
-  Cl: { f: "var(--c3)", r: 7, y: "#fff" },
+  Cl: { f: "var(--c3)", r: 7, y: "var(--on-btn)" },
   F: { f: "#b9dc6b", r: 6, y: "var(--ink)" },
 };
 
@@ -242,7 +242,7 @@ function Etiket({ v }: SahneProps) {
   return (
     <svg viewBox="0 0 340 210" role="img" aria-label={`${g} gram bisküvi, ${virgul(seker)} gram şeker`}>
       <g>
-        <rect x={30} y={16} width={150} height={92} rx={8} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
+        <rect x={30} y={16} width={150} height={92} rx={8} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
         <text x={42} y={36} fontSize={11.5} fontWeight={800} fill="var(--ink)">Besin değeri (100 g)</text>
         <line x1={42} x2={168} y1={44} y2={44} stroke="var(--line-2)" />
         <text x={42} y={62} fontSize={11.5} fill="var(--muted)">Enerji</text>
@@ -259,7 +259,7 @@ function Etiket({ v }: SahneProps) {
         <text x={200} y={108} fontSize={16} fontWeight={800} fill={asti ? "var(--bad)" : "var(--kimya)"}>{virgul(seker)} g</text>
       </g>
       <g>
-        <rect x={X0} y={140} width={X1 - X0} height={16} rx={8} fill="#eef2f7" />
+        <rect x={X0} y={140} width={X1 - X0} height={16} rx={8} fill="var(--panel)" />
         <rect x={X0} y={140} width={Math.max(0, x(seker) - X0)} height={16} rx={8} fill={asti ? "var(--bad)" : "var(--kimya)"} />
         <line x1={x(50)} x2={x(50)} y1={132} y2={164} stroke="var(--ink)" strokeWidth={2} />
         <text x={x(50)} y={182} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--ink)">50 g</text>
@@ -315,7 +315,7 @@ function Boyle({ v }: SahneProps) {
         <text x={gx(8)} y={gy(0) + 15} fontSize={11} fontWeight={700} textAnchor="end" fill="var(--ink)">V (L)</text>
       </g>
       <path d={egri} fill="none" stroke="var(--kimya)" strokeWidth={2.2} />
-      <circle cx={gx(V)} cy={gy(P)} r={5.5} fill="#fff" stroke="var(--ink)" strokeWidth={2.2} />
+      <circle cx={gx(V)} cy={gy(P)} r={5.5} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2.2} />
       <g fontSize={12.5} fontWeight={800}>
         <text x={200} y={26} fill="var(--ink)">P = {virgul(P, 2)} atm</text>
         <text x={200} y={44} fill="var(--muted)">V = {virgul(V)} L</text>
@@ -343,7 +343,7 @@ function Charles({ v }: SahneProps) {
       </g>
       <line x1={gx(-273)} y1={gy(0)} x2={gx(-73)} y2={gy(4)} stroke="var(--kimya)" strokeWidth={2} strokeDasharray="4 4" />
       <line x1={gx(-73)} y1={gy(4)} x2={gx(327)} y2={gy(12)} stroke="var(--kimya)" strokeWidth={2.2} />
-      <circle cx={gx(c)} cy={gy(V)} r={5.5} fill="#fff" stroke="var(--ink)" strokeWidth={2.2} />
+      <circle cx={gx(c)} cy={gy(V)} r={5.5} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2.2} />
       <g fontSize={12.5} fontWeight={800}>
         <text x={190} y={26} fill="var(--ink)">{c} °C = {T} K</text>
         <text x={190} y={44} fill="var(--kimya)">V = {virgul(V, 1)} L</text>
@@ -370,7 +370,7 @@ function GayLussac({ s, t, oynuyor }: SahneProps) {
         ))}
       </g>
       <line x1={170} y1={92} x2={GX - R} y2={92} stroke="var(--ink)" strokeWidth={2} />
-      <circle cx={GX} cy={GY} r={R} fill="#fff" stroke="var(--ink)" strokeWidth={2} />
+      <circle cx={GX} cy={GY} r={R} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2} />
       {[0, 1, 2, 3, 4].map((p) => {
         const [x1, y1] = ig(-120 + p * 60, R - 2), [x2, y2] = ig(-120 + p * 60, R - 9), [tx, ty] = ig(-120 + p * 60, R + 10);
         return (
@@ -404,7 +404,7 @@ function Ideal({ v }: SahneProps) {
         <text x={188} y={110} fontSize={18} fontWeight={800} fill="var(--kimya)">P = {virgul(P)} atm</text>
       </g>
       <g>
-        <rect x={188} y={130} width={136} height={12} rx={6} fill="#eef2f7" />
+        <rect x={188} y={130} width={136} height={12} rx={6} fill="var(--panel)" />
         <rect x={188} y={130} width={Math.max(0, Math.min(136, (P / 18) * 136))} height={12} rx={6} fill="var(--kimya)" />
       </g>
     </svg>
@@ -431,10 +431,10 @@ function Kinetik({ v }: SahneProps) {
       <g fontSize={12.5} fontWeight={700}>
         <text x={206} y={46} fontSize={15} fontWeight={800} fill="var(--ink)">T = {T} K</text>
         <text x={206} y={78} fill="var(--muted)">Ortalama Ek</text>
-        <rect x={206} y={86} width={118} height={12} rx={6} fill="#eef2f7" />
+        <rect x={206} y={86} width={118} height={12} rx={6} fill="var(--panel)" />
         <rect x={206} y={86} width={(T / 600) * 118} height={12} rx={6} fill="var(--kimya)" />
         <text x={206} y={126} fill="var(--muted)">Ortalama hız</text>
-        <rect x={206} y={134} width={118} height={12} rx={6} fill="#eef2f7" />
+        <rect x={206} y={134} width={118} height={12} rx={6} fill="var(--panel)" />
         <rect x={206} y={134} width={(Math.sqrt(T / 600)) * 118} height={12} rx={6} fill="var(--c1)" />
       </g>
       <text x={110} y={200} fontSize={11} textAnchor="middle" fill="var(--muted)">ok boyu = tanecik hızı</text>
@@ -454,11 +454,11 @@ function Graham({ s, t, oynuyor }: SahneProps) {
   return (
     <svg viewBox="0 0 340 200" role="img" aria-label={u >= 1 ? "Beyaz NH₄Cl halkası HCl ucuna daha yakın oluştu" : "Uçlarında NH₃ ve HCl olan cam boru"}>
       <rect x={X0} y={Y - 16} width={L} height={32} rx={6} fill="none" stroke="var(--ink)" strokeWidth={2} />
-      <rect x={X0 - 14} y={Y - 14} width={16} height={28} rx={4} fill="#eef2f7" stroke="var(--c1)" strokeWidth={1.6} />
-      <rect x={X1 - 2} y={Y - 14} width={16} height={28} rx={4} fill="#eef2f7" stroke="var(--c2)" strokeWidth={1.6} />
+      <rect x={X0 - 14} y={Y - 14} width={16} height={28} rx={4} fill="var(--panel)" stroke="var(--c1)" strokeWidth={1.6} />
+      <rect x={X1 - 2} y={Y - 14} width={16} height={28} rx={4} fill="var(--panel)" stroke="var(--c2)" strokeWidth={1.6} />
       <g>{nok(X0 + 2, a, "var(--c1)", Math.round(26 * u))}</g>
       <g>{nok(b, X1 - 2, "var(--c2)", Math.round(18 * u))}</g>
-      {u >= 1 && <rect x={a - 5} y={Y - 15} width={10} height={30} fill="#fff" stroke="#9aa8ba" strokeWidth={1.2} />}
+      {u >= 1 && <rect x={a - 5} y={Y - 15} width={10} height={30} fill="var(--surface)" stroke="#9aa8ba" strokeWidth={1.2} />}
       <g fontSize={12} fontWeight={800}>
         <text x={X0 - 6} y={Y - 30} fill="var(--c1)">NH₃</text>
         <text x={X0 - 6} y={Y - 46} fontSize={11} fontWeight={600} fill="var(--muted)">17 g/mol</text>

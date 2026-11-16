@@ -54,7 +54,7 @@ function DortAyakli({ x, y, renk, kulak = 8, olcek = 1 }: { x: number; y: number
       <path d="M22 -8 L34 -28 L42 -26 L32 -4 Z" fill={renk} />
       <path d={`M34 -28 L48 -22 Q52 -18 46 -15 L38 -17 Z`} fill={renk} />
       <path d={`M34 -26 L${30 - kulak * 0.25} ${-27 - kulak} L40 -27 Z`} fill={renk} strokeLinejoin="round" />
-      <circle cx={41} cy={-22} r={1.6} fill="#fff" />
+      <circle cx={41} cy={-22} r={1.6} fill="var(--surface)" />
     </g>
   );
 }
@@ -126,7 +126,7 @@ const YY = 176;
 function Kutu({ d, renk = "var(--ink)", w }: { d: Dugum; renk?: string; w: number }) {
   return (
     <g>
-      <rect x={d.x - w / 2} y={d.y - 13} width={w} height={26} rx={13} fill="#fff" stroke={renk} strokeWidth={1.6} />
+      <rect x={d.x - w / 2} y={d.y - 13} width={w} height={26} rx={13} fill="var(--surface)" stroke={renk} strokeWidth={1.6} />
       <text x={d.x} y={d.y + 4} fontSize={11.5} fontWeight={700} fill={renk} textAnchor="middle">{d.yazi}</text>
     </g>
   );
@@ -153,7 +153,7 @@ function Anahtar({ s, t, oynuyor }: SahneProps) {
     <g key={`${x2}-${y2}`}>
       <line x1={x1} y1={y1} x2={x2} y2={y2} stroke={yolda && u > 0 ? "var(--biyoloji)" : "var(--line-2)"} strokeWidth={yolda && u > 0 ? 2.6 : 1.6} />
       {yaprak ? (
-        <text x={x2} y={y2 - 8} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle" stroke="#fff" strokeWidth={4} paintOrder="stroke">{yazi}</text>
+        <text x={x2} y={y2 - 8} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle" stroke="var(--surface)" strokeWidth={4} paintOrder="stroke">{yazi}</text>
       ) : (
         <text x={(x1 + x2) / 2 + (x2 < x1 ? -6 : 6)} y={(y1 + y2) / 2 + 2} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor={x2 < x1 ? "end" : "start"}>{yazi}</text>
       )}
@@ -172,7 +172,7 @@ function Anahtar({ s, t, oynuyor }: SahneProps) {
         return (
           <g key={ad}>
             <rect x={y.x - 31} y={YY - 12} width={62} height={24} rx={7} fill={ok ? "var(--biyoloji)" : "var(--biyoloji-soft)"} />
-            <text x={y.x} y={YY + 4} fontSize={11} fontWeight={800} fill={ok ? "#fff" : "var(--ink)"} textAnchor="middle">{ad}</text>
+            <text x={y.x} y={YY + 4} fontSize={11} fontWeight={800} fill={ok ? "var(--on-btn)" : "var(--ink)"} textAnchor="middle">{ad}</text>
           </g>
         );
       })}
@@ -181,7 +181,7 @@ function Anahtar({ s, t, oynuyor }: SahneProps) {
         <text x={246} y={206}>ökaryotlar (çok hücreli)</text>
       </g>
       <text x={170} y={228} fontSize={11} fill="var(--muted)" textAnchor="middle">Protistler bu basit anahtara uymaz.</text>
-      {yap && u > 0 && !bitti && <circle cx={nokta[0]} cy={nokta[1]} r={6} fill="var(--biyoloji)" stroke="#fff" strokeWidth={2} />}
+      {yap && u > 0 && !bitti && <circle cx={nokta[0]} cy={nokta[1]} r={6} fill="var(--biyoloji)" stroke="var(--surface)" strokeWidth={2} />}
     </svg>
   );
 }
@@ -291,7 +291,7 @@ function Kalp({ v }: SahneProps) {
         {odalar.map((d, i) => (
           <g key={i}>
             <rect x={d.x} y={d.y} width={d.w} height={d.h} rx={12} fill={d.renk} fillOpacity={0.85} />
-            <text x={d.x + d.w / 2} y={d.y + d.h / 2 + 4} fontSize={11} fontWeight={700} fill="#fff" textAnchor="middle">{d.ad}</text>
+            <text x={d.x + d.w / 2} y={d.y + d.h / 2 + 4} fontSize={11} fontWeight={700} fill="var(--on-btn)" textAnchor="middle">{d.ad}</text>
           </g>
         ))}
       </g>

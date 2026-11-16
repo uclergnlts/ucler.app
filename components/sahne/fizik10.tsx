@@ -21,7 +21,7 @@ function Miknatis({ x, y, w, h = 30, sol }: { x: number; y: number; w: number; h
     <g>
       <rect x={x} y={y} width={w / 2} height={h} fill={renk(sol)} />
       <rect x={x + w / 2} y={y} width={w / 2} height={h} fill={renk(sag)} />
-      <g fontSize={15} fontWeight={800} fill="#fff" textAnchor="middle">
+      <g fontSize={15} fontWeight={800} fill="var(--surface)" textAnchor="middle">
         <text x={x + w / 4} y={y + h / 2 + 5.5}>{sol}</text>
         <text x={x + (3 * w) / 4} y={y + h / 2 + 5.5}>{sag}</text>
       </g>
@@ -35,7 +35,7 @@ function Pusula({ x, y, aci, r = 15, soluk = false }: { x: number; y: number; ac
   const nx = x + c * u, ny = y + s * u, sx = x - c * u, sy = y - s * u, px = -s * g, py = c * g;
   return (
     <g opacity={soluk ? 0.35 : 1}>
-      <circle cx={x} cy={y} r={r} fill="#fff" stroke="var(--line-2)" strokeWidth={1.6} />
+      <circle cx={x} cy={y} r={r} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={1.6} />
       <path d={`M${nx} ${ny} L${x + px} ${y + py} L${x - px} ${y - py} Z`} fill="var(--c2)" />
       <path d={`M${sx} ${sy} L${x + px} ${y + py} L${x - px} ${y - py} Z`} fill="var(--muted)" />
       <circle cx={x} cy={y} r={1.8} fill="var(--ink)" />
@@ -67,7 +67,7 @@ function Yon({ x, y, cikan, r = 9, renk = "var(--ink)" }: { x: number; y: number
   const k = r * 0.6;
   return (
     <g>
-      <circle cx={x} cy={y} r={r} fill="#fff" stroke={renk} strokeWidth={2} />
+      <circle cx={x} cy={y} r={r} fill="var(--surface)" stroke={renk} strokeWidth={2} />
       {cikan ? <circle cx={x} cy={y} r={r * 0.28} fill={renk} /> : <path d={`M${x - k} ${y - k} L${x + k} ${y + k} M${x + k} ${y - k} L${x - k} ${y + k}`} stroke={renk} strokeWidth={2} />}
     </g>
   );
@@ -90,7 +90,7 @@ function Galvanometre({ x, y, sapma, iz = [] }: { x: number; y: number; sapma: n
   const R = 32, a = (-90 + 60 * sinir(sapma, -1, 1)) * DER;
   return (
     <g>
-      <path d={`M${x - R - 6} ${y} A${R + 6} ${R + 6} 0 0 1 ${x + R + 6} ${y} Z`} fill="#fff" stroke="var(--line-2)" strokeWidth={1.6} />
+      <path d={`M${x - R - 6} ${y} A${R + 6} ${R + 6} 0 0 1 ${x + R + 6} ${y} Z`} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={1.6} />
       {[-60, -30, 0, 30, 60].map((d) => {
         const b = (-90 + d) * DER;
         return <line key={d} x1={x + Math.cos(b) * (R - 4)} y1={y + Math.sin(b) * (R - 4)} x2={x + Math.cos(b) * R} y2={y + Math.sin(b) * R} stroke="var(--muted)" strokeWidth={1.4} />;
@@ -112,7 +112,7 @@ function Lamba({ x, y, p }: { x: number; y: number; p: number }) {
   return (
     <g>
       {q > 0.01 && <circle cx={x} cy={y} r={13 + 14 * q} fill="var(--c4)" opacity={0.12 + 0.3 * q} />}
-      <circle cx={x} cy={y} r={11} fill={q > 0.01 ? "#ffe8a3" : "#fff"} stroke="var(--ink)" strokeWidth={2} />
+      <circle cx={x} cy={y} r={11} fill={q > 0.01 ? "#ffe8a3" : "var(--surface)"} stroke="var(--ink)" strokeWidth={2} />
       <path d={`M${x - 6} ${y + 7} V${y + 1} Q${x - 6} ${y - 6} ${x} ${y - 6} Q${x + 6} ${y - 6} ${x + 6} ${y + 1} V${y + 7}`} fill="none" stroke="var(--ink)" strokeWidth={1.5} />
     </g>
   );
@@ -157,7 +157,7 @@ function Kirik({ t, oynuyor, s }: SahneProps) {
         {yeni ? <Miknatis x={70 - a} y={92} w={100} h={34} sol="S" /> : <rect x={70 - a} y={92} width={100} height={34} fill="var(--c1)" />}
         {yeni ? <Miknatis x={170 + a} y={92} w={100} h={34} sol="S" /> : <rect x={170 + a} y={92} width={100} height={34} fill="var(--c2)" />}
         {!yeni && (
-          <g fontSize={15} fontWeight={800} fill="#fff" textAnchor="middle">
+          <g fontSize={15} fontWeight={800} fill="var(--surface)" textAnchor="middle">
             <text x={120 - a} y={114.5}>S</text>
             <text x={220 + a} y={114.5}>N</text>
           </g>
@@ -226,7 +226,7 @@ function Alan({ v }: SahneProps) {
         {YERLER.map(([x, y], i) =>
           i + 1 === p ? null : (
             <g key={i}>
-              <circle cx={x} cy={y} r={9} fill="#fff" stroke="var(--line-2)" strokeWidth={1.4} />
+              <circle cx={x} cy={y} r={9} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={1.4} />
               <text x={x} y={y + 4} fontSize={11} fontWeight={800} fill="var(--muted)" textAnchor="middle">{i + 1}</text>
             </g>
           ),
@@ -270,7 +270,7 @@ function Oersted({ v }: SahneProps) {
           return <Pusula key={d} x={x} y={y} aci={aci} r={12} />;
         })}
       </g>
-      {i ? <Yon x={cx} y={cy} cikan={!giren} r={10} renk="var(--c2)" /> : <circle cx={cx} cy={cy} r={10} fill="#fff" stroke="var(--muted)" strokeWidth={2} />}
+      {i ? <Yon x={cx} y={cy} cikan={!giren} r={10} renk="var(--c2)" /> : <circle cx={cx} cy={cy} r={10} fill="var(--surface)" stroke="var(--muted)" strokeWidth={2} />}
       <text x={326} y={228} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="end">{i ? "B = 2k · I / d: uzaklaştıkça zayıflar" : "tel ekrana dik duruyor"}</text>
     </svg>
   );
@@ -284,7 +284,7 @@ function Elektromiknatis({ v }: SahneProps) {
     <svg viewBox="0 0 340 236" role="img" aria-label={`${N} sarım, ${c ? "demir çekirdekli" : "çekirdeksiz"}: ${n} ataç çekiliyor`}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">Çekilen ataç: <tspan fill="var(--c2)">{n}</tspan></text>
       <path d="M88 92 V56 H40 V112 M40 136 V170 H210 V92" fill="none" stroke="var(--ink)" strokeWidth={2} />
-      <rect x={24} y={112} width={32} height={24} rx={3} fill="#fff" stroke="var(--ink)" strokeWidth={2} />
+      <rect x={24} y={112} width={32} height={24} rx={3} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2} />
       <text x={40} y={128.5} fontSize={11} fontWeight={800} fill="var(--ink)" textAnchor="middle">2 A</text>
       {c ? <rect x={78} y={80} width={184} height={24} rx={2} fill="#9aa5b4" /> : <rect x={78} y={80} width={184} height={24} rx={2} fill="none" stroke="var(--line-2)" strokeWidth={1.4} strokeDasharray="4 4" />}
       <Bobin x1={88} x2={210} y={92} h={40} n={N / 2.5} />
@@ -338,9 +338,9 @@ function Motor({ t, oynuyor, s }: SahneProps) {
     <svg viewBox="0 0 340 236" role="img" aria-label={bitti ? "Bobin dik konumda salınıp durdu" : "Komütatörsüz bobin mıknatıslar arasında, akım hep aynı yönde"}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill={bitti ? "var(--c2)" : "var(--ink)"}>{bitti ? "Bobin dik durdu: tork sıfır" : "Komütatör yok: akım hep aynı yönde"}</text>
       <rect x={14} y={70} width={46} height={110} fill="var(--c2)" />
-      <text x={37} y={131} fontSize={17} fontWeight={800} fill="#fff" textAnchor="middle">N</text>
+      <text x={37} y={131} fontSize={17} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">N</text>
       <rect x={280} y={70} width={46} height={110} fill="var(--c1)" />
-      <text x={303} y={131} fontSize={17} fontWeight={800} fill="#fff" textAnchor="middle">S</text>
+      <text x={303} y={131} fontSize={17} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">S</text>
       <g>
         {[94, 124, 154].map((y) => <Ok key={y} x1={66} y1={y} x2={274} y2={y} renk="var(--c5)" kalin={1.2} />)}
       </g>
@@ -450,9 +450,9 @@ function Jenerator({ v, t, oynuyor, s, kosular }: SahneProps) {
     <svg viewBox="0 0 340 236" role="img" aria-label={`Bobin saniyede ${r} tur dönüyor; tepe gerilimi ${r} birim`}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">εmax = N·B·A·ω: <tspan fill="var(--c2)">{r} birim</tspan>, {r} tur/s</text>
       <rect x={10} y={84} width={20} height={96} fill="var(--c2)" />
-      <text x={20} y={137} fontSize={13} fontWeight={800} fill="#fff" textAnchor="middle">N</text>
+      <text x={20} y={137} fontSize={13} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">N</text>
       <rect x={94} y={84} width={20} height={96} fill="var(--c1)" />
-      <text x={104} y={137} fontSize={13} fontWeight={800} fill="#fff" textAnchor="middle">S</text>
+      <text x={104} y={137} fontSize={13} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">S</text>
       <ellipse cx={cx} cy={cy} rx={Math.max(1.5, Math.abs(Math.cos(aci)) * 26)} ry={40} fill="none" stroke="var(--c4)" strokeWidth={4} />
       <g>
         <line x1={GX0} x2={GX1} y1={GY} y2={GY} stroke="var(--ink)" strokeWidth={1.3} />
@@ -508,13 +508,13 @@ function Trafo({ v }: SahneProps) {
       <path d="M102 104 H56 V114 M56 140 V150 H102" fill="none" stroke="var(--ink)" strokeWidth={2} />
       {dc ? (
         <g>
-          <rect x={40} y={114} width={32} height={26} rx={3} fill="#fff" stroke="var(--ink)" strokeWidth={2} />
+          <rect x={40} y={114} width={32} height={26} rx={3} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2} />
           <text x={56} y={131} fontSize={11} fontWeight={800} fill="var(--ink)" textAnchor="middle">12 V</text>
           <text x={56} y={166} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">pil (DC)</text>
         </g>
       ) : (
         <g>
-          <circle cx={56} cy={127} r={13} fill="#fff" stroke="var(--ink)" strokeWidth={2} />
+          <circle cx={56} cy={127} r={13} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2} />
           <path d="M48 127 Q52 119 56 127 T64 127" fill="none" stroke="var(--ink)" strokeWidth={1.8} />
           <text x={56} y={166} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">230 V AC</text>
         </g>
@@ -536,15 +536,15 @@ function Iletim({ v }: SahneProps) {
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={`${V} kV ile iletim: akım ${Math.round(I)} A, kayıp ${say(kayip, 1)} kW`}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">I = P / V = <tspan fill="var(--c4)">{say(I, 1)} A</tspan></text>
-      <rect x={10} y={96} width={48} height={50} rx={3} fill="#fff" stroke="var(--ink)" strokeWidth={2} />
+      <rect x={10} y={96} width={48} height={50} rx={3} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2} />
       <text x={34} y={125} fontSize={11} fontWeight={800} fill="var(--ink)" textAnchor="middle">10 MW</text>
       <text x={34} y={162} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">santral</text>
       <path d="M58 110 H66 M270 110 H290" stroke="var(--ink)" strokeWidth={2} />
       <g>
         {[66, 258].map((x) => (
           <g key={x}>
-            <circle cx={x + 6} cy={110} r={8} fill="#fff" stroke="var(--ink)" strokeWidth={1.8} />
-            <circle cx={x + 14} cy={110} r={8} fill="#fff" stroke="var(--ink)" strokeWidth={1.8} />
+            <circle cx={x + 6} cy={110} r={8} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.8} />
+            <circle cx={x + 14} cy={110} r={8} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.8} />
           </g>
         ))}
       </g>
@@ -553,8 +553,8 @@ function Iletim({ v }: SahneProps) {
       {p > 0.002 && <path d="M88 110 Q114 104 120 98 Q145 108 170 98 Q195 108 220 98 Q240 104 258 110" fill="none" stroke="var(--c2)" strokeWidth={2 + 8 * p} opacity={0.15 + 0.5 * p} />}
       <text x={173} y={80} fontSize={11.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">{V} kV hat, R = 10 Ω</text>
       <g>
-        <rect x={292} y={100} width={14} height={46} fill="#fff" stroke="var(--ink)" strokeWidth={1.8} />
-        <rect x={308} y={88} width={18} height={58} fill="#fff" stroke="var(--ink)" strokeWidth={1.8} />
+        <rect x={292} y={100} width={14} height={46} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.8} />
+        <rect x={308} y={88} width={18} height={58} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.8} />
         <text x={309} y={162} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">şehir</text>
       </g>
       <g>

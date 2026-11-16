@@ -92,12 +92,12 @@ function Yol({ t, oynuyor, s }: SahneProps) {
       )}
       {/* kıkırdak halkalar */}
       {[100, 108, 116, 124, 132].map((y) => (
-        <line key={y} x1={114} x2={126} y1={y} y2={y} stroke="#fff" strokeWidth={1.6} />
+        <line key={y} x1={114} x2={126} y1={y} y2={y} stroke="var(--surface)" strokeWidth={1.6} />
       ))}
       {/* epiglot */}
       <line x1={115} y1={68} x2={104} y2={60} stroke={etkin === 2 ? YESIL : "var(--ink)"} strokeWidth={2.2} strokeLinecap="round" />
       <Alveoller x={192} y={190} />
-      {u > 0 && <circle cx={hava[0]} cy={hava[1]} r={4} fill={MAVI} stroke="#fff" strokeWidth={1.2} />}
+      {u > 0 && <circle cx={hava[0]} cy={hava[1]} r={4} fill={MAVI} stroke="var(--surface)" strokeWidth={1.2} />}
       <g fontSize={10.5} fontWeight={700}>
         <text x={44} y={28} fill={yazi(0)}>burun</text>
         <text x={112} y={52} textAnchor="end" fill={yazi(1)}>yutak</text>
@@ -186,7 +186,7 @@ function Kismi({ v }: SahneProps) {
       ))}
       <text x={10} y={22} fontSize={10} fontWeight={700} fill="var(--muted)">km</text>
       <line x1={tirmanX} x2={196} y1={yY(h)} y2={yY(h)} stroke={MAVI} strokeDasharray="3 3" />
-      <circle cx={tirmanX} cy={yY(h) - 6} r={6} fill={MAVI} stroke="#fff" strokeWidth={1.4} />
+      <circle cx={tirmanX} cy={yY(h) - 6} r={6} fill={MAVI} stroke="var(--surface)" strokeWidth={1.4} />
       {/* çubuklar */}
       <g fontSize={11} fontWeight={700}>
         <text x={204} y={30} fill="var(--muted)">Hava basıncı</text>
@@ -299,7 +299,7 @@ function Hb({ v }: SahneProps) {
       <line x1={gx(0)} x2={gx(0)} y1={gy(1)} y2={gy(0)} stroke="var(--ink)" strokeWidth={1.2} />
       <polyline points={egri.join(" ")} fill="none" stroke={KIRMIZI} strokeWidth={2.4} />
       <line x1={gx(p)} x2={gx(p)} y1={gy(0)} y2={gy(sat)} stroke={MAVI} strokeDasharray="3 3" />
-      <circle cx={gx(p)} cy={gy(sat)} r={5} fill={MAVI} stroke="#fff" strokeWidth={1.4} />
+      <circle cx={gx(p)} cy={gy(sat)} r={5} fill={MAVI} stroke="var(--surface)" strokeWidth={1.4} />
       <g fontSize={9.5} fill="var(--muted)">
         <text x={gx(0) - 4} y={gy(1) + 3} textAnchor="end">%100</text>
         <text x={gx(0) - 4} y={gy(0) + 3} textAnchor="end">0</text>
@@ -398,7 +398,7 @@ function Egzersiz({ v }: SahneProps) {
       {[20, 30, 40, 50, 60, 70].map((p) => (
         <text key={p} x={gx(p)} y={154} fontSize={9.5} fill="var(--muted)" textAnchor="middle">{p}</text>
       ))}
-      <circle cx={gx(pco2)} cy={133} r={7} fill={pco2 === 40 ? YESIL : KIRMIZI} stroke="#fff" strokeWidth={1.4} />
+      <circle cx={gx(pco2)} cy={133} r={7} fill={pco2 === 40 ? YESIL : KIRMIZI} stroke="var(--surface)" strokeWidth={1.4} />
       <g fontSize={12} fontWeight={800}>
         <text x={40} y={182} fill="var(--ink)">PCO₂ {pco2}</text>
         <text x={170} y={182} fill="var(--ink)" textAnchor="middle">pH {virgul(ph, 2)}</text>
@@ -482,7 +482,7 @@ function Ure({ t, oynuyor, s }: SahneProps) {
       <text x={238} y={206} fontSize={10.5} fontWeight={700} fill={yaz(5)}>üretra</text>
       {u > 0 && u < 1 && (
         <g>
-          <circle cx={nok[0]} cy={nok[1]} r={6} fill={ure ? YESIL : MOR} stroke="#fff" strokeWidth={1.4} />
+          <circle cx={nok[0]} cy={nok[1]} r={6} fill={ure ? YESIL : MOR} stroke="var(--surface)" strokeWidth={1.4} />
           <text x={nok[0]} y={nok[1] - 10} fontSize={9.5} fontWeight={800} fill={ure ? YESIL : MOR} textAnchor="middle">{ure ? "üre" : "NH₃"}</text>
         </g>
       )}
@@ -615,7 +615,7 @@ function Ph({ v }: SahneProps) {
         <text key={p} x={px(p)} y={172} fontSize={9.5} fill="var(--muted)" textAnchor="middle">{virgul(p)}</text>
       ))}
       <text x={px(7.4)} y={138} fontSize={9.5} fontWeight={700} fill={YESIL} textAnchor="middle">normal</text>
-      <circle cx={px(ph)} cy={150} r={7} fill={normal ? YESIL : KIRMIZI} stroke="#fff" strokeWidth={1.4} />
+      <circle cx={px(ph)} cy={150} r={7} fill={normal ? YESIL : KIRMIZI} stroke="var(--surface)" strokeWidth={1.4} />
       <text x={170} y={210} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
         Kan pH'sı {virgul(ph, 2)}: {ph < 7.35 ? "kan asidik" : ph > 7.45 ? "fazla salgılandı, kan bazik" : "normal aralıkta"}
       </text>

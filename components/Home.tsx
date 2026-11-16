@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
 import { bugunku, doneKeys, gunAdi, useAd, useAsama, useProg, useTekrar, useYer } from "@/lib/store";
 import { asamaSayisi } from "@/lib/asama";
@@ -16,7 +16,10 @@ import { cn } from "@/lib/utils";
 
 // Henüz içeriği olmayan dersler: kartı görünür, dokununca "yakında" der.
 const YAKINDA = [["matematik", "Matematik"], ["tarih", "Tarih"], ["cografya", "Coğrafya"], ["hukuk", "Hukuk"]] as const;
-const dersKart = "flex min-h-[160px] flex-col justify-between gap-3 rounded-3xl border border-border bg-card p-4 transition-transform active:scale-[.98]";
+// Deney defteri (2026-11-16): devam ve tekrar satırları kâğıt kart; solda mürekkep renginde yuvarlak oynat düğmesi.
+const satirKart = "flex items-center gap-3.5 rounded-lg border border-border bg-card p-4 transition-transform active:scale-[.99]";
+const oynat = "grid size-10 flex-none place-items-center rounded-full border-[1.5px] border-[var(--ink)] text-foreground [&_svg]:size-4";
+const tarihBicim = new Intl.DateTimeFormat("tr-TR", { weekday: "long", day: "numeric", month: "long" });
 
 export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; gunHavuz: string[] }) {
   const prog = useProg(), ad = useAd(), tekrar = useTekrar(), asama = useAsama(), yer = useYer();
@@ -33,6 +36,9 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
   const gorevHref = hedef ? href(hedef.ders, hedef.id) : "/kesfet/";
   const Next = Icon.ileri, Play = Icon.play, Tekrar = Icon.tekrar;
   const router = useRouter();
+  // Tarih yalnız tarayıcıda yazılır (sayfa önceden derlendiği için sunucudaki tarih eskir).
+  const [tarih, setTarih] = useState("");
+  useEffect(() => setTarih(tarihBicim.format(new Date())), []);
 
   // Eski tek sayfalık sürümün adresleri (#kimya.simya, #kesfet, #kayit...) yeni adreslere yönlensin.
   useEffect(() => {
@@ -48,7 +54,8 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
     <div className="app">
       <Top><Bugun konuHref={gorevHref} /></Top>
       <Govde>
-        <section className="grid gap-1.5">
+        <section className="grid gap-1">
+          <span className="text-[11px] font-bold tracking-[.14em] text-muted-foreground uppercase">{tarih}</span>
           <h1 className="text-[28px]">Hoş geldin{ad ? `, ${ad}` : ""}</h1>
           {yeni ? (
             <p className="text-[15px] text-muted-foreground">Fizik, kimya ve biyoloji en temelden: kısa, görselli kartlar ve her konunun sonunda 4 soruluk bir test.</p>
@@ -58,26 +65,22 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
         <GunSorusuKart havuz={gunHavuz} />
 
         {yeni && ilk && (
-          <Link
-            data-ders={ilk.ders}
-            href={href(ilk.ders, ilk.id)}
-            className="flex items-center gap-3.5 rounded-2xl bg-acc p-4 text-primary-foreground transition-transform active:scale-[.99]"
-          >
-            <span className="grid size-11 flex-none place-items-center rounded-xl bg-white/20 [&_svg]:size-5"><Play /></span>
+          <Link data-ders={ilk.ders} href={href(ilk.ders, ilk.id)} className={satirKart}>
+            <span className={oynat}><Play /></span>
             <span className="min-w-0 flex-1">
-              <span className="block text-[13px] font-semibold opacity-85">İlk konuna başla</span>
-              <b className="block truncate font-bold">{ilk.title}</b>
+              <span className="block text-[12px] font-semibold text-muted-foreground">İlk konuna başla · {DERSLER[ilk.ders].ad}</span>
+              <b className="block truncate font-display text-[17px] font-extrabold">{ilk.title}</b>
             </span>
             <Next />
           </Link>
         )}
 
         {bugun > 0 && (
-          <Link href="/tekrar/" className="flex items-center gap-3.5 rounded-2xl border-[1.5px] border-foreground bg-card p-4 transition-transform active:scale-[.99]">
-            <span className="grid size-11 flex-none place-items-center rounded-xl bg-secondary [&_svg]:size-5"><Tekrar /></span>
+          <Link href="/tekrar/" className={satirKart}>
+            <span className={oynat}><Tekrar /></span>
             <span className="min-w-0 flex-1">
-              <span className="block text-[13px] font-semibold text-muted-foreground">Tekrar zamanı</span>
-              <b className="block font-bold">Bugün {bugun} soru seni bekliyor</b>
+              <span className="block text-[12px] font-semibold text-muted-foreground">Tekrar zamanı</span>
+              <b className="block font-display text-[17px] font-extrabold">Bugün {bugun} soru seni bekliyor</b>
             </span>
             <Next />
           </Link>
@@ -86,35 +89,27 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
           <p className="-mt-3 flex items-center gap-2 text-[14px] text-muted-foreground [&_svg]:size-4"><Tekrar />Tekrar sıranda {kalan} soru var; ilki {gunAdi(sonraki)} gelecek.</p>
         )}
 
-        {last && (
-          <Link
-            data-ders={last.ders}
-            href={href(last.ders, last.id)}
-            className="flex items-center gap-3.5 rounded-2xl bg-acc p-4 text-primary-foreground transition-transform active:scale-[.99]"
-          >
-            <span className="grid size-11 flex-none place-items-center rounded-xl bg-white/20 [&_svg]:size-5"><Play /></span>
-            <span className="min-w-0 flex-1">
-              <span className="block text-[13px] font-semibold opacity-85">Kaldığın yerden devam et</span>
-              <b className="block truncate font-bold">{last.title}</b>
-              {(() => {
-                const nA = asamaSayisi(last.cardCount ?? 0), k = `${last.ders}.${last.id}`;
-                const b = prog[k] ? nA : Math.min(asama[k] ?? 0, nA);
-                return (
-                  <span className="mt-2 flex items-center gap-2.5">
-                    <span className="flex flex-1 gap-1" aria-hidden="true">
-                      {Array.from({ length: nA }, (_, a) => <span key={a} className={`h-1.5 flex-1 rounded-full ${a < b ? "bg-white" : "bg-white/30"}`} />)}
-                    </span>
-                    <span className="flex-none text-[12px] font-semibold opacity-90">{prog[k] ? "Bitti" : `${nA} aşamadan ${b} tanesi bitti`}</span>
-                  </span>
-                );
-              })()}
-            </span>
-            <Next />
-          </Link>
-        )}
+        {last && (() => {
+          const nA = asamaSayisi(last.cardCount ?? 0), k = `${last.ders}.${last.id}`;
+          const b = prog[k] ? nA : Math.min(asama[k] ?? 0, nA);
+          return (
+            <Link data-ders={last.ders} href={href(last.ders, last.id)} className={satirKart}>
+              <span className={oynat}><Play /></span>
+              <span className="min-w-0 flex-1">
+                <span className="block text-[12px] font-semibold text-muted-foreground">Kaldığın yer · {DERSLER[last.ders].ad}</span>
+                <b className="block truncate font-display text-[17px] font-extrabold">{last.title}</b>
+                <span className="mt-2 flex gap-[3px]" aria-hidden="true">
+                  {Array.from({ length: nA }, (_, a) => <span key={a} className={cn("h-[3px] w-6", a < b ? "bg-foreground" : "bg-border-strong")} />)}
+                </span>
+              </span>
+              <span className="flex-none text-[13px] font-semibold tabular-nums text-muted-foreground">{prog[k] ? "Bitti" : `${b}/${nA}`}</span>
+              <span className="sr-only">{prog[k] ? "Bitti" : `${nA} aşamadan ${b} tanesi bitti`}</span>
+            </Link>
+          );
+        })()}
 
         <Bolum title="Dersler">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid">
             {DERS_IDS.map((d) => {
               const s = DERSLER[d], ready = all[d].filter((e) => e.id);
               const done = ready.filter((e) => prog[`${d}.${e.id}`]).length;
@@ -127,13 +122,11 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
               }, 0);
               const I = Icon[d];
               return (
-                <Link key={d} data-ders={d} href={href(d)} className={dersKart}>
-                  <Simge className="size-14 rounded-2xl [&_svg]:size-7"><I /></Simge>
-                  <span className="grid gap-1">
-                    <b className="font-display text-[18px] font-extrabold">{s.ad}</b>
-                    <span className="text-[13px] font-bold tabular-nums text-muted-foreground">{basladi ? `${basladi} başladın · ${done} bitti` : `${done}/${ready.length} konu`}</span>
-                    <Progress className="mt-1 h-1.5" value={ready.length ? (100 * dolu) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti${basladi ? `, ${basladi} tanesine başladın` : ""}`} />
-                  </span>
+                <Link key={d} data-ders={d} href={href(d)} className="grid grid-cols-[auto_1fr_auto] items-center gap-x-3 gap-y-2 border-b border-border py-3.5 transition-colors active:bg-secondary">
+                  <span className="text-acc [&_svg]:size-5"><I /></span>
+                  <b className="font-display text-[18px] font-extrabold">{s.ad}</b>
+                  <span className="text-[13px] font-semibold tabular-nums text-muted-foreground">{basladi ? `${basladi} başladın · ${done}/${ready.length}` : `${done} / ${ready.length}`}</span>
+                  <Progress className="col-start-2 col-end-4 h-[3px] rounded-none" value={ready.length ? (100 * dolu) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti${basladi ? `, ${basladi} tanesine başladın` : ""}`} />
                 </Link>
               );
             })}
@@ -141,12 +134,10 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
               const I = Icon[k];
               return (
                 <Sheet key={k}>
-                  <SheetTrigger className={cn(dersKart, "text-left")}>
-                    <Simge soluk className="size-14 rounded-2xl [&_svg]:size-7"><I /></Simge>
-                    <span className="grid gap-1">
-                      <b className="font-display text-[18px] font-extrabold text-muted-foreground">{ad}</b>
-                      <span className="text-[13px] font-bold text-muted-foreground">Yakında</span>
-                    </span>
+                  <SheetTrigger className="grid grid-cols-[auto_1fr_auto] items-center gap-3 border-b border-border py-3 text-left text-muted-foreground">
+                    <span className="[&_svg]:size-5"><I /></span>
+                    <span className="font-display text-[16px] font-bold">{ad}</span>
+                    <span className="text-[13px] font-semibold">Yakında</span>
                   </SheetTrigger>
                   <SheetContent>
                     <div className="grid justify-items-center gap-3 py-4 text-center">

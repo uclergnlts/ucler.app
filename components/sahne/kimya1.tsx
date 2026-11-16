@@ -18,7 +18,7 @@ function balonSivi(cx: number, cy: number, r: number, yc: number) {
 function Karo({ x, z, s, ad, renk }: { x: number; z: number; s: string; ad: string; renk: string }) {
   return (
     <g>
-      <rect x={x} y={36} width={104} height={120} rx={14} fill="#fff" stroke={renk} strokeWidth={2} />
+      <rect x={x} y={36} width={104} height={120} rx={14} fill="var(--surface)" stroke={renk} strokeWidth={2} />
       <text x={x + 12} y={58} fontSize={13} fontWeight={700} fill="var(--muted)">{z}</text>
       <text x={x + 52} y={112} fontSize={44} fontWeight={800} textAnchor="middle" fill="var(--ink)" fontFamily="var(--f-display)">{s}</text>
       <text x={x + 52} y={140} fontSize={13} fontWeight={700} textAnchor="middle" fill={renk}>{ad}</text>
@@ -71,9 +71,9 @@ function Damitma({ t, oynuyor, s }: SahneProps) {
         <text x={142} y={70} fontSize={11.5} fontWeight={700} fill="var(--c1)" transform="rotate(21.8 142 70)">soğutucu (soğuk su)</text>
       </g>
       <g>
-        <circle cx={BX} cy={BY} r={BR} fill="#fff" stroke="var(--line-2)" strokeWidth={2.5} />
+        <circle cx={BX} cy={BY} r={BR} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={2.5} />
         <path d={balonSivi(BX, BY, BR - 1.5, sivi)} fill={ASIT} opacity={0.75} />
-        <path d={`M${BX - 8} ${BY - BR + 2} L${BX - 8} 70 L${BX + 8} 70 L${BX + 8} ${BY - BR + 2}`} fill="#fff" stroke="var(--line-2)" strokeWidth={2.5} />
+        <path d={`M${BX - 8} ${BY - BR + 2} L${BX - 8} 70 L${BX + 8} 70 L${BX + 8} ${BY - BR + 2}`} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={2.5} />
         <text x={BX} y={BY + 22} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--ink)">su + alkol</text>
       </g>
       <g>
@@ -90,7 +90,7 @@ function Damitma({ t, oynuyor, s }: SahneProps) {
       </g>
       {buhar}
       <g>
-        <path d="M250 154 L240 196 Q240 202 246 202 L294 202 Q300 202 300 196 L290 154 Z" fill="#fff" stroke="var(--line-2)" strokeWidth={2.5} />
+        <path d="M250 154 L240 196 Q240 202 246 202 L294 202 Q300 202 300 196 L290 154 Z" fill="var(--surface)" stroke="var(--line-2)" strokeWidth={2.5} />
         {akis > 0 && <path d={`M${242 + (202 - top) * 0.24 - 4} ${top} L${298 - (202 - top) * 0.24 + 4} ${top} L300 196 Q300 202 294 202 L246 202 Q240 202 240 196 Z`} fill={ASIT} />}
         {damla !== null && <circle cx={262} cy={damla} r={2.6} fill="var(--kimya)" />}
         <text x={270} y={222} fontSize={11.5} fontWeight={700} textAnchor="middle" fill={akis > 0.5 ? "var(--kimya)" : "var(--muted)"}>
@@ -108,12 +108,12 @@ function Elektroliz({ t, oynuyor, s }: SahneProps) {
   const tup = (x: number, gaz: number, ad: string, renk: string, adUzun: string) => (
     <g>
       <rect x={x - 16} y={56} width={32} height={118} fill={SU} />
-      {gaz > 0 && <rect x={x - 16} y={56} width={32} height={gaz} fill="#fff" />}
+      {gaz > 0 && <rect x={x - 16} y={56} width={32} height={gaz} fill="var(--surface)" />}
       <path d={`M${x - 16} 174 L${x - 16} 70 Q${x - 16} 54 ${x} 54 Q${x + 16} 54 ${x + 16} 70 L${x + 16} 174`} fill="none" stroke="var(--line-2)" strokeWidth={2.5} />
       <rect x={x - 3} y={160} width={6} height={30} fill="var(--ink)" />
       {(oynuyor || (u > 0 && u < 1)) && [0, 1, 2].map((i) => {
         const k = (u * 6 + i / 3) % 1;
-        return <circle key={i} cx={x + (i - 1) * 6} cy={160 - k * (100 - gaz)} r={2.2} fill="#fff" stroke={renk} strokeWidth={1} />;
+        return <circle key={i} cx={x + (i - 1) * 6} cy={160 - k * (100 - gaz)} r={2.2} fill="var(--surface)" stroke={renk} strokeWidth={1} />;
       })}
       {u > 0.4 && (
         <g>
@@ -137,7 +137,7 @@ function Elektroliz({ t, oynuyor, s }: SahneProps) {
         <rect x={152} y={212} width={36} height={16} rx={3} fill="var(--ink)" />
         <text x={146} y={216} fontSize={13} fontWeight={800} textAnchor="end" fill="var(--ink)">−</text>
         <text x={194} y={217} fontSize={13} fontWeight={800} fill="var(--ink)">+</text>
-        <text x={170} y={224} fontSize={9.5} fontWeight={700} textAnchor="middle" fill="#fff">pil</text>
+        <text x={170} y={224} fontSize={9.5} fontWeight={700} textAnchor="middle" fill="var(--on-btn)">pil</text>
       </g>
       {u >= 1 && <text x={280} y={226} fontSize={11.5} fontWeight={700} textAnchor="end" fill="var(--muted)">hacim 2 : 1</text>}
     </svg>
@@ -156,7 +156,7 @@ function KapaliKap({ t, oynuyor, s, v }: SahneProps) {
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={`Terazi ${kutle.toFixed(2)} gram gösteriyor, balonun ağzı ${acik ? "açık" : "kapalı"}`}>
       <g>
-        <circle cx={170} cy={116} r={44} fill="#fff" stroke="var(--line-2)" strokeWidth={2.5} />
+        <circle cx={170} cy={116} r={44} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={2.5} />
         <path d="M160 74 L160 36 M180 74 L180 36" stroke="var(--line-2)" strokeWidth={2.5} />
         <ellipse cx={170} cy={150} rx={22 + 4 * d} ry={6} fill={renk} stroke="#aab4c2" strokeWidth={d} />
         <text x={226} y={150} fontSize={11.5} fontWeight={700} fill="var(--muted)">{d > 0.5 ? "kalay oksit" : "kalay"}</text>
@@ -175,7 +175,7 @@ function KapaliKap({ t, oynuyor, s, v }: SahneProps) {
       {oynuyor && <text x={44} y={116} fontSize={12} fontWeight={700} fill="var(--c4)">ısıtılıyor…</text>}
       <g>
         <rect x={100} y={162} width={140} height={8} rx={3} fill="var(--ink)" />
-        <rect x={118} y={170} width={104} height={44} rx={8} fill="#eef2f7" />
+        <rect x={118} y={170} width={104} height={44} rx={8} fill="var(--panel)" />
         <text x={170} y={200} fontSize={20} fontWeight={800} textAnchor="middle" fill={kutle > 120.001 ? "var(--kimya)" : "var(--ink)"} fontFamily="var(--f-display)">
           {kutle.toFixed(2).replace(".", ",")} g
         </text>
@@ -224,12 +224,12 @@ function Dongu() {
 /* ---------- molekül kur ---------- */
 
 const ATOM: Record<string, { renk: string; r: number; yazi: string }> = {
-  H: { renk: "#ffffff", r: 15, yazi: "var(--ink)" },
-  O: { renk: "var(--c2)", r: 22, yazi: "#fff" },
-  C: { renk: "#3b4656", r: 22, yazi: "#fff" },
-  N: { renk: "var(--c1)", r: 21, yazi: "#fff" },
-  Na: { renk: "var(--c5)", r: 24, yazi: "#fff" },
-  Cl: { renk: "var(--c3)", r: 24, yazi: "#fff" },
+  H: { renk: "var(--surface)", r: 15, yazi: "var(--ink)" },
+  O: { renk: "var(--c2)", r: 22, yazi: "var(--on-btn)" },
+  C: { renk: "#3b4656", r: 22, yazi: "var(--on-btn)" },
+  N: { renk: "var(--c1)", r: 21, yazi: "var(--on-btn)" },
+  Na: { renk: "var(--c5)", r: 24, yazi: "var(--on-btn)" },
+  Cl: { renk: "var(--c3)", r: 24, yazi: "var(--on-btn)" },
 };
 const ALT = "₀₁₂₃₄₅₆₇₈₉";
 const indis = (n: number) => (n === 1 ? "" : String(n).split("").map((c) => ALT[+c]).join(""));
@@ -280,11 +280,11 @@ function Molekul({ s, v }: SahneProps) {
           <line key={i} x1={parcalar[a].x} y1={parcalar[a].y} x2={parcalar[b].x} y2={parcalar[b].y} stroke="var(--line-2)" strokeWidth={6} strokeLinecap="round" />
         ))}
         {parcalar.map((p, i) => {
-          const A = ATOM[p.a] ?? { renk: "var(--muted)", r: 20, yazi: "#fff" };
+          const A = ATOM[p.a] ?? { renk: "var(--muted)", r: 20, yazi: "var(--on-btn)" };
           const yuk = iyonik && varolan.length > 1 ? (p.a === "Na" ? "+" : p.a === "Cl" ? "−" : "") : "";
           return (
             <g key={i}>
-              <circle cx={p.x} cy={p.y} r={A.r} fill={A.renk} stroke={p.a === "H" ? "var(--line-2)" : "#fff"} strokeWidth={2} />
+              <circle cx={p.x} cy={p.y} r={A.r} fill={A.renk} stroke={p.a === "H" ? "var(--line-2)" : "var(--surface)"} strokeWidth={2} />
               <text x={p.x} y={p.y + 5} fontSize={A.r > 18 ? 15 : 13} fontWeight={800} textAnchor="middle" fill={A.yazi}>{p.a}{yuk && <tspan fontSize={11} dy={-7}>{yuk}</tspan>}</text>
             </g>
           );
@@ -304,7 +304,7 @@ function Molekul({ s, v }: SahneProps) {
 function Sembol({ s }: SahneProps) {
   return (
     <svg viewBox="0 0 340 214" role="img" aria-label={`Element sembolü ${String(s.sembol)}, atom numarası ${String(s.z)}`}>
-      <rect x={105} y={20} width={130} height={150} rx={16} fill="#fff" stroke="var(--kimya)" strokeWidth={2.5} />
+      <rect x={105} y={20} width={130} height={150} rx={16} fill="var(--surface)" stroke="var(--kimya)" strokeWidth={2.5} />
       <text x={121} y={46} fontSize={15} fontWeight={700} fill="var(--muted)">{String(s.z)}</text>
       <text x={170} y={118} fontSize={60} fontWeight={800} textAnchor="middle" fill="var(--ink)" fontFamily="var(--f-display)">{String(s.sembol)}</text>
       <text x={170} y={152} fontSize={22} fontWeight={800} textAnchor="middle" fill="var(--line-2)">?</text>
@@ -321,7 +321,7 @@ function Piktogram({ s }: SahneProps) {
   const tur = String(s.isaret ?? "alev");
   return (
     <svg viewBox="0 0 340 220" role="img" aria-label="Kırmızı çerçeveli tehlike işareti">
-      <rect x={106} y={46} width={128} height={128} transform="rotate(45 170 110)" fill="#fff" stroke="#e2231a" strokeWidth={9} strokeLinejoin="round" />
+      <rect x={106} y={46} width={128} height={128} transform="rotate(45 170 110)" fill="var(--surface)" stroke="#e2231a" strokeWidth={9} strokeLinejoin="round" />
       {tur === "alev" && (
         <g>
           <path d={ALEV} transform="translate(170 104) scale(1.1)" fill="var(--ink)" />
@@ -365,7 +365,7 @@ function Seyreltme({ t, oynuyor, s, secim }: SahneProps) {
       ) : (
         <g>
           <g transform="rotate(-62 108 62)">
-            <rect x={84} y={34} width={46} height={64} rx={6} fill="#fff" stroke="var(--line-2)" strokeWidth={2.5} />
+            <rect x={84} y={34} width={46} height={64} rx={6} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={2.5} />
             <rect x={86} y={66} width={42} height={30} fill={dokulen!.renk} />
           </g>
           <text x={60} y={30} fontSize={12} fontWeight={700} fill="var(--ink)">{dokulen!.ad}</text>

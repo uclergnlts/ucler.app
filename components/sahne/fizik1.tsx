@@ -32,7 +32,7 @@ function Dusme({ v, t, oynuyor }: SahneProps) {
       <line x1={40} x2={300} y1={YER} y2={YER} stroke="var(--ink)" strokeWidth={2} />
       <g>
         <circle cx={110} cy={bilyeY} r={13} fill="#7d8da3" />
-        <circle cx={106} cy={bilyeY - 4} r={3.5} fill="#fff" opacity={0.6} />
+        <circle cx={106} cy={bilyeY - 4} r={3.5} fill="var(--surface)" opacity={0.6} />
       </g>
       <g transform={`translate(${230 + 12 * salin} ${tuyY}) rotate(${hava ? 70 + 20 * salin : 0})`}>
         <path d="M0 -16 C9 -10 9 8 0 16 C-9 8 -9 -10 0 -16 Z" fill="var(--c4)" />
@@ -206,7 +206,7 @@ function Terazi({ t, oynuyor }: SahneProps) {
       {kefe(sol.x, sol.y)}
       {kefe(sag.x, sag.y)}
       <rect x={sol.x - 13} y={sol.y + ip - 16} width={26} height={18} rx={2} fill="#7d8da3" />
-      <g fill="#fff" stroke="var(--line-2)" strokeWidth={1.2}>
+      <g fill="var(--surface)" stroke="var(--line-2)" strokeWidth={1.2}>
         {pamuk.map(([dx, dy, rr], i) => <circle key={i} cx={sag.x + dx} cy={sag.y + ip + dy} r={rr} />)}
       </g>
       <g fontSize={12} fontWeight={700} fill="var(--ink)" textAnchor="middle">
@@ -237,7 +237,7 @@ function Silindir({ v }: SahneProps) {
       <g>
         <rect x={84} y={ALT + 2} width={112} height={6} rx={2} fill="var(--ink)" />
         <rect x={92} y={ALT + 8} width={96} height={30} rx={6} fill="var(--ink)" />
-        <text x={140} y={ALT + 29} fontSize={15} fontWeight={800} fill="#fff" textAnchor="middle">{m} g</text>
+        <text x={140} y={ALT + 29} fontSize={15} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">{m} g</text>
       </g>
       <g fontSize={13} fontWeight={700}>
         <text x={224} y={78} fill="var(--c1)">V = {V} cm³</text>
@@ -296,7 +296,7 @@ function Yuzme({ v }: SahneProps) {
       <text x={272} y={SU + 18} fontSize={11.5} fontWeight={700} fill="var(--c1)" textAnchor="end">su: 1 g/cm³</text>
       <g>
         <rect x={170 - K / 2} y={ust} width={K} height={K} rx={4} fill="var(--c4)" />
-        <text x={170} y={ust + K / 2 + 5} fontSize={12} fontWeight={800} fill="#fff" textAnchor="middle">{say(d)}</text>
+        <text x={170} y={ust + K / 2 + 5} fontSize={12} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">{say(d)}</text>
       </g>
       <text x={170} y={230} fontSize={13.5} fontWeight={800} textAnchor="middle" fill={d === 1 ? "var(--good)" : "var(--ink)"}>{hal}</text>
     </svg>

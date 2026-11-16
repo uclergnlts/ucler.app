@@ -26,7 +26,7 @@ Senin görevin **denetlemek**. Yeniden tasarlamak, ürünün yönünü değişti
 - alt menü sekmeleri
 - video süresi ve kuralları
 - maskot olmaması
-- açık tema
+- açık ve koyu tema ("deney defteri" tasarım ilkesi, 2026-11-16)
 
 ## Proje haritası
 | Yol | Ne |

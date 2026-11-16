@@ -78,7 +78,7 @@ export function Madalya({ kupa: kupaIste }: { kupa?: boolean }) {
       <motion.span
         className={kupa
           ? "relative grid size-24 place-items-center rounded-full bg-[var(--glow)] text-[#7a5200] shadow-[0_6px_0_var(--glow-deep)] [&_svg]:size-12"
-          : "relative grid size-24 place-items-center rounded-full bg-acc text-white shadow-[0_6px_0_color-mix(in_srgb,var(--acc),#000_22%)] [&_svg]:size-12 [&_svg]:stroke-[3]"}
+          : "relative grid size-24 place-items-center rounded-full bg-acc text-[var(--on-btn)] shadow-[0_6px_0_color-mix(in_srgb,var(--acc),#000_22%)] [&_svg]:size-12 [&_svg]:stroke-[3]"}
         initial={{ scale: 0, rotate: -30 }}
         animate={{ scale: 1, rotate: 0 }}
         transition={{ type: "spring", stiffness: 260, damping: 14, delay: 0.15 }}

@@ -88,7 +88,7 @@ function Kanal({ t, oynuyor, s }: SahneProps) {
         ),
       )}
       <path d="M166 64 Q168 100 204 100 Q230 100 228 86 Q224 66 200 70 Q186 74 178 62 Z" fill={etkin === 2 ? YESIL : "var(--line-2)"} fillOpacity={etkin === 2 ? 0.45 : 1} />
-      <circle cx={lokma[0]} cy={lokma[1]} r={ara(5.5, 3, sinir(u))} fill="#8a5a2b" stroke="#fff" strokeWidth={1.2} />
+      <circle cx={lokma[0]} cy={lokma[1]} r={ara(5.5, 3, sinir(u))} fill="#8a5a2b" stroke="var(--surface)" strokeWidth={1.2} />
       <g fontSize={10.5} fontWeight={700} fill="var(--muted)">
         <text x={180} y={17} fill={etkin === 0 ? YESIL : "var(--muted)"}>ağız</text>
         <text x={138} y={24} textAnchor="end">tükürük bezi</text>
@@ -121,7 +121,7 @@ function Yuzey({ v }: SahneProps) {
   return (
     <svg viewBox="0 0 340 220" role="img" aria-label={`Lokma ${n * n * n} parçaya bölündü; toplam yüzey ${n} katı, madde yine nişasta`}>
       {kupler.map(({ x, y, z }, i) => (
-        <g key={i} strokeWidth={0.8} stroke="#fff" strokeLinejoin="round">
+        <g key={i} strokeWidth={0.8} stroke="var(--surface)" strokeLinejoin="round">
           <polygon points={`${P(x, y + c, z)} ${P(x + c, y + c, z)} ${P(x + c, y + c, z + c)} ${P(x, y + c, z + c)}`} fill="#f6b93f" />
           <polygon points={`${P(x + c, y, z)} ${P(x + c, y + c, z)} ${P(x + c, y + c, z + c)} ${P(x + c, y, z + c)}`} fill="#e3a019" />
           <polygon points={`${P(x, y, z + c)} ${P(x + c, y, z + c)} ${P(x + c, y + c, z + c)} ${P(x, y + c, z + c)}`} fill="#c98a12" />
@@ -202,7 +202,7 @@ function Baslangic({ v, t, oynuyor, s }: SahneProps) {
           <text x={BASLA[b] + 3} y={102} fontSize={10.5} fontWeight={800} fill={B.renk}>başladı</text>
         </g>
       )}
-      <circle cx={x} cy={62} r={7} fill={B.renk} stroke="#fff" strokeWidth={1.5} />
+      <circle cx={x} cy={62} r={7} fill={B.renk} stroke="var(--surface)" strokeWidth={1.5} />
       <g>
         {boncuk.map((bx, i) => (
           <g key={i}>
@@ -250,8 +250,8 @@ function Ph({ v }: SahneProps) {
       <text x={X(3.3)} y={Y(0.85)} fontSize={11} fontWeight={800} fill={KIRMIZI}>pepsin</text>
       <text x={X(6.7)} y={Y(0.85)} fontSize={11} fontWeight={800} fill={MAVI} textAnchor="end">tripsin</text>
       <line x1={X(ph)} x2={X(ph)} y1={44} y2={160} stroke="var(--ink)" strokeWidth={1.5} strokeDasharray="4 3" />
-      <circle cx={X(ph)} cy={Y(pe)} r={5} fill={KIRMIZI} stroke="#fff" strokeWidth={1.5} />
-      <circle cx={X(ph)} cy={Y(tr)} r={5} fill={MAVI} stroke="#fff" strokeWidth={1.5} />
+      <circle cx={X(ph)} cy={Y(pe)} r={5} fill={KIRMIZI} stroke="var(--surface)" strokeWidth={1.5} />
+      <circle cx={X(ph)} cy={Y(tr)} r={5} fill={MAVI} stroke="var(--surface)" strokeWidth={1.5} />
       <text x={170} y={208} fontSize={12.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">
         pH {ph}: pepsin %{Math.round(pe * 100)}, tripsin %{Math.round(tr * 100)}
       </text>
@@ -345,7 +345,7 @@ function Villus({ v }: SahneProps) {
       {k >= 3 && (
         <g>
           <line x1={175} y1={duvar(175) - 18} x2={248} y2={66} stroke="var(--muted)" strokeWidth={1} strokeDasharray="3 3" />
-          <circle cx={278} cy={56} r={40} fill="#fff" stroke="var(--ink)" strokeWidth={1.5} />
+          <circle cx={278} cy={56} r={40} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.5} />
           <rect x={252} y={58} width={52} height={30} rx={3} fill={KIRMIZI} fillOpacity={0.25} stroke={KIRMIZI} />
           {Array.from({ length: 12 }, (_, i) => <rect key={i} x={253 + i * 4.3} y={42} width={2.6} height={16} rx={1.3} fill={KIRMIZI} fillOpacity={0.7} />)}
           <text x={278} y={71} fontSize={9} fontWeight={700} fill="var(--ink)" textAnchor="middle">epitel</text>
@@ -462,12 +462,12 @@ function Dolasim({ t, oynuyor, s }: SahneProps) {
       <rect x={110} y={180} width={120} height={26} rx={10} fill={KIRMIZI} fillOpacity={0.06} stroke="var(--muted)" strokeWidth={1.2} />
       {oda.map((d) => (
         <g key={d.a + d.b}>
-          <rect x={d.x} y={d.y} width={44} height={d.b === "kulakçık" ? 30 : 36} rx={6} fill="#fff" stroke="var(--ink)" strokeWidth={1.5} />
+          <rect x={d.x} y={d.y} width={44} height={d.b === "kulakçık" ? 30 : 36} rx={6} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.5} />
           <text x={d.x + 22} y={d.y + 13} fontSize={9} fontWeight={700} fill="var(--ink)" textAnchor="middle">{d.a}</text>
           <text x={d.x + 22} y={d.y + 24} fontSize={9} fontWeight={700} fill="var(--ink)" textAnchor="middle">{d.b}</text>
         </g>
       ))}
-      {u > 0 && u < 1 && <circle cx={kan[0]} cy={kan[1]} r={7} fill={kanRenk(o)} stroke="#fff" strokeWidth={2} />}
+      {u > 0 && u < 1 && <circle cx={kan[0]} cy={kan[1]} r={7} fill={kanRenk(o)} stroke="var(--surface)" strokeWidth={2} />}
       <g fontSize={10} fontWeight={700} fill="var(--muted)">
         <text x={170} y={28} textAnchor="middle" fill="var(--ink)">akciğerler</text>
         <text x={170} y={192} textAnchor="middle" fill="var(--ink)">vücut dokuları</text>
@@ -538,7 +538,7 @@ function Kapak({ v, t, oynuyor, s }: SahneProps) {
       </g>
       {damla.map((d, i) => {
         const [x, y] = noktaAl(yol(d, sirasi[i]), akis);
-        return <circle key={i} cx={x} cy={y} r={5} fill={KIRMIZI} stroke="#fff" strokeWidth={1} />;
+        return <circle key={i} cx={x} cy={y} r={5} fill={KIRMIZI} stroke="var(--surface)" strokeWidth={1} />;
       })}
       <g fontSize={10.5} fontWeight={700} fill="var(--muted)">
         <text x={150} y={46} textAnchor="middle">kulakçık</text>
@@ -619,7 +619,7 @@ function Kan({ v }: SahneProps) {
   return (
     <svg viewBox="0 0 340 196" role="img" aria-label={`${k.ad}: ${k.s.join(", ")}`}>
       <rect x={40} y={20} width={40} height={88} fill={SARI} fillOpacity={0.35} />
-      <rect x={40} y={108} width={40} height={3} fill="#fff" />
+      <rect x={40} y={108} width={40} height={3} fill="var(--surface)" />
       <path d="M40 111 L80 111 L80 168 Q80 182 60 182 Q40 182 40 168 Z" fill={KIRMIZI} fillOpacity={0.85} />
       <path d="M40 14 L40 168 Q40 182 60 182 Q80 182 80 168 L80 14" fill="none" stroke="var(--ink)" strokeWidth={1.8} />
       <rect x={37} y={18} width={46} height={92} fill="none" stroke={vurgu(0)} strokeWidth={2} strokeDasharray="4 3" />
@@ -643,7 +643,7 @@ function Kan({ v }: SahneProps) {
         {h === 1 && (
           <g>
             <ellipse cx={0} cy={0} rx={34} ry={22} fill={KIRMIZI} />
-            <ellipse cx={0} cy={0} rx={15} ry={9} fill="#fff" fillOpacity={0.35} />
+            <ellipse cx={0} cy={0} rx={15} ry={9} fill="var(--surface)" fillOpacity={0.35} />
           </g>
         )}
         {h === 2 && (
@@ -694,8 +694,8 @@ function Damar({ v }: SahneProps) {
       <polyline points={DAMAR.map((x, i) => `${X(i)},${Y(x.h)}`).join(" ")} fill="none" stroke={MAVI} strokeWidth={2.5} />
       {DAMAR.map((x, i) => (
         <g key={i}>
-          <circle cx={X(i)} cy={Y(x.b)} r={i === d ? 5 : 3.5} fill={KIRMIZI} stroke="#fff" strokeWidth={1.2} />
-          <circle cx={X(i)} cy={Y(x.h)} r={i === d ? 5 : 3.5} fill={MAVI} stroke="#fff" strokeWidth={1.2} />
+          <circle cx={X(i)} cy={Y(x.b)} r={i === d ? 5 : 3.5} fill={KIRMIZI} stroke="var(--surface)" strokeWidth={1.2} />
+          <circle cx={X(i)} cy={Y(x.h)} r={i === d ? 5 : 3.5} fill={MAVI} stroke="var(--surface)" strokeWidth={1.2} />
           {x.ad.map((a, j) => (
             <text key={j} x={X(i)} y={164 + j * 12} fontSize={10} fontWeight={i === d ? 800 : 600} fill={i === d ? "var(--ink)" : "var(--muted)"} textAnchor="middle">{a}</text>
           ))}

@@ -20,7 +20,7 @@ function Cekirdek({ p, n, x = CX, y = CY, r = 4.4, dokun }: { p: number; n: numb
         const a = i * 2.39996, d = r * 1.05 * Math.sqrt(i);
         return (
           <circle
-            key={i} cx={x + d * Math.cos(a)} cy={y + d * Math.sin(a)} r={r} fill={k === "p" ? "var(--c2)" : "#9aa8ba"} stroke="#fff" strokeWidth={0.8}
+            key={i} cx={x + d * Math.cos(a)} cy={y + d * Math.sin(a)} r={r} fill={k === "p" ? "var(--c2)" : "#9aa8ba"} stroke="var(--surface)" strokeWidth={0.8}
             onClick={dokun ? () => dokun(k as "p" | "n") : undefined} style={dokun ? { cursor: "pointer" } : undefined}
           />
         );
@@ -54,7 +54,7 @@ function Atom({ s, v, set }: SahneProps) {
               const a = (-90 + (j * 360) / c + i * 17) * (Math.PI / 180);
               return (
                 <circle
-                  key={j} cx={CX + R[i] * Math.cos(a)} cy={CY + R[i] * Math.sin(a)} r={dokunmali ? 6.5 : 5} fill="var(--c1)" stroke="#fff" strokeWidth={1.2}
+                  key={j} cx={CX + R[i] * Math.cos(a)} cy={CY + R[i] * Math.sin(a)} r={dokunmali ? 6.5 : 5} fill="var(--c1)" stroke="var(--surface)" strokeWidth={1.2}
                   onClick={dokunmali ? () => degistir("e", -1) : undefined} style={dokunmali ? { cursor: "pointer" } : undefined}
                 />
               );
@@ -96,10 +96,10 @@ function Atom({ s, v, set }: SahneProps) {
               onClick={() => degistir(k, 1)}
               onKeyDown={(ev) => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); degistir(k, 1); } }}
             >
-              <rect x={8 + i * 112} y={232} width={100} height={36} rx={18} fill="#fff" stroke={renk} strokeWidth={2} />
+              <rect x={8 + i * 112} y={232} width={100} height={36} rx={18} fill="var(--surface)" stroke={renk} strokeWidth={2} />
               {!dokundu && <rect x={8 + i * 112} y={232} width={100} height={36} rx={18} fill="none" stroke="var(--acc)" strokeWidth={2} className="ad-nabiz ad-nabiz-hafif" />}
               <circle cx={30 + i * 112} cy={250} r={8} fill={renk} />
-              <text x={30 + i * 112} y={254} fontSize={12} fontWeight={800} fill="#fff" textAnchor="middle">+</text>
+              <text x={30 + i * 112} y={254} fontSize={12} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">+</text>
               <text x={44 + i * 112} y={255} fontSize={13} fontWeight={700} fill="var(--ink)">{ad}</text>
             </g>
           ))}
@@ -134,7 +134,7 @@ function AtomOlcek({ t, oynuyor }: SahneProps) {
         return <circle key={i} cx={170 + bulut * 0.92 * Math.cos(a)} cy={110 + bulut * 0.92 * Math.sin(a)} r={4.5} fill="var(--c1)" />;
       })}
       {rc < 3 ? <circle cx={170} cy={110} r={Math.max(rc, 1.2)} fill="var(--c2)" /> : <Cekirdek p={3} n={4} x={170} y={110} r={rc / 3.1} />}
-      <rect x={10} y={10} width={320} height={26} rx={8} fill="#fff" opacity={0.9} />
+      <rect x={10} y={10} width={320} height={26} rx={8} fill="var(--surface)" opacity={0.9} />
       <text x={170} y={28} fontSize={12.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">
         {u < 0.25 ? "Lityum atomu: çapı yaklaşık 0,0000000003 m" : u < 0.97 ? `Yakınlaşma: ${Math.round(k)} kat` : "Çekirdek: atomdan yaklaşık 100.000 kat küçük"}
       </text>

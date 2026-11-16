@@ -126,7 +126,7 @@ function Aksiyon({ v, t, oynuyor, s, kosular }: SahneProps) {
       <g>
         {eski.map((k, i) => <polyline key={i} points={egri(k.u ?? 0, 4)} fill="none" stroke={MOR} strokeOpacity={0.25} strokeWidth={2} />)}
         {oyn && <polyline points={egri(u, tt)} fill="none" stroke={MOR} strokeWidth={3} strokeLinejoin="round" />}
-        {oyn && <circle cx={AT(tt)} cy={AY(mv)} r={5.5} fill={KIRMIZI} stroke="#fff" strokeWidth={1.6} />}
+        {oyn && <circle cx={AT(tt)} cy={AY(mv)} r={5.5} fill={KIRMIZI} stroke="var(--surface)" strokeWidth={1.6} />}
         {!oyn && <line x1={AX0} y1={AY(-70)} x2={AX1} y2={AY(-70)} stroke={MOR} strokeWidth={2} strokeOpacity={0.5} />}
       </g>
       <text x={170} y={210} fontSize={12.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">
@@ -199,7 +199,7 @@ function Sinaps({ t, oynuyor, s }: SahneProps) {
       </g>
       <g>
         {KESE.map(([x, y], i) => (
-          <circle key={i} cx={ara(x, 140 + i * 15, kes)} cy={ara(y, 92, kes)} r={9} fill="#fff" stroke={MOR} strokeWidth={1.4} opacity={1 - yay} />
+          <circle key={i} cx={ara(x, 140 + i * 15, kes)} cy={ara(y, 92, kes)} r={9} fill="var(--surface)" stroke={MOR} strokeWidth={1.4} opacity={1 - yay} />
         ))}
       </g>
       <g>
@@ -269,7 +269,7 @@ function Refleks({ t, oynuyor, s }: SahneProps) {
         <ellipse cx={140} cy={e - 4} rx={18} ry={8} fill={KIRMIZI} fillOpacity={kasIs ? 0.55 : 0.25} />
       </g>
       <g>
-        <circle cx={262} cy={140} r={22} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
+        <circle cx={262} cy={140} r={22} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
         <path d="M250 130 Q262 138 274 130 L270 150 Q262 144 254 150 Z" fill="var(--line-2)" />
         <text x={262} y={178} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">omurilik</text>
         <ellipse cx={290} cy={32} rx={34} ry={18} fill={MOR} fillOpacity={0.12} stroke={MOR} strokeWidth={1.6} />
@@ -289,7 +289,7 @@ function Refleks({ t, oynuyor, s }: SahneProps) {
           </g>
         ))}
       </g>}
-      {sinyal && <circle cx={sinyal[0]} cy={sinyal[1]} r={5.5} fill={u < 0.25 ? MAVI : u < 0.33 ? SARI : KIRMIZI} stroke="#fff" strokeWidth={1.5} />}
+      {sinyal && <circle cx={sinyal[0]} cy={sinyal[1]} r={5.5} fill={u < 0.25 ? MAVI : u < 0.33 ? SARI : KIRMIZI} stroke="var(--surface)" strokeWidth={1.5} />}
       {beyinS && <circle cx={beyinS[0]} cy={beyinS[1]} r={4.5} fill="var(--muted)" />}
       <g fontSize={12} fontWeight={800}>
         {kalk >= 1 && <text className="ad-belir" x={20} y={30} fill={YESIL}>1. El çekildi</text>}
@@ -316,7 +316,7 @@ function Otonom({ v }: SahneProps) {
         <text x={86} y={164} fontSize={11.5} fill="var(--muted)" textAnchor="middle">{sem ? "≈ 110 atım/dk" : "≈ 65 atım/dk"}</text>
       </g>
       <g>
-        <ellipse cx={170} cy={88} rx={34} ry={20} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
+        <ellipse cx={170} cy={88} rx={34} ry={20} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
         <circle cx={170} cy={88} r={15} fill={MAVI} fillOpacity={0.6} />
         <circle cx={170} cy={88} r={sem ? 10 : 4.5} fill="var(--ink)" />
         <text x={170} y={146} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">göz bebeği</text>
@@ -353,7 +353,7 @@ function Hedef({ t, oynuyor, s }: SahneProps) {
           const yanit = h.uy && in_ >= 1;
           return (
             <g key={i}>
-              <circle cx={h.x} cy={160} r={30} fill={yanit ? YESIL : "#fff"} fillOpacity={yanit ? 0.22 : 1} stroke={yanit ? YESIL : "var(--ink)"} strokeWidth={1.6} />
+              <circle cx={h.x} cy={160} r={30} fill={yanit ? YESIL : "var(--surface)"} fillOpacity={yanit ? 0.22 : 1} stroke={yanit ? YESIL : "var(--ink)"} strokeWidth={1.6} />
               {h.uy ? (
                 <path d={`M${h.x - 8} 124 L${h.x} 134 L${h.x + 8} 124`} fill="none" stroke={YESIL} strokeWidth={3} strokeLinejoin="round" />
               ) : (
@@ -459,7 +459,7 @@ function Insulin({ v, t, oynuyor, s }: SahneProps) {
         {[1, 2, 3].map((x) => <text key={x} x={ST(x)} y={196} textAnchor={x === 3 ? "end" : "middle"}>{x} saat</text>)}
       </g>
       {u > 0 && <polyline points={pts} fill="none" stroke={ins ? MOR : KIRMIZI} strokeWidth={3} strokeLinejoin="round" />}
-      {u > 0 && <circle cx={ST(h)} cy={SY(seker(h, ins))} r={5.5} fill={ins ? MOR : KIRMIZI} stroke="#fff" strokeWidth={1.6} />}
+      {u > 0 && <circle cx={ST(h)} cy={SY(seker(h, ins))} r={5.5} fill={ins ? MOR : KIRMIZI} stroke="var(--surface)" strokeWidth={1.6} />}
       <text x={170} y={220} fontSize={12.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">
         {u <= 0 ? (ins ? "β hücreleri insülin salgılayacak. Oynat." : "İnsülin salgılanmıyor. Oynat.") : `${deger} mg/dL · ${ins ? "insülin: hücreler glikoz alıyor" : "insülin yok: glikoz kanda kalıyor"}`}
       </text>
@@ -476,7 +476,7 @@ function Pankreas({ v }: SahneProps) {
   return (
     <svg viewBox="0 0 340 230" role="img" aria-label={`Kan şekeri ${mg} mg/dL: ${yuksek ? "insülin salgılanıyor" : dusuk ? "glukagon salgılanıyor" : "denge"}`}>
       <g>
-        <rect x={30} y={30} width={22} height={160} rx={11} fill="#fff" stroke="var(--ink)" strokeWidth={1.4} />
+        <rect x={30} y={30} width={22} height={160} rx={11} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.4} />
         <rect x={31} y={186 - ((110 - 40) / 160) * 150} width={20} height={((110 - 70) / 160) * 150} fill={YESIL} fillOpacity={0.25} />
         <rect x={31} y={sinir(y, 32, 188)} width={20} height={Math.max(0, 189 - sinir(y, 32, 188))} rx={9} fill={KIRMIZI} fillOpacity={0.55} />
         <text x={41} y={210} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{mg}</text>
@@ -487,8 +487,8 @@ function Pankreas({ v }: SahneProps) {
         <ellipse cx={150} cy={70} rx={50} ry={28} fill={SARI} fillOpacity={0.15} stroke={SARI} strokeWidth={1.6} />
         <circle cx={132} cy={70} r={12} fill={MAVI} fillOpacity={yuksek ? 0.75 : 0.2} />
         <circle cx={168} cy={70} r={12} fill={MOR} fillOpacity={dusuk ? 0.75 : 0.2} />
-        <text x={132} y={74} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">β</text>
-        <text x={168} y={74} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">α</text>
+        <text x={132} y={74} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">β</text>
+        <text x={168} y={74} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">α</text>
         <text x={150} y={30} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">Langerhans adacığı</text>
       </g>
       <g>

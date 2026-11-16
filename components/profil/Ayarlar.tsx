@@ -6,6 +6,7 @@ import { girisYap } from "@/lib/puan";
 import { resetAll, setAd } from "@/lib/store";
 import { animSes, animSesAyarla, ses, sesAyarla, useAnimSesAcik, useSesAcik } from "@/lib/ses";
 import { oyunAyarla, useOyunAcik } from "@/lib/oyun";
+import { temaAyarla, useTema, type Tema } from "@/lib/tema";
 import { ABONELIK } from "@/lib/abonelik";
 import { bildirimGonder } from "@/lib/bildirim";
 import { olay } from "@/lib/olay";
@@ -51,7 +52,7 @@ export default function Ayarlar() {
                 </DialogDescription>
                 {silHata && <p role="alert" className="text-[14px] font-medium text-bad">Hesap silinemedi. İnternet bağlantını kontrol edip yeniden dene.</p>}
                 <div className="mt-2 grid gap-2">
-                  <Button className="bg-bad text-white hover:bg-bad/90" disabled={cikiyor} onClick={async () => { setCikiyor(true); setSilHata(!(await hesabiSil(temizle))); setCikiyor(false); }}>
+                  <Button className="bg-bad text-[var(--on-btn)] hover:bg-bad/90" disabled={cikiyor} onClick={async () => { setCikiyor(true); setSilHata(!(await hesabiSil(temizle))); setCikiyor(false); }}>
                     {cikiyor ? "Siliniyor..." : "Evet, hesabımı sil"}
                   </Button>
                   <DialogClose asChild><Button variant="ghost">Vazgeç</Button></DialogClose>
@@ -68,6 +69,9 @@ export default function Ayarlar() {
             </div>
           </div>
         )}
+      </Bolum>
+      <Bolum title="Görünüm">
+        <TemaSecici />
       </Bolum>
       <Bolum title="Ders">
         <div className="grid gap-2">
@@ -112,7 +116,7 @@ export default function Ayarlar() {
             <div className="mt-2 grid gap-2">
               <DialogClose asChild>
                 <Button
-                  className="bg-bad text-white hover:bg-bad/90"
+                  className="bg-bad text-[var(--on-btn)] hover:bg-bad/90"
                   onClick={() => {
                     resetAll();
                     // Sıfırlama yeni bir başlangıç: bugünün görevleri hemen yeniden kurulur, giriş puanı yeniden verilir.
@@ -231,8 +235,8 @@ function Anahtar({ acik, ayarla, baslik, metin }: { acik: boolean; ayarla: (v: b
         <b className="block font-semibold leading-snug">{baslik}</b>
         <span className="block text-[13px] text-muted-foreground">{metin}</span>
       </span>
-      <i aria-hidden="true" className={`relative h-7 w-[46px] flex-none rounded-full transition-colors ${acik ? "bg-acc" : "bg-secondary"}`}>
-        <i className={`absolute top-[3px] left-[3px] size-[22px] rounded-full bg-white shadow transition-transform ${acik ? "translate-x-[18px]" : ""}`} />
+      <i aria-hidden="true" className={`relative h-7 w-[46px] flex-none rounded-full transition-colors ${acik ? "bg-primary" : "bg-border-strong"}`}>
+        <i className={`absolute top-[3px] left-[3px] size-[22px] rounded-full bg-card shadow transition-transform ${acik ? "translate-x-[18px]" : ""}`} />
       </i>
     </button>
   );
@@ -257,4 +261,26 @@ function SesAnahtari() {
 function OyunAnahtari() {
   const acik = useOyunAcik();
   return <Anahtar acik={acik} ayarla={oyunAyarla} baslik="Puan, seri ve kutlamalar" metin="Kapatırsan puan, seri, lig ve konfeti görünmez" />;
+}
+
+const TEMALAR: [Tema, string][] = [["sistem", "Telefona göre"], ["acik", "Açık"], ["koyu", "Koyu"]];
+
+/** Açık "deney defteri", koyu "karanlık oda" ya da telefonun ayarı. */
+function TemaSecici() {
+  const t = useTema();
+  return (
+    <div role="radiogroup" aria-label="Görünüm" className="grid grid-cols-3 gap-1 rounded-xl border border-border bg-card p-1">
+      {TEMALAR.map(([k, ad]) => (
+        <button
+          key={k}
+          role="radio"
+          aria-checked={t === k}
+          onClick={() => temaAyarla(k)}
+          className={`h-10 rounded-lg text-[14px] font-semibold transition-colors ${t === k ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
+        >
+          {ad}
+        </button>
+      ))}
+    </div>
+  );
 }

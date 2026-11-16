@@ -39,8 +39,8 @@ export const X = (m: number) => X0 + m * PX;
 export function Yol({ y, etiket = true }: { y: number; etiket?: boolean }) {
   return (
     <g>
-      <rect x={X0 - 14} y={y} width={50 * PX + 28} height={ROAD_H} rx={8} fill="#e6ebf2" />
-      <line x1={X0 - 6} x2={X(50) + 6} y1={y + ROAD_H / 2} y2={y + ROAD_H / 2} stroke="#fff" strokeWidth={2} strokeDasharray="8 7" />
+      <rect x={X0 - 14} y={y} width={50 * PX + 28} height={ROAD_H} rx={8} fill="var(--panel)" />
+      <line x1={X0 - 6} x2={X(50) + 6} y1={y + ROAD_H / 2} y2={y + ROAD_H / 2} stroke="var(--surface)" strokeWidth={2} strokeDasharray="8 7" />
       {etiket &&
         [0, 10, 20, 30, 40, 50].map((m) => (
           <g key={m}>
@@ -58,7 +58,7 @@ export function Araba({ x, y, renk = "var(--fizik)", soluk = false, ters = false
   return (
     <g transform={`translate(${x} ${y}) scale(${(ters ? -1 : 1) * olcek} ${olcek})`} opacity={soluk ? 0.22 : 1}>
       <path d="M-18 -4 L-18 -11 Q-18 -14 -15 -14 L-8 -14 L-3 -21 L8 -21 Q11 -21 12 -18 L14 -14 L16 -14 Q19 -14 19 -11 L19 -4 Z" fill={renk} />
-      <path d="M-5 -14 L-1 -19 L4 -19 L4 -14 Z M6 -19 L9 -19 L11 -14 L6 -14 Z" fill="#fff" opacity={0.85} />
+      <path d="M-5 -14 L-1 -19 L4 -19 L4 -14 Z M6 -19 L9 -19 L11 -14 L6 -14 Z" fill="var(--surface)" opacity={0.85} />
       <circle cx={-10} cy={-4} r={4.6} fill="var(--ink)" />
       <circle cx={11} cy={-4} r={4.6} fill="var(--ink)" />
       <circle cx={-10} cy={-4} r={1.7} fill="#cfd8e3" />
@@ -85,7 +85,7 @@ export function Balon({ x, y, yazi, renk = "var(--ink)" }: { x: number; y: numbe
     <g transform={`translate(${x} ${y})`}>
       <rect x={-w / 2} y={-22} width={w} height={22} rx={7} fill={renk} />
       <path d="M-5 0 L0 6 L5 0 Z" fill={renk} />
-      <text y={-7} fontSize={12} fontWeight={700} fill="#fff" textAnchor="middle">{yazi}</text>
+      <text y={-7} fontSize={12} fontWeight={700} fill="var(--on-btn)" textAnchor="middle">{yazi}</text>
     </g>
   );
 }

@@ -245,7 +245,7 @@ function Ray({ v }: SahneProps) {
     <svg viewBox="0 0 340 236" role="img" aria-label={`Sıcaklık ${dT} derece arttı, ray ${say(dL)} milimetre uzadı`}>
       <path d={`M10 ${Y} Q${(10 + sol) / 2} ${Y - g} ${sol} ${Y}`} fill="none" stroke="#9aa8ba" strokeWidth={16} />
       <path d={`M${sag} ${Y} Q${(sag + 330) / 2} ${Y - g} 330 ${Y}`} fill="none" stroke="#9aa8ba" strokeWidth={16} />
-      {bosluk <= 0 && <line x1={ORTA} x2={ORTA} y1={Y - 8} y2={Y + 8} stroke="#fff" strokeWidth={1.5} />}
+      {bosluk <= 0 && <line x1={ORTA} x2={ORTA} y1={Y - 8} y2={Y + 8} stroke="var(--surface)" strokeWidth={1.5} />}
       <g fill="var(--ink)" opacity={0.65}>
         {[40, 90, 250, 300].map((x) => <rect key={x} x={x - 4} y={Y + 10} width={8} height={18} rx={2} />)}
       </g>

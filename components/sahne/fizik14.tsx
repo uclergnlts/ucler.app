@@ -28,8 +28,8 @@ function Cekirdek({ x, y, p, n, r = 8 }: { x: number; y: number; p: number; n: n
     <g>
       {toplar.reverse().map((b, i) => (
         <g key={i}>
-          <circle cx={b.cx} cy={b.cy} r={r} fill={b.proton ? PROTON : NOTRON} stroke="#fff" strokeWidth={1.4} />
-          {b.proton && <text x={b.cx} y={b.cy + 4} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">+</text>}
+          <circle cx={b.cx} cy={b.cy} r={r} fill={b.proton ? PROTON : NOTRON} stroke="var(--surface)" strokeWidth={1.4} />
+          {b.proton && <text x={b.cx} y={b.cy + 4} fontSize={11} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">+</text>}
         </g>
       ))}
     </g>
@@ -111,7 +111,7 @@ function Kuvvet({ v }: SahneProps) {
       {[x1, x2].map((x, i) => (
         <g key={i}>
           <circle cx={x} cy={Y} r={12} fill={PROTON} />
-          <text x={x} y={Y + 5} fontSize={14} fontWeight={800} fill="#fff" textAnchor="middle">+</text>
+          <text x={x} y={Y + 5} fontSize={14} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">+</text>
         </g>
       ))}
       <text x={cx} y={Y + 46} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">aralarında {say(r)} fm (1 fm = 10⁻¹⁵ m)</text>
@@ -158,7 +158,7 @@ function Kutle({ t, oynuyor, s }: SahneProps) {
       {kefe(lx, ly, (
         <g>
           {[[-22, PROTON], [-8, NOTRON], [8, PROTON], [22, NOTRON]].map(([dx, c], i) => (
-            <circle key={i} cx={lx + Number(dx)} cy={ly + 50} r={6.5} fill={String(c)} stroke="#fff" strokeWidth={1.2} />
+            <circle key={i} cx={lx + Number(dx)} cy={ly + 50} r={6.5} fill={String(c)} stroke="var(--surface)" strokeWidth={1.2} />
           ))}
         </g>
       ), bitti ? `${say(AYRI, 5)} u` : "ayrı 2p + 2n")}
@@ -203,7 +203,7 @@ function Egri({ v }: SahneProps) {
       <path d={yol(EGRI.map(([a, e]) => [gx(a), gy(e)]))} fill="none" stroke="var(--c1)" strokeWidth={2.4} strokeLinejoin="round" />
       {EGRI.map(([a, e]) => <circle key={a} cx={gx(a)} cy={gy(e)} r={2.6} fill="var(--c1)" />)}
       <line x1={gx(A)} x2={gx(A)} y1={gy(E)} y2={GY} stroke="var(--ink)" strokeWidth={1.2} strokeDasharray="3 3" />
-      <circle cx={gx(A)} cy={gy(E)} r={7} fill={tepe ? "var(--c3)" : "var(--ink)"} stroke="#fff" strokeWidth={2} />
+      <circle cx={gx(A)} cy={gy(E)} r={7} fill={tepe ? "var(--c3)" : "var(--ink)"} stroke="var(--surface)" strokeWidth={2} />
     </svg>
   );
 }
@@ -339,7 +339,7 @@ function YariOmur({ v }: SahneProps) {
       <text x={GX - 30} y={GY - GH - 8} fontSize={10.5} fill="var(--muted)">g</text>
       <path d={egri} fill="none" stroke="var(--c1)" strokeWidth={2.4} />
       <line x1={gx(t)} x2={gx(t)} y1={gy(N)} y2={GY} stroke="var(--ink)" strokeWidth={1.2} strokeDasharray="3 3" />
-      <circle cx={gx(t)} cy={gy(N)} r={7} fill={hedef ? "var(--c3)" : "var(--ink)"} stroke="#fff" strokeWidth={2} />
+      <circle cx={gx(t)} cy={gy(N)} r={7} fill={hedef ? "var(--c3)" : "var(--ink)"} stroke="var(--surface)" strokeWidth={2} />
     </svg>
   );
 }

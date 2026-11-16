@@ -4,6 +4,7 @@ import Tabs from "@/components/Tabs";
 import Gunluk from "@/components/Gunluk";
 import Bulut from "@/components/Bulut";
 import Yerel from "@/components/Yerel";
+import TemaIzle from "@/components/TemaIzle";
 import { UMAMI_ID } from "@/lib/olay";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
@@ -15,22 +16,32 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff",
-  colorScheme: "light",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f6f4ef" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f1114" },
+  ],
+  colorScheme: "light dark",
   viewportFit: "cover",
   width: "device-width",
   initialScale: 1,
 };
 
+// Görünüm (lib/tema.ts): React yüklenmeden önce <html data-tema> konur ki sayfa yanlış renkte yanıp sönmesin.
+const TEMA_BETIGI = `try{var t=JSON.parse(localStorage.getItem("tf-tema")||'"sistem"');var k=t==="koyu"||(t!=="acik"&&matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.dataset.tema=k?"koyu":"acik"}catch(e){}`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="tr">
+    <html lang="tr" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: TEMA_BETIGI }} />
+      </head>
       <body>
         {children}
         <Tabs />
         <Gunluk />
         <Bulut />
         <Yerel />
+        <TemaIzle />
         {UMAMI_ID && <Script src="https://cloud.umami.is/script.js" data-website-id={UMAMI_ID} strategy="afterInteractive" />}
       </body>
     </html>

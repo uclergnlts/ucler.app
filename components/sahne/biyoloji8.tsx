@@ -38,11 +38,11 @@ const DENKLEM: Atom[] = (() => {
 
 function AtomDaire({ x, y, el, isaret }: { x: number; y: number; el: string; isaret?: boolean }) {
   const r = el === "H" ? 5.5 : 8.5;
-  const renk = el === "H" ? "#fff" : el === "C" ? C_RENK : isaret ? O18 : O_RENK;
+  const renk = el === "H" ? "var(--surface)" : el === "C" ? C_RENK : isaret ? O18 : O_RENK;
   return (
     <g>
       <circle cx={x} cy={y} r={r} fill={renk} stroke={el === "H" ? "var(--line-2)" : "none"} strokeWidth={1.2} />
-      {el !== "H" && <text x={x} y={y + 3.6} fontSize={9.5} fontWeight={800} fill="#fff" textAnchor="middle">{isaret ? "O*" : el}</text>}
+      {el !== "H" && <text x={x} y={y + 3.6} fontSize={9.5} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">{isaret ? "O*" : el}</text>}
     </g>
   );
 }
@@ -126,7 +126,7 @@ function Renk({ v }: SahneProps) {
       <polyline points={nokta} fill="none" stroke={YESIL} strokeWidth={2.6} strokeLinejoin="round" />
       <g>
         <line x1={SX(l)} y1={40} x2={SX(l)} y2={150} stroke="var(--ink)" strokeWidth={1.2} strokeDasharray="4 3" />
-        <circle cx={SX(l)} cy={150 - a * 100} r={7} fill={renk(l)} stroke="#fff" strokeWidth={2} />
+        <circle cx={SX(l)} cy={150 - a * 100} r={7} fill={renk(l)} stroke="var(--surface)" strokeWidth={2} />
       </g>
       <Spektrum y={158} />
       <g fontSize={11} fill="var(--muted)">
@@ -266,7 +266,7 @@ function Sinirlayici({ v }: SahneProps) {
         })}
         <text x={GX1 + 4} y={gy(PMAX[3]) - 12} fontSize={10.5} fill="var(--muted)">CO₂</text>
       </g>
-      <circle cx={gx(L)} cy={gy(r)} r={7} fill="var(--c2)" stroke="#fff" strokeWidth={2} />
+      <circle cx={gx(L)} cy={gy(r)} r={7} fill="var(--c2)" stroke="var(--surface)" strokeWidth={2} />
       <text x={170} y={206} fontSize={12.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">
         hız: {r} · şu an sınırlayan: {neden}
       </text>
@@ -297,7 +297,7 @@ function Sicaklik({ v }: SahneProps) {
         <line x1={170} y1={170} x2={312} y2={170} stroke="var(--ink)" strokeWidth={1.4} />
         <line x1={170} y1={50} x2={170} y2={170} stroke="var(--ink)" strokeWidth={1.4} />
         <polyline points={nokta} fill="none" stroke={YESIL} strokeWidth={2.4} />
-        <circle cx={170 + s * 2.8} cy={170 - r * 2.6} r={6} fill="var(--c2)" stroke="#fff" strokeWidth={2} />
+        <circle cx={170 + s * 2.8} cy={170 - r * 2.6} r={6} fill="var(--c2)" stroke="var(--surface)" strokeWidth={2} />
         <text x={176} y={46} fontSize={11} fontWeight={700} fill="var(--ink)">kabarcık / dk</text>
         <g fontSize={10.5} fill="var(--muted)" textAnchor="middle">
           <text x={170} y={186}>0</text>

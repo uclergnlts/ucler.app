@@ -76,7 +76,7 @@ function Homolog({ v }: SahneProps) {
   ];
   return (
     <svg viewBox="0 0 340 250" role="img" aria-label={es ? "Homolog kromozomlar yan yana: iki tetrat" : "Diploit hücre: iki homolog çift, ayrı ayrı"}>
-      <ellipse cx={170} cy={126} rx={150} ry={100} fill="#f4f8fc" stroke="var(--ink)" strokeWidth={1.6} />
+      <ellipse cx={170} cy={126} rx={150} ry={100} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
       <g key={String(es)} className="ad-belir">
         {KR.map((k, i) => <Kr key={i} x={es ? k.e[0] : k.d[0]} y={es ? k.e[1] : k.d[1]} boy={k.boy} renk={k.renk} aci={es ? 0 : k.d[2]} />)}
         {es && (
@@ -189,15 +189,15 @@ function Mayoz({ s, t, oynuyor }: SahneProps) {
     <svg viewBox="0 0 340 262" role="img" aria-label={basladi ? `${e.ad}: ${e.not}` : "Mayoz başlamadan: 2n = 4, DNA eşlenmiş"}>
       {/* zar */}
       {bog1 < 1 ? (
-        <path d={zar(170, CY, 152, 96, bog1)} fill="#f4f8fc" stroke="var(--ink)" strokeWidth={1.6} />
+        <path d={zar(170, CY, 152, 96, bog1)} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
       ) : (
         [90, 250].map((cx) => (
           bog2 < 1 ? (
-            <path key={cx} d={zar(cx, CY, 96, 74, bog2)} transform={`rotate(90 ${cx} ${CY})`} fill="#f4f8fc" stroke="var(--ink)" strokeWidth={1.6} />
+            <path key={cx} d={zar(cx, CY, 96, 74, bog2)} transform={`rotate(90 ${cx} ${CY})`} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
           ) : (
             <g key={cx}>
-              <ellipse cx={cx} cy={CY - 49} rx={72} ry={45} fill="#f4f8fc" stroke="var(--ink)" strokeWidth={1.6} />
-              <ellipse cx={cx} cy={CY + 49} rx={72} ry={45} fill="#f4f8fc" stroke="var(--ink)" strokeWidth={1.6} />
+              <ellipse cx={cx} cy={CY - 49} rx={72} ry={45} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
+              <ellipse cx={cx} cy={CY + 49} rx={72} ry={45} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
             </g>
           )
         ))
@@ -339,7 +339,7 @@ function Karsilastir({ v }: SahneProps) {
   const ys = my ? [4, 54, 104, 154] : [44, 144];
   return (
     <svg viewBox="0 0 340 250" role="img" aria-label={my ? "Mayoz: 4 hücre, her birinde 2 kromozom, birbirinden farklı" : "Mitoz: 2 hücre, her birinde 4 kromozom, özdeş"}>
-      <circle cx={52} cy={110} r={40} fill="#f4f8fc" stroke="var(--ink)" strokeWidth={1.6} />
+      <circle cx={52} cy={110} r={40} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
       {[[ANNE, 30, 36, 96], [BABA, 30, 50, 96], [ANNE, 20, 62, 128], [BABA, 20, 76, 128]].map(([r, b, x, y], i) => (
         <Kr key={i} x={(x as number) - 4} y={y as number} boy={b as number} renk={r as string} tek />
       ))}
@@ -349,7 +349,7 @@ function Karsilastir({ v }: SahneProps) {
       <g key={String(my)} className="ad-belir">
         {sonuc.map((h, i) => (
           <g key={i}>
-            <ellipse cx={258} cy={ys[i] + 22} rx={56} ry={my ? 21 : 40} fill="#f4f8fc" stroke="var(--ink)" strokeWidth={1.6} />
+            <ellipse cx={258} cy={ys[i] + 22} rx={56} ry={my ? 21 : 40} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
             {h.map(([r, b, ust], j) => <Kr key={j} x={258 - ((h.length - 1) * 16) / 2 + j * 16} y={ys[i] + 22} boy={my ? b * 0.85 : b} renk={r} tek ust={[ust, null]} />)}
           </g>
         ))}

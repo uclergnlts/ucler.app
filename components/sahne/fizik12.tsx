@@ -242,7 +242,7 @@ function Cukur({ v }: SahneProps) {
       {[["F", F], ["M", 2 * F]].map(([ad, c]) => (
         <g key={ad as string}>
           <circle cx={VX - (c as number) * PX} cy={Y} r={3} fill="var(--ink)" />
-          <text x={VX - (c as number) * PX + 4} y={Y + 15} fontSize={11.5} fontWeight={800} fill="var(--ink)" stroke="#fff" strokeWidth={3} paintOrder="stroke">{ad}</text>
+          <text x={VX - (c as number) * PX + 4} y={Y + 15} fontSize={11.5} fontWeight={800} fill="var(--ink)" stroke="var(--surface)" strokeWidth={3} paintOrder="stroke">{ad}</text>
         </g>
       ))}
       {/* ayna */}
@@ -262,13 +262,13 @@ function Cukur({ v }: SahneProps) {
       {/* cisim */}
       <line x1={xo} x2={xo} y1={Y} y2={yt + 6} stroke="var(--c1)" strokeWidth={3} />
       <path d={`M${xo} ${yt} l-6 9 h12 Z`} fill="var(--c1)" />
-      <text x={xo} y={yt - 6} fontSize={11} fontWeight={700} fill="var(--c1)" textAnchor="middle" stroke="#fff" strokeWidth={3} paintOrder="stroke">cisim</text>
+      <text x={xo} y={yt - 6} fontSize={11} fontWeight={700} fill="var(--c1)" textAnchor="middle" stroke="var(--surface)" strokeWidth={3} paintOrder="stroke">cisim</text>
       {/* görüntü */}
       {sonlu && Math.abs(yi - Y) > 2 && (
         <g opacity={gercek ? 1 : 0.75}>
           <line x1={xi} x2={xi} y1={Y} y2={yi + (yi < Y ? 6 : -6)} stroke="var(--c2)" strokeWidth={3} strokeDasharray={gercek ? undefined : "5 3"} />
           <path d={yi < Y ? `M${xi} ${yi} l-6 9 h12 Z` : `M${xi} ${yi} l-6 -9 h12 Z`} fill="var(--c2)" />
-          <text x={xi} y={yi < Y ? yi - 6 : yi + 16} fontSize={11} fontWeight={700} fill="var(--c2)" textAnchor="middle" stroke="#fff" strokeWidth={3} paintOrder="stroke">görüntü</text>
+          <text x={xi} y={yi < Y ? yi - 6 : yi + 16} fontSize={11} fontWeight={700} fill="var(--c2)" textAnchor="middle" stroke="var(--surface)" strokeWidth={3} paintOrder="stroke">görüntü</text>
         </g>
       )}
       <text x={326} y={226} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="end">f = 10 cm · 1/f = 1/d<tspan fontSize={8.5} dy={3}>c</tspan><tspan dy={-3}> + 1/d</tspan><tspan fontSize={8.5} dy={3}>g</tspan></text>

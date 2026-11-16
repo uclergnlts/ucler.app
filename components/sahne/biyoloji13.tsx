@@ -305,7 +305,7 @@ function Dongu({ v }: SahneProps) {
       <text x={40} y={138} fontSize={10} fontWeight={700} fill="var(--muted)">rahim iç zarı</text>
       <polygon points={zar.join(" ")} fill={KIRMIZI} fillOpacity={0.22} stroke={KIRMIZI} strokeOpacity={0.5} />
       <line x1={X(g)} x2={X(g)} y1={22} y2={178} stroke="var(--ink)" strokeWidth={1.2} strokeDasharray="3 3" />
-      {HORMON.map((h) => <circle key={h.ad} cx={X(g)} cy={Y(h.f(g))} r={3.6} fill={h.renk} stroke="#fff" strokeWidth={1.2} />)}
+      {HORMON.map((h) => <circle key={h.ad} cx={X(g)} cy={Y(h.f(g))} r={3.6} fill={h.renk} stroke="var(--surface)" strokeWidth={1.2} />)}
       <g fontSize={9.5} fill="var(--muted)" textAnchor="middle">
         {[1, 7, 14, 21, 28].map((d) => <text key={d} x={X(d)} y={190}>{d}</text>)}
         <text x={X(28)} y={202} textAnchor="end" fontWeight={700}>gün</text>
@@ -405,7 +405,7 @@ function Embriyo({ x, y, r, evre }: { x: number; y: number; r: number; evre: num
     ];
   return (
     <g>
-      <circle cx={x} cy={y} r={r} fill={evre === 6 ? "#fff" : evre === 0 ? "var(--biyoloji-soft)" : "#fff"} stroke={YESIL} strokeWidth={r > 20 ? 1.6 : 1.1} />
+      <circle cx={x} cy={y} r={r} fill={evre === 6 ? "var(--surface)" : evre === 0 ? "var(--biyoloji-soft)" : "var(--surface)"} stroke={YESIL} strokeWidth={r > 20 ? 1.6 : 1.1} />
       {ic}
     </g>
   );
@@ -443,7 +443,7 @@ function Zigot({ t, oynuyor, s }: SahneProps) {
     <svg viewBox="0 0 340 234" role="img" aria-label="Zigot yumurta kanalında bölünerek morula ve blastosist olur, rahim iç zarına gömülür">
       {/* rahim */}
       <rect x={226} y={78} width={98} height={124} rx={42} fill={KIRMIZI} fillOpacity={0.14} stroke={KIRMIZI} strokeOpacity={0.45} />
-      <rect x={244} y={98} width={60} height={86} rx={26} fill="#fff" />
+      <rect x={244} y={98} width={60} height={86} rx={26} fill="var(--surface)" />
       <text x={275} y={216} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">rahim</text>
       {/* yumurta kanalı */}
       <polyline points={nokt(YOL_B.slice(0, 7))} fill="none" stroke="var(--panel)" strokeWidth={16} strokeLinecap="round" strokeLinejoin="round" />
@@ -495,7 +495,7 @@ function Germ({ v }: SahneProps) {
       {TABAKA.map((k, i) => (
         <circle key={k.ad} cx={cx} cy={cy} r={(k.r0 + k.r1) / 2} fill="none" stroke={k.renk} strokeWidth={k.r1 - k.r0 - 1} strokeOpacity={i === o.t ? 0.75 : 0.2} />
       ))}
-      <circle cx={cx} cy={cy} r={31} fill="#fff" />
+      <circle cx={cx} cy={cy} r={31} fill="var(--surface)" />
       <text x={cx} y={cy - 2} fontSize={9.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">ilkel</text>
       <text x={cx} y={cy + 10} fontSize={9.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">bağırsak</text>
       <line x1={ax} y1={ay} x2={196} y2={148} stroke={tb.renk} strokeWidth={1.6} />
@@ -580,7 +580,7 @@ function Dagilim({ v }: SahneProps) {
     <svg viewBox="0 0 340 232" role="img" aria-label={`${DAGILIM[tip].ad}: 24 birey, ${DAGILIM[tip].neden}`}>
       <text x={170} y={18} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">{DAGILIM[tip].ad}</text>
       <rect x={x0} y={y0} width={160} height={160} rx={10} fill="var(--panel)" stroke="var(--line-2)" />
-      {n.map(([x, y], i) => <circle key={i} cx={x0 + x} cy={y0 + y} r={4.2} fill={YESIL} stroke="#fff" strokeWidth={1} />)}
+      {n.map(([x, y], i) => <circle key={i} cx={x0 + x} cy={y0 + y} r={4.2} fill={YESIL} stroke="var(--surface)" strokeWidth={1} />)}
       <text x={170} y={204} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">Yoğunluk aynı: 24 birey / alan</text>
       <text x={170} y={222} fontSize={11.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">{DAGILIM[tip].neden}</text>
     </svg>
@@ -615,7 +615,7 @@ function JEgrisi({ v }: SahneProps) {
       </g>
       <text x={52} y={20} fontSize={10} fontWeight={700} fill="var(--muted)">bakteri sayısı</text>
       {n > 0 && <polyline points={nokt(nokta)} fill="none" stroke={YESIL} strokeWidth={2.4} strokeLinejoin="round" />}
-      {nokta.map(([x, y], k) => <circle key={k} cx={x} cy={y} r={k === n ? 5.5 : 3.4} fill={k === n ? (asti ? KIRMIZI : YESIL) : YESIL} stroke="#fff" strokeWidth={1.2} />)}
+      {nokta.map(([x, y], k) => <circle key={k} cx={x} cy={y} r={k === n ? 5.5 : 3.4} fill={k === n ? (asti ? KIRMIZI : YESIL) : YESIL} stroke="var(--surface)" strokeWidth={1.2} />)}
       <text x={px > 240 ? px - 10 : px + 10} y={py - 8} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor={px > 240 ? "end" : "start"}>{sayi(N)}</text>
       <text x={170} y={218} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
         {n}. nesil: 10 × 2{UST[n]} = {sayi(N)} bakteri
@@ -652,7 +652,7 @@ function SEgrisi({ v }: SahneProps) {
       <text x={320} y={Y(K) - 5} fontSize={10} fontWeight={700} fill={KIRMIZI} textAnchor="end">K = 1 000</text>
       <polyline points={s.join(" ")} fill="none" stroke={YESIL} strokeWidth={2.4} />
       <line x1={X(tN) - 20} x2={X(tN) + 20} y1={Y(N) + 20 * egim} y2={Y(N) - 20 * egim} stroke={MAVI} strokeWidth={2} strokeLinecap="round" />
-      <circle cx={X(tN)} cy={Y(N)} r={5} fill={MAVI} stroke="#fff" strokeWidth={1.2} />
+      <circle cx={X(tN)} cy={Y(N)} r={5} fill={MAVI} stroke="var(--surface)" strokeWidth={1.2} />
       <g fontSize={9.5} fill="var(--muted)">
         <text x={42} y={Y(0) + 3} textAnchor="end">0</text>
         <text x={42} y={Y(500) + 3} textAnchor="end">500</text>
@@ -663,7 +663,7 @@ function SEgrisi({ v }: SahneProps) {
       <line x1={46} x2={322} y1={194} y2={194} stroke="var(--ink)" strokeWidth={1.2} />
       <polyline points={p.join(" ")} fill="none" stroke={MAVI} strokeWidth={2} strokeOpacity={0.7} />
       <line x1={XN(N)} x2={XN(N)} y1={194} y2={YA(A)} stroke={MAVI} strokeDasharray="3 3" />
-      <circle cx={XN(N)} cy={YA(A)} r={5} fill={en ? KIRMIZI : MAVI} stroke="#fff" strokeWidth={1.2} />
+      <circle cx={XN(N)} cy={YA(A)} r={5} fill={en ? KIRMIZI : MAVI} stroke="var(--surface)" strokeWidth={1.2} />
       <g fontSize={9.5} fill="var(--muted)">
         <text x={50} y={142} fontWeight={700}>yıllık artış</text>
         <text x={XN(0)} y={206} textAnchor="middle">0</text>
@@ -708,7 +708,7 @@ function Faktor({ v }: SahneProps) {
             <line x1={x - 3.5} x2={x + 3.5} y1={yy + 3.5} y2={yy - 3.5} />
           </g>
         ) : (
-          <circle key={i} cx={x} cy={yy} r={4} fill={YESIL} stroke="#fff" strokeWidth={1} />
+          <circle key={i} cx={x} cy={yy} r={4} fill={YESIL} stroke="var(--surface)" strokeWidth={1} />
         ),
       )}
       <text x={262} y={20} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">Ölen oranı</text>

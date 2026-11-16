@@ -90,7 +90,7 @@ function Gecis({ s, v, t, oynuyor }: SahneProps) {
       }
       x += titre(0); y += titre(2);
       if (x < ZX) sayac.sol++; else sayac.sag++;
-      return <circle key={`${gi}-${i}`} cx={x} cy={y} r={g.r ?? 4} fill={g.renk} stroke="#fff" strokeWidth={0.8} />;
+      return <circle key={`${gi}-${i}`} cx={x} cy={y} r={g.r ?? 4} fill={g.renk} stroke="var(--surface)" strokeWidth={0.8} />;
     });
     sayimlar.push({ ad: g.ad, renk: g.renk, sol: sayac.sol, sag: sayac.sag });
     return out;
@@ -118,7 +118,7 @@ function Gecis({ s, v, t, oynuyor }: SahneProps) {
         {pompa && (
           <g>
             <rect x={ZX - 18} y={POMPA_Y - 19} width={36} height={38} rx={10} fill="var(--c5)" />
-            <text x={ZX} y={POMPA_Y + 3} fontSize={8.5} fontWeight={800} fill="#fff" textAnchor="middle">pompa</text>
+            <text x={ZX} y={POMPA_Y + 3} fontSize={8.5} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">pompa</text>
             {oynuyor && <text x={ZX + 18} y={POMPA_Y + 30} fontSize={11} fontWeight={800} fill="var(--c5)">ATP → ADP</text>}
           </g>
         )}

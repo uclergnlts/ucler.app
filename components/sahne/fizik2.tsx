@@ -62,11 +62,11 @@ function Kar({ v }: SahneProps) {
   const y = KAR + gom;
   return (
     <svg viewBox="0 0 340 254" role="img" aria-label={`Taban alanı ${say(A)} metrekare, basınç ${Math.round(P)} paskal`}>
-      <rect x={20} y={KAR} width={300} height={66} fill="#e6ebf2" />
+      <rect x={20} y={KAR} width={300} height={66} fill="var(--panel)" />
       <line x1={20} x2={320} y1={KAR} y2={KAR} stroke="var(--line-2)" strokeWidth={2} />
       <g>
         <rect x={170 - 30} y={y - 82} width={60} height={70} rx={10} fill="var(--c1)" />
-        <text x={170} y={y - 42} fontSize={14} fontWeight={800} fill="#fff" textAnchor="middle">600 N</text>
+        <text x={170} y={y - 42} fontSize={14} fontWeight={800} fill="var(--on-btn)" textAnchor="middle">600 N</text>
         <rect x={170 - w / 2} y={y - 12} width={w} height={12} rx={4} fill="var(--ink)" />
       </g>
       <Ok x1={170} y1={22} x2={170} y2={y - 88} renk="var(--c2)" />
@@ -100,7 +100,7 @@ function Derinlik({ v }: SahneProps) {
       <line x1={105} x2={105} y1={Y0} y2={Y0 + h * K} stroke="var(--fizik)" strokeWidth={1.5} strokeDasharray="4 4" />
       <g>
         <circle cx={105} cy={Y0 + h * K} r={9} fill={tam ? "var(--good)" : "var(--fizik)"} />
-        <circle cx={105} cy={Y0 + h * K} r={3.5} fill="#fff" />
+        <circle cx={105} cy={Y0 + h * K} r={3.5} fill="var(--surface)" />
       </g>
       <g fontSize={13} fontWeight={700}>
         <text x={234} y={86} fill="var(--muted)">h = {h} m</text>
@@ -346,8 +346,8 @@ function Denizalti({ v, t, oynuyor }: SahneProps) {
       <g>
         <rect x={100} y={y - 18} width={140} height={36} rx={18} fill="#7d8da3" />
         <rect x={156} y={y - 32} width={30} height={16} rx={4} fill="#7d8da3" />
-        <rect x={116} y={y - 6} width={36} height={14} rx={5} fill={dolu ? "var(--c1)" : "#fff"} opacity={dolu ? 0.85 : 0.7} />
-        <rect x={188} y={y - 6} width={36} height={14} rx={5} fill={dolu ? "var(--c1)" : "#fff"} opacity={dolu ? 0.85 : 0.7} />
+        <rect x={116} y={y - 6} width={36} height={14} rx={5} fill={dolu ? "var(--c1)" : "var(--surface)"} opacity={dolu ? 0.85 : 0.7} />
+        <rect x={188} y={y - 6} width={36} height={14} rx={5} fill={dolu ? "var(--c1)" : "var(--surface)"} opacity={dolu ? 0.85 : 0.7} />
       </g>
       {u > 0 && <>
       <Ok x1={56} y1={y - 4} x2={56} y2={y - 34} renk="var(--c3)" />
