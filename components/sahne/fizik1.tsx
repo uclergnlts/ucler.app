@@ -237,7 +237,7 @@ function Silindir({ v }: SahneProps) {
       <g>
         <rect x={84} y={ALT + 2} width={112} height={6} rx={2} fill="var(--ink)" />
         <rect x={92} y={ALT + 8} width={96} height={30} rx={6} fill="var(--ink)" />
-        <text x={140} y={ALT + 29} fontSize={15} fontWeight={800} fill="#fff" textAnchor="middle">{m} g</text>
+        <text x={140} y={ALT + 29} fontSize={15} fontWeight={800} fill="var(--bg)" textAnchor="middle">{m} g</text>
       </g>
       <g fontSize={13} fontWeight={700}>
         <text x={224} y={78} fill="var(--c1)">V = {V} cm³</text>

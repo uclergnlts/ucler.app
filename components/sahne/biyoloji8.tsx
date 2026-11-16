@@ -178,7 +178,7 @@ function Engelmann({ t, oynuyor, s }: SahneProps) {
         ))}
       </g>
       <g fontSize={11.5} fontWeight={600} fill="var(--muted)">
-        <text x={30} y={178}>yeşil iplik: alg · siyah noktalar: oksijen arayan bakteriler</text>
+        <text x={30} y={178}>yeşil iplik: alg · küçük noktalar: oksijen arayan bakteriler</text>
         {u >= 1 && <text className="ad-belir" x={30} y={198} fill="var(--ink)" fontWeight={700}>Bakteriler O₂'nin en çok üretildiği yerde.</text>}
       </g>
     </svg>

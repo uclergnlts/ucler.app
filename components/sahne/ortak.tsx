@@ -85,7 +85,7 @@ export function Balon({ x, y, yazi, renk = "var(--ink)" }: { x: number; y: numbe
     <g transform={`translate(${x} ${y})`}>
       <rect x={-w / 2} y={-22} width={w} height={22} rx={7} fill={renk} />
       <path d="M-5 0 L0 6 L5 0 Z" fill={renk} />
-      <text y={-7} fontSize={12} fontWeight={700} fill="#fff" textAnchor="middle">{yazi}</text>
+      <text y={-7} fontSize={12} fontWeight={700} fill={renk === "var(--ink)" ? "var(--bg)" : "#fff"} textAnchor="middle">{yazi}</text>
     </g>
   );
 }

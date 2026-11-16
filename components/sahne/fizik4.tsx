@@ -134,7 +134,7 @@ function Fma({ s, v, t, oynuyor, kosular }: SahneProps) {
         <rect x={px - 22} y={FMA.YOL - 36} width={44} height={26} rx={4} fill="var(--c1)" />
         <circle cx={px - 12} cy={FMA.YOL - 6} r={5.5} fill="var(--ink)" />
         <circle cx={px + 12} cy={FMA.YOL - 6} r={5.5} fill="var(--ink)" />
-        <text x={px} y={FMA.YOL - 18} fontSize={11.5} fontWeight={800} fill="#fff" textAnchor="middle">{m} kg</text>
+        <text x={px} y={FMA.YOL - 18} fontSize={11.5} fontWeight={800} fill="var(--bg)" textAnchor="middle">{m} kg</text>
         {F > 0 && <Ok x1={px + 24} y1={FMA.YOL - 23} x2={px + 24 + F * 1.6} y2={FMA.YOL - 23} renk="var(--c2)" />}
         {F > 0 && <text x={px + 24 + F * 0.8} y={FMA.YOL - 34} fontSize={12} fontWeight={800} fill="var(--c2)" textAnchor="middle">{F} N</text>}
       </g>

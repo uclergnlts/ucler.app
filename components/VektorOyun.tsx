@@ -126,7 +126,7 @@ export default function VektorOyun() {
       <section className="oyun-giris">
         <div className="bubble">
           <h2>Hedefe uç uca git</h2>
-          <p>Siyah noktadan başla. Vektör kartlarından seç; her biri bir öncekinin ucuna eklenir. Bileşke tam hedefe varmalı. Her kartı bir kez kullanabilirsin. {TUR} tur.</p>
+          <p>Başlangıç noktasından başla. Vektör kartlarından seç; her biri bir öncekinin ucuna eklenir. Bileşke tam hedefe varmalı. Her kartı bir kez kullanabilirsin. {TUR} tur.</p>
         </div>
         <button className="btn main" onClick={() => basla("cizim")}>Çizimi görerek oyna</button>
         <button className="btn" onClick={() => basla("kafadan")}>Kafadan hesapla (zor)</button>

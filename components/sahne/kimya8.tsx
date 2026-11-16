@@ -508,7 +508,7 @@ function Kalorimetre({ v }: SahneProps) {
       <path d="M54 72 L54 194 L166 194 L166 72" fill="none" stroke="var(--ink)" strokeWidth={2} />
       <rect x={34} y={58} width={152} height={12} rx={4} fill="var(--ink)" />
       <rect x={82} y={150} width={50} height={30} rx={4} fill="var(--kimya)" opacity={0.8} />
-      <text x={107} y={169} fontSize={10} fontWeight={800} textAnchor="middle" fill="#fff">tepkime</text>
+      <text x={107} y={169} fontSize={10} fontWeight={800} textAnchor="middle" fill="var(--bg)">tepkime</text>
       <Termometre x={146} ust={24} boy={130} deger={T} min={10} max={50} />
       <g fontSize={12} fontWeight={700}>
         <text x={200} y={56} fill="var(--muted)">q = <tspan fill="var(--kimya)">8,36 kJ</tspan></text>

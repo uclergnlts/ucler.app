@@ -29,7 +29,7 @@ function Bag({ a, b, n = 1, renk = "var(--ink)", renkler, kesik = false, kalin =
 function Atom({ p, el, renk }: { p: Nokta; el: string; renk?: string }) {
   const c = el === "C", h = el === "H";
   const r = c ? 14 : h ? 10 : 13;
-  const dolgu = renk ?? (c ? "var(--ink)" : h ? "var(--panel)" : "var(--c3)");
+  const dolgu = renk ?? (c ? "var(--karbon)" : h ? "var(--panel)" : "var(--c3)");
   return (
     <g>
       <circle cx={p[0]} cy={p[1]} r={r} fill={dolgu} stroke={h && !renk ? "var(--line-2)" : "none"} strokeWidth={1.2} />

@@ -76,7 +76,7 @@ function Homolog({ v }: SahneProps) {
   ];
   return (
     <svg viewBox="0 0 340 250" role="img" aria-label={es ? "Homolog kromozomlar yan yana: iki tetrat" : "Diploit hücre: iki homolog çift, ayrı ayrı"}>
-      <ellipse cx={170} cy={126} rx={150} ry={100} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
+      <ellipse cx={170} cy={126} rx={150} ry={100} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
       <g key={String(es)} className="ad-belir">
         {KR.map((k, i) => <Kr key={i} x={es ? k.e[0] : k.d[0]} y={es ? k.e[1] : k.d[1]} boy={k.boy} renk={k.renk} aci={es ? 0 : k.d[2]} />)}
         {es && (
@@ -131,9 +131,9 @@ function Krossing({ v }: SahneProps) {
       )}
       {XS.map((x, i) => (
         <g key={`g${i}-${k}`} fontSize={11} fontWeight={800} textAnchor="middle">
-          <circle cx={x} cy={70} r={9} fill="#fff" stroke={ustRenk[i]} strokeWidth={2} />
+          <circle cx={x} cy={70} r={9} fill="var(--surface)" stroke={ustRenk[i]} strokeWidth={2} />
           <text x={x} y={74} fill="var(--ink)">{ustGen[i]}</text>
-          <circle cx={x} cy={162} r={9} fill="#fff" stroke={altR[i]} strokeWidth={2} />
+          <circle cx={x} cy={162} r={9} fill="var(--surface)" stroke={altR[i]} strokeWidth={2} />
           <text x={x} y={166} fill="var(--ink)">{alt[i]}</text>
         </g>
       ))}
@@ -189,15 +189,15 @@ function Mayoz({ s, t, oynuyor }: SahneProps) {
     <svg viewBox="0 0 340 262" role="img" aria-label={basladi ? `${e.ad}: ${e.not}` : "Mayoz başlamadan: 2n = 4, DNA eşlenmiş"}>
       {/* zar */}
       {bog1 < 1 ? (
-        <path d={zar(170, CY, 152, 96, bog1)} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
+        <path d={zar(170, CY, 152, 96, bog1)} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
       ) : (
         [90, 250].map((cx) => (
           bog2 < 1 ? (
-            <path key={cx} d={zar(cx, CY, 96, 74, bog2)} transform={`rotate(90 ${cx} ${CY})`} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
+            <path key={cx} d={zar(cx, CY, 96, 74, bog2)} transform={`rotate(90 ${cx} ${CY})`} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
           ) : (
             <g key={cx}>
-              <ellipse cx={cx} cy={CY - 49} rx={72} ry={45} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
-              <ellipse cx={cx} cy={CY + 49} rx={72} ry={45} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
+              <ellipse cx={cx} cy={CY - 49} rx={72} ry={45} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
+              <ellipse cx={cx} cy={CY + 49} rx={72} ry={45} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
             </g>
           )
         ))
@@ -263,7 +263,7 @@ function Dagilim({ v }: SahneProps) {
           const sx = x0 + (g % 8) * W, sy = 132 + Math.floor(g / 8) * 46;
           return (
             <g key={g}>
-              <rect x={sx + 3} y={sy} width={W - 6} height={40} rx={8} fill="#fff" stroke="var(--line-2)" strokeWidth={1.2} />
+              <rect x={sx + 3} y={sy} width={W - 6} height={40} rx={8} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={1.2} />
               {Array.from({ length: n }, (_, i) => {
                 const bx = sx + W / 2 - ((n - 1) * 6) / 2 + i * 6, boy = 26 - i * 4;
                 return <line key={i} x1={bx} y1={sy + 20 - boy / 2} x2={bx} y2={sy + 20 + boy / 2} stroke={(g >> (n - 1 - i)) & 1 ? BABA : ANNE} strokeWidth={4} strokeLinecap="round" />;
@@ -339,7 +339,7 @@ function Karsilastir({ v }: SahneProps) {
   const ys = my ? [4, 54, 104, 154] : [44, 144];
   return (
     <svg viewBox="0 0 340 250" role="img" aria-label={my ? "Mayoz: 4 hücre, her birinde 2 kromozom, birbirinden farklı" : "Mitoz: 2 hücre, her birinde 4 kromozom, özdeş"}>
-      <circle cx={52} cy={110} r={40} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
+      <circle cx={52} cy={110} r={40} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
       {[[ANNE, 30, 36, 96], [BABA, 30, 50, 96], [ANNE, 20, 62, 128], [BABA, 20, 76, 128]].map(([r, b, x, y], i) => (
         <Kr key={i} x={(x as number) - 4} y={y as number} boy={b as number} renk={r as string} tek />
       ))}
@@ -349,7 +349,7 @@ function Karsilastir({ v }: SahneProps) {
       <g key={String(my)} className="ad-belir">
         {sonuc.map((h, i) => (
           <g key={i}>
-            <ellipse cx={258} cy={ys[i] + 22} rx={56} ry={my ? 21 : 40} fill="#fff" stroke="var(--ink)" strokeWidth={1.6} />
+            <ellipse cx={258} cy={ys[i] + 22} rx={56} ry={my ? 21 : 40} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
             {h.map(([r, b, ust], j) => <Kr key={j} x={258 - ((h.length - 1) * 16) / 2 + j * 16} y={ys[i] + 22} boy={my ? b * 0.85 : b} renk={r} tek ust={[ust, null]} />)}
           </g>
         ))}
@@ -405,7 +405,7 @@ function Simge({ m, f, x, y }: { m: Mod; f: Fen; x: number; y: number }) {
     const kutu = f.erkek ? <rect x={x - r} y={y - r} width={2 * r} height={2 * r} /> : <circle cx={x} cy={y} r={r} />;
     return (
       <g>
-        <g fill="#fff" stroke="var(--ink)" strokeWidth={1.6}>{kutu}</g>
+        <g fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6}>{kutu}</g>
         {f.dolu === 1 && <g fill="var(--ink)">{kutu}</g>}
         {f.dolu === 0.5 && <circle cx={x} cy={y} r={3.5} fill="var(--ink)" />}
       </g>
@@ -482,13 +482,13 @@ function Punnett(p: SahneProps) {
       <g fontSize={14} fontWeight={800} textAnchor="middle" fill="var(--ink)">
         {e2.map((a, c) => (
           <g key={`s${c}`}>
-            <circle cx={X0 + CW * c + CW / 2} cy={34} r={14} fill="#fff" stroke="var(--line-2)" strokeWidth={1.4} />
+            <circle cx={X0 + CW * c + CW / 2} cy={34} r={14} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={1.4} />
             <text x={X0 + CW * c + CW / 2} y={39}><Alel a={a} /></text>
           </g>
         ))}
         {e1.map((a, r) => (
           <g key={`r${r}`}>
-            <circle cx={X0 - 22} cy={Y0 + CH * r + CH / 2} r={14} fill="#fff" stroke="var(--line-2)" strokeWidth={1.4} />
+            <circle cx={X0 - 22} cy={Y0 + CH * r + CH / 2} r={14} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={1.4} />
             <text x={X0 - 22} y={Y0 + CH * r + CH / 2 + 5}><Alel a={a} /></text>
           </g>
         ))}
@@ -498,7 +498,7 @@ function Punnett(p: SahneProps) {
         const x = X0 + CW * h.c, y = Y0 + CH * h.r, f = fenler[k];
         return (
           <g key={k}>
-            <rect x={x} y={y} width={CW} height={CH} fill="#fff" stroke="var(--line-2)" strokeWidth={1.4} />
+            <rect x={x} y={y} width={CW} height={CH} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={1.4} />
             {gor(k) ? (
               <g className={sure ? "ad-belir" : undefined}>
                 <Simge m={m} f={f} x={x + 22} y={y + CH / 2} />
@@ -517,10 +517,10 @@ function Punnett(p: SahneProps) {
       )}
       {m === "x" && (
         <g fontSize={11} fontWeight={600} fill="var(--muted)">
-          <circle cx={20} cy={250} r={5} fill="#fff" stroke="var(--ink)" strokeWidth={1.3} /><text x={30} y={254}>kız</text>
-          <rect x={62} y={245} width={10} height={10} fill="#fff" stroke="var(--ink)" strokeWidth={1.3} /><text x={78} y={254}>oğul</text>
+          <circle cx={20} cy={250} r={5} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.3} /><text x={30} y={254}>kız</text>
+          <rect x={62} y={245} width={10} height={10} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.3} /><text x={78} y={254}>oğul</text>
           <circle cx={122} cy={250} r={5} fill="var(--ink)" /><text x={132} y={254}>renk körü</text>
-          <circle cx={204} cy={250} r={5} fill="#fff" stroke="var(--ink)" strokeWidth={1.3} /><circle cx={204} cy={250} r={1.8} fill="var(--ink)" /><text x={214} y={254}>taşıyıcı</text>
+          <circle cx={204} cy={250} r={5} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.3} /><circle cx={204} cy={250} r={1.8} fill="var(--ink)" /><text x={214} y={254}>taşıyıcı</text>
         </g>
       )}
     </svg>
