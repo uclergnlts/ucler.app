@@ -17,6 +17,18 @@
 :root[data-tema="canli"] svg.v [stroke="var(--ink)"]{stroke:none}
 :root[data-tema="canli"] .cap{background:#2a1c5e;border-color:#5a45b0}
 :root[data-tema="canli"] .head .sub,:root[data-tema="canli"] .head .sub i{--acc:#ff5d8f}
+/* Canlı görünümde yazı az, görsel çok (Üçler, 2026-11-16): başlık yok, sahne tüm ekran, altyazı küçük ve yarı saydam. */
+.tam{display:none}
+:root[data-tema="canli"] .tam{display:inline}
+:root[data-tema="canli"] .title{display:none}
+:root[data-tema="canli"] .grid{display:none}
+:root[data-tema="canli"] g.mekan{clip-path:none;transform:translate(-208px,-566px) scale(1.6)}
+:root[data-tema="canli"] .etiket{transform:translate(-40px,120px);fill:#fff;opacity:.75}
+:root[data-tema="canli"] svg.f2{transform:translateY(-60px) scale(1.22);transform-origin:540px 1000px}
+:root[data-tema="canli"] .head{top:90px;font-size:24px;z-index:2}
+:root[data-tema="canli"] .head .brand{font-size:32px}
+:root[data-tema="canli"] .cap{top:1590px;left:50%;width:auto;transform:translateX(-50%);padding:0 44px;height:92px;font-size:44px;background:rgba(18,10,51,.78);border:0;border-radius:46px;white-space:nowrap}
+:root[data-tema="canli"] .prog{top:1716px;left:330px;width:420px;height:5px;background:rgba(255,255,255,.22)}
 [data-ders="fizik"]{--acc:var(--c1)}[data-ders="kimya"]{--acc:var(--c2)}[data-ders="biyoloji"]{--acc:var(--c3)}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1080px;height:1920px;overflow:hidden}
@@ -56,7 +68,12 @@ const frames = {
   <radialGradient id="ates" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="var(--isik)" stop-opacity=".5"/><stop offset="1" stop-color="var(--isik)" stop-opacity="0"/></radialGradient>
   <clipPath id="sahneK"><rect x="0" y="560" width="1080" height="790"/></clipPath>
  </defs>
- <g clip-path="url(#sahneK)">
+ <!-- canlı görünümde sahne tüm ekranı kaplar: üstte duvar ve kiriş, altta zemin uzar -->
+ <g class="tam"><rect x="0" y="0" width="1080" height="1420" fill="var(--duvar)"/><rect x="0" y="1416" width="1080" height="504" fill="var(--zemin)"/>
+  <rect x="0" y="150" width="1080" height="44" fill="var(--zemin)" opacity=".55"/><rect x="0" y="194" width="1080" height="10" fill="var(--kink)" opacity=".25"/>
+  <g fill="var(--duvar2)"><rect x="0" y="246" width="1080" height="6"/><rect x="300" y="204" width="6" height="42"/><rect x="760" y="204" width="6" height="42"/></g>
+  <rect x="868" y="0" width="7" height="340" fill="var(--kink)"/></g>
+ <g class="mekan" clip-path="url(#sahneK)">
   <!-- duvar, taş sıraları, zemin -->
   <rect x="0" y="560" width="1080" height="680" fill="var(--duvar)"/>
   <g stroke="var(--duvar2)" stroke-width="4">
@@ -116,12 +133,14 @@ const frames = {
     return k.svg + `<path d="M${k.elO[0]} ${k.elO[1]} L610 930" stroke="var(--ahsap2)" stroke-width="11" stroke-linecap="round"/>`; })()}
  </g>
  <rect x="0" y="560" width="1080" height="790" fill="none" stroke="var(--ink)" stroke-width="5"/>
- <text x="1060" y="1392" text-anchor="end" font-family="Inter" font-weight="700" font-size="26" letter-spacing="3" fill="var(--muted)">BAĞDAT · 9. YÜZYIL</text>
+ <text x="1060" y="1392" text-anchor="end" font-family="Inter" font-weight="700" font-size="26" letter-spacing="3" fill="var(--muted)" class="etiket">BAĞDAT · 9. YÜZYIL</text>
 </svg>
 <div class="cap"><span>Dokuzuncu</span>&nbsp;<span class="on">yüzyıl,</span>&nbsp;<span>Bağdat.</span></div>
 <div class="prog"><i style="width:6%"></i></div>`,
 '2': `<div class="title">Elementi belirleyen:<br><em>proton sayısı</em></div>
-<svg class="v" viewBox="0 0 1080 1920">
+<svg class="v f2" viewBox="0 0 1080 1920">
+ <g class="tam"><circle cx="290" cy="760" r="330" fill="var(--c5)" opacity=".16"/><circle cx="790" cy="760" r="330" fill="var(--c4)" opacity=".13"/>
+  <g fill="#fff" opacity=".7"><circle cx="90" cy="420" r="4"/><circle cx="520" cy="330" r="3"/><circle cx="980" cy="470" r="4"/><circle cx="640" cy="1180" r="3"/><circle cx="150" cy="1230" r="4"/><circle cx="930" cy="1260" r="3"/><circle cx="420" cy="1290" r="3"/></g></g>
  <g transform="translate(0 -170)">
  <g fill="none" stroke="var(--line)" stroke-width="3">
   <circle cx="290" cy="930" r="90"/><circle cx="290" cy="930" r="150"/>
