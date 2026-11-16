@@ -8,7 +8,10 @@
 // yon: 1 sağa bakar, -1 sola bakar, 0 kameraya bakar.
 // tip: 'A' Çizgi (sarı kapüşonlu), 'B' Gölge (dolu siluet), 'C' Laborant (önlüklü, gözlüklü).
 (function (kok) {
-  const NAVY = '#1d3557', SARI = '#ffd95a', BEYAZ = '#ffffff', GRI = '#9aa6b6', ARKA = '#3d5a80';
+  // Renkler sayfadan değiştirilebilir: karakter.js yüklenmeden önce window.KARAKTER_RENK = { navy, sari, beyaz, gri, arka }
+  // yazılır (dikey video şablonu CSS değişkenleri verir, böylece karakter açık ve koyu temaya uyar).
+  const R0 = kok.KARAKTER_RENK || {};
+  const NAVY = R0.navy || '#1d3557', SARI = R0.sari || '#ffd95a', BEYAZ = R0.beyaz || '#ffffff', GRI = R0.gri || '#9aa6b6', ARKA = R0.arka || '#3d5a80';
   const r = d => d * Math.PI / 180;
   let sayac = 0;
 
@@ -150,7 +153,8 @@
       else if (p.agiz === 'o') k += `<ellipse cx="${mx}" cy="${my}" rx="5" ry="7" fill="${ac}"/>`;
       else if (p.agiz === 'duz') k += `<path d="M${mx - 7} ${my} h14" stroke="${ac}" stroke-width="4" stroke-linecap="round"/>`;
       else if (p.agiz === 'esneme') k += `<ellipse cx="${mx}" cy="${my + 2}" rx="8" ry="11" fill="${ac}"/>`;
-      return k;
+      // kafaStil: baş grubuna yazılan CSS (koyu temada yüzü açık, çizgileri koyu tutmak için değişkenleri yeniden tanımlar)
+      return R0.kafaStil ? `<g style="${R0.kafaStil}">${k}</g>` : k;
     }
 
     let g = `<g transform="translate(${p.x.toFixed(1)} ${p.y.toFixed(1)}) scale(${s})">`;

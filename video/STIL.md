@@ -13,6 +13,7 @@ Yerleşim (Üçler, 2026-10-16): üst bant ve başlık yukarıda, altyazı ve il
 - **Altyazı şeridi (y 1610-1720):** Kâğıt rengi kutu (`var(--surface)`), 2 px `var(--line)` kenar, 10 px köşe, Inter 800, 50 px. Ekranda 2-4 kelimelik grup (en çok 24 harf) durur, okunan kelime sarı vurgulanır. Şerit hiç yer değiştirmez; sığmazsa yazı küçülür.
 - **İlerleme çubuğu (y 1755):** İnce çizgi, ders renginde dolar.
 - **Kapanış:** "DÜŞÜN" etiketi (ders renginde) ve büyük soru (Manrope 800, 92 px), anahtar kelime sarı vurgulu.
+- **Karakter (Üçler, 2026-11-16):** Dikey videolarda deneyi yapan ve olayı anlatan kişi bizim karakterimizdir (YouTube videolarındaki Çizgi, `video/karakter/karakter.js`, tip A). Her sahnede yer alır ve seyirci gibi kenarda durmaz: deneyi kendisi yapar, göstereceği şeye eliyle uzanır ya da işaret eder. Konuşurken ağzı açıktır, soru sahnesinde düşünür. Renkleri şablondaki `window.KARAKTER_RENK` ile CSS değişkenlerinden gelir; örnek kareler `sablon/style.html` içindedir. Çocuksu jest ve abartılı mimik kullanılmaz.
 - **Renkler:** Ders renkleri uygulamadakiyle aynıdır: fizik `#2f6fd6`, kimya `#c8344f`, biyoloji `#1b8a52`. Koyu sürümde vurgu amberdir (`#f2b33d`) ve sarı fosfor yerine ince alt çizgi kullanılır. Sarı ya da amber dolgunun üstündeki yazı `var(--on-vurgu)` olur.
 
 ## Hareket
