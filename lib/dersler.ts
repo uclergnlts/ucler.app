@@ -49,7 +49,9 @@ export type Question = { q: string; e: string } & (
 );
 export type Secmeli = Extract<Question, { o: string[] }>;
 export const secmeli = (q: Question): q is Secmeli => !q.tur || q.tur === "secim";
-export type Topic = { title: string; summary: string; cards: Card[]; quiz: Question[] };
+/** Konu girişinde gösterilen gerçek olay ya da deney: yer ("1971 · Ay yüzeyi"), başlık, kısa metin. */
+export type Olay = { yer: string; h: string; p: string };
+export type Topic = { title: string; summary: string; olay?: Olay; cards: Card[]; quiz: Question[] };
 export type DersId = "fizik" | "kimya" | "biyoloji";
 /** on: ön koşul konular (aynı dersten, listede daha önce gelen id'ler). Konu haritası bunlarla çizilir. */
 export type Ders = { ad: string; yol: string; konular: { id?: string; ad: string; on?: string[]; sinav?: Sinav; unite?: string }[] };

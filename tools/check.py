@@ -119,6 +119,12 @@ for ders, topics in d.items():
     for tid, t in topics.items():
         for k in ("title", "summary", "cards", "quiz"):
             if k not in t: err(ders, tid, "eksik alan", k)
+        if "olay" in t:  # konu girişindeki gerçek olay: yer, başlık, metin
+            o = t["olay"]
+            for k in ("yer", "h", "p"):
+                if not isinstance(o.get(k), str) or not o[k].strip(): err(ders, tid, "olay: eksik alan", k)
+            if len(o.get("h", "")) > 45: err(ders, tid, "olay başlığı uzun (≤ 45 karakter)")
+            if len(o.get("p", "").split()) > 40: err(ders, tid, "olay metni uzun (≤ 40 kelime)")
         cards = t.get("cards", [])
         if not 6 <= len(cards) <= 16: err(ders, tid, "kart sayısı", len(cards), "(6-16 olmalı)")
         if cards and cards[-1].get("h") != "Özet": err(ders, tid, "son kart 'Özet' değil")

@@ -228,6 +228,13 @@ export default function Lesson({
           <Html as="p" className="text-[15px] text-muted-foreground" html={t.summary} />
           <span className="text-[14px] font-semibold text-muted-foreground">{nAsama} aşama + mini test · yaklaşık {sureDk(nKart, adimli?.adimlar.length ?? 0, nQuiz)} dk</span>
         </section>
+        {t.olay && (
+          <aside className="grid gap-1.5 border-l-2 border-mark py-0.5 pl-3.5">
+            <span className="text-[11px] font-bold tracking-[.14em] text-mark uppercase">Gerçek olay · {t.olay.yer}</span>
+            <b className="font-display text-[17px] leading-snug">{t.olay.h}</b>
+            <Html as="p" className="text-[14.5px] leading-relaxed text-muted-foreground" html={t.olay.p} />
+          </aside>
+        )}
         {eksik.length > 0 && (
           <p className="-mt-2 text-[14px] text-muted-foreground">
             Önce şuna bakman iyi olur:{" "}

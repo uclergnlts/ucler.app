@@ -31,6 +31,7 @@ Videolar ayrı bir dosyada durur: `content/videolar.json` (biçim `docs/VIDEOLAR
   quiz: [ { q: "Soru?", o: ["A","B","C","D"], a: 2, e: "Neden doğru (1-2 cümle)" } ]   // tam 4 soru; etkileşimli türler için "Konu sonu testi"
 }
 ```
+- **Gerçek olay girişi (isteğe bağlı, 2026-11-16):** Konuya `"olay": {"yer": "1971 · Ay yüzeyi", "h": "Başlık (≤ 45 karakter)", "p": "En fazla 40 kelime."}` eklenirse konu giriş ekranında "Gerçek olay" kutusu çıkar. Olay gerçek ve doğrulanmış olmalı (tarih, yer, kişi). Derste tahmin sorusu olarak sorulan sonucu önceden söylemez.
 - Son kart **"Özet"** kartıdır. Konunun 3-5 ana fikri `<br>• ` ile ayrılarak yazılır.
 - **Dil:** Sade, samimi Türkçe kullanılır ve öğrenciye "sen" diye hitap edilir. Terimin İngilizcesi ilk geçtiği yerde parantez içinde verilebilir.
 - **Doğruluk en önemli kuraldır.** Formüller, sayılar ve tarihler doğru olmalı. Uydurma bilgi olmaz.
