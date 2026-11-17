@@ -509,7 +509,7 @@ const S11b: React.FC = () => {
 const short = makeShort({
   kod: 's12',
   words: WORDS,
-  voiceLen: 21.16,
+  voiceLen: 21.55,
   tail: 0.7,
   baslik: ['PHONE FELL', 'FROM A PLANE'],
   vurgu: '#6FD3FF',

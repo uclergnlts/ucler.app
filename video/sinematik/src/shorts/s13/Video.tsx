@@ -387,7 +387,7 @@ const S9: React.FC = () => {
 const short = makeShort({
   kod: 's13',
   words: WORDS,
-  voiceLen: 18.44,
+  voiceLen: 17.18,
   tail: 0.7,
   baslik: ['ANT FALLS', 'FROM A SKYSCRAPER'],
   vurgu: '#FF9A6A',
