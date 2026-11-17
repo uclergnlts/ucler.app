@@ -10,6 +10,7 @@ import { S11, S11_FRAMES } from './shorts/s11/Video';
 import { S12, S12_FRAMES } from './shorts/s12/Video';
 import { S13, S13_FRAMES } from './shorts/s13/Video';
 import { S14, S14_FRAMES } from './shorts/s14/Video';
+import { S15, S15_FRAMES } from './shorts/s15/Video';
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -30,5 +31,6 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="S12" component={S12} durationInFrames={S12_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="S13" component={S13} durationInFrames={S13_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="S14" component={S14} durationInFrames={S14_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="S15" component={S15} durationInFrames={S15_FRAMES} fps={30} width={1080} height={1920} />
   </>
 );
