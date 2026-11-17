@@ -9,10 +9,12 @@ import { useCurrentFrame } from 'remotion';
 import type { Word } from '../../captions';
 import { fontDuz as fontFamily } from '../../fonts';
 import { INK } from '../../kit';
-import { ap, Cizgi, Kadraj, Koni, lerp, makeShort, pop, useAt, useTt, Zerre } from '../ortak';
+import { ap, Cizgi, Kadraj, Koni, lerp, makeShort, pop, useAt, useTt, Zerre, T } from '../ortak';
 import raw from './words.json';
+import rawTr from './words-tr.json';
 
 const WORDS = raw as Word[];
+const WORDS_TR = rawTr as Word[];
 const SARI = '#FFD54A';
 const CELIK = '#AEB8CC';
 
@@ -294,7 +296,7 @@ const S5: React.FC = () => {
         </Kabin>
       </g>
       <g transform={`translate(800 520) scale(${pop(t, 0.5)})`}>
-        <Etiket x={0} y={0} size={130}>1 = OK</Etiket>
+        <Etiket x={0} y={0} size={130}><T en="1 = OK" tr="1 YETER" /></Etiket>
       </g>
     </Kadraj>
   );
@@ -382,7 +384,7 @@ const S7: React.FC = () => {
         </g>
       )}
       <g transform={`translate(800 520) scale(${pop(t, bite + 0.35)})`}>
-        <Etiket x={0} y={0} size={130} renk="#3FCB6B">STOP</Etiket>
+        <Etiket x={0} y={0} size={130} renk="#3FCB6B"><T en="STOP" tr="DURDU" /></Etiket>
       </g>
     </Kadraj>
   );
@@ -544,7 +546,7 @@ const S9: React.FC = () => {
   );
 };
 
-const short = makeShort({
+const AYAR: Parameters<typeof makeShort>[0] = {
   kod: 's14',
   words: WORDS,
   voiceLen: 20.34,
@@ -578,7 +580,21 @@ const short = makeShort({
     ['pop', 'stage.', 0, 0.22],
   ],
   muzik: ['music-happy', 0.06],
-});
+};
+const short = makeShort(AYAR);
 
 export const S14 = short.Comp;
 export const S14_FRAMES = short.frames;
+
+/** Türkçe sürüm (Instagram): aynı sahneler, Türkçe ses, çapalar EN kelime -> TR kelime. */
+const shortTr = makeShort({
+  ...AYAR,
+  kod: 's14tr',
+  words: WORDS_TR,
+  voiceLen: 18.76,
+  baslik: ["ASANSÖR HALATI", "KOPARSA?"],
+  dil: 'tr',
+  esle: {"Your": "Asansörün", "You": "Ama", "First,": "Çünkü", "There": "Sekize", "each": "her", "Second,": "Kabin", "steel": "çelik", "Invented": "Bu", "The": "Mucidi", "1854.": "dörtte", "bite": "kenetlenir", "cut": "kesti", "eight,": "Sekize", "fast,": "hızlanırsa", "not#2": "yoktur", "snaps.": "koptu", "stage.": "kesti"},
+});
+export const S14TR = shortTr.Comp;
+export const S14TR_FRAMES = shortTr.frames;

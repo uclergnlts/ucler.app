@@ -11,8 +11,10 @@ import { fontDuz as fontFamily } from '../../fonts';
 import { INK } from '../../kit';
 import { ap, Cizgi, Kadraj, lerp, makeShort, pop, T, useAt, useTt, Zerre } from '../ortak';
 import raw from './words.json';
+import rawTr from './words-tr.json';
 
 const WORDS = raw as Word[];
+const WORDS_TR = rawTr as Word[];
 const SARI = '#FFD54A';
 const MOR = '#D58CFF';
 
@@ -215,7 +217,7 @@ const S2: React.FC = () => {
       <Uzum x={410} y={1210} r={140} yuz="sok" />
       <Uzum x={670} y={1210} r={140} yuz="sok" />
       <Plazma x={540} y={lerp(1100, 760, u)} r={lerp(90, 190, u)} />
-      <g transform={`translate(540 1440) scale(${pop(t, pl - 0.05)})`}>
+      <g transform={`translate(540 560) scale(${pop(t, pl - 0.05)})`}>
         <Etiket x={0} y={0} size={140} renk="#FFB8F4">
           <T en="PLASMA" tr="PLAZMA" />
         </Etiket>
@@ -280,7 +282,7 @@ const S4: React.FC = () => {
         <path d="M290 1300 H790 M290 1270 v60 M790 1270 v60" stroke="#fff" strokeWidth={10} strokeLinecap="round" />
       </g>
       <g transform={`translate(540 560) scale(${pop(t, pf)})`}>
-        <Etiket x={0} y={0} size={140}>≈ 1.5 cm</Etiket>
+        <Etiket x={0} y={0} size={140}><T en="≈ 1.5 cm" tr="≈ 1,5 cm" /></Etiket>
       </g>
     </Kadraj>
   );
@@ -503,7 +505,7 @@ const S11: React.FC = () => {
   );
 };
 
-const short = makeShort({
+const AYAR: Parameters<typeof makeShort>[0] = {
   kod: 's17',
   words: WORDS,
   voiceLen: 20.99,
@@ -538,7 +540,22 @@ const short = makeShort({
     ['ding', 'someone', 0.15, 0.2],
   ],
   muzik: ['music-happy', 0.06],
-});
+};
+const short = makeShort(AYAR);
 
 export const S17 = short.Comp;
 export const S17_FRAMES = short.frames;
+
+/** Türkçe sürüm (Instagram): aynı sahneler, Türkçe ses, çapalar EN kelime -> TR kelime. */
+const shortTr = makeShort({
+  ...AYAR,
+  kod: 's17tr',
+  words: WORDS_TR,
+  voiceLen: 19.25,
+  baslik: ["MİKRODALGAYA", "ÜZÜM KOYARSAN?"],
+  dil: 'tr',
+  plan: AYAR.plan.map((p) => (p.w === 'A' ? { w: 'A', C: S5 } : p.w === 'trap' ? { w: 'trap', C: S4 } : p)),
+  esle: {"Put": "Mikrodalgaya", "you": "plazma", "plasma.": "oluşur", "The": "Yıldırımın", "lightning": "Yıldırımın", "A": "Üzüm", "trap": "tam", "perfect": "doğru", "Two": "Birbirine", "touching": "değen", "squeeze": "bütün", "spot.": "noktaya", "The#2": "O", "rips": "parçalanır", "and#2": "ve", "glows.": "parlar", "Please": "Denemek", "someone": "başkasının"},
+});
+export const S17TR = shortTr.Comp;
+export const S17TR_FRAMES = shortTr.frames;

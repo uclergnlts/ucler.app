@@ -8,10 +8,12 @@ import { useCurrentFrame } from 'remotion';
 import type { Word } from '../../captions';
 import { fontDuz as fontFamily } from '../../fonts';
 import { INK } from '../../kit';
-import { ap, Cizgi, Kadraj, lerp, makeShort, pop, useAt, useTt, Zerre } from '../ortak';
+import { ap, Cizgi, Kadraj, lerp, makeShort, pop, useAt, useTt, Zerre, T } from '../ortak';
 import raw from './words.json';
+import rawTr from './words-tr.json';
 
 const WORDS = raw as Word[];
+const WORDS_TR = rawTr as Word[];
 const SARI = '#FFD54A';
 
 /* ---------------- nesneler ---------------- */
@@ -270,7 +272,7 @@ const S5: React.FC = () => {
       <Karinca x={560} y={800 + Math.sin(f / 9) * 10} s={2.4} yuz="mutlu" />
       <g opacity={ap(t, 0.5, 0.3)}>
         <Ok x={540} y={1010} len={lerp(0, 150, ap(t, 0.5, 0.4))} renk="#FF5A3A" />
-        <Etiket x={720} y={1150} size={74} renk="#FF8A6A" anchor="start">0.003 g</Etiket>
+        <Etiket x={720} y={1150} size={74} renk="#FF8A6A" anchor="start"><T en="0.003 g" tr="0,003 g" /></Etiket>
       </g>
       <Zerre n={22} color="#FFE2A8" o={0.35} />
     </Kadraj>
@@ -326,7 +328,7 @@ const S7: React.FC = () => {
         <circle r={30} fill="#FF5A3A" />
       </g>
       <g transform={`translate(540 1180) scale(${pop(t, six - 0.1)})`}>
-        <Etiket x={0} y={0} size={130}>6 km/h</Etiket>
+        <Etiket x={0} y={0} size={130}><T en="6 km/h" tr="6 km/sa" /></Etiket>
       </g>
       <Karinca x={760} y={610 + Math.sin(f / 6) * 14} s={0.8} r={-14} yuz="rahat" />
     </Kadraj>
@@ -346,7 +348,7 @@ const S8: React.FC = () => {
       <Cizgi x={360 + x} y={1420} s={1.25} goz="mutlu" agiz="sirit" bakis={[1, 1]} bacak={Math.sin(f / 4) * 26} kolSol={[20 + Math.sin(f / 4) * 24, 14]} kolSag={[20 - Math.sin(f / 4) * 24, 14]} />
       <Karinca x={640 + x} y={1370} s={0.55} yuz="mutlu" yuru />
       <g transform={`translate(600 700) scale(${pop(t, 0.3)})`}>
-        <Etiket x={0} y={0} size={110}>6 km/h</Etiket>
+        <Etiket x={0} y={0} size={110}><T en="6 km/h" tr="6 km/sa" /></Etiket>
         <path d="M-200 40 H200" stroke={SARI} strokeWidth={10} strokeLinecap="round" />
       </g>
     </Kadraj>
@@ -378,13 +380,13 @@ const S9: React.FC = () => {
         <Karinca x={0} y={0} s={1.5} yuz={t > tall - 0.2 ? 'rahat' : 'mutlu'} />
       </g>
       <g transform={`translate(840 1330) scale(${pop(t, tall - 0.1)})`}>
-        <Etiket x={0} y={0} size={96} renk="#fff">easy.</Etiket>
+        <Etiket x={0} y={0} size={96} renk="#fff"><T en="easy." tr="kolay." /></Etiket>
       </g>
     </Kadraj>
   );
 };
 
-const short = makeShort({
+const AYAR: Parameters<typeof makeShort>[0] = {
   kod: 's13',
   words: WORDS,
   voiceLen: 17.18,
@@ -416,7 +418,21 @@ const short = makeShort({
     ['pop', 'tall.', -0.1, 0.25],
   ],
   muzik: ['music-happy', 0.06],
-});
+};
+const short = makeShort(AYAR);
 
 export const S13 = short.Comp;
 export const S13_FRAMES = short.frames;
+
+/** Türkçe sürüm (Instagram): aynı sahneler, Türkçe ses, çapalar EN kelime -> TR kelime. */
+const shortTr = makeShort({
+  ...AYAR,
+  kod: 's13tr',
+  words: WORDS_TR,
+  voiceLen: 17.92,
+  baslik: ["KARINCA", "GÖKDELENDEN DÜŞTÜ"],
+  dil: 'tr',
+  esle: {"An": "Bir", "300": "Üç", "It": "Sonra", "Why?": "Neden", "The": "Karınca", "air": "hava", "It#2": "Hızı", "That": "Bu", "For": "Bir#2", "6": "altı", "gravity": "güçlü", "tall.": "değildir", "falls": "düşüyor", "light": "hafiftir", "never": "hiç", "walking": "yürüme"},
+});
+export const S13TR = shortTr.Comp;
+export const S13TR_FRAMES = shortTr.frames;

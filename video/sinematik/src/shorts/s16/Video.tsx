@@ -10,8 +10,10 @@ import { fontDuz as fontFamily } from '../../fonts';
 import { INK } from '../../kit';
 import { ap, Cizgi, Kadraj, lerp, makeShort, pop, Sayi, T, useAt, useTt, Zerre } from '../ortak';
 import raw from './words.json';
+import rawTr from './words-tr.json';
 
 const WORDS = raw as Word[];
+const WORDS_TR = rawTr as Word[];
 const SARI = '#FFD54A';
 const KAGIT = '#FBF6E6';
 
@@ -400,7 +402,7 @@ const S8: React.FC = () => {
   );
 };
 
-const short = makeShort({
+const AYAR: Parameters<typeof makeShort>[0] = {
   kod: 's16',
   words: WORDS,
   voiceLen: 23.5,
@@ -433,7 +435,21 @@ const short = makeShort({
     ['impact', 'twelve', 0, 0.2],
   ],
   muzik: ['music-happy', 0.06],
-});
+};
+const short = makeShort(AYAR);
 
 export const S16 = short.Comp;
 export const S16_FRAMES = short.frames;
+
+/** Türkçe sürüm (Instagram): aynı sahneler, Türkçe ses, çapalar EN kelime -> TR kelime. */
+const shortTr = makeShort({
+  ...AYAR,
+  kod: 's16tr',
+  words: WORDS_TR,
+  voiceLen: 16.33,
+  baslik: ["KÂĞIDI", "42 KEZ KATLA"],
+  dil: 'tr',
+  esle: {"Fold": "Bir", "Each": "Her", "Ten": "On", "Twenty-three": "Yirmi", "Thirty": "Otuz", "Forty-two": "Kırk", "One": "Tek", "Nobody": "Bugüne", "one": "bir", "past": "geçersin", "space.": "uzaydasın", "twelve": "on", "reaches": "ulaşır", "fold": "katlama", "doubles": "kalınlığı"},
+});
+export const S16TR = shortTr.Comp;
+export const S16TR_FRAMES = shortTr.frames;

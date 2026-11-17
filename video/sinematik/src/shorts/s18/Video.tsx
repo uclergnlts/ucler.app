@@ -10,8 +10,10 @@ import { fontDuz as fontFamily } from '../../fonts';
 import { INK } from '../../kit';
 import { ap, Cizgi, Kadraj, lerp, makeShort, pop, T, useAt, useTt, Zerre } from '../ortak';
 import raw from './words.json';
+import rawTr from './words-tr.json';
 
 const WORDS = raw as Word[];
+const WORDS_TR = rawTr as Word[];
 const SARI = '#FFD54A';
 const PEMBE = '#FF8FC0';
 
@@ -433,7 +435,7 @@ const S9: React.FC = () => {
   );
 };
 
-const short = makeShort({
+const AYAR: Parameters<typeof makeShort>[0] = {
   kod: 's18',
   words: WORDS,
   voiceLen: 19.97,
@@ -466,7 +468,21 @@ const short = makeShort({
     ['ding', 'Never.', 0, 0.18],
   ],
   muzik: ['music-happy', 0.06],
-});
+};
+const short = makeShort(AYAR);
 
 export const S18 = short.Comp;
 export const S18_FRAMES = short.frames;
+
+/** Türkçe sürüm (Instagram): aynı sahneler, Türkçe ses, çapalar EN kelime -> TR kelime. */
+const shortTr = makeShort({
+  ...AYAR,
+  kod: 's18tr',
+  words: WORDS_TR,
+  voiceLen: 14.89,
+  baslik: ["SAKIZI", "YUTARSAN?"],
+  dil: 'tr',
+  esle: {"You": "Sakızını", "They": "Midende", "It": "Kalmaz", "Your": "Miden", "That": "Bu", "But": "Ama", "Your#2": "Bağırsakların", "A": "Birkaç", "Seven": "Yedi", "Never.": "Asla", "gone.": "gitmiş", "need": "gerekmez", "not.": "Kalmaz", "seven": "yedi", "true.": "doğru", "swallowed": "yuttun", "cannot": "sindiremez"},
+});
+export const S18TR = shortTr.Comp;
+export const S18TR_FRAMES = shortTr.frames;

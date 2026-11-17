@@ -8,10 +8,12 @@ import { useCurrentFrame } from 'remotion';
 import type { Word } from '../../captions';
 import { fontDuz as fontFamily } from '../../fonts';
 import { INK } from '../../kit';
-import { ap, Cizgi, Kadraj, lerp, makeShort, pop, useAt, useTt, Zerre } from '../ortak';
+import { ap, Cizgi, Kadraj, lerp, makeShort, pop, useAt, useTt, Zerre, T } from '../ortak';
 import raw from './words.json';
+import rawTr from './words-tr.json';
 
 const WORDS = raw as Word[];
+const WORDS_TR = rawTr as Word[];
 const SARI = '#FFD54A';
 
 /* ---------------- nesneler ---------------- */
@@ -235,8 +237,8 @@ const S2: React.FC = () => {
         <path d="M900 470 V1330" stroke="#fff" strokeWidth={7} strokeDasharray="22 16" />
         <path d="M878 494 l22 -28 l22 28 M878 1306 l22 28 l22 -28" stroke="#fff" strokeWidth={7} fill="none" />
         <g transform={`translate(860 1010) scale(${pop(t, 0.1)})`}>
-          <Etiket x={0} y={0} size={104} anchor="end">16,000 ft</Etiket>
-          <Etiket x={0} y={84} size={58} anchor="end" renk="#fff">4,900 m</Etiket>
+          <Etiket x={0} y={0} size={104} anchor="end"><T en="16,000 ft" tr="5.000 m" /></Etiket>
+          <Etiket x={0} y={84} size={58} anchor="end" renk="#fff"><T en="4,900 m" tr="16.000 ft" /></Etiket>
         </g>
       </g>
     </Kadraj>
@@ -284,7 +286,7 @@ const S4: React.FC = () => {
         <rect key={i} x={((i * 173) % 1200) - 60} y={1670 + ((i * 59) % 220)} width={10} height={8} fill="#FFC65A" opacity={0.35 + 0.5 * Math.abs(Math.sin(f / 15 + i))} />
       ))}
       <g transform={`translate(540 540) scale(${pop(t, 0.05)})`}>
-        <Etiket x={0} y={0} size={96} renk="#fff">JANUARY</Etiket>
+        <Etiket x={0} y={0} size={96} renk="#fff"><T en="JANUARY" tr="OCAK" /></Etiket>
         <Etiket x={0} y={150} size={170}>2024</Etiket>
       </g>
     </Kadraj>
@@ -506,7 +508,7 @@ const S11b: React.FC = () => {
   );
 };
 
-const short = makeShort({
+const AYAR: Parameters<typeof makeShort>[0] = {
   kod: 's12',
   words: WORDS,
   voiceLen: 21.55,
@@ -540,7 +542,21 @@ const short = makeShort({
     ['ding', 'half', 0.1, 0.18],
   ],
   muzik: ['music-happy', 0.06],
-});
+};
+const short = makeShort(AYAR);
 
 export const S12 = short.Comp;
 export const S12_FRAMES = short.frames;
+
+/** Türkçe sürüm (Instagram): aynı sahneler, Türkçe ses, çapalar EN kelime -> TR kelime. */
+const shortTr = makeShort({
+  ...AYAR,
+  kod: 's12tr',
+  words: WORDS_TR,
+  voiceLen: 18.52,
+  baslik: ["TELEFON", "UÇAKTAN DÜŞTÜ"],
+  dil: 'tr',
+  esle: {"A": "Bir", "16,000": "Beş", "It": "Ve", "January": "Ocak", "A#2": "Uçuş", "and": "ve", "But": "Ama", "Air": "Hava", "It#2": "Bir#2", "Screen": "Ekranı", "Battery": "Pili", "blew": "koptu", "bush.": "çalının", "flat.": "yassıdır", "half": "yarı", "sucked": "savruldu", "worked.": "çalışıyordu", "stops": "hızlanmasına"},
+});
+export const S12TR = shortTr.Comp;
+export const S12TR_FRAMES = shortTr.frames;

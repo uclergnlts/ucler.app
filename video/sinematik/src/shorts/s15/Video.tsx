@@ -10,8 +10,10 @@ import { fontDuz as fontFamily } from '../../fonts';
 import { INK } from '../../kit';
 import { ap, Cizgi, Kadraj, lerp, makeShort, pop, T, useAt, useTt } from '../ortak';
 import raw from './words.json';
+import rawTr from './words-tr.json';
 
 const WORDS = raw as Word[];
+const WORDS_TR = rawTr as Word[];
 const SARI = '#FFD54A';
 const ELK = '#BFE8FF';
 
@@ -381,7 +383,7 @@ const S5: React.FC = () => {
       {vur &&
         [0, 1, 2].map((i) => <path key={i} d={`M${470 + i * 70} ${1150 - ((f * 6 + i * 40) % 160)} q20 -30 0 -60`} stroke="#8E97B0" strokeWidth={10} fill="none" opacity={0.6} strokeLinecap="round" />)}
       <g transform={`translate(800 860) scale(${pop(t, 0.2)})`} opacity={vur ? 0 : 1}>
-        <Etiket x={0} y={0} size={120} renk="#fff">STOP!</Etiket>
+        <Etiket x={0} y={0} size={120} renk="#fff"><T en="STOP!" tr="DUR!" /></Etiket>
       </g>
       <Yagmur n={30} o={0.3} />
     </Kadraj>
@@ -538,7 +540,7 @@ const S9: React.FC = () => {
   );
 };
 
-const short = makeShort({
+const AYAR: Parameters<typeof makeShort>[0] = {
   kod: 's15',
   words: WORDS,
   voiceLen: 19.92,
@@ -569,7 +571,21 @@ const short = makeShort({
     ['alarm', 'not#2', 0, 0.1],
   ],
   muzik: ['music-dark', 0.06],
-});
+};
+const short = makeShort(AYAR);
 
 export const S15 = short.Comp;
 export const S15_FRAMES = short.frames;
+
+/** Türkçe sürüm (Instagram): aynı sahneler, Türkçe ses, çapalar EN kelime -> TR kelime. */
+const shortTr = makeShort({
+  ...AYAR,
+  kod: 's15tr',
+  words: WORDS_TR,
+  voiceLen: 17.27,
+  baslik: ["ARABANA", "YILDIRIM DÜŞERSE?"],
+  dil: 'tr',
+  esle: {"Lightning": "Arabana", "You": "Sana", "And": "Hayır", "The": "Yıldırım", "Tires": "Lastikler", "The#2": "Seni", "The#3": "Akım", "jumps": "toprağa", "Just": "Yeter", "mile": "kilometrelerce", "not": "değildir", "not#2": "dokunma", "saves": "gövdedir", "stop": "durduramaz", "fine.": "olmaz", "runs": "dolaşır"},
+});
+export const S15TR = shortTr.Comp;
+export const S15TR_FRAMES = shortTr.frames;
