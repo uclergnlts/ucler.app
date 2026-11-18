@@ -22,8 +22,10 @@ export class Katman {
     for (const d of degisen) this.surum[d] = Date.now();
     const gorulen = new Set();
     for (const s of this.hz.sahneler) {
-      const boy = s.yerlesim === 'tam' ? [W, H] : [PANEL_G, H];
-      const src = `/p/${encodeURIComponent(this.proje)}/sahneler/${s.dosya}?w=${boy[0]}&h=${boy[1]}&sure=${s.sure || 4}&yer=${s.yerlesim}` +
+      const boy = s.yerlesim === 'tam' || s.yerlesim === 'ust' ? [W, H] : [PANEL_G, H];
+      // "sablon:ad" -> stüdyonun hazır şablonu (public/sablonlar/ad.html)
+      const yol = s.dosya.startsWith('sablon:') ? `/studyo/sablonlar/${s.dosya.slice(7)}.html` : `/p/${encodeURIComponent(this.proje)}/sahneler/${s.dosya}`;
+      const src = `${yol}?w=${boy[0]}&h=${boy[1]}&sure=${s.sure || 4}&yer=${s.yerlesim}` +
         (s.ayar ? '&ayar=' + encodeURIComponent(JSON.stringify(s.ayar)) : '') + (this.surum[s.dosya] ? '&v=' + this.surum[s.dosya] : '');
       gorulen.add(s.id);
       let k = this.kutular.get(s.id);
@@ -32,7 +34,7 @@ export class Katman {
         const kutu = document.createElement('div');
         kutu.className = 'sahne ' + s.yerlesim;
         kutu.style.width = boy[0] + 'px'; kutu.style.height = boy[1] + 'px';
-        if (s.arkaplan === false) kutu.classList.add('seffaf');
+        if (s.arkaplan === false || s.yerlesim === 'ust') kutu.classList.add('seffaf');
         const iframe = document.createElement('iframe');
         iframe.width = boy[0]; iframe.height = boy[1];
         k = { kutu, iframe, src, yerlesim: s.yerlesim, yuklendi: false };
@@ -69,6 +71,8 @@ export class Katman {
         const gecis = s.gecis || 'daire';
         if (gecis === 'daire') { k.kutu.style.clipPath = `circle(${Math.max(0, gir - cik) * 1150}px at 50% 50%)`; k.kutu.style.opacity = 1; }
         else { k.kutu.style.clipPath = 'none'; k.kutu.style.opacity = Math.max(0, gir - cik); }
+      } else if (s.yerlesim === 'ust') {
+        // Yüzün üstünde saydam katman: giriş/çıkışı şablonun kendisi çizer
       } else {
         const x = s.yerlesim === 'sol' ? -(1 - e) * (PANEL_G + 40) : W - PANEL_G + (1 - e) * (PANEL_G + 40);
         k.kutu.style.transform = `translateX(${x}px)`;

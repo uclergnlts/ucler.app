@@ -30,8 +30,40 @@ export function toplamSure(kurgu) {
 
 // Bir klibin kendi zamanını çıktı zamanına çevirir (klip o anı içeren ilk parçada bulunur).
 export function klipAniCikti(kurgu, dosya, an) {
-  for (const p of parcalar(kurgu)) if (!p.bosluk && p.dosya === dosya && an >= p.gir - 1e-6 && an <= p.cik + 1e-6) return p.bas + (an - p.gir);
-  return null;
+  let en = null, enUzak = Infinity;
+  for (const p of parcalar(kurgu)) {
+    if (p.bosluk || p.dosya !== dosya) continue;
+    if (an >= p.gir - 1e-6 && an <= p.cik + 1e-6) return p.bas + (an - p.gir);
+    // An kesilmiş bir duraksamaya düştüyse en yakın parçanın kenarına bağla
+    const u = an < p.gir ? p.gir - an : an - p.cik;
+    if (u < enUzak && u < 2) { enUzak = u; en = an < p.gir ? p.bas : p.son; }
+  }
+  return en;
+}
+
+// Atlamalı kesim: konuşmadaki uzun duraksamaları atar. kurgu.duraksama = { kes: true, esik: 0.6, pay: 0.15 }
+// Bir klipte kapatmak için o klibe "duraksama": false yazılır. Sonuç, klipleri bölünmüş yeni bir kurgudur.
+export function kurguHazirla(kurgu, metinler) {
+  const d = kurgu.duraksama;
+  if (!d || !d.kes) return kurgu;
+  const esik = d.esik ?? 0.6, pay = d.pay ?? 0.15;
+  const klipler = [];
+  for (const k of kurgu.klipler || []) {
+    const m = k.dosya && metinler[k.dosya];
+    if (k.bosluk || !m || k.duraksama === false) { klipler.push(k); continue; }
+    // Duraksamalar: ses analizinden (m.sessizlik); yoksa kelime aralarından
+    let araliklar = m.sessizlik;
+    if (!araliklar) { araliklar = []; for (let i = 0; i < m.kelimeler.length - 1; i++) araliklar.push([m.kelimeler[i].e, m.kelimeler[i + 1].s]); }
+    let bas = k.gir;
+    for (const [a, b] of araliklar) {
+      if (b - a <= esik || a <= k.gir + 0.05 || b >= k.cik - 0.05) continue;
+      const son = a + pay;
+      if (son - bas > 0.2) klipler.push({ ...k, gir: +bas.toFixed(3), cik: +son.toFixed(3), otomatik: true });
+      bas = Math.max(bas, b - pay);
+    }
+    if (k.cik - bas > 0.2) klipler.push({ ...k, gir: +bas.toFixed(3), cik: k.cik, otomatik: true });
+  }
+  return { ...kurgu, klipler, hamKlipler: kurgu.klipler };
 }
 
 // Sahnelerin çıktı zamanları. Sahne ya "bas" (çıktı zamanı) ya da "klip"+"an" (klibin kendi zamanı) ile bağlanır;
@@ -53,6 +85,7 @@ export function sahneZarf(s, t, g = GECIS) {
   return Math.min(yumusak((t - s.bas) / g), yumusak((s.son - t) / g));
 }
 
+// Yerleşimler: tam (yüzü kapatır), sol / sag (yan panel, yüz öbür yana kayar), ust (yüzün üstünde saydam katman)
 // Yüzün yatay kayması (1920 genişliğe göre piksel). sol panel -> yüz sağa (+), sağ panel -> yüz sola (-).
 export function yuzKaydirma(kurgu, t) {
   let x = 0;
@@ -85,10 +118,10 @@ export function altyazi(kurgu, metinler) {
     if (p.bosluk) continue;
     const m = metinler[p.dosya]; if (!m) continue;
     let ilk = true;
-    for (const w of m.kelimeler) {
+    for (const [wi, w] of m.kelimeler.entries()) {
       const orta = (w.s + w.e) / 2;
       if (orta < p.gir || orta > p.cik) continue;
-      kelimeler.push({ w: w.w, s: p.bas + Math.max(0, w.s - p.gir), e: p.bas + Math.min(p.cik, w.e) - p.gir, parcaBasi: ilk });
+      kelimeler.push({ w: w.w, s: p.bas + Math.max(0, w.s - p.gir), e: p.bas + Math.min(p.cik, w.e) - p.gir, parcaBasi: ilk, dosya: p.dosya, wi });
       ilk = false;
     }
   }
@@ -175,4 +208,22 @@ export function arkaFfmpeg(arka, OW, OH, yuz, mk, ark) {
   else if (arka.tur === 'resim') { on = `[${yuz}]null[ak]`; zemin = `[${ark}]scale=${OW}:${OH}:force_original_aspect_ratio=increase,crop=${OW}:${OH},format=yuv420p[az]`; }
   else { on = `[${yuz}]split[ak][ab]`; zemin = `[ab]boxblur=${Math.round((arka.guc || 30) * OW / 1920)}:2[az]`; }
   return `${on};${m};${zemin};[ak][am]alphamerge[akisi];[az][akisi]overlay=0:0:shortest=1,format=yuv420p`;
+}
+
+// YouTube için altyazı dosyası (SRT)
+export function srt(kurgu, metinler) {
+  const { kelimeler, satirlar } = altyazi(kurgu, metinler);
+  const z = t => { t = Math.max(0, t); const ms = Math.round(t * 1000); const h = Math.floor(ms / 3600000), m = Math.floor(ms / 60000) % 60, sn = Math.floor(ms / 1000) % 60;
+    return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(sn).padStart(2, '0')},${String(ms % 1000).padStart(3, '0')}`; };
+  return satirlar.map((s, i) => `${i + 1}\n${z(s.bas)} --> ${z(s.son)}\n${s.k.map(j => kelimeler[j].w).join(' ')}\n`).join('\n');
+}
+
+// YouTube açıklaması için bölüm listesi: "sablon:bolum" sahneleri ya da "bolum" alanı olan sahneler
+export function bolumler(kurgu) {
+  const l = sahneler(kurgu).filter(s => s.bolum || s.dosya === 'sablon:bolum')
+    .map(s => ({ t: s.bas, ad: s.bolum || (s.ayar && s.ayar.baslik) || 'Bölüm' }));
+  if (!l.length || l[0].t > 1) l.unshift({ t: 0, ad: 'Giriş' }); else l[0].t = 0;
+  const z = t => { t = Math.floor(t); const h = Math.floor(t / 3600), m = Math.floor(t / 60) % 60, s = t % 60;
+    return (h ? h + ':' + String(m).padStart(2, '0') : m) + ':' + String(s).padStart(2, '0'); };
+  return l.map(b => `${z(b.t)} ${b.ad}`).join('\n') + '\n';
 }

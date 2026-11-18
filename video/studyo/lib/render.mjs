@@ -3,9 +3,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { chromium } from 'playwright-core';
-import { proje, okuJson } from './yollar.mjs';
+import { proje, okuJson, metinleriOku } from './yollar.mjs';
 import { calistir } from './isle.mjs';
-import { parcalar, toplamSure, ffmpegKaydirma, yuzKaydirma, goruntuFfmpeg, arkaFfmpeg, W, H } from '../public/motor.js';
+import { srt, kurguHazirla, parcalar, toplamSure, ffmpegKaydirma, yuzKaydirma, goruntuFfmpeg, arkaFfmpeg, W, H } from '../public/motor.js';
 import { maskeUret, arkaAnahtar } from './maske.mjs';
 import crypto from 'node:crypto';
 
@@ -63,7 +63,7 @@ async function katmanCiz(ad, { olcek, port, fps, N, hedef, iptal, ilerleme, sekm
 
 export async function render(ad, { cozunurluk = '1080', port, ilerleme = () => { }, iptal = { var: false } } = {}) {
   const p = proje(ad);
-  const kurgu = okuJson(p.kurgu);
+  const kurgu = kurguHazirla(okuJson(p.kurgu), metinleriOku(p));
   const fps = kurgu.fps || 30;
   const olcek = cozunurluk === '4k' ? 2 : 1;
   const OW = W * olcek, OH = H * olcek;
@@ -161,6 +161,7 @@ export async function render(ad, { cozunurluk = '1080', port, ilerleme = () => {
   });
   if (!process.env.STUDYO_SAKLA) fs.rmSync(katmanDosya, { force: true });
   fs.renameSync(cikti + '.yarim.mp4', cikti);
+  fs.writeFileSync(cikti.replace(/\.mp4$/, '.srt'), srt(kurgu, metinleriOku(p)));
   ilerleme({ kare: N, toplam: N, oran: 1, kalan: 0 });
   return cikti;
 }
@@ -168,7 +169,7 @@ export async function render(ad, { cozunurluk = '1080', port, ilerleme = () => {
 // Kontrol için tek kare: ham çekimden yüz + kayma + katman. Claude kurguya bakarken kullanır.
 export async function kareler(ad, zamanlar, { port }) {
   const p = proje(ad);
-  const kurgu = okuJson(p.kurgu);
+  const kurgu = kurguHazirla(okuJson(p.kurgu), metinleriOku(p));
   const pars = parcalar(kurgu);
   const gf = goruntuFfmpeg(kurgu.goruntu, 1);
   fs.mkdirSync(path.join(p.gecici, 'kare'), { recursive: true });

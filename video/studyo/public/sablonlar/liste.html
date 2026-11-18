@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><script src="/studyo/sahne-kit.js"></script>
+<style>#k{position:absolute;inset:0;padding:120px 80px;color:#13233F}.bas{font:800 64px/1.1 Manrope;letter-spacing:-1px;margin-bottom:50px}
+.m{display:flex;gap:22px;align-items:flex-start;font:700 42px/1.25 Manrope;margin:0 0 34px;opacity:0}
+.m i{flex:none;width:52px;height:52px;border-radius:14px;background:#FF7A1A;color:#fff;font:800 30px/52px Manrope;text-align:center;font-style:normal}</style></head>
+<body><div id="k"><div class="bas" id="bas"></div><div id="l"></div></div>
+<script>
+// Madde listesi (yan panel ya da tam ekran). ayar: { baslik, maddeler: ["...", "..."], zamanlar: [0.6, 2.4, ...] (sn, isteğe bağlı) }
+const A = SAHNE.ayar, l = document.getElementById('l');
+document.getElementById('bas').textContent = A.baslik || '';
+const M = A.maddeler || [];
+l.innerHTML = M.map((x, i) => `<div class="m"><i>${i + 1}</i><span></span></div>`).join('');
+[...l.children].forEach((e, i) => e.querySelector('span').textContent = M[i]);
+const Z = A.zamanlar || M.map((_, i) => 0.6 + i * Math.max(0.6, (SAHNE.sure - 1.5) / Math.max(1, M.length)));
+window.render = t => {
+  document.getElementById('bas').style.opacity = K.ez((t - 0.2) / 0.4);
+  [...l.children].forEach((e, i) => { const g = K.ez((t - Z[i]) / 0.4); e.style.opacity = g; e.style.transform = `translateX(${(1 - g) * -30}px)`; });
+};
+render(0);
+</script></body></html>

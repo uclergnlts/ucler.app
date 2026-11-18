@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><script src="/studyo/sahne-kit.js"></script>
+<style>#v{position:absolute;top:300px;max-width:600px;font:800 96px/1.05 Manrope;color:#fff;letter-spacing:-2px;text-shadow:0 8px 40px rgba(0,0,0,.35)}
+#v span{background:#FF7A1A;padding:6px 26px 14px;border-radius:20px;display:inline-block}#a{display:block;font:700 40px Manrope;margin-top:18px;text-shadow:0 4px 18px rgba(0,0,0,.45)}</style></head>
+<body><div id="v"><span id="m"></span><span id="a" style="background:none;padding:0"></span></div>
+<script>
+// Anahtar kelime vurgusu (yüzün yanında). ayar: { metin: "E = mc²", alt: "", konum: "sol"|"sag", renk: "#FF7A1A", y: 300 }
+const A = SAHNE.ayar, v = document.getElementById('v'), m = document.getElementById('m');
+m.textContent = A.metin || ''; document.getElementById('a').textContent = A.alt || '';
+if (A.renk) m.style.background = A.renk;
+if (A.y) v.style.top = A.y + 'px';
+if (A.konum === 'sag') v.style.right = '140px', v.style.textAlign = 'right'; else v.style.left = '140px';
+window.render = t => {
+  const gir = K.back(t / 0.45), cik = K.ez((t - (SAHNE.sure - 0.3)) / 0.3);
+  v.style.transform = `scale(${0.6 + 0.4 * gir}) rotate(${(1 - K.cl(gir)) * -4}deg)`;
+  v.style.transformOrigin = A.konum === 'sag' ? 'right center' : 'left center';
+  v.style.opacity = K.cl(t / 0.15) * (1 - cik);
+};
+render(0);
+</script></body></html>

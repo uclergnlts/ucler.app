@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><script src="/studyo/sahne-kit.js"></script>
+<style>#k{position:absolute;inset:0;background:#F6F2EA;display:flex;flex-direction:column;justify-content:center;padding:0 9%;color:#13233F}
+.no{font:800 34px Manrope;letter-spacing:8px;color:#FF7A1A}.bas{font:800 104px/1.05 Manrope;letter-spacing:-2px;margin-top:18px;max-width:80%}
+.alt{font:700 40px Manrope;color:#6B7487;margin-top:22px}.cizgi{height:10px;background:#FFC83D;border-radius:9px;margin-top:34px;width:0}</style></head>
+<body><div id="k"><div class="no" id="no"></div><div class="bas" id="bas"></div><div class="alt" id="alt"></div><div class="cizgi" id="ci"></div></div>
+<script>
+// Bölüm kartı (tam ekran). ayar: { no: "BÖLÜM 2", baslik: "Zaman da bükülür", alt: "..." }
+const A = SAHNE.ayar, $ = i => document.getElementById(i);
+$('no').textContent = A.no || ''; $('bas').textContent = A.baslik || 'Bölüm'; $('alt').textContent = A.alt || '';
+window.render = t => {
+  const g = i => K.ez((t - 0.15 - i * 0.15) / 0.5);
+  [['no', 0], ['bas', 1], ['alt', 2]].forEach(([id, i]) => { const e = $(id); e.style.opacity = g(i); e.style.transform = `translateY(${(1 - g(i)) * 40}px)`; });
+  $('ci').style.width = (K.ezio((t - 0.7) / 0.8) * 420) + 'px';
+};
+render(0);
+</script></body></html>

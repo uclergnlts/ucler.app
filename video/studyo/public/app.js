@@ -183,8 +183,8 @@ function cizelgeCiz() {
   $('#cetvel').innerHTML = c;
   const blok = (bas, son, sinif, yazi, baslik) => `<div class="blok ${sinif}" style="left:${OLUK + bas * ps}px;width:${Math.max(3, (son - bas) * ps - 2)}px" title="${baslik || yazi}">${yazi}</div>`;
   const konusma = hz.parcalar.map(p => blok(p.bas, p.son, p.bosluk ? 'bosluk' : 'konusma', p.bosluk ? 'boşluk' : p.dosya.replace(/\.[^.]+$/, ''), p.bosluk ? '' : `${p.dosya}  ${p.gir.toFixed(1)}–${p.cik.toFixed(1)} sn`)).join('');
-  const yerAd = { tam: 'tam ekran', sol: 'solda', sag: 'sağda' };
-  const sahne = hz.sahneler.map(s => blok(s.bas, s.son, s.yerlesim, `${s.ad || s.dosya.replace('.html', '')} · ${yerAd[s.yerlesim] || s.yerlesim}`)).join('');
+  const yerAd = { tam: 'tam ekran', sol: 'solda', sag: 'sağda', ust: 'üstte' };
+  const sahne = hz.sahneler.map(s => blok(s.bas, s.son, s.yerlesim, `${s.ad || (s.ayar && (s.ayar.baslik || s.ayar.metin)) || s.dosya.replace('.html', '').replace('sablon:', '')} · ${yerAd[s.yerlesim] || s.yerlesim}`)).join('');
   const altyazi = hz.satirlar.map(s => blok(s.bas, s.son, 'satir', s.k.map(j => hz.kelimeler[j].w).join(' '))).join('');
   const notlar = veri.notlar.map((n, i) => `<div class="isaret ${n.durum === 'yapıldı' ? 'yapildi' : ''}" style="left:${OLUK + n.t * ps}px" title="${kacis(n.metin)}">${i + 1}</div>`).join('');
   $('#izler').innerHTML = `<div class="iz"><span class="ad">Konuşma</span>${konusma}</div><div class="iz"><span class="ad">Sahneler</span>${sahne}</div>` +
@@ -254,7 +254,7 @@ function yukle(f) {
 // ---------- Metin ----------
 function metniCiz() {
   $('#metinListe').innerHTML = hz.satirlar.length ? hz.satirlar.map((s, i) =>
-    `<div class="satirM" data-i="${i}" data-t="${s.bas + 0.06}"><span class="zamanCip">${sureYaz(s.bas)}</span><span>${kacis(s.k.map(j => hz.kelimeler[j].w).join(' '))}</span></div>`).join('')
+    `<div class="satirM" data-i="${i}" data-t="${s.bas + 0.06}"><span class="zamanCip">${sureYaz(s.bas)}</span><span class="satirYazi">${kacis(s.k.map(j => hz.kelimeler[j].w).join(' '))}</span><button class="duzelt" title="Bu satırı düzelt">✎</button></div>`).join('')
     : '<p class="kucuk">Klipler işlenince konuşman burada yazı olarak görünecek.</p>';
 }
 let aktifSatir = -1;
@@ -265,7 +265,31 @@ function metinVurgula() {
   const el = document.querySelector(`.satirM[data-i="${i}"]`);
   if (el) { el.classList.add('aktif'); if ($('#metin').classList.contains('secili')) el.scrollIntoView({ block: 'nearest' }); }
 }
-$('#metinListe').addEventListener('click', e => { const c = e.target.closest('[data-t]'); if (c) konumla(+c.dataset.t); });
+$('#metinListe').addEventListener('click', e => {
+  const d = e.target.closest('.duzelt');
+  if (d) return satirDuzelt(d.closest('.satirM'));
+  if (e.target.closest('[contenteditable]')) return;
+  const c = e.target.closest('[data-t]'); if (c) konumla(+c.dataset.t);
+});
+function satirDuzelt(el) {
+  dur();
+  const s = hz.satirlar[+el.dataset.i];
+  const yazi = el.querySelector('.satirYazi');
+  yazi.contentEditable = 'true'; yazi.focus();
+  document.getSelection().selectAllChildren(yazi);
+  const bitir = async kaydet => {
+    yazi.contentEditable = 'false';
+    yazi.removeEventListener('keydown', tus); yazi.removeEventListener('blur', bulanik);
+    const yeni = yazi.textContent.trim();
+    const eski = s.k.map(j => hz.kelimeler[j].w).join(' ');
+    if (!kaydet || !yeni || yeni === eski) { yazi.textContent = eski; return; }
+    const ks = s.k.map(j => hz.kelimeler[j]);
+    await fetch(`/api/p/${ad}/altyazi`, { method: 'POST', body: JSON.stringify({ dosya: ks[0].dosya, indeksler: ks.map(k => k.wi), metin: yeni }) });
+  };
+  const tus = e => { if (e.key === 'Enter') { e.preventDefault(); bitir(true); } if (e.key === 'Escape') bitir(false); };
+  const bulanik = () => bitir(true);
+  yazi.addEventListener('keydown', tus); yazi.addEventListener('blur', bulanik);
+}
 
 // ---------- Render ----------
 $('#renderBtn').onclick = async () => {
@@ -288,7 +312,10 @@ function renderGoster(r) {
 async function yenileCiktilar() { veri = await (await fetch(`/api/p/${ad}`)).json(); ciktilariCiz(); }
 function ciktilariCiz() {
   $('#ciktiListe').innerHTML = (veri.ciktilar || []).map(f => `<div class="klip"><div style="flex:1"><a class="ad" href="/p/${ad}/cikti/${encodeURIComponent(f)}" target="_blank">${kacis(f)}</a></div></div>`).join('')
-    + `<p class="kucuk">Çıkan videolar Mac'te <a href="#" id="ciktiAc">çıktı klasöründe</a>.</p>`;
+    + `<p class="kucuk">Çıkan videolar Mac'te <a href="#" id="ciktiAc">çıktı klasöründe</a>. Her videonun yanında altyazı dosyası (.srt) da var.</p>`
+    + `<div class="not"><b>YouTube'a yüklerken</b><div class="kucuk" style="margin:4px 0 8px">Altyazı dosyasını YouTube Studio'da "Altyazılar" bölümüne yükle. Bölüm listesini açıklamaya yapıştır.</div>`
+    + `<a href="/api/p/${ad}/disa?tur=srt">Altyazı (.srt) indir</a><pre id="bolumListe" class="kucuk" style="white-space:pre-wrap;background:var(--kagit);padding:8px;border-radius:8px;margin-top:8px"></pre></div>`;
+  fetch(`/api/p/${ad}/disa?tur=bolumler`).then(r => r.text()).then(x => { const e = $('#bolumListe'); if (e) e.textContent = x; });
   const a = $('#ciktiAc'); if (a) a.onclick = e => { e.preventDefault(); fetch(`/api/p/${ad}/klasor`, { method: 'POST', body: JSON.stringify({ hangi: 'cikti' }) }); };
 }
 

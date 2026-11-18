@@ -3,7 +3,8 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
-import { STUDYO, DEPO, MEDYA, MODEL, PROJELER, proje, projeKur, projeListesi, okuJson, yazJson, VIDEO_UZANTI } from './lib/yollar.mjs';
+import { STUDYO, DEPO, MEDYA, MODEL, PROJELER, proje, projeKur, projeListesi, okuJson, yazJson, VIDEO_UZANTI, metinleriOku } from './lib/yollar.mjs';
+import { kurguHazirla, srt, bolumler } from './public/motor.js';
 import { sirayaKoy, durumlar, hazirMi, hamDosyalar } from './lib/isle.mjs';
 import { render, kareler } from './lib/render.mjs';
 import { arkaHazirla, arkaDurum, arkaVekilAdi } from './lib/maske.mjs';
@@ -38,7 +39,7 @@ function izle(ad) {
       if (liste.some(x => !x.startsWith('notlar'))) yayinla(ad, 'kurgu', { degisen: liste.filter(x => x.startsWith('sahneler')).map(x => x.slice(9)) });
     }, 150);
   });
-  const tara = () => { for (const f of hamDosyalar(ad)) if (!hazirMi(ad, f)) sirayaKoy(ad, f, () => yayinla(ad, 'klipler')); };
+  const tara = () => { for (const f of hamDosyalar(ad)) if (!hazirMi(ad, f) || !okuJson(path.join(p.metin, f + '.json'), {}).sessizlik) sirayaKoy(ad, f, () => yayinla(ad, 'klipler')); };
   fs.watch(p.ham, () => setTimeout(tara, 500));
   tara();
   arkaHazirla(ad, () => yayinla(ad, 'klipler'));
@@ -115,9 +116,8 @@ const sunucu = http.createServer(async (req, res) => {
     }
 
     if (alt === '' && req.method === 'GET') {
-      const kurgu = okuJson(p.kurgu, {});
-      const metinler = {};
-      for (const f of fs.readdirSync(p.metin)) if (f.endsWith('.json')) { const j = okuJson(path.join(p.metin, f), null); if (j) metinler[j.dosya] = j; }
+      const metinler = metinleriOku(p);
+      const kurgu = kurguHazirla(okuJson(p.kurgu, {}), metinler);
       const r = renderler.get(ad);
       const ciktilar = fs.existsSync(p.cikti) ? fs.readdirSync(p.cikti).filter(f => f.endsWith('.mp4') && !f.includes('.yarim')).sort().reverse() : [];
       const arka = kurgu.goruntu && kurgu.goruntu.arka;
@@ -160,6 +160,27 @@ const sunucu = http.createServer(async (req, res) => {
       if (n) { if (b.durum) n.durum = b.durum; if (b.sil) notlar.splice(notlar.indexOf(n), 1); yazJson(p.notlar, notlar); }
       return json(res, { tamam: true });
     }
+    if (alt === '/altyazi' && req.method === 'POST') {
+      // Bir altyazı satırını düzelt: aynı klibin ardışık kelimeleri yeni metinle değişir, zamanlar korunur
+      const b = await govde(req);
+      const f = path.join(p.metin, path.basename(String(b.dosya)) + '.json');
+      const m = okuJson(f, null);
+      const idx = (b.indeksler || []).map(Number).sort((x, y) => x - y);
+      if (!m || !idx.length || idx.some(i => !m.kelimeler[i])) return json(res, { hata: 'satır bulunamadı' }, 400);
+      const yeni = String(b.metin || '').trim().split(/\s+/).filter(Boolean);
+      const s0 = m.kelimeler[idx[0]].s, e0 = m.kelimeler[idx[idx.length - 1]].e;
+      let kelimeler;
+      if (yeni.length === idx.length) kelimeler = idx.map((i, n) => ({ ...m.kelimeler[i], w: yeni[n] }));
+      else {
+        const toplam = yeni.reduce((a, w) => a + w.length + 1, 0);
+        let t = s0;
+        kelimeler = yeni.map(w => { const d = (e0 - s0) * (w.length + 1) / toplam; const k = { w, s: +t.toFixed(3), e: +(t + d).toFixed(3) }; t += d; return k; });
+      }
+      m.kelimeler.splice(idx[0], idx[idx.length - 1] - idx[0] + 1, ...kelimeler);
+      m.duzeltildi = true;
+      yazJson(f, m);
+      return json(res, { tamam: true });
+    }
     if (alt === '/render' && req.method === 'POST') {
       const b = await govde(req);
       const var0 = renderler.get(ad);
@@ -171,6 +192,15 @@ const sunucu = http.createServer(async (req, res) => {
         .catch(e => { console.error(e); r.durum = 'hata'; r.hata = String(e.message || e).slice(0, 1500); })
         .finally(() => yayinla(ad, 'render', { ...r, iptal: undefined }));
       return json(res, { tamam: true });
+    }
+    if (alt === '/disa' && req.method === 'GET') {
+      const metinler = metinleriOku(p);
+      const kurgu = kurguHazirla(okuJson(p.kurgu, {}), metinler);
+      const tur = u.searchParams.get('tur');
+      const metin = tur === 'srt' ? srt(kurgu, metinler) : bolumler(kurgu);
+      res.writeHead(200, { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'no-store',
+        ...(tur === 'srt' ? { 'content-disposition': `attachment; filename="${ad}.srt"` } : {}) });
+      return res.end(metin);
     }
     if (alt === '/render/iptal' && req.method === 'POST') { const r = renderler.get(ad); if (r) r.iptal.var = true; return json(res, { tamam: true }); }
     if (alt === '/kare' && req.method === 'GET') {

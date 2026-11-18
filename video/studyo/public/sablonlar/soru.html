@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><script src="/studyo/sahne-kit.js"></script>
+<style>#k{position:absolute;inset:0;background:#13233F;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 10%}
+.ust{font:800 40px Manrope;letter-spacing:8px;color:#FFC83D}.s{font:800 92px/1.12 Manrope;color:#fff;margin-top:28px;letter-spacing:-1px}.alt{font:700 38px Manrope;color:rgba(255,255,255,.7);margin-top:40px}</style></head>
+<body><div id="k"><div class="ust" id="u"></div><div class="s" id="s"></div><div class="alt" id="a"></div></div>
+<script>
+// Soru / kapanış kartı (tam ekran). ayar: { ust: "SENCE?", soru: "...", alt: "Cevabını yorumlara yaz" }
+const A = SAHNE.ayar, $ = i => document.getElementById(i);
+$('u').textContent = A.ust ?? 'SENCE?'; $('s').textContent = A.soru || ''; $('a').textContent = A.alt ?? 'Cevabını yorumlara yaz';
+window.render = t => ['u', 's', 'a'].forEach((id, i) => { const g = K.ez((t - 0.2 - i * 0.3) / 0.5); $(id).style.opacity = g; $(id).style.transform = `translateY(${(1 - g) * 30}px)`; });
+render(0);
+</script></body></html>

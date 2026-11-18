@@ -33,7 +33,7 @@ main{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:0;height:calc(10
 .iz .ad{position:sticky;left:0;z-index:4;display:flex;align-items:center;width:74px;height:100%;font-size:11px;font-weight:800;color:var(--soluk);background:var(--yuzey);padding-left:8px;border-right:1px solid var(--cizgi)}
 .blok{position:absolute;top:5px;height:24px;border-radius:7px;font-size:11px;font-weight:700;color:#fff;padding:4px 7px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .blok.konusma{background:#4A6FA5}.blok.bosluk{background:#9aa3b2}
-.blok.tam{background:var(--mor)}.blok.sol,.blok.sag{background:var(--turuncu)}
+.blok.tam{background:var(--mor)}.blok.ust{background:var(--yesil)}.blok.sol,.blok.sag{background:var(--turuncu)}
 .blok.satir{background:#d9dfe9;color:var(--yazi);font-weight:600;height:20px;top:7px;padding:2px 5px}
 .isaret{position:absolute;top:4px;width:22px;height:26px;margin-left:-11px;border-radius:7px 7px 7px 0;background:var(--sari);font-size:12px;text-align:center;line-height:26px;font-weight:800}
 .isaret.yapildi{background:#cfe9d9}
@@ -63,3 +63,5 @@ aside nav button.secili{color:var(--yazi);border-bottom-color:var(--turuncu)}
 .satirM .zamanCip{flex:none;height:fit-content}
 #surukle{position:fixed;inset:0;background:rgba(47,124,246,.15);border:4px dashed var(--mavi);display:none;align-items:center;justify-content:center;font:800 40px Manrope;color:var(--mavi);z-index:20;pointer-events:none}
 @media (max-width:900px){main{grid-template-columns:1fr;height:auto}aside{border-left:0;border-top:1px solid var(--cizgi);min-height:60vh}#renderKutu{display:none}}
+.satirM .satirYazi{flex:1}.satirM .satirYazi[contenteditable=true]{background:#fff;outline:2px solid var(--mavi);border-radius:6px;padding:0 4px}
+.satirM .duzelt{background:none;color:var(--soluk);padding:0 6px;font-size:14px;visibility:hidden}.satirM:hover .duzelt{visibility:visible}

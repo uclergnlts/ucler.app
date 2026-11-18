@@ -10,7 +10,8 @@ Sitenin derlemesine girmez. Kendi `package.json` dosyası vardır ve yalnızca b
 3. **Klip bırak:** iPhone'dan AirDrop ile gelen klipleri tarayıcı penceresine sürükle. Her klip için önizleme kopyası ve altyazı otomatik çıkar. "Klipler" sekmesinde "hazır" yazınca kurguya eklenir.
    Çekim ayarı: 4K, 30 fps, HDR kapalı, her bölüm ayrı dosya.
 4. **İzle ve not bırak:** Boşluk tuşu oynatır ve durdurur, ok tuşları 1 sn ileri ve geri götürür. İstediğin anda durdur, "Notlar" sekmesine yaz, "Not bırak"a bas. Claude kurguyu değiştirince ekran kendiliğinden yenilenir.
-5. **Videoyu çıkar:** Sağ üstten 1080p ya da 4K seçip "Videoyu çıkar"a bas. Bitince "Çıktılar" sekmesinde görünür.
+5. **Altyazıyı düzelt:** "Metin" sekmesinde bir satırın üstüne gel, ✎ simgesine bas, düzelt ve Enter'a bas.
+6. **Videoyu çıkar:** Sağ üstten 1080p ya da 4K seçip "Videoyu çıkar"a bas. Bitince "Çıktılar" sekmesinde görünür. Videonun yanında YouTube'a yüklenecek altyazı dosyası (.srt) ve açıklamaya yapıştırılacak bölüm listesi de hazırlanır.
 
 Telefondan izlemek için stüdyo şu komutla başlatılır: `STUDYO_AG=1 npm start`. Mac ve telefon aynı Wi-Fi'de olmalı. Bu modda stüdyo yerel ağdaki herkese açılır.
 
@@ -19,7 +20,7 @@ Telefondan izlemek için stüdyo şu komutla başlatılır: `STUDYO_AG=1 npm sta
 |---|---|
 | `projeler/<ad>/kurgu.json` | Kurgu: klip sırası ve kesimleri, sahneler, altyazı, görüntü ayarları, müzik. Depoda tutulur. |
 | `projeler/<ad>/sahneler/*.html` | Çizimli ya da animasyonlu sahneler. Depoda tutulur. |
-| `projeler/<ad>/metin/<klip>.json` | Whisper'ın kelime zamanlı metni. Yazım hataları burada düzeltilir. |
+| `projeler/<ad>/metin/<klip>.json` | Whisper'ın kelime zamanlı metni ve ses analizinden bulunan duraksamalar (`sessizlik`). Yazım hataları burada ya da stüdyoda düzeltilir. |
 | `projeler/<ad>/notlar.json` | Üçler'in zamanlı notları. Claude yanıtı `yanit` alanına, durumu `"yapıldı"` olarak yazar. |
 | `~/Movies/ucler-studyo/<ad>/ham` | Ham çekimler. Depoya girmez. |
 | `~/Movies/ucler-studyo/<ad>/vekil`, `maske`, `gecici` | Önizleme kopyaları, kişi maskeleri ve ara dosyalar. Hepsi yeniden üretilebilir. |
@@ -39,10 +40,11 @@ Telefondan izlemek için stüdyo şu komutla başlatılır: `STUDYO_AG=1 npm sta
     { "dosya": "IMG_0001.MOV", "gir": 14.2, "cik": 31.0 }  // aynı klipten ikinci parça (tekrar çekimi atlamak için)
   ],
   "cikarilan": ["IMG_0003.MOV"],  // kurguya otomatik eklenmesin
+  "duraksama": { "kes": true, "esik": 0.7, "pay": 0.15 },  // 0.7 sn'den uzun duraksamaları at (atlamalı kesim). Bir klipte kapatmak için klibe "duraksama": false
   "sahneler": [
     // "klip"+"an": sahne konuşmanın o anına bağlanır, başka yerde kesme yapılınca kaymaz. Ya da "bas": çıktı saniyesi.
     { "id": "doku", "dosya": "uzay-dokusu.html", "klip": "IMG_0001.MOV", "an": 3.0, "sure": 5,
-      "yerlesim": "sol",          // "tam" (yüzü kapatır) | "sol" | "sag" (yan panel; yüz öbür yana kayar)
+      "yerlesim": "sol",          // "tam" (yüzü kapatır) | "sol" | "sag" (yan panel; yüz öbür yana kayar) | "ust" (yüzün üstünde saydam)
       "gecis": "daire",           // tam ekran için: "daire" | "solma"
       "altyazi": true, "arkaplan": true,
       "ayar": { "baslik": "..." } // sahneye SAHNE.ayar olarak gider
@@ -59,10 +61,20 @@ Telefondan izlemek için stüdyo şu komutla başlatılır: `STUDYO_AG=1 npm sta
 }
 ```
 
+**Hazır şablonlar** (`"dosya": "sablon:<ad>"`, ayarlar `ayar` içinde):
+| Şablon | Yerleşim | ayar |
+|---|---|---|
+| `bolum` | tam | `no`, `baslik`, `alt`. YouTube bölüm listesine kendiliğinden girer. Başka bir sahneyi bölüm yapmak için sahneye `"bolum": "Ad"` yazılır. |
+| `alt-bant` | ust | `baslik`, `alt`, `konum` (sol/sag), `y` |
+| `vurgu` | ust | `metin`, `alt`, `konum` (sol/sag), `renk`, `y`. Anahtar kelime yüzün yanında belirir. |
+| `liste` | sol / sag / tam | `baslik`, `maddeler` [..], `zamanlar` [sn..] |
+| `soru` | tam | `ust`, `soru`, `alt`. Kapanış sorusu. |
+
 **Sahne dosyası:** `<script src="/studyo/sahne-kit.js"></script>` yükler ve `window.render(t)` tanımlar (`t`, sahnenin başından beri geçen saniye). Çizim alanı `SAHNE.w × SAHNE.h` boyutundadır: tam ekranda 1920×1080, yan panelde 846×1080. Yardımcılar `K` içindedir (`ez`, `back`, `win`, `renk`, `canvas`). Örnek: `projeler/uzay-zaman/sahneler/uzay-dokusu.html`.
 
 **Kontrol:**
 - Kurguya bakmak için tek kareler: `curl "localhost:4100/api/p/<ad>/kare?t=3,12.5"`. Dosyalar `gecici/kare/` klasörüne yazılır.
+- Altyazı ve bölüm listesi için: `curl "localhost:4100/api/p/<ad>/disa?tur=srt"` ya da `?tur=bolumler`.
 - Video çıkarmak için: `curl -X POST -d '{"cozunurluk":"1080"}' localhost:4100/api/p/<ad>/render`.
 
 **Nasıl çalışır:** Önizlemede tarayıcı 720p kopyaları oynatır. Sahneleri ve altyazıyı `public/katman.js` aynı anda çizer. Son videoda ham çekimler ffmpeg ile kesilir (değişmeyen parçalar önbellekte kalır). Katman, Chrome'da kare kare saydam PNG olarak üç sekmede paralel çizilir. Yüzün kayması ve ses ayarı (`loudnorm`, -14 LUFS) ffmpeg'de yapılır. Önizleme ile son video aynı hesabı (`public/motor.js`) kullanır.

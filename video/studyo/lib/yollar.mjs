@@ -39,6 +39,7 @@ export function projeKur(ad, baslik) {
     baslik: baslik || ad, konusmaDili: 'tr', fps: 30,
     klipler: [], sahneler: [],
     altyazi: { acik: true },
+    duraksama: { kes: true, esik: 0.7, pay: 0.15 },
     muzik: null,
   });
   if (!fs.existsSync(p.notlar)) yazJson(p.notlar, []);
@@ -56,4 +57,10 @@ export function yazJson(f, v) {
 export function projeListesi() {
   if (!fs.existsSync(PROJELER)) return [];
   return fs.readdirSync(PROJELER).filter(d => fs.existsSync(path.join(PROJELER, d, 'kurgu.json')));
+}
+
+export function metinleriOku(p) {
+  const metinler = {};
+  if (fs.existsSync(p.metin)) for (const f of fs.readdirSync(p.metin)) if (f.endsWith('.json')) { const j = okuJson(path.join(p.metin, f), null); if (j) metinler[j.dosya] = j; }
+  return metinler;
 }

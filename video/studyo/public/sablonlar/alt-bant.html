@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><script src="/studyo/sahne-kit.js"></script>
+<style>#b{position:absolute;left:90px;top:820px;display:flex;align-items:stretch;overflow:hidden;border-radius:14px;box-shadow:0 12px 40px rgba(19,35,63,.25)}
+.renk{width:12px;background:#FF7A1A}.ic{background:#fff;padding:16px 28px 18px}.bas{font:800 44px Manrope;color:#13233F}.alt{font:700 28px Manrope;color:#6B7487;margin-top:2px}</style></head>
+<body><div id="b"><div class="renk"></div><div class="ic"><div class="bas" id="bas"></div><div class="alt" id="alt"></div></div></div>
+<script>
+// Alt bant (yüzün üstünde). ayar: { baslik: "Albert Einstein", alt: "Fizikçi, 1879-1955", konum: "sol"|"sag", y: 820 }
+const A = SAHNE.ayar, b = document.getElementById('b');
+document.getElementById('bas').textContent = A.baslik || ''; document.getElementById('alt').textContent = A.alt || '';
+if (A.konum === 'sag') { b.style.left = 'auto'; b.style.right = '90px'; }
+if (A.y) b.style.top = A.y + 'px';
+window.render = t => {
+  const g = K.ez(t / 0.45) * (1 - K.ez((t - (SAHNE.sure - 0.4)) / 0.4));
+  b.style.clipPath = `inset(0 ${(1 - g) * 100}% 0 0)`; b.style.opacity = g > 0 ? 1 : 0;
+};
+render(0);
+</script></body></html>

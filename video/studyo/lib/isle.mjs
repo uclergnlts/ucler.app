@@ -94,14 +94,21 @@ async function isle(ad, dosya, asama) {
     yazJson(metinF, { dosya, sure: bi.sure, dil: kurgu.konusmaDili || 'tr', bilgi: bi, kelimeler });
     fs.rmSync(wav, { force: true }); fs.rmSync(cikis + '.json', { force: true });
   }
+  const mt = okuJson(metinF, null);
+  if (mt && !mt.sessizlik) { asama('duraksamalar bulunuyor'); mt.sessizlik = await sessizlikBul(ham); yazJson(metinF, mt); }
 
   // Kurguda yoksa sona ekle; baştaki ve sondaki sessizliği kırp
   const kurgu = okuJson(p.kurgu, null);
   if (kurgu && !(kurgu.klipler || []).some(k => k.dosya === dosya) && !(kurgu.cikarilan || []).includes(dosya)) {
     const m = okuJson(metinF, { kelimeler: [] });
     const ilk = m.kelimeler[0], son = m.kelimeler[m.kelimeler.length - 1];
-    const gir = ilk ? Math.max(0, +(ilk.s - 0.3).toFixed(2)) : 0;
-    const cik = son ? Math.min(bi.sure, +(son.e + 0.45).toFixed(2)) : +bi.sure.toFixed(2);
+    let gir = ilk ? Math.max(0, +(ilk.s - 0.3).toFixed(2)) : 0;
+    let cik = son ? Math.min(bi.sure, +(son.e + 0.45).toFixed(2)) : +bi.sure.toFixed(2);
+    // Whisper baştaki/sondaki sessizliği ilk/son kelimeye katabiliyor; ses analizine göre daralt
+    const ss = m.sessizlik || [];
+    const bastaki = ss.find(x => x[0] <= 0.05), sondaki = ss.find(x => x[1] >= bi.sure - 0.1);
+    if (bastaki) gir = Math.max(gir, +(bastaki[1] - 0.25).toFixed(2));
+    if (sondaki) cik = Math.min(cik, +(sondaki[0] + 0.4).toFixed(2));
     kurgu.klipler = kurgu.klipler || [];
     kurgu.klipler.push({ dosya, gir, cik, not: 'otomatik eklendi' });
     yazJson(p.kurgu, kurgu);
@@ -112,4 +119,17 @@ export function hamDosyalar(ad) {
   const p = proje(ad);
   if (!fs.existsSync(p.ham)) return [];
   return fs.readdirSync(p.ham).filter(f => VIDEO_UZANTI.test(f) && !f.startsWith('.')).sort((a, b) => a.localeCompare(b, 'tr', { numeric: true }));
+}
+
+// Konuşmadaki duraksamalar (ffmpeg silencedetect). Whisper kelime zamanları boşlukları doldurduğu için kesimde bunlar kullanılır.
+export async function sessizlikBul(dosya, esik = -38, enAz = 0.3) {
+  const out = await new Promise((ok, no) => {
+    const p = spawn('ffmpeg', ['-v', 'info', '-i', dosya, '-vn', '-af', `highpass=f=100,silencedetect=n=${esik}dB:d=${enAz}`, '-f', 'null', '-'], { stdio: ['ignore', 'ignore', 'pipe'] });
+    let e = ''; p.stderr.on('data', d => e += d); p.on('close', c => c === 0 ? ok(e) : no(new Error('silencedetect')));
+  });
+  const l = []; let bas = null;
+  for (const m of out.matchAll(/silence_(start|end): ([\d.]+)/g)) {
+    if (m[1] === 'start') bas = +m[2]; else if (bas != null) { l.push([+bas.toFixed(3), +(+m[2]).toFixed(3)]); bas = null; }
+  }
+  return l;
 }
