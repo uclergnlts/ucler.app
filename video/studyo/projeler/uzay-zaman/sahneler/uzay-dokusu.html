@@ -1,0 +1,59 @@
+<!doctype html><html><head><meta charset="utf-8"><script src="/studyo/sahne-kit.js"></script></head>
+<body><canvas id="c"></canvas>
+<script>
+// Uzay-zaman dokusu: ızgara, kütle geldikçe çukurlaşır; çevresinde küçük bir gezegen döner.
+// ayar: {baslik, alt, kutle:0..1}
+const S = SAHNE, R = K.renk, c = K.canvas(document.getElementById('c'));
+const A = Object.assign({ baslik: 'Uzay-zaman dokusu', alt: 'Kütle, dokuyu büker', kutle: 1 }, S.ayar);
+const N = 26, GEN = 1100;
+function izd(x, z, y, kam) { // 3B -> ekran
+  const cz = z * Math.cos(kam) - y * Math.sin(kam) + 1500, cy = z * Math.sin(kam) + y * Math.cos(kam);
+  const f = 900 / cz; return [S.w / 2 + x * f * (S.w / 1920 + .35), S.h * 0.58 + cy * f];
+}
+window.render = t => {
+  c.clearRect(0, 0, S.w, S.h);
+  const g = c.createLinearGradient(0, 0, 0, S.h); g.addColorStop(0, '#0B1020'); g.addColorStop(1, '#16213F');
+  c.fillStyle = g; c.fillRect(0, 0, S.w, S.h);
+  for (let i = 0; i < 90; i++) { const x = (i * 977) % S.w, y = (i * 571) % (S.h * .55); c.fillStyle = `rgba(255,255,255,${.25 + .35 * Math.sin(t * 2 + i)})`; c.fillRect(x, y, 2, 2); }
+  const m = K.ezio((t - .5) / 2) * A.kutle;        // kütlenin gelişi
+  const derin = z => r => -520 * m / (1 + (r * r) / 52000);
+  const kam = .95;
+  const y = (x, z) => derin()(Math.hypot(x, z));
+  c.lineWidth = 2;
+  for (let yon = 0; yon < 2; yon++) for (let i = 0; i <= N; i++) {
+    c.beginPath();
+    for (let j = 0; j <= 60; j++) {
+      const a = -GEN + 2 * GEN * i / N, b = -GEN + 2 * GEN * j / 60;
+      const [x, z] = yon ? [a, b] : [b, a];
+      const [sx, sy] = izd(x, z, -y(x, z), kam);
+      j ? c.lineTo(sx, sy) : c.moveTo(sx, sy);
+    }
+    const d = Math.abs(i - N / 2) / (N / 2);
+    c.strokeStyle = `rgba(110,170,255,${.75 - .45 * d})`; c.stroke();
+  }
+  // Kütle (yıldız)
+  const [kx, ky] = izd(0, 0, -y(0, 0) + 120, kam);
+  const r = 70 * K.back((t - .3) / .8) * (S.w / 1920 + .45);
+  if (r > 0) {
+    const pa = c.createRadialGradient(kx, ky, 0, kx, ky, r * 2.6); pa.addColorStop(0, 'rgba(255,200,61,.55)'); pa.addColorStop(1, 'rgba(255,200,61,0)');
+    c.fillStyle = pa; c.beginPath(); c.arc(kx, ky, r * 2.6, 0, 7); c.fill();
+    c.fillStyle = '#FFC83D'; c.beginPath(); c.arc(kx, ky, r, 0, 7); c.fill();
+  }
+  // Yörüngedeki gezegen
+  const go = K.ez((t - 2.2) / .6);
+  if (go > 0) {
+    const aci = (t - 2.2) * 1.1, rr = 520;
+    const px = Math.cos(aci) * rr, pz = Math.sin(aci) * rr;
+    const [sx, sy] = izd(px, pz, -y(px, pz) + 40, kam);
+    c.globalAlpha = go; c.fillStyle = '#2F7CF6'; c.beginPath(); c.arc(sx, sy, 22 * (S.w / 1920 + .5), 0, 7); c.fill(); c.globalAlpha = 1;
+  }
+  // Başlık
+  const ba = K.ez((t - .2) / .5);
+  c.globalAlpha = ba; c.fillStyle = '#fff'; c.textAlign = 'center';
+  c.font = `800 ${S.w > 1000 ? 72 : 54}px Manrope`; c.fillText(A.baslik, S.w / 2, 130);
+  c.globalAlpha = K.ez((t - 1.2) / .5); c.fillStyle = '#FFC83D';
+  c.font = `700 ${S.w > 1000 ? 40 : 32}px Manrope`; c.fillText(A.alt, S.w / 2, 190);
+  c.globalAlpha = 1;
+};
+render(0);
+</script></body></html>

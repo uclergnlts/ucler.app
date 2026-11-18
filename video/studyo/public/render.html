@@ -1,0 +1,16 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>render</title>
+<link rel="stylesheet" href="/fonts/fonts-local.css">
+<style>html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:transparent}#k{position:relative;width:1920px;height:1080px}</style>
+</head><body><div id="k"></div>
+<script type="module">
+import { Katman, KATMAN_CSS } from '/studyo/katman.js';
+const st = document.createElement('style'); st.textContent = KATMAN_CSS; document.head.appendChild(st);
+const proje = new URLSearchParams(location.search).get('p');
+const veri = await (await fetch(`/api/p/${encodeURIComponent(proje)}`)).json();
+const k = new Katman(document.getElementById('k'), proje);
+k.guncelle(veri.kurgu, veri.metinler);
+await k.hazir();
+window.kareHazirla = t => k.ciz(t);
+window.HAZIR = true;
+</script></body></html>

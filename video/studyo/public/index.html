@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Üçler Stüdyo</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2313233F%22/%3E%3Ccircle cx=%2223%22 cy=%2223%22 r=%224%22 fill=%22%23FF7A1A%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/fonts/fonts-local.css">
+<link rel="stylesheet" href="/studyo/stil.css">
+</head><body>
+<header>
+  <div class="logo">ucler<span>.</span> <b>stüdyo</b></div>
+  <select id="proje"></select>
+  <button id="yeniProje" class="ikincil">+ Yeni video</button>
+  <div class="bosluk"></div>
+  <span id="baglanti" class="rozet">bağlanıyor</span>
+  <div id="renderKutu">
+    <select id="cozunurluk"><option value="1080">1080p</option><option value="4k">4K</option></select>
+    <button id="renderBtn">Videoyu çıkar</button>
+  </div>
+</header>
+<main>
+  <section id="sol">
+    <div id="sahneCerceve"><div id="sahne">
+      <div id="yuzKap"><video id="va" playsinline preload="auto"></video><video id="vb" playsinline preload="auto"></video><div id="gizleKatman"></div></div>
+      <div id="katman"></div>
+      <div id="bosMesaj">Henüz klip yok. Çektiğin videoları bu pencereye sürükleyip bırak.</div>
+    </div></div>
+    <div id="kontrol">
+      <button id="oynat" title="Oynat / durdur (boşluk tuşu)">▶</button>
+      <span id="zaman">0:00.0 / 0:00.0</span>
+      <input id="ilerle" type="range" min="0" max="1000" value="0">
+      <label class="kucuk"><input type="checkbox" id="altyaziAc" checked> altyazı</label>
+    </div>
+    <div id="cizelge"><div id="cetvel"></div><div id="izler"></div><div id="imlec"></div></div>
+    <div id="yakinlik"><span class="kucuk">yakınlaştır</span><input id="zoom" type="range" min="4" max="200" value="20"></div>
+  </section>
+  <aside>
+    <nav><button data-sekme="notlar" class="secili">Notlar</button><button data-sekme="klipler">Klipler</button><button data-sekme="metin">Metin</button><button data-sekme="ciktilar">Çıktılar</button></nav>
+    <div id="notlar" class="sekme secili">
+      <div class="notYaz">
+        <textarea id="notMetin" rows="3" placeholder="Bu anla ilgili ne düşünüyorsun? (ör. burada uzay-zaman dokusu tam ekran gelsin)"></textarea>
+        <button id="notEkle">Not bırak · <span id="notZaman">0:00.0</span></button>
+      </div>
+      <div id="notListe"></div>
+    </div>
+    <div id="klipler" class="sekme">
+      <div id="birak">Çekimleri buraya sürükle bırak<br><span class="kucuk">ya da Finder'da <a href="#" id="hamAc">ham klasörüne</a> koy</span></div>
+      <div id="yuklemeler"></div>
+      <div id="klipListe"></div>
+    </div>
+    <div id="metin" class="sekme"><div id="metinListe"></div></div>
+    <div id="ciktilar" class="sekme"><div id="renderDurum"></div><div id="ciktiListe"></div></div>
+  </aside>
+</main>
+<div id="surukle">Bırak, yükleyeyim</div>
+<script type="module" src="/studyo/app.js"></script>
+</body></html>
