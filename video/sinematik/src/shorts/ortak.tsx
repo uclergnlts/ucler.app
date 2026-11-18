@@ -345,20 +345,23 @@ export const makeShort = (o: {
   muzik?: [string, number];
   dil?: 'en' | 'tr';
   esle?: Record<string, string>;
+  /** Kapanış yerine: sonraki videonun ilk çekimi, son 1 sn (abone ol cümlesi yok). */
+  sonraki?: { C: React.FC; words: Word[] };
 }) => {
   const esle = o.esle ?? {};
   const tail = o.tail ?? 0.7;
-  const frames = Math.round((o.voiceLen + OFF + tail) * FPS);
+  const ana = Math.round((o.voiceLen + OFF + tail) * FPS);
+  const frames = ana + (o.sonraki ? FPS : 0);
   const sec = (w: string) => (w === '@END' ? o.voiceLen + Math.max(0.05, tail - 0.6) : findWord(o.words, esle[w] ?? w)) + OFF;
   const fr = (s: number) => Math.round(s * FPS);
   const shots = o.plan.map((p, i) => {
     const from = i === 0 ? 0 : fr(sec(p.w) - 0.12);
-    const to = i === o.plan.length - 1 ? frames : fr(sec(o.plan[i + 1].w) - 0.12);
+    const to = i === o.plan.length - 1 ? ana : fr(sec(o.plan[i + 1].w) - 0.12);
     return { ...p, from, dur: to - from, start: from / FPS - OFF };
   });
   const Comp: React.FC = () => {
     const f = useCurrentFrame();
-    const titleO = interpolate(f, [frames - 8, frames], [1, 1], clamp);
+    const titleO = f >= ana && o.sonraki ? 0 : 1;
     return (
       <AbsoluteFill style={{ background: '#0B0D16' }}>
         <DilCtx.Provider value={o.dil ?? 'en'}>
@@ -383,6 +386,18 @@ export const makeShort = (o: {
         </WordsCtx.Provider>
         </EsleCtx.Provider>
         </DilCtx.Provider>
+        {o.sonraki && (
+          <Sequence from={ana} durationInFrames={FPS} name="sonraki video">
+            <WordsCtx.Provider value={o.sonraki.words}>
+              <ShotStart.Provider value={-OFF}>
+                <o.sonraki.C />
+              </ShotStart.Provider>
+            </WordsCtx.Provider>
+            <div style={{ position: 'absolute', left: 0, right: 0, top: 230, textAlign: 'center' }}>
+              <span style={{ fontFamily, fontWeight: 800, fontSize: 60, color: INK, background: '#FFD54A', padding: '10px 34px', borderRadius: 18, border: `6px solid ${INK}` }}>NEXT</span>
+            </div>
+          </Sequence>
+        )}
         {/* iki satır başlık (Shorts kapağı gibi okunur) */}
         <div style={{ position: 'absolute', left: 0, right: 0, top: 210, textAlign: 'center', fontFamily, fontWeight: 800, fontSize: 74, lineHeight: 1.02, letterSpacing: '-0.02em', color: '#fff', opacity: titleO, textShadow: `0 4px 0 ${INK}, 0 0 22px rgba(0,0,0,0.75)`, WebkitTextStroke: `3px ${INK}` }}>
           <div>{o.baslik[0]}</div>
