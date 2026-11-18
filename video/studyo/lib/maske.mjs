@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { spawn } from 'node:child_process';
-import { STUDYO, proje, okuJson } from './yollar.mjs';
+import { STUDYO, proje, okuJson, SES_UZANTI } from './yollar.mjs';
 import { calistir } from './isle.mjs';
 import { arkaFfmpeg } from '../public/motor.js';
 
@@ -69,7 +69,7 @@ export function arkaHazirla(ad, bildir) {
   const arka = kurgu.goruntu && kurgu.goruntu.arka;
   if (!arka) return;
   for (const k of kurgu.klipler || []) {
-    if (!k.dosya) continue;
+    if (!k.dosya || SES_UZANTI.test(k.dosya)) continue;
     const anahtar = `${ad}/${k.dosya}/${arkaAnahtar(arka)}`;
     if (sirada.has(anahtar) || fs.existsSync(path.join(proje(ad).vekil, arkaVekilAdi(k.dosya, arka)))) continue;
     sirada.add(anahtar);

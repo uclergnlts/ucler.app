@@ -11,7 +11,9 @@ export const PROJELER = path.join(STUDYO, 'projeler');
 export const MEDYA = process.env.STUDYO_MEDYA || path.join(os.homedir(), 'Movies', 'ucler-studyo');
 export const MODEL = process.env.WHISPER_MODEL || path.join(MEDYA, '_modeller', 'ggml-large-v3-turbo-q5_0.bin');
 
-export const VIDEO_UZANTI = /\.(mov|mp4|m4v|hevc)$/i;
+// Ham dosyalar: yüzlü çekim (video) ya da yalnız anlatım sesi (ses kaydı)
+export const VIDEO_UZANTI = /\.(mov|mp4|m4v|hevc|m4a|mp3|wav|aac|caf|aiff?)$/i;
+export const SES_UZANTI = /\.(m4a|mp3|wav|aac|caf|aiff?)$/i;
 
 export function proje(ad) {
   if (!/^[a-z0-9][a-z0-9-]{0,60}$/.test(ad)) throw new Error('Geçersiz proje adı: ' + ad);

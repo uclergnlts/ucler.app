@@ -23,7 +23,7 @@ export async function bilgi(dosya) {
   let w = v.width, h = v.height; if (Math.abs(don) === 90) [w, h] = [h, w];
   return {
     sure: Number(j.format.duration), w, h, fps: d ? +(n / d).toFixed(2) : 30, kodek: v.codec_name,
-    hdr: ['arib-std-b67', 'smpte2084'].includes(v.color_transfer), ses: !!a, boyut: Number(j.format.size),
+    hdr: ['arib-std-b67', 'smpte2084'].includes(v.color_transfer), ses: !!a, yalnizSes: !v.codec_name, boyut: Number(j.format.size),
   };
 }
 
@@ -69,8 +69,9 @@ async function isle(ad, dosya, asama) {
   if (!fs.existsSync(vekil)) {
     asama('önizleme kopyası');
     const gec = vekil + '.yarim.mp4';
-    await calistir('ffmpeg', ['-y', '-v', 'error', '-i', ham, '-vf', 'scale=-2:720,format=yuv420p', '-c:v', 'h264_videotoolbox', '-b:v', '5M', '-g', '15',
-      '-c:a', 'aac', '-b:a', '160k', '-ac', '2', '-movflags', '+faststart', gec]);
+    // Yalnız ses kaydıysa önizleme kopyası da yalnız ses olur (oynatıcı yüz yerine boş zemin gösterir)
+    const goruntu = bi.yalnizSes ? ['-vn'] : ['-vf', 'scale=-2:720,format=yuv420p', '-c:v', 'h264_videotoolbox', '-b:v', '5M', '-g', '15'];
+    await calistir('ffmpeg', ['-y', '-v', 'error', '-i', ham, ...goruntu, '-c:a', 'aac', '-b:a', '160k', '-ac', '2', '-movflags', '+faststart', gec]);
     fs.renameSync(gec, vekil);
   }
 

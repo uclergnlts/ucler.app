@@ -220,7 +220,7 @@ $('#notListe').addEventListener('click', async e => {
 function klipleriCiz() {
   const kurguda = new Set((veri.kurgu.klipler || []).map(k => k.dosya));
   $('#klipListe').innerHTML = veri.klipler.map(k => `<div class="klip"><div style="flex:1"><div class="ad">${kacis(k.dosya)}</div>
-    <div class="kucuk">${k.sure ? sureYaz(k.sure) : ''}${k.bilgi ? ` · ${k.bilgi.w}×${k.bilgi.h} · ${k.bilgi.fps} fps` : ''}${kurguda.has(k.dosya) ? ' · kurguda' : ''}</div>
+    <div class="kucuk">${k.sure ? sureYaz(k.sure) : ''}${k.bilgi ? (k.bilgi.yalnizSes ? ' · yalnız ses' : ` · ${k.bilgi.w}×${k.bilgi.h} · ${k.bilgi.fps} fps`) : ''}${kurguda.has(k.dosya) ? ' · kurguda' : ''}</div>
     ${k.bilgi && k.bilgi.hdr ? '<div class="kucuk" style="color:#B42318">HDR açık çekilmiş: renkler soluk görünebilir. Sonraki çekimlerde HDR\'ı kapat.</div>' : ''}
     ${k.arka ? `<div class="kucuk">${kacis(k.arka)}</div>` : ''}
     ${k.hata ? `<div class="kucuk" style="color:#B42318">${kacis(k.hata.slice(0, 200))}</div>` : ''}</div>
@@ -238,7 +238,7 @@ addEventListener('drop', e => {
 });
 function yukle(f) {
   if (!ad) return alert('Önce bir video projesi aç.');
-  if (!/\.(mov|mp4|m4v)$/i.test(f.name)) return alert(f.name + ': yalnız video dosyaları (.mov, .mp4)');
+  if (!/\.(mov|mp4|m4v|m4a|mp3|wav|aac|caf|aiff?)$/i.test(f.name)) return alert(f.name + ': yalnız video (.mov, .mp4) ya da ses (.m4a, .mp3, .wav) dosyaları');
   document.querySelector('[data-sekme=klipler]').click();
   const kutu = document.createElement('div'); kutu.className = 'klip';
   kutu.innerHTML = `<div style="flex:1"><div class="ad">${kacis(f.name)}</div><div class="cubuk"><i style="width:0"></i></div></div><span class="durum">yükleniyor</span>`;

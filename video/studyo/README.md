@@ -9,6 +9,7 @@ Sitenin derlemesine girmez. Kendi `package.json` dosyası vardır ve yalnızca b
 2. **Video seç:** Üstteki listeden videoyu seç ya da "+ Yeni video" ile yenisini aç.
 3. **Klip bırak:** iPhone'dan AirDrop ile gelen klipleri tarayıcı penceresine sürükle. Her klip için önizleme kopyası ve altyazı otomatik çıkar. "Klipler" sekmesinde "hazır" yazınca kurguya eklenir.
    Çekim ayarı: 4K, 30 fps, HDR kapalı, her bölüm ayrı dosya.
+   **Yüzsüz video:** Yalnız ses kaydı da bırakılabilir (.m4a, .mp3, .wav; örneğin iPhone'un Ses Kayıtları uygulamasından). O zaman yüz yerine boş zemin olur, bu yüzden görüntünün tamamını tam ekran sahneler doldurur. Altyazı, duraksama kesimi ve ses ayarı aynı şekilde çalışır.
 4. **İzle ve not bırak:** Boşluk tuşu oynatır ve durdurur, ok tuşları 1 sn ileri ve geri götürür. İstediğin anda durdur, "Notlar" sekmesine yaz, "Not bırak"a bas. Claude kurguyu değiştirince ekran kendiliğinden yenilenir.
 5. **Altyazıyı düzelt:** "Metin" sekmesinde bir satırın üstüne gel, ✎ simgesine bas, düzelt ve Enter'a bas.
 6. **Videoyu çıkar:** Sağ üstten 1080p ya da 4K seçip "Videoyu çıkar"a bas. Bitince "Çıktılar" sekmesinde görünür. Videonun yanında YouTube'a yüklenecek altyazı dosyası (.srt) ve açıklamaya yapıştırılacak bölüm listesi de hazırlanır.

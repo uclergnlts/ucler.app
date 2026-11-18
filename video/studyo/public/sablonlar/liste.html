@@ -6,6 +6,8 @@
 <script>
 // Madde listesi (yan panel ya da tam ekran). ayar: { baslik, maddeler: ["...", "..."], zamanlar: [0.6, 2.4, ...] (sn, isteğe bağlı) }
 const A = SAHNE.ayar, l = document.getElementById('l');
+// Tam ekranda daha büyük yazı ve geniş kenar boşluğu
+if (SAHNE.yer === 'tam') document.head.insertAdjacentHTML('beforeend', '<style>#k{padding:170px 14%}.bas{font-size:92px;margin-bottom:70px}.m{font-size:58px;margin-bottom:44px;gap:30px}.m i{width:70px;height:70px;font-size:40px;line-height:70px;border-radius:18px}</style>');
 document.getElementById('bas').textContent = A.baslik || '';
 const M = A.maddeler || [];
 l.innerHTML = M.map((x, i) => `<div class="m"><i>${i + 1}</i><span></span></div>`).join('');

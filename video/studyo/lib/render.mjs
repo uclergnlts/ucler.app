@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { chromium } from 'playwright-core';
-import { proje, okuJson, metinleriOku } from './yollar.mjs';
+import { proje, okuJson, metinleriOku, SES_UZANTI } from './yollar.mjs';
 import { calistir } from './isle.mjs';
 import { srt, kurguHazirla, parcalar, toplamSure, ffmpegKaydirma, yuzKaydirma, goruntuFfmpeg, arkaFfmpeg, W, H } from '../public/motor.js';
 import { maskeUret, arkaAnahtar } from './maske.mjs';
@@ -88,17 +88,20 @@ export async function render(ad, { cozunurluk = '1080', port, ilerleme = () => {
     const ortak = ['-c:v', 'h264_videotoolbox', '-b:v', olcek === 2 ? '90M' : '35M', '-g', String(fps), '-c:a', 'pcm_s16le', '-ar', '48000', '-ac', '2', '-t', d];
     if (s.bosluk) await calistir('ffmpeg', ['-y', '-v', 'error', '-f', 'lavfi', '-i', `color=c=${KAGIT}:s=${OW}x${OH}:r=${fps}`, '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo',
       '-vf', 'format=yuv420p', ...ortak, f + '.yarim.mov']);
+    else if (SES_UZANTI.test(s.dosya)) await calistir('ffmpeg', ['-y', '-v', 'error', '-f', 'lavfi', '-i', `color=c=${KAGIT}:s=${OW}x${OH}:r=${fps}`,
+      '-ss', s.gir.toFixed(3), '-t', d, '-i', path.join(p.ham, s.dosya), '-map', '0:v', '-map', '1:a', '-vf', 'format=yuv420p',
+      '-af', `aresample=48000,apad,afade=t=in:d=0.02,afade=t=out:st=${Math.max(0, d - 0.03).toFixed(3)}:d=0.03`, ...ortak, f + '.yarim.mov']);
     else {
       const ekGirdi = [];
       let arkaAdim = '';
-      if (arka) {
+      if (arka && !SES_UZANTI.test(s.dosya)) {
         ilerleme({ asama: 'arka plan ayrılıyor', oran: 0.02 + 0.18 * j / pars.length, kalan: null });
         ekGirdi.push('-ss', s.gir.toFixed(3), '-t', d, '-i', await maskeUret(ad, s.dosya));
         if (arka.tur === 'resim') ekGirdi.push('-loop', '1', '-i', path.join(p.medya, 'arka', arka.dosya));
         arkaAdim = arkaFfmpeg(arka, OW, OH, 'gh', '1:v', '2:v') + '[g0];';
       }
       await calistir('ffmpeg', ['-y', '-v', 'error', '-hwaccel', 'videotoolbox', '-ss', s.gir.toFixed(3), '-t', d, '-i', path.join(p.ham, s.dosya), ...ekGirdi,
-      '-filter_complex', `[0:v]scale=${OW}:${OH}:force_original_aspect_ratio=increase:flags=bicubic,crop=${OW}:${OH},fps=${fps},format=yuv420p,setsar=1[${arka ? 'gh' : 'g0'}];` + arkaAdim +
+      '-filter_complex', `[0:v]scale=${OW}:${OH}:force_original_aspect_ratio=increase:flags=bicubic,crop=${OW}:${OH},fps=${fps},format=yuv420p,setsar=1[${arkaAdim ? 'gh' : 'g0'}];` + arkaAdim +
         (gf ? gf.adimlar + `;[${gf.son}]` : '[g0]') + `tpad=stop_mode=clone:stop_duration=0.3,format=yuv420p[vo]`, '-map', '[vo]', '-map', '0:a?',
       '-af', `aresample=48000,apad,afade=t=in:d=0.02,afade=t=out:st=${Math.max(0, d - 0.03).toFixed(3)}:d=0.03`, ...ortak, f + '.yarim.mov']);
     }
@@ -183,7 +186,7 @@ export async function kareler(ad, zamanlar, { port }) {
       const s = pars.find(s => t >= s.bas && t < s.son) || pars[pars.length - 1];
       const out = path.join(p.gecici, 'kare', `kare-${String(t).replace('.', '_')}.jpg`);
       const x = yuzKaydirma(kurgu, t).toFixed(0);
-      const girdi = s && !s.bosluk ? ['-ss', Math.min(s.cik, s.gir + Math.max(0, t - s.bas)).toFixed(3), '-i', path.join(p.ham, s.dosya)]
+      const girdi = s && !s.bosluk && !SES_UZANTI.test(s.dosya) ? ['-ss', Math.min(s.cik, s.gir + Math.max(0, t - s.bas)).toFixed(3), '-i', path.join(p.ham, s.dosya)]
         : ['-f', 'lavfi', '-i', `color=c=${KAGIT}:s=${W}x${H}`];
       await calistir('ffmpeg', ['-y', '-v', 'error', ...girdi, '-i', ust, '-f', 'lavfi', '-i', `color=c=${KAGIT}:s=${W}x${H}`, '-filter_complex',
         `[0:v]scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},setpts=PTS-STARTPTS,format=yuv420p[g0];${gf ? gf.adimlar + `;[${gf.son}]` : '[g0]'}null[y];[2:v]setpts=PTS-STARTPTS[z];[z][y]overlay=x=${x}:y=0:eof_action=repeat[t];[t][1:v]overlay=0:0`, '-frames:v', '1', '-q:v', '3', out]);

@@ -137,7 +137,7 @@ const sunucu = http.createServer(async (req, res) => {
     }
     if (alt === '/yukle' && req.method === 'PUT') {
       const ad0 = path.basename(u.searchParams.get('dosya') || '');
-      if (!VIDEO_UZANTI.test(ad0)) return json(res, { hata: 'yalnız video dosyaları (.mov .mp4)' }, 400);
+      if (!VIDEO_UZANTI.test(ad0)) return json(res, { hata: 'yalnız video ya da ses dosyaları (.mov .mp4 .m4a .mp3 .wav)' }, 400);
       const hedef = path.join(p.ham, ad0);
       const gec = path.join(p.gecici, ad0 + '.yukleniyor');
       const yaz = fs.createWriteStream(gec);
