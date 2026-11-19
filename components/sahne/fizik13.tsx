@@ -99,7 +99,7 @@ function IsikHizi({ t, oynuyor, s }: SahneProps) {
         <path d="M0 -10 L34 -10 L46 0 L34 10 L0 10 L-8 16 L-8 -16 Z" fill="var(--ink)" />
         <circle cx={46} cy={0} r={3} fill="var(--c4)" />
       </g>
-      <text x={gx + 18} y={Y - 22} fontSize={11} fontWeight={800} fill="var(--ink)" textAnchor="middle">0,5c →</text>
+      <text x={gx + 18} y={Y - 22} fontSize={11} fontWeight={800} fill="var(--ink)" textAnchor="middle">{say(0.5)}c →</text>
       {/* ölçümler */}
       <g fontSize={12} fontWeight={800}>
         <text x={14} y={168} fill="var(--ink)">{cev("Gemideki ölçer:")} <tspan fill="var(--c2)">{zt > 0.3 ? "c" : "?"}</tspan></text>
@@ -316,7 +316,7 @@ function SiyahCisim({ v }: SahneProps) {
   return (
     <svg viewBox="0 0 340 232" role="img" aria-label={cev("T = {0} K; tepe dalga boyu {1} nm", T, Math.round(tepe))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">T = {T} K → λ<tspan fontSize={9} dy={3}>{"max"}</tspan><tspan dy={-3}> = </tspan><tspan fill="var(--c2)">{Math.round(tepe)} {"nm"}</tspan></text>
-      <text x={14} y={40} fontSize={11.5} fontWeight={700} fill="var(--muted)">{tepe < 380 ? cev("tepe morötesinde") : tepe <= 750 ? cev("tepe görünürde") : cev("tepe kızılötesinde")} {cev("· ışıma 1000 K'dekinin")} {say(kat, 0)} {cev("katı")}</text>
+      <text x={14} y={40} fontSize={11.5} fontWeight={700} fill="var(--muted)">{tepe < 380 ? cev("tepe morötesinde") : tepe <= 750 ? cev("tepe görünürde") : cev("tepe kızılötesinde")} {cev("· ışıma 1000 K'dekinin {0} katı", say(kat, 0))}</text>
       {/* görünür bant */}
       <defs>
         <linearGradient id="fiz13-gorunur" x1={0} x2={1} y1={0} y2={0}>
@@ -377,7 +377,7 @@ function Esik({ v, t, oynuyor, s, kosular }: SahneProps) {
   const lam = sinir(v.lam ?? 650, 300, 700), sid = sinir(v.s ?? 1, 1, 4), E = 1240 / lam, kopar = E > W_NA;
   const gecmis = kosular.slice(-3);
   return (
-    <svg viewBox="0 0 340 262" role="img" aria-label={cev("{0} nm ışık, foton enerjisi {1} eV; {2}", lam, say(E, 2), kopar ? "elektron kopuyor" : "elektron kopmuyor")}>
+    <svg viewBox="0 0 340 262" role="img" aria-label={cev("{0} nm ışık, foton enerjisi {1} eV; {2}", lam, say(E, 2), kopar ? cev("elektron kopuyor") : cev("elektron kopmuyor"))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Foton: 1240 /")} {lam} = <tspan fill={kopar ? "var(--c3)" : "var(--c2)"}>{say(E, 2)} {"eV"}</tspan></text>
       <text x={14} y={40} fontSize={11.5} fontWeight={700} fill="var(--muted)">{kopar ? cev("W = 2,3 eV'den büyük: elektron kopar") : cev("W = 2,3 eV'den küçük: elektron kopmaz")} · {bolge(lam)}</text>
       <Levha x0={40} x1={300} y={170} lam={lam} n={3 * sid} u={u} />
@@ -398,7 +398,7 @@ function Durdurma({ v }: SahneProps) {
   const PX = 34, x = 60, Y = 196, wh = W_NA * PX, eh = ek * PX;
   return (
     <svg viewBox="0 0 340 222" role="img" aria-label={cev("{0} nm: foton {1} eV, durdurma gerilimi {2} V", lam, say(E, 2), say(ek, 2))}>
-      <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">E<tspan fontSize={9} dy={3}>{"k,max"}</tspan><tspan dy={-3}> = {say(E, 2)} − 2,3 = </tspan><tspan fill="var(--c2)">{say(ek, 2)} {"eV"}</tspan></text>
+      <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">E<tspan fontSize={9} dy={3}>{"k,max"}</tspan><tspan dy={-3}> = {say(E, 2)} − {say(2.3)} = </tspan><tspan fill="var(--c2)">{say(ek, 2)} {"eV"}</tspan></text>
       <text x={14} y={40} fontSize={11.5} fontWeight={700} fill="var(--muted)">{ek > 0 ? cev("durdurma gerilimi V₀ = {0} V", say(ek, 2)) : cev("elektron kopmaz: V₀ yok")}</text>
       {/* foton enerjisi çubuğu */}
       <rect x={x} y={Y - E * PX} width={46} height={E * PX} rx={4} fill={dalgaRenk(lam)} opacity={0.85} />
@@ -491,7 +491,7 @@ function CiftYarik({ t, oynuyor, s }: SahneProps) {
   const bitti = u >= 1 && !oynuyor;
   const PX0 = 220, PX1 = 320;
   return (
-    <svg viewBox="0 0 340 244" role="img" aria-label={cev("Çift yarıktan geçen {0} elektron perdede {1} oluşturdu", n, bitti ? "girişim saçakları" : "noktalar")}>
+    <svg viewBox="0 0 340 244" role="img" aria-label={cev("Çift yarıktan geçen {0} elektron perdede {1} oluşturdu", n, bitti ? cev("girişim saçakları") : cev("noktalar"))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={bitti ? "var(--c2)" : "var(--ink)"}>{bitti ? cev("Girişim saçakları: elektron dalga gibi") : n > 0 ? cev("{0} elektron geldi", n) : cev("Elektronlar tek tek gönderilecek")}</text>
       <text x={14} y={40} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("her elektron perdeye tek nokta olarak düşer")}</text>
       {/* tabanca */}

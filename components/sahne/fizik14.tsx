@@ -52,11 +52,11 @@ function Gosterim({ x, y, A, Z, sembol, renk = "var(--ink)", boy = 34 }: { x: nu
 /* ================= 1. Çekirdek ve izotop ================= */
 
 const HAFIF = ["", "H", cev("He"), cev("Li"), cev("Be"), "B", "C", "N", "O"];
-const HAFIF_AD = ["", "hidrojen", "helyum", "lityum", "berilyum", "bor", "karbon", "azot", "oksijen"];
+const HAFIF_AD = ["", cev("hidrojen"), cev("helyum"), cev("lityum"), cev("berilyum"), cev("bor"), cev("karbon"), cev("azot"), cev("oksijen")];
 function CekirdekSahne({ v }: SahneProps) {
   const p = sinir(v.p ?? 6, 1, 8), n = sinir(v.n ?? 6, 0, 10), A = p + n;
   const hedef = p === 6 && n === 8;
-  const baslik = p !== 6 ? cev("Z = {0}: artık karbon değil, {1}", p, HAFIF_AD[p]) : hedef ? cev("Karbon-14: karbon-12'nin izotopu") : `Karbon-${A}`;
+  const baslik = p !== 6 ? cev("Z = {0}: artık karbon değil, {1}", p, HAFIF_AD[p]) : hedef ? cev("Karbon-14: karbon-12'nin izotopu") : cev("Karbon-{0}", A);
   return (
     <svg viewBox="0 0 340 230" role="img" aria-label={cev("{0} proton, {1} nötron: {2}-{3}", p, n, HAFIF_AD[p], A)}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={hedef ? "var(--c3)" : p !== 6 ? "var(--c2)" : "var(--ink)"}>{baslik}</text>
@@ -102,7 +102,7 @@ function Kuvvet({ v }: SahneProps) {
   const GX = 44, GW = 270, GY = 236, GH = 78, gx = (q: number) => GX + ((q - 1) / 3) * GW, gy = (f: number) => GY - sinir(olcek(f), 0, 1) * GH;
   const egri = (f: (q: number) => number) => yol(Array.from({ length: 65 }, (_, i) => { const q = 1 + (i / 64) * 3; return [gx(q), gy(f(q))]; }));
   return (
-    <svg viewBox="0 0 340 270" role="img" aria-label={cev("Protonlar arası {0} fm; {1}", say(r), baskin ? "güçlü çekim baskın" : "elektriksel itme baskın")}>
+    <svg viewBox="0 0 340 270" role="img" aria-label={cev("Protonlar arası {0} fm; {1}", say(r), baskin ? cev("güçlü çekim baskın") : cev("elektriksel itme baskın"))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={baskin ? "var(--c3)" : "var(--c2)"}>{baskin ? cev("Güçlü çekim baskın: bir arada kalırlar") : cev("Elektriksel itme baskın: ayrılırlar")}</text>
       {/* oklar: kırmızı itme dışa, yeşil çekim içe */}
       {ok(x1 - 12, -1, okBoy(fi), "var(--c2)", -20)}

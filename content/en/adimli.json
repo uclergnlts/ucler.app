@@ -6162,5 +6162,1407 @@
    "Below the critical temperature, critical field, and critical current, a superconductor drops to zero resistance and pushes the magnetic field out."
   ],
   "soruOnce": true
+ },
+ "optik": {
+  "id": "optik",
+  "ders": "fizik",
+  "konu": "optik",
+  "baslik": "Optics",
+  "ozet": "Enlarge a shadow, bounce a laser onto a target, count images in angled mirrors, find the image in a concave mirror, bend light, catch total internal reflection, and work out color in light and the nearsighted eye.",
+  "adimlar": [
+   {
+    "baslik": "Light travels in straight lines",
+    "metin": "Since light travels along straight lines, a <b>shadow</b> forms behind the ball. The diameter of the ball is 10 cm, and the screen is 120 cm from the lamp. Place the ball so that the diameter of the shadow is <b>exactly 3 times</b> that of the ball. Then try the extended source too.",
+    "sahne": {
+     "tur": "fiz12-golge"
+    },
+    "deger": {
+     "d": 60,
+     "g": 0
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Distance from ball to lamp",
+      "min": 20,
+      "max": 80,
+      "adim": 10,
+      "tur": "surgu",
+      "birim": "cm"
+     },
+     {
+      "ad": "g",
+      "etiket": "Extended source",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "d": 40
+     },
+     "tamam": "With the point source, the distance from the lamp to the ball is 40 cm and to the screen 120 cm. Since the distance is three times as large, the shadow is three times as large too, that is <b>30 cm</b>. Similar triangles show this.",
+     "ipucu": "The shadow grows by the ratio of the lamp-to-screen distance to the lamp-to-ball distance: 120 / d = 3."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Law of reflection",
+    "metin": "In reflection, the angle of incidence equals the angle of reflection. Change the angle of the laser and send the reflected ray to the target.",
+    "sahne": {
+     "tur": "fiz12-yansima"
+    },
+    "deger": {
+     "a": 20
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "Angle of incidence",
+      "min": 10,
+      "max": 60,
+      "adim": 5,
+      "tur": "surgu",
+      "birim": "°"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "a": 40
+     },
+     "tamam": "The ray that arrived at 40° reflected <b>at 40°</b> on the other side of the normal and hit the target.",
+     "ipucu": "The target is at the same height as the laser. The ray goes to the mirror and comes back at the same angle. So the target must be twice as far as the point on the mirror."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Two angled mirrors",
+    "metin": "You joined two mirrors with 60° between them, and a flag stands in between. The images also give images of each other.",
+    "sahne": {
+     "tur": "fiz12-aynalar",
+     "sure": 4,
+     "aci": 60
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "How many images do you see in the mirrors?",
+     "secenekler": [
+      {
+       "yazi": "2",
+       "neden": "If the two mirrors gave only one image each, there would be 2 images. But the images are reflected again in the other mirror."
+      },
+      {
+       "yazi": "5",
+       "dogru": true,
+       "neden": "Since 360/α = 6 is an even number, the number of images is n = 360/α − 1 = <b>5</b>. If the angle between the mirrors were 90°, there would be 3 images."
+      },
+      {
+       "yazi": "6",
+       "neden": "There are 360/60 = 6 flag positions, but one of them is the object itself. So the number of images is one less."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Image in a concave mirror",
+    "metin": "An object stands in front of a concave mirror with a focal length of 10 cm. The orange ray comes parallel to the principal axis and passes through the <b>focus (F)</b>. The green ray reflects symmetrically at the vertex. Slide the object so that the image is <b>real, inverted, and 2 times larger</b>.",
+    "sahne": {
+     "tur": "fiz12-cukur"
+    },
+    "deger": {
+     "d": 30
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Object distance",
+      "min": 5,
+      "max": 40,
+      "adim": 5,
+      "tur": "surgu",
+      "birim": "cm"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "d": 15
+     },
+     "tamam": "The object is between F and C (15 cm). The reflected rays crossed beyond C, and the image was <b>real, inverted, and 2 times larger</b>. You will see how to find this by calculation in Card 11.",
+     "ipucu": "The object must be outside F but closer than C. When the object is between F and C, the image is real, inverted, and enlarged."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Refraction and Snell's law",
+    "metin": "According to Snell's law, n₁·sinθ₁ = n₂·sinθ₂, and in air n = 1. Light arrives from air at 53° (sin 53° ≈ 0.8). Adjust the refractive index of the medium so that the angle of refraction is <b>30°</b>.",
+    "sahne": {
+     "tur": "fiz12-snell"
+    },
+    "deger": {
+     "n": 1.2
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Refractive index",
+      "min": 1,
+      "max": 2,
+      "adim": 0.1,
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 1.6
+     },
+     "tamam": "Since 1 · 0.8 = n · 0.5, <b>n = 1.6</b>. Light travels in this medium at c/1.6 ≈ 1.9·10⁸ m/s. The larger the index, the more the light bends.",
+     "ipucu": "sin 30° = 0.5. Find n from the equation 1 · 0.8 = n · 0.5."
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Light lab",
+    "metin": "A laser sends light to the boundary between two media. Part of the light reflects, and part passes through by refracting. Change the angle of incidence and the refractive index of the lower medium. You can also send the light the other way. Find out the following for yourself.",
+    "sahne": {
+     "tur": "sim-kirilma"
+    },
+    "deger": {
+     "aci": 30,
+     "n": 150,
+     "ters": 0
+    },
+    "kontroller": [
+     {
+      "ad": "aci",
+      "etiket": "Angle of incidence",
+      "min": 0,
+      "max": 85,
+      "birim": "°"
+     },
+     {
+      "ad": "n",
+      "etiket": "Index of the lower medium",
+      "min": 100,
+      "max": 250,
+      "adim": 2,
+      "carpan": 0.01
+     },
+     {
+      "ad": "ters",
+      "etiket": "Send light from the lower medium into air",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "As light passes from air into glass (n = 1.5), raise the angle of incidence above <b>80°</b>. Does the light ever fail to get through?",
+       "hedef": {
+        "ters": 0,
+        "n": [
+         146,
+         154
+        ],
+        "aci": [
+         80,
+         85
+        ]
+       },
+       "coz": [
+        {
+         "ters": 0,
+         "n": 150,
+         "aci": 82
+        }
+       ],
+       "tamam": "No, the angle of refraction reached about 42° at most. This is the critical angle of glass. Light passing from a smaller index to a larger index always bends toward the normal. There is no total internal reflection in this direction."
+      },
+      {
+       "yazi": "Now send the light from glass into air and find an angle at which <b>no light gets out</b>.",
+       "hedef": {
+        "ters": 1,
+        "tam": 1
+       },
+       "coz": [
+        {
+         "ters": 1,
+         "n": 150,
+         "aci": 50
+        }
+       ],
+       "tamam": "When the angle of incidence passed the critical angle (about 42° in glass), all the light reflected back. This is called <b>total internal reflection</b>. This is how a fiber-optic cable traps light."
+      },
+      {
+       "yazi": "Make the lower medium <b>diamond</b> (n ≈ 2.42). Find the <b>smallest</b> whole-number angle at which total internal reflection begins.",
+       "hedef": {
+        "ters": 1,
+        "n": [
+         238,
+         246
+        ],
+        "aci": 25
+       },
+       "coz": [
+        {
+         "ters": 1,
+         "n": 242,
+         "aci": 25
+        }
+       ],
+       "tamam": "The critical angle is about 24° in diamond and about 42° in glass. Light entering a diamond is totally reflected many times at the faces and can get out in only a few directions. That is why a diamond sparkles so much."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Color in light",
+    "metin": "A yellow ball reflects the red and green of white light and absorbs the blue. Now only a <b>red light</b> will be on in the room.",
+    "sahne": {
+     "tur": "fiz12-renk",
+     "sure": 3.5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "How does the yellow ball look in red light?",
+     "secenekler": [
+      {
+       "yazi": "Still yellow",
+       "neden": "For the ball to look yellow, green light must reach the eye along with red. But there is no green light in the room."
+      },
+      {
+       "yazi": "Black",
+       "neden": "The ball reflects red too. It would look black only if there were no light left for it to reflect."
+      },
+      {
+       "yazi": "Red",
+       "dogru": true,
+       "neden": "The ball reflects the red light that falls on it. Since no green light arrives, the ball looks only red."
+      }
+     ]
+    },
+    "kart": 14
+   },
+   {
+    "baslik": "Nearsighted eye",
+    "metin": "The eye works like a converging lens. In a <b>nearsighted</b> eye, rays from far away meet in front of the retina, and distant objects look blurred. Try the two eyeglass lenses one at a time.",
+    "sahne": {
+     "tur": "fiz12-goz"
+    },
+    "deger": {
+     "k": 0,
+     "i": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Thick-edged lens",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "i",
+      "etiket": "Thin-edged lens",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which eyeglass lens does a nearsighted eye need?",
+     "secenekler": [
+      {
+       "yazi": "Thick-edged (diverging) lens",
+       "dogru": true,
+       "neden": "A thick-edged lens spreads the rays a little, and the focus shifts back onto the retina."
+      },
+      {
+       "yazi": "Thin-edged (converging) lens",
+       "neden": "A thin-edged lens converges the rays even more. So the focus moves even farther from the retina."
+      },
+      {
+       "yazi": "Either works",
+       "neden": "A thin-edged lens converges the rays more, and the focus shifts even farther forward of the retina."
+      }
+     ]
+    },
+    "kart": 15
+   }
+  ],
+  "kapanis": [
+   "Light travels along straight lines. A point source makes an umbra, and an extended source makes a penumbra as well.",
+   "In reflection, the angle of incidence equals the angle of reflection. The angles are measured from the normal.",
+   "Two angled mirrors (if 360/α is even) form n = 360/α − 1 images.",
+   "For mirrors and lenses, 1/f = 1/d<sub>o</sub> + 1/d<sub>i</sub>. The magnification is found with m = −d<sub>i</sub>/d<sub>o</sub>.",
+   "According to Snell's law, n₁·sinθ₁ = n₂·sinθ₂. When light passes from a denser medium to a less dense one, there is total internal reflection if the critical angle is exceeded.",
+   "An object appears in the color of the light it reflects. A nearsighted eye gets a thick-edged lens, and a farsighted eye a thin-edged lens."
+  ],
+  "soruOnce": true
+ },
+ "dalga-optigi": {
+  "id": "dalga-optigi",
+  "ders": "fizik",
+  "konu": "dalga-optigi",
+  "baslik": "Interference and Diffraction of Light",
+  "ozet": "Pass a wave through a narrow gap and find a fringe in Young's experiment. Work out the path difference, change the fringe spacing, and put the setup under water. Narrow a single slit and block light with a polarizer.",
+  "adimlar": [
+   {
+    "baslik": "Huygens' principle",
+    "metin": "A plane wave passes through a gap in a barrier. Narrow the gap and see the wave <b>spread in every direction</b>.",
+    "sahne": {
+     "tur": "fiz12-huygens"
+    },
+    "deger": {
+     "w": 5
+    },
+    "kontroller": [
+     {
+      "ad": "w",
+      "etiket": "Gap width",
+      "min": 1,
+      "max": 6,
+      "tur": "sayac",
+      "birim": "λ"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "w": 1
+     },
+     "tamam": "When the gap narrows to about one wavelength, a single wavelet source is left there and the wave spreads like a semicircle. This is called <b>diffraction</b>. In a wide gap the common tangent of the wavelets is still a plane front, and the wave bends only a little at the edges.",
+     "ipucu": "Diffraction is pronounced when the gap is comparable to the wavelength."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Young's experiment",
+    "metin": "At a bright fringe the path difference is a whole multiple of λ. The <b>path difference</b> of the rays reaching P from S₁ and S₂ is Δ = d·x/L. Slide P and find the <b>2nd bright fringe</b>.",
+    "sahne": {
+     "tur": "fiz12-young"
+    },
+    "deger": {
+     "x": 1.5
+    },
+    "kontroller": [
+     {
+      "ad": "x",
+      "etiket": "Distance of P from center",
+      "min": 0,
+      "max": 8,
+      "adim": 0.5,
+      "tur": "surgu",
+      "birim": "mm"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "x": 6
+     },
+     "tamam": "At x = 6 mm, Δ = 1200 nm = <b>2λ</b>. The waves meet crest to crest and interfere <b>constructively</b>. In this setup the fringe spacing is 3 mm. So the 2nd bright fringe is 2 · 3 = 6 mm from the center.",
+     "ipucu": "The path difference must be exactly 2 wavelengths: Δ = 1200 nm."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Bright or dark?",
+    "metin": "If the path difference is a whole multiple of λ a bright fringe forms, and if it is a half multiple a dark fringe forms. Here λ = 500 nm. The light reaching P from S₂ travels <b>1750 nm</b> farther than the light from S₁.",
+    "sahne": {
+     "tur": "fiz12-faz",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What is seen at point P?",
+     "secenekler": [
+      {
+       "yazi": "3rd bright fringe",
+       "neden": "For a bright fringe, Δ must be a whole multiple of the wavelength. 1750 / 500 = 3.5 is not a whole number."
+      },
+      {
+       "yazi": "3rd dark fringe",
+       "neden": "At the 3rd dark fringe, Δ would be (3 − ½)·λ = 2.5λ = 1250 nm."
+      },
+      {
+       "yazi": "4th dark fringe",
+       "dogru": true,
+       "neden": "Δ/λ = 3.5 = 4 − ½. A crest meets a trough and there is <b>destructive interference</b>. Since the dark fringe condition is Δ = (n − ½)·λ, n = 4."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Fringe spacing",
+    "metin": "The fringe spacing is found with Δx = λ·L/d. Change the wavelength, the screen distance, and the slit separation. Turn on the light each time and look at the pattern.",
+    "sahne": {
+     "tur": "fiz12-sacak",
+     "sure": 1.5
+    },
+    "deger": {
+     "lam": 600,
+     "L": 1.5,
+     "d": 0.3
+    },
+    "kontroller": [
+     {
+      "ad": "lam",
+      "etiket": "Wavelength λ",
+      "min": 400,
+      "max": 700,
+      "adim": 100,
+      "tur": "surgu",
+      "birim": "nm"
+     },
+     {
+      "ad": "L",
+      "etiket": "Screen distance L",
+      "min": 1,
+      "max": 2,
+      "adim": 0.5,
+      "tur": "surgu",
+      "birim": "m"
+     },
+     {
+      "ad": "d",
+      "etiket": "Slit separation d",
+      "min": 0.2,
+      "max": 0.4,
+      "adim": 0.1,
+      "tur": "surgu",
+      "birim": "mm"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "What should you do to bring the fringes closer together?",
+     "secenekler": [
+      {
+       "yazi": "Increase the slit separation d",
+       "dogru": true,
+       "neden": "As the slits moved apart, the fringes got closer. You will see the reason in the relation Δx = λL/d on the next card."
+      },
+      {
+       "yazi": "Use red light",
+       "neden": "Red has a longer wavelength. When λ grows, Δx grows too and the fringes spread apart."
+      },
+      {
+       "yazi": "Make the light brighter",
+       "neden": "The intensity of the light does not change Δx. The fringes only get brighter."
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "If the setup is put under water",
+    "metin": "In air the fringe spacing is 4 mm. Now we will immerse the whole setup in water, which has a refractive index of 1.33.",
+    "sahne": {
+     "tur": "fiz12-sivi",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to the fringes on the screen?",
+     "secenekler": [
+      {
+       "yazi": "They get closer",
+       "dogru": true,
+       "neden": "In water the wavelength of light becomes 1.33 times smaller. The fringe spacing shrinks by the same ratio: 4 / 1.33 ≈ <b>3 mm</b>."
+      },
+      {
+       "yazi": "They spread apart",
+       "neden": "For the fringes to spread apart, the wavelength would have to grow. But in water the wavelength shrinks."
+      },
+      {
+       "yazi": "No change",
+       "neden": "Even though the frequency stays the same, Δx = λL/d depends on the wavelength. In water λ shrinks."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Single-slit diffraction",
+    "metin": "The width of the central bright fringe is <b>2λL/w</b> (λ = 500 nm, L = 1 m). Adjust the slit so that the central fringe is <b>20 mm</b> wide.",
+    "sahne": {
+     "tur": "fiz12-tekyarik"
+    },
+    "deger": {
+     "w": 200
+    },
+    "kontroller": [
+     {
+      "ad": "w",
+      "etiket": "Slit width w",
+      "min": 50,
+      "max": 250,
+      "adim": 50,
+      "tur": "surgu",
+      "birim": "μm"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "w": 50
+     },
+     "tamam": "For w = 50 μm, 2 · 500 nm · 1 m / 50 μm = <b>20 mm</b>. As the slit narrows, the pattern <b>widens</b>.",
+     "ipucu": "The width of the central fringe is inversely proportional to w. To widen the fringe, narrow the slit."
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Polarization",
+    "metin": "A <b>polarizer</b> lets light through only with its vibrations in a single direction. Turn the second polarizer so that <b>no light reaches</b> the screen.",
+    "sahne": {
+     "tur": "fiz12-polar"
+    },
+    "deger": {
+     "a": 0
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "Angle of 2nd polarizer",
+      "min": 0,
+      "max": 90,
+      "adim": 15,
+      "tur": "surgu",
+      "birim": "°"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "a": 90
+     },
+     "tamam": "When the second polarizer is turned <b>90°</b> relative to the first, the light is blocked completely. At in-between angles, part of the light gets through.",
+     "ipucu": "The transmitted light goes out when the directions of the two polarizers are perpendicular."
+    },
+    "kart": 14
+   }
+  ],
+  "kapanis": [
+   "According to Huygens' principle, every point of a wavefront is a new source. In a narrow gap the wave is diffracted.",
+   "Young's experiment shows that light is a wave.",
+   "For a bright fringe Δ = n·λ, and for a dark fringe Δ = (n − ½)·λ.",
+   "The fringe spacing is found with Δx = λL/d. If the setup is immersed in a liquid, the fringe spacing becomes Δx/n.",
+   "In a single slit the width of the central fringe is 2λL/w. When the slit narrows, the pattern widens.",
+   "Polarization proves that light is a transverse wave."
+  ],
+  "soruOnce": true
+ },
+ "ozel-gorelilik": {
+  "id": "ozel-gorelilik",
+  "ders": "fizik",
+  "konu": "ozel-gorelilik",
+  "baslik": "Special Relativity",
+  "ozet": "Add velocities and measure the speed of light. Find the order of the lightning strikes, speed up the light clock and make γ equal 2. Bring the muon to the ground, shorten the ship and push against the c limit.",
+  "adimlar": [
+   {
+    "baslik": "Classical velocity addition",
+    "metin": "A ball thrown forward from the train moves at <b>20 m/s</b> relative to the train. What is its speed for an observer on the ground? Speed up the train so that the ball moves at <b>50 m/s</b> relative to the ground. Then press play.",
+    "sahne": {
+     "tur": "fiz13-hiz",
+     "sure": 3
+    },
+    "deger": {
+     "v": 10
+    },
+    "kontroller": [
+     {
+      "ad": "v",
+      "etiket": "Speed of the train",
+      "min": 0,
+      "max": 40,
+      "adim": 10,
+      "tur": "surgu",
+      "birim": "m/s"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "v": 30
+     },
+     "tamam": "30 + 20 = <b>50 m/s</b>. This is how velocities add in classical physics, and it is correct at everyday speeds. So does the light from the train's headlight travel at <b>c + v</b> relative to the ground?",
+     "ipucu": "The ball's speed relative to the ground is the train's speed plus 20. The sum must be 50."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "The speed of light is c for everyone",
+    "metin": "A ship approaches Earth at <b>0.5c</b> and turns on its headlight.",
+    "sahne": {
+     "tur": "fiz13-isik",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "At what speed does an observer on Earth measure the headlight's light?",
+     "secenekler": [
+      {
+       "yazi": "1.5c",
+       "neden": "That is what classical velocity addition would say. But the rule fails for light, and measurements always give c."
+      },
+      {
+       "yazi": "c",
+       "dogru": true,
+       "neden": "Measurements always give c. So the speed of light does not add to the motion of the source. Einstein took this as a postulate (next card)."
+      },
+      {
+       "yazi": "0.5c",
+       "neden": "Light does not leave the source slowed down. Both the ship and Earth measure c."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Simultaneity is relative",
+    "metin": "Lightning strikes the two ends of a moving train, A and B. The two flashes reach <b>O</b>, standing on the ground exactly in the middle, at the same time. <b>O′</b>, in the middle of the train, is moving toward B. Both flashes travel at c.",
+    "sahne": {
+     "tur": "fiz13-esz",
+     "sure": 4.5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What order of lightning strikes does O′ conclude?",
+     "secenekler": [
+      {
+       "yazi": "They struck at the same time",
+       "neden": "O′ sees the flashes at different moments and knows both traveled at c. So O′ cannot say the lightning struck at the same time."
+      },
+      {
+       "yazi": "A was struck first",
+       "neden": "O′ is moving away from A. So the light from A reaches O′ later."
+      },
+      {
+       "yazi": "B was struck first",
+       "dogru": true,
+       "neden": "O′ moves toward the light ahead and sees it first. Since both flashes travel at c, O′ concludes that B was struck <b>first</b>. Events that are simultaneous in one frame may not be simultaneous in another."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "The light clock and time dilation",
+    "metin": "The time a moving observer measures is Δt = γ·Δt₀, with γ = 1/√(1 − v²/c²). In the light clock on the ship, light travels <b>straight</b> between two mirrors. Seen from Earth it takes a <b>slanted, longer</b> path, but its speed is still c. 6 years pass on the ship. Set the speed so that <b>10 years</b> pass on Earth.",
+    "sahne": {
+     "tur": "fiz13-saat"
+    },
+    "deger": {
+     "b": 0.3
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Speed of the ship",
+      "min": 0,
+      "max": 0.9,
+      "adim": 0.1,
+      "tur": "surgu",
+      "birim": "c"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "b": 0.8
+     },
+     "tamam": "At 0.8c, γ = 1/√(1 − 0.64) = <b>5/3</b>. Δt = γ·Δt<sub>0</sub> = 5/3 · 6 = <b>10 years</b>. The time on the ship, where the events happen at the same place, is the <b>proper time</b>. Proper time is the shortest time, and it is always measured longer from other frames.",
+     "ipucu": "γ must be 10 / 6 = 5/3. Since γ = 1/√(1 − v²/c²), γ grows as you raise v/c."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "The γ factor",
+    "metin": "γ = 1/√(1 − v²/c²). Set the speed so that the moving clock runs at <b>half speed</b> as seen from Earth, which means γ equals 2.",
+    "sahne": {
+     "tur": "fiz13-gama"
+    },
+    "deger": {
+     "b": 0.5
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Speed",
+      "min": 0,
+      "max": 0.99,
+      "adim": 0.01,
+      "tur": "surgu",
+      "birim": "c"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "b": [
+       0.86,
+       0.87
+      ]
+     },
+     "tamam": "For γ = 2, 1 − v²/c² = 1/4. So v = (√3/2)c ≈ <b>0.866c</b>.",
+     "ipucu": "For γ = 2, √(1 − v²/c²) must be 1/2. Raise the speed a little above 0.8c."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "How do muons reach the ground?",
+    "metin": "Cosmic rays produce <b>muons</b> in the atmosphere. The mean lifetime of a muon at rest is <b>2.2 μs</b>. At 0.995c a muon can travel only <b>660 m</b> in that time. A muon was born 6.6 km above the ground.",
+    "sahne": {
+     "tur": "fiz13-muon",
+     "sure": 3.5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Can the muon reach the ground within its mean lifetime?",
+     "secenekler": [
+      {
+       "yazi": "Yes",
+       "dogru": true,
+       "neden": "At 0.995c, γ is about 10. Seen from the ground, the muon's lifetime is about <b>22 μs</b>, and in that time it travels about 6.6 km. In the muon's own frame, the atmosphere is γ times thinner, about 660 m."
+      },
+      {
+       "yazi": "No",
+       "neden": "2.2 μs is the lifetime by the muon's own clock. Seen from the ground, a moving clock runs slow."
+      },
+      {
+       "yazi": "Only if it goes faster than light",
+       "neden": "The muon moves at 0.995c. No object with mass can reach c."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Length contraction",
+    "metin": "The ship's length measured in its own frame, its <b>proper length</b>, is 100 m. An observer on Earth measuring the moving ship finds it shorter: <b>L = L<sub>0</sub>/γ</b>. Set the speed so that the ship measures <b>60 m</b>.",
+    "sahne": {
+     "tur": "fiz13-boy"
+    },
+    "deger": {
+     "b": 0
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Speed of the ship",
+      "min": 0,
+      "max": 0.9,
+      "adim": 0.1,
+      "tur": "surgu",
+      "birim": "c"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "b": 0.8
+     },
+     "tamam": "At 0.8c, γ = 1/√(1 − 0.64) = <b>5/3</b> and L = 100 / (5/3) = <b>60 m</b>. The ship's height stays 20 m. The astronaut on board always measures their own ship as 100 m.",
+     "ipucu": "Since 100 / 60 = 5/3, γ must be 5/3. Raise the speed little by little."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "The c limit",
+    "metin": "At high speeds momentum is <b>p = γ·m·v</b>. Give the ship energy step by step and compare Newton's prediction with reality.",
+    "sahne": {
+     "tur": "fiz13-sinir"
+    },
+    "deger": {
+     "K": 0
+    },
+    "kontroller": [
+     {
+      "ad": "K",
+      "etiket": "Energy given",
+      "min": 0,
+      "max": 9,
+      "adim": 1,
+      "tur": "sayac",
+      "birim": "mc²"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "If you keep the engines running without stopping, what happens to the ship's speed?",
+     "secenekler": [
+      {
+       "yazi": "It passes c after a while",
+       "neden": "That is what Newtonian physics would say. But since γ grows without limit, the speed always stays below c."
+      },
+      {
+       "yazi": "It approaches c but never reaches it",
+       "dogru": true,
+       "neden": "As v gets close to c, γ grows without limit. The energy needed to speed up a little more also grows without limit."
+      },
+      {
+       "yazi": "It reaches exactly c and stays there",
+       "neden": "Reaching c takes infinite energy. So for an object with mass, v < c always."
+      }
+     ]
+    },
+    "kart": 7
+   }
+  ],
+  "kapanis": [
+   "Classical velocity addition works at everyday speeds, but it fails for light. Everyone measures the speed of light as c.",
+   "Simultaneity is relative.",
+   "Time dilation is found with Δt = γ·Δt₀, where γ = 1/√(1 − v²/c²).",
+   "Length contracts only along the direction of motion: L = L₀/γ.",
+   "An object with mass cannot reach c. Rest energy is E₀ = m·c².",
+   "When v ≪ c, γ ≈ 1 and relativity turns into Newtonian physics."
+  ],
+  "soruOnce": true
+ },
+ "kuantum": {
+  "id": "kuantum",
+  "ders": "fizik",
+  "konu": "kuantum",
+  "baslik": "Introduction to Quantum Physics",
+  "ozet": "Heat the object and change its color. Try to eject electrons from a metal, find the stopping voltage and raise the intensity. Scatter an X-ray, send electrons through a double slit and find the color of hydrogen.",
+  "adimlar": [
+   {
+    "baslik": "Blackbody radiation",
+    "metin": "By Wien's law, λ<sub>max</sub>·T ≈ 2.9·10⁶ nm·K. Set the temperature so that the peak of the curve is at <b>500 nm</b>.",
+    "sahne": {
+     "tur": "fiz13-siyah"
+    },
+    "deger": {
+     "T": 3000
+    },
+    "kontroller": [
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 1000,
+      "max": 7000,
+      "adim": 100,
+      "tur": "surgu",
+      "birim": "K"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "T": 5800
+     },
+     "tamam": "By Wien's law, λ<sub>max</sub> = 2.9·10⁶ / 5800 = <b>500 nm</b>. This is the surface temperature of the Sun.",
+     "ipucu": "Since λ<sub>max</sub>·T ≈ 2.9·10⁶ nm·K, T = 2.9·10⁶ / 500."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "The photoelectric effect: threshold",
+    "metin": "When light falls on a metal, electrons can be ejected. Ejecting an electron from sodium takes at least <b>W = 2.3 eV</b>. Change the color and the intensity, and make at least two different tries.",
+    "sahne": {
+     "tur": "fiz13-esik",
+     "sure": 2.5
+    },
+    "deger": {
+     "lam": 650,
+     "s": 1
+    },
+    "kontroller": [
+     {
+      "ad": "lam",
+      "etiket": "Wavelength λ",
+      "min": 300,
+      "max": 700,
+      "adim": 50,
+      "tur": "surgu",
+      "birim": "nm"
+     },
+     {
+      "ad": "s",
+      "etiket": "Light intensity",
+      "min": 1,
+      "max": 4,
+      "adim": 1,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "What decides whether an electron is ejected?",
+     "secenekler": [
+      {
+       "yazi": "The intensity of the light",
+       "neden": "Raising the intensity of red light brings more photons, but each still carries less than 2.3 eV."
+      },
+      {
+       "yazi": "How long the light shines",
+       "neden": "An electron absorbs a single photon, and energy does not build up. So waiting below the threshold does not help."
+      },
+      {
+       "yazi": "The frequency (color) of the light",
+       "dogru": true,
+       "neden": "An electron takes the energy of a single photon (h·f). If h·f &lt; W, no electron comes out however intense the light is. For sodium the threshold is about 540 nm."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Einstein's equation and stopping voltage",
+    "metin": "The maximum kinetic energy of an ejected electron is E<sub>k,max</sub> = h·f − W. The photon energy is found with E(eV) ≈ 1240/λ(nm), and for sodium W = 2.3 eV. The reverse voltage that stops the fastest electron is called <b>V<sub>0</sub></b>: e·V<sub>0</sub> = E<sub>k,max</sub>. Set the wavelength so that V<sub>0</sub> is <b>0.8 V</b>.",
+    "sahne": {
+     "tur": "fiz13-durdur"
+    },
+    "deger": {
+     "lam": 500
+    },
+    "kontroller": [
+     {
+      "ad": "lam",
+      "etiket": "Wavelength λ",
+      "min": 300,
+      "max": 600,
+      "adim": 25,
+      "tur": "surgu",
+      "birim": "nm"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "lam": 400
+     },
+     "tamam": "At 400 nm the photon energy is 1240/400 = <b>3.1 eV</b>. E<sub>k,max</sub> = 3.1 − 2.3 = <b>0.8 eV</b> and V<sub>0</sub> = 0.8 V.",
+     "ipucu": "h·f must be 2.3 + 0.8 = 3.1 eV. So λ = 1240 / 3.1."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Intensity and current",
+    "metin": "We shine the same 400 nm light on a sodium plate. In the setup on the right the light has <b>twice the intensity</b>, so twice as many photons arrive each second.",
+    "sahne": {
+     "tur": "fiz13-siddet",
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens when the intensity doubles?",
+     "secenekler": [
+      {
+       "yazi": "E<sub>k,max</sub> doubles",
+       "neden": "The energy of each photon is h·f. Intensity raises the number of photons, not the energy of a photon."
+      },
+      {
+       "yazi": "Current rises, E<sub>k,max</sub> stays the same",
+       "dogru": true,
+       "neden": "Twice the photons eject twice the electrons, and the <b>current</b> grows. Each electron still takes the energy of a single photon and comes out with at most 0.8 eV."
+      },
+      {
+       "yazi": "Both current and E<sub>k,max</sub> double",
+       "neden": "The current rises, but the energy of the electrons depends on the energy of a single photon."
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "The Compton effect",
+    "metin": "In 1923 Compton made X-ray photons collide with electrons. A photon has no mass, but it has momentum: <b>p = h/λ</b>. The photon will now hit the electron and scatter.",
+    "sahne": {
+     "tur": "fiz13-compton",
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to the wavelength of the scattered photon?",
+     "secenekler": [
+      {
+       "yazi": "It gets longer",
+       "dogru": true,
+       "neden": "The photon gives part of its energy to the electron. Its energy drops, <b>λ grows</b> and f gets smaller. The photon's speed is still c."
+      },
+      {
+       "yazi": "It gets shorter",
+       "neden": "A shorter wavelength would mean the photon gained energy. But part of the energy goes to the recoiling electron."
+      },
+      {
+       "yazi": "It stays the same",
+       "neden": "Since the electron recoils, it has taken some energy. That energy comes from the photon."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Matter waves",
+    "metin": "de Broglie said that every particle has a wavelength: <b>λ = h/(m·v)</b>. Now we send electrons <b>one at a time</b> through two slits to a screen.",
+    "sahne": {
+     "tur": "fiz13-elektron",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What forms on the screen over time?",
+     "secenekler": [
+      {
+       "yazi": "Two bands opposite the slits",
+       "neden": "That would happen if electrons behaved only like tiny balls. But the waves from the two slits interfere."
+      },
+      {
+       "yazi": "Randomly scattered dots",
+       "neden": "One by one the dots look random. But when thousands build up, a regular pattern appears."
+      },
+      {
+       "yazi": "Bright and dark interference fringes",
+       "dogru": true,
+       "neden": "Each electron lands on the screen as <b>a single dot</b>, which is particle behavior. But as the dots build up, <b>interference fringes</b> appear, which is wave behavior. This is called <b>wave-particle duality</b>."
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "The Bohr model and spectra",
+    "metin": "When an electron drops to a lower level, it emits a photon with the energy difference of the two levels. In hydrogen, <b>E<sub>n</sub> = −13.6/n² eV</b>. Find the transition that gives the blue-green photon of <b>2.55 eV</b>.",
+    "sahne": {
+     "tur": "fiz13-bohr"
+    },
+    "deger": {
+     "ust": 3,
+     "alt": 1
+    },
+    "kontroller": [
+     {
+      "ad": "ust",
+      "etiket": "Upper level",
+      "min": 2,
+      "max": 6,
+      "adim": 1,
+      "tur": "sayac"
+     },
+     {
+      "ad": "alt",
+      "etiket": "Lower level",
+      "min": 1,
+      "max": 5,
+      "adim": 1,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "ust": 4,
+      "alt": 2
+     },
+     "tamam": "E<sub>4</sub> − E<sub>2</sub> = −0.85 − (−3.4) = <b>2.55 eV</b> and λ = 1240/2.55 ≈ <b>486 nm</b>. Most transitions down to n = 2 are in the visible range and are called the Balmer series. Those down to n = 1 are in the ultraviolet and are called the Lyman series.",
+     "ipucu": "The energies of the levels are −13.6, −3.4, −1.51 and −0.85 eV. Look for the pair whose difference is 2.55."
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "Energy is quantized: E = h·f = h·c/λ. In electronvolts, E(eV) ≈ 1240 / λ(nm).",
+   "For a blackbody, the peak wavelength is found with λmax·T ≈ 2.9·10⁻³ m·K.",
+   "In the photoelectric effect, Ek,max = h·f − W = e·V₀. Frequency sets the threshold, and intensity changes only the current.",
+   "In the Compton effect the photon carries momentum: p = h/λ. The wavelength of the scattered photon gets longer.",
+   "The wavelength of a matter wave is found with λ = h/(m·v). Electrons interfere too.",
+   "In hydrogen, En = −13.6/n² eV. The emitted photon carries the energy difference between the levels."
+  ],
+  "soruOnce": true
+ },
+ "radyoaktivite": {
+  "id": "radyoaktivite",
+  "ders": "fizik",
+  "konu": "radyoaktivite",
+  "baslik": "The atomic nucleus and radioactivity",
+  "ozet": "Build a nucleus and make an isotope. Weigh the strong force, see the mass defect on a balance and find the most stable nucleus. Go from uranium down to lead, separate the radiations, calculate a half-life and control a chain reaction.",
+  "adimlar": [
+   {
+    "baslik": "The nucleus and isotopes",
+    "metin": "This is a carbon-12 nucleus. Turn it into <b>carbon-14</b>.",
+    "sahne": {
+     "tur": "fiz14-cekirdek"
+    },
+    "deger": {
+     "p": 6,
+     "n": 6
+    },
+    "kontroller": [
+     {
+      "ad": "p",
+      "etiket": "Protons",
+      "min": 1,
+      "max": 8,
+      "tur": "sayac"
+     },
+     {
+      "ad": "n",
+      "etiket": "Neutrons",
+      "min": 0,
+      "max": 10,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "p": 6,
+      "n": 8
+     },
+     "tamam": "The nucleus has 6 protons and 8 neutrons: <sup>14</sup><sub>6</sub>C. Since Z stayed the same, this is still carbon, and only A changed. So this is an <b>isotope</b> of carbon.",
+     "ipucu": "The number of protons decides the element, and for carbon Z must stay 6. Change the number of neutrons to make A = 14."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "The strong nuclear force",
+    "metin": "The protons in a nucleus repel each other electrically. The <b>strong nuclear force</b> holds them together. Move the two protons apart (1 fm = 10⁻¹⁵ m) and watch how the two forces change.",
+    "sahne": {
+     "tur": "fiz14-kuvvet"
+    },
+    "deger": {
+     "r": 1
+    },
+    "kontroller": [
+     {
+      "ad": "r",
+      "etiket": "Distance between protons",
+      "min": 1,
+      "max": 4,
+      "adim": 0.5,
+      "tur": "surgu",
+      "birim": "fm"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which is true for the strong nuclear force?",
+     "secenekler": [
+      {
+       "yazi": "It acts only between protons",
+       "neden": "The strong force does not depend on charge. It also acts between a proton and a neutron and between two neutrons."
+      },
+      {
+       "yazi": "It falls off more slowly with distance than electric repulsion",
+       "neden": "It is the other way around. On the graph the green curve dies out much faster than the red one. At a few fm the strong attraction is almost zero."
+      },
+      {
+       "yazi": "It has a very short range",
+       "dogru": true,
+       "neden": "At about 1 fm the strong attraction easily beats the repulsion. At a few fm it drops almost to zero. This is why the nucleus is so small."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Mass defect",
+    "metin": "One pan of the balance holds <b>2 protons and 2 neutrons</b>, all separate. The other pan holds the <b>helium-4 nucleus</b> they form when they join. The parts in the two pans are the same.",
+    "sahne": {
+     "tur": "fiz14-kutle",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which side of the balance is heavier?",
+     "secenekler": [
+      {
+       "yazi": "The separate nucleons",
+       "dogru": true,
+       "neden": "The nucleus is lighter than its parts. The missing mass was released as energy when the nucleus formed."
+      },
+      {
+       "yazi": "The helium nucleus",
+       "neden": "Mass does not increase when the parts join. On the contrary, part of the mass turns into energy and is released."
+      },
+      {
+       "yazi": "It stays balanced",
+       "neden": "The parts are the same, but the masses are not equal. The difference is called the mass defect."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "The most tightly bound nucleus",
+    "metin": "If you divide the binding energy by the nucleon number, you see how tightly a nucleus is bound. Change the mass number and find the <b>peak</b> of the curve.",
+    "sahne": {
+     "tur": "fiz14-egri"
+    },
+    "deger": {
+     "A": 12
+    },
+    "kontroller": [
+     {
+      "ad": "A",
+      "etiket": "Mass number",
+      "min": 2,
+      "max": 238,
+      "adim": 2,
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "A": [
+       54,
+       64
+      ]
+     },
+     "tamam": "The peak is around A ≈ 56-62, where the energy per nucleon is about 8.8 MeV. <b>Iron-56</b> and nickel-62 are among the most stable nuclei.",
+     "ipucu": "The curve rises fast for light nuclei and falls slowly for heavy ones. Look for the highest point in between."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "From uranium to lead",
+    "metin": "α decay lowers A by 4 and Z by 2. β⁻ decay raises Z by 1. <sup>238</sup>U decays step by step down to stable <sup>206</sup>Pb. How many α and how many β⁻ does this take?",
+    "sahne": {
+     "tur": "fiz14-zincir"
+    },
+    "deger": {
+     "a": 0,
+     "b": 0
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "α decays",
+      "min": 0,
+      "max": 10,
+      "tur": "sayac"
+     },
+     {
+      "ad": "b",
+      "etiket": "β⁻ decays",
+      "min": 0,
+      "max": 8,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "a": 8,
+      "b": 6
+     },
+     "tamam": "The difference in A is 238 − 206 = 32. Since only α changes A, it takes 32 / 4 = <b>8 α</b>. 8 α lower Z by 16, down to 76. For Z to rise to 82, it takes <b>6 β⁻</b>.",
+     "ipucu": "First find the number of α from the difference in A: 238 − 206 = 32. Then fix Z with β⁻."
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Separate the radiations",
+    "metin": "A source gives off <b>α</b>, <b>β⁻</b> and <b>γ</b> radiation. The radiations will pass first between two charged plates, then through sheets of paper, aluminum and lead.",
+    "sahne": {
+     "tur": "fiz14-isinim",
+     "sure": 4.5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which is deflected most in the electric field?",
+     "secenekler": [
+      {
+       "yazi": "α (alpha)",
+       "neden": "α has a double charge, but it is very heavy, because it is a helium nucleus. So it bends only a little toward the negative plate."
+      },
+      {
+       "yazi": "β⁻ (beta minus)",
+       "dogru": true,
+       "neden": "β⁻ is an electron. Its charge-to-mass ratio is thousands of times that of α, so it bends the most, toward the positive plate. Uncharged γ does not bend at all."
+      },
+      {
+       "yazi": "γ (gamma)",
+       "neden": "γ is an uncharged photon. So it does not bend at all in an electric field."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Half-life",
+    "metin": "How long must you wait for <b>15 g</b> to be left from 120 g of a substance with a half-life of 4 days?",
+    "sahne": {
+     "tur": "fiz14-yari"
+    },
+    "deger": {
+     "t": 0
+    },
+    "kontroller": [
+     {
+      "ad": "t",
+      "etiket": "Time passed",
+      "min": 0,
+      "max": 24,
+      "adim": 1,
+      "tur": "surgu",
+      "birim": "days"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "t": 12
+     },
+     "tamam": "The amount goes from 120 to 60, to 30 and to 15. That is three half-lives, or <b>12 days</b>.",
+     "ipucu": "How many times must you halve 120 to get 15? Each halving takes 4 days."
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Chain reaction",
+    "metin": "In a power plant, control rods absorb the extra neutrons. How many neutrons from each fission must cause a new fission for the reaction to go on at a <b>steady rate</b>?",
+    "sahne": {
+     "tur": "fiz14-fisyon"
+    },
+    "deger": {
+     "k": 2
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Neutrons causing a new fission",
+      "min": 0,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": 1
+     },
+     "tamam": "If each fission starts exactly <b>one</b> new fission, the reaction goes on at a steady rate. This is how nuclear power plants work. If the number is 2 or 3, the number of fissions multiplies with each generation and the reaction gets out of control. If it is 0, the reaction dies out.",
+     "ipucu": "The number of fissions must stay the same from one generation to the next."
+    },
+    "kart": 11
+   }
+  ],
+  "kapanis": [
+   "Z is the number of protons and decides the element. A = Z + N. Nuclei with the same Z but different A are called isotopes.",
+   "The strong nuclear force does not depend on charge and has a very short range.",
+   "A nucleus is lighter than its parts, and the difference corresponds to an energy of E = Δm·c². Binding energy per nucleon is greatest around iron.",
+   "α decay lowers A by 4 and Z by 2. β⁻ raises Z by 1, and β⁺ lowers Z by 1. In γ emission A and Z do not change.",
+   "In an electric field β⁻ is deflected most, and γ is not deflected. The order of penetration is γ > β > α.",
+   "The amount left is found with N = N₀ / 2ⁿ. Fission splits a nucleus, and fusion joins nuclei. Both release energy."
+  ],
+  "soruOnce": true
  }
 }
