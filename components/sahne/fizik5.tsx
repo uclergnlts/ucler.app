@@ -342,7 +342,7 @@ function Guc({ v }: SahneProps) {
       <Kisi x={206} y={70} s={0.6} renk="var(--c2)" />
       <Ok x1={238} y1={208} x2={238} y2={74} renk="var(--muted)" kalin={1.8} />
       <text x={246} y={146} fontSize={12} fontWeight={700} fill="var(--muted)">3 m</text>
-      <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">W = 50 · 9,8 · 3 = {say(W)} J</text>
+      <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">W = 50 · {say(9.8)} · 3 = {say(W)} J</text>
       <text x={14} y={42} fontSize={13} fontWeight={800} fill="var(--c2)">P = {say(W)} / {sn} = {say(P, 0)} W</text>
       <Cubuk x={262} y={200} w={68} deger={P} enCok={W / 2} renk="var(--c2)" ad={cev("güç")} />
     </svg>

@@ -55,7 +55,7 @@ function Kaldirac({ v, s }: SahneProps) {
   const denge = Math.abs(tF - tY) < 1e-6;
   const xY = cx - dY * PX, xF = cx + dF * PX;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Kaldıraç: yük {0} N {1} m, kuvvet {2} N {3} m; {4}", Y, say(dY), F, say(dF), denge ? "dengede" : tF > tY ? "kuvvet tarafı iniyor" : "yük tarafı iniyor")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Kaldıraç: yük {0} N {1} m, kuvvet {2} N {3} m; {4}", Y, say(dY), F, say(dF), denge ? cev("dengede") : tF > tY ? cev("kuvvet tarafı iniyor") : cev("yük tarafı iniyor"))}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Y·dY =")} {Y} · {say(dY)} = {say(tY)} N·m</text>
       <text x={14} y={44} fontSize={13} fontWeight={800} fill="var(--c2)">{cev("F·dF =")} {F} · {say(dF)} = {say(tF)} N·m</text>
       <line x1={14} x2={326} y1={cy + 22} y2={cy + 22} stroke="var(--line-2)" strokeWidth={2} />
@@ -100,9 +100,9 @@ function Turler() {
             <rect x={132} y={y - 4} width={196} height={7} rx={3.5} fill="var(--c1)" />
             {k.sira.map((h, j) =>
               h === "D" ? (
-                <g key={h}><Destek x={xs[j]} y={y + 3} s={0.8} /><text x={xs[j]} y={y + 36} fontSize={11.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">D</text></g>
+                <g key={h}><Destek x={xs[j]} y={y + 3} s={0.8} /><text x={xs[j]} y={y + 36} fontSize={11.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("D§destek")}</text></g>
               ) : h === "Y" ? (
-                <g key={h}><rect x={xs[j] - 12} y={y - 28} width={24} height={24} rx={3} fill="var(--c4)" /><text x={xs[j]} y={y - 11} fontSize={11.5} fontWeight={800} fill="#fff" textAnchor="middle">Y</text></g>
+                <g key={h}><rect x={xs[j] - 12} y={y - 28} width={24} height={24} rx={3} fill="var(--c4)" /><text x={xs[j]} y={y - 11} fontSize={11.5} fontWeight={800} fill="#fff" textAnchor="middle">{cev("Y§yük")}</text></g>
               ) : (
                 "asagi" in k ? (
                   <g key={h}><Ok x1={xs[j]} y1={y - 30} x2={xs[j]} y2={y - 6} renk="var(--c2)" kalin={2.5} /><text x={xs[j] + 10} y={y - 18} fontSize={11.5} fontWeight={800} fill="var(--c2)">F</text></g>
@@ -175,7 +175,7 @@ function Rampa({ v, s }: SahneProps) {
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={cev("Eğik düzlem: boy {0} m, yükseklik 1 m, 600 N yük için kuvvet {1} N", L, say(F))}>
       {Fg === null ? (
-        <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--c2)">F = G·h / L = 600 · 1 / {L} = {say(F)} N</text>
+        <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--c2)">{cev("F = G·h / L = 600 · 1 /")} {L} = {say(F)} N</text>
       ) : (
         <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--c2)">{cev("Sürtünmesiz")} {say(F)} {cev("N yeterdi · gerçekte")} {Fg} N</text>
       )}
@@ -229,7 +229,7 @@ function Bisiklet({ v, t, oynuyor, s }: SahneProps) {
         <text x={x1} y={y + r1 + 26} fill="var(--c1)">{cev("ön: 48 diş (pedal)")}</text>
         <text x={x2} y={y + 50 + 26} fill="var(--c2)">{cev("arka:")} {z} {cev("diş (tekerlek)")}</text>
       </g>
-      <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Pedal:")} {say(u, 2)} {cev("tur · Tekerlek:")} {say(tur, 2)} {cev("tur")}</text>
+      <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Pedal: {0} tur · Tekerlek: {1} tur", say(u, 2), say(tur, 2))}</text>
       <text x={170} y={226} fontSize={12.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("n₁·r₁ = n₂·r₂ → tekerlek turu = 48 /")} {z} = {say(on / z, 2)}</text>
     </svg>
   );
@@ -264,7 +264,7 @@ function Duvar({ v, t, oynuyor, s }: SahneProps) {
   const x = u <= carp ? x0 + (duvar - r - x0) * (u / carp) : seker ? duvar - r - (duvar - r - x0) * ((u - carp) / carp) : duvar - r;
   const vs = seker ? -vi : 0, dp = m * vs - m * vi, sonra = u > carp;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Top duvara 10 m/s çarpıyor ve {0}: momentum değişimi {1} kg·m/s", seker ? "geri sekiyor" : "yapışıyor", say(dp))}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Top duvara 10 m/s çarpıyor ve {0}: momentum değişimi {1} kg·m/s", seker ? cev("geri sekiyor") : cev("yapışıyor"), say(dp))}>
       <rect x={duvar} y={50} width={16} height={120} fill="var(--line-2)" />
       <line x1={14} x2={duvar} y1={150} y2={150} stroke="var(--line-2)" strokeWidth={1.5} />
       <circle cx={x} cy={138} r={r} fill="var(--c2)" />
@@ -326,7 +326,7 @@ function Carpisma({ v, t, oynuyor, s }: SahneProps) {
   const vA = sonra ? c.a : c.v1, vB = sonra ? c.b : 0;
   const okA = (x: number, w: number, hiz: number, renk: string) => (Math.abs(hiz) > 0.01 ? <Ok x1={x + w / 2} y1={yol - 52} x2={x + w / 2 + hiz * 10} y2={yol - 52} renk={renk} kalin={2.5} /> : null);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0} çarpışma: A {1} kg {2} m/s, B {3} kg; sonra A {4} m/s, B {5} m/s", c.esnek ? "Esnek" : "Yapışan", c.m1, c.v1, c.m2, say(c.a), say(c.b))}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0} çarpışma: A {1} kg {2} m/s, B {3} kg; sonra A {4} m/s, B {5} m/s", c.esnek ? cev("Esnek") : cev("Yapışan"), c.m1, c.v1, c.m2, say(c.a), say(c.b))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{c.esnek ? cev("Esnek çarpışma") : cev("Çarpışınca yapışırlar")}</text>
       <line x1={4} x2={336} y1={yol + 1} y2={yol + 1} stroke="var(--ink)" strokeWidth={1.5} />
       <rect x={xAk} y={yol - 30} width={wA} height={30} rx={5} fill="var(--c1)" />
@@ -339,7 +339,7 @@ function Carpisma({ v, t, oynuyor, s }: SahneProps) {
         <text x={14} y={yol + 24} fill="var(--c1)">A: {c.m1} {cev("kg ·")} {say(vA)} m/s</text>
         <text x={326} y={yol + 24} fill="var(--c2)" textAnchor="end">B: {c.m2} {cev("kg ·")} {say(vB)} m/s</text>
       </g>
-      <text x={14} y={192} fontSize={12.5} fontWeight={800} fill="var(--ink)">{cev("Toplam p:")} {say(pTop)} {cev("kg·m/s")} {sonra ? "(korundu)" : ""}</text>
+      <text x={14} y={192} fontSize={12.5} fontWeight={800} fill="var(--ink)">{cev("Toplam p:")} {say(pTop)} {cev("kg·m/s")} {sonra ? cev("(korundu)") : ""}</text>
       <text x={14} y={214} fontSize={12.5} fontWeight={800} fill={sonra && c.ke1 < c.ke0 - 1e-6 ? "var(--c2)" : "var(--muted)"}>
         {cev("Toplam KE:")} {sonra ? `${say(c.ke0)} J → ${say(c.ke1)} J` : `${say(c.ke0)} J`}
       </text>

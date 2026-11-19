@@ -51,9 +51,9 @@ def metinler(o, yol="", ust=None, out=None):
             return out
         if o.lstrip().startswith("<svg"):
             for i, m in enumerate(SVG_YAZI.finditer(o)):
-                if HARF.search(m.group(1)) or re.search(r"\d,\d", m.group(1)):
+                if HARF.search(m.group(1)) or re.search(r"\d,\d|%\d", m.group(1)):
                     out.append((f"{yol}#{i}", m.group(1), True))
-        elif HARF.search(re.sub(r"<[^>]+>", "", o)) or re.search(r"\d,\d", o):
+        elif HARF.search(re.sub(r"<[^>]+>", "", o)) or re.search(r"\d,\d|%\d", o):
             out.append((yol, o, anahtar not in SERBEST))
     elif isinstance(o, list):
         for i, x in enumerate(o):

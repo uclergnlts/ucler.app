@@ -63,9 +63,11 @@ function Kapi({ v }: SahneProps) {
   );
 }
 
+/** Sahne ayarındaki dönme noktası adları (içerik dosyasında Türkçe yazılır, burada çevrilir). */
+const NOKTA_AD: Record<string, string> = { somun: cev("somun"), "menteşe": cev("menteşe") };
 // Açılı kuvvet: dönme noktası solda, r uzunluğunda kol; ucuna s.F (N), kolla v.theta açısı yaparak.
 function Aci({ v, s }: SahneProps) {
-  const F = Number(s.F ?? 20), r = Number(s.r ?? 0.5), th = sinir(v.theta ?? 30, 0, 180), nokta = String(s.nokta ?? cev("dönme noktası"));
+  const F = Number(s.F ?? 20), r = Number(s.r ?? 0.5), th = sinir(v.theta ?? 30, 0, 180), nokta = NOKTA_AD[String(s.nokta)] ?? String(s.nokta ?? cev("dönme noktası"));
   const sn = Math.sin(th * RAD), cs = Math.cos(th * RAD);
   const tau = F * r * (Math.abs(sn) < 1e-9 ? 0 : sn);
   const OX = 64, OY = 158, EX = 254, EY = 158, L = 84;

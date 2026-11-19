@@ -1969,5 +1969,960 @@
    "Orbital speed is about 7.9 km/s and escape velocity is about 11.2 km/s. Satellites and astronauts are always falling."
   ],
   "soruOnce": true
+ },
+ "is-enerji-guc": {
+  "id": "is-enerji-guc",
+  "ders": "fizik",
+  "konu": "is-enerji-guc",
+  "baslik": "Work, energy, and power",
+  "ozet": "Try first, then learn the name. Change the angle of the rope, drop the ball, and run up the stairs.",
+  "adimlar": [
+   {
+    "baslik": "Work",
+    "metin": "Work is the part of the force along the motion times the distance. You pull a box <b>5 m</b> with a force of <b>40 N</b>. Set the angle of the rope and make the work <b>100 J</b>.",
+    "sahne": {
+     "tur": "fiz5-is",
+     "F": 40,
+     "d": 5
+    },
+    "deger": {
+     "a": 0
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "Rope angle",
+      "min": 0,
+      "max": 90,
+      "adim": 15,
+      "birim": "°"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "a": 60
+     },
+     "tamam": "W = 40 · 5 · cos60° = 200 · 0.5 = 100 J. As the angle grows, the share of the force along the motion shrinks, and at 90° it is zero."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Zero work",
+    "metin": "You walk along a level road at <b>constant speed</b>, holding a heavy bag. Your arm holds the bag upward, while the bag moves horizontally. So θ = 90°.",
+    "sahne": {
+     "tur": "fiz5-is",
+     "F": 50,
+     "d": 4,
+     "aci": 90
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "How much work does your arm do on the bag?",
+     "secenekler": [
+      {
+       "yazi": "Positive",
+       "neden": "Getting tired does not mean doing physical work. What is cos90°?"
+      },
+      {
+       "yazi": "Negative",
+       "neden": "For negative work, the force must oppose the motion, as friction does. Here the force is perpendicular to the motion."
+      },
+      {
+       "yazi": "Zero",
+       "dogru": true,
+       "neden": "cos90° = 0. Your tiredness comes from the energy used inside your muscles, not from work transferred to the bag."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Kinetic energy",
+    "metin": "A 1000 kg car moves at <b>10 m/s</b>, and its kinetic energy is 50 000 J. Set the speed and make the kinetic energy <b>9 times</b> larger.",
+    "sahne": {
+     "tur": "fiz5-ke"
+    },
+    "deger": {
+     "v": 10
+    },
+    "kontroller": [
+     {
+      "ad": "v",
+      "etiket": "Speed",
+      "min": 0,
+      "max": 40,
+      "adim": 10,
+      "tur": "sayac",
+      "birim": "m/s"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "v": 30
+     },
+     "tamam": "At 30 m/s the kinetic energy is ½ · 1000 · 30² = 450 000 J. The speed went up 3 times, and the energy went up 3² = 9 times. That is why a fast vehicle is so much harder to stop."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Energy changes form",
+    "metin": "A 2 kg ball is dropped from a height of 5 m, and its potential energy is 2 · 9.8 · 5 = 98 J. Only gravity does work on it.",
+    "sahne": {
+     "tur": "fiz5-dusme",
+     "sure": 2
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What is the ball's kinetic energy, in J, as it touches the ground?",
+     "secenekler": [
+      {
+       "yazi": "0 J",
+       "neden": "The ball is fastest as it touches the ground, so its kinetic energy is largest there."
+      },
+      {
+       "yazi": "49 J",
+       "neden": "That is the value halfway down."
+      },
+      {
+       "yazi": "98 J",
+       "dogru": true,
+       "neden": "At the ground the potential energy is zero, and all of the lost 98 J has become kinetic energy. Since ½ · 2 · v² = 98 J, the ball hits the ground at about 9.9 m/s."
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Ramp lab",
+    "metin": "You release a skater from the edge of the ramp (g = 10 m/s²). Change the height, the mass, and the friction. The bar below shows how the energy changes form. Find out the following for yourself.",
+    "sahne": {
+     "tur": "sim-rampa"
+    },
+    "deger": {
+     "h": 2,
+     "m": 40,
+     "sur": 0,
+     "durdu": 0
+    },
+    "kontroller": [
+     {
+      "ad": "h",
+      "etiket": "Release height",
+      "min": 1,
+      "max": 5,
+      "adim": 0.5,
+      "birim": "m"
+     },
+     {
+      "ad": "m",
+      "etiket": "Mass",
+      "min": 20,
+      "max": 80,
+      "adim": 20,
+      "birim": "kg",
+      "tur": "sayac"
+     },
+     {
+      "ad": "sur",
+      "etiket": "Friction",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "On the frictionless ramp, find the height that makes the speed at the bottom <b>10 m/s</b>.",
+       "hedef": {
+        "h": 5,
+        "sur": 0
+       },
+       "coz": [
+        {
+         "sur": 0,
+         "h": 5
+        }
+       ],
+       "tamam": "Since m·g·h = ½·m·v², v = √(2gh) = √(2·10·5) = 10 m/s. The skater rises to 5 m again on the other side, because KE + PE always stays the same."
+      },
+      {
+       "yazi": "At 5 m, set the mass to <b>40</b> and then to <b>80 kg</b>. Does the speed at the bottom change?",
+       "hedef": [
+        {
+         "h": 5,
+         "m": 40,
+         "sur": 0
+        },
+        {
+         "h": 5,
+         "m": 80,
+         "sur": 0
+        }
+       ],
+       "sirali": true,
+       "coz": [
+        {
+         "sur": 0,
+         "h": 5,
+         "m": 40
+        },
+        {
+         "m": 80
+        }
+       ],
+       "tamam": "The speed did not change (10 m/s), because m appears on both sides and cancels. But the energy doubled, from 2000 J to 4000 J."
+      },
+      {
+       "yazi": "Turn friction on and watch until the skater stops. Where did the energy go?",
+       "hedef": {
+        "sur": 1,
+        "durdu": 1
+       },
+       "coz": [
+        {
+         "sur": 1
+        }
+       ],
+       "tamam": "The mechanical energy (KE + PE) decreased, but the length of the bar did not change. The missing part turned into <b>heat</b>. Energy is never destroyed; it only changes form."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Power",
+    "metin": "Power is work divided by time. On the same stairs, a 50 kg person climbs 3 m and does about 1470 J of work. Set the climbing time and make the power <b>210 W</b>.",
+    "sahne": {
+     "tur": "fiz5-guc"
+    },
+    "deger": {
+     "t": 10
+    },
+    "kontroller": [
+     {
+      "ad": "t",
+      "etiket": "Climbing time",
+      "min": 2,
+      "max": 12,
+      "tur": "sayac",
+      "birim": "s"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "t": 7
+     },
+     "tamam": "1470 / 7 = 210 W. If the same work is done in less time, the power goes up. The 1 kWh on an electricity bill is 3.6 million J."
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "The spring and the F–x graph",
+    "metin": "The spring constant is k = 200 N/m, and the energy stored in the spring is ½·k·x². Stretch the spring and store <b>4 J</b> of energy in it.",
+    "sahne": {
+     "tur": "fiz5-yay"
+    },
+    "deger": {
+     "x": 0
+    },
+    "kontroller": [
+     {
+      "ad": "x",
+      "etiket": "Extension",
+      "min": 0,
+      "max": 20,
+      "adim": 5,
+      "birim": "cm"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "x": 20
+     },
+     "tamam": "At x = 0.2 m the force is F = 200 · 0.2 = 40 N, and the area of the triangle is ½ · 0.2 · 40 = 4 J. The extension doubled (from 10 cm to 20 cm), while the energy became 4 times larger (from 1 J to 4 J)."
+    },
+    "kart": 8
+   }
+  ],
+  "kapanis": [
+   "Work is W = F·d·cosθ, and its unit is the joule. If the force is perpendicular to the motion or the object does not move, the work is zero.",
+   "Kinetic energy is KE = ½·m·v², and when the speed doubles the energy becomes 4 times larger. Potential energy is PE = m·g·h.",
+   "If only gravity does work, KE + PE stays constant. Friction turns part of the mechanical energy into heat, but the total energy is still conserved.",
+   "Power is P = W / t, and its unit is the watt. If the same work is done in less time, the power goes up.",
+   "The area under a force–extension graph gives the work. The energy stored in a spring is ½·k·x²."
+  ],
+  "soruOnce": true
+ },
+ "basit-makineler": {
+  "id": "basit-makineler",
+  "ders": "fizik",
+  "konu": "basit-makineler",
+  "baslik": "Simple machines",
+  "ozet": "Try first, then learn the name. Balance the lever, lift a load with a block and tackle, and change the gear.",
+  "adimlar": [
+   {
+    "baslik": "Lever",
+    "metin": "A 400 N load is 0.5 m from the pivot. The bar balances when force times distance is equal on both sides of the pivot. <b>Balance</b> the bar with the force you apply 2 m away.",
+    "sahne": {
+     "tur": "fiz6-kaldirac",
+     "Y": 400,
+     "dY": 0.5,
+     "dF": 2
+    },
+    "deger": {
+     "F": 50
+    },
+    "kontroller": [
+     {
+      "ad": "F",
+      "etiket": "Force",
+      "min": 50,
+      "max": 300,
+      "adim": 50,
+      "birim": "N",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "F": 100
+     },
+     "tamam": "400 · 0.5 = 100 · 2 = 200 N·m. The effort arm is 4 times the load arm, so the force is 4 times smaller. That means the advantage is dF / dW = 4."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Three types of lever",
+    "metin": "The order of the pivot (P), the load (W), and the effort (F) sets the type of lever. The item in the middle tells you which arm can be longer.",
+    "sahne": {
+     "tur": "fiz6-turler"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which one <b>loses</b> force (advantage less than 1)?",
+     "secenekler": [
+      {
+       "yazi": "Seesaw",
+       "neden": "With the pivot in the middle, the advantage depends on the lengths of the arms and can also be greater than 1."
+      },
+      {
+       "yazi": "Wheelbarrow",
+       "neden": "With the load in the middle, the effort arm is always longer than the load arm. So the advantage is greater than 1."
+      },
+      {
+       "yazi": "Tweezers",
+       "neden": "With the effort in the middle, the effort arm is always shorter than the load arm, and the advantage is less than 1. In return, the tip moves farther.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Pulleys and the block and tackle",
+    "metin": "Change the number of rope strands carrying the movable block. Lift the 400 N load with <b>100 N</b>.",
+    "sahne": {
+     "tur": "fiz6-makara"
+    },
+    "deger": {
+     "n": 1
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Supporting strands",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 4
+     },
+     "tamam": "4 rope strands share the load, and 400 / 4 = 100 N. But when the load rises 1 m, you pull 4 m of rope. You gain in force and lose in distance. The work is still 400 J."
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Inclined plane",
+    "metin": "You will raise a 600 N crate by 1 m using a ramp. Make the ramp longer and bring the force needed down to <b>150 N</b>.",
+    "sahne": {
+     "tur": "fiz6-rampa"
+    },
+    "deger": {
+     "L": 1
+    },
+    "kontroller": [
+     {
+      "ad": "L",
+      "etiket": "Ramp length",
+      "min": 1,
+      "max": 6,
+      "birim": "m",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "L": 4
+     },
+     "tamam": "600 · 1 / 4 = 150 N. The ramp is 4 times longer, so the force is 4 times smaller. The work is always 600 J. A machine does not reduce the work, it only makes it easier."
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Bicycle gears",
+    "metin": "The front gear has 48 teeth. Make the wheel turn <b>4 times</b> for each turn of the pedal. Choose the rear gear and press play.",
+    "sahne": {
+     "tur": "fiz6-bisiklet",
+     "sure": 4,
+     "hedefTur": 4
+    },
+    "deger": {
+     "z": 24
+    },
+    "kontroller": [
+     {
+      "ad": "z",
+      "etiket": "Rear gear (teeth)",
+      "min": 12,
+      "max": 48,
+      "adim": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "z": 12
+     },
+     "tamam": "Since 48 / 12 = 4, the wheel makes 4 turns. If the wheel's circumference is 2 m, the bike travels 8 m per pedal turn. The bike is fast, but pedaling gets harder."
+    },
+    "kart": 13
+   },
+   {
+    "baslik": "Efficiency",
+    "metin": "A real ramp has friction. Efficiency is the ratio of useful work to work input. Raising a 600 N load by 1 m on a <b>5 m</b> ramp took a force of <b>150 N</b>.",
+    "sahne": {
+     "tur": "fiz6-rampa",
+     "L": 5,
+     "Fg": 150
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "What is the efficiency of this ramp, in percent?",
+     "secenekler": [
+      {
+       "yazi": "125%",
+       "neden": "Efficiency cannot exceed 100%. You divided the work input by the useful work. Do the reverse."
+      },
+      {
+       "yazi": "80%",
+       "neden": "The useful work is 600 · 1 = 600 J, and the work input is 150 · 5 = 750 J. The efficiency is 600 / 750 = 80%. The remaining 150 J turned into heat.",
+       "dogru": true
+      },
+      {
+       "yazi": "20%",
+       "neden": "20% is the part that goes into heat. Efficiency is the ratio of useful work to work input."
+      }
+     ]
+    },
+    "kart": 14
+   }
+  ],
+  "kapanis": [
+   "Mechanical advantage is W / F. What you gain in force you lose in distance, and in an ideal machine the work does not change.",
+   "For a balanced lever F·dF = W·dW. With tweezers the effort is in the middle, and the advantage is less than 1.",
+   "The advantage is 1 for a fixed pulley and 2 for a movable pulley. For a block and tackle it equals the number of rope strands (n) carrying the load.",
+   "For an inclined plane F·L = W·h. For gears n₁·r₁ = n₂·r₂.",
+   "Efficiency is the ratio of useful work to work input, and in a real machine it is below 100%."
+  ],
+  "soruOnce": true
+ },
+ "momentum": {
+  "id": "momentum",
+  "ders": "fizik",
+  "konu": "momentum",
+  "baslik": "Momentum and collisions",
+  "ozet": "Try first, then learn the name. Match the momenta, bounce the ball, and crash the carts.",
+  "adimlar": [
+   {
+    "baslik": "Momentum",
+    "metin": "Momentum is mass × velocity. A 4000 kg truck moves at 5 m/s. Set the speed of the 1000 kg car so that their momenta are <b>equal</b>.",
+    "sahne": {
+     "tur": "fiz6-p"
+    },
+    "deger": {
+     "v": 5
+    },
+    "kontroller": [
+     {
+      "ad": "v",
+      "etiket": "Speed of the car",
+      "min": 0,
+      "max": 40,
+      "adim": 5,
+      "birim": "m/s"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "v": 20
+     },
+     "tamam": "1000 · 20 = 4000 · 5 = 20 000 kg·m/s. If the mass is 4 times smaller, the speed must be 4 times larger. That is why a slow truck is hard to stop."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "A ball bouncing off a wall",
+    "metin": "A 0.2 kg ball hits a wall at 10 m/s. First let it stick, then let it bounce back. <b>Play both cases</b> and compare the change in momentum.",
+    "sahne": {
+     "tur": "fiz6-duvar",
+     "sure": 4
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Ball bounces back",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "When the ball bounces back at the same speed, what is the size of the change in momentum, in kg·m/s?",
+     "secenekler": [
+      {
+       "yazi": "0",
+       "neden": "The speed is the same, but the direction reversed. Momentum is a vector."
+      },
+      {
+       "yazi": "2",
+       "neden": "That is the case where the ball sticks. When it bounces, the velocity goes from +10 to −10."
+      },
+      {
+       "yazi": "4",
+       "neden": "Δp = 0.2·(−10) − 0.2·10 = −4: the size is 4 kg·m/s, twice that of sticking. The wall gives the ball twice the impulse.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Airbag",
+    "metin": "A 70 kg driver stops from 15 m/s, and Δp is always 1050 N·s. Make the stopping time longer and bring the force <b>below 10 000 N</b>.",
+    "sahne": {
+     "tur": "fiz6-yastik"
+    },
+    "deger": {
+     "dt": 10
+    },
+    "kontroller": [
+     {
+      "ad": "dt",
+      "etiket": "Stopping time",
+      "min": 10,
+      "max": 200,
+      "adim": 10,
+      "birim": "ms"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "dt": [
+       110,
+       200
+      ]
+     },
+     "tamam": "The area under the graph, the impulse, is always 1050 N·s. As the time gets longer, the rectangle spreads out and its height, the force, gets smaller. At 150 ms the force is 1050 / 0.15 = 7000 N."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Elastic collision",
+    "metin": "This collision is <b>elastic</b>. So kinetic energy is conserved along with momentum. The 1 kg cart A, moving at 4 m/s, will hit the 1 kg cart B at rest.",
+    "sahne": {
+     "tur": "fiz6-carpisma",
+     "sure": 4,
+     "esnek": true,
+     "m1": 1,
+     "v1": 4,
+     "m2": 1
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens after the collision?",
+     "secenekler": [
+      {
+       "yazi": "They move together at 2 m/s",
+       "neden": "That happens when the carts stick together, and then kinetic energy decreases. In an elastic collision kinetic energy is conserved."
+      },
+      {
+       "yazi": "A bounces back, B moves slowly",
+       "neden": "That happens when a light object hits a heavy one. Here the masses are equal."
+      },
+      {
+       "yazi": "A stops, B moves at 4 m/s",
+       "neden": "Only this way are momentum (4 kg·m/s) and KE (8 J) both conserved. With equal masses, the velocities swap.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Carts that stick together",
+    "metin": "Now the carts stick together when they collide, so m1·v1 = (m1 + m2)·v. Choose the mass of B and press play. Make the common velocity <b>1 m/s</b>.",
+    "sahne": {
+     "tur": "fiz6-carpisma",
+     "sure": 4,
+     "m1": 1,
+     "v1": 4
+    },
+    "deger": {
+     "m2": 1
+    },
+    "kontroller": [
+     {
+      "ad": "m2",
+      "etiket": "Mass of B",
+      "min": 1,
+      "max": 5,
+      "birim": "kg",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "m2": 3
+     },
+     "tamam": "Since 1 · 4 = (1 + 3) · v, v = 1 m/s. The momentum was conserved at 4 kg·m/s and was simply spread over a 4 kg mass."
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Where did the energy go?",
+    "metin": "The 1 kg cart A, moving at 4 m/s, hits the 1 kg cart B at rest and <b>sticks</b>. Press play and watch the total kinetic energy at the bottom.",
+    "sahne": {
+     "tur": "fiz6-carpisma",
+     "sure": 4,
+     "m1": 1,
+     "v1": 4
+    },
+    "deger": {
+     "m2": 1
+    },
+    "kontroller": [
+     {
+      "ad": "m2",
+      "etiket": "Mass of B",
+      "min": 1,
+      "max": 5,
+      "birim": "kg",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 1,
+     "soru": "With B at 1 kg, the kinetic energy dropped from 8 J to 4 J when they stuck. Which statement is true?",
+     "secenekler": [
+      {
+       "yazi": "Momentum decreased too",
+       "neden": "The total momentum is 4 kg·m/s both before and after. With no external force, momentum is conserved."
+      },
+      {
+       "yazi": "Energy was destroyed",
+       "neden": "Energy is not destroyed, it changes form."
+      },
+      {
+       "yazi": "4 J went into heat and sound",
+       "neden": "The common velocity is 2 m/s, and KE = ½ · 2 · 2² = 4 J. Momentum is conserved, and so is the total energy. Only the kinetic part decreased.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Recoil",
+    "metin": "A 4 kg rifle will fire a 0.01 kg bullet at 400 m/s.",
+    "sahne": {
+     "tur": "fiz6-patlama",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "At what speed does the rifle recoil?",
+     "secenekler": [
+      {
+       "yazi": "It does not move at all",
+       "neden": "The rifle pushes the bullet forward and gets an equal push backward (action–reaction)."
+      },
+      {
+       "yazi": "1 m/s",
+       "neden": "The bullet goes forward with a momentum of 0.01 · 400 = 4 kg·m/s, and the rifle recoils with 4 kg·m/s. The rifle's speed is 4 / 4 = 1 m/s. The kinetic energies are 800 J and 2 J, so most of the energy goes to the light bullet.",
+       "dogru": true
+      },
+      {
+       "yazi": "400 m/s",
+       "neden": "The momenta are equal, not the speeds. The rifle is 400 times heavier than the bullet."
+      }
+     ]
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "Momentum p = m·v is a vector, and its unit is kg·m/s.",
+   "Impulse is I = F·Δt = Δp, and it equals the area under the force–time graph. For the same Δp, a longer time means a smaller force.",
+   "For an object that bounces back, Δp is twice that of an object that sticks.",
+   "With no external force, the total momentum is conserved in both collisions and explosions.",
+   "In an elastic collision kinetic energy is conserved. It decreases most when objects stick together, and it increases in an explosion."
+  ],
+  "soruOnce": true
+ },
+ "tork-denge": {
+  "id": "tork-denge",
+  "ders": "fizik",
+  "konu": "tork-denge",
+  "baslik": "Torque, equilibrium, and center of mass",
+  "ozet": "Try first, then learn the name. Push the door, balance the seesaw, hang the bar, and tip the box.",
+  "adimlar": [
+   {
+    "baslik": "Torque: the turning effect",
+    "metin": "The turning effect, or <b>torque</b>, is the force times the distance from the hinge. Opening this door takes a torque of 12 N·m. Put your hand where <b>20 N</b> is enough.",
+    "sahne": {
+     "tur": "fiz7-kapi"
+    },
+    "deger": {
+     "d": 2
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Distance from the hinge",
+      "min": 1,
+      "max": 10,
+      "carpan": 0.1,
+      "birim": "m"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "d": [
+       6,
+       10
+      ]
+     },
+     "tamam": "At d = 0.6 m, F = 12 / 0.6 = 20 N is enough, and farther out even less will do. If you push 0.2 m from the hinge, you need 60 N."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "The angle matters too",
+    "metin": "You apply a 20 N force to the end of a wrench, at a distance r = 0.5 m from the nut. Change the angle between the force and the wrench and make the torque <b>as large as possible</b>.",
+    "sahne": {
+     "tur": "fiz7-aci",
+     "F": 20,
+     "r": 0.5,
+     "nokta": "somun"
+    },
+    "deger": {
+     "theta": 30
+    },
+    "kontroller": [
+     {
+      "ad": "theta",
+      "etiket": "Angle θ",
+      "min": 0,
+      "max": 180,
+      "adim": 15,
+      "birim": "°"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "theta": 90
+     },
+     "tamam": "At θ = 90°, τ = 20 · 0.5 · 1 = 10 N·m. When the force is perpendicular to the wrench, the lever arm is longest (d = r)."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "When the line passes through the hinge",
+    "metin": "You apply 20 N to a door 0.8 m from the hinge. But the line of the force passes right through the hinge.",
+    "sahne": {
+     "tur": "fiz7-aci",
+     "F": 20,
+     "r": 0.8,
+     "nokta": "menteşe"
+    },
+    "deger": {
+     "theta": 180
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "What is the torque on the door, in N·m?",
+     "secenekler": [
+      {
+       "yazi": "16",
+       "neden": "If the force were perpendicular to the door, the torque would be 20 · 0.8 = 16. But what is the lever arm here?"
+      },
+      {
+       "yazi": "0",
+       "neden": "A force whose line passes through the pivot has a lever arm d = 0, so τ = 0. However hard you push, the door does not turn. You only press on the hinge.",
+       "dogru": true
+      },
+      {
+       "yazi": "25",
+       "neden": "20 / 0.8 = 25, but torque comes from the product F·d, not from a division."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Seesaw",
+    "metin": "The 300 N child on the left is 2 m from the pivot. At balance the torques in the two directions are equal. Seat the 400 N child where the seesaw stays <b>balanced</b>.",
+    "sahne": {
+     "tur": "fiz7-tahterevalli"
+    },
+    "deger": {
+     "d": 12
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Distance of the 400 N child",
+      "min": 2,
+      "max": 12,
+      "carpan": 0.25,
+      "birim": "m"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "d": 6
+     },
+     "tamam": "400 · 1.5 = 600 N·m, which equals 300 · 2. The opposite torques are equal, so Στ = 0. The heavier child sits closer to the pivot. Ignoring the weight of the board, the pivot pushes up with 700 N, so ΣF = 0."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Support forces",
+    "metin": "A 4 m uniform bar weighing 40 N is supported at both ends, and its weight acts at its middle. Slide the 60 N load and make the force carried by support B <b>65 N</b>.",
+    "sahne": {
+     "tur": "fiz7-cubuk"
+    },
+    "deger": {
+     "x": 0
+    },
+    "kontroller": [
+     {
+      "ad": "x",
+      "etiket": "Distance of the load from A",
+      "min": 0,
+      "max": 8,
+      "carpan": 0.5,
+      "birim": "m"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "x": 6
+     },
+     "tamam": "About A, N<sub>B</sub> · 4 = 40 · 2 + 60 · 3, so N<sub>B</sub> = 65 N. From ΣF = 0, N<sub>A</sub> = 100 − 65 = 35 N. The closer the load is to B, the more B carries."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Center of mass",
+    "metin": "A light bar has 2 kg at its left end and a mass at its right end, 4 m away. You hang the bar from the point at 3 m. Change the mass on the right and make the bar hang <b>level</b>.",
+    "sahne": {
+     "tur": "fiz7-km"
+    },
+    "deger": {
+     "m": 2
+    },
+    "kontroller": [
+     {
+      "ad": "m",
+      "etiket": "Mass on the right",
+      "min": 1,
+      "max": 10,
+      "birim": "kg",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "m": 6
+     },
+     "tamam": "x<sub>CM</sub> = (2·0 + 6·4) / (2 + 6) = 3 m. A bar hung from its center of mass stays balanced. The center of mass is closer to the heavier part."
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "When does it tip over?",
+    "metin": "You put two boxes with the same base on a <b>rough</b> board that tilts slowly. The boxes do not slide.",
+    "sahne": {
+     "tur": "fiz7-devrilme",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which one tips over first?",
+     "secenekler": [
+      {
+       "yazi": "The low box",
+       "neden": "The low box has a low center of gravity. So its vertical line does not easily leave the base."
+      },
+      {
+       "yazi": "Both at the same time",
+       "neden": "Their bases are the same, but their centers of gravity are at different heights."
+      },
+      {
+       "yazi": "The tall box",
+       "neden": "The tall box has a high center of gravity. At about 22° its vertical line leaves the base and the box tips over. The low box holds out until 45°.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 10
+   }
+  ],
+  "kapanis": [
+   "<b>Torque</b> is τ = F·d = F·r·sinθ, and its unit is N·m. The lever arm d is the perpendicular distance from the pivot to the line of the force.",
+   "A force whose line passes through the pivot has zero torque. The largest torque comes at θ = 90°.",
+   "Equilibrium needs both <b>ΣF = 0</b> and <b>Στ = 0</b>. The weight of a uniform bar acts at its middle.",
+   "The center of mass is x<sub>CM</sub> = Σm·x / Σm, and it is closer to the heavier part.",
+   "If the vertical line from the center of gravity falls outside the base, the object tips over. A low center of gravity and a wide base make tipping harder."
+  ],
+  "soruOnce": true
  }
 }

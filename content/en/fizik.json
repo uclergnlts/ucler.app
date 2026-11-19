@@ -2536,5 +2536,1366 @@
     ]
    }
   ]
+ },
+ "is-enerji-guc": {
+  "title": "Work, energy, and power",
+  "summary": "Learn about work, kinetic and potential energy, conservation of energy, and power.",
+  "cards": [
+   {
+    "h": "Work: when a force moves something",
+    "p": "When a force moves an object, <b>work</b> is done. Work is W = F·d·cosθ, where θ is the angle between the force and the displacement. Its unit is the <b>joule</b>, and 1 J = 1 N·m.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='150' x2='300' y2='150' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='50' y='110' width='50' height='40' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><rect x='210' y='110' width='50' height='40' fill='none' stroke='var(--muted)' stroke-width='1.5' stroke-dasharray='5 4'/><line x1='150' y1='110' x2='150' y2='23.4' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><line x1='100' y1='110' x2='143' y2='110' stroke='var(--c1)' stroke-width='2' fill='none' stroke-dasharray='5 4'/><polygon points='150,110 140,114.5 140,105.5' fill='var(--c1)'/><line x1='100' y1='110' x2='146.5' y2='29.5' stroke='var(--c1)' stroke-width='3' fill='none'/><polygon points='150,23.4 148.9,34.3 141.1,29.8' fill='var(--c1)'/><path d='M125 110 A25 25 0 0 0 112.5 88.3' fill='none' stroke='var(--acc)' stroke-width='1.5'/><text x='127' y='100' font-size='12' fill='var(--acc)'>θ</text><text x='158' y='40' font-size='12' fill='var(--c1)' font-weight='bold'>F = 50 N</text><text x='155' y='106' font-size='12' fill='var(--c1)'>F·cosθ</text><line x1='79.9' y1='170' x2='230.1' y2='170' stroke='var(--acc)' stroke-width='1.5' fill='none'/><polygon points='235,170 228,173.2 228,166.8' fill='var(--acc)'/><polygon points='75,170 82,166.8 82,173.2' fill='var(--acc)'/><text x='155' y='190' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>d = 4 m</text><text x='310' y='75' font-size='13' fill='var(--ink)' text-anchor='end' font-weight='bold'>W = 100 J</text><text x='310' y='95' font-size='12' fill='var(--ink)' text-anchor='end'>θ = 60°</text></svg>",
+    "key": "If a 50 N force acts at a 60° angle over 4 m, then W = 50·4·0.5 = 100 J (cos60° = 0.5)."
+   },
+   {
+    "h": "Positive, zero, and negative work",
+    "p": "If the force helps the motion, the work is positive. If it opposes the motion (friction), the work is negative. If the force is perpendicular to the motion or the object does not move, the work is <b>zero</b>.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='20' width='100' height='170' fill='var(--panel)' rx='8'/><rect x='40' y='98' width='30' height='24' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><line x1='25' y1='150' x2='79.4' y2='150' stroke='var(--muted)' stroke-width='1.5' fill='none'/><polygon points='85,150 77,153.6 77,146.4' fill='var(--muted)'/><text x='55' y='168' font-size='12' fill='var(--muted)' text-anchor='middle'>motion</text><text x='55' y='45' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W &gt; 0</text><text x='55' y='186' font-size='12' fill='var(--ink)' text-anchor='middle'>θ = 0°</text><rect x='110' y='20' width='100' height='170' fill='var(--panel)' rx='8'/><rect x='145' y='98' width='30' height='24' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><line x1='130' y1='150' x2='184.4' y2='150' stroke='var(--muted)' stroke-width='1.5' fill='none'/><polygon points='190,150 182,153.6 182,146.4' fill='var(--muted)'/><text x='160' y='168' font-size='12' fill='var(--muted)' text-anchor='middle'>motion</text><text x='160' y='45' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W = 0</text><text x='160' y='186' font-size='12' fill='var(--ink)' text-anchor='middle'>θ = 90°</text><rect x='215' y='20' width='100' height='170' fill='var(--panel)' rx='8'/><rect x='250' y='98' width='30' height='24' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><line x1='235' y1='150' x2='289.4' y2='150' stroke='var(--muted)' stroke-width='1.5' fill='none'/><polygon points='295,150 287,153.6 287,146.4' fill='var(--muted)'/><text x='265' y='168' font-size='12' fill='var(--muted)' text-anchor='middle'>motion</text><text x='265' y='45' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W &lt; 0</text><text x='265' y='186' font-size='12' fill='var(--ink)' text-anchor='middle'>θ = 180°</text><line x1='70' y1='110' x2='93' y2='110' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='100,110 90,114.5 90,105.5' fill='var(--c3)'/><line x1='160' y1='98' x2='160' y2='65' stroke='var(--c4)' stroke-width='3' fill='none'/><polygon points='160,58 164.5,68 155.5,68' fill='var(--c4)'/><line x1='250' y1='110' x2='227' y2='110' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='220,110 230,105.5 230,114.5' fill='var(--c2)'/></svg>",
+    "key": "cos0° = 1, cos90° = 0, and cos180° = −1. Even if pushing a wall tires you out, you do no work in the physics sense."
+   },
+   {
+    "h": "Kinetic energy",
+    "p": "A moving object has <b>kinetic energy</b>, given by KE = ½·m·v². The speed enters this formula squared. So when the speed doubles, the energy becomes 4 times larger.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='10' y='18' font-size='12' fill='var(--muted)'>1000 kg car</text><line x1='40' y1='170' x2='300' y2='170' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='60' y='155' width='50' height='15' fill='var(--c3)' fill-opacity='0.6'/><rect x='140' y='110' width='50' height='60' fill='var(--c3)' fill-opacity='0.6'/><rect x='220' y='35' width='50' height='135' fill='var(--c3)' fill-opacity='0.6'/><text x='85' y='148' font-size='12' fill='var(--ink)' text-anchor='middle'>50 kJ</text><text x='165' y='103' font-size='12' fill='var(--ink)' text-anchor='middle'>200 kJ</text><text x='245' y='28' font-size='12' fill='var(--ink)' text-anchor='middle'>450 kJ</text><text x='165' y='145' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>×4</text><text x='245' y='110' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>×9</text><text x='85' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>10 m/s</text><text x='165' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>20 m/s</text><text x='245' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>30 m/s</text></svg>",
+    "key": "A 1000 kg car moving at 20 m/s has a kinetic energy of ½·1000·20² = 200 000 J."
+   },
+   {
+    "h": "Potential energy",
+    "p": "An object lifted higher gains <b>potential energy</b>, given by PE = m·g·h. h is measured from the zero level you choose. A 2 kg book on a 1.5 m shelf has a potential energy of 29.4 J.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='180' x2='300' y2='180' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='262' y1='30' x2='262' y2='180' stroke='var(--muted)' stroke-width='2' fill='none'/><rect x='140' y='60' width='122' height='8' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><rect x='180' y='36' width='40' height='24' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)' stroke-width='1.5'/><text x='200' y='53' font-size='12' fill='var(--ink)' text-anchor='middle'>2 kg</text><line x1='110' y1='60' x2='180' y2='60' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><line x1='110' y1='173.1' x2='110' y2='66.9' stroke='var(--acc)' stroke-width='1.5' fill='none'/><polygon points='110,62 113.2,69 106.8,69' fill='var(--acc)'/><polygon points='110,178 106.8,171 113.2,171' fill='var(--acc)'/><text x='102' y='125' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>h = 1.5 m</text><text x='200' y='25' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='bold'>PE = 29.4 J</text><text x='160' y='196' font-size='12' fill='var(--muted)' text-anchor='middle'>zero level (PE = 0)</text></svg>",
+    "key": "2·9.8·1.5 = 29.4 J. Here g = 9.8 m/s² was used, but problems often take g = 10.",
+    "once": {
+     "soru": "If you put the same book twice as high, what happens to its potential energy?",
+     "secenekler": [
+      {
+       "yazi": "It doubles",
+       "neden": "PE = m·g·h. When h doubles, PE doubles too.",
+       "dogru": true
+      },
+      {
+       "yazi": "It becomes 4 times larger",
+       "neden": "The square appears only with speed, in kinetic energy. Potential energy is directly proportional to height."
+      },
+      {
+       "yazi": "It stays the same",
+       "neden": "PE increases as the height increases."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The work–energy theorem",
+    "p": "The <b>net work</b> done on an object equals the change in its kinetic energy (W<sub>net</sub> = ΔKE). A cart at rest pushed with a 10 N force over 5 m gains 50 J of kinetic energy.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='15' y1='120' x2='305' y2='120' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='30' y='90' width='40' height='22' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5' rx='3'/><circle cx='38' cy='116' r='4' fill='var(--ink)'/><circle cx='62' cy='116' r='4' fill='var(--ink)'/><rect x='230' y='90' width='40' height='22' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5' rx='3'/><circle cx='238' cy='116' r='4' fill='var(--ink)'/><circle cx='262' cy='116' r='4' fill='var(--ink)'/><line x1='70' y1='101' x2='103' y2='101' stroke='var(--c1)' stroke-width='3' fill='none'/><polygon points='110,101 100,105.5 100,96.5' fill='var(--c1)'/><text x='72' y='84' font-size='12' fill='var(--c1)' font-weight='bold'>F = 10 N</text><text x='28' y='84' font-size='12' fill='var(--ink)'>v = 0</text><line x1='270' y1='101' x2='298' y2='101' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='305,101 295,105.5 295,96.5' fill='var(--c3)'/><text x='305' y='84' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='bold'>v ≈ 7.1 m/s</text><line x1='54.9' y1='140' x2='245.1' y2='140' stroke='var(--acc)' stroke-width='1.5' fill='none'/><polygon points='250,140 243,143.2 243,136.8' fill='var(--acc)'/><polygon points='50,140 57,136.8 57,143.2' fill='var(--acc)'/><text x='150' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>d = 5 m</text><text x='50' y='185' font-size='12' fill='var(--ink)' text-anchor='middle'>KE = 0</text><text x='150' y='185' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W = 10·5 = 50 J</text><text x='255' y='185' font-size='12' fill='var(--ink)' text-anchor='middle'>KE = 50 J</text></svg>",
+    "key": "The net work is the final kinetic energy minus the initial kinetic energy. With 50 J of energy, a 2 kg cart reaches about 7.1 m/s.",
+    "once": {
+     "soru": "A net work of 200 J is done on a car at rest. What is its kinetic energy, in J?",
+     "secenekler": [
+      {
+       "yazi": "200 J",
+       "neden": "The net work equals the change in kinetic energy, and 0 + 200 = 200 J.",
+       "dogru": true
+      },
+      {
+       "yazi": "0 J",
+       "neden": "Because net work is done, the car speeds up."
+      },
+      {
+       "yazi": "100 J",
+       "neden": "All of the net work goes into kinetic energy."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Conservation of mechanical energy",
+    "p": "As you just saw with the ball, while the potential energy decreases, the kinetic energy increases by the same amount. The sum of KE and PE is called <b>mechanical energy</b>. If only gravity does work, this sum <b>stays constant</b>.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='187' x2='100' y2='187' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='60' y1='37' x2='60' y2='173' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><circle cx='60' cy='30' r='7' fill='var(--c1)'/><circle cx='60' cy='105' r='7' fill='var(--c1)' fill-opacity='0.6'/><circle cx='60' cy='180' r='7' fill='var(--c1)'/><text x='45' y='34' font-size='12' fill='var(--ink)' text-anchor='end'>5 m</text><text x='45' y='109' font-size='12' fill='var(--ink)' text-anchor='end'>2.5 m</text><text x='45' y='184' font-size='12' fill='var(--ink)' text-anchor='end'>0 m</text><text x='110' y='14' font-size='12' fill='var(--ink)' font-weight='bold'>Total always 98 J</text><rect x='110' y='22' width='120' height='16' fill='var(--c2)' fill-opacity='0.45'/><text x='170' y='34' font-size='12' fill='var(--ink)' text-anchor='middle'>PE = 98 J</text><text x='236' y='34' font-size='12' fill='var(--ink)'>v = 0</text><rect x='110' y='97' width='60' height='16' fill='var(--c2)' fill-opacity='0.45'/><rect x='170' y='97' width='60' height='16' fill='var(--c3)' fill-opacity='0.45'/><text x='140' y='109' font-size='12' fill='var(--ink)' text-anchor='middle'>PE 49 J</text><text x='200' y='109' font-size='12' fill='var(--ink)' text-anchor='middle'>KE 49 J</text><text x='236' y='109' font-size='12' fill='var(--ink)'>v ≈ 7 m/s</text><rect x='110' y='172' width='120' height='16' fill='var(--c3)' fill-opacity='0.45'/><text x='170' y='184' font-size='12' fill='var(--ink)' text-anchor='middle'>KE = 98 J</text><text x='236' y='184' font-size='12' fill='var(--ink)'>v ≈ 9.9 m/s</text></svg>",
+    "key": "KE + PE = constant (if only gravity does work). If work is done from outside (a push), the mechanical energy changes.",
+    "etk": {
+     "tur": "formul",
+     "soru": "Drop the ball from different heights. Does the mass change the impact speed? (No air resistance.)",
+     "girdiler": [
+      {
+       "ad": "m",
+       "etiket": "Mass",
+       "birim": "kg",
+       "min": 0.5,
+       "max": 10,
+       "adim": 0.5,
+       "deger": 2
+      },
+      {
+       "ad": "h",
+       "etiket": "Height",
+       "birim": "m",
+       "min": 0.5,
+       "max": 50,
+       "adim": 0.5,
+       "deger": 5
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "Mechanical energy",
+       "ifade": "m*9.8*h",
+       "birim": "J",
+       "basamak": 1
+      },
+      {
+       "ad": "Impact speed",
+       "ifade": "sqrt(2*9.8*h)",
+       "birim": "m/s",
+       "basamak": 1
+      }
+     ]
+    }
+   },
+   {
+    "h": "Friction: energy turns into heat",
+    "p": "With friction, part of the mechanical energy turns into <b>heat</b>. A child going down a slide slows down, and the slide warms up. The energy turned into heat equals the work done by friction, and the total energy is conserved.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='25' y1='50' x2='150' y2='170' stroke='var(--ink)' stroke-width='2.5' fill='none'/><line x1='15' y1='170' x2='160' y2='170' stroke='var(--ink)' stroke-width='1.5' fill='none'/><circle cx='28' cy='40' r='7' fill='var(--c1)'/><circle cx='150' cy='163' r='7' fill='var(--c1)' fill-opacity='0.6'/><text x='40' y='150' font-size='12' fill='var(--c4)' font-weight='bold'>warms up</text><text x='165' y='40' font-size='12' fill='var(--ink)' font-weight='bold'>at the start</text><rect x='165' y='48' width='150' height='18' fill='var(--c2)' fill-opacity='0.45'/><text x='240' y='61' font-size='12' fill='var(--ink)' text-anchor='middle'>PE = 100 J</text><text x='240' y='100' font-size='12' fill='var(--muted)' text-anchor='middle'>total still 100 J</text><text x='165' y='125' font-size='12' fill='var(--ink)' font-weight='bold'>at the end</text><rect x='165' y='133' width='105' height='18' fill='var(--c3)' fill-opacity='0.45'/><rect x='270' y='133' width='45' height='18' fill='var(--c4)' fill-opacity='0.55'/><text x='217.5' y='146' font-size='12' fill='var(--ink)' text-anchor='middle'>KE = 70 J</text><text x='292.5' y='168' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='bold'>heat 30 J</text></svg>",
+    "key": "The work done by friction is the initial energy minus the final energy. For a skater who starts with 100 J and ends with 70 J, friction did 30 J of work."
+   },
+   {
+    "h": "The F–x graph and spring energy",
+    "p": "The area under a force–extension graph gives the work. For a spring F = k·x, so the graph is a triangle. The area of this triangle is the energy stored in the spring, <b>PE = ½·k·x²</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M40 170 H180 M40 170 V30' stroke='var(--ink)' stroke-width='1.5'/><path d='M40 170 L160 50 V170 Z' fill='var(--acc)' fill-opacity='0.2' stroke='var(--acc)' stroke-width='2'/><text x='185' y='184' font-size='12' fill='var(--muted)' text-anchor='end'>x</text><text x='32' y='36' font-size='12' fill='var(--muted)' text-anchor='end'>F</text><text x='118' y='150' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>area = work</text><text x='76' y='90' font-size='12' fill='var(--acc)' text-anchor='middle'>F = k·x</text><path d='M210 60 h10 l6 -10 l12 20 l12 -20 l12 20 l12 -20 l6 10 h10' fill='none' stroke='var(--ink)' stroke-width='2'/><rect x='200' y='40' width='8' height='40' fill='var(--muted)'/><rect x='290' y='48' width='18' height='24' rx='3' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='250' y='105' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>PE = ½·k·x²</text><text x='250' y='128' font-size='11' fill='var(--muted)' text-anchor='middle'>k = 200 N/m, x = 0.1 m</text><text x='250' y='146' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>PE = 1 J</text></svg>",
+    "key": "If k = 200 N/m and x = 0.1 m, the stored energy is ½·200·0.01 = 1 J."
+   },
+   {
+    "h": "Efficiency",
+    "p": "In machines, part of the energy turns into unwanted heat. <b>Efficiency</b> is the useful energy divided by the energy supplied, times 100. Efficiency never exceeds 100%.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='20' y='70' width='80' height='60' rx='8' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='60' y='96' font-size='12' fill='var(--ink)' text-anchor='middle'>supplied</text><text x='60' y='114' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>100 J</text><path d='M100 100 H150' stroke='var(--muted)' stroke-width='14' stroke-opacity='0.35'/><path d='M150 100 Q200 100 210 60 H240' fill='none' stroke='var(--c3)' stroke-width='6'/><path d='M150 100 Q200 100 210 140 H240' fill='none' stroke='var(--c2)' stroke-width='12' stroke-opacity='0.6'/><text x='246' y='58' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>useful: 20 J</text><text x='246' y='74' font-size='11' fill='var(--muted)' text-anchor='start'>(light)</text><text x='246' y='140' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>lost: 80 J</text><text x='246' y='156' font-size='11' fill='var(--muted)' text-anchor='start'>(heat)</text><text x='160' y='30' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>efficiency = useful / supplied × 100</text><text x='120' y='186' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>bulb efficiency: 20%</text></svg>",
+    "once": {
+     "soru": "A bulb turns 20 J of every 100 J of electrical energy into light. What is its efficiency, in percent?",
+     "secenekler": [
+      {
+       "yazi": "20%",
+       "neden": "The ratio of useful energy to supplied energy is 20 / 100 = 0.2, which is 20%.",
+       "dogru": true
+      },
+      {
+       "yazi": "80%",
+       "neden": "80% is the part that goes into heat, not the useful part."
+      },
+      {
+       "yazi": "120%",
+       "neden": "Efficiency cannot exceed 100%."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Power: how fast work is done",
+    "p": "<b>Power</b> is the work done per unit time, P = W / t. Its unit is the <b>watt</b>, and 1 W = 1 J/s. A person who runs up the stairs uses more power than one who walks up.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><path d='M20 170 h20 v-20 h20 v-20 h20 v-20 h20 v-20 h20 v-20 h20 v-20 h30 V170 Z' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><text x='20' y='30' font-size='12' fill='var(--ink)' font-weight='bold'>W = 1470 J (both)</text><line x1='180' y1='165.1' x2='180' y2='54.9' stroke='var(--acc)' stroke-width='1.5' fill='none'/><polygon points='180,50 183.2,57 176.8,57' fill='var(--acc)'/><polygon points='180,170 176.8,163 183.2,163' fill='var(--acc)'/><text x='186' y='114' font-size='12' fill='var(--ink)'>3 m</text><line x1='205' y1='170' x2='312' y2='170' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='212' y='52.4' width='45' height='117.6' fill='var(--c1)' fill-opacity='0.5'/><rect x='264' y='111.2' width='45' height='58.8' fill='var(--c3)' fill-opacity='0.5'/><text x='234.5' y='46' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>294 W</text><text x='286.5' y='105' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>147 W</text><text x='234.5' y='160' font-size='12' fill='var(--ink)' text-anchor='middle'>running</text><text x='286.5' y='160' font-size='12' fill='var(--ink)' text-anchor='middle'>walking</text><text x='234.5' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>5 s</text><text x='286.5' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>10 s</text></svg>",
+    "key": "A 50 kg person who climbs 3 m does about 1470 J of work. Doing it in 5 s takes 294 W, and in 10 s it takes 147 W. 1 kWh is 3.6 million J."
+   },
+   {
+    "h": "Power and speed: P = F·v",
+    "p": "If an object moves at a constant speed v under a force F, the power is <b>P = F·v</b>. If you push a crate with a 500 N force at a constant 2 m/s, the power is 1000 W.",
+    "key": "P = W/t = F·d/t = F·v. That is why you shift to a low gear on a hill. It gives you a large force at a low speed.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='20' y='30' font-size='13' fill='var(--ink)' font-weight='bold'>P = F·v = 500·2 = 1000 W</text><line x1='10' y1='140' x2='310' y2='140' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='130' y='90' width='70' height='50' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.5'/><text x='165' y='120' font-size='12' fill='var(--ink)' text-anchor='middle'>crate</text><line x1='50' y1='115' x2='122' y2='115' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='130,115 121,110.5 121,119.5' fill='var(--acc)'/><text x='86' y='106' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='bold'>F = 500 N</text><line x1='190' y1='150' x2='138' y2='150' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='130,150 139,145.5 139,154.5' fill='var(--c2)'/><text x='196' y='155' font-size='12' fill='var(--c2)'>friction 500 N</text><line x1='140' y1='72' x2='182' y2='72' stroke='var(--muted)' stroke-width='2' fill='none'/><polygon points='190,72 181,67.5 181,76.5' fill='var(--muted)'/><text x='198' y='76' font-size='12' fill='var(--ink)'>v = 2 m/s (constant)</text><text x='160' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>net force zero, yet the push does 1000 J each second</text></svg>",
+    "once": {
+     "soru": "A car with constant engine power starts up a hill and needs a larger force. What happens to its speed?",
+     "secenekler": [
+      {
+       "yazi": "It decreases",
+       "neden": "If P = F·v is constant, v gets smaller when F gets larger.",
+       "dogru": true
+      },
+      {
+       "yazi": "It increases",
+       "neden": "With constant power, the speed cannot increase when the force increases."
+      },
+      {
+       "yazi": "It stays the same",
+       "neden": "The product F·v is constant. So when F changes, v changes too."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Forms of energy",
+    "p": "Energy comes in many forms. Kinetic, potential, thermal, chemical, electrical, light, sound, and nuclear energy are some of them. All are measured in joules and can turn into one another. The total energy is conserved.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kart-enerji-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--muted)'/></marker></defs><rect x='10' y='36' width='68' height='52' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='44' y='58' font-size='11.5' fill='var(--c1)' text-anchor='middle' font-weight='700'>potential</text><text x='44' y='76' font-size='10.5' fill='var(--muted)' text-anchor='middle'>reservoir</text><rect x='88' y='36' width='68' height='52' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='122' y='58' font-size='11.5' fill='var(--c3)' text-anchor='middle' font-weight='700'>kinetic</text><text x='122' y='76' font-size='10.5' fill='var(--muted)' text-anchor='middle'>turbine</text><rect x='166' y='36' width='68' height='52' rx='6' fill='var(--c4)' fill-opacity='0.14' stroke='var(--c4)' stroke-width='1.5'/><text x='200' y='58' font-size='11.5' fill='var(--c4)' text-anchor='middle' font-weight='700'>electrical</text><text x='200' y='76' font-size='10.5' fill='var(--muted)' text-anchor='middle'>generator</text><rect x='244' y='36' width='68' height='52' rx='6' fill='var(--c2)' fill-opacity='0.14' stroke='var(--c2)' stroke-width='1.5'/><text x='278' y='58' font-size='11.5' fill='var(--c2)' text-anchor='middle' font-weight='700'>light + heat</text><text x='278' y='76' font-size='10.5' fill='var(--muted)' text-anchor='middle'>lamp</text><line x1='79' y1='62' x2='87' y2='62' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#kart-enerji-1)'/><line x1='157' y1='62' x2='165' y2='62' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#kart-enerji-1)'/><line x1='235' y1='62' x2='243' y2='62' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#kart-enerji-1)'/><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Energy changes form; the total is conserved</text><rect x='6' y='104' width='308' height='90' rx='8' fill='var(--panel)'/><text x='160' y='126' font-size='12' fill='var(--muted)' text-anchor='middle' font-weight='700'>Other forms</text><text x='84' y='150' font-size='11.5' fill='var(--ink)' text-anchor='middle'>thermal (internal)</text><text x='236' y='150' font-size='11.5' fill='var(--ink)' text-anchor='middle'>chemical (in bonds)</text><text x='84' y='174' font-size='11.5' fill='var(--ink)' text-anchor='middle'>sound</text><text x='236' y='174' font-size='11.5' fill='var(--ink)' text-anchor='middle'>nuclear (in the nucleus)</text></svg>",
+    "key": "At a dam, potential energy first turns into kinetic energy (turbine), then into electrical energy (generator), and finally into light and heat (lamp).",
+    "once": {
+     "soru": "In what order does the water's energy change at a dam?",
+     "secenekler": [
+      {
+       "yazi": "Potential → kinetic → electrical",
+       "neden": "The water falls from a height and speeds up, it turns the turbine, and the generator produces electricity.",
+       "dogru": true
+      },
+      {
+       "yazi": "Chemical → heat → electrical",
+       "neden": "That is a thermal power plant. No fuel burns at a dam."
+      },
+      {
+       "yazi": "Nuclear → heat → electrical",
+       "neden": "That is a nuclear power plant."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "Work is W = F·d·cosθ, and its unit is the joule.<br>KE = ½mv² and PE = mgh. The net work equals the change in kinetic energy.<br>If only gravity does work, KE + PE stays constant. Friction turns energy into heat.<br>Power is P = W/t = F·v.<br>For a spring PE = ½kx². Efficiency is the ratio of useful energy to supplied energy.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='30' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W = F·d·cosθ</text><text x='160' y='52' font-size='12' fill='var(--muted)' text-anchor='middle'>P = W / t</text><rect x='20' y='70' width='110' height='50' fill='var(--c2)' fill-opacity='0.2' rx='10'/><text x='75' y='100' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>PE = mgh</text><rect x='190' y='70' width='110' height='50' fill='var(--c3)' fill-opacity='0.2' rx='10'/><text x='245' y='100' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>KE = ½mv²</text><line x1='135' y1='88' x2='178' y2='88' stroke='var(--ink)' stroke-width='2' fill='none'/><polygon points='185,88 175,92.5 175,83.5' fill='var(--ink)'/><line x1='185' y1='104' x2='142' y2='104' stroke='var(--ink)' stroke-width='2' fill='none'/><polygon points='135,104 145,99.5 145,108.5' fill='var(--ink)'/><line x1='245' y1='120' x2='245' y2='151' stroke='var(--c4)' stroke-width='2' fill='none'/><polygon points='245,158 240.5,148 249.5,148' fill='var(--c4)'/><rect x='190' y='160' width='110' height='32' fill='var(--c4)' fill-opacity='0.2' rx='8'/><text x='245' y='181' font-size='12' fill='var(--ink)' text-anchor='middle'>heat (friction)</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "A 2 kg box is released from rest at the top of a 5 m high ramp and reaches the bottom at 8 m/s. How many joules did friction turn into heat? (g = 10 m/s²)",
+    "cevap": 36,
+    "birim": "J",
+    "e": "The initial energy is m·g·h = 2·10·5 = 100 J, and the final energy is ½·2·8² = 64 J. Friction turned 100 − 64 = 36 J into heat."
+   },
+   {
+    "tur": "ayir",
+    "q": "You apply the force. Are you doing work in the physics sense?",
+    "gruplar": [
+     "Work is done",
+     "No work is done (W = 0)"
+    ],
+    "ogeler": [
+     [
+      "Lifting a book onto a shelf",
+      0
+     ],
+     [
+      "Dragging a box",
+      0
+     ],
+     [
+      "Throwing a ball upward",
+      0
+     ],
+     [
+      "Pushing a wall",
+      1
+     ],
+     [
+      "Holding a weight in the air",
+      1
+     ]
+    ],
+    "e": "For work to be done, there must be a displacement along the direction of the force. The book, the box, and the ball move in the direction of the force. The wall and the weight held in the air do not move. Even if you get tired, W = 0 in these cases."
+   },
+   {
+    "tur": "sayi",
+    "q": "A net force of 20 N acts on a 4 kg object at rest over 10 m. What is the object's final speed, in m/s?",
+    "cevap": 10,
+    "birim": "m/s",
+    "e": "The net work is 20·10 = 200 J, and it equals the change in kinetic energy. Since ½·4·v² = 200, v² = 100 and v = 10 m/s."
+   },
+   {
+    "q": "A motor uses 600 J of energy in 3 s and does 450 J of useful work. What are its efficiency and useful power?",
+    "o": [
+     "75% and 150 W",
+     "75% and 200 W",
+     "133% and 150 W",
+     "25% and 150 W"
+    ],
+    "a": 0,
+    "e": "The efficiency is 450 / 600 = 75%. The useful power is 450 J / 3 s = 150 W. 200 W is the power supplied.",
+    "y": [
+     "",
+     "If you got 200 W, you divided the supplied 600 J by 3 s. The useful power is 450 J / 3 s.",
+     "Efficiency is the ratio of useful work to supplied energy, which is 450/600. Efficiency cannot exceed 100%.",
+     "25% is the part that is lost. Efficiency is the share of useful work, 450/600 = 75%."
+    ]
+   }
+  ]
+ },
+ "basit-makineler": {
+  "title": "Simple machines",
+  "summary": "Learn about levers, pulleys, inclined planes, the wheel and axle, screws, gears, and efficiency.",
+  "cards": [
+   {
+    "h": "What is a simple machine?",
+    "p": "A <b>simple machine</b> makes work easier by changing the size, the direction, or the distance of a force. The lever, pulley, inclined plane, wheel and axle, screw, and gear are all simple machines.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='5' y='15' width='100' height='180' fill='var(--panel)' rx='8'/><rect x='110' y='15' width='100' height='180' fill='var(--panel)' rx='8'/><rect x='215' y='15' width='100' height='180' fill='var(--panel)' rx='8'/><text x='55' y='38' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Size</text><text x='160' y='38' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Direction</text><text x='265' y='38' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Distance / speed</text><polygon points='15,160 95,160 95,100' fill='var(--line)' fill-opacity='0.6' stroke='var(--ink)' stroke-width='1.5'/><rect x='-10' y='-20' width='20' height='20' transform='translate(50,133.75) rotate(-36.87)' fill='var(--c4)' fill-opacity='0.4' stroke='var(--c4)' stroke-width='1.5'/><line x1='62' y1='118' x2='78.9' y2='105.3' stroke='var(--c1)' stroke-width='2'/><polygon points='84,101.5 80,109.5 75.2,103.1' fill='var(--c1)'/><text x='72' y='95' font-size='12' fill='var(--c1)' font-weight='bold'>F</text><text x='55' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>small F, large load</text><line x1='140' y1='58' x2='180' y2='58' stroke='var(--ink)' stroke-width='2'/><line x1='144' y1='58' x2='138' y2='51' stroke='var(--muted)' stroke-width='1'/><line x1='154' y1='58' x2='148' y2='51' stroke='var(--muted)' stroke-width='1'/><line x1='164' y1='58' x2='158' y2='51' stroke='var(--muted)' stroke-width='1'/><line x1='174' y1='58' x2='168' y2='51' stroke='var(--muted)' stroke-width='1'/><line x1='160' y1='58' x2='160' y2='80' stroke='var(--ink)' stroke-width='1.5'/><circle cx='160' cy='80' r='15' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='160' cy='80' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='145' y1='80' x2='145' y2='125' stroke='var(--ink)' stroke-width='1.5'/><line x1='175' y1='80' x2='175' y2='130' stroke='var(--ink)' stroke-width='1.5'/><rect x='132' y='125' width='26' height='22' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><line x1='175' y1='130' x2='175' y2='151.6' stroke='var(--c1)' stroke-width='2.5'/><polygon points='175,158 171,150 179,150' fill='var(--c1)'/><text x='183' y='152' font-size='12' fill='var(--c1)' font-weight='bold'>F</text><line x1='125' y1='145' x2='125' y2='123.6' stroke='var(--c3)' stroke-width='2'/><polygon points='125,118 128.5,125 121.5,125' fill='var(--c3)'/><text x='160' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>pull down, load goes up</text><line x1='232' y1='115' x2='306.3' y2='104.6' stroke='var(--muted)' stroke-width='2' stroke-dasharray='4 3'/><polygon points='232,115 225,127.6 239,127.6' fill='var(--muted)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1.2'/><line x1='232' y1='115' x2='291.1' y2='68.8' stroke='var(--ink)' stroke-width='3'/><path d='M306.3 104.6 A75 75 0 0 0 291.1 68.8' fill='none' stroke='var(--c3)' stroke-width='2'/><path d='M249.8 112.5 A18 18 0 0 0 246.2 103.9' fill='none' stroke='var(--c3)' stroke-width='2'/><line x1='250' y1='138' x2='250' y2='110.4' stroke='var(--c1)' stroke-width='2.5'/><polygon points='250,104 254,112 246,112' fill='var(--c1)'/><text x='257' y='136' font-size='12' fill='var(--c1)' font-weight='bold'>F</text><text x='265' y='160' font-size='10' fill='var(--muted)' text-anchor='middle'>hand moves little,</text><text x='265' y='174' font-size='10' fill='var(--muted)' text-anchor='middle'>tip moves a lot</text></svg>",
+    "key": "In calculations we assume that pulleys and bars are weightless and that there is no friction.",
+    "once": {
+     "soru": "What does the pulley at the top of a flagpole do?",
+     "secenekler": [
+      {
+       "yazi": "It changes the direction of the force",
+       "neden": "You pull the rope down to raise the flag.",
+       "dogru": true
+      },
+      {
+       "yazi": "It reduces the force",
+       "neden": "A fixed pulley gives no gain in force."
+      },
+      {
+       "yazi": "It reduces the work",
+       "neden": "No machine reduces the work."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Gain in force, loss in distance",
+    "p": "<b>Mechanical advantage</b> is the ratio of the load to the effort (W / F). If it is 4, you lift a 400 N load with 100 N, but you pull 4 times as much rope. So there is <b>no gain in work</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='10' width='145' height='185' fill='var(--panel)' rx='8'/><rect x='165' y='10' width='145' height='185' fill='var(--panel)' rx='8'/><text x='82' y='30' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Lifting directly</text><text x='237' y='30' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Machine with advantage 4</text><rect x='35' y='50' width='40' height='100' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.5'/><rect x='90' y='125' width='40' height='25' fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)' stroke-width='1.5'/><text x='55' y='44' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>400 N</text><text x='110' y='119' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>1 m</text><text x='55' y='165' font-size='11' fill='var(--muted)' text-anchor='middle'>force</text><text x='110' y='165' font-size='11' fill='var(--muted)' text-anchor='middle'>distance</text><line x1='27' y1='150' x2='138' y2='150' stroke='var(--ink)' stroke-width='1.2'/><rect x='190' y='125' width='40' height='25' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.5'/><rect x='245' y='50' width='40' height='100' fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)' stroke-width='1.5'/><text x='210' y='119' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>100 N</text><text x='265' y='44' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>4 m</text><text x='210' y='165' font-size='11' fill='var(--muted)' text-anchor='middle'>force</text><text x='265' y='165' font-size='11' fill='var(--muted)' text-anchor='middle'>distance</text><line x1='182' y1='150' x2='293' y2='150' stroke='var(--ink)' stroke-width='1.2'/><text x='82' y='185' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>Work = 400 J</text><text x='237' y='185' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>Work = 400 J</text></svg>",
+    "key": "In an ideal machine F·xF = W·xW. What you gain in force you lose in distance.",
+    "once": {
+     "soru": "A machine lifts a 400 N load with 100 N. How many meters of rope do you pull while the load rises 1 m?",
+     "secenekler": [
+      {
+       "yazi": "4 m",
+       "neden": "If you gain 4 times in force, you lose 4 times in distance, because 100·4 = 400·1.",
+       "dogru": true
+      },
+      {
+       "yazi": "1 m",
+       "neden": "When the force goes down, the distance goes up, and the work stays the same."
+      },
+      {
+       "yazi": "0.25 m",
+       "neden": "If the distance got shorter, you would gain work, and that never happens."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The lever and the balance condition",
+    "p": "A <b>lever</b> is a bar that turns around a pivot (fulcrum). The perpendicular distance from the pivot to the line of the effort is the <b>effort arm</b>, and the distance to the load is the <b>load arm</b>. At balance <b>F·d<sub>F</sub> = W·d<sub>W</sub></b>.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='15' y1='125' x2='305' y2='125' stroke='var(--line)' stroke-width='1'/><polygon points='110,100 98,121.6 122,121.6' fill='var(--muted)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1.2'/><line x1='30' y1='100' x2='295' y2='100' stroke='var(--ink)' stroke-width='4'/><rect x='35' y='72' width='30' height='28' fill='var(--c4)' fill-opacity='0.4' stroke='var(--c4)' stroke-width='1.5'/><text x='50' y='63' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W = 600 N</text><line x1='285' y1='48' x2='285' y2='89' stroke='var(--c2)' stroke-width='3'/><polygon points='285,97 280,87 290,87' fill='var(--c2)'/><text x='278' y='44' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='bold'>F = 200 N</text><line x1='50' y1='135' x2='50' y2='152' stroke='var(--muted)' stroke-width='1'/><line x1='110' y1='135' x2='110' y2='152' stroke='var(--muted)' stroke-width='1'/><line x1='285' y1='135' x2='285' y2='152' stroke='var(--muted)' stroke-width='1'/><line x1='56.8' y1='145' x2='103.2' y2='145' stroke='var(--acc)' stroke-width='1.5'/><polygon points='108,145 102,148 102,142' fill='var(--acc)'/><polygon points='52,145 58,148 58,142' fill='var(--acc)'/><line x1='116.8' y1='145' x2='278.2' y2='145' stroke='var(--acc)' stroke-width='1.5'/><polygon points='283,145 277,148 277,142' fill='var(--acc)'/><polygon points='112,145 118,148 118,142' fill='var(--acc)'/><text x='80' y='165' font-size='12' fill='var(--ink)' text-anchor='middle'>0.5 m</text><text x='197' y='165' font-size='12' fill='var(--ink)' text-anchor='middle'>1.5 m</text><text x='80' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>load arm</text><text x='197' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>effort arm</text><text x='160' y='30' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='bold'>F·1.5 = 600·0.5</text></svg>",
+    "key": "The advantage of a lever is dF / dW. The arm is not the length of the bar. It is the perpendicular distance from the pivot to the line of the force.",
+    "etk": {
+     "tur": "formul",
+     "soru": "Change the arms: F·d<sub>F</sub> = W·d<sub>W</sub>. What happens as the effort arm gets longer?",
+     "girdiler": [
+      {
+       "ad": "Y",
+       "etiket": "Load",
+       "birim": "N",
+       "min": 100,
+       "max": 1000,
+       "adim": 50,
+       "deger": 600
+      },
+      {
+       "ad": "dF",
+       "etiket": "Effort arm d<sub>F</sub>",
+       "birim": "m",
+       "min": 0.2,
+       "max": 3,
+       "adim": 0.1,
+       "deger": 2
+      },
+      {
+       "ad": "dY",
+       "etiket": "Load arm d<sub>W</sub>",
+       "birim": "m",
+       "min": 0.2,
+       "max": 3,
+       "adim": 0.1,
+       "deger": 0.5
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "F",
+       "ifade": "Y*dY/dF",
+       "birim": "N",
+       "basamak": 1
+      },
+      {
+       "ad": "Advantage",
+       "ifade": "dF/dY",
+       "birim": "",
+       "basamak": 2
+      }
+     ]
+    }
+   },
+   {
+    "h": "The three types of lever",
+    "p": "The order of the pivot, the load, and the effort sets the type of lever. On a seesaw the <b>pivot is in the middle</b>. On a wheelbarrow the <b>load is in the middle</b>, and the advantage is greater than 1. With tweezers the <b>effort is in the middle</b>, and the advantage is less than 1.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='5' y='15' width='100' height='180' fill='var(--panel)' rx='8'/><text x='55' y='36' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Pivot in the middle</text><polygon points='55,95 47,109.4 63,109.4' fill='var(--muted)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1.2'/><line x1='15' y1='95' x2='95' y2='95' stroke='var(--ink)' stroke-width='3'/><rect x='17' y='77' width='18' height='18' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><line x1='87' y1='57' x2='87' y2='85.6' stroke='var(--c2)' stroke-width='2.5'/><polygon points='87,92 83,84 91,84' fill='var(--c2)'/><text x='26' y='71' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W</text><text x='78' y='67' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='bold'>F</text><text x='55' y='125' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>P</text><text x='55' y='148' font-size='11' fill='var(--muted)' text-anchor='middle'>seesaw,</text><text x='55' y='162' font-size='11' fill='var(--muted)' text-anchor='middle'>scissors, pliers</text><text x='55' y='184' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='bold'>advantage &gt;1, =1, &lt;1</text><rect x='110' y='15' width='100' height='180' fill='var(--panel)' rx='8'/><text x='160' y='36' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Load in the middle</text><polygon points='125,95 117,109.4 133,109.4' fill='var(--muted)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1.2'/><line x1='120' y1='95' x2='200' y2='95' stroke='var(--ink)' stroke-width='3'/><rect x='150' y='77' width='18' height='18' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><line x1='192' y1='130' x2='192' y2='104.4' stroke='var(--c2)' stroke-width='2.5'/><polygon points='192,98 196,106 188,106' fill='var(--c2)'/><text x='159' y='71' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W</text><text x='182' y='125' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='bold'>F</text><text x='125' y='125' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>P</text><text x='160' y='148' font-size='11' fill='var(--muted)' text-anchor='middle'>wheelbarrow,</text><text x='160' y='162' font-size='11' fill='var(--muted)' text-anchor='middle'>nutcracker</text><text x='160' y='184' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='bold'>always &gt;1</text><rect x='215' y='15' width='100' height='180' fill='var(--panel)' rx='8'/><text x='265' y='36' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Effort in the middle</text><polygon points='230,95 222,109.4 238,109.4' fill='var(--muted)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1.2'/><line x1='225' y1='95' x2='305' y2='95' stroke='var(--ink)' stroke-width='3'/><rect x='285' y='77' width='18' height='18' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><line x1='263' y1='130' x2='263' y2='104.4' stroke='var(--c2)' stroke-width='2.5'/><polygon points='263,98 267,106 259,106' fill='var(--c2)'/><text x='294' y='71' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W</text><text x='273' y='125' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='bold'>F</text><text x='230' y='125' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>P</text><text x='265' y='148' font-size='11' fill='var(--muted)' text-anchor='middle'>tweezers, tongs,</text><text x='265' y='162' font-size='11' fill='var(--muted)' text-anchor='middle'>fishing rod</text><text x='265' y='184' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='bold'>always &lt;1</text></svg>",
+    "key": "Most of the levers in your body (such as the forearm) have the effort in the middle, and they magnify motion.",
+    "etk": {
+     "tur": "ayir",
+     "soru": "What is in the middle of this lever: the pivot, the load, or the effort?",
+     "gruplar": [
+      "Pivot in the middle",
+      "Load in the middle",
+      "Effort in the middle"
+     ],
+     "ogeler": [
+      [
+       "Seesaw",
+       0
+      ],
+      [
+       "Scissors",
+       0,
+       "The screw (pivot) is between the handles and the blades."
+      ],
+      [
+       "Pliers",
+       0,
+       "The rivet (pivot) is between the handles and the jaws."
+      ],
+      [
+       "Wheelbarrow",
+       1,
+       "The wheel is the pivot, the load is in the middle, and you lift at the end."
+      ],
+      [
+       "Nutcracker",
+       1,
+       "The nut sits between the hinge and your hand."
+      ],
+      [
+       "Bottle opener",
+       1,
+       "The top of the cap is the pivot, and the edge being lifted is in the middle."
+      ],
+      [
+       "Tweezers",
+       2,
+       "Your fingers press between the hinge and the tips."
+      ],
+      [
+       "Tongs",
+       2,
+       "Your hand squeezes in the middle, and the tips hold the load."
+      ],
+      [
+       "Fishing rod",
+       2,
+       "The lower hand is the pivot, and the upper hand applies the effort in the middle."
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Fixed pulley",
+    "p": "A <b>fixed pulley</b> is attached to the ceiling and does not move with the load. Its advantage is 1, so F = W. Its benefit is that it <b>changes the direction of the force</b>. You pull the rope down to lift the load.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='80' y1='15' x2='140' y2='15' stroke='var(--ink)' stroke-width='2'/><line x1='84' y1='15' x2='78' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='94' y1='15' x2='88' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='104' y1='15' x2='98' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='114' y1='15' x2='108' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='124' y1='15' x2='118' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='134' y1='15' x2='128' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='110' y1='15' x2='110' y2='45' stroke='var(--ink)' stroke-width='1.5'/><circle cx='110' cy='60' r='25' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='110' cy='60' r='3' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='85' y1='60' x2='85' y2='125' stroke='var(--ink)' stroke-width='1.5'/><line x1='135' y1='60' x2='135' y2='120' stroke='var(--ink)' stroke-width='1.5'/><rect x='65' y='125' width='40' height='35' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><text x='85' y='147' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W</text><line x1='135' y1='120' x2='135' y2='157' stroke='var(--c2)' stroke-width='3'/><polygon points='135,165 130,155 140,155' fill='var(--c2)'/><text x='145' y='160' font-size='13' fill='var(--c2)' font-weight='bold'>F</text><line x1='55' y1='160' x2='55' y2='131.4' stroke='var(--c3)' stroke-width='2'/><polygon points='55,125 59,133 51,133' fill='var(--c3)'/><text x='47' y='180' font-size='10' fill='var(--c3)'>load rises</text><text x='185' y='50' font-size='15' fill='var(--ink)' font-weight='bold'>F = W</text><text x='185' y='75' font-size='13' fill='var(--ink)'>Advantage = 1</text><text x='185' y='100' font-size='12' fill='var(--acc)' font-weight='bold'>Direction only</text><text x='185' y='130' font-size='12' fill='var(--muted)'>Pull the rope h</text><text x='185' y='148' font-size='12' fill='var(--muted)'>→ load rises h</text></svg>",
+    "key": "A fixed pulley gives no gain in force or in distance. It only changes the direction of the force.",
+    "once": {
+     "soru": "With a fixed pulley, how many newtons do you pull with to balance a 200 N load?",
+     "secenekler": [
+      {
+       "yazi": "200 N",
+       "neden": "A fixed pulley gives no gain in force, so F = W.",
+       "dogru": true
+      },
+      {
+       "yazi": "100 N",
+       "neden": "It is the movable pulley that halves the force."
+      },
+      {
+       "yazi": "400 N",
+       "neden": "A fixed pulley does not increase the force. It only changes its direction."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Movable pulley",
+    "p": "A <b>movable pulley</b> rises with the load, and two rope strands carry the load. So <b>F = W/2</b>, and the advantage is 2. The price is that to lift the load by h you pull <b>2h</b> of rope.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='60' y1='15' x2='105' y2='15' stroke='var(--ink)' stroke-width='2'/><line x1='64' y1='15' x2='58' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='74' y1='15' x2='68' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='84' y1='15' x2='78' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='94' y1='15' x2='88' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='104' y1='15' x2='98' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='85' y1='15' x2='85' y2='110' stroke='var(--ink)' stroke-width='1.5'/><circle cx='110' cy='110' r='25' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='110' cy='110' r='3' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='135' y1='110' x2='135' y2='70' stroke='var(--ink)' stroke-width='1.5'/><line x1='135' y1='72' x2='135' y2='30' stroke='var(--c2)' stroke-width='3'/><polygon points='135,22 140,32 130,32' fill='var(--c2)'/><text x='145' y='35' font-size='13' fill='var(--c2)' font-weight='bold'>F</text><line x1='110' y1='110' x2='110' y2='145' stroke='var(--ink)' stroke-width='1.5'/><rect x='90' y='145' width='40' height='35' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><text x='110' y='167' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W</text><text x='78' y='80' font-size='11' fill='var(--muted)' text-anchor='end'>W/2</text><text x='143' y='90' font-size='11' fill='var(--muted)'>W/2</text><text x='185' y='50' font-size='15' fill='var(--ink)' font-weight='bold'>F = W / 2</text><text x='185' y='75' font-size='13' fill='var(--ink)'>Advantage = 2</text><text x='185' y='100' font-size='12' fill='var(--acc)' font-weight='bold'>Load h → rope 2h</text><text x='185' y='130' font-size='11' fill='var(--muted)'>If the pulley weighs w:</text><text x='185' y='147' font-size='12' fill='var(--muted)'>F = (W + w) / 2</text></svg>",
+    "key": "If the pulley weighs w, then F = (W + w)/2. If the rope strands are not parallel, the advantage is less than 2.",
+    "once": {
+     "soru": "With a weightless movable pulley, how many newtons do you need to lift a 300 N load?",
+     "secenekler": [
+      {
+       "yazi": "150 N",
+       "neden": "Two rope strands share the load, and 300 / 2 = 150 N.",
+       "dogru": true
+      },
+      {
+       "yazi": "300 N",
+       "neden": "That is true for a fixed pulley."
+      },
+      {
+       "yazi": "600 N",
+       "neden": "A movable pulley halves the force."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Block and tackle",
+    "p": "A <b>block and tackle</b> combines fixed and movable pulleys. If n rope strands carry the movable block, then <b>F = W/n</b>. When the load rises by h, you pull n·h of rope.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='80' y1='15' x2='215' y2='15' stroke='var(--ink)' stroke-width='2'/><line x1='84' y1='15' x2='78' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='94' y1='15' x2='88' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='104' y1='15' x2='98' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='114' y1='15' x2='108' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='124' y1='15' x2='118' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='134' y1='15' x2='128' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='144' y1='15' x2='138' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='154' y1='15' x2='148' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='164' y1='15' x2='158' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='174' y1='15' x2='168' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='184' y1='15' x2='178' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='194' y1='15' x2='188' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='204' y1='15' x2='198' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='214' y1='15' x2='208' y2='8' stroke='var(--muted)' stroke-width='1'/><line x1='136' y1='15' x2='136' y2='38' stroke='var(--ink)' stroke-width='1.5'/><circle cx='136' cy='50' r='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='136' cy='50' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='184' y1='15' x2='184' y2='38' stroke='var(--ink)' stroke-width='1.5'/><circle cx='184' cy='50' r='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='184' cy='50' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='112' y1='120' x2='112' y2='140' stroke='var(--ink)' stroke-width='1.5'/><circle cx='112' cy='120' r='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='112' cy='120' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='160' y1='120' x2='160' y2='140' stroke='var(--ink)' stroke-width='1.5'/><circle cx='160' cy='120' r='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='160' cy='120' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='100' y1='15' x2='100' y2='120' stroke='var(--c1)' stroke-width='2'/><line x1='124' y1='50' x2='124' y2='120' stroke='var(--c1)' stroke-width='2'/><line x1='148' y1='50' x2='148' y2='120' stroke='var(--c1)' stroke-width='2'/><line x1='172' y1='50' x2='172' y2='120' stroke='var(--c1)' stroke-width='2'/><line x1='196' y1='50' x2='196' y2='135' stroke='var(--ink)' stroke-width='1.5'/><line x1='106' y1='140' x2='166' y2='140' stroke='var(--ink)' stroke-width='3'/><line x1='136' y1='140' x2='136' y2='148' stroke='var(--ink)' stroke-width='1.5'/><rect x='116' y='148' width='40' height='30' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><text x='136' y='168' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W</text><line x1='196' y1='135' x2='196' y2='172' stroke='var(--c2)' stroke-width='3'/><polygon points='196,180 191,170 201,170' fill='var(--c2)'/><text x='204' y='176' font-size='13' fill='var(--c2)' font-weight='bold'>F</text><text x='225' y='50' font-size='15' fill='var(--ink)' font-weight='bold'>n = 4</text><text x='225' y='73' font-size='13' fill='var(--ink)'>F = W / 4</text><text x='225' y='98' font-size='12' fill='var(--acc)' font-weight='bold'>Load h →</text><text x='225' y='114' font-size='12' fill='var(--acc)' font-weight='bold'>rope 4h</text><text x='225' y='140' font-size='11' fill='var(--c1)'>blue: supporting</text><text x='225' y='154' font-size='11' fill='var(--c1)'>strands</text></svg>",
+    "key": "When counting n, count only the strands attached to the movable block. If the movable pulleys weigh w, then F = (W + w)/n."
+   },
+   {
+    "h": "Inclined plane",
+    "p": "If you push a load up a sloped surface with no friction, <b>F·L = W·h</b> (L is the length of the ramp, h is the height). The longer the ramp, the smaller the force, but the longer the distance.",
+    "svg": "<svg viewBox='0 0 320 200'><polygon points='30,165 236,165 236,75' fill='var(--line)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1.5'/><rect x='-14' y='-24' width='28' height='24' transform='translate(122.7,124.5) rotate(-23.6)' fill='var(--c4)' fill-opacity='0.4' stroke='var(--c4)' stroke-width='1.5'/><line x1='130.7' y1='107.9' x2='158.9' y2='95.6' stroke='var(--c2)' stroke-width='3'/><polygon points='165.5,92.7 159.1,100.4 155.5,92.2' fill='var(--c2)'/><text x='172' y='88' font-size='13' fill='var(--c2)' font-weight='bold'>F</text><line x1='117.9' y1='113.5' x2='117.9' y2='145.1' stroke='var(--c1)' stroke-width='2.5'/><polygon points='117.9,151.5 113.9,143.5 121.9,143.5' fill='var(--c1)'/><text x='125.9' y='151.5' font-size='12' fill='var(--c1)' font-weight='bold'>W = 500 N</text><text x='244' y='125' font-size='12' fill='var(--ink)' font-weight='bold'>h = 2 m</text><text x='20' y='30' font-size='15' fill='var(--ink)' font-weight='bold'>F·L = W·h</text><text x='20' y='50' font-size='12' fill='var(--ink)'>F = 500·2 / 5 = 200 N</text><text x='20' y='68' font-size='12' fill='var(--acc)'>Advantage = L / h = 2.5</text><text x='38' y='132' font-size='12' fill='var(--ink)' font-weight='bold'>L = 5 m</text></svg>",
+    "key": "The advantage of an inclined plane is L/h. For the same height, the work W·h does not change."
+   },
+   {
+    "h": "Wheel and axle",
+    "p": "A <b>wheel and axle</b> is a large handle and a small cylinder fixed to the same shaft. At balance <b>F·R = W·r</b>, and the advantage is R/r. A door handle, a steering wheel, and a screwdriver work this way.",
+    "svg": "<svg viewBox='0 0 320 200'><circle cx='100' cy='85' r='60' fill='none' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='4 4'/><circle cx='100' cy='85' r='20' fill='var(--c5)' fill-opacity='0.25' stroke='var(--ink)' stroke-width='1.5'/><circle cx='100' cy='85' r='2.5' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='100' y1='85' x2='160' y2='85' stroke='var(--ink)' stroke-width='3'/><circle cx='160' cy='85' r='4' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><line x1='160' y1='89' x2='160' y2='127' stroke='var(--c2)' stroke-width='3'/><polygon points='160,135 155,125 165,125' fill='var(--c2)'/><text x='168' y='133' font-size='13' fill='var(--c2)' font-weight='bold'>F</text><line x1='80' y1='85' x2='80' y2='150' stroke='var(--ink)' stroke-width='1.5'/><rect x='62' y='150' width='36' height='30' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><text x='80' y='170' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>W</text><text x='130' y='79' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>R</text><line x1='100' y1='85' x2='86' y2='71' stroke='var(--c5)' stroke-width='1.5'/><text x='82' y='61' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='bold'>r</text><text x='185' y='40' font-size='15' fill='var(--ink)' font-weight='bold'>F·R = W·r</text><text x='185' y='62' font-size='12' fill='var(--acc)' font-weight='bold'>Advantage = R / r</text><text x='185' y='95' font-size='11' fill='var(--ink)'>R = 40 cm, r = 10 cm</text><text x='185' y='113' font-size='11' fill='var(--ink)'>W = 200 N</text><text x='185' y='131' font-size='12' fill='var(--ink)' font-weight='bold'>→ F = 50 N</text><text x='185' y='160' font-size='11' fill='var(--muted)'>1 turn: F moves 2πR,</text><text x='185' y='176' font-size='11' fill='var(--muted)'>load moves 2πr</text></svg>",
+    "key": "A well windlass works the same way. In one turn the effort moves 2πR and the load moves 2πr.",
+    "once": {
+     "soru": "Why does a thick-handled screwdriver turn a screw more easily than a thin-handled one?",
+     "secenekler": [
+      {
+       "yazi": "Its handle radius is larger",
+       "neden": "For a wheel and axle the advantage is R/r. A larger handle gives the same turning effect with less force.",
+       "dogru": true
+      },
+      {
+       "yazi": "It is heavier",
+       "neden": "Weight does not make turning easier."
+      },
+      {
+       "yazi": "It is longer",
+       "neden": "It is the radius of the handle, not its length, that makes it easier."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Compound systems",
+    "p": "When simple machines are connected, their advantages <b>multiply</b>. A movable pulley (2) combined with a wheel and axle with R = 4r (4) gives an advantage of 8. So an 800 N load is lifted with 100 N.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='60' y1='12' x2='130' y2='12' stroke='var(--ink)' stroke-width='2'/><line x1='70' y1='12' x2='64' y2='5' stroke='var(--muted)' stroke-width='1'/><line x1='85' y1='12' x2='79' y2='5' stroke='var(--muted)' stroke-width='1'/><line x1='100' y1='12' x2='94' y2='5' stroke='var(--muted)' stroke-width='1'/><line x1='115' y1='12' x2='109' y2='5' stroke='var(--muted)' stroke-width='1'/><line x1='130' y1='12' x2='124' y2='5' stroke='var(--muted)' stroke-width='1'/><line x1='75' y1='12' x2='75' y2='47' stroke='var(--ink)' stroke-width='1.5'/><circle cx='75' cy='55' r='30' fill='none' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='4 4'/><circle cx='75' cy='55' r='8' fill='var(--c5)' fill-opacity='0.25' stroke='var(--ink)' stroke-width='1.5'/><line x1='75' y1='55' x2='45' y2='55' stroke='var(--ink)' stroke-width='3'/><text x='60' y='49' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>R</text><line x1='45' y1='58' x2='45' y2='84' stroke='var(--c2)' stroke-width='3'/><polygon points='45,92 40,82 50,82' fill='var(--c2)'/><text x='45' y='108' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>F</text><line x1='83' y1='55' x2='83' y2='135' stroke='var(--ink)' stroke-width='1.5'/><line x1='113' y1='12' x2='113' y2='135' stroke='var(--ink)' stroke-width='1.5'/><circle cx='98' cy='135' r='15' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='98' cy='135' r='2.5' fill='var(--ink)'/><text x='119' y='100' font-size='11' fill='var(--muted)'>400 N</text><line x1='98' y1='135' x2='98' y2='158' stroke='var(--ink)' stroke-width='1.5'/><rect x='76' y='158' width='44' height='30' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><text x='98' y='178' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>800 N</text><text x='165' y='36' font-size='13' fill='var(--ink)' font-weight='bold'>Advantages multiply</text><text x='165' y='62' font-size='12' fill='var(--ink)'>Movable pulley: ×2</text><text x='165' y='80' font-size='11' fill='var(--muted)'>rope = 800 / 2 = 400 N</text><text x='165' y='106' font-size='12' fill='var(--ink)'>Wheel and axle (R = 4r): ×4</text><text x='165' y='124' font-size='11' fill='var(--muted)'>F = 400 · r / R = 100 N</text><text x='165' y='154' font-size='12' fill='var(--acc)' font-weight='bold'>Total advantage</text><text x='165' y='172' font-size='12' fill='var(--acc)' font-weight='bold'>2 · 4 = 8</text></svg>",
+    "key": "While the load rises h, the end of the handle moves 8h. With no friction, the work does not change in a compound system either.",
+    "once": {
+     "soru": "A pulley with advantage 2 is connected to a wheel and axle with advantage 3. What is the total advantage?",
+     "secenekler": [
+      {
+       "yazi": "6",
+       "neden": "For machines connected in a chain the advantages multiply, giving 2 · 3.",
+       "dogru": true
+      },
+      {
+       "yazi": "5",
+       "neden": "Advantages multiply, they do not add."
+      },
+      {
+       "yazi": "1.5",
+       "neden": "Advantages do not divide. Each machine reduces the force again."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The screw and its pitch",
+    "p": "A <b>screw</b> is an inclined plane wrapped around a cylinder. The distance between neighboring threads is the <b>pitch</b> (a), and the screw advances by a in one turn. With no friction <b>F·2πR = W·a</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='20' y1='40' x2='140' y2='40' stroke='var(--ink)' stroke-width='4'/><circle cx='140' cy='40' r='4' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><rect x='65' y='45' width='30' height='125' fill='var(--muted)' fill-opacity='0.15' stroke='var(--ink)' stroke-width='1.5'/><polygon points='65,170 95,170 80,190' fill='var(--muted)' fill-opacity='0.15' stroke='var(--ink)' stroke-width='1.5'/><line x1='65' y1='55' x2='95' y2='65' stroke='var(--ink)' stroke-width='1.5'/><line x1='65' y1='75' x2='95' y2='85' stroke='var(--ink)' stroke-width='1.5'/><line x1='65' y1='95' x2='95' y2='105' stroke='var(--ink)' stroke-width='1.5'/><line x1='65' y1='115' x2='95' y2='125' stroke='var(--ink)' stroke-width='1.5'/><line x1='65' y1='135' x2='95' y2='145' stroke='var(--ink)' stroke-width='1.5'/><line x1='65' y1='155' x2='95' y2='165' stroke='var(--ink)' stroke-width='1.5'/><line x1='98' y1='85' x2='118' y2='85' stroke='var(--muted)' stroke-width='1'/><line x1='98' y1='105' x2='118' y2='105' stroke='var(--muted)' stroke-width='1'/><line x1='112' y1='91' x2='112' y2='99' stroke='var(--acc)' stroke-width='1.5'/><polygon points='112,103 109.5,98 114.5,98' fill='var(--acc)'/><polygon points='112,87 109.5,92 114.5,92' fill='var(--acc)'/><text x='122' y='99' font-size='13' fill='var(--acc)' font-weight='bold'>a</text><text x='110' y='32' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>R</text><path d='M25.5 44.1 A58 12 0 0 0 134.5 44.1' fill='none' stroke='var(--c2)' stroke-width='2'/><polygon points='141.5,40.1 130.9,40.8 135.4,48.6' fill='var(--c2)'/><text x='140' y='66' font-size='13' fill='var(--c2)' font-weight='bold'>F</text><text x='175' y='40' font-size='12' fill='var(--acc)' font-weight='bold'>1 turn → advances a</text><text x='175' y='72' font-size='15' fill='var(--ink)' font-weight='bold'>F·2πR = W·a</text><text x='175' y='96' font-size='12' fill='var(--ink)'>Advantage = 2πR / a</text><text x='175' y='130' font-size='11' fill='var(--muted)'>Small pitch, long handle</text><text x='175' y='146' font-size='11' fill='var(--muted)'>→ smaller F</text><text x='175' y='178' font-size='11' fill='var(--muted)'>jack, vise</text></svg>",
+    "key": "Here R is the length of the handle. A jack and a vise work this way. A real screw has a lot of friction, which is why it does not turn back by itself.",
+    "once": {
+     "soru": "How far does a screw advance in one full turn?",
+     "secenekler": [
+      {
+       "yazi": "One pitch",
+       "neden": "In one turn the screw advances by the distance between two neighboring threads.",
+       "dogru": true
+      },
+      {
+       "yazi": "Its own length",
+       "neden": "It takes many turns to drive a screw all the way in."
+      },
+      {
+       "yazi": "Its own circumference",
+       "neden": "The circumference is the distance the end of the handle moves. It is not how far the screw advances."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Gears and belt pulleys",
+    "p": "The rims of meshing gears move at the same speed. So the number of turns is inversely proportional to the radius, and <b>n₁·r₁ = n₂·r₂</b>. Meshing gears turn in <b>opposite</b> directions.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='5' y='10' width='150' height='185' fill='var(--panel)' rx='8'/><rect x='165' y='10' width='150' height='185' fill='var(--panel)' rx='8'/><text x='80' y='30' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Gears</text><text x='240' y='30' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Belt pulleys</text><circle cx='55' cy='90' r='32' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='6' stroke-dasharray='4 3'/><circle cx='55' cy='90' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='118' cy='90' r='16' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='6' stroke-dasharray='4 3'/><circle cx='118' cy='90' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><path d='M15.5 75.6 A42 42 0 0 1 62.3 48.6' fill='none' stroke='var(--c1)' stroke-width='2'/><polygon points='64.3,49 53.7,51.2 55.1,43.3' fill='var(--c1)'/><path d='M142.4 81.1 A26 26 0 0 0 113.5 64.4' fill='none' stroke='var(--c4)' stroke-width='2'/><polygon points='111.5,64.7 120.7,59.1 122.1,66.9' fill='var(--c4)'/><text x='55' y='142' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='bold'>2r</text><text x='118' y='122' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='bold'>r</text><text x='80' y='160' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='bold'>turn in opposite directions</text><text x='80' y='180' font-size='11' fill='var(--muted)' text-anchor='middle'>small one: twice the turns</text><circle cx='200' cy='65' r='14' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='280' cy='65' r='14' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><line x1='200' y1='51' x2='280' y2='51' stroke='var(--c5)' stroke-width='2'/><line x1='200' y1='79' x2='280' y2='79' stroke='var(--c5)' stroke-width='2'/><text x='240' y='98' font-size='11' fill='var(--muted)' text-anchor='middle'>open belt: same direction</text><circle cx='200' cy='140' r='14' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='280' cy='140' r='14' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><line x1='200' y1='126' x2='280' y2='154' stroke='var(--c5)' stroke-width='2'/><line x1='200' y1='154' x2='280' y2='126' stroke='var(--c5)' stroke-width='2'/><text x='240' y='173' font-size='11' fill='var(--muted)' text-anchor='middle'>crossed belt: opposite</text></svg>",
+    "key": "You can use the number of teeth instead of r. An open belt keeps the direction, and a crossed belt reverses it. Gears on the same shaft make the same number of turns.",
+    "once": {
+     "soru": "A 20-tooth gear meshes with a 10-tooth gear. When the large gear makes 1 turn, how many turns does the small one make?",
+     "secenekler": [
+      {
+       "yazi": "2",
+       "neden": "1·20 = n·10: the small gear turns twice as fast.",
+       "dogru": true
+      },
+      {
+       "yazi": "½",
+       "neden": "The small gear makes more turns, not fewer."
+      },
+      {
+       "yazi": "1",
+       "neden": "The numbers of teeth are different, so the numbers of turns are different too."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The bicycle: gears at work",
+    "p": "The pedal shares a shaft with the front gear, and the rear gear shares one with the wheel, and the chain links the two. If the front gear has 48 teeth and the rear gear has 16, the wheel makes 3 turns for each turn of the pedal.",
+    "svg": "<svg viewBox='0 0 320 200'><circle cx='225' cy='125' r='52' fill='none' stroke='var(--muted)' stroke-width='2'/><circle cx='225' cy='125' r='2' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='95' cy='125' r='30' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='5' stroke-dasharray='4 3'/><circle cx='225' cy='125' r='10' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)' stroke-width='4' stroke-dasharray='3 2'/><line x1='95' y1='94' x2='225' y2='114' stroke='var(--ink)' stroke-width='1.5'/><line x1='95' y1='156' x2='225' y2='136' stroke='var(--ink)' stroke-width='1.5'/><line x1='95' y1='125' x2='73' y2='165' stroke='var(--ink)' stroke-width='3'/><rect x='61' y='163' width='24' height='6' fill='var(--ink)' fill-opacity='0.6' stroke='var(--ink)' stroke-width='1' rx='1'/><circle cx='95' cy='125' r='2.5' fill='var(--ink)' stroke='var(--ink)' stroke-width='1.5'/><text x='160' y='25' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Pedal 1 turn → wheel 3 turns</text><text x='160' y='45' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='bold'>48 / 16 = 3</text><text x='137' y='173' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='bold'>48 teeth</text><text x='225' y='153' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='bold'>16 teeth</text><text x='150' y='88' font-size='10' fill='var(--muted)' text-anchor='middle'>chain</text><text x='265' y='70' font-size='10' fill='var(--muted)'>wheel</text></svg>",
+    "key": "On a hill you shift to a larger rear gear. The wheel then turns less, and pedaling gets easier. Gears linked by a chain turn in the same direction."
+   },
+   {
+    "h": "Efficiency and friction",
+    "p": "In a real machine, friction turns part of the work into heat. <b>Efficiency</b> is the useful work divided by the work input, times 100, and it is always below 100%.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='28' font-size='11' fill='var(--muted)' text-anchor='middle'>Ramp: W = 600 N, h = 1 m, L = 4 m, F = 200 N</text><text x='30' y='62' font-size='12' fill='var(--ink)' font-weight='bold'>Work input: F·L = 200·4 = 800 J</text><rect x='30' y='72' width='195' height='34' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)' stroke-width='1.5'/><rect x='225' y='72' width='65' height='34' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)' stroke-width='1.5'/><text x='127' y='94' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>useful 600 J</text><text x='257' y='94' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>heat 200 J</text><text x='30' y='128' font-size='12' fill='var(--c3)' font-weight='bold'>Useful work: W·h = 600·1 = 600 J</text><text x='160' y='160' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='bold'>Efficiency = 600 / 800 = 75%</text><text x='160' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>Without friction F = 150 N would be enough</text></svg>",
+    "key": "If you apply 200 N to raise a 600 N load by 1 m on a 4 m ramp, the efficiency is 600 J / 800 J = 75%."
+   },
+   {
+    "h": "Summary",
+    "p": "• The advantage is W / F, and there is no gain in work.<br>• For a lever F·d<sub>F</sub> = W·d<sub>W</sub>.<br>• The advantage is 1 for a fixed pulley, 2 for a movable pulley, and n for a block and tackle.<br>• F·L = W·h for an inclined plane, F·R = W·r for a wheel and axle, and F·2πR = W·a for a screw.<br>• For gears n₁·r₁ = n₂·r₂.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='20' y='8' width='280' height='186' fill='var(--panel)' rx='8'/><text x='40' y='28' font-size='12' fill='var(--muted)' font-weight='bold'>Machine</text><text x='280' y='28' font-size='12' fill='var(--muted)' text-anchor='end' font-weight='bold'>Ideal advantage</text><line x1='30' y1='34' x2='290' y2='34' stroke='var(--line)' stroke-width='1'/><text x='40' y='55' font-size='12' fill='var(--ink)'>Lever</text><text x='280' y='55' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='bold'>d<tspan font-size='10' dy='3'>F</tspan><tspan dy='-3'> </tspan> / d<tspan font-size='10' dy='3'>W</tspan></text><text x='40' y='76' font-size='12' fill='var(--ink)'>Fixed pulley</text><text x='280' y='76' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='bold'>1</text><text x='40' y='97' font-size='12' fill='var(--ink)'>Movable pulley</text><text x='280' y='97' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='bold'>2</text><text x='40' y='118' font-size='12' fill='var(--ink)'>Block and tackle</text><text x='280' y='118' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='bold'>n</text><text x='40' y='139' font-size='12' fill='var(--ink)'>Inclined plane</text><text x='280' y='139' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='bold'>L / h</text><text x='40' y='160' font-size='12' fill='var(--ink)'>Wheel and axle</text><text x='280' y='160' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='bold'>R / r</text><text x='40' y='181' font-size='12' fill='var(--ink)'>Screw</text><text x='280' y='181' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='bold'>2πR / a</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "A 600 N load is lifted with a block and tackle whose movable block is carried by 4 rope strands. If the movable pulleys weigh 40 N in total, what is the smallest force, in N, you must apply to the rope? (no friction)",
+    "cevap": 160,
+    "birim": "N",
+    "e": "The weight of the pulleys adds to the load, so F = (W + w) / n = (600 + 40) / 4 = 160 N."
+   },
+   {
+    "tur": "ayir",
+    "q": "Put each case in the right group by lever type.",
+    "gruplar": [
+     "Pivot in the middle",
+     "Load in the middle",
+     "Effort in the middle"
+    ],
+    "ogeler": [
+     [
+      "Lifting a rock with a crowbar",
+      0
+     ],
+     [
+      "Equal-arm balance",
+      0
+     ],
+     [
+      "Paper guillotine",
+      1
+     ],
+     [
+      "Rising onto your toes",
+      1
+     ],
+     [
+      "Sweeping with a broom",
+      2
+     ],
+     [
+      "Shoveling soil",
+      2
+     ]
+    ],
+    "e": "For a crowbar and a balance the pivot is in the middle. For a paper guillotine and for rising onto your toes the load is in the middle. On your toes, the toes are the pivot and the effort is the muscle at the heel. With a broom and a shovel the upper hand is the pivot, and the lower hand applies the effort in the middle."
+   },
+   {
+    "tur": "sayi",
+    "q": "A 300 N load hangs from one end of a 2 m weightless bar. The pivot is 0.5 m from the load. What is the smallest force, in N, applied perpendicular to the other end that balances the bar?",
+    "cevap": 100,
+    "birim": "N",
+    "e": "The effort arm is 2 − 0.5 = 1.5 m. Since F·1.5 = 300·0.5, F = 100 N. The advantage is 1.5 / 0.5 = 3."
+   },
+   {
+    "q": "Gears K, L, and M mesh in a row and have radii r, 3r, and 2r. If K makes 6 turns clockwise, what does M do?",
+    "o": [
+     "3 turns, counterclockwise",
+     "2 turns, counterclockwise",
+     "3 turns, clockwise",
+     "12 turns, clockwise"
+    ],
+    "a": 2,
+    "e": "For gears in contact n·r is constant. Since 6·r = n·2r, n = 3. L turns opposite to K. M turns opposite to L, which is the same direction as K: clockwise.",
+    "y": [
+     "The middle gear L reverses the direction twice. So K and M turn in the same direction, not in opposite directions.",
+     "The number of turns is inversely proportional to the radius. If 6·r = n·2r, then n = 3, and the direction is the same as K.",
+     "",
+     "The number of turns is inversely proportional to the radius. So the larger gear M makes fewer turns than K."
+    ]
+   }
+  ]
+ },
+ "momentum": {
+  "title": "Momentum and collisions",
+  "summary": "Momentum, impulse, conservation, and elastic or inelastic collisions.",
+  "cards": [
+   {
+    "h": "Momentum: mass × velocity",
+    "p": "<b>Momentum</b> is mass times velocity. It is given by <b>p = m·v</b>, and its unit is kg·m/s. A slow truck is harder to stop than a fast ball, because its mass is large and so its momentum is large too.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='mom-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><text x='160' y='32' font-size='22' fill='var(--acc)' text-anchor='middle' font-weight='bold'>p = m·v</text><rect x='30' y='62' width='60' height='30' rx='3' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><rect x='90' y='70' width='22' height='22' rx='3' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1.5'/><circle cx='48' cy='98' r='6' fill='var(--ink)' fill-opacity='0.6' stroke='var(--ink)' stroke-width='1.5'/><circle cx='98' cy='98' r='6' fill='var(--ink)' fill-opacity='0.6' stroke='var(--ink)' stroke-width='1.5'/><line x1='122' y1='78' x2='162' y2='78' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#mom-1)'/><text x='142' y='68' font-size='12' fill='var(--c1)' text-anchor='middle'>2 m/s</text><text x='70' y='120' font-size='12' fill='var(--muted)' text-anchor='middle'>truck</text><text x='178' y='74' font-size='12' fill='var(--ink)' text-anchor='start'>2000 kg × 2 m/s</text><text x='178' y='92' font-size='13' fill='var(--c1)' text-anchor='start' font-weight='bold'>p = 4000 kg·m/s</text><circle cx='70' cy='145' r='10' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1.5'/><text x='40' y='149' font-size='12' fill='var(--muted)' text-anchor='end'>ball</text><line x1='88' y1='145' x2='160' y2='145' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#mom-2)'/><text x='124' y='135' font-size='12' fill='var(--c2)' text-anchor='middle'>20 m/s</text><text x='178' y='141' font-size='12' fill='var(--ink)' text-anchor='start'>0.4 kg × 20 m/s</text><text x='178' y='159' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='bold'>p = 8 kg·m/s</text><text x='160' y='190' font-size='12' fill='var(--muted)' text-anchor='middle'>the slow but heavy truck has a huge momentum</text></svg>",
+    "key": "Momentum is p = m·v, and its unit is kg·m/s. Being fast does not by itself mean a large momentum."
+   },
+   {
+    "h": "Momentum is a vector",
+    "p": "Momentum points <b>the same way</b> as the velocity. Choose one direction as + and count the opposite as −. Momenta add as <b>vectors</b>. Two objects with equal and opposite momenta have a total momentum of zero.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='mom-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><text x='160' y='28' font-size='12' fill='var(--muted)' text-anchor='middle'>right: +, left: −</text><rect x='50' y='65' width='40' height='34' rx='3' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><text x='70' y='87' font-size='12' fill='var(--ink)' text-anchor='middle'>2 kg</text><line x1='92' y1='82' x2='142' y2='82' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#mom-3)'/><text x='117' y='72' font-size='12' fill='var(--c1)' text-anchor='middle'>3 m/s</text><rect x='230' y='65' width='40' height='34' rx='3' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.5'/><text x='250' y='87' font-size='12' fill='var(--ink)' text-anchor='middle'>3 kg</text><line x1='228' y1='82' x2='178' y2='82' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#mom-4)'/><text x='203' y='72' font-size='12' fill='var(--c2)' text-anchor='middle'>2 m/s</text><text x='70' y='125' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='bold'>p₁ = +6 kg·m/s</text><text x='250' y='125' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='bold'>p₂ = −6 kg·m/s</text><text x='160' y='160' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='bold'>total: (+6) + (−6) = 0</text><text x='160' y='186' font-size='12' fill='var(--muted)' text-anchor='middle'>both are moving, yet the total momentum is zero</text></svg>",
+    "key": "Choose the + direction before you start a calculation. Velocity and momentum in the opposite direction get a minus sign.",
+    "once": {
+     "soru": "Two 1 kg balls move toward each other at 3 m/s. What is the total momentum, in kg·m/s?",
+     "secenekler": [
+      {
+       "yazi": "0",
+       "neden": "The momenta point in opposite directions. +3 and −3 add up to zero.",
+       "dogru": true
+      },
+      {
+       "yazi": "6",
+       "neden": "Opposite momenta do not add up, they cancel."
+      },
+      {
+       "yazi": "3",
+       "neden": "The two balls carry momenta of equal size in opposite directions."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Impulse: I = F·Δt = Δp",
+    "p": "A net force acting for a time gives an <b>impulse</b>, <b>I = F·Δt</b>. The impulse equals the change in momentum (<b>I = Δp</b>). Its unit is N·s, which is the same as kg·m/s.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker><marker id='mom-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker></defs><text x='160' y='28' font-size='12' fill='var(--muted)' text-anchor='middle'>0.5 kg ball, frictionless surface</text><circle cx='45' cy='85' r='14' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><text x='45' y='125' font-size='12' fill='var(--ink)' text-anchor='middle'>before: v = 0</text><line x1='70' y1='85' x2='140' y2='85' stroke='var(--c2)' stroke-width='3' marker-end='url(#mom-5)'/><text x='105' y='72' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>F = 50 N</text><text x='105' y='106' font-size='12' fill='var(--c2)' text-anchor='middle'>Δt = 0.1 s</text><circle cx='185' cy='85' r='14' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><line x1='205' y1='85' x2='275' y2='85' stroke='var(--c3)' stroke-width='2.5' marker-end='url(#mom-6)'/><text x='240' y='72' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>10 m/s</text><text x='210' y='125' font-size='12' fill='var(--ink)' text-anchor='middle'>after: v = 10 m/s</text><line x1='20' y1='140' x2='300' y2='140' stroke='var(--line)' stroke-width='1'/><text x='160' y='162' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>I = F·Δt = 50 × 0.1 = 5 N·s</text><text x='160' y='186' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='bold'>Δp = 0.5 × 10 − 0 = 5 kg·m/s</text></svg>",
+    "key": "Impulse is a vector too, and it points along the net force, which is the direction of Δp. If the force changes, use the average force.",
+    "once": {
+     "soru": "A 50 N force acts on a ball at rest for 0.1 s. What is its momentum, in kg·m/s?",
+     "secenekler": [
+      {
+       "yazi": "5",
+       "neden": "I = F·Δt = 50·0.1 = 5 N·s, and the change in momentum equals this.",
+       "dogru": true
+      },
+      {
+       "yazi": "500",
+       "neden": "The force is multiplied by the time, not divided."
+      },
+      {
+       "yazi": "50",
+       "neden": "Force alone is not momentum. It has to be multiplied by the time."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Area under the F–t graph = impulse",
+    "p": "If the force changes, the impulse is the <b>area under the force–time graph</b>. Area below the axis is impulse in the opposite direction, and it is subtracted. For a constant force the area is a rectangle equal to F·Δt.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><polygon points='40,160 110,70 180,70 250,160' fill='var(--acc)' fill-opacity='0.2' stroke='var(--acc)' stroke-width='2.5'/><line x1='40' y1='160' x2='295' y2='160' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#mom-7)'/><line x1='40' y1='160' x2='40' y2='22' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#mom-7)'/><text x='48' y='26' font-size='12' fill='var(--muted)' text-anchor='start'>F (N)</text><text x='300' y='190' font-size='12' fill='var(--muted)' text-anchor='end'>t (s)</text><line x1='40' y1='70' x2='110' y2='70' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><text x='34' y='74' font-size='12' fill='var(--muted)' text-anchor='end'>20</text><text x='110' y='176' font-size='12' fill='var(--muted)' text-anchor='middle'>2</text><text x='180' y='176' font-size='12' fill='var(--muted)' text-anchor='middle'>4</text><text x='250' y='176' font-size='12' fill='var(--muted)' text-anchor='middle'>6</text><text x='145' y='120' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>area = impulse</text><text x='145' y='140' font-size='12' fill='var(--ink)' text-anchor='middle'>20 + 40 + 20 = 80 N·s</text><text x='300' y='40' font-size='13' fill='var(--acc)' text-anchor='end' font-weight='bold'>I = Δp = 80 N·s</text></svg>",
+    "key": "The area under a force–time graph gives the impulse, which is Δp. The area under a force–extension graph is work. Do not mix them up.",
+    "once": {
+     "soru": "On an F–t graph the force rises steadily from 0 to 10 N over 4 s. What is the impulse, in N·s?",
+     "secenekler": [
+      {
+       "yazi": "20",
+       "neden": "The area is a triangle, and ½ · 4 · 10 = 20 N·s.",
+       "dogru": true
+      },
+      {
+       "yazi": "40",
+       "neden": "That would be right for a rectangle. But the force is not 10 N the whole time."
+      },
+      {
+       "yazi": "10",
+       "neden": "Impulse is the area, not the force. Take the time into account too."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Longer time, smaller force",
+    "p": "The Δp needed to stop is fixed. Since <b>F = Δp / Δt</b>, a longer time means a smaller force. That is why an airbag, helmet foam, and bending your knees protect you.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><polygon points='50,170 65,50 80,170' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='2'/><polygon points='110,170 155,130 200,170' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='2'/><line x1='40' y1='170' x2='300' y2='170' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#mom-8)'/><line x1='40' y1='170' x2='40' y2='22' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#mom-8)'/><text x='48' y='26' font-size='12' fill='var(--muted)' text-anchor='start'>F</text><text x='300' y='190' font-size='12' fill='var(--muted)' text-anchor='end'>t</text><text x='74' y='64' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='bold'>hard ground</text><text x='170' y='128' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='bold'>airbag</text><text x='300' y='30' font-size='12' fill='var(--ink)' text-anchor='end'>equal areas → same Δp</text><text x='300' y='50' font-size='12' fill='var(--c2)' text-anchor='end'>short Δt → large F</text><text x='300' y='70' font-size='12' fill='var(--c3)' text-anchor='end'>long Δt → small F</text></svg>",
+    "key": "An airbag does not reduce the impulse (Δp). It makes the time longer and so reduces the force."
+   },
+   {
+    "h": "The momentum form of the second law",
+    "p": "The general form of the second law is <b>F<sub>net</sub> = Δp / Δt</b>. If the mass is constant, Δp = m·Δv, and this gives <b>F = m·a</b>. If the net force is zero, the momentum does not change.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--muted)'/></marker></defs><rect x='85' y='22' width='150' height='36' rx='6' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.5'/><text x='160' y='46' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='bold'>F<tspan font-size='10' dy='3'>net</tspan><tspan dy='-3'> = Δp / Δt</tspan></text><line x1='160' y1='60' x2='160' y2='82' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#mom-9)'/><text x='172' y='76' font-size='12' fill='var(--muted)' text-anchor='start'>if m is constant, Δp = m·Δv</text><rect x='85' y='86' width='150' height='36' rx='6' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><text x='160' y='110' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='bold'>F = m·Δv / Δt</text><line x1='160' y1='124' x2='160' y2='146' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#mom-9)'/><text x='172' y='140' font-size='12' fill='var(--muted)' text-anchor='start'>Δv / Δt = a</text><rect x='85' y='150' width='150' height='36' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='160' y='174' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='bold'>F = m·a</text><text x='12' y='46' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='bold'>general</text><text x='12' y='174' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='bold'>special</text><text x='12' y='190' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='bold'>form</text><text x='12' y='62' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='bold'>form</text></svg>",
+    "key": "F = m·a is the form that F = Δp/Δt takes when the mass is constant.",
+    "once": {
+     "soru": "If the net force on an object is zero, what happens to its momentum?",
+     "secenekler": [
+      {
+       "yazi": "It stays the same",
+       "neden": "Since Fnet = Δp/Δt, if the force is zero then Δp is zero too.",
+       "dogru": true
+      },
+      {
+       "yazi": "It decreases",
+       "neden": "For it to decrease, there must be a net force opposing the motion."
+      },
+      {
+       "yazi": "It becomes zero",
+       "neden": "The momentum of a moving object is conserved when there is no force."
+      }
+     ]
+    }
+   },
+   {
+    "h": "A ball bouncing off a wall",
+    "p": "When the direction changes, watch the sign. For a ball that hits a wall at speed v and bounces back at the same speed, Δp = m(−v) − m(v) = <b>−2mv</b>. If the ball stuck, Δp would be only mv.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='mom-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><rect x='272' y='30' width='14' height='120' rx='0' fill='var(--muted)' fill-opacity='0.35' stroke='var(--muted)' stroke-width='1.5'/><line x1='286' y1='36' x2='296' y2='44' stroke='var(--muted)' stroke-width='1'/><line x1='286' y1='52' x2='296' y2='60' stroke='var(--muted)' stroke-width='1'/><line x1='286' y1='68' x2='296' y2='76' stroke='var(--muted)' stroke-width='1'/><line x1='286' y1='84' x2='296' y2='92' stroke='var(--muted)' stroke-width='1'/><line x1='286' y1='100' x2='296' y2='108' stroke='var(--muted)' stroke-width='1'/><line x1='286' y1='116' x2='296' y2='124' stroke='var(--muted)' stroke-width='1'/><line x1='286' y1='132' x2='296' y2='140' stroke='var(--muted)' stroke-width='1'/><line x1='286' y1='148' x2='296' y2='156' stroke='var(--muted)' stroke-width='1'/><text x='70' y='66' font-size='12' fill='var(--muted)' text-anchor='start'>before</text><circle cx='120' cy='62' r='12' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.5'/><line x1='140' y1='62' x2='210' y2='62' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#mom-10)'/><text x='175' y='52' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>+v</text><text x='175' y='82' font-size='12' fill='var(--c1)' text-anchor='middle'>p = +mv</text><text x='70' y='122' font-size='12' fill='var(--muted)' text-anchor='start'>after</text><circle cx='240' cy='118' r='12' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1.5'/><line x1='220' y1='118' x2='150' y2='118' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#mom-11)'/><text x='185' y='108' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>−v</text><text x='185' y='138' font-size='12' fill='var(--c2)' text-anchor='middle'>p = −mv</text><text x='150' y='170' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Δp = (−mv) − (+mv) = −2mv</text><text x='150' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>0.5 kg, 10 m/s → |Δp| = 10 kg·m/s</text></svg>",
+    "key": "In a bounce the impulse is twice as large. A common mistake is to think Δp is zero for a ball that bounces back."
+   },
+   {
+    "h": "Conservation of momentum",
+    "p": "If the external forces add up to zero, the total momentum of a system is <b>conserved</b>. The forces that colliding objects exert on each other are an action–reaction pair. These equal and opposite impulses cancel.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><rect x='30' y='34' width='260' height='100' rx='8' fill='none' stroke='var(--acc)' stroke-width='1.5' stroke-dasharray='6 4'/><text x='42' y='52' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='bold'>isolated system</text><circle cx='135' cy='92' r='22' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><circle cx='185' cy='92' r='22' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.5'/><text x='135' y='96' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>1</text><text x='185' y='96' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>2</text><line x1='112' y1='92' x2='62' y2='92' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#mom-12)'/><line x1='208' y1='92' x2='258' y2='92' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#mom-12)'/><text x='86' y='82' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>−F</text><text x='234' y='82' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>+F</text><text x='160' y='124' font-size='12' fill='var(--muted)' text-anchor='middle'>internal forces: equal and opposite</text><text x='160' y='160' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='bold'>m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'</text><text x='160' y='186' font-size='12' fill='var(--muted)' text-anchor='middle'>external forces add to 0 → total p constant</text></svg>",
+    "key": "The momentum one object gains, the other loses. Because a collision is brief, external forces such as friction are usually neglected.",
+    "once": {
+     "soru": "Two skaters at rest on an ice rink push each other apart. What happens to their total momentum?",
+     "secenekler": [
+      {
+       "yazi": "It stays zero",
+       "neden": "There is no external force. So the total momentum, zero at the start, stays zero.",
+       "dogru": true
+      },
+      {
+       "yazi": "It increases",
+       "neden": "Both of them move, but their momenta point in opposite directions."
+      },
+      {
+       "yazi": "It decreases",
+       "neden": "The momentum was already zero at the start, and it is conserved."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Elastic collision",
+    "p": "In an <b>elastic collision</b> both momentum and kinetic energy are conserved. Billiard balls come close to this. The swap of velocities you just saw happens only <b>if the masses are equal</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='mom-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker></defs><text x='14' y='64' font-size='12' fill='var(--muted)' text-anchor='start'>before</text><circle cx='90' cy='60' r='16' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><text x='90' y='64' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>m</text><line x1='110' y1='60' x2='165' y2='60' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#mom-13)'/><text x='137' y='48' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>4 m/s</text><circle cx='210' cy='60' r='16' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.5'/><text x='210' y='64' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>m</text><text x='210' y='94' font-size='12' fill='var(--muted)' text-anchor='middle'>v = 0</text><line x1='14' y1='108' x2='306' y2='108' stroke='var(--line)' stroke-width='1'/><text x='14' y='140' font-size='12' fill='var(--muted)' text-anchor='start'>after</text><circle cx='90' cy='136' r='16' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><text x='90' y='140' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>m</text><text x='90' y='170' font-size='12' fill='var(--muted)' text-anchor='middle'>v = 0</text><circle cx='210' cy='136' r='16' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.5'/><text x='210' y='140' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>m</text><line x1='230' y1='136' x2='285' y2='136' stroke='var(--c3)' stroke-width='2.5' marker-end='url(#mom-14)'/><text x='257' y='124' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>4 m/s</text><text x='160' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>p and KE conserved → equal masses swap velocities</text></svg>",
+    "key": "If a light ball hits a heavy ball at rest elastically, it bounces back. If a heavy ball hits a light one, both move forward."
+   },
+   {
+    "h": "Inelastic collision",
+    "p": "Most collisions are <b>inelastic</b>. Momentum is conserved, but part of the kinetic energy turns into heat, sound, and deformation. The total energy is still conserved.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='14' width='300' height='152' rx='6' fill='var(--panel)' stroke='var(--line)' stroke-width='1.5'/><text x='80' y='34' font-size='12' fill='var(--muted)' text-anchor='middle' font-weight='bold'>collision</text><text x='182' y='34' font-size='13' fill='var(--muted)' text-anchor='middle' font-weight='bold'>p</text><text x='263' y='34' font-size='13' fill='var(--muted)' text-anchor='middle' font-weight='bold'>KE</text><line x1='10' y1='44' x2='310' y2='44' stroke='var(--line)' stroke-width='1.5'/><text x='80' y='68' font-size='12' fill='var(--ink)' text-anchor='middle'>elastic</text><text x='182' y='68' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>conserved</text><text x='263' y='68' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>conserved</text><line x1='10' y1='82' x2='310' y2='82' stroke='var(--line)' stroke-width='1'/><text x='80' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>inelastic</text><text x='182' y='106' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>conserved</text><text x='263' y='106' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>decreases</text><line x1='10' y1='120' x2='310' y2='120' stroke='var(--line)' stroke-width='1'/><text x='80' y='138' font-size='12' fill='var(--ink)' text-anchor='middle'>perfectly</text><text x='80' y='154' font-size='12' fill='var(--ink)' text-anchor='middle'>inelastic (sticking)</text><text x='182' y='146' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>conserved</text><text x='263' y='146' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>decreases most</text><line x1='150' y1='14' x2='150' y2='166' stroke='var(--line)' stroke-width='1'/><line x1='215' y1='14' x2='215' y2='166' stroke='var(--line)' stroke-width='1'/><text x='160' y='188' font-size='12' fill='var(--muted)' text-anchor='middle'>with no external force, p is conserved in every collision</text></svg>",
+    "key": "Do not assume momentum decreased just because kinetic energy did. With no external force, momentum is still conserved."
+   },
+   {
+    "h": "Sticking together: common velocity",
+    "p": "If objects collide and move <b>together</b>, the loss of kinetic energy is the largest possible. The common velocity comes from <b>m<sub>1</sub>v<sub>1</sub> + m<sub>2</sub>v<sub>2</sub> = (m<sub>1</sub> + m<sub>2</sub>)·v</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-15' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='mom-16' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--acc)'/></marker></defs><text x='10' y='60' font-size='12' fill='var(--muted)' text-anchor='start'>before</text><rect x='50' y='38' width='38' height='32' rx='3' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><text x='69' y='59' font-size='12' fill='var(--ink)' text-anchor='middle'>2 kg</text><line x1='92' y1='54' x2='142' y2='54' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#mom-15)'/><text x='117' y='44' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>6 m/s</text><rect x='170' y='42' width='30' height='28' rx='3' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='1.5'/><text x='185' y='60' font-size='11' fill='var(--ink)' text-anchor='middle'>1 kg</text><text x='240' y='60' font-size='12' fill='var(--muted)' text-anchor='middle'>at rest</text><text x='10' y='112' font-size='12' fill='var(--muted)' text-anchor='start'>after</text><rect x='100' y='90' width='38' height='32' rx='3' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><rect x='138' y='94' width='30' height='28' rx='3' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='1.5'/><text x='134' y='138' font-size='12' fill='var(--muted)' text-anchor='middle'>3 kg, together</text><line x1='172' y1='106' x2='222' y2='106' stroke='var(--acc)' stroke-width='2.5' marker-end='url(#mom-16)'/><text x='197' y='96' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='bold'>4 m/s</text><text x='160' y='160' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>p: 2·6 + 1·0 = 3·4 = 12 kg·m/s</text><text x='160' y='178' font-size='12' fill='var(--ink)' text-anchor='middle'>KE: ½·2·6² = 36 J → ½·3·4² = 24 J</text><text x='160' y='195' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>12 J goes into heat, sound, and deformation</text></svg>",
+    "key": "The common velocity is the total momentum divided by the total mass. Do not forget to add the masses.",
+    "etk": {
+     "tur": "formul",
+     "soru": "A moving object hits an object at rest and sticks to it. Change the masses and the speed.",
+     "girdiler": [
+      {
+       "ad": "m1",
+       "etiket": "Mass of the incoming object",
+       "birim": "kg",
+       "min": 0.5,
+       "max": 10,
+       "adim": 0.5,
+       "deger": 2
+      },
+      {
+       "ad": "v1",
+       "etiket": "Speed of the incoming object",
+       "birim": "m/s",
+       "min": 1,
+       "max": 20,
+       "adim": 1,
+       "deger": 6
+      },
+      {
+       "ad": "m2",
+       "etiket": "Mass of the object at rest",
+       "birim": "kg",
+       "min": 0.5,
+       "max": 10,
+       "adim": 0.5,
+       "deger": 1
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "Common velocity v",
+       "ifade": "m1*v1/(m1 + m2)",
+       "birim": "m/s",
+       "basamak": 2
+      },
+      {
+       "ad": "Kinetic energy lost",
+       "ifade": "0.5*m1*v1^2*m2/(m1 + m2)",
+       "birim": "J",
+       "basamak": 1
+      },
+      {
+       "ad": "Fraction lost",
+       "ifade": "100*m2/(m1 + m2)",
+       "birim": "%",
+       "basamak": 0,
+       "max": 100
+      }
+     ]
+    }
+   },
+   {
+    "h": "Explosions and recoil",
+    "p": "If a system at rest breaks apart, the total momentum <b>stays zero</b>. The pieces fly apart with equal and opposite momenta. The recoil of a rifle and a rocket work this way.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-17' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c4)'/></marker><marker id='mom-18' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><polygon points='70,70 190,70 190,82 110,82 96,98 70,98' fill='var(--muted)' fill-opacity='0.3' stroke='var(--ink)' stroke-width='1.5'/><ellipse cx='222' cy='76' rx='9' ry='4' fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)' stroke-width='1.5'/><line x1='238' y1='76' x2='300' y2='76' stroke='var(--c4)' stroke-width='2.5' marker-end='url(#mom-17)'/><text x='269' y='64' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='bold'>400 m/s</text><line x1='64' y1='84' x2='16' y2='84' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#mom-18)'/><text x='40' y='72' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>1 m/s</text><text x='130' y='118' font-size='12' fill='var(--ink)' text-anchor='middle'>rifle 4 kg</text><text x='240' y='100' font-size='12' fill='var(--ink)' text-anchor='middle'>bullet 10 g</text><text x='160' y='146' font-size='12' fill='var(--muted)' text-anchor='middle'>before, everything is at rest: total p = 0</text><text x='160' y='168' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>0 = 0.01·400 + 4·v → v = −1 m/s</text><text x='160' y='190' font-size='12' fill='var(--c2)' text-anchor='middle'>minus sign: the rifle recoils backward</text></svg>",
+    "key": "A rocket does not need air. In an explosion the kinetic energy increases, and this energy comes from the fuel or from a spring. Since KE = p²/2m, the lighter piece has the larger kinetic energy."
+   },
+   {
+    "h": "Velocity of the center of mass",
+    "p": "The velocity of the <b>center of mass</b> is v<sub>CM</sub> = Σp / Σm. With no external force, v<sub>CM</sub> stays constant. When a firework explodes in the air, the center of mass of its pieces keeps following the old path.",
+    "key": "The center of mass is the average position that behaves as if all the mass were gathered at one point.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='10' y1='180' x2='310' y2='180' stroke='var(--ink)' stroke-width='1.5'/><path d='M20 180 Q160 -60 300 180' fill='none' stroke='var(--c1)' stroke-width='1.5' stroke-dasharray='5 4'/><path d='M110 75 Q190 70 245 126' fill='none' stroke='var(--c2)' stroke-width='2'/><path d='M110 75 Q115 20 131 6' fill='none' stroke='var(--c4)' stroke-width='2'/><polygon points='110,63 113,72 122,75 113,78 110,87 107,78 98,75 107,72' fill='var(--c3)'/><line x1='245' y1='124' x2='131' y2='6' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='245' cy='124' r='5' fill='var(--c2)'/><circle cx='131' cy='6' r='5' fill='var(--c4)'/><circle cx='188' cy='65' r='5' fill='none' stroke='var(--c1)' stroke-width='2'/><text x='198' y='60' font-size='12' fill='var(--c1)' font-weight='bold'>CM</text><text x='255' y='130' font-size='11' fill='var(--c2)'>m</text><text x='141' y='12' font-size='11' fill='var(--c4)'>m</text><text x='310' y='24' font-size='13' fill='var(--ink)' text-anchor='end' font-weight='bold'>v(CM) = Σp / Σm</text><text x='160' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>the CM stays on the path it would follow without the explosion</text></svg>",
+    "once": {
+     "soru": "A firework flying through the air explodes. How does the center of mass of the pieces move?",
+     "secenekler": [
+      {
+       "yazi": "It continues on its old path",
+       "neden": "The explosion is an internal event. It does not change the motion of the center of mass.",
+       "dogru": true
+      },
+      {
+       "yazi": "It stops where it is",
+       "neden": "An explosion does not destroy momentum."
+      },
+      {
+       "yazi": "It flies off randomly",
+       "neden": "The pieces scatter, but the center of mass follows the old path."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Collisions in two dimensions",
+    "p": "In a collision in a plane, momentum is conserved <b>in each component separately</b>. If the incoming ball moves only in the x direction, then after the collision the y momenta of the two balls are equal and opposite.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mom-19' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='mom-20' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker></defs><circle cx='40' cy='110' r='12' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.5'/><line x1='56' y1='110' x2='128' y2='110' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#mom-19)'/><text x='92' y='100' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>p</text><circle cx='145' cy='110' r='12' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><line x1='145' y1='110' x2='290' y2='110' stroke='var(--line)' stroke-width='1' stroke-dasharray='4 3'/><line x1='155' y1='104' x2='248' y2='52' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#mom-19)'/><line x1='155' y1='116' x2='248' y2='168' stroke='var(--c3)' stroke-width='2.5' marker-end='url(#mom-20)'/><line x1='250' y1='52' x2='250' y2='110' stroke='var(--c1)' stroke-width='1.5' stroke-dasharray='4 3'/><line x1='250' y1='168' x2='250' y2='110' stroke='var(--c3)' stroke-width='1.5' stroke-dasharray='4 3'/><text x='258' y='88' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='bold'>+p<tspan font-size='10' dy='3'>y</tspan></text><text x='258' y='142' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='bold'>−p<tspan font-size='10' dy='3'>y</tspan></text><text x='10' y='26' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='bold'>x: p = p<tspan font-size='10' dy='3'>1x</tspan><tspan dy='-3'> + p</tspan><tspan font-size='10' dy='3'>2x</tspan></text><text x='10' y='46' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='bold'>y: 0 = p<tspan font-size='10' dy='3'>1y</tspan><tspan dy='-3'> + p</tspan><tspan font-size='10' dy='3'>2y</tspan></text><text x='10' y='190' font-size='12' fill='var(--muted)' text-anchor='start'>no y momentum before → afterward the y parts are equal and opposite</text></svg>",
+    "key": "Add the momentum components, not the speeds. Write separate equations for x and y.",
+    "once": {
+     "soru": "In billiards the cue ball comes in along x and hits a ball at rest. What is the total y momentum after the collision?",
+     "secenekler": [
+      {
+       "yazi": "Zero",
+       "neden": "There was no momentum in the y direction at the start. Each component is conserved separately.",
+       "dogru": true
+      },
+      {
+       "yazi": "The same as the cue ball's",
+       "neden": "The momentum in the x direction is conserved, and the total in the y direction stays zero."
+      },
+      {
+       "yazi": "It increases",
+       "neden": "Without an external force, y momentum cannot appear."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• Momentum p = m·v is a vector, and its unit is kg·m/s.<br>• Impulse is I = F·Δt = Δp, and it equals the area under the force–time graph.<br>• For the same Δp, a longer time means a smaller force.<br>• With no external force, the total momentum is conserved.<br>• In an elastic collision KE is conserved too. In other collisions it decreases, and in an explosion it increases.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='14' width='145' height='80' rx='8' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.5'/><text x='82' y='50' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>p = m·v</text><text x='82' y='72' font-size='12' fill='var(--muted)' text-anchor='middle'>vector, kg·m/s</text><rect x='165' y='14' width='145' height='80' rx='8' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.5'/><text x='237' y='50' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>I = F·Δt = Δp</text><text x='237' y='72' font-size='12' fill='var(--muted)' text-anchor='middle'>F–t area</text><rect x='10' y='106' width='145' height='80' rx='8' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='82' y='142' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Σp before = Σp after</text><text x='82' y='164' font-size='12' fill='var(--muted)' text-anchor='middle'>if no external force</text><rect x='165' y='106' width='145' height='80' rx='8' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.5'/><text x='237' y='142' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>KE: constant if elastic</text><text x='237' y='164' font-size='12' fill='var(--muted)' text-anchor='middle'>otherwise decreases</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "On a frictionless level track, a 3 kg cart moving at 4 m/s hits a 1 kg cart at rest and sticks to it. What is their common velocity, in m/s?",
+    "cevap": 3,
+    "birim": "m/s",
+    "e": "Momentum is conserved: 3·4 + 1·0 = (3 + 1)·v. This gives v = 12 / 4 = 3 m/s."
+   },
+   {
+    "tur": "ayir",
+    "q": "What happens to the total kinetic energy of the system in each event?",
+    "gruplar": [
+     "KE is conserved",
+     "KE decreases",
+     "KE increases"
+    ],
+    "ogeler": [
+     [
+      "Elastic collision",
+      0
+     ],
+     [
+      "Carts that stick together",
+      1
+     ],
+     [
+      "Traffic accident",
+      1
+     ],
+     [
+      "Explosion",
+      2
+     ],
+     [
+      "Firing a rifle",
+      2
+     ]
+    ],
+    "e": "In an elastic collision kinetic energy is conserved. For vehicles that stick together or get crushed, part of the kinetic energy turns into heat, sound, and deformation. In an explosion or a shot, pieces at rest start to move. The energy comes from the fuel, and the kinetic energy increases."
+   },
+   {
+    "tur": "sayi",
+    "q": "The net force on a 2 kg object at rest rises steadily from 0 to 50 N in 0.2 s, then falls steadily back to zero in the next 0.2 s. What is the object's final speed, in m/s?",
+    "cevap": 5,
+    "birim": "m/s",
+    "e": "The force–time graph is a triangle, and the impulse is ½ · 0.4 · 50 = 10 N·s. This equals Δp. So v = 10 / 2 = 5 m/s."
+   },
+   {
+    "tur": "sayi",
+    "q": "A 0.5 kg ball hits a wall head-on at 6 m/s and bounces back at 4 m/s. The contact lasts 0.05 s. What is the average force, in N, that the wall exerts on the ball?",
+    "cevap": 100,
+    "birim": "N",
+    "e": "Taking the backward direction as −, Δp = 0.5·(−4) − 0.5·6 = −5 kg·m/s, with a magnitude of 5 N·s. The force is F = 5 / 0.05 = 100 N. Subtracting the speeds (6 − 4) is wrong, because the direction changed."
+   }
+  ]
+ },
+ "tork-denge": {
+  "title": "Torque, equilibrium, and center of mass",
+  "summary": "How does a force cause rotation, and when does an object stay balanced or tip over?",
+  "cards": [
+   {
+    "h": "Torque: the turning effect",
+    "p": "The turning effect of a force is called <b>torque</b>, given by <b>τ = F·d</b>. Here d is the <b>perpendicular distance</b> from the pivot to the line of the force, and it is called the lever arm. With a longer arm, less force is enough.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tork-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><text x='160.0' y='34.0' font-size='22' fill='var(--acc)' text-anchor='middle' font-weight='bold'>τ = F · d</text><rect x='50' y='95' width='230' height='10' rx='2' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='50' cy='100' r='6' fill='var(--ink)'/><line x1='270.0' y1='52.0' x2='270.0' y2='92.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-1)'/><text x='282.0' y='72.0' font-size='14' fill='var(--c2)' text-anchor='start' font-weight='bold'>F</text><text x='50.0' y='126.0' font-size='12' fill='var(--muted)' text-anchor='middle'>hinge</text><text x='50.0' y='141.0' font-size='11' fill='var(--muted)' text-anchor='middle'>(pivot)</text><line x1='50.0' y1='165.0' x2='270.0' y2='165.0' stroke='var(--muted)' stroke-width='1'/><line x1='50.0' y1='160.0' x2='50.0' y2='170.0' stroke='var(--muted)' stroke-width='1'/><line x1='270.0' y1='160.0' x2='270.0' y2='170.0' stroke='var(--muted)' stroke-width='1'/><text x='160.0' y='185.0' font-size='12' fill='var(--ink)' text-anchor='middle'>d: lever arm (perpendicular distance)</text><text x='150.0' y='82.0' font-size='11' fill='var(--muted)' text-anchor='middle'>door (from above)</text></svg>",
+    "key": "Torque is also called the moment of a force. For the same torque, a longer lever arm needs less force (F = τ / d)."
+   },
+   {
+    "h": "Lever arm: the perpendicular distance",
+    "p": "If the force makes an angle θ with r, the lever arm is d = r·sinθ, and <b>τ = F·r·sinθ</b>. The component perpendicular to r does the turning. sin90° = 1 and sin0° = 0.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tork-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><line x1='79.8' y1='47.5' x2='240.0' y2='140.0' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='4 3'/><rect x='76' y='136' width='168' height='8' rx='2' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><circle cx='80' cy='140' r='5' fill='var(--ink)'/><line x1='240.0' y1='140.0' x2='293.7' y2='171.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-2)'/><text x='297.7' y='163.0' font-size='14' fill='var(--c2)' text-anchor='start' font-weight='bold'>F</text><line x1='80.0' y1='140.0' x2='120.0' y2='70.7' stroke='var(--c3)' stroke-width='2.5'/><path d='M116.0,77.6 L122.9,81.6 L126.9,74.7' fill='none' stroke='var(--c3)' stroke-width='1.2'/><text x='86.0' y='104.0' font-size='14' fill='var(--c3)' text-anchor='end' font-weight='bold'>d</text><text x='80.0' y='162.0' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>O</text><text x='160.0' y='162.0' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>r</text><path d='M216.0,140.0 A24,24 0 0,1 219.2,128.0' fill='none' stroke='var(--c4)' stroke-width='1.5'/><text x='204.0' y='133.0' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='bold'>θ</text><text x='232.0' y='40.0' font-size='15' fill='var(--c3)' text-anchor='middle' font-weight='bold'>d = r · sinθ</text><text x='232.0' y='60.0' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='bold'>τ = F · r · sinθ</text><text x='160.0' y='192.0' font-size='12' fill='var(--muted)' text-anchor='middle'>if the line passes through O, d = 0 and τ = 0</text></svg>",
+    "key": "sin30° = sin150° = 0.5. The component F·cosθ along r produces no torque. A force whose line passes through the pivot does not turn the object either.",
+    "etk": {
+     "tur": "formul",
+     "soru": "Change the force, the distance, and the angle. What happens to the torque when θ = 0° or 180°?",
+     "girdiler": [
+      {
+       "ad": "F",
+       "etiket": "Force",
+       "birim": "N",
+       "min": 0,
+       "max": 100,
+       "adim": 5,
+       "deger": 50
+      },
+      {
+       "ad": "r",
+       "etiket": "Distance r",
+       "birim": "m",
+       "min": 0.1,
+       "max": 1,
+       "adim": 0.05,
+       "deger": 0.4
+      },
+      {
+       "ad": "aci",
+       "etiket": "Angle θ (°)",
+       "min": 0,
+       "max": 180,
+       "adim": 5,
+       "deger": 90
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "Lever arm d",
+       "ifade": "r*sin(aci)",
+       "birim": "m",
+       "basamak": 2
+      },
+      {
+       "ad": "τ",
+       "ifade": "F*r*sin(aci)",
+       "birim": "N·m",
+       "basamak": 1
+      }
+     ]
+    }
+   },
+   {
+    "h": "Direction and sign",
+    "p": "A torque turns an object <b>clockwise</b> or <b>counterclockwise</b>. Choose one direction as + and give the other −. The net torque is the sum of the signed torques.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tork-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='tork-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><text x='160.0' y='22.0' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='bold'>Net torque = 60 − 40 = 20 N·m (counterclockwise)</text><rect x='40' y='106' width='240' height='8' rx='2' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><polygon points='160,114 148,134 172,134' fill='var(--muted)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1'/><line x1='50.0' y1='46.0' x2='50.0' y2='104.0' stroke='var(--c1)' stroke-width='3' marker-end='url(#tork-6)'/><text x='60.0' y='64.0' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='bold'>30 N</text><line x1='270.0' y1='62.0' x2='270.0' y2='104.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-7)'/><text x='260.0' y='78.0' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='bold'>20 N</text><line x1='50.0' y1='150.0' x2='160.0' y2='150.0' stroke='var(--muted)' stroke-width='1'/><line x1='50.0' y1='145.0' x2='50.0' y2='155.0' stroke='var(--muted)' stroke-width='1'/><line x1='160.0' y1='145.0' x2='160.0' y2='155.0' stroke='var(--muted)' stroke-width='1'/><line x1='160.0' y1='150.0' x2='270.0' y2='150.0' stroke='var(--muted)' stroke-width='1'/><line x1='160.0' y1='145.0' x2='160.0' y2='155.0' stroke='var(--muted)' stroke-width='1'/><line x1='270.0' y1='145.0' x2='270.0' y2='155.0' stroke='var(--muted)' stroke-width='1'/><text x='105.0' y='146.0' font-size='12' fill='var(--muted)' text-anchor='middle'>2 m</text><text x='215.0' y='146.0' font-size='12' fill='var(--muted)' text-anchor='middle'>2 m</text><text x='80.0' y='172.0' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>left: 30·2 = 60 N·m</text><text x='80.0' y='188.0' font-size='11' fill='var(--c1)' text-anchor='middle'>counterclockwise (+)</text><text x='240.0' y='172.0' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>right: 20·2 = 40 N·m</text><text x='240.0' y='188.0' font-size='11' fill='var(--c2)' text-anchor='middle'>clockwise (−)</text></svg>",
+    "key": "Most books take counterclockwise as +. Decide the directions before you add torques. Opposite torques are subtracted from each other.",
+    "once": {
+     "soru": "A torque of 30 N·m clockwise and 20 N·m counterclockwise act on a bar. What is the net torque, in N·m?",
+     "secenekler": [
+      {
+       "yazi": "10",
+       "neden": "Opposite torques are subtracted: 30 − 20 = 10 N·m, clockwise.",
+       "dogru": true
+      },
+      {
+       "yazi": "50",
+       "neden": "Opposite torques do not add up, they are subtracted."
+      },
+      {
+       "yazi": "0",
+       "neden": "If the torques were equal, the total would be zero. But 30 and 20 are not equal."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Unit: N·m, but not the joule",
+    "p": "The unit of torque is the <b>N·m</b>. The joule is also N·m, but in work the force is multiplied by the distance <b>along the same line</b>, and in torque by the <b>perpendicular</b> distance. So torque is not written in joules.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='26' width='300' height='160' rx='6' fill='var(--panel)' stroke='var(--line)'/><text x='172.0' y='48.0' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='bold'>Torque</text><text x='265.0' y='48.0' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='bold'>Work</text><line x1='10.0' y1='58.0' x2='310.0' y2='58.0' stroke='var(--line)' stroke-width='1'/><text x='20.0' y='82.0' font-size='12' fill='var(--muted)' text-anchor='start'>formula</text><text x='172.0' y='82.0' font-size='12' fill='var(--ink)' text-anchor='middle'>τ = F · d</text><text x='265.0' y='82.0' font-size='12' fill='var(--ink)' text-anchor='middle'>W = F · Δx</text><line x1='16.0' y1='93.0' x2='304.0' y2='93.0' stroke='var(--line)' stroke-width='1'/><text x='20.0' y='112.0' font-size='12' fill='var(--muted)' text-anchor='start'>F and length</text><text x='172.0' y='112.0' font-size='12' fill='var(--ink)' text-anchor='middle'>perpendicular</text><text x='265.0' y='112.0' font-size='12' fill='var(--ink)' text-anchor='middle'>same line</text><line x1='16.0' y1='123.0' x2='304.0' y2='123.0' stroke='var(--line)' stroke-width='1'/><text x='20.0' y='142.0' font-size='12' fill='var(--muted)' text-anchor='start'>quantity</text><text x='172.0' y='142.0' font-size='12' fill='var(--ink)' text-anchor='middle'>vector (has direction)</text><text x='265.0' y='142.0' font-size='12' fill='var(--ink)' text-anchor='middle'>scalar</text><line x1='16.0' y1='153.0' x2='304.0' y2='153.0' stroke='var(--line)' stroke-width='1'/><text x='20.0' y='172.0' font-size='12' fill='var(--muted)' text-anchor='start'>unit</text><text x='172.0' y='172.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>N·m</text><text x='265.0' y='172.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>J (= N·m)</text><line x1='122.0' y1='32.0' x2='122.0' y2='180.0' stroke='var(--line)' stroke-width='1'/><line x1='222.0' y1='32.0' x2='222.0' y2='180.0' stroke='var(--line)' stroke-width='1'/></svg>",
+    "key": "Torque is given in N·m. The joule is used only for work and energy.",
+    "once": {
+     "soru": "Which is the unit of torque?",
+     "secenekler": [
+      {
+       "yazi": "N·m",
+       "neden": "Torque is force times perpendicular distance. Its unit is the newton times the meter.",
+       "dogru": true
+      },
+      {
+       "yazi": "Joule",
+       "neden": "The joule is for work and energy. Torque is written in N·m."
+      },
+      {
+       "yazi": "Newton",
+       "neden": "The newton is the unit of force. In torque the force is multiplied by a distance."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Equilibrium: ΣF = 0 and Στ = 0",
+    "p": "Equilibrium needs two conditions: <b>ΣF = 0</b> for translation and <b>Στ = 0</b> for rotation. Two equal and opposite forces along different lines are called a <b>couple</b>, and a couple turns the object.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tork-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker><marker id='tork-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker><marker id='tork-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker></defs><text x='160.0' y='22.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>equilibrium = translational + rotational</text><rect x='12' y='34' width='143' height='162' rx='6' fill='var(--c2)' fill-opacity='0.06' stroke='var(--line)'/><rect x='165' y='34' width='143' height='162' rx='6' fill='var(--c3)' fill-opacity='0.06' stroke='var(--line)'/><rect x='30' y='96' width='106' height='8' rx='2' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><line x1='36.0' y1='96.0' x2='36.0' y2='52.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-10)'/><text x='46.0' y='62.0' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='bold'>F</text><line x1='130.0' y1='104.0' x2='130.0' y2='148.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-10)'/><text x='120.0' y='142.0' font-size='13' fill='var(--c2)' text-anchor='end' font-weight='bold'>F</text><text x='83.0' y='168.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>ΣF = 0, Στ ≠ 0</text><text x='83.0' y='186.0' font-size='11' fill='var(--c2)' text-anchor='middle'>couple: it turns</text><rect x='183' y='96' width='106' height='8' rx='2' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><line x1='236.0' y1='140.0' x2='236.0' y2='106.0' stroke='var(--c3)' stroke-width='3' marker-end='url(#tork-11)'/><text x='244.0' y='134.0' font-size='13' fill='var(--c3)' text-anchor='start' font-weight='bold'>2F</text><line x1='188.0' y1='56.0' x2='188.0' y2='94.0' stroke='var(--c1)' stroke-width='3' marker-end='url(#tork-12)'/><text x='196.0' y='64.0' font-size='13' fill='var(--c1)' text-anchor='start' font-weight='bold'>F</text><line x1='284.0' y1='56.0' x2='284.0' y2='94.0' stroke='var(--c1)' stroke-width='3' marker-end='url(#tork-12)'/><text x='276.0' y='64.0' font-size='13' fill='var(--c1)' text-anchor='end' font-weight='bold'>F</text><text x='236.0' y='168.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>ΣF = 0, Στ = 0</text><text x='236.0' y='186.0' font-size='11' fill='var(--c3)' text-anchor='middle'>in equilibrium</text></svg>",
+    "key": "In equilibrium Στ = 0 holds about every point. So you can choose the pivot wherever it suits you."
+   },
+   {
+    "h": "A bar and its support forces",
+    "p": "Put the pivot on one support, so that the torque of that support is zero. The weight of a uniform bar acts at its <b>midpoint</b>. The equation ΣF = 0 then gives the other support.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tork-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker><marker id='tork-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><line x1='40.0' y1='40.0' x2='280.0' y2='40.0' stroke='var(--muted)' stroke-width='1'/><line x1='40.0' y1='35.0' x2='40.0' y2='45.0' stroke='var(--muted)' stroke-width='1'/><line x1='280.0' y1='35.0' x2='280.0' y2='45.0' stroke='var(--muted)' stroke-width='1'/><text x='160.0' y='34.0' font-size='12' fill='var(--muted)' text-anchor='middle'>4 m</text><line x1='40.0' y1='72.0' x2='100.0' y2='72.0' stroke='var(--muted)' stroke-width='1'/><line x1='40.0' y1='67.0' x2='40.0' y2='77.0' stroke='var(--muted)' stroke-width='1'/><line x1='100.0' y1='67.0' x2='100.0' y2='77.0' stroke='var(--muted)' stroke-width='1'/><text x='70.0' y='66.0' font-size='12' fill='var(--muted)' text-anchor='middle'>1 m</text><rect x='40' y='96' width='240' height='8' rx='2' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><text x='34.0' y='104.0' font-size='13' fill='var(--ink)' text-anchor='end' font-weight='bold'>A</text><text x='286.0' y='104.0' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='bold'>B</text><line x1='44.0' y1='150.0' x2='44.0' y2='106.0' stroke='var(--c3)' stroke-width='3' marker-end='url(#tork-13)'/><text x='30.0' y='166.0' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='bold'>N₁ = 65 N</text><line x1='276.0' y1='150.0' x2='276.0' y2='106.0' stroke='var(--c3)' stroke-width='3' marker-end='url(#tork-13)'/><text x='290.0' y='166.0' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='bold'>N₂ = 35 N</text><line x1='100.0' y1='104.0' x2='100.0' y2='150.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-14)'/><text x='108.0' y='146.0' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='bold'>60 N</text><circle cx='160' cy='100' r='3' fill='var(--c2)'/><line x1='160.0' y1='104.0' x2='160.0' y2='136.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-14)'/><text x='168.0' y='132.0' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='bold'>40 N</text><text x='160.0' y='190.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>About A: N₂·4 = 40·2 + 60·1</text></svg>",
+    "key": "Take a 4 m bar weighing 40 N with a 60 N load 1 m from A. About A, N₂·4 = 40·2 + 60·1, so N₂ = 35 N. From ΣF = 0, N₁ = 65 N."
+   },
+   {
+    "h": "Tension in a rope",
+    "p": "To find the tension in a rope holding a hinged bar, take torques <b>about the hinge</b>, because the torque of the hinge force is zero. The torque of the rope is T·L·sinα, and the torque of the bar is W·L/2.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tork-15' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='tork-16' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><rect x='26' y='4' width='14' height='192' fill='var(--muted)' fill-opacity='0.25'/><line x1='40.0' y1='4.0' x2='40.0' y2='196.0' stroke='var(--ink)' stroke-width='1.5'/><rect x='40' y='136' width='220' height='8' rx='2' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><line x1='260.0' y1='140.0' x2='40.0' y2='13.0' stroke='var(--ink)' stroke-width='1.5'/><circle cx='40' cy='140' r='5' fill='var(--ink)'/><line x1='260.0' y1='140.0' x2='206.3' y2='109.0' stroke='var(--c1)' stroke-width='3' marker-end='url(#tork-15)'/><text x='226.0' y='100.0' font-size='14' fill='var(--c1)' text-anchor='start' font-weight='bold'>T</text><path d='M236,140 A24,24 0 0,1 239.2,128.0' fill='none' stroke='var(--c4)' stroke-width='1.5'/><text x='214.0' y='135.0' font-size='11' fill='var(--c4)' text-anchor='end' font-weight='bold'>30°</text><circle cx='150' cy='140' r='3' fill='var(--c2)'/><line x1='150.0' y1='144.0' x2='150.0' y2='180.0' stroke='var(--c2)' stroke-width='3' marker-end='url(#tork-16)'/><text x='158.0' y='176.0' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='bold'>W = 100 N</text><text x='48.0' y='162.0' font-size='11' fill='var(--muted)' text-anchor='start'>hinge</text><text x='232.0' y='26.0' font-size='12' fill='var(--muted)' text-anchor='middle'>about the hinge:</text><text x='232.0' y='44.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>T·L·sin30° = W·L/2</text><text x='232.0' y='62.0' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='bold'>T = W = 100 N</text></svg>",
+    "key": "The tension depends on the angle the rope makes with the bar. The smaller the angle, the larger T.",
+    "once": {
+     "soru": "The end of a 100 N horizontal bar hinged to a wall is held by a rope at 30° to the bar. What is the tension in the rope, in N?",
+     "secenekler": [
+      {
+       "yazi": "100",
+       "neden": "About the hinge, T·L·sin30° = 100·L/2. This gives T = 100 N.",
+       "dogru": true
+      },
+      {
+       "yazi": "50",
+       "neden": "The weight acts at the middle, but the rope pulls at an angle. So sin30° = 0.5 comes into it."
+      },
+      {
+       "yazi": "200",
+       "neden": "The weight of the bar acts at its middle, not at its end."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Center of mass and center of gravity",
+    "p": "The <b>center of mass</b> is the point where an object behaves as if all its mass were there. In uniform gravity the weight also acts at this point, which is called the <b>center of gravity</b>. For a ring this point is in empty space.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='20' y='56' width='70' height='8' rx='2' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.2'/><circle cx='55' cy='60' r='4' fill='var(--c2)'/><text x='55.0' y='100.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>bar</text><text x='55.0' y='114.0' font-size='11' fill='var(--muted)' text-anchor='middle'>midpoint</text><rect x='127' y='32' width='66' height='52' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.2'/><line x1='127.0' y1='32.0' x2='193.0' y2='84.0' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><line x1='193.0' y1='32.0' x2='127.0' y2='84.0' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><circle cx='160' cy='58' r='4' fill='var(--c2)'/><text x='160.0' y='100.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>rectangle</text><text x='160.0' y='114.0' font-size='11' fill='var(--muted)' text-anchor='middle'>where diagonals cross</text><polygon points='235,84 295,84 265,32' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.2'/><line x1='235.0' y1='84.0' x2='280.0' y2='58.0' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><line x1='295.0' y1='84.0' x2='250.0' y2='58.0' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><line x1='265.0' y1='32.0' x2='265.0' y2='84.0' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><circle cx='265' cy='66.7' r='4' fill='var(--c2)'/><text x='265.0' y='100.0' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>triangle</text><text x='265.0' y='114.0' font-size='11' fill='var(--muted)' text-anchor='middle'>medians</text><circle cx='100' cy='150' r='22' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.2'/><circle cx='100' cy='150' r='4' fill='var(--c2)'/><text x='100.0' y='190.0' font-size='12' fill='var(--ink)' text-anchor='middle'>disk: center</text><circle cx='220' cy='150' r='20' fill='none' stroke='var(--c1)' stroke-width='5' stroke-opacity='0.6'/><circle cx='220' cy='150' r='4' fill='var(--c2)'/><text x='220.0' y='190.0' font-size='12' fill='var(--ink)' text-anchor='middle'>ring: center (empty)</text></svg>",
+    "key": "For a uniform object the center of mass lies on the axis or center of symmetry.",
+    "once": {
+     "soru": "Where is the center of mass of a uniform ring?",
+     "secenekler": [
+      {
+       "yazi": "In the empty middle",
+       "neden": "A ring is symmetric. Its center of mass is at the geometric center, even though there is no material there.",
+       "dogru": true
+      },
+      {
+       "yazi": "On the ring itself",
+       "neden": "Every point of the ring is symmetric, and no point stands out."
+      },
+      {
+       "yazi": "It has no center of mass",
+       "neden": "Every object has a center of mass."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Center of mass of a composite object",
+    "p": "For an object made of parts, the center of mass is <b>x<sub>CM</sub> = Σm·x / Σm</b>. The center of mass is closer to the heavier part. A part that has been removed counts as a <b>negative mass</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160.0' y='32.0' font-size='16' fill='var(--acc)' text-anchor='middle' font-weight='bold'>x<tspan font-size='11' dy='3'>CM</tspan><tspan dy='-3'> = Σm·x / Σm</tspan></text><line x1='40.0' y1='110.0' x2='280.0' y2='110.0' stroke='var(--ink)' stroke-width='2'/><line x1='40.0' y1='104.0' x2='40.0' y2='116.0' stroke='var(--muted)' stroke-width='1'/><text x='40.0' y='138.0' font-size='11' fill='var(--muted)' text-anchor='middle'>0</text><line x1='100.0' y1='104.0' x2='100.0' y2='116.0' stroke='var(--muted)' stroke-width='1'/><text x='100.0' y='138.0' font-size='11' fill='var(--muted)' text-anchor='middle'>1</text><line x1='160.0' y1='104.0' x2='160.0' y2='116.0' stroke='var(--muted)' stroke-width='1'/><text x='160.0' y='138.0' font-size='11' fill='var(--muted)' text-anchor='middle'>2</text><line x1='220.0' y1='104.0' x2='220.0' y2='116.0' stroke='var(--muted)' stroke-width='1'/><text x='220.0' y='138.0' font-size='11' fill='var(--muted)' text-anchor='middle'>3</text><line x1='280.0' y1='104.0' x2='280.0' y2='116.0' stroke='var(--muted)' stroke-width='1'/><text x='280.0' y='138.0' font-size='11' fill='var(--muted)' text-anchor='middle'>4 m</text><circle cx='40' cy='110' r='17' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.5'/><circle cx='280' cy='110' r='11' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)' stroke-width='1.5'/><text x='40.0' y='82.0' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>3 kg</text><text x='280.0' y='88.0' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='bold'>1 kg</text><polygon points='100,114 92,128 108,128' fill='var(--c2)'/><circle cx='100' cy='110' r='4' fill='var(--c2)'/><text x='100.0' y='92.0' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>CM</text><text x='160.0' y='170.0' font-size='13' fill='var(--ink)' text-anchor='middle'>x = (3·0 + 1·4) / (3 + 1)</text><text x='160.0' y='190.0' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='bold'>x = 4 / 4 = 1 m</text></svg>",
+    "key": "If a 3 kg part is at x = 0 and a 1 kg part is at x = 4 m, then xCM = (0 + 4) / 4 = 1 m."
+   },
+   {
+    "h": "Base of support and tipping over",
+    "p": "If the vertical line down from the center of gravity falls inside the <b>base of support</b>, the object does not tip over. If it falls outside, the object tips. A low center of gravity and a wide base make tipping harder.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tork-17' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><line x1='10.0' y1='150.0' x2='310.0' y2='150.0' stroke='var(--ink)' stroke-width='2'/><g transform='rotate(15,100,150)'><rect x='60' y='70' width='40' height='80' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/></g><circle cx='91.0' cy='106.2' r='4' fill='var(--ink)'/><line x1='91.0' y1='106.2' x2='91.0' y2='150.0' stroke='var(--ink)' stroke-width='1.5' stroke-dasharray='4 3' marker-end='url(#tork-17)'/><circle cx='100' cy='150' r='3' fill='var(--c4)'/><g transform='rotate(40,240,150)'><rect x='200' y='70' width='40' height='80' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/></g><circle cx='250.4' cy='106.5' r='4' fill='var(--ink)'/><line x1='250.4' y1='106.5' x2='250.4' y2='150.0' stroke='var(--ink)' stroke-width='1.5' stroke-dasharray='4 3' marker-end='url(#tork-17)'/><circle cx='240' cy='150' r='3' fill='var(--c4)'/><text x='80.0' y='172.0' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>line inside the base</text><text x='80.0' y='188.0' font-size='11' fill='var(--c3)' text-anchor='middle'>returns</text><text x='235.0' y='172.0' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>line outside the base</text><text x='235.0' y='188.0' font-size='11' fill='var(--c2)' text-anchor='middle'>tips over</text><text x='160.0' y='22.0' font-size='12' fill='var(--muted)' text-anchor='middle'>vertical line from the center of gravity</text></svg>",
+    "key": "The tipping limit is the moment the vertical line through the center of gravity passes exactly through the edge of the base. That is why race cars are low."
+   },
+   {
+    "h": "Slide or tip?",
+    "p": "A box on an incline slides when <b>tanα > μ<sub>s</sub></b> and tips when <b>tanα > b/h</b> (b is the base, h is the height). As the angle grows, whichever limit is reached first happens.",
+    "key": "If μs < b/h, the box slides without tipping; if μs > b/h, it tips without sliding.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><defs><marker id='tork-kd' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='9' markerHeight='9' markerUnits='userSpaceOnUse' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><polygon points='20,175 240,175 240,72.4' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><line x1='10' y1='175' x2='310' y2='175' stroke='var(--ink)' stroke-width='2'/><g transform='rotate(-25,130,123.7)'><rect x='110' y='63.7' width='40' height='60' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><text x='130' y='137' font-size='11' fill='var(--c3)' text-anchor='middle'>b</text><text x='103' y='97' font-size='11' fill='var(--c3)' text-anchor='end'>h</text></g><circle cx='117.3' cy='96.5' r='4' fill='var(--ink)'/><line x1='117.3' y1='96.5' x2='117.3' y2='128' stroke='var(--ink)' stroke-width='1.5' stroke-dasharray='4 3' marker-end='url(#tork-kd)'/><circle cx='111.9' cy='132.2' r='3' fill='var(--c4)'/><path d='M60 175 A40 40 0 0 0 56.3 158.1' fill='none' stroke='var(--ink)' stroke-width='1.5'/><text x='64' y='170' font-size='12' fill='var(--ink)'>α</text><text x='310' y='26' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>tanα &gt; μs → slides</text><text x='310' y='46' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='bold'>tanα &gt; b/h → tips</text><text x='160' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>the line is still inside the base: no tipping</text></svg>",
+    "once": {
+     "soru": "You put a low box with a wide base on an icy ramp. If the ramp slowly gets steeper, what does the box do first?",
+     "secenekler": [
+      {
+       "yazi": "It slides",
+       "neden": "On ice there is very little friction, so the sliding limit is reached early. For a low box to tip, the ramp would have to be very steep.",
+       "dogru": true
+      },
+      {
+       "yazi": "It tips over",
+       "neden": "A low box has a low center of gravity. The ramp would have to get very steep for it to tip."
+      },
+      {
+       "yazi": "It stays in place",
+       "neden": "There is little friction on ice. The box starts to move as soon as the ramp gets a bit steeper."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Stable, unstable, and neutral equilibrium",
+    "p": "If an object returns after a small push, its equilibrium is <b>stable</b>. If it moves away, it is <b>unstable</b>. If it stays in its new place, it is <b>neutral</b>. In stable equilibrium the center of gravity is at its lowest.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M15,80 Q55,150 95,80' fill='none' stroke='var(--ink)' stroke-width='2'/><circle cx='55' cy='105' r='10' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)' stroke-width='1.5'/><path d='M120,130 Q160,70 200,130' fill='none' stroke='var(--ink)' stroke-width='2'/><circle cx='160' cy='90' r='10' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)' stroke-width='1.5'/><line x1='225.0' y1='115.0' x2='305.0' y2='115.0' stroke='var(--ink)' stroke-width='2'/><circle cx='265' cy='105' r='10' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.5'/><text x='55.0' y='150.0' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='bold'>stable</text><text x='55.0' y='167.0' font-size='11' fill='var(--ink)' text-anchor='middle'>returns</text><text x='55.0' y='183.0' font-size='10' fill='var(--muted)' text-anchor='middle'>hanging pendulum</text><text x='160.0' y='150.0' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='bold'>unstable</text><text x='160.0' y='167.0' font-size='11' fill='var(--ink)' text-anchor='middle'>moves away</text><text x='160.0' y='183.0' font-size='10' fill='var(--muted)' text-anchor='middle'>inverted pendulum</text><text x='265.0' y='150.0' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='bold'>neutral</text><text x='265.0' y='167.0' font-size='11' fill='var(--ink)' text-anchor='middle'>stays in new place</text><text x='265.0' y='183.0' font-size='10' fill='var(--muted)' text-anchor='middle'>ball on flat ground</text><text x='160.0' y='26.0' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>push the ball a little: what happens?</text></svg>",
+    "key": "A ball in a hollow is in stable equilibrium, a ball on a hilltop is unstable, and a ball on flat ground is neutral. After a push, the center of gravity rises in the stable case and drops in the unstable case.",
+    "etk": {
+     "tur": "ayir",
+     "soru": "What happens after a small push? Choose the type of equilibrium.",
+     "gruplar": [
+      "Stable",
+      "Unstable",
+      "Neutral"
+     ],
+     "ogeler": [
+      [
+       "Ball at the bottom of a hollow",
+       0
+      ],
+      [
+       "Hanging pendulum",
+       0
+      ],
+      [
+       "Ruler hung from its top end",
+       0,
+       "When pushed, the center of gravity rises, and the ruler swings back."
+      ],
+      [
+       "Ball on top of a hill",
+       1
+      ],
+      [
+       "Pencil standing on its tip",
+       1,
+       "When pushed, the center of gravity drops, and the pencil falls."
+      ],
+      [
+       "Ball on flat ground",
+       2
+      ],
+      [
+       "Cylinder lying on the ground",
+       2,
+       "As it rolls, the center of gravity stays at the same height."
+      ],
+      [
+       "Wheel mounted on an axle at its center",
+       2,
+       "As it turns, the center of gravity does not move."
+      ]
+     ]
+    },
+    "once": {
+     "soru": "You give a small push to a ball at the bottom of a hollow. What happens?",
+     "secenekler": [
+      {
+       "yazi": "It returns",
+       "neden": "When pushed, the ball rises. Its weight pulls it back to the lowest point.",
+       "dogru": true
+      },
+      {
+       "yazi": "It moves away",
+       "neden": "A ball on a hilltop would move away. A ball in a hollow cannot climb out."
+      },
+      {
+       "yazi": "It stays in its new place",
+       "neden": "A ball on flat ground would do that. In a hollow the ground rises toward the edges."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• Torque is τ = F·d = F·r·sinθ, and its unit is N·m. Its direction is clockwise or counterclockwise.<br>• Equilibrium needs both ΣF = 0 and Στ = 0.<br>• The weight of a uniform bar acts at its middle.<br>• The center of mass is x<sub>CM</sub> = Σm·x / Σm.<br>• If the vertical line falls outside the base, the object tips over.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='20' y='14' width='280' height='38' rx='6' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)' stroke-width='1.2'/><text x='36.0' y='38.0' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='bold'>τ = F·d = F·r·sinθ</text><text x='288.0' y='38.0' font-size='11' fill='var(--muted)' text-anchor='end'>torque, unit N·m</text><rect x='20' y='60' width='280' height='38' rx='6' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.2'/><text x='36.0' y='84.0' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='bold'>ΣF = 0 and Στ = 0</text><text x='288.0' y='84.0' font-size='11' fill='var(--muted)' text-anchor='end'>equilibrium conditions</text><rect x='20' y='106' width='280' height='38' rx='6' fill='var(--c5)' fill-opacity='0.1' stroke='var(--c5)' stroke-width='1.2'/><text x='36.0' y='130.0' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='bold'>x = Σm·x / Σm</text><text x='288.0' y='130.0' font-size='11' fill='var(--muted)' text-anchor='end'>center of mass</text><rect x='20' y='152' width='280' height='38' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)' stroke-width='1.2'/><text x='36.0' y='176.0' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='bold'>line inside the base?</text><text x='288.0' y='176.0' font-size='11' fill='var(--muted)' text-anchor='end'>tipping</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "A 50 N force is applied to the end of a 0.4 m wrench at an angle of 30° to the wrench. What is the torque about the nut, in N·m?",
+    "cevap": 10,
+    "birim": "N·m",
+    "e": "τ = F·r·sinθ = 50·0.4·0.5 = 10 N·m. If the force were perpendicular to the wrench, the torque would be 20 N·m."
+   },
+   {
+    "tur": "ayir",
+    "q": "What happens after a small push? Choose the type of equilibrium for each object.",
+    "gruplar": [
+     "Stable",
+     "Unstable",
+     "Neutral"
+    ],
+    "ogeler": [
+     [
+      "Cone standing on its base",
+      0
+     ],
+     [
+      "Picture hung on a nail from its top",
+      0
+     ],
+     [
+      "Cone standing on its tip",
+      1
+     ],
+     [
+      "Broom balanced upright on a finger",
+      1
+     ],
+     [
+      "Cone lying on its side",
+      2
+     ],
+     [
+      "Ruler on an axle through its center of mass",
+      2
+     ]
+    ],
+    "e": "When a cone on its base or a hanging picture is pushed, the center of gravity rises and the object returns. These are in stable equilibrium. When a cone on its tip or an upright broom is pushed, the center of gravity drops and the object falls. These are in unstable equilibrium. When a cone on its side rolls or a ruler on an axle turns, the height of the center of gravity does not change. These are in neutral equilibrium."
+   },
+   {
+    "tur": "sirala",
+    "q": "A force is applied to a hinged bar. r is the distance from the hinge to the point where the force acts. Put the torques in order from smallest to largest.",
+    "ogeler": [
+     "20 N, r = 0.5 m, line of action through the hinge",
+     "20 N, r = 0.8 m, at 30° to the bar",
+     "20 N, r = 0.5 m, perpendicular to the bar",
+     "30 N, r = 0.6 m, perpendicular to the bar"
+    ],
+    "e": "Use τ = F·r·sinθ. For the force whose line passes through the hinge, τ = 0. The others are 20·0.8·0.5 = 8, 20·0.5 = 10, and 30·0.6 = 18 N·m."
+   },
+   {
+    "tur": "sayi",
+    "q": "A 6 m uniform bar weighing 120 N is supported at its ends A and B. A 300 N load is 2 m from end A. What force, in N, does support B exert on the bar?",
+    "cevap": 160,
+    "birim": "N",
+    "e": "Taking torques about A, N<sub>B</sub>·6 = 120·3 + 300·2 = 960, so N<sub>B</sub> = 160 N. From ΣF = 0, N<sub>A</sub> = 420 − 160 = 260 N."
+   }
+  ]
  }
 }
