@@ -1,11 +1,11 @@
 "use client";
 // Fizik sahneleri (fizik bilimine giriş, madde ve özellikleri): düşme deneyi, birimle ölçme, SI tablosu,
 // sürat, yön; terazi, dereceli silindir, kütle-hacim grafiği, yüzme-batma, karışım ve kılcallık.
-import { cev, SAYI_YEREL } from "@/lib/dil";
+import { cev, inceBinlik, SAYI_YEREL } from "@/lib/dil";
 import { yumusak, type SahneKaydi, type SahneProps } from "./ortak";
 import { Tutamac, useSurukle } from "./soruonce";
 
-const say = (x: number, d = 2) => x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: d });
+const say = (x: number, d = 2) => inceBinlik(x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: d }));
 const say2 = (x: number) => x.toLocaleString(SAYI_YEREL, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 /* ---------- fizik bilimine giriş ---------- */
@@ -294,7 +294,7 @@ function Yuzme({ v }: SahneProps) {
       <rect x={62} y={SU} width={216} height={TABAN - SU} fill="var(--c1)" opacity={0.16} />
       <path d={`M60 46 L60 ${TABAN + 2} L280 ${TABAN + 2} L280 46`} fill="none" stroke="var(--ink)" strokeWidth={2} />
       <line x1={62} x2={278} y1={SU} y2={SU} stroke="var(--c1)" strokeWidth={2} />
-      <text x={272} y={SU + 18} fontSize={11.5} fontWeight={700} fill="var(--c1)" textAnchor="end">{cev("su: 1 g/cm³")}</text>
+      <text x={275} y={SU + 17} fontSize={11} fontWeight={700} fill="var(--c1)" textAnchor="end">{cev("su: 1 g/cm³")}</text>
       <g>
         <rect x={170 - K / 2} y={ust} width={K} height={K} rx={4} fill="var(--c4)" />
         <text x={170} y={ust + K / 2 + 5} fontSize={12} fontWeight={800} fill="#fff" textAnchor="middle">{say(d)}</text>
@@ -326,15 +326,18 @@ function Karisim({ v }: SahneProps) {
         <text x={190} y={150}>=</text>
       </g>
       <g fontSize={11.5} textAnchor="middle">
-        <text x={60} y={196} fontWeight={700} fill="var(--c1)">{cev("su 100 cm³")}</text>
-        <text x={140} y={196} fontWeight={700} fill="var(--c5)">{cev("alkol")} {a} {cev("cm³")}</text>
-        <text x={260} y={196} fontWeight={700} fill="var(--ink)">{cev("karışım")} {Vt} {cev("cm³")}</text>
-        <text x={60} y={213} fill="var(--muted)">100 g</text>
-        <text x={140} y={213} fill="var(--muted)">{say(0.8 * a)} g</text>
-        <text x={260} y={213} fill="var(--muted)">{say(m)} g</text>
+        <text x={60} y={194} fontWeight={700} fill="var(--c1)">{cev("su")}</text>
+        <text x={140} y={194} fontWeight={700} fill="var(--c5)">{cev("alkol")}</text>
+        <text x={260} y={194} fontWeight={700} fill="var(--ink)">{cev("karışım")}</text>
+        <text x={60} y={209} fill="var(--ink)">100 {cev("cm³")}</text>
+        <text x={140} y={209} fill="var(--ink)">{a} {cev("cm³")}</text>
+        <text x={260} y={209} fill="var(--ink)">{Vt} {cev("cm³")}</text>
+        <text x={60} y={224} fill="var(--muted)">100 g</text>
+        <text x={140} y={224} fill="var(--muted)">{say(0.8 * a)} g</text>
+        <text x={260} y={224} fill="var(--muted)">{say(m)} g</text>
       </g>
-      <text x={170} y={248} fontSize={15} fontWeight={800} textAnchor="middle" fill={tam ? "var(--good)" : "var(--ink)"}>
-        d = {say(m)} g ÷ {Vt} {cev("cm³ =")} {say2(d)} {cev("g/cm³")}
+      <text x={170} y={250} fontSize={15} fontWeight={800} textAnchor="middle" fill={tam ? "var(--good)" : "var(--ink)"}>
+        {cev("d§özkütle")} = {say(m)} g ÷ {Vt} {cev("cm³ =")} {say2(d)} {cev("g/cm³")}
       </text>
     </svg>
   );

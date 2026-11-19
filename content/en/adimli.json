@@ -1831,7 +1831,7 @@
      "hedef": {
       "h": 2
      },
-     "tamam": "At 12 800 km up, r = 3R and g drops to one part in 3² = 9 (about 1.09 m/s²). The weight is 784 / 9 ≈ 87 N. The mass is still 80 kg.",
+     "tamam": "At 12 800 km up, r = 3R and g drops to one part in 3² = 9 (about 1.09 m/s²). The weight is 784 / 9 ≈ 87 N. The mass is still 80 kg.",
      "ipucu": "For the weight to drop to one ninth, the distance from the center must triple."
     },
     "kart": 5
@@ -2039,7 +2039,7 @@
    },
    {
     "baslik": "Kinetic energy",
-    "metin": "A 1000 kg car moves at <b>10 m/s</b>, and its kinetic energy is 50 000 J. Set the speed and make the kinetic energy <b>9 times</b> larger.",
+    "metin": "A 1000 kg car moves at <b>10 m/s</b>, and its kinetic energy is 50 000 J. Set the speed and make the kinetic energy <b>9 times</b> larger.",
     "sahne": {
      "tur": "fiz5-ke"
     },
@@ -2062,7 +2062,7 @@
      "hedef": {
       "v": 30
      },
-     "tamam": "At 30 m/s the kinetic energy is ½ · 1000 · 30² = 450 000 J. The speed went up 3 times, and the energy went up 3² = 9 times. That is why a fast vehicle is so much harder to stop."
+     "tamam": "At 30 m/s the kinetic energy is ½ · 1000 · 30² = 450 000 J. The speed went up 3 times, and the energy went up 3² = 9 times. That is why a fast vehicle is so much harder to stop."
     },
     "kart": 3
    },
@@ -2480,7 +2480,7 @@
      "hedef": {
       "v": 20
      },
-     "tamam": "1000 · 20 = 4000 · 5 = 20 000 kg·m/s. If the mass is 4 times smaller, the speed must be 4 times larger. That is why a slow truck is hard to stop."
+     "tamam": "1000 · 20 = 4000 · 5 = 20 000 kg·m/s. If the mass is 4 times smaller, the speed must be 4 times larger. That is why a slow truck is hard to stop."
     },
     "kart": 1
    },
@@ -2527,7 +2527,7 @@
    },
    {
     "baslik": "Airbag",
-    "metin": "A 70 kg driver stops from 15 m/s, and Δp is always 1050 N·s. Make the stopping time longer and bring the force <b>below 10 000 N</b>.",
+    "metin": "A 70 kg driver stops from 15 m/s, and Δp is always 1050 N·s. Make the stopping time longer and bring the force <b>below 10 000 N</b>.",
     "sahne": {
      "tur": "fiz6-yastik"
     },
@@ -2922,6 +2922,797 @@
    "Equilibrium needs both <b>ΣF = 0</b> and <b>Στ = 0</b>. The weight of a uniform bar acts at its middle.",
    "The center of mass is x<sub>CM</sub> = Σm·x / Σm, and it is closer to the heavier part.",
    "If the vertical line from the center of gravity falls outside the base, the object tips over. A low center of gravity and a wide base make tipping harder."
+  ],
+  "soruOnce": true
+ },
+ "madde-ozellikleri": {
+  "id": "madde-ozellikleri",
+  "ders": "fizik",
+  "konu": "madde-ozellikleri",
+  "baslik": "Matter and its properties",
+  "ozet": "Try first, then learn the name. Weigh, pour, mix, and find the density yourself.",
+  "adimlar": [
+   {
+    "baslik": "Which side goes down?",
+    "metin": "One pan of an equal-arm balance holds 1 kg of iron, and the other holds 1 kg of cotton. What happens when you pull out the supports?",
+    "sahne": {
+     "tur": "fiz-terazi",
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens when the pans are released?",
+     "secenekler": [
+      {
+       "yazi": "The balance stays level",
+       "dogru": true,
+       "neden": "An equal-arm balance compares masses, and both are 1 kg (ignoring the buoyancy of air). The cotton takes up far more space, but a large volume does not mean a large mass."
+      },
+      {
+       "yazi": "The iron side goes down",
+       "neden": "Iron seems heavy because it fits in a small space, but the masses are equal."
+      },
+      {
+       "yazi": "The cotton side goes down",
+       "neden": "The cotton takes up more space. But a large volume does not mean a large mass."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Density",
+    "metin": "You pour water into a graduated cylinder, and the scale shows only the mass of the water. Change the volume of the water and make the mass <b>50 g</b>. Watch the ratio m / V as you do.",
+    "sahne": {
+     "tur": "fiz-silindir"
+    },
+    "deger": {
+     "V": 20
+    },
+    "kontroller": [
+     {
+      "ad": "V",
+      "etiket": "Volume of water",
+      "min": 10,
+      "max": 100,
+      "adim": 10,
+      "birim": "cm³",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "V": 50
+     },
+     "tamam": "50 cm³ of water came to 50 g. When the volume changed, the mass changed in the same proportion, but the ratio m / V stayed at 1 g/cm³. So density does not depend on the amount of a substance."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "The mass–volume graph",
+    "metin": "We plotted the mass of three substances against their volume. Each one makes a straight line through the origin.",
+    "sahne": {
+     "tur": "fiz-mv-grafik"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which substance has the highest density?",
+     "secenekler": [
+      {
+       "yazi": "A",
+       "dogru": true,
+       "neden": "A has the steepest line, so it has the most mass for the same volume. A is aluminum (2.7 g/cm³), B is water (1 g/cm³), and C is wood (about 0.5 g/cm³)."
+      },
+      {
+       "yazi": "B",
+       "neden": "B's line has a medium slope. At the same volume, say 20 cm³, which one has more mass?"
+      },
+      {
+       "yazi": "C",
+       "neden": "C's line is the shallowest. It has the least mass for the same volume, so its density is the lowest."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Float or sink?",
+    "metin": "Change the density of the object and leave it suspended in the water.",
+    "sahne": {
+     "tur": "fiz-yuzme"
+    },
+    "deger": {
+     "d": 6
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Density of the object",
+      "min": 2,
+      "max": 20,
+      "carpan": 0.1,
+      "birim": "g/cm³"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "d": 10
+     },
+     "tamam": "When the (average) density of the object equals that of water, the object stays suspended. If it is lower the object floats, and if it is higher the object sinks. For hollow objects the average density is what counts. That is why a steel ship floats, and you will see the details in the Buoyancy topic."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Density of a mixture",
+    "metin": "You add alcohol (0.8 g/cm³) to 100 cm³ of water (1 g/cm³). Set the amount of alcohol and make the density of the mixture 0.9 g/cm³.",
+    "sahne": {
+     "tur": "fiz-karisim"
+    },
+    "deger": {
+     "a": 0
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "Alcohol",
+      "min": 0,
+      "max": 200,
+      "adim": 50,
+      "birim": "cm³",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "a": 100
+     },
+     "tamam": "When you mix equal volumes, the result is the average of the two densities. (100 + 80) g ÷ 200 cm³ = 0.9 g/cm³."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Capillary action",
+    "metin": "Water adheres to glass more strongly than it holds on to its own particles. You dip three glass tubes into water.",
+    "sahne": {
+     "tur": "fiz-kilcal",
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In which tube does the water rise highest?",
+     "secenekler": [
+      {
+       "yazi": "In the thinnest tube",
+       "dogru": true,
+       "neden": "Water climbs by adhering to the glass, and the thinner the tube, the higher it rises. This is called <b>capillary action</b>. It is why water rises in plants and why a paper towel gets wet. Mercury, which does not adhere to glass, drops lower in a thin tube."
+      },
+      {
+       "yazi": "In the widest tube",
+       "neden": "In a wide tube the water to be pulled up is much heavier. Adhesion cannot hold it up."
+      },
+      {
+       "yazi": "The same in all",
+       "neden": "The height depends on how thin the tube is."
+      }
+     ]
+    },
+    "kart": 8
+   }
+  ],
+  "kapanis": [
+   "Mass and volume are <b>common</b> properties found in all matter. <b>Density</b> is a <b>distinguishing</b> property that identifies a substance.",
+   "Density is <b>ρ = m / V</b>. On a mass–volume graph the slope of the line gives the density, and a steeper line means a denser substance.",
+   "An object whose <b>average</b> density is lower than water's floats, one with equal density stays suspended, and one with higher density sinks.",
+   "The density of a mixture is ρ = m<sub>total</sub> / V<sub>final</sub>. The result lies between the two densities.",
+   "The difference between adhesion and cohesion leads to <b>capillary action</b>. Water rises higher in a thinner tube."
+  ],
+  "soruOnce": true
+ },
+ "basinc": {
+  "id": "basinc",
+  "ders": "fizik",
+  "konu": "basinc",
+  "baslik": "Pressure",
+  "ozet": "Try first, then learn the name. Drop the brick, step on the snow, lower the diver, and lift the car.",
+  "adimlar": [
+   {
+    "baslik": "Which one sinks in deeper?",
+    "metin": "Two bricks are identical, and each weighs 20 N. One stands <b>upright</b> and will touch the sponge with its small face. The other lies <b>flat</b> and will touch it with its wide face.",
+    "sahne": {
+     "tur": "fiz2-tugla",
+     "sure": 2
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "When released, which one sinks deeper into the sponge?",
+     "secenekler": [
+      {
+       "yazi": "The flat one",
+       "neden": "The flat brick touches a wider area. Its weight is spread over a large area."
+      },
+      {
+       "yazi": "The upright one",
+       "dogru": true,
+       "neden": "The force is the same, but the upright brick puts it on an area 4 times smaller. A smaller area means a larger pressure. The upright brick exerts 4000 Pa, and the flat one 1000 Pa."
+      },
+      {
+       "yazi": "Both sink in equally",
+       "neden": "The weights are equal, but the areas they touch are different."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Do not sink into the snow",
+    "metin": "You weigh 600 N and you are standing on snow. This snow can hold a pressure of at most 3000 Pa. Make the area of your shoes larger and <b>do not sink in</b>.",
+    "sahne": {
+     "tur": "fiz2-kar"
+    },
+    "deger": {
+     "A": 4
+    },
+    "kontroller": [
+     {
+      "ad": "A",
+      "etiket": "Base area",
+      "min": 2,
+      "max": 30,
+      "carpan": 0.01,
+      "birim": "m²"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "A": [
+       20,
+       30
+      ]
+     },
+     "tamam": "600 N ÷ 0.2 m² = 3000 Pa. Snowshoes do not change your weight. They spread it over a large area."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Dive deep",
+    "metin": "The density of water is 1000 kg/m³, and g is about 10 m/s². Lower the diver and watch the pressure. Stop at the depth where the water pressure is 200 000 Pa.",
+    "sahne": {
+     "tur": "fiz2-derinlik"
+    },
+    "deger": {
+     "h": 5
+    },
+    "kontroller": [
+     {
+      "ad": "h",
+      "etiket": "Depth",
+      "min": 0,
+      "max": 40,
+      "adim": 5,
+      "birim": "m"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "h": 20
+     },
+     "tamam": "1000 × 10 × 20 = 200 000 Pa. When the depth doubled, the liquid pressure doubled too."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "The shape of the container",
+    "metin": "We will fill a wide, a narrow, and a funnel-shaped container with water to a height of 20 cm. The funnel holds the most water, and the narrow one the least.",
+    "sahne": {
+     "tur": "fiz2-kaplar",
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In which one is the liquid pressure at the bottom the largest?",
+     "secenekler": [
+      {
+       "yazi": "The funnel",
+       "neden": "The funnel holds the most water, but the formula is P = ρ·g·h, and the amount is not in it."
+      },
+      {
+       "yazi": "The wide container",
+       "neden": "A wide base makes the total force larger, but the force on each unit of area stays the same."
+      },
+      {
+       "yazi": "Equal in all three",
+       "dogru": true,
+       "neden": "Liquid pressure depends only on depth and density, and 1000 × 10 × 0.2 = 2000 Pa. The shape of the container and the amount of water make no difference. This is called the <b>hydrostatic paradox</b>."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Hydraulic lift",
+    "metin": "The small piston has an area of 10 cm², and you apply 200 N to it. Find the smallest large piston that can hold up the 10 000 N car.",
+    "sahne": {
+     "tur": "fiz2-hidrolik"
+    },
+    "deger": {
+     "A2": 100
+    },
+    "kontroller": [
+     {
+      "ad": "A2",
+      "etiket": "Large piston",
+      "min": 100,
+      "max": 1000,
+      "adim": 100,
+      "birim": "cm²"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "A2": 500
+     },
+     "tamam": "The large piston must have an area of 500 cm², 50 times the small one. 200 N × 50 = 10 000 N. But you lose in distance. If you push the small piston 50 cm, the car rises only 1 cm."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Climb the mountain",
+    "metin": "At sea level water boils at 100 °C. Go up and find the altitude where water boils at 80 °C.",
+    "sahne": {
+     "tur": "fiz2-rakim"
+    },
+    "deger": {
+     "r": 0
+    },
+    "kontroller": [
+     {
+      "ad": "r",
+      "etiket": "Altitude",
+      "min": 0,
+      "max": 9000,
+      "adim": 500,
+      "birim": "m"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "r": 6000
+     },
+     "tamam": "At about 6000 m the outside pressure drops so much that water boils at 80 °C. That is why food takes longer to cook on high mountains."
+    },
+    "kart": 8
+   }
+  ],
+  "kapanis": [
+   "<b>Pressure</b> is the size of the force acting perpendicular to a unit of surface, P = F / A. It is a scalar, and its unit is the pascal (1 Pa = 1 N/m²).",
+   "For the same force, a smaller area means a larger pressure. That is why a knife cuts and why snowshoes keep you from sinking.",
+   "Liquid pressure is <b>P = ρ·g·h</b>. It grows with depth and does not depend on the shape of the container or the amount of liquid.",
+   "By <b>Pascal's principle</b>, pressure in an enclosed liquid is transmitted everywhere. In a hydraulic system F₁ / A₁ = F₂ / A₂.",
+   "Atmospheric pressure is 76 cmHg (1 atm) at sea level. It drops as you go higher, and water boils at a lower temperature."
+  ],
+  "soruOnce": true
+ },
+ "kaldirma-kuvveti": {
+  "id": "kaldirma-kuvveti",
+  "ders": "fizik",
+  "konu": "kaldirma-kuvveti",
+  "baslik": "Buoyancy",
+  "ozet": "Try first, then learn the name. Lower the stone into water, load the ship, and lift the balloon.",
+  "adimlar": [
+   {
+    "baslik": "Why does water push up?",
+    "metin": "A 10 cm cube is under water. The water presses on it from every direction. The forces on the sides cancel each other. Look at the top and bottom faces.",
+    "sahne": {
+     "tur": "fiz2-basinc-fark"
+    },
+    "deger": {
+     "h": 20
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which face has the larger force on it?",
+     "secenekler": [
+      {
+       "yazi": "The top face",
+       "neden": "The top face is closer to the surface of the water. Does pressure increase or decrease with depth?"
+      },
+      {
+       "yazi": "The bottom face",
+       "dogru": true,
+       "neden": "The bottom face is deeper, and liquid pressure increases with depth. The push from below is 10 N larger than the push from above. This difference is the upward <b>buoyant force</b> (F<sub>b</sub>)."
+      },
+      {
+       "yazi": "Equal on both",
+       "neden": "The sides are equal because they are at the same depth. The top and bottom faces are at different depths."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Weigh the stone",
+    "metin": "A stone hanging from a spring scale reads <b>5 N</b> in air, and its volume is 200 cm³. Slowly lower the stone into the water until it is <b>fully</b> submerged. Then look at the reading.",
+    "sahne": {
+     "tur": "fiz2-dinamometre"
+    },
+    "deger": {
+     "V": 0
+    },
+    "kontroller": [
+     {
+      "ad": "V",
+      "etiket": "Submerged volume",
+      "min": 0,
+      "max": 200,
+      "adim": 50,
+      "birim": "cm³",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "V": 200
+     },
+     "tamam": "The reading dropped to 3 N. So F<sub>b</sub> = 5 − 3 = 2 N. Let us check: V<sub>sub</sub>·ρ<sub>liq</sub>·g = 0.0002 m³ × 1000 kg/m³ × 10 m/s² = 2 N."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Go deeper",
+    "metin": "The 10 cm cube from before is fully under water. Move it up and down. How do the forces on the top and bottom faces change?",
+    "sahne": {
+     "tur": "fiz2-basinc-fark"
+    },
+    "deger": {
+     "h": 10
+    },
+    "kontroller": [
+     {
+      "ad": "h",
+      "etiket": "Depth of the top face",
+      "min": 10,
+      "max": 40,
+      "adim": 5,
+      "birim": "cm"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What happens to the buoyant force when you lower the fully submerged cube deeper?",
+     "secenekler": [
+      {
+       "yazi": "It increases",
+       "neden": "It is true that the pressures increase. But both increase together. Look at the difference."
+      },
+      {
+       "yazi": "It decreases",
+       "neden": "Going deeper does not reduce the force on any face. Look at the difference."
+      },
+      {
+       "yazi": "It stays the same",
+       "dogru": true,
+       "neden": "The forces on both faces increase by the same amount, and the difference stays at 10 N. F<sub>b</sub> depends on the submerged volume, not on the depth."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Same object, different liquids",
+    "metin": "You put a 1000 cm³ (6 N) wooden cube with a density of 0.6 g/cm³ into different liquids. Change the density of the liquid so that the cube floats exactly half submerged.",
+    "sahne": {
+     "tur": "fiz2-sivilar"
+    },
+    "deger": {
+     "dl": 10
+    },
+    "kontroller": [
+     {
+      "ad": "dl",
+      "etiket": "Density of the liquid",
+      "min": 5,
+      "max": 15,
+      "carpan": 0.1,
+      "birim": "g/cm³"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "dl": 12
+     },
+     "tamam": "Since 0.6 / 1.2 = 1/2, half of the cube is submerged. In every liquid where the cube floats, F<sub>b</sub> = W = 6 N. Only the submerged volume changes, and the object sinks less in a denser liquid."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Load the ship",
+    "metin": "Load containers onto the ship. Stop when the water reaches the load line on the hull (yellow circle).",
+    "sahne": {
+     "tur": "fiz2-gemi"
+    },
+    "deger": {
+     "n": 0
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Containers",
+      "min": 0,
+      "max": 5,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 4
+     },
+     "tamam": "Each container made the ship sit a little deeper. To balance the extra weight, the ship must displace more water. The load line shows how deep the ship can safely sit."
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Submarine",
+    "metin": "The volume of a submarine does not change, and when it is fully submerged F<sub>b</sub> is constant too. The submarine has taken seawater into its ballast tanks.",
+    "sahne": {
+     "tur": "fiz2-denizalti",
+     "sure": 3
+    },
+    "deger": {
+     "tank": 1
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What does a submarine do after taking water into its tanks?",
+     "secenekler": [
+      {
+       "yazi": "It rises",
+       "neden": "The water entering the tanks makes the submarine heavier."
+      },
+      {
+       "yazi": "It dives",
+       "dogru": true,
+       "neden": "A submarine changes its weight, not its volume. With water taken in, W &gt; F<sub>b</sub> and the submarine dives. When the water is blown out with compressed air, W &lt; F<sub>b</sub> and it rises. If W = F<sub>b</sub>, it stays suspended."
+      },
+      {
+       "yazi": "It stays where it is",
+       "neden": "The volume, and so F<sub>b</sub>, stayed the same, but the weight increased."
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Fly the balloon",
+    "metin": "1 m³ of helium gets a buoyant force of about 12 N from the air, and its own weight is about 1.7 N. The basket and the balloon skin weigh 40 N. Make the balloon larger and lift it off the ground.",
+    "sahne": {
+     "tur": "fiz2-balon"
+    },
+    "deger": {
+     "V": 2
+    },
+    "kontroller": [
+     {
+      "ad": "V",
+      "etiket": "Volume of the balloon",
+      "min": 1,
+      "max": 8,
+      "birim": "m³",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "V": [
+       4,
+       8
+      ]
+     },
+     "tamam": "At 4 m³, F<sub>b</sub> = 48 N, and the total weight is 40 + 6.8 = 46.8 N. So the balloon rises. Each m³ of helium gives a net lift of about 10 N."
+    },
+    "kart": 11
+   }
+  ],
+  "kapanis": [
+   "The buoyant force comes from a pressure difference. The bottom face is deeper, so it is pushed harder.",
+   "By <b>Archimedes' principle</b>, F<sub>b</sub> = V<sub>sub</sub>·ρ<sub>liq</sub>·g. The apparent weight equals W − F<sub>b</sub>.",
+   "Lowering a fully submerged object deeper does not change F<sub>b</sub>.",
+   "For floating and suspended objects F<sub>b</sub> = W. For a floating object V<sub>sub</sub> / V = ρ<sub>obj</sub> / ρ<sub>liq</sub>.",
+   "A ship floats by displacing a lot of water, a submarine dives by changing its weight, and a balloon flies on the buoyant force of the air."
+  ],
+  "soruOnce": true
+ },
+ "isi-sicaklik": {
+  "id": "isi-sicaklik",
+  "ders": "fizik",
+  "konu": "isi-sicaklik",
+  "baslik": "Heat, temperature and expansion",
+  "ozet": "Try it first, then learn its name. Set the thermometer, heat water and iron, melt ice and expand a rail.",
+  "adimlar": [
+   {
+    "baslik": "A drop or a bucket?",
+    "metin": "At 1 atm, a boiling drop of water and a boiling bucket of water are both at 100 °C. <b>Internal energy</b> is the sum of the energies of all the particles.",
+    "sahne": {
+     "tur": "fiz3-damla-kova"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which one has the larger <b>internal energy</b>?",
+     "secenekler": [
+      {
+       "yazi": "They are equal",
+       "neden": "The temperatures are equal, so the average energy is equal. But internal energy is a total, not an average."
+      },
+      {
+       "yazi": "The bucket",
+       "dogru": true,
+       "neden": "The average energy is the same, but the bucket has far more particles. Internal energy is a total, so it depends on the amount of matter. Temperature does not."
+      },
+      {
+       "yazi": "The drop",
+       "neden": "The drop has very few particles. Total energy grows with the number of particles."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Three scales",
+    "metin": "On the Kelvin scale, you find the temperature by adding 273 to the Celsius value. Set the thermometer to 300 K.",
+    "sahne": {
+     "tur": "fiz3-termometre"
+    },
+    "deger": {
+     "t": 0
+    },
+    "kontroller": [
+     {
+      "ad": "t",
+      "etiket": "Temperature",
+      "min": -10,
+      "max": 110,
+      "birim": "°C"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "t": 27
+     },
+     "ipucu": "T = t + 273, so t = 300 − 273.",
+     "tamam": "300 − 273 = 27 °C. On the Fahrenheit scale this is 1.8 × 27 + 32 = 80.6 °F."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Specific heat",
+    "metin": "100 g of water and 100 g of iron are placed on identical heaters. Each will absorb the same amount of heat, 1000 cal. Both start at 20 °C.",
+    "sahne": {
+     "tur": "fiz3-ozisi",
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which one's temperature rises more?",
+     "secenekler": [
+      {
+       "yazi": "Water",
+       "neden": "Water has a very large specific heat. So the same heat warms it only a little."
+      },
+      {
+       "yazi": "Both rise equally",
+       "neden": "The masses and the heat are equal, but the substances are different."
+      },
+      {
+       "yazi": "Iron",
+       "dogru": true,
+       "neden": "Heating 1 g of iron by 1 °C takes about 0.11 cal, while 1 g of water takes 1 cal. The same 1000 cal warms the water by 10 °C and the iron by about 91 °C."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Thermal equilibrium",
+    "metin": "200 g of water at 80 °C is mixed with cold water at 20 °C. Find the amount of cold water that brings the mixture to 44 °C.",
+    "sahne": {
+     "tur": "fiz3-karisim"
+    },
+    "deger": {
+     "m": 100
+    },
+    "kontroller": [
+     {
+      "ad": "m",
+      "etiket": "Cold water",
+      "min": 100,
+      "max": 500,
+      "adim": 100,
+      "birim": "g"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "m": 300
+     },
+     "tamam": "200·(80 − 44) = 7200 cal was given off, and 300·(44 − 20) = 7200 cal was absorbed. There is more cold water, so the equilibrium is closer to 20 °C."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Latent heat",
+    "metin": "There is 10 g of ice at 0 °C, and the heat of fusion of ice is L = 80 cal/g. Melt all the ice, but do not warm the water.",
+    "sahne": {
+     "tur": "fiz3-erime"
+    },
+    "deger": {
+     "Q": 0
+    },
+    "kontroller": [
+     {
+      "ad": "Q",
+      "etiket": "Heat supplied",
+      "min": 0,
+      "max": 1200,
+      "adim": 100,
+      "birim": "cal"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "Q": 800
+     },
+     "tamam": "It takes 10 g × 80 cal/g = 800 cal. The temperature stayed at 0 °C throughout the melting. Any heat supplied after this warms the water."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "The rail gets longer",
+    "metin": "There is a 6 mm gap between 10 m steel rails, and for steel λ is about 1.2·10⁻⁵ 1/°C. Raise the temperature and find the moment the gap just closes.",
+    "sahne": {
+     "tur": "fiz3-ray"
+    },
+    "deger": {
+     "dT": 0
+    },
+    "kontroller": [
+     {
+      "ad": "dT",
+      "etiket": "Temperature rise",
+      "min": 0,
+      "max": 70,
+      "adim": 5,
+      "birim": "°C"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "dT": 50
+     },
+     "tamam": "10 000 mm × 1.2·10⁻⁵ × 50 = 6 mm. On a hotter day the gap is not enough and the rails buckle. That is why gaps are left between rails and expansion joints are built into bridges."
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "<b>Temperature</b> is a measure of the average kinetic energy of the particles, and it does not depend on the amount of matter. <b>Heat</b> is energy transferred from hot to cold.",
+   "The Kelvin value is <b>T = t + 273</b>, and the Fahrenheit value is F = 1.8·t + 32.",
+   "When there is no change of state, the heat absorbed is <b>Q = m·c·ΔT</b>, and a substance with a large specific heat warms slowly. At thermal equilibrium, heat gained equals heat lost.",
+   "During a change of state, the heat absorbed is <b>Q = m·L</b>, and the temperature stays constant.",
+   "A heated solid gets longer, and the change in length is <b>ΔL = L₀·λ·ΔT</b>."
   ],
   "soruOnce": true
  }

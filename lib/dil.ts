@@ -17,6 +17,8 @@ export const SAYI_YEREL = DIL === "en" ? "en-US" : "tr-TR";
 export const ONDALIK = DIL === "en" ? "." : ",";
 /** toLocaleString çıktısındaki binlik ayraç (boşlukla değiştirmek için). */
 export const BINLIK = DIL === "en" ? /,/g : /\./g;
+/** İngilizcede binlik ayraç virgül yerine ince boşluk (12 800). Türkçe yazım değişmez. */
+export const inceBinlik = (s: string) => (DIL === "en" ? s.replace(/,/g, "\u202f") : s);
 
 /**
  * Metni uygulamanın dilinde verir. {0}, {1}… yer tutucuları sırayla verilen değerlerle dolar.

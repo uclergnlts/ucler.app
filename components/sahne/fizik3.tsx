@@ -1,10 +1,10 @@
 "use client";
 // Fizik sahneleri (ısı ve sıcaklık, vektörler): titreşen tanecikler, damla ve kova, üç ölçekli termometre,
 // öz ısı, karışım, buzun erimesi, rayın uzaması; vektör çizme, uç uca toplama, sayıyla çarpma, bileşenler, yürüyüş.
-import { cev, SAYI_YEREL } from "@/lib/dil";
+import { cev, inceBinlik, SAYI_YEREL } from "@/lib/dil";
 import { rastgele, yumusak, type SahneKaydi, type SahneProps } from "./ortak";
 
-const say = (x: number, d = 2) => x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: d });
+const say = (x: number, d = 2) => inceBinlik(x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: d }));
 
 /** (x1, y1)'den (x2, y2)'ye ok; uç (x2, y2)'dedir. */
 function Ok({ x1, y1, x2, y2, renk, kalin = 3, kesik = false }: { x1: number; y1: number; x2: number; y2: number; renk: string; kalin?: number; kesik?: boolean }) {

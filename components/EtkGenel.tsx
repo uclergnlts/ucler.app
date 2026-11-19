@@ -1,7 +1,7 @@
 "use client";
 // İçerikten tanımlanan genel etkileşimler: sırala, eşleştir, ayır, işaretle, formül, yöntem akışı.
 // Her konu bunları yeni kod yazmadan kullanır. Biçim: docs/ICERIK-SPEC.md ("Etkileşimli kart").
-import { cev, SAYI_YEREL } from "@/lib/dil";
+import { cev, inceBinlik, SAYI_YEREL } from "@/lib/dil";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Etk } from "@/lib/dersler";
 import { hesapla } from "@/lib/ifade";
@@ -177,7 +177,7 @@ export function Isaretle({ e, svg }: { e: Of<"isaretle">; svg: string }) {
 export function Formul({ e }: { e: Of<"formul"> }) {
   const [v, setV] = useState<Record<string, number>>(() => Object.fromEntries(e.girdiler.map((g) => [g.ad, g.deger])));
   const sayi = (x: number, b = 2) =>
-    Number.isFinite(x) ? x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: b }).replace("-", "−") : "—";
+    Number.isFinite(x) ? inceBinlik(x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: b })).replace("-", "−") : "—";
   const sonuc = e.ciktilar.map((c) => { try { return hesapla(c.ifade, v); } catch { return NaN; } });
   let yorum: string | undefined;
   if (e.yorum) {

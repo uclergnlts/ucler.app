@@ -23,6 +23,12 @@ ATLA = {"tur", "ifade", "id", "ders", "konu"}
 SERBEST = {"birim", "onek"}
 HARF = re.compile(r"[A-Za-zÇĞİÖŞÜçğıöşü]{2,}")
 SVG_YAZI = re.compile(r">([^<>]*[^\s<>][^<>]*)<")
+# İngilizcede binlik ayraç boşluktur (10 000). Satır sonunda bölünmesin diye dar bölünmez boşluğa çevrilir.
+BINLIK = re.compile(r"(?<=\d) (?=\d{3}(?!\d))")
+
+
+def binlik(s):
+    return BINLIK.sub("\u202f", s)
 
 
 def oku(yol):
@@ -72,14 +78,29 @@ def uygula(o, cev, yol="", ust=None):
             def degis(m):
                 say[0] += 1
                 y = cev.get(f"{yol}#{say[0]}")
-                return m.group(0) if y is None else ">" + y + "<"
+                return m.group(0) if y is None else ">" + binlik(y) + "<"
             return SVG_YAZI.sub(degis, o)
-        return cev.get(yol, o)
+        return binlik(cev[yol]) if yol in cev else o
     if isinstance(o, list):
         return [uygula(x, cev, f"{yol}.{i}" if yol else str(i), ust) for i, x in enumerate(o)]
     if isinstance(o, dict):
         return {k: uygula(v, cev, f"{yol}.{k}" if yol else k, k) for k, v in o.items()}
     return o
+
+
+def tum_yollar(o, yol="", out=None):
+    """Türkçe dosyadaki bütün metin yolları (listeye girmeyen kısa simgeler dahil: "F = G" gibi)."""
+    if out is None:
+        out = set()
+    if isinstance(o, str):
+        out.add(yol)
+    elif isinstance(o, list):
+        for i, x in enumerate(o):
+            tum_yollar(x, f"{yol}.{i}" if yol else str(i), out)
+    elif isinstance(o, dict):
+        for k, v in o.items():
+            tum_yollar(v, f"{yol}.{k}" if yol else k, out)
+    return out
 
 
 def kaynak(ders, konu):
@@ -115,15 +136,16 @@ def cevrilenler():
 
 def durum(ders, konu):
     """(çeviri sözlüğü, eksik yollar, bayat yollar, biçim sorunları, fazla yollar)"""
-    _, _, src = kaynak(ders, konu)
+    t, ad, src = kaynak(ders, konu)
+    gecerli = tum_yollar(t) | ({"A:" + y for y in tum_yollar(ad)} if ad is not None else set())
     cev = oku(os.path.join(EN, "kaynak", ders, f"{konu}.json"))
     oz_yol = os.path.join(EN, "kaynak", ders, f"{konu}.ozet.json")
     oz = oku(oz_yol) if os.path.exists(oz_yol) else {}
     eksik = [y for y, m, z in src if z and y not in cev]
     bayat = [y for y, m, z in src if y in cev and y in oz and oz[y] != ozet(m)]
     bicim = [y for y, m, z in src if y in cev and iz(m) != iz(cev[y])]
-    # SVG içindeki tek harfli simge (ör. "v" altındaki "a" indisi) listede çıkmaz ama elle çevrilebilir: fazla sayılmaz.
-    fazla = [y for y in cev if y not in {s[0] for s in src} and not re.search(r"svg#\d+$", y)]
+    # Listede çıkmayan kısa simgeler (SVG içinde "G", seçenekte "F = G") elle çevrilebilir: yol Türkçe dosyada varsa fazla sayılmaz.
+    fazla = [y for y in cev if y not in {s[0] for s in src} and not re.search(r"svg#\d+$", y) and y not in gecerli]
     return cev, eksik, bayat, bicim, fazla
 
 

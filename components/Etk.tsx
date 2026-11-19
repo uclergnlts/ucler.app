@@ -1,13 +1,13 @@
 "use client";
 // Etkileşimli kart görselleri. Kartta "etk" alanı varsa durağan SVG'nin yerine bunlardan biri çıkar.
 // Biçim: docs/ICERIK-SPEC.md ("Etkileşimli kart"). Renkler içerik SVG'leriyle aynı CSS değişkenleridir.
-import { cev, SAYI_YEREL } from "@/lib/dil";
+import { cev, SAYI_YEREL, inceBinlik } from "@/lib/dil";
 import { useState } from "react";
 import type { Etk as EtkT } from "@/lib/dersler";
 import { ELEMENTLER, katmanlar, yer } from "@/lib/elementler";
 import { Ayir, Eslestir, Formul, Isaretle, Sirala, Yontem } from "./EtkGenel";
 
-const sayi = (x: number) => x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: 2 }).replace("-", "−");
+const sayi = (x: number) => inceBinlik(x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: 2 })).replace("-", "−");
 const yaklasik = (x: number) => (Math.abs(x * 100 - Math.round(x * 100)) > 1e-6 ? "≈" : "=");
 const yuk = (q: number) => (q === 0 ? "" : `${Math.abs(q) > 1 ? Math.abs(q) : ""}${q > 0 ? "+" : "−"}`);
 
