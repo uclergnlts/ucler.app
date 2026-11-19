@@ -3,6 +3,7 @@
 // Kapak kalıbı: siyah zemin, dev gravür nesne, ölçek için minik Çizgi, pembe el çizimi ok, tek pembe kelime, sonda "..".
 import Link from "next/link";
 import { INSTAGRAM, PLAY_URL, YOUTUBE } from "@/lib/site";
+import { CizgiDugme, CizgiIzleyen, CizgiYuruyen } from "./Cizgi";
 import { CIZIM_YOL } from "./Cizimler";
 import { Logo } from "./temel";
 
@@ -121,7 +122,7 @@ export default function Tanitim({ sayi, dil = "en" }: { sayi: Record<string, num
               {m.giris}
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href={PLAY_URL} className={anaDugme}>{m.play}</a>
+              <CizgiDugme><a href={PLAY_URL} className={anaDugme}>{m.play}</a></CizgiDugme>
               <a href={YOUTUBE.url} className={cizgiDugme}>{m.izle}</a>
             </div>
             <p className={mono}>{m.not}</p>
@@ -130,9 +131,8 @@ export default function Tanitim({ sayi, dil = "en" }: { sayi: Record<string, num
           <div className="relative mx-auto w-full max-w-[560px]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/tanitim/saat.webp" alt="" width={1400} height={788} className="w-full" />
-            {/* Ölçek için minik Çizgi ve onu gösteren pembe ok */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/tanitim/cizgi.svg" alt="" className="absolute bottom-[4%] left-[6%] w-[11%]" />
+            {/* Ölçek için minik Çizgi ve onu gösteren pembe ok. Çizgi gözleriyle fareyi izler, tıklanınca el sallar. */}
+            <CizgiIzleyen className="absolute bottom-[3%] left-[5%] w-[13%]" />
             <svg viewBox="0 0 120 90" aria-hidden className="absolute bottom-[30%] left-[13%] w-[17%] text-[var(--mark)]" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M108 8C78 6 40 22 16 70" />
               <path d="M12 44l3 28 26-10" />
@@ -254,6 +254,8 @@ export default function Tanitim({ sayi, dil = "en" }: { sayi: Record<string, num
             <a href={YOUTUBE.url} className={cizgiDugme}>{m.izle}</a>
           </div>
         </div>
+        {/* Sayfa sonunda kendi kendine yürüyen Çizgi; ayakları alt bilginin çizgisine basar. */}
+        <CizgiYuruyen className={sarmal} />
         <footer className={`${sarmal} flex flex-wrap items-center justify-between gap-4 border-t border-[var(--line)] py-6 text-[13px] text-[var(--muted)]`}>
           <Logo className="text-[20px]" />
           <nav className="flex flex-wrap gap-x-5 gap-y-2">

@@ -304,3 +304,24 @@ a.btn{display:grid;place-items:center;text-align:center}
 .etk-esle>div{gap:10px}
 .etk-esle .etk-oge{min-height:56px;padding:10px 12px;font-size:16px;justify-content:center;text-align:center}
 .yt-dal .yt-kutu{align-content:start}
+
+/* Butonun arkasında saklanan Çizgi (components/Cizgi.tsx CizgiDugme). Fare ya da odak gelince başını uzatır, pembe ok çizilir. */
+.cizgi-dugme{position:relative;display:inline-flex}
+.cizgi-dugme > a,.cizgi-dugme > button{position:relative;z-index:2}
+.cizgi-dugme-saklanak{position:absolute;right:10px;bottom:30px;width:72px;height:90px;overflow:hidden;z-index:1;pointer-events:none}
+.cizgi-dugme-saklanak svg{position:absolute;left:0;bottom:-95px;width:72px;overflow:visible;transition:bottom .45s cubic-bezier(.3,1.5,.5,1)}
+.cizgi-dugme.acik .cizgi-dugme-saklanak svg{bottom:-4px}
+.cizgi-dugme-ok{position:absolute;right:-50px;bottom:56px;width:46px;z-index:3;pointer-events:none;color:var(--mark);opacity:0;transition:opacity .2s}
+.cizgi-dugme-ok path{stroke-dasharray:140;stroke-dashoffset:140;transition:stroke-dashoffset .5s .25s ease-out}
+.cizgi-dugme.acik .cizgi-dugme-ok{opacity:1}
+.cizgi-dugme.acik .cizgi-dugme-ok path{stroke-dashoffset:0}
+@media (prefers-reduced-motion:reduce){.cizgi-dugme-saklanak svg{transition:none}}
+
+/* Çizim galerisinde üstüne gelinen çizimin köşesinden çıkan minik Çizgi (components/CizimGaleri.tsx). */
+.cizim-mini{position:absolute;left:5%;bottom:-45%;width:15%;transition:bottom .4s cubic-bezier(.3,1.4,.5,1);pointer-events:none}
+.cizim-mini-ok{position:absolute;left:19%;bottom:34%;width:16%;color:var(--mark);opacity:0;transition:opacity .2s;pointer-events:none}
+.cizim-mini-ok path{stroke-dasharray:140;stroke-dashoffset:140;transition:stroke-dashoffset .45s .2s}
+.cizim-kart:hover .cizim-mini,.cizim-kart:focus-visible .cizim-mini{bottom:3%}
+.cizim-kart:hover .cizim-mini-ok,.cizim-kart:focus-visible .cizim-mini-ok{opacity:1}
+.cizim-kart:hover .cizim-mini-ok path,.cizim-kart:focus-visible .cizim-mini-ok path{stroke-dashoffset:0}
+@media (prefers-reduced-motion:reduce){.cizim-mini{transition:none}}

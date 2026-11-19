@@ -62,12 +62,18 @@ export default function CizimGaleri({ gruplar, etiket }: { gruplar: Grup[]; etik
                   <button
                     type="button"
                     onClick={(e) => { sonOdak.current = e.currentTarget; setAcik(i); }}
-                    className="group grid w-full gap-2 text-left"
+                    className="cizim-kart group grid w-full gap-2 text-left"
                   >
-                    <span className="block overflow-hidden rounded-md border border-[var(--line)] bg-black">
+                    <span className="relative block overflow-hidden rounded-md border border-[var(--line)] bg-black">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={kaynak(z, false)} alt={z.ad} width={640} height={360} loading="lazy" decoding="async"
                         className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
+                      {/* Üstüne gelince köşeden çıkan minik Çizgi ve çizimi gösteren pembe ok (kanal kapağı kalıbı). */}
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src="/tanitim/cizgi.svg" alt="" aria-hidden className="cizim-mini" />
+                      <svg viewBox="0 0 120 90" aria-hidden className="cizim-mini-ok" fill="none" stroke="currentColor" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M8 80C30 50 60 28 104 18" /><path d="M80 8l24 10-16 22" />
+                      </svg>
                     </span>
                     <span className="grid gap-0.5">
                       <span className={mono}>{z.sekil}</span>
