@@ -132,3 +132,9 @@ Bir terim her yerde aynı çevrilir. Yeni terim çıktıkça buraya eklenir.
 | eğik / yatay atış | launch at an angle / horizontal launch | atış hareketi = projectile motion |
 | tepe noktası | top (of the path) | |
 | uçuş süresi | time of flight | |
+| yük (Y), destek (D) | load (W), pivot (P) | Basit makinelerde makara ağırlığı P ise İngilizcede w |
+| kuvvet kazancı | mechanical advantage ("advantage") | |
+| kuvvet kolu (tork) | lever arm | Kaldıraçta "effort arm" |
+| kütle merkezi (KM) | center of mass (CM) | |
+| itme | impulse | Yüklerde "repulsion" |
+| yüzde | 20% | Türkçe %20 |
