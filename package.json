@@ -12,7 +12,7 @@
     "dogal-turkce": "python3 tools/dogal-turkce.py",
     "lint": "tsc --noEmit",
     "ceviri": "python3 tools/ceviri.py birlestir && node tools/ceviri-ui.js denetle",
-    "app": "NEXT_PUBLIC_UYGULAMA=1 npm run build:en && NEXT_PUBLIC_UYGULAMA=1 next build && node tools/en-birlestir.js && rm -f out/videolar/*.mp4 out/videolar/*.jpg && cap sync"
+    "app": "NEXT_PUBLIC_UYGULAMA=1 npm run build:en && NEXT_PUBLIC_UYGULAMA=1 next build && node tools/en-birlestir.js && rm -f out/videolar/*.mp4 out/videolar/*.jpg && rm -rf out/cizim && cap sync"
   },
   "dependencies": {
     "@capacitor-community/apple-sign-in": "^7.1.0",
