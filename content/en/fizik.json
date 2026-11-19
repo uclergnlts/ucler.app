@@ -1622,5 +1622,273 @@
     ]
    }
   ]
+ },
+ "iki-boyutta-hareket": {
+  "title": "Motion in two dimensions and projectiles",
+  "summary": "Why do thrown objects follow a parabola, and how far do they go?",
+  "cards": [
+   {
+    "h": "The curved path of a thrown object",
+    "p": "A thrown ball follows a curved path called a <b>parabola</b>. The way to solve it is to split the motion into two: horizontal and vertical. In this topic g = 9.8 m/s² and there is no air resistance.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='10' y1='175' x2='310' y2='175' stroke='var(--ink)' stroke-width='1.5'/><path d='M30 170 Q150 -10 270 170' fill='none' stroke='var(--c2)' stroke-width='2' stroke-dasharray='5 4'/><circle cx='30' cy='170' r='5' fill='var(--c2)'/><line x1='90' y1='108.5' x2='90' y2='175' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='90' cy='102.5' r='5' fill='var(--c2)'/><line x1='150' y1='86' x2='150' y2='175' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='150' cy='80' r='5' fill='var(--c2)'/><line x1='210' y1='108.5' x2='210' y2='175' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='210' cy='102.5' r='5' fill='var(--c2)'/><circle cx='270' cy='170' r='5' fill='var(--c2)'/><text x='160' y='22' font-size='11' fill='var(--muted)' text-anchor='middle'>vertical, with gravity: slows down first, then speeds up</text><text x='160' y='194' font-size='12' fill='var(--muted)' text-anchor='middle'>horizontal, equal gaps: constant velocity</text></svg>",
+    "once": {
+     "soru": "What does the path of a ball thrown horizontally look like?",
+     "secenekler": [
+      {
+       "yazi": "A curve bending downward",
+       "neden": "The ball keeps moving horizontally while it falls faster and faster vertically. So its path is a parabola.",
+       "dogru": true
+      },
+      {
+       "yazi": "A straight slanted line",
+       "neden": "The vertical velocity keeps growing, so the path bends instead of staying straight."
+      },
+      {
+       "yazi": "Straight first, then steep",
+       "neden": "Gravity acts from the very first moment. So no part of the path is straight."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Horizontal and vertical are independent",
+    "p": "As you just saw, a dropped ball and a ball thrown horizontally land at the same moment. Only gravity sets the vertical motion. The horizontal velocity does not change the fall.",
+    "svg": "<svg viewBox='0 0 320 210' xmlns='http://www.w3.org/2000/svg'><line x1='10' y1='182' x2='310' y2='182' stroke='var(--ink)' stroke-width='1.5' fill='none'/><path d='M100 30 Q190 30 280 174' fill='none' stroke='var(--c2)' stroke-width='1.5' stroke-dasharray='5 4'/><line x1='56' y1='30' x2='94' y2='30' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><circle cx='50' cy='30' r='6' fill='var(--c1)'/><circle cx='100' cy='30' r='6' fill='var(--c2)'/><line x1='56' y1='46' x2='154' y2='46' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><circle cx='50' cy='46' r='6' fill='var(--c1)'/><circle cx='160' cy='46' r='6' fill='var(--c2)'/><line x1='56' y1='94' x2='214' y2='94' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><circle cx='50' cy='94' r='6' fill='var(--c1)'/><circle cx='220' cy='94' r='6' fill='var(--c2)'/><line x1='56' y1='174' x2='274' y2='174' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><circle cx='50' cy='174' r='6' fill='var(--c1)'/><circle cx='280' cy='174' r='6' fill='var(--c2)'/><text x='50' y='16' font-size='12' fill='var(--c1)' text-anchor='middle'>dropped</text><text x='110' y='16' font-size='12' fill='var(--c2)'>thrown horizontally</text><text x='160' y='202' font-size='12' fill='var(--muted)' text-anchor='middle'>always at the same height at equal times</text></svg>",
+    "key": "The object moves at constant velocity horizontally and is in free fall vertically. Solve the two motions separately."
+   },
+   {
+    "h": "Horizontal launch",
+    "p": "An object thrown horizontally moves at constant velocity in the horizontal direction, so x = v<sub>0</sub>·t. Vertically it is in free fall, so h = ½·g·t².",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='48' y='60' width='30' height='98' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><line x1='10' y1='158' x2='310' y2='158' stroke='var(--ink)' stroke-width='1.5' fill='none'/><path d='M78 60 Q178 60 278 158' fill='none' stroke='var(--c2)' stroke-width='2' stroke-dasharray='5 4'/><circle cx='78' cy='60' r='4' fill='var(--c2)'/><circle cx='278' cy='158' r='4' fill='var(--c2)'/><circle cx='178' cy='84.5' r='4' fill='var(--c2)'/><line x1='178' y1='84.5' x2='211' y2='84.5' stroke='var(--c1)' stroke-width='2.5' fill='none'/><polygon points='218,84.5 208,89 208,80' fill='var(--c1)'/><line x1='178' y1='84.5' x2='178' y2='97.1' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='178,104.1 173.5,94.1 182.5,94.1' fill='var(--c2)'/><line x1='178' y1='84.5' x2='211.7' y2='101' stroke='var(--acc)' stroke-width='2' fill='none'/><polygon points='218,104.1 207,103.7 211,95.7' fill='var(--acc)'/><text x='222' y='88' font-size='12' fill='var(--c1)'>vx</text><text x='160' y='112' font-size='12' fill='var(--c2)'>vy</text><text x='6' y='112' font-size='12' fill='var(--ink)'>44.1 m</text><text x='82' y='48' font-size='12' fill='var(--c1)'>v₀ = 10 m/s</text><text x='200' y='150' font-size='12' fill='var(--ink)'>t = 3 s</text><line x1='82.9' y1='172' x2='273.1' y2='172' stroke='var(--muted)' stroke-width='1.5' fill='none'/><polygon points='278,172 271,175.2 271,168.8' fill='var(--muted)'/><polygon points='78,172 85,168.8 85,175.2' fill='var(--muted)'/><text x='178' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>x = 30 m</text></svg>",
+    "key": "A stone thrown at 10 m/s from a 44.1 m cliff falls for 3 s and lands 30 m away. At impact vy = g·t, and the speed is v = √(10² + 29.4²) ≈ 31 m/s."
+   },
+   {
+    "h": "Launch at an angle: split the velocity in two",
+    "p": "For a launch at an angle, the velocity splits into two components. The horizontal component v<sub>x</sub> = v<sub>0</sub>·cosθ does not change. The vertical component v<sub>0y</sub> = v<sub>0</sub>·sinθ drops by 9.8 m/s each second.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='170' x2='300' y2='170' stroke='var(--line)' stroke-width='1.5' fill='none'/><line x1='60' y1='170' x2='137' y2='170' stroke='var(--c1)' stroke-width='3' fill='none'/><polygon points='144,170 134,174.5 134,165.5' fill='var(--c1)'/><line x1='144' y1='170' x2='144' y2='65' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='144,58 148.5,68 139.5,68' fill='var(--c2)'/><line x1='60' y1='170' x2='139.8' y2='63.6' stroke='var(--acc)' stroke-width='3' fill='none'/><polygon points='144,58 141.6,68.7 134.4,63.3' fill='var(--acc)'/><path d='M85 170 A25 25 0 0 0 75 150' fill='none' stroke='var(--ink)' stroke-width='1.5'/><text x='88' y='163' font-size='12' fill='var(--ink)'>53°</text><text x='88' y='95' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='bold'>v₀ = 20 m/s</text><text x='102' y='188' font-size='12' fill='var(--c1)' text-anchor='middle'>vx = 12 m/s</text><text x='152' y='110' font-size='12' fill='var(--c2)'>vy = 16 m/s</text><rect x='200' y='30' width='110' height='60' fill='var(--panel)' rx='8'/><text x='255' y='55' font-size='12' fill='var(--ink)' text-anchor='middle'>cos53° = 0.6</text><text x='255' y='77' font-size='12' fill='var(--ink)' text-anchor='middle'>sin53° = 0.8</text><text x='200' y='140' font-size='12' fill='var(--c1)'>vx: always the same</text><text x='200' y='160' font-size='12' fill='var(--c2)'>vy: drops with g</text></svg>",
+    "key": "The horizontal velocity vx = v0·cosθ stays constant, and the vertical velocity changes as vy = v0·sinθ − g·t. For 20 m/s at 53°, vx = 12 m/s and v0y = 16 m/s.",
+    "once": {
+     "soru": "Which component of the velocity of a ball launched at an angle stays the same during the flight?",
+     "secenekler": [
+      {
+       "yazi": "The horizontal component",
+       "neden": "There is no horizontal force. So vx stays constant.",
+       "dogru": true
+      },
+      {
+       "yazi": "The vertical component",
+       "neden": "Gravity lowers the vertical velocity by 9.8 m/s each second."
+      },
+      {
+       "yazi": "Both change",
+       "neden": "Gravity only acts in the vertical direction."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The top of the path and the time of flight",
+    "p": "At the top v<sub>y</sub> = 0, and the time to get there is v<sub>0y</sub> / g. For an object that lands at its launch level, the way down takes as long as the way up. So the total time is T = 2·v<sub>0y</sub> / g.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='100' x2='306.4' y2='100' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='312,100 304,103.6 304,96.4' fill='var(--ink)'/><line x1='40' y1='185' x2='40' y2='15' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='40' y1='60' x2='287.4' y2='60' stroke='var(--c1)' stroke-width='2.5' fill='none'/><line x1='40' y1='30.7' x2='287.4' y2='169.3' stroke='var(--c2)' stroke-width='2.5' fill='none'/><circle cx='163.7' cy='100' r='4' fill='var(--ink)'/><line x1='287.4' y1='95' x2='287.4' y2='105' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='45' y='14' font-size='12' fill='var(--muted)'>velocity (m/s)</text><text x='175' y='52' font-size='12' fill='var(--c1)'>vx = 10 m/s (constant)</text><text x='70' y='30' font-size='12' fill='var(--c2)' font-weight='bold'>vy</text><text x='35' y='34' font-size='12' fill='var(--ink)' text-anchor='end'>17.3</text><text x='155' y='118' font-size='12' fill='var(--ink)' text-anchor='end'>top: vy = 0</text><text x='287' y='92' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>T ≈ 3.5 s</text><text x='283' y='190' font-size='12' fill='var(--ink)' text-anchor='end'>−17.3</text><text x='300' y='118' font-size='12' fill='var(--muted)'>t</text></svg>",
+    "key": "The maximum height is v0y² / (2g). The total time is T = 2·v0·sinθ / g. If v0y ≈ 17.3 m/s, then T ≈ 3.5 s."
+   },
+   {
+    "h": "Range and the 45° rule",
+    "p": "The total horizontal distance covered is called the <b>range</b>: R = v<sub>0</sub>²·sin2θ / g. For an object that lands at its launch level, the longest range comes at <b>45°</b>. 30° and 60° give the same range.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='180' x2='305' y2='180' stroke='var(--ink)' stroke-width='1.5' fill='none'/><path d='M40 180 Q146 -3.6 252 180' fill='none' stroke='var(--c2)' stroke-width='2'/><path d='M40 180 Q162.5 57.6 285 180' fill='none' stroke='var(--c3)' stroke-width='2.5'/><path d='M40 180 Q146 118.8 252 180' fill='none' stroke='var(--c1)' stroke-width='2'/><text x='146' y='80' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>60°</text><text x='162.5' y='113' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>45°</text><text x='146' y='143' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='bold'>30°</text><line x1='252' y1='175' x2='252' y2='185' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='285' y1='175' x2='285' y2='185' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='246' y='197' font-size='12' fill='var(--ink)' text-anchor='middle'>35.3</text><text x='292' y='197' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>40.8 m</text><text x='10' y='20' font-size='12' fill='var(--ink)'>v₀ = 20 m/s (all)</text><text x='10' y='38' font-size='12' fill='var(--muted)'>g ≈ 9.8 m/s²</text></svg>",
+    "key": "The range is R = v0²·sin2θ / g, and it is largest at θ = 45°.",
+    "etk": {
+     "tur": "formul",
+     "soru": "Change the speed and the angle. Compare 30° with 60°. Which angle gives the longest range?",
+     "girdiler": [
+      {
+       "ad": "v0",
+       "etiket": "Initial speed",
+       "birim": "m/s",
+       "min": 5,
+       "max": 40,
+       "adim": 1,
+       "deger": 20
+      },
+      {
+       "ad": "aci",
+       "etiket": "Launch angle θ (°)",
+       "min": 0,
+       "max": 90,
+       "adim": 1,
+       "deger": 45
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "Range R",
+       "ifade": "v0^2*sin(2*aci)/9.8",
+       "birim": "m",
+       "basamak": 1
+      },
+      {
+       "ad": "Maximum height",
+       "ifade": "(v0*sin(aci))^2/(2*9.8)",
+       "birim": "m",
+       "basamak": 1
+      },
+      {
+       "ad": "Time of flight",
+       "ifade": "2*v0*sin(aci)/9.8",
+       "birim": "s",
+       "basamak": 2
+      }
+     ]
+    }
+   },
+   {
+    "h": "Launch at an angle from a height",
+    "p": "For an object that lands lower than where it started, the formulas for T and range do not apply. Take up as positive and solve −h = v<sub>0y</sub>·t − ½·g·t².",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='310' y='20' font-size='11' fill='var(--muted)' text-anchor='end'>v<tspan font-size='9' baseline-shift='sub'>x</tspan> = 10 m/s, v<tspan font-size='9' baseline-shift='sub'>0y</tspan> = 14.7 m/s</text><text x='310' y='38' font-size='11' fill='var(--muted)' text-anchor='end'>g = 9.8 m/s²</text><rect x='20' y='80' width='40' height='100' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><line x1='10' y1='180' x2='310' y2='180' stroke='var(--ink)' stroke-width='1.5'/><path d='M60 80 Q160 -70 260 180' fill='none' stroke='var(--c2)' stroke-width='2' stroke-dasharray='5 4'/><line x1='60' y1='80' x2='74.1' y2='58.8' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='78,53 76.2,63.8 68.7,58.8' fill='var(--acc)'/><text x='84' y='58' font-size='12' fill='var(--acc)' font-weight='bold'>v₀</text><circle cx='60' cy='80' r='4' fill='var(--c2)'/><circle cx='260' cy='180' r='4' fill='var(--c2)'/><text x='40' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>19.6 m</text><path d='M60 80 H300' stroke='var(--line)' stroke-dasharray='3 3'/><text x='300' y='74' font-size='10' fill='var(--muted)' text-anchor='end'>launch level</text><text x='230' y='165' font-size='12' fill='var(--ink)' text-anchor='end'>t = 4 s</text><text x='160' y='196' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>−19.6 = 14.7t − 4.9t² → t = 4 s, x = 40 m</text></svg>",
+    "key": "For an object launched from a height of 19.6 m with v0y = 14.7 m/s and vx = 10 m/s, t = 4 s and x = 40 m.",
+    "once": {
+     "soru": "Two stones are thrown with the same speed and angle, one from level ground and the other from a high cliff. Which one stays in the air longer?",
+     "secenekler": [
+      {
+       "yazi": "The one from the cliff",
+       "neden": "After coming back to its launch level, it falls further by the height of the cliff.",
+       "dogru": true
+      },
+      {
+       "yazi": "The one from level ground",
+       "neden": "The stone thrown from the cliff passes its launch level and keeps falling. So its time is longer."
+      },
+      {
+       "yazi": "They stay up equally long",
+       "neden": "The extra fall down the cliff adds time."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Throwing from a moving vehicle",
+    "p": "An object thrown from a moving vehicle also carries the vehicle's velocity. A ball thrown straight up from a truck moving at constant velocity comes straight back down for someone on the truck. For someone on the ground, it follows a projectile path.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='20' font-size='11' fill='var(--muted)' text-anchor='middle'>the truck moves at a constant 10 m/s</text><line x1='10' y1='170' x2='310' y2='170' stroke='var(--ink)' stroke-width='1.5'/><g opacity='1'><rect x='30' y='130' width='60' height='30' rx='3' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><circle cx='45' cy='163' r='7' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='80' cy='163' r='7' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/></g><g opacity='0.55'><rect x='210' y='130' width='60' height='30' rx='3' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><circle cx='225' cy='163' r='7' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='260' cy='163' r='7' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/></g><path d='M60 130 Q150 -50 240 130' fill='none' stroke='var(--acc)' stroke-width='2' stroke-dasharray='5 4'/><line x1='60' y1='128' x2='60' y2='69' stroke='var(--c5)' stroke-width='2' fill='none'/><polygon points='60,62 64.5,72 55.5,72' fill='var(--c5)'/><circle cx='60' cy='130' r='5' fill='var(--c2)'/><circle cx='240' cy='130' r='5' fill='var(--c2)'/><line x1='96' y1='145' x2='127' y2='145' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='134,145 124,149.5 124,140.5' fill='var(--c3)'/><text x='115' y='136' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='bold'>10 m/s</text><text x='20' y='192' font-size='11' fill='var(--c5)' font-weight='bold'>truck view: straight up</text><text x='310' y='192' font-size='11' fill='var(--acc)' text-anchor='end' font-weight='bold'>ground view: a curve</text></svg>",
+    "key": "The object's initial velocity relative to the ground is its launch velocity relative to the vehicle plus the vehicle's velocity.",
+    "once": {
+     "soru": "A ball is thrown straight up from the bed of a truck moving at constant velocity. With no air resistance, where does the ball land?",
+     "secenekler": [
+      {
+       "yazi": "In the truck bed",
+       "neden": "The ball carries the truck's horizontal velocity. So it moves along with the truck horizontally.",
+       "dogru": true
+      },
+      {
+       "yazi": "Behind the truck",
+       "neden": "The ball does not lose its horizontal velocity. It keeps the same horizontal velocity as the truck."
+      },
+      {
+       "yazi": "In front of the truck",
+       "neden": "The ball's horizontal velocity is not greater than the truck's."
+      }
+     ]
+    }
+   },
+   {
+    "h": "In real life: air resistance",
+    "p": "The formulas ignore air resistance. In reality, air slows the ball, the range and height get smaller, and the descent is steeper. The angle for the longest range is usually less than 45°.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='15' y1='180' x2='305' y2='180' stroke='var(--ink)' stroke-width='1.5' fill='none'/><path d='M30 180 Q150 60 270 180' fill='none' stroke='var(--c1)' stroke-width='2' stroke-dasharray='5 4'/><path d='M30 180 C90 120 165 100 200 180' fill='none' stroke='var(--c2)' stroke-width='2.5'/><text x='222' y='112' font-size='12' fill='var(--c1)' font-weight='bold'>no air</text><text x='110' y='170' font-size='12' fill='var(--c2)' font-weight='bold'>in air</text><text x='160' y='30' font-size='12' fill='var(--muted)' text-anchor='middle'>range and height get smaller</text><line x1='200' y1='175' x2='200' y2='185' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='270' y1='175' x2='270' y2='185' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='200' y='197' font-size='12' fill='var(--c2)' text-anchor='middle'>short</text><text x='270' y='197' font-size='12' fill='var(--c1)' text-anchor='middle'>long</text></svg>",
+    "key": "Without air, the path is a symmetric parabola. In air, the path is shorter and not symmetric.",
+    "once": {
+     "soru": "In a real game, how does the ball's range compare with what the no-air formula gives?",
+     "secenekler": [
+      {
+       "yazi": "Shorter",
+       "neden": "Air slows the ball. So the ball covers a shorter distance.",
+       "dogru": true
+      },
+      {
+       "yazi": "Longer",
+       "neden": "Air does not give the ball energy. It slows it down."
+      },
+      {
+       "yazi": "The same",
+       "neden": "The formula ignores air, but in reality there is a difference."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• Horizontal and vertical motion are independent.<br>• Horizontally v<sub>x</sub> is constant, and vertically the acceleration is g.<br>• At the top v<sub>y</sub> = 0, and T = 2·v<sub>0</sub>·sinθ / g.<br>• The range is R = v<sub>0</sub>²·sin2θ / g, and it is largest at 45°.",
+    "svg": "<svg viewBox='0 0 320 210' xmlns='http://www.w3.org/2000/svg'><line x1='15' y1='170' x2='305' y2='170' stroke='var(--ink)' stroke-width='1.5' fill='none'/><path d='M30 170 Q160 10 290 170' fill='none' stroke='var(--c3)' stroke-width='2.5'/><line x1='30' y1='170' x2='55.8' y2='135.6' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='60,130 57.6,140.7 50.4,135.3' fill='var(--acc)'/><line x1='160' y1='90' x2='188' y2='90' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='195,90 185,94.5 185,85.5' fill='var(--acc)'/><text x='160' y='75' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>top: vy = 0</text><line x1='34.9' y1='185' x2='285.1' y2='185' stroke='var(--muted)' stroke-width='1.5' fill='none'/><polygon points='290,185 283,188.2 283,181.8' fill='var(--muted)'/><polygon points='30,185 37,181.8 37,188.2' fill='var(--muted)'/><text x='160' y='204' font-size='12' fill='var(--ink)' text-anchor='middle'>range R</text><text x='10' y='20' font-size='12' fill='var(--c1)'>horizontal: constant velocity</text><text x='10' y='38' font-size='12' fill='var(--c2)'>vertical: free fall</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "A stone is thrown horizontally at 15 m/s from a cliff 78.4 m high. How many meters from the base of the cliff does it land? (g = 9.8 m/s², no air resistance)",
+    "cevap": 60,
+    "birim": "m",
+    "e": "Vertically h = ½·g·t²: 78.4 = 4.9·t², t² = 16, and t = 4 s. Horizontally x = v<sub>0</sub>·t = 15·4 = 60 m."
+   },
+   {
+    "tur": "ayir",
+    "q": "While a ball launched at an angle is in flight (no air resistance), which quantities change and which stay constant?",
+    "gruplar": [
+     "Stays constant",
+     "Changes"
+    ],
+    "ogeler": [
+     [
+      "Horizontal velocity (v<sub>x</sub>)",
+      0
+     ],
+     [
+      "Acceleration",
+      0
+     ],
+     [
+      "Vertical velocity (v<sub>y</sub>)",
+      1
+     ],
+     [
+      "Height",
+      1
+     ],
+     [
+      "Speed",
+      1
+     ]
+    ],
+    "e": "There is no horizontal force, so v<sub>x</sub> is constant, and the acceleration is g at every moment. v<sub>y</sub> changes by g each second. That is why the height and the speed also change, and the speed is smallest at the top."
+   },
+   {
+    "tur": "eslestir",
+    "q": "A ball is launched from the ground at speed v<sub>0</sub> and angle θ and lands at the same level. Match each quantity with its formula.",
+    "ciftler": [
+     [
+      "Time to the top",
+      "v<sub>0y</sub> / g"
+     ],
+     [
+      "Time of flight",
+      "2·v<sub>0y</sub> / g"
+     ],
+     [
+      "Maximum height",
+      "v<sub>0y</sub>² / (2g)"
+     ],
+     [
+      "Range",
+      "v<sub>0</sub>²·sin2θ / g"
+     ]
+    ],
+    "e": "At the top v<sub>y</sub> = 0, so the time to the top is v<sub>0y</sub> / g and the height is v<sub>0y</sub>² / (2g). The way down takes as long as the way up, so T = 2·v<sub>0y</sub> / g. The range is R = v<sub>0</sub>²·sin2θ / g."
+   },
+   {
+    "tur": "sayi",
+    "q": "A ball is launched from the ground at 19.6 m/s, at 30° above the horizontal. What is the maximum height it reaches, in meters? (g = 9.8 m/s², sin30° = 0.5)",
+    "cevap": 4.9,
+    "tolerans": 0.05,
+    "birim": "m",
+    "e": "v<sub>0y</sub> = 19.6·0.5 = 9.8 m/s. At the top v<sub>y</sub> = 0, so h = v<sub>0y</sub>² / (2g) = 96.04 / 19.6 = 4.9 m."
+   }
+  ]
  }
 }

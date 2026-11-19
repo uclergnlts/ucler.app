@@ -1271,5 +1271,249 @@
    "For an object at rest, friction balances the push up to μs·N. For a sliding object, fk = μk·N."
   ],
   "soruOnce": true
+ },
+ "iki-boyutta-hareket": {
+  "id": "iki-boyutta-hareket",
+  "ders": "fizik",
+  "konu": "iki-boyutta-hareket",
+  "baslik": "Motion in two dimensions and projectiles",
+  "ozet": "Try it first, then learn its name. Drop the balls, throw a stone off a cliff, and set the angle.",
+  "adimlar": [
+   {
+    "baslik": "Which one lands first?",
+    "metin": "From the same height, you will drop one ball and throw the other horizontally. There is no air resistance.",
+    "sahne": {
+     "tur": "fiz4-iki-top",
+     "sure": 2
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which one hits the ground first?",
+     "secenekler": [
+      {
+       "yazi": "The dropped one",
+       "neden": "Its shorter path does not matter. Only gravity sets the vertical motion."
+      },
+      {
+       "yazi": "The thrown one",
+       "neden": "Horizontal velocity does not speed up the fall. Both fall with the same g."
+      },
+      {
+       "yazi": "They land together",
+       "dogru": true,
+       "neden": "The two balls are at the same height at every moment. Horizontal velocity neither speeds up nor slows down the fall. Horizontal and vertical motion are independent."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Horizontal launch",
+    "metin": "You will throw a stone horizontally from a 19.6 m cliff, and it will land after 2 s. Set the speed and land the stone on the flag 40 m away.",
+    "sahne": {
+     "tur": "fiz4-yatay",
+     "sure": 2
+    },
+    "deger": {
+     "v": 10
+    },
+    "kontroller": [
+     {
+      "ad": "v",
+      "etiket": "Launch speed",
+      "min": 5,
+      "max": 30,
+      "adim": 5,
+      "birim": "m/s"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "v": 20
+     },
+     "tamam": "The fall took 2 s, because h = ½·g·t² gives 19.6 = 4.9·t² and t = 2 s. In that time the stone moved x = 20 × 2 = 40 m horizontally."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Does speed change the time?",
+    "metin": "Throw the stone from the same cliff at two or more different speeds. Check how long each throw takes.",
+    "sahne": {
+     "tur": "fiz4-yatay",
+     "sure": 2
+    },
+    "deger": {
+     "v": 10
+    },
+    "kontroller": [
+     {
+      "ad": "v",
+      "etiket": "Launch speed",
+      "min": 5,
+      "max": 30,
+      "adim": 5,
+      "birim": "m/s"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "When you throw the stone faster, what happens to the time of flight?",
+     "secenekler": [
+      {
+       "yazi": "It gets longer",
+       "neden": "The stone goes farther, but not in more time. Look at the times."
+      },
+      {
+       "yazi": "It stays the same",
+       "dogru": true,
+       "neden": "Every throw took 2 s. The time of flight only depends on the height: t = √(2h / g). The speed only changes how far the stone goes."
+      },
+      {
+       "yazi": "It gets shorter",
+       "neden": "Horizontal velocity does not speed up the fall."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "The top of the path",
+    "metin": "You launch the ball at 20 m/s and an angle of 60°.",
+    "sahne": {
+     "tur": "fiz4-egik",
+     "sure": 1.8,
+     "aci": 60,
+     "tepe": true,
+     "oklar": true
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What is the ball's speed at the top, in m/s?",
+     "secenekler": [
+      {
+       "yazi": "0",
+       "neden": "Only the vertical velocity is zero at the top. The ball is still moving horizontally."
+      },
+      {
+       "yazi": "20",
+       "neden": "That is the launch speed. The vertical velocity dropped as the ball rose."
+      },
+      {
+       "yazi": "10",
+       "dogru": true,
+       "neden": "v<sub>x</sub> = 20 × cos60° = 10 m/s never changes. At the top v<sub>y</sub> = 0, so the speed equals v<sub>x</sub>. It is not zero."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Projectile lab",
+    "metin": "This is a projectile lab. Change the angle and the speed, or drag the tip of the barrel. The path, range, and maximum height update right away. There is no air resistance. Find the answers below yourself.",
+    "sahne": {
+     "tur": "sim-atis"
+    },
+    "deger": {
+     "a": 20,
+     "v": 20
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "Launch angle",
+      "min": 10,
+      "max": 80,
+      "adim": 5,
+      "birim": "°"
+     },
+     {
+      "ad": "v",
+      "etiket": "Launch speed",
+      "min": 10,
+      "max": 30,
+      "adim": 5,
+      "birim": "m/s"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "With the speed at 20 m/s, find the angle that sends the ball <b>farthest</b>.",
+       "hedef": {
+        "a": 45,
+        "v": 20
+       },
+       "coz": [
+        {
+         "v": 20,
+         "a": 45
+        }
+       ],
+       "tamam": "At 45° the range is R = v0²·sin2θ / g = 400 × 1 / 9.8 ≈ 41 m, and that is the largest range. With no air resistance and a landing at launch level, the longest range comes at 45°."
+      },
+      {
+       "yazi": "At the same speed, launch first at <b>30°</b>, then at <b>60°</b>. Compare the ranges.",
+       "hedef": [
+        {
+         "a": 30,
+         "v": 20
+        },
+        {
+         "a": 60,
+         "v": 20
+        }
+       ],
+       "sirali": true,
+       "coz": [
+        {
+         "v": 20,
+         "a": 30
+        },
+        {
+         "a": 60
+        }
+       ],
+       "tamam": "The range is about 35 m in both cases. For angles that add up to 90°, sin2θ is the same (sin60° = sin120°). The ball launched at 60° rises higher and flies longer, but it is slower horizontally."
+      },
+      {
+       "yazi": "At 45°, set the speed first to <b>10</b>, then to <b>20 m/s</b>. How many times larger is the range?",
+       "hedef": [
+        {
+         "a": 45,
+         "v": 10
+        },
+        {
+         "a": 45,
+         "v": 20
+        }
+       ],
+       "sirali": true,
+       "coz": [
+        {
+         "a": 45,
+         "v": 10
+        },
+        {
+         "v": 20
+        }
+       ],
+       "tamam": "The range is about 10.2 m at 10 m/s and about 40.8 m at 20 m/s. When the speed doubled, the range became <b>4 times</b> larger, because R = v0²·sin2θ / g grows with the square of the speed."
+      }
+     ]
+    },
+    "kart": 6
+   }
+  ],
+  "kapanis": [
+   "Horizontal and vertical motion are independent. Horizontally the velocity is constant, and vertically the acceleration is g.",
+   "In a horizontal launch, the time of flight only depends on the height: t = √(2h / g). The horizontal distance is x = v0·t.",
+   "In a launch at an angle, vx = v0·cosθ is constant and vy = v0·sinθ − g·t. At the top vy = 0, but the object's speed equals vx.",
+   "The range is R = v0²·sin2θ / g. Without air, the largest range is at 45°, and 30° and 60° give the same range.",
+   "In reality, air resistance lowers the range and the height. The angle for the longest range is usually a little less than 45°."
+  ],
+  "soruOnce": true
  }
 }
