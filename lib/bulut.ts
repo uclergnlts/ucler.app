@@ -246,8 +246,11 @@ export async function cikisYap(sil: () => void) {
 /** Hesabı ve buluttaki ilerlemeyi kalıcı olarak siler (Supabase "hesap-sil" fonksiyonu), sonra cihazı temizler. */
 export async function hesabiSil(sil: () => void) {
   const id = kullanici, ad = kayitAdi;
+  // Apple ile girdiyse (iPhone'da) Apple'dan taze bir yetki kodu alınır; sunucu bununla Apple jetonlarını iptal eder
+  // (App Store kuralı 5.1.1(v)). Öğrenci Apple ekranını kapatırsa hesap yine silinir.
+  const apple_kod = await appleKodu();
   durdur();
-  const { error } = await sb().functions.invoke("hesap-sil", { method: "POST" });
+  const { error } = await sb().functions.invoke("hesap-sil", { method: "POST", body: apple_kod ? { apple_kod } : {} });
   // Hesap sunucuda silindi ama yanıt yolda kaybolduysa yeniden denemek hep "oturum" hatası verir: hesap artık yoksa
   // silme başarılı sayılır, yoksa öğrenci silinmiş bir hesapta takılı kalırdı.
   const yok = error && (await sb().auth.getUser()).error?.code === "user_not_found";
@@ -354,6 +357,17 @@ export async function appleIleGir(donus?: string) {
   const { error } = await sb().auth.signInWithIdToken({ provider: "apple", token: r.identityToken, nonce: ham });
   if (error) throw error;
   if (r.givenName && !read<string>(KEYS.ad, "")) setAd(r.givenName);
+}
+
+async function appleKodu(): Promise<string | null> {
+  try {
+    if (Capacitor.getPlatform() !== "ios") return null;
+    const { data } = await sb().auth.getUser();
+    if (!data.user?.identities?.some((k) => k.provider === "apple")) return null;
+    const { SignInWithApple } = await import("@capacitor-community/apple-sign-in");
+    const { response: r } = await SignInWithApple.authorize({ clientId: "app.ucler", redirectURI: `${URL}/auth/v1/callback`, scopes: "" });
+    return r.authorizationCode || null;
+  } catch { return null; }
 }
 
 /** Uygulamaya derin bağlantıyla dönülünce (app.ucler://giris?code=...) oturumu açar. Hata varsa mesajını döner. */
