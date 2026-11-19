@@ -984,5 +984,292 @@
    "From a vehicle, rain looks slanted because of its relative velocity."
   ],
   "soruOnce": true
+ },
+ "newton-yasalari": {
+  "id": "newton-yasalari",
+  "ders": "fizik",
+  "konu": "newton-yasalari",
+  "baslik": "Newton's laws of motion",
+  "ozet": "Try it first, then learn its name. Pull the cloth, push the box, and push off on a skateboard.",
+  "adimlar": [
+   {
+    "baslik": "Net force",
+    "metin": "The net force is the sum of all the forces acting on an object. The person on the left pushes to the right with 30 N. Set the force of the person on the right and make the net force zero.",
+    "sahne": {
+     "tur": "fiz4-net"
+    },
+    "deger": {
+     "F": 10
+    },
+    "kontroller": [
+     {
+      "ad": "F",
+      "etiket": "Push from the right",
+      "min": 0,
+      "max": 50,
+      "adim": 5,
+      "birim": "N"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "F": 30
+     },
+     "tamam": "30 N acts to the right and 30 N to the left, so the net force is 0. The forces are there, but the box's velocity does not change. The first law explains why."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "The tablecloth",
+    "metin": "You are going to pull the tablecloth away in one quick move.",
+    "sahne": {
+     "tur": "fiz4-ortu",
+     "sure": 2.5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to the plates when you pull the cloth quickly?",
+     "secenekler": [
+      {
+       "yazi": "They slide along with the cloth",
+       "neden": "The cloth can only pull the plates through friction. When you pull very fast, that force lasts a very short time."
+      },
+      {
+       "yazi": "They stay in place on the table",
+       "dogru": true,
+       "neden": "Plates at rest stay at rest. Friction acts for such a short time that their velocity hardly changes. This is called inertia."
+      },
+      {
+       "yazi": "They fly into the air",
+       "neden": "No upward force acts on the plates."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "F = m·a",
+    "metin": "Acceleration tells you how much the velocity changes each second. Push the 10 kg cart so that its acceleration is 2 m/s², then press play.",
+    "sahne": {
+     "tur": "fiz4-fma",
+     "sure": 2,
+     "m": 10
+    },
+    "deger": {
+     "F": 10
+    },
+    "kontroller": [
+     {
+      "ad": "F",
+      "etiket": "Force",
+      "min": 0,
+      "max": 40,
+      "adim": 5,
+      "birim": "N"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "F": 20
+     },
+     "tamam": "a = 20 N / 10 kg = 2 m/s². The velocity grows 2 m/s each second, and the cart travels ½ · 2 · 2² = 4 m in 2 s."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "More mass",
+    "metin": "The force now stays at 20 N. Change the cart's mass and press play with at least two different masses.",
+    "sahne": {
+     "tur": "fiz4-fma",
+     "sure": 2,
+     "F": 20
+    },
+    "deger": {
+     "m": 10
+    },
+    "kontroller": [
+     {
+      "ad": "m",
+      "etiket": "Mass",
+      "min": 5,
+      "max": 20,
+      "adim": 5,
+      "birim": "kg",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "With the same force, what happens to the acceleration when the mass doubles?",
+     "secenekler": [
+      {
+       "yazi": "It doubles",
+       "neden": "A heavy cart is harder to speed up. Compare the accelerations for 10 kg and 20 kg."
+      },
+      {
+       "yazi": "It stays the same",
+       "neden": "Since a = F / m, changing m changes a."
+      },
+      {
+       "yazi": "It is cut in half",
+       "dogru": true,
+       "neden": "With 20 N, the acceleration is 2 m/s² at 10 kg and 1 m/s² at 20 kg. Since a = F / m, acceleration is inversely proportional to mass."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Action and reaction",
+    "metin": "You are standing on a skateboard and your mass is 60 kg. You are going to push your 30 kg brother with a force of 60 N.",
+    "sahne": {
+     "tur": "fiz4-etki-tepki",
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Who rolls away when you push?",
+     "secenekler": [
+      {
+       "yazi": "Both of you, in opposite directions",
+       "dogru": true,
+       "neden": "Your brother pushes you back with the same magnitude (60 N) in the opposite direction. The forces act on different objects, so they do not cancel. Your brother has half your mass, so he moves away twice as fast (a = F / m)."
+      },
+      {
+       "yazi": "Only your brother",
+       "neden": "Your brother also puts a force of the same magnitude on you. So you roll backward too."
+      },
+      {
+       "yazi": "Only you",
+       "neden": "The force you put on your brother makes him move too."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Weight ≠ mass",
+    "metin": "Take the 60 kg astronaut to the Moon. This scene uses real values: g ≈ 9.8 m/s² on Earth and g ≈ 1.62 m/s² on the Moon.",
+    "sahne": {
+     "tur": "fiz4-agirlik"
+    },
+    "deger": {
+     "ay": 0
+    },
+    "kontroller": [
+     {
+      "ad": "ay",
+      "etiket": "Go to the Moon",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "ay": 1
+     },
+     "tamam": "The mass is still 60 kg, but the weight dropped from 60 × 9.8 ≈ 588 N to 60 × 1.62 ≈ 97 N."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Friction lab",
+    "metin": "A box sits on the floor. μs = 0.5, μk = 0.3, and g = 10 m/s². Change the push and the mass. The force arrows, velocity, and acceleration update right away. Find the answers below yourself.",
+    "sahne": {
+     "tur": "sim-surtunme"
+    },
+    "deger": {
+     "F": 0,
+     "m": 20,
+     "kayiyor": 0
+    },
+    "kontroller": [
+     {
+      "ad": "F",
+      "etiket": "Push force",
+      "min": 0,
+      "max": 250,
+      "adim": 5,
+      "birim": "N"
+     },
+     {
+      "ad": "m",
+      "etiket": "Mass",
+      "min": 10,
+      "max": 40,
+      "adim": 10,
+      "birim": "kg",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "Find the <b>smallest</b> push that makes the 20 kg box slide.",
+       "hedef": {
+        "m": 20,
+        "F": 105,
+        "kayiyor": 1
+       },
+       "coz": [
+        {
+         "m": 20,
+         "F": 105
+        }
+       ],
+       "tamam": "The limit of static friction is μs·N = 0.5 × 200 = 100 N. When the push went above that, the box slid. Now kinetic friction acts, and μk·N = 0.3 × 200 = 60 N."
+      },
+      {
+       "yazi": "While the box is sliding, lower the push to <b>60 N</b>. Watch its velocity.",
+       "hedef": {
+        "m": 20,
+        "F": 60,
+        "kayiyor": 1
+       },
+       "coz": [
+        {
+         "m": 20,
+         "F": 105
+        },
+        {
+         "F": 60
+        }
+       ],
+       "tamam": "The push equals kinetic friction. The net force is zero, so the box moves at <b>constant velocity</b> (first law). Starting the motion took more than 100 N, but 60 N is enough to keep it going."
+      },
+      {
+       "yazi": "Set the mass to <b>40 kg</b> and find the smallest push that makes the box slide again.",
+       "hedef": {
+        "m": 40,
+        "F": 205,
+        "kayiyor": 1
+       },
+       "coz": [
+        {
+         "m": 40,
+         "F": 205
+        }
+       ],
+       "tamam": "When the mass doubled, N became 400 N and the limit also doubled to μs·N = 200 N. Friction is proportional to the normal force."
+      }
+     ]
+    },
+    "kart": 9
+   }
+  ],
+  "kapanis": [
+   "<b>First law:</b> if the net force is zero, the velocity does not change. Being at rest is also constant velocity (v = 0).",
+   "<b>Second law:</b> Fnet = m·a. With the same force, doubling the mass cuts the acceleration in half. 1 N = 1 kg·m/s².",
+   "<b>Third law:</b> action and reaction are equal, opposite, and act on different objects. That is why they do not cancel.",
+   "Weight is W = m·g (N). Mass (kg) is the same everywhere.",
+   "For an object at rest, friction balances the push up to μs·N. For a sliding object, fk = μk·N."
+  ],
+  "soruOnce": true
  }
 }

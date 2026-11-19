@@ -1253,5 +1253,374 @@
     ]
    }
   ]
+ },
+ "newton-yasalari": {
+  "title": "Newton's laws of motion",
+  "summary": "How does a force change motion? The three laws and the fundamental forces.",
+  "cards": [
+   {
+    "h": "Force and net force",
+    "p": "A <b>force</b> is a push or a pull. It has a direction, so it is a vector. The vector sum of all the forces is called the <b>net force</b>. The net force decides how the object moves.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='130' y='60' width='60' height='50' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5' rx='4'/><line x1='190' y1='85' x2='263' y2='85' stroke='var(--c1)' stroke-width='3' fill='none'/><polygon points='270,85 260,89.5 260,80.5' fill='var(--c1)'/><line x1='130' y1='85' x2='105' y2='85' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='98,85 108,80.5 108,89.5' fill='var(--c2)'/><text x='230' y='75' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='bold'>10 N</text><text x='114' y='75' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='bold'>4 N</text><text x='160' y='140' font-size='12' fill='var(--muted)' text-anchor='middle'>10 N − 4 N = 6 N</text><line x1='120' y1='160' x2='161' y2='160' stroke='var(--acc)' stroke-width='3.5' fill='none'/><polygon points='168,160 158,164.5 158,155.5' fill='var(--acc)'/><text x='178' y='164' font-size='13' fill='var(--acc)' font-weight='bold'>Fnet = 6 N, to the right</text><text x='160' y='30' font-size='12' fill='var(--muted)' text-anchor='middle'>same scale: arrow lengths match the newtons</text></svg>",
+    "key": "Net force = the vector sum of all the forces acting on the object"
+   },
+   {
+    "h": "The four fundamental forces of nature",
+    "p": "Every force comes from four interactions. They are <b>gravity</b>, the <b>electromagnetic</b> interaction (all contact forces), the <b>strong nuclear</b> interaction, and the <b>weak nuclear</b> interaction. Gravity is the weakest.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='14' width='300' height='38' rx='8' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='20' y='38' font-size='13' font-weight='bold' fill='var(--ink)'>Strong nuclear</text><text x='140' y='38' font-size='11' fill='var(--muted)'>holds the nucleus</text><text x='302' y='38' font-size='10' text-anchor='end' fill='var(--c2)' font-weight='bold'>strongest</text><rect x='10' y='60' width='300' height='38' rx='8' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)'/><text x='20' y='84' font-size='13' font-weight='bold' fill='var(--ink)'>Electromagnetic</text><text x='140' y='84' font-size='11' fill='var(--muted)'>friction, normal, tension</text><rect x='10' y='106' width='300' height='38' rx='8' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)'/><text x='20' y='130' font-size='13' font-weight='bold' fill='var(--ink)'>Weak nuclear</text><text x='140' y='130' font-size='11' fill='var(--muted)'>radioactive decay</text><rect x='10' y='152' width='300' height='38' rx='8' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='20' y='176' font-size='13' font-weight='bold' fill='var(--ink)'>Gravity</text><text x='140' y='176' font-size='11' fill='var(--muted)'>weight, planets</text><text x='302' y='176' font-size='10' text-anchor='end' fill='var(--c3)' font-weight='bold'>weakest</text></svg>",
+    "key": "The strongest is the strong nuclear force, which holds the nucleus together. Gravity is the weakest, but it always attracts and its range has no limit.",
+    "once": {
+     "soru": "Which interaction do contact forces like friction and the normal force come from?",
+     "secenekler": [
+      {
+       "yazi": "Electromagnetic",
+       "neden": "The electrons in the atoms of two touching surfaces repel each other. That is why all contact forces are electromagnetic.",
+       "dogru": true
+      },
+      {
+       "yazi": "Gravity",
+       "neden": "Gravity produces weight, and it does not need contact."
+      },
+      {
+       "yazi": "Strong nuclear",
+       "neden": "The strong nuclear force only acts inside the nucleus."
+      }
+     ]
+    }
+   },
+   {
+    "h": "First law: inertia",
+    "p": "If the net force is zero, an object at rest stays at rest and a moving object keeps going <b>in a straight line at constant velocity</b>. This is called <b>inertia</b>. It is why you lurch forward when a car brakes.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='40' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='bold'>puck sliding on ice: Fnet ≈ 0</text><line x1='10' y1='128' x2='310' y2='128' stroke='var(--c1)' stroke-width='2' fill='none'/><ellipse cx='40' cy='120' rx='14' ry='6' fill='var(--c5)' fill-opacity='0.3'/><line x1='30' y1='100' x2='53' y2='100' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='60,100 50,104.5 50,95.5' fill='var(--c3)'/><text x='40' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>0 s</text><ellipse cx='100' cy='120' rx='14' ry='6' fill='var(--c5)' fill-opacity='0.44999999999999996'/><line x1='90' y1='100' x2='113' y2='100' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='120,100 110,104.5 110,95.5' fill='var(--c3)'/><text x='100' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>1 s</text><ellipse cx='160' cy='120' rx='14' ry='6' fill='var(--c5)' fill-opacity='0.6'/><line x1='150' y1='100' x2='173' y2='100' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='180,100 170,104.5 170,95.5' fill='var(--c3)'/><text x='160' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>2 s</text><ellipse cx='220' cy='120' rx='14' ry='6' fill='var(--c5)' fill-opacity='0.75'/><line x1='210' y1='100' x2='233' y2='100' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='240,100 230,104.5 230,95.5' fill='var(--c3)'/><text x='220' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>3 s</text><ellipse cx='280' cy='120' rx='14' ry='6' fill='var(--c5)' fill-opacity='0.8999999999999999'/><line x1='270' y1='100' x2='293' y2='100' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='300,100 290,104.5 290,95.5' fill='var(--c3)'/><text x='280' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>4 s</text><text x='160' y='180' font-size='12' fill='var(--muted)' text-anchor='middle'>equal distance in equal time → constant velocity</text></svg>",
+    "key": "If the net force is zero, the velocity does not change. Being at rest is also constant velocity (v = 0)."
+   },
+   {
+    "h": "Second law: F = m·a",
+    "p": "A net force accelerates an object, and <b>a = F<sub>net</sub> / m</b>. The acceleration points the same way as the net force. With the same push, an empty shopping cart speeds up more easily than a full one.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='40' y='30' width='40' height='40' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><text x='60' y='55' font-size='12' fill='var(--ink)' text-anchor='middle'>1 kg</text><line x1='80' y1='50' x2='133' y2='50' stroke='var(--ink)' stroke-width='3' fill='none'/><polygon points='140,50 130,54.5 130,45.5' fill='var(--ink)'/><text x='110' y='42' font-size='12' fill='var(--ink)' text-anchor='middle'>2 N</text><line x1='180' y1='50' x2='253' y2='50' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='260,50 250,54.5 250,45.5' fill='var(--c3)'/><text x='220' y='40' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>a = 2 m/s²</text><rect x='30' y='110' width='60' height='60' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.5'/><text x='60' y='145' font-size='12' fill='var(--ink)' text-anchor='middle'>4 kg</text><line x1='90' y1='140' x2='143' y2='140' stroke='var(--ink)' stroke-width='3' fill='none'/><polygon points='150,140 140,144.5 140,135.5' fill='var(--ink)'/><text x='120' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>2 N</text><line x1='180' y1='140' x2='193' y2='140' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='200,140 190,144.5 190,135.5' fill='var(--c3)'/><text x='200' y='130' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>a = 0.5 m/s²</text><text x='160' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>same force: more mass, less acceleration</text></svg>",
+    "key": "1 N = 1 kg·m/s². A force of 1 N gives a 1 kg object an acceleration of 1 m/s². A 100 g apple weighs about 1 N.",
+    "etk": {
+     "tur": "formul",
+     "soru": "Change the net force and the mass: a = F<sub>net</sub> / m.",
+     "girdiler": [
+      {
+       "ad": "F",
+       "etiket": "Net force",
+       "birim": "N",
+       "min": 0,
+       "max": 100,
+       "adim": 1,
+       "deger": 20
+      },
+      {
+       "ad": "m",
+       "etiket": "Mass",
+       "birim": "kg",
+       "min": 1,
+       "max": 50,
+       "adim": 1,
+       "deger": 10
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "a",
+       "ifade": "F/m",
+       "birim": "m/s²",
+       "basamak": 2
+      }
+     ]
+    }
+   },
+   {
+    "h": "Third law: action and reaction",
+    "p": "As you just saw, if A pushes on B, then B pushes on A with an <b>equal and opposite</b> force. The two forces act on <b>different objects</b>, so they do not cancel.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><circle cx='110' cy='58' r='10' fill='var(--c1)' fill-opacity='0.3'/><circle cx='210' cy='58' r='10' fill='var(--c3)' fill-opacity='0.3'/><rect x='90' y='70' width='40' height='80' fill='var(--c1)' fill-opacity='0.25' rx='8'/><rect x='190' y='70' width='40' height='80' fill='var(--c3)' fill-opacity='0.25' rx='8'/><line x1='130' y1='100' x2='190' y2='100' stroke='var(--ink)' stroke-width='2' fill='none'/><line x1='90' y1='110' x2='47' y2='110' stroke='var(--acc)' stroke-width='3' fill='none'/><polygon points='40,110 50,105.5 50,114.5' fill='var(--acc)'/><line x1='230' y1='110' x2='273' y2='110' stroke='var(--acc)' stroke-width='3' fill='none'/><polygon points='280,110 270,114.5 270,105.5' fill='var(--acc)'/><text x='65' y='100' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>B→A</text><text x='255' y='100' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>A→B</text><text x='110' y='170' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='bold'>A</text><text x='210' y='170' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='bold'>B</text><text x='160' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>same magnitude, opposite direction, different objects</text></svg>",
+    "key": "Action and reaction forces are equal in magnitude and opposite in direction. They also act on different objects."
+   },
+   {
+    "h": "Weight ≠ mass",
+    "p": "<b>Mass</b> (kg) is the amount of matter, and it is the same everywhere. <b>Weight</b> (N) is the force of gravity: W = m·g. In this topic we take g = 10 m/s².",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='90' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Earth (g ≈ 10)</text><text x='230' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Mars (g ≈ 3.7)</text><text x='90' y='33' font-size='12' fill='var(--ink)' text-anchor='middle'>m = 50 kg</text><text x='230' y='33' font-size='12' fill='var(--ink)' text-anchor='middle'>m = 50 kg</text><circle cx='90' cy='50' r='10' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.5'/><circle cx='230' cy='50' r='10' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.5'/><line x1='90' y1='62' x2='90' y2='175' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='90,182 85.5,172 94.5,172' fill='var(--c2)'/><line x1='230' y1='62' x2='230' y2='97' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='230,104 225.5,94 234.5,94' fill='var(--c2)'/><text x='100' y='130' font-size='13' fill='var(--c2)' font-weight='bold'>W = 500 N</text><text x='240' y='92' font-size='13' fill='var(--c2)' font-weight='bold'>W ≈ 185 N</text><text x='230' y='140' font-size='12' fill='var(--muted)' text-anchor='middle'>same mass,</text><text x='230' y='158' font-size='12' fill='var(--muted)' text-anchor='middle'>different weight</text></svg>",
+    "key": "Weight is W = m·g. A 50 kg person weighs 500 N on Earth and about 185 N on Mars (g ≈ 3.7)."
+   },
+   {
+    "h": "Normal force",
+    "p": "A surface pushes on an object resting on it with a force <b>perpendicular to the surface</b>. This is the <b>normal force</b> (N). On level ground with no other vertical force, N = W.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='40' y='120' width='240' height='10' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><line x1='60' y1='130' x2='60' y2='190' stroke='var(--muted)' stroke-width='3' fill='none'/><line x1='260' y1='130' x2='260' y2='190' stroke='var(--muted)' stroke-width='3' fill='none'/><rect x='130' y='95' width='60' height='25' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><line x1='160' y1='107' x2='160' y2='54' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='160,47 164.5,57 155.5,57' fill='var(--c3)'/><line x1='160' y1='107' x2='160' y2='160' stroke='var(--c2)' stroke-width='3' fill='none'/><polygon points='160,167 155.5,157 164.5,157' fill='var(--c2)'/><text x='168' y='57' font-size='13' fill='var(--c3)' font-weight='bold'>N</text><text x='168' y='165' font-size='13' fill='var(--c2)' font-weight='bold'>W = m·g</text><text x='230' y='75' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>N = W</text><text x='230' y='93' font-size='12' fill='var(--muted)' text-anchor='middle'>(level table)</text></svg>",
+    "key": "N and W are not an action-reaction pair, because both act on the book.",
+    "once": {
+     "soru": "A 2 kg book rests on a table. How many newtons of upward force does the table put on it? (g = 10)",
+     "secenekler": [
+      {
+       "yazi": "20 N",
+       "neden": "The book is not falling. The table's upward push balances the weight (2 · 10 = 20 N).",
+       "dogru": true
+      },
+      {
+       "yazi": "0",
+       "neden": "If the table did not push, the book would fall."
+      },
+      {
+       "yazi": "2 N",
+       "neden": "2 is the book's mass (kg). Its weight is m·g = 20 N."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Friction",
+    "p": "Friction acts <b>opposite</b> to the motion. For a sliding object, f<sub>k</sub> = μ<sub>k</sub>·N, and μ<sub>k</sub> depends on the kind of surfaces. With a mass of 10 kg and μ<sub>k</sub> = 0.3, f<sub>k</sub> = 30 N.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='135' x2='300' y2='135' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='130' y='95' width='60' height='40' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><line x1='160' y1='95' x2='160' y2='33.4' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='160,26.4 164.5,36.4 155.5,36.4' fill='var(--c3)'/><line x1='160' y1='115' x2='160' y2='176.6' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='160,183.6 155.5,173.6 164.5,173.6' fill='var(--c2)'/><line x1='190' y1='115' x2='218' y2='115' stroke='var(--c1)' stroke-width='2.5' fill='none'/><polygon points='225,115 215,119.5 215,110.5' fill='var(--c1)'/><line x1='130' y1='131' x2='116.4' y2='131' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='109.4,131 119.4,126.5 119.4,135.5' fill='var(--acc)'/><text x='168' y='40' font-size='12' fill='var(--c3)' font-weight='bold'>N = 100 N</text><text x='168' y='182' font-size='12' fill='var(--c2)' font-weight='bold'>W = 100 N</text><text x='230' y='119' font-size='12' fill='var(--c1)' font-weight='bold'>F = 50 N</text><text x='105' y='124' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='bold'>fk = 30 N</text><text x='230' y='60' font-size='12' fill='var(--muted)'>motion</text><line x1='230' y1='70' x2='284.4' y2='70' stroke='var(--muted)' stroke-width='1.5' fill='none'/><polygon points='290,70 282,73.6 282,66.4' fill='var(--muted)'/><text x='232' y='160' font-size='12' fill='var(--ink)'>μk = 0.3</text></svg>",
+    "key": "Friction does not depend on the contact area. It only depends on the kind of surfaces (μ) and on N.",
+    "once": {
+     "soru": "Which way does friction act on a sliding box?",
+     "secenekler": [
+      {
+       "yazi": "Opposite to the motion",
+       "neden": "Friction resists sliding, so it acts opposite to the motion.",
+       "dogru": true
+      },
+      {
+       "yazi": "Along the motion",
+       "neden": "If it did, it would speed the box up."
+      },
+      {
+       "yazi": "Upward",
+       "neden": "Friction is parallel to the surface. The upward push is the normal force."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Static and kinetic friction",
+    "p": "When you push a cabinet that is at rest, <b>static friction</b> grows to match your push, up to a maximum of μ<sub>s</sub>·N. Once your push goes above that, the cabinet slides. Usually μ<sub>k</sub> < μ<sub>s</sub>.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M40 170 H300 M40 170 V30' stroke='var(--ink)' stroke-width='1.5'/><path d='M40 170 L160 60 L172 85 H290' fill='none' stroke='var(--c2)' stroke-width='2.5'/><path d='M160 60 V170' stroke='var(--line)' stroke-dasharray='3 3'/><text x='100' y='150' font-size='11' fill='var(--c2)' text-anchor='middle'>static: fs = F</text><text x='165' y='52' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>fs,max = μs·N</text><text x='230' y='78' font-size='11' fill='var(--c2)' text-anchor='middle'>kinetic: fk = μk·N</text><text x='100' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>object at rest</text><text x='230' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>object slides</text><text x='32' y='36' font-size='12' fill='var(--muted)' text-anchor='end'>f</text><text x='300' y='160' font-size='10' fill='var(--muted)' text-anchor='end'>applied F</text></svg>",
+    "key": "For an object at rest, 0 ≤ fs ≤ μs·N. For a sliding object, fk = μk·N. That is why starting the motion is harder than keeping it going."
+   },
+   {
+    "h": "Free-body diagram",
+    "p": "Draw the object as a dot and add only the forces <b>acting on it</b> as arrows. Then write F<sub>net</sub> = m·a for each axis.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><polygon points='20,180 150,180 150,105' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><rect x='73' y='126.5' width='24' height='16' fill='var(--c4)' fill-opacity='0.45' stroke='var(--c4)' stroke-width='1.5' transform='rotate(-30 85 142.5)'/><path d='M50 180 A30 30 0 0 0 46 165' fill='none' stroke='var(--ink)' stroke-width='1.5'/><text x='56' y='176' font-size='12' fill='var(--ink)'>30°</text><text x='85' y='100' font-size='12' fill='var(--ink)' text-anchor='middle'>10 kg, at rest</text><text x='235' y='14' font-size='12' fill='var(--muted)' text-anchor='middle'>free-body diagram</text><line x1='235' y1='95' x2='235' y2='166.4' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='235,173.4 230.5,163.4 239.5,163.4' fill='var(--c2)'/><line x1='235' y1='95' x2='204.5' y2='42.3' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='201,36.2 209.9,42.6 202.1,47.1' fill='var(--c3)'/><line x1='235' y1='95' x2='262.8' y2='78.9' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='268.9,75.4 262.5,84.3 258,76.5' fill='var(--acc)'/><circle cx='235' cy='95' r='4' fill='var(--ink)'/><text x='196' y='40' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='bold'>N ≈ 87 N</text><text x='258' y='62' font-size='12' fill='var(--acc)' font-weight='bold'>f = 50 N</text><text x='241' y='165' font-size='12' fill='var(--c2)' font-weight='bold'>W = 100 N</text></svg>",
+    "key": "Draw the forces acting on the object, not the forces it exerts. On an incline, N = W·cosθ, which is smaller than W.",
+    "etk": {
+     "tur": "isaretle",
+     "soru": "The free-body diagram of a 10 kg box at rest on an incline. Explore the arrows.",
+     "noktalar": [
+      {
+       "x": 85,
+       "y": 134,
+       "ad": "Box",
+       "acik": "It rests on a 30° incline. In the diagram it is drawn as a dot, and the forces start from that dot."
+      },
+      {
+       "x": 235,
+       "y": 132,
+       "ad": "Weight W",
+       "acik": "The weight is W = m·g = 10·10 = 100 N, and it points straight down."
+      },
+      {
+       "x": 220,
+       "y": 69,
+       "ad": "Normal force N",
+       "acik": "The normal force is perpendicular to the surface, and N = W·cos30° ≈ 87 N. On an incline, N is smaller than W."
+      },
+      {
+       "x": 258,
+       "y": 82,
+       "ad": "Static friction f",
+       "acik": "Friction keeps the box from sliding, so it points up the slope. Its magnitude is f = W·sin30° = 50 N."
+      }
+     ]
+    },
+    "once": {
+     "soru": "Which of these is not drawn on the free-body diagram of a book on a table?",
+     "secenekler": [
+      {
+       "yazi": "The book's push on the table",
+       "neden": "That force acts on the table. The diagram only shows forces that act on the book.",
+       "dogru": true
+      },
+      {
+       "yazi": "The book's weight",
+       "neden": "Weight acts on the book, so it is drawn."
+      },
+      {
+       "yazi": "The table's push on the book",
+       "neden": "The normal force acts on the book, so it is drawn."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Sliding on an incline",
+    "p": "On an incline, the parallel component of the weight, <b>W·sinθ</b>, pulls the object down the slope. Without friction, <b>a = g·sinθ</b>, and the acceleration does not depend on mass. With friction, a = g·sinθ − μ<sub>k</sub>·g·cosθ.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='20' y='22' font-size='12' fill='var(--ink)' font-weight='bold'>a = g·sinθ − μ<tspan font-size='9' baseline-shift='sub'>k</tspan>·g·cosθ</text><polygon points='20,180 150,180 150,82' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><rect x='76' y='109.2' width='28' height='18' fill='var(--c4)' fill-opacity='0.45' stroke='var(--c4)' stroke-width='1.5' transform='rotate(-37 90 127.2)'/><path d='M50 180 A30 30 0 0 0 44 162' fill='none' stroke='var(--ink)' stroke-width='1.5'/><text x='55' y='175' font-size='12' fill='var(--ink)'>37°</text><text x='310' y='46' font-size='11' fill='var(--muted)' text-anchor='end'>μ<tspan font-size='9' baseline-shift='sub'>k</tspan> = 0.5, g ≈ 10</text><line x1='235' y1='100' x2='235' y2='153' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='235,160 230.5,150 239.5,150' fill='var(--c2)'/><line x1='235' y1='100' x2='211.8' y2='117.5' stroke='var(--c4)' stroke-width='2' fill='none'/><polygon points='206.2,121.7 211.4,112.1 216.9,119.3' fill='var(--c4)'/><line x1='235' y1='100' x2='259.6' y2='132.7' stroke='var(--muted)' stroke-width='2' fill='none'/><polygon points='263.8,138.3 254.2,133 261.4,127.6' fill='var(--muted)'/><line x1='235' y1='100' x2='210.4' y2='67.3' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='206.2,61.7 215.8,67 208.6,72.4' fill='var(--c3)'/><line x1='235' y1='100' x2='248.5' y2='89.8' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='254.1,85.6 248.9,95.2 243.4,88' fill='var(--acc)'/><circle cx='235' cy='100' r='4' fill='var(--ink)'/><text x='204.2' y='135.7' font-size='11' fill='var(--c4)' text-anchor='end' font-weight='bold'>W·sinθ</text><text x='267.8' y='142.3' font-size='11' fill='var(--muted)'>W·cosθ</text><text x='202.2' y='63.7' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='bold'>N</text><text x='259.1' y='83.6' font-size='12' fill='var(--acc)' font-weight='bold'>f</text><text x='241' y='158' font-size='12' fill='var(--c2)' font-weight='bold'>W</text><text x='235' y='194' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>a = 6 − 4 = 2 m/s²</text></svg>",
+    "key": "The normal force balances the perpendicular component, W·cosθ. If θ = 37° and μk = 0.5, then a = 10·0.6 − 0.5·10·0.8 = 2 m/s².",
+    "once": {
+     "soru": "A truck and a marble are released on a frictionless 30° incline. Which one has the larger acceleration?",
+     "secenekler": [
+      {
+       "yazi": "They are equal",
+       "neden": "a = g·sinθ. Mass appears in both the force and the inertia, so it cancels.",
+       "dogru": true
+      },
+      {
+       "yazi": "The truck",
+       "neden": "The force pulling the truck is large, but so is its mass. So the acceleration is the same."
+      },
+      {
+       "yazi": "The marble",
+       "neden": "Being light does not increase the acceleration, because a = g·sinθ."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Tension and connected objects",
+    "p": "A taut rope pulls the object tied to it along the rope with a <b>tension force</b> (T). Objects connected by a rope move with the same acceleration. First find the acceleration from a = F<sub>net</sub> / m<sub>total</sub>, then find T.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='160' y='30' font-size='12' fill='var(--muted)' text-anchor='middle'>frictionless floor</text><line x1='20' y1='160' x2='300' y2='160' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='40' y='120' width='50' height='40' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><rect x='150' y='112' width='64' height='48' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><text x='65' y='145' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>2 kg</text><text x='182' y='141' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>3 kg</text><line x1='90' y1='140' x2='150' y2='140' stroke='var(--muted)' stroke-width='2' fill='none'/><line x1='92' y1='124' x2='109' y2='124' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='116,124 106,128.5 106,119.5' fill='var(--c2)'/><line x1='148' y1='124' x2='131' y2='124' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='124,124 134,119.5 134,128.5' fill='var(--c2)'/><text x='102' y='114' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='bold'>T</text><text x='138' y='114' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='bold'>T</text><line x1='214' y1='136' x2='283' y2='136' stroke='var(--c3)' stroke-width='3' fill='none'/><polygon points='290,136 280,140.5 280,131.5' fill='var(--c3)'/><text x='252' y='126' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>F = 20 N</text><text x='160' y='180' font-size='12' fill='var(--ink)' text-anchor='middle'>a = 20 / (2 + 3) = 4 m/s²</text><text x='160' y='196' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>T = 2 · 4 = 8 N</text></svg>",
+    "key": "The rope pulls on the two objects with equal and opposite T. T is an internal force, so it does not change the acceleration of the system.",
+    "once": {
+     "soru": "Two boxes of 2 kg and 3 kg are tied together with a rope. They are pulled with 10 N on a frictionless floor. What is the acceleration, in m/s²?",
+     "secenekler": [
+      {
+       "yazi": "2",
+       "neden": "Think of the two boxes as one object. a = 10 / (2 + 3) = 2 m/s².",
+       "dogru": true
+      },
+      {
+       "yazi": "5",
+       "neden": "The 10 N accelerates the whole 5 kg, not just the 2 kg."
+      },
+      {
+       "yazi": "3.3",
+       "neden": "10 / 3 only accounts for one box. But the two boxes move together."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The pulley system (Atwood machine)",
+    "p": "Two objects of 3 kg and 2 kg hang from a pulley. The net force is the difference of the weights, so <b>a = (m₁ − m₂)·g / (m₁ + m₂)</b>. The heavier object moves down.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='70' y1='10' x2='150' y2='10' stroke='var(--ink)' stroke-width='3'/><line x1='110' y1='10' x2='110' y2='45' stroke='var(--ink)' stroke-width='2'/><line x1='90' y1='45' x2='90' y2='110' stroke='var(--muted)' stroke-width='1.5'/><line x1='130' y1='45' x2='130' y2='90' stroke='var(--muted)' stroke-width='1.5'/><circle cx='110' cy='45' r='20' fill='var(--panel)' stroke='var(--ink)' stroke-width='2'/><circle cx='110' cy='45' r='3' fill='var(--ink)'/><rect x='72' y='110' width='36' height='36' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><text x='90' y='132' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='bold'>3 kg</text><rect x='116' y='90' width='28' height='28' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><text x='130' y='108' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='bold'>2 kg</text><line x1='90' y1='108' x2='90' y2='79' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='90,72 94.5,82 85.5,82' fill='var(--c3)'/><text x='84' y='86' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='bold'>T</text><line x1='130' y1='88' x2='130' y2='73' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='130,66 134.5,76 125.5,76' fill='var(--c3)'/><text x='136' y='76' font-size='12' fill='var(--c3)' font-weight='bold'>T</text><line x1='90' y1='148' x2='90' y2='181' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='90,188 85.5,178 94.5,178' fill='var(--c2)'/><text x='84' y='182' font-size='11' fill='var(--c2)' text-anchor='end' font-weight='bold'>30 N</text><line x1='130' y1='120' x2='130' y2='143' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='130,150 125.5,140 134.5,140' fill='var(--c2)'/><text x='136' y='146' font-size='11' fill='var(--c2)' font-weight='bold'>20 N</text><line x1='50' y1='115' x2='50' y2='138' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='50,145 45.5,135 54.5,135' fill='var(--acc)'/><text x='44' y='134' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='bold'>a</text><line x1='170' y1='115' x2='170' y2='92' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='170,85 174.5,95 165.5,95' fill='var(--acc)'/><text x='176' y='104' font-size='12' fill='var(--acc)' font-weight='bold'>a</text><text x='190' y='50' font-size='11' fill='var(--muted)'>g ≈ 10 m/s²</text><text x='190' y='80' font-size='12' fill='var(--ink)'>a = (30 − 20) / 5</text><text x='190' y='98' font-size='12' fill='var(--acc)' font-weight='bold'>= 2 m/s²</text><text x='190' y='132' font-size='12' fill='var(--ink)'>T = m₂·(g + a)</text><text x='190' y='150' font-size='12' fill='var(--c3)' font-weight='bold'>= 2·12 = 24 N</text><text x='190' y='182' font-size='11' fill='var(--muted)'>heavier goes down</text></svg>",
+    "key": "For an ideal pulley and g = 10, a = (3 − 2)·10 / 5 = 2 m/s². From the lighter object, T = m₂·(g + a) = 2·12 = 24 N.",
+    "once": {
+     "soru": "3 kg and 2 kg hang on the two sides of a pulley. What net force accelerates the system, in N? (g = 10)",
+     "secenekler": [
+      {
+       "yazi": "10 N",
+       "neden": "The weights are 30 N and 20 N. They pull in opposite directions, so the net force is their difference, 10 N.",
+       "dogru": true
+      },
+      {
+       "yazi": "50 N",
+       "neden": "The weights pull in opposite directions on the two sides of the rope. So they do not add."
+      },
+      {
+       "yazi": "30 N",
+       "neden": "30 N is only the weight of the heavier object. The other object holds it back."
+      }
+     ]
+    }
+   },
+   {
+    "h": "A scale in an elevator",
+    "p": "A scale reads the <b>normal force</b>. When the elevator accelerates upward, N = m·(g + a). When it accelerates downward, N = m·(g − a). In free fall, N = 0.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='40' width='80' height='110' rx='4' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><circle cx='56' cy='86' r='8' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><rect x='44' y='96' width='24' height='40' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><rect x='36' y='136' width='40' height='8' fill='var(--ink)'/><text x='60' y='28' font-size='11' fill='var(--muted)' text-anchor='middle'>accelerating up</text><text x='60' y='172' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>N &gt; m·g</text><text x='60' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>you feel heavier</text><line x1='88' y1='110' x2='88' y2='73' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='88,66 92.5,76 83.5,76' fill='var(--c2)'/><text x='88' y='124' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>a</text><rect x='120' y='40' width='80' height='110' rx='4' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><circle cx='156' cy='86' r='8' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><rect x='144' y='96' width='24' height='40' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><rect x='136' y='136' width='40' height='8' fill='var(--ink)'/><text x='160' y='28' font-size='11' fill='var(--muted)' text-anchor='middle'>constant velocity</text><text x='160' y='172' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>N = m·g</text><text x='160' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>normal</text><text x='184' y='90' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='bold'>a = 0</text><rect x='220' y='40' width='80' height='110' rx='4' fill='var(--panel)' stroke='var(--muted)' stroke-width='1.5'/><circle cx='256' cy='86' r='8' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><rect x='244' y='96' width='24' height='40' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.5'/><rect x='236' y='136' width='40' height='8' fill='var(--ink)'/><text x='260' y='28' font-size='11' fill='var(--muted)' text-anchor='middle'>accelerating down</text><text x='260' y='172' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>N &lt; m·g</text><text x='260' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>you feel lighter</text><line x1='288' y1='66' x2='288' y2='103' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='288,110 283.5,100 292.5,100' fill='var(--c2)'/><text x='288' y='60' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='bold'>a</text></svg>",
+    "key": "What matters is the direction of the acceleration, not of the velocity. In free fall the scale reads 0, but your weight (m·g) does not change.",
+    "once": {
+     "soru": "A 60 kg person stands on a scale in an elevator accelerating upward at 2 m/s². What does the scale read, in N? (g = 10)",
+     "secenekler": [
+      {
+       "yazi": "720 N",
+       "neden": "The floor has to both support the person and accelerate them. So N = 60·(10 + 2) = 720 N.",
+       "dogru": true
+      },
+      {
+       "yazi": "600 N",
+       "neden": "600 N is the reading in an elevator at rest or moving at constant velocity."
+      },
+      {
+       "yazi": "480 N",
+       "neden": "That is the reading in an elevator accelerating downward: 60·(10 − 2)."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Air resistance and terminal velocity",
+    "p": "Air resistance grows with speed. When it equals the weight, the net force is zero and the object falls at a constant <b>terminal velocity</b>. A parachute increases the cross-sectional area and lowers the terminal velocity.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><path d='M40 170 H185 M40 170 V30' stroke='var(--ink)' stroke-width='1.5'/><text x='185' y='186' font-size='12' fill='var(--muted)' text-anchor='end'>t</text><text x='32' y='36' font-size='12' fill='var(--muted)' text-anchor='end'>v</text><polyline points='40,170 45,155.4 50,142.7 55,131.7 60,122.1 65,113.8 70,106.7 75,100.5 80,95.1 85,90.4 90,86.4 95,82.9 100,79.8 105,77.2 110,74.9 115,72.9 120,71.2 125,69.7 130,68.4 135,67.3 140,66.3 145,65.5 150,64.7 155,64.1 160,63.6 165,63.1 170,62.7 175,62.3 180,62' fill='none' stroke='var(--c3)' stroke-width='2.5'/><path d='M40 60 H185' stroke='var(--c3)' stroke-dasharray='5 4'/><text x='112' y='52' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='bold'>terminal velocity</text><path d='M40 170 L80 44' stroke='var(--muted)' stroke-dasharray='3 3'/><text x='84' y='100' font-size='11' fill='var(--muted)'>slope is g at the start</text><circle cx='255' cy='105' r='14' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><line x1='255' y1='119' x2='255' y2='163' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='255,170 250.5,160 259.5,160' fill='var(--c2)'/><text x='262' y='165' font-size='12' fill='var(--c2)' font-weight='bold'>W</text><line x1='255' y1='91' x2='255' y2='47' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='255,40 259.5,50 250.5,50' fill='var(--c3)'/><text x='262' y='50' font-size='12' fill='var(--c3)' font-weight='bold'>F<tspan font-size='9' baseline-shift='sub'>air</tspan></text><text x='255' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>F<tspan font-size='9' baseline-shift='sub'>air</tspan> = W → a = 0</text></svg>",
+    "key": "Terminal velocity gets larger with more mass and smaller with more cross-sectional area.",
+    "once": {
+     "soru": "After falling for a while, a skydiver's speed stops increasing. What is the net force?",
+     "secenekler": [
+      {
+       "yazi": "Zero",
+       "neden": "If the velocity is constant, the acceleration is zero. So air resistance has become equal to the weight.",
+       "dogru": true
+      },
+      {
+       "yazi": "Equal to the weight",
+       "neden": "If the net force equaled the weight, the skydiver would keep speeding up."
+      },
+      {
+       "yazi": "Upward",
+       "neden": "With an upward net force, the skydiver would slow down."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• First law: if the net force is zero, the velocity does not change.<br>• Second law: F<sub>net</sub> = m·a.<br>• Third law: action and reaction are equal, opposite, and act on different objects.<br>• Weight is W = m·g.<br>• For friction, f<sub>s</sub> ≤ μ<sub>s</sub>·N and f<sub>k</sub> = μ<sub>k</sub>·N.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='10' y='20' width='95' height='160' fill='var(--panel)' rx='8'/><rect x='112.5' y='20' width='95' height='160' fill='var(--panel)' rx='8'/><rect x='215' y='20' width='95' height='160' fill='var(--panel)' rx='8'/><text x='57.5' y='45' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>1st law</text><text x='160' y='45' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>2nd law</text><text x='262.5' y='45' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>3rd law</text><circle cx='30' cy='100' r='4' fill='var(--c1)'/><circle cx='50' cy='100' r='4' fill='var(--c1)'/><circle cx='70' cy='100' r='4' fill='var(--c1)'/><circle cx='90' cy='100' r='4' fill='var(--c1)'/><text x='57.5' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>Fnet = 0</text><text x='57.5' y='168' font-size='12' fill='var(--muted)' text-anchor='middle'>v constant</text><rect x='130' y='85' width='24' height='24' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><line x1='154' y1='97' x2='188' y2='97' stroke='var(--ink)' stroke-width='2.5' fill='none'/><polygon points='195,97 185,101.5 185,92.5' fill='var(--ink)'/><text x='160' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>F = m·a</text><text x='160' y='168' font-size='12' fill='var(--muted)' text-anchor='middle'>a along F</text><rect x='240' y='85' width='22' height='24' fill='var(--c1)' fill-opacity='0.3'/><rect x='263' y='85' width='22' height='24' fill='var(--c3)' fill-opacity='0.3'/><line x1='240' y1='97' x2='229' y2='97' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='222,97 232,92.5 232,101.5' fill='var(--acc)'/><line x1='285' y1='97' x2='296' y2='97' stroke='var(--acc)' stroke-width='2.5' fill='none'/><polygon points='303,97 293,101.5 293,92.5' fill='var(--acc)'/><text x='262.5' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>action = reaction</text><text x='262.5' y='168' font-size='12' fill='var(--muted)' text-anchor='middle'>different objects</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "Masses of 4 kg and 1 kg hang on the two sides of an ideal pulley. What is the acceleration of the system, in m/s²? (g = 10 m/s²)",
+    "cevap": 6,
+    "birim": "m/s²",
+    "e": "a = (m₁ − m₂)·g / (m₁ + m₂) = (4 − 1)·10 / 5 = 6 m/s². The heavier 4 kg mass moves down."
+   },
+   {
+    "tur": "sayi",
+    "q": "A 10 kg box is pulled with a horizontal force of 50 N across a floor where the coefficient of kinetic friction is μk = 0.2. If g = 10 m/s², what is the box's acceleration, in m/s²?",
+    "cevap": 3,
+    "birim": "m/s²",
+    "e": "N = m·g = 100 N and f<sub>k</sub> = 0.2·100 = 20 N. The net force is 50 − 20 = 30 N, and the acceleration is 30 / 10 = 3 m/s²."
+   },
+   {
+    "tur": "sirala",
+    "q": "A 60 kg person stands on a scale in an elevator. Put the scale readings in order from smallest to largest. (g = 10 m/s²)",
+    "ogeler": [
+     "The elevator is in free fall",
+     "The elevator accelerates downward at 2 m/s²",
+     "The elevator moves at constant velocity",
+     "The elevator accelerates upward at 2 m/s²"
+    ],
+    "e": "A scale reads the normal force. In free fall N = 0, and accelerating downward N = 60·(10 − 2) = 480 N. At constant velocity it is 600 N, and accelerating upward it is 60·(10 + 2) = 720 N."
+   },
+   {
+    "q": "When a horse pulls a cart, the cart pulls back on the horse with the same magnitude. Why don't these two forces cancel?",
+    "o": [
+     "They act on different objects",
+     "The horse's force is slightly larger",
+     "The reaction force is delayed",
+     "The cart is light, so there is no reaction"
+    ],
+    "a": 0,
+    "e": "Action and reaction forces act on different objects. What moves the horse forward is the friction force the ground puts on its hooves.",
+    "y": [
+     "",
+     "Action and reaction forces are always exactly equal in magnitude. There is no difference between them.",
+     "Action and reaction appear at the same moment. There is no delay between them.",
+     "However small the mass is, the reaction force is always there and equals the action."
+    ]
+   }
+  ]
  }
 }

@@ -108,3 +108,16 @@ Bir terim her yerde aynı çevrilir. Yeni terim çıktıkça buraya eklenir.
 | tekrar | review | arayüz |
 | seri | streak | arayüz |
 | seviye testi | placement test | arayüz |
+| ağırlık (simge) | W | Türkçede G; W = m·g. SVG içindeki tek harfli G de W yapılır |
+| normal kuvvet | normal force (N) | |
+| sürtünme (statik / kinetik) | static / kinetic friction | |
+| eylemsizlik | inertia | |
+| etki-tepki | action and reaction | |
+| ip gerilmesi | tension | |
+| eğik düzlem | incline | |
+| limit hız | terminal velocity | |
+| serbest cisim diyagramı | free-body diagram | |
+| bağıl hız | relative velocity | v<sub>rel</sub> |
+| referans sistemi | reference frame | |
+| akıntı / kayık hızı | current / boat (vc, vb) | Türkçede va, vk |
+| sürüklenme | drift | |

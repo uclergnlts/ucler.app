@@ -315,7 +315,7 @@ function SurtunmeLab({ v, set, saat = 0 }: SahneProps) {
   const okF = Math.min(130, F * 0.55), okf = Math.min(130, f * 0.55);
   const kenar = SUR.KX - 30;
   return (
-    <svg viewBox="0 0 340 232" role="img" aria-label={cev("{0} kilogram kutu, itme {1} newton, sürtünme {2} newton, {3}", m, F, Math.round(f), kayiyor ? "kayıyor" : "duruyor")}>
+    <svg viewBox="0 0 340 232" role="img" aria-label={cev("{0} kilogram kutu, itme {1} newton, sürtünme {2} newton, {3}", m, F, Math.round(f), kayiyor ? cev("kayıyor") : cev("duruyor"))}>
       <text x={10} y={22} fontSize={13} fontWeight={800} fill={kayiyor ? "var(--c1)" : "var(--ink)"}>
         {kayiyor ? (Math.abs(a) < 0.01 ? cev("Kayıyor: hız sabit") : a > 0 ? cev("Kayıyor: hızlanıyor") : cev("Kayıyor: yavaşlıyor")) : cev("Duruyor: statik sürtünme itmeyi dengeliyor")}
       </text>
@@ -343,7 +343,7 @@ function SurtunmeLab({ v, set, saat = 0 }: SahneProps) {
           <line x1={SUR.KX} x2={SUR.KX - okf + 9} y1={SUR.ZEMIN - 3} y2={SUR.ZEMIN - 3} stroke="var(--c2)" strokeWidth={3.5} strokeLinecap="round" />
           <path d={`M${SUR.KX - okf} ${SUR.ZEMIN - 3} l10 -6 l0 12 Z`} fill="var(--c2)" />
           <text x={SUR.KX} y={SUR.ZEMIN + 32} fontSize={11.5} fontWeight={800} fill="var(--c2)" textAnchor="middle">
-            {cev("sürtünme")} {Math.round(f)} N ({kayiyor ? "kinetik" : "statik"})
+            {cev("sürtünme")} {Math.round(f)} N ({kayiyor ? cev("kinetik") : cev("statik")})
           </text>
         </g>
       )}

@@ -90,7 +90,7 @@ function Net({ v }: SahneProps) {
       </g>
       {net !== 0 && <Ok x1={170} y1={172} x2={170 + net * K} y2={172} renk="var(--ink)" kalin={2.5} />}
       <text x={170} y={net !== 0 ? 198 : 184} fontSize={14} fontWeight={800} textAnchor="middle" fill={net === 0 ? "var(--good)" : "var(--ink)"}>
-        {cev("Net kuvvet:")} {Math.abs(net)} N{net > 0 ? cev(" sağa") : net < 0 ? " sola" : ""}
+        {cev("Net kuvvet:")} {Math.abs(net)} N{net > 0 ? cev(" sağa") : net < 0 ? cev(" sola") : ""}
       </text>
       <text x={170} y={net !== 0 ? 218 : 204} fontSize={12} textAnchor="middle" fill="var(--muted)">
         {net === 0 ? cev("Kuvvetler dengede: hız değişmez") : cev("Kutunun hızı net kuvvet yönünde değişir")}
@@ -116,7 +116,7 @@ function Fma({ s, v, t, oynuyor, kosular }: SahneProps) {
       <g fontSize={11.5} fill="var(--muted)">
         {son.map((k, i) => {
           const kF = k.F ?? Number(s.F ?? 0), km = k.m ?? Number(s.m ?? 10), ka = kF / km;
-          return <text key={i} x={170} y={52 + i * 17} textAnchor="middle">{km} {cev("kg,")} {kF} N: a = {say(ka, 2)} m/s², {T} {cev("s'de")} {say(0.5 * ka * T * T)} m</text>;
+          return <text key={i} x={170} y={52 + i * 17} textAnchor="middle">{cev("{0} kg, {1} N: a = {2} m/s², {3} s'de {4} m", km, kF, say(ka, 2), T, say(0.5 * ka * T * T))}</text>;
         })}
       </g>
       <line x1={FMA.X0 - 14} x2={330} y1={FMA.YOL} y2={FMA.YOL} stroke="var(--ink)" strokeWidth={2} />
@@ -219,7 +219,7 @@ function Surtunme({ v }: SahneProps) {
   const F = v.F ?? 0, SINIR = 0.4 * 196, FK = 0.3 * 196, kayar = F > SINIR, f = kayar ? FK : F, K = 1.1, Y = 170;
   const bar = (x: number) => 40 + (x / 100) * 260;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("İtme {0} newton, sürtünme {1} newton, dolap {2}", F, Math.round(f), kayar ? "kayıyor" : "duruyor")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("İtme {0} newton, sürtünme {1} newton, dolap {2}", F, Math.round(f), kayar ? cev("kayıyor") : cev("duruyor"))}>
       <rect x={40} y={26} width={260} height={10} rx={5} fill="var(--line)" />
       <rect x={40} y={26} width={bar(F) - 40} height={10} rx={5} fill={kayar ? "var(--c2)" : "var(--c1)"} />
       <line x1={bar(SINIR)} x2={bar(SINIR)} y1={20} y2={42} stroke="var(--ink)" strokeWidth={2} />
@@ -300,7 +300,7 @@ function Yatay({ v, t, oynuyor, kosular }: SahneProps) {
   const eskiler = [...new Set(kosular.map((k) => k.v))].filter((h) => !(bitti && h === v0));
   const bx = YT.X0 + v0 * tt * YT.PX, by = YT.Y0 + 0.5 * G * tt * tt * YT.PY, bayrak = YT.X0 + 40 * YT.PX;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Atış hızı {0} metre bölü saniye{1}", v0, bitti ? `, taş ${v0 * 2} metre öteye düştü` : "")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Atış hızı {0} metre bölü saniye{1}", v0, bitti ? cev(", taş {0} metre öteye düştü", v0 * 2) : "")}>
       <rect x={6} y={60} width={50} height={140} fill="var(--line)" />
       <line x1={6} x2={334} y1={200} y2={200} stroke="var(--ink)" strokeWidth={2} />
       <text x={31} y={134} fontSize={11} fill="var(--muted)" textAnchor="middle">19,6 m</text>
@@ -344,7 +344,7 @@ function Egik({ s, v, t, oynuyor, kosular }: SahneProps) {
   const bx = EG.X0 + vx * tau * EG.PX, by = EG.ZEMIN - Math.max(0, vy * tau - 0.5 * G * tau * tau) * EG.PX;
   const vyNow = vy - G * tau, r = (aci * Math.PI) / 180;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Açı {0} derece, 20 metre bölü saniye{1}", aci, bitti && !tepe ? `, menzil ${say(R)} metre` : "")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Açı {0} derece, 20 metre bölü saniye{1}", aci, bitti && !tepe ? cev(", menzil {0} metre", say(R)) : "")}>
       <line x1={8} x2={334} y1={EG.ZEMIN} y2={EG.ZEMIN} stroke="var(--ink)" strokeWidth={2} />
       <g fill="none" stroke="var(--c1)" strokeWidth={1.5} opacity={0.3}>
         {eskiler.map((a) => <polyline key={a} points={yolu(a, ucus(a).T)} />)}

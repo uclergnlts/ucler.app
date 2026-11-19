@@ -3,7 +3,7 @@
 // Oyunlar 2026-10-30'da menüden çıktı (Üçler: şimdilik geri planda); /oyunlar/ sayfaları duruyor, hiçbir sekmeye bağlı değil.
 // Kaydedilenler Profil'in içindedir.
 // Ders ekranında (/ders/konu/), tekrar ve günün sorusu ekranında gizlenir.
-import { cev } from "@/lib/dil";
+import { cev, DIL } from "@/lib/dil";
 import { ANA } from "@/lib/site";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -20,6 +20,9 @@ const TABS = [
   { k: "deneme", href: "/deneme/", label: cev("Deneme"), renk: "var(--c4)" },
   { k: "profil", href: "/profil/", label: cev("Profil"), renk: "var(--c5)" },
 ] as const;
+
+// Videolar Türkçe seslidir; İngilizce kopyada sekme ve kart altındaki videolar gösterilmez (lib/videolar.ts).
+const GORUNEN = DIL === "en" ? TABS.filter((t) => t.k !== "video") : TABS;
 
 /** Sayfanın ait olduğu sekme. Ders haritası (/fizik/) ve bulunamayan sayfalar hiçbir sekmeye ait değil. */
 function sekme(parts: string[]): string | undefined {
@@ -42,7 +45,7 @@ export default function Tabs() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-10 border-t border-border bg-background pb-[env(safe-area-inset-bottom,0px)]">
       <nav aria-label={cev("Bölümler")} className="mx-auto grid h-[var(--nav)] max-w-[520px] grid-cols-5">
-        {TABS.map((t) => {
+        {GORUNEN.map((t) => {
           const I = Icon[t.k], on = cur === t.k;
           return (
             <Link
