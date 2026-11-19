@@ -45,7 +45,7 @@ export default function Tabs() {
   const cur = sekme(parts);
   return (
     <div className="fixed inset-x-0 bottom-0 z-10 border-t border-border bg-background pb-[env(safe-area-inset-bottom,0px)]">
-      <nav aria-label={cev("Bölümler")} className="mx-auto grid h-[var(--nav)] max-w-[520px] grid-cols-5">
+      <nav aria-label={cev("Bölümler")} className="mx-auto grid h-[var(--nav)] max-w-[520px]" style={{ gridTemplateColumns: `repeat(${GORUNEN.length}, minmax(0, 1fr))` }}>
         {GORUNEN.map((t) => {
           const I = Icon[t.k], on = cur === t.k;
           return (
