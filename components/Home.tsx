@@ -120,13 +120,15 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
                 const k = `${d}.${e.id}`, nA = asamaSayisi(e.cardCount ?? 0);
                 return n + (prog[k] ? 1 : Math.min(asama[k] ?? 0, nA) / nA);
               }, 0);
-              const I = Icon[d];
               return (
-                <Link key={d} data-ders={d} href={href(d)} className="grid grid-cols-[auto_1fr_auto] items-center gap-x-3 gap-y-2 border-b border-border py-3.5 transition-colors active:bg-secondary">
-                  <span className="text-acc [&_svg]:size-5"><I /></span>
-                  <b className="font-display text-[18px] font-extrabold">{s.ad}</b>
-                  <span className="text-[13px] font-semibold tabular-nums text-muted-foreground">{basladi ? `${basladi} başladın · ${done}/${ready.length}` : `${done} / ${ready.length}`}</span>
-                  <Progress className="col-start-2 col-end-4 h-[3px] rounded-none" value={ready.length ? (100 * dolu) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti${basladi ? `, ${basladi} tanesine başladın` : ""}`} />
+                <Link key={d} data-ders={d} href={href(d)} className="relative mb-2.5 grid min-h-[116px] content-between overflow-hidden rounded-lg border border-border bg-card p-4 pr-[120px] transition-transform active:scale-[.99]">
+                  {/* Gravür: kanal kapaklarındaki taralı nesne. Tek renkli maske olduğu için iki temada da mürekkep rengini alır. */}
+                  <span aria-hidden className="absolute -right-1 bottom-0 top-2 w-[118px] bg-[var(--ink)] opacity-90" style={{ maskImage: `url(/gravur/${d}.png)`, WebkitMaskImage: `url(/gravur/${d}.png)`, maskSize: "contain", WebkitMaskSize: "contain", maskRepeat: "no-repeat", WebkitMaskRepeat: "no-repeat", maskPosition: "center bottom", WebkitMaskPosition: "center bottom" }} />
+                  <span className="grid gap-0.5">
+                    <b className="font-display text-[22px] leading-tight font-extrabold">{s.ad}</b>
+                    <span className="font-mono text-[11px] tracking-[.08em] text-muted-foreground uppercase">{basladi ? `${basladi} başladın · ${done}/${ready.length}` : `${done} / ${ready.length} konu`}</span>
+                  </span>
+                  <Progress className="h-[3px] rounded-none" value={ready.length ? (100 * dolu) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti${basladi ? `, ${basladi} tanesine başladın` : ""}`} />
                 </Link>
               );
             })}
