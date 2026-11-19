@@ -2,10 +2,12 @@
 @import "tw-animate-css";
 
 /* Yazı tipleri yerelde (public/fonts, fontsource-variable 5.2.5, OFL): derleme Google Fonts'a bağlanmaz. */
-@font-face{font-family:'Inter';font-style:normal;font-display:swap;font-weight:100 900;src:url(/fonts/inter-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Inter';font-style:normal;font-display:swap;font-weight:100 900;src:url(/fonts/inter-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'Manrope';font-style:normal;font-display:swap;font-weight:100 900;src:url(/fonts/manrope-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Manrope';font-style:normal;font-display:swap;font-weight:100 900;src:url(/fonts/manrope-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-display:swap;font-weight:200 800;src:url(/fonts/bricolage-grotesque-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-display:swap;font-weight:200 800;src:url(/fonts/bricolage-grotesque-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-display:swap;font-weight:500;src:url(/fonts/ibm-plex-mono-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-display:swap;font-weight:500;src:url(/fonts/ibm-plex-mono-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 
 /* shadcn/ui jetonları: bileşenler (components/ui/) bu adları kullanır; değerler aşağıdaki :root renkleridir. */
 @theme inline {
@@ -31,6 +33,7 @@
   --color-bad-soft: var(--bad-soft);
   --font-sans: var(--f-body);
   --font-display: var(--f-display);
+  --font-mono: var(--f-mono);
   /* Deney defteri: köşeler küçük, kartlar kâğıt gibi. */
   --radius-lg: 6px;
   --radius-xl: 8px;
@@ -39,36 +42,38 @@
 }
 
 /* Düzen: telefon genişliğinde tek sütun, uygulama gibi; altta bölüm sekmeleri (ders adları değil).
-   Tasarım ilkesi (Üçler, 2026-11-16): "deney defteri". Ciddi, gerçek deney hissi; az ama güçlü renk.
-   Açık tema (varsayılan): sıcak kâğıt zemin, mürekkep siyahı yazı, tek vurgu kırmızı, ana düğme siyah.
-   Koyu tema ("karanlık oda"): aynı sistemin koyusu, vurgu amber. Ayarlar > Görünüm'den seçilir (lib/tema.ts).
-   Ders renkleri yalnızca küçük işaretlerde ve görsellerde kullanılır. */
+   Tasarım ilkesi (Üçler, 2026-11-19): YouTube kanalının "Gece Defteri" görünümü (SABLON-GECE-DEFTERI.md).
+   Koyu tema: gece laciverti zemin, tebeşir yazı, Çizgi sarısı ana düğme. Açık tema: aynı ailenin krem kâğıdı,
+   mürekkep (gece) yazı ve düğme. Pembe (--mark) yalnızca küçük imlerde: logo noktası, seçili sekme, vurgu.
+   Ayarlar > Görünüm'den seçilir (lib/tema.ts). Ders renkleri yalnızca küçük işaretlerde ve görsellerde kullanılır;
+   kimya pembeden mora alındı, çünkü pembe artık markanın im rengi. */
 :root{
   color-scheme:light;
-  --bg:#f6f4ef; --surface:#fffdf8; --panel:#efebe3; --ink:#16181d; --muted:#5b616b; --line:#e2dccf; --line-2:#cdc5b5;
-  --grid:#efe9dc; --karbon:#3b4656;
-  --mark:#c8344f; --btn:#16181d; --on-btn:#fffdf8;
-  --glow:#ffc93c; --glow-soft:#fff6d9; --glow-deep:#e0a400; --glow-ink:#7a5200;
-  --fizik:#2f6fd6; --kimya:#c8344f; --biyoloji:#1b8a52;
-  --fizik-soft:#e6eefb; --kimya-soft:#f9e7eb; --biyoloji-soft:#e3f2e9;
-  --c1:#2f6fd6; --c2:#e2553f; --c3:#1b8a52; --c4:#e09a12; --c5:#7f4fd1;
+  --bg:#f6f1e6; --surface:#fffdf7; --panel:#eee7d8; --ink:#10182a; --muted:#55607a; --line:#e3dbc9; --line-2:#cfc5ae;
+  --grid:#efe8d8; --karbon:#3b4656;
+  --mark:#e0335f; --btn:#10182a; --on-btn:#f1e9d8;
+  --glow:#f5c518; --glow-soft:#fdf3c7; --glow-deep:#d9a900; --glow-ink:#6e5200;
+  --fizik:#2c72c9; --kimya:#7a55c7; --biyoloji:#1b8a52;
+  --fizik-soft:#e4edf8; --kimya-soft:#ede7f8; --biyoloji-soft:#e3f2e9;
+  --c1:#2c72c9; --c2:#e2553f; --c3:#1b8a52; --c4:#e09a12; --c5:#7a55c7;
   --good:#1b8a52; --bad:#d03a2f; --good-soft:#e5f3ea; --bad-soft:#fbe9e6;
   --acc:var(--ink); --acc-soft:var(--panel);
   --nav:60px;
-  --f-display:"Manrope", "Segoe UI", system-ui, sans-serif;
-  --f-body:"Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-display:"Bricolage Grotesque", "Manrope", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 :root[data-tema="koyu"]{
   color-scheme:dark;
-  --bg:#0f1114; --surface:#171a1f; --panel:#1f242b; --ink:#f1efe9; --muted:#a7aeb8; --line:#262b33; --line-2:#343a43;
-  --grid:#1b1f25; --karbon:#6b7890;
-  --mark:#f2b33d; --btn:#f2b33d; --on-btn:#15120a;
-  --glow-soft:#3a2f12; --glow-ink:#ffd27a;
+  --bg:#10182a; --surface:#1b2640; --panel:#24314f; --ink:#f1e9d8; --muted:#a3acc0; --line:#27344f; --line-2:#3a4968;
+  --grid:#202c48; --karbon:#7586a6;
+  --mark:#ff4f7b; --btn:#f5c518; --on-btn:#10182a;
+  --glow-soft:#3d3413; --glow-ink:#ffdc6b;
   /* Ders ve görsel renkleri: koyu zeminde seçilecek kadar açık, üstündeki beyaz yazı okunacak kadar koyu. */
-  --fizik:#4a8af0; --kimya:#e8557c; --biyoloji:#27a866;
-  --fizik-soft:#16243a; --kimya-soft:#33192a; --biyoloji-soft:#12301f;
-  --c1:#4a8af0; --c2:#e85f4a; --c3:#27a866; --c4:#e0a020; --c5:#9468e8;
-  --good:#27a866; --bad:#e85f4a; --good-soft:#12301f; --bad-soft:#3a1a17;
+  --fizik:#3f8fdc; --kimya:#9670e6; --biyoloji:#27a866;
+  --fizik-soft:#18294a; --kimya-soft:#2a2552; --biyoloji-soft:#143328;
+  --c1:#3f8fdc; --c2:#e85f4a; --c3:#27a866; --c4:#e0a020; --c5:#9670e6;
+  --good:#27a866; --bad:#e85f4a; --good-soft:#143328; --bad-soft:#3d1f24;
 }
 /* Eski sınıflar components katmanında: Tailwind yardımcı sınıfları (shadcn/ui) bunların üstüne yazabilir. */
 @layer components {

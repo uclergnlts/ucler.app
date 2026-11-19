@@ -15,7 +15,7 @@ import { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle, SheetTri
 import { cn } from "@/lib/utils";
 
 // Henüz içeriği olmayan dersler: kartı görünür, dokununca "yakında" der.
-const YAKINDA = [["matematik", "Matematik"], ["tarih", "Tarih"], ["cografya", "Coğrafya"], ["hukuk", "Hukuk"]] as const;
+const YAKINDA = [["matematik", "Matematik"], ["tarih", "Tarih"], ["cografya", "Coğrafya"]] as const;
 // Deney defteri (2026-11-16): devam ve tekrar satırları kâğıt kart; solda mürekkep renginde yuvarlak oynat düğmesi.
 const satirKart = "flex items-center gap-3.5 rounded-lg border border-border bg-card p-4 transition-transform active:scale-[.99]";
 const oynat = "grid size-10 flex-none place-items-center rounded-full border-[1.5px] border-[var(--ink)] text-foreground [&_svg]:size-4";

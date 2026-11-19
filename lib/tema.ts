@@ -7,7 +7,7 @@ import { read, subscribe, write } from "./store";
 export type Tema = "sistem" | "acik" | "koyu";
 const ANAHTAR = "tf-tema";
 const KOYU_SORGU = "(prefers-color-scheme: dark)";
-const ZEMIN = { acik: "#f6f4ef", koyu: "#0f1114" } as const;
+const ZEMIN = { acik: "#f6f1e6", koyu: "#10182a" } as const;
 
 const secili = () => read<Tema>(ANAHTAR, "sistem");
 export const useTema = () => useSyncExternalStore(subscribe, secili, () => "sistem" as Tema);

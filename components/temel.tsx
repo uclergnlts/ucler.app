@@ -97,7 +97,7 @@ export const Bolum = ({ title, more, children, id }: { title?: string; more?: Re
   <section className="grid gap-2.5" id={id}>
     {title && (
       <div className="flex items-baseline justify-between">
-        <h2 className="font-sans text-[11px] font-bold tracking-[.14em] text-muted-foreground uppercase">{title}</h2>
+        <h2 className="font-mono text-[11px] font-medium tracking-[.12em] text-muted-foreground uppercase">{title}</h2>
         {more}
       </div>
     )}
