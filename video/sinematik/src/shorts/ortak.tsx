@@ -347,6 +347,10 @@ export const makeShort = (o: {
   esle?: Record<string, string>;
   /** Kapanış yerine: sonraki videonun ilk çekimi, son 1 sn (abone ol cümlesi yok). */
   sonraki?: { C: React.FC; words: Word[] };
+  /** 'gece': Gece Defteri kanal tasarımı (krem başlık + tek pembe kelime, nokta dokusu, ŞEKİL notu). */
+  tema?: 'gece';
+  /** Gece temasında çekim başına "ŞEKİL n · ..." notu (plan sırasıyla). */
+  sekil?: string[];
 }) => {
   const esle = o.esle ?? {};
   const tail = o.tail ?? 0.7;
@@ -363,7 +367,7 @@ export const makeShort = (o: {
     const f = useCurrentFrame();
     const titleO = f >= ana && o.sonraki ? 0 : 1;
     return (
-      <AbsoluteFill style={{ background: '#0B0D16' }}>
+      <AbsoluteFill style={{ background: o.tema === 'gece' ? GD.gece : '#0B0D16' }}>
         <DilCtx.Provider value={o.dil ?? 'en'}>
         <EsleCtx.Provider value={esle}>
         <WordsCtx.Provider value={o.words}>
@@ -398,6 +402,10 @@ export const makeShort = (o: {
             </div>
           </Sequence>
         )}
+        {o.tema === 'gece' ? (
+          <GeceUst baslik={o.baslik} titleO={titleO} sekil={o.sekil} shots={shots} />
+        ) : (
+          <>
         {/* iki satır başlık (Shorts kapağı gibi okunur) */}
         <div style={{ position: 'absolute', left: 0, right: 0, top: 210, textAlign: 'center', fontFamily, fontWeight: 800, fontSize: 74, lineHeight: 1.02, letterSpacing: '-0.02em', color: '#fff', opacity: titleO, textShadow: `0 4px 0 ${INK}, 0 0 22px rgba(0,0,0,0.75)`, WebkitTextStroke: `3px ${INK}` }}>
           <div>{o.baslik[0]}</div>
@@ -406,9 +414,11 @@ export const makeShort = (o: {
         <div style={{ position: 'absolute', right: 44, top: 96, fontFamily, fontWeight: 800, fontSize: 30, color: 'rgba(255,255,255,0.85)', textShadow: '0 2px 6px rgba(0,0,0,0.6)' }}>
           ucler<span style={{ color: '#F2C21A' }}>.</span>
         </div>
+          </>
+        )}
         <Sequence from={fr(OFF)} durationInFrames={fr(o.voiceLen + 0.1)}>
           <div style={{ position: 'absolute', left: 60, right: 60, bottom: 400, display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
-            <Caption words={o.words} color="#fff" accent="#FFD54A" size={70} style={{ fontFamily, transformOrigin: 'center', textShadow: `0 4px 0 ${INK}, 0 0 20px rgba(0,0,0,0.9)`, WebkitTextStroke: `2px ${INK}` }} />
+            <Caption words={o.words} color={o.tema === 'gece' ? GD.teb : '#fff'} accent={o.tema === 'gece' ? GD.sari : '#FFD54A'} size={70} style={{ fontFamily, transformOrigin: 'center', textShadow: `0 4px 0 ${INK}, 0 0 20px rgba(0,0,0,0.9)`, WebkitTextStroke: `2px ${INK}` }} />
           </div>
         </Sequence>
         <Sequence from={fr(OFF)}>
@@ -430,3 +440,68 @@ export const makeShort = (o: {
 export const T: React.FC<{ en: string; tr: string }> = ({ en, tr }) => <>{useT()(en, tr)}</>;
 /** Dile göre binlik ayraçlı sayı (12,262 / 12.262). */
 export const Sayi: React.FC<{ n: number }> = ({ n }) => <>{n.toLocaleString(useContext(DilCtx) === 'tr' ? 'tr-TR' : 'en-US')}</>;
+
+/* ---------------- Gece Defteri teması ---------------- */
+
+/** Gece Defteri paleti (SABLON-GECE-DEFTERI.md). Pembe yalnızca cevap ve çelişki içindir. */
+export const GD = {
+  gece: '#10182A',
+  gece2: '#1B2640',
+  gece3: '#26345A',
+  siyah: '#070A12',
+  teb: '#F1E9D8',
+  sari: '#F5C518',
+  pembe: '#FF4F7B',
+  buz: '#69C3E6',
+  sis: '#A3ACC0',
+};
+export const fontBaslik = 'Bricolage Grotesque';
+export const fontMono = 'IBM Plex Mono';
+
+/** Krem tarama (gölge) ve nokta dokusu desenleri. Sahnenin <svg>'si içinde bir kez çizilir. */
+export const GeceDefs: React.FC = () => (
+  <defs>
+    <pattern id="g-tarama" width={14} height={14} patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <path d="M0 0 V14" stroke={GD.teb} strokeWidth={2.4} />
+    </pattern>
+    <pattern id="g-tarama-sik" width={9} height={9} patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+      <path d="M0 0 V9" stroke={GD.teb} strokeWidth={2} />
+    </pattern>
+    <pattern id="g-nokta" width={22} height={22} patternUnits="userSpaceOnUse">
+      <circle cx={11} cy={11} r={1.6} fill={GD.teb} />
+    </pattern>
+  </defs>
+);
+
+type ShotInfo = { from: number; dur: number };
+const GeceUst: React.FC<{ baslik: [string, string]; titleO: number; sekil?: string[]; shots: ShotInfo[] }> = ({ baslik, titleO, sekil, shots }) => {
+  const f = useCurrentFrame();
+  const i = shots.findIndex((s) => f >= s.from && f < s.from + s.dur);
+  const not = sekil && i >= 0 ? sekil[Math.min(i, sekil.length - 1)] : undefined;
+  // başlık: son kelime pembe, sonda ".." (kapak kalıbı)
+  const ikinci = baslik[1].split(' ');
+  const son = ikinci.pop();
+  return (
+    <>
+      <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none' }}>
+        <GeceDefs />
+        <rect width={1080} height={1920} fill="url(#g-nokta)" opacity={0.07} />
+      </svg>
+      <div style={{ position: 'absolute', left: 0, right: 0, top: 206, textAlign: 'center', fontFamily: fontBaslik, fontWeight: 700, fontSize: 80, lineHeight: 0.98, letterSpacing: '-0.025em', color: GD.teb, opacity: titleO, textShadow: `0 4px 0 ${GD.siyah}, 0 0 26px rgba(4,6,12,0.9)` }}>
+        <div>{baslik[0]}</div>
+        <div>
+          {ikinci.length ? ikinci.join(' ') + ' ' : ''}
+          <span style={{ color: GD.pembe }}>{son}</span>..
+        </div>
+      </div>
+      <div style={{ position: 'absolute', right: 48, top: 98, fontFamily: fontBaslik, fontWeight: 700, fontSize: 34, color: GD.teb, opacity: 0.92 }}>
+        ucler<span style={{ color: GD.pembe }}>.</span>
+      </div>
+      {not && (
+        <div style={{ position: 'absolute', left: 60, bottom: 545, fontFamily: fontMono, fontSize: 25, letterSpacing: '0.08em', color: GD.sis, opacity: 0.9 * titleO, textShadow: `0 2px 6px ${GD.siyah}` }}>
+          {not}
+        </div>
+      )}
+    </>
+  );
+};
