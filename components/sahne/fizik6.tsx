@@ -8,7 +8,7 @@ import { Araba, type SahneKaydi, type SahneProps } from "./ortak";
 const say = (x: number, d = 1) => {
   const [a, b] = x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: d, useGrouping: false }).split(ONDALIK);
   const g = Math.abs(x) >= 10000 ? a.replace(/\B(?=(\d{3})+(?!\d))/g, " ") : a;
-  return (b ? `${g},${b}` : g).replace("-", "−");
+  return (b ? `${g}${ONDALIK}${b}` : g).replace("-", "−");
 };
 const sinir = (x: number, a: number, b: number) => Math.max(a, Math.min(b, x));
 /** Oynatma ilerlemesi 0..1 (hiç oynatılmadıysa 0). */

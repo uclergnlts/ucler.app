@@ -121,3 +121,14 @@ Bir terim her yerde aynı çevrilir. Yeni terim çıktıkça buraya eklenir.
 | referans sistemi | reference frame | |
 | akıntı / kayık hızı | current / boat (vc, vb) | Türkçede va, vk |
 | sürüklenme | drift | |
+| periyot / frekans | period / frequency | |
+| çizgisel / açısal hız | linear / angular speed | |
+| merkezcil ivme / kuvvet | centripetal acceleration / force | |
+| merkezkaç | centrifugal | |
+| eylemsizlik momenti | moment of inertia | |
+| açısal momentum | angular momentum | |
+| eğimli viraj | banked curve | viraj = curve |
+| menzil | range | |
+| eğik / yatay atış | launch at an angle / horizontal launch | atış hareketi = projectile motion |
+| tepe noktası | top (of the path) | |
+| uçuş süresi | time of flight | |

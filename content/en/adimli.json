@@ -1515,5 +1515,459 @@
    "In reality, air resistance lowers the range and the height. The angle for the longest range is usually a little less than 45°."
   ],
   "soruOnce": true
+ },
+ "cembersel-hareket": {
+  "id": "cembersel-hareket",
+  "ders": "fizik",
+  "konu": "cembersel-hareket",
+  "baslik": "Circular and rotational motion",
+  "ozet": "Try it first, then learn its name. Watch the ball go around, compare speeds on a Ferris wheel, and take a curve without skidding.",
+  "adimlar": [
+   {
+    "baslik": "Constant speed, changing velocity",
+    "metin": "The ball goes around the circle at constant speed. The velocity arrow is always tangent to the circle, and since its direction changes, the ball is accelerating.",
+    "sahne": {
+     "tur": "fiz7-cember",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which way does this acceleration point?",
+     "secenekler": [
+      {
+       "yazi": "Along the velocity",
+       "neden": "A tangent acceleration would change the speed. But the speed is constant."
+      },
+      {
+       "yazi": "Toward the center",
+       "neden": "An acceleration that changes only the direction, not the speed, is perpendicular to the velocity and always points toward the center (red arrow). It is called <b>centripetal acceleration</b>.",
+       "dogru": true
+      },
+      {
+       "yazi": "Away from the center",
+       "neden": "An outward acceleration would move the ball away from the circle. Which way must the acceleration point to bend the ball's path around the circle?"
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Period and frequency",
+    "metin": "Frequency is the number of turns per second, measured in hertz. Set the washing machine drum to <b>25 Hz</b>.",
+    "sahne": {
+     "tur": "fiz7-tambur"
+    },
+    "deger": {
+     "rpm": 600
+    },
+    "kontroller": [
+     {
+      "ad": "rpm",
+      "etiket": "Spin rate",
+      "min": 300,
+      "max": 1500,
+      "adim": 300,
+      "birim": "rpm"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "rpm": 1500
+     },
+     "tamam": "1500 turns per minute is 1500 / 60 = 25 turns per second, so f = 25 Hz. One turn takes T = 1/25 = 0.04 s."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Inner seat, outer seat",
+    "metin": "The Ferris wheel makes one turn every 20 seconds. You are in the outer seat, 8 m from the center. Your friend is in the inner seat, 4 m from the center.",
+    "sahne": {
+     "tur": "fiz7-dolap",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which of you moves faster?",
+     "secenekler": [
+      {
+       "yazi": "We move at the same speed",
+       "neden": "You both go around in the same time, so your angular speed is the same. But the outer seat covers more distance."
+      },
+      {
+       "yazi": "The outer seat",
+       "neden": "In one turn the outer seat travels 2π·8 ≈ 50 m and the inner seat about 25 m, and both do it in 20 s. Twice the distance in the same time means twice the speed.",
+       "dogru": true
+      },
+      {
+       "yazi": "The inner seat",
+       "neden": "The seat near the center traces a smaller circle and covers less distance in the same time."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "If the string breaks",
+    "metin": "You whirl a stone on a string in a horizontal plane, and we are looking from above. The string will break when the stone is at its northernmost point, moving east.",
+    "sahne": {
+     "tur": "fiz7-ip",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Where does the stone go when the string breaks?",
+     "secenekler": [
+      {
+       "yazi": "Straight along the tangent",
+       "neden": "Once the force pulling toward the center is gone, the first law says the stone keeps the velocity it has and moves straight <b>along the tangent</b>. A hammer thrower lets go at exactly this kind of moment.",
+       "dogru": true
+      },
+      {
+       "yazi": "Straight out from the center",
+       "neden": "No force pushes outward. Centrifugal force is a misconception."
+      },
+      {
+       "yazi": "It keeps going around",
+       "neden": "The string tension was what kept the stone on the circle. Without it, the path becomes straight."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Centripetal force",
+    "metin": "The centripetal force needed is F = m·v²/r. A 1000 kg car is on a curve with a radius of 50 m. Change the speed and make the force <b>8000 N</b>.",
+    "sahne": {
+     "tur": "fiz7-merkezcil"
+    },
+    "deger": {
+     "v": 10
+    },
+    "kontroller": [
+     {
+      "ad": "v",
+      "etiket": "Speed",
+      "min": 5,
+      "max": 25,
+      "adim": 5,
+      "birim": "m/s"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "v": 20
+     },
+     "tamam": "1000 · 20² / 50 = 8000 N. When the speed doubles from 10 m/s to 20 m/s, the force needed becomes four times larger. This is not a new force. Here, friction between the tires and the road supplies it."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "On a wet curve",
+    "metin": "The maximum safe speed on a curve is √(μ·g·r), where μ is the surface's coefficient of friction. Your car will take a 50 m curve at 15 m/s. Choose the road surface and take the curve <b>without skidding</b>.",
+    "sahne": {
+     "tur": "fiz7-viraj",
+     "sure": 4
+    },
+    "deger": {
+     "mu": 3
+    },
+    "kontroller": [
+     {
+      "ad": "mu",
+      "etiket": "Coefficient of friction μ",
+      "min": 1,
+      "max": 8,
+      "carpan": 0.1
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "mu": [
+       5,
+       8
+      ]
+     },
+     "tamam": "At μ = 0.5 the limit is √(0.5 · 9.8 · 50) ≈ 15.7 m/s, so 15 m/s is safe. In rain μ drops, and so does the limit. That is why you slow down on a wet road."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "The skater",
+    "metin": "A skater spins with arms out, and there is no external torque. Pulling the arms in to the body will cut the moment of inertia I in half.",
+    "sahne": {
+     "tur": "fiz7-patenci",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens when the skater pulls the arms in?",
+     "secenekler": [
+      {
+       "yazi": "The skater slows down",
+       "neden": "If I gets smaller while L stays constant, ω must get larger."
+      },
+      {
+       "yazi": "The skater spins twice as fast",
+       "neden": "The product I·ω, the angular momentum, stays constant: 4 · 2 = 2 · 4. When I is cut in half, ω doubles.",
+       "dogru": true
+      },
+      {
+       "yazi": "The spin stays the same",
+       "neden": "If the spin stayed the same, cutting I in half would cut L in half too. But L cannot change without an external torque."
+      }
+     ]
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "In uniform circular motion the speed is constant, but the direction of the velocity changes. So the object is <b>accelerating</b>, and the acceleration always points toward the center.",
+   "f = 1/T and v = ω·r = 2πr/T. On a rotating object ω is the same at every point, while v grows with the radius.",
+   "<b>F = m·v²/r</b> is not a new force. It is the net force toward the center. Tension, friction, or gravity supplies it.",
+   "When the force is gone, the object moves straight along the tangent. On a level curve the safe speed is v ≤ √(μ·g·r).",
+   "With no external torque, angular momentum <b>L = I·ω</b> is conserved."
+  ],
+  "soruOnce": true
+ },
+ "kutle-cekimi": {
+  "id": "kutle-cekimi",
+  "ders": "fizik",
+  "konu": "kutle-cekimi",
+  "baslik": "Gravitation",
+  "ozet": "Try it first, then learn its name. Tune gravity with mass and distance, put the ball into orbit, and cut the elevator cable.",
+  "adimlar": [
+   {
+    "baslik": "Mass and distance",
+    "metin": "Double the distance. Then set B's mass and bring the force back to <b>F₀</b>.",
+    "sahne": {
+     "tur": "fiz8-cekim"
+    },
+    "deger": {
+     "m": 1,
+     "r": 1
+    },
+    "kontroller": [
+     {
+      "ad": "m",
+      "etiket": "Mass of B",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac",
+      "birim": "× m"
+     },
+     {
+      "ad": "r",
+      "etiket": "Distance",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac",
+      "birim": "× r"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "r": 2,
+      "m": 4
+     },
+     "tamam": "When the distance doubles, the force drops to one part in 2² = 4. Making the mass 4 times larger brings the force back to F₀. This is called the <b>inverse-square law</b>.",
+     "ipucu": "First set the distance to 2 and see what fraction the force drops to."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "The apple pulls on Earth too",
+    "metin": "A 100 g apple falls from a tree. Earth pulls on the apple with about <b>1 N</b>.",
+    "sahne": {
+     "tur": "fiz8-elma",
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "How hard does the apple pull on Earth?",
+     "secenekler": [
+      {
+       "yazi": "Not at all",
+       "neden": "Every object with mass attracts. Being small does not make the force disappear."
+      },
+      {
+       "yazi": "1 N",
+       "neden": "Action and reaction forces are <b>equal in magnitude</b> and opposite in direction.",
+       "dogru": true
+      },
+      {
+       "yazi": "Much less",
+       "neden": "The forces are equal. What is small is Earth's <b>acceleration</b>, not the force."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "g gets smaller as you rise",
+    "metin": "An 80 kg astronaut rises above the ground. Bring the astronaut's weight down to about <b>87 N</b>.",
+    "sahne": {
+     "tur": "fiz8-yukseklik"
+    },
+    "deger": {
+     "h": 0
+    },
+    "kontroller": [
+     {
+      "ad": "h",
+      "etiket": "Height",
+      "min": 0,
+      "max": 3,
+      "tur": "sayac",
+      "carpan": 6400,
+      "birim": "km"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "h": 2
+     },
+     "tamam": "At 12 800 km up, r = 3R and g drops to one part in 3² = 9 (about 1.09 m/s²). The weight is 784 / 9 ≈ 87 N. The mass is still 80 kg.",
+     "ipucu": "For the weight to drop to one ninth, the distance from the center must triple."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Kepler's law of areas",
+    "metin": "Watch the planet for one full trip around its elliptical orbit.",
+    "sahne": {
+     "tur": "fiz8-kepler",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "When is the planet fastest?",
+     "secenekler": [
+      {
+       "yazi": "Its speed is always the same",
+       "neden": "Close to the Sun, gravity is stronger and the planet speeds up."
+      },
+      {
+       "yazi": "At aphelion",
+       "neden": "It is slowest at aphelion. It has to move slowly so that the area swept in equal times stays the same."
+      },
+      {
+       "yazi": "At perihelion",
+       "neden": "Close to the Sun, the radius is short. To sweep the same area in the same time, the planet has to move faster.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Newton's cannonball",
+    "metin": "A ball thrown horizontally from a mountaintop both falls and moves forward. If you throw it fast enough, the surface curves away beneath it. Put the ball <b>into orbit</b>.",
+    "sahne": {
+     "tur": "fiz8-newton",
+     "sure": 5
+    },
+    "deger": {
+     "v": 50
+    },
+    "kontroller": [
+     {
+      "ad": "v",
+      "etiket": "Launch speed",
+      "min": 20,
+      "max": 130,
+      "adim": 1,
+      "carpan": 0.1,
+      "birim": "km/s"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "v": [
+       79,
+       111
+      ]
+     },
+     "tamam": "A ball thrown at about <b>7.9 km/s</b> goes around Earth. A satellite is always falling too, but it keeps missing Earth. Gravity acts as the centripetal force, and v = √(GM/r).",
+     "ipucu": "Raise the speed a little above 7.9 km/s and press play."
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Escape velocity",
+    "metin": "If you raise the speed even more, the orbit stretches out. <b>Free</b> the ball from Earth's gravity.",
+    "sahne": {
+     "tur": "fiz8-newton",
+     "sure": 5
+    },
+    "deger": {
+     "v": 90
+    },
+    "kontroller": [
+     {
+      "ad": "v",
+      "etiket": "Launch speed",
+      "min": 20,
+      "max": 130,
+      "adim": 1,
+      "carpan": 0.1,
+      "birim": "km/s"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "v": [
+       112,
+       130
+      ]
+     },
+     "tamam": "The escape velocity from Earth's surface is about <b>11.2 km/s</b>, which is √2 times the orbital speed (7.9 × 1.41). An object thrown at this speed never comes back.",
+     "ipucu": "Escape velocity is about 1.41 times the orbital speed."
+    },
+    "kart": 12
+   },
+   {
+    "baslik": "Weightlessness",
+    "metin": "A 60 kg person stands on a scale in an elevator, and the scale reads 588 N. Cut the cable and press play.",
+    "sahne": {
+     "tur": "fiz8-asansor",
+     "sure": 3
+    },
+    "deger": {
+     "kes": 0
+    },
+    "kontroller": [
+     {
+      "ad": "kes",
+      "etiket": "Cut the cable",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "kes": 1
+     },
+     "tamam": "The person and the scale fall freely together, and the scale reads 0. Gravity is still there. It is the very reason they are falling."
+    },
+    "kart": 11
+   }
+  ],
+  "kapanis": [
+   "Any two masses attract each other, and F = G·m₁·m₂ / r². When the distance doubles, the force drops to one quarter.",
+   "Gravitational forces are equal and opposite. The apple also pulls on Earth with 1 N.",
+   "Since g = GM/r², it gets smaller as you rise. At r = 2R, g is one quarter of 9.8.",
+   "Planets sweep equal areas in equal times and speed up near the Sun.",
+   "Orbital speed is about 7.9 km/s and escape velocity is about 11.2 km/s. Satellites and astronauts are always falling."
+  ],
+  "soruOnce": true
  }
 }

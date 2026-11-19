@@ -9,7 +9,7 @@ import type { SahneKaydi, SahneProps } from "./ortak";
 const say = (x: number, d = 1) => {
   const [a, b] = x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: d, useGrouping: false }).split(ONDALIK);
   const g = Math.abs(x) >= 10000 ? a.replace(/\B(?=(\d{3})+(?!\d))/g, " ") : a;
-  return (b ? `${g},${b}` : g).replace("-", "−");
+  return (b ? `${g}${ONDALIK}${b}` : g).replace("-", "−");
 };
 const sinir = (x: number, a: number, b: number) => Math.max(a, Math.min(b, x));
 /** Oynatma ilerlemesi 0..1 (hiç oynatılmadıysa 0). */
@@ -116,7 +116,7 @@ function Tahterevalli({ v }: SahneProps) {
     </g>
   );
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Tahterevalli: 300 N 2 m, 400 N {0} m; {1}", say(d, 2), denge ? "dengede" : tR > tL ? "sağ taraf iniyor" : "sol taraf iniyor")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Tahterevalli: 300 N 2 m, 400 N {0} m; {1}", say(d, 2), denge ? cev("dengede") : tR > tL ? cev("sağ taraf iniyor") : cev("sol taraf iniyor"))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--c1)">{cev("sol: 300 · 2 =")} {tL} N·m</text>
       <text x={326} y={22} fontSize={13} fontWeight={800} fill="var(--c2)" textAnchor="end">{cev("sağ: 400 ·")} {say(d, 2)} = {say(tR)} N·m</text>
       <line x1={14} x2={326} y1={cy + 24} y2={cy + 24} stroke="var(--line-2)" strokeWidth={2} />
@@ -158,7 +158,7 @@ function Cubuk({ v }: SahneProps) {
       <g fontSize={12.5} fontWeight={800}>
         <text x={14} y={204} fill="var(--c1)">N<tspan fontSize={9} dy={3}>A</tspan><tspan dy={-3}> = {say(NA)} N</tspan></text>
         <text x={326} y={204} fill="var(--c2)" textAnchor="end">N<tspan fontSize={9} dy={3}>B</tspan><tspan dy={-3}> = {say(NB)} N</tspan></text>
-        <text x={170} y={226} fill="var(--muted)" textAnchor="middle" fontSize={11.5}>{cev("yük A'dan")} {say(x)} {cev("m uzakta")}</text>
+        <text x={170} y={226} fill="var(--muted)" textAnchor="middle" fontSize={11.5}>{cev("yük A'dan {0} m uzakta", say(x))}</text>
       </g>
     </svg>
   );
@@ -171,7 +171,7 @@ function KutleMerkezi({ v }: SahneProps) {
   const aci = sinir((m - 6) * 2.5, -14, 14);
   const r = (k: number) => 8 + 3.2 * Math.sqrt(k);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Sağdaki kütle {0} kg; kütle merkezi {1} m'de; {2}", m, say(xkm, 2), denge ? "çubuk yatay" : "çubuk eğik")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Sağdaki kütle {0} kg; kütle merkezi {1} m'de; {2}", m, say(xkm, 2), denge ? cev("çubuk yatay") : cev("çubuk eğik"))}>
       <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)">x<tspan fontSize={9} dy={3}>{cev("KM")}</tspan><tspan dy={-3}> = (2·0 + {m}·4) / (2 + {m}) = {say(xkm, 2)} m</tspan></text>
       <line x1={hx - 30} x2={hx + 30} y1={44} y2={44} stroke="var(--ink)" strokeWidth={3} />
       <line x1={hx} x2={hx} y1={44} y2={Y} stroke="var(--ink)" strokeWidth={1.6} />
@@ -198,7 +198,7 @@ function KutleMerkezi({ v }: SahneProps) {
 // Eğilen tahta: aynı tabanlı (40) basık (yükseklik 40) ve uzun (100) kutu. Oynatınca eğim 0'dan 35°'ye çıkar.
 const KUTULAR = [
   { p: 200, w: 40, h: 40, renk: "var(--c1)", ad: cev("basık") },
-  { p: 110, w: 40, h: 100, renk: "var(--c2)", ad: "uzun" },
+  { p: 110, w: 40, h: 100, renk: "var(--c2)", ad: cev("uzun§kutu") },
 ];
 function Devrilme({ t, oynuyor, s }: SahneProps) {
   const sure = Number(s.sure ?? 5), u = ilerleme(t, oynuyor, sure), a = 35 * u * RAD;
@@ -218,7 +218,7 @@ function Devrilme({ t, oynuyor, s }: SahneProps) {
   });
   const uc = dunya(290, 0);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Eğim {0} derece; {1} devrildi", Math.round(35 * u), kutular.filter((k) => k.devrildi).map((k) => k.ad).join(" ve ") || "hiçbir kutu")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Eğim {0} derece; {1} devrildi", Math.round(35 * u), kutular.filter((k) => k.devrildi).map((k) => k.ad).join(cev(" ve ")) || cev("hiçbir kutu"))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Eğim:")} {Math.round(35 * u)}°</text>
       <line x1={O.x} y1={O.y} x2={uc.x} y2={uc.y} stroke="var(--ink)" strokeWidth={4} strokeLinecap="round" />
       <line x1={14} x2={326} y1={O.y + 3} y2={O.y + 3} stroke="var(--line-2)" strokeWidth={2} />
@@ -231,8 +231,8 @@ function Devrilme({ t, oynuyor, s }: SahneProps) {
         </g>
       ))}
       <g fontSize={12} fontWeight={800}>
-        <text x={14} y={44} fill="var(--c1)">{cev("basık:")} {kutular[0].devrildi ? "devrildi" : "duruyor"}</text>
-        <text x={14} y={62} fill="var(--c2)">{cev("uzun:")} {kutular[1].devrildi ? "devrildi" : "duruyor"}</text>
+        <text x={14} y={44} fill="var(--c1)">{cev("basık:")} {kutular[0].devrildi ? cev("devrildi") : cev("duruyor§kutu")}</text>
+        <text x={14} y={62} fill="var(--c2)">{cev("uzun:")} {kutular[1].devrildi ? cev("devrildi") : cev("duruyor§kutu")}</text>
       </g>
       <text x={326} y={226} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="end">{cev("kesikli çizgi: ağırlık merkezinin düşeyi")}</text>
     </svg>
@@ -341,10 +341,10 @@ function Ip({ t, oynuyor, s }: SahneProps) {
       {kopti && <line x1={CX} y1={CY} x2={CX + 22} y2={CY - 30} stroke="var(--ink)" strokeWidth={1.8} />}
       <circle cx={sinir(p.x, 0, 318)} cy={p.y} r={9} fill="var(--c4)" />
       <g fontSize={12} fontWeight={800} fill="var(--muted)" textAnchor="middle">
-        <text x={300} y={152}>K</text>
-        <text x={300} y={200}>G</text>
-        <text x={274} y={180}>B</text>
-        <text x={326} y={180}>D</text>
+        <text x={300} y={152}>{cev("K§yön")}</text>
+        <text x={300} y={200}>{cev("G§yön")}</text>
+        <text x={274} y={180}>{cev("B§yön")}</text>
+        <text x={326} y={180}>{cev("D§yön")}</text>
         <line x1={300} y1={158} x2={300} y2={188} stroke="var(--muted)" strokeWidth={1.2} />
         <line x1={282} y1={176} x2={318} y2={176} stroke="var(--muted)" strokeWidth={1.2} />
       </g>
@@ -394,7 +394,7 @@ function Viraj({ v, t, oynuyor, s }: SahneProps) {
   const aci = (Math.atan2(p.dy, p.dx) * 180) / Math.PI;
   const savruldu = !guvenli && u > 0.5;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("μ = {0}: en büyük güvenli hız {1} m/s; araba {2}", say(mu), say(vm), guvenli ? "virajı güvenle alır" : "savrulur")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("μ = {0}: en büyük güvenli hız {1} m/s; araba {2}", say(mu), say(vm), guvenli ? cev("virajı güvenle alır") : cev("savrulur"))}>
       <path d={`M${yer(a0).x} ${yer(a0).y} A${R} ${R} 0 0 1 ${yer(a1).x} ${yer(a1).y}`} fill="none" stroke={mu <= 0.15 ? "color-mix(in srgb, #50a3f3 20%, var(--surface))" : mu <= 0.45 ? "color-mix(in srgb, #2d5da8 20%, var(--surface))" : "var(--line)"} strokeWidth={30} />
       <path d={`M${yer(a0).x} ${yer(a0).y} A${R} ${R} 0 0 1 ${yer(a1).x} ${yer(a1).y}`} fill="none" stroke="var(--surface)" strokeWidth={1.6} strokeDasharray="8 7" />
       {savruldu && <line x1={yer(ak).x} y1={yer(ak).y} x2={p.x} y2={p.y} stroke="var(--c2)" strokeWidth={1.5} strokeDasharray="3 5" />}

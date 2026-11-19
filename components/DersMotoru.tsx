@@ -83,8 +83,10 @@ function useSaat(aktif: boolean, ref: React.RefObject<HTMLElement | null>) {
 export const uyar = (v: Degerler, hedef: Record<string, number | [number, number]>) =>
   Object.entries(hedef).every(([k, h]) => (Array.isArray(h) ? v[k] >= h[0] && v[k] <= h[1] : v[k] === h));
 const ayni = (a: Degerler, b: Degerler) => Object.keys({ ...a, ...b }).every((k) => a[k] === b[k]);
+/** İngilizcede binlik ayraç virgül yerine ince boşluk (12 800). Türkçe yazım değişmez. */
+const INCE_BINLIK = SAYI_YEREL === "en-US" ? /,/g : /$^/;
 const gosterim = (k: Kontrol, x: number) =>
-  `${k.onek ?? ""}${(x * (k.carpan ?? 1)).toLocaleString(SAYI_YEREL, { maximumFractionDigits: 2 })}${k.birim ? (k.birim === "°" ? "°" : ` ${k.birim}`) : ""}`;
+  `${k.onek ?? ""}${(x * (k.carpan ?? 1)).toLocaleString(SAYI_YEREL, { maximumFractionDigits: 2 }).replace(INCE_BINLIK, "\u202f")}${k.birim ? (k.birim === "°" ? "°" : ` ${k.birim}`) : ""}`;
 
 /** Şıkların gösterim sırası: içerikte doğru şık çoğu zaman ilk yazılır, ekranda karışık çıksın.
  * Sıra şıkların metninden üretilir, yani her açılışta aynıdır. */

@@ -81,7 +81,7 @@ function Elma({ t, oynuyor, s, secim }: SahneProps) {
       <text x={326} y={226} fontSize={11.5} fontWeight={800} fill="var(--c3)" textAnchor="end">{cev("Dünya")}</text>
       <g fontSize={12.5} fontWeight={800}>
         <text x={326} y={22} fill="var(--c2)" textAnchor="end">{cev("elma: 0,1 kg")}</text>
-        {acik && <text x={326} y={42} fill="var(--c2)" textAnchor="end">a = 1 / 0,1 ≈ 10 m/s²</text>}
+        {acik && <text x={326} y={42} fill="var(--c2)" textAnchor="end">a = 1 / {say(0.1)} ≈ 10 m/s²</text>}
         {acik && <text x={326} y={62} fill="var(--c1)" textAnchor="end">{cev("Dünya: a = 1 / 6·10²⁴ ≈ 0")}</text>}
       </g>
     </svg>
@@ -107,7 +107,7 @@ function Yukseklik({ v }: SahneProps) {
       <Ok x1={ax - 9} y1={CY - 8} x2={ax - 9 - sinir(G / 12, 6, 66)} y2={CY - 8} renk="var(--c2)" kalin={2.5} />
       <text x={ax} y={CY + 22} fontSize={12} fontWeight={800} fill="var(--muted)" textAnchor="middle">r = {n === 1 ? "R" : `${n}R`}</text>
       <g fontSize={13} fontWeight={800}>
-        <text x={326} y={22} fill="var(--ink)" textAnchor="end">g = 9,8 / {n}² = {say(g, 2)} m/s²</text>
+        <text x={326} y={22} fill="var(--ink)" textAnchor="end">g = {say(9.8)} / {n}² = {say(g, 2)} m/s²</text>
         <text x={326} y={42} fill="var(--c2)" textAnchor="end">{cev("ağırlık = 80 · g =")} {say(G)} N</text>
         <text x={326} y={226} fill="var(--muted)" textAnchor="end">{cev("kütle: 80 kg (değişmez)")}</text>
       </g>
@@ -204,7 +204,7 @@ function Asansor({ v, t, oynuyor, s }: SahneProps) {
   const sure = Number(s.sure ?? 3), u = ilerleme(t, oynuyor, sure), kes = v.kes === 1;
   const dus = kes ? u * u * 118 : 0, Y = 30 + dus, tarti = kes && u > 0 ? 0 : 588;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Asansördeki tartı {0} N gösteriyor{1}", tarti, kes && u > 0 ? ": asansör serbest düşüyor" : "")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Asansördeki tartı {0} N gösteriyor{1}", tarti, kes && u > 0 ? cev(": asansör serbest düşüyor") : "")}>
       <line x1={120} x2={120} y1={0} y2={236} stroke="var(--line-2)" strokeWidth={2} />
       <line x1={220} x2={220} y1={0} y2={236} stroke="var(--line-2)" strokeWidth={2} />
       {!kes || u === 0 ? (
@@ -247,7 +247,7 @@ function Surtunme({ t, oynuyor, s }: SahneProps) {
   const camE = 5 - gecen, ipekE = 5 + gecen;
   const RY = 86, IY = 150;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Cam {0}; ipek {1}", gecen ? "2 elektron verdi, (+) yüklü" : "nötr", gecen ? "2 elektron aldı, (−) yüklü" : "nötr")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Cam {0}; ipek {1}", gecen ? cev("2 elektron verdi, (+) yüklü") : cev("nötr"), gecen ? cev("2 elektron aldı, (−) yüklü") : cev("nötr"))}>
       <rect x={40} y={RY - 12} width={260} height={24} rx={12} fill="var(--fizik-soft)" stroke="var(--c1)" strokeWidth={1.5} />
       {Array.from({ length: 5 }, (_, i) => <Yuk key={`cp${i}`} x={70 + i * 50} y={RY} art />)}
       {Array.from({ length: camE }, (_, i) => <Yuk key={`ce${i}`} x={88 + i * 50} y={RY} art={false} />)}
@@ -260,7 +260,7 @@ function Surtunme({ t, oynuyor, s }: SahneProps) {
       <g fontSize={12.5} fontWeight={800}>
         <text x={14} y={56} fill="var(--c1)">{cev("cam çubuk:")} {gecen ? cev("+2 (2 elektron verdi)") : cev("nötr")}</text>
         <text x={14} y={204} fill="var(--c5)">{cev("ipek:")} {gecen ? cev("−2 (2 elektron aldı)") : cev("nötr")}</text>
-        <text x={14} y={22} fill="var(--ink)">{cev("toplam yük: 0")} {gecen ? "(korundu)" : ""}</text>
+        <text x={14} y={22} fill="var(--ink)">{cev("toplam yük: 0")} {gecen ? cev("(korundu)") : ""}</text>
       </g>
     </svg>
   );
@@ -354,7 +354,7 @@ function Elektroskop({ v }: SahneProps) {
   };
   const sol = yaprak(-1), sag = yaprak(1);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Çubuk {0} cm uzakta; yapraklar {1}", d * 2, aci > 4 ? "açık" : "neredeyse kapalı")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Çubuk {0} cm uzakta; yapraklar {1}", d * 2, aci > 4 ? cev("açık") : cev("neredeyse kapalı"))}>
       <path d={`M100 120 Q100 92 128 92 L212 92 Q240 92 240 120 L240 218 L100 218 Z`} fill="none" stroke="var(--line-2)" strokeWidth={2} />
       <circle cx={TX} cy={TY} r={12} fill="var(--c4)" />
       <line x1={TX} y1={TY + 12} x2={TX} y2={AY} stroke="var(--c4)" strokeWidth={4} />
@@ -384,10 +384,10 @@ function Coulomb({ v }: SahneProps) {
   const q = sinir(v.q ?? 2, -4, 4), n = sinir(v.r ?? 1, 1, 3), F = (0.4 * q) / (n * n), Fb = Math.abs(F);
   const Y = 112, AX = 70, BX = AX + n * 80, ok = sinir(Math.sqrt(Fb) * 60, 0, 80), iter = F > 0;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("q₂ = {0} μC, uzaklık {1} cm: kuvvet {2} N, {3}", q, n * 30, say(Fb, 3), q === 0 ? "kuvvet yok" : iter ? "itme" : "çekme")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("q₂ = {0} μC, uzaklık {1} cm: kuvvet {2} N, {3}", q, n * 30, say(Fb, 3), q === 0 ? cev("kuvvet yok") : iter ? cev("itme§yük") : cev("çekme"))}>
       <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)">F = k·q₁·q₂ / r² = 9·10⁹ · 4·10⁻⁶ · {say(Math.abs(q))}·10⁻⁶ / {say(n * 0.3)}²</text>
       <text x={14} y={42} fontSize={13} fontWeight={800} fill={q === 0 ? "var(--muted)" : iter ? "var(--c2)" : "var(--c1)"}>
-        F = {say(Fb, 3)} N {q === 0 ? "" : iter ? "(itme)" : cev("(çekme)")}
+        F = {say(Fb, 3)} N {q === 0 ? "" : iter ? cev("(itme)") : cev("(çekme)")}
       </text>
       <line x1={AX} x2={BX} y1={Y} y2={Y} stroke="var(--line-2)" strokeWidth={1.5} strokeDasharray="4 5" />
       {q !== 0 && ok > 4 && (
@@ -484,7 +484,7 @@ export const FIZIK8: Record<string, SahneKaydi> = {
     C: Newton,
     geri: (v) => {
       const hiz = (v.v ?? 50) / 10, sonuc = yolHesapla(hiz).sonuc;
-      return { baslik: SONUC[sonuc], metin: `${say(hiz)} km/s ile ${sonuc === "carpti" ? cev("top yere düştü. Hızı artır: yüzey eğildikçe top daha uzağa düşer.") : sonuc === "kurtuldu" ? cev("top hiç geri dönmüyor.") : cev("top yörüngede kalıyor.")}` };
+      return { baslik: SONUC[sonuc], metin: sonuc === "carpti" ? cev("{0} km/s ile top yere düştü. Hızı artır: yüzey eğildikçe top daha uzağa düşer.", say(hiz)) : sonuc === "kurtuldu" ? cev("{0} km/s ile top hiç geri dönmüyor.", say(hiz)) : cev("{0} km/s ile top yörüngede kalıyor.", say(hiz)) };
     },
   },
   "fiz8-asansor": {
