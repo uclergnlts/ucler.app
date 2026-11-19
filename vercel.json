@@ -8,6 +8,10 @@
       "main": true
     }
   },
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "out",
+  "trailingSlash": true,
   "ignoreCommand": "bash tools/vercel-atla.sh",
   "rewrites": [
     {
