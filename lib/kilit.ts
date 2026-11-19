@@ -5,6 +5,7 @@
 // Daha önce açılmış (başlanmış ya da bitirilmiş) konu kilitlenmez.
 import type { Entry } from "./dersler";
 import type { Asama, Prog, Seviye, Unite, Yer } from "./store";
+import { ESKI_UNITE } from "./eski-unite";
 
 /** Ünite testini geçmek için gereken en az puan (100 üzerinden). */
 export const GECME = 80;
@@ -15,20 +16,25 @@ export const SEVIYE_SORU = 10;
 
 export type Durumlar = { prog: Prog; asama: Asama; yer: Yer; unite: Unite; seviye: Seviye };
 
-export type Unitem = { no: number; ad: string; konular: Entry[] };
+export type Unitem = { no: number; kod: string; ad: string; konular: Entry[] };
 /** Dersin üniteleri, sırayla (yalnızca yazılmış konular). */
 export function uniteler(list: Entry[]): Unitem[] {
   const out: Unitem[] = [];
   for (const e of list) {
     if (!e.id) continue;
     let u = out[out.length - 1];
-    if (!u || u.no !== e.unite) out.push((u = { no: e.unite, ad: e.uniteAd, konular: [] }));
+    if (!u || u.no !== e.unite) out.push((u = { no: e.unite, kod: e.uniteKod, ad: e.uniteAd, konular: [] }));
     u.konular.push(e);
   }
   return out;
 }
 
-export const uniteGecti = (ders: string, u: number, d: Durumlar) => (d.unite[`${ders}.${u}`] ?? 0) >= GECME;
+/** Ünite testi puanının saklandığı anahtar: "ders.kod". Kod kalıcıdır, ünitelerin sırası değişse de aynı kalır. */
+export const uniteAnahtar = (ders: string, kod: string) => `${ders}.${kod}`;
+export const uniteGecti = (ders: string, kod: string, d: Durumlar) => (d.unite[uniteAnahtar(ders, kod)] ?? 0) >= GECME;
+/** Konu, eski (2026-11-19 öncesi) ünite yapısında testi geçilmiş bir ünitedeydi: geçilmiş sayılmaya devam eder. */
+const eskidenGecti = (e: Entry, d: Durumlar) =>
+  Object.entries(ESKI_UNITE).some(([k, ids]) => k.startsWith(`${e.ders}.`) && (d.unite[k] ?? 0) >= GECME && ids.includes(e.id!));
 const bitti = (e: Entry, d: Durumlar) => !!d.prog[`${e.ders}.${e.id}`];
 /** Seviye testi geçilen en ileri konunun sırası (hazır konular içinde); geçilen yoksa -1. */
 function seviyeSiniri(hazir: Entry[], d: Durumlar) {
@@ -36,7 +42,7 @@ function seviyeSiniri(hazir: Entry[], d: Durumlar) {
   return -1;
 }
 /** Konu öğrenmeden atlandı mı: ünitesinin testi ya da daha ileri bir konunun seviye testi geçildi. */
-const atlandi = (hazir: Entry[], i: number, d: Durumlar) => uniteGecti(hazir[i].ders, hazir[i].unite, d) || i < seviyeSiniri(hazir, d);
+const atlandi = (hazir: Entry[], i: number, d: Durumlar) => uniteGecti(hazir[i].ders, hazir[i].uniteKod, d) || eskidenGecti(hazir[i], d) || i < seviyeSiniri(hazir, d);
 /** Konu geçildi mi: testi bitti ya da atlandı. */
 const gecildi = (hazir: Entry[], i: number, d: Durumlar) => bitti(hazir[i], d) || atlandi(hazir, i, d);
 /** Öğrenci bu konuya daha önce başlamış mı (aşama bitirmiş ya da bir aşamanın ortasında kalmış). */

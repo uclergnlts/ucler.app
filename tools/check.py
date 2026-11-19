@@ -177,6 +177,8 @@ for ders, topics in d.items():
     for k in kl:
         if "unite" in k and not (isinstance(k["unite"], str) and k["unite"].strip()): err(ders, k.get("id"), "unite boş olmamalı")
         if "unite" in k and not k.get("id"): err(ders, k.get("ad"), "yazılmamış konu ünite başlatamaz")
+        if ("unite" in k) != ("uniteKod" in k): err(ders, k.get("id"), "unite ile uniteKod birlikte durmalı")
+        if "uniteKod" in k and not re.fullmatch(r"[a-z][a-z0-9-]*", str(k["uniteKod"])): err(ders, k.get("id"), "uniteKod küçük harf, rakam ve tire olmalı (sayıyla başlamaz):", k["uniteKod"])
     # ön koşullar (konu haritası): aynı dersten, listede daha önce gelen hazır konular
     onceki = set()
     for k in dersler[ders]["konular"]:

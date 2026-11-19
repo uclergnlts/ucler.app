@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useCallback } from "react";
 import type { TekrarSoru } from "@/lib/content";
 import { DERSLER, type DersId, type Entry } from "@/lib/dersler";
-import { GECME, UNITE_SORU, uniteAcik, uniteler } from "@/lib/kilit";
+import { GECME, UNITE_SORU, uniteAcik, uniteAnahtar, uniteler } from "@/lib/kilit";
 import { uniteKaydet, useDurumlar, useTarayici } from "@/lib/store";
 import { Alt } from "./Soru";
 import { href } from "./temel";
@@ -27,9 +27,9 @@ export default function UniteTesti({ ders, no, list, sorular }: { ders: DersId; 
       cikis="Ünite testinden çık"
       sorular={sorular}
       sec={sec}
-      bitti={(puan) => uniteKaydet(`${ders}.${no}`, puan)}
+      bitti={(puan) => uniteKaydet(uniteAnahtar(ders, u.kod), puan)}
       giris={(basla) => {
-        const ac = !tarayici || uniteAcik(list, u, d), eski = d.unite[`${ders}.${no}`];
+        const ac = !tarayici || uniteAcik(list, u, d), eski = d.unite[uniteAnahtar(ders, u.kod)];
         return {
           body: (
             <article className="flex flex-col gap-3 pt-4">

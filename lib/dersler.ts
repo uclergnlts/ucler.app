@@ -54,7 +54,7 @@ export type Olay = { yer: string; h: string; p: string };
 export type Topic = { title: string; summary: string; olay?: Olay; cards: Card[]; quiz: Question[] };
 export type DersId = "fizik" | "kimya" | "biyoloji";
 /** on: ön koşul konular (aynı dersten, listede daha önce gelen id'ler). Konu haritası bunlarla çizilir. */
-export type Ders = { ad: string; yol: string; konular: { id?: string; ad: string; on?: string[]; sinav?: Sinav; unite?: string }[] };
+export type Ders = { ad: string; yol: string; konular: { id?: string; ad: string; on?: string[]; sinav?: Sinav; unite?: string; uniteKod?: string }[] };
 /** Konunun YKS'de hangi oturumda çıktığı (content/dersler.json "sinav"; tools/check.py doğrular). */
 export type Sinav = "TYT" | "AYT" | "TYT-AYT";
 export const SINAV_AD: Record<Sinav, string> = { TYT: "TYT", AYT: "AYT", "TYT-AYT": "TYT ve AYT" };
@@ -75,6 +75,8 @@ export type Entry = {
   /** Ünite sırası (1'den başlar) ve adı; content/dersler.json'da "unite" yeni ünitenin ilk konusunda durur. */
   unite: number;
   uniteAd: string;
+  /** Ünitenin kalıcı kodu (content/dersler.json "uniteKod"); ünite testi puanı "ders.kod" anahtarıyla saklanır. */
+  uniteKod: string;
   /** Konunun yaklaşık süresi (dakika). */
   dk?: number;
 };

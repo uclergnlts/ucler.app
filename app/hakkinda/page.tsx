@@ -12,9 +12,8 @@ export default function Page() {
       <GeriTop to="/profil/" label="Profil'e dön" baslik="Hakkında" sag={<UstEylem external href={INSTAGRAM.url} label={`Instagram: ${INSTAGRAM.ad}`} icon={<Icon.instagram />} />} />
       <Govde className="text-[15px] leading-relaxed">
         <p>
-          ucler, fizik, kimya ve biyolojiyi en temelden anlatan bir öğrenme sitesi. Konular kısa, görselli kartlarla anlatılır;
-          9. sınıftan üniversitenin ilk yıllarına kadar herkes için yazıldı ve lise müfredatının bütün konularını kapsamayı amaçlar.
-          Site şu an deneme sürümünde; içerik ve görünüm geliştirilmeye devam ediyor.
+          ucler, fizik, kimya ve biyolojiyi en temelden anlatan bir öğrenme uygulamasıdır. Konular kısa ve görselli kartlarla anlatılır.
+          Her ders en temelden başlar ve üniversitenin ilk yılına kadar gider. İçerik ve görünüm geliştirilmeye devam ediyor.
         </p>
         <Bolum title="Nasıl kullanılır?">
           <ol className="grid list-decimal gap-2 pl-5">

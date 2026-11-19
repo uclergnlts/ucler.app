@@ -54,7 +54,7 @@ server.listen(0, async () => {
   p.setDefaultTimeout(8000);
   // DersMotoru'daki COZUM_SURE (25000 ms) beklemesini kısalt.
   // Konular sırayla açılır (lib/kilit.ts): her konunun ekranı alınabilsin diye bütün ünite testleri geçilmiş sayılır.
-  const uniteler = Object.fromEntries(Object.entries(require(path.join(root, 'content/dersler.json'))).flatMap(([d, v]) => v.konular.filter((k) => k.unite).map((_, i) => [`${d}.${i + 1}`, 100])));
+  const uniteler = Object.fromEntries(Object.entries(require(path.join(root, 'content/dersler.json'))).flatMap(([d, v]) => v.konular.filter((k) => k.unite).map((k) => [`${d}.${k.uniteKod}`, 100])));
   await p.addInitScript((u) => { try { if (!localStorage.getItem('tf-unite')) localStorage.setItem('tf-unite', JSON.stringify(u)); } catch {} }, uniteler);
   // TEMA=koyu ya da TEMA=acik verilirse görüntüler o görünümde alınır (lib/tema.ts); verilmezse açık.
   await p.addInitScript((t) => { try { localStorage.setItem('tf-tema', JSON.stringify(t)); } catch {} }, process.env.TEMA === 'koyu' ? 'koyu' : 'acik');

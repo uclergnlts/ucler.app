@@ -6,7 +6,7 @@ import { ANA } from "@/lib/site";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { DERSLER, type DersId, type Entry } from "@/lib/dersler";
-import { acik, bekledigi, GECME, seviyeHref, siradaki, uniteAcik, uniteGecti, uniteHref, uniteler, type Unitem } from "@/lib/kilit";
+import { acik, bekledigi, GECME, seviyeHref, siradaki, uniteAcik, uniteAnahtar, uniteGecti, uniteHref, uniteler, type Unitem } from "@/lib/kilit";
 import { useDurumlar } from "@/lib/store";
 import { asamaSayisi } from "@/lib/asama";
 import { Icon } from "./icons";
@@ -48,7 +48,7 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
         </section>
         {uler.map((u) => {
           const biten = u.konular.filter((e) => d.prog[`${ders}.${e.id}`]).length;
-          const gecti = uniteGecti(ders, u.no, d), testAcik = uniteAcik(list, u, d), puan = d.unite[`${ders}.${u.no}`];
+          const gecti = uniteGecti(ders, u.kod, d), testAcik = uniteAcik(list, u, d), puan = d.unite[uniteAnahtar(ders, u.kod)];
           return (
             <section key={u.no} className="grid gap-2" aria-label={`${u.no}. ünite: ${u.ad}`}>
               <div className="flex items-end justify-between gap-3 border-b border-border pb-2.5">
@@ -161,7 +161,7 @@ function KonuPencere({ ders, list, e, sira }: { ders: DersId; list: Entry[]; e: 
 
 function TestPencere({ ders, list, u }: { ders: DersId; list: Entry[]; u: Unitem }) {
   const d = useDurumlar();
-  const puan = d.unite[`${ders}.${u.no}`], ac = uniteAcik(list, u, d), gecti = uniteGecti(ders, u.no, d);
+  const puan = d.unite[uniteAnahtar(ders, u.kod)], ac = uniteAcik(list, u, d), gecti = uniteGecti(ders, u.kod, d);
   const Kilit = Icon.kilit;
   return (
     <div className="grid gap-3 pb-1">

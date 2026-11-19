@@ -13,13 +13,13 @@ const DATA = { fizik, kimya, biyoloji } as unknown as Record<DersId, Record<stri
 export const topic = (d: DersId, id: string): Topic | undefined => DATA[d][id];
 
 export function entries(d: DersId): Entry[] {
-  let unite = 0, uniteAd = "";
+  let unite = 0, uniteAd = "", uniteKod = "";
   return DERSLER[d].konular.map((k, i) => {
-    if (k.unite) { unite++; uniteAd = k.unite; }
+    if (k.unite) { unite++; uniteAd = k.unite; uniteKod = k.uniteKod ?? String(unite); }
     const t = k.id ? topic(d, k.id) : undefined;
-    if (!k.id || !t) return { ders: d, no: i + 1, ad: k.ad, sinav: k.sinav, unite, uniteAd };
+    if (!k.id || !t) return { ders: d, no: i + 1, ad: k.ad, sinav: k.sinav, unite, uniteAd, uniteKod };
     return {
-      ders: d, no: i + 1, ad: k.ad, id: k.id, title: t.title, summary: t.summary, on: k.on, sinav: k.sinav, unite, uniteAd,
+      ders: d, no: i + 1, ad: k.ad, id: k.id, title: t.title, summary: t.summary, on: k.on, sinav: k.sinav, unite, uniteAd, uniteKod,
       cardCount: t.cards.length, quizCount: t.quiz.length, headings: t.cards.map((c) => c.h).join(" "),
       dk: sureDk(t.cards.length, adimliDers(k.id)?.adimlar.length ?? 0, t.quiz.length),
     };
