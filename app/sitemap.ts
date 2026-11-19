@@ -7,7 +7,7 @@ import { SITE_URL } from "@/lib/site";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const sayfalar = ["/", "/kesfet/", "/videolar/", "/hakkinda/", "/gizlilik/", "/kosullar/"];
+  const sayfalar = ["/", "/tr/", "/kesfet/", "/videolar/", "/hakkinda/", "/gizlilik/", "/kosullar/"];
   return [
     ...sayfalar.map((y) => ({ url: SITE_URL + y })),
     ...DERS_IDS.map((d) => ({ url: `${SITE_URL}/${d}/` })),

@@ -60,7 +60,16 @@ server.listen(0, async () => {
   await p.addInitScript((t) => { try { localStorage.setItem('tf-tema', JSON.stringify(t)); } catch {} }, process.env.TEMA === 'koyu' ? 'koyu' : 'acik');
   await p.addInitScript(() => { const st = window.setTimeout; window.setTimeout = (f, d, ...a) => st(f, d === 25000 ? 400 : d, ...a); });
   const ileri = (ms) => p.waitForTimeout(ms);
-  const cek = async (ad) => { await ileri(1800); await p.screenshot({ path: path.join(out, `${ad}.png`) }); };
+  // CEVIRI=<json dosyası> verilirse ekrandaki yazılar görüntü alınırken sözlükteki karşılıklarıyla değiştirilir, sonra geri konur
+  // (tanıtım sayfasının İngilizce ekran görüntüleri için). METIN=1 verilirse her ekranın yazıları <ad>.txt olarak da yazılır.
+  const sozluk = process.env.CEVIRI ? JSON.parse(fs.readFileSync(process.env.CEVIRI, 'utf8')) : null;
+  const cek = async (ad) => {
+    await ileri(1800);
+    if (process.env.METIN) fs.writeFileSync(path.join(out, `${ad}.txt`), (await p.evaluate(() => { const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT), l = []; let n; while ((n = w.nextNode())) { const t = n.nodeValue.trim(); if (t && !n.parentElement.closest('script,style')) l.push(t); } return l; })).join('\n'));
+    if (sozluk) await p.evaluate((d) => { const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); window.__eski = []; let n; while ((n = w.nextNode())) { const t = n.nodeValue.replace(/\s+/g, ' ').trim(); if (t in d) { window.__eski.push([n, n.nodeValue]); const v = n.nodeValue; n.nodeValue = v.match(/^\s*/)[0] + d[t] + v.match(/\s*$/)[0]; } } }, sozluk);
+    await p.screenshot({ path: path.join(out, `${ad}.png`) });
+    if (sozluk) await p.evaluate(() => { for (const [n, v] of window.__eski) n.nodeValue = v; });
+  };
   const errs = [], takilan = [];
   p.on('pageerror', e => errs.push(e.message));
   p.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });

@@ -11,6 +11,7 @@ export const metadata: Metadata = UYGULAMA
   : {
       title: { absolute: "ucler: science, explained properly" },
       description: "ucler helps anyone understand science: short interactive lessons in the app and deep-dive videos on YouTube.",
+      alternates: { canonical: "/", languages: { en: "/", tr: "/tr/" } },
     };
 
 export default function Page() {

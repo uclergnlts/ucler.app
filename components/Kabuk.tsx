@@ -7,7 +7,7 @@ import Gunluk from "./Gunluk";
 
 export default function Kabuk() {
   const yol = usePathname() ?? "";
-  if (!UYGULAMA && yol === "/") return null;
+  if (!UYGULAMA && /^\/(tr\/?)?$/.test(yol)) return null;
   return (
     <>
       <Tabs />
