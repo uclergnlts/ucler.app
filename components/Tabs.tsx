@@ -4,7 +4,7 @@
 // Kaydedilenler Profil'in içindedir.
 // Ders ekranında (/ders/konu/), tekrar ve günün sorusu ekranında gizlenir.
 import { cev, DIL } from "@/lib/dil";
-import { ANA } from "@/lib/site";
+import { ANA, YAKINDA_GOSTER } from "@/lib/site";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
@@ -22,7 +22,8 @@ const TABS = [
 ] as const;
 
 // Videolar Türkçe seslidir; İngilizce kopyada sekme ve kart altındaki videolar gösterilmez (lib/videolar.ts).
-const GORUNEN = DIL === "en" ? TABS.filter((t) => t.k !== "video") : TABS;
+// "Deneme" sekmesi YAKINDA_GOSTER kapalıyken gizlidir (lib/site.ts).
+const GORUNEN = TABS.filter((t) => !(DIL === "en" && t.k === "video") && (YAKINDA_GOSTER || t.k !== "deneme"));
 
 /** Sayfanın ait olduğu sekme. Ders haritası (/fizik/) ve bulunamayan sayfalar hiçbir sekmeye ait değil. */
 function sekme(parts: string[]): string | undefined {
