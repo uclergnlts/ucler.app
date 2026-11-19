@@ -991,7 +991,7 @@ const kirilma = (aci: number, n: number, ters: boolean) => {
   const sn = ters ? n * Math.sin(aci * RAD) : Math.sin(aci * RAD) / n;
   return sn > 1 ? null : Math.asin(sn) / RAD;
 };
-const ortamAdi = (n: number) => (n < 1.2 ? "hava" : n < 1.4 ? "su" : n < 1.7 ? "cam" : n > 2.3 ? "elmas" : cev("yoğun cam"));
+const ortamAdi = (n: number) => (n < 1.2 ? cev("hava") : n < 1.4 ? cev("su") : n < 1.7 ? cev("cam") : n > 2.3 ? cev("elmas") : cev("yoğun cam"));
 
 function KirilmaLab({ v, saat = 0 }: SahneProps) {
   const aci = v.aci ?? 30, n = (v.n ?? 150) / 100, ters = v.ters === 1, k = kirilma(aci, n, ters);
@@ -1014,7 +1014,7 @@ function KirilmaLab({ v, saat = 0 }: SahneProps) {
   const yay = (a: number, asagi: boolean, r: number) => { const u = yon(a, asagi); return `M${O.x} ${O.y + (asagi ? r : -r)} A${r} ${r} 0 0 ${asagi === a > 0 ? 0 : 1} ${O.x + u.x * r} ${O.y + u.y * r}`; };
   const yansOp = k === null ? 1 : 0.18 + 0.5 * Math.pow(aci / 90, 4), etiket = `${ortamAdi(n)} · n = ${say(n, 2)}`;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Gelme açısı {0} derece, {1}", aci, k === null ? "tam yansıma" : `kırılma açısı ${Math.round(k)} derece`)}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Gelme açısı {0} derece, {1}", aci, k === null ? cev("tam yansıma") : cev("kırılma açısı {0} derece", Math.round(k)))}>
       <text x={10} y={22} fontSize={13} fontWeight={800} fill={k === null ? "var(--c2)" : "var(--ink)"}>{k === null ? cev("Tam yansıma: ışık dışarı çıkamıyor") : cev("kırılma açısı θ₂ = {0}°", say(k))}</text>
       <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{k === null ? cev("{0} · sin{1}° = {2} > 1", say(n1, 2), aci, say(n1 * Math.sin(aci * RAD), 2)) : cev("{0} · sin{1}° = {2} · sin θ₂", say(n1, 2), aci, say(n2, 2))}{sinir !== null ? cev(" · sınır açı {0}°", say(sinir)) : ""}</text>
       <rect x={10} y={O.y} width={320} height={110} rx={0} fill="var(--fizik-soft)" />

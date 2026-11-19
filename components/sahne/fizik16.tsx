@@ -81,7 +81,7 @@ function Kristal({ v, t, oynuyor, s }: SahneProps) {
           {zt === 0 && <text x={ex + 10} y={ey - 6} fontSize={11} fontWeight={700} fill="var(--c1)">{cev("fazla elektron")}</text>}
         </g>
       )}
-      {p && zt === 0 && <text x={boslukX + 4} y={boslukY - 12} fontSize={11} fontWeight={700} fill="var(--c2)" textAnchor="middle">{cev("boşluk")}</text>}
+      {p && zt === 0 && <text x={boslukX + 4} y={boslukY - 12} fontSize={11} fontWeight={700} fill="var(--c2)" textAnchor="middle">{cev("boşluk§yarı iletken")}</text>}
       <text x={170} y={232} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">
         {p ? cev("B: 3 değerlik elektron · Si: 4") : cev("P: 5 değerlik elektron · Si: 4")}
       </text>
@@ -159,7 +159,7 @@ function Diyot({ v, t, oynuyor, s }: SahneProps) {
 // Elektron enerji aralığını inip boşlukla birleşince bir foton verir: λ (nm) ≈ 1240 / E (eV).
 const dalgaBoyu = (E: number) => 1240 / E;
 const renkAdi = (l: number) =>
-  l > 700 ? cev("kızılötesi (görünmez)") : l >= 620 ? cev("kırmızı") : l >= 590 ? "turuncu" : l >= 570 ? cev("sarı") : l >= 495 ? cev("yeşil") : l >= 450 ? "mavi" : l >= 380 ? "mor" : cev("morötesi");
+  l > 700 ? cev("kızılötesi (görünmez)") : l >= 620 ? cev("kırmızı") : l >= 590 ? cev("turuncu") : l >= 570 ? cev("sarı") : l >= 495 ? cev("yeşil") : l >= 450 ? cev("mavi") : l >= 380 ? cev("mor") : cev("morötesi");
 /** Dalga boyundan yaklaşık görünür renk. */
 function dalgaRengi(l: number) {
   let r = 0, g = 0, b = 0;
@@ -186,7 +186,7 @@ function Led({ v }: SahneProps) {
       <rect x={24} y={ust - 18} width={120} height={18} fill="var(--c1)" fillOpacity={0.18} />
       <rect x={24} y={ALT} width={120} height={18} fill="var(--c2)" fillOpacity={0.18} />
       <text x={150} y={ust - 5} fontSize={10.5} fontWeight={700} fill="var(--c1)">{cev("elektron")}</text>
-      <text x={150} y={ALT + 13} fontSize={10.5} fontWeight={700} fill="var(--c2)">{cev("boşluk")}</text>
+      <text x={150} y={ALT + 13} fontSize={10.5} fontWeight={700} fill="var(--c2)">{cev("boşluk§yarı iletken")}</text>
       <circle cx={60} cy={ust - 9} r={5} fill="var(--c1)" />
       <circle cx={60} cy={ALT + 9} r={5} fill="none" stroke="var(--c2)" strokeWidth={2} />
       <line x1={60} x2={60} y1={ust - 2} y2={ALT + 2} stroke="var(--ink)" strokeWidth={1.4} strokeDasharray="4 3" />
@@ -336,7 +336,7 @@ function Meissner({ t, oynuyor, s }: SahneProps) {
   const DY = 168, yuzen = DY - 40; // diskin üstü, mıknatısın duracağı alt kenar
   const altKenar = 70 + in_ * (yuzen - 70);
   const bitti = zt >= sure - 1e-6 && !oynuyor;
-  const baslik = bitti ? cev("Mıknatıs havada asılı kaldı") : zt === 0 ? cev("Seramik disk oda sıcaklığında") : cev("Disk soğuyor: {0} K{1}", Math.round(T), superIl ? " (süper iletken)" : "");
+  const baslik = bitti ? cev("Mıknatıs havada asılı kaldı") : zt === 0 ? cev("Seramik disk oda sıcaklığında") : cev("Disk soğuyor: {0} K{1}", Math.round(T), superIl ? cev(" (süper iletken)") : "");
   return (
     <svg viewBox="0 0 340 240" role="img" aria-label={baslik}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={bitti ? "var(--c3)" : "var(--ink)"}>{baslik}</text>
