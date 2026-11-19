@@ -3715,5 +3715,882 @@
    "A heated solid gets longer, and the change in length is <b>ΔL = L₀·λ·ΔT</b>."
   ],
   "soruOnce": true
+ },
+ "basit-harmonik-hareket": {
+  "id": "basit-harmonik-hareket",
+  "ders": "fizik",
+  "konu": "basit-harmonik-hareket",
+  "baslik": "Simple Harmonic Motion",
+  "ozet": "Pull the spring and see the restoring force. Watch the oscillation, read the position-time graph and set the period. Take a pendulum to the Moon, find how the energy is shared, and catch resonance with a swing.",
+  "adimlar": [
+   {
+    "baslik": "The restoring force",
+    "metin": "A spring pulls an object that is a distance x from equilibrium back with a force <b>F = −k · x</b>. Here k = 50 N/m. Move the object to a place where the spring pulls it <b>to the left with 5 N</b>.",
+    "sahne": {
+     "tur": "fiz11-geri"
+    },
+    "deger": {
+     "x": -4
+    },
+    "kontroller": [
+     {
+      "ad": "x",
+      "etiket": "Displacement x",
+      "min": -10,
+      "max": 10,
+      "tur": "surgu",
+      "birim": "cm"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "x": 10
+     },
+     "tamam": "For x = +0.1 m, F = −50 · 0.1 = <b>−5 N</b>. The object is to the right of equilibrium, and the force points left. The spring always pulls the object toward equilibrium.",
+     "ipucu": "For the force to point left, the object must be to the right of equilibrium. 5 / 50 = 0.1 m."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "What happens when you let go?",
+    "metin": "You pull the object 10 cm and let go, and there is no friction. The red arrow will show the acceleration and the green arrow the velocity.",
+    "sahne": {
+     "tur": "fiz11-salinim",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "How does the object move?",
+     "secenekler": [
+      {
+       "yazi": "It stops at equilibrium",
+       "neden": "At equilibrium the force is zero, but the object is at its fastest at that moment. So its speed carries it past equilibrium."
+      },
+      {
+       "yazi": "It goes a little past equilibrium and stops",
+       "neden": "That is damped oscillation. In damped oscillation friction turns the energy into heat, but here there is no friction."
+      },
+      {
+       "yazi": "It goes back and forth between two ends",
+       "dogru": true,
+       "neden": "At equilibrium the speed is greatest and the acceleration is zero. At the ends it is the other way around. There is no friction, so the amplitude stays 10 cm."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "The position-time graph",
+    "metin": "An object on a vertical spring was released from +A at t = 0. The period is T = 2 s, and the graph is the curve <b>x = A·cos(ωt)</b>. Slide the time and find the moment the object <b>first reaches −A</b>.",
+    "sahne": {
+     "tur": "fiz11-grafik"
+    },
+    "deger": {
+     "t": 0
+    },
+    "kontroller": [
+     {
+      "ad": "t",
+      "etiket": "Time",
+      "min": 0,
+      "max": 2,
+      "adim": 0.25,
+      "tur": "surgu",
+      "birim": "s"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "t": 1
+     },
+     "tamam": "The object reaches −A at <b>T/2 = 1 s</b>. It passes equilibrium at T/4 = 0.5 s and is back at the start at T = 2 s.",
+     "ipucu": "One full back-and-forth trip takes T. Reaching −A takes half of that."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Spring lab",
+    "metin": "The object oscillates on the end of the spring without friction, and the position-time graph runs below it. When you change the spring constant, the mass and the amplitude, the oscillation changes right away. Find the following for yourself.",
+    "sahne": {
+     "tur": "sim-yay"
+    },
+    "deger": {
+     "k": 40,
+     "m": 1,
+     "A": 5
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Spring constant",
+      "min": 10,
+      "max": 80,
+      "adim": 10,
+      "tur": "surgu",
+      "birim": "N/m"
+     },
+     {
+      "ad": "m",
+      "etiket": "Mass",
+      "min": 0.5,
+      "max": 4,
+      "adim": 0.5,
+      "tur": "sayac",
+      "birim": "kg"
+     },
+     {
+      "ad": "A",
+      "etiket": "Amplitude",
+      "min": 5,
+      "max": 20,
+      "adim": 5,
+      "tur": "surgu",
+      "birim": "cm"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "With k = 40 N/m and 1 kg, set the amplitude to <b>10</b>, then to <b>20 cm</b>. Does the period change?",
+       "hedef": [
+        {
+         "A": 10,
+         "m": 1,
+         "k": 40
+        },
+        {
+         "A": 20,
+         "m": 1,
+         "k": 40
+        }
+       ],
+       "sirali": true,
+       "coz": [
+        {
+         "k": 40,
+         "m": 1,
+         "A": 10
+        },
+        {
+         "A": 20
+        }
+       ],
+       "tamam": "The period stays 0.99 s. When the amplitude doubles, the object travels twice as far but also twice as fast. So the period does not depend on the amplitude."
+      },
+      {
+       "yazi": "Find a way to <b>double</b> the period (≈ 2 s).",
+       "hedef": {
+        "T": [
+         1.95,
+         2.03
+        ]
+       },
+       "coz": [
+        {
+         "k": 40,
+         "m": 4
+        }
+       ],
+       "tamam": "The relation T = 2π√(m/k) contains a square root. So to double the period you must make the mass 4 times larger or cut k to one quarter."
+      },
+      {
+       "yazi": "Now bring the period down to <b>0.5 s</b>.",
+       "hedef": {
+        "T": [
+         0.47,
+         0.52
+        ]
+       },
+       "coz": [
+        {
+         "m": 0.5,
+         "k": 80
+        }
+       ],
+       "tamam": "You need a light mass and a stiff spring. For m = 0.5 kg and k = 80 N/m, T = 2π√(0.5/80) ≈ 0.5 s. A stiffer spring gives a larger restoring force, and the oscillation speeds up."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "The simple pendulum",
+    "metin": "This pendulum swings through small angles. Change the length of the string and the mass of the ball, and play it at least twice.",
+    "sahne": {
+     "tur": "fiz11-sarkac",
+     "sure": 4
+    },
+    "deger": {
+     "L": 1,
+     "a": 0
+    },
+    "kontroller": [
+     {
+      "ad": "L",
+      "etiket": "String length",
+      "min": 0.25,
+      "max": 1,
+      "adim": 0.25,
+      "tur": "surgu",
+      "birim": "m"
+     },
+     {
+      "ad": "a",
+      "etiket": "Heavy ball",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "What does the period of the pendulum depend on?",
+     "secenekler": [
+      {
+       "yazi": "The mass of the ball",
+       "neden": "The period comes out the same with the heavy ball and the light one."
+      },
+      {
+       "yazi": "Both",
+       "neden": "In the trial where you change only the mass, the period does not change."
+      },
+      {
+       "yazi": "The length of the string",
+       "dogru": true,
+       "neden": "The period grows with the square root of the string length. When the string is 4 times longer, the period doubles. The mass does not change the period."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "A pendulum on the Moon",
+    "metin": "The same 1 m pendulum will swing on Earth and on the Moon. On the Moon g is about 1.6 m/s², one sixth of its value on Earth.",
+    "sahne": {
+     "tur": "fiz11-ay",
+     "sure": 6.5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What is the period of the pendulum on the Moon?",
+     "secenekler": [
+      {
+       "yazi": "It stays the same",
+       "neden": "The period of a pendulum depends on g: T = 2π√(L/g)."
+      },
+      {
+       "yazi": "6 times longer",
+       "neden": "The period is inversely proportional to √g, not to g."
+      },
+      {
+       "yazi": "About 2.5 times longer",
+       "dogru": true,
+       "neden": "When g drops to one sixth, the period becomes √6 ≈ 2.45 times longer. So the period is about 4.9 s instead of 2 s. That is why a pendulum clock runs slow on the Moon."
+      }
+     ]
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "How the energy is shared",
+    "metin": "The potential energy is <b>½ · k · x²</b>, and the total energy is ½ · k · A². The spring constant is k = 50 N/m and the amplitude is A = 10 cm. Move the object to a place where <b>75% of the energy is kinetic</b>.",
+    "sahne": {
+     "tur": "fiz11-enerji"
+    },
+    "deger": {
+     "x": 10
+    },
+    "kontroller": [
+     {
+      "ad": "x",
+      "etiket": "Distance from equilibrium",
+      "min": 0,
+      "max": 10,
+      "tur": "surgu",
+      "birim": "cm"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "x": 5
+     },
+     "tamam": "At x = A/2 = 5 cm, E<sub>p</sub> = ½ · 50 · 0.05² = 0.0625 J. This is one quarter of the total energy (0.25 J). The other 75% is kinetic. The speed here is about 87% of the maximum speed.",
+     "ipucu": "The share of potential energy must be 25%: x²/A² = 1/4."
+    },
+    "kart": 12
+   },
+   {
+    "baslik": "Resonance",
+    "metin": "Push the swing at regular intervals, always in the same direction. Find the push interval that makes the swing grow the most.",
+    "sahne": {
+     "tur": "fiz11-rezonans",
+     "sure": 10
+    },
+    "deger": {
+     "p": 1
+    },
+    "kontroller": [
+     {
+      "ad": "p",
+      "etiket": "Push interval",
+      "min": 1,
+      "max": 3,
+      "adim": 0.5,
+      "tur": "surgu",
+      "birim": "s"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "p": 2
+     },
+     "tamam": "The swing's own period is 2 s, so its <b>natural frequency</b> is 0.5 Hz. Every push came while the swing was moving the same way, and the amplitude grew. This is called <b>resonance</b>. The frequency of the outside push must equal the natural frequency. Friction limits the amplitude.",
+     "ipucu": "The pushes should line up with one full back-and-forth trip of the swing."
+    },
+    "kart": 13
+   }
+  ],
+  "kapanis": [
+   "The restoring force F = −k·x always points toward equilibrium.",
+   "The speed is greatest at equilibrium (ωA). The acceleration is greatest at the ends (ω²A).",
+   "For a mass on a spring T = 2π√(m/k), and for a simple pendulum T = 2π√(L/g). The period does not depend on the amplitude.",
+   "The period of a pendulum does not depend on the mass, and it gets longer when g gets smaller. The period of a mass on a spring does not depend on g.",
+   "The total energy is E = ½kA², and it is constant. At an end all the energy is potential, and at equilibrium it is all kinetic."
+  ],
+  "soruOnce": true
+ },
+ "dalgalar": {
+  "id": "dalgalar",
+  "ders": "fizik",
+  "konu": "dalgalar",
+  "baslik": "Vibrations and Waves",
+  "ozet": "Compare transverse and longitudinal waves, set the wavelength with v = λ·f, send a wave into another medium, see what amplitude does, reflect a pulse and make waves interfere.",
+  "adimlar": [
+   {
+    "baslik": "Transverse and longitudinal waves",
+    "metin": "Send a wave first along a rope, then along a spring, and watch the red particles.",
+    "sahne": {
+     "tur": "fiz11-tur",
+     "sure": 4
+    },
+    "deger": {
+     "b": 0
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Spring (longitudinal wave)",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "Does the red particle travel along with the wave?",
+     "secenekler": [
+      {
+       "yazi": "Yes, it moves right",
+       "neden": "Look at the dashed line. The particle stays around the place where it started."
+      },
+      {
+       "yazi": "No, it vibrates in place",
+       "dogru": true,
+       "neden": "A wave carries energy, not matter. When you throw a stone into water the rings move outward, but a floating leaf just bobs up and down in place."
+      },
+      {
+       "yazi": "Only in a longitudinal wave",
+       "neden": "In a longitudinal wave too, the particle moves back and forth and returns to the same place."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Entering another medium",
+    "metin": "The speed of a wave is <b>v = λ · f</b>. The wave will now pass from a thin rope to a thick rope.",
+    "sahne": {
+     "tur": "fiz11-ortam",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What changes on the thick rope?",
+     "secenekler": [
+      {
+       "yazi": "Speed and λ decrease, f is the same",
+       "dogru": true,
+       "neden": "The wave slows down on the thick rope. The frequency does not change, so by v = λ·f the wavelength gets shorter too."
+      },
+      {
+       "yazi": "f decreases, λ is the same",
+       "neden": "The source sets the frequency. When a wave enters another medium, f does not change."
+      },
+      {
+       "yazi": "Nothing changes",
+       "neden": "On the thick rope the waves bunch up and the front slows down."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Amplitude",
+    "metin": "Amplitude is the height from equilibrium to a crest. The two ropes are identical. The upper wave has amplitude A, and the lower one 3A.",
+    "sahne": {
+     "tur": "fiz11-genlik",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which wave gets ahead?",
+     "secenekler": [
+      {
+       "yazi": "The large-amplitude one",
+       "neden": "A wave with a larger amplitude carries more energy, but it does not travel faster."
+      },
+      {
+       "yazi": "The small-amplitude one",
+       "neden": "A small amplitude does not speed a wave up. Both waves are in the same medium."
+      },
+      {
+       "yazi": "They stay side by side",
+       "dogru": true,
+       "neden": "The two waves travel at the same speed on identical ropes. The medium sets the speed, not the amplitude."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Wave lab",
+    "metin": "The source shakes the rope, and the wave travels to the right. The triangle follows a crest, and the red dot is a piece of the rope. Change the frequency, the wave speed (the tension in the rope) and the amplitude. Find the following for yourself.",
+    "sahne": {
+     "tur": "sim-dalga"
+    },
+    "deger": {
+     "f": 1,
+     "v": 4,
+     "A": 2
+    },
+    "kontroller": [
+     {
+      "ad": "f",
+      "etiket": "Frequency",
+      "min": 1,
+      "max": 4,
+      "adim": 0.5,
+      "tur": "sayac",
+      "birim": "Hz"
+     },
+     {
+      "ad": "v",
+      "etiket": "Wave speed",
+      "min": 2,
+      "max": 8,
+      "adim": 2,
+      "tur": "sayac",
+      "birim": "m/s"
+     },
+     {
+      "ad": "A",
+      "etiket": "Amplitude",
+      "min": 1,
+      "max": 4,
+      "birim": "cm"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "With the speed at 4 m/s, raise the frequency from <b>1 Hz</b> to <b>2 Hz</b>. What happens to the wavelength?",
+       "hedef": [
+        {
+         "v": 4,
+         "f": 1
+        },
+        {
+         "v": 4,
+         "f": 2
+        }
+       ],
+       "sirali": true,
+       "coz": [
+        {
+         "v": 4,
+         "f": 1
+        },
+        {
+         "f": 2
+        }
+       ],
+       "tamam": "λ dropped from 4 m to 2 m. On the same rope the speed does not change. So when the frequency doubles, the wavelength is cut in half: <b>v = λ·f</b>."
+      },
+      {
+       "yazi": "Set the frequency to <b>4 Hz</b> but keep the wavelength at <b>2 m</b>.",
+       "hedef": {
+        "f": 4,
+        "lam": 2
+       },
+       "coz": [
+        {
+         "v": 8,
+         "f": 4
+        }
+       ],
+       "tamam": "For the wavelength to stay the same, the speed had to double as well, so you tightened the rope. The medium sets the speed, and the source sets the frequency."
+      },
+      {
+       "yazi": "Bring the wavelength down to <b>0.5 m</b> and watch the red dot.",
+       "hedef": {
+        "lam": 0.5
+       },
+       "coz": [
+        {
+         "v": 2,
+         "f": 4
+        }
+       ],
+       "tamam": "At a speed of 2 m/s and a frequency of 4 Hz, λ = 0.5 m. While the wave traveled to the right, the red dot only vibrated up and down. So a wave carries energy, not matter."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Reflection of a pulse",
+    "metin": "A single disturbance on a spring is called a <b>pulse</b>. Send the pulse first to a <b>fixed end</b> tied to a wall, then to a <b>free end</b> with a ring sliding on a rod.",
+    "sahne": {
+     "tur": "fiz11-yansima",
+     "sure": 4
+    },
+    "deger": {
+     "u": 0
+    },
+    "kontroller": [
+     {
+      "ad": "u",
+      "etiket": "Free end",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "At which end does the pulse come back inverted?",
+     "secenekler": [
+      {
+       "yazi": "At the free end",
+       "neden": "At the free end the ring rises with the pulse, and the pulse comes back as a crest."
+      },
+      {
+       "yazi": "At the fixed end",
+       "dogru": true,
+       "neden": "The pulse pulls the wall up, and the wall pulls the rope down. This is an action-reaction pair. So the crest comes back as a trough."
+      },
+      {
+       "yazi": "It is inverted at both",
+       "neden": "In the trial with the free end, the pulse came back as a crest."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Interference",
+    "metin": "Two pulses are heading toward each other. When they meet at the same point, their displacements <b>add</b>. Make the rope look <b>flat</b> at the moment they meet.",
+    "sahne": {
+     "tur": "fiz11-girisim",
+     "sure": 3.4
+    },
+    "deger": {
+     "c": 0
+    },
+    "kontroller": [
+     {
+      "ad": "c",
+      "etiket": "Right pulse is a trough",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "c": 1
+     },
+     "tamam": "When a crest met an equal trough, the displacements canceled each other. This is called <b>destructive interference</b>.",
+     "ipucu": "To cancel a crest you need an equal trough."
+    },
+    "kart": 5
+   }
+  ],
+  "kapanis": [
+   "A wave carries energy, not matter. The particles of the medium vibrate in place.",
+   "In a transverse wave the vibration is perpendicular to the direction of travel, and in a longitudinal wave it is parallel. Sound is a longitudinal wave.",
+   "The speed of a wave is v = λ·f. The medium sets the speed, and the source sets the frequency. Amplitude changes the energy, not the speed.",
+   "A pulse reflects inverted from a fixed end and upright from a free end. When waves meet, their displacements add.",
+   "Pushes at the natural frequency make the amplitude grow. This is called resonance."
+  ],
+  "soruOnce": true
+ },
+ "deprem": {
+  "id": "deprem",
+  "ders": "fizik",
+  "konu": "deprem",
+  "baslik": "Earthquakes and resonance",
+  "ozet": "Release the stress built up on a fault and race the P and S waves to a station. Turn magnitude into energy, and drive buildings into resonance on a shake table.",
+  "adimlar": [
+   {
+    "baslik": "A locked fault",
+    "metin": "The two sides of the fault are slowly pushed in opposite directions, but friction keeps the fault locked. Press play and watch the road.",
+    "sahne": {
+     "tur": "fiz15-fay",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "What happened to the road when the stress exceeded the strength?",
+     "secenekler": [
+      {
+       "yazi": "It splits in two, and the pieces stay straight but offset",
+       "dogru": true,
+       "neden": "The rock slips suddenly and the bend straightens out, but the two sides are now offset. The stored energy spreads out as waves."
+      },
+      {
+       "yazi": "It stays bent",
+       "neden": "The bend in the road is a sign of stress. When the fault breaks, the stress is released and the road straightens."
+      },
+      {
+       "yazi": "It returns to its old straight shape, with no offset",
+       "neden": "The blocks really did move during this time. The break completes that slip all at once."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Which wave is first?",
+    "metin": "Two kinds of waves, <b>P</b> and <b>S</b>, leave the focus at the same moment. The station is 120 km away.",
+    "sahne": {
+     "tur": "fiz15-istasyon",
+     "sure": 6,
+     "hizGizle": true
+    },
+    "deger": {
+     "d": 120
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which one reaches the station first?",
+     "secenekler": [
+      {
+       "yazi": "The P wave",
+       "dogru": true,
+       "neden": "P travels at about 6 km/s and S at about 3.5 km/s. Over 120 km, P arrives in 20 s and S in about 34 s."
+      },
+      {
+       "yazi": "The S wave",
+       "neden": "S shakes harder, but it is slower."
+      },
+      {
+       "yazi": "Both at the same time",
+       "neden": "The two waves leave at the same moment, but their speeds are different. So S falls behind."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Distance and time difference",
+    "metin": "Each second of difference between P and S means about 8 km of distance. Place the station where there will be <b>10 seconds</b> between P and S. Then press play.",
+    "sahne": {
+     "tur": "fiz15-istasyon",
+     "sure": 6
+    },
+    "deger": {
+     "d": 40
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Distance",
+      "min": 20,
+      "max": 200,
+      "adim": 2,
+      "tur": "surgu",
+      "birim": "km"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "d": [
+       80,
+       88
+      ]
+     },
+     "tamam": "The distance is about <b>84 km</b>. The P wave arrives in 14 seconds and the S wave in 24 seconds. Each second of difference is about 8.4 km. That is why the rule is d ≈ 8 km × Δt.",
+     "ipucu": "Each 1 second of difference means about 8 km of distance."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Magnitude and energy",
+    "metin": "When the magnitude goes up by 1, the energy goes up about 32 times. Raise the magnitude. The square stands for the energy released.",
+    "sahne": {
+     "tur": "fiz15-buyukluk"
+    },
+    "deger": {
+     "M": 5
+    },
+    "kontroller": [
+     {
+      "ad": "M",
+      "etiket": "Magnitude",
+      "min": 4,
+      "max": 8,
+      "adim": 0.1,
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "M": [
+       6.95,
+       7.05
+      ]
+     },
+     "tamam": "A magnitude 7 earthquake releases about <b>1000 times</b> (32 × 32) the energy of a magnitude 5. A small difference in magnitude is a huge difference in energy.",
+     "ipucu": "Each +1 in magnitude means about 32 times the energy. 32 × 32 is about 1000."
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Which building sways?",
+    "metin": "Every building has its own period of oscillation. The table will shake slowly, with a period of 2 s (0.5 Hz). The natural periods of the buildings are written below them.",
+    "sahne": {
+     "tur": "fiz15-sarsma",
+     "sure": 6
+    },
+    "deger": {
+     "f": 0.5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which building sways the most?",
+     "secenekler": [
+      {
+       "yazi": "3-story",
+       "neden": "The period of this building is about 0.3 s. In slow shaking it moves along with the ground and does not bend."
+      },
+      {
+       "yazi": "10-story",
+       "neden": "The period of this building is about 1 s, which does not match the 2 s shaking."
+      },
+      {
+       "yazi": "20-story",
+       "dogru": true,
+       "neden": "The period of this building is about 2 s, equal to that of the shaking. So it goes into resonance. Long-period shaking is dangerous for tall buildings."
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Catch the resonance",
+    "metin": "A building goes into resonance when the frequency of the shaking equals its own frequency (f = 1/T). Set the frequency, bring the <b>3-story building</b> into resonance, and press play.",
+    "sahne": {
+     "tur": "fiz15-sarsma",
+     "sure": 6
+    },
+    "deger": {
+     "f": 1
+    },
+    "kontroller": [
+     {
+      "ad": "f",
+      "etiket": "Shaking frequency",
+      "min": 0.3,
+      "max": 3.6,
+      "adim": 0.1,
+      "tur": "surgu",
+      "birim": "Hz"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "f": [
+       3.1,
+       3.5
+      ]
+     },
+     "tamam": "The period of the 3-story building is ≈ 0.3 s, so f ≈ 3.3 Hz. Short-period shaking on hard ground puts stress on low buildings.",
+     "ipucu": "f = 1 / T. The period of the 3-story building is T ≈ 0.1 × 3 = 0.3 s."
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Seismic isolator",
+    "metin": "The building and the shaking are the same. Play it first without the isolator, then turn the isolator on.",
+    "sahne": {
+     "tur": "fiz15-izolator",
+     "sure": 6
+    },
+    "deger": {
+     "iz": 0
+    },
+    "kontroller": [
+     {
+      "ad": "iz",
+      "etiket": "Isolator",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "How does an isolator protect the building?",
+     "secenekler": [
+      {
+       "yazi": "It lengthens the building's period, so less shaking gets through",
+       "dogru": true,
+       "neden": "The flexible bearings absorb the motion of the ground. The building's period moves far from that of the shaking, and resonance is avoided."
+      },
+      {
+       "yazi": "It makes the building stiffer and heavier",
+       "neden": "Stiffness shortens the period. An isolator does the opposite and makes the building flexible at its base."
+      },
+      {
+       "yazi": "It stops the seismic waves",
+       "neden": "The wave still arrives, and the ground shakes the same way. What changes is how much of the shaking is passed on to the building."
+      }
+     ]
+    },
+    "kart": 11
+   }
+  ],
+  "kapanis": [
+   "An earthquake is the sudden release of stress built up on a locked fault.",
+   "Each second between P and S means about 8 km of distance.",
+   "When the magnitude goes up by 1, the energy goes up about 32 times.",
+   "If the period of the shaking is close to the building's natural period, there is resonance. An isolator prevents this."
+  ],
+  "soruOnce": true
  }
 }

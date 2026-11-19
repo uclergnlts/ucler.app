@@ -127,7 +127,7 @@ function Buyukluk({ v }: SahneProps) {
   const yaz = oran >= 10 ? say(oran, 0) : say(oran, oran < 1 ? 2 : 1);
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={cev("Büyüklük {0}: büyüklüğü 5 olan depremin {1} katı enerji", say(M), yaz)}>
-      <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">M = {say(M)}{cev(": enerji, M = 5'in")} <tspan fill="var(--c2)">{yaz} {cev("katı")}</tspan></text>
+      <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">M = {say(M)}{cev(": enerji, M = 5'in")} <tspan fill="var(--c2)">{yaz} {cev("katı§kat")}</tspan></text>
       <rect x={40} y={196 - k5} width={k5} height={k5} fill="var(--c1)" fillOpacity={0.35} stroke="var(--c1)" strokeWidth={1.5} />
       <text x={40 + k5 / 2} y={214} fontSize={11.5} fontWeight={700} fill="var(--c1)" textAnchor="middle">M = 5</text>
       <rect x={150} y={196 - kM} width={kM} height={kM} fill="var(--c2)" fillOpacity={0.3} stroke="var(--c2)" strokeWidth={1.5} />
@@ -153,7 +153,7 @@ function Bina({ x, taban, kat, sapma, renk }: { x: number; taban: number; kat: n
     const a = (i / kat) * sapma, b = ((i + 1) / kat) * sapma, y = taban - i * kh;
     return <path key={i} d={`M${x + a} ${y} L${x + a + W} ${y} L${x + b + W} ${y - kh} L${x + b} ${y - kh} Z`} fill={renk} fillOpacity={0.25 + (i % 2) * 0.12} stroke={renk} strokeWidth={0.8} />;
   });
-  return <g>{katlar}<text x={x + W / 2} y={taban + 30} fontSize={11.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">{kat} {cev("kat")}</text></g>;
+  return <g>{katlar}<text x={x + W / 2} y={taban + 30} fontSize={11.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">{kat} {cev("kat§bina")}</text></g>;
 }
 function Sarsma({ v, t, oynuyor, s }: SahneProps) {
   const f = sinir(v.f ?? 2, 0.3, 3.6), sure = Number(s.sure ?? 6), zt = ilerleme(t, oynuyor, sure) * sure;

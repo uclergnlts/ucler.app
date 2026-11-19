@@ -5161,5 +5161,1000 @@
     ]
    }
   ]
+ },
+ "basit-harmonik-hareket": {
+  "title": "Simple harmonic motion",
+  "summary": "Learn about the restoring force, oscillation graphs, pendulums and energy.",
+  "cards": [
+   {
+    "h": "The restoring force",
+    "p": "When you pull an object a distance x from equilibrium, a spring pulls it back with a force <b>F = −k·x</b>. This force always points toward equilibrium. Motion under such a force is called <b>simple harmonic motion</b> (SHM).",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bhh-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><marker id='bhh-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='14' y='20' width='8' height='50' fill='var(--line)'/><path d='M14 70 H300' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M170 22 V70' fill='none' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><polyline points='22.0,55.0 35.3,62.0 50.0,48.0 64.7,62.0 79.3,48.0 94.0,62.0 108.7,48.0 123.3,62.0 138.0,48.0 152.7,62.0 167.3,48.0 182.0,62.0 196.7,48.0 204.0,55.0 210.0,55.0' fill='none' stroke='var(--muted)' stroke-width='1.5'/><rect x='210' y='40' width='30' height='30' rx='3' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><text x='225.0' y='60.0' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>m</text><path d='M225 30 H186' fill='none' stroke='var(--c2)' stroke-width='2' marker-end='url(#bhh-1)'/><text x='236' y='34' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='700'>F</text><path d='M170 84 H223' fill='none' stroke='var(--ink)' stroke-width='1.2' marker-end='url(#bhh-2)'/><text x='170' y='98' font-size='11' fill='var(--muted)' text-anchor='middle'>O</text><text x='198' y='98' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>x</text><path d='M30 150 H160 M90 108 V192' fill='none' stroke='var(--ink)' stroke-width='1.2'/><path d='M42 115 L138 185' fill='none' stroke='var(--c2)' stroke-width='2'/><text x='164' y='154' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>x</text><text x='96' y='116' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>F</text><text x='245' y='145' font-size='20' fill='var(--c2)' text-anchor='middle' font-weight='700'>F = −k·x</text><text x='245' y='168' font-size='11' fill='var(--muted)' text-anchor='middle'>force proportional to x</text><text x='245' y='185' font-size='11' fill='var(--muted)' text-anchor='middle'>always toward equilibrium</text></svg>",
+    "key": "The minus sign says the force points toward equilibrium. This force is called the restoring force."
+   },
+   {
+    "h": "Amplitude, period, frequency",
+    "p": "The distance from equilibrium to an end is the <b>amplitude</b> (A). The time for one full back-and-forth trip is the <b>period</b> (T), and the number of oscillations per second is the <b>frequency</b>: f = 1/T. The angular frequency is ω = 2πf.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bhh-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker></defs><path d='M60 55 H260' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M60 49 V61 M160 49 V61 M260 49 V61' fill='none' stroke='var(--ink)' stroke-width='1.5'/><text x='60' y='78' font-size='12' fill='var(--ink)' text-anchor='middle'>−A</text><text x='160' y='78' font-size='12' fill='var(--ink)' text-anchor='middle'>O</text><text x='260' y='78' font-size='12' fill='var(--ink)' text-anchor='middle'>+A</text><circle cx='260.0' cy='55.0' r='7' fill='var(--c1)'/><path d='M160 32 H258' fill='none' stroke='var(--c4)' stroke-width='1.5' marker-end='url(#bhh-3)' marker-start='url(#bhh-3)'/><text x='210' y='25' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>A</text><text x='160' y='100' font-size='12' fill='var(--muted)' text-anchor='middle'>+A → −A → +A : one period</text><rect x='8' y='115' width='98' height='75' rx='8' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.5'/><rect x='111' y='115' width='98' height='75' rx='8' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><rect x='214' y='115' width='98' height='75' rx='8' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.5'/><text x='57' y='140' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>T (s)</text><text x='57' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>one full</text><text x='57' y='178' font-size='11' fill='var(--ink)' text-anchor='middle'>trip</text><text x='160' y='140' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>f (Hz)</text><text x='160' y='166' font-size='13' fill='var(--ink)' text-anchor='middle'>f = 1/T</text><text x='263' y='140' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>ω (rad/s)</text><text x='263' y='162' font-size='12' fill='var(--ink)' text-anchor='middle'>ω = 2π/T</text><text x='263' y='178' font-size='12' fill='var(--ink)' text-anchor='middle'>= 2πf</text></svg>",
+    "key": "Going from −A to +A takes T/2, and going from equilibrium to an end takes T/4.",
+    "once": {
+     "soru": "A swing makes one full back-and-forth trip in 4 seconds. What is its frequency?",
+     "secenekler": [
+      {
+       "yazi": "0.25 Hz",
+       "neden": "f = 1/T = 1/4 = 0.25 Hz. So the object makes a quarter of an oscillation each second.",
+       "dogru": true
+      },
+      {
+       "yazi": "4 Hz",
+       "neden": "4 is the period. Frequency is the inverse of the period."
+      },
+      {
+       "yazi": "2 Hz",
+       "neden": "For 2 oscillations per second the period would have to be 0.5 s."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The projection of circular motion",
+    "p": "The shadow of a point moving uniformly around a circle, cast on a diameter, does SHM between −A and +A. The period of the SHM equals the time for one turn, and ω equals the angular speed.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bhh-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><circle cx='110' cy='95' r='60' fill='var(--panel)' stroke='var(--c1)' stroke-width='1.5'/><path d='M110 95 H170' fill='none' stroke='var(--line)' stroke-width='1'/><path d='M110 95 L148.6 49.0' fill='none' stroke='var(--ink)' stroke-width='1.5'/><circle cx='148.6' cy='49.0' r='6' fill='var(--c1)'/><circle cx='110.0' cy='95.0' r='2.5' fill='var(--ink)'/><path d='M178.0 63.3 A75 75 0 0 0 135.7 24.5' fill='none' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#bhh-4)'/><text x='118' y='70' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><text x='136' y='84' font-size='11' fill='var(--muted)' text-anchor='start'>ωt</text><path d='M148.6 55.0 V176' fill='none' stroke='var(--c2)' stroke-width='1' stroke-dasharray='3 3'/><path d='M50 176 H170' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M50 171 V181 M110 171 V181 M170 171 V181' fill='none' stroke='var(--ink)' stroke-width='1.2'/><circle cx='148.6' cy='176.0' r='5' fill='var(--c2)'/><text x='50' y='195' font-size='11' fill='var(--ink)' text-anchor='middle'>−A</text><text x='110' y='195' font-size='11' fill='var(--ink)' text-anchor='middle'>O</text><text x='170' y='195' font-size='11' fill='var(--ink)' text-anchor='middle'>+A</text><text x='246' y='30' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>rotating point</text><text x='246' y='48' font-size='11' fill='var(--muted)' text-anchor='middle'>its shadow does SHM</text><text x='248' y='105' font-size='15' fill='var(--c2)' text-anchor='middle' font-weight='700'>x = A·cos(ωt)</text><text x='248' y='135' font-size='11' fill='var(--ink)' text-anchor='middle'>A = radius = amplitude</text><text x='248' y='153' font-size='11' fill='var(--ink)' text-anchor='middle'>T = time for one turn</text><text x='248' y='171' font-size='11' fill='var(--ink)' text-anchor='middle'>ω = angular speed</text></svg>",
+    "key": "All the SHM formulas come from the projection of uniform circular motion.",
+    "once": {
+     "soru": "You follow one cabin of a Ferris wheel by its shadow on the ground. How does the shadow move?",
+     "secenekler": [
+      {
+       "yazi": "It oscillates back and forth",
+       "neden": "The shadow shows only the horizontal position, and it goes back and forth between two ends.",
+       "dogru": true
+      },
+      {
+       "yazi": "It traces a circle",
+       "neden": "The shadow falls on the ground and stays on a straight line."
+      },
+      {
+       "yazi": "It does not move",
+       "neden": "As the cabin turns, the position of the shadow changes."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The position-time graph",
+    "p": "If the object is at +A at t = 0, then <b>x = A·cos(ωt)</b>. It passes equilibrium at T/4, reaches −A at T/2, and is back at the start at T. The slope of the graph is the velocity.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M40 22 V178 M40 100 H300' fill='none' stroke='var(--ink)' stroke-width='1.2'/><path d='M40 40 H290 M40 160 H290' fill='none' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><polyline points='40.0,40.0 42.1,40.1 44.2,40.5 46.2,41.2 48.3,42.0 50.4,43.2 52.5,44.6 54.6,46.2 56.7,48.0 58.8,50.1 60.8,52.4 62.9,54.9 65.0,57.6 67.1,60.4 69.2,63.5 71.2,66.7 73.3,70.0 75.4,73.5 77.5,77.0 79.6,80.7 81.7,84.5 83.8,88.3 85.8,92.2 87.9,96.1 90.0,100.0 92.1,103.9 94.2,107.8 96.2,111.7 98.3,115.5 100.4,119.3 102.5,123.0 104.6,126.5 106.7,130.0 108.8,133.3 110.8,136.5 112.9,139.6 115.0,142.4 117.1,145.1 119.2,147.6 121.2,149.9 123.3,152.0 125.4,153.8 127.5,155.4 129.6,156.8 131.7,158.0 133.8,158.8 135.8,159.5 137.9,159.9 140.0,160.0 142.1,159.9 144.2,159.5 146.2,158.8 148.3,158.0 150.4,156.8 152.5,155.4 154.6,153.8 156.7,152.0 158.8,149.9 160.8,147.6 162.9,145.1 165.0,142.4 167.1,139.6 169.2,136.5 171.2,133.3 173.3,130.0 175.4,126.5 177.5,123.0 179.6,119.3 181.7,115.5 183.8,111.7 185.8,107.8 187.9,103.9 190.0,100.0 192.1,96.1 194.2,92.2 196.2,88.3 198.3,84.5 200.4,80.7 202.5,77.0 204.6,73.5 206.7,70.0 208.8,66.7 210.8,63.5 212.9,60.4 215.0,57.6 217.1,54.9 219.2,52.4 221.2,50.1 223.3,48.0 225.4,46.2 227.5,44.6 229.6,43.2 231.7,42.0 233.8,41.2 235.8,40.5 237.9,40.1 240.0,40.0 242.1,40.1 244.2,40.5 246.2,41.2 248.3,42.0 250.4,43.2 252.5,44.6 254.6,46.2 256.7,48.0 258.8,50.1 260.8,52.4 262.9,54.9 265.0,57.6 267.1,60.4 269.2,63.5 271.2,66.7 273.3,70.0 275.4,73.5 277.5,77.0 279.6,80.7 281.7,84.5 283.8,88.3 285.8,92.2 287.9,96.1 290.0,100.0' fill='none' stroke='var(--c1)' stroke-width='2'/><circle cx='40.0' cy='40.0' r='4' fill='var(--c1)'/><text x='34' y='44' font-size='11' fill='var(--muted)' text-anchor='end'>+A</text><text x='34' y='164' font-size='11' fill='var(--muted)' text-anchor='end'>−A</text><text x='34' y='104' font-size='11' fill='var(--muted)' text-anchor='end'>0</text><text x='46' y='22' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>x</text><text x='304' y='104' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>t</text><path d='M140.0 96 V104 M240 96 V104' fill='none' stroke='var(--ink)' stroke-width='1.2'/><text x='140.0' y='91' font-size='11' fill='var(--ink)' text-anchor='middle'>T/2</text><text x='240' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>T</text><text x='170' y='193' font-size='14' fill='var(--c1)' text-anchor='middle' font-weight='700'>x = A·cos(ωt)</text></svg>",
+    "key": "If it starts from equilibrium in the + direction, you write x = A·sin(ωt). At the peaks and troughs the slope, and so the velocity, is zero."
+   },
+   {
+    "h": "Speed: greatest at equilibrium",
+    "p": "The speed is <b>|v| = ω√(A² − x²)</b>. At equilibrium (x = 0) the speed is greatest: v<sub>max</sub> = ωA. At the ends (x = ±A) the object stops for an instant.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bhh-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><path d='M40 55 H280' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M40 49 V61 M160 49 V61 M280 49 V61' fill='none' stroke='var(--ink)' stroke-width='1.2'/><text x='40' y='77' font-size='12' fill='var(--ink)' text-anchor='middle'>−A</text><text x='160' y='77' font-size='12' fill='var(--ink)' text-anchor='middle'>O</text><text x='280' y='77' font-size='12' fill='var(--ink)' text-anchor='middle'>+A</text><circle cx='40.0' cy='55.0' r='5' fill='var(--c1)'/><circle cx='100.0' cy='55.0' r='5' fill='var(--c1)'/><circle cx='160.0' cy='55.0' r='5' fill='var(--c1)'/><circle cx='220.0' cy='55.0' r='5' fill='var(--c1)'/><circle cx='280.0' cy='55.0' r='5' fill='var(--c1)'/><path d='M100 33 H143' fill='none' stroke='var(--c3)' stroke-width='2' marker-end='url(#bhh-5)'/><path d='M160 33 H210' fill='none' stroke='var(--c3)' stroke-width='2' marker-end='url(#bhh-5)'/><path d='M220 33 H263' fill='none' stroke='var(--c3)' stroke-width='2' marker-end='url(#bhh-5)'/><text x='40' y='38' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>v = 0</text><text x='290' y='38' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>v = 0</text><text x='160' y='112' font-size='16' fill='var(--c3)' text-anchor='middle' font-weight='700'>|v| = ω·√(A² − x²)</text><text x='160' y='134' font-size='12' fill='var(--ink)' text-anchor='middle'>at equilibrium v<tspan font-size='10' dy='3'>max</tspan><tspan dy='-3'> = ω·A</tspan></text><rect x='10' y='146' width='300' height='48' rx='8' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='160' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>A = 0.2 m, ω = 5 rad/s → v<tspan font-size='10' dy='3'>max</tspan><tspan dy='-3'> = 1 m/s</tspan></text><text x='160' y='184' font-size='11' fill='var(--ink)' text-anchor='middle'>x = 0.12 m: |v| = 5·√(0.04 − 0.0144) = 0.8 m/s</text></svg>",
+    "key": "At x = A/2 the speed is not half the maximum speed. It is about 87% of it.",
+    "once": {
+     "soru": "Where is an oscillating object fastest?",
+     "secenekler": [
+      {
+       "yazi": "At equilibrium",
+       "neden": "The force keeps speeding the object up all the way from the end to equilibrium. So the speed is greatest at equilibrium.",
+       "dogru": true
+      },
+      {
+       "yazi": "At the ends",
+       "neden": "At the ends the object stops for an instant and turns back."
+      },
+      {
+       "yazi": "The same everywhere",
+       "neden": "The speed changes all the time."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Acceleration: greatest at the ends",
+    "p": "From Newton's law, ma = −kx, which gives <b>a = −ω²x</b> (ω² = k/m). The acceleration always points toward equilibrium. It is greatest at the ends (ω²A) and zero at equilibrium.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bhh-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><path d='M40 55 H280' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M40 49 V61 M160 49 V61 M280 49 V61' fill='none' stroke='var(--ink)' stroke-width='1.2'/><text x='40' y='77' font-size='12' fill='var(--ink)' text-anchor='middle'>−A</text><text x='160' y='77' font-size='12' fill='var(--ink)' text-anchor='middle'>O</text><text x='280' y='77' font-size='12' fill='var(--ink)' text-anchor='middle'>+A</text><circle cx='40.0' cy='55.0' r='5' fill='var(--c1)'/><circle cx='100.0' cy='55.0' r='5' fill='var(--c1)'/><circle cx='160.0' cy='55.0' r='5' fill='var(--c1)'/><circle cx='220.0' cy='55.0' r='5' fill='var(--c1)'/><circle cx='280.0' cy='55.0' r='5' fill='var(--c1)'/><path d='M40 33 H90' fill='none' stroke='var(--c2)' stroke-width='2' marker-end='url(#bhh-6)'/><path d='M100 33 H125' fill='none' stroke='var(--c2)' stroke-width='2' marker-end='url(#bhh-6)'/><path d='M220 33 H195' fill='none' stroke='var(--c2)' stroke-width='2' marker-end='url(#bhh-6)'/><path d='M280 33 H230' fill='none' stroke='var(--c2)' stroke-width='2' marker-end='url(#bhh-6)'/><text x='160' y='38' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>a = 0</text><text x='160' y='112' font-size='16' fill='var(--c2)' text-anchor='middle' font-weight='700'>a = −ω²·x</text><text x='160' y='134' font-size='12' fill='var(--ink)' text-anchor='middle'>at the ends a<tspan font-size='10' dy='3'>max</tspan><tspan dy='-3'> = ω²·A</tspan></text><rect x='10' y='146' width='300' height='48' rx='8' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.5'/><text x='160' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>A = 0.2 m, ω = 5 rad/s → a<tspan font-size='10' dy='3'>max</tspan><tspan dy='-3'> = 25·0.2 = 5 m/s²</tspan></text><text x='160' y='184' font-size='11' fill='var(--ink)' text-anchor='middle'>x = 0.12 m: |a| = 25·0.12 = 3 m/s²</text></svg>",
+    "key": "At equilibrium the force is zero, but the object does not stop. Its speed is greatest right there.",
+    "once": {
+     "soru": "When the object stops for an instant at an end, what is its acceleration?",
+     "secenekler": [
+      {
+       "yazi": "It is greatest",
+       "neden": "At the end the displacement is greatest, so the force and the acceleration are greatest too.",
+       "dogru": true
+      },
+      {
+       "yazi": "It is zero",
+       "neden": "What is zero at the end is the velocity, not the acceleration. The object turns back right away."
+      },
+      {
+       "yazi": "It is half its maximum",
+       "neden": "Acceleration is proportional to displacement. So it is greatest at the end."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The phase of position, velocity and acceleration",
+    "p": "Position, velocity and acceleration oscillate with the same period. The acceleration graph is the position graph with the opposite sign. Velocity is shifted by T/4 from position. So when x is greatest, the velocity is zero.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M110 12 V188' fill='none' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><path d='M170 12 V188' fill='none' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><path d='M230 12 V188' fill='none' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><path d='M50 35 H294' fill='none' stroke='var(--muted)' stroke-width='1'/><polyline points='50.0,15.0 52.0,15.0 54.0,15.1 56.0,15.2 58.0,15.4 60.0,15.7 62.0,16.0 64.0,16.3 66.0,16.7 68.0,17.2 70.0,17.7 72.0,18.2 74.0,18.8 76.0,19.5 78.0,20.1 80.0,20.9 82.0,21.6 84.0,22.4 86.0,23.2 88.0,24.1 90.0,25.0 92.0,25.9 94.0,26.9 96.0,27.8 98.0,28.8 100.0,29.8 102.0,30.8 104.0,31.9 106.0,32.9 108.0,34.0 110.0,35.0 112.0,36.0 114.0,37.1 116.0,38.1 118.0,39.2 120.0,40.2 122.0,41.2 124.0,42.2 126.0,43.1 128.0,44.1 130.0,45.0 132.0,45.9 134.0,46.8 136.0,47.6 138.0,48.4 140.0,49.1 142.0,49.9 144.0,50.5 146.0,51.2 148.0,51.8 150.0,52.3 152.0,52.8 154.0,53.3 156.0,53.7 158.0,54.0 160.0,54.3 162.0,54.6 164.0,54.8 166.0,54.9 168.0,55.0 170.0,55.0 172.0,55.0 174.0,54.9 176.0,54.8 178.0,54.6 180.0,54.3 182.0,54.0 184.0,53.7 186.0,53.3 188.0,52.8 190.0,52.3 192.0,51.8 194.0,51.2 196.0,50.5 198.0,49.9 200.0,49.1 202.0,48.4 204.0,47.6 206.0,46.8 208.0,45.9 210.0,45.0 212.0,44.1 214.0,43.1 216.0,42.2 218.0,41.2 220.0,40.2 222.0,39.2 224.0,38.1 226.0,37.1 228.0,36.0 230.0,35.0 232.0,34.0 234.0,32.9 236.0,31.9 238.0,30.8 240.0,29.8 242.0,28.8 244.0,27.8 246.0,26.9 248.0,25.9 250.0,25.0 252.0,24.1 254.0,23.2 256.0,22.4 258.0,21.6 260.0,20.9 262.0,20.1 264.0,19.5 266.0,18.8 268.0,18.2 270.0,17.7 272.0,17.2 274.0,16.7 276.0,16.3 278.0,16.0 280.0,15.7 282.0,15.4 284.0,15.2 286.0,15.1 288.0,15.0 290.0,15.0' fill='none' stroke='var(--c1)' stroke-width='2'/><text x='26' y='40' font-size='14' fill='var(--c1)' text-anchor='middle' font-weight='700'>x</text><path d='M50 100 H294' fill='none' stroke='var(--muted)' stroke-width='1'/><polyline points='50.0,100.0 52.0,101.0 54.0,102.1 56.0,103.1 58.0,104.2 60.0,105.2 62.0,106.2 64.0,107.2 66.0,108.1 68.0,109.1 70.0,110.0 72.0,110.9 74.0,111.8 76.0,112.6 78.0,113.4 80.0,114.1 82.0,114.9 84.0,115.5 86.0,116.2 88.0,116.8 90.0,117.3 92.0,117.8 94.0,118.3 96.0,118.7 98.0,119.0 100.0,119.3 102.0,119.6 104.0,119.8 106.0,119.9 108.0,120.0 110.0,120.0 112.0,120.0 114.0,119.9 116.0,119.8 118.0,119.6 120.0,119.3 122.0,119.0 124.0,118.7 126.0,118.3 128.0,117.8 130.0,117.3 132.0,116.8 134.0,116.2 136.0,115.5 138.0,114.9 140.0,114.1 142.0,113.4 144.0,112.6 146.0,111.8 148.0,110.9 150.0,110.0 152.0,109.1 154.0,108.1 156.0,107.2 158.0,106.2 160.0,105.2 162.0,104.2 164.0,103.1 166.0,102.1 168.0,101.0 170.0,100.0 172.0,99.0 174.0,97.9 176.0,96.9 178.0,95.8 180.0,94.8 182.0,93.8 184.0,92.8 186.0,91.9 188.0,90.9 190.0,90.0 192.0,89.1 194.0,88.2 196.0,87.4 198.0,86.6 200.0,85.9 202.0,85.1 204.0,84.5 206.0,83.8 208.0,83.2 210.0,82.7 212.0,82.2 214.0,81.7 216.0,81.3 218.0,81.0 220.0,80.7 222.0,80.4 224.0,80.2 226.0,80.1 228.0,80.0 230.0,80.0 232.0,80.0 234.0,80.1 236.0,80.2 238.0,80.4 240.0,80.7 242.0,81.0 244.0,81.3 246.0,81.7 248.0,82.2 250.0,82.7 252.0,83.2 254.0,83.8 256.0,84.5 258.0,85.1 260.0,85.9 262.0,86.6 264.0,87.4 266.0,88.2 268.0,89.1 270.0,90.0 272.0,90.9 274.0,91.9 276.0,92.8 278.0,93.8 280.0,94.8 282.0,95.8 284.0,96.9 286.0,97.9 288.0,99.0 290.0,100.0' fill='none' stroke='var(--c3)' stroke-width='2'/><text x='26' y='105' font-size='14' fill='var(--c3)' text-anchor='middle' font-weight='700'>v</text><path d='M50 165 H294' fill='none' stroke='var(--muted)' stroke-width='1'/><polyline points='50.0,185.0 52.0,185.0 54.0,184.9 56.0,184.8 58.0,184.6 60.0,184.3 62.0,184.0 64.0,183.7 66.0,183.3 68.0,182.8 70.0,182.3 72.0,181.8 74.0,181.2 76.0,180.5 78.0,179.9 80.0,179.1 82.0,178.4 84.0,177.6 86.0,176.8 88.0,175.9 90.0,175.0 92.0,174.1 94.0,173.1 96.0,172.2 98.0,171.2 100.0,170.2 102.0,169.2 104.0,168.1 106.0,167.1 108.0,166.0 110.0,165.0 112.0,164.0 114.0,162.9 116.0,161.9 118.0,160.8 120.0,159.8 122.0,158.8 124.0,157.8 126.0,156.9 128.0,155.9 130.0,155.0 132.0,154.1 134.0,153.2 136.0,152.4 138.0,151.6 140.0,150.9 142.0,150.1 144.0,149.5 146.0,148.8 148.0,148.2 150.0,147.7 152.0,147.2 154.0,146.7 156.0,146.3 158.0,146.0 160.0,145.7 162.0,145.4 164.0,145.2 166.0,145.1 168.0,145.0 170.0,145.0 172.0,145.0 174.0,145.1 176.0,145.2 178.0,145.4 180.0,145.7 182.0,146.0 184.0,146.3 186.0,146.7 188.0,147.2 190.0,147.7 192.0,148.2 194.0,148.8 196.0,149.5 198.0,150.1 200.0,150.9 202.0,151.6 204.0,152.4 206.0,153.2 208.0,154.1 210.0,155.0 212.0,155.9 214.0,156.9 216.0,157.8 218.0,158.8 220.0,159.8 222.0,160.8 224.0,161.9 226.0,162.9 228.0,164.0 230.0,165.0 232.0,166.0 234.0,167.1 236.0,168.1 238.0,169.2 240.0,170.2 242.0,171.2 244.0,172.2 246.0,173.1 248.0,174.1 250.0,175.0 252.0,175.9 254.0,176.8 256.0,177.6 258.0,178.4 260.0,179.1 262.0,179.9 264.0,180.5 266.0,181.2 268.0,181.8 270.0,182.3 272.0,182.8 274.0,183.3 276.0,183.7 278.0,184.0 280.0,184.3 282.0,184.6 284.0,184.8 286.0,184.9 288.0,185.0 290.0,185.0' fill='none' stroke='var(--c2)' stroke-width='2'/><text x='26' y='170' font-size='14' fill='var(--c2)' text-anchor='middle' font-weight='700'>a</text><text x='50' y='198' font-size='10' fill='var(--muted)' text-anchor='middle'>0</text><text x='110' y='198' font-size='10' fill='var(--muted)' text-anchor='middle'>T/4</text><text x='170' y='198' font-size='10' fill='var(--muted)' text-anchor='middle'>T/2</text><text x='230' y='198' font-size='10' fill='var(--muted)' text-anchor='middle'>3T/4</text><text x='290' y='198' font-size='10' fill='var(--muted)' text-anchor='middle'>T</text></svg>",
+    "key": "When x = 0 the speed is greatest. In a graph question, look at the x graph first. a is the same graph with the opposite sign, and v is its slope.",
+    "once": {
+     "soru": "When the position is +A, which way does the acceleration point?",
+     "secenekler": [
+      {
+       "yazi": "In the −x direction",
+       "neden": "a = −ω²x. When x is positive the acceleration is negative, so it points toward equilibrium.",
+       "dogru": true
+      },
+      {
+       "yazi": "In the +x direction",
+       "neden": "The acceleration always points toward equilibrium."
+      },
+      {
+       "yazi": "There is no acceleration",
+       "neden": "The acceleration is greatest at the end."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The period of a mass on a spring",
+    "p": "The period of a mass on a spring is <b>T = 2π√(m/k)</b>. A larger mass makes the period longer, and a stiffer spring makes it shorter. The period <b>does not depend on the amplitude</b>. It stays the same if the spring hangs vertically or is on another planet.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='34' font-size='22' fill='var(--c1)' text-anchor='middle' font-weight='700'>T = 2π√(m/k)</text><path d='M40 55 H100' fill='none' stroke='var(--ink)' stroke-width='2'/><polyline points='70.0,55.0 77.0,63.3 63.0,69.9 77.0,76.6 63.0,83.2 77.0,89.8 63.0,96.4 77.0,103.1 63.0,109.7 70.0,113.0 70.0,118.0' fill='none' stroke='var(--muted)' stroke-width='1.5'/><text x='84' y='90' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>k</text><rect x='54' y='118' width='32' height='28' rx='3' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><text x='70.0' y='137.0' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>m</text><text x='150' y='80' font-size='12' fill='var(--ink)' text-anchor='start'>larger m, larger T</text><text x='150' y='102' font-size='12' fill='var(--ink)' text-anchor='start'>larger k, smaller T</text><text x='150' y='124' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>independent of amplitude</text><text x='150' y='146' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>independent of g</text><rect x='10' y='162' width='300' height='32' rx='8' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.5'/><text x='160' y='183' font-size='12' fill='var(--ink)' text-anchor='middle'>m = 0.4 kg, k = 40 N/m → T = 2π·0.1 ≈ 0.63 s</text></svg>",
+    "key": "The period of a mass on a spring depends neither on the amplitude nor on g.",
+    "etk": {
+     "tur": "formul",
+     "soru": "Change the mass, the spring constant and the amplitude. Does the amplitude change the period?",
+     "girdiler": [
+      {
+       "ad": "m",
+       "etiket": "Mass",
+       "birim": "kg",
+       "min": 0.1,
+       "max": 5,
+       "adim": 0.1,
+       "deger": 1
+      },
+      {
+       "ad": "k",
+       "etiket": "Spring constant",
+       "birim": "N/m",
+       "min": 10,
+       "max": 500,
+       "adim": 10,
+       "deger": 100
+      },
+      {
+       "ad": "A",
+       "etiket": "Amplitude",
+       "birim": "m",
+       "min": 0.05,
+       "max": 0.5,
+       "adim": 0.05,
+       "deger": 0.1
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "T",
+       "ifade": "2*pi*sqrt(m/k)",
+       "birim": "s",
+       "basamak": 2
+      },
+      {
+       "ad": "f",
+       "ifade": "1/(2*pi*sqrt(m/k))",
+       "birim": "Hz",
+       "basamak": 2
+      },
+      {
+       "ad": "v<sub>max</sub>",
+       "ifade": "A*sqrt(k/m)",
+       "birim": "m/s",
+       "basamak": 2
+      }
+     ]
+    }
+   },
+   {
+    "h": "Springs in series and in parallel",
+    "p": "Parallel springs share the load: k<sub>eq</sub> = k<sub>1</sub> + k<sub>2</sub>. In series the extensions add up and the system gets softer: 1/k<sub>eq</sub> = 1/k<sub>1</sub> + 1/k<sub>2</sub>.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M60 25 H100' fill='none' stroke='var(--ink)' stroke-width='2'/><polyline points='80.0,25.0 87.0,33.1 73.0,39.2 87.0,45.4 73.0,51.6 87.0,57.8 73.0,63.9 80.0,67.0 80.0,72.0' fill='none' stroke='var(--muted)' stroke-width='1.5'/><circle cx='80.0' cy='72.0' r='2.5' fill='var(--ink)'/><polyline points='80.0,72.0 87.0,80.2 73.0,86.5 87.0,92.8 73.0,99.2 87.0,105.5 73.0,111.8 80.0,115.0 80.0,120.0' fill='none' stroke='var(--muted)' stroke-width='1.5'/><text x='66' y='52' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>k₁</text><text x='66' y='100' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>k₂</text><rect x='64' y='120' width='32' height='26' rx='3' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><text x='80.0' y='138.0' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>m</text><text x='80' y='170' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>series</text><text x='80' y='190' font-size='11' fill='var(--ink)' text-anchor='middle'>1/k = 1/k₁ + 1/k₂</text><path d='M210 25 H290' fill='none' stroke='var(--ink)' stroke-width='2'/><polyline points='230.0,25.0 237.0,34.6 223.0,43.9 237.0,53.2 223.0,62.5 237.0,71.8 223.0,81.1 237.0,90.4 230.0,95.0 230.0,100.0' fill='none' stroke='var(--muted)' stroke-width='1.5'/><polyline points='270.0,25.0 277.0,34.6 263.0,43.9 277.0,53.2 263.0,62.5 277.0,71.8 263.0,81.1 277.0,90.4 270.0,95.0 270.0,100.0' fill='none' stroke='var(--muted)' stroke-width='1.5'/><text x='218' y='66' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>k₁</text><text x='282' y='66' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>k₂</text><rect x='215' y='100' width='70' height='28' rx='3' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><text x='250.0' y='119.0' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>m</text><text x='250' y='170' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>parallel</text><text x='250' y='190' font-size='11' fill='var(--ink)' text-anchor='middle'>k = k₁ + k₂</text><text x='155' y='60' font-size='11' fill='var(--muted)' text-anchor='middle'>identical springs</text><text x='155' y='80' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>series → k/2</text><text x='155' y='100' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>parallel → 2k</text></svg>",
+    "key": "Two identical springs give 2k in parallel and k/2 in series. If you cut a spring in half, each half has a constant of 2k.",
+    "once": {
+     "soru": "You connect two identical springs side by side (in parallel) and hang the same mass. How does the system compare with a single spring?",
+     "secenekler": [
+      {
+       "yazi": "Stiffer",
+       "neden": "The load is shared by the two springs, and each stretches half as much. So the equivalent constant is 2k.",
+       "dogru": true
+      },
+      {
+       "yazi": "Softer",
+       "neden": "Softening happens in a series connection."
+      },
+      {
+       "yazi": "The same",
+       "neden": "Two springs together pull with a larger force."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The simple pendulum",
+    "p": "A pendulum swinging through small angles does SHM, and its period is <b>T = 2π√(L/g)</b>. The period does not depend on the mass. A longer string makes the period longer, and a larger g makes it shorter.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M50 25 H130' fill='none' stroke='var(--ink)' stroke-width='2'/><path d='M90 25 V140' fill='none' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><path d='M90 25 L125.9 123.7' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M90 60 A35 35 0 0 0 102.0 57.9' fill='none' stroke='var(--muted)' stroke-width='1'/><circle cx='125.9' cy='123.7' r='9' fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)' stroke-width='1.5'/><text x='116' y='72' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>L</text><text x='100' y='90' font-size='11' fill='var(--muted)' text-anchor='middle'>θ</text><text x='225' y='45' font-size='20' fill='var(--c4)' text-anchor='middle' font-weight='700'>T = 2π√(L/g)</text><text x='225' y='75' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>independent of mass</text><text x='225' y='93' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>and of small amplitudes</text><text x='225' y='120' font-size='11' fill='var(--ink)' text-anchor='middle'>larger L, larger T</text><text x='225' y='138' font-size='11' fill='var(--ink)' text-anchor='middle'>larger g, smaller T</text><rect x='10' y='160' width='300' height='34' rx='8' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.5'/><text x='160' y='182' font-size='12' fill='var(--ink)' text-anchor='middle'>L = 1 m, g = 9.8 m/s² → T ≈ 2.0 s</text></svg>",
+    "key": "The angle should be below about 10°. For L = 1 m and g = 9.8 m/s², T is about 2 s."
+   },
+   {
+    "h": "In an elevator and on another planet",
+    "p": "For a pendulum, you use the <b>effective acceleration</b> g' in place of g. If the elevator accelerates upward, g' = g + a, and if it accelerates downward, g' = g − a. In free fall there is no oscillation.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='bhh-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='30' y='14' width='50' height='70' rx='3' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><path d='M55 18 L64 60' fill='none' stroke='var(--ink)' stroke-width='1.2'/><circle cx='64' cy='62' r='5' fill='var(--c4)'/><path d='M91 70 V32' fill='none' stroke='var(--c3)' stroke-width='2' marker-end='url(#bhh-7)'/><text x='98' y='56' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>a</text><text x='55' y='104' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>a points up</text><text x='55' y='124' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>g' = g + a</text><text x='55' y='143' font-size='12' fill='var(--ink)' text-anchor='middle'>T gets shorter</text><rect x='135' y='14' width='50' height='70' rx='3' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><path d='M160 18 L169 60' fill='none' stroke='var(--ink)' stroke-width='1.2'/><circle cx='169' cy='62' r='5' fill='var(--c4)'/><path d='M196 32 V70' fill='none' stroke='var(--c2)' stroke-width='2' marker-end='url(#bhh-7)'/><text x='203' y='56' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>a</text><text x='160' y='104' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>a points down</text><text x='160' y='124' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>g' = g − a</text><text x='160' y='143' font-size='12' fill='var(--ink)' text-anchor='middle'>T gets longer</text><rect x='240' y='14' width='50' height='70' rx='3' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><path d='M265 18 L274 60' fill='none' stroke='var(--ink)' stroke-width='1.2'/><circle cx='274' cy='62' r='5' fill='var(--c4)'/><path d='M301 32 V70' fill='none' stroke='var(--c5)' stroke-width='2' marker-end='url(#bhh-7)'/><text x='308' y='56' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>g</text><text x='265' y='104' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>free fall</text><text x='265' y='124' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>g' = 0</text><text x='265' y='143' font-size='12' fill='var(--ink)' text-anchor='middle'>no swing</text><text x='160' y='174' font-size='11' fill='var(--muted)' text-anchor='middle'>In an elevator at constant speed g' = g: T is unchanged.</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>On the Moon g ≈ 1.6 m/s² → T is about 2.5 times longer.</text></svg>",
+    "key": "What matters is the direction of the acceleration, not of the velocity. In an elevator moving at constant speed the period does not change."
+   },
+   {
+    "h": "How the energy is shared",
+    "p": "Without friction the total energy is constant: <b>E = ½kA²</b>. At position x the potential energy is E<sub>p</sub> = ½kx². At the ends all the energy is potential, and at equilibrium it is all kinetic.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M50 170 H270' fill='none' stroke='var(--ink)' stroke-width='1.2'/><path d='M60 50 H260' fill='none' stroke='var(--c5)' stroke-width='2'/><polyline points='60.0,50.0 61.7,54.0 63.3,57.9 65.0,61.7 66.7,65.5 68.3,69.2 70.0,72.8 71.7,76.4 73.3,79.9 75.0,83.3 76.7,86.7 78.3,90.0 80.0,93.2 81.7,96.4 83.3,99.5 85.0,102.5 86.7,105.5 88.3,108.4 90.0,111.2 91.7,114.0 93.3,116.7 95.0,119.3 96.7,121.9 98.3,124.4 100.0,126.8 101.7,129.2 103.3,131.5 105.0,133.7 106.7,135.9 108.3,138.0 110.0,140.0 111.7,142.0 113.3,143.9 115.0,145.7 116.7,147.5 118.3,149.2 120.0,150.8 121.7,152.4 123.3,153.9 125.0,155.3 126.7,156.7 128.3,158.0 130.0,159.2 131.7,160.4 133.3,161.5 135.0,162.5 136.7,163.5 138.3,164.4 140.0,165.2 141.7,166.0 143.3,166.7 145.0,167.3 146.7,167.9 148.3,168.4 150.0,168.8 151.7,169.2 153.3,169.5 155.0,169.7 156.7,169.9 158.3,170.0 160.0,170.0 161.7,170.0 163.3,169.9 165.0,169.7 166.7,169.5 168.3,169.2 170.0,168.8 171.7,168.4 173.3,167.9 175.0,167.3 176.7,166.7 178.3,166.0 180.0,165.2 181.7,164.4 183.3,163.5 185.0,162.5 186.7,161.5 188.3,160.4 190.0,159.2 191.7,158.0 193.3,156.7 195.0,155.3 196.7,153.9 198.3,152.4 200.0,150.8 201.7,149.2 203.3,147.5 205.0,145.7 206.7,143.9 208.3,142.0 210.0,140.0 211.7,138.0 213.3,135.9 215.0,133.7 216.7,131.5 218.3,129.2 220.0,126.8 221.7,124.4 223.3,121.9 225.0,119.3 226.7,116.7 228.3,114.0 230.0,111.2 231.7,108.4 233.3,105.5 235.0,102.5 236.7,99.5 238.3,96.4 240.0,93.2 241.7,90.0 243.3,86.7 245.0,83.3 246.7,79.9 248.3,76.4 250.0,72.8 251.7,69.2 253.3,65.5 255.0,61.7 256.7,57.9 258.3,54.0 260.0,50.0' fill='none' stroke='var(--c2)' stroke-width='2'/><polyline points='60.0,170.0 61.7,166.0 63.3,162.1 65.0,158.3 66.7,154.5 68.3,150.8 70.0,147.2 71.7,143.6 73.3,140.1 75.0,136.7 76.7,133.3 78.3,130.0 80.0,126.8 81.7,123.6 83.3,120.5 85.0,117.5 86.7,114.5 88.3,111.6 90.0,108.8 91.7,106.0 93.3,103.3 95.0,100.7 96.7,98.1 98.3,95.6 100.0,93.2 101.7,90.8 103.3,88.5 105.0,86.3 106.7,84.1 108.3,82.0 110.0,80.0 111.7,78.0 113.3,76.1 115.0,74.3 116.7,72.5 118.3,70.8 120.0,69.2 121.7,67.6 123.3,66.1 125.0,64.7 126.7,63.3 128.3,62.0 130.0,60.8 131.7,59.6 133.3,58.5 135.0,57.5 136.7,56.5 138.3,55.6 140.0,54.8 141.7,54.0 143.3,53.3 145.0,52.7 146.7,52.1 148.3,51.6 150.0,51.2 151.7,50.8 153.3,50.5 155.0,50.3 156.7,50.1 158.3,50.0 160.0,50.0 161.7,50.0 163.3,50.1 165.0,50.3 166.7,50.5 168.3,50.8 170.0,51.2 171.7,51.6 173.3,52.1 175.0,52.7 176.7,53.3 178.3,54.0 180.0,54.8 181.7,55.6 183.3,56.5 185.0,57.5 186.7,58.5 188.3,59.6 190.0,60.8 191.7,62.0 193.3,63.3 195.0,64.7 196.7,66.1 198.3,67.6 200.0,69.2 201.7,70.8 203.3,72.5 205.0,74.3 206.7,76.1 208.3,78.0 210.0,80.0 211.7,82.0 213.3,84.1 215.0,86.3 216.7,88.5 218.3,90.8 220.0,93.2 221.7,95.6 223.3,98.1 225.0,100.7 226.7,103.3 228.3,106.0 230.0,108.8 231.7,111.6 233.3,114.5 235.0,117.5 236.7,120.5 238.3,123.6 240.0,126.8 241.7,130.0 243.3,133.3 245.0,136.7 246.7,140.1 248.3,143.6 250.0,147.2 251.7,150.8 253.3,154.5 255.0,158.3 256.7,162.1 258.3,166.0 260.0,170.0' fill='none' stroke='var(--c3)' stroke-width='2'/><path d='M89.3 110.0 V170 M230.7 110.0 V170' fill='none' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='89.3' cy='110.0' r='3' fill='var(--ink)'/><circle cx='230.7' cy='110.0' r='3' fill='var(--ink)'/><text x='160' y='38' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>E = ½kA²</text><text x='160' y='72' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>E<tspan font-size='10' dy='3'>k</tspan></text><text x='278' y='76' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>E<tspan font-size='10' dy='3'>p</tspan></text><text x='160' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>Eₖ = Eₚ</text><text x='60' y='186' font-size='11' fill='var(--ink)' text-anchor='middle'>−A</text><text x='160' y='186' font-size='11' fill='var(--ink)' text-anchor='middle'>O</text><text x='260' y='186' font-size='11' fill='var(--ink)' text-anchor='middle'>+A</text><text x='89.28932188134526' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>−A/√2</text><text x='230.71067811865476' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>+A/√2</text></svg>",
+    "key": "At x = A/√2 the kinetic and potential energies are equal. If the amplitude doubles, the energy becomes 4 times larger."
+   },
+   {
+    "h": "Damping and resonance",
+    "p": "Friction turns the energy into heat, and the amplitude shrinks. This is called <b>damped oscillation</b>. If you push the system regularly at its own natural frequency, the amplitude grows very large. This is called <b>resonance</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M20 55 H205' fill='none' stroke='var(--muted)' stroke-width='1'/><polyline points='20.0,20.0 21.5,20.7 23.1,21.3 24.6,22.0 26.2,22.6 27.7,23.2 29.2,23.8 30.8,24.4 32.3,25.0 33.9,25.6 35.4,26.1 37.0,26.7 38.5,27.2 40.0,27.8 41.6,28.3 43.1,28.8 44.7,29.3 46.2,29.8 47.8,30.3 49.3,30.7 50.8,31.2 52.4,31.6 53.9,32.1 55.5,32.5 57.0,33.0 58.5,33.4 60.1,33.8 61.6,34.2 63.2,34.6 64.7,35.0 66.2,35.4 67.8,35.7 69.3,36.1 70.9,36.5 72.4,36.8 74.0,37.2 75.5,37.5 77.0,37.8 78.6,38.2 80.1,38.5 81.7,38.8 83.2,39.1 84.8,39.4 86.3,39.7 87.8,40.0 89.4,40.3 90.9,40.6 92.5,40.9 94.0,41.1 95.5,41.4 97.1,41.6 98.6,41.9 100.2,42.2 101.7,42.4 103.2,42.6 104.8,42.9 106.3,43.1 107.9,43.3 109.4,43.6 111.0,43.8 112.5,44.0 114.0,44.2 115.6,44.4 117.1,44.6 118.7,44.8 120.2,45.0 121.8,45.2 123.3,45.4 124.8,45.6 126.4,45.7 127.9,45.9 129.5,46.1 131.0,46.3 132.5,46.4 134.1,46.6 135.6,46.8 137.2,46.9 138.7,47.1 140.2,47.2 141.8,47.4 143.3,47.5 144.9,47.7 146.4,47.8 148.0,47.9 149.5,48.1 151.0,48.2 152.6,48.3 154.1,48.5 155.7,48.6 157.2,48.7 158.8,48.8 160.3,48.9 161.8,49.1 163.4,49.2 164.9,49.3 166.5,49.4 168.0,49.5 169.5,49.6 171.1,49.7 172.6,49.8 174.2,49.9 175.7,50.0 177.2,50.1 178.8,50.2 180.3,50.3 181.9,50.4 183.4,50.5 185.0,50.5 186.5,50.6 188.0,50.7 189.6,50.8 191.1,50.9 192.7,51.0 194.2,51.0 195.8,51.1 197.3,51.2 198.8,51.3 200.4,51.3 201.9,51.4 203.5,51.5 205.0,51.5' fill='none' stroke='var(--line)' stroke-width='1.2' stroke-dasharray='3 3'/><polyline points='20.0,90.0 21.5,89.3 23.1,88.7 24.6,88.0 26.2,87.4 27.7,86.8 29.2,86.2 30.8,85.6 32.3,85.0 33.9,84.4 35.4,83.9 37.0,83.3 38.5,82.8 40.0,82.2 41.6,81.7 43.1,81.2 44.7,80.7 46.2,80.2 47.8,79.7 49.3,79.3 50.8,78.8 52.4,78.4 53.9,77.9 55.5,77.5 57.0,77.0 58.5,76.6 60.1,76.2 61.6,75.8 63.2,75.4 64.7,75.0 66.2,74.6 67.8,74.3 69.3,73.9 70.9,73.5 72.4,73.2 74.0,72.8 75.5,72.5 77.0,72.2 78.6,71.8 80.1,71.5 81.7,71.2 83.2,70.9 84.8,70.6 86.3,70.3 87.8,70.0 89.4,69.7 90.9,69.4 92.5,69.1 94.0,68.9 95.5,68.6 97.1,68.4 98.6,68.1 100.2,67.8 101.7,67.6 103.2,67.4 104.8,67.1 106.3,66.9 107.9,66.7 109.4,66.4 111.0,66.2 112.5,66.0 114.0,65.8 115.6,65.6 117.1,65.4 118.7,65.2 120.2,65.0 121.8,64.8 123.3,64.6 124.8,64.4 126.4,64.3 127.9,64.1 129.5,63.9 131.0,63.7 132.5,63.6 134.1,63.4 135.6,63.2 137.2,63.1 138.7,62.9 140.2,62.8 141.8,62.6 143.3,62.5 144.9,62.3 146.4,62.2 148.0,62.1 149.5,61.9 151.0,61.8 152.6,61.7 154.1,61.5 155.7,61.4 157.2,61.3 158.8,61.2 160.3,61.1 161.8,60.9 163.4,60.8 164.9,60.7 166.5,60.6 168.0,60.5 169.5,60.4 171.1,60.3 172.6,60.2 174.2,60.1 175.7,60.0 177.2,59.9 178.8,59.8 180.3,59.7 181.9,59.6 183.4,59.5 185.0,59.5 186.5,59.4 188.0,59.3 189.6,59.2 191.1,59.1 192.7,59.0 194.2,59.0 195.8,58.9 197.3,58.8 198.8,58.7 200.4,58.7 201.9,58.6 203.5,58.5 205.0,58.5' fill='none' stroke='var(--line)' stroke-width='1.2' stroke-dasharray='3 3'/><polyline points='20.0,20.0 20.9,20.8 21.9,22.2 22.8,24.4 23.7,27.1 24.6,30.3 25.6,34.0 26.5,38.0 27.4,42.3 28.3,46.8 29.2,51.3 30.2,55.8 31.1,60.2 32.0,64.4 33.0,68.3 33.9,71.8 34.8,74.9 35.7,77.5 36.6,79.6 37.6,81.1 38.5,82.0 39.4,82.3 40.4,82.1 41.3,81.3 42.2,80.0 43.1,78.1 44.0,75.8 45.0,73.2 45.9,70.2 46.8,67.0 47.8,63.6 48.7,60.1 49.6,56.5 50.5,53.0 51.5,49.7 52.4,46.5 53.3,43.6 54.2,40.9 55.1,38.7 56.1,36.8 57.0,35.4 57.9,34.4 58.9,33.8 59.8,33.7 60.7,34.1 61.6,34.9 62.5,36.1 63.5,37.6 64.4,39.5 65.3,41.7 66.2,44.1 67.2,46.7 68.1,49.4 69.0,52.1 70.0,54.9 70.9,57.5 71.8,60.1 72.7,62.5 73.7,64.7 74.6,66.6 75.5,68.3 76.4,69.6 77.3,70.6 78.3,71.3 79.2,71.6 80.1,71.5 81.0,71.1 82.0,70.4 82.9,69.3 83.8,68.0 84.8,66.4 85.7,64.7 86.6,62.7 87.5,60.7 88.5,58.6 89.4,56.4 90.3,54.3 91.2,52.3 92.2,50.3 93.1,48.5 94.0,46.8 94.9,45.4 95.8,44.2 96.8,43.3 97.7,42.6 98.6,42.2 99.5,42.1 100.5,42.2 101.4,42.7 102.3,43.3 103.2,44.2 104.2,45.3 105.1,46.6 106.0,48.0 107.0,49.6 107.9,51.2 108.8,52.8 109.7,54.5 110.7,56.1 111.6,57.7 112.5,59.2 113.4,60.6 114.3,61.8 115.3,62.8 116.2,63.7 117.1,64.4 118.0,64.8 119.0,65.0 119.9,65.0 120.8,64.8 121.8,64.4 122.7,63.9 123.6,63.1 124.5,62.2 125.5,61.1 126.4,60.0 127.3,58.8 128.2,57.5 129.2,56.2 130.1,54.9 131.0,53.6 131.9,52.4 132.8,51.3 133.8,50.3 134.7,49.4 135.6,48.6 136.6,48.0 137.5,47.6 138.4,47.3 139.3,47.2 140.2,47.2 141.2,47.4 142.1,47.8 143.0,48.3 143.9,49.0 144.9,49.7 145.8,50.5 146.7,51.5 147.7,52.4 148.6,53.4 149.5,54.5 150.4,55.5 151.3,56.4 152.3,57.3 153.2,58.2 154.1,59.0 155.1,59.6 156.0,60.2 156.9,60.6 157.8,60.9 158.8,61.1 159.7,61.1 160.6,61.0 161.5,60.8 162.4,60.5 163.4,60.0 164.3,59.5 165.2,58.9 166.2,58.2 167.1,57.5 168.0,56.7 168.9,55.9 169.8,55.1 170.8,54.4 171.7,53.6 172.6,52.9 173.6,52.3 174.5,51.7 175.4,51.2 176.3,50.8 177.2,50.5 178.2,50.4 179.1,50.3 180.0,50.3 180.9,50.4 181.9,50.6 182.8,50.9 183.7,51.2 184.7,51.7 185.6,52.2 186.5,52.7 187.4,53.3 188.3,53.9 189.3,54.5 190.2,55.1 191.1,55.7 192.1,56.3 193.0,56.8 193.9,57.3 194.8,57.7 195.8,58.1 196.7,58.3 197.6,58.5 198.5,58.7 199.4,58.7 200.4,58.7 201.3,58.6 202.2,58.4 203.2,58.1 204.1,57.8 205.0,57.5' fill='none' stroke='var(--c1)' stroke-width='1.8'/><text x='268' y='50' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>damped oscillation</text><text x='268' y='68' font-size='11' fill='var(--muted)' text-anchor='middle'>amplitude shrinks</text><path d='M30 112 V180 H222' fill='none' stroke='var(--ink)' stroke-width='1.2'/><polyline points='30.0,178.7 31.6,178.6 33.2,178.6 34.8,178.5 36.3,178.5 37.9,178.4 39.5,178.4 41.1,178.3 42.7,178.3 44.2,178.2 45.8,178.1 47.4,178.0 49.0,178.0 50.6,177.9 52.2,177.8 53.8,177.7 55.3,177.6 56.9,177.5 58.5,177.4 60.1,177.2 61.7,177.1 63.2,177.0 64.8,176.8 66.4,176.7 68.0,176.5 69.6,176.3 71.2,176.1 72.8,175.8 74.3,175.6 75.9,175.3 77.5,175.0 79.1,174.7 80.7,174.4 82.2,174.0 83.8,173.6 85.4,173.1 87.0,172.6 88.6,172.0 90.2,171.4 91.8,170.7 93.3,169.9 94.9,169.0 96.5,167.9 98.1,166.8 99.7,165.5 101.2,164.0 102.8,162.3 104.4,160.4 106.0,158.2 107.6,155.7 109.2,152.8 110.8,149.5 112.3,145.9 113.9,141.9 115.5,137.5 117.1,133.0 118.7,128.5 120.2,124.4 121.8,121.0 123.4,118.8 125.0,118.0 126.6,118.8 128.2,121.0 129.8,124.4 131.3,128.5 132.9,133.0 134.5,137.5 136.1,141.9 137.7,145.9 139.2,149.5 140.8,152.8 142.4,155.7 144.0,158.2 145.6,160.4 147.2,162.3 148.8,164.0 150.3,165.5 151.9,166.8 153.5,167.9 155.1,169.0 156.7,169.9 158.2,170.7 159.8,171.4 161.4,172.0 163.0,172.6 164.6,173.1 166.2,173.6 167.8,174.0 169.3,174.4 170.9,174.7 172.5,175.0 174.1,175.3 175.7,175.6 177.2,175.8 178.8,176.1 180.4,176.3 182.0,176.5 183.6,176.7 185.2,176.8 186.8,177.0 188.3,177.1 189.9,177.2 191.5,177.4 193.1,177.5 194.7,177.6 196.2,177.7 197.8,177.8 199.4,177.9 201.0,178.0 202.6,178.0 204.2,178.1 205.8,178.2 207.3,178.3 208.9,178.3 210.5,178.4 212.1,178.4 213.7,178.5 215.2,178.5 216.8,178.6 218.4,178.6 220.0,178.7' fill='none' stroke='var(--c2)' stroke-width='2'/><path d='M125 118 V180' fill='none' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><text x='125' y='195' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>f₀</text><text x='228' y='184' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>f</text><text x='38' y='118' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>A</text><text x='268' y='128' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>resonance</text><text x='268' y='146' font-size='11' fill='var(--ink)' text-anchor='middle'>when f = f₀</text><text x='268' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>largest amplitude</text></svg>",
+    "key": "For resonance, the frequency of the outside push must equal the natural frequency. Pushing a swing at the right moments is an example."
+   },
+   {
+    "h": "Summary",
+    "p": "• The restoring force is F = −kx, and it points toward equilibrium.<br>• The speed is greatest at equilibrium (ωA), and the acceleration at the ends (ω²A).<br>• The periods are 2π√(m/k) and 2π√(L/g), and they do not depend on the amplitude.<br>• For parallel springs k adds up, and for series springs 1/k adds up.<br>• The total energy is E = ½kA².",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='10' width='145' height='85' rx='8' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.5'/><text x='82.5' y='36' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Force</text><text x='82.5' y='60' font-size='12' fill='var(--ink)' text-anchor='middle'>F = −k·x</text><text x='82.5' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>a = −ω²·x</text><rect x='165' y='10' width='145' height='85' rx='8' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='237.5' y='36' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Speed</text><text x='237.5' y='60' font-size='12' fill='var(--ink)' text-anchor='middle'>|v| = ω√(A² − x²)</text><text x='237.5' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>v<tspan font-size='10' dy='3'>max</tspan><tspan dy='-3'> = ω·A</tspan></text><rect x='10' y='105' width='145' height='85' rx='8' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.5'/><text x='82.5' y='131' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Period</text><text x='82.5' y='155' font-size='12' fill='var(--ink)' text-anchor='middle'>T = 2π√(m/k)</text><text x='82.5' y='175' font-size='12' fill='var(--ink)' text-anchor='middle'>T = 2π√(L/g)</text><rect x='165' y='105' width='145' height='85' rx='8' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.5'/><text x='237.5' y='131' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Energy</text><text x='237.5' y='155' font-size='12' fill='var(--ink)' text-anchor='middle'>E = ½kA²</text><text x='237.5' y='175' font-size='12' fill='var(--ink)' text-anchor='middle'>x = A/√2: Eₖ = Eₚ</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "An object in simple harmonic motion has an amplitude of 0.1 m and an angular frequency of 10 rad/s. What is its speed, in m/s, 0.06 m from the equilibrium point?",
+    "cevap": 0.8,
+    "birim": "m/s",
+    "e": "|v| = ω√(A² − x²) = 10·√(0.01 − 0.0036) = 10·0.08 = 0.8 m/s."
+   },
+   {
+    "tur": "ayir",
+    "q": "In a mass-spring system, where is each quantity greatest? Put each one in the right group.",
+    "gruplar": [
+     "Greatest at equilibrium",
+     "Greatest at the ends"
+    ],
+    "ogeler": [
+     [
+      "Speed",
+      0
+     ],
+     [
+      "Kinetic energy",
+      0
+     ],
+     [
+      "Magnitude of the acceleration",
+      1
+     ],
+     [
+      "Restoring force",
+      1
+     ],
+     [
+      "Potential energy",
+      1
+     ],
+     [
+      "Magnitude of the displacement",
+      1
+     ]
+    ],
+    "e": "At equilibrium x = 0. There the speed is greatest, at ωA, and all the energy is kinetic. At the ends |x| = A, so the force (kx), the acceleration (ω²A) and the potential energy (½kA²) are greatest."
+   },
+   {
+    "tur": "eslestir",
+    "q": "In a mass-spring system, what does each change do to the period? Match them.",
+    "ciftler": [
+     [
+      "The mass becomes 4 times larger",
+      "It doubles"
+     ],
+     [
+      "The spring constant becomes 4 times larger",
+      "It is cut in half"
+     ],
+     [
+      "The amplitude doubles",
+      "It does not change"
+     ],
+     [
+      "An identical second spring is added in series",
+      "It is multiplied by √2"
+     ]
+    ],
+    "e": "T = 2π√(m/k). When m becomes 4 times larger, T doubles, and when k becomes 4 times larger, T is cut in half. The amplitude does not affect the period. In series k<sub>eq</sub> = k/2, so T is multiplied by √2."
+   },
+   {
+    "q": "A simple pendulum and a mass on a spring oscillate in an elevator that accelerates upward. How do their periods change compared with an elevator at rest?",
+    "o": [
+     "Both periods get shorter",
+     "The pendulum's gets shorter, the spring's does not change",
+     "The pendulum's gets longer, the spring's does not change",
+     "Neither period changes"
+    ],
+    "a": 1,
+    "e": "If the acceleration is upward, the effective gravity for the pendulum is g' = g + a, which is larger. So T = 2π√(L/g') gets shorter. For the mass on a spring, T = 2π√(m/k) does not contain g and does not change.",
+    "y": [
+     "The period of a mass on a spring is T = 2π√(m/k). It does not depend on g, so it does not depend on the acceleration of the elevator.",
+     "",
+     "With upward acceleration g' = g + a. When g' is larger, the period of the pendulum gets shorter, not longer.",
+     "For a simple pendulum T = 2π√(L/g'), so the period depends on the effective gravity. In an accelerating elevator g' changes."
+    ]
+   }
+  ]
+ },
+ "dalgalar": {
+  "title": "Vibrations and waves",
+  "summary": "Types of waves, reflection, interference, sound and electromagnetic waves.",
+  "cards": [
+   {
+    "h": "Waves: transverse and longitudinal",
+    "p": "A vibration that travels through a medium is called a <b>mechanical wave</b>, and a wave carries energy. If the vibration is perpendicular to the direction of travel, the wave is <b>transverse</b>. A wave on a rope is an example. If the vibration is parallel to the direction of travel, the wave is <b>longitudinal</b>. Sound is an example.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dalga-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><marker id='dalga-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='150' y='20' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>transverse wave</text><path d='M20 60 H250' fill='none' stroke='var(--line)' stroke-width='1' stroke-dasharray='3 3'/><polyline points='30.0,60.0 31.8,57.7 33.7,55.4 35.5,53.2 37.3,51.1 39.2,49.0 41.0,47.1 42.8,45.3 44.7,43.7 46.5,42.2 48.3,40.9 50.2,39.9 52.0,39.1 53.8,38.5 55.7,38.1 57.5,38.0 59.3,38.1 61.2,38.5 63.0,39.1 64.8,39.9 66.7,40.9 68.5,42.2 70.3,43.7 72.2,45.3 74.0,47.1 75.8,49.0 77.7,51.1 79.5,53.2 81.3,55.4 83.2,57.7 85.0,60.0 86.8,62.3 88.7,64.6 90.5,66.8 92.3,68.9 94.2,71.0 96.0,72.9 97.8,74.7 99.7,76.3 101.5,77.8 103.3,79.1 105.2,80.1 107.0,80.9 108.8,81.5 110.7,81.9 112.5,82.0 114.3,81.9 116.2,81.5 118.0,80.9 119.8,80.1 121.7,79.1 123.5,77.8 125.3,76.3 127.2,74.7 129.0,72.9 130.8,71.0 132.7,68.9 134.5,66.8 136.3,64.6 138.2,62.3 140.0,60.0 141.8,57.7 143.7,55.4 145.5,53.2 147.3,51.1 149.2,49.0 151.0,47.1 152.8,45.3 154.7,43.7 156.5,42.2 158.3,40.9 160.2,39.9 162.0,39.1 163.8,38.5 165.7,38.1 167.5,38.0 169.3,38.1 171.2,38.5 173.0,39.1 174.8,39.9 176.7,40.9 178.5,42.2 180.3,43.7 182.2,45.3 184.0,47.1 185.8,49.0 187.7,51.1 189.5,53.2 191.3,55.4 193.2,57.7 195.0,60.0 196.8,62.3 198.7,64.6 200.5,66.8 202.3,68.9 204.2,71.0 206.0,72.9 207.8,74.7 209.7,76.3 211.5,77.8 213.3,79.1 215.2,80.1 217.0,80.9 218.8,81.5 220.7,81.9 222.5,82.0 224.3,81.9 226.2,81.5 228.0,80.9 229.8,80.1 231.7,79.1 233.5,77.8 235.3,76.3 237.2,74.7 239.0,72.9 240.8,71.0 242.7,68.9 244.5,66.8 246.3,64.6 248.2,62.3 250.0,60.0' fill='none' stroke='var(--c1)' stroke-width='2'/><path d='M140 40 V80' fill='none' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#dalga-2)' marker-start='url(#dalga-2)'/><circle cx='140' cy='60' r='4' fill='var(--c2)'/><path d='M262 60 H305' fill='none' stroke='var(--ink)' stroke-width='2' marker-end='url(#dalga-3)'/><text x='283' y='50' font-size='10' fill='var(--muted)' text-anchor='middle'>travel</text><text x='150' y='110' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>longitudinal wave</text><path d='M30.0 122 V158 M32.7 122 V158 M35.7 122 V158 M39.2 122 V158 M43.4 122 V158 M48.5 122 V158 M54.4 122 V158 M61.2 122 V158 M68.7 122 V158 M76.7 122 V158 M85.0 122 V158 M93.3 122 V158 M101.3 122 V158 M108.8 122 V158 M115.6 122 V158 M121.5 122 V158 M126.6 122 V158 M130.8 122 V158 M134.3 122 V158 M137.3 122 V158 M140.0 122 V158 M142.7 122 V158 M145.7 122 V158 M149.2 122 V158 M153.4 122 V158 M158.5 122 V158 M164.4 122 V158 M171.2 122 V158 M178.7 122 V158 M186.7 122 V158 M195.0 122 V158 M203.3 122 V158 M211.3 122 V158 M218.8 122 V158 M225.6 122 V158 M231.5 122 V158 M236.6 122 V158 M240.8 122 V158 M244.3 122 V158 M247.3 122 V158' fill='none' stroke='var(--c5)' stroke-width='1.5'/><path d='M118 175 H160' fill='none' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#dalga-2)' marker-start='url(#dalga-2)'/><text x='70' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>compression</text><text x='208' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>rarefaction</text><path d='M262 140 H305' fill='none' stroke='var(--ink)' stroke-width='2' marker-end='url(#dalga-3)'/><text x='283' y='130' font-size='10' fill='var(--muted)' text-anchor='middle'>travel</text></svg>",
+    "key": "Light is a transverse wave too, but it is not mechanical. Light needs no medium and travels through a vacuum."
+   },
+   {
+    "h": "Wavelength, frequency, amplitude",
+    "p": "The distance between two neighboring crests is the <b>wavelength</b> (λ). The height from equilibrium to a crest is the <b>amplitude</b> (A), and the number of waves per second is the <b>frequency</b>. The speed of the wave is <b>v = λ·f</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dalga-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M10 110 H300' fill='none' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><path d='M20 110 Q50 30 80 110 T140 110 T200 110 T260 110' fill='none' stroke='var(--c1)' stroke-width='2.5'/><path d='M50 58 V68 M170 58 V68' fill='none' stroke='var(--muted)' stroke-width='1'/><path d='M52 58 H168' fill='none' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#dalga-4)' marker-start='url(#dalga-4)'/><text x='110' y='50' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>λ (wavelength)</text><path d='M232 150 H286' fill='none' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><path d='M278 112 V148' fill='none' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#dalga-4)' marker-start='url(#dalga-4)'/><text x='288' y='135' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>A</text><text x='110' y='170' font-size='11' fill='var(--muted)' text-anchor='middle'>trough</text><text x='250' y='30' font-size='18' fill='var(--c2)' text-anchor='middle' font-weight='700'>v = λ·f</text><text x='250' y='50' font-size='12' fill='var(--muted)' text-anchor='middle'>T = 1/f</text><text x='170' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>f: number of waves per second (Hz)</text></svg>",
+    "key": "The period is T = 1/f. The amplitude sets the energy. When the amplitude doubles, the energy becomes 4 times larger.",
+    "etk": {
+     "tur": "formul",
+     "soru": "Change the wavelength and the frequency: v = λ·f.",
+     "girdiler": [
+      {
+       "ad": "lam",
+       "etiket": "Wavelength λ",
+       "birim": "m",
+       "min": 0.1,
+       "max": 4,
+       "adim": 0.1,
+       "deger": 0.5
+      },
+      {
+       "ad": "f",
+       "etiket": "Frequency f",
+       "birim": "Hz",
+       "min": 1,
+       "max": 50,
+       "adim": 1,
+       "deger": 4
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "v",
+       "ifade": "lam*f",
+       "birim": "m/s",
+       "basamak": 2
+      },
+      {
+       "ad": "T",
+       "ifade": "1/f",
+       "birim": "s",
+       "basamak": 3
+      }
+     ]
+    }
+   },
+   {
+    "h": "Speed depends on the medium, frequency on the source",
+    "p": "The <b>medium</b> sets the speed of a wave. A wave travels fast on a tight rope and slowly on a thick rope. The <b>source</b> sets the frequency. When a wave enters another medium, f does not change, but λ does.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dalga-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='22' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>f stays the same</text><path d='M160 34 V128' fill='none' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><path d='M0 100 Q20 60 40 100 T80 100 T120 100 T160 100' fill='none' stroke='var(--c1)' stroke-width='1.5'/><path d='M160 100 Q170 70 180 100 T200 100 T220 100 T240 100 T260 100 T280 100 T300 100' fill='none' stroke='var(--c1)' stroke-width='4'/><path d='M22 64 H98' fill='none' stroke='var(--ink)' stroke-width='1.2' marker-end='url(#dalga-5)' marker-start='url(#dalga-5)'/><text x='60' y='56' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>λ₁</text><path d='M172 74 H208' fill='none' stroke='var(--ink)' stroke-width='1.2' marker-end='url(#dalga-5)' marker-start='url(#dalga-5)'/><text x='190' y='64' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>λ₂</text><text x='80' y='150' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>thin spring</text><text x='235' y='150' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>thick spring</text><text x='80' y='170' font-size='11' fill='var(--muted)' text-anchor='middle'>large v, long λ</text><text x='235' y='170' font-size='11' fill='var(--muted)' text-anchor='middle'>small v, short λ</text><text x='160' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>v = λ·f: with f constant, v and λ change by the same ratio</text></svg>",
+    "key": "On a stretched rope v = √(F/μ). F is the force stretching the rope, and μ is the mass per unit length of the rope."
+   },
+   {
+    "h": "Reflection of a pulse on a spring",
+    "p": "A <b>pulse</b> reflected from a <b>fixed end</b> tied to a wall comes back inverted. So a crest returns as a trough. From a <b>free end</b>, a ring sliding on a rod, the pulse reflects upright. The transmitted pulse always stays upright.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dalga-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker><marker id='dalga-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><marker id='dalga-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><text x='20' y='18' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>fixed end: reflects inverted</text><path d='M20 55 H290' fill='none' stroke='var(--ink)' stroke-width='1.5'/><rect x='290' y='25' width='10' height='60' fill='var(--line)' stroke='var(--muted)'/><path d='M50 55 Q80 5 110 55' fill='none' stroke='var(--c1)' stroke-width='2.5'/><path d='M62 68 H98' fill='none' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#dalga-6)'/><text x='80' y='88' font-size='11' fill='var(--muted)' text-anchor='middle'>incoming</text><path d='M170 55 Q200 105 230 55' fill='none' stroke='var(--c2)' stroke-width='2.5'/><path d='M218 42 H182' fill='none' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#dalga-7)'/><text x='200' y='30' font-size='11' fill='var(--muted)' text-anchor='middle'>reflected</text><text x='20' y='106' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>free end: reflects upright</text><path d='M20 145 H290' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M294 112 V182' fill='none' stroke='var(--muted)' stroke-width='3'/><circle cx='294' cy='145' r='5' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M50 145 Q80 95 110 145' fill='none' stroke='var(--c1)' stroke-width='2.5'/><path d='M62 158 H98' fill='none' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#dalga-6)'/><text x='80' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>incoming</text><path d='M170 145 Q200 95 230 145' fill='none' stroke='var(--c3)' stroke-width='2.5'/><path d='M218 158 H182' fill='none' stroke='var(--c3)' stroke-width='1.5' marker-end='url(#dalga-8)'/><text x='200' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>reflected</text></svg>",
+    "key": "Going from thin to thick, the reflected pulse comes back inverted. Going from thick to thin, it comes back upright."
+   },
+   {
+    "h": "Interference",
+    "p": "When two waves overlap at the same point, their displacements add. This is called <b>interference</b>. A crest meeting a crest gives <b>constructive</b> interference, and a crest meeting an equal trough gives <b>destructive</b> interference. The waves then continue on their way unchanged.",
+    "svg": "<svg viewBox='0 0 320 200'><g transform='translate(0,40)'><text x='89' y='22' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>constructive</text><text x='239' y='22' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>destructive</text><path d='M14 75 H160 M166 75 H310' fill='none' stroke='var(--line)' stroke-width='1'/><path d='M20 75 Q35.0 45 50 75' fill='none' stroke='var(--c1)' stroke-width='2'/><text x='62' y='80' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>+</text><path d='M74 75 Q89.0 45 104 75' fill='none' stroke='var(--c1)' stroke-width='2'/><text x='116' y='80' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>=</text><path d='M128 75 Q143.0 15 158 75' fill='none' stroke='var(--c3)' stroke-width='2.5'/><path d='M170 75 Q185.0 45 200 75' fill='none' stroke='var(--c1)' stroke-width='2'/><text x='212' y='80' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>+</text><path d='M224 75 Q239.0 105 254 75' fill='none' stroke='var(--c1)' stroke-width='2'/><text x='266' y='80' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>=</text><path d='M278 75 H308' fill='none' stroke='var(--c2)' stroke-width='2.5'/></g><text x='160' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>afterward the waves continue unchanged</text></svg>",
+    "key": "In destructive interference the energy does not disappear. When the waves separate, both return to their original shape."
+   },
+   {
+    "h": "Standing waves",
+    "p": "Two identical waves traveling in opposite directions on the same rope form a <b>standing wave</b>. The points that never vibrate are <b>nodes</b>, and the points that vibrate with the largest amplitude are <b>antinodes</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dalga-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><g transform='translate(0,-60)'><text x='290' y='112' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>standing wave</text><path d='M30 150 H290' fill='none' stroke='var(--line)' stroke-width='1'/><path d='M30 150 Q62.5 110 95 150 T160 150 T225 150 T290 150' fill='none' stroke='var(--c5)' stroke-width='2'/><path d='M30 150 Q62.5 190 95 150 T160 150 T225 150 T290 150' fill='none' stroke='var(--c5)' stroke-width='1.5' stroke-dasharray='4 3'/><circle cx='30' cy='150' r='3.5' fill='var(--ink)'/><circle cx='95' cy='150' r='3.5' fill='var(--ink)'/><circle cx='160' cy='150' r='3.5' fill='var(--ink)'/><circle cx='225' cy='150' r='3.5' fill='var(--ink)'/><circle cx='290' cy='150' r='3.5' fill='var(--ink)'/><text x='127.5' y='120' font-size='11' fill='var(--muted)' text-anchor='middle'>antinode</text><text x='95' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>node</text><path d='M162 180 H223' fill='none' stroke='var(--ink)' stroke-width='1.2' marker-end='url(#dalga-9)' marker-start='url(#dalga-9)'/><text x='192.5' y='196' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>λ/2</text></g><text x='160' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>node: never vibrates · antinode: vibrates most</text></svg>",
+    "key": "The distance between two neighboring nodes or two neighboring antinodes is λ/2.",
+    "once": {
+     "soru": "Both ends of a guitar string are fixed. Do these ends vibrate when the string is played?",
+     "secenekler": [
+      {
+       "yazi": "No",
+       "neden": "Fixed ends cannot move. So in a standing wave these ends are always nodes.",
+       "dogru": true
+      },
+      {
+       "yazi": "Yes, the most",
+       "neden": "The points that vibrate most are antinodes, and they are in the middle of the string."
+      },
+      {
+       "yazi": "Only slowly",
+       "neden": "Tied ends do not vibrate at all."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Reflection of water waves",
+    "p": "For a wave hitting a straight barrier, <b>the angle of incidence equals the angle of reflection</b>. The angles are measured from the line perpendicular to the barrier, called the <b>normal</b>. A straight wave reflected from a parabolic barrier gathers at the focus.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dalga-20' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><marker id='dalga-21' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><text x='80' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>straight barrier</text><path d='M20 150 H140' fill='none' stroke='var(--ink)' stroke-width='3'/><path d='M80 62 V150' fill='none' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><text x='80' y='56' font-size='11' fill='var(--muted)' text-anchor='middle'>normal</text><path d='M34 80 L78 147' fill='none' stroke='var(--c2)' stroke-width='2' marker-end='url(#dalga-20)'/><path d='M82 147 L124 83' fill='none' stroke='var(--c2)' stroke-width='2' marker-end='url(#dalga-20)'/><text x='66' y='118' font-size='12' fill='var(--ink)' text-anchor='middle'>i</text><text x='94' y='118' font-size='12' fill='var(--ink)' text-anchor='middle'>r</text><text x='80' y='178' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>i = r</text><path d='M160 30 V180' fill='none' stroke='var(--line)' stroke-width='1'/><text x='240' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>parabolic barrier</text><path d='M255 45 Q335 105 255 165' fill='none' stroke='var(--ink)' stroke-width='3'/><path d='M180 60 V150 M195 60 V150 M210 60 V150' fill='none' stroke='var(--c1)' stroke-width='1.5'/><path d='M184 52 H210' fill='none' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#dalga-21)'/><path d='M220 75 H284 L274 103' fill='none' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#dalga-20)'/><path d='M220 135 H284 L274 107' fill='none' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#dalga-20)'/><circle cx='272.5' cy='105' r='3.5' fill='var(--acc)'/><text x='258' y='109' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='700'>focus</text><text x='240' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>the wave gathers at the focus</text></svg>",
+    "key": "A ripple tank is a shallow, glass-bottomed tray for watching water waves. A circular wave leaving the focus reflects from the parabola as a straight wave.",
+    "once": {
+     "soru": "A water wave reaches a straight wall at 30° to the normal. What is the angle of reflection?",
+     "secenekler": [
+      {
+       "yazi": "30°",
+       "neden": "The angle of incidence equals the angle of reflection.",
+       "dogru": true
+      },
+      {
+       "yazi": "60°",
+       "neden": "60° is the angle with the wall. Angles are measured from the normal."
+      },
+      {
+       "yazi": "90°",
+       "neden": "The angle of reflection equals the angle of incidence. 90° would not make sense here, since the wave arrives at 30°."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Water waves: from deep to shallow",
+    "p": "Water waves slow down in a <b>shallow</b> region. The frequency does not change, and the wavelength gets shorter. A wave that meets the boundary at an angle is <b>refracted</b>. Going from deep to shallow, the wave bends toward the normal.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dalga-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><clipPath id='dalga-k1'><rect x='20' y='22' width='140' height='156'/></clipPath><clipPath id='dalga-k2'><rect x='160' y='22' width='140' height='156'/></clipPath></defs><rect x='20' y='22' width='140' height='156' fill='var(--c1)' fill-opacity='0.08'/><rect x='160' y='22' width='140' height='156' fill='var(--c1)' fill-opacity='0.22'/><path d='M160 -223.6 L-97.1 82.8 M160 -183.1 L-97.1 123.3 M160 -142.7 L-97.1 163.7 M160 -102.2 L-97.1 204.2 M160 -61.8 L-97.1 244.6 M160 -21.3 L-97.1 285.1 M160 19.1 L-97.1 325.5 M160 59.6 L-97.1 366.0 M160 100.0 L-97.1 406.4 M160 140.4 L-97.1 446.9 M160 180.9 L-97.1 487.3 M160 221.3 L-97.1 527.8 M160 261.8 L-97.1 568.2 M160 302.2 L-97.1 608.7 M160 342.7 L-97.1 649.1 M160 383.1 L-97.1 689.6 M160 423.6 L-97.1 730.0' fill='none' stroke='var(--c1)' stroke-width='1.5' clip-path='url(#dalga-k1)'/><path d='M160 -223.6 L314.3 -592.6 M160 -183.1 L314.3 -552.2 M160 -142.7 L314.3 -511.7 M160 -102.2 L314.3 -471.3 M160 -61.8 L314.3 -430.8 M160 -21.3 L314.3 -390.4 M160 19.1 L314.3 -350.0 M160 59.6 L314.3 -309.5 M160 100.0 L314.3 -269.1 M160 140.4 L314.3 -228.6 M160 180.9 L314.3 -188.2 M160 221.3 L314.3 -147.7 M160 261.8 L314.3 -107.3 M160 302.2 L314.3 -66.8 M160 342.7 L314.3 -26.4 M160 383.1 L314.3 14.1 M160 423.6 L314.3 54.5' fill='none' stroke='var(--c1)' stroke-width='1.5' clip-path='url(#dalga-k2)'/><path d='M160 22 V178' fill='none' stroke='var(--ink)' stroke-width='2'/><path d='M110 100 H215' fill='none' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><path d='M112.5 60.1 L160 100 L220.9 125.5' fill='none' stroke='var(--c2)' stroke-width='2.5' marker-end='url(#dalga-10)'/><text x='90' y='15' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>deep</text><text x='230' y='15' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>shallow</text><text x='90' y='195' font-size='11' fill='var(--muted)' text-anchor='middle'>large v, long λ</text><text x='230' y='195' font-size='11' fill='var(--muted)' text-anchor='middle'>small v, short λ</text></svg>",
+    "key": "A wave going from shallow to deep bends away from the normal.",
+    "once": {
+     "soru": "Why do ocean waves turn parallel to the shore even when they approach at an angle?",
+     "secenekler": [
+      {
+       "yazi": "They slow down in the shallows",
+       "neden": "The part of the wave nearer the shore slows down first. So the wave front turns and becomes parallel to the shore.",
+       "dogru": true
+      },
+      {
+       "yazi": "The wind turns them",
+       "neden": "Waves turn near the shore even with no wind."
+      },
+      {
+       "yazi": "They reflect off the shore",
+       "neden": "The turning happens in shallow water, before the wave reaches the shore."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Diffraction and two-source interference",
+    "p": "A wave passing through a narrow gap bends into the region behind the barrier. This is called <b>diffraction</b>. Diffraction is noticeable when the gap is close to the wavelength or smaller. Two identical sources produce interference lines.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='80' y='14' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>diffraction</text><path d='M20 30 V170 M34 30 V170 M48 30 V170 M62 30 V170' fill='none' stroke='var(--c1)' stroke-width='1.5'/><rect x='78' y='22' width='6' height='68' fill='var(--ink)'/><rect x='78' y='110' width='6' height='70' fill='var(--ink)'/><path d='M83 86 A14 14 0 0 1 83 114 M83 72 A28 28 0 0 1 83 128 M83 58 A42 42 0 0 1 83 142 M83 44 A56 56 0 0 1 83 156' fill='none' stroke='var(--c1)' stroke-width='1.5'/><text x='80' y='195' font-size='11' fill='var(--muted)' text-anchor='middle'>gap ≈ λ</text><text x='245' y='14' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>two-source interference</text><path d='M190 78 A12 12 0 0 1 190 102 M190 66 A24 24 0 0 1 190 114 M190 54 A36 36 0 0 1 190 126 M190 42 A48 48 0 0 1 190 138 M190 118 A12 12 0 0 1 190 142 M190 106 A24 24 0 0 1 190 154 M190 94 A36 36 0 0 1 190 166 M190 82 A48 48 0 0 1 190 178' fill='none' stroke='var(--c1)' stroke-width='1' stroke-opacity='0.6'/><circle cx='190' cy='90' r='4' fill='var(--ink)'/><circle cx='190' cy='130' r='4' fill='var(--ink)'/><text x='182' y='94' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>K₁</text><text x='182' y='134' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>K₂</text><path d='M190 110 H306' fill='none' stroke='var(--c3)' stroke-width='2' stroke-dasharray='5 3'/><path d='M190 110 L306 127.6 M190 110 L306 92.4' fill='none' stroke='var(--c2)' stroke-width='1.5' stroke-dasharray='5 3'/><text x='306' y='160' font-size='11' fill='var(--c3)' text-anchor='end' font-weight='700'>green: constructive</text><text x='306' y='176' font-size='11' fill='var(--c2)' text-anchor='end' font-weight='700'>red: destructive</text><text x='306' y='195' font-size='10' fill='var(--muted)' text-anchor='end'>central line: constructive</text></svg>",
+    "key": "In diffraction λ, f and the speed do not change. With light, the same effect gives bright and dark fringes in the double-slit experiment.",
+    "once": {
+     "soru": "You can hear someone behind a door but you cannot see them. Why?",
+     "secenekler": [
+      {
+       "yazi": "Sound diffracts more",
+       "neden": "The wavelength of sound is close to the size of the doorway, so sound bends around the corner. The wavelength of light is very small.",
+       "dogru": true
+      },
+      {
+       "yazi": "Sound is faster",
+       "neden": "Light is much faster than sound."
+      },
+      {
+       "yazi": "Light cannot pass through walls",
+       "neden": "Sound does not come through the wall either. It bends through the opening."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Sound waves",
+    "p": "Sound is a <b>longitudinal</b>, <b>mechanical</b> wave that compresses and thins out the air. So it does not travel through a vacuum. The speed of sound is greatest in solids and smallest in gases. In air it is about 343 m/s.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M80 42 V160' fill='none' stroke='var(--ink)' stroke-width='1.5'/><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>speed of sound (m/s, approximate, 20 °C)</text><text x='70' y='65' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>air</text><rect x='80' y='50' width='11.4' height='22' rx='3' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.5'/><text x='99.43333333333334' y='65' font-size='11' fill='var(--ink)' text-anchor='start'>343</text><text x='70' y='103' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>water</text><rect x='80' y='88' width='49.3' height='22' rx='3' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)' stroke-width='1.5'/><text x='137.33333333333334' y='103' font-size='11' fill='var(--ink)' text-anchor='start'>≈ 1480</text><text x='70' y='141' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>steel</text><rect x='80' y='126' width='196.7' height='22' rx='3' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)' stroke-width='1.5'/><text x='268.66666666666663' y='141' font-size='11' fill='var(--ink)' text-anchor='end'>≈ 5900</text><text x='70' y='176' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>vacuum</text><text x='80' y='176' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>0: sound does not travel</text><text x='160' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>in general: gas &lt; liquid &lt; solid</text></svg>",
+    "key": "Sound travels at about 1480 m/s in water. The human ear hears sounds between 20 and 20 000 Hz. Sounds below this range are called infrasound, and those above it ultrasound.",
+    "once": {
+     "soru": "Can we hear the sound of an explosion in space from Earth?",
+     "secenekler": [
+      {
+       "yazi": "No",
+       "neden": "Sound needs matter to travel. So it cannot travel through the vacuum of space.",
+       "dogru": true
+      },
+      {
+       "yazi": "Yes, with a delay",
+       "neden": "Sound does not travel through a vacuum at all."
+      },
+      {
+       "yazi": "Yes, right away",
+       "neden": "We see the light, but we do not hear the sound."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Pitch, intensity and timbre",
+    "p": "The <b>pitch</b> of a sound depends on its frequency. Its <b>intensity</b> grows with amplitude and is measured in decibels (dB). <b>Timbre</b> is the wave shape that lets you tell a violin from a piano.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='55' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>pitch</text><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>intensity · level</text><text x='265' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>timbre</text><polyline points='10.0,62.0 10.8,58.9 11.5,55.9 12.2,53.2 13.0,50.9 13.8,49.0 14.5,47.7 15.2,47.1 16.0,47.1 16.8,47.7 17.5,49.0 18.2,50.9 19.0,53.2 19.8,55.9 20.5,58.9 21.2,62.0 22.0,65.1 22.8,68.1 23.5,70.8 24.2,73.1 25.0,75.0 25.8,76.3 26.5,76.9 27.2,76.9 28.0,76.3 28.8,75.0 29.5,73.1 30.2,70.8 31.0,68.1 31.8,65.1 32.5,62.0 33.2,58.9 34.0,55.9 34.8,53.2 35.5,50.9 36.2,49.0 37.0,47.7 37.8,47.1 38.5,47.1 39.2,47.7 40.0,49.0 40.8,50.9 41.5,53.2 42.2,55.9 43.0,58.9 43.8,62.0 44.5,65.1 45.2,68.1 46.0,70.8 46.8,73.1 47.5,75.0 48.2,76.3 49.0,76.9 49.8,76.9 50.5,76.3 51.2,75.0 52.0,73.1 52.8,70.8 53.5,68.1 54.2,65.1 55.0,62.0 55.8,58.9 56.5,55.9 57.2,53.2 58.0,50.9 58.8,49.0 59.5,47.7 60.2,47.1 61.0,47.1 61.8,47.7 62.5,49.0 63.2,50.9 64.0,53.2 64.8,55.9 65.5,58.9 66.2,62.0 67.0,65.1 67.8,68.1 68.5,70.8 69.2,73.1 70.0,75.0 70.8,76.3 71.5,76.9 72.2,76.9 73.0,76.3 73.8,75.0 74.5,73.1 75.2,70.8 76.0,68.1 76.8,65.1 77.5,62.0 78.2,58.9 79.0,55.9 79.8,53.2 80.5,50.9 81.2,49.0 82.0,47.7 82.8,47.1 83.5,47.1 84.2,47.7 85.0,49.0 85.8,50.9 86.5,53.2 87.2,55.9 88.0,58.9 88.8,62.0 89.5,65.1 90.2,68.1 91.0,70.8 91.8,73.1 92.5,75.0 93.2,76.3 94.0,76.9 94.8,76.9 95.5,76.3 96.2,75.0 97.0,73.1 97.8,70.8 98.5,68.1 99.2,65.1 100.0,62.0' fill='none' stroke='var(--c1)' stroke-width='2'/><text x='55' y='100' font-size='11' fill='var(--muted)' text-anchor='middle'>high (large f)</text><polyline points='10.0,135.0 10.8,133.4 11.5,131.9 12.2,130.4 13.0,128.9 13.8,127.5 14.5,126.2 15.2,125.0 16.0,123.9 16.8,122.9 17.5,122.0 18.2,121.3 19.0,120.7 19.8,120.3 20.5,120.1 21.2,120.0 22.0,120.1 22.8,120.3 23.5,120.7 24.2,121.3 25.0,122.0 25.8,122.9 26.5,123.9 27.2,125.0 28.0,126.2 28.8,127.5 29.5,128.9 30.2,130.4 31.0,131.9 31.8,133.4 32.5,135.0 33.2,136.6 34.0,138.1 34.8,139.6 35.5,141.1 36.2,142.5 37.0,143.8 37.8,145.0 38.5,146.1 39.2,147.1 40.0,148.0 40.8,148.7 41.5,149.3 42.2,149.7 43.0,149.9 43.8,150.0 44.5,149.9 45.2,149.7 46.0,149.3 46.8,148.7 47.5,148.0 48.2,147.1 49.0,146.1 49.8,145.0 50.5,143.8 51.2,142.5 52.0,141.1 52.8,139.6 53.5,138.1 54.2,136.6 55.0,135.0 55.8,133.4 56.5,131.9 57.2,130.4 58.0,128.9 58.8,127.5 59.5,126.2 60.2,125.0 61.0,123.9 61.8,122.9 62.5,122.0 63.2,121.3 64.0,120.7 64.8,120.3 65.5,120.1 66.2,120.0 67.0,120.1 67.8,120.3 68.5,120.7 69.2,121.3 70.0,122.0 70.8,122.9 71.5,123.9 72.2,125.0 73.0,126.2 73.8,127.5 74.5,128.9 75.2,130.4 76.0,131.9 76.8,133.4 77.5,135.0 78.2,136.6 79.0,138.1 79.8,139.6 80.5,141.1 81.2,142.5 82.0,143.8 82.8,145.0 83.5,146.1 84.2,147.1 85.0,148.0 85.8,148.7 86.5,149.3 87.2,149.7 88.0,149.9 88.8,150.0 89.5,149.9 90.2,149.7 91.0,149.3 91.8,148.7 92.5,148.0 93.2,147.1 94.0,146.1 94.8,145.0 95.5,143.8 96.2,142.5 97.0,141.1 97.8,139.6 98.5,138.1 99.2,136.6 100.0,135.0' fill='none' stroke='var(--c1)' stroke-width='2'/><text x='55' y='170' font-size='11' fill='var(--muted)' text-anchor='middle'>low (small f)</text><polyline points='115.0,62.0 115.8,59.7 116.5,57.4 117.2,55.2 118.0,53.1 118.8,51.0 119.5,49.1 120.2,47.3 121.0,45.7 121.8,44.2 122.5,42.9 123.2,41.9 124.0,41.1 124.8,40.5 125.5,40.1 126.2,40.0 127.0,40.1 127.8,40.5 128.5,41.1 129.2,41.9 130.0,42.9 130.8,44.2 131.5,45.7 132.2,47.3 133.0,49.1 133.8,51.0 134.5,53.1 135.2,55.2 136.0,57.4 136.8,59.7 137.5,62.0 138.2,64.3 139.0,66.6 139.8,68.8 140.5,70.9 141.2,73.0 142.0,74.9 142.8,76.7 143.5,78.3 144.2,79.8 145.0,81.1 145.8,82.1 146.5,82.9 147.2,83.5 148.0,83.9 148.8,84.0 149.5,83.9 150.2,83.5 151.0,82.9 151.8,82.1 152.5,81.1 153.2,79.8 154.0,78.3 154.8,76.7 155.5,74.9 156.2,73.0 157.0,70.9 157.8,68.8 158.5,66.6 159.2,64.3 160.0,62.0 160.8,59.7 161.5,57.4 162.2,55.2 163.0,53.1 163.8,51.0 164.5,49.1 165.2,47.3 166.0,45.7 166.8,44.2 167.5,42.9 168.2,41.9 169.0,41.1 169.8,40.5 170.5,40.1 171.2,40.0 172.0,40.1 172.8,40.5 173.5,41.1 174.2,41.9 175.0,42.9 175.8,44.2 176.5,45.7 177.2,47.3 178.0,49.1 178.8,51.0 179.5,53.1 180.2,55.2 181.0,57.4 181.8,59.7 182.5,62.0 183.2,64.3 184.0,66.6 184.8,68.8 185.5,70.9 186.2,73.0 187.0,74.9 187.8,76.7 188.5,78.3 189.2,79.8 190.0,81.1 190.8,82.1 191.5,82.9 192.2,83.5 193.0,83.9 193.8,84.0 194.5,83.9 195.2,83.5 196.0,82.9 196.8,82.1 197.5,81.1 198.2,79.8 199.0,78.3 199.8,76.7 200.5,74.9 201.2,73.0 202.0,70.9 202.8,68.8 203.5,66.6 204.2,64.3 205.0,62.0' fill='none' stroke='var(--c2)' stroke-width='2'/><text x='160' y='100' font-size='10' fill='var(--muted)' text-anchor='middle'>10⁻⁵ W/m² · 70 dB</text><polyline points='115.0,135.0 115.8,134.2 116.5,133.3 117.2,132.5 118.0,131.7 118.8,131.0 119.5,130.3 120.2,129.6 121.0,129.1 121.8,128.5 122.5,128.1 123.2,127.7 124.0,127.4 124.8,127.2 125.5,127.0 126.2,127.0 127.0,127.0 127.8,127.2 128.5,127.4 129.2,127.7 130.0,128.1 130.8,128.5 131.5,129.1 132.2,129.6 133.0,130.3 133.8,131.0 134.5,131.7 135.2,132.5 136.0,133.3 136.8,134.2 137.5,135.0 138.2,135.8 139.0,136.7 139.8,137.5 140.5,138.3 141.2,139.0 142.0,139.7 142.8,140.4 143.5,140.9 144.2,141.5 145.0,141.9 145.8,142.3 146.5,142.6 147.2,142.8 148.0,143.0 148.8,143.0 149.5,143.0 150.2,142.8 151.0,142.6 151.8,142.3 152.5,141.9 153.2,141.5 154.0,140.9 154.8,140.4 155.5,139.7 156.2,139.0 157.0,138.3 157.8,137.5 158.5,136.7 159.2,135.8 160.0,135.0 160.8,134.2 161.5,133.3 162.2,132.5 163.0,131.7 163.8,131.0 164.5,130.3 165.2,129.6 166.0,129.1 166.8,128.5 167.5,128.1 168.2,127.7 169.0,127.4 169.8,127.2 170.5,127.0 171.2,127.0 172.0,127.0 172.8,127.2 173.5,127.4 174.2,127.7 175.0,128.1 175.8,128.5 176.5,129.1 177.2,129.6 178.0,130.3 178.8,131.0 179.5,131.7 180.2,132.5 181.0,133.3 181.8,134.2 182.5,135.0 183.2,135.8 184.0,136.7 184.8,137.5 185.5,138.3 186.2,139.0 187.0,139.7 187.8,140.4 188.5,140.9 189.2,141.5 190.0,141.9 190.8,142.3 191.5,142.6 192.2,142.8 193.0,143.0 193.8,143.0 194.5,143.0 195.2,142.8 196.0,142.6 196.8,142.3 197.5,141.9 198.2,141.5 199.0,140.9 199.8,140.4 200.5,139.7 201.2,139.0 202.0,138.3 202.8,137.5 203.5,136.7 204.2,135.8 205.0,135.0' fill='none' stroke='var(--c2)' stroke-width='2'/><text x='160' y='170' font-size='10' fill='var(--muted)' text-anchor='middle'>10⁻⁶ W/m² · 60 dB</text><polyline points='220.0,62.0 220.8,60.4 221.5,58.9 222.2,57.4 223.0,55.9 223.8,54.5 224.5,53.2 225.2,52.0 226.0,50.9 226.8,49.9 227.5,49.0 228.2,48.3 229.0,47.7 229.8,47.3 230.5,47.1 231.2,47.0 232.0,47.1 232.8,47.3 233.5,47.7 234.2,48.3 235.0,49.0 235.8,49.9 236.5,50.9 237.2,52.0 238.0,53.2 238.8,54.5 239.5,55.9 240.2,57.4 241.0,58.9 241.8,60.4 242.5,62.0 243.2,63.6 244.0,65.1 244.8,66.6 245.5,68.1 246.2,69.5 247.0,70.8 247.8,72.0 248.5,73.1 249.2,74.1 250.0,75.0 250.8,75.7 251.5,76.3 252.2,76.7 253.0,76.9 253.8,77.0 254.5,76.9 255.2,76.7 256.0,76.3 256.8,75.7 257.5,75.0 258.2,74.1 259.0,73.1 259.8,72.0 260.5,70.8 261.2,69.5 262.0,68.1 262.8,66.6 263.5,65.1 264.2,63.6 265.0,62.0 265.8,60.4 266.5,58.9 267.2,57.4 268.0,55.9 268.8,54.5 269.5,53.2 270.2,52.0 271.0,50.9 271.8,49.9 272.5,49.0 273.2,48.3 274.0,47.7 274.8,47.3 275.5,47.1 276.2,47.0 277.0,47.1 277.8,47.3 278.5,47.7 279.2,48.3 280.0,49.0 280.8,49.9 281.5,50.9 282.2,52.0 283.0,53.2 283.8,54.5 284.5,55.9 285.2,57.4 286.0,58.9 286.8,60.4 287.5,62.0 288.2,63.6 289.0,65.1 289.8,66.6 290.5,68.1 291.2,69.5 292.0,70.8 292.8,72.0 293.5,73.1 294.2,74.1 295.0,75.0 295.8,75.7 296.5,76.3 297.2,76.7 298.0,76.9 298.8,77.0 299.5,76.9 300.2,76.7 301.0,76.3 301.8,75.7 302.5,75.0 303.2,74.1 304.0,73.1 304.8,72.0 305.5,70.8 306.2,69.5 307.0,68.1 307.8,66.6 308.5,65.1 309.2,63.6 310.0,62.0' fill='none' stroke='var(--c3)' stroke-width='2'/><text x='265' y='100' font-size='11' fill='var(--muted)' text-anchor='middle'>pure tone</text><polyline points='220.0,135.0 220.8,131.0 221.5,127.1 222.2,123.7 223.0,120.8 223.8,118.6 224.5,117.1 225.2,116.4 226.0,116.4 226.8,117.0 227.5,118.2 228.2,119.7 229.0,121.5 229.8,123.4 230.5,125.3 231.2,126.9 232.0,128.3 232.8,129.4 233.5,130.1 234.2,130.6 235.0,130.8 235.8,130.9 236.5,130.8 237.2,130.8 238.0,130.9 238.8,131.2 239.5,131.6 240.2,132.3 241.0,133.1 241.8,134.0 242.5,135.0 243.2,136.0 244.0,136.9 244.8,137.7 245.5,138.4 246.2,138.8 247.0,139.1 247.8,139.2 248.5,139.2 249.2,139.1 250.0,139.2 250.8,139.4 251.5,139.9 252.2,140.6 253.0,141.7 253.8,143.1 254.5,144.7 255.2,146.6 256.0,148.5 256.8,150.3 257.5,151.8 258.2,153.0 259.0,153.6 259.8,153.6 260.5,152.9 261.2,151.4 262.0,149.2 262.8,146.3 263.5,142.9 264.2,139.0 265.0,135.0 265.8,131.0 266.5,127.1 267.2,123.7 268.0,120.8 268.8,118.6 269.5,117.1 270.2,116.4 271.0,116.4 271.8,117.0 272.5,118.2 273.2,119.7 274.0,121.5 274.8,123.4 275.5,125.3 276.2,126.9 277.0,128.3 277.8,129.4 278.5,130.1 279.2,130.6 280.0,130.8 280.8,130.9 281.5,130.8 282.2,130.8 283.0,130.9 283.8,131.2 284.5,131.6 285.2,132.3 286.0,133.1 286.8,134.0 287.5,135.0 288.2,136.0 289.0,136.9 289.8,137.7 290.5,138.4 291.2,138.8 292.0,139.1 292.8,139.2 293.5,139.2 294.2,139.1 295.0,139.2 295.8,139.4 296.5,139.9 297.2,140.6 298.0,141.7 298.8,143.1 299.5,144.7 300.2,146.6 301.0,148.5 301.8,150.3 302.5,151.8 303.2,153.0 304.0,153.6 304.8,153.6 305.5,152.9 306.2,151.4 307.0,149.2 307.8,146.3 308.5,142.9 309.2,139.0 310.0,135.0' fill='none' stroke='var(--c3)' stroke-width='2'/><text x='265' y='170' font-size='11' fill='var(--muted)' text-anchor='middle'>same f, other shape</text><text x='55' y='192' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>← frequency</text><text x='160' y='192' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>← amplitude</text><text x='265' y='192' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>← wave shape</text></svg>",
+    "key": "Every +10 dB means the intensity is 10 times larger. So a 70 dB sound has 10 times the intensity of a 60 dB sound.",
+    "once": {
+     "soru": "Why does the same note sound different on a violin and on a piano?",
+     "secenekler": [
+      {
+       "yazi": "Different timbres",
+       "neden": "The frequency is the same, but the wave shapes are different.",
+       "dogru": true
+      },
+      {
+       "yazi": "Different frequencies",
+       "neden": "The same note has the same frequency."
+      },
+      {
+       "yazi": "Different speeds",
+       "neden": "The air sets the speed of sound, not the source."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The Doppler effect",
+    "p": "You hear a higher pitch when a sound source approaches and a lower pitch when it moves away. This is called the <b>Doppler effect</b>. The wavelength is shorter in front of the source and longer behind it. The source's own frequency does not change.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dalga-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker></defs><g transform='translate(-80,0)'><text x='240' y='26' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Doppler</text><circle cx='230' cy='100' r='60.0' fill='none' stroke='var(--c1)' stroke-width='1.5'/><circle cx='245' cy='100' r='37.5' fill='none' stroke='var(--c1)' stroke-width='1.5'/><circle cx='260' cy='100' r='15.0' fill='none' stroke='var(--c1)' stroke-width='1.5'/><circle cx='270' cy='100' r='5' fill='var(--c4)'/><path d='M276 100 H302' fill='none' stroke='var(--c4)' stroke-width='2' marker-end='url(#dalga-11)'/><text x='168' y='184' font-size='11' fill='var(--ink)' text-anchor='start'>behind: low</text><text x='310' y='184' font-size='11' fill='var(--ink)' text-anchor='end'>ahead: high</text></g></svg>",
+    "key": "The speed of sound in air does not change either. Speed radar and Doppler ultrasound use this effect.",
+    "once": {
+     "soru": "An ambulance with its siren on passes you and moves away. How does the sound change?",
+     "secenekler": [
+      {
+       "yazi": "The pitch drops",
+       "neden": "Behind it the wavelength is longer, so the frequency you hear drops.",
+       "dogru": true
+      },
+      {
+       "yazi": "The pitch rises",
+       "neden": "The pitch rises while the source is approaching."
+      },
+      {
+       "yazi": "It does not change",
+       "neden": "The source is moving, so the frequency you hear changes."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Electromagnetic waves",
+    "p": "Light, radio waves and X-rays are <b>electromagnetic</b> waves. They are transverse waves and need no medium. Their speed in a vacuum is <b>c = 3×10<sup>8</sup> m/s</b>. As the frequency increases, the wavelength gets shorter and the energy increases.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dalga-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><polyline points='10.0,40.0 11.0,39.2 12.0,38.3 13.0,37.5 14.0,36.6 15.0,35.8 16.0,34.9 17.0,34.1 18.0,33.3 19.0,32.6 20.0,31.9 21.0,31.2 22.0,30.7 23.0,30.2 24.0,29.7 25.0,29.4 26.0,29.2 27.0,29.0 28.0,29.0 29.0,29.1 30.0,29.3 31.0,29.6 32.0,30.1 33.0,30.7 34.0,31.4 35.0,32.2 36.0,33.2 37.0,34.2 38.0,35.3 39.0,36.5 40.0,37.8 41.0,39.1 42.0,40.5 43.0,41.8 44.0,43.2 45.0,44.5 46.0,45.7 47.0,46.9 48.0,48.0 49.0,48.9 50.0,49.7 51.0,50.3 52.0,50.7 53.0,51.0 54.0,51.0 55.0,50.8 56.0,50.3 57.0,49.7 58.0,48.8 59.0,47.7 60.0,46.5 61.0,45.0 62.0,43.5 63.0,41.9 64.0,40.1 65.0,38.4 66.0,36.7 67.0,35.1 68.0,33.6 69.0,32.2 70.0,31.0 71.0,30.1 72.0,29.4 73.0,29.1 74.0,29.0 75.0,29.3 76.0,29.9 77.0,30.8 78.0,32.0 79.0,33.5 80.0,35.2 81.0,37.1 82.0,39.0 83.0,41.1 84.0,43.1 85.0,45.0 86.0,46.7 87.0,48.3 88.0,49.5 89.0,50.4 90.0,50.9 91.0,51.0 92.0,50.6 93.0,49.9 94.0,48.7 95.0,47.2 96.0,45.3 97.0,43.2 98.0,41.0 99.0,38.7 100.0,36.5 101.0,34.4 102.0,32.5 103.0,30.9 104.0,29.8 105.0,29.2 106.0,29.0 107.0,29.4 108.0,30.3 109.0,31.7 110.0,33.5 111.0,35.7 112.0,38.1 113.0,40.6 114.0,43.1 115.0,45.5 116.0,47.5 117.0,49.2 118.0,50.4 119.0,50.9 120.0,50.9 121.0,50.2 122.0,48.9 123.0,47.1 124.0,44.8 125.0,42.3 126.0,39.5 127.0,36.8 128.0,34.3 129.0,32.1 130.0,30.4 131.0,29.4 132.0,29.0 133.0,29.4 134.0,30.5 135.0,32.2 136.0,34.5 137.0,37.2 138.0,40.1 139.0,43.1 140.0,45.8 141.0,48.1 142.0,49.8 143.0,50.8 144.0,51.0 145.0,50.3 146.0,48.8 147.0,46.7 148.0,44.0 149.0,40.9 150.0,37.8 151.0,34.8 152.0,32.3 153.0,30.4 154.0,29.2 155.0,29.0 156.0,29.8 157.0,31.4 158.0,33.8 159.0,36.7 160.0,40.0 161.0,43.3 162.0,46.3 163.0,48.7 164.0,50.3 165.0,51.0 166.0,50.6 167.0,49.2 168.0,46.9 169.0,43.9 170.0,40.6 171.0,37.1 172.0,33.9 173.0,31.3 174.0,29.6 175.0,29.0 176.0,29.5 177.0,31.1 178.0,33.7 179.0,37.0 180.0,40.6 181.0,44.1 182.0,47.2 183.0,49.6 184.0,50.8 185.0,50.9 186.0,49.7 187.0,47.4 188.0,44.2 189.0,40.5 190.0,36.7 191.0,33.4 192.0,30.8 193.0,29.3 194.0,29.1 195.0,30.3 196.0,32.6 197.0,36.0 198.0,39.8 199.0,43.7 200.0,47.1 201.0,49.6 202.0,50.9 203.0,50.7 204.0,49.1 205.0,46.3 206.0,42.6 207.0,38.5 208.0,34.7 209.0,31.5 210.0,29.5 211.0,29.0 212.0,30.1 213.0,32.5 214.0,36.1 215.0,40.2 216.0,44.3 217.0,47.8 218.0,50.2 219.0,51.0 220.0,50.2 221.0,47.8 222.0,44.2 223.0,40.0 224.0,35.7 225.0,32.1 226.0,29.8 227.0,29.0 228.0,30.0 229.0,32.6 230.0,36.5 231.0,40.9 232.0,45.2 233.0,48.6 234.0,50.6 235.0,50.9 236.0,49.2 237.0,46.0 238.0,41.8 239.0,37.2 240.0,33.1 241.0,30.2 242.0,29.0 243.0,29.8 244.0,32.4 245.0,36.4 246.0,41.1 247.0,45.6 248.0,49.0 249.0,50.8 250.0,50.6 251.0,48.4 252.0,44.6 253.0,39.9 254.0,35.2 255.0,31.4 256.0,29.3 257.0,29.3 258.0,31.4 259.0,35.2 260.0,40.0 261.0,44.8 262.0,48.7 263.0,50.8 264.0,50.7 265.0,48.3 266.0,44.3 267.0,39.3 268.0,34.5 269.0,30.8 270.0,29.1 271.0,29.7 272.0,32.5 273.0,37.0 274.0,42.2 275.0,46.9 276.0,50.0 277.0,51.0 278.0,49.5 279.0,45.8 280.0,40.8 281.0,35.6 282.0,31.4 283.0,29.2 284.0,29.5 285.0,32.2 286.0,36.8 287.0,42.2 288.0,47.0 289.0,50.2 290.0,50.9 291.0,49.0 292.0,44.9 293.0,39.5 294.0,34.3 295.0,30.5 296.0,29.0 297.0,30.3 298.0,34.1 299.0,39.3 300.0,44.8 301.0,49.0 302.0,51.0 303.0,50.0 304.0,46.4 305.0,41.2 306.0,35.6 307.0,31.1 308.0,29.1 309.0,29.9 310.0,33.5' fill='none' stroke='var(--c1)' stroke-width='1.5'/><rect x='10.0' y='88' width='42.86' height='24' fill='var(--acc)' fill-opacity='0.10' stroke='var(--panel)'/><text x='31.4' y='78' font-size='11' fill='var(--ink)' text-anchor='middle'>radio</text><rect x='52.9' y='88' width='42.86' height='24' fill='var(--acc)' fill-opacity='0.18' stroke='var(--panel)'/><text x='74.3' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>microwave</text><rect x='95.7' y='88' width='42.86' height='24' fill='var(--acc)' fill-opacity='0.26' stroke='var(--panel)'/><text x='117.1' y='78' font-size='11' fill='var(--ink)' text-anchor='middle'>infrared</text><rect x='138.6' y='88' width='8.57' height='24' fill='var(--c2)' fill-opacity='0.75'/><rect x='147.1' y='88' width='8.57' height='24' fill='var(--c4)' fill-opacity='0.75'/><rect x='155.7' y='88' width='8.57' height='24' fill='var(--c3)' fill-opacity='0.75'/><rect x='164.3' y='88' width='8.57' height='24' fill='var(--c1)' fill-opacity='0.75'/><rect x='172.9' y='88' width='8.57' height='24' fill='var(--c5)' fill-opacity='0.75'/><text x='160.0' y='128' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>visible</text><rect x='181.4' y='88' width='42.86' height='24' fill='var(--acc)' fill-opacity='0.42' stroke='var(--panel)'/><text x='202.9' y='78' font-size='11' fill='var(--ink)' text-anchor='middle'>ultraviolet</text><rect x='224.3' y='88' width='42.86' height='24' fill='var(--acc)' fill-opacity='0.50' stroke='var(--panel)'/><text x='245.7' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>X-ray</text><rect x='267.1' y='88' width='42.86' height='24' fill='var(--acc)' fill-opacity='0.58' stroke='var(--panel)'/><text x='288.6' y='78' font-size='11' fill='var(--ink)' text-anchor='middle'>gamma</text><path d='M20 148 H300' fill='none' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#dalga-12)'/><text x='160' y='168' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>frequency and energy rise, λ shrinks</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>in a vacuum all travel at c = 3×10⁸ m/s</text></svg>",
+    "key": "The order is radio, microwave, infrared, visible light, ultraviolet, X-ray and gamma. In visible light, red has the longest wavelength and violet the shortest.",
+    "etk": {
+     "tur": "sirala",
+     "soru": "Put the electromagnetic waves in order from shortest to longest wavelength. Hint: as the frequency increases, the wavelength gets shorter.",
+     "ogeler": [
+      "Gamma",
+      "X-ray",
+      "Ultraviolet",
+      "Visible light",
+      "Infrared",
+      "Microwave",
+      "Radio"
+     ]
+    },
+    "once": {
+     "soru": "How does sunlight cross empty space and reach the Earth?",
+     "secenekler": [
+      {
+       "yazi": "It needs no medium",
+       "neden": "An electromagnetic wave travels through a vacuum too.",
+       "dogru": true
+      },
+      {
+       "yazi": "There is air in space",
+       "neden": "Space is almost empty."
+      },
+      {
+       "yazi": "It cannot, it is reflected",
+       "neden": "Sunlight reaches us every day."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Waves at work",
+    "p": "Ultrasound images a baby, and sonar measures depth. These are <b>mechanical waves</b>. Radio and phones carry communication, a microwave oven heats food, and X-rays show bones. These are <b>electromagnetic waves</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='6' width='150' height='188' rx='6' fill='var(--c4)' fill-opacity='0.14' stroke='var(--c4)' stroke-width='1.5'/><rect x='164' y='6' width='150' height='188' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='81' y='28' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>Mechanical wave</text><text x='239' y='28' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Electromagnetic</text><text x='81' y='44' font-size='10.5' fill='var(--muted)' text-anchor='middle'>needs a medium</text><text x='239' y='44' font-size='10.5' fill='var(--muted)' text-anchor='middle'>travels in a vacuum too</text><text x='81' y='72' font-size='12.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>ultrasound</text><text x='81' y='88' font-size='10.5' fill='var(--muted)' text-anchor='middle'>baby imaging</text><text x='81' y='112' font-size='12.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>sonar</text><text x='81' y='128' font-size='10.5' fill='var(--muted)' text-anchor='middle'>sea depth</text><text x='81' y='152' font-size='12.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>seismograph</text><text x='81' y='168' font-size='10.5' fill='var(--muted)' text-anchor='middle'>earthquake waves</text><text x='239' y='72' font-size='12.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>radio, phone</text><text x='239' y='88' font-size='10.5' fill='var(--muted)' text-anchor='middle'>communication</text><text x='239' y='112' font-size='12.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>microwave</text><text x='239' y='128' font-size='10.5' fill='var(--muted)' text-anchor='middle'>oven, radar</text><text x='239' y='152' font-size='12.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>X-ray</text><text x='239' y='168' font-size='10.5' fill='var(--muted)' text-anchor='middle'>medical imaging</text></svg>",
+    "key": "A mechanical wave needs a medium, while an electromagnetic wave also travels through a vacuum. A seismograph records earthquake waves, and radar finds aircraft.",
+    "once": {
+     "soru": "Which kind of wave carries a phone call through a satellite?",
+     "secenekler": [
+      {
+       "yazi": "Electromagnetic",
+       "neden": "Only an electromagnetic wave can cross the vacuum of space.",
+       "dogru": true
+      },
+      {
+       "yazi": "Sound",
+       "neden": "Sound does not travel through a vacuum."
+      },
+      {
+       "yazi": "Ultrasound",
+       "neden": "Ultrasound is a mechanical wave too, and it needs a medium."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• A wave carries energy and is transverse or longitudinal.<br>• v = λ·f. The speed depends on the medium, and the frequency on the source.<br>• A pulse reflects inverted from a fixed end and upright from a free end.<br>• Sound is longitudinal and does not travel through a vacuum.<br>• The speed of EM waves in a vacuum is c = 3×10<sup>8</sup> m/s.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='10' width='145' height='85' rx='8' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.5'/><text x='82.5' y='36' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Reflection</text><text x='82.5' y='60' font-size='12' fill='var(--ink)' text-anchor='middle'>fixed end: inverted</text><text x='82.5' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>free end: upright</text><rect x='165' y='10' width='145' height='85' rx='8' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.5'/><text x='237.5' y='36' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Wave</text><text x='237.5' y='60' font-size='12' fill='var(--ink)' text-anchor='middle'>v = λ·f</text><text x='237.5' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>v: medium, f: source</text><rect x='10' y='105' width='145' height='85' rx='8' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='82.5' y='131' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Sound</text><text x='82.5' y='155' font-size='12' fill='var(--ink)' text-anchor='middle'>longitudinal, mechanical</text><text x='82.5' y='175' font-size='12' fill='var(--ink)' text-anchor='middle'>not in a vacuum</text><rect x='165' y='105' width='145' height='85' rx='8' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.5'/><text x='237.5' y='131' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>EM wave</text><text x='237.5' y='155' font-size='12' fill='var(--ink)' text-anchor='middle'>transverse, no medium</text><text x='237.5' y='175' font-size='12' fill='var(--ink)' text-anchor='middle'>c = 3×10⁸ m/s</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "A source produces 5 waves per second, and the distance between two neighboring crests is 0.4 m. What is the speed of the wave in m/s?",
+    "cevap": 2,
+    "birim": "m/s",
+    "e": "v = λ·f = 0.4 m · 5 Hz = 2 m/s."
+   },
+   {
+    "q": "A sound wave passes from air into water. How do its frequency, speed and wavelength change?",
+    "o": [
+     "Frequency stays the same. Speed and wavelength increase",
+     "Frequency stays the same. Speed and wavelength decrease",
+     "Frequency increases. Speed and wavelength stay the same",
+     "Nothing changes"
+    ],
+    "a": 0,
+    "e": "The source sets the frequency, and it does not change. Sound is faster in water (about 1480 m/s) than in air (about 343 m/s). Since v = λ·f, the wavelength increases by the same ratio.",
+    "y": [
+     "",
+     "You assumed that what happens on a thick rope is true for sound as well. Sound is about 4 times faster in water than in air.",
+     "The source sets the frequency. When a wave enters another medium, f does not change.",
+     "The medium sets the speed. Water is a different medium, so the speed changes."
+    ]
+   },
+   {
+    "tur": "ayir",
+    "q": "A pulse (a crest) travels along a spring. In each case, how does it come back or pass through? Inverted (a trough) or upright (a crest)?",
+    "gruplar": [
+     "Inverted",
+     "Upright"
+    ],
+    "ogeler": [
+     [
+      "Reflected from a fixed end",
+      0
+     ],
+     [
+      "Reflected from a free end",
+      1
+     ],
+     [
+      "Reflected going from a thin to a thick spring",
+      0
+     ],
+     [
+      "Reflected going from a thick to a thin spring",
+      1
+     ],
+     [
+      "Transmitted from a thin to a thick spring",
+      1
+     ],
+     [
+      "Transmitted from a thick to a thin spring",
+      1
+     ]
+    ],
+    "e": "A fixed end and a thick spring reflect the pulse inverted. A free end and a thin spring reflect it upright. The pulse transmitted between two springs stays upright in every case."
+   },
+   {
+    "q": "When an ambulance with its siren on approaches you, you hear a higher pitch. What is the reason?",
+    "o": [
+     "The frequency the siren produces increases",
+     "The speed of sound in air increases",
+     "The wave crests reach your ear closer together",
+     "The amplitude of the sound increases"
+    ],
+    "a": 2,
+    "e": "In the Doppler effect, the source's own frequency and the speed of sound do not change. In front of an approaching source the wavelength is shorter, and you perceive a higher frequency.",
+    "y": [
+     "The frequency the siren itself produces does not change. What changes is how often the waves reach your ear.",
+     "The speed of sound depends on the medium and does not change with the motion of the source. What changes is the wavelength.",
+     "",
+     "Amplitude sets the intensity of the sound. A higher pitch comes from a higher frequency."
+    ]
+   }
+  ]
+ },
+ "deprem": {
+  "title": "Earthquakes and resonance",
+  "summary": "A fault breaks, waves spread out, and a building sways at its own frequency.",
+  "cards": [
+   {
+    "h": "What is an earthquake?",
+    "p": "Along a fault, the rocks are locked together by friction, and stress builds up for years. When the strength of the rocks is exceeded, the blocks slip suddenly. The stored energy spreads out as <b>seismic waves</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='deprem-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c1)'/></marker></defs><rect x='20' y='40' width='140' height='110' fill='var(--c4)' fill-opacity='0.14'/><rect x='160' y='40' width='140' height='110' fill='var(--c4)' fill-opacity='0.24'/><line x1='160' y1='34' x2='160' y2='156' stroke='var(--ink)' stroke-width='2.5' stroke-dasharray='7 5'/><path d='M20 95 L120 95 Q160 95 160 112' fill='none' stroke='var(--ink)' stroke-width='6' stroke-linecap='round' opacity='0.85'/><path d='M160 78 Q160 95 200 95 L300 95' fill='none' stroke='var(--ink)' stroke-width='6' stroke-linecap='round' opacity='0.85'/><line x1='60' y1='130' x2='60' y2='106' stroke='var(--c1)' stroke-width='2' marker-end='url(#deprem-1)'/><line x1='260' y1='60' x2='260' y2='84' stroke='var(--c1)' stroke-width='2' marker-end='url(#deprem-1)'/><text x='160' y='24' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Stress builds up on a locked fault</text><text x='168' y='150' font-size='11' fill='var(--muted)' text-anchor='start'>fault</text><rect x='20' y='164' width='280' height='30' rx='6' fill='var(--panel)'/><text x='160' y='184' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>past its strength the rock slips suddenly: earthquake</text></svg>",
+    "key": "The Earth's crust is made of plates, and the plates move a few cm each year. An earthquake is slowly built-up stress released within seconds."
+   },
+   {
+    "h": "Focus and epicenter",
+    "p": "The underground point where the break starts is the <b>focus</b>, and the point on the surface directly above it is the <b>epicenter</b>. In most destructive earthquakes the focus is shallow, less than 70 km deep.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='deprem-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--muted)'/></marker></defs><rect x='10' y='60' width='300' height='130' fill='var(--c4)' fill-opacity='0.14'/><line x1='10' y1='60' x2='310' y2='60' stroke='var(--ink)' stroke-width='2'/><circle cx='160' cy='150' r='22' fill='none' stroke='var(--c2)' stroke-width='1.5' opacity='0.9'/><circle cx='160' cy='150' r='44' fill='none' stroke='var(--c2)' stroke-width='1.5' opacity='0.6'/><circle cx='160' cy='150' r='66' fill='none' stroke='var(--c2)' stroke-width='1.5' opacity='0.35'/><circle cx='160' cy='150' r='6' fill='var(--c2)'/><line x1='160' y1='144' x2='160' y2='64' stroke='var(--ink)' stroke-dasharray='4 3'/><circle cx='160' cy='60' r='5' fill='var(--ink)'/><text x='160' y='48' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>epicenter</text><text x='236' y='146' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>focus</text><text x='236' y='161' font-size='11' fill='var(--c2)' text-anchor='start'>(hypocenter)</text><line x1='232' y1='150' x2='168' y2='150' stroke='var(--c2)' stroke-width='1'/><text x='150' y='108' font-size='10.5' fill='var(--muted)' text-anchor='end'>focal depth</text><text x='160' y='22' font-size='12' fill='var(--muted)' text-anchor='middle'>Where the break starts, and the point above it</text></svg>",
+    "key": "In a shallow earthquake the energy reaches the surface with less loss. The location given in the news is the epicenter.",
+    "once": {
+     "soru": "The news says \"the earthquake was 10 km deep.\" What is 10 km deep?",
+     "secenekler": [
+      {
+       "yazi": "The point where the break started",
+       "neden": "This point is called the focus. The depth is the distance from the surface to the focus.",
+       "dogru": true
+      },
+      {
+       "yazi": "The foundations of collapsed buildings",
+       "neden": "Building foundations are only a few meters deep."
+      },
+      {
+       "yazi": "The deepest crack",
+       "neden": "The depth describes the point where the break started."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Why do earthquakes happen in certain places?",
+    "p": "The Earth's crust is made of slowly moving <b>plates</b>. At their boundaries the plates grind past each other, collide or move apart. Stress builds up on the <b>faults</b> at these boundaries, and most earthquakes happen there.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Plates grind past each other at a boundary</text><path d='M30 44 L176 44 L136 168 L30 168 Z' fill='var(--panel)' stroke='var(--line-2)' stroke-width='1.5'/><path d='M184 44 L290 44 L290 168 L144 168 Z' fill='var(--panel)' stroke='var(--line-2)' stroke-width='1.5'/><path d='M180 44 L140 168' fill='none' stroke='var(--c2)' stroke-width='3.5'/><path d='M96 140 L96 76 M88 88 L96 74 L104 88' fill='none' stroke='var(--c1)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><path d='M224 72 L224 136 M216 124 L224 138 L232 124' fill='none' stroke='var(--c1)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><text x='70' y='112' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>plate</text><text x='256' y='108' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>plate</text><text x='172' y='108' font-size='11.5' fill='var(--c2)' text-anchor='start' font-weight='700'>fault</text><text x='160' y='190' font-size='10.5' fill='var(--muted)' text-anchor='middle'>schematic; stress builds up along the fault</text></svg>",
+    "key": "About 90% of the world's earthquakes happen in the Ring of Fire around the Pacific. A fault map shows where an earthquake will happen, but it cannot tell when.",
+    "once": {
+     "soru": "Why are earthquakes frequent in Japan and Chile?",
+     "secenekler": [
+      {
+       "yazi": "They are on a plate boundary",
+       "neden": "Both countries sit on boundaries where plates push against each other. Stress builds up on the faults there.",
+       "dogru": true
+      },
+      {
+       "yazi": "There are many caves underground",
+       "neden": "Cave collapses cause very small tremors. Large earthquakes happen on faults."
+      },
+      {
+       "yazi": "There are many volcanoes",
+       "neden": "Most large earthquakes come from faults, not volcanoes. Volcanoes form at the same plate boundaries."
+      }
+     ]
+    }
+   },
+   {
+    "h": "P and S waves",
+    "p": "The <b>P wave</b> is longitudinal, arrives first at ≈6 km/s, and passes through every medium. The <b>S wave</b> is transverse, arrives later at ≈3.5 km/s, and cannot pass through liquids.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='deprem-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--muted)'/></marker></defs><rect x='6' y='6' width='150' height='188' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><rect x='164' y='6' width='150' height='188' rx='6' fill='var(--c2)' fill-opacity='0.14' stroke='var(--c2)' stroke-width='1.5'/><text x='81' y='28' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>P wave</text><text x='239' y='28' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>S wave</text><line x1='24' y1='56' x2='24' y2='80' stroke='var(--c1)' stroke-width='2'/><line x1='30' y1='56' x2='30' y2='80' stroke='var(--c1)' stroke-width='2'/><line x1='36' y1='56' x2='36' y2='80' stroke='var(--c1)' stroke-width='2'/><line x1='58' y1='56' x2='58' y2='80' stroke='var(--c1)' stroke-width='2'/><line x1='82' y1='56' x2='82' y2='80' stroke='var(--c1)' stroke-width='2'/><line x1='88' y1='56' x2='88' y2='80' stroke='var(--c1)' stroke-width='2'/><line x1='94' y1='56' x2='94' y2='80' stroke='var(--c1)' stroke-width='2'/><line x1='116' y1='56' x2='116' y2='80' stroke='var(--c1)' stroke-width='2'/><line x1='140' y1='56' x2='140' y2='80' stroke='var(--c1)' stroke-width='2'/><line x1='22' y1='92' x2='140' y2='92' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#deprem-4)'/><path d='M176 68 Q190 48 204 68 T232 68 T260 68 T288 68' fill='none' stroke='var(--c2)' stroke-width='2'/><line x1='176' y1='92' x2='300' y2='92' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#deprem-4)'/><text x='81' y='120' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>longitudinal</text><text x='81' y='133' font-size='10' fill='var(--muted)' text-anchor='middle'>squeezes and stretches</text><text x='81' y='146' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>≈ 6 km/s</text><text x='81' y='159' font-size='10' fill='var(--muted)' text-anchor='middle'>arrives first</text><text x='81' y='172' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>solid, liquid, gas</text><text x='81' y='185' font-size='10' fill='var(--muted)' text-anchor='middle'>passes through all</text><text x='239' y='120' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>transverse</text><text x='239' y='133' font-size='10' fill='var(--muted)' text-anchor='middle'>shakes up and down</text><text x='239' y='146' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>≈ 3.5 km/s</text><text x='239' y='159' font-size='10' fill='var(--muted)' text-anchor='middle'>arrives later</text><text x='239' y='172' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>solids only</text><text x='239' y='185' font-size='10' fill='var(--muted)' text-anchor='middle'>not through liquids</text></svg>",
+    "key": "The fact that S waves cannot pass through the outer core showed that the outer core is liquid."
+   },
+   {
+    "h": "Surface waves",
+    "p": "When body waves reach the surface, <b>surface waves</b> form. They are the slowest waves, but their amplitudes are large. Most of the damage to buildings comes from surface waves.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='20' y1='100' x2='300' y2='100' stroke='var(--line-2)'/><path d='M20 100.0 L21 100.0 L22 100.0 L23 100.0 L24 100.0 L25 100.0 L26 100.0 L27 100.0 L28 100.0 L29 100.0 L30 100.0 L31 100.0 L32 100.0 L33 100.0 L34 100.0 L35 100.0 L36 100.0 L37 100.0 L38 100.0 L39 100.0 L40 100.0 L41 100.0 L42 100.0 L43 100.0 L44 100.0 L45 100.0 L46 100.0 L47 100.0 L48 100.0 L49 100.0 L50 100.0 L51 100.0 L52 100.0 L53 100.0 L54 100.0 L55 100.0 L56 100.0 L57 100.0 L58 95.6 L59 95.2 L60 101.5 L61 105.3 L62 101.4 L63 95.9 L64 96.4 L65 101.9 L66 104.4 L67 100.6 L68 96.3 L69 97.4 L70 102.1 L71 103.5 L72 100.0 L73 96.7 L74 98.2 L75 102.1 L76 102.8 L77 99.5 L78 97.2 L79 98.9 L80 102.0 L81 102.2 L82 99.3 L83 97.6 L84 99.4 L85 101.9 L86 101.6 L87 99.1 L88 98.0 L89 99.8 L90 101.7 L91 101.2 L92 99.0 L93 98.4 L94 100.0 L95 101.5 L96 100.8 L97 99.0 L98 98.7 L99 100.2 L100 101.3 L101 100.5 L102 99.1 L103 99.0 L104 100.3 L105 101.1 L106 100.3 L107 99.1 L108 99.3 L109 100.4 L110 100.9 L111 100.1 L112 99.2 L113 99.5 L114 93.3 L115 87.6 L116 89.2 L117 97.3 L118 107.2 L119 112.4 L120 109.4 L121 100.4 L122 91.6 L123 89.0 L124 93.3 L125 101.2 L126 107.6 L127 109.1 L128 105.4 L129 98.7 L130 92.8 L131 91.4 L132 95.5 L133 102.5 L134 107.6 L135 107.6 L136 102.7 L137 96.6 L138 93.2 L139 94.1 L140 98.3 L141 103.2 L142 106.1 L143 105.3 L144 101.3 L145 96.5 L146 94.0 L147 95.5 L148 99.8 L149 104.0 L150 105.3 L151 103.3 L152 99.5 L153 96.3 L154 95.5 L155 97.3 L156 100.7 L157 103.6 L158 104.2 L159 102.2 L160 98.8 L161 96.3 L162 96.4 L163 98.7 L164 101.6 L165 103.3 L166 102.9 L167 100.9 L168 98.4 L169 97.0 L170 89.8 L171 81.7 L172 76.3 L173 73.0 L174 71.4 L175 72.0 L176 75.9 L177 83.3 L178 93.6 L179 105.0 L180 115.1 L181 122.2 L182 125.5 L183 125.0 L184 121.9 L185 117.2 L186 111.8 L187 105.8 L188 99.1 L189 91.9 L190 85.0 L191 79.8 L192 77.6 L193 78.8 L194 83.0 L195 89.3 L196 96.1 L197 102.4 L198 107.5 L199 111.4 L200 114.2 L201 116.0 L202 116.5 L203 115.0 L204 111.4 L205 106.0 L206 99.8 L207 94.0 L208 89.5 L209 86.9 L210 86.2 L211 87.1 L212 89.0 L213 91.5 L214 94.7 L215 98.5 L216 102.8 L217 106.9 L218 110.3 L219 112.1 L220 112.1 L221 110.4 L222 107.5 L223 104.0 L224 100.5 L225 97.4 L226 94.9 L227 92.8 L228 91.3 L229 90.6 L230 91.0 L231 92.6 L232 95.3 L233 98.6 L234 101.9 L235 104.7 L236 106.5 L237 107.4 L238 107.4 L239 106.8 L240 105.6 L241 104.0 L242 102.0 L243 99.5 L244 97.1 L245 95.0 L246 93.6 L247 93.2 L248 93.8 L249 95.1 L250 96.9 L251 98.7 L252 100.5 L253 102.1 L254 103.5 L255 104.6 L256 105.2 L257 105.3 L258 104.6 L259 103.3 L260 101.6 L261 99.7 L262 98.1 L263 96.9 L264 96.2 L265 95.9 L266 96.0 L267 96.4 L268 97.2 L269 98.3 L270 99.6 L271 101.1 L272 102.3 L273 103.3 L274 103.7 L275 103.6 L276 103.0 L277 102.2 L278 101.3 L279 100.3 L280 99.3 L281 98.4 L282 97.7 L283 97.2 L284 97.0 L285 97.2 L286 97.8 L287 98.7 L288 99.7 L289 100.6 L290 101.4 L291 101.9 L292 102.2 L293 102.3 L294 102.2 L295 101.8 L296 101.3 L297 100.6 L298 99.8 L299 99.0 L300 98.4' fill='none' stroke='var(--ink)' stroke-width='1.4'/><line x1='57' y1='44' x2='57' y2='156' stroke='var(--c1)' stroke-dasharray='3 3'/><text x='57' y='38' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>P</text><line x1='113' y1='44' x2='113' y2='156' stroke='var(--c2)' stroke-dasharray='3 3'/><text x='113' y='38' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>S</text><line x1='169' y1='44' x2='169' y2='156' stroke='var(--c5)' stroke-dasharray='3 3'/><text x='169' y='38' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>surface</text><text x='160' y='20' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Seismogram: the three waves arrive in order</text><rect x='20' y='166' width='280' height='28' rx='6' fill='var(--panel)'/><text x='160' y='185' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>surface waves: slowest, largest amplitude</text></svg>",
+    "key": "The waves arrive in this order: first P, then S, and last the surface waves.",
+    "once": {
+     "soru": "In an earthquake there is a slight tremor first, then strong shaking. Which waves cause most of the strong shaking?",
+     "secenekler": [
+      {
+       "yazi": "Surface waves",
+       "neden": "Surface waves arrive last, but their amplitudes are the largest. They shake the ground both sideways and up and down.",
+       "dogru": true
+      },
+      {
+       "yazi": "P waves",
+       "neden": "The P wave arrives first. It is the first slight tremor."
+      },
+      {
+       "yazi": "S waves",
+       "neden": "S is stronger than P, but surface waves have a larger amplitude."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Finding the epicenter",
+    "p": "The S wave falls behind the P wave. The time between them (Δt) grows with distance, and each second is about <b>8 km</b>. Circles drawn by three stations cross at the epicenter.",
+    "svg": "<svg viewBox='0 0 320 200'><circle cx='110' cy='80' r='58' fill='var(--c1)' fill-opacity='0.06' stroke='var(--c1)' stroke-width='1.6'/><path d='M104 85 L110 74 L116 85 Z' fill='var(--c1)'/><circle cx='230' cy='95' r='72' fill='var(--c3)' fill-opacity='0.06' stroke='var(--c3)' stroke-width='1.6'/><path d='M224 100 L230 89 L236 100 Z' fill='var(--c3)'/><circle cx='175' cy='150' r='43' fill='var(--c5)' fill-opacity='0.06' stroke='var(--c5)' stroke-width='1.6'/><path d='M169 155 L175 144 L181 155 Z' fill='var(--c5)'/><line x1='222' y1='180' x2='165' y2='114' stroke='var(--c2)' stroke-width='1.2'/><circle cx='160' cy='110' r='6' fill='var(--c2)'/><text x='226' y='188' font-size='11.5' fill='var(--c2)' text-anchor='start' font-weight='700'>epicenter</text><rect x='6' y='168' width='120' height='26' rx='6' fill='var(--panel)'/><text x='66' y='186' font-size='12.5' fill='var(--acc)' text-anchor='middle' font-weight='700'>d ≈ 8 km × Δt</text></svg>",
+    "etk": {
+     "tur": "formul",
+     "soru": "Change the speeds of P and S and the time between them. How does the distance change?",
+     "girdiler": [
+      {
+       "ad": "dt",
+       "etiket": "Time between P and S",
+       "birim": "s",
+       "min": 1,
+       "max": 60,
+       "adim": 1,
+       "deger": 10
+      },
+      {
+       "ad": "vp",
+       "etiket": "P speed",
+       "birim": "km/s",
+       "min": 5,
+       "max": 8,
+       "adim": 0.5,
+       "deger": 6
+      },
+      {
+       "ad": "vs",
+       "etiket": "S speed",
+       "birim": "km/s",
+       "min": 3,
+       "max": 4.5,
+       "adim": 0.5,
+       "deger": 3.5
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "d",
+       "ifade": "dt*vp*vs/(vp-vs)",
+       "birim": "km",
+       "basamak": 0,
+       "max": 500
+      }
+     ]
+    },
+    "key": "If Δt = 10 s, the earthquake is about 80 km away. One station gives only the distance."
+   },
+   {
+    "h": "Magnitude and intensity",
+    "p": "<b>Magnitude</b> is a measure of the energy released. When the magnitude goes up by 1, the energy goes up about <b>32 times</b>. <b>Intensity</b> describes the shaking and damage at one place. It is measured from I to XII and depends on distance and on the ground.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='6' width='150' height='188' rx='6' fill='var(--c2)' fill-opacity='0.14' stroke='var(--c2)' stroke-width='1.5'/><rect x='164' y='6' width='150' height='188' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='81' y='30' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Magnitude</text><text x='239' y='30' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Intensity</text><text x='81' y='52' font-size='11' fill='var(--ink)' text-anchor='middle'>energy released</text><text x='81' y='68' font-size='10.5' fill='var(--muted)' text-anchor='middle'>one value per earthquake</text><text x='239' y='52' font-size='11' fill='var(--ink)' text-anchor='middle'>shaking at one place</text><text x='239' y='68' font-size='10.5' fill='var(--muted)' text-anchor='middle'>varies with location</text><rect x='20' y='164' width='18' height='6' fill='var(--c2)' fill-opacity='0.25'/><text x='29' y='186' font-size='10.5' fill='var(--muted)' text-anchor='middle'>5</text><rect x='44' y='156' width='18' height='14' fill='var(--c2)' fill-opacity='0.37'/><text x='53' y='186' font-size='10.5' fill='var(--muted)' text-anchor='middle'>6</text><rect x='68' y='140' width='18' height='30' fill='var(--c2)' fill-opacity='0.49'/><text x='77' y='186' font-size='10.5' fill='var(--muted)' text-anchor='middle'>7</text><rect x='92' y='106' width='18' height='64' fill='var(--c2)' fill-opacity='0.61'/><text x='101' y='186' font-size='10.5' fill='var(--muted)' text-anchor='middle'>8</text><rect x='116' y='80' width='18' height='90' fill='var(--c2)' fill-opacity='0.73'/><text x='70' y='92' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>+1 → ×32 energy</text><text x='239' y='100' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>I ··· XII</text><text x='239' y='124' font-size='10.5' fill='var(--muted)' text-anchor='middle'>measured by damage</text><text x='239' y='138' font-size='10.5' fill='var(--muted)' text-anchor='middle'>and what people feel</text><text x='239' y='170' font-size='11' fill='var(--ink)' text-anchor='middle'>distance and ground</text><text x='239' y='184' font-size='11' fill='var(--ink)' text-anchor='middle'>change the intensity</text></svg>",
+    "key": "A magnitude 7 earthquake releases about 1000 times the energy of a magnitude 5."
+   },
+   {
+    "h": "The seismograph",
+    "p": "A <b>seismograph</b> relies on inertia. A heavy mass hanging from a spring tends to stay where it is, while the frame shakes with the ground. The record of the difference between them is called a <b>seismogram</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='40' y='140' width='240' height='14' fill='var(--c4)' fill-opacity='0.5'/><line x1='80' y1='140' x2='80' y2='40' stroke='var(--ink)' stroke-width='3'/><line x1='80' y1='40' x2='190' y2='40' stroke='var(--ink)' stroke-width='3'/><path d='M180 40 L180 52 l-6 4 l12 6 l-12 6 l12 6 l-6 4 L180 86' fill='none' stroke='var(--muted)' stroke-width='2'/><rect x='166' y='86' width='28' height='24' rx='3' fill='var(--c1)'/><line x1='194' y1='100' x2='228' y2='100' stroke='var(--ink)' stroke-width='1.5'/><rect x='228' y='70' width='50' height='66' fill='var(--panel)' stroke='var(--line-2)'/><path d='M232 100 L238 100 L241 92 L244 108 L247 88 L250 112 L253 96 L256 104 L260 100 L274 100' fill='none' stroke='var(--c2)' stroke-width='1.4'/><text x='150' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Inertia holds the mass still while the frame shakes</text><text x='150' y='124' font-size='11' fill='var(--c1)' text-anchor='end' font-weight='700'>mass</text><text x='253' y='64' font-size='11' fill='var(--muted)' text-anchor='middle'>record</text><text x='160' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>the difference is recorded; today's devices are electronic</text></svg>",
+    "key": "With a large mass and a soft spring the device is more sensitive. Thousands of stations around the world monitor the ground all the time.",
+    "once": {
+     "soru": "When a bus starts suddenly, a standing passenger is thrown backward. A seismograph uses the same principle. Which one?",
+     "secenekler": [
+      {
+       "yazi": "Inertia",
+       "neden": "The heavy mass tends to stay where it is. The difference between it and the frame, which shakes with the ground, is recorded.",
+       "dogru": true
+      },
+      {
+       "yazi": "Friction",
+       "neden": "What a seismograph relies on is the tendency of the mass to stay at rest."
+      },
+      {
+       "yazi": "Buoyancy",
+       "neden": "Buoyancy acts in liquids and gases. A seismograph relies on inertia."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Natural period and resonance",
+    "p": "Every building has a <b>natural period</b>, roughly the number of floors times 0.1 s. If the period of the ground shaking comes close to it, the swaying grows. This is called <b>resonance</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='40' y1='170' x2='290' y2='170' stroke='var(--ink)' stroke-width='1.4'/><line x1='40' y1='170' x2='40' y2='24' stroke='var(--ink)' stroke-width='1.4'/><path d='M40 142.9 L41 142.8 L42 142.7 L43 142.6 L44 142.5 L45 142.3 L46 142.2 L47 142.0 L48 141.9 L49 141.7 L50 141.6 L51 141.4 L52 141.2 L53 141.0 L54 140.8 L55 140.6 L56 140.4 L57 140.2 L58 139.9 L59 139.7 L60 139.4 L61 139.2 L62 138.9 L63 138.6 L64 138.3 L65 138.0 L66 137.6 L67 137.3 L68 136.9 L69 136.6 L70 136.2 L71 135.8 L72 135.3 L73 134.9 L74 134.4 L75 134.0 L76 133.5 L77 132.9 L78 132.4 L79 131.8 L80 131.2 L81 130.6 L82 129.9 L83 129.2 L84 128.5 L85 127.7 L86 126.9 L87 126.0 L88 125.1 L89 124.2 L90 123.2 L91 122.2 L92 121.0 L93 119.9 L94 118.6 L95 117.3 L96 115.9 L97 114.4 L98 112.8 L99 111.1 L100 109.3 L101 107.4 L102 105.3 L103 103.1 L104 100.8 L105 98.2 L106 95.5 L107 92.6 L108 89.6 L109 86.2 L110 82.7 L111 79.0 L112 75.0 L113 70.8 L114 66.5 L115 62.1 L116 57.7 L117 53.3 L118 49.3 L119 45.6 L120 42.6 L121 40.5 L122 39.5 L123 39.5 L124 40.8 L125 43.2 L126 46.5 L127 50.6 L128 55.3 L129 60.3 L130 65.4 L131 70.5 L132 75.5 L133 80.3 L134 84.9 L135 89.2 L136 93.3 L137 97.1 L138 100.6 L139 103.9 L140 107.0 L141 109.9 L142 112.6 L143 115.0 L144 117.4 L145 119.5 L146 121.5 L147 123.4 L148 125.2 L149 126.9 L150 128.4 L151 129.9 L152 131.3 L153 132.6 L154 133.8 L155 135.0 L156 136.1 L157 137.1 L158 138.1 L159 139.1 L160 140.0 L161 140.8 L162 141.6 L163 142.4 L164 143.1 L165 143.9 L166 144.5 L167 145.2 L168 145.8 L169 146.4 L170 147.0 L171 147.5 L172 148.0 L173 148.5 L174 149.0 L175 149.5 L176 149.9 L177 150.4 L178 150.8 L179 151.2 L180 151.6 L181 151.9 L182 152.3 L183 152.7 L184 153.0 L185 153.3 L186 153.6 L187 154.0 L188 154.3 L189 154.5 L190 154.8 L191 155.1 L192 155.4 L193 155.6 L194 155.9 L195 156.1 L196 156.3 L197 156.6 L198 156.8 L199 157.0 L200 157.2 L201 157.4 L202 157.6 L203 157.8 L204 158.0 L205 158.2 L206 158.4 L207 158.5 L208 158.7 L209 158.9 L210 159.0 L211 159.2 L212 159.4 L213 159.5 L214 159.7 L215 159.8 L216 160.0 L217 160.1 L218 160.2 L219 160.4 L220 160.5 L221 160.6 L222 160.7 L223 160.9 L224 161.0 L225 161.1 L226 161.2 L227 161.3 L228 161.4 L229 161.5 L230 161.6 L231 161.7 L232 161.8 L233 161.9 L234 162.0 L235 162.1 L236 162.2 L237 162.3 L238 162.4 L239 162.5 L240 162.6 L241 162.7 L242 162.8 L243 162.8 L244 162.9 L245 163.0 L246 163.1 L247 163.1 L248 163.2 L249 163.3 L250 163.4 L251 163.4 L252 163.5 L253 163.6 L254 163.6 L255 163.7 L256 163.8 L257 163.8 L258 163.9 L259 164.0 L260 164.0 L261 164.1 L262 164.1 L263 164.2 L264 164.3 L265 164.3 L266 164.4 L267 164.4 L268 164.5 L269 164.5 L270 164.6 L271 164.6 L272 164.7 L273 164.7 L274 164.8 L275 164.8 L276 164.9 L277 164.9 L278 165.0 L279 165.0 L280 165.1' fill='none' stroke='var(--c2)' stroke-width='2.4'/><line x1='123' y1='170' x2='123' y2='30' stroke='var(--muted)' stroke-dasharray='3 3'/><text x='129.47826086956525' y='40' font-size='11.5' fill='var(--c2)' text-anchor='start' font-weight='700'>resonance</text><text x='44' y='20' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>sway</text><text x='290' y='188' font-size='10.5' fill='var(--muted)' text-anchor='end'>shaking period / building period</text><text x='123.47826086956523' y='188' font-size='10.5' fill='var(--muted)' text-anchor='middle'>1</text></svg>",
+    "key": "The period of a 10-story building is about 1 s. In resonance, small but well-timed pushes build up a large oscillation. The same thing happens on a swing."
+   },
+   {
+    "h": "Ground and building height",
+    "p": "On loose, wet ground the amplitude of the shaking grows and its period gets longer. This is called <b>site amplification</b>. The ground can also behave like a liquid, which is called <b>liquefaction</b>. In the 1964 Niigata earthquake, apartment buildings tipped over because of liquefaction.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='6' width='150' height='188' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><rect x='164' y='6' width='150' height='188' rx='6' fill='var(--c2)' fill-opacity='0.14' stroke='var(--c2)' stroke-width='1.5'/><text x='81' y='28' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Solid rock</text><text x='239' y='28' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Loose, wet ground</text><path d='M20 120 Q35 112 50 120 T80 120 T110 120 T140 120' fill='none' stroke='var(--c3)' stroke-width='2'/><path d='M178 120 Q193 92 208 120 T238 120 T268 120 T298 120' fill='none' stroke='var(--c2)' stroke-width='2'/><text x='81' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>short period,</text><text x='81' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>small shaking</text><text x='239' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>wave slows and grows;</text><text x='239' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>long period: tall</text><text x='239' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>buildings at risk</text><text x='81' y='60' font-size='10.5' fill='var(--muted)' text-anchor='middle'>no amplification</text><text x='239' y='60' font-size='10.5' fill='var(--muted)' text-anchor='middle'>amplification</text></svg>",
+    "key": "Long periods put stress on tall buildings. In the same earthquake, damage in two neighboring districts can be very different because of the ground."
+   },
+   {
+    "h": "Earthquake-resistant buildings",
+    "p": "A resistant building needs solid ground, good concrete and proper reinforcement. A <b>seismic isolator</b> separates the building from the ground and lengthens its period. In skyscrapers, a <b>tuned mass damper</b> damps the swaying.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='6' width='150' height='188' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><rect x='164' y='6' width='150' height='188' rx='6' fill='var(--c5)' fill-opacity='0.14' stroke='var(--c5)' stroke-width='1.5'/><text x='81' y='28' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Seismic isolator</text><text x='239' y='28' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Tuned mass damper</text><rect x='36' y='54' width='90' height='84' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><rect x='40' y='140' width='14' height='12' fill='var(--ink)' fill-opacity='0.55'/><rect x='64' y='140' width='14' height='12' fill='var(--ink)' fill-opacity='0.55'/><rect x='88' y='140' width='14' height='12' fill='var(--ink)' fill-opacity='0.55'/><rect x='112' y='140' width='14' height='12' fill='var(--ink)' fill-opacity='0.55'/><rect x='30' y='152' width='102' height='8' fill='var(--c4)' fill-opacity='0.6'/><text x='81' y='178' font-size='10.5' fill='var(--ink)' text-anchor='middle'>rubber-steel bearing</text><text x='81' y='191' font-size='10.5' fill='var(--muted)' text-anchor='middle'>lengthens the period</text><path d='M216 160 L224 46 L254 46 L262 160 Z' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)'/><line x1='239' y1='50' x2='239' y2='70' stroke='var(--ink)'/><circle cx='239' cy='78' r='9' fill='var(--c5)'/><text x='239' y='178' font-size='10.5' fill='var(--ink)' text-anchor='middle'>pendulum mass at the top</text><text x='239' y='191' font-size='10.5' fill='var(--muted)' text-anchor='middle'>damps the swaying</text></svg>",
+    "key": "The terminal of Istanbul's Sabiha Gökçen Airport stands on isolators. The goal is not a building that never sways. It is a building that stays standing without loss of life."
+   },
+   {
+    "h": "During an earthquake",
+    "p": "During the shaking, <b>drop, cover and hold on</b>. That means get down, protect your head and neck, and hold on to something sturdy. Stay away from windows, shelves and elevators. Do not run for the stairs.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='20' width='100' height='110' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='56' y='48' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>Drop</text><rect x='110' y='20' width='100' height='110' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='160' y='48' font-size='15' fill='var(--c3)' text-anchor='middle' font-weight='700'>Cover</text><rect x='214' y='20' width='100' height='110' rx='6' fill='var(--c5)' fill-opacity='0.14' stroke='var(--c5)' stroke-width='1.5'/><text x='264' y='48' font-size='15' fill='var(--c5)' text-anchor='middle' font-weight='700'>Hold on</text><text x='56' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>onto your</text><text x='56' y='96' font-size='11' fill='var(--ink)' text-anchor='middle'>knees</text><text x='160' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>protect your</text><text x='160' y='96' font-size='11' fill='var(--ink)' text-anchor='middle'>head and neck</text><text x='264' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>hold something</text><text x='264' y='96' font-size='11' fill='var(--ink)' text-anchor='middle'>sturdy</text><rect x='6' y='140' width='308' height='54' rx='8' fill='var(--panel)'/><text x='160' y='162' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>stay away from windows, shelves and elevators</text><text x='160' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>beforehand: emergency kit, secure your furniture</text></svg>",
+    "key": "Fasten cabinets to the wall ahead of time, prepare an emergency kit, and agree on a meeting place. Preparation is the only real protection.",
+    "once": {
+     "soru": "You are at home and the shaking starts. What do you do first?",
+     "secenekler": [
+      {
+       "yazi": "Drop, cover, hold on",
+       "neden": "You get down, protect your head and hold on to something sturdy. That protects you from falling objects.",
+       "dogru": true
+      },
+      {
+       "yazi": "Run down the stairs",
+       "neden": "You can fall on the stairs during the shaking. Stairs are among the places that take the most damage."
+      },
+      {
+       "yazi": "Go to the window",
+       "neden": "The glass can break. So stay away from windows."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• An earthquake is the sudden release of stress on a fault.<br>• First P, then S, then the surface waves arrive.<br>• S waves do not pass through liquids.<br>• The distance is about 8 km × Δt.<br>• When the magnitude goes up by 1, the energy goes up about 32 times.<br>• When the periods are close, there is resonance.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='40' y='8' width='240' height='32' rx='16' fill='var(--c4)' fill-opacity='0.16' stroke='var(--c4)' stroke-width='1.5'/><text x='160' y='29' font-size='12.5' fill='var(--c4)' text-anchor='middle' font-weight='700'>fault breaks</text><rect x='40' y='46' width='240' height='32' rx='16' fill='var(--c1)' fill-opacity='0.16' stroke='var(--c1)' stroke-width='1.5'/><text x='160' y='67' font-size='12.5' fill='var(--c1)' text-anchor='middle' font-weight='700'>P, S, surface</text><rect x='40' y='84' width='240' height='32' rx='16' fill='var(--c3)' fill-opacity='0.16' stroke='var(--c3)' stroke-width='1.5'/><text x='160' y='105' font-size='12.5' fill='var(--c3)' text-anchor='middle' font-weight='700'>d ≈ 8·Δt</text><rect x='40' y='122' width='240' height='32' rx='16' fill='var(--c2)' fill-opacity='0.16' stroke='var(--c2)' stroke-width='1.5'/><text x='160' y='143' font-size='12.5' fill='var(--c2)' text-anchor='middle' font-weight='700'>+1 → ×32</text><rect x='40' y='160' width='240' height='32' rx='16' fill='var(--c5)' fill-opacity='0.16' stroke='var(--c5)' stroke-width='1.5'/><text x='160' y='181' font-size='12.5' fill='var(--c5)' text-anchor='middle' font-weight='700'>resonance</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sirala",
+    "q": "Put the waves in the order they arrive at a station (first to arrive on top).",
+    "ogeler": [
+     "P wave",
+     "S wave",
+     "Surface waves"
+    ],
+    "e": "The P wave is the fastest (about 6 km/s). The S wave follows it (about 3.5 km/s). Surface waves are the slowest, but their amplitudes are the largest."
+   },
+   {
+    "tur": "sayi",
+    "q": "At a station, 12 s pass between P and S. About how many km away is the earthquake? (Each second ≈ 8 km)",
+    "cevap": 96,
+    "tolerans": 6,
+    "birim": "km",
+    "e": "The distance is about 8 km × 12 = 96 km. Finding the exact location of the earthquake takes at least three stations."
+   },
+   {
+    "tur": "eslestir",
+    "q": "Match the terms with their definitions.",
+    "ciftler": [
+     [
+      "Focus",
+      "The deep point where the break starts"
+     ],
+     [
+      "Epicenter",
+      "The surface directly above the focus"
+     ],
+     [
+      "Magnitude",
+      "A measure of the energy released"
+     ],
+     [
+      "Intensity",
+      "Shaking and damage at one place"
+     ]
+    ],
+    "e": "Every earthquake has a single magnitude. Intensity changes from place to place. It is high near the epicenter and on loose ground."
+   },
+   {
+    "q": "In an earthquake, the period of the ground shaking is about 1 s. Which building on the same street is closest to resonance?",
+    "o": [
+     "3-story building",
+     "10-story building",
+     "20-story building",
+     "All sway equally"
+    ],
+    "a": 1,
+    "e": "The natural period is about 0.1 × the number of floors. So the period of the 10-story building is about 1 s. The period of the shaking equals it, so this building sways the most.",
+    "y": [
+     "The period of a 3-story building is about 0.3 s. That is far from the 1 s shaking.",
+     "",
+     "The period of a 20-story building is about 2 s. That is twice the period of the shaking.",
+     "Every building has a different natural period. So buildings respond differently to the shaking."
+    ]
+   }
+  ]
  }
 }

@@ -73,9 +73,9 @@ function Yatay({ x, soluk = [] }: { x: number; soluk?: number[] }) {
 function GeriGetir({ v }: SahneProps) {
   const x = sinir(v.x ?? 0, -10, 10), F = (-50 * x) / 100, cx = cmX(x);
   return (
-    <svg viewBox="0 0 340 196" role="img" aria-label={cev("Uzanım {0} cm; yay kuvveti {1} N {2}", say(x), say(Math.abs(F)), F < 0 ? "sola" : F > 0 ? "sağa" : "")}>
+    <svg viewBox="0 0 340 196" role="img" aria-label={cev("Uzanım {0} cm; yay kuvveti {1} N {2}", say(x), say(Math.abs(F)), F < 0 ? cev("sola") : F > 0 ? cev("sağa") : "")}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">F = −k·x = −50 · {say(x / 100, 2)} = <tspan fill="var(--c2)">{say(F, 1)} N</tspan></text>
-      <text x={14} y={44} fontSize={11.5} fontWeight={700} fill="var(--muted)">{x === 0 ? "dengede: yay kuvveti yok" : cev("kuvvet {0}, yani dengeye doğru", F < 0 ? "sola" : "sağa")}</text>
+      <text x={14} y={44} fontSize={11.5} fontWeight={700} fill="var(--muted)">{x === 0 ? cev("dengede: yay kuvveti yok") : cev("kuvvet {0}, yani dengeye doğru", F < 0 ? cev("sola") : cev("sağa"))}</text>
       <Yatay x={x} />
       {F !== 0 && (
         <g>
@@ -125,7 +125,7 @@ function Grafik({ v }: SahneProps) {
     const n = Math.max(2, Math.round(son * 60));
     return yol(Array.from({ length: n + 1 }, (_, k) => { const z = (k / n) * son; return [gx(z), gy(10 * Math.cos(Math.PI * z))] as [number, number]; }));
   };
-  const by = gy(x), ad = Math.abs(x) > 9.95 ? (x > 0 ? " (+A)" : " (−A)") : Math.abs(x) < 0.05 ? " (denge)" : "";
+  const by = gy(x), ad = Math.abs(x) > 9.95 ? (x > 0 ? " (+A)" : " (−A)") : Math.abs(x) < 0.05 ? ` (${cev("denge")})` : "";
   return (
     <svg viewBox="0 0 340 250" role="img" aria-label={cev("t = {0} s anında x = {1} cm", say(tt, 2), say(x, 1))}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">t = {say(tt, 2)} s → x = <tspan fill="var(--c2)">{say(x, 1)} {cev("cm")}{ad}</tspan></text>
@@ -227,7 +227,7 @@ function BasitSarkac({ v, t, oynuyor, s, kosular }: SahneProps) {
   const gecmis = kosular.slice(-4);
   return (
     <svg viewBox="0 0 340 240" role="img" aria-label={cev("İp {0} m, {1} top; periyot {2} s", say(Lm, 2), agir ? "ağır" : "hafif", say(T, 2))}>
-      <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Süre")} {say(zt, 1)} s · <tspan fill="var(--c2)">{Math.floor(zt / T + 1e-6)} {cev("salınım")}</tspan></text>
+      <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Süre")} {say(zt, 1)} s · <tspan fill="var(--c2)">{cev("{0} salınım", Math.floor(zt / T + 1e-6))}</tspan></text>
       <Tavan x1={60} x2={160} y={46} />
       <line x1={110} x2={110} y1={46} y2={226} stroke="var(--line)" strokeDasharray="4 4" />
       <Sarkac px={110} py={46} L={170 * Lm} aci={aci} r={agir ? 12 : 8} renk={agir ? "var(--ink)" : "var(--c4)"} />
@@ -241,7 +241,7 @@ function BasitSarkac({ v, t, oynuyor, s, kosular }: SahneProps) {
           <text x={190} y={150}>{cev("Denemelerin:")}</text>
           {gecmis.map((k, i) => {
             const l = sinir(k.L ?? 1, 0.25, 1);
-            return <text key={i} x={190} y={168 + i * 16}>{say(l, 2)} m · {(k.a ?? 0) === 1 ? cev("ağır") : "hafif"} → {say(2 * Math.PI * Math.sqrt(l / SG), 2)} s</text>;
+            return <text key={i} x={190} y={168 + i * 16}>{say(l, 2)} m · {(k.a ?? 0) === 1 ? cev("ağır") : cev("hafif")} → {say(2 * Math.PI * Math.sqrt(l / SG), 2)} s</text>;
           })}
         </g>
       )}
@@ -253,8 +253,8 @@ function BasitSarkac({ v, t, oynuyor, s, kosular }: SahneProps) {
 function AySarkac({ t, oynuyor, s }: SahneProps) {
   const sure = Number(s.sure ?? 6.5), zt = ilerleme(t, oynuyor, sure) * sure;
   const yerler = [
-    { ad: cev("Dünya"), g: 9.8, gy: "9,8", x: 90, renk: "var(--c1)" },
-    { ad: cev("Ay"), g: 1.62, gy: "1,6", x: 250, renk: "var(--muted)" },
+    { ad: cev("Dünya"), g: 9.8, gy: say(9.8), x: 90, renk: "var(--c1)" },
+    { ad: cev("Ay"), g: 1.62, gy: say(1.6), x: 250, renk: "var(--muted)" },
   ];
   return (
     <svg viewBox="0 0 340 250" role="img" aria-label={cev("Aynı 1 m'lik sarkaç Dünya'da ve Ay'da salınıyor")}>
@@ -268,7 +268,7 @@ function AySarkac({ t, oynuyor, s }: SahneProps) {
             <text x={y.x} y={66} fontSize={11} fill="var(--muted)" textAnchor="middle">g = {y.gy} m/s²</text>
             <Tavan x1={y.x - 34} x2={y.x + 34} y={82} />
             <Sarkac px={y.x} py={82} L={110} aci={aci} r={10} renk={y.renk} />
-            <text x={y.x} y={222} fontSize={12} fontWeight={800} fill="var(--c2)" textAnchor="middle">{n} {cev("salınım")}</text>
+            <text x={y.x} y={222} fontSize={12} fontWeight={800} fill="var(--c2)" textAnchor="middle">{cev("{0} salınım", n)}</text>
             {zt >= T && <text x={y.x} y={240} fontSize={11.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">T ≈ {say(T, 1)} s</text>}
           </g>
         );
@@ -282,7 +282,7 @@ function Enerji({ v }: SahneProps) {
   const x = sinir(v.x ?? 10, 0, 10), E = 0.25, Ep = 0.5 * 50 * (x / 100) ** 2, Ek = Math.max(0, E - Ep);
   const B0 = 126, W = 128, satir = (y: number, ad: string, deger: number, renk: string) => (
     <g>
-      <text x={14} y={y} fontSize={12} fontWeight={800} fill={renk}>{ad} %{say((deger / E) * 100, 0)}</text>
+      <text x={14} y={y} fontSize={12} fontWeight={800} fill={renk}>{cev("{0} %{1}", ad, say((deger / E) * 100, 0))}</text>
       <rect x={B0} y={y - 10} width={W} height={11} rx={5.5} fill="var(--line)" />
       <rect x={B0} y={y - 10} width={Math.max(0, (W * deger) / E)} height={11} rx={5.5} fill={renk} />
       <text x={326} y={y} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="end">{say(deger, 4)} J</text>
@@ -290,7 +290,7 @@ function Enerji({ v }: SahneProps) {
   );
   return (
     <svg viewBox="0 0 340 206" role="img" aria-label={cev("Cisim dengeden {0} cm uzakta; kinetik %{1}, potansiyel %{2}", say(x), say((Ek / E) * 100, 0), say((Ep / E) * 100, 0))}>
-      <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Toplam E = ½kA² =")} <tspan fill="var(--c1)">0,25 J</tspan></text>
+      <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Toplam E = ½kA² =")} <tspan fill="var(--c1)">{say(0.25, 2)} J</tspan></text>
       {satir(48, cev("Kinetik"), Ek, "var(--c3)")}
       {satir(70, cev("Potansiyel"), Ep, "var(--c4)")}
       <Yatay x={x} soluk={[-10, 10]} />
