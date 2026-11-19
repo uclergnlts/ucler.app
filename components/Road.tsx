@@ -2,6 +2,7 @@
 // Bir dersin konuları: ünite ünite, konu içindeki aşama yolu gibi kıvrılan yollar. Her ünitenin sonunda ünite testi.
 // Konular sırayla açılır (lib/kilit.ts). Bir konuya dokununca alttan kısa özet ve "Başla" penceresi açılır;
 // kilitli konuda pencere neden kilitli olduğunu söyler ve seviye testiyle doğrudan o konuya geçmeyi önerir.
+import { ANA } from "@/lib/site";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { DERSLER, type DersId, type Entry } from "@/lib/dersler";
@@ -35,7 +36,7 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
   return (
     <div className="app" data-ders={ders}>
       <UstBar
-        geri={{ to: "/", label: "Ana sayfa" }}
+        geri={{ to: ANA, label: "Ana sayfa" }}
         baslik={s.ad}
         sag={<UstEylem label="Bu ders nasıl ilerler?" icon={<Icon.soru />} onClick={() => setYardim(true)} />}
       />

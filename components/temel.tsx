@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { sekmeRengi } from "./Tabs";
 import { motion, type HTMLMotionProps } from "motion/react";
 import { DERSLER, type Entry } from "@/lib/dersler";
-import { INSTAGRAM } from "@/lib/site";
+import { INSTAGRAM, ANA } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { Badge } from "./ui/badge";
 import { Card } from "./ui/card";
@@ -23,7 +23,7 @@ export const Logo = ({ className }: { className?: string }) => (
 /** Üst çubuk: logo Ana sayfaya götürür; children sağa yaslanır (Ana sayfada seri ve görev simgeleri). */
 export const Top = ({ children }: { children?: React.ReactNode }) => (
   <header className="top">
-    <Link href="/" aria-label="ucler, Ana sayfa" className="rounded-lg"><Logo /></Link>
+    <Link href={ANA} aria-label="ucler, Ana sayfa" className="rounded-lg"><Logo /></Link>
     {children}
   </header>
 );

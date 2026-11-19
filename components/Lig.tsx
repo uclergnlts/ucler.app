@@ -2,6 +2,7 @@
 // Haftalık lig ekranı: renkli başlık ve geri sayım, gerçek ilk üç için kürsü, liste, öğrencinin kendi satırı.
 // Örnek öğrenciler listede "örnek" etiketiyle, sıra numarası olmadan görünür; kürsüye ve madalyaya girmez.
 // Veri lib/lig.ts'den; liste sunucuda kurulur. Hesabı olmayan öğrenci listeyi görür, kendi yeri için hesap açmaya çağrılır.
+import { ANA } from "@/lib/site";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { motion } from "motion/react";
@@ -133,7 +134,7 @@ export default function Lig() {
 
   return (
     <div className="app">
-      <UstBar geri={{ to: "/", label: "Ana sayfa" }} baslik="Haftalık lig" sag={<UstEylem label="Yenile" icon={<Icon.tekrar />} onClick={yukle} />} />
+      <UstBar geri={{ to: ANA, label: "Ana sayfa" }} baslik="Haftalık lig" sag={<UstEylem label="Yenile" icon={<Icon.tekrar />} onClick={yukle} />} />
       <Govde className="gap-4 pb-28">
         <section className="relative grid gap-1 overflow-hidden rounded-lg border border-border bg-card p-4">
           <span className="absolute top-4 right-4 text-mark [&_svg]:size-7" aria-hidden="true"><Kupa /></span>

@@ -3,6 +3,7 @@
 // Akış: tanıtım (ders, kurallar, "Başla") → soru (süre işler, alttaki "Kontrol et" tek hak) → sonuç (puan, süre,
 // bugün kaç kişinin çözdüğü, seri, "Bu konuyu öğren"). Süre "Başla"ya basınca başlar; ekrandan çıkıp dönen öğrencinin
 // süresi kaldığı yerden sürer. Hesabı olmayan da çözer ama puanı kaydedilmez; sonuçta hesap açmaya çağrılır.
+import { ANA } from "@/lib/site";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
@@ -260,7 +261,7 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
       <Alt>
         <div className="grid gap-2" data-ders={ders}>
           <Button asChild className="min-w-0"><Link href={href(ders, Q.konu)}><span className="truncate">Bu konuyu öğren: {Q.baslik}</span></Link></Button>
-          <Button asChild variant="ghost"><Link href="/">Ana sayfaya dön</Link></Button>
+          <Button asChild variant="ghost"><Link href={ANA}>Ana sayfaya dön</Link></Button>
         </div>
       </Alt>
     );
@@ -269,7 +270,7 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
   return (
     <div className="app">
       <UstBar
-        geri={{ to: "/", label: "Ana sayfaya dön" }}
+        geri={{ to: ANA, label: "Ana sayfaya dön" }}
         baslik="Günün sorusu"
         sag={Q && (durum === "soru" || durum === "sonuc") ? (
           <Bildir yer={{ ders: Q.ders, konu: Q.konu, yer: `günün sorusu (${key})`, ozet: Q.q }}><BildirDugme /></Bildir>

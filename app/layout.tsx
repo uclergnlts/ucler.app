@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import Tabs from "@/components/Tabs";
-import Gunluk from "@/components/Gunluk";
+import Kabuk from "@/components/Kabuk";
 import Bulut from "@/components/Bulut";
 import Yerel from "@/components/Yerel";
 import TemaIzle from "@/components/TemaIzle";
@@ -37,8 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         {children}
-        <Tabs />
-        <Gunluk />
+        <Kabuk />
         <Bulut />
         <Yerel />
         <TemaIzle />

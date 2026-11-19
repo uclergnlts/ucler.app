@@ -3,6 +3,7 @@
 // Oyunlar 2026-10-30'da menüden çıktı (Üçler: şimdilik geri planda); /oyunlar/ sayfaları duruyor, hiçbir sekmeye bağlı değil.
 // Kaydedilenler Profil'in içindedir.
 // Ders ekranında (/ders/konu/), tekrar ve günün sorusu ekranında gizlenir.
+import { ANA } from "@/lib/site";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
@@ -12,7 +13,7 @@ import { Icon } from "./icons";
 // Sekme renkleri yalnızca üst çubuktaki küçük düğmelerde kullanılır (sekmeRengi). Alt menü tek renktir:
 // seçili sekme mürekkep renginde ve kalın, altında küçük bir vurgu noktası durur (deney defteri, 2026-11-16).
 const TABS = [
-  { k: "home", href: "/", label: "Ana sayfa", renk: "var(--c1)" },
+  { k: "home", href: ANA, label: "Ana sayfa", renk: "var(--c1)" },
   { k: "kesfet", href: "/kesfet/", label: "Keşfet", renk: "var(--c3)" },
   { k: "video", href: "/videolar/", label: "Videolar", renk: "var(--kimya)" },
   { k: "deneme", href: "/deneme/", label: "Deneme", renk: "var(--c4)" },
@@ -21,7 +22,7 @@ const TABS = [
 
 /** Sayfanın ait olduğu sekme. Ders haritası (/fizik/) ve bulunamayan sayfalar hiçbir sekmeye ait değil. */
 function sekme(parts: string[]): string | undefined {
-  return parts.length === 0
+  return parts.length === 0 || parts[0] === "ogren"
     ? "home"
     : ({ kesfet: "kesfet", kaydedilenler: "profil", profil: "profil", hakkinda: "profil", gizlilik: "profil", lig: "profil", videolar: "video", deneme: "deneme" } as Record<string, string>)[parts[0]];
 }

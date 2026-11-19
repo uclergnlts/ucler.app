@@ -4,6 +4,7 @@
 // cevaplandıkça listeden düşmez; böylece aynı oturumda soru sırası kaymaz.
 // /tekrar/?karisik: karışık test. Bitirilen konuların testlerinden rastgele 10 soru; tekrar sırasını ilerletmez,
 // yalnızca yanlış yapılan soruyu tekrar sırasına ekler.
+import { ANA } from "@/lib/site";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
@@ -100,7 +101,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
         <Logo className="mb-1 text-[40px]" />
         <h1 className="text-[24px]">Karışık test için önce bir konu bitir</h1>
         <p className="text-[15px] text-muted-foreground">Karışık test, testini bitirdiğin konulardan rastgele {KARISIK} soru seçer.</p>
-        <Button asChild className="mt-4 w-full"><Link href="/">Ana sayfaya dön</Link></Button>
+        <Button asChild className="mt-4 w-full"><Link href={ANA}>Ana sayfaya dön</Link></Button>
       </article>
     );
   } else if (liste && !n) {
@@ -122,7 +123,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
         {hicTest ? (
           <Button asChild className="mt-4 w-full"><Link href={ILK_KONU}>İlk testini çöz</Link></Button>
         ) : (
-          <Button asChild className="mt-4 w-full"><Link href="/">Ana sayfaya dön</Link></Button>
+          <Button asChild className="mt-4 w-full"><Link href={ANA}>Ana sayfaya dön</Link></Button>
         )}
       </article>
     );
@@ -182,7 +183,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
         </p>
         <div className="mt-4 grid w-full gap-2">
           {karisik && <Button onClick={() => kur(true)}>Yeni karışık test</Button>}
-          <Button asChild variant={karisik ? "ghost" : "default"}><Link href="/">Ana sayfaya dön</Link></Button>
+          <Button asChild variant={karisik ? "ghost" : "default"}><Link href={ANA}>Ana sayfaya dön</Link></Button>
         </div>
       </article>
     );
@@ -191,7 +192,7 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
   return (
     <div className="app">
       <header className="top gap-3">
-        <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href="/" aria-label={karisik ? "Karışık testten çık" : "Tekrardan çık"}><Close /></Link></Button>
+        <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={ANA} aria-label={karisik ? "Karışık testten çık" : "Tekrardan çık"}><Close /></Link></Button>
         <div className="grid min-w-0 flex-1 gap-1.5">
           <span className="truncate font-display text-[15px] font-extrabold">{karisik ? "Karışık test" : "Tekrar"}</span>
           {/* Sorulacak soru yoksa ilerleme çubuğu gösterilmez. */}

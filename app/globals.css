@@ -63,7 +63,8 @@
   --f-body:"Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
   --f-mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
-:root[data-tema="koyu"]{
+/* .gece: tanıtım sayfası her zaman gece görünümündedir (components/Tanitim.tsx). */
+:root[data-tema="koyu"], .gece{
   color-scheme:dark;
   --bg:#10182a; --surface:#1b2640; --panel:#24314f; --ink:#f1e9d8; --muted:#a3acc0; --line:#27344f; --line-2:#3a4968;
   --grid:#202c48; --karbon:#7586a6;
