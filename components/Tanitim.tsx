@@ -3,6 +3,7 @@
 // Kapak kalıbı: siyah zemin, dev gravür nesne, ölçek için minik Çizgi, pembe el çizimi ok, tek pembe kelime, sonda "..".
 import Link from "next/link";
 import { INSTAGRAM, PLAY_URL, YOUTUBE } from "@/lib/site";
+import { CIZIM_YOL } from "./Cizimler";
 import { Logo } from "./temel";
 
 export type Dil = "en" | "tr";
@@ -19,6 +20,7 @@ const METIN = {
     a1p: (n: number) => `${n} topics in physics, chemistry and biology, from the very basics to first-year university. Short cards, drawings you can touch, and a quick test at the end of every topic.`,
     a2k: "02 · The channel", a2h: "Science's strangest questions, explained properly",
     a2p: "A new deep dive every week. One question, the real experiments behind it, and a small yellow explorer who walks you through. In English, with Turkish audio.",
+    cz: "Drawings", k6: "From the videos", h6: "Every video gets its own engravings, one for each idea.", h6b: "See all the drawings",
     k3: "Inside the app", h3: "Built like a lab notebook, not a textbook.",
     ekran: [
       ["ana", "The app's home screen with Physics, Chemistry and Biology", "Fig. 2 · Three subjects, one path each"],
@@ -51,6 +53,7 @@ const METIN = {
     a1p: (n: number) => `Fizik, kimya ve biyolojide ${n} konu var. Konular en temelden başlar ve üniversitenin ilk yılına kadar gider. Her konuda kısa kartlar, dokunabildiğin çizimler ve sonda kısa bir test bulunur.`,
     a2k: "02 · Kanal", a2h: "Bilimin en tuhaf soruları, hakkını vererek",
     a2p: "Her hafta yeni bir uzun video yayınlıyoruz. Her videoda tek bir soru, arkasındaki gerçek deneyler ve sana yol gösteren küçük sarı bir kâşif var. Videolar İngilizce çıkıyor, Türkçe seslendirmesi de bulunuyor.",
+    cz: "Çizimler", k6: "Videolardan", h6: "Her videonun kendi gravürleri var, her fikre bir çizim.", h6b: "Bütün çizimleri gör",
     k3: "Uygulamadan", h3: "Ders kitabı gibi değil, deney defteri gibi.",
     ekran: [
       ["ana", "Uygulamanın ana ekranı: Fizik, Kimya ve Biyoloji", "Şekil 2 · Üç ders, her birinin kendi yolu"],
@@ -75,6 +78,8 @@ const METIN = {
 } as const;
 
 const DERS_IDS = ["fizik", "kimya", "biyoloji"] as const;
+/** Tanıtım sayfasında galeriye kapı olan dört çizim (video/çizim). */
+const VITRIN = ["yt05/f05", "yt04/g10", "yt05/f12", "yt04/g02"] as const;
 
 const mono = "font-mono text-[11px] tracking-[.14em] uppercase text-[var(--muted)]";
 const sarmal = "mx-auto w-full max-w-[1080px] px-5 sm:px-8";
@@ -99,6 +104,7 @@ export default function Tanitim({ sayi, dil = "en" }: { sayi: Record<string, num
           <Logo />
           <nav className="flex items-center gap-5 text-[14px] font-semibold">
             <a href={YOUTUBE.url} className="hidden text-[var(--muted)] hover:text-[var(--ink)] sm:block">YouTube</a>
+            <Link href={CIZIM_YOL[dil]} className="hidden text-[var(--muted)] hover:text-[var(--ink)] sm:block">{m.cz}</Link>
             <a href={INSTAGRAM.url} className="hidden text-[var(--muted)] hover:text-[var(--ink)] sm:block">Instagram</a>
             <span className="flex items-center gap-2 font-mono text-[12px] tracking-[.1em]">{dilDugme("en", "/")}<span aria-hidden className="text-[var(--line-2)]">/</span>{dilDugme("tr", "/tr/")}</span>
             <a href={PLAY_URL} className="rounded-md border border-[var(--line-2)] px-3.5 py-2 hover:border-[var(--ink)]">{m.al}</a>
@@ -162,6 +168,24 @@ export default function Tanitim({ sayi, dil = "en" }: { sayi: Record<string, num
             <a href={YOUTUBE.url} className="mt-1 font-bold text-[var(--btn)]">{m.izle} →</a>
           </article>
         </div>
+      </section>
+
+      {/* Videolardan: çizim galerisine kapı (components/Cizimler.tsx) */}
+      <section className={`${sarmal} grid gap-8 pb-16 md:pb-24`}>
+        <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-4">
+          <div className="grid max-w-[60ch] gap-4">
+            <p className={mono}>{m.k6}</p>
+            <h2 className="font-display text-[32px] leading-tight font-extrabold sm:text-[40px]">{m.h6}</h2>
+          </div>
+          <Link href={CIZIM_YOL[dil]} className={cizgiDugme}>{m.h6b} →</Link>
+        </div>
+        <Link href={CIZIM_YOL[dil]} aria-label={m.h6b} className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+          {VITRIN.map((v, i) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img key={v} src={`/cizim/${v}-k.webp`} alt="" width={640} height={360} loading="lazy"
+              className={`aspect-video w-full rounded-md border border-[var(--line)] object-cover ${i > 1 ? "hidden sm:block" : ""}`} />
+          ))}
+        </Link>
       </section>
 
       {/* Uygulamadan */}
@@ -235,6 +259,7 @@ export default function Tanitim({ sayi, dil = "en" }: { sayi: Record<string, num
           <nav className="flex flex-wrap gap-x-5 gap-y-2">
             <a href={YOUTUBE.url} className="hover:text-[var(--ink)]">YouTube</a>
             <a href={INSTAGRAM.url} className="hover:text-[var(--ink)]">Instagram</a>
+            <Link href={CIZIM_YOL[dil]} className="hover:text-[var(--ink)]">{m.cz}</Link>
             <Link href="/gizlilik/" className="hover:text-[var(--ink)]">{m.gizlilik}</Link>
             <Link href="/kosullar/" className="hover:text-[var(--ink)]">{m.kosul}</Link>
             <Link href="/hesap-silme/" className="hover:text-[var(--ink)]">{m.sil}</Link>
