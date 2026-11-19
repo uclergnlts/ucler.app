@@ -450,7 +450,7 @@ function Jenerator({ v, t, oynuyor, s, kosular }: SahneProps) {
   const eskiler = kosular.slice(-3).filter((k) => !(oynuyor && k.r === r));
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={cev("Bobin saniyede {0} tur dönüyor; tepe gerilimi {1} birim", r, r)}>
-      <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("εmax = N·B·A·ω:")} <tspan fill="var(--c2)">{r} {cev("birim")}</tspan>, {r} {cev("tur/s")}</text>
+      <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("εmax = N·B·A·ω:")} <tspan fill="var(--c2)">{r} {r === 1 ? cev("birim§tek") : cev("birim")}</tspan>, {r} {cev("tur/s")}</text>
       <rect x={10} y={84} width={20} height={96} fill="var(--c2)" />
       <text x={20} y={137} fontSize={13} fontWeight={800} fill="#fff" textAnchor="middle">N</text>
       <rect x={94} y={84} width={20} height={96} fill="var(--c1)" />

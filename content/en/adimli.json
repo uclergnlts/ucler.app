@@ -5596,5 +5596,571 @@
    "A force of F = B·I·L·sinθ acts on a wire in a field. Thanks to the commutator, a motor turns this force into continuous rotation."
   ],
   "soruOnce": true
+ },
+ "induksiyon-ac": {
+  "id": "induksiyon-ac",
+  "ders": "fizik",
+  "konu": "induksiyon-ac",
+  "baslik": "Induction and Alternating Current",
+  "ozet": "Push a magnet into a coil and see Lenz's rule. Slide a rod on rails and spin a generator. Read the grid voltage, adjust a transformer, and cut the transmission loss.",
+  "adimlar": [
+   {
+    "baslik": "Magnet and coil",
+    "metin": "When the magnetic flux through a coil changes, a current forms in the coil. This is called <b>electromagnetic induction</b>. Push the magnet into the coil at different speeds and watch the galvanometer.",
+    "sahne": {
+     "tur": "fiz10-faraday",
+     "sure": 3
+    },
+    "deger": {
+     "h": 1
+    },
+    "kontroller": [
+     {
+      "ad": "h",
+      "etiket": "Magnet speed",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac",
+      "birim": "m/s"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "What does the galvanometer's deflection depend on?",
+     "secenekler": [
+      {
+       "yazi": "The magnet being at rest",
+       "neden": "When the magnet stops, the flux does not change and the needle returns to zero."
+      },
+      {
+       "yazi": "The magnet's speed",
+       "dogru": true,
+       "neden": "As the magnet speeds up, the flux through the coil changes in a shorter time. The faster the flux changes, the larger the voltage."
+      },
+      {
+       "yazi": "Nothing",
+       "neden": "Look at the faded traces of your trials. As the speed increases, the deflection increases too."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Lenz's rule",
+    "metin": "The N pole of the magnet is approaching the coil quickly. The current that forms in the coil also turns the coil into a magnet.",
+    "sahne": {
+     "tur": "fiz10-lenz",
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What does the face of the coil toward the magnet become?",
+     "secenekler": [
+      {
+       "yazi": "S, it attracts",
+       "neden": "If that were so, the magnet would speed up on its own, and energy would be produced from nothing."
+      },
+      {
+       "yazi": "No change",
+       "neden": "The current through the coil forces the coil to behave like a magnet."
+      },
+      {
+       "yazi": "N, it repels",
+       "dogru": true,
+       "neden": "The coil repels the approaching N pole and so opposes its approach. The work you do pushing the magnet against this repulsion turns into electrical energy."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Sliding rod",
+    "metin": "For a sliding rod, <b>ε = B · L · v</b>. B = 0.5 T, and the length of the rod is L = 0.4 m. Adjust the speed so that the voltage is <b>0.8 V</b>.",
+    "sahne": {
+     "tur": "fiz10-cubuk"
+    },
+    "deger": {
+     "v": 2
+    },
+    "kontroller": [
+     {
+      "ad": "v",
+      "etiket": "Speed",
+      "min": 0,
+      "max": 10,
+      "tur": "surgu",
+      "birim": "m/s"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "v": 4
+     },
+     "tamam": "ε = 0.5 · 0.4 · 4 = <b>0.8 V</b>. When the rod stops, the area (A) of the circuit no longer changes. The flux stays constant and the current stops.",
+     "ipucu": "0.5 · 0.4 makes 0.2. For 0.8 V you need v = 0.8 / 0.2."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Generator",
+    "metin": "Spin the coil at different speeds and watch the voltage on the graph.",
+    "sahne": {
+     "tur": "fiz10-jenerator",
+     "sure": 2
+    },
+    "deger": {
+     "r": 1
+    },
+    "kontroller": [
+     {
+      "ad": "r",
+      "etiket": "Rotation speed (rev/s)",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "What happens when the coil spins twice as fast?",
+     "secenekler": [
+      {
+       "yazi": "Only the frequency rises",
+       "neden": "The peaks on the graph get higher too. Since εmax = N·B·A·ω, the peak value increases with the rotation speed."
+      },
+      {
+       "yazi": "Only the peak rises",
+       "neden": "The waves on the graph also get closer together. Frequency is the number of turns per second."
+      },
+      {
+       "yazi": "Both double",
+       "dogru": true,
+       "neden": "Since εmax = N·B·A·ω, when the speed doubles the peak value doubles too. The frequency is the number of turns per second, so it doubles as well."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Voltage at the outlet",
+    "metin": "In Europe the grid frequency is <b>50 Hz</b>. So one period lasts T = 1/50 s = 20 ms. Slide the time and find the moment the voltage first reaches its peak value.",
+    "sahne": {
+     "tur": "fiz10-sebeke"
+    },
+    "deger": {
+     "t": 12
+    },
+    "kontroller": [
+     {
+      "ad": "t",
+      "etiket": "Time",
+      "min": 0,
+      "max": 20,
+      "tur": "surgu",
+      "birim": "ms"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "t": 5
+     },
+     "tamam": "At T/4 = 5 ms the voltage reaches its peak value of <b>325 V</b>. The 230 V at the outlet is the <b>rms value</b>: 325 / √2 ≈ 230 V. The voltage reverses twice every period, that is 100 times a second.",
+     "ipucu": "The voltage reaches its peak value in a quarter period: 20 / 4."
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Transformer",
+    "metin": "The ratio of the voltages equals the ratio of the numbers of turns: <b>V₁/V₂ = N₁/N₂</b>. The primary coil has 1000 turns and is connected to 230 V. Make the output <b>11.5 V</b> for a phone charger. Then try the battery too.",
+    "sahne": {
+     "tur": "fiz10-trafo"
+    },
+    "deger": {
+     "N2": 500,
+     "d": 0
+    },
+    "kontroller": [
+     {
+      "ad": "N2",
+      "etiket": "Secondary turns N₂",
+      "min": 50,
+      "max": 2000,
+      "adim": 50,
+      "tur": "surgu"
+     },
+     {
+      "ad": "d",
+      "etiket": "Connect battery (DC)",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "N2": 50,
+      "d": 0
+     },
+     "tamam": "V₂ = 230 · 50 / 1000 = <b>11.5 V</b>. When you connect the battery the output is 0, because the flux of a steady current does not change.",
+     "ipucu": "11.5 / 230 makes 1/20. So N₂ must be 1000 / 20."
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Transmission to a distant city",
+    "metin": "The power plant sends 10 MW, and the resistance of the line is 10 Ω. The power lost as heat in the line is <b>I²·R</b>. Raise the voltage and cut the loss to <b>one hundredth</b>.",
+    "sahne": {
+     "tur": "fiz10-iletim"
+    },
+    "deger": {
+     "k": 1
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Line voltage",
+      "min": 1,
+      "max": 10,
+      "tur": "surgu",
+      "carpan": 38,
+      "birim": "kV"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": 10
+     },
+     "tamam": "When the voltage becomes 10 times larger, the current drops to one tenth, and the loss I²·R falls to <b>one hundredth</b>.",
+     "ipucu": "The loss is proportional to the square of the current. To cut the current to one tenth, make the voltage 10 times larger."
+    },
+    "kart": 13
+   }
+  ],
+  "kapanis": [
+   "When the flux through a coil changes, an induced voltage forms: ε = −N·ΔΦ/Δt. The faster the change, the larger the voltage.",
+   "By Lenz's law, the induced current opposes the change that creates it. This is conservation of energy.",
+   "A generator produces alternating current: εmax = N·B·A·ω. The grid is 50 Hz. 230 V is the rms value, and about 325 V is the peak value.",
+   "For a transformer, V₁ / V₂ = N₁ / N₂. A transformer does not work with direct current.",
+   "When the voltage becomes 10 times larger, the transmission loss drops to one hundredth."
+  ],
+  "soruOnce": true
+ },
+ "yari-iletkenler": {
+  "id": "yari-iletkenler",
+  "ders": "fizik",
+  "konu": "yari-iletkenler",
+  "baslik": "Semiconductors and superconductors",
+  "ozet": "Change resistance by heating, and move charges in doped silicon. Reverse a diode, pick an LED color, and draw current from a solar cell and a transistor. Cool a superconductor and float a magnet in the air.",
+  "adimlar": [
+   {
+    "baslik": "What happens on cooling?",
+    "metin": "Lower the temperature and watch the two curves.",
+    "sahne": {
+     "tur": "fiz16-direnc"
+    },
+    "deger": {
+     "T": 300
+    },
+    "kontroller": [
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 20,
+      "max": 300,
+      "adim": 5,
+      "tur": "surgu",
+      "birim": "K"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which one's resistance increases as it cools?",
+     "secenekler": [
+      {
+       "yazi": "Silicon",
+       "dogru": true,
+       "neden": "In cooling silicon the free electrons become fewer, and no charge is left to carry the current. So the resistance increases."
+      },
+      {
+       "yazi": "Copper",
+       "neden": "As copper cools, its atoms vibrate less and its resistance decreases."
+      },
+      {
+       "yazi": "Both",
+       "neden": "Look at the curves: one goes down and the other goes up. A metal and a semiconductor behave in opposite ways."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Where does the extra electron go?",
+    "metin": "<b>Phosphorus</b> has been added to silicon. The 5th electron of phosphorus does not go into a bond and is left free. A battery has been connected, making the left end − and the right end +.",
+    "sahne": {
+     "tur": "fiz16-kristal",
+     "sure": 5
+    },
+    "deger": {
+     "p": 0
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "When the battery is connected, which way does the extra electron go?",
+     "secenekler": [
+      {
+       "yazi": "To the + end",
+       "dogru": true,
+       "neden": "An electron is negatively charged and is attracted to the positive end. The extra electron, free to move in the crystal, carries the current."
+      },
+      {
+       "yazi": "To the − end",
+       "neden": "Charges of the same sign repel each other. So the electron moves away from the − end."
+      },
+      {
+       "yazi": "It stays in place",
+       "neden": "Since the fifth electron is not in a bond, it is freed easily and moves in the electric field."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Where does the hole go?",
+    "metin": "Now <b>boron</b> has been added instead of phosphorus. Boron comes with 3 electrons, and one bond is left one electron short. This gap is called a <b>hole</b>.",
+    "sahne": {
+     "tur": "fiz16-kristal",
+     "sure": 5
+    },
+    "deger": {
+     "p": 1
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "With the battery connected, which way does the hole go?",
+     "secenekler": [
+      {
+       "yazi": "To the − end",
+       "dogru": true,
+       "neden": "Neighboring electrons hop into the hole on their way toward the + end. With each hop the hole shifts one step the opposite way, toward the − end. A hole behaves like a positive charge."
+      },
+      {
+       "yazi": "To the + end",
+       "neden": "The electrons go toward the + end. The hole moves opposite to them."
+      },
+      {
+       "yazi": "It stays in place",
+       "neden": "A hole does not stay put. When a neighboring electron hops into it, the hole moves to that electron's old place."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Reverse-biased diode",
+    "metin": "We joined p-type and n-type and got a <b>diode</b>. The plus end of the battery is on the <b>n</b> side, and the voltage is 2.5 V.",
+    "sahne": {
+     "tur": "fiz16-diyot",
+     "sure": 4
+    },
+    "deger": {
+     "ters": 1,
+     "V": 2.5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Does the lamp light up?",
+     "secenekler": [
+      {
+       "yazi": "No",
+       "dogru": true,
+       "neden": "In reverse, the depletion region at the junction thickens and no current flows. If you turn the battery around, the lamp lights up."
+      },
+      {
+       "yazi": "Yes, dimly",
+       "neden": "In reverse the current is almost zero. So the lamp does not light at all."
+      },
+      {
+       "yazi": "Yes, brightly",
+       "neden": "The voltage is high, but the direction is wrong. A diode passes current only from p to n."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Blue LED",
+    "metin": "In an LED, as the energy gap grows, the color of the light shifts from red to blue. Change the gap and find the material that gives <b>blue</b> light.",
+    "sahne": {
+     "tur": "fiz16-led"
+    },
+    "deger": {
+     "E": 1.9
+    },
+    "kontroller": [
+     {
+      "ad": "E",
+      "etiket": "Energy gap",
+      "min": 1.6,
+      "max": 3.2,
+      "adim": 0.05,
+      "tur": "surgu",
+      "birim": "eV"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "E": [
+       2.55,
+       2.75
+      ]
+     },
+     "tamam": "The wavelength of blue light is about 450-490 nm, and the energy gap is about 2.5-2.8 eV. It was hard to make a high-quality gallium nitride crystal with such a large gap. That is why the blue LED came last.",
+     "ipucu": "The energy gap grows as you go from red to blue."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "150 W from a panel",
+    "metin": "Adjust the irradiance on the panel, that is the light power per square meter (W/m²). Get <b>150 W</b> of power from a 1 m² panel. The efficiency of the panel is 20%.",
+    "sahne": {
+     "tur": "fiz16-gunes"
+    },
+    "deger": {
+     "I": 300
+    },
+    "kontroller": [
+     {
+      "ad": "I",
+      "etiket": "Irradiance",
+      "min": 0,
+      "max": 1000,
+      "adim": 10,
+      "tur": "surgu",
+      "birim": "W/m²"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "I": [
+       740,
+       760
+      ]
+     },
+     "tamam": "0.20 × 750 W/m² × 1 m² = <b>150 W</b>. At noon on a clear summer day, solar irradiance is about 1000 W/m². This panel gives about 200 W at most.",
+     "ipucu": "Power is found with 0.20 × irradiance × 1 m². What is 150 ÷ 0.20?"
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "3 mA with a transistor",
+    "metin": "In this classic (BJT) transistor, adjust the base current so that <b>3 mA</b> flows through the collector. The current is amplified 100 times.",
+    "sahne": {
+     "tur": "fiz16-transistor"
+    },
+    "deger": {
+     "ib": 5
+    },
+    "kontroller": [
+     {
+      "ad": "ib",
+      "etiket": "Base current",
+      "min": 0,
+      "max": 60,
+      "adim": 1,
+      "tur": "surgu",
+      "birim": "µA"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "ib": [
+       30,
+       30
+      ]
+     },
+     "tamam": "30 µA × 100 = 3000 µA = <b>3 mA</b>. A small base current controls a current 100 times larger. This is called an amplifier.",
+     "ipucu": "3 mA makes 3000 µA. What is 3000 ÷ 100?"
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Cold disk, magnet",
+    "metin": "A ceramic disk (YBCO) will be cooled with liquid nitrogen. Then a magnet will be lowered over the disk.",
+    "sahne": {
+     "tur": "fiz16-meissner",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens when the magnet comes near the disk?",
+     "secenekler": [
+      {
+       "yazi": "It floats in the air",
+       "dogru": true,
+       "neden": "The cooled disk becomes a superconductor and pushes the magnet's field out of its interior. This is called the Meissner effect. The magnet hovers above the disk."
+      },
+      {
+       "yazi": "It sticks to the disk",
+       "neden": "A ceramic is not attracted like iron. In the superconducting state it does the opposite and pushes the field out."
+      },
+      {
+       "yazi": "It drops onto the disk",
+       "neden": "That would happen at room temperature. The cold disk is a superconductor and pushes the field out."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "The limit of YBCO",
+    "metin": "Change the temperature and find the <b>highest</b> temperature at which YBCO stays superconducting.",
+    "sahne": {
+     "tur": "fiz16-direnc",
+     "ybco": true
+    },
+    "deger": {
+     "T": 200
+    },
+    "kontroller": [
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 20,
+      "max": 300,
+      "adim": 1,
+      "tur": "surgu",
+      "birim": "K"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "T": [
+       88,
+       91
+      ]
+     },
+     "tamam": "YBCO is a superconductor below about <b>92 K</b>. Liquid nitrogen (77 K) is enough for this, and expensive liquid helium is not needed.",
+     "ipucu": "Go just below the point where the green curve drops to zero."
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "The type of dopant decides which charge carries the current. Electrons carry it in n-type, and holes in p-type.",
+   "A diode passes current only in the forward direction. The color of an LED is set by its energy gap.",
+   "A transistor controls a large current with a small signal (base current or gate voltage).",
+   "Below the critical temperature, critical field, and critical current, a superconductor drops to zero resistance and pushes the magnetic field out."
+  ],
+  "soruOnce": true
  }
 }
