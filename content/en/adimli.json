@@ -4592,5 +4592,1009 @@
    "If the period of the shaking is close to the building's natural period, there is resonance. An isolator prevents this."
   ],
   "soruOnce": true
+ },
+ "elektrostatik": {
+  "id": "elektrostatik",
+  "ders": "fizik",
+  "konu": "elektrostatik",
+  "baslik": "Electrostatics",
+  "ozet": "Try it first, then learn its name. Rub the glass, touch the spheres together, charge by grounding and set the Coulomb force.",
+  "adimlar": [
+   {
+    "baslik": "Charging by friction",
+    "metin": "Charge does not appear from nothing. Only <b>electrons</b> pass from one object to the other. Rub the glass rod with the silk cloth.",
+    "sahne": {
+     "tur": "fiz8-surtunme",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What charge does the glass rod have after rubbing?",
+     "secenekler": [
+      {
+       "yazi": "(−) charge",
+       "neden": "The one that is (−) is the silk, which gains the electrons."
+      },
+      {
+       "yazi": "(+) charge",
+       "neden": "The glass gives electrons to the silk. The glass, now short of electrons, becomes <b>(+)</b>, and the silk becomes <b>(−)</b> by the same amount. Total charge is conserved.",
+       "dogru": true
+      },
+      {
+       "yazi": "It stays neutral",
+       "neden": "Two electrons moved to the silk. The glass is no longer neutral."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Sharing by contact",
+    "metin": "Spheres that touch share charge in proportion to their radii. Sphere A has 12 μC and B is neutral. Choose the radius of B so that B ends up with <b>8 μC</b> after they touch.",
+    "sahne": {
+     "tur": "fiz8-dokunma",
+     "sure": 4
+    },
+    "deger": {
+     "r": 1
+    },
+    "kontroller": [
+     {
+      "ad": "r",
+      "etiket": "Radius of B",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac",
+      "birim": "× r"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "r": 2
+     },
+     "tamam": "When the radii are 1 : 2, the 12 μC divides as 4 : 8. The total charge is still 12 μC. In contact, charge is conserved and both spheres get the <b>same sign</b>.",
+     "ipucu": "B must take 2/3 of the total."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Polarization by induction",
+    "metin": "A (−) charged rod approaches a neutral conducting sphere without touching it. The electrons in the sphere can move freely.",
+    "sahne": {
+     "tur": "fiz8-etki",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to the side of the sphere near the rod?",
+     "secenekler": [
+      {
+       "yazi": "It becomes (−)",
+       "neden": "Electrons are repelled by the (−) rod and escape to the far side."
+      },
+      {
+       "yazi": "It stays neutral",
+       "neden": "The total charge is zero, but the charges shift."
+      },
+      {
+       "yazi": "It becomes (+)",
+       "neden": "Electrons are repelled and move to the far side. The near side becomes <b>(+)</b> and the far side <b>(−)</b>. The sphere as a whole is still neutral. This is called <b>polarization</b>.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Charging by grounding",
+    "metin": "Now the order is: bring the rod near, connect the sphere to the ground, cut the connection, and remove the rod. Watch this sequence.",
+    "sahne": {
+     "tur": "fiz8-etki",
+     "sure": 6,
+     "toprak": true
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What charge is the sphere left with?",
+     "secenekler": [
+      {
+       "yazi": "(+) charge",
+       "neden": "The repelled electrons escape to the ground, and they cannot come back because the connection is cut first. The sphere is left with the sign <b>opposite</b> to the rod.",
+       "dogru": true
+      },
+      {
+       "yazi": "(−) charge",
+       "neden": "An object charged by induction takes the sign <b>opposite</b> to the rod. Electrons left the sphere."
+      },
+      {
+       "yazi": "Neutral",
+       "neden": "Charge can move without contact too. Here the electrons flowed to the ground."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "The electroscope",
+    "metin": "A (+) rod has been brought near the knob of an electroscope. By induction the leaves get the same sign and repel each other. <b>Move the rod away</b>.",
+    "sahne": {
+     "tur": "fiz8-elektroskop"
+    },
+    "deger": {
+     "d": 1
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Distance",
+      "min": 1,
+      "max": 10,
+      "adim": 1,
+      "carpan": 2,
+      "birim": "cm"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What happens to the leaves when the rod moves away?",
+     "secenekler": [
+      {
+       "yazi": "They open wider",
+       "neden": "The induction weakens, and the charge on the leaves decreases."
+      },
+      {
+       "yazi": "They stay open",
+       "neden": "No charge passed to the electroscope. When the induction ends, the leaves go back to how they were."
+      },
+      {
+       "yazi": "They close",
+       "neden": "There was no contact, so the total charge of the electroscope is zero. When the rod moves away, the charges return to their places and the leaves <b>close</b>.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "The Coulomb force",
+    "metin": "The force between two charges is F = k·q₁·q₂ / r². q₁ = +4 μC. Set q₂ and the distance so that the force is an <b>attraction of 0.1 N</b> (k ≈ 9·10⁹ N·m²/C²).",
+    "sahne": {
+     "tur": "fiz8-coulomb"
+    },
+    "deger": {
+     "q": 2,
+     "r": 1
+    },
+    "kontroller": [
+     {
+      "ad": "q",
+      "etiket": "q₂",
+      "min": -4,
+      "max": 4,
+      "tur": "sayac",
+      "birim": "μC"
+     },
+     {
+      "ad": "r",
+      "etiket": "Distance",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac",
+      "carpan": 30,
+      "birim": "cm"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "q": -1,
+      "r": 2
+     },
+     "tamam": "For q₂ = −1 μC and r = 60 cm, F = 9·10⁹ · 4·10⁻⁶ · 1·10⁻⁶ / 0.36 = 0.1 N. Opposite charges <b>attract</b>, and like charges repel.",
+     "ipucu": "For attraction q₂ must be (−). At 30 cm, −1 μC gives 0.4 N. Double the distance."
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Field lines",
+    "metin": "Electric field lines show the direction a (+) test charge placed there would be pushed. Change the sign of the charge on the right.",
+    "sahne": {
+     "tur": "fiz8-alan"
+    },
+    "deger": {
+     "isaret": 0
+    },
+    "kontroller": [
+     {
+      "ad": "isaret",
+      "etiket": "Right charge is (−)",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Where do field lines start and where do they end?",
+     "secenekler": [
+      {
+       "yazi": "They leave (+) and enter (−)",
+       "neden": "The lines point out of a (+) charge and into a (−) charge, and they <b>never cross</b>.",
+       "dogru": true
+      },
+      {
+       "yazi": "They leave (−) and enter (+)",
+       "neden": "The direction of the field is the direction a (+) test charge would be pushed. That direction points away from a (+) charge."
+      },
+      {
+       "yazi": "They exist only between the two charges",
+       "neden": "The lines spread in every direction. For two charges of the same sign, an empty region is left between them."
+      }
+     ]
+    },
+    "kart": 9
+   }
+  ],
+  "kapanis": [
+   "Charge is quantized (e = 1.6·10⁻¹⁹ C) and conserved. In charging, only electrons are transferred.",
+   "With friction, glass becomes (+) and silk (−). With contact, charge is shared in proportion to the radii and with the same sign.",
+   "An object charged by induction and grounding gets the sign opposite to the rod. For this, the connection must be cut before the rod is removed.",
+   "By Coulomb's law F = k·q₁·q₂ / r². Opposite charges attract and like charges repel.",
+   "Field lines leave (+), enter (−), and never cross."
+  ],
+  "soruOnce": true
+ },
+ "elektrik-akimi": {
+  "id": "elektrik-akimi",
+  "ders": "fizik",
+  "konu": "elektrik-akimi",
+  "baslik": "Electric Current",
+  "ozet": "Try first, then learn the name. Close the switch, lengthen the wire, connect bulbs in series and in parallel, and solve a mixed circuit.",
+  "adimlar": [
+   {
+    "baslik": "What is current?",
+    "metin": "Electrons leave from the (−) terminal, and conventional current runs the opposite way. Close the switch.",
+    "sahne": {
+     "tur": "fiz9-devre"
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Close the switch",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": 1
+     },
+     "tamam": "The circuit is complete. If 30 C of charge passes through the cross-section in 1 minute, the current is I = 30 / 60 = <b>0.5 A</b>. No current forms in an open circuit."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Ohm's law",
+    "metin": "The resistance is 4 Ω. Increase the voltage and get a current of <b>2 A</b>. Use the relation <b>V = I · R</b> for this.",
+    "sahne": {
+     "tur": "fiz9-ohm",
+     "R": 4
+    },
+    "deger": {
+     "V": 0
+    },
+    "kontroller": [
+     {
+      "ad": "V",
+      "etiket": "Voltage",
+      "min": 0,
+      "max": 12,
+      "tur": "surgu",
+      "birim": "V"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "V": 8
+     },
+     "tamam": "V = I · R = 2 · 4 = <b>8 V</b>. If the voltage doubles, the current doubles too. That is why the V–I graph is a straight line.",
+     "ipucu": "Since I = V / R, to get 2 A you need V = 2 · 4."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "The slope of the graph",
+    "metin": "On a V–I graph (V vertical, I horizontal), the line's <b>slope gives the resistance</b>.",
+    "sahne": {
+     "tur": "fiz9-vi"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which one has the larger resistance?",
+     "secenekler": [
+      {
+       "yazi": "Y",
+       "neden": "Y is flatter. It needs less voltage for the same current, so its resistance is small."
+      },
+      {
+       "yazi": "They are equal",
+       "neden": "The slopes are different. The lines of conductors with equal resistance would lie on top of each other."
+      },
+      {
+       "yazi": "X",
+       "neden": "X is steeper. It needs more voltage for the same current, so its R = V / I value is large. When they are connected in parallel, Y carries more of the current.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Resistance of a wire",
+    "metin": "The resistance of a wire increases with length and decreases with cross-section. The wire is twice as long. Adjust the cross-section so that the resistance is R₀ again.",
+    "sahne": {
+     "tur": "fiz9-tel"
+    },
+    "deger": {
+     "L": 2,
+     "A": 1
+    },
+    "kontroller": [
+     {
+      "ad": "A",
+      "etiket": "Cross-section",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac",
+      "birim": "× A₀"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "A": 2
+     },
+     "tamam": "The length doubled, and so did the cross-section. So R = 2/2 · R₀ = R₀. This is why a long extension cord is made thicker.",
+     "ipucu": "The ratio L / A must be 1."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Series or parallel?",
+    "metin": "First connect the bulbs in parallel, then unscrew one bulb. Try the same with the series connection.",
+    "sahne": {
+     "tur": "fiz9-iki-ampul"
+    },
+    "deger": {
+     "p": 0,
+     "s": 0
+    },
+    "kontroller": [
+     {
+      "ad": "p",
+      "etiket": "Connect in parallel",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "s",
+      "etiket": "Unscrew one bulb",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "When one bulb is unscrewed, in which connection does the other keep glowing?",
+     "secenekler": [
+      {
+       "yazi": "In series",
+       "neden": "A series connection has a single path. When one bulb is unscrewed, the circuit opens and they all go out."
+      },
+      {
+       "yazi": "In parallel",
+       "neden": "In a parallel connection, each bulb has its own branch. Even if one is unscrewed, the other still gets the same 12 V (with an ideal battery) and glows just as brightly. That is why home wiring is parallel.",
+       "dogru": true
+      },
+      {
+       "yazi": "It goes out in both",
+       "neden": "In a parallel connection, the path of the other branch stays open to current. You can also see in the scene that the other bulb stays on when you unscrew one."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Where does the ammeter go?",
+    "metin": "The internal resistance of an ammeter is almost zero. You connected it in <b>parallel</b> with the lamp by mistake.",
+    "sahne": {
+     "tur": "fiz9-yanlis-amper",
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens if an ammeter is connected in parallel with a lamp?",
+     "secenekler": [
+      {
+       "yazi": "The lamp glows brighter",
+       "neden": "The current skips the lamp. It passes through the ammeter, which has almost no resistance."
+      },
+      {
+       "yazi": "Nothing changes",
+       "neden": "A path with an internal resistance of about zero has opened. The current chooses this path."
+      },
+      {
+       "yazi": "The lamp goes out, a large current flows",
+       "neden": "The internal resistance of an ammeter is almost zero. So a <b>short circuit</b> path opens across the lamp. The lamp goes out, a very large current is drawn from the battery, and the ammeter can burn out.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 12
+   },
+   {
+    "baslik": "Mixed circuit",
+    "metin": "A 4 Ω resistor is in series with 6 Ω and 3 Ω resistors connected in parallel. Adjust the battery so that <b>3 A</b> flows in the main branch.",
+    "sahne": {
+     "tur": "fiz9-karisik"
+    },
+    "deger": {
+     "V": 6
+    },
+    "kontroller": [
+     {
+      "ad": "V",
+      "etiket": "Battery",
+      "min": 0,
+      "max": 24,
+      "adim": 2,
+      "tur": "surgu",
+      "birim": "V"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "V": 18
+     },
+     "tamam": "The resistance of the parallel part is 6·3/(6+3) = 2 Ω, and the equivalent resistance is 6 Ω. So V = 3 · 6 = <b>18 V</b>. 6 V drops across the parallel part. 1 A passes through the 6 Ω and 2 A through the 3 Ω, and the total is 3 A again. This is the junction rule.",
+     "ipucu": "First reduce the parallel part to a single resistor: 6·3/(6+3)."
+    },
+    "kart": 10
+   }
+  ],
+  "kapanis": [
+   "Current is the charge that passes per unit time and is found with I = q / t. Conventional current is opposite to the electrons.",
+   "According to Ohm's law, V = I · R. The slope of the V–I graph gives the resistance.",
+   "The resistance of a wire is found with R = ρ · L / A. A wire drawn out to twice its length has 4 times the resistance.",
+   "In series the current is shared and Req is the sum. In parallel the voltage is shared and Req is smaller than the smallest resistor.",
+   "An ammeter is connected in series (internal resistance ≈ 0), and a voltmeter in parallel (internal resistance very large)."
+  ],
+  "soruOnce": true
+ },
+ "elektriksel-enerji": {
+  "id": "elektriksel-enerji",
+  "ders": "fizik",
+  "konu": "elektriksel-enerji",
+  "baslik": "Electrical Energy and Power",
+  "ozet": "Charge the phone and compare the brightness of the bulbs. Heat the wire, read the label, and lower the bill. Switch to LED without blowing the fuse.",
+  "adimlar": [
+   {
+    "baslik": "Energy = V · I · t",
+    "metin": "The energy transferred is found with <b>W = V · I · t</b>. The charger delivers 5 V and 2 A. Transfer <b>36 000 J</b> of energy to the phone.",
+    "sahne": {
+     "tur": "fiz9-sarj"
+    },
+    "deger": {
+     "t": 0
+    },
+    "kontroller": [
+     {
+      "ad": "t",
+      "etiket": "Time",
+      "min": 0,
+      "max": 120,
+      "adim": 10,
+      "tur": "surgu",
+      "birim": "min"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "t": 60
+     },
+     "tamam": "W = 5 · 2 · 3600 = <b>36 000 J</b>. 1 hour is 3600 seconds. Do not forget to convert minutes to seconds.",
+     "ipucu": "How many minutes is 36 000 / (5 · 2) seconds?"
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Which one is bright?",
+    "metin": "The brightness of a bulb is set by its <b>power</b>. The resistances of the bulbs are 2 Ω and 4 Ω. In series the current is shared, so <b>P = I² · R</b> is used. In parallel the voltage is shared, so <b>P = V² / R</b> is used. Try both connections.",
+    "sahne": {
+     "tur": "fiz9-iki-ampul",
+     "r1": 2,
+     "r2": 4
+    },
+    "deger": {
+     "p": 0,
+     "s": 0
+    },
+    "kontroller": [
+     {
+      "ad": "p",
+      "etiket": "Connect in parallel",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which bulb is brighter when they are in series?",
+     "secenekler": [
+      {
+       "yazi": "The 2 Ω one",
+       "neden": "In series the current is shared, and since P = I² · R, the smaller resistor uses less power. The 2 Ω bulb glows brighter only in parallel."
+      },
+      {
+       "yazi": "The 4 Ω one",
+       "neden": "In series the same current passes through both, and since P = I² · R, the larger resistor uses more power. In parallel, P = V² / R, so the 2 Ω bulb glows brighter.",
+       "dogru": true
+      },
+      {
+       "yazi": "Equally bright",
+       "neden": "The resistances are different. So they use different powers at the same current."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Joule heating",
+    "metin": "Heat is found with <b>Q = I² · R · t</b>. A 10 Ω wire gives 600 J of heat in 1 minute at a current of 1 A. Make the heat <b>4 times</b> as large.",
+    "sahne": {
+     "tur": "fiz9-joule"
+    },
+    "deger": {
+     "I": 1
+    },
+    "kontroller": [
+     {
+      "ad": "I",
+      "etiket": "Current",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac",
+      "birim": "A"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "I": 2
+     },
+     "tamam": "When the current doubles, the heat becomes 2² = <b>4 times</b> as large: 2² · 10 · 60 = 2400 J. That is why fuses and cable thickness matter.",
+     "ipucu": "Heat increases with the square of the current."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Read the label",
+    "metin": "The heater's label says <b>220 V, 2000 W</b>. Its resistance is R = V² / P = 24.2 Ω and does not change. We plug the heater into a 110 V outlet.",
+    "sahne": {
+     "tur": "fiz9-etiket",
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "How many watts does the heater use at 110 V?",
+     "secenekler": [
+      {
+       "yazi": "1000 W",
+       "neden": "The voltage was halved, but power is proportional to V². The square of one half is one quarter."
+      },
+      {
+       "yazi": "2000 W",
+       "neden": "The power on the label is valid only at 220 V."
+      },
+      {
+       "yazi": "500 W",
+       "neden": "The resistance is constant, so P = V² / R = 110² / 24.2 = <b>500 W</b>. When the voltage is halved, the power drops to one quarter.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Lower the bill",
+    "metin": "Energy (kWh) is power (kW) multiplied by time (hours). A 1.5 kW air conditioner runs for 30 days, and 1 kWh costs 3 TL. Adjust the daily use so that the monthly cost does not exceed <b>270 TL</b>.",
+    "sahne": {
+     "tur": "fiz9-fatura"
+    },
+    "deger": {
+     "h": 4
+    },
+    "kontroller": [
+     {
+      "ad": "h",
+      "etiket": "Daily use (hours)",
+      "min": 1,
+      "max": 6,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "h": [
+       1,
+       2
+      ]
+     },
+     "tamam": "If it runs 2 hours a day, it uses 1.5 · 2 · 30 = 90 kWh, and the cost is 90 · 3 = <b>270 TL</b>. Halving the time also halves the bill.",
+     "ipucu": "270 TL / 3 TL makes 90 kWh. How many hours is 90 / (1.5 · 30)?"
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Don't blow the fuse",
+    "metin": "The fuse is rated 16 A, and the 2000 W heater is on. Switch on one more device next to it, but do not blow the fuse.",
+    "sahne": {
+     "tur": "fiz9-sigorta"
+    },
+    "deger": {
+     "a": 1,
+     "b": 0,
+     "c": 0
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "Heater",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "b",
+      "etiket": "Kettle",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "c",
+      "etiket": "Iron",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "a": 1,
+      "b": 0,
+      "c": 1
+     },
+     "tamam": "9.1 A + 5 A makes about 14.1 A, and this value is below the limit. With the kettle the total would be 19.1 A, and the fuse would blow. A fuse protects the cable from overheating.",
+     "ipucu": "The current of each device is found with I = P / 220. The total current must not exceed 16 A."
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Efficiency",
+    "metin": "A 60 W incandescent bulb and a 9 W LED give the same light. Switch to LED.",
+    "sahne": {
+     "tur": "fiz9-verim"
+    },
+    "deger": {
+     "led": 0
+    },
+    "kontroller": [
+     {
+      "ad": "led",
+      "etiket": "Switch to LED",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "If it is on 5 hours a day, how much energy does the LED save in a year?",
+     "secenekler": [
+      {
+       "yazi": "About 9 kWh",
+       "neden": "That only looks at the 9 W the LED uses. The difference is 60 − 9 = 51 W."
+      },
+      {
+       "yazi": "About 51 kWh",
+       "neden": "51 is the difference in watts. It has to be multiplied by the number of hours and days."
+      },
+      {
+       "yazi": "About 93 kWh",
+       "neden": "The difference is 51 W. 51 W · 5 hours · 365 days makes about 93 000 Wh, that is <b>93 kWh</b>.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 13
+   }
+  ],
+  "kapanis": [
+   "Electrical energy is found with W = V · I · t. Power is P = V · I = I² · R = V² / R.",
+   "Power sets the brightness. In series the larger resistor glows brighter, and in parallel the smaller one does.",
+   "Heat is found with Q = I² · R · t. When the current doubles, the heat becomes four times as large.",
+   "The kWh is a unit of energy. The bill is power multiplied by time and by the unit price.",
+   "Home wiring is parallel, and the fuse limits the total current. An LED gives the same light with much less energy."
+  ],
+  "soruOnce": true
+ },
+ "manyetizma": {
+  "id": "manyetizma",
+  "ders": "fizik",
+  "konu": "manyetizma",
+  "baslik": "Magnetism",
+  "ozet": "Push and pull magnets, then break one. Explore the field with a compass and look around a current-carrying wire. Build an electromagnet and measure the force on a wire.",
+  "adimlar": [
+   {
+    "baslik": "Poles",
+    "metin": "Every magnet has an <b>N</b> (north) and an <b>S</b> (south) pole. Right now two N poles face each other. Flip the magnet on the right.",
+    "sahne": {
+     "tur": "fiz10-kutuplar"
+    },
+    "deger": {
+     "c": 0
+    },
+    "kontroller": [
+     {
+      "ad": "c",
+      "etiket": "Flip the right magnet",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "c": 1
+     },
+     "tamam": "Opposite poles attract each other, and like poles repel. <b>Repulsion</b> proves that an object is a magnet. Attraction is not proof, because a magnet also attracts an iron nail."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Broken magnet",
+    "metin": "The left half of the bar magnet is the S pole and the right half is the N pole. What happens if you break it right in the middle?",
+    "sahne": {
+     "tur": "fiz10-kirik",
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to the pieces when a magnet is broken in the middle?",
+     "secenekler": [
+      {
+       "yazi": "One is only N, the other only S",
+       "neden": "Poles cannot be separated from each other. A new pole forms at the broken end of each piece."
+      },
+      {
+       "yazi": "The magnetism disappears",
+       "neden": "Magnetism comes from tiny magnets at the atomic scale. Breaking the magnet does not destroy them."
+      },
+      {
+       "yazi": "Both become full magnets",
+       "dogru": true,
+       "neden": "New poles form at the broken ends right away. The right end of the left piece becomes N, and the left end of the right piece becomes S."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Field lines",
+    "metin": "Move the compass to the numbered spots and watch how the needle turns.",
+    "sahne": {
+     "tur": "fiz10-alan"
+    },
+    "deger": {
+     "p": 1
+    },
+    "kontroller": [
+     {
+      "ad": "p",
+      "etiket": "Compass position",
+      "min": 1,
+      "max": 6,
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Where is the magnetic field strongest?",
+     "secenekler": [
+      {
+       "yazi": "Near the poles",
+       "dogru": true,
+       "neden": "The lines gather and get denser at the poles. The field (B) is strongest there."
+      },
+      {
+       "yazi": "Just above the middle",
+       "neden": "The lines are sparse in the middle region. So at spot 2 the field is only of medium strength."
+      },
+      {
+       "yazi": "Far from the magnet",
+       "neden": "Sparse lines mean a weak field. The field is weak at spots 1 and 6."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Current-carrying wire",
+    "metin": "This is Oersted's experiment, and the wire is perpendicular to the screen. In the <b>right-hand rule</b>, the thumb shows the direction of the current and the curled fingers show the direction of the field. Turn on the current, reverse its direction, and look at the compasses.",
+    "sahne": {
+     "tur": "fiz10-oersted"
+    },
+    "deger": {
+     "i": 0,
+     "y": 0
+    },
+    "kontroller": [
+     {
+      "ad": "i",
+      "etiket": "Turn on the current",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "y",
+      "etiket": "Current into the screen (⊗)",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "If the current goes into the screen (⊗), which way do the field lines circle?",
+     "secenekler": [
+      {
+       "yazi": "Counterclockwise",
+       "neden": "That happens when the current flows toward you (⊙). When the current reverses, the field reverses too."
+      },
+      {
+       "yazi": "Clockwise",
+       "dogru": true,
+       "neden": "By the right-hand rule, the thumb shows the direction of the current (into the screen). The curled fingers then turn clockwise."
+      },
+      {
+       "yazi": "Outward from the wire",
+       "neden": "The field lines of a wire are circles around the wire. The compasses sit tangent to these circles."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Electromagnet",
+    "metin": "A current of 2 A flows through the coil. Build an electromagnet that picks up exactly <b>8 paper clips</b>.",
+    "sahne": {
+     "tur": "fiz10-elektromiknatis"
+    },
+    "deger": {
+     "N": 10,
+     "c": 0
+    },
+    "kontroller": [
+     {
+      "ad": "N",
+      "etiket": "Turns",
+      "min": 10,
+      "max": 50,
+      "adim": 10,
+      "tur": "sayac"
+     },
+     {
+      "ad": "c",
+      "etiket": "Insert iron core",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "N": 40,
+      "c": 1
+     },
+     "tamam": "40 turns with an iron core picked up 8 paper clips. The core itself becomes magnetized in the field of the coil and adds to the field.",
+     "ipucu": "A coil without a core is weak. First insert the iron core, then adjust the number of turns."
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Force on a wire",
+    "metin": "A force of <b>F = B·I·L·sinθ</b> acts on a current-carrying wire in a field. Here B = 0.2 T, I = 5 A, and L = 0.5 m. Adjust the angle so that the force is <b>0.25 N</b>.",
+    "sahne": {
+     "tur": "fiz10-kuvvet"
+    },
+    "deger": {
+     "a": 90
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "Angle θ",
+      "min": 0,
+      "max": 90,
+      "adim": 15,
+      "tur": "surgu",
+      "birim": "°"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "a": 30
+     },
+     "tamam": "F = 0.2 · 5 · 0.5 · sin30° = 0.5 · 0.5 = <b>0.25 N</b>. The force is greatest when the wire is perpendicular to the field (0.5 N). When the wire is parallel to the field, the force is zero.",
+     "ipucu": "0.2 · 5 · 0.5 makes 0.5 N. So sinθ must be 0.5."
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Electric motor",
+    "metin": "The <b>commutator</b> is the part that reverses the direction of the current in the coil every half turn. This motor has no commutator, and the current always flows in the same direction.",
+    "sahne": {
+     "tur": "fiz10-motor",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What would the coil do without a commutator?",
+     "secenekler": [
+      {
+       "yazi": "Swing back and forth",
+       "dogru": true,
+       "neden": "When the plane of the loop is perpendicular to the field, the forces on the sides lie along the same line and the torque is zero. The coil swings back and forth around this position."
+      },
+      {
+       "yazi": "Turn continuously",
+       "neden": "Once the plane of the loop passes the position perpendicular to the field, the forces pull the coil back. For continuous rotation, the direction of the current has to be reversed."
+      },
+      {
+       "yazi": "Not turn at all",
+       "neden": "At the start the forces create a torque and the coil begins to turn. But the coil cannot turn continuously."
+      }
+     ]
+    },
+    "kart": 14
+   }
+  ],
+  "kapanis": [
+   "Like poles repel each other, and opposite poles attract. Repulsion proves that an object is a magnet. There is no magnet with a single pole.",
+   "Field lines run from N to S outside the magnet. Where the lines are dense, the field is strong. The N end of a compass shows the direction of the field.",
+   "A wire carrying current creates a field around itself: B = 2k·I/d. The direction of the field is found with the right-hand rule.",
+   "An electromagnet gets stronger with turns, current, and an iron core.",
+   "A force of F = B·I·L·sinθ acts on a wire in a field. Thanks to the commutator, a motor turns this force into continuous rotation."
+  ],
+  "soruOnce": true
  }
 }

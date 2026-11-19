@@ -210,10 +210,11 @@ const YERLER = [[44, 62], [170, 58], [266, 120], [170, 186], [74, 120], [306, 20
 function Alan({ v }: SahneProps) {
   const p = sinir(Math.round(v.p ?? 1), 1, 6), [px, py] = YERLER[p - 1], [bx, by] = alan(px, py);
   const B = Math.hypot(bx, by), ref = Math.hypot(...alan(266, 120)), oran = B / ref;
-  const derece = oran > 0.6 ? cev("güçlü") : oran > 0.25 ? "orta" : cev("zayıf");
+  const sev = oran > 0.6 ? 2 : oran > 0.25 ? 1 : 0;
+  const derece = [cev("zayıf"), cev("orta"), cev("güçlü")][sev];
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={cev("Pusula {0}. yerde; alan {1}", p, derece)}>
-      <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{p}{cev(". yerde alan:")} <tspan fill={derece === "güçlü" ? "var(--c2)" : derece === "orta" ? "var(--c4)" : "var(--muted)"}>{derece}</tspan></text>
+      <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("{0}. yerde alan:", p)} <tspan fill={sev === 2 ? "var(--c2)" : sev === 1 ? "var(--c4)" : "var(--muted)"}>{derece}</tspan></text>
       <g>
         {CIZGILER.map((c, i) => (
           <g key={i}>
@@ -244,7 +245,7 @@ function Oersted({ v }: SahneProps) {
   const i = (v.i ?? 0) === 1, giren = (v.y ?? 0) === 1, cx = 170, cy = 128;
   const yon = giren ? 1 : -1; // −1: saat yönünün tersi (ekranda)
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={!i ? cev("Akım yok: pusulalar kuzeyi gösteriyor") : cev("Akım {0} dönüyor", giren ? "ekrana giriyor; alan saat yönünde" : "ekrandan çıkıyor. Alan saat yönünün tersine")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={!i ? cev("Akım yok: pusulalar kuzeyi gösteriyor") : cev("Akım {0} dönüyor", giren ? cev("ekrana giriyor; alan saat yönünde") : cev("ekrandan çıkıyor. Alan saat yönünün tersine"))}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill={i ? "var(--c5)" : "var(--muted)"}>{!i ? cev("Akım yok: pusulalar kuzeyi gösteriyor") : giren ? cev("⊗ akım ekrana giriyor: alan saat yönünde") : cev("⊙ akım sana doğru: alan saat yönünün tersine")}</text>
       {i && (
         <g>
@@ -282,7 +283,7 @@ function Elektromiknatis({ v }: SahneProps) {
   const N = sinir(v.N ?? 10, 10, 50), c = (v.c ?? 0) === 1, n = sinir(Math.floor((N * 2 * (c ? 1 : 0.25)) / 10), 0, 10);
   const ucY = 92, askiX = c ? 262 : 216;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0} sarım, {1}: {2} ataç çekiliyor", N, c ? "demir çekirdekli" : "çekirdeksiz", n)}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0} sarım, {1}: {2} ataç çekiliyor", N, c ? cev("demir çekirdekli") : cev("çekirdeksiz"), n)}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Çekilen ataç:")} <tspan fill="var(--c2)">{n}</tspan></text>
       <path d="M88 92 V56 H40 V112 M40 136 V170 H210 V92" fill="none" stroke="var(--ink)" strokeWidth={2} />
       <rect x={24} y={112} width={32} height={24} rx={3} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2} />
@@ -316,7 +317,7 @@ function Kuvvet({ v }: SahneProps) {
       <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("F = B·I·L·sinθ =")} <tspan fill="var(--c2)">{say(F, 3)} N</tspan></text>
       <g>
         {[56, 92, 128, 164, 200].map((y) => <Ok key={y} x1={22} y1={y} x2={318} y2={y} renk="var(--c5)" kalin={1.4} />)}
-        <text x={318} y={46} fontSize={12} fontWeight={800} fill="var(--c5)" textAnchor="end">B = 0,2 T</text>
+        <text x={318} y={46} fontSize={12} fontWeight={800} fill="var(--c5)" textAnchor="end">B = {say(0.2)} T</text>
       </g>
       <line x1={cx - ux * L} y1={cy - uy * L} x2={cx + ux * L} y2={cy + uy * L} stroke="var(--ink)" strokeWidth={5} strokeLinecap="round" />
       <Uc x={cx + ux * (L - 22)} y={cy + uy * (L - 22)} aci={Math.atan2(uy, ux)} renk="var(--c4)" b={8} />
@@ -324,7 +325,7 @@ function Kuvvet({ v }: SahneProps) {
       {a > 0 && <path d={`M${cx + 34} ${cy} A34 34 0 0 0 ${cx + Math.cos(a * DER) * 34} ${cy - Math.sin(a * DER) * 34}`} fill="none" stroke="var(--ink)" strokeWidth={1.4} />}
       <text x={cx + 40} y={cy + 18} fontSize={12} fontWeight={800} fill="var(--ink)">θ = {a}°</text>
       {F > 0.001 ? <Yon x={cx} y={cy} cikan={false} r={5 + 18 * (F / 0.25) * 0.5} renk="var(--c2)" /> : <circle cx={cx} cy={cy} r={3} fill="var(--ink)" />}
-      <text x={14} y={228} fontSize={11.5} fontWeight={700} fill="var(--muted)">{F > 0.001 ? cev("⊗ kuvvet ekrana giriyor (L = 0,5 m)") : "tel alana paralel: kuvvet yok"}</text>
+      <text x={14} y={228} fontSize={11.5} fontWeight={700} fill="var(--muted)">{F > 0.001 ? cev("⊗ kuvvet ekrana giriyor (L = 0,5 m)") : cev("tel alana paralel: kuvvet yok")}</text>
     </svg>
   );
 }
@@ -371,7 +372,7 @@ function Faraday({ v, t, oynuyor, s, kosular }: SahneProps) {
   const sapma = oynuyor && hareket && zt > 0 ? (h / 3) * yakin : 0;
   const iz = kosular.slice(-3).map((k) => sinir(k.h ?? 1, 1, 3) / 3);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Mıknatıs {0} birim hızla bobine itiliyor; galvanometre {1}", h, sapma > 0.05 ? "sapıyor" : "sıfırda")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Mıknatıs {0} birim hızla bobine itiliyor; galvanometre {1}", h, sapma > 0.05 ? cev("sapıyor") : cev("sıfırda"))}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill={sapma > 0.05 ? "var(--c2)" : "var(--muted)"}>{sapma > 0.05 ? cev("Akı değişiyor: indüksiyon akımı") : zt > 0 && !oynuyor ? cev("Mıknatıs durdu: akım yok") : cev("Mıknatısı bobine it")}</text>
       <path d="M200 120 V158 H232 M296 120 V158 H264" fill="none" stroke="var(--ink)" strokeWidth={2} />
       <g>
@@ -416,12 +417,12 @@ function Cubuk({ v }: SahneProps) {
   const h = sinir(v.v ?? 0, 0, 10), e = 0.5 * 0.4 * h;
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={cev("Çubuk {0} m/s ile kayıyor; ε = {1} V", h, say(e, 2))}>
-      <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">ε = B·L·v = 0,5·0,4·{h} = <tspan fill="var(--c2)">{say(e, 2)} V</tspan></text>
+      <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">ε = B·L·v = {say(0.5)}·{say(0.4)}·{h} = <tspan fill="var(--c2)">{say(e, 2)} V</tspan></text>
       <g>
         {[100, 150, 200, 250, 300].flatMap((x) => [94, 140, 186].map((y) => (
           <path key={`${x}-${y}`} d={`M${x - 4} ${y - 4} L${x + 4} ${y + 4} M${x + 4} ${y - 4} L${x - 4} ${y + 4}`} stroke="var(--c5)" strokeWidth={1.5} opacity={0.6} />
         )))}
-        <text x={326} y={50} fontSize={11.5} fontWeight={800} fill="var(--c5)" textAnchor="end">⊗ B = 0,5 T</text>
+        <text x={326} y={50} fontSize={11.5} fontWeight={800} fill="var(--c5)" textAnchor="end">⊗ B = {say(0.5)} T</text>
       </g>
       <path d="M330 62 H40 V125 M40 155 V218 H330" fill="none" stroke="var(--ink)" strokeWidth={2.4} />
       <Lamba x={40} y={140} p={e / 1.2} />
@@ -431,7 +432,7 @@ function Cubuk({ v }: SahneProps) {
         <text x={146} y={132} fontSize={11.5} fontWeight={800} fill="var(--c2)" textAnchor="middle">v</text>
         {h > 0 && <animateTransform attributeName="transform" type="translate" from="0 0" to="190 0" dur={`${(10 / h).toFixed(2)}s`} repeatCount="indefinite" />}
       </g>
-      <text x={56} y={82} fontSize={11.5} fontWeight={800} fill="var(--ink)">L = 0,4 m</text>
+      <text x={56} y={82} fontSize={11.5} fontWeight={800} fill="var(--ink)">L = {say(0.4)} m</text>
     </svg>
   );
 }
@@ -559,7 +560,7 @@ function Iletim({ v }: SahneProps) {
         <text x={309} y={162} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("şehir")}</text>
       </g>
       <g>
-        <text x={14} y={196} fontSize={12} fontWeight={800} fill="var(--ink)">{cev("Kayıp = I²·R =")} <tspan fill="var(--c2)">{say(kayip, 1)} {cev("kW")}</tspan> (%{say(yuzde, 2)})</text>
+        <text x={14} y={196} fontSize={12} fontWeight={800} fill="var(--ink)">{cev("Kayıp = I²·R =")} <tspan fill="var(--c2)">{say(kayip, 1)} {cev("kW")}</tspan> ({cev("%{0}", say(yuzde, 2))})</text>
         <rect x={14} y={208} width={312} height={12} rx={6} fill="var(--line)" />
         <rect x={14} y={208} width={Math.max(4, 312 * p)} height={12} rx={6} fill="var(--c2)" />
       </g>
