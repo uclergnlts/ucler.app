@@ -3,6 +3,7 @@
 import Link from "next/link";
 import veri from "@/content/cizimler.json";
 import { YOUTUBE } from "@/lib/site";
+import { CizgiIzleyen, CizgiYuruyen } from "./Cizgi";
 import CizimGaleri, { type Grup } from "./CizimGaleri";
 import { Logo } from "./temel";
 import type { Dil } from "./Tanitim";
@@ -61,12 +62,15 @@ export default function Cizimler({ dil }: { dil: Dil }) {
             <a href={YOUTUBE.url} className="rounded-md border border-[var(--line-2)] px-3.5 py-2 hover:border-[var(--ink)]">YouTube</a>
           </nav>
         </header>
-        <section className={`${sarmal} grid gap-5 pt-8 pb-12 md:pt-14 md:pb-16`}>
+        <section className={`${sarmal} grid items-end gap-6 pt-8 pb-12 sm:grid-cols-[1fr_auto] md:pt-14 md:pb-16`}>
+          <div className="grid gap-5">
           <p className={mono}>{m.k1}</p>
           <h1 className="max-w-[16ch] font-display text-[40px] leading-[.98] font-extrabold tracking-[-.02em] uppercase sm:text-[60px]">
             {m.h1a}<span className="text-[var(--mark)]">{m.h1b}</span>..
           </h1>
           <p className="max-w-[52ch] text-[18px] leading-relaxed text-[var(--muted)]">{m.giris(n, gruplar.length)}</p>
+          </div>
+          <CizgiIzleyen className="hidden w-[150px] sm:block md:w-[190px]" />
         </section>
       </div>
 
@@ -75,6 +79,7 @@ export default function Cizimler({ dil }: { dil: Dil }) {
       </div>
 
       <footer className="bg-[#070a12]">
+        <CizgiYuruyen className={sarmal} />
         <div className={`${sarmal} flex flex-wrap items-center justify-between gap-4 border-t border-[var(--line)] py-6 text-[13px] text-[var(--muted)]`}>
           <Link href={ANA_YOL[dil]} aria-label={m.ana}><Logo className="text-[20px]" /></Link>
           <a href={YOUTUBE.url} className="hover:text-[var(--ink)]">{m.kanal} →</a>
