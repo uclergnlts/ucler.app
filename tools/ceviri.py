@@ -47,7 +47,7 @@ def metinler(o, yol="", ust=None, out=None):
         out = []
     if isinstance(o, str):
         anahtar = yol.rsplit(".", 1)[-1] if not yol.rsplit(".", 1)[-1].isdigit() else (ust or "")
-        if anahtar in ATLA or ".sahne." in "." + yol + "." or (anahtar == "ad" and re.search(r"(kontroller|girdiler|ciktilar)\.\d+\.ad$", yol)):
+        if anahtar in ATLA or ".sahne." in "." + yol + "." or (anahtar == "ad" and re.search(r"(kontroller|girdiler)\.\d+\.ad$", yol)):
             return out
         if o.lstrip().startswith("<svg"):
             for i, m in enumerate(SVG_YAZI.finditer(o)):
@@ -122,7 +122,8 @@ def durum(ders, konu):
     eksik = [y for y, m, z in src if z and y not in cev]
     bayat = [y for y, m, z in src if y in cev and y in oz and oz[y] != ozet(m)]
     bicim = [y for y, m, z in src if y in cev and iz(m) != iz(cev[y])]
-    fazla = [y for y in cev if y not in {s[0] for s in src}]
+    # SVG içindeki tek harfli simge (ör. "v" altındaki "a" indisi) listede çıkmaz ama elle çevrilebilir: fazla sayılmaz.
+    fazla = [y for y in cev if y not in {s[0] for s in src} and not re.search(r"svg#\d+$", y)]
     return cev, eksik, bayat, bicim, fazla
 
 

@@ -116,8 +116,8 @@ function IkiArac({ v }: SahneProps) {
   const yon = (x: number) => (x > 0 ? cev("doğuya") : x < 0 ? cev("batıya") : "");
   return (
     <svg viewBox="0 0 340 250" role="img" aria-label={cev("A doğuya 90, B {0} km/h {1}; A'ya göre B {2} km/h {3}", Math.abs(vB), yon(vB), Math.abs(r), yon(r))}>
-      <AracSatir y={72} baslik={cev("Yerden bakış")} a={vA} b={vB} aYazi="90 km/h" bYazi={vB === 0 ? "duruyor" : `${Math.abs(vB)} km/h`} />
-      <AracSatir y={168} baslik={cev("A'daki sürücünün gözünden")} a={0} b={r} aYazi="durgun" bYazi={r === 0 ? "durgun" : `${Math.abs(r)} km/h ${yon(r)}`} />
+      <AracSatir y={72} baslik={cev("Yerden bakış")} a={vA} b={vB} aYazi="90 km/h" bYazi={vB === 0 ? cev("duruyor") : `${Math.abs(vB)} km/h`} />
+      <AracSatir y={168} baslik={cev("A'daki sürücünün gözünden")} a={0} b={r} aYazi={cev("durgun")} bYazi={r === 0 ? cev("durgun") : `${Math.abs(r)} km/h ${yon(r)}`} />
       <text x={170} y={238} fontSize={13.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">
         {cev("A'ya göre B:")} {vB} − 90 = {r} {cev("km/h")}
       </text>
@@ -193,10 +193,10 @@ function Nehir({ s, v, t, oynuyor, kosular }: SahneProps) {
           <text x={BX + 14} y={KIYI1 - 20} fontSize={11.5} fontWeight={700} fill="var(--c2)">{cev("kayık")} {say(h.vk)} m/s</text>
         </g>
       )}
-      <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Nehir")} {h.gen} {cev("m · burun")} {h.aci === 0 ? cev("kıyıya dik") : cev("{0}° akıntıya karşı", h.aci)}</text>
+      <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Nehir {0} m · burun {1}", h.gen, h.aci === 0 ? cev("kıyıya dik") : cev("{0}° akıntıya karşı", h.aci))}</text>
       <text x={170} y={238} fontSize={13} fontWeight={800} textAnchor="middle" fill={bitti ? "var(--ink)" : "var(--muted)"}>
         {bitti
-          ? cev("Geçiş {0} s · sürüklenme {1}", say(h.tc), Math.abs(h.kay) < 0.5 ? "yok" : `${say(Math.abs(h.kay))} m ${h.kay > 0 ? "aşağı" : "yukarı"}`)
+          ? cev("Geçiş {0} s · sürüklenme {1}", say(h.tc), Math.abs(h.kay) < 0.5 ? cev("yok§sürüklenme") : h.kay > 0 ? cev("{0} m aşağı", say(Math.abs(h.kay))) : cev("{0} m yukarı", say(Math.abs(h.kay))))
           : oynuyor ? `${say(u * h.tc)} s` : cev("Oynat ve kayığın nereye vardığına bak")}
       </text>
     </svg>
@@ -318,13 +318,13 @@ function Kaydirak({ v, t, oynuyor, s }: SahneProps) {
   const f = yuk(p), PE = top * f, isi = srt ? 0.6 * top * (1 - f) : 0, KE = top - PE - isi, hiz = Math.sqrt((2 * KE) / m);
   const bx = X(p), by = Yk(p);
   return (
-    <svg viewBox="0 0 340 250" role="img" aria-label={cev("Kaydırak, sürtünme {0}: kinetik {1} J, ısı {2} J", srt ? "var" : "yok", Math.round(KE), Math.round(isi))}>
+    <svg viewBox="0 0 340 250" role="img" aria-label={cev("Kaydırak, sürtünme {0}: kinetik {1} J, ısı {2} J", srt ? cev("var§sürtünme") : cev("yok§sürtünme"), Math.round(KE), Math.round(isi))}>
       <line x1={14} x2={330} y1={190} y2={190} stroke="var(--ink)" strokeWidth={1.5} />
       <polyline points={pts} fill="none" stroke="var(--ink)" strokeWidth={3} strokeLinejoin="round" />
       <line x1={40} x2={40} y1={60} y2={190} stroke="var(--ink)" strokeWidth={2} />
       {srt && <polyline points={pts} fill="none" stroke="var(--c4)" strokeWidth={6} opacity={0.25 + 0.5 * p} />}
       <circle cx={bx} cy={by - 11} r={10} fill="var(--c2)" />
-      <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Sürtünme")} {srt ? "var" : "yok"} {cev("· hız")} {say(hiz)} m/s</text>
+      <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{srt ? cev("Sürtünme var · hız {0} m/s", say(hiz)) : cev("Sürtünme yok · hız {0} m/s", say(hiz))}</text>
       <Cubuk x={200} y={70} w={120} deger={PE} enCok={top} renk="var(--c1)" ad={cev("Potansiyel {0} J", Math.round(PE))} />
       <Cubuk x={200} y={108} w={120} deger={KE} enCok={top} renk="var(--c2)" ad={cev("Kinetik {0} J", Math.round(KE))} />
       <Cubuk x={200} y={146} w={120} deger={isi} enCok={top} renk="var(--c4)" ad={cev("Isı {0} J", Math.round(isi))} />
@@ -388,7 +388,9 @@ export const FIZIK5: Record<string, SahneKaydi> = {
       if (Math.abs(h.kay) < 0.5) return null;
       return {
         baslik: cev("Henüz tam karşı değil"),
-        metin: cev("Kayık {0} m {1}. Akıntıyı dengelemek için kayığın akıntıya karşı bileşeni 3 m/s olmalı.", say(Math.abs(h.kay)), h.kay > 0 ? "aşağı sürüklendi: burnu akıntıya karşı biraz daha çevir" : "yukarı kaçtı: burnu biraz daha az çevir"),
+        metin: h.kay > 0
+          ? cev("Kayık {0} m aşağı sürüklendi: burnu akıntıya karşı biraz daha çevir. Akıntıyı dengelemek için kayığın akıntıya karşı bileşeni 3 m/s olmalı.", say(Math.abs(h.kay)))
+          : cev("Kayık {0} m yukarı kaçtı: burnu biraz daha az çevir. Akıntıyı dengelemek için kayığın akıntıya karşı bileşeni 3 m/s olmalı.", say(Math.abs(h.kay))),
       };
     },
   },

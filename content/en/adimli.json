@@ -738,5 +738,251 @@
    "If the position-time graph is flat, the car is stopped. If it goes down, the car is moving back."
   ],
   "soruOnce": true
+ },
+ "bagil-hareket": {
+  "id": "bagil-hareket",
+  "ders": "fizik",
+  "konu": "bagil-hareket",
+  "baslik": "Relative motion",
+  "ozet": "Try it first, then learn its name. Switch the observer, and look at velocity from cars and from a boat.",
+  "adimlar": [
+   {
+    "baslik": "Relative to whom?",
+    "metin": "The train moves at 20 m/s relative to the ground. Switch the observer. Look first from the platform, then from the seat of the friend on the train.",
+    "sahne": {
+     "tur": "fiz5-gozlemci"
+    },
+    "deger": {
+     "g": 0
+    },
+    "kontroller": [
+     {
+      "ad": "g",
+      "etiket": "Look from the train",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Is the passenger on the train moving?",
+     "secenekler": [
+      {
+       "yazi": "Yes",
+       "neden": "That is true for the person on the platform. But relative to the friend on the train, the passenger is not moving at all."
+      },
+      {
+       "yazi": "It depends on who is looking",
+       "dogru": true,
+       "neden": "The passenger moves at 20 m/s relative to the platform and is at rest relative to the friend. The observer you measure motion from is called the <b>reference frame</b>. A velocity is incomplete without its reference."
+      },
+      {
+       "yazi": "No",
+       "neden": "That is true for the friend. But how does the person on the platform see the passenger?"
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Relative velocity",
+    "metin": "A moves east at 90 km/h. Set B's velocity so that the driver of A sees B at rest.",
+    "sahne": {
+     "tur": "fiz5-iki-arac"
+    },
+    "deger": {
+     "b": 60
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "B's velocity (− is west)",
+      "min": -90,
+      "max": 120,
+      "adim": 30,
+      "birim": "km/h"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "b": 90
+     },
+     "tamam": "90 − 90 = 0. Cars moving in the same direction at the same speed see each other at rest."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Opposite directions",
+    "metin": "Now let B move west. Make the driver of A see B moving <b>west at 150 km/h</b>.",
+    "sahne": {
+     "tur": "fiz5-iki-arac"
+    },
+    "deger": {
+     "b": 60
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "B's velocity (− is west)",
+      "min": -90,
+      "max": 120,
+      "adim": 30,
+      "birim": "km/h"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "b": -60
+     },
+     "tamam": "The velocity of B relative to A is −60 − 90 = −150 km/h, which is 150 km/h toward the west. Speeds in opposite directions add."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "The escalator",
+    "metin": "A 24 m escalator moves up at 1 m/s, so if you stand on it you reach the top in 24 s. If you walk at 0.5 m/s on a stopped escalator, the climb takes 48 s.",
+    "sahne": {
+     "tur": "fiz5-merdiven",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "If you walk up the moving escalator, how many seconds does it take to reach the top?",
+     "secenekler": [
+      {
+       "yazi": "72 s",
+       "neden": "Both you and the escalator are going up. Together you are faster than either one alone."
+      },
+      {
+       "yazi": "36 s",
+       "neden": "Both the escalator and you are going up. So you must be faster than either one alone."
+      },
+      {
+       "yazi": "16 s",
+       "dogru": true,
+       "neden": "Your velocity relative to the ground is 1 + 0.5 = 1.5 m/s, so the climb takes 24 / 1.5 = 16 s. Velocities add, times do not. If you walked the other way, your velocity would be 1 − 0.5 = 0.5 m/s and the climb would take 48 s."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "A boat on a river",
+    "metin": "The boat moves at 4 m/s relative to the water, with its bow pointed straight across. The river is 80 m wide. Change the current and press play at least twice.",
+    "sahne": {
+     "tur": "fiz5-nehir",
+     "sure": 4,
+     "gen": 80,
+     "vk": 4,
+     "aci": 0
+    },
+    "deger": {
+     "va": 1
+    },
+    "kontroller": [
+     {
+      "ad": "va",
+      "etiket": "Current",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac",
+      "birim": "m/s"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "When the current got faster, what happened to the crossing time?",
+     "secenekler": [
+      {
+       "yazi": "It got longer",
+       "neden": "The current runs parallel to the bank. So it does not slow the motion straight across."
+      },
+      {
+       "yazi": "It got shorter",
+       "neden": "The current only pushes the boat sideways. It does not bring it closer to the other bank."
+      },
+      {
+       "yazi": "It stayed the same",
+       "dogru": true,
+       "neden": "The crossing time is the width divided by the velocity perpendicular to the bank: 80 / 4 = 20 s. The current does not change the time. It only increases the drift. With a 3 m/s current the drift is 3 · 20 = 60 m."
+      }
+     ]
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Land directly opposite",
+    "metin": "The river is 60 m wide, the boat's speed is 5 m/s, and the current is 3 m/s. Turn the bow upstream and land the boat <b>directly opposite</b>. Set the angle, then press play.",
+    "sahne": {
+     "tur": "fiz5-nehir",
+     "sure": 4,
+     "gen": 60,
+     "vk": 5,
+     "va": 3
+    },
+    "deger": {
+     "aci": 0
+    },
+    "kontroller": [
+     {
+      "ad": "aci",
+      "etiket": "Bow angle",
+      "min": 0,
+      "max": 60,
+      "birim": "°"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "aci": 37
+     },
+     "ipucu": "The boat's upstream component must exactly balance the current (3 m/s).",
+     "tamam": "At about 37° (sin37° = 0.6), the upstream component is 5 · 0.6 = 3 m/s and balances the current. The component perpendicular to the bank is 5 · 0.8 = 4 m/s, so the crossing takes 60 / 4 = 15 s."
+    },
+    "kart": 12
+   },
+   {
+    "baslik": "Rain from a car",
+    "metin": "With no wind, rain falls straight down at 8 m/s. Speed the car up until the drops come at <b>10 m/s</b> relative to someone in the car.",
+    "sahne": {
+     "tur": "fiz5-yagmur"
+    },
+    "deger": {
+     "v": 0
+    },
+    "kontroller": [
+     {
+      "ad": "v",
+      "etiket": "Car's speed",
+      "min": 0,
+      "max": 10,
+      "adim": 2,
+      "tur": "sayac",
+      "birim": "m/s"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "v": 6
+     },
+     "tamam": "Relative to someone in the car, the rain comes at 8 m/s downward and 6 m/s backward. Its speed is √(8² + 6²) = 10 m/s. For the angle from the vertical, tanθ = 6/8 = 0.75, so θ ≈ 37°."
+    },
+    "kart": 13
+   }
+  ],
+  "kapanis": [
+   "Velocity is measured relative to an observer. A velocity is incomplete without its reference.",
+   "Relative velocity is the object's velocity minus the observer's velocity, as vectors. Velocities in the same direction subtract, and those in opposite directions add.",
+   "Velocity relative to the ground is the velocity relative to the vehicle plus the vehicle's velocity relative to the ground. Velocities add, times do not.",
+   "On a river, crossing time = width / velocity perpendicular to the bank. The current does not change the time. It carries the boat downstream.",
+   "From a vehicle, rain looks slanted because of its relative velocity."
+  ],
+  "soruOnce": true
  }
 }
