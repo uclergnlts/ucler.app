@@ -2,6 +2,7 @@
 // Oyun: formüldeki atomları say. 10 tur, dört seçenek.
 // Cevaplar elle yazılmaz: lib/formul.ts formülü çözümleyip sayar. Yanlış seçenekler sık yapılan hatalardan gelir
 // (parantez indisini ya da katsayıyı unutmak).
+import { cev } from "@/lib/dil";
 import Link from "next/link";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { kaydet, PUAN } from "@/lib/puan";
@@ -77,11 +78,11 @@ function Dokum({ s }: { s: Soru }) {
     <>
       <ul className="dokum">
         {[...satir].filter(([el]) => !s.el || el === s.el).map(([el, r]) => <li key={el}>{yaz(el, r)}</li>)}
-        {!s.el && <li><b>Toplam: {[...satir.values()].map((r) => r.deger).join(" + ")} = {s.dogru}</b></li>}
+        {!s.el && <li><b>{cev("Toplam:")} {[...satir.values()].map((r) => r.deger).join(" + ")} = {s.dogru}</b></li>}
       </ul>
       <p className="ipucu">
-        {katsayili ? "Baştaki katsayı formüldeki her atomu çarpar. " : parcalar.length > 1 ? "Noktadan sonraki katsayı yalnızca su moleküllerini çarpar. " : parcalar[0].katkilar.some((k) => k.carpan.length) ? "Parantez dışındaki indis, parantez içindeki her atomu çarpar. " : ""}
-        Mol için de aynı: {parcalar[0].katsayi} mol <Formul f={s.f.replace(/^\d+\s*/, "")} /> içinde {s.dogru} mol {s.el ? `${s.el} atomu` : "atom"} var.
+        {katsayili ? cev("Baştaki katsayı formüldeki her atomu çarpar. ") : parcalar.length > 1 ? cev("Noktadan sonraki katsayı yalnızca su moleküllerini çarpar. ") : parcalar[0].katkilar.some((k) => k.carpan.length) ? cev("Parantez dışındaki indis, parantez içindeki her atomu çarpar. ") : ""}
+        {cev("Mol için de aynı:")} {parcalar[0].katsayi} {cev("mol")} <Formul f={s.f.replace(/^\d+\s*/, "")} /> {cev("içinde")} {s.dogru} {cev("mol")} {s.el ? cev("{0} atomu", s.el) : "atom"} {cev("var.")}
       </p>
     </>
   );
@@ -115,23 +116,23 @@ export default function AtomSayOyun() {
     govde = (
       <section className="oyun-giris">
         <div className="bubble">
-          <h2>Atomları say</h2>
-          <p>Her turda bir formül göreceksin. Toplam atom sayısını ya da istenen elementin atom sayısını bul. İndislere, parantezlere ve katsayılara dikkat et. {TUR} tur.</p>
+          <h2>{cev("Atomları say")}</h2>
+          <p>{cev("Her turda bir formül göreceksin. Toplam atom sayısını ya da istenen elementin atom sayısını bul. İndislere, parantezlere ve katsayılara dikkat et.")} {TUR} {cev("tur.")}</p>
         </div>
-        <button className="btn main" onClick={basla}>Başla</button>
-        {rekor > 0 && <p className="oyun-rekor">En iyi sonucun: {rekor}/{TUR}</p>}
+        <button className="btn main" onClick={basla}>{cev("Başla")}</button>
+        {rekor > 0 && <p className="oyun-rekor">{cev("En iyi sonucun:")} {rekor}/{TUR}</p>}
       </section>
     );
   } else if (bitti) {
     govde = (
       <section className="card end">
         <div className="score">{d.dogru}/{TUR}</div>
-        <h2>{d.dogru === TUR ? "Hepsi doğru, indisler artık senden sorulur!" : d.dogru >= 7 ? "Çok iyi, birkaç parantez kaçtı." : "Parantez ve katsayı kuralına bir daha bak."}</h2>
-        <p>En iyi sonucun: {Math.max(rekor, d.dogru)}/{TUR}</p>
+        <h2>{d.dogru === TUR ? cev("Hepsi doğru, indisler artık senden sorulur!") : d.dogru >= 7 ? cev("Çok iyi, birkaç parantez kaçtı.") : cev("Parantez ve katsayı kuralına bir daha bak.")}</h2>
+        <p>{cev("En iyi sonucun:")} {Math.max(rekor, d.dogru)}/{TUR}</p>
         <div className="acts">
-          <button className="btn main" onClick={basla}>Tekrar oyna</button>
-          <Link className="btn" href={href("kimya", "mol")}>Konu: Mol kavramı</Link>
-          <Link className="btn" href="/oyunlar/">Oyunlara dön</Link>
+          <button className="btn main" onClick={basla}>{cev("Tekrar oyna")}</button>
+          <Link className="btn" href={href("kimya", "mol")}>{cev("Konu: Mol kavramı")}</Link>
+          <Link className="btn" href="/oyunlar/">{cev("Oyunlara dön")}</Link>
         </div>
       </section>
     );
@@ -145,14 +146,14 @@ export default function AtomSayOyun() {
     govde = (
       <>
         <div className="oyun-ust">
-          <span>Tur {d.i + 1} / {TUR}</span>
-          <span>{d.dogru} doğru</span>
+          <span>{cev("Tur")} {d.i + 1} / {TUR}</span>
+          <span>{d.dogru} {cev("doğru")}</span>
         </div>
         <div className="oyun-soru as-soru">
           <b><Formul f={s.f} /></b>
           <span>{s.ad}</span>
         </div>
-        <p className="as-ne">{s.el ? <>Bu ifadede kaç tane <b>{s.el}</b> atomu var?</> : <>Bu ifadede <b>toplam</b> kaç atom var?</>}</p>
+        <p className="as-ne">{s.el ? <>{cev("Bu ifadede kaç tane")} <b>{s.el}</b> {cev("atomu var?")}</> : <>{cev("Bu ifadede")} <b>{cev("toplam")}</b> {cev("kaç atom var?")}</>}</p>
         <div className="opts as-opts">
           {s.secenek.map((n, k) => {
             const cls = sec === null ? "" : n === s.dogru ? "right" : n === sec ? "wrong" : "";
@@ -165,13 +166,13 @@ export default function AtomSayOyun() {
         </div>
         {sec !== null && (
           <div className={`bubble ${bildi ? "ok" : "no"}`} aria-live="polite">
-            <h2>{bildi ? "Doğru!" : `Doğru cevap: ${s.dogru}`}</h2>
+            <h2>{bildi ? cev("Doğru!") : cev("Doğru cevap: {0}", s.dogru)}</h2>
             <Dokum s={s} />
           </div>
         )}
         <div className="controls one">
           <button className="btn main" disabled={sec === null} onClick={() => setD((o) => o && { ...o, i: o.i + 1, secim: null })}>
-            {d.i === TUR - 1 ? "Sonucu gör" : "Sonraki formül"}
+            {d.i === TUR - 1 ? cev("Sonucu gör") : cev("Sonraki formül")}
           </button>
         </div>
       </>
@@ -181,9 +182,9 @@ export default function AtomSayOyun() {
   return (
     <div className="app" data-ders="kimya">
       <UstBar
-        geri={{ to: "/oyunlar/", label: "Oyunlara dön" }}
-        baslik="Formülde atom say"
-        sag={d && <UstEylem label="Baştan başla" icon={<Icon.tekrar />} onClick={() => setD(null)} />}
+        geri={{ to: "/oyunlar/", label: cev("Oyunlara dön") }}
+        baslik={cev("Formülde atom say")}
+        sag={d && <UstEylem label={cev("Baştan başla")} icon={<Icon.tekrar />} onClick={() => setD(null)} />}
       />
       <main className="view lesson">{govde}</main>
     </div>

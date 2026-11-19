@@ -1,6 +1,7 @@
 "use client";
 // "Soru önce" pilot sahneleri (adları so- ile başlar). Öğrenci değeri altta bir sürgüyle değil, görselin kendisini
 // sürükleyerek ya da ona dokunarak değiştirir (kontrol türü "surukle"). Tutamaç ilk dokunuşa kadar hafifçe nabız atar.
+import { cev, SAYI_YEREL } from "@/lib/dil";
 import { useEffect, useRef, useState } from "react";
 import { Araba, Balon, Eksen, G, X, Yol, gX, gY, svgNokta, yumusak, type SahneKaydi, type SahneProps } from "./ortak";
 
@@ -57,15 +58,15 @@ function VtAlan({ s, v, set }: SahneProps) {
       </g>
       <Yol y={22} etiket={false} />
       <Araba x={X(dx)} y={35} />
-      <Balon x={X(dx)} y={14} yazi={`${dx.toLocaleString("tr-TR")} m`} renk={oldu ? "var(--good)" : "var(--ink)"} />
+      <Balon x={X(dx)} y={14} yazi={`${dx.toLocaleString(SAYI_YEREL)} m`} renk={oldu ? "var(--good)" : "var(--ink)"} />
       <Eksen tMax={tMax} yMax={yMax} yAd="v (m/s)" yAdim={yMax / 5} />
       {v0 > 0 && <path d={dikdortgen} fill="var(--c1)" fillOpacity={0.28} />}
       {a > 0 && t > 0 && <path d={ucgen} fill="var(--c2)" fillOpacity={0.3} />}
       <line x1={gX(0, tMax)} y1={gY(v0, yMax)} x2={gX(tMax, tMax)} y2={gY(hiz(tMax), yMax)} stroke="var(--c1)" strokeWidth={3} strokeLinecap="round" />
       {t > 0 && (
         <g fontSize={11.5} fontWeight={700} textAnchor="middle" pointerEvents="none">
-          {v0 > 0 && <text x={(gX(0, tMax) + gX(t, tMax)) / 2} y={gY(v0 / 2, yMax) + 4} fill="var(--c1)">{v0}·{t.toLocaleString("tr-TR")}</text>}
-          {a > 0 && t >= 1.5 && <text x={gX(t * 0.68, tMax)} y={gY(v0 + a * t * 0.3, yMax) + 4} fill="var(--c2)">½·{hiz(t).toLocaleString("tr-TR")}·{t.toLocaleString("tr-TR")}</text>}
+          {v0 > 0 && <text x={(gX(0, tMax) + gX(t, tMax)) / 2} y={gY(v0 / 2, yMax) + 4} fill="var(--c1)">{v0}·{t.toLocaleString(SAYI_YEREL)}</text>}
+          {a > 0 && t >= 1.5 && <text x={gX(t * 0.68, tMax)} y={gY(v0 + a * t * 0.3, yMax) + 4} fill="var(--c2)">½·{hiz(t).toLocaleString(SAYI_YEREL)}·{t.toLocaleString(SAYI_YEREL)}</text>}
         </g>
       )}
       <line x1={gX(t, tMax)} x2={gX(t, tMax)} y1={G.y0 - 6} y2={G.y1} stroke="var(--acc)" strokeWidth={2} strokeDasharray="4 4" pointerEvents="none" />
@@ -96,7 +97,7 @@ function Dusme({ t, oynuyor, kosular }: SahneProps) {
     </g>
   );
   return (
-    <svg viewBox="0 0 340 312" role="img" aria-label="Havası alınmış tüpte gülle ve tüy aynı yükseklikten bırakılıyor">
+    <svg viewBox="0 0 340 312" role="img" aria-label={cev("Havası alınmış tüpte gülle ve tüy aynı yükseklikten bırakılıyor")}>
       <rect x={70} y={4} width={200} height={282} rx={18} fill="var(--c1)" fillOpacity={0.05} stroke="var(--line-2)" strokeWidth={1.5} />
       {[0, 5, 10, 15, 20].map((m) => (
         <g key={m}>
@@ -109,12 +110,12 @@ function Dusme({ t, oynuyor, kosular }: SahneProps) {
       {izler.map((k) => <Tuy key={`t${k}`} yy={y(k)} soluk />)}
       <Gulle yy={y(tt)} />
       <Tuy yy={y(tt)} />
-      <text x={110} y={DUS_UST - 22} fontSize={11.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">gülle 5 kg</text>
-      <text x={230} y={DUS_UST - 22} fontSize={11.5} fontWeight={700} fill="#b7800d" textAnchor="middle">tüy 1 g</text>
+      <text x={110} y={DUS_UST - 22} fontSize={11.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">{cev("gülle 5 kg")}</text>
+      <text x={230} y={DUS_UST - 22} fontSize={11.5} fontWeight={700} fill="#b7800d" textAnchor="middle">{cev("tüy 1 g")}</text>
       {bitti ? (
-        <text x={170} y={305} fontSize={12.5} fontWeight={800} fill="var(--good)" textAnchor="middle" className="ad-belir">İkisi birlikte: 2 s'de 20 m</text>
+        <text x={170} y={305} fontSize={12.5} fontWeight={800} fill="var(--good)" textAnchor="middle" className="ad-belir">{cev("İkisi birlikte: 2 s'de 20 m")}</text>
       ) : (
-        <text x={170} y={305} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">havası alınmış tüp</text>
+        <text x={170} y={305} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("havası alınmış tüp")}</text>
       )}
     </svg>
   );
@@ -140,7 +141,7 @@ function YukariAtis({ s, v, set, t, oynuyor, kosular }: SahneProps) {
   const ucY = YA_YER - 14 - v0 * YA_OK;
   const havada = tt > 0 && tt < ucus;
   return (
-    <svg ref={svg} viewBox="0 0 340 290" className="ad-surukle" role="img" aria-label={`Top ${v0} m/s ile yukarı atılıyor`} {...olaylar}>
+    <svg ref={svg} viewBox="0 0 340 290" className="ad-surukle" role="img" aria-label={cev("Top {0} m/s ile yukarı atılıyor", v0)} {...olaylar}>
       {[0, 10, 20, 30, 40, 50].map((m) => (
         <g key={m}>
           <line x1={34} x2={44} y1={YA_YER - m * YA_PX} y2={YA_YER - m * YA_PX} stroke="var(--muted)" strokeWidth={1.2} />
@@ -149,13 +150,13 @@ function YukariAtis({ s, v, set, t, oynuyor, kosular }: SahneProps) {
       ))}
       <text x={30} y={YA_YER - 50 * YA_PX - 12} fontSize={10.5} fill="var(--muted)" textAnchor="end">h (m)</text>
       <line x1={50} x2={320} y1={YA_YER - hedef * YA_PX} y2={YA_YER - hedef * YA_PX} stroke="var(--c4)" strokeWidth={2} strokeDasharray="6 5" />
-      <text x={54} y={YA_YER - hedef * YA_PX - 6} fontSize={11.5} fontWeight={700} fill="#b7800d">hedef {hedef} m</text>
+      <text x={54} y={YA_YER - hedef * YA_PX - 6} fontSize={11.5} fontWeight={700} fill="#b7800d">{cev("hedef")} {hedef} m</text>
       {tepeler.map((x, i) => {
         const hm = (x * x) / 20;
         return hm <= 52 && (
           <g key={x} opacity={oynuyor ? 0.3 : 1}>
             <line x1={YA_X - 30} x2={YA_X + 30} y1={YA_YER - 14 - hm * YA_PX} y2={YA_YER - 14 - hm * YA_PX} stroke={["var(--c1)", "var(--c2)", "var(--c3)", "var(--c5)"][i % 4]} strokeWidth={2.5} strokeLinecap="round" />
-            <text x={YA_X + 36} y={YA_YER - 14 - hm * YA_PX + 4} fontSize={11} fontWeight={700} fill="var(--muted)">{x} m/s → {hm.toLocaleString("tr-TR")} m</text>
+            <text x={YA_X + 36} y={YA_YER - 14 - hm * YA_PX + 4} fontSize={11} fontWeight={700} fill="var(--muted)">{x} m/s → {hm.toLocaleString(SAYI_YEREL)} m</text>
           </g>
         );
       })}
@@ -228,9 +229,9 @@ function ZarDene({ v, set }: SahneProps) {
   };
   const bas = Array.from({ length: 17 }, (_, i) => 26 + i * 12).filter((y) => Math.abs(y - ZD_TASIYICI) > 20);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label="Zarın solunda O₂, glikoz ve protein; birine dokununca zara gider">
-      <text x={60} y={16} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">hücre dışı</text>
-      <text x={280} y={16} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">hücre içi</text>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Zarın solunda O₂, glikoz ve protein; birine dokununca zara gider")}>
+      <text x={60} y={16} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("hücre dışı")}</text>
+      <text x={280} y={16} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("hücre içi")}</text>
       {bas.map((y) => (
         <g key={y}>
           <line x1={ZD_X - 8} x2={ZD_X - 1} y1={y} y2={y} stroke="#e0b25c" strokeWidth={1.5} />
@@ -241,7 +242,7 @@ function ZarDene({ v, set }: SahneProps) {
       ))}
       <rect x={ZD_X - 15} y={ZD_TASIYICI - 20} width={30} height={40} rx={11} fill="var(--c5)" />
       <rect x={ZD_X - 5} y={ZD_TASIYICI - 20} width={10} height={40} fill="color-mix(in srgb, #d2e4ff 20%, var(--surface))" opacity={0.9} />
-      <text x={ZD_X + 18} y={ZD_TASIYICI - 24} fontSize={10.5} fontWeight={700} fill="var(--c5)">taşıyıcı protein</text>
+      <text x={ZD_X + 18} y={ZD_TASIYICI - 24} fontSize={10.5} fontWeight={700} fill="var(--c5)">{cev("taşıyıcı protein")}</text>
       {TANECIK.map((k) => {
         const p = yer(k), bekliyor = !ucan || ucan.u >= 1;
         const hazir = bekliyor && v[k.ad] !== 1;
@@ -249,7 +250,7 @@ function ZarDene({ v, set }: SahneProps) {
           <g
             key={k.ad}
             role="button"
-            aria-label={`${k.yazi}: zara gönder`}
+            aria-label={cev("{0}: zara gönder", k.yazi)}
             tabIndex={hazir ? 0 : -1}
             style={{ cursor: hazir ? "pointer" : "default" }}
             onClick={() => { if (hazir) { setDokundu(true); setUcan({ ad: k.ad, u: 0 }); } }}
@@ -276,7 +277,7 @@ export const SORU_ONCE: Record<string, SahneKaydi> = {
     C: VtAlan,
     geri: (v, s) => {
       const v0 = sayi(s.v0, 5), a = sayi(s.a, 0), t = v.t ?? 0, dx = v0 * t + 0.5 * a * t * t, hedef = sayi(s.hedef, 20);
-      return dx === hedef ? null : { baslik: dx < hedef ? "Bayrağa varmadı" : "Bayrağı geçti", metin: `Araba ${dx.toLocaleString("tr-TR")} m gitti. Tutamacı ${dx < hedef ? "sağa" : "sola"} sürükle.` };
+      return dx === hedef ? null : { baslik: dx < hedef ? cev("Bayrağa varmadı") : cev("Bayrağı geçti"), metin: cev("Araba {0} m gitti. Tutamacı {1} sürükle.", dx.toLocaleString(SAYI_YEREL), dx < hedef ? cev("sağa") : cev("sola")) };
     },
   },
   "so-dusme": { C: Dusme },
@@ -286,8 +287,8 @@ export const SORU_ONCE: Record<string, SahneKaydi> = {
       const v0 = v.v0 ?? 10, hm = (v0 * v0) / 20, hedef = sayi(s.hedef, 20);
       if (hm === hedef) return null;
       return {
-        baslik: hm > hedef ? "Fazla yükseğe çıktı" : "Hedefe ulaşmadı",
-        metin: `${v0} m/s ile atılan top her saniye 10 m/s yavaşladı, ${v0 / 10} s sonra durdu ve ${hm.toLocaleString("tr-TR")} m'ye çıktı. Oku ${hm > hedef ? "kısalt" : "uzat"}.`,
+        baslik: hm > hedef ? cev("Fazla yükseğe çıktı") : cev("Hedefe ulaşmadı"),
+        metin: cev("{0} m/s ile atılan top her saniye 10 m/s yavaşladı, {1} s sonra durdu ve {2} m'ye çıktı. Oku {3}.", v0, v0 / 10, hm.toLocaleString(SAYI_YEREL), hm > hedef ? cev("kısalt") : cev("uzat")),
       };
     },
   },

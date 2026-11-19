@@ -1,6 +1,7 @@
 "use client";
 // Aşama yolu (konu girişi ve ders sayfasındaki konu listesi): aşamalar kıvrılan bir yolun üstünde büyük düğmeler, en sonda mini test (kupa).
 // Bitmiş aşama dolu ve işaretli, sıradaki aşama nabız gibi atar ve üstünde "Başla" balonu durur, kilitliler gri.
+import { cev } from "@/lib/dil";
 import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -15,7 +16,7 @@ const SATIR = 112; // bir düğümün satır yüksekliği (px)
 const KAYMA = [0, 26, 0, -26]; // düğümün ortadan sapması (% genişlik), yol bu sırayla kıvrılır
 
 /** kaydir: sıradaki düğüm ekranın altında kalıyorsa sayfa açılınca ona kaydırılır (uzun konu listesi için). */
-export default function AsamaYolu({ dugumler, balon, ad = "Aşamalar", kaydir }: { dugumler: YolDugum[]; balon: string; ad?: string; kaydir?: boolean }) {
+export default function AsamaYolu({ dugumler, balon, ad = cev("Aşamalar"), kaydir }: { dugumler: YolDugum[]; balon: string; ad?: string; kaydir?: boolean }) {
   const x = (i: number) => 50 + KAYMA[i % KAYMA.length];
   const h = dugumler.length * SATIR;
   // Düğüm merkezlerinden geçen yumuşak yol (viewBox: genişlik 100, yükseklik piksel).
@@ -64,7 +65,7 @@ export default function AsamaYolu({ dugumler, balon, ad = "Aşamalar", kaydir }:
               <motion.button
                 disabled={g.durum === "kilitli" && !g.serbest && !g.dokun}
                 onClick={g.ac}
-                aria-label={g.etiket ?? `${g.baslik}, ${g.durum === "bitti" ? "bitti" : g.durum === "sirada" ? "sıradaki" : g.serbest ? "aşamalar bitmeden de çözebilirsin" : "kilitli"}`}
+                aria-label={g.etiket ?? `${g.baslik}, ${g.durum === "bitti" ? "bitti" : g.durum === "sirada" ? cev("sıradaki") : g.serbest ? cev("aşamalar bitmeden de çözebilirsin") : "kilitli"}`}
                 className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2"
                 style={{ left: `${x(i)}%` }}
                 initial={{ scale: 0.6, opacity: 0 }}

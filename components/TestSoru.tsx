@@ -2,6 +2,7 @@
 // Konu sonu testinin soru gövdesi: çoktan seçmeli ve etkileşimli türler (sırala, eşleştir, ayır, sayı, sahne).
 // Etkileşimli soruda öğrenci cevabını kurar, alttaki "Kontrol et" ile bir kez değerlendirilir; sonra doğrusu
 // gövdede işaretlenir. Ders ekranındaki test ve tekrar ekranı ortak kullanır. Biçim: docs/ICERIK-SPEC.md ("Test").
+import { BINLIK, cev, DIL, SAYI_YEREL } from "@/lib/dil";
 import { useMemo, useState } from "react";
 import { motion } from "motion/react";
 import { secmeli, type Question } from "@/lib/dersler";
@@ -31,7 +32,7 @@ export function ilkCevap(q: Question): Cevap {
 export function sayiOku(yazi: string): number {
   let s = yazi.replace(/\s/g, "").replace(/−/g, "-");
   if (s.includes(",")) s = s.replace(/\./g, "").replace(",", ".");
-  else if (/^-?[1-9]\d{0,2}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, "");
+  else if (DIL === "tr" && /^-?[1-9]\d{0,2}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, "");
   return s === "" || s === "-" ? NaN : Number(s);
 }
 const doluMu = (c: Cevap) => Array.isArray(c) && c.every((x) => x !== null);
@@ -57,15 +58,15 @@ export function dogruMu(q: Question, c: Cevap): boolean {
 /** Doğru cevabı gösterir. Binlik ayracı nokta olunca "2.700" ondalık "2,7" sanılabiliyor; bu yüzden 9999'a kadar
  *  ayraç konmaz (2700), daha büyük sayılar boşlukla gruplanır (103 000). Ondalık ayracı virgüldür. */
 const sayiYaz = (x: number) =>
-  x.toLocaleString("tr-TR", { maximumFractionDigits: 3, useGrouping: Math.abs(x) >= 10000 }).replace(/\./g, "\u202f").replace("-", "−");
+  x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: 3, useGrouping: Math.abs(x) >= 10000 }).replace(BINLIK, "\u202f").replace("-", "−");
 
 /** Değerlendirmeden sonra alttaki çubuğun başlığı. */
 export function geriBaslik(q: Question, ok: boolean): string {
-  if (ok) return "Doğru!";
-  if (secmeli(q)) return `Doğru cevap ${"ABCD"[q.a]}`;
-  if (q.tur === "sayi") return `Doğru cevap: ${sayiYaz(q.cevap)}${q.birim ? ` ${q.birim}` : ""}`;
-  if (q.tur === "sirala") return "Sıra tam doğru değil";
-  return "Tam doğru değil";
+  if (ok) return cev("Doğru!");
+  if (secmeli(q)) return cev("Doğru cevap {0}", "ABCD"[q.a]);
+  if (q.tur === "sayi") return cev("Doğru cevap: {0}{1}", sayiYaz(q.cevap), q.birim ? ` ${q.birim}` : "");
+  if (q.tur === "sirala") return cev("Sıra tam doğru değil");
+  return cev("Tam doğru değil");
 }
 
 /** Sorunun altındaki kısa yönerge (etkileşimli türlerde ne yapılacağı). */
@@ -76,9 +77,9 @@ export function geriMetin(q: Question, c: Cevap, ok: boolean): string {
 }
 
 export function yonerge(q: Question): string | null {
-  if (q.tur === "sirala") return "Öğelere sırayla dokun. Yanlış yerleşeni geri almak için ona dokun.";
-  if (q.tur === "eslestir") return "Bir satır seç, sonra aşağıdan eşine dokun.";
-  if (q.tur === "ayir") return "Bir öğe seç, sonra ait olduğu gruba dokun. × ile geri alırsın.";
+  if (q.tur === "sirala") return cev("Öğelere sırayla dokun. Yanlış yerleşeni geri almak için ona dokun.");
+  if (q.tur === "eslestir") return cev("Bir satır seç, sonra aşağıdan eşine dokun.");
+  if (q.tur === "ayir") return cev("Bir öğe seç, sonra ait olduğu gruba dokun. × ile geri alırsın.");
   return null;
 }
 
@@ -154,12 +155,12 @@ function Yuvalar({ q, yuva, setYuva, bitti, tohum }: {
                   durum === "no" && "border-bad bg-bad-soft",
                 )}
                 disabled={bitti || k === null}
-                aria-label={k === null ? `${i + 1}. yuva boş` : undefined}
+                aria-label={k === null ? cev("{0}. yuva boş", i + 1) : undefined}
                 onClick={() => bosalt(i)}
               >
-                {k !== null ? <Html html={ogeler[k]} /> : <span className="text-muted-foreground">{durum === "aktif" ? "Buraya…" : ""}</span>}
+                {k !== null ? <Html html={ogeler[k]} /> : <span className="text-muted-foreground">{durum === "aktif" ? cev("Buraya…") : ""}</span>}
                 {durum === "no" && (
-                  <span className="mt-1 block text-[13px] font-medium text-muted-foreground">Doğrusu: <Html html={ogeler[i]} /></span>
+                  <span className="mt-1 block text-[13px] font-medium text-muted-foreground">{cev("Doğrusu:")} <Html html={ogeler[i]} /></span>
                 )}
               </button>
             </li>
@@ -206,7 +207,7 @@ function Ayir({ q, grup, setGrup, bitti, tohum }: { q: Of<"ayir">; grup: (number
             key={g}
             role="button"
             tabIndex={bitti ? -1 : 0}
-            aria-label={`${ad} grubuna koy`}
+            aria-label={cev("{0} grubuna koy", ad)}
             data-grup
             onClick={() => yerles(g)}
             onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); yerles(g); } }}
@@ -233,7 +234,7 @@ function Ayir({ q, grup, setGrup, bitti, tohum }: { q: Of<"ayir">; grup: (number
                 {!bitti && (
                   <button
                     className="grid size-5 flex-none place-items-center rounded-full text-[15px] leading-none text-muted-foreground hover:bg-secondary"
-                    aria-label="Geri al"
+                    aria-label={cev("Geri al")}
                     onClick={(e) => { e.stopPropagation(); geri(k); }}
                   >
                     ×
@@ -260,7 +261,7 @@ function Sayi({ q, yazi, setYazi, sonuc }: { q: Of<"sayi">; yazi: string; setYaz
           )}
           inputMode="decimal"
           autoComplete="off"
-          aria-label="Cevabın"
+          aria-label={cev("Cevabın")}
           placeholder="?"
           disabled={sonuc !== null}
           value={yazi}
@@ -268,7 +269,7 @@ function Sayi({ q, yazi, setYazi, sonuc }: { q: Of<"sayi">; yazi: string; setYaz
         />
         {q.birim && <Html className="text-[18px] font-bold" html={q.birim} />}
       </label>
-      {sonuc === null && <p className="text-center text-[13px] font-semibold text-muted-foreground">Ondalık için virgül: 2,5 · Binlik ayraç koyma: 2700</p>}
+      {sonuc === null && <p className="text-center text-[13px] font-semibold text-muted-foreground">{cev("Ondalık için virgül: 2,5 · Binlik ayraç koyma: 2700")}</p>}
     </div>
   );
 }
@@ -276,7 +277,7 @@ function Sayi({ q, yazi, setYazi, sonuc }: { q: Of<"sayi">; yazi: string; setYaz
 /** Sahne: adımlı derslerin sahnesi test modunda; öğrenci kontrolleri (ya da sahnedeki nesneyi) hedefe getirir. */
 function SahneSoru({ q, v, setV, sonuc }: { q: Of<"sahne">; v: Record<string, number>; setV: (c: Cevap) => void; sonuc: boolean | null }) {
   const kayit = SAHNELER[q.sahne.tur];
-  if (!kayit) return <p>Bu sahne bulunamadı: {q.sahne.tur}</p>;
+  if (!kayit) return <p>{cev("Bu sahne bulunamadı:")} {q.sahne.tur}</p>;
   const C = kayit.C;
   const set = (ad: string, x: number) => { if (sonuc === null) setV(kayit.bagla ? kayit.bagla(ad, x, v) : { ...v, [ad]: x }); };
   return (

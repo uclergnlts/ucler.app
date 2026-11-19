@@ -1,9 +1,10 @@
 "use client";
 // Fizik sahneleri (basınç, kaldırma kuvveti): süngerdeki tuğlalar, kar ayakkabısı, derinlik, kabın şekli,
 // hidrolik kaldıraç, yükseklik ve kaynama; basınç farkı, dinamometre, farklı sıvılar, gemi, denizaltı, balon.
+import { cev, SAYI_YEREL } from "@/lib/dil";
 import { yumusak, type SahneKaydi, type SahneProps } from "./ortak";
 
-const say = (x: number, d = 2) => x.toLocaleString("tr-TR", { maximumFractionDigits: d });
+const say = (x: number, d = 2) => x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: d });
 
 /** (x1, y1)'den (x2, y2)'ye ok; uç (x2, y2)'dedir. */
 function Ok({ x1, y1, x2, y2, renk, kalin = 3 }: { x1: number; y1: number; x2: number; y2: number; renk: string; kalin?: number }) {
@@ -27,10 +28,10 @@ function Tugla({ t, oynuyor }: SahneProps) {
   const SUN = 160, bitti = !oynuyor && t > 0;
   const tug = [
     { x: 100, w: 22, h: 88, P: 4000, cukur: 26, ad: "dik" },
-    { x: 240, w: 88, h: 22, P: 1000, cukur: 6.5, ad: "yatık" },
+    { x: 240, w: 88, h: 22, P: 1000, cukur: 6.5, ad: cev("yatık") },
   ];
   return (
-    <svg viewBox="0 0 340 250" role="img" aria-label="Aynı iki tuğla süngerin üstünde: biri dik, biri yatık">
+    <svg viewBox="0 0 340 250" role="img" aria-label={cev("Aynı iki tuğla süngerin üstünde: biri dik, biri yatık")}>
       <path
         d={`M24 ${SUN} L${100 - 11} ${SUN} Q100 ${SUN + 2 * tug[0].cukur * b} ${100 + 11} ${SUN} L${240 - 44} ${SUN} Q240 ${SUN + 2 * tug[1].cukur * b} ${240 + 44} ${SUN} L316 ${SUN} L316 206 L24 206 Z`}
         fill="var(--c4)"
@@ -42,15 +43,15 @@ function Tugla({ t, oynuyor }: SahneProps) {
           <g key={k.ad}>
             <rect x={k.x - k.w / 2} y={y} width={k.w} height={k.h} rx={2} fill="var(--c2)" />
             <text x={k.x} y={226} fontSize={12} fontWeight={700} fill="var(--ink)" textAnchor="middle">
-              {k.ad}: {k.ad === "dik" ? "50" : "200"} cm²
+              {k.ad}: {k.ad === "dik" ? "50" : "200"} {cev("cm²")}
             </text>
             <text x={k.x} y={244} fontSize={12} fill={bitti ? "var(--fizik)" : "var(--muted)"} fontWeight={bitti ? 800 : 400} textAnchor="middle">
-              {bitti ? `P = ${say(k.P)} Pa` : "ağırlık 20 N"}
+              {bitti ? cev("P = {0} Pa", say(k.P)) : cev("ağırlık 20 N")}
             </text>
           </g>
         );
       })}
-      <text x={36} y={198} fontSize={12} fontWeight={700} fill="#b7800d">sünger</text>
+      <text x={36} y={198} fontSize={12} fontWeight={700} fill="#b7800d">{cev("sünger")}</text>
     </svg>
   );
 }
@@ -61,7 +62,7 @@ function Kar({ v }: SahneProps) {
   const tasir = P <= 3000, w = 24 + (v.A ?? 4) * 8, gom = Math.min(56, (P / 30000) * 56);
   const y = KAR + gom;
   return (
-    <svg viewBox="0 0 340 254" role="img" aria-label={`Taban alanı ${say(A)} metrekare, basınç ${Math.round(P)} paskal`}>
+    <svg viewBox="0 0 340 254" role="img" aria-label={cev("Taban alanı {0} metrekare, basınç {1} paskal", say(A), Math.round(P))}>
       <rect x={20} y={KAR} width={300} height={66} fill="var(--panel)" />
       <line x1={20} x2={320} y1={KAR} y2={KAR} stroke="var(--line-2)" strokeWidth={2} />
       <g>
@@ -70,12 +71,12 @@ function Kar({ v }: SahneProps) {
         <rect x={170 - w / 2} y={y - 12} width={w} height={12} rx={4} fill="var(--ink)" />
       </g>
       <Ok x1={170} y1={22} x2={170} y2={y - 88} renk="var(--c2)" />
-      <text x={180} y={34} fontSize={12} fontWeight={700} fill="var(--c2)">ağırlık</text>
+      <text x={180} y={34} fontSize={12} fontWeight={700} fill="var(--c2)">{cev("ağırlık")}</text>
       <text x={170} y={234} fontSize={15} fontWeight={800} textAnchor="middle" fill={tasir ? "var(--good)" : "var(--ink)"}>
-        P = 600 N ÷ {say(A)} m² = {say(Math.round(P))} Pa
+        P = 600 N ÷ {say(A)} m² = {say(Math.round(P))} {cev("Pa")}
       </text>
       <text x={170} y={251} fontSize={12} textAnchor="middle" fill={tasir ? "var(--good)" : "var(--bad)"} fontWeight={700}>
-        {tasir ? "Kar taşıyor, gömülmüyorsun" : "Kara gömülüyorsun (kar en çok 3000 Pa taşır)"}
+        {tasir ? cev("Kar taşıyor, gömülmüyorsun") : cev("Kara gömülüyorsun (kar en çok 3000 Pa taşır)")}
       </text>
     </svg>
   );
@@ -86,7 +87,7 @@ function Derinlik({ v }: SahneProps) {
   const h = v.h ?? 5, P = h * 1000 * 10, Y0 = 34, K = 4.2;
   const tam = P === 200000;
   return (
-    <svg viewBox="0 0 340 252" role="img" aria-label={`${h} metre derinlikte suyun basıncı ${P} paskal`}>
+    <svg viewBox="0 0 340 252" role="img" aria-label={cev("{0} metre derinlikte suyun basıncı {1} paskal", h, P)}>
       <rect x={20} y={Y0} width={170} height={40 * K + 8} fill="var(--c1)" opacity={0.18} />
       <line x1={20} x2={190} y1={Y0} y2={Y0} stroke="var(--c1)" strokeWidth={2} />
       <g fontSize={11} fill="var(--muted)">
@@ -104,11 +105,11 @@ function Derinlik({ v }: SahneProps) {
       </g>
       <g fontSize={13} fontWeight={700}>
         <text x={234} y={86} fill="var(--muted)">h = {h} m</text>
-        <text x={234} y={112} fill="var(--muted)">d = 1000 kg/m³</text>
+        <text x={234} y={112} fill="var(--muted)">{cev("d = 1000 kg/m³")}</text>
         <text x={234} y={138} fill="var(--muted)">g = 10 m/s²</text>
       </g>
       <text x={170} y={240} fontSize={15} fontWeight={800} textAnchor="middle" fill={tam ? "var(--good)" : "var(--ink)"}>
-        P = h·d·g = {say(P)} Pa
+        P = h·d·g = {say(P)} {cev("Pa")}
       </text>
     </svg>
   );
@@ -120,7 +121,7 @@ function Kaplar({ t, oynuyor }: SahneProps) {
   const ALT = 186, H = 110, h = H * u; // 110 px = 20 cm
   const huni = (y: number) => 18 + ((ALT - y) / H) * 30; // yarım genişlik yükseldikçe artar
   return (
-    <svg viewBox="0 0 340 244" role="img" aria-label="Geniş, dar ve huni biçimli üç kap aynı yüksekliğe kadar su ile dolu">
+    <svg viewBox="0 0 340 244" role="img" aria-label={cev("Geniş, dar ve huni biçimli üç kap aynı yüksekliğe kadar su ile dolu")}>
       <g fill="var(--c1)" opacity={0.3}>
         <rect x={20} y={ALT - h} width={84} height={h} />
         <rect x={156} y={ALT - h} width={28} height={h} />
@@ -132,14 +133,14 @@ function Kaplar({ t, oynuyor }: SahneProps) {
         <path d={`M${270 - 18 - 36} ${ALT - H - 22} L${270 - 18} ${ALT} L${270 + 18} ${ALT} L${270 + 18 + 36} ${ALT - H - 22}`} />
       </g>
       <line x1={14} x2={326} y1={ALT - H} y2={ALT - H} stroke="var(--muted)" strokeWidth={1} strokeDasharray="4 4" />
-      <text x={130} y={ALT - H - 6} fontSize={11} fill="var(--muted)" textAnchor="middle">20 cm</text>
+      <text x={130} y={ALT - H - 6} fontSize={11} fill="var(--muted)" textAnchor="middle">{cev("20 cm")}</text>
       <g fontSize={12} fontWeight={700} fill="var(--ink)" textAnchor="middle">
-        <text x={62} y={ALT + 18}>geniş</text>
-        <text x={170} y={ALT + 18}>dar</text>
-        <text x={270} y={ALT + 18}>huni</text>
+        <text x={62} y={ALT + 18}>{cev("geniş")}</text>
+        <text x={170} y={ALT + 18}>{cev("dar")}</text>
+        <text x={270} y={ALT + 18}>{cev("huni")}</text>
       </g>
       <g fontSize={12} fontWeight={800} fill="var(--fizik)" textAnchor="middle">
-        {bitti && [62, 170, 270].map((x) => <text key={x} x={x} y={ALT + 36}>2000 Pa</text>)}
+        {bitti && [62, 170, 270].map((x) => <text key={x} x={x} y={ALT + 36}>{cev("2000 Pa")}</text>)}
       </g>
     </svg>
   );
@@ -148,11 +149,11 @@ function Kaplar({ t, oynuyor }: SahneProps) {
 // Hidrolik kaldıraç: küçük piston 10 cm², üstüne 200 N. v.A2: büyük pistonun alanı (cm²). Araba 10 000 N.
 function Hidrolik({ v }: SahneProps) {
   const A2 = v.A2 ?? 100, F2 = 200 * (A2 / 10);
-  const hal = F2 < 10000 ? "Araba kalkmıyor" : F2 === 10000 ? "Dengede: araba havada duruyor" : "Araba yükseliyor";
+  const hal = F2 < 10000 ? cev("Araba kalkmıyor") : F2 === 10000 ? cev("Dengede: araba havada duruyor") : cev("Araba yükseliyor");
   const ok = F2 >= 10000, ALT = 196, kucukX = 50, w = 40 + A2 * 0.14, bx = 128;
   const sv = ok ? 112 : 128; // büyük pistonun üst seviyesi
   return (
-    <svg viewBox="0 0 340 262" role="img" aria-label={`Büyük piston ${A2} santimetrekare, kuvvet ${F2} newton`}>
+    <svg viewBox="0 0 340 262" role="img" aria-label={cev("Büyük piston {0} santimetrekare, kuvvet {1} newton", A2, F2)}>
       <path
         d={`M${kucukX - 7} 96 L${kucukX - 7} ${ALT} L${bx + w} ${ALT} L${bx + w} ${sv + 8} L${bx} ${sv + 8} L${bx} ${ALT - 24} L${kucukX + 7} ${ALT - 24} L${kucukX + 7} 96 Z`}
         fill="var(--c1)"
@@ -174,9 +175,9 @@ function Hidrolik({ v }: SahneProps) {
         <circle cx={11} cy={-4} r={4.6} fill="var(--ink)" />
       </g>
       <g fontSize={11.5} fill="var(--muted)" textAnchor="middle">
-        <text x={kucukX} y={ALT + 20}>10 cm²</text>
-        <text x={bx + w / 2} y={ALT + 20}>{A2} cm²</text>
-        <text x={bx + w / 2} y={sv - 40}>araba 10.000 N</text>
+        <text x={kucukX} y={ALT + 20}>{cev("10 cm²")}</text>
+        <text x={bx + w / 2} y={ALT + 20}>{A2} {cev("cm²")}</text>
+        <text x={bx + w / 2} y={sv - 40}>{cev("araba 10.000 N")}</text>
       </g>
       <text x={170} y={238} fontSize={14} fontWeight={800} textAnchor="middle" fill={ok ? "var(--good)" : "var(--ink)"}>
         F₂ = 200 N × {A2} / 10 = {say(F2)} N
@@ -192,7 +193,7 @@ function Rakim({ v }: SahneProps) {
   const ALT = 200, K = 1.9, tam = r === 6000;
   const dagY = 196 - (r / 9000) * 150;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Rakım ${r} metre: cıva ${Math.round(cm)} santimetre, su ${Math.round(kay)} derecede kaynar`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Rakım {0} metre: cıva {1} santimetre, su {2} derecede kaynar", r, Math.round(cm), Math.round(kay))}>
       <path d="M150 200 L245 46 L285 110 L300 92 L330 200 Z" fill="var(--line)" />
       <g>
         <circle cx={150 + ((200 - dagY) / 154) * 95} cy={dagY} r={6} fill="var(--fizik)" />
@@ -205,15 +206,15 @@ function Rakim({ v }: SahneProps) {
       </g>
       <g fontSize={11} fill="var(--muted)">
         <line x1={78} x2={90} y1={ALT - cm * K} y2={ALT - cm * K} stroke="var(--fizik)" strokeWidth={1.5} />
-        <text x={94} y={ALT - cm * K + 4} fill="var(--fizik)" fontWeight={800} fontSize={12.5}>{Math.round(cm)} cm</text>
-        <text x={64} y={ALT + 32} textAnchor="middle">cıva</text>
+        <text x={94} y={ALT - cm * K + 4} fill="var(--fizik)" fontWeight={800} fontSize={12.5}>{Math.round(cm)} {cev("cm")}</text>
+        <text x={64} y={ALT + 32} textAnchor="middle">{cev("cıva")}</text>
       </g>
       <g fontSize={12.5} fontWeight={700}>
-        <text x={170} y={24} fill="var(--ink)">Rakım: {say(r)} m</text>
-        <text x={150 + ((200 - dagY) / 154) * 95 + 10} y={dagY + 4} fill="var(--fizik)" fontSize={11.5}>{r === 0 ? "deniz seviyesi" : "buradasın"}</text>
+        <text x={170} y={24} fill="var(--ink)">{cev("Rakım:")} {say(r)} m</text>
+        <text x={150 + ((200 - dagY) / 154) * 95 + 10} y={dagY + 4} fill="var(--fizik)" fontSize={11.5}>{r === 0 ? cev("deniz seviyesi") : cev("buradasın")}</text>
       </g>
       <text x={330} y={228} fontSize={14} fontWeight={800} textAnchor="end" fill={tam ? "var(--good)" : "var(--ink)"}>
-        Su {Math.round(kay)} °C'de kaynar
+        {cev("Su")} {Math.round(kay)} {cev("°C'de kaynar")}
       </text>
     </svg>
   );
@@ -227,11 +228,11 @@ function BasincFark({ v }: SahneProps) {
   const ust = Y0 + h * K, alt = ust + S;
   const L = (F: number) => 8 + F * 0.6;
   return (
-    <svg viewBox="0 0 340 262" role="img" aria-label={`Üst yüzü ${h} cm derinlikte küp: üstten ${h} N, alttan ${h + 10} N, kaldırma kuvveti 10 N`}>
+    <svg viewBox="0 0 340 262" role="img" aria-label={cev("Üst yüzü {0} cm derinlikte küp: üstten {1} N, alttan {2} N, kaldırma kuvveti 10 N", h, h, h + 10)}>
       <rect x={20} y={Y0} width={220} height={196} fill="var(--c1)" opacity={0.16} />
       <line x1={20} x2={240} y1={Y0} y2={Y0} stroke="var(--c1)" strokeWidth={2} />
       <line x1={CX + S / 2 + 6} x2={CX + S / 2 + 6} y1={Y0} y2={ust} stroke="var(--muted)" strokeWidth={1} strokeDasharray="3 3" />
-      <text x={CX + S / 2 + 10} y={(Y0 + ust) / 2 + 4} fontSize={11} fill="var(--muted)">{h} cm</text>
+      <text x={CX + S / 2 + 10} y={(Y0 + ust) / 2 + 4} fontSize={11} fill="var(--muted)">{h} {cev("cm")}</text>
       <rect x={CX - S / 2} y={ust} width={S} height={S} rx={3} fill="#9aa8ba" />
       <Ok x1={CX} y1={ust - L(h) - 2} x2={CX} y2={ust - 2} renk="var(--c2)" />
       <Ok x1={CX} y1={alt + L(h + 10) + 2} x2={CX} y2={alt + 2} renk="var(--c3)" />
@@ -240,11 +241,11 @@ function BasincFark({ v }: SahneProps) {
         <Ok x1={CX + S / 2 + 26} y1={ust + S / 2} x2={CX + S / 2 + 3} y2={ust + S / 2} renk="var(--muted)" kalin={2} />
       </g>
       <g fontSize={12.5} fontWeight={700}>
-        <text x={252} y={70} fill="var(--c2)">üstten: {h} N ↓</text>
-        <text x={252} y={96} fill="var(--c3)">alttan: {h + 10} N ↑</text>
-        <text x={252} y={122} fill="var(--muted)" fontSize={11.5}>yanlar dengede</text>
+        <text x={252} y={70} fill="var(--c2)">{cev("üstten:")} {h} N ↓</text>
+        <text x={252} y={96} fill="var(--c3)">{cev("alttan:")} {h + 10} N ↑</text>
+        <text x={252} y={122} fill="var(--muted)" fontSize={11.5}>{cev("yanlar dengede")}</text>
         <line x1={252} x2={334} y1={136} y2={136} stroke="var(--line)" />
-        <text x={252} y={158} fill="var(--fizik)" fontWeight={800}>fark: 10 N ↑</text>
+        <text x={252} y={158} fill="var(--fizik)" fontWeight={800}>{cev("fark: 10 N ↑")}</text>
       </g>
     </svg>
   );
@@ -256,7 +257,7 @@ function Dinamometre({ v }: SahneProps) {
   const tasUst = SU - TH + (V / 200) * TH, uz = oku * 7;
   const tam = V === 200;
   return (
-    <svg viewBox="0 0 340 250" role="img" aria-label={`Batan hacim ${V} santimetreküp, dinamometre ${say(oku)} newton gösteriyor`}>
+    <svg viewBox="0 0 340 250" role="img" aria-label={cev("Batan hacim {0} santimetreküp, dinamometre {1} newton gösteriyor", V, say(oku))}>
       <path d="M108 120 L108 210 L232 210 L232 120" fill="none" stroke="var(--ink)" strokeWidth={2} />
       <g>
         <line x1={170} x2={170} y1={4} y2={14} stroke="var(--ink)" strokeWidth={2} />
@@ -268,10 +269,10 @@ function Dinamometre({ v }: SahneProps) {
       <rect x={110} y={SU} width={120} height={58} fill="var(--c1)" opacity={0.25} />
       <line x1={110} x2={230} y1={SU} y2={SU} stroke="var(--c1)" strokeWidth={2} />
       <g fontSize={13} fontWeight={700}>
-        <text x={14} y={40} fill="var(--ink)">havada: 5 N</text>
-        <text x={14} y={66} fill={tam ? "var(--good)" : "var(--fizik)"} fontWeight={800}>okunan: {say(oku)} N</text>
-        <text x={248} y={180} fill="var(--c1)" fontSize={12}>batan:</text>
-        <text x={248} y={198} fill="var(--c1)" fontSize={12}>{V} cm³</text>
+        <text x={14} y={40} fill="var(--ink)">{cev("havada: 5 N")}</text>
+        <text x={14} y={66} fill={tam ? "var(--good)" : "var(--fizik)"} fontWeight={800}>{cev("okunan:")} {say(oku)} N</text>
+        <text x={248} y={180} fill="var(--c1)" fontSize={12}>{cev("batan:")}</text>
+        <text x={248} y={198} fill="var(--c1)" fontSize={12}>{V} {cev("cm³")}</text>
       </g>
       <text x={170} y={238} fontSize={14} fontWeight={800} textAnchor="middle" fill={tam ? "var(--good)" : "var(--ink)"}>
         F<tspan fontSize={10} dy={3}>k</tspan><tspan dy={-3}> = 5 − {say(oku)} = {say(Fk)} N</tspan>
@@ -286,20 +287,20 @@ function Sivilar({ v }: SahneProps) {
   const batar = dl < dc, askida = dl === dc, oran = batar || askida ? 1 : dc / dl;
   const ust = batar ? TABAN - K : askida ? (SU + TABAN) / 2 - K / 2 : SU - K * (1 - oran);
   const Fk = batar ? 10 * dl : 6, tam = v.dl === 12;
-  const hal = batar ? "Batar" : askida ? "Askıda" : `Yüzer: batık kısım %${Math.round(oran * 100)}`;
+  const hal = batar ? cev("Batar") : askida ? cev("Askıda") : cev("Yüzer: batık kısım %{0}", Math.round(oran * 100));
   return (
-    <svg viewBox="0 0 340 256" role="img" aria-label={`Sıvının özkütlesi ${say(dl)}: ${hal}`}>
+    <svg viewBox="0 0 340 256" role="img" aria-label={cev("Sıvının özkütlesi {0}: {1}", say(dl), hal)}>
       <rect x={140 - K / 2} y={ust} width={K} height={K} rx={3} fill="var(--c4)" />
       <rect x={52} y={SU} width={176} height={TABAN - SU} fill="var(--c5)" opacity={0.08 + 0.16 * dl} />
       <path d={`M50 40 L50 ${TABAN + 2} L230 ${TABAN + 2} L230 40`} fill="none" stroke="var(--ink)" strokeWidth={2} />
       <line x1={52} x2={228} y1={SU} y2={SU} stroke="var(--c5)" strokeWidth={2} />
       <g fontSize={12.5} fontWeight={700}>
-        <text x={240} y={70} fill="var(--muted)" fontSize={11.5}>tahta: 0,6 g/cm³</text>
+        <text x={240} y={70} fill="var(--muted)" fontSize={11.5}>{cev("tahta: 0,6 g/cm³")}</text>
         <text x={240} y={96} fill="var(--c2)">G = 6 N</text>
         <text x={240} y={120} fill="var(--c3)">F<tspan fontSize={9} dy={3}>k</tspan><tspan dy={-3}> = {say(Fk)} N</tspan></text>
       </g>
       <text x={140} y={226} fontSize={13.5} fontWeight={800} textAnchor="middle" fill={tam ? "var(--good)" : "var(--ink)"}>{hal}</text>
-      <text x={140} y={246} fontSize={11.5} textAnchor="middle" fill="var(--muted)">sıvı: {say(dl)} g/cm³</text>
+      <text x={140} y={246} fontSize={11.5} textAnchor="middle" fill="var(--muted)">{cev("sıvı:")} {say(dl)} {cev("g/cm³")}</text>
     </svg>
   );
 }
@@ -311,7 +312,7 @@ function Gemi({ v }: SahneProps) {
   const govdeUst = SU + batik - H, cizgi = govdeUst + H - 45;
   const tam = n === 4, fazla = n > 4;
   return (
-    <svg viewBox="0 0 340 250" role="img" aria-label={`${n} konteyner yüklü gemi`}>
+    <svg viewBox="0 0 340 250" role="img" aria-label={cev("{0} konteyner yüklü gemi", n)}>
       <rect x={10} y={SU} width={320} height={70} fill="var(--c1)" opacity={0.18} />
       <path d={`M60 ${govdeUst} L280 ${govdeUst} L262 ${govdeUst + H} L78 ${govdeUst + H} Z`} fill="var(--ink)" />
       <g>
@@ -325,10 +326,10 @@ function Gemi({ v }: SahneProps) {
         ))}
       </g>
       <text x={170} y={226} fontSize={14} fontWeight={800} textAnchor="middle" fill={tam ? "var(--good)" : fazla ? "var(--bad)" : "var(--ink)"}>
-        F<tspan fontSize={10} dy={3}>k</tspan><tspan dy={-3}> = 2000 + {300 * n} = {say(G)} kN</tspan>
+        F<tspan fontSize={10} dy={3}>k</tspan><tspan dy={-3}> = 2000 + {300 * n} = {say(G)} {cev("kN")}</tspan>
       </text>
       <text x={170} y={244} fontSize={12} fontWeight={700} textAnchor="middle" fill={tam ? "var(--good)" : fazla ? "var(--bad)" : "var(--muted)"}>
-        {tam ? "Su, yükleme çizgisine ulaştı" : fazla ? "Yükleme çizgisi suyun altında kaldı" : "sarı daire: yükleme çizgisi"}
+        {tam ? cev("Su, yükleme çizgisine ulaştı") : fazla ? cev("Yükleme çizgisi suyun altında kaldı") : cev("sarı daire: yükleme çizgisi")}
       </text>
     </svg>
   );
@@ -340,7 +341,7 @@ function Denizalti({ v, t, oynuyor }: SahneProps) {
   const Y0 = 96, y = dolu ? Y0 + 56 * u : Y0 - 30 * u;
   const bitti = !oynuyor && t > 0;
   return (
-    <svg viewBox="0 0 340 250" role="img" aria-label={`Balast tankları ${dolu ? "dolu" : "boş"} denizaltı`}>
+    <svg viewBox="0 0 340 250" role="img" aria-label={cev("Balast tankları {0} denizaltı", dolu ? "dolu" : "boş")}>
       <rect x={10} y={50} width={320} height={170} fill="var(--c1)" opacity={0.16} />
       <line x1={10} x2={330} y1={50} y2={50} stroke="var(--c1)" strokeWidth={2} />
       <g>
@@ -359,8 +360,8 @@ function Denizalti({ v, t, oynuyor }: SahneProps) {
       </>}
       <text x={170} y={242} fontSize={13} fontWeight={800} textAnchor="middle" fill={bitti ? "var(--good)" : "var(--muted)"}>
         {bitti ? (
-          <>{dolu ? "G > F" : "G < F"}<tspan fontSize={9} dy={3}>k</tspan><tspan dy={-3}>{dolu ? ": denizaltı dalıyor" : ": denizaltı yükseliyor"}</tspan></>
-        ) : dolu ? "Tanklar deniz suyuyla dolu" : "Tanklar boş"}
+          <>{dolu ? "G > F" : "G < F"}<tspan fontSize={9} dy={3}>k</tspan><tspan dy={-3}>{dolu ? cev(": denizaltı dalıyor") : cev(": denizaltı yükseliyor")}</tspan></>
+        ) : dolu ? cev("Tanklar deniz suyuyla dolu") : cev("Tanklar boş")}
       </text>
     </svg>
   );
@@ -371,7 +372,7 @@ function Balon({ v }: SahneProps) {
   const V = v.V ?? 2, Fk = 12 * V, G = 1.7 * V + 40, net = Fk - G, kalkar = net > 0;
   const R = 20 * Math.cbrt(V), kalk = kalkar ? 44 : 0, cy = 206 - 58 - R - kalk; // sepet yerdeyken altı 206'da
   return (
-    <svg viewBox="0 0 340 262" role="img" aria-label={`${V} metreküp helyum balonu: ${kalkar ? "yükseliyor" : "yerde"}`}>
+    <svg viewBox="0 0 340 262" role="img" aria-label={cev("{0} metreküp helyum balonu: {1}", V, kalkar ? "yükseliyor" : "yerde")}>
       <line x1={20} x2={320} y1={206} y2={206} stroke="var(--ink)" strokeWidth={2} />
       <g>
         <line x1={150} y1={cy + R * 0.9} x2={162} y2={cy + R + 40} stroke="var(--muted)" strokeWidth={1.2} />
@@ -382,14 +383,14 @@ function Balon({ v }: SahneProps) {
       <g fontSize={12.5} fontWeight={700}>
         <text x={236} y={70} fill="var(--c3)">F<tspan fontSize={9} dy={3}>k</tspan><tspan dy={-3}> = {say(Fk, 1)} N ↑</tspan></text>
         <text x={236} y={96} fill="var(--c2)">G = {say(G, 1)} N ↓</text>
-        <text x={236} y={114} fill="var(--muted)" fontSize={11}>helyum + sepet</text>
+        <text x={236} y={114} fill="var(--muted)" fontSize={11}>{cev("helyum + sepet")}</text>
         <line x1={236} x2={334} y1={126} y2={126} stroke="var(--line)" />
-        <text x={236} y={148} fill={kalkar ? "var(--good)" : "var(--ink)"} fontWeight={800}>net: {net < 0 ? "−" : ""}{say(Math.abs(net), 1)} N</text>
+        <text x={236} y={148} fill={kalkar ? "var(--good)" : "var(--ink)"} fontWeight={800}>{cev("net:")} {net < 0 ? "−" : ""}{say(Math.abs(net), 1)} N</text>
       </g>
       <text x={170} y={234} fontSize={14} fontWeight={800} textAnchor="middle" fill={kalkar ? "var(--good)" : "var(--ink)"}>
-        {kalkar ? "Balon yükseliyor" : "Balon yerden kalkamıyor"}
+        {kalkar ? cev("Balon yükseliyor") : cev("Balon yerden kalkamıyor")}
       </text>
-      <text x={170} y={252} fontSize={12} textAnchor="middle" fill="var(--muted)">hacim {V} m³</text>
+      <text x={170} y={252} fontSize={12} textAnchor="middle" fill="var(--muted)">{cev("hacim")} {V} m³</text>
     </svg>
   );
 }

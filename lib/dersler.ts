@@ -1,5 +1,7 @@
 // Ders listesi ve türler. İstemci bileşenleri yalnızca bunu içe aktarır; konu içerikleri (büyük JSON) lib/content.ts'tedir.
+import { cev, DIL } from "@/lib/dil";
 import dersler from "@/content/dersler.json";
+import derslerEn from "@/content/en/dersler.json";
 
 /** Etkileşimli kart görseli (components/Etk.tsx). Başlangıç değerleri içerikten gelir. */
 export type Etk =
@@ -57,7 +59,7 @@ export type DersId = "fizik" | "kimya" | "biyoloji";
 export type Ders = { ad: string; yol: string; konular: { id?: string; ad: string; on?: string[]; sinav?: Sinav; unite?: string; uniteKod?: string }[] };
 /** Konunun YKS'de hangi oturumda çıktığı (content/dersler.json "sinav"; tools/check.py doğrular). */
 export type Sinav = "TYT" | "AYT" | "TYT-AYT";
-export const SINAV_AD: Record<Sinav, string> = { TYT: "TYT", AYT: "AYT", "TYT-AYT": "TYT ve AYT" };
+export const SINAV_AD: Record<Sinav, string> = { TYT: "TYT", AYT: "AYT", "TYT-AYT": cev("TYT ve AYT") };
 
 /** Ders yolundaki bir konu: hazırsa kısa bilgisiyle, değilse yalnızca adıyla. Kart görsellerini taşımaz. */
 export type Entry = {
@@ -81,6 +83,26 @@ export type Entry = {
   dk?: number;
 };
 
-export const DERSLER = dersler as Record<DersId, Ders>;
+/**
+ * İngilizce kopyada (lib/dil.ts) ders, ünite ve konu adları content/en/dersler.json'dan gelir; orada adı olmayan Türkçe kalır.
+ */
+type DersEn = { ad: string; yol: string; uniteler: Record<string, string>; konular: Record<string, string> };
+function yerel(d: Record<DersId, Ders>): Record<DersId, Ders> {
+  if (DIL !== "en") return d;
+  const en = derslerEn as Record<DersId, DersEn>;
+  return Object.fromEntries(
+    (Object.keys(d) as DersId[]).map((k) => [k, {
+      ...d[k],
+      ad: en[k]?.ad ?? d[k].ad,
+      yol: en[k]?.yol ?? d[k].yol,
+      konular: d[k].konular.map((t) => ({
+        ...t,
+        ad: (t.id && en[k]?.konular[t.id]) || t.ad,
+        ...(t.unite ? { unite: (t.uniteKod && en[k]?.uniteler[t.uniteKod]) || t.unite } : {}),
+      })),
+    }]),
+  ) as Record<DersId, Ders>;
+}
+export const DERSLER = yerel(dersler as Record<DersId, Ders>);
 export const DERS_IDS = Object.keys(DERSLER) as DersId[];
 export const isDers = (d: string): d is DersId => d in DERSLER;

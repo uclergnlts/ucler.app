@@ -2,6 +2,7 @@
 // Kimya sahneleri (madde, atom modelleri): taneciklerin üç hali, ısınma eğrisi, element-bileşik-karışım,
 // homojen-heterojen karışım, fiziksel-kimyasal değişim; katot ışını, üzümlü kek, altın levha deneyi,
 // çekirdeğe nişan, Bohr katmanları ve elektron bulutu.
+import { cev } from "@/lib/dil";
 import { useEffect, useMemo, useState } from "react";
 import { rastgele, yumusak, type SahneKaydi, type SahneProps } from "./ortak";
 
@@ -48,15 +49,15 @@ const N_HAL = 16;
 function Hal({ v }: SahneProps) {
   const T = v.T ?? 20;
   const saat = useSaat();
-  const hal = T <= 0 ? "katı" : T <= 100 ? "sıvı" : "gaz";
+  const hal = T <= 0 ? cev("katı") : T <= 100 ? cev("sıvı") : "gaz";
   const rnd = useMemo(() => { const r = rastgele(41); return Array.from({ length: N_HAL }, () => [r(), r(), r(), r()]); }, []);
   const ucgen = (x: number) => { const k = ((x % 2) + 2) % 2; return k < 1 ? k : 2 - k; };
   const noktalar = rnd.map(([a, b, c, d], i) => {
-    if (hal === "katı") {
+    if (hal === cev("katı")) {
       const titre = 1.4;
       return { x: 143 + (i % 4) * 18 + titre * Math.sin(saat * 22 + i * 1.7), y: 177 - Math.floor(i / 4) * 18 + titre * Math.cos(saat * 19 + i * 2.3) };
     }
-    if (hal === "sıvı") {
+    if (hal === cev("sıvı")) {
       const sira = Math.floor(i / 7), k = i % 7;
       const x = 104 + k * 22 + (sira % 2) * 11 + 5 * Math.sin(saat * (0.9 + a) + i * 1.9);
       return { x: Math.max(KAP.x0 + 9, Math.min(KAP.x1 - 9, x)), y: 177 - sira * 14 + 1.5 * Math.sin(saat * 2.2 + i) };
@@ -64,8 +65,8 @@ function Hal({ v }: SahneProps) {
     const hiz = 0.3 + 0.35 * c;
     return { x: KAP.x0 + 9 + ucgen(a * 2 + saat * hiz) * (KAP.x1 - KAP.x0 - 18), y: KAP.y0 + 9 + ucgen(b * 2 + saat * hiz * (0.7 + d)) * (KAP.y1 - KAP.y0 - 18) };
   });
-  const ozellik = hal === "katı" ? "Şekli ve hacmi sabit" : hal === "sıvı" ? "Hacmi sabit, şekli kabın şekli" : "Kabı tamamen doldurur";
-  const not = T === 0 ? "0 °C: erime noktası" : T === 100 ? "100 °C: kaynama noktası" : hal === "katı" ? "buz" : hal === "sıvı" ? "su" : "su buharı";
+  const ozellik = hal === cev("katı") ? cev("Şekli ve hacmi sabit") : hal === cev("sıvı") ? cev("Hacmi sabit, şekli kabın şekli") : cev("Kabı tamamen doldurur");
+  const not = T === 0 ? cev("0 °C: erime noktası") : T === 100 ? cev("100 °C: kaynama noktası") : hal === cev("katı") ? "buz" : hal === cev("sıvı") ? "su" : cev("su buharı");
   return (
     <svg viewBox="0 0 340 224" role="img" aria-label={`${T} derecede su: ${hal}`}>
       <path d={`M${KAP.x0} ${KAP.y0 - 8} L${KAP.x0} ${KAP.y1} L${KAP.x1} ${KAP.y1} L${KAP.x1} ${KAP.y0 - 8}`} fill="none" stroke="var(--line-2)" strokeWidth={2.5} />
@@ -100,9 +101,9 @@ function Isinma({ t, oynuyor, s }: SahneProps) {
   const z = u * 10;
   const yol = [...DUGUM.filter(([zz]) => zz < z).map(([zz, T]) => [iX(zz), iY(T)]), [iX(z), iY(sicaklik(z))]];
   const T = Math.round(sicaklik(z));
-  const durum = z < 1 ? "buz ısınıyor" : z < 4 ? "buz eriyor" : z < 5.5 ? "su ısınıyor" : z < 9 ? "su kaynıyor" : "buhar ısınıyor";
+  const durum = z < 1 ? cev("buz ısınıyor") : z < 4 ? cev("buz eriyor") : z < 5.5 ? cev("su ısınıyor") : z < 9 ? cev("su kaynıyor") : cev("buhar ısınıyor");
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label={`Isınma grafiği: ${T} derece, ${durum}`}>
+    <svg viewBox="0 0 340 226" role="img" aria-label={cev("Isınma grafiği: {0} derece, {1}", T, durum)}>
       <g>
         {[0, 100].map((d) => (
           <g key={d}>
@@ -113,17 +114,17 @@ function Isinma({ t, oynuyor, s }: SahneProps) {
         <line x1={ISI.x0} x2={ISI.x0} y1={ISI.y0 - 10} y2={ISI.y1} stroke="var(--ink)" strokeWidth={1.4} />
         <line x1={ISI.x0} x2={ISI.x1} y1={ISI.y1} y2={ISI.y1} stroke="var(--ink)" strokeWidth={1.4} />
         <text x={ISI.x0 - 6} y={ISI.y1 + 4} fontSize={11} textAnchor="end" fill="var(--muted)">−20</text>
-        <text x={ISI.x0 + 6} y={ISI.y0 - 14} fontSize={11} fontWeight={700} fill="var(--ink)">sıcaklık (°C)</text>
-        <text x={ISI.x1} y={ISI.y1 + 18} fontSize={11} fontWeight={700} textAnchor="end" fill="var(--ink)">zaman (ısı veriliyor) →</text>
+        <text x={ISI.x0 + 6} y={ISI.y0 - 14} fontSize={11} fontWeight={700} fill="var(--ink)">{cev("sıcaklık (°C)")}</text>
+        <text x={ISI.x1} y={ISI.y1 + 18} fontSize={11} fontWeight={700} textAnchor="end" fill="var(--ink)">{cev("zaman (ısı veriliyor) →")}</text>
       </g>
       <polyline points={yol.map((p) => p.join(",")).join(" ")} fill="none" stroke="var(--kimya)" strokeWidth={3} strokeLinejoin="round" strokeLinecap="round" />
       <circle cx={yol[yol.length - 1][0]} cy={yol[yol.length - 1][1]} r={5} fill="var(--kimya)" />
       <g fontSize={11} fontWeight={700}>
-        {z >= 2.5 && <text x={iX(2.5)} y={iY(0) - 8} textAnchor="middle" fill="var(--kimya)">eriyor: 0 °C</text>}
-        {z >= 7.3 && <text x={iX(7.4)} y={iY(100) + 17} textAnchor="middle" fill="var(--kimya)">kaynıyor: 100 °C</text>}
+        {z >= 2.5 && <text x={iX(2.5)} y={iY(0) - 8} textAnchor="middle" fill="var(--kimya)">{cev("eriyor: 0 °C")}</text>}
+        {z >= 7.3 && <text x={iX(7.4)} y={iY(100) + 17} textAnchor="middle" fill="var(--kimya)">{cev("kaynıyor: 100 °C")}</text>}
       </g>
-      <text x={ISI.x1} y={24} fontSize={13} fontWeight={800} textAnchor="end" fill="var(--ink)">{u > 0 ? `${T} °C · ${durum}` : "−20 °C · buz"}</text>
-      <text x={170} y={222} fontSize={11} textAnchor="middle" fill="var(--muted)">1 atm basınçta saf su</text>
+      <text x={ISI.x1} y={24} fontSize={13} fontWeight={800} textAnchor="end" fill="var(--ink)">{u > 0 ? `${T} °C · ${durum}` : cev("−20 °C · buz")}</text>
+      <text x={170} y={222} fontSize={11} textAnchor="middle" fill="var(--muted)">{cev("1 atm basınçta saf su")}</text>
     </svg>
   );
 }
@@ -142,13 +143,13 @@ function Ornekler() {
     );
   };
   return (
-    <svg viewBox="0 0 340 220" role="img" aria-label="A: oksijen molekülleri, B: su molekülleri, C: hidrojen ve oksijen molekülleri karışık">
+    <svg viewBox="0 0 340 220" role="img" aria-label={cev("A: oksijen molekülleri, B: su molekülleri, C: hidrojen ve oksijen molekülleri karışık")}>
       {kutu(16, "A", (x, y, i) => <O2 key={i} x={x} y={y} />)}
       {kutu(122, "B", (x, y, i) => <Su key={i} x={x} y={y} a={(i * 47) % 60 - 30} />)}
       {kutu(228, "C", (x, y, i) => (i % 2 ? <O2 key={i} x={x} y={y} /> : <H2 key={i} x={x} y={y} />))}
       <g fontSize={11.5} fill="var(--muted)" fontWeight={600}>
-        <circle cx={118} cy={210} r={6} fill="var(--c2)" /><text x={128} y={214}>oksijen</text>
-        <circle cx={192} cy={210} r={4.2} fill="var(--surface)" stroke="#8d9bb0" strokeWidth={1.3} /><text x={202} y={214}>hidrojen</text>
+        <circle cx={118} cy={210} r={6} fill="var(--c2)" /><text x={128} y={214}>{cev("oksijen")}</text>
+        <circle cx={192} cy={210} r={4.2} fill="var(--surface)" stroke="#8d9bb0" strokeWidth={1.3} /><text x={202} y={214}>{cev("hidrojen")}</text>
       </g>
     </svg>
   );
@@ -172,7 +173,7 @@ function Karistir({ t, oynuyor, s }: SahneProps) {
   }) : null;
   const katman = karis === 0 || u >= 1 ? 1 : cokel;
   return (
-    <svg viewBox="0 0 340 228" role="img" aria-label={u >= 1 ? "Şekerli su her yerde aynı, zeytinyağı üstte ayrı katman" : "Şeker ve su, zeytinyağı ve su"}>
+    <svg viewBox="0 0 340 228" role="img" aria-label={u >= 1 ? cev("Şekerli su her yerde aynı, zeytinyağı üstte ayrı katman") : cev("Şeker ve su, zeytinyağı ve su")}>
       <g>
         <path d={`M${L - 49} 92 L${L - 46} 188 Q${L - 45} 193 ${L - 38} 193 L${L + 38} 193 Q${L + 45} 193 ${L + 46} 188 L${L + 49} 92 Z`} fill={SU} />
         <path d={bardak(L)} fill="none" stroke="var(--line-2)" strokeWidth={2.5} />
@@ -190,15 +191,15 @@ function Karistir({ t, oynuyor, s }: SahneProps) {
       </g>
       {oynuyor && u < 0.55 && (
         <g fontSize={12} fontWeight={700} fill="var(--c1)" textAnchor="middle">
-          <text x={L} y={58}>↻ karıştırılıyor</text><text x={R} y={58}>↻ karıştırılıyor</text>
+          <text x={L} y={58}>{cev("↻ karıştırılıyor")}</text><text x={R} y={58}>{cev("↻ karıştırılıyor")}</text>
         </g>
       )}
-      {oynuyor && u >= 0.55 && <text x={170} y={58} fontSize={12} fontWeight={700} fill="var(--muted)" textAnchor="middle">bekleniyor…</text>}
+      {oynuyor && u >= 0.55 && <text x={170} y={58} fontSize={12} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("bekleniyor…")}</text>}
       <g fontSize={12.5} fontWeight={700} textAnchor="middle">
-        <text x={L} y={214} fill="var(--ink)">şeker + su</text>
-        <text x={R} y={214} fill="var(--ink)">zeytinyağı + su</text>
-        {u >= 1 && <text x={L} y={30} fill="var(--good)">homojen</text>}
-        {u >= 1 && <text x={R} y={30} fill="var(--kimya)">heterojen</text>}
+        <text x={L} y={214} fill="var(--ink)">{cev("şeker + su")}</text>
+        <text x={R} y={214} fill="var(--ink)">{cev("zeytinyağı + su")}</text>
+        {u >= 1 && <text x={L} y={30} fill="var(--good)">{cev("homojen")}</text>}
+        {u >= 1 && <text x={R} y={30} fill="var(--kimya)">{cev("heterojen")}</text>}
       </g>
     </svg>
   );
@@ -212,7 +213,7 @@ function Degisim({ t, oynuyor, s }: SahneProps) {
   const rnd = useMemo(() => { const r = rastgele(yanma ? 5 : 3); return Array.from({ length: 9 }, () => [r(), r(), r()]); }, [yanma]);
   if (!yanma) {
     return (
-      <svg viewBox="0 0 340 220" role="img" aria-label={u >= 1 ? "Su molekülleri aynı, düzen bozuldu" : "Buzda düzenli su molekülleri"}>
+      <svg viewBox="0 0 340 220" role="img" aria-label={u >= 1 ? cev("Su molekülleri aynı, düzen bozuldu") : cev("Buzda düzenli su molekülleri")}>
         <g>
           {rnd.map(([a, b, c], i) => {
             const x0 = 128 + (i % 3) * 42, y0 = 62 + Math.floor(i / 3) * 42;
@@ -222,14 +223,14 @@ function Degisim({ t, oynuyor, s }: SahneProps) {
         </g>
         <text x={170} y={24} fontSize={14} fontWeight={800} textAnchor="middle" fill="var(--ink)">9 H₂O {u > 0 ? "→ 9 H₂O" : ""}</text>
         <text x={170} y={204} fontSize={12.5} fontWeight={700} textAnchor="middle" fill={u >= 1 ? "var(--good)" : "var(--muted)"}>
-          {u >= 1 ? "su: aynı molekül, yalnızca dizilişi değişti" : oynuyor ? "eriyor…" : "buz: düzenli dizilmiş su molekülleri"}
+          {u >= 1 ? cev("su: aynı molekül, yalnızca dizilişi değişti") : oynuyor ? "eriyor…" : cev("buz: düzenli dizilmiş su molekülleri")}
         </text>
       </svg>
     );
   }
   const satir = [70, 112, 154];
   return (
-    <svg viewBox="0 0 340 228" role="img" aria-label={u >= 1 ? "Karbon ve oksijen birleşip karbon dioksit oluştu" : "Karbon atomları ve oksijen molekülleri"}>
+    <svg viewBox="0 0 340 228" role="img" aria-label={u >= 1 ? cev("Karbon ve oksijen birleşip karbon dioksit oluştu") : cev("Karbon atomları ve oksijen molekülleri")}>
       <g>
         {satir.map((y, i) => (
           <g key={i}>
@@ -244,11 +245,11 @@ function Degisim({ t, oynuyor, s }: SahneProps) {
           <path key={d} d={`M${170 + d} 208 C${161 + d} 205 ${163 + d} 194 ${170 + d} 182 C${177 + d} 194 ${179 + d} 205 ${170 + d} 208 Z`} fill="var(--c4)" opacity={0.85} />
         ))}
       </g>
-      <text x={170} y={30} fontSize={15} fontWeight={800} textAnchor="middle" fill="var(--ink)">{u >= 1 ? "C + O₂ → CO₂" : "C + O₂ → ?"}</text>
+      <text x={170} y={30} fontSize={15} fontWeight={800} textAnchor="middle" fill="var(--ink)">{u >= 1 ? cev("C + O₂ → CO₂") : "C + O₂ → ?"}</text>
       <g fontSize={12} fontWeight={700} textAnchor="middle">
-        {u < 0.5 && <text x={110} y={190} fill="var(--muted)">karbon</text>}
-        {u < 0.5 && <text x={230} y={190} fill="var(--muted)">oksijen (O₂)</text>}
-        {u >= 1 && <text x={270} y={116} fill="var(--kimya)">karbon dioksit</text>}
+        {u < 0.5 && <text x={110} y={190} fill="var(--muted)">{cev("karbon")}</text>}
+        {u < 0.5 && <text x={230} y={190} fill="var(--muted)">{cev("oksijen (O₂)")}</text>}
+        {u >= 1 && <text x={270} y={116} fill="var(--kimya)">{cev("karbon dioksit")}</text>}
       </g>
     </svg>
   );
@@ -265,7 +266,7 @@ function Katot({ t, oynuyor, s }: SahneProps) {
   for (let x = xs; x <= xNow; x += 4) nokta.push(`${x},${120 + sapma(x)}`);
   if (u > 0) nokta.push(`${xNow},${120 + sapma(xNow)}`);
   return (
-    <svg viewBox="0 0 340 220" role="img" aria-label={u >= 1 ? "Işın artı yüklü levhaya doğru saptı" : "Katot ışını tüpü ve yüklü levhalar"}>
+    <svg viewBox="0 0 340 220" role="img" aria-label={u >= 1 ? cev("Işın artı yüklü levhaya doğru saptı") : cev("Katot ışını tüpü ve yüklü levhalar")}>
       <rect x={16} y={60} width={306} height={120} rx={40} fill="none" stroke="var(--line-2)" strokeWidth={2.5} />
       <g>
         <rect x={34} y={100} width={6} height={40} fill="var(--ink)" />
@@ -282,11 +283,11 @@ function Katot({ t, oynuyor, s }: SahneProps) {
       {u > 0 && <polyline points={nokta.join(" ")} fill="none" stroke="var(--c3)" strokeWidth={3} strokeLinecap="round" />}
       {u >= 1 && <circle cx={xe + 6} cy={120 + sapma(xe)} r={5} fill="var(--c3)" />}
       <g fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">
-        <text x={50} y={200}>katot</text>
-        <text x={200} y={200}>yüklü levhalar</text>
-        <text x={308} y={200}>ekran</text>
+        <text x={50} y={200}>{cev("katot")}</text>
+        <text x={200} y={200}>{cev("yüklü levhalar")}</text>
+        <text x={308} y={200}>{cev("ekran")}</text>
       </g>
-      {u >= 1 && <text x={170} y={30} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--c3)">Işın artı levhaya saptı</text>}
+      {u >= 1 && <text x={170} y={30} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--c3)">{cev("Işın artı levhaya saptı")}</text>}
     </svg>
   );
 }
@@ -300,7 +301,7 @@ function Thomson({ v }: SahneProps) {
   const e = v.e ?? 0, q = 6 - e;
   const cx = 116, cy = 112;
   return (
-    <svg viewBox="0 0 340 224" role="img" aria-label={`Artı yüklü küre, ${e} elektron, toplam yük ${q}`}>
+    <svg viewBox="0 0 340 224" role="img" aria-label={cev("Artı yüklü küre, {0} elektron, toplam yük {1}", e, q)}>
       <circle cx={cx} cy={cy} r={86} fill="var(--c2)" fillOpacity={0.12} stroke="var(--c2)" strokeWidth={2} />
       <g fontSize={18} fontWeight={800} fill="var(--c2)" textAnchor="middle">
         {ARTI.map(([x, y], i) => <text key={i} x={cx + x} y={cy + y + 6}>+</text>)}
@@ -314,11 +315,11 @@ function Thomson({ v }: SahneProps) {
         ))}
       </g>
       <g fontSize={13} fontWeight={700}>
-        <text x={226} y={86} fill="var(--c2)">artı yük: +6</text>
-        <text x={226} y={110} fill="var(--c1)">eksi yük: {e ? `−${e}` : "0"}</text>
+        <text x={226} y={86} fill="var(--c2)">{cev("artı yük: +6")}</text>
+        <text x={226} y={110} fill="var(--c1)">{cev("eksi yük:")} {e ? `−${e}` : "0"}</text>
         <line x1={226} x2={330} y1={120} y2={120} stroke="var(--line-2)" />
         <text x={226} y={142} fill={q === 0 ? "var(--good)" : "var(--ink)"} fontSize={15} fontWeight={800}>
-          {q === 0 ? "nötr atom" : `toplam: ${q > 0 ? "+" : "−"}${Math.abs(q)}`}
+          {q === 0 ? cev("nötr atom") : `toplam: ${q > 0 ? "+" : "−"}${Math.abs(q)}`}
         </text>
       </g>
     </svg>
@@ -360,18 +361,18 @@ function Altin({ t, oynuyor, s }: SahneProps) {
     );
   });
   return (
-    <svg viewBox="0 0 340 228" role="img" aria-label={u >= 1 ? "Alfa taneciklerinin 12'si düz geçti, 2'si saptı, 1'i geri döndü" : "Alfa kaynağı ve ince altın levha"}>
+    <svg viewBox="0 0 340 228" role="img" aria-label={u >= 1 ? cev("Alfa taneciklerinin 12'si düz geçti, 2'si saptı, 1'i geri döndü") : cev("Alfa kaynağı ve ince altın levha")}>
       <g>
         <rect x={2} y={50} width={18} height={146} rx={4} fill="var(--ink)" />
-        <text x={2} y={218} fontSize={11.5} fontWeight={700} textAnchor="start" fill="var(--muted)">alfa kaynağı</text>
+        <text x={2} y={218} fontSize={11.5} fontWeight={700} textAnchor="start" fill="var(--muted)">{cev("alfa kaynağı")}</text>
       </g>
       <g>
         <rect x={FOLYO - 2} y={36} width={4} height={164} fill="var(--c4)" />
-        <text x={FOLYO} y={28} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="#b7800d">altın levha</text>
+        <text x={FOLYO} y={28} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="#b7800d">{cev("altın levha")}</text>
       </g>
       <g>{izler}</g>
       {u >= 1 && (
-        <text x={334} y={218} fontSize={12} fontWeight={800} textAnchor="end" fill="var(--ink)">12 geçti · 2 saptı · 1 geri döndü</text>
+        <text x={334} y={218} fontSize={12} fontWeight={800} textAnchor="end" fill="var(--ink)">{cev("12 geçti · 2 saptı · 1 geri döndü")}</text>
       )}
     </svg>
   );
@@ -405,12 +406,12 @@ function Nisan({ v, t, oynuyor, s }: SahneProps) {
   const son = gorunen[gorunen.length - 1];
   const aci = Math.round(sapmaAci(b));
   return (
-    <svg viewBox="0 0 340 228" role="img" aria-label={`Çekirdeğe uzaklık ${b}, sapma ${aci} derece`}>
+    <svg viewBox="0 0 340 228" role="img" aria-label={cev("Çekirdeğe uzaklık {0}, sapma {1} derece", b, aci)}>
       <circle cx={NX} cy={NY} r={92} fill="none" stroke="var(--line-2)" strokeWidth={1.5} strokeDasharray="5 6" />
       <g>
         <circle cx={NX} cy={NY} r={6} fill="var(--c2)" />
-        <text x={NX + 10} y={NY + 20} fontSize={11.5} fontWeight={700} fill="var(--c2)">çekirdek (+)</text>
-        <text x={NX - 76} y={NY + 92} fontSize={11.5} fontWeight={600} textAnchor="end" fill="var(--muted)">atom: çoğu boşluk</text>
+        <text x={NX + 10} y={NY + 20} fontSize={11.5} fontWeight={700} fill="var(--c2)">{cev("çekirdek (+)")}</text>
+        <text x={NX - 76} y={NY + 92} fontSize={11.5} fontWeight={600} textAnchor="end" fill="var(--muted)">{cev("atom: çoğu boşluk")}</text>
       </g>
       <g>
         <line x1={14} x2={NX} y1={NY} y2={NY} stroke="var(--line)" strokeDasharray="3 5" />
@@ -420,7 +421,7 @@ function Nisan({ v, t, oynuyor, s }: SahneProps) {
       <circle cx={son[0]} cy={son[1]} r={4.5} fill="var(--c2)" />
       {u >= 1 && (
         <text x={334} y={222} fontSize={13} fontWeight={800} textAnchor="end" fill={aci > 90 ? "var(--good)" : "var(--ink)"}>
-          Sapma: {aci}°{aci > 90 ? " · geri döndü" : ""}
+          {cev("Sapma:")} {aci}°{aci > 90 ? cev(" · geri döndü") : ""}
         </text>
       )}
     </svg>
@@ -431,12 +432,12 @@ function Nisan({ v, t, oynuyor, s }: SahneProps) {
 
 const BCX = 96, BCY = 112, BR = [24, 44, 66, 90];
 const GECIS: Record<string, { nm: string; renk: string; ad: string }> = {
-  "3-2": { nm: "656 nm", renk: "#e2483b", ad: "kırmızı ışık" },
-  "4-2": { nm: "486 nm", renk: "#1aa3b8", ad: "mavi-yeşil ışık" },
-  "4-3": { nm: "1875 nm", renk: "#9aa8ba", ad: "kızılötesi (görünmez)" },
-  "2-1": { nm: "122 nm", renk: "var(--c5)", ad: "morötesi (görünmez)" },
-  "3-1": { nm: "103 nm", renk: "var(--c5)", ad: "morötesi (görünmez)" },
-  "4-1": { nm: "97 nm", renk: "var(--c5)", ad: "morötesi (görünmez)" },
+  "3-2": { nm: cev("656 nm"), renk: "#e2483b", ad: cev("kırmızı ışık") },
+  "4-2": { nm: cev("486 nm"), renk: "#1aa3b8", ad: cev("mavi-yeşil ışık") },
+  "4-3": { nm: cev("1875 nm"), renk: "#9aa8ba", ad: cev("kızılötesi (görünmez)") },
+  "2-1": { nm: cev("122 nm"), renk: "var(--c5)", ad: cev("morötesi (görünmez)") },
+  "3-1": { nm: cev("103 nm"), renk: "var(--c5)", ad: cev("morötesi (görünmez)") },
+  "4-1": { nm: cev("97 nm"), renk: "var(--c5)", ad: cev("morötesi (görünmez)") },
 };
 
 function Bohr({ v }: SahneProps) {
@@ -452,7 +453,7 @@ function Bohr({ v }: SahneProps) {
     return d;
   })();
   return (
-    <svg viewBox="0 0 340 224" role="img" aria-label={`Elektron ${n}. katmanda${inis ? `, ${inis.ad} yayıldı` : ""}`}>
+    <svg viewBox="0 0 340 224" role="img" aria-label={cev("Elektron {0}. katmanda{1}", n, inis ? `, ${inis.ad} yayıldı` : "")}>
       <g>
         {BR.map((r, i) => (
           <g key={i}>
@@ -465,11 +466,11 @@ function Bohr({ v }: SahneProps) {
       <circle cx={ex} cy={ey} r={6.5} fill="var(--c1)" stroke="var(--surface)" strokeWidth={1.2} />
       {inis && <path key={`${son![0]}${son![1]}`} className="ad-belir" d={dalga} fill="none" stroke={inis.renk} strokeWidth={2.5} strokeLinecap="round" />}
       <g fontSize={12.5} fontWeight={700}>
-        <text x={212} y={44} fill="var(--ink)" fontSize={15} fontWeight={800}>{n}. katman</text>
-        {son && <text x={212} y={70} fill="var(--muted)">{son[0]} → {son[1]}: {son[1] < son[0] ? "ışık yaydı" : "enerji aldı"}</text>}
+        <text x={212} y={44} fill="var(--ink)" fontSize={15} fontWeight={800}>{n}{cev(". katman")}</text>
+        {son && <text x={212} y={70} fill="var(--muted)">{son[0]} → {son[1]}: {son[1] < son[0] ? cev("ışık yaydı") : cev("enerji aldı")}</text>}
         {inis && <text x={212} y={94} fill={inis.renk}>{inis.nm}</text>}
         {inis && <text x={212} y={114} fill={inis.renk}>{inis.ad}</text>}
-        {!son && <text x={212} y={70} fill="var(--muted)">hidrojen atomu</text>}
+        {!son && <text x={212} y={70} fill="var(--muted)">{cev("hidrojen atomu")}</text>}
       </g>
     </svg>
   );
@@ -488,7 +489,7 @@ function Bulut({ v }: SahneProps) {
     }).filter(Boolean) as number[][];
   }, []);
   return (
-    <svg viewBox="0 0 340 224" role="img" aria-label={bulut ? "Elektron bulutu: koyu yerlerde bulunma olasılığı yüksek" : "Bohr modeli: elektron belirli bir yörüngede"}>
+    <svg viewBox="0 0 340 224" role="img" aria-label={bulut ? cev("Elektron bulutu: koyu yerlerde bulunma olasılığı yüksek") : cev("Bohr modeli: elektron belirli bir yörüngede")}>
       {bulut ? (
         <g>{noktalar.map(([x, y], i) => <circle key={i} cx={x} cy={y} r={1.5} fill="var(--c1)" opacity={0.55} />)}</g>
       ) : (
@@ -501,7 +502,7 @@ function Bulut({ v }: SahneProps) {
       )}
       <circle cx={170} cy={108} r={6} fill="var(--c2)" />
       <text x={170} y={218} fontSize={12.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">
-        {bulut ? "Modern model: koyu yerde bulunma olasılığı yüksek" : "Bohr: elektron belirli bir yörüngede"}
+        {bulut ? cev("Modern model: koyu yerde bulunma olasılığı yüksek") : cev("Bohr: elektron belirli bir yörüngede")}
       </text>
     </svg>
   );
@@ -520,7 +521,7 @@ export const KIMYA2: Record<string, SahneKaydi> = {
     C: Nisan,
     geri: (v) => {
       const a = Math.round(sapmaAci(v.b ?? 40));
-      return { baslik: `Sapma ${a}°: geri dönmedi`, metin: "Tanecik çekirdekten uzak geçtiği için itme zayıf kaldı. Onu çekirdeğe daha yakın gönder." };
+      return { baslik: cev("Sapma {0}°: geri dönmedi", a), metin: cev("Tanecik çekirdekten uzak geçtiği için itme zayıf kaldı. Onu çekirdeğe daha yakın gönder.") };
     },
   },
   "kim2-bohr": { C: Bohr },

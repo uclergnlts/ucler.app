@@ -2,6 +2,7 @@
 // Biyoloji sahneleri (bitkiler âlemi, mitoz): bitki grupları anahtarı, iletim demetiyle su taşıma,
 // döl almaşı, baskın döl, açık ve kapalı tohum; hücre döngüsü, kromozom ve kromatit, mitoz evreleri,
 // sitokinez, bakterinin ikiye bölünmesi, aşı.
+import { cev, SAYI_YEREL } from "@/lib/dil";
 import { yumusak, type SahneKaydi, type SahneProps } from "./ortak";
 
 const sinir = (x: number, a = 0, b = 1) => Math.max(a, Math.min(b, x));
@@ -71,24 +72,24 @@ function Elma() {
 }
 
 const GRUP = [
-  { ad: "Kara yosunları", ornek: "kara yosunu, ciğer otu", kisa: "yosunlar", C: Yosun },
-  { ad: "Eğrelti otları", ornek: "eğrelti, at kuyruğu, kibrit otu", kisa: "eğreltiler", C: Egrelti },
-  { ad: "Açık tohumlular", ornek: "çam, ladin, köknar, ardıç", kisa: "açık tohum", C: Cam },
-  { ad: "Kapalı tohumlular", ornek: "elma, buğday, lale, meşe", kisa: "kapalı tohum", C: Elma },
+  { ad: cev("Kara yosunları"), ornek: cev("kara yosunu, ciğer otu"), kisa: "yosunlar", C: Yosun },
+  { ad: cev("Eğrelti otları"), ornek: cev("eğrelti, at kuyruğu, kibrit otu"), kisa: cev("eğreltiler"), C: Egrelti },
+  { ad: cev("Açık tohumlular"), ornek: cev("çam, ladin, köknar, ardıç"), kisa: cev("açık tohum"), C: Cam },
+  { ad: cev("Kapalı tohumlular"), ornek: cev("elma, buğday, lale, meşe"), kisa: cev("kapalı tohum"), C: Elma },
 ];
 
 function Gruplar({ v }: SahneProps) {
   const d = v.d ?? 0, t = v.t ?? 0, c = v.c ?? 0;
-  const yok = t === 0 && c === 1 ? "Çiçek ve meyve yalnızca tohumlu bitkilerde bulunur." : d === 0 && t === 1 ? "Damarsız ama tohumlu bir bitki grubu yoktur." : null;
+  const yok = t === 0 && c === 1 ? cev("Çiçek ve meyve yalnızca tohumlu bitkilerde bulunur.") : d === 0 && t === 1 ? cev("Damarsız ama tohumlu bir bitki grubu yoktur.") : null;
   const k = yok ? -1 : d === 0 ? 0 : t === 0 ? 1 : c === 0 ? 2 : 3;
   const G = k >= 0 ? GRUP[k] : null;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={G ? `${G.ad}: ${G.ornek}` : "Böyle bir bitki grubu yok"}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={G ? `${G.ad}: ${G.ornek}` : cev("Böyle bir bitki grubu yok")}>
       <line x1={90} y1={140} x2={250} y2={140} stroke="var(--line-2)" strokeWidth={1.6} />
       <g key={k} className="ad-belir">
         {G ? <G.C /> : <text x={170} y={110} fontSize={48} fontWeight={800} fill="var(--line-2)" textAnchor="middle">?</text>}
       </g>
-      <text x={170} y={166} fontSize={15} fontWeight={800} fill={G ? "var(--ink)" : "var(--bad)"} textAnchor="middle">{G ? G.ad : "Böyle bir grup yok"}</text>
+      <text x={170} y={166} fontSize={15} fontWeight={800} fill={G ? "var(--ink)" : "var(--bad)"} textAnchor="middle">{G ? G.ad : cev("Böyle bir grup yok")}</text>
       <text x={170} y={185} fontSize={11.5} fontWeight={600} fill="var(--muted)" textAnchor="middle">{G ? G.ornek : yok}</text>
       {GRUP.map((g, i) => {
         const x = 4 + i * 84, on = i === k;
@@ -119,7 +120,7 @@ function Su({ t, oynuyor, s }: SahneProps) {
       </g>
     ));
   return (
-    <svg viewBox="0 0 340 250" role="img" aria-label="İletim demeti olan ve olmayan iki gövdede suyun yükselmesi">
+    <svg viewBox="0 0 340 250" role="img" aria-label={cev("İletim demeti olan ve olmayan iki gövdede suyun yükselmesi")}>
       {hucreler(46, (i) => yavas - i)}
       {hucreler(226, (i) => (u > 0.45 ? yumusak((u - 0.45) / 0.4) : 0) * (boru > i ? 1 : 0))}
       <g>
@@ -131,15 +132,15 @@ function Su({ t, oynuyor, s }: SahneProps) {
         <rect x={210} y={Y0} width={96} height={10} rx={3} fill="var(--c1)" fillOpacity={0.35} />
       </g>
       <g fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        <text x={78} y={24}>iletim demeti yok</text>
-        <text x={258} y={24}>iletim demeti var</text>
+        <text x={78} y={24}>{cev("iletim demeti yok")}</text>
+        <text x={258} y={24}>{cev("iletim demeti var")}</text>
       </g>
       {u > 0 && (
       <g fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">
-        <text x={78} y={226}>{u > 0.95 ? "yavaş geçen su" : "su hücreden hücreye"}</text>
-        <text x={78} y={241} fill={u > 0.95 ? "var(--bad)" : undefined} fontWeight={u > 0.95 ? 800 : 600}>{u > 0.95 ? "tepeye ulaşamadı" : "yavaşça geçer"}</text>
-        <text x={258} y={226}>ksilem borusu suyu</text>
-        <text x={258} y={241}>hızla yukarı taşır</text>
+        <text x={78} y={226}>{u > 0.95 ? cev("yavaş geçen su") : cev("su hücreden hücreye")}</text>
+        <text x={78} y={241} fill={u > 0.95 ? "var(--bad)" : undefined} fontWeight={u > 0.95 ? 800 : 600}>{u > 0.95 ? cev("tepeye ulaşamadı") : cev("yavaşça geçer")}</text>
+        <text x={258} y={226}>{cev("ksilem borusu suyu")}</text>
+        <text x={258} y={241}>{cev("hızla yukarı taşır")}</text>
       </g>
       )}
     </svg>
@@ -155,14 +156,14 @@ const DOL = [
   { ad: "gametler", p: "n", x: 102, y: 178 },
   { ad: "zigot", p: "2n", x: 58, y: 92 },
 ];
-const OLAY = ["mayoz", "mitoz", "mitoz", "döllenme", "mitoz"];
+const OLAY = ["mayoz", "mitoz", "mitoz", cev("döllenme"), "mitoz"];
 
 function DolAlmasi({ t, oynuyor, s }: SahneProps) {
   const sure = typeof s.sure === "number" ? s.sure : 6;
   const u = ilerleme(t, oynuyor, sure);
   const adim = u * 5, CX = 170, CY = 110;
   return (
-    <svg viewBox="0 0 340 256" role="img" aria-label="Eğreltide döl almaşı: sporofit mayozla spor, spor mitozla gametofit, gametofit mitozla gamet, döllenme ile zigot">
+    <svg viewBox="0 0 340 256" role="img" aria-label={cev("Eğreltide döl almaşı: sporofit mayozla spor, spor mitozla gametofit, gametofit mitozla gamet, döllenme ile zigot")}>
       {DOL.map((a, i) => {
         const b = DOL[(i + 1) % 5], dolu = sinir(adim - i);
         const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2, lx = mx + (mx - CX) * 0.42, ly = my + (my - CY) * 0.42 + 4;
@@ -188,8 +189,8 @@ function DolAlmasi({ t, oynuyor, s }: SahneProps) {
         );
       })}
       <g fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">
-        <text x={170} y={236}>Eğreltide büyük yapraklı bitki sporofit,</text>
-        <text x={170} y={251}>kalp biçimli küçük protallus gametofittir.</text>
+        <text x={170} y={236}>{cev("Eğreltide büyük yapraklı bitki sporofit,")}</text>
+        <text x={170} y={251}>{cev("kalp biçimli küçük protallus gametofittir.")}</text>
       </g>
     </svg>
   );
@@ -200,9 +201,9 @@ function DolAlmasi({ t, oynuyor, s }: SahneProps) {
 function Baskin({ v }: SahneProps) {
   const g = sinir(v.g ?? 1, 1, 3);
   const [ad, gam, spo, gNot, sNot] = [
-    ["Kara yosunu", 0.85, 0.25, "gördüğün yosun örtüsü", "üstündeki sapçık, ona bağlı"],
-    ["Eğrelti otu", 0.2, 0.85, "küçük protallus, bağımsız", "büyük yapraklı bitki"],
-    ["Tohumlu bitki", 0.06, 1, "polen ve embriyo kesesi", "ağacın, çiçeğin kendisi"],
+    [cev("Kara yosunu"), 0.85, 0.25, cev("gördüğün yosun örtüsü"), cev("üstündeki sapçık, ona bağlı")],
+    [cev("Eğrelti otu"), 0.2, 0.85, cev("küçük protallus, bağımsız"), cev("büyük yapraklı bitki")],
+    [cev("Tohumlu bitki"), 0.06, 1, cev("polen ve embriyo kesesi"), cev("ağacın, çiçeğin kendisi")],
   ][g - 1] as [string, number, number, string, string];
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={`${ad}: gametofit ${gNot}, sporofit ${sNot}`}>
@@ -235,8 +236,8 @@ function Baskin({ v }: SahneProps) {
       </g>
       <line x1={60} y1={132} x2={280} y2={132} stroke="var(--line-2)" strokeWidth={1.4} />
       {[
-        { y: 156, ad: "gametofit (n)", oran: gam, renk: N1, not: gNot },
-        { y: 200, ad: "sporofit (2n)", oran: spo, renk: N2, not: sNot },
+        { y: 156, ad: cev("gametofit (n)"), oran: gam, renk: N1, not: gNot },
+        { y: 200, ad: cev("sporofit (2n)"), oran: spo, renk: N2, not: sNot },
       ].map((b) => (
         <g key={b.ad}>
           <text x={14} y={b.y} fontSize={12} fontWeight={800} fill={b.renk}>{b.ad}</text>
@@ -257,7 +258,7 @@ function Tohum({ t, oynuyor, s }: SahneProps) {
   const dus = yumusak(u / 0.35), sis = yumusak((u - 0.3) / 0.5), bitti = u > 0.95;
   const r = 13 + 25 * sis;
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label="Çamda tohum kozalak pulunun üstünde açıkta, elmada meyvenin içinde">
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("Çamda tohum kozalak pulunun üstünde açıkta, elmada meyvenin içinde")}>
       <g>
         <path d="M30 150 Q36 96 84 84 Q132 96 138 150 Q84 164 30 150 Z" fill={KAHVE} fillOpacity={0.85} />
         {[64, 104].map((x) => (
@@ -277,19 +278,19 @@ function Tohum({ t, oynuyor, s }: SahneProps) {
         {[-6, 6].map((dx) => <ellipse key={dx} cx={250 + dx * (1 + sis)} cy={120} rx={3.5} ry={5.5} fill={KAHVE} />)}
       </g>
       <g fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        <text x={84} y={30}>çam</text>
-        <text x={250} y={30}>elma</text>
+        <text x={84} y={30}>{cev("çam")}</text>
+        <text x={250} y={30}>{cev("elma")}</text>
       </g>
       <g fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">
-        <text x={84} y={46}>dişi kozalağın pulu</text>
-        <text x={250} y={46}>{u === 0 ? "çiçek ve yumurtalık" : sis < 0.5 ? "yumurtalık büyüyor" : "yumurtalık → meyve"}</text>
+        <text x={84} y={46}>{cev("dişi kozalağın pulu")}</text>
+        <text x={250} y={46}>{u === 0 ? cev("çiçek ve yumurtalık") : sis < 0.5 ? cev("yumurtalık büyüyor") : cev("yumurtalık → meyve")}</text>
       </g>
       {bitti && (
         <g className="ad-belir" fontSize={12} fontWeight={800} textAnchor="middle">
-          <text x={84} y={190} fill="var(--c4)">tohum açıkta</text>
-          <text x={84} y={207} fontSize={11} fontWeight={600} fill="var(--muted)">kanatlı, rüzgârla uçar</text>
-          <text x={250} y={190} fill="var(--c2)">tohum meyvenin içinde</text>
-          <text x={250} y={207} fontSize={11} fontWeight={600} fill="var(--muted)">meyve onu korur, taşıtır</text>
+          <text x={84} y={190} fill="var(--c4)">{cev("tohum açıkta")}</text>
+          <text x={84} y={207} fontSize={11} fontWeight={600} fill="var(--muted)">{cev("kanatlı, rüzgârla uçar")}</text>
+          <text x={250} y={190} fill="var(--c2)">{cev("tohum meyvenin içinde")}</text>
+          <text x={250} y={207} fontSize={11} fontWeight={600} fill="var(--muted)">{cev("meyve onu korur, taşıtır")}</text>
         </g>
       )}
     </svg>
@@ -301,15 +302,15 @@ function Tohum({ t, oynuyor, s }: SahneProps) {
 function Cenek({ v }: SahneProps) {
   const p = sinir(v.p ?? 5, 3, 6), pd = v.pd === 1, sk = v.sk === 1;
   const ozellik = [
-    { ad: "çiçek", deger: `${p} yaprak`, tek: p % 3 === 0 },
-    { ad: "damar", deger: pd ? "paralel" : "ağsı", tek: pd },
-    { ad: "kök", deger: sk ? "saçak" : "kazık", tek: sk },
+    { ad: cev("çiçek"), deger: cev("{0} yaprak", p), tek: p % 3 === 0 },
+    { ad: "damar", deger: pd ? "paralel" : cev("ağsı"), tek: pd },
+    { ad: cev("kök"), deger: sk ? cev("saçak") : cev("kazık"), tek: sk },
   ];
   const tek = ozellik.filter((o) => o.tek).length;
-  const sonuc = tek === 3 ? "tek çenekli" : tek === 0 ? "çift çenekli" : "özellikler karışık";
+  const sonuc = tek === 3 ? cev("tek çenekli") : tek === 0 ? cev("çift çenekli") : cev("özellikler karışık");
   const renk = tek === 3 ? "var(--c1)" : tek === 0 ? "var(--c2)" : "var(--muted)";
   return (
-    <svg viewBox="0 0 340 250" role="img" aria-label={`${p} çiçek yaprağı, ${pd ? "paralel" : "ağsı"} damar, ${sk ? "saçak" : "kazık"} kök: ${sonuc}`}>
+    <svg viewBox="0 0 340 250" role="img" aria-label={cev("{0} çiçek yaprağı, {1} damar, {2} kök: {3}", p, pd ? "paralel" : "ağsı", sk ? "saçak" : "kazık", sonuc)}>
       <g>
         {Array.from({ length: p }, (_, i) => {
           const a = (i * 360) / p - 90, r = (a * Math.PI) / 180;
@@ -349,7 +350,7 @@ function Cenek({ v }: SahneProps) {
           <g key={o.ad}>
             <text x={186} y={56 + i * 44} fontSize={11} fontWeight={600} fill="var(--muted)">{o.ad}</text>
             <text x={186} y={74 + i * 44} fontSize={14} fontWeight={800} fill={o.tek ? "var(--c1)" : "var(--c2)"}>{o.deger}</text>
-            <text x={326} y={74 + i * 44} fontSize={11} fontWeight={700} fill={o.tek ? "var(--c1)" : "var(--c2)"} textAnchor="end">{o.tek ? "tek" : "çift"}</text>
+            <text x={326} y={74 + i * 44} fontSize={11} fontWeight={700} fill={o.tek ? "var(--c1)" : "var(--c2)"} textAnchor="end">{o.tek ? "tek" : cev("çift")}</text>
           </g>
         ))}
       </g>
@@ -364,10 +365,10 @@ function Cenek({ v }: SahneProps) {
 /* ---------- hücre döngüsü ---------- */
 
 const EVRE = [
-  { ad: "G1", a: 0, b: 35, renk: "var(--c3)", not: "hücre büyür" },
-  { ad: "S", a: 35, b: 60, renk: "var(--c1)", not: "DNA eşlenir" },
-  { ad: "G2", a: 60, b: 80, renk: "var(--c4)", not: "bölünmeye hazırlanır" },
-  { ad: "M", a: 80, b: 100, renk: "var(--c2)", not: "mitoz ve sitokinez" },
+  { ad: "G1", a: 0, b: 35, renk: "var(--c3)", not: cev("hücre büyür") },
+  { ad: "S", a: 35, b: 60, renk: "var(--c1)", not: cev("DNA eşlenir") },
+  { ad: "G2", a: 60, b: 80, renk: "var(--c4)", not: cev("bölünmeye hazırlanır") },
+  { ad: "M", a: 80, b: 100, renk: "var(--c2)", not: cev("mitoz ve sitokinez") },
 ];
 const yay = (cx: number, cy: number, r: number, a: number, b: number) => {
   const p = (k: number) => { const t = ((k / 100) * 360 - 90) * (Math.PI / 180); return [cx + r * Math.cos(t), cy + r * Math.sin(t)]; };
@@ -404,14 +405,14 @@ function Dongu({ v }: SahneProps) {
     { x: 282, y: 142, boy: yogun ? 20 : 26, renk: "var(--c2)", aci: -25 },
   ];
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label={`${e.ad} evresi: ${e.not}; DNA ${dna.toFixed(1)} birim, kromozom sayısı 4`}>
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("{0} evresi: {1}; DNA {2} birim, kromozom sayısı 4", e.ad, e.not, dna.toFixed(1))}>
       {EVRE.map((x) => (
         <g key={x.ad}>
           <path d={yay(CX, CY, R, x.a + 0.8, x.b - 0.8)} stroke={x.renk} strokeWidth={x === e ? 16 : 11} fill="none" opacity={x === e ? 1 : 0.4} />
           {(() => { const m = (((x.a + x.b) / 200) * 360 - 90) * (Math.PI / 180); return <text x={CX + (R + 18) * Math.cos(m)} y={CY + (R + 18) * Math.sin(m) + 4} fontSize={12} fontWeight={800} fill={x.renk} textAnchor="middle">{x.ad}</text>; })()}
         </g>
       ))}
-      <text x={CX} y={CY - 4} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">interfaz</text>
+      <text x={CX} y={CY - 4} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">{cev("interfaz")}</text>
       <text x={CX} y={CY + 11} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">G1 + S + G2</text>
       <circle cx={CX + R * Math.cos(ang)} cy={CY + R * Math.sin(ang)} r={9} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2.4} />
       <g>
@@ -420,8 +421,8 @@ function Dongu({ v }: SahneProps) {
       </g>
       <text x={170} y={22} fontSize={14} fontWeight={800} fill={e.renk} textAnchor="middle">{e.ad}: {e.not}</text>
       <g fontSize={12} fontWeight={700} fill="var(--ink)">
-        <text x={196} y={206}>DNA: {dna.toLocaleString("tr-TR", { maximumFractionDigits: 1 })} birim</text>
-        <text x={196} y={224}>kromozom: 4</text>
+        <text x={196} y={206}>{cev("DNA:")} {dna.toLocaleString(SAYI_YEREL, { maximumFractionDigits: 1 })} {cev("birim")}</text>
+        <text x={196} y={224}>{cev("kromozom: 4")}</text>
       </g>
     </svg>
   );
@@ -438,27 +439,27 @@ function Kromatit({ v }: SahneProps) {
     { x: 264, y: 112, boy: 46, renk: "var(--c2)" },
   ];
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${es ? "Eşlenmiş" : "Eşlenmemiş"}: 4 kromozom, ${es ? 8 : 4} kromatit`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={`${es ? cev("Eşlenmiş") : cev("Eşlenmemiş")}: 4 kromozom, ${es ? 8 : 4} kromatit`}>
       <g key={es} className="ad-belir">
         {KR.map((c, i) => <Kromozom key={i} {...c} es={es * 2} />)}
       </g>
       {es === 1 && (
         <g className="ad-belir" fontSize={11} fontWeight={700} fill="var(--muted)">
           <path d="M130 60 L114 46 M142 60 L158 46" stroke="var(--muted)" strokeWidth={1.2} />
-          <text x={136} y={38} textAnchor="middle">kardeş kromatitler</text>
+          <text x={136} y={38} textAnchor="middle">{cev("kardeş kromatitler")}</text>
           <path d="M208 108 L296 64" stroke="var(--muted)" strokeWidth={1.2} />
-          <text x={300} y={56} textAnchor="middle">sentromer</text>
+          <text x={300} y={56} textAnchor="middle">{cev("sentromer")}</text>
         </g>
       )}
       <g fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">
-        <text x={106} y={172}>uzun çift</text>
-        <text x={234} y={172}>kısa çift</text>
+        <text x={106} y={172}>{cev("uzun çift")}</text>
+        <text x={234} y={172}>{cev("kısa çift")}</text>
       </g>
       <g>
         {[
           { x: 60, ad: "kromozom", n: 4 },
           { x: 170, ad: "kromatit", n: es ? 8 : 4 },
-          { x: 280, ad: "DNA molekülü", n: es ? 8 : 4 },
+          { x: 280, ad: cev("DNA molekülü"), n: es ? 8 : 4 },
         ].map((s) => (
           <g key={s.ad}>
             <text x={s.x} y={206} fontSize={22} fontWeight={800} fill="var(--ink)" textAnchor="middle">{s.n}</text>
@@ -473,10 +474,10 @@ function Kromatit({ v }: SahneProps) {
 /* ---------- mitoz evreleri ---------- */
 
 const MITOZ = [
-  { ad: "Profaz", not: "kromozomlar belirir, çekirdek zarı kaybolur" },
-  { ad: "Metafaz", not: "kromozomlar ekvatorda tek sıra" },
-  { ad: "Anafaz", not: "kardeş kromatitler zıt kutuplara" },
-  { ad: "Telofaz", not: "iki yeni çekirdek kurulur" },
+  { ad: cev("Profaz"), not: cev("kromozomlar belirir, çekirdek zarı kaybolur") },
+  { ad: cev("Metafaz"), not: cev("kromozomlar ekvatorda tek sıra") },
+  { ad: cev("Anafaz"), not: cev("kardeş kromatitler zıt kutuplara") },
+  { ad: cev("Telofaz"), not: cev("iki yeni çekirdek kurulur") },
 ];
 const KROM = [
   { boy: 34, renk: "var(--c1)", pro: [138, 92, -25], y: 62 },
@@ -505,7 +506,7 @@ function Mitoz({ s, v, t, oynuyor }: SahneProps) {
   });
   const kutupX = (d: number) => CX + d * 74 * ayril;
   return (
-    <svg viewBox="0 0 340 260" role="img" aria-label={`${MITOZ[f].ad}: ${MITOZ[f].not}; kromozom sayısı ${sayi}`}>
+    <svg viewBox="0 0 340 260" role="img" aria-label={cev("{0}: {1}; kromozom sayısı {2}", MITOZ[f].ad, MITOZ[f].not, sayi)}>
       <path d={zar} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.8} />
       <circle cx={CX} cy={CY} r={66} fill="none" stroke="var(--ink)" strokeWidth={1.4} strokeDasharray="5 5" opacity={1 - yumusak(x / 0.7)} />
       <g stroke="var(--c3)" strokeWidth={1} opacity={0.75 * (1 - tel)}>
@@ -547,8 +548,8 @@ function Mitoz({ s, v, t, oynuyor }: SahneProps) {
       <text x={14} y={22} fontSize={14} fontWeight={800} fill="var(--biyoloji)">{MITOZ[f].ad}</text>
       <text x={14} y={38} fontSize={11} fontWeight={600} fill="var(--muted)">{MITOZ[f].not}</text>
       <g fontSize={12.5} fontWeight={800}>
-        <text x={14} y={248} fill={sayi === 8 ? "var(--c2)" : "var(--ink)"}>kromozom: {sayi}{f === 3 ? " (her çekirdekte 4)" : ""}</text>
-        <text x={326} y={248} fill="var(--ink)" textAnchor="end">DNA: 4 birim</text>
+        <text x={14} y={248} fill={sayi === 8 ? "var(--c2)" : "var(--ink)"}>{cev("kromozom:")} {sayi}{f === 3 ? cev(" (her çekirdekte 4)") : ""}</text>
+        <text x={326} y={248} fill="var(--ink)" textAnchor="end">{cev("DNA: 4 birim")}</text>
       </g>
     </svg>
   );
@@ -565,19 +566,19 @@ function Sitokinez({ v, t, oynuyor, s }: SahneProps) {
     const w = 78 * yumusak(u);
     const zar = `M40 ${CY} C40 36 160 28 170 ${30 + w} C180 28 300 36 300 ${CY} C300 184 180 192 170 ${190 - w} C160 192 40 184 40 ${CY} Z`;
     return (
-      <svg viewBox="0 0 340 236" role="img" aria-label="Hayvan hücresinde sitoplazma ortadan boğumlanarak bölünür">
+      <svg viewBox="0 0 340 236" role="img" aria-label={cev("Hayvan hücresinde sitoplazma ortadan boğumlanarak bölünür")}>
         <path d={zar} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.8} />
         <g>
           {[100, 240].map((x) => <circle key={x} cx={x} cy={CY} r={30} fill="var(--c5)" fillOpacity={0.18} stroke="var(--c5)" strokeWidth={1.6} />)}
         </g>
         {u > 0 && u < 1 && <g stroke="var(--c2)" strokeWidth={2.2}><path d={`M170 ${16 + w * 0.6} l0 10 M165 ${21 + w * 0.6} l5 5 l5 -5`} /><path d={`M170 ${204 - w * 0.6} l0 -10 M165 ${199 - w * 0.6} l5 -5 l5 5`} /></g>}
-        <text x={170} y={226} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{u > 0.95 ? "zar içe boğumlandı: iki hücre" : "hayvan hücresi: zar esnek"}</text>
+        <text x={170} y={226} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{u > 0.95 ? cev("zar içe boğumlandı: iki hücre") : cev("hayvan hücresi: zar esnek")}</text>
       </svg>
     );
   }
   const plak = yumusak(u / 0.85);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label="Bitki hücresinde Golgi keseciklerinden ortada hücre plağı kurulur">
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Bitki hücresinde Golgi keseciklerinden ortada hücre plağı kurulur")}>
       <rect x={34} y={28} width={272} height={166} rx={4} fill="color-mix(in srgb, #c8f3ee 20%, var(--surface))" stroke={YESIL} strokeWidth={6} />
       <g>
         {[100, 240].map((x) => <circle key={x} cx={x} cy={CY} r={30} fill="var(--c5)" fillOpacity={0.18} stroke="var(--c5)" strokeWidth={1.6} />)}
@@ -590,7 +591,7 @@ function Sitokinez({ v, t, oynuyor, s }: SahneProps) {
         })}
       </g>
       <rect x={167} y={CY - 80 * plak} width={6} height={160 * plak} fill={YESIL} />
-      <text x={170} y={222} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{u > 0.95 ? "ortada hücre plağı kuruldu: iki hücre" : u > 0 ? "Golgi kesecikleri ortada birleşiyor" : "bitki hücresi: sert hücre duvarı"}</text>
+      <text x={170} y={222} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{u > 0.95 ? cev("ortada hücre plağı kuruldu: iki hücre") : u > 0 ? cev("Golgi kesecikleri ortada birleşiyor") : cev("bitki hücresi: sert hücre duvarı")}</text>
     </svg>
   );
 }
@@ -612,10 +613,10 @@ function Bakteri({ t, oynuyor, s }: SahneProps) {
       </g>
       <line x1={20} y1={200} x2={320} y2={200} stroke="var(--line)" />
       <g fontSize={13} fontWeight={800} fill="var(--ink)">
-        <text x={20} y={224}>{dk}. dakika</text>
-        <text x={320} y={224} textAnchor="end">{sayi} bakteri</text>
+        <text x={20} y={224}>{dk}{cev(". dakika")}</text>
+        <text x={320} y={224} textAnchor="end">{sayi} {cev("bakteri")}</text>
       </g>
-      <text x={170} y={224} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">{n} bölünme</text>
+      <text x={170} y={224} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">{n} {cev("bölünme")}</text>
     </svg>
   );
 }
@@ -628,7 +629,7 @@ function Asi({ t, oynuyor, s }: SahneProps) {
   const yer = yumusak(u / 0.3), tac = yumusak((u - 0.3) / 0.4), meyve = yumusak((u - 0.7) / 0.25);
   const kx = 236 + (170 - 236) * yer, ky = 70 + (104 - 70) * yer;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label="Yabani elma anacına Amasya elması kalemi aşılanıyor; meyveler kalemin özelliğini taşıyor">
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Yabani elma anacına Amasya elması kalemi aşılanıyor; meyveler kalemin özelliğini taşıyor")}>
       <g>
         <rect x={164} y={112} width={12} height={68} fill={KAHVE} />
         {[-30, -14, 0, 14, 30].map((dx, i) => <path key={i} d={`M170 180 Q${170 + dx * 0.5} 192 ${170 + dx} ${204 + (i % 2) * 6}`} stroke={KAHVE} strokeWidth={2} fill="none" />)}
@@ -643,13 +644,13 @@ function Asi({ t, oynuyor, s }: SahneProps) {
       {[[146, 62], [190, 78], [170, 92], [158, 86], [188, 54]].map(([x, y], i) => <circle key={i} cx={x} cy={y} r={7 * meyve} fill="var(--c2)" />)}
       <g fontSize={11.5} fontWeight={700}>
         <circle cx={262} cy={124} r={6} fill="var(--c2)" />
-        <text x={272} y={128} fill="var(--ink)">kalem:</text>
-        <text x={328} y={144} fill="var(--muted)" fontWeight={600} textAnchor="end">Amasya elması (tatlı)</text>
+        <text x={272} y={128} fill="var(--ink)">{cev("kalem:")}</text>
+        <text x={328} y={144} fill="var(--muted)" fontWeight={600} textAnchor="end">{cev("Amasya elması (tatlı)")}</text>
         <circle cx={34} cy={124} r={5} fill="#c8c64a" />
-        <text x={44} y={128} fill="var(--ink)">anaç:</text>
-        <text x={18} y={144} fill="var(--muted)" fontWeight={600}>yabani elma (ekşi)</text>
+        <text x={44} y={128} fill="var(--ink)">{cev("anaç:")}</text>
+        <text x={18} y={144} fill="var(--muted)" fontWeight={600}>{cev("yabani elma (ekşi)")}</text>
       </g>
-      {u > 0.95 && <text x={170} y={228} fontSize={12.5} fontWeight={800} fill="var(--c2)" textAnchor="middle" className="ad-belir">meyveler kalemin özelliğini taşır</text>}
+      {u > 0.95 && <text x={170} y={228} fontSize={12.5} fontWeight={800} fill="var(--c2)" textAnchor="middle" className="ad-belir">{cev("meyveler kalemin özelliğini taşır")}</text>}
     </svg>
   );
 }
@@ -666,7 +667,7 @@ export const BIYOLOJI4: Record<string, SahneKaydi> = {
   "biy4-mitoz": { C: Mitoz },
   "biy4-sitokinez": {
     C: Sitokinez,
-    geri: (v) => (v.b === 1 ? null : { baslik: "Bu hayvan hücresiydi", metin: "Zar ortadan içe boğumlandı. Şimdi bitki hücresine geç ve onu da oynat." }),
+    geri: (v) => (v.b === 1 ? null : { baslik: cev("Bu hayvan hücresiydi"), metin: cev("Zar ortadan içe boğumlandı. Şimdi bitki hücresine geç ve onu da oynat.") }),
   },
   "biy4-bakteri": { C: Bakteri },
   "biy4-asi": { C: Asi },

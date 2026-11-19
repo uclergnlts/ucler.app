@@ -2,6 +2,7 @@
 // Haftalık lig ekranı: renkli başlık ve geri sayım, gerçek ilk üç için kürsü, liste, öğrencinin kendi satırı.
 // Örnek öğrenciler listede "örnek" etiketiyle, sıra numarası olmadan görünür; kürsüye ve madalyaya girmez.
 // Veri lib/lig.ts'den; liste sunucuda kurulur. Hesabı olmayan öğrenci listeyi görür, kendi yeri için hesap açmaya çağrılır.
+import { cev } from "@/lib/dil";
 import { ANA } from "@/lib/site";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
@@ -41,7 +42,7 @@ function Avatar({ ad, buyuk }: { ad: string; buyuk?: boolean }) {
 function Madalya({ n }: { n?: number | null }) {
   if (!n) return null;
   return (
-    <span className="grid size-4 flex-none place-items-center rounded-full text-[10px] font-extrabold text-white" style={{ background: MADALYA[n] }} title={`Geçen hafta ${n}.`} aria-label={`Geçen hafta ${n}.`}>
+    <span className="grid size-4 flex-none place-items-center rounded-full text-[10px] font-extrabold text-white" style={{ background: MADALYA[n] }} title={cev("Geçen hafta {0}.", n)} aria-label={cev("Geçen hafta {0}.", n)}>
       {n}
     </span>
   );
@@ -58,7 +59,7 @@ const Puan = ({ n, className }: { n: number; className?: string }) => {
 
 function Kursu({ liste }: { liste: LigSatir[] }) {
   return (
-    <div className="grid grid-cols-3 items-end gap-2 pt-2" aria-label="İlk üç">
+    <div className="grid grid-cols-3 items-end gap-2 pt-2" aria-label={cev("İlk üç")}>
       {KURSU.map(({ i, h, zemin, yazi }) => {
         const s = liste[i];
         return (
@@ -76,7 +77,7 @@ function Kursu({ liste }: { liste: LigSatir[] }) {
                   {i === 0 && <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-[#e0a400] [&_svg]:size-5 [&_svg]:fill-[var(--glow)]"><Icon.kupa /></span>}
                 </div>
                 <span className={cn("flex max-w-full items-center gap-1 truncate text-[14px] font-bold", s.ben && "text-mark")}>
-                  <span className="truncate">{s.ben ? "Sen" : s.ad}</span><Madalya n={s.madalya} />
+                  <span className="truncate">{s.ben ? cev("Sen") : s.ad}</span><Madalya n={s.madalya} />
                 </span>
                 <Puan n={s.puan} className="text-[14px]" />
               </>
@@ -103,8 +104,8 @@ function Satir({ s, i }: { s: LigSatir; i: number }) {
       <Avatar ad={s.ad} />
       <span className="flex min-w-0 flex-1 items-center gap-1.5 text-[15px] font-semibold">
         <span className="truncate">{s.ad}</span>
-        {s.ben && <span className="flex-none text-[13px] font-bold text-mark">(sen)</span>}
-        {s.ornek ? <span className="flex-none rounded-full bg-secondary px-2 py-0.5 text-[12px] font-bold text-muted-foreground">örnek</span> : <Madalya n={s.madalya} />}
+        {s.ben && <span className="flex-none text-[13px] font-bold text-mark">{cev("(sen)")}</span>}
+        {s.ornek ? <span className="flex-none rounded-full bg-secondary px-2 py-0.5 text-[12px] font-bold text-muted-foreground">{cev("örnek")}</span> : <Madalya n={s.madalya} />}
       </span>
       <Puan n={s.puan} className="text-[15px]" />
     </motion.li>
@@ -134,33 +135,33 @@ export default function Lig() {
 
   return (
     <div className="app">
-      <UstBar geri={{ to: ANA, label: "Ana sayfa" }} baslik="Haftalık lig" sag={<UstEylem label="Yenile" icon={<Icon.tekrar />} onClick={yukle} />} />
+      <UstBar geri={{ to: ANA, label: cev("Ana sayfa") }} baslik={cev("Haftalık lig")} sag={<UstEylem label={cev("Yenile")} icon={<Icon.tekrar />} onClick={yukle} />} />
       <Govde className="gap-4 pb-28">
         <section className="relative grid gap-1 overflow-hidden rounded-lg border border-border bg-card p-4">
           <span className="absolute top-4 right-4 text-mark [&_svg]:size-7" aria-hidden="true"><Kupa /></span>
-          <span className="text-[11px] font-bold tracking-[.14em] text-mark uppercase">Haftalık lig</span>
-          <h2 className="font-display text-[24px] leading-tight font-extrabold">Bu hafta</h2>
-          <p className="text-[15px] text-muted-foreground">Bu hafta kazandığın puanlarla sıralan.</p>
+          <span className="text-[11px] font-bold tracking-[.14em] text-mark uppercase">{cev("Haftalık lig")}</span>
+          <h2 className="font-display text-[24px] leading-tight font-extrabold">{cev("Bu hafta")}</h2>
+          <p className="text-[15px] text-muted-foreground">{cev("Bu hafta kazandığın puanlarla sıralan.")}</p>
           <div className="mt-2 flex flex-wrap gap-2 text-[13px] font-bold">
-            <span className="rounded-full bg-secondary px-3 py-1">{veri ? `Bitmesine ${kalanSure(veri.bitis, simdi)}` : "Hafta pazar gece biter"}</span>
-            {veri && veri.kisi > 0 && <span className="rounded-full bg-secondary px-3 py-1">{veri.kisi} kişi</span>}
+            <span className="rounded-full bg-secondary px-3 py-1">{veri ? cev("Bitmesine {0}", kalanSure(veri.bitis, simdi)) : cev("Hafta pazar gece biter")}</span>
+            {veri && veri.kisi > 0 && <span className="rounded-full bg-secondary px-3 py-1">{veri.kisi} {cev("kişi")}</span>}
           </div>
         </section>
 
         {veri === undefined ? (
-          <div className="grid gap-2" aria-label="Yükleniyor">
+          <div className="grid gap-2" aria-label={cev("Yükleniyor")}>
             <div className="h-44 animate-pulse rounded-3xl bg-secondary" />
             {[0, 1, 2].map((k) => <div key={k} className="h-14 animate-pulse rounded-2xl bg-secondary" />)}
           </div>
         ) : veri === null ? (
           <div className="grid gap-3 rounded-2xl border border-border p-4 text-center">
-            <p className="text-[15px] text-muted-foreground">Lig şu an yüklenemedi. İnternet bağlantını kontrol edip yeniden dene.</p>
-            <Button variant="outline" onClick={yukle}>Yeniden dene</Button>
+            <p className="text-[15px] text-muted-foreground">{cev("Lig şu an yüklenemedi. İnternet bağlantını kontrol edip yeniden dene.")}</p>
+            <Button variant="outline" onClick={yukle}>{cev("Yeniden dene")}</Button>
           </div>
         ) : liste.length === 0 ? (
           <div className="grid gap-1 rounded-2xl border border-dashed border-border-strong p-5 text-center">
-            <b className="font-display text-[17px] font-extrabold">Bu hafta henüz kimse puan almadı</b>
-            <p className="text-[14px] text-muted-foreground">Bir kart oku ya da bir görev çöz, listenin başına sen geç.</p>
+            <b className="font-display text-[17px] font-extrabold">{cev("Bu hafta henüz kimse puan almadı")}</b>
+            <p className="text-[14px] text-muted-foreground">{cev("Bir kart oku ya da bir görev çöz, listenin başına sen geç.")}</p>
           </div>
         ) : (
           <>
@@ -176,31 +177,31 @@ export default function Lig() {
         {oturum === null && (
           <section className="grid gap-3 rounded-2xl border border-border bg-card p-4">
             <div className="grid gap-1">
-              <b className="font-display text-[17px] font-extrabold">Hesap aç, ligde yerini gör</b>
-              <p className="text-[14px] text-muted-foreground">Ligde yalnızca hesabı olanlar yarışır. Bu cihazda kazandığın puanlar da hesabına taşınır.</p>
+              <b className="font-display text-[17px] font-extrabold">{cev("Hesap aç, ligde yerini gör")}</b>
+              <p className="text-[14px] text-muted-foreground">{cev("Ligde yalnızca hesabı olanlar yarışır. Bu cihazda kazandığın puanlar da hesabına taşınır.")}</p>
             </div>
             <div className="grid grid-cols-2 gap-2">
-              <Button asChild variant="hesap"><Link href="/giris/">Hesap aç</Link></Button>
-              <Button asChild variant="hesapCizgi"><Link href="/giris/?giris">Giriş yap</Link></Button>
+              <Button asChild variant="hesap"><Link href="/giris/">{cev("Hesap aç")}</Link></Button>
+              <Button asChild variant="hesapCizgi"><Link href="/giris/?giris">{cev("Giriş yap")}</Link></Button>
             </div>
           </section>
         )}
 
         {ben && !ben.ligde && (
           <p className="rounded-2xl bg-secondary p-3.5 text-[14px] text-muted-foreground">
-            Listede görünmüyorsun; sıranı yalnızca sen görüyorsun. Görünmek için{" "}
-            <Link href="/profil/ayarlar/" className="font-bold text-foreground underline">Ayarlar</Link>&apos;da &quot;Haftalık ligde görün&quot;ü aç.
+            {cev("Listede görünmüyorsun; sıranı yalnızca sen görüyorsun. Görünmek için")}{" "}
+            <Link href="/profil/ayarlar/" className="font-bold text-foreground underline">{cev("Ayarlar")}</Link>{cev("'da \"Haftalık ligde görün\"ü aç.")}
           </p>
         )}
 
         {ornekVar && (
           <p className="rounded-2xl bg-secondary p-3.5 text-[14px] text-muted-foreground">
-            &quot;Örnek&quot; yazan satırlar, lig yeniyken nasıl göründüğünü göstermek için eklenen örnek öğrencilerdir. Hesapları yoktur; sıraya, kişi sayısına ve madalyalara girmezler.
+            {cev("\"Örnek\" yazan satırlar, lig yeniyken nasıl göründüğünü göstermek için eklenen örnek öğrencilerdir. Hesapları yoktur; sıraya, kişi sayısına ve madalyalara girmezler.")}
           </p>
         )}
 
         <p className="px-1 text-[13px] text-muted-foreground">
-          Lig her pazartesi 00:00&apos;da sıfırlanır. Bir günde en çok 600 puan sayılır. Adının yanındaki küçük madalya, geçen haftanın ilk üçünde olduğunu gösterir. Listede yalnızca adın ve puanın görünür.
+          {cev("Lig her pazartesi 00:00'da sıfırlanır. Bir günde en çok 600 puan sayılır. Adının yanındaki küçük madalya, geçen haftanın ilk üçünde olduğunu gösterir. Listede yalnızca adın ve puanın görünür.")}
         </p>
       </Govde>
 
@@ -211,7 +212,7 @@ export default function Lig() {
             <span className="w-7 flex-none text-center font-display text-[16px] font-extrabold tabular-nums text-mark">{ben.puan > 0 ? ben.sira : "–"}</span>
             <Avatar ad={ben.ad} />
             <span className="min-w-0 flex-1 truncate text-[15px] font-semibold">
-              {ben.puan > 0 ? "Senin sıran" : "Bu hafta puan al, listeye gir"}
+              {ben.puan > 0 ? cev("Senin sıran") : cev("Bu hafta puan al, listeye gir")}
             </span>
             <Puan n={ben.puan} className="text-[15px]" />
           </div>

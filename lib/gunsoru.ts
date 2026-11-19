@@ -4,6 +4,7 @@
 // Tek deneme hakkı vardır. Hesabı olan öğrencinin süresi ve puanı sunucuda tutulur ve haftalık lige eklenir
 // (supabase/migrations/20261030_gunun_sorusu.sql). Cevabın doğruluğuna sunucu karar verir (supabase/functions/gunun-sorusu). Hesabı olmayan da çözebilir; süre cihazda ölçülür, puan kaydedilmez.
 // Bu cihazdaki son kayıt (yalnızca bugünün) ana sayfadaki kartı besler ve hesapsız ikinci denemeyi engeller.
+import { cev } from "@/lib/dil";
 import { useSyncExternalStore } from "react";
 import { sb } from "./bulut";
 import { read, subscribe, write } from "./store";
@@ -25,7 +26,7 @@ export function trGun(t = Date.now()) {
 export function yeniSoruya(t = Date.now()) {
   const gece = Date.parse(`${trGun(t)}T00:00:00+03:00`) + 86_400_000;
   const dk = Math.max(1, Math.ceil((gece - t) / 60_000)), s = Math.floor(dk / 60);
-  return s ? `${s} saat ${dk % 60} dk` : `${dk} dk`;
+  return s ? cev("{0} saat {1} dk", s, dk % 60) : `${dk} dk`;
 }
 
 /** O günün sorusu. Gün sırasıyla ders döner; her dersin havuzunda adım asal sayı olduğu için havuz bitmeden soru tekrar etmez. */

@@ -1,6 +1,7 @@
 "use client";
 // Puan, günlük giriş, seri ve günlük görevler. Hepsi yalnızca bu cihazda (localStorage) durur.
 // Veri gün gün sayaç olarak tutulur; hesap gelince aynı sayaçlar sunucuya taşınabilir ve puan listesi onlardan kurulur.
+import { cev } from "@/lib/dil";
 import { useSyncExternalStore } from "react";
 import { bugunku, gun, KEYS, read, subscribe, write, type Tekrar } from "./store";
 
@@ -19,14 +20,14 @@ type GorevKayit = { g?: string; l?: Gorev[]; tamam?: GorevId[]; hepsi?: 1 };
 export const PUAN = { giris: 5, kart: 1, adim: 3, dogru: 5, asama: 10, konu: 20, tekrar: 5, oyun: 10, video: 3, gorev: 15, hepsi: 20 } as const;
 
 const GOREV_ADI: Record<GorevId, (n: number) => string> = {
-  asama: () => "Bir aşama bitir",
-  kart: (n) => `${n} kart oku`,
-  adim: (n) => `${n} etkileşimli görevi çöz`,
-  dogru: (n) => `Testte ${n} doğru cevap ver`,
-  konu: () => "Bir konuyu bitir",
-  tekrar: (n) => (n === 1 ? "Tekrardaki soruyu çöz" : `Tekrarda ${n} soru çöz`),
-  oyun: () => "Bir oyun oyna",
-  video: () => "Bir video izle",
+  asama: () => cev("Bir aşama bitir"),
+  kart: (n) => cev("{0} kart oku", n),
+  adim: (n) => cev("{0} etkileşimli görevi çöz", n),
+  dogru: (n) => cev("Testte {0} doğru cevap ver", n),
+  konu: () => cev("Bir konuyu bitir"),
+  tekrar: (n) => (n === 1 ? cev("Tekrardaki soruyu çöz") : cev("Tekrarda {0} soru çöz", n)),
+  oyun: () => cev("Bir oyun oyna"),
+  video: () => cev("Bir video izle"),
 };
 export const gorevAdi = (g: Gorev) => GOREV_ADI[g.id](g.hedef);
 
@@ -133,9 +134,9 @@ export function kaydet(tur: Sayac | "giris", n = 1, puan = 0) {
   yeni.enUzun = Math.max(p.enUzun ?? 0, seri(yeni));
   write(KEYS.puan, yeni);
 
-  if (tur === "giris") odulGoster(puan, "Günlük giriş");
-  yeniTamam.forEach((gv) => odulGoster(PUAN.gorev, `Görev tamam: ${gorevAdi(gv)}`));
-  if (hepsi) odulGoster(PUAN.hepsi, "Bugünün görevlerinin hepsi tamam");
+  if (tur === "giris") odulGoster(puan, cev("Günlük giriş"));
+  yeniTamam.forEach((gv) => odulGoster(PUAN.gorev, cev("Görev tamam: {0}", gorevAdi(gv))));
+  if (hepsi) odulGoster(PUAN.hepsi, cev("Bugünün görevlerinin hepsi tamam"));
 }
 
 /** Günün ilk açılışında giriş puanı verir. Gün değişmişse yeni görevleri de hazırlar. */

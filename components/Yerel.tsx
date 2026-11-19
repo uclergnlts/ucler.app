@@ -3,6 +3,7 @@
 // Google/Apple girişinden app.ucler://giris bağlantısıyla dönülünce oturum açılsın (lib/bulut.ts uygulamaDonusu).
 // Animasyon: telefonun sabit açılış ekranındaki "u." ile başlar, nokta sağa kayarken c, l, e, r harfleri noktanın
 // geçtiği yerde tek tek, yumuşakça belirir ve "ucler." olur. Sitede `?acilis` ile önizlenir. "Hareketi azalt" açıksa oynamaz.
+import { cev } from "@/lib/dil";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { App } from "@capacitor/app";
@@ -39,7 +40,7 @@ export default function Yerel() {
       if (video) return video.close();
       if (document.querySelector('[role="dialog"][data-state="open"]'))
         return void document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", bubbles: true }));
-      if (!/^\/(index\.html)?$/.test(location.pathname)) return canGoBack ? history.back() : router.replace("/");
+      if (!/^(\/en)?\/(index\.html)?$/.test(location.pathname)) return canGoBack ? history.back() : router.replace("/");
       if (Date.now() - sonGeri.current < 2000) return void App.exitApp();
       sonGeri.current = Date.now();
       setCikis(true);
@@ -59,7 +60,7 @@ export default function Yerel() {
   return (
     <>
       {acilis && <Acilis bitti={() => setAcilis(false)} />}
-      {cikis && <div className="toast" role="status">Çıkmak için tekrar bas</div>}
+      {cikis && <div className="toast" role="status">{cev("Çıkmak için tekrar bas")}</div>}
     </>
   );
 }
@@ -79,8 +80,8 @@ function Acilis({ bitti }: { bitti: () => void }) {
       const W = y.offsetWidth, wN = n.offsetWidth, wKe = ke.offsetWidth, wU = harf[0].offsetWidth;
       // Başlangıç: yalnızca "u." görünür ve ortadadır. Kelime sola, nokta sağa kayar; her harf nokta üstünden geçince belirir.
       const basKe = (W - wU - wN) / 2, gizli = wKe - wU, basN = basKe + wU - n.offsetLeft;
-      ke.style.transform = `translateX(${basKe}px)`;
-      n.style.transform = `translateX(${basN}px)`;
+      ke.style.transform = cev("translateX({0}px)", basKe);
+      n.style.transform = cev("translateX({0}px)", basN);
       harf.slice(1).forEach((h) => { h.style.opacity = "0"; });
       y.style.visibility = "visible";
       if (Capacitor.isNativePlatform()) void SplashScreen.hide({ fadeOutDuration: 0 }).catch(() => {});

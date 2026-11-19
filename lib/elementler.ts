@@ -1,11 +1,12 @@
 // İlk 20 element. Etkileşimli atom kartı ve periyodik tablo oyunu bunu kullanır.
+import { cev } from "@/lib/dil";
 export type El = { z: number; s: string; ad: string };
 
 export const ELEMENTLER: El[] = [
-  ["H", "Hidrojen"], ["He", "Helyum"], ["Li", "Lityum"], ["Be", "Berilyum"], ["B", "Bor"],
-  ["C", "Karbon"], ["N", "Azot"], ["O", "Oksijen"], ["F", "Flor"], ["Ne", "Neon"],
-  ["Na", "Sodyum"], ["Mg", "Magnezyum"], ["Al", "Alüminyum"], ["Si", "Silisyum"], ["P", "Fosfor"],
-  ["S", "Kükürt"], ["Cl", "Klor"], ["Ar", "Argon"], ["K", "Potasyum"], ["Ca", "Kalsiyum"],
+  ["H", cev("Hidrojen")], [cev("He"), cev("Helyum")], [cev("Li"), cev("Lityum")], [cev("Be"), cev("Berilyum")], ["B", cev("Bor")],
+  ["C", cev("Karbon")], ["N", cev("Azot")], ["O", cev("Oksijen")], ["F", cev("Flor")], [cev("Ne"), cev("Neon")],
+  [cev("Na"), cev("Sodyum")], [cev("Mg"), cev("Magnezyum")], [cev("Al"), cev("Alüminyum")], [cev("Si"), cev("Silisyum")], ["P", cev("Fosfor")],
+  ["S", cev("Kükürt")], [cev("Cl"), cev("Klor")], [cev("Ar"), cev("Argon")], ["K", cev("Potasyum")], [cev("Ca"), cev("Kalsiyum")],
 ].map(([s, ad], i) => ({ z: i + 1, s, ad }));
 
 /** Katmanlardaki elektron sayıları. İlk 20 element için basit kural: 2, 8, 8, 2. */

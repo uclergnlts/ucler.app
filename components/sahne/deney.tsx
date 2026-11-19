@@ -1,6 +1,7 @@
 "use client";
 // Deney sahneleri (MEB "deney yapabilme" çıktıları): besin testleri laboratuvarı, deney planı kurma, deney verisi tablosu.
 // Öğrenci seçenekleri sahnenin içinde dokunarak seçer (kontrol türü "surukle"); her seçenek klavyeyle de seçilebilen düğmedir.
+import { cev } from "@/lib/dil";
 import type { SahneKaydi, SahneProps } from "./ortak";
 
 /** SVG içinde dokunulan ve klavyeyle (Enter / boşluk) seçilen düğme. */
@@ -27,34 +28,34 @@ function Sec({ x, y, w, h, yazi, secili, renk = "var(--acc)", onSec, etiket }: {
 
 // v.b: besin (1-5, 0 seçilmedi), v.r: ayraç (1-4, 0 seçilmedi). Sonuçlar ders kitabı düzeyinde; az miktarı ayraç
 // göstermeyebileceği için olumsuz sonuç "yok ya da çok az" diye yazılır.
-const BESIN = ["Patates", "Yumurta akı", "Zeytinyağı", "Bal", "Saf su"];
-const AYRAC = ["İyot", "Benedict", "Biüre", "Sudan III"];
+const BESIN = [cev("Patates"), cev("Yumurta akı"), cev("Zeytinyağı"), cev("Bal"), cev("Saf su")];
+const AYRAC = [cev("İyot"), cev("Benedict"), cev("Biüre"), cev("Sudan III")];
 /** Her ayraç için: hangi besinde olumlu, olumlu ve olumsuz renk, aradığı madde. */
 const TEST = [
-  { arti: [1], renk: ["#1f2a5a", "#c98a2b"], arti_yazi: "mavi-siyah", eksi_yazi: "sarı-kahve kaldı", madde: "nişasta" },
-  { arti: [4], renk: ["#c1440e", "#3a7bd5"], arti_yazi: "ısıtınca kiremit kırmızısı", eksi_yazi: "ısıtınca da mavi kaldı", madde: "şeker" },
-  { arti: [2], renk: ["#7b3fa0", "#3a7bd5"], arti_yazi: "mor", eksi_yazi: "mavi kaldı", madde: "protein" },
-  { arti: [3], renk: ["#d6452f", "#f1b5a8"], arti_yazi: "üstte kırmızı yağ tabakası", eksi_yazi: "tabaka yok", madde: "yağ" },
+  { arti: [1], renk: ["#1f2a5a", "#c98a2b"], arti_yazi: "mavi-siyah", eksi_yazi: cev("sarı-kahve kaldı"), madde: cev("nişasta") },
+  { arti: [4], renk: ["#c1440e", "#3a7bd5"], arti_yazi: cev("ısıtınca kiremit kırmızısı"), eksi_yazi: cev("ısıtınca da mavi kaldı"), madde: cev("şeker") },
+  { arti: [2], renk: ["#7b3fa0", "#3a7bd5"], arti_yazi: "mor", eksi_yazi: cev("mavi kaldı"), madde: "protein" },
+  { arti: [3], renk: ["#d6452f", "#f1b5a8"], arti_yazi: cev("üstte kırmızı yağ tabakası"), eksi_yazi: cev("tabaka yok"), madde: cev("yağ") },
 ];
 export function besinSonuc(b: number, r: number) {
   if (!b || !r) return null;
   const t = TEST[r - 1], arti = t.arti.includes(b);
-  return { arti, renk: t.renk[arti ? 0 : 1], yazi: `${arti ? t.arti_yazi : t.eksi_yazi}: ${t.madde} ${arti ? "var" : "yok ya da çok az"}`, madde: t.madde, yag: r === 4 };
+  return { arti, renk: t.renk[arti ? 0 : 1], yazi: `${arti ? t.arti_yazi : t.eksi_yazi}: ${t.madde} ${arti ? "var" : cev("yok ya da çok az")}`, madde: t.madde, yag: r === 4 };
 }
 
 function BesinLab({ v, set }: SahneProps) {
   const b = v.b ?? 0, r = v.r ?? 0, s = besinSonuc(b, r);
-  const baslik = !b ? "Bir besin seç" : !r ? `${BESIN[b - 1]}: şimdi bir ayraç seç` : `${BESIN[b - 1]} + ${AYRAC[r - 1]}`;
+  const baslik = !b ? cev("Bir besin seç") : !r ? cev("{0}: şimdi bir ayraç seç", BESIN[b - 1]) : `${BESIN[b - 1]} + ${AYRAC[r - 1]}`;
   return (
     <svg viewBox="0 0 340 250" aria-label={s ? `${baslik}: ${s.yazi}` : baslik}>
       <text x={14} y={20} fontSize={13} fontWeight={800} fill={s ? (s.arti ? "var(--c3)" : "var(--ink)") : "var(--ink)"}>{baslik}</text>
-      <text x={14} y={42} fontSize={10.5} fontWeight={700} fill="var(--muted)">BESİN</text>
+      <text x={14} y={42} fontSize={10.5} fontWeight={700} fill="var(--muted)">{cev("BESİN")}</text>
       {BESIN.map((ad, i) => (
-        <Sec key={ad} x={14 + (i % 3) * 106} y={48 + Math.floor(i / 3) * 30} w={100} h={24} yazi={ad} secili={b === i + 1} renk="var(--c1)" onSec={() => set("b", i + 1)} etiket={`Besin: ${ad}`} />
+        <Sec key={ad} x={14 + (i % 3) * 106} y={48 + Math.floor(i / 3) * 30} w={100} h={24} yazi={ad} secili={b === i + 1} renk="var(--c1)" onSec={() => set("b", i + 1)} etiket={cev("Besin: {0}", ad)} />
       ))}
-      <text x={14} y={124} fontSize={10.5} fontWeight={700} fill="var(--muted)">AYRAÇ</text>
+      <text x={14} y={124} fontSize={10.5} fontWeight={700} fill="var(--muted)">{cev("AYRAÇ")}</text>
       {AYRAC.map((ad, i) => (
-        <Sec key={ad} x={14 + i * 80} y={130} w={74} h={24} yazi={ad} secili={r === i + 1} renk="var(--c4)" onSec={() => set("r", i + 1)} etiket={`Ayraç: ${ad}`} />
+        <Sec key={ad} x={14 + i * 80} y={130} w={74} h={24} yazi={ad} secili={r === i + 1} renk="var(--c4)" onSec={() => set("r", i + 1)} etiket={cev("Ayraç: {0}", ad)} />
       ))}
       {/* deney tüpü */}
       <g transform="translate(40 166)">
@@ -67,10 +68,10 @@ function BesinLab({ v, set }: SahneProps) {
         )}
       </g>
       <text x={92} y={196} fontSize={12} fontWeight={800} fill={s ? (s.arti ? "var(--c3)" : "var(--muted)") : "var(--muted)"}>
-        {s ? s.yazi.split(": ")[0] : b ? "ayraç bekleniyor" : ""}
+        {s ? s.yazi.split(": ")[0] : b ? cev("ayraç bekleniyor") : ""}
       </text>
       <text x={92} y={216} fontSize={12} fontWeight={700} fill="var(--ink)">{s ? s.yazi.split(": ")[1] : ""}</text>
-      {b === 5 && <text x={92} y={236} fontSize={10.5} fontWeight={700} fill="var(--muted)">kontrol tüpü: ayraç tek başına</text>}
+      {b === 5 && <text x={92} y={236} fontSize={10.5} fontWeight={700} fill="var(--muted)">{cev("kontrol tüpü: ayraç tek başına")}</text>}
     </svg>
   );
 }
@@ -86,9 +87,9 @@ function Plan({ s, v, set }: SahneProps) {
   const yanlis = hepsi ? satirlar.find((x) => v[x.ad] !== x.dogru) : undefined;
   const H = 40 + satirlar.length * 48 + 44;
   return (
-    <svg viewBox={`0 0 340 ${H}`} aria-label={String(s.baslik ?? "Deney planı")}>
+    <svg viewBox={`0 0 340 ${H}`} aria-label={String(s.baslik ?? cev("Deney planı"))}>
       <text x={14} y={20} fontSize={13} fontWeight={800} fill={hepsi && !yanlis ? "var(--c3)" : "var(--ink)"}>
-        {hepsi && !yanlis ? "Plan hazır" : String(s.baslik ?? "Deney planı")}
+        {hepsi && !yanlis ? cev("Plan hazır") : String(s.baslik ?? cev("Deney planı"))}
       </text>
       {satirlar.map((x, i) => {
         const y = 40 + i * 48, sec = v[x.ad] ?? 0, kotu = hepsi && sec !== x.dogru;
@@ -102,7 +103,7 @@ function Plan({ s, v, set }: SahneProps) {
         );
       })}
       <text x={14} y={H - 18} fontSize={11.5} fontWeight={700} fill={yanlis ? "var(--c2)" : "var(--muted)"}>
-        {yanlis ? (yanlis.secenekler[(v[yanlis.ad] ?? 1) - 1]?.neden ?? "Bu adımı yeniden düşün.") : hepsi ? "" : "Her satırdan bir seçenek seç."}
+        {yanlis ? (yanlis.secenekler[(v[yanlis.ad] ?? 1) - 1]?.neden ?? cev("Bu adımı yeniden düşün.")) : hepsi ? "" : cev("Her satırdan bir seçenek seç.")}
       </text>
     </svg>
   );

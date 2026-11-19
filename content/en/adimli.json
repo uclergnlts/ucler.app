@@ -1,0 +1,399 @@
+{
+ "fizik-bilimine-giris": {
+  "id": "fizik-bilimine-giris",
+  "ders": "fizik",
+  "konu": "fizik-bilimine-giris",
+  "baslik": "Introduction to physics",
+  "ozet": "Try first, learn the name after. Run an experiment, measure, and turn the arrow yourself.",
+  "adimlar": [
+   {
+    "baslik": "Start with a prediction",
+    "metin": "Let's begin with an experiment. A steel ball and a feather are released at the same moment in a tube with the air pumped out.",
+    "sahne": {
+     "tur": "fiz-dusme",
+     "sure": 2
+    },
+    "deger": {
+     "hava": 0
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which one hits the ground first?",
+     "secenekler": [
+      {
+       "yazi": "Both at the same time",
+       "dogru": true,
+       "neden": "In a vacuum every object falls with the same acceleration, whatever its mass. Astronaut David Scott showed this on the Moon in 1971 with a hammer and a feather."
+      },
+      {
+       "yazi": "The steel ball",
+       "neden": "It feels as if the heavier one should land first. But without air, mass does not make the fall any faster."
+      },
+      {
+       "yazi": "The feather",
+       "neden": "Being light does not make the feather fall faster."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "What makes the difference?",
+    "metin": "In everyday life the feather still falls slowly. Form a <b>hypothesis</b>, a prediction you can test: maybe air makes the difference. To test it, choose <b>Air</b> below.",
+    "sahne": {
+     "tur": "fiz-dusme",
+     "sure": 2
+    },
+    "deger": {
+     "hava": 0
+    },
+    "kontroller": [
+     {
+      "ad": "hava",
+      "etiket": "Air in the tube",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar",
+      "yazilar": [
+       "No air",
+       "Air"
+      ]
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "hava": 1
+     },
+     "ipucu": "Choose “Air” below. The experiment replays on its own.",
+     "tamam": "The ball was barely affected, but the feather slowed down. So air resistance makes the difference. Your hypothesis was confirmed by experiment."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Measuring is comparing",
+    "metin": "You have rods that are 25 cm long. Line up enough rods to cover the table exactly.",
+    "sahne": {
+     "tur": "fiz-birim"
+    },
+    "deger": {
+     "n": 1
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Number of rods",
+      "min": 1,
+      "max": 7,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 6
+     },
+     "tamam": "The table is 6 rods long, which is 150 cm (1.5 m). With a 30 cm rod you would have counted 5. So the number depends on the unit. That is why a result is always written with <b>a number and a unit</b>, and everyone uses the same units, the <b>SI</b> units."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Seven base quantities",
+    "metin": "The SI has seven base quantities, and every other quantity is built from them. Look at the table.",
+    "sahne": {
+     "tur": "fiz-si-tablo"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why is speed (m/s) not in this table?",
+     "secenekler": [
+      {
+       "yazi": "It is derived from length and time",
+       "dogru": true,
+       "neden": "Speed is built from length (m) and time (s), and its unit is m/s. Quantities built from base quantities like this are called <b>derived</b> quantities."
+      },
+      {
+       "yazi": "Speed cannot be measured",
+       "neden": "Speed can be measured, and a car's speedometer does exactly that. Look at its unit: what is m/s made of?"
+      },
+      {
+       "yazi": "Speed is not part of the SI",
+       "neden": "Speed is part of the SI and its unit is m/s, but it is not a base quantity. Look at which two base quantities it is built from."
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "A derived quantity",
+    "metin": "A runner runs 100 meters. Speed is the distance divided by the time. Change the time and make the runner's speed 10 m/s.",
+    "sahne": {
+     "tur": "fiz-kosu"
+    },
+    "deger": {
+     "t": 20
+    },
+    "kontroller": [
+     {
+      "ad": "t",
+      "etiket": "Time",
+      "min": 8,
+      "max": 20,
+      "birim": "s",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "t": 10
+     },
+     "tamam": "100 m ÷ 10 s = 10 m/s. So the runner covers 10 m every second. The world's fastest sprinters run 100 meters in just under 10 seconds."
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Do you need a direction?",
+    "metin": "If I say \"walk 3 km\", you cannot tell where you will end up. The school is northeast of your home. Grab the arrow and turn it.",
+    "sahne": {
+     "tur": "fiz-yon",
+     "surukle": true
+    },
+    "deger": {
+     "yon": 0
+    },
+    "kontroller": [
+     {
+      "ad": "yon",
+      "etiket": "Direction",
+      "min": 0,
+      "max": 315,
+      "adim": 45,
+      "birim": "°",
+      "tur": "surukle"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "yon": 45
+     },
+     "tamam": "Walk 3 km northeast and now it is clear where you end up. Quantities that also need a direction, such as displacement, velocity and force, are called <b>vector</b> quantities."
+    },
+    "kart": 9
+   }
+  ],
+  "kapanis": [
+   "Physics studies matter, energy and how they interact through <b>observation, experiment and mathematics</b>.",
+   "A <b>hypothesis</b> is a prediction that can be tested. A <b>law</b> tells you what happens, and a <b>theory</b> explains why.",
+   "To measure is to compare a quantity with a known unit. The result always has <b>a number and a unit</b>.",
+   "The SI has 7 <b>base quantities</b>. Other quantities, such as speed (m/s), are <b>derived</b> from them.",
+   "A <b>scalar</b> has no direction. A <b>vector</b> also needs a direction."
+  ],
+  "soruOnce": true
+ },
+ "vektorler": {
+  "id": "vektorler",
+  "ders": "fizik",
+  "konu": "vektorler",
+  "baslik": "Vectors",
+  "ozet": "Try first, learn the name after. Draw a vector, rotate and add, then split it into components.",
+  "adimlar": [
+   {
+    "baslik": "Draw it as an arrow",
+    "metin": "θ is the angle the arrow makes with the +x axis (pointing right). Draw the vector with length 3 units and θ = 135°.",
+    "sahne": {
+     "tur": "fiz3-vektor"
+    },
+    "deger": {
+     "L": 2,
+     "a": 0
+    },
+    "kontroller": [
+     {
+      "ad": "L",
+      "etiket": "Magnitude",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     },
+     {
+      "ad": "a",
+      "etiket": "Angle (θ)",
+      "min": 0,
+      "max": 315,
+      "adim": 45,
+      "birim": "°"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "L": 3,
+      "a": 135
+     },
+     "tamam": "Since 135° = 90° + 45°, the arrow points up and to the left."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Add head to tail",
+    "metin": "A is 3 units long and B is 4 units long. Rotate B and make the resultant exactly 5 units.",
+    "sahne": {
+     "tur": "fiz3-toplama"
+    },
+    "deger": {
+     "b": 0
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Angle of B",
+      "min": 0,
+      "max": 180,
+      "adim": 30,
+      "birim": "°"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "b": 90
+     },
+     "tamam": "When A and B are perpendicular they form a right triangle, and R = √(3² + 4²) = 5. The magnitude of the resultant depends on the angle between the vectors. Adding the numbers is not enough."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "How big can the resultant be?",
+    "metin": "Turn B from 0° to 180° and watch how the resultant changes.",
+    "sahne": {
+     "tur": "fiz3-toplama"
+    },
+    "deger": {
+     "b": 60
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Angle of B",
+      "min": 0,
+      "max": 180,
+      "adim": 30,
+      "birim": "°"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "In what range does the resultant of two vectors of 3 and 4 units stay?",
+     "secenekler": [
+      {
+       "yazi": "Between 0 and 7",
+       "neden": "For the resultant to be zero, the vectors would need equal lengths. Set B to 180° and look."
+      },
+      {
+       "yazi": "Between 1 and 7",
+       "dogru": true,
+       "neden": "It is largest in the same direction (3 + 4 = 7) and smallest in opposite directions (4 − 3 = 1). The resultant always lies between |A − B| and A + B."
+      },
+      {
+       "yazi": "Between 3 and 4",
+       "neden": "Set B to 0°. The resultant becomes 7, which is more than 4."
+      }
+     ]
+    },
+    "kart": 12
+   },
+   {
+    "baslik": "Multiply by a number",
+    "metin": "Make a vector twice as long as A but pointing the opposite way.",
+    "sahne": {
+     "tur": "fiz3-carpma"
+    },
+    "deger": {
+     "k": 1
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Multiplier (k)",
+      "min": -2,
+      "max": 2,
+      "adim": 0.5,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": -2
+     },
+     "tamam": "This vector is −2A. It is twice as long and points the opposite way."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Components",
+    "metin": "V is 10 units long. Change the angle and make the vertical component 5.",
+    "sahne": {
+     "tur": "fiz3-bilesen"
+    },
+    "deger": {
+     "a": 60
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "Angle (θ)",
+      "min": 0,
+      "max": 90,
+      "adim": 15,
+      "birim": "°"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "a": 30
+     },
+     "tamam": "Since sin30° = 0.5, V<sub>y</sub> = 10 × 0.5 = 5. The horizontal component is V<sub>x</sub> = 10 × cos30° ≈ 8.66."
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Magnitude from components",
+    "metin": "You walked 3 steps east. How many steps north must you walk to be exactly 5 steps from where you started?",
+    "sahne": {
+     "tur": "fiz3-yuruyus"
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Steps north",
+      "min": 0,
+      "max": 8,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": 4
+     },
+     "tamam": "√(3² + 4²) = 5. You walked 7 steps in total, but your displacement is 5 steps. The total length of your path (the <b>distance</b>) is a scalar, while displacement is a vector."
+    },
+    "kart": 9
+   }
+  ],
+  "kapanis": [
+   "A <b>scalar</b> quantity is given by a number and a unit (mass, temperature, time). A <b>vector</b> quantity also needs a direction (force, velocity, displacement).",
+   "For vectors added head to tail, the resultant is the arrow from the first tail to the last head. The resultant always lies between |A − B| and A + B.",
+   "The length of <b>kA</b> is |k| times the length of A, and if k is negative the direction is reversed. A − B means A + (−B).",
+   "The components are <b>Vx = V·cosθ</b> and <b>Vy = V·sinθ</b>. The magnitude is <b>V = √(Vx² + Vy²)</b>."
+  ],
+  "soruOnce": true
+ }
+}

@@ -1,11 +1,12 @@
 "use client";
 // Fizik sahneleri (yarı iletkenler ve süper iletkenler): katkılı silisyumda yük taşıyıcıları, diyot,
 // LED'in rengi ile enerji aralığı, güneş pili, transistör, sıcaklıkla direnç ve Meissner etkisi.
+import { cev, SAYI_YEREL } from "@/lib/dil";
 import type { SahneKaydi, SahneProps } from "./ortak";
 
 /** Türkçe sayı: ondalık virgül, eksi işareti. */
 const say = (x: number, d = 1) =>
-  x.toLocaleString("tr-TR", { maximumFractionDigits: d, useGrouping: false }).replace("-", "−");
+  x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: d, useGrouping: false }).replace("-", "−");
 const sinir = (x: number, a: number, b: number) => Math.max(a, Math.min(b, x));
 /** Oynatma ilerlemesi 0..1 (hiç oynatılmadıysa 0). */
 const ilerleme = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 0 ? sinir(t / sure, 0, 1) : 0);
@@ -29,8 +30,8 @@ function Kristal({ v, t, oynuyor, s }: SahneProps) {
   // Boşluk bağdan bağa atlar: her atlamada bir bağ sola.
   const adim = Math.floor(git * 3.999), boslukX = ax(OI) - DX / 2 - adim * DX, boslukY = ay(OJ);
   const baslik = bitti
-    ? p ? "Boşluk − uca gitti: elektronlar ters yöne atladı" : "Fazla elektron + uca gitti"
-    : p ? "Bor katkılı silisyum: bir bağda elektron eksik" : "Fosfor katkılı silisyum: bir elektron fazla";
+    ? p ? cev("Boşluk − uca gitti: elektronlar ters yöne atladı") : cev("Fazla elektron + uca gitti")
+    : p ? cev("Bor katkılı silisyum: bir bağda elektron eksik") : cev("Fosfor katkılı silisyum: bir elektron fazla");
   return (
     <svg viewBox="0 0 340 240" role="img" aria-label={baslik}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={bitti ? "var(--c3)" : "var(--ink)"}>{baslik}</text>
@@ -77,12 +78,12 @@ function Kristal({ v, t, oynuyor, s }: SahneProps) {
         <g>
           <circle cx={ex} cy={ey} r={5.5} fill="var(--c1)" />
           <text x={ex} y={ey + 3} fontSize={9} fontWeight={800} fill="#fff" textAnchor="middle">−</text>
-          {zt === 0 && <text x={ex + 10} y={ey - 6} fontSize={11} fontWeight={700} fill="var(--c1)">fazla elektron</text>}
+          {zt === 0 && <text x={ex + 10} y={ey - 6} fontSize={11} fontWeight={700} fill="var(--c1)">{cev("fazla elektron")}</text>}
         </g>
       )}
-      {p && zt === 0 && <text x={boslukX + 4} y={boslukY - 12} fontSize={11} fontWeight={700} fill="var(--c2)" textAnchor="middle">boşluk</text>}
+      {p && zt === 0 && <text x={boslukX + 4} y={boslukY - 12} fontSize={11} fontWeight={700} fill="var(--c2)" textAnchor="middle">{cev("boşluk")}</text>}
       <text x={170} y={232} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">
-        {p ? "B: 3 değerlik elektron · Si: 4" : "P: 5 değerlik elektron · Si: 4"}
+        {p ? cev("B: 3 değerlik elektron · Si: 4") : cev("P: 5 değerlik elektron · Si: 4")}
       </text>
     </svg>
   );
@@ -100,8 +101,8 @@ function Diyot({ v, t, oynuyor, s }: SahneProps) {
   // Engel bölgesi: ileri yönde incelir, ters yönde kalınlaşır (oynayınca görünür).
   const engel = zt > 0 ? (ters ? 14 + 6 * V : sinir(14 - 12 * (V / ESIK), 2, 14)) : 14;
   const baslik = bitti || zt > 0.3
-    ? akar ? "İleri yön: akım geçiyor" : ters ? "Ters yön: engel kalınlaştı, akım yok" : `${say(V)} V yetmiyor: akım yok`
-    : ters ? "Pilin artısı n ucunda" : "Pilin artısı p ucunda";
+    ? akar ? cev("İleri yön: akım geçiyor") : ters ? cev("Ters yön: engel kalınlaştı, akım yok") : cev("{0} V yetmiyor: akım yok", say(V))
+    : ters ? cev("Pilin artısı n ucunda") : cev("Pilin artısı p ucunda");
   // Devre: dikdörtgen yol. Pil solda (x=50), diyot üstte ortada, lamba sağda.
   const L = 50, R = 290, U = 64, A = 170;
   const yolUzun = 2 * (R - L) + 2 * (A - U);
@@ -147,7 +148,7 @@ function Diyot({ v, t, oynuyor, s }: SahneProps) {
         <rect x={80 - engel / 2} y={0} width={engel} height={26} fill="var(--panel)" stroke="var(--muted)" strokeDasharray="3 2" />
         <text x={30} y={17} fontSize={11.5} fontWeight={800} fill="var(--c2)" textAnchor="middle">p</text>
         <text x={130} y={17} fontSize={11.5} fontWeight={800} fill="var(--c1)" textAnchor="middle">n</text>
-        <text x={80} y={40} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">engel bölgesi</text>
+        <text x={80} y={40} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("engel bölgesi")}</text>
       </g>
     </svg>
   );
@@ -158,7 +159,7 @@ function Diyot({ v, t, oynuyor, s }: SahneProps) {
 // Elektron enerji aralığını inip boşlukla birleşince bir foton verir: λ (nm) ≈ 1240 / E (eV).
 const dalgaBoyu = (E: number) => 1240 / E;
 const renkAdi = (l: number) =>
-  l > 700 ? "kızılötesi (görünmez)" : l >= 620 ? "kırmızı" : l >= 590 ? "turuncu" : l >= 570 ? "sarı" : l >= 495 ? "yeşil" : l >= 450 ? "mavi" : l >= 380 ? "mor" : "morötesi";
+  l > 700 ? cev("kızılötesi (görünmez)") : l >= 620 ? cev("kırmızı") : l >= 590 ? "turuncu" : l >= 570 ? cev("sarı") : l >= 495 ? cev("yeşil") : l >= 450 ? "mavi" : l >= 380 ? "mor" : cev("morötesi");
 /** Dalga boyundan yaklaşık görünür renk. */
 function dalgaRengi(l: number) {
   let r = 0, g = 0, b = 0;
@@ -177,21 +178,21 @@ function Led({ v }: SahneProps) {
   // Bant şeması: üst bant (iletim) ile alt bant (değerlik) arası E ile orantılı.
   const ALT = 196, ust = ALT - 30 - E * 38;
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label={`Enerji aralığı ${say(E, 2)} eV, ışık yaklaşık ${Math.round(l)} nm, ${renkAdi(l)}`}>
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("Enerji aralığı {0} eV, ışık yaklaşık {1} nm, {2}", say(E, 2), Math.round(l), renkAdi(l))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">
-        {say(E, 2)} eV → λ ≈ {Math.round(l)} nm: <tspan fill={gorunur ? renk : "var(--muted)"}>{renkAdi(l)}</tspan>
+        {say(E, 2)} {cev("eV → λ ≈")} {Math.round(l)} {cev("nm:")} <tspan fill={gorunur ? renk : "var(--muted)"}>{renkAdi(l)}</tspan>
       </text>
       {/* bant şeması */}
       <rect x={24} y={ust - 18} width={120} height={18} fill="var(--c1)" fillOpacity={0.18} />
       <rect x={24} y={ALT} width={120} height={18} fill="var(--c2)" fillOpacity={0.18} />
-      <text x={150} y={ust - 5} fontSize={10.5} fontWeight={700} fill="var(--c1)">elektron</text>
-      <text x={150} y={ALT + 13} fontSize={10.5} fontWeight={700} fill="var(--c2)">boşluk</text>
+      <text x={150} y={ust - 5} fontSize={10.5} fontWeight={700} fill="var(--c1)">{cev("elektron")}</text>
+      <text x={150} y={ALT + 13} fontSize={10.5} fontWeight={700} fill="var(--c2)">{cev("boşluk")}</text>
       <circle cx={60} cy={ust - 9} r={5} fill="var(--c1)" />
       <circle cx={60} cy={ALT + 9} r={5} fill="none" stroke="var(--c2)" strokeWidth={2} />
       <line x1={60} x2={60} y1={ust - 2} y2={ALT + 2} stroke="var(--ink)" strokeWidth={1.4} strokeDasharray="4 3" />
       <text x={52} y={(ust + ALT) / 2 + 4} fontSize={11.5} fontWeight={800} fill="var(--ink)" textAnchor="end">E</text>
       <path d={yol(Array.from({ length: 30 }, (_, i) => [70 + i * 2.2, (ust + ALT) / 2 + 6 * Math.sin(i * (0.45 + E * 0.2))] as [number, number]))} fill="none" stroke={renk} strokeWidth={2.2} />
-      <text x={104} y={(ust + ALT) / 2 + 22} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">foton</text>
+      <text x={104} y={(ust + ALT) / 2 + 22} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("foton")}</text>
       {/* LED */}
       <g transform="translate(250 0)">
         {gorunur && <circle cx={0} cy={100} r={56} fill={renk} fillOpacity={0.16} />}
@@ -199,7 +200,7 @@ function Led({ v }: SahneProps) {
         <rect x={-28} y={140} width={56} height={8} rx={2} fill="var(--ink)" fillOpacity={0.6} />
         <line x1={-10} x2={-10} y1={148} y2={196} stroke="var(--muted)" strokeWidth={2.4} />
         <line x1={10} x2={10} y1={148} y2={186} stroke="var(--muted)" strokeWidth={2.4} />
-        <text x={0} y={216} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">en az ≈ {say(E, 1)} V ister</text>
+        <text x={0} y={216} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("en az ≈")} {say(E, 1)} {cev("V ister")}</text>
       </g>
     </svg>
   );
@@ -214,8 +215,8 @@ function Gunes({ v }: SahneProps) {
   const I = sinir(v.I ?? 400, 0, 1000), P = VERIM * I, oran = I / 1000;
   const isin = Math.round(oran * 7);
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label={`Işık ${Math.round(I)} watt bölü metrekare, panelin gücü ${Math.round(P)} watt`}>
-      <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">Işınım {Math.round(I)} W/m² → panel {Math.round(P)} W</text>
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("Işık {0} watt bölü metrekare, panelin gücü {1} watt", Math.round(I), Math.round(P))}>
+      <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Işınım")} {Math.round(I)} {cev("W/m² → panel")} {Math.round(P)} W</text>
       {/* güneş */}
       <circle cx={40} cy={54} r={16} fill="var(--c4)" fillOpacity={0.2 + 0.7 * oran} />
       {Array.from({ length: isin }, (_, k) => {
@@ -240,8 +241,8 @@ function Gunes({ v }: SahneProps) {
       <path d="M230 118 H300 V96" fill="none" stroke="var(--ink)" strokeWidth={2} />
       <path d="M230 166 H300 V140" fill="none" stroke="var(--ink)" strokeWidth={2} />
       <circle cx={300} cy={118} r={16} fill="var(--c4)" fillOpacity={0.1 + 0.8 * oran} stroke="var(--ink)" strokeWidth={1.6} />
-      <text x={145} y={200} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">ışık elektronu n'ye, boşluğu p'ye ayırır</text>
-      <text x={145} y={222} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">1 m² panel, verim %20</text>
+      <text x={145} y={200} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("ışık elektronu n'ye, boşluğu p'ye ayırır")}</text>
+      <text x={145} y={222} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("1 m² panel, verim %20")}</text>
     </svg>
   );
 }
@@ -253,7 +254,7 @@ const BETA = 100, IMAX = 5; // mA
 const toplayici = (ib: number) => Math.min((BETA * ib) / 1000, IMAX); // ib µA → mA
 function Transistor({ v }: SahneProps) {
   const ib = sinir(v.ib ?? 10, 0, 60), Ic = toplayici(ib), doyum = BETA * ib / 1000 >= IMAX, oran = Ic / IMAX;
-  const baslik = ib === 0 ? "Taban akımı yok: transistör kapalı" : doyum ? "Tam açık (doyum): akım 5 mA'de durdu" : `Taban ${say(ib, 0)} µA → toplayıcı ${say(Ic, 2)} mA`;
+  const baslik = ib === 0 ? cev("Taban akımı yok: transistör kapalı") : doyum ? cev("Tam açık (doyum): akım 5 mA'de durdu") : cev("Taban {0} µA → toplayıcı {1} mA", say(ib, 0), say(Ic, 2));
   const TX = 190, TY = 128;
   return (
     <svg viewBox="0 0 340 240" role="img" aria-label={baslik}>
@@ -270,9 +271,9 @@ function Transistor({ v }: SahneProps) {
       <path d={`M${TX + 14} ${TY + 26} V206 H290`} fill="none" stroke="var(--c1)" strokeWidth={1.5 + 9 * oran} strokeLinejoin="round" />
       <line x1={290} x2={290} y1={60} y2={206} stroke="var(--line-2)" strokeWidth={2} strokeDasharray="4 3" />
       <circle cx={290} cy={133} r={18} fill="var(--c4)" fillOpacity={0.1 + 0.8 * oran} stroke="var(--ink)" strokeWidth={1.6} />
-      <text x={62} y={TY - 10} fontSize={11.5} fontWeight={700} fill="var(--c5)">taban: {say(ib, 0)} µA</text>
-      <text x={TX + 22} y={52} fontSize={11.5} fontWeight={700} fill="var(--c1)">toplayıcı: {say(Ic, 2)} mA</text>
-      <text x={TX + 22} y={226} fontSize={11.5} fontWeight={700} fill="var(--muted)">yayıcı</text>
+      <text x={62} y={TY - 10} fontSize={11.5} fontWeight={700} fill="var(--c5)">{cev("taban:")} {say(ib, 0)} µA</text>
+      <text x={TX + 22} y={52} fontSize={11.5} fontWeight={700} fill="var(--c1)">{cev("toplayıcı:")} {say(Ic, 2)} {cev("mA")}</text>
+      <text x={TX + 22} y={226} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("yayıcı")}</text>
       <text x={20} y={226} fontSize={11.5} fontWeight={700} fill="var(--muted)">β = 100</text>
     </svg>
   );
@@ -293,18 +294,18 @@ function Direnc({ v, s }: SahneProps) {
   const egri = (f: (x: number) => number) => yol(Array.from({ length: 141 }, (_, i) => { const x = 20 + i * 2; return [gx(x), gy(f(x))] as [number, number]; }));
   const ybcoYol = yol(Array.from({ length: 105 }, (_, i) => { const x = TC + i * 2; return [gx(Math.min(x, 300)), gy(ybco(Math.min(x, 300)))] as [number, number]; }));
   const sifir = ybcoVar && T < TC;
-  const baslik = ybcoVar ? (sifir ? `${Math.round(T)} K: YBCO süper iletken, R = 0` : `${Math.round(T)} K: YBCO'nun direnci var`) : `${Math.round(T)} K`;
+  const baslik = ybcoVar ? (sifir ? cev("{0} K: YBCO süper iletken, R = 0", Math.round(T)) : cev("{0} K: YBCO'nun direnci var", Math.round(T))) : `${Math.round(T)} K`;
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label={`Sıcaklık ${Math.round(T)} kelvin`}>
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("Sıcaklık {0} kelvin", Math.round(T))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={sifir ? "var(--c3)" : "var(--ink)"}>{baslik}</text>
       <line x1={GX0} x2={GX1} y1={GY1} y2={GY1} stroke="var(--ink)" />
       <line x1={GX0} x2={GX0} y1={GY0 - 6} y2={GY1} stroke="var(--ink)" />
-      <text x={GX0 - 6} y={GY0} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="end" transform={`rotate(-90 ${GX0 - 10} ${GY0 + 40})`}>direnç</text>
+      <text x={GX0 - 6} y={GY0} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="end" transform={`rotate(-90 ${GX0 - 10} ${GY0 + 40})`}>{cev("direnç")}</text>
       {[0, 100, 200, 300].map((x) => <text key={x} x={gx(x)} y={GY1 + 14} fontSize={10.5} fill="var(--muted)" textAnchor="middle">{x} K</text>)}
       {ybcoVar && (
         <g>
           <line x1={gx(77)} x2={gx(77)} y1={GY0} y2={GY1} stroke="var(--c1)" strokeDasharray="3 3" />
-          <text x={gx(77) - 3} y={GY0 + 2} fontSize={10} fontWeight={700} fill="var(--c1)" textAnchor="end">sıvı azot 77 K</text>
+          <text x={gx(77) - 3} y={GY0 + 2} fontSize={10} fontWeight={700} fill="var(--c1)" textAnchor="end">{cev("sıvı azot 77 K")}</text>
         </g>
       )}
       <path d={egri(bakir)} fill="none" stroke="var(--c4)" strokeWidth={2.4} />
@@ -315,11 +316,11 @@ function Direnc({ v, s }: SahneProps) {
       <circle cx={gx(T)} cy={gy(silisyum(T))} r={5} fill="var(--c5)" />
       {ybcoVar && <circle cx={gx(T)} cy={gy(ybco(T))} r={5} fill="var(--c3)" />}
       <g fontSize={11.5} fontWeight={800}>
-        <text x={GX1} y={gy(bakir(300)) + 20} fill="var(--c4)" textAnchor="end">bakır (metal)</text>
-        <text x={gx(112)} y={gy(silisyum(112)) - 10} fill="var(--c5)">silisyum</text>
-        {ybcoVar && <text x={gx(TC) + 4} y={GY1 - 8} fill="var(--c3)">YBCO</text>}
+        <text x={GX1} y={gy(bakir(300)) + 20} fill="var(--c4)" textAnchor="end">{cev("bakır (metal)")}</text>
+        <text x={gx(112)} y={gy(silisyum(112)) - 10} fill="var(--c5)">{cev("silisyum")}</text>
+        {ybcoVar && <text x={gx(TC) + 4} y={GY1 - 8} fill="var(--c3)">{cev("YBCO")}</text>}
       </g>
-      <text x={GX1} y={234} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="end">eğriler niteldir, ölçekli değildir</text>
+      <text x={GX1} y={234} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="end">{cev("eğriler niteldir, ölçekli değildir")}</text>
     </svg>
   );
 }
@@ -335,7 +336,7 @@ function Meissner({ t, oynuyor, s }: SahneProps) {
   const DY = 168, yuzen = DY - 40; // diskin üstü, mıknatısın duracağı alt kenar
   const altKenar = 70 + in_ * (yuzen - 70);
   const bitti = zt >= sure - 1e-6 && !oynuyor;
-  const baslik = bitti ? "Mıknatıs havada asılı kaldı" : zt === 0 ? "Seramik disk oda sıcaklığında" : `Disk soğuyor: ${Math.round(T)} K${superIl ? " (süper iletken)" : ""}`;
+  const baslik = bitti ? cev("Mıknatıs havada asılı kaldı") : zt === 0 ? cev("Seramik disk oda sıcaklığında") : cev("Disk soğuyor: {0} K{1}", Math.round(T), superIl ? " (süper iletken)" : "");
   return (
     <svg viewBox="0 0 340 240" role="img" aria-label={baslik}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={bitti ? "var(--c3)" : "var(--ink)"}>{baslik}</text>
@@ -352,14 +353,14 @@ function Meissner({ t, oynuyor, s }: SahneProps) {
       <rect x={150} y={altKenar - 22} width={40} height={22} rx={2} fill="var(--c2)" fillOpacity={0.8} />
       <text x={170} y={altKenar - 7} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">N</text>
       <text x={280} y={60} fontSize={11.5} fontWeight={700} fill={superIl ? "var(--c3)" : "var(--muted)"} textAnchor="end">T = {Math.round(T)} K</text>
-      <text x={170} y={230} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">YBCO disk · kritik sıcaklık 92 K</text>
+      <text x={170} y={230} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("YBCO disk · kritik sıcaklık 92 K")}</text>
     </svg>
   );
 }
 
 const transistorGeri = (v: Record<string, number>) => {
   const ib = sinir(v.ib ?? 10, 0, 60);
-  return { baslik: `Toplayıcı akımı ${say(toplayici(ib), 2)} mA`, metin: "Toplayıcı akımı taban akımının 100 katı: 3 mA için taban akımı 3 mA ÷ 100 = 30 µA olmalı." };
+  return { baslik: cev("Toplayıcı akımı {0} mA", say(toplayici(ib), 2)), metin: cev("Toplayıcı akımı taban akımının 100 katı: 3 mA için taban akımı 3 mA ÷ 100 = 30 µA olmalı.") };
 };
 
 export const FIZIK16: Record<string, SahneKaydi> = {

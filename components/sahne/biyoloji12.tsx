@@ -2,6 +2,7 @@
 // Biyoloji sahneleri (solunum, boşaltım): havanın yolu, soluk alma kasları, yükseklik ve kısmi basınç,
 // alveolde gaz değişimi, hemoglobinin O₂ bırakması, CO₂'nin taşınması, egzersizde soluk;
 // azotlu atıklar, ürenin yolu, glomerulda süzülme, geri emilim, H⁺ salgılama ve pH, ADH, glikoz eşiği.
+import { cev, ONDALIK } from "@/lib/dil";
 import { rastgele, type SahneKaydi, type SahneProps } from "./ortak";
 
 const sinir = (x: number, a = 0, b = 1) => Math.max(a, Math.min(b, x));
@@ -9,7 +10,7 @@ const ilerleme = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 
 const ara = (a: number, b: number, u: number) => a + (b - a) * u;
 const YESIL = "var(--biyoloji)";
 const MAVI = "var(--c1)", KIRMIZI = "var(--c2)", SARI = "var(--c4)", MOR = "var(--c5)";
-const virgul = (x: number, b = 1) => x.toFixed(b).replace(".", ",");
+const virgul = (x: number, b = 1) => x.toFixed(b).replace(".", ONDALIK);
 
 type Nokta = [number, number];
 
@@ -51,13 +52,13 @@ function bolum(paylar: number[], u: number) {
 /* ---------- havanın yolu ---------- */
 
 const HAVA: { ad: string; pay: number; yol: Nokta[]; not: string }[] = [
-  { ad: "burun", pay: 0.16, yol: [[34, 44], [72, 38], [108, 38]], not: "Burun: hava ısınır, nemlenir, süzülür" },
-  { ad: "yutak", pay: 0.12, yol: [[108, 38], [120, 48], [120, 70]], not: "Yutak: hava ile besinin ortak yolu" },
-  { ad: "gırtlak", pay: 0.1, yol: [[120, 70], [120, 94]], not: "Gırtlak: ses telleri burada, epiglot açık" },
-  { ad: "soluk borusu", pay: 0.16, yol: [[120, 94], [120, 140]], not: "Soluk borusu: kıkırdak halkalar açık tutar" },
-  { ad: "bronş", pay: 0.14, yol: [[120, 140], [156, 160]], not: "Bronş: soluk borusu ikiye ayrılır" },
-  { ad: "bronşçuk", pay: 0.16, yol: [[156, 160], [182, 180]], not: "Bronşçuk: kıkırdak yok, düz kas var" },
-  { ad: "alveol", pay: 0.16, yol: [[182, 180], [192, 190]], not: "Alveol: gaz değişimi burada olur" },
+  { ad: "burun", pay: 0.16, yol: [[34, 44], [72, 38], [108, 38]], not: cev("Burun: hava ısınır, nemlenir, süzülür") },
+  { ad: "yutak", pay: 0.12, yol: [[108, 38], [120, 48], [120, 70]], not: cev("Yutak: hava ile besinin ortak yolu") },
+  { ad: cev("gırtlak"), pay: 0.1, yol: [[120, 70], [120, 94]], not: cev("Gırtlak: ses telleri burada, epiglot açık") },
+  { ad: cev("soluk borusu"), pay: 0.16, yol: [[120, 94], [120, 140]], not: cev("Soluk borusu: kıkırdak halkalar açık tutar") },
+  { ad: cev("bronş"), pay: 0.14, yol: [[120, 140], [156, 160]], not: cev("Bronş: soluk borusu ikiye ayrılır") },
+  { ad: cev("bronşçuk"), pay: 0.16, yol: [[156, 160], [182, 180]], not: cev("Bronşçuk: kıkırdak yok, düz kas var") },
+  { ad: "alveol", pay: 0.16, yol: [[182, 180], [192, 190]], not: cev("Alveol: gaz değişimi burada olur") },
 ];
 
 function Alveoller({ x, y }: { x: number; y: number }) {
@@ -78,7 +79,7 @@ function Yol({ t, oynuyor, s }: SahneProps) {
   const renk = (i: number) => (i === etkin ? YESIL : "var(--line-2)");
   const yazi = (i: number) => (i === etkin ? YESIL : "var(--muted)");
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label="Havanın yolu: burun, yutak, gırtlak, soluk borusu, bronş, bronşçuk, alveol; yemek borusu yutaktan ayrılır">
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Havanın yolu: burun, yutak, gırtlak, soluk borusu, bronş, bronşçuk, alveol; yemek borusu yutaktan ayrılır")}>
       {/* yemek borusu (arkada) */}
       <polyline points="128,64 140,74 140,150" fill="none" stroke="var(--panel)" strokeWidth={11} strokeLinecap="round" strokeLinejoin="round" />
       <polyline points="128,64 140,74 140,150" fill="none" stroke="var(--line-2)" strokeWidth={1.2} strokeDasharray="3 3" strokeLinecap="round" />
@@ -99,18 +100,18 @@ function Yol({ t, oynuyor, s }: SahneProps) {
       <Alveoller x={192} y={190} />
       {u > 0 && <circle cx={hava[0]} cy={hava[1]} r={4} fill={MAVI} stroke="var(--surface)" strokeWidth={1.2} />}
       <g fontSize={10.5} fontWeight={700}>
-        <text x={44} y={28} fill={yazi(0)}>burun</text>
-        <text x={112} y={52} textAnchor="end" fill={yazi(1)}>yutak</text>
-        <text x={100} y={74} textAnchor="end" fill="var(--muted)">epiglot</text>
-        <text x={108} y={92} textAnchor="end" fill={yazi(2)}>gırtlak</text>
-        <text x={108} y={124} textAnchor="end" fill={yazi(3)}>soluk borusu</text>
-        <text x={150} y={104} fill="var(--muted)">yemek borusu</text>
-        <text x={162} y={152} fill={yazi(4)}>bronş</text>
-        <text x={196} y={176} fill={yazi(5)}>bronşçuk</text>
-        <text x={208} y={200} fill={yazi(6)}>alveol</text>
+        <text x={44} y={28} fill={yazi(0)}>{cev("burun")}</text>
+        <text x={112} y={52} textAnchor="end" fill={yazi(1)}>{cev("yutak")}</text>
+        <text x={100} y={74} textAnchor="end" fill="var(--muted)">{cev("epiglot")}</text>
+        <text x={108} y={92} textAnchor="end" fill={yazi(2)}>{cev("gırtlak")}</text>
+        <text x={108} y={124} textAnchor="end" fill={yazi(3)}>{cev("soluk borusu")}</text>
+        <text x={150} y={104} fill="var(--muted)">{cev("yemek borusu")}</text>
+        <text x={162} y={152} fill={yazi(4)}>{cev("bronş")}</text>
+        <text x={196} y={176} fill={yazi(5)}>{cev("bronşçuk")}</text>
+        <text x={208} y={200} fill={yazi(6)}>{cev("alveol")}</text>
       </g>
       <text x={170} y={228} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {etkin < 0 ? "Hava burundan giriyor" : u >= 1 ? "Hava alveole ulaştı. Yemek borusuna hiç girmedi" : HAVA[etkin].not}
+        {etkin < 0 ? cev("Hava burundan giriyor") : u >= 1 ? cev("Hava alveole ulaştı. Yemek borusuna hiç girmedi") : HAVA[etkin].not}
       </text>
     </svg>
   );
@@ -128,7 +129,7 @@ function Gogus({ v }: SahneProps) {
   const ry = (tepe - 2 - (ust + 24)) / 2;
   const hacim = 1 + 0.12 * d + 0.07 * k;
   return (
-    <svg viewBox="0 0 340 220" role="img" aria-label={`Göğüs boşluğu: diyafram ${d ? "kasılı ve düz" : "gevşek ve kubbe"}, kaburga kasları ${k ? "kasılı" : "gevşek"}; akciğer içi basınç ${P} mmHg`}>
+    <svg viewBox="0 0 340 220" role="img" aria-label={cev("Göğüs boşluğu: diyafram {0}, kaburga kasları {1}; akciğer içi basınç {2} mmHg", d ? "kasılı ve düz" : "gevşek ve kubbe", k ? "kasılı" : "gevşek", P)}>
       {/* kaburga kafesi */}
       <path d={`M${cx - 30} ${ust} L${cx - yarim} ${ust + 40} L${cx - yarim} ${taban} M${cx + 30} ${ust} L${cx + yarim} ${ust + 40} L${cx + yarim} ${taban}`} fill="none" stroke="var(--ink)" strokeWidth={2} strokeLinejoin="round" />
       {/* soluk borusu ve akciğerler */}
@@ -141,7 +142,7 @@ function Gogus({ v }: SahneProps) {
       ))}
       {/* diyafram */}
       <path d={`M${cx - yarim} ${taban} Q${cx} ${2 * tepe - taban} ${cx + yarim} ${taban}`} fill="none" stroke={d ? KIRMIZI : "var(--ink)"} strokeWidth={3.2} strokeLinecap="round" />
-      <text x={cx} y={taban + 18} fontSize={10.5} fontWeight={700} fill={d ? KIRMIZI : "var(--muted)"} textAnchor="middle">{d ? "diyafram kasıldı, düzleşti" : "diyafram gevşek, kubbe"}</text>
+      <text x={cx} y={taban + 18} fontSize={10.5} fontWeight={700} fill={d ? KIRMIZI : "var(--muted)"} textAnchor="middle">{d ? cev("diyafram kasıldı, düzleşti") : cev("diyafram gevşek, kubbe")}</text>
       {/* hava akışı */}
       {P < 760 && (
         <g fill={MAVI} stroke={MAVI}>
@@ -150,17 +151,17 @@ function Gogus({ v }: SahneProps) {
         </g>
       )}
       <g fontSize={11.5} fontWeight={700}>
-        <text x={214} y={34} fill="var(--muted)">Göğüs hacmi</text>
+        <text x={214} y={34} fill="var(--muted)">{cev("Göğüs hacmi")}</text>
         <rect x={214} y={42} width={110} height={12} rx={6} fill="var(--line)" />
         <rect x={214} y={42} width={80 * hacim} height={12} rx={6} fill={YESIL} />
-        <text x={214} y={82} fill="var(--muted)">Atmosfer</text>
-        <text x={214} y={100} fontSize={15} fontWeight={800} fill="var(--ink)">760 mmHg</text>
-        <text x={214} y={128} fill="var(--muted)">Akciğer içi</text>
-        <text x={214} y={146} fontSize={15} fontWeight={800} fill={P < 760 ? MAVI : "var(--ink)"}>≈ {P} mmHg</text>
-        <text x={214} y={172} fontSize={12} fontWeight={800} fill={P < 760 ? MAVI : "var(--muted)"}>{P < 760 ? "hava içeri akıyor" : "hava akmıyor"}</text>
+        <text x={214} y={82} fill="var(--muted)">{cev("Atmosfer")}</text>
+        <text x={214} y={100} fontSize={15} fontWeight={800} fill="var(--ink)">{cev("760 mmHg")}</text>
+        <text x={214} y={128} fill="var(--muted)">{cev("Akciğer içi")}</text>
+        <text x={214} y={146} fontSize={15} fontWeight={800} fill={P < 760 ? MAVI : "var(--ink)"}>≈ {P} {cev("mmHg")}</text>
+        <text x={214} y={172} fontSize={12} fontWeight={800} fill={P < 760 ? MAVI : "var(--muted)"}>{P < 760 ? cev("hava içeri akıyor") : cev("hava akmıyor")}</text>
       </g>
       <text x={170} y={214} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {P === 760 ? "Kaslar gevşek: basınçlar eşit, hava akmıyor" : d && k ? "İki kas da kasıldı: hacim en büyük, basınç en düşük" : "Hacim arttı, basınç düştü. Ama hacim daha da artabilir"}
+        {P === 760 ? cev("Kaslar gevşek: basınçlar eşit, hava akmıyor") : d && k ? cev("İki kas da kasıldı: hacim en büyük, basınç en düşük") : cev("Hacim arttı, basınç düştü. Ama hacim daha da artabilir")}
       </text>
     </svg>
   );
@@ -175,7 +176,7 @@ function Kismi({ v }: SahneProps) {
   const yY = (km: number) => 190 - km * 19;
   const tirmanX = ara(34, 146, h / 8.4);
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={`Yükseklik ${virgul(h)} km: hava basıncı ${Math.round(P)} mmHg, O₂ oranı yüzde 21, O₂ kısmi basıncı ${Math.round(po2)} mmHg`}>
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("Yükseklik {0} km: hava basıncı {1} mmHg, O₂ oranı yüzde 21, O₂ kısmi basıncı {2} mmHg", virgul(h), Math.round(P), Math.round(po2))}>
       {/* dağ */}
       <path d="M34 190 L146 30 L196 190 Z" fill="var(--panel)" stroke="var(--line-2)" strokeWidth={1.4} strokeLinejoin="round" />
       {[0, 2, 4, 6, 8].map((km) => (
@@ -184,26 +185,26 @@ function Kismi({ v }: SahneProps) {
           <text x={18} y={yY(km) + 3.5} fontSize={9.5} fill="var(--muted)" textAnchor="end">{km}</text>
         </g>
       ))}
-      <text x={10} y={22} fontSize={10} fontWeight={700} fill="var(--muted)">km</text>
+      <text x={10} y={22} fontSize={10} fontWeight={700} fill="var(--muted)">{cev("km")}</text>
       <line x1={tirmanX} x2={196} y1={yY(h)} y2={yY(h)} stroke={MAVI} strokeDasharray="3 3" />
       <circle cx={tirmanX} cy={yY(h) - 6} r={6} fill={MAVI} stroke="var(--surface)" strokeWidth={1.4} />
       {/* çubuklar */}
       <g fontSize={11} fontWeight={700}>
-        <text x={204} y={30} fill="var(--muted)">Hava basıncı</text>
+        <text x={204} y={30} fill="var(--muted)">{cev("Hava basıncı")}</text>
         <rect x={204} y={36} width={120} height={12} rx={6} fill="var(--line)" />
         <rect x={204} y={36} width={(120 * P) / 760} height={12} rx={6} fill="var(--ink)" />
-        <text x={204} y={64} fontSize={14} fontWeight={800} fill="var(--ink)">{Math.round(P)} mmHg</text>
-        <text x={204} y={90} fill="var(--muted)">O₂ oranı</text>
+        <text x={204} y={64} fontSize={14} fontWeight={800} fill="var(--ink)">{Math.round(P)} {cev("mmHg")}</text>
+        <text x={204} y={90} fill="var(--muted)">{cev("O₂ oranı")}</text>
         <rect x={204} y={96} width={120} height={12} rx={6} fill="var(--line)" />
         <rect x={204} y={96} width={120 * 0.21} height={12} rx={6} fill={SARI} />
         <text x={204} y={124} fontSize={14} fontWeight={800} fill="var(--ink)">%21</text>
-        <text x={204} y={150} fill="var(--muted)">O₂ kısmi basıncı</text>
+        <text x={204} y={150} fill="var(--muted)">{cev("O₂ kısmi basıncı")}</text>
         <rect x={204} y={156} width={120} height={12} rx={6} fill="var(--line)" />
         <rect x={204} y={156} width={(120 * po2) / 160} height={12} rx={6} fill={MAVI} />
-        <text x={204} y={186} fontSize={14} fontWeight={800} fill={MAVI}>{Math.round(po2)} mmHg</text>
+        <text x={204} y={186} fontSize={14} fontWeight={800} fill={MAVI}>{Math.round(po2)} {cev("mmHg")}</text>
       </g>
       <text x={170} y={214} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        PO₂ = {Math.round(P)} × 0,21 ≈ {Math.round(po2)} mmHg
+        {cev("PO₂ =")} {Math.round(P)} × 0,21 ≈ {Math.round(po2)} {cev("mmHg")}
       </text>
     </svg>
   );
@@ -220,11 +221,11 @@ function Alveol({ t, oynuyor, s }: SahneProps) {
   const giris = { o: 40, c: 45 }, cikis = { o: Math.round(ara(40, 100, u)), c: Math.round(ara(45, 40, u)) };
   const kanRenk = (x: number) => (u > 0 && x > 150 ? KIRMIZI : MOR);
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label="Alveol ve kılcal damar: O₂ alveolden kana, CO₂ kandan alveole difüzyonla geçer">
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("Alveol ve kılcal damar: O₂ alveolden kana, CO₂ kandan alveole difüzyonla geçer")}>
       <circle cx={170} cy={78} r={58} fill="var(--biyoloji-soft)" stroke={YESIL} strokeWidth={1.6} />
-      <text x={170} y={40} fontSize={11} fontWeight={800} fill={YESIL} textAnchor="middle">alveol</text>
-      <text x={104} y={70} fontSize={10.5} fontWeight={700} fill="var(--ink)" textAnchor="end">PO₂ 100</text>
-      <text x={104} y={84} fontSize={10.5} fontWeight={700} fill="var(--ink)" textAnchor="end">PCO₂ 40</text>
+      <text x={170} y={40} fontSize={11} fontWeight={800} fill={YESIL} textAnchor="middle">{cev("alveol")}</text>
+      <text x={104} y={70} fontSize={10.5} fontWeight={700} fill="var(--ink)" textAnchor="end">{cev("PO₂ 100")}</text>
+      <text x={104} y={84} fontSize={10.5} fontWeight={700} fill="var(--ink)" textAnchor="end">{cev("PCO₂ 40")}</text>
       {/* kılcal */}
       <rect x={16} y={142} width={308} height={24} rx={12} fill="var(--panel)" stroke="var(--line-2)" />
       <rect x={16} y={142} width={154} height={24} rx={12} fill={MOR} fillOpacity={0.14} />
@@ -245,17 +246,17 @@ function Alveol({ t, oynuyor, s }: SahneProps) {
         return <rect key={i} x={c.x - 3} y={ara(c.y, 54 + i * 9, k) - 3} width={6} height={6} rx={1.5} fill="var(--muted)" />;
       })}
       <g fontSize={10} fontWeight={700}>
-        <text x={18} y={184} fill={MOR}>kan giriyor</text>
-        <text x={18} y={198} fill="var(--ink)">PO₂ {giris.o} · PCO₂ {giris.c}</text>
-        <text x={322} y={184} fill={u > 0 ? KIRMIZI : "var(--muted)"} textAnchor="end">kan çıkıyor</text>
-        <text x={322} y={198} fill="var(--ink)" textAnchor="end">{u > 0 ? `PO₂ ${cikis.o} · PCO₂ ${cikis.c}` : "?"}</text>
+        <text x={18} y={184} fill={MOR}>{cev("kan giriyor")}</text>
+        <text x={18} y={198} fill="var(--ink)">{cev("PO₂")} {giris.o} {cev("· PCO₂")} {giris.c}</text>
+        <text x={322} y={184} fill={u > 0 ? KIRMIZI : "var(--muted)"} textAnchor="end">{cev("kan çıkıyor")}</text>
+        <text x={322} y={198} fill="var(--ink)" textAnchor="end">{u > 0 ? cev("PO₂ {0} · PCO₂ {1}", cikis.o, cikis.c) : "?"}</text>
         <circle cx={250} cy={30} r={3.4} fill={MAVI} />
         <text x={258} y={34} fill="var(--muted)">O₂</text>
         <rect x={247} y={43} width={6} height={6} rx={1.5} fill="var(--muted)" />
-        <text x={258} y={50} fill="var(--muted)">CO₂</text>
+        <text x={258} y={50} fill="var(--muted)">{cev("CO₂")}</text>
       </g>
       <text x={170} y={216} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {u <= 0 ? "Kan, alveolün kılcalına geliyor" : u < 1 ? "Gazlar yüksek kısmi basınçtan düşüğe geçiyor" : "Kan O₂ aldı, CO₂ verdi. ATP harcanmadı"}
+        {u <= 0 ? cev("Kan, alveolün kılcalına geliyor") : u < 1 ? cev("Gazlar yüksek kısmi basınçtan düşüğe geçiyor") : cev("Kan O₂ aldı, CO₂ verdi. ATP harcanmadı")}
       </text>
     </svg>
   );
@@ -272,9 +273,9 @@ function Hb({ v }: SahneProps) {
   const gx = (x: number) => 176 + (x / 100) * 140, gy = (y: number) => 160 - y * 120;
   const egri: string[] = [];
   for (let x = 0; x <= 100; x += 2) egri.push(`${gx(x)},${gy(doy(x))}`);
-  const yer = p >= 90 ? "Akciğer: Hb neredeyse tamamen dolu" : p >= 40 ? (p === 40 ? "Dinlenen doku: Hb 4 O₂'nin 1'ini bırakır" : "O₂ azalıyor; Hb bırakmaya başladı") : p > 20 ? "Hb O₂'nin yarısını bıraktı" : "Çalışan kas: Hb O₂'nin çoğunu bıraktı";
+  const yer = p >= 90 ? cev("Akciğer: Hb neredeyse tamamen dolu") : p >= 40 ? (p === 40 ? cev("Dinlenen doku: Hb 4 O₂'nin 1'ini bırakır") : cev("O₂ azalıyor; Hb bırakmaya başladı")) : p > 20 ? cev("Hb O₂'nin yarısını bıraktı") : cev("Çalışan kas: Hb O₂'nin çoğunu bıraktı");
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={`PO₂ ${p} mmHg: hemoglobine bağlı O₂ ${bagli} / 4, doygunluk yüzde ${Math.round(sat * 100)}`}>
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("PO₂ {0} mmHg: hemoglobine bağlı O₂ {1} / 4, doygunluk yüzde {2}", p, bagli, Math.round(sat * 100))}>
       {/* hemoglobin */}
       {[0, 1, 2, 3].map((i) => {
         const x = 54 + (i % 2) * 52, y = 56 + Math.floor(i / 2) * 52;
@@ -292,8 +293,8 @@ function Hb({ v }: SahneProps) {
           </g>
         );
       })}
-      <text x={80} y={148} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">hemoglobin, 4 hem</text>
-      <text x={80} y={170} fontSize={16} fontWeight={800} fill="var(--ink)" textAnchor="middle">bağlı O₂: {bagli} / 4</text>
+      <text x={80} y={148} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("hemoglobin, 4 hem")}</text>
+      <text x={80} y={170} fontSize={16} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("bağlı O₂:")} {bagli} / 4</text>
       {/* doygunluk eğrisi */}
       <line x1={gx(0)} x2={gx(100)} y1={gy(0)} y2={gy(0)} stroke="var(--ink)" strokeWidth={1.2} />
       <line x1={gx(0)} x2={gx(0)} y1={gy(1)} y2={gy(0)} stroke="var(--ink)" strokeWidth={1.2} />
@@ -305,8 +306,8 @@ function Hb({ v }: SahneProps) {
         <text x={gx(0) - 4} y={gy(0) + 3} textAnchor="end">0</text>
         <text x={gx(40)} y={gy(0) + 13} textAnchor="middle">40</text>
         <text x={gx(100)} y={gy(0) + 13} textAnchor="middle">100</text>
-        <text x={gx(100)} y={gy(0) + 26} textAnchor="end" fontWeight={700}>PO₂ (mmHg)</text>
-        <text x={gx(0) + 4} y={gy(1) - 8} fontWeight={700}>Hb doygunluğu</text>
+        <text x={gx(100)} y={gy(0) + 26} textAnchor="end" fontWeight={700}>{cev("PO₂ (mmHg)")}</text>
+        <text x={gx(0) + 4} y={gy(1) - 8} fontWeight={700}>{cev("Hb doygunluğu")}</text>
       </g>
       <text x={170} y={214} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{yer}</text>
     </svg>
@@ -320,22 +321,22 @@ function Co2({ t, oynuyor, s }: SahneProps) {
   const u = ilerleme(t, oynuyor, sure);
   const adim = u <= 0 ? 0 : u < 0.2 ? 1 : u < 0.4 ? 2 : u < 0.6 ? 3 : 4;
   const satir = [
-    { y: 52, yazi: "CO₂ + H₂O", renk: "var(--ink)" },
-    { y: 80, yazi: "→ H₂CO₃  (karbonik anhidraz)", renk: MOR },
-    { y: 108, yazi: "→ H⁺ + HCO₃⁻", renk: "var(--ink)" },
+    { y: 52, yazi: cev("CO₂ + H₂O"), renk: "var(--ink)" },
+    { y: 80, yazi: cev("→ H₂CO₃  (karbonik anhidraz)"), renk: MOR },
+    { y: 108, yazi: cev("→ H⁺ + HCO₃⁻"), renk: "var(--ink)" },
   ];
   const cubuk = sinir((u - 0.6) / 0.3);
   const paylar = [
     { ad: "bikarbonat", pay: 70, renk: YESIL },
-    { ad: "Hb'ye bağlı", pay: 23, renk: KIRMIZI },
-    { ad: "çözünmüş", pay: 7, renk: MAVI },
+    { ad: cev("Hb'ye bağlı"), pay: 23, renk: KIRMIZI },
+    { ad: cev("çözünmüş"), pay: 7, renk: MAVI },
   ];
   let x = 20;
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label="Alyuvarda CO₂ suyla karbonik aside, o da H⁺ ve bikarbonata dönüşür; CO₂'nin yüzde 70'i bikarbonat, 23'ü Hb'ye bağlı, 7'si çözünmüş taşınır">
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("Alyuvarda CO₂ suyla karbonik aside, o da H⁺ ve bikarbonata dönüşür; CO₂'nin yüzde 70'i bikarbonat, 23'ü Hb'ye bağlı, 7'si çözünmüş taşınır")}>
       <ellipse cx={140} cy={78} rx={112} ry={60} fill={KIRMIZI} fillOpacity={0.1} stroke={KIRMIZI} strokeWidth={1.4} />
-      <text x={30} y={22} fontSize={10.5} fontWeight={700} fill={KIRMIZI}>alyuvar</text>
-      <text x={296} y={22} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">plazma</text>
+      <text x={30} y={22} fontSize={10.5} fontWeight={700} fill={KIRMIZI}>{cev("alyuvar")}</text>
+      <text x={296} y={22} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("plazma")}</text>
       {satir.map((r, i) => (
         <text key={i} x={140} y={r.y} fontSize={13} fontWeight={800} fill={r.renk} textAnchor="middle" opacity={adim > i ? 1 : u > 0 ? 0.12 : 0}>{r.yazi}</text>
       ))}
@@ -343,8 +344,8 @@ function Co2({ t, oynuyor, s }: SahneProps) {
         <g>
           <line x1={200} x2={272} y1={104} y2={104} stroke={YESIL} strokeWidth={2} />
           <path d="M276 104 L268 99 L268 109 Z" fill={YESIL} />
-          <text x={296} y={108} fontSize={11.5} fontWeight={800} fill={YESIL} textAnchor="middle">HCO₃⁻</text>
-          <text x={140} y={126} fontSize={10} fontWeight={700} fill="var(--muted)" textAnchor="middle">H⁺ hemoglobine tutunur</text>
+          <text x={296} y={108} fontSize={11.5} fontWeight={800} fill={YESIL} textAnchor="middle">{cev("HCO₃⁻")}</text>
+          <text x={140} y={126} fontSize={10} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("H⁺ hemoglobine tutunur")}</text>
         </g>
       )}
       {cubuk > 0 && (
@@ -358,15 +359,15 @@ function Co2({ t, oynuyor, s }: SahneProps) {
             return g;
           })}
           <g fontSize={10.5} fontWeight={700} opacity={cubuk}>
-            <text x={22} y={182} fill={YESIL}>bikarbonat %70</text>
-            <text x={232} y={182} fill={KIRMIZI} textAnchor="middle">Hb %23</text>
+            <text x={22} y={182} fill={YESIL}>{cev("bikarbonat %70")}</text>
+            <text x={232} y={182} fill={KIRMIZI} textAnchor="middle">{cev("Hb %23")}</text>
             <text x={318} y={182} fill={MAVI} textAnchor="end">%7</text>
-            <text x={318} y={144} fill="var(--muted)" textAnchor="end">çözünmüş</text>
+            <text x={318} y={144} fill="var(--muted)" textAnchor="end">{cev("çözünmüş")}</text>
           </g>
         </g>
       )}
       <text x={170} y={210} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {u <= 0 ? "Dokudan gelen CO₂ alyuvara giriyor" : u < 0.6 ? "Enzim tepkimeyi çok hızlandırır" : "CO₂'nin çoğu plazmada bikarbonat olarak taşınır"}
+        {u <= 0 ? cev("Dokudan gelen CO₂ alyuvara giriyor") : u < 0.6 ? cev("Enzim tepkimeyi çok hızlandırır") : cev("CO₂'nin çoğu plazmada bikarbonat olarak taşınır")}
       </text>
     </svg>
   );
@@ -384,15 +385,15 @@ function Egzersiz({ v }: SahneProps) {
     const y = 70 - Math.sin((i / 120) * Math.PI * 2 * (1.5 * sv)) * (12 + 4 * sv);
     nefes.push(`${x},${y}`);
   }
-  const durum = pco2 > 40 ? "CO₂ birikiyor, kan asitleşiyor" : pco2 < 40 ? "Fazla soluk: CO₂ çok azaldı, pH yükseldi" : "Üretilen CO₂ kadarı atılıyor";
+  const durum = pco2 > 40 ? cev("CO₂ birikiyor, kan asitleşiyor") : pco2 < 40 ? cev("Fazla soluk: CO₂ çok azaldı, pH yükseldi") : cev("Üretilen CO₂ kadarı atılıyor");
   const gx = (p: number) => 40 + ((p - 20) / 50) * 260;
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={`Egzersiz: soluk dinlenmenin ${sv} katı, kandaki PCO₂ ${pco2} mmHg, pH ${virgul(ph, 2)}`}>
-      <text x={20} y={22} fontSize={10.5} fontWeight={700} fill="var(--muted)">soluk (10 saniye)</text>
-      <text x={320} y={22} fontSize={10.5} fontWeight={700} fill={KIRMIZI} textAnchor="end">kas: CO₂ üretimi ×3</text>
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("Egzersiz: soluk dinlenmenin {0} katı, kandaki PCO₂ {1} mmHg, pH {2}", sv, pco2, virgul(ph, 2))}>
+      <text x={20} y={22} fontSize={10.5} fontWeight={700} fill="var(--muted)">{cev("soluk (10 saniye)")}</text>
+      <text x={320} y={22} fontSize={10.5} fontWeight={700} fill={KIRMIZI} textAnchor="end">{cev("kas: CO₂ üretimi ×3")}</text>
       <polyline points={nefes.join(" ")} fill="none" stroke={YESIL} strokeWidth={2.4} strokeLinejoin="round" />
       <line x1={20} x2={320} y1={70} y2={70} stroke="var(--line)" />
-      <text x={20} y={118} fontSize={10.5} fontWeight={700} fill="var(--muted)">kanda PCO₂ (mmHg)</text>
+      <text x={20} y={118} fontSize={10.5} fontWeight={700} fill="var(--muted)">{cev("kanda PCO₂ (mmHg)")}</text>
       <rect x={gx(35)} y={126} width={gx(45) - gx(35)} height={14} fill={YESIL} fillOpacity={0.18} />
       <line x1={40} x2={300} y1={133} y2={133} stroke="var(--line-2)" strokeWidth={2} />
       {[20, 30, 40, 50, 60, 70].map((p) => (
@@ -400,9 +401,9 @@ function Egzersiz({ v }: SahneProps) {
       ))}
       <circle cx={gx(pco2)} cy={133} r={7} fill={pco2 === 40 ? YESIL : KIRMIZI} stroke="var(--surface)" strokeWidth={1.4} />
       <g fontSize={12} fontWeight={800}>
-        <text x={40} y={182} fill="var(--ink)">PCO₂ {pco2}</text>
-        <text x={170} y={182} fill="var(--ink)" textAnchor="middle">pH {virgul(ph, 2)}</text>
-        <text x={300} y={182} fill="var(--ink)" textAnchor="end">soluk ×{sv}</text>
+        <text x={40} y={182} fill="var(--ink)">{cev("PCO₂")} {pco2}</text>
+        <text x={170} y={182} fill="var(--ink)" textAnchor="middle">{cev("pH")} {virgul(ph, 2)}</text>
+        <text x={300} y={182} fill="var(--ink)" textAnchor="end">{cev("soluk ×")}{sv}</text>
       </g>
       <text x={170} y={210} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{durum}</text>
     </svg>
@@ -414,18 +415,18 @@ function Egzersiz({ v }: SahneProps) {
 /* ---------- azotlu atıklar ---------- */
 
 const ATIK = [
-  { ad: "Amonyak", formul: "NH₃", puan: [3, 3, 1], kim: "kemikli balıklar, sucul omurgasızlar, iribaş" },
-  { ad: "Üre", formul: "CO(NH₂)₂", puan: [2, 2, 2], kim: "memeliler, ergin kurbağa" },
-  { ad: "Ürik asit", formul: "C₅H₄N₄O₃", puan: [1, 1, 3], kim: "kuşlar, sürüngenlerin çoğu, böcekler" },
+  { ad: cev("Amonyak"), formul: "NH₃", puan: [3, 3, 1], kim: cev("kemikli balıklar, sucul omurgasızlar, iribaş") },
+  { ad: cev("Üre"), formul: "CO(NH₂)₂", puan: [2, 2, 2], kim: cev("memeliler, ergin kurbağa") },
+  { ad: cev("Ürik asit"), formul: "C₅H₄N₄O₃", puan: [1, 1, 3], kim: cev("kuşlar, sürüngenlerin çoğu, böcekler") },
 ];
 
 function Atik({ v }: SahneProps) {
   const a = Math.round(sinir((v.a ?? 1) - 1, 0, 2));
   const A = ATIK[a];
-  const olcut = ["Zehirlilik", "Su ihtiyacı", "Enerji maliyeti"];
+  const olcut = [cev("Zehirlilik"), cev("Su ihtiyacı"), cev("Enerji maliyeti")];
   const renk = [KIRMIZI, MAVI, SARI];
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={`${A.ad}: zehirlilik ${A.puan[0]}, su ihtiyacı ${A.puan[1]}, enerji maliyeti ${A.puan[2]} (3 üzerinden); atanlar: ${A.kim}`}>
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("{0}: zehirlilik {1}, su ihtiyacı {2}, enerji maliyeti {3} (3 üzerinden); atanlar: {4}", A.ad, A.puan[0], A.puan[1], A.puan[2], A.kim)}>
       <text x={170} y={30} fontSize={20} fontWeight={800} fill="var(--ink)" textAnchor="middle">{A.ad}</text>
       <text x={170} y={50} fontSize={12} fontWeight={700} fill="var(--muted)" textAnchor="middle">{A.formul}</text>
       {olcut.map((o, i) => (
@@ -436,7 +437,7 @@ function Atik({ v }: SahneProps) {
           ))}
         </g>
       ))}
-      <text x={170} y={186} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">Kim atar?</text>
+      <text x={170} y={186} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("Kim atar?")}</text>
       <text x={170} y={206} fontSize={12.5} fontWeight={800} fill={YESIL} textAnchor="middle">{A.kim}</text>
     </svg>
   );
@@ -445,12 +446,12 @@ function Atik({ v }: SahneProps) {
 /* ---------- ürenin yolu ---------- */
 
 const URE: { pay: number; yol: Nokta[]; not: string }[] = [
-  { pay: 0.14, yol: [[40, 56], [92, 56]], not: "Hücrede amino asit yıkıldı: NH₃ oluştu" },
-  { pay: 0.18, yol: [[92, 56], [128, 56]], not: "Karaciğer: NH₃ + CO₂ → üre (ATP harcanır)" },
-  { pay: 0.2, yol: [[128, 56], [170, 56], [210, 56], [234, 84]], not: "Üre kanla böbreğe taşınıyor" },
-  { pay: 0.14, yol: [[234, 84], [240, 100]], not: "Böbrek üreyi kandan süzüp idrara katıyor" },
-  { pay: 0.2, yol: [[240, 100], [236, 136], [228, 160]], not: "Üreter: idrar keseye iniyor" },
-  { pay: 0.14, yol: [[228, 160], [228, 182], [228, 204]], not: "İdrar kesesi dolunca üretra ile dışarı" },
+  { pay: 0.14, yol: [[40, 56], [92, 56]], not: cev("Hücrede amino asit yıkıldı: NH₃ oluştu") },
+  { pay: 0.18, yol: [[92, 56], [128, 56]], not: cev("Karaciğer: NH₃ + CO₂ → üre (ATP harcanır)") },
+  { pay: 0.2, yol: [[128, 56], [170, 56], [210, 56], [234, 84]], not: cev("Üre kanla böbreğe taşınıyor") },
+  { pay: 0.14, yol: [[234, 84], [240, 100]], not: cev("Böbrek üreyi kandan süzüp idrara katıyor") },
+  { pay: 0.2, yol: [[240, 100], [236, 136], [228, 160]], not: cev("Üreter: idrar keseye iniyor") },
+  { pay: 0.14, yol: [[228, 160], [228, 182], [228, 204]], not: cev("İdrar kesesi dolunca üretra ile dışarı") },
 ];
 
 function Ure({ t, oynuyor, s }: SahneProps) {
@@ -461,33 +462,33 @@ function Ure({ t, oynuyor, s }: SahneProps) {
   const ure = etkin >= 1 && !(etkin === 1 && yerel < 0.5);
   const yaz = (i: number) => (i === etkin ? YESIL : "var(--muted)");
   return (
-    <svg viewBox="0 0 340 228" role="img" aria-label="Üre karaciğerde amonyak ve CO₂'den yapılır, kanla böbreğe gelir, idrarla üreter, idrar kesesi ve üretradan atılır">
+    <svg viewBox="0 0 340 228" role="img" aria-label={cev("Üre karaciğerde amonyak ve CO₂'den yapılır, kanla böbreğe gelir, idrarla üreter, idrar kesesi ve üretradan atılır")}>
       {/* hücre */}
       <rect x={18} y={36} width={48} height={40} rx={10} fill="var(--panel)" stroke="var(--line-2)" />
-      <text x={42} y={92} fontSize={10.5} fontWeight={700} textAnchor="middle" fill={yaz(0)}>hücre</text>
+      <text x={42} y={92} fontSize={10.5} fontWeight={700} textAnchor="middle" fill={yaz(0)}>{cev("hücre")}</text>
       {/* karaciğer */}
       <path d="M86 44 Q96 30 122 32 Q148 36 142 56 Q132 76 104 74 Q84 70 86 44 Z" fill={KIRMIZI} fillOpacity={etkin === 1 ? 0.35 : 0.18} stroke={KIRMIZI} strokeWidth={1.4} />
-      <text x={114} y={92} fontSize={10.5} fontWeight={700} textAnchor="middle" fill={yaz(1)}>karaciğer</text>
+      <text x={114} y={92} fontSize={10.5} fontWeight={700} textAnchor="middle" fill={yaz(1)}>{cev("karaciğer")}</text>
       {/* kan damarı */}
       <polyline points="142,56 210,56 234,84" fill="none" stroke={KIRMIZI} strokeOpacity={0.35} strokeWidth={6} strokeLinecap="round" strokeLinejoin="round" />
-      <text x={176} y={46} fontSize={10.5} fontWeight={700} textAnchor="middle" fill={yaz(2)}>kan</text>
+      <text x={176} y={46} fontSize={10.5} fontWeight={700} textAnchor="middle" fill={yaz(2)}>{cev("kan")}</text>
       {/* böbrek, üreter, kese, üretra */}
       <path d="M232 78 Q252 66 262 84 Q270 104 256 118 Q240 126 236 108 Q246 98 232 78 Z" fill="#b5523a" fillOpacity={etkin === 3 ? 0.55 : 0.35} stroke="#b5523a" strokeWidth={1.4} />
-      <text x={272} y={98} fontSize={10.5} fontWeight={700} fill={yaz(3)}>böbrek</text>
+      <text x={272} y={98} fontSize={10.5} fontWeight={700} fill={yaz(3)}>{cev("böbrek")}</text>
       <polyline points="240,108 236,136 228,160" fill="none" stroke={SARI} strokeWidth={3} strokeLinecap="round" />
-      <text x={246} y={140} fontSize={10.5} fontWeight={700} fill={yaz(4)}>üreter</text>
+      <text x={246} y={140} fontSize={10.5} fontWeight={700} fill={yaz(4)}>{cev("üreter")}</text>
       <ellipse cx={228} cy={176} rx={20} ry={16} fill={SARI} fillOpacity={0.25} stroke={SARI} strokeWidth={1.4} />
       <line x1={228} x2={228} y1={192} y2={206} stroke={SARI} strokeWidth={3} strokeLinecap="round" />
-      <text x={254} y={180} fontSize={10.5} fontWeight={700} fill={yaz(5)}>idrar kesesi</text>
-      <text x={238} y={206} fontSize={10.5} fontWeight={700} fill={yaz(5)}>üretra</text>
+      <text x={254} y={180} fontSize={10.5} fontWeight={700} fill={yaz(5)}>{cev("idrar kesesi")}</text>
+      <text x={238} y={206} fontSize={10.5} fontWeight={700} fill={yaz(5)}>{cev("üretra")}</text>
       {u > 0 && u < 1 && (
         <g>
           <circle cx={nok[0]} cy={nok[1]} r={6} fill={ure ? YESIL : MOR} stroke="var(--surface)" strokeWidth={1.4} />
-          <text x={nok[0]} y={nok[1] - 10} fontSize={9.5} fontWeight={800} fill={ure ? YESIL : MOR} textAnchor="middle">{ure ? "üre" : "NH₃"}</text>
+          <text x={nok[0]} y={nok[1] - 10} fontSize={9.5} fontWeight={800} fill={ure ? YESIL : MOR} textAnchor="middle">{ure ? cev("üre") : "NH₃"}</text>
         </g>
       )}
       <text x={170} y={222} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {etkin < 0 ? "Fazla amino asit yıkılınca amonyak oluşur" : u >= 1 ? "Üre karaciğerde yapıldı, böbrekte atıldı" : URE[etkin].not}
+        {etkin < 0 ? cev("Fazla amino asit yıkılınca amonyak oluşur") : u >= 1 ? cev("Üre karaciğerde yapıldı, böbrekte atıldı") : URE[etkin].not}
       </text>
     </svg>
   );
@@ -498,10 +499,10 @@ function Ure({ t, oynuyor, s }: SahneProps) {
 const PARCA = [
   { ad: "su", r: 2.2, renk: MAVI, gecer: true, n: 6 },
   { ad: "glikoz", r: 3.4, renk: SARI, gecer: true, n: 3 },
-  { ad: "amino asit", r: 3.4, renk: MOR, gecer: true, n: 3 },
-  { ad: "üre", r: 3, renk: YESIL, gecer: true, n: 3 },
+  { ad: cev("amino asit"), r: 3.4, renk: MOR, gecer: true, n: 3 },
+  { ad: cev("üre"), r: 3, renk: YESIL, gecer: true, n: 3 },
   { ad: "tuzlar", r: 2.6, renk: "var(--ink)", gecer: true, n: 3 },
-  { ad: "büyük protein", r: 8, renk: "#6b7f99", gecer: false, n: 2 },
+  { ad: cev("büyük protein"), r: 8, renk: "#6b7f99", gecer: false, n: 2 },
   { ad: "alyuvar", r: 10, renk: KIRMIZI, gecer: false, n: 2 },
 ];
 
@@ -517,13 +518,13 @@ function Suzme({ t, oynuyor, s }: SahneProps) {
     }
   });
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label="Glomerulda süzülme: su, glikoz, amino asit, üre ve tuzlar Bowman kapsülüne geçer; alyuvar ve büyük proteinler kanda kalır">
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("Glomerulda süzülme: su, glikoz, amino asit, üre ve tuzlar Bowman kapsülüne geçer; alyuvar ve büyük proteinler kanda kalır")}>
       <rect x={14} y={24} width={216} height={64} rx={10} fill={KIRMIZI} fillOpacity={0.08} />
       <rect x={14} y={104} width={216} height={64} rx={10} fill={SARI} fillOpacity={0.12} />
       <line x1={14} x2={230} y1={96} y2={96} stroke="var(--ink)" strokeWidth={2} strokeDasharray="10 5" />
       <g fontSize={10.5} fontWeight={700}>
-        <text x={18} y={18} fill={KIRMIZI}>glomerul (kan, yüksek basınç)</text>
-        <text x={18} y={184} fill="#a77a06">Bowman kapsülü (süzüntü)</text>
+        <text x={18} y={18} fill={KIRMIZI}>{cev("glomerul (kan, yüksek basınç)")}</text>
+        <text x={18} y={184} fill="#a77a06">{cev("Bowman kapsülü (süzüntü)")}</text>
       </g>
       {tane.map((k, i) => {
         const ilerle = k.p.gecer ? sinir((u - k.gec) / 0.4) : 0;
@@ -540,7 +541,7 @@ function Suzme({ t, oynuyor, s }: SahneProps) {
         ))}
       </g>
       <text x={170} y={212} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {u <= 0 ? "Kan glomerule geliyor" : u < 1 ? "Basınç küçük molekülleri kapsüle itiyor" : "Alyuvar ve büyük proteinler kanda kaldı"}
+        {u <= 0 ? cev("Kan glomerule geliyor") : u < 1 ? cev("Basınç küçük molekülleri kapsüle itiyor") : cev("Alyuvar ve büyük proteinler kanda kaldı")}
       </text>
     </svg>
   );
@@ -553,16 +554,16 @@ function Geri({ v }: SahneProps) {
   const idrar = 180 * (1 - g / 100);
   const W = 300;
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={`Günde 180 L süzüntünün yüzde ${g}'si geri emiliyor; idrar ${virgul(idrar)} L`}>
-      <text x={20} y={26} fontSize={11.5} fontWeight={700} fill="var(--muted)">Günlük süzüntü: 180 L</text>
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("Günde 180 L süzüntünün yüzde {0}'si geri emiliyor; idrar {1} L", g, virgul(idrar))}>
+      <text x={20} y={26} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("Günlük süzüntü: 180 L")}</text>
       <rect x={20} y={34} width={W} height={24} rx={6} fill={SARI} fillOpacity={0.5} />
       <rect x={20} y={34} width={(W * g) / 100} height={24} rx={6} fill={MAVI} fillOpacity={0.75} />
       <g fontSize={11} fontWeight={700}>
-        <text x={24} y={76} fill={MAVI}>kana döner: {virgul((180 * g) / 100)} L</text>
-        <text x={316} y={76} fill="#a77a06" textAnchor="end">idrar: {virgul(idrar)} L</text>
+        <text x={24} y={76} fill={MAVI}>{cev("kana döner:")} {virgul((180 * g) / 100)} L</text>
+        <text x={316} y={76} fill="#a77a06" textAnchor="end">{cev("idrar:")} {virgul(idrar)} L</text>
       </g>
       {/* idrar şişeleri: her biri 1,5 L */}
-      <text x={20} y={108} fontSize={11.5} fontWeight={700} fill="var(--muted)">Bir günde atılacak idrar (her şişe 1,5 L)</text>
+      <text x={20} y={108} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("Bir günde atılacak idrar (her şişe 1,5 L)")}</text>
       {Array.from({ length: Math.min(24, Math.ceil(idrar / 1.5 - 0.001)) }, (_, i) => {
         const dolu = Math.min(1, idrar / 1.5 - i);
         const x = 22 + (i % 12) * 25, y = 118 + Math.floor(i / 12) * 38;
@@ -573,9 +574,9 @@ function Geri({ v }: SahneProps) {
           </g>
         );
       })}
-      {idrar / 1.5 > 24 && <text x={320} y={190} fontSize={11} fontWeight={800} fill={KIRMIZI} textAnchor="end">+{Math.ceil(idrar / 1.5) - 24} şişe daha</text>}
+      {idrar / 1.5 > 24 && <text x={320} y={190} fontSize={11} fontWeight={800} fill={KIRMIZI} textAnchor="end">+{Math.ceil(idrar / 1.5) - 24} {cev("şişe daha")}</text>}
       <text x={170} y={214} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {g >= 99 ? "%99 geri emildi: günde 1,8 L idrar" : g >= 95 ? "Hâlâ çok fazla su kaybı var" : "Bu kadar idrarla vücut saatler içinde susuz kalır"}
+        {g >= 99 ? cev("%99 geri emildi: günde 1,8 L idrar") : g >= 95 ? cev("Hâlâ çok fazla su kaybı var") : cev("Bu kadar idrarla vücut saatler içinde susuz kalır")}
       </text>
     </svg>
   );
@@ -589,12 +590,12 @@ function Ph({ v }: SahneProps) {
   const px = (p: number) => 30 + ((p - 7.0) / 0.8) * 280;
   const normal = ph >= 7.35 && ph <= 7.45;
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={`Böbrek ${n} birim H⁺ salgılıyor; kan pH'sı ${virgul(ph, 2)}`}>
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("Böbrek {0} birim H⁺ salgılıyor; kan pH'sı {1}", n, virgul(ph, 2))}>
       {/* tüp hücresi şeması */}
       <rect x={20} y={20} width={300} height={28} rx={8} fill={SARI} fillOpacity={0.18} />
-      <text x={26} y={38} fontSize={10.5} fontWeight={700} fill="#a77a06">tüp (idrar olacak sıvı)</text>
+      <text x={26} y={38} fontSize={10.5} fontWeight={700} fill="#a77a06">{cev("tüp (idrar olacak sıvı)")}</text>
       <rect x={20} y={88} width={300} height={28} rx={8} fill={KIRMIZI} fillOpacity={0.1} />
-      <text x={26} y={106} fontSize={10.5} fontWeight={700} fill={KIRMIZI}>kan</text>
+      <text x={26} y={106} fontSize={10.5} fontWeight={700} fill={KIRMIZI}>{cev("kan")}</text>
       {Array.from({ length: n }, (_, i) => {
         const x = 178 + i * 36;
         return (
@@ -607,17 +608,17 @@ function Ph({ v }: SahneProps) {
           </g>
         );
       })}
-      {n > 0 && <text x={316} y={106} fontSize={10} fontWeight={700} fill={YESIL} textAnchor="end">HCO₃⁻ kana döner</text>}
+      {n > 0 && <text x={316} y={106} fontSize={10} fontWeight={700} fill={YESIL} textAnchor="end">{cev("HCO₃⁻ kana döner")}</text>}
       {/* pH ölçeği */}
       <rect x={px(7.35)} y={142} width={px(7.45) - px(7.35)} height={16} fill={YESIL} fillOpacity={0.2} />
       <line x1={px(7.0)} x2={px(7.8)} y1={150} y2={150} stroke="var(--line-2)" strokeWidth={2} />
       {[7.0, 7.2, 7.4, 7.6, 7.8].map((p) => (
         <text key={p} x={px(p)} y={172} fontSize={9.5} fill="var(--muted)" textAnchor="middle">{virgul(p)}</text>
       ))}
-      <text x={px(7.4)} y={138} fontSize={9.5} fontWeight={700} fill={YESIL} textAnchor="middle">normal</text>
+      <text x={px(7.4)} y={138} fontSize={9.5} fontWeight={700} fill={YESIL} textAnchor="middle">{cev("normal")}</text>
       <circle cx={px(ph)} cy={150} r={7} fill={normal ? YESIL : KIRMIZI} stroke="var(--surface)" strokeWidth={1.4} />
       <text x={170} y={210} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        Kan pH'sı {virgul(ph, 2)}: {ph < 7.35 ? "kan asidik" : ph > 7.45 ? "fazla salgılandı, kan bazik" : "normal aralıkta"}
+        {cev("Kan pH'sı")} {virgul(ph, 2)}: {ph < 7.35 ? cev("kan asidik") : ph > 7.45 ? cev("fazla salgılandı, kan bazik") : cev("normal aralıkta")}
       </text>
     </svg>
   );
@@ -626,28 +627,28 @@ function Ph({ v }: SahneProps) {
 /* ---------- ADH ---------- */
 
 const ADH = [
-  { ad: "Normal gün", adh: 2, idrar: 0.45, renk: "color-mix(in srgb, #ecb302 70%, var(--surface))", not: "ADH orta: idrar normal miktarda" },
-  { ad: "Bol su içtin", adh: 0, idrar: 1, renk: "color-mix(in srgb, #ebc62b 40%, var(--surface))", not: "Kan seyreldi: ADH azaldı, idrar bol ve açık" },
-  { ad: "Alkol aldın", adh: 0, idrar: 0.95, renk: "color-mix(in srgb, #ebc62b 40%, var(--surface))", not: "Alkol ADH'yi baskıladı: idrar bol" },
+  { ad: cev("Normal gün"), adh: 2, idrar: 0.45, renk: "color-mix(in srgb, #ecb302 70%, var(--surface))", not: cev("ADH orta: idrar normal miktarda") },
+  { ad: cev("Bol su içtin"), adh: 0, idrar: 1, renk: "color-mix(in srgb, #ebc62b 40%, var(--surface))", not: cev("Kan seyreldi: ADH azaldı, idrar bol ve açık") },
+  { ad: cev("Alkol aldın"), adh: 0, idrar: 0.95, renk: "color-mix(in srgb, #ebc62b 40%, var(--surface))", not: cev("Alkol ADH'yi baskıladı: idrar bol") },
 ];
 
 function Adh({ v }: SahneProps) {
   const d = Math.round(sinir((v.d ?? 1) - 1, 0, 2));
   const D = ADH[d];
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={`${D.ad}: ADH düzeyi ${D.adh}, idrar miktarı ${D.idrar > 0.6 ? "bol" : "normal"}`}>
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("{0}: ADH düzeyi {1}, idrar miktarı {2}", D.ad, D.adh, D.idrar > 0.6 ? "bol" : "normal")}>
       <text x={170} y={22} fontSize={15} fontWeight={800} fill="var(--ink)" textAnchor="middle">{D.ad}</text>
       {/* hipofiz */}
       <circle cx={52} cy={64} r={18} fill={MOR} fillOpacity={0.16} stroke={MOR} strokeWidth={1.4} />
-      <text x={52} y={96} fontSize={10} fontWeight={700} fill={MOR} textAnchor="middle">hipofiz</text>
+      <text x={52} y={96} fontSize={10} fontWeight={700} fill={MOR} textAnchor="middle">{cev("hipofiz")}</text>
       {Array.from({ length: D.adh * 2 }, (_, i) => (
         <circle key={i} cx={84 + i * 12} cy={64} r={3.2} fill={MOR} />
       ))}
-      <text x={84} y={50} fontSize={10} fontWeight={700} fill={MOR}>{D.adh === 0 ? "ADH çok az" : "ADH salgılanıyor"}</text>
+      <text x={84} y={50} fontSize={10} fontWeight={700} fill={MOR}>{D.adh === 0 ? cev("ADH çok az") : cev("ADH salgılanıyor")}</text>
       {/* toplama kanalı */}
       <rect x={188} y={44} width={22} height={124} rx={8} fill={SARI} fillOpacity={0.2} stroke="var(--line-2)" />
-      <text x={180} y={120} fontSize={10} fontWeight={700} fill="var(--muted)" textAnchor="end">toplama</text>
-      <text x={180} y={133} fontSize={10} fontWeight={700} fill="var(--muted)" textAnchor="end">kanalı</text>
+      <text x={180} y={120} fontSize={10} fontWeight={700} fill="var(--muted)" textAnchor="end">{cev("toplama")}</text>
+      <text x={180} y={133} fontSize={10} fontWeight={700} fill="var(--muted)" textAnchor="end">{cev("kanalı")}</text>
       {Array.from({ length: D.adh * 2 }, (_, i) => {
         const y = 60 + i * 26;
         return (
@@ -657,11 +658,11 @@ function Adh({ v }: SahneProps) {
           </g>
         );
       })}
-      {D.adh > 0 && <text x={246} y={74} fontSize={10} fontWeight={700} fill={MAVI}>su kana döner</text>}
+      {D.adh > 0 && <text x={246} y={74} fontSize={10} fontWeight={700} fill={MAVI}>{cev("su kana döner")}</text>}
       {/* idrar kabı */}
       <rect x={262} y={110} width={48} height={62} rx={6} fill="var(--panel)" stroke="var(--line-2)" />
       <rect x={262} y={110 + 62 * (1 - D.idrar)} width={48} height={62 * D.idrar} rx={6} fill={D.renk} />
-      <text x={286} y={188} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">idrar</text>
+      <text x={286} y={188} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("idrar")}</text>
       <text x={170} y={212} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{D.not}</text>
     </svg>
   );
@@ -675,16 +676,16 @@ function Esik({ v }: SahneProps) {
   const tasinan = Math.min(toplam, 9);
   const kacan = toplam - tasinan;
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={`Kan şekeri ${k} mg/dL: ${kacan > 0 ? "taşıyıcılar doydu, glikoz idrara kaçıyor" : "glikozun hepsi geri emiliyor"}`}>
-      <text x={20} y={22} fontSize={10.5} fontWeight={700} fill="#a77a06">proksimal tüp (süzüntü akıyor →)</text>
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("Kan şekeri {0} mg/dL: {1}", k, kacan > 0 ? "taşıyıcılar doydu, glikoz idrara kaçıyor" : "glikozun hepsi geri emiliyor")}>
+      <text x={20} y={22} fontSize={10.5} fontWeight={700} fill="#a77a06">{cev("proksimal tüp (süzüntü akıyor →)")}</text>
       <rect x={20} y={30} width={240} height={40} rx={10} fill={SARI} fillOpacity={0.16} />
       {/* taşıyıcılar */}
       {Array.from({ length: 9 }, (_, i) => (
         <rect key={i} x={30 + i * 25} y={68} width={14} height={14} rx={3} fill={i < tasinan ? YESIL : "var(--line-2)"} />
       ))}
-      <text x={20} y={98} fontSize={9.5} fontWeight={700} fill={YESIL}>taşıyıcılar ({tasinan}/9 dolu)</text>
+      <text x={20} y={98} fontSize={9.5} fontWeight={700} fill={YESIL}>{cev("taşıyıcılar (")}{tasinan}{cev("/9 dolu)")}</text>
       <rect x={20} y={108} width={240} height={36} rx={10} fill={KIRMIZI} fillOpacity={0.08} />
-      <text x={24} y={160} fontSize={10.5} fontWeight={700} fill={KIRMIZI}>kana geri dönen glikoz</text>
+      <text x={24} y={160} fontSize={10.5} fontWeight={700} fill={KIRMIZI}>{cev("kana geri dönen glikoz")}</text>
       {Array.from({ length: tasinan }, (_, i) => (
         <circle key={i} cx={37 + i * 25} cy={126} r={5} fill={SARI} />
       ))}
@@ -697,11 +698,11 @@ function Esik({ v }: SahneProps) {
       {Array.from({ length: kacan }, (_, i) => (
         <circle key={i} cx={288 + (i % 3) * 11} cy={84 - Math.floor(i / 3) * 10} r={4} fill={SARI} stroke="#a77a06" strokeWidth={1} />
       ))}
-      <text x={299} y={112} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">idrar</text>
-      <text x={299} y={128} fontSize={10.5} fontWeight={800} fill={kacan > 0 ? KIRMIZI : YESIL} textAnchor="middle">{kacan > 0 ? "glikoz var" : "glikoz yok"}</text>
-      <text x={170} y={196} fontSize={14} fontWeight={800} fill="var(--ink)" textAnchor="middle">Kan şekeri {k} mg/dL</text>
+      <text x={299} y={112} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("idrar")}</text>
+      <text x={299} y={128} fontSize={10.5} fontWeight={800} fill={kacan > 0 ? KIRMIZI : YESIL} textAnchor="middle">{kacan > 0 ? cev("glikoz var") : cev("glikoz yok")}</text>
+      <text x={170} y={196} fontSize={14} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("Kan şekeri")} {k} {cev("mg/dL")}</text>
       <text x={170} y={214} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {kacan > 0 ? "Taşıyıcılar doydu, fazlası idrara kaçıyor" : "Glikozun hepsi kana geri dönüyor"}
+        {kacan > 0 ? cev("Taşıyıcılar doydu, fazlası idrara kaçıyor") : cev("Glikozun hepsi kana geri dönüyor")}
       </text>
     </svg>
   );

@@ -1,5 +1,6 @@
 "use client";
 // Fizik sahneleri: düz yolda giden araba, her saniye çekilen kareler, konum-zaman ve hız-zaman grafikleri.
+import { cev } from "@/lib/dil";
 import { useRef } from "react";
 import {
   Araba, Balon, Eksen, G, Ok, PX, RENK, ROAD_H, X, X0, Yol, gX, gY, svgNokta, yumusak,
@@ -21,7 +22,7 @@ function Konum({ s, v, set }: SahneProps) {
   };
   return (
     <svg
-      ref={svg} viewBox="0 40 340 130" className="ad-surukle" role="img" aria-label={`Araba x = ${m} m konumunda`}
+      ref={svg} viewBox="0 40 340 130" className="ad-surukle" role="img" aria-label={cev("Araba x = {0} m konumunda", m)}
       onPointerDown={(e) => { tut.current = true; (e.target as Element).setPointerCapture?.(e.pointerId); tasi(e); }}
       onPointerMove={(e) => tut.current && tasi(e)}
       onPointerUp={() => (tut.current = false)}
@@ -31,7 +32,7 @@ function Konum({ s, v, set }: SahneProps) {
         <path d={`M${X(hedef)} 52 L${X(hedef) + 18} 58 L${X(hedef)} 64 Z`} fill="var(--c4)" />
       </g>
       <line x1={X(0)} x2={X(0)} y1={70} y2={104} stroke="var(--muted)" strokeWidth={1.2} strokeDasharray="3 3" />
-      <text x={X(0)} y={64} fontSize={11} fill="var(--muted)" textAnchor="middle">başlangıç</text>
+      <text x={X(0)} y={64} fontSize={11} fill="var(--muted)" textAnchor="middle">{cev("başlangıç")}</text>
       <Yol y={104} />
       <Ok x1={X(0)} x2={X(m)} y={92} renk="var(--c1)" kalin={2} />
       <Araba x={X(m)} y={117} />
@@ -46,16 +47,16 @@ function YerDegistirme({ t, oynuyor, kosular }: SahneProps) {
   const enUzak = t < 2 ? m : 40;
   const bitti = !oynuyor && kosular.length > 0;
   return (
-    <svg viewBox="0 0 340 190" role="img" aria-label="Araba 40 m ileri, sonra 30 m geri gidiyor">
+    <svg viewBox="0 0 340 190" role="img" aria-label={cev("Araba 40 m ileri, sonra 30 m geri gidiyor")}>
       <Ok x1={X(0)} x2={X(enUzak)} y={30} renk="var(--c1)" />
-      {enUzak > 4 && <text x={X(20)} y={22} fontSize={12} fontWeight={700} fill="var(--c1)" textAnchor="middle">40 m ileri</text>}
+      {enUzak > 4 && <text x={X(20)} y={22} fontSize={12} fontWeight={700} fill="var(--c1)" textAnchor="middle">{cev("40 m ileri")}</text>}
       {t > 2 && <Ok x1={X(40)} x2={X(m)} y={56} renk="var(--c2)" />}
-      {t > 2.6 && <text x={X(25)} y={48} fontSize={12} fontWeight={700} fill="var(--c2)" textAnchor="middle">30 m geri</text>}
+      {t > 2.6 && <text x={X(25)} y={48} fontSize={12} fontWeight={700} fill="var(--c2)" textAnchor="middle">{cev("30 m geri")}</text>}
       {bitti && (
         <g className="ad-belir">
           <Ok x1={X(0)} x2={X(10)} y={84} renk="var(--good)" kalin={4} />
           <text x={X(10) + 8} y={88} fontSize={13} fontWeight={800} fill="var(--good)">Δx = +10 m</text>
-          <text x={X(50)} y={88} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="end">yol = 70 m</text>
+          <text x={X(50)} y={88} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="end">{cev("yol = 70 m")}</text>
         </g>
       )}
       <Yol y={124} />
@@ -85,7 +86,7 @@ function HizSerit({ s, v, t, oynuyor }: SahneProps) {
     </g>
   );
   return (
-    <svg viewBox="0 0 340 170" role="img" aria-label="İki araba, her saniye çekilmiş karelerle">
+    <svg viewBox="0 0 340 170" role="img" aria-label={cev("İki araba, her saniye çekilmiş karelerle")}>
       {serit(vA, 18, "var(--c1)", "A")}
       {serit(vB, 96, "var(--c2)", "B")}
     </svg>
@@ -99,7 +100,7 @@ function KonumZaman({ v, t, oynuyor, kosular }: SahneProps) {
   const renkOf = (h: number) => RENK[Math.max(0, eski.indexOf(h)) % RENK.length];
   const simdiki = eski.includes(hiz) ? renkOf(hiz) : RENK[eski.length % RENK.length];
   return (
-    <svg viewBox="0 0 340 300" role="img" aria-label="Araba ve konum-zaman grafiği">
+    <svg viewBox="0 0 340 300" role="img" aria-label={cev("Araba ve konum-zaman grafiği")}>
       <Yol y={22} etiket={false} />
       <Araba x={X(hiz * t)} y={35} renk={simdiki} />
       <Eksen tMax={5} yMax={50} yAd="x (m)" yAdim={10} />
@@ -127,7 +128,7 @@ function Ivme({ v, t, oynuyor }: SahneProps) {
   const x = (k: number) => 0.5 * a * k * k;
   const kareler = [0, 1, 2, 3, 4, 5].filter((k) => k < tt - 0.05);
   return (
-    <svg viewBox="0 -18 340 318" role="img" aria-label="Hızlanan araba ve hız-zaman grafiği">
+    <svg viewBox="0 -18 340 318" role="img" aria-label={cev("Hızlanan araba ve hız-zaman grafiği")}>
       <Yol y={22} etiket={false} />
       {kareler.map((k) => <Araba key={k} x={X(x(k))} y={35} soluk olcek={0.75} />)}
       {kareler.map((k) => <circle key={`d${k}`} cx={X(x(k))} cy={22 + ROAD_H + 7} r={3} fill="var(--c1)" />)}
@@ -150,7 +151,7 @@ function GrafikOku({ t, oynuyor }: SahneProps) {
   const nokta = [[0, 0], [2, 30], [4, 30], [6, 10]] as const;
   const d = nokta.map(([k, m], i) => `${i ? "L" : "M"}${gX(k, 6)} ${gY(m, 40)}`).join(" ");
   return (
-    <svg viewBox="0 0 340 300" role="img" aria-label="Üç parçalı konum-zaman grafiği">
+    <svg viewBox="0 0 340 300" role="img" aria-label={cev("Üç parçalı konum-zaman grafiği")}>
       <Yol y={22} etiket={false} />
       <Araba x={X(xt(t))} y={35} ters={t > 4 && t < 6} />
       <rect x={gX(2, 6)} y={G.y0} width={gX(4, 6) - gX(2, 6)} height={G.y1 - G.y0} fill="var(--glow-soft)" />
@@ -175,8 +176,8 @@ export const HAREKET: Record<string, SahneKaydi> = {
       const vA = sayi(s.vA, 5), vB = v.vB ?? 0;
       if (vB === vA) return null;
       return {
-        baslik: vB > vA ? "B öne geçti" : "B geride kaldı",
-        metin: `B her saniye ${vB} m gidiyor, A ise ${vA} m. Kareler arasındaki boşluklar eşit olana kadar hızı değiştir.`,
+        baslik: vB > vA ? cev("B öne geçti") : cev("B geride kaldı"),
+        metin: cev("B her saniye {0} m gidiyor, A ise {1} m. Kareler arasındaki boşluklar eşit olana kadar hızı değiştir.", vB, vA),
       };
     },
   },

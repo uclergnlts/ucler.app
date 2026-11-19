@@ -1,6 +1,7 @@
 "use client";
 // Seri hatırlatma ve yeni içerik e-postalarındaki "kapat" bağlantısı buraya gelir (?tur=yenilik: yeni içerik, ?tur=hepsi: tüm e-postalar). Kapatma, e-posta programlarının
 // bağlantıyı önceden açıp denetlemesiyle olmasın diye sayfanın içinden yapılır (supabase/functions/).
+import { cev } from "@/lib/dil";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { sb } from "@/lib/bulut";
@@ -19,20 +20,20 @@ export default function HatirlatmaKapat() {
       .then(({ data, error }) => setDurum(!error && data?.tamam ? "tamam" : "hata"));
   }, []);
   const [baslik, metin] = durum === "bekle"
-    ? ["Bir saniye...", ""]
+    ? [cev("Bir saniye..."), ""]
     : durum === "tamam"
       ? tur === "hepsi"
-        ? ["Tüm e-postalardan çıktın", "Artık sana seri hatırlatması ya da yeni içerik e-postası göndermeyeceğiz. İstersen Profil > Ayarlar'dan yeniden açabilirsin."]
+        ? [cev("Tüm e-postalardan çıktın"), cev("Artık sana seri hatırlatması ya da yeni içerik e-postası göndermeyeceğiz. İstersen Profil > Ayarlar'dan yeniden açabilirsin.")]
         : tur === "yenilik"
-        ? ["Bildirimleri kapattık", "Artık yeni içerikler için e-posta göndermeyeceğiz. İstersen Profil > Ayarlar'dan yeniden açabilirsin."]
-        : ["Hatırlatmaları kapattık", "Artık serin için e-posta göndermeyeceğiz. İstersen Profil > Ayarlar'dan yeniden açabilirsin."]
-      : ["Bağlantı çalışmadı", "E-posta bildirimlerini Profil > Ayarlar'dan da kapatabilirsin."];
+        ? [cev("Bildirimleri kapattık"), cev("Artık yeni içerikler için e-posta göndermeyeceğiz. İstersen Profil > Ayarlar'dan yeniden açabilirsin.")]
+        : [cev("Hatırlatmaları kapattık"), cev("Artık serin için e-posta göndermeyeceğiz. İstersen Profil > Ayarlar'dan yeniden açabilirsin.")]
+      : [cev("Bağlantı çalışmadı"), cev("E-posta bildirimlerini Profil > Ayarlar'dan da kapatabilirsin.")];
   return (
     <div className="app">
-      <GeriTop to="/profil/" label="Profil'e dön" baslik={baslik} />
+      <GeriTop to="/profil/" label={cev("Profil'e dön")} baslik={baslik} />
       <Govde>
         <PageHead text={metin} />
-        {durum !== "bekle" && <Button asChild><Link href="/profil/ayarlar/">{"Ayarlar'a git"}</Link></Button>}
+        {durum !== "bekle" && <Button asChild><Link href="/profil/ayarlar/">{cev("Ayarlar'a git")}</Link></Button>}
       </Govde>
     </div>
   );

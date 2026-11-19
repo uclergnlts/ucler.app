@@ -1,6 +1,7 @@
+import { cev } from "@/lib/dil";
 import Lig from "@/components/Lig";
 
-export const metadata = { title: "Haftalık lig" };
+export const metadata = { title: cev("Haftalık lig") };
 
 export default function Page() {
   return <Lig />;

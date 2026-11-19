@@ -1,3 +1,4 @@
+import { cev } from "@/lib/dil";
 import { notFound } from "next/navigation";
 import UniteTesti from "@/components/UniteTesti";
 import { DERS_IDS, DERSLER, entries, isDers, uniteSorulari } from "@/lib/content";
@@ -12,7 +13,7 @@ export const generateStaticParams = () =>
 
 export async function generateMetadata({ params }: Props) {
   const { ders, no } = await params;
-  return { title: isDers(ders) ? `${DERSLER[ders].ad} · ${no}. ünite testi` : undefined };
+  return { title: isDers(ders) ? cev("{0} · {1}. ünite testi", DERSLER[ders].ad, no) : undefined };
 }
 
 export default async function Page({ params }: Props) {

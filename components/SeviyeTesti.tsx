@@ -2,6 +2,7 @@
 // Seviye testi: kilitli bir konuya doğrudan geçmek isteyen öğrenci, dersin o konudan önceki bütün konularından karışık
 // en çok SEVIYE_SORU soru çözer. En az GECME alırsa o konu ve öncesindeki bütün konular açılır (lib/kilit.ts);
 // alamazsa yanlış yaptığı ilk konu "buradan başla" diye gösterilir.
+import { cev } from "@/lib/dil";
 import Link from "next/link";
 import { useCallback, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
@@ -40,9 +41,9 @@ function Yok({ ders }: { ders: DersId }) {
   return (
     <div className="app" data-ders={ders}>
       <main className="view items-center pt-10 text-center">
-        <h1 className="text-[22px]">Bu konu için seviye testi yok</h1>
-        <p className="text-[15px] text-muted-foreground">Dersin ilk konusu her zaman açıktır.</p>
-        <Button asChild className="mt-3"><Link href={href(ders)}>{DERSLER[ders].ad} konularına dön</Link></Button>
+        <h1 className="text-[22px]">{cev("Bu konu için seviye testi yok")}</h1>
+        <p className="text-[15px] text-muted-foreground">{cev("Dersin ilk konusu her zaman açıktır.")}</p>
+        <Button asChild className="mt-3"><Link href={href(ders)}>{cev("{0} konularına dön", DERSLER[ders].ad)}</Link></Button>
       </main>
     </div>
   );
@@ -62,8 +63,8 @@ function Test({ ders, id, list, onceki, hepsi }: { ders: DersId; id: string; lis
   return (
     <KarisikTest
       ders={ders}
-      baslik="Seviye testi"
-      cikis="Seviye testinden çık"
+      baslik={cev("Seviye testi")}
+      cikis={cev("Seviye testinden çık")}
       sorular={sorular}
       sec={secim}
       bitti={(puan) => seviyeKaydet(`${ders}.${id}`, puan)}
@@ -72,22 +73,21 @@ function Test({ ders, id, list, onceki, hepsi }: { ders: DersId; id: string; lis
         return {
           body: (
             <article className="flex flex-col gap-3 pt-4">
-              <span className="text-[13px] font-bold text-acc">{DERSLER[ders].ad} · {bu.unite}. ünite · {bu.no}. konu</span>
-              <h1 className="text-[26px]">{bu.title}: seviye testi</h1>
+              <span className="text-[13px] font-bold text-acc">{DERSLER[ders].ad} · {cev("{0}. ünite · {1}. konu", bu.unite, bu.no)}</span>
+              <h1 className="text-[26px]">{bu.title}{cev(": seviye testi")}</h1>
               <p className="text-[15px] text-muted-foreground">
-                Bu konudan önceki {onceki.length} konudan karışık {Math.min(SEVIYE_SORU, Object.keys(sorular).length)} soru. En az {GECME} puan alırsan
-                bu konu ve öncesindeki bütün konular açılır; doğrudan buradan devam edersin.
+                {cev("Bu konudan önceki")} {onceki.length} {cev("konudan karışık")} {Math.min(SEVIYE_SORU, Object.keys(sorular).length)} {cev("soru. En az")} {GECME} {cev("puan alırsan bu konu ve öncesindeki bütün konular açılır; doğrudan buradan devam edersin.")}
               </p>
               <ul className="grid gap-1 text-[14px] text-muted-foreground">
-                {ulerAd.map((u) => <li key={u.no}>· {u.no}. ünite: {u.ad}</li>)}
+                {ulerAd.map((u) => <li key={u.no}>· {cev("{0}. ünite:", u.no)} {u.ad}</li>)}
               </ul>
-              {eski !== undefined && <p className="text-[14px] font-semibold">En iyi puanın: {eski}</p>}
-              {zaten && <p className="rounded-xl bg-secondary p-3 text-[15px]">Bu konu zaten açık. İstersen testi yine de çözebilirsin.</p>}
+              {eski !== undefined && <p className="text-[14px] font-semibold">{cev("En iyi puanın:")} {eski}</p>}
+              {zaten && <p className="rounded-xl bg-secondary p-3 text-[15px]">{cev("Bu konu zaten açık. İstersen testi yine de çözebilirsin.")}</p>}
             </article>
           ),
           controls: (
             <Alt>
-              <Button className="w-full" data-next onClick={basla}>Teste başla</Button>
+              <Button className="w-full" data-next onClick={basla}>{cev("Teste başla")}</Button>
             </Alt>
           ),
         };
@@ -104,27 +104,27 @@ function Test({ ders, id, list, onceki, hepsi }: { ders: DersId; id: string; lis
             {gecti && <SesCal tur="seviye" />}
             {gecti && <Madalya kupa />}
             <div className="font-display text-[56px] leading-none font-extrabold text-acc">{puan}</div>
-            <span className="text-[14px] font-semibold text-muted-foreground">{n} sorudan {right} doğru</span>
-            <h2 className="mt-1 text-[22px]">{gecti ? "Seviye testini geçtin!" : `Geçmek için en az ${GECME} gerekiyor.`}</h2>
+            <span className="text-[14px] font-semibold text-muted-foreground">{cev("{0} sorudan {1} doğru", n, right)}</span>
+            <h2 className="mt-1 text-[22px]">{gecti ? cev("Seviye testini geçtin!") : cev("Geçmek için en az {0} gerekiyor.", GECME)}</h2>
             <p className="text-[15px] text-muted-foreground">
               {gecti
-                ? `“${bu.title}” ve öncesindeki bütün konular açıldı.`
+                ? cev("“{0}” ve öncesindeki bütün konular açıldı.", bu.title)
                 : bas
-                  ? <>Önce <b className="text-foreground">“{bas.title}”</b> konusundan başlaman iyi olur; ilk yanlışın oradaydı. Yanlışların tekrar sırana eklendi.</>
-                  : "Yanlışların tekrar sırana eklendi."}
+                  ? <>{cev("Önce")} <b className="text-foreground">“{bas.title}”</b> {cev("konusundan başlaman iyi olur; ilk yanlışın oradaydı. Yanlışların tekrar sırana eklendi.")}</>
+                  : cev("Yanlışların tekrar sırana eklendi.")}
             </p>
             <div className="relative z-30 mt-4 grid w-full gap-2">
               {gecti ? (
-                <Button asChild><Link href={href(ders, id)}>Konuya başla: {bu.title}</Link></Button>
+                <Button asChild><Link href={href(ders, id)}>{cev("Konuya başla:")} {bu.title}</Link></Button>
               ) : bas ? (
                 basAcik
-                  ? <Button asChild><Link href={href(ders, bas.id)}>Buradan başla: {bas.title}</Link></Button>
-                  : <Button asChild><Link href={seviyeHref(ders, bas.id!)}>“{bas.title}” seviye testini çöz</Link></Button>
+                  ? <Button asChild><Link href={href(ders, bas.id)}>{cev("Buradan başla:")} {bas.title}</Link></Button>
+                  : <Button asChild><Link href={seviyeHref(ders, bas.id!)}>“{bas.title}{cev("” seviye testini çöz")}</Link></Button>
               ) : sira ? (
-                <Button asChild><Link href={href(ders, sira.id)}>Sıradaki konuya git: {sira.title}</Link></Button>
+                <Button asChild><Link href={href(ders, sira.id)}>{cev("Sıradaki konuya git:")} {sira.title}</Link></Button>
               ) : null}
-              {!gecti && <Button variant="outline" onClick={basla}>Testi yeniden çöz</Button>}
-              <Button asChild variant="ghost"><Link href={href(ders)}>{DERSLER[ders].ad} konularına dön</Link></Button>
+              {!gecti && <Button variant="outline" onClick={basla}>{cev("Testi yeniden çöz")}</Button>}
+              <Button asChild variant="ghost"><Link href={href(ders)}>{cev("{0} konularına dön", DERSLER[ders].ad)}</Link></Button>
             </div>
           </article>
         );

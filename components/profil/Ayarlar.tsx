@@ -1,4 +1,5 @@
 "use client";
+import { cev, DIL, dilDegistir, dilSecimi, type Dil } from "@/lib/dil";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { bildirimOku, bildirimYaz, cikisYap, hesabiSil, useEsitleme, useOturum, type Bildirim } from "@/lib/bulut";
@@ -29,51 +30,52 @@ export default function Ayarlar() {
   const [magaza, setMagaza] = useState<string | null>(null), [kopya, setKopya] = useState(false), [gorus, setGorus] = useState(false);
   useEffect(() => setMagaza(magazaAdresi()), []);
   return (
-    <Kabuk title="Ayarlar" sag={<UstEylem href="/hakkinda/" label="Hakkında" icon={<Icon.soru />} />}>
-      <Bolum title="Hesap">
+    <Kabuk title={cev("Ayarlar")} sag={<UstEylem href="/hakkinda/" label={cev("Hakkında")} icon={<Icon.soru />} />}>
+      <Bolum title={cev("Hesap")}>
         {oturum ? (
           <div className="grid gap-3">
-            <p className="text-[14px] text-muted-foreground"><b className="text-foreground">{oturum.user.email}</b> ile giriş yaptın.{" "}
-              {esitleme === "hata" ? "Şu an buluta kaydedilemedi. İlerlemen bu cihazda duruyor, bağlantı gelince yeniden denenecek." : "İlerlemen hesabına kaydediliyor."}</p>
+            <p className="text-[14px] text-muted-foreground"><b className="text-foreground">{oturum.user.email}</b> {cev("ile giriş yaptın.")}{" "}
+              {esitleme === "hata" ? cev("Şu an buluta kaydedilemedi. İlerlemen bu cihazda duruyor, bağlantı gelince yeniden denenecek.") : cev("İlerlemen hesabına kaydediliyor.")}</p>
             <Bildirimler kimlik={oturum.user.id} />
             <Button variant="outline" className="w-full" disabled={cikiyor} onClick={async () => { setCikiyor(true); setCikisHata(!(await cikisYap(temizle))); setCikiyor(false); }}>
-              {cikiyor ? "Çıkış yapılıyor..." : "Çıkış yap"}
+              {cikiyor ? cev("Çıkış yapılıyor...") : cev("Çıkış yap")}
             </Button>
-            {cikisHata && <p role="alert" className="text-[14px] font-medium text-bad">Son ilerlemen buluta kaydedilemedi, bu yüzden çıkış yapılmadı. İnternet bağlantını kontrol edip yeniden dene.</p>}
+            {cikisHata && <p role="alert" className="text-[14px] font-medium text-bad">{cev("Son ilerlemen buluta kaydedilemedi, bu yüzden çıkış yapılmadı. İnternet bağlantını kontrol edip yeniden dene.")}</p>}
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="ghost" className="w-full text-bad hover:text-bad">Hesabımı sil</Button>
+                <Button variant="ghost" className="w-full text-bad hover:text-bad">{cev("Hesabımı sil")}</Button>
               </DialogTrigger>
               <DialogContent>
-                <DialogTitle>Hesabın silinsin mi?</DialogTitle>
+                <DialogTitle>{cev("Hesabın silinsin mi?")}</DialogTitle>
                 <DialogDescription>
-                  Hesabın, e-posta adresin ve buluttaki bütün ilerlemen kalıcı olarak silinir; bu cihazdaki ilerleme de temizlenir. Bu geri alınamaz.
-                  {ABONELIK && " Hesabını silmek ucler Plus aboneliğini iptal etmez. Aboneliğin varsa App Store ya da Google Play ayarlarından iptal et."}
+                  {cev("Hesabın, e-posta adresin ve buluttaki bütün ilerlemen kalıcı olarak silinir; bu cihazdaki ilerleme de temizlenir. Bu geri alınamaz.")}
+                  {ABONELIK && cev(" Hesabını silmek ucler Plus aboneliğini iptal etmez. Aboneliğin varsa App Store ya da Google Play ayarlarından iptal et.")}
                 </DialogDescription>
-                {silHata && <p role="alert" className="text-[14px] font-medium text-bad">Hesap silinemedi. İnternet bağlantını kontrol edip yeniden dene.</p>}
+                {silHata && <p role="alert" className="text-[14px] font-medium text-bad">{cev("Hesap silinemedi. İnternet bağlantını kontrol edip yeniden dene.")}</p>}
                 <div className="mt-2 grid gap-2">
                   <Button className="bg-bad text-white hover:bg-bad/90" disabled={cikiyor} onClick={async () => { setCikiyor(true); setSilHata(!(await hesabiSil(temizle))); setCikiyor(false); }}>
-                    {cikiyor ? "Siliniyor..." : "Evet, hesabımı sil"}
+                    {cikiyor ? cev("Siliniyor...") : cev("Evet, hesabımı sil")}
                   </Button>
-                  <DialogClose asChild><Button variant="ghost">Vazgeç</Button></DialogClose>
+                  <DialogClose asChild><Button variant="ghost">{cev("Vazgeç")}</Button></DialogClose>
                 </div>
               </DialogContent>
             </Dialog>
           </div>
         ) : (
           <div className="grid gap-3">
-            <p className="text-[14px] text-muted-foreground">Hesabın yok. İlerlemen, puanın ve serin yalnızca bu cihazda tutuluyor.</p>
+            <p className="text-[14px] text-muted-foreground">{cev("Hesabın yok. İlerlemen, puanın ve serin yalnızca bu cihazda tutuluyor.")}</p>
             <div className="grid grid-cols-2 gap-2">
-              <Button asChild variant="hesap"><Link href="/giris/">Hesap aç</Link></Button>
-              <Button asChild variant="hesapCizgi"><Link href="/giris/?giris">Giriş yap</Link></Button>
+              <Button asChild variant="hesap"><Link href="/giris/">{cev("Hesap aç")}</Link></Button>
+              <Button asChild variant="hesapCizgi"><Link href="/giris/?giris">{cev("Giriş yap")}</Link></Button>
             </div>
           </div>
         )}
       </Bolum>
-      <Bolum title="Görünüm">
+      <Bolum title={cev("Görünüm")}>
         <TemaSecici />
       </Bolum>
-      <Bolum title="Ders">
+      <DilSecici />
+      <Bolum title={cev("Ders")}>
         <div className="grid gap-2">
           <SesAnahtari />
           <OyunAnahtari />
@@ -81,37 +83,37 @@ export default function Ayarlar() {
       </Bolum>
       <Bolum title="ucler">
         <Liste>
-          <Satir href="/hakkinda/" icon={<Bulb />} title="Hakkında" sub="ucler nedir, nasıl kullanılır" tag={<Ok />} />
-          <Satir href="/gizlilik/" icon={<Kilit />} title="Gizlilik" sub="Verilerin nerede tutulur" tag={<Ok />} />
-          <Satir href="/kosullar/" icon={<Icon.kitap />} title="Kullanım koşulları" sub="ucler'i ve Plus'ı kullanma koşulları" tag={<Ok />} />
-          <Satir external href={INSTAGRAM.url} icon={<Insta />} title="İletişim" sub={`Instagram'da ${INSTAGRAM.ad}`} tag={<Ok />} />
+          <Satir href="/hakkinda/" icon={<Bulb />} title={cev("Hakkında")} sub={cev("ucler nedir, nasıl kullanılır")} tag={<Ok />} />
+          <Satir href="/gizlilik/" icon={<Kilit />} title={cev("Gizlilik")} sub={cev("Verilerin nerede tutulur")} tag={<Ok />} />
+          <Satir href="/kosullar/" icon={<Icon.kitap />} title={cev("Kullanım koşulları")} sub={cev("ucler'i ve Plus'ı kullanma koşulları")} tag={<Ok />} />
+          <Satir external href={INSTAGRAM.url} icon={<Insta />} title={cev("İletişim")} sub={cev("Instagram'da {0}", INSTAGRAM.ad)} tag={<Ok />} />
         </Liste>
       </Bolum>
-      <Bolum title="Destek ol">
+      <Bolum title={cev("Destek ol")}>
         <Liste>
           <Satir
             icon={<Paylas />}
-            title="Arkadaşına öner"
-            sub={kopya ? "Bağlantı kopyalandı" : "ucler'i arkadaşına gönder"}
+            title={cev("Arkadaşına öner")}
+            sub={kopya ? cev("Bağlantı kopyalandı") : cev("ucler'i arkadaşına gönder")}
             tag={<Ok />}
             onClick={async () => setKopya((await uygulamayiPaylas()) === "kopyalandi")}
           />
           {magaza && (
-            <Satir external href={magaza} icon={<Yildiz />} title="Uygulamayı puanla" sub="Google Play'de puan ver, yorum yaz" tag={<Ok />} />
+            <Satir external href={magaza} icon={<Yildiz />} title={cev("Uygulamayı puanla")} sub={cev("Google Play'de puan ver, yorum yaz")} tag={<Ok />} />
           )}
-          <Satir icon={<Soru />} title="Görüşünü yaz" sub="Eksik ya da istediğin şeyi bize ilet" tag={<Ok />} onClick={() => setGorus(true)} />
+          <Satir icon={<Soru />} title={cev("Görüşünü yaz")} sub={cev("Eksik ya da istediğin şeyi bize ilet")} tag={<Ok />} onClick={() => setGorus(true)} />
         </Liste>
         <Gorus acik={gorus} ayarla={setGorus} />
       </Bolum>
-      <Bolum title="İlerleme">
+      <Bolum title={cev("İlerleme")}>
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="outline" className="w-full text-bad hover:text-bad">İlerlemeyi sıfırla</Button>
+            <Button variant="outline" className="w-full text-bad hover:text-bad">{cev("İlerlemeyi sıfırla")}</Button>
           </DialogTrigger>
           <DialogContent>
-            <DialogTitle>İlerlemen silinsin mi?</DialogTitle>
+            <DialogTitle>{cev("İlerlemen silinsin mi?")}</DialogTitle>
             <DialogDescription>
-              Bitirdiğin konular, puanın, serin, kaydettiğin konular, tekrar sıran ve işaretlediğin kartlar {oturum ? "bu cihazdan ve hesabından" : "bu cihazdan"} silinir. Bu geri alınamaz.
+              {cev("Bitirdiğin konular, puanın, serin, kaydettiğin konular, tekrar sıran ve işaretlediğin kartlar")} {oturum ? cev("bu cihazdan ve hesabından") : cev("bu cihazdan")} {cev("silinir. Bu geri alınamaz.")}
             </DialogDescription>
             <div className="mt-2 grid gap-2">
               <DialogClose asChild>
@@ -123,10 +125,10 @@ export default function Ayarlar() {
                     girisYap();
                   }}
                 >
-                  Evet, sıfırla
+                  {cev("Evet, sıfırla")}
                 </Button>
               </DialogClose>
-              <DialogClose asChild><Button variant="ghost">Vazgeç</Button></DialogClose>
+              <DialogClose asChild><Button variant="ghost">{cev("Vazgeç")}</Button></DialogClose>
             </div>
           </DialogContent>
         </Dialog>
@@ -143,7 +145,7 @@ function Gorus({ acik, ayarla }: { acik: boolean; ayarla: (a: boolean) => void }
   async function gonder() {
     setDurum("gidiyor");
     try {
-      await bildirimGonder("hata", { ders: "gorus", yer: "Ayarlar > Görüşünü yaz" }, not);
+      await bildirimGonder("hata", { ders: "gorus", yer: cev("Ayarlar > Görüşünü yaz") }, not);
       olay("gorus");
       setDurum("tamam");
     } catch { setDurum("hata"); }
@@ -153,25 +155,25 @@ function Gorus({ acik, ayarla }: { acik: boolean; ayarla: (a: boolean) => void }
       <SheetContent aria-describedby={undefined}>
         {durum === "tamam" ? (
           <>
-            <SheetTitle>Teşekkürler!</SheetTitle>
-            <p className="mb-1.5 text-base leading-relaxed text-muted-foreground">Görüşün ekibimize ulaştı. Hepsini okuyoruz.</p>
-            <SheetClose asChild><Button variant="outline">Kapat</Button></SheetClose>
+            <SheetTitle>{cev("Teşekkürler!")}</SheetTitle>
+            <p className="mb-1.5 text-base leading-relaxed text-muted-foreground">{cev("Görüşün ekibimize ulaştı. Hepsini okuyoruz.")}</p>
+            <SheetClose asChild><Button variant="outline">{cev("Kapat")}</Button></SheetClose>
           </>
         ) : (
           <>
-            <SheetTitle>Görüşünü yaz</SheetTitle>
+            <SheetTitle>{cev("Görüşünü yaz")}</SheetTitle>
             <textarea
               value={not}
               onChange={(e) => setNot(e.target.value)}
               maxLength={600}
               rows={4}
-              placeholder="Neyi beğendin, neyi eksik buldun, ne olsun isterdin?"
-              aria-label="Görüşün"
+              placeholder={cev("Neyi beğendin, neyi eksik buldun, ne olsun isterdin?")}
+              aria-label={cev("Görüşün")}
               className="w-full resize-none rounded-xl border border-border-strong bg-card px-4 py-3 text-base text-foreground outline-none placeholder:text-muted-foreground focus-visible:border-foreground"
             />
-            {durum === "hata" && <p role="alert" className="text-[14px] text-bad">Gönderilemedi. Bağlantını kontrol edip yeniden dene.</p>}
+            {durum === "hata" && <p role="alert" className="text-[14px] text-bad">{cev("Gönderilemedi. Bağlantını kontrol edip yeniden dene.")}</p>}
             <Button className="mt-1" disabled={not.trim().length < 3 || durum === "gidiyor"} onClick={gonder}>
-              {durum === "gidiyor" ? "Gönderiliyor…" : "Gönder"}
+              {durum === "gidiyor" ? cev("Gönderiliyor…") : cev("Gönder")}
             </Button>
           </>
         )}
@@ -181,9 +183,9 @@ function Gorus({ acik, ayarla }: { acik: boolean; ayarla: (a: boolean) => void }
 }
 
 const BILDIRIMLER: [Bildirim, string, string][] = [
-  ["seri_hatirlat", "Seri hatırlatması", "Serin bitmek üzereyken akşam bir e-posta gönderelim."],
-  ["yenilik_bildir", "Yeni içerikler", "Yeni ders, konu ya da video eklenince e-posta gönderelim."],
-  ["ligde", "Haftalık ligde görün", "Adın ve bu haftaki puanın lider tablosunda görünsün."],
+  ["seri_hatirlat", cev("Seri hatırlatması"), cev("Serin bitmek üzereyken akşam bir e-posta gönderelim.")],
+  ["yenilik_bildir", cev("Yeni içerikler"), cev("Yeni ders, konu ya da video eklenince e-posta gönderelim.")],
+  ["ligde", cev("Haftalık ligde görün"), cev("Adın ve bu haftaki puanın lider tablosunda görünsün.")],
 ];
 
 /** E-posta bildirimleri ve ligde görünmek. Hesap satırı eşitleme kurulunca okunur. */
@@ -247,10 +249,10 @@ function SesAnahtari() {
   const acik = useSesAcik(), anim = useAnimSesAcik();
   return (
     <>
-      <Anahtar acik={acik} baslik="Ses ve titreşim" metin="Doğru ve yanlış cevapta, aşama ve konu bitince kısa bir ses"
+      <Anahtar acik={acik} baslik={cev("Ses ve titreşim")} metin={cev("Doğru ve yanlış cevapta, aşama ve konu bitince kısa bir ses")}
         ayarla={(v) => { sesAyarla(v); if (v) ses("dogru"); }} />
       {acik && (
-        <Anahtar acik={anim} baslik="Animasyon sesleri" metin="Görseller çizilirken, madalya, konfeti ve puan gelirken hafif sesler"
+        <Anahtar acik={anim} baslik={cev("Animasyon sesleri")} metin={cev("Görseller çizilirken, madalya, konfeti ve puan gelirken hafif sesler")}
           ayarla={(v) => { animSesAyarla(v); if (v) animSes("madalya"); }} />
       )}
     </>
@@ -260,16 +262,45 @@ function SesAnahtari() {
 /** Puan, seri, lig ve konfeti: isteyen kapatır, yalnızca konular ve testler kalır. */
 function OyunAnahtari() {
   const acik = useOyunAcik();
-  return <Anahtar acik={acik} ayarla={oyunAyarla} baslik="Puan, seri ve kutlamalar" metin="Kapatırsan puan, seri, lig ve konfeti görünmez" />;
+  return <Anahtar acik={acik} ayarla={oyunAyarla} baslik={cev("Puan, seri ve kutlamalar")} metin={cev("Kapatırsan puan, seri, lig ve konfeti görünmez")} />;
 }
 
-const TEMALAR: [Tema, string][] = [["sistem", "Telefona göre"], ["acik", "Açık"], ["koyu", "Koyu"]];
+/**
+ * Uygulama dili. İngilizce çeviri tamamlanana kadar bölüm yalnızca dili bir kez adresle seçmiş cihazda görünür
+ * (önizleme: /ogren/?dil=en). Çeviri bitince DIL_HERKESE true yapılır.
+ */
+const DIL_HERKESE = false;
+const DILLER: [Dil, string][] = [["tr", cev("Türkçe")], ["en", "English"]];
+function DilSecici() {
+  const [goster, setGoster] = useState(DIL_HERKESE);
+  useEffect(() => { if (dilSecimi() !== null) setGoster(true); }, []);
+  if (!goster) return null;
+  return (
+    <Bolum title={cev("Dil")}>
+      <div role="radiogroup" aria-label={cev("Dil")} className="grid grid-cols-2 gap-1 rounded-xl border border-border bg-card p-1">
+        {DILLER.map(([k, ad]) => (
+          <button
+            key={k}
+            role="radio"
+            aria-checked={DIL === k}
+            onClick={() => dilDegistir(k)}
+            className={`h-10 rounded-lg text-[14px] font-semibold transition-colors ${DIL === k ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
+          >
+            {ad}
+          </button>
+        ))}
+      </div>
+    </Bolum>
+  );
+}
+
+const TEMALAR: [Tema, string][] = [["sistem", cev("Telefona göre")], ["acik", cev("Açık")], ["koyu", cev("Koyu")]];
 
 /** Açık "deney defteri", koyu "karanlık oda" ya da telefonun ayarı. */
 function TemaSecici() {
   const t = useTema();
   return (
-    <div role="radiogroup" aria-label="Görünüm" className="grid grid-cols-3 gap-1 rounded-xl border border-border bg-card p-1">
+    <div role="radiogroup" aria-label={cev("Görünüm")} className="grid grid-cols-3 gap-1 rounded-xl border border-border bg-card p-1">
       {TEMALAR.map(([k, ad]) => (
         <button
           key={k}

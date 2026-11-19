@@ -2,6 +2,7 @@
 // Bir dersin konuları: ünite ünite, konu içindeki aşama yolu gibi kıvrılan yollar. Her ünitenin sonunda ünite testi.
 // Konular sırayla açılır (lib/kilit.ts). Bir konuya dokununca alttan kısa özet ve "Başla" penceresi açılır;
 // kilitli konuda pencere neden kilitli olduğunu söyler ve seviye testiyle doğrudan o konuya geçmeyi önerir.
+import { cev } from "@/lib/dil";
 import { ANA } from "@/lib/site";
 import Link from "next/link";
 import { useRef, useState } from "react";
@@ -36,56 +37,56 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
   return (
     <div className="app" data-ders={ders}>
       <UstBar
-        geri={{ to: ANA, label: "Ana sayfa" }}
+        geri={{ to: ANA, label: cev("Ana sayfa") }}
         baslik={s.ad}
-        sag={<UstEylem label="Bu ders nasıl ilerler?" icon={<Icon.soru />} onClick={() => setYardim(true)} />}
+        sag={<UstEylem label={cev("Bu ders nasıl ilerler?")} icon={<Icon.soru />} onClick={() => setYardim(true)} />}
       />
       <Govde>
         <section className="grid gap-1.5">
           <p className="text-[15px] text-muted-foreground">{s.yol}.</p>
-          <Progress className="mt-1.5" value={ready.length ? (100 * done) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti`} />
-          <span className="text-[13px] font-semibold text-muted-foreground">{done} / {ready.length} konu bitti</span>
+          <Progress className="mt-1.5" value={ready.length ? (100 * done) / ready.length : 0} label={cev("{0} konudan {1} tanesi bitti", ready.length, done)} />
+          <span className="text-[13px] font-semibold text-muted-foreground">{done} / {ready.length} {cev("konu bitti")}</span>
         </section>
         {uler.map((u) => {
           const biten = u.konular.filter((e) => d.prog[`${ders}.${e.id}`]).length;
           const gecti = uniteGecti(ders, u.kod, d), testAcik = uniteAcik(list, u, d), puan = d.unite[uniteAnahtar(ders, u.kod)];
           return (
-            <section key={u.no} className="grid gap-2" aria-label={`${u.no}. ünite: ${u.ad}`}>
+            <section key={u.no} className="grid gap-2" aria-label={cev("{0}. ünite: {1}", u.no, u.ad)}>
               <div className="flex items-end justify-between gap-3 border-b border-border pb-2.5">
                 <div className="grid min-w-0">
-                  <span className="text-[13px] font-bold text-acc">{u.no}. ünite</span>
+                  <span className="text-[13px] font-bold text-acc">{cev("{0}. ünite", u.no)}</span>
                   <h2 className="text-[20px] leading-tight">{u.ad}</h2>
                 </div>
-                <span className="flex-none text-[13px] font-semibold tabular-nums text-muted-foreground">{gecti && biten < u.konular.length ? "Geçildi" : `${biten}/${u.konular.length}`}</span>
+                <span className="flex-none text-[13px] font-semibold tabular-nums text-muted-foreground">{gecti && biten < u.konular.length ? cev("Geçildi") : `${biten}/${u.konular.length}`}</span>
               </div>
               <div className="pt-10">
                 <AsamaYolu
-                  ad={`${u.no}. ünitenin konuları`}
+                  ad={cev("{0}. ünitenin konuları", u.no)}
                   kaydir
-                  balon={done ? "Devam" : "Başla"}
+                  balon={done ? cev("Devam") : cev("Başla")}
                   dugumler={[
                     ...u.konular.map((e): YolDugum => {
                       const k = `${ders}.${e.id}`, res = d.prog[k], ac = acik(list, e.id!, d);
                       const durum: YolDugum["durum"] = res ? "bitti" : e.id === sira?.id ? "sirada" : "kilitli";
-                      const ilerleme = !res && d.asama[k] ? `${d.asama[k]}/${asamaSayisi(e.cardCount ?? 0)} aşama` : "";
+                      const ilerleme = !res && d.asama[k] ? cev("{0}/{1} aşama", d.asama[k], asamaSayisi(e.cardCount ?? 0)) : "";
                       return {
                         baslik: e.title ?? e.ad,
                         alt: res ?? ilerleme,
                         durum,
                         serbest: ac,
                         dokun: true,
-                        etiket: `${e.no}. ${e.title}, ${res ? "bitti" : durum === "sirada" ? "sıradaki konu" : ac ? "açık" : "kilitli"}`,
+                        etiket: `${e.no}. ${e.title}, ${res ? "bitti" : durum === "sirada" ? cev("sıradaki konu") : ac ? cev("açık") : "kilitli"}`,
                         ac: () => setSecim({ tur: "konu", e }),
                       };
                     }),
                     {
-                      baslik: "Ünite testi",
-                      alt: puan !== undefined ? `En iyi puanın: ${puan}` : `${GECME} alan üniteyi geçer`,
+                      baslik: cev("Ünite testi"),
+                      alt: puan !== undefined ? cev("En iyi puanın: {0}", puan) : cev("{0} alan üniteyi geçer", GECME),
                       durum: gecti ? "bitti" : "kilitli",
                       test: true,
                       serbest: testAcik,
                       dokun: true,
-                      etiket: `${u.no}. ünite testi, ${gecti ? "geçildi" : testAcik ? "çözebilirsin" : "kilitli"}`,
+                      etiket: cev("{0}. ünite testi, {1}", u.no, gecti ? "geçildi" : testAcik ? "çözebilirsin" : "kilitli"),
                       ac: () => setSecim({ tur: "test", u }),
                     },
                   ]}
@@ -98,11 +99,11 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
       <Sheet open={yardim} onOpenChange={setYardim}>
         <SheetContent data-ders={ders}>
           <div className="grid gap-2 pb-2">
-            <SheetTitle className="text-[22px]">Bu ders nasıl ilerler?</SheetTitle>
+            <SheetTitle className="text-[22px]">{cev("Bu ders nasıl ilerler?")}</SheetTitle>
             <SheetDescription className="text-[15px] text-muted-foreground">
-              Konular sırayla açılır; her konu bir öncekinin üzerine kurulu. Bir üniteyi zaten biliyorsan ünite testinden en az {GECME} alarak o üniteyi atlayabilirsin. Kilitli bir konuya dokunursan seviye testi çıkar: o konudan önceki konulardan karışık sorularda en az {GECME} alırsan doğrudan o konuya geçersin. Başladığın konular hep açık kalır.
+              {cev("Konular sırayla açılır; her konu bir öncekinin üzerine kurulu. Bir üniteyi zaten biliyorsan ünite testinden en az")} {GECME} {cev("alarak o üniteyi atlayabilirsin. Kilitli bir konuya dokunursan seviye testi çıkar: o konudan önceki konulardan karışık sorularda en az")} {GECME} {cev("alırsan doğrudan o konuya geçersin. Başladığın konular hep açık kalır.")}
             </SheetDescription>
-            <Button className="mt-2" onClick={() => setYardim(false)}>Anladım</Button>
+            <Button className="mt-2" onClick={() => setYardim(false)}>{cev("Anladım")}</Button>
           </div>
         </SheetContent>
       </Sheet>
@@ -125,34 +126,34 @@ function KonuPencere({ ders, list, e, sira }: { ders: DersId; list: Entry[]; e: 
   const Kilit = Icon.kilit, Yildiz = Icon.yildiz;
   return (
     <div className="grid gap-3 pb-1">
-      <span className="text-[13px] font-bold text-acc">{e.unite}. ünite · {e.no}. konu</span>
+      <span className="text-[13px] font-bold text-acc">{cev("{0}. ünite · {1}. konu", e.unite, e.no)}</span>
       <SheetTitle className="text-[22px]">{e.title}</SheetTitle>
       <SheetDescription className="text-[15px] text-muted-foreground"><Html html={e.summary ?? ""} /></SheetDescription>
       <p className="flex flex-wrap gap-x-3 text-[14px] font-semibold text-muted-foreground">
-        <span>{nA} aşama + mini test</span>
-        {e.dk && <span>yaklaşık {e.dk} dk</span>}
+        <span>{nA} {cev("aşama + mini test")}</span>
+        {e.dk && <span>{cev("yaklaşık")} {e.dk} {cev("dk")}</span>}
       </p>
       {ac && odemeli ? (
         <>
           <p className="flex items-start gap-2.5 rounded-xl bg-secondary p-3 text-[15px] [&_svg]:mt-0.5 [&_svg]:size-4 [&_svg]:flex-none [&_svg]:text-[var(--c1)]">
-            <Yildiz /><span>Bu konu <b>ucler Plus</b>&apos;ta. Her dersin ilk konusu ücretsiz. Plus ile bütün konular açılır.</span>
+            <Yildiz /><span>{cev("Bu konu")} <b>{cev("ucler Plus")}</b>{cev("'ta. Her dersin ilk konusu ücretsiz. Plus ile bütün konular açılır.")}</span>
           </p>
-          <Button asChild variant="hesap" className="mt-1 w-full"><Link href={href(ders, e.id)}>Plus ile aç</Link></Button>
+          <Button asChild variant="hesap" className="mt-1 w-full"><Link href={href(ders, e.id)}>{cev("Plus ile aç")}</Link></Button>
         </>
       ) : ac ? (
         <>
-          {!res && bitenA > 0 && <Progress value={(100 * bitenA) / nA} label={`${nA} aşamadan ${bitenA} tanesi bitti`} />}
-          {res && <p className="text-[14px] font-semibold">Bitirdin: {res}</p>}
-          <Button asChild className="mt-1 w-full"><Link href={href(ders, e.id)}>{res ? "Yeniden çalış" : bitenA > 0 ? "Devam et" : "Başla"}</Link></Button>
+          {!res && bitenA > 0 && <Progress value={(100 * bitenA) / nA} label={cev("{0} aşamadan {1} tanesi bitti", nA, bitenA)} />}
+          {res && <p className="text-[14px] font-semibold">{cev("Bitirdin:")} {res}</p>}
+          <Button asChild className="mt-1 w-full"><Link href={href(ders, e.id)}>{res ? cev("Yeniden çalış") : bitenA > 0 ? cev("Devam et") : cev("Başla")}</Link></Button>
         </>
       ) : (
         <>
           <p className="flex items-start gap-2.5 rounded-xl bg-secondary p-3 text-[15px] [&_svg]:mt-0.5 [&_svg]:size-4 [&_svg]:flex-none">
             <Kilit />
-            <span>Bu konu, {once ? <b>“{once.title}”</b> : "önceki konu"} bitince açılır. Öncesini zaten biliyorsan <b>seviye testinden</b> en az {GECME} alarak doğrudan bu konuya geçebilirsin.</span>
+            <span>{cev("Bu konu,")} {once ? <b>“{once.title}”</b> : cev("önceki konu")} {cev("bitince açılır. Öncesini zaten biliyorsan")} <b>{cev("seviye testinden")}</b> {cev("en az")} {GECME} {cev("alarak doğrudan bu konuya geçebilirsin.")}</span>
           </p>
-          <Button asChild className="mt-1 w-full"><Link href={seviyeHref(ders, e.id!)}>Seviye testini çöz</Link></Button>
-          {sira && <Button asChild variant="outline" className="w-full"><Link href={href(ders, sira.id)}>Sıradaki konuya git</Link></Button>}
+          <Button asChild className="mt-1 w-full"><Link href={seviyeHref(ders, e.id!)}>{cev("Seviye testini çöz")}</Link></Button>
+          {sira && <Button asChild variant="outline" className="w-full"><Link href={href(ders, sira.id)}>{cev("Sıradaki konuya git")}</Link></Button>}
         </>
       )}
     </div>
@@ -165,17 +166,17 @@ function TestPencere({ ders, list, u }: { ders: DersId; list: Entry[]; u: Unitem
   const Kilit = Icon.kilit;
   return (
     <div className="grid gap-3 pb-1">
-      <span className="text-[13px] font-bold text-acc">{u.no}. ünite</span>
-      <SheetTitle className="text-[22px]">{u.ad}: ünite testi</SheetTitle>
+      <span className="text-[13px] font-bold text-acc">{cev("{0}. ünite", u.no)}</span>
+      <SheetTitle className="text-[22px]">{u.ad}{cev(": ünite testi")}</SheetTitle>
       <SheetDescription className="text-[15px] text-muted-foreground">
-        Ünitedeki {u.konular.length} konudan karışık sorular. En az {GECME} puan alırsan bu ünitenin bütün konuları açılır ve sıradaki üniteye geçersin.
+        {cev("Ünitedeki")} {u.konular.length} {cev("konudan karışık sorular. En az")} {GECME} {cev("puan alırsan bu ünitenin bütün konuları açılır ve sıradaki üniteye geçersin.")}
       </SheetDescription>
-      {puan !== undefined && <p className="text-[14px] font-semibold">En iyi puanın: {puan}{gecti ? " · geçtin" : ""}</p>}
+      {puan !== undefined && <p className="text-[14px] font-semibold">{cev("En iyi puanın:")} {puan}{gecti ? cev(" · geçtin") : ""}</p>}
       {ac ? (
-        <Button asChild className="mt-1 w-full"><Link href={uniteHref(ders, u.no)}>{puan !== undefined ? "Yeniden çöz" : "Teste başla"}</Link></Button>
+        <Button asChild className="mt-1 w-full"><Link href={uniteHref(ders, u.no)}>{puan !== undefined ? cev("Yeniden çöz") : cev("Teste başla")}</Link></Button>
       ) : (
         <p className="flex items-start gap-2.5 rounded-xl bg-secondary p-3 text-[15px] [&_svg]:mt-0.5 [&_svg]:size-4 [&_svg]:flex-none">
-          <Kilit /><span>Bu testi çözmek için önce önceki üniteleri bitir ya da onların testlerini geç.</span>
+          <Kilit /><span>{cev("Bu testi çözmek için önce önceki üniteleri bitir ya da onların testlerini geç.")}</span>
         </p>
       )}
     </div>

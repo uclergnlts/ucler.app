@@ -2,6 +2,7 @@
 // Biyoloji sahneleri (üreme sistemi, popülasyon ve komünite): spermin yolu, testiste FSH ve LH,
 // spermatogenez ve oogenez, menstrual döngü, hCG, zigottan implantasyona, germ tabakaları;
 // doğum-ölüm-göç, dağılım tipleri, J eğrisi, S eğrisi, sınırlayıcı faktörler, av-avcı döngüsü, Gause deneyi.
+import { cev } from "@/lib/dil";
 import { rastgele, type SahneKaydi, type SahneProps } from "./ortak";
 
 const sinir = (x: number, a = 0, b = 1) => Math.max(a, Math.min(b, x));
@@ -62,10 +63,10 @@ function Cubuk({ x, y, w, oran, renk }: { x: number; y: number; w: number; oran:
 /* ---------- spermin yolu ---------- */
 
 const SPERM: { pay: number; yol: Nokta[]; not: string }[] = [
-  { pay: 0.22, yol: [[72, 64], [72, 98]], not: "Testis: sperm seminifer tüpçüklerde üretilir" },
-  { pay: 0.22, yol: [[72, 98], [72, 118], [120, 118]], not: "Epididim: sperm olgunlaşır ve depolanır" },
-  { pay: 0.32, yol: [[120, 118], [242, 118]], not: "Sperm kanalı: bez salgıları katılır, meni oluşur" },
-  { pay: 0.24, yol: [[242, 118], [284, 118], [284, 186]], not: "Üretra: meni dışarı atılır" },
+  { pay: 0.22, yol: [[72, 64], [72, 98]], not: cev("Testis: sperm seminifer tüpçüklerde üretilir") },
+  { pay: 0.22, yol: [[72, 98], [72, 118], [120, 118]], not: cev("Epididim: sperm olgunlaşır ve depolanır") },
+  { pay: 0.32, yol: [[120, 118], [242, 118]], not: cev("Sperm kanalı: bez salgıları katılır, meni oluşur") },
+  { pay: 0.24, yol: [[242, 118], [284, 118], [284, 186]], not: cev("Üretra: meni dışarı atılır") },
 ];
 
 function Kutu({ x, y, w, ad, etkin }: { x: number; y: number; w: number; ad: string; etkin: boolean }) {
@@ -86,35 +87,35 @@ function Sperm({ t, oynuyor, s }: SahneProps) {
   const meni = etkin > 2 || (etkin === 2 && p[0] >= 186);
   const damla = etkin === 2 && p[0] > 150 && p[0] < 186;
   return (
-    <svg viewBox="0 0 340 232" role="img" aria-label="Spermin yolu: testis, epididim, sperm kanalı, bez salgıları, üretra">
+    <svg viewBox="0 0 340 232" role="img" aria-label={cev("Spermin yolu: testis, epididim, sperm kanalı, bez salgıları, üretra")}>
       {/* yollar */}
       <polyline points={nokt([[72, 60], [72, 98]])} fill="none" stroke="var(--line-2)" strokeWidth={6} strokeLinecap="round" />
       <polyline points={nokt([[120, 118], [242, 118]])} fill="none" stroke={etkin === 2 ? YESIL : "var(--line-2)"} strokeOpacity={etkin === 2 ? 0.6 : 1} strokeWidth={6} strokeLinecap="round" />
       <polyline points={nokt([[284, 138], [284, 186]])} fill="none" stroke={etkin === 3 ? YESIL : "var(--line-2)"} strokeOpacity={etkin === 3 ? 0.6 : 1} strokeWidth={6} strokeLinecap="round" />
       <Kutu x={24} y={20} w={96} ad="testis" etkin={etkin === 0} />
       <Kutu x={24} y={98} w={96} ad="epididim" etkin={etkin === 1} />
-      <Kutu x={242} y={98} w={84} ad="üretra" etkin={etkin === 3} />
+      <Kutu x={242} y={98} w={84} ad={cev("üretra")} etkin={etkin === 3} />
       {/* bezler */}
       <rect x={134} y={14} width={104} height={58} rx={12} fill={meni || damla ? "color-mix(in srgb, #f5cb6c 20%, var(--surface))" : "var(--panel)"} stroke={meni || damla ? SARI : "var(--line-2)"} strokeWidth={1.4} />
       <g fontSize={10.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">
-        <text x={186} y={32}>seminal kesecik</text>
-        <text x={186} y={47}>prostat</text>
-        <text x={186} y={62}>bulbouretral bez</text>
+        <text x={186} y={32}>{cev("seminal kesecik")}</text>
+        <text x={186} y={47}>{cev("prostat")}</text>
+        <text x={186} y={62}>{cev("bulbouretral bez")}</text>
       </g>
       <line x1={186} x2={186} y1={74} y2={110} stroke={SARI} strokeWidth={1.6} strokeDasharray="3 3" />
       {damla && [0, 1, 2].map((k) => <circle key={k} cx={186} cy={80 + ((p[0] - 150) / 36) * 30 - k * 9} r={3} fill={SARI} />)}
       <g fontSize={10} fontWeight={700} textAnchor="middle">
-        <text x={186} y={136} fill={etkin === 2 ? YESIL : "var(--muted)"}>sperm kanalı</text>
-        {gecti(0) && <text x={78} y={82} fill={YESIL} textAnchor="start">üretim · 2-3 °C serin</text>}
-        {gecti(1) && <text x={72} y={152} fill={YESIL}>olgunlaşma, depolama</text>}
-        {gecti(3) && <text x={276} y={178} fill={YESIL} textAnchor="end">idrar ve meni yolu</text>}
+        <text x={186} y={136} fill={etkin === 2 ? YESIL : "var(--muted)"}>{cev("sperm kanalı")}</text>
+        {gecti(0) && <text x={78} y={82} fill={YESIL} textAnchor="start">{cev("üretim · 2-3 °C serin")}</text>}
+        {gecti(1) && <text x={72} y={152} fill={YESIL}>{cev("olgunlaşma, depolama")}</text>}
+        {gecti(3) && <text x={276} y={178} fill={YESIL} textAnchor="end">{cev("idrar ve meni yolu")}</text>}
       </g>
       {/* sperm */}
       {meni && <circle cx={p[0]} cy={p[1]} r={9} fill={SARI} fillOpacity={0.35} />}
       <path d={`M${p[0]} ${p[1]} q -5 -4 -9 0 t -9 0`} fill="none" stroke={MAVI} strokeWidth={1.4} transform={etkin === 0 || (etkin === 3 && p[0] >= 284) || etkin < 0 ? `rotate(-90 ${p[0]} ${p[1]})` : undefined} />
       <ellipse cx={p[0]} cy={p[1]} rx={4.5} ry={3.4} fill={MAVI} />
       <text x={170} y={222} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {etkin < 0 ? "Sperm testiste üretildi. Nereye gidiyor?" : u >= 1 ? "Sperm testisten üretraya ulaştı" : SPERM[etkin].not}
+        {etkin < 0 ? cev("Sperm testiste üretildi. Nereye gidiyor?") : u >= 1 ? cev("Sperm testisten üretraya ulaştı") : SPERM[etkin].not}
       </text>
     </svg>
   );
@@ -131,18 +132,18 @@ function Testis({ v }: SahneProps) {
   const spermler = Array.from({ length: 9 }, () => ({ a: r() * Math.PI * 2, d: 6 + r() * 18, y: r() * Math.PI * 2 }));
   const kac = Math.round(uretim * 9);
   return (
-    <svg viewBox="0 0 340 228" role="img" aria-label={`Testis: FSH ${f ? "var" : "yok"}, LH ${l ? "var" : "yok"}; sperm üretimi ${uretim === 1 ? "tam" : uretim ? "zayıf" : "yok"}`}>
+    <svg viewBox="0 0 340 228" role="img" aria-label={cev("Testis: FSH {0}, LH {1}; sperm üretimi {2}", f ? "var" : "yok", l ? "var" : "yok", uretim === 1 ? "tam" : uretim ? "zayıf" : "yok")}>
       {/* hipofiz */}
       <ellipse cx={60} cy={22} rx={32} ry={13} fill="var(--panel)" stroke="var(--line-2)" />
-      <text x={60} y={26} fontSize={10.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">hipofiz</text>
+      <text x={60} y={26} fontSize={10.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("hipofiz")}</text>
       {/* FSH oku */}
       <line x1={58} x2={80} y1={36} y2={80} stroke={f ? MAVI : "var(--line-2)"} strokeWidth={2.2} strokeDasharray={f ? undefined : "4 4"} />
       <path d="M80 84 L74 74 L84 74 Z" fill={f ? MAVI : "var(--line-2)"} transform="rotate(-26 80 80)" />
-      <text x={56} y={64} fontSize={11} fontWeight={800} fill={f ? MAVI : "var(--muted)"} textAnchor="end">FSH</text>
+      <text x={56} y={64} fontSize={11} fontWeight={800} fill={f ? MAVI : "var(--muted)"} textAnchor="end">{cev("FSH")}</text>
       {/* LH oku */}
       <line x1={84} x2={168} y1={30} y2={84} stroke={l ? MOR : "var(--line-2)"} strokeWidth={2.2} strokeDasharray={l ? undefined : "4 4"} />
       <path d="M172 87 L160 86 L166 77 Z" fill={l ? MOR : "var(--line-2)"} />
-      <text x={128} y={46} fontSize={11} fontWeight={800} fill={l ? MOR : "var(--muted)"}>LH</text>
+      <text x={128} y={46} fontSize={11} fontWeight={800} fill={l ? MOR : "var(--muted)"}>{cev("LH")}</text>
       {/* seminifer tüpçük */}
       <circle cx={cx} cy={cy} r={R} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
       {sertoli.map((a, i) => {
@@ -163,21 +164,21 @@ function Testis({ v }: SahneProps) {
       {[[166, 98], [178, 104], [170, 110]].map(([x, y], i) => (
         <circle key={i} cx={x} cy={y} r={6} fill={l ? MOR : "var(--line-2)"} fillOpacity={l ? 0.45 : 0.6} stroke={l ? MOR : "var(--muted)"} />
       ))}
-      <text x={174} y={130} fontSize={10.5} fontWeight={700} fill={l ? MOR : "var(--muted)"} textAnchor="middle">Leydig</text>
+      <text x={174} y={130} fontSize={10.5} fontWeight={700} fill={l ? MOR : "var(--muted)"} textAnchor="middle">{cev("Leydig")}</text>
       {l ? [0, 1, 2].map((k) => <circle key={k} cx={152 - k * 12} cy={112 + k * 8} r={2.6} fill={SARI} />) : null}
-      <text x={cx} y={204} fontSize={10.5} fontWeight={700} fill={f ? YESIL : "var(--muted)"} textAnchor="middle">Sertoli (tüpçük duvarı)</text>
+      <text x={cx} y={204} fontSize={10.5} fontWeight={700} fill={f ? YESIL : "var(--muted)"} textAnchor="middle">{cev("Sertoli (tüpçük duvarı)")}</text>
       {/* sağ panel */}
       <g fontSize={11} fontWeight={700}>
-        <text x={214} y={36} fill="var(--muted)">Sertoli hücreleri</text>
-        <text x={214} y={54} fontSize={13} fontWeight={800} fill={f ? YESIL : "var(--muted)"}>{f ? "spermi besliyor" : "uyarılmadı"}</text>
-        <text x={214} y={86} fill="var(--muted)">Testosteron</text>
+        <text x={214} y={36} fill="var(--muted)">{cev("Sertoli hücreleri")}</text>
+        <text x={214} y={54} fontSize={13} fontWeight={800} fill={f ? YESIL : "var(--muted)"}>{f ? cev("spermi besliyor") : cev("uyarılmadı")}</text>
+        <text x={214} y={86} fill="var(--muted)">{cev("Testosteron")}</text>
         <Cubuk x={214} y={93} w={112} oran={l} renk={SARI} />
-        <text x={214} y={128} fill="var(--muted)">Sperm üretimi</text>
+        <text x={214} y={128} fill="var(--muted)">{cev("Sperm üretimi")}</text>
         <Cubuk x={214} y={135} w={112} oran={uretim} renk={MAVI} />
-        <text x={214} y={164} fontSize={13} fontWeight={800} fill={uretim === 1 ? MAVI : "var(--muted)"}>{uretim === 1 ? "tam" : uretim ? "zayıf" : "yok"}</text>
+        <text x={214} y={164} fontSize={13} fontWeight={800} fill={uretim === 1 ? MAVI : "var(--muted)"}>{uretim === 1 ? "tam" : uretim ? cev("zayıf") : "yok"}</text>
       </g>
       <text x={170} y={222} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {uretim === 1 ? "FSH ve LH birlikte: sperm üretimi tam" : f ? "FSH var ama testosteron yok: üretim zayıf" : l ? "Testosteron var ama Sertoli uyarılmadı: üretim zayıf" : "Hormon yok: tüpçükte sperm üretilmiyor"}
+        {uretim === 1 ? cev("FSH ve LH birlikte: sperm üretimi tam") : f ? cev("FSH var ama testosteron yok: üretim zayıf") : l ? cev("Testosteron var ama Sertoli uyarılmadı: üretim zayıf") : cev("Hormon yok: tüpçükte sperm üretilmiyor")}
       </text>
     </svg>
   );
@@ -220,9 +221,9 @@ function Mayoz({ v, t, oynuyor, s }: SahneProps) {
   const D = kadin ? disi : erkek;
   const r0 = kadin ? 24 : 18;
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label={kadin ? "Oogenez: 1 birincil oosit, 1 yumurta ve 3 kutup hücresi verir" : "Spermatogenez: 1 birincil spermatosit, 4 sperm verir"}>
+    <svg viewBox="0 0 340 226" role="img" aria-label={kadin ? cev("Oogenez: 1 birincil oosit, 1 yumurta ve 3 kutup hücresi verir") : cev("Spermatogenez: 1 birincil spermatosit, 4 sperm verir")}>
       <text x={170} y={16} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {kadin ? "Oogenez: 1 birincil oosit (2n)" : "Spermatogenez: 1 birincil spermatosit (2n)"}
+        {kadin ? cev("Oogenez: 1 birincil oosit (2n)") : cev("Spermatogenez: 1 birincil spermatosit (2n)")}
       </text>
       {p1 <= 0 && <Hucre x={A[0]} y={A[1]} r={r0} n="2n" />}
       {p1 > 0 && p2 <= 0 &&
@@ -234,24 +235,24 @@ function Mayoz({ v, t, oynuyor, s }: SahneProps) {
         })}
       {kadin && p2 >= 1 && (
         <g fontSize={10} fontWeight={700}>
-          <text x={258} y={112} fill={YESIL} textAnchor="middle">yumurta</text>
-          <text x={260} y={172} fill="var(--muted)" textAnchor="middle">kutup hücreleri</text>
+          <text x={258} y={112} fill={YESIL} textAnchor="middle">{cev("yumurta")}</text>
+          <text x={260} y={172} fill="var(--muted)" textAnchor="middle">{cev("kutup hücreleri")}</text>
         </g>
       )}
-      {kadin && p1 >= 1 && p2 <= 0 && <text x={150} y={184} fontSize={10} fontWeight={700} fill="var(--muted)" textAnchor="middle">kutup hücresi</text>}
+      {kadin && p1 >= 1 && p2 <= 0 && <text x={150} y={184} fontSize={10} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("kutup hücresi")}</text>}
       <g fontSize={10} fontWeight={700} fill="var(--muted)" textAnchor="middle">
-        <text x={48} y={200}>birincil</text>
-        <text x={150} y={200} fill={p1 > 0 ? "var(--ink)" : "var(--muted)"}>mayoz I</text>
-        <text x={262} y={200} fill={p2 > 0 ? "var(--ink)" : "var(--muted)"}>mayoz II</text>
+        <text x={48} y={200}>{cev("birincil")}</text>
+        <text x={150} y={200} fill={p1 > 0 ? "var(--ink)" : "var(--muted)"}>{cev("mayoz I")}</text>
+        <text x={262} y={200} fill={p2 > 0 ? "var(--ink)" : "var(--muted)"}>{cev("mayoz II")}</text>
       </g>
       <text x={170} y={220} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
         {u <= 0
-          ? "Oynat ve bölünmeyi izle"
+          ? cev("Oynat ve bölünmeyi izle")
           : u < 1
-            ? kadin ? "Sitoplazma eşit bölünmüyor. Besin büyük hücrede kalıyor" : "Sitoplazma eşit bölünüyor"
-            : kadin ? "1 oosit → 1 yumurta + 3 kutup hücresi" : "1 spermatosit → 4 sperm"}
+            ? kadin ? cev("Sitoplazma eşit bölünmüyor. Besin büyük hücrede kalıyor") : cev("Sitoplazma eşit bölünüyor")
+            : kadin ? cev("1 oosit → 1 yumurta + 3 kutup hücresi") : cev("1 spermatosit → 4 sperm")}
       </text>
-      {kadin && u >= 1 && <text x={170} y={36} fontSize={10} fill="var(--muted)" textAnchor="middle">Mayoz II yalnızca sperm girince tamamlanır</text>}
+      {kadin && u >= 1 && <text x={170} y={36} fontSize={10} fill="var(--muted)" textAnchor="middle">{cev("Mayoz II yalnızca sperm girince tamamlanır")}</text>}
     </svg>
   );
 }
@@ -267,7 +268,7 @@ const ICZAR = (d: number) => (d <= 5 ? 0.65 - (0.5 * (d - 1)) / 4 : d <= 14 ? 0.
 const HORMON = [
   { ad: "FSH", f: FSH, renk: MAVI, x: 40 },
   { ad: "LH", f: LH, renk: MOR, x: 92 },
-  { ad: "östrojen", f: OST, renk: SARI, x: 134 },
+  { ad: cev("östrojen"), f: OST, renk: SARI, x: 134 },
   { ad: "progesteron", f: PRO, renk: KIRMIZI, x: 208 },
 ];
 
@@ -283,15 +284,15 @@ function Dongu({ v }: SahneProps) {
   const zar: string[] = [`${X(1)},176`];
   for (let d = 1; d <= 28.001; d += 0.5) zar.push(`${X(d).toFixed(1)},${(176 - ICZAR(d) * 34).toFixed(1)}`);
   zar.push(`${X(28)},176`);
-  const evre = g <= 5 ? "Menstruasyon" : g <= 12 ? "Folikül evresi" : g <= 14 ? "Ovulasyon" : "Korpus luteum evresi";
+  const evre = g <= 5 ? cev("Menstruasyon") : g <= 12 ? cev("Folikül evresi") : g <= 14 ? cev("Ovulasyon") : cev("Korpus luteum evresi");
   const olay =
-    g <= 5 ? "İç zar kanamayla dökülüyor" :
-    g <= 12 ? "Folikül büyüyor, östrojen iç zarı kalınlaştırıyor" :
-    g === 13 ? "LH tepede: oosit atılmak üzere" :
-    g === 14 ? "LH tepesinin ardından oosit atılıyor" :
-    g <= 25 ? "Sarı cisim progesteron salgılıyor" : "Döllenme yok: sarı cisim köreliyor";
+    g <= 5 ? cev("İç zar kanamayla dökülüyor") :
+    g <= 12 ? cev("Folikül büyüyor, östrojen iç zarı kalınlaştırıyor") :
+    g === 13 ? cev("LH tepede: oosit atılmak üzere") :
+    g === 14 ? cev("LH tepesinin ardından oosit atılıyor") :
+    g <= 25 ? cev("Sarı cisim progesteron salgılıyor") : cev("Döllenme yok: sarı cisim köreliyor");
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Döngünün ${g}. günü: ${evre}. ${olay}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Döngünün {0}. günü: {1}. {2}", g, evre, olay)}>
       <g fontSize={10} fontWeight={700}>
         {HORMON.map((h) => (
           <g key={h.ad}>
@@ -302,15 +303,15 @@ function Dongu({ v }: SahneProps) {
       </g>
       <line x1={40} x2={322} y1={118} y2={118} stroke="var(--ink)" strokeWidth={1.2} />
       {HORMON.map((h) => <polyline key={h.ad} points={egri(h.f)} fill="none" stroke={h.renk} strokeWidth={2.2} strokeLinejoin="round" />)}
-      <text x={40} y={138} fontSize={10} fontWeight={700} fill="var(--muted)">rahim iç zarı</text>
+      <text x={40} y={138} fontSize={10} fontWeight={700} fill="var(--muted)">{cev("rahim iç zarı")}</text>
       <polygon points={zar.join(" ")} fill={KIRMIZI} fillOpacity={0.22} stroke={KIRMIZI} strokeOpacity={0.5} />
       <line x1={X(g)} x2={X(g)} y1={22} y2={178} stroke="var(--ink)" strokeWidth={1.2} strokeDasharray="3 3" />
       {HORMON.map((h) => <circle key={h.ad} cx={X(g)} cy={Y(h.f(g))} r={3.6} fill={h.renk} stroke="var(--surface)" strokeWidth={1.2} />)}
       <g fontSize={9.5} fill="var(--muted)" textAnchor="middle">
         {[1, 7, 14, 21, 28].map((d) => <text key={d} x={X(d)} y={190}>{d}</text>)}
-        <text x={X(28)} y={202} textAnchor="end" fontWeight={700}>gün</text>
+        <text x={X(28)} y={202} textAnchor="end" fontWeight={700}>{cev("gün")}</text>
       </g>
-      <text x={170} y={210} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">{g}. gün: {evre}</text>
+      <text x={170} y={210} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">{g}{cev(". gün:")} {evre}</text>
       <text x={170} y={228} fontSize={11.5} fontWeight={700} fill={g === 13 || g === 14 ? MOR : "var(--muted)"} textAnchor="middle">{olay}</text>
     </svg>
   );
@@ -344,34 +345,34 @@ function Hcg({ v, t, oynuyor, s }: SahneProps) {
   zp.push(`${X(son)},178`);
   const sari = e ? 1 : 1 - sinir((son - 25) / 4);
   const durum =
-    u <= 0 ? "Ovulasyon oldu. Oynat ve izle" :
-    e ? (son < 21 ? "Sarı cisim progesteron salgılıyor" : son < 26 ? "Embriyo yerleşti ve hCG salgılıyor" : "hCG sarı cismi yaşatıyor; kanama yok")
-      : (son < 25 ? "Sarı cisim progesteron salgılıyor" : son < 29 ? "Döllenme yok: sarı cisim köreliyor" : "Progesteron düştü, iç zar döküldü");
+    u <= 0 ? cev("Ovulasyon oldu. Oynat ve izle") :
+    e ? (son < 21 ? cev("Sarı cisim progesteron salgılıyor") : son < 26 ? cev("Embriyo yerleşti ve hCG salgılıyor") : cev("hCG sarı cismi yaşatıyor; kanama yok"))
+      : (son < 25 ? cev("Sarı cisim progesteron salgılıyor") : son < 29 ? cev("Döllenme yok: sarı cisim köreliyor") : cev("Progesteron düştü, iç zar döküldü"));
   return (
-    <svg viewBox="0 0 340 232" role="img" aria-label={e ? "Embriyo yerleşince hCG artar, progesteron yüksek kalır, iç zar dökülmez" : "Döllenme olmazsa progesteron düşer ve iç zar dökülür"}>
+    <svg viewBox="0 0 340 232" role="img" aria-label={e ? cev("Embriyo yerleşince hCG artar, progesteron yüksek kalır, iç zar dökülmez") : cev("Döllenme olmazsa progesteron düşer ve iç zar dökülür")}>
       <g fontSize={10} fontWeight={700}>
         <line x1={40} x2={52} y1={11} y2={11} stroke={KIRMIZI} strokeWidth={3} strokeLinecap="round" />
-        <text x={56} y={14.5} fill="var(--ink)">progesteron</text>
+        <text x={56} y={14.5} fill="var(--ink)">{cev("progesteron")}</text>
         <line x1={132} x2={144} y1={11} y2={11} stroke={MOR} strokeWidth={3} strokeLinecap="round" />
-        <text x={148} y={14.5} fill="var(--ink)">hCG</text>
+        <text x={148} y={14.5} fill="var(--ink)">{cev("hCG")}</text>
         <circle cx={226} cy={11} r={6 * Math.max(0.25, sari)} fill={SARI} fillOpacity={0.8} />
-        <text x={238} y={14.5} fill={sari > 0.3 ? "var(--ink)" : "var(--muted)"}>sarı cisim {sari > 0.3 ? "yaşıyor" : "köreldi"}</text>
+        <text x={238} y={14.5} fill={sari > 0.3 ? "var(--ink)" : "var(--muted)"}>{cev("sarı cisim")} {sari > 0.3 ? cev("yaşıyor") : cev("köreldi")}</text>
       </g>
       <line x1={40} x2={322} y1={116} y2={116} stroke="var(--ink)" strokeWidth={1.2} />
       {e && son >= 21 && (
         <g>
           <line x1={X(21)} x2={X(21)} y1={26} y2={178} stroke={MOR} strokeDasharray="2 3" />
-          <text x={X(21) + 4} y={34} fontSize={9.5} fontWeight={700} fill={MOR}>implantasyon</text>
+          <text x={X(21) + 4} y={34} fontSize={9.5} fontWeight={700} fill={MOR}>{cev("implantasyon")}</text>
         </g>
       )}
       {u > 0 && <polyline points={egri(pro, Y)} fill="none" stroke={KIRMIZI} strokeWidth={2.4} strokeLinejoin="round" />}
       {u > 0 && e && <polyline points={egri(hcg, Y)} fill="none" stroke={MOR} strokeWidth={2.4} strokeLinejoin="round" />}
-      <text x={40} y={136} fontSize={10} fontWeight={700} fill="var(--muted)">rahim iç zarı</text>
+      <text x={40} y={136} fontSize={10} fontWeight={700} fill="var(--muted)">{cev("rahim iç zarı")}</text>
       {u > 0 && <polygon points={zp.join(" ")} fill={KIRMIZI} fillOpacity={0.22} stroke={KIRMIZI} strokeOpacity={0.5} />}
       <line x1={40} x2={322} y1={178} y2={178} stroke="var(--line-2)" />
       <g fontSize={9.5} fill="var(--muted)" textAnchor="middle">
         {[14, 21, 28, 35, 42].map((d) => <text key={d} x={X(d)} y={190}>{d}</text>)}
-        <text x={X(42)} y={202} textAnchor="end" fontWeight={700}>gün</text>
+        <text x={X(42)} y={202} textAnchor="end" fontWeight={700}>{cev("gün")}</text>
       </g>
       <text x={170} y={222} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{durum}</text>
     </svg>
@@ -413,12 +414,12 @@ function Embriyo({ x, y, r, evre }: { x: number; y: number; r: number; evre: num
 
 const EVRE = [
   { ad: "oosit", gun: "", hucre: "" },
-  { ad: "zigot", gun: "gün 0", hucre: "1 hücre" },
-  { ad: "2 hücre", gun: "gün 1", hucre: "2 hücre" },
-  { ad: "4 hücre", gun: "gün 2", hucre: "4 hücre" },
-  { ad: "8 hücre", gun: "gün 3", hucre: "8 hücre" },
-  { ad: "morula", gun: "gün 4", hucre: "16+ hücre" },
-  { ad: "blastosist", gun: "gün 5", hucre: "100'e yakın hücre" },
+  { ad: "zigot", gun: cev("gün 0"), hucre: cev("1 hücre") },
+  { ad: cev("2 hücre"), gun: cev("gün 1"), hucre: cev("2 hücre") },
+  { ad: cev("4 hücre"), gun: cev("gün 2"), hucre: cev("4 hücre") },
+  { ad: cev("8 hücre"), gun: cev("gün 3"), hucre: cev("8 hücre") },
+  { ad: "morula", gun: cev("gün 4"), hucre: cev("16+ hücre") },
+  { ad: "blastosist", gun: cev("gün 5"), hucre: cev("100'e yakın hücre") },
 ];
 
 function Zigot({ t, oynuyor, s }: SahneProps) {
@@ -433,25 +434,25 @@ function Zigot({ t, oynuyor, s }: SahneProps) {
   if (gom > 0) p = [p[0] + 8 * gom, p[1] + 2 * gom];
   const spermler = u > 0.03 && u < 0.14 ? [0, 1, 2].map((k) => noktaAl([...YOL_B].reverse(), sinir((u - 0.03 - k * 0.012) / 0.09))) : [];
   const durum =
-    u <= 0 ? "Oosit yumurtalıktan atılmak üzere" :
-    u < 0.13 ? "Ovulasyon: oosit yumurta kanalına alındı" :
-    u < 0.22 ? "Sperm kanalın üst kısmında oosite girdi: zigot" :
-    u < 0.58 ? "Segmentasyon: hücre sayısı artıyor, boyut aynı" :
-    u < 0.72 ? "Morula: hücreden bir top" :
-    gom <= 0 ? "Blastosist: içi sıvılı top, rahme ulaştı" : "İmplantasyon: blastosist iç zara gömüldü (gün 6-7)";
+    u <= 0 ? cev("Oosit yumurtalıktan atılmak üzere") :
+    u < 0.13 ? cev("Ovulasyon: oosit yumurta kanalına alındı") :
+    u < 0.22 ? cev("Sperm kanalın üst kısmında oosite girdi: zigot") :
+    u < 0.58 ? cev("Segmentasyon: hücre sayısı artıyor, boyut aynı") :
+    u < 0.72 ? cev("Morula: hücreden bir top") :
+    gom <= 0 ? cev("Blastosist: içi sıvılı top, rahme ulaştı") : cev("İmplantasyon: blastosist iç zara gömüldü (gün 6-7)");
   return (
-    <svg viewBox="0 0 340 234" role="img" aria-label="Zigot yumurta kanalında bölünerek morula ve blastosist olur, rahim iç zarına gömülür">
+    <svg viewBox="0 0 340 234" role="img" aria-label={cev("Zigot yumurta kanalında bölünerek morula ve blastosist olur, rahim iç zarına gömülür")}>
       {/* rahim */}
       <rect x={226} y={78} width={98} height={124} rx={42} fill={KIRMIZI} fillOpacity={0.14} stroke={KIRMIZI} strokeOpacity={0.45} />
       <rect x={244} y={98} width={60} height={86} rx={26} fill="var(--surface)" />
-      <text x={275} y={216} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">rahim</text>
+      <text x={275} y={216} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("rahim")}</text>
       {/* yumurta kanalı */}
       <polyline points={nokt(YOL_B.slice(0, 7))} fill="none" stroke="var(--panel)" strokeWidth={16} strokeLinecap="round" strokeLinejoin="round" />
       <polyline points={nokt([[58, 118], ...YOL_B.slice(0, 1), [110, 58]])} fill="none" stroke="var(--panel)" strokeWidth={16} strokeLinecap="round" strokeLinejoin="round" />
-      <text x={150} y={30} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">yumurta kanalı</text>
+      <text x={150} y={30} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("yumurta kanalı")}</text>
       {/* yumurtalık */}
       <ellipse cx={34} cy={132} rx={22} ry={15} fill="var(--panel)" stroke="var(--line-2)" />
-      <text x={6} y={162} fontSize={10.5} fontWeight={700} fill="var(--muted)">yumurtalık</text>
+      <text x={6} y={162} fontSize={10.5} fontWeight={700} fill="var(--muted)">{cev("yumurtalık")}</text>
       {spermler.map((q, i) => <circle key={i} cx={q[0]} cy={q[1]} r={2.2} fill={MAVI} />)}
       <Embriyo x={p[0]} y={p[1]} r={7} evre={evre} />
       {/* büyütülmüş görünüm */}
@@ -461,7 +462,7 @@ function Zigot({ t, oynuyor, s }: SahneProps) {
           <Embriyo x={172} y={164} r={34} evre={evre} />
           <text x={96} y={154} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">{EVRE[evre].ad}</text>
           <text x={96} y={170} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{EVRE[evre].gun}</text>
-          {evre >= 2 && evre <= 4 && <text x={96} y={186} fontSize={10.5} fontWeight={700} fill={YESIL} textAnchor="middle">boyut aynı</text>}
+          {evre >= 2 && evre <= 4 && <text x={96} y={186} fontSize={10.5} fontWeight={700} fill={YESIL} textAnchor="middle">{cev("boyut aynı")}</text>}
         </g>
       )}
       <text x={170} y={230} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{durum}</text>
@@ -472,16 +473,16 @@ function Zigot({ t, oynuyor, s }: SahneProps) {
 /* ---------- germ tabakaları ---------- */
 
 const ORGAN = [
-  { ad: "Beyin ve omurilik", t: 0 },
-  { ad: "Deri üst tabakası", t: 0 },
-  { ad: "Kalp ve kan damarları", t: 1 },
-  { ad: "Kemik ve kaslar", t: 1 },
-  { ad: "Karaciğer ve pankreas", t: 2 },
+  { ad: cev("Beyin ve omurilik"), t: 0 },
+  { ad: cev("Deri üst tabakası"), t: 0 },
+  { ad: cev("Kalp ve kan damarları"), t: 1 },
+  { ad: cev("Kemik ve kaslar"), t: 1 },
+  { ad: cev("Karaciğer ve pankreas"), t: 2 },
 ];
 const TABAKA = [
-  { ad: "ektoderm", yer: "dış", renk: MAVI, r1: 70, r0: 58, kural: "Ektoderm: dış yüz ve sinir sistemi" },
-  { ad: "mezoderm", yer: "orta", renk: KIRMIZI, r1: 58, r0: 45, kural: "Mezoderm: kas, kemik, kalp ve kan" },
-  { ad: "endoderm", yer: "iç", renk: SARI, r1: 45, r0: 32, kural: "Endoderm: iç yüzeyler ve sindirim bezleri" },
+  { ad: "ektoderm", yer: cev("dış"), renk: MAVI, r1: 70, r0: 58, kural: cev("Ektoderm: dış yüz ve sinir sistemi") },
+  { ad: "mezoderm", yer: "orta", renk: KIRMIZI, r1: 58, r0: 45, kural: cev("Mezoderm: kas, kemik, kalp ve kan") },
+  { ad: "endoderm", yer: cev("iç"), renk: SARI, r1: 45, r0: 32, kural: cev("Endoderm: iç yüzeyler ve sindirim bezleri") },
 ];
 
 function Germ({ v }: SahneProps) {
@@ -491,13 +492,13 @@ function Germ({ v }: SahneProps) {
   const rOrta = (tb.r0 + tb.r1) / 2;
   const ax = cx + Math.cos(-0.35) * rOrta, ay = cy + Math.sin(-0.35) * rOrta;
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label={`${o.ad}: ${tb.ad}ten gelişir`}>
+    <svg viewBox="0 0 340 226" role="img" aria-label={cev("{0}: {1}ten gelişir", o.ad, tb.ad)}>
       {TABAKA.map((k, i) => (
         <circle key={k.ad} cx={cx} cy={cy} r={(k.r0 + k.r1) / 2} fill="none" stroke={k.renk} strokeWidth={k.r1 - k.r0 - 1} strokeOpacity={i === o.t ? 0.75 : 0.2} />
       ))}
       <circle cx={cx} cy={cy} r={31} fill="var(--surface)" />
-      <text x={cx} y={cy - 2} fontSize={9.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">ilkel</text>
-      <text x={cx} y={cy + 10} fontSize={9.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">bağırsak</text>
+      <text x={cx} y={cy - 2} fontSize={9.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("ilkel")}</text>
+      <text x={cx} y={cy + 10} fontSize={9.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("bağırsak")}</text>
       <line x1={ax} y1={ay} x2={196} y2={148} stroke={tb.renk} strokeWidth={1.6} />
       <circle cx={ax} cy={ay} r={3.4} fill={tb.renk} />
       <g fontSize={11} fontWeight={700}>
@@ -507,9 +508,9 @@ function Germ({ v }: SahneProps) {
             <text x={218} y={36 + i * 24} fill={i === o.t ? "var(--ink)" : "var(--muted)"} fontWeight={i === o.t ? 800 : 600}>{k.ad} ({k.yer})</text>
           </g>
         ))}
-        <text x={200} y={130} fill="var(--muted)">Organ</text>
+        <text x={200} y={130} fill="var(--muted)">{cev("Organ")}</text>
         <text x={200} y={150} fontSize={12} fontWeight={800} fill="var(--ink)">{o.ad}</text>
-        <text x={200} y={170} fontSize={12} fontWeight={800} fill={tb.renk}>{tb.ad}ten gelişir</text>
+        <text x={200} y={170} fontSize={12} fontWeight={800} fill={tb.renk}>{tb.ad}{cev("ten gelişir")}</text>
       </g>
       <text x={170} y={214} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{tb.kural}</text>
     </svg>
@@ -526,23 +527,23 @@ function Akis({ v }: SahneProps) {
   const N = 500 + (60 + g) - (80 + 20);
   const renk = N === 500 ? YESIL : N > 500 ? MAVI : KIRMIZI;
   return (
-    <svg viewBox="0 0 340 214" role="img" aria-label={`Artış ${60 + g}, azalış 100; bir yıl sonra ${N} kuş`}>
-      <text x={170} y={18} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">Başlangıç: 500 kuş</text>
+    <svg viewBox="0 0 340 214" role="img" aria-label={cev("Artış {0}, azalış 100; bir yıl sonra {1} kuş", 60 + g, N)}>
+      <text x={170} y={18} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("Başlangıç: 500 kuş")}</text>
       <g fontSize={11} fontWeight={700}>
-        <text x={14} y={53} fill="var(--muted)">Artış</text>
+        <text x={14} y={53} fill="var(--muted)">{cev("Artış")}</text>
         <rect x={x0} y={42} width={60 * S} height={16} rx={4} fill={YESIL} />
         {g > 0 && <rect x={x0 + 60 * S} y={42} width={g * S} height={16} rx={4} fill={MAVI} />}
-        <text x={x0} y={74} fill={YESIL}>doğum 60</text>
-        <text x={x0 + 60 * S + 4} y={74} fill={MAVI}>göçle gelen {g}</text>
-        <text x={14} y={113} fill="var(--muted)">Azalış</text>
+        <text x={x0} y={74} fill={YESIL}>{cev("doğum 60")}</text>
+        <text x={x0 + 60 * S + 4} y={74} fill={MAVI}>{cev("göçle gelen")} {g}</text>
+        <text x={14} y={113} fill="var(--muted)">{cev("Azalış")}</text>
         <rect x={x0} y={102} width={80 * S} height={16} rx={4} fill={KIRMIZI} />
         <rect x={x0 + 80 * S} y={102} width={20 * S} height={16} rx={4} fill={SARI} />
-        <text x={x0} y={134} fill={KIRMIZI}>ölüm 80</text>
-        <text x={x0 + 80 * S + 4} y={134} fill="#a77a06">göçle giden 20</text>
+        <text x={x0} y={134} fill={KIRMIZI}>{cev("ölüm 80")}</text>
+        <text x={x0 + 80 * S + 4} y={134} fill="#a77a06">{cev("göçle giden 20")}</text>
       </g>
       <line x1={x0 + 100 * S} x2={x0 + 100 * S} y1={36} y2={62} stroke="var(--ink)" strokeDasharray="3 3" />
       <line x1={x0 + 100 * S} x2={x0 + 100 * S} y1={96} y2={122} stroke="var(--ink)" strokeDasharray="3 3" />
-      <text x={170} y={170} fontSize={15} fontWeight={800} fill={renk} textAnchor="middle">Bir yıl sonra: {sayi(N)} kuş</text>
+      <text x={170} y={170} fontSize={15} fontWeight={800} fill={renk} textAnchor="middle">{cev("Bir yıl sonra:")} {sayi(N)} {cev("kuş")}</text>
       <text x={170} y={194} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">
         ΔN = (60 + {g}) − (80 + 20) = {N - 500 > 0 ? "+" : ""}{N - 500}
       </text>
@@ -553,9 +554,9 @@ function Akis({ v }: SahneProps) {
 /* ---------- dağılım tipleri ---------- */
 
 const DAGILIM = [
-  { ad: "Kümeli dağılım", neden: "Kaynak öbek öbek. Sürü ya da aile hâlinde yaşam" },
-  { ad: "Düzenli dağılım", neden: "Bölge savunması ya da kaynak rekabeti" },
-  { ad: "Rastgele dağılım", neden: "Kaynak her yerde eşit, etkileşim zayıf" },
+  { ad: cev("Kümeli dağılım"), neden: cev("Kaynak öbek öbek. Sürü ya da aile hâlinde yaşam") },
+  { ad: cev("Düzenli dağılım"), neden: cev("Bölge savunması ya da kaynak rekabeti") },
+  { ad: cev("Rastgele dağılım"), neden: cev("Kaynak her yerde eşit, etkileşim zayıf") },
 ];
 
 function dagilimNoktalari(tip: number): Nokta[] {
@@ -581,7 +582,7 @@ function Dagilim({ v }: SahneProps) {
       <text x={170} y={18} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">{DAGILIM[tip].ad}</text>
       <rect x={x0} y={y0} width={160} height={160} rx={10} fill="var(--panel)" stroke="var(--line-2)" />
       {n.map(([x, y], i) => <circle key={i} cx={x0 + x} cy={y0 + y} r={4.2} fill={YESIL} stroke="var(--surface)" strokeWidth={1} />)}
-      <text x={170} y={204} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">Yoğunluk aynı: 24 birey / alan</text>
+      <text x={170} y={204} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("Yoğunluk aynı: 24 birey / alan")}</text>
       <text x={170} y={222} fontSize={11.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">{DAGILIM[tip].neden}</text>
     </svg>
   );
@@ -611,14 +612,14 @@ function JEgrisi({ v }: SahneProps) {
       </g>
       <g fontSize={9.5} fill="var(--muted)" textAnchor="middle">
         {Array.from({ length: 9 }, (_, k) => <text key={k} x={X(k)} y={190}>{k}</text>)}
-        <text x={322} y={204} textAnchor="end" fontWeight={700}>nesil</text>
+        <text x={322} y={204} textAnchor="end" fontWeight={700}>{cev("nesil")}</text>
       </g>
-      <text x={52} y={20} fontSize={10} fontWeight={700} fill="var(--muted)">bakteri sayısı</text>
+      <text x={52} y={20} fontSize={10} fontWeight={700} fill="var(--muted)">{cev("bakteri sayısı")}</text>
       {n > 0 && <polyline points={nokt(nokta)} fill="none" stroke={YESIL} strokeWidth={2.4} strokeLinejoin="round" />}
       {nokta.map(([x, y], k) => <circle key={k} cx={x} cy={y} r={k === n ? 5.5 : 3.4} fill={k === n ? (asti ? KIRMIZI : YESIL) : YESIL} stroke="var(--surface)" strokeWidth={1.2} />)}
       <text x={px > 240 ? px - 10 : px + 10} y={py - 8} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor={px > 240 ? "end" : "start"}>{sayi(N)}</text>
       <text x={170} y={218} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {n}. nesil: 10 × 2{UST[n]} = {sayi(N)} bakteri
+        {n}{cev(". nesil: 10 × 2")}{UST[n]} = {sayi(N)} {cev("bakteri")}
       </text>
     </svg>
   );
@@ -644,7 +645,7 @@ function SEgrisi({ v }: SahneProps) {
   const egim = (A * 86) / K / (274 / 25); // piksel cinsinden eğim
   const en = A >= 99;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`N = ${N}: birim zamandaki artış yaklaşık ${Math.round(A)} birey`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("N = {0}: birim zamandaki artış yaklaşık {1} birey", N, Math.round(A))}>
       {/* üst: S eğrisi */}
       <line x1={46} x2={322} y1={112} y2={112} stroke="var(--ink)" strokeWidth={1.2} />
       <line x1={46} x2={46} y1={20} y2={112} stroke="var(--ink)" strokeWidth={1.2} />
@@ -657,7 +658,7 @@ function SEgrisi({ v }: SahneProps) {
         <text x={42} y={Y(0) + 3} textAnchor="end">0</text>
         <text x={42} y={Y(500) + 3} textAnchor="end">500</text>
         <text x={50} y={16} fontWeight={700}>N</text>
-        <text x={322} y={124} fontWeight={700} textAnchor="end">zaman</text>
+        <text x={322} y={124} fontWeight={700} textAnchor="end">{cev("zaman")}</text>
       </g>
       {/* alt: artış */}
       <line x1={46} x2={322} y1={194} y2={194} stroke="var(--ink)" strokeWidth={1.2} />
@@ -665,14 +666,14 @@ function SEgrisi({ v }: SahneProps) {
       <line x1={XN(N)} x2={XN(N)} y1={194} y2={YA(A)} stroke={MAVI} strokeDasharray="3 3" />
       <circle cx={XN(N)} cy={YA(A)} r={5} fill={en ? KIRMIZI : MAVI} stroke="var(--surface)" strokeWidth={1.2} />
       <g fontSize={9.5} fill="var(--muted)">
-        <text x={50} y={142} fontWeight={700}>yıllık artış</text>
+        <text x={50} y={142} fontWeight={700}>{cev("yıllık artış")}</text>
         <text x={XN(0)} y={206} textAnchor="middle">0</text>
         <text x={XN(500)} y={206} textAnchor="middle">500</text>
         <text x={XN(1000)} y={206} textAnchor="middle">1 000</text>
         <text x={XN(1000)} y={142} textAnchor="end" fontWeight={700}>N</text>
       </g>
       <text x={170} y={228} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        N = {sayi(N)}: artış ≈ {Math.round(A)} birey/yıl{en ? " (en hızlı)" : N > 600 ? ", K'ya yaklaştıkça azalıyor" : ""}
+        N = {sayi(N)}{cev(": artış ≈")} {Math.round(A)} {cev("birey/yıl")}{en ? cev(" (en hızlı)") : N > 600 ? cev(", K'ya yaklaştıkça azalıyor") : ""}
       </text>
     </svg>
   );
@@ -683,11 +684,11 @@ function SEgrisi({ v }: SahneProps) {
 const YOGUNLUK = [
   { ad: "seyrek", n: 10 },
   { ad: "orta", n: 24 },
-  { ad: "kalabalık", n: 48 },
+  { ad: cev("kalabalık"), n: 48 },
 ];
 const OLAY = [
-  { ad: "Salgın hastalık", oran: [0.1, 0.3, 0.6] },
-  { ad: "Don", oran: [0.4, 0.4, 0.4] },
+  { ad: cev("Salgın hastalık"), oran: [0.1, 0.3, 0.6] },
+  { ad: cev("Don"), oran: [0.4, 0.4, 0.4] },
 ];
 
 function Faktor({ v }: SahneProps) {
@@ -698,7 +699,7 @@ function Faktor({ v }: SahneProps) {
   const nokta = Array.from({ length: yo.n }, () => [22 + r() * 148, 38 + r() * 140] as Nokta);
   const olen = Math.round(ol.oran[y] * yo.n);
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label={`${ol.ad}, ${yo.ad} popülasyon: bireylerin yüzde ${Math.round(ol.oran[y] * 100)}'i öldü`}>
+    <svg viewBox="0 0 340 226" role="img" aria-label={cev("{0}, {1} popülasyon: bireylerin yüzde {2}'i öldü", ol.ad, yo.ad, Math.round(ol.oran[y] * 100))}>
       <text x={96} y={20} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{ol.ad} · {yo.ad}</text>
       <rect x={14} y={30} width={164} height={156} rx={10} fill="var(--panel)" stroke="var(--line-2)" />
       {nokta.map(([x, yy], i) =>
@@ -711,7 +712,7 @@ function Faktor({ v }: SahneProps) {
           <circle key={i} cx={x} cy={yy} r={4} fill={YESIL} stroke="var(--surface)" strokeWidth={1} />
         ),
       )}
-      <text x={262} y={20} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">Ölen oranı</text>
+      <text x={262} y={20} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("Ölen oranı")}</text>
       {YOGUNLUK.map((k, i) => {
         const x = 210 + i * 44, h = ol.oran[i] * 120;
         return (
@@ -724,7 +725,7 @@ function Faktor({ v }: SahneProps) {
       })}
       <line x1={204} x2={336} y1={170} y2={170} stroke="var(--ink)" />
       <text x={170} y={214} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {o === 0 ? "Salgın kalabalıkta daha çok öldürüyor: yoğunluğa bağlı" : "Don her yoğunlukta aynı oranda: yoğunluktan bağımsız"}
+        {o === 0 ? cev("Salgın kalabalıkta daha çok öldürüyor: yoğunluğa bağlı") : cev("Don her yoğunlukta aynı oranda: yoğunluktan bağımsız")}
       </text>
     </svg>
   );
@@ -748,24 +749,24 @@ function AvAvci({ t, oynuyor, s }: SahneProps) {
   };
   const evre = son % 10;
   const durum =
-    u <= 0 ? "Oynat ve iki popülasyonu izle" :
-    u >= 1 ? "Avcının tepesi her döngüde avınkinden sonra geliyor" :
-    evre < 2.5 ? "Av çoğalıyor. Avcının besini artıyor" :
-    evre < 5 ? "Avcı çoğaldıkça av azalmaya başladı" :
-    evre < 7.5 ? "Av azaldı; besini azalan avcı da azalıyor" : "Avcı azalınca av yeniden çoğalıyor";
+    u <= 0 ? cev("Oynat ve iki popülasyonu izle") :
+    u >= 1 ? cev("Avcının tepesi her döngüde avınkinden sonra geliyor") :
+    evre < 2.5 ? cev("Av çoğalıyor. Avcının besini artıyor") :
+    evre < 5 ? cev("Avcı çoğaldıkça av azalmaya başladı") :
+    evre < 7.5 ? cev("Av azaldı; besini azalan avcı da azalıyor") : cev("Avcı azalınca av yeniden çoğalıyor");
   const tepeler = [2.5, 12.5].filter((y) => y <= son);
   const avciTepe = [5, 15].filter((y) => y <= son);
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label="Kar tavşanı ve vaşak sayıları döngüsel iner çıkar; vaşağın tepesi tavşanınkinden sonra gelir">
+    <svg viewBox="0 0 340 226" role="img" aria-label={cev("Kar tavşanı ve vaşak sayıları döngüsel iner çıkar; vaşağın tepesi tavşanınkinden sonra gelir")}>
       <g fontSize={10.5} fontWeight={700}>
         <line x1={40} x2={52} y1={13} y2={13} stroke={MAVI} strokeWidth={3} strokeLinecap="round" />
-        <text x={56} y={16.5} fill="var(--ink)">kar tavşanı (av)</text>
+        <text x={56} y={16.5} fill="var(--ink)">{cev("kar tavşanı (av)")}</text>
         <line x1={170} x2={182} y1={13} y2={13} stroke={KIRMIZI} strokeWidth={3} strokeLinecap="round" />
-        <text x={186} y={16.5} fill="var(--ink)">vaşak (avcı)</text>
+        <text x={186} y={16.5} fill="var(--ink)">{cev("vaşak (avcı)")}</text>
       </g>
       <line x1={40} x2={322} y1={172} y2={172} stroke="var(--ink)" strokeWidth={1.2} />
       <line x1={40} x2={40} y1={26} y2={172} stroke="var(--ink)" strokeWidth={1.2} />
-      <text x={44} y={32} fontSize={9.5} fontWeight={700} fill="var(--muted)">birey sayısı</text>
+      <text x={44} y={32} fontSize={9.5} fontWeight={700} fill="var(--muted)">{cev("birey sayısı")}</text>
       {u > 0 && <polyline points={egri(AV)} fill="none" stroke={MAVI} strokeWidth={2.4} />}
       {u > 0 && <polyline points={egri(AVCI)} fill="none" stroke={KIRMIZI} strokeWidth={2.4} />}
       {tepeler.map((y) => <line key={`a${y}`} x1={X(y)} x2={X(y)} y1={Y(AV(y))} y2={172} stroke={MAVI} strokeDasharray="2 3" />)}
@@ -773,13 +774,13 @@ function AvAvci({ t, oynuyor, s }: SahneProps) {
       {avciTepe.length > 0 && (
         <g>
           <line x1={X(2.5)} x2={X(5)} y1={180} y2={180} stroke="var(--ink)" strokeWidth={1.2} />
-          <text x={X(3.75)} y={194} fontSize={9.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">gecikme</text>
+          <text x={X(3.75)} y={194} fontSize={9.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">{cev("gecikme")}</text>
         </g>
       )}
       <g fontSize={9.5} fill="var(--muted)" textAnchor="middle">
         <text x={X(10)} y={184}>10</text>
         <text x={X(20)} y={184}>20</text>
-        <text x={X(20)} y={196} textAnchor="end" fontWeight={700}>yıl</text>
+        <text x={X(20)} y={196} textAnchor="end" fontWeight={700}>{cev("yıl")}</text>
       </g>
       <text x={170} y={218} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{durum}</text>
     </svg>
@@ -805,26 +806,26 @@ function Gause({ v, t, oynuyor, s }: SahneProps) {
     return p.join(" ");
   };
   const durum =
-    u <= 0 ? (ayni ? "İki tür aynı kapta, aynı besinle" : "İki tür ayrı kaplarda, aynı besinle") :
-    !ayni ? (u < 1 ? "İkisi de çoğalıyor" : "Ayrı kaplarda ikisi de çoğaldı ve dengelendi") :
-    son < 6 ? "İkisi de çoğalıyor. Besin azalıyor" : u < 1 ? "Besini paylaşamayan P. caudatum azalıyor" : "P. caudatum yok oldu, P. aurelia kaldı";
+    u <= 0 ? (ayni ? cev("İki tür aynı kapta, aynı besinle") : cev("İki tür ayrı kaplarda, aynı besinle")) :
+    !ayni ? (u < 1 ? cev("İkisi de çoğalıyor") : cev("Ayrı kaplarda ikisi de çoğaldı ve dengelendi")) :
+    son < 6 ? cev("İkisi de çoğalıyor. Besin azalıyor") : u < 1 ? cev("Besini paylaşamayan P. caudatum azalıyor") : cev("P. caudatum yok oldu, P. aurelia kaldı");
   return (
-    <svg viewBox="0 0 340 228" role="img" aria-label={ayni ? "Aynı kapta P. aurelia çoğalır, P. caudatum yok olur" : "Ayrı kaplarda iki Paramecium türü de çoğalır"}>
+    <svg viewBox="0 0 340 228" role="img" aria-label={ayni ? cev("Aynı kapta P. aurelia çoğalır, P. caudatum yok olur") : cev("Ayrı kaplarda iki Paramecium türü de çoğalır")}>
       <g fontSize={10.5} fontWeight={700}>
         <line x1={40} x2={52} y1={13} y2={13} stroke={MAVI} strokeWidth={3} strokeLinecap="round" />
-        <text x={56} y={16.5} fill="var(--ink)" fontStyle="italic">P. aurelia</text>
+        <text x={56} y={16.5} fill="var(--ink)" fontStyle="italic">{cev("P. aurelia")}</text>
         <line x1={140} x2={152} y1={13} y2={13} stroke={KIRMIZI} strokeWidth={3} strokeLinecap="round" />
-        <text x={156} y={16.5} fill="var(--ink)" fontStyle="italic">P. caudatum</text>
-        <text x={322} y={16.5} fill={ayni ? MOR : "var(--muted)"} textAnchor="end">{ayni ? "aynı kap" : "ayrı kaplar"}</text>
+        <text x={156} y={16.5} fill="var(--ink)" fontStyle="italic">{cev("P. caudatum")}</text>
+        <text x={322} y={16.5} fill={ayni ? MOR : "var(--muted)"} textAnchor="end">{ayni ? cev("aynı kap") : cev("ayrı kaplar")}</text>
       </g>
       <line x1={40} x2={322} y1={172} y2={172} stroke="var(--ink)" strokeWidth={1.2} />
       <line x1={40} x2={40} y1={30} y2={172} stroke="var(--ink)" strokeWidth={1.2} />
-      <text x={44} y={40} fontSize={9.5} fontWeight={700} fill="var(--muted)">birey sayısı</text>
+      <text x={44} y={40} fontSize={9.5} fontWeight={700} fill="var(--muted)">{cev("birey sayısı")}</text>
       {u > 0 && <polyline points={egri(AUR)} fill="none" stroke={MAVI} strokeWidth={2.4} />}
       {u > 0 && <polyline points={egri((d) => CAU(d, ayni))} fill="none" stroke={KIRMIZI} strokeWidth={2.4} />}
       <g fontSize={9.5} fill="var(--muted)" textAnchor="middle">
         {[0, 4, 8, 12, 16].map((d) => <text key={d} x={X(d)} y={186}>{d}</text>)}
-        <text x={X(16)} y={198} textAnchor="end" fontWeight={700}>gün</text>
+        <text x={X(16)} y={198} textAnchor="end" fontWeight={700}>{cev("gün")}</text>
       </g>
       <text x={170} y={218} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{durum}</text>
     </svg>

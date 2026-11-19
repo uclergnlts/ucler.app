@@ -4,6 +4,7 @@
 // cevaplandıkça listeden düşmez; böylece aynı oturumda soru sırası kaymaz.
 // /tekrar/?karisik: karışık test. Bitirilen konuların testlerinden rastgele 10 soru; tekrar sırasını ilerletmez,
 // yalnızca yanlış yapılan soruyu tekrar sırasına ekler.
+import { cev } from "@/lib/dil";
 import { ANA } from "@/lib/site";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
@@ -35,7 +36,7 @@ function karistir<T>(l: T[]) {
 }
 
 /** Basamağa göre doğru cevaptan sonra sorunun ne zaman yeniden geleceği. */
-const SONRA = ["2 gün sonra yeniden sorulacak.", "4 gün sonra son kez sorulacak.", "Bu soruyu öğrendin, artık tekrar sorulmayacak."];
+const SONRA = [cev("2 gün sonra yeniden sorulacak."), cev("4 gün sonra son kez sorulacak."), cev("Bu soruyu öğrendin, artık tekrar sorulmayacak.")];
 
 export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru> }) {
   const [liste, setListe] = useState<Oge[] | null>(null);
@@ -99,9 +100,9 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
     body = (
       <article className="flex flex-col items-center gap-2 pt-10 text-center">
         <Logo className="mb-1 text-[40px]" />
-        <h1 className="text-[24px]">Karışık test için önce bir konu bitir</h1>
-        <p className="text-[15px] text-muted-foreground">Karışık test, testini bitirdiğin konulardan rastgele {KARISIK} soru seçer.</p>
-        <Button asChild className="mt-4 w-full"><Link href={ANA}>Ana sayfaya dön</Link></Button>
+        <h1 className="text-[24px]">{cev("Karışık test için önce bir konu bitir")}</h1>
+        <p className="text-[15px] text-muted-foreground">{cev("Karışık test, testini bitirdiğin konulardan rastgele")} {KARISIK} {cev("soru seçer.")}</p>
+        <Button asChild className="mt-4 w-full"><Link href={ANA}>{cev("Ana sayfaya dön")}</Link></Button>
       </article>
     );
   } else if (liste && !n) {
@@ -112,18 +113,17 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
     const hicTest = !Object.keys(tekrar).length && !doneKeys(prog).length;
     body = (
       <article className="flex flex-col items-center gap-2 pt-6 text-center">
-        <h1 className="text-[24px]">Bugün tekrar edecek sorun yok</h1>
+        <h1 className="text-[24px]">{cev("Bugün tekrar edecek sorun yok")}</h1>
         <p className="text-[15px] text-muted-foreground">
-          {ilk ? `Sıradaki tekrar ${gunAdi(ilk)}: ${ayni} soru.` : "Testlerde yanlış yaptığın sorular burada toplanır."}
+          {ilk ? cev("Sıradaki tekrar {0}: {1} soru.", gunAdi(ilk), ayni) : cev("Testlerde yanlış yaptığın sorular burada toplanır.")}
         </p>
         <p className="mt-3 rounded-2xl bg-secondary px-4 py-3 text-left text-[14px]">
-          Bir soruyu yanlış yapınca ertesi gün yeniden karşına çıkar. Doğru yaparsan 2 gün sonra, sonra da 4 gün sonra
-          yeniden sorulur. Üçünü de doğru yaparsan soru sıradan çıkar; arada yanlış yaparsan baştan başlar. Bilgi böyle kalıcı olur.
+          {cev("Bir soruyu yanlış yapınca ertesi gün yeniden karşına çıkar. Doğru yaparsan 2 gün sonra, sonra da 4 gün sonra yeniden sorulur. Üçünü de doğru yaparsan soru sıradan çıkar; arada yanlış yaparsan baştan başlar. Bilgi böyle kalıcı olur.")}
         </p>
         {hicTest ? (
-          <Button asChild className="mt-4 w-full"><Link href={ILK_KONU}>İlk testini çöz</Link></Button>
+          <Button asChild className="mt-4 w-full"><Link href={ILK_KONU}>{cev("İlk testini çöz")}</Link></Button>
         ) : (
-          <Button asChild className="mt-4 w-full"><Link href={ANA}>Ana sayfaya dön</Link></Button>
+          <Button asChild className="mt-4 w-full"><Link href={ANA}>{cev("Ana sayfaya dön")}</Link></Button>
         )}
       </article>
     );
@@ -131,9 +131,9 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
     const ok = sonuc === true, not = yonerge(Q);
     body = (
       <article className="flex flex-col gap-4" data-ders={Q.ders}>
-        <h1 className="sr-only">{karisik ? "Karışık test" : "Tekrar"}</h1>
+        <h1 className="sr-only">{karisik ? cev("Karışık test") : cev("Tekrar")}</h1>
         <span className="flex min-w-0 items-center gap-2 text-[13px] font-bold">
-          <span className="flex-none whitespace-nowrap tabular-nums text-acc">Soru {i + 1} / {n}</span>
+          <span className="flex-none whitespace-nowrap tabular-nums text-acc">{cev("Soru")} {i + 1} / {n}</span>
           <span className="truncate text-muted-foreground">· {DERSLER[Q.ders].ad} · {Q.baslik}</span>
         </span>
         <Html as="h2" className={sonuc === null ? "text-[22px]" : "text-lg"} html={Q.q} />
@@ -157,16 +157,16 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
               <h2 className={cn("mb-0.5 text-lg", ok ? "text-good" : "text-bad")}>{geriBaslik(Q, ok)}</h2>
               <Html as="p" className="text-[15px] leading-normal" html={geriMetin(Q, cevap, ok)} />
               <p className="mt-1.5 text-[14px] font-semibold">
-                {karisik ? (ok ? null : <>Tekrar sırana eklendi, yarın yeniden sorulacak. <Link className="text-acc underline-offset-2 hover:underline" data-ders={Q.ders} href={href(Q.ders, Q.konu)}>Konuya bak</Link></>)
-                  : ok ? SONRA[cur.s] : <>Yarın yeniden sorulacak. <Link className="text-acc underline-offset-2 hover:underline" data-ders={Q.ders} href={href(Q.ders, Q.konu)}>Konuya bak</Link></>}
+                {karisik ? (ok ? null : <>{cev("Tekrar sırana eklendi, yarın yeniden sorulacak.")} <Link className="text-acc underline-offset-2 hover:underline" data-ders={Q.ders} href={href(Q.ders, Q.konu)}>{cev("Konuya bak")}</Link></>)
+                  : ok ? SONRA[cur.s] : <>{cev("Yarın yeniden sorulacak.")} <Link className="text-acc underline-offset-2 hover:underline" data-ders={Q.ders} href={href(Q.ders, Q.konu)}>{cev("Konuya bak")}</Link></>}
               </p>
             </motion.div>
           )}
         </AnimatePresence>
         {!secmeli(Q) && sonuc === null ? (
-          <Button className="w-full" data-next disabled={!hazir(Q, cevap)} onClick={() => degerlendir(cevap)}>Kontrol et</Button>
+          <Button className="w-full" data-next disabled={!hazir(Q, cevap)} onClick={() => degerlendir(cevap)}>{cev("Kontrol et")}</Button>
         ) : (
-          <Button className="w-full" data-next disabled={sonuc === null} onClick={ileri}>{i === n - 1 ? "Sonucu gör" : "Sonraki soru"}</Button>
+          <Button className="w-full" data-next disabled={sonuc === null} onClick={ileri}>{i === n - 1 ? cev("Sonucu gör") : cev("Sonraki soru")}</Button>
         )}
       </Alt>
     );
@@ -175,15 +175,15 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
       <article className="flex flex-col items-center gap-2 pt-6 text-center">
         <Logo className="mb-1 text-[40px]" />
         <div className="font-display text-[56px] leading-none font-extrabold">{right}/{n}</div>
-        <h2 className="text-[22px]">{karisik ? "Karışık test bitti" : "Bugünkü tekrar bitti"}</h2>
+        <h2 className="text-[22px]">{karisik ? cev("Karışık test bitti") : cev("Bugünkü tekrar bitti")}</h2>
         <p className="font-medium text-muted-foreground">
           {karisik
-            ? n - right ? `Yanlış yaptığın ${n - right} soru tekrar sırana eklendi. Yarın yeniden gelecek.` : "Hepsi doğru."
+            ? n - right ? cev("Yanlış yaptığın {0} soru tekrar sırana eklendi. Yarın yeniden gelecek.", n - right) : cev("Hepsi doğru.")
             : sonucMetni(n - right, right - ogrenilen, ogrenilen)}
         </p>
         <div className="mt-4 grid w-full gap-2">
-          {karisik && <Button onClick={() => kur(true)}>Yeni karışık test</Button>}
-          <Button asChild variant={karisik ? "ghost" : "default"}><Link href={ANA}>Ana sayfaya dön</Link></Button>
+          {karisik && <Button onClick={() => kur(true)}>{cev("Yeni karışık test")}</Button>}
+          <Button asChild variant={karisik ? "ghost" : "default"}><Link href={ANA}>{cev("Ana sayfaya dön")}</Link></Button>
         </div>
       </article>
     );
@@ -192,14 +192,14 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
   return (
     <div className="app">
       <header className="top gap-3">
-        <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={ANA} aria-label={karisik ? "Karışık testten çık" : "Tekrardan çık"}><Close /></Link></Button>
+        <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={ANA} aria-label={karisik ? cev("Karışık testten çık") : cev("Tekrardan çık")}><Close /></Link></Button>
         <div className="grid min-w-0 flex-1 gap-1.5">
-          <span className="truncate font-display text-[15px] font-extrabold">{karisik ? "Karışık test" : "Tekrar"}</span>
+          <span className="truncate font-display text-[15px] font-extrabold">{karisik ? cev("Karışık test") : cev("Tekrar")}</span>
           {/* Sorulacak soru yoksa ilerleme çubuğu gösterilmez. */}
           {n > 0 && <Progress value={(100 * Math.min(i + (sonuc !== null ? 1 : 0), n)) / n} />}
         </div>
         {cur && Q && (
-          <Bildir yer={{ ders: Q.ders, konu: Q.konu, yer: `test sorusu ${Number(cur.key.split(".").pop()) + 1} (${karisik ? "karışık test" : "tekrar"})`, ozet: Q.q }}>
+          <Bildir yer={{ ders: Q.ders, konu: Q.konu, yer: cev("test sorusu {0} ({1})", Number(cur.key.split(".").pop()) + 1, karisik ? cev("karışık test") : "tekrar"), ozet: Q.q }}>
             <BildirDugme className="-mr-1" />
           </Bildir>
         )}

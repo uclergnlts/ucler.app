@@ -1,12 +1,13 @@
 "use client";
 // Etkileşimli kart görselleri. Kartta "etk" alanı varsa durağan SVG'nin yerine bunlardan biri çıkar.
 // Biçim: docs/ICERIK-SPEC.md ("Etkileşimli kart"). Renkler içerik SVG'leriyle aynı CSS değişkenleridir.
+import { cev, SAYI_YEREL } from "@/lib/dil";
 import { useState } from "react";
 import type { Etk as EtkT } from "@/lib/dersler";
 import { ELEMENTLER, katmanlar, yer } from "@/lib/elementler";
 import { Ayir, Eslestir, Formul, Isaretle, Sirala, Yontem } from "./EtkGenel";
 
-const sayi = (x: number) => x.toLocaleString("tr-TR", { maximumFractionDigits: 2 }).replace("-", "−");
+const sayi = (x: number) => x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: 2 }).replace("-", "−");
 const yaklasik = (x: number) => (Math.abs(x * 100 - Math.round(x * 100)) > 1e-6 ? "≈" : "=");
 const yuk = (q: number) => (q === 0 ? "" : `${Math.abs(q) > 1 ? Math.abs(q) : ""}${q > 0 ? "+" : "−"}`);
 
@@ -30,9 +31,9 @@ function Adim({ ad, v, min, max, set }: { ad: string; v: number; min: number; ma
   return (
     <div className="adim">
       <span>{ad}</span>
-      <button aria-label={`${ad} azalt`} disabled={v <= min} onClick={() => set(v - 1)}>−</button>
+      <button aria-label={cev("{0} azalt", ad)} disabled={v <= min} onClick={() => set(v - 1)}>−</button>
       <b aria-live="polite">{v}</b>
-      <button aria-label={`${ad} artır`} disabled={v >= max} onClick={() => set(v + 1)}>+</button>
+      <button aria-label={cev("{0} artır", ad)} disabled={v >= max} onClick={() => set(v + 1)}>+</button>
     </div>
   );
 }
@@ -67,11 +68,11 @@ function Atom({ p0, n0, e0 }: { p0: number; n0: number; e0: number }) {
     setE(v);
   };
   const el = ELEMENTLER[p - 1], q = p - e, A = p + n, k = katmanlar(e);
-  const tip = q === 0 ? (qMin === qMax ? (g === 8 ? "Nötr atom · soygaz, iyon oluşturmaz" : "Nötr atom · genelde iyon değil, bağ kurar") : "Nötr atom") : q > 0 ? `Katyon: ${q} elektron verdi` : `Anyon: ${-q} elektron aldı`;
+  const tip = q === 0 ? (qMin === qMax ? (g === 8 ? cev("Nötr atom · soygaz, iyon oluşturmaz") : cev("Nötr atom · genelde iyon değil, bağ kurar")) : cev("Nötr atom")) : q > 0 ? cev("Katyon: {0} elektron verdi", q) : cev("Anyon: {0} elektron aldı", -q);
   const R = [36, 54, 72, 90];
   return (
     <>
-      <svg viewBox="0 0 320 200" role="img" aria-label={`${el.ad}: ${p} proton, ${n} nötron, ${e} elektron`}>
+      <svg viewBox="0 0 320 200" role="img" aria-label={cev("{0}: {1} proton, {2} nötron, {3} elektron", el.ad, p, n, e)}>
         {k.map((c, i) => (
           <g key={i}>
             <circle cx="96" cy="100" r={R[i]} fill="none" stroke="var(--line)" strokeWidth="2" />
@@ -91,13 +92,13 @@ function Atom({ p0, n0, e0 }: { p0: number; n0: number; e0: number }) {
         </text>
         <text x="258" y="128" fontSize="15" textAnchor="middle" fill="var(--ink)" fontWeight="700">{el.ad}</text>
         <text x="258" y="150" fontSize="12" textAnchor="middle" fill="var(--muted)">A = {p} + {n} = {A}</text>
-        <text x="258" y="170" fontSize="12" textAnchor="middle" fill="var(--muted)">katmanlar: {k.join(", ") || "yok"}</text>
+        <text x="258" y="170" fontSize="12" textAnchor="middle" fill="var(--muted)">{cev("katmanlar:")} {k.join(", ") || "yok"}</text>
       </svg>
       <div className={`etk-durum ${q ? "on" : ""}`}>{tip}</div>
       <div className="adimlar">
-        <Adim ad="Proton" v={p} min={1} max={20} set={setP} />
-        <Adim ad="Nötron" v={n} min={nMin} max={nMax} set={setN} />
-        <Adim ad="Elektron" v={e} min={eMin} max={eMax} set={setE} />
+        <Adim ad={cev("Proton")} v={p} min={1} max={20} set={setP} />
+        <Adim ad={cev("Nötron")} v={n} min={nMin} max={nMax} set={setN} />
+        <Adim ad={cev("Elektron")} v={e} min={eMin} max={eMax} set={setE} />
       </div>
     </>
   );
@@ -124,7 +125,7 @@ function Vektor({ v0, a0 }: { v0: number; a0: number }) {
   const yay = 28, ax = ox + yay * Math.cos(r), ay = oy - yay * Math.sin(r);
   return (
     <>
-      <svg viewBox="0 0 320 200" role="img" aria-label={`V = ${v}, açı ${a} derece`}>
+      <svg viewBox="0 0 320 200" role="img" aria-label={cev("V = {0}, açı {1} derece", v, a)}>
         <line x1="12" y1={oy} x2="308" y2={oy} stroke="var(--line)" strokeWidth="2" />
         <line x1={ox} y1="14" x2={ox} y2="192" stroke="var(--line)" strokeWidth="2" />
         <text x="304" y={oy - 6} fontSize="12" textAnchor="end" fill="var(--muted)">+x</text>
@@ -137,8 +138,8 @@ function Vektor({ v0, a0 }: { v0: number; a0: number }) {
         )}
       </svg>
       <div className="etk-sonuc">
-        <span style={{ color: "var(--c1)" }}>V<sub>x</sub> = {v}·cos{a}° {yaklasik(vx)} {sayi(vx)}</span>
-        <span style={{ color: "var(--c2)" }}>V<sub>y</sub> = {v}·sin{a}° {yaklasik(vy)} {sayi(vy)}</span>
+        <span style={{ color: "var(--c1)" }}>V<sub>x</sub> = {v}{cev("·cos")}{a}° {yaklasik(vx)} {sayi(vx)}</span>
+        <span style={{ color: "var(--c2)" }}>V<sub>y</sub> = {v}{cev("·sin")}{a}° {yaklasik(vy)} {sayi(vy)}</span>
       </div>
       <div className="adimlar">
         <Surgu ad="V" v={v} min={1} max={10} step={1} yaz={String(v)} set={setV} />
@@ -180,25 +181,25 @@ function Osmoz({ c0 }: { c0: number }) {
     );
   };
   const metin = {
-    hipo: ["Hipotonik ortam", patlar ? "Su hızla hücreye girer. Alyuvar şişer ve patlayabilir (hemoliz)." : "Dışarısı daha seyreltik. Su hücreye girer, alyuvar şişer."],
-    izo: ["İzotonik ortam", "Derişimler eşit. Su iki yöne eşit geçer, hücrenin şekli değişmez."],
-    hiper: ["Hipertonik ortam", "Dışarısı daha derişik. Su hücreden çıkar, alyuvar büzüşür."],
+    hipo: [cev("Hipotonik ortam"), patlar ? cev("Su hızla hücreye girer. Alyuvar şişer ve patlayabilir (hemoliz).") : cev("Dışarısı daha seyreltik. Su hücreye girer, alyuvar şişer.")],
+    izo: [cev("İzotonik ortam"), cev("Derişimler eşit. Su iki yöne eşit geçer, hücrenin şekli değişmez.")],
+    hiper: [cev("Hipertonik ortam"), cev("Dışarısı daha derişik. Su hücreden çıkar, alyuvar büzüşür.")],
   }[hal];
   return (
     <>
-      <svg viewBox="0 0 320 200" role="img" aria-label={`${metin[0]}: dış ortam yüzde ${sayi(c)} tuz`}>
+      <svg viewBox="0 0 320 200" role="img" aria-label={cev("{0}: dış ortam yüzde {1} tuz", metin[0], sayi(c))}>
         <rect x="10" y="10" width="300" height="180" rx="14" fill="var(--c1)" fillOpacity={0.05 + c * 0.04} stroke="var(--line)" strokeWidth="2" />
         {noktalar}
         {hal === "izo" ? [0, 90, 180, 270].map((a) => ok(a, a % 180 === 0)) : [0, 90, 180, 270].map((a) => ok(a, hal === "hipo"))}
         <polygon points={kenar} fill="var(--c2)" fillOpacity="0.25" stroke="var(--c2)" strokeWidth="2.5" strokeDasharray={patlar ? "7 5" : undefined} />
         {hal !== "hipo" && <ellipse cx="160" cy="100" rx={rx * 0.45} ry={ry * 0.4} fill="var(--c2)" fillOpacity="0.15" />}
         <text x="160" y="104" fontSize="12" textAnchor="middle" fill="var(--ink)" fontWeight="700">%0,9</text>
-        <text x="22" y="180" fontSize="12" fill="var(--muted)">dış ortam: %{sayi(c)} tuz</text>
+        <text x="22" y="180" fontSize="12" fill="var(--muted)">{cev("dış ortam: %")}{sayi(c)} {cev("tuz")}</text>
       </svg>
       <div className={`etk-durum ${hal === "izo" ? "" : "on"}`}>{metin[0]}</div>
       <p className="etk-not">{metin[1]}</p>
       <div className="adimlar">
-        <Surgu ad="Tuz" v={t} min={0} max={20} step={1} yaz={`%${sayi(c)}`} set={setT} />
+        <Surgu ad={cev("Tuz")} v={t} min={0} max={20} step={1} yaz={`%${sayi(c)}`} set={setT} />
       </div>
     </>
   );

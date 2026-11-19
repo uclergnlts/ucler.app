@@ -6,6 +6,7 @@
 // Üstteki geri okuyla bir önceki sayfaya dönülür. Yeni kartta görsel parça parça çizilir, yazı cümle cümle gelir.
 // Etkileşimli adımları "kart" alanıyla yerleştirilmiş konularda adımlar anlatımın içinde, ilgili karttan hemen
 // sonra gelir: kısa açıklama (kart) → örnek (sahne kendisi oynar) → sıra sende (görev). Görev bitmeden "Devam" açılmaz.
+import { cev } from "@/lib/dil";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { DERSLER, secmeli, type DersId, type Entry, type Topic } from "@/lib/dersler";
@@ -120,7 +121,7 @@ export default function Lesson({
   // Her sayfa en üstten açılır.
   useEffect(() => { window.scrollTo(0, 0); }, [s.q, s.a, s.ara, s.i]);
   useEffect(() => {
-    if (acikKesin && s.q === nQuiz) setProg({ [`${ders}.${id}`]: `${s.right}/${nQuiz} doğru` });
+    if (acikKesin && s.q === nQuiz) setProg({ [`${ders}.${id}`]: cev("{0}/{1} doğru", s.right, nQuiz) });
   }, [acikKesin, s.q, s.right, nQuiz, ders, id]);
   // Akışta ilerledikçe kaldığın yer yazılır; aşama bitince silinir.
   useEffect(() => {
@@ -209,11 +210,11 @@ export default function Lesson({
     : sonKartOge?.tur === "kart" ? sonKartOge.k + 1 : 0;
   const anlamadimMi = !!sonKartNo && anlamadim.includes(`${ders}.${id}.${sonKartNo}`);
   const bildirYer: BildirimYer | undefined = suanki?.tur === "kart"
-    ? { ders, konu: id, yer: `kart ${suanki.k + 1}`, ozet: t.cards[suanki.k].h }
+    ? { ders, konu: id, yer: cev("kart {0}", suanki.k + 1), ozet: t.cards[suanki.k].h }
     : suanki?.tur === "adim"
-      ? { ders, konu: id, yer: `adım ${suanki.n + 1}`, ozet: suanki.a.baslik }
+      ? { ders, konu: id, yer: cev("adım {0}", suanki.n + 1), ozet: suanki.a.baslik }
       : s.q >= 0 && s.q < nQuiz
-        ? { ders, konu: id, yer: `test sorusu ${s.q + 1}`, ozet: t.quiz[s.q].q }
+        ? { ders, konu: id, yer: cev("test sorusu {0}", s.q + 1), ozet: t.quiz[s.q].q }
         : undefined;
   let body: React.ReactNode, controls: React.ReactNode = null, key: string;
 
@@ -226,18 +227,18 @@ export default function Lesson({
         <section className="grid gap-2">
           <h1 className="text-[26px]">{t.title}</h1>
           <Html as="p" className="text-[15px] text-muted-foreground" html={t.summary} />
-          <span className="text-[14px] font-semibold text-muted-foreground">{nAsama} aşama + mini test · yaklaşık {sureDk(nKart, adimli?.adimlar.length ?? 0, nQuiz)} dk</span>
+          <span className="text-[14px] font-semibold text-muted-foreground">{nAsama} {cev("aşama + mini test · yaklaşık")} {sureDk(nKart, adimli?.adimlar.length ?? 0, nQuiz)} {cev("dk")}</span>
         </section>
         {t.olay && (
           <aside className="grid gap-1.5 border-l-2 border-mark py-0.5 pl-3.5">
-            <span className="text-[11px] font-bold tracking-[.14em] text-mark uppercase">Gerçek olay · {t.olay.yer}</span>
+            <span className="text-[11px] font-bold tracking-[.14em] text-mark uppercase">{cev("Gerçek olay ·")} {t.olay.yer}</span>
             <b className="font-display text-[17px] leading-snug">{t.olay.h}</b>
             <Html as="p" className="text-[14.5px] leading-relaxed text-muted-foreground" html={t.olay.p} />
           </aside>
         )}
         {eksik.length > 0 && (
           <p className="-mt-2 text-[14px] text-muted-foreground">
-            Önce şuna bakman iyi olur:{" "}
+            {cev("Önce şuna bakman iyi olur:")}{" "}
             {eksik.map((o, k) => (
               <span key={o.id}>{k > 0 && ", "}<Link href={href(ders, o.id)} className="font-semibold text-acc">{o.title}</Link></span>
             ))}
@@ -245,17 +246,17 @@ export default function Lesson({
         )}
         <div className="pt-8 pb-2">
           <AsamaYolu
-            balon={prog[konuKey] ? "Yeniden" : bitenA === 0 && !yer ? "Başla" : "Devam"}
+            balon={prog[konuKey] ? cev("Yeniden") : bitenA === 0 && !yer ? cev("Başla") : cev("Devam")}
             dugumler={[
               ...asamalar(nKart).map(([b], a) => ({
-                baslik: `${a + 1}. aşama`,
+                baslik: cev("{0}. aşama", a + 1),
                 alt: t.cards[b].h,
                 durum: (prog[konuKey] ? (a === 0 ? "sirada" : "bitti") : a < bitenA ? "bitti" : a === bitenA ? "sirada" : "kilitli") as YolDugum["durum"],
                 ac: () => asamaAc(a),
               })),
               {
-                baslik: "Mini test",
-                alt: prog[konuKey] ? `Son sonuç: ${prog[konuKey]}` : testAcik ? `${nQuiz} soru` : `${nQuiz} soru · istersen hemen çöz`,
+                baslik: cev("Mini test"),
+                alt: prog[konuKey] ? cev("Son sonuç: {0}", prog[konuKey]) : testAcik ? cev("{0} soru", nQuiz) : cev("{0} soru · istersen hemen çöz", nQuiz),
                 durum: (prog[konuKey] ? "bitti" : testAcik ? "sirada" : "kilitli") as YolDugum["durum"],
                 test: true,
                 // Konuyu bilen öğrenci aşamaları beklemeden kendini sınayabilsin.
@@ -270,7 +271,7 @@ export default function Lesson({
     controls = (
       <Alt>
         <Button className="w-full" data-next onClick={() => step(1)}>
-          {prog[konuKey] ? "Baştan başla" : yer ? "Kaldığın yerden devam et" : bitenA === 0 ? "Başla" : testAcik ? "Mini teste geç" : `${bitenA + 1}. aşamadan devam et`}
+          {prog[konuKey] ? cev("Baştan başla") : yer ? cev("Kaldığın yerden devam et") : bitenA === 0 ? cev("Başla") : testAcik ? cev("Mini teste geç") : cev("{0}. aşamadan devam et", bitenA + 1)}
         </Button>
       </Alt>
     );
@@ -298,10 +299,10 @@ export default function Lesson({
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          {s.a + 1}. aşama bitti
+          {cev("{0}. aşama bitti", s.a + 1)}
         </motion.h1>
         <p className="text-[15px] text-muted-foreground">
-          {sonAsama ? "Bütün kartları gördün. Şimdi öğrendiklerini mini testte dene." : s.a + 2 === nAsama ? "Sırada son aşama var." : `Sırada ${s.a + 2}. aşama var.`}
+          {sonAsama ? cev("Bütün kartları gördün. Şimdi öğrendiklerini mini testte dene.") : s.a + 2 === nAsama ? cev("Sırada son aşama var.") : cev("Sırada {0}. aşama var.", s.a + 2)}
         </p>
         {s.odul > 0 && <PuanRozet puan={s.odul} />}
         <KayitDavet donus={href(ders, id)} />
@@ -309,7 +310,7 @@ export default function Lesson({
     );
     controls = (
       <Alt>
-        <Button className="w-full" data-next onClick={() => step(1)}>{sonAsama ? "Mini teste geç" : `${s.a + 2}. aşamaya geç`}</Button>
+        <Button className="w-full" data-next onClick={() => step(1)}>{sonAsama ? cev("Mini teste geç") : cev("{0}. aşamaya geç", s.a + 2)}</Button>
       </Alt>
     );
   } else if (s.q < 0) {
@@ -358,9 +359,9 @@ export default function Lesson({
         </AnimatePresence>
         {!bildirim && s.i === ilkOge + 1 && !ipucu.includes("akis") && (
           // Bir kez gösterilir: önceki sayfaya üstteki geri okuyla dönülür, anlamadım simgesi sağ üstte.
-          <p className="pb-2.5 text-[13px] text-muted-foreground">Önceki sayfaya üstteki okla dönebilirsin. Anlamadığın ya da hata gördüğün yerde sağ üstteki ? simgesine dokun.</p>
+          <p className="pb-2.5 text-[13px] text-muted-foreground">{cev("Önceki sayfaya üstteki okla dönebilirsin. Anlamadığın ya da hata gördüğün yerde sağ üstteki ? simgesine dokun.")}</p>
         )}
-        <Button className="w-full" data-next disabled={kilitli} onClick={() => step(1)}>{kilitli ? (soruBekler(s.i) ? "Bir cevap seç" : gorevYazisi(ogeler[s.i])) : last ? "Aşamayı bitir" : "Devam"}</Button>
+        <Button className="w-full" data-next disabled={kilitli} onClick={() => step(1)}>{kilitli ? (soruBekler(s.i) ? cev("Bir cevap seç") : gorevYazisi(ogeler[s.i])) : last ? cev("Aşamayı bitir") : cev("Devam")}</Button>
       </Alt>
     );
   } else if (s.q < nQuiz) {
@@ -368,7 +369,7 @@ export default function Lesson({
     key = `q${s.q}`;
     body = (
       <article className="flex flex-col gap-4">
-        <span className="text-[13px] font-bold tabular-nums text-acc">Soru {s.q + 1} / {nQuiz}</span>
+        <span className="text-[13px] font-bold tabular-nums text-acc">{cev("Soru")} {s.q + 1} / {nQuiz}</span>
         <Html as="h2" className={sonuc === null ? "text-[22px]" : "text-lg"} html={Q.q} />
         {not && sonuc === null && <p className="-mt-2 text-[14px] font-medium text-muted-foreground">{not}</p>}
         <TestGovde q={Q} cevap={s.cevap} setCevap={(c) => setS((p) => (p.sonuc !== null ? p : { ...p, cevap: c }))} sonuc={sonuc} sec={degerlendir} tohum={`${konuKey}.${s.q}`} />
@@ -393,10 +394,10 @@ export default function Lesson({
           )}
         </AnimatePresence>
         {etkilesimli && sonuc === null ? (
-          <Button className="w-full" data-next disabled={!hazir(Q, s.cevap)} onClick={() => degerlendir(s.cevap)}>Kontrol et</Button>
+          <Button className="w-full" data-next disabled={!hazir(Q, s.cevap)} onClick={() => degerlendir(s.cevap)}>{cev("Kontrol et")}</Button>
         ) : (
           <Button className="w-full" data-next disabled={sonuc === null} onClick={() => step(1)}>
-            {sonuc === null ? "Bir cevap seç" : s.q === nQuiz - 1 ? "Sonucu gör" : "Sonraki soru"}
+            {sonuc === null ? cev("Bir cevap seç") : s.q === nQuiz - 1 ? cev("Sonucu gör") : cev("Sonraki soru")}
           </Button>
         )}
       </Alt>
@@ -420,14 +421,14 @@ export default function Lesson({
         >
           {s.right}/{nQuiz}
         </motion.div>
-        <h2 className="text-[22px]">{great ? "Harika, hepsi doğru!" : iyi ? "Çok iyi, bir yanlışın var." : "Testi bitirdin."}</h2>
+        <h2 className="text-[22px]">{great ? cev("Harika, hepsi doğru!") : iyi ? cev("Çok iyi, bir yanlışın var.") : cev("Testi bitirdin.")}</h2>
         {s.odul > 0 && <PuanRozet puan={s.odul} />}
         {yanlis > 0 && (
           <p className="mt-1 text-[14px] text-muted-foreground">
-            Yanlışların tekrar sırana eklendi; yarın Ana sayfadaki Tekrar bölümünde karşına çıkacak.
+            {cev("Yanlışların tekrar sırana eklendi; yarın Ana sayfadaki Tekrar bölümünde karşına çıkacak.")}
           </p>
         )}
-        <ol className="mt-3 grid w-full divide-y divide-border rounded-2xl border border-border text-left" aria-label="Soruların sonucu">
+        <ol className="mt-3 grid w-full divide-y divide-border rounded-2xl border border-border text-left" aria-label={cev("Soruların sonucu")}>
           {t.quiz.map((q, j) => {
             const ok = s.cevaplar[j];
             return (
@@ -435,14 +436,14 @@ export default function Lesson({
                 <span
                   className={cn("mt-0.5 grid size-6 flex-none place-items-center rounded-full text-white [&_svg]:size-3.5 [&_svg]:stroke-[3]", ok ? "bg-good" : "bg-bad")}
                   role="img"
-                  aria-label={ok ? "Doğru" : "Yanlış"}
+                  aria-label={ok ? cev("Doğru") : cev("Yanlış")}
                 >
                   {ok ? <Check /> : <Kapat />}
                 </span>
                 <span className="grid min-w-0 gap-0.5">
                   <Html as="span" className="line-clamp-2 text-[14px] leading-snug font-medium" html={q.q} />
                   {!ok && secmeli(q) && (
-                    <span className="text-[13px] text-muted-foreground">Doğru cevap: <Html as="span" className="font-semibold text-foreground" html={q.o[q.a]} /></span>
+                    <span className="text-[13px] text-muted-foreground">{cev("Doğru cevap:")} <Html as="span" className="font-semibold text-foreground" html={q.o[q.a]} /></span>
                   )}
                 </span>
               </li>
@@ -452,17 +453,17 @@ export default function Lesson({
         {/* Konfeti düğmelerin arkasında kalsın. */}
         <div className="relative z-30 mt-4 grid w-full gap-2">
           {yanlis ? (
-            <Button onClick={() => asamaAc(nAsama)}>Testi yeniden çöz</Button>
+            <Button onClick={() => asamaAc(nAsama)}>{cev("Testi yeniden çöz")}</Button>
           ) : next ? (
-            <Button asChild><Link href={href(ders, next.id)}>Sıradaki: {next.title}</Link></Button>
+            <Button asChild><Link href={href(ders, next.id)}>{cev("Sıradaki:")} {next.title}</Link></Button>
           ) : (
-            <Button asChild><Link href={href(ders)}>{DERSLER[ders].ad} konularına dön</Link></Button>
+            <Button asChild><Link href={href(ders)}>{cev("{0} konularına dön", DERSLER[ders].ad)}</Link></Button>
           )}
           <div className="grid grid-cols-2 gap-2">
-            <Button variant="ghost" onClick={() => { yon.current = -1; setS(START); }}>Aşamalara dön</Button>
+            <Button variant="ghost" onClick={() => { yon.current = -1; setS(START); }}>{cev("Aşamalara dön")}</Button>
             {yanlis && next
-              ? <Button asChild variant="ghost"><Link href={href(ders, next.id)}>Sıradaki konu</Link></Button>
-              : <Button asChild variant="ghost"><Link href={href(ders)}>{DERSLER[ders].ad} konuları</Link></Button>}
+              ? <Button asChild variant="ghost"><Link href={href(ders, next.id)}>{cev("Sıradaki konu")}</Link></Button>
+              : <Button asChild variant="ghost"><Link href={href(ders)}>{cev("{0} konuları", DERSLER[ders].ad)}</Link></Button>}
           </div>
         </div>
       </article>
@@ -475,21 +476,21 @@ export default function Lesson({
     return (
       <div className="app" data-ders={ders}>
         <header className="top gap-3">
-          <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={href(ders)} aria-label="Konulara dön"><Close /></Link></Button>
+          <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={href(ders)} aria-label={cev("Konulara dön")}><Close /></Link></Button>
           <span className="truncate font-display text-[15px] font-extrabold">{t.title}</span>
         </header>
         <main className="view pt-6">
           <article className="flex flex-col items-center gap-3 text-center">
             <span className="grid size-16 place-items-center rounded-2xl bg-secondary text-muted-foreground [&_svg]:size-8"><Kilit /></span>
-            <h1 className="text-[24px]">Bu konu henüz kilitli</h1>
+            <h1 className="text-[24px]">{cev("Bu konu henüz kilitli")}</h1>
             <p className="text-[15px] text-muted-foreground">
-              Konular birbirinin üzerine kurulu. {once ? <><b className="text-foreground">“{once.title}”</b> konusunu bitirince bu konu açılır.</> : null}
-              {once && <> Öncesini zaten biliyorsan seviye testinden en az {GECME} alarak doğrudan bu konuya geçebilirsin.</>}
+              {cev("Konular birbirinin üzerine kurulu.")} {once ? <><b className="text-foreground">“{once.title}”</b> {cev("konusunu bitirince bu konu açılır.")}</> : null}
+              {once && <> {cev("Öncesini zaten biliyorsan seviye testinden en az")} {GECME} {cev("alarak doğrudan bu konuya geçebilirsin.")}</>}
             </p>
             <div className="mt-3 grid w-full gap-2">
-              {once && <Button asChild><Link href={seviyeHref(ders, id)}>Seviye testini çöz</Link></Button>}
-              {sira && <Button asChild variant="outline"><Link href={href(ders, sira.id)}>Sıradaki konuya git: {sira.title}</Link></Button>}
-              <Button asChild variant="ghost"><Link href={href(ders)}>{DERSLER[ders].ad} konularına dön</Link></Button>
+              {once && <Button asChild><Link href={seviyeHref(ders, id)}>{cev("Seviye testini çöz")}</Link></Button>}
+              {sira && <Button asChild variant="outline"><Link href={href(ders, sira.id)}>{cev("Sıradaki konuya git:")} {sira.title}</Link></Button>}
+              <Button asChild variant="ghost"><Link href={href(ders)}>{cev("{0} konularına dön", DERSLER[ders].ad)}</Link></Button>
             </div>
           </article>
         </main>
@@ -501,7 +502,7 @@ export default function Lesson({
     return (
       <div className="app" data-ders={ders}>
         <header className="top gap-3">
-          <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={href(ders)} aria-label="Konulara dön"><Close /></Link></Button>
+          <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={href(ders)} aria-label={cev("Konulara dön")}><Close /></Link></Button>
           <span className="truncate font-display text-[15px] font-extrabold">{t.title}</span>
         </header>
         <main className="view pt-6"><PlusEkran konu={t.title} donus={href(ders, id)} /></main>
@@ -514,9 +515,9 @@ export default function Lesson({
       <header className="top gap-3">
         {akista ? (
           // Ders sayfalarında solda geri (önceki sayfa), sağda çıkış.
-          <Button variant="ghost" size="icon" className="-ml-2 text-muted-foreground" aria-label="Önceki sayfa" onClick={geri}><Geri /></Button>
+          <Button variant="ghost" size="icon" className="-ml-2 text-muted-foreground" aria-label={cev("Önceki sayfa")} onClick={geri}><Geri /></Button>
         ) : (
-          <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={href(ders)} aria-label="Konudan çık"><Close /></Link></Button>
+          <Button asChild variant="ghost" size="icon" className="-ml-2 text-muted-foreground"><Link href={href(ders)} aria-label={cev("Konudan çık")}><Close /></Link></Button>
         )}
         <div className="grid min-w-0 flex-1 gap-1.5">
           <span className="truncate font-display text-[15px] font-extrabold">{t.title}</span>
@@ -543,14 +544,14 @@ export default function Lesson({
           size="icon"
           className={cn(akista ? "" : "-mr-2", saved ? "text-acc [&_svg]:fill-current" : "text-muted-foreground")}
           aria-pressed={saved}
-          aria-label="Konuyu kaydet"
-          title="Konuyu kaydet"
+          aria-label={cev("Konuyu kaydet")}
+          title={cev("Konuyu kaydet")}
           onClick={konuKaydet}
         >
           <Bookmark />
         </Button>
         {davet}
-        {akista && <Button asChild variant="ghost" size="icon" className="-mr-2 text-muted-foreground"><Link href={href(ders)} aria-label="Konudan çık"><Close /></Link></Button>}
+        {akista && <Button asChild variant="ghost" size="icon" className="-mr-2 text-muted-foreground"><Link href={href(ders)} aria-label={cev("Konudan çık")}><Close /></Link></Button>}
       </header>
       <main className="view gap-0 pt-1 pb-0">
         <AnimatePresence mode="wait" custom={yon.current}>
@@ -581,14 +582,14 @@ export default function Lesson({
 /** Görevi bitmemiş adımda pasif "Devam" düğmesinin yazısı: öğrenciye ne yapması gerektiğini söyler. */
 function gorevYazisi(o: Oge | undefined) {
   const tur = o?.tur === "adim" ? o.a.gorev.tur : "";
-  return tur === "secim" || tur === "tahmin" ? "Bir cevap seç" : tur === "ayarla" ? "Değerleri hedefe getir" : tur === "kesfet" ? "Önce bulguları keşfet" : tur === "oynat" ? "Önce sahneyi oynat" : "Devam";
+  return tur === "secim" || tur === "tahmin" ? cev("Bir cevap seç") : tur === "ayarla" ? cev("Değerleri hedefe getir") : tur === "kesfet" ? cev("Önce bulguları keşfet") : tur === "oynat" ? cev("Önce sahneyi oynat") : cev("Devam");
 }
 
 /** Konu ilerleme çubuğu: her aşama ve mini test ayrı bir parça; parçalar kendi içinde dolar. */
 function AsamaCubugu({ dolu }: { dolu: number[] }) {
   const toplam = dolu.reduce((a, b) => a + Math.min(1, b), 0);
   return (
-    <div className="flex gap-1" role="progressbar" aria-label="Konu ilerlemesi" aria-valuenow={Math.round((100 * toplam) / dolu.length)} aria-valuemin={0} aria-valuemax={100}>
+    <div className="flex gap-1" role="progressbar" aria-label={cev("Konu ilerlemesi")} aria-valuenow={Math.round((100 * toplam) / dolu.length)} aria-valuemin={0} aria-valuemax={100}>
       {dolu.map((v, k) => (
         <div key={k} className="relative h-[3px] flex-1 overflow-hidden bg-border-strong">
           <motion.div className="h-full bg-foreground" initial={false} animate={{ width: `${Math.max(0, Math.min(1, v)) * 100}%` }} transition={{ type: "spring", stiffness: 260, damping: 32 }} />
@@ -666,7 +667,7 @@ function AkisKart({ c, vids, canli, oynat, ref, cevaplandi, soruGoster, tamam, b
                   {v.poster && <img src={v.poster} alt="" className="absolute inset-0 size-full object-cover" />}
                   <span className="relative grid size-6 place-items-center rounded-full bg-white/90 text-foreground [&_svg]:size-3.5"><Play /></span>
                 </span>
-                <span><b className="block text-[15px] leading-snug font-semibold">{v.baslik}</b><span className="block text-[13px] text-muted-foreground">Kısa video · {sureYaz(v.sure)}</span></span>
+                <span><b className="block text-[15px] leading-snug font-semibold">{v.baslik}</b><span className="block text-[13px] text-muted-foreground">{cev("Kısa video ·")} {sureYaz(v.sure)}</span></span>
               </button>
             </Kap>
           ))}

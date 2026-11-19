@@ -2,10 +2,11 @@
 // Kimya sahneleri (redoks, elektrokimya): yükseltgenme basamağı hesabı, Cu²⁺ çözeltisinde çinko, aktiflik sırası,
 // redoks olan ve olmayan tepkimeler; Daniell pili ve tuz köprüsü, standart potansiyeller, katsayı ve E°,
 // suyun elektrolizi, Faraday hesabı, kalay ve çinko kaplamada korozyon.
+import { cev, SAYI_YEREL } from "@/lib/dil";
 import { rastgele, yumusak, type SahneKaydi, type SahneProps } from "./ortak";
 
 const oran = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 0 ? Math.min(1, t / sure) : 0);
-const virgul = (x: number, b = 2) => x.toLocaleString("tr-TR", { maximumFractionDigits: b, minimumFractionDigits: 0 });
+const virgul = (x: number, b = 2) => x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: b, minimumFractionDigits: 0 });
 /** Sayıyı işaretiyle yazar: +6, −3, 0. */
 const isaret = (n: number) => (n > 0 ? `+${virgul(n)}` : n < 0 ? `−${virgul(-n)}` : "0");
 /** Binlikleri boşlukla ayırır: 19 300. */
@@ -27,7 +28,7 @@ function Basamak({ s, v }: SahneProps) {
   const toplam = f.parca.reduce((a, p) => a + p.n * deger(p), 0), tamam = toplam === f.yuk;
   const ifade = f.parca.map((p) => (p.n > 1 ? `${p.n}(${isaret(deger(p))})` : `(${isaret(deger(p))})`)).join(" + ");
   return (
-    <svg viewBox="0 0 340 214" role="img" aria-label={`${f.ad}: toplam ${isaret(toplam)}, olması gereken ${isaret(f.yuk)}`}>
+    <svg viewBox="0 0 340 214" role="img" aria-label={cev("{0}: toplam {1}, olması gereken {2}", f.ad, isaret(toplam), isaret(f.yuk))}>
       <text x={170} y={40} fontSize={28} fontWeight={800} textAnchor="middle" fill="var(--ink)">{f.ad}</text>
       {f.parca.map((p, i) => {
         const px = x0 + i * (W + ara), bil = p.b === null;
@@ -36,13 +37,13 @@ function Basamak({ s, v }: SahneProps) {
             <rect x={px} y={60} width={W} height={80} rx={10} fill={bil ? "var(--kimya-soft)" : "var(--panel)"} stroke={bil ? "var(--kimya)" : "var(--line-2)"} strokeWidth={bil ? 2 : 1} />
             <text x={px + W / 2} y={86} fontSize={18} fontWeight={800} textAnchor="middle" fill="var(--ink)">{p.el}<tspan fontSize={12} fill="var(--muted)">{p.n > 1 ? ` ×${p.n}` : ""}</tspan></text>
             <text x={px + W / 2} y={111} fontSize={16} fontWeight={800} textAnchor="middle" fill={bil ? "var(--kimya)" : "var(--ink)"}>{isaret(deger(p))}</text>
-            <text x={px + W / 2} y={130} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">katkı {isaret(p.n * deger(p))}</text>
+            <text x={px + W / 2} y={130} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">{cev("katkı")} {isaret(p.n * deger(p))}</text>
           </g>
         );
       })}
       <text x={170} y={170} fontSize={14} fontWeight={800} textAnchor="middle" fill="var(--ink)">{ifade} = {isaret(toplam)}</text>
       <text x={170} y={198} fontSize={13} fontWeight={800} textAnchor="middle" fill={tamam ? "var(--good)" : "var(--muted)"}>
-        {tamam ? `Toplam ${isaret(f.yuk)}: tanecik yüküne eşit` : `Toplam ${isaret(f.yuk)} olmalı (${f.yuk === 0 ? "nötr bileşik" : "iyon yükü"})`}
+        {tamam ? cev("Toplam {0}: tanecik yüküne eşit", isaret(f.yuk)) : cev("Toplam {0} olmalı ({1})", isaret(f.yuk), f.yuk === 0 ? "nötr bileşik" : "iyon yükü")}
       </text>
     </svg>
   );
@@ -62,14 +63,14 @@ function ZnCu({ s, t, oynuyor }: SahneProps) {
   const w = 18 * (1 - 0.18 * u);
   const ok = 0 < u && u < 1 && Math.floor(t * 3) % 2 === 0;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={bitti ? "Çinko şeritte bakır birikti, mavi renk soldu" : "Çinko şerit mavi CuSO₄ çözeltisinde"}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={bitti ? cev("Çinko şeritte bakır birikti, mavi renk soldu") : cev("Çinko şerit mavi CuSO₄ çözeltisinde")}>
       <rect x={92} y={80} width={156} height={96} fill={MAVI} opacity={0.08 + 0.36 * (1 - 0.7 * u)} />
       {cuIyon.slice(0, nCu).map((p, i) => <circle key={`c${i}`} cx={p.x} cy={p.y} r={4} fill={MAVI} />)}
       {znIyon.slice(0, nZn).map((p, i) => <circle key={`z${i}`} cx={p.x} cy={p.y} r={4} fill="var(--surface)" stroke={DEMIR} strokeWidth={1.4} />)}
       <rect x={170 - w / 2} y={30} width={w} height={136} rx={2} fill={GRI} stroke="#8a95a3" />
       {birikim.slice(0, nBir).map((p, i) => <circle key={`b${i}`} cx={170 + p.yan * (w / 2 + 1)} cy={p.y} r={p.r} fill={BAKIR} />)}
       <path d="M92 50 L92 176 Q92 182 98 182 L242 182 Q248 182 248 176 L248 50" fill="none" stroke="var(--ink)" strokeWidth={2} />
-      <text x={186} y={44} fontSize={12} fontWeight={800} fill="var(--ink)">Zn şerit</text>
+      <text x={186} y={44} fontSize={12} fontWeight={800} fill="var(--ink)">{cev("Zn şerit")}</text>
       {ok && (
         <g>
           <line x1={182} x2={206} y1={124} y2={124} stroke="var(--c4)" strokeWidth={2.4} />
@@ -78,19 +79,19 @@ function ZnCu({ s, t, oynuyor }: SahneProps) {
         </g>
       )}
       <g fontSize={11} fontWeight={700} fill="var(--muted)">
-        <circle cx={262} cy={98} r={4} fill={MAVI} /><text x={270} y={102}>Cu²⁺</text>
-        <circle cx={262} cy={118} r={4} fill="var(--surface)" stroke={DEMIR} strokeWidth={1.4} /><text x={270} y={122}>Zn²⁺</text>
-        <circle cx={262} cy={138} r={4} fill={BAKIR} /><text x={270} y={142}>Cu (katı)</text>
+        <circle cx={262} cy={98} r={4} fill={MAVI} /><text x={270} y={102}>{cev("Cu²⁺")}</text>
+        <circle cx={262} cy={118} r={4} fill="var(--surface)" stroke={DEMIR} strokeWidth={1.4} /><text x={270} y={122}>{cev("Zn²⁺")}</text>
+        <circle cx={262} cy={138} r={4} fill={BAKIR} /><text x={270} y={142}>{cev("Cu (katı)")}</text>
       </g>
       {bitti ? (
         <g fontSize={12} fontWeight={800}>
-          <text x={20} y={206} fill="var(--ink)">Zn → Zn²⁺ + 2e⁻</text>
-          <text x={320} y={206} textAnchor="end" fill="var(--c2)">yükseltgenme</text>
-          <text x={20} y={226} fill="var(--ink)">Cu²⁺ + 2e⁻ → Cu</text>
-          <text x={320} y={226} textAnchor="end" fill="var(--c1)">indirgenme</text>
+          <text x={20} y={206} fill="var(--ink)">{cev("Zn → Zn²⁺ + 2e⁻")}</text>
+          <text x={320} y={206} textAnchor="end" fill="var(--c2)">{cev("yükseltgenme")}</text>
+          <text x={20} y={226} fill="var(--ink)">{cev("Cu²⁺ + 2e⁻ → Cu")}</text>
+          <text x={320} y={226} textAnchor="end" fill="var(--c1)">{cev("indirgenme")}</text>
         </g>
       ) : (
-        <text x={170} y={210} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">mavi CuSO₄ çözeltisi</text>
+        <text x={170} y={210} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">{cev("mavi CuSO₄ çözeltisi")}</text>
       )}
     </svg>
   );
@@ -98,13 +99,13 @@ function ZnCu({ s, t, oynuyor }: SahneProps) {
 
 /* ---------- aktiflik sırası ---------- */
 
-const SIRA = ["K", "Ca", "Na", "Mg", "Al", "Zn", "Fe", "Ni", "Sn", "Pb", "H", "Cu", "Ag", "Au"];
+const SIRA = ["K", cev("Ca"), cev("Na"), cev("Mg"), cev("Al"), cev("Zn"), cev("Fe"), cev("Ni"), cev("Sn"), cev("Pb"), "H", cev("Cu"), cev("Ag"), cev("Au")];
 const METAL = SIRA.filter((m) => m !== "H"); // sayaç bu dizinin sırasını kullanır (0-12)
 const DENKLEM: Record<string, string> = {
-  K: "2K + 2H₂O → 2KOH + H₂", Ca: "Ca + 2H₂O → Ca(OH)₂ + H₂", Na: "2Na + 2H₂O → 2NaOH + H₂",
-  Mg: "Mg + Cu²⁺ → Mg²⁺ + Cu", Al: "2Al + 3Cu²⁺ → 2Al³⁺ + 3Cu", Zn: "Zn + Cu²⁺ → Zn²⁺ + Cu",
-  Fe: "Fe + Cu²⁺ → Fe²⁺ + Cu", Ni: "Ni + Cu²⁺ → Ni²⁺ + Cu", Sn: "Sn + Cu²⁺ → Sn²⁺ + Cu", Pb: "Pb + Cu²⁺ → Pb²⁺ + Cu",
-  Cu: "Cu + Cu²⁺: değişim yok", Ag: "Ag + Cu²⁺: tepkime yok", Au: "Au + Cu²⁺: tepkime yok",
+  K: cev("2K + 2H₂O → 2KOH + H₂"), Ca: cev("Ca + 2H₂O → Ca(OH)₂ + H₂"), Na: cev("2Na + 2H₂O → 2NaOH + H₂"),
+  Mg: cev("Mg + Cu²⁺ → Mg²⁺ + Cu"), Al: cev("2Al + 3Cu²⁺ → 2Al³⁺ + 3Cu"), Zn: cev("Zn + Cu²⁺ → Zn²⁺ + Cu"),
+  Fe: cev("Fe + Cu²⁺ → Fe²⁺ + Cu"), Ni: cev("Ni + Cu²⁺ → Ni²⁺ + Cu"), Sn: cev("Sn + Cu²⁺ → Sn²⁺ + Cu"), Pb: cev("Pb + Cu²⁺ → Pb²⁺ + Cu"),
+  Cu: cev("Cu + Cu²⁺: değişim yok"), Ag: cev("Ag + Cu²⁺: tepkime yok"), Au: cev("Au + Cu²⁺: tepkime yok"),
 };
 
 function Aktiflik({ v, set }: SahneProps) {
@@ -114,16 +115,16 @@ function Aktiflik({ v, set }: SahneProps) {
   const r = rastgele(3);
   const birikim = Array.from({ length: 14 }, () => ({ yan: r() < 0.5 ? -1 : 1, y: 120 + r() * 52 }));
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label={`${ad} metali Cu²⁺ çözeltisinde: ${DENKLEM[ad]}`}>
-      <text x={10} y={16} fontSize={11} fontWeight={700} fill="var(--muted)">daha aktif</text>
-      <text x={330} y={16} fontSize={11} fontWeight={700} textAnchor="end" fill="var(--muted)">daha az aktif</text>
+    <svg viewBox="0 0 340 226" role="img" aria-label={cev("{0} metali Cu²⁺ çözeltisinde: {1}", ad, DENKLEM[ad])}>
+      <text x={10} y={16} fontSize={11} fontWeight={700} fill="var(--muted)">{cev("daha aktif")}</text>
+      <text x={330} y={16} fontSize={11} fontWeight={700} textAnchor="end" fill="var(--muted)">{cev("daha az aktif")}</text>
       <line x1={80} x2={252} y1={12} y2={12} stroke="var(--muted)" strokeWidth={1.4} />
       <path d="M258 12 L250 8 L250 16 Z" fill="var(--muted)" />
       {SIRA.map((e, i) => {
         const x = 10 + i * W, mi = METAL.indexOf(e), sec = mi === m, h = e === "H";
         return (
           <g key={e} onClick={h ? undefined : () => set("m", mi)} style={{ cursor: h ? "default" : "pointer" }}>
-            <rect x={x + 1} y={26} width={W - 2} height={28} rx={6} fill={sec ? "var(--kimya)" : h ? "none" : "var(--panel)"} stroke={e === "Cu" ? MAVI : "var(--line-2)"} strokeWidth={e === "Cu" ? 2 : 1} strokeDasharray={h ? "3 3" : undefined} />
+            <rect x={x + 1} y={26} width={W - 2} height={28} rx={6} fill={sec ? "var(--kimya)" : h ? "none" : "var(--panel)"} stroke={e === "Cu" ? MAVI : "var(--line-2)"} strokeWidth={e === cev("Cu") ? 2 : 1} strokeDasharray={h ? "3 3" : undefined} />
             <text x={x + W / 2} y={44} fontSize={11} fontWeight={800} textAnchor="middle" fill={sec ? "#fff" : h ? "var(--muted)" : "var(--ink)"}>{e}</text>
           </g>
         );
@@ -133,17 +134,17 @@ function Aktiflik({ v, set }: SahneProps) {
       {durum === "var" && birikim.map((p, i) => <circle key={i} cx={95 + p.yan * 8} cy={p.y} r={3} fill={BAKIR} />)}
       {durum === "su" && [0, 1, 2, 3, 4].map((i) => <circle key={i} cx={112 + (i % 2) * 12} cy={160 - i * 10} r={3} fill="none" stroke="var(--c1)" strokeWidth={1.3} />)}
       <path d="M40 92 L40 180 Q40 186 46 186 L144 186 Q150 186 150 180 L150 92" fill="none" stroke="var(--ink)" strokeWidth={2} />
-      <text x={95} y={202} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">Cu²⁺ çözeltisi</text>
+      <text x={95} y={202} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">{cev("Cu²⁺ çözeltisi")}</text>
       <g fontWeight={800}>
-        <text x={168} y={96} fontSize={14} fill="var(--ink)">Metal: {ad}</text>
+        <text x={168} y={96} fontSize={14} fill="var(--ink)">{cev("Metal:")} {ad}</text>
         <text x={168} y={120} fontSize={12.5} fill={durum === "var" ? "var(--good)" : durum === "su" ? "var(--c4)" : "var(--bad)"}>
-          {durum === "var" ? "Tepkime var" : durum === "su" ? "Suyla tepkimeye girer" : durum === "ayni" ? "Aynı metal" : "Tepkime yok"}
+          {durum === "var" ? cev("Tepkime var") : durum === "su" ? cev("Suyla tepkimeye girer") : durum === "ayni" ? cev("Aynı metal") : cev("Tepkime yok")}
         </text>
         <g fontSize={11.5} fontWeight={700} fill="var(--muted)">
-          {durum === "var" && <><text x={168} y={142}>{ad}, Cu'dan aktif: Cu²⁺</text><text x={168} y={158}>iyonunu indirger.</text></>}
-          {durum === "su" && <><text x={168} y={142}>Çok aktif: sudan H₂</text><text x={168} y={158}>açığa çıkarır.</text></>}
-          {durum === "ayni" && <text x={168} y={142}>Değişim olmaz.</text>}
-          {durum === "yok" && <><text x={168} y={142}>Cu daha aktif; {ad}, Cu²⁺</text><text x={168} y={158}>iyonunu indirgeyemez.</text></>}
+          {durum === "var" && <><text x={168} y={142}>{ad}{cev(", Cu'dan aktif: Cu²⁺")}</text><text x={168} y={158}>{cev("iyonunu indirger.")}</text></>}
+          {durum === "su" && <><text x={168} y={142}>{cev("Çok aktif: sudan H₂")}</text><text x={168} y={158}>{cev("açığa çıkarır.")}</text></>}
+          {durum === "ayni" && <text x={168} y={142}>{cev("Değişim olmaz.")}</text>}
+          {durum === "yok" && <><text x={168} y={142}>{cev("Cu daha aktif;")} {ad}{cev(", Cu²⁺")}</text><text x={168} y={158}>{cev("iyonunu indirgeyemez.")}</text></>}
         </g>
       </g>
       <text x={170} y={220} fontSize={12.5} fontWeight={800} textAnchor="middle" fill="var(--ink)">{DENKLEM[ad]}</text>
@@ -154,15 +155,15 @@ function Aktiflik({ v, set }: SahneProps) {
 /* ---------- redoks mu? ---------- */
 
 const TEPKIME = [
-  { harf: "A", d: "Zn + 2HCl → ZnCl₂ + H₂", b: "Zn 0 → +2, H +1 → 0", redoks: true },
-  { harf: "B", d: "HCl + NaOH → NaCl + H₂O", b: "H +1, Cl −1, Na +1, O −2", redoks: false },
-  { harf: "C", d: "CH₄ + 2O₂ → CO₂ + 2H₂O", b: "C −4 → +4, O 0 → −2", redoks: true },
+  { harf: "A", d: cev("Zn + 2HCl → ZnCl₂ + H₂"), b: cev("Zn 0 → +2, H +1 → 0"), redoks: true },
+  { harf: "B", d: cev("HCl + NaOH → NaCl + H₂O"), b: cev("H +1, Cl −1, Na +1, O −2"), redoks: false },
+  { harf: "C", d: cev("CH₄ + 2O₂ → CO₂ + 2H₂O"), b: "C −4 → +4, O 0 → −2", redoks: true },
 ];
 
 function RedoksMu({ v }: SahneProps) {
   const goster = (v.g ?? 0) === 1;
   return (
-    <svg viewBox="0 0 340 204" role="img" aria-label={goster ? "A ve C redoks, B redoks değil" : "Üç tepkime, basamaklar gizli"}>
+    <svg viewBox="0 0 340 204" role="img" aria-label={goster ? cev("A ve C redoks, B redoks değil") : cev("Üç tepkime, basamaklar gizli")}>
       {TEPKIME.map((k, i) => {
         const y = 14 + i * 64;
         return (
@@ -174,10 +175,10 @@ function RedoksMu({ v }: SahneProps) {
             {goster ? (
               <>
                 <text x={48} y={y + 45} fontSize={11.5} fontWeight={700} fill="var(--muted)">{k.b}</text>
-                <text x={322} y={y + 45} fontSize={11.5} fontWeight={800} textAnchor="end" fill={k.redoks ? "var(--good)" : "var(--c2)"}>{k.redoks ? "redoks" : "değişmez"}</text>
+                <text x={322} y={y + 45} fontSize={11.5} fontWeight={800} textAnchor="end" fill={k.redoks ? "var(--good)" : "var(--c2)"}>{k.redoks ? "redoks" : cev("değişmez")}</text>
               </>
             ) : (
-              <text x={48} y={y + 45} fontSize={11.5} fontWeight={700} fill="var(--muted)">basamaklar gizli</text>
+              <text x={48} y={y + 45} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("basamaklar gizli")}</text>
             )}
           </g>
         );
@@ -208,7 +209,7 @@ function Daniell({ s, v, t, oynuyor }: SahneProps) {
   const hareket = kopru && oynar && u > 0 && u < 1;
   const etiket = !oynar || bitti;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={kopru ? (akim ? "Elektronlar telde Zn'den Cu'ya akıyor, 1,10 V" : "Daniell pili") : "Tuz köprüsü yok: 0 V, akım yok"}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={kopru ? (akim ? cev("Elektronlar telde Zn'den Cu'ya akıyor, 1,10 V") : cev("Daniell pili")) : cev("Tuz köprüsü yok: 0 V, akım yok")}>
       <polyline points={yol.map((p) => p.join(",")).join(" ")} fill="none" stroke="var(--ink)" strokeWidth={2} />
       <circle cx={170} cy={36} r={18} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2} />
       <text x={170} y={41} fontSize={14} fontWeight={800} textAnchor="middle" fill="var(--ink)">V</text>
@@ -227,8 +228,8 @@ function Daniell({ s, v, t, oynuyor }: SahneProps) {
       ) : (
         <path d="M108 128 L108 90 L232 90 L232 128" fill="none" stroke="var(--line-2)" strokeWidth={1.5} strokeDasharray="4 4" />
       )}
-      <text x={170} y={110} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">{kopru ? "tuz köprüsü" : "köprü yok"}</text>
-      {kopru && <text x={170} y={124} fontSize={10.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">(KNO₃)</text>}
+      <text x={170} y={110} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">{kopru ? cev("tuz köprüsü") : cev("köprü yok")}</text>
+      {kopru && <text x={170} y={124} fontSize={10.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">{cev("(KNO₃)")}</text>}
       {/* kaplar */}
       <rect x={32} y={116} width={92} height={70} fill="color-mix(in srgb, #8caddf 20%, var(--surface))" />
       <rect x={216} y={116} width={92} height={70} fill={MAVI} opacity={0.35 - 0.12 * (oynar ? u : 0)} />
@@ -237,15 +238,15 @@ function Daniell({ s, v, t, oynuyor }: SahneProps) {
       <path d="M30 100 L30 186 Q30 192 36 192 L120 192 Q126 192 126 186 L126 100 M214 100 L214 186 Q214 192 220 192 L304 192 Q310 192 310 186 L310 100" fill="none" stroke="var(--ink)" strokeWidth={2} />
       {etiket ? (
         <g fontWeight={800}>
-          <text x={80} y={210} fontSize={12.5} textAnchor="middle" fill="var(--c2)">anot (−)</text>
-          <text x={260} y={210} fontSize={12.5} textAnchor="middle" fill="var(--c1)">katot (+)</text>
-          <text x={80} y={228} fontSize={11} textAnchor="middle" fill="var(--muted)">Zn → Zn²⁺ + 2e⁻</text>
-          <text x={260} y={228} fontSize={11} textAnchor="middle" fill="var(--muted)">Cu²⁺ + 2e⁻ → Cu</text>
+          <text x={80} y={210} fontSize={12.5} textAnchor="middle" fill="var(--c2)">{cev("anot (−)")}</text>
+          <text x={260} y={210} fontSize={12.5} textAnchor="middle" fill="var(--c1)">{cev("katot (+)")}</text>
+          <text x={80} y={228} fontSize={11} textAnchor="middle" fill="var(--muted)">{cev("Zn → Zn²⁺ + 2e⁻")}</text>
+          <text x={260} y={228} fontSize={11} textAnchor="middle" fill="var(--muted)">{cev("Cu²⁺ + 2e⁻ → Cu")}</text>
         </g>
       ) : (
         <g fontSize={12} fontWeight={800} textAnchor="middle" fill="var(--ink)">
-          <text x={80} y={210}>Zn | ZnSO₄</text>
-          <text x={260} y={210}>Cu | CuSO₄</text>
+          <text x={80} y={210}>{cev("Zn | ZnSO₄")}</text>
+          <text x={260} y={210}>{cev("Cu | CuSO₄")}</text>
         </g>
       )}
     </svg>
@@ -262,13 +263,13 @@ const YARI = [
 function Potansiyel({ v }: SahneProps) {
   const a = Math.max(1, Math.min(6, v.a ?? 2)) - 1, k = Math.max(1, Math.min(6, v.k ?? 5)) - 1;
   const E = YARI[k].e - YARI[a].e, ayni = a === k;
-  const iki = (x: number) => Math.abs(x).toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const iki = (x: number) => Math.abs(x).toLocaleString(SAYI_YEREL, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const isr = (x: number) => (x < 0 ? `−${iki(x)}` : `+${iki(x)}`);
   const sayi = (x: number) => (x < 0 ? `(−${iki(x)})` : iki(x));
   return (
-    <svg viewBox="0 0 340 228" role="img" aria-label={ayni ? "Anot ve katot aynı" : `Anot ${YARI[a].ad}, katot ${YARI[k].ad}: E° pil ${isaret(E)} V`}>
+    <svg viewBox="0 0 340 228" role="img" aria-label={ayni ? cev("Anot ve katot aynı") : cev("Anot {0}, katot {1}: E° pil {2} V", YARI[a].ad, YARI[k].ad, isaret(E))}>
       <g fontSize={11} fontWeight={700} fill="var(--muted)">
-        <text x={40} y={16}>yarı hücre</text>
+        <text x={40} y={16}>{cev("yarı hücre")}</text>
         <text x={172} y={16} textAnchor="end">E° (V)</text>
       </g>
       {YARI.map((h, i) => {
@@ -279,14 +280,14 @@ function Potansiyel({ v }: SahneProps) {
             <text x={22} y={y + 15} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">{i + 1}</text>
             <text x={40} y={y + 15} fontSize={12.5} fontWeight={800} fill="var(--ink)">{h.ad}</text>
             <text x={172} y={y + 15} fontSize={12.5} fontWeight={800} textAnchor="end" fill="var(--ink)">{isr(h.e)}</text>
-            {an && <><rect x={192} y={y + 3} width={56} height={15} rx={7} fill="var(--c2)" /><text x={220} y={y + 14} fontSize={10.5} fontWeight={800} textAnchor="middle" fill="#fff">anot</text></>}
-            {ka && <><rect x={256} y={y + 3} width={56} height={15} rx={7} fill="var(--c1)" /><text x={284} y={y + 14} fontSize={10.5} fontWeight={800} textAnchor="middle" fill="#fff">katot</text></>}
+            {an && <><rect x={192} y={y + 3} width={56} height={15} rx={7} fill="var(--c2)" /><text x={220} y={y + 14} fontSize={10.5} fontWeight={800} textAnchor="middle" fill="#fff">{cev("anot")}</text></>}
+            {ka && <><rect x={256} y={y + 3} width={56} height={15} rx={7} fill="var(--c1)" /><text x={284} y={y + 14} fontSize={10.5} fontWeight={800} textAnchor="middle" fill="#fff">{cev("katot")}</text></>}
           </g>
         );
       })}
-      <text x={170} y={190} fontSize={12.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">E°pil = E°katot − E°anot</text>
+      <text x={170} y={190} fontSize={12.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">{cev("E°pil = E°katot − E°anot")}</text>
       <text x={170} y={214} fontSize={14} fontWeight={800} textAnchor="middle" fill={ayni ? "var(--bad)" : E > 0 ? "var(--ink)" : "var(--bad)"}>
-        {ayni ? "Anot ve katot aynı olamaz" : `= ${sayi(YARI[k].e)} − ${sayi(YARI[a].e)} = ${isr(E)} V${E < 0 ? ": istemsiz" : ""}`}
+        {ayni ? cev("Anot ve katot aynı olamaz") : `= ${sayi(YARI[k].e)} − ${sayi(YARI[a].e)} = ${isr(E)} V${E < 0 ? ": istemsiz" : ""}`}
       </text>
     </svg>
   );
@@ -296,22 +297,22 @@ function Potansiyel({ v }: SahneProps) {
 
 function Katsayi() {
   return (
-    <svg viewBox="0 0 340 196" role="img" aria-label="Cu + 2Ag⁺ → Cu²⁺ + 2Ag: yarı tepkimeler ve E° değerleri">
-      <text x={170} y={30} fontSize={16} fontWeight={800} textAnchor="middle" fill="var(--ink)">Cu + 2Ag⁺ → Cu²⁺ + 2Ag</text>
+    <svg viewBox="0 0 340 196" role="img" aria-label={cev("Cu + 2Ag⁺ → Cu²⁺ + 2Ag: yarı tepkimeler ve E° değerleri")}>
+      <text x={170} y={30} fontSize={16} fontWeight={800} textAnchor="middle" fill="var(--ink)">{cev("Cu + 2Ag⁺ → Cu²⁺ + 2Ag")}</text>
       <g>
         <rect x={8} y={50} width={324} height={50} rx={10} fill="var(--panel)" />
-        <text x={20} y={70} fontSize={11.5} fontWeight={800} fill="var(--c2)">anot</text>
-        <text x={20} y={90} fontSize={13.5} fontWeight={800} fill="var(--ink)">Cu → Cu²⁺ + 2e⁻</text>
-        <text x={320} y={90} fontSize={12} fontWeight={700} textAnchor="end" fill="var(--muted)">Cu²⁺/Cu: +0,34 V</text>
+        <text x={20} y={70} fontSize={11.5} fontWeight={800} fill="var(--c2)">{cev("anot")}</text>
+        <text x={20} y={90} fontSize={13.5} fontWeight={800} fill="var(--ink)">{cev("Cu → Cu²⁺ + 2e⁻")}</text>
+        <text x={320} y={90} fontSize={12} fontWeight={700} textAnchor="end" fill="var(--muted)">{cev("Cu²⁺/Cu: +0,34 V")}</text>
       </g>
       <g>
         <rect x={8} y={108} width={324} height={50} rx={10} fill="var(--panel)" />
-        <text x={20} y={128} fontSize={11.5} fontWeight={800} fill="var(--c1)">katot</text>
-        <text x={64} y={128} fontSize={11} fontWeight={700} fill="var(--muted)">(×2 ile çarpıldı)</text>
-        <text x={20} y={148} fontSize={13.5} fontWeight={800} fill="var(--ink)">2Ag⁺ + 2e⁻ → 2Ag</text>
-        <text x={320} y={148} fontSize={12} fontWeight={700} textAnchor="end" fill="var(--muted)">Ag⁺/Ag: +0,80 V</text>
+        <text x={20} y={128} fontSize={11.5} fontWeight={800} fill="var(--c1)">{cev("katot")}</text>
+        <text x={64} y={128} fontSize={11} fontWeight={700} fill="var(--muted)">{cev("(×2 ile çarpıldı)")}</text>
+        <text x={20} y={148} fontSize={13.5} fontWeight={800} fill="var(--ink)">{cev("2Ag⁺ + 2e⁻ → 2Ag")}</text>
+        <text x={320} y={148} fontSize={12} fontWeight={700} textAnchor="end" fill="var(--muted)">{cev("Ag⁺/Ag: +0,80 V")}</text>
       </g>
-      <text x={170} y={184} fontSize={15} fontWeight={800} textAnchor="middle" fill="var(--kimya)">E°pil = ?</text>
+      <text x={170} y={184} fontSize={15} fontWeight={800} textAnchor="middle" fill="var(--kimya)">{cev("E°pil = ?")}</text>
     </svg>
   );
 }
@@ -323,7 +324,7 @@ function Su({ s, t, oynuyor }: SahneProps) {
   const H = 100 * u, O = 50 * u;
   const tup = [{ x: 120, gaz: H, ad: "H₂", hacim: 20 * u, kab: 5 }, { x: 220, gaz: O, ad: "O₂", hacim: 10 * u, kab: 2 }];
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={bitti ? "Katotta 20 mL H₂, anotta 10 mL O₂" : "Suyun elektrolizi"}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={bitti ? cev("Katotta 20 mL H₂, anotta 10 mL O₂") : cev("Suyun elektrolizi")}>
       <text x={170} y={16} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--ink)">2H₂O → 2H₂ + O₂</text>
       <rect x={62} y={150} width={216} height={50} fill="color-mix(in srgb, #3794f3 20%, var(--surface))" />
       {tup.map((k, i) => (
@@ -348,10 +349,10 @@ function Su({ s, t, oynuyor }: SahneProps) {
         <text x={186} y={220} fill="var(--c2)">+</text>
       </g>
       <g fontSize={12} fontWeight={800}>
-        <text x={98} y={50} textAnchor="end" fill="var(--c1)">katot (−)</text>
-        <text x={242} y={50} fill="var(--c2)">anot (+)</text>
-        {t > 0 && <text x={98} y={70} textAnchor="end" fill="var(--ink)">{tup[0].ad}: {Math.round(tup[0].hacim)} mL</text>}
-        {t > 0 && <text x={242} y={70} fill="var(--ink)">{tup[1].ad}: {Math.round(tup[1].hacim)} mL</text>}
+        <text x={98} y={50} textAnchor="end" fill="var(--c1)">{cev("katot (−)")}</text>
+        <text x={242} y={50} fill="var(--c2)">{cev("anot (+)")}</text>
+        {t > 0 && <text x={98} y={70} textAnchor="end" fill="var(--ink)">{tup[0].ad}: {Math.round(tup[0].hacim)} {cev("mL")}</text>}
+        {t > 0 && <text x={242} y={70} fill="var(--ink)">{tup[1].ad}: {Math.round(tup[1].hacim)} {cev("mL")}</text>}
       </g>
       {bitti && <text x={170} y={120} fontSize={12.5} fontWeight={800} textAnchor="middle" fill="var(--good)">2 : 1</text>}
     </svg>
@@ -365,7 +366,7 @@ function Faraday({ v }: SahneProps) {
   const I = 4, t = v.t ?? 1930, Q = I * t, ne = Q / F, nCu = ne / 2, m = nCu * 63.5;
   const kalin = 2 + Math.min(10, (m / 6.35) * 6);
   return (
-    <svg viewBox="0 0 340 216" role="img" aria-label={`${t} saniyede ${virgul(m)} g bakır`}>
+    <svg viewBox="0 0 340 216" role="img" aria-label={cev("{0} saniyede {1} g bakır", t, virgul(m))}>
       <path d="M44 66 L44 30 L84 30 M106 30 L136 30 L136 66" fill="none" stroke="var(--ink)" strokeWidth={1.6} />
       <circle cx={95} cy={30} r={11} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
       <text x={95} y={34} fontSize={11} fontWeight={800} textAnchor="middle" fill="var(--ink)">A</text>
@@ -376,18 +377,18 @@ function Faraday({ v }: SahneProps) {
       <rect x={132} y={66} width={8} height={70} fill="#9aa8ba" />
       <path d="M20 74 L20 142 Q20 148 26 148 L154 148 Q160 148 160 142 L160 74" fill="none" stroke="var(--ink)" strokeWidth={2} />
       <g fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">
-        <text x={44} y={164}>anot (+)</text>
-        <text x={136} y={164}>katot (−)</text>
+        <text x={44} y={164}>{cev("anot (+)")}</text>
+        <text x={136} y={164}>{cev("katot (−)")}</text>
       </g>
       <g fontWeight={800}>
-        <text x={180} y={78} fontSize={12.5} fill="var(--ink)">Cu²⁺ + 2e⁻ → Cu</text>
+        <text x={180} y={78} fontSize={12.5} fill="var(--ink)">{cev("Cu²⁺ + 2e⁻ → Cu")}</text>
         <text x={180} y={104} fontSize={12} fill="var(--muted)">t = {t} s</text>
-        <text x={180} y={124} fontSize={12} fill="var(--muted)">≈ {virgul(t / 60, 0)} dk</text>
-        <text x={180} y={152} fontSize={15} fill="var(--kimya)">m(Cu) = {virgul(m)} g</text>
+        <text x={180} y={124} fontSize={12} fill="var(--muted)">≈ {virgul(t / 60, 0)} {cev("dk")}</text>
+        <text x={180} y={152} fontSize={15} fill="var(--kimya)">{cev("m(Cu) =")} {virgul(m)} g</text>
       </g>
       <g fontSize={12} fontWeight={700} fill="var(--ink)">
-        <text x={20} y={188}>Q = I·t = {binlik(Q)} C → n(e⁻) = {virgul(ne, 3)} mol</text>
-        <text x={20} y={208}>n(Cu) = n(e⁻) / 2 = {virgul(nCu, 3)} mol</text>
+        <text x={20} y={188}>Q = I·t = {binlik(Q)} C → n(e⁻) = {virgul(ne, 3)} {cev("mol")}</text>
+        <text x={20} y={208}>{cev("n(Cu) = n(e⁻) / 2 =")} {virgul(nCu, 3)} {cev("mol")}</text>
       </g>
     </svg>
   );
@@ -414,14 +415,14 @@ function Korozyon({ s, t, oynuyor }: SahneProps) {
     );
   };
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={bitti ? "Kalay kaplı çivi paslandı, çinko kaplı çivide çinko çözüldü, demir korundu" : "Çizilmiş kalay ve çinko kaplı çiviler tuzlu suda"}>
-      {civi(54, "kalay (Sn) kaplı, çizik", "color-mix(in srgb, #4b6087 30%, var(--surface))", false)}
-      {civi(150, "çinko (Zn) kaplı, çizik", "#9fb3c8", true)}
+    <svg viewBox="0 0 340 222" role="img" aria-label={bitti ? cev("Kalay kaplı çivi paslandı, çinko kaplı çivide çinko çözüldü, demir korundu") : cev("Çizilmiş kalay ve çinko kaplı çiviler tuzlu suda")}>
+      {civi(54, cev("kalay (Sn) kaplı, çizik"), "color-mix(in srgb, #4b6087 30%, var(--surface))", false)}
+      {civi(150, cev("çinko (Zn) kaplı, çizik"), "#9fb3c8", true)}
       <g fontSize={11.5} fontWeight={800}>
-        {bitti && <text x={20} y={88} fill="var(--bad)">Demir paslandı: Fe, Sn'den aktif, anot olur.</text>}
-        {bitti && <text x={20} y={184} fill="var(--good)">Zn yükseltgendi, demir korundu.</text>}
+        {bitti && <text x={20} y={88} fill="var(--bad)">{cev("Demir paslandı: Fe, Sn'den aktif, anot olur.")}</text>}
+        {bitti && <text x={20} y={184} fill="var(--good)">{cev("Zn yükseltgendi, demir korundu.")}</text>}
       </g>
-      <text x={20} y={212} fontSize={11} fontWeight={600} fill="var(--muted)">Mavi damla: tuzlu su. Hızlandırılmış gösterim.</text>
+      <text x={20} y={212} fontSize={11} fontWeight={600} fill="var(--muted)">{cev("Mavi damla: tuzlu su. Hızlandırılmış gösterim.")}</text>
     </svg>
   );
 }
@@ -434,7 +435,7 @@ export const KIMYA10: Record<string, SahneKaydi> = {
   "kim10-daniell": { C: Daniell },
   "kim10-potansiyel": {
     C: Potansiyel,
-    geri: (v) => (v.a === v.k ? { baslik: "Aynı yarı hücre", metin: "Anot ve katot farklı yarı hücreler olmalı." } : null),
+    geri: (v) => (v.a === v.k ? { baslik: cev("Aynı yarı hücre"), metin: cev("Anot ve katot farklı yarı hücreler olmalı.") } : null),
   },
   "kim10-katsayi": { C: Katsayi },
   "kim10-su": { C: Su },

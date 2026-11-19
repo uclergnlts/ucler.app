@@ -2,6 +2,7 @@
 // Adımlı ders motoru (Brilliant tarzı): her adımda büyük, hareketli bir sahne + kısa metin + öğrencinin
 // yaptığı bir görev. Geri bildirim alttaki çubukta çıkar; görev bitince "Devam" açılır. Adımlar
 // content/adimli/*.json dosyalarından gelir, sahneler components/sahne/ kütüphanesindendir.
+import { cev, SAYI_YEREL } from "@/lib/dil";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Icon } from "./icons";
@@ -22,7 +23,7 @@ type Bildir = (b: Bildirim | null) => void;
 /** Takılan öğrenci için "Çözümü göster": iki yanlıştan sonra (sahnesi oynamayan ayar görevinde bir süre sonra) çıkar. */
 const COZUM_YANLIS = 2, COZUM_SURE = 25000;
 function CozumDugmesi({ onClick }: { onClick: () => void }) {
-  return <button className="ad-cozum" onClick={onClick}>Çözümü göster</button>;
+  return <button className="ad-cozum" onClick={onClick}>{cev("Çözümü göster")}</button>;
 }
 
 /* ---------- oynatma ---------- */
@@ -83,7 +84,7 @@ export const uyar = (v: Degerler, hedef: Record<string, number | [number, number
   Object.entries(hedef).every(([k, h]) => (Array.isArray(h) ? v[k] >= h[0] && v[k] <= h[1] : v[k] === h));
 const ayni = (a: Degerler, b: Degerler) => Object.keys({ ...a, ...b }).every((k) => a[k] === b[k]);
 const gosterim = (k: Kontrol, x: number) =>
-  `${k.onek ?? ""}${(x * (k.carpan ?? 1)).toLocaleString("tr-TR", { maximumFractionDigits: 2 })}${k.birim ? (k.birim === "°" ? "°" : ` ${k.birim}`) : ""}`;
+  `${k.onek ?? ""}${(x * (k.carpan ?? 1)).toLocaleString(SAYI_YEREL, { maximumFractionDigits: 2 })}${k.birim ? (k.birim === "°" ? "°" : ` ${k.birim}`) : ""}`;
 
 /** Şıkların gösterim sırası: içerikte doğru şık çoğu zaman ilk yazılır, ekranda karışık çıksın.
  * Sıra şıkların metninden üretilir, yani her açılışta aynıdır. */
@@ -114,7 +115,7 @@ export function Soru({ soru, secenekler, tamam, bildir }: { soru: string; secene
   const [dogru, setDogru] = useState<number | null>(null);
   const cozum = () => {
     const k = secenekler.findIndex((x) => x.dogru);
-    setDogru(k); tamam(); bildir({ ok: true, baslik: "Çözüm", metin: secenekler[k].neden });
+    setDogru(k); tamam(); bildir({ ok: true, baslik: cev("Çözüm"), metin: secenekler[k].neden });
   };
   return (
     <div className="ad-soru">
@@ -124,8 +125,8 @@ export function Soru({ soru, secenekler, tamam, bildir }: { soru: string; secene
         sinif={(k) => (dogru === k ? "right" : yanlis.includes(k) ? "wrong" : "")}
         kapali={(k) => dogru !== null || yanlis.includes(k)}
         onSec={(k) => {
-          if (secenekler[k].dogru) { setDogru(k); tamam(); bildir({ ok: true, baslik: "Doğru!", metin: secenekler[k].neden }); }
-          else { setYanlis((y) => [...y, k]); bildir({ ok: false, baslik: "Tekrar dene", metin: secenekler[k].neden }); }
+          if (secenekler[k].dogru) { setDogru(k); tamam(); bildir({ ok: true, baslik: cev("Doğru!"), metin: secenekler[k].neden }); }
+          else { setYanlis((y) => [...y, k]); bildir({ ok: false, baslik: cev("Tekrar dene"), metin: secenekler[k].neden }); }
         }}
       />
       {dogru === null && yanlis.length >= COZUM_YANLIS && <CozumDugmesi onClick={cozum} />}
@@ -185,9 +186,9 @@ function KontrolListesi({ liste, v, set, kapali }: { liste: Kontrol[]; v: Degerl
           return (
             <div key={k.ad} className="ad-sayac">
               <span>{k.etiket}</span>
-              <button aria-label={`${k.etiket} azalt`} disabled={kapali || x <= k.min} onClick={() => set(k.ad, x - adim)}>−</button>
+              <button aria-label={cev("{0} azalt", k.etiket)} disabled={kapali || x <= k.min} onClick={() => set(k.ad, x - adim)}>−</button>
               <b aria-live="polite">{gosterim(k, x)}</b>
-              <button aria-label={`${k.etiket} artır`} disabled={kapali || x >= k.max} onClick={() => set(k.ad, x + adim)}>+</button>
+              <button aria-label={cev("{0} artır", k.etiket)} disabled={kapali || x >= k.max} onClick={() => set(k.ad, x + adim)}>+</button>
             </div>
           );
         return (
@@ -319,20 +320,20 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
   // Ayarla ve tahmin görevlerinin geri bildirimi (seçim sorusu kendi bildirir).
   const ayarlaGeri: Bildirim | null =
     ornekte || g.tur !== "ayarla" || (sure && !oynandi) ? null :
-    hedefte ? { ok: true, baslik: "Oldu!", metin: g.tamam } :
+    hedefte ? { ok: true, baslik: cev("Oldu!"), metin: g.tamam } :
     sure ? (() => {
-      const m = kayit?.geri?.(v, a.sahne) ?? { baslik: "Henüz değil", metin: g.ipucu ?? "Değerleri değiştirip yeniden oynat." };
+      const m = kayit?.geri?.(v, a.sahne) ?? { baslik: cev("Henüz değil"), metin: g.ipucu ?? cev("Değerleri değiştirip yeniden oynat.") };
       return { ok: false, ...m };
     })() : null;
   const tahminGeri: Bildirim | null = (() => {
     if (g.tur !== "tahmin" || secim === null || !acik) return null;
     const dk = g.secenekler.findIndex((s) => s.dogru), d = g.secenekler[dk];
     return secim === dk
-      ? { ok: true, baslik: "Tahminin doğru!", metin: d.neden }
-      : { ok: false, baslik: `Doğrusu: ${d.etiket ?? d.yazi}`, metin: `${g.secenekler[secim].neden} ${d.neden}` };
+      ? { ok: true, baslik: cev("Tahminin doğru!"), metin: d.neden }
+      : { ok: false, baslik: cev("Doğrusu: {0}", d.etiket ?? d.yazi), metin: `${g.secenekler[secim].neden} ${d.neden}` };
   })();
   const kesfetGeri: Bildirim | null = bulgular && sonBulgu !== null
-    ? { ok: true, baslik: basari ? "Hepsini buldun!" : `Buldun! (${bulunanSay}/${bulgular.length})`, metin: bulgular[sonBulgu].tamam }
+    ? { ok: true, baslik: basari ? cev("Hepsini buldun!") : cev("Buldun! ({0}/{1})", bulunanSay, bulgular.length), metin: bulgular[sonBulgu].tamam }
     : null;
   const geri = ayarlaGeri ?? tahminGeri ?? kesfetGeri;
   const geriAnahtar = geri ? JSON.stringify(geri) : g.tur === "secim" ? "secim" : "";
@@ -374,7 +375,7 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
     if (sure) setTimeout(o.basla, dizi.length * 200 + 200);
   };
 
-  if (!kayit) return <p className="ad-ipucu">Bu sahne bulunamadı: {a.sahne.tur}</p>;
+  if (!kayit) return <p className="ad-ipucu">{cev("Bu sahne bulunamadı:")} {a.sahne.tur}</p>;
   const C = kayit.C;
   const tahminOncesi = g.tur === "tahmin" && secim === null;
 
@@ -395,23 +396,23 @@ export function AdimGorunum({ a, tamam, bildir }: { a: Adim; tamam: () => void; 
 
       {ornekte ? (
         <div className="ad-ornek-acts">
-          <Button disabled={!ornekBitti} onClick={senBasla}>Şimdi sen dene</Button>
+          <Button disabled={!ornekBitti} onClick={senBasla}>{cev("Şimdi sen dene")}</Button>
         </div>
       ) : null}
 
       {!ornekte && sure > 0 && !tahminOncesi && !(g.tur === "tahmin" && !acik) && (
         <button className="ad-oynat" disabled={o.oynuyor} onClick={o.basla}>
-          <span aria-hidden="true">{o.oynuyor ? "●" : "▶"}</span> {o.oynuyor ? "Oynuyor" : kosular.length ? "Tekrar oynat" : "Oynat"}
+          <span aria-hidden="true">{o.oynuyor ? "●" : "▶"}</span> {o.oynuyor ? cev("Oynuyor") : kosular.length ? cev("Tekrar oynat") : cev("Oynat")}
         </button>
       )}
 
       {bulgular && (
-        <ol className="ad-bulgular" aria-label="Bulman gerekenler">
+        <ol className="ad-bulgular" aria-label={cev("Bulman gerekenler")}>
           {bulgular.map((b, i) => (
             <li key={i} className={bulunan[i] ? "ok" : i === bulunan.findIndex((x) => !x) ? "simdi" : ""}>
               <i aria-hidden="true">{bulunan[i] ? "✓" : i + 1}</i>
               <Html html={b.yazi} />
-              {bulunan[i] && <span className="sr-only"> (bulundu)</span>}
+              {bulunan[i] && <span className="sr-only"> {cev("(bulundu)")}</span>}
             </li>
           ))}
         </ol>
@@ -460,7 +461,7 @@ export default function DersMotoru({ ders }: { ders: AdimliDers }) {
   return (
     <div className="app ad-sayfa" data-ders={ders.ders}>
       <header className="top ad-ust">
-        <Link className="ad-kapat" href={konu} aria-label="Dersten çık"><Close /></Link>
+        <Link className="ad-kapat" href={konu} aria-label={cev("Dersten çık")}><Close /></Link>
         <span className="ad-adimlar" aria-label={`${Math.min(i + 1, n)} / ${n}`}>
           {ders.adimlar.map((_, k) => (
             <i key={k}>
@@ -490,13 +491,13 @@ export default function DersMotoru({ ders }: { ders: AdimliDers }) {
             </div>
           ) : (
             <motion.article className="ad-kart" key="son" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }}>
-              <h2 className="ad-bitti">{ders.baslik}: bitti</h2>
+              <h2 className="ad-bitti">{ders.baslik}{cev(": bitti")}</h2>
               <ul className="ad-ozet">
                 {ders.kapanis.map((m, k) => <li key={k} dangerouslySetInnerHTML={{ __html: m }} />)}
               </ul>
               <div className="ad-acts">
-                <Button asChild><Link href={konu}>Konunun kartlarına ve testine geç</Link></Button>
-                <Button variant="outline" onClick={() => { git(0); setBiten(ders.adimlar.map(() => false)); }}>Baştan başla</Button>
+                <Button asChild><Link href={konu}>{cev("Konunun kartlarına ve testine geç")}</Link></Button>
+                <Button variant="outline" onClick={() => { git(0); setBiten(ders.adimlar.map(() => false)); }}>{cev("Baştan başla")}</Button>
               </div>
             </motion.article>
           )}
@@ -520,7 +521,7 @@ export default function DersMotoru({ ders }: { ders: AdimliDers }) {
               )}
             </AnimatePresence>
             <Button className="w-full" disabled={!biten[i]} onClick={() => git(i + 1)}>
-              {i === n - 1 ? "Bitir" : "Devam"}
+              {i === n - 1 ? cev("Bitir") : cev("Devam")}
             </Button>
           </div>
         )}

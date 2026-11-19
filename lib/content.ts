@@ -2,13 +2,25 @@
 import fizik from "@/content/fizik.json";
 import kimya from "@/content/kimya.json";
 import biyoloji from "@/content/biyoloji.json";
+import fizikEn from "@/content/en/fizik.json";
+import kimyaEn from "@/content/en/kimya.json";
+import biyolojiEn from "@/content/en/biyoloji.json";
+import { DIL } from "./dil";
 import { DERS_IDS, DERSLER, type DersId, type Entry, type Question, type Topic } from "./dersler";
 import { adimliDers } from "./adimli";
 import { sureDk } from "./asama";
 
 export * from "./dersler";
 // JSON'dan gelen "tur" alanı string olarak çıkarılır; biçimi tools/check.py doğrular.
-const DATA = { fizik, kimya, biyoloji } as unknown as Record<DersId, Record<string, Topic>>;
+const TR = { fizik, kimya, biyoloji } as unknown as Record<DersId, Record<string, Topic>>;
+// İngilizce kopyada çevrilmiş konular content/en/<ders>.json'dan gelir (tools/ceviri.py birlestir üretir);
+// henüz çevrilmemiş konu Türkçe kalır.
+const EN = { fizik: fizikEn, kimya: kimyaEn, biyoloji: biyolojiEn } as unknown as Record<DersId, Record<string, Topic>>;
+const DATA = DIL === "en"
+  ? (Object.fromEntries(DERS_IDS.map((d) => [d, { ...TR[d], ...EN[d] }])) as Record<DersId, Record<string, Topic>>)
+  : TR;
+/** Konu bu kopyanın dilinde mi? (İngilizce kopyada henüz çevrilmemiş konular için false.) */
+export const cevrili = (d: DersId, id: string) => DIL !== "en" || id in EN[d];
 
 export const topic = (d: DersId, id: string): Topic | undefined => DATA[d][id];
 
@@ -19,7 +31,7 @@ export function entries(d: DersId): Entry[] {
     const t = k.id ? topic(d, k.id) : undefined;
     if (!k.id || !t) return { ders: d, no: i + 1, ad: k.ad, sinav: k.sinav, unite, uniteAd, uniteKod };
     return {
-      ders: d, no: i + 1, ad: k.ad, id: k.id, title: t.title, summary: t.summary, on: k.on, sinav: k.sinav, unite, uniteAd, uniteKod,
+      ders: d, no: i + 1, ad: k.ad, id: k.id, title: cevrili(d, k.id) ? t.title : k.ad, summary: t.summary, on: k.on, sinav: k.sinav, unite, uniteAd, uniteKod,
       cardCount: t.cards.length, quizCount: t.quiz.length, headings: t.cards.map((c) => c.h).join(" "),
       dk: sureDk(t.cards.length, adimliDers(k.id)?.adimlar.length ?? 0, t.quiz.length),
     };

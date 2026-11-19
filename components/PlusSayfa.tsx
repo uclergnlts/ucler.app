@@ -1,5 +1,6 @@
 "use client";
 // /plus/: Profil'deki "ucler Plus" satırından açılır. Ödeme duvarı kapalıyken (lib/abonelik.ts) Profil'e döner.
+import { cev } from "@/lib/dil";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { ABONELIK } from "@/lib/abonelik";
@@ -12,7 +13,7 @@ export default function PlusSayfa() {
   if (!ABONELIK) return null;
   return (
     <div className="app">
-      <GeriTop to="/profil/" label="Profil'e dön" baslik="ucler Plus" />
+      <GeriTop to="/profil/" label={cev("Profil'e dön")} baslik={cev("ucler Plus")} />
       <Govde><PlusEkran /></Govde>
     </div>
   );

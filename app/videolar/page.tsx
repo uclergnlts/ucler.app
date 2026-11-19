@@ -1,8 +1,9 @@
+import { cev } from "@/lib/dil";
 import VideoFeed from "@/components/VideoFeed";
 import { topic } from "@/lib/content";
 import { VIDEOLAR } from "@/lib/videolar";
 
-export const metadata = { title: "Videolar" };
+export const metadata = { title: cev("Videolar") };
 
 export default function Page() {
   // Akışta her videonun altında konusunun adı yazar; adlar derleme sırasında içerikten alınır.

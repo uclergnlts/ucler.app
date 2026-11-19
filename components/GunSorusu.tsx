@@ -3,6 +3,7 @@
 // Akış: tanıtım (ders, kurallar, "Başla") → soru (süre işler, alttaki "Kontrol et" tek hak) → sonuç (puan, süre,
 // bugün kaç kişinin çözdüğü, seri, "Bu konuyu öğren"). Süre "Başla"ya basınca başlar; ekrandan çıkıp dönen öğrencinin
 // süresi kaldığı yerden sürer. Hesabı olmayan da çözer ama puanı kaydedilmez; sonuçta hesap açmaya çağrılır.
+import { cev, SAYI_YEREL } from "@/lib/dil";
 import { ANA } from "@/lib/site";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -31,9 +32,9 @@ import { Button } from "./ui/button";
 /** "12,4 sn", "1 dk 05 sn". */
 export function sureYazi(ms: number) {
   const s = ms / 1000;
-  if (s < 60) return `${s.toLocaleString("tr-TR", { maximumFractionDigits: 1, minimumFractionDigits: 1 })} sn`;
+  if (s < 60) return `${s.toLocaleString(SAYI_YEREL, { maximumFractionDigits: 1, minimumFractionDigits: 1 })} sn`;
   const dk = Math.floor(s / 60);
-  return dk >= 60 ? `${Math.floor(dk / 60)} sa ${dk % 60} dk` : `${dk} dk ${String(Math.floor(s % 60)).padStart(2, "0")} sn`;
+  return dk >= 60 ? cev("{0} sa {1} dk", Math.floor(dk / 60), dk % 60) : cev("{0} dk {1} sn", dk, String(Math.floor(s % 60)).padStart(2, "0"));
 }
 
 /** Bugünün tarihi; yalnız tarayıcıda bilinir (sayfa derlenirken değil). */
@@ -55,8 +56,8 @@ export function GunSorusuKart({ havuz }: { havuz: string[] }) {
   if (!key || !ders || !isDers(ders)) return null;
   const s = kayit?.sonuc, Soru = Icon.soru, Next = Icon.ileri;
   const alt = s
-    ? s.dogru ? (oyun ? `Çözdün: +${s.puan} puan, ${sureYazi(s.ms)}` : `Doğru çözdün, ${sureYazi(s.ms)}`) : `Bu sefer olmadı. Yeni soru ${yeniSoruya()} sonra.`
-    : kayit ? "Süren işliyor, hemen dön" : oyun ? "Hızlı çöz, 150 puana kadar al" : "Bugünkü soru seni bekliyor";
+    ? s.dogru ? (oyun ? cev("Çözdün: +{0} puan, {1}", s.puan, sureYazi(s.ms)) : cev("Doğru çözdün, {0}", sureYazi(s.ms))) : cev("Bu sefer olmadı. Yeni soru {0} sonra.", yeniSoruya())
+    : kayit ? cev("Süren işliyor, hemen dön") : oyun ? cev("Hızlı çöz, 150 puana kadar al") : cev("Bugünkü soru seni bekliyor");
   return (
     <Link
       href="/gunun-sorusu/"
@@ -64,7 +65,7 @@ export function GunSorusuKart({ havuz }: { havuz: string[] }) {
       className="grid gap-1.5 rounded-lg border border-border bg-card p-4 transition-transform active:scale-[.99]"
     >
       <span className="flex items-center gap-2 text-[11px] font-bold tracking-[.14em] text-mark uppercase">
-        <span className="[&_svg]:size-4"><Soru /></span>Günün sorusu · {DERSLER[ders].ad}
+        <span className="[&_svg]:size-4"><Soru /></span>{cev("Günün sorusu ·")} {DERSLER[ders].ad}
         {!s && <span aria-hidden="true" className="ml-auto size-2 rounded-full bg-mark" />}
       </span>
       <span className="flex items-center gap-3">
@@ -152,16 +153,16 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
   let govde: React.ReactNode = null, alt: React.ReactNode = null;
 
   if (durum === "yukleniyor" || !Q || !ders) {
-    govde = <p className="pt-10 text-center text-muted-foreground">Yükleniyor…</p>;
+    govde = <p className="pt-10 text-center text-muted-foreground">{cev("Yükleniyor…")}</p>;
   } else if (durum === "hata") {
     govde = (
       <section className="grid gap-3 pt-6 text-center">
-        <h2 className="text-[22px]">Bağlantı kurulamadı</h2>
-        <p className="text-muted-foreground">Günün sorusu puanın sunucuda tutulduğu için internet gerekiyor. Süren başladıysa işlemeye devam ediyor.</p>
-        <Button className="mt-2" onClick={() => location.reload()}>Yeniden dene</Button>
+        <h2 className="text-[22px]">{cev("Bağlantı kurulamadı")}</h2>
+        <p className="text-muted-foreground">{cev("Günün sorusu puanın sunucuda tutulduğu için internet gerekiyor. Süren başladıysa işlemeye devam ediyor.")}</p>
+        <Button className="mt-2" onClick={() => location.reload()}>{cev("Yeniden dene")}</Button>
         {!kayit && (
           <Button variant="ghost" onClick={() => { gunKayitYaz({ g: trGun(), soru: key!, basla: Date.now(), misafir: true }); setSimdi(Date.now()); setDurum("soru"); }}>
-            Puansız çöz
+            {cev("Puansız çöz")}
           </Button>
         )}
       </section>
@@ -171,26 +172,26 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
       <section className="grid gap-5 pt-2" data-ders={ders}>
         <div className="grid gap-1.5">
           <span className="text-[13px] font-bold text-acc">{DERSLER[ders].ad}</span>
-          <h2 className="text-[26px]">Bugünün sorusu hazır</h2>
-          <p className="text-[15px] text-muted-foreground">Herkes bugün aynı soruyu çözüyor. Gece yarısı yeni soru gelir.</p>
+          <h2 className="text-[26px]">{cev("Bugünün sorusu hazır")}</h2>
+          <p className="text-[15px] text-muted-foreground">{cev("Herkes bugün aynı soruyu çözüyor. Gece yarısı yeni soru gelir.")}</p>
         </div>
         <ul className="grid gap-2.5 rounded-2xl bg-secondary p-4 text-[15px]">
-          <li className="flex gap-2.5"><b className="w-5 flex-none text-acc">1</b>Tek hakkın var, cevabını kontrol etmeden önce iyi düşün.</li>
-          <li className="flex gap-2.5"><b className="w-5 flex-none text-acc">2</b>Süre “Başla”ya basınca başlar. Çıkıp dönsen de işlemeye devam eder.</li>
-          {oyun && <li className="flex gap-2.5"><b className="w-5 flex-none text-acc">3</b>Doğru cevap 100 puan. İlk 10 saniyede 50 puan hız bonusu, sonra 60. saniyeye kadar azalır.</li>}
-          {oyun && <li className="flex gap-2.5"><b className="w-5 flex-none text-acc">4</b>{girisli ? "Puanın haftalık lige eklenir." : "Puanının haftalık lige eklenmesi için hesabın olmalı."}</li>}
+          <li className="flex gap-2.5"><b className="w-5 flex-none text-acc">1</b>{cev("Tek hakkın var, cevabını kontrol etmeden önce iyi düşün.")}</li>
+          <li className="flex gap-2.5"><b className="w-5 flex-none text-acc">2</b>{cev("Süre “Başla”ya basınca başlar. Çıkıp dönsen de işlemeye devam eder.")}</li>
+          {oyun && <li className="flex gap-2.5"><b className="w-5 flex-none text-acc">3</b>{cev("Doğru cevap 100 puan. İlk 10 saniyede 50 puan hız bonusu, sonra 60. saniyeye kadar azalır.")}</li>}
+          {oyun && <li className="flex gap-2.5"><b className="w-5 flex-none text-acc">4</b>{girisli ? cev("Puanın haftalık lige eklenir.") : cev("Puanının haftalık lige eklenmesi için hesabın olmalı.")}</li>}
         </ul>
       </section>
     );
-    alt = <Alt><Button className="w-full" data-ders={ders} disabled={bekle} onClick={basla}>Başla</Button></Alt>;
+    alt = <Alt><Button className="w-full" data-ders={ders} disabled={bekle} onClick={basla}>{cev("Başla")}</Button></Alt>;
   } else if (durum === "soru" && kayit) {
     const c = cevap ?? ilkCevap(Q), ms = Math.max(0, simdi - kayit.basla), b = bonus(ms), not = yonerge(Q);
     govde = (
       <article className="flex flex-col gap-4" data-ders={ders}>
         <div className="flex items-center justify-between gap-3 text-[13px] font-bold">
-          <span className="truncate text-acc">Günün sorusu · {DERSLER[ders].ad}</span>
+          <span className="truncate text-acc">{cev("Günün sorusu ·")} {DERSLER[ders].ad}</span>
           <span className="flex flex-none items-center gap-2 tabular-nums">
-            {oyun && b > 0 && <span className="rounded-full bg-acc-soft px-2 py-0.5 text-acc">+{b} hız</span>}
+            {oyun && b > 0 && <span className="rounded-full bg-acc-soft px-2 py-0.5 text-acc">+{b} {cev("hız§bonus")}</span>}
             <span className="rounded-full bg-secondary px-2.5 py-0.5">{sureYazi(ms).replace(/,\d sn$/, " sn")}</span>
           </span>
         </div>
@@ -202,7 +203,7 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
     );
     alt = (
       <Alt>
-        <Button className="w-full" data-ders={ders} disabled={bekle || !hazir(Q, c)} onClick={() => { setCevap(c); void kontrol(c); }}>Kontrol et</Button>
+        <Button className="w-full" data-ders={ders} disabled={bekle || !hazir(Q, c)} onClick={() => { setCevap(c); void kontrol(c); }}>{cev("Kontrol et")}</Button>
       </Alt>
     );
   } else if (durum === "sonuc" && kayit?.sonuc) {
@@ -216,33 +217,33 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.25 }}
         >
-          <h2 className={cn("text-[22px]", ok ? "text-good" : "text-bad")}>{ok ? "Doğru!" : "Bu sefer olmadı"}</h2>
+          <h2 className={cn("text-[22px]", ok ? "text-good" : "text-bad")}>{ok ? cev("Doğru!") : cev("Bu sefer olmadı")}</h2>
           {oyun && ok && s.puan > 0 && <div className="font-display text-[52px] leading-none font-extrabold tabular-nums">+{s.puan}</div>}
-          {oyun && ok && s.puan > 0 && <p className="text-[14px] font-semibold text-muted-foreground">100 doğru cevap{s.puan > 100 ? ` + ${s.puan - 100} hız bonusu` : ""}</p>}
-          <p className="text-[15px] font-semibold">Süre: {sureYazi(s.ms)}</p>
+          {oyun && ok && s.puan > 0 && <p className="text-[14px] font-semibold text-muted-foreground">{cev("100 doğru cevap")}{s.puan > 100 ? cev(" + {0} hız bonusu", s.puan - 100) : ""}</p>}
+          <p className="text-[15px] font-semibold">{cev("Süre:")} {sureYazi(s.ms)}</p>
         </motion.div>
 
         {s.kayitli ? (
           <div className="grid gap-2 rounded-2xl border border-border bg-card p-4 text-[15px]">
-            {oyun && ok && s.puan > 0 && <p className="flex items-center gap-2 [&_svg]:size-4 [&_svg]:text-acc"><Kupa />Puanın haftalık lige eklendi.</p>}
-            {ok && s.puan === 0 && <p>Uygulaman eski bir sürümde olduğu için bu sorunun puanı sayılmadı. Uygulamayı güncelleyince puanların yine lige eklenir.</p>}
+            {oyun && ok && s.puan > 0 && <p className="flex items-center gap-2 [&_svg]:size-4 [&_svg]:text-acc"><Kupa />{cev("Puanın haftalık lige eklendi.")}</p>}
+            {ok && s.puan === 0 && <p>{cev("Uygulaman eski bir sürümde olduğu için bu sorunun puanı sayılmadı. Uygulamayı güncelleyince puanların yine lige eklenir.")}</p>}
             {s.ist && s.ist.kisi > 0 && (
               <p>
-                Bugün {s.ist.kisi} kişi çözdü, {s.ist.dogru} kişi doğru yaptı.
-                {ok && digerleri > 0 && ` Çözen ${digerleri} kişiden ${s.ist.gectigin} kişiyi geçtin.`}
+                {cev("Bugün {0} kişi çözdü, {1} kişi doğru yaptı.", s.ist.kisi, s.ist.dogru)}
+                {ok && digerleri > 0 && cev(" Çözen {0} kişiden {1} kişiyi geçtin.", digerleri, s.ist.gectigin)}
               </p>
             )}
-            {oyun && !!s.seri && <p className="flex items-center gap-2 [&_svg]:size-4 [&_svg]:text-acc"><Seri />Günün sorusu serin: {s.seri} gün</p>}
+            {oyun && !!s.seri && <p className="flex items-center gap-2 [&_svg]:size-4 [&_svg]:text-acc"><Seri />{cev("Günün sorusu serin:")} {s.seri} {cev("gün")}</p>}
           </div>
         ) : girisli && !kayit.misafir ? (
-          <p className="rounded-2xl bg-secondary px-4 py-3 text-[14px]">Bağlantı kurulamadığı için sonucun sunucuya kaydedilemedi.</p>
+          <p className="rounded-2xl bg-secondary px-4 py-3 text-[14px]">{cev("Bağlantı kurulamadığı için sonucun sunucuya kaydedilemedi.")}</p>
         ) : girisli ? (
-          <p className="rounded-2xl bg-secondary px-4 py-3 text-[14px]">Bu soruyu hesabına girmeden başlattığın için puanı kaydedilmedi. Yarından itibaren puanların lige eklenecek.</p>
+          <p className="rounded-2xl bg-secondary px-4 py-3 text-[14px]">{cev("Bu soruyu hesabına girmeden başlattığın için puanı kaydedilmedi. Yarından itibaren puanların lige eklenecek.")}</p>
         ) : (
           <div className="grid gap-2.5 rounded-2xl border-[1.5px] border-acc bg-card p-4">
-            <b className="text-[16px]">{ok ? "Puanın kaydedilmedi" : "Hesabınla çöz, puanın sayılsın"}</b>
-            <p className="text-[14px] text-muted-foreground">Ücretsiz hesap açarsan günün sorusu puanların haftalık lige eklenir, serin tutulur ve kaç kişiyi geçtiğini görürsün.</p>
-            <Button onClick={() => { setDavet(true); olay("kayit_davet", { yol: "gunun_sorusu" }); }}>Hesap aç</Button>
+            <b className="text-[16px]">{ok ? cev("Puanın kaydedilmedi") : cev("Hesabınla çöz, puanın sayılsın")}</b>
+            <p className="text-[14px] text-muted-foreground">{cev("Ücretsiz hesap açarsan günün sorusu puanların haftalık lige eklenir, serin tutulur ve kaç kişiyi geçtiğini görürsün.")}</p>
+            <Button onClick={() => { setDavet(true); olay("kayit_davet", { yol: "gunun_sorusu" }); }}>{cev("Hesap aç")}</Button>
           </div>
         )}
 
@@ -254,14 +255,14 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
             <Html as="p" className="text-[15px] leading-normal" html={geriMetin(Q, cevap ?? ilkCevap(Q), ok)} />
           </div>
         </article>
-        <p className="text-center text-[14px] font-semibold text-muted-foreground">Yeni soru {yeniSoruya()} sonra.</p>
+        <p className="text-center text-[14px] font-semibold text-muted-foreground">{cev("Yeni soru {0} sonra.", yeniSoruya())}</p>
       </section>
     );
     alt = (
       <Alt>
         <div className="grid gap-2" data-ders={ders}>
-          <Button asChild className="min-w-0"><Link href={href(ders, Q.konu)}><span className="truncate">Bu konuyu öğren: {Q.baslik}</span></Link></Button>
-          <Button asChild variant="ghost"><Link href={ANA}>Ana sayfaya dön</Link></Button>
+          <Button asChild className="min-w-0"><Link href={href(ders, Q.konu)}><span className="truncate">{cev("Bu konuyu öğren:")} {Q.baslik}</span></Link></Button>
+          <Button asChild variant="ghost"><Link href={ANA}>{cev("Ana sayfaya dön")}</Link></Button>
         </div>
       </Alt>
     );
@@ -270,10 +271,10 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
   return (
     <div className="app">
       <UstBar
-        geri={{ to: ANA, label: "Ana sayfaya dön" }}
-        baslik="Günün sorusu"
+        geri={{ to: ANA, label: cev("Ana sayfaya dön") }}
+        baslik={cev("Günün sorusu")}
         sag={Q && (durum === "soru" || durum === "sonuc") ? (
-          <Bildir yer={{ ders: Q.ders, konu: Q.konu, yer: `günün sorusu (${key})`, ozet: Q.q }}><BildirDugme /></Bildir>
+          <Bildir yer={{ ders: Q.ders, konu: Q.konu, yer: cev("günün sorusu ({0})", key), ozet: Q.q }}><BildirDugme /></Bildir>
         ) : undefined}
       />
       <Govde className="pb-0">
@@ -284,7 +285,7 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
         </AnimatePresence>
         {alt}
       </Govde>
-      <KayitSayfasi acik={davet} setAcik={setDavet} donus="/gunun-sorusu/" baslik="Puanını kaydet" aciklama="Ücretsiz hesap aç. Yarından itibaren günün sorusu puanların haftalık lige eklensin." />
+      <KayitSayfasi acik={davet} setAcik={setDavet} donus="/gunun-sorusu/" baslik={cev("Puanını kaydet")} aciklama={cev("Ücretsiz hesap aç. Yarından itibaren günün sorusu puanların haftalık lige eklensin.")} />
     </div>
   );
 }

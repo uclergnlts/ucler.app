@@ -2,6 +2,7 @@
 // Oyun: vektörleri uç uca ekleyip başlangıç noktasından hedefe ulaş. 10 tur.
 // Her turda dört vektör kartı var; çözüm bunların 1-3 tanesinden kurulur, yani her tur çözülebilir.
 // Kural kartlardakiyle aynı: bileşke R = A + B + ..., bileşenler ayrı ayrı toplanır (Rx, Ry).
+import { cev } from "@/lib/dil";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { kaydet, PUAN } from "@/lib/puan";
@@ -75,7 +76,7 @@ function Izgara({ tur, secili, ciz, cozumGoster }: { tur: Tur; secili: number[];
   const n = Array.from({ length: 2 * G + 1 }, (_, k) => k - G);
   const m = G + 0.6;
   return (
-    <svg className="vk-izgara" viewBox={`${-m} ${-m} ${2 * m} ${2 * m}`} role="img" aria-label={`Başlangıç ${nokta(tur.bas)}, hedef ${nokta(tur.hedef)}`}>
+    <svg className="vk-izgara" viewBox={`${-m} ${-m} ${2 * m} ${2 * m}`} role="img" aria-label={cev("Başlangıç {0}, hedef {1}", nokta(tur.bas), nokta(tur.hedef))}>
       <defs>
         <clipPath id="vk-kirp"><rect x={-G - 0.3} y={-G - 0.3} width={2 * G + 0.6} height={2 * G + 0.6} /></clipPath>
       </defs>
@@ -125,24 +126,24 @@ export default function VektorOyun() {
     govde = (
       <section className="oyun-giris">
         <div className="bubble">
-          <h2>Hedefe uç uca git</h2>
-          <p>Başlangıç noktasından başla. Vektör kartlarından seç; her biri bir öncekinin ucuna eklenir. Bileşke tam hedefe varmalı. Her kartı bir kez kullanabilirsin. {TUR} tur.</p>
+          <h2>{cev("Hedefe uç uca git")}</h2>
+          <p>{cev("Başlangıç noktasından başla. Vektör kartlarından seç; her biri bir öncekinin ucuna eklenir. Bileşke tam hedefe varmalı. Her kartı bir kez kullanabilirsin.")} {TUR} {cev("tur.")}</p>
         </div>
-        <button className="btn main" onClick={() => basla("cizim")}>Çizimi görerek oyna</button>
-        <button className="btn" onClick={() => basla("kafadan")}>Kafadan hesapla (zor)</button>
-        {rekor > 0 && <p className="oyun-rekor">En iyi sonucun: {rekor}/{TUR}</p>}
+        <button className="btn main" onClick={() => basla("cizim")}>{cev("Çizimi görerek oyna")}</button>
+        <button className="btn" onClick={() => basla("kafadan")}>{cev("Kafadan hesapla (zor)")}</button>
+        {rekor > 0 && <p className="oyun-rekor">{cev("En iyi sonucun:")} {rekor}/{TUR}</p>}
       </section>
     );
   } else if (bitti) {
     govde = (
       <section className="card end">
         <div className="score">{d.dogru}/{TUR}</div>
-        <h2>{d.dogru === TUR ? "Hepsi doğru, bileşke senin işin!" : d.dogru >= 7 ? "Çok iyi, birkaç hedef kaçtı." : "Bileşenleri ayrı ayrı toplamayı bir daha dene."}</h2>
-        <p>En iyi sonucun: {Math.max(rekor, d.dogru)}/{TUR}</p>
+        <h2>{d.dogru === TUR ? cev("Hepsi doğru, bileşke senin işin!") : d.dogru >= 7 ? cev("Çok iyi, birkaç hedef kaçtı.") : cev("Bileşenleri ayrı ayrı toplamayı bir daha dene.")}</h2>
+        <p>{cev("En iyi sonucun:")} {Math.max(rekor, d.dogru)}/{TUR}</p>
         <div className="acts">
-          <button className="btn main" onClick={() => basla(d.mod)}>Tekrar oyna</button>
-          <Link className="btn" href={href("fizik", "vektorler")}>Konu: Vektörler</Link>
-          <Link className="btn" href="/oyunlar/">Oyunlara dön</Link>
+          <button className="btn main" onClick={() => basla(d.mod)}>{cev("Tekrar oyna")}</button>
+          <Link className="btn" href={href("fizik", "vektorler")}>{cev("Konu: Vektörler")}</Link>
+          <Link className="btn" href="/oyunlar/">{cev("Oyunlara dön")}</Link>
         </div>
       </section>
     );
@@ -168,17 +169,17 @@ export default function VektorOyun() {
     govde = (
       <>
         <div className="oyun-ust">
-          <span>Tur {d.i + 1} / {TUR}</span>
-          <span>{d.dogru} doğru</span>
+          <span>{cev("Tur")} {d.i + 1} / {TUR}</span>
+          <span>{d.dogru} {cev("doğru")}</span>
         </div>
         <div className="vk-alan">
           <Izgara tur={t} secili={sec} ciz={ciz} cozumGoster={kontrol && !d.sonuc} />
           <div className="vk-lejant">
-            <span><i className="vk-bas" />başlangıç {nokta(t.bas)}</span>
-            <span><i className="vk-hedef" />hedef {nokta(t.hedef)}</span>
+            <span><i className="vk-bas" />{cev("başlangıç")} {nokta(t.bas)}</span>
+            <span><i className="vk-hedef" />{cev("hedef")} {nokta(t.hedef)}</span>
           </div>
         </div>
-        <div className="vk-kartlar" role="group" aria-label="Vektör kartları">
+        <div className="vk-kartlar" role="group" aria-label={cev("Vektör kartları")}>
           {t.vek.map((v, j) => {
             const k = sec.indexOf(j);
             return (
@@ -190,31 +191,31 @@ export default function VektorOyun() {
           })}
         </div>
         <p className="vk-yol">
-          {!sec.length ? "Bir vektör kartına dokun." : d.mod === "cizim" || kontrol ? <>R = {adlar(sec)} = {nokta(R)}{!icinde(topla([R], t.bas)) && " · ızgaranın dışına çıktın"}</> : <>Seçtiğin: {adlar(sec)}</>}
+          {!sec.length ? cev("Bir vektör kartına dokun.") : d.mod === "cizim" || kontrol ? <>R = {adlar(sec)} = {nokta(R)}{!icinde(topla([R], t.bas)) && cev(" · ızgaranın dışına çıktın")}</> : <>{cev("Seçtiğin:")} {adlar(sec)}</>}
         </p>
         {!kontrol && (
           <div className="vk-arac">
-            <button className="btn" disabled={!sec.length} onClick={() => setD((o) => o && { ...o, secili: o.secili.slice(0, -1) })}>Geri al</button>
-            <button className="btn" disabled={!sec.length} onClick={() => setD((o) => o && { ...o, secili: [] })}>Sıfırla</button>
+            <button className="btn" disabled={!sec.length} onClick={() => setD((o) => o && { ...o, secili: o.secili.slice(0, -1) })}>{cev("Geri al")}</button>
+            <button className="btn" disabled={!sec.length} onClick={() => setD((o) => o && { ...o, secili: [] })}>{cev("Sıfırla")}</button>
           </div>
         )}
         {kontrol && (
           <div className={`bubble ${d.sonuc ? "ok" : "no"}`} aria-live="polite">
-            <h2>{d.sonuc ? "Tam isabet!" : "Hedefe varmadın"}</h2>
+            <h2>{d.sonuc ? cev("Tam isabet!") : cev("Hedefe varmadın")}</h2>
             <p>
-              Gereken yer değiştirme: hedef − başlangıç = {nokta(gerek)}.<br />
+              {cev("Gereken yer değiştirme: hedef − başlangıç =")} {nokta(gerek)}.<br />
               {adlar(sec)}: {bilesen(sec)}.
-              {!d.sonuc && <><br />Bir çözüm (yeşil kesikli): {adlar(t.cozum)}: {bilesen(t.cozum)}.</>}
+              {!d.sonuc && <><br />{cev("Bir çözüm (yeşil kesikli):")} {adlar(t.cozum)}: {bilesen(t.cozum)}.</>}
             </p>
           </div>
         )}
         <div className="controls one">
           {kontrol ? (
             <button className="btn main" onClick={() => setD((o) => o && { ...o, i: o.i + 1, secili: [], sonuc: null })}>
-              {d.i === TUR - 1 ? "Sonucu gör" : "Sonraki tur"}
+              {d.i === TUR - 1 ? cev("Sonucu gör") : cev("Sonraki tur")}
             </button>
           ) : (
-            <button className="btn main" disabled={!sec.length} onClick={kontrolEt}>Kontrol et</button>
+            <button className="btn main" disabled={!sec.length} onClick={kontrolEt}>{cev("Kontrol et")}</button>
           )}
         </div>
       </>
@@ -224,9 +225,9 @@ export default function VektorOyun() {
   return (
     <div className="app" data-ders="fizik">
       <UstBar
-        geri={{ to: "/oyunlar/", label: "Oyunlara dön" }}
-        baslik="Vektörle hedefi vur"
-        sag={d && <UstEylem label="Baştan başla" icon={<Icon.tekrar />} onClick={() => setD(null)} />}
+        geri={{ to: "/oyunlar/", label: cev("Oyunlara dön") }}
+        baslik={cev("Vektörle hedefi vur")}
+        sag={d && <UstEylem label={cev("Baştan başla")} icon={<Icon.tekrar />} onClick={() => setD(null)} />}
       />
       <main className="view lesson">{govde}</main>
     </div>

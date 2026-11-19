@@ -3,6 +3,7 @@
 // verisi ayrıca "ilerleme" tablosundaki tek satırına yazılır. Buluttaki veriyle cihazdaki veri birleştirilir
 // (kurallar lib/esitle.ts), böylece öğrenci telefon değiştirse de, hesabı açmadan önce çalıştıklarını da kaybetmez.
 // Adres ve anahtar herkese açık (publishable) değerlerdir; tabloyu satır düzeyi güvenlik (RLS) korur.
+import { cev } from "@/lib/dil";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { Capacitor } from "@capacitor/core";
 import { createClient, type Session, type SupabaseClient } from "@supabase/supabase-js";
@@ -274,15 +275,15 @@ export async function bildirimYaz(tur: Bildirim, acik: boolean) {
 /** Supabase hata iletilerini öğrencinin anlayacağı Türkçe cümlelere çevirir. */
 export function hataMetni(e: { message?: string; code?: string } | null | undefined): string {
   const m = `${e?.code ?? ""} ${e?.message ?? ""}`.toLowerCase();
-  if (m.includes("invalid login") || m.includes("invalid_credentials")) return "E-posta ya da şifre yanlış.";
-  if (m.includes("email not confirmed") || m.includes("email_not_confirmed")) return "E-postanı henüz doğrulamadın. Gelen kutundaki bağlantıya dokun.";
-  if (m.includes("already registered") || m.includes("user_already_exists")) return "Bu e-postayla zaten bir hesap var. Giriş yapmayı dene.";
-  if (m.includes("password") && (m.includes("short") || m.includes("weak") || m.includes("characters"))) return "Şifre en az 8 karakter olmalı.";
-  if (m.includes("not authorized") || m.includes("email_address_not_authorized")) return "Şu an e-posta gönderemiyoruz, hesap açma kısa süre sonra açılacak.";
-  if (m.includes("rate limit") || m.includes("over_email_send_rate_limit") || m.includes("too many")) return "Çok fazla deneme oldu. Birkaç dakika sonra yeniden dene.";
-  if (m.includes("invalid") && m.includes("email")) return "Bu e-posta adresi geçerli görünmüyor.";
-  if (m.includes("fetch") || m.includes("network")) return "İnternet bağlantısı yok gibi görünüyor.";
-  return "Bir sorun oldu. Biraz sonra yeniden dene.";
+  if (m.includes("invalid login") || m.includes("invalid_credentials")) return cev("E-posta ya da şifre yanlış.");
+  if (m.includes("email not confirmed") || m.includes("email_not_confirmed")) return cev("E-postanı henüz doğrulamadın. Gelen kutundaki bağlantıya dokun.");
+  if (m.includes("already registered") || m.includes("user_already_exists")) return cev("Bu e-postayla zaten bir hesap var. Giriş yapmayı dene.");
+  if (m.includes("password") && (m.includes("short") || m.includes("weak") || m.includes("characters"))) return cev("Şifre en az 8 karakter olmalı.");
+  if (m.includes("not authorized") || m.includes("email_address_not_authorized")) return cev("Şu an e-posta gönderemiyoruz, hesap açma kısa süre sonra açılacak.");
+  if (m.includes("rate limit") || m.includes("over_email_send_rate_limit") || m.includes("too many")) return cev("Çok fazla deneme oldu. Birkaç dakika sonra yeniden dene.");
+  if (m.includes("invalid") && m.includes("email")) return cev("Bu e-posta adresi geçerli görünmüyor.");
+  if (m.includes("fetch") || m.includes("network")) return cev("İnternet bağlantısı yok gibi görünüyor.");
+  return cev("Bir sorun oldu. Biraz sonra yeniden dene.");
 }
 
 // ---- Google ve Apple ile giriş ----
@@ -358,7 +359,7 @@ export async function appleIleGir(donus?: string) {
 /** Uygulamaya derin bağlantıyla dönülünce (app.ucler://giris?code=...) oturumu açar. Hata varsa mesajını döner. */
 export async function uygulamaDonusu(url: string): Promise<string | null> {
   const q = new globalThis.URL(url.replace("#", "?")).searchParams;
-  if (q.get("error")) return "Giriş tamamlanamadı. Yeniden dene ya da e-postayla devam et.";
+  if (q.get("error")) return cev("Giriş tamamlanamadı. Yeniden dene ya da e-postayla devam et.");
   const kod = q.get("code");
   if (!kod) return null;
   const { error } = await sb().auth.exchangeCodeForSession(kod);

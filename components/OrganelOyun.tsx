@@ -1,6 +1,7 @@
 "use client";
 // Oyun: görevi verilen organeli hücre çiziminde bul. Hayvan ya da bitki hücresi, 10 tur.
 // Bilgiler content/biyoloji.json'daki "Hücre ve organeller" konusuyla aynıdır.
+import { cev } from "@/lib/dil";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { kaydet, PUAN } from "@/lib/puan";
@@ -14,20 +15,20 @@ type Durum = { mod: Mod; sira: string[]; i: number; secim: string | null; dogru:
 const TUR = 10, KAYIT = "ucler-oyun-organel";
 
 const ORG: Record<string, Org> = {
-  zar: { ad: "Hücre zarı", gorev: "Hücreyi çevreleyen sınır: neyin girip çıkacağını seçer (seçici geçirgen).", not: "Hücre zarı her hücrede bulunur. Bitkide zarın hemen dışında bir de hücre duvarı vardır." },
-  cekirdek: { ad: "Çekirdek", gorev: "DNA'yı taşır; hangi proteinin ne zaman üretileceğini belirleyerek hücreyi yönetir.", not: "Çekirdek porlu çift zarla çevrilidir. İçinde DNA (kromatin) ve çekirdekçik bulunur." },
-  cekirdekcik: { ad: "Çekirdekçik", gorev: "Çekirdeğin içindeki koyu bölge: ribozom yapımına katılır.", not: "Çekirdekçik zarsızdır ve çekirdeğin içinde durur." },
-  ribozom: { ad: "Ribozom", gorev: "Zarsız, çok küçük yapı: protein sentezler. Sitoplazmada serbest hâlde de bulunur.", not: "Ribozom bütün hücrelerde, bakterilerde bile bulunur. Granüllü ER'nin üstündeki noktalar da ribozomdur." },
-  ger: { ad: "Granüllü ER", gorev: "Üstü ribozomlarla kaplı kanal sistemi: salgılanacak ve zara gidecek proteinleri üretip taşır.", not: "Granüllü ER çekirdeğin hemen yanındadır. Ürettiği proteinleri keseciklerle Golgi'ye yollar." },
-  gser: { ad: "Granülsüz ER", gorev: "Ribozomsuz kanal sistemi: lipit sentezler, karaciğerde zararlı maddeleri etkisizleştirir.", not: "Granülsüz ER ribozom taşımaz. Kas hücresinde Ca²⁺ depolar." },
-  golgi: { ad: "Golgi aygıtı", gorev: "ER'den gelen proteinleri düzenler, paketler ve keseciklerle gideceği yere yollar.", not: "Golgi, üst üste dizili yassı keselerden oluşan kargo merkezidir." },
-  mitokondri: { ad: "Mitokondri", gorev: "Hücrenin enerji santrali: oksijenli solunumla besinlerden ATP üretir.", not: "Mitokondri çift zarlıdır, iç zarı kıvrımlıdır; kendi DNA'sı ve ribozomu vardır. Kas hücrelerinde boldur." },
-  lizozom: { ad: "Lizozom", gorev: "Sindirim enzimleriyle dolu kesecik: hücre içi sindirim yapar, eskiyen organelleri yıkar.", not: "Lizozom Golgi'den oluşur; özellikle hayvan hücrelerinde bulunur." },
-  peroksizom: { ad: "Peroksizom", gorev: "Zararlı hidrojen peroksiti (H₂O₂) katalaz enzimiyle su ve oksijene ayırır.", not: "Peroksizom küçük, tek zarlı bir kesecik. Karaciğerde boldur, bitki hücresinde de bulunur." },
-  sentrozom: { ad: "Sentrozom", gorev: "Hücre bölünürken iğ ipliklerini düzenler. Birbirine dik iki küçük silindirden oluşur.", not: "Sentrozom iki sentriolden oluşur. Hayvan hücresinde bulunur, bitki hücresinde yoktur." },
-  duvar: { ad: "Hücre duvarı", gorev: "Selülozdan yapılmış sağlam dış katman: hücreye destek ve koruma sağlar.", not: "Hücre duvarı zarın dışındadır. Bitkide selülozdandır. Hayvan hücresinde yoktur." },
-  kloroplast: { ad: "Kloroplast", gorev: "Klorofille ışık enerjisini yakalar, fotosentezle glikoz üretir.", not: "Kloroplast çift zarlıdır ve kendi DNA'sı vardır. Bitki ve alglerde bulunan bir plastittir." },
-  koful: { ad: "Merkezi koful", gorev: "Su, besin, pigment ve atık depolayan kese. Su alınca bitki hücresini gergin tutar.", not: "Bitki hücresinde tek ve büyük bir merkezi koful vardır. Hayvan hücresinin kofulları küçüktür." },
+  zar: { ad: cev("Hücre zarı"), gorev: cev("Hücreyi çevreleyen sınır: neyin girip çıkacağını seçer (seçici geçirgen)."), not: cev("Hücre zarı her hücrede bulunur. Bitkide zarın hemen dışında bir de hücre duvarı vardır.") },
+  cekirdek: { ad: cev("Çekirdek"), gorev: cev("DNA'yı taşır; hangi proteinin ne zaman üretileceğini belirleyerek hücreyi yönetir."), not: cev("Çekirdek porlu çift zarla çevrilidir. İçinde DNA (kromatin) ve çekirdekçik bulunur.") },
+  cekirdekcik: { ad: cev("Çekirdekçik"), gorev: cev("Çekirdeğin içindeki koyu bölge: ribozom yapımına katılır."), not: cev("Çekirdekçik zarsızdır ve çekirdeğin içinde durur.") },
+  ribozom: { ad: cev("Ribozom"), gorev: cev("Zarsız, çok küçük yapı: protein sentezler. Sitoplazmada serbest hâlde de bulunur."), not: cev("Ribozom bütün hücrelerde, bakterilerde bile bulunur. Granüllü ER'nin üstündeki noktalar da ribozomdur.") },
+  ger: { ad: cev("Granüllü ER"), gorev: cev("Üstü ribozomlarla kaplı kanal sistemi: salgılanacak ve zara gidecek proteinleri üretip taşır."), not: cev("Granüllü ER çekirdeğin hemen yanındadır. Ürettiği proteinleri keseciklerle Golgi'ye yollar.") },
+  gser: { ad: cev("Granülsüz ER"), gorev: cev("Ribozomsuz kanal sistemi: lipit sentezler, karaciğerde zararlı maddeleri etkisizleştirir."), not: cev("Granülsüz ER ribozom taşımaz. Kas hücresinde Ca²⁺ depolar.") },
+  golgi: { ad: cev("Golgi aygıtı"), gorev: cev("ER'den gelen proteinleri düzenler, paketler ve keseciklerle gideceği yere yollar."), not: cev("Golgi, üst üste dizili yassı keselerden oluşan kargo merkezidir.") },
+  mitokondri: { ad: cev("Mitokondri"), gorev: cev("Hücrenin enerji santrali: oksijenli solunumla besinlerden ATP üretir."), not: cev("Mitokondri çift zarlıdır, iç zarı kıvrımlıdır; kendi DNA'sı ve ribozomu vardır. Kas hücrelerinde boldur.") },
+  lizozom: { ad: cev("Lizozom"), gorev: cev("Sindirim enzimleriyle dolu kesecik: hücre içi sindirim yapar, eskiyen organelleri yıkar."), not: cev("Lizozom Golgi'den oluşur; özellikle hayvan hücrelerinde bulunur.") },
+  peroksizom: { ad: cev("Peroksizom"), gorev: cev("Zararlı hidrojen peroksiti (H₂O₂) katalaz enzimiyle su ve oksijene ayırır."), not: cev("Peroksizom küçük, tek zarlı bir kesecik. Karaciğerde boldur, bitki hücresinde de bulunur.") },
+  sentrozom: { ad: cev("Sentrozom"), gorev: cev("Hücre bölünürken iğ ipliklerini düzenler. Birbirine dik iki küçük silindirden oluşur."), not: cev("Sentrozom iki sentriolden oluşur. Hayvan hücresinde bulunur, bitki hücresinde yoktur.") },
+  duvar: { ad: cev("Hücre duvarı"), gorev: cev("Selülozdan yapılmış sağlam dış katman: hücreye destek ve koruma sağlar."), not: cev("Hücre duvarı zarın dışındadır. Bitkide selülozdandır. Hayvan hücresinde yoktur.") },
+  kloroplast: { ad: cev("Kloroplast"), gorev: cev("Klorofille ışık enerjisini yakalar, fotosentezle glikoz üretir."), not: cev("Kloroplast çift zarlıdır ve kendi DNA'sı vardır. Bitki ve alglerde bulunan bir plastittir.") },
+  koful: { ad: cev("Merkezi koful"), gorev: cev("Su, besin, pigment ve atık depolayan kese. Su alınca bitki hücresini gergin tutar."), not: cev("Bitki hücresinde tek ve büyük bir merkezi koful vardır. Hayvan hücresinin kofulları küçüktür.") },
 };
 
 // Bir yayın (halka diliminin) yolu: merkez, yarıçap, başlangıç ve bitiş açısı (derece, saat yönünde).
@@ -220,25 +221,25 @@ export default function OrganelOyun() {
     govde = (
       <section className="oyun-giris">
         <div className="bubble">
-          <h2>Görevden organele</h2>
-          <p>Her turda bir organelin görevi yazacak. Hücre çiziminde o organele dokun. {TUR} tur.</p>
+          <h2>{cev("Görevden organele")}</h2>
+          <p>{cev("Her turda bir organelin görevi yazacak. Hücre çiziminde o organele dokun.")} {TUR} {cev("tur.")}</p>
         </div>
-        <button className="btn main" onClick={() => basla("hayvan")}>Hayvan hücresi</button>
-        <button className="btn" onClick={() => basla("bitki")}>Bitki hücresi (duvar, kloroplast, koful)</button>
-        {rekor > 0 && <p className="oyun-rekor">En iyi sonucun: {rekor}/{TUR}</p>}
+        <button className="btn main" onClick={() => basla("hayvan")}>{cev("Hayvan hücresi")}</button>
+        <button className="btn" onClick={() => basla("bitki")}>{cev("Bitki hücresi (duvar, kloroplast, koful)")}</button>
+        {rekor > 0 && <p className="oyun-rekor">{cev("En iyi sonucun:")} {rekor}/{TUR}</p>}
       </section>
     );
   } else if (bitti) {
     govde = (
       <section className="card end">
         <div className="score">{d.dogru}/{TUR}</div>
-        <h2>{d.dogru === TUR ? "Hepsi doğru, hücrenin haritası sende!" : d.dogru >= 7 ? "Çok iyi, birkaç organel karıştı." : "Organellerin görevlerine bir daha bak."}</h2>
-        <p>En iyi sonucun: {Math.max(rekor, d.dogru)}/{TUR}</p>
+        <h2>{d.dogru === TUR ? cev("Hepsi doğru, hücrenin haritası sende!") : d.dogru >= 7 ? cev("Çok iyi, birkaç organel karıştı.") : cev("Organellerin görevlerine bir daha bak.")}</h2>
+        <p>{cev("En iyi sonucun:")} {Math.max(rekor, d.dogru)}/{TUR}</p>
         <div className="acts">
-          <button className="btn main" onClick={() => basla(d.mod)}>Tekrar oyna</button>
-          <button className="btn" onClick={() => basla(d.mod === "hayvan" ? "bitki" : "hayvan")}>{d.mod === "hayvan" ? "Bitki hücresiyle oyna" : "Hayvan hücresiyle oyna"}</button>
-          <Link className="btn" href={href("biyoloji", "hucre-organeller")}>Konu: Hücre ve organeller</Link>
-          <Link className="btn" href="/oyunlar/">Oyunlara dön</Link>
+          <button className="btn main" onClick={() => basla(d.mod)}>{cev("Tekrar oyna")}</button>
+          <button className="btn" onClick={() => basla(d.mod === "hayvan" ? "bitki" : "hayvan")}>{d.mod === "hayvan" ? cev("Bitki hücresiyle oyna") : cev("Hayvan hücresiyle oyna")}</button>
+          <Link className="btn" href={href("biyoloji", "hucre-organeller")}>{cev("Konu: Hücre ve organeller")}</Link>
+          <Link className="btn" href="/oyunlar/">{cev("Oyunlara dön")}</Link>
         </div>
       </section>
     );
@@ -252,12 +253,12 @@ export default function OrganelOyun() {
     govde = (
       <>
         <div className="oyun-ust">
-          <span>Tur {d.i + 1} / {TUR}</span>
-          <span>{d.dogru} doğru</span>
+          <span>{cev("Tur")} {d.i + 1} / {TUR}</span>
+          <span>{d.dogru} {cev("doğru")}</span>
         </div>
         <div className="og-soru">{o.gorev}</div>
         <div className="og-alan">
-          <svg viewBox={`0 0 ${sahne.w} ${sahne.h}`} role="group" aria-label={d.mod === "hayvan" ? "Hayvan hücresi" : "Bitki hücresi"}>
+          <svg viewBox={`0 0 ${sahne.w} ${sahne.h}`} role="group" aria-label={d.mod === "hayvan" ? cev("Hayvan hücresi") : cev("Bitki hücresi")}>
             {sahne.zemin}
             {Object.entries(sahne.hit).map(([id, sekil], k) => {
               const cls = s === null ? "" : id === hedef ? "ok" : id === s ? "no" : "";
@@ -267,7 +268,7 @@ export default function OrganelOyun() {
                   className={`og-hit ${cls}`}
                   role="button"
                   tabIndex={s === null ? 0 : -1}
-                  aria-label={s === null ? `Bölge ${k + 1}` : ORG[id].ad}
+                  aria-label={s === null ? cev("Bölge {0}", k + 1) : ORG[id].ad}
                   onClick={() => sec(id)}
                   onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); sec(id); } }}
                 >
@@ -279,13 +280,13 @@ export default function OrganelOyun() {
         </div>
         {s && (
           <div className={`bubble ${bildi ? "ok" : "no"}`} aria-live="polite">
-            <h2>{bildi ? `Doğru: ${o.ad}` : `Dokunduğun: ${ORG[s].ad}`}</h2>
-            <p>{!bildi && <>Aranan: <b>{o.ad}</b> (yeşil). </>}{o.not}</p>
+            <h2>{bildi ? cev("Doğru: {0}", o.ad) : cev("Dokunduğun: {0}", ORG[s].ad)}</h2>
+            <p>{!bildi && <>{cev("Aranan:")} <b>{o.ad}</b> {cev("(yeşil).")} </>}{o.not}</p>
           </div>
         )}
         <div className="controls one">
           <button className="btn main" disabled={!s} onClick={() => setD((x) => x && { ...x, i: x.i + 1, secim: null })}>
-            {d.i === TUR - 1 ? "Sonucu gör" : "Sonraki görev"}
+            {d.i === TUR - 1 ? cev("Sonucu gör") : cev("Sonraki görev")}
           </button>
         </div>
       </>
@@ -295,9 +296,9 @@ export default function OrganelOyun() {
   return (
     <div className="app" data-ders="biyoloji">
       <UstBar
-        geri={{ to: "/oyunlar/", label: "Oyunlara dön" }}
-        baslik="Organeli bul"
-        sag={d && <UstEylem label="Baştan başla" icon={<Icon.tekrar />} onClick={() => setD(null)} />}
+        geri={{ to: "/oyunlar/", label: cev("Oyunlara dön") }}
+        baslik={cev("Organeli bul")}
+        sag={d && <UstEylem label={cev("Baştan başla")} icon={<Icon.tekrar />} onClick={() => setD(null)} />}
       />
       <main className="view lesson">{govde}</main>
     </div>

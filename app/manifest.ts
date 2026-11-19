@@ -1,3 +1,4 @@
+import { cev } from "@/lib/dil";
 import type { MetadataRoute } from "next";
 
 // Web uygulaması bildirimi: telefonda "Ana ekrana ekle" ile uygulama gibi açılır. Statik çıktıda
@@ -8,7 +9,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "ucler",
     short_name: "ucler",
-    description: "Fizik, kimya ve biyoloji en temelden: kısa, görselli kartlar ve mini testler.",
+    description: cev("Fizik, kimya ve biyoloji en temelden: kısa, görselli kartlar ve mini testler."),
     lang: "tr",
     start_url: "/",
     scope: "/",

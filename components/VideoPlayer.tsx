@@ -2,6 +2,7 @@
 // Ders ekranında kartın üstünde açılan video. Kapatınca öğrenci kaldığı karttan devam eder.
 // Yerel <dialog> (showModal): odak pencerenin içinde kalır, arkadaki ders etkileşime kapanır,
 // Escape kapatır ve kapanınca odak açma düğmesine döner.
+import { cev } from "@/lib/dil";
 import { useEffect, useRef } from "react";
 import type { Video } from "@/lib/videolar";
 import { kaydet, PUAN } from "@/lib/puan";
@@ -53,7 +54,7 @@ export default function VideoPlayer({ v, onClose }: { v: Video; onClose: () => v
         />
         <div className="player-bar">
           <span><b>{v.baslik}</b><Cevap v={v} /></span>
-          <Button ref={kapat} variant="outline" className="h-11 flex-none" onClick={onClose}>Karta dön</Button>
+          <Button ref={kapat} variant="outline" className="h-11 flex-none" onClick={onClose}>{cev("Karta dön")}</Button>
         </div>
       </div>
     </dialog>

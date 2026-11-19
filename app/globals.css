@@ -79,7 +79,7 @@
 /* Eski sınıflar components katmanında: Tailwind yardımcı sınıfları (shadcn/ui) bunların üstüne yazabilir. */
 @layer components {
 html,body{height:100%}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;-webkit-tap-highlight-color:transparent;font-variant-ligatures:none;-webkit-font-smoothing:antialiased}
 [data-ders="fizik"]{--acc:var(--fizik);--acc-soft:var(--fizik-soft)}
 [data-ders="kimya"]{--acc:var(--kimya);--acc-soft:var(--kimya-soft)}
 [data-ders="biyoloji"]{--acc:var(--biyoloji);--acc-soft:var(--biyoloji-soft)}

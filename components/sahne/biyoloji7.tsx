@@ -2,6 +2,7 @@
 // Biyoloji sahneleri (DNA ve genetik kod, protein sentezi): nükleotit ve bazlar, baz eşleşmesi,
 // Chargaff kuralı, yarı korunumlu eşlenme, eşlenme çatalı, PCR; transkripsiyon, kodon okuma,
 // ribozomda translasyon, peptit hesabı, nokta mutasyonu (orak hücre) ve çerçeve kayması.
+import { cev, BINLIK, SAYI_YEREL } from "@/lib/dil";
 import type { SahneKaydi, SahneProps } from "./ortak";
 
 const sinir = (x: number, a = 0, b = 1) => Math.max(a, Math.min(b, x));
@@ -18,8 +19,8 @@ const RNA_ES: Record<string, string> = { A: "U", T: "A", G: "C", C: "G" };
 const KOD = (() => {
   const b = "UCAG", aa = "FFLLSSSSYY**CC*WLLLLPPPPHHQQRRRRIIIMTTTTNNKKSSRRVVVVAAAADDEEGGGG";
   const ad: Record<string, string> = {
-    F: "Phe", L: "Leu", S: "Ser", Y: "Tyr", "*": "dur", C: "Cys", W: "Trp", P: "Pro", H: "His", Q: "Gln", R: "Arg",
-    I: "Ile", M: "Met", T: "Thr", N: "Asn", K: "Lys", V: "Val", A: "Ala", D: "Asp", E: "Glu", G: "Gly",
+    F: cev("Phe"), L: cev("Leu"), S: cev("Ser"), Y: cev("Tyr"), "*": "dur", C: cev("Cys"), W: cev("Trp"), P: cev("Pro"), H: cev("His"), Q: cev("Gln"), R: cev("Arg"),
+    I: cev("Ile"), M: cev("Met"), T: cev("Thr"), N: cev("Asn"), K: cev("Lys"), V: cev("Val"), A: cev("Ala"), D: cev("Asp"), E: cev("Glu"), G: cev("Gly"),
   };
   const m: Record<string, string> = {};
   let i = 0;
@@ -80,7 +81,7 @@ function Nukleotit() {
     { b: "T", ad: "timin", p: false }, { b: "C", ad: "sitozin", p: false },
   ];
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label="Nükleotit: fosfat, deoksiriboz ve baz. Dört baz: adenin, guanin, timin, sitozin">
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("Nükleotit: fosfat, deoksiriboz ve baz. Dört baz: adenin, guanin, timin, sitozin")}>
       <g>
         <circle cx={70} cy={56} r={17} fill="var(--c4)" fillOpacity={0.2} stroke="var(--c4)" strokeWidth={1.8} />
         <text x={70} y={61} fontSize={14} fontWeight={800} fill="#b47f0c" textAnchor="middle">P</text>
@@ -88,12 +89,12 @@ function Nukleotit() {
         <polygon points="150,34 174,50 165,78 135,78 126,50" fill="var(--c2)" fillOpacity={0.14} stroke="var(--c2)" strokeWidth={1.8} />
         <line x1={174} y1={56} x2={212} y2={56} stroke="var(--ink)" strokeWidth={1.6} />
         <rect x={212} y={40} width={58} height={32} rx={7} fill="var(--line)" stroke="var(--muted)" strokeWidth={1.4} />
-        <text x={241} y={61} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">baz</text>
+        <text x={241} y={61} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("baz")}</text>
       </g>
       <g fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">
-        <text x={70} y={98}>fosfat</text>
-        <text x={150} y={98}>deoksiriboz</text>
-        <text x={241} y={98}>A, G, T ya da C</text>
+        <text x={70} y={98}>{cev("fosfat")}</text>
+        <text x={150} y={98}>{cev("deoksiriboz")}</text>
+        <text x={241} y={98}>{cev("A, G, T ya da C")}</text>
       </g>
       <line x1={20} y1={116} x2={320} y2={116} stroke="var(--line)" />
       {bazlar.map((z, i) => {
@@ -105,7 +106,7 @@ function Nukleotit() {
           </g>
         );
       })}
-      <text x={170} y={228} fontSize={11.5} fontWeight={600} fill="var(--muted)" textAnchor="middle">Halkaları say: ikisi çift halkalı, ikisi tek halkalı.</text>
+      <text x={170} y={228} fontSize={11.5} fontWeight={600} fill="var(--muted)" textAnchor="middle">{cev("Halkaları say: ikisi çift halkalı, ikisi tek halkalı.")}</text>
     </svg>
   );
 }
@@ -119,7 +120,7 @@ function Eslesme({ s, t, oynuyor }: SahneProps) {
   const u = ilerleme(t, oynuyor, sure);
   const x = (i: number) => 60 + i * 44, Y1 = 70, Y2 = 150;
   return (
-    <svg viewBox="0 0 340 220" role="img" aria-label={`Üst iplik 5'-${KALIP}-3'. Karşı iplik ${u >= 1 ? "3'-TACGTC-5'" : "henüz tamamlanmadı"}`}>
+    <svg viewBox="0 0 340 220" role="img" aria-label={cev("Üst iplik 5'-{0}-3'. Karşı iplik {1}", KALIP, u >= 1 ? "3'-TACGTC-5'" : "henüz tamamlanmadı")}>
       <g>
         <line x1={x(0) - 22} y1={Y1 - 22} x2={x(5) + 22} y2={Y1 - 22} stroke="var(--ink)" strokeWidth={3} strokeLinecap="round" />
         <text x={x(0) - 30} y={Y1 - 18} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="end">5'</text>
@@ -151,7 +152,7 @@ function Eslesme({ s, t, oynuyor }: SahneProps) {
         <text x={x(0) - 30} y={Y2 + 26} fontSize={12} fontWeight={800} fill={YESIL} textAnchor="end">3'</text>
         <text x={x(5) + 30} y={Y2 + 26} fontSize={12} fontWeight={800} fill={YESIL}>5'</text>
       </g>
-      <text x={170} y={210} fontSize={11.5} fontWeight={600} fill="var(--muted)" textAnchor="middle">kesikli çizgi: hidrojen bağı (A=T iki, G≡C üç)</text>
+      <text x={170} y={210} fontSize={11.5} fontWeight={600} fill="var(--muted)" textAnchor="middle">{cev("kesikli çizgi: hidrojen bağı (A=T iki, G≡C üç)")}</text>
     </svg>
   );
 }
@@ -163,9 +164,9 @@ function Chargaff({ v }: SahneProps) {
   const cubuk = [{ b: "A", n: A }, { b: "T", n: A }, { b: "G", n: G }, { b: "C", n: G }];
   const Y0 = 180, OL = 1.2;
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label={`100 baz çiftlik DNA: A ${A}, T ${A}, G ${G}, C ${G}; ${H} hidrojen bağı`}>
-      <text x={20} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">100 baz çiftlik DNA</text>
-      <text x={20} y={42} fontSize={11.5} fontWeight={600} fill="var(--muted)">toplam 200 baz</text>
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("100 baz çiftlik DNA: A {0}, T {1}, G {2}, C {3}; {4} hidrojen bağı", A, A, G, G, H)}>
+      <text x={20} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("100 baz çiftlik DNA")}</text>
+      <text x={20} y={42} fontSize={11.5} fontWeight={600} fill="var(--muted)">{cev("toplam 200 baz")}</text>
       <g>
         <line x1={30} y1={Y0} x2={230} y2={Y0} stroke="var(--ink)" strokeWidth={1.4} />
         {cubuk.map((c, i) => {
@@ -182,11 +183,11 @@ function Chargaff({ v }: SahneProps) {
       <g fontSize={12} fontWeight={700}>
         <text x={250} y={80} fill="var(--ink)">A = T = {A}</text>
         <text x={250} y={102} fill="var(--ink)">G = C = {G}</text>
-        <text x={250} y={136} fill="var(--muted)" fontWeight={600}>H bağı:</text>
+        <text x={250} y={136} fill="var(--muted)" fontWeight={600}>{cev("H bağı:")}</text>
         <text x={250} y={156} fill="var(--muted)" fontWeight={600}>2·{A} + 3·{G}</text>
         <text x={250} y={180} fontSize={15} fontWeight={800} fill={H === 270 ? YESIL : "var(--ink)"}>= {H}</text>
       </g>
-      <text x={170} y={228} fontSize={11.5} fontWeight={600} fill="var(--muted)" textAnchor="middle">A + G = T + C = 100 (pürin = pirimidin)</text>
+      <text x={170} y={228} fontSize={11.5} fontWeight={600} fill="var(--muted)" textAnchor="middle">{cev("A + G = T + C = 100 (pürin = pirimidin)")}</text>
     </svg>
   );
 }
@@ -209,17 +210,17 @@ function Eslenme({ s, t, oynuyor }: SahneProps) {
   const u = ilerleme(t, oynuyor, sure);
   const k1 = u > 0.3, k2 = u > 0.7;
   const sutun = [
-    { x: 54, m: [[AGIR, AGIR]], not: "1 ağır", on: true },
-    { x: 164, m: [[AGIR, HAFIF], [HAFIF, AGIR]], not: "2 hibrit", on: k1 },
-    { x: 280, m: [[AGIR, HAFIF], [HAFIF, HAFIF], [HAFIF, HAFIF], [HAFIF, AGIR]], not: "2 hibrit + 2 hafif", on: k2 },
+    { x: 54, m: [[AGIR, AGIR]], not: cev("1 ağır"), on: true },
+    { x: 164, m: [[AGIR, HAFIF], [HAFIF, AGIR]], not: cev("2 hibrit"), on: k1 },
+    { x: 280, m: [[AGIR, HAFIF], [HAFIF, HAFIF], [HAFIF, HAFIF], [HAFIF, AGIR]], not: cev("2 hibrit + 2 hafif"), on: k2 },
   ];
   const yy = (n: number, j: number) => 108 + (j - (n - 1) / 2) * 30;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Eşlenme: ${k2 ? "2. kuşakta 2 hibrit, 2 hafif DNA" : k1 ? "1. kuşakta 2 hibrit DNA" : "başlangıçta 1 ağır DNA"}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Eşlenme: {0}", k2 ? "2. kuşakta 2 hibrit, 2 hafif DNA" : k1 ? "1. kuşakta 2 hibrit DNA" : "başlangıçta 1 ağır DNA")}>
       <g fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        <text x={54} y={30}>başlangıç</text>
-        <text x={164} y={30}>1. eşlenme</text>
-        <text x={280} y={30}>2. eşlenme</text>
+        <text x={54} y={30}>{cev("başlangıç")}</text>
+        <text x={164} y={30}>{cev("1. eşlenme")}</text>
+        <text x={280} y={30}>{cev("2. eşlenme")}</text>
       </g>
       {sutun.map((c, i) => (
         <g key={i} opacity={c.on ? 1 : 0.12}>
@@ -233,9 +234,9 @@ function Eslenme({ s, t, oynuyor }: SahneProps) {
       </g>
       <g fontSize={11.5} fontWeight={700}>
         <line x1={40} y1={214} x2={64} y2={214} stroke={AGIR} strokeWidth={5} strokeLinecap="round" />
-        <text x={70} y={218} fill="var(--ink)">eski iplik (¹⁵N, ağır)</text>
+        <text x={70} y={218} fill="var(--ink)">{cev("eski iplik (¹⁵N, ağır)")}</text>
         <line x1={200} y1={214} x2={224} y2={214} stroke={HAFIF} strokeWidth={5} strokeLinecap="round" />
-        <text x={230} y={218} fill="var(--ink)">yeni (¹⁴N)</text>
+        <text x={230} y={218} fill="var(--ink)">{cev("yeni (¹⁴N)")}</text>
       </g>
     </svg>
   );
@@ -257,7 +258,7 @@ function Catal({ s, t, oynuyor }: SahneProps) {
   const yeniUst = [0.12, 0.95].map((k) => kayik(ust(k), 9));
   const parca = [[0.1, 0.36], [0.42, 0.68], [0.74, 0.92]].filter(([, b]) => b < 0.95);
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label="Eşlenme çatalı: helikaz iplikleri açar, DNA polimeraz yeni iplikleri örer, ligaz parçaları birleştirir">
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("Eşlenme çatalı: helikaz iplikleri açar, DNA polimeraz yeni iplikleri örer, ligaz parçaları birleştirir")}>
       <g>
         <line x1={fx} y1={Y1} x2={322} y2={Y1} stroke={AGIR} strokeWidth={4} strokeLinecap="round" />
         <line x1={fx} y1={Y2} x2={322} y2={Y2} stroke={AGIR} strokeWidth={4} strokeLinecap="round" />
@@ -281,17 +282,17 @@ function Catal({ s, t, oynuyor }: SahneProps) {
         <circle cx={kayik(alt(0.71), -9).x} cy={kayik(alt(0.71), -9).y} r={5} fill="var(--c2)" />
       </g>
       <g fontSize={12} fontWeight={700}>
-        {u > 0 && <text x={fx + 2} y={88} fill="#b47f0c" textAnchor="middle">helikaz</text>}
+        {u > 0 && <text x={fx + 2} y={88} fill="#b47f0c" textAnchor="middle">{cev("helikaz")}</text>}
         {u > 0 && <line x1={fx + 2} y1={92} x2={fx + 2} y2={106} stroke="#b47f0c" strokeWidth={1.2} />}
-        <text x={fx - 95} y={124} fill="var(--c1)" textAnchor="middle" opacity={sinir((u - 0.5) * 4, 0, 1)}>DNA polimeraz</text>
-        {u > 0 && <text x={kayik(alt(0.71), -9).x + 10} y={alt(0.71).y + 16} fill="var(--c2)">ligaz</text>}
-        <text x={322} y={152} fill="var(--muted)" textAnchor="end" fontWeight={600}>açılmamış DNA</text>
+        <text x={fx - 95} y={124} fill="var(--c1)" textAnchor="middle" opacity={sinir((u - 0.5) * 4, 0, 1)}>{cev("DNA polimeraz")}</text>
+        {u > 0 && <text x={kayik(alt(0.71), -9).x + 10} y={alt(0.71).y + 16} fill="var(--c2)">{cev("ligaz")}</text>}
+        <text x={322} y={152} fill="var(--muted)" textAnchor="end" fontWeight={600}>{cev("açılmamış DNA")}</text>
       </g>
       <g fontSize={11.5} fontWeight={700}>
         <line x1={40} y1={222} x2={64} y2={222} stroke={AGIR} strokeWidth={4} strokeLinecap="round" />
-        <text x={70} y={226} fill="var(--ink)">eski (kalıp) iplik</text>
+        <text x={70} y={226} fill="var(--ink)">{cev("eski (kalıp) iplik")}</text>
         <line x1={190} y1={222} x2={214} y2={222} stroke={YESIL} strokeWidth={4} strokeLinecap="round" />
-        <text x={220} y={226} fill="var(--ink)">yeni iplik</text>
+        <text x={220} y={226} fill="var(--ink)">{cev("yeni iplik")}</text>
       </g>
     </svg>
   );
@@ -303,9 +304,9 @@ function Pcr({ v }: SahneProps) {
   const n = sinir(v.n ?? 1, 0, 12), kopya = 2 ** n;
   const Y0 = 196, x = (i: number) => 32 + i * 23;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`PCR: ${n} döngüde ${kopya} kopya`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("PCR: {0} döngüde {1} kopya", n, kopya)}>
       <g fontSize={11.5} fontWeight={700}>
-        {[{ t: "95 °C ayrıl", r: "var(--c2)" }, { t: "55 °C primer", r: "var(--c1)" }, { t: "72 °C ör", r: YESIL }].map((a, i) => (
+        {[{ t: cev("95 °C ayrıl"), r: "var(--c2)" }, { t: cev("55 °C primer"), r: "var(--c1)" }, { t: cev("72 °C ör"), r: YESIL }].map((a, i) => (
           <g key={i}>
             <rect x={20 + i * 104} y={12} width={94} height={24} rx={12} fill={a.r} fillOpacity={0.14} />
             <text x={67 + i * 104} y={28} fill={a.r} textAnchor="middle">{a.t}</text>
@@ -313,7 +314,7 @@ function Pcr({ v }: SahneProps) {
         ))}
       </g>
       <text x={20} y={62} fontSize={14} fontWeight={800} fill={kopya >= 1000 ? YESIL : "var(--ink)"}>
-        {n} döngü: 2<tspan fontSize={10} dy={-6}>{n}</tspan><tspan dy={6}> = {kopya.toLocaleString("tr-TR").replace(/\./g, " ")} kopya</tspan>
+        {n} {cev("döngü: 2")}<tspan fontSize={10} dy={-6}>{n}</tspan><tspan dy={6}> = {kopya.toLocaleString(SAYI_YEREL).replace(BINLIK, " ")} {cev("kopya")}</tspan>
       </text>
       <g>
         <line x1={24} y1={Y0} x2={320} y2={Y0} stroke="var(--ink)" strokeWidth={1.4} />
@@ -327,7 +328,7 @@ function Pcr({ v }: SahneProps) {
           );
         })}
       </g>
-      <text x={170} y={228} fontSize={11.5} fontWeight={600} fill="var(--muted)" textAnchor="middle">her döngüde kopya sayısı 2 katına çıkar (sütunlar log ölçekte)</text>
+      <text x={170} y={228} fontSize={11.5} fontWeight={600} fill="var(--muted)" textAnchor="middle">{cev("her döngüde kopya sayısı 2 katına çıkar (sütunlar log ölçekte)")}</text>
     </svg>
   );
 }
@@ -345,22 +346,22 @@ function Transkripsiyon({ s, t, oynuyor }: SahneProps) {
   const n = Math.floor(u * 9 + 1e-6), px = ara(x(0), x(8), sinir(u));
   const Y1 = 44, Y2 = 108, Y3 = 172;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Kalıp iplik 3'-${kalip.join("")}-5'; mRNA 5'-${mrna.slice(0, n).join("")}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Kalıp iplik 3'-{0}-5'; mRNA 5'-{1}", kalip.join(""), mrna.slice(0, n).join(""))}>
       <g fontSize={11.5} fontWeight={700} fill="var(--muted)">
-        <text x={20} y={Y1 - 18}>kodlayan iplik 5'→3'</text>
-        <text x={20} y={Y2 - 18} fill="var(--ink)">kalıp iplik 3'→5' (okunan)</text>
-        <text x={20} y={Y3 - 18} fill={YESIL}>mRNA 5'→3'</text>
+        <text x={20} y={Y1 - 18}>{cev("kodlayan iplik 5'→3'")}</text>
+        <text x={20} y={Y2 - 18} fill="var(--ink)">{cev("kalıp iplik 3'→5' (okunan)")}</text>
+        <text x={20} y={Y3 - 18} fill={YESIL}>{cev("mRNA 5'→3'")}</text>
       </g>
       <g>{[...KODLAYAN].map((b, i) => <Baz key={i} x={x(i)} y={Y1} b={b} soluk />)}</g>
       <g>{kalip.map((b, i) => <Baz key={i} x={x(i)} y={Y2} b={b} />)}</g>
       {u > 0 && u < 1 && (
         <g>
           <ellipse cx={px} cy={(Y2 + Y3) / 2} rx={22} ry={40} fill="var(--c5)" fillOpacity={0.14} stroke="var(--c5)" strokeWidth={1.4} />
-          <text x={Math.min(px, 268)} y={Y3 + 40} fontSize={11.5} fontWeight={700} fill="var(--c5)" textAnchor="middle">RNA polimeraz</text>
+          <text x={Math.min(px, 268)} y={Y3 + 40} fontSize={11.5} fontWeight={700} fill="var(--c5)" textAnchor="middle">{cev("RNA polimeraz")}</text>
         </g>
       )}
       <g>{mrna.map((b, i) => (i < n ? <g key={i} className="ad-belir"><Baz x={x(i)} y={Y3} b={b} /></g> : <BosBaz key={i} x={x(i)} y={Y3} />))}</g>
-      {u >= 1 && <text x={170} y={226} fontSize={12} fontWeight={700} fill="var(--ink)" textAnchor="middle">mRNA = kodlayan iplik, T yerine U</text>}
+      {u >= 1 && <text x={170} y={226} fontSize={12} fontWeight={700} fill="var(--ink)" textAnchor="middle">{cev("mRNA = kodlayan iplik, T yerine U")}</text>}
     </svg>
   );
 }
@@ -376,7 +377,7 @@ function Kodon({ v }: SahneProps) {
   const durdu = okunan.includes("UAA");
   const bag = Math.max(0, aa.length - 1);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${k} kodon okundu: ${aa.join("-") || "henüz amino asit yok"}${durdu ? ", dur" : ""}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={`${k} kodon okundu: ${aa.join("-") || cev("henüz amino asit yok")}${durdu ? cev(", dur") : ""}`}>
       <g>
         {aa.map((a, i) => {
           const cx = 50 + i * 62;
@@ -388,7 +389,7 @@ function Kodon({ v }: SahneProps) {
             </g>
           );
         })}
-        {durdu && <text x={50 + aa.length * 62 - 16} y={61} fontSize={13} fontWeight={800} fill="var(--c2)" className="ad-belir">DUR</text>}
+        {durdu && <text x={50 + aa.length * 62 - 16} y={61} fontSize={13} fontWeight={800} fill="var(--c2)" className="ad-belir">{cev("DUR")}</text>}
       </g>
       <g>
         {[...MRNA_K].map((b, i) => <Baz key={i} x={x(i)} y={140} b={b} w={14} soluk={Math.floor(i / 3) >= k} />)}
@@ -404,8 +405,8 @@ function Kodon({ v }: SahneProps) {
           );
         })}
       </g>
-      <text x={20} y={212} fontSize={12.5} fontWeight={700} fill="var(--ink)">{aa.length} amino asit · {bag} peptit bağı</text>
-      <text x={20} y={229} fontSize={11.5} fontWeight={600} fill="var(--muted)">mRNA 5'→3' yönünde üçer üçer okunur</text>
+      <text x={20} y={212} fontSize={12.5} fontWeight={700} fill="var(--ink)">{aa.length} {cev("amino asit ·")} {bag} {cev("peptit bağı")}</text>
+      <text x={20} y={229} fontSize={11.5} fontWeight={600} fill="var(--muted)">{cev("mRNA 5'→3' yönünde üçer üçer okunur")}</text>
     </svg>
   );
 }
@@ -433,10 +434,10 @@ function Ribozom({ s, t, oynuyor }: SahneProps) {
   const gel = sinir(u / 0.3), aktar = u > 0.42, kay = sinir((u - 0.5) / 0.3), cik = sinir((u - 0.82) / 0.18);
   const P = 170, W = 50, MY = 176, TY = 112;
   const cx = (j: number) => P + (j - 1) * W - kay * W;
-  const zincir = aktar ? ["Met", "Ala", "Trp"] : ["Met", "Ala"];
+  const zincir = aktar ? [cev("Met"), cev("Ala"), cev("Trp")] : [cev("Met"), cev("Ala")];
   const tasiyan = aktar ? 2 : 1;
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label="Ribozom: yeni tRNA A bölgesine girer, zincir ona aktarılır, ribozom bir kodon kayar, boş tRNA E bölgesinden çıkar">
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("Ribozom: yeni tRNA A bölgesine girer, zincir ona aktarılır, ribozom bir kodon kayar, boş tRNA E bölgesinden çıkar")}>
       <g>
         <ellipse cx={P} cy={118} rx={98} ry={52} fill="var(--c1)" fillOpacity={0.08} stroke="var(--c1)" strokeOpacity={0.5} strokeWidth={1.4} />
         <ellipse cx={P} cy={196} rx={92} ry={20} fill="var(--c1)" fillOpacity={0.1} stroke="var(--c1)" strokeOpacity={0.5} strokeWidth={1.4} />
@@ -452,8 +453,8 @@ function Ribozom({ s, t, oynuyor }: SahneProps) {
           return [...c].map((b, k) => <Baz key={`${j}${k}`} x={x0 + (k - 1) * 15} y={MY} b={b} w={14} />);
         })}
       </g>
-      <TRNA x={cx(1)} y={TY - cik * 70} kodon={RIB[1]} aa={tasiyan === 1 ? "Ala" : undefined} op={1 - cik} />
-      {gel > 0 && <TRNA x={cx(2)} y={TY - (1 - gel) * 80} kodon={RIB[2]} aa="Trp" op={gel} />}
+      <TRNA x={cx(1)} y={TY - cik * 70} kodon={RIB[1]} aa={tasiyan === 1 ? cev("Ala") : undefined} op={1 - cik} />
+      {gel > 0 && <TRNA x={cx(2)} y={TY - (1 - gel) * 80} kodon={RIB[2]} aa={cev("Trp")} op={gel} />}
       <g>
         {zincir.slice(0, -1).reverse().map((a, i) => {
           const hx = cx(tasiyan) - 20 - i * 22, hy = TY - 16 - i * 12;
@@ -465,9 +466,9 @@ function Ribozom({ s, t, oynuyor }: SahneProps) {
           );
         })}
       </g>
-      {aktar && u < 0.5 && <text x={cx(2) + 22} y={TY - 20} fontSize={11.5} fontWeight={800} fill="var(--c2)" className="ad-belir">peptit bağı</text>}
+      {aktar && u < 0.5 && <text x={cx(2) + 22} y={TY - 20} fontSize={11.5} fontWeight={800} fill="var(--c2)" className="ad-belir">{cev("peptit bağı")}</text>}
       <text x={170} y={232} fontSize={11.5} fontWeight={600} fill="var(--muted)" textAnchor="middle">
-        {u === 0 ? "P'de zincir, A boş" : u < 0.42 ? "UGG'ye uyan tRNA A'ya geliyor" : u < 0.5 ? "zincir A'daki tRNA'ya aktarıldı" : u < 0.82 ? "ribozom bir kodon kayıyor" : "boş tRNA E'den çıkıyor"}
+        {u === 0 ? cev("P'de zincir, A boş") : u < 0.42 ? cev("UGG'ye uyan tRNA A'ya geliyor") : u < 0.5 ? cev("zincir A'daki tRNA'ya aktarıldı") : u < 0.82 ? cev("ribozom bir kodon kayıyor") : cev("boş tRNA E'den çıkıyor")}
       </text>
     </svg>
   );
@@ -478,15 +479,15 @@ function Ribozom({ s, t, oynuyor }: SahneProps) {
 function Hesap({ v }: SahneProps) {
   const n = Math.round(sinir(v.n ?? 10, 1, 300));
   const satir = [
-    { a: "amino asit", d: `${n}` },
-    { a: "kodon (dur dahil)", d: `${n} + 1 = ${n + 1}` },
-    { a: "mRNA nükleotidi", d: `3 · ${n + 1} = ${3 * (n + 1)}`, vurgu: 3 * (n + 1) === 453 },
-    { a: "DNA nükleotidi (en az)", d: `6 · ${n + 1} = ${6 * (n + 1)}` },
-    { a: "peptit bağı = açığa çıkan su", d: `${n} − 1 = ${n - 1}` },
+    { a: cev("amino asit"), d: `${n}` },
+    { a: cev("kodon (dur dahil)"), d: `${n} + 1 = ${n + 1}` },
+    { a: cev("mRNA nükleotidi"), d: `3 · ${n + 1} = ${3 * (n + 1)}`, vurgu: 3 * (n + 1) === 453 },
+    { a: cev("DNA nükleotidi (en az)"), d: `6 · ${n + 1} = ${6 * (n + 1)}` },
+    { a: cev("peptit bağı = açığa çıkan su"), d: `${n} − 1 = ${n - 1}` },
   ];
   const boncuk = Math.min(n, 14);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${n} amino asit: ${3 * (n + 1)} mRNA nükleotidi, ${n - 1} peptit bağı`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0} amino asit: {1} mRNA nükleotidi, {2} peptit bağı", n, 3 * (n + 1), n - 1)}>
       <g>
         {Array.from({ length: boncuk }, (_, i) => (
           <circle key={i} cx={26 + i * 21} cy={30} r={8} fill={YESIL} fillOpacity={0.2 + (0.5 * i) / 14} stroke={YESIL} strokeWidth={1.2} />
@@ -512,11 +513,11 @@ function Mutasyon({ v }: SahneProps) {
   const b2 = v.b2 === 1, b3 = v.b3 === 1;
   const k6 = `G${b2 ? "U" : "A"}${b3 ? "A" : "G"}`;
   const kd = [BETA[0], BETA[1], k6, BETA[3]];
-  const aa = kd.map((c) => KOD[c]), orak = aa[2] === "Val";
+  const aa = kd.map((c) => KOD[c]), orak = aa[2] === cev("Val");
   const x = (j: number, k: number) => 40 + j * 78 + k * 18;
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label={`6. kodon ${k6}: ${aa[2]}. ${orak ? "Hemoglobin değişti, alyuvar orak biçimli" : "Alyuvar normal"}`}>
-      <text x={20} y={22} fontSize={12} fontWeight={700} fill="var(--muted)">β-globin mRNA, 4.–7. kodonlar</text>
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("6. kodon {0}: {1}. {2}", k6, aa[2], orak ? "Hemoglobin değişti, alyuvar orak biçimli" : "Alyuvar normal")}>
+      <text x={20} y={22} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("β-globin mRNA, 4.–7. kodonlar")}</text>
       <g>
         {kd.map((c, j) =>
           [...c].map((b, k) => {
@@ -527,7 +528,7 @@ function Mutasyon({ v }: SahneProps) {
       </g>
       <g>
         {aa.map((a, j) => {
-          const cx = x(j, 1), farkli = j === 2 && a !== "Glu";
+          const cx = x(j, 1), farkli = j === 2 && a !== cev("Glu");
           return (
             <g key={j}>
               <text x={cx} y={84} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">{j + 4}.</text>
@@ -549,7 +550,7 @@ function Mutasyon({ v }: SahneProps) {
         )}
       </g>
       <text x={170} y={226} fontSize={12} fontWeight={700} fill={orak ? "var(--c2)" : "var(--ink)"} textAnchor="middle">
-        {orak ? "6. amino asit Val: alyuvar orak biçimli" : aa[2] === "Glu" && b3 ? "kodon değişti ama amino asit yine Glu" : "normal alyuvar: yuvarlak, ortası basık"}
+        {orak ? cev("6. amino asit Val: alyuvar orak biçimli") : aa[2] === cev("Glu") && b3 ? cev("kodon değişti ama amino asit yine Glu") : cev("normal alyuvar: yuvarlak, ortası basık")}
       </text>
     </svg>
   );
@@ -566,8 +567,8 @@ function Cerceve({ v }: SahneProps) {
   for (const c of kd) { const a = KOD[c]; aa.push(a); if (a === "dur") break; }
   const x = (i: number) => 22 + i * 15 + Math.floor(i / 3) * 4;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${ek ? "Bir U eklendi: " : "Normal: "}${aa.join("-")}`}>
-      <text x={20} y={24} fontSize={12} fontWeight={700} fill="var(--muted)">{ek ? "3. kodondan önce bir U eklendi" : "normal mRNA"}</text>
+    <svg viewBox="0 0 340 236" role="img" aria-label={`${ek ? cev("Bir U eklendi: ") : cev("Normal: ")}${aa.join("-")}`}>
+      <text x={20} y={24} fontSize={12} fontWeight={700} fill="var(--muted)">{ek ? cev("3. kodondan önce bir U eklendi") : cev("normal mRNA")}</text>
       <g>
         {[...dizi].map((b, i) => (
           <Baz key={`${ek}${i}`} x={x(i)} y={60} b={b} w={14} soluk={Math.floor(i / 3) >= aa.length} cerceve={ek && i === 6 ? "var(--bad)" : undefined} />
@@ -591,8 +592,8 @@ function Cerceve({ v }: SahneProps) {
           );
         })}
       </g>
-      <text x={20} y={190} fontSize={12.5} fontWeight={700} fill="var(--ink)">protein: {aa.filter((a) => a !== "dur").length} amino asit</text>
-      <text x={20} y={210} fontSize={11.5} fontWeight={600} fill="var(--muted)">{ek ? "eklemeden sonraki bütün kodonlar değişti" : "okuma AUG'den başlar, üçer üçer gider"}</text>
+      <text x={20} y={190} fontSize={12.5} fontWeight={700} fill="var(--ink)">{cev("protein:")} {aa.filter((a) => a !== "dur").length} {cev("amino asit")}</text>
+      <text x={20} y={210} fontSize={11.5} fontWeight={600} fill="var(--muted)">{ek ? cev("eklemeden sonraki bütün kodonlar değişti") : cev("okuma AUG'den başlar, üçer üçer gider")}</text>
     </svg>
   );
 }

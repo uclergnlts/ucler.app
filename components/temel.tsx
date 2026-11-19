@@ -1,6 +1,7 @@
 "use client";
 // Sayfaların ortak parçaları: logo, üst çubuk, sayfa başlığı, liste satırı. Görünüm shadcn/ui + Tailwind,
 // hareket Motion ile. Sade: beyaz zemin, 1px çizgiler, renk yalnızca küçük vurgularda (docs/KARARLAR.md).
+import { cev } from "@/lib/dil";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -16,14 +17,14 @@ import { Icon } from "./icons";
 
 export const Logo = ({ className }: { className?: string }) => (
   <div className={cn("logo", className)} aria-label="ucler">
-    ucler<i>.</i>
+    {cev("ucler")}<i>.</i>
   </div>
 );
 
 /** Üst çubuk: logo Ana sayfaya götürür; children sağa yaslanır (Ana sayfada seri ve görev simgeleri). */
 export const Top = ({ children }: { children?: React.ReactNode }) => (
   <header className="top">
-    <Link href={ANA} aria-label="ucler, Ana sayfa" className="rounded-lg"><Logo /></Link>
+    <Link href={ANA} aria-label={cev("ucler, Ana sayfa")} className="rounded-lg"><Logo /></Link>
     {children}
   </header>
 );
@@ -172,7 +173,7 @@ export function InstaLink() {
         href={INSTAGRAM.url}
         icon={<I />}
         title={INSTAGRAM.ad}
-        sub="Kısa videolar her hafta Instagram'da"
+        sub={cev("Kısa videolar her hafta Instagram'da")}
         tag={<Ok />}
       />
     </Liste>
@@ -185,7 +186,7 @@ export const href = (d: string, id?: string) => (id ? `/${d}/${id}/` : `/${d}/`)
 export function Row({ e, done }: { e: Entry; done?: boolean }) {
   const I = Icon[e.ders];
   if (!e.id)
-    return <Satir ders={e.ders} soluk icon={<I />} title={e.ad} sub={DERSLER[e.ders].ad} tag={<Badge>Yakında</Badge>} />;
+    return <Satir ders={e.ders} soluk icon={<I />} title={e.ad} sub={DERSLER[e.ders].ad} tag={<Badge>{cev("Yakında")}</Badge>} />;
   return (
     <Satir
       ders={e.ders}
@@ -193,7 +194,7 @@ export function Row({ e, done }: { e: Entry; done?: boolean }) {
       icon={<I />}
       title={e.title}
       sub={`${DERSLER[e.ders].ad} · ${e.summary}`}
-      tag={done ? <Badge variant="default">Bitti</Badge> : <span className="flex-none text-xs font-semibold text-muted-foreground">{e.cardCount} kart</span>}
+      tag={done ? <Badge variant="default">{cev("Bitti")}</Badge> : <span className="flex-none text-xs font-semibold text-muted-foreground">{e.cardCount} {cev("kart")}</span>}
     />
   );
 }

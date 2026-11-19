@@ -2,6 +2,7 @@
 // Biyoloji sahneleri (mayoz, kalıtım): kuşaklar boyunca kromozom sayısı, homologlar ve tetrat,
 // krossing-over, mayoz I ve II, bağımsız dağılım, ayrılmama, mitoz ile mayoz; Punnett karesi
 // (baskın-çekinik, eksik baskınlık, ABO, X'e bağlı) ve kontrol çaprazlaması.
+import { cev } from "@/lib/dil";
 import { yumusak, type SahneKaydi, type SahneProps } from "./ortak";
 
 const sinir = (x: number, a = 0, b = 1) => Math.max(a, Math.min(b, x));
@@ -40,12 +41,12 @@ function Kusak({ v }: SahneProps) {
   const sayi = (g: number) => (mayoz ? 46 : 46 * 2 ** (g - 1));
   const H = 118, taban = 196;
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label={`${n}. kuşakta vücut hücresinde ${sayi(n)} kromozom`}>
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("{0}. kuşakta vücut hücresinde {1} kromozom", n, sayi(n))}>
       <text x={20} y={24} fontSize={12.5} fontWeight={800} fill="var(--ink)">
-        {mayoz ? "gamet: 23 + 23 → zigot: 46" : `gamet: ${sayi(n)} + ${sayi(n)} → zigot: ${sayi(n) * 2}`}
+        {mayoz ? cev("gamet: 23 + 23 → zigot: 46") : cev("gamet: {0} + {1} → zigot: {2}", sayi(n), sayi(n), sayi(n) * 2)}
       </text>
       <text x={20} y={42} fontSize={11} fontWeight={600} fill="var(--muted)">
-        {mayoz ? "mayoz sayıyı yarıya indirir, döllenme ikiye katlar" : "gametler vücut hücresi kadar kromozom taşısaydı"}
+        {mayoz ? cev("mayoz sayıyı yarıya indirir, döllenme ikiye katlar") : cev("gametler vücut hücresi kadar kromozom taşısaydı")}
       </text>
       <line x1={20} y1={taban} x2={320} y2={taban} stroke="var(--line-2)" strokeWidth={1.4} />
       {Array.from({ length: n }, (_, i) => {
@@ -58,7 +59,7 @@ function Kusak({ v }: SahneProps) {
           </g>
         );
       })}
-      <text x={320} y={232} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="end">vücut hücresindeki kromozom</text>
+      <text x={320} y={232} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="end">{cev("vücut hücresindeki kromozom")}</text>
     </svg>
   );
 }
@@ -75,7 +76,7 @@ function Homolog({ v }: SahneProps) {
     { renk: BABA, boy: 40, d: [120, 160, 30], e: [176, 168] },
   ];
   return (
-    <svg viewBox="0 0 340 250" role="img" aria-label={es ? "Homolog kromozomlar yan yana: iki tetrat" : "Diploit hücre: iki homolog çift, ayrı ayrı"}>
+    <svg viewBox="0 0 340 250" role="img" aria-label={es ? cev("Homolog kromozomlar yan yana: iki tetrat") : cev("Diploit hücre: iki homolog çift, ayrı ayrı")}>
       <ellipse cx={170} cy={126} rx={150} ry={100} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
       <g key={String(es)} className="ad-belir">
         {KR.map((k, i) => <Kr key={i} x={es ? k.e[0] : k.d[0]} y={es ? k.e[1] : k.d[1]} boy={k.boy} renk={k.renk} aci={es ? 0 : k.d[2]} />)}
@@ -83,15 +84,15 @@ function Homolog({ v }: SahneProps) {
           <g fontSize={11.5} fontWeight={700} fill="var(--muted)">
             <rect x={136} y={60} width={54} height={80} rx={10} fill="none" stroke="var(--biyoloji)" strokeWidth={1.5} strokeDasharray="4 4" />
             <rect x={136} y={142} width={54} height={52} rx={10} fill="none" stroke="var(--biyoloji)" strokeWidth={1.5} strokeDasharray="4 4" />
-            <text x={204} y={104} fill="var(--biyoloji)">tetrat</text>
-            <text x={204} y={172} fill="var(--biyoloji)">tetrat</text>
+            <text x={204} y={104} fill="var(--biyoloji)">{cev("tetrat")}</text>
+            <text x={204} y={172} fill="var(--biyoloji)">{cev("tetrat")}</text>
           </g>
         )}
       </g>
       <g fontSize={11} fontWeight={700}>
-        <rect x={14} y={234} width={10} height={6} rx={3} fill={ANNE} /><text x={30} y={241} fill="var(--muted)">anneden</text>
-        <rect x={86} y={234} width={10} height={6} rx={3} fill={BABA} /><text x={102} y={241} fill="var(--muted)">babadan</text>
-        <text x={326} y={241} fill="var(--ink)" textAnchor="end">4 kromozom · 8 kromatit</text>
+        <rect x={14} y={234} width={10} height={6} rx={3} fill={ANNE} /><text x={30} y={241} fill="var(--muted)">{cev("anneden")}</text>
+        <rect x={86} y={234} width={10} height={6} rx={3} fill={BABA} /><text x={102} y={241} fill="var(--muted)">{cev("babadan")}</text>
+        <text x={326} y={241} fill="var(--ink)" textAnchor="end">{cev("4 kromozom · 8 kromatit")}</text>
       </g>
     </svg>
   );
@@ -111,10 +112,10 @@ function Krossing({ v }: SahneProps) {
   const yeni = (i: number) => k && (i === 1 || i === 2);
   const farkli = new Set(birlesim).size;
   return (
-    <svg viewBox="0 0 340 256" role="img" aria-label={`Tetrat: ${birlesim.join(", ")}; ${farkli} farklı birleşim`}>
+    <svg viewBox="0 0 340 256" role="img" aria-label={cev("Tetrat: {0}; {1} farklı birleşim", birlesim.join(", "), farkli)}>
       <g fontSize={11.5} fontWeight={700} textAnchor="middle">
-        <text x={115} y={30} fill={ANNE}>anneden</text>
-        <text x={225} y={30} fill={BABA}>babadan</text>
+        <text x={115} y={30} fill={ANNE}>{cev("anneden")}</text>
+        <text x={225} y={30} fill={BABA}>{cev("babadan")}</text>
       </g>
       {XS.map((x, i) => (
         <g key={`${i}-${k}`}>
@@ -126,7 +127,7 @@ function Krossing({ v }: SahneProps) {
       {k && (
         <g className="ad-belir">
           <path d={`M${XS[1] + 6} ${KZ - 18} L${XS[2] - 6} ${KZ + 6} M${XS[1] + 6} ${KZ + 6} L${XS[2] - 6} ${KZ - 18}`} stroke="var(--c5)" strokeWidth={2} strokeDasharray="5 4" />
-          <text x={170} y={KZ - 26} fontSize={11} fontWeight={700} fill="var(--c5)" textAnchor="middle">kiazma</text>
+          <text x={170} y={KZ - 26} fontSize={11} fontWeight={700} fill="var(--c5)" textAnchor="middle">{cev("kiazma")}</text>
         </g>
       )}
       {XS.map((x, i) => (
@@ -140,10 +141,10 @@ function Krossing({ v }: SahneProps) {
       {XS.map((x, i) => (
         <g key={`b${i}-${k}`} textAnchor="middle">
           <text x={x} y={214} fontSize={14} fontWeight={800} fill={yeni(i) ? "var(--c5)" : "var(--ink)"}>{birlesim[i]}</text>
-          {yeni(i) && <text x={x} y={230} fontSize={10.5} fontWeight={700} fill="var(--c5)" className="ad-belir">yeni</text>}
+          {yeni(i) && <text x={x} y={230} fontSize={10.5} fontWeight={700} fill="var(--c5)" className="ad-belir">{cev("yeni")}</text>}
         </g>
       ))}
-      <text x={170} y={250} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">farklı gen birleşimi: {farkli}</text>
+      <text x={170} y={250} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("farklı gen birleşimi:")} {farkli}</text>
     </svg>
   );
 }
@@ -151,13 +152,13 @@ function Krossing({ v }: SahneProps) {
 /* ---------- mayoz I ve II ---------- */
 
 const EVRELER = [
-  { u: 0, ad: "Profaz I", not: "homologlar eşleşir: tetrat" },
-  { u: 0.17, ad: "Metafaz I", not: "tetratlar ekvatorda karşılıklı" },
-  { u: 0.3, ad: "Anafaz I", not: "homolog kromozomlar zıt kutuplara" },
-  { u: 0.44, ad: "Telofaz I", not: "2 hücre; kromozomlar hâlâ iki kromatitli" },
-  { u: 0.58, ad: "Metafaz II", not: "kromozomlar ekvatorda tek sıra" },
-  { u: 0.7, ad: "Anafaz II", not: "kardeş kromatitler ayrılır" },
-  { u: 0.84, ad: "Telofaz II", not: "4 haploit (n) hücre" },
+  { u: 0, ad: cev("Profaz I"), not: cev("homologlar eşleşir: tetrat") },
+  { u: 0.17, ad: cev("Metafaz I"), not: cev("tetratlar ekvatorda karşılıklı") },
+  { u: 0.3, ad: cev("Anafaz I"), not: cev("homolog kromozomlar zıt kutuplara") },
+  { u: 0.44, ad: cev("Telofaz I"), not: cev("2 hücre; kromozomlar hâlâ iki kromatitli") },
+  { u: 0.58, ad: cev("Metafaz II"), not: cev("kromozomlar ekvatorda tek sıra") },
+  { u: 0.7, ad: cev("Anafaz II"), not: cev("kardeş kromatitler ayrılır") },
+  { u: 0.84, ad: cev("Telofaz II"), not: cev("4 haploit (n) hücre") },
 ];
 // Başlangıç, metafaz I, anafaz I sonu, metafaz II konumları; kardeş kromatitlerin ayrılma yönü (+1 aşağı).
 const MK = [
@@ -184,9 +185,9 @@ function Mayoz({ s, t, oynuyor }: SahneProps) {
   const hucre = u >= 0.92 ? 4 : u >= 0.5 ? 2 : 1;
   // Anafaz II'de ayrılan kardeş kromatitler hücre ikiye bölünene dek geçici olarak 4 kromozom sayılır.
   const kromozom = u >= 0.72 && u < 0.92 ? 4 : u >= 0.5 ? 2 : 4;
-  const kAd = u >= 0.72 && u < 0.92 ? "(geçici)" : u >= 0.5 ? "(n)" : "(2n)";
+  const kAd = u >= 0.72 && u < 0.92 ? cev("(geçici)") : u >= 0.5 ? "(n)" : "(2n)";
   return (
-    <svg viewBox="0 0 340 262" role="img" aria-label={basladi ? `${e.ad}: ${e.not}` : "Mayoz başlamadan: 2n = 4, DNA eşlenmiş"}>
+    <svg viewBox="0 0 340 262" role="img" aria-label={basladi ? `${e.ad}: ${e.not}` : cev("Mayoz başlamadan: 2n = 4, DNA eşlenmiş")}>
       {/* zar */}
       {bog1 < 1 ? (
         <path d={zar(170, CY, 152, 96, bog1)} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
@@ -225,12 +226,12 @@ function Mayoz({ s, t, oynuyor }: SahneProps) {
         })}
       </g>
       {dizil > 0 && dizil < 1.01 && !ikinci && <line x1={170} y1={CY - 70} x2={170} y2={CY + 70} stroke="var(--muted)" strokeWidth={1} strokeDasharray="3 5" opacity={0.6 * (1 - bog1)} />}
-      <text x={12} y={18} fontSize={13.5} fontWeight={800} fill="var(--biyoloji)">{basladi ? e.ad : "Mayozdan önce"}</text>
-      <text x={328} y={18} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="end">{basladi ? e.not : "2n = 4, DNA eşlendi"}</text>
+      <text x={12} y={18} fontSize={13.5} fontWeight={800} fill="var(--biyoloji)">{basladi ? e.ad : cev("Mayozdan önce")}</text>
+      <text x={328} y={18} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="end">{basladi ? e.not : cev("2n = 4, DNA eşlendi")}</text>
       <g fontSize={12} fontWeight={800} fill="var(--ink)">
-        <text x={12} y={252}>hücre: {hucre}</text>
+        <text x={12} y={252}>{cev("hücre:")} {hucre}</text>
         <text x={328} y={252} textAnchor="end">
-          her hücrede kromozom: {kromozom} {kAd}
+          {cev("her hücrede kromozom:")} {kromozom} {kAd}
         </text>
       </g>
     </svg>
@@ -243,8 +244,8 @@ function Dagilim({ v }: SahneProps) {
   const n = sinir(v.n ?? 1, 1, 4), adet = 2 ** n;
   const sut = Math.min(adet, 8), W = 36, x0 = 170 - (sut * W) / 2;
   return (
-    <svg viewBox="0 0 340 246" role="img" aria-label={`${n} homolog çift: ${adet} çeşit gamet`}>
-      <text x={20} y={22} fontSize={11.5} fontWeight={700} fill="var(--muted)">hücredeki homolog çiftler ({n})</text>
+    <svg viewBox="0 0 340 246" role="img" aria-label={cev("{0} homolog çift: {1} çeşit gamet", n, adet)}>
+      <text x={20} y={22} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("hücredeki homolog çiftler (")}{n})</text>
       <g key={`c${n}`}>
         {Array.from({ length: n }, (_, i) => {
           const x = 170 - (n * 40) / 2 + i * 40 + 20, boy = 40 - i * 6;
@@ -257,7 +258,7 @@ function Dagilim({ v }: SahneProps) {
         })}
       </g>
       <line x1={20} y1={100} x2={320} y2={100} stroke="var(--line)" />
-      <text x={20} y={120} fontSize={11.5} fontWeight={700} fill="var(--muted)">olası gametler</text>
+      <text x={20} y={120} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("olası gametler")}</text>
       <g key={`g${n}`} className="ad-belir">
         {Array.from({ length: adet }, (_, g) => {
           const sx = x0 + (g % 8) * W, sy = 132 + Math.floor(g / 8) * 46;
@@ -272,7 +273,7 @@ function Dagilim({ v }: SahneProps) {
           );
         })}
       </g>
-      <text x={170} y={238} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">gamet çeşidi = 2{"¹²³⁴"[n - 1]} = {adet}</text>
+      <text x={170} y={238} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("gamet çeşidi = 2")}{"¹²³⁴"[n - 1]} = {adet}</text>
     </svg>
   );
 }
@@ -293,10 +294,10 @@ function Ayrilmama({ s, t, oynuyor }: SahneProps) {
     </g>
   );
   return (
-    <svg viewBox="0 0 340 256" role="img" aria-label={son ? "Dört gamet: 24, 24, 22, 22 kromozomlu" : "Mayoz I'de bir homolog çift ayrılmıyor"}>
+    <svg viewBox="0 0 340 256" role="img" aria-label={son ? cev("Dört gamet: 24, 24, 22, 22 kromozomlu") : cev("Mayoz I'de bir homolog çift ayrılmıyor")}>
       <g fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">
-        <text x={100} y={18}>mayoz I</text>
-        <text x={222} y={18}>mayoz II</text>
+        <text x={100} y={18}>{cev("mayoz I")}</text>
+        <text x={222} y={18}>{cev("mayoz II")}</text>
       </g>
       <Hucre x={ANA.x} y={ANA.y} r={30} n={46} kotu={false} op={1} />
       <text x={ANA.x} y={ANA.y + 48} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">2n = 46</text>
@@ -306,7 +307,7 @@ function Ayrilmama({ s, t, oynuyor }: SahneProps) {
           <Hucre x={c.x} y={c.y} r={26} n={c.n} kotu op={m1} />
         </g>
       ))}
-      {m1 > 0.9 && <text x={156} y={128} fontSize={10.5} fontWeight={700} fill={ANNE} textAnchor="middle">bir çift ayrılmadı</text>}
+      {m1 > 0.9 && <text x={156} y={128} fontSize={10.5} fontWeight={700} fill={ANNE} textAnchor="middle">{cev("bir çift ayrılmadı")}</text>}
       {II.map((c, i) => {
         const a = I[c.p];
         return (
@@ -317,7 +318,7 @@ function Ayrilmama({ s, t, oynuyor }: SahneProps) {
           </g>
         );
       })}
-      {son && <text x={12} y={248} fontSize={12} fontWeight={800} fill="var(--ink)" className="ad-belir">4 gametin hepsi anormal (normali 23)</text>}
+      {son && <text x={12} y={248} fontSize={12} fontWeight={800} fill="var(--ink)" className="ad-belir">{cev("4 gametin hepsi anormal (normali 23)")}</text>}
     </svg>
   );
 }
@@ -338,13 +339,13 @@ function Karsilastir({ v }: SahneProps) {
   const sonuc = my ? mayoz : mitoz;
   const ys = my ? [4, 54, 104, 154] : [44, 144];
   return (
-    <svg viewBox="0 0 340 250" role="img" aria-label={my ? "Mayoz: 4 hücre, her birinde 2 kromozom, birbirinden farklı" : "Mitoz: 2 hücre, her birinde 4 kromozom, özdeş"}>
+    <svg viewBox="0 0 340 250" role="img" aria-label={my ? cev("Mayoz: 4 hücre, her birinde 2 kromozom, birbirinden farklı") : cev("Mitoz: 2 hücre, her birinde 4 kromozom, özdeş")}>
       <circle cx={52} cy={110} r={40} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.6} />
       {[[ANNE, 30, 36, 96], [BABA, 30, 50, 96], [ANNE, 20, 62, 128], [BABA, 20, 76, 128]].map(([r, b, x, y], i) => (
         <Kr key={i} x={(x as number) - 4} y={y as number} boy={b as number} renk={r as string} tek />
       ))}
       <text x={52} y={170} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">2n = 4</text>
-      <text x={150} y={110} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{my ? "2 bölünme" : "1 bölünme"}</text>
+      <text x={150} y={110} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{my ? cev("2 bölünme") : cev("1 bölünme")}</text>
       <path d="M112 120 L188 120 M180 114 L188 120 L180 126" stroke="var(--muted)" strokeWidth={1.6} fill="none" />
       <g key={String(my)} className="ad-belir">
         {sonuc.map((h, i) => (
@@ -355,8 +356,8 @@ function Karsilastir({ v }: SahneProps) {
         ))}
       </g>
       <g fontSize={12} fontWeight={800} fill="var(--ink)">
-        <text x={12} y={240}>{my ? "4 hücre · n = 2" : "2 hücre · 2n = 4"}</text>
-        <text x={328} y={240} textAnchor="end" fill={my ? "var(--c5)" : "var(--ink)"}>{my ? "genetik olarak farklı" : "genetik olarak özdeş"}</text>
+        <text x={12} y={240}>{my ? cev("4 hücre · n = 2") : cev("2 hücre · 2n = 4")}</text>
+        <text x={328} y={240} textAnchor="end" fill={my ? "var(--c5)" : "var(--ink)"}>{my ? cev("genetik olarak farklı") : cev("genetik olarak özdeş")}</text>
       </g>
     </svg>
   );
@@ -371,7 +372,7 @@ function Alel({ a }: { a: string }) {
   if (a.length === 2 && (a[0] === "I" || a[0] === "X")) return <>{a[0]}<tspan baselineShift="super" fontSize="70%">{a[1]}</tspan></>;
   return <>{a}</>;
 }
-const SIRA = ["A", "a", "K", "B", "IA", "IB", "i", "XH", "Xh", "Y"];
+const SIRA = ["A", "a", "K", "B", "IA", "IB", "i", "XH", cev("Xh"), "Y"];
 const sirala = (g: string[]) => [...g].sort((p, q) => SIRA.indexOf(p) - SIRA.indexOf(q));
 
 type Fen = { ad: string; renk: string; erkek?: boolean; dolu?: number };
@@ -379,15 +380,15 @@ function fenotip(m: Mod, g: string[]): Fen {
   if (m === "baskin") return g.includes("A") ? { ad: "mor", renk: "var(--c5)" } : { ad: "beyaz", renk: "#fff" };
   if (m === "eksik") {
     const k = g.filter((x) => x === "K").length;
-    return k === 2 ? { ad: "kırmızı", renk: "var(--c2)" } : k === 1 ? { ad: "pembe", renk: "#f6a6bb" } : { ad: "beyaz", renk: "#fff" };
+    return k === 2 ? { ad: cev("kırmızı"), renk: "var(--c2)" } : k === 1 ? { ad: "pembe", renk: "#f6a6bb" } : { ad: "beyaz", renk: "#fff" };
   }
   if (m === "kan") {
     const a = g.includes("IA"), b = g.includes("IB");
     return { ad: a && b ? "AB" : a ? "A" : b ? "B" : "0", renk: "var(--c2)" };
   }
-  const erkek = g.includes("Y"), h = g.filter((x) => x === "Xh").length;
-  if (erkek) return h ? { ad: "renk körü", renk: "var(--ink)", erkek, dolu: 1 } : { ad: "sağlıklı", renk: "var(--ink)", erkek, dolu: 0 };
-  return h === 2 ? { ad: "renk körü", renk: "var(--ink)", dolu: 1 } : h === 1 ? { ad: "taşıyıcı", renk: "var(--ink)", dolu: 0.5 } : { ad: "sağlıklı", renk: "var(--ink)", dolu: 0 };
+  const erkek = g.includes("Y"), h = g.filter((x) => x === cev("Xh")).length;
+  if (erkek) return h ? { ad: cev("renk körü"), renk: "var(--ink)", erkek, dolu: 1 } : { ad: cev("sağlıklı"), renk: "var(--ink)", erkek, dolu: 0 };
+  return h === 2 ? { ad: cev("renk körü"), renk: "var(--ink)", dolu: 1 } : h === 1 ? { ad: cev("taşıyıcı"), renk: "var(--ink)", dolu: 0.5 } : { ad: cev("sağlıklı"), renk: "var(--ink)", dolu: 0 };
 }
 
 const kesir = (n: number, top: number) => (n === top ? "hepsi" : ({ 1: "¼", 2: "½", 3: "¾" } as Record<number, string>)[(n * 4) / top] ?? `${n}/${top}`);
@@ -429,7 +430,7 @@ function ebeveyn(s: SahneProps["s"], v: SahneProps["v"]): [string[], string[]] {
     const g = (n: number) => (n >= 2 ? ["A", "A"] : n === 1 ? ["A", "a"] : ["a", "a"]);
     return [g(v.p1 ?? (s.p1 as number) ?? 1), g(v.p2 ?? (s.p2 as number) ?? 1)];
   }
-  if (m === "x") return [(s.e1 as string[]) ?? ["XH", "Xh"], [v.bk === 1 ? "Xh" : "XH", "Y"]];
+  if (m === "x") return [(s.e1 as string[]) ?? ["XH", cev("Xh")], [v.bk === 1 ? cev("Xh") : "XH", "Y"]];
   return [(s.e1 as string[]) ?? [], (s.e2 as string[]) ?? []];
 }
 
@@ -439,7 +440,7 @@ function Punnett(p: SahneProps) {
   const sure = typeof s.sure === "number" ? s.sure : 0;
   const u = sure ? ilerleme(t, oynuyor, sure) : 1;
   const [e1, e2] = ebeveyn(s, p.v);
-  const ad = (s.adlar as string[]) ?? (m === "x" || m === "kan" ? ["anne", "baba"] : ["1. ebeveyn", "2. ebeveyn"]);
+  const ad = (s.adlar as string[]) ?? (m === "x" || m === "kan" ? ["anne", "baba"] : [cev("1. ebeveyn"), cev("2. ebeveyn")]);
   const hucreler = e1.flatMap((a, r) => e2.map((b, c) => ({ r, c, g: sirala([a, b]) })));
   const X0 = 124, Y0 = 52, CW = 92, CH = 60;
   const gor = (k: number) => !sure || u > 0.08 + k * 0.2;
@@ -455,7 +456,7 @@ function Punnett(p: SahneProps) {
     lst.forEach((x) => { if (!(x in n)) { sira.push(x); n[x] = 0; } n[x]++; });
     return sira.map((x) => [x, n[x]] as [string, number]);
   };
-  const oran = (lst: [string, number][]) => (lst.length === 1 ? `hepsi ${lst[0][0]}` : lst.map(([x, n]) => `${n} ${x}`).join(" : "));
+  const oran = (lst: [string, number][]) => (lst.length === 1 ? cev("hepsi {0}", lst[0][0]) : lst.map(([x, n]) => `${n} ${x}`).join(" : "));
   const satirlar: React.ReactNode[] = [];
   if (m === "baskin" || m === "eksik") {
     const gs = say(hucreler.map((h) => h.g.join(""))).sort((a, b) => SIRA.indexOf(a[0][0]) - SIRA.indexOf(b[0][0]) || SIRA.indexOf(a[0][1]) - SIRA.indexOf(b[0][1]));
@@ -471,7 +472,7 @@ function Punnett(p: SahneProps) {
   }
   const fenAd = (g: string[]) => fenotip(m, sirala(g)).ad;
   return (
-    <svg viewBox="0 0 340 262" role="img" aria-label={`${ad[0]} ${e1.join("")}, ${ad[1]} ${e2.join("")}. ${hepsi ? satirlar.join(". ") : "Punnett karesi dolduruluyor"}`}>
+    <svg viewBox="0 0 340 262" role="img" aria-label={`${ad[0]} ${e1.join("")}, ${ad[1]} ${e2.join("")}. ${hepsi ? satirlar.join(". ") : cev("Punnett karesi dolduruluyor")}`}>
       <g fontSize={11.5} fontWeight={700} fill="var(--muted)">
         <text x={X0 + CW} y={14} textAnchor="middle">{ad[1]}: <tspan fill="var(--ink)" fontWeight={800}>{yazGen(genYaz2)}</tspan> ({fenAd(e2)})</text>
         <text x={14} y={Y0 + CH - 6}>{ad[0]}:</text>
@@ -517,10 +518,10 @@ function Punnett(p: SahneProps) {
       )}
       {m === "x" && (
         <g fontSize={11} fontWeight={600} fill="var(--muted)">
-          <circle cx={20} cy={250} r={5} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.3} /><text x={30} y={254}>kız</text>
-          <rect x={62} y={245} width={10} height={10} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.3} /><text x={78} y={254}>oğul</text>
-          <circle cx={122} cy={250} r={5} fill="var(--ink)" /><text x={132} y={254}>renk körü</text>
-          <circle cx={204} cy={250} r={5} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.3} /><circle cx={204} cy={250} r={1.8} fill="var(--ink)" /><text x={214} y={254}>taşıyıcı</text>
+          <circle cx={20} cy={250} r={5} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.3} /><text x={30} y={254}>{cev("kız")}</text>
+          <rect x={62} y={245} width={10} height={10} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.3} /><text x={78} y={254}>{cev("oğul")}</text>
+          <circle cx={122} cy={250} r={5} fill="var(--ink)" /><text x={132} y={254}>{cev("renk körü")}</text>
+          <circle cx={204} cy={250} r={5} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.3} /><circle cx={204} cy={250} r={1.8} fill="var(--ink)" /><text x={214} y={254}>{cev("taşıyıcı")}</text>
         </g>
       )}
     </svg>
@@ -545,14 +546,14 @@ function Test({ s, t, oynuyor }: SahneProps) {
     </g>
   );
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={basladi ? `Yavrular: ${mor} mor, ${beyaz} beyaz` : "Mor bitki (genotipi bilinmiyor) ile beyaz bitki (aa) çaprazlanıyor"}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={basladi ? cev("Yavrular: {0} mor, {1} beyaz", mor, beyaz) : cev("Mor bitki (genotipi bilinmiyor) ile beyaz bitki (aa) çaprazlanıyor")}>
       <Cicek x={92} y={40} renk="var(--c5)" />
       <text x={92} y={104} fontSize={14} fontWeight={800} fill="var(--ink)" textAnchor="middle">?</text>
       <text x={170} y={50} fontSize={20} fontWeight={700} fill="var(--muted)" textAnchor="middle">×</text>
       <Cicek x={248} y={40} renk="#fff" />
-      <text x={248} y={104} fontSize={14} fontWeight={800} fill="var(--ink)" textAnchor="middle">aa</text>
+      <text x={248} y={104} fontSize={14} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("aa")}</text>
       <line x1={20} y1={120} x2={320} y2={120} stroke="var(--line)" />
-      <text x={20} y={142} fontSize={11.5} fontWeight={700} fill="var(--muted)">yavrular</text>
+      <text x={20} y={142} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("yavrular")}</text>
       {[{ ad: "mor", n: mor, renk: "var(--c5)", y: 158 }, { ad: "beyaz", n: beyaz, renk: "color-mix(in srgb, #87a3d5 20%, var(--surface))", y: 196 }].map((b) => (
         <g key={b.ad}>
           <text x={20} y={b.y + 15} fontSize={12} fontWeight={700} fill="var(--ink)">{b.ad}</text>

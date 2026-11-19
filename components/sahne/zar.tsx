@@ -1,5 +1,6 @@
 "use client";
 // Biyoloji sahneleri: hücre zarı modeli, zardan geçen tanecikler (difüzyon, kanal, pompa) ve osmoz.
+import { cev, SAYI_YEREL } from "@/lib/dil";
 import { rastgele, yumusak, type SahneKaydi, type SahneProps } from "./ortak";
 
 /* ---------- akıcı mozaik zar ---------- */
@@ -19,9 +20,9 @@ function ZarModel() {
   const xs = Array.from({ length: 28 }, (_, i) => 8 + i * 12);
   const bos = (x: number) => (x > 70 && x < 118) || (x > 206 && x < 262);
   return (
-    <svg viewBox="0 0 340 220" role="img" aria-label="Akıcı mozaik zar modeli">
-      <text x={10} y={20} fontSize={11} fill="var(--muted)" fontWeight={700}>hücre dışı</text>
-      <text x={10} y={210} fontSize={11} fill="var(--muted)" fontWeight={700}>hücre içi (sitoplazma)</text>
+    <svg viewBox="0 0 340 220" role="img" aria-label={cev("Akıcı mozaik zar modeli")}>
+      <text x={10} y={20} fontSize={11} fill="var(--muted)" fontWeight={700}>{cev("hücre dışı")}</text>
+      <text x={10} y={210} fontSize={11} fill="var(--muted)" fontWeight={700}>{cev("hücre içi (sitoplazma)")}</text>
       <g className="ad-kay">
         {xs.filter((x) => !bos(x)).map((x) => <Fosfolipit key={`u${x}`} x={x} y={82} yukari={false} />)}
         {xs.filter((x) => !bos(x)).map((x) => <Fosfolipit key={`a${x}`} x={x} y={148} yukari />)}
@@ -37,12 +38,12 @@ function ZarModel() {
       </g>
       <g fontSize={11.5} fontWeight={700}>
         <line x1={20} y1={86} x2={20} y2={44} stroke="var(--c1)" />
-        <text x={24} y={44} fill="var(--c1)">fosfolipit</text>
-        <text x={94} y={190} fill="var(--c3)" textAnchor="middle">kanal proteini</text>
+        <text x={24} y={44} fill="var(--c1)">{cev("fosfolipit")}</text>
+        <text x={94} y={190} fill="var(--c3)" textAnchor="middle">{cev("kanal proteini")}</text>
         <line x1={160} y1={126} x2={160} y2={186} stroke="var(--c4)" />
-        <text x={164} y={186} fill="#b7800d">kolesterol</text>
-        <text x={244} y={204} fill="var(--c5)" textAnchor="middle">taşıyıcı protein</text>
-        <text x={262} y={30} fill="var(--kimya)">karbonhidrat</text>
+        <text x={164} y={186} fill="#b7800d">{cev("kolesterol")}</text>
+        <text x={244} y={204} fill="var(--c5)" textAnchor="middle">{cev("taşıyıcı protein")}</text>
+        <text x={262} y={30} fill="var(--kimya)">{cev("karbonhidrat")}</text>
       </g>
     </svg>
   );
@@ -97,9 +98,9 @@ function Gecis({ s, v, t, oynuyor }: SahneProps) {
   });
   const bas = Array.from({ length: 13 }, (_, i) => UST + 4 + i * 12).filter((y) => !(kanal && Math.abs(y - KANAL_Y) < 16) && !(pompa && Math.abs(y - POMPA_Y) < 20));
   return (
-    <svg viewBox="0 0 340 238" role="img" aria-label="Zarın iki yanındaki tanecikler">
+    <svg viewBox="0 0 340 238" role="img" aria-label={cev("Zarın iki yanındaki tanecikler")}>
       <text x={85} y={UST - 14} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{String(s.solAd ?? "sol")}</text>
-      <text x={255} y={UST - 14} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{String(s.sagAd ?? "sağ")}</text>
+      <text x={255} y={UST - 14} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{String(s.sagAd ?? cev("sağ"))}</text>
       <g>
         {bas.map((y) => (
           <g key={y}>
@@ -118,8 +119,8 @@ function Gecis({ s, v, t, oynuyor }: SahneProps) {
         {pompa && (
           <g>
             <rect x={ZX - 18} y={POMPA_Y - 19} width={36} height={38} rx={10} fill="var(--c5)" />
-            <text x={ZX} y={POMPA_Y + 3} fontSize={8.5} fontWeight={800} fill="#fff" textAnchor="middle">pompa</text>
-            {oynuyor && <text x={ZX + 18} y={POMPA_Y + 30} fontSize={11} fontWeight={800} fill="var(--c5)">ATP → ADP</text>}
+            <text x={ZX} y={POMPA_Y + 3} fontSize={8.5} fontWeight={800} fill="#fff" textAnchor="middle">{cev("pompa")}</text>
+            {oynuyor && <text x={ZX + 18} y={POMPA_Y + 30} fontSize={11} fontWeight={800} fill="var(--c5)">{cev("ATP → ADP")}</text>}
           </g>
         )}
       </g>
@@ -168,15 +169,15 @@ function Osmoz({ s, v, t: zaman, oynuyor }: SahneProps) {
       </g>
     );
   };
-  const ad = { hipo: "Hipotonik: su hücreye giriyor", izo: "İzotonik: net su geçişi yok", hiper: "Hipertonik: su hücreden çıkıyor" }[hal];
+  const ad = { hipo: cev("Hipotonik: su hücreye giriyor"), izo: cev("İzotonik: net su geçişi yok"), hiper: cev("Hipertonik: su hücreden çıkıyor") }[hal];
   return (
-    <svg viewBox="0 0 340 224" role="img" aria-label={`${ad}. Dış ortam yüzde ${c.toLocaleString("tr-TR", { maximumFractionDigits: 1 })} tuz`}>
+    <svg viewBox="0 0 340 224" role="img" aria-label={cev("{0}. Dış ortam yüzde {1} tuz", ad, c.toLocaleString(SAYI_YEREL, { maximumFractionDigits: 1 }))}>
       <rect x={10} y={10} width={320} height={190} rx={14} fill="var(--c1)" fillOpacity={0.04 + c * 0.04} />
       {noktalar}
       {hal === "izo" ? [0, 90, 180, 270].map((a) => ok(a, a % 180 === 0)) : [0, 90, 180, 270].map((a) => ok(a, hal === "hipo"))}
       <polygon points={kenar} fill="var(--c2)" fillOpacity={0.28} stroke="var(--c2)" strokeWidth={2.5} strokeDasharray={t < 5 ? "7 5" : undefined} />
       {hal !== "hipo" && <ellipse cx={170} cy={105} rx={rx * 0.45} ry={ry * 0.4} fill="var(--c2)" fillOpacity={0.15} />}
-      <text x={170} y={109} fontSize={12} textAnchor="middle" fill="var(--ink)" fontWeight={700}>içi %0,9</text>
+      <text x={170} y={109} fontSize={12} textAnchor="middle" fill="var(--ink)" fontWeight={700}>{cev("içi %0,9")}</text>
       <text x={170} y={218} fontSize={12.5} textAnchor="middle" fontWeight={800} fill={hal === "izo" ? "var(--muted)" : "var(--biyoloji)"}>{ad}</text>
     </svg>
   );

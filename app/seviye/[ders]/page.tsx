@@ -1,3 +1,4 @@
+import { cev } from "@/lib/dil";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import SeviyeTesti from "@/components/SeviyeTesti";
@@ -12,7 +13,7 @@ export const generateStaticParams = () => DERS_IDS.map((ders) => ({ ders }));
 
 export async function generateMetadata({ params }: Props) {
   const { ders } = await params;
-  return { title: isDers(ders) ? `${DERSLER[ders].ad} · seviye testi` : undefined };
+  return { title: isDers(ders) ? cev("{0} · seviye testi", DERSLER[ders].ad) : undefined };
 }
 
 export default async function Page({ params }: Props) {

@@ -1,6 +1,7 @@
 "use client";
 // İlerleme ve kaydedilenler yalnızca bu cihazda, localStorage'da durur.
 // Anahtarlar eski siteyle aynı (tf-prog, tf-saved), böylece öğrencinin ilerlemesi kaybolmaz.
+import { cev } from "@/lib/dil";
 import { useMemo, useSyncExternalStore } from "react";
 
 export type Prog = Record<string, string>; // "ders.konu" -> "3/4 doğru", "_last" -> "ders.konu"
@@ -111,7 +112,7 @@ export function gun(n = 0) {
 /** "bugün", "yarın", "3 gün sonra". */
 export function gunAdi(g: string) {
   const fark = Math.round((Date.parse(g) - Date.parse(gun())) / 864e5);
-  return fark <= 0 ? "bugün" : fark === 1 ? "yarın" : `${fark} gün sonra`;
+  return fark <= 0 ? cev("bugün") : fark === 1 ? cev("yarın") : cev("{0} gün sonra", fark);
 }
 
 export const useTekrar = () =>

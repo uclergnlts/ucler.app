@@ -1,5 +1,6 @@
 "use client";
 // Aşama ya da konu bitince: konfeti, ortada büyük bir madalya ve sayarak artan puan. Her biri kendi kısık sesiyle gelir.
+import { cev } from "@/lib/dil";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { animate, motion, useReducedMotion } from "motion/react";
 import { Icon } from "./icons";
@@ -114,7 +115,7 @@ export function PuanRozet({ puan }: { puan: number }) {
       animate={{ scale: 1, opacity: 1 }}
       transition={{ type: "spring", stiffness: 300, damping: 18, delay: 0.4 }}
     >
-      <Yildiz />+{n} puan
+      <Yildiz />+{n} {cev("puan")}
     </motion.span>
   );
 }

@@ -2,6 +2,7 @@
 // "Anlamadım / Hata var" penceresi: öğrenci sorunu yaşadığı yerde (kart, adım, test sorusu, video) ekibe bildirir.
 // Not isteğe bağlıdır. "Anlamadım" seçilince kart ayrıca Profil > Anlamadıklarım listesine eklenir (anlamadim verilirse).
 // Açan düğme her ekranda aynıdır: üst çubuğun sağında küçük "Hata bildir" yazısı (BildirDugme; Üçler 2026-10-31).
+import { cev } from "@/lib/dil";
 import { useState } from "react";
 import { bildirimGonder, type BildirimTur, type BildirimYer } from "@/lib/bildirim";
 import { cn } from "@/lib/utils";
@@ -9,8 +10,8 @@ import { Button } from "./ui/button";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
 
 const SECENEK: { tur: BildirimTur; ad: string; ipucu: string }[] = [
-  { tur: "anlamadim", ad: "Anlamadım", ipucu: "Neresi kafanı karıştırdı? (isteğe bağlı)" },
-  { tur: "hata", ad: "Hata var", ipucu: "Hatayı kısaca yaz (isteğe bağlı)" },
+  { tur: "anlamadim", ad: cev("Anlamadım"), ipucu: cev("Neresi kafanı karıştırdı? (isteğe bağlı)") },
+  { tur: "hata", ad: cev("Hata var"), ipucu: cev("Hatayı kısaca yaz (isteğe bağlı)") },
 ];
 
 export default function Bildir({ yer, anlamadim, children }: { yer: BildirimYer; anlamadim?: () => void; children: React.ReactNode }) {
@@ -37,17 +38,17 @@ export default function Bildir({ yer, anlamadim, children }: { yer: BildirimYer;
       <SheetContent data-ders={yer.ders} aria-describedby={undefined}>
         {durum === "tamam" ? (
           <>
-            <SheetTitle>Teşekkürler!</SheetTitle>
+            <SheetTitle>{cev("Teşekkürler!")}</SheetTitle>
             <p className="mb-1.5 text-base leading-relaxed text-muted-foreground">
-              Bildirimin ekibimize ulaştı. İnceleyip düzelteceğiz.
-              {tur === "anlamadim" && anlamadim ? " Bu kartı Profil > Anlamadıklarım'da da bulabilirsin." : ""}
+              {cev("Bildirimin ekibimize ulaştı. İnceleyip düzelteceğiz.")}
+              {tur === "anlamadim" && anlamadim ? cev(" Bu kartı Profil > Anlamadıklarım'da da bulabilirsin.") : ""}
             </p>
-            <SheetClose asChild><Button variant="outline">Kapat</Button></SheetClose>
+            <SheetClose asChild><Button variant="outline">{cev("Kapat")}</Button></SheetClose>
           </>
         ) : (
           <>
-            <SheetTitle>Bir sorun mu var?</SheetTitle>
-            <div className="mt-1 grid grid-cols-2 gap-2" role="radiogroup" aria-label="Bildirim türü">
+            <SheetTitle>{cev("Bir sorun mu var?")}</SheetTitle>
+            <div className="mt-1 grid grid-cols-2 gap-2" role="radiogroup" aria-label={cev("Bildirim türü")}>
               {SECENEK.map((s) => (
                 <button
                   key={s.tur}
@@ -71,13 +72,13 @@ export default function Bildir({ yer, anlamadim, children }: { yer: BildirimYer;
                 maxLength={600}
                 rows={3}
                 placeholder={SECENEK.find((s) => s.tur === tur)!.ipucu}
-                aria-label="Açıklama"
+                aria-label={cev("Açıklama")}
                 className="w-full resize-none rounded-xl border border-border-strong bg-card px-4 py-3 text-base text-foreground outline-none placeholder:text-muted-foreground focus-visible:border-foreground"
               />
             )}
-            {durum === "hata" && <p className="text-[14px] text-bad">Gönderilemedi. Bağlantını kontrol edip yeniden dene.</p>}
+            {durum === "hata" && <p className="text-[14px] text-bad">{cev("Gönderilemedi. Bağlantını kontrol edip yeniden dene.")}</p>}
             <Button className="mt-1" disabled={!tur || durum === "gidiyor"} onClick={gonder}>
-              {durum === "gidiyor" ? "Gönderiliyor…" : "Gönder"}
+              {durum === "gidiyor" ? cev("Gönderiliyor…") : cev("Gönder")}
             </Button>
           </>
         )}
@@ -94,7 +95,7 @@ export function BildirDugme({ className, ...p }: React.ComponentProps<"button">)
       className={cn("h-8 flex-none rounded-full px-2.5 text-[13px] font-semibold whitespace-nowrap text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground", className)}
       {...p}
     >
-      Hata bildir
+      {cev("Hata bildir")}
     </button>
   );
 }

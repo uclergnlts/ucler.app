@@ -1,6 +1,7 @@
 "use client";
 // İçerikten tanımlanan genel etkileşimler: sırala, eşleştir, ayır, işaretle, formül, yöntem akışı.
 // Her konu bunları yeni kod yazmadan kullanır. Biçim: docs/ICERIK-SPEC.md ("Etkileşimli kart").
+import { cev, SAYI_YEREL } from "@/lib/dil";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Etk } from "@/lib/dersler";
 import { hesapla } from "@/lib/ifade";
@@ -34,8 +35,8 @@ function useYanlis(): [string | null, (k: string) => void] {
 const Soru = ({ html }: { html: string }) => <Html as="p" className="etk-soru" html={html} />;
 const Bitti = ({ hata, sifirla, yazi }: { hata: number; sifirla: () => void; yazi?: string }) => (
   <div className="etk-bitti">
-    <b>{yazi ?? "Tamam!"} {hata === 0 ? "Hiç hata yok." : `${hata} hata.`}</b>
-    <button className="etk-mini" onClick={sifirla}>Baştan</button>
+    <b>{yazi ?? cev("Tamam!")} {hata === 0 ? cev("Hiç hata yok.") : `${hata} hata.`}</b>
+    <button className="etk-mini" onClick={sifirla}>{cev("Baştan")}</button>
   </div>
 );
 
@@ -64,7 +65,7 @@ export function Sirala({ e }: { e: Of<"sirala"> }) {
           ))}
         </div>
       ) : (
-        <Bitti hata={hata} yazi="Doğru sıra!" sifirla={() => { setN(0); setHata(0); }} />
+        <Bitti hata={hata} yazi={cev("Doğru sıra!")} sifirla={() => { setN(0); setHata(0); }} />
       )}
     </>
   );
@@ -103,7 +104,7 @@ export function Eslestir({ e }: { e: Of<"eslestir"> }) {
         </div>
       </div>
       {bitti ? <Bitti hata={hata} sifirla={() => { setTamam([]); setHata(0); }} />
-        : <p className="etk-ipucu">{secili === null ? "Soldan birini seç." : "Şimdi sağdaki eşini seç."}</p>}
+        : <p className="etk-ipucu">{secili === null ? cev("Soldan birini seç.") : cev("Şimdi sağdaki eşini seç.")}</p>}
     </>
   );
 }
@@ -128,8 +129,8 @@ export function Ayir({ e }: { e: Of<"ayir"> }) {
       )}
       {son && !son.ok && (
         <p className="etk-ipucu no">
-          Bu, <b>{e.gruplar[e.ogeler[son.k][1]]}</b> grubunda.{e.ogeler[son.k][2] && <> <Html html={e.ogeler[son.k][2]!} /></>}{" "}
-          <button className="etk-mini" onClick={() => { setSon(null); setN(n + 1); }}>Devam</button>
+          {cev("Bu,")} <b>{e.gruplar[e.ogeler[son.k][1]]}</b> {cev("grubunda.")}{e.ogeler[son.k][2] && <> <Html html={e.ogeler[son.k][2]!} /></>}{" "}
+          <button className="etk-mini" onClick={() => { setSon(null); setN(n + 1); }}>{cev("Devam")}</button>
         </p>
       )}
       <div className="etk-gruplar" style={{ gridTemplateColumns: `repeat(${e.gruplar.length}, 1fr)` }}>
@@ -167,7 +168,7 @@ export function Isaretle({ e, svg }: { e: Of<"isaretle">; svg: string }) {
         </svg>
       </div>
       <div className="etk-bilgi" aria-live="polite">
-        {p ? <><b><Html html={p.ad} /></b> <Html html={p.acik} /></> : <span>Numaralara dokun. {gorulen.length}/{e.noktalar.length} keşfedildi.</span>}
+        {p ? <><b><Html html={p.ad} /></b> <Html html={p.acik} /></> : <span>{cev("Numaralara dokun.")} {gorulen.length}/{e.noktalar.length} {cev("keşfedildi.")}</span>}
       </div>
     </>
   );
@@ -176,7 +177,7 @@ export function Isaretle({ e, svg }: { e: Of<"isaretle">; svg: string }) {
 export function Formul({ e }: { e: Of<"formul"> }) {
   const [v, setV] = useState<Record<string, number>>(() => Object.fromEntries(e.girdiler.map((g) => [g.ad, g.deger])));
   const sayi = (x: number, b = 2) =>
-    Number.isFinite(x) ? x.toLocaleString("tr-TR", { maximumFractionDigits: b }).replace("-", "−") : "—";
+    Number.isFinite(x) ? x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: b }).replace("-", "−") : "—";
   const sonuc = e.ciktilar.map((c) => { try { return hesapla(c.ifade, v); } catch { return NaN; } });
   let yorum: string | undefined;
   if (e.yorum) {
@@ -242,16 +243,16 @@ export function Yontem({ e }: { e: Of<"yontem"> }) {
   const [n, setN] = useState(0), [dogru, setDogru] = useState(false), [curuk, setCuruk] = useState(false);
   return (
     <div className="yt">
-      <Kutu ad="Hipotez" html={e.hipotez} vurgu={n === 0} />
+      <Kutu ad={cev("Hipotez")} html={e.hipotez} vurgu={n === 0} />
       {n === 0 ? (
-        <button className="yt-dugme" onClick={() => setN(1)}>Deneyle sına</button>
+        <button className="yt-dugme" onClick={() => setN(1)}>{cev("Deneyle sına")}</button>
       ) : (
         <>
-          <AsagiOk yazi="sına" />
-          <Kutu ad="Deney" html={e.deney} d={0.35} vurgu={!dogru && !curuk} />
+          <AsagiOk yazi={cev("sına")} />
+          <Kutu ad={cev("Deney")} html={e.deney} d={0.35} vurgu={!dogru && !curuk} />
           <motion.div className="yt-sec" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>
-            <button className={curuk ? "on" : ""} aria-pressed={curuk} onClick={() => setCuruk(true)}>Çürütürse</button>
-            <button className={dogru ? "on" : ""} aria-pressed={dogru} onClick={() => setDogru(true)}>Doğrularsa</button>
+            <button className={curuk ? "on" : ""} aria-pressed={curuk} onClick={() => setCuruk(true)}>{cev("Çürütürse")}</button>
+            <button className={dogru ? "on" : ""} aria-pressed={dogru} onClick={() => setDogru(true)}>{cev("Doğrularsa")}</button>
           </motion.div>
           <AnimatePresence>
             {curuk && (
@@ -262,10 +263,10 @@ export function Yontem({ e }: { e: Of<"yontem"> }) {
           </AnimatePresence>
           {dogru && (
             <>
-              <AsagiOk yazi="defalarca doğrulanınca" />
+              <AsagiOk yazi={cev("defalarca doğrulanınca")} />
               <div className="yt-dal">
-                <Kutu ad="Yasa" html={e.yasa} d={0.4} vurgu />
-                <Kutu ad="Teori" html={e.teori} d={0.6} vurgu />
+                <Kutu ad={cev("Yasa")} html={e.yasa} d={0.4} vurgu />
+                <Kutu ad={cev("Teori")} html={e.teori} d={0.6} vurgu />
               </div>
             </>
           )}

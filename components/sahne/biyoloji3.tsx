@@ -2,6 +2,7 @@
 // Biyoloji sahneleri (sınıflandırma, hayvanlar âlemi): sınıflandırma basamakları, at + eşek = katır,
 // ikili adlandırma, âlem anahtarı; iskelet ve omurga, böcek-örümcek bacakları, kalp odacıkları,
 // değişken ve sabit vücut sıcaklığı, yarasanın sınıfı.
+import { cev } from "@/lib/dil";
 import { yumusak, type SahneKaydi, type SahneProps } from "./ortak";
 
 const sinir = (x: number, a = 0, b = 1) => Math.max(a, Math.min(b, x));
@@ -10,24 +11,24 @@ const ilerleme = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 
 /* ---------- sınıflandırma basamakları ---------- */
 
 const BASAMAK = [
-  "Üst âlem: Ökaryotlar", "Âlem: Hayvanlar", "Şube: Kordalılar", "Sınıf: Memeliler",
-  "Takım: Etçiller", "Familya: Kedigiller", "Cins: Felis", "Tür: Felis catus",
+  cev("Üst âlem: Ökaryotlar"), cev("Âlem: Hayvanlar"), cev("Şube: Kordalılar"), cev("Sınıf: Memeliler"),
+  cev("Takım: Etçiller"), cev("Familya: Kedigiller"), cev("Cins: Felis"), cev("Tür: Felis catus"),
 ];
 // d: ev kedisiyle kaç basamağı paylaştığı (0: üst âlem bile farklı).
 const CANLILAR: [string, number][] = [
-  ["bakteri", 0], ["meşe", 1], ["mantar", 1], ["arı", 2],
-  ["salyangoz", 2], ["alabalık", 3], ["kartal", 3], ["kurbağa", 3],
-  ["at", 4], ["yarasa", 4], ["köpek", 5], ["ayı", 5],
-  ["aslan", 6], ["vaşak", 6], ["yaban kedisi", 7], ["ev kedisi", 8],
+  ["bakteri", 0], [cev("meşe"), 1], ["mantar", 1], [cev("arı"), 2],
+  ["salyangoz", 2], [cev("alabalık"), 3], ["kartal", 3], [cev("kurbağa"), 3],
+  ["at", 4], ["yarasa", 4], [cev("köpek"), 5], [cev("ayı"), 5],
+  ["aslan", 6], [cev("vaşak"), 6], [cev("yaban kedisi"), 7], [cev("ev kedisi"), 8],
 ];
 
 function Basamak({ v }: SahneProps) {
   const k = sinir((v.k ?? 1) - 1, 0, 7);
   const n = CANLILAR.filter(([, d]) => d > k).length;
   return (
-    <svg viewBox="0 0 340 254" role="img" aria-label={`${BASAMAK[k]}: ${n} canlı`}>
+    <svg viewBox="0 0 340 254" role="img" aria-label={cev("{0}: {1} canlı", BASAMAK[k], n)}>
       <text x={170} y={24} fontSize={16} fontWeight={800} fill="var(--biyoloji)" textAnchor="middle">{BASAMAK[k]}</text>
-      <text x={170} y={44} fontSize={12} fontWeight={600} fill="var(--muted)" textAnchor="middle">Bu grupta 16 canlıdan {n} tanesi var</text>
+      <text x={170} y={44} fontSize={12} fontWeight={600} fill="var(--muted)" textAnchor="middle">{cev("Bu grupta 16 canlıdan")} {n} {cev("tanesi var")}</text>
       {CANLILAR.map(([ad, d], i) => {
         const ic = d > k, x = 10 + (i % 4) * 82, y = 62 + Math.floor(i / 4) * 42, ben = d === 8;
         return (
@@ -37,7 +38,7 @@ function Basamak({ v }: SahneProps) {
           </g>
         );
       })}
-      <text x={170} y={246} fontSize={11.5} fill="var(--muted)" textAnchor="middle">aşağı indikçe grup küçülür, akrabalık artar</text>
+      <text x={170} y={246} fontSize={11.5} fill="var(--muted)" textAnchor="middle">{cev("aşağı indikçe grup küçülür, akrabalık artar")}</text>
     </svg>
   );
 }
@@ -65,24 +66,24 @@ function Melez({ t, oynuyor, s }: SahneProps) {
   const yavru = yumusak((u - 0.15) / 0.3);
   const kisir = u > 0.6;
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label="Dişi at ile erkek eşekten katır doğar; katır kısırdır">
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("Dişi at ile erkek eşekten katır doğar; katır kısırdır")}>
       <DortAyakli x={74} y={56} renk="#9a6b43" kulak={8} />
-      <text x={74} y={106} fontSize={12} fontWeight={700} fill="var(--ink)" textAnchor="middle">dişi at</text>
+      <text x={74} y={106} fontSize={12} fontWeight={700} fill="var(--ink)" textAnchor="middle">{cev("dişi at")}</text>
       <DortAyakli x={250} y={60} renk="#8c8f99" kulak={17} olcek={0.85} />
-      <text x={250} y={106} fontSize={12} fontWeight={700} fill="var(--ink)" textAnchor="middle">erkek eşek</text>
+      <text x={250} y={106} fontSize={12} fontWeight={700} fill="var(--ink)" textAnchor="middle">{cev("erkek eşek")}</text>
       <text x={162} y={64} fontSize={22} fontWeight={800} fill="var(--muted)" textAnchor="middle">+</text>
       <path d="M90 112 Q120 128 122 146 M232 112 Q140 124 122 146" stroke="var(--line-2)" strokeWidth={2} fill="none" />
       <g opacity={yavru}>
         <DortAyakli x={112} y={176} renk="#7d6a58" kulak={13} olcek={0.9} />
-        <text x={112} y={226} fontSize={12} fontWeight={700} fill="var(--ink)" textAnchor="middle">katır</text>
+        <text x={112} y={226} fontSize={12} fontWeight={700} fill="var(--ink)" textAnchor="middle">{cev("katır")}</text>
       </g>
       {u === 0 && <text x={122} y={186} fontSize={28} fontWeight={800} fill="var(--line-2)" textAnchor="middle">?</text>}
       {kisir && (
         <g className="ad-belir">
           <path d="M196 158 L216 178 M216 158 L196 178" stroke="var(--bad)" strokeWidth={4} strokeLinecap="round" />
-          <text x={226} y={166} fontSize={12.5} fontWeight={800} fill="var(--bad)">kısır</text>
-          <text x={226} y={183} fontSize={11} fontWeight={600} fill="var(--muted)">yavru veremez</text>
-          <text x={196} y={206} fontSize={11} fontWeight={600} fill="var(--muted)">kromozomları eşlenemez</text>
+          <text x={226} y={166} fontSize={12.5} fontWeight={800} fill="var(--bad)">{cev("kısır")}</text>
+          <text x={226} y={183} fontSize={11} fontWeight={600} fill="var(--muted)">{cev("yavru veremez")}</text>
+          <text x={196} y={206} fontSize={11} fontWeight={600} fill="var(--muted)">{cev("kromozomları eşlenemez")}</text>
         </g>
       )}
     </svg>
@@ -92,18 +93,18 @@ function Melez({ t, oynuyor, s }: SahneProps) {
 /* ---------- ikili adlandırma ---------- */
 
 function Ad({ v }: SahneProps) {
-  const cins = v.cb ? "Canis" : "canis", tan = v.tb ? "Lupus" : "lupus", it = v.it === 1;
+  const cins = v.cb ? cev("Canis") : "canis", tan = v.tb ? cev("Lupus") : "lupus", it = v.it === 1;
   return (
-    <svg viewBox="0 0 340 170" role="img" aria-label={`Kurdun bilimsel adı: ${cins} ${tan}${it ? ", italik" : ""}`}>
-      <text x={170} y={30} fontSize={13} fontWeight={700} fill="var(--muted)" textAnchor="middle">kurt</text>
+    <svg viewBox="0 0 340 170" role="img" aria-label={cev("Kurdun bilimsel adı: {0} {1}{2}", cins, tan, it ? ", italik" : "")}>
+      <text x={170} y={30} fontSize={13} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("kurt")}</text>
       <text x={170} y={92} fontSize={40} fontWeight={700} fill="var(--ink)" textAnchor="middle" fontStyle={it ? "italic" : "normal"} fontFamily="Georgia, 'Times New Roman', serif">
         <tspan fill="var(--c1)">{cins}</tspan> <tspan fill="var(--c5)">{tan}</tspan>
       </text>
       <line x1={64} y1={110} x2={168} y2={110} stroke="var(--c1)" strokeWidth={2} />
       <line x1={184} y1={110} x2={278} y2={110} stroke="var(--c5)" strokeWidth={2} />
-      <text x={116} y={130} fontSize={12} fontWeight={700} fill="var(--c1)" textAnchor="middle">cins adı</text>
-      <text x={231} y={130} fontSize={12} fontWeight={700} fill="var(--c5)" textAnchor="middle">tanımlayıcı ad</text>
-      <text x={170} y={160} fontSize={11.5} fill="var(--muted)" textAnchor="middle">Latince, iki kelime; dünyanın her yerinde aynı</text>
+      <text x={116} y={130} fontSize={12} fontWeight={700} fill="var(--c1)" textAnchor="middle">{cev("cins adı")}</text>
+      <text x={231} y={130} fontSize={12} fontWeight={700} fill="var(--c5)" textAnchor="middle">{cev("tanımlayıcı ad")}</text>
+      <text x={170} y={160} fontSize={11.5} fill="var(--muted)" textAnchor="middle">{cev("Latince, iki kelime; dünyanın her yerinde aynı")}</text>
     </svg>
   );
 }
@@ -111,14 +112,14 @@ function Ad({ v }: SahneProps) {
 /* ---------- âlem anahtarı ---------- */
 
 type Dugum = { x: number; y: number; yazi: string };
-const KOK: Dugum = { x: 170, y: 30, yazi: "Çekirdek var mı?" };
-const SOL: Dugum = { x: 76, y: 100, yazi: "Duvarda peptidoglikan?" };
-const SAG: Dugum = { x: 246, y: 100, yazi: "Hücre duvarı?" };
+const KOK: Dugum = { x: 170, y: 30, yazi: cev("Çekirdek var mı?") };
+const SOL: Dugum = { x: 76, y: 100, yazi: cev("Duvarda peptidoglikan?") };
+const SAG: Dugum = { x: 246, y: 100, yazi: cev("Hücre duvarı?") };
 const YAPRAK: Record<string, { x: number; ust: Dugum; dal: string }> = {
   Bakteriler: { x: 38, ust: SOL, dal: "var" },
   Arkeler: { x: 112, ust: SOL, dal: "yok" },
   Hayvanlar: { x: 184, ust: SAG, dal: "yok" },
-  Bitkiler: { x: 248, ust: SAG, dal: "selüloz" },
+  Bitkiler: { x: 248, ust: SAG, dal: cev("selüloz") },
   Mantarlar: { x: 308, ust: SAG, dal: "kitin" },
 };
 const YY = 176;
@@ -160,8 +161,8 @@ function Anahtar({ s, t, oynuyor }: SahneProps) {
     </g>
   );
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label="Üst âlem ve âlem anahtarı">
-      {kenar(KOK.x, KOK.y + 13, SOL.x, SOL.y - 13, "hayır", !!yap && yap.ust === SOL)}
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Üst âlem ve âlem anahtarı")}>
+      {kenar(KOK.x, KOK.y + 13, SOL.x, SOL.y - 13, cev("hayır"), !!yap && yap.ust === SOL)}
       {kenar(KOK.x, KOK.y + 13, SAG.x, SAG.y - 13, "evet", !!yap && yap.ust === SAG)}
       {Object.entries(YAPRAK).map(([ad, y]) => kenar(y.ust.x, y.ust.y + 13, y.x, YY - 12, y.dal, ad === hedef, true))}
       <Kutu d={KOK} w={124} />
@@ -177,10 +178,10 @@ function Anahtar({ s, t, oynuyor }: SahneProps) {
         );
       })}
       <g fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">
-        <text x={75} y={206}>prokaryotlar</text>
-        <text x={246} y={206}>ökaryotlar (çok hücreli)</text>
+        <text x={75} y={206}>{cev("prokaryotlar")}</text>
+        <text x={246} y={206}>{cev("ökaryotlar (çok hücreli)")}</text>
       </g>
-      <text x={170} y={228} fontSize={11} fill="var(--muted)" textAnchor="middle">Protistler bu basit anahtara uymaz.</text>
+      <text x={170} y={228} fontSize={11} fill="var(--muted)" textAnchor="middle">{cev("Protistler bu basit anahtara uymaz.")}</text>
       {yap && u > 0 && !bitti && <circle cx={nokta[0]} cy={nokta[1]} r={6} fill="var(--biyoloji)" stroke="var(--surface)" strokeWidth={2} />}
     </svg>
   );
@@ -190,7 +191,7 @@ function Anahtar({ s, t, oynuyor }: SahneProps) {
 
 function Iskelet() {
   return (
-    <svg viewBox="0 0 340 200" role="img" aria-label="Böcek, deniz yıldızı ve balığın iskeleti">
+    <svg viewBox="0 0 340 200" role="img" aria-label={cev("Böcek, deniz yıldızı ve balığın iskeleti")}>
       <g>
         <ellipse cx={56} cy={92} rx={22} ry={34} fill="var(--c4)" fillOpacity={0.18} stroke="#b7800d" strokeWidth={4} />
         <line x1={34} y1={86} x2={78} y2={86} stroke="#b7800d" strokeWidth={2} />
@@ -213,17 +214,17 @@ function Iskelet() {
         <path d="M266 92 L262 98 M300 92 L310 92" stroke="var(--c1)" strokeWidth={1.4} />
       </g>
       <g fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        <text x={56} y={150}>böcek</text>
-        <text x={170} y={150}>deniz yıldızı</text>
-        <text x={284} y={150}>balık</text>
+        <text x={56} y={150}>{cev("böcek")}</text>
+        <text x={170} y={150}>{cev("deniz yıldızı")}</text>
+        <text x={284} y={150}>{cev("balık")}</text>
       </g>
       <g fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">
-        <text x={56} y={168}>dış iskelet</text>
-        <text x={56} y={182}>(kitin kabuk)</text>
-        <text x={170} y={168}>deri altında</text>
-        <text x={170} y={182}>kireçli plakalar</text>
-        <text x={284} y={168}>sırtta omurlar</text>
-        <text x={284} y={182}>(omurga)</text>
+        <text x={56} y={168}>{cev("dış iskelet")}</text>
+        <text x={56} y={182}>{cev("(kitin kabuk)")}</text>
+        <text x={170} y={168}>{cev("deri altında")}</text>
+        <text x={170} y={182}>{cev("kireçli plakalar")}</text>
+        <text x={284} y={168}>{cev("sırtta omurlar")}</text>
+        <text x={284} y={182}>{cev("(omurga)")}</text>
       </g>
     </svg>
   );
@@ -258,14 +259,14 @@ function Bacak({ s, v }: SahneProps) {
   const b = v.b ?? 0, o = typeof s.orumcek === "number" ? s.orumcek : 2;
   const top = b * 6 + o * 8;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${b} böcek, ${o} örümcek, toplam ${top} bacak`}>
-      <text x={14} y={22} fontSize={12} fontWeight={700} fill="#b7800d">böcekler: 3 vücut bölümü, anten var</text>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0} böcek, {1} örümcek, toplam {2} bacak", b, o, top)}>
+      <text x={14} y={22} fontSize={12} fontWeight={700} fill="#b7800d">{cev("böcekler: 3 vücut bölümü, anten var")}</text>
       {Array.from({ length: b }, (_, i) => <Bocek key={i} x={34 + i * 54} y={66} />)}
-      {b === 0 && <text x={170} y={72} fontSize={12} fill="var(--muted)" textAnchor="middle">henüz böcek yok</text>}
+      {b === 0 && <text x={170} y={72} fontSize={12} fill="var(--muted)" textAnchor="middle">{cev("henüz böcek yok")}</text>}
       <line x1={14} y1={110} x2={326} y2={110} stroke="var(--line)" />
-      <text x={14} y={134} fontSize={12} fontWeight={700} fill="var(--c5)">örümcekler: 2 vücut bölümü, anten yok</text>
+      <text x={14} y={134} fontSize={12} fontWeight={700} fill="var(--c5)">{cev("örümcekler: 2 vücut bölümü, anten yok")}</text>
       {Array.from({ length: o }, (_, i) => <Orumcek key={i} x={60 + i * 70} y={170} />)}
-      <text x={326} y={226} fontSize={15} fontWeight={800} fill="var(--ink)" textAnchor="end">Toplam bacak: {top}</text>
+      <text x={326} y={226} fontSize={15} fontWeight={800} fill="var(--ink)" textAnchor="end">{cev("Toplam bacak:")} {top}</text>
     </svg>
   );
 }
@@ -278,15 +279,15 @@ function Kalp({ v }: SahneProps) {
   const o = sinir(v.o ?? 2, 2, 4);
   const odalar: { x: number; y: number; w: number; h: number; renk: string; ad: string }[] =
     o === 2
-      ? [{ x: 70, y: 40, w: 120, h: 56, renk: KAN.o2siz, ad: "kulakçık" }, { x: 70, y: 104, w: 120, h: 76, renk: KAN.o2siz, ad: "karıncık" }]
+      ? [{ x: 70, y: 40, w: 120, h: 56, renk: KAN.o2siz, ad: cev("kulakçık") }, { x: 70, y: 104, w: 120, h: 76, renk: KAN.o2siz, ad: cev("karıncık") }]
       : o === 3
-        ? [{ x: 70, y: 40, w: 56, h: 56, renk: KAN.o2siz, ad: "kulakçık" }, { x: 134, y: 40, w: 56, h: 56, renk: KAN.o2li, ad: "kulakçık" }, { x: 70, y: 104, w: 120, h: 76, renk: KAN.karisik, ad: "karıncık" }]
-        : [{ x: 70, y: 40, w: 56, h: 56, renk: KAN.o2siz, ad: "kulakçık" }, { x: 134, y: 40, w: 56, h: 56, renk: KAN.o2li, ad: "kulakçık" }, { x: 70, y: 104, w: 56, h: 76, renk: KAN.o2siz, ad: "karıncık" }, { x: 134, y: 104, w: 56, h: 76, renk: KAN.o2li, ad: "karıncık" }];
-  const kimler = o === 2 ? ["balıklar"] : o === 3 ? ["iki yaşamlılar", "çoğu sürüngen"] : ["kuşlar", "memeliler", "timsah"];
-  const not = o === 2 ? "yalnızca oksijensiz kan geçer" : o === 3 ? "karıncıkta kan kısmen karışır" : "oksijenli ve oksijensiz kan karışmaz";
+        ? [{ x: 70, y: 40, w: 56, h: 56, renk: KAN.o2siz, ad: cev("kulakçık") }, { x: 134, y: 40, w: 56, h: 56, renk: KAN.o2li, ad: cev("kulakçık") }, { x: 70, y: 104, w: 120, h: 76, renk: KAN.karisik, ad: cev("karıncık") }]
+        : [{ x: 70, y: 40, w: 56, h: 56, renk: KAN.o2siz, ad: cev("kulakçık") }, { x: 134, y: 40, w: 56, h: 56, renk: KAN.o2li, ad: cev("kulakçık") }, { x: 70, y: 104, w: 56, h: 76, renk: KAN.o2siz, ad: cev("karıncık") }, { x: 134, y: 104, w: 56, h: 76, renk: KAN.o2li, ad: cev("karıncık") }];
+  const kimler = o === 2 ? [cev("balıklar")] : o === 3 ? [cev("iki yaşamlılar"), cev("çoğu sürüngen")] : [cev("kuşlar"), "memeliler", "timsah"];
+  const not = o === 2 ? cev("yalnızca oksijensiz kan geçer") : o === 3 ? cev("karıncıkta kan kısmen karışır") : cev("oksijenli ve oksijensiz kan karışmaz");
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label={`${o} odacıklı kalp: ${kimler.join(", ")}`}>
-      <text x={130} y={26} fontSize={14} fontWeight={800} fill="var(--ink)" textAnchor="middle">{o} odacıklı kalp</text>
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("{0} odacıklı kalp: {1}", o, kimler.join(", "))}>
+      <text x={130} y={26} fontSize={14} fontWeight={800} fill="var(--ink)" textAnchor="middle">{o} {cev("odacıklı kalp")}</text>
       <g key={o} className="ad-belir">
         {odalar.map((d, i) => (
           <g key={i}>
@@ -297,13 +298,13 @@ function Kalp({ v }: SahneProps) {
       </g>
       <text x={130} y={202} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{not}</text>
       <g fontSize={12.5} fontWeight={700} fill="var(--ink)">
-        <text x={212} y={52} fontSize={11} fill="var(--muted)" fontWeight={600}>kimlerde?</text>
+        <text x={212} y={52} fontSize={11} fill="var(--muted)" fontWeight={600}>{cev("kimlerde?")}</text>
         {kimler.map((k, i) => <text key={k} x={212} y={74 + i * 20}>{k}</text>)}
       </g>
       <g fontSize={11} fill="var(--muted)">
-        <rect x={30} y={220} width={10} height={10} rx={2} fill={KAN.o2siz} /><text x={45} y={229}>oksijensiz</text>
-        <rect x={122} y={220} width={10} height={10} rx={2} fill={KAN.o2li} /><text x={137} y={229}>oksijenli</text>
-        <rect x={204} y={220} width={10} height={10} rx={2} fill={KAN.karisik} /><text x={219} y={229}>karışık</text>
+        <rect x={30} y={220} width={10} height={10} rx={2} fill={KAN.o2siz} /><text x={45} y={229}>{cev("oksijensiz")}</text>
+        <rect x={122} y={220} width={10} height={10} rx={2} fill={KAN.o2li} /><text x={137} y={229}>{cev("oksijenli")}</text>
+        <rect x={204} y={220} width={10} height={10} rx={2} fill={KAN.karisik} /><text x={219} y={229}>{cev("karışık")}</text>
       </g>
     </svg>
   );
@@ -327,26 +328,26 @@ function Termometre({ x, deger, renk, ad, alt }: { x: number; deger: number; ren
 
 function Sicaklik({ v }: SahneProps) {
   const T = v.T ?? 25;
-  const hal = T < 12 ? "çok yavaş, kış uykusuna yakın" : T < 22 ? "yavaşladı" : "hareketli";
+  const hal = T < 12 ? cev("çok yavaş, kış uykusuna yakın") : T < 22 ? cev("yavaşladı") : "hareketli";
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label={`Ortam ${T} °C: kertenkele ${T} °C, fare 37 °C`}>
-      <text x={170} y={22} fontSize={12.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">ortam: {T} °C</text>
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("Ortam {0} °C: kertenkele {1} °C, fare 37 °C", T, T)}>
+      <text x={170} y={22} fontSize={12.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("ortam:")} {T} °C</text>
       <Termometre x={90} deger={T} renk="var(--c4)" ad="kertenkele" alt={hal} />
-      <Termometre x={240} deger={37} renk="var(--c2)" ad="fare" alt="ısıyı besinden üretir" />
+      <Termometre x={240} deger={37} renk="var(--c2)" ad="fare" alt={cev("ısıyı besinden üretir")} />
     </svg>
   );
 }
 
 /* ---------- yarasanın sınıfı ---------- */
 
-const OZELLIK = ["uçar (kuşta da var)", "vücudu kıllı", "yavrusunu sütle besler", "diyaframı var"];
+const OZELLIK = [cev("uçar (kuşta da var)"), cev("vücudu kıllı"), cev("yavrusunu sütle besler"), cev("diyaframı var")];
 
 function Yarasa({ t, oynuyor, s }: SahneProps) {
   const sure = typeof s.sure === "number" ? s.sure : 4;
   const u = ilerleme(t, oynuyor, sure);
   const kac = u === 0 ? 1 : Math.min(4, 1 + Math.floor(u * 4.2));
   return (
-    <svg viewBox="0 0 340 252" role="img" aria-label="Yarasanın özellikleri">
+    <svg viewBox="0 0 340 252" role="img" aria-label={cev("Yarasanın özellikleri")}>
       <g>
         <path d="M170 64 Q140 40 112 44 Q104 30 84 34 Q92 52 78 70 Q100 68 112 80 Q124 72 140 82 Q150 70 166 74 Z" fill="var(--ink)" fillOpacity={0.85} />
         <path d="M170 64 Q200 40 228 44 Q236 30 256 34 Q248 52 262 70 Q240 68 228 80 Q216 72 200 82 Q190 70 174 74 Z" fill="var(--ink)" fillOpacity={0.85} />
@@ -359,7 +360,7 @@ function Yarasa({ t, oynuyor, s }: SahneProps) {
           <text x={170} y={123 + i * 28} fontSize={12} fontWeight={700} fill={i === 0 ? "var(--muted)" : "var(--biyoloji)"} textAnchor="middle">{o}</text>
         </g>
       ))}
-      {u > 0.95 && <text x={170} y={246} fontSize={13} fontWeight={800} fill="var(--biyoloji)" textAnchor="middle" className="ad-belir">kıl + süt bezi → memeli</text>}
+      {u > 0.95 && <text x={170} y={246} fontSize={13} fontWeight={800} fill="var(--biyoloji)" textAnchor="middle" className="ad-belir">{cev("kıl + süt bezi → memeli")}</text>}
     </svg>
   );
 }

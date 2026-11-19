@@ -7,6 +7,7 @@
 // kaydet, paylaş ve ses.
 // Sıra her açılışta karışıktır: önce izlenmemiş videolar, hepsi izlendikten sonra izlenenler yine karışık gelir.
 // %80'i izlenen video "izlendi" sayılır; liste tf-izlenen'de tutulur, hesaba eşitlenir.
+import { cev } from "@/lib/dil";
 import { paylas as paylasimMenusu } from "@/lib/yerel";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -163,7 +164,7 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
 
   async function paylas() {
     const url = adres(`/videolar/#${v.id}`);
-    if ((await paylasimMenusu({ baslik: v.baslik, url })) === "kopyalandi") o.toast("Bağlantı kopyalandı");
+    if ((await paylasimMenusu({ baslik: v.baslik, url })) === "kopyalandi") o.toast(cev("Bağlantı kopyalandı"));
   }
 
   return (
@@ -188,7 +189,7 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
           }}
         />
         {zorla && active && hint && !cevap && (
-          <button className="reel-hint" onClick={sesiAc}><I.sesKapali />Sesi açmak için dokun</button>
+          <button className="reel-hint" onClick={sesiAc}><I.sesKapali />{cev("Sesi açmak için dokun")}</button>
         )}
         {active && paused && !zorla && (
           <span className="reel-flash" aria-hidden="true"><I.play /></span>
@@ -199,30 +200,30 @@ function Reel({ v, konu, active, o }: { v: Video; konu: string; active: boolean;
         <span className="reel-prog" aria-hidden="true"><i style={{ width: `${pct}%` }} /></span>
         <div className="flex items-center gap-2">
           <span className="k min-w-0 flex-1 truncate"><b>{DERSLER[y.ders].ad}</b> · {konu || v.baslik}</span>
-          <Bildir yer={{ ders: y.ders, konu: y.konu, yer: `video ${v.id}`, ozet: v.baslik }}>
+          <Bildir yer={{ ders: y.ders, konu: y.konu, yer: cev("video {0}", v.id), ozet: v.baslik }}>
             <BildirDugme className="-mr-2 h-7" />
           </Bildir>
         </div>
         <div className="reel-acts">
-          <Link className="reel-go" href={yerHref(y)}>Konuya git<I.ileri /></Link>
+          <Link className="reel-go" href={yerHref(y)}>{cev("Konuya git")}<I.ileri /></Link>
           {v.cevap && (
             <Sheet open={cevap} onOpenChange={setCevap}>
-              <SheetTrigger className="reel-pill">Cevabı gör</SheetTrigger>
+              <SheetTrigger className="reel-pill">{cev("Cevabı gör")}</SheetTrigger>
               <SheetContent data-ders={y.ders} aria-describedby={undefined}>
-                <span className="text-xs font-bold tracking-wide text-acc uppercase">Videonun sorusu</span>
+                <span className="text-xs font-bold tracking-wide text-acc uppercase">{cev("Videonun sorusu")}</span>
                 <SheetTitle>{v.soru}</SheetTitle>
                 <p className="mb-1.5 text-base leading-relaxed">{v.cevap}</p>
-                <SheetClose asChild><Button variant="outline">Kapat</Button></SheetClose>
+                <SheetClose asChild><Button variant="outline">{cev("Kapat")}</Button></SheetClose>
               </SheetContent>
             </Sheet>
           )}
           <span className="sp" />
-          <button className="reel-ic" onClick={() => { if (konuKaydet()) o.toast(saved ? "Kaydedilenlerden çıkarıldı" : "Konu kaydedildi"); }} aria-pressed={saved} aria-label="Konuyu kaydet">
+          <button className="reel-ic" onClick={() => { if (konuKaydet()) o.toast(saved ? cev("Kaydedilenlerden çıkarıldı") : cev("Konu kaydedildi")); }} aria-pressed={saved} aria-label={cev("Konuyu kaydet")}>
             <I.kayit />
           </button>
           {davet}
-          <button className="reel-ic" onClick={paylas} aria-label="Paylaş"><I.paylas /></button>
-          <button className="reel-ic" onClick={sesDugmesi} aria-pressed={!sessiz} aria-label={sessiz ? "Sesi aç" : "Sesi kapat"}>
+          <button className="reel-ic" onClick={paylas} aria-label={cev("Paylaş")}><I.paylas /></button>
+          <button className="reel-ic" onClick={sesDugmesi} aria-pressed={!sessiz} aria-label={sessiz ? cev("Sesi aç") : cev("Sesi kapat")}>
             {sessiz ? <I.sesKapali /> : <I.sesAcik />}
           </button>
         </div>
@@ -290,15 +291,15 @@ export default function VideoFeed({ konular }: { konular: Record<string, string>
   if (!VIDEOLAR.length)
     return (
       <div className="app">
-        <UstBar baslik="Videolar" />
+        <UstBar baslik={cev("Videolar")} />
         <main className="view">
-          <PageHead text="Kısa, dikey konu videoları çok yakında burada. Her videodan ilgili konuya geçebileceksin." />
+          <PageHead text={cev("Kısa, dikey konu videoları çok yakında burada. Her videodan ilgili konuya geçebileceksin.")} />
         </main>
       </div>
     );
   return (
     <div className="feed" ref={feed}>
-      <h1 className="sr-only">Videolar</h1>
+      <h1 className="sr-only">{cev("Videolar")}</h1>
       {sira?.map((v) => <Reel key={v.id} v={v} konu={konular[v.id]} active={active === v.id} o={o} />)}
       <AnimatePresence>
         {msg && (

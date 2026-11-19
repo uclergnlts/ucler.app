@@ -1,4 +1,5 @@
 "use client";
+import { cev, SAYI_YEREL } from "@/lib/dil";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -15,11 +16,11 @@ import { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle, SheetTri
 import { cn } from "@/lib/utils";
 
 // Henüz içeriği olmayan dersler: kartı görünür, dokununca "yakında" der.
-const YAKINDA = [["matematik", "Matematik"], ["tarih", "Tarih"], ["cografya", "Coğrafya"]] as const;
+const YAKINDA = [["matematik", cev("Matematik")], ["tarih", cev("Tarih")], ["cografya", cev("Coğrafya")]] as const;
 // Deney defteri (2026-11-16): devam ve tekrar satırları kâğıt kart; solda mürekkep renginde yuvarlak oynat düğmesi.
 const satirKart = "flex items-center gap-3.5 rounded-lg border border-border bg-card p-4 transition-transform active:scale-[.99]";
 const oynat = "grid size-10 flex-none place-items-center rounded-full border-[1.5px] border-[var(--ink)] text-foreground [&_svg]:size-4";
-const tarihBicim = new Intl.DateTimeFormat("tr-TR", { weekday: "long", day: "numeric", month: "long" });
+const tarihBicim = new Intl.DateTimeFormat(SAYI_YEREL, { weekday: "long", day: "numeric", month: "long" });
 
 export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; gunHavuz: string[] }) {
   const prog = useProg(), ad = useAd(), tekrar = useTekrar(), asama = useAsama(), yer = useYer();
@@ -56,10 +57,10 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
       <Govde>
         <section className="grid gap-1">
           <span className="text-[11px] font-bold tracking-[.14em] text-muted-foreground uppercase">{tarih}</span>
-          <h1 className="text-[28px]">Hoş geldin{ad ? `, ${ad}` : ""}</h1>
+          <h1 className="text-[28px]">{cev("Hoş geldin")}{ad ? `, ${ad}` : ""}</h1>
           {yeni ? (
-            <p className="text-[15px] text-muted-foreground">Fizik, kimya ve biyoloji en temelden: kısa, görselli kartlar ve her konunun sonunda 4 soruluk bir test.</p>
-          ) : doneAll > 0 && <p className="text-[15px] text-muted-foreground">Şimdiye kadar {doneAll} konu bitirdin.</p>}
+            <p className="text-[15px] text-muted-foreground">{cev("Fizik, kimya ve biyoloji en temelden: kısa, görselli kartlar ve her konunun sonunda 4 soruluk bir test.")}</p>
+          ) : doneAll > 0 && <p className="text-[15px] text-muted-foreground">{cev("Şimdiye kadar")} {doneAll} {cev("konu bitirdin.")}</p>}
         </section>
 
         <GunSorusuKart havuz={gunHavuz} />
@@ -68,7 +69,7 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
           <Link data-ders={ilk.ders} href={href(ilk.ders, ilk.id)} className={satirKart}>
             <span className={oynat}><Play /></span>
             <span className="min-w-0 flex-1">
-              <span className="block text-[12px] font-semibold text-muted-foreground">İlk konuna başla · {DERSLER[ilk.ders].ad}</span>
+              <span className="block text-[12px] font-semibold text-muted-foreground">{cev("İlk konuna başla ·")} {DERSLER[ilk.ders].ad}</span>
               <b className="block truncate font-display text-[17px] font-extrabold">{ilk.title}</b>
             </span>
             <Next />
@@ -79,14 +80,14 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
           <Link href="/tekrar/" className={satirKart}>
             <span className={oynat}><Tekrar /></span>
             <span className="min-w-0 flex-1">
-              <span className="block text-[12px] font-semibold text-muted-foreground">Tekrar zamanı</span>
-              <b className="block font-display text-[17px] font-extrabold">Bugün {bugun} soru seni bekliyor</b>
+              <span className="block text-[12px] font-semibold text-muted-foreground">{cev("Tekrar zamanı")}</span>
+              <b className="block font-display text-[17px] font-extrabold">{cev("Bugün")} {bugun} {cev("soru seni bekliyor")}</b>
             </span>
             <Next />
           </Link>
         )}
         {bugun === 0 && kalan > 0 && sonraki && (
-          <p className="-mt-3 flex items-center gap-2 text-[14px] text-muted-foreground [&_svg]:size-4"><Tekrar />Tekrar sıranda {kalan} soru var; ilki {gunAdi(sonraki)} gelecek.</p>
+          <p className="-mt-3 flex items-center gap-2 text-[14px] text-muted-foreground [&_svg]:size-4"><Tekrar />{cev("Tekrar sıranda {0} soru var; ilki {1} gelecek.", kalan, gunAdi(sonraki))}</p>
         )}
 
         {last && (() => {
@@ -96,19 +97,19 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
             <Link data-ders={last.ders} href={href(last.ders, last.id)} className={satirKart}>
               <span className={oynat}><Play /></span>
               <span className="min-w-0 flex-1">
-                <span className="block text-[12px] font-semibold text-muted-foreground">Kaldığın yer · {DERSLER[last.ders].ad}</span>
+                <span className="block text-[12px] font-semibold text-muted-foreground">{cev("Kaldığın yer ·")} {DERSLER[last.ders].ad}</span>
                 <b className="block truncate font-display text-[17px] font-extrabold">{last.title}</b>
                 <span className="mt-2 flex gap-[3px]" aria-hidden="true">
                   {Array.from({ length: nA }, (_, a) => <span key={a} className={cn("h-[3px] w-6", a < b ? "bg-foreground" : "bg-border-strong")} />)}
                 </span>
               </span>
-              <span className="flex-none text-[13px] font-semibold tabular-nums text-muted-foreground">{prog[k] ? "Bitti" : `${b}/${nA}`}</span>
-              <span className="sr-only">{prog[k] ? "Bitti" : `${nA} aşamadan ${b} tanesi bitti`}</span>
+              <span className="flex-none text-[13px] font-semibold tabular-nums text-muted-foreground">{prog[k] ? cev("Bitti") : `${b}/${nA}`}</span>
+              <span className="sr-only">{prog[k] ? cev("Bitti") : cev("{0} aşamadan {1} tanesi bitti", nA, b)}</span>
             </Link>
           );
         })()}
 
-        <Bolum title="Dersler">
+        <Bolum title={cev("Dersler")}>
           <div className="grid">
             {DERS_IDS.map((d) => {
               const s = DERSLER[d], ready = all[d].filter((e) => e.id);
@@ -126,9 +127,9 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
                   <span aria-hidden className="absolute -right-1 bottom-0 top-2 w-[118px] bg-[var(--ink)] opacity-90" style={{ maskImage: `url(/gravur/${d}.png)`, WebkitMaskImage: `url(/gravur/${d}.png)`, maskSize: "contain", WebkitMaskSize: "contain", maskRepeat: "no-repeat", WebkitMaskRepeat: "no-repeat", maskPosition: "center bottom", WebkitMaskPosition: "center bottom" }} />
                   <span className="grid gap-0.5">
                     <b className="font-display text-[22px] leading-tight font-extrabold">{s.ad}</b>
-                    <span className="font-mono text-[11px] tracking-[.08em] text-muted-foreground uppercase">{basladi ? `${basladi} başladın · ${done}/${ready.length}` : `${done} / ${ready.length} konu`}</span>
+                    <span className="font-mono text-[11px] tracking-[.08em] text-muted-foreground uppercase">{basladi ? cev("{0} başladın · {1}/{2}", basladi, done, ready.length) : cev("{0} / {1} konu", done, ready.length)}</span>
                   </span>
-                  <Progress className="h-[3px] rounded-none" value={ready.length ? (100 * dolu) / ready.length : 0} label={`${ready.length} konudan ${done} tanesi bitti${basladi ? `, ${basladi} tanesine başladın` : ""}`} />
+                  <Progress className="h-[3px] rounded-none" value={ready.length ? (100 * dolu) / ready.length : 0} label={cev("{0} konudan {1} tanesi bitti{2}", ready.length, done, basladi ? cev(", {0} tanesine başladın", basladi) : "")} />
                 </Link>
               );
             })}
@@ -139,14 +140,14 @@ export default function Home({ all, gunHavuz }: { all: Record<DersId, Entry[]>; 
                   <SheetTrigger className="grid grid-cols-[auto_1fr_auto] items-center gap-3 border-b border-border py-3 text-left text-muted-foreground">
                     <span className="[&_svg]:size-5"><I /></span>
                     <span className="font-display text-[16px] font-bold">{ad}</span>
-                    <span className="text-[13px] font-semibold">Yakında</span>
+                    <span className="text-[13px] font-semibold">{cev("Yakında")}</span>
                   </SheetTrigger>
                   <SheetContent>
                     <div className="grid justify-items-center gap-3 py-4 text-center">
                       <Simge soluk className="size-16 rounded-2xl [&_svg]:size-8"><I /></Simge>
-                      <SheetTitle className="text-[22px]">{ad} yakında</SheetTitle>
-                      <SheetDescription className="text-muted-foreground">Bu dersin konularını hazırlıyoruz. Hazır olunca burada açılacak.</SheetDescription>
-                      <SheetClose asChild><Button className="mt-2 w-full">Tamam</Button></SheetClose>
+                      <SheetTitle className="text-[22px]">{ad} {cev("yakında")}</SheetTitle>
+                      <SheetDescription className="text-muted-foreground">{cev("Bu dersin konularını hazırlıyoruz. Hazır olunca burada açılacak.")}</SheetDescription>
+                      <SheetClose asChild><Button className="mt-2 w-full">{cev("Tamam")}</Button></SheetClose>
                     </div>
                   </SheetContent>
                 </Sheet>

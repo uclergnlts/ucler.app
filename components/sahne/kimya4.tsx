@@ -2,6 +2,7 @@
 // Kimya sahneleri (maddenin halleri, karışımlar): kristal ve amorf katının erimesi, viskozite, buhar basıncı,
 // dış basınç ve kaynama noktası, hâl değişimlerinin enerjisi, CO₂ faz diyagramı; Tyndall etkisi,
 // benzer benzeri çözer, çözünürlük eğrisi ve kristallenme, karışıma uygun ayırma yöntemi.
+import { cev, SAYI_YEREL } from "@/lib/dil";
 import { useMemo } from "react";
 import { rastgele, yumusak, type SahneKaydi, type SahneProps } from "./ortak";
 
@@ -9,7 +10,7 @@ const oran = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 0 ? 
 const kes = (x: number) => Math.max(0, Math.min(1, x));
 const ara = (a: number, b: number, u: number) => a + (b - a) * u;
 const eksi = (x: number) => `${x < 0 ? "−" : ""}${Math.abs(x)}`;
-const virgul = (x: number, b = 1) => x.toLocaleString("tr-TR", { maximumFractionDigits: b, minimumFractionDigits: 0 });
+const virgul = (x: number, b = 1) => x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: b, minimumFractionDigits: 0 });
 const SU = "color-mix(in srgb, #3294ff 20%, var(--surface))";
 const BAL = "#e8a91c";
 const YAG = "color-mix(in srgb, #eec12f 70%, var(--surface))";
@@ -39,7 +40,7 @@ function MiniGrafik({ x, f, u, renk, cizgi }: { x: number; f: (u: number) => num
       <line x1={x} x2={x + W} y1={Y1} y2={Y1} stroke="var(--ink)" strokeWidth={1.3} />
       <line x1={x} x2={x} y1={Y0 - 6} y2={Y1} stroke="var(--ink)" strokeWidth={1.3} />
       <text x={x + 4} y={Y0 - 8} fontSize={11} fontWeight={700} fill="var(--ink)">T</text>
-      <text x={x + W} y={Y1 + 14} fontSize={11} textAnchor="end" fill="var(--muted)">zaman</text>
+      <text x={x + W} y={Y1 + 14} fontSize={11} textAnchor="end" fill="var(--muted)">{cev("zaman")}</text>
       {cizgi && (
         <g>
           <line x1={x} x2={x + W} y1={Y1 - 0.6 * (Y1 - Y0)} y2={Y1 - 0.6 * (Y1 - Y0)} stroke="var(--line-2)" strokeDasharray="4 4" />
@@ -58,10 +59,10 @@ function Erime({ s, t, oynuyor }: SahneProps) {
   const kup = 34 * (1 - eri);
   const sarkma = yumusak(kes((u - 0.15) / 0.85)) * 18;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label="Tuz kristali ve cam ısıtılıyor">
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Tuz kristali ve cam ısıtılıyor")}>
       <g fontSize={13} fontWeight={800} fill="var(--ink)">
-        <text x={20} y={22}>Tuz <tspan fontWeight={600} fill="var(--muted)">(kristal)</tspan></text>
-        <text x={186} y={22}>Cam <tspan fontWeight={600} fill="var(--muted)">(amorf)</tspan></text>
+        <text x={20} y={22}>{cev("Tuz")} <tspan fontWeight={600} fill="var(--muted)">{cev("(kristal)")}</tspan></text>
+        <text x={186} y={22}>{cev("Cam")} <tspan fontWeight={600} fill="var(--muted)">{cev("(amorf)")}</tspan></text>
       </g>
       <MiniGrafik x={24} f={tuzT} u={u} renk="var(--kimya)" cizgi={u > 0 ? "801 °C" : undefined} />
       <MiniGrafik x={190} f={camT} u={u} renk="var(--c1)" />
@@ -77,8 +78,8 @@ function Erime({ s, t, oynuyor }: SahneProps) {
         <path d={`M196 172 Q253 ${172 + sarkma * 2} 310 172`} fill="none" stroke="var(--c1)" strokeWidth={8} strokeLinecap="round" opacity={0.75} />
       </g>
       <g fontSize={11.5} fontWeight={600} textAnchor="middle" opacity={kes((u - 0.75) * 5)}>
-        <text x={85} y={228} fill="var(--kimya)">birden erir</text>
-        <text x={253} y={228} fill="var(--c1)">yavaş yavaş yumuşar</text>
+        <text x={85} y={228} fill="var(--kimya)">{cev("birden erir")}</text>
+        <text x={253} y={228} fill="var(--c1)">{cev("yavaş yavaş yumuşar")}</text>
       </g>
     </svg>
   );
@@ -98,9 +99,9 @@ function Bal({ s, v, t, oynuyor }: SahneProps) {
   const GX = 170, G0 = 120, G1 = 206, GW = 76;
   const sv = G1 - dolu * (G1 - G0 - 6);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${T} derecede bal akıyor`}>
-      <text x={20} y={26} fontSize={13} fontWeight={800} fill="var(--ink)">Bal: {T} °C</text>
-      <text x={320} y={26} fontSize={13} fontWeight={700} textAnchor="end" fill="var(--muted)">süre: {Math.round(u * 10)} / 10 s</text>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0} derecede bal akıyor", T)}>
+      <text x={20} y={26} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Bal:")} {T} °C</text>
+      <text x={320} y={26} fontSize={13} fontWeight={700} textAnchor="end" fill="var(--muted)">{cev("süre:")} {Math.round(u * 10)} / 10 s</text>
       <g>
         <path d={`M${GX - 60} 40 L${GX + 60} 40 L${GX + 8} 92 L${GX + 8} 104 L${GX - 8} 104 L${GX - 8} 92 Z`} fill={BAL} opacity={0.25 + 0.6 * (1 - dolu)} />
         <path d={`M${GX - 60} 40 L${GX - 8} 92 L${GX - 8} 104 M${GX + 60} 40 L${GX + 8} 92 L${GX + 8} 104`} fill="none" stroke="var(--ink)" strokeWidth={2} strokeLinejoin="round" />
@@ -111,14 +112,14 @@ function Bal({ s, v, t, oynuyor }: SahneProps) {
         <path d={`M${GX - GW / 2} ${G0} L${GX - GW / 2} ${G1} L${GX + GW / 2} ${G1} L${GX + GW / 2} ${G0}`} fill="none" stroke="var(--ink)" strokeWidth={2.2} />
       </g>
       <g fontSize={12} fill="var(--muted)" fontWeight={600}>
-        <text x={20} y={150}>akmazlık</text>
+        <text x={20} y={150}>{cev("akmazlık")}</text>
         <rect x={20} y={158} width={90} height={10} rx={5} fill="var(--line)" />
         <rect x={20} y={158} width={Math.max(6, 90 * (1 - (T - 10) / 55))} height={10} rx={5} fill="var(--c2)" />
-        <text x={20} y={190}>{T < 30 ? "çok ağır akar" : T < 50 ? "daha kolay akar" : "rahat akar"}</text>
+        <text x={20} y={190}>{T < 30 ? cev("çok ağır akar") : T < 50 ? cev("daha kolay akar") : cev("rahat akar")}</text>
       </g>
       {u >= 1 && (
         <text x={170} y={228} fontSize={12.5} fontWeight={700} textAnchor="middle" fill={dolu >= 1 ? "var(--good)" : "var(--kimya)"}>
-          {dolu >= 1 ? "Bardak 10 saniyede doldu." : `Bardağın ancak %${Math.round(dolu * 100)}'i doldu.`}
+          {dolu >= 1 ? cev("Bardak 10 saniyede doldu.") : cev("Bardağın ancak %{0}'i doldu.", Math.round(dolu * 100))}
         </text>
       )}
     </svg>
@@ -138,8 +139,8 @@ function BuharBasinci({ v }: SahneProps) {
   const nokta = useMemo(() => { const r = rastgele(17); return Array.from({ length: 20 }, () => [r(), r()]); }, []);
   const bar = 196 - (P / 760) * 150;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Kapalı kapta su, ${T} derece, buhar basıncı ${Math.round(P)} mmHg`}>
-      <text x={20} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">Kapalı kap · {T} °C</text>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Kapalı kapta su, {0} derece, buhar basıncı {1} mmHg", T, Math.round(P))}>
+      <text x={20} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Kapalı kap ·")} {T} °C</text>
       <g>
         <rect x={40} y={sv} width={140} height={196 - sv} fill={SU} />
         <path d="M40 44 L40 196 L180 196 L180 44 Z" fill="none" stroke="var(--ink)" strokeWidth={2.2} strokeLinejoin="round" />
@@ -151,11 +152,11 @@ function BuharBasinci({ v }: SahneProps) {
       <g>
         <rect x={246} y={46} width={26} height={150} rx={6} fill="var(--line)" />
         <rect x={246} y={bar} width={26} height={196 - bar} rx={6} fill="var(--kimya)" />
-        <text x={259} y={216} fontSize={11.5} textAnchor="middle" fill="var(--muted)">buhar basıncı</text>
+        <text x={259} y={216} fontSize={11.5} textAnchor="middle" fill="var(--muted)">{cev("buhar basıncı")}</text>
         <text x={280} y={Math.max(60, bar + 5)} fontSize={14} fontWeight={800} fill="var(--ink)">{Math.round(P)}</text>
-        <text x={280} y={Math.max(60, bar + 5) + 15} fontSize={11} fill="var(--muted)">mmHg</text>
+        <text x={280} y={Math.max(60, bar + 5) + 15} fontSize={11} fill="var(--muted)">{cev("mmHg")}</text>
       </g>
-      <text x={110} y={216} fontSize={11.5} textAnchor="middle" fill="var(--muted)">sıvı: {["az", "orta", "çok"][m - 1]}</text>
+      <text x={110} y={216} fontSize={11.5} textAnchor="middle" fill="var(--muted)">{cev("sıvı:")} {["az", "orta", cev("çok")][m - 1]}</text>
     </svg>
   );
 }
@@ -169,7 +170,7 @@ function kaynama(atm: number) {
   return T1 <= 100 ? T1 : 1810.94 / (8.14019 - mm) - 244.485;
 }
 const yerAdi = (p: number) =>
-  p <= 3 ? "Everest zirvesi" : p <= 5 ? "yüksek dağ (≈ 5500 m)" : p <= 7 ? "dağ (≈ 3000 m)" : p < 10 ? "yayla" : p === 10 ? "deniz seviyesi" : p < 20 ? "kapalı kap" : "düdüklü tencere";
+  p <= 3 ? cev("Everest zirvesi") : p <= 5 ? cev("yüksek dağ (≈ 5500 m)") : p <= 7 ? cev("dağ (≈ 3000 m)") : p < 10 ? "yayla" : p === 10 ? cev("deniz seviyesi") : p < 20 ? cev("kapalı kap") : cev("düdüklü tencere");
 
 function KaynamaNoktasi({ v }: SahneProps) {
   const p = v.p ?? 10;
@@ -177,8 +178,8 @@ function KaynamaNoktasi({ v }: SahneProps) {
   const kab = useMemo(() => { const r = rastgele(5); return Array.from({ length: 9 }, () => [r(), r(), r()]); }, []);
   const th = 196 - ((Tb - 50) / 80) * 140;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Dış basınç ${virgul(p / 10)} atm, su ${Math.round(Tb)} derecede kaynar`}>
-      <text x={20} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">Dış basınç: {virgul(p / 10)} atm</text>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Dış basınç {0} atm, su {1} derecede kaynar", virgul(p / 10), Math.round(Tb))}>
+      <text x={20} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Dış basınç:")} {virgul(p / 10)} {cev("atm")}</text>
       <text x={20} y={42} fontSize={12} fontWeight={600} fill="var(--muted)">{yerAdi(p)}</text>
       <g>
         <rect x={40} y={98} width={140} height={84} fill={SU} />
@@ -199,7 +200,7 @@ function KaynamaNoktasi({ v }: SahneProps) {
           </g>
         ))}
       </g>
-      <text x={110} y={60} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--kimya)">kaynar: {Math.round(Tb)} °C</text>
+      <text x={110} y={60} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--kimya)">{cev("kaynar:")} {Math.round(Tb)} °C</text>
     </svg>
   );
 }
@@ -207,14 +208,14 @@ function KaynamaNoktasi({ v }: SahneProps) {
 /* ---------- hâl değişimleri ve enerji ---------- */
 
 type Degisim = { ad: string; a: 0 | 1 | 2; b: 0 | 1 | 2; alir: boolean; ornek: string };
-const HALLER = ["katı", "sıvı", "gaz"];
+const HALLER = [cev("katı"), cev("sıvı"), "gaz"];
 const DEGISIMLER: Degisim[] = [
-  { ad: "Erime", a: 0, b: 1, alir: true, ornek: "buz eriyor" },
-  { ad: "Donma", a: 1, b: 0, alir: false, ornek: "su donuyor" },
-  { ad: "Buharlaşma", a: 1, b: 2, alir: true, ornek: "ter buharlaşıyor" },
-  { ad: "Yoğuşma", a: 2, b: 1, alir: false, ornek: "aynada buğu" },
-  { ad: "Süblimleşme", a: 0, b: 2, alir: true, ornek: "naftalin, kuru buz" },
-  { ad: "Kırağılaşma", a: 2, b: 0, alir: false, ornek: "camda kırağı" },
+  { ad: cev("Erime"), a: 0, b: 1, alir: true, ornek: cev("buz eriyor") },
+  { ad: cev("Donma"), a: 1, b: 0, alir: false, ornek: cev("su donuyor") },
+  { ad: cev("Buharlaşma"), a: 1, b: 2, alir: true, ornek: cev("ter buharlaşıyor") },
+  { ad: cev("Yoğuşma"), a: 2, b: 1, alir: false, ornek: cev("aynada buğu") },
+  { ad: cev("Süblimleşme"), a: 0, b: 2, alir: true, ornek: cev("naftalin, kuru buz") },
+  { ad: cev("Kırağılaşma"), a: 2, b: 0, alir: false, ornek: cev("camda kırağı") },
 ];
 const HAL_YER: [number, number][] = [[52, 186], [288, 186], [170, 44]];
 
@@ -250,12 +251,12 @@ function HalDegisim({ v }: SahneProps) {
     );
   };
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${d.ad}: ısı ${d.alir ? "alır" : "verir"}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0}: ısı {1}", d.ad, d.alir ? "alır" : "verir")}>
       <g>{DEGISIMLER.map((D) => ok(D, D === d))}</g>
       {HAL_YER.map(([x, y], i) => <HalKutu key={i} x={x} y={y} hal={i} />)}
       <g textAnchor="middle">
         <text x={170} y={132} fontSize={17} fontWeight={800} fill="var(--ink)" fontFamily="var(--f-display)">{d.ad}</text>
-        <text x={170} y={152} fontSize={12.5} fontWeight={700} fill={d.alir ? "var(--c2)" : "var(--c1)"}>{d.alir ? "ısı alır (endotermik)" : "ısı verir (ekzotermik)"}</text>
+        <text x={170} y={152} fontSize={12.5} fontWeight={700} fill={d.alir ? "var(--c2)" : "var(--c1)"}>{d.alir ? cev("ısı alır (endotermik)") : cev("ısı verir (ekzotermik)")}</text>
         <text x={170} y={169} fontSize={12} fill="var(--muted)">{d.ornek}</text>
       </g>
     </svg>
@@ -271,17 +272,17 @@ const fx = (T: number) => 46 + ((T + 100) / 140) * 272;
 const fy = (P: number) => 196 - 166 * Math.sqrt(P / 80);
 const yol = (n: [number, number][]) => n.map(([T, P], i) => `${i ? "L" : "M"}${fx(T).toFixed(1)} ${fy(P).toFixed(1)}`).join(" ");
 function co2Hal(T: number, P: number) {
-  if (T > 31 && P > 72.9) return "süperkritik akışkan";
+  if (T > 31 && P > 72.9) return cev("süperkritik akışkan");
   const sinir = T < -56.6 ? egri(SUB, T) : egri(BUH, T);
   if (P < sinir) return "gaz";
-  return T < egri(ERI.map(([a, b]) => [b, a]) as [number, number][], P) ? "katı" : "sıvı";
+  return T < egri(ERI.map(([a, b]) => [b, a]) as [number, number][], P) ? cev("katı") : cev("sıvı");
 }
 
 function Faz({ s, v }: SahneProps) {
   const T = Number(s.T ?? -20), P = v.P ?? 1;
   const hal = co2Hal(T, P);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`CO₂ faz diyagramı: ${T} derece, ${P} atm, ${hal}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("CO₂ faz diyagramı: {0} derece, {1} atm, {2}", T, P, hal)}>
       <g>
         {[1, 5, 20, 40, 80].map((p) => (
           <g key={p}>
@@ -292,27 +293,27 @@ function Faz({ s, v }: SahneProps) {
         {[-100, -60, -20, 20].map((d) => <text key={d} x={fx(d)} y={212} fontSize={11} textAnchor="middle" fill="var(--muted)">{eksi(d)}</text>)}
         <line x1={46} x2={318} y1={196} y2={196} stroke="var(--ink)" strokeWidth={1.4} />
         <line x1={46} x2={46} y1={22} y2={196} stroke="var(--ink)" strokeWidth={1.4} />
-        <text x={52} y={20} fontSize={11} fontWeight={700} fill="var(--ink)">P (atm)</text>
+        <text x={52} y={20} fontSize={11} fontWeight={700} fill="var(--ink)">{cev("P (atm)")}</text>
         <text x={318} y={228} fontSize={11} fontWeight={700} textAnchor="end" fill="var(--ink)">T (°C)</text>
       </g>
       <path d={yol(SUB)} fill="none" stroke="var(--ink)" strokeWidth={2.2} />
       <path d={yol(BUH)} fill="none" stroke="var(--ink)" strokeWidth={2.2} />
       <path d={yol(ERI)} fill="none" stroke="var(--ink)" strokeWidth={2.2} />
       <g fontSize={13} fontWeight={800} fill="var(--muted)">
-        <text x={84} y={70}>KATI</text>
-        <text x={150} y={56}>SIVI</text>
-        <text x={262} y={164}>GAZ</text>
+        <text x={84} y={70}>{cev("KATI")}</text>
+        <text x={150} y={56}>{cev("SIVI")}</text>
+        <text x={262} y={164}>{cev("GAZ")}</text>
       </g>
       <g fontSize={11} fill="var(--muted)">
         <circle cx={fx(-56.6)} cy={fy(5.11)} r={3.5} fill="var(--ink)" />
-        <text x={fx(-56.6) + 6} y={fy(5.11) + 16}>üçlü nokta</text>
+        <text x={fx(-56.6) + 6} y={fy(5.11) + 16}>{cev("üçlü nokta")}</text>
         <circle cx={fx(31)} cy={fy(72.9)} r={3.5} fill="var(--ink)" />
-        <text x={fx(31) - 8} y={fy(72.9) - 6} textAnchor="end">kritik nokta</text>
+        <text x={fx(31) - 8} y={fy(72.9) - 6} textAnchor="end">{cev("kritik nokta")}</text>
       </g>
       <g>
         <line x1={fx(T)} x2={fx(T)} y1={fy(80)} y2={196} stroke="var(--kimya)" strokeDasharray="3 4" opacity={0.6} />
         <circle cx={fx(T)} cy={fy(P)} r={7} fill="var(--kimya)" stroke="var(--surface)" strokeWidth={2} />
-        <text x={318} y={14} fontSize={12.5} fontWeight={800} textAnchor="end" fill="var(--kimya)">{eksi(T)} °C, {P} atm: {hal}</text>
+        <text x={318} y={14} fontSize={12.5} fontWeight={800} textAnchor="end" fill="var(--kimya)">{eksi(T)} °C, {P} {cev("atm:")} {hal}</text>
       </g>
     </svg>
   );
@@ -328,7 +329,7 @@ function Tyndall({ s, t, oynuyor }: SahneProps) {
   const isikla = (x: number) => Math.max(0, Math.min(W, ucX - x));
   const nokta = useMemo(() => { const r = rastgele(23); return Array.from({ length: 40 }, () => [r(), r()]); }, []);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label="Işık demeti tuzlu sudan ve sütlü sudan geçiyor">
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Işık demeti tuzlu sudan ve sütlü sudan geçiyor")}>
       <g>
         <rect x={4} y={Y - 7} width={30} height={14} rx={4} fill="var(--ink)" />
         <path d={`M34 ${Y - 7} L46 ${Y - 13} L46 ${Y + 13} L34 ${Y + 7} Z`} fill="var(--ink)" />
@@ -348,12 +349,12 @@ function Tyndall({ s, t, oynuyor }: SahneProps) {
         <path d={`M${X2} 52 L${X2} 188 L${X2 + W} 188 L${X2 + W} 52`} fill="none" stroke="var(--ink)" strokeWidth={2.2} />
       </g>
       <g fontSize={12.5} fontWeight={700} textAnchor="middle" fill="var(--ink)">
-        <text x={X1 + W / 2} y={208}>tuzlu su</text>
-        <text x={X2 + W / 2} y={208}>sulandırılmış süt</text>
+        <text x={X1 + W / 2} y={208}>{cev("tuzlu su")}</text>
+        <text x={X2 + W / 2} y={208}>{cev("sulandırılmış süt")}</text>
       </g>
       <g fontSize={11.5} fontWeight={700} textAnchor="middle" opacity={kes((u - 0.75) * 5)}>
-        <text x={X1 + W / 2} y={226} fill="var(--muted)">ışık görünmez</text>
-        <text x={X2 + W / 2} y={226} fill="var(--kimya)">ışık yolu görünür</text>
+        <text x={X1 + W / 2} y={226} fill="var(--muted)">{cev("ışık görünmez")}</text>
+        <text x={X2 + W / 2} y={226} fill="var(--kimya)">{cev("ışık yolu görünür")}</text>
       </g>
     </svg>
   );
@@ -388,10 +389,10 @@ function Tup({ x, cozer, u, ad }: { x: number; cozer: boolean; u: number; ad: st
 function Cozunme({ s, t, oynuyor }: SahneProps) {
   const u = oran(t, oynuyor, Number(s.sure ?? 4));
   return (
-    <svg viewBox="0 0 340 250" role="img" aria-label="Zeytinyağı suya ve benzine ekleniyor">
-      <text x={170} y={24} fontSize={12.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">İki tüpe de biraz zeytinyağı (sarı) eklendi</text>
-      <Tup x={110} cozer={false} u={u} ad="su + yağ" />
-      <Tup x={230} cozer u={u} ad="benzin + yağ" />
+    <svg viewBox="0 0 340 250" role="img" aria-label={cev("Zeytinyağı suya ve benzine ekleniyor")}>
+      <text x={170} y={24} fontSize={12.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">{cev("İki tüpe de biraz zeytinyağı (sarı) eklendi")}</text>
+      <Tup x={110} cozer={false} u={u} ad={cev("su + yağ")} />
+      <Tup x={230} cozer u={u} ad={cev("benzin + yağ")} />
     </svg>
   );
 }
@@ -417,7 +418,7 @@ function Cozunurluk({ s, v }: SahneProps) {
   const nK = Math.ceil(kK / 4), nN = Math.ceil(kN / 4);
   const yol = (n: [number, number][]) => n.map(([a, b], i) => `${i ? "L" : "M"}${cx(a)} ${cy(b).toFixed(1)}`).join(" ");
   return (
-    <svg viewBox="0 0 340 250" role="img" aria-label={`${T} derecede çözünürlük: KNO₃ ${Math.round(sK)} g, NaCl ${Math.round(sN)} g`}>
+    <svg viewBox="0 0 340 250" role="img" aria-label={cev("{0} derecede çözünürlük: KNO₃ {1} g, NaCl {2} g", T, Math.round(sK), Math.round(sN))}>
       <g>
         {[0, 50, 100, 150, 200, 250].map((g) => (
           <g key={g}>
@@ -427,13 +428,13 @@ function Cozunurluk({ s, v }: SahneProps) {
         ))}
         {[0, 20, 40, 60, 80, 100].map((d) => <text key={d} x={cx(d)} y={135} fontSize={11} textAnchor="middle" fill="var(--muted)">{d}</text>)}
         <text x={318} y={150} fontSize={11} fontWeight={700} textAnchor="end" fill="var(--ink)">T (°C)</text>
-        <text x={52} y={18} fontSize={11} fontWeight={700} fill="var(--ink)">g / 100 g su</text>
+        <text x={52} y={18} fontSize={11} fontWeight={700} fill="var(--ink)">{cev("g / 100 g su")}</text>
       </g>
       <path d={yol(KNO3)} fill="none" stroke="var(--c5)" strokeWidth={2.6} />
       <path d={yol(NACL)} fill="none" stroke="var(--c4)" strokeWidth={2.6} />
       <g fontSize={11.5} fontWeight={800}>
-        <text x={cx(66)} y={cy(150)} textAnchor="end" fill="var(--c5)">KNO₃</text>
-        <text x={cx(70)} y={cy(38) - 6} fill="#b7800d">NaCl</text>
+        <text x={cx(66)} y={cy(150)} textAnchor="end" fill="var(--c5)">{cev("KNO₃")}</text>
+        <text x={cx(70)} y={cy(38) - 6} fill="#b7800d">{cev("NaCl")}</text>
       </g>
       <g>
         <line x1={cx(T)} x2={cx(T)} y1={cy(250)} y2={120} stroke="var(--kimya)" strokeWidth={1.5} />
@@ -448,9 +449,9 @@ function Cozunurluk({ s, v }: SahneProps) {
         <Kristal x={25} y={212 - Math.ceil(nK / 10) * 8} n={nN} renk="#b7800d" />
       </g>
       <g fontSize={12} fill="var(--ink)">
-        <text x={136} y={178} fontWeight={800}>{T} °C, 100 g su</text>
-        <text x={136} y={198} fill="var(--c5)" fontWeight={700}>{mK} g KNO₃: {kK > 0 ? `${Math.round(kK)} g dipte` : "hepsi çözeltide"}</text>
-        {ikili && <text x={136} y={216} fill="#b7800d" fontWeight={700}>{mN} g NaCl: {kN > 0 ? `${Math.round(kN)} g dipte` : "hepsi çözeltide"}</text>}
+        <text x={136} y={178} fontWeight={800}>{T} {cev("°C, 100 g su")}</text>
+        <text x={136} y={198} fill="var(--c5)" fontWeight={700}>{mK} {cev("g KNO₃:")} {kK > 0 ? cev("{0} g dipte", Math.round(kK)) : cev("hepsi çözeltide")}</text>
+        {ikili && <text x={136} y={216} fill="#b7800d" fontWeight={700}>{mN} {cev("g NaCl:")} {kN > 0 ? cev("{0} g dipte", Math.round(kN)) : cev("hepsi çözeltide")}</text>}
       </g>
     </svg>
   );
@@ -458,22 +459,22 @@ function Cozunurluk({ s, v }: SahneProps) {
 
 /* ---------- uygun ayırma yöntemi ---------- */
 
-const YONTEM = ["Mıknatıs", "Süzme", "Ayırma hunisi", "Damıtma"];
+const YONTEM = [cev("Mıknatıs"), cev("Süzme"), cev("Ayırma hunisi"), cev("Damıtma")];
 const CIP_W = [74, 62, 106, 72];
 const CIP_X = CIP_W.map((_, i) => 6 + CIP_W.slice(0, i).reduce((a, b) => a + b + 6, 0));
 type Karisim = { ad: string; dogru: number; ciktilar: [string, string]; neden: string[] };
 const KARISIM: Record<string, Karisim> = {
   "demir-kukurt": {
-    ad: "demir tozu + kükürt tozu", dogru: 1, ciktilar: ["demir tozu", "kükürt"],
-    neden: ["", "", "İki bileşen de katı toz. İkisi de süzgeç kâğıdında kalır.", "Ayırma hunisi birbirinde çözünmeyen sıvılar içindir. Burada sıvı yok.", "Damıtma sıvıları kaynama noktası farkıyla ayırır. Burada sıvı yok."],
+    ad: cev("demir tozu + kükürt tozu"), dogru: 1, ciktilar: [cev("demir tozu"), cev("kükürt")],
+    neden: ["", "", cev("İki bileşen de katı toz. İkisi de süzgeç kâğıdında kalır."), cev("Ayırma hunisi birbirinde çözünmeyen sıvılar içindir. Burada sıvı yok."), cev("Damıtma sıvıları kaynama noktası farkıyla ayırır. Burada sıvı yok.")],
   },
   "yag-su": {
-    ad: "zeytinyağı + su", dogru: 3, ciktilar: ["su", "zeytinyağı"],
-    neden: ["", "Mıknatıs yalnızca demir, nikel ve kobaltı çeker. Bu karışımda yok.", "İki sıvı da süzgeç kâğıdından geçer.", "", "Isıtmaya gerek yok: bu iki sıvı zaten iki katmana ayrılıyor. Katmanları ayıran daha basit yöntemi bul."],
+    ad: cev("zeytinyağı + su"), dogru: 3, ciktilar: ["su", cev("zeytinyağı")],
+    neden: ["", cev("Mıknatıs yalnızca demir, nikel ve kobaltı çeker. Bu karışımda yok."), cev("İki sıvı da süzgeç kâğıdından geçer."), "", cev("Isıtmaya gerek yok: bu iki sıvı zaten iki katmana ayrılıyor. Katmanları ayıran daha basit yöntemi bul.")],
   },
   "tuzlu-su": {
-    ad: "tuzlu su", dogru: 4, ciktilar: ["saf su", "tuz"],
-    neden: ["", "Mıknatıs yalnızca demir, nikel ve kobaltı çeker. Bu karışımda yok.", "Çözünmüş tuz suyla birlikte süzgeç kâğıdından geçer.", "Tuzlu su tek fazlı bir çözeltidir. Katmanlara ayrılmaz.", ""],
+    ad: cev("tuzlu su"), dogru: 4, ciktilar: [cev("saf su"), "tuz"],
+    neden: ["", cev("Mıknatıs yalnızca demir, nikel ve kobaltı çeker. Bu karışımda yok."), cev("Çözünmüş tuz suyla birlikte süzgeç kâğıdından geçer."), cev("Tuzlu su tek fazlı bir çözeltidir. Katmanlara ayrılmaz."), ""],
   },
 };
 
@@ -517,7 +518,7 @@ function Ayirma({ s, v, t, oynuyor }: SahneProps) {
   const tasi = basari ? yumusak(kes((u - 0.2) / 0.7)) : 0;
   const titre = !basari && oynuyor ? Math.sin(t * 40) * 3 : 0;
   return (
-    <svg viewBox="0 0 340 250" role="img" aria-label={`${K.ad}, yöntem: ${YONTEM[y - 1]}`}>
+    <svg viewBox="0 0 340 250" role="img" aria-label={cev("{0}, yöntem: {1}", K.ad, YONTEM[y - 1])}>
       <g>
         {YONTEM.map((ad, i) => {
           const x = CIP_X[i], w = CIP_W[i], sec = i + 1 === y;
@@ -551,7 +552,7 @@ function Ayirma({ s, v, t, oynuyor }: SahneProps) {
           })}
         </g>
       )}
-      {!basari && u >= 1 && <text x={240} y={196} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--kimya)">Ayrılmadı</text>}
+      {!basari && u >= 1 && <text x={240} y={196} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--kimya)">{cev("Ayrılmadı")}</text>}
     </svg>
   );
 }
@@ -560,7 +561,7 @@ export const KIMYA4: Record<string, SahneKaydi> = {
   "kim4-erime": { C: Erime },
   "kim4-bal": {
     C: Bal,
-    geri: (v) => ({ baslik: "Bardak dolmadı", metin: `${v.T} °C'de bal hâlâ ağır akıyor. Isıtınca tanecikler arası çekimi daha kolay yener; sıcaklığı artırıp yeniden dene.` }),
+    geri: (v) => ({ baslik: cev("Bardak dolmadı"), metin: cev("{0} °C'de bal hâlâ ağır akıyor. Isıtınca tanecikler arası çekimi daha kolay yener; sıcaklığı artırıp yeniden dene.", v.T) }),
   },
   "kim4-buhar": { C: BuharBasinci },
   "kim4-kaynama": { C: KaynamaNoktasi },
@@ -574,7 +575,7 @@ export const KIMYA4: Record<string, SahneKaydi> = {
     geri: (v, s) => {
       const K = KARISIM[String(s.karisim ?? "tuzlu-su")];
       const y = v.y ?? 1;
-      return { baslik: `${YONTEM[y - 1]} uygun değil`, metin: K.neden[y] || "Başka bir yöntem dene." };
+      return { baslik: cev("{0} uygun değil", YONTEM[y - 1]), metin: K.neden[y] || cev("Başka bir yöntem dene.") };
     },
   },
 };

@@ -48,7 +48,8 @@ function akis(ders, id, t) {
 }
 
 server.listen(0, async () => {
-  const base = `http://localhost:${server.address().port}`;
+  // DIL=en: İngilizce kopyanın (out/en/) ekranları alınır.
+  const base = `http://localhost:${server.address().port}` + (process.env.DIL === 'en' ? '/en' : '');
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
   p.setDefaultTimeout(8000);
@@ -95,12 +96,12 @@ server.listen(0, async () => {
     for (let tur = 0; tur < 150; tur++) {
       if (await devam.isEnabled()) return true;
       if (await oynuyor()) { await ileri(400); continue; }
-      const sen = d.getByRole('button', { name: 'Şimdi sen dene' });
+      const sen = d.getByRole('button', { name: /^(Şimdi sen dene|Now you try)$/ });
       if (await sen.count()) {
         if (await sen.isEnabled()) { await sen.click(); await ileri(500); } else await ileri(400);
         continue;
       }
-      const cozum = d.locator('.ad-cozum', { hasText: 'Çözümü göster' });
+      const cozum = d.locator('.ad-cozum', { hasText: /Çözümü göster|Show solution/ });
       if (await gorunur(cozum)) { await cozum.first().click().catch(() => {}); await ileri(1500); continue; }
       if (await gorunur(opt)) { await opt.first().click().catch(() => {}); await ileri(800); continue; }
       if (await gorunur(oynat)) {
@@ -118,8 +119,8 @@ server.listen(0, async () => {
     if (await iki.count()) { await iki.first().click(); return; }
     const anahtar = d.locator('.ad-anahtar:not([disabled])');
     if (await anahtar.count()) { await anahtar.nth(tur % (await anahtar.count())).click(); return; }
-    const artir = d.locator('.ad-sayac button[aria-label$="artır"]:not([disabled])');
-    const azalt = d.locator('.ad-sayac button[aria-label$="azalt"]:not([disabled])');
+    const artir = d.locator('.ad-sayac button[aria-label$="artır"]:not([disabled]), .ad-sayac button[aria-label^="increase"]:not([disabled])');
+    const azalt = d.locator('.ad-sayac button[aria-label$="azalt"]:not([disabled]), .ad-sayac button[aria-label^="decrease"]:not([disabled])');
     if (await artir.count()) { await artir.first().click(); return; }
     if (await azalt.count()) { await azalt.first().click(); return; }
     const surgu = d.locator('.ad-surgu input:not([disabled])');
@@ -138,7 +139,7 @@ server.listen(0, async () => {
     else if (tur === 'ayir') for (let k = 0; k < q.ogeler.length; k++) { await p.locator('[data-grup]').nth(k % q.gruplar.length).click(); await ileri(120); }
     else if (tur === 'sahne') await kontrolDegistir(p.locator('main'), 0);
     else while (await p.locator('[data-cip]').count()) { await p.locator('[data-cip]').first().click(); await ileri(120); }
-    await p.getByRole('button', { name: 'Kontrol et' }).click(); await ileri(400);
+    await p.getByRole('button', { name: /^(Kontrol et|Check)$/ }).click(); await ileri(400);
   }
 
   for (const ders of Object.keys(dersler)) {
@@ -169,7 +170,7 @@ server.listen(0, async () => {
         if (await devam.isEnabled()) {
           await devam.click(); await ileri(600);
           // Aşama sonu ekranı: görüntüsünü al, sonraki aşamaya (ya da teste) geç.
-          if (await p.getByRole('heading', { name: /aşama bitti$/ }).count()) { await cek(`${ad}-ara`); const sonra = p.getByRole('button', { name: 'Şimdi değil' }); if (await sonra.count()) { await sonra.click(); await ileri(400); } await devam.click(); await ileri(600); }
+          if (await p.getByRole('heading', { name: /aşama bitti$|^Stage \d+ complete$/ }).count()) { await cek(`${ad}-ara`); const sonra = p.getByRole('button', { name: /^(Şimdi değil|Not now)$/ }); if (await sonra.count()) { await sonra.click(); await ileri(400); } await devam.click(); await ileri(600); }
         }
       }
       // Konu sonu testi: her soruyu cevapla (çoğu zaman yanlış; amaç geri bildirim ekranlarını görmek).

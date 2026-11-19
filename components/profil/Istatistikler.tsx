@@ -1,4 +1,5 @@
 "use client";
+import { cev } from "@/lib/dil";
 import { DERSLER, DERS_IDS, type DersId, type Entry } from "@/lib/dersler";
 import { seri, type Gun } from "@/lib/puan";
 import { gun, useSaved } from "@/lib/store";
@@ -26,16 +27,16 @@ export default function Istatistikler({ all }: { all: Record<DersId, Entry[]> })
 
   if (yeni)
     return (
-      <Kabuk title="İstatistikler" sag={<UstEylem href="/lig/" label="Haftalık lig" icon={<Icon.kupa />} />}>
-        <Bos>İlk konunu bitirdiğinde puanın, serin ve doğru oranın burada görünür.</Bos>
+      <Kabuk title={cev("İstatistikler")} sag={<UstEylem href="/lig/" label={cev("Haftalık lig")} icon={<Icon.kupa />} />}>
+        <Bos>{cev("İlk konunu bitirdiğinde puanın, serin ve doğru oranın burada görünür.")}</Bos>
       </Kabuk>
     );
   return (
-    <Kabuk title="İstatistikler" sag={<UstEylem href="/lig/" label="Haftalık lig" icon={<Icon.kupa />} />}>
+    <Kabuk title={cev("İstatistikler")} sag={<UstEylem href="/lig/" label={cev("Haftalık lig")} icon={<Icon.kupa />} />}>
       <Card className="grid grid-cols-3 gap-0 py-0 [&>div]:border-border [&>div:nth-child(-n+3)]:border-b [&>div:not(:nth-child(3n+1))]:border-l">
         {([
-          [puan.toplam ?? 0, "puan"], [`${seri(puan)} gün`, "seri"], [`${puan.enUzun ?? 0} gün`, "en uzun seri"],
-          [done.length, "konu bitti"], [total ? `%${Math.round((100 * right) / total)}` : "–", "doğru cevap"], [saved.length, "kaydedilen konu"],
+          [puan.toplam ?? 0, "puan"], [cev("{0} gün", seri(puan)), "seri"], [cev("{0} gün", puan.enUzun ?? 0), cev("en uzun seri")],
+          [done.length, cev("konu bitti")], [total ? `%${Math.round((100 * right) / total)}` : "–", cev("doğru cevap")], [saved.length, cev("kaydedilen konu")],
         ] as const).map(([b, l]) => (
           <div key={l} className="px-2 py-3.5 text-center">
             <b className="block font-display text-2xl leading-tight font-extrabold">{b}</b>
@@ -44,17 +45,17 @@ export default function Istatistikler({ all }: { all: Record<DersId, Entry[]> })
         ))}
       </Card>
       <HaftalikPuan gunler={puan.gunler ?? {}} />
-      <Bolum title="Derslere göre doğru oranı">
+      <Bolum title={cev("Derslere göre doğru oranı")}>
         <Card className="grid gap-3.5 px-4 py-3.5">
           {dersOran.map(({ d, n, toplam, oran }) => (
             <div key={d} className="grid gap-1.5" data-ders={d}>
               <div className="flex justify-between text-[15px] font-semibold">
                 {DERSLER[d].ad}
                 <span className="text-[13px] font-medium text-muted-foreground">
-                  {oran === null ? `Henüz test yok · ${toplam} konu` : `%${oran} doğru · ${n} / ${toplam} konu`}
+                  {oran === null ? cev("Henüz test yok · {0} konu", toplam) : cev("%{0} doğru · {1} / {2} konu", oran, n, toplam)}
                 </span>
               </div>
-              <Progress value={oran ?? 0} label={oran === null ? `${DERSLER[d].ad}: henüz test yok` : `${DERSLER[d].ad}: yüzde ${oran} doğru`} />
+              <Progress value={oran ?? 0} label={oran === null ? cev("{0}: henüz test yok", DERSLER[d].ad) : cev("{0}: yüzde {1} doğru", DERSLER[d].ad, oran)} />
             </div>
           ))}
         </Card>
@@ -63,7 +64,7 @@ export default function Istatistikler({ all }: { all: Record<DersId, Entry[]> })
   );
 }
 
-const GUN_ADI = ["Pz", "Pt", "Sa", "Ça", "Pe", "Cu", "Ct"];
+const GUN_ADI = [cev("Pz"), cev("Pt"), cev("Sa"), cev("Ça"), cev("Pe"), cev("Cu"), cev("Ct")];
 
 /** Son 7 günün puanı: tek seri sütun grafik; bugünün sütunu koyu, değeri üstünde yazar. */
 function HaftalikPuan({ gunler }: { gunler: Record<string, Gun> }) {
@@ -73,9 +74,9 @@ function HaftalikPuan({ gunler }: { gunler: Record<string, Gun> }) {
   });
   const max = Math.max(20, ...g.map((x) => x.p)), toplam = g.reduce((n, x) => n + x.p, 0);
   return (
-    <Bolum title="Son 7 gün" more={<span className="text-sm font-bold tabular-nums text-muted-foreground">{toplam} puan</span>}>
+    <Bolum title={cev("Son 7 gün")} more={<span className="text-sm font-bold tabular-nums text-muted-foreground">{toplam} {cev("puan")}</span>}>
       <Card className="px-4 pt-4 pb-3">
-        <ol className="flex h-36 items-end gap-2" aria-label="Son 7 günün puanı">
+        <ol className="flex h-36 items-end gap-2" aria-label={cev("Son 7 günün puanı")}>
           {g.map((x) => (
             <li key={x.t} className="group relative grid h-full flex-1 grid-rows-[1fr_auto] justify-items-center gap-1.5" title={`${x.ad}: ${x.p} puan`}>
               <span className="flex w-full flex-col items-center justify-end">

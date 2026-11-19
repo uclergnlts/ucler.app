@@ -2,12 +2,13 @@
 // Fizik sahneleri (kütle çekimi; elektrostatik): iki cisim arasındaki çekim, düşen elma ve Dünya, yükseklikle azalan g,
 // Kepler'in eşit alanları, Newton'un dağdaki topu (yörünge ve kurtulma), halatı kesilen asansör; sürtünmeyle, dokunmayla
 // ve etkiyle elektriklenme, elektroskop, Coulomb kuvveti, iki yükün alan çizgileri.
+import { cev, SAYI_YEREL } from "@/lib/dil";
 import { useMemo } from "react";
 import type { SahneKaydi, SahneProps } from "./ortak";
 
 /** Türkçe sayı: ondalık virgül, eksi işareti. */
 const say = (x: number, d = 1) =>
-  x.toLocaleString("tr-TR", { maximumFractionDigits: d, useGrouping: false }).replace("-", "−");
+  x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: d, useGrouping: false }).replace("-", "−");
 const sinir = (x: number, a: number, b: number) => Math.max(a, Math.min(b, x));
 /** Oynatma ilerlemesi 0..1 (hiç oynatılmadıysa 0). */
 const ilerleme = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 0 ? sinir(t / sure, 0, 1) : 0);
@@ -36,7 +37,7 @@ function Cekim({ v }: SahneProps) {
   const rB = 14 * Math.cbrt(k), ok = sinir(F * 46, 8, 92);
   const tam = Math.abs(F - 1) < 1e-9;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`B'nin kütlesi ${k}m, uzaklık ${n}r: çekim kuvveti ${say(F, 2)} F₀`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("B'nin kütlesi {0}m, uzaklık {1}r: çekim kuvveti {2} F₀", k, n, say(F, 2))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">F = G·m₁·m₂ / r² ∝ {k} / {n}²</text>
       <text x={14} y={42} fontSize={13} fontWeight={800} fill={tam ? "var(--good)" : "var(--c2)"}>F = {say(F, 2)} F₀</text>
       <line x1={AX} x2={BX} y1={Y} y2={Y} stroke="var(--line-2)" strokeWidth={1.5} strokeDasharray="4 5" />
@@ -54,7 +55,7 @@ function Cekim({ v }: SahneProps) {
         <line x1={BX} x2={BX} y1={Y + 57} y2={Y + 67} stroke="var(--muted)" strokeWidth={1.2} />
         <text x={(AX + BX) / 2} y={Y + 80}>{n === 1 ? "r" : `${n} r`}</text>
       </g>
-      <text x={170} y={226} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">oklar: iki cisme etki eden eşit ve zıt kuvvetler</text>
+      <text x={170} y={226} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("oklar: iki cisme etki eden eşit ve zıt kuvvetler")}</text>
     </svg>
   );
 }
@@ -64,7 +65,7 @@ function Elma({ t, oynuyor, s, secim }: SahneProps) {
   const sure = Number(s.sure ?? 3), u = ilerleme(t, oynuyor, sure), dus = u * u;
   const y0 = 70, y1 = 178, y = y0 + (y1 - y0) * dus, acik = secim !== null && u >= 1;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label="Düşen elma ve Dünya birbirini eşit büyüklükte kuvvetle çeker">
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Düşen elma ve Dünya birbirini eşit büyüklükte kuvvetle çeker")}>
       <path d="M0 196 Q170 176 340 196 L340 236 L0 236 Z" fill="var(--c3)" opacity={0.25} />
       <path d="M0 196 Q170 176 340 196" fill="none" stroke="var(--c3)" strokeWidth={2} />
       <g>
@@ -77,11 +78,11 @@ function Elma({ t, oynuyor, s, secim }: SahneProps) {
       <text x={194} y={y + 2} fontSize={12} fontWeight={800} fill="var(--c2)">1 N</text>
       {u > 0 && <Ok x1={140} y1={214} x2={140} y2={188} renk="var(--c1)" kalin={2.5} />}
       {u > 0 && <text x={132} y={212} fontSize={12} fontWeight={800} fill="var(--c1)" textAnchor="end">1 N</text>}
-      <text x={326} y={226} fontSize={11.5} fontWeight={800} fill="var(--c3)" textAnchor="end">Dünya</text>
+      <text x={326} y={226} fontSize={11.5} fontWeight={800} fill="var(--c3)" textAnchor="end">{cev("Dünya")}</text>
       <g fontSize={12.5} fontWeight={800}>
-        <text x={326} y={22} fill="var(--c2)" textAnchor="end">elma: 0,1 kg</text>
+        <text x={326} y={22} fill="var(--c2)" textAnchor="end">{cev("elma: 0,1 kg")}</text>
         {acik && <text x={326} y={42} fill="var(--c2)" textAnchor="end">a = 1 / 0,1 ≈ 10 m/s²</text>}
-        {acik && <text x={326} y={62} fill="var(--c1)" textAnchor="end">Dünya: a = 1 / 6·10²⁴ ≈ 0</text>}
+        {acik && <text x={326} y={62} fill="var(--c1)" textAnchor="end">{cev("Dünya: a = 1 / 6·10²⁴ ≈ 0")}</text>}
       </g>
     </svg>
   );
@@ -92,12 +93,12 @@ function Yukseklik({ v }: SahneProps) {
   const h = sinir(v.h ?? 0, 0, 3), n = 1 + h, g = 9.8 / (n * n), G = 80 * g;
   const CX = 50, CY = 136, R = 38, ax = CX + n * R;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Merkezden ${n}R uzakta g = ${say(g, 2)} m/s², 80 kg'lık astronotun ağırlığı ${say(G)} N`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Merkezden {0}R uzakta g = {1} m/s², 80 kg'lık astronotun ağırlığı {2} N", n, say(g, 2), say(G))}>
       {[2, 3, 4].map((k) => (
         <path key={k} d={`M${CX} ${CY - k * R} A${k * R} ${k * R} 0 0 1 ${CX + k * R} ${CY}`} fill="none" stroke="var(--line)" strokeWidth={1.2} strokeDasharray="3 5" />
       ))}
       <circle cx={CX} cy={CY} r={R} fill="var(--c1)" opacity={0.85} />
-      <text x={CX} y={CY + 20} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">Dünya</text>
+      <text x={CX} y={CY + 20} fontSize={11} fontWeight={800} fill="#fff" textAnchor="middle">{cev("Dünya")}</text>
       <line x1={CX} y1={CY} x2={ax} y2={CY} stroke="var(--muted)" strokeWidth={1.2} strokeDasharray="4 4" />
       <g>
         <circle cx={ax} cy={CY - 22} r={7} fill="var(--c4)" />
@@ -107,8 +108,8 @@ function Yukseklik({ v }: SahneProps) {
       <text x={ax} y={CY + 22} fontSize={12} fontWeight={800} fill="var(--muted)" textAnchor="middle">r = {n === 1 ? "R" : `${n}R`}</text>
       <g fontSize={13} fontWeight={800}>
         <text x={326} y={22} fill="var(--ink)" textAnchor="end">g = 9,8 / {n}² = {say(g, 2)} m/s²</text>
-        <text x={326} y={42} fill="var(--c2)" textAnchor="end">ağırlık = 80 · g = {say(G)} N</text>
-        <text x={326} y={226} fill="var(--muted)" textAnchor="end">kütle: 80 kg (değişmez)</text>
+        <text x={326} y={42} fill="var(--c2)" textAnchor="end">{cev("ağırlık = 80 · g =")} {say(G)} N</text>
+        <text x={326} y={226} fill="var(--muted)" textAnchor="end">{cev("kütle: 80 kg (değişmez)")}</text>
       </g>
     </svg>
   );
@@ -130,20 +131,20 @@ function Kepler({ t, oynuyor, s, secim }: SahneProps) {
   const acik = secim !== null && u >= 1;
   const yakin = Math.hypot(p.x - GX, p.y - KCY) < KA * 0.8;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label="Elips yörüngede gezegen; eşit sürelerde eşit alanlar taranır">
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Elips yörüngede gezegen; eşit sürelerde eşit alanlar taranır")}>
       <ellipse cx={KCX} cy={KCY} rx={KA} ry={KB} fill="none" stroke="var(--line-2)" strokeWidth={2} />
       {u > 1 / 12 && <path d={dilim(-Math.PI / 12)} fill="var(--c4)" opacity={0.35} />}
       {u > 7 / 12 && <path d={dilim(Math.PI - Math.PI / 12)} fill="var(--c4)" opacity={0.35} />}
       <circle cx={GX} cy={KCY} r={11} fill="var(--c4)" />
       <circle cx={p.x} cy={p.y} r={7} fill="var(--c1)" />
       <g fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">
-        <text x={GX} y={KCY + 26}>Güneş</text>
-        <text x={KCX - KA - 4} y={KCY - 14} textAnchor="start">günberi</text>
-        <text x={KCX + KA} y={KCY - 14} textAnchor="end">günöte</text>
+        <text x={GX} y={KCY + 26}>{cev("Güneş")}</text>
+        <text x={KCX - KA - 4} y={KCY - 14} textAnchor="start">{cev("günberi")}</text>
+        <text x={KCX + KA} y={KCY - 14} textAnchor="end">{cev("günöte")}</text>
       </g>
       <g fontSize={12.5} fontWeight={800}>
-        <text x={14} y={22} fill="var(--ink)">{u > 0 && u < 1 ? (yakin ? "Güneş'e yakın: hızlı" : "Güneş'ten uzak: yavaş") : "Elips yörünge"}</text>
-        {acik && <text x={170} y={226} fill="var(--c4)" textAnchor="middle">iki dilim aynı sürede tarandı: alanları eşit</text>}
+        <text x={14} y={22} fill="var(--ink)">{u > 0 && u < 1 ? (yakin ? cev("Güneş'e yakın: hızlı") : cev("Güneş'ten uzak: yavaş")) : cev("Elips yörünge")}</text>
+        {acik && <text x={170} y={226} fill="var(--c4)" textAnchor="middle">{cev("iki dilim aynı sürede tarandı: alanları eşit")}</text>}
       </g>
     </svg>
   );
@@ -174,7 +175,7 @@ function yolHesapla(v: number): Yol {
   }
   return { pts, sonuc: v * v / 2 - GM >= 0 ? "kurtuldu" : "uzak" };
 }
-const SONUC = { carpti: "Yere düştü", yorunge: "Yörüngede: hep düşüyor ama Dünya'yı ıskalıyor", kurtuldu: "Dünya'nın çekiminden kurtuldu", uzak: "Çok uzaklaştı ama geri dönecek" };
+const SONUC = { carpti: cev("Yere düştü"), yorunge: cev("Yörüngede: hep düşüyor ama Dünya'yı ıskalıyor"), kurtuldu: cev("Dünya'nın çekiminden kurtuldu"), uzak: cev("Çok uzaklaştı ama geri dönecek") };
 function Newton({ v, t, oynuyor, s }: SahneProps) {
   const sure = Number(s.sure ?? 5), u = ilerleme(t, oynuyor, sure), hiz = sinir(v.v ?? 50, 20, 130) / 10;
   const yol = useMemo(() => yolHesapla(hiz), [hiz]);
@@ -184,14 +185,14 @@ function Newton({ v, t, oynuyor, s }: SahneProps) {
   const d = goster.map((q, i) => `${i ? "L" : "M"}${(CX + q.x * PX).toFixed(1)} ${(CY - q.y * PX).toFixed(1)}`).join(" ");
   const son = goster[goster.length - 1] ?? { x: 0, y: 1 };
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Top ${say(hiz)} km/s hızla atılıyor${u >= 1 ? `: ${SONUC[yol.sonuc]}` : ""}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Top {0} km/s hızla atılıyor{1}", say(hiz), u >= 1 ? `: ${SONUC[yol.sonuc]}` : "")}>
       <circle cx={CX} cy={CY} r={RD * PX} fill="var(--c1)" opacity={0.85} />
       <path d={`M${CX - 6} ${CY - RD * PX + 1} L${CX} ${CY - PX} L${CX + 6} ${CY - RD * PX + 1} Z`} fill="#a0784f" />
       {n > 0 && <path d={d} fill="none" stroke="var(--c2)" strokeWidth={2} strokeDasharray="4 4" />}
       <circle cx={CX + son.x * PX} cy={CY - son.y * PX} r={4.5} fill="var(--c2)" />
       <g fontSize={12.5} fontWeight={800}>
-        <text x={14} y={22} fill="var(--ink)">atış hızı: {say(hiz)} km/s</text>
-        <text x={326} y={22} fill="var(--muted)" textAnchor="end">yörünge 7,9 · kurtulma 11,2</text>
+        <text x={14} y={22} fill="var(--ink)">{cev("atış hızı:")} {say(hiz)} {cev("km/s")}</text>
+        <text x={326} y={22} fill="var(--muted)" textAnchor="end">{cev("yörünge 7,9 · kurtulma 11,2")}</text>
         {u >= 1 && <text x={170} y={226} fill={yol.sonuc === "carpti" ? "var(--c2)" : "var(--good)"} textAnchor="middle">{SONUC[yol.sonuc]}</text>}
       </g>
     </svg>
@@ -203,7 +204,7 @@ function Asansor({ v, t, oynuyor, s }: SahneProps) {
   const sure = Number(s.sure ?? 3), u = ilerleme(t, oynuyor, sure), kes = v.kes === 1;
   const dus = kes ? u * u * 118 : 0, Y = 30 + dus, tarti = kes && u > 0 ? 0 : 588;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Asansördeki tartı ${tarti} N gösteriyor${kes && u > 0 ? ": asansör serbest düşüyor" : ""}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Asansördeki tartı {0} N gösteriyor{1}", tarti, kes && u > 0 ? ": asansör serbest düşüyor" : "")}>
       <line x1={120} x2={120} y1={0} y2={236} stroke="var(--line-2)" strokeWidth={2} />
       <line x1={220} x2={220} y1={0} y2={236} stroke="var(--line-2)" strokeWidth={2} />
       {!kes || u === 0 ? (
@@ -219,9 +220,9 @@ function Asansor({ v, t, oynuyor, s }: SahneProps) {
       </g>
       {kes && u > 0 && <Ok x1={238} y1={Y + 24} x2={238} y2={Y + 64} renk="var(--c2)" kalin={2.5} />}
       <g fontSize={12.5} fontWeight={800}>
-        <text x={14} y={22} fill="var(--ink)">kişi: 60 kg</text>
-        <text x={14} y={42} fill={tarti ? "var(--c5)" : "var(--c2)"}>tartı: {tarti} N</text>
-        {kes && u > 0 && <text x={14} y={62} fill="var(--c2)">serbest düşüş: a = g</text>}
+        <text x={14} y={22} fill="var(--ink)">{cev("kişi: 60 kg")}</text>
+        <text x={14} y={42} fill={tarti ? "var(--c5)" : "var(--c2)"}>{cev("tartı:")} {tarti} N</text>
+        {kes && u > 0 && <text x={14} y={62} fill="var(--c2)">{cev("serbest düşüş: a = g")}</text>}
       </g>
     </svg>
   );
@@ -246,7 +247,7 @@ function Surtunme({ t, oynuyor, s }: SahneProps) {
   const camE = 5 - gecen, ipekE = 5 + gecen;
   const RY = 86, IY = 150;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Cam ${gecen ? "2 elektron verdi, (+) yüklü" : "nötr"}; ipek ${gecen ? "2 elektron aldı, (−) yüklü" : "nötr"}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Cam {0}; ipek {1}", gecen ? "2 elektron verdi, (+) yüklü" : "nötr", gecen ? "2 elektron aldı, (−) yüklü" : "nötr")}>
       <rect x={40} y={RY - 12} width={260} height={24} rx={12} fill="var(--fizik-soft)" stroke="var(--c1)" strokeWidth={1.5} />
       {Array.from({ length: 5 }, (_, i) => <Yuk key={`cp${i}`} x={70 + i * 50} y={RY} art />)}
       {Array.from({ length: camE }, (_, i) => <Yuk key={`ce${i}`} x={88 + i * 50} y={RY} art={false} />)}
@@ -257,9 +258,9 @@ function Surtunme({ t, oynuyor, s }: SahneProps) {
       </g>
       {u > 0.4 && u < 0.7 && [0, 1].map((i) => <Ok key={i} x1={238 + i * 50} y1={RY + 10} x2={230 + i * 30} y2={IY - 20} renk="var(--c1)" kalin={2} />)}
       <g fontSize={12.5} fontWeight={800}>
-        <text x={14} y={56} fill="var(--c1)">cam çubuk: {gecen ? "+2 (2 elektron verdi)" : "nötr"}</text>
-        <text x={14} y={204} fill="var(--c5)">ipek: {gecen ? "−2 (2 elektron aldı)" : "nötr"}</text>
-        <text x={14} y={22} fill="var(--ink)">toplam yük: 0 {gecen ? "(korundu)" : ""}</text>
+        <text x={14} y={56} fill="var(--c1)">{cev("cam çubuk:")} {gecen ? cev("+2 (2 elektron verdi)") : cev("nötr")}</text>
+        <text x={14} y={204} fill="var(--c5)">{cev("ipek:")} {gecen ? cev("−2 (2 elektron aldı)") : cev("nötr")}</text>
+        <text x={14} y={22} fill="var(--ink)">{cev("toplam yük: 0")} {gecen ? "(korundu)" : ""}</text>
       </g>
     </svg>
   );
@@ -286,7 +287,7 @@ function Dokunma({ v, t, oynuyor, s }: SahneProps) {
         <text x={AX} y={Y + rA + 20}>r</text>
         <text x={BX} y={Y + rB + 20}>{k === 1 ? "r" : `${k}r`}</text>
       </g>
-      <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)">toplam: 12 μC · q<tspan fontSize={9} dy={3}>A</tspan><tspan dy={-3}> / q</tspan><tspan fontSize={9} dy={3}>B</tspan><tspan dy={-3}> = r</tspan><tspan fontSize={9} dy={3}>A</tspan><tspan dy={-3}> / r</tspan><tspan fontSize={9} dy={3}>B</tspan></text>
+      <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)">{cev("toplam: 12 μC · q")}<tspan fontSize={9} dy={3}>A</tspan><tspan dy={-3}> / q</tspan><tspan fontSize={9} dy={3}>B</tspan><tspan dy={-3}> = r</tspan><tspan fontSize={9} dy={3}>A</tspan><tspan dy={-3}> / r</tspan><tspan fontSize={9} dy={3}>B</tspan></text>
     </svg>
   );
 }
@@ -315,7 +316,7 @@ function Etki({ t, oynuyor, s, secim }: SahneProps) {
   });
   const son = toprak && u >= 1 && secim !== null;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={toprak ? (u >= 1 ? "Küre (+) yüklü kaldı" : "Topraklama ile elektriklenme") : "Etkiyle kutuplanma: yakın yüz (+), uzak yüz (−)"}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={toprak ? (u >= 1 ? cev("Küre (+) yüklü kaldı") : cev("Topraklama ile elektriklenme")) : cev("Etkiyle kutuplanma: yakın yüz (+), uzak yüz (−)")}>
       <circle cx={CX} cy={CY} r={R} fill="var(--line)" stroke="var(--muted)" strokeWidth={1.5} />
       {art.map((p, i) => <Yuk key={`p${i}`} x={p.x} y={p.y} art r={6} />)}
       {eksi.filter((e) => !e.gitti).map((e, i) => <Yuk key={`e${i}`} x={e.x} y={e.y} art={false} r={6} />)}
@@ -335,9 +336,9 @@ function Etki({ t, oynuyor, s, secim }: SahneProps) {
       </g>
       <g fontSize={12.5} fontWeight={800}>
         <text x={14} y={22} fill="var(--ink)">
-          {!toprak ? "(−) çubuk nötr küreye yaklaşıyor" : u < 0.25 ? "1. Çubuğu yaklaştır" : u < 0.45 ? "2. Toprağa bağla" : u < 0.55 ? "3. Bağı kes" : u < 0.8 ? "4. Çubuğu uzaklaştır" : "Sonuç"}
+          {!toprak ? cev("(−) çubuk nötr küreye yaklaşıyor") : u < 0.25 ? cev("1. Çubuğu yaklaştır") : u < 0.45 ? cev("2. Toprağa bağla") : u < 0.55 ? cev("3. Bağı kes") : u < 0.8 ? cev("4. Çubuğu uzaklaştır") : cev("Sonuç")}
         </text>
-        {son && <text x={14} y={226} fill="var(--c2)">küre: 8 proton, 5 elektron → +3</text>}
+        {son && <text x={14} y={226} fill="var(--c2)">{cev("küre: 8 proton, 5 elektron → +3")}</text>}
       </g>
     </svg>
   );
@@ -353,7 +354,7 @@ function Elektroskop({ v }: SahneProps) {
   };
   const sol = yaprak(-1), sag = yaprak(1);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Çubuk ${d * 2} cm uzakta; yapraklar ${aci > 4 ? "açık" : "neredeyse kapalı"}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Çubuk {0} cm uzakta; yapraklar {1}", d * 2, aci > 4 ? "açık" : "neredeyse kapalı")}>
       <path d={`M100 120 Q100 92 128 92 L212 92 Q240 92 240 120 L240 218 L100 218 Z`} fill="none" stroke="var(--line-2)" strokeWidth={2} />
       <circle cx={TX} cy={TY} r={12} fill="var(--c4)" />
       <line x1={TX} y1={TY + 12} x2={TX} y2={AY} stroke="var(--c4)" strokeWidth={4} />
@@ -371,8 +372,8 @@ function Elektroskop({ v }: SahneProps) {
         </g>
       )}
       <g fontSize={12.5} fontWeight={800}>
-        <text x={14} y={22} fill="var(--ink)">çubuk–topuz: {d * 2} cm</text>
-        <text x={326} y={22} fill={aci > 4 ? "var(--c4)" : "var(--muted)"} textAnchor="end">{aci > 4 ? "yapraklar açık" : "yapraklar kapalı"}</text>
+        <text x={14} y={22} fill="var(--ink)">{cev("çubuk–topuz:")} {d * 2} {cev("cm")}</text>
+        <text x={326} y={22} fill={aci > 4 ? "var(--c4)" : "var(--muted)"} textAnchor="end">{aci > 4 ? cev("yapraklar açık") : cev("yapraklar kapalı")}</text>
       </g>
     </svg>
   );
@@ -383,10 +384,10 @@ function Coulomb({ v }: SahneProps) {
   const q = sinir(v.q ?? 2, -4, 4), n = sinir(v.r ?? 1, 1, 3), F = (0.4 * q) / (n * n), Fb = Math.abs(F);
   const Y = 112, AX = 70, BX = AX + n * 80, ok = sinir(Math.sqrt(Fb) * 60, 0, 80), iter = F > 0;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`q₂ = ${q} μC, uzaklık ${n * 30} cm: kuvvet ${say(Fb, 3)} N, ${q === 0 ? "kuvvet yok" : iter ? "itme" : "çekme"}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("q₂ = {0} μC, uzaklık {1} cm: kuvvet {2} N, {3}", q, n * 30, say(Fb, 3), q === 0 ? "kuvvet yok" : iter ? "itme" : "çekme")}>
       <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)">F = k·q₁·q₂ / r² = 9·10⁹ · 4·10⁻⁶ · {say(Math.abs(q))}·10⁻⁶ / {say(n * 0.3)}²</text>
       <text x={14} y={42} fontSize={13} fontWeight={800} fill={q === 0 ? "var(--muted)" : iter ? "var(--c2)" : "var(--c1)"}>
-        F = {say(Fb, 3)} N {q === 0 ? "" : iter ? "(itme)" : "(çekme)"}
+        F = {say(Fb, 3)} N {q === 0 ? "" : iter ? "(itme)" : cev("(çekme)")}
       </text>
       <line x1={AX} x2={BX} y1={Y} y2={Y} stroke="var(--line-2)" strokeWidth={1.5} strokeDasharray="4 5" />
       {q !== 0 && ok > 4 && (
@@ -405,7 +406,7 @@ function Coulomb({ v }: SahneProps) {
         <line x1={AX} x2={BX} y1={Y + 56} y2={Y + 56} stroke="var(--muted)" strokeWidth={1.2} />
         <line x1={AX} x2={AX} y1={Y + 51} y2={Y + 61} stroke="var(--muted)" strokeWidth={1.2} />
         <line x1={BX} x2={BX} y1={Y + 51} y2={Y + 61} stroke="var(--muted)" strokeWidth={1.2} />
-        <text x={(AX + BX) / 2} y={Y + 74}>{n * 30} cm</text>
+        <text x={(AX + BX) / 2} y={Y + 74}>{n * 30} {cev("cm")}</text>
       </g>
     </svg>
   );
@@ -456,7 +457,7 @@ function Alan({ v }: SahneProps) {
   const eksi = v.isaret === 1;
   const yollar = useMemo(() => cizgiler(eksi), [eksi]);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={eksi ? "Zıt yükler: çizgiler (+) yükten çıkıp (−) yüke giriyor" : "Aynı işaretli iki yük: çizgiler birbirinden uzaklaşıyor"}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={eksi ? cev("Zıt yükler: çizgiler (+) yükten çıkıp (−) yüke giriyor") : cev("Aynı işaretli iki yük: çizgiler birbirinden uzaklaşıyor")}>
       <g fill="none" stroke="var(--c5)" strokeWidth={1.4} opacity={0.75}>
         {yollar.map((c, i) => <path key={i} d={c.d} />)}
       </g>
@@ -468,7 +469,7 @@ function Alan({ v }: SahneProps) {
       <Yuk x={YA.x} y={YA.y} art r={12} />
       <Yuk x={YB.x} y={YB.y} art={!eksi} r={12} />
       <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)" stroke="var(--surface)" strokeWidth={4} strokeLinejoin="round" paintOrder="stroke">
-        {eksi ? "zıt yükler: çizgiler birbirine bağlanır" : "aynı işaretli yükler: çizgiler ayrılır"}
+        {eksi ? cev("zıt yükler: çizgiler birbirine bağlanır") : cev("aynı işaretli yükler: çizgiler ayrılır")}
       </text>
     </svg>
   );
@@ -483,19 +484,19 @@ export const FIZIK8: Record<string, SahneKaydi> = {
     C: Newton,
     geri: (v) => {
       const hiz = (v.v ?? 50) / 10, sonuc = yolHesapla(hiz).sonuc;
-      return { baslik: SONUC[sonuc], metin: `${say(hiz)} km/s ile ${sonuc === "carpti" ? "top yere düştü. Hızı artır: yüzey eğildikçe top daha uzağa düşer." : sonuc === "kurtuldu" ? "top hiç geri dönmüyor." : "top yörüngede kalıyor."}` };
+      return { baslik: SONUC[sonuc], metin: `${say(hiz)} km/s ile ${sonuc === "carpti" ? cev("top yere düştü. Hızı artır: yüzey eğildikçe top daha uzağa düşer.") : sonuc === "kurtuldu" ? cev("top hiç geri dönmüyor.") : cev("top yörüngede kalıyor.")}` };
     },
   },
   "fiz8-asansor": {
     C: Asansor,
-    geri: () => ({ baslik: "Tartı hâlâ 588 N", metin: "Halat sağlamken asansör duruyor. Tartı ağırlığını gösteriyor. Halatı kes ve yeniden oynat." }),
+    geri: () => ({ baslik: cev("Tartı hâlâ 588 N"), metin: cev("Halat sağlamken asansör duruyor. Tartı ağırlığını gösteriyor. Halatı kes ve yeniden oynat.") }),
   },
   "fiz8-surtunme": { C: Surtunme },
   "fiz8-dokunma": {
     C: Dokunma,
     geri: (v) => {
       const k = v.r ?? 1;
-      return { baslik: "Henüz değil", metin: `B'nin yarıçapı ${k === 1 ? "r" : `${k}r`} iken B, 12 μC'nin ${k}/${k + 1}'ini alır: ${say((12 * k) / (k + 1))} μC. 8 μC için B, toplamın 2/3'ünü almalı.` };
+      return { baslik: cev("Henüz değil"), metin: cev("B'nin yarıçapı {0} iken B, 12 μC'nin {1}/{2}'ini alır: {3} μC. 8 μC için B, toplamın 2/3'ünü almalı.", k === 1 ? "r" : `${k}r`, k, k + 1, say((12 * k) / (k + 1))) };
     },
   },
   "fiz8-etki": { C: Etki },

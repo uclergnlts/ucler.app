@@ -1,6 +1,7 @@
 "use client";
 // Kimya sahneleri (modern atom teorisi): yörünge ve orbital, kuantum sayıları (n, ℓ, mℓ), Aufbau dolma sırası,
 // Hund kuralıyla orbital şeması, dizilimden elementi bulma, Cr ve Cu istisnası, demir iyonlarının dizilimi.
+import { cev } from "@/lib/dil";
 import { rastgele, type SahneKaydi, type SahneProps } from "./ortak";
 
 const sinir = (x: number, a: number, b: number) => Math.max(a, Math.min(b, x));
@@ -9,9 +10,9 @@ const UST = "⁰¹²³⁴⁵⁶⁷⁸⁹";
 const ust = (n: number) => String(n).split("").map((c) => UST[Number(c)]).join("");
 
 const EL: [string, string][] = [
-  ["H", "Hidrojen"], ["He", "Helyum"], ["Li", "Lityum"], ["Be", "Berilyum"], ["B", "Bor"], ["C", "Karbon"], ["N", "Azot"], ["O", "Oksijen"], ["F", "Flor"], ["Ne", "Neon"],
-  ["Na", "Sodyum"], ["Mg", "Magnezyum"], ["Al", "Alüminyum"], ["Si", "Silisyum"], ["P", "Fosfor"], ["S", "Kükürt"], ["Cl", "Klor"], ["Ar", "Argon"], ["K", "Potasyum"], ["Ca", "Kalsiyum"],
-  ["Sc", "Skandiyum"], ["Ti", "Titanyum"], ["V", "Vanadyum"], ["Cr", "Krom"], ["Mn", "Mangan"], ["Fe", "Demir"], ["Co", "Kobalt"], ["Ni", "Nikel"], ["Cu", "Bakır"], ["Zn", "Çinko"],
+  ["H", cev("Hidrojen")], [cev("He"), cev("Helyum")], [cev("Li"), cev("Lityum")], [cev("Be"), cev("Berilyum")], ["B", cev("Bor")], ["C", cev("Karbon")], ["N", cev("Azot")], ["O", cev("Oksijen")], ["F", cev("Flor")], [cev("Ne"), cev("Neon")],
+  [cev("Na"), cev("Sodyum")], [cev("Mg"), cev("Magnezyum")], [cev("Al"), cev("Alüminyum")], [cev("Si"), cev("Silisyum")], ["P", cev("Fosfor")], ["S", cev("Kükürt")], [cev("Cl"), cev("Klor")], [cev("Ar"), cev("Argon")], ["K", cev("Potasyum")], [cev("Ca"), cev("Kalsiyum")],
+  [cev("Sc"), cev("Skandiyum")], [cev("Ti"), cev("Titanyum")], ["V", cev("Vanadyum")], [cev("Cr"), cev("Krom")], [cev("Mn"), cev("Mangan")], [cev("Fe"), cev("Demir")], [cev("Co"), cev("Kobalt")], [cev("Ni"), cev("Nikel")], [cev("Cu"), cev("Bakır")], [cev("Zn"), cev("Çinko")],
 ];
 
 /** Dolma sırası (enerji artışı) ve her alt katmanın orbital sayısı. */
@@ -67,7 +68,7 @@ function Model({ v }: SahneProps) {
     if (d < 74) nokta.push(`M${(cx + d * Math.cos(a)).toFixed(1)} ${(cy + d * Math.sin(a)).toFixed(1)}h0`);
   }
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label={o ? "Kuantum modeli: elektron bulutu ve yüzde 90 sınırı" : "Bohr modeli: elektron belirli dairesel yörüngede"}>
+    <svg viewBox="0 0 340 226" role="img" aria-label={o ? cev("Kuantum modeli: elektron bulutu ve yüzde 90 sınırı") : cev("Bohr modeli: elektron belirli dairesel yörüngede")}>
       {o ? (
         <g>
           <path d={nokta.join("")} stroke="var(--c1)" strokeWidth={3.2} strokeLinecap="round" fill="none" opacity={0.75} />
@@ -83,9 +84,9 @@ function Model({ v }: SahneProps) {
         </g>
       )}
       <circle cx={cx} cy={cy} r={6} fill="var(--c2)" />
-      <text x={170} y={196} fontSize={14} fontWeight={800} textAnchor="middle" fill="var(--ink)">{o ? "Kuantum modeli: orbital" : "Bohr modeli: yörünge"}</text>
+      <text x={170} y={196} fontSize={14} fontWeight={800} textAnchor="middle" fill="var(--ink)">{o ? cev("Kuantum modeli: orbital") : cev("Bohr modeli: yörünge")}</text>
       <text x={170} y={216} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">
-        {o ? "Elektronun yeri değil, bulunma olasılığı bilinir" : "Elektron belli bir dairesel yolda döner"}
+        {o ? cev("Elektronun yeri değil, bulunma olasılığı bilinir") : cev("Elektron belli bir dairesel yolda döner")}
       </text>
     </svg>
   );
@@ -94,7 +95,7 @@ function Model({ v }: SahneProps) {
 /* ---------- 2. kuantum sayıları: n ve ℓ ---------- */
 
 const HARF = "spdf";
-const SEKIL = ["küresel", "halter", "çoğu dört yapraklı", "karmaşık"];
+const SEKIL = [cev("küresel"), "halter", cev("çoğu dört yapraklı"), cev("karmaşık")];
 
 function Sekil({ l, cx, cy }: { l: number; cx: number; cy: number }) {
   const st = { fill: "var(--kimya)", fillOpacity: 0.28, stroke: "var(--kimya)", strokeWidth: 1.6 };
@@ -115,15 +116,15 @@ function Kuantum({ v }: SahneProps) {
   const n = sinir(v.n ?? 1, 1, 4), l = sinir(v.l ?? 0, 0, n - 1), m = 2 * l + 1;
   const w = 26, x0 = 170 - (m * w) / 2;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`n = ${n}, ℓ = ${l}: ${n}${HARF[l]} alt katmanı, ${m} orbital`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("n = {0}, ℓ = {1}: {2}{3} alt katmanı, {4} orbital", n, l, n, HARF[l], m)}>
       <text x={24} y={30} fontSize={14} fontWeight={800} fill="var(--ink)">n = {n}</text>
-      <text x={24} y={50} fontSize={12} fontWeight={700} fill="var(--muted)">{n}. katman</text>
+      <text x={24} y={50} fontSize={12} fontWeight={700} fill="var(--muted)">{n}{cev(". katman")}</text>
       <text x={316} y={30} fontSize={14} fontWeight={800} textAnchor="end" fill="var(--ink)">ℓ = {l}</text>
-      <text x={316} y={50} fontSize={12} fontWeight={700} textAnchor="end" fill="var(--muted)">ℓ en fazla n − 1 = {n - 1}</text>
+      <text x={316} y={50} fontSize={12} fontWeight={700} textAnchor="end" fill="var(--muted)">{cev("ℓ en fazla n − 1 =")} {n - 1}</text>
       <text x={170} y={38} fontSize={30} fontWeight={800} textAnchor="middle" fill="var(--kimya)">{n}{HARF[l]}</text>
       <Sekil l={l} cx={170} cy={96} />
       <circle cx={170} cy={96} r={3} fill="var(--c2)" />
-      <text x={170} y={146} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">{HARF[l]} orbitali: {SEKIL[l]}</text>
+      <text x={170} y={146} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">{HARF[l]} {cev("orbitali:")} {SEKIL[l]}</text>
       {Array.from({ length: m }, (_, i) => (
         <g key={i}>
           <Kutu x={x0 + i * w} y={156} n={0} w={w} />
@@ -131,7 +132,7 @@ function Kuantum({ v }: SahneProps) {
         </g>
       ))}
       <text x={x0 - 8} y={198} fontSize={11} fontWeight={700} textAnchor="end" fill="var(--muted)">mℓ:</text>
-      <text x={170} y={226} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--ink)">{m} orbital · en çok {2 * m} elektron</text>
+      <text x={170} y={226} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--ink)">{m} {cev("orbital · en çok")} {2 * m} {cev("elektron")}</text>
     </svg>
   );
 }
@@ -166,7 +167,7 @@ function Dolma({ v }: SahneProps) {
   e.forEach((k, i) => { if (k) sonI = i; });
   return (
     <svg viewBox="0 0 340 240" role="img" aria-label={`${ad} (${z}): ${yazi(e, z > 18)}`}>
-      <text x={14} y={14} fontSize={10} fontWeight={700} fill="var(--muted)">enerji ↑</text>
+      <text x={14} y={14} fontSize={10} fontWeight={700} fill="var(--muted)">{cev("enerji ↑")}</text>
       <Diyagram e={e} z={z} x0={42} y0={208} />
       <text x={160} y={80} fontSize={10} fontWeight={700} fill="var(--muted)">n+ℓ=5</text>
       <text x={72} y={103} fontSize={10} fontWeight={700} fill="var(--muted)">n+ℓ=4</text>
@@ -174,9 +175,9 @@ function Dolma({ v }: SahneProps) {
       <text x={262} y={88} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--ink)">{ad} · Z = {z}</text>
       <text x={262} y={124} fontSize={z > 18 ? 15 : 12} fontWeight={800} textAnchor="middle" fill="var(--ink)">{yazi(e, z > 18)}</text>
       <text x={262} y={160} fontSize={12} fontWeight={700} textAnchor="middle" fill={istisna ? "var(--bad)" : "var(--muted)"}>
-        {istisna ? "İstisna:" : `Son elektron: ${SIRA[sonI].ad}`}
+        {istisna ? cev("İstisna:") : cev("Son elektron: {0}", SIRA[sonI].ad)}
       </text>
-      {istisna && <text x={262} y={178} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--bad)">bir 4s e⁻ 3d'ye geçti</text>}
+      {istisna && <text x={262} y={178} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--bad)">{cev("bir 4s e⁻ 3d'ye geçti")}</text>}
     </svg>
   );
 }
@@ -189,7 +190,7 @@ function Hund({ v, set }: SahneProps) {
   const dogru = top === 3 && k.every((x) => x === 1), es = top === 3 && !dogru;
   const w = 40, x0 = 170 - 1.5 * w;
   return (
-    <svg viewBox="0 0 340 230" role="img" aria-label={`Azot 2p: ${k.join(", ")} elektron; toplam ${top}`}>
+    <svg viewBox="0 0 340 230" role="img" aria-label={cev("Azot 2p: {0} elektron; toplam {1}", k.join(", "), top)}>
       <text x={170} y={26} fontSize={15} fontWeight={800} textAnchor="middle" fill="var(--ink)">N (7 e⁻): 1s² 2s² 2p³</text>
       <text x={60} y={74} fontSize={12} fontWeight={800} textAnchor="end" fill="var(--muted)">1s</text>
       <Kutu x={66} y={56} n={2} w={28} />
@@ -201,9 +202,9 @@ function Hund({ v, set }: SahneProps) {
           <Kutu x={x0 + i * w} y={108} n={n} w={w} renk={dogru ? "var(--good)" : es ? "var(--bad)" : "var(--ink)"} />
         </g>
       ))}
-      <text x={170} y={174} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">2p'de {top} / 3 elektron · kutuya dokunabilirsin</text>
+      <text x={170} y={174} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">{cev("2p'de")} {top} {cev("/ 3 elektron · kutuya dokunabilirsin")}</text>
       <text x={170} y={204} fontSize={13} fontWeight={800} textAnchor="middle" fill={dogru ? "var(--good)" : es || top > 3 ? "var(--bad)" : "var(--ink)"}>
-        {dogru ? "↑ ↑ ↑: üç eşleşmemiş elektron, Hund'a uygun" : es ? "Boş orbital varken eşleşme olmaz" : top > 3 ? "Azotun 2p'sinde yalnızca 3 elektron var" : `${3 - top} elektron daha yerleştir`}
+        {dogru ? cev("↑ ↑ ↑: üç eşleşmemiş elektron, Hund'a uygun") : es ? cev("Boş orbital varken eşleşme olmaz") : top > 3 ? cev("Azotun 2p'sinde yalnızca 3 elektron var") : cev("{0} elektron daha yerleştir", 3 - top)}
       </text>
     </svg>
   );
@@ -217,7 +218,7 @@ function Bul({ v }: SahneProps) {
   const w = 22;
   const parca = [{ ad: "1s", x: 43, m: 1, k: 2 }, { ad: "2s", x: 79, m: 1, k: 2 }, { ad: "2p", x: 115, m: 3, k: 6 }, { ad: "3s", x: 195, m: 1, k: 2 }, { ad: "3p", x: 231, m: 3, k: e[4] }];
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label="Dizilim: 1s² 2s² 2p⁶ 3s² 3p⁴">
+    <svg viewBox="0 0 340 226" role="img" aria-label={cev("Dizilim: 1s² 2s² 2p⁶ 3s² 3p⁴")}>
       <text x={170} y={32} fontSize={20} fontWeight={800} textAnchor="middle" fill="var(--ink)">1s² 2s² 2p⁶ 3s² 3p⁴</text>
       {parca.map((p) => {
         const dis = say && p.ad.startsWith("3");
@@ -230,13 +231,13 @@ function Bul({ v }: SahneProps) {
       })}
       {say ? (
         <g>
-          <text x={170} y={138} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--ink)">2 + 2 + 6 + 2 + 4 = 16 elektron</text>
+          <text x={170} y={138} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--ink)">{cev("2 + 2 + 6 + 2 + 4 = 16 elektron")}</text>
           <path d="M195 104 L195 110 L297 110 L297 104" fill="none" stroke="var(--kimya)" strokeWidth={1.6} />
-          <text x={170} y={164} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--kimya)">En büyük n = 3 · dış katmanda 2 + 4 = 6 e⁻</text>
-          <text x={170} y={190} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">Dizilim p ile bitiyor: A grubu</text>
+          <text x={170} y={164} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--kimya)">{cev("En büyük n = 3 · dış katmanda 2 + 4 = 6 e⁻")}</text>
+          <text x={170} y={190} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">{cev("Dizilim p ile bitiyor: A grubu")}</text>
         </g>
       ) : (
-        <text x={170} y={150} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">Elektronları saymak için anahtarı aç</text>
+        <text x={170} y={150} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">{cev("Elektronları saymak için anahtarı aç")}</text>
       )}
     </svg>
   );
@@ -248,11 +249,11 @@ function Istisna({ v }: SahneProps) {
   const cu = (v.el ?? 0) === 1;
   const sat = cu
     ? [{ et: "A", s: 2, d: 9 }, { et: "B", s: 1, d: 10 }]
-    : [{ et: "kurala göre", s: 2, d: 4 }, { et: "gerçek", s: 1, d: 5 }];
+    : [{ et: cev("kurala göre"), s: 2, d: 4 }, { et: cev("gerçek"), s: 1, d: 5 }];
   const x4 = 100, x3 = 136, w = 24;
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label={cu ? "Bakır için iki aday dizilim: A 4s² 3d⁹, B 4s¹ 3d¹⁰" : "Krom: kurala göre 4s² 3d⁴, gerçekte 4s¹ 3d⁵"}>
-      <text x={170} y={28} fontSize={16} fontWeight={800} textAnchor="middle" fill="var(--ink)">{cu ? "Bakır (29): hangisi?" : "Krom (24)"}</text>
+    <svg viewBox="0 0 340 226" role="img" aria-label={cu ? cev("Bakır için iki aday dizilim: A 4s² 3d⁹, B 4s¹ 3d¹⁰") : cev("Krom: kurala göre 4s² 3d⁴, gerçekte 4s¹ 3d⁵")}>
+      <text x={170} y={28} fontSize={16} fontWeight={800} textAnchor="middle" fill="var(--ink)">{cu ? cev("Bakır (29): hangisi?") : cev("Krom (24)")}</text>
       <text x={x4 + w / 2} y={56} fontSize={11} fontWeight={800} textAnchor="middle" fill="var(--muted)">4s</text>
       <text x={x3 + 2.5 * w} y={56} fontSize={11} fontWeight={800} textAnchor="middle" fill="var(--muted)">3d</text>
       {sat.map((r, i) => {
@@ -268,7 +269,7 @@ function Istisna({ v }: SahneProps) {
         );
       })}
       <text x={170} y={200} fontSize={12} fontWeight={700} textAnchor="middle" fill={cu ? "var(--muted)" : "var(--good)"}>
-        {cu ? "İpucu: kromda hangi d dizilimi kararlılık getirdi?" : "Yarı dolu 3d⁵ daha kararlı: bir 4s e⁻ 3d'ye geçer"}
+        {cu ? cev("İpucu: kromda hangi d dizilimi kararlılık getirdi?") : cev("Yarı dolu 3d⁵ daha kararlı: bir 4s e⁻ 3d'ye geçer")}
       </text>
     </svg>
   );
@@ -277,27 +278,27 @@ function Istisna({ v }: SahneProps) {
 /* ---------- 7. demir iyonları ---------- */
 
 const FE = [
-  { ad: "Fe", s: 2, d: 6 }, { ad: "Fe⁺", s: 1, d: 6 }, { ad: "Fe²⁺", s: 0, d: 6 }, { ad: "Fe³⁺", s: 0, d: 5 },
+  { ad: cev("Fe"), s: 2, d: 6 }, { ad: "Fe⁺", s: 1, d: 6 }, { ad: "Fe²⁺", s: 0, d: 6 }, { ad: "Fe³⁺", s: 0, d: 5 },
 ];
 
 function Iyon({ v }: SahneProps) {
   const k = sinir(v.k ?? 0, 0, 3), f = FE[k], kut = hund(f.d, 5);
   const tek = (f.s === 1 ? 1 : 0) + kut.filter((x) => x === 1).length;
   const w = 28, x4 = 60, x3 = 104;
-  const diz = `[Ar]${f.s ? ` 4s${ust(f.s)}` : ""} 3d${ust(f.d)}`;
+  const diz = cev("[Ar]{0} 3d{1}", f.s ? ` 4s${ust(f.s)}` : "", ust(f.d));
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label={`${f.ad}: ${diz}, ${tek} eşleşmemiş elektron`}>
+    <svg viewBox="0 0 340 226" role="img" aria-label={cev("{0}: {1}, {2} eşleşmemiş elektron", f.ad, diz, tek)}>
       <text x={170} y={36} fontSize={26} fontWeight={800} textAnchor="middle" fill="var(--kimya)">{f.ad}</text>
-      <text x={170} y={60} fontSize={13} fontWeight={700} textAnchor="middle" fill="var(--muted)">26 proton · {26 - k} elektron</text>
+      <text x={170} y={60} fontSize={13} fontWeight={700} textAnchor="middle" fill="var(--muted)">{cev("26 proton ·")} {26 - k} {cev("elektron")}</text>
       <text x={x4 + w / 2} y={88} fontSize={11} fontWeight={800} textAnchor="middle" fill="var(--muted)">4s</text>
       <text x={x3 + 2.5 * w} y={88} fontSize={11} fontWeight={800} textAnchor="middle" fill="var(--muted)">3d</text>
       <Kutu x={x4} y={96} n={f.s} w={w} kesik={f.s === 0} />
       {kut.map((n, j) => <Kutu key={j} x={x3 + j * w} y={96} n={n} w={w} />)}
       <text x={170} y={158} fontSize={18} fontWeight={800} textAnchor="middle" fill="var(--ink)">{diz}</text>
       <text x={170} y={184} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">
-        {k === 0 ? "Nötr demir: son elektronlar 3d'ye girdi" : k <= 2 ? "Elektronlar 4s'ten koptu (en büyük n)" : "4s boşaldıktan sonra 3d'den koptu"}
+        {k === 0 ? cev("Nötr demir: son elektronlar 3d'ye girdi") : k <= 2 ? cev("Elektronlar 4s'ten koptu (en büyük n)") : cev("4s boşaldıktan sonra 3d'den koptu")}
       </text>
-      <text x={170} y={208} fontSize={12} fontWeight={800} textAnchor="middle" fill="var(--ink)">{tek} eşleşmemiş e⁻ · paramanyetik</text>
+      <text x={170} y={208} fontSize={12} fontWeight={800} textAnchor="middle" fill="var(--ink)">{tek} {cev("eşleşmemiş e⁻ · paramanyetik")}</text>
     </svg>
   );
 }

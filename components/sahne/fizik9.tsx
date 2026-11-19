@@ -2,13 +2,14 @@
 // Fizik sahneleri (elektrik akımı; elektriksel enerji): anahtarlı basit devre, Ohm yasası ve V–I grafiği, telin direnci,
 // seri / paralel ampuller, ampermetrenin yanlış bağlanması, karışık devre; telefon şarjı, Joule ısınması, cihaz etiketi,
 // kWh faturası, sigorta, akkor ampul ile LED.
+import { cev, BINLIK, SAYI_YEREL } from "@/lib/dil";
 import type { SahneKaydi, SahneProps } from "./ortak";
 
 /** Türkçe sayı: ondalık virgül, eksi işareti. */
 const say = (x: number, d = 1) =>
-  x.toLocaleString("tr-TR", { maximumFractionDigits: d, useGrouping: false }).replace("-", "−");
+  x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: d, useGrouping: false }).replace("-", "−");
 /** Binlik ayraçlı Türkçe sayı (36 000). */
-const binlik = (x: number) => Math.round(x).toLocaleString("tr-TR").replace(/\./g, " ");
+const binlik = (x: number) => Math.round(x).toLocaleString(SAYI_YEREL).replace(BINLIK, " ");
 const sinir = (x: number, a: number, b: number) => Math.max(a, Math.min(b, x));
 /** Oynatma ilerlemesi 0..1 (hiç oynatılmadıysa 0). */
 const ilerleme = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 0 ? sinir(t / sure, 0, 1) : 0);
@@ -76,8 +77,8 @@ function Uc({ x, y, yon, renk }: { x: number; y: number; yon: "sag" | "sol" | "y
 function Devre({ v }: SahneProps) {
   const k = (v.k ?? 0) === 1;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={k ? "Anahtar kapalı: devreden akım geçiyor, lamba yanıyor" : "Anahtar açık: akım yok"}>
-      <text x={14} y={22} fontSize={13} fontWeight={800} fill={k ? "var(--good)" : "var(--muted)"}>{k ? "Devre kapalı: lamba yanıyor" : "Devre açık: akım yok"}</text>
+    <svg viewBox="0 0 340 236" role="img" aria-label={k ? cev("Anahtar kapalı: devreden akım geçiyor, lamba yanıyor") : cev("Anahtar açık: akım yok")}>
+      <text x={14} y={22} fontSize={13} fontWeight={800} fill={k ? "var(--good)" : "var(--muted)"}>{k ? cev("Devre kapalı: lamba yanıyor") : cev("Devre açık: akım yok")}</text>
       <path d="M70 112 V62 H150 M190 62 H270 V106 M270 130 V182 H70 V128" fill="none" stroke="var(--ink)" strokeWidth={2.2} />
       <circle cx={150} cy={62} r={3.5} fill="var(--ink)" />
       <circle cx={190} cy={62} r={3.5} fill="var(--ink)" />
@@ -89,10 +90,10 @@ function Devre({ v }: SahneProps) {
       {k && (
         <g fontSize={11.5} fontWeight={800}>
           <Uc x={214} y={62} yon="sag" renk="var(--c2)" />
-          <text x={214} y={52} fill="var(--c2)" textAnchor="middle">akım (I)</text>
+          <text x={214} y={52} fill="var(--c2)" textAnchor="middle">{cev("akım (I)")}</text>
           <Uc x={170} y={182} yon="sag" renk="var(--c1)" />
-          <text x={170} y={202} fill="var(--c1)" textAnchor="middle">elektronlar</text>
-          <text x={326} y={226} fill="var(--muted)" textAnchor="end">her saniye 2 C geçiyor: I = q / t = 2 A</text>
+          <text x={170} y={202} fill="var(--c1)" textAnchor="middle">{cev("elektronlar")}</text>
+          <text x={326} y={226} fill="var(--muted)" textAnchor="end">{cev("her saniye 2 C geçiyor: I = q / t = 2 A")}</text>
         </g>
       )}
     </svg>
@@ -126,7 +127,7 @@ function Ohm({ v, s }: SahneProps) {
         {[0, 1, 2, 3].map((i) => <text key={i} x={gx(i)} y={GY0 + 14} fontSize={10} fill="var(--muted)" textAnchor="middle">{i}</text>)}
       </g>
       <line x1={gx(0)} y1={gy(0)} x2={gx(IM)} y2={gy(12)} stroke="var(--c5)" strokeWidth={2.4} />
-      <text x={gx(IM) - 38} y={gy(12) + 6} fontSize={11.5} fontWeight={800} fill="var(--c5)" textAnchor="end">eğim = R</text>
+      <text x={gx(IM) - 38} y={gy(12) + 6} fontSize={11.5} fontWeight={800} fill="var(--c5)" textAnchor="end">{cev("eğim = R")}</text>
       <g>
         <line x1={gx(I)} x2={gx(I)} y1={gy(V)} y2={GY0} stroke="var(--c2)" strokeWidth={1.2} strokeDasharray="3 3" />
         <line x1={GX0} x2={gx(I)} y1={gy(V)} y2={gy(V)} stroke="var(--c2)" strokeWidth={1.2} strokeDasharray="3 3" />
@@ -141,7 +142,7 @@ function VI() {
   const GX0 = 60, GX1 = 310, GY0 = 200, GY1 = 40;
   const gx = (i: number) => GX0 + (i / 3) * (GX1 - GX0), gy = (u: number) => GY0 - (u / 12) * (GY0 - GY1);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label="İki direncin V–I grafiği: X'in doğrusu daha dik">
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("İki direncin V–I grafiği: X'in doğrusu daha dik")}>
       <g>
         <line x1={GX0} x2={GX1 + 6} y1={GY0} y2={GY0} stroke="var(--ink)" strokeWidth={1.4} />
         <line x1={GX0} x2={GX0} y1={GY0} y2={GY1 - 12} stroke="var(--ink)" strokeWidth={1.4} />
@@ -161,7 +162,7 @@ function VI() {
         <text x={gx(2) + 8} y={gy(12) + 6} fill="var(--c2)">X</text>
         <text x={gx(3) - 4} y={gy(6) - 10} fill="var(--c1)" textAnchor="end">Y</text>
       </g>
-      <text x={326} y={226} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="end">aynı I için X'in uçlarında daha büyük V var</text>
+      <text x={326} y={226} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="end">{cev("aynı I için X'in uçlarında daha büyük V var")}</text>
     </svg>
   );
 }
@@ -172,7 +173,7 @@ function Tel({ v }: SahneProps) {
   const boy = L * 56, kal = 4 + A * 5, X0 = 30, Y = 104;
   const bar = sinir(R * 60, 6, 240);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Boy ${L} L₀, kesit ${A} A₀: direnç ${say(R, 2)} R₀`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Boy {0} L₀, kesit {1} A₀: direnç {2} R₀", L, A, say(R, 2))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">R = ρ · L / A = ({L} / {A}) · R₀</text>
       <text x={14} y={42} fontSize={13} fontWeight={800} fill={R === 1 ? "var(--good)" : "var(--c2)"}>R = {R === 1 ? "R₀" : `${say(R, 2)} R₀`}</text>
       <rect x={X0} y={Y - kal / 2} width={boy} height={kal} rx={kal / 2} fill="#d58a4a" />
@@ -180,11 +181,11 @@ function Tel({ v }: SahneProps) {
         <line x1={X0} x2={X0 + boy} y1={Y + 34} y2={Y + 34} stroke="var(--muted)" strokeWidth={1.2} />
         <line x1={X0} x2={X0} y1={Y + 29} y2={Y + 39} stroke="var(--muted)" strokeWidth={1.2} />
         <line x1={X0 + boy} x2={X0 + boy} y1={Y + 29} y2={Y + 39} stroke="var(--muted)" strokeWidth={1.2} />
-        <text x={X0 + boy / 2} y={Y + 54} textAnchor="middle">boy: {L === 1 ? "L₀" : `${L} L₀`}</text>
-        <text x={X0 + boy + 10} y={Y + 4}>kesit: {A === 1 ? "A₀" : `${A} A₀`}</text>
+        <text x={X0 + boy / 2} y={Y + 54} textAnchor="middle">{cev("boy:")} {L === 1 ? "L₀" : `${L} L₀`}</text>
+        <text x={X0 + boy + 10} y={Y + 4}>{cev("kesit:")} {A === 1 ? "A₀" : `${A} A₀`}</text>
       </g>
       <g>
-        <text x={14} y={196} fontSize={11.5} fontWeight={800} fill="var(--muted)">direnç</text>
+        <text x={14} y={196} fontSize={11.5} fontWeight={800} fill="var(--muted)">{cev("direnç")}</text>
         <rect x={70} y={186} width={240} height={14} rx={7} fill="var(--line)" />
         <rect x={70} y={186} width={bar} height={14} rx={7} fill={R === 1 ? "var(--good)" : "var(--c2)"} />
         <line x1={130} x2={130} y1={180} y2={206} stroke="var(--ink)" strokeWidth={1.4} />
@@ -203,9 +204,9 @@ function IkiAmpul({ v, s }: SahneProps) {
   else { I = V / (r1 + r2); P1 = I * I * r1; P2 = I * I * r2; }
   const PM = (V * V) / Math.min(r1, r2), parl = (P: number) => (P > 0 ? Math.sqrt(P / PM) : 0);
   const etiket = (r: number) => (r1 === r2 ? "" : `${r} Ω`);
-  const durum = !par && sok ? "Devre açıldı: ikisi de söndü" : `${par ? "Paralel" : "Seri"}: pilden ${say(I, 2)} A çekiliyor`;
+  const durum = !par && sok ? cev("Devre açıldı: ikisi de söndü") : cev("{0}: pilden {1} A çekiliyor", par ? "Paralel" : "Seri", say(I, 2));
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${par ? "Paralel" : "Seri"} bağlı ampuller${sok ? ", biri sökük" : ""}: ${say(P1)} W ve ${say(P2)} W`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0} bağlı ampuller{1}: {2} W ve {3} W", par ? "Paralel" : "Seri", sok ? ", biri sökük" : "", say(P1), say(P2))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={!par && sok ? "var(--c2)" : "var(--ink)"}>{durum}</text>
       {par ? (
         <g>
@@ -214,7 +215,7 @@ function IkiAmpul({ v, s }: SahneProps) {
           <Lamba x={270} y={120} p={parl(P2)} sokuk={sok} />
           <g fontSize={12} fontWeight={800} textAnchor="middle">
             <text x={198} y={125} fill="var(--ink)" textAnchor="start">{say(P1)} W</text>
-            <text x={288} y={125} fill={sok ? "var(--muted)" : "var(--ink)"} textAnchor="start">{sok ? "sökük" : `${say(P2)} W`}</text>
+            <text x={288} y={125} fill={sok ? "var(--muted)" : "var(--ink)"} textAnchor="start">{sok ? cev("sökük") : `${say(P2)} W`}</text>
             {etiket(r1) && <text x={156} y={104} fill="var(--muted)" textAnchor="end">{etiket(r1)}</text>}
             {etiket(r2) && <text x={246} y={104} fill="var(--muted)" textAnchor="end">{etiket(r2)}</text>}
           </g>
@@ -228,7 +229,7 @@ function IkiAmpul({ v, s }: SahneProps) {
           <Lamba x={220} y={60} p={parl(P2)} sokuk={sok} />
           <g fontSize={12} fontWeight={800} textAnchor="middle">
             <text x={140} y={100} fill="var(--ink)">{say(P1)} W</text>
-            <text x={220} y={100} fill={sok ? "var(--muted)" : "var(--ink)"}>{sok ? "sökük" : `${say(P2)} W`}</text>
+            <text x={220} y={100} fill={sok ? "var(--muted)" : "var(--ink)"}>{sok ? cev("sökük") : `${say(P2)} W`}</text>
             {etiket(r1) && <text x={140} y={36} fill="var(--muted)">{etiket(r1)}</text>}
             {etiket(r2) && <text x={220} y={36} fill="var(--muted)">{etiket(r2)}</text>}
           </g>
@@ -236,7 +237,7 @@ function IkiAmpul({ v, s }: SahneProps) {
         </g>
       )}
       <Pil x={50} y={120} etiket="12 V" />
-      <text x={326} y={226} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="end">parlaklık = ampulün harcadığı güç</text>
+      <text x={326} y={226} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="end">{cev("parlaklık = ampulün harcadığı güç")}</text>
     </svg>
   );
 }
@@ -245,8 +246,8 @@ function IkiAmpul({ v, s }: SahneProps) {
 function YanlisAmper({ t, oynuyor, s }: SahneProps) {
   const sure = Number(s.sure ?? 3), u = ilerleme(t, oynuyor, sure), bagli = u > 0.3;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={bagli ? "Ampermetre lambaya paralel bağlandı: kısa devre, lamba söndü" : "Lamba yanıyor. Ampermetre lambaya paralel bağlanacak"}>
-      <text x={14} y={22} fontSize={13} fontWeight={800} fill={bagli ? "var(--c2)" : "var(--ink)"}>{bagli ? "Kısa devre: lamba söndü" : "Ampermetre lambaya paralel bağlanıyor"}</text>
+    <svg viewBox="0 0 340 236" role="img" aria-label={bagli ? cev("Ampermetre lambaya paralel bağlandı: kısa devre, lamba söndü") : cev("Lamba yanıyor. Ampermetre lambaya paralel bağlanacak")}>
+      <text x={14} y={22} fontSize={13} fontWeight={800} fill={bagli ? "var(--c2)" : "var(--ink)"}>{bagli ? cev("Kısa devre: lamba söndü") : cev("Ampermetre lambaya paralel bağlanıyor")}</text>
       <path d="M60 112 V62 H190 V104 M190 128 V182 H60 V128" fill="none" stroke="var(--ink)" strokeWidth={2.2} />
       <Pil x={60} y={120} />
       {bagli && <circle cx={60} cy={120} r={24} fill="var(--c2)" opacity={0.15 + 0.15 * Math.sin(u * 30)} />}
@@ -257,13 +258,13 @@ function YanlisAmper({ t, oynuyor, s }: SahneProps) {
       {bagli && <Elektronlar d="M60 130 V182 H280 V134 M280 98 V62 H60 V110" hiz={4} />}
       {bagli && (
         <g fontSize={11.5} fontWeight={800} fill="var(--c2)">
-          <text x={300} y={112}>çok</text>
-          <text x={300} y={126}>büyük</text>
-          <text x={300} y={140}>akım</text>
-          <text x={72} y={160}>pil ısınıyor</text>
+          <text x={300} y={112}>{cev("çok")}</text>
+          <text x={300} y={126}>{cev("büyük")}</text>
+          <text x={300} y={140}>{cev("akım")}</text>
+          <text x={72} y={160}>{cev("pil ısınıyor")}</text>
         </g>
       )}
-      <text x={326} y={226} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="end">ampermetrenin iç direnci neredeyse sıfır</text>
+      <text x={326} y={226} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="end">{cev("ampermetrenin iç direnci neredeyse sıfır")}</text>
     </svg>
   );
 }
@@ -272,7 +273,7 @@ function YanlisAmper({ t, oynuyor, s }: SahneProps) {
 function Karisik({ v }: SahneProps) {
   const V = sinir(v.V ?? 6, 0, 24), I = V / 6, Vp = I * 2, I6 = Vp / 6, I3 = Vp / 3;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Üreteç ${V} V: ana akım ${say(I, 2)} A, 6 Ω'dan ${say(I6, 2)} A, 3 Ω'dan ${say(I3, 2)} A`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Üreteç {0} V: ana akım {1} A, 6 Ω'dan {2} A, 3 Ω'dan {3} A", V, say(I, 2), say(I6, 2), say(I3, 2))}>
       <path d="M40 112 V50 H190 M190 50 H290 M190 50 V104 H290 V50 M290 50 H316 V176 H40 V128" fill="none" stroke="var(--ink)" strokeWidth={2.2} />
       <Pil x={40} y={120} etiket="" />
       <text x={28} y={152} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="end">{V} V</text>
@@ -289,8 +290,8 @@ function Karisik({ v }: SahneProps) {
         <text x={240} y={130} fill="var(--c5)" textAnchor="middle">{say(I3, 2)} A</text>
       </g>
       <g fontSize={12} fontWeight={800} fill="var(--ink)">
-        <text x={14} y={198}>Reş = 4 + (6·3)/(6+3) = 6 Ω,  I = {V} / 6 = <tspan fill="var(--c2)">{say(I, 2)} A</tspan></text>
-        <text x={14} y={220} fill="var(--muted)">4 Ω'da {say(I * 4, 2)} V, paralel kısımda {say(Vp, 2)} V düşer</text>
+        <text x={14} y={198}>{cev("Reş = 4 + (6·3)/(6+3) = 6 Ω,  I =")} {V} / 6 = <tspan fill="var(--c2)">{say(I, 2)} A</tspan></text>
+        <text x={14} y={220} fill="var(--muted)">{cev("4 Ω'da")} {say(I * 4, 2)} {cev("V, paralel kısımda")} {say(Vp, 2)} {cev("V düşer")}</text>
       </g>
     </svg>
   );
@@ -302,7 +303,7 @@ function Karisik({ v }: SahneProps) {
 function Sarj({ v }: SahneProps) {
   const dk = sinir(v.t ?? 0, 0, 120), W = 5 * 2 * dk * 60, oran = sinir(W / 72000, 0, 1), hedef = W === 36000;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${dk} dakika şarj: ${binlik(W)} J`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0} dakika şarj: {1} J", dk, binlik(W))}>
       <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)">W = V · I · t = 5 · 2 · {dk * 60} s</text>
       <text x={14} y={42} fontSize={13} fontWeight={800} fill={hedef ? "var(--good)" : "var(--c2)"}>W = {binlik(W)} J</text>
       <g>
@@ -314,12 +315,12 @@ function Sarj({ v }: SahneProps) {
         <text x={172} y={205} fontSize={10.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">5 V 2 A</text>
       </g>
       <g>
-        <text x={120} y={92} fontSize={11.5} fontWeight={800} fill="var(--muted)">aktarılan enerji</text>
+        <text x={120} y={92} fontSize={11.5} fontWeight={800} fill="var(--muted)">{cev("aktarılan enerji")}</text>
         <rect x={120} y={100} width={200} height={16} rx={8} fill="var(--line)" />
         <rect x={120} y={100} width={Math.max(0.1, 200 * oran)} height={16} rx={8} fill={hedef ? "var(--good)" : "var(--c1)"} />
         <line x1={220} x2={220} y1={94} y2={122} stroke="var(--ink)" strokeWidth={1.4} />
         <text x={220} y={138} fontSize={11} fontWeight={700} fill="var(--ink)" textAnchor="middle">36 000 J</text>
-        <text x={120} y={162} fontSize={12} fontWeight={800} fill="var(--ink)">süre: {dk} dk</text>
+        <text x={120} y={162} fontSize={12} fontWeight={800} fill="var(--ink)">{cev("süre:")} {dk} {cev("dk")}</text>
       </g>
     </svg>
   );
@@ -329,9 +330,9 @@ function Sarj({ v }: SahneProps) {
 function Joule({ v }: SahneProps) {
   const I = sinir(v.I ?? 1, 1, 4), Q = I * I * 10 * 60, oran = sinir(Q / 9600, 0, 1), k = I * I;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Akım ${I} A: 1 dakikada ${binlik(Q)} J ısı`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Akım {0} A: 1 dakikada {1} J ısı", I, binlik(Q))}>
       <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)">Q = I² · R · t = {I}² · 10 Ω · 60 s</text>
-      <text x={14} y={42} fontSize={13} fontWeight={800} fill={I === 2 ? "var(--good)" : "var(--c2)"}>Q = {binlik(Q)} J  ({k} katı)</text>
+      <text x={14} y={42} fontSize={13} fontWeight={800} fill={I === 2 ? "var(--good)" : "var(--c2)"}>Q = {binlik(Q)} J  ({k} {cev("katı)")}</text>
       <g>
         <path d="M40 80 V200 Q40 208 48 208 H152 Q160 208 160 200 V80" fill="none" stroke="var(--ink)" strokeWidth={2.2} />
         <rect x={42} y={110} width={116} height={96} fill="var(--c1)" opacity={0.12} />
@@ -342,11 +343,11 @@ function Joule({ v }: SahneProps) {
         ))}
       </g>
       <g>
-        <text x={186} y={92} fontSize={11.5} fontWeight={800} fill="var(--muted)">1 dakikada açığa çıkan ısı</text>
+        <text x={186} y={92} fontSize={11.5} fontWeight={800} fill="var(--muted)">{cev("1 dakikada açığa çıkan ısı")}</text>
         <rect x={186} y={104} width={140} height={16} rx={8} fill="var(--line)" />
         <rect x={186} y={104} width={140 * oran} height={16} rx={8} fill="var(--c2)" />
-        <text x={186} y={146} fontSize={12} fontWeight={800} fill="var(--ink)">akım: {I} A</text>
-        <text x={186} y={166} fontSize={11.5} fontWeight={700} fill="var(--muted)">akım 2 katı → ısı 4 katı</text>
+        <text x={186} y={146} fontSize={12} fontWeight={800} fill="var(--ink)">{cev("akım:")} {I} A</text>
+        <text x={186} y={166} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("akım 2 katı → ısı 4 katı")}</text>
       </g>
     </svg>
   );
@@ -357,9 +358,9 @@ function Etiket({ t, oynuyor, s }: SahneProps) {
   const sure = Number(s.sure ?? 3), u = ilerleme(t, oynuyor, sure), V = u > 0.4 ? 110 : 220, P = (V * V) / 24.2;
   const parl = Math.sqrt(P / 2000);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Isıtıcı ${V} V'ta ${Math.round(P)} W harcıyor`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Isıtıcı {0} V'ta {1} W harcıyor", V, Math.round(P))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">R = V² / P = 220² / 2000 = 24,2 Ω</text>
-      <text x={14} y={42} fontSize={13} fontWeight={800} fill={V === 110 ? "var(--c2)" : "var(--ink)"}>{V} V'ta P = {V}² / 24,2 = {Math.round(P)} W</text>
+      <text x={14} y={42} fontSize={13} fontWeight={800} fill={V === 110 ? "var(--c2)" : "var(--ink)"}>{V} {cev("V'ta P =")} {V}² / 24,2 = {Math.round(P)} W</text>
       <g>
         <rect x={40} y={70} width={150} height={110} rx={12} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2.2} />
         {[0, 1, 2, 3].map((i) => (
@@ -369,10 +370,10 @@ function Etiket({ t, oynuyor, s }: SahneProps) {
         <text x={115} y={206} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">220 V · 2000 W</text>
       </g>
       <g>
-        <text x={214} y={90} fontSize={11.5} fontWeight={800} fill="var(--muted)">priz</text>
+        <text x={214} y={90} fontSize={11.5} fontWeight={800} fill="var(--muted)">{cev("priz")}</text>
         <rect x={214} y={98} width={100} height={40} rx={10} fill={V === 110 ? "var(--c2)" : "var(--c1)"} opacity={0.15} />
         <text x={264} y={125} fontSize={18} fontWeight={800} fill={V === 110 ? "var(--c2)" : "var(--c1)"} textAnchor="middle">{V} V</text>
-        <text x={214} y={164} fontSize={11.5} fontWeight={800} fill="var(--muted)">güç</text>
+        <text x={214} y={164} fontSize={11.5} fontWeight={800} fill="var(--muted)">{cev("güç")}</text>
         <rect x={214} y={172} width={100} height={14} rx={7} fill="var(--line)" />
         <rect x={214} y={172} width={100 * (P / 2000)} height={14} rx={7} fill="var(--c2)" />
       </g>
@@ -385,22 +386,22 @@ function Fatura({ v }: SahneProps) {
   const h = sinir(v.h ?? 4, 1, 6), E = 1.5 * h * 30, TL = E * 3, iyi = TL <= 270;
   const bx = (x: number) => 30 + (x / 810) * 280;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Günde ${h} saat: ${say(E)} kWh, ${say(TL)} TL`}>
-      <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)">E = 1,5 kW · {h} saat · 30 gün = {say(E)} kWh</text>
-      <text x={14} y={42} fontSize={13} fontWeight={800} fill={iyi ? "var(--good)" : "var(--c2)"}>Tutar = {say(E)} kWh · 3 TL = {say(TL)} TL</text>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Günde {0} saat: {1} kWh, {2} TL", h, say(E), say(TL))}>
+      <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)">{cev("E = 1,5 kW ·")} {h} {cev("saat · 30 gün =")} {say(E)} {cev("kWh")}</text>
+      <text x={14} y={42} fontSize={13} fontWeight={800} fill={iyi ? "var(--good)" : "var(--c2)"}>{cev("Tutar =")} {say(E)} {cev("kWh · 3 TL =")} {say(TL)} {cev("TL")}</text>
       <g>
         <rect x={60} y={66} width={150} height={44} rx={10} fill="var(--surface)" stroke="var(--ink)" strokeWidth={2.2} />
         {[0, 1, 2].map((i) => <line key={i} x1={74} x2={196} y1={96 + i * 5} y2={96 + i * 5} stroke="var(--line-2)" strokeWidth={2} />)}
-        <text x={135} y={86} fontSize={11} fontWeight={800} fill="var(--muted)" textAnchor="middle">klima · 1,5 kW</text>
-        <text x={226} y={86} fontSize={12} fontWeight={800} fill="var(--ink)">günde {h} saat</text>
-        <text x={226} y={104} fontSize={11.5} fontWeight={700} fill="var(--muted)">30 gün</text>
+        <text x={135} y={86} fontSize={11} fontWeight={800} fill="var(--muted)" textAnchor="middle">{cev("klima · 1,5 kW")}</text>
+        <text x={226} y={86} fontSize={12} fontWeight={800} fill="var(--ink)">{cev("günde")} {h} {cev("saat")}</text>
+        <text x={226} y={104} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("30 gün")}</text>
       </g>
       <g>
-        <text x={30} y={150} fontSize={11.5} fontWeight={800} fill="var(--muted)">aylık tutar</text>
+        <text x={30} y={150} fontSize={11.5} fontWeight={800} fill="var(--muted)">{cev("aylık tutar")}</text>
         <rect x={30} y={158} width={280} height={18} rx={9} fill="var(--line)" />
         <rect x={30} y={158} width={bx(TL) - 30} height={18} rx={9} fill={iyi ? "var(--good)" : "var(--c2)"} />
         <line x1={bx(270)} x2={bx(270)} y1={150} y2={184} stroke="var(--ink)" strokeWidth={1.6} />
-        <text x={bx(270)} y={200} fontSize={11} fontWeight={800} fill="var(--ink)" textAnchor="middle">bütçe: 270 TL</text>
+        <text x={bx(270)} y={200} fontSize={11} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("bütçe: 270 TL")}</text>
       </g>
     </svg>
   );
@@ -408,17 +409,17 @@ function Fatura({ v }: SahneProps) {
 
 // Sigorta: 220 V hat, 16 A. Cihazlar: v.a ısıtıcı 2000 W, v.b su ısıtıcısı 2200 W, v.c ütü 1100 W.
 const CIHAZ = [
-  { ad: "ısıtıcı", P: 2000, k: "a" },
-  { ad: "su ısıtıcısı", P: 2200, k: "b" },
-  { ad: "ütü", P: 1100, k: "c" },
+  { ad: cev("ısıtıcı"), P: 2000, k: "a" },
+  { ad: cev("su ısıtıcısı"), P: 2200, k: "b" },
+  { ad: cev("ütü"), P: 1100, k: "c" },
 ];
 function Sigorta({ v }: SahneProps) {
   const acik = CIHAZ.map((c) => (v[c.k] ?? 0) === 1);
   const I = CIHAZ.reduce((t, c, i) => t + (acik[i] ? c.P / 220 : 0), 0), atti = I > 16;
   const gx = (a: number) => 30 + (sinir(a, 0, 30) / 30) * 280;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Toplam akım ${say(I)} A${atti ? ": sigorta attı" : ""}`}>
-      <text x={14} y={22} fontSize={13} fontWeight={800} fill={atti ? "var(--c2)" : "var(--ink)"}>{atti ? "Sigorta attı: hat kesildi" : `Toplam akım: ${say(I)} A`}</text>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Toplam akım {0} A{1}", say(I), atti ? ": sigorta attı" : "")}>
+      <text x={14} y={22} fontSize={13} fontWeight={800} fill={atti ? "var(--c2)" : "var(--ink)"}>{atti ? cev("Sigorta attı: hat kesildi") : cev("Toplam akım: {0} A", say(I))}</text>
       <g>
         <path d="M30 60 H310" stroke="var(--ink)" strokeWidth={2.2} />
         <rect x={40} y={50} width={44} height={20} rx={4} fill="var(--surface)" stroke={atti ? "var(--c2)" : "var(--ink)"} strokeWidth={2} />
@@ -431,7 +432,7 @@ function Sigorta({ v }: SahneProps) {
               <rect x={x - 32} y={92} width={64} height={40} rx={8} fill={on ? "var(--c4)" : "var(--surface)"} opacity={on ? 0.9 : 1} stroke="var(--ink)" strokeWidth={2} />
               <text x={x} y={110} fontSize={10.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">{c.ad}</text>
               <text x={x} y={124} fontSize={10.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">{c.P} W</text>
-              <text x={x} y={148} fontSize={10.5} fontWeight={800} fill={acik[i] ? "var(--ink)" : "var(--muted)"} textAnchor="middle">{acik[i] ? `${say(c.P / 220)} A` : "kapalı"}</text>
+              <text x={x} y={148} fontSize={10.5} fontWeight={800} fill={acik[i] ? "var(--ink)" : "var(--muted)"} textAnchor="middle">{acik[i] ? `${say(c.P / 220)} A` : cev("kapalı")}</text>
             </g>
           );
         })}
@@ -440,7 +441,7 @@ function Sigorta({ v }: SahneProps) {
         <rect x={30} y={170} width={280} height={18} rx={9} fill="var(--line)" />
         <rect x={30} y={170} width={Math.max(0.1, gx(I) - 30)} height={18} rx={9} fill={atti ? "var(--c2)" : "var(--good)"} />
         <line x1={gx(16)} x2={gx(16)} y1={162} y2={196} stroke="var(--ink)" strokeWidth={1.6} />
-        <text x={gx(16)} y={212} fontSize={11} fontWeight={800} fill="var(--ink)" textAnchor="middle">sınır 16 A</text>
+        <text x={gx(16)} y={212} fontSize={11} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("sınır 16 A")}</text>
       </g>
     </svg>
   );
@@ -451,9 +452,9 @@ function Verim({ v }: SahneProps) {
   const led = (v.led ?? 0) === 1, P = led ? 9 : 60, isik = 3, isi = P - isik;
   const w = (x: number) => (x / 60) * 220;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${led ? "LED" : "Akkor ampul"}: ${P} W, ışık ${isik} W, ısı ${isi} W`}>
-      <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{led ? "LED: 9 W" : "Akkor ampul: 60 W"}</text>
-      <text x={14} y={42} fontSize={13} fontWeight={800} fill={led ? "var(--good)" : "var(--c2)"}>verim = ışık / harcanan = {isik} / {P} ≈ %{Math.round((100 * isik) / P)}</text>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0}: {1} W, ışık {2} W, ısı {3} W", led ? "LED" : "Akkor ampul", P, isik, isi)}>
+      <text x={14} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{led ? cev("LED: 9 W") : cev("Akkor ampul: 60 W")}</text>
+      <text x={14} y={42} fontSize={13} fontWeight={800} fill={led ? "var(--good)" : "var(--c2)"}>{cev("verim = ışık / harcanan =")} {isik} / {P} ≈ %{Math.round((100 * isik) / P)}</text>
       <g>
         <circle cx={58} cy={112} r={34} fill="var(--c4)" opacity={0.2} />
         <circle cx={58} cy={112} r={20} fill="color-mix(in srgb, #ffc924 40%, var(--surface))" stroke="var(--ink)" strokeWidth={2} />
@@ -463,14 +464,14 @@ function Verim({ v }: SahneProps) {
         ))}
       </g>
       <g>
-        <text x={110} y={90} fontSize={11.5} fontWeight={800} fill="var(--muted)">ışık: {isik} W</text>
+        <text x={110} y={90} fontSize={11.5} fontWeight={800} fill="var(--muted)">{cev("ışık:")} {isik} W</text>
         <rect x={110} y={98} width={220} height={14} rx={7} fill="var(--line)" />
         <rect x={110} y={98} width={w(isik)} height={14} rx={7} fill="var(--c4)" />
-        <text x={110} y={136} fontSize={11.5} fontWeight={800} fill="var(--muted)">ısı: {isi} W</text>
+        <text x={110} y={136} fontSize={11.5} fontWeight={800} fill="var(--muted)">{cev("ısı:")} {isi} W</text>
         <rect x={110} y={144} width={220} height={14} rx={7} fill="var(--line)" />
         <rect x={110} y={144} width={w(isi)} height={14} rx={7} fill="var(--c2)" />
       </g>
-      <text x={326} y={210} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="end">ikisi de aynı miktarda ışık veriyor</text>
+      <text x={326} y={210} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="end">{cev("ikisi de aynı miktarda ışık veriyor")}</text>
     </svg>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 // Karışık test akışı: ünite testi ve seviye testi aynı soru akışını kullanır (giriş, sorular, sonuç).
 // Yanlış yapılan soru konu testinde olduğu gibi tekrar sırasına girer.
+import { cev } from "@/lib/dil";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
@@ -99,7 +100,7 @@ export default function KarisikTest({ ders, baslik, cikis, sorular, sec, giris, 
     body = (
       <article className="flex flex-col gap-4">
         <span className="flex min-w-0 items-center gap-2 text-[13px] font-bold">
-          <span className="flex-none whitespace-nowrap tabular-nums text-acc">Soru {i + 1} / {n}</span>
+          <span className="flex-none whitespace-nowrap tabular-nums text-acc">{cev("Soru")} {i + 1} / {n}</span>
           <span className="truncate text-muted-foreground">· {Q.baslik}</span>
         </span>
         <Html as="h2" className={sonuc === null ? "text-[22px]" : "text-lg"} html={Q.q} />
@@ -118,9 +119,9 @@ export default function KarisikTest({ ders, baslik, cikis, sorular, sec, giris, 
           )}
         </AnimatePresence>
         {!secmeli(Q) && sonuc === null ? (
-          <Button className="w-full" data-next disabled={!hazir(Q, cevap)} onClick={() => degerlendir(cevap)}>{hazir(Q, cevap) ? "Kontrol et" : "Cevabını kur"}</Button>
+          <Button className="w-full" data-next disabled={!hazir(Q, cevap)} onClick={() => degerlendir(cevap)}>{hazir(Q, cevap) ? cev("Kontrol et") : cev("Cevabını kur")}</Button>
         ) : (
-          <Button className="w-full" data-next disabled={sonuc === null} onClick={ileri}>{sonuc === null ? "Bir cevap seç" : i === n - 1 ? "Sonucu gör" : "Sonraki soru"}</Button>
+          <Button className="w-full" data-next disabled={sonuc === null} onClick={ileri}>{sonuc === null ? cev("Bir cevap seç") : i === n - 1 ? cev("Sonucu gör") : cev("Sonraki soru")}</Button>
         )}
       </Alt>
     );
@@ -137,7 +138,7 @@ export default function KarisikTest({ ders, baslik, cikis, sorular, sec, giris, 
           <Progress value={n ? (100 * Math.min(i + (sonuc !== null ? 1 : 0), n)) / n : 0} />
         </div>
         {key && Q && (
-          <Bildir yer={{ ders: Q.ders, konu: Q.konu, yer: `test sorusu ${Number(key.split(".").pop()) + 1} (${baslik})`, ozet: Q.q }}>
+          <Bildir yer={{ ders: Q.ders, konu: Q.konu, yer: cev("test sorusu {0} ({1})", Number(key.split(".").pop()) + 1, baslik), ozet: Q.q }}>
             <BildirDugme className="-mr-1" />
           </Bildir>
         )}

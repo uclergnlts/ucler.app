@@ -1,12 +1,13 @@
 "use client";
 // Fizik sahneleri (atom çekirdeği ve radyoaktivite): çekirdek ve izotop, güçlü çekirdek kuvveti, kütle açığı,
 // nükleon başına bağlanma enerjisi, bozunma zinciri, ışımaların sapması ve giriciliği, yarı ömür, zincirleme fisyon.
+import { cev, SAYI_YEREL } from "@/lib/dil";
 import type { ReactNode } from "react";
 import type { SahneKaydi, SahneProps } from "./ortak";
 
 /** Türkçe sayı: ondalık virgül, eksi işareti. */
 const say = (x: number, d = 1) =>
-  x.toLocaleString("tr-TR", { maximumFractionDigits: d, useGrouping: false }).replace("-", "−");
+  x.toLocaleString(SAYI_YEREL, { maximumFractionDigits: d, useGrouping: false }).replace("-", "−");
 const sinir = (x: number, a: number, b: number) => Math.max(a, Math.min(b, x));
 /** Oynatma ilerlemesi 0..1 (hiç oynatılmadıysa 0). */
 const ilerleme = (t: number, oynuyor: boolean, sure: number) => (oynuyor || t > 0 ? sinir(t / sure, 0, 1) : 0);
@@ -50,27 +51,27 @@ function Gosterim({ x, y, A, Z, sembol, renk = "var(--ink)", boy = 34 }: { x: nu
 
 /* ================= 1. Çekirdek ve izotop ================= */
 
-const HAFIF = ["", "H", "He", "Li", "Be", "B", "C", "N", "O"];
+const HAFIF = ["", "H", cev("He"), cev("Li"), cev("Be"), "B", "C", "N", "O"];
 const HAFIF_AD = ["", "hidrojen", "helyum", "lityum", "berilyum", "bor", "karbon", "azot", "oksijen"];
 function CekirdekSahne({ v }: SahneProps) {
   const p = sinir(v.p ?? 6, 1, 8), n = sinir(v.n ?? 6, 0, 10), A = p + n;
   const hedef = p === 6 && n === 8;
-  const baslik = p !== 6 ? `Z = ${p}: artık karbon değil, ${HAFIF_AD[p]}` : hedef ? "Karbon-14: karbon-12'nin izotopu" : `Karbon-${A}`;
+  const baslik = p !== 6 ? cev("Z = {0}: artık karbon değil, {1}", p, HAFIF_AD[p]) : hedef ? cev("Karbon-14: karbon-12'nin izotopu") : `Karbon-${A}`;
   return (
-    <svg viewBox="0 0 340 230" role="img" aria-label={`${p} proton, ${n} nötron: ${HAFIF_AD[p]}-${A}`}>
+    <svg viewBox="0 0 340 230" role="img" aria-label={cev("{0} proton, {1} nötron: {2}-{3}", p, n, HAFIF_AD[p], A)}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={hedef ? "var(--c3)" : p !== 6 ? "var(--c2)" : "var(--ink)"}>{baslik}</text>
       <Cekirdek x={100} y={122} p={p} n={n} r={9} />
       <Gosterim x={232} y={134} A={A} Z={p} sembol={HAFIF[p]} boy={44} />
       <g fontSize={12} fontWeight={700} fill="var(--muted)">
-        <text x={200} y={172}>Z = proton = <tspan fill={PROTON}>{p}</tspan></text>
-        <text x={200} y={190}>N = nötron = <tspan fill="var(--ink)">{n}</tspan></text>
+        <text x={200} y={172}>{cev("Z = proton =")} <tspan fill={PROTON}>{p}</tspan></text>
+        <text x={200} y={190}>{cev("N = nötron =")} <tspan fill="var(--ink)">{n}</tspan></text>
         <text x={200} y={208}>A = Z + N = <tspan fill="var(--ink)">{A}</tspan></text>
       </g>
       <g fontSize={11} fontWeight={700}>
         <circle cx={40} cy={214} r={6} fill={PROTON} />
-        <text x={50} y={218} fill="var(--muted)">proton</text>
+        <text x={50} y={218} fill="var(--muted)">{cev("proton")}</text>
         <circle cx={104} cy={214} r={6} fill={NOTRON} />
-        <text x={114} y={218} fill="var(--muted)">nötron</text>
+        <text x={114} y={218} fill="var(--muted)">{cev("nötron")}</text>
       </g>
     </svg>
   );
@@ -101,8 +102,8 @@ function Kuvvet({ v }: SahneProps) {
   const GX = 44, GW = 270, GY = 236, GH = 78, gx = (q: number) => GX + ((q - 1) / 3) * GW, gy = (f: number) => GY - sinir(olcek(f), 0, 1) * GH;
   const egri = (f: (q: number) => number) => yol(Array.from({ length: 65 }, (_, i) => { const q = 1 + (i / 64) * 3; return [gx(q), gy(f(q))]; }));
   return (
-    <svg viewBox="0 0 340 270" role="img" aria-label={`Protonlar arası ${say(r)} fm; ${baskin ? "güçlü çekim baskın" : "elektriksel itme baskın"}`}>
-      <text x={14} y={22} fontSize={13} fontWeight={800} fill={baskin ? "var(--c3)" : "var(--c2)"}>{baskin ? "Güçlü çekim baskın: bir arada kalırlar" : "Elektriksel itme baskın: ayrılırlar"}</text>
+    <svg viewBox="0 0 340 270" role="img" aria-label={cev("Protonlar arası {0} fm; {1}", say(r), baskin ? "güçlü çekim baskın" : "elektriksel itme baskın")}>
+      <text x={14} y={22} fontSize={13} fontWeight={800} fill={baskin ? "var(--c3)" : "var(--c2)"}>{baskin ? cev("Güçlü çekim baskın: bir arada kalırlar") : cev("Elektriksel itme baskın: ayrılırlar")}</text>
       {/* oklar: kırmızı itme dışa, yeşil çekim içe */}
       {ok(x1 - 12, -1, okBoy(fi), "var(--c2)", -20)}
       {ok(x2 + 12, 1, okBoy(fi), "var(--c2)", -20)}
@@ -114,17 +115,17 @@ function Kuvvet({ v }: SahneProps) {
           <text x={x} y={Y + 5} fontSize={14} fontWeight={800} fill="#fff" textAnchor="middle">+</text>
         </g>
       ))}
-      <text x={cx} y={Y + 46} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">aralarında {say(r)} fm (1 fm = 10⁻¹⁵ m)</text>
+      <text x={cx} y={Y + 46} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("aralarında")} {say(r)} {cev("fm (1 fm = 10⁻¹⁵ m)")}</text>
       {/* grafik */}
       <line x1={GX} x2={GX + GW} y1={GY} y2={GY} stroke="var(--line-2)" strokeWidth={1.4} />
       <path d={egri(itme)} fill="none" stroke="var(--c2)" strokeWidth={2.2} />
       <path d={egri(cekim)} fill="none" stroke="var(--c3)" strokeWidth={2.2} />
       <line x1={gx(r)} x2={gx(r)} y1={GY - GH - 4} y2={GY} stroke="var(--ink)" strokeWidth={1.2} strokeDasharray="3 3" />
-      {[1, 2, 3, 4].map((q) => <text key={q} x={gx(q)} y={GY + 14} fontSize={10.5} fill="var(--muted)" textAnchor="middle">{q} fm</text>)}
-      <text x={GX + GW} y={GY - GH + 6} fontSize={11} fontWeight={700} fill="var(--c2)" textAnchor="end">elektriksel itme</text>
-      <text x={GX + GW} y={GY - GH + 22} fontSize={11} fontWeight={700} fill="var(--c3)" textAnchor="end">güçlü çekim</text>
+      {[1, 2, 3, 4].map((q) => <text key={q} x={gx(q)} y={GY + 14} fontSize={10.5} fill="var(--muted)" textAnchor="middle">{q} {cev("fm")}</text>)}
+      <text x={GX + GW} y={GY - GH + 6} fontSize={11} fontWeight={700} fill="var(--c2)" textAnchor="end">{cev("elektriksel itme")}</text>
+      <text x={GX + GW} y={GY - GH + 22} fontSize={11} fontWeight={700} fill="var(--c3)" textAnchor="end">{cev("güçlü çekim")}</text>
       <text x={GX - 6} y={GY - GH + 4} fontSize={10.5} fill="var(--muted)" textAnchor="end">F</text>
-      <text x={GX} y={GY + 30} fontSize={10.5} fill="var(--muted)">temsilî ölçek</text>
+      <text x={GX} y={GY + 30} fontSize={10.5} fill="var(--muted)">{cev("temsilî ölçek")}</text>
     </svg>
   );
 }
@@ -147,9 +148,9 @@ function Kutle({ t, oynuyor, s }: SahneProps) {
       <text x={x} y={y + 88} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{yazi}</text>
     </g>
   );
-  const baslik = zt === 0 ? "Hangisi daha ağır?" : bitti ? `Kütle açığı Δm = ${say(AYRI - HE, 4)} u` : "Terazi serbest…";
+  const baslik = zt === 0 ? cev("Hangisi daha ağır?") : bitti ? cev("Kütle açığı Δm = {0} u", say(AYRI - HE, 4)) : cev("Terazi serbest…");
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={bitti ? "Ayrı nükleonlar daha ağır; aradaki fark kütle açığı" : "Solda ayrı 2 proton ve 2 nötron, sağda helyum-4 çekirdeği"}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={bitti ? cev("Ayrı nükleonlar daha ağır; aradaki fark kütle açığı") : cev("Solda ayrı 2 proton ve 2 nötron, sağda helyum-4 çekirdeği")}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={bitti ? "var(--c3)" : "var(--ink)"}>{baslik}</text>
       {/* ayak */}
       <path d={`M${CX} ${CY} L${CX} 214 M${CX - 30} 214 L${CX + 30} 214`} stroke="var(--line-2)" strokeWidth={4} strokeLinecap="round" />
@@ -161,9 +162,9 @@ function Kutle({ t, oynuyor, s }: SahneProps) {
             <circle key={i} cx={lx + Number(dx)} cy={ly + 50} r={6.5} fill={String(c)} stroke="var(--surface)" strokeWidth={1.2} />
           ))}
         </g>
-      ), bitti ? `${say(AYRI, 5)} u` : "ayrı 2p + 2n")}
-      {kefe(rx, ry, <Cekirdek x={rx} y={ry + 46} p={2} n={2} r={6.5} />, bitti ? `${say(HE, 5)} u` : "helyum-4 çekirdeği")}
-      {bitti && <text x={14} y={42} fontSize={11.5} fontWeight={700} fill="var(--muted)">E = Δm·c² ≈ 0,0304 · 931,5 ≈ 28,3 MeV</text>}
+      ), bitti ? `${say(AYRI, 5)} u` : cev("ayrı 2p + 2n"))}
+      {kefe(rx, ry, <Cekirdek x={rx} y={ry + 46} p={2} n={2} r={6.5} />, bitti ? `${say(HE, 5)} u` : cev("helyum-4 çekirdeği"))}
+      {bitti && <text x={14} y={42} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("E = Δm·c² ≈ 0,0304 · 931,5 ≈ 28,3 MeV")}</text>}
     </svg>
   );
 }
@@ -186,20 +187,20 @@ function Egri({ v }: SahneProps) {
   const GX = 44, GW = 280, GY = 200, GH = 150;
   const gx = (a: number) => GX + Math.sqrt(a / 240) * GW, gy = (e: number) => GY - (e / 9.5) * GH;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`A = ${A}: nükleon başına yaklaşık ${say(E, 2)} MeV`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("A = {0}: nükleon başına yaklaşık {1} MeV", A, say(E, 2))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={tepe ? "var(--c3)" : "var(--ink)"}>
-        {yakin ? yakin[2] : `A = ${A}`}: <tspan fill="var(--c1)">{say(E, 2)} MeV</tspan> / nükleon{tepe ? " · tepe" : ""}
+        {yakin ? yakin[2] : `A = ${A}`}: <tspan fill="var(--c1)">{say(E, 2)} {cev("MeV")}</tspan> {cev("/ nükleon")}{tepe ? cev(" · tepe") : ""}
       </text>
       {/* eksenler */}
       <line x1={GX} x2={GX + GW} y1={GY} y2={GY} stroke="var(--line-2)" strokeWidth={1.4} />
       <line x1={GX} x2={GX} y1={GY} y2={GY - GH} stroke="var(--line-2)" strokeWidth={1.4} />
       {[0, 2, 4, 6, 8].map((e) => <text key={e} x={GX - 6} y={gy(e) + 4} fontSize={10.5} fill="var(--muted)" textAnchor="end">{e}</text>)}
       {[4, 16, 56, 120, 238].map((a) => <text key={a} x={gx(a)} y={GY + 14} fontSize={10.5} fill="var(--muted)" textAnchor="middle">{a}</text>)}
-      <text x={GX + GW} y={GY + 28} fontSize={10.5} fill="var(--muted)" textAnchor="end">kütle numarası A</text>
-      <text x={GX - 30} y={GY - GH - 8} fontSize={10.5} fill="var(--muted)">MeV</text>
+      <text x={GX + GW} y={GY + 28} fontSize={10.5} fill="var(--muted)" textAnchor="end">{cev("kütle numarası A")}</text>
+      <text x={GX - 30} y={GY - GH - 8} fontSize={10.5} fill="var(--muted)">{cev("MeV")}</text>
       {/* yönler */}
-      <text x={gx(14)} y={GY - 18} fontSize={11} fontWeight={700} fill="var(--c4)" textAnchor="middle">füzyon →</text>
-      <text x={gx(180)} y={GY - 18} fontSize={11} fontWeight={700} fill="var(--c4)" textAnchor="middle">← fisyon</text>
+      <text x={gx(14)} y={GY - 18} fontSize={11} fontWeight={700} fill="var(--c4)" textAnchor="middle">{cev("füzyon →")}</text>
+      <text x={gx(180)} y={GY - 18} fontSize={11} fontWeight={700} fill="var(--c4)" textAnchor="middle">{cev("← fisyon")}</text>
       <path d={yol(EGRI.map(([a, e]) => [gx(a), gy(e)]))} fill="none" stroke="var(--c1)" strokeWidth={2.4} strokeLinejoin="round" />
       {EGRI.map(([a, e]) => <circle key={a} cx={gx(a)} cy={gy(e)} r={2.6} fill="var(--c1)" />)}
       <line x1={gx(A)} x2={gx(A)} y1={gy(E)} y2={GY} stroke="var(--ink)" strokeWidth={1.2} strokeDasharray="3 3" />
@@ -211,8 +212,8 @@ function Egri({ v }: SahneProps) {
 /* ================= 5. Bozunma zinciri ================= */
 
 const AGIR: Record<number, string> = {
-  72: "Hf", 73: "Ta", 74: "W", 75: "Re", 76: "Os", 77: "Ir", 78: "Pt", 79: "Au", 80: "Hg", 81: "Tl", 82: "Pb", 83: "Bi", 84: "Po", 85: "At", 86: "Rn",
-  87: "Fr", 88: "Ra", 89: "Ac", 90: "Th", 91: "Pa", 92: "U", 93: "Np", 94: "Pu", 95: "Am", 96: "Cm", 97: "Bk", 98: "Cf", 99: "Es", 100: "Fm",
+  72: cev("Hf"), 73: cev("Ta"), 74: "W", 75: cev("Re"), 76: cev("Os"), 77: cev("Ir"), 78: cev("Pt"), 79: cev("Au"), 80: cev("Hg"), 81: cev("Tl"), 82: cev("Pb"), 83: cev("Bi"), 84: cev("Po"), 85: cev("At"), 86: cev("Rn"),
+  87: cev("Fr"), 88: cev("Ra"), 89: cev("Ac"), 90: cev("Th"), 91: cev("Pa"), 92: "U", 93: cev("Np"), 94: cev("Pu"), 95: cev("Am"), 96: cev("Cm"), 97: cev("Bk"), 98: cev("Cf"), 99: cev("Es"), 100: cev("Fm"),
 };
 function Zincir({ v }: SahneProps) {
   const a = sinir(v.a ?? 0, 0, 10), b = sinir(v.b ?? 0, 0, 8), A = 238 - 4 * a, Z = 92 - 2 * a + b;
@@ -224,15 +225,15 @@ function Zincir({ v }: SahneProps) {
   for (let i = 1; i <= a; i++) noktalar.push([92 - 2 * i, 238 - 4 * i]);
   for (let i = 1; i <= b; i++) noktalar.push([92 - 2 * a + i, A]);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${a} alfa ve ${b} beta eksi sonrası A = ${A}, Z = ${Z}: ${AGIR[Z]}-${A}`}>
-      <text x={14} y={22} fontSize={13} fontWeight={800} fill={hedef ? "var(--c3)" : "var(--ink)"}>{hedef ? "Kurşun-206'ya ulaştın!" : `Şu an: ${AGIR[Z]}-${A}`}</text>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0} alfa ve {1} beta eksi sonrası A = {2}, Z = {3}: {4}-{5}", a, b, A, Z, AGIR[Z], A)}>
+      <text x={14} y={22} fontSize={13} fontWeight={800} fill={hedef ? "var(--c3)" : "var(--ink)"}>{hedef ? cev("Kurşun-206'ya ulaştın!") : cev("Şu an: {0}-{1}", AGIR[Z], A)}</text>
       <Gosterim x={40} y={84} A={238} Z={92} sembol="U" boy={30} />
       <text x={84} y={76} fontSize={18} fontWeight={800} fill="var(--muted)">→</text>
       <Gosterim x={130} y={84} A={A} Z={Z} sembol={AGIR[Z]} renk={hedef ? "var(--c3)" : "var(--c1)"} boy={30} />
       <g fontSize={11} fontWeight={700}>
         <text x={192} y={58} fill={A === 206 ? "var(--c3)" : "var(--muted)"}>A = 238 − 4·{a} = {A}</text>
         <text x={192} y={76} fill={Z === 82 ? "var(--c3)" : "var(--muted)"}>Z = 92 − 2·{a} + {b} = {Z}</text>
-        <text x={192} y={94} fill="var(--muted)">hedef: ²⁰⁶₈₂Pb</text>
+        <text x={192} y={94} fill="var(--muted)">{cev("hedef: ²⁰⁶₈₂Pb")}</text>
       </g>
       {/* düzlem */}
       <line x1={GX} x2={GX + GW} y1={GY} y2={GY} stroke="var(--line-2)" strokeWidth={1.4} />
@@ -245,9 +246,9 @@ function Zincir({ v }: SahneProps) {
       <path d={yol(noktalar.map(([z, m]) => [gx(z), gy(m)]))} fill="none" stroke="var(--c1)" strokeWidth={2} strokeLinejoin="round" />
       {noktalar.map(([z, m], i) => <circle key={i} cx={gx(z)} cy={gy(m)} r={i === noktalar.length - 1 ? 5 : 3} fill={i === noktalar.length - 1 ? "var(--c1)" : "var(--c1)"} opacity={i === noktalar.length - 1 ? 1 : 0.55} />)}
       <text x={gx(92) + 8} y={gy(238) + 4} fontSize={10.5} fontWeight={700} fill="var(--muted)">U-238</text>
-      <text x={gx(82) + 12} y={gy(206) + 4} fontSize={10.5} fontWeight={700} fill="var(--c3)">Pb-206</text>
+      <text x={gx(82) + 12} y={gy(206) + 4} fontSize={10.5} fontWeight={700} fill="var(--c3)">{cev("Pb-206")}</text>
       <g fontSize={10.5} fontWeight={700} fill="var(--muted)">
-        <text x={GX + GW} y={GY - 44} textAnchor="end">α: sola-aşağı · β⁻: sağa</text>
+        <text x={GX + GW} y={GY - 44} textAnchor="end">{cev("α: sola-aşağı · β⁻: sağa")}</text>
       </g>
     </svg>
   );
@@ -279,9 +280,9 @@ function Isinim({ t, oynuyor, s }: SahneProps) {
       <text x={x + w / 2} y={ay} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{ad}</text>
     </g>
   );
-  const baslik = zt === 0 ? "Kaynak α, β⁻ ve γ saçıyor" : bitti ? "β⁻ en çok saptı. γ hiç sapmadı" : "Işımalar elektrik alandan geçiyor…";
+  const baslik = zt === 0 ? cev("Kaynak α, β⁻ ve γ saçıyor") : bitti ? cev("β⁻ en çok saptı. γ hiç sapmadı") : cev("Işımalar elektrik alandan geçiyor…");
   return (
-    <svg viewBox="0 0 340 230" role="img" aria-label={bitti ? "Alfa negatif plakaya az, beta eksi pozitif plakaya çok saptı, gama sapmadı; alfa kâğıtta, beta alüminyumda durdu, gama kurşunda zayıfladı" : "Radyoaktif kaynak, elektrik alan ve üç engel"}>
+    <svg viewBox="0 0 340 230" role="img" aria-label={bitti ? cev("Alfa negatif plakaya az, beta eksi pozitif plakaya çok saptı, gama sapmadı; alfa kâğıtta, beta alüminyumda durdu, gama kurşunda zayıfladı") : cev("Radyoaktif kaynak, elektrik alan ve üç engel")}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={bitti ? "var(--c3)" : "var(--ink)"}>{baslik}</text>
       {/* plakalar */}
       <rect x={IS.P0} y={52} width={IS.P1 - IS.P0} height={5} rx={2} fill="var(--c2)" />
@@ -289,9 +290,9 @@ function Isinim({ t, oynuyor, s }: SahneProps) {
       <text x={IS.P0 - 8} y={60} fontSize={14} fontWeight={800} fill="var(--c2)" textAnchor="end">+</text>
       <text x={IS.P0 - 8} y={171} fontSize={14} fontWeight={800} fill="var(--c1)" textAnchor="end">−</text>
       {/* engeller */}
-      {engel(208, 3, "color-mix(in srgb, #805608 30%, var(--surface))", "kâğıt", 204)}
-      {engel(253, 5, "#b8c2cf", "alüminyum", 218)}
-      {engel(298, 14, "#6b7280", "kurşun", 204)}
+      {engel(208, 3, "color-mix(in srgb, #805608 30%, var(--surface))", cev("kâğıt"), 204)}
+      {engel(253, 5, "#b8c2cf", cev("alüminyum"), 218)}
+      {engel(298, 14, "#6b7280", cev("kurşun"), 204)}
       {/* ışımalar */}
       {ISIMALAR.map((i) => {
         const son = Math.min(on, i.dur), pts: [number, number][] = [];
@@ -309,7 +310,7 @@ function Isinim({ t, oynuyor, s }: SahneProps) {
       })}
       {/* kaynak */}
       <rect x={IS.SX - 14} y={IS.SY - 12} width={18} height={24} rx={3} fill="var(--ink)" />
-      <text x={IS.SX - 5} y={IS.SY + 30} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">kaynak</text>
+      <text x={IS.SX - 5} y={IS.SY + 30} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("kaynak")}</text>
     </svg>
   );
 }
@@ -323,9 +324,9 @@ function YariOmur({ v }: SahneProps) {
   const gx = (q: number) => GX + (q / 24) * GW, gy = (m: number) => GY - (m / YO.N0) * GH;
   const egri = yol(Array.from({ length: 97 }, (_, i) => { const q = (i / 96) * 24; return [gx(q), gy(YO.N0 / 2 ** (q / YO.T))]; }));
   return (
-    <svg viewBox="0 0 340 232" role="img" aria-label={`${t} gün sonra ${say(N, 2)} g kaldı`}>
-      <text x={14} y={22} fontSize={13} fontWeight={800} fill={hedef ? "var(--c3)" : "var(--ink)"}>Kalan: <tspan fill="var(--c1)">{say(N, 2)} g</tspan></text>
-      <text x={14} y={42} fontSize={11.5} fontWeight={700} fill="var(--muted)">n = {t} / 4 = {say(n, 2)} yarı ömür → 120 / 2{n === Math.round(n) ? <tspan dy={-5} fontSize={9}>{n}</tspan> : <tspan dy={-5} fontSize={9}>{say(n, 2)}</tspan>}</text>
+    <svg viewBox="0 0 340 232" role="img" aria-label={cev("{0} gün sonra {1} g kaldı", t, say(N, 2))}>
+      <text x={14} y={22} fontSize={13} fontWeight={800} fill={hedef ? "var(--c3)" : "var(--ink)"}>{cev("Kalan:")} <tspan fill="var(--c1)">{say(N, 2)} g</tspan></text>
+      <text x={14} y={42} fontSize={11.5} fontWeight={700} fill="var(--muted)">n = {t} / 4 = {say(n, 2)} {cev("yarı ömür → 120 / 2")}{n === Math.round(n) ? <tspan dy={-5} fontSize={9}>{n}</tspan> : <tspan dy={-5} fontSize={9}>{say(n, 2)}</tspan>}</text>
       <line x1={GX} x2={GX + GW} y1={GY} y2={GY} stroke="var(--line-2)" strokeWidth={1.4} />
       <line x1={GX} x2={GX} y1={GY} y2={GY - GH} stroke="var(--line-2)" strokeWidth={1.4} />
       {[120, 60, 30, 15].map((m) => (
@@ -335,7 +336,7 @@ function YariOmur({ v }: SahneProps) {
         </g>
       ))}
       {[0, 4, 8, 12, 16, 20, 24].map((q) => <text key={q} x={gx(q)} y={GY + 14} fontSize={10.5} fill="var(--muted)" textAnchor="middle">{q}</text>)}
-      <text x={GX + GW} y={GY + 28} fontSize={10.5} fill="var(--muted)" textAnchor="end">gün</text>
+      <text x={GX + GW} y={GY + 28} fontSize={10.5} fill="var(--muted)" textAnchor="end">{cev("gün")}</text>
       <text x={GX - 30} y={GY - GH - 8} fontSize={10.5} fill="var(--muted)">g</text>
       <path d={egri} fill="none" stroke="var(--c1)" strokeWidth={2.4} />
       <line x1={gx(t)} x2={gx(t)} y1={gy(N)} y2={GY} stroke="var(--ink)" strokeWidth={1.2} strokeDasharray="3 3" />
@@ -354,9 +355,9 @@ function Fisyon({ v }: SahneProps) {
     const n = Math.min(sayilar[g], SINIR);
     return 30 + ((j + 0.5) / n) * 250;
   };
-  const baslik = k === 0 ? "Tepkime söndü" : k === 1 ? "Sabit hız: denetimli tepkime" : "Hızla büyüyor: denetimsiz";
+  const baslik = k === 0 ? cev("Tepkime söndü") : k === 1 ? cev("Sabit hız: denetimli tepkime") : cev("Hızla büyüyor: denetimsiz");
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Her bölünmeden ${k} nötron yeni bölünme yapıyor; kuşaklar: ${sayilar.join(", ")}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Her bölünmeden {0} nötron yeni bölünme yapıyor; kuşaklar: {1}", k, sayilar.join(", "))}>
       <text x={14} y={22} fontSize={13} fontWeight={800} fill={k === 1 ? "var(--c3)" : k === 0 ? "var(--muted)" : "var(--c2)"}>{baslik}</text>
       {sayilar.map((sayi, g) => {
         const n = Math.min(sayi, SINIR), y = satirY(g);
@@ -371,7 +372,7 @@ function Fisyon({ v }: SahneProps) {
           </g>
         );
       })}
-      <text x={14} y={232} fontSize={11.5} fontWeight={700} fill="var(--muted)">her satır bir kuşak; sağda bölünme sayısı</text>
+      <text x={14} y={232} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("her satır bir kuşak; sağda bölünme sayısı")}</text>
     </svg>
   );
 }

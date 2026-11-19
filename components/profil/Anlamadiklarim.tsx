@@ -1,4 +1,5 @@
 "use client";
+import { cev } from "@/lib/dil";
 import Link from "next/link";
 import type { DersId, Entry } from "@/lib/dersler";
 import { toggleAnlamadim } from "@/lib/store";
@@ -11,7 +12,7 @@ export default function Anlamadiklarim({ all, basliklar }: { all: Record<DersId,
   const list = useAnlamadiklarim(all, basliklar);
   const Soru = Icon.soru, Kapat = Icon.kapat;
   return (
-    <Kabuk title="Anlamadıklarım" sag={<UstEylem href="/tekrar/" label="Tekrar et" icon={<Icon.tekrar />} />} text={list.length ? "İşaretlediğin kartlar. Karta dokunup yeniden bakabilirsin." : undefined}>
+    <Kabuk title={cev("Anlamadıklarım")} sag={<UstEylem href="/tekrar/" label={cev("Tekrar et")} icon={<Icon.tekrar />} />} text={list.length ? cev("İşaretlediğin kartlar. Karta dokunup yeniden bakabilirsin.") : undefined}>
       {list.length ? (
         <Liste>
           {list.map(({ k, e, no, h }) => (
@@ -20,17 +21,17 @@ export default function Anlamadiklarim({ all, basliklar }: { all: Record<DersId,
                 <Simge><Soru /></Simge>
                 <span className="min-w-0 flex-1">
                   <Html as="span" className="block leading-snug font-semibold" html={h} />
-                  <span className="block truncate text-[13px] text-muted-foreground">{e.title} · {no}. kart</span>
+                  <span className="block truncate text-[13px] text-muted-foreground">{e.title} · {cev("{0}. kart", no)}</span>
                 </span>
               </Link>
-              <button className="grid size-11 flex-none place-items-center text-muted-foreground [&_svg]:size-4" aria-label="İşareti kaldır" onClick={() => toggleAnlamadim(k)}>
+              <button className="grid size-11 flex-none place-items-center text-muted-foreground [&_svg]:size-4" aria-label={cev("İşareti kaldır")} onClick={() => toggleAnlamadim(k)}>
                 <Kapat />
               </button>
             </div>
           ))}
         </Liste>
       ) : (
-        <Bos>Bir kartı anlamadıysan ders ekranında sağ üstteki ? simgesine dokun. Kart buraya gelir, sonra dönüp yeniden bakabilirsin.</Bos>
+        <Bos>{cev("Bir kartı anlamadıysan ders ekranında sağ üstteki ? simgesine dokun. Kart buraya gelir, sonra dönüp yeniden bakabilirsin.")}</Bos>
       )}
     </Kabuk>
   );

@@ -14,5 +14,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: python3 tools/check.py
+      # İngilizce çeviri: üretilen dosyalar güncel mi, eksik ya da bayat çeviri var mı (docs/CEVIRI.md)
+      - run: python3 tools/ceviri.py birlestir && git diff --exit-code content/en
+      - run: node tools/ceviri-ui.js denetle
       - run: npm run lint
       - run: npm run build

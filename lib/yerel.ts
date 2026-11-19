@@ -1,6 +1,7 @@
 "use client";
 // Telefonun kendi özelliklerine giden küçük yardımcılar: paylaşım menüsü ve mağazanın puanlama penceresi.
 // Sitede (tarayıcıda) paylaşım tarayıcının menüsüne ya da panoya düşer; puanlama yalnızca uygulamada çalışır.
+import { cev } from "@/lib/dil";
 import { Capacitor } from "@capacitor/core";
 import { olay } from "./olay";
 import { SITE_URL } from "./site";
@@ -30,7 +31,7 @@ export async function paylas(p: { baslik: string; metin?: string; url: string })
 /** ucler'i arkadaşa önerme: Ayarlar ve Profil'deki satır. */
 export const uygulamayiPaylas = () => {
   olay("paylas", { ne: "uygulama" });
-  return paylas({ baslik: "ucler", metin: "Konuları kısa kart, video ve etkileşimli soruyla anlatan ucler'i dene.", url: SITE_URL });
+  return paylas({ baslik: "ucler", metin: cev("Konuları kısa kart, video ve etkileşimli soruyla anlatan ucler'i dene."), url: SITE_URL });
 };
 
 const PUAN_ANAHTAR = "ucler.puanla", PUAN_ARA = 60 * 24 * 3600 * 1000;

@@ -1,5 +1,7 @@
 // Adımlı dersler (Brilliant tarzı): her adımda bir sahne (hareketli görsel), kısa metin ve bir görev.
 // İçerik content/adimli/*.json dosyalarındadır; biçim için docs/ICERIK-SPEC.md ("Adımlı ders").
+import adimliEn from "@/content/en/adimli.json";
+import { DIL } from "./dil";
 import hareket from "@/content/adimli/bir-boyutta-hareket.json";
 import atom from "@/content/adimli/atomun-yapisi.json";
 import modernAtom from "@/content/adimli/modern-atom-teorisi.json";
@@ -148,9 +150,12 @@ export type Adim = {
  * goster (örnek çözüm) kullanılmaz; adımı olmayan kartların çoğu once sorusuyla açılır (lib/dersler.ts Card). */
 export type AdimliDers = { id: string; ders: DersId; konu: string; baslik: string; ozet: string; adimlar: Adim[]; kapanis: string[]; soruOnce?: boolean };
 
-export const ADIMLI: AdimliDers[] = [
+const TR_ADIMLI: AdimliDers[] = [
   fizikGiris, maddeOzellikleri, basinc, kaldirma, isiSicaklik, vektorler, hareket, newton, ikiBoyut, bagil, isEnerji, basitMakineler, momentum, tork, cembersel, kutleCekimi, elektrostatik, elektrikAkimi, elektrikselEnerji, manyetizma, induksiyon, yariIletkenler, bhh, dalgalar, deprem, optik, dalgaOptigi, ozelGorelilik, kuantum, radyoaktivite,
   simya, kimyaBilimi, madde, atomModelleri, atom, modernAtom, periyodikTablo, kimyasalBaglar, maddeninHalleri, karisimlar, temelKanunlar, tepkimeler, mol, asitBaz, kimyaHerYerde, gazlar, cozeltiler, tepkimeEnerjisi, tepkimeHizi, kimyasalDenge, redoks, elektrokimya, organikGiris, hidrokarbonlar, fonksiyonelGruplar, enerjiKaynaklari, yesilKimya,
   canlilar, biyomolekuller, enzimler, hucreOrganeller, zar, siniflandirma, hayvanlar, bitkiler, mitoz, mayoz, kalitim, ekosistem, bitkiBiyolojisi, dnaGenetikKod, proteinSentezi, fotosentez, hucreselSolunum, sinirSistemi, endokrin, duyuOrganlari, destekHareket, sindirim, dolasim, solunum, bosaltim, uremeSistemi, populasyonKomunite, evrim,
 ] as unknown as AdimliDers[];
+// İngilizce kopyada çevrilmiş adımlı dersler content/en/adimli.json'dan gelir (tools/ceviri.py birlestir üretir).
+const EN_ADIMLI = adimliEn as unknown as Record<string, AdimliDers>;
+export const ADIMLI: AdimliDers[] = DIL === "en" ? TR_ADIMLI.map((d) => EN_ADIMLI[d.id] ?? d) : TR_ADIMLI;
 export const adimliDers = (id: string) => ADIMLI.find((d) => d.id === id);

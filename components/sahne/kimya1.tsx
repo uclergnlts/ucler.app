@@ -1,6 +1,7 @@
 "use client";
 // Kimya sahneleri (simya, kimyanın dili): element dönüşümü, damıtma, suyun elektrolizi, Lavoisier'in kapalı kabı,
 // bilimsel yöntem döngüsü, molekül kurma, element sembolü, tehlike işaretleri ve asidin seyreltilmesi.
+import { cev, ONDALIK } from "@/lib/dil";
 import { yumusak, type SahneKaydi, type SahneProps } from "./ortak";
 
 const SU = "color-mix(in srgb, #3294ff 20%, var(--surface))", ASIT = "color-mix(in srgb, #e4b71f 40%, var(--surface))";
@@ -28,18 +29,18 @@ function Karo({ x, z, s, ad, renk }: { x: number; z: number; s: string; ad: stri
 
 function ElementDonusum() {
   return (
-    <svg viewBox="0 0 340 214" role="img" aria-label="Kurşun 82 proton, altın 79 proton">
-      <Karo x={22} z={82} s="Pb" ad="Kurşun" renk="#7d8da3" />
-      <Karo x={214} z={79} s="Au" ad="Altın" renk="var(--c4)" />
+    <svg viewBox="0 0 340 214" role="img" aria-label={cev("Kurşun 82 proton, altın 79 proton")}>
+      <Karo x={22} z={82} s={cev("Pb")} ad={cev("Kurşun")} renk="#7d8da3" />
+      <Karo x={214} z={79} s={cev("Au")} ad={cev("Altın")} renk="var(--c4)" />
       <g>
         <line x1={134} x2={198} y1={96} y2={96} stroke="var(--line-2)" strokeWidth={3} strokeDasharray="6 6" />
         <path d="M206 96 L196 90 L196 102 Z" fill="var(--line-2)" />
         <text x={170} y={84} fontSize={20} fontWeight={800} textAnchor="middle" fill="var(--muted)">?</text>
       </g>
       <g fontSize={12.5} fontWeight={700} textAnchor="middle">
-        <text x={74} y={180} fill="var(--ink)">82 proton</text>
-        <text x={266} y={180} fill="var(--ink)">79 proton</text>
-        <text x={170} y={206} fill="var(--muted)" fontWeight={600}>Elementi çekirdekteki proton sayısı belirler.</text>
+        <text x={74} y={180} fill="var(--ink)">{cev("82 proton")}</text>
+        <text x={266} y={180} fill="var(--ink)">{cev("79 proton")}</text>
+        <text x={170} y={206} fill="var(--muted)" fontWeight={600}>{cev("Elementi çekirdekteki proton sayısı belirler.")}</text>
       </g>
     </svg>
   );
@@ -64,24 +65,24 @@ function Damitma({ t, oynuyor, s }: SahneProps) {
     : null;
   const damla = akis > 0 && akis < 1 ? 154 + ((u * 40) % 1) * 14 : null;
   return (
-    <svg viewBox="0 0 340 228" role="img" aria-label={`Damıtma düzeneği, sıcaklık ${T} derece`}>
+    <svg viewBox="0 0 340 228" role="img" aria-label={cev("Damıtma düzeneği, sıcaklık {0} derece", T)}>
       <g>
         <line x1={TUP.x1 + 26} y1={TUP.y1 + 10.4} x2={TUP.x2 - 26} y2={TUP.y2 - 10.4} stroke="color-mix(in srgb, #78b2fd 20%, var(--surface))" strokeWidth={24} strokeLinecap="round" />
         <line x1={TUP.x1} y1={TUP.y1} x2={TUP.x2} y2={TUP.y2} stroke="var(--line-2)" strokeWidth={7} strokeLinecap="round" />
-        <text x={142} y={70} fontSize={11.5} fontWeight={700} fill="var(--c1)" transform="rotate(21.8 142 70)">soğutucu (soğuk su)</text>
+        <text x={142} y={70} fontSize={11.5} fontWeight={700} fill="var(--c1)" transform="rotate(21.8 142 70)">{cev("soğutucu (soğuk su)")}</text>
       </g>
       <g>
         <circle cx={BX} cy={BY} r={BR} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={2.5} />
         <path d={balonSivi(BX, BY, BR - 1.5, sivi)} fill={ASIT} opacity={0.75} />
         <path d={`M${BX - 8} ${BY - BR + 2} L${BX - 8} 70 L${BX + 8} 70 L${BX + 8} ${BY - BR + 2}`} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={2.5} />
-        <text x={BX} y={BY + 22} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--ink)">su + alkol</text>
+        <text x={BX} y={BY + 22} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--ink)">{cev("su + alkol")}</text>
       </g>
       <g>
         <rect x={BX - 34} y={198} width={68} height={10} rx={4} fill="var(--ink)" />
         {u > 0 && [-14, 0, 14].map((d) => (
           <path key={d} d={`M${BX + d} 186 q5 6 0 11 q-5 -5 0 -11`} fill="var(--c4)" />
         ))}
-        <text x={BX} y={222} fontSize={11} textAnchor="middle" fill="var(--muted)">ısıtıcı</text>
+        <text x={BX} y={222} fontSize={11} textAnchor="middle" fill="var(--muted)">{cev("ısıtıcı")}</text>
       </g>
       <g>
         <line x1={BX} y1={44} x2={BX} y2={96} stroke="var(--ink)" strokeWidth={2} />
@@ -94,7 +95,7 @@ function Damitma({ t, oynuyor, s }: SahneProps) {
         {akis > 0 && <path d={`M${242 + (202 - top) * 0.24 - 4} ${top} L${298 - (202 - top) * 0.24 + 4} ${top} L300 196 Q300 202 294 202 L246 202 Q240 202 240 196 Z`} fill={ASIT} />}
         {damla !== null && <circle cx={262} cy={damla} r={2.6} fill="var(--kimya)" />}
         <text x={270} y={222} fontSize={11.5} fontWeight={700} textAnchor="middle" fill={akis > 0.5 ? "var(--kimya)" : "var(--muted)"}>
-          {akis > 0.5 ? "çoğunlukla alkol" : "toplama kabı"}
+          {akis > 0.5 ? cev("çoğunlukla alkol") : cev("toplama kabı")}
         </text>
       </g>
     </svg>
@@ -124,11 +125,11 @@ function Elektroliz({ t, oynuyor, s }: SahneProps) {
     </g>
   );
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={u >= 1 ? "Su hidrojen ve oksijen gazlarına ayrıldı" : "Suya elektrik akımı veriliyor"}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={u >= 1 ? cev("Su hidrojen ve oksijen gazlarına ayrıldı") : cev("Suya elektrik akımı veriliyor")}>
       <g>
         <rect x={60} y={110} width={220} height={90} fill={SU} />
         <path d="M60 96 L60 200 L280 200 L280 96" fill="none" stroke="var(--line-2)" strokeWidth={2.5} />
-        <text x={170} y={194} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--c1)">su</text>
+        <text x={170} y={194} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--c1)">{cev("su")}</text>
       </g>
       {tup(116, 72 * u, "H₂", "var(--c1)", "hidrojen")}
       {tup(212, 36 * u, "O₂", "var(--c2)", "oksijen")}
@@ -137,9 +138,9 @@ function Elektroliz({ t, oynuyor, s }: SahneProps) {
         <rect x={152} y={212} width={36} height={16} rx={3} fill="var(--ink)" />
         <text x={146} y={216} fontSize={13} fontWeight={800} textAnchor="end" fill="var(--ink)">−</text>
         <text x={194} y={217} fontSize={13} fontWeight={800} fill="var(--ink)">+</text>
-        <text x={170} y={224} fontSize={9.5} fontWeight={700} textAnchor="middle" fill="#fff">pil</text>
+        <text x={170} y={224} fontSize={9.5} fontWeight={700} textAnchor="middle" fill="#fff">{cev("pil")}</text>
       </g>
-      {u >= 1 && <text x={280} y={226} fontSize={11.5} fontWeight={700} textAnchor="end" fill="var(--muted)">hacim 2 : 1</text>}
+      {u >= 1 && <text x={280} y={226} fontSize={11.5} fontWeight={700} textAnchor="end" fill="var(--muted)">{cev("hacim 2 : 1")}</text>}
     </svg>
   );
 }
@@ -154,12 +155,12 @@ function KapaliKap({ t, oynuyor, s, v }: SahneProps) {
   const d = yumusak(u); // kalay → kalay oksit
   const renk = `rgb(${Math.round(140 + 90 * d)},${Math.round(150 + 82 * d)},${Math.round(165 + 70 * d)})`;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`Terazi ${kutle.toFixed(2)} gram gösteriyor, balonun ağzı ${acik ? "açık" : "kapalı"}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Terazi {0} gram gösteriyor, balonun ağzı {1}", kutle.toFixed(2), acik ? "açık" : "kapalı")}>
       <g>
         <circle cx={170} cy={116} r={44} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={2.5} />
         <path d="M160 74 L160 36 M180 74 L180 36" stroke="var(--line-2)" strokeWidth={2.5} />
         <ellipse cx={170} cy={150} rx={22 + 4 * d} ry={6} fill={renk} stroke="#aab4c2" strokeWidth={d} />
-        <text x={226} y={150} fontSize={11.5} fontWeight={700} fill="var(--muted)">{d > 0.5 ? "kalay oksit" : "kalay"}</text>
+        <text x={226} y={150} fontSize={11.5} fontWeight={700} fill="var(--muted)">{d > 0.5 ? cev("kalay oksit") : "kalay"}</text>
       </g>
       {!acik ? (
         <rect x={156} y={28} width={28} height={12} rx={3} fill="var(--ink)" />
@@ -169,17 +170,17 @@ function KapaliKap({ t, oynuyor, s, v }: SahneProps) {
             const k = (u * 4 + i / 2) % 1;
             return <text key={i} x={170 + (i ? 10 : -10)} y={8 + k * 48} fontSize={10.5} fontWeight={800} textAnchor="middle" fill="var(--c1)">O₂</text>;
           })}
-          <text x={196} y={34} fontSize={11.5} fontWeight={700} fill="var(--c1)">ağzı açık: hava girer</text>
+          <text x={196} y={34} fontSize={11.5} fontWeight={700} fill="var(--c1)">{cev("ağzı açık: hava girer")}</text>
         </g>
       )}
-      {oynuyor && <text x={44} y={116} fontSize={12} fontWeight={700} fill="var(--c4)">ısıtılıyor…</text>}
+      {oynuyor && <text x={44} y={116} fontSize={12} fontWeight={700} fill="var(--c4)">{cev("ısıtılıyor…")}</text>}
       <g>
         <rect x={100} y={162} width={140} height={8} rx={3} fill="var(--ink)" />
         <rect x={118} y={170} width={104} height={44} rx={8} fill="var(--panel)" />
         <text x={170} y={200} fontSize={20} fontWeight={800} textAnchor="middle" fill={kutle > 120.001 ? "var(--kimya)" : "var(--ink)"} fontFamily="var(--f-display)">
-          {kutle.toFixed(2).replace(".", ",")} g
+          {kutle.toFixed(2).replace(".", ONDALIK)} g
         </text>
-        <text x={170} y={230} fontSize={11} textAnchor="middle" fill="var(--muted)">terazi</text>
+        <text x={170} y={230} fontSize={11} textAnchor="middle" fill="var(--muted)">{cev("terazi")}</text>
       </g>
     </svg>
   );
@@ -188,12 +189,12 @@ function KapaliKap({ t, oynuyor, s, v }: SahneProps) {
 /* ---------- bilimsel yöntem döngüsü ---------- */
 
 function Dongu() {
-  const adlar = ["gözlem", "hipotez", "deney ve ölçüm", "sonuç"];
+  const adlar = [cev("gözlem"), "hipotez", cev("deney ve ölçüm"), cev("sonuç")];
   const R = 74, cx = 170, cy = 112;
   const nokta = (a: number, r = R) => [cx + r * Math.cos((a * Math.PI) / 180), cy + r * Math.sin((a * Math.PI) / 180)];
   const acilar = [-90, 0, 90, 180];
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label="Bilimsel yöntem: gözlem, hipotez, deney ve ölçüm, sonuç">
+    <svg viewBox="0 0 340 226" role="img" aria-label={cev("Bilimsel yöntem: gözlem, hipotez, deney ve ölçüm, sonuç")}>
       {acilar.map((a, i) => {
         const [x1, y1] = nokta(a + 22), [x2, y2] = nokta(a + 68);
         const [ux, uy] = [Math.cos(((a + 68 + 90) * Math.PI) / 180), Math.sin(((a + 68 + 90) * Math.PI) / 180)];
@@ -214,8 +215,8 @@ function Dongu() {
         );
       })}
       <g fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">
-        <text x={cx} y={cy - 2}>herkes tekrarlar,</text>
-        <text x={cx} y={cy + 14}>sayıyla ölçer</text>
+        <text x={cx} y={cy - 2}>{cev("herkes tekrarlar,")}</text>
+        <text x={cx} y={cy + 14}>{cev("sayıyla ölçer")}</text>
       </g>
     </svg>
   );
@@ -274,14 +275,14 @@ function Molekul({ s, v }: SahneProps) {
     parcalar.forEach((p) => { p.x += dx; p.y += dy; });
   }
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label={toplam ? `${formul}${ad ? `, ${ad}` : ""}` : "Henüz atom yok"}>
+    <svg viewBox="0 0 340 226" role="img" aria-label={toplam ? `${formul}${ad ? `, ${ad}` : ""}` : cev("Henüz atom yok")}>
       <g>
         {baglar.map(([a, b], i) => (
           <line key={i} x1={parcalar[a].x} y1={parcalar[a].y} x2={parcalar[b].x} y2={parcalar[b].y} stroke="var(--line-2)" strokeWidth={6} strokeLinecap="round" />
         ))}
         {parcalar.map((p, i) => {
           const A = ATOM[p.a] ?? { renk: "var(--muted)", r: 20, yazi: "#fff" };
-          const yuk = iyonik && varolan.length > 1 ? (p.a === "Na" ? "+" : p.a === "Cl" ? "−" : "") : "";
+          const yuk = iyonik && varolan.length > 1 ? (p.a === cev("Na") ? "+" : p.a === cev("Cl") ? "−" : "") : "";
           return (
             <g key={i}>
               <circle cx={p.x} cy={p.y} r={A.r} fill={A.renk} stroke={p.a === "H" ? "var(--line-2)" : "var(--surface)"} strokeWidth={2} />
@@ -289,7 +290,7 @@ function Molekul({ s, v }: SahneProps) {
             </g>
           );
         })}
-        {!toplam && <text x={cx} y={cy + 5} fontSize={13} textAnchor="middle" fill="var(--muted)">Atom ekle</text>}
+        {!toplam && <text x={cx} y={cy + 5} fontSize={13} textAnchor="middle" fill="var(--muted)">{cev("Atom ekle")}</text>}
       </g>
       <g>
         <text x={cx} y={182} fontSize={30} fontWeight={800} textAnchor="middle" fill="var(--ink)" fontFamily="var(--f-display)">{formul || " "}</text>
@@ -303,7 +304,7 @@ function Molekul({ s, v }: SahneProps) {
 
 function Sembol({ s }: SahneProps) {
   return (
-    <svg viewBox="0 0 340 214" role="img" aria-label={`Element sembolü ${String(s.sembol)}, atom numarası ${String(s.z)}`}>
+    <svg viewBox="0 0 340 214" role="img" aria-label={cev("Element sembolü {0}, atom numarası {1}", String(s.sembol), String(s.z))}>
       <rect x={105} y={20} width={130} height={150} rx={16} fill="var(--surface)" stroke="var(--kimya)" strokeWidth={2.5} />
       <text x={121} y={46} fontSize={15} fontWeight={700} fill="var(--muted)">{String(s.z)}</text>
       <text x={170} y={118} fontSize={60} fontWeight={800} textAnchor="middle" fill="var(--ink)" fontFamily="var(--f-display)">{String(s.sembol)}</text>
@@ -320,7 +321,7 @@ const ALEV = "M0 -34 C9 -20 22 -12 20 6 C19 22 9 30 0 30 C-12 30 -22 21 -20 5 C-
 function Piktogram({ s }: SahneProps) {
   const tur = String(s.isaret ?? "alev");
   return (
-    <svg viewBox="0 0 340 220" role="img" aria-label="Kırmızı çerçeveli tehlike işareti">
+    <svg viewBox="0 0 340 220" role="img" aria-label={cev("Kırmızı çerçeveli tehlike işareti")}>
       <rect x={106} y={46} width={128} height={128} transform="rotate(45 170 110)" fill="var(--surface)" stroke="#e2231a" strokeWidth={9} strokeLinejoin="round" />
       {tur === "alev" && (
         <g>
@@ -346,21 +347,21 @@ function Seyreltme({ t, oynuyor, s, secim }: SahneProps) {
   const u = oran(t, oynuyor, Number(s.sure ?? 5));
   const dogru = secim === 0;
   const secildi = secim !== null;
-  const icerik = !secildi ? null : dogru ? { renk: SU, ad: "su" } : { renk: ASIT, ad: "derişik asit" };
+  const icerik = !secildi ? null : dogru ? { renk: SU, ad: "su" } : { renk: ASIT, ad: cev("derişik asit") };
   const dokulen = !secildi ? null : dogru ? { renk: ASIT, ad: "asit" } : { renk: SU, ad: "su" };
   const akiyor = secildi && u > 0.05 && u < 0.85;
   const seviye = 196 - 50 - 22 * kes(u / 0.85);
   const sicrama = secildi && !dogru && u > 0.35;
   return (
-    <svg viewBox="0 0 340 228" role="img" aria-label={!secildi ? "Derişik asit ve su" : dogru ? "Asit suya yavaşça ekleniyor" : "Su asidin üstüne dökülüyor"}>
+    <svg viewBox="0 0 340 228" role="img" aria-label={!secildi ? cev("Derişik asit ve su") : dogru ? cev("Asit suya yavaşça ekleniyor") : cev("Su asidin üstüne dökülüyor")}>
       {!secildi ? (
         <g>
           <path d="M70 80 L70 190 Q70 198 78 198 L122 198 Q130 198 130 190 L130 80" fill="none" stroke="var(--line-2)" strokeWidth={2.5} />
           <rect x={72} y={110} width={56} height={86} fill={ASIT} />
-          <text x={100} y={70} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--ink)">derişik asit</text>
+          <text x={100} y={70} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--ink)">{cev("derişik asit")}</text>
           <path d="M210 80 L210 190 Q210 198 218 198 L262 198 Q270 198 270 190 L270 80" fill="none" stroke="var(--line-2)" strokeWidth={2.5} />
           <rect x={212} y={110} width={56} height={86} fill={SU} />
-          <text x={240} y={70} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--ink)">su</text>
+          <text x={240} y={70} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--ink)">{cev("su")}</text>
         </g>
       ) : (
         <g>
@@ -379,7 +380,7 @@ function Seyreltme({ t, oynuyor, s, secim }: SahneProps) {
           })}
           {u > 0.35 && (
             <text x={180} y={220} fontSize={13} fontWeight={800} textAnchor="middle" fill={dogru ? "var(--good)" : "var(--bad)"}>
-              {dogru ? "Sakin: ısı suya yayılır" : "Sıçrama: su birden kaynar"}
+              {dogru ? cev("Sakin: ısı suya yayılır") : cev("Sıçrama: su birden kaynar")}
             </text>
           )}
         </g>
@@ -394,7 +395,7 @@ export const KIMYA1: Record<string, SahneKaydi> = {
   elektroliz: { C: Elektroliz },
   "kapali-kap": {
     C: KapaliKap,
-    geri: (v) => (v.acik === 1 ? null : { baslik: "Kütle değişmedi", metin: "Ağzı kapalıyken içeri hava giremez. Anahtarla ağzını aç ve yeniden oynat." }),
+    geri: (v) => (v.acik === 1 ? null : { baslik: cev("Kütle değişmedi"), metin: cev("Ağzı kapalıyken içeri hava giremez. Anahtarla ağzını aç ve yeniden oynat.") }),
   },
   "bilim-dongu": { C: Dongu },
   "formul-kur": { C: Molekul },

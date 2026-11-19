@@ -1,5 +1,6 @@
 "use client";
 // Kimya sahneleri: atom (çekirdek, dönen elektron katmanları, gösterim) ve atomun ölçeği.
+import { cev } from "@/lib/dil";
 import { ELEMENTLER, katmanlar } from "@/lib/elementler";
 import { useState } from "react";
 import type { SahneKaydi, SahneProps } from "./ortak";
@@ -43,9 +44,9 @@ function Atom({ s, v, set }: SahneProps) {
   const el = ELEMENTLER[p - 1], q = p - e, A = p + n, k = katmanlar(e);
   // Testte (s.test) gösterim, yük ve element adı gizlenir: öğrenci sayıları kendisi kurar.
   const etiket = s.etiket === true, gizli = s.test === true;
-  const durum = q === 0 ? "Nötr atom" : q > 0 ? `Katyon: ${q} elektron verdi` : `Anyon: ${-q} elektron aldı`;
+  const durum = q === 0 ? cev("Nötr atom") : q > 0 ? cev("Katyon: {0} elektron verdi", q) : cev("Anyon: {0} elektron aldı", -q);
   return (
-    <svg viewBox={dokunmali ? "0 0 340 272" : "0 0 340 224"} role="img" aria-label={gizli ? `${p} proton, ${n} nötron, ${e} elektron` : `${el.ad}: ${p} proton, ${n} nötron, ${e} elektron`}>
+    <svg viewBox={dokunmali ? "0 0 340 272" : "0 0 340 224"} role="img" aria-label={gizli ? cev("{0} proton, {1} nötron, {2} elektron", p, n, e) : cev("{0}: {1} proton, {2} nötron, {3} elektron", el.ad, p, n, e)}>
       {k.map((c, i) => (
         <g key={i}>
           <circle cx={CX} cy={CY} r={R[i]} fill="none" stroke="var(--line-2)" strokeWidth={1.5} />
@@ -66,13 +67,13 @@ function Atom({ s, v, set }: SahneProps) {
       {etiket && (
         <g fontSize={11.5} fontWeight={700}>
           <line x1={CX + 4} y1={CY - 4} x2={236} y2={46} stroke="var(--c2)" strokeWidth={1.2} />
-          <text x={240} y={50} fill="var(--c2)">proton (+1)</text>
+          <text x={240} y={50} fill="var(--c2)">{cev("proton (+1)")}</text>
           <line x1={CX + 6} y1={CY + 4} x2={236} y2={78} stroke="#7d8da3" strokeWidth={1.2} />
-          <text x={240} y={82} fill="#6b7b91">nötron (0)</text>
+          <text x={240} y={82} fill="#6b7b91">{cev("nötron (0)")}</text>
           <line x1={CX + R[0]} y1={CY} x2={236} y2={112} stroke="var(--c1)" strokeWidth={1.2} />
-          <text x={240} y={116} fill="var(--c1)">elektron (−1)</text>
-          <text x={240} y={150} fill="var(--muted)" fontWeight={600}>çekirdek</text>
-          <text x={240} y={166} fill="var(--muted)" fontWeight={600}>= proton + nötron</text>
+          <text x={240} y={116} fill="var(--c1)">{cev("elektron (−1)")}</text>
+          <text x={240} y={150} fill="var(--muted)" fontWeight={600}>{cev("çekirdek")}</text>
+          <text x={240} y={166} fill="var(--muted)" fontWeight={600}>{cev("= proton + nötron")}</text>
         </g>
       )}
       {!etiket && !gizli && (
@@ -84,15 +85,15 @@ function Atom({ s, v, set }: SahneProps) {
           </text>
           <text x={284} y={124} fontSize={15} textAnchor="middle" fill="var(--ink)" fontWeight={700}>{el.ad}</text>
           <text x={284} y={146} fontSize={12} textAnchor="middle" fill="var(--muted)">A = {p} + {n} = {A}</text>
-          <text x={284} y={164} fontSize={12} textAnchor="middle" fill="var(--muted)">katmanlar: {k.join("-") || "yok"}</text>
+          <text x={284} y={164} fontSize={12} textAnchor="middle" fill="var(--muted)">{cev("katmanlar:")} {k.join("-") || "yok"}</text>
           <text x={332} y={216} fontSize={11.5} textAnchor="end" fontWeight={700} fill={q ? "var(--kimya)" : "var(--muted)"}>{durum}</text>
         </g>
       )}
       {dokunmali && (
         <g>
-          {([["p", "proton", "var(--c2)"], ["n", "nötron", "#9aa8ba"], ["e", "elektron", "var(--c1)"]] as const).map(([k, ad, renk], i) => (
+          {([["p", "proton", "var(--c2)"], ["n", cev("nötron"), "#9aa8ba"], ["e", "elektron", "var(--c1)"]] as const).map(([k, ad, renk], i) => (
             <g
-              key={k} role="button" tabIndex={0} aria-label={`${ad} ekle`} style={{ cursor: "pointer" }}
+              key={k} role="button" tabIndex={0} aria-label={cev("{0} ekle", ad)} style={{ cursor: "pointer" }}
               onClick={() => degistir(k, 1)}
               onKeyDown={(ev) => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); degistir(k, 1); } }}
             >
@@ -120,7 +121,7 @@ function AtomOlcek({ t, oynuyor }: SahneProps) {
   const k = Math.exp(u * 4.3); // 1 → ~74 kat
   const bulut = 70 * k, rc = 0.8 * k;
   return (
-    <svg viewBox="0 0 340 220" role="img" aria-label="Atomun içine yakınlaşma">
+    <svg viewBox="0 0 340 220" role="img" aria-label={cev("Atomun içine yakınlaşma")}>
       <defs>
         <radialGradient id="ad-bulut">
           <stop offset="0" stopColor="var(--c1)" stopOpacity={0.05} />
@@ -136,10 +137,10 @@ function AtomOlcek({ t, oynuyor }: SahneProps) {
       {rc < 3 ? <circle cx={170} cy={110} r={Math.max(rc, 1.2)} fill="var(--c2)" /> : <Cekirdek p={3} n={4} x={170} y={110} r={rc / 3.1} />}
       <rect x={10} y={10} width={320} height={26} rx={8} fill="var(--surface)" opacity={0.9} />
       <text x={170} y={28} fontSize={12.5} fontWeight={700} fill="var(--ink)" textAnchor="middle">
-        {u < 0.25 ? "Lityum atomu: çapı yaklaşık 0,0000000003 m" : u < 0.97 ? `Yakınlaşma: ${Math.round(k)} kat` : "Çekirdek: atomdan yaklaşık 100.000 kat küçük"}
+        {u < 0.25 ? cev("Lityum atomu: çapı yaklaşık 0,0000000003 m") : u < 0.97 ? cev("Yakınlaşma: {0} kat", Math.round(k)) : cev("Çekirdek: atomdan yaklaşık 100.000 kat küçük")}
       </text>
       {u >= 0.97 && (
-        <text x={170} y={204} fontSize={12} fill="var(--muted)" textAnchor="middle">Elektronlar çok uzakta; aradaki her yer boşluk.</text>
+        <text x={170} y={204} fontSize={12} fill="var(--muted)" textAnchor="middle">{cev("Elektronlar çok uzakta; aradaki her yer boşluk.")}</text>
       )}
     </svg>
   );

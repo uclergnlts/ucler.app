@@ -2,6 +2,7 @@
 // Ana sayfanın sağ üstündeki küçük simgeler: haftalık lig (kupa, /lig/), seri (alev + gün sayısı) ve günün görevleri (halka + x/3).
 // Simgeye dokununca alttan bir pencere açılır: seri için puan ve son 7 gün, görevler için liste.
 // Her görev, yapılacağı yere götürür (oyun → Oyunlar, video → Videolar, tekrar → Tekrar, gerisi → kalınan konu).
+import { cev } from "@/lib/dil";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { aktif, gorevAdi, PUAN, seri, useGorev, usePuan, type GorevId } from "@/lib/puan";
@@ -11,7 +12,7 @@ import { cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { Icon } from "./icons";
 
-const GUN_ADI = ["Pz", "Pt", "Sa", "Ça", "Pe", "Cu", "Ct"];
+const GUN_ADI = [cev("Pz"), cev("Pt"), cev("Sa"), cev("Ça"), cev("Pe"), cev("Cu"), cev("Ct")];
 
 /** Görev türünün simgesi ve rengi. */
 const GOREV_GORUNUM: Record<GorevId, { ikon: keyof typeof Icon; renk: string }> = {
@@ -46,13 +47,13 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
   const rozet = "flex h-9 items-center gap-1.5 rounded-full border border-border bg-card px-2.5 font-display text-[15px] font-extrabold tabular-nums transition-colors active:bg-secondary";
 
   return (
-    <div className="ml-auto flex items-center gap-2" aria-label="Bugün">
+    <div className="ml-auto flex items-center gap-2" aria-label={cev("Bugün")}>
       {oyun && <>
-      <Link href="/lig/" className={cn(rozet, "px-2 text-[var(--c5)] [&_svg]:size-5 [&_svg]:fill-[color-mix(in_srgb,var(--c5)_25%,var(--surface))]")} aria-label="Haftalık lig">
+      <Link href="/lig/" className={cn(rozet, "px-2 text-[var(--c5)] [&_svg]:size-5 [&_svg]:fill-[color-mix(in_srgb,var(--c5)_25%,var(--surface))]")} aria-label={cev("Haftalık lig")}>
         <Kupa />
       </Link>
       <Sheet>
-        <SheetTrigger className={cn(rozet, n > 0 ? "text-foreground" : "text-muted-foreground")} aria-label={`Seri: ${n} gün`}>
+        <SheetTrigger className={cn(rozet, n > 0 ? "text-foreground" : "text-muted-foreground")} aria-label={cev("Seri: {0} gün", n)}>
           <motion.span
             className={cn("grid [&_svg]:size-5", n > 0 ? "text-[#f07800] [&_svg]:fill-[#ffb020]" : "text-muted-foreground")}
             animate={tehlikede ? { scale: [1, 1.15, 1] } : undefined}
@@ -63,8 +64,8 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
           {n}
         </SheetTrigger>
         <SheetContent>
-          <SheetTitle className="sr-only">Serin</SheetTitle>
-          <SheetDescription className="sr-only">Seri, puan ve son 7 gün</SheetDescription>
+          <SheetTitle className="sr-only">{cev("Serin")}</SheetTitle>
+          <SheetDescription className="sr-only">{cev("Seri, puan ve son 7 gün")}</SheetDescription>
       <div className="grid gap-3.5 rounded-lg border border-border bg-secondary p-4">
         <div className="flex items-center gap-3.5">
           <motion.span
@@ -75,16 +76,16 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
             <Seri />
           </motion.span>
           <span className="grid min-w-0 leading-tight">
-            <b className="font-display text-[30px] font-extrabold tabular-nums">{n} gün</b>
+            <b className="font-display text-[30px] font-extrabold tabular-nums">{n} {cev("gün")}</b>
             <span className="text-[14px] font-semibold text-muted-foreground">
-              {n === 0 ? "Bugün bir şey öğren, serin başlasın" : tehlikede ? "Bugün bir şey öğren, serin bitmesin" : "Serin devam ediyor"}
+              {n === 0 ? cev("Bugün bir şey öğren, serin başlasın") : tehlikede ? cev("Bugün bir şey öğren, serin bitmesin") : cev("Serin devam ediyor")}
             </span>
           </span>
-          <span className="ml-auto flex flex-none items-center gap-1.5 rounded-full bg-card px-3 py-1.5 text-[15px] font-extrabold tabular-nums [&_svg]:size-4 [&_svg]:fill-[var(--glow)] [&_svg]:stroke-[var(--glow-deep)]" aria-label={`${p.toplam ?? 0} puan`}>
+          <span className="ml-auto flex flex-none items-center gap-1.5 rounded-full bg-card px-3 py-1.5 text-[15px] font-extrabold tabular-nums [&_svg]:size-4 [&_svg]:fill-[var(--glow)] [&_svg]:stroke-[var(--glow-deep)]" aria-label={cev("{0} puan", p.toplam ?? 0)}>
             <Yildiz />{p.toplam ?? 0}
           </span>
         </div>
-        <ol className="grid grid-cols-7 gap-1.5" aria-label="Son 7 gün">
+        <ol className="grid grid-cols-7 gap-1.5" aria-label={cev("Son 7 gün")}>
           {hafta.map((h) => (
             <li key={h.g} className="grid justify-items-center gap-1">
               <span
@@ -93,7 +94,7 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
                   h.on ? "bg-[#f07800] text-white" : "bg-card",
                   h.bugun && !h.on && "border-2 border-dashed border-[#f0a060]",
                 )}
-                aria-label={`${h.ad}: ${h.on ? "çalıştın" : "çalışmadın"}`}
+                aria-label={`${h.ad}: ${h.on ? cev("çalıştın") : cev("çalışmadın")}`}
               >
                 {h.on && <Check />}
               </span>
@@ -107,17 +108,17 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
       </>}
 
       <Sheet>
-        <SheetTrigger className={rozet} aria-label={`Günün görevleri: ${biten}/${gorevler.length || 3}`}>
+        <SheetTrigger className={rozet} aria-label={cev("Günün görevleri: {0}/{1}", biten, gorevler.length || 3)}>
           <Halka oran={tamamOran} className="size-5" />
           {biten}/{gorevler.length || 3}
-          <span className="font-sans text-[13px] font-semibold text-muted-foreground">görev</span>
+          <span className="font-sans text-[13px] font-semibold text-muted-foreground">{cev("görev")}</span>
         </SheetTrigger>
         <SheetContent>
-          <SheetDescription className="sr-only">Bugün yapılacak üç görev</SheetDescription>
+          <SheetDescription className="sr-only">{cev("Bugün yapılacak üç görev")}</SheetDescription>
       <div className="grid gap-3 py-1">
         <span className="flex items-center gap-3">
           <Halka oran={tamamOran} />
-          <SheetTitle className="flex-1 text-[16px]">Bugünün görevleri</SheetTitle>
+          <SheetTitle className="flex-1 text-[16px]">{cev("Bugünün görevleri")}</SheetTitle>
           <b className="font-display text-[16px] font-extrabold tabular-nums text-muted-foreground">{biten}/{gorevler.length || 3}</b>
         </span>
         <ul className="grid gap-3">
@@ -156,7 +157,7 @@ export default function Bugun({ konuHref }: { konuHref: string }) {
           })}
         </ul>
         {gorevler.length > 0 && biten === gorevler.length && (
-          <p className="text-[13px] font-semibold text-good">Bugünün görevleri tamam, +{PUAN.hepsi} bonus kazandın.</p>
+          <p className="text-[13px] font-semibold text-good">{cev("Bugünün görevleri tamam, +")}{PUAN.hepsi} {cev("bonus kazandın.")}</p>
         )}
       </div>
         </SheetContent>

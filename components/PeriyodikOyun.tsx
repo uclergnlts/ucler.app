@@ -1,6 +1,7 @@
 "use client";
 // Oyun: elementi periyodik tablodaki kutusuna yerleştir. İlk 20 element, 10 tur.
 // Kural kartlardakiyle aynı: katman sayısı periyodu, değerlik elektronu A grubunu verir.
+import { cev } from "@/lib/dil";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { kaydet, PUAN } from "@/lib/puan";
@@ -27,9 +28,9 @@ const KUTU = new Map(ELEMENTLER.map((e) => { const y = yer(e.z); return [`${y.pe
 
 function aciklama(z: number) {
   const e = ELEMENTLER[z - 1], k = katmanlar(z), y = yer(z);
-  if (z === 1) return `H (Z = 1): tek katmanda 1 elektron. 1. periyot, 1A grubu. Metal değildir ama 1A'da durur.`;
-  if (z === 2) return `He (Z = 2): tek katmanı 2 elektronla dolu. 1. periyot; soygaz olduğu için 8A grubunda.`;
-  return `${e.s} (Z = ${z}): elektronlar ${k.join(", ")} diye dizilir. ${k.length} katman var: ${y.periyot}. periyot. Son katmanda ${y.grup} elektron var: ${y.grup}A grubu.`;
+  if (z === 1) return cev("H (Z = 1): tek katmanda 1 elektron. 1. periyot, 1A grubu. Metal değildir ama 1A'da durur.");
+  if (z === 2) return cev("He (Z = 2): tek katmanı 2 elektronla dolu. 1. periyot; soygaz olduğu için 8A grubunda.");
+  return cev("{0} (Z = {1}): elektronlar {2} diye dizilir. {3} katman var: {4}. periyot. Son katmanda {5} elektron var: {6}A grubu.", e.s, z, k.join(", "), k.length, y.periyot, y.grup, y.grup);
 }
 
 function enIyi(): number {
@@ -60,24 +61,24 @@ export default function PeriyodikOyun() {
     govde = (
       <section className="oyun-giris">
         <div className="bubble">
-          <h2>Elementi yerine koy</h2>
-          <p>Sana bir element gösterilecek. Periyodik tabloda onun kutusuna dokun. {TUR} tur, ilk 20 element.</p>
+          <h2>{cev("Elementi yerine koy")}</h2>
+          <p>{cev("Sana bir element gösterilecek. Periyodik tabloda onun kutusuna dokun.")} {TUR} {cev("tur, ilk 20 element.")}</p>
         </div>
-        <button className="btn main" onClick={() => basla("z")}>Atom numarasıyla oyna</button>
-        <button className="btn" onClick={() => basla("ezber")}>Yalnızca adla oyna (zor)</button>
-        {rekor > 0 && <p className="oyun-rekor">En iyi sonucun: {rekor}/{TUR}</p>}
+        <button className="btn main" onClick={() => basla("z")}>{cev("Atom numarasıyla oyna")}</button>
+        <button className="btn" onClick={() => basla("ezber")}>{cev("Yalnızca adla oyna (zor)")}</button>
+        {rekor > 0 && <p className="oyun-rekor">{cev("En iyi sonucun:")} {rekor}/{TUR}</p>}
       </section>
     );
   } else if (bitti) {
     govde = (
       <section className="card end">
         <div className="score">{d.dogru}/{TUR}</div>
-        <h2>{d.dogru === TUR ? "Hepsi doğru, tablo artık senin!" : d.dogru >= 7 ? "Çok iyi, birkaç kutu kaldı." : "Katman kuralını bir daha dene."}</h2>
-        <p>En iyi sonucun: {Math.max(rekor, d.dogru)}/{TUR}</p>
+        <h2>{d.dogru === TUR ? cev("Hepsi doğru, tablo artık senin!") : d.dogru >= 7 ? cev("Çok iyi, birkaç kutu kaldı.") : cev("Katman kuralını bir daha dene.")}</h2>
+        <p>{cev("En iyi sonucun:")} {Math.max(rekor, d.dogru)}/{TUR}</p>
         <div className="acts">
-          <button className="btn main" onClick={() => basla(d.mod)}>Tekrar oyna</button>
-          <Link className="btn" href={href("kimya", "atomun-yapisi")}>Konu: Atomun yapısı</Link>
-          <Link className="btn" href="/oyunlar/">Oyunlara dön</Link>
+          <button className="btn main" onClick={() => basla(d.mod)}>{cev("Tekrar oyna")}</button>
+          <Link className="btn" href={href("kimya", "atomun-yapisi")}>{cev("Konu: Atomun yapısı")}</Link>
+          <Link className="btn" href="/oyunlar/">{cev("Oyunlara dön")}</Link>
         </div>
       </section>
     );
@@ -95,14 +96,14 @@ export default function PeriyodikOyun() {
     govde = (
       <>
         <div className="oyun-ust">
-          <span>Tur {d.i + 1} / {TUR}</span>
-          <span>{d.dogru} doğru</span>
+          <span>{cev("Tur")} {d.i + 1} / {TUR}</span>
+          <span>{d.dogru} {cev("doğru")}</span>
         </div>
         <div className="oyun-soru">
           <b>{e.s}</b>
           <span>{e.ad}{d.mod === "z" && <> · Z = {z}</>}</span>
         </div>
-        <div className="pt" role="grid" aria-label="Periyodik tablo, ilk dört periyot">
+        <div className="pt" role="grid" aria-label={cev("Periyodik tablo, ilk dört periyot")}>
           <span />
           {Array.from({ length: 8 }, (_, g) => (
             <span key={g} className="pt-h">{g + 1}A<i>{grup18(g + 1)}</i></span>
@@ -134,13 +135,13 @@ export default function PeriyodikOyun() {
         </div>
         {s && (
           <div className={`bubble ${bildi ? "ok" : "no"}`} aria-live="polite">
-            <h2>{bildi ? "Doğru!" : "Bu kutu değil"}</h2>
+            <h2>{bildi ? cev("Doğru!") : cev("Bu kutu değil")}</h2>
             <p>{aciklama(z)}</p>
           </div>
         )}
         <div className="controls one">
           <button className="btn main" disabled={!s} onClick={() => setD((o) => o && { ...o, i: o.i + 1, secim: null })}>
-            {d.i === TUR - 1 ? "Sonucu gör" : "Sonraki element"}
+            {d.i === TUR - 1 ? cev("Sonucu gör") : cev("Sonraki element")}
           </button>
         </div>
       </>
@@ -150,9 +151,9 @@ export default function PeriyodikOyun() {
   return (
     <div className="app" data-ders="kimya">
       <UstBar
-        geri={{ to: "/oyunlar/", label: "Oyunlara dön" }}
-        baslik="Periyodik tabloda yerini bul"
-        sag={d && <UstEylem label="Baştan başla" icon={<Icon.tekrar />} onClick={() => setD(null)} />}
+        geri={{ to: "/oyunlar/", label: cev("Oyunlara dön") }}
+        baslik={cev("Periyodik tabloda yerini bul")}
+        sag={d && <UstEylem label={cev("Baştan başla")} icon={<Icon.tekrar />} onClick={() => setD(null)} />}
       />
       <main className="view lesson">{govde}</main>
     </div>

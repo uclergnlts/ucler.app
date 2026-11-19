@@ -4,6 +4,7 @@
 // "Haftalık ligde görün" anahtarı açık öğrenciler; dönen yalnızca ad, puan, sıra. Günlük puan en çok 600 sayılır.
 // Listede ayrıca hesabı olmayan örnek öğrenciler görünür (20261024_lig_ornek.sql); "ornek" ile işaretlidir, sıra numarası
 // almaz, kişi sayısına ve madalyalara girmez (20261026_lig_ornek_etiket.sql). Kapatmak sunucuda tek satır.
+import { cev } from "@/lib/dil";
 import { sb, simdiEsitle } from "./bulut";
 
 /** madalya: geçen haftanın ilk üçündeyse 1, 2 ya da 3. ornek: hesabı olmayan örnek öğrenci (sira null). */
@@ -29,5 +30,5 @@ export async function ligOku(girisli: boolean): Promise<Lig | null> {
 export function kalanSure(bitis: string, simdi = Date.now()) {
   const dk = Math.max(0, Math.floor((Date.parse(bitis) - simdi) / 60_000));
   const g = Math.floor(dk / 1440), s = Math.floor((dk % 1440) / 60), d = dk % 60;
-  return g ? `${g} gün ${s} saat` : s ? `${s} saat ${d} dk` : `${d} dk`;
+  return g ? cev("{0} gün {1} saat", g, s) : s ? cev("{0} saat {1} dk", s, d) : `${d} dk`;
 }
