@@ -641,5 +641,264 @@
     ]
    }
   ]
+ },
+ "bir-boyutta-hareket": {
+  "title": "Motion in one dimension",
+  "summary": "How do position, velocity, and acceleration change along a straight line?",
+  "olay": {
+   "yer": "1971 · Surface of the Moon",
+   "h": "Which lands first, the hammer or the feather?",
+   "p": "Apollo 15 astronaut David Scott dropped a hammer and a falcon feather from the same height at the same moment. The Moon has no air, so both hit the ground together."
+  },
+  "cards": [
+   {
+    "h": "Position, displacement, and distance",
+    "p": "<b>Position</b> is where you are relative to a starting point. <b>Displacement</b> (Δx = x<sub>final</sub> − x<sub>initial</sub>) is a quantity with direction. <b>Distance</b> is the total length of the path you travel.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='25' y1='160' x2='305' y2='160' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='40' y1='155' x2='40' y2='165' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='40' y='180' font-size='12' fill='var(--ink)' text-anchor='middle'>0</text><line x1='80' y1='155' x2='80' y2='165' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='80' y='180' font-size='12' fill='var(--ink)' text-anchor='middle'>10</text><line x1='120' y1='155' x2='120' y2='165' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='120' y='180' font-size='12' fill='var(--ink)' text-anchor='middle'>20</text><line x1='160' y1='155' x2='160' y2='165' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='160' y='180' font-size='12' fill='var(--ink)' text-anchor='middle'>30</text><line x1='200' y1='155' x2='200' y2='165' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='200' y='180' font-size='12' fill='var(--ink)' text-anchor='middle'>40</text><line x1='240' y1='155' x2='240' y2='165' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='240' y='180' font-size='12' fill='var(--ink)' text-anchor='middle'>50</text><text x='318' y='180' font-size='12' fill='var(--muted)' text-anchor='end'>x (m)</text><line x1='40' y1='60' x2='40' y2='160' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><line x1='240' y1='60' x2='240' y2='160' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><line x1='160' y1='95' x2='160' y2='160' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><text x='40' y='30' font-size='12' fill='var(--muted)' text-anchor='middle'>start</text><circle cx='40' cy='160' r='4' fill='var(--acc)'/><line x1='40' y1='60' x2='233' y2='60' stroke='var(--c1)' stroke-width='2.5' fill='none'/><polygon points='240,60 230,64.5 230,55.5' fill='var(--c1)'/><text x='140' y='50' font-size='12' fill='var(--c1)' text-anchor='middle'>50 m forward</text><line x1='240' y1='95' x2='167' y2='95' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='160,95 170,90.5 170,99.5' fill='var(--c2)'/><text x='200' y='85' font-size='12' fill='var(--c2)' text-anchor='middle'>20 m back</text><line x1='40' y1='130' x2='153' y2='130' stroke='var(--acc)' stroke-width='3.5' fill='none'/><polygon points='160,130 150,134.5 150,125.5' fill='var(--acc)'/><text x='100' y='122' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='bold'>Δx = +30 m</text><text x='310' y='134' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='bold'>distance = 70 m</text></svg>",
+    "key": "If you go 50 m forward and then 20 m back, the distance is 70 m but the displacement is +30 m. Distance is never smaller than |Δx|."
+   },
+   {
+    "h": "Velocity and speed",
+    "p": "<b>Average speed</b> is distance divided by time. <b>Average velocity</b> is Δx / Δt, and it has a direction. Both are measured in m/s.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><rect x='10' y='10' width='145' height='110' fill='var(--panel)' rx='10'/><rect x='165' y='10' width='145' height='110' fill='var(--panel)' rx='10'/><text x='82.5' y='35' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Average speed</text><text x='82.5' y='60' font-size='12' fill='var(--ink)' text-anchor='middle'>distance / Δt</text><text x='82.5' y='82' font-size='12' fill='var(--ink)' text-anchor='middle'>70 m / 10 s</text><text x='82.5' y='106' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='bold'>= 7 m/s</text><text x='237.5' y='35' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>Average velocity</text><text x='237.5' y='60' font-size='12' fill='var(--ink)' text-anchor='middle'>Δx / Δt</text><text x='237.5' y='82' font-size='12' fill='var(--ink)' text-anchor='middle'>30 m / 10 s</text><text x='237.5' y='106' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='bold'>= 3 m/s</text><rect x='15' y='135' width='140' height='16' fill='var(--c4)' fill-opacity='0.6' rx='3'/><rect x='170' y='135' width='60' height='16' fill='var(--c1)' fill-opacity='0.6' rx='3'/><text x='82.5' y='178' font-size='12' fill='var(--muted)' text-anchor='middle'>scalar, no direction</text><text x='237.5' y='178' font-size='12' fill='var(--muted)' text-anchor='middle'>vector, points along +x</text></svg>",
+    "key": "Average speed is not the average of the speeds. If you cover half the distance at 40 km/h and the other half at 60 km/h, your average speed is 48 km/h."
+   },
+   {
+    "h": "Average and instantaneous velocity",
+    "p": "On a position-time graph, the slope between two points is the <b>average velocity</b>. The slope of the tangent at a single point is the <b>instantaneous velocity</b>.",
+    "svg": "<svg viewBox='0 0 320 205' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='180' x2='302.4' y2='180' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='308,180 300,183.6 300,176.4' fill='var(--ink)'/><line x1='40' y1='180' x2='40' y2='13.6' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='40,8 43.6,16 36.4,16' fill='var(--ink)'/><line x1='100' y1='175' x2='100' y2='185' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='100' y='200' font-size='12' fill='var(--ink)' text-anchor='middle'>1</text><line x1='160' y1='175' x2='160' y2='185' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='220' y1='175' x2='220' y2='185' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='280' y1='175' x2='280' y2='185' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='160' y='198' font-size='12' fill='var(--ink)' text-anchor='middle'>2</text><text x='220' y='198' font-size='12' fill='var(--ink)' text-anchor='middle'>3</text><text x='280' y='198' font-size='12' fill='var(--ink)' text-anchor='middle'>4</text><text x='318' y='198' font-size='12' fill='var(--muted)' text-anchor='end'>t (s)</text><text x='34' y='24' font-size='12' fill='var(--ink)' text-anchor='end'>16</text><text x='34' y='94' font-size='12' fill='var(--ink)' text-anchor='end'>9</text><text x='34' y='144' font-size='12' fill='var(--ink)' text-anchor='end'>4</text><text x='46' y='14' font-size='12' fill='var(--muted)'>x (m)</text><line x1='36' y1='20' x2='44' y2='20' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='36' y1='90' x2='44' y2='90' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='36' y1='140' x2='44' y2='140' stroke='var(--ink)' stroke-width='1.5' fill='none'/><path d='M40 180 Q160 180 280 20' fill='none' stroke='var(--ink)' stroke-width='2.5'/><line x1='40' y1='180' x2='280' y2='20' stroke='var(--c1)' stroke-width='2' fill='none' stroke-dasharray='5 4'/><line x1='172' y1='138' x2='268' y2='42' stroke='var(--c2)' stroke-width='2' fill='none'/><circle cx='220' cy='90' r='4' fill='var(--c2)'/><text x='200' y='150' font-size='12' fill='var(--c1)'>average: 4 m/s</text><text x='200' y='168' font-size='12' fill='var(--c2)'>instantaneous: 6 m/s</text><text x='226' y='104' font-size='12' fill='var(--c2)'>t = 3 s</text></svg>",
+    "key": "On an x–t graph, slope = velocity. A car's speedometer shows instantaneous speed."
+   },
+   {
+    "h": "Acceleration: how fast does velocity change?",
+    "p": "<b>Acceleration</b> tells you how much the velocity changes each second. It is a = Δv / Δt, measured in m/s². An acceleration that points opposite to the velocity slows the car down.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='15' y1='128' x2='305' y2='128' stroke='var(--line)' stroke-width='1.5' fill='none'/><circle cx='30' cy='120' r='8' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.5'/><text x='30' y='148' font-size='12' fill='var(--ink)' text-anchor='middle'>0 s</text><circle cx='50' cy='120' r='8' fill='var(--c1)' fill-opacity='0.55' stroke='var(--c1)' stroke-width='1.5'/><line x1='50' y1='95' x2='57' y2='95' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='62,95 54.8,98.2 54.8,91.8' fill='var(--c3)'/><text x='50' y='148' font-size='12' fill='var(--ink)' text-anchor='middle'>1 s</text><circle cx='110' cy='120' r='8' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1.5'/><line x1='110' y1='95' x2='127' y2='95' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='134,95 124,99.5 124,90.5' fill='var(--c3)'/><text x='110' y='148' font-size='12' fill='var(--ink)' text-anchor='middle'>2 s</text><circle cx='210' cy='120' r='8' fill='var(--c1)' fill-opacity='0.9500000000000001' stroke='var(--c1)' stroke-width='1.5'/><line x1='210' y1='95' x2='239' y2='95' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='246,95 236,99.5 236,90.5' fill='var(--c3)'/><text x='210' y='148' font-size='12' fill='var(--ink)' text-anchor='middle'>3 s</text><text x='30' y='80' font-size='12' fill='var(--c3)' text-anchor='middle'>0</text><text x='56' y='80' font-size='12' fill='var(--c3)' text-anchor='middle'>4 m/s</text><text x='122' y='80' font-size='12' fill='var(--c3)' text-anchor='middle'>8 m/s</text><text x='228' y='80' font-size='12' fill='var(--c3)' text-anchor='middle'>12 m/s</text><text x='160' y='30' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>a = 4 m/s², starting from rest</text><text x='160' y='185' font-size='12' fill='var(--muted)' text-anchor='middle'>velocity grows 4 m/s each second, so the gaps widen</text></svg>",
+    "key": "A car that goes from 0 to 20 m/s in 5 s has an acceleration of a = 20 / 5 = 4 m/s²."
+   },
+   {
+    "h": "Motion at constant velocity",
+    "p": "If the velocity is constant, the acceleration is zero and Δx = v·t. The position-time graph is a sloped line and the velocity-time graph is a horizontal line.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='95' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>x–t: sloped line</text><text x='250' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>v–t: horizontal line</text><line x1='35' y1='165' x2='160' y2='165' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='35' y1='165' x2='35' y2='40' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='35' y1='165' x2='155' y2='45' stroke='var(--c1)' stroke-width='2.5' fill='none'/><line x1='35' y1='45' x2='155' y2='45' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><text x='31' y='49' font-size='12' fill='var(--ink)' text-anchor='end'>20</text><text x='155' y='182' font-size='12' fill='var(--ink)' text-anchor='middle'>4</text><text x='40' y='36' font-size='12' fill='var(--muted)'>x (m)</text><text x='130' y='182' font-size='12' fill='var(--muted)' text-anchor='end'>t (s)</text><line x1='190' y1='165' x2='315' y2='165' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='190' y1='165' x2='190' y2='40' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='190' y='85' width='120' height='80' fill='var(--c3)' fill-opacity='0.2'/><line x1='190' y1='85' x2='310' y2='85' stroke='var(--c1)' stroke-width='2.5' fill='none'/><text x='186' y='89' font-size='12' fill='var(--ink)' text-anchor='end'>5</text><text x='310' y='182' font-size='12' fill='var(--ink)' text-anchor='middle'>4</text><text x='195' y='36' font-size='12' fill='var(--muted)'>v (m/s)</text><text x='285' y='182' font-size='12' fill='var(--muted)' text-anchor='end'>t (s)</text><text x='250' y='130' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>area = 20 m</text></svg>",
+    "key": "The area under a velocity-time graph gives the displacement."
+   },
+   {
+    "h": "Velocity and position at constant acceleration",
+    "p": "At constant acceleration, the velocity grows by the same amount each second, so v = v<sub>0</sub> + a·t. The area under the graph is a rectangle plus a triangle. That gives Δx = v<sub>0</sub>·t + ½·a·t².",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='180' x2='300' y2='180' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='40' y1='180' x2='40' y2='15' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='40' y='150' width='200' height='30' fill='var(--c1)' fill-opacity='0.2'/><polygon points='40,150 240,150 240,30' fill='var(--c3)' fill-opacity='0.2'/><line x1='40' y1='150' x2='240' y2='30' stroke='var(--ink)' stroke-width='2.5' fill='none'/><text x='140' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>v₀·t = 8 m</text><text x='180' y='135' font-size='12' fill='var(--ink)' text-anchor='middle'>½·a·t² = 16 m</text><text x='35' y='154' font-size='12' fill='var(--ink)' text-anchor='end'>2</text><text x='35' y='34' font-size='12' fill='var(--ink)' text-anchor='end'>10</text><line x1='36' y1='30' x2='44' y2='30' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='240' y='195' font-size='12' fill='var(--ink)' text-anchor='middle'>4</text><text x='300' y='195' font-size='12' fill='var(--muted)' text-anchor='end'>t (s)</text><text x='45' y='20' font-size='12' fill='var(--muted)'>v (m/s)</text><text x='150' y='20' font-size='12' fill='var(--ink)' font-weight='bold'>total: 24 m</text><text x='248' y='60' font-size='12' fill='var(--ink)'>a = 2 m/s²</text></svg>",
+    "key": "If v<sub>0</sub> = 2 m/s, a = 2 m/s², and t = 4 s, then Δx = 8 + 16 = 24 m."
+   },
+   {
+    "h": "The equation without time: braking distance",
+    "p": "When you don't know the time, use <b>v² = v<sub>0</sub>² + 2·a·Δx</b>. For this car, 0 = 400 − 10·Δx, so it stops in 40 m.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='175' x2='300' y2='175' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='40' y1='175' x2='40' y2='15' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='40,35 40,175 240,175' fill='var(--c4)' fill-opacity='0.2'/><line x1='40' y1='35' x2='240' y2='175' stroke='var(--ink)' stroke-width='2.5' fill='none'/><text x='35' y='39' font-size='12' fill='var(--ink)' text-anchor='end'>20</text><text x='240' y='192' font-size='12' fill='var(--ink)' text-anchor='middle'>4</text><line x1='240' y1='170' x2='240' y2='180' stroke='var(--ink)' stroke-width='1.5' fill='none'/><text x='300' y='192' font-size='12' fill='var(--muted)' text-anchor='end'>t (s)</text><text x='45' y='20' font-size='12' fill='var(--muted)'>v (m/s)</text><text x='48' y='150' font-size='12' fill='var(--ink)' font-weight='bold'>area = ½·20·4 = 40 m</text><text x='160' y='80' font-size='12' fill='var(--c2)'>slope = a = −5 m/s²</text></svg>",
+    "key": "The slope of a velocity-time graph is the acceleration. The area, ½ · 20 · 4 = 40 m, gives the same answer.",
+    "etk": {
+     "tur": "formul",
+     "soru": "Change the car's speed and its braking acceleration. When the speed doubles, how many times longer is the braking distance?",
+     "girdiler": [
+      {
+       "ad": "v0",
+       "etiket": "Initial speed",
+       "birim": "m/s",
+       "min": 5,
+       "max": 40,
+       "adim": 1,
+       "deger": 20
+      },
+      {
+       "ad": "a",
+       "etiket": "Magnitude of braking acceleration",
+       "birim": "m/s²",
+       "min": 1,
+       "max": 10,
+       "adim": 0.5,
+       "deger": 5
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "Δx",
+       "ifade": "v0^2/(2*a)",
+       "birim": "m",
+       "basamak": 1
+      },
+      {
+       "ad": "t",
+       "ifade": "v0/a",
+       "birim": "s",
+       "basamak": 1
+      },
+      {
+       "ad": "v<sub>0</sub>",
+       "ifade": "v0*3.6",
+       "birim": "km/h",
+       "basamak": 0
+      }
+     ]
+    },
+    "once": {
+     "soru": "A car moving at 20 m/s brakes and slows by 5 m/s every second. How many seconds does it take to stop?",
+     "secenekler": [
+      {
+       "yazi": "4 s",
+       "dogru": true,
+       "neden": "The velocity drops 5 m/s each second, so the car stops in 20 / 5 = 4 s. How many meters does it travel in that time?"
+      },
+      {
+       "yazi": "5 s",
+       "neden": "The velocity drops 5 m/s each second. How many 5s does it take to get from 20 down to 0?"
+      },
+      {
+       "yazi": "100 s",
+       "neden": "You don't multiply 20 by 5 here. A velocity of 20 m/s drops by 5 m/s each second."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Free fall",
+    "p": "Without air resistance, every object falls with the same acceleration. It is g ≈ 9.8 m/s², and we round it to 10 in calculations. For an object dropped from rest, v = g·t and h = ½·g·t².",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='30' y='16' font-size='12' fill='var(--muted)' text-anchor='middle'>t</text><text x='150' y='16' font-size='12' fill='var(--muted)' text-anchor='middle'>distance fallen</text><text x='255' y='16' font-size='12' fill='var(--muted)' text-anchor='middle'>velocity</text><line x1='80' y1='40' x2='80' y2='185.5' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><circle cx='80' cy='40' r='6' fill='var(--c2)' fill-opacity='0.4'/><line x1='92' y1='40' x2='118' y2='40' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><text x='30' y='44' font-size='12' fill='var(--ink)' text-anchor='middle'>0 s</text><text x='150' y='44' font-size='12' fill='var(--ink)' text-anchor='middle'>0</text><text x='255' y='44' font-size='12' fill='var(--c3)' text-anchor='middle'>0</text><circle cx='80' cy='56.2' r='6' fill='var(--c2)' fill-opacity='0.6000000000000001'/><line x1='92' y1='56.2' x2='118' y2='56.2' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><text x='30' y='60.2' font-size='12' fill='var(--ink)' text-anchor='middle'>1 s</text><text x='150' y='60.2' font-size='12' fill='var(--ink)' text-anchor='middle'>5 m</text><text x='255' y='60.2' font-size='12' fill='var(--c3)' text-anchor='middle'>10 m/s</text><circle cx='80' cy='104.7' r='6' fill='var(--c2)' fill-opacity='0.8'/><line x1='92' y1='104.7' x2='118' y2='104.7' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><text x='30' y='108.7' font-size='12' fill='var(--ink)' text-anchor='middle'>2 s</text><text x='150' y='108.7' font-size='12' fill='var(--ink)' text-anchor='middle'>20 m</text><text x='255' y='108.7' font-size='12' fill='var(--c3)' text-anchor='middle'>20 m/s</text><circle cx='80' cy='185.5' r='6' fill='var(--c2)' fill-opacity='1'/><line x1='92' y1='185.5' x2='118' y2='185.5' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><text x='30' y='189.5' font-size='12' fill='var(--ink)' text-anchor='middle'>3 s</text><text x='150' y='189.5' font-size='12' fill='var(--ink)' text-anchor='middle'>45 m</text><text x='255' y='189.5' font-size='12' fill='var(--c3)' text-anchor='middle'>30 m/s</text></svg>",
+    "key": "After 1 s the velocity is 10 m/s and the object has fallen 5 m. After 2 s the velocity is 20 m/s and it has fallen 20 m."
+   },
+   {
+    "h": "Thrown downward",
+    "p": "An object thrown downward also accelerates at g, but its velocity starts at v<sub>0</sub>. So <b>v = v<sub>0</sub> + g·t</b> and <b>h = v<sub>0</sub>·t + ½·g·t²</b>.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><text x='190' y='16' font-size='12' fill='var(--muted)' text-anchor='middle'>thrown down: v₀ = 5 m/s</text><line x1='80' y1='24' x2='80' y2='190' stroke='var(--line)' stroke-width='1' stroke-dasharray='5 4'/><circle cx='80' cy='30' r='6' fill='var(--c1)' fill-opacity='0.4'/><line x1='98' y1='30' x2='98' y2='39' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='98,46 93.5,36 102.5,36' fill='var(--c3)'/><line x1='62' y1='24' x2='62' y2='37' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='62,44 57.5,34 66.5,34' fill='var(--c2)'/><text x='150' y='34' font-size='12' fill='var(--ink)'>0 s: 5 m/s</text><circle cx='80' cy='64.7' r='6' fill='var(--c1)' fill-opacity='0.7'/><line x1='98' y1='64.7' x2='98' y2='93.2' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='98,100.2 93.5,90.2 102.5,90.2' fill='var(--c3)'/><line x1='62' y1='58.7' x2='62' y2='71.7' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='62,78.7 57.5,68.7 66.5,68.7' fill='var(--c2)'/><text x='150' y='68.7' font-size='12' fill='var(--c3)'>1 s: 15 m/s · 10 m</text><circle cx='80' cy='133.6' r='6' fill='var(--c1)' fill-opacity='1.0'/><line x1='98' y1='133.6' x2='98' y2='181.8' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='98,188.8 93.5,178.8 102.5,178.8' fill='var(--c3)'/><line x1='62' y1='127.6' x2='62' y2='140.6' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='62,147.6 57.5,137.6 66.5,137.6' fill='var(--c2)'/><text x='150' y='137.6' font-size='12' fill='var(--c3)' font-weight='bold'>2 s: 25 m/s · 30 m</text><text x='150' y='175' font-size='12' fill='var(--c2)' font-weight='bold'>a = g, always downward</text><text x='150' y='192' font-size='12' fill='var(--ink)'>v = v₀ + g·t</text></svg>",
+    "key": "A stone thrown at 5 m/s reaches 25 m/s in 2 s and travels 30 m.",
+    "once": {
+     "soru": "A stone is thrown downward at 5 m/s. What is its velocity after 2 s?",
+     "secenekler": [
+      {
+       "yazi": "25 m/s",
+       "dogru": true,
+       "neden": "The acceleration is still g, so the velocity grows 10 m/s each second. That gives 5 + 10 · 2 = 25 m/s."
+      },
+      {
+       "yazi": "20 m/s",
+       "neden": "That would be the velocity of a stone dropped from rest. This stone already started at 5 m/s."
+      },
+      {
+       "yazi": "15 m/s",
+       "neden": "That is the velocity after 1 s. In 2 s, 10 m/s is added twice."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Thrown upward",
+    "p": "An object thrown upward slows by 10 m/s each second, so v = v<sub>0</sub> − g·t. At the top its velocity is zero, but its acceleration is still g.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='186' x2='150' y2='186' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='80' y1='174' x2='80' y2='49' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 4'/><circle cx='80' cy='180' r='6' fill='var(--c1)' fill-opacity='0.4'/><circle cx='80' cy='77.1' r='6' fill='var(--c1)' fill-opacity='0.7'/><circle cx='80' cy='42.8' r='6' fill='var(--c1)' fill-opacity='1'/><line x1='98' y1='180' x2='98' y2='147' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='98,140 102.5,150 93.5,150' fill='var(--c3)'/><line x1='98' y1='77.1' x2='98' y2='64.1' stroke='var(--c3)' stroke-width='2.5' fill='none'/><polygon points='98,57.1 102.5,67.1 93.5,67.1' fill='var(--c3)'/><line x1='62' y1='166' x2='62' y2='179' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='62,186 57.5,176 66.5,176' fill='var(--c2)'/><line x1='62' y1='63.1' x2='62' y2='76.1' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='62,83.1 57.5,73.1 66.5,73.1' fill='var(--c2)'/><line x1='62' y1='28.8' x2='62' y2='41.8' stroke='var(--c2)' stroke-width='2.5' fill='none'/><polygon points='62,48.8 57.5,38.8 66.5,38.8' fill='var(--c2)'/><text x='190' y='16' font-size='12' fill='var(--muted)' text-anchor='middle'>upward velocity</text><text x='150' y='46.8' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='bold'>2 s: 0 (top)</text><text x='150' y='81.1' font-size='12' fill='var(--c3)' text-anchor='start'>1 s: 10 m/s</text><text x='150' y='176' font-size='12' fill='var(--c3)' text-anchor='start'>0 s: 20 m/s</text><text x='150' y='120' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='bold'>a = g, always downward</text><text x='150' y='138' font-size='12' fill='var(--ink)' text-anchor='start'>at the top v = 0, a = g</text></svg>",
+    "key": "The time to the top is v<sub>0</sub>/g and the maximum height is v<sub>0</sub>²/(2g). The way down takes as long as the way up, and the object returns at the same speed."
+   },
+   {
+    "h": "Moving between graphs",
+    "p": "The slope of a position-time graph gives velocity. The slope of a velocity-time graph gives acceleration. The area under a velocity-time graph gives Δx, and the area under an acceleration-time graph gives Δv. Area below the axis counts as negative.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><path d='M20 40 V140 H100' fill='none' stroke='var(--ink)' stroke-width='1.5'/><text x='60' y='160' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>x–t</text><path d='M125 40 V140 H205' fill='none' stroke='var(--ink)' stroke-width='1.5'/><text x='165' y='160' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>v–t</text><path d='M230 40 V140 H310' fill='none' stroke='var(--ink)' stroke-width='1.5'/><text x='270' y='160' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='bold'>a–t</text><path d='M20 140 Q60 140 98 52' fill='none' stroke='var(--c1)' stroke-width='2.5'/><polygon points='125,124 203,64 203,140 125,140' fill='var(--c3)' fill-opacity='0.2'/><line x1='125' y1='124' x2='203' y2='64' stroke='var(--c1)' stroke-width='2.5' fill='none'/><rect x='230' y='96' width='74' height='44' fill='var(--c3)' fill-opacity='0.2'/><line x1='230' y1='96' x2='304' y2='96' stroke='var(--c1)' stroke-width='2.5' fill='none'/><line x1='70' y1='26' x2='133' y2='26' stroke='var(--c1)' stroke-width='2' fill='none'/><polygon points='140,26 130,30.5 130,21.5' fill='var(--c1)'/><text x='105' y='18' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='bold'>slope</text><line x1='175' y1='26' x2='238' y2='26' stroke='var(--c1)' stroke-width='2' fill='none'/><polygon points='245,26 235,30.5 235,21.5' fill='var(--c1)'/><text x='210' y='18' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='bold'>slope</text><line x1='245' y1='176' x2='182' y2='176' stroke='var(--c3)' stroke-width='2' fill='none'/><polygon points='175,176 185,171.5 185,180.5' fill='var(--c3)'/><text x='210' y='194' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='bold'>area</text><line x1='140' y1='176' x2='77' y2='176' stroke='var(--c3)' stroke-width='2' fill='none'/><polygon points='70,176 80,171.5 80,180.5' fill='var(--c3)'/><text x='105' y='194' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='bold'>area</text></svg>",
+    "key": "If velocity and acceleration have the same sign, the object speeds up. If they have opposite signs, it slows down. So negative acceleration does not always mean slowing down."
+   },
+   {
+    "h": "Types of motion",
+    "p": "Motion comes in three forms. A runner moves in <b>translation</b>, a propeller in <b>rotation</b>, and a swing in <b>vibration</b>. Motion is also <b>uniform</b> or <b>non-uniform</b>, depending on whether the velocity changes.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='6' width='100' height='150' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><rect x='110' y='6' width='100' height='150' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><rect x='214' y='6' width='100' height='150' rx='6' fill='var(--c5)' fill-opacity='0.14' stroke='var(--c5)' stroke-width='1.5'/><text x='56' y='28' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Translation</text><text x='160' y='28' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Rotation</text><text x='264' y='28' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Vibration</text><defs><marker id='kart-hareket-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--ink)'/></marker></defs><rect x='22' y='72' width='26' height='26' rx='3' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-dasharray='3 2'/><rect x='62' y='72' width='26' height='26' rx='3' fill='var(--c1)'/><line x1='36' y1='112' x2='80' y2='112' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#kart-hareket-1)'/><circle cx='160' cy='86' r='24' fill='none' stroke='var(--c3)' stroke-width='2'/><circle cx='160' cy='86' r='3' fill='var(--ink)'/><line x1='160' y1='86' x2='177' y2='69' stroke='var(--c3)' stroke-width='2'/><path d='M132 110 A32 32 0 0 0 188 110' fill='none' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#kart-hareket-1)'/><line x1='240' y1='52' x2='288' y2='52' stroke='var(--ink)' stroke-width='2'/><line x1='264' y1='52' x2='250' y2='98' stroke='var(--c5)' stroke-width='1.5' stroke-dasharray='3 2'/><line x1='264' y1='52' x2='278' y2='98' stroke='var(--c5)' stroke-width='1.5'/><circle cx='278' cy='100' r='7' fill='var(--c5)'/><circle cx='250' cy='100' r='7' fill='var(--c5)' fill-opacity='0.3'/><path d='M246 118 Q264 128 282 118' fill='none' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#kart-hareket-1)'/><text x='56' y='144' font-size='10.5' fill='var(--muted)' text-anchor='middle'>a runner</text><text x='160' y='144' font-size='10.5' fill='var(--muted)' text-anchor='middle'>a propeller</text><text x='264' y='144' font-size='10.5' fill='var(--muted)' text-anchor='middle'>a swing</text><rect x='6' y='164' width='308' height='30' rx='6' fill='var(--panel)'/><text x='160' y='184' font-size='11.5' fill='var(--ink)' text-anchor='middle'>by velocity: uniform (constant) · non-uniform (changing)</text></svg>",
+    "key": "Vibration is moving back and forth on either side of an equilibrium point.",
+    "once": {
+     "soru": "How does a rolling wheel move?",
+     "secenekler": [
+      {
+       "yazi": "It moves forward and rotates",
+       "dogru": true,
+       "neden": "The center of the wheel travels from one place to another, and the wheel also turns around its own axis. Both motions happen at once."
+      },
+      {
+       "yazi": "It only moves forward",
+       "neden": "Look at a point on the rim of the wheel. It also goes around the center."
+      },
+      {
+       "yazi": "It only rotates",
+       "neden": "The wheel is not spinning in place. Its center travels from one place to another."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• Displacement is a vector and distance is a scalar. Velocity is Δx/Δt and acceleration is Δv/Δt.<br>• At constant acceleration, v = v<sub>0</sub> + at and Δx = v<sub>0</sub>t + ½at².<br>• The slope of a position-time graph gives velocity. The slope of a velocity-time graph gives acceleration, and its area gives Δx.<br>• In free fall the acceleration is g.",
+    "svg": "<svg viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='170' x2='295' y2='170' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='40' y1='170' x2='40' y2='25' stroke='var(--ink)' stroke-width='1.5' fill='none'/><polygon points='40,130 240,60 240,170 40,170' fill='var(--c3)' fill-opacity='0.2'/><line x1='40' y1='130' x2='240' y2='60' stroke='var(--ink)' stroke-width='2.5' fill='none'/><text x='140' y='140' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='bold'>area = Δx</text><text x='120' y='70' font-size='13' fill='var(--c2)' text-anchor='end' font-weight='bold'>slope = a</text><text x='46' y='22' font-size='12' fill='var(--muted)'>v</text><text x='300' y='174' font-size='12' fill='var(--muted)'>t</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sahne",
+    "q": "The car goes 35 m forward from the starting point, then 15 m back. Move the car to its final position.",
+    "sahne": {
+     "tur": "konum",
+     "hedef": 20
+    },
+    "deger": {
+     "x": 0
+    },
+    "kontroller": [
+     {
+      "ad": "x",
+      "etiket": "Position",
+      "min": 0,
+      "max": 50,
+      "birim": "m"
+     }
+    ],
+    "hedef": {
+     "x": 20
+    },
+    "e": "The final position is x = 35 − 15 = 20 m. The displacement is +20 m, and the distance traveled is 35 + 15 = 50 m."
+   },
+   {
+    "tur": "sayi",
+    "q": "On a car's v–t graph, the velocity rises steadily from 0 to 8 m/s between 0 and 4 s, then stays at 8 m/s between 4 and 6 s. What is the car's displacement in 6 s, in meters?",
+    "cevap": 32,
+    "birim": "m",
+    "e": "Displacement is the area under the velocity-time graph. The triangle has an area of ½·4·8 = 16 m and the rectangle 2·8 = 16 m. The total is 32 m."
+   },
+   {
+    "tur": "eslestir",
+    "q": "What do you read from each graph? Match them.",
+    "ciftler": [
+     [
+      "slope of the x–t graph",
+      "velocity"
+     ],
+     [
+      "slope of the v–t graph",
+      "acceleration"
+     ],
+     [
+      "area under the v–t graph",
+      "displacement"
+     ],
+     [
+      "area under the a–t graph",
+      "change in velocity (Δv)"
+     ]
+    ],
+    "e": "A slope tells you how fast the quantity on the vertical axis changes. On a position-time graph that is velocity, and on a velocity-time graph it is acceleration. An area gives a product. v·t is displacement and a·t is the change in velocity."
+   },
+   {
+    "q": "With no air resistance, a ball is thrown upward at 30 m/s. What is the maximum height it reaches, in meters? (g = 10 m/s²)",
+    "o": [
+     "45",
+     "90",
+     "30",
+     "15"
+    ],
+    "a": 0,
+    "e": "At the top the velocity is zero, so h = v₀² / (2g) = 900 / 20 = 45 m. The climb takes 30 / 10 = 3 s.",
+    "y": [
+     "",
+     "If you got 90, you forgot the 2 in the denominator. The correct form is h = v₀² / (2g) = 900 / 20.",
+     "30 is the number for the initial velocity. The height comes from v₀² / (2g).",
+     "If you got 15, you only divided the initial velocity by 2. The height is v₀² / (2g) = 45 m."
+    ]
+   }
+  ]
  }
 }

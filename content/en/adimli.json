@@ -395,5 +395,348 @@
    "The components are <b>Vx = V·cosθ</b> and <b>Vy = V·sinθ</b>. The magnitude is <b>V = √(Vx² + Vy²)</b>."
   ],
   "soruOnce": true
+ },
+ "bir-boyutta-hareket": {
+  "id": "bir-boyutta-hareket",
+  "ders": "fizik",
+  "konu": "bir-boyutta-hareket",
+  "baslik": "Motion in one dimension",
+  "ozet": "Try it first, then learn its name. Drive the car, drag the graph, and throw the ball.",
+  "adimlar": [
+   {
+    "baslik": "Position",
+    "metin": "Drag the car to the yellow flag.",
+    "sahne": {
+     "tur": "konum",
+     "hedef": 30
+    },
+    "deger": {
+     "x": 4
+    },
+    "kontroller": [
+     {
+      "ad": "x",
+      "etiket": "Position",
+      "min": 0,
+      "max": 50,
+      "birim": "m",
+      "tur": "surukle"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "x": 30
+     },
+     "tamam": "The car is 30 m from the start, so its position is x = 30 m. Position is always given relative to a starting point."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Displacement and distance",
+    "metin": "You can measure a trip in two ways. One is where you started and where you ended up. The other is how far you traveled in total.",
+    "sahne": {
+     "tur": "yer-degistirme",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "The car will go 40 m forward, then 30 m back. What do you think its displacement (Δx) is, in meters?",
+     "secenekler": [
+      {
+       "yazi": "+10 m",
+       "dogru": true,
+       "neden": "Displacement only looks at the first and last positions, so Δx = 10 − 0 = +10 m. The total length traveled is the <b>distance</b>, and it is 40 + 30 = 70 m."
+      },
+      {
+       "yazi": "+70 m",
+       "neden": "70 m is the total length the car traveled. That is the distance."
+      },
+      {
+       "yazi": "−30 m",
+       "neden": "−30 m is only the displacement on the way back. Don't forget the first 40 m."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Velocity",
+    "metin": "The camera takes one frame every second. A moves <b>5 m</b> each second. Set B's velocity and press play. Make the two cars travel side by side.",
+    "sahne": {
+     "tur": "hiz-serit",
+     "sure": 5,
+     "vA": 5
+    },
+    "deger": {
+     "vB": 8
+    },
+    "kontroller": [
+     {
+      "ad": "vB",
+      "etiket": "B's velocity",
+      "min": 1,
+      "max": 10,
+      "birim": "m/s"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "vB": 5
+     },
+     "tamam": "Both cars move 5 m each second, so v = Δx / Δt = 25 m / 5 s = 5 m/s. Equal velocities mean equally spaced frames."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Position-time graph",
+    "metin": "As the car moves, it plots its position on the graph at every moment. Pick <b>two different velocities</b> and play both.",
+    "sahne": {
+     "tur": "konum-zaman",
+     "sure": 5
+    },
+    "deger": {
+     "v": 4
+    },
+    "kontroller": [
+     {
+      "ad": "v",
+      "etiket": "Velocity",
+      "min": 2,
+      "max": 10,
+      "birim": "m/s"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "What does the faster car's line look like?",
+     "secenekler": [
+      {
+       "yazi": "Steeper",
+       "dogru": true,
+       "neden": "The fast car covers more ground each second, so its line rises faster. The slope of a position-time graph is the velocity."
+      },
+      {
+       "yazi": "Flatter",
+       "neden": "Look at the graphs. Which line is higher at second 5?"
+      },
+      {
+       "yazi": "Both have the same slope",
+       "neden": "The two lines don't end at the same place. Which one ends higher?"
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Acceleration",
+    "metin": "The car starts from rest and steps on the gas. Pick an acceleration and press play.",
+    "sahne": {
+     "tur": "ivme",
+     "sure": 5
+    },
+    "deger": {
+     "a": 2
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "Acceleration",
+      "min": 1,
+      "max": 4,
+      "birim": "m/s²"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 1,
+     "soru": "Which of these strips looks like the frames taken each second?",
+     "secenekler": [
+      {
+       "yazi": "<svg viewBox=\"0 0 200 20\" class=\"ad-serit\" aria-hidden=\"true\"><line x1=\"6\" x2=\"194\" y1=\"10\" y2=\"10\" stroke=\"var(--line-2)\" stroke-width=\"2\"/><circle cx=\"6\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"53\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"100\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"147\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"194\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/></svg>",
+       "neden": "Equal gaps mean constant velocity. A car that speeds up covers more ground each second.",
+       "etiket": "Frames equally spaced"
+      },
+      {
+       "yazi": "<svg viewBox=\"0 0 200 20\" class=\"ad-serit\" aria-hidden=\"true\"><line x1=\"6\" x2=\"194\" y1=\"10\" y2=\"10\" stroke=\"var(--line-2)\" stroke-width=\"2\"/><circle cx=\"6\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"18\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"53\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"112\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"194\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/></svg>",
+       "dogru": true,
+       "neden": "As the velocity grows, the car covers more ground each second, so the frames spread apart. The velocity-time graph also rises as a straight line.",
+       "etiket": "Frames spreading apart"
+      },
+      {
+       "yazi": "<svg viewBox=\"0 0 200 20\" class=\"ad-serit\" aria-hidden=\"true\"><line x1=\"6\" x2=\"194\" y1=\"10\" y2=\"10\" stroke=\"var(--line-2)\" stroke-width=\"2\"/><circle cx=\"6\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"88\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"147\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"182\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/><circle cx=\"194\" cy=\"10\" r=\"4.5\" fill=\"var(--ink)\"/></svg>",
+       "neden": "If the gaps shrink, the car is slowing down. How did the frames above spread?",
+       "etiket": "Frames closing in"
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Area under the graph",
+    "metin": "The car moves at a constant <b>5 m/s</b>. Drag the handle on the graph to move time forward and bring the car to the flag.",
+    "sahne": {
+     "tur": "so-vt-alan",
+     "v0": 5,
+     "a": 0,
+     "tMax": 6,
+     "yMax": 10,
+     "hedef": 20
+    },
+    "deger": {
+     "t": 1
+    },
+    "kontroller": [
+     {
+      "ad": "t",
+      "etiket": "Time",
+      "min": 0,
+      "max": 6,
+      "adim": 0.5,
+      "birim": "s",
+      "tur": "surukle"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "t": 4
+     },
+     "tamam": "The car traveled 20 m in 4 s. The shaded rectangle also has an area of 5 · 4 = 20. So the area under a velocity-time graph gives the distance traveled."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Area while speeding up",
+    "metin": "Now the car starts from rest and speeds up by <b>2 m/s</b> each second. Drag the handle and bring the car to the flag at 16 m.",
+    "sahne": {
+     "tur": "so-vt-alan",
+     "v0": 0,
+     "a": 2,
+     "tMax": 5,
+     "yMax": 10,
+     "hedef": 16
+    },
+    "deger": {
+     "t": 1
+    },
+    "kontroller": [
+     {
+      "ad": "t",
+      "etiket": "Time",
+      "min": 0,
+      "max": 5,
+      "adim": 0.5,
+      "birim": "s",
+      "tur": "surukle"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "t": 4
+     },
+     "tamam": "After 4 s the velocity was 8 m/s. The shaded triangle has an area of ½ · 8 · 4 = 16 m. The area rule also works for a car that speeds up."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Free fall",
+    "metin": "In a tube with the air pumped out, a 5 kg cannonball and a 1 g feather will be dropped at the same moment.",
+    "sahne": {
+     "tur": "so-dusme",
+     "sure": 2
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which one hits the ground first?",
+     "secenekler": [
+      {
+       "yazi": "The cannonball",
+       "neden": "The cannonball is pulled with a larger force, but its mass is larger by the same factor. So its acceleration is the same as the feather's."
+      },
+      {
+       "yazi": "The feather",
+       "neden": "What slows a feather in air is air resistance. This tube has no air."
+      },
+      {
+       "yazi": "At the same time",
+       "dogru": true,
+       "neden": "Without air, every object falls with the same acceleration. Both fell 20 m in 2 s. The gap between the marks grew each time, so they sped up as they fell."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Thrown upward",
+    "metin": "Drag the velocity arrow upward to choose the launch speed, then press play. Make the ball rise to exactly <b>20 m</b>.",
+    "sahne": {
+     "tur": "so-yukari",
+     "sure": 6,
+     "hedef": 20
+    },
+    "deger": {
+     "v0": 10
+    },
+    "kontroller": [
+     {
+      "ad": "v0",
+      "etiket": "Launch speed",
+      "min": 5,
+      "max": 30,
+      "adim": 5,
+      "birim": "m/s",
+      "tur": "surukle"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "v0": 20
+     },
+     "tamam": "The ball thrown at 20 m/s slowed by 10 m/s each second, stopped after 2 s, and reached 20 m. Then it came back in the same time, at the same speed."
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Read the motion from a graph",
+    "metin": "This time the graph is ready. Press play and watch the car. What happens in the yellow region?",
+    "sahne": {
+     "tur": "grafik-oku",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "What is the car doing between seconds 2 and 4, where the graph is flat?",
+     "secenekler": [
+      {
+       "yazi": "It is stopped",
+       "dogru": true,
+       "neden": "The position does not change, and x stays at 30 m. A horizontal line has zero slope, so the velocity is zero. In the last part the line goes down, so the car is coming back."
+      },
+      {
+       "yazi": "Moving at constant velocity",
+       "neden": "A car moving at constant velocity changes position every second, so its line is sloped. Is x changing here?"
+      },
+      {
+       "yazi": "Speeding up",
+       "neden": "The position graph of a car that speeds up is a curve that gets steeper. Press play and watch the car."
+      }
+     ]
+    },
+    "kart": 11
+   }
+  ],
+  "kapanis": [
+   "<b>Position</b> is where you are relative to the start. <b>Displacement</b> is Δx = x<sub>final</sub> − x<sub>initial</sub>.",
+   "<b>Distance</b> is the total length traveled. If you turn back, the distance is larger than Δx.",
+   "<b>Velocity</b> is displacement divided by time (v = Δx / Δt), and it is the slope of the position-time graph. Total distance divided by time is called <b>speed</b>. On a trip where you turn back, the two are different.",
+   "<b>Acceleration</b> is the change in velocity each second. For a car that speeds up, the frames spread apart.",
+   "If the position-time graph is flat, the car is stopped. If it goes down, the car is moving back."
+  ],
+  "soruOnce": true
  }
 }
