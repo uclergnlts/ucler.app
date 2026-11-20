@@ -2,7 +2,7 @@
 // Kim olduğumuzu, ne yaptığımızı ve nasıl anlattığımızı söyler; ders çözdürmez, uygulamaya ve kanala yönlendirir.
 // Kapak kalıbı: siyah zemin, dev gravür nesne, ölçek için minik Çizgi, pembe el çizimi ok, tek pembe kelime, sonda "..".
 import Link from "next/link";
-import { INSTAGRAM, PLAY_URL, YOUTUBE } from "@/lib/site";
+import { APP_STORE_URL, INSTAGRAM, IOS_YAYINDA, PLAY_URL, YOUTUBE } from "@/lib/site";
 import { CizgiDugme, CizgiIzleyen, CizgiYuruyen } from "./Cizgi";
 import { CIZIM_YOL } from "./Cizimler";
 import { Logo } from "./temel";
@@ -11,10 +11,10 @@ export type Dil = "en" | "tr";
 
 const METIN = {
   en: {
-    al: "Get the app", play: "Get it on Google Play", izle: "Watch on YouTube",
+    al: "Get the app", play: "Get it on Google Play", ios: "Download on the App Store", yakinda: "soon", izle: "Watch on YouTube",
     k1: "Fig. 1 · Who we are", h1a: "Knowledge belongs to ", h1b: "everyone",
     giris: "ucler is an independent science project from Türkiye. We help people understand physics, chemistry and biology: short interactive lessons in the app, and long, careful videos on YouTube.",
-    not: "iPhone app coming soon · The app is in Turkish today, English is on the way",
+    not: "The app is in Turkish today, English is on the way",
     k2: "What we do", h2: "Two ways in. Same idea behind both.",
     amac: "Our goal is simple: help people reach knowledge and learn science, wherever they live and whatever school they went to.",
     a1k: "01 · The app", a1h: "Learn by doing, a few minutes at a time",
@@ -44,10 +44,10 @@ const METIN = {
     gizlilik: "Privacy", kosul: "Terms", sil: "Delete account",
   },
   tr: {
-    al: "Uygulamayı indir", play: "Google Play'den indir", izle: "YouTube'da izle",
+    al: "Uygulamayı indir", play: "Google Play'den indir", ios: "App Store'dan indir", yakinda: "yakında", izle: "YouTube'da izle",
     k1: "Şekil 1 · Biz kimiz", h1a: "Bilgi ", h1b: "herkesindir",
     giris: "ucler, Türkiye'den bağımsız bir bilim projesidir. İnsanların fiziği, kimyayı ve biyolojiyi anlamasına yardım ediyoruz. Uygulamada kısa ve etkileşimli dersler, YouTube'da uzun ve özenli videolar hazırlıyoruz.",
-    not: "iPhone uygulaması yakında",
+    not: "",
     k2: "Ne yapıyoruz", h2: "İki ayrı yol var, ikisinin de fikri aynı.",
     amac: "Amacımız basit: nerede yaşarsa yaşasın, hangi okulda okumuş olursa olsun, herkesin bilgiye ulaşmasına ve bilimi öğrenmesine yardım etmek.",
     a1k: "01 · Uygulama", a1h: "Her gün birkaç dakikada, yaparak öğren",
@@ -87,6 +87,19 @@ const sarmal = "mx-auto w-full max-w-[1080px] px-5 sm:px-8";
 const anaDugme = "inline-flex h-12 items-center justify-center gap-2 rounded-md bg-[var(--btn)] px-5 text-[16px] font-bold text-[var(--on-btn)] transition-transform active:scale-[.98]";
 const cizgiDugme = "inline-flex h-12 items-center justify-center gap-2 rounded-md border border-[var(--line-2)] px-5 text-[16px] font-bold transition-colors hover:border-[var(--ink)]";
 
+const yakindaDugme = "inline-flex h-12 cursor-default items-center justify-center gap-2.5 rounded-md border border-dashed border-[var(--line-2)] px-5 text-[16px] font-bold text-[var(--muted)]";
+
+/** App Store düğmesi. iOS uygulaması yayında değilken (IOS_YAYINDA) bağlantı vermez, "yakında" yazar.
+ * Apple'ın rozetini taklit etmemek için logo kullanılmaz, yalnızca yazı vardır. */
+function AppStore({ m, sinif, ok }: { m: (typeof METIN)[Dil]; sinif: string; ok?: boolean }) {
+  if (IOS_YAYINDA) return <a href={APP_STORE_URL} className={sinif}>{m.ios}{ok && " →"}</a>;
+  return (
+    <span aria-disabled="true" className={ok ? "font-bold text-[var(--muted)]" : yakindaDugme}>
+      App Store <span className="font-mono text-[11px] font-normal tracking-[.14em] uppercase">· {m.yakinda}</span>
+    </span>
+  );
+}
+
 const maske = (id: string): React.CSSProperties => {
   const u = `url(/gravur/${id}.png)`;
   return { maskImage: u, WebkitMaskImage: u, maskSize: "contain", WebkitMaskSize: "contain", maskRepeat: "no-repeat", WebkitMaskRepeat: "no-repeat", maskPosition: "center bottom", WebkitMaskPosition: "center bottom" };
@@ -123,9 +136,10 @@ export default function Tanitim({ sayi, dil = "en" }: { sayi: Record<string, num
             </p>
             <div className="flex flex-wrap gap-3">
               <CizgiDugme><a href={PLAY_URL} className={anaDugme}>{m.play}</a></CizgiDugme>
+              <AppStore m={m} sinif={anaDugme} />
               <a href={YOUTUBE.url} className={cizgiDugme}>{m.izle}</a>
             </div>
-            <p className={mono}>{m.not}</p>
+            {m.not && <p className={mono}>{m.not}</p>}
           </div>
 
           <div className="relative mx-auto w-full max-w-[560px]">
@@ -157,7 +171,10 @@ export default function Tanitim({ sayi, dil = "en" }: { sayi: Record<string, num
             <p className="leading-relaxed text-[var(--muted)]">
               {m.a1p(Object.values(sayi).reduce((a, b) => a + b, 0))}
             </p>
-            <a href={PLAY_URL} className="mt-1 font-bold text-[var(--btn)]">{m.play} →</a>
+            <div className="mt-1 flex flex-wrap gap-x-6 gap-y-2">
+              <a href={PLAY_URL} className="font-bold text-[var(--btn)]">{m.play} →</a>
+              <AppStore m={m} sinif="font-bold text-[var(--btn)]" ok />
+            </div>
           </article>
           <article className="grid content-start gap-3 rounded-lg border border-[var(--line)] bg-[var(--surface)] p-6">
             <p className={mono}>{m.a2k}</p>
@@ -251,6 +268,7 @@ export default function Tanitim({ sayi, dil = "en" }: { sayi: Record<string, num
           </h2>
           <div className="flex flex-wrap gap-3">
             <a href={PLAY_URL} className={anaDugme}>{m.play}</a>
+            <AppStore m={m} sinif={anaDugme} />
             <a href={YOUTUBE.url} className={cizgiDugme}>{m.izle}</a>
           </div>
         </div>

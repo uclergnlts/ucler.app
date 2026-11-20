@@ -18,4 +18,9 @@ export const UYGULAMA = process.env.NEXT_PUBLIC_UYGULAMA === "1";
 export const YAKINDA_GOSTER = false;
 export const ANA = UYGULAMA || DIL === "en" ? "/" : "/ogren/";
 export const PLAY_URL = "https://play.google.com/store/apps/details?id=app.ucler";
+/** App Store sayfası (App Store Connect uygulama kimliği 6826647393). */
+export const APP_STORE_URL = "https://apps.apple.com/app/id6826647393";
+/** iOS uygulaması App Store'da yayında mı? false iken tanıtım sayfasındaki App Store düğmesi "yakında" olarak durur,
+ * bağlantı vermez (yayımlanmamış uygulamanın App Store sayfası açılmaz). Apple onaylayınca true yapılır. */
+export const IOS_YAYINDA = false;
 export const YOUTUBE = { ad: "@uclerapp", url: "https://www.youtube.com/@uclerapp" };
