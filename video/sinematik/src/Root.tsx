@@ -21,6 +21,11 @@ import { S23, S23_FRAMES } from './shorts/s23/Video';
 import { S24, S24_FRAMES } from './shorts/s24/Video';
 import { S25, S25_FRAMES } from './shorts/s25/Video';
 import { S26, S26_FRAMES } from './shorts/s26/Video';
+import { S27, S27_FRAMES } from './shorts/s27/Video';
+import { S28, S28_FRAMES } from './shorts/s28/Video';
+import { S29, S29_FRAMES } from './shorts/s29/Video';
+import { S30, S30_FRAMES } from './shorts/s30/Video';
+import { S31, S31_FRAMES } from './shorts/s31/Video';
 import { S20, S20_FRAMES } from './shorts/s20/Video';
 import { S21, S21_FRAMES } from './shorts/s21/Video';
 
@@ -61,6 +66,11 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="S24" component={S24} durationInFrames={S24_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="S25" component={S25} durationInFrames={S25_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="S26" component={S26} durationInFrames={S26_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="S27" component={S27} durationInFrames={S27_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="S28" component={S28} durationInFrames={S28_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="S29" component={S29} durationInFrames={S29_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="S30" component={S30} durationInFrames={S30_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="S31" component={S31} durationInFrames={S31_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="S20" component={S20} durationInFrames={S20_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="S21" component={S21} durationInFrames={S21_FRAMES} fps={30} width={1080} height={1920} />
   </>
