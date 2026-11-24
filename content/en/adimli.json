@@ -12485,6 +12485,207 @@
   ],
   "soruOnce": true
  },
+ "redoks": {
+  "id": "redoks",
+  "ders": "kimya",
+  "konu": "redoks",
+  "baslik": "Redox reactions",
+  "ozet": "Calculate oxidation states, watch zinc reduce copper ions, try the activity series and tell redox from non-redox.",
+  "adimlar": [
+   {
+    "baslik": "Calculate the oxidation state",
+    "metin": "In a neutral compound the oxidation states add up to 0. In H₂SO₄, H is +1 and O is −2. Set the oxidation state of sulfur.",
+    "sahne": {
+     "tur": "kim10-basamak",
+     "formul": "h2so4"
+    },
+    "deger": {
+     "x": 0
+    },
+    "kontroller": [
+     {
+      "ad": "x",
+      "etiket": "Oxidation state of S",
+      "min": -4,
+      "max": 8,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "x": 6
+     },
+     "ipucu": "Solve 2(+1) + x + 4(−2) = 0.",
+     "tamam": "2 − 8 + x = 0, so S is <b>+6</b>. Here sulfur is at its highest oxidation state. In H₂S it goes down to −2."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Sum in an ion",
+    "metin": "In an ion the oxidation states add up to the ion's charge. Find nitrogen in NH₄⁺.",
+    "sahne": {
+     "tur": "kim10-basamak",
+     "formul": "nh4"
+    },
+    "deger": {
+     "x": 0
+    },
+    "kontroller": [
+     {
+      "ad": "x",
+      "etiket": "Oxidation state of N",
+      "min": -4,
+      "max": 8,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "x": -3
+     },
+     "ipucu": "Use x + 4(+1) = +1.",
+     "tamam": "x + 4 = +1, so N is <b>−3</b>. Depending on the compound, nitrogen can have oxidation states from −3 to +5."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Zinc and copper ions",
+    "metin": "We dip a zinc strip into blue CuSO₄ solution.",
+    "sahne": {
+     "tur": "kim10-zncu",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What do you observe?",
+     "secenekler": [
+      {
+       "yazi": "Copper coats the strip, blue fades",
+       "neden": "Zn gives electrons and dissolves as Zn²⁺. Cu²⁺ takes these electrons and deposits on the strip as copper metal. The Cu²⁺ that gives the blue color decreases, so the color fades.",
+       "dogru": true
+      },
+      {
+       "yazi": "Nothing happens",
+       "neden": "Zn gives electrons more easily than Cu and reduces Cu²⁺ on its own. You'll see this order in the activity series."
+      },
+      {
+       "yazi": "The solution gets darker",
+       "neden": "Cu²⁺ gives the blue color, and it is used up. The strip also gets thinner as it dissolves. The red-brown layer on the strip is copper."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Who gave, who took?",
+    "metin": "Look at the half-reactions. One gives electrons, the other takes them. A substance that reduces something else by giving electrons is called a <b>reducing agent</b>.",
+    "sahne": {
+     "tur": "kim10-zncu",
+     "son": true
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which is the reducing agent in this reaction?",
+     "secenekler": [
+      {
+       "yazi": "Cu²⁺",
+       "neden": "Cu²⁺ takes electrons and is reduced. Because it oxidizes Zn, it is the <b>oxidizing agent</b>."
+      },
+      {
+       "yazi": "SO₄²⁻",
+       "neden": "The sulfate ion doesn't change in the reaction. So it is a spectator ion."
+      },
+      {
+       "yazi": "Zn",
+       "neden": "Zn gives electrons, is oxidized and reduces Cu²⁺. The species that is itself oxidized is the <b>reducing agent</b>.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Activity series",
+    "metin": "Choose a metal that doesn't react in Cu²⁺ solution. You can tap the metals in the list.",
+    "sahne": {
+     "tur": "kim10-aktiflik"
+    },
+    "deger": {
+     "m": 5
+    },
+    "kontroller": [
+     {
+      "ad": "m",
+      "etiket": "Metal",
+      "min": 0,
+      "max": 12,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "m": [
+       11,
+       12
+      ]
+     },
+     "ipucu": "Look at the metals to the right of Cu in the activity series.",
+     "tamam": "Ag and Au are less active than Cu and can't give electrons to Cu²⁺. On the contrary, Cu reduces the ions of these metals."
+    },
+    "kart": 13
+   },
+   {
+    "baslik": "Redox?",
+    "metin": "There are three reactions. Show the oxidation states and see whether any of them changes.",
+    "sahne": {
+     "tur": "kim10-redoksmu"
+    },
+    "deger": {
+     "g": 0
+    },
+    "kontroller": [
+     {
+      "ad": "g",
+      "etiket": "Show oxidation states",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which one is not redox?",
+     "secenekler": [
+      {
+       "yazi": "Zn + 2HCl → ZnCl₂ + H₂",
+       "neden": "Zn is oxidized from 0 to +2. H is reduced from +1 to 0. So the reaction is redox."
+      },
+      {
+       "yazi": "HCl + NaOH → NaCl + H₂O",
+       "neden": "In neutralization no element's oxidation state changes and no electrons are transferred. Precipitation reactions are the same.",
+       "dogru": true
+      },
+      {
+       "yazi": "CH₄ + 2O₂ → CO₂ + 2H₂O",
+       "neden": "Combustion is a redox reaction. C is oxidized from −4 to +4. O is reduced from 0 to −2."
+      }
+     ]
+    },
+    "kart": 7
+   }
+  ],
+  "kapanis": [
+   "<b>Oxidation</b> is giving electrons, and the oxidation state goes up. <b>Reduction</b> is taking electrons, and the state goes down.",
+   "Oxidation states add up to 0 in a neutral compound and to the ion's charge in an ion. For example, S is +6 in H₂SO₄ and N is −3 in NH₄⁺.",
+   "The species that is itself oxidized is the <b>reducing agent</b>, and the one that is itself reduced is the <b>oxidizing agent</b>. In Zn + Cu²⁺, the reducing agent is Zn.",
+   "A metal earlier in the activity series reduces the ion of a metal later in it. The reverse doesn't happen on its own.",
+   "If no oxidation state changes, there is no redox. Neutralization and precipitation are not redox. Combustion, rusting and respiration are redox reactions."
+  ],
+  "soruOnce": true
+ },
  "kimya-her-yerde": {
   "id": "kimya-her-yerde",
   "ders": "kimya",

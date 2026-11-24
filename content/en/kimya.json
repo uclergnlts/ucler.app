@@ -6105,6 +6105,403 @@
    }
   ]
  },
+ "redoks": {
+  "title": "Redox reactions",
+  "summary": "Learn about electron transfer, oxidation states, balancing and the activity series.",
+  "cards": [
+   {
+    "h": "Redox: electron transfer",
+    "p": "In some reactions one atom gives away electrons and another atom takes them. These are called <b>redox</b> reactions. When NaCl forms, Na gives away one electron and becomes Na<sup>+</sup>, and Cl takes that electron and becomes Cl<sup>−</sup>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='red-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c5)'/></marker></defs><text x='160' y='22' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>2Na + Cl₂ → 2NaCl</text><circle cx='80' cy='88' r='24' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)'/><text x='80' y='93' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>Na</text><circle cx='240' cy='88' r='28' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><text x='240' y='93' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>Cl</text><path d='M104 78 Q160 46 210 76' stroke='var(--c5)' stroke-width='1.5' fill='none' marker-end='url(#red-1)'/><text x='160' y='52' font-size='14' fill='var(--c5)' text-anchor='middle' font-weight='700'>e⁻</text><text x='80' y='138' font-size='13' fill='var(--ink)' text-anchor='middle'>Na → Na⁺ + e⁻</text><text x='240' y='138' font-size='13' fill='var(--ink)' text-anchor='middle'>Cl₂ + 2e⁻ → 2Cl⁻</text><text x='80' y='158' font-size='12' fill='var(--c2)' text-anchor='middle'>gives e⁻</text><text x='240' y='158' font-size='12' fill='var(--c1)' text-anchor='middle'>takes e⁻</text><text x='80' y='176' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>oxidized</text><text x='240' y='176' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>reduced</text><text x='160' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>e⁻ given = e⁻ taken</text></svg>",
+    "key": "Electrons don't disappear. An electron one atom gives away must be taken by another. \"Redox\" comes from the words reduction and oxidation.",
+    "once": {
+     "soru": "When sodium chloride forms, does the sodium atom take or give electrons?",
+     "secenekler": [
+      {
+       "yazi": "Gives",
+       "neden": "Na is a metal, and it gives away 1 electron to become Na⁺. Cl takes this electron.",
+       "dogru": true
+      },
+      {
+       "yazi": "Takes",
+       "neden": "Cl is the one that takes an electron and becomes Cl⁻."
+      },
+      {
+       "yazi": "Shares",
+       "neden": "In NaCl electrons are transferred, not shared. This bond is called an ionic bond."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Oxidation and reduction",
+    "p": "The <b>oxidation state</b> is an atom's imagined charge in a compound. The atom that gives electrons is <b>oxidized</b>, and its oxidation state goes up. The atom that takes electrons is <b>reduced</b>, and its oxidation state goes down. The two always happen together.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='red-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='red-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Oxidation state axis</text><path d='M30 58 H292' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#red-2)'/><text x='160' y='46' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Oxidation: gives e⁻, state goes up</text><line x1='24' y1='96' x2='296' y2='96' stroke='var(--ink)' stroke-width='1.5'/><line x1='30' y1='90' x2='30' y2='102' stroke='var(--ink)' stroke-width='1.2'/><text x='30' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>−3</text><line x1='56' y1='90' x2='56' y2='102' stroke='var(--ink)' stroke-width='1.2'/><text x='56' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>−2</text><line x1='82' y1='90' x2='82' y2='102' stroke='var(--ink)' stroke-width='1.2'/><text x='82' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>−1</text><line x1='108' y1='90' x2='108' y2='102' stroke='var(--ink)' stroke-width='1.2'/><text x='108' y='118' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>0</text><line x1='134' y1='90' x2='134' y2='102' stroke='var(--ink)' stroke-width='1.2'/><text x='134' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>+1</text><line x1='160' y1='90' x2='160' y2='102' stroke='var(--ink)' stroke-width='1.2'/><text x='160' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>+2</text><line x1='186' y1='90' x2='186' y2='102' stroke='var(--ink)' stroke-width='1.2'/><text x='186' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>+3</text><line x1='212' y1='90' x2='212' y2='102' stroke='var(--ink)' stroke-width='1.2'/><text x='212' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>+4</text><line x1='238' y1='90' x2='238' y2='102' stroke='var(--ink)' stroke-width='1.2'/><text x='238' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>+5</text><line x1='264' y1='90' x2='264' y2='102' stroke='var(--ink)' stroke-width='1.2'/><text x='264' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>+6</text><line x1='290' y1='90' x2='290' y2='102' stroke='var(--ink)' stroke-width='1.2'/><text x='290' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>+7</text><path d='M290 138 H28' stroke='var(--c1)' stroke-width='2' fill='none' marker-end='url(#red-3)'/><text x='160' y='158' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>Reduction: takes e⁻, state goes down</text><text x='160' y='186' font-size='12' fill='var(--muted)' text-anchor='middle'>Fe²⁺ → Fe³⁺ + e⁻ is oxidation: +2 → +3</text></svg>",
+    "key": "Electrons are negative. So a particle that takes electrons has its oxidation state go down. For example, Fe³⁺ + e⁻ → Fe²⁺ is a reduction."
+   },
+   {
+    "h": "Rules for oxidation states",
+    "p": "In a free element the oxidation state is <b>0</b>, and in a monatomic ion it is the ion's charge. F is always <b>−1</b>, group 1A metals are <b>+1</b> and group 2A metals are <b>+2</b>. In a neutral compound the oxidation states add up to <b>0</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='6' width='308' height='24' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='14' y='23' font-size='12' fill='var(--muted)' text-anchor='start' font-weight='700'>Rule</text><text x='196' y='23' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>State</text><text x='272' y='23' font-size='12' fill='var(--muted)' text-anchor='middle' font-weight='700'>Example</text><text x='14' y='50' font-size='12' fill='var(--ink)' text-anchor='start'>Free element</text><text x='196' y='50' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>0</text><text x='272' y='50' font-size='12' fill='var(--ink)' text-anchor='middle'>Fe, O₂, Cl₂</text><line x1='6' y1='58' x2='314' y2='58' stroke='var(--line)' stroke-width='1'/><text x='14' y='73' font-size='12' fill='var(--ink)' text-anchor='start'>Monatomic ion</text><text x='196' y='73' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>ion charge</text><text x='272' y='73' font-size='12' fill='var(--ink)' text-anchor='middle'>Al³⁺ → +3</text><line x1='6' y1='81' x2='314' y2='81' stroke='var(--line)' stroke-width='1'/><text x='14' y='96' font-size='12' fill='var(--ink)' text-anchor='start'>F (in compounds)</text><text x='196' y='96' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>−1</text><text x='272' y='96' font-size='12' fill='var(--ink)' text-anchor='middle'>HF, OF₂</text><line x1='6' y1='104' x2='314' y2='104' stroke='var(--line)' stroke-width='1'/><text x='14' y='119' font-size='12' fill='var(--ink)' text-anchor='start'>1A metals</text><text x='196' y='119' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>+1</text><text x='272' y='119' font-size='12' fill='var(--ink)' text-anchor='middle'>Na, K</text><line x1='6' y1='127' x2='314' y2='127' stroke='var(--line)' stroke-width='1'/><text x='14' y='142' font-size='12' fill='var(--ink)' text-anchor='start'>2A metals</text><text x='196' y='142' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>+2</text><text x='272' y='142' font-size='12' fill='var(--ink)' text-anchor='middle'>Mg, Ca</text><line x1='6' y1='150' x2='314' y2='150' stroke='var(--line)' stroke-width='1'/><text x='14' y='165' font-size='12' fill='var(--ink)' text-anchor='start'>Sum in neutral compound</text><text x='196' y='165' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>0</text><text x='272' y='165' font-size='12' fill='var(--ink)' text-anchor='middle'>H₂O</text><line x1='6' y1='173' x2='314' y2='173' stroke='var(--line)' stroke-width='1'/><text x='14' y='188' font-size='12' fill='var(--ink)' text-anchor='start'>Sum in polyatomic ion</text><text x='196' y='188' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>ion charge</text><text x='272' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>SO₄²⁻ → −2</text><line x1='6' y1='196' x2='314' y2='196' stroke='var(--line)' stroke-width='1'/></svg>",
+    "key": "In a polyatomic ion, the oxidation states add up to the ion's charge. First write the states you know for sure, then find the unknown from the sum rule."
+   },
+   {
+    "h": "O and H: usually, not always",
+    "p": "In compounds O is usually <b>−2</b>, but in peroxides (H₂O₂) it is <b>−1</b>. H is usually <b>+1</b>, but in metal hydrides (NaH) it is <b>−1</b>. If the rules conflict, the F, 1A and 2A rules come first.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Same element, different states</text><rect x='10' y='28' width='146' height='78' rx='6' fill='var(--c1)' fill-opacity='0.06' stroke='var(--c1)'/><text x='22' y='52' font-size='16' fill='var(--ink)' text-anchor='start' font-weight='700'>H₂O</text><text x='146' y='50' font-size='11' fill='var(--c1)' text-anchor='end'>usual</text><text x='22' y='74' font-size='13' fill='var(--c1)' text-anchor='start' font-weight='700'>O = −2</text><text x='22' y='94' font-size='11' fill='var(--muted)' text-anchor='start'>2(+1) + (−2) = 0</text><rect x='164' y='28' width='146' height='78' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)'/><text x='176' y='52' font-size='16' fill='var(--ink)' text-anchor='start' font-weight='700'>H₂O₂</text><text x='300' y='50' font-size='11' fill='var(--c2)' text-anchor='end'>peroxide</text><text x='176' y='74' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='700'>O = −1</text><text x='176' y='94' font-size='11' fill='var(--muted)' text-anchor='start'>2(+1) + 2(−1) = 0</text><rect x='10' y='112' width='146' height='78' rx='6' fill='var(--c1)' fill-opacity='0.06' stroke='var(--c1)'/><text x='22' y='136' font-size='16' fill='var(--ink)' text-anchor='start' font-weight='700'>HCl</text><text x='146' y='134' font-size='11' fill='var(--c1)' text-anchor='end'>usual</text><text x='22' y='158' font-size='13' fill='var(--c1)' text-anchor='start' font-weight='700'>H = +1</text><text x='22' y='178' font-size='11' fill='var(--muted)' text-anchor='start'>(+1) + (−1) = 0</text><rect x='164' y='112' width='146' height='78' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)'/><text x='176' y='136' font-size='16' fill='var(--ink)' text-anchor='start' font-weight='700'>NaH</text><text x='300' y='134' font-size='11' fill='var(--c2)' text-anchor='end'>metal hydride</text><text x='176' y='158' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='700'>H = −1</text><text x='176' y='178' font-size='11' fill='var(--muted)' text-anchor='start'>(+1) + (−1) = 0</text></svg>",
+    "key": "In Na₂O₂, Na is definitely +1, so O can't be −2. From 2(+1) + 2x = 0, x = −1. In OF₂, O is +2.",
+    "once": {
+     "soru": "If Na is +1 in NaH, what is the oxidation state of H?",
+     "secenekler": [
+      {
+       "yazi": "−1",
+       "neden": "The sum must be 0. +1 + x = 0, so x = −1. In metal hydrides H is −1.",
+       "dogru": true
+      },
+      {
+       "yazi": "+1",
+       "neden": "H is usually +1, but here Na is already +1 and the sum wouldn't be 0."
+      },
+      {
+       "yazi": "0",
+       "neden": "H in a compound is not a free element."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Worked examples",
+    "p": "Call the unknown state x and write the sum rule. For NO₃<sup>−</sup>, x + 3(−2) = −1, so x = +5. For SO₃<sup>2−</sup>, x + 3(−2) = −2, so x = +4.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='14' width='96' height='150' rx='6' fill='var(--c5)' fill-opacity='0.07' stroke='var(--c5)'/><text x='56' y='42' font-size='16' fill='var(--ink)' text-anchor='middle' font-weight='700'>NO₃⁻</text><text x='56' y='66' font-size='11' fill='var(--muted)' text-anchor='middle'>O = −2</text><text x='56' y='84' font-size='11' fill='var(--muted)' text-anchor='middle'>sum = −1</text><text x='56' y='114' font-size='12' fill='var(--ink)' text-anchor='middle'>x − 6 = −1</text><text x='56' y='148' font-size='15' fill='var(--c5)' text-anchor='middle' font-weight='700'>N: +5</text><rect x='112' y='14' width='96' height='150' rx='6' fill='var(--c4)' fill-opacity='0.07' stroke='var(--c4)'/><text x='160' y='42' font-size='16' fill='var(--ink)' text-anchor='middle' font-weight='700'>SO₃²⁻</text><text x='160' y='66' font-size='11' fill='var(--muted)' text-anchor='middle'>O = −2</text><text x='160' y='84' font-size='11' fill='var(--muted)' text-anchor='middle'>sum = −2</text><text x='160' y='114' font-size='12' fill='var(--ink)' text-anchor='middle'>x − 6 = −2</text><text x='160' y='148' font-size='15' fill='var(--c4)' text-anchor='middle' font-weight='700'>S: +4</text><rect x='216' y='14' width='96' height='150' rx='6' fill='var(--c1)' fill-opacity='0.07' stroke='var(--c1)'/><text x='264' y='42' font-size='16' fill='var(--ink)' text-anchor='middle' font-weight='700'>C₂O₄²⁻</text><text x='264' y='66' font-size='11' fill='var(--muted)' text-anchor='middle'>O = −2</text><text x='264' y='84' font-size='11' fill='var(--muted)' text-anchor='middle'>sum = −2</text><text x='264' y='114' font-size='12' fill='var(--ink)' text-anchor='middle'>2x − 8 = −2</text><text x='264' y='148' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>C: +3</text><text x='160' y='188' font-size='12' fill='var(--muted)' text-anchor='middle'>Call the unknown x and write the sum rule.</text></svg>",
+    "etk": {
+     "tur": "eslestir",
+     "soru": "Find the oxidation state of each atom and match them.",
+     "ciftler": [
+      [
+       "N in NO₂",
+       "+4"
+      ],
+      [
+       "Cl in HClO₄",
+       "+7"
+      ],
+      [
+       "O in BaO₂",
+       "−1"
+      ],
+      [
+       "Fe in Fe₂O₃",
+       "+3"
+      ],
+      [
+       "Cl in Cl₂",
+       "0"
+      ],
+      [
+       "S in H₂S",
+       "−2"
+      ]
+     ]
+    },
+    "key": "For C₂O₄²⁻, 2x + 4(−2) = −2, so x = +3. The same element can have different oxidation states. For example, N is −3 in NH₄⁺ and +5 in NO₃⁻.",
+    "once": {
+     "soru": "If O is −2 in CO₂, what is the oxidation state of C?",
+     "secenekler": [
+      {
+       "yazi": "+4",
+       "neden": "x + 2(−2) = 0, so x = +4.",
+       "dogru": true
+      },
+      {
+       "yazi": "+2",
+       "neden": "There are two O atoms, and together they contribute 2 · (−2) = −4."
+      },
+      {
+       "yazi": "−4",
+       "neden": "The sum must be 0. The O atoms give −4, so C is +4."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Reducing agent and oxidizing agent",
+    "p": "A substance that reduces something else is called a <b>reducing agent</b>. It gives electrons and is itself <b>oxidized</b>. An <b>oxidizing agent</b> takes electrons and is itself <b>reduced</b>. In Fe + 2Ag⁺, Fe is the reducing agent.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='red-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='red-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><text x='50' y='100' font-size='16' fill='var(--ink)' text-anchor='middle' font-weight='700'>Fe</text><text x='85' y='100' font-size='16' fill='var(--muted)' text-anchor='middle'>+</text><text x='122' y='100' font-size='16' fill='var(--ink)' text-anchor='middle' font-weight='700'>2Ag⁺</text><text x='160' y='100' font-size='16' fill='var(--muted)' text-anchor='middle'>→</text><text x='200' y='100' font-size='16' fill='var(--ink)' text-anchor='middle' font-weight='700'>Fe²⁺</text><text x='238' y='100' font-size='16' fill='var(--muted)' text-anchor='middle'>+</text><text x='270' y='100' font-size='16' fill='var(--ink)' text-anchor='middle' font-weight='700'>2Ag</text><text x='50' y='80' font-size='11' fill='var(--muted)' text-anchor='middle'>0</text><text x='122' y='80' font-size='11' fill='var(--muted)' text-anchor='middle'>+1</text><text x='200' y='80' font-size='11' fill='var(--muted)' text-anchor='middle'>+2</text><text x='270' y='80' font-size='11' fill='var(--muted)' text-anchor='middle'>0</text><path d='M50 66 V56 H200 V64' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#red-4)'/><text x='125' y='46' font-size='12' fill='var(--c2)' text-anchor='middle'>oxidation: 0 → +2 (gives 2e⁻)</text><path d='M122 110 V128 H270 V112' stroke='var(--c1)' stroke-width='1.5' fill='none' marker-end='url(#red-5)'/><text x='196' y='146' font-size='12' fill='var(--c1)' text-anchor='middle'>reduction: +1 → 0 (2Ag⁺ take 2e⁻)</text><rect x='14' y='160' width='136' height='32' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)'/><text x='82' y='181' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Fe: reducing agent</text><rect x='170' y='160' width='136' height='32' rx='6' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)'/><text x='238' y='181' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Ag⁺: oxidizing agent</text></svg>",
+    "key": "It looks backward, but it's right. The reducing agent is oxidized, and the oxidizing agent is reduced. In Fe + 2Ag⁺ → Fe²⁺ + 2Ag, Ag⁺ is the oxidizing agent."
+   },
+   {
+    "h": "Redox or not?",
+    "p": "Write each atom's oxidation state before and after the reaction. If at least one changes, the reaction is <b>redox</b>. In neutralization and precipitation reactions no state changes, so they are not redox.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Does any atom's state change?</text><text x='10' y='50' font-size='12' fill='var(--ink)' text-anchor='start'>Zn + 2HCl → ZnCl₂ + H₂</text><rect x='196' y='35' width='44' height='21' rx='4' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='218' y='49' font-size='10' fill='var(--c3)' text-anchor='middle' font-weight='700'>Redox</text><text x='246' y='50' font-size='11' fill='var(--muted)' text-anchor='start'>metal + acid</text><line x1='8' y1='60' x2='312' y2='60' stroke='var(--line)' stroke-width='1'/><text x='10' y='78' font-size='12' fill='var(--ink)' text-anchor='start'>CH₄ + 2O₂ → CO₂ + 2H₂O</text><rect x='196' y='63' width='44' height='21' rx='4' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='218' y='77' font-size='10' fill='var(--c3)' text-anchor='middle' font-weight='700'>Redox</text><text x='246' y='78' font-size='11' fill='var(--muted)' text-anchor='start'>combustion</text><line x1='8' y1='88' x2='312' y2='88' stroke='var(--line)' stroke-width='1'/><text x='10' y='106' font-size='12' fill='var(--ink)' text-anchor='start'>HCl + NaOH → NaCl + H₂O</text><rect x='196' y='91' width='44' height='21' rx='4' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='218' y='105' font-size='10' fill='var(--c2)' text-anchor='middle' font-weight='700'>Not</text><text x='246' y='106' font-size='11' fill='var(--muted)' text-anchor='start'>neutralization</text><line x1='8' y1='116' x2='312' y2='116' stroke='var(--line)' stroke-width='1'/><text x='10' y='134' font-size='12' fill='var(--ink)' text-anchor='start'>AgNO₃ + NaCl → AgCl + NaNO₃</text><rect x='196' y='119' width='44' height='21' rx='4' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='218' y='133' font-size='10' fill='var(--c2)' text-anchor='middle' font-weight='700'>Not</text><text x='246' y='134' font-size='11' fill='var(--muted)' text-anchor='start'>precipitation</text><line x1='8' y1='144' x2='312' y2='144' stroke='var(--line)' stroke-width='1'/><text x='10' y='162' font-size='12' fill='var(--ink)' text-anchor='start'>CaCO₃ → CaO + CO₂</text><rect x='196' y='147' width='44' height='21' rx='4' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='218' y='161' font-size='10' fill='var(--c2)' text-anchor='middle' font-weight='700'>Not</text><text x='246' y='162' font-size='11' fill='var(--muted)' text-anchor='start'>this decomposition</text><text x='160' y='181' font-size='10' fill='var(--muted)' text-anchor='middle'>Zn: 0 → +2, H: +1 → 0  ·  C: −4 → +4, O: 0 → −2</text><text x='160' y='196' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>But the decomposition 2H₂O → 2H₂ + O₂ is redox.</text></svg>",
+    "key": "Reactions in which a free element enters or leaves are usually redox. One exception is 3O₂ → 2O₃, because O stays at 0."
+   },
+   {
+    "h": "Self-redox",
+    "p": "If the same element is both oxidized and reduced, it is called <b>disproportionation</b>. In Cl₂ + 2NaOH → NaCl + NaOCl + H₂O, Cl goes from 0 both down to <b>−1</b> and up to <b>+1</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='redk-dis' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='160' y='28' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>Cl₂ + 2NaOH → NaCl + NaOCl + H₂O</text><rect x='18' y='86' width='84' height='44' rx='6' fill='var(--panel)' fill-opacity='0.6' stroke='var(--line)'/><text x='60' y='106' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>Cl₂</text><text x='60' y='123' font-size='11' fill='var(--muted)' text-anchor='middle'>state 0</text><path d='M106 98 L196 66' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#redk-dis)'/><path d='M106 118 L196 150' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#redk-dis)'/><text x='140' y='70' font-size='11' fill='var(--c1)' text-anchor='middle'>takes e⁻</text><text x='140' y='156' font-size='11' fill='var(--c2)' text-anchor='middle'>gives e⁻</text><text x='204' y='62' font-size='13' fill='var(--c1)' text-anchor='start' font-weight='700'>NaCl: Cl −1</text><text x='204' y='78' font-size='11' fill='var(--muted)' text-anchor='start'>reduction</text><text x='204' y='146' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='700'>NaOCl: Cl +1</text><text x='204' y='162' font-size='11' fill='var(--muted)' text-anchor='start'>oxidation</text><rect x='8' y='174' width='304' height='22' rx='4' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)'/><text x='160' y='189' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>The same Cl is both reducing and oxidizing agent</text></svg>",
+    "key": "Here Cl₂ is both the reducing agent and the oxidizing agent.",
+    "once": {
+     "soru": "In 2H₂O₂ → 2H₂O + O₂, how does the oxidation state of O change? (O is −1 in H₂O₂)",
+     "secenekler": [
+      {
+       "yazi": "It both falls and rises",
+       "neden": "O drops to −2 in H₂O and rises to 0 in O₂. So the same element is both reduced and oxidized.",
+       "dogru": true
+      },
+      {
+       "yazi": "It only falls",
+       "neden": "O in O₂ has a state of 0. So there is also a rise from −1 to 0."
+      },
+      {
+       "yazi": "It doesn't change",
+       "neden": "It goes from −1 to both −2 and 0."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The half-reaction method",
+    "p": "In acidic solution, split the reaction into <b>half-reactions</b>. Add <b>H₂O</b> for missing O, <b>H<sup>+</sup></b> for missing H and <b>e<sup>−</sup></b> for the charge difference. Then make the electrons equal and add the half-reactions.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='26' y1='22' x2='26' y2='162' stroke='var(--line)' stroke-width='2'/><circle cx='26' cy='22' r='11' fill='var(--c5)' fill-opacity='0.9'/><text x='26' y='26' font-size='12' fill='var(--panel)' text-anchor='middle' font-weight='700'>1</text><text x='48' y='27' font-size='13' fill='var(--ink)' text-anchor='start'>Split into half-reactions</text><circle cx='26' cy='50' r='11' fill='var(--c1)' fill-opacity='0.9'/><text x='26' y='54' font-size='12' fill='var(--panel)' text-anchor='middle' font-weight='700'>2</text><text x='48' y='55' font-size='13' fill='var(--ink)' text-anchor='start'>Balance atoms other than O and H</text><circle cx='26' cy='78' r='11' fill='var(--c1)' fill-opacity='0.9'/><text x='26' y='82' font-size='12' fill='var(--panel)' text-anchor='middle' font-weight='700'>3</text><text x='48' y='83' font-size='13' fill='var(--ink)' text-anchor='start'>Add H₂O to the side missing O</text><circle cx='26' cy='106' r='11' fill='var(--c1)' fill-opacity='0.9'/><text x='26' y='110' font-size='12' fill='var(--panel)' text-anchor='middle' font-weight='700'>4</text><text x='48' y='111' font-size='13' fill='var(--ink)' text-anchor='start'>Add H⁺ to the side missing H</text><circle cx='26' cy='134' r='11' fill='var(--c4)' fill-opacity='0.9'/><text x='26' y='138' font-size='12' fill='var(--panel)' text-anchor='middle' font-weight='700'>5</text><text x='48' y='139' font-size='13' fill='var(--ink)' text-anchor='start'>Balance charge by adding e⁻</text><circle cx='26' cy='162' r='11' fill='var(--c3)' fill-opacity='0.9'/><text x='26' y='166' font-size='12' fill='var(--panel)' text-anchor='middle' font-weight='700'>6</text><text x='48' y='167' font-size='13' fill='var(--ink)' text-anchor='start'>Make e⁻ equal, add up</text><rect x='8' y='176' width='304' height='22' rx='4' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)'/><text x='160' y='191' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Check: are atoms and total charge equal on both sides?</text></svg>",
+    "key": "First balance the atoms other than O and H. e⁻ is always added to the side with the more positive charge.",
+    "once": {
+     "soru": "In balancing, what is true about the numbers of electrons given and taken?",
+     "secenekler": [
+      {
+       "yazi": "They must be equal",
+       "neden": "Electrons don't disappear. Every electron given is taken by another particle.",
+       "dogru": true
+      },
+      {
+       "yazi": "More must be given",
+       "neden": "Otherwise extra electrons would be left somewhere, and that doesn't happen."
+      },
+      {
+       "yazi": "It doesn't matter",
+       "neden": "If the numbers aren't equal, charge and mass won't balance."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Example: MnO₄⁻ and Fe²⁺",
+    "p": "In acidic solution, Mn in MnO₄<sup>−</sup> drops from +7 to +2. Write 4H₂O on the right and 8H<sup>+</sup> and 5e<sup>−</sup> on the left. The half-reaction Fe<sup>2+</sup> → Fe<sup>3+</sup> + e<sup>−</sup> is multiplied by five and added to it.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='12' y='22' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>Reduction (Mn: +7 → +2)</text><text x='12' y='44' font-size='13' fill='var(--ink)' text-anchor='start'>MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O</text><text x='12' y='72' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>Oxidation (Fe: +2 → +3), ×5</text><text x='12' y='94' font-size='13' fill='var(--ink)' text-anchor='start'>5Fe²⁺ → 5Fe³⁺ + 5e⁻</text><line x1='8' y1='108' x2='312' y2='108' stroke='var(--ink)' stroke-width='1.2'/><text x='12' y='128' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>Add: 5e⁻ cancels on both sides</text><rect x='8' y='138' width='304' height='56' rx='6' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)'/><text x='160' y='160' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>MnO₄⁻ + 5Fe²⁺ + 8H⁺ →</text><text x='160' y='184' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>Mn²⁺ + 5Fe³⁺ + 4H₂O</text></svg>",
+    "key": "Check the charges. The left side is −1 + 10 + 8 = +17 and the right side is +2 + 15 = +17, so the equation is balanced.",
+    "once": {
+     "soru": "If O is −2 in MnO₄⁻, what is the oxidation state of Mn?",
+     "secenekler": [
+      {
+       "yazi": "+7",
+       "neden": "x + 4(−2) = −1, so x = +7.",
+       "dogru": true
+      },
+      {
+       "yazi": "+8",
+       "neden": "The sum must equal the ion's charge, which is −1."
+      },
+      {
+       "yazi": "+6",
+       "neden": "If it were +6, the sum would be −2."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Balancing in basic solution",
+    "p": "In basic solution, first balance as in acidic solution. Then add as many <b>OH⁻ to both sides</b> as there are H⁺. H⁺ and OH⁻ on the same side combine into <b>H₂O</b>. Cancel any water that appears on both sides.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='12' y='22' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>Basic solution: MnO₄⁻ → MnO₂ (Mn: +7 → +4)</text><text x='12' y='46' font-size='11' fill='var(--muted)' text-anchor='start'>1) Balance as in acidic solution</text><text x='12' y='66' font-size='13' fill='var(--ink)' text-anchor='start'>MnO₄⁻ + 4H⁺ + 3e⁻ → MnO₂ + 2H₂O</text><text x='12' y='92' font-size='11' fill='var(--muted)' text-anchor='start'>2) Add 4OH⁻ to both sides; 4H⁺ + 4OH⁻ = 4H₂O</text><text x='12' y='112' font-size='12' fill='var(--ink)' text-anchor='start'>MnO₄⁻ + 4H₂O + 3e⁻ → MnO₂ + 2H₂O + 4OH⁻</text><text x='12' y='138' font-size='11' fill='var(--c3)' text-anchor='start' font-weight='700'>3) Cancel the 2H₂O that appears on both sides</text><rect x='8' y='148' width='304' height='46' rx='6' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)'/><text x='160' y='176' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>MnO₄⁻ + 2H₂O + 3e⁻ → MnO₂ + 4OH⁻</text></svg>",
+    "key": "The final equation has no H⁺, but it has OH⁻. Don't forget to check the charge.",
+    "once": {
+     "soru": "Which one does not appear in an equation balanced in basic solution?",
+     "secenekler": [
+      {
+       "yazi": "H⁺",
+       "neden": "In basic solution H⁺ combines with OH⁻ and becomes water.",
+       "dogru": true
+      },
+      {
+       "yazi": "OH⁻",
+       "neden": "OH⁻ is the sign of basic solution, and it appears in the final equation."
+      },
+      {
+       "yazi": "H₂O",
+       "neden": "Water is often used in balancing."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The activity series of metals",
+    "p": "The activity series of metals is K, Ca, Na, Mg, Al, Zn, Fe, Ni, Sn, Pb, (H), Cu, Hg, Ag, Pt, Au. A metal further left gives away electrons more easily.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='red-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c5)'/></marker></defs><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Activity series (in aqueous solution)</text><rect x='10' y='36' width='17' height='26' rx='3' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='18.5' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>K</text><rect x='28.75' y='36' width='17' height='26' rx='3' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='37.25' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Ca</text><rect x='47.5' y='36' width='17' height='26' rx='3' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='56' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Na</text><rect x='66.25' y='36' width='17' height='26' rx='3' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='74.75' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Mg</text><rect x='85' y='36' width='17' height='26' rx='3' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='93.5' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Al</text><rect x='103.75' y='36' width='17' height='26' rx='3' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='112.25' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Zn</text><rect x='122.5' y='36' width='17' height='26' rx='3' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='131' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Fe</text><rect x='141.25' y='36' width='17' height='26' rx='3' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='149.75' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Ni</text><rect x='160' y='36' width='17' height='26' rx='3' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='168.5' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Sn</text><rect x='178.75' y='36' width='17' height='26' rx='3' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='187.25' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Pb</text><rect x='197.5' y='36' width='17' height='26' rx='3' fill='none' stroke='var(--ink)' stroke-dasharray='3 2'/><text x='206' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>H</text><rect x='216.25' y='36' width='17' height='26' rx='3' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)'/><text x='224.75' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Cu</text><rect x='235' y='36' width='17' height='26' rx='3' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)'/><text x='243.5' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Hg</text><rect x='253.75' y='36' width='17' height='26' rx='3' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)'/><text x='262.25' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Ag</text><rect x='272.5' y='36' width='17' height='26' rx='3' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)'/><text x='281' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Pt</text><rect x='291.25' y='36' width='17' height='26' rx='3' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)'/><text x='299.75' y='53' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Au</text><path d='M300 82 H22' stroke='var(--c5)' stroke-width='1.8' fill='none' marker-end='url(#red-6)'/><text x='160' y='100' font-size='12' fill='var(--c5)' text-anchor='middle'>tendency to give e⁻ (reducing power) increases</text><line x1='10' y1='118' x2='196' y2='118' stroke='var(--c3)' stroke-width='2'/><text x='10' y='136' font-size='11' fill='var(--c3)' text-anchor='start'>More active than H: releases H₂ from HCl</text><line x1='216' y1='150' x2='310' y2='150' stroke='var(--c4)' stroke-width='2'/><text x='310' y='168' font-size='11' fill='var(--c4)' text-anchor='end'>no H₂</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>A metal on the left reduces the ion of a metal on the right to the metal.</text></svg>",
+    "etk": {
+     "tur": "sirala",
+     "soru": "Order from most active to least active in aqueous solution (hydrogen is included for comparison).",
+     "ogeler": [
+      "K",
+      "Mg",
+      "Zn",
+      "Fe",
+      "H",
+      "Cu",
+      "Ag"
+     ]
+    },
+    "key": "A metal further left is a stronger reducing agent. Hydrogen is placed in the series for comparison. Cu, Ag and Au can stay unchanged in nature.",
+    "once": {
+     "soru": "Why does gold jewelry stay shiny for years?",
+     "secenekler": [
+      {
+       "yazi": "Gold is not very active",
+       "neden": "Gold is very reluctant to give away electrons. So it doesn't oxidize in air.",
+       "dogru": true
+      },
+      {
+       "yazi": "Gold is hard",
+       "neden": "Gold is actually a soft metal."
+      },
+      {
+       "yazi": "Gold is very active",
+       "neden": "An active metal oxidizes quickly and tarnishes."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Metal + salt solution",
+    "p": "A more active metal gives electrons to the ion of a less active metal and releases it as metal. For example, copper gets coated with silver in AgNO₃ solution (Cu + 2Ag⁺ → Cu²⁺ + 2Ag).",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M30 48 V158 H130 V48' fill='none' stroke='var(--ink)' stroke-width='1.5'/><rect x='31' y='78' width='98' height='79' fill='var(--c1)' fill-opacity='0.28'/><rect x='72' y='36' width='16' height='108' rx='2' fill='var(--muted)' fill-opacity='0.55' stroke='var(--muted)'/><text x='80' y='28' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Zn strip</text><circle cx='90' cy='90' r='3.5' fill='var(--c2)' fill-opacity='0.8'/><circle cx='70' cy='100' r='3.5' fill='var(--c2)' fill-opacity='0.8'/><circle cx='90' cy='110' r='3.5' fill='var(--c2)' fill-opacity='0.8'/><circle cx='70' cy='120' r='3.5' fill='var(--c2)' fill-opacity='0.8'/><circle cx='90' cy='130' r='3.5' fill='var(--c2)' fill-opacity='0.8'/><circle cx='70' cy='140' r='3.5' fill='var(--c2)' fill-opacity='0.8'/><text x='80' y='176' font-size='12' fill='var(--muted)' text-anchor='middle'>CuSO₄(aq), blue</text><text x='80' y='195' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Reaction: Cu builds up</text><path d='M190 48 V158 H290 V48' fill='none' stroke='var(--ink)' stroke-width='1.5'/><rect x='191' y='78' width='98' height='79' fill='var(--line)' fill-opacity='0.35'/><rect x='232' y='36' width='16' height='108' rx='2' fill='var(--c4)' fill-opacity='0.55' stroke='var(--c4)'/><text x='240' y='28' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Cu strip</text><text x='240' y='176' font-size='12' fill='var(--muted)' text-anchor='middle'>ZnSO₄(aq), colorless</text><text x='240' y='195' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>No reaction</text></svg>",
+    "key": "Zinc reacts with CuSO₄ the same way. Copper doesn't react with ZnSO₄. Meanwhile the strip's mass changes: as 65 g of Zn dissolves, 63.5 g of Cu builds up."
+   },
+   {
+    "h": "Active metal + acid → H₂",
+    "p": "Metals more active than hydrogen (Zn, Fe) give H₂ with HCl. <b>Semi-noble</b> metals (Cu, Ag) don't release H₂. <b>Noble</b> metals (Au, Pt) dissolve only in aqua regia.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M60 36 V96 A20 20 0 0 0 100 96 V36' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M61 60 V96 A19 19 0 0 0 99 96 V60 Z' fill='var(--c5)' fill-opacity='0.15'/><rect x='70' y='102' width='20' height='9' rx='2' fill='var(--muted)' fill-opacity='0.7'/><text x='80' y='26' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Zn + HCl(aq)</text><text x='80' y='140' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>H₂ released</text><circle cx='74' cy='92' r='3' fill='none' stroke='var(--c1)'/><circle cx='85' cy='84' r='3.5' fill='none' stroke='var(--c1)'/><circle cx='77' cy='74' r='2.5' fill='none' stroke='var(--c1)'/><circle cx='87' cy='66' r='3' fill='none' stroke='var(--c1)'/><text x='114' y='54' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>H₂</text><path d='M220 36 V96 A20 20 0 0 0 260 96 V36' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M221 60 V96 A19 19 0 0 0 259 96 V60 Z' fill='var(--c5)' fill-opacity='0.15'/><rect x='230' y='102' width='20' height='9' rx='2' fill='var(--c4)' fill-opacity='0.7'/><text x='240' y='26' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Cu + HCl(aq)</text><text x='240' y='140' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>No reaction</text><line x1='8' y1='152' x2='312' y2='152' stroke='var(--line)' stroke-width='1'/><text x='160' y='172' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Zn + 2H⁺ → Zn²⁺ + H₂</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>Zn: 0 → +2 oxidized; H: +1 → 0 reduced</text></svg>",
+    "key": "Zn + 2HCl → ZnCl₂ + H₂ is an example. Semi-noble metals give NO, NO₂ or SO₂ with HNO₃ and concentrated H₂SO₄. K, Na and Ca give H₂ even with cold water.",
+    "once": {
+     "soru": "You drop a piece of copper into HCl. Is H₂ gas released?",
+     "secenekler": [
+      {
+       "yazi": "No",
+       "neden": "Cu is to the right of H in the activity series. So it can't reduce H⁺ ions.",
+       "dogru": true
+      },
+      {
+       "yazi": "Yes",
+       "neden": "The metals that release H₂ are those more active than hydrogen."
+      },
+      {
+       "yazi": "Slowly",
+       "neden": "Copper releases no H₂ at all from HCl."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Redox in everyday life",
+    "p": "In <b>rusting</b>, iron is oxidized. In <b>burning</b>, the fuel is oxidized and O₂ is reduced. Bleach <b>whitens</b> by oxidizing colored molecules. In <b>photosynthesis</b> CO₂ is reduced, and in <b>respiration</b> glucose is oxidized.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='8' width='146' height='88' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)'/><text x='83' y='32' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Rusting</text><text x='83' y='58' font-size='11' fill='var(--ink)' text-anchor='middle'>Fe → Fe³⁺ (rust)</text><text x='83' y='80' font-size='11' fill='var(--muted)' text-anchor='middle'>O₂ is reduced; moisture needed</text><rect x='164' y='8' width='146' height='88' rx='6' fill='var(--c4)' fill-opacity='0.08' stroke='var(--c4)'/><text x='237' y='32' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>Burning</text><text x='237' y='58' font-size='11' fill='var(--ink)' text-anchor='middle'>CH₄ + 2O₂ → CO₂ + 2H₂O</text><text x='237' y='80' font-size='11' fill='var(--muted)' text-anchor='middle'>C: −4 → +4</text><rect x='10' y='104' width='146' height='88' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)'/><text x='83' y='128' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Bleach</text><text x='83' y='154' font-size='11' fill='var(--ink)' text-anchor='middle'>NaOCl: Cl has state +1</text><text x='83' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>reduced to Cl⁻ (−1)</text><rect x='164' y='104' width='146' height='88' rx='6' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)'/><text x='237' y='128' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>In living things</text><text x='237' y='154' font-size='11' fill='var(--ink)' text-anchor='middle'>Photosynthesis: C +4 → 0</text><text x='237' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>Respiration: C 0 → +4</text></svg>",
+    "key": "The oxidizing agent in bleach is NaOCl. Never mix bleach with muriatic acid, because toxic Cl₂ gas is released.",
+    "once": {
+     "soru": "When iron rusts, does it give or take electrons?",
+     "secenekler": [
+      {
+       "yazi": "Gives",
+       "neden": "Fe goes from 0 to +3. So it is oxidized and gives electrons.",
+       "dogru": true
+      },
+      {
+       "yazi": "Takes",
+       "neden": "Oxygen is the one that takes electrons."
+      },
+      {
+       "yazi": "No change",
+       "neden": "Rust is the oxidized form of iron."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• Oxidation is giving electrons, and the oxidation state goes up. Reduction is taking electrons, and the state goes down.<br>• Elements have a state of 0, and F is −1. O is usually −2 and H usually +1.<br>• The reducing agent is oxidized, and the oxidizing agent is reduced.<br>• In balancing, electrons given and taken are made equal.<br>• An active metal reduces the ion of a less active metal.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='red-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c5)'/></marker></defs><rect x='10' y='30' width='120' height='86' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)'/><text x='70' y='54' font-size='14' fill='var(--c2)' text-anchor='middle' font-weight='700'>Reducing agent</text><text x='70' y='76' font-size='12' fill='var(--ink)' text-anchor='middle'>gives e⁻</text><text x='70' y='96' font-size='12' fill='var(--ink)' text-anchor='middle'>oxidized, ↑</text><rect x='190' y='30' width='120' height='86' rx='6' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)'/><text x='250' y='54' font-size='14' fill='var(--c1)' text-anchor='middle' font-weight='700'>Oxidizing agent</text><text x='250' y='76' font-size='12' fill='var(--ink)' text-anchor='middle'>takes e⁻</text><text x='250' y='96' font-size='12' fill='var(--ink)' text-anchor='middle'>reduced, ↓</text><path d='M134 73 H184' stroke='var(--c5)' stroke-width='2' fill='none' marker-end='url(#red-7)'/><text x='159' y='64' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>e⁻</text><text x='160' y='18' font-size='11' fill='var(--muted)' text-anchor='middle'>↑ ↓ : oxidation state</text><text x='160' y='146' font-size='12' fill='var(--ink)' text-anchor='middle'>Aktiflik: K > Ca > Na > Mg > Al > Zn > Fe</text><text x='160' y='166' font-size='12' fill='var(--ink)' text-anchor='middle'>> Ni > Sn > Pb > H > Cu > Ag > Au</text><text x='160' y='192' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>e⁻ given = e⁻ taken</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "In acidic solution, the Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup> ion is reduced to Cr<sup>3+</sup> ions. How many moles of electrons does 1 mol of Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup> take?",
+    "cevap": 6,
+    "birim": "mol e⁻",
+    "e": "In Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup>, 2x + 7(−2) = −2, so Cr is +6. Each Cr takes 3 e<sup>−</sup> as it drops from +6 to +3. For two Cr, a total of 6 mol of e<sup>−</sup> is needed."
+   },
+   {
+    "tur": "sirala",
+    "q": "Order these metals from most easily oxidized to least easily oxidized in aqueous solution.",
+    "ogeler": [
+     "Mg",
+     "Zn",
+     "Fe",
+     "Cu",
+     "Ag"
+    ],
+    "e": "The activity series is Mg > Zn > Fe > Cu > Ag. A metal further left gives away electrons more easily, so it is a stronger reducing agent."
+   },
+   {
+    "tur": "ayir",
+    "q": "Which of these are redox reactions? Sort them.",
+    "gruplar": [
+     "Redox",
+     "Not redox"
+    ],
+    "ogeler": [
+     [
+      "Iron rusting",
+      0
+     ],
+     [
+      "Methane burning",
+      0
+     ],
+     [
+      "Zn + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu",
+      0
+     ],
+     [
+      "Cl₂ with NaOH",
+      0
+     ],
+     [
+      "HCl with NaOH",
+      1
+     ],
+     [
+      "Ag<sup>+</sup> + Cl<sup>−</sup> → AgCl",
+      1
+     ]
+    ],
+    "e": "In rusting, Fe is oxidized. When methane burns, C is oxidized (−4 → +4) and O is reduced (0 → −2). H is +1 on both sides. Zn reduces Cu<sup>2+</sup>. In the reaction of Cl₂ with NaOH, Cl both drops to −1 and rises to +1. In neutralization and the precipitation of AgCl, no oxidation state changes."
+   },
+   {
+    "q": "Which is true for the reaction Mg + 2HCl → MgCl₂ + H₂?",
+    "o": [
+     "Mg is reduced, HCl is the reducing agent",
+     "Mg is the reducing agent and is oxidized. H<sup>+</sup> is reduced",
+     "Cl goes from −1 to 0",
+     "It is not redox"
+    ],
+    "a": 1,
+    "e": "Mg goes from 0 to +2. So it gives electrons and is the reducing agent. H drops from +1 to 0. Cl stays −1 on both sides.",
+    "y": [
+     "Mg gives electrons and is oxidized. A substance that gives electrons is the reducing agent. What is reduced is H<sup>+</sup>.",
+     "",
+     "Cl is −1 on both sides of the reaction. The ones whose states change are Mg and H.",
+     "Mg goes from 0 to +2 and H from +1 to 0, so this is a redox reaction."
+    ]
+   }
+  ]
+ },
  "kimya-her-yerde": {
   "title": "Chemistry everywhere",
   "summary": "Learn about cleaning products, polymers, medicines, food and farm chemistry.",
