@@ -12686,6 +12686,228 @@
   ],
   "soruOnce": true
  },
+ "elektrokimya": {
+  "id": "elektrokimya",
+  "ders": "kimya",
+  "konu": "elektrokimya",
+  "baslik": "Electrochemistry",
+  "ozet": "Follow the electrons in a Daniell cell and remove the salt bridge. Build cells from standard potentials, electrolyze water and do a Faraday calculation.",
+  "adimlar": [
+   {
+    "baslik": "Daniell cell",
+    "metin": "A Zn strip stands in ZnSO₄ solution and a Cu strip in CuSO₄ solution. We connected them with a wire and a salt bridge. The cell will run for a while.",
+    "sahne": {
+     "tur": "kim10-daniell",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to the strips as the cell runs?",
+     "secenekler": [
+      {
+       "yazi": "Zn gets thinner, Cu thicker",
+       "neden": "Zn atoms give electrons and go into solution as Zn²⁺. So the strip gets thinner. The electrons travel through the wire to Cu, where Cu²⁺ ions build up as Cu. As Cu²⁺ decreases, the blue color fades too.",
+       "dogru": true
+      },
+      {
+       "yazi": "Zn gets thicker, Cu thinner",
+       "neden": "Zn is the one that gives electrons. Does an atom that gives away its electrons stay on the strip, or become an ion and go into solution?"
+      },
+      {
+       "yazi": "Neither changes",
+       "neden": "The current comes from atoms giving and taking electrons. A Zn atom that has given away its electrons is now an ion and goes into solution."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Salt bridge",
+    "metin": "The cell is running. Remove the salt bridge and look at the voltmeter.",
+    "sahne": {
+     "tur": "kim10-daniell"
+    },
+    "deger": {
+     "k": 1
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Salt bridge",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": 0
+     },
+     "tamam": "Without the bridge, the circuit isn't complete. + charge builds up in the anode beaker and − charge in the cathode beaker, and the current <b>stops</b>."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Build a cell",
+    "metin": "The cell voltage is <b>E°cell = E°cathode − E°anode</b>. The half-cell with the larger E° is the cathode. Choose the anode and cathode to build a cell that gives <b>1.56 V</b>.",
+    "sahne": {
+     "tur": "kim10-potansiyel"
+    },
+    "deger": {
+     "a": 2,
+     "k": 5
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "Anode",
+      "min": 1,
+      "max": 6,
+      "tur": "sayac"
+     },
+     {
+      "ad": "k",
+      "etiket": "Cathode",
+      "min": 1,
+      "max": 6,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "a": 2,
+      "k": 6
+     },
+     "ipucu": "Calculate with E°cell = E°cathode − E°anode. The current Zn–Cu cell gives 1.10 V.",
+     "tamam": "With Zn as the anode and Ag as the cathode, you get 0.80 − (−0.76) = <b>1.56 V</b>. The values in the table are measured against the standard hydrogen electrode (0 V). If E° came out negative, the cell wouldn't run on its own."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Does a coefficient change E°?",
+    "metin": "Ag⁺ takes one electron. To make the electrons equal, we multiplied the Ag half-reaction by 2.",
+    "sahne": {
+     "tur": "kim10-katsayi"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "What is E° for this cell?",
+     "secenekler": [
+      {
+       "yazi": "0.46 V",
+       "neden": "0.80 − 0.34 = 0.46 V. E° doesn't depend on the amount of substance and isn't multiplied by the coefficient.",
+       "dogru": true
+      },
+      {
+       "yazi": "1.26 V",
+       "neden": "You used 2 · 0.80 − 0.34. E° doesn't depend on amount. Multiplying a half-reaction by 2 doesn't change E°."
+      },
+      {
+       "yazi": "1.14 V",
+       "neden": "You used 0.80 + 0.34. But you take the difference: E°cathode − E°anode."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Electrolysis of water",
+    "metin": "We pass current through water with a little electrolyte added.",
+    "sahne": {
+     "tur": "kim10-su",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "How are the gases collected?",
+     "secenekler": [
+      {
+       "yazi": "H₂ at anode, O₂ at cathode",
+       "neden": "The places are swapped. H₂ comes out at the cathode, where electrons are taken. The volumes aren't equal either."
+      },
+      {
+       "yazi": "The same gas at both",
+       "neden": "Reduction happens at the cathode and gives H₂. Oxidation happens at the anode and gives O₂. So the gases are different."
+      },
+      {
+       "yazi": "H₂ at cathode, O₂ at anode, twice as much H₂",
+       "neden": "At the cathode water is reduced and H₂ comes out. At the anode water is oxidized and O₂ comes out. Since 2H₂O → 2H₂ + O₂, the volume of H₂ is <b>twice</b> that of O₂.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Faraday calculation",
+    "metin": "A 4 A current passes through CuSO₄ solution. Set the time needed to deposit <b>0.1 mol</b> of copper at the cathode. (1 F ≈ 96 500 C, Cu = 63.5 g/mol)",
+    "sahne": {
+     "tur": "kim10-faraday"
+    },
+    "deger": {
+     "t": 1930
+    },
+    "kontroller": [
+     {
+      "ad": "t",
+      "etiket": "Time",
+      "min": 0,
+      "max": 19300,
+      "adim": 965,
+      "birim": "s",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "t": 4825
+     },
+     "ipucu": "0.1 mol of Cu needs 0.2 mol of electrons. So Q = 0.2 · 96 500 C.",
+     "tamam": "Q = 0.2 · 96 500 = 19 300 C. t = Q / I = 19 300 / 4 = <b>4825 s</b>. 6.35 g of copper deposits at the cathode. In plating, the object to be plated is made the cathode."
+    },
+    "kart": 12
+   },
+   {
+    "baslik": "Corrosion",
+    "metin": "Of two iron nails, one is coated with tin and the other with zinc. The coating on both nails got scratched, and the scratches are wet with salt water.",
+    "sahne": {
+     "tur": "kim10-korozyon",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens?",
+     "secenekler": [
+      {
+       "yazi": "The tin-coated one rusts",
+       "neden": "Zn is more active than iron. It is oxidized itself and protects the iron. Sn is less active than iron. When the coating is scratched, the iron becomes the anode and rusts <b>faster</b>.",
+       "dogru": true
+      },
+      {
+       "yazi": "Both are protected",
+       "neden": "A coating is a barrier only while it is intact. At a scratch, what matters is which metal becomes the anode."
+      },
+      {
+       "yazi": "The zinc-coated one rusts",
+       "neden": "The opposite happens. Zinc is more active than iron, so it is oxidized first. That is why Mg or Zn blocks are used on ships as <b>sacrificial anodes</b>."
+      }
+     ]
+    },
+    "kart": 13
+   }
+  ],
+  "kapanis": [
+   "In a galvanic cell, the anode (−) is oxidized and the cathode (+) is reduced. In the external circuit, electrons flow from the anode to the cathode.",
+   "The salt bridge keeps the solutions neutral. Without it the current stops.",
+   "The cell voltage is <b>E°cell = E°cathode − E°anode</b>, and coefficients don't change E°. The Zn–Cu cell gives 1.10 V, and the Cu–Ag cell 0.46 V.",
+   "In electrolysis the anode is + and the cathode is −. In the electrolysis of water, H₂ collects at the cathode and half that volume of O₂ at the anode.",
+   "The amount deposited is calculated with <b>Q = I·t</b> and 1 F ≈ 96 500 C. Coating with an active metal and sacrificial anodes protect iron from corrosion."
+  ],
+  "soruOnce": true
+ },
  "kimya-her-yerde": {
   "id": "kimya-her-yerde",
   "ders": "kimya",
