@@ -17689,6 +17689,382 @@
   ],
   "soruOnce": true
  },
+ "evrim": {
+  "id": "evrim",
+  "ders": "biyoloji",
+  "konu": "evrim",
+  "baslik": "Evolution and natural selection",
+  "ozet": "Follow the gene pool generation by generation and see what the antibiotic selects. Compare the types of selection, find q with Hardy–Weinberg and turn two populations into separate species.",
+  "adimlar": [
+   {
+    "baslik": "Gene pool",
+    "metin": "Change the generation and watch the <b>gene pool</b>.",
+    "sahne": {
+     "tur": "biy14-havuz"
+    },
+    "deger": {
+     "k": 1
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Generation",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What changes across the generations?",
+     "secenekler": [
+      {
+       "yazi": "The individuals' own genotypes",
+       "neden": "An individual's genotype stays the same for life. New individuals make up the gene pool in each generation."
+      },
+      {
+       "yazi": "The number of individuals",
+       "neden": "Each generation has 5 individuals, and this number didn't change. Something else changed."
+      },
+      {
+       "yazi": "Allele frequency in the gene pool",
+       "dogru": true,
+       "neden": "The share of allele A rose from 0.3 to 0.8. Even though the number of individuals stayed the same, the gene pool changed."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Acquired traits",
+    "metin": "<b>Lamarck</b> thought that a trait acquired during life passes to offspring. A weightlifter trains for years and builds bigger muscles. Predict first, then play.",
+    "sahne": {
+     "tur": "biy14-lamarck",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Do the father's bigger muscles pass to his child?",
+     "secenekler": [
+      {
+       "yazi": "Yes",
+       "neden": "This is Lamarck's view, and it is invalid. The change in muscle cells does not reach the DNA of the gametes."
+      },
+      {
+       "yazi": "No",
+       "dogru": true,
+       "neden": "Muscle built by training is a modification. The change happens in body cells and does not reach the gametes."
+      },
+      {
+       "yazi": "Partly",
+       "neden": "No part of an acquired trait is inherited. The child's muscles depend on the child's own genes and life."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Antibiotic resistance",
+    "metin": "A dish holds 28 bacteria. Three purple bacteria became resistant through a random <b>mutation</b> before any drug was given. Predict first, then give the antibiotic.",
+    "sahne": {
+     "tur": "biy14-antibiyotik",
+     "sure": 7
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In the end, resistant bacteria fill the dish. What is the antibiotic's role?",
+     "secenekler": [
+      {
+       "yazi": "It pushes bacteria to become resistant",
+       "neden": "Mutations arise at random, not according to need. The drug does not create new resistance."
+      },
+      {
+       "yazi": "Bacteria get used to the drug and pass it on",
+       "neden": "This is a Lamarckian mistake. The susceptible bacteria that die cannot get used to the drug. The surviving resistant bacteria were already resistant."
+      },
+      {
+       "yazi": "It selects resistant bacteria that already existed",
+       "dogru": true,
+       "neden": "The antibiotic kills the susceptible bacteria. The 3 bacteria that were resistant before the drug survive, divide and fill the dish."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Types of selection",
+    "metin": "Natural selection changes the distribution of a trait in three different ways. The dashed line shows the distribution before, and the green area shows it after. Look at all three types.",
+    "sahne": {
+     "tur": "biy14-secilim"
+    },
+    "deger": {
+     "t": 1
+    },
+    "kontroller": [
+     {
+      "ad": "t",
+      "etiket": "Selection type",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Babies born very small or very large have lower chances of survival. Birth weight is an example of which type of selection?",
+     "secenekler": [
+      {
+       "yazi": "Stabilizing selection",
+       "dogru": true,
+       "neden": "Both extremes are removed and the average weight is favored. The distribution narrows, but the average stays in place."
+      },
+      {
+       "yazi": "Directional selection",
+       "neden": "In directional selection, only one extreme is favored and the average shifts. Here both extremes are at a disadvantage."
+      },
+      {
+       "yazi": "Disruptive selection",
+       "neden": "In disruptive selection, both extremes are favored and the middle is removed. With babies, the exact opposite happens."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Hardy–Weinberg",
+    "metin": "In a population at equilibrium, the share of aa equals q². In this population in Hardy–Weinberg equilibrium, 16% of individuals have the aa genotype. Find q.",
+    "sahne": {
+     "tur": "biy14-hw"
+    },
+    "deger": {
+     "q": 70
+    },
+    "kontroller": [
+     {
+      "ad": "q",
+      "etiket": "q (frequency of allele a)",
+      "min": 0,
+      "max": 100,
+      "adim": 5,
+      "carpan": 0.01
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "q": 40
+     },
+     "ipucu": "The share of aa is q². Look for the number whose square is 0.16.",
+     "tamam": "q = √0.16 = 0.4 and p = 0.6. The share of carriers (Aa) is 2pq = 2 · 0.6 · 0.4 = 0.48. So the recessive allele is mostly hidden, unnoticed, in carriers."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Genetic drift",
+    "metin": "Allele frequency changes not only through selection but also by chance. This is called <b>genetic drift</b>. Each line shows a repeat run from the same starting point. Play the small and large populations separately.",
+    "sahne": {
+     "tur": "biy14-suruklenme",
+     "sure": 5
+    },
+    "deger": {
+     "b": 0
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Large population",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "In which population is an allele more easily lost by chance?",
+     "secenekler": [
+      {
+       "yazi": "In the large population",
+       "neden": "In the population of 500, the lines stayed around 0.5. In a large sample, chance has a small effect."
+      },
+      {
+       "yazi": "In the small population",
+       "dogru": true,
+       "neden": "In a population of 10, the luck of a few individuals changes the whole pool. In some runs an allele was lost completely. This is also why bottlenecks and the founder effect are so strong."
+      },
+      {
+       "yazi": "Equally in both",
+       "neden": "Look at the graphs. In the small population the lines swing much more."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Selection lab",
+    "metin": "In England, peppered moths rest on tree trunks and birds hunt them. Dark and light color are inherited. At the start, most moths are light. Turn industrial pollution and birds on and off. Each second is one generation. Find the following yourself.",
+    "sahne": {
+     "tur": "sim-guve"
+    },
+    "deger": {
+     "kirli": 0,
+     "kus": 1,
+     "koyu": 5,
+     "kusuz": 0,
+     "donus": 0
+    },
+    "kontroller": [
+     {
+      "ad": "kirli",
+      "etiket": "Industrial pollution (soot)",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "kus",
+      "etiket": "Birds",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "Turn on pollution and wait. See whether the share of dark moths passes <b>80%</b>.",
+       "hedef": {
+        "kirli": 1,
+        "koyu": [
+         80,
+         100
+        ]
+       },
+       "coz": [
+        {
+         "kirli": 1,
+         "kus": 1
+        }
+       ],
+       "tamam": "On soot-darkened trees, birds easily spotted the light moths. Dark moths survived and reproduced more, so the dark color spread. This is called <b>natural selection</b>."
+      },
+      {
+       "yazi": "Remove the birds and wait a few generations. See whether the share still changes.",
+       "hedef": {
+        "kus": 0,
+        "kusuz": [
+         4,
+         99
+        ]
+       },
+       "coz": [
+        {
+         "kus": 0
+        }
+       ],
+       "tamam": "With the predators gone, the share almost stopped changing. The remaining very slow change comes from rare mutations. Mutation produces the colors, but the <b>selective pressure</b> in the environment decides which color spreads fast."
+      },
+      {
+       "yazi": "Bring the birds back and turn off pollution to clean the air. See whether dark moths fall below <b>30%</b>.",
+       "hedef": {
+        "kus": 1,
+        "kirli": 0,
+        "koyu": [
+         0,
+         30
+        ],
+        "donus": 1
+       },
+       "coz": [
+        {
+         "kus": 1,
+         "kirli": 0
+        }
+       ],
+       "tamam": "When the trees turned light again, light moths had the advantage this time and dark moths declined. The environment sets the direction of selection. This is exactly what was observed in England after the 1960s."
+      }
+     ]
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Speciation",
+    "metin": "If a river splits a population in two, <b>gene flow</b> between the two groups stops. Thousands of generations pass. Predict first, then play.",
+    "sahne": {
+     "tur": "biy14-turlesme",
+     "sure": 8
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "When the groups meet again, what shows that they are separate species?",
+     "secenekler": [
+      {
+       "yazi": "Their colors have diverged",
+       "neden": "Members of the same species can look very different. Think of dog breeds. The test of a species is reproduction, not appearance."
+      },
+      {
+       "yazi": "They lived apart for a long time",
+       "neden": "Geographic separation starts speciation, but it does not prove it. If the groups produce fertile offspring when they meet again, they are still one species."
+      },
+      {
+       "yazi": "They produce no fertile offspring",
+       "dogru": true,
+       "neden": "If they cannot produce fertile offspring, reproductive isolation has formed between them. They are now two separate species."
+      }
+     ]
+    },
+    "kart": 12
+   },
+   {
+    "baslik": "Homologous and analogous",
+    "metin": "The human arm, the bat wing and the whale flipper develop from the same bone plan. Such structures are called <b>homologous</b> structures. Now compare two wings.",
+    "sahne": {
+     "tur": "biy14-kanit"
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Compare the wings",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why are a bird wing and a butterfly wing analogous structures?",
+     "secenekler": [
+      {
+       "yazi": "Both are for flying, but their origins differ",
+       "dogru": true,
+       "neden": "A bird wing is a forelimb with bones, while a butterfly wing is a membrane without bones. The similar function comes from adapting to a similar environment."
+      },
+      {
+       "yazi": "They developed from the same bone plan",
+       "neden": "A butterfly wing has no bones at all. A shared bone plan is a feature of homologous structures."
+      },
+      {
+       "yazi": "Both are vestigial organs",
+       "neden": "Both wings still work. A vestigial organ is a structure that worked in an ancestor and has shrunk. The human tailbone is an example."
+      }
+     ]
+    },
+    "kart": 14
+   }
+  ],
+  "kapanis": [
+   "Evolution is a change in the allele frequencies of the gene pool over generations. Populations evolve, not individuals.",
+   "Acquired traits are not inherited. Only the DNA in the gametes passes to offspring.",
+   "Natural selection does not create new alleles. It selects, among existing heritable differences, the ones that suit the environment.",
+   "In Hardy–Weinberg equilibrium, p + q = 1 and p² + 2pq + q² = 1. You find q by taking the square root of the aa share.",
+   "Drift is strong in small populations. When gene flow stops and reproductive isolation forms, a new species appears."
+  ],
+  "soruOnce": true
+ },
  "siniflandirma": {
   "id": "siniflandirma",
   "ders": "biyoloji",

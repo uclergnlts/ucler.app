@@ -3980,6 +3980,371 @@
    }
   ]
  },
+ "evrim": {
+  "title": "Evolution and natural selection",
+  "summary": "Learn how populations change, from Darwin to Hardy–Weinberg.",
+  "olay": {
+   "yer": "1848 · Manchester",
+   "h": "Moths that changed color in fifty years",
+   "p": "In 1848, the first dark peppered moth was caught in Manchester. By 1895, about 98% of the moths in the city were dark. What happened in those fifty years?"
+  },
+  "cards": [
+   {
+    "h": "What is evolution?",
+    "p": "A change in a population's inherited traits over generations is called <b>evolution</b>. All the alleles in a population make up its <b>gene pool</b>, and an allele's share of that pool is its <b>allele frequency</b>. Individuals do not evolve. The gene pool changes.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='evr-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='17' font-size='12' fill='var(--muted)' text-anchor='middle'>gene pool of a population (10 alleles)</text><rect x='12' y='28' width='86' height='104' rx='6' fill='var(--acc)' fill-opacity='0.06' stroke='var(--acc)' stroke-width='1.2'/><text x='55' y='46' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>generation 1</text><circle cx='27' cy='72' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='41' cy='72' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='55' cy='72' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='69' cy='72' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><circle cx='83' cy='72' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><circle cx='27' cy='98' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><circle cx='41' cy='98' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><circle cx='55' cy='98' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><circle cx='69' cy='98' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><circle cx='83' cy='98' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><text x='55' y='124' font-size='11' fill='var(--ink)' text-anchor='middle'>A 0.3 · a 0.7</text><line x1='101' y1='85' x2='114' y2='85' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-1)'/><rect x='117' y='28' width='86' height='104' rx='6' fill='var(--acc)' fill-opacity='0.06' stroke='var(--acc)' stroke-width='1.2'/><text x='160' y='46' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>generation 5</text><circle cx='132' cy='72' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='146' cy='72' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='160' cy='72' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='174' cy='72' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='188' cy='72' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='132' cy='98' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><circle cx='146' cy='98' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><circle cx='160' cy='98' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><circle cx='174' cy='98' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><circle cx='188' cy='98' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><text x='160' y='124' font-size='11' fill='var(--ink)' text-anchor='middle'>A 0.5 · a 0.5</text><line x1='206' y1='85' x2='219' y2='85' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-1)'/><rect x='222' y='28' width='86' height='104' rx='6' fill='var(--acc)' fill-opacity='0.06' stroke='var(--acc)' stroke-width='1.2'/><text x='265' y='46' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>generation 10</text><circle cx='237' cy='72' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='251' cy='72' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='265' cy='72' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='279' cy='72' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='293' cy='72' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='237' cy='98' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='251' cy='98' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='265' cy='98' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><circle cx='279' cy='98' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><circle cx='293' cy='98' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><text x='265' y='124' font-size='11' fill='var(--ink)' text-anchor='middle'>A 0.8 · a 0.2</text><circle cx='105' cy='153' r='5' fill='var(--c1)' fill-opacity='0.75' stroke='var(--c1)' stroke-width='1'/><text x='114' y='157' font-size='11' fill='var(--ink)' text-anchor='start'>allele A</text><circle cx='185' cy='153' r='5' fill='var(--c2)' fill-opacity='0.75' stroke='var(--c2)' stroke-width='1'/><text x='194' y='157' font-size='11' fill='var(--ink)' text-anchor='start'>allele a</text><text x='160' y='186' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>allele frequency changed: the population evolved</text></svg>",
+    "key": "Evolution is measured by changes in allele frequencies. An allele's frequency is the number of copies of that allele divided by the total number of alleles."
+   },
+   {
+    "h": "Lamarck's explanation",
+    "p": "According to <b>Lamarck</b> (1809), an organ that is used grows stronger and one that is not used shrinks. He also held that acquired traits pass to offspring. This view is invalid, because a change in a body cell does not change the DNA of the gametes.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='evr-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='80' y='18' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Lamarck's claim</text><text x='240' y='18' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Darwin's explanation</text><rect x='10' y='30' width='140' height='38' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)' stroke-width='1.3'/><text x='80' y='46' font-size='11' fill='var(--ink)' text-anchor='middle'>giraffe tries to</text><text x='80' y='60' font-size='11' fill='var(--ink)' text-anchor='middle'>stretch its neck</text><line x1='80' y1='70' x2='80' y2='80' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-2)'/><rect x='10' y='82' width='140' height='38' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)' stroke-width='1.3'/><text x='80' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>neck grows longer</text><text x='80' y='112' font-size='11' fill='var(--ink)' text-anchor='middle'>during its life</text><line x1='80' y1='122' x2='80' y2='132' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-2)'/><rect x='10' y='134' width='140' height='38' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)' stroke-width='1.3'/><text x='80' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>long neck</text><text x='80' y='164' font-size='11' fill='var(--ink)' text-anchor='middle'>passes to young</text><rect x='170' y='30' width='140' height='38' rx='6' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.3'/><text x='240' y='46' font-size='11' fill='var(--ink)' text-anchor='middle'>taller ones</text><text x='240' y='60' font-size='11' fill='var(--ink)' text-anchor='middle'>feed better</text><line x1='240' y1='70' x2='240' y2='80' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-2)'/><rect x='170' y='82' width='140' height='38' rx='6' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.3'/><text x='240' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>leave more</text><text x='240' y='112' font-size='11' fill='var(--ink)' text-anchor='middle'>offspring</text><line x1='240' y1='122' x2='240' y2='132' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-2)'/><rect x='170' y='134' width='140' height='38' rx='6' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.3'/><text x='240' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>long necks</text><text x='240' y='164' font-size='11' fill='var(--ink)' text-anchor='middle'>spread</text><text x='80' y='190' font-size='11' fill='var(--c2)' text-anchor='middle'>wrong: not inherited</text><text x='240' y='190' font-size='11' fill='var(--c3)' text-anchor='middle'>the environment selects</text></svg>",
+    "key": "According to Lamarck, the giraffe's neck grew longer as it kept stretching it. His error was the mechanism he proposed. The idea that living things change over time is correct."
+   },
+   {
+    "h": "Darwin, Wallace and the finches",
+    "p": "<b>Darwin</b> saw that the beaks of Galápagos finches differed according to their food. He explained this by populations from a common ancestor adapting to their environments. <b>Wallace</b> reached the same conclusion.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='17' font-size='12' fill='var(--muted)' text-anchor='middle'>Galápagos finches: beak fits the food</text><polygon points='69,46 93,57 69,68' fill='var(--c4)' fill-opacity='0.6' stroke='var(--ink)' stroke-width='1.2'/><circle cx='55' cy='56' r='17' fill='var(--panel)' fill-opacity='1' stroke='var(--panel)' stroke-width='0'/><circle cx='55' cy='56' r='17' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><circle cx='61' cy='51' r='2.5' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0'/><text x='55' y='96' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>thick, short beak</text><text x='55' y='111' font-size='10' fill='var(--muted)' text-anchor='middle'>cracks seeds</text><line x1='55' y1='120' x2='160' y2='160' stroke='var(--muted)' stroke-width='1.3' stroke-linecap='round'/><polygon points='174,51 204,58 174,62' fill='var(--c4)' fill-opacity='0.6' stroke='var(--ink)' stroke-width='1.2'/><circle cx='160' cy='56' r='17' fill='var(--panel)' fill-opacity='1' stroke='var(--panel)' stroke-width='0'/><circle cx='160' cy='56' r='17' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.5'/><circle cx='166' cy='51' r='2.5' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0'/><text x='160' y='96' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>long, pointed beak</text><text x='160' y='111' font-size='10' fill='var(--muted)' text-anchor='middle'>feeds on cactus</text><line x1='160' y1='120' x2='160' y2='160' stroke='var(--muted)' stroke-width='1.3' stroke-linecap='round'/><polygon points='279,53 305,57 279,59' fill='var(--c4)' fill-opacity='0.6' stroke='var(--ink)' stroke-width='1.2'/><circle cx='265' cy='56' r='17' fill='var(--panel)' fill-opacity='1' stroke='var(--panel)' stroke-width='0'/><circle cx='265' cy='56' r='17' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><circle cx='271' cy='51' r='2.5' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0'/><text x='265' y='96' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>thin beak</text><text x='265' y='111' font-size='10' fill='var(--muted)' text-anchor='middle'>catches insects</text><line x1='265' y1='120' x2='160' y2='160' stroke='var(--muted)' stroke-width='1.3' stroke-linecap='round'/><circle cx='160' cy='164' r='5' fill='var(--muted)' fill-opacity='0.6' stroke='var(--muted)' stroke-width='1'/><text x='160' y='188' font-size='11' fill='var(--ink)' text-anchor='middle'>common ancestor: a population from the mainland</text></svg>",
+    "key": "The Beagle voyage took place from 1831 to 1836, and On the Origin of Species was published in 1859. These finches are thought to descend from a common ancestor that came from the mainland.",
+    "once": {
+     "soru": "What is the beak of a seed-cracking finch on the Galápagos like?",
+     "secenekler": [
+      {
+       "yazi": "Thick and strong",
+       "neden": "A thick beak suits cracking hard seeds.",
+       "dogru": true
+      },
+      {
+       "yazi": "Thin and long",
+       "neden": "Thin beaks are found in finches that eat insects."
+      },
+      {
+       "yazi": "Same as the others",
+       "neden": "The beaks have diverged according to the type of food."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Natural selection and adaptation",
+    "p": "Natural selection needs four conditions. A population must have <b>variation</b>, and these differences must be <b>heritable</b>. More <b>offspring</b> must be born than can survive, and individuals suited to the environment must <b>reproduce more</b>. A heritable trait that improves fit is called an <b>adaptation</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='evr-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='8' y='8' width='156' height='36' rx='6' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)' stroke-width='1.2'/><text x='16' y='23' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>1  variation</text><text x='16' y='37' font-size='10' fill='var(--muted)' text-anchor='start'>individuals differ</text><rect x='8' y='50' width='156' height='36' rx='6' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)' stroke-width='1.2'/><text x='16' y='65' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>2  inheritance</text><text x='16' y='79' font-size='10' fill='var(--muted)' text-anchor='start'>differences pass to offspring</text><rect x='8' y='92' width='156' height='36' rx='6' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)' stroke-width='1.2'/><text x='16' y='107' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>3  overproduction</text><text x='16' y='121' font-size='10' fill='var(--muted)' text-anchor='start'>more young than can survive</text><rect x='8' y='134' width='156' height='36' rx='6' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)' stroke-width='1.2'/><text x='16' y='149' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>4  differential reproduction</text><text x='16' y='163' font-size='10' fill='var(--muted)' text-anchor='start'>the fit leave more offspring</text><text x='86' y='190' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>result: the adaptation spreads</text><text x='240' y='18' font-size='11' fill='var(--muted)' text-anchor='middle'>generation 1</text><rect x='182' y='64' width='20' height='8' fill='var(--c1)' fill-opacity='0.45' stroke='var(--c1)' stroke-width='1'/><rect x='206' y='50' width='20' height='22' fill='var(--c1)' fill-opacity='0.45' stroke='var(--c1)' stroke-width='1'/><rect x='230' y='34' width='20' height='38' fill='var(--c1)' fill-opacity='0.45' stroke='var(--c1)' stroke-width='1'/><rect x='254' y='50' width='20' height='22' fill='var(--c1)' fill-opacity='0.45' stroke='var(--c1)' stroke-width='1'/><rect x='278' y='64' width='20' height='8' fill='var(--c1)' fill-opacity='0.45' stroke='var(--c1)' stroke-width='1'/><line x1='178' y1='72' x2='302' y2='72' stroke='var(--ink)' stroke-width='1.2' stroke-linecap='round'/><line x1='240' y1='80' x2='240' y2='96' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-4)'/><text x='240' y='112' font-size='11' fill='var(--muted)' text-anchor='middle'>many generations later</text><rect x='182' y='162' width='20' height='2' fill='var(--c3)' fill-opacity='0.45' stroke='var(--c3)' stroke-width='1'/><rect x='206' y='156' width='20' height='8' fill='var(--c3)' fill-opacity='0.45' stroke='var(--c3)' stroke-width='1'/><rect x='230' y='142' width='20' height='22' fill='var(--c3)' fill-opacity='0.45' stroke='var(--c3)' stroke-width='1'/><rect x='254' y='126' width='20' height='38' fill='var(--c3)' fill-opacity='0.45' stroke='var(--c3)' stroke-width='1'/><rect x='278' y='140' width='20' height='24' fill='var(--c3)' fill-opacity='0.45' stroke='var(--c3)' stroke-width='1'/><line x1='178' y1='164' x2='302' y2='164' stroke='var(--ink)' stroke-width='1.2' stroke-linecap='round'/><text x='240' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>neck length →</text></svg>",
+    "key": "Natural selection does not create new alleles and has no goal. It only selects among existing differences."
+   },
+   {
+    "h": "Sources of variation",
+    "p": "New alleles arise by <b>mutation</b>. <b>Crossing over</b>, <b>independent assortment</b> and <b>random fertilization</b> bring alleles together in new combinations. <b>Gene flow</b> also carries alleles in from other populations.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='16' y='18' font-size='11' fill='var(--muted)' text-anchor='start'>source</text><text x='166' y='18' font-size='11' fill='var(--muted)' text-anchor='start'>what does it do?</text><rect x='8' y='26' width='304' height='26' rx='5' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)' stroke-width='1.1'/><text x='16' y='43' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>mutation</text><text x='166' y='43' font-size='12' fill='var(--c2)' text-anchor='start'>a new allele forms</text><rect x='8' y='56' width='304' height='26' rx='5' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1.1'/><text x='16' y='73' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>crossing over</text><text x='166' y='73' font-size='12' fill='var(--c1)' text-anchor='start'>new combination</text><rect x='8' y='86' width='304' height='26' rx='5' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1.1'/><text x='16' y='103' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>independent assortment</text><text x='166' y='103' font-size='12' fill='var(--c1)' text-anchor='start'>new combination</text><rect x='8' y='116' width='304' height='26' rx='5' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1.1'/><text x='16' y='133' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>random fertilization</text><text x='166' y='133' font-size='12' fill='var(--c1)' text-anchor='start'>new combination</text><rect x='8' y='146' width='304' height='26' rx='5' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.1'/><text x='16' y='163' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>gene flow (migration)</text><text x='166' y='163' font-size='12' fill='var(--c3)' text-anchor='start'>alleles arrive from outside</text><text x='160' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>modification is not heritable and adds no variation</text></svg>",
+    "key": "Mutation produces the raw material of variation. Meiosis and fertilization shuffle that raw material.",
+    "once": {
+     "soru": "How does an allele that never existed in a population appear?",
+     "secenekler": [
+      {
+       "yazi": "By mutation",
+       "neden": "The only source of a new allele is a change in DNA.",
+       "dogru": true
+      },
+      {
+       "yazi": "By crossing over",
+       "neden": "Crossing over shuffles existing alleles, but it does not create new ones."
+      },
+      {
+       "yazi": "By natural selection",
+       "neden": "Natural selection selects among existing alleles."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Hardy–Weinberg equilibrium",
+    "p": "In a large, randomly mating population with no mutation, migration or selection, allele frequencies do not change. This is called <b>Hardy–Weinberg equilibrium</b>. In this equilibrium, p + q = 1 and p² + 2pq + q² = 1.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='34' font-size='20' fill='var(--acc)' text-anchor='middle' font-weight='700'>p² + 2pq + q² = 1</text><text x='160' y='56' font-size='12' fill='var(--ink)' text-anchor='middle'>p + q = 1   (p: frequency of A, q: frequency of a)</text><rect x='14' y='68' width='292' height='124' rx='6' fill='var(--c1)' fill-opacity='0.06' stroke='var(--c1)' stroke-width='1.2'/><text x='26' y='87' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Example: share of aa individuals is 0.09</text><text x='26' y='108' font-size='12' fill='var(--ink)' text-anchor='start'>q² = 0.09  →  q = 0.3</text><text x='26' y='126' font-size='12' fill='var(--ink)' text-anchor='start'>p = 1 − 0.3 = 0.7</text><text x='26' y='144' font-size='12' fill='var(--ink)' text-anchor='start'>AA = p² = 0.49</text><text x='26' y='162' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>Aa = 2pq = 2 · 0.7 · 0.3 = 0.42</text><text x='26' y='180' font-size='12' fill='var(--ink)' text-anchor='start'>check: 0.49 + 0.42 + 0.09 = 1</text></svg>",
+    "key": "First you find q by taking the square root of the aa share. The share of carriers (Aa) equals 2pq.",
+    "etk": {
+     "tur": "formul",
+     "soru": "Change q, the frequency of the recessive allele (a), and see the genotype shares at equilibrium.",
+     "girdiler": [
+      {
+       "ad": "q",
+       "etiket": "q (frequency of allele a)",
+       "min": 0,
+       "max": 1,
+       "adim": 0.01,
+       "deger": 0.3
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "AA = p<sup>2</sup>",
+       "ifade": "(1-q)^2",
+       "basamak": 4,
+       "max": 1
+      },
+      {
+       "ad": "Aa = 2pq",
+       "ifade": "2*(1-q)*q",
+       "basamak": 4,
+       "max": 1
+      },
+      {
+       "ad": "aa = q<sup>2</sup>",
+       "ifade": "q^2",
+       "basamak": 4,
+       "max": 1
+      }
+     ]
+    }
+   },
+   {
+    "h": "Genetic drift",
+    "p": "A change in allele frequency by chance is called <b>genetic drift</b>, and its effect is large in small populations. When a disaster shrinks a population, it is called a <b>bottleneck</b>. When a few individuals settle in a new place, it is called the <b>founder effect</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='evr-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><line x1='160' y1='8' x2='160' y2='192' stroke='var(--line)' stroke-width='1.2' stroke-linecap='round'/><text x='80' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Bottleneck effect</text><text x='240' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Founder effect</text><ellipse cx='80' cy='50' rx='52' ry='22' fill='var(--muted)' fill-opacity='0.06' stroke='var(--muted)' stroke-width='1.2'/><circle cx='58.0' cy='44.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='69.0' cy='44.0' r='4' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='1'/><circle cx='80.0' cy='44.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='91.0' cy='44.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='102.0' cy='44.0' r='4' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='1'/><circle cx='58.0' cy='56.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='69.0' cy='56.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='80.0' cy='56.0' r='4' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='1'/><circle cx='91.0' cy='56.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='102.0' cy='56.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><line x1='80' y1='75' x2='80' y2='92' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-7)'/><text x='88' y='88' font-size='10' fill='var(--muted)' text-anchor='start'>disaster</text><ellipse cx='80' cy='106' rx='22' ry='11' fill='var(--c5)' fill-opacity='0.08' stroke='var(--c5)' stroke-width='1.2'/><circle cx='69.0' cy='106.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='80.0' cy='106.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='91.0' cy='106.0' r='4' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='1'/><line x1='80' y1='120' x2='80' y2='140' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-7)'/><text x='88' y='134' font-size='10' fill='var(--muted)' text-anchor='start'>growth</text><ellipse cx='80' cy='166' rx='52' ry='22' fill='var(--muted)' fill-opacity='0.06' stroke='var(--muted)' stroke-width='1.2'/><circle cx='58.0' cy='160.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='69.0' cy='160.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='80.0' cy='160.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='91.0' cy='160.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='102.0' cy='160.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='58.0' cy='172.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='69.0' cy='172.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='80.0' cy='172.0' r='4' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='1'/><circle cx='91.0' cy='172.0' r='4' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='1'/><circle cx='102.0' cy='172.0' r='4' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='1'/><ellipse cx='240' cy='50' rx='52' ry='22' fill='var(--muted)' fill-opacity='0.06' stroke='var(--muted)' stroke-width='1.2'/><circle cx='218.0' cy='44.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='229.0' cy='44.0' r='4' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='1'/><circle cx='240.0' cy='44.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='251.0' cy='44.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='262.0' cy='44.0' r='4' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='1'/><circle cx='218.0' cy='56.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='229.0' cy='56.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='240.0' cy='56.0' r='4' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='1'/><circle cx='251.0' cy='56.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='262.0' cy='56.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><line x1='240' y1='75' x2='240' y2='92' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-7)'/><text x='248' y='88' font-size='10' fill='var(--muted)' text-anchor='start'>migration</text><ellipse cx='240' cy='106' rx='22' ry='11' fill='var(--c5)' fill-opacity='0.08' stroke='var(--c5)' stroke-width='1.2'/><circle cx='229.0' cy='106.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='240.0' cy='106.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='251.0' cy='106.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><line x1='240' y1='120' x2='240' y2='140' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-7)'/><text x='248' y='134' font-size='10' fill='var(--muted)' text-anchor='start'>growth</text><ellipse cx='240' cy='166' rx='52' ry='22' fill='var(--muted)' fill-opacity='0.06' stroke='var(--muted)' stroke-width='1.2'/><circle cx='218.0' cy='160.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='229.0' cy='160.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='240.0' cy='160.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='251.0' cy='160.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='262.0' cy='160.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='218.0' cy='172.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='229.0' cy='172.0' r='4' fill='var(--c4)' fill-opacity='0.8' stroke='var(--c4)' stroke-width='1'/><circle cx='240.0' cy='172.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='251.0' cy='172.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/><circle cx='262.0' cy='172.0' r='4' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)' stroke-width='1'/></svg>",
+    "key": "Drift ignores fitness. It is not the fittest that remain but the lucky ones. An allele can be lost completely this way."
+   },
+   {
+    "h": "Types of selection",
+    "p": "<b>Directional</b> selection favors one extreme, and the average shifts. <b>Stabilizing</b> selection favors the average, and the extremes are removed. <b>Disruptive</b> selection favors both extremes, and the population can split in two.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='56.0' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>directional</text><path d='M10.0,129.9 L12.3,129.8 L14.6,129.6 L16.9,129.3 L19.2,128.8 L21.5,128.1 L23.8,126.9 L26.1,125.3 L28.4,123.0 L30.7,119.8 L33.0,115.8 L35.3,110.8 L37.6,104.8 L39.9,98.0 L42.2,90.6 L44.5,83.0 L46.8,75.8 L49.1,69.4 L51.4,64.3 L53.7,61.1 L56.0,60.0 L58.3,61.1 L60.6,64.3 L62.9,69.4 L65.2,75.8 L67.5,83.0 L69.8,90.6 L72.1,98.0 L74.4,104.8 L76.7,110.8 L79.0,115.8 L81.3,119.8 L83.6,123.0 L85.9,125.3 L88.2,126.9 L90.5,128.1 L92.8,128.8 L95.1,129.3 L97.4,129.6 L99.7,129.8 L102.0,129.9' fill='none' stroke='var(--muted)' stroke-width='1.3' stroke-dasharray='4 3'/><path d='M10.0,130.0 L12.3,130.0 L14.6,130.0 L16.9,130.0 L19.2,130.0 L21.5,130.0 L23.8,130.0 L26.1,130.0 L28.4,129.9 L30.7,129.9 L33.0,129.8 L35.3,129.5 L37.6,129.1 L39.9,128.4 L42.2,127.2 L44.5,125.2 L46.8,122.3 L49.1,118.2 L51.4,112.7 L53.7,105.6 L56.0,97.1 L58.3,87.5 L60.6,77.4 L62.9,67.7 L65.2,59.4 L67.5,53.3 L69.8,50.3 L72.1,50.6 L74.4,54.3 L76.7,60.9 L79.0,69.6 L81.3,79.5 L83.6,89.5 L85.9,98.9 L88.2,107.2 L90.5,113.9 L92.8,119.2 L95.1,123.0 L97.4,125.7 L99.7,127.4 L102.0,128.6' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='2'/><line x1='10' y1='130' x2='102' y2='130' stroke='var(--ink)' stroke-width='1.2' stroke-linecap='round'/><text x='56.0' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>average shifts</text><text x='160.0' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>stabilizing</text><path d='M114.0,129.9 L116.3,129.8 L118.6,129.6 L120.9,129.3 L123.2,128.8 L125.5,128.1 L127.8,126.9 L130.1,125.3 L132.4,123.0 L134.7,119.8 L137.0,115.8 L139.3,110.8 L141.6,104.8 L143.9,98.0 L146.2,90.6 L148.5,83.0 L150.8,75.8 L153.1,69.4 L155.4,64.3 L157.7,61.1 L160.0,60.0 L162.3,61.1 L164.6,64.3 L166.9,69.4 L169.2,75.8 L171.5,83.0 L173.8,90.6 L176.1,98.0 L178.4,104.8 L180.7,110.8 L183.0,115.8 L185.3,119.8 L187.6,123.0 L189.9,125.3 L192.2,126.9 L194.5,128.1 L196.8,128.8 L199.1,129.3 L201.4,129.6 L203.7,129.8 L206.0,129.9' fill='none' stroke='var(--muted)' stroke-width='1.3' stroke-dasharray='4 3'/><path d='M114.0,130.0 L116.3,130.0 L118.6,130.0 L120.9,130.0 L123.2,130.0 L125.5,130.0 L127.8,130.0 L130.1,130.0 L132.4,129.9 L134.7,129.8 L137.0,129.4 L139.3,128.5 L141.6,126.5 L143.9,122.7 L146.2,116.2 L148.5,106.4 L150.8,93.4 L153.1,78.4 L155.4,64.2 L157.7,53.8 L160.0,50.0 L162.3,53.8 L164.6,64.2 L166.9,78.4 L169.2,93.4 L171.5,106.4 L173.8,116.2 L176.1,122.7 L178.4,126.5 L180.7,128.5 L183.0,129.4 L185.3,129.8 L187.6,129.9 L189.9,130.0 L192.2,130.0 L194.5,130.0 L196.8,130.0 L199.1,130.0 L201.4,130.0 L203.7,130.0 L206.0,130.0' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='2'/><line x1='114' y1='130' x2='206' y2='130' stroke='var(--ink)' stroke-width='1.2' stroke-linecap='round'/><text x='160.0' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>extremes removed</text><text x='264.0' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>disruptive</text><path d='M218.0,129.9 L220.3,129.8 L222.6,129.6 L224.9,129.3 L227.2,128.8 L229.5,128.1 L231.8,126.9 L234.1,125.3 L236.4,123.0 L238.7,119.8 L241.0,115.8 L243.3,110.8 L245.6,104.8 L247.9,98.0 L250.2,90.6 L252.5,83.0 L254.8,75.8 L257.1,69.4 L259.4,64.3 L261.7,61.1 L264.0,60.0 L266.3,61.1 L268.6,64.3 L270.9,69.4 L273.2,75.8 L275.5,83.0 L277.8,90.6 L280.1,98.0 L282.4,104.8 L284.7,110.8 L287.0,115.8 L289.3,119.8 L291.6,123.0 L293.9,125.3 L296.2,126.9 L298.5,128.1 L300.8,128.8 L303.1,129.3 L305.4,129.6 L307.7,129.8 L310.0,129.9' fill='none' stroke='var(--muted)' stroke-width='1.3' stroke-dasharray='4 3'/><path d='M218.0,129.2 L220.3,127.9 L222.6,125.5 L224.9,120.9 L227.2,113.6 L229.5,103.0 L231.8,89.6 L234.1,75.4 L236.4,62.9 L238.7,55.3 L241.0,54.6 L243.3,60.9 L245.6,72.6 L247.9,86.8 L250.2,100.5 L252.5,111.7 L254.8,119.7 L257.1,124.7 L259.4,127.5 L261.7,128.9 L264.0,129.2 L266.3,128.9 L268.6,127.5 L270.9,124.7 L273.2,119.7 L275.5,111.7 L277.8,100.5 L280.1,86.8 L282.4,72.6 L284.7,60.9 L287.0,54.6 L289.3,55.3 L291.6,62.9 L293.9,75.4 L296.2,89.6 L298.5,103.0 L300.8,113.6 L303.1,120.9 L305.4,125.5 L307.7,127.9 L310.0,129.2' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='2'/><line x1='218' y1='130' x2='310' y2='130' stroke='var(--ink)' stroke-width='1.2' stroke-linecap='round'/><text x='264.0' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>the middle is removed</text><line x1='70' y1='174' x2='90' y2='174' stroke='var(--muted)' stroke-width='1.3' stroke-linecap='round' stroke-dasharray='4 3'/><text x='95' y='178' font-size='11' fill='var(--muted)' text-anchor='start'>before</text><line x1='150' y1='174' x2='170' y2='174' stroke='var(--acc)' stroke-width='2' stroke-linecap='round'/><text x='175' y='178' font-size='11' fill='var(--acc)' text-anchor='start'>after</text><text x='160' y='196' font-size='10' fill='var(--muted)' text-anchor='middle'>horizontal axis: trait (e.g. beak length)</text></svg>",
+    "key": "Birth weight is an example of stabilizing selection. The darkening of peppered moths and antibiotic resistance are examples of directional selection."
+   },
+   {
+    "h": "Sexual selection and reproductive success",
+    "p": "Success in evolution is not about being the strongest but about <b>leaving more offspring</b>. Mate choice also leads to <b>sexual selection</b>. For example, peahens choose males with showy tails.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M80 76 L36 36 A60 60 0 0 1 124 32 Z' fill='var(--c3)' fill-opacity='0.18' stroke='var(--c3)' stroke-width='1.2'/><circle cx='50' cy='46' r='4' fill='var(--c1)' fill-opacity='0.6'/><circle cx='70' cy='32' r='4' fill='var(--c1)' fill-opacity='0.6'/><circle cx='94' cy='30' r='4' fill='var(--c1)' fill-opacity='0.6'/><circle cx='114' cy='40' r='4' fill='var(--c1)' fill-opacity='0.6'/><ellipse cx='84' cy='76' rx='12' ry='9' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)' stroke-width='1.3'/><circle cx='96' cy='66' r='5' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)' stroke-width='1.3'/><path d='M81 85 V96 M88 85 V96' stroke='var(--ink)' stroke-width='1'/><path d='M232 76 L214 64 L218 80 Z' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.2'/><ellipse cx='236' cy='76' rx='12' ry='9' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.3'/><circle cx='248' cy='66' r='5' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.3'/><path d='M233 85 V96 M240 85 V96' stroke='var(--ink)' stroke-width='1'/><text x='80' y='118' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>showy tail</text><text x='236' y='118' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>plain tail</text><path d='M160 14 V104' stroke='var(--line)' stroke-width='1'/><text x='160' y='138' font-size='10' fill='var(--muted)' text-anchor='middle'>escaping predators</text><text x='80' y='138' font-size='11' fill='var(--ink)' text-anchor='middle'>hard</text><text x='236' y='138' font-size='11' fill='var(--ink)' text-anchor='middle'>easy</text><text x='160' y='156' font-size='10' fill='var(--muted)' text-anchor='middle'>female's choice</text><text x='80' y='156' font-size='11' fill='var(--ink)' text-anchor='middle'>often</text><text x='236' y='156' font-size='11' fill='var(--ink)' text-anchor='middle'>rarely</text><text x='160' y='176' font-size='10' fill='var(--muted)' text-anchor='middle' font-weight='700'>offspring</text><rect x='40' y='166' width='84' height='14' rx='3' fill='var(--c3)' fill-opacity='0.4'/><rect x='216' y='166' width='30' height='14' rx='3' fill='var(--c4)' fill-opacity='0.4'/><text x='160' y='196' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>selection favors: whoever leaves more offspring</text></svg>",
+    "key": "Male deer fight with their antlers. The idea \"only the strongest survive\" is wrong. Selection favors the individual that reproduces more in that environment.",
+    "once": {
+     "soru": "A peacock's big tail slows it down against predators. Why is it still common?",
+     "secenekler": [
+      {
+       "yazi": "It finds more mates",
+       "neden": "Peahens choose showy males, and these males leave more offspring.",
+       "dogru": true
+      },
+      {
+       "yazi": "It scares predators",
+       "neden": "A big tail is a disadvantage against predators."
+      },
+      {
+       "yazi": "It makes flying easier",
+       "neden": "A big tail makes flying harder."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Artificial selection",
+    "p": "In <b>artificial selection</b>, humans decide which individuals reproduce. Dog breeds came from wolves this way, and broccoli and cauliflower came from wild cabbage. In natural selection, the environment does the choosing.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='16' font-size='11' fill='var(--muted)' text-anchor='middle'>chosen by humans; all the same species</text><rect x='4' y='26' width='72' height='44' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><text x='40' y='44' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>cabbage</text><text x='40' y='61' font-size='10' fill='var(--muted)' text-anchor='middle'>terminal bud</text><line x1='40' y1='70' x2='160' y2='138' stroke='var(--muted)' stroke-width='1.2' stroke-linecap='round'/><rect x='84' y='26' width='72' height='44' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><text x='120' y='44' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>broccoli</text><text x='120' y='61' font-size='10' fill='var(--muted)' text-anchor='middle'>flower stalks</text><line x1='120' y1='70' x2='160' y2='138' stroke='var(--muted)' stroke-width='1.2' stroke-linecap='round'/><rect x='164' y='26' width='72' height='44' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><text x='200' y='44' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>cauliflower</text><text x='200' y='61' font-size='10' fill='var(--muted)' text-anchor='middle'>flower cluster</text><line x1='200' y1='70' x2='160' y2='138' stroke='var(--muted)' stroke-width='1.2' stroke-linecap='round'/><rect x='244' y='26' width='72' height='44' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><text x='280' y='44' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>kohlrabi</text><text x='280' y='61' font-size='10' fill='var(--muted)' text-anchor='middle'>stem</text><line x1='280' y1='70' x2='160' y2='138' stroke='var(--muted)' stroke-width='1.2' stroke-linecap='round'/><rect x='90' y='138' width='140' height='36' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.3'/><text x='160' y='154' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>wild cabbage</text><text x='160' y='168' font-size='11' fill='var(--ink)' text-anchor='middle' font-style='italic'>Brassica oleracea</text><text x='160' y='192' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>humans select; in natural selection, the environment</text></svg>",
+    "key": "Cabbage, broccoli and cauliflower are varieties of the same species. Darwin also started from examples like these when explaining natural selection.",
+    "once": {
+     "soru": "Which plant were broccoli and cauliflower bred from?",
+     "secenekler": [
+      {
+       "yazi": "Wild cabbage",
+       "neden": "Farmers selected different traits and got different varieties from the same species.",
+       "dogru": true
+      },
+      {
+       "yazi": "Lettuce",
+       "neden": "Lettuce belongs to a different plant family."
+      },
+      {
+       "yazi": "Spinach",
+       "neden": "Spinach belongs to a different plant family."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Peppered moths and industrial melanism",
+    "p": "During the Industrial Revolution, soot darkened tree trunks. Dark <b>peppered moths</b> were better hidden from birds, so they became common. This is called <b>industrial melanism</b>. When the air was cleaned up, light moths increased again.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='evr-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><line x1='160' y1='8' x2='160' y2='192' stroke='var(--line)' stroke-width='1.2' stroke-linecap='round'/><text x='80' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>antibiotic resistance</text><text x='240' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>peppered moth</text><ellipse cx='26' cy='38' rx='7' ry='4' fill='var(--c1)' fill-opacity='0.6' stroke='var(--c1)' stroke-width='1.2'/><ellipse cx='46' cy='38' rx='7' ry='4' fill='var(--c1)' fill-opacity='0.6' stroke='var(--c1)' stroke-width='1.2'/><ellipse cx='66' cy='38' rx='7' ry='4' fill='var(--c1)' fill-opacity='0.6' stroke='var(--c1)' stroke-width='1.2'/><ellipse cx='86' cy='38' rx='7' ry='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1.2'/><ellipse cx='106' cy='38' rx='7' ry='4' fill='var(--c1)' fill-opacity='0.6' stroke='var(--c1)' stroke-width='1.2'/><ellipse cx='126' cy='38' rx='7' ry='4' fill='var(--c1)' fill-opacity='0.6' stroke='var(--c1)' stroke-width='1.2'/><line x1='76' y1='48' x2='76' y2='70' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-10)'/><text x='84' y='64' font-size='10' fill='var(--muted)' text-anchor='start'>antibiotic</text><ellipse cx='26' cy='84' rx='7' ry='4' fill='var(--muted)' fill-opacity='0.0' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='2 2'/><ellipse cx='46' cy='84' rx='7' ry='4' fill='var(--muted)' fill-opacity='0.0' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='2 2'/><ellipse cx='66' cy='84' rx='7' ry='4' fill='var(--muted)' fill-opacity='0.0' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='2 2'/><ellipse cx='86' cy='84' rx='7' ry='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1.2'/><ellipse cx='106' cy='84' rx='7' ry='4' fill='var(--muted)' fill-opacity='0.0' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='2 2'/><ellipse cx='126' cy='84' rx='7' ry='4' fill='var(--muted)' fill-opacity='0.0' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='2 2'/><line x1='76' y1='94' x2='76' y2='116' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-10)'/><text x='84' y='110' font-size='10' fill='var(--muted)' text-anchor='start'>growth</text><ellipse cx='26' cy='130' rx='7' ry='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1.2'/><ellipse cx='46' cy='130' rx='7' ry='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1.2'/><ellipse cx='66' cy='130' rx='7' ry='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1.2'/><ellipse cx='86' cy='130' rx='7' ry='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1.2'/><ellipse cx='106' cy='130' rx='7' ry='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1.2'/><ellipse cx='126' cy='130' rx='7' ry='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1.2'/><ellipse cx='30' cy='160' rx='7' ry='4' fill='var(--c1)' fill-opacity='0.6' stroke='var(--c1)' stroke-width='1.2'/><text x='42' y='164' font-size='10' fill='var(--ink)' text-anchor='start'>susceptible</text><ellipse cx='96' cy='160' rx='7' ry='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1.2'/><text x='108' y='164' font-size='10' fill='var(--ink)' text-anchor='start'>resistant</text><text x='80' y='188' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>resistance existed beforehand</text><rect x='180' y='28' width='50' height='112' fill='var(--line)' stroke='var(--muted)' stroke-width='1'/><rect x='255' y='28' width='50' height='112' fill='var(--ink)' fill-opacity='0.75' stroke='var(--ink)' stroke-width='1'/><path d='M205 60 l-11 -6 l3 11 z M205 60 l11 -6 l-3 11 z' fill='var(--panel)' fill-opacity='1' stroke='var(--muted)' stroke-width='1'/><path d='M205 108 l-11 -6 l3 11 z M205 108 l11 -6 l-3 11 z' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='1'/><path d='M280 60 l-11 -6 l3 11 z M280 60 l11 -6 l-3 11 z' fill='var(--panel)' fill-opacity='1' stroke='var(--muted)' stroke-width='1'/><path d='M280 108 l-11 -6 l3 11 z M280 108 l11 -6 l-3 11 z' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='1'/><text x='205' y='158' font-size='11' fill='var(--ink)' text-anchor='middle'>clean trunk</text><text x='280' y='158' font-size='11' fill='var(--ink)' text-anchor='middle'>sooty trunk</text><text x='205' y='174' font-size='11' fill='var(--muted)' text-anchor='middle'>light moth</text><text x='280' y='174' font-size='11' fill='var(--muted)' text-anchor='middle'>dark moth</text><text x='205' y='190' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>hidden</text><text x='280' y='190' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>hidden</text></svg>",
+    "key": "Antibiotic resistance is selected in the same way. Unnecessary antibiotic use speeds up the selection of resistant bacteria."
+   },
+   {
+    "h": "Speciation",
+    "p": "The formation of a new species is called <b>speciation</b>. When a mountain or river splits a population, <b>geographic isolation</b> occurs. Gene flow stops and the gene pools drift apart. If the groups can no longer produce fertile offspring, <b>reproductive isolation</b> has formed.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='evr-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='18' font-size='11' fill='var(--muted)' text-anchor='middle'>time →</text><ellipse cx='42' cy='80' rx='30' ry='42' fill='var(--c5)' fill-opacity='0.18' stroke='var(--c5)' stroke-width='1.5'/><ellipse cx='122' cy='80' rx='30' ry='42' fill='var(--c5)' fill-opacity='0.18' stroke='var(--c5)' stroke-width='1.5'/><path d='M122 36 q5 11 0 22 q-5 11 0 22 q5 11 0 22 q-5 11 0 22' fill='none' stroke='var(--c1)' stroke-width='3'/><ellipse cx='185' cy='80' rx='12' ry='40' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='1.5'/><ellipse cx='219' cy='80' rx='12' ry='40' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><path d='M202 36 q5 11 0 22 q-5 11 0 22 q5 11 0 22 q-5 11 0 22' fill='none' stroke='var(--c1)' stroke-width='3'/><ellipse cx='264' cy='80' rx='12' ry='40' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='1.5'/><ellipse cx='300' cy='80' rx='12' ry='40' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><line x1='277' y1='75' x2='287' y2='85' stroke='var(--c2)' stroke-width='2' stroke-linecap='round'/><line x1='287' y1='75' x2='277' y2='85' stroke='var(--c2)' stroke-width='2' stroke-linecap='round'/><line x1='74' y1='80' x2='89' y2='80' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-11)'/><line x1='154' y1='80' x2='169' y2='80' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-11)'/><line x1='234' y1='80' x2='249' y2='80' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-11)'/><text x='42' y='142' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>single</text><text x='42' y='157' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>population</text><text x='122' y='142' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>geographic</text><text x='122' y='157' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>isolation</text><text x='202' y='142' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>gene pools</text><text x='202' y='157' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>diverge</text><text x='282' y='142' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>reproductive</text><text x='282' y='157' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>isolation</text><text x='160' y='188' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>no fertile offspring even without the barrier: two species</text></svg>",
+    "key": "This path of speciation is called allopatric speciation. Reproductive isolation can arise from different mating seasons, different courtship behaviors or sterile hybrids."
+   },
+   {
+    "h": "Speciation in the same place: polyploidy",
+    "p": "Speciation can also happen without a geographic barrier, and this is called <b>sympatric speciation</b>. In plants, the chromosome number can multiply, and this is called <b>polyploidy</b>. A 4n plant crossed with its 2n ancestor gives sterile 3n offspring. So isolation forms in a single generation.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='evr-p1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='8' y='12' width='84' height='34' rx='6' fill='var(--c3)' fill-opacity='0.18' stroke='var(--c3)' stroke-width='1.4'/><text x='50.0' y='27' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>2n plant</text><text x='50.0' y='40' font-size='9.5' fill='var(--muted)' text-anchor='middle'>parent species</text><path d='M94 29 H140' stroke='var(--ink)' stroke-width='1.4' marker-end='url(#evr-p1)'/><text x='117' y='20' font-size='9.5' fill='var(--muted)' text-anchor='middle'>meiosis</text><text x='117' y='44' font-size='9.5' fill='var(--muted)' text-anchor='middle'>error</text><rect x='144' y='12' width='70' height='34' rx='6' fill='var(--c5)' fill-opacity='0.18' stroke='var(--c5)' stroke-width='1.4'/><text x='179.0' y='34' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>2n gamete</text><path d='M216 29 H232' stroke='var(--ink)' stroke-width='1.4' marker-end='url(#evr-p1)'/><rect x='236' y='12' width='76' height='34' rx='6' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)' stroke-width='1.4'/><text x='274.0' y='27' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>4n plant</text><text x='274.0' y='40' font-size='9.5' fill='var(--muted)' text-anchor='middle'>new species</text><path d='M6 62 H314' stroke='var(--line)' stroke-width='1'/><text x='14' y='86' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>4n × 2n</text><path d='M78 82 H118' stroke='var(--ink)' stroke-width='1.4' marker-end='url(#evr-p1)'/><rect x='122' y='66' width='70' height='34' rx='6' fill='var(--muted)' fill-opacity='0.18' stroke='var(--muted)' stroke-width='1.4'/><text x='157.0' y='88' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>3n offspring</text><path d='M204 76 L216 88 M216 76 L204 88' stroke='var(--c2)' stroke-width='2.2'/><text x='226' y='87' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>sterile</text><text x='14' y='132' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>4n × 4n</text><path d='M78 128 H118' stroke='var(--ink)' stroke-width='1.4' marker-end='url(#evr-p1)'/><rect x='122' y='112' width='70' height='34' rx='6' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)' stroke-width='1.4'/><text x='157.0' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>4n offspring</text><path d='M204 130 L210 136 L220 122' stroke='var(--c3)' stroke-width='2.2' fill='none'/><text x='226' y='133' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>fertile</text><rect x='6' y='160' width='308' height='34' rx='6' fill='var(--acc)' fill-opacity='0.12' stroke='var(--acc)' stroke-width='1.2'/><text x='160' y='182' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>no geographic barrier; reproductive isolation in one generation</text></svg>",
+    "key": "A 4n plant crossed with another 4n plant gives fertile 4n offspring. Bread wheat also arose through polyploidy.",
+    "once": {
+     "soru": "Does a new species always need a mountain or river barrier to form?",
+     "secenekler": [
+      {
+       "yazi": "No",
+       "neden": "In plants, chromosome doubling can create a new species in the same place within a single generation.",
+       "dogru": true
+      },
+      {
+       "yazi": "Yes",
+       "neden": "A geographic barrier is a common route, but not the only one."
+      },
+      {
+       "yazi": "Only not on islands",
+       "neden": "Speciation without a barrier is not limited to islands."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Evidence: fossils and structures",
+    "p": "<b>Fossils</b> show organisms that lived in the past and transitional forms. Structures with the same origin are called <b>homologous structures</b>. The human arm and the bat wing are examples. Structures with a similar function but a different origin are called <b>analogous structures</b>. Bird and butterfly wings are examples.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='80' y='15' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>upper arm</text><text x='160' y='15' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>forearm</text><text x='240' y='15' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>hand bones</text><line x1='55' y1='26' x2='55' y2='66' stroke='var(--c1)' stroke-width='6' stroke-linecap='round'/><line x1='51' y1='72' x2='49' y2='106' stroke='var(--c3)' stroke-width='3' stroke-linecap='round'/><line x1='59' y1='72' x2='61' y2='106' stroke='var(--c3)' stroke-width='3' stroke-linecap='round'/><line x1='50.2' y1='112' x2='43' y2='136' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='52.6' y1='112' x2='49' y2='136' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='55.0' y1='112' x2='55' y2='136' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='57.4' y1='112' x2='61' y2='136' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='59.8' y1='112' x2='67' y2='136' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><path d='M160 92 L120 136 L140 140 L160 142 L180 140 L198 130 Z' fill='var(--c4)' fill-opacity='0.12' stroke='none'/><line x1='160' y1='26' x2='160' y2='50' stroke='var(--c1)' stroke-width='6' stroke-linecap='round'/><line x1='158' y1='56' x2='158' y2='88' stroke='var(--c3)' stroke-width='3' stroke-linecap='round'/><line x1='163' y1='56' x2='163' y2='88' stroke='var(--c3)' stroke-width='2' stroke-linecap='round'/><line x1='160' y1='94' x2='120' y2='136' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='160' y1='94' x2='140' y2='140' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='160' y1='94' x2='160' y2='142' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='160' y1='94' x2='180' y2='140' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='160' y1='94' x2='198' y2='130' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><ellipse cx='265' cy='104' rx='20' ry='38' fill='var(--c4)' fill-opacity='0.08' stroke='var(--muted)' stroke-width='1.2'/><line x1='265' y1='32' x2='265' y2='50' stroke='var(--c1)' stroke-width='8' stroke-linecap='round'/><line x1='261' y1='55' x2='260' y2='70' stroke='var(--c3)' stroke-width='4' stroke-linecap='round'/><line x1='269' y1='55' x2='270' y2='70' stroke='var(--c3)' stroke-width='4' stroke-linecap='round'/><line x1='259.6' y1='76' x2='256' y2='134' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='263.2' y1='76' x2='262' y2='134' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='266.8' y1='76' x2='268' y2='134' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><line x1='270.4' y1='76' x2='274' y2='134' stroke='var(--c4)' stroke-width='2' stroke-linecap='round'/><text x='55' y='158' font-size='11' fill='var(--ink)' text-anchor='middle'>human: grasping</text><text x='160' y='158' font-size='11' fill='var(--ink)' text-anchor='middle'>bat: flying</text><text x='265' y='158' font-size='11' fill='var(--ink)' text-anchor='middle'>whale: swimming</text><text x='160' y='178' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>homologous: same bone plan, different function</text><text x='160' y='195' font-size='11' fill='var(--muted)' text-anchor='middle'>analogous: bird and butterfly wings, different origin</text></svg>",
+    "key": "In undisturbed layers, the lower fossils are usually older. Homologous structures show divergent evolution, and analogous structures show convergent evolution.",
+    "etk": {
+     "tur": "ayir",
+     "soru": "Is the pair of structures homologous or analogous?",
+     "gruplar": [
+      "Homologous",
+      "Analogous"
+     ],
+     "ogeler": [
+      [
+       "Human arm and bat wing",
+       0
+      ],
+      [
+       "Whale flipper and horse foreleg",
+       0
+      ],
+      [
+       "Pea tendril and cactus spine",
+       0,
+       "Both are modified leaves. They share an origin but have different functions."
+      ],
+      [
+       "Bird wing and butterfly wing",
+       1
+      ],
+      [
+       "Bat wing and fly wing",
+       1
+      ],
+      [
+       "Octopus eye and human eye",
+       1,
+       "Both are eyes with a lens, but they evolved independently in separate lineages. Their origins differ."
+      ],
+      [
+       "Rose thorn and cactus spine",
+       1,
+       "A cactus spine is a modified leaf. A rose thorn is an outgrowth of the stem surface."
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Evidence: vestigial organs, embryos, DNA",
+    "p": "Structures that worked in ancestors but are reduced today are called <b>vestigial organs</b>. The human tailbone is an example. Vertebrate <b>embryos</b> also pass through similar stages. The more similar the DNA sequences, the closer the relationship.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='11' fill='var(--muted)' text-anchor='middle'>representative section of the same gene</text><text x='302' y='34' font-size='10' fill='var(--muted)' text-anchor='middle'>differences</text><text x='66' y='54' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>human</text><text x='82' y='54' font-size='12' fill='var(--ink)' text-anchor='middle'>A</text><text x='100' y='54' font-size='12' fill='var(--ink)' text-anchor='middle'>T</text><text x='118' y='54' font-size='12' fill='var(--ink)' text-anchor='middle'>G</text><text x='136' y='54' font-size='12' fill='var(--ink)' text-anchor='middle'>G</text><text x='154' y='54' font-size='12' fill='var(--ink)' text-anchor='middle'>T</text><text x='172' y='54' font-size='12' fill='var(--ink)' text-anchor='middle'>A</text><text x='190' y='54' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='208' y='54' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='226' y='54' font-size='12' fill='var(--ink)' text-anchor='middle'>T</text><text x='244' y='54' font-size='12' fill='var(--ink)' text-anchor='middle'>G</text><text x='262' y='54' font-size='12' fill='var(--ink)' text-anchor='middle'>A</text><text x='280' y='54' font-size='12' fill='var(--ink)' text-anchor='middle'>A</text><text x='302' y='54' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>0</text><text x='66' y='80' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>chimpanzee</text><text x='82' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>A</text><text x='100' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>T</text><text x='118' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>G</text><text x='136' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>G</text><text x='154' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>T</text><text x='172' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>A</text><text x='190' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><rect x='201' y='67' width='14' height='17' rx='3' fill='var(--c2)' fill-opacity='0.25'/><text x='208' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>T</text><text x='226' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>T</text><text x='244' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>G</text><text x='262' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>A</text><text x='280' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>A</text><text x='302' y='80' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>1</text><text x='66' y='106' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>mouse</text><text x='82' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>A</text><text x='100' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>T</text><text x='118' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>G</text><rect x='129' y='93' width='14' height='17' rx='3' fill='var(--c2)' fill-opacity='0.25'/><text x='136' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='154' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>T</text><text x='172' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>A</text><text x='190' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><rect x='201' y='93' width='14' height='17' rx='3' fill='var(--c2)' fill-opacity='0.25'/><text x='208' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>T</text><text x='226' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>T</text><text x='244' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>G</text><text x='262' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>A</text><rect x='273' y='93' width='14' height='17' rx='3' fill='var(--c2)' fill-opacity='0.25'/><text x='280' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>G</text><text x='302' y='106' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>3</text><text x='66' y='132' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>chicken</text><text x='82' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>A</text><rect x='93' y='119' width='14' height='17' rx='3' fill='var(--c2)' fill-opacity='0.25'/><text x='100' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='118' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>G</text><rect x='129' y='119' width='14' height='17' rx='3' fill='var(--c2)' fill-opacity='0.25'/><text x='136' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='154' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>T</text><rect x='165' y='119' width='14' height='17' rx='3' fill='var(--c2)' fill-opacity='0.25'/><text x='172' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>G</text><text x='190' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><rect x='201' y='119' width='14' height='17' rx='3' fill='var(--c2)' fill-opacity='0.25'/><text x='208' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>T</text><text x='226' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>T</text><text x='244' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>G</text><text x='262' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>A</text><rect x='273' y='119' width='14' height='17' rx='3' fill='var(--c2)' fill-opacity='0.25'/><text x='280' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>G</text><text x='302' y='132' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>5</text><text x='160' y='166' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>few differences → recent common ancestor (usually)</text><text x='160' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>vestigial organs and embryo similarity also support this</text></svg>",
+    "key": "The remnant pelvis in whales is also a vestigial organ. Early vertebrate embryos have pharyngeal pouches and a tail.",
+    "once": {
+     "soru": "Did humans evolve from chimpanzees?",
+     "secenekler": [
+      {
+       "yazi": "No, they share an ancestor",
+       "neden": "The two species split from a recent common ancestor and evolved in different directions.",
+       "dogru": true
+      },
+      {
+       "yazi": "Yes",
+       "neden": "The chimpanzee is a separate living species and is not a human ancestor."
+      },
+      {
+       "yazi": "They are not related",
+       "neden": "Human and chimpanzee DNA is very similar, so they are close relatives."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• Evolution is a change in allele frequencies in a population.<br>• Natural selection rests on variation, inheritance, overproduction and differential reproductive success.<br>• Acquired traits are not inherited, so Lamarck's view is invalid.<br>• In Hardy–Weinberg equilibrium, p + q = 1 and p² + 2pq + q² = 1.<br>• The evidence for evolution includes fossils, homologous structures, vestigial organs and DNA.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='evr-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='100' y='78' width='120' height='44' rx='6' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.5'/><text x='160' y='96' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>allele frequency</text><text x='160' y='112' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>changes</text><rect x='6' y='18' width='118' height='30' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.3'/><text x='65' y='37' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>natural selection</text><rect x='196' y='18' width='118' height='30' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.3'/><text x='255' y='37' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>genetic drift</text><rect x='6' y='132' width='118' height='30' rx='6' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.3'/><text x='65' y='151' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>gene flow</text><rect x='196' y='132' width='118' height='30' rx='6' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.3'/><text x='255' y='151' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>mutation</text><line x1='126' y1='46' x2='144' y2='76' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-14)'/><line x1='194' y1='46' x2='176' y2='76' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-14)'/><line x1='126' y1='134' x2='144' y2='124' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-14)'/><line x1='194' y1='134' x2='176' y2='124' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#evr-14)'/><text x='160' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>evidence: fossils, homologous structures, embryos, DNA</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "In a population in Hardy–Weinberg equilibrium, the share of individuals with the recessive phenotype (aa) is 0.04. What is the share of heterozygous (Aa) individuals?",
+    "cevap": 0.32,
+    "tolerans": 0.005,
+    "e": "Since q² = 0.04, q = 0.2 and p = 1 − 0.2 = 0.8. The share of heterozygotes is 2pq = 2 · 0.8 · 0.2 = 0.32."
+   },
+   {
+    "tur": "sirala",
+    "q": "Put the steps of speciation by geographic isolation in order.",
+    "ogeler": [
+     "A river splits the population in two",
+     "Gene flow between the two groups stops",
+     "Mutation, selection and drift make the gene pools diverge",
+     "Reproductive isolation forms between the groups"
+    ],
+    "e": "A geographic barrier splits the population and stops gene flow. The separated gene pools diverge through mutation, selection and drift. When the groups can no longer produce fertile offspring, a new species has formed."
+   },
+   {
+    "tur": "ayir",
+    "q": "Put each idea with the explanation it belongs to.",
+    "gruplar": [
+     "Lamarck",
+     "Darwin"
+    ],
+    "ogeler": [
+     [
+      "Used organs grow",
+      0
+     ],
+     [
+      "Acquired traits pass on",
+      0
+     ],
+     [
+      "Giraffe stretching its neck",
+      0
+     ],
+     [
+      "Variation exists",
+      1
+     ],
+     [
+      "The environment selects",
+      1
+     ],
+     [
+      "Excess offspring are born",
+      1
+     ],
+     [
+      "The fit reproduce more",
+      1
+     ]
+    ],
+    "e": "Lamarck proposed that used organs grow and that traits acquired during life pass to offspring. This view is invalid. Darwin's natural selection rests on variation, overproduction and individuals suited to the environment reproducing more. The environment does the selecting."
+   },
+   {
+    "q": "Which of the following pairs is an example of homologous structures?",
+    "o": [
+     "A cat's foreleg and a seal's flipper",
+     "A potato tuber and a sweet potato root",
+     "An insect's leg and a lizard's leg",
+     "A bird's beak and an octopus's beak"
+    ],
+    "a": 0,
+    "e": "A cat's foreleg and a seal's flipper developed from the shared mammalian forelimb bone plan, but their functions differ. The other pairs do similar jobs but are analogous structures with different origins.",
+    "y": [
+     "",
+     "A potato tuber is a modified stem, while a sweet potato is a modified root. A similar function does not show a shared origin.",
+     "An insect leg has an exoskeleton, while a lizard leg has an internal skeleton. Their origins differ, so they are analogous structures.",
+     "The bird beak and the octopus beak evolved independently in separate lineages. So they are analogous structures."
+    ]
+   }
+  ]
+ },
  "siniflandirma": {
   "title": "Classifying living things",
   "summary": "How are living things grouped, and how are species named?",
