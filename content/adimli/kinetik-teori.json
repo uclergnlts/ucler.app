@@ -1,0 +1,115 @@
+{
+ "id": "kinetik-teori",
+ "ders": "fizik",
+ "konu": "kinetik-teori",
+ "baslik": "Gazlar ve kinetik teori",
+ "ozet": "Önce dene, sonra adını öğren. Gazı sıkıştır, ısıt, tanecik ekle ve basıncın nereden geldiğini kendin gör.",
+ "adimlar": [
+  {
+   "baslik": "Gaz laboratuvarı",
+   "metin": "Pistonlu kapta 1 mol gaz var: 27 °C, 24,6 L ve 1 atm. Taneciklerin çepere çarpışını izle. Basıncı <b>2 katına</b> çıkarmanın üç farklı yolunu bul.",
+   "sahne": {
+    "tur": "sim-gaz"
+   },
+   "deger": {
+    "V": 24.6,
+    "T": 27,
+    "n": 1
+   },
+   "kontroller": [
+    {
+     "ad": "V",
+     "etiket": "Hacim",
+     "min": 5,
+     "max": 25,
+     "adim": 0.1,
+     "birim": "L"
+    },
+    {
+     "ad": "T",
+     "etiket": "Sıcaklık",
+     "min": -73,
+     "max": 327,
+     "birim": "°C"
+    },
+    {
+     "ad": "n",
+     "etiket": "Mol sayısı",
+     "min": 0.5,
+     "max": 2,
+     "adim": 0.5,
+     "birim": "mol",
+     "tur": "sayac"
+    }
+   ],
+   "gorev": {
+    "tur": "kesfet",
+    "bulgular": [
+     {
+      "yazi": "Yalnızca <b>hacmi</b> değiştirerek basıncı 2 atm yap.",
+      "hedef": {
+       "P": [
+        1.95,
+        2.05
+       ],
+       "T": 27,
+       "n": 1
+      },
+      "coz": [
+       {
+        "T": 27,
+        "n": 1,
+        "V": 12.3
+       }
+      ],
+      "tamam": "Hacmi yarıya indirdin. Tanecikler çepere iki kat sık çarpınca basınç iki katına çıktı."
+     },
+     {
+      "yazi": "Yalnızca <b>sıcaklığı</b> değiştirerek basıncı 2 atm yap.",
+      "hedef": {
+       "P": [
+        1.95,
+        2.05
+       ],
+       "V": 24.6,
+       "n": 1
+      },
+      "coz": [
+       {
+        "V": 24.6,
+        "n": 1,
+        "T": 327
+       }
+      ],
+      "tamam": "Sıcaklık 300 K'den 600 K'ye çıktı. Tanecikler hem daha sık hem daha sert çarptı ve basınç iki katına çıktı."
+     },
+     {
+      "yazi": "Yalnızca <b>tanecik sayısını</b> değiştirerek basıncı 2 atm yap.",
+      "hedef": {
+       "P": [
+        1.95,
+        2.05
+       ],
+       "V": 24.6,
+       "T": 27
+      },
+      "coz": [
+       {
+        "V": 24.6,
+        "T": 27,
+        "n": 2
+       }
+      ],
+      "tamam": "Tanecik sayısı iki katına çıkınca çarpışma sayısı da iki katına çıktı."
+     }
+    ]
+   },
+   "kart": 5
+  }
+ ],
+ "kapanis": [
+  "Basınç, taneciklerin çepere çarpışlarından doğar.",
+  "Hacmi küçültmek ve gaz eklemek çarpışmaları sıklaştırır.",
+  "Isıtmak tanecikleri hızlandırır, çarpışmalar hem sıklaşır hem sertleşir."
+ ]
+}

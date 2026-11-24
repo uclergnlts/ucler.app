@@ -19,6 +19,7 @@ import atomModelleri from "@/content/adimli/atom-modelleri.json";
 import enzimler from "@/content/adimli/enzimler.json";
 import hucreOrganeller from "@/content/adimli/hucre-organeller.json";
 import isiSicaklik from "@/content/adimli/isi-sicaklik.json";
+import kinetikTeori from "@/content/adimli/kinetik-teori.json";
 import vektorler from "@/content/adimli/vektorler.json";
 import periyodikTablo from "@/content/adimli/periyodik-tablo.json";
 import kimyasalBaglar from "@/content/adimli/kimyasal-baglar.json";
@@ -151,7 +152,7 @@ export type Adim = {
 export type AdimliDers = { id: string; ders: DersId; konu: string; baslik: string; ozet: string; adimlar: Adim[]; kapanis: string[]; soruOnce?: boolean };
 
 const TR_ADIMLI: AdimliDers[] = [
-  fizikGiris, maddeOzellikleri, basinc, kaldirma, isiSicaklik, vektorler, hareket, newton, ikiBoyut, bagil, isEnerji, basitMakineler, momentum, tork, cembersel, kutleCekimi, elektrostatik, elektrikAkimi, elektrikselEnerji, manyetizma, induksiyon, yariIletkenler, bhh, dalgalar, deprem, optik, dalgaOptigi, ozelGorelilik, kuantum, radyoaktivite,
+  fizikGiris, maddeOzellikleri, basinc, kaldirma, isiSicaklik, kinetikTeori, vektorler, hareket, newton, ikiBoyut, bagil, isEnerji, basitMakineler, momentum, tork, cembersel, kutleCekimi, elektrostatik, elektrikAkimi, elektrikselEnerji, manyetizma, induksiyon, yariIletkenler, bhh, dalgalar, deprem, optik, dalgaOptigi, ozelGorelilik, kuantum, radyoaktivite,
   simya, kimyaBilimi, madde, atomModelleri, atom, modernAtom, periyodikTablo, kimyasalBaglar, maddeninHalleri, karisimlar, temelKanunlar, tepkimeler, mol, asitBaz, kimyaHerYerde, gazlar, cozeltiler, tepkimeEnerjisi, tepkimeHizi, kimyasalDenge, redoks, elektrokimya, organikGiris, hidrokarbonlar, fonksiyonelGruplar, enerjiKaynaklari, yesilKimya,
   canlilar, biyomolekuller, enzimler, hucreOrganeller, zar, siniflandirma, hayvanlar, bitkiler, mitoz, mayoz, kalitim, ekosistem, bitkiBiyolojisi, dnaGenetikKod, proteinSentezi, fotosentez, hucreselSolunum, sinirSistemi, endokrin, duyuOrganlari, destekHareket, sindirim, dolasim, solunum, bosaltim, uremeSistemi, populasyonKomunite, evrim,
 ] as unknown as AdimliDers[];

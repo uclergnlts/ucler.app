@@ -3716,6 +3716,121 @@
   ],
   "soruOnce": true
  },
+ "kinetik-teori": {
+  "id": "kinetik-teori",
+  "ders": "fizik",
+  "konu": "kinetik-teori",
+  "baslik": "Gases and kinetic theory",
+  "ozet": "Try first, then learn the name. Squeeze the gas, heat it, add particles and see for yourself where pressure comes from.",
+  "adimlar": [
+   {
+    "baslik": "Gas lab",
+    "metin": "A piston holds 1 mol of gas at 27 °C, 24.6 L and 1 atm. Watch the particles hit the walls. Find three different ways to <b>double</b> the pressure.",
+    "sahne": {
+     "tur": "sim-gaz"
+    },
+    "deger": {
+     "V": 24.6,
+     "T": 27,
+     "n": 1
+    },
+    "kontroller": [
+     {
+      "ad": "V",
+      "etiket": "Volume",
+      "min": 5,
+      "max": 25,
+      "adim": 0.1,
+      "birim": "L"
+     },
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": -73,
+      "max": 327,
+      "birim": "°C"
+     },
+     {
+      "ad": "n",
+      "etiket": "Amount",
+      "min": 0.5,
+      "max": 2,
+      "adim": 0.5,
+      "birim": "mol",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "Reach 2 atm by changing only the <b>volume</b>.",
+       "hedef": {
+        "P": [
+         1.95,
+         2.05
+        ],
+        "T": 27,
+        "n": 1
+       },
+       "coz": [
+        {
+         "T": 27,
+         "n": 1,
+         "V": 12.3
+        }
+       ],
+       "tamam": "You halved the volume. The particles hit the walls twice as often, so the pressure doubled."
+      },
+      {
+       "yazi": "Reach 2 atm by changing only the <b>temperature</b>.",
+       "hedef": {
+        "P": [
+         1.95,
+         2.05
+        ],
+        "V": 24.6,
+        "n": 1
+       },
+       "coz": [
+        {
+         "V": 24.6,
+         "n": 1,
+         "T": 327
+        }
+       ],
+       "tamam": "The temperature rose from 300 K to 600 K. The particles hit both more often and harder, and the pressure doubled."
+      },
+      {
+       "yazi": "Reach 2 atm by changing only the <b>number of particles</b>.",
+       "hedef": {
+        "P": [
+         1.95,
+         2.05
+        ],
+        "V": 24.6,
+        "T": 27
+       },
+       "coz": [
+        {
+         "V": 24.6,
+         "T": 27,
+         "n": 2
+        }
+       ],
+       "tamam": "With twice as many particles, there were twice as many collisions."
+      }
+     ]
+    },
+    "kart": 5
+   }
+  ],
+  "kapanis": [
+   "Pressure comes from particles hitting the walls.",
+   "Shrinking the volume or adding gas makes collisions more frequent.",
+   "Heating speeds the particles up, so collisions become both more frequent and harder."
+  ]
+ },
  "basit-harmonik-hareket": {
   "id": "basit-harmonik-hareket",
   "ders": "fizik",
