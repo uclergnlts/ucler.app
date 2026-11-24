@@ -8249,6 +8249,238 @@
   ],
   "soruOnce": true
  },
+ "karisimlar": {
+  "id": "karisimlar",
+  "ders": "kimya",
+  "konu": "karisimlar",
+  "baslik": "Mixtures and separation methods",
+  "ozet": "Try it first, then learn its name. Find the colloid with light, dissolve salt and choose a separation method.",
+  "adimlar": [
+   {
+    "baslik": "Solution or colloid?",
+    "metin": "In a solution the dispersed particles are very small. In a <b>colloid</b> they are bigger (about 1-1000 nm), but they still do not settle. We will shine light into two glasses from the side.",
+    "sahne": {
+     "tur": "kim4-tyndall",
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In which glass is the path of the light beam visible?",
+     "secenekler": [
+      {
+       "yazi": "The salt water",
+       "neden": "The ions in a solution are too small to scatter light."
+      },
+      {
+       "yazi": "Both",
+       "neden": "One liquid is a solution and the other a colloid. Their particle sizes are different."
+      },
+      {
+       "yazi": "The diluted milk",
+       "neden": "The colloid particles in milk scatter light, and the beam's path becomes visible. This is called the Tyndall effect.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Like dissolves like",
+    "metin": "Water is a polar liquid, and gasoline is nonpolar. Olive oil is nonpolar too.",
+    "sahne": {
+     "tur": "kim4-cozunme",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "We shake both tubes. In which one does the olive oil dissolve?",
+     "secenekler": [
+      {
+       "yazi": "In water",
+       "neden": "Polar water does not dissolve nonpolar oil."
+      },
+      {
+       "yazi": "In gasoline",
+       "neden": "Nonpolar gasoline dissolves nonpolar oil, forming a single-phase solution. In water, shaking spreads the oil as droplets, forming an emulsion. After waiting, the droplets join and form a layer on top.",
+       "dogru": true
+      },
+      {
+       "yazi": "In both",
+       "neden": "Oil is not like polar water."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Solubility",
+    "metin": "The largest mass of a substance that can dissolve in 100 g of water is called its <b>solubility</b>, and it changes with temperature. The container holds 100 g of water and 60 g of KNO₃. Heat the water and dissolve all the KNO₃.",
+    "sahne": {
+     "tur": "kim4-cozunurluk"
+    },
+    "deger": {
+     "T": 20
+    },
+    "kontroller": [
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 0,
+      "max": 100,
+      "adim": 2,
+      "birim": "°C"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "T": [
+       38,
+       100
+      ]
+     },
+     "tamam": "At around 38 °C, all 60 g of KNO₃ dissolves. A solution that has dissolved as much as it can is called a <b>saturated solution</b>. If you cool this solution, its solubility drops and the extra comes out as crystals. This is called <b>crystallization</b>."
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Fractional crystallization",
+    "metin": "Now 100 g of KNO₃ and 30 g of NaCl are dissolved in 100 g of hot water. Cool the solution to 20 °C and see what settles to the bottom.",
+    "sahne": {
+     "tur": "kim4-cozunurluk",
+     "ikili": true
+    },
+    "deger": {
+     "T": 80
+    },
+    "kontroller": [
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 0,
+      "max": 100,
+      "adim": 2,
+      "birim": "°C"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What settles to the bottom at 20 °C?",
+     "secenekler": [
+      {
+       "yazi": "Only NaCl",
+       "neden": "The solubility of NaCl barely changes with temperature. Look at the curves."
+      },
+      {
+       "yazi": "Both",
+       "neden": "The solubility of NaCl is still 36 g at 20 °C. All 30 g stays dissolved."
+      },
+      {
+       "yazi": "Only KNO₃",
+       "neden": "The solubility of KNO₃ drops to 31.6 g at 20 °C, and about 68 g crystallizes. The solubility of NaCl barely changes, and all of it stays in solution. This method is called <b>fractional crystallization</b>.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Magnetic separation",
+    "metin": "To separate a mixture, you use a property in which its components differ. Choose the method that separates iron filings from sulfur powder, and play it.",
+    "sahne": {
+     "tur": "kim4-ayirma",
+     "karisim": "demir-kukurt",
+     "sure": 4
+    },
+    "deger": {
+     "y": 2
+    },
+    "kontroller": [
+     {
+      "ad": "y",
+      "etiket": "Method",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "y": 1
+     },
+     "tamam": "Iron is attracted by a magnet, and sulfur is not. Magnetic separation relies on this difference, and steel is sorted this way at scrapyards too. Nickel and cobalt are also attracted by magnets."
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Separatory funnel",
+    "metin": "Olive oil and water do not dissolve in each other and separate into two layers. Choose the method that separates them, and play it.",
+    "sahne": {
+     "tur": "kim4-ayirma",
+     "karisim": "yag-su",
+     "sure": 4
+    },
+    "deger": {
+     "y": 1
+    },
+    "kontroller": [
+     {
+      "ad": "y",
+      "etiket": "Method",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "y": 3
+     },
+     "tamam": "In a separatory funnel, the denser water collects at the bottom. When the tap is opened, the water drains first and the oil stays in the funnel. This method is used only for liquids that do not dissolve in each other. Alcohol and water cannot be separated this way."
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Distillation",
+    "metin": "You want to get back both the salt and the water from salt water. Choose the method that gives you both, and play it.",
+    "sahne": {
+     "tur": "kim4-ayirma",
+     "karisim": "tuzlu-su",
+     "sure": 4
+    },
+    "deger": {
+     "y": 2
+    },
+    "kontroller": [
+     {
+      "ad": "y",
+      "etiket": "Method",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "y": 4
+     },
+     "tamam": "In distillation the water boils, the vapor condenses in the condenser, and pure water drips into the collecting flask. The salt stays in the flask. If you only evaporated it, you would get the salt, but the water would escape into the air. For liquids with close boiling points, fractional distillation is used."
+    },
+    "kart": 10
+   }
+  ],
+  "kapanis": [
+   "In a mixture the components keep their properties. Their ratio can vary, and there is no definite boiling point.",
+   "A homogeneous mixture, or solution, has one phase. A <b>colloid</b> scatters light and shows the Tyndall effect, while a solution does not.",
+   "<b>Like dissolves like.</b> Polar water dissolves salt and sugar, and nonpolar gasoline dissolves oil.",
+   "Solubility changes with temperature. When a saturated solution is cooled, the extra substance crystallizes.",
+   "Every separation method relies on a difference in some property, such as magnetism, density, particle size or boiling point."
+  ],
+  "soruOnce": true
+ },
  "atom-modelleri": {
   "id": "atom-modelleri",
   "ders": "kimya",
@@ -9724,6 +9956,472 @@
    "<b>Vapor pressure</b> rises with temperature and depends on the type of liquid. It does not depend on the amount of liquid.",
    "A liquid boils when its vapor pressure equals the outside pressure. On a mountain water boils below 100 °C, and in a pressure cooker above it.",
    "Melting, evaporation and sublimation absorb heat. Freezing, condensation and deposition release heat."
+  ],
+  "soruOnce": true
+ },
+ "temel-kanunlar": {
+  "id": "temel-kanunlar",
+  "ders": "kimya",
+  "konu": "temel-kanunlar",
+  "baslik": "The basic laws of chemistry",
+  "ozet": "Try it first, then learn its name. Burn magnesium, make water and combine gas volumes.",
+  "adimlar": [
+   {
+    "baslik": "Mass in an open container",
+    "metin": "Lavoisier showed that in reactions in a closed container the total mass does not change. But what if the container is open? You will burn a magnesium ribbon in an open dish on a balance.",
+    "sahne": {
+     "tur": "kim5-mg",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "When the magnesium burns and turns into a white powder, what does the balance show?",
+     "secenekler": [
+      {
+       "yazi": "Less",
+       "neden": "When wood burns the ash gets lighter, because CO₂ and water vapor escape into the air. With magnesium no gas escapes. Instead, a gas joins from the air."
+      },
+      {
+       "yazi": "More",
+       "neden": "Magnesium combines with oxygen from the air (2Mg + O₂ → 2MgO). 1.6 g of oxygen joins 2.4 g of magnesium, and the balance shows 4.0 g. Mass was conserved, because oxygen from the air came onto the balance.",
+       "dogru": true
+      },
+      {
+       "yazi": "The same",
+       "neden": "That would be true in a closed container. Here the container is open. Think about whether something from the air joins what is on the balance."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "A fixed ratio",
+    "metin": "According to Proust, the mass ratio of elements in a compound is fixed. In water, the ratio of hydrogen to oxygen is 1 : 8. The container holds 40 g of oxygen. Add just enough hydrogen to turn all of it into water.",
+    "sahne": {
+     "tur": "kim5-oran",
+     "o": 40
+    },
+    "deger": {
+     "h": 1
+    },
+    "kontroller": [
+     {
+      "ad": "h",
+      "etiket": "Hydrogen",
+      "min": 1,
+      "max": 10,
+      "birim": "g",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "h": 5
+     },
+     "tamam": "5 g of hydrogen combines with 40 g of oxygen, because 5 : 40 = 1 : 8. The water formed is 5 + 40 = 45 g. Add less hydrogen and oxygen is left over. Add more and hydrogen is left over."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Which one is left over?",
+    "metin": "Now the container holds 10 g of hydrogen and 40 g of oxygen. The ratio is 1 : 8, so one is used up completely and the other is left over.",
+    "sahne": {
+     "tur": "kim5-oran",
+     "sure": 4,
+     "o": 40
+    },
+    "deger": {
+     "h": 10
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What is left over when the reaction is done?",
+     "secenekler": [
+      {
+       "yazi": "4 g of oxygen",
+       "neden": "40 / 8 = 5 g of hydrogen is enough to use up all the oxygen. No oxygen is left over."
+      },
+      {
+       "yazi": "Nothing",
+       "neden": "For nothing to be left over, the masses would have to be in a 1 : 8 ratio. Here the ratio is 10 : 40, or 1 : 4."
+      },
+      {
+       "yazi": "5 g of hydrogen",
+       "neden": "40 g of oxygen combines with only 5 g of hydrogen. 5 g of hydrogen is left over, and 45 g of water forms. Since 10 + 40 = 45 + 5, mass is still conserved.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "A fixed ratio on a graph",
+    "metin": "If you plot the oxygen used against the hydrogen, you get a straight line through the origin. Slide the point and find the one that gives <b>27 g of water</b>.",
+    "sahne": {
+     "tur": "kim5-grafik"
+    },
+    "deger": {
+     "h": 1
+    },
+    "kontroller": [
+     {
+      "ad": "h",
+      "etiket": "Hydrogen",
+      "min": 0.5,
+      "max": 5,
+      "adim": 0.5,
+      "birim": "g",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "h": 3
+     },
+     "tamam": "3 g of hydrogen and 24 g of oxygen combine to form 27 g of water. The mass of water is 9 times the hydrogen, because 1 + 8 = 9. The amount changes, but the ratio does not."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Multiple proportions",
+    "metin": "Carbon and oxygen form two different compounds, CO and CO₂. Keep carbon fixed at 12 g in both and compare the masses of oxygen.",
+    "sahne": {
+     "tur": "kim5-katli"
+    },
+    "deger": {
+     "b": 0
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Show CO₂ too",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "For 12 g of carbon, what is the ratio of the oxygen masses in CO and CO₂?",
+     "secenekler": [
+      {
+       "yazi": "1 : 1",
+       "neden": "The oxygen masses are not equal. Show CO₂ too and compare the two bars."
+      },
+      {
+       "yazi": "2 : 1",
+       "neden": "Check the order. CO (16 g) comes first, then CO₂ (32 g)."
+      },
+      {
+       "yazi": "1 : 2",
+       "neden": "16 : 32 = 1 : 2. When the shared element is held fixed, the masses of the other are in a small whole-number ratio. This is called Dalton's law of multiple proportions.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Combining volumes",
+    "metin": "Gay-Lussac found that at the same temperature and pressure, gases combine in small whole-number ratios by volume. The container holds 1 L of oxygen. Add just enough hydrogen that no gas is left over, and play it.",
+    "sahne": {
+     "tur": "kim5-hacim",
+     "sure": 4
+    },
+    "deger": {
+     "h": 1
+    },
+    "kontroller": [
+     {
+      "ad": "h",
+      "etiket": "Hydrogen",
+      "min": 1,
+      "max": 4,
+      "birim": "L",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "h": 2
+     },
+     "tamam": "2 L of hydrogen and 1 L of oxygen combined to form 2 L of water vapor. The total volume went down from 3 L to 2 L. Mass is always conserved, but gas volume may not be. According to Avogadro, equal volumes hold equal numbers of molecules, so the volume ratio is the ratio of molecules."
+    },
+    "kart": 9
+   }
+  ],
+  "kapanis": [
+   "In a closed container the total mass is conserved (Lavoisier). If the balance changes with an open container, a gas has escaped or joined from the air.",
+   "According to Proust, the mass ratio in a compound is fixed. In water H : O is 1 : 8. The substance present beyond the ratio is left over.",
+   "By Dalton's law of multiple proportions, when the shared element is held fixed, the masses of the other are in a small whole-number ratio. In CO and CO₂ this ratio is 1 : 2.",
+   "By Gay-Lussac's law of combining volumes, at the same temperature and pressure gases combine in whole-number ratios by volume. The total volume may not be conserved.",
+   "According to Avogadro, at the same temperature and pressure, equal volumes of gases hold equal numbers of particles."
+  ],
+  "soruOnce": true
+ },
+ "tepkimeler": {
+  "id": "tepkimeler",
+  "ders": "kimya",
+  "konu": "tepkimeler",
+  "baslik": "Chemical reactions and equations",
+  "ozet": "Try it first, then learn its name. Rearrange atoms, balance an equation and see incomplete combustion.",
+  "adimlar": [
+   {
+    "baslik": "What is a reaction?",
+    "metin": "Water will form from hydrogen and oxygen. First make a guess, then watch the atoms.",
+    "sahne": {
+     "tur": "kim5-bag",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to the atoms during the reaction?",
+     "secenekler": [
+      {
+       "yazi": "Some disappear",
+       "neden": "Atoms do not disappear. There were 4 H and 2 O before, and there are 4 H and 2 O after."
+      },
+      {
+       "yazi": "They are rearranged",
+       "neden": "Bonds break, atoms rearrange and new bonds form. The atoms stay the same. Only what they are bonded to changes. So the number of atoms and the total mass are conserved.",
+       "dogru": true
+      },
+      {
+       "yazi": "They turn into other atoms",
+       "neden": "In a chemical reaction the nuclei do not change. Hydrogen stays hydrogen, and oxygen stays oxygen."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Coefficients and subscripts",
+    "metin": "An equation must have the same number of each atom on both sides. This one has 2 O on the left and 1 O on the right.",
+    "sahne": {
+     "tur": "kim5-denklestir",
+     "denklem": "su"
+    },
+    "deger": {
+     "k0": 1,
+     "k1": 1,
+     "k2": 1
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "What is the right way to balance the oxygen?",
+     "secenekler": [
+      {
+       "yazi": "Change H₂O to H₂O₂",
+       "neden": "The subscript decides what the substance is. H₂O₂ is not water but hydrogen peroxide. You would be writing a different substance."
+      },
+      {
+       "yazi": "Change O₂ to O",
+       "neden": "Oxygen gas is made of O₂ molecules, and you cannot change its formula."
+      },
+      {
+       "yazi": "Put a 2 in front of H₂O",
+       "neden": "The coefficient shows the number of molecules, so 2H₂O means two water molecules. Only coefficients change, not subscripts.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Balance it",
+    "metin": "Now set the coefficients yourself. In the equation <b>H₂ + O₂ → H₂O</b>, make every atom equal on both sides.",
+    "sahne": {
+     "tur": "kim5-denklestir",
+     "denklem": "su"
+    },
+    "deger": {
+     "k0": 1,
+     "k1": 1,
+     "k2": 1
+    },
+    "kontroller": [
+     {
+      "ad": "k0",
+      "etiket": "H₂",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     },
+     {
+      "ad": "k1",
+      "etiket": "O₂",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     },
+     {
+      "ad": "k2",
+      "etiket": "H₂O",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k0": 2,
+      "k1": 1,
+      "k2": 2
+     },
+     "tamam": "The equation becomes 2H₂ + O₂ → 2H₂O, with 4 H and 2 O on both sides. Coefficients should be the smallest whole numbers. 4H₂ + 2O₂ → 4H₂O is also balanced, but it can be simplified."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Burning methane",
+    "metin": "When natural gas (methane) burns, CO₂ and water form. First balance C, then H. Leave O₂, a single element, for last.",
+    "sahne": {
+     "tur": "kim5-denklestir",
+     "denklem": "metan"
+    },
+    "deger": {
+     "k0": 1,
+     "k1": 1,
+     "k2": 1,
+     "k3": 1
+    },
+    "kontroller": [
+     {
+      "ad": "k0",
+      "etiket": "CH₄",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     },
+     {
+      "ad": "k1",
+      "etiket": "O₂",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     },
+     {
+      "ad": "k2",
+      "etiket": "CO₂",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     },
+     {
+      "ad": "k3",
+      "etiket": "H₂O",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k0": 1,
+      "k1": 2,
+      "k2": 1,
+      "k3": 2
+     },
+     "tamam": "The equation becomes CH₄ + 2O₂ → CO₂ + 2H₂O. Both sides have 1 C, 4 H and 4 O. In a reaction the kinds and numbers of atoms, the mass and the charge are conserved. The number of molecules does not have to be."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Incomplete combustion",
+    "metin": "Combustion is a substance reacting with oxygen. This stove is burning methane in a closed room with little air.",
+    "sahne": {
+     "tur": "kim5-yanma",
+     "sure": 5,
+     "hava": 0
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What forms when methane burns without enough oxygen?",
+     "secenekler": [
+      {
+       "yazi": "Only CO₂ and water",
+       "neden": "That is complete combustion, and it needs enough oxygen."
+      },
+      {
+       "yazi": "Only water vapor",
+       "neden": "The carbon in methane has to go somewhere too. It comes out as CO₂, CO or soot."
+      },
+      {
+       "yazi": "Carbon monoxide and soot",
+       "neden": "Incomplete combustion forms CO and soot (carbon). CO is colorless and odorless, and it binds to hemoglobin much more tightly than oxygen. That is why detectors and ventilation save lives.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Types of reactions",
+    "metin": "When limestone is heated, quicklime and carbon dioxide form. To find the type of a reaction, look at the number of substances going in and coming out.",
+    "sahne": {
+     "tur": "kim5-analiz"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "What type of reaction is CaCO₃ → CaO + CO₂?",
+     "secenekler": [
+      {
+       "yazi": "Synthesis (combination)",
+       "neden": "In synthesis several substances turn into one product. Here the opposite happens."
+      },
+      {
+       "yazi": "Decomposition",
+       "neden": "Here a compound breaks down into simpler substances, so several products form from one substance. Decomposition often needs heat or electricity, and here it needs heat.",
+       "dogru": true
+      },
+      {
+       "yazi": "Precipitation",
+       "neden": "Precipitation happens when two solutions mix. Here a single solid is heated."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Precipitation",
+    "metin": "When two ionic compounds dissolved in water are mixed, some ions can form a solid that does not dissolve in water. Silver nitrate and sodium chloride solutions are both clear.",
+    "sahne": {
+     "tur": "kim5-cokelme",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens when the divider is removed?",
+     "secenekler": [
+      {
+       "yazi": "A white solid settles to the bottom",
+       "neden": "Ag⁺ and Cl⁻ combine to form AgCl, which does not dissolve in water, as a white precipitate. Na⁺ and NO₃⁻ stay unchanged in the solution.",
+       "dogru": true
+      },
+      {
+       "yazi": "Nothing happens",
+       "neden": "Some ion pairs do not dissolve in water. Which two of these ions could combine?"
+      },
+      {
+       "yazi": "Gas bubbles form",
+       "neden": "There is no ion pair here that could form a gas. The product is a solid."
+      }
+     ]
+    },
+    "kart": 11
+   }
+  ],
+  "kapanis": [
+   "In a reaction, bonds break, atoms rearrange and new substances form.",
+   "When balancing, only coefficients change, not subscripts. Coefficients should be the smallest whole numbers.",
+   "The kinds and numbers of atoms, the mass and the charge are conserved. The number of molecules and the gas volume can change.",
+   "Combustion happens with oxygen and releases heat. With too little oxygen, combustion is incomplete, and toxic CO and soot form.",
+   "The types of reactions are combustion, synthesis, decomposition, precipitation, acid-base and redox. In synthesis substances combine, and in decomposition a substance breaks down."
   ],
   "soruOnce": true
  }
