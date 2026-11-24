@@ -19,7 +19,7 @@ const RNA_ES: Record<string, string> = { A: "U", T: "A", G: "C", C: "G" };
 const KOD = (() => {
   const b = "UCAG", aa = "FFLLSSSSYY**CC*WLLLLPPPPHHQQRRRRIIIMTTTTNNKKSSRRVVVVAAAADDEEGGGG";
   const ad: Record<string, string> = {
-    F: cev("Phe"), L: cev("Leu"), S: cev("Ser"), Y: cev("Tyr"), "*": "dur", C: cev("Cys"), W: cev("Trp"), P: cev("Pro"), H: cev("His"), Q: cev("Gln"), R: cev("Arg"),
+    F: cev("Phe"), L: cev("Leu"), S: cev("Ser"), Y: cev("Tyr"), "*": cev("dur"), C: cev("Cys"), W: cev("Trp"), P: cev("Pro"), H: cev("His"), Q: cev("Gln"), R: cev("Arg"),
     I: cev("Ile"), M: cev("Met"), T: cev("Thr"), N: cev("Asn"), K: cev("Lys"), V: cev("Val"), A: cev("Ala"), D: cev("Asp"), E: cev("Glu"), G: cev("Gly"),
   };
   const m: Record<string, string> = {};
@@ -77,8 +77,8 @@ function Halka({ x, y, b, purin }: { x: number; y: number; b: string; purin: boo
 
 function Nukleotit() {
   const bazlar = [
-    { b: "A", ad: "adenin", p: true }, { b: "G", ad: "guanin", p: true },
-    { b: "T", ad: "timin", p: false }, { b: "C", ad: "sitozin", p: false },
+    { b: "A", ad: cev("adenin"), p: true }, { b: "G", ad: cev("guanin"), p: true },
+    { b: "T", ad: cev("timin"), p: false }, { b: "C", ad: cev("sitozin"), p: false },
   ];
   return (
     <svg viewBox="0 0 340 240" role="img" aria-label={cev("Nükleotit: fosfat, deoksiriboz ve baz. Dört baz: adenin, guanin, timin, sitozin")}>
@@ -373,11 +373,11 @@ const MRNA_K = "AUGGCUUGGAAAUAA";
 function Kodon({ v }: SahneProps) {
   const k = sinir(v.k ?? 0, 0, 5), kd = kodonlar(MRNA_K);
   const x = (i: number) => 36 + i * 16 + Math.floor(i / 3) * 12;
-  const okunan = kd.slice(0, k), aa = okunan.map((c) => KOD[c]).filter((a) => a !== "dur");
+  const okunan = kd.slice(0, k), aa = okunan.map((c) => KOD[c]).filter((a) => a !== cev("dur"));
   const durdu = okunan.includes("UAA");
   const bag = Math.max(0, aa.length - 1);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${k} kodon okundu: ${aa.join("-") || cev("henüz amino asit yok")}${durdu ? cev(", dur") : ""}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0} kodon okundu: {1}", k, (aa.join("-") || cev("henüz amino asit yok")) + (durdu ? cev(", dur") : ""))}>
       <g>
         {aa.map((a, i) => {
           const cx = 50 + i * 62;
@@ -400,7 +400,7 @@ function Kodon({ v }: SahneProps) {
           return (
             <g key={j} opacity={on ? 1 : 0.35}>
               <path d={`M${x0} 118 L${x0} 112 L${x1} 112 L${x1} 118`} fill="none" stroke={on ? "var(--ink)" : "var(--line-2)"} strokeWidth={1.4} />
-              <text x={(x0 + x1) / 2} y={176} fontSize={12} fontWeight={700} fill={KOD[c] === "dur" ? "var(--c2)" : "var(--ink)"} textAnchor="middle">{on ? KOD[c] : "?"}</text>
+              <text x={(x0 + x1) / 2} y={176} fontSize={12} fontWeight={700} fill={KOD[c] === cev("dur") ? "var(--c2)" : "var(--ink)"} textAnchor="middle">{on ? KOD[c] : "?"}</text>
             </g>
           );
         })}
@@ -564,7 +564,7 @@ function Cerceve({ v }: SahneProps) {
   const ek = v.ek === 1;
   const dizi = ek ? NORMAL.slice(0, 6) + "U" + NORMAL.slice(6) : NORMAL;
   const kd = kodonlar(dizi), aa: string[] = [];
-  for (const c of kd) { const a = KOD[c]; aa.push(a); if (a === "dur") break; }
+  for (const c of kd) { const a = KOD[c]; aa.push(a); if (a === cev("dur")) break; }
   const x = (i: number) => 22 + i * 15 + Math.floor(i / 3) * 4;
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={`${ek ? cev("Bir U eklendi: ") : cev("Normal: ")}${aa.join("-")}`}>
@@ -582,7 +582,7 @@ function Cerceve({ v }: SahneProps) {
       </g>
       <g key={String(ek)} className="ad-belir">
         {aa.map((a, j) => {
-          const cx = 40 + j * 52, dur = a === "dur";
+          const cx = 40 + j * 52, dur = a === cev("dur");
           return (
             <g key={j}>
               {j > 0 && <line x1={cx - 52 + 19} y1={130} x2={cx - 19} y2={130} stroke="var(--ink)" strokeWidth={2} opacity={dur ? 0 : 1} />}
@@ -592,7 +592,7 @@ function Cerceve({ v }: SahneProps) {
           );
         })}
       </g>
-      <text x={20} y={190} fontSize={12.5} fontWeight={700} fill="var(--ink)">{cev("protein:")} {aa.filter((a) => a !== "dur").length} {cev("amino asit")}</text>
+      <text x={20} y={190} fontSize={12.5} fontWeight={700} fill="var(--ink)">{cev("protein:")} {aa.filter((a) => a !== cev("dur")).length} {cev("amino asit")}</text>
       <text x={20} y={210} fontSize={11.5} fontWeight={600} fill="var(--muted)">{ek ? cev("eklemeden sonraki bütün kodonlar değişti") : cev("okuma AUG'den başlar, üçer üçer gider")}</text>
     </svg>
   );

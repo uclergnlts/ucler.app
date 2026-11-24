@@ -16,10 +16,10 @@ function Glikoz({ x, y, r = 14 }: { x: number; y: number; r?: number }) {
 
 const BASAMAK = [
   { ad: cev("hücre"), ornek: cev("kas hücresi") },
-  { ad: "doku", ornek: cev("kas dokusu") },
-  { ad: "organ", ornek: "kalp" },
-  { ad: "sistem", ornek: cev("dolaşım sistemi") },
-  { ad: "organizma", ornek: "insan" },
+  { ad: cev("doku"), ornek: cev("kas dokusu") },
+  { ad: cev("organ"), ornek: cev("kalp") },
+  { ad: cev("sistem"), ornek: cev("dolaşım sistemi") },
+  { ad: cev("organizma"), ornek: cev("insan") },
 ];
 const ETIKET_X = [26, 90, 156, 224, 298], ETIKET_W = [34, 30, 38, 42, 66];
 const KALP = "M170 128 C122 96 126 58 150 58 C161 58 168 66 170 74 C172 66 179 58 190 58 C214 58 218 96 170 128 Z";
@@ -37,7 +37,7 @@ function Basamak({ v }: SahneProps) {
   const d = Math.max(1, Math.min(5, v.d ?? 1));
   const b = BASAMAK[d - 1];
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label={`${d}. basamak: ${b.ad} (${b.ornek})`}>
+    <svg viewBox="0 0 340 226" role="img" aria-label={cev("{0}. basamak: {1} ({2})", d, b.ad, b.ornek)}>
       <g key={d} className="ad-belir">
         {d === 1 && <Igcik x={170} y={92} w={92} />}
         {d === 2 && [0, 1, 2, 3].map((r) => [0, 1, 2].map((c) => <Igcik key={`${r}${c}`} x={100 + c * 72 + (r % 2) * 36} y={44 + r * 32} w={32} />))}

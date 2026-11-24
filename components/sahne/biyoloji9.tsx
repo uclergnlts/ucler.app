@@ -35,7 +35,7 @@ function Noron({ t, oynuyor, s }: SahneProps) {
   const u = ilerleme(t, oynuyor, sure);
   const [px, py] = yolNokta(NORON_YOL, u);
   const bolum = u < 0.12 ? 0 : u < 0.22 ? 1 : u < 0.9 ? 2 : 3;
-  const ad = ["dendrit", cev("hücre gövdesi"), "akson", cev("akson ucu")];
+  const ad = [cev("dendrit"), cev("hücre gövdesi"), cev("akson"), cev("akson ucu")];
   return (
     <svg viewBox="0 0 340 210" role="img" aria-label={u > 0 ? cev("İmpuls şu an: {0}", ad[bolum]) : cev("Bir nöron: dendrit, hücre gövdesi, miyelinli akson, akson ucu")}>
       <g stroke={MOR} strokeWidth={2.4} strokeLinecap="round" fill="none">
@@ -533,7 +533,7 @@ function Tiroit({ v }: SahneProps) {
       </g>
       <g>
         <path transform={`translate(95 176) scale(${buyuk})`} d="M-4 -14 Q-36 -30 -40 -2 Q-42 22 -14 16 Q-4 12 0 4 Q4 12 14 16 Q42 22 40 -2 Q36 -30 4 -14 Z" fill={KIRMIZI} fillOpacity={0.3} stroke={KIRMIZI} strokeWidth={1.6} />
-        <text x={95} y={232} fontSize={12} fontWeight={800} fill={KIRMIZI} textAnchor="middle">{eksik ? cev("tiroit (guatr)") : "tiroit"}</text>
+        <text x={95} y={232} fontSize={12} fontWeight={800} fill={KIRMIZI} textAnchor="middle">{eksik ? cev("tiroit (guatr)") : cev("tiroit")}</text>
       </g>
       <g stroke="var(--ink)" strokeWidth={1 + ust * 0.5} strokeLinecap="round">
         <line x1={95} y1={46} x2={95} y2={80} />

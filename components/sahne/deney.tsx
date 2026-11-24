@@ -32,15 +32,15 @@ const BESIN = [cev("Patates"), cev("Yumurta akı"), cev("Zeytinyağı"), cev("Ba
 const AYRAC = [cev("İyot"), cev("Benedict"), cev("Biüre"), cev("Sudan III")];
 /** Her ayraç için: hangi besinde olumlu, olumlu ve olumsuz renk, aradığı madde. */
 const TEST = [
-  { arti: [1], renk: ["#1f2a5a", "#c98a2b"], arti_yazi: "mavi-siyah", eksi_yazi: cev("sarı-kahve kaldı"), madde: cev("nişasta") },
+  { arti: [1], renk: ["#1f2a5a", "#c98a2b"], arti_yazi: cev("mavi-siyah"), eksi_yazi: cev("sarı-kahve kaldı"), madde: cev("nişasta") },
   { arti: [4], renk: ["#c1440e", "#3a7bd5"], arti_yazi: cev("ısıtınca kiremit kırmızısı"), eksi_yazi: cev("ısıtınca da mavi kaldı"), madde: cev("şeker") },
-  { arti: [2], renk: ["#7b3fa0", "#3a7bd5"], arti_yazi: "mor", eksi_yazi: cev("mavi kaldı"), madde: "protein" },
+  { arti: [2], renk: ["#7b3fa0", "#3a7bd5"], arti_yazi: cev("mor"), eksi_yazi: cev("mavi kaldı"), madde: cev("protein") },
   { arti: [3], renk: ["#d6452f", "#f1b5a8"], arti_yazi: cev("üstte kırmızı yağ tabakası"), eksi_yazi: cev("tabaka yok"), madde: cev("yağ") },
 ];
 export function besinSonuc(b: number, r: number) {
   if (!b || !r) return null;
   const t = TEST[r - 1], arti = t.arti.includes(b);
-  return { arti, renk: t.renk[arti ? 0 : 1], yazi: `${arti ? t.arti_yazi : t.eksi_yazi}: ${t.madde} ${arti ? "var" : cev("yok ya da çok az")}`, madde: t.madde, yag: r === 4 };
+  return { arti, renk: t.renk[arti ? 0 : 1], yazi: arti ? cev("{0}: {1} var", t.arti_yazi, t.madde) : cev("{0}: {1} yok ya da çok az", t.eksi_yazi, t.madde), madde: t.madde, yag: r === 4 };
 }
 
 function BesinLab({ v, set }: SahneProps) {

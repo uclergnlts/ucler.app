@@ -261,7 +261,7 @@ function Sinirlayici({ v }: SahneProps) {
           return (
             <g key={k} opacity={k === c ? 1 : 0.28}>
               <polyline points={`${gx(0)},${gy(0)} ${gx(p)},${gy(p)} ${gx(100)},${gy(p)}`} fill="none" stroke={YESIL} strokeWidth={k === c ? 3 : 1.8} strokeLinejoin="round" />
-              <text x={GX1 + 4} y={gy(p) + 4} fontSize={10.5} fontWeight={700} fill={YESIL}>{["", "az", "orta", cev("çok")][k]}</text>
+              <text x={GX1 + 4} y={gy(p) + 4} fontSize={10.5} fontWeight={700} fill={YESIL}>{["", cev("az"), cev("orta"), cev("çok")][k]}</text>
             </g>
           );
         })}
@@ -316,8 +316,8 @@ function Sicaklik({ v }: SahneProps) {
 /* ---------- solunumun evreleri ---------- */
 
 const EVRE = [
-  { ad: cev("Glikoliz"), yer: "sitoplazma", x: 52, atp: 2, t: 2 },
-  { ad: cev("Krebs"), yer: "matriks", x: 170, atp: 2, t: 4.5 },
+  { ad: cev("Glikoliz"), yer: cev("sitoplazma"), x: 52, atp: 2, t: 2 },
+  { ad: cev("Krebs"), yer: cev("matriks"), x: 170, atp: 2, t: 4.5 },
   { ad: "ETS", yer: cev("iç zar"), x: 260, lx: 300, atp: 26, t: 7 },
 ];
 
@@ -623,7 +623,7 @@ function GeceGunduz({ v }: SahneProps) {
         )}
       </g>
       <g fontSize={11.5} fontWeight={700}>
-        <text x={330} y={30} textAnchor="end" fill={gece ? "var(--line-2)" : YESIL}>{cev("fotosentez")} {gece ? "yok" : cev("hızlı")}</text>
+        <text x={330} y={30} textAnchor="end" fill={gece ? "var(--line-2)" : YESIL}>{cev("fotosentez")} {gece ? cev("yok") : cev("hızlı")}</text>
         <text x={330} y={48} textAnchor="end" fill="var(--c2)">{cev("solunum sürüyor")}</text>
       </g>
       <text x={170} y={226} fontSize={11.5} fontWeight={600} fill="var(--muted)" textAnchor="middle">{cev("oklar dışarıyla olan net gaz alışverişini gösterir")}</text>

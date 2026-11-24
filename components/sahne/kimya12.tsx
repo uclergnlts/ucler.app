@@ -45,7 +45,7 @@ const GRUP = [
 ];
 
 function Grup({ v, set }: SahneProps) {
-  const g = sinir(v.g ?? 0, 0, 3), d = GRUP[g], gaz = d.hal === "gaz";
+  const g = sinir(v.g ?? 0, 0, 3), d = GRUP[g], gaz = d.hal === cev("gaz");
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={cev("CH₃–CH₂{0}: {1}, {2}, kaynama noktası {3}, {4}", d.g, d.ad, d.hal, d.kn, d.su)}>
       <Sekmeler adlar={GRUP.map((x) => x.g)} secili={g} sec={(i) => set("g", i)} />

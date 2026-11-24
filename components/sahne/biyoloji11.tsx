@@ -155,7 +155,7 @@ const BESIN = [
 const BOLGE = [
   { ad: cev("ağız"), x0: 14, x1: 84 },
   { ad: cev("yemek b."), x0: 84, x1: 120 },
-  { ad: "mide", x0: 120, x1: 206 },
+  { ad: cev("mide"), x0: 120, x1: 206 },
   { ad: cev("ince bağırsak"), x0: 206, x1: 326 },
 ];
 /** Besin x konumundayken kırılan bağların oranı. */
@@ -190,7 +190,7 @@ function Baslangic({ v, t, oynuyor, s }: SahneProps) {
   for (let i = 0; i < B.n; i++) { boncuk.push(xx); xx += ad + (kopuk.has(i) ? bosluk : 0); }
   const bitti = u >= 1;
   return (
-    <svg viewBox="0 0 340 214" role="img" aria-label={cev("{0}: kimyasal sindirimi {1} başlar, ince bağırsakta biter", B.ad, ["ağızda", "midede", "ince bağırsakta"][b])}>
+    <svg viewBox="0 0 340 214" role="img" aria-label={cev("{0}: kimyasal sindirimi {1} başlar, ince bağırsakta biter", B.ad, [cev("ağızda"), cev("midede"), cev("ince bağırsakta")][b])}>
       {BOLGE.map((z, i) => (
         <g key={z.ad}>
           <rect x={z.x0} y={i === 1 ? 52 : 34} width={z.x1 - z.x0} height={i === 1 ? 20 : 56} rx={i === 1 ? 4 : 12} fill={x >= z.x0 && x < z.x1 && u > 0 ? "var(--biyoloji-soft)" : "var(--panel)"} stroke="var(--line-2)" />
@@ -452,7 +452,7 @@ function Dolasim({ t, oynuyor, s }: SahneProps) {
   const yazi = u <= 0 ? cev("Kan sağ karıncıktan yola çıkıyor") : simdi < L[3] ? cev("Akciğer atardamarı: oksijensiz kan akciğere") : simdi < L[4] ? cev("Akciğerde kan O₂ alıyor") : simdi < L[8] ? cev("Akciğer toplardamarı: oksijenli kan kalbe") : simdi < L[11] ? cev("Aort: oksijenli kan dokulara") : simdi < L[12] ? cev("Dokularda kan O₂ bırakıyor") : u < 1 ? cev("Ana toplardamar: oksijensiz kan kalbe") : cev("Kan bir tam tur attı");
   const oda = [
     { x: 126, y: 84, a: cev("sağ"), b: cev("kulakçık") }, { x: 126, y: 117, a: cev("sağ"), b: cev("karıncık") },
-    { x: 172, y: 84, a: "sol", b: cev("kulakçık") }, { x: 172, y: 117, a: "sol", b: cev("karıncık") },
+    { x: 172, y: 84, a: cev("sol"), b: cev("kulakçık") }, { x: 172, y: 117, a: cev("sol"), b: cev("karıncık") },
   ];
   return (
     <svg viewBox="0 0 340 234" role="img" aria-label={cev("Küçük dolaşımda kan akciğerde oksijen alır; büyük dolaşımda dokulara oksijen bırakır")}>
@@ -550,7 +550,7 @@ function Kapak({ v, t, oynuyor, s }: SahneProps) {
         <text x={256} y={122}>{cev("kapakçığı")}</text>
       </g>
       <text x={170} y={204} fontSize={12.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {u < 1 ? (saglam ? cev("Kapakçıklar sağlam") : cev("Kapakçıklar tam kapanmıyor")) : cev("Aorta giden kan: {0}/12{1}", aorta, aorta < 12 ? `, geri kaçan: ${12 - aorta}` : "")}
+        {u < 1 ? (saglam ? cev("Kapakçıklar sağlam") : cev("Kapakçıklar tam kapanmıyor")) : cev("Aorta giden kan: {0}/12{1}", aorta, aorta < 12 ? cev(", geri kaçan: {0}", 12 - aorta) : "")}
       </text>
     </svg>
   );
@@ -673,11 +673,11 @@ function Kan({ v }: SahneProps) {
 /* ---------- damarlarda basınç ve hız ---------- */
 
 const DAMAR = [
-  { ad: ["aort"], b: 1, h: 1, a: 0.03, s: [cev("Basınç en yüksek: ≈120/80 mmHg"), cev("Esnek duvar her atımda gerilir: nabız")] },
-  { ad: ["atar", "damar"], b: 0.85, h: 0.45, a: 0.07, s: [cev("Basınç ve hız düşmeye başlar"), cev("Kanı kalpten dokulara götürür")] },
+  { ad: [cev("aort")], b: 1, h: 1, a: 0.03, s: [cev("Basınç en yüksek: ≈120/80 mmHg"), cev("Esnek duvar her atımda gerilir: nabız")] },
+  { ad: [cev("atar"), cev("damar§sütun")], b: 0.85, h: 0.45, a: 0.07, s: [cev("Basınç ve hız düşmeye başlar"), cev("Kanı kalpten dokulara götürür")] },
   { ad: [cev("kılcal")], b: 0.3, h: 0.04, a: 1, s: [cev("Hız en düşük: alışverişe zaman kalır"), cev("Duvar tek kat hücre, toplam kesit en geniş")] },
-  { ad: ["toplar", "damar"], b: 0.1, h: 0.25, a: 0.2, s: [cev("Basınç çok düşük, hız yeniden artar"), cev("Kapakçıklar ve kaslar kanı kalbe iter")] },
-  { ad: ["ana", "toplardamar"], b: 0.03, h: 0.5, a: 0.05, s: [cev("Basınç sıfıra yakın"), cev("Kan sağ kulakçığa döner")] },
+  { ad: [cev("toplar"), cev("damar§sütun")], b: 0.1, h: 0.25, a: 0.2, s: [cev("Basınç çok düşük, hız yeniden artar"), cev("Kapakçıklar ve kaslar kanı kalbe iter")] },
+  { ad: [cev("ana"), cev("toplardamar")], b: 0.03, h: 0.5, a: 0.05, s: [cev("Basınç sıfıra yakın"), cev("Kan sağ kulakçığa döner")] },
 ];
 
 function Damar({ v }: SahneProps) {
@@ -769,7 +769,7 @@ function Grup({ v, s }: SahneProps) {
       {ak.A && [[268, 60], [300, 92], [278, 98]].map(([x, y], i) => <Y key={`a${i}`} x={x} y={y} renk={SARI} don={i * 40} />)}
       {ak.B && [[310, 56], [266, 84], [312, 104]].map(([x, y], i) => <Y key={`b${i}`} x={x} y={y} renk={YESIL} don={-i * 50} />)}
       <text x={290} y={130} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">
-        {ak.A && ak.B ? cev("anti-A ve anti-B") : ak.A ? "anti-A" : ak.B ? "anti-B" : cev("antikor yok")}
+        {ak.A && ak.B ? cev("anti-A ve anti-B") : ak.A ? cev("anti-A") : ak.B ? cev("anti-B") : cev("antikor yok")}
       </text>
       <text x={170} y={24} fontSize={11.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("Karışınca")}</text>
       {hucre.map(([x, y], i) => <Antijenli key={i} x={x} y={y} g={vg} r={12} />)}

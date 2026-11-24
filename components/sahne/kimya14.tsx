@@ -179,8 +179,8 @@ function Birikim({ t, oynuyor, s }: SahneProps) {
 const filmDurum = (g: number) => (g < 20 ? cev("kırılgan") : g <= 40 ? cev("esnek") : cev("yapışkan"));
 function Film({ v }: SahneProps) {
   const g = sinir(v.g ?? 0, 0, 60), d = filmDurum(g);
-  const renk = d === "esnek" ? "var(--c3)" : "var(--c2)";
-  const bukum = d === cev("kırılgan") ? 0 : d === "esnek" ? 26 : 42;
+  const renk = d === cev("esnek") ? "var(--c3)" : "var(--c2)";
+  const bukum = d === cev("kırılgan") ? 0 : d === cev("esnek") ? 26 : 42;
   // Zincirler: gliserol molekülleri araya girdikçe zincirler açılır.
   const aralik = 12 + g * 0.3;
   return (

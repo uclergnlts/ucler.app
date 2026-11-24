@@ -148,7 +148,7 @@ const IYON = (() => {
 
 function PhLab({ v, saat = 0 }: SahneProps) {
   const A = v.A ?? 0, B = v.B ?? 0, { pH, h, oh } = phHesap(A, B);
-  const p = Math.round(pH * 10) / 10, durum = p < 7 ? "asidik" : p > 7 ? "bazik" : cev("nötr");
+  const p = Math.round(pH * 10) / 10, durum = p < 7 ? cev("asidik") : p > 7 ? cev("bazik") : cev("nötr");
   const renk = phRengi(pH);
   // Damla: bir değer artınca damlalıktan yarım saniyelik bir damla düşer.
   const son = useRef({ A, B, tA: -9, tB: -9 });

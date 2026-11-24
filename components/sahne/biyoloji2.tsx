@@ -228,7 +228,7 @@ function Ph({ v }: SahneProps) {
       </g>
       <g fontSize={12} fontWeight={700}>
         {ENZIMLER_PH.map((e, i) => (
-          <text key={e.ad} x={GX1} y={18 + i * 17} fill={e.renk} textAnchor="end">{e.ad}: %{Math.round(phHiz(p, e.tepe) * 100)}</text>
+          <text key={e.ad} x={GX1} y={18 + i * 17} fill={e.renk} textAnchor="end">{cev("{0}: %{1}", e.ad, Math.round(phHiz(p, e.tepe) * 100))}</text>
         ))}
       </g>
     </svg>
@@ -348,11 +348,11 @@ type Organel = { id: string; ad: string; x: number; y: number };
 // Etiketin konumu; hayvan hücresinde organellerin merkezleri.
 const HAYVAN: Organel[] = [
   { id: "cekirdek", ad: cev("çekirdek"), x: 150, y: 114 },
-  { id: "mitokondri", ad: "mitokondri", x: 82, y: 82 },
+  { id: "mitokondri", ad: cev("mitokondri"), x: 82, y: 82 },
   { id: "golgi", ad: cev("Golgi aygıtı"), x: 246, y: 92 },
-  { id: "lizozom", ad: "lizozom", x: 252, y: 160 },
+  { id: "lizozom", ad: cev("lizozom"), x: 252, y: 160 },
   { id: "er", ad: cev("granüllü ER"), x: 205, y: 104 },
-  { id: "sentrozom", ad: "sentrozom", x: 96, y: 160 },
+  { id: "sentrozom", ad: cev("sentrozom"), x: 96, y: 160 },
 ];
 
 function HayvanHucresi({ etiket, vurgu }: { etiket: boolean; vurgu: Record<string, string> }) {

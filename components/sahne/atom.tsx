@@ -91,7 +91,7 @@ function Atom({ s, v, set }: SahneProps) {
       )}
       {dokunmali && (
         <g>
-          {([["p", "proton", "var(--c2)"], ["n", cev("nötron"), "#9aa8ba"], ["e", "elektron", "var(--c1)"]] as const).map(([k, ad, renk], i) => (
+          {([["p", cev("proton"), "var(--c2)"], ["n", cev("nötron"), "#9aa8ba"], ["e", cev("elektron"), "var(--c1)"]] as const).map(([k, ad, renk], i) => (
             <g
               key={k} role="button" tabIndex={0} aria-label={cev("{0} ekle", ad)} style={{ cursor: "pointer" }}
               onClick={() => degistir(k, 1)}

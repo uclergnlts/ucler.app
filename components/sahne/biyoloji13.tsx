@@ -92,8 +92,8 @@ function Sperm({ t, oynuyor, s }: SahneProps) {
       <polyline points={nokt([[72, 60], [72, 98]])} fill="none" stroke="var(--line-2)" strokeWidth={6} strokeLinecap="round" />
       <polyline points={nokt([[120, 118], [242, 118]])} fill="none" stroke={etkin === 2 ? YESIL : "var(--line-2)"} strokeOpacity={etkin === 2 ? 0.6 : 1} strokeWidth={6} strokeLinecap="round" />
       <polyline points={nokt([[284, 138], [284, 186]])} fill="none" stroke={etkin === 3 ? YESIL : "var(--line-2)"} strokeOpacity={etkin === 3 ? 0.6 : 1} strokeWidth={6} strokeLinecap="round" />
-      <Kutu x={24} y={20} w={96} ad="testis" etkin={etkin === 0} />
-      <Kutu x={24} y={98} w={96} ad="epididim" etkin={etkin === 1} />
+      <Kutu x={24} y={20} w={96} ad={cev("testis")} etkin={etkin === 0} />
+      <Kutu x={24} y={98} w={96} ad={cev("epididim")} etkin={etkin === 1} />
       <Kutu x={242} y={98} w={84} ad={cev("üretra")} etkin={etkin === 3} />
       {/* bezler */}
       <rect x={134} y={14} width={104} height={58} rx={12} fill={meni || damla ? "color-mix(in srgb, #f5cb6c 20%, var(--surface))" : "var(--panel)"} stroke={meni || damla ? SARI : "var(--line-2)"} strokeWidth={1.4} />
@@ -175,7 +175,7 @@ function Testis({ v }: SahneProps) {
         <Cubuk x={214} y={93} w={112} oran={l} renk={SARI} />
         <text x={214} y={128} fill="var(--muted)">{cev("Sperm üretimi")}</text>
         <Cubuk x={214} y={135} w={112} oran={uretim} renk={MAVI} />
-        <text x={214} y={164} fontSize={13} fontWeight={800} fill={uretim === 1 ? MAVI : "var(--muted)"}>{uretim === 1 ? "tam" : uretim ? cev("zayıf") : "yok"}</text>
+        <text x={214} y={164} fontSize={13} fontWeight={800} fill={uretim === 1 ? MAVI : "var(--muted)"}>{uretim === 1 ? cev("tam") : uretim ? cev("zayıf") : cev("yok")}</text>
       </g>
       <text x={170} y={222} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
         {uretim === 1 ? cev("FSH ve LH birlikte: sperm üretimi tam") : f ? cev("FSH var ama testosteron yok: üretim zayıf") : l ? cev("Testosteron var ama Sertoli uyarılmadı: üretim zayıf") : cev("Hormon yok: tüpçükte sperm üretilmiyor")}
@@ -269,7 +269,7 @@ const HORMON = [
   { ad: "FSH", f: FSH, renk: MAVI, x: 40 },
   { ad: "LH", f: LH, renk: MOR, x: 92 },
   { ad: cev("östrojen"), f: OST, renk: SARI, x: 134 },
-  { ad: "progesteron", f: PRO, renk: KIRMIZI, x: 208 },
+  { ad: cev("progesteron"), f: PRO, renk: KIRMIZI, x: 208 },
 ];
 
 function Dongu({ v }: SahneProps) {
@@ -413,13 +413,13 @@ function Embriyo({ x, y, r, evre }: { x: number; y: number; r: number; evre: num
 }
 
 const EVRE = [
-  { ad: "oosit", gun: "", hucre: "" },
-  { ad: "zigot", gun: cev("gün 0"), hucre: cev("1 hücre") },
+  { ad: cev("oosit"), gun: "", hucre: "" },
+  { ad: cev("zigot"), gun: cev("gün 0"), hucre: cev("1 hücre") },
   { ad: cev("2 hücre"), gun: cev("gün 1"), hucre: cev("2 hücre") },
   { ad: cev("4 hücre"), gun: cev("gün 2"), hucre: cev("4 hücre") },
   { ad: cev("8 hücre"), gun: cev("gün 3"), hucre: cev("8 hücre") },
-  { ad: "morula", gun: cev("gün 4"), hucre: cev("16+ hücre") },
-  { ad: "blastosist", gun: cev("gün 5"), hucre: cev("100'e yakın hücre") },
+  { ad: cev("morula"), gun: cev("gün 4"), hucre: cev("16+ hücre") },
+  { ad: cev("blastosist"), gun: cev("gün 5"), hucre: cev("100'e yakın hücre") },
 ];
 
 function Zigot({ t, oynuyor, s }: SahneProps) {
@@ -480,9 +480,9 @@ const ORGAN = [
   { ad: cev("Karaciğer ve pankreas"), t: 2 },
 ];
 const TABAKA = [
-  { ad: "ektoderm", yer: cev("dış"), renk: MAVI, r1: 70, r0: 58, kural: cev("Ektoderm: dış yüz ve sinir sistemi") },
-  { ad: "mezoderm", yer: "orta", renk: KIRMIZI, r1: 58, r0: 45, kural: cev("Mezoderm: kas, kemik, kalp ve kan") },
-  { ad: "endoderm", yer: cev("iç"), renk: SARI, r1: 45, r0: 32, kural: cev("Endoderm: iç yüzeyler ve sindirim bezleri") },
+  { ad: cev("ektoderm"), yer: cev("dış"), renk: MAVI, r1: 70, r0: 58, kural: cev("Ektoderm: dış yüz ve sinir sistemi") },
+  { ad: cev("mezoderm"), yer: cev("orta"), renk: KIRMIZI, r1: 58, r0: 45, kural: cev("Mezoderm: kas, kemik, kalp ve kan") },
+  { ad: cev("endoderm"), yer: cev("iç"), renk: SARI, r1: 45, r0: 32, kural: cev("Endoderm: iç yüzeyler ve sindirim bezleri") },
 ];
 
 function Germ({ v }: SahneProps) {
@@ -510,7 +510,7 @@ function Germ({ v }: SahneProps) {
         ))}
         <text x={200} y={130} fill="var(--muted)">{cev("Organ")}</text>
         <text x={200} y={150} fontSize={12} fontWeight={800} fill="var(--ink)">{o.ad}</text>
-        <text x={200} y={170} fontSize={12} fontWeight={800} fill={tb.renk}>{tb.ad}{cev("ten gelişir")}</text>
+        <text x={200} y={170} fontSize={12} fontWeight={800} fill={tb.renk}>{cev("{0}ten gelişir", tb.ad)}</text>
       </g>
       <text x={170} y={214} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{tb.kural}</text>
     </svg>
@@ -578,7 +578,7 @@ function Dagilim({ v }: SahneProps) {
   const n = dagilimNoktalari(tip);
   const x0 = 90, y0 = 28;
   return (
-    <svg viewBox="0 0 340 232" role="img" aria-label={`${DAGILIM[tip].ad}: 24 birey, ${DAGILIM[tip].neden}`}>
+    <svg viewBox="0 0 340 232" role="img" aria-label={cev("{0}: 24 birey, {1}", DAGILIM[tip].ad, DAGILIM[tip].neden)}>
       <text x={170} y={18} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">{DAGILIM[tip].ad}</text>
       <rect x={x0} y={y0} width={160} height={160} rx={10} fill="var(--panel)" stroke="var(--line-2)" />
       {n.map(([x, y], i) => <circle key={i} cx={x0 + x} cy={y0 + y} r={4.2} fill={YESIL} stroke="var(--surface)" strokeWidth={1} />)}
@@ -601,7 +601,7 @@ function JEgrisi({ v }: SahneProps) {
   const [px, py] = nokta[n];
   const asti = N > 1000;
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label={`${n}. nesil: ${N} bakteri`}>
+    <svg viewBox="0 0 340 226" role="img" aria-label={cev("{0}. nesil: {1} bakteri", n, N)}>
       <line x1={46} x2={322} y1={176} y2={176} stroke="var(--ink)" strokeWidth={1.2} />
       <line x1={46} x2={46} y1={24} y2={176} stroke="var(--ink)" strokeWidth={1.2} />
       <line x1={46} x2={322} y1={Y(1000)} y2={Y(1000)} stroke={KIRMIZI} strokeDasharray="4 4" />
@@ -682,8 +682,8 @@ function SEgrisi({ v }: SahneProps) {
 /* ---------- sınırlayıcı faktörler ---------- */
 
 const YOGUNLUK = [
-  { ad: "seyrek", n: 10 },
-  { ad: "orta", n: 24 },
+  { ad: cev("seyrek"), n: 10 },
+  { ad: cev("orta"), n: 24 },
   { ad: cev("kalabalık"), n: 48 },
 ];
 const OLAY = [

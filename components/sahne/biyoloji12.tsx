@@ -327,7 +327,7 @@ function Co2({ t, oynuyor, s }: SahneProps) {
   ];
   const cubuk = sinir((u - 0.6) / 0.3);
   const paylar = [
-    { ad: "bikarbonat", pay: 70, renk: YESIL },
+    { ad: cev("bikarbonat"), pay: 70, renk: YESIL },
     { ad: cev("Hb'ye bağlı"), pay: 23, renk: KIRMIZI },
     { ad: cev("çözünmüş"), pay: 7, renk: MAVI },
   ];
@@ -498,12 +498,12 @@ function Ure({ t, oynuyor, s }: SahneProps) {
 
 const PARCA = [
   { ad: "su", r: 2.2, renk: MAVI, gecer: true, n: 6 },
-  { ad: "glikoz", r: 3.4, renk: SARI, gecer: true, n: 3 },
+  { ad: cev("glikoz"), r: 3.4, renk: SARI, gecer: true, n: 3 },
   { ad: cev("amino asit"), r: 3.4, renk: MOR, gecer: true, n: 3 },
   { ad: cev("üre"), r: 3, renk: YESIL, gecer: true, n: 3 },
-  { ad: "tuzlar", r: 2.6, renk: "var(--ink)", gecer: true, n: 3 },
+  { ad: cev("tuzlar"), r: 2.6, renk: "var(--ink)", gecer: true, n: 3 },
   { ad: cev("büyük protein"), r: 8, renk: "#6b7f99", gecer: false, n: 2 },
-  { ad: "alyuvar", r: 10, renk: KIRMIZI, gecer: false, n: 2 },
+  { ad: cev("alyuvar"), r: 10, renk: KIRMIZI, gecer: false, n: 2 },
 ];
 
 function Suzme({ t, oynuyor, s }: SahneProps) {

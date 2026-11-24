@@ -19,7 +19,7 @@ const ZINCIR = [
   { ad: cev("çekirge"), rol: cev("birincil tüketici"), e: 1000 },
   { ad: cev("kurbağa"), rol: cev("ikincil tüketici"), e: 100 },
   { ad: cev("yılan"), rol: cev("üçüncül tüketici"), e: 10 },
-  { ad: "kartal", rol: cev("dördüncül tüketici"), e: 1 },
+  { ad: cev("kartal"), rol: cev("dördüncül tüketici"), e: 1 },
 ];
 const GEN = [300, 248, 196, 144, 92];
 
@@ -50,7 +50,7 @@ function Zincir({ v }: SahneProps) {
 const PIRAMIT = [
   { ad: cev("Enerji piramidi"), alt: cev("çayır, kJ"), b: [{ ad: "ot", d: cev("10 000 kJ"), w: 290 }, { ad: cev("çekirge"), d: cev("1 000 kJ"), w: 210 }, { ad: cev("kurbağa"), d: cev("100 kJ"), w: 136 }] },
   { ad: cev("Birey sayısı piramidi"), alt: cev("tek bir ağaç"), b: [{ ad: cev("ağaç"), d: "1", w: 70 }, { ad: cev("tırtıl"), d: "3 000", w: 280 }, { ad: cev("kuş"), d: "20", w: 110 }] },
-  { ad: cev("Biyokütle piramidi"), alt: cev("okyanus, anlık kütle (g/m²)"), b: [{ ad: "fitoplankton", d: "4", w: 120 }, { ad: "zooplankton", d: "21", w: 280 }] },
+  { ad: cev("Biyokütle piramidi"), alt: cev("okyanus, anlık kütle (g/m²)"), b: [{ ad: cev("fitoplankton"), d: "4", w: 120 }, { ad: cev("zooplankton"), d: "21", w: 280 }] },
 ];
 
 function Piramit({ v }: SahneProps) {
@@ -78,7 +78,7 @@ function Piramit({ v }: SahneProps) {
 
 const BIRIKIM = [
   { ad: "su", ppm: "0,000003", n: 1 },
-  { ad: "plankton", ppm: "0,04", n: 3 },
+  { ad: cev("plankton"), ppm: "0,04", n: 3 },
   { ad: cev("küçük balık"), ppm: "0,5", n: 7 },
   { ad: cev("büyük balık"), ppm: "2", n: 13 },
   { ad: cev("balıkçıl"), ppm: "25", n: 26 },
@@ -163,7 +163,7 @@ function Agac({ x, y, olcek = 1 }: { x: number; y: number; olcek?: number }) {
 
 function Karbon({ v }: SahneProps) {
   const yak = v.yak === 1, ayr = v.ayr === 1;
-  const durum = yak ? cev("artıyor ↑") : "dengede";
+  const durum = yak ? cev("artıyor ↑") : cev("dengede");
   return (
     <svg viewBox="0 0 340 254" role="img" aria-label={cev("Karbon döngüsü. Havadaki CO₂ {0}{1}", durum, ayr ? "" : "; ayrıştırıcı yok, ölü madde birikiyor")}>
       <g>
@@ -219,15 +219,15 @@ const AZOT = [
   { x: 66, y: 120, ad: cev("amonyak (NH₄⁺)"), w: 110 },
   { x: 120, y: 206, ad: cev("nitrit (NO₂⁻)"), w: 98 },
   { x: 250, y: 206, ad: cev("nitrat (NO₃⁻)"), w: 102 },
-  { x: 280, y: 120, ad: "bitki", w: 64 },
+  { x: 280, y: 120, ad: cev("bitki"), w: 64 },
 ];
 // Oklar sırayla çizilir: [x1, y1, x2, y2, renk, yazılar [x, y, metin, hizalama]]
 const AZOT_OK: { p: [number, number, number, number]; renk: string; kesik?: boolean; yazi: [number, number, string, "start" | "middle" | "end"][] }[] = [
   { p: [130, 46, 72, 106], renk: "var(--c1)", yazi: [[12, 70, cev("azot bağlama"), "start"], [12, 84, "(Rhizobium)", "start"]] },
-  { p: [80, 134, 108, 192], renk: "var(--c1)", yazi: [[12, 170, "nitrifikasyon", "start"]] },
-  { p: [170, 206, 198, 206], renk: "var(--c1)", yazi: [[184, 238, "nitrifikasyon", "middle"]] },
+  { p: [80, 134, 108, 192], renk: "var(--c1)", yazi: [[12, 170, cev("nitrifikasyon"), "start"]] },
+  { p: [170, 206, 198, 206], renk: "var(--c1)", yazi: [[184, 238, cev("nitrifikasyon"), "middle"]] },
   { p: [262, 192, 279, 134], renk: YESIL, yazi: [[282, 168, cev("bitki alır"), "start"]] },
-  { p: [236, 192, 196, 46], renk: "var(--c5)", kesik: true, yazi: [[208, 116, "denitrifikasyon", "end"]] },
+  { p: [236, 192, 196, 46], renk: "var(--c5)", kesik: true, yazi: [[208, 116, cev("denitrifikasyon"), "end"]] },
 ];
 
 function Azot({ s, t, oynuyor }: SahneProps) {
@@ -360,7 +360,7 @@ function BekciHucre({ x, acik, sol }: { x: number; acik: number; sol: boolean })
 
 function Stoma({ v }: SahneProps) {
   const isik = v.isik === 1, su = v.su === 1, acik = isik && su ? 1 : 0;
-  const neden = !isik && !su ? cev("karanlık ve susuzluk") : !isik ? cev("karanlık") : !su ? "susuzluk: absisik asit" : "";
+  const neden = !isik && !su ? cev("karanlık ve susuzluk") : !isik ? cev("karanlık") : !su ? cev("susuzluk: absisik asit") : "";
   return (
     <svg viewBox="0 0 340 250" role="img" aria-label={acik ? cev("Stoma açık: K⁺ ve su bekçi hücrelerine girdi") : cev("Stoma kapalı ({0})", neden)}>
       <g key={acik} className="ad-belir">

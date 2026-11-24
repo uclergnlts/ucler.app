@@ -377,10 +377,10 @@ const sirala = (g: string[]) => [...g].sort((p, q) => SIRA.indexOf(p) - SIRA.ind
 
 type Fen = { ad: string; renk: string; erkek?: boolean; dolu?: number };
 function fenotip(m: Mod, g: string[]): Fen {
-  if (m === "baskin") return g.includes("A") ? { ad: "mor", renk: "var(--c5)" } : { ad: "beyaz", renk: "#fff" };
+  if (m === "baskin") return g.includes("A") ? { ad: cev("mor"), renk: "var(--c5)" } : { ad: cev("beyaz"), renk: "#fff" };
   if (m === "eksik") {
     const k = g.filter((x) => x === "K").length;
-    return k === 2 ? { ad: cev("kırmızı"), renk: "var(--c2)" } : k === 1 ? { ad: "pembe", renk: "#f6a6bb" } : { ad: "beyaz", renk: "#fff" };
+    return k === 2 ? { ad: cev("kırmızı"), renk: "var(--c2)" } : k === 1 ? { ad: cev("pembe"), renk: "#f6a6bb" } : { ad: cev("beyaz"), renk: "#fff" };
   }
   if (m === "kan") {
     const a = g.includes("IA"), b = g.includes("IB");
@@ -391,7 +391,7 @@ function fenotip(m: Mod, g: string[]): Fen {
   return h === 2 ? { ad: cev("renk körü"), renk: "var(--ink)", dolu: 1 } : h === 1 ? { ad: cev("taşıyıcı"), renk: "var(--ink)", dolu: 0.5 } : { ad: cev("sağlıklı"), renk: "var(--ink)", dolu: 0 };
 }
 
-const kesir = (n: number, top: number) => (n === top ? "hepsi" : ({ 1: "¼", 2: "½", 3: "¾" } as Record<number, string>)[(n * 4) / top] ?? `${n}/${top}`);
+const kesir = (n: number, top: number) => (n === top ? cev("hepsi") : ({ 1: "¼", 2: "½", 3: "¾" } as Record<number, string>)[(n * 4) / top] ?? `${n}/${top}`);
 
 function Simge({ m, f, x, y }: { m: Mod; f: Fen; x: number; y: number }) {
   if (m === "kan")
@@ -440,7 +440,7 @@ function Punnett(p: SahneProps) {
   const sure = typeof s.sure === "number" ? s.sure : 0;
   const u = sure ? ilerleme(t, oynuyor, sure) : 1;
   const [e1, e2] = ebeveyn(s, p.v);
-  const ad = (s.adlar as string[]) ?? (m === "x" || m === "kan" ? ["anne", "baba"] : [cev("1. ebeveyn"), cev("2. ebeveyn")]);
+  const ad = (s.adlar as string[]) ?? (m === "x" || m === "kan" ? [cev("anne"), cev("baba")] : [cev("1. ebeveyn"), cev("2. ebeveyn")]);
   const hucreler = e1.flatMap((a, r) => e2.map((b, c) => ({ r, c, g: sirala([a, b]) })));
   const X0 = 124, Y0 = 52, CW = 92, CH = 60;
   const gor = (k: number) => !sure || u > 0.08 + k * 0.2;
@@ -461,14 +461,14 @@ function Punnett(p: SahneProps) {
   if (m === "baskin" || m === "eksik") {
     const gs = say(hucreler.map((h) => h.g.join(""))).sort((a, b) => SIRA.indexOf(a[0][0]) - SIRA.indexOf(b[0][0]) || SIRA.indexOf(a[0][1]) - SIRA.indexOf(b[0][1]));
     const fs = say(fenler.map((f) => f.ad));
-    satirlar.push(`Genotip: ${oran(gs)}`, `Fenotip: ${oran(fs)}`);
+    satirlar.push(cev("Genotip: {0}", oran(gs)), cev("Fenotip: {0}", oran(fs)));
   } else if (m === "kan") {
     const fs = say(fenler.map((f) => f.ad));
-    satirlar.push(`Kan grubu: ${fs.map(([x, n]) => `${x} (${kesir(n, 4)})`).join(", ")}`);
+    satirlar.push(cev("Kan grubu: {0}", fs.map(([x, n]) => `${x} (${kesir(n, 4)})`).join(", ")));
   } else {
     const kiz = fenler.filter((f) => !f.erkek), ogul = fenler.filter((f) => f.erkek);
-    satirlar.push(`Kızlar: ${say(kiz.map((f) => f.ad)).map(([x, n]) => `${kesir(n, kiz.length)} ${x}`).join(", ")}`);
-    satirlar.push(`Oğullar: ${say(ogul.map((f) => f.ad)).map(([x, n]) => `${kesir(n, ogul.length)} ${x}`).join(", ")}`);
+    satirlar.push(cev("Kızlar: {0}", say(kiz.map((f) => f.ad)).map(([x, n]) => `${kesir(n, kiz.length)} ${x}`).join(", ")));
+    satirlar.push(cev("Oğullar: {0}", say(ogul.map((f) => f.ad)).map(([x, n]) => `${kesir(n, ogul.length)} ${x}`).join(", ")));
   }
   const fenAd = (g: string[]) => fenotip(m, sirala(g)).ad;
   return (
@@ -554,7 +554,7 @@ function Test({ s, t, oynuyor }: SahneProps) {
       <text x={248} y={104} fontSize={14} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("aa")}</text>
       <line x1={20} y1={120} x2={320} y2={120} stroke="var(--line)" />
       <text x={20} y={142} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("yavrular")}</text>
-      {[{ ad: "mor", n: mor, renk: "var(--c5)", y: 158 }, { ad: "beyaz", n: beyaz, renk: "color-mix(in srgb, #87a3d5 20%, var(--surface))", y: 196 }].map((b) => (
+      {[{ ad: cev("mor"), n: mor, renk: "var(--c5)", y: 158 }, { ad: cev("beyaz"), n: beyaz, renk: "color-mix(in srgb, #87a3d5 20%, var(--surface))", y: 196 }].map((b) => (
         <g key={b.ad}>
           <text x={20} y={b.y + 15} fontSize={12} fontWeight={700} fill="var(--ink)">{b.ad}</text>
           <rect x={70} y={b.y} width={W} height={22} rx={6} fill="none" stroke="var(--line)" />

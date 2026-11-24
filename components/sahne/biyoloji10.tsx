@@ -152,7 +152,7 @@ function Uyum({ v }: SahneProps) {
       </g>
       <g fontSize={11.5} fontWeight={700}>
         <text x={14} y={168} fill={KIRMIZI}>{cev("kirpiksi kas:")} {yakin ? cev("kasılı") : cev("gevşek")}</text>
-        <text x={14} y={184} fill="var(--muted)">{cev("askı bağları:")} {yakin ? cev("gevşek") : "gergin"}</text>
+        <text x={14} y={184} fill="var(--muted)">{cev("askı bağları:")} {yakin ? cev("gevşek") : cev("gergin")}</text>
         <text x={14} y={200} fill={MAVI}>{cev("mercek:")} {yakin ? cev("kalın (çok kırar)") : cev("ince (az kırar)")}</text>
       </g>
       <text x={170} y={219} fontSize={12.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">
@@ -222,7 +222,7 @@ function Kulak({ t, oynuyor, s }: SahneProps) {
   const evre = u <= 0 ? -1 : u < 0.28 ? 0 : u < 0.42 ? 1 : u < 0.64 ? 2 : u < 0.84 ? 3 : 4;
   const tit = (e: number) => (evre === e ? Math.sin(t * 40) * 2.5 : 0);
   const kemik = sinir((u - 0.42) / 0.22);
-  const ad = [cev("kulak yolu"), cev("kulak zarı"), cev("çekiç, örs, üzengi"), "salyangoz", cev("işitme siniri")];
+  const ad = [cev("kulak yolu"), cev("kulak zarı"), cev("çekiç, örs, üzengi"), cev("salyangoz"), cev("işitme siniri")];
   const renk = (e: number) => (evre === e ? KIRMIZI : "var(--muted)");
   return (
     <svg viewBox="0 0 340 220" role="img" aria-label={evre >= 0 ? cev("Ses şu an: {0}", ad[evre]) : cev("Kulak: kulak yolu, kulak zarı, kemikçikler, salyangoz, işitme siniri")}>
@@ -533,7 +533,7 @@ function Enerji({ t, oynuyor, s }: SahneProps) {
             <text x={14} y={y + 15} fontSize={12} fontWeight={700} fill={etkin === i ? k.renk : "var(--muted)"}>{k.ad}</text>
             <rect x={140} y={y} width={180} height={22} rx={6} fill="var(--line)" fillOpacity={0.5} />
             <rect x={140} y={y} width={Math.max(0, 180 * stok)} height={22} rx={6} fill={k.renk} fillOpacity={etkin === i ? 0.85 : 0.4} />
-            <text x={312} y={y + 15} fontSize={11} fontWeight={700} fill="var(--ink)" textAnchor="end">{i < 2 ? (stok > 0 ? "stok" : "bitti") : stok > 0 ? "devrede" : "bekliyor"}</text>
+            <text x={312} y={y + 15} fontSize={11} fontWeight={700} fill="var(--ink)" textAnchor="end">{i < 2 ? (stok > 0 ? cev("stok") : cev("bitti")) : stok > 0 ? cev("devrede") : cev("bekliyor")}</text>
           </g>
         );
       })}

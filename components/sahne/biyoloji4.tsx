@@ -72,7 +72,7 @@ function Elma() {
 }
 
 const GRUP = [
-  { ad: cev("Kara yosunları"), ornek: cev("kara yosunu, ciğer otu"), kisa: "yosunlar", C: Yosun },
+  { ad: cev("Kara yosunları"), ornek: cev("kara yosunu, ciğer otu"), kisa: cev("yosunlar"), C: Yosun },
   { ad: cev("Eğrelti otları"), ornek: cev("eğrelti, at kuyruğu, kibrit otu"), kisa: cev("eğreltiler"), C: Egrelti },
   { ad: cev("Açık tohumlular"), ornek: cev("çam, ladin, köknar, ardıç"), kisa: cev("açık tohum"), C: Cam },
   { ad: cev("Kapalı tohumlular"), ornek: cev("elma, buğday, lale, meşe"), kisa: cev("kapalı tohum"), C: Elma },
@@ -150,13 +150,13 @@ function Su({ t, oynuyor, s }: SahneProps) {
 /* ---------- döl almaşı ---------- */
 
 const DOL = [
-  { ad: "sporofit", p: "2n", x: 170, y: 30 },
-  { ad: "spor", p: "n", x: 282, y: 92 },
-  { ad: "gametofit", p: "n", x: 238, y: 178 },
-  { ad: "gametler", p: "n", x: 102, y: 178 },
-  { ad: "zigot", p: "2n", x: 58, y: 92 },
+  { ad: cev("sporofit"), p: "2n", x: 170, y: 30 },
+  { ad: cev("spor"), p: "n", x: 282, y: 92 },
+  { ad: cev("gametofit"), p: "n", x: 238, y: 178 },
+  { ad: cev("gametler"), p: "n", x: 102, y: 178 },
+  { ad: cev("zigot"), p: "2n", x: 58, y: 92 },
 ];
-const OLAY = ["mayoz", "mitoz", "mitoz", cev("döllenme"), "mitoz"];
+const OLAY = [cev("mayoz"), cev("mitoz"), cev("mitoz"), cev("döllenme"), cev("mitoz")];
 
 function DolAlmasi({ t, oynuyor, s }: SahneProps) {
   const sure = typeof s.sure === "number" ? s.sure : 6;
@@ -206,7 +206,7 @@ function Baskin({ v }: SahneProps) {
     [cev("Tohumlu bitki"), 0.06, 1, cev("polen ve embriyo kesesi"), cev("ağacın, çiçeğin kendisi")],
   ][g - 1] as [string, number, number, string, string];
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${ad}: gametofit ${gNot}, sporofit ${sNot}`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0}: gametofit {1}, sporofit {2}", ad, gNot, sNot)}>
       <text x={170} y={22} fontSize={15} fontWeight={800} fill="var(--ink)" textAnchor="middle">{ad}</text>
       <g key={g} className="ad-belir">
         {g === 1 && (
@@ -303,7 +303,7 @@ function Cenek({ v }: SahneProps) {
   const p = sinir(v.p ?? 5, 3, 6), pd = v.pd === 1, sk = v.sk === 1;
   const ozellik = [
     { ad: cev("çiçek"), deger: cev("{0} yaprak", p), tek: p % 3 === 0 },
-    { ad: "damar", deger: pd ? "paralel" : cev("ağsı"), tek: pd },
+    { ad: cev("damar"), deger: pd ? cev("paralel") : cev("ağsı"), tek: pd },
     { ad: cev("kök"), deger: sk ? cev("saçak") : cev("kazık"), tek: sk },
   ];
   const tek = ozellik.filter((o) => o.tek).length;
@@ -350,7 +350,7 @@ function Cenek({ v }: SahneProps) {
           <g key={o.ad}>
             <text x={186} y={56 + i * 44} fontSize={11} fontWeight={600} fill="var(--muted)">{o.ad}</text>
             <text x={186} y={74 + i * 44} fontSize={14} fontWeight={800} fill={o.tek ? "var(--c1)" : "var(--c2)"}>{o.deger}</text>
-            <text x={326} y={74 + i * 44} fontSize={11} fontWeight={700} fill={o.tek ? "var(--c1)" : "var(--c2)"} textAnchor="end">{o.tek ? "tek" : cev("çift")}</text>
+            <text x={326} y={74 + i * 44} fontSize={11} fontWeight={700} fill={o.tek ? "var(--c1)" : "var(--c2)"} textAnchor="end">{o.tek ? cev("tek") : cev("çift")}</text>
           </g>
         ))}
       </g>
@@ -439,7 +439,7 @@ function Kromatit({ v }: SahneProps) {
     { x: 264, y: 112, boy: 46, renk: "var(--c2)" },
   ];
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${es ? cev("Eşlenmiş") : cev("Eşlenmemiş")}: 4 kromozom, ${es ? 8 : 4} kromatit`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0}: 4 kromozom, {1} kromatit", es ? cev("Eşlenmiş") : cev("Eşlenmemiş"), es ? 8 : 4)}>
       <g key={es} className="ad-belir">
         {KR.map((c, i) => <Kromozom key={i} {...c} es={es * 2} />)}
       </g>
@@ -457,8 +457,8 @@ function Kromatit({ v }: SahneProps) {
       </g>
       <g>
         {[
-          { x: 60, ad: "kromozom", n: 4 },
-          { x: 170, ad: "kromatit", n: es ? 8 : 4 },
+          { x: 60, ad: cev("kromozom"), n: 4 },
+          { x: 170, ad: cev("kromatit"), n: es ? 8 : 4 },
           { x: 280, ad: cev("DNA molekülü"), n: es ? 8 : 4 },
         ].map((s) => (
           <g key={s.ad}>
@@ -604,7 +604,7 @@ function Bakteri({ t, oynuyor, s }: SahneProps) {
   const n = Math.min(6, Math.floor(u * 6 + 1e-6)), sayi = 2 ** n;
   const dk = Math.round(u * 120);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={`${dk}. dakika: ${sayi} bakteri`}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0}. dakika: {1} bakteri", dk, sayi)}>
       <g key={n} className="ad-belir">
         {Array.from({ length: sayi }, (_, i) => {
           const sut = 8, x = 58 + (i % sut) * 32, y = 34 + Math.floor(i / sut) * 20;
