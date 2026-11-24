@@ -16,8 +16,8 @@ export default function YapisalVeri({ dil }: { dil: "tr" | "en" }) {
         operatingSystem: "iOS, Android",
         applicationCategory: "EducationalApplication",
         description: en
-          ? "Short interactive science lessons with visuals and mini tests."
-          : "Görselli, kısa ve etkileşimli bilim dersleri ve mini testler.",
+          ? "Short interactive lessons with visuals and mini tests."
+          : "Görselli, kısa ve etkileşimli dersler ve mini testler.",
         inLanguage: ["en", "tr"],
         installUrl: [APP_STORE_URL, PLAY_URL],
         offers: { "@type": "Offer", price: "0", priceCurrency: en ? "USD" : "TRY" },
