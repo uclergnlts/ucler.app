@@ -40,4 +40,6 @@
     <!-- Permissions -->
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Dikey kilit, dikey ekranı olmayan cihazları (Chromebook, XR) dışlamasın -->
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false" />
 </manifest>
