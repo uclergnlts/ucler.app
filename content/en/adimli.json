@@ -20246,6 +20246,242 @@
   ],
   "soruOnce": true
  },
+ "bosaltim": {
+  "id": "bosaltim",
+  "ders": "biyoloji",
+  "konu": "bosaltim",
+  "baslik": "Excretory system",
+  "ozet": "Compare nitrogenous wastes, follow the path of urea, filter in the nephron, reabsorb, and keep the blood's pH and water in balance.",
+  "adimlar": [
+   {
+    "baslik": "Three nitrogenous wastes",
+    "metin": "Compare the three wastes. Then think about an embryo inside a shelled egg.",
+    "sahne": {
+     "tur": "biy12-atik"
+    },
+    "deger": {
+     "a": 1
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "Waste",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "An embryo in a shelled egg stores its waste inside the egg. Which waste suits this?",
+     "secenekler": [
+      {
+       "yazi": "Ammonia",
+       "neden": "Ammonia is very toxic and needs a lot of water to dilute it. If it built up in a closed egg, it would poison the embryo."
+      },
+      {
+       "yazi": "Urea",
+       "neden": "Urea dissolves in water, and as it builds up it still needs water. A closed egg does not have that much water."
+      },
+      {
+       "yazi": "Uric acid",
+       "dogru": true,
+       "neden": "Uric acid is barely toxic and forms crystals that do not dissolve in water. So it needs almost no water. Bird and reptile embryos store their waste this way."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "The path of urea",
+    "metin": "When extra amino acids are broken down, ammonia forms. One organ combines ammonia with CO₂ to make urea, and another organ filters urea out of the blood. Make a guess first, then watch.",
+    "sahne": {
+     "tur": "biy12-ure",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In which organ is urea made?",
+     "secenekler": [
+      {
+       "yazi": "Kidney",
+       "neden": "The kidney does not make urea. It filters urea out of the blood and removes it in urine."
+      },
+      {
+       "yazi": "Liver",
+       "dogru": true,
+       "neden": "Ammonia combines with CO₂ in the liver. The urea that forms is carried by the blood to the kidney."
+      },
+      {
+       "yazi": "Bladder",
+       "neden": "The bladder only stores urine, and no urea is made in it."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Filtration",
+    "metin": "Blood pressure pushes plasma from the <b>glomerulus</b> into Bowman's capsule. Make a guess first, then press play.",
+    "sahne": {
+     "tur": "biy12-suzme",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which ones do not pass into Bowman's capsule?",
+     "secenekler": [
+      {
+       "yazi": "Red cells and large proteins",
+       "dogru": true,
+       "neden": "Blood cells and large proteins are too big to pass through the filtering membrane. The filtrate is like plasma without them."
+      },
+      {
+       "yazi": "Glucose and amino acids",
+       "neden": "Glucose and amino acids are small, so they are filtered. Later they are reabsorbed into the blood in the tubules."
+      },
+      {
+       "yazi": "Urea and salts",
+       "neden": "Urea and salts are small, so they pass into the filtrate. Most urea is removed in urine."
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Reabsorption",
+    "metin": "Your two kidneys form about <b>180 L</b> of filtrate a day, but you make only about 1.8 L of urine a day. Useful substances and most of the water return from the tubules to the blood. Adjust the reabsorption.",
+    "sahne": {
+     "tur": "biy12-geri"
+    },
+    "deger": {
+     "g": 80
+    },
+    "kontroller": [
+     {
+      "ad": "g",
+      "etiket": "Reabsorbed",
+      "min": 80,
+      "max": 100,
+      "onek": "%"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "g": 99
+     },
+     "ipucu": "What percentage of 180 L is 1.8 L of urine a day? The rest returns to the blood.",
+     "tamam": "99% of the 180 L of filtrate returned to the blood, and only 1.8 L of urine was left."
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Secretion and pH",
+    "metin": "The blood has become acidic and its pH has dropped to 7.22. The kidney can secrete H⁺ from the blood into the tubule. Make the kidney secrete H⁺ and bring the pH back to normal.",
+    "sahne": {
+     "tur": "biy12-ph"
+    },
+    "deger": {
+     "n": 0
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "H⁺ secretion",
+      "min": 0,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 3
+     },
+     "ipucu": "Normal blood pH is between 7.35 and 7.45. If you secrete too much, the blood becomes basic.",
+     "tamam": "After 3 units of H⁺ were secreted, the blood pH returned to 7.4."
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "ADH",
+    "metin": "How much water the collecting duct reabsorbs is set by <b>ADH</b>, which the pituitary releases. Compare the three situations.",
+    "sahne": {
+     "tur": "biy12-adh"
+    },
+    "deger": {
+     "d": 1
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Situation",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What happens in someone who sweats a lot and drinks little water?",
+     "secenekler": [
+      {
+       "yazi": "ADH drops, urine is plentiful and pale",
+       "neden": "This happens when you drink a lot of water. When you sweat, the blood becomes concentrated and the body tries to keep water."
+      },
+      {
+       "yazi": "ADH rises, urine is scant and dark",
+       "dogru": true,
+       "neden": "When the blood becomes concentrated, ADH rises and the collecting duct reabsorbs more water. Urine decreases and gets darker."
+      },
+      {
+       "yazi": "Filtration stops, no urine forms",
+       "neden": "Filtration in the glomerulus continues. What changes is how much water is reabsorbed in the collecting duct."
+      }
+     ]
+    },
+    "kart": 13
+   },
+   {
+    "baslik": "Glucose in urine",
+    "metin": "Glucose is reabsorbed by carriers in the proximal tubule. The number of carriers is limited. Raise the blood sugar and find the value at which glucose first appears in the urine.",
+    "sahne": {
+     "tur": "biy12-esik"
+    },
+    "deger": {
+     "k": 100
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Blood sugar",
+      "min": 80,
+      "max": 300,
+      "adim": 10,
+      "birim": "mg/dL"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": 190
+     },
+     "ipucu": "Until the carriers are full, all the glucose returns to the blood. Stop at the value where glucose first leaks into the urine.",
+     "tamam": "Up to a blood sugar of about 180 mg/dL, all the glucose is reabsorbed. Above this value the carriers are full and the extra glucose leaks into the urine. Glucose in the urine is usually a sign of diabetes."
+    },
+    "kart": 10
+   }
+  ],
+  "kapanis": [
+   "Ammonia is the main waste in aquatic animals, urea in mammals, and uric acid in birds, reptiles and insects.",
+   "Urea is made in the liver and removed by the kidney. Urine passes through the ureter, bladder and urethra.",
+   "In the glomerulus, all of the plasma except red cells and large proteins is filtered. 99% of the filtrate is reabsorbed.",
+   "Secretion goes from blood to tubule. By secreting H⁺ and reabsorbing HCO₃⁻, the kidney keeps the blood pH at 7.4.",
+   "ADH increases water reabsorption in the collecting duct. When the glucose carriers are saturated, glucose passes into the urine."
+  ],
+  "soruOnce": true
+ },
  "ekosistem": {
   "id": "ekosistem",
   "ders": "biyoloji",
