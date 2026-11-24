@@ -135,7 +135,7 @@ function Renk({ v }: SahneProps) {
         <text x={310} y={186} textAnchor="end">{cev("700 nm")}</text>
       </g>
       <text x={170} y={204} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {l} {cev("nm: %")}{Math.round(a * 100)} {cev("soğurulur, %")}{100 - Math.round(a * 100)} {cev("yansır ya da geçer")}
+        {cev("{0} nm: %{1} soğurulur, %{2} yansır ya da geçer", l, Math.round(a * 100), 100 - Math.round(a * 100))}
       </text>
     </svg>
   );
@@ -307,7 +307,7 @@ function Sicaklik({ v }: SahneProps) {
         </g>
       </g>
       <text x={170} y={216} fontSize={12.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {s} {cev("°C: dakikada")} {Math.round(r)} {cev("kabarcık O₂")}{s > 40 ? cev(" (enzimler bozuluyor)") : ""}
+        {cev("{0} °C: dakikada {1} kabarcık O₂", s, Math.round(r))}{s > 40 ? cev(" (enzimler bozuluyor)") : ""}
       </text>
     </svg>
   );

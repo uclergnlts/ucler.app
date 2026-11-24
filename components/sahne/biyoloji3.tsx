@@ -287,7 +287,7 @@ function Kalp({ v }: SahneProps) {
   const not = o === 2 ? cev("yalnızca oksijensiz kan geçer") : o === 3 ? cev("karıncıkta kan kısmen karışır") : cev("oksijenli ve oksijensiz kan karışmaz");
   return (
     <svg viewBox="0 0 340 240" role="img" aria-label={cev("{0} odacıklı kalp: {1}", o, kimler.join(", "))}>
-      <text x={130} y={26} fontSize={14} fontWeight={800} fill="var(--ink)" textAnchor="middle">{o} {cev("odacıklı kalp")}</text>
+      <text x={130} y={26} fontSize={14} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("{0} odacıklı kalp", o)}</text>
       <g key={o} className="ad-belir">
         {odalar.map((d, i) => (
           <g key={i}>

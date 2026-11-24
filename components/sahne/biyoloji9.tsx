@@ -524,7 +524,7 @@ function Tiroit({ v }: SahneProps) {
     </g>
   );
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label={cev("Tiroksin {0}/5, TRH ve TSH {1}/5{2}", tx, ust, eksik ? "; iyot eksik, tiroit büyümüş" : "")}>
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("Tiroksin {0}/5, TRH ve TSH {1}/5{2}", tx, ust, eksik ? cev("; iyot eksik, tiroit büyümüş") : "")}>
       <g>
         <rect x={40} y={14} width={110} height={30} rx={10} fill={MOR} fillOpacity={0.12} stroke={MOR} strokeWidth={1.4} />
         <text x={95} y={34} fontSize={12} fontWeight={800} fill={MOR} textAnchor="middle">{cev("hipotalamus")}</text>

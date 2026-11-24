@@ -28,7 +28,7 @@ function Havuz({ v }: SahneProps) {
   const fA = alel.filter((a) => a === "A").length / alel.length;
   return (
     <svg viewBox="0 0 340 226" role="img" aria-label={cev("{0}: beş birey, gen havuzunda A frekansı {1}, a frekansı {2}", ad, virgul(fA), virgul(1 - fA))}>
-      <text x={170} y={18} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">{ad}{cev(": yeni bireyler")}</text>
+      <text x={170} y={18} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("{0}: yeni bireyler", ad)}</text>
       {g.map((gen, i) => {
         const x = 38 + i * 66;
         return (

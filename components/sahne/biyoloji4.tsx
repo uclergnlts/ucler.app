@@ -613,7 +613,7 @@ function Bakteri({ t, oynuyor, s }: SahneProps) {
       </g>
       <line x1={20} y1={200} x2={320} y2={200} stroke="var(--line)" />
       <g fontSize={13} fontWeight={800} fill="var(--ink)">
-        <text x={20} y={224}>{dk}{cev(". dakika")}</text>
+        <text x={20} y={224}>{cev("{0}. dakika", dk)}</text>
         <text x={320} y={224} textAnchor="end">{sayi} {cev("bakteri")}</text>
       </g>
       <text x={170} y={224} fontSize={11} fontWeight={600} fill="var(--muted)" textAnchor="middle">{n} {cev("bölünme")}</text>

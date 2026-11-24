@@ -245,7 +245,7 @@ function Dagilim({ v }: SahneProps) {
   const sut = Math.min(adet, 8), W = 36, x0 = 170 - (sut * W) / 2;
   return (
     <svg viewBox="0 0 340 246" role="img" aria-label={cev("{0} homolog çift: {1} çeşit gamet", n, adet)}>
-      <text x={20} y={22} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("hücredeki homolog çiftler (")}{n})</text>
+      <text x={20} y={22} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("hücredeki homolog çiftler ({0})", n)}</text>
       <g key={`c${n}`}>
         {Array.from({ length: n }, (_, i) => {
           const x = 170 - (n * 40) / 2 + i * 40 + 20, boy = 40 - i * 6;

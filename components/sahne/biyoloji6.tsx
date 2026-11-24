@@ -165,7 +165,7 @@ function Karbon({ v }: SahneProps) {
   const yak = v.yak === 1, ayr = v.ayr === 1;
   const durum = yak ? cev("artıyor ↑") : cev("dengede");
   return (
-    <svg viewBox="0 0 340 254" role="img" aria-label={cev("Karbon döngüsü. Havadaki CO₂ {0}{1}", durum, ayr ? "" : "; ayrıştırıcı yok, ölü madde birikiyor")}>
+    <svg viewBox="0 0 340 254" role="img" aria-label={cev("Karbon döngüsü. Havadaki CO₂ {0}{1}", durum, ayr ? "" : cev("; ayrıştırıcı yok, ölü madde birikiyor"))}>
       <g>
         <rect x={110} y={12} width={120} height={40} rx={10} fill="none" stroke="var(--ink)" strokeWidth={1.5} />
         <text x={170} y={30} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("havadaki CO₂")}</text>

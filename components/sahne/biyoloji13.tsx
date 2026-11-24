@@ -311,7 +311,7 @@ function Dongu({ v }: SahneProps) {
         {[1, 7, 14, 21, 28].map((d) => <text key={d} x={X(d)} y={190}>{d}</text>)}
         <text x={X(28)} y={202} textAnchor="end" fontWeight={700}>{cev("gün")}</text>
       </g>
-      <text x={170} y={210} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">{g}{cev(". gün:")} {evre}</text>
+      <text x={170} y={210} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("{0}. gün: {1}", g, evre)}</text>
       <text x={170} y={228} fontSize={11.5} fontWeight={700} fill={g === 13 || g === 14 ? MOR : "var(--muted)"} textAnchor="middle">{olay}</text>
     </svg>
   );
@@ -534,7 +534,7 @@ function Akis({ v }: SahneProps) {
         <rect x={x0} y={42} width={60 * S} height={16} rx={4} fill={YESIL} />
         {g > 0 && <rect x={x0 + 60 * S} y={42} width={g * S} height={16} rx={4} fill={MAVI} />}
         <text x={x0} y={74} fill={YESIL}>{cev("doğum 60")}</text>
-        <text x={x0 + 60 * S + 4} y={74} fill={MAVI}>{cev("göçle gelen")} {g}</text>
+        <text x={x0 + 60 * S + 4} y={74} fill={MAVI}>{cev("göçle gelen {0}", g)}</text>
         <text x={14} y={113} fill="var(--muted)">{cev("Azalış")}</text>
         <rect x={x0} y={102} width={80 * S} height={16} rx={4} fill={KIRMIZI} />
         <rect x={x0 + 80 * S} y={102} width={20 * S} height={16} rx={4} fill={SARI} />
@@ -543,7 +543,7 @@ function Akis({ v }: SahneProps) {
       </g>
       <line x1={x0 + 100 * S} x2={x0 + 100 * S} y1={36} y2={62} stroke="var(--ink)" strokeDasharray="3 3" />
       <line x1={x0 + 100 * S} x2={x0 + 100 * S} y1={96} y2={122} stroke="var(--ink)" strokeDasharray="3 3" />
-      <text x={170} y={170} fontSize={15} fontWeight={800} fill={renk} textAnchor="middle">{cev("Bir yıl sonra:")} {sayi(N)} {cev("kuş")}</text>
+      <text x={170} y={170} fontSize={15} fontWeight={800} fill={renk} textAnchor="middle">{cev("Bir yıl sonra: {0} kuş", sayi(N))}</text>
       <text x={170} y={194} fontSize={11.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">
         ΔN = (60 + {g}) − (80 + 20) = {N - 500 > 0 ? "+" : ""}{N - 500}
       </text>
@@ -619,7 +619,7 @@ function JEgrisi({ v }: SahneProps) {
       {nokta.map(([x, y], k) => <circle key={k} cx={x} cy={y} r={k === n ? 5.5 : 3.4} fill={k === n ? (asti ? KIRMIZI : YESIL) : YESIL} stroke="var(--surface)" strokeWidth={1.2} />)}
       <text x={px > 240 ? px - 10 : px + 10} y={py - 8} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor={px > 240 ? "end" : "start"}>{sayi(N)}</text>
       <text x={170} y={218} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {n}{cev(". nesil: 10 × 2")}{UST[n]} = {sayi(N)} {cev("bakteri")}
+        {cev("{0}. nesil: 10 × 2{1} = {2} bakteri", n, UST[n], sayi(N))}
       </text>
     </svg>
   );
@@ -673,7 +673,7 @@ function SEgrisi({ v }: SahneProps) {
         <text x={XN(1000)} y={142} textAnchor="end" fontWeight={700}>N</text>
       </g>
       <text x={170} y={228} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        N = {sayi(N)}{cev(": artış ≈")} {Math.round(A)} {cev("birey/yıl")}{en ? cev(" (en hızlı)") : N > 600 ? cev(", K'ya yaklaştıkça azalıyor") : ""}
+        {cev("N = {0}: artış ≈ {1} birey/yıl", sayi(N), Math.round(A))}{en ? cev(" (en hızlı)") : N > 600 ? cev(", K'ya yaklaştıkça azalıyor") : ""}
       </text>
     </svg>
   );

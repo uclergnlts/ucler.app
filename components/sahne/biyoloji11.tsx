@@ -212,7 +212,7 @@ function Baslangic({ v, t, oynuyor, s }: SahneProps) {
           </g>
         ))}
       </g>
-      <text x={170} y={116} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">{B.ad} {cev("molekülü")}</text>
+      <text x={170} y={116} fontSize={11} fontWeight={700} fill="var(--muted)" textAnchor="middle">{cev("{0} molekülü", B.ad)}</text>
       <text x={170} y={166} fontSize={11.5} fontWeight={700} fill={B.renk} textAnchor="middle">
         {u <= 0 ? cev("Oynat ve izle") : bitti ? cev("Son ürün: {0}", B.urun) : enzimYazi(b, x)}
       </text>
@@ -254,7 +254,7 @@ function Ph({ v }: SahneProps) {
       <circle cx={X(ph)} cy={Y(pe)} r={5} fill={KIRMIZI} stroke="var(--surface)" strokeWidth={1.5} />
       <circle cx={X(ph)} cy={Y(tr)} r={5} fill={MAVI} stroke="var(--surface)" strokeWidth={1.5} />
       <text x={170} y={208} fontSize={12.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {cev("pH")} {ph}{cev(": pepsin %")}{Math.round(pe * 100)}{cev(", tripsin %")}{Math.round(tr * 100)}
+        {cev("pH {0}: pepsin %{1}, tripsin %{2}", ph, Math.round(pe * 100), Math.round(tr * 100))}
       </text>
     </svg>
   );
@@ -582,7 +582,7 @@ function Nabiz({ v }: SahneProps) {
     <svg viewBox="0 0 340 214" role="img" aria-label={cev("Kalp hızı dakikada {0}; bir döngü {1} saniye", n, virgul(T))}>
       <path d="M44 66 C20 50 22 26 40 26 C48 26 52 32 54 36 C56 32 60 26 68 26 C86 26 88 50 64 66 L54 74 Z" fill={KIRMIZI} fillOpacity={0.8} transform="translate(0 -8)" />
       <text x={96} y={44} fontSize={20} fontWeight={800} fill="var(--ink)">{n} {cev("atım/dk")}</text>
-      <text x={96} y={66} fontSize={12.5} fontWeight={700} fill="var(--muted)">{cev("Bir döngü: 60 ÷")} {n} = {virgul(T)} s</text>
+      <text x={96} y={66} fontSize={12.5} fontWeight={700} fill="var(--muted)">{cev("Bir döngü: 60 ÷ {0} = {1} s", n, virgul(T))}</text>
       {Array.from({ length: 7 }, (_, i) => (
         <g key={i}>
           <line x1={X(i)} x2={X(i)} y1={84} y2={154} stroke="var(--line)" />
@@ -599,7 +599,7 @@ function Nabiz({ v }: SahneProps) {
         </g>
       )}
       <text x={320} y={182} fontSize={10.5} fontWeight={700} fill="var(--ink)" textAnchor="end">{cev("zaman (s)")}</text>
-      <text x={170} y={206} fontSize={12.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("6 saniyede")} {atim} {cev("atım")}</text>
+      <text x={170} y={206} fontSize={12.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("6 saniyede {0} atım", atim)}</text>
     </svg>
   );
 }

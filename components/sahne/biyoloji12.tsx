@@ -204,7 +204,7 @@ function Kismi({ v }: SahneProps) {
         <text x={204} y={186} fontSize={14} fontWeight={800} fill={MAVI}>{Math.round(po2)} {cev("mmHg")}</text>
       </g>
       <text x={170} y={214} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {cev("PO₂ =")} {Math.round(P)} × 0,21 ≈ {Math.round(po2)} {cev("mmHg")}
+        {cev("PO₂ = {0} × 0,21 ≈ {1} mmHg", Math.round(P), Math.round(po2))}
       </text>
     </svg>
   );
@@ -247,7 +247,7 @@ function Alveol({ t, oynuyor, s }: SahneProps) {
       })}
       <g fontSize={10} fontWeight={700}>
         <text x={18} y={184} fill={MOR}>{cev("kan giriyor")}</text>
-        <text x={18} y={198} fill="var(--ink)">{cev("PO₂")} {giris.o} {cev("· PCO₂")} {giris.c}</text>
+        <text x={18} y={198} fill="var(--ink)">{cev("PO₂ {0} · PCO₂ {1}", giris.o, giris.c)}</text>
         <text x={322} y={184} fill={u > 0 ? KIRMIZI : "var(--muted)"} textAnchor="end">{cev("kan çıkıyor")}</text>
         <text x={322} y={198} fill="var(--ink)" textAnchor="end">{u > 0 ? cev("PO₂ {0} · PCO₂ {1}", cikis.o, cikis.c) : "?"}</text>
         <circle cx={250} cy={30} r={3.4} fill={MAVI} />
@@ -403,7 +403,7 @@ function Egzersiz({ v }: SahneProps) {
       <g fontSize={12} fontWeight={800}>
         <text x={40} y={182} fill="var(--ink)">{cev("PCO₂")} {pco2}</text>
         <text x={170} y={182} fill="var(--ink)" textAnchor="middle">{cev("pH")} {virgul(ph, 2)}</text>
-        <text x={300} y={182} fill="var(--ink)" textAnchor="end">{cev("soluk ×")}{sv}</text>
+        <text x={300} y={182} fill="var(--ink)" textAnchor="end">{cev("soluk × {0}", sv)}</text>
       </g>
       <text x={170} y={210} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">{durum}</text>
     </svg>
@@ -574,7 +574,7 @@ function Geri({ v }: SahneProps) {
           </g>
         );
       })}
-      {idrar / 1.5 > 24 && <text x={320} y={190} fontSize={11} fontWeight={800} fill={KIRMIZI} textAnchor="end">+{Math.ceil(idrar / 1.5) - 24} {cev("şişe daha")}</text>}
+      {idrar / 1.5 > 24 && <text x={320} y={190} fontSize={11} fontWeight={800} fill={KIRMIZI} textAnchor="end">{cev("+{0} şişe daha", Math.ceil(idrar / 1.5) - 24)}</text>}
       <text x={170} y={214} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
         {g >= 99 ? cev("%99 geri emildi: günde 1,8 L idrar") : g >= 95 ? cev("Hâlâ çok fazla su kaybı var") : cev("Bu kadar idrarla vücut saatler içinde susuz kalır")}
       </text>
@@ -636,7 +636,7 @@ function Adh({ v }: SahneProps) {
   const d = Math.round(sinir((v.d ?? 1) - 1, 0, 2));
   const D = ADH[d];
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={cev("{0}: ADH düzeyi {1}, idrar miktarı {2}", D.ad, D.adh, D.idrar > 0.6 ? "bol" : "normal")}>
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("{0}: ADH düzeyi {1}, idrar miktarı {2}", D.ad, D.adh, D.idrar > 0.6 ? cev("bol") : cev("normal"))}>
       <text x={170} y={22} fontSize={15} fontWeight={800} fill="var(--ink)" textAnchor="middle">{D.ad}</text>
       {/* hipofiz */}
       <circle cx={52} cy={64} r={18} fill={MOR} fillOpacity={0.16} stroke={MOR} strokeWidth={1.4} />
@@ -648,7 +648,7 @@ function Adh({ v }: SahneProps) {
       {/* toplama kanalı */}
       <rect x={188} y={44} width={22} height={124} rx={8} fill={SARI} fillOpacity={0.2} stroke="var(--line-2)" />
       <text x={180} y={120} fontSize={10} fontWeight={700} fill="var(--muted)" textAnchor="end">{cev("toplama")}</text>
-      <text x={180} y={133} fontSize={10} fontWeight={700} fill="var(--muted)" textAnchor="end">{cev("kanalı")}</text>
+      <text x={180} y={133} fontSize={10} fontWeight={700} fill="var(--muted)" textAnchor="end">{cev("kanalı§toplama")}</text>
       {Array.from({ length: D.adh * 2 }, (_, i) => {
         const y = 60 + i * 26;
         return (
@@ -683,7 +683,7 @@ function Esik({ v }: SahneProps) {
       {Array.from({ length: 9 }, (_, i) => (
         <rect key={i} x={30 + i * 25} y={68} width={14} height={14} rx={3} fill={i < tasinan ? YESIL : "var(--line-2)"} />
       ))}
-      <text x={20} y={98} fontSize={9.5} fontWeight={700} fill={YESIL}>{cev("taşıyıcılar (")}{tasinan}{cev("/9 dolu)")}</text>
+      <text x={20} y={98} fontSize={9.5} fontWeight={700} fill={YESIL}>{cev("taşıyıcılar ({0}/9 dolu)", tasinan)}</text>
       <rect x={20} y={108} width={240} height={36} rx={10} fill={KIRMIZI} fillOpacity={0.08} />
       <text x={24} y={160} fontSize={10.5} fontWeight={700} fill={KIRMIZI}>{cev("kana geri dönen glikoz")}</text>
       {Array.from({ length: tasinan }, (_, i) => (
