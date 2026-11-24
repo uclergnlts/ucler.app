@@ -16216,6 +16216,246 @@
   ],
   "soruOnce": true
  },
+ "mayoz": {
+  "id": "mayoz",
+  "ders": "biyoloji",
+  "konu": "mayoz",
+  "baslik": "Meiosis and sexual reproduction",
+  "ozet": "Try first, then learn the name. Build a tetrad, swap pieces, play through meiosis and count the gametes.",
+  "adimlar": [
+   {
+    "baslik": "Why is meiosis needed?",
+    "metin": "Look at the generations, then turn on meiosis in the gametes.",
+    "sahne": {
+     "tur": "biy5-kusak"
+    },
+    "deger": {
+     "kusak": 3,
+     "mayoz": 0
+    },
+    "kontroller": [
+     {
+      "ad": "kusak",
+      "etiket": "Generation",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     },
+     {
+      "ad": "mayoz",
+      "etiket": "Meiosis in gametes",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "mayoz": 1
+     },
+     "tamam": "In humans, gametes have 23 chromosomes, and the zygote has 23 + 23 = 46. This keeps the number the same from one generation to the next."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Homologs and tetrads",
+    "metin": "The DNA was copied before meiosis. Now bring the <b>homologous chromosomes</b> side by side in prophase I.",
+    "sahne": {
+     "tur": "biy5-homolog"
+    },
+    "deger": {
+     "s": 0
+    },
+    "kontroller": [
+     {
+      "ad": "s",
+      "etiket": "Pair the homologs (synapsis)",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "How many chromatids are in a tetrad?",
+     "secenekler": [
+      {
+       "yazi": "2",
+       "neden": "2 is the number of chromosomes. Each chromosome has been copied, so it has two chromatids."
+      },
+      {
+       "yazi": "8",
+       "neden": "8 is the total number of chromatids in this cell. A tetrad is just one homologous pair."
+      },
+      {
+       "yazi": "4",
+       "dogru": true,
+       "neden": "A tetrad is made of two homologous chromosomes. Each has 2 chromatids, so a tetrad has 4 chromatids."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Crossing over",
+    "metin": "These chromatids carry the genes A and B. Swap the pieces and look at the gene combinations.",
+    "sahne": {
+     "tur": "biy5-krossing"
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Crossing over",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": 1
+     },
+     "tamam": "At first there were only the combinations AB and ab. After the swap, <b>Ab</b> and <b>aB</b> formed too. These are new chromatids that carry the mother's and father's genes together."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Meiosis I and meiosis II",
+    "metin": "In meiosis, DNA is copied once, but the cell divides <b>twice</b>. In this cell 2n = 4. Make a guess before you play.",
+    "sahne": {
+     "tur": "biy5-mayoz",
+     "sure": 9
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What moves to opposite poles in anaphase I?",
+     "secenekler": [
+      {
+       "yazi": "Sister chromatids",
+       "neden": "Sister chromatids separate in meiosis II, in anaphase II."
+      },
+      {
+       "yazi": "Homologous chromosomes",
+       "dogru": true,
+       "neden": "In anaphase I, homologous chromosomes separate and the centromeres do not split. This is where the chromosome number is halved (n)."
+      },
+      {
+       "yazi": "All four chromatids separately",
+       "neden": "Chromatids do not come apart in meiosis I. Chromosomes with two chromatids go to each pole."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Independent assortment",
+    "metin": "Change the number of homologous pairs and build a cell that makes <b>8 kinds</b> of gametes.",
+    "sahne": {
+     "tur": "biy5-dagilim"
+    },
+    "deger": {
+     "n": 1
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Homologous pairs",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 3
+     },
+     "tamam": "With 3 homologous pairs, 2³ = 8 kinds of gametes form. With the 23 human pairs, this number is over 8 million."
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Nondisjunction",
+    "metin": "Sometimes homologous chromosomes or sister chromatids fail to separate. This is called <b>nondisjunction</b>. In this human cell, one homologous pair does not separate in meiosis I, while meiosis II goes normally. Make a guess first, then play.",
+    "sahne": {
+     "tur": "biy5-ayrilmama",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Of the 4 gametes that form, how many have an abnormal chromosome number?",
+     "secenekler": [
+      {
+       "yazi": "None",
+       "neden": "The pair that did not separate goes to one cell as an extra, and the other cell gets none."
+      },
+      {
+       "yazi": "Two",
+       "neden": "For two gametes to be abnormal, the nondisjunction has to happen in meiosis II and in only one cell."
+      },
+      {
+       "yazi": "All four",
+       "dogru": true,
+       "neden": "The pair that did not separate goes to a single cell, and both cells are affected. That is why all four gametes are abnormal: 24, 24, 22 and 22."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Mitosis and meiosis",
+    "metin": "Switch between mitosis and meiosis and compare the cells that form.",
+    "sahne": {
+     "tur": "biy5-karsilastir"
+    },
+    "deger": {
+     "m": 0
+    },
+    "kontroller": [
+     {
+      "ad": "m",
+      "etiket": "Meiosis",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which one is seen only in meiosis?",
+     "secenekler": [
+      {
+       "yazi": "DNA copying",
+       "neden": "Both divisions start with DNA copying in interphase."
+      },
+      {
+       "yazi": "Tetrads and crossing over",
+       "dogru": true,
+       "neden": "Homologs pair up only in prophase I. Tetrads and crossing over are not seen in mitosis."
+      },
+      {
+       "yazi": "Sister chromatids separating",
+       "neden": "Sister chromatids separate both in the anaphase of mitosis and in anaphase II of meiosis."
+      }
+     ]
+    },
+    "kart": 8
+   }
+  ],
+  "kapanis": [
+   "Meiosis halves the chromosome number (2n → n), and fertilization doubles it. This keeps the number constant from one generation to the next.",
+   "In meiosis, DNA is <b>copied once</b> and the cell <b>divides twice</b>. Homologs separate in meiosis I, sister chromatids separate in meiosis II and 4 haploid cells form at the end.",
+   "In prophase I, homologs form a <b>tetrad</b>. Non-sister chromatids swap pieces by <b>crossing over</b>.",
+   "The sources of variety are crossing over, independent assortment (2ⁿ gametes) and random fertilization.",
+   "Nondisjunction makes gametes with n+1 and n−1 chromosomes. Down syndrome (47 chromosomes) is one example."
+  ],
+  "soruOnce": true
+ },
  "siniflandirma": {
   "id": "siniflandirma",
   "ders": "biyoloji",

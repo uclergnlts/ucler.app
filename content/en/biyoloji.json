@@ -1873,6 +1873,322 @@
    }
   ]
  },
+ "mayoz": {
+  "title": "Meiosis and sexual reproduction",
+  "summary": "How is the chromosome number halved, and where does variety come from?",
+  "cards": [
+   {
+    "h": "Why is meiosis needed?",
+    "p": "If gametes carried as many chromosomes as body cells, the chromosome number would double in every generation. <b>Meiosis</b> halves the chromosome number (2n → n). In animals it makes gametes, and in plants it makes spores.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='may-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='18' font-size='12' fill='var(--muted)' text-anchor='middle'>Human: body cell 2n = 46</text><text x='12' y='62' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Without</text><text x='12' y='78' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>meiosis</text><circle cx='118' cy='66' r='20' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><text x='118' y='71' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>46</text><text x='149' y='71' font-size='15' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='180' cy='66' r='20' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><text x='180' y='71' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>46</text><path d='M206 66 H232' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-1)'/><circle cx='260' cy='66' r='24' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.5'/><text x='260' y='71' font-size='14' fill='var(--c2)' text-anchor='middle' font-weight='700'>92</text><text x='118' y='102' font-size='11' fill='var(--muted)' text-anchor='middle'>gamete</text><text x='180' y='102' font-size='11' fill='var(--muted)' text-anchor='middle'>gamete</text><text x='262' y='104' font-size='11' fill='var(--c2)' text-anchor='middle'>doubles each generation</text><text x='12' y='146' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>With</text><text x='12' y='162' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>meiosis</text><circle cx='118' cy='150' r='20' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='118' y='155' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>23</text><text x='149' y='155' font-size='15' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='180' cy='150' r='20' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='180' y='155' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>23</text><path d='M206 150 H232' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-1)'/><circle cx='260' cy='150' r='24' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='1.5'/><text x='260' y='155' font-size='14' fill='var(--c3)' text-anchor='middle' font-weight='700'>46</text><text x='116' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>gamete (n)</text><text x='182' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>gamete (n)</text><text x='262' y='190' font-size='11' fill='var(--c3)' text-anchor='middle'>zygote (2n)</text></svg>",
+    "key": "Meiosis halves the chromosome number, and fertilization doubles it. This keeps the number constant from one generation to the next."
+   },
+   {
+    "h": "Homologous chromosomes",
+    "p": "In a diploid cell, every chromosome has a partner. One comes from the mother and the other from the father. These partners are called <b>homologous chromosomes</b>. Homologs have the same length, shape and order of genes. Humans have 23 homologous pairs.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M86 40 V34 H164 V40' stroke='var(--ink)' stroke-width='1.2' fill='none'/><text x='125' y='26' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>homologous pair</text><rect x='88.5' y='46' width='10' height='110' rx='5.0' fill='var(--c2)' fill-opacity='0.85'/><rect x='99.5' y='46' width='10' height='110' rx='5.0' fill='var(--c2)' fill-opacity='0.85'/><circle cx='99' cy='90.0' r='5.5' fill='var(--ink)'/><rect x='140.5' y='46' width='10' height='110' rx='5.0' fill='var(--c1)' fill-opacity='0.85'/><rect x='151.5' y='46' width='10' height='110' rx='5.0' fill='var(--c1)' fill-opacity='0.85'/><circle cx='151' cy='90.0' r='5.5' fill='var(--ink)'/><rect x='86' y='66' width='26' height='6' fill='var(--c4)'/><rect x='138' y='66' width='26' height='6' fill='var(--c4)'/><text x='78' y='74' font-size='14' fill='var(--c2)' text-anchor='end' font-weight='700'>A</text><text x='133' y='74' font-size='14' fill='var(--c1)' text-anchor='end' font-weight='700'>a</text><text x='99' y='176' font-size='12' fill='var(--c2)' text-anchor='middle'>from mother</text><text x='151' y='176' font-size='12' fill='var(--c1)' text-anchor='middle'>from father</text><path d='M198 69 H168' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='202' y='73' font-size='12' fill='var(--ink)' text-anchor='start'>locus (gene position)</text><path d='M198 90 H160' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='202' y='94' font-size='12' fill='var(--ink)' text-anchor='start'>centromere</text><path d='M198 128 H164' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='202' y='125' font-size='12' fill='var(--ink)' text-anchor='start'>sister</text><text x='202' y='140' font-size='12' fill='var(--ink)' text-anchor='start'>chromatids</text><text x='202' y='176' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>A and a: alleles</text></svg>",
+    "key": "Homologs can carry different alleles of the same gene. The X and Y in males are the exception. Homologs are the mother's and father's copies, while sister chromatids are copies of the same chromosome.",
+    "once": {
+     "soru": "Of the 46 chromosomes in a human body cell, how many come from the mother?",
+     "secenekler": [
+      {
+       "yazi": "23",
+       "neden": "One of each pair comes from the mother and the other from the father.",
+       "dogru": true
+      },
+      {
+       "yazi": "46",
+       "neden": "Not all 46 chromosomes come from a single parent."
+      },
+      {
+       "yazi": "None",
+       "neden": "Half of them come from the mother."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Prophase I: synapsis and tetrads",
+    "p": "Before meiosis, DNA is copied <b>once</b>. In prophase I, homologous chromosomes line up side by side along their whole length. This is called <b>synapsis</b>. The structure of four chromatids is called a <b>tetrad</b>. Tetrads do not form in mitosis.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='may-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='70' y='22' font-size='12' fill='var(--muted)' text-anchor='middle'>copied homologs</text><rect x='36.5' y='45' width='8' height='100' rx='4.0' fill='var(--c2)' fill-opacity='0.85'/><rect x='45.5' y='45' width='8' height='100' rx='4.0' fill='var(--c2)' fill-opacity='0.85'/><circle cx='45' cy='85.0' r='4.4' fill='var(--ink)'/><rect x='86.5' y='45' width='8' height='100' rx='4.0' fill='var(--c1)' fill-opacity='0.85'/><rect x='95.5' y='45' width='8' height='100' rx='4.0' fill='var(--c1)' fill-opacity='0.85'/><circle cx='95' cy='85.0' r='4.4' fill='var(--ink)'/><path d='M130 95 H180' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-3)'/><text x='155' y='85' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>synapsis</text><text x='245' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>tetrad</text><rect x='210' y='36' width='70' height='118' rx='14' fill='var(--c5)' fill-opacity='0.1' stroke='var(--c5)' stroke-dasharray='4 3'/><rect x='224.5' y='45' width='8' height='100' rx='4.0' fill='var(--c2)' fill-opacity='0.85'/><rect x='233.5' y='45' width='8' height='100' rx='4.0' fill='var(--c2)' fill-opacity='0.85'/><circle cx='233' cy='85.0' r='4.4' fill='var(--ink)'/><rect x='248.5' y='45' width='8' height='100' rx='4.0' fill='var(--c1)' fill-opacity='0.85'/><rect x='257.5' y='45' width='8' height='100' rx='4.0' fill='var(--c1)' fill-opacity='0.85'/><circle cx='257' cy='85.0' r='4.4' fill='var(--ink)'/><text x='70' y='172' font-size='12' fill='var(--muted)' text-anchor='middle'>2 chromosomes, apart</text><text x='245' y='172' font-size='12' fill='var(--ink)' text-anchor='middle'>1 pair = 4 chromatids</text><text x='245' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>side by side</text></svg>",
+    "key": "A tetrad is one homologous pair. That means it is made of 2 chromosomes and 4 chromatids."
+   },
+   {
+    "h": "Crossing over",
+    "p": "In a tetrad, <b>non-sister</b> chromatids of the homologs cross over each other. This point is called a <b>chiasma</b>. The chromatids swap pieces here, and this is called <b>crossing over</b>. This creates chromatids that carry the mother's and father's genes together.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='may-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='52' y='14' font-size='12' fill='var(--muted)' text-anchor='middle'>before</text><text x='243' y='14' font-size='12' fill='var(--muted)' text-anchor='middle'>after</text><rect x='26' y='40' width='10' height='120' rx='5.0' fill='var(--c2)' fill-opacity='0.85'/><text x='31' y='33' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><text x='31' y='176' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>B</text><rect x='40' y='40' width='10' height='120' rx='5.0' fill='var(--c2)' fill-opacity='0.85'/><text x='45' y='33' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><text x='45' y='176' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>B</text><rect x='54' y='40' width='10' height='120' rx='5.0' fill='var(--c1)' fill-opacity='0.85'/><text x='59' y='33' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>a</text><text x='59' y='176' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>b</text><rect x='68' y='40' width='10' height='120' rx='5.0' fill='var(--c1)' fill-opacity='0.85'/><text x='73' y='33' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>a</text><text x='73' y='176' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>b</text><path d='M26 55 H78 M26 135 H78' stroke='var(--ink)' stroke-width='1.2' fill='none'/><circle cx='38' cy='75' r='4' fill='var(--ink)'/><circle cx='66' cy='75' r='4' fill='var(--ink)'/><path d='M46 92 L58 108 M58 92 L46 108' stroke='var(--c5)' stroke-width='3' fill='none'/><text x='52' y='194' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>X: chiasma</text><path d='M98 100 H170' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-4)'/><text x='134' y='90' font-size='11' fill='var(--c5)' text-anchor='middle'>pieces swapped</text><rect x='217' y='40' width='10' height='120' rx='5.0' fill='var(--c2)' fill-opacity='0.85'/><text x='222' y='33' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><text x='222' y='176' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>B</text><path d='M231 45.0 A5.0 5.0 0 0 1 241 45.0 V100 H231 Z' fill='var(--c2)' fill-opacity='0.85'/><path d='M231 100 H241 V155.0 A5.0 5.0 0 0 1 231 155.0 Z' fill='var(--c1)' fill-opacity='0.85'/><text x='236' y='33' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><text x='236' y='176' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>b</text><path d='M245 45.0 A5.0 5.0 0 0 1 255 45.0 V100 H245 Z' fill='var(--c1)' fill-opacity='0.85'/><path d='M245 100 H255 V155.0 A5.0 5.0 0 0 1 245 155.0 Z' fill='var(--c2)' fill-opacity='0.85'/><text x='250' y='33' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>a</text><text x='250' y='176' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>B</text><rect x='259' y='40' width='10' height='120' rx='5.0' fill='var(--c1)' fill-opacity='0.85'/><text x='264' y='33' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>a</text><text x='264' y='176' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>b</text><path d='M217 55 H269 M217 135 H269' stroke='var(--ink)' stroke-width='1.2' fill='none'/><circle cx='229' cy='75' r='4' fill='var(--ink)'/><circle cx='257' cy='75' r='4' fill='var(--ink)'/><text x='245' y='194' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>Ab and aB: new</text></svg>",
+    "key": "Crossing over happens in prophase I, between non-sister chromatids."
+   },
+   {
+    "h": "Metaphase I and anaphase I",
+    "p": "In metaphase I, the tetrads line up at the equator <b>in pairs</b>. In anaphase I, the <b>homologous chromosomes</b> move to opposite poles, and the centromeres do not split. At the end of telophase I, two n cells form, but the chromosomes still have two chromatids.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='may-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='80' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Metaphase I</text><text x='240' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Anaphase I</text><ellipse cx='80' cy='105' rx='70' ry='60' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-width='1.5'/><ellipse cx='240' cy='105' rx='70' ry='60' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-width='1.5'/><path d='M80 52 V158' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='4 3'/><path d='M16 105 L63 82 M16 105 L63 131 M144 105 L97 82 M144 105 L97 131' stroke='var(--muted)' stroke-width='0.8' fill='none'/><rect x='63.5' y='64' width='6' height='46' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><rect x='70.5' y='64' width='6' height='46' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><circle cx='70' cy='82.4' r='3.3000000000000003' fill='var(--ink)'/><rect x='83.5' y='64' width='6' height='46' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><rect x='90.5' y='64' width='6' height='46' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><circle cx='90' cy='82.4' r='3.3000000000000003' fill='var(--ink)'/><rect x='63.5' y='120' width='6' height='28' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><rect x='70.5' y='120' width='6' height='28' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><circle cx='70' cy='131.2' r='3.3000000000000003' fill='var(--ink)'/><rect x='83.5' y='120' width='6' height='28' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><rect x='90.5' y='120' width='6' height='28' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><circle cx='90' cy='131.2' r='3.3000000000000003' fill='var(--ink)'/><rect x='189.5' y='62' width='6' height='46' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><rect x='196.5' y='62' width='6' height='46' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><circle cx='196' cy='80.4' r='3.3000000000000003' fill='var(--ink)'/><rect x='189.5' y='122' width='6' height='28' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><rect x='196.5' y='122' width='6' height='28' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><circle cx='196' cy='133.2' r='3.3000000000000003' fill='var(--ink)'/><rect x='277.5' y='62' width='6' height='46' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><rect x='284.5' y='62' width='6' height='46' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><circle cx='284' cy='80.4' r='3.3000000000000003' fill='var(--ink)'/><rect x='277.5' y='122' width='6' height='28' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><rect x='284.5' y='122' width='6' height='28' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><circle cx='284' cy='133.2' r='3.3000000000000003' fill='var(--ink)'/><path d='M232 105 H212' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-5)'/><path d='M248 105 H268' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-5)'/><text x='80' y='188' font-size='12' fill='var(--muted)' text-anchor='middle'>tetrads at the equator</text><text x='240' y='188' font-size='12' fill='var(--muted)' text-anchor='middle'>homologs separate</text></svg>",
+    "key": "At the end of meiosis II, the chromosome number is also n. It becomes 2n only for a short time in anaphase II."
+   },
+   {
+    "h": "Meiosis II: chromatids separate",
+    "p": "DNA is not copied between meiosis I and meiosis II. Meiosis II is like mitosis, and in anaphase II the <b>sister chromatids</b> separate. The result is four <b>haploid</b> cells that are genetically different from one another.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='may-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='90' y='20' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>Meiosis I</text><text x='200' y='20' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>Meiosis II</text><path d='M66 88 L114 66' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-6)'/><path d='M66 112 L114 134' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-6)'/><path d='M165 56 L240 30' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-6)'/><path d='M165 64 L240 70' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-6)'/><path d='M165 136 L240 128' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-6)'/><path d='M165 144 L240 170' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-6)'/><circle cx='40' cy='100' r='28' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-width='1.5'/><rect x='26' y='82' width='6' height='34' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><path d='M32.5 85.0 A3.0 3.0 0 0 1 38.5 85.0 V104 H32.5 Z' fill='var(--c2)' fill-opacity='0.85'/><path d='M32.5 104 H38.5 V113.0 A3.0 3.0 0 0 1 32.5 113.0 Z' fill='var(--c1)' fill-opacity='0.85'/><circle cx='32' cy='95' r='3.3' fill='var(--ink)'/><path d='M41 85.0 A3.0 3.0 0 0 1 47 85.0 V104 H41 Z' fill='var(--c1)' fill-opacity='0.85'/><path d='M41 104 H47 V113.0 A3.0 3.0 0 0 1 41 113.0 Z' fill='var(--c2)' fill-opacity='0.85'/><rect x='47.5' y='82' width='6' height='34' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><circle cx='47' cy='95' r='3.3' fill='var(--ink)'/><text x='40' y='146' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>2n</text><circle cx='140' cy='60' r='24' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-width='1.5'/><rect x='133.5' y='45' width='6' height='30' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><path d='M140.5 48.0 A3.0 3.0 0 0 1 146.5 48.0 V65 H140.5 Z' fill='var(--c2)' fill-opacity='0.85'/><path d='M140.5 65 H146.5 V72.0 A3.0 3.0 0 0 1 140.5 72.0 Z' fill='var(--c1)' fill-opacity='0.85'/><circle cx='140' cy='57' r='3.3' fill='var(--ink)'/><text x='140' y='98' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><circle cx='140' cy='140' r='24' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-width='1.5'/><path d='M133.5 128.0 A3.0 3.0 0 0 1 139.5 128.0 V145 H133.5 Z' fill='var(--c1)' fill-opacity='0.85'/><path d='M133.5 145 H139.5 V152.0 A3.0 3.0 0 0 1 133.5 152.0 Z' fill='var(--c2)' fill-opacity='0.85'/><rect x='140.5' y='125' width='6' height='30' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><circle cx='140' cy='137' r='3.3' fill='var(--ink)'/><text x='140' y='178' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><circle cx='260' cy='25' r='18' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-width='1.5'/><rect x='257' y='13' width='6' height='24' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><circle cx='260' cy='22' r='3' fill='var(--ink)'/><text x='286' y='30' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>n</text><circle cx='260' cy='72' r='18' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-width='1.5'/><path d='M257 63.0 A3.0 3.0 0 0 1 263 63.0 V75 H257 Z' fill='var(--c2)' fill-opacity='0.85'/><path d='M257 75 H263 V81.0 A3.0 3.0 0 0 1 257 81.0 Z' fill='var(--c1)' fill-opacity='0.85'/><circle cx='260' cy='69' r='3' fill='var(--ink)'/><text x='286' y='77' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>n</text><circle cx='260' cy='128' r='18' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-width='1.5'/><path d='M257 119.0 A3.0 3.0 0 0 1 263 119.0 V131 H257 Z' fill='var(--c1)' fill-opacity='0.85'/><path d='M257 131 H263 V137.0 A3.0 3.0 0 0 1 257 137.0 Z' fill='var(--c2)' fill-opacity='0.85'/><circle cx='260' cy='125' r='3' fill='var(--ink)'/><text x='286' y='133' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>n</text><circle cx='260' cy='175' r='18' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-width='1.5'/><rect x='257' y='163' width='6' height='24' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><circle cx='260' cy='172' r='3' fill='var(--ink)'/><text x='286' y='180' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>n</text></svg>",
+    "key": "Homologous chromosomes separate in meiosis I, and sister chromatids separate in meiosis II.",
+    "once": {
+     "soru": "When a germ cell completes meiosis, how many cells form?",
+     "secenekler": [
+      {
+       "yazi": "4",
+       "neden": "Two divisions come one after the other. One cell first becomes two, then four.",
+       "dogru": true
+      },
+      {
+       "yazi": "2",
+       "neden": "In meiosis, the cell divides twice. That is why four cells form, not two."
+      },
+      {
+       "yazi": "8",
+       "neden": "DNA is copied once, but the cell divides twice. The result is 4 cells."
+      }
+     ]
+    }
+   },
+   {
+    "h": "DNA and chromosome number in meiosis",
+    "p": "In a cell with 2n = 4, the amount of DNA rises from 2 units to 4 units in the S phase. It drops to 2 units in telophase I and to 1 unit in telophase II. The number of chromosomes drops from 4 to 2 in meiosis I.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M80 22 L80 176' stroke='var(--line)' stroke-width='1' stroke-dasharray='2 3'/><path d='M112 22 L112 176' stroke='var(--line)' stroke-width='1' stroke-dasharray='2 3'/><path d='M144 22 L144 176' stroke='var(--line)' stroke-width='1' stroke-dasharray='2 3'/><path d='M176 22 L176 176' stroke='var(--line)' stroke-width='1' stroke-dasharray='2 3'/><path d='M208 22 L208 176' stroke='var(--line)' stroke-width='1' stroke-dasharray='2 3'/><path d='M240 22 L240 176' stroke='var(--line)' stroke-width='1' stroke-dasharray='2 3'/><path d='M272 22 L272 176' stroke='var(--line)' stroke-width='1' stroke-dasharray='2 3'/><text x='64' y='192' font-size='10' fill='var(--ink)' text-anchor='middle'>G₁</text><text x='96' y='192' font-size='10' fill='var(--ink)' text-anchor='middle'>S</text><text x='128' y='192' font-size='10' fill='var(--ink)' text-anchor='middle'>P I</text><text x='160' y='192' font-size='10' fill='var(--ink)' text-anchor='middle'>A I</text><text x='192' y='192' font-size='10' fill='var(--ink)' text-anchor='middle'>T I</text><text x='224' y='192' font-size='10' fill='var(--ink)' text-anchor='middle'>A II</text><text x='256' y='192' font-size='10' fill='var(--ink)' text-anchor='middle'>T II</text><text x='288' y='192' font-size='10' fill='var(--ink)' text-anchor='middle'>end</text><path d='M48 22 L48 94' stroke='var(--ink)' stroke-width='1.2'/><path d='M48 94 L308 94' stroke='var(--ink)' stroke-width='1.2'/><path d='M48 116 L48 176' stroke='var(--ink)' stroke-width='1.2'/><path d='M48 176 L308 176' stroke='var(--ink)' stroke-width='1.2'/><path d='M48 64 L80 64 L112 28 L208 28 L208 64 L272 64 L272 84 L304 84' stroke='var(--c2)' stroke-width='2.4' fill='none'/><path d='M48 140 L208 140 L208 166 L240 166 L240 140 L272 140 L272 166 L304 166' stroke='var(--c1)' stroke-width='2.4' fill='none'/><text x='42' y='88' font-size='11' fill='var(--ink)' text-anchor='end'>1</text><text x='42' y='68' font-size='11' fill='var(--ink)' text-anchor='end'>2</text><text x='42' y='32' font-size='11' fill='var(--ink)' text-anchor='end'>4</text><text x='42' y='170' font-size='11' fill='var(--ink)' text-anchor='end'>2</text><text x='42' y='144' font-size='11' fill='var(--ink)' text-anchor='end'>4</text><text x='54' y='16' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>amount of DNA (units, per cell)</text><text x='54' y='112' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>number of chromosomes (2n = 4)</text></svg>",
+    "key": "When the centromeres split in anaphase II, the chromosome number becomes 4 for a short time, then drops back to 2 at the end. Meiosis II halves the amount of DNA, not the chromosome number.",
+    "once": {
+     "soru": "In which division of meiosis is the chromosome number halved?",
+     "secenekler": [
+      {
+       "yazi": "Meiosis I",
+       "neden": "When the homologs separate, each cell gets only one of each pair. This drops the number from 2n to n.",
+       "dogru": true
+      },
+      {
+       "yazi": "Meiosis II",
+       "neden": "Meiosis II separates sister chromatids. By this stage, the chromosome number is already n."
+      },
+      {
+       "yazi": "In both",
+       "neden": "The chromosome number is halved only once, in meiosis I."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Meiosis and mitosis",
+    "p": "Both mitosis and meiosis start with DNA copying. Mitosis allows growth, repair and asexual reproduction, and it keeps the chromosome number the same. Meiosis makes gametes or spores, halves the chromosome number and creates variety.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='4' y='7' width='312' height='26' rx='6' fill='var(--acc)' fill-opacity='0.15'/><text x='12' y='24' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'></text><text x='162' y='24' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Mitosis</text><text x='260' y='24' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Meiosis</text><path d='M6 32.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='50' font-size='12' fill='var(--ink)' text-anchor='start'>Number of divisions</text><text x='162' y='50' font-size='11' fill='var(--c1)' text-anchor='middle'>1</text><text x='260' y='50' font-size='11' fill='var(--c5)' text-anchor='middle'>2</text><path d='M6 58.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='76' font-size='12' fill='var(--ink)' text-anchor='start'>Cells formed</text><text x='162' y='76' font-size='11' fill='var(--c1)' text-anchor='middle'>2</text><text x='260' y='76' font-size='11' fill='var(--c5)' text-anchor='middle'>4</text><path d='M6 84.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='102' font-size='12' fill='var(--ink)' text-anchor='start'>Chromosome number</text><text x='162' y='102' font-size='11' fill='var(--c1)' text-anchor='middle'>kept</text><text x='260' y='102' font-size='11' fill='var(--c5)' text-anchor='middle'>halved</text><path d='M6 110.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='128' font-size='12' fill='var(--ink)' text-anchor='start'>Crossing over</text><text x='162' y='128' font-size='11' fill='var(--c1)' text-anchor='middle'>no</text><text x='260' y='128' font-size='11' fill='var(--c5)' text-anchor='middle'>yes</text><path d='M6 136.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='154' font-size='12' fill='var(--ink)' text-anchor='start'>Daughter cells</text><text x='162' y='154' font-size='11' fill='var(--c1)' text-anchor='middle'>like the parent</text><text x='260' y='154' font-size='11' fill='var(--c5)' text-anchor='middle'>different</text><path d='M6 162.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='180' font-size='12' fill='var(--ink)' text-anchor='start'>Where?</text><text x='162' y='180' font-size='11' fill='var(--c1)' text-anchor='middle'>body cells</text><text x='260' y='180' font-size='11' fill='var(--c5)' text-anchor='middle'>germ cells</text></svg>",
+    "key": "A haploid (n) cell can go through mitosis, but not meiosis."
+   },
+   {
+    "h": "Sources of variety",
+    "p": "There are three sources of variety. The first is <b>crossing over</b>. The second is the <b>independent assortment</b> of homologs in metaphase I. This creates 2<sup>n</sup> kinds of gametes, and in humans that number is about 8.4 million. The third is the <b>random joining</b> of gametes at fertilization.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='may-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='12' y='56' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Arrangement 1</text><ellipse cx='108' cy='52' rx='34' ry='32' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-width='1.5'/><path d='M108 24 V80' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><rect x='96' y='28' width='6' height='26' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><rect x='114' y='28' width='6' height='26' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><rect x='96' y='58' width='6' height='16' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><rect x='114' y='58' width='6' height='16' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><path d='M146 52 H176' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-8)'/><circle cx='205' cy='52' r='22' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.5'/><rect x='197' y='37' width='6' height='26' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><rect x='207' y='45' width='6' height='16' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><circle cx='268' cy='52' r='22' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.5'/><rect x='260' y='37' width='6' height='26' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><rect x='270' y='45' width='6' height='16' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><text x='12' y='136' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Arrangement 2</text><ellipse cx='108' cy='132' rx='34' ry='32' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-width='1.5'/><path d='M108 104 V160' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><rect x='96' y='108' width='6' height='26' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><rect x='114' y='108' width='6' height='26' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><rect x='96' y='138' width='6' height='16' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><rect x='114' y='138' width='6' height='16' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><path d='M146 132 H176' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-8)'/><circle cx='205' cy='132' r='22' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.5'/><rect x='197' y='117' width='6' height='26' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><rect x='207' y='125' width='6' height='16' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><circle cx='268' cy='132' r='22' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.5'/><rect x='260' y='117' width='6' height='26' rx='3.0' fill='var(--c1)' fill-opacity='0.85'/><rect x='270' y='125' width='6' height='16' rx='3.0' fill='var(--c2)' fill-opacity='0.85'/><text x='160' y='190' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>n = 2 pairs → 2² = 4 different gametes</text></svg>",
+    "key": "The n in the 2ⁿ formula is the number of homologous pairs. One mother and father can produce about 70 trillion different zygotes, and crossing over raises this number even further."
+   },
+   {
+    "h": "Nondisjunction and Down syndrome",
+    "p": "The <b>nondisjunction</b> you just saw leads to gametes with n+1 and n−1 chromosomes. In <b>Down syndrome</b>, there are three copies of chromosome 21, and the total chromosome number is 47. This risk rises as the mother gets older.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='may-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='12' y='16' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>Nondisjunction in meiosis I</text><circle cx='40' cy='90' r='26' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-width='1.5'/><rect x='27.5' y='76' width='5' height='28' rx='2.5' fill='var(--c2)' fill-opacity='0.85'/><rect x='33.5' y='76' width='5' height='28' rx='2.5' fill='var(--c2)' fill-opacity='0.85'/><circle cx='33' cy='87.2' r='2.75' fill='var(--ink)'/><rect x='41.5' y='76' width='5' height='28' rx='2.5' fill='var(--c1)' fill-opacity='0.85'/><rect x='47.5' y='76' width='5' height='28' rx='2.5' fill='var(--c1)' fill-opacity='0.85'/><circle cx='47' cy='87.2' r='2.75' fill='var(--ink)'/><text x='40' y='132' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>2n</text><path d='M66 80 L106 54' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-9)'/><path d='M66 100 L106 122' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-9)'/><circle cx='130' cy='45' r='22' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-width='1.5'/><rect x='117.5' y='32' width='5' height='26' rx='2.5' fill='var(--c2)' fill-opacity='0.85'/><rect x='123.5' y='32' width='5' height='26' rx='2.5' fill='var(--c2)' fill-opacity='0.85'/><circle cx='123' cy='42.4' r='2.75' fill='var(--ink)'/><rect x='131.5' y='32' width='5' height='26' rx='2.5' fill='var(--c1)' fill-opacity='0.85'/><rect x='137.5' y='32' width='5' height='26' rx='2.5' fill='var(--c1)' fill-opacity='0.85'/><circle cx='137' cy='42.4' r='2.75' fill='var(--ink)'/><circle cx='130' cy='130' r='22' fill='var(--acc)' fill-opacity='0.08' stroke='var(--acc)' stroke-width='1.5'/><text x='130' y='134' font-size='11' fill='var(--muted)' text-anchor='middle'>empty</text><path d='M154 38 L200 26' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-9)'/><path d='M154 52 L200 64' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-9)'/><path d='M154 124 L200 106' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-9)'/><path d='M154 138 L200 144' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-9)'/><circle cx='218' cy='25' r='15' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.5'/><rect x='211' y='15' width='5' height='20' rx='2.5' fill='var(--c2)' fill-opacity='0.85'/><rect x='220' y='15' width='5' height='20' rx='2.5' fill='var(--c1)' fill-opacity='0.85'/><text x='240' y='29' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>n+1 (24)</text><circle cx='218' cy='65' r='15' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.5'/><rect x='211' y='55' width='5' height='20' rx='2.5' fill='var(--c2)' fill-opacity='0.85'/><rect x='220' y='55' width='5' height='20' rx='2.5' fill='var(--c1)' fill-opacity='0.85'/><text x='240' y='69' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>n+1 (24)</text><circle cx='218' cy='105' r='15' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.5'/><text x='240' y='109' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>n−1 (22)</text><circle cx='218' cy='145' r='15' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.5'/><text x='240' y='149' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>n−1 (22)</text><text x='160' y='186' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>24 + 23 = 47 → trisomy 21 (Down syndrome)</text></svg>",
+    "key": "If nondisjunction happens in meiosis I, all 4 gametes are abnormal. If it happens in meiosis II, usually 2 gametes are abnormal."
+   },
+   {
+    "h": "Making gametes",
+    "p": "In males, one germ cell gives four equal cells, which means four sperm. This is called <b>spermatogenesis</b>. In females, the cytoplasm does not divide equally. One large egg and small <b>polar bodies</b> form. This is called <b>oogenesis</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='80' y='16' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Spermatogenesis</text><text x='240' y='16' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Oogenesis</text><path d='M80 56 L52 84 M80 56 L108 84 M50 107 L36 136 M50 107 L64 136 M110 107 L96 136 M110 107 L124 136' stroke='var(--ink)' stroke-width='1.2' fill='none'/><circle cx='80' cy='42' r='14' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='80' y='46' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>2n</text><circle cx='50' cy='95' r='12' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='50' y='99' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><circle cx='110' cy='95' r='12' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='110' y='99' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><ellipse cx='36' cy='145' rx='5' ry='7' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)'/><path d='M36 152 q4 5 0 9 t0 9' stroke='var(--c1)' fill='none'/><ellipse cx='64' cy='145' rx='5' ry='7' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)'/><path d='M64 152 q4 5 0 9 t0 9' stroke='var(--c1)' fill='none'/><ellipse cx='96' cy='145' rx='5' ry='7' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)'/><path d='M96 152 q4 5 0 9 t0 9' stroke='var(--c1)' fill='none'/><ellipse cx='124' cy='145' rx='5' ry='7' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)'/><path d='M124 152 q4 5 0 9 t0 9' stroke='var(--c1)' fill='none'/><text x='80' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>equal division → 4 sperm</text><path d='M240 58 L228 77 M240 58 L276 84 M222 113 L216 130 M222 113 L254 147 M280 92 L278 140 M280 92 L298 140' stroke='var(--ink)' stroke-width='1.2' fill='none'/><circle cx='240' cy='42' r='16' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><text x='240' y='46' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>2n</text><circle cx='222' cy='95' r='18' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><text x='222' y='99' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><circle cx='280' cy='88' r='5' fill='var(--c4)' fill-opacity='0.4' stroke='var(--c4)' stroke-width='1.5'/><circle cx='215' cy='150' r='20' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.5'/><text x='215' y='154' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><text x='190' y='154' font-size='11' fill='var(--c2)' text-anchor='end'>egg</text><circle cx='254' cy='150' r='5' fill='var(--c4)' fill-opacity='0.4' stroke='var(--c4)' stroke-width='1.5'/><circle cx='278' cy='146' r='5' fill='var(--c4)' fill-opacity='0.4' stroke='var(--c4)' stroke-width='1.5'/><circle cx='298' cy='146' r='5' fill='var(--c4)' fill-opacity='0.4' stroke='var(--c4)' stroke-width='1.5'/><text x='274' y='176' font-size='11' fill='var(--c4)' text-anchor='middle'>polar bodies</text><text x='240' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>unequal → 1 egg</text></svg>",
+    "key": "The polar bodies break down, and the nutrients gather in the egg. One germ cell gives 4 sperm in males and 1 egg in females.",
+    "once": {
+     "soru": "How many eggs does one egg mother cell give through meiosis?",
+     "secenekler": [
+      {
+       "yazi": "1",
+       "neden": "The cytoplasm does not divide equally. One cell becomes the egg, and the others become small polar bodies.",
+       "dogru": true
+      },
+      {
+       "yazi": "4",
+       "neden": "In males four sperm form, but in females only one egg forms."
+      },
+      {
+       "yazi": "2",
+       "neden": "The polar bodies do not become eggs. Only one egg forms."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Fertilization and the zygote",
+    "p": "The joining of the sperm and egg nuclei is called <b>fertilization</b>. Two n gametes join and form a 2n <b>zygote</b>. In fish and frogs, <b>external fertilization</b> happens in water. In reptiles, birds and mammals, <b>internal fertilization</b> happens inside the female's body.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='may-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><ellipse cx='42' cy='55' rx='7' ry='5' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)'/><path d='M35 55 q-5 -5 -10 0 t-10 0' stroke='var(--c1)' fill='none'/><text x='64' y='60' font-size='15' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='92' cy='55' r='22' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)' stroke-width='1.5'/><text x='92' y='60' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><text x='30' y='90' font-size='11' fill='var(--muted)' text-anchor='middle'>sperm (n)</text><text x='92' y='92' font-size='11' fill='var(--muted)' text-anchor='middle'>egg</text><path d='M120 55 H148' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-11)'/><text x='134' y='30' font-size='11' fill='var(--c5)' text-anchor='middle'>fertilization</text><circle cx='174' cy='55' r='22' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><text x='174' y='60' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>2n</text><text x='174' y='92' font-size='11' fill='var(--muted)' text-anchor='middle'>zygote</text><path d='M200 55 H226' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-11)'/><text x='213' y='30' font-size='11' fill='var(--c5)' text-anchor='middle'>mitosis</text><circle cx='252' cy='47' r='9' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><circle cx='270' cy='47' r='9' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><circle cx='252' cy='64' r='9' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><circle cx='270' cy='64' r='9' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><text x='261' y='92' font-size='11' fill='var(--muted)' text-anchor='middle'>embryo</text><rect x='10' y='110' width='145' height='78' rx='8' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><rect x='165' y='110' width='145' height='78' rx='8' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='82' y='132' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>External fertilization</text><text x='82' y='152' font-size='11' fill='var(--ink)' text-anchor='middle'>in water, many gametes</text><text x='82' y='172' font-size='11' fill='var(--muted)' text-anchor='middle'>most fish, frogs</text><text x='237' y='132' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Internal fertilization</text><text x='237' y='152' font-size='11' fill='var(--ink)' text-anchor='middle'>inside the female's body</text><text x='237' y='172' font-size='11' fill='var(--muted)' text-anchor='middle'>reptiles, birds, mammals</text></svg>",
+    "key": "The zygote divides by mitosis and forms the embryo. In external fertilization, many gametes are released. Internal fertilization is an adaptation to life on land.",
+    "etk": {
+     "tur": "ayir",
+     "soru": "Sort each animal by how fertilization happens.",
+     "gruplar": [
+      "External fertilization",
+      "Internal fertilization"
+     ],
+     "ogeler": [
+      [
+       "Trout",
+       0
+      ],
+      [
+       "Frog",
+       0,
+       "A frog releases its eggs and sperm into water. Fertilization happens outside the body."
+      ],
+      [
+       "Lizard",
+       1
+      ],
+      [
+       "Pigeon",
+       1
+      ],
+      [
+       "Dolphin",
+       1,
+       "A dolphin lives in water, but it is a mammal. Fertilization happens inside the female's body."
+      ],
+      [
+       "Mussel",
+       0
+      ]
+     ]
+    },
+    "once": {
+     "soru": "How many sets of chromosomes does the zygote formed by fertilization carry?",
+     "secenekler": [
+      {
+       "yazi": "2n",
+       "neden": "A sperm (n) and an egg (n) join. So n + n = 2n.",
+       "dogru": true
+      },
+      {
+       "yazi": "n",
+       "neden": "Gametes are the ones with n chromosomes. A zygote forms when two gametes join."
+      },
+      {
+       "yazi": "4n",
+       "neden": "Each gamete brings one set of chromosomes. That makes two sets in total."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Sexual and asexual reproduction",
+    "p": "In asexual reproduction, a single parent gives offspring like itself. This is fast, but there is little variety. Sexual reproduction involves meiosis and fertilization. The offspring differ both from their parents and from one another.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='4' y='7' width='312' height='26' rx='6' fill='var(--acc)' fill-opacity='0.15'/><text x='12' y='24' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'></text><text x='168' y='24' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Asexual</text><text x='262' y='24' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Sexual</text><path d='M6 32.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='50' font-size='12' fill='var(--ink)' text-anchor='start'>Number of parents</text><text x='168' y='50' font-size='11' fill='var(--c1)' text-anchor='middle'>1</text><text x='262' y='50' font-size='11' fill='var(--c5)' text-anchor='middle'>usually 2</text><path d='M6 58.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='76' font-size='12' fill='var(--ink)' text-anchor='start'>Division</text><text x='168' y='76' font-size='11' fill='var(--c1)' text-anchor='middle'>mitosis*</text><text x='262' y='76' font-size='11' fill='var(--c5)' text-anchor='middle'>meiosis + fertilization</text><path d='M6 84.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='102' font-size='12' fill='var(--ink)' text-anchor='start'>Offspring</text><text x='168' y='102' font-size='11' fill='var(--c1)' text-anchor='middle'>like the parent</text><text x='262' y='102' font-size='11' fill='var(--c5)' text-anchor='middle'>different</text><path d='M6 110.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='128' font-size='12' fill='var(--ink)' text-anchor='start'>Speed</text><text x='168' y='128' font-size='11' fill='var(--c1)' text-anchor='middle'>fast</text><text x='262' y='128' font-size='11' fill='var(--c5)' text-anchor='middle'>slow</text><path d='M6 136.5 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='154' font-size='12' fill='var(--ink)' text-anchor='start'>When conditions change</text><text x='168' y='154' font-size='11' fill='var(--c1)' text-anchor='middle'>low chance to adapt</text><text x='262' y='154' font-size='11' fill='var(--c5)' text-anchor='middle'>high chance to adapt</text><text x='12' y='190' font-size='11' fill='var(--muted)' text-anchor='start'>* Binary fission in bacteria</text></svg>",
+    "key": "In asexual reproduction, variety arises only through mutation.",
+    "once": {
+     "soru": "If conditions suddenly change, which population has a better chance of survival?",
+     "secenekler": [
+      {
+       "yazi": "One that reproduces sexually",
+       "neden": "The offspring differ from one another. That is why some of them can adapt to the new conditions.",
+       "dogru": true
+      },
+      {
+       "yazi": "One that reproduces asexually",
+       "neden": "The individuals are nearly all the same, so one change affects them all at once."
+      },
+      {
+       "yazi": "No difference",
+       "neden": "Variety is a big advantage in a changing environment."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• In meiosis, DNA is copied once, the cell divides twice and 4 different n cells form.<br>• Homologs separate in meiosis I, and sister chromatids separate in meiosis II.<br>• Variety comes from crossing over, independent assortment and random fertilization.<br>• Nondisjunction leads to outcomes such as Down syndrome.<br>• In plants, spores form by meiosis and gametes by mitosis.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='may-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><circle cx='40' cy='70' r='24' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><text x='40' y='75' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>2n</text><circle cx='150' cy='50' r='16' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.5'/><text x='150' y='54' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><circle cx='150' cy='90' r='16' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.5'/><text x='150' y='94' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><path d='M66 64 L130 52' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-14)'/><path d='M66 76 L130 88' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-14)'/><text x='98' y='30' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>Meiosis I</text><circle cx='262' cy='22' r='12' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.5'/><text x='262' y='26' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><circle cx='262' cy='54' r='12' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.5'/><text x='262' y='58' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><circle cx='262' cy='86' r='12' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.5'/><text x='262' y='90' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><circle cx='262' cy='118' r='12' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.5'/><text x='262' y='122' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><path d='M168 46 L246 24' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-14)'/><path d='M168 54 L246 54' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-14)'/><path d='M168 86 L246 86' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-14)'/><path d='M168 94 L246 116' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#may-14)'/><text x='207' y='128' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>Meiosis II</text><path d='M262 136 C262 186 40 186 40 98' stroke='var(--c3)' stroke-width='1.8' fill='none' marker-end='url(#may-14)'/><text x='150' y='192' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>fertilization → zygote (2n)</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sirala",
+    "q": "Put the events of meiosis in order.",
+    "ogeler": [
+     "DNA is copied once (interphase)",
+     "Homologs pair up into tetrads and cross over",
+     "Tetrads line up in pairs at the equator",
+     "Homologous chromosomes move to opposite poles",
+     "Sister chromatids move to opposite poles",
+     "Four haploid (n) cells form"
+    ],
+    "e": "DNA is copied once before meiosis. In prophase I, tetrads form and crossing over happens. In metaphase I the tetrads line up in pairs, and in anaphase I the homologs separate. In anaphase II the sister chromatids separate, and four n cells form."
+   },
+   {
+    "tur": "sayi",
+    "q": "In an organism with 2n = 8, the homologs differ from each other and there is no crossing over. How many kinds of gametes can form by independent assortment?",
+    "cevap": 16,
+    "birim": "kinds",
+    "e": "The number of homologous pairs is n = 4. Independent assortment gives 2<sup>4</sup> = 16 kinds of gametes."
+   },
+   {
+    "tur": "ayir",
+    "q": "Sort each event by the division it happens in.",
+    "gruplar": [
+     "Mitosis only",
+     "Meiosis only",
+     "Both"
+    ],
+    "ogeler": [
+     [
+      "Tetrad formation",
+      1
+     ],
+     [
+      "Crossing over",
+      1
+     ],
+     [
+      "Homologs separating",
+      1
+     ],
+     [
+      "Can happen in a haploid cell",
+      0
+     ],
+     [
+      "Identical daughter cells",
+      0
+     ],
+     [
+      "DNA copied beforehand",
+      2
+     ],
+     [
+      "Centromeres splitting",
+      2
+     ],
+     [
+      "Spindle fibers forming",
+      2
+     ]
+    ],
+    "e": "Tetrads, crossing over and homologs separating are unique to meiosis. A haploid cell can only go through mitosis, and mitosis gives identical cells. DNA copying, centromeres splitting and spindle fibers are found in both divisions."
+   },
+   {
+    "q": "In a human (2n = 46), meiosis I goes normally. In meiosis II, the sister chromatids of one chromosome fail to separate in just one of the two cells. What are the chromosome numbers of the four gametes?",
+    "o": [
+     "24, 24, 22, 22",
+     "24, 22, 23, 23",
+     "23, 23, 23, 23",
+     "47, 45, 46, 46"
+    ],
+    "a": 1,
+    "e": "At the end of meiosis I, both cells have 23 chromosomes. The cell with nondisjunction gives gametes with 24 and 22 chromosomes, and the normal cell gives gametes with 23 and 23.",
+    "y": [
+     "This pattern belongs to nondisjunction in meiosis I. In meiosis II, only one cell is affected.",
+     "",
+     "The two gametes from the cell with nondisjunction cannot be normal. One gets an extra chromosome, and the other is missing one.",
+     "Gametes are haploid. 47 and 45 chromosomes can only appear after fertilization, in the zygote."
+    ]
+   }
+  ]
+ },
  "siniflandirma": {
   "title": "Classifying living things",
   "summary": "How are living things grouped, and how are species named?",
