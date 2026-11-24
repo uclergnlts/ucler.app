@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Lesson from "@/components/Lesson";
-import { entries, isDers, nextTopic, readyTopics, topic } from "@/lib/content";
+import { enHazir, entries, isDers, nextTopic, readyTopics, topic } from "@/lib/content";
+import { dilAdresleri, paylasim } from "@/lib/seo";
 import { adimliDers } from "@/lib/adimli";
 import "../../adim.css";
 
@@ -12,7 +13,13 @@ export const generateStaticParams = () => readyTopics().map(({ ders, id }) => ({
 export async function generateMetadata({ params }: Props) {
   const { ders, konu } = await params;
   const t = isDers(ders) ? topic(ders, konu) : undefined;
-  return { title: t?.title, description: t?.summary };
+  if (!isDers(ders) || !t) return {};
+  const aciklama = t.summary.replace(/<[^>]+>/g, "");
+  return {
+    title: t.title, description: aciklama,
+    alternates: dilAdresleri(`/${ders}/${konu}/`, enHazir(ders, konu)),
+    ...paylasim(t.title, aciklama),
+  };
 }
 
 export default async function Page({ params }: Props) {

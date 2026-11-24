@@ -266,6 +266,20 @@ export default function Lesson({
             ]}
           />
         </div>
+        {/* Konunun içeriğine kısa bakış: ilk kartın metni ve bütün kart başlıkları. Kapalı durur; sayfanın HTML'inde
+            yer aldığı için arama motorları da konunun ne anlattığını görür (Üçler 2026-11-24, SEO). */}
+        <details className="rounded-xl border border-border px-4 py-3 text-[14.5px]">
+          <summary className="cursor-pointer font-semibold text-muted-foreground">{cev("Bu konuda neler var?")}</summary>
+          <div className="grid gap-3 pt-3">
+            <section className="grid gap-1">
+              <h2 className="font-display text-[17px] leading-snug">{t.cards[0].h}</h2>
+              <Html as="p" className="leading-relaxed text-muted-foreground" html={t.cards[0].p} />
+            </section>
+            <ol className="list-decimal grid gap-0.5 pl-5 text-muted-foreground">
+              {t.cards.map((c, k) => <li key={k}>{c.h}</li>)}
+            </ol>
+          </div>
+        </details>
       </div>
     );
     controls = (

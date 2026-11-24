@@ -7,12 +7,14 @@ import Yerel from "@/components/Yerel";
 import TemaIzle from "@/components/TemaIzle";
 import { UMAMI_ID } from "@/lib/olay";
 import { SITE_URL, UYGULAMA } from "@/lib/site";
+import { paylasim } from "@/lib/seo";
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: "ucler", template: "%s · ucler" },
-  description: cev("Fizik, kimya ve biyoloji en temelden: kısa, görselli kartlar ve mini testler."),
+  description: cev("Bilimi gerçekten anlamak için kısa, etkileşimli dersler ve mini testler."),
+  ...paylasim("ucler", cev("Bilimi gerçekten anlamak için kısa, etkileşimli dersler ve mini testler.")),
 };
 
 export const viewport: Viewport = {
