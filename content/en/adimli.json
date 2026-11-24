@@ -20015,6 +20015,237 @@
   ],
   "soruOnce": true
  },
+ "solunum": {
+  "id": "solunum",
+  "ders": "biyoloji",
+  "konu": "solunum",
+  "baslik": "Respiratory system",
+  "ozet": "Follow the air from the nose to the alveolus, work the breathing muscles, climb a mountain, exchange gases and make hemoglobin release O₂.",
+  "adimlar": [
+   {
+    "baslik": "The path of air",
+    "metin": "The air you breathe passes through a series of tubes from the nose to the <b>alveolus</b>. The pharynx is a path for both air and food. Make a guess first, then follow the air.",
+    "sahne": {
+     "tur": "biy12-yol",
+     "sure": 7
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which one does air not pass through?",
+     "secenekler": [
+      {
+       "yazi": "Larynx",
+       "neden": "Air passes from the pharynx to the larynx, and from there into the trachea. The vocal cords are in the larynx."
+      },
+      {
+       "yazi": "Esophagus",
+       "dogru": true,
+       "neden": "The esophagus is the path for food. When you swallow, the epiglottis closes the larynx. When you breathe in, the epiglottis is open and air goes to the trachea."
+      },
+      {
+       "yazi": "Bronchus",
+       "neden": "The trachea splits in two. Each bronchus enters a lung and branches into bronchioles. So air does pass through the bronchus."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Breathing in",
+    "metin": "Work both muscles and take air in.",
+    "sahne": {
+     "tur": "biy12-gogus"
+    },
+    "deger": {
+     "d": 0,
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Contract diaphragm",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "k",
+      "etiket": "Contract rib muscles",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "d": 1,
+      "k": 1
+     },
+     "ipucu": "When the diaphragm flattens, the chest expands downward. When the external intercostals contract, the chest expands up and out.",
+     "tamam": "The chest expanded both downward and up and out. When the pressure dropped below atmospheric pressure, air flowed in on its own."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Partial pressure",
+    "metin": "At sea level, air pressure is 760 mmHg and 21% of air is O₂. So the <b>partial pressure</b> of O₂ is 760 × 0.21 ≈ 160 mmHg. Climb the mountain and cut PO₂ in half.",
+    "sahne": {
+     "tur": "biy12-kismi"
+    },
+    "deger": {
+     "h": 0
+    },
+    "kontroller": [
+     {
+      "ad": "h",
+      "etiket": "Altitude",
+      "min": 0,
+      "max": 8,
+      "adim": 0.5,
+      "birim": "km"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "h": [
+       5,
+       6
+      ]
+     },
+     "ipucu": "Air pressure drops as you go higher. Climb until PO₂ is around 80 mmHg.",
+     "tamam": "At about 5.5 km, both air pressure and PO₂ drop by half, and PO₂ is about 80 mmHg. The O₂ share is still 21%."
+    },
+    "kart": 13
+   },
+   {
+    "baslik": "Gas exchange in the alveolus",
+    "metin": "The walls of the alveolus and the capillary are one cell thick. Gases move from where their <b>partial pressure</b> is high to where it is low. Make a guess first, then press play.",
+    "sahne": {
+     "tur": "biy12-alveol",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Blood arriving at the capillary has a PO₂ of 40, and the alveolus has 100 mmHg. Where does O₂ go?",
+     "secenekler": [
+      {
+       "yazi": "From alveolus to blood",
+       "dogru": true,
+       "neden": "The partial pressure of O₂ is higher in the alveolus, so O₂ diffuses into the blood. CO₂ is higher in the blood (45 mmHg) and passes into the alveolus. No ATP is used."
+      },
+      {
+       "yazi": "From blood to alveolus",
+       "neden": "A gas moves from where its partial pressure is high to where it is low. PO₂ is lower in the blood, so O₂ comes into the blood."
+      },
+      {
+       "yazi": "Pumped into blood with ATP",
+       "neden": "Gas exchange is diffusion and needs no energy. The driving force is the partial pressure difference."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Hemoglobin releases O₂",
+    "metin": "As PO₂ falls, <b>hemoglobin</b> releases O₂. Make hemoglobin release more than half of the O₂ it carries.",
+    "sahne": {
+     "tur": "biy12-hb"
+    },
+    "deger": {
+     "p": 100
+    },
+    "kontroller": [
+     {
+      "ad": "p",
+      "etiket": "PO₂",
+      "min": 10,
+      "max": 100,
+      "adim": 10,
+      "birim": "mmHg"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "p": [
+       10,
+       20
+      ]
+     },
+     "ipucu": "In resting tissue, PO₂ is 40 mmHg and hemoglobin releases only 1 O₂ there. A working muscle uses O₂ much faster.",
+     "tamam": "In a working muscle, PO₂ drops to 10-20 mmHg and hemoglobin releases most of its O₂. In resting tissue it releases only 1 O₂, and the rest stays in reserve."
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "The journey of CO₂",
+    "metin": "CO₂ made in the tissue passes into the blood and is carried to the lungs. The enzyme <b>carbonic anhydrase</b> in red blood cells quickly combines CO₂ with water. Make a guess first, then press play.",
+    "sahne": {
+     "tur": "biy12-co2",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In what form is most CO₂ carried in the blood?",
+     "secenekler": [
+      {
+       "yazi": "Bound to hemoglobin",
+       "neden": "About 23% of CO₂ binds to hemoglobin. Most CO₂ is carried in another form."
+      },
+      {
+       "yazi": "Dissolved gas in plasma",
+       "neden": "Only about 7% of CO₂ dissolves in plasma as a gas."
+      },
+      {
+       "yazi": "Bicarbonate ions in plasma",
+       "dogru": true,
+       "neden": "Carbonic acid splits into H⁺ and HCO₃⁻ ions, and bicarbonate passes into the plasma. In the lungs the reaction reverses and CO₂ is breathed out."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Breathing during exercise",
+    "metin": "CO₂ in the blood controls breathing. Faster breathing removes more CO₂. While running, your muscles' CO₂ production has tripled. Adjust your breathing and keep PCO₂ at 40.",
+    "sahne": {
+     "tur": "biy12-egzersiz"
+    },
+    "deger": {
+     "s": 1
+    },
+    "kontroller": [
+     {
+      "ad": "s",
+      "etiket": "Breathing",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac",
+      "onek": "×"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "s": 3
+     },
+     "ipucu": "The CO₂ removed must equal the CO₂ produced. If you breathe too fast, too much CO₂ is removed.",
+     "tamam": "When breathing tripled, as much CO₂ was removed as was produced. So PCO₂ stayed at 40 and the pH stayed at 7.4."
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "Air passes through the nose, pharynx, larynx, trachea, bronchi and bronchioles to reach the alveolus. The epiglottis keeps food out of the trachea.",
+   "When the diaphragm and external intercostal muscles contract, chest volume increases, pressure drops and air flows in.",
+   "Gases cross by diffusion, driven by partial pressure differences. At altitude, it is the partial pressure of O₂ that drops, not its share.",
+   "Most O₂ is carried by hemoglobin. Hemoglobin releases O₂ in tissues where PO₂ is low.",
+   "Most CO₂ is carried as bicarbonate. Breathing is sped up mainly by a rise in CO₂ in the blood."
+  ],
+  "soruOnce": true
+ },
  "ekosistem": {
   "id": "ekosistem",
   "ders": "biyoloji",
