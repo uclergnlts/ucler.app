@@ -22,5 +22,5 @@ export const PLAY_URL = "https://play.google.com/store/apps/details?id=app.ucler
 export const APP_STORE_URL = "https://apps.apple.com/app/id6826647393";
 /** iOS uygulaması App Store'da yayında mı? false iken tanıtım sayfasındaki App Store düğmesi "yakında" olarak durur,
  * bağlantı vermez (yayımlanmamış uygulamanın App Store sayfası açılmaz). Apple onaylayınca true yapılır. */
-export const IOS_YAYINDA = false;
+export const IOS_YAYINDA = true; // Apple onayladı, 2026-11-24 yayında
 export const YOUTUBE = { ad: "@uclerapp", url: "https://www.youtube.com/@uclerapp" };

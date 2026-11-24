@@ -6,7 +6,7 @@ import { Capacitor } from "@capacitor/core";
 import { olay } from "./olay";
 import { SITE_URL } from "./site";
 
-/** Google Play'deki uygulama sayfası. iOS sayfası App Store'da yayımlanınca eklenecek. */
+/** Google Play'deki uygulama sayfası. App Store adresi lib/site.ts içinde (APP_STORE_URL). */
 export const PLAY_URL = "https://play.google.com/store/apps/details?id=app.ucler";
 /** "Uygulamayı puanla" satırının açacağı adres; mağaza sayfası olmayan yerde null. */
 export const magazaAdresi = () => (Capacitor.getPlatform() === "android" ? PLAY_URL : null);
