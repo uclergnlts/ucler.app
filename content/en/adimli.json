@@ -20482,6 +20482,268 @@
   ],
   "soruOnce": true
  },
+ "ureme-sistemi": {
+  "id": "ureme-sistemi",
+  "ders": "biyoloji",
+  "konu": "ureme-sistemi",
+  "baslik": "Reproductive system and embryonic development",
+  "ozet": "Follow the path of sperm, run the testis with hormones, compare meiosis, find the day in the cycle and take the zygote to the uterus.",
+  "adimlar": [
+   {
+    "baslik": "The path of sperm",
+    "metin": "A man is having a vasectomy. In this operation, both <b>vasa deferentia</b> are cut and tied. Predict first, then follow the path of the sperm.",
+    "sahne": {
+     "tur": "biy13-sperm",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to this person?",
+     "secenekler": [
+      {
+       "yazi": "The testes stop making sperm",
+       "neden": "The testes keep making sperm and testosterone. Only the sperm cannot reach the way out."
+      },
+      {
+       "yazi": "Semen forms but contains no sperm",
+       "dogru": true,
+       "neden": "The fluid of semen is made by the vesicles and glands. Because the duct is cut, sperm from the epididymis cannot join this fluid."
+      },
+      {
+       "yazi": "No semen forms at all",
+       "neden": "The seminal vesicles, prostate and bulbourethral glands lie beyond the cut. So their secretions still form semen."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Two hormones in the testis",
+    "metin": "The pituitary sends <b>FSH</b> and <b>LH</b> to the testis. Get sperm production running at full speed.",
+    "sahne": {
+     "tur": "biy13-testis"
+    },
+    "deger": {
+     "f": 0,
+     "l": 0
+    },
+    "kontroller": [
+     {
+      "ad": "f",
+      "etiket": "FSH",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "l",
+      "etiket": "LH",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "f": 1,
+      "l": 1
+     },
+     "ipucu": "Sertoli cells nourish developing sperm. Testosterone from Leydig cells keeps production going. Both are needed together.",
+     "tamam": "The two hormones worked together. Sertoli cells nourished the sperm, and testosterone from Leydig cells brought production to full speed."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Making sperm and eggs",
+    "metin": "Both sperm and eggs form by <b>meiosis</b>, but the result differs. Watch a spermatocyte divide first, then an oocyte.",
+    "sahne": {
+     "tur": "biy13-mayoz",
+     "sure": 5
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "In females (oocyte)",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "In a woman, 25 primary oocytes complete meiosis. At most how many eggs form?",
+     "secenekler": [
+      {
+       "yazi": "25",
+       "dogru": true,
+       "neden": "Each primary oocyte forms only 1 egg. The cytoplasm does not divide equally. The nutrients stay in the egg, and the polar bodies break down."
+      },
+      {
+       "yazi": "100",
+       "neden": "That is what happens with sperm, where one primary spermatocyte forms 4 sperm. In an oocyte, only one of the 4 cells is an egg."
+      },
+      {
+       "yazi": "50",
+       "neden": "Of the two cells formed in meiosis I, the smaller one is a polar body and cannot become an egg. In the end, each oocyte leaves 1 egg."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Mid-cycle",
+    "metin": "Ovulation is triggered by a sudden surge in the pituitary hormone LH. Slide through the days and find ovulation.",
+    "sahne": {
+     "tur": "biy13-dongu"
+    },
+    "deger": {
+     "g": 3
+    },
+    "kontroller": [
+     {
+      "ad": "g",
+      "etiket": "Day",
+      "min": 1,
+      "max": 28,
+      "adim": 1
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "g": [
+       13,
+       14
+      ]
+     },
+     "ipucu": "Look for the day when the purple LH curve shoots up. The LH peak triggers ovulation.",
+     "tamam": "The LH peak triggered ovulation. The day estrogen is highest comes just before the LH peak."
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "hCG",
+    "metin": "Without fertilization, the <b>yellow body</b> (corpus luteum) breaks down. If an embryo implants in the uterus, it secretes <b>hCG</b>, and pregnancy tests look for this hormone. Play both cases.",
+    "sahne": {
+     "tur": "biy13-hcg",
+     "sure": 5
+    },
+    "deger": {
+     "e": 0
+    },
+    "kontroller": [
+     {
+      "ad": "e",
+      "etiket": "Embryo implanted",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "Why does menstruation not happen when hCG is present?",
+     "secenekler": [
+      {
+       "yazi": "hCG thickens the lining directly",
+       "neden": "The hormone that maintains the uterine lining is progesterone. hCG does this indirectly."
+      },
+      {
+       "yazi": "hCG keeps the yellow body alive, so progesterone stays up",
+       "dogru": true,
+       "neden": "hCG prevents the yellow body from breaking down. So progesterone stays high and the lining is not shed."
+      },
+      {
+       "yazi": "hCG raises FSH and a new follicle matures",
+       "neden": "No new follicle matures during pregnancy, because high progesterone suppresses FSH and LH."
+      }
+     ]
+    },
+    "kart": 13
+   },
+   {
+    "baslik": "From zygote to implantation",
+    "metin": "The zygote divides quickly by mitosis on its way to the uterus. Predict first, then watch.",
+    "sahne": {
+     "tur": "biy13-zigot",
+     "sure": 7
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "During cleavage the number of cells rises. What happens to the embryo's total size?",
+     "secenekler": [
+      {
+       "yazi": "It grows at the same rate as the cell count",
+       "neden": "Between divisions, the cells have no time to grow. So the total size does not grow."
+      },
+      {
+       "yazi": "It halves",
+       "neden": "Division does not lose material, and the outer size is kept."
+      },
+      {
+       "yazi": "It barely changes",
+       "dogru": true,
+       "neden": "Between divisions, the cells have no time to grow. With each division the cells get smaller, and the total size stays the same."
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Three germ layers",
+    "metin": "Tour the organs that develop from the germ layers. Then answer the question.",
+    "sahne": {
+     "tur": "biy13-germ"
+    },
+    "deger": {
+     "o": 1
+    },
+    "kontroller": [
+     {
+      "ad": "o",
+      "etiket": "Organ",
+      "min": 1,
+      "max": 5,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which layer does the inner surface of the lung's air sacs develop from?",
+     "secenekler": [
+      {
+       "yazi": "Endoderm",
+       "dogru": true,
+       "neden": "The endoderm forms the inner linings. The linings of the digestive and respiratory tracts, the liver and the pancreas develop from the endoderm. The lung also buds off the primitive gut."
+      },
+      {
+       "yazi": "Mesoderm",
+       "neden": "The mesoderm forms muscle, bone, the heart and blood. The muscle and vessels around the lung come from the mesoderm, but the inner surface does not."
+      },
+      {
+       "yazi": "Ectoderm",
+       "neden": "The ectoderm forms the outer surface, that is, the epidermis and the nervous system. The lining of the air sacs is on the inside."
+      }
+     ]
+    },
+    "kart": 10
+   }
+  ],
+  "kapanis": [
+   "Sperm are made in the testis and mature in the epididymis. Mixed with gland secretions, they form semen.",
+   "FSH stimulates Sertoli cells, and LH stimulates Leydig cells. Leydig cells secrete testosterone.",
+   "One spermatocyte forms 4 sperm, while one oocyte forms 1 egg. Meiosis II is completed at fertilization.",
+   "High estrogen raises LH, and LH triggers ovulation. hCG keeps the yellow body alive.",
+   "The zygote becomes a morula, then a blastocyst, and implants in the uterus. Then three germ layers separate in the gastrula and differentiate into organs."
+  ],
+  "soruOnce": true
+ },
  "ekosistem": {
   "id": "ekosistem",
   "ders": "biyoloji",
