@@ -15428,5 +15428,237 @@
    "Once the active sites are full, the rate levels off. This is called saturation. The effect of a <b>competitive inhibitor</b> weakens as substrate increases."
   ],
   "soruOnce": true
+ },
+ "hucre-organeller": {
+  "id": "hucre-organeller",
+  "ders": "biyoloji",
+  "konu": "hucre-organeller",
+  "baslik": "Cells and organelles",
+  "ozet": "Try first, then learn the name. Find the organelles, switch to a bacterium and a plant cell, and follow insulin's route.",
+  "adimlar": [
+   {
+    "baslik": "The cell's power plant",
+    "metin": "This is an animal cell. Inside it are <b>organelles</b>, each doing a different job. In hard-working cells like muscle, one of these organelles is especially plentiful.",
+    "sahne": {
+     "tur": "biy2-hucre",
+     "sure": 2,
+     "organeller": [
+      "golgi",
+      "mitokondri",
+      "lizozom"
+     ],
+     "dogru": "mitokondri"
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which organelle makes ATP from food?",
+     "secenekler": [
+      {
+       "yazi": "Golgi apparatus",
+       "neden": "The Golgi packages and ships proteins. It doesn't make ATP."
+      },
+      {
+       "yazi": "Mitochondrion",
+       "dogru": true,
+       "neden": "Mitochondria break down food with oxygen and pass its energy to ATP. Muscle cells use a lot of ATP, so they have many mitochondria."
+      },
+      {
+       "yazi": "Lysosome",
+       "neden": "A lysosome is a vesicle full of digestive enzymes. It doesn't make ATP."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Digestion inside the cell",
+    "metin": "Worn-out organelles and food taken into the cell need to be digested. Small vesicles full of enzymes do this job.",
+    "sahne": {
+     "tur": "biy2-hucre",
+     "sure": 2,
+     "organeller": [
+      "cekirdek",
+      "sentrozom",
+      "lizozom"
+     ],
+     "dogru": "lizozom"
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which organelle digests inside the cell?",
+     "secenekler": [
+      {
+       "yazi": "Nucleus",
+       "neden": "The nucleus holds DNA and runs the cell. It doesn't digest."
+      },
+      {
+       "yazi": "Ribosome",
+       "neden": "A ribosome is a structure without a membrane that makes protein. It doesn't digest."
+      },
+      {
+       "yazi": "Lysosome",
+       "dogru": true,
+       "neden": "The inside of a lysosome is acidic, and digestive enzymes work only there. The lysosome's membrane keeps these enzymes apart from the rest of the cell."
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "A cell without a nucleus",
+    "metin": "Now switch to a bacterium and compare it with the animal cell.",
+    "sahne": {
+     "tur": "biy2-hucre",
+     "etiket": true
+    },
+    "deger": {
+     "bakteri": 0
+    },
+    "kontroller": [
+     {
+      "ad": "bakteri",
+      "etiket": "Show the bacterial cell",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which one is found in a bacterial cell?",
+     "secenekler": [
+      {
+       "yazi": "Ribosome",
+       "dogru": true,
+       "neden": "Every cell has to make protein. So ribosomes, which have no membrane, are found in every cell."
+      },
+      {
+       "yazi": "Mitochondrion",
+       "neden": "A mitochondrion is a membrane-bound organelle. Prokaryotes have no membrane-bound organelles."
+      },
+      {
+       "yazi": "Nuclear membrane",
+       "neden": "A bacterium's DNA floats free in the cytoplasm with no membrane around it."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Plant and animal",
+    "metin": "Now switch to a plant cell and find the differences.",
+    "sahne": {
+     "tur": "biy2-hucre",
+     "etiket": true
+    },
+    "deger": {
+     "bitki": 0
+    },
+    "kontroller": [
+     {
+      "ad": "bitki",
+      "etiket": "Show the plant cell",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which one is found in a plant cell but not in an animal cell?",
+     "secenekler": [
+      {
+       "yazi": "Cell wall",
+       "dogru": true,
+       "neden": "The strong cellulose wall keeps a plant cell from bursting when it takes in water and swells. Animal cells have no such wall."
+      },
+      {
+       "yazi": "Mitochondrion",
+       "neden": "Plant cells need ATP too. Mitochondria are found in both cells."
+      },
+      {
+       "yazi": "Golgi apparatus",
+       "neden": "The Golgi packages proteins in both cells."
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Chloroplasts and mitochondria",
+    "metin": "Turn off the light and look at two organelles in the plant cell.",
+    "sahne": {
+     "tur": "biy2-enerji"
+    },
+    "deger": {
+     "karanlik": 0
+    },
+    "kontroller": [
+     {
+      "ad": "karanlik",
+      "etiket": "Turn off the light",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which is found in a plant cell?",
+     "secenekler": [
+      {
+       "yazi": "Both chloroplasts and mitochondria",
+       "dogru": true,
+       "neden": "A plant makes its food in chloroplasts. But it needs mitochondria to get ATP from that food. At night, photosynthesis stops, but respiration goes on."
+      },
+      {
+       "yazi": "Only chloroplasts",
+       "neden": "See what happens when you turn off the light. The plant lives at night too, and its mitochondria make ATP."
+      },
+      {
+       "yazi": "Only mitochondria",
+       "neden": "A plant cell makes its own food. That is what its chloroplasts are for."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "A protein's journey",
+    "metin": "A pancreas cell makes <b>insulin</b> and secretes it into the blood. For this job, the organelles work together like a production line.",
+    "sahne": {
+     "tur": "biy2-salgi-yolu",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What route does insulin follow until it leaves the cell?",
+     "secenekler": [
+      {
+       "yazi": "Golgi → ER → ribosome → outside",
+       "neden": "The order is backward. The protein is made first on a ribosome and shipped last from the Golgi."
+      },
+      {
+       "yazi": "Ribosome (rough ER) → Golgi → vesicle → outside",
+       "dogru": true,
+       "neden": "The protein is made on a ribosome on the rough ER and packaged in the Golgi. A vesicle fuses with the cell membrane and releases the insulin outside."
+      },
+      {
+       "yazi": "Ribosome → lysosome → Golgi → outside",
+       "neden": "The lysosome digests. It is not on the route of a secreted protein."
+      }
+     ]
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "The cell is the unit of structure and function in living things. Prokaryotes have no membrane-bound nucleus or organelles, and eukaryotes do.",
+   "Ribosomes are found in every cell and make protein. The nucleus runs the cell with the information in DNA.",
+   "Rough ER and the Golgi make and package secreted proteins. Lysosomes digest inside the cell.",
+   "<b>Mitochondria</b> make ATP from food, and <b>chloroplasts</b> make food with light. Plant cells have both.",
+   "Plant cells have a cell wall, chloroplasts and a large central vacuole. Animal cells have a centrosome, and lysosomes are seen mostly in animal cells."
+  ],
+  "soruOnce": true
  }
 }
