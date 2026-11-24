@@ -1391,5 +1391,212 @@
     "e": "The only membrane structure in prokaryotes is the cell membrane. The nuclear membrane and membrane-bound organelles are unique to eukaryotes. Ribosomes, the cell membrane, DNA and cytoplasm are found in every cell."
    }
   ]
+ },
+ "madde-gecisi": {
+  "title": "Transport across the cell membrane",
+  "summary": "How do substances get in and out through the membrane, and when is energy needed?",
+  "cards": [
+   {
+    "h": "The fluid mosaic model",
+    "p": "The cell membrane is made of a double layer of <b>phospholipids</b>, with proteins and carbohydrates among them. The parts of the membrane can slide sideways. That is why the membrane is <b>fluid</b>. Because different parts sit side by side, it is also a <b>mosaic</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='10' y1='97' x2='310' y2='97' stroke='var(--c4)' stroke-width='22' stroke-dasharray='2 12' stroke-opacity='0.7' fill='none'/><line x1='10' y1='123' x2='310' y2='123' stroke='var(--c4)' stroke-width='22' stroke-dasharray='2 12' stroke-opacity='0.7' fill='none'/><line x1='10' y1='80' x2='310' y2='80' stroke='var(--c1)' stroke-width='12' stroke-linecap='round' stroke-dasharray='0 14' fill='none'/><line x1='10' y1='140' x2='310' y2='140' stroke='var(--c1)' stroke-width='12' stroke-linecap='round' stroke-dasharray='0 14' fill='none'/><ellipse cx='100' cy='110' rx='20' ry='45' fill='var(--c5)' fill-opacity='0.6' stroke='var(--c5)' stroke-width='2'/><g fill='none' stroke='var(--c3)' stroke-width='2'><polyline points='100,65 100,50 92,40'/><line x1='100' y1='50' x2='108' y2='40'/></g><g fill='var(--c3)'><circle cx='92' cy='40' r='3'/><circle cx='108' cy='40' r='3'/></g><g fill='var(--c5)' fill-opacity='0.6' stroke='var(--c5)' stroke-width='2'><rect x='238' y='65' width='12' height='90' rx='4'/><rect x='258' y='65' width='12' height='90' rx='4'/></g><rect x='170' y='90' width='6' height='18' fill='var(--c2)'/><ellipse cx='210' cy='154' rx='14' ry='6' fill='var(--c5)' fill-opacity='0.6' stroke='var(--c5)'/><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='60' y='25'>carbohydrate</text><text x='254' y='25'>channel protein</text><text x='100' y='175'>protein</text><text x='173' y='175'>cholesterol</text></g><g stroke='var(--muted)'><line x1='70' y1='30' x2='90' y2='38'/><line x1='254' y1='30' x2='254' y2='60'/></g><text x='10' y='194' font-size='12' fill='var(--muted)'>phospholipid bilayer: parts slide sideways</text></svg>",
+    "key": "Singer and Nicolson proposed the fluid mosaic model in 1972. Animal cell membranes also contain cholesterol."
+   },
+   {
+    "h": "Selective permeability",
+    "p": "The membrane is <b>selectively permeable</b>. Small, fat-soluble substances pass straight through it. Glucose and ions pass with the help of membrane proteins. Very large substances are carried in vesicles.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='madde-gecisi-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><rect x='0' y='90' width='320' height='30' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)'/><g fill='var(--c5)' fill-opacity='0.6' stroke='var(--c5)'><rect x='172' y='84' width='8' height='42' rx='3'/><rect x='190' y='84' width='8' height='42' rx='3'/></g><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='45' y='35'>O₂</text><text x='110' y='35'>CO₂</text><text x='185' y='35'>glucose</text><text x='270' y='35'>large molecule</text></g><g stroke='var(--c3)' stroke-width='2' marker-end='url(#madde-gecisi-2)'><line x1='45' y1='45' x2='45' y2='160'/><line x1='110' y1='45' x2='110' y2='160'/><line x1='185' y1='45' x2='185' y2='160'/></g><circle cx='270' cy='62' r='14' fill='var(--c2)' fill-opacity='0.4' stroke='var(--c2)' stroke-width='2'/><g stroke='var(--c2)' stroke-width='3'><line x1='262' y1='97' x2='278' y2='113'/><line x1='278' y1='97' x2='262' y2='113'/></g><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='77' y='182'>passes easily</text><text x='185' y='182'>passes via protein</text><text x='272' y='182'>by vesicle</text></g></svg>",
+    "key": "Small substances like O₂ and CO₂ pass easily. Charged or large substances pass through proteins, and very large ones in vesicles."
+   },
+   {
+    "h": "Diffusion",
+    "p": "The spontaneous spreading of a substance from where its concentration is high to where it is low is called <b>diffusion</b>. Diffusion uses no ATP. Once the concentrations are equal, net movement stops.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='madde-gecisi-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><text x='82' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>Start</text><text x='237' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>Equilibrium</text><rect x='15' y='40' width='135' height='90' rx='6' fill='var(--panel)' stroke='var(--ink)'/><rect x='170' y='40' width='135' height='90' rx='6' fill='var(--panel)' stroke='var(--ink)'/><g fill='var(--c2)'><circle cx='28' cy='52' r='4'/><circle cx='45' cy='60' r='4'/><circle cx='62' cy='50' r='4'/><circle cx='30' cy='75' r='4'/><circle cx='50' cy='85' r='4'/><circle cx='68' cy='72' r='4'/><circle cx='25' cy='100' r='4'/><circle cx='42' cy='110' r='4'/><circle cx='60' cy='98' r='4'/><circle cx='72' cy='118' r='4'/><circle cx='30' cy='120' r='4'/><circle cx='55' cy='120' r='4'/><circle cx='100' cy='70' r='4'/><circle cx='130' cy='105' r='4'/><circle cx='115' cy='120' r='4'/></g><g fill='var(--c2)'><circle cx='185' cy='55' r='4'/><circle cx='218' cy='60' r='4'/><circle cx='250' cy='52' r='4'/><circle cx='285' cy='58' r='4'/><circle cx='195' cy='85' r='4'/><circle cx='230' cy='80' r='4'/><circle cx='265' cy='90' r='4'/><circle cx='292' cy='80' r='4'/><circle cx='182' cy='112' r='4'/><circle cx='212' cy='118' r='4'/><circle cx='245' cy='108' r='4'/><circle cx='280' cy='115' r='4'/><circle cx='205' cy='70' r='4'/><circle cx='270' cy='70' r='4'/><circle cx='235' cy='100' r='4'/></g><line x1='40' y1='150' x2='125' y2='150' stroke='var(--c2)' stroke-width='2' marker-end='url(#madde-gecisi-3)'/><text x='82' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>high to low</text><text x='237' y='155' font-size='12' fill='var(--ink)' text-anchor='middle'>net movement stops</text><text x='160' y='192' font-size='13' fill='var(--muted)' text-anchor='middle'>no ATP used</text></svg>",
+    "key": "Diffusion speeds up as temperature, concentration difference and surface area increase. It also speeds up as particles get smaller. O₂ passing into the blood in the lungs is an example."
+   },
+   {
+    "h": "Facilitated diffusion",
+    "p": "Glucose and ions cannot cross the membrane on their own. They still move from high to low, but through <b>channel</b> or <b>carrier proteins</b>. This is called <b>facilitated diffusion</b>, and it uses no ATP.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='madde-gecisi-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><rect x='0' y='85' width='320' height='35' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)'/><g fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1.5'><rect x='66' y='78' width='10' height='50' rx='3'/><rect x='86' y='78' width='10' height='50' rx='3'/><rect x='200' y='75' width='40' height='55' rx='12'/></g><g stroke='var(--ink)' stroke-width='1.5' marker-end='url(#madde-gecisi-4)'><line x1='81' y1='40' x2='81' y2='160'/><line x1='220' y1='40' x2='220' y2='160'/></g><g fill='var(--c4)'><circle cx='60' cy='40' r='5'/><circle cx='100' cy='45' r='5'/><circle cx='110' cy='62' r='5'/><circle cx='50' cy='62' r='5'/><circle cx='81' cy='102' r='5'/><circle cx='110' cy='150' r='5'/></g><g fill='var(--c1)'><circle cx='195' cy='40' r='5'/><circle cx='245' cy='45' r='5'/><circle cx='258' cy='62' r='5'/><circle cx='185' cy='60' r='5'/><circle cx='250' cy='150' r='5'/></g><polygon points='229,102 224.5,109.8 215.5,109.8 211,102 215.5,94.2 224.5,94.2' fill='var(--c1)' fill-opacity='0.6' stroke='var(--c1)'/><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='81' y='180'>channel protein</text><text x='220' y='180'>carrier protein</text></g><g font-size='12' fill='var(--muted)' text-anchor='end'><text x='312' y='45'>high</text><text x='312' y='160'>low</text></g></svg>",
+    "key": "Once all the carriers are busy, the rate of movement stops rising."
+   },
+   {
+    "h": "Osmosis: the diffusion of water",
+    "p": "The movement of water across a selectively permeable membrane is called <b>osmosis</b>. Water moves, on balance, from the side with less solute to the side with more solute. In other words, water flows from where water is plentiful to where it is scarce.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='madde-gecisi-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><text x='160' y='28' font-size='12' fill='var(--muted)' text-anchor='middle'>selectively permeable membrane</text><rect x='40' y='95' width='120' height='65' fill='var(--c1)' fill-opacity='0.2'/><rect x='160' y='70' width='120' height='90' fill='var(--c1)' fill-opacity='0.2'/><path d='M40,40 L40,160 L280,160 L280,40' fill='none' stroke='var(--ink)' stroke-width='2'/><line x1='160' y1='36' x2='160' y2='160' stroke='var(--ink)' stroke-width='2' stroke-dasharray='4 3'/><g fill='var(--c2)'><circle cx='185' cy='90' r='5'/><circle cx='215' cy='105' r='5'/><circle cx='250' cy='92' r='5'/><circle cx='195' cy='135' r='5'/><circle cx='235' cy='140' r='5'/><circle cx='265' cy='120' r='5'/><circle cx='110' cy='140' r='5'/></g><line x1='105' y1='118' x2='215' y2='118' stroke='var(--c1)' stroke-width='2.5' marker-end='url(#madde-gecisi-5)'/><text x='130' y='112' font-size='13' fill='var(--c1)' text-anchor='middle'>water</text><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='100' y='180'>less solute</text><text x='220' y='180'>more solute</text></g><text x='220' y='62' font-size='12' fill='var(--muted)' text-anchor='middle'>level rises</text></svg>",
+    "key": "Water crosses the membrane in both directions. Osmosis describes the direction of net flow. Most water passes through channels called aquaporins."
+   },
+   {
+    "h": "Animal cells: three environments",
+    "p": "In a <b>hypotonic</b> environment, water enters the cell. A red blood cell swells and can burst. This is called hemolysis. In an <b>isotonic</b> environment, there is no net water movement. In a <b>hypertonic</b> environment, water leaves the cell and the red blood cell shrinks.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='madde-gecisi-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='55' y='30'>Hypotonic</text><text x='160' y='30'>Isotonic</text><text x='265' y='30'>Hypertonic</text></g><circle cx='55' cy='90' r='30' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='2'/><circle cx='160' cy='90' r='22' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='2'/><circle cx='160' cy='90' r='9' fill='var(--c2)' fill-opacity='0.2'/><polygon points='284,90 278.5,93.6 281.5,99.5 274.9,99.9 274.5,106.5 268.6,103.5 265,109 261.4,103.5 255.5,106.5 255.1,99.9 248.5,99.5 251.5,93.6 246,90 251.5,86.4 248.5,80.5 255.1,80.1 255.5,73.5 261.4,76.5 265,71 268.6,76.5 274.5,73.5 274.9,80.1 281.5,80.5 278.5,86.4' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='2'/><g stroke='var(--c1)' stroke-width='2' marker-end='url(#madde-gecisi-6)'><line x1='6' y1='90' x2='22' y2='90'/><line x1='104' y1='90' x2='88' y2='90'/><line x1='243' y1='90' x2='228' y2='90'/><line x1='287' y1='90' x2='302' y2='90'/></g><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='55' y='145'>water enters</text><text x='160' y='145'>balance</text><text x='265' y='145'>water leaves</text></g><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='55' y='163'>swells, bursts</text><text x='160' y='163'>normal</text><text x='265' y='163'>shrinks</text></g><text x='160' y='190' font-size='12' fill='var(--muted)' text-anchor='middle'>a red blood cell in three environments</text></svg>",
+    "key": "That is why the saline given through an IV is isotonic and contains 0.9% NaCl.",
+    "etk": {
+     "tur": "osmoz",
+     "c": 0.9
+    }
+   },
+   {
+    "h": "Plant cells: turgor and plasmolysis",
+    "p": "A plant cell in a hypotonic environment takes in water and presses against its cell wall. This is called <b>turgor</b>. In a hypertonic environment, it loses water and its membrane pulls away from the wall. This is called <b>plasmolysis</b>. The cell returning to normal in pure water is called <b>deplasmolysis</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='57' y='35'>Hypotonic</text><text x='160' y='35'>Isotonic</text><text x='263' y='35'>Hypertonic</text></g><g fill='none' stroke='var(--c3)' stroke-width='4'><rect x='15' y='50' width='85' height='80'/><rect x='118' y='50' width='85' height='80'/><rect x='221' y='50' width='85' height='80'/></g><rect x='19' y='54' width='77' height='72' fill='var(--c3)' fill-opacity='0.25' stroke='var(--ink)'/><rect x='27' y='62' width='61' height='56' rx='6' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><rect x='123' y='55' width='75' height='70' fill='var(--c3)' fill-opacity='0.25' stroke='var(--ink)'/><rect x='136' y='68' width='49' height='44' rx='6' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><ellipse cx='263' cy='90' rx='26' ry='22' fill='var(--c3)' fill-opacity='0.25' stroke='var(--ink)'/><ellipse cx='263' cy='90' rx='12' ry='9' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='57' y='148'>water enters</text><text x='160' y='148'>no net movement</text><text x='263' y='148'>water leaves</text></g><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='57' y='166'>turgor</text><text x='160' y='166'>limp</text><text x='263' y='166'>plasmolysis</text></g><text x='160' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>green frame: cell wall · blue: vacuole</text></svg>",
+    "key": "Plants wilt in salty soil because of plasmolysis.",
+    "once": {
+     "soru": "What happens if we put a plant cell in pure water?",
+     "secenekler": [
+      {
+       "yazi": "It swells but doesn't burst",
+       "dogru": true,
+       "neden": "Water flows in, but there is a strong cell wall outside the membrane. The cell presses against the wall, and the wall's resistance stops more water from entering."
+      },
+      {
+       "yazi": "It swells and bursts",
+       "neden": "A red blood cell can burst, but a plant cell has a wall outside its membrane."
+      },
+      {
+       "yazi": "It shrinks",
+       "neden": "Pure water is more dilute than the inside of the cell. So water does not leave the cell, it flows in."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Osmotic pressure and suction force",
+    "p": "A solution's power to draw water by osmosis is called <b>osmotic pressure</b>, and it rises with concentration. In a plant cell, the <b>suction force</b> is found by subtracting turgor pressure from osmotic pressure.",
+    "svg": "<svg viewBox='0 0 320 200'><g font-size='11' fill='var(--ink)'><line x1='12' y1='14' x2='26' y2='14' stroke='var(--c1)' stroke-width='3'/><text x='30' y='18'>osmotic pressure</text><line x1='118' y1='14' x2='132' y2='14' stroke='var(--c3)' stroke-width='3'/><text x='136' y='18'>turgor pressure</text><line x1='224' y1='14' x2='238' y2='14' stroke='var(--c2)' stroke-width='3'/><text x='242' y='18'>suction force</text></g><g stroke='var(--ink)'><line x1='40' y1='32' x2='40' y2='160'/><line x1='40' y1='160' x2='300' y2='160'/></g><line x1='280' y1='80' x2='280' y2='160' stroke='var(--muted)' stroke-dasharray='3 3'/><line x1='40' y1='50' x2='280' y2='80' stroke='var(--c1)' stroke-width='2.5'/><line x1='40' y1='160' x2='280' y2='80' stroke='var(--c3)' stroke-width='2.5'/><line x1='40' y1='50' x2='280' y2='160' stroke='var(--c2)' stroke-width='2.5'/><g font-size='11' fill='var(--muted)' text-anchor='middle'><text x='40' y='176'>plasmolysis</text><text x='280' y='176'>full turgor</text></g><text x='160' y='194' font-size='11' fill='var(--ink)' text-anchor='middle'>as the cell takes in water →</text></svg>",
+    "key": "As the cell takes in water, turgor rises and suction force falls. At full turgor, the suction force is zero.",
+    "once": {
+     "soru": "Which plant cell draws in water more strongly?",
+     "secenekler": [
+      {
+       "yazi": "A plasmolyzed cell",
+       "dogru": true,
+       "neden": "This cell's inside is concentrated, and the wall does not press on it at all. So its pull for water is highest."
+      },
+      {
+       "yazi": "A cell at full turgor",
+       "neden": "This cell is full of water, and the wall presses back on it. It can't take in more water."
+      },
+      {
+       "yazi": "Both the same",
+       "neden": "Both the concentration inside the two cells and the pressure from the wall differ."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Active transport and the Na-K pump",
+    "p": "Moving a substance from low to high, that is \"uphill\", is called <b>active transport</b>. It needs a carrier protein and ATP. For example, the <b>Na⁺-K⁺ pump</b> uses each ATP to push 3 Na⁺ ions out and bring 2 K⁺ ions in.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='madde-gecisi-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><rect x='0' y='85' width='320' height='35' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)'/><rect x='138' y='70' width='46' height='65' rx='10' fill='var(--c5)' fill-opacity='0.4' stroke='var(--c5)' stroke-width='2'/><line x1='150' y1='130' x2='150' y2='55' stroke='var(--c4)' stroke-width='2.5' marker-end='url(#madde-gecisi-8)'/><line x1='172' y1='55' x2='172' y2='130' stroke='var(--c3)' stroke-width='2.5' marker-end='url(#madde-gecisi-8)'/><text x='144' y='50' font-size='13' fill='var(--c4)' text-anchor='end'>3 Na⁺</text><text x='178' y='150' font-size='13' fill='var(--c3)'>2 K⁺</text><g fill='var(--c4)'><circle cx='40' cy='62' r='6'/><circle cx='75' cy='52' r='6'/><circle cx='235' cy='58' r='6'/><circle cx='262' cy='68' r='6'/><circle cx='292' cy='52' r='6'/><circle cx='105' cy='66' r='6'/></g><g fill='var(--c3)'><circle cx='40' cy='148' r='6'/><circle cx='72' cy='165' r='6'/><circle cx='232' cy='162' r='6'/><circle cx='272' cy='148' r='6'/><circle cx='298' cy='170' r='6'/></g><text x='108' y='168' font-size='13' fill='var(--c2)' text-anchor='end'>ATP</text><line x1='112' y1='160' x2='136' y2='138' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#madde-gecisi-8)'/><text x='10' y='28' font-size='12' fill='var(--ink)'>outside: more Na⁺</text><text x='10' y='192' font-size='12' fill='var(--ink)'>inside: more K⁺</text><text x='310' y='28' font-size='12' fill='var(--muted)' text-anchor='end'>low to high: uphill</text></svg>",
+    "key": "Passive transport also happens across the membrane of a dead cell, but active transport happens only in living cells. A root taking up minerals from the soil is also active transport."
+   },
+   {
+    "h": "Endocytosis and exocytosis",
+    "p": "Large substances are carried in <b>vesicles</b> made from the membrane, using ATP. Taking substances in is called <b>endocytosis</b>. Taking in solids is phagocytosis, and taking in fluids is pinocytosis. Sending substances out is called <b>exocytosis</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><ellipse cx='57' cy='56' rx='16' ry='9' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)'/><g fill='none' stroke='var(--ink)' stroke-width='3'><path d='M10,90 L30,90 C30,60 35,42 45,38'/><path d='M105,90 L85,90 C85,60 80,42 70,38'/><path d='M110,70 L145,70 C145,100 175,100 175,70 L210,70'/><path d='M215,70 L245,70'/><path d='M275,70 L310,70'/><path d='M245,70 C245,95 275,95 275,70'/></g><g fill='var(--c1)'><circle cx='160' cy='82' r='3'/><circle cx='152' cy='77' r='3'/><circle cx='168' cy='79' r='3'/><circle cx='130' cy='55' r='3'/><circle cx='190' cy='58' r='3'/></g><g fill='var(--c4)'><circle cx='260' cy='80' r='3.5'/><circle cx='254' cy='58' r='3.5'/><circle cx='268' cy='46' r='3.5'/><circle cx='262' cy='34' r='3.5'/></g><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='57' y='125'>Phagocytosis</text><text x='160' y='125'>Pinocytosis</text><text x='262' y='125'>Exocytosis</text></g><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='57' y='143'>solid particle</text><text x='160' y='143'>fluid droplet</text><text x='262' y='143'>secretion out</text></g><line x1='15' y1='155' x2='205' y2='155' stroke='var(--line)'/><text x='110' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>Endocytosis (taking in)</text><text x='262' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>sending out</text><text x='160' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>Top: outside the cell · Bottom: inside the cell · ATP is used</text></svg>",
+    "key": "Insulin secretion is an example of exocytosis. Exocytosis enlarges the membrane, and endocytosis shrinks it. Transport by vesicles happens only in living cells.",
+    "once": {
+     "soru": "How does a white blood cell take in a bacterium?",
+     "secenekler": [
+      {
+       "yazi": "It wraps it in membrane, in a vesicle",
+       "dogru": true,
+       "neden": "A bacterium is too big to pass through any channel. The white blood cell wraps it in membrane and takes it in inside a vesicle."
+      },
+      {
+       "yazi": "Through a channel protein",
+       "neden": "Channels are for small particles such as ions and water. A bacterium is much bigger."
+      },
+      {
+       "yazi": "By diffusion",
+       "neden": "Only small particles cross the membrane by diffusion. A bacterium can't seep through."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• The membrane has a fluid mosaic structure and is selectively permeable.<br>• Diffusion, facilitated diffusion and osmosis are passive transport. Substances move from high to low, and no ATP is used.<br>• In active transport, substances are moved from low to high. Proteins and ATP are needed.<br>• Large substances are carried in vesicles by endocytosis and exocytosis.",
+    "svg": "<svg viewBox='0 0 320 200'><g stroke='var(--ink)' stroke-width='1.5'><line x1='160' y1='40' x2='80' y2='70'/><line x1='160' y1='40' x2='240' y2='70'/></g><rect x='105' y='14' width='110' height='28' rx='8' fill='var(--acc)' fill-opacity='0.25' stroke='var(--acc)'/><text x='160' y='33' font-size='13' fill='var(--ink)' text-anchor='middle'>Membrane transport</text><rect x='20' y='70' width='120' height='28' rx='8' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><rect x='180' y='70' width='120' height='28' rx='8' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)'/><g font-size='13' fill='var(--ink)' text-anchor='middle'><text x='80' y='89'>Passive: no ATP</text><text x='240' y='89'>Active: uses ATP</text></g><g font-size='12' fill='var(--ink)' text-anchor='middle'><text x='80' y='122'>diffusion</text><text x='80' y='142'>facilitated diff.</text><text x='80' y='162'>osmosis</text><text x='240' y='122'>pumps (Na-K)</text><text x='240' y='142'>endocytosis</text><text x='240' y='162'>exocytosis</text></g><g font-size='12' fill='var(--muted)' text-anchor='middle'><text x='80' y='188'>high to low</text><text x='240' y='188'>low to high / vesicle</text></g></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "ayir",
+    "q": "Which kinds of transport use ATP? Put each one in the right group.",
+    "gruplar": [
+     "Passive (no ATP)",
+     "Active (uses ATP)"
+    ],
+    "ogeler": [
+     [
+      "Diffusion",
+      0
+     ],
+     [
+      "Osmosis",
+      0
+     ],
+     [
+      "Facilitated diffusion",
+      0
+     ],
+     [
+      "Na<sup>+</sup>-K<sup>+</sup> pump",
+      1
+     ],
+     [
+      "Phagocytosis",
+      1
+     ],
+     [
+      "Exocytosis",
+      1
+     ]
+    ],
+    "e": "Diffusion, osmosis and facilitated diffusion happen on their own, from high to low. The Na-K pump moves substances from low to high, and phagocytosis and exocytosis form vesicles. These three use ATP."
+   },
+   {
+    "tur": "sayi",
+    "q": "A plant cell has an osmotic pressure of 12 atm and a turgor pressure of 5 atm. What is its suction force in atm?",
+    "cevap": 7,
+    "birim": "atm",
+    "e": "Suction force is osmotic pressure minus turgor pressure: 12 − 5 = 7 atm. As the cell takes in water, turgor rises and suction force falls."
+   },
+   {
+    "tur": "sirala",
+    "q": "Put in order what happens to a plant cell placed in salt water.",
+    "ogeler": [
+     "The outside becomes hypertonic to the cell",
+     "Water leaves the vacuole by osmosis",
+     "The vacuole shrinks and turgor pressure drops",
+     "The membrane pulls away from the wall (plasmolysis)"
+    ],
+    "e": "When the outside is more concentrated, water leaves the cell, the vacuole shrinks and turgor is lost. Finally the membrane pulls away from the wall. If the cell is put in pure water, the process reverses. This is called deplasmolysis."
+   },
+   {
+    "tur": "eslestir",
+    "q": "Match each event with its kind of transport.",
+    "ciftler": [
+     [
+      "A white blood cell engulfing a bacterium",
+      "Phagocytosis"
+     ],
+     [
+      "A cell taking in a fluid droplet",
+      "Pinocytosis"
+     ],
+     [
+      "A cell secreting insulin",
+      "Exocytosis"
+     ],
+     [
+      "Water crossing the membrane",
+      "Osmosis"
+     ]
+    ],
+    "e": "Engulfing a solid particle is called phagocytosis, and taking in a fluid droplet is called pinocytosis. A vesicle fusing with the membrane and emptying its contents is called exocytosis. The diffusion of water across the membrane is osmosis."
+   }
+  ]
  }
 }

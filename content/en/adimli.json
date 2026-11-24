@@ -15660,5 +15660,334 @@
    "Plant cells have a cell wall, chloroplasts and a large central vacuole. Animal cells have a centrosome, and lysosomes are seen mostly in animal cells."
   ],
   "soruOnce": true
+ },
+ "madde-gecisi": {
+  "id": "madde-gecisi",
+  "ders": "biyoloji",
+  "konu": "madde-gecisi",
+  "baslik": "Transport across the cell membrane",
+  "ozet": "Try first, then learn the name. Send particles to the membrane and put a red blood cell in different waters.",
+  "adimlar": [
+   {
+    "baslik": "The cell membrane",
+    "metin": "Look at the heads and tails of the <b>phospholipids</b> in the membrane.",
+    "sahne": {
+     "tur": "zar-model"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which part of the phospholipids faces the water on both sides of the membrane?",
+     "secenekler": [
+      {
+       "yazi": "The heads",
+       "dogru": true,
+       "neden": "A phospholipid's head is water-loving (hydrophilic), and its tails are water-avoiding (hydrophobic). So the heads face outward, toward the water on both sides. The tails face inward, toward each other."
+      },
+      {
+       "yazi": "The tails",
+       "neden": "The tails are like oil and avoid water. Notice where the tails point in the picture."
+      },
+      {
+       "yazi": "They line up randomly",
+       "neden": "Look at the picture: both layers have the same arrangement. The water-loving part always turns toward water."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Selective permeability",
+    "metin": "Tap the particles on the left and send each one to the membrane. See which ones can pass and how.",
+    "sahne": {
+     "tur": "so-zar-dene"
+    },
+    "deger": {
+     "o2": 0,
+     "glikoz": 0,
+     "protein": 0
+    },
+    "kontroller": [
+     {
+      "ad": "o2",
+      "etiket": "O₂",
+      "min": 0,
+      "max": 1,
+      "tur": "surukle"
+     },
+     {
+      "ad": "glikoz",
+      "etiket": "Glucose",
+      "min": 0,
+      "max": 1,
+      "tur": "surukle"
+     },
+     {
+      "ad": "protein",
+      "etiket": "Protein",
+      "min": 0,
+      "max": 1,
+      "tur": "surukle"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "Send O₂ to the membrane",
+       "hedef": {
+        "o2": 1
+       },
+       "coz": [
+        {
+         "o2": 1
+        }
+       ],
+       "tamam": "Small, uncharged O₂ passed straight between the phospholipids."
+      },
+      {
+       "yazi": "Send glucose to the membrane",
+       "hedef": {
+        "glikoz": 1
+       },
+       "coz": [
+        {
+         "glikoz": 1
+        }
+       ],
+       "tamam": "Glucose couldn't pass through the oily layer. It passed through a carrier protein in the membrane."
+      },
+      {
+       "yazi": "Send the protein to the membrane",
+       "hedef": {
+        "protein": 1
+       },
+       "coz": [
+        {
+         "protein": 1
+        }
+       ],
+       "tamam": "The protein is too big to pass either between the phospholipids or through the carrier. Large substances like this are carried in vesicles."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Diffusion",
+    "metin": "There are different numbers of oxygen (O₂) molecules on the two sides of the membrane. Small, uncharged O₂ molecules can easily pass between the phospholipids.",
+    "sahne": {
+     "tur": "gecis",
+     "sure": 5,
+     "solAd": "çok O₂",
+     "sagAd": "az O₂",
+     "gruplar": [
+      {
+       "ad": "O₂",
+       "renk": "var(--c1)",
+       "sol": 24,
+       "sag": 4,
+       "gecer": "evet"
+      }
+     ]
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What do you think happens when you press play?",
+     "secenekler": [
+      {
+       "yazi": "They move from the crowded side to the other, and the numbers even out",
+       "dogru": true,
+       "neden": "Particles are always moving, and more of them hit and cross the membrane from the side where they are crowded. Once the numbers are equal, crossing continues both ways, but net movement stops."
+      },
+      {
+       "yazi": "They move from the sparse side to the crowded side",
+       "neden": "This doesn't happen on its own. It needs energy, as you will see in later steps."
+      },
+      {
+       "yazi": "They don't cross at all",
+       "neden": "O₂ is small and uncharged, so it can cross the membrane."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Membrane lab",
+    "metin": "On the left of the membrane are O₂ molecules and Na⁺ ions, all moving randomly all the time. Watch the counts and the crossings. If needed, put a channel protein in the membrane or refill the container.",
+    "sahne": {
+     "tur": "sim-zar"
+    },
+    "deger": {
+     "kanal": 0,
+     "yenile": 0,
+     "tur": 0,
+     "o2fark": 20,
+     "nasag": 0
+    },
+    "kontroller": [
+     {
+      "ad": "kanal",
+      "etiket": "Channel protein",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "yenile",
+      "etiket": "Refill",
+      "min": 0,
+      "max": 1,
+      "tur": "dugme"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "Watch O₂ <b>even out</b> on both sides. Do the molecules stop once they're even?",
+       "hedef": {
+        "o2fark": [
+         0,
+         2
+        ]
+       },
+       "coz": [
+        {
+         "kanal": 0
+        }
+       ],
+       "tamam": "O₂ spread from where it was crowded to where it was sparse. This is called <b>diffusion</b>, and no ATP is used. Once even, the molecules still cross, but about equally in both directions, so <b>net</b> movement stopped."
+      },
+      {
+       "yazi": "Get Na⁺ ions to the <b>right</b> of the membrane.",
+       "hedef": {
+        "kanal": 1,
+        "nasag": [
+         3,
+         12
+        ]
+       },
+       "coz": [
+        {
+         "kanal": 1
+        }
+       ],
+       "tamam": "Charged Na⁺ ions can't pass through the oily middle of the phospholipids. When the channel protein opened, they moved from high to low, again with no ATP used. This is called <b>facilitated diffusion</b>."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Osmosis",
+    "metin": "The inside of a red blood cell is like 0.9% salt water. Now we will put the red blood cell in <b>pure water</b>.",
+    "sahne": {
+     "tur": "osmoz",
+     "sure": 3,
+     "dis": 0
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to the red blood cell in pure water?",
+     "secenekler": [
+      {
+       "yazi": "It swells",
+       "dogru": true,
+       "neden": "There is no solute outside, and water is plentiful. So water moves, on balance, into the red blood cell, and the cell swells. If it swells too much, it can burst."
+      },
+      {
+       "yazi": "It shrinks",
+       "neden": "For it to shrink, water would have to leave. But water moves from where it is plentiful to where it is scarce."
+      },
+      {
+       "yazi": "Nothing changes",
+       "neden": "The inside and outside of the cell have different concentrations. Water flows in the direction that evens out this difference."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Osmosis",
+    "metin": "Now you set it. Make the outside salty enough for the red blood cell to lose water and shrink.",
+    "sahne": {
+     "tur": "osmoz"
+    },
+    "deger": {
+     "tuz": 9
+    },
+    "kontroller": [
+     {
+      "ad": "tuz",
+      "etiket": "Salt outside",
+      "min": 0,
+      "max": 20,
+      "carpan": 0.1,
+      "onek": "%"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "tuz": [
+       10,
+       20
+      ]
+     },
+     "tamam": "The outside is now saltier than the inside of the cell. This is called a <b>hypertonic</b> environment. Water leaves the cell, and the red blood cell shrinks."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Pumps and active transport",
+    "metin": "A cell keeps far more potassium (K⁺) ions inside than outside. <b>Pump</b> proteins in the membrane make this possible.",
+    "sahne": {
+     "tur": "gecis",
+     "sure": 5,
+     "pompa": true,
+     "solAd": "hücre dışı (az K⁺)",
+     "sagAd": "hücre içi (çok K⁺)",
+     "gruplar": [
+      {
+       "ad": "K⁺",
+       "renk": "var(--c5)",
+       "r": 4.5,
+       "sol": 10,
+       "sag": 14,
+       "gecer": "pompa",
+       "sonSol": 2
+      }
+     ]
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "The pump will move K⁺ ions from where they are few to where they are many. What does this need?",
+     "secenekler": [
+      {
+       "yazi": "Energy (ATP)",
+       "dogru": true,
+       "neden": "Moving a substance from where it is scarce to where it is plentiful is like pushing something uphill. ATP supplies the energy needed."
+      },
+      {
+       "yazi": "Nothing",
+       "neden": "Spontaneous movement is always from high to low. Here the direction is the opposite."
+      },
+      {
+       "yazi": "Just opening a channel",
+       "neden": "A channel only opens a door. Particles still move from high to low."
+      }
+     ]
+    },
+    "kart": 9
+   }
+  ],
+  "kapanis": [
+   "The cell membrane is made of a phospholipid bilayer with proteins floating in it. This is called the <b>fluid mosaic model</b>.",
+   "In <b>diffusion</b>, particles move from high to low without using energy. Small, uncharged particles pass straight through the membrane.",
+   "In <b>facilitated diffusion</b>, particles such as ions move through channel or carrier proteins, still from high to low.",
+   "In <b>active transport</b>, pump proteins use ATP and move particles from low to high.",
+   "In <b>osmosis</b>, water moves from a less salty environment to a saltier one. A red blood cell swells in a hypotonic environment and shrinks in a hypertonic one."
+  ],
+  "soruOnce": true
  }
 }
