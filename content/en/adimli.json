@@ -8248,5 +8248,740 @@
    "In a <b>physical</b> change the substance stays the same, as in melting and dissolving. In a <b>chemical</b> change a new substance forms, as in burning and rusting."
   ],
   "soruOnce": true
+ },
+ "atom-modelleri": {
+  "id": "atom-modelleri",
+  "ders": "kimya",
+  "konu": "atom-modelleri",
+  "baslik": "The history of atomic models",
+  "ozet": "Try it first, then learn its name. Deflect a cathode ray, fire particles at gold foil and drop an electron to a lower level.",
+  "adimlar": [
+   {
+    "baslik": "Cathode rays",
+    "metin": "In 1897 J. J. Thomson passed cathode rays between two charged plates in a tube with the air pumped out.",
+    "sahne": {
+     "tur": "kim2-katot",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which plate does the ray bend toward?",
+     "secenekler": [
+      {
+       "yazi": "The positive (+) plate",
+       "dogru": true,
+       "neden": "The ray was pulled toward the positive plate, so it is made of negatively charged particles. These particles are called electrons. Since electrons come from atoms, the atom can be divided, and Dalton's solid sphere falls short."
+      },
+      {
+       "yazi": "The negative (−) plate",
+       "neden": "Opposite charges attract and like charges repel. Which plate did the ray move toward?"
+      },
+      {
+       "yazi": "It does not bend",
+       "neden": "An uncharged ray would not bend. This ray is made of charged particles."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Plum pudding",
+    "metin": "This sphere in Thomson's pudding model has 6 units of positive charge. Add electrons to make the atom neutral.",
+    "sahne": {
+     "tur": "kim2-thomson"
+    },
+    "deger": {
+     "e": 2
+    },
+    "kontroller": [
+     {
+      "ad": "e",
+      "etiket": "Electron",
+      "min": 0,
+      "max": 10,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "e": 6
+     },
+     "tamam": "6 negative charges balance 6 positive charges, and the atom as a whole has no charge. For Thomson, the positive charge was spread throughout the sphere."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "The gold foil experiment",
+    "metin": "In 1909, under Rutherford's direction, Geiger and Marsden fired positively charged alpha particles at a very thin gold foil. By Thomson's model, nearly all of them should have gone straight through.",
+    "sahne": {
+     "tur": "kim2-altin",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What do you think the particles did?",
+     "secenekler": [
+      {
+       "yazi": "Most passed, a few bounced back",
+       "dogru": true,
+       "neden": "Most particles going straight through shows that most of the atom is empty space. The drawing exaggerates the particles bouncing back. In reality only about 1 in 8000 bounced back."
+      },
+      {
+       "yazi": "All went straight through",
+       "neden": "That is what Thomson's model predicted, but the experiment gave a different result."
+      },
+      {
+       "yazi": "Most bounced back",
+       "neden": "The foil is very thin, and the atom is mostly empty space. So most particles hit nothing."
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Aim at the nucleus",
+    "metin": "Bring the alpha particle closer to the nucleus and make it bounce back.",
+    "sahne": {
+     "tur": "kim2-nisan",
+     "sure": 4
+    },
+    "deger": {
+     "b": 40
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Distance to nucleus",
+      "min": 0,
+      "max": 60,
+      "adim": 5
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "b": [
+       0,
+       5
+      ]
+     },
+     "tamam": "Only a particle that gets very close to the nucleus is pushed back by its positive charge. The nucleus is about 100 000 times smaller than the atom, so this is very rare. Most particles pass through empty space.",
+     "ipucu": "Reduce the distance and play again."
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Bohr's levels",
+    "metin": "For Bohr, hydrogen's electron can only be in certain levels. The electron is now in level 3. Drop it to level 2.",
+    "sahne": {
+     "tur": "kim2-bohr"
+    },
+    "deger": {
+     "n": 3
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Electron's level",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 2
+     },
+     "tamam": "As the electron dropped to the lower level, it gave off the energy difference as light of a certain color. A drop from level 3 to level 2 gives red light (656 nm), and from level 4 to level 2 blue-green light (486 nm). This is how Bohr explained hydrogen's line spectrum."
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "The electron cloud",
+    "metin": "Quantum mechanics was built in the 1920s. Use the switch to go from Bohr's orbit to the modern model.",
+    "sahne": {
+     "tur": "kim2-bulut"
+    },
+    "deger": {
+     "bulut": 0
+    },
+    "kontroller": [
+     {
+      "ad": "bulut",
+      "etiket": "Electron cloud",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "In the modern model, which is true about the electron?",
+     "secenekler": [
+      {
+       "yazi": "Its position is known only as a probability",
+       "dogru": true,
+       "neden": "In quantum mechanics, an electron's position and speed cannot both be known exactly at the same time. So only probability is calculated. In the dark parts of the cloud the chance of finding it is high."
+      },
+      {
+       "yazi": "It moves on a circle",
+       "neden": "That was Bohr's idea. In the modern model there is no exact orbit."
+      },
+      {
+       "yazi": "It sits inside the nucleus",
+       "neden": "The nucleus holds protons and neutrons. Electrons are around the nucleus."
+      }
+     ]
+    },
+    "kart": 10
+   }
+  ],
+  "kapanis": [
+   "For <b>Dalton</b> (1803-1808), the atom is a solid sphere that cannot be divided.",
+   "In 1897 <b>Thomson</b> showed that cathode rays are made of negatively charged electrons. In the plum pudding model he proposed in 1904, the atom is a positive sphere with electrons embedded in it.",
+   "<b>Rutherford</b>'s gold foil experiment (1909-1911) showed that the atom is mostly empty space. The mass is packed into a small, positively charged nucleus.",
+   "For <b>Bohr</b> (1913), electrons move in certain energy levels. An electron that drops to a lower level gives off light of a certain color.",
+   "In the <b>modern model</b> the position of the electron cannot be known exactly. Only the probability of finding it, its orbital, is calculated."
+  ],
+  "soruOnce": true
+ },
+ "atomun-yapisi": {
+  "id": "atomun-yapisi",
+  "ders": "kimya",
+  "konu": "atomun-yapisi",
+  "baslik": "The structure of the atom",
+  "ozet": "Try it first, then learn its name. Build an atom yourself by adding and removing particles.",
+  "adimlar": [
+   {
+    "baslik": "Three particles",
+    "metin": "The atom on the screen is helium. Its nucleus has 2 protons and 2 neutrons, and there are 2 electrons around it.",
+    "sahne": {
+     "tur": "atom",
+     "etiket": true
+    },
+    "deger": {
+     "p": 2,
+     "n": 2,
+     "e": 2
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Where is almost all of the atom's mass?",
+     "secenekler": [
+      {
+       "yazi": "In the nucleus",
+       "dogru": true,
+       "neden": "Protons and neutrons have similar masses. An electron is about 1836 times lighter than a proton. So almost all of the mass is in the nucleus."
+      },
+      {
+       "yazi": "In the electron shells",
+       "neden": "The shells make up the atom's volume, but electrons are very light. A proton has about the mass of 1836 electrons."
+      },
+      {
+       "yazi": "Spread evenly",
+       "neden": "An electron is much lighter than a proton. Where does the weight collect?"
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "How small is an atom?",
+    "metin": "An atom is so small that 3 million of them side by side make only 1 millimeter. Now you will zoom into a lithium atom.",
+    "sahne": {
+     "tur": "atom-olcek",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "If you blew an atom up to the size of a football stadium, how big would the nucleus in the middle be?",
+     "secenekler": [
+      {
+       "yazi": "About the size of a pea",
+       "dogru": true,
+       "neden": "The nucleus's diameter is about 100 000 times smaller than the atom's. In a stadium-sized atom, the nucleus would be a pea in the middle of the field."
+      },
+      {
+       "yazi": "About the size of a soccer ball",
+       "neden": "Even a soccer ball is far too big."
+      },
+      {
+       "yazi": "About half the field",
+       "neden": "The nucleus is only a tiny dot inside the atom."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Protons decide the element",
+    "metin": "Add particles from the tray below. Tap a particle in the atom to remove it. Turn hydrogen into <b>a neutral carbon atom</b> and look at the element's name.",
+    "sahne": {
+     "tur": "atom-kur",
+     "dokun": true
+    },
+    "deger": {
+     "p": 1,
+     "n": 0,
+     "e": 1
+    },
+    "kontroller": [
+     {
+      "ad": "p",
+      "etiket": "Proton",
+      "min": 1,
+      "max": 20,
+      "tur": "surukle"
+     },
+     {
+      "ad": "n",
+      "etiket": "Neutron",
+      "min": 0,
+      "max": 24,
+      "tur": "surukle"
+     },
+     {
+      "ad": "e",
+      "etiket": "Electron",
+      "min": 0,
+      "max": 22,
+      "tur": "surukle"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "p": 6,
+      "e": 6
+     },
+     "tamam": "6 protons make carbon. The number of protons decides the element. One more proton and it would be nitrogen. In a neutral atom, the number of electrons equals the number of protons."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Neutrons and isotopes",
+    "metin": "This is a carbon atom. Add neutrons to its nucleus and see whether the element changes. Make the mass number (A) <b>14</b>.",
+    "sahne": {
+     "tur": "atom-kur",
+     "dokun": true
+    },
+    "deger": {
+     "p": 6,
+     "n": 6,
+     "e": 6
+    },
+    "kontroller": [
+     {
+      "ad": "p",
+      "etiket": "Proton",
+      "min": 1,
+      "max": 20,
+      "tur": "surukle"
+     },
+     {
+      "ad": "n",
+      "etiket": "Neutron",
+      "min": 0,
+      "max": 24,
+      "tur": "surukle"
+     },
+     {
+      "ad": "e",
+      "etiket": "Electron",
+      "min": 0,
+      "max": 22,
+      "tur": "surukle"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "p": 6,
+      "n": 8
+     },
+     "tamam": "The atom is still carbon, because it has 6 protons. But A = 6 + 8 = 14. Atoms with the same number of protons but different numbers of neutrons are called <b>isotopes</b>. Carbon-14 is used to find the age of ancient remains."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Electrons and ions",
+    "metin": "This is a sodium atom. Tap one of its electrons to remove it.",
+    "sahne": {
+     "tur": "atom-kur",
+     "dokun": true
+    },
+    "deger": {
+     "p": 11,
+     "n": 12,
+     "e": 11
+    },
+    "kontroller": [
+     {
+      "ad": "p",
+      "etiket": "Proton",
+      "min": 1,
+      "max": 20,
+      "tur": "surukle"
+     },
+     {
+      "ad": "n",
+      "etiket": "Neutron",
+      "min": 0,
+      "max": 24,
+      "tur": "surukle"
+     },
+     {
+      "ad": "e",
+      "etiket": "Electron",
+      "min": 0,
+      "max": 22,
+      "tur": "surukle"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "p": 11,
+      "e": 10
+     },
+     "tamam": "The atom has 11 protons and 10 electrons, so its charge is 11 − 10 = +1. The nucleus did not change at all. Becoming an ion only changes the number of electrons."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Electron shells",
+    "metin": "Change the number of protons and see how the electrons are arranged in shells.",
+    "sahne": {
+     "tur": "atom"
+    },
+    "deger": {
+     "p": 3,
+     "n": 4,
+     "e": 3
+    },
+    "kontroller": [
+     {
+      "ad": "p",
+      "etiket": "Proton",
+      "min": 1,
+      "max": 20,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "How many electrons are in the outer shell of a chlorine atom (17 protons)?",
+     "secenekler": [
+      {
+       "yazi": "7",
+       "dogru": true,
+       "neden": "The 17 electrons are arranged 2-8-7. The 7 electrons in the outer shell are why chlorine tends to gain one electron and become Cl⁻."
+      },
+      {
+       "yazi": "8",
+       "neden": "First the first two shells fill, holding 2 + 8 = 10 electrons. How many electrons are left: 17 − 10?"
+      },
+      {
+       "yazi": "1",
+       "neden": "Set the number of protons to 17 and count the shells."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "All together",
+    "metin": "Now build everything yourself. Make sulfur with mass number 32 that has gained two electrons, the <b>³²S²⁻</b> ion. Set the number of protons first.",
+    "sahne": {
+     "tur": "atom"
+    },
+    "deger": {
+     "p": 10,
+     "n": 10,
+     "e": 10
+    },
+    "kontroller": [
+     {
+      "ad": "p",
+      "etiket": "Proton",
+      "min": 1,
+      "max": 20,
+      "tur": "sayac"
+     },
+     {
+      "ad": "n",
+      "etiket": "Neutron",
+      "min": 0,
+      "max": 24,
+      "tur": "sayac"
+     },
+     {
+      "ad": "e",
+      "etiket": "Electron",
+      "min": 0,
+      "max": 20,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "p": 16,
+      "n": 16,
+      "e": 18
+     },
+     "tamam": "16 protons make sulfur, and the number of neutrons is 32 − 16 = 16. A neutral atom would have 16 electrons. After gaining 2 electrons it has 18, and the charge is 16 − 18 = −2."
+    },
+    "kart": 11
+   }
+  ],
+  "kapanis": [
+   "An atom is made of a nucleus of <b>protons</b> and <b>neutrons</b>, with <b>electrons</b> around it. The ¹H nucleus has no neutrons. The mass is in the nucleus, and the volume is mostly empty space.",
+   "The number of protons is the <b>atomic number</b> (Z), and it decides the element.",
+   "The <b>mass number</b> (A) is the total number of protons and neutrons. Atoms of the same element with different numbers of neutrons are called <b>isotopes</b>.",
+   "The charge is the number of protons minus the number of electrons. An atom that gives up electrons becomes a <b>cation</b>, and one that gains electrons becomes an <b>anion</b>.",
+   "For the first 20 elements, shells hold at most 2, 8 and 8 electrons. The rest go to the 4th shell, so the Ca atom is arranged 2-8-8-2."
+  ],
+  "soruOnce": true
+ },
+ "modern-atom-teorisi": {
+  "id": "modern-atom-teorisi",
+  "ders": "kimya",
+  "konu": "modern-atom-teorisi",
+  "baslik": "Modern atomic theory",
+  "ozet": "Try it first, then learn its name. Give electrons an address, fill orbitals and make an ion.",
+  "adimlar": [
+   {
+    "baslik": "An electron's address",
+    "metin": "Subshells are also shown by numbers: s is 0, p is 1, d is 2 and f is 3. Iron's last electrons are in 3d. Set the n and ℓ values for an electron in 3d.",
+    "sahne": {
+     "tur": "kim13-kuantum"
+    },
+    "deger": {
+     "n": 1,
+     "l": 0
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "n (shell)",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     },
+     {
+      "ad": "l",
+      "etiket": "ℓ (subshell)",
+      "min": 0,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 3,
+      "l": 2
+     },
+     "ipucu": "In the d subshell ℓ = 2. For ℓ to be 2, n must be at least 3.",
+     "tamam": "n = 3 and ℓ = 2, so this subshell is 3d. m<sub>ℓ</sub> takes five values from −2 to +2, so there are five d orbitals. The fourth number, m<sub>s</sub>, is +½ or −½."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Filling order",
+    "metin": "In argon the 3p subshell is full. Add electrons and stop at the element where the first electron enters 3d.",
+    "sahne": {
+     "tur": "kim13-dolma"
+    },
+    "deger": {
+     "e": 18
+    },
+    "kontroller": [
+     {
+      "ad": "e",
+      "etiket": "Number of electrons",
+      "min": 1,
+      "max": 30,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "e": 21
+     },
+     "ipucu": "Where did the last electrons of K and Ca go? Stop when the first arrow appears in the 3d boxes.",
+     "tamam": "This element is scandium (21), and its configuration is [Ar] 4s² 3d¹. 4s has n + ℓ = 4 and 3d has 5, so 4s filled first. That is why the 3rd shell stopped at 8 electrons in K and Ca."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Hund's rule",
+    "metin": "Place nitrogen's three 2p electrons in the three 2p orbitals of equal energy. If two electrons go into one box, their spins are opposite (Pauli). Build the arrangement that follows Hund's rule.",
+    "sahne": {
+     "tur": "kim13-hund"
+    },
+    "deger": {
+     "a": 0,
+     "b": 0,
+     "c": 0
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "1st 2p orbital",
+      "min": 0,
+      "max": 2,
+      "tur": "sayac"
+     },
+     {
+      "ad": "b",
+      "etiket": "2nd 2p orbital",
+      "min": 0,
+      "max": 2,
+      "tur": "sayac"
+     },
+     {
+      "ad": "c",
+      "etiket": "3rd 2p orbital",
+      "min": 0,
+      "max": 2,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "a": 1,
+      "b": 1,
+      "c": 1
+     },
+     "ipucu": "Electrons do not pair while there is an empty orbital. First one electron goes into each box.",
+     "tamam": "The electrons went in ↑ ↑ ↑, one at a time first and with the same spin. Nitrogen has 3 unpaired electrons. In oxygen (2p⁴) the fourth electron pairs up."
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Two elements that break the rule",
+    "metin": "Chromium breaks the rule, because one 4s electron moves to 3d. Use the switch to go to copper and look at the two candidate configurations.",
+    "sahne": {
+     "tur": "kim13-istisna"
+    },
+    "deger": {
+     "el": 0
+    },
+    "kontroller": [
+     {
+      "ad": "el",
+      "etiket": "Copper",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What is copper's (29) actual ground-state configuration?",
+     "secenekler": [
+      {
+       "yazi": "[Ar] 4s² 3d⁹",
+       "neden": "This is what the filling order predicts. But the atom is more stable when 3d is full."
+      },
+      {
+       "yazi": "[Ar] 4s¹ 3d¹⁰",
+       "neden": "One 4s electron moves to 3d, making a full 3d¹⁰. Like the half-full 3d⁵ in chromium, this is more stable.",
+       "dogru": true
+      },
+      {
+       "yazi": "[Ar] 4s² 3d⁸ 4p¹",
+       "neden": "4p has higher energy than 3d. An electron does not move to 4p before 3d is full."
+      }
+     ]
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Ionize iron",
+    "metin": "Iron is [Ar] 4s² 3d⁶. The last electrons to go in were in 3d. So which ones leave first when an ion forms? Give up electrons and make the <b>Fe²⁺</b> ion.",
+    "sahne": {
+     "tur": "kim13-iyon"
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Electrons given up",
+      "min": 0,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": 2
+     },
+     "ipucu": "For Fe²⁺ you must give up two electrons.",
+     "tamam": "The Fe²⁺ ion is [Ar] 3d⁶, not [Ar] 4s² 3d⁴. In a cation, electrons leave first from the shell with the largest n, which is 4s. Give up one more electron and you get the half-full Fe³⁺ ion, [Ar] 3d⁵."
+    },
+    "kart": 12
+   },
+   {
+    "baslik": "Find the element from its configuration",
+    "metin": "An element's ground-state configuration is given below. Count the electrons and find where the element sits.",
+    "sahne": {
+     "tur": "kim13-bul"
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Count the electrons",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which element is this, and where is it in the periodic table?",
+     "secenekler": [
+      {
+       "yazi": "Sulfur (S): period 3, 6A",
+       "neden": "There are 16 electrons, so Z = 16. The largest n is 3, and the outer shell has 6 electrons in 3s² 3p⁴. So the element is in period 3, group 6A.",
+       "dogru": true
+      },
+      {
+       "yazi": "Oxygen (O): period 2, 6A",
+       "neden": "The group is right, but oxygen has 8 electrons (1s² 2s² 2p⁴). Here the largest n is 3."
+      },
+      {
+       "yazi": "Silicon (Si): period 3, 4A",
+       "neden": "The group number comes from the total of the s and p electrons in the outer shell, not just the p electrons. 2 + 4 = 6."
+      },
+      {
+       "yazi": "Argon (Ar): period 3, 8A",
+       "neden": "Argon's 3p subshell is full (3p⁶, 18 electrons). Here 3p has 4 electrons."
+      }
+     ]
+    },
+    "kart": 13
+   }
+  ],
+  "kapanis": [
+   "An orbital is a region where the electron is likely to be found. It is not an exact path like Bohr's orbit.",
+   "n gives the shell, and ℓ gives the s, p, d and f subshells. ℓ can be at most n − 1. In 3d, n = 3 and ℓ = 2, and there are five orbitals.",
+   "Electrons go first into the orbital with the smaller n + ℓ, so 4s fills before 3d. By the Pauli principle, an orbital holds at most two electrons with opposite spins.",
+   "By Hund's rule, electrons go into orbitals of equal energy one at a time first, with the same spin. Nitrogen's electrons are placed ↑ ↑ ↑.",
+   "Cr [Ar] 4s¹ 3d⁵ and Cu [Ar] 4s¹ 3d¹⁰ break the rule. When a cation forms, 4s empties first, so Fe²⁺ is [Ar] 3d⁶."
+  ],
+  "soruOnce": true
  }
 }
