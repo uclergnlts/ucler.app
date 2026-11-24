@@ -1,5 +1,5 @@
 "use client";
-import { cev, DIL, dilDegistir, dilSecimi, type Dil } from "@/lib/dil";
+import { cev, DIL, dilDegistir, type Dil } from "@/lib/dil";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { bildirimOku, bildirimYaz, cikisYap, hesabiSil, useEsitleme, useOturum, type Bildirim } from "@/lib/bulut";
@@ -265,16 +265,9 @@ function OyunAnahtari() {
   return <Anahtar acik={acik} ayarla={oyunAyarla} baslik={cev("Puan, seri ve kutlamalar")} metin={cev("Kapatırsan puan, seri, lig ve konfeti görünmez")} />;
 }
 
-/**
- * Uygulama dili. İngilizce çeviri tamamlanana kadar bölüm yalnızca dili bir kez adresle seçmiş cihazda görünür
- * (önizleme: /ogren/?dil=en). Çeviri bitince DIL_HERKESE true yapılır.
- */
-const DIL_HERKESE = false;
-const DILLER: [Dil, string][] = [["tr", cev("Türkçe")], ["en", "English"]];
+/** Uygulama dili: Türkçe ya da İngilizce (lib/dil.ts). */
+const DILLER: [Dil, string][] = [["tr", "Türkçe"], ["en", "English"]];
 function DilSecici() {
-  const [goster, setGoster] = useState(DIL_HERKESE);
-  useEffect(() => { if (dilSecimi() !== null) setGoster(true); }, []);
-  if (!goster) return null;
   return (
     <Bolum title={cev("Dil")}>
       <div role="radiogroup" aria-label={cev("Dil")} className="grid grid-cols-2 gap-1 rounded-xl border border-border bg-card p-1">

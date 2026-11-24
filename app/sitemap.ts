@@ -12,5 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...sayfalar.map((y) => ({ url: SITE_URL + y })),
     ...DERS_IDS.map((d) => ({ url: `${SITE_URL}/${d}/` })),
     ...readyTopics().map((t) => ({ url: `${SITE_URL}/${t.ders}/${t.id}/` })),
+    // İngilizce kopya (/en/): dersler ve konular.
+    ...DERS_IDS.map((d) => ({ url: `${SITE_URL}/en/${d}/` })),
+    ...readyTopics().map((t) => ({ url: `${SITE_URL}/en/${t.ders}/${t.id}/` })),
   ];
 }
