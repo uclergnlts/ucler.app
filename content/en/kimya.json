@@ -3655,5 +3655,726 @@
     ]
    }
   ]
+ },
+ "mol": {
+  "title": "The mole and chemical calculations",
+  "summary": "Learn the mole, Avogadro's number, finding formulas, stoichiometry and yield.",
+  "cards": [
+   {
+    "h": "Chemistry's dozen: the mole",
+    "p": "A single drop of water holds about 10<sup>21</sup> molecules. That is why chemists use a counting package. <b>1 mole</b> means 6.02×10<sup>23</sup> particles, and this number is called <b>Avogadro's number</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='16' y='48' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>1 dozen</text><circle cx='118' cy='37' r='5' fill='var(--c4)' fill-opacity='0.8'/><circle cx='131' cy='37' r='5' fill='var(--c4)' fill-opacity='0.8'/><circle cx='144' cy='37' r='5' fill='var(--c4)' fill-opacity='0.8'/><circle cx='157' cy='37' r='5' fill='var(--c4)' fill-opacity='0.8'/><circle cx='170' cy='37' r='5' fill='var(--c4)' fill-opacity='0.8'/><circle cx='183' cy='37' r='5' fill='var(--c4)' fill-opacity='0.8'/><circle cx='118' cy='50' r='5' fill='var(--c4)' fill-opacity='0.8'/><circle cx='131' cy='50' r='5' fill='var(--c4)' fill-opacity='0.8'/><circle cx='144' cy='50' r='5' fill='var(--c4)' fill-opacity='0.8'/><circle cx='157' cy='50' r='5' fill='var(--c4)' fill-opacity='0.8'/><circle cx='170' cy='50' r='5' fill='var(--c4)' fill-opacity='0.8'/><circle cx='183' cy='50' r='5' fill='var(--c4)' fill-opacity='0.8'/><text x='304' y='48' font-size='13' fill='var(--muted)' text-anchor='end'>= 12 items</text><text x='16' y='100' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>1 pack of ten</text><circle cx='118' cy='89' r='5' fill='var(--c3)' fill-opacity='0.8'/><circle cx='131' cy='89' r='5' fill='var(--c3)' fill-opacity='0.8'/><circle cx='144' cy='89' r='5' fill='var(--c3)' fill-opacity='0.8'/><circle cx='157' cy='89' r='5' fill='var(--c3)' fill-opacity='0.8'/><circle cx='170' cy='89' r='5' fill='var(--c3)' fill-opacity='0.8'/><circle cx='118' cy='102' r='5' fill='var(--c3)' fill-opacity='0.8'/><circle cx='131' cy='102' r='5' fill='var(--c3)' fill-opacity='0.8'/><circle cx='144' cy='102' r='5' fill='var(--c3)' fill-opacity='0.8'/><circle cx='157' cy='102' r='5' fill='var(--c3)' fill-opacity='0.8'/><circle cx='170' cy='102' r='5' fill='var(--c3)' fill-opacity='0.8'/><text x='304' y='100' font-size='13' fill='var(--muted)' text-anchor='end'>= 10 items</text><rect x='10' y='128' width='300' height='44' rx='6' fill='var(--acc)' fill-opacity='0.12' stroke='var(--acc)' stroke-width='1.2'/><text x='22' y='156' font-size='15' fill='var(--acc)' text-anchor='start' font-weight='700'>1 mole</text><text x='298' y='157' font-size='15' fill='var(--acc)' text-anchor='end' font-weight='700'>= 6.02×10²³ items</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>particle: atom, molecule or ion</text></svg>",
+    "key": "A particle can be an atom, a molecule or an ion. 12 g of carbon-12 contains about 6.02×10²³ atoms."
+   },
+   {
+    "h": "From amu to g/mol",
+    "p": "Atomic masses are given in <b>amu</b>, and 1 amu is 1/12 of the mass of a C-12 atom. The mass in grams of 1 mole of particles is called the <b>molar mass</b> (M, g/mol), and it has the same numerical value.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mol-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><circle cx='60' cy='70' r='38' fill='var(--acc)' fill-opacity='0.12' stroke='var(--acc)' stroke-width='1.5'/><path d='M60 70 L98.0 70.0' stroke='var(--acc)' stroke-width='1'/><path d='M60 70 L92.9 89.0' stroke='var(--acc)' stroke-width='1'/><path d='M60 70 L79.0 102.9' stroke='var(--acc)' stroke-width='1'/><path d='M60 70 L60.0 108.0' stroke='var(--acc)' stroke-width='1'/><path d='M60 70 L41.0 102.9' stroke='var(--acc)' stroke-width='1'/><path d='M60 70 L27.1 89.0' stroke='var(--acc)' stroke-width='1'/><path d='M60 70 L22.0 70.0' stroke='var(--acc)' stroke-width='1'/><path d='M60 70 L27.1 51.0' stroke='var(--acc)' stroke-width='1'/><path d='M60 70 L41.0 37.1' stroke='var(--acc)' stroke-width='1'/><path d='M60 70 L60.0 32.0' stroke='var(--acc)' stroke-width='1'/><path d='M60 70 L79.0 37.1' stroke='var(--acc)' stroke-width='1'/><path d='M60 70 L92.9 51.0' stroke='var(--acc)' stroke-width='1'/><path d='M60 70 L98 70 A38 38 0 0 1 92.9 89 Z' fill='var(--acc)' fill-opacity='0.55'/><text x='62' y='128' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>C-12 atom = 12 amu</text><text x='62' y='146' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>1 slice = 1 amu</text><path d='M120 60 H310' stroke='var(--line)' stroke-width='1'/><text x='150' y='80' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>H</text><text x='200' y='80' font-size='12' fill='var(--ink)' text-anchor='middle'>1 amu</text><text x='275' y='80' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>1 g/mol</text><text x='150' y='102' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>C</text><text x='200' y='102' font-size='12' fill='var(--ink)' text-anchor='middle'>12 amu</text><text x='275' y='102' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>12 g/mol</text><text x='150' y='124' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Cl</text><text x='200' y='124' font-size='12' fill='var(--ink)' text-anchor='middle'>35.5 amu</text><text x='275' y='124' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>35.5 g/mol</text><text x='150' y='146' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>H₂O</text><text x='200' y='146' font-size='12' fill='var(--ink)' text-anchor='middle'>18 amu</text><text x='275' y='146' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>18 g/mol</text><text x='200' y='52' font-size='11' fill='var(--muted)' text-anchor='middle'>1 particle</text><text x='275' y='52' font-size='11' fill='var(--c1)' text-anchor='middle'>molar mass</text><text x='160' y='182' font-size='12' fill='var(--muted)' text-anchor='middle'>1 amu ≈ 1.66×10⁻²⁴ g;  N<tspan font-size='10' baseline-shift='sub'>A</tspan> × 1 amu ≈ 1 g</text></svg>",
+    "key": "The relative atomic mass in the table is the weighted average of the isotopes (Cl = 35.5). One H₂O molecule has a mass of about 3×10⁻²³ g. 18 g of water is 1 mole of water."
+   },
+   {
+    "h": "The mole: a common language",
+    "p": "The mole is the bridge between mass and number of particles. We use n = m / M and n = N / N<sub>A</sub>. For example, 9 g of water is 0.5 mol.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mol-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='115' y='80' width='90' height='40' rx='6' fill='var(--acc)' fill-opacity='0.2' stroke='var(--acc)' stroke-width='1.2'/><text x='160' y='99' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='700'>n</text><text x='160' y='114' font-size='11' fill='var(--muted)' text-anchor='middle'>mole</text><rect x='8' y='80' width='72' height='40' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.2'/><text x='44' y='98' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>mass</text><text x='44' y='113' font-size='11' fill='var(--muted)' text-anchor='middle'>m (g)</text><rect x='240' y='80' width='72' height='40' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><text x='276' y='98' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>particles</text><text x='276' y='113' font-size='11' fill='var(--muted)' text-anchor='middle'>N</text><rect x='115' y='152' width='90' height='40' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.2'/><text x='160' y='170' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>gas volume</text><text x='160' y='185' font-size='11' fill='var(--muted)' text-anchor='middle'>V (L)</text><path d='M82 92 H112' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#mol-3)'/><path d='M113 108 H83' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#mol-3)'/><text x='97' y='76' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>÷ M</text><text x='97' y='130' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>× M</text><path d='M208 92 H237' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#mol-3)'/><path d='M238 108 H209' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#mol-3)'/><text x='228' y='76' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>× N<tspan font-size='10' baseline-shift='sub'>A</tspan></text><text x='228' y='130' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>÷ N<tspan font-size='10' baseline-shift='sub'>A</tspan></text><path d='M150 123 V149' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#mol-3)'/><path d='M170 149 V123' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#mol-3)'/><text x='144' y='144' font-size='11' fill='var(--c3)' text-anchor='end' font-weight='700'>× 22.4</text><text x='176' y='144' font-size='11' fill='var(--c3)' text-anchor='start' font-weight='700'>÷ 22.4</text><text x='255' y='160' font-size='11' fill='var(--muted)' text-anchor='middle'>(STP, gases only)</text><text x='160' y='24' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>n = m / M = N / N<tspan font-size='11' baseline-shift='sub'>A</tspan></text><text x='160' y='50' font-size='12' fill='var(--muted)' text-anchor='middle'>9 g H₂O ÷ 18 g/mol = 0.5 mol</text></svg>",
+    "etk": {
+     "tur": "formul",
+     "soru": "n = m / M and N = n · N<sub>A</sub>. Change the mass and the molar mass. (Water: M = 18 g/mol)",
+     "girdiler": [
+      {
+       "ad": "m",
+       "etiket": "Mass",
+       "birim": "g",
+       "min": 1,
+       "max": 200,
+       "adim": 1,
+       "deger": 9
+      },
+      {
+       "ad": "M",
+       "etiket": "Molar mass",
+       "birim": "g/mol",
+       "min": 2,
+       "max": 200,
+       "adim": 1,
+       "deger": 18
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "n",
+       "ifade": "m/M",
+       "birim": "mol",
+       "basamak": 3,
+       "max": 10
+      },
+      {
+       "ad": "N",
+       "ifade": "m/M*6.02",
+       "birim": "× 10<sup>23</sup> particles",
+       "basamak": 2
+      }
+     ]
+    },
+    "key": "The molar mass of water is 18 g/mol, and 0.5 mol of water contains 3.01×10²³ molecules. Whatever unit you start from and wherever you go, convert to moles first.",
+    "once": {
+     "soru": "How many moles is 36 g of water (M = 18 g/mol)?",
+     "secenekler": [
+      {
+       "yazi": "2",
+       "neden": "n = m / M = 36 / 18 = 2 mol.",
+       "dogru": true
+      },
+      {
+       "yazi": "0.5",
+       "neden": "The division is upside down. You need 36 / 18, not 18 / 36."
+      },
+      {
+       "yazi": "648",
+       "neden": "You divide the mass by the molar mass, you don't multiply."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Molar volume of gases",
+    "p": "At the same temperature and pressure, equal numbers of moles of gas take up equal volumes. At <b>STP</b> (0 °C, 1 atm), 1 mole of gas takes up 22.4 L, and at room conditions about 24.5 L.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='30' y='40' width='88' height='88' rx='4' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><text x='74' y='80' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>22.4 L</text><text x='74' y='100' font-size='11' fill='var(--muted)' text-anchor='middle'>1 mol gas</text><text x='74' y='150' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Standard conditions (STP)</text><text x='74' y='167' font-size='12' fill='var(--muted)' text-anchor='middle'>0 °C, 1 atm</text><rect x='190' y='34' width='94' height='94' rx='4' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.2'/><text x='237' y='77' font-size='15' fill='var(--c4)' text-anchor='middle' font-weight='700'>24.5 L</text><text x='237' y='97' font-size='11' fill='var(--muted)' text-anchor='middle'>1 mol gas</text><text x='237' y='150' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Room conditions</text><text x='237' y='167' font-size='12' fill='var(--muted)' text-anchor='middle'>25 °C, 1 atm</text><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Same T and P: equal moles of gas = equal volume</text><text x='160' y='192' font-size='11' fill='var(--c2)' text-anchor='middle'>Not for solids and liquids (1 mol water ≈ 18 mL)</text></svg>",
+    "key": "22.4 L/mol applies only to gases at STP. Under other conditions, use PV = nRT from the Gases topic."
+   },
+   {
+    "h": "Count the atoms in a compound",
+    "p": "As you just counted, the subscript gives the number of atoms, and this also holds for moles. 1 mol of H<sub>2</sub>O contains 2 mol of H and 1 mol of O.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M54 42 L34 58 M54 42 L74 58' stroke='var(--line)' stroke-width='3'/><circle cx='54' cy='42' r='13' fill='var(--c2)' fill-opacity='0.75'/><circle cx='32' cy='60' r='8' fill='var(--c1)' fill-opacity='0.6'/><circle cx='76' cy='60' r='8' fill='var(--c1)' fill-opacity='0.6'/><text x='54' y='46' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>O</text><text x='32' y='64' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>H</text><text x='76' y='64' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>H</text><text x='54' y='92' font-size='11' fill='var(--muted)' text-anchor='middle'>1 H₂O molecule</text><text x='185' y='30' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>H</text><text x='230' y='30' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>O</text><text x='285' y='30' font-size='11' fill='var(--muted)' text-anchor='middle'>total</text><path d='M110 38 L315 38' stroke='var(--line)' stroke-width='1'/><text x='112' y='58' font-size='11' fill='var(--ink)' text-anchor='start'>1 molecule</text><text x='185' y='58' font-size='12' fill='var(--ink)' text-anchor='middle'>2 atoms</text><text x='230' y='58' font-size='12' fill='var(--ink)' text-anchor='middle'>1 atom</text><text x='285' y='58' font-size='12' fill='var(--ink)' text-anchor='middle'>3 atoms</text><text x='112' y='82' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>1 mol</text><text x='185' y='82' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>2 mol</text><text x='230' y='82' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>1 mol</text><text x='285' y='82' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>3 mol</text><rect x='10' y='112' width='300' height='76' rx='6' fill='var(--c5)' fill-opacity='0.08' stroke='var(--c5)' stroke-width='1.2'/><text x='22' y='134' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>In 0.5 mol CH₄:</text><text x='22' y='156' font-size='12' fill='var(--ink)' text-anchor='start'>C: 0.5 mol</text><text x='130' y='156' font-size='12' fill='var(--ink)' text-anchor='start'>H: 0.5 × 4 = 2 mol</text><text x='22' y='178' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>total atoms: 2.5 mol = 2.5 × 6.02×10²³</text></svg>",
+    "key": "1 mol of H₂O has 6.02×10²³ molecules but 3 × 6.02×10²³ atoms. 1 mol of CaCl₂ contains 1 mol of Ca²⁺ and 2 mol of Cl⁻."
+   },
+   {
+    "h": "Percent composition by mass",
+    "p": "The mass percent of an element is its mass in the formula divided by the molar mass, times 100. In NaCl (M = 58.5), Na is 39.3% and Cl is 60.7%. These percentages do not depend on the sample size.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>% element = (mass of that element / M) × 100</text><text x='16' y='59' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>NaCl</text><rect x='80' y='42' width='86.5' height='26' fill='var(--c4)' fill-opacity='0.35'/><rect x='166.5' y='42' width='133.5' height='26' fill='var(--c3)' fill-opacity='0.35'/><text x='123.25' y='59' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>Na 39.3%</text><text x='233.25' y='59' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>Cl 60.7%</text><text x='123' y='88' font-size='11' fill='var(--muted)' text-anchor='middle'>23 / 58.5</text><text x='234' y='88' font-size='11' fill='var(--muted)' text-anchor='middle'>35.5 / 58.5</text><text x='16' y='125' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>H₂O</text><rect x='80' y='108' width='24.4' height='26' fill='var(--c1)' fill-opacity='0.35'/><rect x='104.4' y='108' width='195.6' height='26' fill='var(--c2)' fill-opacity='0.35'/><text x='84' y='125' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'></text><text x='202.2' y='125' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>O 88.9%</text><text x='86' y='152' font-size='11' fill='var(--c1)' text-anchor='start' font-weight='700'>H 11.1% = 2 / 18</text><text x='300' y='152' font-size='11' fill='var(--muted)' text-anchor='end'>16 / 18</text><text x='160' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>The ratio is independent of sample size (definite proportions)</text></svg>",
+    "key": "The mass of Na is 23 and that of Cl is 35.5. The percentages stay constant because of the law of definite proportions.",
+    "once": {
+     "soru": "What is the mass percent of hydrogen in water (H₂O, M = 18)? (H = 1)",
+     "secenekler": [
+      {
+       "yazi": "11%",
+       "neden": "2 / 18 × 100 is about 11.1%.",
+       "dogru": true
+      },
+      {
+       "yazi": "67%",
+       "neden": "67% is the ratio of atom counts (2 of 3 atoms). It is not the mass ratio."
+      },
+      {
+       "yazi": "50%",
+       "neden": "Hydrogen atoms are very light, so they add little to the mass."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Empirical (simplest) formula",
+    "p": "The smallest whole-number ratio of atoms is called the <b>empirical formula</b>. To find it, turn the percentages into grams in a 100 g sample and divide by the molar masses. Then divide all mole numbers by the smallest one.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='26' y='28' font-size='11' fill='var(--muted)' text-anchor='middle'>element</text><text x='92' y='28' font-size='11' fill='var(--muted)' text-anchor='middle'>in 100 g</text><text x='158' y='28' font-size='11' fill='var(--muted)' text-anchor='middle'>÷ M</text><text x='222' y='28' font-size='11' fill='var(--muted)' text-anchor='middle'>mol</text><text x='286' y='28' font-size='11' fill='var(--muted)' text-anchor='middle'>÷ 3.33</text><path d='M10 36 L310 36' stroke='var(--line)' stroke-width='1'/><text x='26' y='58' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>C</text><text x='92' y='58' font-size='13' fill='var(--ink)' text-anchor='middle'>40 g</text><text x='158' y='58' font-size='13' fill='var(--ink)' text-anchor='middle'>÷ 12</text><text x='222' y='58' font-size='13' fill='var(--ink)' text-anchor='middle'>3.33</text><text x='286' y='58' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>1</text><text x='26' y='82' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>H</text><text x='92' y='82' font-size='13' fill='var(--ink)' text-anchor='middle'>6.7 g</text><text x='158' y='82' font-size='13' fill='var(--ink)' text-anchor='middle'>÷ 1</text><text x='222' y='82' font-size='13' fill='var(--ink)' text-anchor='middle'>6.7</text><text x='286' y='82' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>2</text><text x='26' y='106' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>O</text><text x='92' y='106' font-size='13' fill='var(--ink)' text-anchor='middle'>53.3 g</text><text x='158' y='106' font-size='13' fill='var(--ink)' text-anchor='middle'>÷ 16</text><text x='222' y='106' font-size='13' fill='var(--ink)' text-anchor='middle'>3.33</text><text x='286' y='106' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>1</text><rect x='262' y='40' width='48' height='70' rx='5' fill='var(--acc)' fill-opacity='0.1'/><path d='M10 116 L310 116' stroke='var(--line)' stroke-width='1'/><text x='160' y='146' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Ratio C : H : O = 1 : 2 : 1</text><text x='160' y='178' font-size='16' fill='var(--acc)' text-anchor='middle' font-weight='700'>Empirical formula: CH₂O</text></svg>",
+    "key": "A compound with 40% C, 6.7% H and 53.3% O has the empirical formula CH₂O. If a ratio comes out like 1.5, multiply by 2 to reach whole numbers.",
+    "once": {
+     "soru": "A compound has 2 mol of H for every 1 mol of C. Which is its empirical formula?",
+     "secenekler": [
+      {
+       "yazi": "CH₂",
+       "neden": "The smallest whole-number ratio is 1 : 2.",
+       "dogru": true
+      },
+      {
+       "yazi": "C₂H",
+       "neden": "The ratio is written backwards."
+      },
+      {
+       "yazi": "C₂H₄",
+       "neden": "This could be a molecular formula. The simplest ratio is CH₂."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Molecular formula",
+    "p": "The <b>molecular formula</b> is a whole-number multiple of the empirical formula, written as (CH₂O)<sub>n</sub>. CH₂O has a molar mass of 30 g/mol. If the compound is 180 g/mol, then n = 6 and the formula is C₆H₁₂O₆ (glucose).",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mol-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><rect x='110' y='14' width='100' height='40' rx='6' fill='var(--acc)' fill-opacity='0.18' stroke='var(--acc)' stroke-width='1.2'/><text x='160' y='32' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>CH₂O</text><text x='160' y='47' font-size='11' fill='var(--muted)' text-anchor='middle'>30 g/mol</text><path d='M130 56 L60 92' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mol-8)'/><path d='M160 56 V92' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mol-8)'/><path d='M190 56 L262 92' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mol-8)'/><text x='78' y='72' font-size='11' fill='var(--muted)' text-anchor='end'>n = 1</text><text x='166' y='80' font-size='11' fill='var(--muted)' text-anchor='start'>n = 2</text><text x='244' y='72' font-size='11' fill='var(--muted)' text-anchor='start'>n = 6</text><rect x='12' y='96' width='92' height='64' rx='6' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='58' y='117' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₂O</text><text x='58' y='134' font-size='11' fill='var(--muted)' text-anchor='middle'>30 g/mol</text><text x='58' y='150' font-size='11' fill='var(--muted)' text-anchor='middle'>formaldehyde</text><rect x='114' y='96' width='92' height='64' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><text x='160' y='117' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>C₂H₄O₂</text><text x='160' y='134' font-size='11' fill='var(--muted)' text-anchor='middle'>60 g/mol</text><text x='160' y='150' font-size='11' fill='var(--muted)' text-anchor='middle'>acetic acid</text><rect x='216' y='96' width='92' height='64' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.2'/><text x='262' y='117' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>C₆H₁₂O₆</text><text x='262' y='134' font-size='11' fill='var(--muted)' text-anchor='middle'>180 g/mol</text><text x='262' y='150' font-size='11' fill='var(--muted)' text-anchor='middle'>glucose</text><text x='160' y='186' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>n = M(molecule) / M(empirical formula) = 180 / 30 = 6</text></svg>",
+    "key": "Percent composition gives only the empirical formula. For the molecular formula you also need the molar mass.",
+    "once": {
+     "soru": "A compound with empirical formula CH has a molar mass of 78 g/mol. What is its molecular formula? (CH = 13)",
+     "secenekler": [
+      {
+       "yazi": "C₆H₆",
+       "neden": "78 / 13 = 6. So the formula is (CH)₆, that is C₆H₆, and the compound is benzene.",
+       "dogru": true
+      },
+      {
+       "yazi": "CH",
+       "neden": "CH has a mass of 13. To reach 78 you need 6 times that."
+      },
+      {
+       "yazi": "C₂H₂",
+       "neden": "C₂H₂ has a molar mass of 26 g/mol, not 78."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Coefficients are mole ratios",
+    "p": "The coefficients in an equation give the <b>mole ratio</b>, not the mass ratio. In N₂ + 3H₂ → 2NH₃, 1 mol of N₂ combines with 3 mol of H₂ to give 2 mol of NH₃.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mol-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='120' y='26' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>N₂</text><text x='157' y='26' font-size='15' fill='var(--muted)' text-anchor='middle'>+</text><text x='195' y='26' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>3H₂</text><text x='232' y='26' font-size='15' fill='var(--muted)' text-anchor='middle'>→</text><text x='270' y='26' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>2NH₃</text><path d='M10 38 L310 38' stroke='var(--line)' stroke-width='1'/><text x='14' y='60' font-size='12' fill='var(--muted)' text-anchor='start'>particles</text><text x='120' y='60' font-size='12' fill='var(--ink)' text-anchor='middle'>1</text><text x='195' y='60' font-size='12' fill='var(--ink)' text-anchor='middle'>3</text><text x='270' y='60' font-size='12' fill='var(--ink)' text-anchor='middle'>2</text><text x='14' y='84' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>moles</text><text x='120' y='84' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>1 mol</text><text x='195' y='84' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>3 mol</text><text x='270' y='84' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>2 mol</text><text x='14' y='108' font-size='12' fill='var(--muted)' text-anchor='start'>mass</text><text x='120' y='108' font-size='12' fill='var(--ink)' text-anchor='middle'>28 g</text><text x='195' y='108' font-size='12' fill='var(--ink)' text-anchor='middle'>6 g</text><text x='270' y='108' font-size='12' fill='var(--ink)' text-anchor='middle'>34 g</text><text x='14' y='132' font-size='12' fill='var(--muted)' text-anchor='start'>volume (STP)</text><text x='120' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>22.4 L</text><text x='195' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>67.2 L</text><text x='270' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>44.8 L</text><path d='M10 144 L310 144' stroke='var(--line)' stroke-width='1'/><text x='160' y='166' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Mass is conserved: 28 + 6 = 34 g</text><text x='160' y='188' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Moles may not be: 4 mol → 2 mol</text></svg>",
+    "key": "Mass is conserved (28 + 6 = 34 g), but the total number of moles may not be. For gases under the same conditions, the coefficients also give the volume ratio.",
+    "once": {
+     "soru": "In 2H₂ + O₂ → 2H₂O, how many moles of O₂ react with 4 mol of H₂?",
+     "secenekler": [
+      {
+       "yazi": "2",
+       "neden": "The coefficient ratio is H₂ : O₂ = 2 : 1. So 4 mol of H₂ needs 2 mol of O₂.",
+       "dogru": true
+      },
+      {
+       "yazi": "4",
+       "neden": "The mole ratio is 2 : 1, not 1 : 1."
+      },
+      {
+       "yazi": "8",
+       "neden": "The coefficient of O₂ is half that of H₂."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Stoichiometry: three steps",
+    "p": "First convert the given substance to moles. Then use the coefficients to find the moles of the substance you want, and switch to the unit you need. For example, in CH₄ + 2O₂ → CO₂ + 2H₂O, 8 g of CH₄ gives 22 g of CO₂.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mol-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='22' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₄ + 2O₂ → CO₂ + 2H₂O</text><rect x='8' y='48' width='78' height='40' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.2'/><text x='47' y='66' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>8 g</text><text x='47' y='81' font-size='11' fill='var(--muted)' text-anchor='middle'>CH₄</text><rect x='118' y='48' width='84' height='40' rx='6' fill='var(--acc)' fill-opacity='0.18' stroke='var(--acc)' stroke-width='1.2'/><text x='160' y='66' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>0.5 mol</text><text x='160' y='81' font-size='11' fill='var(--muted)' text-anchor='middle'>CH₄</text><rect x='234' y='48' width='78' height='40' rx='6' fill='var(--acc)' fill-opacity='0.18' stroke='var(--acc)' stroke-width='1.2'/><text x='273' y='66' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>0.5 mol</text><text x='273' y='81' font-size='11' fill='var(--muted)' text-anchor='middle'>CO₂</text><path d='M88 68 H115' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#mol-10)'/><text x='102' y='60' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>÷ 16</text><path d='M204 68 H231' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#mol-10)'/><text x='218' y='60' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>1 : 1</text><path d='M255 90 L215 130' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#mol-10)'/><path d='M290 90 L290 130' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#mol-10)'/><rect x='160' y='134' width='74' height='36' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.2'/><text x='197' y='157' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>22 g</text><rect x='250' y='134' width='62' height='36' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.2'/><text x='281' y='157' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>11.2 L</text><text x='212' y='114' font-size='11' fill='var(--c4)' text-anchor='end' font-weight='700'>× 44</text><text x='286' y='116' font-size='11' fill='var(--c3)' text-anchor='end' font-weight='700'>× 22.4</text><text x='16' y='140' font-size='11' fill='var(--muted)' text-anchor='start'>1. convert to moles</text><text x='16' y='158' font-size='11' fill='var(--muted)' text-anchor='start'>2. use the coefficients</text><text x='16' y='176' font-size='11' fill='var(--muted)' text-anchor='start'>3. switch to the unit you need</text><text x='197' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>mass</text><text x='281' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>STP volume</text></svg>",
+    "key": "8 g of CH₄ (M = 16) is 0.5 mol. 0.5 mol of CO₂ (M = 44) is 22 g, or 11.2 L at STP. Never go straight from mass to mass."
+   },
+   {
+    "h": "Limiting reactant",
+    "p": "If the reactants are not in the coefficient ratio, the one that runs out first, the <b>limiting reactant</b>, decides the amount of product, and the other is left over. With 4 g of H₂ and 48 g of O₂, the H₂ runs out and 16 g of O₂ is left.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='140' y='24' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>2H₂</text><text x='172' y='24' font-size='14' fill='var(--muted)' text-anchor='middle'>+</text><text x='205' y='24' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>O₂</text><text x='240' y='24' font-size='14' fill='var(--muted)' text-anchor='middle'>→</text><text x='275' y='24' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>2H₂O</text><path d='M10 34 L310 34' stroke='var(--line)' stroke-width='1'/><text x='14' y='56' font-size='12' fill='var(--ink)' text-anchor='start'>Start</text><text x='140' y='56' font-size='12' fill='var(--ink)' text-anchor='middle'>2 mol</text><text x='205' y='56' font-size='12' fill='var(--ink)' text-anchor='middle'>1.5 mol</text><text x='275' y='56' font-size='12' fill='var(--ink)' text-anchor='middle'>0</text><text x='14' y='80' font-size='12' fill='var(--ink)' text-anchor='start'>Change</text><text x='140' y='80' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>−2 mol</text><text x='205' y='80' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>−1 mol</text><text x='275' y='80' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>+2 mol</text><path d='M10 90 L310 90' stroke='var(--line)' stroke-width='1'/><text x='14' y='110' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>End</text><text x='140' y='110' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>0</text><text x='205' y='110' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>0.5 mol</text><text x='275' y='110' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>2 mol</text><rect x='118' y='96' width='44' height='22' rx='4' fill='none' stroke='var(--c2)' stroke-width='1.5'/><text x='140' y='136' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>used up</text><text x='205' y='136' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>left over (16 g)</text><text x='275' y='136' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>36 g</text><text x='160' y='168' font-size='12' fill='var(--muted)' text-anchor='middle'>4 g H₂ = 2 mol;  48 g O₂ = 1.5 mol</text><text x='160' y='190' font-size='12' fill='var(--ink)' text-anchor='middle'>2 mol H₂ reacts with only 1 mol O₂</text></svg>",
+    "key": "4 g of H₂ is 2 mol and 48 g of O₂ is 1.5 mol, and 36 g of water forms. Don't pick the limiting reactant by mass. The substance with the smaller ratio of moles to coefficient runs out."
+   },
+   {
+    "h": "Percent yield",
+    "p": "The largest amount of product calculated from the limiting reactant is called the <b>theoretical yield</b>. Because of losses, you actually get less. The <b>percent yield</b> is the actual yield divided by the theoretical yield, times 100.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M40 170 L300 170' stroke='var(--ink)' stroke-width='1.2'/><path d='M40 30 L40 170' stroke='var(--ink)' stroke-width='1.2'/><rect x='80' y='50' width='70' height='120' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><rect x='190' y='80' width='70' height='90' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)'/><rect x='190' y='50' width='70' height='30' fill='none' stroke='var(--c2)' stroke-dasharray='4 3'/><text x='115' y='42' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>36 g</text><text x='225' y='68' font-size='11' fill='var(--c2)' text-anchor='middle'>loss 9 g</text><text x='225' y='128' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>27 g</text><text x='115' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>theoretical</text><text x='225' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>actual</text><text x='290' y='24' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='700'>yield = 27 / 36 × 100 = 75%</text></svg>",
+    "key": "Yield cannot exceed 100%. If it does, the product is most likely wet or impure.",
+    "once": {
+     "soru": "In theory 36 g of water should form, but 27 g was obtained. What is the percent yield?",
+     "secenekler": [
+      {
+       "yazi": "75%",
+       "neden": "27 / 36 × 100 = 75%.",
+       "dogru": true
+      },
+      {
+       "yazi": "133%",
+       "neden": "The actual yield cannot be larger than the theoretical yield. The ratio is upside down."
+      },
+      {
+       "yazi": "25%",
+       "neden": "25% is the part that was lost, not the yield."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Mixture problems",
+    "p": "Give each component of a mixture an unknown and set up two equations. One equation is for the total amount, the other for the product.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='14' width='120' height='76' rx='6' fill='var(--c5)' fill-opacity='0.1' stroke='var(--c5)' stroke-width='1.2'/><circle cx='36' cy='40' r='7' fill='var(--c1)' fill-opacity='0.6'/><circle cx='60' cy='60' r='7' fill='var(--c1)' fill-opacity='0.6'/><circle cx='30' cy='72' r='7' fill='var(--c1)' fill-opacity='0.6'/><ellipse cx='92' cy='42' rx='13' ry='7' fill='var(--c4)' fill-opacity='0.7'/><ellipse cx='98' cy='70' rx='13' ry='7' fill='var(--c4)' fill-opacity='0.7'/><text x='70' y='108' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>0.5 mol mixture</text><circle cx='160' cy='30' r='6' fill='var(--c1)' fill-opacity='0.6'/><text x='172' y='34' font-size='12' fill='var(--ink)' text-anchor='start'>CH₄: x mol</text><ellipse cx='160' cy='56' rx='10' ry='6' fill='var(--c4)' fill-opacity='0.7'/><text x='172' y='60' font-size='12' fill='var(--ink)' text-anchor='start'>C₂H₆: y mol</text><text x='172' y='86' font-size='12' fill='var(--muted)' text-anchor='start'>burning gives 0.7 mol CO₂</text><path d='M10 122 L310 122' stroke='var(--line)' stroke-width='1'/><text x='20' y='144' font-size='12' fill='var(--muted)' text-anchor='start'>total moles:</text><text x='120' y='144' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>x + y = 0.5</text><text x='20' y='166' font-size='12' fill='var(--muted)' text-anchor='start'>moles of CO₂:</text><text x='120' y='166' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>x + 2y = 0.7</text><text x='160' y='192' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>→ y = 0.2 mol C₂H₆,  x = 0.3 mol CH₄</text></svg>",
+    "key": "If 0.5 mol of a CH₄–C₂H₆ mixture at STP burns to give 0.7 mol of CO₂, then x + y = 0.5 and x + 2y = 0.7. This gives 0.3 mol of CH₄ and 0.2 mol of C₂H₆.",
+    "once": {
+     "soru": "Each C atom gives one CO₂ when it burns. How many moles of CO₂ form when 1 mol of C₂H₆ burns?",
+     "secenekler": [
+      {
+       "yazi": "2",
+       "neden": "C₂H₆ has 2 C atoms, and each one forms a CO₂.",
+       "dogru": true
+      },
+      {
+       "yazi": "1",
+       "neden": "There are two carbon atoms in one molecule."
+      },
+      {
+       "yazi": "6",
+       "neden": "6 is the number of hydrogens."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• 1 mole is 6.02×10<sup>23</sup> particles.<br>• Use n = m/M = N/N<sub>A</sub>. For gases at STP, n = V/22.4.<br>• Percentages give the empirical formula, and the molar mass gives the molecular formula.<br>• Coefficients give the mole ratio, so convert to moles first.<br>• The reactant that runs out decides the product. Yield is the actual amount divided by the theoretical amount.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mol-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><rect x='115' y='78' width='90' height='44' rx='6' fill='var(--acc)' fill-opacity='0.2' stroke='var(--acc)' stroke-width='1.2'/><text x='160' y='98' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>1 mol</text><text x='160' y='114' font-size='11' fill='var(--ink)' text-anchor='middle'>6.02×10²³</text><rect x='10' y='20' width='96' height='40' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.2'/><text x='58' y='45' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>m = n·M</text><rect x='214' y='20' width='96' height='40' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><text x='262' y='45' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>N = n·N<tspan font-size='10' baseline-shift='sub'>A</tspan></text><rect x='10' y='140' width='96' height='40' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.2'/><text x='58' y='158' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>V = n·22.4</text><text x='58' y='173' font-size='10' fill='var(--muted)' text-anchor='middle'>(STP, gas)</text><rect x='214' y='140' width='96' height='40' rx='6' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.2'/><text x='262' y='158' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>coefficient</text><text x='262' y='173' font-size='11' fill='var(--muted)' text-anchor='middle'>= mole ratio</text><path d='M115 86 L98 62' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mol-14)'/><path d='M205 86 L222 62' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mol-14)'/><path d='M115 114 L98 138' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mol-14)'/><path d='M205 114 L222 138' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mol-14)'/></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "How many grams is the CO<sub>2</sub> gas that takes up 4.48 L at STP? (C = 12, O = 16)",
+    "cevap": 8.8,
+    "tolerans": 0.05,
+    "birim": "g",
+    "e": "n = 4.48 / 22.4 = 0.2 mol. The molar mass of CO<sub>2</sub> is 44 g/mol, so m = 0.2 × 44 = 8.8 g."
+   },
+   {
+    "tur": "eslestir",
+    "q": "Match each amount to its number of moles. (H = 1, C = 12, O = 16)",
+    "ciftler": [
+     [
+      "54 g H<sub>2</sub>O",
+      "3 mol"
+     ],
+     [
+      "4.4 g CO<sub>2</sub>",
+      "0.1 mol"
+     ],
+     [
+      "11.2 L CH<sub>4</sub> at STP",
+      "0.5 mol"
+     ],
+     [
+      "1.204×10<sup>24</sup> molecules",
+      "2 mol"
+     ]
+    ],
+    "e": "54 / 18 = 3 mol, 4.4 / 44 = 0.1 mol and 11.2 / 22.4 = 0.5 mol. 1.204×10<sup>24</sup> / 6.02×10<sup>23</sup> is 2 mol."
+   },
+   {
+    "tur": "sayi",
+    "q": "A compound is 80% C and 20% H by mass, and its molar mass is 30 g/mol. How many H atoms are in its molecular formula? (H = 1, C = 12)",
+    "cevap": 6,
+    "e": "100 g contains 80 / 12 = 6.67 mol of C and 20 / 1 = 20 mol of H. The ratio is 1 : 3, so the empirical formula is CH<sub>3</sub> (15 g/mol). n = 30 / 15 = 2, and the molecular formula is C<sub>2</sub>H<sub>6</sub>. So the molecule has 6 H."
+   },
+   {
+    "q": "For the reaction N<sub>2</sub> + 3H<sub>2</sub> → 2NH<sub>3</sub>, a container holds 2 mol of N<sub>2</sub> and 3 mol of H<sub>2</sub>. When the reaction goes to completion, what is in the container?",
+    "o": [
+     "1 mol N<sub>2</sub> and 2 mol NH<sub>3</sub>",
+     "Only 2 mol NH<sub>3</sub>",
+     "1 mol H<sub>2</sub> and 4 mol NH<sub>3</sub>",
+     "Only 4 mol NH<sub>3</sub>"
+    ],
+    "a": 0,
+    "e": "3 mol of H<sub>2</sub> reacts with only 1 mol of N<sub>2</sub>. The H<sub>2</sub> runs out, 2 mol of NH<sub>3</sub> forms and 1 mol of N<sub>2</sub> is left over.",
+    "y": [
+     "",
+     "3 mol of H<sub>2</sub> uses up only 1 mol of N<sub>2</sub>. The leftover 1 mol of N<sub>2</sub> stays in the container.",
+     "The limiting reactant is H<sub>2</sub>. 2 mol of N<sub>2</sub> would need 6 mol of H<sub>2</sub>, but there are only 3 mol.",
+     "4 mol of NH<sub>3</sub> would need 6 mol of H<sub>2</sub>. 3 mol of H<sub>2</sub> gives at most 2 mol of NH<sub>3</sub>."
+    ]
+   }
+  ]
+ },
+ "asit-baz": {
+  "title": "Acids, bases and salts",
+  "summary": "Learn the definitions of acids and bases, pH, Ka, neutralization, salts and titration.",
+  "cards": [
+   {
+    "h": "Recognizing acids and bases",
+    "p": "Acids taste <b>sour</b>. Solutions of bases taste bitter and feel slippery. Dyes that change color in acids and bases are called <b>indicators</b>. Litmus turns red in acid and blue in base.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='8' width='304' height='24' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='56' y='25' font-size='12' fill='var(--muted)' text-anchor='middle' font-weight='700'>Property</text><text x='170' y='25' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Acid</text><text x='266' y='25' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Base</text><text x='14' y='52' font-size='12' fill='var(--muted)' text-anchor='start'>Taste</text><text x='170' y='52' font-size='12' fill='var(--ink)' text-anchor='middle'>sour (lemon)</text><text x='266' y='52' font-size='12' fill='var(--ink)' text-anchor='middle'>bitter, slippery feel</text><line x1='8' y1='60' x2='312' y2='60' stroke='var(--line)' stroke-width='1'/><text x='14' y='75' font-size='12' fill='var(--muted)' text-anchor='start'>Litmus</text><circle cx='126' cy='71' r='5' fill='var(--c2)' fill-opacity='0.85'/><circle cx='224' cy='71' r='5' fill='var(--c1)' fill-opacity='0.85'/><text x='170' y='75' font-size='12' fill='var(--ink)' text-anchor='middle'>red</text><text x='266' y='75' font-size='12' fill='var(--ink)' text-anchor='middle'>blue</text><line x1='8' y1='83' x2='312' y2='83' stroke='var(--line)' stroke-width='1'/><text x='14' y='98' font-size='12' fill='var(--muted)' text-anchor='start'>Phenolphthalein</text><circle cx='224' cy='94' r='5' fill='var(--c5)' fill-opacity='0.85'/><text x='170' y='98' font-size='12' fill='var(--ink)' text-anchor='middle'>colorless</text><text x='266' y='98' font-size='12' fill='var(--ink)' text-anchor='middle'>pink</text><line x1='8' y1='106' x2='312' y2='106' stroke='var(--line)' stroke-width='1'/><text x='14' y='121' font-size='12' fill='var(--muted)' text-anchor='start'>Methyl orange</text><circle cx='126' cy='117' r='5' fill='var(--c2)' fill-opacity='0.85'/><circle cx='224' cy='117' r='5' fill='var(--c4)' fill-opacity='0.85'/><text x='170' y='121' font-size='12' fill='var(--ink)' text-anchor='middle'>red</text><text x='266' y='121' font-size='12' fill='var(--ink)' text-anchor='middle'>yellow</text><line x1='8' y1='129' x2='312' y2='129' stroke='var(--line)' stroke-width='1'/><text x='14' y='144' font-size='12' fill='var(--muted)' text-anchor='start'>With CaCO₃</text><text x='170' y='144' font-size='12' fill='var(--ink)' text-anchor='middle'>releases CO₂</text><text x='266' y='144' font-size='12' fill='var(--ink)' text-anchor='middle'>no reaction</text><line x1='8' y1='152' x2='312' y2='152' stroke='var(--line)' stroke-width='1'/><text x='14' y='167' font-size='12' fill='var(--muted)' text-anchor='start'>Aqueous solution</text><text x='170' y='167' font-size='12' fill='var(--ink)' text-anchor='middle'>conducts electricity</text><text x='266' y='167' font-size='12' fill='var(--ink)' text-anchor='middle'>conducts electricity</text><line x1='8' y1='175' x2='312' y2='175' stroke='var(--line)' stroke-width='1'/><text x='160' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>An indicator changes color over a certain pH range.</text></svg>",
+    "key": "Lemons and vinegar contain acids. Acids release CO₂ from limestone (CaCO₃), and this is how descalers work. Never taste anything in the lab.",
+    "once": {
+     "soru": "You dip litmus paper into lemon juice. What color does it turn?",
+     "secenekler": [
+      {
+       "yazi": "Red",
+       "neden": "Lemon contains acid, and litmus turns red in acid.",
+       "dogru": true
+      },
+      {
+       "yazi": "Blue",
+       "neden": "Litmus turns blue in base. Lemon is acidic."
+      },
+      {
+       "yazi": "No change",
+       "neden": "Litmus is an indicator, and its color changes in acid."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The Arrhenius definition",
+    "p": "According to Arrhenius, an <b>acid</b> is a substance that releases H<sup>+</sup> in water. The H<sup>+</sup> bonds to water and forms <b>H₃O<sup>+</sup></b>. A <b>base</b> is a substance that releases OH<sup>−</sup> in water. NH₃ is a base because it forms OH<sup>−</sup> with water.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='asit-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='10' y='12' width='300' height='76' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)'/><text x='20' y='32' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='700'>Acid: releases H⁺ in water</text><text x='20' y='56' font-size='13' fill='var(--ink)' text-anchor='start'>HCl(aq) → H⁺ + Cl⁻</text><text x='20' y='78' font-size='13' fill='var(--ink)' text-anchor='start'>H⁺ + H₂O → H₃O⁺ (hydronium)</text><rect x='10' y='98' width='300' height='76' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)'/><text x='20' y='118' font-size='13' fill='var(--c1)' text-anchor='start' font-weight='700'>Base: releases OH⁻ in water</text><text x='20' y='142' font-size='13' fill='var(--ink)' text-anchor='start'>NaOH(s) → Na⁺(aq) + OH⁻(aq)</text><text x='20' y='164' font-size='13' fill='var(--ink)' text-anchor='start'>NH₃ + H₂O ⇌ NH₄⁺ + OH⁻</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>The definition applies only to aqueous solutions.</text></svg>",
+    "etk": {
+     "tur": "ayir",
+     "soru": "Sort each substance by how it behaves in water: does it release H⁺ or form OH⁻?",
+     "gruplar": [
+      "Acid",
+      "Base"
+     ],
+     "ogeler": [
+      [
+       "HCl",
+       0
+      ],
+      [
+       "HNO₃",
+       0
+      ],
+      [
+       "H₂SO₄",
+       0
+      ],
+      [
+       "CH₃COOH",
+       0,
+       "This is acetic acid, found in vinegar. It releases H⁺ in water (weak acid)."
+      ],
+      [
+       "NaOH",
+       1
+      ],
+      [
+       "KOH",
+       1
+      ],
+      [
+       "Ca(OH)₂",
+       1
+      ],
+      [
+       "NH₃",
+       1,
+       "It has no OH in its structure, but it reacts with water and forms OH⁻."
+      ]
+     ]
+    },
+    "key": "H₃O⁺ is the hydronium ion. The Arrhenius definition holds only for aqueous solutions.",
+    "once": {
+     "soru": "Which ion does HCl release when it dissolves in water?",
+     "secenekler": [
+      {
+       "yazi": "H⁺",
+       "neden": "HCl splits into H⁺ and Cl⁻ ions in water. A substance that releases H⁺ in water is an acid.",
+       "dogru": true
+      },
+      {
+       "yazi": "OH⁻",
+       "neden": "HCl has no OH group. Substances that release OH⁻ are bases."
+      },
+      {
+       "yazi": "No ions at all",
+       "neden": "HCl splits almost completely into ions in water."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Brønsted–Lowry and conjugate pairs",
+    "p": "According to Brønsted–Lowry, an acid is a <b>proton (H<sup>+</sup>) donor</b> and a base is a proton acceptor. An acid that gives away a proton leaves behind its <b>conjugate base</b>. For example, the conjugate base of CH₃COOH is CH₃COO<sup>−</sup>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='asit-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='asit-3b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><text x='160' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Proton (H⁺) transfer</text><text x='40' y='78' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>NH₃</text><text x='78' y='78' font-size='14' fill='var(--muted)' text-anchor='middle'>+</text><text x='116' y='78' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>H₂O</text><text x='160' y='78' font-size='15' fill='var(--muted)' text-anchor='middle'>⇌</text><text x='204' y='78' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>NH₄⁺</text><text x='244' y='78' font-size='14' fill='var(--muted)' text-anchor='middle'>+</text><text x='282' y='78' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>OH⁻</text><text x='40' y='100' font-size='11' fill='var(--c1)' text-anchor='middle'>base</text><text x='116' y='100' font-size='11' fill='var(--c2)' text-anchor='middle'>acid</text><text x='204' y='100' font-size='11' fill='var(--c2)' text-anchor='middle'>conjugate acid</text><text x='282' y='100' font-size='11' fill='var(--c1)' text-anchor='middle'>conjugate base</text><path d='M116 58 C116 40 52 40 44 56' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#asit-3)'/><text x='80' y='40' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>H⁺</text><path d='M40 108 V122 H204 V108' fill='none' stroke='var(--c1)' stroke-width='1.2'/><path d='M116 108 V132 H282 V108' fill='none' stroke='var(--c2)' stroke-width='1.2'/><text x='90' y='146' font-size='11' fill='var(--c1)' text-anchor='middle'>pair 1: NH₃ / NH₄⁺</text><text x='230' y='146' font-size='11' fill='var(--c2)' text-anchor='middle'>pair 2: H₂O / OH⁻</text><rect x='10' y='158' width='300' height='34' rx='6' fill='var(--panel)' fill-opacity='1'/><text x='160' y='179' font-size='12' fill='var(--ink)' text-anchor='middle'>HCl(g) + NH₃(g) → NH₄Cl(s): no water, still acid–base</text></svg>",
+    "key": "An acid and its conjugate base differ by one H⁺. Water can both donate and accept a proton, so it is amphiprotic. The stronger the acid, the weaker its conjugate base.",
+    "once": {
+     "soru": "What does water do in the reaction NH₃ + H₂O → NH₄⁺ + OH⁻?",
+     "secenekler": [
+      {
+       "yazi": "Donates a proton",
+       "neden": "Water gives an H⁺ to NH₃ and becomes OH⁻. Here it acts like an acid.",
+       "dogru": true
+      },
+      {
+       "yazi": "Accepts a proton",
+       "neden": "NH₃ is the one that accepts the proton and becomes NH₄⁺."
+      },
+      {
+       "yazi": "Takes no part",
+       "neden": "Water reacts, loses an H⁺ and becomes OH⁻."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Ionization of water: Kw",
+    "p": "Pure water ionizes slightly and reaches equilibrium (2H₂O ⇌ H₃O⁺ + OH⁻). At 25 °C, <b>Kw = [H₃O⁺][OH⁻] = 10⁻¹⁴</b>. In pure water both ions have a concentration of 10⁻⁷ M.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>2H₂O ⇌ H₃O⁺ + OH⁻</text><line x1='20' y1='160' x2='300' y2='160' stroke='var(--ink)' stroke-width='1.2'/><rect x='30' y='61' width='24' height='99' fill='var(--c2)' fill-opacity='0.55'/><text x='42' y='56' font-size='10' fill='var(--c2)' text-anchor='middle'>10⁻³</text><rect x='60' y='133' width='24' height='27' fill='var(--c1)' fill-opacity='0.55'/><text x='72' y='128' font-size='10' fill='var(--c1)' text-anchor='middle'>10⁻¹¹</text><text x='57' y='177' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>acidic</text><rect x='133' y='97' width='24' height='63' fill='var(--c2)' fill-opacity='0.55'/><text x='145' y='92' font-size='10' fill='var(--c2)' text-anchor='middle'>10⁻⁷</text><rect x='163' y='97' width='24' height='63' fill='var(--c1)' fill-opacity='0.55'/><text x='175' y='92' font-size='10' fill='var(--c1)' text-anchor='middle'>10⁻⁷</text><text x='160' y='177' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>neutral</text><rect x='236' y='133' width='24' height='27' fill='var(--c2)' fill-opacity='0.55'/><text x='248' y='128' font-size='10' fill='var(--c2)' text-anchor='middle'>10⁻¹¹</text><rect x='266' y='61' width='24' height='99' fill='var(--c1)' fill-opacity='0.55'/><text x='278' y='56' font-size='10' fill='var(--c1)' text-anchor='middle'>10⁻³</text><text x='263' y='177' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>basic</text><rect x='24' y='34' width='10' height='10' fill='var(--c2)' fill-opacity='0.55'/><text x='39' y='43' font-size='11' fill='var(--muted)' text-anchor='start'>[H₃O⁺]</text><rect x='92' y='34' width='10' height='10' fill='var(--c1)' fill-opacity='0.55'/><text x='107' y='43' font-size='11' fill='var(--muted)' text-anchor='start'>[OH⁻]</text><text x='160' y='195' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>At 25 °C the product is always 1×10⁻¹⁴ M²</text></svg>",
+    "key": "At equilibrium the forward and reverse reactions run at the same rate. Kw increases with temperature. That is why neutral water does not have a pH of exactly 7 at temperatures other than 25 °C.",
+    "once": {
+     "soru": "A little acid is added to pure water. What happens to [OH⁻]?",
+     "secenekler": [
+      {
+       "yazi": "It decreases",
+       "neden": "At 25 °C the product [H₃O⁺][OH⁻] is constant. So when H₃O⁺ goes up, OH⁻ goes down.",
+       "dogru": true
+      },
+      {
+       "yazi": "It increases",
+       "neden": "The acid adds H₃O⁺. The product stays constant, so OH⁻ cannot increase."
+      },
+      {
+       "yazi": "It stays the same",
+       "neden": "The product is constant. When one goes up, the other has to go down."
+      }
+     ]
+    }
+   },
+   {
+    "h": "pH, pOH and the pH scale",
+    "p": "pH is calculated as <b>pH = −log[H₃O⁺]</b>. For example, if [H₃O⁺] = 10⁻³ M, then pH = 3. At 25 °C, pH + pOH = 14. pH 7 is neutral, below 7 is acidic and above 7 is basic.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='90' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>pH = −log[H₃O⁺]</text><text x='235' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>pH + pOH = 14</text><text x='160' y='40' font-size='11' fill='var(--muted)' text-anchor='middle'>(25 °C)</text><rect x='20' y='86' width='19' height='24' fill='var(--c2)' fill-opacity='0.71'/><text x='29.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>0</text><rect x='39' y='86' width='19' height='24' fill='var(--c2)' fill-opacity='0.63'/><text x='48.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>1</text><rect x='58' y='86' width='19' height='24' fill='var(--c2)' fill-opacity='0.55'/><text x='67.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>2</text><rect x='77' y='86' width='19' height='24' fill='var(--c2)' fill-opacity='0.47'/><text x='86.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>3</text><rect x='96' y='86' width='19' height='24' fill='var(--c2)' fill-opacity='0.39'/><text x='105.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>4</text><rect x='115' y='86' width='19' height='24' fill='var(--c2)' fill-opacity='0.31'/><text x='124.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>5</text><rect x='134' y='86' width='19' height='24' fill='var(--c2)' fill-opacity='0.23'/><text x='143.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>6</text><rect x='153' y='86' width='19' height='24' fill='var(--c3)' fill-opacity='0.5'/><text x='162.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>7</text><rect x='172' y='86' width='19' height='24' fill='var(--c1)' fill-opacity='0.23'/><text x='181.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>8</text><rect x='191' y='86' width='19' height='24' fill='var(--c1)' fill-opacity='0.31'/><text x='200.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>9</text><rect x='210' y='86' width='19' height='24' fill='var(--c1)' fill-opacity='0.39'/><text x='219.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>10</text><rect x='229' y='86' width='19' height='24' fill='var(--c1)' fill-opacity='0.47'/><text x='238.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>11</text><rect x='248' y='86' width='19' height='24' fill='var(--c1)' fill-opacity='0.55'/><text x='257.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>12</text><rect x='267' y='86' width='19' height='24' fill='var(--c1)' fill-opacity='0.63'/><text x='276.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>13</text><rect x='286' y='86' width='19' height='24' fill='var(--c1)' fill-opacity='0.71'/><text x='295.5' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>14</text><line x1='48.5' y1='76' x2='48.5' y2='86' stroke='var(--muted)' stroke-width='1'/><text x='48' y='70' font-size='11' fill='var(--ink)' text-anchor='middle'>stomach ≈1.5</text><line x1='115' y1='76' x2='115' y2='86' stroke='var(--muted)' stroke-width='1'/><text x='115' y='70' font-size='11' fill='var(--ink)' text-anchor='middle'>coffee ≈5</text><line x1='210' y1='76' x2='210' y2='86' stroke='var(--muted)' stroke-width='1'/><text x='210' y='70' font-size='11' fill='var(--ink)' text-anchor='middle'>soap ≈10</text><line x1='286' y1='76' x2='286' y2='86' stroke='var(--muted)' stroke-width='1'/><text x='286' y='58' font-size='11' fill='var(--ink)' text-anchor='middle'>drain</text><text x='286' y='70' font-size='11' fill='var(--ink)' text-anchor='middle'>cleaner ≈14</text><line x1='61.8' y1='110' x2='61.8' y2='120' stroke='var(--muted)' stroke-width='1'/><text x='61.8' y='132' font-size='11' fill='var(--ink)' text-anchor='middle'>lemon ≈2</text><line x1='153' y1='110' x2='153' y2='120' stroke='var(--muted)' stroke-width='1'/><text x='156' y='132' font-size='11' fill='var(--ink)' text-anchor='end'>pure water 7</text><line x1='160.6' y1='110' x2='160.6' y2='120' stroke='var(--muted)' stroke-width='1'/><text x='161' y='132' font-size='11' fill='var(--ink)' text-anchor='start'>blood ≈7.4</text><line x1='238.5' y1='110' x2='238.5' y2='140' stroke='var(--muted)' stroke-width='1'/><text x='244' y='152' font-size='11' fill='var(--ink)' text-anchor='middle'>ammonia ≈11</text><text x='70' y='172' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>← acidic</text><text x='250' y='172' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>basic →</text><text x='160' y='192' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>1 pH unit = 10× difference in [H₃O⁺]</text></svg>",
+    "key": "pOH is calculated as pOH = −log[OH⁻]. If the pH drops by one unit, [H₃O⁺] goes up 10 times. If it drops by 2 units, it goes up 100 times.",
+    "etk": {
+     "tur": "formul",
+     "soru": "At 25 °C, [H₃O⁺] = a × 10<sup>−b</sup> M. Change the concentration: how do pH and pOH change?",
+     "girdiler": [
+      {
+       "ad": "a",
+       "etiket": "Coefficient (a)",
+       "min": 1,
+       "max": 9.9,
+       "adim": 0.1,
+       "deger": 1
+      },
+      {
+       "ad": "b",
+       "etiket": "Exponent (b)",
+       "min": 1,
+       "max": 14,
+       "adim": 1,
+       "deger": 3
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "pH",
+       "ifade": "b-log(a)",
+       "basamak": 2,
+       "max": 14
+      },
+      {
+       "ad": "pOH",
+       "ifade": "14-(b-log(a))",
+       "basamak": 2,
+       "max": 14
+      }
+     ],
+     "yorum": [
+      [
+       7,
+       "The solution is acidic, because [H₃O⁺] &gt; [OH⁻]."
+      ],
+      [
+       7.00001,
+       "The solution is neutral, because [H₃O⁺] = [OH⁻]."
+      ],
+      [
+       null,
+       "The solution is basic, because [OH⁻] &gt; [H₃O⁺]."
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Strong and weak acids and bases",
+    "p": "Strong acids and bases such as HCl, HNO₃, NaOH and KOH ionize <b>completely</b> in water. Weak ones such as CH₃COOH in vinegar and NH₃ ionize only <b>slightly</b>. Being strong does not mean being concentrated.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M18 40 V150 H148 V40' fill='none' stroke='var(--ink)' stroke-width='1.5'/><path d='M172 40 V150 H302 V40' fill='none' stroke='var(--ink)' stroke-width='1.5'/><circle cx='38' cy='62' r='9' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='38' y='66' font-size='11' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='70' cy='76' r='9' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><text x='70' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>−</text><circle cx='104' cy='58' r='9' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='104' y='62' font-size='11' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='128' cy='86' r='9' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><text x='128' y='90' font-size='11' fill='var(--ink)' text-anchor='middle'>−</text><circle cx='44' cy='104' r='9' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='44' y='108' font-size='11' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='82' cy='120' r='9' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><text x='82' y='124' font-size='11' fill='var(--ink)' text-anchor='middle'>−</text><circle cx='118' cy='128' r='9' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='118' y='132' font-size='11' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='60' cy='136' r='9' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><text x='60' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>−</text><rect x='181' y='53' width='26' height='18' rx='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='194' y='66' font-size='10' fill='var(--ink)' text-anchor='middle'>HA</text><rect x='227' y='49' width='26' height='18' rx='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='240' y='62' font-size='10' fill='var(--ink)' text-anchor='middle'>HA</text><rect x='269' y='61' width='26' height='18' rx='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='282' y='74' font-size='10' fill='var(--ink)' text-anchor='middle'>HA</text><rect x='191' y='91' width='26' height='18' rx='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='204' y='104' font-size='10' fill='var(--ink)' text-anchor='middle'>HA</text><rect x='243' y='87' width='26' height='18' rx='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='256' y='100' font-size='10' fill='var(--ink)' text-anchor='middle'>HA</text><rect x='183' y='125' width='26' height='18' rx='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='196' y='138' font-size='10' fill='var(--ink)' text-anchor='middle'>HA</text><rect x='269' y='119' width='26' height='18' rx='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)'/><text x='282' y='132' font-size='10' fill='var(--ink)' text-anchor='middle'>HA</text><circle cx='232' cy='138' r='9' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='232' y='142' font-size='11' fill='var(--ink)' text-anchor='middle'>+</text><circle cx='256' cy='128' r='9' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><text x='256' y='132' font-size='11' fill='var(--ink)' text-anchor='middle'>−</text><text x='83' y='26' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>0.1 M HCl</text><text x='237' y='26' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>0.1 M CH₃COOH</text><text x='83' y='168' font-size='12' fill='var(--c2)' text-anchor='middle'>fully ionized</text><text x='237' y='168' font-size='12' fill='var(--c5)' text-anchor='middle'>≈ 1% ionized</text><text x='83' y='188' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>pH = 1</text><text x='237' y='188' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>pH ≈ 2.9</text></svg>",
+    "key": "H₂SO₄ gives up its first proton completely. At the same concentration a strong acid has a lower pH. Dilute HCl is still a strong acid."
+   },
+   {
+    "h": "Ka and Kb: measuring strength",
+    "p": "The ionization of a weak acid is an equilibrium, written as <b>Ka = [H₃O⁺][A⁻] / [HA]</b>. Water is left out of this expression. The larger Ka is, the stronger the acid. Kb is written the same way for bases.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='asit-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--acc)'/></marker></defs><text x='160' y='24' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>HA + H₂O ⇌ H₃O⁺ + A⁻</text><text x='160' y='50' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>K<tspan font-size='10' baseline-shift='sub'>a</tspan> = [H₃O⁺][A⁻] / [HA]</text><path d='M20 92 H300' stroke='var(--acc)' stroke-width='1.5' fill='none' marker-end='url(#asit-7)'/><text x='160' y='80' font-size='12' fill='var(--muted)' text-anchor='middle'>K<tspan font-size='10' baseline-shift='sub'>a</tspan> larger → stronger acid</text><circle cx='50' cy='92' r='4' fill='var(--c2)' fill-opacity='0.85'/><text x='50' y='112' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>HCN</text><text x='50' y='127' font-size='11' fill='var(--muted)' text-anchor='middle'>6.2×10⁻¹⁰</text><circle cx='160' cy='92' r='4' fill='var(--c2)' fill-opacity='0.85'/><text x='160' y='112' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₃COOH</text><text x='160' y='127' font-size='11' fill='var(--muted)' text-anchor='middle'>1.8×10⁻⁵</text><circle cx='262' cy='92' r='4' fill='var(--c2)' fill-opacity='0.85'/><text x='262' y='112' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>HF</text><text x='262' y='127' font-size='11' fill='var(--muted)' text-anchor='middle'>≈7×10⁻⁴</text><rect x='10' y='142' width='300' height='52' rx='6' fill='var(--panel)' fill-opacity='1'/><text x='160' y='162' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Conjugate pair (25 °C): K<tspan font-size='10' baseline-shift='sub'>a</tspan>·K<tspan font-size='10' baseline-shift='sub'>b</tspan> = K<tspan font-size='10' baseline-shift='sub'>w</tspan></text><text x='160' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>For CH₃COO⁻, K<tspan font-size='10' baseline-shift='sub'>b</tspan> = 10⁻¹⁴ / 1.8×10⁻⁵ ≈ 5.6×10⁻¹⁰</text></svg>",
+    "key": "If Ka is large, the acid is strong and the Kb of its conjugate base is small.",
+    "once": {
+     "soru": "Ka values: 7×10⁻⁴ for HF and 1.8×10⁻⁵ for CH₃COOH. Which is the stronger acid?",
+     "secenekler": [
+      {
+       "yazi": "HF",
+       "neden": "The acid with the larger Ka ionizes more. HF has the larger Ka.",
+       "dogru": true
+      },
+      {
+       "yazi": "CH₃COOH",
+       "neden": "This acid has the smaller Ka and ionizes less."
+      },
+      {
+       "yazi": "They are equal",
+       "neden": "The Ka values differ. The one with the larger Ka is stronger."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Calculating pH: strong and weak",
+    "p": "For a strong monoprotic acid, [H₃O⁺] equals the acid concentration. For example, 0.01 M HCl has a pH of 2. For weak acids, use <b>[H₃O⁺] ≈ √(Ka·C)</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='10' width='148' height='180' rx='6' fill='var(--c2)' fill-opacity='0.07' stroke='var(--c2)'/><text x='82' y='30' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Strong acid</text><text x='82' y='56' font-size='12' fill='var(--ink)' text-anchor='middle'>0.01 M HCl</text><text x='82' y='78' font-size='12' fill='var(--ink)' text-anchor='middle'>[H₃O⁺] = 10⁻² M</text><text x='82' y='100' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>pH = 2</text><line x1='20' y1='116' x2='144' y2='116' stroke='var(--line)' stroke-width='1'/><text x='82' y='136' font-size='12' fill='var(--ink)' text-anchor='middle'>0.01 M NaOH</text><text x='82' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>pOH = 2</text><text x='82' y='180' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>pH = 14 − 2 = 12</text><rect x='164' y='10' width='148' height='180' rx='6' fill='var(--c5)' fill-opacity='0.07' stroke='var(--c5)'/><text x='238' y='30' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Weak acid</text><text x='238' y='56' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>[H₃O⁺] ≈ √(K<tspan font-size='10' baseline-shift='sub'>a</tspan>·C)</text><text x='238' y='82' font-size='12' fill='var(--ink)' text-anchor='middle'>K<tspan font-size='10' baseline-shift='sub'>a</tspan> = 1×10⁻⁵</text><text x='238' y='105' font-size='12' fill='var(--ink)' text-anchor='middle'>C = 0.1 M</text><text x='238' y='127' font-size='12' fill='var(--ink)' text-anchor='middle'>√(10⁻⁶) = 10⁻³ M</text><text x='238' y='150' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>pH = 3</text><text x='238' y='172' font-size='11' fill='var(--muted)' text-anchor='middle'>ionized: 1%</text></svg>",
+    "key": "For strong bases, find pOH first. If you dilute a strong acid 10 times, the pH goes up by 1. 0.01 M HCl has a pH of 2, and 0.001 M HCl has a pH of 3.",
+    "once": {
+     "soru": "What is the pH of a 0.001 M HCl solution?",
+     "secenekler": [
+      {
+       "yazi": "3",
+       "neden": "HCl ionizes completely. [H₃O⁺] = 10⁻³ M, so pH = 3.",
+       "dogru": true
+      },
+      {
+       "yazi": "0.001",
+       "neden": "That is the concentration. pH is the negative logarithm of the concentration."
+      },
+      {
+       "yazi": "11",
+       "neden": "11 is the pOH. The pH of an acid is below 7."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Neutralization",
+    "p": "When an acid reacts with a base, <b>a salt and water</b> form. The real event is H₃O⁺ and OH⁻ joining to make water, and heat is released. Stomach remedies called <b>antacids</b> work this way.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='asit-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='24' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>HCl + NaOH → NaCl + H₂O</text><text x='160' y='44' font-size='12' fill='var(--muted)' text-anchor='middle'>acid + base → salt + water</text><rect x='40' y='56' width='240' height='36' rx='6' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)'/><text x='160' y='79' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>net: H₃O⁺ + OH⁻ → 2H₂O + heat</text><text x='160' y='116' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Antacid for heartburn:</text><text x='160' y='140' font-size='12' fill='var(--ink)' text-anchor='middle'>Mg(OH)₂ + 2HCl → MgCl₂ + 2H₂O</text><text x='160' y='162' font-size='12' fill='var(--ink)' text-anchor='middle'>NaHCO₃ + HCl → NaCl + H₂O + CO₂</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>Neutralization is exothermic.</text></svg>",
+    "key": "Antacids contain Mg(OH)₂ or NaHCO₃. Neutralization does not always give pH 7. The result depends on the salt that forms."
+   },
+   {
+    "h": "Polyprotic acids and bases",
+    "p": "H₂SO₄ can release two H⁺ and H₃PO₄ three. Ca(OH)₂ also releases two OH⁻. For complete neutralization, <b>n(H⁺) = n(OH⁻)</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='24' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O</text><rect x='40' y='38' width='240' height='34' rx='6' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)'/><text x='160' y='60' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>n(H⁺) = n(OH⁻)</text><text x='160' y='94' font-size='12' fill='var(--ink)' text-anchor='middle'>M<tspan font-size='9' baseline-shift='sub'>a</tspan> · V<tspan font-size='9' baseline-shift='sub'>a</tspan> · (number of H⁺) = M<tspan font-size='9' baseline-shift='sub'>b</tspan> · V<tspan font-size='9' baseline-shift='sub'>b</tspan> · (number of OH⁻)</text><text x='160' y='118' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>0.1 · 100 · 2 = 0.2 · V · 1  →  V = 100 mL</text><line x1='16' y1='132' x2='304' y2='132' stroke='var(--line)' stroke-width='1'/><text x='16' y='152' font-size='12' fill='var(--c2)' text-anchor='start'>HCl 1</text><text x='88' y='152' font-size='12' fill='var(--c2)' text-anchor='start'>H₂SO₄ 2</text><text x='176' y='152' font-size='12' fill='var(--c2)' text-anchor='start'>H₃PO₄ 3</text><text x='16' y='172' font-size='12' fill='var(--c1)' text-anchor='start'>NaOH 1</text><text x='88' y='172' font-size='12' fill='var(--c1)' text-anchor='start'>Ca(OH)₂ 2</text><text x='176' y='172' font-size='12' fill='var(--c1)' text-anchor='start'>Al(OH)₃ 3</text><text x='160' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>CH₃COOH has 4 H but releases only 1 H⁺.</text></svg>",
+    "key": "For example, 100 mL of 0.1 M H₂SO₄ releases 0.02 mol of H⁺. 100 mL of 0.2 M NaOH neutralizes it. CH₃COOH releases only one H⁺.",
+    "once": {
+     "soru": "How many moles of NaOH are needed to fully neutralize 0.1 mol of H₂SO₄?",
+     "secenekler": [
+      {
+       "yazi": "0.2",
+       "neden": "H₂SO₄ releases two H⁺. 0.2 mol of H⁺ needs 0.2 mol of OH⁻.",
+       "dogru": true
+      },
+      {
+       "yazi": "0.1",
+       "neden": "Each H₂SO₄ releases two H⁺, but each NaOH releases only one OH⁻."
+      },
+      {
+       "yazi": "0.05",
+       "neden": "The acid is diprotic. So you need more base, not less."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Salts: acidic, basic, neutral",
+    "p": "The anion of a weak acid or the cation of a weak base reaches equilibrium with water, and this is called <b>hydrolysis</b>. So the pH of a salt depends on the strength of the acid and base that formed it.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Salt solution (25 °C)</text><rect x='8' y='30' width='304' height='34' rx='6' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.2'/><text x='18' y='44' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>strong acid + strong base</text><text x='18' y='58' font-size='11' fill='var(--muted)' text-anchor='start'>NaCl, KNO₃</text><text x='302' y='58' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='700'>neutral, pH = 7</text><rect x='8' y='68' width='304' height='34' rx='6' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1.2'/><text x='18' y='82' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>weak acid + strong base</text><text x='18' y='96' font-size='11' fill='var(--muted)' text-anchor='start'>CH₃COONa, soap</text><text x='302' y='96' font-size='12' fill='var(--c1)' text-anchor='end' font-weight='700'>basic, pH &gt; 7</text><rect x='8' y='106' width='304' height='34' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)' stroke-width='1.2'/><text x='18' y='120' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>strong acid + weak base</text><text x='18' y='134' font-size='11' fill='var(--muted)' text-anchor='start'>NH₄Cl</text><text x='302' y='134' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>acidic, pH &lt; 7</text><rect x='8' y='144' width='304' height='34' rx='6' fill='var(--c5)' fill-opacity='0.1' stroke='var(--c5)' stroke-width='1.2'/><text x='18' y='158' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>weak acid + weak base</text><text x='18' y='172' font-size='11' fill='var(--muted)' text-anchor='start'>NH₄CN (basic)</text><text x='302' y='166' font-size='12' fill='var(--c5)' text-anchor='end' font-weight='700'>K<tspan font-size='9' baseline-shift='sub'>a</tspan> vs K<tspan font-size='9' baseline-shift='sub'>b</tspan> decides</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻ (hydrolysis)</text></svg>",
+    "key": "The salt takes on the character of whichever side is strong. NH₄Cl is acidic and CH₃COONa is basic. If both are weak, compare Ka and Kb."
+   },
+   {
+    "h": "Titration and the equivalence point",
+    "p": "Neutralizing an acid of unknown concentration drop by drop with a base of known concentration is called <b>titration</b>. When the acid is used up exactly, the <b>equivalence point</b> is reached and the pH jumps sharply.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M60 26 V166 H300' fill='none' stroke='var(--ink)' stroke-width='1.2'/><line x1='56' y1='96' x2='60' y2='96' stroke='var(--ink)' stroke-width='1'/><text x='52' y='100' font-size='11' fill='var(--muted)' text-anchor='end'>7</text><line x1='56' y1='46' x2='60' y2='46' stroke='var(--ink)' stroke-width='1'/><text x='52' y='50' font-size='11' fill='var(--muted)' text-anchor='end'>12</text><line x1='56' y1='146' x2='60' y2='146' stroke='var(--ink)' stroke-width='1'/><text x='52' y='150' font-size='11' fill='var(--muted)' text-anchor='end'>2</text><line x1='210' y1='166' x2='210' y2='170' stroke='var(--ink)' stroke-width='1'/><text x='210' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>25</text><path d='M60.0 156.0 L61.2 155.9 L62.4 155.9 L63.6 155.8 L64.8 155.7 L66.0 155.7 L67.2 155.6 L68.4 155.5 L69.6 155.4 L70.8 155.4 L72.0 155.3 L73.2 155.2 L74.4 155.2 L75.6 155.1 L76.8 155.0 L78.0 155.0 L79.2 154.9 L80.4 154.8 L81.6 154.7 L82.8 154.7 L84.0 154.6 L85.2 154.5 L86.4 154.5 L87.6 154.4 L88.8 154.3 L90.0 154.2 L91.2 154.2 L92.4 154.1 L93.6 154.0 L94.8 153.9 L96.0 153.9 L97.2 153.8 L98.4 153.7 L99.6 153.7 L100.8 153.6 L102.0 153.5 L103.2 153.4 L104.4 153.3 L105.6 153.3 L106.8 153.2 L108.0 153.1 L109.2 153.0 L110.4 153.0 L111.6 152.9 L112.8 152.8 L114.0 152.7 L115.2 152.6 L116.4 152.6 L117.6 152.5 L118.8 152.4 L120.0 152.3 L121.2 152.2 L122.4 152.2 L123.6 152.1 L124.8 152.0 L126.0 151.9 L127.2 151.8 L128.4 151.7 L129.6 151.6 L130.8 151.5 L132.0 151.5 L133.2 151.4 L134.4 151.3 L135.6 151.2 L136.8 151.1 L138.0 151.0 L139.2 150.9 L140.4 150.8 L141.6 150.7 L142.8 150.6 L144.0 150.5 L145.2 150.4 L146.4 150.3 L147.6 150.2 L148.8 150.1 L150.0 150.0 L151.2 149.9 L152.4 149.8 L153.6 149.6 L154.8 149.5 L156.0 149.4 L157.2 149.3 L158.4 149.2 L159.6 149.1 L160.8 148.9 L162.0 148.8 L163.2 148.7 L164.4 148.5 L165.6 148.4 L166.8 148.3 L168.0 148.1 L169.2 148.0 L170.4 147.8 L171.6 147.7 L172.8 147.5 L174.0 147.3 L175.2 147.2 L176.4 147.0 L177.6 146.8 L178.8 146.6 L180.0 146.5 L181.2 146.3 L182.4 146.1 L183.6 145.8 L184.8 145.6 L186.0 145.4 L187.2 145.2 L188.4 144.9 L189.6 144.6 L190.8 144.3 L192.0 144.1 L193.2 143.7 L194.4 143.4 L195.6 143.0 L196.8 142.6 L198.0 142.2 L199.2 141.7 L200.4 141.2 L201.6 140.6 L202.8 139.9 L204.0 139.1 L205.2 138.1 L206.4 136.8 L207.6 135.1 L208.8 132.0 L210.0 96.0 L211.2 60.0 L212.4 57.0 L213.6 55.3 L214.8 54.0 L216.0 53.1 L217.2 52.3 L218.4 51.6 L219.6 51.1 L220.8 50.6 L222.0 50.1 L223.2 49.8 L224.4 49.4 L225.6 49.1 L226.8 48.8 L228.0 48.5 L229.2 48.2 L230.4 48.0 L231.6 47.7 L232.8 47.5 L234.0 47.3 L235.2 47.1 L236.4 46.9 L237.6 46.7 L238.8 46.6 L240.0 46.4 L241.2 46.3 L242.4 46.1 L243.6 46.0 L244.8 45.8 L246.0 45.7 L247.2 45.6 L248.4 45.5 L249.6 45.3 L250.8 45.2 L252.0 45.1 L253.2 45.0 L254.4 44.9 L255.6 44.8 L256.8 44.7 L258.0 44.6 L259.2 44.5 L260.4 44.4 L261.6 44.3 L262.8 44.2 L264.0 44.2 L265.2 44.1 L266.4 44.0 L267.6 43.9 L268.8 43.9 L270.0 43.8 L271.2 43.7 L272.4 43.6 L273.6 43.6 L274.8 43.5 L276.0 43.4 L277.2 43.4 L278.4 43.3 L279.6 43.3 L280.8 43.2 L282.0 43.1 L283.2 43.1 L284.4 43.0 L285.6 43.0 L286.8 42.9 L288.0 42.9 L289.2 42.8 L290.4 42.7 L291.6 42.7 L292.8 42.6 L294.0 42.6 L295.2 42.6 L296.4 42.5 L297.6 42.5 L298.8 42.4 L300.0 42.4' fill='none' stroke='var(--acc)' stroke-width='2'/><line x1='210' y1='96' x2='210' y2='166' stroke='var(--muted)' stroke-dasharray='3 3'/><circle cx='210' cy='96' r='4' fill='var(--c5)' fill-opacity='0.85'/><text x='218' y='100' font-size='11' fill='var(--c5)' text-anchor='start' font-weight='700'>equivalence point</text><text x='16' y='20' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>pH</text><text x='298' y='196' font-size='11' fill='var(--muted)' text-anchor='end'>NaOH added (mL)</text><text x='102' y='132' font-size='11' fill='var(--c2)' text-anchor='middle'>acidic region</text><text x='258' y='58' font-size='11' fill='var(--c1)' text-anchor='middle'>basic region</text><text x='120' y='20' font-size='11' fill='var(--muted)' text-anchor='start'>25 mL 0.1 M HCl + 0.1 M NaOH</text><text x='120' y='36' font-size='10' fill='var(--c4)' text-anchor='start'>25 mL 0.1 M CH₃COOH also needs 25 mL</text></svg>",
+    "key": "For a weak acid, the total amount of acid still counts. In a strong acid–strong base titration, the pH at the equivalence point is 7. In a weak acid–strong base titration, it is above 7.",
+    "once": {
+     "soru": "How many mL of NaOH of the same concentration are needed to neutralize 25 mL of HCl?",
+     "secenekler": [
+      {
+       "yazi": "25",
+       "neden": "If the concentrations are equal, equal volumes contain equal moles. So 25 mL is enough.",
+       "dogru": true
+      },
+      {
+       "yazi": "50",
+       "neden": "That adds twice as much base. The acid runs out halfway, and the rest of the base is left over."
+      },
+      {
+       "yazi": "12.5",
+       "neden": "That is half of what is needed. Half of the acid stays un-neutralized."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Buffer solution",
+    "p": "A solution that contains a weak acid and its conjugate base (CH₃COOH / CH₃COONa) is a <b>buffer</b>. When a little acid or base is added, its pH changes very little.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='asit-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Adding 0.01 mol HCl to 1 L of solution</text><rect x='10' y='34' width='140' height='80' rx='6' fill='var(--c2)' fill-opacity='0.07' stroke='var(--c2)'/><rect x='170' y='34' width='140' height='80' rx='6' fill='var(--c3)' fill-opacity='0.07' stroke='var(--c3)'/><text x='80' y='54' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Pure water</text><text x='80' y='80' font-size='15' fill='var(--c2)' text-anchor='middle' font-weight='700'>pH 7 → 2</text><text x='80' y='102' font-size='11' fill='var(--muted)' text-anchor='middle'>large change</text><text x='240' y='54' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Acetate buffer</text><text x='240' y='80' font-size='15' fill='var(--c3)' text-anchor='middle' font-weight='700'>pH 4.74 → 4.66</text><text x='240' y='102' font-size='11' fill='var(--muted)' text-anchor='middle'>very small change</text><text x='160' y='136' font-size='11' fill='var(--muted)' text-anchor='middle'>0.1 M CH₃COOH + 0.1 M CH₃COONa</text><text x='160' y='160' font-size='12' fill='var(--ink)' text-anchor='middle'>added H₃O⁺ + CH₃COO⁻ → CH₃COOH + H₂O</text><text x='160' y='182' font-size='12' fill='var(--ink)' text-anchor='middle'>added OH⁻ + CH₃COOH → CH₃COO⁻ + H₂O</text></svg>",
+    "key": "A weak base with its conjugate acid also makes a buffer. Blood is protected by the H₂CO₃ / HCO₃⁻ buffer. A buffer's capacity is limited."
+   },
+   {
+    "h": "Acids, bases and metals",
+    "p": "Active metals react with acids to form <b>a salt and H₂</b>. Cu, Ag and Au do not give H₂ with HCl. <b>Amphoteric</b> metals such as Al and Zn also release H₂ with strong bases.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='8' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='16' y='26' font-size='12' fill='var(--muted)' text-anchor='start' font-weight='700'>Metal</text><text x='212' y='26' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>+ HCl</text><text x='276' y='26' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>+ NaOH</text><text x='16' y='58' font-size='12' fill='var(--ink)' text-anchor='start'>Mg, Fe (active)</text><text x='212' y='58' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>salt + H₂</text><text x='276' y='58' font-size='12' fill='var(--muted)' text-anchor='middle'>—</text><line x1='8' y1='68' x2='312' y2='68' stroke='var(--line)' stroke-width='1'/><text x='16' y='88' font-size='12' fill='var(--ink)' text-anchor='start'>Cu, Ag, Au (noble, semi-noble)</text><text x='212' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>—</text><text x='276' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>—</text><line x1='8' y1='98' x2='312' y2='98' stroke='var(--line)' stroke-width='1'/><text x='16' y='118' font-size='12' fill='var(--ink)' text-anchor='start'>Al, Zn (amphoteric)</text><text x='212' y='118' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>salt + H₂</text><text x='276' y='118' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>salt + H₂</text><line x1='8' y1='128' x2='312' y2='128' stroke='var(--line)' stroke-width='1'/><text x='160' y='156' font-size='12' fill='var(--ink)' text-anchor='middle'>Zn + 2HCl → ZnCl₂ + H₂</text><text x='160' y='178' font-size='12' fill='var(--ink)' text-anchor='middle'>Zn + 2NaOH → Na₂ZnO₂ + H₂</text><text x='160' y='196' font-size='10' fill='var(--muted)' text-anchor='middle'>(— : no H₂)</text></svg>",
+    "key": "When diluting, always add acid to water, never water to acid. Cu and Ag react with HNO₃, but they release NO or NO₂, not H₂."
+   },
+   {
+    "h": "Acidic, basic and amphoteric oxides",
+    "p": "Most nonmetal oxides are <b>acidic</b> (CO₂, SO₂). Oxides of active metals are <b>basic</b> (Na₂O, CaO). Al₂O₃ and ZnO are <b>amphoteric</b>, and CO, NO and N₂O are <b>neutral</b> oxides.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='8' width='148' height='88' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)' stroke-width='1.2'/><rect x='164' y='8' width='148' height='88' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)' stroke-width='1.2'/><rect x='8' y='104' width='148' height='88' rx='6' fill='var(--c5)' fill-opacity='0.08' stroke='var(--c5)' stroke-width='1.2'/><rect x='164' y='104' width='148' height='88' rx='6' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)' stroke-width='1.2'/><text x='82' y='28' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Acidic oxide</text><text x='82' y='46' font-size='11' fill='var(--muted)' text-anchor='middle'>nonmetal: CO₂, SO₂, SO₃</text><text x='82' y='68' font-size='12' fill='var(--ink)' text-anchor='middle'>CO₂ + H₂O → H₂CO₃</text><text x='82' y='86' font-size='11' fill='var(--muted)' text-anchor='middle'>gives a salt with a base</text><text x='238' y='28' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Basic oxide</text><text x='238' y='46' font-size='11' fill='var(--muted)' text-anchor='middle'>active metal: Na₂O, CaO</text><text x='238' y='68' font-size='12' fill='var(--ink)' text-anchor='middle'>CaO + H₂O → Ca(OH)₂</text><text x='238' y='86' font-size='11' fill='var(--muted)' text-anchor='middle'>gives a salt with an acid</text><text x='82' y='124' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Amphoteric oxide</text><text x='82' y='142' font-size='11' fill='var(--muted)' text-anchor='middle'>Al₂O₃, ZnO</text><text x='82' y='164' font-size='12' fill='var(--ink)' text-anchor='middle'>reacts with acids</text><text x='82' y='182' font-size='12' fill='var(--ink)' text-anchor='middle'>and with bases</text><text x='238' y='124' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Neutral oxide</text><text x='238' y='142' font-size='11' fill='var(--muted)' text-anchor='middle'>CO, NO, N₂O</text><text x='238' y='164' font-size='12' fill='var(--ink)' text-anchor='middle'>forms no salt with</text><text x='238' y='182' font-size='12' fill='var(--ink)' text-anchor='middle'>water, acids or bases</text></svg>",
+    "key": "An acidic oxide forms an acid with water, and a basic oxide forms a base. In acid rain, SO₂ and NO₂ in the air form acids in rainwater.",
+    "once": {
+     "soru": "What is the solution like when CO₂ dissolves in water?",
+     "secenekler": [
+      {
+       "yazi": "Acidic",
+       "neden": "CO₂ forms carbonic acid with water. That is where the slight sourness of soda comes from.",
+       "dogru": true
+      },
+      {
+       "yazi": "Basic",
+       "neden": "Basic solutions come from metal oxides. C is a nonmetal."
+      },
+      {
+       "yazi": "Neutral",
+       "neden": "CO₂ reacts with water and forms an acid."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• An acid donates a proton and a base accepts one.<br>• At 25 °C, pH + pOH = 14, and pH 7 is neutral.<br>• Strong acids and bases ionize completely, weak ones only partly.<br>• In neutralization, n(H⁺) = n(OH⁻). The salt that forms is not always neutral.<br>• Active metals form a salt and H₂ with acids.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='asit-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><rect x='105' y='8' width='110' height='30' rx='6' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)'/><text x='160' y='28' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Acid + Base</text><rect x='10' y='62' width='92' height='50' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)'/><text x='56' y='82' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Definition</text><text x='56' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>donates / accepts H⁺</text><rect x='114' y='62' width='92' height='50' rx='6' fill='var(--c5)' fill-opacity='0.1' stroke='var(--c5)'/><text x='160' y='82' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>Strength</text><text x='160' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>K<tspan font-size='10' baseline-shift='sub'>a</tspan>, K<tspan font-size='10' baseline-shift='sub'>b</tspan></text><rect x='218' y='62' width='92' height='50' rx='6' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)'/><text x='264' y='82' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>pH</text><text x='264' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>pH + pOH = 14</text><path d='M140 38 L70 60' stroke='var(--muted)' stroke-width='1' fill='none' marker-end='url(#asit-14)'/><path d='M160 38 V60' stroke='var(--muted)' stroke-width='1' fill='none' marker-end='url(#asit-14)'/><path d='M180 38 L250 60' stroke='var(--muted)' stroke-width='1' fill='none' marker-end='url(#asit-14)'/><rect x='10' y='132' width='140' height='56' rx='6' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)'/><text x='80' y='152' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Neutralization</text><text x='80' y='170' font-size='11' fill='var(--ink)' text-anchor='middle'>salt + water</text><rect x='170' y='132' width='140' height='56' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)'/><text x='240' y='152' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>With metals</text><text x='240' y='170' font-size='11' fill='var(--ink)' text-anchor='middle'>salt + H₂</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "What is the pH of a 0.005 M Ca(OH)₂ solution at 25 °C? (Ca(OH)₂ ionizes completely.)",
+    "cevap": 12,
+    "e": "Each Ca(OH)₂ releases two OH<sup>−</sup>. So [OH<sup>−</sup>] = 2 × 0.005 = 0.01 M and pOH = 2. The pH is 14 − 2 = 12."
+   },
+   {
+    "tur": "sayi",
+    "q": "At 25 °C, a 0.01 M solution of the weak acid HA has K<sub>a</sub> = 1×10⁻⁶. What is the pH of the solution?",
+    "cevap": 4,
+    "e": "[H₃O⁺] ≈ √(K<sub>a</sub>·C) = √(10⁻⁶ × 10⁻²) = √(10⁻⁸) = 10⁻⁴ M, so pH = 4. HCl at the same concentration would have a pH of 2."
+   },
+   {
+    "tur": "eslestir",
+    "q": "Match each oxide to its type.",
+    "ciftler": [
+     [
+      "CO₂",
+      "Acidic oxide"
+     ],
+     [
+      "CaO",
+      "Basic oxide"
+     ],
+     [
+      "ZnO",
+      "Amphoteric oxide"
+     ],
+     [
+      "CO",
+      "Neutral oxide"
+     ]
+    ],
+    "e": "CO₂ forms an acid with water, and CaO forms a base. ZnO reacts with both acids and bases. CO reacts with neither, so it is neutral."
+   },
+   {
+    "q": "A 0.1 M CH₃COOH solution is titrated with 0.1 M NaOH. Which is true for the solution at the equivalence point at 25 °C?",
+    "o": [
+     "pH = 7",
+     "pH &lt; 7",
+     "pH = 14",
+     "pH &gt; 7"
+    ],
+    "a": 3,
+    "e": "At equivalence the solution contains CH₃COONa. The anion of the weak acid reacts with water and releases OH<sup>−</sup>, so the solution is basic.",
+    "y": [
+     "Equal moles of a weak acid and a strong base do not give a neutral solution. CH₃COO<sup>−</sup> reacts with water and produces OH<sup>−</sup>.",
+     "At the equivalence point all of the acid has reacted. The CH₃COO<sup>−</sup> left in solution makes it basic.",
+     "The pH reaches 14 only with 1 M OH<sup>−</sup>. Here there is only acetate, a weak base.",
+     ""
+    ]
+   }
+  ]
  }
 }

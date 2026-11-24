@@ -10424,5 +10424,526 @@
    "The types of reactions are combustion, synthesis, decomposition, precipitation, acid-base and redox. In synthesis substances combine, and in decomposition a substance breaks down."
   ],
   "soruOnce": true
+ },
+ "mol": {
+  "id": "mol",
+  "ders": "kimya",
+  "konu": "mol",
+  "baslik": "The mole and chemical calculations",
+  "ozet": "Try it first, then learn its name. Weigh a substance, measure a gas and calculate the product from an equation.",
+  "adimlar": [
+   {
+    "baslik": "Chemistry's dozen",
+    "metin": "A dozen eggs and a dozen watermelons are both 12 items, but their weights are very different. Change the number of moles and watch the pans.",
+    "sahne": {
+     "tur": "kim6-paket"
+    },
+    "deger": {
+     "n": 1
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Number of moles",
+      "min": 1,
+      "max": 3,
+      "birim": "mol",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What is the same for 1 mol of carbon, 1 mol of water and 1 mol of iron?",
+     "secenekler": [
+      {
+       "yazi": "Their masses",
+       "neden": "Look at the pans: the masses are 12 g, 18 g and 56 g. The particles have different masses, so the packages do too."
+      },
+      {
+       "yazi": "Their volumes",
+       "neden": "The volume of solid carbon, liquid water and solid iron depends on particle size and packing. The mole doesn't make them equal."
+      },
+      {
+       "yazi": "Their particle counts",
+       "neden": "Each one has 6.02×10²³ particles. In carbon and iron these are atoms, in water they are molecules. The mole is a counting unit, not a mass unit.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "From moles to grams",
+    "metin": "The mass in grams of 1 mole of a substance is called its <b>molar mass</b> (M), and n = m / M. Adjust the water in the beaker and put <b>45 g</b> of water on the scale.",
+    "sahne": {
+     "tur": "kim6-su"
+    },
+    "deger": {
+     "n": 1
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Water",
+      "min": 0.5,
+      "max": 4,
+      "adim": 0.5,
+      "birim": "mol",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 2.5
+     },
+     "tamam": "45 g / 18 g/mol = 2.5 mol of water. It contains 2.5 × 6.02×10²³, or about 1.5×10²⁴ molecules. Going from mass to number of particles, there is always a mole in between."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Volume of gases",
+    "metin": "At standard conditions (STP: 0 °C, 1 atm), 1 mole of gas takes up 22.4 L. Let the syringe hold 11.2 L of gas at STP. Adjust the conditions and the number of moles.",
+    "sahne": {
+     "tur": "kim6-gaz"
+    },
+    "deger": {
+     "n": 1,
+     "k": 1
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Gas",
+      "min": 0.5,
+      "max": 3,
+      "adim": 0.5,
+      "birim": "mol",
+      "tur": "surgu"
+     },
+     {
+      "ad": "k",
+      "etiket": "Room conditions (25 °C)",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 0.5,
+      "k": 0
+     },
+     "ipucu": "First set the conditions to STP, then adjust the number of moles.",
+     "tamam": "At STP, 11.2 / 22.4 = 0.5 mol. At room conditions the same 0.5 mol of gas takes up 12.25 L. The value 22.4 L/mol holds only for gases at STP, so always check the conditions."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Molecule or atom?",
+    "metin": "The subscript in a formula shows the number of atoms in one molecule. Split the molecules into atoms and count them.",
+    "sahne": {
+     "tur": "kim6-atom"
+    },
+    "deger": {
+     "a": 0
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "Split into atoms",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "How many moles of atoms in total are in 1 mol of H₂O?",
+     "secenekler": [
+      {
+       "yazi": "1 mol",
+       "neden": "1 mol is the number of molecules. How many atoms are in each molecule?"
+      },
+      {
+       "yazi": "2 mol",
+       "neden": "You counted only the hydrogens and got 2 mol of H. Add the oxygen too."
+      },
+      {
+       "yazi": "3 mol",
+       "neden": "Each H₂O molecule has 2 H and 1 O. 1 mol of water has 2 mol H + 1 mol O = 3 mol of atoms, that is 3 × 6.02×10²³ atoms.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Stoichiometry: three steps",
+    "metin": "Burning methane releases CO₂ (CH₄ + 2O₂ → CO₂ + 2H₂O). Burn enough methane to get <b>33 g</b> of CO₂. The molar mass of CH₄ is 16 g/mol and that of CO₂ is 44 g/mol.",
+    "sahne": {
+     "tur": "kim6-stok"
+    },
+    "deger": {
+     "m": 16
+    },
+    "kontroller": [
+     {
+      "ad": "m",
+      "etiket": "Methane",
+      "min": 4,
+      "max": 32,
+      "adim": 4,
+      "birim": "g",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "m": 12
+     },
+     "tamam": "33 g of CO₂ is 0.75 mol. The coefficients are 1 : 1, so you need 0.75 mol of CH₄, which is 0.75 × 16 = 12 g. You can't go straight from mass to mass: moles and the coefficient ratio are in between."
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Which runs out first?",
+    "metin": "The container holds 6 g of H₂ (3 mol) and 32 g of O₂ (1 mol), and the reaction is 2H₂ + O₂ → 2H₂O. If the reactants are not in the coefficient ratio, one runs out first and decides the amount of product.",
+    "sahne": {
+     "tur": "kim6-sinir",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens when the reaction is over?",
+     "secenekler": [
+      {
+       "yazi": "H₂ runs out, O₂ is left",
+       "neden": "Oxygen has the larger mass, but the decision is made by moles. 3 mol of H₂ would need 1.5 mol of O₂, and we have only 1 mol."
+      },
+      {
+       "yazi": "Both run out completely",
+       "neden": "For that the mole ratio would have to be 2 : 1. Here it is 3 : 1."
+      },
+      {
+       "yazi": "O₂ runs out, H₂ is left",
+       "neden": "1 mol of O₂ reacts with 2 mol of H₂, and 2 mol (36 g) of water forms. 1 mol (2 g) of H₂ is left over. The limiting reactant is O₂, because the substance with the smaller ratio of moles to coefficient runs out.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 11
+   }
+  ],
+  "kapanis": [
+   "1 mole is 6.02×10²³ particles, and this number is called Avogadro's number. The mole is a counting unit.",
+   "The number of moles is n = m / M = N / N<sub>A</sub>. 1 mole of water has a mass of 18 g.",
+   "1 mol of H₂O contains 3 mol of atoms. Don't confuse the number of molecules with the number of atoms.",
+   "At STP (0 °C, 1 atm), 1 mole of gas takes up 22.4 L.",
+   "In calculations, convert to moles first and use the coefficients. The reactant that runs out, the limiting reactant, decides the amount of product."
+  ],
+  "soruOnce": true
+ },
+ "asit-baz": {
+  "id": "asit-baz",
+  "ders": "kimya",
+  "konu": "asit-baz",
+  "baslik": "Acids, bases and salts",
+  "ozet": "Try it first, then learn its name. Explore the pH scale, neutralize an acid with a base and test a buffer.",
+  "adimlar": [
+   {
+    "baslik": "The pH scale",
+    "metin": "pH 7 is neutral. Move along the scale and find a substance that turns litmus <b>blue</b>.",
+    "sahne": {
+     "tur": "kim6-ph"
+    },
+    "deger": {
+     "p": 3
+    },
+    "kontroller": [
+     {
+      "ad": "p",
+      "etiket": "pH",
+      "min": 0,
+      "max": 14,
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "p": [
+       8,
+       14
+      ]
+     },
+     "tamam": "Substances with a pH above 7 are basic and turn litmus blue. Soap, ammonia and bleach are examples."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "pH lab",
+    "metin": "The container holds 1 L of pure water at pH 7. Add 1 M HCl and 1 M NaOH with the droppers. The pH meter, the color and the ions change instantly. Find the following yourself.",
+    "sahne": {
+     "tur": "sim-ph"
+    },
+    "deger": {
+     "A": 0,
+     "B": 0
+    },
+    "kontroller": [
+     {
+      "ad": "A",
+      "etiket": "HCl (1 M)",
+      "min": 0,
+      "max": 10,
+      "adim": 0.1,
+      "birim": "mL"
+     },
+     {
+      "ad": "B",
+      "etiket": "NaOH (1 M)",
+      "min": 0,
+      "max": 20,
+      "adim": 0.1,
+      "birim": "mL"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "Add acid to bring the pH to <b>3</b>.",
+       "hedef": {
+        "pH": [
+         2.9,
+         3.1
+        ],
+        "B": 0
+       },
+       "coz": [
+        {
+         "B": 0,
+         "A": 1
+        }
+       ],
+       "tamam": "1 mL of 1 M HCl in 1 L of water makes [H₃O⁺] 1×10⁻³ M, so pH = −log(10⁻³) = 3. [OH⁻] dropped to 1×10⁻¹¹ M, and the product is still 1×10⁻¹⁴."
+      },
+      {
+       "yazi": "Now lower the pH to <b>2</b>. How much acid did it take?",
+       "hedef": {
+        "pH": [
+         1.9,
+         2.1
+        ],
+        "B": 0
+       },
+       "coz": [
+        {
+         "B": 0,
+         "A": 10
+        }
+       ],
+       "tamam": "To lower the pH by just 1 unit, you made the acid <b>10 times</b> larger (from 1 mL to 10 mL). The pH scale is logarithmic, so each unit means a 10× difference in [H₃O⁺]."
+      },
+      {
+       "yazi": "Add NaOH to make the container <b>basic</b>: pH 11.",
+       "hedef": {
+        "pH": [
+         10.9,
+         11.1
+        ],
+        "A": [
+         1,
+         10
+        ]
+       },
+       "coz": [
+        {
+         "A": 10,
+         "B": 11
+        }
+       ],
+       "tamam": "The OH⁻ ions first joined the H₃O⁺ ions to form water. The excess made the pH 11 (pOH = 3, pH + pOH = 14). Near the equal amount, a single drop makes the pH jump by several units."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Strong and weak",
+    "metin": "Compare HCl and vinegar acid at the same concentration (0.1 M). Look at the ions and the lamp.",
+    "sahne": {
+     "tur": "kim6-kuvvet"
+    },
+    "deger": {
+     "z": 0
+    },
+    "kontroller": [
+     {
+      "ad": "z",
+      "etiket": "Switch to vinegar acid",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What makes vinegar acid a weak acid?",
+     "secenekler": [
+      {
+       "yazi": "Its low concentration",
+       "neden": "Strong and concentrated are not the same thing. Both are 0.1 M, and dilute HCl is still a strong acid."
+      },
+      {
+       "yazi": "Few H in its formula",
+       "neden": "CH₃COOH has 4 H, but only one can be given away as a proton. Strength is about the fraction of protons given away."
+      },
+      {
+       "yazi": "It ionizes only slightly",
+       "neden": "Only about 1 percent of 0.1 M vinegar acid ionizes. The solution has little H₃O⁺, its pH is about 2.9 and the lamp is dim. HCl ionizes completely and has a pH of 1.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Neutralization",
+    "metin": "Add 0.1 M NaOH from the burette to fully neutralize 25 mL of 0.1 M HCl. The moles of acid and base must be <b>equal</b>. The flask contains phenolphthalein.",
+    "sahne": {
+     "tur": "kim6-titrasyon"
+    },
+    "deger": {
+     "V": 0
+    },
+    "kontroller": [
+     {
+      "ad": "V",
+      "etiket": "NaOH added",
+      "min": 0,
+      "max": 50,
+      "adim": 2.5,
+      "birim": "mL",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "V": 25
+     },
+     "ipucu": "The moles of acid and base must be equal. 25 mL × 0.1 M = 2.5 mmol.",
+     "tamam": "2.5 mmol of NaOH fully neutralized 2.5 mmol of HCl. NaCl and water formed and the pH became 7. Right after the equivalence point the pH jumps sharply and phenolphthalein turns pink. This method is called <b>titration</b>."
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Is a salt always neutral?",
+    "metin": "Now you fully neutralized a weak acid, vinegar acid, with NaOH. The container holds sodium acetate (CH₃COONa) and water.",
+    "sahne": {
+     "tur": "kim6-tuz",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What is the pH of this salt solution?",
+     "secenekler": [
+      {
+       "yazi": "Less than 7",
+       "neden": "The acid is all used up. Does the acetate ion left behind donate a proton or accept one?"
+      },
+      {
+       "yazi": "Exactly 7",
+       "neden": "That would be true for a strong acid and a strong base."
+      },
+      {
+       "yazi": "More than 7",
+       "neden": "The acetate ion (CH₃COO⁻) is the conjugate base of a weak acid, and it takes a proton from water (CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻). Because of the OH⁻ that forms, the pH is about 8.7.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Buffer",
+    "metin": "One of the containers holds a mixture of vinegar acid and sodium acetate, that is, a <b>buffer</b>. Add the same amount of HCl to both containers and watch how their pH changes.",
+    "sahne": {
+     "tur": "kim6-tampon"
+    },
+    "deger": {
+     "x": 0
+    },
+    "kontroller": [
+     {
+      "ad": "x",
+      "etiket": "HCl added (mmol)",
+      "min": 0,
+      "max": 5,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why does the buffer's pH change so little?",
+     "secenekler": [
+      {
+       "yazi": "Acetate ions capture H₃O⁺",
+       "neden": "The reaction CH₃COO⁻ + H₃O⁺ → CH₃COOH + H₂O takes place. The added acid turns into a weak acid, so the pH drops very little.",
+       "dogru": true
+      },
+      {
+       "yazi": "The buffer dilutes the acid",
+       "neden": "Both containers have the same volume (100 mL). The difference is in the reaction, not in dilution."
+      },
+      {
+       "yazi": "The buffer has no H₃O⁺",
+       "neden": "The buffer is already acidic (pH 4.74) and contains H₃O⁺. What matters is what the added acid turns into."
+      }
+     ]
+    },
+    "kart": 13
+   },
+   {
+    "baslik": "Metals and acid",
+    "metin": "Active metals react with acids to form a salt and hydrogen gas (Mg + 2HCl → MgCl₂ + H₂). You will put magnesium, zinc and copper into three tubes.",
+    "sahne": {
+     "tur": "kim6-metal",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In which tube do no H₂ bubbles form?",
+     "secenekler": [
+      {
+       "yazi": "Magnesium",
+       "neden": "Magnesium is very active and bubbles the fastest."
+      },
+      {
+       "yazi": "Copper",
+       "neden": "Copper is less active than hydrogen and gives no H₂ with HCl. Silver and gold don't either.",
+       "dogru": true
+      },
+      {
+       "yazi": "Zinc",
+       "neden": "Zinc also gives H₂ with acid, but more slowly than magnesium."
+      }
+     ]
+    },
+    "kart": 14
+   }
+  ],
+  "kapanis": [
+   "pH 7 is neutral, below it is acidic and above it is basic. Litmus turns red in acid and blue in base.",
+   "pH is logarithmic, and a drop of one unit makes [H₃O⁺] 10 times larger. At 25 °C, pH + pOH = 14.",
+   "Strong acids ionize completely, weak acids only partly. Strong and concentrated are not the same thing.",
+   "An acid and a base form a salt and water. A salt solution is not always neutral. A buffer keeps pH changes small.",
+   "Active metals form a salt and H₂ with acids. Cu, Ag and Au give no H₂ with HCl."
+  ],
+  "soruOnce": true
  }
 }
