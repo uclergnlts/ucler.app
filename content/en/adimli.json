@@ -19777,6 +19777,244 @@
   ],
   "soruOnce": true
  },
+ "dolasim-bagisiklik": {
+  "id": "dolasim-bagisiklik",
+  "ders": "biyoloji",
+  "konu": "dolasim-bagisiklik",
+  "baslik": "Circulation and immunity",
+  "ozet": "Send blood from the heart to the lungs and tissues, repair the valves, set the pulse, find matching blood and see on a graph why vaccines work.",
+  "adimlar": [
+   {
+    "baslik": "Valves",
+    "metin": "The heart has <b>valves</b> that keep blood flowing in one direction. This heart's valves do not close fully. Press play and see what happens to the blood, then repair the valves.",
+    "sahne": {
+     "tur": "biy11-kapak",
+     "sure": 3
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Valves intact",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": 1
+     },
+     "ipucu": "When the ventricle contracts, the door to the atrium should close and the door to the aorta should open.",
+     "tamam": "When the ventricle contracted, the bicuspid valve closed and the semilunar valve opened. So all the blood went into the aorta. On the right side, the tricuspid valve does the same job."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Heart rate",
+    "metin": "At rest, one heart cycle takes <b>0.8 seconds</b>. Set the pulse to match.",
+    "sahne": {
+     "tur": "biy11-nabiz"
+    },
+    "deger": {
+     "n": 60
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Pulse",
+      "min": 50,
+      "max": 150,
+      "adim": 5,
+      "birim": "beats/min"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 75
+     },
+     "ipucu": "One minute is 60 seconds. How many 0.8-second cycles fit into 60 seconds?",
+     "tamam": "60 ÷ 0.8 = 75 beats/min. Even if the heart's nerves are cut, the heart keeps beating at this rhythm. The nerves only adjust its rate."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Two circulations",
+    "metin": "The right half of the heart pumps blood to the <b>lungs</b>, and the left half pumps it to the <b>body</b>. Arteries carry blood away from the heart, and veins bring it back. Make a guess first, then follow a drop of blood.",
+    "sahne": {
+     "tur": "biy11-dolasim",
+     "sure": 9
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What is the blood in the pulmonary artery like?",
+     "secenekler": [
+      {
+       "yazi": "Oxygenated",
+       "neden": "An artery is a vessel that carries blood away from the heart, and it does not have to be oxygenated. The blood going to the lungs has left its oxygen in the tissues."
+      },
+      {
+       "yazi": "Deoxygenated",
+       "dogru": true,
+       "neden": "The pulmonary artery carries deoxygenated blood from the right ventricle to the lungs. The blood picks up O₂ in the lungs and returns oxygenated to the left atrium through the pulmonary veins."
+      },
+      {
+       "yazi": "Mixed",
+       "neden": "In humans, the right and left halves of the heart are separate. So oxygenated and deoxygenated blood do not mix."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "What is in blood?",
+    "metin": "When a tube of blood is spun, it separates into two parts. The yellowish <b>plasma</b> is on top, and the cells collect at the bottom. Look at each component one by one.",
+    "sahne": {
+     "tur": "biy11-kan"
+    },
+    "deger": {
+     "h": 1
+    },
+    "kontroller": [
+     {
+      "ad": "h",
+      "etiket": "Component",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "In which part of blood are antibodies carried?",
+     "secenekler": [
+      {
+       "yazi": "Red blood cells",
+       "neden": "Red blood cells carry oxygen with hemoglobin. Their membranes carry the antigens that set the blood type, but they do not carry antibodies."
+      },
+      {
+       "yazi": "White blood cells",
+       "neden": "Antibodies are made by plasma cells that develop from B lymphocytes. But the released antibodies do not stay in the cell. They are carried dissolved in the plasma."
+      },
+      {
+       "yazi": "Plasma",
+       "dogru": true,
+       "neden": "Plasma is about 55% of blood. It is mostly water, and it carries proteins such as albumin, fibrinogen and antibodies."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Pressure and speed",
+    "metin": "As blood moves from the aorta to the capillaries and then to the veins, its <b>pressure</b> and <b>speed</b> change. Pick each vessel and look at the graph.",
+    "sahne": {
+     "tur": "biy11-damar"
+    },
+    "deger": {
+     "d": 1
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Vessel",
+      "min": 1,
+      "max": 5,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why does blood flow slowest in the capillaries?",
+     "secenekler": [
+      {
+       "yazi": "Their total cross section is largest",
+       "dogru": true,
+       "neden": "A single capillary is very thin, but there are billions of them. So their total cross section is many times wider than the aorta. Blood spreads into a wide bed, slows down and has time for exchange."
+      },
+      {
+       "yazi": "The pressure is zero",
+       "neden": "At the arterial end of a capillary, the pressure is still high enough to push fluid into the tissue. Pressure near zero is found in the vena cava."
+      },
+      {
+       "yazi": "Their walls are thick",
+       "neden": "It is the opposite, because a capillary wall is one cell thick. The thin wall makes exchange easier."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Blood types",
+    "metin": "Blood type is set by the <b>antigens</b> on red blood cells. Plasma holds <b>antibodies</b> against them. The recipient's blood type is O. Find a matching donor.",
+    "sahne": {
+     "tur": "biy11-grup",
+     "alici": "O"
+    },
+    "deger": {
+     "g": 1
+    },
+    "kontroller": [
+     {
+      "ad": "g",
+      "etiket": "Donor type",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "g": 4
+     },
+     "ipucu": "Type O plasma has both anti-A and anti-B. Look for red cells with no antigen.",
+     "tamam": "Only type O red cells did not clump, because they have no A or B antigen on their membranes. That is why type O is the universal donor. If it is Rh−, it also matches everyone for Rh. Still, a compatibility test is always done before a transfusion."
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Why do vaccines work?",
+    "metin": "A vaccine introduces the body to an <b>antigen</b> that does not cause disease. Make a guess first, then watch the antibody graph.",
+    "sahne": {
+     "tur": "biy11-yanit",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What is the antibody response like at the second contact with the same antigen?",
+     "secenekler": [
+      {
+       "yazi": "The same as the first",
+       "neden": "Memory cells remain after the first contact. Because the body recognizes the antigen, the response is not the same."
+      },
+      {
+       "yazi": "Later and weaker",
+       "neden": "The body does not get used to the antigen and weaken its response. Memory cells make the response faster instead."
+      },
+      {
+       "yazi": "Faster and stronger",
+       "dogru": true,
+       "neden": "Memory cells multiply right away, and antibodies rise to a much higher level in a short time. The microbe is stopped before it can cause disease. This is why active immunity lasts long."
+      }
+     ]
+    },
+    "kart": 13
+   }
+  ],
+  "kapanis": [
+   "In pulmonary circulation blood picks up oxygen in the lungs, and in systemic circulation it delivers this oxygen to the tissues. The pulmonary artery carries deoxygenated blood.",
+   "Valves keep blood flowing in one direction. At rest, one heart cycle takes 0.8 seconds, which is 75 beats per minute.",
+   "Plasma makes up 55% of blood. Red blood cells carry oxygen, white blood cells defend the body, and platelets start clotting.",
+   "Blood pressure falls from the aorta toward the veins. Blood flows slowest in the capillaries, which have the widest total cross section.",
+   "If an antigen on red cells meets the recipient's antibody, clumping occurs. A vaccine leaves memory cells, so the second response is fast and strong."
+  ],
+  "soruOnce": true
+ },
  "ekosistem": {
   "id": "ekosistem",
   "ders": "biyoloji",

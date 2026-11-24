@@ -7543,6 +7543,348 @@
    }
   ]
  },
+ "dolasim-bagisiklik": {
+  "title": "Circulatory and immune systems",
+  "summary": "The heart, blood vessels, blood, lymph and the body's lines of defense.",
+  "cards": [
+   {
+    "h": "Structure of the heart",
+    "p": "The heart is a pump made of <b>cardiac muscle</b>. It has two <b>atria</b> at the top and two <b>ventricles</b> at the bottom. <b>Valves</b> keep blood flowing in one direction. There is a tricuspid valve on the right side and a bicuspid valve on the left.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='16' font-size='10' fill='var(--muted)' text-anchor='middle'>the right half of the heart is drawn on the left</text><text x='103' y='38' font-size='10' fill='var(--c1)' text-anchor='middle'>deoxygenated blood</text><text x='217' y='38' font-size='10' fill='var(--c2)' text-anchor='middle'>oxygenated blood</text><rect x='152' y='45' width='16' height='130' rx='2' fill='var(--muted)' fill-opacity='0.25' stroke='var(--muted)' stroke-width='0'/><rect x='56' y='45' width='94' height='50' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><rect x='170' y='45' width='94' height='50' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><rect x='56' y='105' width='94' height='70' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><rect x='170' y='105' width='94' height='70' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='4'/><text x='103' y='74' font-size='12' fill='var(--ink)' text-anchor='middle'>right atrium</text><text x='217' y='74' font-size='12' fill='var(--ink)' text-anchor='middle'>left atrium</text><text x='103' y='138' font-size='12' fill='var(--ink)' text-anchor='middle'>right ventricle</text><text x='217' y='134' font-size='12' fill='var(--ink)' text-anchor='middle'>left ventricle</text><text x='217' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>thickest wall</text><path d='M93 96 L103 104 L113 96' fill='none' stroke='var(--ink)' stroke-width='2'/><path d='M207 96 L217 104 L227 96' fill='none' stroke='var(--ink)' stroke-width='2'/><text x='118' y='103' font-size='10' fill='var(--ink)' text-anchor='start' font-weight='700'>tricuspid</text><text x='202' y='103' font-size='10' fill='var(--ink)' text-anchor='end' font-weight='700'>bicuspid</text><defs><marker id='dol-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker><marker id='dol-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><line x1='56' y1='120' x2='12' y2='120' stroke='var(--c1)' stroke-width='2' marker-end='url(#dol-1)'/><line x1='264' y1='120' x2='308' y2='120' stroke='var(--c2)' stroke-width='2' marker-end='url(#dol-2)'/><path d='M38 114 Q32 120 38 126' fill='none' stroke='var(--ink)' stroke-width='2'/><path d='M282 114 Q288 120 282 126' fill='none' stroke='var(--ink)' stroke-width='2'/><text x='28' y='140' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>semilunar</text><text x='292' y='140' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>semilunar</text><text x='28' y='155' font-size='10' fill='var(--muted)' text-anchor='middle'>to the lungs</text><text x='292' y='155' font-size='10' fill='var(--muted)' text-anchor='middle'>to the body</text><text x='160' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>the septum keeps right and left blood from mixing</text></svg>",
+    "key": "Semilunar valves sit where the arteries leave the heart. The left ventricle has the thickest wall, because it pumps blood to the whole body."
+   },
+   {
+    "h": "How does the heart beat?",
+    "p": "The heart makes its own signal to contract. The <b>SA node</b> starts the signal, and the <b>AV node</b> holds it briefly and passes it to the ventricles. Contraction is called <b>systole</b>, and relaxing and filling with blood is called <b>diastole</b>. One cycle takes about 0.8 seconds.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dol-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='8' y='10' width='142' height='20' rx='5' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.2'/><text x='79' y='24' font-size='11' fill='var(--ink)' text-anchor='middle'>SA node makes the signal</text><line x1='79' y1='30' x2='79' y2='40' stroke='var(--ink)' stroke-width='1.2' marker-end='url(#dol-3)'/><rect x='8' y='41' width='142' height='20' rx='5' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.2'/><text x='79' y='55' font-size='11' fill='var(--ink)' text-anchor='middle'>atria contract</text><line x1='79' y1='61' x2='79' y2='71' stroke='var(--ink)' stroke-width='1.2' marker-end='url(#dol-3)'/><rect x='8' y='72' width='142' height='20' rx='5' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.2'/><text x='79' y='86' font-size='11' fill='var(--ink)' text-anchor='middle'>AV node: short delay</text><line x1='79' y1='92' x2='79' y2='102' stroke='var(--ink)' stroke-width='1.2' marker-end='url(#dol-3)'/><rect x='8' y='103' width='142' height='20' rx='5' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.2'/><text x='79' y='117' font-size='11' fill='var(--ink)' text-anchor='middle'>bundle of His</text><line x1='79' y1='123' x2='79' y2='133' stroke='var(--ink)' stroke-width='1.2' marker-end='url(#dol-3)'/><rect x='8' y='134' width='142' height='20' rx='5' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.2'/><text x='79' y='148' font-size='11' fill='var(--ink)' text-anchor='middle'>Purkinje fibers</text><line x1='79' y1='154' x2='79' y2='164' stroke='var(--ink)' stroke-width='1.2' marker-end='url(#dol-3)'/><rect x='8' y='165' width='142' height='20' rx='5' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.2'/><text x='79' y='179' font-size='11' fill='var(--ink)' text-anchor='middle'>ventricles contract</text><text x='237' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>one cycle ≈ 0.8 s</text><rect x='165' y='34' width='18' height='24' fill='var(--c4)' fill-opacity='0.5' stroke='var(--ink)' stroke-width='1'/><rect x='183' y='34' width='54' height='24' fill='var(--c2)' fill-opacity='0.4' stroke='var(--ink)' stroke-width='1'/><rect x='237' y='34' width='73' height='24' fill='var(--c1)' fill-opacity='0.3' stroke='var(--ink)' stroke-width='1'/><text x='165' y='72' font-size='10' fill='var(--muted)' text-anchor='middle'>0</text><text x='310' y='72' font-size='10' fill='var(--muted)' text-anchor='end'>0.8 s</text><rect x='168' y='88' width='10' height='10' rx='1' fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)' stroke-width='1'/><text x='184' y='97' font-size='10' fill='var(--ink)' text-anchor='start'>atrial systole 0.1 s</text><rect x='168' y='106' width='10' height='10' rx='1' fill='var(--c2)' fill-opacity='0.4' stroke='var(--c2)' stroke-width='1'/><text x='184' y='115' font-size='10' fill='var(--ink)' text-anchor='start'>ventricular systole 0.3 s</text><rect x='168' y='124' width='10' height='10' rx='1' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1'/><text x='184' y='133' font-size='10' fill='var(--ink)' text-anchor='start'>general diastole 0.4 s</text><text x='165' y='166' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>systole: contraction</text><text x='165' y='184' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>diastole: relaxing, filling</text></svg>",
+    "key": "The SA node is in the right atrium. The signal spreads through the bundle of His and the Purkinje fibers. Sympathetic nerves speed up the heart, and parasympathetic nerves slow it down."
+   },
+   {
+    "h": "Systemic and pulmonary circulation",
+    "p": "In <b>pulmonary circulation</b>, blood goes from the right ventricle to the lungs, picks up oxygen and returns to the left atrium. In <b>systemic circulation</b>, blood goes from the left ventricle through the aorta to the tissues, drops off its oxygen and returns to the right atrium.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dol-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker><marker id='dol-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><marker id='dol-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><rect x='110' y='10' width='100' height='28' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='160' y='29' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>lungs</text><text x='218' y='22' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>pulmonary circulation</text><rect x='100' y='75' width='50' height='24' rx='3' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.2'/><rect x='100' y='101' width='50' height='24' rx='3' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.2'/><rect x='170' y='75' width='50' height='24' rx='3' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.2'/><rect x='170' y='101' width='50' height='24' rx='3' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.2'/><text x='125' y='91' font-size='10' fill='var(--ink)' text-anchor='middle'>atrium</text><text x='125' y='117' font-size='10' fill='var(--ink)' text-anchor='middle'>ventricle</text><text x='195' y='91' font-size='10' fill='var(--ink)' text-anchor='middle'>atrium</text><text x='195' y='117' font-size='10' fill='var(--ink)' text-anchor='middle'>ventricle</text><text x='125' y='140' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>right</text><text x='195' y='140' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>left</text><path d='M150 113 L160 113 L160 40' fill='none' stroke='var(--c1)' stroke-width='2' marker-end='url(#dol-4)'/><path d='M195 38 L195 73' fill='none' stroke='var(--c2)' stroke-width='2' marker-end='url(#dol-5)'/><line x1='100' y1='50' x2='158' y2='50' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><text x='97' y='48' font-size='10' fill='var(--c1)' text-anchor='end'>pulmonary</text><text x='97' y='60' font-size='10' fill='var(--c1)' text-anchor='end'>artery</text><line x1='197' y1='50' x2='224' y2='50' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><text x='228' y='48' font-size='10' fill='var(--c2)' text-anchor='start'>pulmonary</text><text x='228' y='60' font-size='10' fill='var(--c2)' text-anchor='start'>vein</text><path d='M220 113 L285 113 L285 177 L227 177' fill='none' stroke='var(--c2)' stroke-width='2' marker-end='url(#dol-5)'/><text x='291' y='145' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>aorta</text><rect x='95' y='162' width='130' height='30' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='160' y='181' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>body tissues</text><path d='M95 177 L35 177 L35 87 L98 87' fill='none' stroke='var(--c1)' stroke-width='2' marker-end='url(#dol-4)'/><text x='42' y='144' font-size='10' fill='var(--c1)' text-anchor='start'>superior and inferior</text><text x='42' y='156' font-size='10' fill='var(--c1)' text-anchor='start'>vena cava</text><text x='232' y='196' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>systemic circulation</text></svg>",
+    "key": "Blood returns to the heart from the lungs through the pulmonary veins, and from the tissues through the superior and inferior venae cavae. Vessels are named by the direction of blood flow."
+   },
+   {
+    "h": "Blood vessels, pulse and blood pressure",
+    "p": "An <b>artery</b> carries blood away from the heart. Its elastic wall stretches with every beat, and this stretch is called the <b>pulse</b>. A <b>vein</b> brings blood back to the heart, has low pressure and has valves. The wall of a <b>capillary</b> is one cell thick.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='40' y1='20' x2='40' y2='160' stroke='var(--ink)' stroke-width='1.2'/><line x1='40' y1='160' x2='310' y2='160' stroke='var(--ink)' stroke-width='1.2'/><line x1='40' y1='120' x2='310' y2='120' stroke='var(--line)' stroke-width='1'/><line x1='40' y1='80' x2='310' y2='80' stroke='var(--line)' stroke-width='1'/><line x1='40' y1='40' x2='310' y2='40' stroke='var(--line)' stroke-width='1'/><text x='35' y='164' font-size='10' fill='var(--muted)' text-anchor='end'>0</text><text x='35' y='124' font-size='10' fill='var(--muted)' text-anchor='end'>40</text><text x='35' y='84' font-size='10' fill='var(--muted)' text-anchor='end'>80</text><text x='35' y='44' font-size='10' fill='var(--muted)' text-anchor='end'>120</text><text x='8' y='14' font-size='10' fill='var(--muted)' text-anchor='start'>pressure (mmHg)</text><line x1='160' y1='160' x2='160' y2='165' stroke='var(--ink)' stroke-width='1'/><line x1='225' y1='160' x2='225' y2='165' stroke='var(--ink)' stroke-width='1'/><path d='M40 40.0 L41 40.8 L42 43.0 L43 46.6 L44 51.2 L45 56.5 L46 62.1 L47 67.5 L48 72.3 L49 76.2 L50 78.8 L51 80.0 L52 79.6 L53 77.7 L54 74.4 L55 70.0 L56 64.8 L57 59.3 L58 53.8 L59 48.8 L60 44.7 L61 41.7 L62 40.2 L63 40.2 L64 41.7 L65 44.7 L66 48.8 L67 53.8 L68 59.3 L69 64.8 L70 70.0 L71 74.4 L72 77.7 L73 79.6 L74 80.0 L75 78.8 L76 76.2 L77 72.3 L78 67.5 L79 62.1 L80 56.5 L81 51.2 L82 46.6 L83 43.0 L84 40.8 L85 40.0 L86 40.8 L87 43.0 L88 46.6 L89 51.2 L90 56.5 L91 62.1 L92 67.5 L93 72.3 L94 76.2 L95 78.8 L96 80.0 L97 79.6 L98 77.7 L99 74.4 L100 70.0 L101 64.8 L102 59.3 L103 53.8 L104 48.8 L105 44.7 L106 41.7 L107 40.2 L108 40.2 L109 41.7 L110 44.7 L111 48.8 L112 53.8 L113 59.3 L114 64.8 L115 70.0 L116 74.4 L117 77.7 L118 79.6 L119 80.0 L120 78.8 L121 76.2 L122 72.3 L123 67.5 L124 62.1 L125 56.5 L126 51.2 L127 46.6 L128 43.0 L129 40.8 L130 40.0 L131 43.2 L132 47.7 L133 53.3 L134 59.7 L135 66.3 L136 72.9 L137 79.0 L138 84.4 L139 88.7 L140 92.0 L141 94.1 L142 95.1 L143 95.2 L144 94.6 L145 93.6 L146 92.3 L147 91.2 L148 90.4 L149 90.2 L150 90.6 L151 91.7 L152 93.5 L153 95.9 L154 98.8 L155 102.1 L156 105.4 L157 108.7 L158 111.9 L159 114.7 L160 117.1 L161 119.2 L162 120.9 L163 122.4 L164 123.7 L165 125.0 L166 125.3 L167 125.7 L168 126.0 L169 126.3 L170 126.7 L171 127.0 L172 127.3 L173 127.7 L174 128.0 L175 128.3 L176 128.7 L177 129.0 L178 129.3 L179 129.7 L180 130.0 L181 130.3 L182 130.7 L183 131.0 L184 131.3 L185 131.7 L186 132.0 L187 132.3 L188 132.7 L189 133.0 L190 133.3 L191 133.7 L192 134.0 L193 134.3 L194 134.7 L195 135.0 L196 135.3 L197 135.7 L198 136.0 L199 136.3 L200 136.7 L201 137.0 L202 137.3 L203 137.7 L204 138.0 L205 138.3 L206 138.7 L207 139.0 L208 139.3 L209 139.7 L210 140.0 L211 140.3 L212 140.7 L213 141.0 L214 141.3 L215 141.7 L216 142.0 L217 142.3 L218 142.7 L219 143.0 L220 143.3 L221 143.7 L222 144.0 L223 144.3 L224 144.7 L225 145.0 L226 145.1 L227 145.3 L228 145.4 L229 145.6 L230 145.7 L231 145.8 L232 146.0 L233 146.1 L234 146.3 L235 146.4 L236 146.6 L237 146.7 L238 146.8 L239 147.0 L240 147.1 L241 147.3 L242 147.4 L243 147.5 L244 147.7 L245 147.8 L246 148.0 L247 148.1 L248 148.2 L249 148.4 L250 148.5 L251 148.7 L252 148.8 L253 149.0 L254 149.1 L255 149.2 L256 149.4 L257 149.5 L258 149.7 L259 149.8 L260 149.9 L261 150.1 L262 150.2 L263 150.4 L264 150.5 L265 150.6 L266 150.8 L267 150.9 L268 151.1 L269 151.2 L270 151.4 L271 151.5 L272 151.6 L273 151.8 L274 151.9 L275 152.1 L276 152.2 L277 152.3 L278 152.5 L279 152.6 L280 152.8 L281 152.9 L282 153.0 L283 153.2 L284 153.3 L285 153.5 L286 153.6 L287 153.8 L288 153.9 L289 154.0 L290 154.2 L291 154.3 L292 154.5 L293 154.6 L294 154.7 L295 154.9 L296 155.0 L297 155.2 L298 155.3 L299 155.4 L300 155.6 L301 155.7 L302 155.9 L303 156.0 L304 156.2 L305 156.3 L306 156.4 L307 156.6 L308 156.7 L309 156.9 L310 157.0' fill='none' stroke='var(--c2)' stroke-width='2'/><text x='85' y='33' font-size='10' fill='var(--c2)' text-anchor='middle' font-weight='700'>systolic ≈ 120</text><text x='85' y='96' font-size='10' fill='var(--c1)' text-anchor='middle' font-weight='700'>diastolic ≈ 80</text><text x='305' y='32' font-size='10' fill='var(--ink)' text-anchor='end'>pulse: the wave in an artery</text><text x='305' y='45' font-size='10' fill='var(--muted)' text-anchor='end'>60-100 beats/min at rest</text><text x='268' y='112' font-size='10' fill='var(--muted)' text-anchor='middle'>lowest pressure</text><text x='100' y='177' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>artery</text><text x='192' y='177' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>capillary</text><text x='268' y='177' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>vein</text><text x='100' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>thick, elastic</text><text x='192' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>one cell thick</text><text x='268' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>thin, with valves</text></svg>",
+    "key": "Normal blood pressure is about 120/80 mmHg. The larger number shows systole, and the smaller number shows diastole. The muscles around the veins push the blood in them toward the heart.",
+    "once": {
+     "soru": "Which vessel do you count your pulse from at your wrist?",
+     "secenekler": [
+      {
+       "yazi": "Artery",
+       "neden": "The artery wall stretches with every beat. You feel this wave with your finger.",
+       "dogru": true
+      },
+      {
+       "yazi": "Vein",
+       "neden": "The pressure in a vein is low, so no pulse can be felt."
+      },
+      {
+       "yazi": "Capillary",
+       "neden": "Capillaries are so thin that no pulse can be taken from them."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Exchange in the capillaries",
+    "p": "Blood flows slowest in the capillaries. At the arterial end of a capillary, blood pressure wins, so water and small molecules filter into the tissue. At the venous end, <b>osmotic pressure</b> pulls the water back.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dol-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><marker id='dol-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker><marker id='dol-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='70' y='42' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>arterial end</text><text x='190' y='42' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>venous end</text><path d='M42 50 L130 50 L130 80 L42 80 Q30 80 30 68 L30 62 Q30 50 42 50 Z' fill='var(--c2)' fill-opacity='0.2'/><path d='M130 50 L218 50 Q230 50 230 62 L230 68 Q230 80 218 80 L130 80 Z' fill='var(--c1)' fill-opacity='0.2'/><rect x='30' y='50' width='200' height='30' rx='12' fill='var(--ink)' fill-opacity='0' stroke='var(--ink)' stroke-width='1.5'/><line x1='105' y1='65' x2='155' y2='65' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#dol-9)'/><line x1='60' y1='82' x2='60' y2='102' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#dol-7)'/><line x1='90' y1='82' x2='90' y2='102' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#dol-7)'/><line x1='170' y1='102' x2='170' y2='84' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#dol-8)'/><line x1='200' y1='102' x2='200' y2='84' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#dol-8)'/><text x='75' y='118' font-size='10' fill='var(--c2)' text-anchor='middle'>filters into tissue</text><text x='185' y='118' font-size='10' fill='var(--c1)' text-anchor='middle'>returns to blood</text><line x1='232' y1='92' x2='262' y2='92' stroke='var(--muted)' stroke-width='1.2' marker-end='url(#dol-9)'/><text x='240' y='108' font-size='10' fill='var(--c3)' text-anchor='start'>the excess</text><text x='240' y='120' font-size='10' fill='var(--c3)' text-anchor='start'>goes to lymph</text><line x1='30' y1='182' x2='230' y2='182' stroke='var(--ink)' stroke-width='1.2'/><line x1='30' y1='133' x2='230' y2='161' stroke='var(--c2)' stroke-width='2'/><line x1='30' y1='147' x2='230' y2='147' stroke='var(--c5)' stroke-width='2' stroke-dasharray='4 3'/><text x='26' y='137' font-size='10' fill='var(--c2)' text-anchor='end'>35</text><text x='26' y='151' font-size='10' fill='var(--c5)' text-anchor='end'>25</text><text x='236' y='150' font-size='10' fill='var(--c5)' text-anchor='start'>osmotic pressure</text><text x='236' y='166' font-size='10' fill='var(--c2)' text-anchor='start'>blood pressure</text><text x='130' y='195' font-size='10' fill='var(--muted)' text-anchor='middle'>approximate values (mmHg)</text></svg>",
+    "key": "O₂ and CO₂ cross by diffusion. The small amount of fluid that does not return to the blood is collected by lymph capillaries."
+   },
+   {
+    "h": "Lymph circulation and lymph nodes",
+    "p": "Tissue fluid that does not return to the blood enters the <b>lymph capillaries</b> and is then called <b>lymph</b>. Lymph joins the blood at the subclavian vein. <b>Lymph nodes</b> filter microbes out of the lymph.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dol-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker><marker id='dol-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><text x='85' y='22' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>blood capillary</text><path d='M29 30 L85 30 L85 48 L29 48 Q20 48 20 39 Q20 30 29 30 Z' fill='var(--c2)' fill-opacity='0.25'/><path d='M85 30 L141 30 Q150 30 150 39 Q150 48 141 48 L85 48 Z' fill='var(--c1)' fill-opacity='0.25'/><rect x='20' y='30' width='130' height='18' rx='9' fill='var(--ink)' fill-opacity='0' stroke='var(--ink)' stroke-width='1.2'/><line x1='60' y1='50' x2='60' y2='64' stroke='var(--muted)' stroke-width='1.2' marker-end='url(#dol-10)'/><text x='95' y='82' font-size='11' fill='var(--ink)' text-anchor='middle'>tissue fluid</text><circle cx='28' cy='68' r='3' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='0.8'/><circle cx='48' cy='96' r='3' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='0.8'/><circle cx='140' cy='66' r='3' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='0.8'/><circle cx='148' cy='96' r='3' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='0.8'/><circle cx='34' cy='84' r='3' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='0.8'/><circle cx='152' cy='80' r='3' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='0.8'/><line x1='110' y1='92' x2='110' y2='107' stroke='var(--c3)' stroke-width='1.2' marker-end='url(#dol-11)'/><path d='M150 110 L52 110 Q40 110 40 118 Q40 126 52 126 L150 126' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><text x='95' y='142' font-size='10' fill='var(--c3)' text-anchor='middle'>lymph capillary (closed end)</text><line x1='150' y1='118' x2='183' y2='118' stroke='var(--c3)' stroke-width='3'/><path d='M158 113 L164 118 L158 123' fill='none' stroke='var(--c3)' stroke-width='1.5'/><path d='M170 113 L176 118 L170 123' fill='none' stroke='var(--c3)' stroke-width='1.5'/><ellipse cx='205' cy='118' rx='22' ry='14' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.5'/><text x='205' y='148' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>lymph node</text><text x='205' y='161' font-size='10' fill='var(--muted)' text-anchor='middle'>microbes filtered out</text><path d='M227 118 L245 118 L245 60' fill='none' stroke='var(--c3)' stroke-width='3' marker-end='url(#dol-11)'/><rect x='220' y='20' width='92' height='38' rx='5' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><text x='266' y='35' font-size='11' fill='var(--ink)' text-anchor='middle'>subclavian</text><text x='266' y='50' font-size='11' fill='var(--ink)' text-anchor='middle'>vein</text><text x='252' y='92' font-size='10' fill='var(--ink)' text-anchor='start'>joins the blood</text><text x='160' y='189' font-size='10' fill='var(--muted)' text-anchor='middle'>fats absorbed in the small intestine also enter the lymph</text></svg>",
+    "key": "Lymph circulation does not form a loop and has no pump. The spleen, thymus and tonsils are also lymphatic organs.",
+    "once": {
+     "soru": "When your throat is infected, why do the glands under your jaw swell?",
+     "secenekler": [
+      {
+       "yazi": "Lymph nodes are working",
+       "neden": "Lymph nodes filter out microbes. Lymphocytes multiply there and the node swells.",
+       "dogru": true
+      },
+      {
+       "yazi": "Blood vessels get blocked",
+       "neden": "The swollen structures are lymph nodes, not blood vessels."
+      },
+      {
+       "yazi": "Saliva builds up",
+       "neden": "The swollen glands are lymph nodes, not salivary glands."
+      }
+     ]
+    }
+   },
+   {
+    "h": "What blood is made of",
+    "p": "About 55% of blood is <b>plasma</b>. Plasma holds water, proteins, ions and nutrients. <b>Red blood cells</b> carry oxygen with hemoglobin, <b>white blood cells</b> defend the body, and <b>platelets</b> start clotting.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='20' y='8' width='154' height='22' fill='var(--c4)' fill-opacity='0.3' stroke='var(--ink)' stroke-width='1'/><rect x='174' y='8' width='126' height='22' fill='var(--c2)' fill-opacity='0.3' stroke='var(--ink)' stroke-width='1'/><text x='97' y='23' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>plasma ≈ 55%</text><text x='237' y='23' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>cells ≈ 45%</text><text x='121' y='50' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>red blood cell</text><text x='201' y='50' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>white blood cell</text><text x='280' y='50' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>platelet</text><line x1='8' y1='56' x2='314' y2='56' stroke='var(--line)' stroke-width='1'/><text x='10' y='70' font-size='10' fill='var(--muted)' text-anchor='start'>nucleus</text><text x='121' y='70' font-size='10' fill='var(--ink)' text-anchor='middle'>no (mammals)</text><text x='201' y='70' font-size='10' fill='var(--ink)' text-anchor='middle'>yes</text><text x='280' y='70' font-size='10' fill='var(--ink)' text-anchor='middle'>no</text><line x1='8' y1='76' x2='314' y2='76' stroke='var(--line)' stroke-width='1'/><text x='10' y='90' font-size='10' fill='var(--muted)' text-anchor='start'>count (mm³)</text><text x='121' y='90' font-size='10' fill='var(--ink)' text-anchor='middle'>≈ 5 million</text><text x='201' y='90' font-size='10' fill='var(--ink)' text-anchor='middle'>4,000-11,000</text><text x='280' y='90' font-size='10' fill='var(--ink)' text-anchor='middle'>150,000-400,000</text><line x1='8' y1='96' x2='314' y2='96' stroke='var(--line)' stroke-width='1'/><text x='10' y='110' font-size='10' fill='var(--muted)' text-anchor='start'>job</text><text x='121' y='110' font-size='10' fill='var(--ink)' text-anchor='middle'>carries O₂</text><text x='201' y='110' font-size='10' fill='var(--ink)' text-anchor='middle'>defense</text><text x='280' y='110' font-size='10' fill='var(--ink)' text-anchor='middle'>clotting</text><line x1='8' y1='116' x2='314' y2='116' stroke='var(--line)' stroke-width='1'/><text x='10' y='130' font-size='10' fill='var(--muted)' text-anchor='start'>lifespan</text><text x='121' y='130' font-size='10' fill='var(--ink)' text-anchor='middle'>≈ 120 days</text><text x='201' y='130' font-size='10' fill='var(--ink)' text-anchor='middle'>varies</text><text x='280' y='130' font-size='10' fill='var(--ink)' text-anchor='middle'>≈ 7-10 days</text><line x1='8' y1='136' x2='314' y2='136' stroke='var(--line)' stroke-width='1'/><text x='10' y='154' font-size='10' fill='var(--ink)' text-anchor='start'>white cell types: neutrophil, eosinophil, basophil (granular),</text><text x='10' y='168' font-size='10' fill='var(--ink)' text-anchor='start'>monocyte (becomes a macrophage in tissue), lymphocyte (agranular)</text><text x='160' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>all blood cells are made in red bone marrow</text></svg>",
+    "key": "Platelets are also called thrombocytes, and they are cell fragments. In mammals, mature red blood cells have no nucleus."
+   },
+   {
+    "h": "Blood clotting",
+    "p": "At a wound, platelets form a plug and release <b>thromboplastin</b>. With the help of Ca<sup>2+</sup>, thromboplastin turns prothrombin into <b>thrombin</b>. Thrombin turns <b>fibrinogen into fibrin</b>, and the fibrin mesh forms the clot.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dol-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='8' y='12' width='92' height='26' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><text x='54' y='29' font-size='11' fill='var(--ink)' text-anchor='middle'>vessel is injured</text><line x1='103' y1='25' x2='197' y2='25' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#dol-12)'/><rect x='200' y='8' width='115' height='34' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='257' y='22' font-size='10' fill='var(--ink)' text-anchor='middle'>platelets stick,</text><text x='257' y='35' font-size='10' fill='var(--ink)' text-anchor='middle'>thromboplastin is released</text><rect x='8' y='77' width='92' height='26' rx='6' fill='var(--muted)' fill-opacity='0.12' stroke='var(--muted)' stroke-width='1.5'/><text x='54' y='94' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>prothrombin</text><text x='150' y='70' font-size='10' fill='var(--c4)' text-anchor='middle'>thromboplastin</text><text x='150' y='83' font-size='10' fill='var(--c4)' text-anchor='middle' font-weight='700'>+ Ca²⁺</text><line x1='103' y1='90' x2='197' y2='90' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#dol-12)'/><rect x='200' y='77' width='115' height='26' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><text x='257' y='94' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>thrombin</text><text x='8' y='120' font-size='10' fill='var(--muted)' text-anchor='start'>made in the liver with vitamin K</text><rect x='8' y='147' width='92' height='26' rx='6' fill='var(--muted)' fill-opacity='0.12' stroke='var(--muted)' stroke-width='1.5'/><text x='54' y='164' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>fibrinogen</text><text x='150' y='152' font-size='10' fill='var(--c2)' text-anchor='middle' font-weight='700'>thrombin</text><line x1='103' y1='160' x2='197' y2='160' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#dol-12)'/><rect x='200' y='147' width='115' height='26' rx='6' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.5'/><text x='257' y='164' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>fibrin mesh → clot</text><text x='54' y='188' font-size='10' fill='var(--muted)' text-anchor='middle'>soluble</text><text x='257' y='188' font-size='10' fill='var(--muted)' text-anchor='middle'>insoluble threads</text><path d='M257 103 L257 129 L150 129 L150 140' fill='none' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='4 3' marker-end='url(#dol-15)'/><defs><marker id='dol-15' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs></svg>",
+    "key": "Vitamin K is needed to make prothrombin. If vitamin K or Ca²⁺ is low, clotting is delayed.",
+    "etk": {
+     "tur": "sirala",
+     "soru": "Put the steps of clotting in order.",
+     "ogeler": [
+      "The vessel is injured",
+      "Platelets form a plug",
+      "Thromboplastin is released",
+      "Prothrombin turns into thrombin",
+      "Fibrinogen turns into fibrin",
+      "The fibrin mesh forms the clot"
+     ]
+    },
+    "once": {
+     "soru": "Why does blood clot at a wound and not inside the vessel?",
+     "secenekler": [
+      {
+       "yazi": "The wound starts the chain",
+       "neden": "Thromboplastin is released from injured tissue and platelets.",
+       "dogru": true
+      },
+      {
+       "yazi": "No Ca²⁺ in the vessel",
+       "neden": "Ca²⁺ is always present in blood."
+      },
+      {
+       "yazi": "No fibrinogen in the vessel",
+       "neden": "Fibrinogen is always present in plasma, but it does not turn into fibrin without a wound."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Blood types and transfusion",
+    "p": "Blood type is set by the <b>antigens</b> on the membrane of red blood cells. Plasma holds <b>antibodies</b> against the antigens the person lacks. If the donor's antigen meets the recipient's antibody, the red blood cells <b>clump</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='40' y='22' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>type</text><text x='130' y='22' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>red cell antigen</text><text x='245' y='22' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>plasma antibody</text><rect x='10' y='30' width='300' height='20' rx='4' fill='var(--panel)' fill-opacity='1' stroke='var(--line)' stroke-width='1'/><text x='40' y='45' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><text x='130' y='45' font-size='11' fill='var(--ink)' text-anchor='middle'>A</text><text x='245' y='45' font-size='11' fill='var(--ink)' text-anchor='middle'>anti-B</text><rect x='10' y='54' width='300' height='20' rx='4' fill='var(--panel)' fill-opacity='1' stroke='var(--line)' stroke-width='1'/><text x='40' y='69' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>B</text><text x='130' y='69' font-size='11' fill='var(--ink)' text-anchor='middle'>B</text><text x='245' y='69' font-size='11' fill='var(--ink)' text-anchor='middle'>anti-A</text><rect x='10' y='78' width='300' height='20' rx='4' fill='var(--panel)' fill-opacity='1' stroke='var(--line)' stroke-width='1'/><text x='40' y='93' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>AB</text><text x='130' y='93' font-size='11' fill='var(--ink)' text-anchor='middle'>A and B</text><text x='245' y='93' font-size='11' fill='var(--ink)' text-anchor='middle'>none</text><rect x='10' y='102' width='300' height='20' rx='4' fill='var(--panel)' fill-opacity='1' stroke='var(--line)' stroke-width='1'/><text x='40' y='117' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>O</text><text x='130' y='117' font-size='11' fill='var(--ink)' text-anchor='middle'>none</text><text x='245' y='117' font-size='11' fill='var(--ink)' text-anchor='middle'>anti-A, anti-B</text><text x='160' y='148' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>Rh+: D antigen on red cells  ·  Rh−: none</text><text x='160' y='167' font-size='10' fill='var(--muted)' text-anchor='middle'>in an Rh− person, anti-D forms only after meeting Rh+ blood</text><text x='160' y='188' font-size='10' fill='var(--c2)' text-anchor='middle'>donor antigen + recipient antibody → clumping (agglutination)</text></svg>",
+    "key": "In an Rh− person, anti-D antibodies form after meeting Rh+ blood. If an Rh− mother carries an Rh+ baby, Rh incompatibility can occur. For red blood cells, O Rh− is the universal donor."
+   },
+   {
+    "h": "Finding blood type with sera",
+    "p": "A drop of blood is mixed separately with <b>anti-A</b>, <b>anti-B</b> and <b>anti-D</b> sera. If the red blood cells <b>clump</b> in a serum, the red cells carry that antigen.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='60' y='22' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>blood</text><text x='150' y='22' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>anti-A</text><text x='210' y='22' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>anti-B</text><text x='270' y='22' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>anti-D</text><line x1='20' y1='32' x2='300' y2='32' stroke='var(--line)' stroke-width='1'/><line x1='20' y1='68' x2='300' y2='68' stroke='var(--line)' stroke-width='1'/><line x1='20' y1='104' x2='300' y2='104' stroke='var(--line)' stroke-width='1'/><line x1='20' y1='140' x2='300' y2='140' stroke='var(--line)' stroke-width='1'/><line x1='20' y1='176' x2='300' y2='176' stroke='var(--line)' stroke-width='1'/><text x='60' y='54' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>A Rh+</text><circle cx='150' cy='50' r='14' fill='var(--panel)' stroke='var(--c2)' stroke-width='1.2'/><circle cx='144' cy='45' r='2.6' fill='var(--c2)'/><circle cx='148' cy='43' r='2.6' fill='var(--c2)'/><circle cx='143' cy='50' r='2.6' fill='var(--c2)'/><circle cx='147' cy='48' r='2.6' fill='var(--c2)'/><circle cx='155' cy='52' r='2.6' fill='var(--c2)'/><circle cx='158' cy='56' r='2.6' fill='var(--c2)'/><circle cx='154' cy='56' r='2.6' fill='var(--c2)'/><circle cx='157' cy='49' r='2.6' fill='var(--c2)'/><circle cx='145' cy='57' r='2.6' fill='var(--c2)'/><text x='172' y='54' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>+</text><circle cx='210' cy='50' r='14' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1.2'/><text x='232' y='54' font-size='11' fill='var(--muted)' text-anchor='start'>−</text><circle cx='270' cy='50' r='14' fill='var(--panel)' stroke='var(--c2)' stroke-width='1.2'/><circle cx='264' cy='45' r='2.6' fill='var(--c2)'/><circle cx='268' cy='43' r='2.6' fill='var(--c2)'/><circle cx='263' cy='50' r='2.6' fill='var(--c2)'/><circle cx='267' cy='48' r='2.6' fill='var(--c2)'/><circle cx='275' cy='52' r='2.6' fill='var(--c2)'/><circle cx='278' cy='56' r='2.6' fill='var(--c2)'/><circle cx='274' cy='56' r='2.6' fill='var(--c2)'/><circle cx='277' cy='49' r='2.6' fill='var(--c2)'/><circle cx='265' cy='57' r='2.6' fill='var(--c2)'/><text x='292' y='54' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>+</text><text x='60' y='90' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>B Rh−</text><circle cx='150' cy='86' r='14' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1.2'/><text x='172' y='90' font-size='11' fill='var(--muted)' text-anchor='start'>−</text><circle cx='210' cy='86' r='14' fill='var(--panel)' stroke='var(--c2)' stroke-width='1.2'/><circle cx='204' cy='81' r='2.6' fill='var(--c2)'/><circle cx='208' cy='79' r='2.6' fill='var(--c2)'/><circle cx='203' cy='86' r='2.6' fill='var(--c2)'/><circle cx='207' cy='84' r='2.6' fill='var(--c2)'/><circle cx='215' cy='88' r='2.6' fill='var(--c2)'/><circle cx='218' cy='92' r='2.6' fill='var(--c2)'/><circle cx='214' cy='92' r='2.6' fill='var(--c2)'/><circle cx='217' cy='85' r='2.6' fill='var(--c2)'/><circle cx='205' cy='93' r='2.6' fill='var(--c2)'/><text x='232' y='90' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>+</text><circle cx='270' cy='86' r='14' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1.2'/><text x='292' y='90' font-size='11' fill='var(--muted)' text-anchor='start'>−</text><text x='60' y='126' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>AB Rh+</text><circle cx='150' cy='122' r='14' fill='var(--panel)' stroke='var(--c2)' stroke-width='1.2'/><circle cx='144' cy='117' r='2.6' fill='var(--c2)'/><circle cx='148' cy='115' r='2.6' fill='var(--c2)'/><circle cx='143' cy='122' r='2.6' fill='var(--c2)'/><circle cx='147' cy='120' r='2.6' fill='var(--c2)'/><circle cx='155' cy='124' r='2.6' fill='var(--c2)'/><circle cx='158' cy='128' r='2.6' fill='var(--c2)'/><circle cx='154' cy='128' r='2.6' fill='var(--c2)'/><circle cx='157' cy='121' r='2.6' fill='var(--c2)'/><circle cx='145' cy='129' r='2.6' fill='var(--c2)'/><text x='172' y='126' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>+</text><circle cx='210' cy='122' r='14' fill='var(--panel)' stroke='var(--c2)' stroke-width='1.2'/><circle cx='204' cy='117' r='2.6' fill='var(--c2)'/><circle cx='208' cy='115' r='2.6' fill='var(--c2)'/><circle cx='203' cy='122' r='2.6' fill='var(--c2)'/><circle cx='207' cy='120' r='2.6' fill='var(--c2)'/><circle cx='215' cy='124' r='2.6' fill='var(--c2)'/><circle cx='218' cy='128' r='2.6' fill='var(--c2)'/><circle cx='214' cy='128' r='2.6' fill='var(--c2)'/><circle cx='217' cy='121' r='2.6' fill='var(--c2)'/><circle cx='205' cy='129' r='2.6' fill='var(--c2)'/><text x='232' y='126' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>+</text><circle cx='270' cy='122' r='14' fill='var(--panel)' stroke='var(--c2)' stroke-width='1.2'/><circle cx='264' cy='117' r='2.6' fill='var(--c2)'/><circle cx='268' cy='115' r='2.6' fill='var(--c2)'/><circle cx='263' cy='122' r='2.6' fill='var(--c2)'/><circle cx='267' cy='120' r='2.6' fill='var(--c2)'/><circle cx='275' cy='124' r='2.6' fill='var(--c2)'/><circle cx='278' cy='128' r='2.6' fill='var(--c2)'/><circle cx='274' cy='128' r='2.6' fill='var(--c2)'/><circle cx='277' cy='121' r='2.6' fill='var(--c2)'/><circle cx='265' cy='129' r='2.6' fill='var(--c2)'/><text x='292' y='126' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>+</text><text x='60' y='162' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>O Rh−</text><circle cx='150' cy='158' r='14' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1.2'/><text x='172' y='162' font-size='11' fill='var(--muted)' text-anchor='start'>−</text><circle cx='210' cy='158' r='14' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1.2'/><text x='232' y='162' font-size='11' fill='var(--muted)' text-anchor='start'>−</text><circle cx='270' cy='158' r='14' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1.2'/><text x='292' y='162' font-size='11' fill='var(--muted)' text-anchor='start'>−</text><text x='160' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>clumps = agglutination (+) · smooth color = no agglutination (−)</text></svg>",
+    "key": "If there is clumping in both anti-A and anti-B sera, the blood type is AB. If there is clumping in neither, the blood type is O.",
+    "once": {
+     "soru": "A person's blood clumps only in anti-B serum. What is their blood type?",
+     "secenekler": [
+      {
+       "yazi": "B Rh−",
+       "neden": "Clumping in anti-B serum shows the B antigen. There is no clumping in anti-D serum, so the person is Rh−.",
+       "dogru": true
+      },
+      {
+       "yazi": "A Rh+",
+       "neden": "If the person were type A, there would be clumping in anti-A serum, and if Rh+, in anti-D serum."
+      },
+      {
+       "yazi": "AB Rh−",
+       "neden": "If the person were type AB, there would also be clumping in anti-A serum."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Innate (nonspecific) defense",
+    "p": "Innate defense gives the same response to every microbe. The <b>first line of defense</b> is the skin, mucus and stomach acid. The <b>second line</b> includes <b>phagocytosis</b>, <b>inflammation</b> and <b>fever</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='11' fill='var(--muted)' text-anchor='middle'>the body's three lines of defense</text><defs><marker id='dol-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><rect x='6' y='34' width='98' height='116' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='55.0' y='54' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>1st line: barriers</text><text x='55.0' y='78' font-size='10' fill='var(--ink)' text-anchor='middle'>skin</text><text x='55.0' y='97' font-size='10' fill='var(--ink)' text-anchor='middle'>mucus, hairs</text><text x='55.0' y='116' font-size='10' fill='var(--ink)' text-anchor='middle'>tears (lysozyme)</text><text x='55.0' y='135' font-size='10' fill='var(--ink)' text-anchor='middle'>stomach acid</text><rect x='110' y='34' width='100' height='116' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.5'/><text x='160.0' y='54' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>2nd line</text><text x='160.0' y='78' font-size='10' fill='var(--ink)' text-anchor='middle'>phagocytosis</text><text x='160.0' y='97' font-size='10' fill='var(--ink)' text-anchor='middle'>neutrophils, macrophages</text><text x='160.0' y='116' font-size='10' fill='var(--ink)' text-anchor='middle'>inflammation</text><text x='160.0' y='135' font-size='10' fill='var(--ink)' text-anchor='middle'>fever</text><rect x='216' y='34' width='98' height='116' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.5'/><text x='265.0' y='54' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>3rd line: specific</text><text x='265.0' y='78' font-size='10' fill='var(--ink)' text-anchor='middle'>lymphocytes</text><text x='265.0' y='97' font-size='10' fill='var(--ink)' text-anchor='middle'>antibodies</text><text x='265.0' y='116' font-size='10' fill='var(--ink)' text-anchor='middle'>memory cells</text><path d='M8 160 L8 166 L208 166 L208 160' fill='none' stroke='var(--muted)' stroke-width='1.2'/><text x='108' y='182' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>innate (nonspecific)</text><path d='M218 160 L218 166 L312 166 L312 160' fill='none' stroke='var(--muted)' stroke-width='1.2'/><text x='265' y='182' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>acquired</text><text x='108' y='196' font-size='10' fill='var(--muted)' text-anchor='middle'>inborn, same for all</text><text x='265' y='196' font-size='10' fill='var(--muted)' text-anchor='middle'>specific to the antigen</text></svg>",
+    "key": "During inflammation, histamine widens the blood vessels. When a monocyte moves into tissue, it becomes a macrophage and engulfs microbes.",
+    "once": {
+     "soru": "Why does a small cut on your hand turn red and swell?",
+     "secenekler": [
+      {
+       "yazi": "Inflammation",
+       "neden": "The blood vessels widen and more blood and defense cells reach the area.",
+       "dogru": true
+      },
+      {
+       "yazi": "Blood clots",
+       "neden": "A clot stops bleeding. The redness and swelling come from inflammation."
+      },
+      {
+       "yazi": "Antibodies clump",
+       "neden": "The first response at a cut comes from innate defense, not antibodies."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Specific immunity: humoral and cell-mediated",
+    "p": "A <b>macrophage</b> displays a piece of the microbe on its surface, and a <b>helper T</b> cell recognizes this piece. <b>B lymphocytes</b> release antibodies, which is called <b>humoral</b> immunity. <b>Cytotoxic T</b> cells kill infected cells, which is called <b>cell-mediated</b> immunity. In the end, <b>memory cells</b> remain.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dol-h1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><marker id='dol-h2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker><marker id='dol-h3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><circle cx='40' cy='96' r='24' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)' stroke-width='1.4'/><path d='M36 73 l4 -9 l4 9 z' fill='var(--c5)'/><text x='40' y='100' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>macrophage</text><text x='40' y='136' font-size='10' fill='var(--muted)' text-anchor='middle'>presents</text><text x='40' y='150' font-size='10' fill='var(--muted)' text-anchor='middle'>antigen</text><path d='M70 96 H96' stroke='var(--ink)' stroke-width='1.4' marker-end='url(#dol-h1)'/><circle cx='124' cy='96' r='28' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.4'/><text x='124' y='93' font-size='9.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>helper</text><text x='124' y='106' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>T</text><path d='M146 80 L178 50' stroke='var(--ink)' stroke-width='1.4' marker-end='url(#dol-h1)'/><path d='M146 112 L178 142' stroke='var(--ink)' stroke-width='1.4' marker-end='url(#dol-h1)'/><text x='124' y='140' font-size='10' fill='var(--muted)' text-anchor='middle'>activates</text><text x='124' y='154' font-size='10' fill='var(--muted)' text-anchor='middle'>both paths</text><circle cx='196' cy='44' r='14' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.4'/><text x='196' y='48' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>B</text><path d='M212 44 H232' stroke='var(--c1)' stroke-width='1.4' marker-end='url(#dol-h2)'/><circle cx='250' cy='44' r='14' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.4'/><text x='250' y='72' font-size='10' fill='var(--muted)' text-anchor='middle'>plasma cell</text><path d='M280 44 V37 L275 32 M280 37 L285 32' stroke='var(--c1)' stroke-width='1.6' fill='none'/><path d='M302 56 V49 L297 44 M302 49 L307 44' stroke='var(--c1)' stroke-width='1.6' fill='none'/><path d='M284 66 V59 L279 54 M284 59 L289 54' stroke='var(--c1)' stroke-width='1.6' fill='none'/><text x='292' y='26' font-size='10' fill='var(--c1)' text-anchor='middle'>antibody</text><text x='250' y='96' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>humoral immunity</text><circle cx='196' cy='150' r='14' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.4'/><text x='196' y='154' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>Tc</text><path d='M212 150 H244' stroke='var(--c2)' stroke-width='1.4' marker-end='url(#dol-h3)'/><circle cx='270' cy='150' r='18' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1.2' stroke-dasharray='4 2'/><path d='M262 142 L278 158 M278 142 L262 158' stroke='var(--c2)' stroke-width='2'/><text x='196' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>cytotoxic T</text><text x='270' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>infected cell</text><text x='250' y='120' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>cell-mediated immunity</text></svg>",
+    "key": "B lymphocytes mature in the bone marrow, and T lymphocytes mature in the thymus. A B lymphocyte becomes a plasma cell and releases antibodies.",
+    "once": {
+     "soru": "Which cell directly kills a cell that a virus has entered?",
+     "secenekler": [
+      {
+       "yazi": "Cytotoxic T",
+       "neden": "A cytotoxic T cell recognizes the infected cell and destroys it directly. This is called cell-mediated immunity.",
+       "dogru": true
+      },
+      {
+       "yazi": "B lymphocyte",
+       "neden": "A B lymphocyte makes antibodies, but it does not kill the cell directly."
+      },
+      {
+       "yazi": "Red blood cell",
+       "neden": "A red blood cell carries oxygen. It does not defend the body."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Active and passive immunity",
+    "p": "In <b>active</b> immunity, the body makes the antibodies itself. It starts late but lasts long, and it is gained by having a disease or getting a <b>vaccine</b>. In <b>passive</b> immunity, ready-made antibodies are received. <b>Antiserum</b> and breast milk protect this way, and the effect starts right away but does not last long.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='145' y='22' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>active</text><text x='260' y='22' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>passive</text><text x='145' y='38' font-size='10' fill='var(--muted)' text-anchor='middle'>starts slowly, lasting</text><text x='260' y='38' font-size='10' fill='var(--muted)' text-anchor='middle'>fast effect, temporary</text><text x='45' y='82' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>natural</text><text x='45' y='138' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>artificial</text><rect x='90' y='50' width='110' height='52' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><rect x='205' y='50' width='110' height='52' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.5'/><rect x='90' y='108' width='110' height='52' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><rect x='205' y='108' width='110' height='52' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.5'/><text x='145' y='72' font-size='11' fill='var(--ink)' text-anchor='middle'>having the</text><text x='145' y='87' font-size='11' fill='var(--ink)' text-anchor='middle'>disease</text><text x='260' y='72' font-size='11' fill='var(--ink)' text-anchor='middle'>antibodies from mother:</text><text x='260' y='87' font-size='11' fill='var(--ink)' text-anchor='middle'>placenta, milk</text><text x='145' y='126' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>vaccine</text><text x='145' y='141' font-size='10' fill='var(--muted)' text-anchor='middle'>dead/weakened microbe</text><text x='145' y='153' font-size='10' fill='var(--muted)' text-anchor='middle'>or a piece of it</text><text x='260' y='126' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>antiserum</text><text x='260' y='143' font-size='10' fill='var(--muted)' text-anchor='middle'>ready-made antibodies</text><text x='160' y='184' font-size='10' fill='var(--ink)' text-anchor='middle'>memory cells form only in active immunity</text></svg>",
+    "key": "A vaccine protects against a disease in advance. Antiserum helps right away during a disease or poisoning. The anti-D shot given to an Rh− mother is also passive immunity."
+   },
+   {
+    "h": "Tissue matching and organ transplants",
+    "p": "The <b>tissue antigens</b> on cell membranes differ from person to person. Cytotoxic T cells recognize a transplanted organ as foreign and attack it. This is called <b>rejection</b>. That is why tissue matching is checked before a transplant.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='80' y='20' font-size='11' fill='var(--muted)' text-anchor='middle'>donor organ</text><text x='240' y='20' font-size='11' fill='var(--muted)' text-anchor='middle'>recipient's T cell</text><rect x='6' y='30' width='308' height='68' rx='6' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)' stroke-width='1.2'/><circle cx='80' cy='64' r='20' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='1.4'/><path d='M74 44 l6 -8 l6 8 z M98 58 l8 6 l-8 6 z' fill='var(--c3)'/><circle cx='240' cy='64' r='16' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.4'/><text x='240' y='68' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>T</text><text x='160' y='60' font-size='10' fill='var(--muted)' text-anchor='middle'>antigens</text><text x='160' y='74' font-size='10' fill='var(--muted)' text-anchor='middle'>familiar</text><text x='160' y='92' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>match: the organ survives</text><rect x='6' y='108' width='308' height='68' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)' stroke-width='1.2'/><circle cx='80' cy='142' r='20' fill='var(--c5)' fill-opacity='0.25' stroke='var(--c5)' stroke-width='1.4'/><path d='M75 117 h10 v10 h-10 z M99 137 h10 v10 h-10 z' fill='var(--c5)'/><circle cx='240' cy='142' r='16' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.4'/><text x='240' y='146' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>T</text><path d='M220 142 H120' stroke='var(--c2)' stroke-width='2' stroke-dasharray='5 3'/><text x='160' y='136' font-size='10' fill='var(--c2)' text-anchor='middle' font-weight='700'>foreign!</text><text x='160' y='170' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>no match: rejection</text><text x='160' y='194' font-size='10' fill='var(--muted)' text-anchor='middle'>identical twins have the same tissue antigens</text></svg>",
+    "key": "A suitable donor is most often found among siblings. Transplant patients are given drugs that suppress the immune system.",
+    "once": {
+     "soru": "Who could be the best donor for a kidney transplant?",
+     "secenekler": [
+      {
+       "yazi": "An identical twin",
+       "neden": "Tissue antigens are inherited and are the same in identical twins.",
+       "dogru": true
+      },
+      {
+       "yazi": "Anyone at random",
+       "neden": "Tissue antigens vary a lot from person to person."
+      },
+      {
+       "yazi": "Anyone with the same blood type",
+       "neden": "A matching blood type is not enough. Tissue antigens are checked too."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Immune and circulatory disorders",
+    "p": "An overreaction to a harmless substance is called an <b>allergy</b>. When the immune system attacks the body's own tissues, it is called an <b>autoimmune</b> disease. In <b>AIDS</b>, the HIV virus destroys helper T cells. A drop in hemoglobin in the blood is called <b>anemia</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='dol-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='100' y='18' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>atherosclerosis</text><circle cx='52' cy='75' r='38' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='2'/><circle cx='52' cy='75' r='24' fill='var(--panel)' fill-opacity='1' stroke='var(--c2)' stroke-width='1'/><circle cx='150' cy='75' r='38' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='2'/><circle cx='150' cy='75' r='24' fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)' stroke-width='1'/><circle cx='150' cy='87' r='12' fill='var(--panel)' fill-opacity='1' stroke='var(--c2)' stroke-width='1'/><text x='52' y='132' font-size='10' fill='var(--muted)' text-anchor='middle'>healthy</text><text x='150' y='132' font-size='10' fill='var(--c4)' text-anchor='middle' font-weight='700'>fatty plaque</text><text x='100' y='160' font-size='10' fill='var(--ink)' text-anchor='middle'>the vessel narrows and hardens:</text><text x='100' y='175' font-size='10' fill='var(--c2)' text-anchor='middle'>risk of heart attack and stroke</text><line x1='206' y1='12' x2='206' y2='190' stroke='var(--line)' stroke-width='1'/><text x='262' y='18' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>AIDS</text><rect x='212' y='31' width='100' height='22' rx='4' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.2'/><text x='262' y='46' font-size='10' fill='var(--ink)' text-anchor='middle'>HIV enters</text><line x1='262' y1='54' x2='262' y2='70' stroke='var(--muted)' stroke-width='1.2' marker-end='url(#dol-14)'/><rect x='212' y='71' width='100' height='22' rx='4' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.2'/><text x='262' y='86' font-size='10' fill='var(--ink)' text-anchor='middle'>helper T cells drop</text><line x1='262' y1='94' x2='262' y2='110' stroke='var(--muted)' stroke-width='1.2' marker-end='url(#dol-14)'/><rect x='212' y='111' width='100' height='22' rx='4' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.2'/><text x='262' y='126' font-size='10' fill='var(--ink)' text-anchor='middle'>defense collapses</text><line x1='262' y1='134' x2='262' y2='150' stroke='var(--muted)' stroke-width='1.2' marker-end='url(#dol-14)'/><rect x='212' y='151' width='100' height='22' rx='4' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.2'/><text x='262' y='166' font-size='10' fill='var(--ink)' text-anchor='middle'>opportunistic infection</text></svg>",
+    "key": "In an allergy, IgE antibodies are made at the first contact, and symptoms appear at later contacts. Type 1 diabetes is an autoimmune disease. Atherosclerosis is the buildup of fatty plaque in the vessel wall.",
+    "once": {
+     "soru": "In a pollen allergy, which substance causes the itching and swelling?",
+     "secenekler": [
+      {
+       "yazi": "Histamine",
+       "neden": "Mast cells release histamine. The vessels widen and itching starts.",
+       "dogru": true
+      },
+      {
+       "yazi": "Insulin",
+       "neden": "Insulin regulates blood sugar."
+      },
+      {
+       "yazi": "Hemoglobin",
+       "neden": "Hemoglobin carries O₂."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• The heart has four chambers, and the SA node starts the signal to contract.<br>• Pulmonary circulation oxygenates blood in the lungs, and systemic circulation delivers it to the tissues.<br>• In clotting, thrombin turns fibrinogen into fibrin.<br>• If a serum causes clumping, the red cells carry that antigen.<br>• Active immunity lasts, while passive immunity is fast but short-lived.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='12' width='148' height='50' rx='6' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.5'/><text x='82' y='32' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>heart</text><text x='82' y='50' font-size='10' fill='var(--muted)' text-anchor='middle'>4 chambers · SA → AV → His</text><rect x='164' y='12' width='148' height='50' rx='6' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.5'/><text x='238' y='32' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>vessels</text><text x='238' y='50' font-size='10' fill='var(--muted)' text-anchor='middle'>artery → capillary → vein</text><rect x='8' y='72' width='148' height='50' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.5'/><text x='82' y='92' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>blood</text><text x='82' y='110' font-size='10' fill='var(--muted)' text-anchor='middle'>plasma + 3 cell types</text><rect x='164' y='72' width='148' height='50' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='238' y='92' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>lymph</text><text x='238' y='110' font-size='10' fill='var(--muted)' text-anchor='middle'>tissue fluid → back to blood</text><rect x='8' y='132' width='304' height='56' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.5'/><text x='160' y='152' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>immunity</text><text x='160' y='172' font-size='10' fill='var(--muted)' text-anchor='middle'>innate (same for all) + specific (antibodies, T cells, memory)</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "After a run, a person's pulse is 120 beats/min. How many seconds does one heart cycle take?",
+    "cevap": 0.5,
+    "tolerans": 0.01,
+    "birim": "s",
+    "e": "One minute is 60 seconds. 60 ÷ 120 = 0.5 seconds. When the heart speeds up, the cycle gets shorter, and diastole shortens the most."
+   },
+   {
+    "tur": "eslestir",
+    "q": "Match the serum results (+ clumping, − no clumping) with the blood type.",
+    "ciftler": [
+     [
+      "Anti-A +, anti-B −, anti-D −",
+      "A Rh−"
+     ],
+     [
+      "Anti-A −, anti-B +, anti-D +",
+      "B Rh+"
+     ],
+     [
+      "Anti-A +, anti-B +, anti-D −",
+      "AB Rh−"
+     ],
+     [
+      "Anti-A −, anti-B −, anti-D +",
+      "O Rh+"
+     ]
+    ],
+    "e": "A serum with clumping shows that the red cells carry that antigen. Clumping in anti-A shows A, in anti-B shows B, and in anti-D shows the Rh (D) antigen. If there is no clumping in either anti-A or anti-B, the blood type is O."
+   },
+   {
+    "tur": "ayir",
+    "q": "Group each case by the type of immunity.",
+    "gruplar": [
+     "Active",
+     "Passive"
+    ],
+    "ogeler": [
+     [
+      "Getting a vaccine",
+      0
+     ],
+     [
+      "Having measles",
+      0
+     ],
+     [
+      "Antiserum for a snake bite",
+      1
+     ],
+     [
+      "Antibodies in breast milk",
+      1
+     ],
+     [
+      "Antibodies across the placenta",
+      1
+     ],
+     [
+      "Anti-D shot for the mother",
+      1
+     ]
+    ],
+    "e": "In active immunity, the body makes the antibodies itself. Getting a vaccine and having the disease are examples. In passive immunity, ready-made antibodies are received. Antiserum, antibodies from the mother through the placenta and milk, and the anti-D shot are examples."
+   },
+   {
+    "q": "Someone who has taken antibiotics for a long time has fewer gut bacteria and now lacks vitamin K. Which step of clotting is directly affected?",
+    "o": [
+     "Platelets sticking to the wound",
+     "Making prothrombin",
+     "The fibrin mesh trapping cells",
+     "Absorbing Ca²⁺ ions from the intestine"
+    ],
+    "a": 1,
+    "e": "The liver makes prothrombin using vitamin K. When prothrombin drops, less thrombin and therefore less fibrin form, and bleeding lasts longer.",
+    "y": [
+     "Platelets do not depend on vitamin K. The plug forms, but the clot sets late.",
+     "",
+     "The fibrin mesh is a later step. The real problem is that there is less thrombin to make fibrin.",
+     "Ca²⁺ absorption is increased by vitamin D, not vitamin K."
+    ]
+   }
+  ]
+ },
  "ekosistem": {
   "title": "Ecosystem ecology and current environmental problems",
   "summary": "How does energy flow, how does matter cycle, and what disrupts an ecosystem?",
