@@ -1748,5 +1748,953 @@
     ]
    }
   ]
+ },
+ "periyodik-tablo": {
+  "title": "The periodic table",
+  "summary": "The periodic table is a map of the elements. An element's place tells you how it behaves.",
+  "cards": [
+   {
+    "h": "Mendeleev's bold table",
+    "p": "In 1869 Mendeleev arranged the 63 known elements by mass and put similar ones in the same column. He left gaps for elements not yet found and predicted their properties. One of them, gallium, was found in 1875.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='14' text-anchor='middle' fill='var(--ink)'>Leave a gap, make a prediction</text><rect x='20' y='40' width='50' height='36' fill='var(--panel)' stroke='var(--line)'/><text x='45' y='63' font-size='14' text-anchor='middle' fill='var(--ink)'>Al</text><rect x='20' y='80' width='50' height='36' fill='var(--acc)' fill-opacity='0.2' stroke='var(--acc)' stroke-dasharray='4 3'/><text x='45' y='103' font-size='15' text-anchor='middle' fill='var(--acc)'>?</text><rect x='20' y='120' width='50' height='36' fill='var(--panel)' stroke='var(--line)'/><text x='45' y='143' font-size='14' text-anchor='middle' fill='var(--ink)'>In</text><g font-size='13' text-anchor='middle' fill='var(--muted)'><text x='200' y='55'>Predicted</text><text x='272' y='55'>Actual (Ga)</text></g><line x1='95' y1='65' x2='310' y2='65' stroke='var(--line)' fill='none'/><g font-size='13' fill='var(--ink)'><text x='95' y='95'>Mass</text><text x='95' y='130'>Density</text></g><g font-size='13' text-anchor='middle' fill='var(--ink)'><text x='200' y='95'>68</text><text x='272' y='95'>69.7</text><text x='200' y='130'>5.9</text><text x='272' y='130'>5.9</text></g><text x='95' y='170' font-size='12' fill='var(--muted)'>Gallium was found in 1875</text></svg>"
+   },
+   {
+    "h": "The modern table: atomic number",
+    "p": "In 1913 Moseley showed that the true order of the elements is their <b>atomic number</b> (number of protons). Today's table is arranged this way and holds 118 elements.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='28' font-size='14' text-anchor='middle' fill='var(--ink)'>True order: number of protons</text><rect x='60' y='45' width='80' height='80' rx='6' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)'/><rect x='180' y='45' width='80' height='80' rx='6' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)'/><text x='68' y='63' font-size='12' fill='var(--ink)'>52</text><text x='100' y='92' font-size='15' text-anchor='middle' fill='var(--ink)'>Te</text><text x='100' y='115' font-size='12' text-anchor='middle' fill='var(--muted)'>127.6</text><text x='188' y='63' font-size='12' fill='var(--ink)'>53</text><text x='220' y='92' font-size='15' text-anchor='middle' fill='var(--ink)'>I</text><text x='220' y='115' font-size='12' text-anchor='middle' fill='var(--muted)'>126.9</text><text x='160' y='155' font-size='12' text-anchor='middle' fill='var(--muted)'>By mass, I should have come first</text><text x='160' y='178' font-size='13' text-anchor='middle' fill='var(--acc)'>By Z: Te (52) → I (53) ✓</text></svg>",
+    "key": "Modern periodic table = arranged by atomic number (Z)",
+    "once": {
+     "soru": "Tellurium (127.6) is heavier than iodine (126.9) but comes before it in the table. What is the modern table arranged by?",
+     "secenekler": [
+      {
+       "yazi": "Atomic number",
+       "neden": "In 1913 Moseley showed that the true order is the number of protons. Te has 52 protons, and I has 53.",
+       "dogru": true
+      },
+      {
+       "yazi": "Atomic mass",
+       "neden": "If it were arranged by mass, Te and I would swap places."
+      },
+      {
+       "yazi": "Date of discovery",
+       "neden": "The table is arranged by the structure of the atom, not by the order of discovery."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Periods and groups",
+    "p": "The horizontal rows of the table are called <b>periods</b>, and there are 7. The period number gives the number of shells. The vertical columns are called <b>groups</b>, and there are 18. Elements in the same main group have similar valence electrons and chemical properties.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M16 30h16v16h-16zM288 30h16v16h-16zM16 46h16v16h-16zM32 46h16v16h-16zM208 46h16v16h-16zM224 46h16v16h-16zM240 46h16v16h-16zM256 46h16v16h-16zM272 46h16v16h-16zM288 46h16v16h-16zM16 62h16v16h-16zM32 62h16v16h-16zM208 62h16v16h-16zM224 62h16v16h-16zM240 62h16v16h-16zM256 62h16v16h-16zM272 62h16v16h-16zM288 62h16v16h-16zM16 78h288v16h-288zM16 94h288v16h-288zM16 110h288v16h-288zM16 126h288v16h-288z' fill='var(--panel)' stroke='var(--line)'/><path d='M48 78v64M64 78v64M80 78v64M96 78v64M112 78v64M128 78v64M144 78v64M160 78v64M176 78v64M192 78v64M208 78v64M224 78v64M240 78v64M256 78v64M272 78v64M288 78v64M32 78v64' stroke='var(--line)' fill='none'/><rect x='16' y='78' width='288' height='16' fill='var(--c1)' fill-opacity='0.35'/><rect x='16' y='30' width='16' height='112' fill='var(--c2)' fill-opacity='0.35'/><g font-size='12' text-anchor='middle' fill='var(--muted)'><text x='8' y='42'>1</text><text x='8' y='58'>2</text><text x='8' y='74'>3</text><text x='8' y='90'>4</text><text x='8' y='106'>5</text><text x='8' y='122'>6</text><text x='8' y='138'>7</text><text x='24' y='26'>1</text><text x='296' y='26'>18</text></g><rect x='40' y='156' width='14' height='12' fill='var(--c1)' fill-opacity='0.35'/><text x='60' y='166' font-size='12' fill='var(--ink)'>Period: horizontal row (7)</text><rect x='40' y='176' width='14' height='12' fill='var(--c2)' fill-opacity='0.35'/><text x='60' y='186' font-size='12' fill='var(--ink)'>Group: vertical column (18)</text></svg>",
+    "key": "He has 2 valence electrons, but it sits in group 18 (8A)."
+   },
+   {
+    "h": "Metals, nonmetals, noble gases",
+    "p": "On the left and in the middle are the <b>metals</b> (shiny, conductive), at the upper right the <b>nonmetals</b>, between them the <b>metalloids</b>, and at the far right the <b>noble gases</b>. <b>Metallic character</b> increases to the left and down.",
+    "etk": {
+     "tur": "ayir",
+     "soru": "Put each element in the right group.",
+     "gruplar": [
+      "Metal",
+      "Nonmetal",
+      "Noble gas"
+     ],
+     "ogeler": [
+      [
+       "Iron (Fe)",
+       0
+      ],
+      [
+       "Copper (Cu)",
+       0
+      ],
+      [
+       "Sodium (Na)",
+       0
+      ],
+      [
+       "Oxygen (O)",
+       1
+      ],
+      [
+       "Sulfur (S)",
+       1
+      ],
+      [
+       "Chlorine (Cl)",
+       1
+      ],
+      [
+       "Hydrogen (H)",
+       1,
+       "It sits on the left of the table in 1A, but it is a nonmetal."
+      ],
+      [
+       "Helium (He)",
+       2
+      ],
+      [
+       "Argon (Ar)",
+       2
+      ]
+     ]
+    },
+    "svg": "<svg viewBox='0 0 320 200'><path d='M16 46h16v16h-16zM32 46h16v16h-16zM16 62h16v16h-16zM32 62h16v16h-16zM208 62h16v16h-16zM16 78h16v16h-16zM32 78h16v16h-16zM48 78h16v16h-16zM64 78h16v16h-16zM80 78h16v16h-16zM96 78h16v16h-16zM112 78h16v16h-16zM128 78h16v16h-16zM144 78h16v16h-16zM160 78h16v16h-16zM176 78h16v16h-16zM192 78h16v16h-16zM208 78h16v16h-16zM16 94h16v16h-16zM32 94h16v16h-16zM48 94h16v16h-16zM64 94h16v16h-16zM80 94h16v16h-16zM96 94h16v16h-16zM112 94h16v16h-16zM128 94h16v16h-16zM144 94h16v16h-16zM160 94h16v16h-16zM176 94h16v16h-16zM192 94h16v16h-16zM208 94h16v16h-16zM224 94h16v16h-16zM16 110h16v16h-16zM32 110h16v16h-16zM48 110h16v16h-16zM64 110h16v16h-16zM80 110h16v16h-16zM96 110h16v16h-16zM112 110h16v16h-16zM128 110h16v16h-16zM144 110h16v16h-16zM160 110h16v16h-16zM176 110h16v16h-16zM192 110h16v16h-16zM208 110h16v16h-16zM224 110h16v16h-16zM240 110h16v16h-16zM256 110h16v16h-16zM16 126h16v16h-16zM32 126h16v16h-16zM48 126h16v16h-16zM64 126h16v16h-16zM80 126h16v16h-16zM96 126h16v16h-16zM112 126h16v16h-16zM128 126h16v16h-16zM144 126h16v16h-16zM160 126h16v16h-16zM176 126h16v16h-16zM192 126h16v16h-16zM208 126h16v16h-16zM224 126h16v16h-16zM240 126h16v16h-16zM256 126h16v16h-16zM272 126h16v16h-16z' fill='var(--c1)' fill-opacity='0.55' stroke='var(--panel)'/><path d='M16 30h16v16h-16zM224 46h16v16h-16zM240 46h16v16h-16zM256 46h16v16h-16zM272 46h16v16h-16zM240 62h16v16h-16zM256 62h16v16h-16zM272 62h16v16h-16zM256 78h16v16h-16zM272 78h16v16h-16zM272 94h16v16h-16z' fill='var(--c3)' fill-opacity='0.55' stroke='var(--panel)'/><path d='M208 46h16v16h-16zM224 62h16v16h-16zM224 78h16v16h-16zM240 78h16v16h-16zM240 94h16v16h-16zM256 94h16v16h-16zM272 110h16v16h-16z' fill='var(--c4)' fill-opacity='0.55' stroke='var(--panel)'/><path d='M288 30h16v16h-16zM288 46h16v16h-16zM288 62h16v16h-16zM288 78h16v16h-16zM288 94h16v16h-16zM288 110h16v16h-16zM288 126h16v16h-16z' fill='var(--c5)' fill-opacity='0.55' stroke='var(--panel)'/><text x='24' y='42' font-size='12' text-anchor='middle' fill='var(--ink)'>H</text><rect x='16' y='156' width='12' height='12' fill='var(--c1)' fill-opacity='0.55'/><text x='33' y='166' font-size='12' fill='var(--ink)'>metal</text><rect x='110' y='156' width='12' height='12' fill='var(--c3)' fill-opacity='0.55'/><text x='127' y='166' font-size='12' fill='var(--ink)'>nonmetal (incl. H)</text><rect x='16' y='178' width='12' height='12' fill='var(--c4)' fill-opacity='0.55'/><text x='33' y='188' font-size='12' fill='var(--ink)'>metalloid</text><rect x='110' y='178' width='12' height='12' fill='var(--c5)' fill-opacity='0.55'/><text x='127' y='188' font-size='12' fill='var(--ink)'>noble gas</text></svg>"
+   },
+   {
+    "h": "Group number = valence e⁻",
+    "p": "The main group number gives the number of valence electrons, with He as the only exception. Group 1A is called the <b>alkali metals</b>, 2A the <b>alkaline earth metals</b>, 7A the <b>halogens</b> and 8A the <b>noble gases</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><g font-size='13' text-anchor='middle' fill='var(--acc)'><text x='30' y='34'>1A</text><text x='67' y='34'>2A</text><text x='104' y='34'>3A</text><text x='141' y='34'>4A</text><text x='178' y='34'>5A</text><text x='215' y='34'>6A</text><text x='252' y='34'>7A</text><text x='289' y='34'>8A</text></g><g font-size='12' text-anchor='middle' fill='var(--muted)'><text x='30' y='52'>1</text><text x='67' y='52'>2</text><text x='104' y='52'>13</text><text x='141' y='52'>14</text><text x='178' y='52'>15</text><text x='215' y='52'>16</text><text x='252' y='52'>17</text><text x='289' y='52'>18</text></g><circle cx='30' cy='136' r='3' fill='var(--c1)'/><circle cx='67' cy='136' r='3' fill='var(--c1)'/><circle cx='67' cy='127' r='3' fill='var(--c1)'/><circle cx='104' cy='136' r='3' fill='var(--c1)'/><circle cx='104' cy='127' r='3' fill='var(--c1)'/><circle cx='104' cy='118' r='3' fill='var(--c1)'/><circle cx='141' cy='136' r='3' fill='var(--c1)'/><circle cx='141' cy='127' r='3' fill='var(--c1)'/><circle cx='141' cy='118' r='3' fill='var(--c1)'/><circle cx='141' cy='109' r='3' fill='var(--c1)'/><circle cx='178' cy='136' r='3' fill='var(--c1)'/><circle cx='178' cy='127' r='3' fill='var(--c1)'/><circle cx='178' cy='118' r='3' fill='var(--c1)'/><circle cx='178' cy='109' r='3' fill='var(--c1)'/><circle cx='178' cy='100' r='3' fill='var(--c1)'/><circle cx='215' cy='136' r='3' fill='var(--c1)'/><circle cx='215' cy='127' r='3' fill='var(--c1)'/><circle cx='215' cy='118' r='3' fill='var(--c1)'/><circle cx='215' cy='109' r='3' fill='var(--c1)'/><circle cx='215' cy='100' r='3' fill='var(--c1)'/><circle cx='215' cy='91' r='3' fill='var(--c1)'/><circle cx='252' cy='136' r='3' fill='var(--c1)'/><circle cx='252' cy='127' r='3' fill='var(--c1)'/><circle cx='252' cy='118' r='3' fill='var(--c1)'/><circle cx='252' cy='109' r='3' fill='var(--c1)'/><circle cx='252' cy='100' r='3' fill='var(--c1)'/><circle cx='252' cy='91' r='3' fill='var(--c1)'/><circle cx='252' cy='82' r='3' fill='var(--c1)'/><circle cx='289' cy='136' r='3' fill='var(--c1)'/><circle cx='289' cy='127' r='3' fill='var(--c1)'/><circle cx='289' cy='118' r='3' fill='var(--c1)'/><circle cx='289' cy='109' r='3' fill='var(--c1)'/><circle cx='289' cy='100' r='3' fill='var(--c1)'/><circle cx='289' cy='91' r='3' fill='var(--c1)'/><circle cx='289' cy='82' r='3' fill='var(--c1)'/><circle cx='289' cy='73' r='3' fill='var(--c1)'/><g font-size='13' text-anchor='middle' fill='var(--ink)'><text x='30' y='155'>1</text><text x='67' y='155'>2</text><text x='104' y='155'>3</text><text x='141' y='155'>4</text><text x='178' y='155'>5</text><text x='215' y='155'>6</text><text x='252' y='155'>7</text><text x='289' y='155'>8</text></g><text x='160' y='175' font-size='12' text-anchor='middle' fill='var(--muted)'>1A alkali metals · 2A alkaline earth metals</text><text x='160' y='192' font-size='12' text-anchor='middle' fill='var(--muted)'>7A halogens · 8A noble gases</text></svg>",
+    "key": "In the 1-18 numbering, the last digit of groups 13-18 gives the A group number.",
+    "once": {
+     "soru": "Chlorine is in group 7A. How many electrons are in its outer shell?",
+     "secenekler": [
+      {
+       "yazi": "7",
+       "neden": "The main group number gives the number of valence electrons. An element in group 7A has 7 valence electrons.",
+       "dogru": true
+      },
+      {
+       "yazi": "1",
+       "neden": "Elements in group 1A have 1 valence electron."
+      },
+      {
+       "yazi": "17",
+       "neden": "17 is chlorine's total number of electrons. Its outer shell has 7."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Atomic radius",
+    "p": "Going down a group, the number of shells increases, so the atom <b>gets bigger</b>. Going right across a period, the number of protons increases, the nucleus pulls the electrons harder, and the atom <b>gets smaller</b>. A cation is smaller than its atom, and an anion is bigger.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='periyodik-tablo-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--acc)'/></marker></defs><g font-size='12' text-anchor='middle' fill='var(--ink)'><text x='40' y='28'>Li</text><text x='80' y='28'>Be</text><text x='120' y='28'>B</text><text x='160' y='28'>C</text><text x='200' y='28'>N</text><text x='240' y='28'>O</text><text x='280' y='28'>F</text></g><g fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)'><circle cx='40' cy='50' r='16'/><circle cx='80' cy='50' r='13'/><circle cx='120' cy='50' r='11'/><circle cx='160' cy='50' r='10'/><circle cx='200' cy='50' r='9'/><circle cx='240' cy='50' r='8'/><circle cx='280' cy='50' r='7'/><circle cx='40' cy='103' r='20'/><circle cx='40' cy='160' r='26'/></g><text x='68' y='107' font-size='12' fill='var(--ink)'>Na</text><text x='72' y='164' font-size='12' fill='var(--ink)'>K</text><line x1='100' y1='82' x2='290' y2='82' stroke='var(--acc)' stroke-width='2' fill='none' marker-end='url(#periyodik-tablo-6)'/><text x='195' y='102' font-size='12' text-anchor='middle' fill='var(--ink)'>right across a period: smaller</text><line x1='100' y1='118' x2='100' y2='182' stroke='var(--acc)' stroke-width='2' fill='none' marker-end='url(#periyodik-tablo-6)'/><text x='110' y='155' font-size='12' fill='var(--ink)'>down a group: bigger</text></svg>",
+    "key": "It increases down a group and decreases to the right. A cation is smaller than its atom, and an anion is bigger than its atom."
+   },
+   {
+    "h": "Exceptions in ionization energy",
+    "p": "Ionization energy increases to the right across a period and decreases down a group. There are two exceptions. Going from Be to B and from N to O, the ionization energy drops, because the s² and half-full p³ configurations are more stable.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='periyodik-tablo-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--ink)'/></marker></defs><line x1='40' y1='170' x2='310' y2='170' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#periyodik-tablo-7)'/><line x1='40' y1='170' x2='40' y2='22' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#periyodik-tablo-7)'/><line x1='36' y1='30' x2='44' y2='30' stroke='var(--ink)' fill='none'/><text x='34' y='34' font-size='12' text-anchor='end' fill='var(--ink)'>25</text><text x='34' y='174' font-size='12' text-anchor='end' fill='var(--ink)'>0</text><polyline points='40,94 54,32 67,140 81,118 95,124 108,107 122,89 136,94 149,73 163,49 177,141 191,127 204,136 218,124 232,111 245,112 259,97 273,82 286,146 300,136' fill='none' stroke='var(--acc)' stroke-width='2.5'/><g fill='var(--c5)'><circle cx='54' cy='32' r='4'/><circle cx='163' cy='49' r='4'/><circle cx='273' cy='82' r='4'/></g><g fill='var(--c4)'><circle cx='67' cy='140' r='4'/><circle cx='177' cy='141' r='4'/><circle cx='286' cy='146' r='4'/></g><g font-size='12' fill='var(--ink)'><text x='62' y='34'>He</text><text x='170' y='48'>Ne</text><text x='280' y='80'>Ar</text><text x='60' y='160'>Li</text><text x='170' y='160'>Na</text><text x='280' y='164'>K</text></g><text x='48' y='18' font-size='12' fill='var(--ink)'>Ionization energy (eV)</text><text x='305' y='190' font-size='12' text-anchor='end' fill='var(--ink)'>Atomic number (1-20)</text></svg>",
+    "key": "Group 2A has a higher ionization energy than 3A, and 5A higher than 6A. This is because the s² and p³ configurations are spherically symmetric and more stable."
+   },
+   {
+    "h": "Successive ionization energies",
+    "p": "As electrons are removed one by one, each one takes more energy. When the valence electrons run out and an inner shell is reached, the energy <b>jumps</b> suddenly. The number of electrons before the jump gives the group number.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='12' text-anchor='middle' font-weight='700' fill='var(--ink)'>Mg (2-8-2): successive ionization energies</text><line x1='40' y1='170' x2='290' y2='170' stroke='var(--ink)' stroke-width='1.5'/><rect x='60' y='161.6' width='36' height='8.4' fill='var(--c1)' fill-opacity='0.55'/><text x='78' y='156' font-size='11' text-anchor='middle' fill='var(--ink)'>738</text><text x='78' y='186' font-size='12' text-anchor='middle' fill='var(--ink)'>IE<tspan font-size='9' dy='3'>1</tspan></text><rect x='120' y='153.5' width='36' height='16.5' fill='var(--c1)' fill-opacity='0.55'/><text x='138' y='147' font-size='11' text-anchor='middle' fill='var(--ink)'>1451</text><text x='138' y='186' font-size='12' text-anchor='middle' fill='var(--ink)'>IE<tspan font-size='9' dy='3'>2</tspan></text><rect x='180' y='82.0' width='36' height='88.0' fill='var(--c2)' fill-opacity='0.55'/><text x='198' y='76' font-size='11' text-anchor='middle' fill='var(--ink)'>7733</text><text x='198' y='186' font-size='12' text-anchor='middle' fill='var(--ink)'>IE<tspan font-size='9' dy='3'>3</tspan></text><rect x='240' y='50.0' width='36' height='120.0' fill='var(--c2)' fill-opacity='0.55'/><text x='258' y='44' font-size='11' text-anchor='middle' fill='var(--ink)'>10543</text><text x='258' y='186' font-size='12' text-anchor='middle' fill='var(--ink)'>IE<tspan font-size='9' dy='3'>4</tspan></text><text x='40' y='42' font-size='11' fill='var(--c2)'>IE₂ → IE₃: jumps more than 5 times</text><text x='40' y='58' font-size='12' font-weight='700' fill='var(--acc)'>→ 2 valence e⁻: group 2A</text><text x='300' y='198' font-size='10' text-anchor='end' fill='var(--muted)'>kJ/mol</text></svg>",
+    "key": "The number of electrons before the big jump equals the number of valence electrons and the main group number.",
+    "once": {
+     "soru": "An atom's successive ionization energies are 738, 1451 and 7733 kJ/mol. How many valence electrons does it have?",
+     "secenekler": [
+      {
+       "yazi": "2",
+       "neden": "The first two electrons come off the outer shell easily. The third comes from an inner shell, so the energy jumps. This element, with 2 valence electrons, is magnesium in group 2A.",
+       "dogru": true
+      },
+      {
+       "yazi": "3",
+       "neden": "The third electron comes from an inner shell. So it is not a valence electron."
+      },
+      {
+       "yazi": "1",
+       "neden": "The second electron also comes off easily. The big jump comes after it."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Electronegativity",
+    "p": "<b>Electronegativity</b> is how strongly an atom pulls the shared electrons in a bond toward itself. It increases to the right and decreases going down. Fluorine is the most electronegative, and oxygen is second.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='13' text-anchor='middle' fill='var(--ink)'>Electronegativity (Pauling), period 2</text><line x1='10' y1='160' x2='310' y2='160' stroke='var(--line)' fill='none'/><g fill='var(--c1)' fill-opacity='0.6'><rect x='18' y='131' width='24' height='29'/><rect x='58' y='113' width='24' height='47'/><rect x='98' y='99' width='24' height='61'/><rect x='138' y='83' width='24' height='77'/><rect x='178' y='69' width='24' height='91'/><rect x='218' y='57' width='24' height='103'/></g><rect x='258' y='41' width='24' height='119' fill='var(--c2)' fill-opacity='0.7'/><g font-size='12' text-anchor='middle' fill='var(--ink)'><text x='30' y='127'>1.0</text><text x='70' y='109'>1.6</text><text x='110' y='95'>2.0</text><text x='150' y='79'>2.6</text><text x='190' y='65'>3.0</text><text x='230' y='53'>3.4</text><text x='270' y='37'>4.0</text><text x='30' y='176'>Li</text><text x='70' y='176'>Be</text><text x='110' y='176'>B</text><text x='150' y='176'>C</text><text x='190' y='176'>N</text><text x='230' y='176'>O</text><text x='270' y='176'>F</text></g><text x='160' y='195' font-size='12' text-anchor='middle' fill='var(--muted)'>Down the group: F 4.0 · Cl 3.2 · Br 3.0 · I 2.7</text></svg>",
+    "key": "Electronegativity increases to the right and up. Fluorine has the highest electronegativity.",
+    "once": {
+     "soru": "In the H–F bond, which atom are the shared electrons closer to?",
+     "secenekler": [
+      {
+       "yazi": "Fluorine",
+       "neden": "Fluorine is the most electronegative element, and it pulls the electrons in the bond toward itself.",
+       "dogru": true
+      },
+      {
+       "yazi": "Hydrogen",
+       "neden": "Hydrogen pulls much more weakly than fluorine."
+      },
+      {
+       "yazi": "Equally between them",
+       "neden": "Equal sharing happens only between two identical atoms, as in H–H."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Electron affinity",
+    "p": "The energy released when a gaseous atom gains an electron is its <b>electron affinity</b>. The highest values are found in the halogens. Nonmetallic character increases to the right and up.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='periyodik-tablo-ei' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c3)'/></marker><marker id='periyodik-tablo-mk' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c1)'/></marker></defs><path d='M16 30h16v16h-16zM288 30h16v16h-16zM16 46h16v16h-16zM32 46h16v16h-16zM208 46h16v16h-16zM224 46h16v16h-16zM240 46h16v16h-16zM256 46h16v16h-16zM272 46h16v16h-16zM288 46h16v16h-16zM16 62h16v16h-16zM32 62h16v16h-16zM208 62h16v16h-16zM224 62h16v16h-16zM240 62h16v16h-16zM256 62h16v16h-16zM272 62h16v16h-16zM288 62h16v16h-16zM16 78h16v16h-16zM32 78h16v16h-16zM48 78h16v16h-16zM64 78h16v16h-16zM80 78h16v16h-16zM96 78h16v16h-16zM112 78h16v16h-16zM128 78h16v16h-16zM144 78h16v16h-16zM160 78h16v16h-16zM176 78h16v16h-16zM192 78h16v16h-16zM208 78h16v16h-16zM224 78h16v16h-16zM240 78h16v16h-16zM256 78h16v16h-16zM272 78h16v16h-16zM288 78h16v16h-16zM16 94h16v16h-16zM32 94h16v16h-16zM48 94h16v16h-16zM64 94h16v16h-16zM80 94h16v16h-16zM96 94h16v16h-16zM112 94h16v16h-16zM128 94h16v16h-16zM144 94h16v16h-16zM160 94h16v16h-16zM176 94h16v16h-16zM192 94h16v16h-16zM208 94h16v16h-16zM224 94h16v16h-16zM240 94h16v16h-16zM256 94h16v16h-16zM272 94h16v16h-16zM288 94h16v16h-16zM16 110h16v16h-16zM32 110h16v16h-16zM48 110h16v16h-16zM64 110h16v16h-16zM80 110h16v16h-16zM96 110h16v16h-16zM112 110h16v16h-16zM128 110h16v16h-16zM144 110h16v16h-16zM160 110h16v16h-16zM176 110h16v16h-16zM192 110h16v16h-16zM208 110h16v16h-16zM224 110h16v16h-16zM240 110h16v16h-16zM256 110h16v16h-16zM272 110h16v16h-16zM288 110h16v16h-16zM16 126h16v16h-16zM32 126h16v16h-16zM48 126h16v16h-16zM64 126h16v16h-16zM80 126h16v16h-16zM96 126h16v16h-16zM112 126h16v16h-16zM128 126h16v16h-16zM144 126h16v16h-16zM160 126h16v16h-16zM176 126h16v16h-16zM192 126h16v16h-16zM208 126h16v16h-16zM224 126h16v16h-16zM240 126h16v16h-16zM256 126h16v16h-16zM272 126h16v16h-16zM288 126h16v16h-16z' fill='var(--panel)' stroke='var(--line)'/><line x1='150' y1='100' x2='262' y2='52' stroke='var(--c3)' stroke-width='3' fill='none' marker-end='url(#periyodik-tablo-ei)'/><line x1='130' y1='104' x2='40' y2='134' stroke='var(--c1)' stroke-width='3' fill='none' marker-end='url(#periyodik-tablo-mk)'/><text x='160' y='164' font-size='12' text-anchor='middle' fill='var(--c3)'>↗ electron affinity, nonmetallic character (generally)</text><text x='160' y='180' font-size='12' text-anchor='middle' fill='var(--c1)'>↙ metallic character increases</text><text x='160' y='196' font-size='11' text-anchor='middle' fill='var(--muted)'>Electron affinity: Cl 349, F 328 kJ/mol</text></svg>",
+    "key": "The highest electron affinity belongs to chlorine, not fluorine. In the small F atom, the electrons repel each other.",
+    "once": {
+     "soru": "Atoms of which group are most eager to gain electrons?",
+     "secenekler": [
+      {
+       "yazi": "Halogens (7A)",
+       "neden": "When halogens gain one electron, they reach a noble gas configuration. So their electron affinities are the highest.",
+       "dogru": true
+      },
+      {
+       "yazi": "Alkali metals (1A)",
+       "neden": "These are eager to give up electrons, not to gain them."
+      },
+      {
+       "yazi": "Noble gases (8A)",
+       "neden": "Noble gases already have a stable configuration. So they are not eager to gain electrons."
+      }
+     ]
+    }
+   },
+   {
+    "h": "s, p, d and f blocks",
+    "p": "The subshell that the last electron enters sets the element's <b>block</b>. 1A, 2A and He are in the s block, and groups 3A–8A are in the p block. The B groups form the d block, and they are called <b>transition metals</b>. The lanthanides and actinides are in the f block.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M16 30h16v16h-16zM16 46h16v16h-16zM32 46h16v16h-16zM16 62h16v16h-16zM32 62h16v16h-16zM16 78h16v16h-16zM32 78h16v16h-16zM16 94h16v16h-16zM32 94h16v16h-16zM16 110h16v16h-16zM32 110h16v16h-16zM16 126h16v16h-16zM32 126h16v16h-16z' fill='var(--c1)' fill-opacity='0.35' stroke='var(--panel)'/><path d='M288 30h16v16h-16z' fill='var(--c1)' fill-opacity='0.35' stroke='var(--panel)'/><path d='M48 78h16v16h-16zM64 78h16v16h-16zM80 78h16v16h-16zM96 78h16v16h-16zM112 78h16v16h-16zM128 78h16v16h-16zM144 78h16v16h-16zM160 78h16v16h-16zM176 78h16v16h-16zM192 78h16v16h-16zM48 94h16v16h-16zM64 94h16v16h-16zM80 94h16v16h-16zM96 94h16v16h-16zM112 94h16v16h-16zM128 94h16v16h-16zM144 94h16v16h-16zM160 94h16v16h-16zM176 94h16v16h-16zM192 94h16v16h-16zM48 110h16v16h-16zM64 110h16v16h-16zM80 110h16v16h-16zM96 110h16v16h-16zM112 110h16v16h-16zM128 110h16v16h-16zM144 110h16v16h-16zM160 110h16v16h-16zM176 110h16v16h-16zM192 110h16v16h-16zM48 126h16v16h-16zM64 126h16v16h-16zM80 126h16v16h-16zM96 126h16v16h-16zM112 126h16v16h-16zM128 126h16v16h-16zM144 126h16v16h-16zM160 126h16v16h-16zM176 126h16v16h-16zM192 126h16v16h-16z' fill='var(--c4)' fill-opacity='0.35' stroke='var(--panel)'/><path d='M208 46h16v16h-16zM224 46h16v16h-16zM240 46h16v16h-16zM256 46h16v16h-16zM272 46h16v16h-16zM288 46h16v16h-16zM208 62h16v16h-16zM224 62h16v16h-16zM240 62h16v16h-16zM256 62h16v16h-16zM272 62h16v16h-16zM288 62h16v16h-16zM208 78h16v16h-16zM224 78h16v16h-16zM240 78h16v16h-16zM256 78h16v16h-16zM272 78h16v16h-16zM288 78h16v16h-16zM208 94h16v16h-16zM224 94h16v16h-16zM240 94h16v16h-16zM256 94h16v16h-16zM272 94h16v16h-16zM288 94h16v16h-16zM208 110h16v16h-16zM224 110h16v16h-16zM240 110h16v16h-16zM256 110h16v16h-16zM272 110h16v16h-16zM288 110h16v16h-16zM208 126h16v16h-16zM224 126h16v16h-16zM240 126h16v16h-16zM256 126h16v16h-16zM272 126h16v16h-16zM288 126h16v16h-16z' fill='var(--c3)' fill-opacity='0.35' stroke='var(--panel)'/><path d='M48 152h16v16h-16zM64 152h16v16h-16zM80 152h16v16h-16zM96 152h16v16h-16zM112 152h16v16h-16zM128 152h16v16h-16zM144 152h16v16h-16zM160 152h16v16h-16zM176 152h16v16h-16zM192 152h16v16h-16zM208 152h16v16h-16zM224 152h16v16h-16zM240 152h16v16h-16zM256 152h16v16h-16zM48 168h16v16h-16zM64 168h16v16h-16zM80 168h16v16h-16zM96 168h16v16h-16zM112 168h16v16h-16zM128 168h16v16h-16zM144 168h16v16h-16zM160 168h16v16h-16zM176 168h16v16h-16zM192 168h16v16h-16zM208 168h16v16h-16zM224 168h16v16h-16zM240 168h16v16h-16zM256 168h16v16h-16z' fill='var(--c5)' fill-opacity='0.35' stroke='var(--panel)'/><text x='32' y='112' font-size='14' text-anchor='middle' fill='var(--ink)'>s</text><text x='128' y='114' font-size='12' text-anchor='middle' fill='var(--ink)'>d: transition metals</text><text x='256' y='98' font-size='14' text-anchor='middle' fill='var(--ink)'>p</text><text x='160' y='172' font-size='11' text-anchor='middle' fill='var(--ink)'>f: lanthanides, actinides</text><text x='24' y='42' font-size='10' text-anchor='middle' fill='var(--ink)'>H</text><text x='296' y='42' font-size='10' text-anchor='middle' fill='var(--ink)'>He</text><text x='160' y='196' font-size='11' text-anchor='middle' fill='var(--muted)'>He (1s²) is in the s block but sits in 8A.</text></svg>",
+    "key": "The main groups (A groups) are made of the s and p blocks. The transition metals (B groups) are in the d block.",
+    "once": {
+     "soru": "Iron (Fe) is in the B groups in the middle of the table. Which subshell does its last electron enter?",
+     "secenekler": [
+      {
+       "yazi": "d",
+       "neden": "Fe is [Ar] 4s² 3d⁶, and the last electron enters 3d. The B groups in the middle of the table are the d block.",
+       "dogru": true
+      },
+      {
+       "yazi": "s",
+       "neden": "Elements ending in s are the two groups at the far left of the table."
+      },
+      {
+       "yazi": "p",
+       "neden": "Elements ending in p are the six groups on the right of the table."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• The modern table is arranged by atomic number and has 7 periods and 18 groups.<br>• The period number gives the number of shells, and the main group number gives the number of valence electrons.<br>• Metals are on the left, nonmetals at the upper right and noble gases at the far right.<br>• Toward the upper right, the radius decreases, and ionization energy and electronegativity usually increase.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='periyodik-tablo-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c2)'/></marker></defs><path d='M16 30h16v16h-16zM288 30h16v16h-16zM16 46h16v16h-16zM32 46h16v16h-16zM208 46h16v16h-16zM224 46h16v16h-16zM240 46h16v16h-16zM256 46h16v16h-16zM272 46h16v16h-16zM288 46h16v16h-16zM16 62h16v16h-16zM32 62h16v16h-16zM208 62h16v16h-16zM224 62h16v16h-16zM240 62h16v16h-16zM256 62h16v16h-16zM272 62h16v16h-16zM288 62h16v16h-16zM16 78h288v16h-288zM16 94h288v16h-288zM16 110h288v16h-288zM16 126h288v16h-288z' fill='var(--panel)' stroke='var(--line)'/><line x1='50' y1='132' x2='262' y2='44' stroke='var(--c2)' stroke-width='3' fill='none' marker-end='url(#periyodik-tablo-9)'/><text x='160' y='165' font-size='12' text-anchor='middle' fill='var(--ink)'>↗ toward upper right: IE and electronegativity increase</text><text x='160' y='185' font-size='12' text-anchor='middle' fill='var(--ink)'>↙ toward lower left: atomic radius increases</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sirala",
+    "q": "Order these from highest to lowest electronegativity. (F: period 2, 7A; Cl: period 3, 7A; S: period 3, 6A; Na: period 3, 1A)",
+    "ogeler": [
+     "F",
+     "Cl",
+     "S",
+     "Na"
+    ],
+    "e": "Electronegativity increases to the right and up. F is at the upper right (4.0). Cl is below it (3.2), S is to the left of Cl (2.6), and Na is at the far left of the period (0.9)."
+   },
+   {
+    "tur": "sirala",
+    "q": "Order these isoelectronic ions from largest to smallest radius. (Z: S 16, Cl 17, K 19, Ca 20)",
+    "ogeler": [
+     "S²⁻",
+     "Cl⁻",
+     "K⁺",
+     "Ca²⁺"
+    ],
+    "e": "All four particles have 18 electrons. As the number of protons grows, the nucleus pulls the same electrons harder. So S²⁻ with 16 protons is the largest, and Ca²⁺ with 20 protons is the smallest."
+   },
+   {
+    "tur": "sayi",
+    "q": "A main-group atom has these successive ionization energies (kJ/mol): IE₁ = 578, IE₂ = 1817, IE₃ = 2745, IE₄ = 11 577. How many valence electrons does it have?",
+    "cevap": 3,
+    "birim": "electrons",
+    "e": "The big jump comes from IE₃ to IE₄ (2745 → 11 577). So the first 3 electrons are valence electrons, and the fourth comes from an inner shell. The atom is in group 3A, and it is aluminum."
+   },
+   {
+    "q": "Which one has the greatest metallic character? (Na: period 3, 1A; K: period 4, 1A; Mg: period 3, 2A; Al: period 3, 3A)",
+    "o": [
+     "Na",
+     "K",
+     "Mg",
+     "Al"
+    ],
+    "a": 1,
+    "e": "Metallic character increases to the left and down. K is both at the far left (1A) and below Na. Its valence electron is farthest from the nucleus, so it comes off most easily.",
+    "y": [
+     "Na is also in group 1A, but K is below it. Going down, the electron comes off more easily.",
+     "",
+     "Mg is to the right of Na. Metallic character decreases to the right.",
+     "Al is the farthest right of these three in period 3. So its metallic character is the smallest."
+    ]
+   }
+  ]
+ },
+ "kimyasal-baglar": {
+  "title": "Interactions between chemical species",
+  "summary": "The forces that hold atoms, ions and molecules together.",
+  "cards": [
+   {
+    "h": "What is a chemical species?",
+    "p": "A particle that carries chemical properties is called a <b>chemical species</b>. A chemical species can be an <b>atom</b> (He), an <b>ion</b> (Na<sup>+</sup>) or a <b>molecule</b> (H₂O). These species attract each other. So how tightly do they hold on?",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='107' y1='14' x2='107' y2='186' stroke='var(--line)'/><line x1='213' y1='14' x2='213' y2='186' stroke='var(--line)'/><text x='55' y='30' font-size='14' text-anchor='middle' fill='var(--ink)'>Atom</text><text x='160' y='30' font-size='14' text-anchor='middle' fill='var(--ink)'>Ion</text><text x='266' y='30' font-size='14' text-anchor='middle' fill='var(--ink)'>Molecule</text><circle cx='55' cy='92' r='26' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)'/><text x='55' y='97' font-size='15' text-anchor='middle' fill='var(--ink)'>He</text><circle cx='136' cy='92' r='17' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><text x='136' y='96' font-size='12' text-anchor='middle' fill='var(--ink)'>Na⁺</text><circle cx='182' cy='92' r='23' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)'/><text x='182' y='97' font-size='14' text-anchor='middle' fill='var(--ink)'>Cl⁻</text><line x1='254.8' y1='97.3' x2='250.5' y2='103.1' stroke='var(--ink)' stroke-width='2'/><line x1='277.2' y1='97.3' x2='281.5' y2='103.1' stroke='var(--ink)' stroke-width='2'/><circle cx='266' cy='82' r='19' fill='var(--c5)' fill-opacity='0.25' stroke='var(--c5)'/><text x='266' y='87' font-size='14' text-anchor='middle' fill='var(--ink)'>O</text><circle cx='244' cy='112' r='11' fill='var(--panel)' stroke='var(--muted)'/><text x='244' y='116' font-size='11' text-anchor='middle' fill='var(--ink)'>H</text><circle cx='288' cy='112' r='11' fill='var(--panel)' stroke='var(--muted)'/><text x='288' y='116' font-size='11' text-anchor='middle' fill='var(--ink)'>H</text><text x='55' y='148' font-size='11' text-anchor='middle' fill='var(--muted)'>neutral, single atom</text><text x='160' y='148' font-size='11' text-anchor='middle' fill='var(--muted)'>charged particle</text><text x='266' y='148' font-size='11' text-anchor='middle' fill='var(--muted)'>bonded atoms</text><text x='55' y='172' font-size='12' text-anchor='middle' fill='var(--ink)'>He, Fe, Ne</text><text x='160' y='172' font-size='12' text-anchor='middle' fill='var(--ink)'>Na⁺, Cl⁻, OH⁻</text><text x='266' y='172' font-size='12' text-anchor='middle' fill='var(--ink)'>H₂, O₂, H₂O</text></svg>",
+    "key": "A chemical species can be an atom (He, Fe), an ion (Na⁺, Cl⁻) or a molecule (H₂, H₂O).",
+    "once": {
+     "soru": "What kind of chemical species is Na⁺?",
+     "secenekler": [
+      {
+       "yazi": "Ion",
+       "neden": "It is a charged sodium particle that has given up one electron.",
+       "dogru": true
+      },
+      {
+       "yazi": "Atom",
+       "neden": "The neutral atom is Na. The + charge shows that the atom has lost an electron."
+      },
+      {
+       "yazi": "Molecule",
+       "neden": "A molecule forms when several atoms bond together."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Strong and weak interactions",
+    "p": "Attractions that take more than 40 kJ/mol to break are counted as <b>strong</b> (ionic, covalent, metallic), and those that take less are <b>weak</b> (van der Waals, hydrogen bonds).",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='13' text-anchor='middle' fill='var(--ink)'>Energy needed to break the interaction</text><rect x='16' y='58' width='94' height='26' fill='var(--c1)' fill-opacity='0.2'/><rect x='110' y='58' width='194' height='26' fill='var(--c2)' fill-opacity='0.2'/><rect x='16' y='58' width='288' height='26' fill='none' stroke='var(--line)'/><line x1='110' y1='48' x2='110' y2='94' stroke='var(--acc)' stroke-width='2' stroke-dasharray='4 3'/><text x='110' y='43' font-size='12' text-anchor='middle' fill='var(--acc)'>≈ 40 kJ/mol</text><text x='63' y='76' font-size='13' text-anchor='middle' fill='var(--ink)'>weak</text><text x='207' y='76' font-size='13' text-anchor='middle' fill='var(--ink)'>strong</text><text x='63' y='112' font-size='11' text-anchor='middle' fill='var(--ink)'>H bond (water)</text><text x='63' y='128' font-size='12' text-anchor='middle' fill='var(--c1)'>≈ 20</text><text x='145' y='112' font-size='11' text-anchor='middle' fill='var(--ink)'>Cl–Cl</text><text x='145' y='128' font-size='12' text-anchor='middle' fill='var(--c2)'>242</text><text x='207' y='112' font-size='11' text-anchor='middle' fill='var(--ink)'>H–H</text><text x='207' y='128' font-size='12' text-anchor='middle' fill='var(--c2)'>436</text><text x='269' y='112' font-size='11' text-anchor='middle' fill='var(--ink)'>N≡N</text><text x='269' y='128' font-size='12' text-anchor='middle' fill='var(--c2)'>945</text><text x='160' y='154' font-size='11' text-anchor='middle' fill='var(--muted)'>Values in kJ/mol; bars not drawn to scale.</text><text x='160' y='182' font-size='12' text-anchor='middle' fill='var(--ink)'>The 40 kJ/mol line is a convention, not a law of nature.</text></svg>",
+    "key": "This line is not a law of nature but a textbook convention.",
+    "once": {
+     "soru": "Which one is a strong interaction?",
+     "secenekler": [
+      {
+       "yazi": "Covalent bond",
+       "neden": "This bond holds atoms together inside a molecule, and breaking it takes a lot of energy.",
+       "dogru": true
+      },
+      {
+       "yazi": "Hydrogen bond",
+       "neden": "This interaction is between molecules and counts as weak."
+      },
+      {
+       "yazi": "Van der Waals",
+       "neden": "It is a weak attraction between molecules."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Octet, duet and Lewis symbols",
+    "p": "Noble gases have a full outer shell, so they hardly react. Other atoms tend to complete their outer shell to 8 electrons, which is called an <b>octet</b>. H and Li complete it to 2 electrons, which is called a <b>duet</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='26' font-size='13' text-anchor='middle' fill='var(--ink)'>Lewis symbol: each dot is one valence e⁻</text><text x='35' y='88' font-size='15' text-anchor='middle' fill='var(--ink)'>H</text><circle cx='46' cy='83' r='1.8' fill='var(--ink)'/><text x='35' y='126' font-size='12' text-anchor='middle' fill='var(--muted)'>1A</text><text x='35' y='144' font-size='12' text-anchor='middle' fill='var(--ink)'>1 e⁻</text><text x='85' y='88' font-size='15' text-anchor='middle' fill='var(--ink)'>C</text><circle cx='85' cy='72' r='1.8' fill='var(--ink)'/><circle cx='96' cy='83' r='1.8' fill='var(--ink)'/><circle cx='85' cy='94' r='1.8' fill='var(--ink)'/><circle cx='74' cy='83' r='1.8' fill='var(--ink)'/><text x='85' y='126' font-size='12' text-anchor='middle' fill='var(--muted)'>4A</text><text x='85' y='144' font-size='12' text-anchor='middle' fill='var(--ink)'>4 e⁻</text><text x='135' y='88' font-size='15' text-anchor='middle' fill='var(--ink)'>N</text><circle cx='132' cy='72' r='1.8' fill='var(--ink)'/><circle cx='138' cy='72' r='1.8' fill='var(--ink)'/><circle cx='146' cy='83' r='1.8' fill='var(--ink)'/><circle cx='135' cy='94' r='1.8' fill='var(--ink)'/><circle cx='124' cy='83' r='1.8' fill='var(--ink)'/><text x='135' y='126' font-size='12' text-anchor='middle' fill='var(--muted)'>5A</text><text x='135' y='144' font-size='12' text-anchor='middle' fill='var(--ink)'>5 e⁻</text><text x='185' y='88' font-size='15' text-anchor='middle' fill='var(--ink)'>O</text><circle cx='182' cy='72' r='1.8' fill='var(--ink)'/><circle cx='188' cy='72' r='1.8' fill='var(--ink)'/><circle cx='196' cy='80' r='1.8' fill='var(--ink)'/><circle cx='196' cy='86' r='1.8' fill='var(--ink)'/><circle cx='185' cy='94' r='1.8' fill='var(--ink)'/><circle cx='174' cy='83' r='1.8' fill='var(--ink)'/><text x='185' y='126' font-size='12' text-anchor='middle' fill='var(--muted)'>6A</text><text x='185' y='144' font-size='12' text-anchor='middle' fill='var(--ink)'>6 e⁻</text><text x='235' y='88' font-size='15' text-anchor='middle' fill='var(--ink)'>F</text><circle cx='232' cy='72' r='1.8' fill='var(--ink)'/><circle cx='238' cy='72' r='1.8' fill='var(--ink)'/><circle cx='246' cy='80' r='1.8' fill='var(--ink)'/><circle cx='246' cy='86' r='1.8' fill='var(--ink)'/><circle cx='232' cy='94' r='1.8' fill='var(--ink)'/><circle cx='238' cy='94' r='1.8' fill='var(--ink)'/><circle cx='224' cy='83' r='1.8' fill='var(--ink)'/><text x='235' y='126' font-size='12' text-anchor='middle' fill='var(--muted)'>7A</text><text x='235' y='144' font-size='12' text-anchor='middle' fill='var(--ink)'>7 e⁻</text><text x='285' y='88' font-size='15' text-anchor='middle' fill='var(--ink)'>Ne</text><circle cx='282' cy='72' r='1.8' fill='var(--ink)'/><circle cx='288' cy='72' r='1.8' fill='var(--ink)'/><circle cx='300' cy='80' r='1.8' fill='var(--ink)'/><circle cx='300' cy='86' r='1.8' fill='var(--ink)'/><circle cx='282' cy='94' r='1.8' fill='var(--ink)'/><circle cx='288' cy='94' r='1.8' fill='var(--ink)'/><circle cx='270' cy='80' r='1.8' fill='var(--ink)'/><circle cx='270' cy='86' r='1.8' fill='var(--ink)'/><text x='285' y='126' font-size='12' text-anchor='middle' fill='var(--muted)'>8A</text><text x='285' y='144' font-size='12' text-anchor='middle' fill='var(--ink)'>8 e⁻</text><rect x='258' y='56' width='54' height='98' rx='6' fill='var(--c5)' fill-opacity='0.1' stroke='var(--c5)'/><text x='160' y='182' font-size='12' text-anchor='middle' fill='var(--acc)'>Ne has a full octet: it hardly reacts.</text></svg>",
+    "key": "In a Lewis symbol the valence electrons are drawn as dots. The octet is a tendency, and it has exceptions such as BF₃.",
+    "once": {
+     "soru": "Neon hardly ever reacts. Why?",
+     "secenekler": [
+      {
+       "yazi": "Its outer shell is full",
+       "neden": "Neon has 8 electrons in its outer shell. It has no electrons to gain or give up.",
+       "dogru": true
+      },
+      {
+       "yazi": "Its nucleus is very big",
+       "neden": "It is the outer-shell electrons that decide reactions."
+      },
+      {
+       "yazi": "It has no electrons",
+       "neden": "Neon has 10 electrons."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Ionic bonds and the ionic lattice",
+    "p": "A metal gives up electrons and becomes a cation, and a nonmetal gains electrons and becomes an anion. Oppositely charged ions attract each other, and this is called an <b>ionic bond</b>. There are no molecules in NaCl. The ions form a <b>lattice</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kbag-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--acc)'/></marker></defs><text x='30' y='54' font-size='15' text-anchor='middle' fill='var(--ink)'>Na</text><circle cx='45' cy='49' r='1.8' fill='var(--acc)'/><text x='66' y='54' font-size='14' text-anchor='middle' fill='var(--ink)'>+</text><text x='100' y='54' font-size='15' text-anchor='middle' fill='var(--ink)'>Cl</text><circle cx='97' cy='38' r='1.8' fill='var(--ink)'/><circle cx='103' cy='38' r='1.8' fill='var(--ink)'/><circle cx='97' cy='60' r='1.8' fill='var(--ink)'/><circle cx='103' cy='60' r='1.8' fill='var(--ink)'/><circle cx='115' cy='46' r='1.8' fill='var(--ink)'/><circle cx='115' cy='52' r='1.8' fill='var(--ink)'/><circle cx='85' cy='49' r='1.8' fill='var(--ink)'/><path d='M46 41 Q66 18 84 40' fill='none' stroke='var(--acc)' stroke-width='1.5' marker-end='url(#kbag-1)'/><text x='146' y='54' font-size='15' text-anchor='middle' fill='var(--ink)'>→</text><text x='180' y='54' font-size='15' text-anchor='middle' fill='var(--ink)'>Na⁺</text><text x='222' y='55' font-size='15' text-anchor='middle' fill='var(--ink)'>[</text><text x='250' y='54' font-size='15' text-anchor='middle' fill='var(--ink)'>Cl</text><circle cx='247' cy='38' r='1.8' fill='var(--ink)'/><circle cx='253' cy='38' r='1.8' fill='var(--ink)'/><circle cx='247' cy='60' r='1.8' fill='var(--ink)'/><circle cx='253' cy='60' r='1.8' fill='var(--ink)'/><circle cx='265' cy='46' r='1.8' fill='var(--ink)'/><circle cx='265' cy='52' r='1.8' fill='var(--ink)'/><circle cx='235' cy='46' r='1.8' fill='var(--ink)'/><circle cx='235' cy='52' r='1.8' fill='var(--ink)'/><text x='278' y='55' font-size='15' text-anchor='middle' fill='var(--ink)'>]</text><text x='290' y='44' font-size='13' text-anchor='middle' fill='var(--ink)'>−</text><text x='30' y='84' font-size='11' text-anchor='middle' fill='var(--muted)'>2-8-1</text><text x='100' y='84' font-size='11' text-anchor='middle' fill='var(--muted)'>2-8-7</text><text x='180' y='84' font-size='11' text-anchor='middle' fill='var(--muted)'>2-8</text><text x='250' y='84' font-size='11' text-anchor='middle' fill='var(--muted)'>2-8-8</text><circle cx='40' cy='116' r='8' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='40' y='120' font-size='11' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='66' cy='116' r='11' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='66' y='120' font-size='12' text-anchor='middle' fill='var(--ink)'>−</text><circle cx='92' cy='116' r='8' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='92' y='120' font-size='11' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='118' cy='116' r='11' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='118' y='120' font-size='12' text-anchor='middle' fill='var(--ink)'>−</text><circle cx='144' cy='116' r='8' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='144' y='120' font-size='11' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='170' cy='116' r='11' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='170' y='120' font-size='12' text-anchor='middle' fill='var(--ink)'>−</text><circle cx='196' cy='116' r='8' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='196' y='120' font-size='11' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='40' cy='142' r='11' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='40' y='146' font-size='12' text-anchor='middle' fill='var(--ink)'>−</text><circle cx='66' cy='142' r='8' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='66' y='146' font-size='11' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='92' cy='142' r='11' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='92' y='146' font-size='12' text-anchor='middle' fill='var(--ink)'>−</text><circle cx='118' cy='142' r='8' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='118' y='146' font-size='11' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='144' cy='142' r='11' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='144' y='146' font-size='12' text-anchor='middle' fill='var(--ink)'>−</text><circle cx='170' cy='142' r='8' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='170' y='146' font-size='11' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='196' cy='142' r='11' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='196' y='146' font-size='12' text-anchor='middle' fill='var(--ink)'>−</text><circle cx='40' cy='168' r='8' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='40' y='172' font-size='11' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='66' cy='168' r='11' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='66' y='172' font-size='12' text-anchor='middle' fill='var(--ink)'>−</text><circle cx='92' cy='168' r='8' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='92' y='172' font-size='11' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='118' cy='168' r='11' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='118' y='172' font-size='12' text-anchor='middle' fill='var(--ink)'>−</text><circle cx='144' cy='168' r='8' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='144' y='172' font-size='11' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='170' cy='168' r='11' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='170' y='172' font-size='12' text-anchor='middle' fill='var(--ink)'>−</text><circle cx='196' cy='168' r='8' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='196' y='172' font-size='11' text-anchor='middle' fill='var(--ink)'>+</text><text x='262' y='138' font-size='12' text-anchor='middle' fill='var(--ink)'>NaCl lattice</text><text x='262' y='154' font-size='11' text-anchor='middle' fill='var(--muted)'>(cross-section)</text><text x='160' y='194' font-size='11' text-anchor='middle' fill='var(--muted)'>Each ion is attracted by its oppositely charged neighbors; there are no molecules.</text></svg>",
+    "key": "An ionic bond forms by electron transfer and the attraction of opposite charges. The formula NaCl only shows the 1 to 1 ratio of the ions."
+   },
+   {
+    "h": "Formulas and names of ionic compounds",
+    "p": "In the formula of an ionic compound the charges add up to zero. For example, in Al₂O₃, 2·(+3) + 3·(−2) = 0. A compound is named by saying the cation first and then the anion. NaCl is sodium chloride, and Fe₂O₃ is iron(III) oxide.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kbag-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--muted)'/></marker></defs><text x='160' y='22' font-size='14' text-anchor='middle' fill='var(--ink)'>The charges must add up to zero</text><text x='55' y='58' font-size='16' text-anchor='middle' fill='var(--c1)'>Al³⁺</text><text x='125' y='58' font-size='16' text-anchor='middle' fill='var(--c2)'>O²⁻</text><line x1='68' y1='64' x2='112' y2='88' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#kbag-6)'/><line x1='112' y1='64' x2='68' y2='88' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#kbag-6)'/><text x='90' y='112' font-size='18' text-anchor='middle' fill='var(--ink)'>Al₂O₃</text><text x='190' y='60' font-size='13' fill='var(--ink)'>2 · (+3) = +6</text><text x='190' y='82' font-size='13' fill='var(--ink)'>3 · (−2) = −6</text><text x='190' y='106' font-size='13' fill='var(--c3)'>total charge: 0</text><line x1='14' y1='124' x2='306' y2='124' stroke='var(--line)'/><g font-size='12' fill='var(--ink)'><text x='20' y='146'>NaCl</text><text x='100' y='146'>sodium chloride</text><text x='20' y='168'>MgO</text><text x='100' y='168'>magnesium oxide</text><text x='20' y='190'>Fe₂O₃</text><text x='100' y='190'>iron(III) oxide</text></g><text x='300' y='190' font-size='11' text-anchor='end' fill='var(--muted)'>Fe³⁺ → (III)</text></svg>",
+    "key": "Single-atom anions end in -ide. Cl⁻ is chloride, O²⁻ oxide, S²⁻ sulfide, F⁻ fluoride and N³⁻ nitride. For metals whose charge can vary, the charge is written as a Roman numeral."
+   },
+   {
+    "h": "Polyatomic ions",
+    "p": "In some ions, several atoms carry the charge together. OH⁻ is hydroxide, NO₃⁻ nitrate, SO₄²⁻ sulfate, CO₃²⁻ carbonate and NH₄⁺ ammonium. If more than one of these ions is needed, it goes in parentheses, as in Ca(OH)₂.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='14' text-anchor='middle' fill='var(--ink)'>Common polyatomic ions</text><rect x='12' y='34' width='92' height='44' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)'/><text x='58' y='54' font-size='14' text-anchor='middle' fill='var(--ink)'>OH⁻</text><text x='58' y='71' font-size='11' text-anchor='middle' fill='var(--muted)'>hydroxide</text><rect x='114' y='34' width='92' height='44' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)'/><text x='160' y='54' font-size='14' text-anchor='middle' fill='var(--ink)'>NO₃⁻</text><text x='160' y='71' font-size='11' text-anchor='middle' fill='var(--muted)'>nitrate</text><rect x='216' y='34' width='92' height='44' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)'/><text x='262' y='54' font-size='14' text-anchor='middle' fill='var(--ink)'>SO₄²⁻</text><text x='262' y='71' font-size='11' text-anchor='middle' fill='var(--muted)'>sulfate</text><rect x='12' y='86' width='92' height='44' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)'/><text x='58' y='106' font-size='14' text-anchor='middle' fill='var(--ink)'>CO₃²⁻</text><text x='58' y='123' font-size='11' text-anchor='middle' fill='var(--muted)'>carbonate</text><rect x='114' y='86' width='92' height='44' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)'/><text x='160' y='106' font-size='14' text-anchor='middle' fill='var(--ink)'>PO₄³⁻</text><text x='160' y='123' font-size='11' text-anchor='middle' fill='var(--muted)'>phosphate</text><rect x='216' y='86' width='92' height='44' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)'/><text x='262' y='106' font-size='14' text-anchor='middle' fill='var(--ink)'>NH₄⁺</text><text x='262' y='123' font-size='11' text-anchor='middle' fill='var(--muted)'>ammonium</text><text x='160' y='160' font-size='13' text-anchor='middle' fill='var(--ink)'>Ca(OH)₂ = Ca²⁺ + 2 OH⁻</text><text x='160' y='184' font-size='13' text-anchor='middle' fill='var(--ink)'>(NH₄)₂SO₄ = 2 NH₄⁺ + SO₄²⁻</text></svg>",
+    "key": "A subscript outside the parentheses multiplies every atom inside them. So Ca(OH)₂ has 2 O and 2 H. PO₄³⁻ is the phosphate ion, and (NH₄)₂SO₄ is ammonium sulfate.",
+    "once": {
+     "soru": "What is the formula of the compound made of Ca²⁺ and OH⁻ ions?",
+     "secenekler": [
+      {
+       "yazi": "Ca(OH)₂",
+       "neden": "Two OH⁻ are needed to balance the +2 charge. The polyatomic ion goes in parentheses.",
+       "dogru": true
+      },
+      {
+       "yazi": "CaOH₂",
+       "neden": "Without parentheses the 2 multiplies only H, and there are not two O atoms."
+      },
+      {
+       "yazi": "CaOH",
+       "neden": "The charges add up to +1, not zero."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Covalent bonds: single, double, triple",
+    "p": "Nonmetals share their electrons, and both nuclei pull on the shared electron pair. This is called a <b>covalent bond</b>. H₂ has one shared pair, O₂ has two and N₂ has three.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='80' y='50' font-size='15' text-anchor='middle' fill='var(--ink)'>H</text><line x1='89' y1='45' x2='121' y2='45' stroke='var(--ink)' stroke-width='1.6'/><text x='130' y='50' font-size='15' text-anchor='middle' fill='var(--ink)'>H</text><text x='80' y='108' font-size='15' text-anchor='middle' fill='var(--ink)'>O</text><circle cx='77' cy='92' r='1.8' fill='var(--ink)'/><circle cx='83' cy='92' r='1.8' fill='var(--ink)'/><circle cx='77' cy='114' r='1.8' fill='var(--ink)'/><circle cx='83' cy='114' r='1.8' fill='var(--ink)'/><line x1='89' y1='100' x2='121' y2='100' stroke='var(--ink)' stroke-width='1.6'/><line x1='89' y1='106' x2='121' y2='106' stroke='var(--ink)' stroke-width='1.6'/><text x='130' y='108' font-size='15' text-anchor='middle' fill='var(--ink)'>O</text><circle cx='127' cy='92' r='1.8' fill='var(--ink)'/><circle cx='133' cy='92' r='1.8' fill='var(--ink)'/><circle cx='127' cy='114' r='1.8' fill='var(--ink)'/><circle cx='133' cy='114' r='1.8' fill='var(--ink)'/><text x='80' y='166' font-size='15' text-anchor='middle' fill='var(--ink)'>N</text><circle cx='69' cy='158' r='1.8' fill='var(--ink)'/><circle cx='69' cy='164' r='1.8' fill='var(--ink)'/><line x1='89' y1='156' x2='121' y2='156' stroke='var(--ink)' stroke-width='1.6'/><line x1='89' y1='161' x2='121' y2='161' stroke='var(--ink)' stroke-width='1.6'/><line x1='89' y1='166' x2='121' y2='166' stroke='var(--ink)' stroke-width='1.6'/><text x='130' y='166' font-size='15' text-anchor='middle' fill='var(--ink)'>N</text><circle cx='141' cy='158' r='1.8' fill='var(--ink)'/><circle cx='141' cy='164' r='1.8' fill='var(--ink)'/><line x1='182' y1='20' x2='182' y2='186' stroke='var(--line)'/><text x='196' y='42' font-size='13' text-anchor='start' fill='var(--ink)'>single bond (H₂)</text><text x='196' y='58' font-size='11' text-anchor='start' fill='var(--muted)'>1 shared pair</text><text x='196' y='100' font-size='13' text-anchor='start' fill='var(--ink)'>double bond (O₂)</text><text x='196' y='116' font-size='11' text-anchor='start' fill='var(--muted)'>2 shared pairs</text><text x='196' y='158' font-size='13' text-anchor='start' fill='var(--ink)'>triple bond (N₂)</text><text x='196' y='174' font-size='11' text-anchor='start' fill='var(--muted)'>3 shared pairs</text></svg>",
+    "key": "Each line stands for one shared pair. Pairs that are not in a bond are called lone pairs. In H₂O, O has two lone pairs, and in NH₃, N has one."
+   },
+   {
+    "h": "Names of covalent compounds",
+    "p": "In compounds of two nonmetals, the numbers of atoms are given by prefixes: mono, di, tri, tetra, penta and hexa. Mono is not used for the first element. For example, CO is carbon monoxide, and N₂O₅ is dinitrogen pentoxide.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='14' text-anchor='middle' fill='var(--ink)'>Prefix = number of atoms</text><text x='26' y='50' font-size='13' text-anchor='middle' fill='var(--acc)'>1</text><text x='42' y='50' font-size='13' fill='var(--ink)'>mono</text><text x='26' y='75' font-size='13' text-anchor='middle' fill='var(--acc)'>2</text><text x='42' y='75' font-size='13' fill='var(--ink)'>di</text><text x='26' y='100' font-size='13' text-anchor='middle' fill='var(--acc)'>3</text><text x='42' y='100' font-size='13' fill='var(--ink)'>tri</text><text x='26' y='125' font-size='13' text-anchor='middle' fill='var(--acc)'>4</text><text x='42' y='125' font-size='13' fill='var(--ink)'>tetra</text><text x='26' y='150' font-size='13' text-anchor='middle' fill='var(--acc)'>5</text><text x='42' y='150' font-size='13' fill='var(--ink)'>penta</text><text x='26' y='175' font-size='13' text-anchor='middle' fill='var(--acc)'>6</text><text x='42' y='175' font-size='13' fill='var(--ink)'>hexa</text><line x1='104' y1='36' x2='104' y2='184' stroke='var(--line)'/><text x='118' y='58' font-size='14' fill='var(--c1)'>CO</text><text x='170' y='58' font-size='12' fill='var(--ink)'>carbon monoxide</text><text x='118' y='96' font-size='14' fill='var(--c1)'>PCl₃</text><text x='170' y='96' font-size='12' fill='var(--ink)'>phosphorus trichloride</text><text x='118' y='134' font-size='14' fill='var(--c1)'>N₂O₅</text><text x='170' y='134' font-size='12' fill='var(--ink)'>dinitrogen pentoxide</text><text x='118' y='172' font-size='14' fill='var(--c1)'>SF₆</text><text x='170' y='172' font-size='12' fill='var(--ink)'>sulfur hexafluoride</text></svg>",
+    "key": "PCl₃ is phosphorus trichloride. H₂O and NH₃ go by their common names, water and ammonia.",
+    "once": {
+     "soru": "What is the name of CO₂?",
+     "secenekler": [
+      {
+       "yazi": "Carbon dioxide",
+       "neden": "There is one C (mono is not used) and two O (di). So the name is carbon dioxide.",
+       "dogru": true
+      },
+      {
+       "yazi": "Monocarbon dioxide",
+       "neden": "Mono is not used for the first element."
+      },
+      {
+       "yazi": "Carbon oxide",
+       "neden": "In a compound of two nonmetals, the number of O atoms is given by a prefix."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Polar and nonpolar covalent bonds",
+    "p": "The shared pair shifts toward the more electronegative atom. So the H–Cl bond is <b>polar</b>, and the H–H bond is <b>nonpolar</b>. In symmetrical CO₂ the bond dipoles cancel out. Bent H₂O is a <b>polar</b> molecule.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kbag-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--ink)'/></marker></defs><text x='80' y='22' font-size='13' text-anchor='middle' fill='var(--ink)'>H₂</text><text x='240' y='22' font-size='13' text-anchor='middle' fill='var(--ink)'>HCl</text><ellipse cx='80' cy='72' rx='48' ry='20' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><text x='60' y='77' font-size='15' text-anchor='middle' fill='var(--ink)'>H</text><text x='100' y='77' font-size='15' text-anchor='middle' fill='var(--ink)'>H</text><ellipse cx='246' cy='72' rx='54' ry='20' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)'/><ellipse cx='262' cy='72' rx='32' ry='16' fill='var(--c2)' fill-opacity='0.25'/><text x='212' y='77' font-size='15' text-anchor='middle' fill='var(--ink)'>H</text><text x='268' y='77' font-size='15' text-anchor='middle' fill='var(--ink)'>Cl</text><text x='212' y='46' font-size='12' text-anchor='middle' fill='var(--c1)'>δ+</text><text x='268' y='46' font-size='12' text-anchor='middle' fill='var(--c2)'>δ−</text><text x='80' y='114' font-size='13' text-anchor='middle' fill='var(--ink)'>nonpolar covalent</text><text x='80' y='130' font-size='11' text-anchor='middle' fill='var(--muted)'>equal pull, ΔEN = 0</text><text x='240' y='114' font-size='13' text-anchor='middle' fill='var(--ink)'>polar covalent</text><text x='240' y='130' font-size='11' text-anchor='middle' fill='var(--muted)'>e⁻ shift to Cl</text><line x1='24' y1='168' x2='296' y2='168' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#kbag-4)'/><text x='24' y='158' font-size='12' text-anchor='start' fill='var(--ink)'>nonpolar</text><text x='160' y='158' font-size='12' text-anchor='middle' fill='var(--ink)'>polar</text><text x='292' y='158' font-size='12' text-anchor='end' fill='var(--ink)'>ionic</text><text x='160' y='188' font-size='11' text-anchor='middle' fill='var(--muted)'>electronegativity difference (ΔEN) increases</text></svg>",
+    "key": "A polar bond does not mean a polar molecule. The bonds in CO₂ and CH₄ are polar, but the molecules are nonpolar."
+   },
+   {
+    "h": "Metallic bonds: a sea of electrons",
+    "p": "Metal atoms let go of their valence electrons, and these electrons move freely through the metal. The attraction between the cations and this <b>sea of electrons</b> is called a <b>metallic bond</b>. That is why metals conduct and can be hammered into shape.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='16' y='26' width='184' height='144' rx='8' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)'/><circle cx='44' cy='56' r='13' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='44' y='60' font-size='12' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='87' cy='56' r='13' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='87' y='60' font-size='12' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='130' cy='56' r='13' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='130' y='60' font-size='12' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='173' cy='56' r='13' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='173' y='60' font-size='12' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='44' cy='98' r='13' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='44' y='102' font-size='12' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='87' cy='98' r='13' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='87' y='102' font-size='12' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='130' cy='98' r='13' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='130' y='102' font-size='12' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='173' cy='98' r='13' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='173' y='102' font-size='12' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='44' cy='140' r='13' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='44' y='144' font-size='12' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='87' cy='140' r='13' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='87' y='144' font-size='12' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='130' cy='140' r='13' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='130' y='144' font-size='12' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='173' cy='140' r='13' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)'/><text x='173' y='144' font-size='12' text-anchor='middle' fill='var(--ink)'>+</text><circle cx='65' cy='76' r='2.6' fill='var(--acc)'/><circle cx='108' cy='72' r='2.6' fill='var(--acc)'/><circle cx='152' cy='80' r='2.6' fill='var(--acc)'/><circle cx='66' cy='120' r='2.6' fill='var(--acc)'/><circle cx='110' cy='118' r='2.6' fill='var(--acc)'/><circle cx='150' cy='116' r='2.6' fill='var(--acc)'/><circle cx='28' cy='78' r='2.6' fill='var(--acc)'/><circle cx='190' cy='98' r='2.6' fill='var(--acc)'/><circle cx='88' cy='36' r='2.6' fill='var(--acc)'/><circle cx='130' cy='162' r='2.6' fill='var(--acc)'/><circle cx='26' cy='156' r='2.6' fill='var(--acc)'/><circle cx='192' cy='44' r='2.6' fill='var(--acc)'/><circle cx='66' cy='160' r='2.6' fill='var(--acc)'/><circle cx='176' cy='160' r='2.6' fill='var(--acc)'/><circle cx='130' cy='78' r='2.6' fill='var(--acc)'/><text x='108' y='188' font-size='11' text-anchor='middle' fill='var(--muted)'>cations + a sea of free e⁻</text><text x='214' y='52' font-size='13' text-anchor='start' fill='var(--ink)'>Conductive</text><text x='214' y='68' font-size='11' text-anchor='start' fill='var(--muted)'>electricity and heat</text><text x='214' y='102' font-size='13' text-anchor='start' fill='var(--ink)'>Workable</text><text x='214' y='118' font-size='11' text-anchor='start' fill='var(--muted)'>into wire and sheets</text><text x='214' y='152' font-size='13' text-anchor='start' fill='var(--ink)'>Shiny</text><text x='214' y='168' font-size='11' text-anchor='start' fill='var(--muted)'>reflects light</text></svg>",
+    "key": "A metallic bond is the attraction between cations and free electrons."
+   },
+   {
+    "h": "Van der Waals interactions",
+    "p": "Weak attractions between molecules are called <b>van der Waals</b> forces. Between polar molecules there are <b>dipole–dipole</b> forces, and every molecule has <b>London forces</b> that come from momentary dipoles.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kbag-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--muted)'/></marker></defs><text x='160' y='18' font-size='12' text-anchor='middle' fill='var(--muted)'>Dipole–dipole (polar molecules, HCl)</text><ellipse cx='60' cy='56' rx='34' ry='14' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='44' y='60' font-size='12' text-anchor='middle' fill='var(--ink)'>H</text><text x='74' y='60' font-size='12' text-anchor='middle' fill='var(--ink)'>Cl</text><text x='44' y='36' font-size='11' text-anchor='middle' fill='var(--c1)'>δ+</text><text x='74' y='36' font-size='11' text-anchor='middle' fill='var(--c2)'>δ−</text><ellipse cx='160' cy='56' rx='34' ry='14' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='144' y='60' font-size='12' text-anchor='middle' fill='var(--ink)'>H</text><text x='174' y='60' font-size='12' text-anchor='middle' fill='var(--ink)'>Cl</text><text x='144' y='36' font-size='11' text-anchor='middle' fill='var(--c1)'>δ+</text><text x='174' y='36' font-size='11' text-anchor='middle' fill='var(--c2)'>δ−</text><ellipse cx='260' cy='56' rx='34' ry='14' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='244' y='60' font-size='12' text-anchor='middle' fill='var(--ink)'>H</text><text x='274' y='60' font-size='12' text-anchor='middle' fill='var(--ink)'>Cl</text><text x='244' y='36' font-size='11' text-anchor='middle' fill='var(--c1)'>δ+</text><text x='274' y='36' font-size='11' text-anchor='middle' fill='var(--c2)'>δ−</text><line x1='95' y1='56' x2='125' y2='56' stroke='var(--acc)' stroke-width='1.5' stroke-dasharray='3 3'/><line x1='195' y1='56' x2='225' y2='56' stroke='var(--acc)' stroke-width='1.5' stroke-dasharray='3 3'/><line x1='16' y1='92' x2='304' y2='92' stroke='var(--line)'/><text x='160' y='114' font-size='12' text-anchor='middle' fill='var(--muted)'>London forces (in all molecules)</text><ellipse cx='100' cy='150' rx='40' ry='20' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)'/><ellipse cx='86' cy='150' rx='22' ry='14' fill='var(--c5)' fill-opacity='0.25'/><text x='78' y='154' font-size='12' text-anchor='middle' fill='var(--c2)'>δ−</text><text x='124' y='154' font-size='12' text-anchor='middle' fill='var(--c1)'>δ+</text><line x1='144' y1='150' x2='176' y2='150' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#kbag-5)'/><ellipse cx='220' cy='150' rx='40' ry='20' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)'/><ellipse cx='206' cy='150' rx='22' ry='14' fill='var(--c5)' fill-opacity='0.25'/><text x='198' y='154' font-size='12' text-anchor='middle' fill='var(--c2)'>δ−</text><text x='244' y='154' font-size='12' text-anchor='middle' fill='var(--c1)'>δ+</text><text x='160' y='190' font-size='11' text-anchor='middle' fill='var(--muted)'>a momentary dipole creates a dipole in its neighbor too</text></svg>",
+    "key": "London forces grow as the molecule gets bigger. So at room temperature F₂ and Cl₂ are gases, Br₂ is a liquid and I₂ is a solid.",
+    "once": {
+     "soru": "At room temperature Cl₂ is a gas and I₂ is a solid. Why do I₂ molecules hold on more tightly?",
+     "secenekler": [
+      {
+       "yazi": "The molecule is bigger",
+       "neden": "In a big molecule the electrons shift more easily. So the London forces get stronger.",
+       "dogru": true
+      },
+      {
+       "yazi": "The molecule is polar",
+       "neden": "I₂, made of two identical atoms, is nonpolar."
+      },
+      {
+       "yazi": "There are ionic bonds between them",
+       "neden": "There are only weak attractions between I₂ molecules."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Ion–dipole and induced dipole",
+    "p": "An <b>ion–dipole</b> attraction happens between an ion and a polar molecule. When salt dissolves in water, Na<sup>+</sup> pulls on water's δ− oxygen, and Cl<sup>−</sup> pulls on its δ+ hydrogens.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='12' text-anchor='middle' fill='var(--muted)'>Salt in water: ion–dipole interaction</text><circle cx='80' cy='90' r='12' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)'/><circle cx='236' cy='90' r='15' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)'/><circle cx='110.5' cy='97.1' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='110.5' cy='82.9' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='105' cy='90' r='6' fill='var(--c2)'/><circle cx='72.9' cy='120.5' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='87.1' cy='120.5' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='80' cy='115' r='6' fill='var(--c2)'/><circle cx='49.5' cy='82.9' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='49.5' cy='97.1' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='55' cy='90' r='6' fill='var(--c2)'/><circle cx='87.1' cy='59.5' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='72.9' cy='59.5' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='80' cy='65' r='6' fill='var(--c2)'/><circle cx='258' cy='90' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='269.3' cy='81.3' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='267' cy='90' r='6' fill='var(--c2)'/><circle cx='236' cy='112' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='244.7' cy='123.3' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='236' cy='121' r='6' fill='var(--c2)'/><circle cx='214' cy='90' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='202.7' cy='98.7' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='205' cy='90' r='6' fill='var(--c2)'/><circle cx='236' cy='68' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='227.3' cy='56.7' r='3.5' fill='var(--panel)' stroke='var(--muted)'/><circle cx='236' cy='59' r='6' fill='var(--c2)'/><text x='80' y='94' font-size='11' text-anchor='middle' fill='var(--ink)'>Na⁺</text><text x='236' y='94' font-size='11' text-anchor='middle' fill='var(--ink)'>Cl⁻</text><text x='80' y='148' font-size='11' text-anchor='middle' fill='var(--ink)'>O end (δ−) turns to Na⁺</text><text x='236' y='148' font-size='11' text-anchor='middle' fill='var(--ink)'>H end (δ+) turns to Cl⁻</text><line x1='16' y1='162' x2='304' y2='162' stroke='var(--line)'/><text x='160' y='180' font-size='11' text-anchor='middle' fill='var(--muted)'>O₂ in water: dipole–induced dipole (weak)</text><text x='160' y='196' font-size='11' text-anchor='middle' fill='var(--muted)'>red: O · white: H</text></svg>",
+    "key": "Ions being surrounded by water molecules is called hydration. A polar molecule can create a temporary dipole in a nonpolar molecule, which is called dipole–induced dipole. This is how O₂ dissolves in water, if only a little.",
+    "once": {
+     "soru": "When salt dissolves in water, which end of the water molecule does the Na⁺ ion attract?",
+     "secenekler": [
+      {
+       "yazi": "The oxygen end",
+       "neden": "The oxygen end of water has a partial negative (δ−) charge and attracts the positive ion.",
+       "dogru": true
+      },
+      {
+       "yazi": "The hydrogen end",
+       "neden": "The hydrogen end of water is δ+ and repels the Na⁺ ion."
+      },
+      {
+       "yazi": "Both ends equally",
+       "neden": "Water is polar, so its ends have different charges."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Hydrogen bonds",
+    "p": "The attraction you just saw is formed only by H bonded to F, O or N. H₂O, NH₃ and HF have <b>hydrogen bonds</b>. CH₄ and H₂S do not.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='84' y1='66' x2='118' y2='86' stroke='var(--acc)' stroke-width='2' stroke-dasharray='3 3'/><line x1='106' y1='128' x2='78' y2='148' stroke='var(--acc)' stroke-width='2' stroke-dasharray='3 3'/><line x1='45.6' y1='55.4' x2='40.7' y2='59.9' stroke='var(--ink)' stroke-width='2'/><line x1='67.4' y1='54.1' x2='76.7' y2='60.8' stroke='var(--ink)' stroke-width='2'/><circle cx='56' cy='46' r='14' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='56' y='51' font-size='13' text-anchor='middle' fill='var(--ink)'>O</text><circle cx='34' cy='66' r='9' fill='var(--panel)' stroke='var(--muted)'/><text x='34' y='70' font-size='10' text-anchor='middle' fill='var(--ink)'>H</text><circle cx='84' cy='66' r='9' fill='var(--panel)' stroke='var(--muted)'/><text x='84' y='70' font-size='10' text-anchor='middle' fill='var(--ink)'>H</text><line x1='121.6' y1='107.2' x2='111.4' y2='120.8' stroke='var(--ink)' stroke-width='2'/><line x1='137.4' y1='107.9' x2='145.2' y2='120.4' stroke='var(--ink)' stroke-width='2'/><circle cx='130' cy='96' r='14' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='130' y='101' font-size='13' text-anchor='middle' fill='var(--ink)'>O</text><circle cx='106' cy='128' r='9' fill='var(--panel)' stroke='var(--muted)'/><text x='106' y='132' font-size='10' text-anchor='middle' fill='var(--ink)'>H</text><circle cx='150' cy='128' r='9' fill='var(--panel)' stroke='var(--muted)'/><text x='150' y='132' font-size='10' text-anchor='middle' fill='var(--ink)'>H</text><line x1='54.1' y1='169.3' x2='47.7' y2='173.3' stroke='var(--ink)' stroke-width='2'/><line x1='77.1' y1='170.5' x2='84.9' y2='176.5' stroke='var(--ink)' stroke-width='2'/><circle cx='66' cy='162' r='14' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='66' y='167' font-size='13' text-anchor='middle' fill='var(--ink)'>O</text><circle cx='40' cy='178' r='9' fill='var(--panel)' stroke='var(--muted)'/><text x='40' y='182' font-size='10' text-anchor='middle' fill='var(--ink)'>H</text><circle cx='92' cy='182' r='9' fill='var(--panel)' stroke='var(--muted)'/><text x='92' y='186' font-size='10' text-anchor='middle' fill='var(--ink)'>H</text><line x1='186' y1='30' x2='206' y2='30' stroke='var(--ink)' stroke-width='2'/><text x='212' y='34' font-size='11' text-anchor='start' fill='var(--ink)'>covalent O–H</text><line x1='186' y1='50' x2='206' y2='50' stroke='var(--acc)' stroke-width='2' stroke-dasharray='3 3'/><text x='212' y='54' font-size='11' text-anchor='start' fill='var(--ink)'>hydrogen bond</text><rect x='182' y='76' width='126' height='96' rx='6' fill='var(--panel)' stroke='var(--line)'/><text x='245' y='96' font-size='12' text-anchor='middle' fill='var(--muted)'>Boiling point</text><text x='245' y='122' font-size='14' text-anchor='middle' fill='var(--c1)'>H₂O: 100 °C</text><text x='245' y='146' font-size='14' text-anchor='middle' fill='var(--ink)'>H₂S: −60 °C</text><text x='245' y='163' font-size='11' text-anchor='middle' fill='var(--muted)'>(H₂S is heavier!)</text></svg>",
+    "key": "A hydrogen bond is stronger than van der Waals forces but much weaker than a covalent bond. Hydrogen bonds make ice less dense than water. This is why lakes freeze from the top."
+   },
+   {
+    "h": "Physical or chemical?",
+    "p": "During boiling, only the attractions between molecules break. In electrolysis, which splits a substance with electricity, the O–H bonds break and H₂ and O₂ form. What decides the type of change is not the strength of the bond but whether a <b>new substance</b> forms.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kbag-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c3)'/></marker></defs><defs><marker id='kbag-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c2)'/></marker></defs><line x1='160' y1='14' x2='160' y2='190' stroke='var(--line)'/><text x='80' y='24' font-size='13' text-anchor='middle' fill='var(--ink)'>Water boils</text><text x='80' y='40' font-size='11' text-anchor='middle' fill='var(--c3)'>physical change</text><text x='240' y='24' font-size='13' text-anchor='middle' fill='var(--ink)'>Water is electrolyzed</text><text x='240' y='40' font-size='11' text-anchor='middle' fill='var(--c2)'>chemical change</text><text x='80' y='76' font-size='15' text-anchor='middle' fill='var(--ink)'>H₂O···H₂O</text><line x1='80' y1='86' x2='80' y2='114' stroke='var(--c3)' stroke-width='1.5' marker-end='url(#kbag-2)'/><text x='48' y='136' font-size='15' text-anchor='middle' fill='var(--ink)'>H₂O</text><text x='112' y='136' font-size='15' text-anchor='middle' fill='var(--ink)'>H₂O</text><text x='80' y='164' font-size='11' text-anchor='middle' fill='var(--muted)'>H bonds break,</text><text x='80' y='180' font-size='11' text-anchor='middle' fill='var(--muted)'>the H₂O molecule stays the same</text><text x='240' y='76' font-size='15' text-anchor='middle' fill='var(--ink)'>2H₂O</text><line x1='240' y1='86' x2='240' y2='114' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#kbag-3)'/><text x='240' y='136' font-size='15' text-anchor='middle' fill='var(--ink)'>2H₂ + O₂</text><text x='240' y='164' font-size='11' text-anchor='middle' fill='var(--muted)'>O–H bonds break,</text><text x='240' y='180' font-size='11' text-anchor='middle' fill='var(--muted)'>new substances form</text></svg>",
+    "key": "A strong bond breaking is not enough on its own. For example, melting NaCl is a physical change.",
+    "etk": {
+     "tur": "eslestir",
+     "soru": "Wrap up the topic: match each example with the interaction that holds its particles together.",
+     "ciftler": [
+      [
+       "NaCl crystal",
+       "Ionic bond"
+      ],
+      [
+       "Cl–Cl in Cl₂",
+       "Nonpolar covalent bond"
+      ],
+      [
+       "H–Cl in HCl",
+       "Polar covalent bond"
+      ],
+      [
+       "Copper wire",
+       "Metallic bond"
+      ],
+      [
+       "Between water molecules",
+       "Hydrogen bond"
+      ],
+      [
+       "Between CH₄ molecules",
+       "London forces"
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• Chemical species are atoms, ions and molecules.<br>• Ionic bonds form by electron transfer, covalent bonds by sharing, and metallic bonds in a sea of electrons.<br>• In an ionic compound the charges add up to zero. Covalent compounds are named with prefixes.<br>• Van der Waals forces and hydrogen bonds are weak interactions.<br>• The test for a chemical change is that a new substance forms.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='150' y1='37' x2='100' y2='63' stroke='var(--line)' stroke-width='1.5'/><line x1='170' y1='37' x2='225' y2='63' stroke='var(--line)' stroke-width='1.5'/><path d='M85 85V101M85 123V131M85 153V161M240 85V101M240 123V131' stroke='var(--line)' stroke-width='1.5'/><rect x='100.0' y='15' width='120' height='22' rx='6' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)'/><text x='160' y='30' font-size='13' text-anchor='middle' fill='var(--ink)'>Interactions</text><rect x='20.0' y='63' width='130' height='22' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='85' y='78' font-size='12' text-anchor='middle' fill='var(--ink)'>Strong (&gt; ~40 kJ/mol)</text><rect x='175.0' y='63' width='130' height='22' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)'/><text x='240' y='78' font-size='12' text-anchor='middle' fill='var(--ink)'>Weak (&lt; ~40 kJ/mol)</text><rect x='30.0' y='101' width='110' height='22' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='85' y='116' font-size='12' text-anchor='middle' fill='var(--ink)'>ionic</text><rect x='30.0' y='131' width='110' height='22' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='85' y='146' font-size='12' text-anchor='middle' fill='var(--ink)'>covalent</text><rect x='30.0' y='161' width='110' height='22' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)'/><text x='85' y='176' font-size='12' text-anchor='middle' fill='var(--ink)'>metallic</text><rect x='180.0' y='101' width='120' height='22' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)'/><text x='240' y='116' font-size='12' text-anchor='middle' fill='var(--ink)'>van der Waals</text><rect x='180.0' y='131' width='120' height='22' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)'/><text x='240' y='146' font-size='12' text-anchor='middle' fill='var(--ink)'>hydrogen bond</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "ayir",
+    "q": "Sort each substance by the type of bond that holds its atoms together.",
+    "gruplar": [
+     "Ionic",
+     "Covalent",
+     "Metallic"
+    ],
+    "ogeler": [
+     [
+      "NaCl",
+      0
+     ],
+     [
+      "KCl",
+      0
+     ],
+     [
+      "H<sub>2</sub>",
+      1
+     ],
+     [
+      "HCl",
+      1
+     ],
+     [
+      "N<sub>2</sub>",
+      1
+     ],
+     [
+      "Cu",
+      2
+     ],
+     [
+      "Fe",
+      2
+     ]
+    ],
+    "e": "In NaCl and KCl, the metal gives up electrons and the nonmetal gains them, forming ionic bonds. In H<sub>2</sub>, HCl and N<sub>2</sub>, nonmetals share electrons, forming covalent bonds. In Cu and Fe, cations sit in a sea of electrons, forming metallic bonds."
+   },
+   {
+    "tur": "eslestir",
+    "q": "Match each event with the interaction that explains it.",
+    "ciftler": [
+     [
+      "Salt dissolving in water",
+      "Ion–dipole"
+     ],
+     [
+      "Oxygen dissolving a little in water",
+      "Dipole–induced dipole"
+     ],
+     [
+      "Water boiling at 100 °C",
+      "Hydrogen bond"
+     ],
+     [
+      "Attraction between nonpolar molecules",
+      "London forces"
+     ]
+    ],
+    "e": "When salt dissolves, the ions attract the oppositely charged ends of water, which is an ion–dipole interaction. Polar water creates a temporary dipole in nonpolar O<sub>2</sub>. Water's high boiling point comes from hydrogen bonds. The attraction between nonpolar molecules comes from momentary dipoles (London)."
+   },
+   {
+    "tur": "eslestir",
+    "q": "Match each formula with its systematic name.",
+    "ciftler": [
+     [
+      "CaCl₂",
+      "Calcium chloride"
+     ],
+     [
+      "FeO",
+      "Iron(II) oxide"
+     ],
+     [
+      "N₂O₄",
+      "Dinitrogen tetroxide"
+     ],
+     [
+      "NH₄NO₃",
+      "Ammonium nitrate"
+     ],
+     [
+      "Mg(OH)₂",
+      "Magnesium hydroxide"
+     ]
+    ],
+    "e": "In an ionic compound, the cation is read first and then the anion. In FeO iron has a +2 charge, so (II) is written in its name. In N₂O₄, made of two nonmetals, the numbers of atoms are given by prefixes."
+   },
+   {
+    "q": "Which molecule has polar bonds but is itself nonpolar?",
+    "o": [
+     "H₂O",
+     "CO₂",
+     "HCl",
+     "Cl₂"
+    ],
+    "a": 1,
+    "e": "The C=O bonds are polar, but in linear O=C=O the two bond dipoles point in opposite directions and are equal, so they cancel out.",
+    "y": [
+     "H₂O is a bent molecule. Its bond dipoles do not cancel, so the molecule is polar.",
+     "",
+     "HCl has only one bond, so there is no other bond to cancel its dipole. So the molecule is polar.",
+     "The Cl–Cl bond is between identical atoms, so the bond itself is nonpolar."
+    ]
+   }
+  ]
+ },
+ "maddenin-halleri": {
+  "title": "States of matter",
+  "summary": "Learn the solid, liquid, gas and plasma states, changes of state and the phase diagram.",
+  "cards": [
+   {
+    "h": "Kinetic theory and the three states",
+    "p": "By <b>kinetic theory</b>, particles are always moving, and they speed up as the temperature rises. The state of a substance is set by a contest between the attraction among particles and their motion. In a solid, attraction wins. In a gas, motion wins.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='94' y='8' width='60' height='50' rx='6' fill='var(--panel)' stroke='var(--line)'/><rect x='172' y='8' width='60' height='50' rx='6' fill='var(--panel)' stroke='var(--line)'/><rect x='250' y='8' width='60' height='50' rx='6' fill='var(--panel)' stroke='var(--line)'/><circle cx='104.5' cy='20' r='5.5' fill='var(--c1)' fill-opacity='0.7'/><circle cx='117.5' cy='20' r='5.5' fill='var(--c1)' fill-opacity='0.7'/><circle cx='130.5' cy='20' r='5.5' fill='var(--c1)' fill-opacity='0.7'/><circle cx='143.5' cy='20' r='5.5' fill='var(--c1)' fill-opacity='0.7'/><circle cx='104.5' cy='33' r='5.5' fill='var(--c1)' fill-opacity='0.7'/><circle cx='117.5' cy='33' r='5.5' fill='var(--c1)' fill-opacity='0.7'/><circle cx='130.5' cy='33' r='5.5' fill='var(--c1)' fill-opacity='0.7'/><circle cx='143.5' cy='33' r='5.5' fill='var(--c1)' fill-opacity='0.7'/><circle cx='104.5' cy='46' r='5.5' fill='var(--c1)' fill-opacity='0.7'/><circle cx='117.5' cy='46' r='5.5' fill='var(--c1)' fill-opacity='0.7'/><circle cx='130.5' cy='46' r='5.5' fill='var(--c1)' fill-opacity='0.7'/><circle cx='143.5' cy='46' r='5.5' fill='var(--c1)' fill-opacity='0.7'/><circle cx='182' cy='50' r='5.5' fill='var(--c3)' fill-opacity='0.7'/><circle cx='194' cy='51' r='5.5' fill='var(--c3)' fill-opacity='0.7'/><circle cx='206' cy='49' r='5.5' fill='var(--c3)' fill-opacity='0.7'/><circle cx='218' cy='50' r='5.5' fill='var(--c3)' fill-opacity='0.7'/><circle cx='187' cy='39' r='5.5' fill='var(--c3)' fill-opacity='0.7'/><circle cx='200' cy='38' r='5.5' fill='var(--c3)' fill-opacity='0.7'/><circle cx='213' cy='40' r='5.5' fill='var(--c3)' fill-opacity='0.7'/><circle cx='224' cy='39' r='5.5' fill='var(--c3)' fill-opacity='0.7'/><circle cx='193' cy='28' r='5.5' fill='var(--c3)' fill-opacity='0.7'/><circle cx='207' cy='29' r='5.5' fill='var(--c3)' fill-opacity='0.7'/><circle cx='262' cy='20' r='5.5' fill='var(--c2)' fill-opacity='0.7'/><circle cx='295' cy='17' r='5.5' fill='var(--c2)' fill-opacity='0.7'/><circle cx='279' cy='36' r='5.5' fill='var(--c2)' fill-opacity='0.7'/><circle cx='258' cy='48' r='5.5' fill='var(--c2)' fill-opacity='0.7'/><circle cx='299' cy='49' r='5.5' fill='var(--c2)' fill-opacity='0.7'/><text x='124' y='75' font-size='13' text-anchor='middle' fill='var(--c1)'>Solid</text><text x='202' y='75' font-size='13' text-anchor='middle' fill='var(--c3)'>Liquid</text><text x='280' y='75' font-size='13' text-anchor='middle' fill='var(--c2)'>Gas</text><line x1='10' y1='83' x2='315' y2='83' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='98' font-size='12' fill='var(--muted)'>Order</text><text x='124' y='98' font-size='11' text-anchor='middle' fill='var(--ink)'>ordered</text><text x='202' y='98' font-size='11' text-anchor='middle' fill='var(--ink)'>disordered</text><text x='280' y='98' font-size='11' text-anchor='middle' fill='var(--ink)'>very disordered</text><line x1='10' y1='105' x2='315' y2='105' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='120' font-size='12' fill='var(--muted)'>Motion</text><text x='124' y='120' font-size='11' text-anchor='middle' fill='var(--ink)'>vibrates</text><text x='202' y='120' font-size='11' text-anchor='middle' fill='var(--ink)'>slides, turns</text><text x='280' y='120' font-size='11' text-anchor='middle' fill='var(--ink)'>flies freely</text><line x1='10' y1='127' x2='315' y2='127' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='142' font-size='12' fill='var(--muted)'>Shape</text><text x='124' y='142' font-size='11' text-anchor='middle' fill='var(--ink)'>definite</text><text x='202' y='142' font-size='11' text-anchor='middle' fill='var(--ink)'>container's shape</text><text x='280' y='142' font-size='11' text-anchor='middle' fill='var(--ink)'>container's shape</text><line x1='10' y1='149' x2='315' y2='149' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='164' font-size='12' fill='var(--muted)'>Volume</text><text x='124' y='164' font-size='11' text-anchor='middle' fill='var(--ink)'>definite</text><text x='202' y='164' font-size='11' text-anchor='middle' fill='var(--ink)'>definite</text><text x='280' y='164' font-size='11' text-anchor='middle' fill='var(--ink)'>container's volume</text><line x1='10' y1='171' x2='315' y2='171' stroke='var(--line)' stroke-width='1' fill='none'/><text x='12' y='186' font-size='12' fill='var(--muted)'>Compression</text><text x='124' y='186' font-size='11' text-anchor='middle' fill='var(--ink)'>very little</text><text x='202' y='186' font-size='11' text-anchor='middle' fill='var(--ink)'>very little</text><text x='280' y='186' font-size='11' text-anchor='middle' fill='var(--ink)'>easy</text></svg>",
+    "key": "In a liquid, attraction and motion are balanced. Temperature is a measure of average kinetic energy.",
+    "once": {
+     "soru": "What happens to water molecules when you heat the water in a container?",
+     "secenekler": [
+      {
+       "yazi": "They move faster",
+       "neden": "Temperature is a measure of the particles' average energy of motion.",
+       "dogru": true
+      },
+      {
+       "yazi": "They get bigger",
+       "neden": "The size of the molecules does not change. What changes is their speed and the distance between them."
+      },
+      {
+       "yazi": "They stop",
+       "neden": "Particles never stop. They speed up when heated."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Crystalline and amorphous solids",
+    "p": "In <b>crystalline solids</b> the particles form an ordered lattice, and the substance melts sharply at a definite temperature. Salt and ice are examples. In <b>amorphous solids</b> there is no order, and the substance softens slowly as it is heated. Glass and plastic are examples.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='15' y='10' width='135' height='120' rx='6' fill='var(--panel)' stroke='var(--line)'/><rect x='170' y='10' width='135' height='120' rx='6' fill='var(--panel)' stroke='var(--line)'/><circle cx='32' cy='30' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='52' cy='30' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='72' cy='30' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='92' cy='30' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='112' cy='30' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='132' cy='30' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='32' cy='50' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='52' cy='50' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='72' cy='50' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='92' cy='50' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='112' cy='50' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='132' cy='50' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='32' cy='70' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='52' cy='70' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='72' cy='70' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='92' cy='70' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='112' cy='70' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='132' cy='70' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='32' cy='90' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='52' cy='90' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='72' cy='90' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='92' cy='90' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='112' cy='90' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='132' cy='90' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='32' cy='110' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='52' cy='110' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='72' cy='110' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='92' cy='110' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='112' cy='110' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='132' cy='110' r='7' fill='var(--c1)' fill-opacity='0.7'/><circle cx='218.3' cy='36.5' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='254' cy='29' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='241.4' cy='57.1' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='189.3' cy='70.7' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='190.6' cy='30.7' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='229.3' cy='101.4' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='251.4' cy='113' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='289.4' cy='26.5' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='276.6' cy='49.8' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='217.2' cy='78.2' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='269.6' cy='89.1' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='274.6' cy='112.7' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='189.6' cy='89.3' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='202.2' cy='44.3' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='286.9' cy='88.3' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='239.2' cy='81.3' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='185.8' cy='105.9' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='287.3' cy='64.9' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='264.8' cy='67.9' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='211.3' cy='62.2' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='206.9' cy='113.4' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='185' cy='53.8' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='237.5' cy='39.1' r='7' fill='var(--c5)' fill-opacity='0.7'/><circle cx='253.6' cy='95.4' r='7' fill='var(--c5)' fill-opacity='0.7'/><text x='82' y='152' font-size='13' text-anchor='middle' fill='var(--c1)'>Crystalline (NaCl, ice)</text><text x='82' y='170' font-size='11' text-anchor='middle' fill='var(--ink)'>long-range order</text><text x='82' y='187' font-size='11' text-anchor='middle' fill='var(--muted)'>sharp melting point</text><text x='237' y='152' font-size='13' text-anchor='middle' fill='var(--c5)'>Amorphous (glass)</text><text x='237' y='170' font-size='11' text-anchor='middle' fill='var(--ink)'>disordered structure</text><text x='237' y='187' font-size='11' text-anchor='middle' fill='var(--muted)'>melts by softening</text></svg>",
+    "key": "Glass is an amorphous solid. It has no definite melting point and softens over a range of temperatures when heated."
+   },
+   {
+    "h": "Types of crystalline solids",
+    "p": "The force that holds a crystal together decides its properties. <b>Ionic</b> crystals (NaCl) are hard and brittle. <b>Covalent network</b> crystals (diamond) are very hard to melt. <b>Molecular</b> crystals (ice) melt easily. <b>Metallic</b> crystals (Cu) conduct.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='8' width='145' height='88' rx='8' fill='var(--c2)' stroke='var(--c2)' fill-opacity='0.12'/><text x='22' y='30' font-size='14' fill='var(--c2)'>Ionic</text><text x='22' y='51' font-size='11' fill='var(--ink)'>attraction between ions</text><text x='22' y='69' font-size='11' fill='var(--ink)'>NaCl, MgO</text><text x='22' y='87' font-size='11' fill='var(--muted)'>hard but brittle</text><rect x='165' y='8' width='145' height='88' rx='8' fill='var(--c5)' stroke='var(--c5)' fill-opacity='0.12'/><text x='177' y='30' font-size='14' fill='var(--c5)'>Covalent network</text><text x='177' y='51' font-size='11' fill='var(--ink)'>network of covalent bonds</text><text x='177' y='69' font-size='11' fill='var(--ink)'>diamond, quartz (SiO₂)</text><text x='177' y='87' font-size='11' fill='var(--muted)'>very hard, hard to melt</text><rect x='10' y='104' width='145' height='88' rx='8' fill='var(--c3)' stroke='var(--c3)' fill-opacity='0.12'/><text x='22' y='126' font-size='14' fill='var(--c3)'>Molecular</text><text x='22' y='147' font-size='11' fill='var(--ink)'>weak interactions</text><text x='22' y='165' font-size='11' fill='var(--ink)'>ice, I₂, sugar</text><text x='22' y='183' font-size='11' fill='var(--muted)'>low melting point</text><rect x='165' y='104' width='145' height='88' rx='8' fill='var(--c4)' stroke='var(--c4)' fill-opacity='0.12'/><text x='177' y='126' font-size='14' fill='var(--c4)'>Metallic</text><text x='177' y='147' font-size='11' fill='var(--ink)'>metallic bond</text><text x='177' y='165' font-size='11' fill='var(--ink)'>Fe, Cu, Al</text><text x='177' y='183' font-size='11' fill='var(--muted)'>conductive, malleable</text></svg>",
+    "etk": {
+     "tur": "eslestir",
+     "soru": "Match each solid with its type of crystal.",
+     "ciftler": [
+      [
+       "NaCl",
+       "Ionic crystal"
+      ],
+      [
+       "Diamond",
+       "Covalent network crystal"
+      ],
+      [
+       "Ice",
+       "Molecular crystal"
+      ],
+      [
+       "Copper",
+       "Metallic crystal"
+      ]
+     ]
+    },
+    "key": "When a molecular solid melts, the weak interactions between molecules break, not the covalent bonds.",
+    "once": {
+     "soru": "Why does diamond melt only at a very high temperature?",
+     "secenekler": [
+      {
+       "yazi": "It is a covalent network crystal",
+       "neden": "A whole diamond is one covalent network. To melt it, strong bonds must break.",
+       "dogru": true
+      },
+      {
+       "yazi": "Its molecules are heavy",
+       "neden": "Diamond has no separate molecules."
+      },
+      {
+       "yazi": "It is an ionic crystal",
+       "neden": "Diamond is made only of carbon atoms and contains no ions."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Liquids: flow and viscosity",
+    "p": "Liquids <b>flow</b> because their particles slide past each other. The resistance to flow is called <b>viscosity</b>. Liquids with strong attractions have high viscosity, which is why honey flows more slowly than water. Viscosity drops as a liquid warms up.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hal-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--ink)'/></marker></defs><line x1='50' y1='175' x2='300' y2='175' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#hal-1)'/><line x1='50' y1='175' x2='50' y2='22' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#hal-1)'/><text x='56' y='18' font-size='12' fill='var(--muted)'>viscosity</text><text x='300' y='193' font-size='12' text-anchor='end' fill='var(--muted)'>temperature</text><path d='M62 38C120 100 200 125 290 138' stroke='var(--c4)' stroke-width='3' fill='none'/><path d='M62 132C120 150 200 158 290 163' stroke='var(--c1)' stroke-width='3' fill='none'/><text x='82' y='34' font-size='12' fill='var(--c4)'>glycerin</text><text x='72' y='124' font-size='12' fill='var(--c1)'>water</text><text x='300' y='40' font-size='12' text-anchor='end' fill='var(--ink)'>as temperature rises</text><text x='300' y='56' font-size='12' text-anchor='end' fill='var(--ink)'>viscosity drops</text><text x='300' y='92' font-size='11' text-anchor='end' fill='var(--muted)'>strong attraction</text><text x='300' y='107' font-size='11' text-anchor='end' fill='var(--muted)'>high viscosity</text></svg>",
+    "key": "If you heat a liquid, its viscosity drops. Warm honey flows more easily."
+   },
+   {
+    "h": "Surface tension",
+    "p": "A molecule at the surface is pulled only sideways and inward. So the surface behaves like a stretched skin, and this is called <b>surface tension</b>. Water has high surface tension because of hydrogen bonds. Soap and heat lower surface tension.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hal-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c2)'/></marker></defs><rect x='20' y='70' width='280' height='122' rx='4' fill='var(--c1)' stroke='none' fill-opacity='0.15'/><line x1='20' y1='70' x2='300' y2='70' stroke='var(--c1)' stroke-width='2' fill='none'/><circle cx='90' cy='122' r='9' fill='var(--c1)' fill-opacity='0.8'/><line x1='101' y1='122' x2='124' y2='122' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#hal-2)'/><line x1='79' y1='122' x2='56' y2='122' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#hal-2)'/><line x1='90' y1='133' x2='90' y2='156' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#hal-2)'/><line x1='90' y1='111' x2='90' y2='88' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#hal-2)'/><circle cx='225' cy='80' r='9' fill='var(--c1)' fill-opacity='0.8'/><line x1='236' y1='80' x2='259' y2='80' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#hal-2)'/><line x1='214' y1='80' x2='191' y2='80' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#hal-2)'/><line x1='225' y1='91' x2='225' y2='114' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#hal-2)'/><text x='225' y='28' font-size='12' text-anchor='middle' fill='var(--ink)'>surface molecule</text><text x='225' y='45' font-size='12' text-anchor='middle' fill='var(--c2)'>net pull is inward</text><text x='100' y='180' font-size='12' text-anchor='middle' fill='var(--ink)'>inner molecule: net pull zero</text><text x='28' y='62' font-size='11' fill='var(--muted)'>surface</text></svg>",
+    "key": "Drops take a round shape, because surface tension makes the surface as small as possible.",
+    "once": {
+     "soru": "How does a water strider walk on water without sinking?",
+     "secenekler": [
+      {
+       "yazi": "Surface tension",
+       "neden": "The water surface acts like a stretched skin and holds up the light insect.",
+       "dogru": true
+      },
+      {
+       "yazi": "Buoyant force",
+       "neden": "The insect does not sink into the water. The water surface holds it up."
+      },
+      {
+       "yazi": "Viscosity",
+       "neden": "Viscosity is resistance to flow. It does not explain being held up at the surface."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Vapor pressure",
+    "p": "In a closed container, once the rates of evaporation and condensation are equal, the pressure of the vapor is called the <b>equilibrium vapor pressure</b>. Vapor pressure rises with temperature. Liquids with weak attractions between particles, such as acetone, have high vapor pressure.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hal-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c2)'/></marker><marker id='hal-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c1)'/></marker></defs><rect x='30' y='18' width='120' height='164' rx='8' fill='none' stroke='var(--ink)'/><rect x='31' y='120' width='118' height='61' fill='var(--c1)' fill-opacity='0.2'/><line x1='30' y1='120' x2='150' y2='120' stroke='var(--c1)' stroke-width='2' fill='none'/><circle cx='45' cy='35' r='4' fill='var(--c1)' fill-opacity='0.7'/><circle cx='80' cy='30' r='4' fill='var(--c1)' fill-opacity='0.7'/><circle cx='130' cy='40' r='4' fill='var(--c1)' fill-opacity='0.7'/><circle cx='60' cy='60' r='4' fill='var(--c1)' fill-opacity='0.7'/><circle cx='105' cy='55' r='4' fill='var(--c1)' fill-opacity='0.7'/><circle cx='135' cy='85' r='4' fill='var(--c1)' fill-opacity='0.7'/><circle cx='42' cy='95' r='4' fill='var(--c1)' fill-opacity='0.7'/><circle cx='88' cy='95' r='4' fill='var(--c1)' fill-opacity='0.7'/><line x1='65' y1='135' x2='65' y2='75' stroke='var(--c2)' stroke-width='2.5' fill='none' marker-end='url(#hal-3)'/><line x1='115' y1='72' x2='115' y2='132' stroke='var(--c1)' stroke-width='2.5' fill='none' marker-end='url(#hal-4)'/><text x='170' y='34' font-size='13' fill='var(--ink)'>Equilibrium in a closed container:</text><text x='170' y='54' font-size='12' fill='var(--c2)'>evaporation rate</text><text x='170' y='70' font-size='12' fill='var(--c1)'>= condensation rate</text><text x='170' y='102' font-size='13' fill='var(--c3)'>Depends on:</text><text x='170' y='118' font-size='11' fill='var(--ink)'>temperature, type of liquid</text><text x='170' y='146' font-size='13' fill='var(--c2)'>Does not depend on:</text><text x='170' y='162' font-size='11' fill='var(--ink)'>amount of liquid, container volume,</text><text x='170' y='177' font-size='11' fill='var(--ink)'>surface area</text></svg>",
+    "key": "Vapor pressure does not depend on the amount of liquid. Liquids with high vapor pressure and low boiling points, such as acetone and ether, are called volatile."
+   },
+   {
+    "h": "Boiling and evaporation",
+    "p": "When the vapor pressure equals the outside pressure, bubbles form inside the liquid, and this is called <b>boiling</b>. Evaporation happens at any temperature and only at the surface. If the outside pressure drops, the boiling point drops too.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hal-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--ink)'/></marker></defs><line x1='45' y1='170' x2='305' y2='170' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#hal-5)'/><line x1='45' y1='170' x2='45' y2='14' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#hal-5)'/><line x1='45' y1='56' x2='300' y2='56' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='4 3'/><line x1='45' y1='91.1' x2='300' y2='91.1' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='4 3'/><line x1='222.273' y1='56' x2='222.273' y2='170' stroke='var(--c5)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><line x1='249.545' y1='91.1' x2='249.545' y2='170' stroke='var(--c1)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><line x1='272.273' y1='56' x2='272.273' y2='170' stroke='var(--c1)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><path d='M45.0 168.2L49.5 168.0L54.1 167.7L58.6 167.3L63.2 166.9L67.7 166.5L72.3 166.0L76.8 165.5L81.4 164.9L85.9 164.2L90.5 163.4L95.0 162.6L99.5 161.7L104.1 160.7L108.6 159.5L113.2 158.3L117.7 156.9L122.3 155.4L126.8 153.7L131.4 151.9L135.9 149.9L140.5 147.8L145.0 145.4L149.5 142.8L154.1 140.0L158.6 137.0L163.2 133.6L167.7 130.0L172.3 126.2L176.8 121.9L181.4 117.4L185.9 112.5L190.5 107.2L195.0 101.5L199.5 95.4L204.1 88.8L208.6 81.8L213.2 74.2L217.7 66.1L222.3 57.4L226.8 48.2L231.4 38.3' stroke='var(--c5)' stroke-width='2.5' fill='none'/><path d='M45.0 169.3L49.5 169.2L54.1 169.1L58.6 169.0L63.2 168.8L67.7 168.6L72.3 168.4L76.8 168.2L81.4 168.0L85.9 167.7L90.5 167.4L95.0 167.0L99.5 166.7L104.1 166.2L108.6 165.8L113.2 165.2L117.7 164.7L122.3 164.0L126.8 163.3L131.4 162.6L135.9 161.7L140.5 160.8L145.0 159.8L149.5 158.7L154.1 157.5L158.6 156.2L163.2 154.7L167.7 153.2L172.3 151.5L176.8 149.6L181.4 147.6L185.9 145.5L190.5 143.2L195.0 140.7L199.5 137.9L204.1 135.0L208.6 131.9L213.2 128.5L217.7 124.9L222.3 121.0L226.8 116.8L231.4 112.4L235.9 107.6L240.5 102.5L245.0 97.0L249.5 91.2L254.1 85.0L258.6 78.4L263.2 71.4L267.7 63.9L272.3 56.0L276.8 47.6L281.4 38.6L285.9 29.2L290.5 19.1' stroke='var(--c1)' stroke-width='2.5' fill='none'/><text x='52' y='11' font-size='11' fill='var(--muted)'>vapor pressure (mmHg)</text><text x='50' y='51' font-size='11' fill='var(--ink)'>760 mmHg = 1 atm (sea level)</text><text x='50' y='86.1' font-size='11' fill='var(--ink)'>≈ 526 mmHg (≈ 3000 m)</text><text x='222.273' y='184' font-size='11' text-anchor='middle' fill='var(--c5)'>78</text><text x='249.545' y='184' font-size='11' text-anchor='middle' fill='var(--c1)'>90</text><text x='275.273' y='184' font-size='11' text-anchor='middle' fill='var(--c1)'>100</text><text x='45' y='196' font-size='11' fill='var(--muted)'>temperature (°C)</text><text x='166' y='114' font-size='12' text-anchor='end' fill='var(--c5)'>ethanol</text><text x='255' y='130' font-size='12' fill='var(--c1)'>water</text></svg>",
+    "key": "On a mountain, water boils below 100 °C. In a pressure cooker it boils at about 120 °C, which is why food cooks quickly there."
+   },
+   {
+    "h": "Relative humidity and feels-like temperature",
+    "p": "The ratio of the vapor pressure in the air to the saturated vapor pressure is called <b>relative humidity</b>. At 100% relative humidity the air is saturated. When humidity is high, sweat evaporates poorly and the air feels hotter.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='50' y='30' width='44' height='120' fill='none' stroke='var(--c1)' stroke-width='1.5' stroke-dasharray='4 3'/><rect x='50' y='90' width='44' height='60' fill='var(--c1)' fill-opacity='0.45'/><line x1='40' y1='150' x2='104' y2='150' stroke='var(--ink)' stroke-width='1.5'/><text x='72' y='84' font-size='13' text-anchor='middle' font-weight='700' fill='var(--c1)'>50%</text><text x='112' y='40' font-size='11' fill='var(--muted)'>saturated vapor pressure</text><text x='112' y='56' font-size='12' font-weight='700' fill='var(--ink)'>23.8 mmHg (25 °C)</text><text x='112' y='104' font-size='11' fill='var(--muted)'>water vapor in the air</text><text x='112' y='120' font-size='12' font-weight='700' fill='var(--c1)'>11.9 mmHg</text><text x='160' y='174' font-size='12' text-anchor='middle' font-weight='700' fill='var(--acc)'>relative humidity = 11.9 / 23.8 × 100 = 50%</text><text x='160' y='193' font-size='11' text-anchor='middle' fill='var(--muted)'>High humidity, sweat evaporates poorly: the air feels hotter</text></svg>",
+    "key": "The temperature your body senses is called the feels-like temperature. Relative humidity is the vapor pressure divided by the saturated vapor pressure, times 100.",
+    "once": {
+     "soru": "At the same 32 °C, why does a humid coastal city feel hotter than a dry desert city?",
+     "secenekler": [
+      {
+       "yazi": "Sweat evaporates poorly",
+       "neden": "The air is close to full of vapor. So sweat cannot evaporate and cool the body.",
+       "dogru": true
+      },
+      {
+       "yazi": "The sun is stronger",
+       "neden": "The temperature is the same in both cities. The difference is the humidity."
+      },
+      {
+       "yazi": "The air is denser",
+       "neden": "What makes the felt difference is sweating, which depends on humidity."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Plasma: the fourth state",
+    "p": "In a very hot gas, or one in a strong electric field, atoms lose electrons. This ionized gas, made of electrons and positive ions, is called <b>plasma</b>. The Sun, lightning and neon lights are examples of plasma.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hal-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--c4)'/></marker></defs><rect x='15' y='40' width='110' height='110' rx='6' fill='var(--panel)' stroke='var(--line)'/><rect x='195' y='40' width='110' height='110' rx='6' fill='var(--panel)' stroke='var(--line)'/><circle cx='66.2' cy='99.8' r='8' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><circle cx='66.2' cy='99.8' r='2.5' fill='var(--c1)'/><circle cx='103.9' cy='92.3' r='8' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><circle cx='103.9' cy='92.3' r='2.5' fill='var(--c1)'/><circle cx='37.5' cy='79.3' r='8' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><circle cx='37.5' cy='79.3' r='2.5' fill='var(--c1)'/><circle cx='37.3' cy='119.8' r='8' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><circle cx='37.3' cy='119.8' r='2.5' fill='var(--c1)'/><circle cx='85.5' cy='58.4' r='8' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><circle cx='85.5' cy='58.4' r='2.5' fill='var(--c1)'/><circle cx='108.6' cy='132.2' r='8' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><circle cx='108.6' cy='132.2' r='2.5' fill='var(--c1)'/><circle cx='53.1' cy='60.6' r='8' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><circle cx='53.1' cy='60.6' r='2.5' fill='var(--c1)'/><circle cx='230.7' cy='109.8' r='8' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)'/><text x='230.7' y='113.8' font-size='12' text-anchor='middle' fill='var(--c2)'>+</text><circle cx='264.7' cy='122.9' r='8' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)'/><text x='264.7' y='126.9' font-size='12' text-anchor='middle' fill='var(--c2)'>+</text><circle cx='224.9' cy='73.4' r='8' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)'/><text x='224.9' y='77.4' font-size='12' text-anchor='middle' fill='var(--c2)'>+</text><circle cx='268.7' cy='65.4' r='8' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)'/><text x='268.7' y='69.4' font-size='12' text-anchor='middle' fill='var(--c2)'>+</text><circle cx='255.1' cy='89.4' r='8' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)'/><text x='255.1' y='93.4' font-size='12' text-anchor='middle' fill='var(--c2)'>+</text><circle cx='288.9' cy='110.3' r='8' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)'/><text x='288.9' y='114.3' font-size='12' text-anchor='middle' fill='var(--c2)'>+</text><circle cx='240' cy='118' r='3' fill='var(--c4)'/><circle cx='210' cy='140' r='3' fill='var(--c4)'/><circle cx='270' cy='140' r='3' fill='var(--c4)'/><circle cx='295' cy='55' r='3' fill='var(--c4)'/><circle cx='290' cy='140' r='3' fill='var(--c4)'/><circle cx='215' cy='50' r='3' fill='var(--c4)'/><line x1='132' y1='95' x2='186' y2='95' stroke='var(--c4)' stroke-width='2.5' fill='none' marker-end='url(#hal-8)'/><text x='160' y='76' font-size='11' text-anchor='middle' fill='var(--ink)'>heat or</text><text x='160' y='115' font-size='11' text-anchor='middle' fill='var(--ink)'>electricity</text><text x='70' y='168' font-size='12' text-anchor='middle' fill='var(--ink)'>neutral gas atoms</text><text x='250' y='168' font-size='12' text-anchor='middle' fill='var(--acc)'>plasma</text><circle cx='203' cy='186' r='6' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)'/><text x='213' y='190' font-size='11' fill='var(--ink)'>ion</text><circle cx='255' cy='186' r='3' fill='var(--c4)'/><text x='262' y='190' font-size='11' fill='var(--ink)'>electron</text></svg>",
+    "key": "Plasma conducts electricity and gives off light. Most of the visible matter in the universe is plasma, and stars are made of plasma.",
+    "once": {
+     "soru": "Which one is in the plasma state?",
+     "secenekler": [
+      {
+       "yazi": "Lightning",
+       "neden": "In lightning the air gets so hot that atoms lose electrons and an ionized gas forms.",
+       "dogru": true
+      },
+      {
+       "yazi": "Water vapor",
+       "neden": "Water vapor is an ordinary gas, and its molecules are not ionized."
+      },
+      {
+       "yazi": "Dry ice",
+       "neden": "Dry ice is solid CO₂."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Gas or vapor? Critical temperature",
+    "p": "A substance above its <b>critical temperature</b> cannot be liquefied even by compression, and it is called a <b>gas</b>. A substance below its critical temperature is called a <b>vapor</b>, and it liquefies under pressure. That is why propane can be kept as a liquid in a tank.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='70' y1='165' x2='300' y2='165' stroke='var(--ink)' stroke-width='1.5' fill='none'/><line x1='156.25' y1='38' x2='156.25' y2='165' stroke='var(--acc)' stroke-width='1.5' fill='none' stroke-dasharray='4 3'/><text x='10' y='14' font-size='12' fill='var(--muted)'>Critical temperature (°C)</text><text x='112' y='32' font-size='12' text-anchor='middle' fill='var(--c1)'>GAS at 25 °C</text><text x='230' y='32' font-size='12' text-anchor='middle' fill='var(--c4)'>VAPOR at 25 °C</text><line x1='70' y1='165' x2='70' y2='170' stroke='var(--ink)' stroke-width='1' fill='none'/><text x='70' y='193' font-size='10' text-anchor='middle' fill='var(--muted)'>−200</text><line x1='146.667' y1='165' x2='146.667' y2='170' stroke='var(--ink)' stroke-width='1' fill='none'/><text x='146.667' y='193' font-size='10' text-anchor='middle' fill='var(--muted)'>0</text><line x1='223.333' y1='165' x2='223.333' y2='170' stroke='var(--ink)' stroke-width='1' fill='none'/><text x='223.333' y='193' font-size='10' text-anchor='middle' fill='var(--muted)'>200</text><line x1='300' y1='165' x2='300' y2='170' stroke='var(--ink)' stroke-width='1' fill='none'/><text x='300' y='193' font-size='10' text-anchor='end' fill='var(--muted)'>400</text><line x1='70' y1='60' x2='300' y2='60' stroke='var(--line)' stroke-width='1' fill='none'/><text x='10' y='65' font-size='13' fill='var(--ink)'>N₂</text><circle cx='90.3167' cy='60' r='5' fill='var(--c1)'/><text x='99.3167' y='54' font-size='11' fill='var(--ink)'>−147 °C</text><line x1='70' y1='88' x2='300' y2='88' stroke='var(--line)' stroke-width='1' fill='none'/><text x='10' y='93' font-size='13' fill='var(--ink)'>O₂</text><circle cx='101.05' cy='88' r='5' fill='var(--c1)'/><text x='110.05' y='82' font-size='11' fill='var(--ink)'>−119 °C</text><line x1='70' y1='116' x2='300' y2='116' stroke='var(--line)' stroke-width='1' fill='none'/><text x='10' y='121' font-size='13' fill='var(--ink)'>C₃H₈</text><circle cx='183.85' cy='116' r='5' fill='var(--c4)'/><text x='192.85' y='110' font-size='11' fill='var(--ink)'>97 °C</text><line x1='70' y1='144' x2='300' y2='144' stroke='var(--line)' stroke-width='1' fill='none'/><text x='10' y='149' font-size='13' fill='var(--ink)'>H₂O</text><circle cx='290.033' cy='144' r='5' fill='var(--c4)'/><text x='281.033' y='138' font-size='11' text-anchor='end' fill='var(--ink)'>374 °C</text><text x='156.25' y='182' font-size='10' text-anchor='middle' fill='var(--acc)'>room</text></svg>",
+    "key": "At room temperature oxygen is a gas, and water vapor is a vapor. To liquefy a gas, you must first cool it below its critical temperature.",
+    "once": {
+     "soru": "At room temperature, oxygen will not liquefy no matter how much you compress it. Why?",
+     "secenekler": [
+      {
+       "yazi": "It is above its critical temperature",
+       "neden": "Oxygen's critical temperature is about −119 °C. At room temperature, pressure alone is not enough.",
+       "dogru": true
+      },
+      {
+       "yazi": "Its molecule is very small",
+       "neden": "Size does not decide liquefaction. The temperature relative to the critical value does."
+      },
+      {
+       "yazi": "The pressure is not enough",
+       "neden": "Above the critical temperature, no amount of pressure causes liquefaction."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Changes of state and the heating curve",
+    "p": "Melting, evaporation and sublimation absorb heat, so they are <b>endothermic</b> changes. Their reverses release heat, so they are <b>exothermic</b> changes. On the flat parts of the heating curve, the heat added goes into overcoming attraction, and the temperature stays constant.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hal-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--ink)'/></marker></defs><line x1='40' y1='175' x2='305' y2='175' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#hal-11)'/><line x1='40' y1='175' x2='40' y2='15' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#hal-11)'/><line x1='40' y1='120' x2='90' y2='120' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><line x1='40' y1='60' x2='190' y2='60' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><path d='M50 160L90 120L140 120L190 60L265 60L300 30' stroke='var(--acc)' stroke-width='3' fill='none' stroke-linejoin='round'/><text x='34' y='124' font-size='11' text-anchor='end' fill='var(--ink)'>0</text><text x='34' y='64' font-size='11' text-anchor='end' fill='var(--ink)'>100</text><text x='46' y='14' font-size='11' fill='var(--muted)'>temperature (°C)</text><text x='305' y='193' font-size='11' text-anchor='end' fill='var(--muted)'>heat added (time)</text><text x='80' y='158' font-size='11' fill='var(--c1)'>solid</text><text x='115' y='112' font-size='11' text-anchor='middle' fill='var(--c2)'>melting</text><text x='115' y='137' font-size='11' text-anchor='middle' fill='var(--ink)'>solid + liquid</text><text x='176' y='104' font-size='11' fill='var(--c3)'>liquid</text><text x='227' y='52' font-size='11' text-anchor='middle' fill='var(--c2)'>boiling</text><text x='227' y='77' font-size='11' text-anchor='middle' fill='var(--ink)'>liquid + gas</text><text x='292' y='78' font-size='11' text-anchor='middle' fill='var(--c5)'>gas</text><text x='140' y='163' font-size='11' fill='var(--muted)'>pure water, 1 atm</text></svg>",
+    "key": "On the flat parts of the curve Q = m·L is used, and on the sloped parts Q = m·c·ΔT. A steam burn is worse than a boiling-water burn, because steam releases extra heat as it condenses."
+   },
+   {
+    "h": "Phase diagram and triple point",
+    "p": "A <b>phase diagram</b> shows which state a substance is in at a given temperature and pressure. At the <b>triple point</b> solid, liquid and gas exist together. Water's triple point is 0.01 °C and 0.006 atm.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hal-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--ink)'/></marker></defs><line x1='45' y1='175' x2='305' y2='175' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#hal-12)'/><line x1='45' y1='175' x2='45' y2='15' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#hal-12)'/><line x1='45' y1='95' x2='300' y2='95' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='4 3'/><path d='M55 170Q85 160 110 135' stroke='var(--c5)' stroke-width='2.5' fill='none'/><path d='M110 135L98 20' stroke='var(--c1)' stroke-width='2.5' fill='none'/><path d='M110 135Q210 125 270 40' stroke='var(--c2)' stroke-width='2.5' fill='none'/><circle cx='110' cy='135' r='4.5' fill='var(--ink)'/><circle cx='270' cy='40' r='4.5' fill='var(--ink)'/><circle cx='105.826' cy='95' r='3.5' fill='var(--muted)'/><circle cx='216.965' cy='95.0039' r='3.5' fill='var(--muted)'/><text x='60' y='60' font-size='13' fill='var(--c1)'>SOLID</text><text x='160' y='60' font-size='13' fill='var(--c3)'>LIQUID</text><text x='235' y='158' font-size='13' fill='var(--c2)'>GAS</text><text x='116' y='155' font-size='11' fill='var(--ink)'>triple point</text><text x='262' y='30' font-size='11' text-anchor='end' fill='var(--ink)'>critical point</text><text x='300' y='90' font-size='11' text-anchor='end' fill='var(--muted)'>1 atm</text><text x='99.8261' y='90' font-size='11' text-anchor='end' fill='var(--ink)'>0 °C</text><text x='222.965' y='109' font-size='11' fill='var(--ink)'>100 °C</text><text x='52' y='14' font-size='11' fill='var(--muted)'>pressure</text><text x='305' y='193' font-size='11' text-anchor='end' fill='var(--muted)'>temperature</text><text x='52' y='193' font-size='11' fill='var(--muted)'>water (not to scale)</text></svg>",
+    "etk": {
+     "tur": "isaretle",
+     "soru": "Tap the numbers on water's phase diagram.",
+     "noktalar": [
+      {
+       "x": 70,
+       "y": 125,
+       "ad": "Solid region",
+       "acik": "At low temperature and high pressure, water is ice."
+      },
+      {
+       "x": 140,
+       "y": 112,
+       "ad": "Liquid region",
+       "acik": "Between the melting and vaporization curves, water is liquid."
+      },
+      {
+       "x": 200,
+       "y": 150,
+       "ad": "Gas region",
+       "acik": "At high temperature and low pressure, water is a gas (vapor)."
+      },
+      {
+       "x": 110,
+       "y": 135,
+       "ad": "Triple point",
+       "acik": "At the triple point, solid, liquid and gas are in equilibrium together. For water this point is 0.01 °C and about 0.006 atm."
+      },
+      {
+       "x": 270,
+       "y": 40,
+       "ad": "Critical point",
+       "acik": "The liquid–gas curve ends here. Above this temperature, water vapor cannot be liquefied by pressure."
+      }
+     ]
+    },
+    "key": "On the curves, two states are in equilibrium. Water is an exception, because ice melts when pressure rises. CO₂'s triple point is at 5.1 atm, so dry ice sublimes at 1 atm."
+   },
+   {
+    "h": "Summary",
+    "p": "• The state of a substance is set by the attraction between particles and their energy of motion.<br>• Crystalline solids melt sharply, and amorphous solids melt by softening.<br>• A liquid boils when its vapor pressure equals the outside pressure.<br>• Below the critical temperature there is vapor, above it gas. Plasma is ionized gas.<br>• For a change of state use Q = m·L, and for heating use Q = m·c·ΔT.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hal-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0L10 5L0 10z' fill='var(--acc)'/></marker></defs><rect x='12' y='60' width='66' height='40' rx='8' fill='var(--c1)' stroke='var(--c1)' fill-opacity='0.15'/><text x='45' y='85' font-size='13' text-anchor='middle' fill='var(--c1)'>Solid</text><rect x='89' y='60' width='66' height='40' rx='8' fill='var(--c3)' stroke='var(--c3)' fill-opacity='0.15'/><text x='122' y='85' font-size='13' text-anchor='middle' fill='var(--c3)'>Liquid</text><rect x='166' y='60' width='66' height='40' rx='8' fill='var(--c2)' stroke='var(--c2)' fill-opacity='0.15'/><text x='199' y='85' font-size='13' text-anchor='middle' fill='var(--c2)'>Gas</text><rect x='243' y='60' width='66' height='40' rx='8' fill='var(--c5)' stroke='var(--c5)' fill-opacity='0.15'/><text x='276' y='85' font-size='13' text-anchor='middle' fill='var(--c5)'>Plasma</text><line x1='20' y1='125' x2='300' y2='125' stroke='var(--acc)' stroke-width='2.5' fill='none' marker-end='url(#hal-13)'/><text x='160' y='145' font-size='12' text-anchor='middle' fill='var(--ink)'>particle energy and disorder increase</text><text x='160' y='172' font-size='11' text-anchor='middle' fill='var(--muted)'>while the state changes, a pure substance's temperature stays constant</text><text x='160' y='36' font-size='12' text-anchor='middle' fill='var(--muted)'>attraction between particles decreases</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "20 g of ice at 0 °C melts and warms to water at 20 °C. How many calories of heat does it absorb in total? (Heat of fusion L = 80 cal/g, specific heat of water c = 1 cal/g·°C)",
+    "cevap": 2000,
+    "birim": "cal",
+    "e": "Melting (the flat part) takes Q = m·L = 20·80 = 1600 cal. Warming (the sloped part) takes Q = m·c·ΔT = 20·1·20 = 400 cal. The total is 2000 cal."
+   },
+   {
+    "tur": "sirala",
+    "q": "Water is boiled in an open pot at the places below. Order the boiling temperatures from lowest to highest.",
+    "ogeler": [
+     "Top of Mount Everest",
+     "A city at 900 m altitude",
+     "At the seaside",
+     "A pressure cooker"
+    ],
+    "e": "Water boils when its vapor pressure equals the outside pressure. Higher up, air pressure drops and the boiling point falls. In a pressure cooker the pressure is above 1 atm."
+   },
+   {
+    "tur": "eslestir",
+    "q": "Match each event with the fact that explains it.",
+    "ciftler": [
+     [
+      "Dry ice turning into gas at 1 atm without melting",
+      "CO₂'s triple point is 5.1 atm"
+     ],
+     [
+      "Ice melting below 0 °C under high pressure",
+      "Ice is less dense than water"
+     ],
+     [
+      "Propane staying liquid in a tank",
+      "Its critical temperature is above 25 °C"
+     ],
+     [
+      "Pasta cooking slowly on a mountain",
+      "Outside pressure is low"
+     ]
+    ],
+    "e": "1 atm is below CO₂'s triple point, so liquid CO₂ cannot form. Ice is less dense than water, so pressure makes melting easier. Propane is below its critical temperature, so it liquefies under pressure. On a mountain, water boils at a lower temperature."
+   },
+   {
+    "q": "The critical temperatures of some gases are given. Which one can be liquefied at 25 °C just by raising the pressure?",
+    "o": [
+     "CH₄ (−82 °C)",
+     "NH₃ (132 °C)",
+     "He (−268 °C)",
+     "H₂ (−240 °C)"
+    ],
+    "a": 1,
+    "e": "A substance liquefies under pressure only while it is below its critical temperature. 25 °C is below the critical temperature of NH₃ only. So at room temperature NH₃ is a vapor.",
+    "y": [
+     "25 °C is above CH₄'s critical temperature. CH₄ must first be cooled below −82 °C.",
+     "",
+     "Helium's critical temperature is −268 °C. At 25 °C no pressure can liquefy it.",
+     "At 25 °C, H₂ is far above its critical temperature. Pressure alone is not enough."
+    ]
+   }
+  ]
  }
 }

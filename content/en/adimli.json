@@ -8983,5 +8983,748 @@
    "Cr [Ar] 4s¹ 3d⁵ and Cu [Ar] 4s¹ 3d¹⁰ break the rule. When a cation forms, 4s empties first, so Fe²⁺ is [Ar] 3d⁶."
   ],
   "soruOnce": true
+ },
+ "periyodik-tablo": {
+  "id": "periyodik-tablo",
+  "ders": "kimya",
+  "konu": "periyodik-tablo",
+  "baslik": "The periodic table",
+  "ozet": "Try it first, then learn its name. Fill the gap Mendeleev left, find an element and grow the atoms.",
+  "adimlar": [
+   {
+    "baslik": "Mendeleev's gap",
+    "metin": "No known element fit between silicon and tin. So Mendeleev left a gap there.",
+    "sahne": {
+     "tur": "kim3-mendeleyev",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What should the element in the gap be like?",
+     "secenekler": [
+      {
+       "yazi": "Heavier than tin",
+       "neden": "In the column, mass increases from top to bottom. The gap is between silicon and tin."
+      },
+      {
+       "yazi": "Like silicon, fitting in between",
+       "dogru": true,
+       "neden": "Mendeleev put an element with a mass of about 72, similar to silicon, in the gap. In 1886 germanium was found, with a mass of 72.6. The prediction held, and the table gained trust."
+      },
+      {
+       "yazi": "No element at all",
+       "neden": "Mendeleev left the gap for an element that had not been found yet."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "A place in the table",
+    "metin": "The period (row) number gives the number of shells, and the A group number gives the number of electrons in the outer shell. Find the 7A element in period 3.",
+    "sahne": {
+     "tur": "kim3-tablo"
+    },
+    "deger": {
+     "z": 1
+    },
+    "kontroller": [
+     {
+      "ad": "z",
+      "etiket": "Atomic number",
+      "min": 1,
+      "max": 20,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "z": 17
+     },
+     "ipucu": "This element has 3 shells, with 7 electrons in the outer one. So its electrons are arranged 2-8-7.",
+     "tamam": "This element is chlorine, with electrons arranged 2-8-7. It has three shells, so it is in period 3. It has 7 electrons in its outer shell, so it is in group 7A. In the 1-18 numbering, it is in group 17."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Same group, similar properties",
+    "metin": "Oxygen is selected. Change the atomic number and look at its neighbors.",
+    "sahne": {
+     "tur": "kim3-tablo"
+    },
+    "deger": {
+     "z": 8
+    },
+    "kontroller": [
+     {
+      "ad": "z",
+      "etiket": "Atomic number",
+      "min": 1,
+      "max": 20,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which element is chemically most like oxygen?",
+     "secenekler": [
+      {
+       "yazi": "Nitrogen (N)",
+       "neden": "Nitrogen is oxygen's neighbor, but it is in group 5A. Nitrogen has 5 valence electrons, and oxygen has 6."
+      },
+      {
+       "yazi": "Fluorine (F)",
+       "neden": "Fluorine is in the same period, but in group 7A. Look for similarity in the group, not the period."
+      },
+      {
+       "yazi": "Sulfur (S)",
+       "dogru": true,
+       "neden": "Sulfur (2-8-6), like oxygen (2-6), is in group 6A, and both have 6 valence electrons. Both tend to gain two electrons and form −2 ions."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Metals and nonmetals",
+    "metin": "Elements are grouped as metals, nonmetals, metalloids and noble gases. These groups gather in certain regions of the table.",
+    "sahne": {
+     "tur": "kim3-tablo",
+     "mod": "bolge",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Where in the table are the elements that are shiny, conduct electricity and can be drawn into wire?",
+     "secenekler": [
+      {
+       "yazi": "At the upper right",
+       "neden": "The upper right belongs to nonmetals such as oxygen and sulfur. Most nonmetals do not conduct electricity."
+      },
+      {
+       "yazi": "On the left and in the middle",
+       "dogru": true,
+       "neden": "Metals are on the left and in the middle of the table. Nonmetals are at the upper right, metalloids such as silicon on the border, and noble gases at the far right."
+      },
+      {
+       "yazi": "In the far right column",
+       "neden": "The far right column is the noble gases. They hardly react at all."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Atomic radius",
+    "metin": "The circles show the size of the atoms. Find the largest atom among the first 20 elements.",
+    "sahne": {
+     "tur": "kim3-tablo",
+     "mod": "yaricap"
+    },
+    "deger": {
+     "z": 9
+    },
+    "kontroller": [
+     {
+      "ad": "z",
+      "etiket": "Atomic number",
+      "min": 1,
+      "max": 20,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "z": 19
+     },
+     "ipucu": "Go down to the period with the most shells, then to the far left of that period.",
+     "tamam": "The largest atom is potassium (K). It has 4 shells and sits at the far left of its period. The largest atoms are at the lower left, and the smallest at the upper right."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Ionization energy",
+    "metin": "The energy needed to remove one electron from a gaseous atom is called its <b>ionization energy</b>. We will plot the values for the first 20 elements.",
+    "sahne": {
+     "tur": "kim3-iyonlasma",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "The atoms that give up an electron most easily, with the lowest ionization energy, are in which group?",
+     "secenekler": [
+      {
+       "yazi": "Noble gases (8A)",
+       "neden": "Quite the opposite: noble gases have the highest value in each period. Removing an electron from their full outer shell is very hard."
+      },
+      {
+       "yazi": "Halogens (7A)",
+       "neden": "Halogens have high ionization energies. They tend to gain electrons rather than give them up."
+      },
+      {
+       "yazi": "Alkali metals (1A)",
+       "dogru": true,
+       "neden": "Li, Na and K have the lowest values in each period, because their single valence electron comes off easily. The value usually rises to the right across a period and falls down a group."
+      }
+     ]
+    },
+    "kart": 7
+   }
+  ],
+  "kapanis": [
+   "The modern table is arranged by <b>atomic number</b> and has 7 periods and 18 groups.",
+   "The <b>period</b> number gives the number of shells, and the main <b>group</b> number gives the number of valence electrons. Elements in the same group behave alike.",
+   "<b>Metals</b> are on the left and in the middle, <b>nonmetals</b> at the upper right, metalloids on the border and <b>noble gases</b> at the far right.",
+   "<b>Atomic radius</b> increases down a group and decreases to the right across a period.",
+   "<b>Ionization energy</b> and electronegativity usually increase to the right and up. The most electronegative element is fluorine."
+  ],
+  "soruOnce": true
+ },
+ "kimyasal-baglar": {
+  "id": "kimyasal-baglar",
+  "ders": "kimya",
+  "konu": "kimyasal-baglar",
+  "baslik": "Chemical bonds",
+  "ozet": "Try it first, then learn its name. Give up an electron, share electrons and set them free.",
+  "adimlar": [
+   {
+    "baslik": "Electron transfer",
+    "metin": "Sodium has 1 electron in its outer shell, and chlorine has 7. Both tend to complete their outer shell to 8 electrons (an octet).",
+    "sahne": {
+     "tur": "kim3-iyonik",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens when sodium meets chlorine?",
+     "secenekler": [
+      {
+       "yazi": "Chlorine gives one electron to sodium",
+       "neden": "To complete an octet, chlorine would have to give up 7 electrons. Gaining 1 electron is much easier."
+      },
+      {
+       "yazi": "They share their electrons",
+       "neden": "Sharing happens between two nonmetals. Sodium is a metal and gives up its electron easily."
+      },
+      {
+       "yazi": "Sodium gives one electron to chlorine",
+       "dogru": true,
+       "neden": "Sodium gives up its single outer electron and becomes Na⁺ (2-8), and chlorine takes that electron and becomes Cl⁻ (2-8-8). The attraction between oppositely charged ions is called an ionic bond. An ionic bond usually forms between a metal and a nonmetal."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Build a formula from charges",
+    "metin": "Aluminum forms the Al³⁺ ion, and oxygen forms O²⁻. Add ions until the total charge is zero.",
+    "sahne": {
+     "tur": "formul-kur",
+     "atomlar": [
+      "Al",
+      "O"
+     ],
+     "adlar": {
+      "Al": "alüminyum iyonu (+3)",
+      "O": "oksit iyonu (−2)",
+      "AlO": "toplam yük +1",
+      "AlO2": "toplam yük −1",
+      "AlO3": "toplam yük −3",
+      "AlO4": "toplam yük −5",
+      "Al2O": "toplam yük +4",
+      "Al2O2": "toplam yük +2",
+      "Al2O3": "alüminyum oksit: yük 0 ✓",
+      "Al2O4": "toplam yük −2",
+      "Al3O": "toplam yük +7",
+      "Al3O2": "toplam yük +5",
+      "Al3O3": "toplam yük +3",
+      "Al3O4": "toplam yük +1"
+     },
+     "iyonik": true
+    },
+    "deger": {
+     "Al": 1,
+     "O": 1
+    },
+    "kontroller": [
+     {
+      "ad": "Al",
+      "etiket": "Al³⁺",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     },
+     {
+      "ad": "O",
+      "etiket": "O²⁻",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "Al": 2,
+      "O": 3
+     },
+     "tamam": "The formula is Al₂O₃, because 2 · (+3) + 3 · (−2) = 0. As a shortcut, you can cross the charges over. Al's 3 becomes O's subscript, and O's 2 becomes Al's subscript.",
+     "ipucu": "Look for numbers of ions that give a total of +6 and −6."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Shared electron pairs",
+    "metin": "Increase the number of shared pairs until both nitrogen atoms have a full octet.",
+    "sahne": {
+     "tur": "kim3-kovalent"
+    },
+    "deger": {
+     "b": 1
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Shared pairs",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "b": 3
+     },
+     "ipucu": "Each shared pair counts for both atoms. What should 5 + the number of shared pairs be?",
+     "tamam": "Three shared pairs formed, making the N≡N triple bond. Each N atom reaches 8 electrons with 3 shared pairs (6 electrons) and 1 lone pair (2 electrons)."
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Polar and nonpolar",
+    "metin": "The shared electron pair stays closer to the more electronegative atom. First look at the pair between two hydrogens, then replace the second hydrogen with chlorine.",
+    "sahne": {
+     "tur": "kim3-polar"
+    },
+    "deger": {
+     "cl": 0
+    },
+    "kontroller": [
+     {
+      "ad": "cl",
+      "etiket": "Make the second atom chlorine",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "In the H–Cl bond, where does the shared electron pair sit?",
+     "secenekler": [
+      {
+       "yazi": "Exactly in the middle",
+       "neden": "For the pair to sit in the middle, both atoms must pull equally. That only happens between identical atoms, as in H₂ and Cl₂."
+      },
+      {
+       "yazi": "Closer to chlorine",
+       "dogru": true,
+       "neden": "Chlorine's electronegativity (3.2) is greater than hydrogen's (2.2), so it pulls the pair toward itself. Cl becomes partially negative (δ−), and H partially positive (δ+). This is called a <b>polar covalent bond</b>."
+      },
+      {
+       "yazi": "Closer to hydrogen",
+       "neden": "Think about which atom pulls the pair harder. Look at the electronegativities."
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "A sea of electrons",
+    "metin": "Metal atoms let go of their valence electrons easily. Connect a battery to the metal.",
+    "sahne": {
+     "tur": "kim3-metal"
+    },
+    "deger": {
+     "pil": 0
+    },
+    "kontroller": [
+     {
+      "ad": "pil",
+      "etiket": "Connect the battery",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "pil": 1
+     },
+     "tamam": "The free electrons started to flow toward the positive terminal. This is how a metal conducts electricity. Because the layers of cations can slide, metals can also be hammered into wire and sheets."
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Hydrogen bonds",
+    "metin": "An H atom bonded to F, O or N attracts a lone pair on F, O or N in a neighboring molecule. This is called a <b>hydrogen bond</b>. There are hydrogen bonds between H₂O molecules but not between H₂S molecules. We will heat both together.",
+    "sahne": {
+     "tur": "kim3-kaynama",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which one boils at a higher temperature?",
+     "secenekler": [
+      {
+       "yazi": "H₂S",
+       "neden": "London forces are a little stronger in the heavier molecule. But the hydrogen bonds in H₂O are much stronger than that."
+      },
+      {
+       "yazi": "H₂O",
+       "dogru": true,
+       "neden": "H₂S boils at −60 °C, and lighter H₂O at 100 °C. The hydrogen bonds between molecules make the difference."
+      },
+      {
+       "yazi": "Both at the same temperature",
+       "neden": "The attractions between their molecules are different, so their boiling points must be different too."
+      }
+     ]
+    },
+    "kart": 13
+   },
+   {
+    "baslik": "What breaks during boiling?",
+    "metin": "The dashed lines show hydrogen bonds between molecules, and the solid lines show the O–H covalent bonds inside a molecule. Now we boil the water.",
+    "sahne": {
+     "tur": "kim3-kaynatma",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which bonds break when water boils?",
+     "secenekler": [
+      {
+       "yazi": "The O–H bonds inside molecules",
+       "neden": "If the O–H bonds broke, new substances such as H₂ and O₂ would form. That happens in electrolysis, and it is a chemical change."
+      },
+      {
+       "yazi": "No bonds break",
+       "neden": "If the molecules move apart, the attraction between them has been overcome."
+      },
+      {
+       "yazi": "The hydrogen bonds between molecules",
+       "dogru": true,
+       "neden": "In boiling, only the weak interactions between molecules break. The H₂O molecules stay intact, so this is a physical change."
+      }
+     ]
+    },
+    "kart": 14
+   }
+  ],
+  "kapanis": [
+   "In an <b>ionic bond</b>, a metal gives up electrons and a nonmetal gains them. Oppositely charged ions attract each other.",
+   "In a <b>covalent bond</b>, nonmetals share electrons. Each line stands for one shared pair. H₂ has a single bond, O₂ a double bond and N₂ a triple bond.",
+   "If the shared pair shifts toward the more electronegative atom, the bond is <b>polar</b>. Between identical atoms it is <b>nonpolar</b>.",
+   "In a <b>metallic bond</b>, cations sit in a sea of free electrons. These electrons carry electric current.",
+   "<b>Hydrogen bonds</b> and van der Waals forces are weak interactions, and they are what break in boiling. For a change to count as chemical, a new substance must form."
+  ],
+  "soruOnce": true
+ },
+ "maddenin-halleri": {
+  "id": "maddenin-halleri",
+  "ders": "kimya",
+  "konu": "maddenin-halleri",
+  "baslik": "States of matter",
+  "ozet": "Try it first, then learn its name. Melt a solid, pour honey and boil water at different pressures.",
+  "adimlar": [
+   {
+    "baslik": "Crystalline and amorphous",
+    "metin": "In salt the particles form an ordered lattice. In glass they are arranged at random. We will heat both.",
+    "sahne": {
+     "tur": "kim4-erime",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which one melts all at once at a definite temperature?",
+     "secenekler": [
+      {
+       "yazi": "Glass",
+       "neden": "Glass is an amorphous solid. It has no definite melting point and softens first."
+      },
+      {
+       "yazi": "Salt",
+       "neden": "Salt melts all at once at 801 °C, and its temperature stays constant until it has all melted. Glass softens slowly, with no definite melting point.",
+       "dogru": true
+      },
+      {
+       "yazi": "Both",
+       "neden": "One has an ordered lattice and the other does not. Could they melt the same way?"
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Viscosity",
+    "metin": "Heat the honey and fill the glass in 10 seconds.",
+    "sahne": {
+     "tur": "kim4-bal",
+     "sure": 4
+    },
+    "deger": {
+     "T": 20
+    },
+    "kontroller": [
+     {
+      "ad": "T",
+      "etiket": "Honey temperature",
+      "min": 10,
+      "max": 60,
+      "adim": 5,
+      "birim": "°C"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "T": [
+       50,
+       60
+      ]
+     },
+     "ipucu": "Heat the honey and play again.",
+     "tamam": "In warm honey the particles overcome attraction more easily and slide past each other quickly. So the viscosity drops."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Vapor pressure",
+    "metin": "In a closed container, molecules that escape from the liquid form a vapor. The pressure of this vapor is called vapor pressure. Change the temperature and the amount of liquid.",
+    "sahne": {
+     "tur": "kim4-buhar"
+    },
+    "deger": {
+     "T": 40,
+     "m": 1
+    },
+    "kontroller": [
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 20,
+      "max": 100,
+      "adim": 10,
+      "birim": "°C"
+     },
+     {
+      "ad": "m",
+      "etiket": "Amount of liquid",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "At the same temperature, what happens to the vapor pressure if you add more water to the container?",
+     "secenekler": [
+      {
+       "yazi": "It rises",
+       "neden": "Increase the amount of liquid and look at the gauge. Check whether the value changes."
+      },
+      {
+       "yazi": "It drops",
+       "neden": "More liquid does not reduce the vapor. Try it with the counter."
+      },
+      {
+       "yazi": "It does not change",
+       "neden": "Vapor pressure depends only on temperature and the type of liquid. The amount of liquid, the container's volume and the surface area do not change it. It rises quickly with temperature, though. For water it is 55 mmHg at 40 °C and 760 mmHg at 100 °C.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Boiling lab",
+    "metin": "Heat the water in the pot and watch the temperature, the graph and the two pressures. You can also change the outside pressure. Find the following yourself.",
+    "sahne": {
+     "tur": "sim-kaynama"
+    },
+    "deger": {
+     "isit": 0,
+     "p": 10,
+     "kayniyor": 0,
+     "Tsu": 20
+    },
+    "kontroller": [
+     {
+      "ad": "isit",
+      "etiket": "Heater",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "p",
+      "etiket": "Outside pressure",
+      "min": 2,
+      "max": 20,
+      "carpan": 0.1,
+      "birim": "atm"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "Heat the water at 1 atm until it boils. While it boils you keep heating. What does the temperature do?",
+       "hedef": {
+        "p": 10,
+        "kayniyor": 1,
+        "Tsu": [
+         99,
+         101
+        ]
+       },
+       "coz": [
+        {
+         "p": 10,
+         "isit": 1
+        }
+       ],
+       "tamam": "The water boiled at 100 °C, and the temperature stayed constant. The heat added no longer raises the temperature. It turns liquid into vapor. This temperature at 1 atm is called the <b>normal boiling point</b>."
+      },
+      {
+       "yazi": "Lower the outside pressure to <b>0.5 atm</b>, as if you were high on a mountain. At what temperature does the water boil?",
+       "hedef": {
+        "p": [
+         4,
+         6
+        ],
+        "kayniyor": 1,
+        "Tsu": [
+         75,
+         87
+        ]
+       },
+       "coz": [
+        {
+         "isit": 1,
+         "p": 5
+        }
+       ],
+       "tamam": "The water boiled at about 81 °C. Less heating was enough for the vapor pressure to reach the outside pressure. On Everest (about 0.3 atm) water boils at about 70 °C, and pasta cooks poorly."
+      },
+      {
+       "yazi": "Raise the outside pressure to <b>2 atm</b>, like a pressure cooker, and boil it again.",
+       "hedef": {
+        "p": [
+         18,
+         20
+        ],
+        "kayniyor": 1,
+        "Tsu": [
+         116,
+         122
+        ]
+       },
+       "coz": [
+        {
+         "isit": 1,
+         "p": 20
+        }
+       ],
+       "tamam": "The water boiled at about 121 °C, because the boiling point rises as outside pressure rises. Food cooks faster in hotter water."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Changes of state and heat",
+    "metin": "When its state changes, a substance either absorbs heat or releases it. Go through the changes one by one.",
+    "sahne": {
+     "tur": "kim4-hal"
+    },
+    "deger": {
+     "d": 1
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Change",
+      "min": 1,
+      "max": 6,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why does sweat cool you as it evaporates?",
+     "secenekler": [
+      {
+       "yazi": "Evaporation takes heat from the skin",
+       "neden": "Evaporation is endothermic, and it takes the heat it needs from the skin, so the skin cools down. When humidity is high, sweat evaporates poorly and you cannot cool off.",
+       "dogru": true
+      },
+      {
+       "yazi": "Evaporation releases heat",
+       "neden": "The changes that release heat are freezing, condensation and deposition. Find evaporation."
+      },
+      {
+       "yazi": "Sweat is cold",
+       "neden": "Sweat is at body temperature. The cooling comes from the change of state."
+      }
+     ]
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Phase diagram",
+    "metin": "Dry ice (solid CO₂) does not melt at 1 atm. It turns straight into gas. Apply pressure to turn CO₂ at −20 °C into a liquid.",
+    "sahne": {
+     "tur": "kim4-faz",
+     "T": -20
+    },
+    "deger": {
+     "P": 1
+    },
+    "kontroller": [
+     {
+      "ad": "P",
+      "etiket": "Pressure",
+      "min": 1,
+      "max": 80,
+      "birim": "atm"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "P": [
+       20,
+       80
+      ]
+     },
+     "tamam": "At −20 °C, CO₂ liquefies above about 20 atm. Its triple point is at 5.1 atm, so liquid CO₂ cannot exist at 1 atm, and that is why dry ice sublimes. Above the critical temperature (31 °C), no pressure can liquefy it."
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "Crystalline solids melt sharply at a definite temperature. <b>Amorphous</b> solids such as glass and plastic melt by softening.",
+   "<b>Viscosity</b> is resistance to flow. With strong attraction between molecules, viscosity is high, and it drops when the liquid warms up.",
+   "<b>Vapor pressure</b> rises with temperature and depends on the type of liquid. It does not depend on the amount of liquid.",
+   "A liquid boils when its vapor pressure equals the outside pressure. On a mountain water boils below 100 °C, and in a pressure cooker above it.",
+   "Melting, evaporation and sublimation absorb heat. Freezing, condensation and deposition release heat."
+  ],
+  "soruOnce": true
  }
 }
