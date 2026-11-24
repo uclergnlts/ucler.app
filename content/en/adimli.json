@@ -17416,5 +17416,219 @@
    "In gymnosperms the seed is exposed on a scale, and in angiosperms it is inside a fruit. Monocots have flower parts in multiples of 3, parallel veins and fibrous roots."
   ],
   "soruOnce": true
+ },
+ "ekosistem": {
+  "id": "ekosistem",
+  "ders": "biyoloji",
+  "konu": "ekosistem",
+  "baslik": "Ecosystem ecology and current environmental problems",
+  "ozet": "Try first, then learn the name. Follow energy level by level, track the poison and play through the cycles.",
+  "adimlar": [
+   {
+    "baslik": "The 10% rule",
+    "metin": "The grass in a meadow stored 10,000 kJ of energy. A grasshopper eats the grass, a frog eats the grasshopper, a snake eats the frog and an eagle eats the snake. Move up the chain and find the level where the energy drops to <b>100 kJ</b>.",
+    "sahne": {
+     "tur": "biy6-zincir"
+    },
+    "deger": {
+     "ust": 1
+    },
+    "kontroller": [
+     {
+      "ad": "ust",
+      "etiket": "Level",
+      "min": 1,
+      "max": 5,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "ust": 3
+     },
+     "tamam": "Only 100 kJ reached the frog, the secondary consumer. At each level, most of the energy is lost as heat through respiration, and some is not digested. On average, only about 10% passes to the next level up. That is why chains are no longer than 4-5 links."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Ecological pyramids",
+    "metin": "Stacking the levels from bottom to top gives a pyramid. The shape of the pyramid can change depending on what is measured. Switch between the three pyramids.",
+    "sahne": {
+     "tur": "biy6-piramit"
+    },
+    "deger": {
+     "tur": 1
+    },
+    "kontroller": [
+     {
+      "ad": "tur",
+      "etiket": "Pyramid",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which pyramid is never inverted under any conditions?",
+     "secenekler": [
+      {
+       "yazi": "Pyramid of numbers",
+       "neden": "Thousands of caterpillars can live on a single tree. Look at pyramid 2."
+      },
+      {
+       "yazi": "Biomass pyramid",
+       "neden": "In the ocean, fast-growing phytoplankton can have less mass at any one moment than zooplankton. Look at pyramid 3."
+      },
+      {
+       "yazi": "Energy pyramid",
+       "dogru": true,
+       "neden": "Each level gets less energy than the one below, because some energy is lost as heat along the way. That is why the energy pyramid is always upright."
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Poison moves up",
+    "metin": "A very small amount of DDT got into a lake. DDT is hard for the body to get rid of. Make a guess before you play the chain.",
+    "sahne": {
+     "tur": "biy6-birikim",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Where is the DDT concentration highest?",
+     "secenekler": [
+      {
+       "yazi": "In the water",
+       "neden": "The DDT concentration is lowest in the water. The real buildup happens in living tissues."
+      },
+      {
+       "yazi": "In the plankton",
+       "neden": "Plankton builds up much more DDT than the water, but the animals that eat it collect even more."
+      },
+      {
+       "yazi": "In the heron",
+       "dogru": true,
+       "neden": "The concentration multiplies at each level. From 0.000003 ppm in the water, it rises to about 25 ppm in the heron, about 8 million times higher."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "The carbon cycle",
+    "metin": "Energy flows, and matter cycles. Carbon moves between the CO₂ in the air and living things. Turn on fossil fuel burning, then turn off the decomposers and see what changes.",
+    "sahne": {
+     "tur": "biy6-karbon"
+    },
+    "deger": {
+     "yak": 0,
+     "ayr": 1
+    },
+    "kontroller": [
+     {
+      "ad": "yak",
+      "etiket": "Burn fossil fuels",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "ayr",
+      "etiket": "Decomposers (bacteria, fungi)",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What is the main process that takes CO₂ from the air and builds it into organic matter?",
+     "secenekler": [
+      {
+       "yazi": "Respiration",
+       "neden": "Respiration breaks down organic matter and returns CO₂ to the air."
+      },
+      {
+       "yazi": "Photosynthesis",
+       "dogru": true,
+       "neden": "Plants and algae build CO₂ into organic matter by photosynthesis. When you turn off the decomposers, carbon builds up in dead matter and does not return to the air."
+      },
+      {
+       "yazi": "Burning",
+       "neden": "Burning releases carbon into the air as CO₂. As fossil fuels burn, the CO₂ in the air rises."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "The nitrogen cycle",
+    "metin": "About 78% of the air is nitrogen (N₂), but plants cannot use this nitrogen directly. Make a guess before you play the cycle.",
+    "sahne": {
+     "tur": "biy6-azot",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "How does N₂ from the air reach a plant?",
+     "secenekler": [
+      {
+       "yazi": "Taken in directly through stomata",
+       "neden": "Even if N₂ enters through the stomata, the plant cannot use it, because the triple bond in the molecule is very strong."
+      },
+      {
+       "yazi": "Bacteria fix and convert it",
+       "dogru": true,
+       "neden": "Bacteria turn N₂ first into ammonia, then into nitrate, which the plant can take up with its roots. You will see the names of these steps on the next card."
+      },
+      {
+       "yazi": "Only by lightning",
+       "neden": "Lightning also fixes nitrogen, but only a very small part. Bacteria fix most of the nitrogen."
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Eutrophication",
+    "metin": "Fertilizer from fields is washing into a lake. The fertilizer contains nitrogen and phosphorus. Guess what will happen, then watch.",
+    "sahne": {
+     "tur": "biy6-gol",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What is the real cause of the oxygen drop that kills the fish?",
+     "secenekler": [
+      {
+       "yazi": "Algae using up O₂",
+       "neden": "Living algae make oxygen by photosynthesis during the day. The real consumer is something else."
+      },
+      {
+       "yazi": "Fertilizer reacting with water",
+       "neden": "Fertilizer does not use up oxygen directly. It feeds the algae."
+      },
+      {
+       "yazi": "Bacteria decomposing dead algae",
+       "dogru": true,
+       "neden": "Fertilizer makes the algae multiply too much, and then the algae die and sink. The bacteria that decompose them multiply and use up the water's oxygen through respiration. The fish die. This is called eutrophication."
+      }
+     ]
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "An ecosystem is made of living things (biotic) and the nonliving surroundings (abiotic).",
+   "Energy flows in one direction, and on average only <b>about 10%</b> passes to each level. An energy pyramid is never inverted.",
+   "Poisons such as DDT and mercury <b>build up</b> going up the chain. Top consumers are harmed the most.",
+   "Matter cycles. Photosynthesis takes up CO₂. Respiration, decomposition and burning give it back. Bacteria fix nitrogen, convert it and return it to the air.",
+   "When fertilizer washes into a lake, algae multiply. The bacteria that decompose dead algae use up the oxygen. This is called <b>eutrophication</b>."
+  ],
+  "soruOnce": true
  }
 }

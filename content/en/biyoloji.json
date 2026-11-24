@@ -3642,5 +3642,421 @@
     ]
    }
   ]
+ },
+ "ekosistem": {
+  "title": "Ecosystem ecology and current environmental problems",
+  "summary": "How does energy flow, how does matter cycle, and what disrupts an ecosystem?",
+  "cards": [
+   {
+    "h": "Ecosystems: parts and levels",
+    "p": "The interaction of living things (<b>biotic</b>) with the nonliving surroundings (<b>abiotic</b>) such as light, water and soil is called an <b>ecosystem</b>. From smallest to largest, the levels are the individual, the <b>population</b>, the <b>community</b>, the ecosystem and the biosphere.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='65' y='16' font-size='11' fill='var(--muted)' text-anchor='middle'>levels</text><rect x='10' y='24' width='110' height='22' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='65' y='39' font-size='12' fill='var(--ink)' text-anchor='middle'>individual</text><path d='M65 47 V55' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-1)'/><rect x='10' y='56' width='110' height='22' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='65' y='71' font-size='12' fill='var(--ink)' text-anchor='middle'>population</text><path d='M65 79 V87' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-1)'/><rect x='10' y='88' width='110' height='22' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='65' y='103' font-size='12' fill='var(--ink)' text-anchor='middle'>community</text><path d='M65 111 V119' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-1)'/><rect x='10' y='120' width='110' height='22' rx='6' fill='var(--acc)' fill-opacity='0.3' stroke='var(--acc)' stroke-width='1.5'/><text x='65' y='135' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>ecosystem</text><path d='M65 143 V151' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-1)'/><rect x='10' y='152' width='110' height='22' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='65' y='167' font-size='12' fill='var(--ink)' text-anchor='middle'>biosphere</text><path d='M121 131 H150 M150 62 V148 M150 62 H164 M150 148 H164' stroke='var(--muted)' stroke-width='1.2' fill='none'/><rect x='165' y='24' width='147' height='76' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='238' y='43' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Biotic (living)</text><text x='238' y='64' font-size='12' fill='var(--ink)' text-anchor='middle'>producers, consumers,</text><text x='238' y='82' font-size='12' fill='var(--ink)' text-anchor='middle'>decomposers</text><rect x='165' y='110' width='147' height='76' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.5'/><text x='238' y='129' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>Abiotic (nonliving)</text><text x='238' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>light, temperature, water,</text><text x='238' y='168' font-size='12' fill='var(--ink)' text-anchor='middle'>soil, minerals</text><text x='160' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>ecosystem = community + abiotic surroundings</text></svg>",
+    "key": "The individuals of one species in an area form a population. All the populations in that area form the community. An ecosystem also includes the nonliving surroundings.",
+    "once": {
+     "soru": "Which level do all the carp in a lake form?",
+     "secenekler": [
+      {
+       "yazi": "Population",
+       "neden": "The individuals of one species living in an area form a population.",
+       "dogru": true
+      },
+      {
+       "yazi": "Community",
+       "neden": "A community includes all the species in the lake."
+      },
+      {
+       "yazi": "Ecosystem",
+       "neden": "An ecosystem also includes the nonliving surroundings."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Habitat and ecological niche",
+    "p": "The place where an organism lives is called its <b>habitat</b>. A habitat is like the organism's address. An <b>ecological niche</b> is the organism's role in the ecosystem, which is like its job. What an organism eats, when it feeds and which resources it uses determine its niche.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='10' y='16' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>Habitat: forest (shared address)</text><rect x='60' y='105' width='14' height='80' fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)'/><circle cx='67' cy='72' r='46' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><path d='M10 185 H125' stroke='var(--ink)' stroke-width='1.2' fill='none'/><circle cx='80' cy='48' r='4' fill='var(--c5)'/><path d='M84 48 H135' stroke='var(--muted)' stroke-width='1' fill='none'/><circle cx='98' cy='92' r='4' fill='var(--c1)'/><path d='M102 92 H135' stroke='var(--muted)' stroke-width='1' fill='none'/><circle cx='67' cy='150' r='4' fill='var(--c2)'/><path d='M71 150 L100 140 H135' stroke='var(--muted)' stroke-width='1' fill='none'/><text x='140' y='44' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>owl</text><text x='140' y='58' font-size='11' fill='var(--ink)' text-anchor='start'>hunts mice at night</text><text x='140' y='88' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>squirrel</text><text x='140' y='102' font-size='11' fill='var(--ink)' text-anchor='start'>gathers seeds and nuts</text><text x='140' y='136' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>woodpecker</text><text x='140' y='150' font-size='11' fill='var(--ink)' text-anchor='start'>eats insects in the bark</text><text x='140' y='176' font-size='11' fill='var(--muted)' text-anchor='start'>Different niches → little competition</text><text x='140' y='192' font-size='11' fill='var(--muted)' text-anchor='start'>Same niche → strong competition</text></svg>",
+    "key": "A habitat is an organism's address, and its niche is its job. Competition grows between species whose niches overlap.",
+    "once": {
+     "soru": "Two birds live in the same tree. One eats insects by day, and the other eats fruit at night. What is different about these birds?",
+     "secenekler": [
+      {
+       "yazi": "Their niches",
+       "neden": "What they eat and when they feed, in other words their roles, are different.",
+       "dogru": true
+      },
+      {
+       "yazi": "Their habitats",
+       "neden": "Both live in the same tree, so they share an address."
+      },
+      {
+       "yazi": "Nothing",
+       "neden": "They feed in different ways, so their niches are different too."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Producers, consumers, decomposers",
+    "p": "<b>Producers</b> make food from inorganic substances. They do this by photosynthesis or with chemical energy, which is chemosynthesis. <b>Consumers</b> take in ready-made food. <b>Decomposers</b> such as bacteria and fungi break down dead remains and return minerals to the soil.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='14' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>group</text><text x='100' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>energy / food</text><text x='206' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>example</text><rect x='6' y='24.0' width='308' height='21' rx='4' fill='var(--c3)' fill-opacity='0.12'/><text x='14' y='39.0' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>photosynthetic</text><text x='100' y='39.0' font-size='12' fill='var(--ink)' text-anchor='start'>light energy</text><text x='206' y='39.0' font-size='11' fill='var(--ink)' text-anchor='start'>plants, algae</text><rect x='6' y='48.5' width='308' height='21' rx='4' fill='var(--c3)' fill-opacity='0.12'/><text x='14' y='63.5' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>chemosynthetic</text><text x='100' y='63.5' font-size='12' fill='var(--ink)' text-anchor='start'>chemical energy</text><text x='206' y='63.5' font-size='11' fill='var(--ink)' text-anchor='start'>nitrifying bact.</text><rect x='6' y='73.0' width='308' height='21' rx='4' fill='var(--c4)' fill-opacity='0.12'/><text x='14' y='88.0' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>herbivore</text><text x='100' y='88.0' font-size='12' fill='var(--ink)' text-anchor='start'>plants</text><text x='206' y='88.0' font-size='11' fill='var(--ink)' text-anchor='start'>rabbit, grasshopper</text><rect x='6' y='97.5' width='308' height='21' rx='4' fill='var(--c4)' fill-opacity='0.12'/><text x='14' y='112.5' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>carnivore</text><text x='100' y='112.5' font-size='12' fill='var(--ink)' text-anchor='start'>animals</text><text x='206' y='112.5' font-size='11' fill='var(--ink)' text-anchor='start'>wolf, eagle</text><rect x='6' y='122.0' width='308' height='21' rx='4' fill='var(--c4)' fill-opacity='0.12'/><text x='14' y='137.0' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>omnivore</text><text x='100' y='137.0' font-size='12' fill='var(--ink)' text-anchor='start'>plants + animals</text><text x='206' y='137.0' font-size='11' fill='var(--ink)' text-anchor='start'>bear, human</text><rect x='6' y='146.5' width='308' height='21' rx='4' fill='var(--c4)' fill-opacity='0.12'/><text x='14' y='161.5' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>scavenger</text><text x='100' y='161.5' font-size='12' fill='var(--ink)' text-anchor='start'>dead animals</text><text x='206' y='161.5' font-size='11' fill='var(--ink)' text-anchor='start'>vulture</text><rect x='6' y='171.0' width='308' height='21' rx='4' fill='var(--c5)' fill-opacity='0.12'/><text x='14' y='186.0' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>decomposer</text><text x='100' y='186.0' font-size='12' fill='var(--ink)' text-anchor='start'>dead → minerals</text><text x='206' y='186.0' font-size='11' fill='var(--ink)' text-anchor='start'>bacteria, fungi</text></svg>",
+    "key": "Consumers can be herbivores, carnivores, omnivores or scavengers. Chemosynthetic organisms get energy by oxidizing inorganic substances.",
+    "etk": {
+     "tur": "ayir",
+     "soru": "Place each organism by its role in the ecosystem.",
+     "gruplar": [
+      "Producer",
+      "Consumer",
+      "Decomposer"
+     ],
+     "ogeler": [
+      [
+       "Wheat",
+       0
+      ],
+      [
+       "Cyanobacterium",
+       0,
+       "Cyanobacteria carry out photosynthesis, so they are producers."
+      ],
+      [
+       "Nitrifying bacterium",
+       0,
+       "It makes food from inorganic substances by chemosynthesis, so it is a producer."
+      ],
+      [
+       "Rabbit",
+       1
+      ],
+      [
+       "Eagle",
+       1
+      ],
+      [
+       "Bear",
+       1
+      ],
+      [
+       "Vulture",
+       1,
+       "A vulture is a scavenger. It eats dead animals, so it is a consumer. The organisms that break dead remains down all the way to minerals are the decomposers."
+      ],
+      [
+       "Decay fungus",
+       2
+      ],
+      [
+       "Decay bacterium",
+       2
+      ]
+     ]
+    },
+    "once": {
+     "soru": "In a forest, which organisms turn dead leaves into minerals?",
+     "secenekler": [
+      {
+       "yazi": "Decomposers",
+       "neden": "Decay bacteria and fungi break down dead remains.",
+       "dogru": true
+      },
+      {
+       "yazi": "Producers",
+       "neden": "Producers make food. They do not break down dead remains."
+      },
+      {
+       "yazi": "Scavengers",
+       "neden": "Scavengers eat dead animals, but the ones that break them down to minerals are the decomposers."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Food chains and food webs",
+    "p": "A <b>food chain</b> shows how food and energy pass from one organism to the next. Each link in the chain is called a <b>trophic level</b>. When chains connect to each other, they form a <b>food web</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><marker id='eko-4b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><text x='10' y='14' font-size='11' fill='var(--muted)' text-anchor='start'>food chain</text><text x='22' y='38' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>grass</text><text x='22' y='54' font-size='10' fill='var(--muted)' text-anchor='middle'>producer</text><path d='M34 34 H60' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-4)'/><text x='88' y='38' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>grasshopper</text><text x='88' y='54' font-size='10' fill='var(--muted)' text-anchor='middle'>1st consumer</text><path d='M116 34 H130' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-4)'/><text x='160' y='38' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>frog</text><text x='160' y='54' font-size='10' fill='var(--muted)' text-anchor='middle'>2nd consumer</text><path d='M190 34 H212' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-4)'/><text x='232' y='38' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>snake</text><text x='232' y='54' font-size='10' fill='var(--muted)' text-anchor='middle'>3rd consumer</text><path d='M252 34 H268' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-4)'/><text x='292' y='38' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>eagle</text><text x='292' y='54' font-size='10' fill='var(--muted)' text-anchor='middle'>4th consumer</text><path d='M10 66 H310' stroke='var(--line)' stroke-width='1' fill='none'/><text x='10' y='84' font-size='11' fill='var(--muted)' text-anchor='start'>food web</text><text x='160' y='190' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>plant</text><text x='70' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>rabbit</text><text x='160' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>mouse</text><text x='250' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>grasshopper</text><text x='70' y='108' font-size='12' fill='var(--ink)' text-anchor='middle'>fox</text><text x='160' y='108' font-size='12' fill='var(--ink)' text-anchor='middle'>eagle</text><text x='250' y='108' font-size='12' fill='var(--ink)' text-anchor='middle'>frog</text><path d='M144 176 L86 155' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/><path d='M160 176 L160 155' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/><path d='M176 176 L234 155' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/><path d='M70 136 L70 113' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/><path d='M144 136 L86 113' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/><path d='M86 136 L144 113' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/><path d='M160 136 L160 113' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/><path d='M250 136 L250 113' stroke='var(--c3)' stroke-width='1.2' fill='none' marker-end='url(#eko-4b)'/></svg>",
+    "key": "The more complex a food web gets, the more stable the ecosystem usually is.",
+    "once": {
+     "soru": "In a chain of grass, grasshopper and frog, what do the arrows show?",
+     "secenekler": [
+      {
+       "yazi": "The flow of energy",
+       "neden": "An arrow is drawn from the organism that is eaten to the one that eats it. Energy passes in that direction too.",
+       "dogru": true
+      },
+      {
+       "yazi": "From predator to prey",
+       "neden": "The arrow is drawn from the eaten to the eater, not from predator to prey."
+      },
+      {
+       "yazi": "Order of size",
+       "neden": "The arrows have nothing to do with the size of the organisms."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Energy flow and the 10% rule",
+    "p": "Energy enters an ecosystem as sunlight. At each level, most of the energy is lost as <b>heat</b> through respiration. Only about <b>10%</b> passes to the next level up. So energy flows in one direction, while matter cycles.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker><marker id='eko-5b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><text x='10' y='18' font-size='11' fill='var(--muted)' text-anchor='start'>≈ 90% lost at each level (respiration heat, waste)</text><rect x='95' y='34' width='46' height='24' rx='4' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='88' y='50' font-size='12' fill='var(--ink)' text-anchor='end'>top carnivore</text><text x='118.0' y='50' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>10 kJ</text><rect x='95' y='74' width='70' height='24' rx='4' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.5'/><text x='88' y='90' font-size='12' fill='var(--ink)' text-anchor='end'>carnivore</text><text x='130.0' y='90' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>100 kJ</text><path d='M110 73 V59' stroke='var(--c4)' stroke-width='2' fill='none' marker-end='url(#eko-5)'/><rect x='95' y='114' width='120' height='24' rx='4' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='88' y='130' font-size='12' fill='var(--ink)' text-anchor='end'>herbivore</text><text x='155.0' y='130' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>1,000 kJ</text><path d='M110 113 V99' stroke='var(--c4)' stroke-width='2' fill='none' marker-end='url(#eko-5)'/><rect x='95' y='154' width='200' height='24' rx='4' fill='var(--c4)' fill-opacity='0.45000000000000007' stroke='var(--c4)' stroke-width='1.5'/><text x='88' y='170' font-size='12' fill='var(--ink)' text-anchor='end'>producer</text><text x='195.0' y='170' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>10,000 kJ</text><path d='M110 153 V139' stroke='var(--c4)' stroke-width='2' fill='none' marker-end='url(#eko-5)'/><path d='M169 86 H199' stroke='var(--c2)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-5b)'/><text x='203' y='90' font-size='11' fill='var(--c2)' text-anchor='start'>heat</text><path d='M219 126 H249' stroke='var(--c2)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-5b)'/><text x='253' y='130' font-size='11' fill='var(--c2)' text-anchor='start'>heat</text><text x='10' y='196' font-size='11' fill='var(--muted)' text-anchor='start'>sunlight → producer</text></svg>",
+    "key": "Energy flows, and matter cycles. The 10% is an average. The real share is usually between 5% and 20%.",
+    "etk": {
+     "tur": "formul",
+     "soru": "Change the energy entering the producer and the level. About 10% passes to each level.",
+     "girdiler": [
+      {
+       "ad": "E",
+       "etiket": "Energy in producers",
+       "birim": "kJ",
+       "min": 1000,
+       "max": 100000,
+       "adim": 1000,
+       "deger": 10000
+      },
+      {
+       "ad": "n",
+       "etiket": "Level (1 = producer)",
+       "min": 1,
+       "max": 5,
+       "adim": 1,
+       "deger": 3
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "Energy at this level",
+       "ifade": "E*0.1^(n-1)",
+       "birim": "kJ",
+       "basamak": 2
+      },
+      {
+       "ad": "Share of producer energy",
+       "ifade": "100*0.1^(n-1)",
+       "birim": "%",
+       "basamak": 3,
+       "max": 100
+      }
+     ]
+    }
+   },
+   {
+    "h": "Ecological pyramids",
+    "p": "The <b>energy pyramid</b> you just explored is always upright. A pyramid of <b>numbers</b>, however, can be inverted. For example, thousands of caterpillars can live on one tree. A <b>biomass</b> pyramid can also be inverted in the ocean.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='55' y='18' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>energy</text><text x='160' y='18' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>numbers</text><text x='265' y='18' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>biomass</text><rect x='38.0' y='54' width='34' height='22' rx='2' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.2'/><rect x='26.0' y='80' width='58' height='22' rx='2' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.2'/><rect x='14.0' y='106' width='82' height='22' rx='2' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.2'/><rect x='5.0' y='132' width='100' height='22' rx='2' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.2'/><text x='55' y='147' font-size='10' fill='var(--ink)' text-anchor='middle'>producer</text><rect x='138.0' y='80' width='44' height='22' rx='2' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.2'/><text x='160' y='95' font-size='10' fill='var(--ink)' text-anchor='middle'>bird</text><rect x='112.0' y='106' width='96' height='22' rx='2' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.2'/><text x='160' y='121' font-size='10' fill='var(--ink)' text-anchor='middle'>caterpillars</text><rect x='143.0' y='132' width='34' height='22' rx='2' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.2'/><text x='160' y='147' font-size='10' fill='var(--ink)' text-anchor='middle'>tree</text><rect x='217.0' y='106' width='96' height='22' rx='2' fill='var(--c5)' fill-opacity='0.25' stroke='var(--c5)' stroke-width='1.2'/><text x='265' y='121' font-size='10' fill='var(--ink)' text-anchor='middle'>zooplankton</text><rect x='245.0' y='132' width='40' height='22' rx='2' fill='var(--c5)' fill-opacity='0.25' stroke='var(--c5)' stroke-width='1.2'/><text x='265' y='147' font-size='10' fill='var(--ink)' text-anchor='middle'>phyto.</text><path d='M108 30 V170 M213 30 V170' stroke='var(--line)' stroke-width='1' fill='none'/><text x='55' y='172' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>always upright</text><text x='160' y='172' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>can be inverted</text><text x='265' y='172' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>can be inverted</text><text x='160' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>a single oak tree</text><text x='265' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>ocean (snapshot)</text><text x='55' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>because of heat loss</text></svg>",
+    "key": "In the ocean, fast-growing phytoplankton can have less mass at any one moment than zooplankton. Energy drops at every level, so there are no more than 4-5 levels."
+   },
+   {
+    "h": "Biomagnification",
+    "p": "Substances that the body has trouble getting rid of, such as DDT and mercury, build up in tissues. Each consumer eats many prey, so the concentration of these substances multiplies going up the chain. This is called <b>biomagnification</b>. Top consumers are harmed the most.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><text x='10' y='18' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>DDT concentration (ppm)</text><text x='310' y='18' font-size='10' fill='var(--muted)' text-anchor='end'>bars: log scale</text><text x='10' y='44' font-size='12' fill='var(--ink)' text-anchor='start'>heron</text><rect x='105' y='32' width='118' height='14' rx='2' fill='var(--c2)' fill-opacity='0.63' stroke='var(--c2)' stroke-width='1.2'/><text x='310' y='44' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>25</text><text x='10' y='72' font-size='12' fill='var(--ink)' text-anchor='start'>large fish</text><rect x='105' y='60' width='101' height='14' rx='2' fill='var(--c2)' fill-opacity='0.51' stroke='var(--c2)' stroke-width='1.2'/><text x='310' y='72' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>2</text><text x='10' y='100' font-size='12' fill='var(--ink)' text-anchor='start'>small fish</text><rect x='105' y='88' width='91' height='14' rx='2' fill='var(--c2)' fill-opacity='0.39' stroke='var(--c2)' stroke-width='1.2'/><text x='310' y='100' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>0.5</text><text x='10' y='128' font-size='12' fill='var(--ink)' text-anchor='start'>zooplankton</text><rect x='105' y='116' width='74' height='14' rx='2' fill='var(--c2)' fill-opacity='0.27' stroke='var(--c2)' stroke-width='1.2'/><text x='310' y='128' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>0.04</text><text x='10' y='156' font-size='12' fill='var(--ink)' text-anchor='start'>water</text><rect x='105' y='144' width='8' height='14' rx='2' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.2'/><text x='310' y='156' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>0.000003</text><path d='M245 150 V40' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#eko-7)'/><text x='10' y='192' font-size='11' fill='var(--muted)' text-anchor='start'>water → bird: about 8 million times higher</text></svg>",
+    "key": "Going up the food chain, energy decreases but poison increases. DDT thinned the eggshells of birds of prey. Mercury poisoned people in Minamata."
+   },
+   {
+    "h": "The water and carbon cycles",
+    "p": "Matter moves through an ecosystem in cycles. The <b>water cycle</b> runs through evaporation, transpiration from leaves, condensation and precipitation. In the <b>carbon cycle</b>, photosynthesis takes up CO<sub>2</sub>. Respiration, decomposition and burning return CO<sub>2</sub> to the air.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker><marker id='eko-8b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker><marker id='eko-8c' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><ellipse cx='85' cy='30' rx='72' ry='17' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)'/><text x='85' y='34' font-size='11' fill='var(--c1)' text-anchor='middle'>cloud (condensation)</text><rect x='6' y='160' width='74' height='26' rx='2' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1'/><text x='43' y='177' font-size='11' fill='var(--ink)' text-anchor='middle'>sea</text><rect x='80' y='160' width='78' height='26' rx='2' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)' stroke-width='1'/><text x='119' y='177' font-size='11' fill='var(--ink)' text-anchor='middle'>land</text><rect x='147' y='135' width='5' height='25' fill='var(--c4)'/><circle cx='149' cy='128' r='10' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)'/><path d='M20 157 V50' stroke='var(--c1)' stroke-width='1.5' fill='none' marker-end='url(#eko-8)'/><text x='26' y='100' font-size='11' fill='var(--c1)' text-anchor='start'>evaporation</text><path d='M100 49 V156' stroke='var(--c1)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-8)'/><text x='106' y='80' font-size='11' fill='var(--c1)' text-anchor='start'>precipitation</text><path d='M149 116 V50' stroke='var(--c1)' stroke-width='1.5' fill='none' marker-end='url(#eko-8)'/><text x='143' y='108' font-size='10' fill='var(--c3)' text-anchor='end'>transpiration</text><text x='80' y='197' font-size='11' fill='var(--muted)' text-anchor='middle'>water cycle</text><path d='M166 8 V192' stroke='var(--line)' stroke-width='1' fill='none'/><rect x='178' y='12' width='130' height='26' rx='4' fill='var(--muted)' fill-opacity='0.12' stroke='var(--muted)' stroke-width='1'/><text x='243' y='30' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CO₂ (atmosphere)</text><text x='195' y='120' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>plant</text><text x='275' y='120' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>animal</text><path d='M190 40 V104' stroke='var(--c3)' stroke-width='1.5' fill='none' marker-end='url(#eko-8b)'/><text x='196' y='72' font-size='11' fill='var(--c3)' text-anchor='start'>photosynthesis</text><path d='M285 104 V40' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#eko-8c)'/><text x='279' y='92' font-size='11' fill='var(--c2)' text-anchor='end'>respiration</text><path d='M215 116 H248' stroke='var(--c3)' stroke-width='1.5' fill='none' marker-end='url(#eko-8b)'/><text x='240' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>dead → decomposers → CO₂</text><text x='240' y='170' font-size='11' fill='var(--c2)' text-anchor='middle'>burning fossil fuels → CO₂</text><text x='240' y='197' font-size='11' fill='var(--muted)' text-anchor='middle'>carbon cycle</text></svg>",
+    "key": "Fossil fuels hold the carbon of ancient organisms, and burning them raises the CO₂ in the air. Oceans and forests are the largest carbon stores."
+   },
+   {
+    "h": "The nitrogen and phosphorus cycles",
+    "p": "<b>Nitrogen-fixing bacteria</b> such as <em>Rhizobium</em> turn N<sub>2</sub> from the air into ammonia. <b>Nitrification</b> turns ammonia into nitrate, and <b>denitrification</b> turns nitrate back into N<sub>2</sub>. The phosphorus cycle has no gas stage.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><marker id='eko-9b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker><marker id='eko-9c' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><marker id='eko-9d' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c5)'/></marker></defs><rect x='105' y='10' width='120' height='26' rx='4' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='165' y='28' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>N₂ (≈78% of air)</text><rect x='10' y='116' width='60' height='26' rx='4' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.5'/><text x='40' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>NH₃</text><rect x='100' y='116' width='60' height='26' rx='4' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.5'/><text x='130' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>NO₂⁻</text><rect x='190' y='116' width='60' height='26' rx='4' fill='var(--c3)' fill-opacity='0.18' stroke='var(--c3)' stroke-width='1.5'/><text x='220' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>NO₃⁻</text><rect x='268' y='116' width='46' height='26' rx='4' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.5'/><text x='291' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>plant</text><path d='M108 37 L48 113' stroke='var(--c3)' stroke-width='1.8' fill='none' marker-end='url(#eko-9b)'/><text x='8' y='58' font-size='11' fill='var(--c3)' text-anchor='start' font-weight='700'>nitrogen fixation</text><text x='8' y='72' font-size='10' fill='var(--muted)' text-anchor='start'><tspan font-style='italic'>Rhizobium</tspan></text><path d='M71 129 H97' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-9)'/><path d='M161 129 H187' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-9)'/><path d='M251 129 H265' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-9)'/><text x='130' y='160' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>nitrifying bacteria</text><path d='M222 113 L190 39' stroke='var(--c2)' stroke-width='1.8' fill='none' marker-end='url(#eko-9c)'/><text x='214' y='70' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>denitrification</text><path d='M291 143 V184 H40 V146' stroke='var(--c5)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-9d)'/><text x='165' y='178' font-size='11' fill='var(--c5)' text-anchor='middle'>dead organisms, waste → decomposers</text></svg>",
+    "key": "Decomposers turn the nitrogen in dead organisms into ammonia. This is called ammonification. Plants take up nitrogen mostly as nitrate. Phosphorus moves from rocks into the soil, and from there into living things."
+   },
+   {
+    "h": "Pollution and acid rain",
+    "p": "When fossil fuels burn, SO<sub>2</sub> and nitrogen oxides are released into the air. These gases combine with moisture to form acids, and <b>acid rain</b> forms. Acid rain harms lakes, soil and forests, and it wears away marble.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='8.0' width='308' height='27' rx='4' fill='var(--muted)' fill-opacity='0.13'/><text x='14' y='26.0' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>air</text><text x='108' y='26.0' font-size='11' fill='var(--ink)' text-anchor='start'>fossil fuels: SO₂, NOₓ, CO, particles</text><rect x='6' y='39.5' width='308' height='27' rx='4' fill='var(--c2)' fill-opacity='0.13'/><text x='14' y='57.5' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>acid rain</text><text x='108' y='57.5' font-size='11' fill='var(--ink)' text-anchor='start'>H₂SO₄ and HNO₃ form in the air</text><rect x='6' y='71.0' width='308' height='27' rx='4' fill='var(--c1)' fill-opacity='0.13'/><text x='14' y='89.0' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>water</text><text x='108' y='89.0' font-size='11' fill='var(--ink)' text-anchor='start'>industrial waste, sewage, fertilizer</text><rect x='6' y='102.5' width='308' height='27' rx='4' fill='var(--c4)' fill-opacity='0.13'/><text x='14' y='120.5' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>soil</text><text x='108' y='120.5' font-size='11' fill='var(--ink)' text-anchor='start'>pesticides, solid waste, heavy metals</text><rect x='6' y='134.0' width='308' height='27' rx='4' fill='var(--c5)' fill-opacity='0.13'/><text x='14' y='152.0' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>nuclear</text><text x='108' y='152.0' font-size='11' fill='var(--ink)' text-anchor='start'>radioactive leak (Chernobyl 1986)</text><rect x='6' y='165.5' width='308' height='27' rx='4' fill='var(--c3)' fill-opacity='0.13'/><text x='14' y='183.5' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>light, noise</text><text x='108' y='183.5' font-size='11' fill='var(--ink)' text-anchor='start'>confused migration, stress, hearing</text></svg>",
+    "key": "Normal rain is also slightly acidic (pH ≈ 5.6), but acid rain has a lower pH. Waste, fertilizers and pesticides also pollute water and soil.",
+    "once": {
+     "soru": "What is the main source of acid rain?",
+     "secenekler": [
+      {
+       "yazi": "Burning fossil fuels",
+       "neden": "The SO₂ and nitrogen oxides released when coal and oil burn combine with moisture to form acids.",
+       "dogru": true
+      },
+      {
+       "yazi": "Ozone layer thinning",
+       "neden": "Ozone thinning is about UV rays, not acid."
+      },
+      {
+       "yazi": "Forest photosynthesis",
+       "neden": "Photosynthesis takes up CO₂. It does not produce acid."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The greenhouse effect, climate and ozone",
+    "p": "The <b>greenhouse effect</b> is a natural process. CO<sub>2</sub>, methane and water vapor trap heat. When these gases increase, <b>climate change</b> begins. <b>Ozone thinning</b> is a separate problem. CFC gases weaken the ozone layer that protects against UV rays.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='6' width='150' height='26' rx='4' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)' stroke-width='1.5'/><text x='81' y='24' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Greenhouse effect ↑</text><rect x='164' y='6' width='150' height='26' rx='4' fill='var(--c5)' fill-opacity='0.18' stroke='var(--c5)' stroke-width='1.5'/><text x='239' y='24' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Ozone thinning</text><text x='160' y='52' font-size='10' fill='var(--muted)' text-anchor='middle'>where?</text><text x='81' y='68' font-size='11' fill='var(--ink)' text-anchor='middle'>troposphere (lower atmosphere)</text><text x='239' y='68' font-size='11' fill='var(--ink)' text-anchor='middle'>stratosphere (≈15-35 km)</text><text x='160' y='90' font-size='10' fill='var(--muted)' text-anchor='middle'>cause?</text><text x='81' y='106' font-size='11' fill='var(--ink)' text-anchor='middle'>rise in CO₂, CH₄, N₂O</text><text x='239' y='106' font-size='11' fill='var(--ink)' text-anchor='middle'>chlorine from CFCs breaks O₃</text><path d='M6 80 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='160' y='128' font-size='10' fill='var(--muted)' text-anchor='middle'>result?</text><text x='81' y='144' font-size='11' fill='var(--ink)' text-anchor='middle'>heat trapped, climate warms</text><text x='239' y='144' font-size='11' fill='var(--ink)' text-anchor='middle'>more UV: skin cancer</text><path d='M6 118 H314' stroke='var(--line)' stroke-width='1' fill='none'/><text x='160' y='166' font-size='10' fill='var(--muted)' text-anchor='middle'>response</text><text x='81' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>Paris Agreement (2015)</text><text x='239' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>Montreal Prot. (1987)</text><path d='M6 156 H314' stroke='var(--line)' stroke-width='1' fill='none'/></svg>",
+    "key": "Fossil fuels and deforestation increase greenhouse gases. Glaciers melt and sea level rises. Ozone thinning is not the cause of global warming.",
+    "once": {
+     "soru": "What would Earth be like with no greenhouse effect at all?",
+     "secenekler": [
+      {
+       "yazi": "Much colder",
+       "neden": "If the gases did not trap heat, Earth's average temperature would be about −18 °C.",
+       "dogru": true
+      },
+      {
+       "yazi": "Much warmer",
+       "neden": "Greenhouse gases trap heat. Without them, Earth would cool down."
+      },
+      {
+       "yazi": "The same",
+       "neden": "The greenhouse effect is a natural process and is needed for life."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Eutrophication, erosion, species loss",
+    "p": "The <b>eutrophication</b> you just saw is started by the nitrogen and phosphorus in fertilizer. When plant cover disappears, soil is carried away by water and wind. This is called <b>erosion</b>. Habitat loss and overhunting reduce <b>biodiversity</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='10' y='12' width='92' height='34' rx='5' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='56' y='34' font-size='11' fill='var(--ink)' text-anchor='middle'>fertilizer: N and P</text><rect x='115' y='12' width='92' height='34' rx='5' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='161' y='34' font-size='11' fill='var(--ink)' text-anchor='middle'>algal bloom</text><rect x='220' y='12' width='92' height='34' rx='5' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='266' y='34' font-size='11' fill='var(--ink)' text-anchor='middle'>dead algae decompose</text><rect x='220' y='70' width='92' height='34' rx='5' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='266' y='92' font-size='11' fill='var(--ink)' text-anchor='middle'>O₂ drops</text><rect x='115' y='70' width='92' height='34' rx='5' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='161' y='92' font-size='11' fill='var(--ink)' text-anchor='middle'>fish die</text><path d='M103 29 H112' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-12)'/><path d='M208 29 H217' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-12)'/><path d='M266 47 V67' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-12)'/><path d='M217 87 H210' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#eko-12)'/><text x='60' y='92' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>eutrophication</text><path d='M6 116 H314' stroke='var(--line)' stroke-width='1' fill='none'/><rect x='6' y='124' width='150' height='70' rx='5' fill='var(--c4)' fill-opacity='0.14' stroke='var(--c4)' stroke-width='1.5'/><text x='81' y='144' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>Erosion</text><text x='81' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>plant cover disappears</text><text x='81' y='178' font-size='11' fill='var(--ink)' text-anchor='middle'>→ soil carried away</text><rect x='164' y='124' width='150' height='70' rx='5' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='239' y='144' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Biodiversity ↓</text><text x='239' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>habitat loss, invasive</text><text x='239' y='178' font-size='11' fill='var(--ink)' text-anchor='middle'>species, overhunting</text></svg>",
+    "key": "Invasive species also reduce biodiversity. They spread quickly because they have no natural enemies in their new home. The lionfish in the Mediterranean is an example."
+   },
+   {
+    "h": "Endemic species",
+    "p": "Species that naturally live only in one particular region are called <b>endemic species</b>. If an endemic species dies out in that region, it is gone from the world. About 80% of the plant species in Madagascar are endemic. Lemurs also live only on this island.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='100' y='14' font-size='11' fill='var(--muted)' text-anchor='middle'>an isolated island</text><ellipse cx='100' cy='100' rx='86' ry='62' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><path d='M70 76 Q96 56 124 70 Q146 84 136 112 Q124 140 94 136 Q62 130 60 104 Q58 86 70 76 Z' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.5'/><text x='98' y='104' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>island</text><text x='100' y='152' font-size='10' fill='var(--c1)' text-anchor='middle' font-weight='700'>the sea isolates species</text><circle cx='258' cy='78' r='42' fill='var(--c3)' fill-opacity='0.18' stroke='var(--c3)' stroke-width='1.5'/><path d='M258 78 L258 36 A42 42 0 1 1 218.1 65 Z' fill='var(--c2)' fill-opacity='0.45' stroke='var(--c2)' stroke-width='1.5'/><text x='262' y='96' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>≈ 80%</text><text x='258' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>of plant species</text><text x='258' y='155' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>≈ 80% endemic</text><text x='160' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>example: Madagascar and its lemurs</text></svg>",
+    "key": "Islands and high mountains isolate species, so they have many endemic species. The wild ancestors of wheat and chickpeas live in the Fertile Crescent.",
+    "once": {
+     "soru": "Galápagos giant tortoises live only on those islands. What are such species called?",
+     "secenekler": [
+      {
+       "yazi": "Endemic",
+       "neden": "An endemic species naturally lives only in one particular region.",
+       "dogru": true
+      },
+      {
+       "yazi": "Invasive",
+       "neden": "An invasive species arrives in a new place and spreads quickly."
+      },
+      {
+       "yazi": "Pioneer",
+       "neden": "Pioneer species are the first to settle in a bare area."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Solutions and the ecological footprint",
+    "p": "<b>Sustainability</b> means meeting today's needs without using up the options of future generations. The <b>ecological footprint</b> is the productive area needed for the resources we use and the waste we make. A smaller footprint is better.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='6' width='150' height='90' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='81' y='32' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Sustainability</text><text x='81' y='58' font-size='11' fill='var(--ink)' text-anchor='middle'>meet today's needs,</text><text x='81' y='76' font-size='11' fill='var(--ink)' text-anchor='middle'>don't use up the future</text><rect x='164' y='6' width='150' height='90' rx='6' fill='var(--c4)' fill-opacity='0.14' stroke='var(--c4)' stroke-width='1.5'/><text x='239' y='32' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>Ecological footprint</text><text x='239' y='58' font-size='11' fill='var(--ink)' text-anchor='middle'>area our consumption</text><text x='239' y='76' font-size='11' fill='var(--ink)' text-anchor='middle'>requires (global hectares)</text><rect x='6' y='104' width='150' height='90' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='81' y='130' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Recycling</text><text x='81' y='156' font-size='11' fill='var(--ink)' text-anchor='middle'>paper, glass, metal, plastic</text><text x='81' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>saves resources and energy</text><rect x='164' y='104' width='150' height='90' rx='6' fill='var(--c5)' fill-opacity='0.14' stroke='var(--c5)' stroke-width='1.5'/><text x='239' y='130' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Protected areas</text><text x='239' y='156' font-size='11' fill='var(--ink)' text-anchor='middle'>national parks, wetlands,</text><text x='239' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>nature parks, natural monuments</text></svg>",
+    "key": "The main solutions are recycling, renewable energy, public transport, protected areas and international agreements.",
+    "once": {
+     "soru": "Which of these shrinks the ecological footprint?",
+     "secenekler": [
+      {
+       "yazi": "Using public transport",
+       "neden": "Public transport cuts fuel use and emissions per person.",
+       "dogru": true
+      },
+      {
+       "yazi": "Often buying new things",
+       "neden": "The more we consume, the bigger the ecological footprint."
+      },
+      {
+       "yazi": "Single-use products",
+       "neden": "The more waste there is, the bigger the ecological footprint."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Waste management",
+    "p": "Waste management starts with <b>preventing</b> waste. We need to consume less and reuse things. The waste that remains is sorted at the source and goes to recycling, <b>compost</b> or the battery bin. A landfill is the last option.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10.0' y='26' width='300' height='26' rx='6' fill='var(--c3)' fill-opacity='0.18' stroke='var(--c3)' stroke-width='1.5'/><text x='160' y='44' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>prevent, reduce</text><rect x='35.0' y='57' width='250' height='26' rx='6' fill='var(--c3)' fill-opacity='0.18' stroke='var(--c3)' stroke-width='1.5'/><text x='160' y='75' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>reuse</text><rect x='60.0' y='88' width='200' height='26' rx='6' fill='var(--c1)' fill-opacity='0.18' stroke='var(--c1)' stroke-width='1.5'/><text x='160' y='106' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>recycle, compost</text><rect x='85.0' y='119' width='150' height='26' rx='6' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.5'/><text x='160' y='137' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>recover energy</text><rect x='110.0' y='150' width='100' height='26' rx='6' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)' stroke-width='1.5'/><text x='160' y='168' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>landfill</text><text x='160' y='16' font-size='10.5' fill='var(--muted)' text-anchor='middle'>top to bottom: best to last</text><text x='160' y='196' font-size='10.5' fill='var(--muted)' text-anchor='middle'>sort at the source: paper · plastic · glass · metal · batteries</text></svg>",
+    "key": "The right order is prevent, reuse and recycle. Burying is the last resort.",
+    "once": {
+     "soru": "What is the first choice in waste management?",
+     "secenekler": [
+      {
+       "yazi": "Preventing waste",
+       "neden": "The best waste is the waste that never forms.",
+       "dogru": true
+      },
+      {
+       "yazi": "Recycling",
+       "neden": "Recycling is good, but it comes after preventing waste."
+      },
+      {
+       "yazi": "Burying it in a landfill",
+       "neden": "Burying waste is the last resort."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• An ecosystem is made of living things and the nonliving surroundings.<br>• Energy flows in one direction, and only about 10% passes to each level.<br>• Water, carbon, nitrogen and phosphorus move in cycles.<br>• Poisons build up going up the food chain.<br>• The answer to pollution, climate change and habitat loss is sustainability.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='eko-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c4)'/></marker><marker id='eko-14b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker><marker id='eko-14c' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><rect x='8' y='68' width='56' height='30' rx='6' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.5'/><text x='36' y='88' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>sun</text><rect x='92' y='68' width='76' height='30' rx='6' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1.5'/><text x='130' y='88' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>producer</text><rect x='204' y='68' width='80' height='30' rx='6' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)' stroke-width='1.5'/><text x='244' y='88' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>consumer</text><rect x='130' y='140' width='100' height='30' rx='6' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)' stroke-width='1.5'/><text x='180' y='160' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>decomposer</text><path d='M65 83 H89' stroke='var(--c4)' stroke-width='2.5' fill='none' marker-end='url(#eko-14)'/><path d='M169 83 H201' stroke='var(--c4)' stroke-width='2.5' fill='none' marker-end='url(#eko-14)'/><path d='M130 66 V36' stroke='var(--c2)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-14b)'/><path d='M244 66 V36' stroke='var(--c2)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-14b)'/><text x='130' y='28' font-size='11' fill='var(--c2)' text-anchor='middle'>heat</text><text x='244' y='28' font-size='11' fill='var(--c2)' text-anchor='middle'>heat</text><path d='M244 100 L222 137' stroke='var(--c3)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-14c)'/><path d='M150 100 L170 137' stroke='var(--c3)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-14c)'/><path d='M129 155 H108 V101' stroke='var(--c3)' stroke-width='1.5' fill='none' stroke-dasharray='5 3' marker-end='url(#eko-14c)'/><text x='102' y='140' font-size='10' fill='var(--c3)' text-anchor='end'>minerals</text><path d='M40 192 H62' stroke='var(--c4)' stroke-width='2.5' fill='none'/><text x='66' y='196' font-size='11' fill='var(--ink)' text-anchor='start'>energy: one way</text><path d='M175 192 H197' stroke='var(--c3)' stroke-width='1.5' stroke-dasharray='5 3'/><text x='201' y='196' font-size='11' fill='var(--ink)' text-anchor='start'>matter: cycles</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sirala",
+    "q": "Put in order how a nitrogen atom moves from the air to a plant and back to the soil.",
+    "ogeler": [
+     "N₂ in the air",
+     "Ammonia (nitrogen fixation)",
+     "Nitrate (nitrification)",
+     "Plant protein",
+     "Ammonia (ammonification)"
+    ],
+    "e": "Bacteria fix N₂ into ammonia, and nitrifying bacteria turn ammonia into nitrate. The plant takes up nitrate with its roots and builds it into its proteins. When the plant dies, decomposers turn the nitrogen back into ammonia. This is called ammonification."
+   },
+   {
+    "tur": "sayi",
+    "q": "In a food chain, the producers store 50,000 kJ of energy. By the 10% rule, about how many kJ reach the secondary consumers?",
+    "cevap": 500,
+    "birim": "kJ",
+    "e": "50,000 × 0.1 = 5,000 kJ passes to the primary consumers. Then 5,000 × 0.1 = 500 kJ passes to the secondary consumers."
+   },
+   {
+    "tur": "eslestir",
+    "q": "Match each environmental problem with its main cause.",
+    "ciftler": [
+     [
+      "Acid rain",
+      "SO₂ and NOₓ released into the air"
+     ],
+     [
+      "Ozone thinning",
+      "CFC gases"
+     ],
+     [
+      "Eutrophication",
+      "Fertilizer washing into a lake"
+     ],
+     [
+      "Climate change",
+      "Rising greenhouse gases"
+     ],
+     [
+      "Erosion",
+      "Loss of plant cover"
+     ]
+    ],
+    "e": "SO₂ and nitrogen oxides form acids with moisture and cause acid rain. CFCs thin the ozone layer. Nitrogen and phosphorus from fertilizer cause eutrophication, rising greenhouse gases cause climate change and loss of plant cover causes erosion."
+   },
+   {
+    "q": "Which of the following statements is true?",
+    "o": [
+     "An energy pyramid is never inverted.",
+     "Ozone thinning is the main cause of global warming.",
+     "Like matter, energy cycles through an ecosystem.",
+     "Scavengers such as vultures are decomposers."
+    ],
+    "a": 0,
+    "e": "Energy is lost as heat at every level. So the energy of a higher level can never be greater than that of the level below. The other options are common misconceptions.",
+    "y": [
+     "",
+     "Ozone thinning leads to more UV rays. The main cause of global warming is greenhouse gases.",
+     "Matter cycles, but energy flows in one direction and is lost as heat at every level.",
+     "A vulture is a consumer that tears up and eats carcasses. The decomposers are bacteria and fungi."
+    ]
+   }
+  ]
  }
 }
