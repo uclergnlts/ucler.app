@@ -17417,6 +17417,276 @@
   ],
   "soruOnce": true
  },
+ "bitki-biyolojisi": {
+  "id": "bitki-biyolojisi",
+  "ders": "biyoloji",
+  "konu": "bitki-biyolojisi",
+  "baslik": "Plant biology",
+  "ozet": "Try first, then learn the name. Pull water to the top, open a stoma, prune the tip and germinate a seed.",
+  "adimlar": [
+   {
+    "baslik": "How does water go up?",
+    "metin": "Every day, a tree carries hundreds of liters of water meters upward without any pump. Open the stomata and see what happens to the water in the xylem.",
+    "sahne": {
+     "tur": "biy6-terleme"
+    },
+    "deger": {
+     "st": 0
+    },
+    "kontroller": [
+     {
+      "ad": "st",
+      "etiket": "Stomata open",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "In a tall tree, what is the main force that lifts water to the top?",
+     "secenekler": [
+      {
+       "yazi": "Root pressure",
+       "neden": "Root pressure pushes water up a little, but it is not enough on its own for tall trees."
+      },
+      {
+       "yazi": "Water pumps",
+       "neden": "There are no water pumps in xylem. The plant spends no ATP moving water."
+      },
+      {
+       "yazi": "Transpiration pull",
+       "dogru": true,
+       "neden": "Water evaporating from the stomata pulls the column of water in the xylem upward. Root pressure only helps."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Open the stoma",
+    "metin": "At night and during drought, the stoma is closed. Change the conditions and open the stoma.",
+    "sahne": {
+     "tur": "biy6-stoma"
+    },
+    "deger": {
+     "isik": 0,
+     "su": 0
+    },
+    "kontroller": [
+     {
+      "ad": "isik",
+      "etiket": "Light",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "su",
+      "etiket": "Enough water in the soil",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "isik": 1,
+      "su": 1
+     },
+     "tamam": "Light and water were both provided. K⁺ ions entered the guard cells, water followed them and the stoma opened."
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Where does the sugar go?",
+    "metin": "Phloem carries the sugar made in the leaves from a <b>source</b> to a <b>sink</b>, where the sugar is used or stored. First look at a plant in summer and play it.",
+    "sahne": {
+     "tur": "biy6-floem",
+     "mevsim": "yaz",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "oynat"
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "In spring",
+    "metin": "Now the same plant is in spring. The leaves have not opened yet, but the buds need sugar to grow.",
+    "sahne": {
+     "tur": "biy6-floem",
+     "mevsim": "ilkbahar",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In spring, which way does sugar flow in the phloem?",
+     "secenekler": [
+      {
+       "yazi": "From the leaves to the root",
+       "neden": "In spring, there are no mature leaves yet to carry out photosynthesis."
+      },
+      {
+       "yazi": "From the root's store to the buds",
+       "dogru": true,
+       "neden": "In spring, the store in the root becomes the source, and sugar is carried up to the growing buds (the sink). Phloem is made of living cells and can carry food in both directions. Xylem is dead and carries water only upward."
+      },
+      {
+       "yazi": "It does not flow",
+       "neden": "A growing bud needs sugar. The food has to come from somewhere."
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Annual rings",
+    "metin": "The cambium adds one ring to the stem each year. Grow this tree to 5 years old.",
+    "sahne": {
+     "tur": "biy6-halka"
+    },
+    "deger": {
+     "yil": 1
+    },
+    "kontroller": [
+     {
+      "ad": "yil",
+      "etiket": "Year",
+      "min": 1,
+      "max": 8,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "yil": 5
+     },
+     "tamam": "5 rings show that the tree is 5 years old. The rings are made of xylem, which is wood. The phloem stays thin and is pushed outward."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Prune the tip",
+    "metin": "A gardener cuts off the top bud of the stem. Make a guess before you play.",
+    "sahne": {
+     "tur": "biy6-tepe",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens when the tip is pruned?",
+     "secenekler": [
+      {
+       "yazi": "It grows taller fast",
+       "neden": "The tip that made the plant grow taller was cut off."
+      },
+      {
+       "yazi": "It dries out",
+       "neden": "Pruning does not kill the plant. Gardeners do it every year."
+      },
+      {
+       "yazi": "It branches out",
+       "dogru": true,
+       "neden": "The suppression by auxin is lifted, and cytokinin from the root stimulates the side buds. So the plant branches out."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Turning toward light",
+    "metin": "A seedling on a windowsill bends toward the light. This is called <b>phototropism</b>. The hormone auxin controls this bending. Make a guess before you play.",
+    "sahne": {
+     "tur": "biy6-foto",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "On which side of the seedling does auxin collect?",
+     "secenekler": [
+      {
+       "yazi": "The lit side",
+       "neden": "If it did, the lit side would grow longer and the seedling would bend away from the light."
+      },
+      {
+       "yazi": "The shaded side",
+       "dogru": true,
+       "neden": "Auxin moves to the shaded side and makes the cells there grow longer. As the shaded side lengthens, the tip of the seedling bends toward the light."
+      },
+      {
+       "yazi": "It goes down to the root",
+       "neden": "The bending depends on how the auxin moving down from the tip is split between the two sides."
+      }
+     ]
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Germination",
+    "metin": "A seed can wait dry for years. Provide the conditions it needs to germinate.",
+    "sahne": {
+     "tur": "biy6-cimlenme"
+    },
+    "deger": {
+     "su": 0,
+     "o2": 0,
+     "sicak": 0,
+     "isik": 0
+    },
+    "kontroller": [
+     {
+      "ad": "su",
+      "etiket": "Water",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "o2",
+      "etiket": "Oxygen (airy soil)",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "sicak",
+      "etiket": "Suitable temperature",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "isik",
+      "etiket": "Light",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "su": 1,
+      "o2": 1,
+      "sicak": 1
+     },
+     "tamam": "Water, oxygen and a suitable temperature were enough. Once a seed takes up water, its enzymes work and the stored food is used up by respiration. Respiration also needs oxygen. Most seeds do not need light, but some do. The seed loses dry mass until it opens leaves and starts photosynthesis."
+    },
+    "kart": 13
+   }
+  ],
+  "kapanis": [
+   "Water rises because of <b>transpiration pull</b> in the leaves. Cohesion and adhesion keep the column of water from breaking. Root pressure helps.",
+   "In light, K⁺ ions and water enter the guard cells and the <b>stoma opens</b>. During drought, abscisic acid closes the stoma.",
+   "<b>Xylem</b> cells are dead and carry water upward. <b>Phloem</b> cells are alive and can carry sugar from source to sink in both directions.",
+   "The cambium makes the stem thicker, and one ring forms each year. <b>Auxin</b> controls apical dominance and turning toward light.",
+   "A seed needs <b>water, oxygen and a suitable temperature</b> to germinate."
+  ],
+  "soruOnce": true
+ },
  "ekosistem": {
   "id": "ekosistem",
   "ders": "biyoloji",
