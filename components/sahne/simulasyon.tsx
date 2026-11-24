@@ -196,7 +196,7 @@ function PhLab({ v, saat = 0 }: SahneProps) {
       <text x={196} y={134} fontSize={40} fontWeight={800} fill="var(--ink)">{say(p)}</text>
       <text x={196} y={156} fontSize={13} fontWeight={800} fill={p < 7 ? "var(--c2)" : p > 7 ? "var(--c1)" : "var(--ink)"}>{durum}</text>
       <text x={196} y={184} fontSize={11.5} fontWeight={700} fill="var(--c2)">[H₃O⁺] = {bilimsel(h)} M</text>
-      <text x={196} y={202} fontSize={11.5} fontWeight={700} fill="var(--c1)">{cev("[OH⁻] =")} {bilimsel(oh)} M</text>
+      <text x={196} y={202} fontSize={11.5} fontWeight={700} fill="var(--c1)">{cev("[OH⁻] = {0} M", bilimsel(oh))}</text>
 
       {/* pH ölçeği */}
       {PH_RENK.map((r, i) => <rect key={i} x={sx(i)} y={246} width={300 / 14 + 0.5} height={10} fill={r} />)}
@@ -245,7 +245,7 @@ function EnzimLab({ v, saat = 0 }: SahneProps) {
     <svg viewBox="0 0 340 250" role="img" aria-label={cev("{0} derece: {1}, hız yüzde {2}", T, durum, Math.round(hiz * 100))}>
       <text x={10} y={22} fontSize={13} fontWeight={800} fill={renk}>{durum}</text>
       <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{T} {cev("°C · hız %")}{Math.round(hiz * 100)}</text>
-      <text x={330} y={22} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="end">{cev("ürün:")} {Math.floor(r.current.urun)}</text>
+      <text x={330} y={22} fontSize={13} fontWeight={800} fill="var(--ink)" textAnchor="end">{cev("ürün: {0}", Math.floor(r.current.urun))}</text>
 
       {ENZ.map((e, k) => {
         const p = r.current.faz[k] % 1, titre = T > 45 && !bozuk ? Math.sin(saat * 30 + k) * 1.5 : 0;
@@ -377,7 +377,7 @@ function GazLab({ v, saat = 0 }: SahneProps) {
   const GX = 292, GY = 118;
   return (
     <svg viewBox="0 0 340 222" role="img" aria-label={cev("{0} mol gaz, {1} santigrat derece, {2} litre: basınç {3} atm", n, Tc, say(V), say(P, 2))}>
-      <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">n = {say(n)} {cev("mol · T =")} {TK} K · V = {say(V)} L</text>
+      <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("n = {0} mol · T = {1} K · V = {2} L", say(n), TK, say(V))}</text>
       <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">P = n·R·T / V = {say(n)}·0,082·{TK} / {say(V)}</text>
 
       {/* silindir ve piston */}
@@ -444,9 +444,9 @@ function ZarLab({ v, set, saat = 0 }: SahneProps) {
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={cev("O2 solda {0}, sağda {1}; sodyum iyonu solda {2}, sağda {3}; kanal {4}", o2s, o2g, nas, nag, kanal ? "açık" : "kapalı")}>
       <g fontSize={12} fontWeight={700}>
-        <text x={10} y={22} fill="var(--c1)">{cev("O₂: sol")} {o2s} {cev("· sağ")} {o2g}</text>
-        <text x={330} y={22} fill="var(--c4)" textAnchor="end">{cev("Na⁺: sol")} {nas} {cev("· sağ")} {nag}</text>
-        <text x={10} y={42} fill="var(--muted)">{cev("son 5 s O₂ geçişi: sağa")} {saga}{cev(", sola")} {sola}</text>
+        <text x={10} y={22} fill="var(--c1)">{cev("O₂: sol {0} · sağ {1}", o2s, o2g)}</text>
+        <text x={330} y={22} fill="var(--c4)" textAnchor="end">{cev("Na⁺: sol {0} · sağ {1}", nas, nag)}</text>
+        <text x={10} y={42} fill="var(--muted)">{cev("son 5 s O₂ geçişi: sağa {0}, sola {1}", saga, sola)}</text>
       </g>
       <rect x={ZR.x0} y={ZR.ust} width={ZR.x1 - ZR.x0} height={ZR.alt - ZR.ust} rx={10} fill="none" stroke="var(--line-2)" strokeWidth={1.5} />
       {/* zar: fosfolipit başları; kanal açıkken ortada protein kapısı */}
@@ -577,8 +577,8 @@ function CarpismaLab({ v, saat = 0 }: SahneProps) {
   const alan = `M${mbX(Ea)} ${MB.y1} ` + nok.filter(([E]) => E >= Ea).map(([E, y]) => `L${mbX(E).toFixed(1)} ${mbY(y).toFixed(1)}`).join(" ") + ` L${mbX(MB.EMAX)} ${MB.y1} Z`;
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0} kelvin, derişim {1}, katalizör {2}: bağıl hız {3}", T, n, kat ? "var" : "yok", say(hiz))}>
-      <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("bağıl hız ×")}{hiz < 10 ? say(hiz) : Math.round(hiz)}</text>
-      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">T = {T} {cev("K · Ea =")} {Ea} {cev("kJ · son 5 s:")} {d.urun.length} {cev("etkin çarpışma")}</text>
+      <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("bağıl hız ×{0}", hiz < 10 ? say(hiz) : Math.round(hiz))}</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("T = {0} K · Ea = {1} kJ · son 5 s: {2} etkin çarpışma", T, Ea, d.urun.length)}</text>
       <rect x={CK.x0} y={CK.ust} width={CK.x1 - CK.x0} height={CK.alt - CK.ust} rx={10} fill="none" stroke="var(--line-2)" strokeWidth={1.5} />
       {ps.map((q, i) => {
         const yeni = saat - q.parla < 0.5;
@@ -624,8 +624,8 @@ function FotoLab({ v, saat = 0 }: SahneProps) {
   const parlak = isik / 100;
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={cev("Işık yüzde {0}, CO2 {1}, {2} derece: hız yüzde {3}", isik, co2, T, Math.round(hz * 100))}>
-      <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--biyoloji)">{cev("hız %")}{Math.round(hz * 100)} · {Math.round(hz * 360)} {cev("kabarcık/dk")}</text>
-      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("sınırlayan:")} {sinirlayan}</text>
+      <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--biyoloji)">{cev("hız %{0} · {1} kabarcık/dk", Math.round(hz * 100), Math.round(hz * 360))}</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("sınırlayan: {0}", sinirlayan)}</text>
       {/* lamba */}
       <g>
         <circle cx={34} cy={96} r={14} fill={`rgba(242,193,46,${0.15 + 0.85 * parlak})`} stroke="var(--ink)" strokeWidth={1.5} />
@@ -642,7 +642,7 @@ function FotoLab({ v, saat = 0 }: SahneProps) {
       ))}
       {d.k.map((b, i) => { const u = (saat - b.t) / 2.4; return <circle key={i} cx={b.x + Math.sin(u * 9 + i) * 3} cy={112 - u * 26} r={2.6} fill="var(--surface)" stroke="var(--c1)" strokeWidth={1.2} opacity={1 - u} />; })}
       <g fontSize={11} fontWeight={700} fill="var(--muted)">
-        <text x={124} y={230} textAnchor="middle">{cev("su bitkisi ·")} {T} °C</text>
+        <text x={124} y={230} textAnchor="middle">{cev("su bitkisi · {0} °C", T)}</text>
       </g>
       {/* hız–ışık grafiği (şimdiki CO₂ ve sıcaklıkta) */}
       <polyline points={egri} fill="none" stroke="var(--line-2)" strokeWidth={2.2} />
@@ -730,7 +730,7 @@ function DengeLab({ v, set, saat = 0 }: SahneProps) {
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0} kelvin: N2O4 {1} molar, NO2 {2} molar, {3}", T, say(d.a, 2), say(d.b, 2), d.sakin > 0.5 ? "dengede" : "denge kuruluyor")}>
       <text x={10} y={22} fontSize={13} fontWeight={800} fill={d.sakin > 0.5 ? "var(--good)" : "var(--ink)"}>{d.sakin > 0.5 ? cev("Dengede: ileri hız = geri hız") : ileri > geri ? cev("İleri yönde yürüyor") : cev("Geri yönde yürüyor")}</text>
-      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">T = {T} {cev("K · Kc =")} {K < 0.1 ? K.toFixed(4).replace(".", ONDALIK) : say(K, 2)} · Q = {Q < 0.1 ? Q.toFixed(4).replace(".", ONDALIK) : say(Q, 2)}</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("T = {0} K · Kc = {1} · Q = {2}", T, K < 0.1 ? K.toFixed(4).replace(".", ONDALIK) : say(K, 2), Q < 0.1 ? Q.toFixed(4).replace(".", ONDALIK) : say(Q, 2))}</text>
       {/* kap: NO₂ kahverengidir */}
       <rect x={12} y={60} width={180} height={140} rx={10} fill={`rgba(150,80,30,${0.06 + 0.3 * kahve})`} stroke="var(--line-2)" strokeWidth={1.5} />
       {Array.from({ length: Math.min(nA, 36) }, (_, i) => { const x = 26 + q() * 152, y = 74 + q() * 112, f = q() * 6.3; const xx = x + Math.sin(saat * 0.9 + f) * 5, yy = y + Math.cos(saat * 0.7 + f) * 5; return <g key={`a${i}`}><circle cx={xx - 3.5} cy={yy} r={4} fill="var(--c1)" /><circle cx={xx + 3.5} cy={yy} r={4} fill="var(--c1)" /></g>; })}
@@ -888,7 +888,7 @@ function KaynamaLab({ v, set, saat = 0 }: SahneProps) {
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={cev("Dış basınç {0} atmosfer, su {1} derece, {2}", say(P), Math.round(d.T), kayniyor ? "kaynıyor" : "kaynamıyor")}>
       <text x={10} y={22} fontSize={13} fontWeight={800} fill={kayniyor ? "var(--good)" : "var(--ink)"}>{kayniyor ? cev("Kaynıyor: buhar basıncı = dış basınç") : isit ? cev("Isınıyor") : cev("Isıtıcı kapalı")}</text>
-      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("su")} {say(d.T)} {cev("°C · kaynama noktası")} {say(Tb)} °C</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("su {0} °C · kaynama noktası {1} °C", say(d.T), say(Tb))}</text>
       {/* dış basınç okları */}
       {Array.from({ length: nOk }, (_, i) => { const x = 48 + (i * 104) / Math.max(1, nOk - 1); return <path key={i} d={`M${x} 58 l0 18 m-4 -6 l4 6 l4 -6`} fill="none" stroke="var(--ink)" strokeWidth={1.6} strokeLinecap="round" />; })}
       {/* kap ve su */}
@@ -953,7 +953,7 @@ function CaprazLab({ v, set }: SahneProps) {
       <text x={76} y={30} fontSize={15} fontWeight={700} fill="var(--muted)">×</text>
       {cicek(104, 24, p2 > 0, 14)}
       <text x={124} y={30} fontSize={15} fontWeight={800} fill="var(--ink)">{GENOTIP[p2]}</text>
-      <text x={160} y={22} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("beklenen beyaz: %")}{beklenen}</text>
+      <text x={160} y={22} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("beklenen beyaz: %{0}", beklenen)}</text>
       <text x={160} y={39} fontSize={12} fontWeight={800} fill="var(--ink)">{top ? cev("çıkan beyaz: %{0}", beyazYuzde) : cev("henüz yavru yok")}</text>
       {/* Punnett karesi */}
       <text x={PU.x} y={PU.y - 26} fontSize={10.5} fontWeight={700} fill="var(--muted)">{cev("Punnett karesi")}</text>
@@ -1066,7 +1066,7 @@ function CozunurlukLab({ v, set, saat = 0 }: SahneProps) {
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0} derecede 100 gram suya {1} gram KNO3: {2} gram çözündü", T, tuz, Math.round(d.c))}>
       <text x={10} y={22} fontSize={13} fontWeight={800} fill={doygun ? "var(--kimya)" : "var(--ink)"}>{durum}</text>
-      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("100 g su ·")} {T} {cev("°C · çözünen")} {Math.round(d.c)} {cev("g · dipte")} {Math.round(dip)} g</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("100 g su · {0} °C · çözünen {1} g · dipte {2} g", T, Math.round(d.c), Math.round(dip))}</text>
       {/* beher */}
       <path d="M30 66 L30 206 Q30 214 38 214 L172 214 Q180 214 180 206 L180 66" fill="none" stroke="var(--ink)" strokeWidth={2} />
       <rect x={31} y={84} width={148} height={129} fill="var(--kimya)" opacity={0.05 + Math.min(0.12, d.c / 1200)} />
@@ -1121,7 +1121,7 @@ function GuveLab({ v, set, saat = 0 }: SahneProps) {
   const kus2 = kus ? { x: 30 + ((saat * 40) % 140), y: 62 + Math.sin(saat * 2) * 6 } : null;
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={cev("Kuşak {0}: güvelerin yüzde {1} kadarı koyu", d.kusak, koyu)}>
-      <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("koyu güve %")}{koyu} {cev("· açık güve %")}{100 - koyu}</text>
+      <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("koyu güve %{0} · açık güve %{1}", koyu, 100 - koyu)}</text>
       <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("kuşak")} {d.kusak} · {kirli ? cev("kurumla kararmış ağaç") : cev("likenli açık renk ağaç")}{kus ? "" : cev(" · kuş yok")}</text>
       {/* ağaç gövdesi */}
       <rect x={14} y={56} width={168} height={160} rx={10} fill={kirli ? "#4a4744" : "#d9d3c4"} />

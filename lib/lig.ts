@@ -23,7 +23,14 @@ export type Lig = {
 export async function ligOku(girisli: boolean): Promise<Lig | null> {
   if (girisli) await simdiEsitle().catch(() => false);
   const { data, error } = await sb().rpc("haftalik_lig");
-  return error || !data ? null : (data as Lig);
+  if (error || !data) return null;
+  const lig = data as Lig;
+  // Sunucu adı boş olanlara "Öğrenci 4821" gibi bir takma ad verir; İngilizcede "Student 4821" görünsün.
+  const adCevir = <T extends LigSatir>(s: T): T => {
+    const m = /^Öğrenci (\d+)$/.exec(s.ad);
+    return m ? { ...s, ad: cev("Öğrenci {0}", m[1]) } : s;
+  };
+  return { ...lig, liste: (lig.liste ?? []).map(adCevir), ben: lig.ben ? adCevir(lig.ben) : null };
 }
 
 /** "2 gün 5 saat", "3 saat 12 dk", "8 dk". */

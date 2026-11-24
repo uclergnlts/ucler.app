@@ -82,7 +82,7 @@ function Dokum({ s }: { s: Soru }) {
       </ul>
       <p className="ipucu">
         {katsayili ? cev("Baştaki katsayı formüldeki her atomu çarpar. ") : parcalar.length > 1 ? cev("Noktadan sonraki katsayı yalnızca su moleküllerini çarpar. ") : parcalar[0].katkilar.some((k) => k.carpan.length) ? cev("Parantez dışındaki indis, parantez içindeki her atomu çarpar. ") : ""}
-        {cev("Mol için de aynı:")} {parcalar[0].katsayi} {cev("mol")} <Formul f={s.f.replace(/^\d+\s*/, "")} /> {cev("içinde")} {s.dogru} {cev("mol")} {s.el ? cev("{0} atomu", s.el) : "atom"} {cev("var.")}
+        {cev("Mol için de aynı:")} {parcalar[0].katsayi} {cev("mol")} <Formul f={s.f.replace(/^\d+\s*/, "")} /> {cev("içinde {0} mol {1} var.", s.dogru, s.el ? cev("{0} atomu", s.el) : cev("atom"))}
       </p>
     </>
   );
@@ -153,7 +153,7 @@ export default function AtomSayOyun() {
           <b><Formul f={s.f} /></b>
           <span>{s.ad}</span>
         </div>
-        <p className="as-ne">{s.el ? <>{cev("Bu ifadede kaç tane")} <b>{s.el}</b> {cev("atomu var?")}</> : <>{cev("Bu ifadede")} <b>{cev("toplam")}</b> {cev("kaç atom var?")}</>}</p>
+        <p className="as-ne">{s.el ? <>{cev("Bu ifadede kaç tane")} <b>{s.el}</b> {cev("atomu var?")}</> : <>{cev("Bu ifadede")} <b>{cev("toplam§oyun")}</b> {cev("kaç atom var?")}</>}</p>
         <div className="opts as-opts">
           {s.secenek.map((n, k) => {
             const cls = sec === null ? "" : n === s.dogru ? "right" : n === sec ? "wrong" : "";

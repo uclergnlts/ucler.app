@@ -85,7 +85,7 @@ function Atom({ s, v, set }: SahneProps) {
           </text>
           <text x={284} y={124} fontSize={15} textAnchor="middle" fill="var(--ink)" fontWeight={700}>{el.ad}</text>
           <text x={284} y={146} fontSize={12} textAnchor="middle" fill="var(--muted)">A = {p} + {n} = {A}</text>
-          <text x={284} y={164} fontSize={12} textAnchor="middle" fill="var(--muted)">{cev("katmanlar:")} {k.join("-") || "yok"}</text>
+          <text x={284} y={164} fontSize={12} textAnchor="middle" fill="var(--muted)">{cev("katmanlar:")} {k.join("-") || cev("yok")}</text>
           <text x={332} y={216} fontSize={11.5} textAnchor="end" fontWeight={700} fill={q ? "var(--kimya)" : "var(--muted)"}>{durum}</text>
         </g>
       )}

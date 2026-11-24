@@ -23,22 +23,17 @@ export default function Page() {
             {cev("Hesabınla giriş yaptıysan aynı bilgiler, başka cihazlarda da devam edebilmen için hesabına kaydedilir. Hesaplar ve ilerleme Supabase üzerinde, Avrupa Birliği'ndeki (Frankfurt) sunucularda saklanır; şifren şifrelenmiş olarak tutulur ve kimse göremez. Haftalık lig dışında verilerini kimseyle paylaşmayız, reklam için kullanmayız.")}
           </p>
           <p>
-            Bu cihazdaki ilerlemeyi Profil &gt; Ayarlar&apos;daki &quot;İlerlemeyi sıfırla&quot; ile silebilirsin. Hesabını ve buluttaki
-            bütün verini aynı ekrandaki &quot;Hesabımı sil&quot; ile kalıcı olarak silebilirsin.
+            {cev("Bu cihazdaki ilerlemeyi Profil > Ayarlar'daki \"İlerlemeyi sıfırla\" ile silebilirsin. Hesabını ve buluttaki bütün verini aynı ekrandaki \"Hesabımı sil\" ile kalıcı olarak silebilirsin.")}
           </p>
         </Bolum>
         <Bolum title={cev("Haftalık lig")}>
           <p>
-            Hesabın varsa adın (Profil&apos;e yazdığın ad, boşsa &quot;Öğrenci 4821&quot; gibi bir takma ad) ve o hafta kazandığın puan
-            haftalık lig listesinde görünür. E-posta adresin ve başka hiçbir bilgin listede yer almaz. Listede görünmek
-            istemezsen Profil &gt; Ayarlar&apos;daki &quot;Haftalık ligde görün&quot;ü kapat; o zaman sıranı yalnızca sen görürsün.
+            {cev("Hesabın varsa adın (Profil'e yazdığın ad, boşsa \"Öğrenci 4821\" gibi bir takma ad) ve o hafta kazandığın puan haftalık lig listesinde görünür. E-posta adresin ve başka hiçbir bilgin listede yer almaz. Listede görünmek istemezsen Profil > Ayarlar'daki \"Haftalık ligde görün\"ü kapat; o zaman sıranı yalnızca sen görürsün.")}
           </p>
         </Bolum>
-        <Bolum title="E-postalar">
+        <Bolum title={cev("E-postalar")}>
           <p>
-            Hesabın varsa e-posta adresine yalnızca hesapla ilgili e-postalar (hesap onayı, şifre yenileme) , serin bitmek
-            üzereyken akşam bir hatırlatma ve yeni ders, konu ya da video eklenince bir bildirim göndeririz. Bu ikisini
-            Profil &gt; Ayarlar&apos;dan ya da e-postadaki bağlantıdan kapatabilirsin. E-postalar Resend üzerinden gönderilir.
+            {cev("Hesabın varsa e-posta adresine yalnızca hesapla ilgili e-postalar (hesap onayı, şifre yenileme), serin bitmek üzereyken akşam bir hatırlatma ve yeni ders, konu ya da video eklenince bir bildirim göndeririz. Bu ikisini Profil > Ayarlar'dan ya da e-postadaki bağlantıdan kapatabilirsin. E-postalar Resend üzerinden gönderilir.")}
           </p>
         </Bolum>
         <Bolum title={cev("Sorun bildirimleri")}>

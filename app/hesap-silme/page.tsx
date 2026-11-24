@@ -20,7 +20,7 @@ export default function Page() {
               {cev("adresine git.")}
             </li>
             <li>{cev("Hesabınla giriş yap.")}</li>
-            <li>Profil &gt; Ayarlar&apos;da &quot;Hesabımı sil&quot;e dokun ve onayla.</li>
+            <li>{cev("Profil > Ayarlar'da \"Hesabımı sil\"e dokun ve onayla.")}</li>
           </ol>
         </Bolum>
         <Bolum title={cev("Neler silinir")}>

@@ -80,8 +80,8 @@ function Acilis({ bitti }: { bitti: () => void }) {
       const W = y.offsetWidth, wN = n.offsetWidth, wKe = ke.offsetWidth, wU = harf[0].offsetWidth;
       // Başlangıç: yalnızca "u." görünür ve ortadadır. Kelime sola, nokta sağa kayar; her harf nokta üstünden geçince belirir.
       const basKe = (W - wU - wN) / 2, gizli = wKe - wU, basN = basKe + wU - n.offsetLeft;
-      ke.style.transform = cev("translateX({0}px)", basKe);
-      n.style.transform = cev("translateX({0}px)", basN);
+      ke.style.transform = `translateX(${basKe}px)`;
+      n.style.transform = `translateX(${basN}px)`;
       harf.slice(1).forEach((h) => { h.style.opacity = "0"; });
       y.style.visibility = "visible";
       if (Capacitor.isNativePlatform()) void SplashScreen.hide({ fadeOutDuration: 0 }).catch(() => {});
