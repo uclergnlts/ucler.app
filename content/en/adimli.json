@@ -20957,5 +20957,354 @@
    "When fertilizer washes into a lake, algae multiply. The bacteria that decompose dead algae use up the oxygen. This is called <b>eutrophication</b>."
   ],
   "soruOnce": true
+ },
+ "populasyon-komunite": {
+  "id": "populasyon-komunite",
+  "ders": "biyoloji",
+  "konu": "populasyon-komunite",
+  "baslik": "Community and population ecology",
+  "ozet": "Keep a population steady, compare distributions, build the J and S curves, follow predator and prey and repeat Gause's experiment.",
+  "adimlar": [
+   {
+    "baslik": "Births, deaths and migration",
+    "metin": "An island has 500 birds. In one year 60 chicks hatch, 80 birds die and 20 birds migrate away. How many birds must arrive from other islands for the number to stay the same?",
+    "sahne": {
+     "tur": "biy13-akis"
+    },
+    "deger": {
+     "g": 0
+    },
+    "kontroller": [
+     {
+      "ad": "g",
+      "etiket": "Immigrants",
+      "min": 0,
+      "max": 80,
+      "adim": 10
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "g": 40
+     },
+     "ipucu": "Births and immigrants increase the number, while deaths and emigrants decrease it. The two bars must be equal.",
+     "tamam": "60 + 40 = 80 + 20. Because the increase equals the decrease, the population stayed at 500."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Distribution",
+    "metin": "Tour the three distribution types.",
+    "sahne": {
+     "tur": "biy13-dagilim"
+    },
+    "deger": {
+     "d": 1
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Type",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "In a desert, shrubs compete for water with their roots, and the area around each shrub stays empty. How are these shrubs distributed?",
+     "secenekler": [
+      {
+       "yazi": "Clumped",
+       "neden": "In a clumped distribution, individuals gather around a resource. Here each shrub keeps its neighbors away."
+      },
+      {
+       "yazi": "Random",
+       "neden": "Random distribution appears when interactions between individuals are weak. Here there is strong competition."
+      },
+      {
+       "yazi": "Uniform",
+       "dogru": true,
+       "neden": "Competition for resources or territory defense keeps individuals evenly spaced."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "J curve",
+    "metin": "A jar with unlimited food holds 10 bacteria, and their number doubles every generation. Step through the generations and find the first one where the number passes 1,000.",
+    "sahne": {
+     "tur": "biy13-j"
+    },
+    "deger": {
+     "n": 0
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Generation",
+      "min": 0,
+      "max": 8,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 7
+     },
+     "ipucu": "The number goes 10, 20, 40, 80. Stop at the first generation that crosses the red line.",
+     "tamam": "In generation 7, the 10 bacteria reached 1,280. Even though the rate stays constant, the number added each generation grows. This is called exponential growth."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "S curve",
+    "metin": "Here the <b>carrying capacity</b> is K = 1,000. Find the population size at which growth is fastest.",
+    "sahne": {
+     "tur": "biy13-s"
+    },
+    "deger": {
+     "n": 100
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Population",
+      "min": 50,
+      "max": 950,
+      "adim": 50
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": [
+       450,
+       550
+      ]
+     },
+     "ipucu": "In a small population, few individuals are reproducing. Near K, limiting factors stop the growth. Look for the peak of the lower curve.",
+     "tamam": "Growth is fastest around K/2 = 500, where the S curve is steepest. As the population nears K, growth drops to zero. K is not fixed. It changes when the environment changes."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Limiting factors",
+    "metin": "Some factors have a stronger effect as crowding increases, and these are called <b>density-dependent</b> factors. Others ignore crowding, and these are called <b>density-independent</b> factors. Change the density and the event.",
+    "sahne": {
+     "tur": "biy13-faktor"
+    },
+    "deger": {
+     "y": 1,
+     "o": 1
+    },
+    "kontroller": [
+     {
+      "ad": "y",
+      "etiket": "Density",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     },
+     {
+      "ad": "o",
+      "etiket": "Event",
+      "min": 1,
+      "max": 2,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "By this measure, what kind of factor is a flood?",
+     "secenekler": [
+      {
+       "yazi": "Density-dependent",
+       "neden": "A flood affects most individuals in the area regardless of crowding. Density-dependent factors are things like epidemics, competition and predation."
+      },
+      {
+       "yazi": "Density-independent",
+       "dogru": true,
+       "neden": "Frost, drought, floods and fires affect sparse and dense populations at a similar rate. The test here is whether the effect grows as crowding increases."
+      },
+      {
+       "yazi": "Affects only sparse populations",
+       "neden": "A flood affects populations of any density, and its effect does not depend on density."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Predator and prey",
+    "metin": "In Canada, the numbers of snowshoe hares and the lynx that hunt them were recorded for years. The two populations affect each other. Predict first, then watch.",
+    "sahne": {
+     "tur": "biy13-avavci",
+     "sure": 7
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "When does the lynx population peak?",
+     "secenekler": [
+      {
+       "yazi": "Shortly after the hare peak",
+       "dogru": true,
+       "neden": "When prey multiply, the predator's food increases and the predator multiplies afterward. More predators reduce the prey, and then the predators decline too. This cycle takes about 10 years."
+      },
+      {
+       "yazi": "At the same time as the hares",
+       "neden": "For the predator to multiply, the prey must multiply first and the young must grow. That takes time."
+      },
+      {
+       "yazi": "Shortly before the hare peak",
+       "neden": "The predator cannot multiply before its food increases. The predator's rise follows the prey's rise."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Competitive exclusion",
+    "metin": "Gause fed two <em>Paramecium</em> species the same food. Grow them in separate jars first, then in the same jar.",
+    "sahne": {
+     "tur": "biy13-gause",
+     "sure": 6
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Same jar",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "Why did <em>P. caudatum</em> die out in the shared jar?",
+     "secenekler": [
+      {
+       "yazi": "P. aurelia hunted it",
+       "neden": "Both species feed on bacteria, and neither eats the other. The loss comes from competition for food."
+      },
+      {
+       "yazi": "Both used the same limited food in the same way",
+       "dogru": true,
+       "neden": "Both species fed on the same bacteria. The faster-growing <em>P. aurelia</em> used up the food, and its rival starved and died out."
+      },
+      {
+       "yazi": "Both declined because the jar was small",
+       "neden": "<em>P. aurelia</em> did not decline. It multiplied and leveled off. Only its rival died out."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Predator-prey lab",
+    "metin": "Hares (prey) and lynx (predators) live in a forest, and each second equals one year. Watch their numbers and the graph of the last 16 years. You can remove the lynx or restart everything.",
+    "sahne": {
+     "tur": "sim-avavci"
+    },
+    "deger": {
+     "avci": 1,
+     "yenile": 0,
+     "tur": 0,
+     "dongu": 0,
+     "doydu": 0
+    },
+    "kontroller": [
+     {
+      "ad": "avci",
+      "etiket": "Lynx",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "yenile",
+      "etiket": "Restart",
+      "min": 0,
+      "max": 1,
+      "tur": "dugme"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "Watch one cycle and see which one <b>peaks</b> first.",
+       "hedef": {
+        "avci": 1,
+        "dongu": [
+         1,
+         99
+        ]
+       },
+       "coz": [
+        {
+         "avci": 1
+        }
+       ],
+       "tamam": "The hares peaked first, and the lynx peaked after them."
+      },
+      {
+       "yazi": "<b>Remove</b> the lynx and see whether the hares grow forever.",
+       "hedef": {
+        "avci": 0,
+        "doydu": 1
+       },
+       "coz": [
+        {
+         "avci": 0
+        }
+       ],
+       "tamam": "The hares did not grow forever. They grew fast but stopped around 2,000 when food ran short. Even without predators, environmental resistance limits growth and an <b>S curve</b> forms."
+      },
+      {
+       "yazi": "<b>Bring back</b> the lynx and watch a new cycle.",
+       "hedef": [
+        {
+         "avci": 0
+        },
+        {
+         "avci": 1,
+         "dongu": [
+          1,
+          99
+         ]
+        }
+       ],
+       "sirali": true,
+       "coz": [
+        {
+         "avci": 0
+        },
+        {
+         "avci": 1
+        }
+       ],
+       "tamam": "Facing many hares, the lynx multiplied quickly and reduced the hares. Then they declined too, and the cycle began again."
+      }
+     ]
+    },
+    "kart": 10
+   }
+  ],
+  "kapanis": [
+   "Births and immigrants increase a population, while deaths and emigrants decrease it.",
+   "Even at the same density, the distribution can be clumped, uniform or random.",
+   "Unlimited resources give a J curve and limited resources an S curve. Growth is fastest around K/2.",
+   "Epidemics and competition are density-dependent factors. Frost and floods are density-independent.",
+   "The predator's numbers peak after the prey's. Of two species sharing the same limited resource, one is excluded."
+  ],
+  "soruOnce": true
  }
 }

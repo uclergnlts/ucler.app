@@ -9383,5 +9383,402 @@
     ]
    }
   ]
+ },
+ "populasyon-komunite": {
+  "title": "Community and population ecology",
+  "summary": "How do populations grow, and how do species live together?",
+  "cards": [
+   {
+    "h": "Population: density and distribution",
+    "p": "Individuals of the same species living in an area form a <b>population</b>. The number of individuals per unit area is the <b>density</b>. Individuals can be distributed in a <b>clumped</b>, <b>uniform</b> or <b>random</b> pattern.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>density = number of individuals / area</text><rect x='12' y='30' width='88' height='88' rx='4' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)' stroke-width='1.2'/><text x='56' y='138' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>clumped</text><text x='56' y='154' font-size='10' fill='var(--muted)' text-anchor='middle'>herds, patchy resources</text><rect x='116' y='30' width='88' height='88' rx='4' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)' stroke-width='1.2'/><text x='160' y='138' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>uniform</text><text x='160' y='154' font-size='10' fill='var(--muted)' text-anchor='middle'>territory defense</text><rect x='220' y='30' width='88' height='88' rx='4' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)' stroke-width='1.2'/><text x='264' y='138' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>random</text><text x='264' y='154' font-size='10' fill='var(--muted)' text-anchor='middle'>resources everywhere</text><circle cx='27.0' cy='48.0' r='3.5' fill='var(--c3)'/><circle cx='37.0' cy='48.0' r='3.5' fill='var(--c3)'/><circle cx='28.0' cy='57.0' r='3.5' fill='var(--c3)'/><circle cx='38.0' cy='57.0' r='3.5' fill='var(--c3)'/><circle cx='73.0' cy='60.0' r='3.5' fill='var(--c3)'/><circle cx='83.0' cy='60.0' r='3.5' fill='var(--c3)'/><circle cx='74.0' cy='69.0' r='3.5' fill='var(--c3)'/><circle cx='84.0' cy='69.0' r='3.5' fill='var(--c3)'/><circle cx='39.0' cy='94.0' r='3.5' fill='var(--c3)'/><circle cx='49.0' cy='94.0' r='3.5' fill='var(--c3)'/><circle cx='40.0' cy='103.0' r='3.5' fill='var(--c3)'/><circle cx='50.0' cy='103.0' r='3.5' fill='var(--c3)'/><circle cx='130.0' cy='48.0' r='3.5' fill='var(--c3)'/><circle cx='130.0' cy='74.0' r='3.5' fill='var(--c3)'/><circle cx='130.0' cy='100.0' r='3.5' fill='var(--c3)'/><circle cx='150.0' cy='48.0' r='3.5' fill='var(--c3)'/><circle cx='150.0' cy='74.0' r='3.5' fill='var(--c3)'/><circle cx='150.0' cy='100.0' r='3.5' fill='var(--c3)'/><circle cx='170.0' cy='48.0' r='3.5' fill='var(--c3)'/><circle cx='170.0' cy='74.0' r='3.5' fill='var(--c3)'/><circle cx='170.0' cy='100.0' r='3.5' fill='var(--c3)'/><circle cx='190.0' cy='48.0' r='3.5' fill='var(--c3)'/><circle cx='190.0' cy='74.0' r='3.5' fill='var(--c3)'/><circle cx='190.0' cy='100.0' r='3.5' fill='var(--c3)'/><circle cx='232.0' cy='44.0' r='3.5' fill='var(--c3)'/><circle cx='262.0' cy='38.0' r='3.5' fill='var(--c3)'/><circle cx='290.0' cy='52.0' r='3.5' fill='var(--c3)'/><circle cx='246.0' cy='66.0' r='3.5' fill='var(--c3)'/><circle cx='276.0' cy='74.0' r='3.5' fill='var(--c3)'/><circle cx='234.0' cy='92.0' r='3.5' fill='var(--c3)'/><circle cx='258.0' cy='100.0' r='3.5' fill='var(--c3)'/><circle cx='296.0' cy='96.0' r='3.5' fill='var(--c3)'/><circle cx='284.0' cy='110.0' r='3.5' fill='var(--c3)'/><circle cx='238.0' cy='112.0' r='3.5' fill='var(--c3)'/><circle cx='266.0' cy='56.0' r='3.5' fill='var(--c3)'/><circle cx='300.0' cy='70.0' r='3.5' fill='var(--c3)'/><path d='M8 166 H312' stroke='var(--line)' stroke-width='1' fill='none'/><text x='160' y='184' font-size='12' fill='var(--ink)' text-anchor='middle'>All three: 12 individuals / 4 m² = 3 individuals/m²</text><text x='160' y='198' font-size='10' fill='var(--muted)' text-anchor='middle'>same density, different distribution</text></svg>",
+    "key": "The most common distribution in nature is clumped. Uniform distribution results from territory defense or competition, while random distribution appears when resources are equal everywhere."
+   },
+   {
+    "h": "Age pyramids and sex ratio",
+    "p": "The base of an <b>age pyramid</b> shows the young. In an <b>expanding</b> pyramid the population grows, in a <b>stable</b> pyramid it stays constant, and in a <b>contracting</b> pyramid it shrinks. The sex ratio also affects reproductive power.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='16' font-size='11' fill='var(--muted)' text-anchor='middle'>left: male · right: female · bottom: young, top: old</text><rect x='15' y='132' width='40' height='16' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)' stroke-width='1'/><rect x='55' y='132' width='40' height='16' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1'/><rect x='23' y='114' width='32' height='16' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)' stroke-width='1'/><rect x='55' y='114' width='32' height='16' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1'/><rect x='31' y='96' width='24' height='16' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)' stroke-width='1'/><rect x='55' y='96' width='24' height='16' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1'/><rect x='39' y='78' width='16' height='16' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)' stroke-width='1'/><rect x='55' y='78' width='16' height='16' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1'/><rect x='47' y='60' width='8' height='16' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)' stroke-width='1'/><rect x='55' y='60' width='8' height='16' fill='var(--c3)' fill-opacity='0.2' stroke='var(--c3)' stroke-width='1'/><path d='M55 50 V152' stroke='var(--ink)' stroke-width='1' fill='none'/><text x='55' y='170' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>expanding</text><text x='55' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>growing</text><rect x='132' y='132' width='28' height='16' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><rect x='160' y='132' width='28' height='16' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1'/><rect x='132' y='114' width='28' height='16' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><rect x='160' y='114' width='28' height='16' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1'/><rect x='133' y='96' width='27' height='16' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><rect x='160' y='96' width='27' height='16' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1'/><rect x='135' y='78' width='25' height='16' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><rect x='160' y='78' width='25' height='16' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1'/><rect x='143' y='60' width='17' height='16' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><rect x='160' y='60' width='17' height='16' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1'/><path d='M160 50 V152' stroke='var(--ink)' stroke-width='1' fill='none'/><text x='160' y='170' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>stable</text><text x='160' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>constant</text><rect x='247' y='132' width='18' height='16' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><rect x='265' y='132' width='18' height='16' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1'/><rect x='241' y='114' width='24' height='16' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><rect x='265' y='114' width='24' height='16' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1'/><rect x='237' y='96' width='28' height='16' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><rect x='265' y='96' width='28' height='16' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1'/><rect x='237' y='78' width='28' height='16' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><rect x='265' y='78' width='28' height='16' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1'/><rect x='243' y='60' width='22' height='16' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><rect x='265' y='60' width='22' height='16' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1'/><path d='M265 50 V152' stroke='var(--ink)' stroke-width='1' fill='none'/><text x='265' y='170' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>contracting</text><text x='265' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>shrinking</text><text x='160' y='38' font-size='11' fill='var(--ink)' text-anchor='middle'>the number of pre-reproductive young sets the future</text></svg>",
+    "key": "The base of the pyramid shows the population's future. A high share of young people means the population will grow.",
+    "once": {
+     "soru": "A country has far more children than elderly people. How will its population change?",
+     "secenekler": [
+      {
+       "yazi": "It will grow",
+       "neden": "The many young people will have children later. So the population grows.",
+       "dogru": true
+      },
+      {
+       "yazi": "It will shrink",
+       "neden": "With few young people the population would shrink, but here there are many."
+      },
+      {
+       "yazi": "It will stay the same",
+       "neden": "If the age groups were similar in size, the population would stay constant."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Births, deaths and migration",
+    "p": "<b>Births</b> and <b>immigration</b> increase a population, while <b>deaths</b> and <b>emigration</b> decrease it. In a closed population with no migration, only births and deaths set its size.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='pop-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker><marker id='pop-3b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><ellipse cx='160' cy='82' rx='58' ry='38' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.5'/><text x='160' y='80' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>population</text><text x='160' y='96' font-size='12' fill='var(--muted)' text-anchor='middle'>(N)</text><path d='M30 40 L100 62' stroke='var(--c3)' stroke-width='2' fill='none' marker-end='url(#pop-3)'/><text x='12' y='32' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>births</text><path d='M30 124 L100 102' stroke='var(--c3)' stroke-width='2' fill='none' marker-end='url(#pop-3)'/><text x='12' y='142' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>immigration</text><path d='M220 62 L290 40' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#pop-3b)'/><text x='308' y='32' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>deaths</text><path d='M220 102 L290 124' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#pop-3b)'/><text x='308' y='142' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>emigration</text><rect x='20' y='160' width='280' height='30' rx='6' fill='var(--panel)' fill-opacity='1' stroke='var(--panel)' stroke-width='1'/><text x='160' y='180' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>ΔN = (births + immigrants) − (deaths + emigrants)</text></svg>",
+    "key": "If births plus immigrants equal deaths plus emigrants, the population size does not change."
+   },
+   {
+    "h": "Growth: J curve and S curve",
+    "p": "With unlimited resources, a population grows at a constant rate and forms a <b>J curve</b>. In nature, <b>environmental resistance</b> slows growth. The population levels off at the <b>carrying capacity (K)</b> and forms an <b>S curve</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='pop-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><marker id='pop-4b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M40 170 H305' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#pop-4)'/><path d='M40 170 V22' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#pop-4b)'/><text x='305' y='188' font-size='11' fill='var(--muted)' text-anchor='end'>time</text><text x='46' y='30' font-size='11' fill='var(--muted)' text-anchor='start'>number of individuals</text><path d='M40 70 H300' stroke='var(--muted)' stroke-width='1.2' fill='none' stroke-dasharray='5 3'/><text x='34' y='74' font-size='13' fill='var(--ink)' text-anchor='end' font-weight='700'>K</text><path d='M40.0 167.6 L40.8 167.5 L41.6 167.4 L42.3 167.3 L43.1 167.3 L43.9 167.2 L44.7 167.1 L45.5 167.0 L46.2 166.9 L47.0 166.8 L47.8 166.7 L48.6 166.6 L49.4 166.5 L50.1 166.4 L50.9 166.3 L51.7 166.2 L52.5 166.1 L53.3 165.9 L54.0 165.8 L54.8 165.7 L55.6 165.6 L56.4 165.4 L57.2 165.3 L57.9 165.1 L58.7 165.0 L59.5 164.8 L60.3 164.7 L61.1 164.5 L61.8 164.4 L62.6 164.2 L63.4 164.0 L64.2 163.8 L65.0 163.6 L65.7 163.4 L66.5 163.2 L67.3 163.0 L68.1 162.8 L68.9 162.6 L69.6 162.4 L70.4 162.1 L71.2 161.9 L72.0 161.7 L72.8 161.4 L73.5 161.1 L74.3 160.9 L75.1 160.6 L75.9 160.3 L76.7 160.0 L77.4 159.7 L78.2 159.4 L79.0 159.1 L79.8 158.7 L80.6 158.4 L81.3 158.0 L82.1 157.7 L82.9 157.3 L83.7 156.9 L84.5 156.5 L85.2 156.1 L86.0 155.7 L86.8 155.2 L87.6 154.8 L88.4 154.3 L89.1 153.9 L89.9 153.4 L90.7 152.9 L91.5 152.3 L92.3 151.8 L93.0 151.2 L93.8 150.7 L94.6 150.1 L95.4 149.5 L96.2 148.9 L96.9 148.2 L97.7 147.5 L98.5 146.9 L99.3 146.2 L100.1 145.4 L100.8 144.7 L101.6 143.9 L102.4 143.1 L103.2 142.3 L104.0 141.5 L104.7 140.6 L105.5 139.7 L106.3 138.8 L107.1 137.8 L107.9 136.8 L108.6 135.8 L109.4 134.8 L110.2 133.7 L111.0 132.6 L111.8 131.5 L112.5 130.3 L113.3 129.1 L114.1 127.8 L114.9 126.6 L115.7 125.2 L116.4 123.9 L117.2 122.5 L118.0 121.0 L118.8 119.5 L119.6 118.0 L120.3 116.4 L121.1 114.8 L121.9 113.1 L122.7 111.3 L123.5 109.6 L124.2 107.7 L125.0 105.8 L125.8 103.9 L126.6 101.9 L127.4 99.8 L128.1 97.6 L128.9 95.4 L129.7 93.2 L130.5 90.8 L131.3 88.4 L132.0 85.9 L132.8 83.4 L133.6 80.7 L134.4 78.0 L135.2 75.2 L135.9 72.3 L136.7 69.4 L137.5 66.3 L138.3 63.1 L139.1 59.9 L139.8 56.5 L140.6 53.1 L141.4 49.5 L142.2 45.8 L143.0 42.1 L143.7 38.2 L144.5 34.1 L145.3 30.0' stroke='var(--c2)' stroke-width='2.2' fill='none'/><text x='151.3' y='42.00620232817991' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>J: exponential</text><path d='M40.0 167.6 L42.6 167.3 L45.2 167.0 L47.8 166.7 L50.4 166.4 L53.0 166.0 L55.6 165.6 L58.2 165.2 L60.8 164.7 L63.4 164.2 L66.0 163.6 L68.6 163.0 L71.2 162.3 L73.8 161.6 L76.4 160.8 L79.0 159.9 L81.6 159.0 L84.2 158.0 L86.8 156.9 L89.4 155.7 L92.0 154.4 L94.6 153.0 L97.2 151.6 L99.8 150.0 L102.4 148.4 L105.0 146.7 L107.6 144.8 L110.2 142.9 L112.8 140.9 L115.4 138.8 L118.0 136.6 L120.6 134.3 L123.2 132.0 L125.8 129.6 L128.4 127.2 L131.0 124.7 L133.6 122.2 L136.2 119.7 L138.8 117.2 L141.4 114.7 L144.0 112.3 L146.6 109.9 L149.2 107.5 L151.8 105.2 L154.4 102.9 L157.0 100.8 L159.6 98.7 L162.2 96.7 L164.8 94.8 L167.4 93.0 L170.0 91.2 L172.6 89.6 L175.2 88.1 L177.8 86.6 L180.4 85.3 L183.0 84.1 L185.6 82.9 L188.2 81.8 L190.8 80.8 L193.4 79.9 L196.0 79.0 L198.6 78.2 L201.2 77.5 L203.8 76.8 L206.4 76.2 L209.0 75.7 L211.6 75.2 L214.2 74.7 L216.8 74.3 L219.4 73.9 L222.0 73.5 L224.6 73.2 L227.2 72.9 L229.8 72.6 L232.4 72.4 L235.0 72.2 L237.6 72.0 L240.2 71.8 L242.8 71.6 L245.4 71.5 L248.0 71.3 L250.6 71.2 L253.2 71.1 L255.8 71.0 L258.4 70.9 L261.0 70.8 L263.6 70.7 L266.2 70.7 L268.8 70.6 L271.4 70.5 L274.0 70.5 L276.6 70.4 L279.2 70.4 L281.8 70.4 L284.4 70.3 L287.0 70.3 L289.6 70.3 L292.2 70.2 L294.8 70.2 L297.4 70.2 L300.0 70.2' stroke='var(--c3)' stroke-width='2.2' fill='none'/><text x='300' y='88' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='700'>S: logistic</text><path d='M40 120.0 H135.9' stroke='var(--line)' stroke-width='1' fill='none' stroke-dasharray='5 3'/><text x='34' y='124.0' font-size='11' fill='var(--muted)' text-anchor='end'>K/2</text><circle cx='135.9' cy='120.0' r='4' fill='var(--c3)'/><text x='143.91086580696236' y='138.0' font-size='11' fill='var(--c3)' text-anchor='start'>fastest growth</text></svg>",
+    "key": "An organism's maximum reproductive power is called its biotic potential. K is the largest number of individuals the environment can support. The J curve doesn't last long in nature."
+   },
+   {
+    "h": "Limiting factors",
+    "p": "The effect of <b>density-dependent</b> factors such as competition, epidemics and predation grows as crowding increases. <b>Density-independent</b> factors such as frost, drought, floods and fires act regardless of crowding.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='10' width='148' height='30' rx='6' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)' stroke-width='1.5'/><text x='82' y='30' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>density-dependent</text><rect x='164' y='10' width='148' height='30' rx='6' fill='var(--c1)' fill-opacity='0.18' stroke='var(--c1)' stroke-width='1.5'/><text x='238' y='30' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>density-independent</text><text x='18' y='62' font-size='12' fill='var(--ink)' text-anchor='start'>• competition for food</text><text x='174' y='62' font-size='12' fill='var(--ink)' text-anchor='start'>• frost, extreme heat</text><text x='18' y='82' font-size='12' fill='var(--ink)' text-anchor='start'>• competition for space, nests</text><text x='174' y='82' font-size='12' fill='var(--ink)' text-anchor='start'>• drought</text><text x='18' y='102' font-size='12' fill='var(--ink)' text-anchor='start'>• epidemic disease</text><text x='174' y='102' font-size='12' fill='var(--ink)' text-anchor='start'>• flood</text><text x='18' y='122' font-size='12' fill='var(--ink)' text-anchor='start'>• parasites</text><text x='174' y='122' font-size='12' fill='var(--ink)' text-anchor='start'>• forest fire</text><text x='18' y='142' font-size='12' fill='var(--ink)' text-anchor='start'>• predation</text><text x='174' y='142' font-size='12' fill='var(--ink)' text-anchor='start'>• storm</text><text x='18' y='162' font-size='12' fill='var(--ink)' text-anchor='start'>• waste buildup</text><text x='174' y='162' font-size='12' fill='var(--ink)' text-anchor='start'>• volcanic eruption</text><path d='M160 48 V180' stroke='var(--line)' stroke-width='1' fill='none'/><text x='82' y='192' font-size='10' fill='var(--c2)' text-anchor='middle'>effect grows with crowding</text><text x='238' y='192' font-size='10' fill='var(--c1)' text-anchor='middle'>ignores crowding</text></svg>",
+    "key": "The main brake that keeps a population near its carrying capacity (K) is density-dependent factors."
+   },
+   {
+    "h": "r and K strategies",
+    "p": "<b>r-strategists</b> have many small offspring, give them no care and live short lives. Insects are an example. <b>K-strategists</b> have few offspring, care for them and live long. Like elephants, their numbers stay close to K.",
+    "svg": "<svg viewBox='0 0 320 200'><g transform='translate(80 0)'><text x='78' y='18' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>r</text><text x='128' y='18' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>K</text><rect x='6' y='30' width='148' height='24' rx='4' fill='var(--panel)'/><text x='12' y='46' font-size='11' fill='var(--muted)' text-anchor='start'>offspring</text><text x='78' y='46' font-size='12' fill='var(--ink)' text-anchor='middle'>many</text><text x='128' y='46' font-size='12' fill='var(--ink)' text-anchor='middle'>few</text><rect x='6' y='58' width='148' height='24' rx='4' fill='var(--panel)'/><text x='12' y='74' font-size='11' fill='var(--muted)' text-anchor='start'>size</text><text x='78' y='74' font-size='12' fill='var(--ink)' text-anchor='middle'>small</text><text x='128' y='74' font-size='12' fill='var(--ink)' text-anchor='middle'>large</text><rect x='6' y='86' width='148' height='24' rx='4' fill='var(--panel)'/><text x='12' y='102' font-size='11' fill='var(--muted)' text-anchor='start'>lifespan</text><text x='78' y='102' font-size='12' fill='var(--ink)' text-anchor='middle'>short</text><text x='128' y='102' font-size='12' fill='var(--ink)' text-anchor='middle'>long</text><rect x='6' y='114' width='148' height='24' rx='4' fill='var(--panel)'/><text x='12' y='130' font-size='11' fill='var(--muted)' text-anchor='start'>care</text><text x='78' y='130' font-size='12' fill='var(--ink)' text-anchor='middle'>none</text><text x='128' y='130' font-size='12' fill='var(--ink)' text-anchor='middle'>yes</text><rect x='6' y='142' width='148' height='24' rx='4' fill='var(--panel)'/><text x='12' y='158' font-size='11' fill='var(--muted)' text-anchor='start'>example</text><text x='78' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>insect</text><text x='128' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>elephant</text><text x='80' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>r: multiply fast · K: stay at K</text></g></svg>",
+    "key": "r-strategists multiply quickly in changing environments. They are often the first to settle after a fire or in a new pond.",
+    "once": {
+     "soru": "A fish lays thousands of eggs but does not care for its young. An elephant cares for its single calf for years. Which loses most of its offspring?",
+     "secenekler": [
+      {
+       "yazi": "The fish",
+       "neden": "Most young without care die. The large number of eggs makes up for this loss.",
+       "dogru": true
+      },
+      {
+       "yazi": "The elephant",
+       "neden": "The elephant protects its calf, and the calf's chance of survival is high."
+      },
+      {
+       "yazi": "Both equally",
+       "neden": "Care greatly raises the offspring's chance of survival."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Survivorship curves",
+    "p": "A survivorship curve shows how many individuals are alive at each age. In <b>Type I</b>, deaths happen in old age, and in <b>Type II</b> they happen at an equal rate at every age. In <b>Type III</b>, deaths are concentrated among the young.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='pop-hk' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M60 170 H296' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#pop-hk)'/><path d='M60 170 V24' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#pop-hk)'/><text x='296' y='186' font-size='11' fill='var(--muted)' text-anchor='end'>age</text><text x='66' y='22' font-size='11' fill='var(--muted)' text-anchor='start'>share surviving</text><text x='54' y='44' font-size='10' fill='var(--muted)' text-anchor='end'>100%</text><text x='54' y='173' font-size='10' fill='var(--muted)' text-anchor='end'>0</text><path d='M60 40 C200 40 230 60 262 168' stroke='var(--c1)' stroke-width='2.5' fill='none'/><path d='M60 40 C110 120 170 150 272 164' stroke='var(--c3)' stroke-width='2.5' fill='none'/><path d='M60 40 C64 140 80 162 272 167' stroke='var(--c2)' stroke-width='2.5' fill='none'/><text x='196' y='36' font-size='11' fill='var(--c1)' text-anchor='start' font-weight='700'>Type I: humans, elephants</text><text x='140' y='104' font-size='11' fill='var(--c3)' text-anchor='start' font-weight='700'>Type II: birds</text><text x='66' y='164' font-size='10' fill='var(--c2)' text-anchor='start' font-weight='700'>Type III: fish</text></svg>",
+    "key": "Humans and elephants are Type I, some birds are Type II, and fish and frogs are Type III.",
+    "once": {
+     "soru": "At what stage do most people die today?",
+     "secenekler": [
+      {
+       "yazi": "In old age",
+       "neden": "Thanks to care and medicine, most people live until old age.",
+       "dogru": true
+      },
+      {
+       "yazi": "As babies",
+       "neden": "Infant deaths have dropped sharply today."
+      },
+      {
+       "yazi": "Equally at every age",
+       "neden": "The death rate rises clearly in old age."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Niche and the competitive exclusion principle",
+    "p": "All the populations in an area form a <b>community</b>. Each species has a <b>niche</b>, or role, in the community. Two species that use the same limited resource in the same way cannot live together for long. This is the principle of <b>competitive exclusion</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='pop-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><marker id='pop-7b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M40 150 H308' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#pop-7)'/><path d='M40 150 V26' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#pop-7b)'/><text x='308' y='166' font-size='11' fill='var(--muted)' text-anchor='end'>days</text><text x='46' y='22' font-size='11' fill='var(--muted)' text-anchor='start'>number of individuals · same jar</text><path d='M40.0 146.9 L42.5 146.6 L45.0 146.2 L47.5 145.8 L50.0 145.3 L52.5 144.8 L55.0 144.2 L57.5 143.6 L60.0 142.9 L62.5 142.2 L65.0 141.4 L67.5 140.4 L70.0 139.5 L72.5 138.4 L75.0 137.2 L77.5 135.9 L80.0 134.6 L82.5 133.1 L85.0 131.5 L87.5 129.8 L90.0 128.0 L92.5 126.1 L95.0 124.1 L97.5 122.0 L100.0 119.8 L102.5 117.4 L105.0 115.0 L107.5 112.6 L110.0 110.1 L112.5 107.5 L115.0 104.9 L117.5 102.3 L120.0 99.7 L122.5 97.1 L125.0 94.5 L127.5 92.0 L130.0 89.6 L132.5 87.2 L135.0 84.9 L137.5 82.7 L140.0 80.6 L142.5 78.6 L145.0 76.7 L147.5 74.9 L150.0 73.2 L152.5 71.6 L155.0 70.2 L157.5 68.8 L160.0 67.6 L162.5 66.4 L165.0 65.4 L167.5 64.4 L170.0 63.5 L172.5 62.7 L175.0 62.0 L177.5 61.3 L180.0 60.7 L182.5 60.1 L185.0 59.6 L187.5 59.1 L190.0 58.7 L192.5 58.4 L195.0 58.0 L197.5 57.7 L200.0 57.4 L202.5 57.2 L205.0 57.0 L207.5 56.8 L210.0 56.6 L212.5 56.4 L215.0 56.3 L217.5 56.1 L220.0 56.0 L222.5 55.9 L225.0 55.8 L227.5 55.7 L230.0 55.7 L232.5 55.6 L235.0 55.5 L237.5 55.5 L240.0 55.4 L242.5 55.4 L245.0 55.3 L247.5 55.3 L250.0 55.3 L252.5 55.2 L255.0 55.2 L257.5 55.2 L260.0 55.2 L262.5 55.2 L265.0 55.1 L267.5 55.1 L270.0 55.1 L272.5 55.1 L275.0 55.1 L277.5 55.1 L280.0 55.1 L282.5 55.1 L285.0 55.1 L287.5 55.1 L290.0 55.0' stroke='var(--c1)' stroke-width='2.2' fill='none'/><path d='M40.0 148.1 L42.5 147.8 L45.0 147.5 L47.5 147.1 L50.0 146.7 L52.5 146.2 L55.0 145.7 L57.5 145.1 L60.0 144.4 L62.5 143.7 L65.0 142.9 L67.5 141.9 L70.0 140.9 L72.5 139.8 L75.0 138.5 L77.5 137.2 L80.0 135.7 L82.5 134.1 L85.0 132.4 L87.5 130.6 L90.0 128.8 L92.5 126.8 L95.0 124.8 L97.5 122.7 L100.0 120.6 L102.5 118.5 L105.0 116.4 L107.5 114.4 L110.0 112.4 L112.5 110.5 L115.0 108.6 L117.5 108.6 L120.0 108.8 L122.5 109.2 L125.0 109.6 L127.5 110.2 L130.0 110.9 L132.5 111.7 L135.0 112.6 L137.5 113.5 L140.0 114.5 L142.5 115.5 L145.0 116.6 L147.5 117.6 L150.0 118.7 L152.5 119.7 L155.0 120.8 L157.5 121.8 L160.0 122.8 L162.5 123.8 L165.0 124.8 L167.5 125.7 L170.0 126.7 L172.5 127.6 L175.0 128.4 L177.5 129.3 L180.0 130.1 L182.5 130.9 L185.0 131.7 L187.5 132.4 L190.0 133.1 L192.5 133.8 L195.0 134.4 L197.5 135.1 L200.0 135.7 L202.5 136.3 L205.0 136.8 L207.5 137.3 L210.0 137.9 L212.5 138.4 L215.0 138.8 L217.5 139.3 L220.0 139.7 L222.5 140.2 L225.0 140.6 L227.5 140.9 L230.0 141.3 L232.5 141.7 L235.0 142.0 L237.5 142.3 L240.0 142.7 L242.5 143.0 L245.0 143.2 L247.5 143.5 L250.0 143.8 L252.5 144.0 L255.0 144.3 L257.5 144.5 L260.0 144.8 L262.5 145.0 L265.0 145.2 L267.5 145.4 L270.0 145.6 L272.5 145.7 L275.0 145.9 L277.5 146.1 L280.0 146.2 L282.5 146.4 L285.0 146.6 L287.5 146.7 L290.0 146.8' stroke='var(--c2)' stroke-width='2.2' fill='none'/><text x='290' y='46' font-size='12' fill='var(--c1)' text-anchor='end' font-weight='700'><tspan font-style='italic'>P. aurelia</tspan> wins</text><text x='150' y='116' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'><tspan font-style='italic'>P. caudatum</tspan> dies out</text><text x='160' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>In separate jars, both grow along an S curve.</text><text x='160' y='197' font-size='11' fill='var(--muted)' text-anchor='middle'>When they share the same resource, one is excluded.</text></svg>",
+    "key": "Gause's Paramecium experiment demonstrated this principle. Species can separate their niches by choosing different foods, times or areas."
+   },
+   {
+    "h": "Types of competition and amensalism",
+    "p": "<b>Intraspecific competition</b> happens between individuals of the same species and is usually the fiercest. <b>Interspecific competition</b> happens between species whose niches overlap. In <b>amensalism</b>, one species is harmed and the other is unaffected.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='pop-r1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='80' y='18' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>intraspecific competition</text><text x='240' y='18' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>interspecific competition</text><rect x='68' y='52' width='24' height='18' rx='3' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)' stroke-width='1.2'/><circle cx='40' cy='40' r='9' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1.3'/><circle cx='122' cy='44' r='9' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1.3'/><circle cx='44' cy='86' r='9' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1.3'/><circle cx='118' cy='84' r='9' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1.3'/><path d='M49 44 L64 54' stroke='var(--ink)' stroke-width='1.1' marker-end='url(#pop-r1)'/><path d='M113 47 L96 55' stroke='var(--ink)' stroke-width='1.1' marker-end='url(#pop-r1)'/><path d='M52 82 L64 70' stroke='var(--ink)' stroke-width='1.1' marker-end='url(#pop-r1)'/><path d='M109 81 L96 70' stroke='var(--ink)' stroke-width='1.1' marker-end='url(#pop-r1)'/><text x='80' y='112' font-size='10' fill='var(--muted)' text-anchor='middle'>identical niche</text><path d='M160 26 V120' stroke='var(--line)' stroke-width='1'/><ellipse cx='218' cy='64' rx='38' ry='28' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)' stroke-width='1.3'/><ellipse cx='262' cy='64' rx='38' ry='28' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.3'/><text x='196' y='68' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>A</text><text x='284' y='68' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>B</text><text x='240' y='68' font-size='9.5' fill='var(--ink)' text-anchor='middle'>shared</text><text x='240' y='112' font-size='10' fill='var(--muted)' text-anchor='middle'>niches partly overlap</text><path d='M6 124 H314' stroke='var(--line)' stroke-width='1'/><circle cx='60' cy='162' r='32' fill='var(--muted)' fill-opacity='0.08' stroke='var(--muted)' stroke-width='1.2'/><circle cx='60' cy='162' r='17' fill='none' stroke='var(--c3)' stroke-width='1' stroke-dasharray='3 2'/><circle cx='60' cy='162' r='7' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)'/><circle cx='34' cy='146' r='2' fill='var(--c1)'/><circle cx='38' cy='178' r='2' fill='var(--c1)'/><circle cx='84' cy='150' r='2' fill='var(--c1)'/><circle cx='82' cy='178' r='2' fill='var(--c1)'/><circle cx='60' cy='136' r='2' fill='var(--c1)'/><circle cx='60' cy='188' r='2' fill='var(--c1)'/><circle cx='30' cy='162' r='2' fill='var(--c1)'/><circle cx='90' cy='164' r='2' fill='var(--c1)'/><text x='110' y='146' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>amensalism  0 / −</text><text x='110' y='166' font-size='11' fill='var(--c3)' text-anchor='start'>mold unaffected (0)</text><text x='110' y='184' font-size='11' fill='var(--c1)' text-anchor='start'>bacteria around it die (−)</text></svg>",
+    "key": "Penicillium mold stops bacteria around it from multiplying, and this is amensalism. Intraspecific competition limits a population in a density-dependent way.",
+    "once": {
+     "soru": "Between which is competition usually fiercest?",
+     "secenekler": [
+      {
+       "yazi": "Members of the same species",
+       "neden": "Members of the same species have identical niches. They compete for the same food and space.",
+       "dogru": true
+      },
+      {
+       "yazi": "Different species",
+       "neden": "The niches of different species only partly overlap."
+      },
+      {
+       "yazi": "Prey and predator",
+       "neden": "The predator-prey relationship is a feeding relationship, not competition."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Predator-prey relationship: the cycle",
+    "p": "Predator and prey numbers rise and fall in <b>cycles</b>. The predator's numbers peak after the prey's. Predators mostly catch weak individuals and so keep the prey population healthy.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='pop-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><marker id='pop-8b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M30 160 H305' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#pop-8)'/><path d='M30 160 V22' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#pop-8b)'/><text x='305' y='176' font-size='11' fill='var(--muted)' text-anchor='end'>years</text><text x='36' y='22' font-size='11' fill='var(--muted)' text-anchor='start'>number of individuals</text><path d='M38.0 95.0 L39.3 91.4 L40.6 87.8 L41.9 84.3 L43.2 80.8 L44.5 77.4 L45.9 74.0 L47.2 70.8 L48.5 67.7 L49.8 64.7 L51.1 61.9 L52.4 59.2 L53.7 56.6 L55.0 54.3 L56.3 52.2 L57.6 50.2 L59.0 48.5 L60.3 47.0 L61.6 45.8 L62.9 44.7 L64.2 43.9 L65.5 43.4 L66.8 43.1 L68.1 43.0 L69.4 43.2 L70.8 43.6 L72.1 44.3 L73.4 45.3 L74.7 46.4 L76.0 47.8 L77.3 49.4 L78.6 51.3 L79.9 53.3 L81.2 55.6 L82.5 58.0 L83.8 60.6 L85.2 63.4 L86.5 66.3 L87.8 69.4 L89.1 72.6 L90.4 75.9 L91.7 79.2 L93.0 82.7 L94.3 86.2 L95.6 89.8 L97.0 93.4 L98.3 97.0 L99.6 100.5 L100.9 104.1 L102.2 107.6 L103.5 111.1 L104.8 114.4 L106.1 117.7 L107.4 120.9 L108.7 124.0 L110.1 126.9 L111.4 129.6 L112.7 132.2 L114.0 134.6 L115.3 136.9 L116.6 138.9 L117.9 140.7 L119.2 142.3 L120.5 143.7 L121.8 144.8 L123.2 145.7 L124.5 146.4 L125.8 146.8 L127.1 147.0 L128.4 146.9 L129.7 146.6 L131.0 146.0 L132.3 145.2 L133.6 144.1 L134.9 142.9 L136.2 141.3 L137.6 139.6 L138.9 137.6 L140.2 135.5 L141.5 133.1 L142.8 130.6 L144.1 127.9 L145.4 125.0 L146.7 122.0 L148.0 118.9 L149.3 115.7 L150.7 112.3 L152.0 108.9 L153.3 105.4 L154.6 101.8 L155.9 98.3 L157.2 94.7 L158.5 91.1 L159.8 87.5 L161.1 84.0 L162.4 80.5 L163.8 77.1 L165.1 73.8 L166.4 70.5 L167.7 67.4 L169.0 64.4 L170.3 61.6 L171.6 58.9 L172.9 56.4 L174.2 54.1 L175.6 52.0 L176.9 50.1 L178.2 48.4 L179.5 46.9 L180.8 45.6 L182.1 44.6 L183.4 43.9 L184.7 43.3 L186.0 43.1 L187.3 43.0 L188.6 43.2 L190.0 43.7 L191.3 44.4 L192.6 45.3 L193.9 46.5 L195.2 47.9 L196.5 49.6 L197.8 51.4 L199.1 53.5 L200.4 55.8 L201.8 58.2 L203.1 60.9 L204.4 63.6 L205.7 66.6 L207.0 69.7 L208.3 72.9 L209.6 76.2 L210.9 79.6 L212.2 83.0 L213.5 86.5 L214.9 90.1 L216.2 93.7 L217.5 97.3 L218.8 100.9 L220.1 104.4 L221.4 107.9 L222.7 111.4 L224.0 114.7 L225.3 118.0 L226.6 121.2 L227.9 124.2 L229.3 127.1 L230.6 129.9 L231.9 132.5 L233.2 134.9 L234.5 137.1 L235.8 139.1 L237.1 140.9 L238.4 142.5 L239.7 143.8 L241.1 144.9 L242.4 145.8 L243.7 146.5 L245.0 146.9 L246.3 147.0 L247.6 146.9 L248.9 146.5 L250.2 146.0 L251.5 145.1 L252.8 144.0 L254.1 142.7 L255.5 141.2 L256.8 139.4 L258.1 137.4 L259.4 135.3 L260.7 132.9 L262.0 130.4 L263.3 127.6 L264.6 124.8 L265.9 121.8 L267.2 118.6 L268.6 115.4 L269.9 112.0 L271.2 108.6 L272.5 105.1 L273.8 101.5 L275.1 97.9 L276.4 94.3 L277.7 90.8 L279.0 87.2 L280.4 83.7 L281.7 80.2 L283.0 76.8 L284.3 73.5 L285.6 70.2 L286.9 67.1 L288.2 64.2 L289.5 61.4 L290.8 58.7 L292.1 56.2 L293.4 53.9 L294.8 51.8 L296.1 49.9 L297.4 48.2 L298.7 46.8 L300.0 45.5' stroke='var(--c3)' stroke-width='2.2' fill='none'/><path d='M38.0 148.5 L39.3 147.9 L40.6 147.2 L41.9 146.4 L43.2 145.6 L44.5 144.6 L45.9 143.6 L47.2 142.4 L48.5 141.3 L49.8 140.0 L51.1 138.7 L52.4 137.4 L53.7 136.0 L55.0 134.5 L56.3 133.1 L57.6 131.6 L59.0 130.1 L60.3 128.6 L61.6 127.0 L62.9 125.5 L64.2 124.0 L65.5 122.5 L66.8 121.1 L68.1 119.6 L69.4 118.3 L70.8 116.9 L72.1 115.6 L73.4 114.4 L74.7 113.2 L76.0 112.2 L77.3 111.1 L78.6 110.2 L79.9 109.4 L81.2 108.6 L82.5 107.9 L83.8 107.3 L85.2 106.9 L86.5 106.5 L87.8 106.2 L89.1 106.1 L90.4 106.0 L91.7 106.0 L93.0 106.2 L94.3 106.4 L95.6 106.8 L97.0 107.3 L98.3 107.8 L99.6 108.5 L100.9 109.2 L102.2 110.0 L103.5 111.0 L104.8 112.0 L106.1 113.0 L107.4 114.2 L108.7 115.4 L110.1 116.7 L111.4 118.0 L112.7 119.4 L114.0 120.8 L115.3 122.3 L116.6 123.7 L117.9 125.2 L119.2 126.8 L120.5 128.3 L121.8 129.8 L123.2 131.3 L124.5 132.8 L125.8 134.3 L127.1 135.7 L128.4 137.1 L129.7 138.5 L131.0 139.8 L132.3 141.0 L133.6 142.2 L134.9 143.4 L136.2 144.4 L137.6 145.4 L138.9 146.3 L140.2 147.1 L141.5 147.8 L142.8 148.4 L144.1 148.9 L145.4 149.3 L146.7 149.7 L148.0 149.9 L149.3 150.0 L150.7 150.0 L152.0 149.9 L153.3 149.7 L154.6 149.4 L155.9 149.0 L157.2 148.5 L158.5 147.8 L159.8 147.1 L161.1 146.3 L162.4 145.5 L163.8 144.5 L165.1 143.5 L166.4 142.3 L167.7 141.2 L169.0 139.9 L170.3 138.6 L171.6 137.2 L172.9 135.8 L174.2 134.4 L175.6 132.9 L176.9 131.4 L178.2 129.9 L179.5 128.4 L180.8 126.9 L182.1 125.4 L183.4 123.9 L184.7 122.4 L186.0 120.9 L187.3 119.5 L188.6 118.1 L190.0 116.8 L191.3 115.5 L192.6 114.3 L193.9 113.1 L195.2 112.1 L196.5 111.0 L197.8 110.1 L199.1 109.3 L200.4 108.5 L201.8 107.9 L203.1 107.3 L204.4 106.8 L205.7 106.5 L207.0 106.2 L208.3 106.1 L209.6 106.0 L210.9 106.1 L212.2 106.2 L213.5 106.5 L214.9 106.8 L216.2 107.3 L217.5 107.9 L218.8 108.5 L220.1 109.3 L221.4 110.1 L222.7 111.0 L224.0 112.1 L225.3 113.1 L226.6 114.3 L227.9 115.5 L229.3 116.8 L230.6 118.1 L231.9 119.5 L233.2 120.9 L234.5 122.4 L235.8 123.9 L237.1 125.4 L238.4 126.9 L239.7 128.4 L241.1 129.9 L242.4 131.4 L243.7 132.9 L245.0 134.4 L246.3 135.8 L247.6 137.2 L248.9 138.6 L250.2 139.9 L251.5 141.2 L252.8 142.3 L254.1 143.5 L255.5 144.5 L256.8 145.5 L258.1 146.4 L259.4 147.1 L260.7 147.8 L262.0 148.5 L263.3 149.0 L264.6 149.4 L265.9 149.7 L267.2 149.9 L268.6 150.0 L269.9 150.0 L271.2 149.9 L272.5 149.7 L273.8 149.3 L275.1 148.9 L276.4 148.4 L277.7 147.8 L279.0 147.1 L280.4 146.3 L281.7 145.4 L283.0 144.4 L284.3 143.4 L285.6 142.2 L286.9 141.0 L288.2 139.8 L289.5 138.5 L290.8 137.1 L292.1 135.7 L293.4 134.3 L294.8 132.8 L296.1 131.3 L297.4 129.8 L298.7 128.3 L300.0 126.8' stroke='var(--c2)' stroke-width='2.2' fill='none'/><rect x='150' y='6' width='10' height='10' rx='2' fill='var(--c3)' fill-opacity='1' stroke='var(--c3)' stroke-width='0'/><text x='164' y='15' font-size='11' fill='var(--ink)' text-anchor='start'>prey (hare)</text><rect x='230' y='6' width='10' height='10' rx='2' fill='var(--c2)' fill-opacity='1' stroke='var(--c2)' stroke-width='0'/><text x='244' y='15' font-size='11' fill='var(--ink)' text-anchor='start'>predator (lynx)</text><text x='30' y='196' font-size='10' fill='var(--muted)' text-anchor='start'>the predator peaks after the prey</text></svg>",
+    "key": "The predator stops the prey from overmultiplying and using up its own food. Where wolves were wiped out, deer can strip the vegetation."
+   },
+   {
+    "h": "Relationships between species: symbiosis",
+    "p": "In <b>symbiosis</b>, two species live closely together. In <b>mutualism</b>, both species benefit, and lichen is an example. In <b>commensalism</b>, one benefits and the other is unaffected. In <b>parasitism</b>, the parasite benefits and the host is harmed.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='10' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>relationship</text><text x='118' y='16' font-size='11' fill='var(--muted)' text-anchor='middle'>effect</text><text x='150' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>example</text><rect x='4' y='24' width='312' height='26' rx='4' fill='var(--muted)' fill-opacity='0.12'/><text x='10' y='41' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>competition</text><text x='118' y='41' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>− / −</text><text x='150' y='41' font-size='11' fill='var(--ink)' text-anchor='start'>two species wanting the same food</text><rect x='4' y='54' width='312' height='26' rx='4' fill='var(--muted)' fill-opacity='0.12'/><text x='10' y='71' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>predation</text><text x='118' y='71' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>+ / −</text><text x='150' y='71' font-size='11' fill='var(--ink)' text-anchor='start'>lynx – hare</text><rect x='4' y='84' width='312' height='26' rx='4' fill='var(--c3)' fill-opacity='0.12'/><text x='10' y='101' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>mutualism</text><text x='118' y='101' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>+ / +</text><text x='150' y='101' font-size='11' fill='var(--ink)' text-anchor='start'>lichen, mycorrhiza, <tspan font-style='italic'>Rhizobium</tspan></text><rect x='4' y='114' width='312' height='26' rx='4' fill='var(--c1)' fill-opacity='0.12'/><text x='10' y='131' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>commensalism</text><text x='118' y='131' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>+ / 0</text><text x='150' y='131' font-size='11' fill='var(--ink)' text-anchor='start'>remora – shark</text><rect x='4' y='144' width='312' height='26' rx='4' fill='var(--c2)' fill-opacity='0.12'/><text x='10' y='161' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>parasitism</text><text x='118' y='161' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>+ / −</text><text x='150' y='161' font-size='11' fill='var(--ink)' text-anchor='start'>internal: tapeworm · external: flea, tick</text><path d='M4 82 H316' stroke='var(--ink)' stroke-width='1' fill='none' stroke-dasharray='5 3'/><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>+ benefits · − harmed · 0 unaffected</text></svg>",
+    "key": "Lichen is a partnership of a fungus and an alga, and mycorrhiza is a partnership of a fungus and a root. The tapeworm is an internal parasite, while fleas and ticks are external parasites. A parasite usually does not kill its host right away.",
+    "etk": {
+     "tur": "ayir",
+     "soru": "Put each relationship in the right type of symbiosis.",
+     "gruplar": [
+      "Mutualism",
+      "Commensalism",
+      "Parasitism"
+     ],
+     "ogeler": [
+      [
+       "Lichen (fungus + alga)",
+       0
+      ],
+      [
+       "Mycorrhiza (fungus + root)",
+       0
+      ],
+      [
+       "Legumes and <em>Rhizobium</em>",
+       0
+      ],
+      [
+       "Remora and shark",
+       1,
+       "The remora feeds on the shark's leftovers, and the shark is unaffected (+/0)."
+      ],
+      [
+       "Orchid clinging to a tree",
+       1,
+       "The orchid clings to the tree to reach light, but does not take the tree's food. The tree is unaffected (+/0)."
+      ],
+      [
+       "Tapeworm",
+       2
+      ],
+      [
+       "Flea",
+       2
+      ],
+      [
+       "Tick",
+       2,
+       "The tick sucks the host's blood and the host is harmed (+/−). The tick is an external parasite."
+      ]
+     ]
+    },
+    "once": {
+     "soru": "In a lichen, the fungus gives the alga water and shelter, and the alga gives the fungus food. Which one benefits?",
+     "secenekler": [
+      {
+       "yazi": "Both",
+       "neden": "Each gives what the other cannot provide. This is called mutualism.",
+       "dogru": true
+      },
+      {
+       "yazi": "Only the fungus",
+       "neden": "The alga also benefits from the water and shelter the fungus provides."
+      },
+      {
+       "yazi": "Only the alga",
+       "neden": "The fungus also gets the food the alga makes."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Camouflage and mimicry",
+    "p": "In <b>camouflage</b>, an organism hides by looking like its surroundings. The stick insect and the arctic fox are examples. In <b>mimicry</b>, one species looks like another. For example, the harmless hoverfly has the pattern of a bee.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='80' y='18' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>camouflage</text><text x='240' y='18' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>mimicry</text><path d='M160 8 V170' stroke='var(--line)' stroke-width='1' fill='none'/><path d='M14 120 L150 70' stroke='var(--c4)' stroke-width='7' stroke-linecap='round' fill='none' stroke-opacity='0.55'/><path d='M90 98 L118 128' stroke='var(--c4)' stroke-width='5' stroke-linecap='round' fill='none' stroke-opacity='0.55'/><path d='M44 108 L104 86' stroke='var(--c3)' stroke-width='4' stroke-linecap='round' fill='none'/><path d='M56 104 L50 92 M70 99 L66 86 M86 93 L84 80 M56 104 L54 116 M70 99 L70 112 M86 93 L88 106' stroke='var(--c3)' stroke-width='1.2' fill='none'/><text x='80' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>stick insect looks like a twig</text><text x='80' y='166' font-size='10' fill='var(--muted)' text-anchor='middle'>arctic fox turns white in winter</text><ellipse cx='206' cy='70' rx='26' ry='14' fill='var(--c4)' fill-opacity='0.75' stroke='var(--ink)' stroke-width='1'/><circle cx='176' cy='70' r='8' fill='var(--ink)'/><ellipse cx='208' cy='50' rx='14' ry='7' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1'/><rect x='194' y='57' width='5' height='26' fill='var(--ink)' fill-opacity='0.85'/><rect x='206' y='57' width='5' height='26' fill='var(--ink)' fill-opacity='0.85'/><rect x='218' y='57' width='5' height='26' fill='var(--ink)' fill-opacity='0.85'/><ellipse cx='280' cy='70' rx='26' ry='14' fill='var(--c4)' fill-opacity='0.75' stroke='var(--ink)' stroke-width='1'/><circle cx='250' cy='70' r='8' fill='var(--ink)'/><ellipse cx='282' cy='50' rx='14' ry='7' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1'/><rect x='268' y='57' width='5' height='26' fill='var(--ink)' fill-opacity='0.85'/><rect x='280' y='57' width='5' height='26' fill='var(--ink)' fill-opacity='0.85'/><rect x='292' y='57' width='5' height='26' fill='var(--ink)' fill-opacity='0.85'/><text x='206' y='106' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>bee</text><text x='206' y='120' font-size='10' fill='var(--muted)' text-anchor='middle'>stings</text><text x='280' y='106' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>hoverfly</text><text x='280' y='120' font-size='10' fill='var(--muted)' text-anchor='middle'>harmless</text><text x='240' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>predators avoid both</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>camouflage: look like the setting · mimicry: look like another species</text></svg>",
+    "key": "Camouflage helps both prey and predators. In camouflage the organism resembles its surroundings, and in mimicry it resembles another organism.",
+    "once": {
+     "soru": "A harmless fly has the yellow-black pattern of a stinging bee. What does this pattern give the fly?",
+     "secenekler": [
+      {
+       "yazi": "Predators avoid it",
+       "neden": "A predator that has been stung by a bee also avoids eating a fly with a similar pattern.",
+       "dogru": true
+      },
+      {
+       "yazi": "It can make honey",
+       "neden": "The pattern does not give the fly the bee's abilities."
+      },
+      {
+       "yazi": "Bees feed it",
+       "neden": "Bees recognize the fly. The pattern works against predators."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Ecological succession",
+    "p": "In <b>succession</b>, a community is gradually replaced by other communities over time. <b>Primary</b> succession begins with lichens on bare rock without soil. <b>Secondary</b> succession happens where soil remains and is faster. The process ends with a <b>climax</b> community.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='pop-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><marker id='pop-11b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><rect x='8' y='130' width='46' height='10' rx='3' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.2'/><text x='31' y='156' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>bare</text><text x='31' y='170' font-size='10' fill='var(--muted)' text-anchor='middle'>rock</text><rect x='60' y='114' width='46' height='26' rx='3' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='1.2'/><text x='83' y='156' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>lichen</text><text x='83' y='170' font-size='10' fill='var(--muted)' text-anchor='middle'>(pioneer)</text><rect x='112' y='98' width='46' height='42' rx='3' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)' stroke-width='1.2'/><text x='135' y='156' font-size='10' fill='var(--ink)' text-anchor='middle' font-weight='700'>moss</text><rect x='164' y='78' width='46' height='62' rx='3' fill='var(--c3)' fill-opacity='0.45000000000000007' stroke='var(--c3)' stroke-width='1.2'/><text x='187' y='156' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>grasses</text><rect x='216' y='54' width='46' height='86' rx='3' fill='var(--c3)' fill-opacity='0.55' stroke='var(--c3)' stroke-width='1.2'/><text x='239' y='156' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>shrubs</text><rect x='268' y='24' width='46' height='116' rx='3' fill='var(--c3)' fill-opacity='0.65' stroke='var(--c3)' stroke-width='1.2'/><text x='291' y='156' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>trees</text><text x='291' y='170' font-size='10' fill='var(--muted)' text-anchor='middle'>(climax)</text><path d='M10 186 H300' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#pop-11)'/><text x='10' y='198' font-size='10' fill='var(--muted)' text-anchor='start'>primary: from bare rock, very slow</text><text x='304' y='198' font-size='10' fill='var(--muted)' text-anchor='end'>time</text><path d='M150 18 L178 66' stroke='var(--c2)' stroke-width='1.8' fill='none' stroke-dasharray='5 3' marker-end='url(#pop-11b)'/><text x='10' y='16' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>secondary: after a fire</text><text x='10' y='32' font-size='11' fill='var(--c2)' text-anchor='start'>soil present, starts with grasses</text><text x='10' y='48' font-size='11' fill='var(--c2)' text-anchor='start'>progresses faster</text></svg>",
+    "key": "Secondary succession happens after a fire or on abandoned fields. The difference is the soil. Without soil it is primary succession, and with soil it is secondary.",
+    "once": {
+     "soru": "Which organisms settle first on a freshly cooled lava flow?",
+     "secenekler": [
+      {
+       "yazi": "Lichens",
+       "neden": "Lichens can cling to rock without soil. They wear down the rock and form soil.",
+       "dogru": true
+      },
+      {
+       "yazi": "Trees",
+       "neden": "Trees need soil to put down roots."
+      },
+      {
+       "yazi": "Grasses",
+       "neden": "Grasses also need soil. Lichens prepare the soil first."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Species diversity and keystone species",
+    "p": "<b>Species diversity</b> depends on the number of species and on how evenly individuals are spread among them. A species that affects the community far more strongly than its numbers suggest is called a <b>keystone species</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='80' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>species diversity</text><text x='240' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>keystone species</text><path d='M160 8 V196' stroke='var(--line)' stroke-width='1' fill='none'/><rect x='14' y='97.5' width='12' height='22.5' fill='var(--c1)' fill-opacity='0.6'/><rect x='29' y='97.5' width='12' height='22.5' fill='var(--c3)' fill-opacity='0.6'/><rect x='44' y='97.5' width='12' height='22.5' fill='var(--c4)' fill-opacity='0.6'/><rect x='59' y='97.5' width='12' height='22.5' fill='var(--c5)' fill-opacity='0.6'/><path d='M12 120 H74' stroke='var(--ink)' stroke-width='1' fill='none'/><text x='43' y='136' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>community A</text><text x='43' y='150' font-size='10' fill='var(--muted)' text-anchor='middle'>25-25-25-25%</text><rect x='88' y='43.5' width='12' height='76.5' fill='var(--c1)' fill-opacity='0.6'/><rect x='103' y='115.5' width='12' height='4.5' fill='var(--c3)' fill-opacity='0.6'/><rect x='118' y='115.5' width='12' height='4.5' fill='var(--c4)' fill-opacity='0.6'/><rect x='133' y='115.5' width='12' height='4.5' fill='var(--c5)' fill-opacity='0.6'/><path d='M86 120 H148' stroke='var(--ink)' stroke-width='1' fill='none'/><text x='117' y='136' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>community B</text><text x='117' y='150' font-size='10' fill='var(--muted)' text-anchor='middle'>85-5-5-5%</text><text x='80' y='172' font-size='11' fill='var(--ink)' text-anchor='middle'>same number of species (4)</text><text x='80' y='188' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>diversity higher in A</text><rect x='172' y='32' width='136' height='54' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='240' y='52' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>with sea stars</text><text x='240' y='72' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>15 species</text><rect x='172' y='104' width='136' height='54' rx='6' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.5'/><text x='240' y='124' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>without sea stars</text><text x='240' y='144' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>8 species, mussels dominate</text><defs><marker id='pop-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M240 87 V101' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#pop-12)'/><text x='240' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>Paine's experiment</text><text x='240' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>(rocky intertidal shore)</text></svg>",
+    "key": "In Paine's experiment, the number of species fell from 15 to 8. A keystone species does not have to be the most numerous, because its effect is larger than its numbers.",
+    "once": {
+     "soru": "Predatory sea stars were removed from a shore. What happened to the number of species there?",
+     "secenekler": [
+      {
+       "yazi": "It fell",
+       "neden": "Mussels multiplied and covered the rocks. So there was no room left for other species.",
+       "dogru": true
+      },
+      {
+       "yazi": "It rose",
+       "neden": "With the predator gone, one species became dominant and the others found no space."
+      },
+      {
+       "yazi": "It didn't change",
+       "neden": "The sea star was a keystone species, and its removal changed the community."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Growth of the human population",
+    "p": "The human population was 1 billion in 1800. As farming, medicine and clean water reduced deaths, the population grew along a J-like curve and reached 8 billion in 2022. Today the growth rate is falling.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='pop-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><marker id='pop-13b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M36 170 H308' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#pop-13)'/><path d='M36 170 V20' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#pop-13b)'/><text x='42' y='20' font-size='11' fill='var(--muted)' text-anchor='start'>world population (billions)</text><path d='M36 138.9 H300' stroke='var(--line)' stroke-width='1' fill='none'/><text x='30' y='142.88888888888889' font-size='10' fill='var(--muted)' text-anchor='end'>2</text><path d='M36 107.8 H300' stroke='var(--line)' stroke-width='1' fill='none'/><text x='30' y='111.77777777777777' font-size='10' fill='var(--muted)' text-anchor='end'>4</text><path d='M36 76.7 H300' stroke='var(--line)' stroke-width='1' fill='none'/><text x='30' y='80.66666666666667' font-size='10' fill='var(--muted)' text-anchor='end'>6</text><path d='M36 45.6 H300' stroke='var(--line)' stroke-width='1' fill='none'/><text x='30' y='49.55555555555556' font-size='10' fill='var(--muted)' text-anchor='end'>8</text><text x='36.0' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>1700</text><text x='116.0' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>1800</text><text x='196.0' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>1900</text><text x='276.0' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>2000</text><path d='M36.0 160.7 L76.0 157.7 L116.0 154.4 L156.0 150.4 L196.0 144.3 L217.6 138.9 L236.0 131.1 L244.0 123.3 L255.2 107.8 L265.6 92.2 L275.2 76.7 L284.8 61.1 L293.6 45.6 L296.0 42.4' stroke='var(--acc)' stroke-width='2.4' fill='none'/><circle cx='116.0' cy='154.4' r='3.5' fill='var(--acc)'/><text x='116.0' y='144.4' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>1 billion (≈1800)</text><circle cx='217.6' cy='138.9' r='3.5' fill='var(--acc)'/><text x='209.6' y='142.9' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>2 (1927)</text><circle cx='255.2' cy='107.8' r='3.5' fill='var(--acc)'/><text x='247.2' y='111.8' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>4 (1974)</text><circle cx='293.6' cy='45.6' r='3.5' fill='var(--acc)'/><text x='285.6' y='49.6' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>8 (2022)</text></svg>",
+    "key": "The world population was 2 billion in 1927 and 4 billion in 1974. The annual growth rate has been falling since the 1960s. Earth's carrying capacity for humans is still debated.",
+    "once": {
+     "soru": "About how many billion people live on Earth today?",
+     "secenekler": [
+      {
+       "yazi": "8",
+       "neden": "The world population passed 8 billion in 2022.",
+       "dogru": true
+      },
+      {
+       "yazi": "2",
+       "neden": "The population was 2 billion in 1927."
+      },
+      {
+       "yazi": "20",
+       "neden": "The population has not even reached half of this number yet."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• Births, deaths and migration change the size of a population.<br>• Unlimited resources give a J curve and limited resources an S curve. The S curve levels off at K.<br>• Of two species using the same limited resource, one is excluded.<br>• Mutualism is +/+, commensalism +/0, parasitism +/− and competition −/−.<br>• Succession begins with pioneer lichens and settles at a climax.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='pop-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker><marker id='pop-14b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='8' y='20' width='96' height='110' rx='8' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><text x='56' y='42' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>population</text><text x='56' y='64' font-size='11' fill='var(--ink)' text-anchor='middle'>density</text><text x='56' y='82' font-size='11' fill='var(--ink)' text-anchor='middle'>age pyramid</text><text x='56' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>J and S, K</text><text x='56' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>r / K</text><rect x='112' y='20' width='96' height='110' rx='8' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.5'/><text x='160' y='42' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>community</text><text x='160' y='64' font-size='11' fill='var(--ink)' text-anchor='middle'>niche, Gause</text><text x='160' y='82' font-size='11' fill='var(--ink)' text-anchor='middle'>predator-prey</text><text x='160' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>symbiosis</text><text x='160' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>keystone species</text><rect x='216' y='20' width='96' height='110' rx='8' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='264' y='42' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>over time</text><text x='264' y='64' font-size='11' fill='var(--ink)' text-anchor='middle'>succession</text><text x='264' y='82' font-size='11' fill='var(--ink)' text-anchor='middle'>pioneer: lichen</text><text x='264' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>climax</text><text x='264' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>human population</text><path d='M104 75 H110' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#pop-14)'/><path d='M208 75 H214' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#pop-14b)'/><text x='160' y='162' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>ΔN = (births + immigrants) − (deaths + emigrants)</text><text x='160' y='186' font-size='12' fill='var(--muted)' text-anchor='middle'>limited resources → S curve → K</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "A lake with a carrying capacity (K) of 800 has a fish population growing along an S curve. At what population size is the yearly increase greatest?",
+    "cevap": 400,
+    "birim": "individuals",
+    "e": "On an S curve, growth is fastest at K/2, that is, at 800 ÷ 2 = 400 individuals. When the population is smaller, few individuals are reproducing. As it nears K, environmental resistance stops the growth."
+   },
+   {
+    "tur": "ayir",
+    "q": "Group each factor by how it limits a population.",
+    "gruplar": [
+     "Density-dependent",
+     "Density-independent"
+    ],
+    "ogeler": [
+     [
+      "Shortage of nesting sites",
+      0
+     ],
+     [
+      "Mange spreading fast in crowds",
+      0
+     ],
+     [
+      "Fights over a water source",
+      0
+     ],
+     [
+      "Hurricane",
+      1
+     ],
+     [
+      "Sudden hailstorm",
+      1
+     ],
+     [
+      "Volcanic eruption",
+      1
+     ]
+    ],
+    "e": "The effect of nesting sites, water and contagious disease grows as crowding increases. A hurricane, hail or a volcanic eruption affects a sparse or a dense population at a similar rate."
+   },
+   {
+    "tur": "eslestir",
+    "q": "Match each concept with its example.",
+    "ciftler": [
+     [
+      "Mutualism",
+      "Lichen (fungus + alga)"
+     ],
+     [
+      "Parasitism",
+      "A tick and its host"
+     ],
+     [
+      "Amensalism",
+      "Penicillium mold and bacteria"
+     ],
+     [
+      "Mimicry",
+      "A hoverfly that looks like a bee"
+     ],
+     [
+      "Camouflage",
+      "A stick insect that looks like a twig"
+     ]
+    ],
+    "e": "In a lichen, the fungus and the alga both benefit, and this is mutualism. A tick harms its host, and this is parasitism. Penicillium mold inhibits bacteria but is itself unaffected, which is amensalism. A hoverfly resembling a bee is mimicry, and a stick insect hiding by resembling its surroundings is camouflage."
+   },
+   {
+    "q": "A few years after a forest fire, grasses appear first in the burned area, followed by shrubs and young trees. Which is true of this process?",
+    "o": [
+     "It is secondary succession.",
+     "It is primary succession.",
+     "It is secondary succession and starts with lichens.",
+     "It does not count as succession."
+    ],
+    "a": 0,
+    "e": "The fire destroys the vegetation but leaves the soil. So the process is secondary succession, and the stage of lichens building soil is skipped.",
+    "y": [
+     "",
+     "Because the soil remains, this is secondary succession. A process that starts with lichens happens on bare rock.",
+     "Lichens wearing down rock is specific to primary succession. Here the soil is already present.",
+     "The rebuilding of a disturbed community is secondary succession. The earlier community does not prevent it."
+    ]
+   }
+  ]
  }
 }
