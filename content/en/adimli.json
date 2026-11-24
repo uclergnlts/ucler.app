@@ -13174,6 +13174,241 @@
   ],
   "soruOnce": true
  },
+ "hidrokarbonlar": {
+  "id": "hidrokarbonlar",
+  "ders": "kimya",
+  "konu": "hidrokarbonlar",
+  "baslik": "Hydrocarbons",
+  "ozet": "Grow the alkane series and boil branched isomers. Find the longest chain, saturate ethyne, test with bromine water and burn pentane.",
+  "adimlar": [
+   {
+    "baslik": "The alkane series",
+    "metin": "Alkanes contain only single bonds, and their general formula is CₙH₂ₙ₊₂. Increase the number of carbons and watch the boiling point. Find <b>the first alkane that is a liquid</b> at room temperature.",
+    "sahne": {
+     "tur": "kim11-alkan"
+    },
+    "deger": {
+     "n": 1
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Number of carbons",
+      "min": 1,
+      "max": 10,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 5
+     },
+     "ipucu": "Look for the first alkane whose boiling point passes the 25 °C line.",
+     "tamam": "Pentane boils at 36 °C. As the chain gets longer, London forces grow and the boiling point rises."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Count the longest chain",
+    "metin": "In naming, the longest chain gives the parent name (pentane for 5 C). The branch is numbered from the nearest end. Bend the chain and count the carbons.",
+    "sahne": {
+     "tur": "kim11-adlandir"
+    },
+    "deger": {
+     "z": 0
+    },
+    "kontroller": [
+     {
+      "ad": "z",
+      "etiket": "Bent chain",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What is the IUPAC name of this alkane?",
+     "secenekler": [
+      {
+       "yazi": "3-methylpentane",
+       "neden": "The longest chain has 5 C (pentane), and the methyl branch is on carbon 3 from either end. The molecule's formula is C₆H₁₄, so it is an isomer of hexane.",
+       "dogru": true
+      },
+      {
+       "yazi": "2-ethylbutane",
+       "neden": "The horizontal chain has 4 C, but it is not the longest chain. The ethyl branch continues the chain, and including it gives 5 C."
+      },
+      {
+       "yazi": "3-ethylbutane",
+       "neden": "Both the chain and the number are wrong. The longest chain has 5 C, and the branch must get the lowest number."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Branching",
+    "metin": "Three containers hold three alkanes with the same formula (C₅H₁₂). One has a straight chain, one has one branch, and one has two branches. We heat all three slowly together.",
+    "sahne": {
+     "tur": "kim11-dallanma",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which one boils first?",
+     "secenekler": [
+      {
+       "yazi": "Pentane",
+       "neden": "Pentane has a straight chain. Its molecules touch along a long surface, so London attraction is strongest. That is why it boils last (36 °C)."
+      },
+      {
+       "yazi": "2,2-dimethylpropane",
+       "neden": "The most branched molecule is the closest to a sphere. Its contact surface is small, and London attraction is weak. So it boils first, at 10 °C.",
+       "dogru": true
+      },
+      {
+       "yazi": "All three at once",
+       "neden": "The molar mass is the same, but the shape differs. Branching shrinks the contact surface and lowers the boiling point."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Saturate ethyne",
+    "metin": "Ethyne (C₂H₂) has a triple bond. Each mole of H₂ opens one π bond and adds one H to each of the two carbons. Saturate ethyne completely.",
+    "sahne": {
+     "tur": "kim11-doyur"
+    },
+    "deger": {
+     "h": 0
+    },
+    "kontroller": [
+     {
+      "ad": "h",
+      "etiket": "H₂ added (mol)",
+      "min": 0,
+      "max": 2,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "h": 2
+     },
+     "ipucu": "A triple bond has two π bonds.",
+     "tamam": "The alkyne first becomes an alkene, then an alkane. So addition happens in two steps."
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "The bromine water test",
+    "metin": "Three tubes hold orange <b>bromine water</b>. We add a few drops of a hydrocarbon to each and shake.",
+    "sahne": {
+     "tur": "kim11-brom",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In which tube does the bromine water lose its color?",
+     "secenekler": [
+      {
+       "yazi": "Hexane and hexene",
+       "neden": "Hexane is saturated, and Br₂ cannot add to its single bonds. In light, slow substitution happens, but the color does not disappear right away."
+      },
+      {
+       "yazi": "Hexene and benzene",
+       "neden": "Benzene is drawn with double bonds, but its stable aromatic ring resists addition. So the color stays."
+      },
+      {
+       "yazi": "Only hexene",
+       "neden": "Hexene's C=C bond opens, and Br₂ adds to the two carbons. The colored Br₂ is used up, so the color fades. This is a test for unsaturation.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Why is benzene different?",
+    "metin": "Benzene is drawn as if it had three double bonds, but those bonds do not stay in place. Show the ring and look at the bond lengths.",
+    "sahne": {
+     "tur": "kim11-benzen"
+    },
+    "deger": {
+     "r": 0
+    },
+    "kontroller": [
+     {
+      "ad": "r",
+      "etiket": "Show the ring",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why doesn't benzene decolorize bromine water?",
+     "secenekler": [
+      {
+       "yazi": "Benzene is a saturated hydrocarbon",
+       "neden": "C₆H₆ has 8 fewer H atoms than hexane (C₆H₁₄), which has the same number of carbons, so it is not saturated. The difference is that its π electrons spread around the ring."
+      },
+      {
+       "yazi": "The spread-out π ring is very stable",
+       "neden": "Addition would break the aromatic ring, so benzene undergoes substitution instead. With an FeBr₃ catalyst, Br₂ replaces an H.",
+       "dogru": true
+      },
+      {
+       "yazi": "Benzene has no π electrons",
+       "neden": "Benzene has 6 π electrons. They are not in fixed double bonds but spread over the whole ring."
+      }
+     ]
+    },
+    "kart": 13
+   },
+   {
+    "baslik": "Burn pentane",
+    "metin": "When pentane (C₅H₁₂) burns, CO₂ and H₂O form. Balance the equation with the O₂ coefficient.",
+    "sahne": {
+     "tur": "kim11-yanma"
+    },
+    "deger": {
+     "o": 4
+    },
+    "kontroller": [
+     {
+      "ad": "o",
+      "etiket": "O₂ coefficient",
+      "min": 1,
+      "max": 12,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "o": 8
+     },
+     "ipucu": "How many O atoms are on the right? Each O₂ brings two O.",
+     "tamam": "C₅H₁₂ + 8O₂ → 5CO₂ + 6H₂O. With too little oxygen, combustion is incomplete, and toxic CO and soot form. Combustion is a redox reaction."
+    },
+    "kart": 5
+   }
+  ],
+  "kapanis": [
+   "The formula of alkanes is CₙH₂ₙ₊₂. They have single bonds and are saturated. A longer chain raises the boiling point, and branching lowers it.",
+   "The name comes from <b>the longest chain</b>, and numbering starts from the end nearest a branch. 3-methylpentane is named this way.",
+   "An alkyne first becomes an alkene, then an alkane. 1 mol of alkyne adds 2 mol of H₂ or Br₂, and 1 mol of alkene adds 1 mol.",
+   "Alkenes and alkynes decolorize bromine water. Alkanes and benzene do not.",
+   "Benzene's 6 π electrons are spread around the ring. Because of this stability, benzene undergoes <b>substitution</b> instead of addition."
+  ],
+  "soruOnce": true
+ },
  "kimya-her-yerde": {
   "id": "kimya-her-yerde",
   "ders": "kimya",
