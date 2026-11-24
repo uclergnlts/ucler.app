@@ -12908,6 +12908,272 @@
   ],
   "soruOnce": true
  },
+ "organik-giris": {
+  "id": "organik-giris",
+  "ders": "kimya",
+  "konu": "organik-giris",
+  "baslik": "Carbon and an introduction to organic chemistry",
+  "ozet": "Give carbon four bonds, watch the angle change with the bond type, count σ and π bonds, explore the types of formulas and tell isomers apart.",
+  "adimlar": [
+   {
+    "baslik": "Four bonds",
+    "metin": "Attach hydrogen to carbon so that no bond is left open.",
+    "sahne": {
+     "tur": "kim11-dortbag",
+     "mod": "metan"
+    },
+    "deger": {
+     "h": 1
+    },
+    "kontroller": [
+     {
+      "ad": "h",
+      "etiket": "Number of H",
+      "min": 0,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "h": 4
+     },
+     "ipucu": "The dashed lines are open bonds.",
+     "tamam": "This compound is CH₄, methane, the simplest organic compound. The four bonds point to the corners of a regular tetrahedron."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "A double bond counts too",
+    "metin": "Now two carbons are joined by a <b>double bond</b>. C=C counts as two bonds for each carbon. How many H should attach to each carbon?",
+    "sahne": {
+     "tur": "kim11-dortbag",
+     "mod": "eten"
+    },
+    "deger": {
+     "h": 0
+    },
+    "kontroller": [
+     {
+      "ad": "h",
+      "etiket": "H on each C",
+      "min": 0,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "h": 2
+     },
+     "ipucu": "A double bond counts as 2 bonds. Bring the bond count up to 4.",
+     "tamam": "This compound is C₂H₄, ethene. The double bond makes 2 bonds, and the two H atoms make 2 more. In ethyne (C₂H₂), with a triple bond, each carbon keeps only one H."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Hybrid and angle",
+    "metin": "The bond type decides the geometry around carbon. Change the bond type and watch the hybrid and the bond angle.",
+    "sahne": {
+     "tur": "kim11-hibrit"
+    },
+    "deger": {
+     "b": 1
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Bond type",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "In CO₂, carbon forms two double bonds (O=C=O). What is carbon's hybrid and the shape of the molecule?",
+     "secenekler": [
+      {
+       "yazi": "sp³, 109.5°, bent",
+       "neden": "sp³ is a carbon with four single bonds. In CO₂, carbon has only two neighbors and no single bonds."
+      },
+      {
+       "yazi": "sp², 120°, trigonal planar",
+       "neden": "An sp² carbon has three neighbors, through one double and two single bonds. In CO₂, carbon has only two O neighbors."
+      },
+      {
+       "yazi": "sp, 180°, linear",
+       "neden": "A carbon with a triple bond or two double bonds is sp hybridized. O=C=O is linear, with a 180° angle. So the two C=O dipoles cancel, and CO₂ is nonpolar.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Count σ and π",
+    "metin": "A single bond is 1σ, and a triple bond is 1σ + 2π. Count the σ and π bonds in propyne (CH₃–C≡CH).",
+    "sahne": {
+     "tur": "kim11-sigmapi"
+    },
+    "deger": {
+     "s": 0,
+     "p": 0
+    },
+    "kontroller": [
+     {
+      "ad": "s",
+      "etiket": "Number of σ",
+      "min": 0,
+      "max": 10,
+      "tur": "sayac"
+     },
+     {
+      "ad": "p",
+      "etiket": "Number of π",
+      "min": 0,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "s": 6,
+      "p": 2
+     },
+     "ipucu": "Count the C–H bonds too. Each one is a σ bond.",
+     "tamam": "4 C–H and 2 C–C bonds make <b>6σ</b> in total. The triple bond adds another <b>2π</b>."
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Types of formulas",
+    "metin": "The same molecule can be written in different ways. Explore the formulas of butane. You can also tap the tabs at the top.",
+    "sahne": {
+     "tur": "kim11-formul"
+    },
+    "deger": {
+     "f": 0
+    },
+    "kontroller": [
+     {
+      "ad": "f",
+      "etiket": "Formula",
+      "min": 0,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which two molecules have the same empirical formula?",
+     "secenekler": [
+      {
+       "yazi": "CH₄ and C₂H₆",
+       "neden": "The empirical formula of CH₄ is CH₄, and that of C₂H₆ is CH₃. Their C:H ratios differ."
+      },
+      {
+       "yazi": "C₂H₂ and C₆H₆",
+       "neden": "Both have a C:H ratio of 1:1, and the empirical formula is CH. To tell them apart, you need the molar mass. Their molar masses are 26 and 78 g/mol.",
+       "dogru": true
+      },
+      {
+       "yazi": "C₂H₄ and C₂H₆",
+       "neden": "The empirical formula of C₂H₄ is CH₂, and that of C₂H₆ is CH₃. The number of carbons is the same, but the ratio differs."
+      }
+     ]
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Same formula, different structure",
+    "metin": "Four carbons can be arranged in two different ways. Branch the chain and see what changes.",
+    "sahne": {
+     "tur": "kim11-izomer"
+    },
+    "deger": {
+     "d": 0
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Branched chain",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which is true for butane and 2-methylpropane?",
+     "secenekler": [
+      {
+       "yazi": "They are not isomers",
+       "neden": "Both have 4 C and 10 H. So the molecular formula is the same (C₄H₁₀)."
+      },
+      {
+       "yazi": "They are the same substance",
+       "neden": "Their boiling points differ (−0.5 °C and −11.7 °C), so they are different substances. One is a straight chain and the other is branched."
+      },
+      {
+       "yazi": "They are chain isomers",
+       "neden": "The molecular formula is the same (C₄H₁₀), but the carbon skeleton differs. This is called chain isomerism. When the structure changes, the properties change too.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 14
+   },
+   {
+    "baslik": "Cis or trans?",
+    "metin": "In the trans isomer, the two Cl atoms are on opposite sides of the double bond. Put a Cl on the right carbon and flip that carbon to build trans-1,2-dichloroethene.",
+    "sahne": {
+     "tur": "kim11-cistrans"
+    },
+    "deger": {
+     "m": 0,
+     "y": 0
+    },
+    "kontroller": [
+     {
+      "ad": "m",
+      "etiket": "Cl on right C",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "y",
+      "etiket": "Flip right C",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "m": 1,
+      "y": 1
+     },
+     "ipucu": "In the trans isomer, the two Cl atoms are on opposite sides.",
+     "tamam": "You built trans-1,2-dichloroethene. The two Cl atoms are on opposite sides, the dipoles cancel, and the molecule is nonpolar. That is why the cis isomer has a higher boiling point."
+    },
+    "kart": 15
+   }
+  ],
+  "kapanis": [
+   "In stable organic compounds, carbon forms <b>four bonds</b>. C=C counts as two bonds and C≡C as three.",
+   "A carbon with only single bonds is <b>sp³</b> (109.5°), one with a double bond is <b>sp²</b> (120°), and one with a triple bond or two double bonds is <b>sp</b> (180°) hybridized.",
+   "A single bond is 1σ, a double bond is 1σ + 1π, and a triple bond is 1σ + 2π. C–H bonds are σ bonds too.",
+   "The molecular formula shows the numbers of atoms, and the empirical formula shows the smallest ratio. For example, C₂H₂ and C₆H₆ have the same empirical formula (CH).",
+   "Substances with the same molecular formula but different structures are called <b>isomers</b>. Butane and 2-methylpropane are chain isomers. Cis- and trans-dichloroethene are geometric isomers."
+  ],
+  "soruOnce": true
+ },
  "kimya-her-yerde": {
   "id": "kimya-her-yerde",
   "ders": "kimya",

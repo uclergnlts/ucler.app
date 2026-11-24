@@ -6917,6 +6917,408 @@
    }
   ]
  },
+ "organik-giris": {
+  "title": "Carbon and an introduction to organic chemistry",
+  "summary": "Learn about carbon's bonds, its allotropes, the types of formulas and isomerism.",
+  "cards": [
+   {
+    "h": "What does organic chemistry study?",
+    "p": "<b>Organic chemistry</b> studies carbon compounds. Carbon is mostly bonded to H, and also to O, N and S. CO, CO₂, carbonates and cyanides, however, count as <b>inorganic</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='13' fill='var(--ink)' text-anchor='middle'>All contain C, but not all are organic</text><rect x='10' y='36' width='142' height='150' rx='6' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.2'/><rect x='168' y='36' width='142' height='150' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)' stroke-width='1.2'/><text x='81' y='58' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Organic</text><text x='239' y='58' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Counted as inorganic</text><text x='22' y='86' font-size='13' fill='var(--ink)' text-anchor='start'>CH₄</text><text x='140' y='86' font-size='11' fill='var(--muted)' text-anchor='end'>methane</text><text x='22' y='110' font-size='13' fill='var(--ink)' text-anchor='start'>C₂H₅OH</text><text x='140' y='110' font-size='11' fill='var(--muted)' text-anchor='end'>ethanol</text><text x='22' y='134' font-size='13' fill='var(--ink)' text-anchor='start'>C₆H₁₂O₆</text><text x='140' y='134' font-size='11' fill='var(--muted)' text-anchor='end'>glucose</text><text x='22' y='158' font-size='13' fill='var(--ink)' text-anchor='start'>CO(NH₂)₂</text><text x='140' y='158' font-size='11' fill='var(--muted)' text-anchor='end'>urea</text><text x='180' y='82' font-size='13' fill='var(--ink)' text-anchor='start'>CO, CO₂</text><text x='298' y='82' font-size='11' fill='var(--muted)' text-anchor='end'>oxides</text><text x='180' y='106' font-size='13' fill='var(--ink)' text-anchor='start'>CaCO₃</text><text x='298' y='106' font-size='11' fill='var(--muted)' text-anchor='end'>carbonate</text><text x='180' y='130' font-size='13' fill='var(--ink)' text-anchor='start'>KCN</text><text x='298' y='130' font-size='11' fill='var(--muted)' text-anchor='end'>cyanide</text><text x='180' y='154' font-size='13' fill='var(--ink)' text-anchor='start'>CaC₂</text><text x='298' y='154' font-size='11' fill='var(--muted)' text-anchor='end'>carbide</text><text x='180' y='176' font-size='13' fill='var(--ink)' text-anchor='start'>C (diamond)</text><text x='298' y='176' font-size='11' fill='var(--muted)' text-anchor='end'>element</text></svg>",
+    "etk": {
+     "tur": "ayir",
+     "soru": "All of these contain carbon. Which are organic compounds, and which are traditionally counted as inorganic?",
+     "gruplar": [
+      "Organic",
+      "Inorganic"
+     ],
+     "ogeler": [
+      [
+       "CH₄ (methane)",
+       0
+      ],
+      [
+       "C₂H₅OH (ethanol)",
+       0
+      ],
+      [
+       "C₆H₁₂O₆ (glucose)",
+       0
+      ],
+      [
+       "CO(NH₂)₂ (urea)",
+       0,
+       "Urea, which Wöhler synthesized in 1828, is an organic compound."
+      ],
+      [
+       "CO₂",
+       1,
+       "Carbon oxides count as inorganic."
+      ],
+      [
+       "CO",
+       1,
+       "Carbon oxides count as inorganic."
+      ],
+      [
+       "CaCO₃ (limestone)",
+       1,
+       "Carbonates count as inorganic."
+      ],
+      [
+       "KCN",
+       1,
+       "Cyanides count as inorganic."
+      ],
+      [
+       "CaC₂ (calcium carbide)",
+       1,
+       "Carbides count as inorganic."
+      ]
+     ]
+    },
+    "key": "Carbides (such as CaC₂) are inorganic too. Pure carbon is not a compound at all.",
+    "once": {
+     "soru": "All of these contain carbon. Which one is an organic compound?",
+     "secenekler": [
+      {
+       "yazi": "Methane (CH₄)",
+       "neden": "It is the simplest organic compound, with H bonded to C.",
+       "dogru": true
+      },
+      {
+       "yazi": "Carbon dioxide (CO₂)",
+       "neden": "CO₂ is traditionally counted as inorganic."
+      },
+      {
+       "yazi": "Limestone (CaCO₃)",
+       "neden": "Carbonates are inorganic."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Wöhler and the end of vital force",
+    "p": "People once believed that organic matter could only form in living things, through a <b>vital force</b>. In 1828, <b>Wöhler</b> made <b>urea</b> from inorganic ammonium cyanate.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='org-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--acc)'/></marker></defs><text x='160' y='24' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>1828 · Wöhler's experiment</text><rect x='12' y='44' width='122' height='74' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)' stroke-width='1.2'/><text x='73' y='72' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>NH₄OCN</text><text x='73' y='92' font-size='11' fill='var(--ink)' text-anchor='middle'>ammonium cyanate</text><text x='73' y='108' font-size='11' fill='var(--c2)' text-anchor='middle'>inorganic salt</text><path d='M142 81 L178 81' stroke='var(--acc)' stroke-width='2' fill='none' marker-end='url(#org-1)'/><text x='160' y='72' font-size='12' fill='var(--acc)' text-anchor='middle'>heat</text><rect x='186' y='44' width='122' height='74' rx='6' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.2'/><text x='247' y='72' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>CO(NH₂)₂</text><text x='247' y='92' font-size='11' fill='var(--ink)' text-anchor='middle'>urea</text><text x='247' y='108' font-size='11' fill='var(--c3)' text-anchor='middle'>organic (in urine)</text><text x='160' y='146' font-size='12' fill='var(--muted)' text-anchor='middle'>Both have the molecular formula CH₄N₂O</text><text x='160' y='176' font-size='12' fill='var(--acc)' text-anchor='middle'>No living thing, no vital force: organic matter formed</text></svg>",
+    "key": "This experiment shook the idea of vital force (vitalism). Later syntheses led to the idea being dropped completely.",
+    "once": {
+     "soru": "Can an organic substance be made in the lab, without a living thing?",
+     "secenekler": [
+      {
+       "yazi": "Yes",
+       "neden": "Wöhler made urea from an inorganic substance. So a living thing is not required.",
+       "dogru": true
+      },
+      {
+       "yazi": "No",
+       "neden": "That was the old vital force idea, and experiments disproved it."
+      },
+      {
+       "yazi": "Only from plants",
+       "neden": "It can be synthesized in the lab without taking any substance from a living thing."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Organic and inorganic compared",
+    "p": "Organic compounds are usually covalent. They have low melting points, most dissolve poorly in water, and they burn. Most inorganic compounds are ionic. They have high melting points, and their solutions conduct electricity.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='10' width='300' height='26' rx='4' fill='var(--panel)'/><text x='18' y='28' font-size='12' fill='var(--muted)' text-anchor='start' font-weight='700'>Property</text><text x='184' y='28' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Organic</text><text x='268' y='28' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Inorganic</text><text x='18' y='56' font-size='11' fill='var(--ink)' text-anchor='start'>Bond type</text><text x='184' y='56' font-size='11' fill='var(--ink)' text-anchor='middle'>covalent</text><text x='268' y='56' font-size='11' fill='var(--ink)' text-anchor='middle'>mostly ionic</text><line x1='12' y1='64' x2='308' y2='64' stroke='var(--line)' stroke-width='0.8'/><text x='18' y='78' font-size='11' fill='var(--ink)' text-anchor='start'>Melting point</text><text x='184' y='78' font-size='11' fill='var(--ink)' text-anchor='middle'>low</text><text x='268' y='78' font-size='11' fill='var(--ink)' text-anchor='middle'>high</text><line x1='12' y1='86' x2='308' y2='86' stroke='var(--line)' stroke-width='0.8'/><text x='18' y='100' font-size='11' fill='var(--ink)' text-anchor='start'>Solubility in water</text><text x='184' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>mostly low</text><text x='268' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>mostly high</text><line x1='12' y1='108' x2='308' y2='108' stroke='var(--line)' stroke-width='0.8'/><text x='18' y='122' font-size='11' fill='var(--ink)' text-anchor='start'>Burning</text><text x='184' y='122' font-size='11' fill='var(--ink)' text-anchor='middle'>most burn</text><text x='268' y='122' font-size='11' fill='var(--ink)' text-anchor='middle'>most don't burn</text><line x1='12' y1='130' x2='308' y2='130' stroke='var(--line)' stroke-width='0.8'/><text x='18' y='144' font-size='11' fill='var(--ink)' text-anchor='start'>Solution conductivity</text><text x='184' y='144' font-size='11' fill='var(--ink)' text-anchor='middle'>most don't conduct</text><text x='268' y='144' font-size='11' fill='var(--ink)' text-anchor='middle'>most conduct</text><line x1='12' y1='152' x2='308' y2='152' stroke='var(--line)' stroke-width='0.8'/><text x='18' y='166' font-size='11' fill='var(--ink)' text-anchor='start'>Reaction rate</text><text x='184' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>mostly slow</text><text x='268' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>mostly fast</text><line x1='12' y1='174' x2='308' y2='174' stroke='var(--line)' stroke-width='0.8'/><text x='160' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>General trends: there are exceptions (sugar dissolves well in water).</text></svg>",
+    "key": "These are only trends. Sugar, for example, is organic, but it dissolves very well in water.",
+    "once": {
+     "soru": "You heat a candle and some table salt. Which one melts sooner?",
+     "secenekler": [
+      {
+       "yazi": "Candle",
+       "neden": "Wax is organic, and the attraction between its molecules is weak. So it melts at a low temperature.",
+       "dogru": true
+      },
+      {
+       "yazi": "Salt",
+       "neden": "Salt is an ionic solid and melts at 801 °C."
+      },
+      {
+       "yazi": "Both at once",
+       "neden": "Their melting points are very different."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Carbon's unique properties",
+    "p": "Carbon has four valence electrons and forms <b>four covalent bonds</b>. With its own atoms, it builds long <b>straight</b> or <b>branched chains</b> and <b>rings</b>. It can form single, double and triple bonds.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='110' y1='30' x2='110' y2='150' stroke='var(--line)' stroke-width='1'/><line x1='215' y1='30' x2='215' y2='150' stroke='var(--line)' stroke-width='1'/><text x='55' y='93.4' font-size='15' fill='var(--ink)' text-anchor='middle'>C</text><line x1='55' y1='78' x2='55' y2='64' stroke='var(--ink)' stroke-width='1.5'/><text x='55' y='58.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='55' y1='98' x2='55' y2='112' stroke='var(--ink)' stroke-width='1.5'/><text x='55' y='126.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='45' y1='88' x2='31' y2='88' stroke='var(--ink)' stroke-width='1.5'/><text x='21' y='92.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='65' y1='88' x2='79' y2='88' stroke='var(--ink)' stroke-width='1.5'/><text x='89' y='92.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='129.4' y1='91.5' x2='137.6' y2='84.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='148.4' y1='84.5' x2='156.6' y2='91.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='167.4' y1='91.5' x2='175.6' y2='84.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='186.4' y1='84.5' x2='194.6' y2='91.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='162' y1='103' x2='162' y2='117' stroke='var(--ink)' stroke-width='1.5'/><text x='124' y='100.32' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='143' y='84.32' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='162' y='100.32' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='181' y='84.32' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='200' y='100.32' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='162' y='128.32' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><line x1='286.9' y1='110.5' x2='273.1' y2='118.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='260.9' y1='118.5' x2='247.1' y2='110.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='241' y1='100' x2='241' y2='84' stroke='var(--ink)' stroke-width='1.5'/><line x1='247.1' y1='73.5' x2='260.9' y2='65.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='273.1' y1='65.5' x2='286.9' y2='73.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='293' y1='84' x2='293' y2='100' stroke='var(--ink)' stroke-width='1.5'/><text x='292.98076211353316' y='111.32' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='267.0' y='126.32' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='241.01923788646684' y='111.32' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='241.01923788646684' y='81.32' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='267.0' y='66.32' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='292.98076211353316' y='81.32' font-size='12' fill='var(--ink)' text-anchor='middle'>C</text><text x='55' y='160' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>4 bonds</text><text x='162' y='160' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>chain (branched)</text><text x='267' y='160' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>ring</text><text x='55' y='30' font-size='12' fill='var(--muted)' text-anchor='middle'>CH₄</text><text x='162' y='30' font-size='12' fill='var(--muted)' text-anchor='middle'>C₆H₁₄</text><text x='267' y='30' font-size='12' fill='var(--muted)' text-anchor='middle'>C₆H₁₂</text><text x='160' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>Strong C–C bonds build long skeletons</text></svg>",
+    "key": "In stable organic compounds, C forms four bonds. C=C counts as two bonds and C≡C as three. Millions of organic compounds come from this property."
+   },
+   {
+    "h": "Allotropes: diamond and graphite",
+    "p": "Forms of the same element with different structures are called <b>allotropes</b>. In <b>diamond</b>, each C is bonded to four C atoms, and it is very hard. In <b>graphite</b>, each C is bonded to three C atoms, the layers slide, and it conducts electricity.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='160' y1='16' x2='160' y2='190' stroke='var(--line)' stroke-width='1'/><text x='80' y='20' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>Diamond</text><line x1='80' y1='72' x2='80' y2='40' stroke='var(--ink)' stroke-width='1.4'/><line x1='80' y1='72' x2='50' y2='88' stroke='var(--ink)' stroke-width='1.4'/><line x1='80' y1='72' x2='110' y2='88' stroke='var(--ink)' stroke-width='1.4'/><line x1='80' y1='72' x2='80' y2='106' stroke='var(--ink)' stroke-width='1.4'/><line x1='80' y1='40' x2='60' y2='30' stroke='var(--muted)' stroke-width='1.1'/><line x1='80' y1='40' x2='100' y2='30' stroke='var(--muted)' stroke-width='1.1'/><line x1='50' y1='88' x2='28' y2='78' stroke='var(--muted)' stroke-width='1.1'/><line x1='50' y1='88' x2='36' y2='108' stroke='var(--muted)' stroke-width='1.1'/><line x1='110' y1='88' x2='132' y2='78' stroke='var(--muted)' stroke-width='1.1'/><line x1='110' y1='88' x2='124' y2='108' stroke='var(--muted)' stroke-width='1.1'/><line x1='80' y1='106' x2='62' y2='118' stroke='var(--muted)' stroke-width='1.1'/><line x1='80' y1='106' x2='98' y2='118' stroke='var(--muted)' stroke-width='1.1'/><circle cx='80' cy='72' r='4.5' fill='var(--c1)' stroke='var(--ink)' stroke-width='0.8'/><circle cx='80' cy='40' r='4.5' fill='var(--c1)' stroke='var(--ink)' stroke-width='0.8'/><circle cx='50' cy='88' r='4.5' fill='var(--c1)' stroke='var(--ink)' stroke-width='0.8'/><circle cx='110' cy='88' r='4.5' fill='var(--c1)' stroke='var(--ink)' stroke-width='0.8'/><circle cx='80' cy='106' r='4.5' fill='var(--c1)' stroke='var(--ink)' stroke-width='0.8'/><text x='240' y='20' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>Graphite</text><polygon points='219.2,54.0 208.8,60.0 198.4,54.0 198.4,42.0 208.8,36.0 219.2,42.0' fill='none' stroke='var(--ink)' stroke-width='1.2'/><polygon points='240.0,54.0 229.6,60.0 219.2,54.0 219.2,42.0 229.6,36.0 240.0,42.0' fill='none' stroke='var(--ink)' stroke-width='1.2'/><polygon points='260.8,54.0 250.4,60.0 240.0,54.0 240.0,42.0 250.4,36.0 260.8,42.0' fill='none' stroke='var(--ink)' stroke-width='1.2'/><polygon points='281.6,54.0 271.2,60.0 260.8,54.0 260.8,42.0 271.2,36.0 281.6,42.0' fill='none' stroke='var(--ink)' stroke-width='1.2'/><polygon points='219.2,108.0 208.8,114.0 198.4,108.0 198.4,96.0 208.8,90.0 219.2,96.0' fill='none' stroke='var(--ink)' stroke-width='1.2'/><polygon points='240.0,108.0 229.6,114.0 219.2,108.0 219.2,96.0 229.6,90.0 240.0,96.0' fill='none' stroke='var(--ink)' stroke-width='1.2'/><polygon points='260.8,108.0 250.4,114.0 240.0,108.0 240.0,96.0 250.4,90.0 260.8,96.0' fill='none' stroke='var(--ink)' stroke-width='1.2'/><polygon points='281.6,108.0 271.2,114.0 260.8,108.0 260.8,96.0 271.2,90.0 281.6,96.0' fill='none' stroke='var(--ink)' stroke-width='1.2'/><line x1='220' y1='64' x2='220' y2='86' stroke='var(--c4)' stroke-width='1.2' stroke-dasharray='3 3'/><line x1='260' y1='64' x2='260' y2='86' stroke='var(--c4)' stroke-width='1.2' stroke-dasharray='3 3'/><text x='240' y='79' font-size='10' fill='var(--c4)' text-anchor='middle'>weak</text><text x='80' y='142' font-size='12' fill='var(--ink)' text-anchor='middle'>each C → 4 C</text><text x='80' y='162' font-size='12' fill='var(--c1)' text-anchor='middle'>3D network: very hard</text><text x='80' y='182' font-size='12' fill='var(--muted)' text-anchor='middle'>doesn't conduct</text><text x='240' y='142' font-size='12' fill='var(--ink)' text-anchor='middle'>each C → 3 C</text><text x='240' y='162' font-size='12' fill='var(--c4)' text-anchor='middle'>layers slide</text><text x='240' y='182' font-size='12' fill='var(--c3)' text-anchor='middle'>conducts electricity</text></svg>",
+    "key": "Diamond does not conduct electricity. Allotropes are different forms of the same element. That is why both give CO₂ when they burn in enough O₂.",
+    "once": {
+     "soru": "Why does a pencil tip (graphite) leave a mark on paper so easily?",
+     "secenekler": [
+      {
+       "yazi": "Its layers slide",
+       "neden": "Graphite layers are held together by weak attraction. When rubbed on paper, the layers come apart and stay on the paper.",
+       "dogru": true
+      },
+      {
+       "yazi": "It is very hard",
+       "neden": "Diamond is the hard one. Graphite is soft."
+      },
+      {
+       "yazi": "It melts",
+       "neden": "Graphite does not melt while you write."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Fullerene, graphene and nanotubes",
+    "p": "<b>Fullerene</b> (C₆₀) is a molecule shaped like a soccer ball. <b>Graphene</b> is a single layer of graphite, one atom thick. A <b>nanotube</b> is graphene rolled into a cylinder, and it is both light and strong.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='107' y1='16' x2='107' y2='190' stroke='var(--line)' stroke-width='1'/><line x1='213' y1='16' x2='213' y2='190' stroke='var(--line)' stroke-width='1'/><circle cx='55' cy='78' r='34' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.3'/><polygon points='55.0,67.0 65.5,74.6 61.5,86.9 48.5,86.9 44.5,74.6' fill='none' stroke='var(--ink)' stroke-width='1.2'/><line x1='55' y1='67' x2='55' y2='54' stroke='var(--ink)' stroke-width='1.1'/><line x1='65.5' y1='74.6' x2='77.8' y2='70.6' stroke='var(--ink)' stroke-width='1.1'/><line x1='61.5' y1='86.9' x2='69.1' y2='97.4' stroke='var(--ink)' stroke-width='1.1'/><line x1='48.5' y1='86.9' x2='40.9' y2='97.4' stroke='var(--ink)' stroke-width='1.1'/><line x1='44.5' y1='74.6' x2='32.2' y2='70.6' stroke='var(--ink)' stroke-width='1.1'/><polygon points='55.0,54.0 69.1,58.6 77.8,70.6 77.8,85.4 69.1,97.4 55.0,102.0 40.9,97.4 32.2,85.4 32.2,70.6 40.9,58.6' fill='none' stroke='var(--ink)' stroke-width='1.1'/><polygon points='141.8,56.5 134.0,61.0 126.2,56.5 126.2,47.5 134.0,43.0 141.8,47.5' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='157.4,56.5 149.6,61.0 141.8,56.5 141.8,47.5 149.6,43.0 157.4,47.5' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='173.0,56.5 165.2,61.0 157.4,56.5 157.4,47.5 165.2,43.0 173.0,47.5' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='188.6,56.5 180.8,61.0 173.0,56.5 173.0,47.5 180.8,43.0 188.6,47.5' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='149.6,70.0 141.8,74.5 134.0,70.0 134.0,61.0 141.8,56.5 149.6,61.0' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='165.2,70.0 157.4,74.5 149.6,70.0 149.6,61.0 157.4,56.5 165.2,61.0' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='180.8,70.0 173.0,74.5 165.2,70.0 165.2,61.0 173.0,56.5 180.8,61.0' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='196.4,70.0 188.6,74.5 180.8,70.0 180.8,61.0 188.6,56.5 196.4,61.0' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='141.8,83.5 134.0,88.0 126.2,83.5 126.2,74.5 134.0,70.0 141.8,74.5' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='157.4,83.5 149.6,88.0 141.8,83.5 141.8,74.5 149.6,70.0 157.4,74.5' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='173.0,83.5 165.2,88.0 157.4,83.5 157.4,74.5 165.2,70.0 173.0,74.5' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='188.6,83.5 180.8,88.0 173.0,83.5 173.0,74.5 180.8,70.0 188.6,74.5' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='149.6,97.0 141.8,101.5 134.0,97.0 134.0,88.0 141.8,83.5 149.6,88.0' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='165.2,97.0 157.4,101.5 149.6,97.0 149.6,88.0 157.4,83.5 165.2,88.0' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='180.8,97.0 173.0,101.5 165.2,97.0 165.2,88.0 173.0,83.5 180.8,88.0' fill='none' stroke='var(--c1)' stroke-width='1.1'/><polygon points='196.4,97.0 188.6,101.5 180.8,97.0 180.8,88.0 188.6,83.5 196.4,88.0' fill='none' stroke='var(--c1)' stroke-width='1.1'/><rect x='238' y='56' width='56' height='44' fill='var(--c3)' fill-opacity='0.12' stroke='none'/><line x1='238' y1='56' x2='294' y2='56' stroke='var(--c3)' stroke-width='1.3'/><line x1='238' y1='100' x2='294' y2='100' stroke='var(--c3)' stroke-width='1.3'/><ellipse cx='238' cy='78' rx='8' ry='22' fill='var(--panel)' stroke='var(--c3)' stroke-width='1.3'/><path d='M294 56 A8 22 0 0 1 294 100' fill='none' stroke='var(--c3)' stroke-width='1.3'/><path d='M252 56 l-5 7 l5 7 l-5 7 l5 7 l-5 7 l5 7' fill='none' stroke='var(--c3)' stroke-width='0.9'/><path d='M266 56 l-5 7 l5 7 l-5 7 l5 7 l-5 7 l5 7' fill='none' stroke='var(--c3)' stroke-width='0.9'/><path d='M280 56 l-5 7 l5 7 l-5 7 l5 7 l-5 7 l5 7' fill='none' stroke='var(--c3)' stroke-width='0.9'/><text x='55' y='136' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Fullerene C₆₀</text><text x='55' y='156' font-size='11' fill='var(--ink)' text-anchor='middle'>separate molecules</text><text x='55' y='174' font-size='11' fill='var(--muted)' text-anchor='middle'>ball-shaped cage</text><text x='160' y='136' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Graphene</text><text x='160' y='156' font-size='11' fill='var(--ink)' text-anchor='middle'>one atom thick</text><text x='160' y='174' font-size='11' fill='var(--muted)' text-anchor='middle'>strong, conductive</text><text x='266' y='136' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Nanotube</text><text x='266' y='156' font-size='11' fill='var(--ink)' text-anchor='middle'>rolled graphene</text><text x='266' y='174' font-size='11' fill='var(--muted)' text-anchor='middle'>light, strong</text></svg>",
+    "key": "C₆₀ has 12 pentagons and 20 hexagons. Graphene is very strong and an excellent conductor.",
+    "once": {
+     "soru": "Which element are fullerene, graphene and nanotubes made of?",
+     "secenekler": [
+      {
+       "yazi": "Carbon",
+       "neden": "They are all allotropes of carbon.",
+       "dogru": true
+      },
+      {
+       "yazi": "Silicon",
+       "neden": "Silicon is a different element. These structures contain only C."
+      },
+      {
+       "yazi": "Iron",
+       "neden": "There is no metal in these structures."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Hybridization: sp³, sp², sp",
+    "p": "When carbon bonds, its orbitals mix and form <b>hybrid orbitals</b>. A C with four single bonds is <b>sp³</b> (109.5°), a C with a double bond is <b>sp²</b> (120°), and a C with a triple bond is <b>sp</b> (180°) hybridized.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='108' y1='16' x2='108' y2='190' stroke='var(--line)' stroke-width='1'/><line x1='214' y1='16' x2='214' y2='190' stroke='var(--line)' stroke-width='1'/><text x='55' y='22' font-size='13' fill='var(--muted)' text-anchor='middle'>CH₄</text><text x='161' y='22' font-size='13' fill='var(--muted)' text-anchor='middle'>C₂H₄</text><text x='267' y='22' font-size='13' fill='var(--muted)' text-anchor='middle'>C₂H₂</text><text x='55' y='77.4' font-size='15' fill='var(--ink)' text-anchor='middle'>C</text><line x1='55' y1='62' x2='55' y2='48' stroke='var(--ink)' stroke-width='1.5'/><text x='55' y='42.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='45.9' y1='76.1' x2='33.1' y2='81.9' stroke='var(--ink)' stroke-width='1.5'/><text x='24' y='90.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='64.1' y1='76.1' x2='76.9' y2='81.9' stroke='var(--ink)' stroke-width='1.5'/><text x='86' y='90.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='59.5' y1='80.9' x2='65.5' y2='93.1' stroke='var(--ink)' stroke-width='1.5' stroke-dasharray='3 2'/><text x='70' y='106.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><text x='145' y='77.4' font-size='15' fill='var(--ink)' text-anchor='middle'>C</text><text x='177' y='77.4' font-size='15' fill='var(--ink)' text-anchor='middle'>C</text><line x1='154' y1='69.5' x2='168' y2='69.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='154' y1='74.5' x2='168' y2='74.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='139.2' y1='65.1' x2='130.8' y2='54.9' stroke='var(--ink)' stroke-width='1.5'/><text x='125' y='52.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='139.2' y1='78.9' x2='130.8' y2='89.1' stroke='var(--ink)' stroke-width='1.5'/><text x='125' y='100.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='182.8' y1='65.1' x2='191.2' y2='54.9' stroke='var(--ink)' stroke-width='1.5'/><text x='197' y='52.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='182.8' y1='78.9' x2='191.2' y2='89.1' stroke='var(--ink)' stroke-width='1.5'/><text x='197' y='100.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><text x='226' y='76.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><text x='250' y='77.4' font-size='15' fill='var(--ink)' text-anchor='middle'>C</text><text x='282' y='77.4' font-size='15' fill='var(--ink)' text-anchor='middle'>C</text><text x='306' y='76.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='234' y1='72' x2='242' y2='72' stroke='var(--ink)' stroke-width='1.5'/><line x1='259' y1='67.5' x2='273' y2='67.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='259' y1='72' x2='273' y2='72' stroke='var(--ink)' stroke-width='1.5'/><line x1='259' y1='76.5' x2='273' y2='76.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='290' y1='72' x2='298' y2='72' stroke='var(--ink)' stroke-width='1.5'/><text x='55' y='134' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='700'>sp³</text><text x='161' y='134' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='700'>sp²</text><text x='267' y='134' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='700'>sp</text><text x='55' y='156' font-size='13' fill='var(--ink)' text-anchor='middle'>109.5°</text><text x='161' y='156' font-size='13' fill='var(--ink)' text-anchor='middle'>120°</text><text x='267' y='156' font-size='13' fill='var(--ink)' text-anchor='middle'>180°</text><text x='55' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>tetrahedral</text><text x='161' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>trigonal planar</text><text x='267' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>linear</text></svg>",
+    "key": "CH₄ is tetrahedral, C₂H₄ is trigonal planar, and C₂H₂ is linear. A C with two double bonds is also sp hybridized."
+   },
+   {
+    "h": "Sigma (σ) and pi (π) bonds",
+    "p": "End-to-end overlap of orbitals forms a <b>sigma (σ)</b> bond, and side-by-side overlap forms a <b>pi (π)</b> bond. A single bond is 1σ, a double bond is 1σ + 1π, and a triple bond is 1σ + 2π.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='16' y1='62' x2='126' y2='62' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><ellipse cx='52' cy='62' rx='24' ry='13' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.2'/><ellipse cx='90' cy='62' rx='24' ry='13' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.2'/><circle cx='40' cy='62' r='2.5' fill='var(--ink)'/><circle cx='102' cy='62' r='2.5' fill='var(--ink)'/><line x1='196' y1='72' x2='282' y2='72' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><ellipse cx='224' cy='57' rx='9' ry='14' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.2'/><ellipse cx='224' cy='87' rx='9' ry='14' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.2'/><circle cx='224' cy='72' r='2.5' fill='var(--ink)'/><ellipse cx='254' cy='57' rx='9' ry='14' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.2'/><ellipse cx='254' cy='87' rx='9' ry='14' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.2'/><circle cx='254' cy='72' r='2.5' fill='var(--ink)'/><path d='M224 44 Q239 37 254 44' fill='none' stroke='var(--c2)' stroke-width='1.2' stroke-dasharray='3 2'/><path d='M224 100 Q239 107 254 100' fill='none' stroke='var(--c2)' stroke-width='1.2' stroke-dasharray='3 2'/><text x='71' y='22' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>σ: end to end</text><text x='71' y='98' font-size='11' fill='var(--muted)' text-anchor='middle'>on the axis</text><text x='239' y='22' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>π: side by side</text><text x='239' y='120' font-size='11' fill='var(--muted)' text-anchor='middle'>above and below the axis</text><line x1='12' y1='128' x2='308' y2='128' stroke='var(--line)' stroke-width='1'/><text x='20' y='148' font-size='13' fill='var(--ink)' text-anchor='start'>H–C≡C–H</text><text x='300' y='148' font-size='13' fill='var(--acc)' text-anchor='end' font-weight='700'>3σ + 2π</text><text x='20' y='168' font-size='13' fill='var(--ink)' text-anchor='start'>H₂C=CH₂</text><text x='300' y='168' font-size='13' fill='var(--acc)' text-anchor='end' font-weight='700'>5σ + 1π</text><text x='20' y='188' font-size='13' fill='var(--ink)' text-anchor='start'>CH₄</text><text x='300' y='188' font-size='13' fill='var(--acc)' text-anchor='end' font-weight='700'>4σ</text></svg>",
+    "key": "A σ bond is stronger than a π bond. The π bond prevents rotation. C–H bonds are σ bonds too."
+   },
+   {
+    "h": "VSEPR and molecular geometry",
+    "p": "According to <b>VSEPR</b> theory, the electron pairs on the central atom repel each other and spread as far apart as possible. Lone pairs repel more strongly. That is why the angle is 109.5° in CH₄, 107° in NH₃ and 104.5° in H₂O.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='14' y='22' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>Type</text><text x='72' y='22' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>Example</text><text x='152' y='22' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>Shape</text><text x='306' y='22' font-size='11' fill='var(--muted)' text-anchor='end' font-weight='700'>Angle</text><rect x='8' y='30' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='14' y='48' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>AX₂</text><text x='72' y='48' font-size='12' fill='var(--ink)' text-anchor='start'>BeH₂, CO₂</text><text x='152' y='48' font-size='12' fill='var(--ink)' text-anchor='start'>linear</text><text x='306' y='48' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='700'>180°</text><rect x='8' y='58' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='0.4'/><text x='14' y='76' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>AX₃</text><text x='72' y='76' font-size='12' fill='var(--ink)' text-anchor='start'>BF₃</text><text x='152' y='76' font-size='12' fill='var(--ink)' text-anchor='start'>trigonal planar</text><text x='306' y='76' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='700'>120°</text><rect x='8' y='86' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='14' y='104' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>AX₄</text><text x='72' y='104' font-size='12' fill='var(--ink)' text-anchor='start'>CH₄</text><text x='152' y='104' font-size='12' fill='var(--ink)' text-anchor='start'>tetrahedral</text><text x='306' y='104' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='700'>109.5°</text><rect x='8' y='114' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='0.4'/><text x='14' y='132' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>AX₃E</text><text x='72' y='132' font-size='12' fill='var(--ink)' text-anchor='start'>NH₃</text><text x='152' y='132' font-size='12' fill='var(--ink)' text-anchor='start'>trigonal pyramidal</text><text x='306' y='132' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='700'>107°</text><rect x='8' y='142' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='14' y='160' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>AX₂E₂</text><text x='72' y='160' font-size='12' fill='var(--ink)' text-anchor='start'>H₂O</text><text x='152' y='160' font-size='12' fill='var(--ink)' text-anchor='start'>bent</text><text x='306' y='160' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='700'>104.5°</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>A: central atom · X: bonded atom · E: lone pair</text></svg>",
+    "key": "In AXnEm notation, n is the number of bonded atoms and m is the number of lone pairs. A multiple bond counts as one direction. So CO₂ is AX₂ and linear.",
+    "once": {
+     "soru": "Why is a water molecule bent rather than straight?",
+     "secenekler": [
+      {
+       "yazi": "Lone pairs repel",
+       "neden": "The two lone pairs on O push the H atoms and narrow the angle to 104.5°.",
+       "dogru": true
+      },
+      {
+       "yazi": "H atoms attract each other",
+       "neden": "The two H atoms do not repel each other, but they do not attract either. Electron pairs decide the shape of the molecule."
+      },
+      {
+       "yazi": "The O atom is very small",
+       "neden": "Electron pairs decide the shape, not atom size."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Bond and molecular polarity",
+    "p": "A bond between atoms with different electronegativities is polar. If the bond dipoles do not cancel, the molecule is <b>polar</b>. H₂O and NH₃ are polar. Symmetric CH₄ and CO₂ are nonpolar.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='108' y1='16' x2='108' y2='190' stroke='var(--line)' stroke-width='1'/><line x1='214' y1='16' x2='214' y2='190' stroke='var(--line)' stroke-width='1'/><text x='55' y='75.4' font-size='15' fill='var(--ink)' text-anchor='middle'>C</text><line x1='55' y1='60' x2='55' y2='46' stroke='var(--ink)' stroke-width='1.5'/><text x='55' y='40.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='45.9' y1='74.1' x2='33.1' y2='79.9' stroke='var(--ink)' stroke-width='1.5'/><text x='24' y='88.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='64.1' y1='74.1' x2='76.9' y2='79.9' stroke='var(--ink)' stroke-width='1.5'/><text x='86' y='88.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='59.5' y1='78.9' x2='65.5' y2='91.1' stroke='var(--ink)' stroke-width='1.5' stroke-dasharray='3 2'/><text x='70' y='104.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><text x='160' y='77.4' font-size='15' fill='var(--ink)' text-anchor='middle'>N</text><line x1='152.1' y1='78.2' x2='139.9' y2='87.8' stroke='var(--ink)' stroke-width='1.5'/><text x='132' y='98.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='167.9' y1='78.2' x2='180.1' y2='87.8' stroke='var(--ink)' stroke-width='1.5'/><text x='188' y='98.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='160' y1='82' x2='160' y2='94' stroke='var(--ink)' stroke-width='1.5'/><text x='160' y='108.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><ellipse cx='160' cy='48' rx='9' ry='13' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)' stroke-width='1'/><circle cx='156' cy='48' r='1.8' fill='var(--ink)'/><circle cx='164' cy='48' r='1.8' fill='var(--ink)'/><text x='265' y='71.4' font-size='15' fill='var(--ink)' text-anchor='middle'>O</text><line x1='258.3' y1='73.5' x2='246.7' y2='86.5' stroke='var(--ink)' stroke-width='1.5'/><text x='240' y='98.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='271.7' y1='73.5' x2='283.3' y2='86.5' stroke='var(--ink)' stroke-width='1.5'/><text x='290' y='98.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><ellipse cx='250' cy='44' rx='8' ry='12' transform='rotate(-35 250 44)' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)' stroke-width='1'/><ellipse cx='280' cy='44' rx='8' ry='12' transform='rotate(35 280 44)' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)' stroke-width='1'/><circle cx='247' cy='46' r='1.8' fill='var(--ink)'/><circle cx='253' cy='42' r='1.8' fill='var(--ink)'/><circle cx='277' cy='42' r='1.8' fill='var(--ink)'/><circle cx='283' cy='46' r='1.8' fill='var(--ink)'/><text x='55' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>tetrahedral</text><text x='160' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>trigonal pyramidal</text><text x='265' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>bent</text><text x='55' y='148' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>109.5°</text><text x='160' y='148' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>107°</text><text x='265' y='148' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>104.5°</text><text x='55' y='168' font-size='11' fill='var(--muted)' text-anchor='middle'>4 bonds, 0 pairs</text><text x='160' y='168' font-size='11' fill='var(--muted)' text-anchor='middle'>3 bonds, 1 pair</text><text x='265' y='168' font-size='11' fill='var(--muted)' text-anchor='middle'>2 bonds, 2 pairs</text><text x='55' y='188' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>nonpolar</text><text x='160' y='188' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>polar</text><text x='265' y='188' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>polar</text></svg>",
+    "key": "A polar bond does not mean a polar molecule. BF₃ is also nonpolar because it is symmetric.",
+    "once": {
+     "soru": "The C=O bonds in CO₂ are polar. Is the molecule polar?",
+     "secenekler": [
+      {
+       "yazi": "No",
+       "neden": "In a linear molecule, the two dipoles point in opposite directions and cancel.",
+       "dogru": true
+      },
+      {
+       "yazi": "Yes",
+       "neden": "Polar bonds are not enough. You also have to look at the molecule's geometry."
+      },
+      {
+       "yazi": "Only as a solid",
+       "neden": "Polarity depends on the molecule's shape, not its state."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Types of formulas",
+    "p": "The <b>molecular formula</b> shows the number of atoms (C₄H₁₀), and the <b>empirical formula</b> shows the smallest ratio (C₂H₅). The <b>structural formula</b> shows every bond. In a <b>skeletal formula</b>, each corner is a C atom.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='14' y='28' font-size='12' fill='var(--muted)' text-anchor='start'>Molecular</text><text x='94' y='28' font-size='14' fill='var(--ink)' text-anchor='start' font-weight='700'>C₄H₁₀</text><text x='306' y='28' font-size='11' fill='var(--muted)' text-anchor='end'>numbers of atoms</text><text x='14' y='54' font-size='12' fill='var(--muted)' text-anchor='start'>Empirical</text><text x='94' y='54' font-size='14' fill='var(--ink)' text-anchor='start' font-weight='700'>C₂H₅</text><text x='306' y='54' font-size='11' fill='var(--muted)' text-anchor='end'>smallest ratio</text><line x1='12' y1='66' x2='308' y2='66' stroke='var(--line)' stroke-width='1'/><text x='14' y='106' font-size='12' fill='var(--muted)' text-anchor='start'>Structural</text><text x='116' y='106.68' font-size='13' fill='var(--ink)' text-anchor='middle'>C</text><text x='150' y='106.68' font-size='13' fill='var(--ink)' text-anchor='middle'>C</text><text x='184' y='106.68' font-size='13' fill='var(--ink)' text-anchor='middle'>C</text><text x='218' y='106.68' font-size='13' fill='var(--ink)' text-anchor='middle'>C</text><line x1='123' y1='102' x2='143' y2='102' stroke='var(--ink)' stroke-width='1.5'/><line x1='157' y1='102' x2='177' y2='102' stroke='var(--ink)' stroke-width='1.5'/><line x1='191' y1='102' x2='211' y2='102' stroke='var(--ink)' stroke-width='1.5'/><line x1='116' y1='95' x2='116' y2='89' stroke='var(--ink)' stroke-width='1.5'/><text x='116' y='85.96' font-size='11' fill='var(--ink)' text-anchor='middle'>H</text><line x1='116' y1='109' x2='116' y2='115' stroke='var(--ink)' stroke-width='1.5'/><text x='116' y='125.96' font-size='11' fill='var(--ink)' text-anchor='middle'>H</text><line x1='150' y1='95' x2='150' y2='89' stroke='var(--ink)' stroke-width='1.5'/><text x='150' y='85.96' font-size='11' fill='var(--ink)' text-anchor='middle'>H</text><line x1='150' y1='109' x2='150' y2='115' stroke='var(--ink)' stroke-width='1.5'/><text x='150' y='125.96' font-size='11' fill='var(--ink)' text-anchor='middle'>H</text><line x1='184' y1='95' x2='184' y2='89' stroke='var(--ink)' stroke-width='1.5'/><text x='184' y='85.96' font-size='11' fill='var(--ink)' text-anchor='middle'>H</text><line x1='184' y1='109' x2='184' y2='115' stroke='var(--ink)' stroke-width='1.5'/><text x='184' y='125.96' font-size='11' fill='var(--ink)' text-anchor='middle'>H</text><line x1='218' y1='95' x2='218' y2='89' stroke='var(--ink)' stroke-width='1.5'/><text x='218' y='85.96' font-size='11' fill='var(--ink)' text-anchor='middle'>H</text><line x1='218' y1='109' x2='218' y2='115' stroke='var(--ink)' stroke-width='1.5'/><text x='218' y='125.96' font-size='11' fill='var(--ink)' text-anchor='middle'>H</text><line x1='109' y1='102' x2='101' y2='102' stroke='var(--ink)' stroke-width='1.5'/><text x='94' y='105.96' font-size='11' fill='var(--ink)' text-anchor='middle'>H</text><line x1='225' y1='102' x2='233' y2='102' stroke='var(--ink)' stroke-width='1.5'/><text x='240' y='105.96' font-size='11' fill='var(--ink)' text-anchor='middle'>H</text><text x='306' y='106' font-size='11' fill='var(--muted)' text-anchor='end'>all bonds</text><line x1='12' y1='136' x2='308' y2='136' stroke='var(--line)' stroke-width='1'/><text x='14' y='156' font-size='12' fill='var(--muted)' text-anchor='start'>Condensed</text><text x='94' y='156' font-size='13' fill='var(--ink)' text-anchor='start'>CH₃–CH₂–CH₂–CH₃</text><text x='14' y='182' font-size='12' fill='var(--muted)' text-anchor='start'>Skeletal</text><polyline points='94,184 120,168 146,184 172,168' fill='none' stroke='var(--ink)' stroke-width='1.8'/><text x='306' y='182' font-size='11' fill='var(--muted)' text-anchor='end'>corner = C</text></svg>",
+    "key": "A condensed formula shows the chain as groups. An empirical formula alone does not identify a molecule. For example, HCHO and glucose have the same empirical formula (CH₂O)."
+   },
+   {
+    "h": "Finding a formula by combustion analysis",
+    "p": "In <b>combustion analysis</b>, all the C ends up in CO₂ and all the H ends up in H₂O. From the products, you find the mass of C and H. If this total is less than the mass of the sample, the difference is oxygen. The ratio of the atoms gives the empirical formula.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='14' y='24' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>2.9 g sample + O₂ → CO₂ + H₂O</text><text x='306' y='24' font-size='11' fill='var(--muted)' text-anchor='end'>combustion analysis</text><text x='14' y='54' font-size='12' fill='var(--muted)' text-anchor='start'>CO₂</text><text x='60' y='54' font-size='11' fill='var(--ink)' text-anchor='start'>8.8 g ÷ 44 = 0.2 mol</text><text x='306' y='54' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>C: 0.2 mol = 2.4 g</text><text x='14' y='80' font-size='12' fill='var(--muted)' text-anchor='start'>H₂O</text><text x='60' y='80' font-size='11' fill='var(--ink)' text-anchor='start'>4.5 g ÷ 18 = 0.25 mol</text><text x='306' y='80' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>H: 0.5 mol = 0.5 g</text><line x1='12' y1='94' x2='308' y2='94' stroke='var(--line)' stroke-width='1'/><text x='14' y='118' font-size='12' fill='var(--muted)' text-anchor='start'>O?</text><text x='60' y='118' font-size='11' fill='var(--ink)' text-anchor='start'>2.9 − (2.4 + 0.5) = 0 g</text><text x='306' y='118' font-size='11' fill='var(--c2)' text-anchor='end' font-weight='700'>no O</text><text x='14' y='146' font-size='12' fill='var(--muted)' text-anchor='start'>Ratio</text><text x='60' y='146' font-size='11' fill='var(--ink)' text-anchor='start'>C : H = 0.2 : 0.5 = 2 : 5</text><text x='306' y='146' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>empirical: C₂H₅</text><text x='14' y='174' font-size='12' fill='var(--muted)' text-anchor='start'>M</text><text x='60' y='174' font-size='11' fill='var(--ink)' text-anchor='start'>58 g/mol ÷ 29 = 2</text><text x='306' y='174' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='700'>molecular: C₄H₁₀</text><text x='160' y='194' font-size='10' fill='var(--muted)' text-anchor='middle'>O in the products isn't counted: some of it comes from O₂.</text></svg>",
+    "key": "Burning 2.9 g of a sample gave 8.8 g of CO₂ and 4.5 g of H₂O. These products contain 2.4 g of C and 0.5 g of H, so the sample has no O. The C:H ratio is 2:5, and if M = 58, the formula is C₄H₁₀.",
+    "once": {
+     "soru": "A substance burns and gives only CO₂ and H₂O. Which elements are certainly in the substance?",
+     "secenekler": [
+      {
+       "yazi": "C and H",
+       "neden": "The O in the products can also come from O₂ in the air. Only C and H are certain.",
+       "dogru": true
+      },
+      {
+       "yazi": "C, H and O",
+       "neden": "Whether O is present is found by a mass calculation, not by looking at the products."
+      },
+      {
+       "yazi": "Only C",
+       "neden": "Since H₂O forms, H is present too."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Classes of organic compounds",
+    "p": "Compounds that contain only C and H are <b>hydrocarbons</b>. If the molecule has a <b>functional group</b> such as –OH or –COOH, that group largely decides its reactions.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='90' y='8' width='140' height='26' rx='6' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)' stroke-width='1.2'/><text x='160' y='26' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Organic compounds</text><line x1='120' y1='34' x2='81' y2='44' stroke='var(--muted)' stroke-width='1.2'/><line x1='200' y1='34' x2='239' y2='44' stroke='var(--muted)' stroke-width='1.2'/><rect x='10' y='44' width='142' height='146' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)' stroke-width='1.2'/><rect x='168' y='44' width='142' height='146' rx='6' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)' stroke-width='1.2'/><text x='81' y='64' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>Hydrocarbons</text><text x='81' y='80' font-size='10' fill='var(--muted)' text-anchor='middle'>only C and H</text><text x='20' y='104' font-size='12' fill='var(--ink)' text-anchor='start'>alkane</text><text x='142' y='104' font-size='12' fill='var(--ink)' text-anchor='end'>C–C</text><text x='20' y='126' font-size='12' fill='var(--ink)' text-anchor='start'>alkene</text><text x='142' y='126' font-size='12' fill='var(--ink)' text-anchor='end'>C=C</text><text x='20' y='148' font-size='12' fill='var(--ink)' text-anchor='start'>alkyne</text><text x='142' y='148' font-size='12' fill='var(--ink)' text-anchor='end'>C≡C</text><text x='20' y='170' font-size='12' fill='var(--ink)' text-anchor='start'>aromatic</text><text x='142' y='170' font-size='12' fill='var(--ink)' text-anchor='end'>benzene</text><text x='239' y='64' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>With functional groups</text><text x='178' y='84' font-size='11' fill='var(--ink)' text-anchor='start'>alcohol</text><text x='300' y='84' font-size='11' fill='var(--ink)' text-anchor='end'>–OH</text><text x='178' y='100' font-size='11' fill='var(--ink)' text-anchor='start'>ether</text><text x='300' y='100' font-size='11' fill='var(--ink)' text-anchor='end'>–O–</text><text x='178' y='116' font-size='11' fill='var(--ink)' text-anchor='start'>aldehyde</text><text x='300' y='116' font-size='11' fill='var(--ink)' text-anchor='end'>–CHO</text><text x='178' y='132' font-size='11' fill='var(--ink)' text-anchor='start'>ketone</text><text x='300' y='132' font-size='11' fill='var(--ink)' text-anchor='end'>–CO–</text><text x='178' y='148' font-size='11' fill='var(--ink)' text-anchor='start'>carboxylic acid</text><text x='300' y='148' font-size='11' fill='var(--ink)' text-anchor='end'>–COOH</text><text x='178' y='164' font-size='11' fill='var(--ink)' text-anchor='start'>ester</text><text x='300' y='164' font-size='11' fill='var(--ink)' text-anchor='end'>–COO–</text><text x='178' y='180' font-size='11' fill='var(--ink)' text-anchor='start'>amine</text><text x='300' y='180' font-size='11' fill='var(--ink)' text-anchor='end'>–NH₂</text></svg>",
+    "key": "You will see alkanes, alkenes, alkynes and aromatics in the next topic. The functional group is the part that gives a molecule its character.",
+    "once": {
+     "soru": "Is ethanol (C₂H₅OH) a hydrocarbon?",
+     "secenekler": [
+      {
+       "yazi": "No",
+       "neden": "It contains an O atom. Hydrocarbons contain only C and H.",
+       "dogru": true
+      },
+      {
+       "yazi": "Yes",
+       "neden": "Ethanol has an –OH group."
+      },
+      {
+       "yazi": "Only as a liquid",
+       "neden": "Being a hydrocarbon depends on the elements, not the state."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Structural isomerism",
+    "p": "Compounds with the same molecular formula but different structures are called <b>isomers</b>. There are <b>chain</b>, <b>position</b> and <b>functional group</b> (for example, −OH) isomers. Ethanol and dimethyl ether are functional group isomers of each other.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='14' y='20' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>Chain isomerism · C₅H₁₂</text><text x='16' y='44' font-size='11' fill='var(--ink)' text-anchor='start'>CH₃–CH₂–CH₂–CH₂–CH₃</text><text x='166' y='44' font-size='13' fill='var(--muted)' text-anchor='middle'>≠</text><text x='196' y='44' font-size='12' fill='var(--ink)' text-anchor='start'>CH₃–CH–CH₂–CH₃</text><line x1='231' y1='48' x2='231' y2='56' stroke='var(--ink)' stroke-width='1.2'/><text x='231' y='68' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃</text><line x1='12' y1='78' x2='308' y2='78' stroke='var(--line)' stroke-width='1'/><text x='14' y='96' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>Position isomerism · C₃H₈O</text><text x='20' y='120' font-size='12' fill='var(--ink)' text-anchor='start'>CH₃–CH₂–CH₂–OH</text><text x='160' y='120' font-size='13' fill='var(--muted)' text-anchor='middle'>≠</text><text x='250' y='120' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃–CH–CH₃</text><line x1='250' y1='124' x2='250' y2='132' stroke='var(--ink)' stroke-width='1.2'/><text x='250' y='144' font-size='12' fill='var(--ink)' text-anchor='middle'>OH</text><line x1='12' y1='154' x2='308' y2='154' stroke='var(--line)' stroke-width='1'/><text x='14' y='172' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>Functional group isomerism · C₂H₆O</text><text x='20' y='192' font-size='12' fill='var(--ink)' text-anchor='start'>CH₃–CH₂–OH (alcohol)</text><text x='300' y='192' font-size='12' fill='var(--ink)' text-anchor='end'>CH₃–O–CH₃ (ether)</text></svg>",
+    "key": "To be isomers, the molecular formulas must first be the same. Pentane and 2-methylbutane are chain isomers."
+   },
+   {
+    "h": "Geometric (cis-trans) isomerism",
+    "p": "A C=C bond cannot rotate because of the π bond. If both carbons of the double bond carry different groups, the isomer is <b>cis</b> when similar groups are on the same side and <b>trans</b> when they are on opposite sides.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='160' y1='16' x2='160' y2='190' stroke='var(--line)' stroke-width='1'/><text x='80' y='24' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='700'>cis</text><text x='240' y='24' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='700'>trans</text><text x='63' y='93.4' font-size='15' fill='var(--ink)' text-anchor='middle'>C</text><text x='97' y='93.4' font-size='15' fill='var(--ink)' text-anchor='middle'>C</text><line x1='72' y1='85.5' x2='88' y2='85.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='72' y1='90.5' x2='88' y2='90.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='56.8' y1='80.1' x2='44.2' y2='63.9' stroke='var(--ink)' stroke-width='1.5'/><text x='38' y='60.68' font-size='13' fill='var(--c2)' text-anchor='middle'>Cl</text><line x1='56.8' y1='95.9' x2='44.2' y2='112.1' stroke='var(--ink)' stroke-width='1.5'/><text x='38' y='124.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='103.2' y1='80.1' x2='115.8' y2='63.9' stroke='var(--ink)' stroke-width='1.5'/><text x='122' y='60.68' font-size='13' fill='var(--c2)' text-anchor='middle'>Cl</text><line x1='103.2' y1='95.9' x2='115.8' y2='112.1' stroke='var(--ink)' stroke-width='1.5'/><text x='122' y='124.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><text x='223' y='93.4' font-size='15' fill='var(--ink)' text-anchor='middle'>C</text><text x='257' y='93.4' font-size='15' fill='var(--ink)' text-anchor='middle'>C</text><line x1='232' y1='85.5' x2='248' y2='85.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='232' y1='90.5' x2='248' y2='90.5' stroke='var(--ink)' stroke-width='1.5'/><line x1='216.8' y1='80.1' x2='204.2' y2='63.9' stroke='var(--ink)' stroke-width='1.5'/><text x='198' y='60.68' font-size='13' fill='var(--c2)' text-anchor='middle'>Cl</text><line x1='216.8' y1='95.9' x2='204.2' y2='112.1' stroke='var(--ink)' stroke-width='1.5'/><text x='198' y='124.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='263.2' y1='80.1' x2='275.8' y2='63.9' stroke='var(--ink)' stroke-width='1.5'/><text x='282' y='60.68' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><line x1='263.2' y1='95.9' x2='275.8' y2='112.1' stroke='var(--ink)' stroke-width='1.5'/><text x='282' y='124.68' font-size='13' fill='var(--c2)' text-anchor='middle'>Cl</text><text x='80' y='156' font-size='12' fill='var(--ink)' text-anchor='middle'>Cl atoms on the same side</text><text x='240' y='156' font-size='12' fill='var(--ink)' text-anchor='middle'>Cl atoms on opposite sides</text><text x='80' y='178' font-size='12' fill='var(--c2)' text-anchor='middle'>polar</text><text x='240' y='178' font-size='12' fill='var(--c1)' text-anchor='middle'>nonpolar</text></svg>",
+    "key": "ClHC=CHCl is an example. CH₂=CHCl has no cis-trans isomers, because one of its carbons carries two H atoms."
+   },
+   {
+    "h": "Summary",
+    "p": "• Organic chemistry studies carbon compounds. CO, CO₂ and carbonates are left out.<br>• Wöhler's synthesis of urea shook the idea of vital force.<br>• The angle is 109.5° for sp³, 120° for sp² and 180° for sp. A lone pair narrows the angle.<br>• A single bond is 1σ, a double bond 1σ+1π and a triple bond 1σ+2π.<br>• Isomers have the same molecular formula but different structures.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='160' y1='100' x2='70' y2='36' stroke='var(--line)' stroke-width='1.2'/><line x1='160' y1='100' x2='250' y2='36' stroke='var(--line)' stroke-width='1.2'/><line x1='160' y1='100' x2='60' y2='100' stroke='var(--line)' stroke-width='1.2'/><line x1='160' y1='100' x2='260' y2='100' stroke='var(--line)' stroke-width='1.2'/><line x1='160' y1='100' x2='70' y2='164' stroke='var(--line)' stroke-width='1.2'/><line x1='160' y1='100' x2='250' y2='164' stroke='var(--line)' stroke-width='1.2'/><rect x='16' y='22' width='108' height='26' rx='13' fill='var(--panel)' stroke='var(--acc)' stroke-width='1'/><text x='70' y='40' font-size='11' fill='var(--ink)' text-anchor='middle'>4 bonds, chains, rings</text><rect x='196' y='22' width='108' height='26' rx='13' fill='var(--panel)' stroke='var(--acc)' stroke-width='1'/><text x='250' y='40' font-size='11' fill='var(--ink)' text-anchor='middle'>allotropes</text><rect x='6' y='86' width='108' height='26' rx='13' fill='var(--panel)' stroke='var(--acc)' stroke-width='1'/><text x='60' y='104' font-size='11' fill='var(--ink)' text-anchor='middle'>sp³ · sp² · sp</text><rect x='206' y='86' width='108' height='26' rx='13' fill='var(--panel)' stroke='var(--acc)' stroke-width='1'/><text x='260' y='104' font-size='11' fill='var(--ink)' text-anchor='middle'>σ and π</text><rect x='16' y='150' width='108' height='26' rx='13' fill='var(--panel)' stroke='var(--acc)' stroke-width='1'/><text x='70' y='168' font-size='11' fill='var(--ink)' text-anchor='middle'>5 formula types</text><rect x='196' y='150' width='108' height='26' rx='13' fill='var(--panel)' stroke='var(--acc)' stroke-width='1'/><text x='250' y='168' font-size='11' fill='var(--ink)' text-anchor='middle'>isomerism</text><circle cx='160' cy='100' r='30' fill='var(--panel)' stroke='var(--acc)' stroke-width='1.5'/><text x='160' y='106' font-size='18' fill='var(--acc)' text-anchor='middle' font-weight='700'>C</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "eslestir",
+    "q": "Match the carbon atom in each molecule with its hybridization and bond angle.",
+    "ciftler": [
+     [
+      "CO₂ (O=C=O)",
+      "sp, 180°"
+     ],
+     [
+      "HCHO (H₂C=O)",
+      "sp², 120°"
+     ],
+     [
+      "CH₃OH",
+      "sp³, 109.5°"
+     ]
+    ],
+    "e": "In CO₂, C forms two double bonds, so it is sp hybridized and the angle is 180°. In HCHO, C has one double bond and is sp² hybridized (120°). In CH₃OH, C forms only single bonds and is sp³ hybridized (109.5°)."
+   },
+   {
+    "tur": "ayir",
+    "q": "Sort each substance as organic or inorganic.",
+    "gruplar": [
+     "Organic",
+     "Inorganic"
+    ],
+    "ogeler": [
+     [
+      "CH₄",
+      0
+     ],
+     [
+      "Ethanol",
+      0
+     ],
+     [
+      "Urea",
+      0
+     ],
+     [
+      "C₄H₁₀",
+      0
+     ],
+     [
+      "CO₂",
+      1
+     ],
+     [
+      "CaCO₃",
+      1
+     ],
+     [
+      "KCN",
+      1
+     ],
+     [
+      "CaC₂",
+      1
+     ]
+    ],
+    "e": "Organic chemistry studies carbon compounds, and the urea Wöhler synthesized is organic too. CO₂, carbonates (CaCO₃), cyanides (KCN) and carbides (CaC₂) contain carbon but count as inorganic."
+   },
+   {
+    "tur": "sayi",
+    "q": "How many sigma (σ) bonds are in the molecule CH₂=CH–C≡CH?",
+    "cevap": 7,
+    "e": "Each of the four C–H bonds and three C–C bonds contains one σ bond, so there are 4 + 3 = 7σ in total. The double bond adds another 1π, and the triple bond adds 2π."
+   },
+   {
+    "q": "Burning 4.6 g of a compound containing C, H and O completely gives 8.8 g of CO₂ and 5.4 g of H₂O. What is the empirical formula of the compound? (C = 12, H = 1, O = 16 g/mol)",
+    "o": [
+     "C₂H₆",
+     "C₂H₃O",
+     "C₂H₆O",
+     "CH₂O"
+    ],
+    "a": 2,
+    "e": "8.8 g of CO₂ contains 0.2 mol of C (2.4 g). 5.4 g of H₂O is 0.3 mol and contains 0.6 mol of H (0.6 g). Oxygen is 4.6 − 3.0 = 1.6 g, or 0.1 mol. The ratio is 2 : 6 : 1, so the empirical formula is C₂H₆O. If you forget the two H atoms in H₂O, you get C₂H₃O.",
+    "y": [
+     "2.4 g of C and 0.6 g of H add up to 3.0 g. You left out the remaining 1.6 g of oxygen.",
+     "You didn't count the two H atoms in H₂O. 0.3 mol of water gives 0.6 mol of H, so the C:H ratio is 2:6.",
+     "",
+     "You get 0.2 mol of C, 0.6 mol of H and 0.1 mol of O. The smallest ratio is 2:6:1, which doesn't fit CH₂O."
+    ]
+   }
+  ]
+ },
  "kimya-her-yerde": {
   "title": "Chemistry everywhere",
   "summary": "Learn about cleaning products, polymers, medicines, food and farm chemistry.",
