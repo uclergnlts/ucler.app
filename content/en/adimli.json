@@ -14753,5 +14753,358 @@
    "Living things respond to stimuli. Viruses can multiply only inside a living cell."
   ],
   "soruOnce": true
+ },
+ "biyomolekuller": {
+  "id": "biyomolekuller",
+  "ders": "biyoloji",
+  "konu": "biyomolekuller",
+  "baslik": "Biomolecules",
+  "ozet": "Try first, then learn the name: build and split a chain, weigh fat, damage a protein, and compare DNA with RNA.",
+  "adimlar": [
+   {
+    "baslik": "Water leaves as units join",
+    "metin": "Add glucose to build a chain of <b>5 glucose units</b>, and watch what happens at each bond.",
+    "sahne": {
+     "tur": "polimer"
+    },
+    "deger": {
+     "n": 1,
+     "su": 0
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Glucose",
+      "min": 1,
+      "max": 8,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 5
+     },
+     "tamam": "4 bonds formed between the 5 glucose units, and one water molecule left at each bond."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "How many waters?",
+    "metin": "The rule is always the same: one water molecule is released for each bond.",
+    "sahne": {
+     "tur": "polimer"
+    },
+    "deger": {
+     "n": 6,
+     "su": 0
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "How many water molecules are released when a straight chain of 100 glucose units is built?",
+     "secenekler": [
+      {
+       "yazi": "99",
+       "dogru": true,
+       "neden": "In a straight chain, the number of bonds is one less than the number of units. 100 − 1 = 99 bonds form, and 99 waters are released."
+      },
+      {
+       "yazi": "100",
+       "neden": "Look at the 6 glucose units on the screen and count the bonds. The number of bonds is one less than the number of units."
+      },
+      {
+       "yazi": "50",
+       "neden": "Water is released at every bond between two neighboring units. We are not counting the units in pairs."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Hydrolysis",
+    "metin": "Now do the reverse: <b>add water</b> to the chain.",
+    "sahne": {
+     "tur": "polimer"
+    },
+    "deger": {
+     "n": 5,
+     "su": 0
+    },
+    "kontroller": [
+     {
+      "ad": "su",
+      "etiket": "Add water",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "su": 1
+     },
+     "tamam": "4 waters went in, 4 bonds broke, and 5 glucose units were set free. This is how starch is split into glucose in digestion."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Fat: dense energy",
+    "metin": "The bar below is the 100 kcal from 25 g of carbohydrate. How many grams of fat give the same energy? Move the slider as close to <b>100 kcal</b> as you can.",
+    "sahne": {
+     "tur": "enerji-yag"
+    },
+    "deger": {
+     "g": 0
+    },
+    "kontroller": [
+     {
+      "ad": "g",
+      "etiket": "Fat",
+      "min": 0,
+      "max": 30,
+      "birim": "g"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "g": 11
+     },
+     "tamam": "11 g of fat gives about 99 kcal. Carbohydrate needs 25 g for the same energy. Fat carries the same energy in less than half the mass. That is why fat is the long-term store."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "A protein's shape",
+    "metin": "Proteins are chains of amino acids. Change the 6th amino acid in one chain of hemoglobin, which carries oxygen in the blood.",
+    "sahne": {
+     "tur": "protein"
+    },
+    "deger": {
+     "deg": 0
+    },
+    "kontroller": [
+     {
+      "ad": "deg",
+      "etiket": "Change the 6th amino acid",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What happened when a single amino acid changed?",
+     "secenekler": [
+      {
+       "yazi": "Its shape and job were damaged",
+       "dogru": true,
+       "neden": "This is <b>sickle cell anemia</b>: when valine replaces glutamic acid, hemoglobin molecules stick together. The red blood cell takes on a sickle shape, and oxygen transport suffers."
+      },
+      {
+       "yazi": "Nothing changed",
+       "neden": "Look at what happens to the red blood cell when you change it. If the order changes, the shape can change too."
+      },
+      {
+       "yazi": "It turned into fat",
+       "neden": "It is still a protein. Only the amino acid order changed, and with it the shape and job."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "DNA and RNA",
+    "metin": "Two molecules carry genetic information: DNA and RNA. The screen shows DNA's bases. Switch to RNA and compare the bases.",
+    "sahne": {
+     "tur": "nukleik"
+    },
+    "deger": {
+     "tur": 0
+    },
+    "kontroller": [
+     {
+      "ad": "tur",
+      "etiket": "Show RNA",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which base is found only in RNA?",
+     "secenekler": [
+      {
+       "yazi": "Uracil (U)",
+       "dogru": true,
+       "neden": "Like thymine, uracil pairs with adenine. It lacks just one methyl group compared with thymine."
+      },
+      {
+       "yazi": "Thymine (T)",
+       "neden": "Thymine is specific to DNA. Which base takes its place in RNA?"
+      },
+      {
+       "yazi": "Adenine (A)",
+       "neden": "Adenine is found in both DNA and RNA."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Food lab",
+    "metin": "Choose a food and a reagent, and look at the color in the tube. Show for yourself what each food contains.",
+    "sahne": {
+     "tur": "deney-besin"
+    },
+    "deger": {
+     "b": 0,
+     "r": 0
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Food",
+      "min": 0,
+      "max": 5,
+      "tur": "surukle"
+     },
+     {
+      "ad": "r",
+      "etiket": "Reagent",
+      "min": 0,
+      "max": 4,
+      "tur": "surukle"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "Show that honey contains <b>sugar</b>.",
+       "hedef": {
+        "b": 4,
+        "r": 2
+       },
+       "coz": [
+        {
+         "b": 4,
+         "r": 2
+        }
+       ],
+       "tamam": "Benedict's solution turned brick red when heated. So honey contains reducing sugars such as glucose and fructose."
+      },
+      {
+       "yazi": "Show that egg white contains <b>protein</b>.",
+       "hedef": {
+        "b": 2,
+        "r": 3
+       },
+       "coz": [
+        {
+         "b": 2,
+         "r": 3
+        }
+       ],
+       "tamam": "Biuret turned purple. This color shows peptide bonds, which means protein is present."
+      },
+      {
+       "yazi": "Show that olive oil contains <b>fat</b>.",
+       "hedef": {
+        "b": 3,
+        "r": 4
+       },
+       "coz": [
+        {
+         "b": 3,
+         "r": 4
+        }
+       ],
+       "tamam": "Sudan III dissolves in fat, and a red oil layer formed on top."
+      },
+      {
+       "yazi": "Make a control tube with <b>pure water</b>: try a reagent.",
+       "hedef": {
+        "b": 5,
+        "r": [
+         1,
+         4
+        ]
+       },
+       "coz": [
+        {
+         "b": 5,
+         "r": 1
+        }
+       ],
+       "tamam": "No reagent gives a positive color with pure water. The control tube shows that the color change comes from the food."
+      }
+     ]
+    },
+    "kart": 12
+   },
+   {
+    "baslik": "Unknown food",
+    "metin": "A friend tried the same four reagents on an unknown food. Read the results.",
+    "sahne": {
+     "tur": "deney-tablo",
+     "baslik": "Bilinmeyen besin",
+     "sutunlar": [
+      "Ayraç",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "İyot",
+       "sarı-kahve kaldı"
+      ],
+      [
+       "Benedict (ısıt)",
+       "kiremit kırmızısı"
+      ],
+      [
+       "Biüre",
+       "mor"
+      ],
+      [
+       "Sudan III",
+       "tabaka yok"
+      ]
+     ],
+     "not": "Kontrol tüpünde (saf su) hiçbir renk değişmedi."
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "What does this food contain?",
+     "secenekler": [
+      {
+       "yazi": "Sugar and protein",
+       "dogru": true,
+       "neden": "Benedict's turned red, so there is sugar, and biuret turned purple, so there is protein. Iodine and Sudan III did not change, so starch and fat are either absent or too little for the reagent to show."
+      },
+      {
+       "yazi": "Starch and protein",
+       "neden": "If there were starch, iodine would turn blue-black, but the iodine stayed yellow-brown."
+      },
+      {
+       "yazi": "Sugar and fat",
+       "neden": "If there were fat, a red layer would form with Sudan III."
+      }
+     ]
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "Monomers join by <b>dehydration</b> (releasing water), and polymers split by <b>hydrolysis</b> (adding water).",
+   "In a straight chain, the number of bonds and of waters released is one less than the number of units.",
+   "Fat gives about 9 kcal per gram and carbohydrate about 4 kcal. Fat is the long-term store.",
+   "In a protein, amino acid order decides folding, folding decides shape, and shape decides the job. A single change can ruin the job.",
+   "DNA is double-stranded and carries deoxyribose and the bases A, T, G and C. RNA is usually single-stranded, carries ribose, and has U instead of T.",
+   "In food tests, iodine shows starch, Benedict's shows sugar, biuret shows protein and Sudan III shows fat. Pure water is the control tube."
+  ],
+  "soruOnce": true
  }
 }
