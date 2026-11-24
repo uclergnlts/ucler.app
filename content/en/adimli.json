@@ -16955,6 +16955,239 @@
   ],
   "soruOnce": true
  },
+ "protein-sentezi": {
+  "id": "protein-sentezi",
+  "ders": "biyoloji",
+  "konu": "protein-sentezi",
+  "baslik": "Protein synthesis",
+  "ozet": "Try first, then learn the name. Write mRNA from DNA, read the codons and grow the chain on the ribosome.",
+  "adimlar": [
+   {
+    "baslik": "From DNA to mRNA",
+    "metin": "Information is first copied from DNA into RNA. This is called <b>transcription</b>. RNA polymerase reads only the template strand and adds complementary RNA nucleotides.",
+    "sahne": {
+     "tur": "biy7-transkripsiyon",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which base goes opposite an A in the template strand of the mRNA?",
+     "secenekler": [
+      {
+       "yazi": "T",
+       "neden": "T is found only in DNA. In RNA, another base takes its place."
+      },
+      {
+       "yazi": "U",
+       "dogru": true,
+       "neden": "RNA has no thymine. Uracil (U) goes opposite A."
+      },
+      {
+       "yazi": "A",
+       "neden": "A base does not pair with itself. The partner of A is a pyrimidine."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Three-letter words",
+    "metin": "mRNA is read three bases at a time, and each triplet is called a <b>codon</b>. UAA, UAG and UGA are stop codons. Read the codons in order and go on until the stop codon.",
+    "sahne": {
+     "tur": "biy7-kodon"
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Codon read",
+      "min": 0,
+      "max": 5,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": 5
+     },
+     "tamam": "5 codons gave 4 amino acids: Met, Ala, Trp and Lys. There are 3 peptide bonds between them."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Translation on the ribosome",
+    "metin": "Play the ribosome and watch how the tRNAs pass through the A, P and E sites.",
+    "sahne": {
+     "tur": "biy7-ribozom",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "When the ribosome shifts by one codon, from which site does the empty tRNA that has let go of its chain leave?",
+     "secenekler": [
+      {
+       "yazi": "The A site",
+       "neden": "The A site is where a newly arriving tRNA enters."
+      },
+      {
+       "yazi": "The P site",
+       "neden": "The P site is where the tRNA holding the chain sits. After the shift, the tRNA from A moves there."
+      },
+      {
+       "yazi": "The E site",
+       "dogru": true,
+       "neden": "The empty tRNA leaves from the E (exit) site."
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Counting codons and bonds",
+    "metin": "One codon codes for each amino acid, and there is also a stop codon at the end. Each codon is 3 nucleotides. Change the number of amino acids and make the mRNA's coding region <b>453</b> nucleotides.",
+    "sahne": {
+     "tur": "biy7-hesap"
+    },
+    "deger": {
+     "n": 50
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Amino acids",
+      "min": 10,
+      "max": 200,
+      "adim": 10
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 150
+     },
+     "tamam": "150 amino acids and one stop codon make 151 codons. 3 · 151 = 453 nucleotides. The chain has 150 − 1 = 149 peptide bonds, and one water molecule was released for each bond."
+    },
+    "kart": 12
+   },
+   {
+    "baslik": "One base, a different protein",
+    "metin": "In the β-globin chain of hemoglobin, amino acid 6 is glutamic acid (Glu). Change the middle base of this amino acid's codon and see what happens to the red blood cell.",
+    "sahne": {
+     "tur": "biy7-mutasyon"
+    },
+    "deger": {
+     "b2": 0
+    },
+    "kontroller": [
+     {
+      "ad": "b2",
+      "etiket": "Codon 6, base 2: A → U",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "b2": 1
+     },
+     "tamam": "The GAG codon became GUG, and valine (Val) took the place of glutamic acid. This single change distorts the shape of hemoglobin, and red blood cells take on a sickle shape. This is called sickle-cell anemia. It is a missense point mutation."
+    },
+    "kart": 13
+   },
+   {
+    "baslik": "Silent mutation",
+    "metin": "Now change the third base of the same codon: let GAG become GAA.",
+    "sahne": {
+     "tur": "biy7-mutasyon"
+    },
+    "deger": {
+     "b2": 0,
+     "b3": 0
+    },
+    "kontroller": [
+     {
+      "ad": "b3",
+      "etiket": "Codon 6, base 3: G → A",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why did this base change not affect the protein?",
+     "secenekler": [
+      {
+       "yazi": "Only the first base matters",
+       "neden": "In sickle cell, the middle base changed and the protein changed. What decides is not the position of the base but the meaning of the new codon."
+      },
+      {
+       "yazi": "GAA also codes for Glu",
+       "dogru": true,
+       "neden": "The genetic code is redundant. More than one codon can code for an amino acid. GAG and GAA both code for Glu, so the protein stays the same. This is called a silent mutation."
+      },
+      {
+       "yazi": "A codon codes for several amino acids",
+       "neden": "It is the other way around. A codon always stands for one amino acid, but an amino acid can have more than one codon."
+      }
+     ]
+    },
+    "kart": 13
+   },
+   {
+    "baslik": "Frameshift",
+    "metin": "What happens if a base is inserted or deleted? Insert a single U into the mRNA before the third codon and watch the reading.",
+    "sahne": {
+     "tur": "biy7-cerceve"
+    },
+    "deger": {
+     "ek": 0
+    },
+    "kontroller": [
+     {
+      "ad": "ek",
+      "etiket": "Insert a U",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What happened to the protein when a single base was inserted?",
+     "secenekler": [
+      {
+       "yazi": "One amino acid changed",
+       "neden": "That happens in a point mutation. Look at the codons after the insertion."
+      },
+      {
+       "yazi": "The protein did not change",
+       "neden": "When you turn on the switch, you can see that the chain gets shorter."
+      },
+      {
+       "yazi": "The frame shifted and the chain got shorter",
+       "dogru": true,
+       "neden": "The reading frame shifted by one letter. A UAA stop codon formed after GCU, and the protein stopped at 2 amino acids."
+      }
+     ]
+    },
+    "kart": 14
+   }
+  ],
+  "kapanis": [
+   "Information flows from DNA to mRNA (transcription), and from mRNA to protein (translation).",
+   "The mRNA is the complement of the template strand. A U goes opposite each A in the template.",
+   "There are 64 codons. AUG starts synthesis and codes for methionine. UAA, UAG and UGA stop synthesis, and the remaining 61 codons code for 20 amino acids.",
+   "A chain of n amino acids needs n + 1 codons and 3(n + 1) mRNA nucleotides. The chain forms n − 1 peptide bonds, and n − 1 water molecules are released.",
+   "A mutation can be silent, missense (sickle cell), nonsense or a frameshift."
+  ],
+  "soruOnce": true
+ },
  "siniflandirma": {
   "id": "siniflandirma",
   "ders": "biyoloji",

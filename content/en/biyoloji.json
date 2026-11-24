@@ -2925,6 +2925,345 @@
    }
   ]
  },
+ "protein-sentezi": {
+  "title": "Protein synthesis",
+  "summary": "How does the code in a gene become a protein?",
+  "cards": [
+   {
+    "h": "From gene to protein: the central dogma",
+    "p": "A region of DNA that carries the instructions for making a protein is called a <b>gene</b>. This information is first copied into RNA. This is called <b>transcription</b>. Then it is translated into the language of amino acids. This is called <b>translation</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='prot-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='10' y='72' width='70' height='40' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><text x='45' y='98' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>DNA</text><rect x='125' y='72' width='70' height='40' rx='6' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.2'/><text x='160' y='98' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>RNA</text><rect x='240' y='72' width='70' height='40' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.2'/><text x='275' y='98' font-size='14' fill='var(--c3)' text-anchor='middle' font-weight='700'>Protein</text><path d='M82 92 L121 92' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#prot-1)'/><path d='M197 92 L236 92' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#prot-1)'/><text x='102' y='62' font-size='11' fill='var(--ink)' text-anchor='middle'>transcription</text><text x='218' y='62' font-size='11' fill='var(--ink)' text-anchor='middle'>translation</text><path d='M24 70 C20 38 52 38 50 68' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#prot-1)'/><text x='40' y='30' font-size='11' fill='var(--muted)' text-anchor='middle'>replication</text><text x='45' y='130' font-size='12' fill='var(--muted)' text-anchor='middle'>gene</text><text x='160' y='130' font-size='12' fill='var(--muted)' text-anchor='middle'>mRNA</text><text x='275' y='130' font-size='12' fill='var(--muted)' text-anchor='middle'>polypeptide</text><text x='160' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>exception: retroviruses make DNA from RNA</text></svg>",
+    "key": "This flow of information from DNA to RNA and from RNA to protein is called the central dogma. Some genes code for RNA rather than protein."
+   },
+   {
+    "h": "Transcription: from DNA to mRNA",
+    "p": "<b>RNA polymerase</b> binds to the <b>promoter</b> region at the start of the gene and opens the DNA. It reads only the <b>template strand</b> and extends the RNA in the 5'→3' direction. A U is placed opposite each A in the template.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='prot-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='12' y='42' font-size='11' fill='var(--muted)' text-anchor='start'>coding</text><text x='12' y='78' font-size='11' fill='var(--c1)' text-anchor='start'>template</text><text x='12' y='148' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>mRNA</text><text x='90' y='42' font-size='11' fill='var(--muted)' text-anchor='start'>5'</text><text x='200' y='42' font-size='14' fill='var(--muted)' text-anchor='end' font-family='monospace'>ATG CCT GAA</text><text x='206' y='42' font-size='11' fill='var(--muted)' text-anchor='start'>3'</text><text x='90' y='78' font-size='11' fill='var(--c1)' text-anchor='start'>3'</text><text x='200' y='78' font-size='14' fill='var(--c1)' text-anchor='end' font-weight='700' font-family='monospace'>TAC GGA CTT</text><text x='206' y='78' font-size='11' fill='var(--c1)' text-anchor='start'>5'</text><text x='90' y='148' font-size='11' fill='var(--c2)' text-anchor='start'>5'</text><text x='200' y='148' font-size='14' fill='var(--c2)' text-anchor='end' font-weight='700' font-family='monospace'>AUG CCU GAA</text><text x='206' y='148' font-size='11' fill='var(--c2)' text-anchor='start'>3'</text><path d='M155 86 L155 130' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#prot-2)'/><text x='232' y='105' font-size='11' fill='var(--ink)' text-anchor='start'>RNA polymerase</text><text x='232' y='120' font-size='11' fill='var(--muted)' text-anchor='start'>reads the template</text><path d='M110 168 L200 168' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#prot-2)'/><text x='155' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>RNA grows 5'→3'</text><text x='236' y='160' font-size='11' fill='var(--c2)' text-anchor='start'>U instead of T</text></svg>",
+    "key": "No primer is needed in this process. At the end region, the RNA comes off and the DNA closes again. The mRNA is a copy of the coding strand with U written in place of T.",
+    "once": {
+     "soru": "If the template DNA strand is 3'-TAC-5', what is the mRNA?",
+     "secenekler": [
+      {
+       "yazi": "5'-AUG-3'",
+       "neden": "A pairs with T, U pairs with A and G pairs with C.",
+       "dogru": true
+      },
+      {
+       "yazi": "5'-ATG-3'",
+       "neden": "RNA has no T. U pairs with A."
+      },
+      {
+       "yazi": "5'-UAC-3'",
+       "neden": "This is a copy of the template. The mRNA is the complement of the template."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Eukaryotes and prokaryotes differ",
+    "p": "In eukaryotes, transcription happens in the nucleus. Along the way, <b>introns</b> are cut out, <b>exons</b> are joined and the mRNA moves into the cytoplasm. Prokaryotes have no nucleus. That is why transcription and translation happen <b>at the same time</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='prot-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='80' y='16' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Eukaryote</text><text x='240' y='16' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Prokaryote</text><path d='M160 6 L160 194' stroke='var(--line)' stroke-width='1'/><rect x='12' y='26' width='136' height='86' rx='14' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)' stroke-width='1.2'/><text x='80' y='42' font-size='11' fill='var(--c1)' text-anchor='middle'>nucleus</text><rect x='22' y='52' width='22' height='10' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)' stroke-width='1'/><rect x='44' y='52' width='26' height='10' fill='var(--muted)' fill-opacity='0.2' stroke='var(--muted)' stroke-width='1'/><rect x='70' y='52' width='20' height='10' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)' stroke-width='1'/><rect x='90' y='52' width='26' height='10' fill='var(--muted)' fill-opacity='0.2' stroke='var(--muted)' stroke-width='1'/><rect x='116' y='52' width='22' height='10' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)' stroke-width='1'/><text x='57' y='78' font-size='10' fill='var(--muted)' text-anchor='middle'>intron</text><text x='103' y='78' font-size='10' fill='var(--muted)' text-anchor='middle'>intron</text><text x='80' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>introns cut out</text><path d='M80 114 L80 128' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#prot-3)'/><rect x='48' y='132' width='22' height='10' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)' stroke-width='1'/><rect x='70' y='132' width='20' height='10' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)' stroke-width='1'/><rect x='90' y='132' width='22' height='10' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)' stroke-width='1'/><text x='80' y='160' font-size='11' fill='var(--c3)' text-anchor='middle'>mature mRNA</text><text x='80' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>passes through a pore into</text><text x='80' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>the cytoplasm, read there</text><path d='M172 40 L312 40' stroke='var(--c1)' stroke-width='2'/><path d='M172 46 L312 46' stroke='var(--c1)' stroke-width='2'/><text x='178' y='32' font-size='11' fill='var(--c1)' text-anchor='start'>DNA</text><ellipse cx='290' cy='43' rx='13' ry='9' fill='var(--c5)' fill-opacity='0.4' stroke='var(--c5)' stroke-width='1.5'/><text x='312' y='30' font-size='10' fill='var(--c5)' text-anchor='end'>RNA pol.</text><path d='M284 52 C270 80 230 95 180 120' fill='none' stroke='var(--c4)' stroke-width='2.5'/><ellipse cx='256' cy='78' rx='11' ry='7' fill='var(--c3)' fill-opacity='0.45' stroke='var(--c3)' stroke-width='1.5'/><ellipse cx='226' cy='97' rx='11' ry='7' fill='var(--c3)' fill-opacity='0.45' stroke='var(--c3)' stroke-width='1.5'/><ellipse cx='196' cy='112' rx='11' ry='7' fill='var(--c3)' fill-opacity='0.45' stroke='var(--c3)' stroke-width='1.5'/><text x='250' y='120' font-size='11' fill='var(--c3)' text-anchor='start'>ribosomes</text><text x='240' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>translation starts</text><text x='240' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>before mRNA is done</text><text x='240' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>no nuclear envelope</text></svg>",
+    "key": "Mature mRNA passes through the nuclear pores. In prokaryotes, ribosomes attach to mRNA that is still being made.",
+    "once": {
+     "soru": "In a bacterium, can ribosomes start reading an mRNA while it is still being written?",
+     "secenekler": [
+      {
+       "yazi": "Yes",
+       "neden": "A bacterium has no nuclear envelope. So writing and reading happen in the same place at the same time.",
+       "dogru": true
+      },
+      {
+       "yazi": "No, it must leave the nucleus",
+       "neden": "A bacterium has no nucleus."
+      },
+      {
+       "yazi": "No, it has no ribosomes",
+       "neden": "Bacteria have ribosomes too, because every cell makes proteins."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The genetic code: three-letter words",
+    "p": "mRNA is read three bases at a time, with no gaps. Each triplet is called a <b>codon</b>, and there are 4³ = 64 codons. The <b>AUG</b> codon starts synthesis and codes for methionine. <b>UAA, UAG and UGA</b> stop synthesis.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='30' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='700'>4 × 4 × 4 = 64 codons</text><text x='14' y='80' font-size='11' fill='var(--muted)' text-anchor='start'>5'</text><text x='306' y='80' font-size='11' fill='var(--muted)' text-anchor='end'>3'</text><text x='55' y='80' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700' font-family='monospace'>AUG</text><path d='M38 87 L38 92 L72 92 L72 87' fill='none' stroke='var(--muted)' stroke-width='1'/><circle cx='55' cy='112' r='12' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)' stroke-width='1.5'/><text x='55' y='116' font-size='10' fill='var(--ink)' text-anchor='middle'>Met</text><text x='108' y='80' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700' font-family='monospace'>GCU</text><path d='M91 87 L91 92 L125 92 L125 87' fill='none' stroke='var(--muted)' stroke-width='1'/><circle cx='108' cy='112' r='12' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='108' y='116' font-size='10' fill='var(--ink)' text-anchor='middle'>Ala</text><text x='161' y='80' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700' font-family='monospace'>UCA</text><path d='M144 87 L144 92 L178 92 L178 87' fill='none' stroke='var(--muted)' stroke-width='1'/><circle cx='161' cy='112' r='12' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='161' y='116' font-size='10' fill='var(--ink)' text-anchor='middle'>Ser</text><text x='214' y='80' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700' font-family='monospace'>GGA</text><path d='M197 87 L197 92 L231 92 L231 87' fill='none' stroke='var(--muted)' stroke-width='1'/><circle cx='214' cy='112' r='12' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='214' y='116' font-size='10' fill='var(--ink)' text-anchor='middle'>Gly</text><text x='267' y='80' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700' font-family='monospace'>UAA</text><path d='M250 87 L250 92 L284 92 L284 87' fill='none' stroke='var(--muted)' stroke-width='1'/><rect x='251' y='102' width='32' height='20' rx='4' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)' stroke-width='1.2'/><text x='267' y='116' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>stop</text><text x='55' y='140' font-size='11' fill='var(--c3)' text-anchor='middle'>start</text><text x='267' y='140' font-size='11' fill='var(--c2)' text-anchor='middle'>end</text><text x='160' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>61 codons → 20 amino acids</text><text x='160' y='190' font-size='12' fill='var(--c2)' text-anchor='middle'>3 stop codons: UAA, UAG, UGA</text></svg>",
+    "key": "Stop codons do not code for amino acids. The other 61 codons code for the 20 kinds of amino acids."
+   },
+   {
+    "h": "Redundant and nearly universal",
+    "p": "More than one codon can code for the same amino acid. That is why the genetic code is <b>redundant</b>. But a codon always stands for just one amino acid. The code is the same in nearly all living things, so it is <b>universal</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='prot-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='30' y='32' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>UUA</text><text x='74' y='32' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>UUG</text><text x='30' y='56' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>CUU</text><text x='74' y='56' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>CUC</text><text x='30' y='80' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>CUA</text><text x='74' y='80' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>CUG</text><path d='M100 52 L124 52' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#prot-5)'/><circle cx='148' cy='50' r='20' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><text x='148' y='54' font-size='11' fill='var(--ink)' text-anchor='middle'>Leucine</text><text x='84' y='104' font-size='11' fill='var(--muted)' text-anchor='middle'>6 codons → 1 amino acid</text><text x='220' y='34' font-size='13' fill='var(--ink)' text-anchor='start' font-family='monospace'>AUG → Met</text><text x='220' y='60' font-size='13' fill='var(--ink)' text-anchor='start' font-family='monospace'>UGG → Trp</text><text x='220' y='82' font-size='11' fill='var(--muted)' text-anchor='start'>single codon</text><rect x='10' y='122' width='300' height='70' rx='8' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.2'/><text x='160' y='144' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Nearly universal</text><text x='160' y='164' font-size='12' fill='var(--ink)' text-anchor='middle'>GCU is alanine in bacteria and in humans.</text><text x='160' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>exception: a few codons differ in mitochondria</text></svg>",
+    "key": "That is why some base changes do not affect the protein. There are a few exceptions, such as mitochondria.",
+    "once": {
+     "soru": "There are 64 codons, but only 20 amino acids. How is that possible?",
+     "secenekler": [
+      {
+       "yazi": "One amino acid can have several codons",
+       "neden": "For example, 6 different codons code for leucine. This is called a redundant code.",
+       "dogru": true
+      },
+      {
+       "yazi": "Some codons code for two amino acids",
+       "neden": "A codon always stands for just one amino acid. Otherwise the protein would be ambiguous."
+      },
+      {
+       "yazi": "The extra codons are not used",
+       "neden": "Each of the 61 codons codes for an amino acid, and the remaining 3 are stop codons."
+      }
+     ]
+    }
+   },
+   {
+    "h": "tRNA and the anticodon",
+    "p": "<b>tRNA</b> carries amino acids to the ribosome. One end of a tRNA holds a specific amino acid, and the other end has a three-base <b>anticodon</b>. The anticodon pairs with the codon on the mRNA.",
+    "svg": "<svg viewBox='0 0 320 200'><circle cx='120' cy='24' r='13' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='120' y='28' font-size='10' fill='var(--ink)' text-anchor='middle'>Met</text><path d='M115 37 L115 66' stroke='var(--c5)' stroke-width='2'/><path d='M125 37 L125 66' stroke='var(--c5)' stroke-width='2'/><circle cx='84' cy='82' r='15' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.5'/><circle cx='156' cy='82' r='15' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.5'/><circle cx='120' cy='82' r='14' fill='var(--c5)' fill-opacity='0.25' stroke='var(--c5)' stroke-width='1.5'/><path d='M115 96 L115 120' stroke='var(--c5)' stroke-width='2'/><path d='M125 96 L125 120' stroke='var(--c5)' stroke-width='2'/><path d='M98 124 Q120 118 142 124 L142 142 Q120 150 98 142 Z' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)' stroke-width='1.5'/><text x='120' y='138' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700' font-family='monospace'>UAC</text><path d='M108 148 L108 158' stroke='var(--ink)' stroke-width='1'/><path d='M120 149 L120 158' stroke='var(--ink)' stroke-width='1'/><path d='M132 148 L132 158' stroke='var(--ink)' stroke-width='1'/><rect x='10' y='160' width='300' height='20' rx='3' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1'/><text x='120' y='175' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700' font-family='monospace'>AUG</text><text x='18' y='175' font-size='11' fill='var(--muted)' text-anchor='start'>5'</text><text x='302' y='175' font-size='11' fill='var(--muted)' text-anchor='end'>3'</text><text x='60' y='175' font-size='13' fill='var(--muted)' text-anchor='middle' font-family='monospace'>GCA</text><text x='180' y='175' font-size='13' fill='var(--muted)' text-anchor='middle' font-family='monospace'>GCU</text><text x='240' y='175' font-size='13' fill='var(--muted)' text-anchor='middle' font-family='monospace'>UCA</text><text x='160' y='20' font-size='11' fill='var(--ink)' text-anchor='start'>amino acid attachment end</text><text x='160' y='35' font-size='11' fill='var(--muted)' text-anchor='start'>(with ATP, by a specific enzyme)</text><text x='160' y='128' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>anticodon</text><text x='160' y='143' font-size='11' fill='var(--muted)' text-anchor='start'>3' UAC 5'</text><text x='160' y='197' font-size='11' fill='var(--muted)' text-anchor='middle'>mRNA codon 5' AUG 3'</text></svg>",
+    "key": "The amino acid is attached to the tRNA by a special enzyme, using ATP. There is no tRNA for the stop codons.",
+    "once": {
+     "soru": "If the codon on the mRNA is AUG, what is the anticodon of the tRNA that pairs with it?",
+     "secenekler": [
+      {
+       "yazi": "UAC",
+       "neden": "A pairs with U, U with A and G with C.",
+       "dogru": true
+      },
+      {
+       "yazi": "AUG",
+       "neden": "A sequence does not pair with itself. The anticodon must be complementary."
+      },
+      {
+       "yazi": "TAC",
+       "neden": "T is found only in DNA. tRNA has U."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The ribosome: a protein factory",
+    "p": "The <b>ribosome</b> is a structure without a membrane where translation takes place. The small subunit holds the mRNA. In the large subunit, peptide bonds form, and tRNAs sit in the <b>A, P and E</b> sites.",
+    "svg": "<svg viewBox='0 0 320 200'><ellipse cx='160' cy='70' rx='140' ry='52' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='160' y='34' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>large subunit</text><rect x='82' y='52' width='44' height='54' rx='4' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><rect x='138' y='52' width='44' height='54' rx='4' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><rect x='194' y='52' width='44' height='54' rx='4' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><text x='104' y='84' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>E</text><text x='160' y='84' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>P</text><text x='216' y='84' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><rect x='6' y='124' width='308' height='16' rx='3' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1'/><text x='14' y='136' font-size='11' fill='var(--muted)' text-anchor='start'>5'</text><text x='306' y='136' font-size='11' fill='var(--muted)' text-anchor='end'>3'</text><text x='160' y='136' font-size='11' fill='var(--ink)' text-anchor='middle'>mRNA</text><ellipse cx='160' cy='158' rx='120' ry='16' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='160' y='162' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>small subunit</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>rRNA + protein, no membrane. Prokaryote 70S, eukaryote 80S</text></svg>",
+    "key": "A ribosome is made of rRNA and protein, and its subunits come together only during synthesis. A prokaryotic ribosome (70S) is smaller than a eukaryotic one (80S).",
+    "once": {
+     "soru": "If you compare a bacterium with a human cell, which one has ribosomes?",
+     "secenekler": [
+      {
+       "yazi": "Both",
+       "neden": "Ribosomes have no membrane and make proteins in both bacteria and human cells. A bacterial ribosome (70S) is smaller.",
+       "dogru": true
+      },
+      {
+       "yazi": "Only the human cell",
+       "neden": "Bacteria make proteins too, and they have ribosomes."
+      },
+      {
+       "yazi": "Only the bacterium",
+       "neden": "In a human cell, ribosomes are found both in the cytoplasm and on the rough ER."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Translation 1: initiation",
+    "p": "The small subunit finds the <b>AUG</b> codon on the mRNA, and the initiator tRNA carrying methionine pairs with it. Then the large subunit joins. The initiator tRNA sits in the <b>P site</b>, and the A site stays empty.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='prot-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><ellipse cx='105' cy='72' rx='95' ry='46' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5' stroke-dasharray='5 4'/><path d='M105 12 L105 26' stroke='var(--c3)' stroke-width='1.5' fill='none' marker-end='url(#prot-8)'/><text x='150' y='18' font-size='11' fill='var(--c3)' text-anchor='start'>3: large subunit joins</text><text x='36' y='64' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>E</text><text x='84' y='64' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>P</text><text x='132' y='64' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><circle cx='84' cy='86' r='12' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='84' y='90' font-size='10' fill='var(--ink)' text-anchor='middle'>Met</text><path d='M84 98 L84 100' stroke='var(--c5)' stroke-width='2'/><rect x='71' y='100' width='26' height='36' rx='4' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)' stroke-width='1.2'/><text x='84' y='130' font-size='10' fill='var(--ink)' text-anchor='middle' font-family='monospace'>UAC</text><text x='132' y='100' font-size='11' fill='var(--muted)' text-anchor='middle'>empty</text><rect x='6' y='138' width='198' height='16' rx='3' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1'/><text x='84' y='150' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700' font-family='monospace'>AUG</text><text x='132' y='150' font-size='12' fill='var(--muted)' text-anchor='middle' font-family='monospace'>GCU</text><text x='14' y='150' font-size='10' fill='var(--muted)' text-anchor='start'>5'</text><text x='36' y='150' font-size='12' fill='var(--muted)' text-anchor='middle'>…</text><ellipse cx='105' cy='172' rx='90' ry='14' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='105' y='176' font-size='11' fill='var(--c1)' text-anchor='middle'>small subunit</text><text x='214' y='70' font-size='11' fill='var(--c1)' text-anchor='start'>1: small subunit</text><text x='214' y='84' font-size='11' fill='var(--c1)' text-anchor='start'>binds the mRNA,</text><text x='214' y='98' font-size='11' fill='var(--c1)' text-anchor='start'>finds AUG</text><text x='214' y='124' font-size='11' fill='var(--c5)' text-anchor='start'>2: Met-tRNA</text><text x='214' y='138' font-size='11' fill='var(--c5)' text-anchor='start'>pairs with AUG</text><text x='214' y='172' font-size='11' fill='var(--muted)' text-anchor='start'>the chain always</text><text x='214' y='186' font-size='11' fill='var(--muted)' text-anchor='start'>starts with Met</text></svg>",
+    "key": "The anticodon of the initiator tRNA is UAC. The first methionine may be cut off later in the mature protein.",
+    "once": {
+     "soru": "Which amino acid does the synthesis of every protein start with?",
+     "secenekler": [
+      {
+       "yazi": "Methionine",
+       "neden": "The start codon, AUG, codes for methionine.",
+       "dogru": true
+      },
+      {
+       "yazi": "Leucine",
+       "neden": "The codons for leucine are not start codons."
+      },
+      {
+       "yazi": "Glycine",
+       "neden": "The codons for glycine are not start codons."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Translation 2: elongation",
+    "p": "A new tRNA arrives at the <b>A site</b>. The chain in the P site is transferred to the amino acid in the A site by a <b>peptide bond</b>. Then the ribosome shifts by one codon, and the empty tRNA leaves from the E site.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='prot-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><ellipse cx='165' cy='88' rx='150' ry='50' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.5'/><text x='100' y='58' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>E</text><text x='165' y='58' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>P</text><text x='230' y='58' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><circle cx='140' cy='66' r='11' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='140' y='70' font-size='10' fill='var(--ink)' text-anchor='middle'>Met</text><path d='M148 73 L157 76' stroke='var(--ink)' stroke-width='1.5'/><circle cx='165' cy='82' r='11' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='165' y='86' font-size='10' fill='var(--ink)' text-anchor='middle'>Ala</text><rect x='152' y='94' width='26' height='36' rx='4' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)' stroke-width='1.2'/><text x='165' y='124' font-size='10' fill='var(--ink)' text-anchor='middle' font-family='monospace'>CGA</text><circle cx='230' cy='82' r='11' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)' stroke-width='1.5'/><text x='230' y='86' font-size='10' fill='var(--ink)' text-anchor='middle'>Ser</text><rect x='217' y='94' width='26' height='36' rx='4' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)' stroke-width='1.2'/><text x='230' y='124' font-size='10' fill='var(--ink)' text-anchor='middle' font-family='monospace'>AGU</text><path d='M177 76 Q198 64 217 74' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#prot-9)'/><text x='232' y='22' font-size='11' fill='var(--c2)' text-anchor='middle'>peptide bond (+ H₂O)</text><rect x='79' y='90' width='26' height='32' rx='4' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.2'/><text x='92' y='116' font-size='10' fill='var(--ink)' text-anchor='middle' font-family='monospace'>UAC</text><path d='M80 86 L50 34' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#prot-9)'/><text x='8' y='22' font-size='11' fill='var(--muted)' text-anchor='start'>empty tRNA leaves from E</text><rect x='6' y='138' width='308' height='16' rx='3' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1'/><text x='100' y='150' font-size='12' fill='var(--muted)' text-anchor='middle' font-family='monospace'>AUG</text><text x='165' y='150' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700' font-family='monospace'>GCU</text><text x='230' y='150' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700' font-family='monospace'>UCA</text><text x='290' y='150' font-size='12' fill='var(--muted)' text-anchor='middle' font-family='monospace'>GGA</text><text x='14' y='150' font-size='10' fill='var(--muted)' text-anchor='start'>5'</text><path d='M110 172 L230 172' stroke='var(--ink)' stroke-width='2' fill='none' marker-end='url(#prot-9)'/><text x='170' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>ribosome shifts 1 codon (3 nucleotides)</text></svg>",
+    "key": "A water molecule is released as each peptide bond forms. The tRNA holding the chain moves to the P site, and the cycle repeats. The ribosome reads the mRNA in the 5'→3' direction."
+   },
+   {
+    "h": "Translation 3: termination",
+    "p": "When a <b>stop codon</b> reaches the A site, there is no tRNA that pairs with it. Instead, a <b>release factor</b> binds and the chain is released. The subunits separate, and the polypeptide folds into a working protein.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='prot-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><ellipse cx='120' cy='84' rx='110' ry='42' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.5'/><text x='70' y='62' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>E</text><text x='120' y='62' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>P</text><text x='170' y='62' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><rect x='107' y='88' width='26' height='36' rx='4' fill='var(--c5)' fill-opacity='0.35' stroke='var(--c5)' stroke-width='1.2'/><text x='120' y='118' font-size='10' fill='var(--ink)' text-anchor='middle' font-family='monospace'>CGA</text><path d='M157 88 L183 88 L183 120 L170 124 L157 120 Z' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1.5'/><text x='170' y='109' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>RF</text><rect x='6' y='128' width='228' height='16' rx='3' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1'/><text x='120' y='140' font-size='12' fill='var(--muted)' text-anchor='middle' font-family='monospace'>GCU</text><text x='170' y='140' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700' font-family='monospace'>UAA</text><text x='14' y='140' font-size='10' fill='var(--muted)' text-anchor='start'>5'</text><circle cx='120' cy='78' r='7' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='120' y='82' font-size='10' fill='var(--ink)' text-anchor='middle'></text><path d='M125 73 L135 67' stroke='var(--ink)' stroke-width='1.5'/><circle cx='140' cy='63' r='7' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='140' y='67' font-size='10' fill='var(--ink)' text-anchor='middle'></text><path d='M145 58 L162 42' stroke='var(--ink)' stroke-width='1.5' stroke-dasharray='3 3'/><path d='M166 38 L198 22' stroke='var(--c4)' stroke-width='1.5' fill='none' marker-end='url(#prot-10)'/><text x='205' y='22' font-size='11' fill='var(--c4)' text-anchor='start'>chain released</text><text x='14' y='170' font-size='11' fill='var(--c2)' text-anchor='start'>RF: release factor</text><text x='14' y='186' font-size='11' fill='var(--muted)' text-anchor='start'>(a protein, not a tRNA)</text><text x='244' y='80' font-size='11' fill='var(--ink)' text-anchor='start'>then:</text><text x='244' y='100' font-size='11' fill='var(--muted)' text-anchor='start'>subunits</text><text x='244' y='114' font-size='11' fill='var(--muted)' text-anchor='start'>separate</text><text x='244' y='150' font-size='11' fill='var(--muted)' text-anchor='start'>polypeptide</text><text x='244' y='164' font-size='11' fill='var(--muted)' text-anchor='start'>folds</text></svg>",
+    "key": "A stop codon does not code for an amino acid. So no amino acid is added to the chain for it.",
+    "once": {
+     "soru": "The UAA stop codon has reached the ribosome's A site. What happens now?",
+     "secenekler": [
+      {
+       "yazi": "The chain is released",
+       "neden": "No tRNA comes to a stop codon. A protein factor binds and releases the chain.",
+       "dogru": true
+      },
+      {
+       "yazi": "One more amino acid is added",
+       "neden": "A stop codon does not code for an amino acid."
+      },
+      {
+       "yazi": "The ribosome skips the codon",
+       "neden": "The ribosome does not skip the stop codon. Synthesis ends there."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Polyribosomes and where proteins go",
+    "p": "Many ribosomes can read one mRNA at the same time. This is called a <b>polyribosome</b>. Free ribosomes make the proteins that will stay in the cytoplasm. Ribosomes on the <b>rough ER</b> make the proteins that will be secreted.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='prot-pol' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M24 82 H300' stroke='var(--c4)' stroke-width='3'/><text x='14' y='86' font-size='10' fill='var(--muted)' text-anchor='middle'>5'</text><text x='310' y='86' font-size='10' fill='var(--muted)' text-anchor='middle'>3'</text><ellipse cx='70' cy='70' rx='20' ry='12' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.2'/><ellipse cx='70' cy='89' rx='15' ry='7' fill='var(--c3)' fill-opacity='0.45' stroke='var(--c3)' stroke-width='1.2'/><circle cx='66' cy='52' r='4' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><ellipse cx='130' cy='70' rx='20' ry='12' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.2'/><ellipse cx='130' cy='89' rx='15' ry='7' fill='var(--c3)' fill-opacity='0.45' stroke='var(--c3)' stroke-width='1.2'/><circle cx='126' cy='52' r='4' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><circle cx='134' cy='44' r='4' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><ellipse cx='190' cy='70' rx='20' ry='12' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.2'/><ellipse cx='190' cy='89' rx='15' ry='7' fill='var(--c3)' fill-opacity='0.45' stroke='var(--c3)' stroke-width='1.2'/><circle cx='186' cy='52' r='4' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><circle cx='194' cy='44' r='4' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><circle cx='186' cy='36' r='4' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><circle cx='194' cy='28' r='4' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><ellipse cx='250' cy='70' rx='20' ry='12' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.2'/><ellipse cx='250' cy='89' rx='15' ry='7' fill='var(--c3)' fill-opacity='0.45' stroke='var(--c3)' stroke-width='1.2'/><circle cx='246' cy='52' r='4' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><circle cx='254' cy='44' r='4' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><circle cx='246' cy='36' r='4' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><circle cx='254' cy='28' r='4' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><circle cx='246' cy='20' r='4' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><circle cx='254' cy='12' r='4' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><path d='M120 110 L200 110' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#prot-pol)'/><text x='160' y='126' font-size='10' fill='var(--muted)' text-anchor='middle'>ribosomes move this way</text><text x='14' y='30' font-size='10' fill='var(--c5)' text-anchor='start'>polypeptide chain</text><rect x='8' y='146' width='82' height='24' rx='5' fill='var(--panel)' stroke='var(--ink)' stroke-width='1'/><text x='49.0' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>rough ER</text><rect x='106' y='146' width='60' height='24' rx='5' fill='var(--panel)' stroke='var(--ink)' stroke-width='1'/><text x='136.0' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>Golgi</text><rect x='184' y='146' width='60' height='24' rx='5' fill='var(--panel)' stroke='var(--ink)' stroke-width='1'/><text x='214.0' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>vesicle</text><rect x='262' y='146' width='54' height='24' rx='5' fill='var(--panel)' stroke='var(--ink)' stroke-width='1'/><text x='289.0' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>out</text><path d='M91 158 L105 158' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#prot-pol)'/><path d='M167 158 L183 158' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#prot-pol)'/><path d='M245 158 L261 158' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#prot-pol)'/><text x='160' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>path of a secreted protein</text></svg>",
+    "key": "Many copies of the same protein are made from one mRNA in a short time. The ribosome closest to the 3' end carries the longest chain.",
+    "once": {
+     "soru": "A pancreas cell secretes insulin. On which ribosomes is insulin made?",
+     "secenekler": [
+      {
+       "yazi": "Those on the rough ER",
+       "neden": "Proteins to be secreted are made on rough ER ribosomes and packaged in the Golgi.",
+       "dogru": true
+      },
+      {
+       "yazi": "Free ribosomes",
+       "neden": "Free ribosomes make the proteins that stay inside the cell."
+      },
+      {
+       "yazi": "In the nucleus",
+       "neden": "mRNA is written in the nucleus. Protein is made on ribosomes."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Calculations: amino acids, codons, bonds",
+    "p": "The mRNA coding for a polypeptide of <b>n</b> amino acids has <b>n + 1</b> codons, counting the stop codon. That makes 3(n + 1) nucleotides. The number of peptide bonds in the chain, and of water molecules released, is <b>n − 1</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='14' y='22' font-size='11' fill='var(--muted)' text-anchor='start'>quantity</text><text x='222' y='22' font-size='11' fill='var(--muted)' text-anchor='middle'>formula</text><text x='290' y='22' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>n = 100</text><rect x='8' y='30' width='304' height='23' rx='4' fill='var(--panel)'/><text x='14' y='46' font-size='12' fill='var(--ink)' text-anchor='start'>amino acids</text><text x='222' y='46' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><text x='290' y='46' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>100</text><text x='14' y='71' font-size='12' fill='var(--ink)' text-anchor='start'>codons (without stop)</text><text x='222' y='71' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>n</text><text x='290' y='71' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>100</text><rect x='8' y='80' width='304' height='23' rx='4' fill='var(--panel)'/><text x='14' y='96' font-size='12' fill='var(--ink)' text-anchor='start'>codons (with stop)</text><text x='222' y='96' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>n + 1</text><text x='290' y='96' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>101</text><text x='14' y='121' font-size='12' fill='var(--ink)' text-anchor='start'>mRNA nucleotides</text><text x='222' y='121' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>3(n + 1)</text><text x='290' y='121' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>303</text><rect x='8' y='130' width='304' height='23' rx='4' fill='var(--panel)'/><text x='14' y='146' font-size='12' fill='var(--ink)' text-anchor='start'>DNA nucleotides (double strand)</text><text x='222' y='146' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>6(n + 1)</text><text x='290' y='146' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>606</text><text x='14' y='171' font-size='12' fill='var(--ink)' text-anchor='start'>peptide bonds = water</text><text x='222' y='171' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>n − 1</text><text x='290' y='171' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>99</text><text x='160' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>coding region only, no introns or end regions</text></svg>",
+    "key": "The gene's double-stranded DNA has at least 6(n + 1) nucleotides. n tRNAs come to the ribosome, because no tRNA comes to the stop codon.",
+    "etk": {
+     "tur": "formul",
+     "soru": "Change the number of amino acids in the polypeptide. Only the coding region is counted.",
+     "girdiler": [
+      {
+       "ad": "n",
+       "etiket": "Number of amino acids (n)",
+       "min": 2,
+       "max": 500,
+       "adim": 1,
+       "deger": 100
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "mRNA nucleotides",
+       "ifade": "3*(n+1)",
+       "basamak": 0
+      },
+      {
+       "ad": "DNA nucleotides",
+       "ifade": "6*(n+1)",
+       "basamak": 0
+      },
+      {
+       "ad": "Peptide bonds and water",
+       "ifade": "n-1",
+       "basamak": 0
+      }
+     ]
+    }
+   },
+   {
+    "h": "Point mutations and sickle cell",
+    "p": "If a single base in DNA changes, it is a <b>point mutation</b>. In a <b>silent</b> mutation, the amino acid stays the same. In a <b>missense</b> mutation, the amino acid changes. Sickle-cell anemia is an example. In a <b>nonsense</b> mutation, a stop codon forms.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='14' y='20' font-size='11' fill='var(--muted)' text-anchor='start'>type</text><text x='140' y='20' font-size='11' fill='var(--muted)' text-anchor='middle'>codon</text><text x='200' y='20' font-size='11' fill='var(--muted)' text-anchor='middle'>amino acid</text><text x='250' y='20' font-size='11' fill='var(--muted)' text-anchor='start'>result</text><rect x='8' y='29' width='304' height='25' rx='4' fill='var(--panel)'/><text x='14' y='46' font-size='12' fill='var(--ink)' text-anchor='start'>normal</text><text x='130' y='46' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>G</text><text x='140' y='46' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>A</text><text x='150' y='46' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>G</text><text x='200' y='46' font-size='12' fill='var(--ink)' text-anchor='middle'>Glu</text><text x='250' y='46' font-size='11' fill='var(--muted)' text-anchor='start'></text><text x='14' y='74' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>silent</text><text x='130' y='74' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>G</text><text x='140' y='74' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>A</text><text x='150' y='74' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700' font-family='monospace'>A</text><text x='200' y='74' font-size='12' fill='var(--ink)' text-anchor='middle'>Glu</text><text x='250' y='74' font-size='11' fill='var(--muted)' text-anchor='start'>same</text><rect x='8' y='85' width='304' height='25' rx='4' fill='var(--panel)'/><text x='14' y='102' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>missense</text><text x='130' y='102' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>G</text><text x='140' y='102' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700' font-family='monospace'>U</text><text x='150' y='102' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>G</text><text x='200' y='102' font-size='12' fill='var(--ink)' text-anchor='middle'>Val</text><text x='250' y='102' font-size='11' fill='var(--muted)' text-anchor='start'>changes</text><text x='14' y='130' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>nonsense</text><text x='130' y='130' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700' font-family='monospace'>U</text><text x='140' y='130' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>A</text><text x='150' y='130' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>G</text><text x='200' y='130' font-size='12' fill='var(--ink)' text-anchor='middle'>stop</text><text x='250' y='130' font-size='11' fill='var(--muted)' text-anchor='start'>stays short</text><rect x='8' y='148' width='304' height='44' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.2'/><text x='160' y='166' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Sickle-cell anemia: Glu → Val in β-globin</text><text x='160' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>single base change, missense mutation</text></svg>",
+    "key": "A nonsense mutation shortens the protein and is often more harmful than a missense mutation."
+   },
+   {
+    "h": "Frameshift",
+    "p": "If one or two nucleotides are inserted or deleted, the reading frame shifts. Then <b>all the codons</b> after it change, and an early stop codon often appears.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='12' y='42' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>normal</text><rect x='96' y='26' width='44' height='22' rx='4' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><text x='118' y='42' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>AUG</text><text x='118' y='66' font-size='11' fill='var(--muted)' text-anchor='middle'>Met</text><rect x='152' y='26' width='44' height='22' rx='4' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><text x='174' y='42' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'><tspan fill='var(--c2)' font-weight='700'>G</tspan>CU</text><text x='174' y='66' font-size='11' fill='var(--muted)' text-anchor='middle'>Ala</text><rect x='208' y='26' width='44' height='22' rx='4' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><text x='230' y='42' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>UCA</text><text x='230' y='66' font-size='11' fill='var(--muted)' text-anchor='middle'>Ser</text><rect x='264' y='26' width='44' height='22' rx='4' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><text x='286' y='42' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>GGA</text><text x='286' y='66' font-size='11' fill='var(--muted)' text-anchor='middle'>Gly</text><text x='12' y='112' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>G deleted</text><rect x='96' y='96' width='44' height='22' rx='4' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><text x='118' y='112' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>AUG</text><text x='118' y='136' font-size='11' fill='var(--muted)' text-anchor='middle'>Met</text><rect x='152' y='96' width='44' height='22' rx='4' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.2'/><text x='174' y='112' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>CUU</text><text x='174' y='136' font-size='11' fill='var(--muted)' text-anchor='middle'>Leu</text><rect x='208' y='96' width='44' height='22' rx='4' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.2'/><text x='230' y='112' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>CAG</text><text x='230' y='136' font-size='11' fill='var(--muted)' text-anchor='middle'>Gln</text><rect x='264' y='96' width='44' height='22' rx='4' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.2'/><text x='286' y='112' font-size='13' fill='var(--ink)' text-anchor='middle' font-family='monospace'>GAU</text><text x='286' y='136' font-size='11' fill='var(--muted)' text-anchor='middle'>Asp</text><text x='160' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>every codon after the deletion changes</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>a 1 or 2 base shift: the frame breaks</text></svg>",
+    "key": "The resulting protein is usually useless. If three nucleotides are inserted or deleted, the reading frame is kept."
+   },
+   {
+    "h": "Summary",
+    "p": "• Information flows from DNA to mRNA, and from mRNA to protein.<br>• In eukaryotes introns are removed, and in prokaryotes the two processes happen at the same time.<br>• 64 codons code for 20 amino acids. AUG starts, and stop codons end.<br>• n amino acids have n − 1 peptide bonds.<br>• A mutation can be silent, missense, nonsense or a frameshift.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='prot-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='8' y='20' width='92' height='36' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><text x='54' y='43' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>DNA</text><rect x='114' y='20' width='92' height='36' rx='6' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.2'/><text x='160' y='43' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>mRNA</text><rect x='220' y='20' width='92' height='36' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.2'/><text x='266' y='43' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>protein</text><path d='M101 38 L112 38' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#prot-14)'/><path d='M207 38 L218 38' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#prot-14)'/><text x='54' y='76' font-size='11' fill='var(--muted)' text-anchor='middle'>RNA polymerase</text><text x='54' y='90' font-size='11' fill='var(--muted)' text-anchor='middle'>template strand</text><text x='160' y='76' font-size='11' fill='var(--muted)' text-anchor='middle'>codon: 3 bases</text><text x='160' y='90' font-size='11' fill='var(--muted)' text-anchor='middle'>AUG starts</text><text x='266' y='76' font-size='11' fill='var(--muted)' text-anchor='middle'>ribosome + tRNA</text><text x='266' y='90' font-size='11' fill='var(--muted)' text-anchor='middle'>peptide bond</text><rect x='8' y='112' width='304' height='80' rx='8' fill='var(--panel)' fill-opacity='1' stroke='var(--panel)' stroke-width='1.2'/><text x='18' y='134' font-size='12' fill='var(--ink)' text-anchor='start'>n amino acids → n + 1 codons → 3(n + 1) nucleotides</text><text x='18' y='156' font-size='12' fill='var(--ink)' text-anchor='start'>peptide bonds = water = n − 1</text><text x='18' y='178' font-size='11' fill='var(--muted)' text-anchor='start'>mutations: silent, missense, nonsense, frameshift</text></svg>",
+    "etk": {
+     "tur": "sirala",
+     "soru": "Put the steps from gene to protein in a eukaryotic cell in order.",
+     "ogeler": [
+      "RNA polymerase binds the promoter",
+      "mRNA is made",
+      "Introns are removed",
+      "mRNA moves into the cytoplasm",
+      "The ribosome starts at AUG",
+      "The polypeptide grows",
+      "Release at the stop codon"
+     ]
+    }
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "A mature mRNA codes for a single-chain polypeptide of 200 amino acids. How many nucleotides are in its coding region, counting the stop codon?",
+    "cevap": 603,
+    "birim": "nucleotides",
+    "e": "200 amino acids need 200 codons, and with the stop codon there are 201 codons. 201 × 3 = 603 nucleotides."
+   },
+   {
+    "tur": "sayi",
+    "q": "The coding region of an mRNA is 612 nucleotides, counting the stop codon. How many tRNA molecules come to the ribosome while a polypeptide is made from this mRNA?",
+    "cevap": 203,
+    "birim": "tRNA",
+    "e": "There are 612 / 3 = 204 codons. No tRNA comes to the stop codon, and one tRNA brings each of the 203 amino acids. So 203 tRNAs come."
+   },
+   {
+    "tur": "eslestir",
+    "q": "Match each base change with its type of mutation. UAA, UAG and UGA are stop codons.",
+    "ciftler": [
+     [
+      "GAG → GAA (both Glu)",
+      "Silent"
+     ],
+     [
+      "GAG → GUG (Glu → Val)",
+      "Missense"
+     ],
+     [
+      "UGG → UGA",
+      "Nonsense"
+     ],
+     [
+      "Deleting one nucleotide",
+      "Frameshift"
+     ]
+    ],
+    "e": "If the same amino acid comes, the mutation is silent. If a different amino acid comes, it is missense. UGA is a stop codon, so the protein stays short. This is a nonsense mutation. When a nucleotide is deleted, every codon after it changes. This is called a frameshift."
+   },
+   {
+    "q": "The template strand of a gene has the sequence 3'-TAC GGA-5'. Which mRNA sequence is made from this region?",
+    "o": [
+     "5'-AUG CCU-3'",
+     "5'-ATG CCT-3'",
+     "5'-UAC GGA-3'",
+     "3'-AUG CCU-5'"
+    ],
+    "a": 0,
+    "e": "The mRNA is complementary to the template strand and runs in the opposite direction. A pairs with T, U with A and C with G. RNA has no T.",
+    "y": [
+     "",
+     "mRNA has uracil in place of thymine. A sequence with T is DNA and cannot be RNA.",
+     "You wrote the same sequence as the template. The mRNA is complementary to the template. A pairs with T, U with A and C with G.",
+     "The bases are right, but the ends are reversed. The mRNA runs opposite to the template, so its 5' end is opposite TAC."
+    ]
+   }
+  ]
+ },
  "siniflandirma": {
   "title": "Classifying living things",
   "summary": "How are living things grouped, and how are species named?",
