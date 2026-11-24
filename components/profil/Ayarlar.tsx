@@ -11,7 +11,7 @@ import { temaAyarla, useTema, type Tema } from "@/lib/tema";
 import { ABONELIK } from "@/lib/abonelik";
 import { bildirimGonder } from "@/lib/bildirim";
 import { olay } from "@/lib/olay";
-import { magazaAdresi, uygulamayiPaylas } from "@/lib/yerel";
+import { magazaAdresi, PLAY_URL, uygulamayiPaylas } from "@/lib/yerel";
 import { Icon } from "../icons";
 import { Bolum, INSTAGRAM, Liste, Ok, Satir, UstEylem } from "../temel";
 import { Button } from "../ui/button";
@@ -99,7 +99,7 @@ export default function Ayarlar() {
             onClick={async () => setKopya((await uygulamayiPaylas()) === "kopyalandi")}
           />
           {magaza && (
-            <Satir external href={magaza} icon={<Yildiz />} title={cev("Uygulamayı puanla")} sub={cev("Google Play'de puan ver, yorum yaz")} tag={<Ok />} />
+            <Satir external href={magaza} icon={<Yildiz />} title={cev("Uygulamayı puanla")} sub={magaza.startsWith(PLAY_URL) ? cev("Google Play'de puan ver, yorum yaz") : cev("App Store'da puan ver, yorum yaz")} tag={<Ok />} />
           )}
           <Satir icon={<Soru />} title={cev("Görüşünü yaz")} sub={cev("Eksik ya da istediğin şeyi bize ilet")} tag={<Ok />} onClick={() => setGorus(true)} />
         </Liste>
