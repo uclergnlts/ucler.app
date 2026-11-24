@@ -71,7 +71,7 @@ function SertSu({ v }: SahneProps) {
   const iyon = sert ? Array.from({ length: 6 }, (_, i) => ({ x: X + 22 + (i % 2) * 44 + (Math.floor(i / 2) % 2) * 6, y: SUY + 34 + Math.floor(i / 2) * 22, mg: i % 3 === 1 })) : [];
   const kab = Array.from({ length: kotu ? 0 : 9 }, (_, i) => ({ x: X + 8 + (i % 5) * 18 + (i > 4 ? 9 : 0), y: SUY - 10 - (i > 4 ? 18 : 0) - (i % 2) * 6, r: 8 + (i % 3) * 2 }));
   return (
-    <svg viewBox="0 0 340 214" role="img" aria-label={`${sert ? cev("Sert") : cev("Yumuşak")} su ve ${det ? "deterjan" : "sabun"}: ${kotu ? cev("az köpük, kaymak oluştu") : cev("bol köpük")}`}>
+    <svg viewBox="0 0 340 214" role="img" aria-label={cev("{0} su ve {1}: {2}", sert ? cev("Sert") : cev("Yumuşak"), det ? cev("deterjan") : cev("sabun"), kotu ? cev("az köpük, kaymak oluştu") : cev("bol köpük"))}>
       <rect x={X} y={SUY} width={W} height={ALT - SUY} fill={SU} />
       <g>
         {kab.map((b, i) => <circle key={i} cx={b.x} cy={b.y} r={b.r} fill="var(--surface)" stroke="color-mix(in srgb, #3e649b 30%, var(--surface))" strokeWidth={1.2} />)}
@@ -89,8 +89,8 @@ function SertSu({ v }: SahneProps) {
       </g>
       <path d={`M${X} 40 L${X} ${ALT} L${X + W} ${ALT} L${X + W} 40`} fill="none" stroke="var(--ink)" strokeWidth={2} />
       <g fontSize={12} fontWeight={700}>
-        <text x={186} y={64} fill="var(--muted)">{cev("Su:")} <tspan fill="var(--ink)">{sert ? "sert" : cev("yumuşak")}</tspan></text>
-        <text x={186} y={84} fill="var(--muted)">{cev("Temizleyici:")} <tspan fill="var(--ink)">{det ? "deterjan" : "sabun"}</tspan></text>
+        <text x={186} y={64} fill="var(--muted)">{cev("Su:")} <tspan fill="var(--ink)">{sert ? cev("sert") : cev("yumuşak")}</tspan></text>
+        <text x={186} y={84} fill="var(--muted)">{cev("Temizleyici:")} <tspan fill="var(--ink)">{det ? cev("deterjan") : cev("sabun")}</tspan></text>
         <text x={186} y={122} fontSize={14} fontWeight={800} fill={kotu ? "var(--bad)" : "var(--good)"}>{kotu ? cev("Az köpük") : cev("Bol köpük")}</text>
         {kotu && <text x={186} y={142} fontSize={11.5} fill="var(--muted)">{cev("Sabun Ca²⁺ ve Mg²⁺ ile")}</text>}
         {kotu && <text x={186} y={158} fontSize={11.5} fill="var(--muted)">{cev("çökelek (kaymak) yaptı.")}</text>}
@@ -470,7 +470,7 @@ function Graham({ s, t, oynuyor }: SahneProps) {
         <g fontSize={11.5} fontWeight={700} textAnchor="middle">
           <line x1={a} x2={a} y1={Y + 18} y2={Y + 34} stroke="var(--ink)" strokeWidth={1.4} />
           <text x={a} y={Y + 50} fill="var(--ink)">{cev("beyaz halka: NH₄Cl")}</text>
-          <text x={170} y={Y + 78} fill="var(--muted)">{cev("NH₃ yolun %")}{Math.round(pay * 100)}{cev("'unu, HCl %")}{100 - Math.round(pay * 100)}{cev("'ini aldı")}</text>
+          <text x={170} y={Y + 78} fill="var(--muted)">{cev("NH₃ yolun %{0}'ını, HCl %{1}'ını aldı", Math.round(pay * 100), 100 - Math.round(pay * 100))}</text>
         </g>
       )}
     </svg>

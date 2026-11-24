@@ -317,7 +317,7 @@ function Denklestir({ s, v }: SahneProps) {
   const xs = sutun.map((_, i) => 40 + (i * 260) / (sutun.length - 1));
   const kutuW = 96, kutuX = (i: number) => 170 + (i - (sayim.length - 1) / 2) * (kutuW + 8) - kutuW / 2;
   return (
-    <svg viewBox="0 0 340 252" role="img" aria-label={`${terimler.map((x, i) => `${kat[i]} ${x.f}`).join(", ")}: ${denk ? "denk" : cev("denk değil")}`}>
+    <svg viewBox="0 0 340 252" role="img" aria-label={`${terimler.map((x, i) => `${kat[i]} ${x.f}`).join(", ")}: ${denk ? cev("denk") : cev("denk değil")}`}>
       <text x={170} y={30} fontSize={19} fontWeight={800} textAnchor="middle" fill="var(--ink)">
         {terimler.map((x, i) => (
           <tspan key={i}>
@@ -367,7 +367,7 @@ function Yanma({ s, v, t, oynuyor }: SahneProps) {
   const yaniyor = u > 0;
   const urunler = bol ? ["CO2", "H2O", "H2O", "CO2", "H2O", "H2O"] : ["CO", "H2O", "C", "H2O", "CO", "C", "H2O", "CO2"];
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={cev("Metan {0} havada yanıyor", bol ? "bol" : "az")}>
+    <svg viewBox="0 0 340 222" role="img" aria-label={bol ? cev("Metan bol havada yanıyor") : cev("Metan az havada yanıyor")}>
       <text x={14} y={22} fontSize={12.5} fontWeight={800} fill="var(--ink)">{bol ? cev("Hava bol") : cev("Hava az (kapalı oda)")}</text>
       <g>
         <rect x={140} y={186} width={60} height={14} rx={4} fill="#9aa8ba" />

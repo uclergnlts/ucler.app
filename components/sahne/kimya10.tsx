@@ -175,7 +175,7 @@ function RedoksMu({ v }: SahneProps) {
             {goster ? (
               <>
                 <text x={48} y={y + 45} fontSize={11.5} fontWeight={700} fill="var(--muted)">{k.b}</text>
-                <text x={322} y={y + 45} fontSize={11.5} fontWeight={800} textAnchor="end" fill={k.redoks ? "var(--good)" : "var(--c2)"}>{k.redoks ? "redoks" : cev("değişmez")}</text>
+                <text x={322} y={y + 45} fontSize={11.5} fontWeight={800} textAnchor="end" fill={k.redoks ? "var(--good)" : "var(--c2)"}>{k.redoks ? cev("redoks") : cev("değişmez")}</text>
               </>
             ) : (
               <text x={48} y={y + 45} fontSize={11.5} fontWeight={700} fill="var(--muted)">{cev("basamaklar gizli")}</text>

@@ -156,7 +156,7 @@ function BuharBasinci({ v }: SahneProps) {
         <text x={280} y={Math.max(60, bar + 5)} fontSize={14} fontWeight={800} fill="var(--ink)">{Math.round(P)}</text>
         <text x={280} y={Math.max(60, bar + 5) + 15} fontSize={11} fill="var(--muted)">{cev("mmHg")}</text>
       </g>
-      <text x={110} y={216} fontSize={11.5} textAnchor="middle" fill="var(--muted)">{cev("sıvı:")} {["az", "orta", cev("çok")][m - 1]}</text>
+      <text x={110} y={216} fontSize={11.5} textAnchor="middle" fill="var(--muted)">{cev("sıvı:")} {[cev("az"), cev("orta"), cev("çok")][m - 1]}</text>
     </svg>
   );
 }
@@ -170,7 +170,7 @@ function kaynama(atm: number) {
   return T1 <= 100 ? T1 : 1810.94 / (8.14019 - mm) - 244.485;
 }
 const yerAdi = (p: number) =>
-  p <= 3 ? cev("Everest zirvesi") : p <= 5 ? cev("yüksek dağ (≈ 5500 m)") : p <= 7 ? cev("dağ (≈ 3000 m)") : p < 10 ? "yayla" : p === 10 ? cev("deniz seviyesi") : p < 20 ? cev("kapalı kap") : cev("düdüklü tencere");
+  p <= 3 ? cev("Everest zirvesi") : p <= 5 ? cev("yüksek dağ (≈ 5500 m)") : p <= 7 ? cev("dağ (≈ 3000 m)") : p < 10 ? cev("yayla") : p === 10 ? cev("deniz seviyesi") : p < 20 ? cev("kapalı kap") : cev("düdüklü tencere");
 
 function KaynamaNoktasi({ v }: SahneProps) {
   const p = v.p ?? 10;
@@ -208,7 +208,7 @@ function KaynamaNoktasi({ v }: SahneProps) {
 /* ---------- hâl değişimleri ve enerji ---------- */
 
 type Degisim = { ad: string; a: 0 | 1 | 2; b: 0 | 1 | 2; alir: boolean; ornek: string };
-const HALLER = [cev("katı"), cev("sıvı"), "gaz"];
+const HALLER = [cev("katı"), cev("sıvı"), cev("gaz")];
 const DEGISIMLER: Degisim[] = [
   { ad: cev("Erime"), a: 0, b: 1, alir: true, ornek: cev("buz eriyor") },
   { ad: cev("Donma"), a: 1, b: 0, alir: false, ornek: cev("su donuyor") },
@@ -473,7 +473,7 @@ const KARISIM: Record<string, Karisim> = {
     neden: ["", cev("Mıknatıs yalnızca demir, nikel ve kobaltı çeker. Bu karışımda yok."), cev("İki sıvı da süzgeç kâğıdından geçer."), "", cev("Isıtmaya gerek yok: bu iki sıvı zaten iki katmana ayrılıyor. Katmanları ayıran daha basit yöntemi bul.")],
   },
   "tuzlu-su": {
-    ad: cev("tuzlu su"), dogru: 4, ciktilar: [cev("saf su"), "tuz"],
+    ad: cev("tuzlu su"), dogru: 4, ciktilar: [cev("saf su"), cev("tuz")],
     neden: ["", cev("Mıknatıs yalnızca demir, nikel ve kobaltı çeker. Bu karışımda yok."), cev("Çözünmüş tuz suyla birlikte süzgeç kâğıdından geçer."), cev("Tuzlu su tek fazlı bir çözeltidir. Katmanlara ayrılmaz."), ""],
   },
 };

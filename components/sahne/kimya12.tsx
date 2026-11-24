@@ -38,10 +38,10 @@ function Tup({ x, renk, op = 0.7, ust = 70, alt = 160 }: { x: number; renk: stri
 /* ---------- grubun karakteri: etana bir grup ekle ---------- */
 
 const GRUP = [
-  { g: "−H", ad: "etan", f: "C₂H₆", kn: "−89 °C", hal: "gaz", su: cev("suda çözünmez") },
-  { g: "−CH₃", ad: "propan", f: "C₃H₈", kn: "−42 °C", hal: "gaz", su: cev("suda çözünmez") },
-  { g: "−Br", ad: "bromoetan", f: "C₂H₅Br", kn: "38 °C", hal: cev("sıvı"), su: cev("suyla karışmaz, dibe çöker") },
-  { g: "−OH", ad: "etanol", f: "C₂H₅OH", kn: "78 °C", hal: cev("sıvı"), su: cev("suyla her oranda karışır") },
+  { g: "−H", ad: cev("etan"), f: "C₂H₆", kn: "−89 °C", hal: cev("gaz"), su: cev("suda çözünmez") },
+  { g: "−CH₃", ad: cev("propan"), f: "C₃H₈", kn: "−42 °C", hal: cev("gaz"), su: cev("suda çözünmez") },
+  { g: "−Br", ad: cev("bromoetan"), f: "C₂H₅Br", kn: "38 °C", hal: cev("sıvı"), su: cev("suyla karışmaz, dibe çöker") },
+  { g: "−OH", ad: cev("etanol"), f: "C₂H₅OH", kn: "78 °C", hal: cev("sıvı"), su: cev("suyla her oranda karışır") },
 ];
 
 function Grup({ v, set }: SahneProps) {
@@ -73,7 +73,7 @@ function Grup({ v, set }: SahneProps) {
 
 /* ---------- alkollerde zincir boyu ve çözünürlük ---------- */
 
-const ALKOL = ["metanol", "etanol", "1-propanol", cev("1-bütanol"), "1-pentanol", "1-hekzanol", "1-heptanol", "1-oktanol"];
+const ALKOL = [cev("metanol"), cev("etanol"), cev("1-propanol"), cev("1-bütanol"), cev("1-pentanol"), cev("1-hekzanol"), cev("1-heptanol"), cev("1-oktanol")];
 /** g / 100 g su, 25 °C civarı; ilk üçü her oranda karışır. */
 const COZ = [Infinity, Infinity, Infinity, 7.4, 2.2, 0.6, 0.2, 0.05];
 
@@ -123,7 +123,7 @@ function Hbag({ v }: SahneProps) {
   return (
     <svg viewBox="0 0 340 226" role="img" aria-label={eter ? cev("Dimetil eter: O−H yok, moleküller arasında hidrojen bağı yok, kaynama noktası −24 °C") : cev("Etanol: −OH grupları arasında hidrojen bağı, kaynama noktası 78 °C")}>
       <text x={170} y={22} fontSize={15} fontWeight={800} textAnchor="middle" fill="var(--ink)">
-        {eter ? cev("dimetil eter") : "etanol"} · C₂H₆O
+        {eter ? cev("dimetil eter") : cev("etanol")} · C₂H₆O
       </text>
       {!eter && (
         <g stroke="var(--c1)" strokeWidth={2} strokeDasharray="3 4">
@@ -154,9 +154,9 @@ function Hbag({ v }: SahneProps) {
 /* ---------- alkollerin dikromatla yükseltgenmesi ---------- */
 
 const ALK = [
-  { ad: "etanol", sinif: "1°", h: 2, urun: cev("→ asetik asit") },
-  { ad: "2-propanol", sinif: "2°", h: 1, urun: cev("→ aseton") },
-  { ad: "2-metil-2-propanol", sinif: "3°", h: 0, urun: cev("tepkime yok") },
+  { ad: cev("etanol"), sinif: "1°", h: 2, urun: cev("→ asetik asit") },
+  { ad: cev("2-propanol"), sinif: "2°", h: 1, urun: cev("→ aseton") },
+  { ad: cev("2-metil-2-propanol"), sinif: "3°", h: 0, urun: cev("tepkime yok") },
 ];
 
 function Dikromat({ s, t, oynuyor }: SahneProps) {
@@ -186,9 +186,9 @@ function Dikromat({ s, t, oynuyor }: SahneProps) {
 /* ---------- Tollens ve Fehling ---------- */
 
 const ALDEHIT = [
-  { ad: "propanal", f: "C₂H₅CHO", t: true, fe: true },
-  { ad: "propanon", f: "CH₃COCH₃", t: false, fe: false },
-  { ad: "benzaldehit", f: "C₆H₅CHO", t: true, fe: false },
+  { ad: cev("propanal"), f: "C₂H₅CHO", t: true, fe: true },
+  { ad: cev("propanon"), f: "CH₃COCH₃", t: false, fe: false },
+  { ad: cev("benzaldehit"), f: "C₆H₅CHO", t: true, fe: false },
 ];
 
 function Ayirac({ v, set, s, t, oynuyor, kosular }: SahneProps) {
@@ -235,14 +235,14 @@ function Ayirac({ v, set, s, t, oynuyor, kosular }: SahneProps) {
 /* ---------- esterleşme ---------- */
 
 const ASIT = [
-  { ad: cev("formik asit"), f: "HCO", ek: "formiyat" },
-  { ad: cev("asetik asit"), f: "CH₃CO", ek: "asetat" },
+  { ad: cev("formik asit"), f: "HCO", ek: cev("formiyat") },
+  { ad: cev("asetik asit"), f: "CH₃CO", ek: cev("asetat") },
   { ad: cev("bütanoik asit"), f: "C₃H₇CO", ek: cev("bütanoat") },
 ];
 const ALKOL2 = [
-  { ad: "metanol", r: "CH₃", ek: "metil" },
-  { ad: "etanol", r: "C₂H₅", ek: "etil" },
-  { ad: cev("izoamil alkol"), r: "C₅H₁₁", ek: "izoamil" },
+  { ad: cev("metanol"), r: "CH₃", ek: cev("metil") },
+  { ad: cev("etanol"), r: "C₂H₅", ek: cev("etil") },
+  { ad: cev("izoamil alkol"), r: "C₅H₁₁", ek: cev("izoamil") },
 ];
 const KOKU: Record<string, string> = { "1-2": cev("muz kokusu"), "2-1": cev("ananas kokusu") };
 
@@ -313,9 +313,9 @@ function Sabun({ v }: SahneProps) {
 
 const KESIR = [
   { ad: cev("gaz (LPG)"), c: [1, 4], kn: cev("40 °C'nin altı") },
-  { ad: "benzin", c: [5, 10], kn: "40–175 °C" },
+  { ad: cev("benzin"), c: [5, 10], kn: "40–175 °C" },
   { ad: cev("gazyağı"), c: [11, 16], kn: "175–275 °C" },
-  { ad: "motorin", c: [17, 20], kn: "275–350 °C" },
+  { ad: cev("motorin"), c: [17, 20], kn: "275–350 °C" },
   { ad: cev("kalıntı (asfalt)"), c: [21, 40], kn: cev("350 °C'nin üstü") },
 ];
 
@@ -351,7 +351,7 @@ function Kule({ v }: SahneProps) {
 
 const YAKIT = [
   { ad: cev("kömür"), g: 95 },
-  { ad: "petrol", g: 73 },
+  { ad: cev("petrol"), g: 73 },
   { ad: cev("doğal gaz"), g: 56 },
 ];
 
@@ -451,7 +451,7 @@ function Asit({ v }: SahneProps) {
       <text x={170} y={212} fontSize={14} fontWeight={800} textAnchor="middle" fill={n ? "var(--bad)" : "var(--ink)"}>
         {cev("Yağmurun pH'ı ≈")} {ph.toLocaleString(SAYI_YEREL)} · {n ? cev("asit yağmuru") : cev("temiz yağmur")}
       </text>
-      <text x={170} y={230} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">{cev("Havadaki SO₂:")} {["yok", "az", "orta", cev("çok")][n]}</text>
+      <text x={170} y={230} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">{cev("Havadaki SO₂:")} {[cev("yok"), cev("az"), cev("orta"), cev("çok")][n]}</text>
     </svg>
   );
 }
@@ -459,12 +459,12 @@ function Asit({ v }: SahneProps) {
 /* ---------- santrallerde enerji dönüşümü ---------- */
 
 const SANTRAL = [
-  { ad: cev("Hidroelektrik"), zincir: [cev("suyun potansiyel enerjisi"), cev("türbin"), cev("jeneratör"), "elektrik"], co2: false },
-  { ad: cev("Rüzgâr"), zincir: [cev("havanın kinetik enerjisi"), cev("türbin"), cev("jeneratör"), "elektrik"], co2: false },
-  { ad: cev("Güneş pili"), zincir: [cev("ışık"), cev("yarı iletken (silisyum)"), "elektrik"], co2: false },
-  { ad: cev("Kömür"), zincir: [cev("kimyasal enerji"), cev("yanma: ısı, buhar"), cev("türbin"), cev("jeneratör"), "elektrik"], co2: true },
-  { ad: cev("Nükleer"), zincir: [cev("²³⁵U fisyonu"), cev("ısı, buhar"), cev("türbin"), cev("jeneratör"), "elektrik"], co2: false },
-  { ad: cev("Yakıt pili"), zincir: [cev("H₂ + O₂ (kimyasal)"), "elektrotlar", "elektrik"], co2: false },
+  { ad: cev("Hidroelektrik"), zincir: [cev("suyun potansiyel enerjisi"), cev("türbin"), cev("jeneratör"), cev("elektrik")], co2: false },
+  { ad: cev("Rüzgâr"), zincir: [cev("havanın kinetik enerjisi"), cev("türbin"), cev("jeneratör"), cev("elektrik")], co2: false },
+  { ad: cev("Güneş pili"), zincir: [cev("ışık"), cev("yarı iletken (silisyum)"), cev("elektrik")], co2: false },
+  { ad: cev("Kömür"), zincir: [cev("kimyasal enerji"), cev("yanma: ısı, buhar"), cev("türbin"), cev("jeneratör"), cev("elektrik")], co2: true },
+  { ad: cev("Nükleer"), zincir: [cev("²³⁵U fisyonu"), cev("ısı, buhar"), cev("türbin"), cev("jeneratör"), cev("elektrik")], co2: false },
+  { ad: cev("Yakıt pili"), zincir: [cev("H₂ + O₂ (kimyasal)"), cev("elektrotlar"), cev("elektrik")], co2: false },
 ];
 
 function Santral({ v, set }: SahneProps) {
@@ -496,7 +496,7 @@ function Santral({ v, set }: SahneProps) {
 const YOL = [
   { ad: cev("Fermantasyon"), den: cev("C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂"), urun: 92, top: 180, atik: cev("2 CO₂") },
   { ad: cev("Yer değiştirme"), den: cev("C₂H₅Br + NaOH → C₂H₅OH + NaBr"), urun: 46, top: 149, atik: "NaBr" },
-  { ad: cev("Katılma"), den: cev("C₂H₄ + H₂O → C₂H₅OH"), urun: 46, top: 46, atik: "yok" },
+  { ad: cev("Katılma"), den: cev("C₂H₄ + H₂O → C₂H₅OH"), urun: 46, top: 46, atik: cev("yok") },
 ];
 
 function AtomEko({ v, set }: SahneProps) {

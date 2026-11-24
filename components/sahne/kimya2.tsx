@@ -49,7 +49,7 @@ const N_HAL = 16;
 function Hal({ v }: SahneProps) {
   const T = v.T ?? 20;
   const saat = useSaat();
-  const hal = T <= 0 ? cev("katı") : T <= 100 ? cev("sıvı") : "gaz";
+  const hal = T <= 0 ? cev("katı") : T <= 100 ? cev("sıvı") : cev("gaz");
   const rnd = useMemo(() => { const r = rastgele(41); return Array.from({ length: N_HAL }, () => [r(), r(), r(), r()]); }, []);
   const ucgen = (x: number) => { const k = ((x % 2) + 2) % 2; return k < 1 ? k : 2 - k; };
   const noktalar = rnd.map(([a, b, c, d], i) => {
@@ -66,7 +66,7 @@ function Hal({ v }: SahneProps) {
     return { x: KAP.x0 + 9 + ucgen(a * 2 + saat * hiz) * (KAP.x1 - KAP.x0 - 18), y: KAP.y0 + 9 + ucgen(b * 2 + saat * hiz * (0.7 + d)) * (KAP.y1 - KAP.y0 - 18) };
   });
   const ozellik = hal === cev("katı") ? cev("Şekli ve hacmi sabit") : hal === cev("sıvı") ? cev("Hacmi sabit, şekli kabın şekli") : cev("Kabı tamamen doldurur");
-  const not = T === 0 ? cev("0 °C: erime noktası") : T === 100 ? cev("100 °C: kaynama noktası") : hal === cev("katı") ? "buz" : hal === cev("sıvı") ? "su" : cev("su buharı");
+  const not = T === 0 ? cev("0 °C: erime noktası") : T === 100 ? cev("100 °C: kaynama noktası") : hal === cev("katı") ? cev("buz") : hal === cev("sıvı") ? cev("su") : cev("su buharı");
   return (
     <svg viewBox="0 0 340 224" role="img" aria-label={`${T} derecede su: ${hal}`}>
       <path d={`M${KAP.x0} ${KAP.y0 - 8} L${KAP.x0} ${KAP.y1} L${KAP.x1} ${KAP.y1} L${KAP.x1} ${KAP.y0 - 8}`} fill="none" stroke="var(--line-2)" strokeWidth={2.5} />
@@ -223,7 +223,7 @@ function Degisim({ t, oynuyor, s }: SahneProps) {
         </g>
         <text x={170} y={24} fontSize={14} fontWeight={800} textAnchor="middle" fill="var(--ink)">9 H₂O {u > 0 ? "→ 9 H₂O" : ""}</text>
         <text x={170} y={204} fontSize={12.5} fontWeight={700} textAnchor="middle" fill={u >= 1 ? "var(--good)" : "var(--muted)"}>
-          {u >= 1 ? cev("su: aynı molekül, yalnızca dizilişi değişti") : oynuyor ? "eriyor…" : cev("buz: düzenli dizilmiş su molekülleri")}
+          {u >= 1 ? cev("su: aynı molekül, yalnızca dizilişi değişti") : oynuyor ? cev("eriyor…") : cev("buz: düzenli dizilmiş su molekülleri")}
         </text>
       </svg>
     );
@@ -453,7 +453,7 @@ function Bohr({ v }: SahneProps) {
     return d;
   })();
   return (
-    <svg viewBox="0 0 340 224" role="img" aria-label={cev("Elektron {0}. katmanda{1}", n, inis ? `, ${inis.ad} yayıldı` : "")}>
+    <svg viewBox="0 0 340 224" role="img" aria-label={cev("Elektron {0}. katmanda{1}", n, inis ? cev(", {0} yayıldı", inis.ad) : "")}>
       <g>
         {BR.map((r, i) => (
           <g key={i}>
@@ -466,7 +466,7 @@ function Bohr({ v }: SahneProps) {
       <circle cx={ex} cy={ey} r={6.5} fill="var(--c1)" stroke="var(--surface)" strokeWidth={1.2} />
       {inis && <path key={`${son![0]}${son![1]}`} className="ad-belir" d={dalga} fill="none" stroke={inis.renk} strokeWidth={2.5} strokeLinecap="round" />}
       <g fontSize={12.5} fontWeight={700}>
-        <text x={212} y={44} fill="var(--ink)" fontSize={15} fontWeight={800}>{n}{cev(". katman")}</text>
+        <text x={212} y={44} fill="var(--ink)" fontSize={15} fontWeight={800}>{cev("{0}. katman", n)}</text>
         {son && <text x={212} y={70} fill="var(--muted)">{son[0]} → {son[1]}: {son[1] < son[0] ? cev("ışık yaydı") : cev("enerji aldı")}</text>}
         {inis && <text x={212} y={94} fill={inis.renk}>{inis.nm}</text>}
         {inis && <text x={212} y={114} fill={inis.renk}>{inis.ad}</text>}

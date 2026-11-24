@@ -69,9 +69,9 @@ const SOY = [2, 10, 18];
 const bolge = (z: number) =>
   SOY.includes(z) ? 3 : [3, 4, 11, 12, 13, 19, 20].includes(z) ? 0 : [5, 14].includes(z) ? 1 : 2;
 const BOLGE = [
-  { ad: "metal", renk: "var(--c1)" },
+  { ad: cev("metal"), renk: "var(--c1)" },
   { ad: cev("yarı metal"), renk: "var(--c4)" },
-  { ad: "ametal", renk: "var(--c3)" },
+  { ad: cev("ametal"), renk: "var(--c3)" },
   { ad: cev("soy gaz"), renk: "var(--c5)" },
 ];
 
@@ -257,7 +257,7 @@ function Kovalent({ v }: SahneProps) {
         ))}
       </g>
       <text x={170} y={160} fontSize={14} fontWeight={800} textAnchor="middle" fill={top === 8 ? "var(--good)" : "var(--ink)"}>
-        {cev("Her N çevresinde")} {top} {cev("elektron")}{top === 8 ? ": oktet tamam" : `: ${8 - top} eksik`}
+        {top === 8 ? cev("Her N çevresinde {0} elektron: oktet tamam", top) : cev("Her N çevresinde {0} elektron: {1} eksik", top, 8 - top)}
       </text>
       <text x={170} y={184} fontSize={12.5} textAnchor="middle" fill="var(--muted)">{ad} {cev("· her çizgi 1 ortak elektron çifti")}</text>
       <text x={170} y={204} fontSize={12} textAnchor="middle" fill="var(--muted)">{cev("ortak çift iki atomun da sayımına girer")}</text>

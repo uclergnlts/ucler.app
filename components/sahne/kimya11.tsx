@@ -201,7 +201,7 @@ function SigmaPi({ v }: SahneProps) {
 
 /* ---------- formül türleri: bütan ---------- */
 
-const FORMUL_TUR = [cev("açık"), cev("yarı açık"), "iskelet", cev("kapalı"), "basit"];
+const FORMUL_TUR = [cev("açık"), cev("yarı açık"), cev("iskelet"), cev("kapalı"), cev("basit")];
 const FORMUL_NOT = [
   cev("Bütün atomlar ve bütün bağlar görünür."),
   cev("Karbon zinciri gruplarla yazılır."),
@@ -360,7 +360,7 @@ function Alkan({ v }: SahneProps) {
         {n > 1 && <polyline points={pt.map((q) => q.join(",")).join(" ")} fill="none" stroke="var(--ink)" strokeWidth={2.4} strokeLinejoin="round" />}
         {pt.map((q, i) => <circle key={i} cx={q[0]} cy={q[1]} r={7} fill="var(--ink)" />)}
       </g>
-      <text x={170} y={114} fontSize={13} fontWeight={800} textAnchor="middle" fill={sivi ? "var(--c1)" : "var(--c4)"}>{cev("25 °C'de")} {sivi ? cev("sıvı") : "gaz"}</text>
+      <text x={170} y={114} fontSize={13} fontWeight={800} textAnchor="middle" fill={sivi ? "var(--c1)" : "var(--c4)"}>{cev("25 °C'de")} {sivi ? cev("sıvı") : cev("gaz")}</text>
       <g>
         <line x1={50} x2={330} y1={Y0} y2={Y0} stroke="var(--line-2)" strokeWidth={1.2} />
         <line x1={50} x2={330} y1={Y0 - 25 * K} y2={Y0 - 25 * K} stroke="var(--muted)" strokeWidth={1} strokeDasharray="3 3" />
@@ -379,9 +379,9 @@ function Alkan({ v }: SahneProps) {
 /* ---------- dallanma ve kaynama: C₅H₁₂ ---------- */
 
 const DAL = [
-  { ad: "pentan", kn: 36, pt: [[-32, 64], [-16, 52], [0, 64], [16, 52], [32, 64]] as Nokta[], bag: [[0, 1], [1, 2], [2, 3], [3, 4]] },
+  { ad: cev("pentan"), kn: 36, pt: [[-32, 64], [-16, 52], [0, 64], [16, 52], [32, 64]] as Nokta[], bag: [[0, 1], [1, 2], [2, 3], [3, 4]] },
   { ad: cev("2-metilbütan"), kn: 28, pt: [[-24, 64], [-8, 52], [8, 64], [24, 52], [-8, 34]] as Nokta[], bag: [[0, 1], [1, 2], [2, 3], [1, 4]] },
-  { ad: "2,2-dimetilpropan", kn: 10, pt: [[0, 54], [-20, 54], [20, 54], [0, 34], [0, 74]] as Nokta[], bag: [[0, 1], [0, 2], [0, 3], [0, 4]] },
+  { ad: cev("2,2-dimetilpropan"), kn: 10, pt: [[0, 54], [-20, 54], [20, 54], [0, 34], [0, 74]] as Nokta[], bag: [[0, 1], [0, 2], [0, 3], [0, 4]] },
 ];
 
 function Dallanma({ s, t, oynuyor }: SahneProps) {
@@ -446,7 +446,7 @@ function Adlandir({ v }: SahneProps) {
           );
         })}
       </g>
-      <text x={z ? 60 : 95} y={z ? 58 : 176} fontSize={11.5} fontWeight={800} textAnchor="middle" fill="var(--muted)">{z ? "metil" : "etil"}</text>
+      <text x={z ? 60 : 95} y={z ? 58 : 176} fontSize={11.5} fontWeight={800} textAnchor="middle" fill="var(--muted)">{z ? cev("metil") : cev("etil")}</text>
       <text x={170} y={196} fontSize={14} fontWeight={800} textAnchor="middle" fill="var(--ink)">{cev("Zincir:")} {zincir.length} C</text>
       <text x={170} y={215} fontSize={12} fontWeight={700} textAnchor="middle" fill={z ? "var(--good)" : "var(--bad)"}>
         {z ? cev("En uzun zincir bu: daha uzunu yok") : cev("Kıvrılan daha uzun bir zincir var")}
@@ -495,9 +495,9 @@ function Doyur({ v }: SahneProps) {
 /* ---------- bromlu su testi ---------- */
 
 const TUP = [
-  { ad: "hekzan", f: cev("C₆H₁₄ · alkan"), siner: false },
-  { ad: "hekzen", f: cev("C₆H₁₂ · alken"), siner: true },
-  { ad: "benzen", f: cev("C₆H₆ · aromatik"), siner: false },
+  { ad: cev("hekzan"), f: cev("C₆H₁₄ · alkan"), siner: false },
+  { ad: cev("hekzen"), f: cev("C₆H₁₂ · alken"), siner: true },
+  { ad: cev("benzen"), f: cev("C₆H₆ · aromatik"), siner: false },
 ];
 
 function Brom({ s, t, oynuyor }: SahneProps) {
@@ -514,7 +514,7 @@ function Brom({ s, t, oynuyor }: SahneProps) {
             <path d={`M${x - 19} 44 L${x - 19} 162 A19 19 0 0 0 ${x + 19} 162 L${x + 19} 44`} fill="none" stroke="var(--ink)" strokeWidth={2} />
             <text x={x} y={204} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--ink)">{d.ad}</text>
             <text x={x} y={221} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">{d.f}</text>
-            {bitti && <text x={x} y={30} fontSize={11.5} fontWeight={800} textAnchor="middle" fill={d.siner ? "var(--good)" : "var(--c2)"}>{d.siner ? "renksiz" : cev("renk kaldı")}</text>}
+            {bitti && <text x={x} y={30} fontSize={11.5} fontWeight={800} textAnchor="middle" fill={d.siner ? "var(--good)" : "var(--c2)"}>{d.siner ? cev("renksiz") : cev("renk kaldı")}</text>}
           </g>
         );
       })}
@@ -591,7 +591,7 @@ function Yanma({ v }: SahneProps) {
               <text x={50} y={y} textAnchor="middle" fill="var(--ink)">{r.el}</text>
               <text x={110} y={y} textAnchor="middle" fill={ok ? "var(--ink)" : "var(--bad)"}>{r.s}</text>
               <text x={170} y={y} textAnchor="middle" fill="var(--ink)">{r.g}</text>
-              <text x={212} y={y} fill={ok ? "var(--good)" : "var(--bad)"}>{ok ? "✓" : r.s < r.g ? "eksik" : "fazla"}</text>
+              <text x={212} y={y} fill={ok ? "var(--good)" : "var(--bad)"}>{ok ? "✓" : r.s < r.g ? cev("eksik") : cev("fazla")}</text>
             </g>
           );
         })}

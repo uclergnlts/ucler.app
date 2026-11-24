@@ -160,7 +160,7 @@ function KapaliKap({ t, oynuyor, s, v }: SahneProps) {
         <circle cx={170} cy={116} r={44} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={2.5} />
         <path d="M160 74 L160 36 M180 74 L180 36" stroke="var(--line-2)" strokeWidth={2.5} />
         <ellipse cx={170} cy={150} rx={22 + 4 * d} ry={6} fill={renk} stroke="#aab4c2" strokeWidth={d} />
-        <text x={226} y={150} fontSize={11.5} fontWeight={700} fill="var(--muted)">{d > 0.5 ? cev("kalay oksit") : "kalay"}</text>
+        <text x={226} y={150} fontSize={11.5} fontWeight={700} fill="var(--muted)">{d > 0.5 ? cev("kalay oksit") : cev("kalay")}</text>
       </g>
       {!acik ? (
         <rect x={156} y={28} width={28} height={12} rx={3} fill="var(--ink)" />
@@ -189,7 +189,7 @@ function KapaliKap({ t, oynuyor, s, v }: SahneProps) {
 /* ---------- bilimsel yöntem döngüsü ---------- */
 
 function Dongu() {
-  const adlar = [cev("gözlem"), "hipotez", cev("deney ve ölçüm"), cev("sonuç")];
+  const adlar = [cev("gözlem"), cev("hipotez"), cev("deney ve ölçüm"), cev("sonuç")];
   const R = 74, cx = 170, cy = 112;
   const nokta = (a: number, r = R) => [cx + r * Math.cos((a * Math.PI) / 180), cy + r * Math.sin((a * Math.PI) / 180)];
   const acilar = [-90, 0, 90, 180];
@@ -347,8 +347,8 @@ function Seyreltme({ t, oynuyor, s, secim }: SahneProps) {
   const u = oran(t, oynuyor, Number(s.sure ?? 5));
   const dogru = secim === 0;
   const secildi = secim !== null;
-  const icerik = !secildi ? null : dogru ? { renk: SU, ad: "su" } : { renk: ASIT, ad: cev("derişik asit") };
-  const dokulen = !secildi ? null : dogru ? { renk: ASIT, ad: "asit" } : { renk: SU, ad: "su" };
+  const icerik = !secildi ? null : dogru ? { renk: SU, ad: cev("su") } : { renk: ASIT, ad: cev("derişik asit") };
+  const dokulen = !secildi ? null : dogru ? { renk: ASIT, ad: cev("asit") } : { renk: SU, ad: cev("su") };
   const akiyor = secildi && u > 0.05 && u < 0.85;
   const seviye = 196 - 50 - 22 * kes(u / 0.85);
   const sicrama = secildi && !dogru && u > 0.35;

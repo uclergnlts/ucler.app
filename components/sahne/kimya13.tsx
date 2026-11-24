@@ -95,7 +95,7 @@ function Model({ v }: SahneProps) {
 /* ---------- 2. kuantum sayıları: n ve ℓ ---------- */
 
 const HARF = "spdf";
-const SEKIL = [cev("küresel"), "halter", cev("çoğu dört yapraklı"), cev("karmaşık")];
+const SEKIL = [cev("küresel"), cev("halter"), cev("çoğu dört yapraklı"), cev("karmaşık")];
 
 function Sekil({ l, cx, cy }: { l: number; cx: number; cy: number }) {
   const st = { fill: "var(--kimya)", fillOpacity: 0.28, stroke: "var(--kimya)", strokeWidth: 1.6 };
@@ -118,7 +118,7 @@ function Kuantum({ v }: SahneProps) {
   return (
     <svg viewBox="0 0 340 236" role="img" aria-label={cev("n = {0}, ℓ = {1}: {2}{3} alt katmanı, {4} orbital", n, l, n, HARF[l], m)}>
       <text x={24} y={30} fontSize={14} fontWeight={800} fill="var(--ink)">n = {n}</text>
-      <text x={24} y={50} fontSize={12} fontWeight={700} fill="var(--muted)">{n}{cev(". katman")}</text>
+      <text x={24} y={50} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("{0}. katman", n)}</text>
       <text x={316} y={30} fontSize={14} fontWeight={800} textAnchor="end" fill="var(--ink)">ℓ = {l}</text>
       <text x={316} y={50} fontSize={12} fontWeight={700} textAnchor="end" fill="var(--muted)">{cev("ℓ en fazla n − 1 =")} {n - 1}</text>
       <text x={170} y={38} fontSize={30} fontWeight={800} textAnchor="middle" fill="var(--kimya)">{n}{HARF[l]}</text>

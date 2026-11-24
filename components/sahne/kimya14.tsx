@@ -23,7 +23,7 @@ const OLCEK = {
 function Mikro({ v }: SahneProps) {
   const mikro = (v.mikro ?? 0) > 0.5, o = mikro ? OLCEK.mikro : OLCEK.makro;
   const satir: [string, number, number, string][] = [
-    ["kimyasal", o.kimyasal, OLCEK.makro.kimyasal, "var(--c2)"],
+    [cev("kimyasal"), o.kimyasal, OLCEK.makro.kimyasal, "var(--c2)"],
     [cev("yıkama suyu"), o.su, OLCEK.makro.su, "var(--c1)"],
     [cev("atık"), o.atik, OLCEK.makro.atik, "var(--c4)"],
   ];
@@ -143,7 +143,7 @@ function Gumus({ t, oynuyor, s }: SahneProps) {
 
 // Suda çok az cıva var. Her basamak bir alttakinden çok sayıda yer ve cıvayı yavaş atar: derişim katlanır.
 // Temsilî: her basamakta yaklaşık 10 kat.
-const ZINCIR = ["su", "plankton", cev("küçük balık"), cev("büyük balık"), "insan"];
+const ZINCIR = [cev("su"), cev("plankton"), cev("küçük balık"), cev("büyük balık"), cev("insan")];
 function Birikim({ t, oynuyor, s }: SahneProps) {
   const sure = Number(s.sure ?? 6), zt = ilerleme(t, oynuyor, sure) * sure;
   const ulasti = zt === 0 ? 0 : Math.min(ZINCIR.length - 1, Math.floor((zt / sure) * ZINCIR.length));
@@ -176,7 +176,7 @@ function Birikim({ t, oynuyor, s }: SahneProps) {
 
 // Gliserol oranı (nişastanın kütlesine göre %): az olursa film kırılgan, çok olursa yapışkan ve dayanıksız.
 // Esnek ve sağlam film yaklaşık %20-40 arası.
-const filmDurum = (g: number) => (g < 20 ? cev("kırılgan") : g <= 40 ? "esnek" : cev("yapışkan"));
+const filmDurum = (g: number) => (g < 20 ? cev("kırılgan") : g <= 40 ? cev("esnek") : cev("yapışkan"));
 function Film({ v }: SahneProps) {
   const g = sinir(v.g ?? 0, 0, 60), d = filmDurum(g);
   const renk = d === "esnek" ? "var(--c3)" : "var(--c2)";

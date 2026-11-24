@@ -302,7 +302,7 @@ function Denge({ s, t, oynuyor }: SahneProps) {
       <Tanecikler n24={10 - dd} n2={2 * dd} cx={85} cy={107} w={130} h={126} tohum={4} />
       <rect x={20} y={44} width={130} height={126} rx={10} fill="none" stroke="var(--ink)" strokeWidth={2} />
       <text x={85} y={188} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">{10 - dd} N₂O₄ · {2 * dd} {cev("NO₂")}</text>
-      <Eksen x0={x0} x1={x1} y0={y0} y1={y1} yAd={cev("hız")} xAd="zaman" />
+      <Eksen x0={x0} x1={x1} y0={y0} y1={y1} yAd={cev("hız")} xAd={cev("zaman")} />
       {u > 0 && <polyline points={yol(ileri)} fill="none" stroke="var(--c1)" strokeWidth={2.6} />}
       {u > 0 && <polyline points={yol(geri)} fill="none" stroke="var(--kimya)" strokeWidth={2.6} />}
       <g fontSize={11.5} fontWeight={800}>
@@ -361,7 +361,7 @@ function Qk({ v }: SahneProps) {
   const L = (q: number) => 40 + ((Math.log10(Math.max(q, 0.1)) + 1) / 4) * 260; // 0,1 … 1000
   const yon = Math.abs(Q - K) < 0.01 ? "denge" : Q < K ? "ileri" : "geri";
   return (
-    <svg viewBox="0 0 340 200" role="img" aria-label={`Q = ${virgul(Q, 1)}, K = 64: ${yon}`}>
+    <svg viewBox="0 0 340 200" role="img" aria-label={`Q = ${virgul(Q, 1)}, K = 64: ${yon === "denge" ? cev("Q = K: sistem dengede") : yon === "ileri" ? cev("Q < K: tepkime ileri yürür →") : cev("← Q > K: tepkime geri yürür")}`}>
       <text x={170} y={24} fontSize={13} fontWeight={800} textAnchor="middle" fill="var(--ink)">{cev("H₂ + I₂ ⇌ 2HI   (Kc = 64)")}</text>
       <g fontSize={12} fontWeight={700} fill="var(--muted)">
         <text x={20} y={54}>[H₂] = [I₂] = 0,1 M</text>
@@ -469,7 +469,7 @@ function Haber({ v }: SahneProps) {
       <text x={20} y={y + 12} fontSize={12.5} fontWeight={800} fill="var(--ink)">{ad}</text>
       <rect x={110} y={y} width={200} height={16} rx={8} fill="var(--line)" />
       <rect x={110} y={y} width={Math.max(8, 200 * deger)} height={16} rx={8} fill={renk} />
-      <text x={314} y={y + 32} fontSize={11} fontWeight={700} textAnchor="end" fill="var(--muted)">{deger > 0.66 ? cev("yüksek") : deger > 0.33 ? "orta" : cev("düşük")}</text>
+      <text x={314} y={y + 32} fontSize={11} fontWeight={700} textAnchor="end" fill="var(--muted)">{deger > 0.66 ? cev("yüksek") : deger > 0.33 ? cev("orta") : cev("düşük")}</text>
     </g>
   );
   return (

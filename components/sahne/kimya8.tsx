@@ -226,7 +226,7 @@ function Donma({ s, t, oynuyor }: SahneProps) {
               </g>
             )}
             <path d={`M${x - 17} 60 L${x - 17} 164 Q${x - 17} 176 ${x - 5} 176 L${x + 5} 176 Q${x + 17} 176 ${x + 17} 164 L${x + 17} 60`} fill="none" stroke="var(--ink)" strokeWidth={1.8} />
-            <text x={x} y={52} fontSize={11.5} fontWeight={800} textAnchor="middle" fill={don ? "var(--c1)" : "var(--muted)"}>{don ? "dondu" : cev("sıvı")}</text>
+            <text x={x} y={52} fontSize={11.5} fontWeight={800} textAnchor="middle" fill={don ? "var(--c1)" : "var(--muted)"}>{don ? cev("dondu") : cev("sıvı")}</text>
             <text x={x} y={196} fontSize={12} fontWeight={800} textAnchor="middle" fill="var(--ink)">{d.ad}</text>
             {bitti && <text x={x} y={214} fontSize={11} fontWeight={700} textAnchor="middle" fill="var(--muted)">{d.i ? `${isaretli(Tf, 2)} °C` : "0 °C"}</text>}
           </g>

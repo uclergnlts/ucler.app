@@ -53,16 +53,16 @@ function Molekul({ m, x, y, k = 1, op = 1 }: { m: string; x: number; y: number; 
 /* ---------- mol paketleri: 1 mol C, 1 mol H₂O, 1 mol Fe ---------- */
 
 const PAKET = [
-  { ad: cev("Karbon (C)"), M: 12, renk: "var(--karbon)", tan: "atom" },
+  { ad: cev("Karbon (C)"), M: 12, renk: "var(--karbon)", tan: cev("atom") },
   { ad: cev("Su (H₂O)"), M: 18, renk: "var(--c1)", tan: cev("molekül") },
-  { ad: cev("Demir (Fe)"), M: 56, renk: "#9aa8ba", tan: "atom" },
+  { ad: cev("Demir (Fe)"), M: 56, renk: "#9aa8ba", tan: cev("atom") },
 ];
 
 function Paket({ v }: SahneProps) {
   const n = v.n ?? 1;
   return (
     <svg viewBox="0 0 340 220" role="img" aria-label={cev("{0} mol karbon, su ve demir", n)}>
-      <text x={170} y={20} fontSize={12.5} fontWeight={800} textAnchor="middle" fill="var(--ink)">{cev("Her kefede")} {n} {cev("mol madde")}</text>
+      <text x={170} y={20} fontSize={12.5} fontWeight={800} textAnchor="middle" fill="var(--ink)">{cev("Her kefede {0} mol madde", n)}</text>
       {PAKET.map((p, i) => {
         const cx = 60 + i * 110, m = p.M * n;
         // Yığının yüksekliği kütleyle orantılı (en çok 3 × 56 g = 168 g).
@@ -255,10 +255,10 @@ const PH_ORNEK = [cev("Akü asidi"), cev("Mide özsuyu"), cev("Limon suyu"), cev
 function PhOlcek({ v }: SahneProps) {
   const p = v.p ?? 7;
   const cw = 20, x0 = 20;
-  const tur = p < 7 ? "asidik" : p > 7 ? "bazik" : cev("nötr");
+  const tur = p < 7 ? cev("asidik") : p > 7 ? cev("bazik") : cev("nötr");
   const turnusol = p < 7 ? "#e2483b" : p > 7 ? "#3a63c4" : "#8d55e0";
   return (
-    <svg viewBox="0 0 340 214" role="img" aria-label={cev("pH {0}: {1}, {2}; turnusol {3}", p, PH_ORNEK[p], tur, p < 7 ? "kırmızı" : p > 7 ? "mavi" : "mor")}>
+    <svg viewBox="0 0 340 214" role="img" aria-label={cev("pH {0}: {1}, {2}; turnusol {3}", p, PH_ORNEK[p], tur, p < 7 ? cev("kırmızı") : p > 7 ? cev("mavi") : cev("mor"))}>
       <g>
         {PH_RENK.map((r, i) => <rect key={i} x={x0 + i * cw} y={40} width={cw - 2} height={24} rx={4} fill={r} />)}
         {PH_RENK.map((_, i) => (
@@ -278,7 +278,7 @@ function PhOlcek({ v }: SahneProps) {
       <g>
         <text x={84} y={122} fontSize={16} fontWeight={800} fill="var(--ink)">{cev("pH")} {p}: {PH_ORNEK[p]}</text>
         <text x={84} y={146} fontSize={13} fontWeight={700} fill={p < 7 ? "var(--bad)" : p > 7 ? "var(--c1)" : "var(--c5)"}>
-          {tur === cev("nötr") ? cev("Nötr") : tur === "asidik" ? cev("Asidik") : cev("Bazik")}{cev(": turnusol")} {p < 7 ? cev("kırmızı") : p > 7 ? "mavi" : "mor"}
+          {cev("{0}: turnusol {1}", p === 7 ? cev("Nötr") : p < 7 ? cev("Asidik") : cev("Bazik"), p < 7 ? cev("kırmızı") : p > 7 ? cev("mavi") : cev("mor"))}
         </text>
         <text x={84} y={170} fontSize={11.5} fill="var(--muted)">{cev("Değerler yaklaşıktır (25 °C).")}</text>
       </g>
