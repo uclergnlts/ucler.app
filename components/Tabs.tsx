@@ -1,9 +1,10 @@
 "use client";
-// Alt menü: Ana sayfa, Keşfet, Videolar, Deneme, Profil (ders adları değil; bkz. docs/KARARLAR.md).
+// Alt menü: Ana sayfa, Keşfet, Deneme, Profil (ders adları değil; bkz. docs/KARARLAR.md).
 // Oyunlar 2026-10-30'da menüden çıktı (Üçler: şimdilik geri planda); /oyunlar/ sayfaları duruyor, hiçbir sekmeye bağlı değil.
+// Videolar sekmesi 2026-11-24'te kalktı (Üçler); /videolar/ ana sayfaya yönlenir, kart altındaki videolar duruyor.
 // Kaydedilenler Profil'in içindedir.
 // Ders ekranında (/ders/konu/), tekrar ve günün sorusu ekranında gizlenir.
-import { cev, DIL } from "@/lib/dil";
+import { cev } from "@/lib/dil";
 import { ANA, YAKINDA_GOSTER } from "@/lib/site";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -16,20 +17,18 @@ import { Icon } from "./icons";
 const TABS = [
   { k: "home", href: ANA, label: cev("Ana sayfa"), renk: "var(--c1)" },
   { k: "kesfet", href: "/kesfet/", label: cev("Keşfet"), renk: "var(--c3)" },
-  { k: "video", href: "/videolar/", label: cev("Videolar"), renk: "var(--kimya)" },
   { k: "deneme", href: "/deneme/", label: cev("Deneme"), renk: "var(--c4)" },
   { k: "profil", href: "/profil/", label: cev("Profil"), renk: "var(--c5)" },
 ] as const;
 
-// Videolar Türkçe seslidir; İngilizce kopyada sekme ve kart altındaki videolar gösterilmez (lib/videolar.ts).
 // "Deneme" sekmesi YAKINDA_GOSTER kapalıyken gizlidir (lib/site.ts).
-const GORUNEN = TABS.filter((t) => !(DIL === "en" && t.k === "video") && (YAKINDA_GOSTER || t.k !== "deneme"));
+const GORUNEN = TABS.filter((t) => (YAKINDA_GOSTER || t.k !== "deneme"));
 
 /** Sayfanın ait olduğu sekme. Ders haritası (/fizik/) ve bulunamayan sayfalar hiçbir sekmeye ait değil. */
 function sekme(parts: string[]): string | undefined {
   return parts.length === 0 || parts[0] === "ogren"
     ? "home"
-    : ({ kesfet: "kesfet", kaydedilenler: "profil", profil: "profil", hakkinda: "profil", gizlilik: "profil", lig: "profil", videolar: "video", deneme: "deneme" } as Record<string, string>)[parts[0]];
+    : ({ kesfet: "kesfet", kaydedilenler: "profil", profil: "profil", hakkinda: "profil", gizlilik: "profil", lig: "profil", deneme: "deneme" } as Record<string, string>)[parts[0]];
 }
 
 /** Sayfanın sekme rengi (üst çubuk düğmeleri de bunu kullanır). */

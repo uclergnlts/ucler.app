@@ -8,7 +8,7 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const sayfalar = ["/", "/tr/", "/drawings/", "/tr/cizimler/", "/kesfet/", "/hakkinda/", "/gizlilik/", "/kosullar/"];
-  // /videolar/ haritada yok: sayfanın HTML'inde neredeyse metin yok, içerik tarayıcıda yükleniyor.
+  // /videolar/ haritada yok: sekme 2026-11-24'te kalktı, adres ana sayfaya yönlenir.
   return [
     ...sayfalar.map((y) => ({ url: SITE_URL + y })),
     ...DERS_IDS.map((d) => ({ url: `${SITE_URL}/${d}/` })),

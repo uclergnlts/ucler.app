@@ -1,7 +1,7 @@
 "use client";
 // Ana sayfanın sağ üstündeki küçük simgeler: haftalık lig (kupa, /lig/), seri (alev + gün sayısı) ve günün görevleri (halka + x/3).
 // Simgeye dokununca alttan bir pencere açılır: seri için puan ve son 7 gün, görevler için liste.
-// Her görev, yapılacağı yere götürür (oyun → Oyunlar, video → Videolar, tekrar → Tekrar, gerisi → kalınan konu).
+// Her görev, yapılacağı yere götürür (oyun → Oyunlar, tekrar → Tekrar, gerisi → kalınan konu).
 import { cev } from "@/lib/dil";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -28,7 +28,7 @@ const GOREV_GORUNUM: Record<GorevId, { ikon: keyof typeof Icon; renk: string }> 
 
 /** Görevin yapılacağı sayfa; konu görevleri konuHref'e gider. */
 const gorevYeri = (id: GorevId, konuHref: string) =>
-  id === "oyun" ? "/oyunlar/" : id === "video" ? "/videolar/" : id === "tekrar" ? "/tekrar/" : konuHref;
+  id === "oyun" ? "/oyunlar/" : id === "tekrar" ? "/tekrar/" : konuHref;
 
 export default function Bugun({ konuHref }: { konuHref: string }) {
   const p = usePuan(), gk = useGorev(), oyun = useOyunAcik();

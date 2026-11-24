@@ -1,4 +1,4 @@
-// Videolar tek yerde saklanır (content/videolar.json), iki yerde gösterilir: ilgili kartın altında ve Keşfet'teki akışta.
+// Videolar tek yerde saklanır (content/videolar.json), ilgili kartın altında gösterilir (Videolar sekmesi 2026-11-24'te kalktı).
 // Ayrıntı: docs/VIDEOLAR.md
 import data from "@/content/videolar.json";
 import type { DersId } from "./dersler";

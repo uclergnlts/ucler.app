@@ -10,7 +10,7 @@ export function GET() {
   const ogeler = [
     ...DERS_IDS.map((d) => ({ id: `ders:${d}`, tur: "ders", ad: DERSLER[d].ad, yol: `/${d}/` })),
     ...DERS_IDS.flatMap((d) => tum[d].filter((e) => e.id && e.title).map((e) => ({ id: `konu:${d}/${e.id}`, tur: "konu", ad: e.title!, ders: DERSLER[d].ad, yol: `/${d}/${e.id}/` }))),
-    ...VIDEOLAR.map((v) => ({ id: `video:${v.id}`, tur: "video", ad: v.baslik, yol: `/videolar/#${v.id}` })),
+    ...VIDEOLAR.map((v) => ({ id: `video:${v.id}`, tur: "video", ad: v.baslik, yol: `/${v.yerler[0].ders}/${v.yerler[0].konu}/` })),
   ];
   return Response.json(ogeler);
 }
