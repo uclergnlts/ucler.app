@@ -244,7 +244,7 @@ function Gazoz({ v }: SahneProps) {
   const kab = acik ? Math.round(6 + (1 - coz) * 22) : 1;
   const r = rastgele(3);
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={cev("Kapak {0}, {1} °C: çözünmüş CO₂ {2}", acik ? "açık" : "kapalı", T, Math.round(coz * 100))}>
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("Kapak {0}, {1} °C: çözünmüş CO₂ {2}", acik ? cev("açık") : cev("kapalı"), T, Math.round(coz * 100))}>
       <path d="M78 206 L78 104 Q78 84 96 74 L102 70 L102 44 L128 44 L128 70 L134 74 Q152 84 152 104 L152 206 Z" fill="var(--surface)" stroke="none" />
       <rect x={80} y={96} width={70} height={108} fill="color-mix(in srgb, #af7b08 20%, var(--surface))" />
       <g>
@@ -365,7 +365,7 @@ function Metan({ v }: SahneProps) {
     </g>
   );
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={cev("CH₄ + 2 O₂ → CO₂ + {0} H₂O; {1}", k, denk ? `ΔH ${isaretli(dH)} kJ` : "denklem denk değil")}>
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("CH₄ + 2 O₂ → CO₂ + {0} H₂O; {1}", k, denk ? `ΔH ${isaretli(dH)} kJ` : cev("denklem denk değil"))}>
       <text x={170} y={28} fontSize={15} fontWeight={800} textAnchor="middle" fill="var(--ink)">
         {cev("CH₄ + 2 O₂ → CO₂ +")} <tspan fill="var(--kimya)">{k}</tspan> H₂O(s)
       </text>

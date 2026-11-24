@@ -192,8 +192,8 @@ function YukariAtis({ s, v, set, t, oynuyor, kosular }: SahneProps) {
 type Tanecik = { ad: "o2" | "glikoz" | "protein"; yazi: string; renk: string; r: number; y: number };
 const TANECIK: Tanecik[] = [
   { ad: "o2", yazi: "O₂", renk: "var(--c1)", r: 7, y: 60 },
-  { ad: "glikoz", yazi: "glikoz", renk: "var(--c4)", r: 11, y: 124 },
-  { ad: "protein", yazi: "protein", renk: "var(--c2)", r: 22, y: 192 },
+  { ad: "glikoz", yazi: cev("glikoz"), renk: "var(--c4)", r: 11, y: 124 },
+  { ad: "protein", yazi: cev("protein"), renk: "var(--c2)", r: 22, y: 192 },
 ];
 const ZD_X = 196, ZD_TASIYICI = 140, ZD_SURE = 1.8;
 function ZarDene({ v, set }: SahneProps) {

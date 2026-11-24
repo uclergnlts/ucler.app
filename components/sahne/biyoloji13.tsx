@@ -132,7 +132,7 @@ function Testis({ v }: SahneProps) {
   const spermler = Array.from({ length: 9 }, () => ({ a: r() * Math.PI * 2, d: 6 + r() * 18, y: r() * Math.PI * 2 }));
   const kac = Math.round(uretim * 9);
   return (
-    <svg viewBox="0 0 340 228" role="img" aria-label={cev("Testis: FSH {0}, LH {1}; sperm üretimi {2}", f ? "var" : "yok", l ? "var" : "yok", uretim === 1 ? "tam" : uretim ? "zayıf" : "yok")}>
+    <svg viewBox="0 0 340 228" role="img" aria-label={cev("Testis: FSH {0}, LH {1}; sperm üretimi {2}", f ? cev("var") : cev("yok"), l ? cev("var") : cev("yok"), uretim === 1 ? cev("tam") : uretim ? cev("zayıf") : cev("yok"))}>
       {/* hipofiz */}
       <ellipse cx={60} cy={22} rx={32} ry={13} fill="var(--panel)" stroke="var(--line-2)" />
       <text x={60} y={26} fontSize={10.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("hipofiz")}</text>

@@ -65,7 +65,7 @@ export default function AsamaYolu({ dugumler, balon, ad = cev("Aşamalar"), kayd
               <motion.button
                 disabled={g.durum === "kilitli" && !g.serbest && !g.dokun}
                 onClick={g.ac}
-                aria-label={g.etiket ?? `${g.baslik}, ${g.durum === "bitti" ? "bitti" : g.durum === "sirada" ? cev("sıradaki") : g.serbest ? cev("aşamalar bitmeden de çözebilirsin") : "kilitli"}`}
+                aria-label={g.etiket ?? `${g.baslik}, ${g.durum === "bitti" ? cev("bitti") : g.durum === "sirada" ? cev("sıradaki") : g.serbest ? cev("aşamalar bitmeden de çözebilirsin") : cev("kilitli")}`}
                 className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2"
                 style={{ left: `${x(i)}%` }}
                 initial={{ scale: 0.6, opacity: 0 }}

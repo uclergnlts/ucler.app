@@ -226,7 +226,7 @@ function BasitSarkac({ v, t, oynuyor, s, kosular }: SahneProps) {
   const aci = 10 * DER * Math.cos((2 * Math.PI * zt) / T);
   const gecmis = kosular.slice(-4);
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label={cev("İp {0} m, {1} top; periyot {2} s", say(Lm, 2), agir ? "ağır" : "hafif", say(T, 2))}>
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("İp {0} m, {1} top; periyot {2} s", say(Lm, 2), agir ? cev("ağır") : cev("hafif"), say(T, 2))}>
       <text x={14} y={24} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("Süre")} {say(zt, 1)} s · <tspan fill="var(--c2)">{cev("{0} salınım", Math.floor(zt / T + 1e-6))}</tspan></text>
       <Tavan x1={60} x2={160} y={46} />
       <line x1={110} x2={110} y1={46} y2={226} stroke="var(--line)" strokeDasharray="4 4" />

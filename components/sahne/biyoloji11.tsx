@@ -758,7 +758,7 @@ function Grup({ v, s }: SahneProps) {
     ? [[148, 94], [178, 88], [204, 102], [158, 124], [192, 126]]
     : [[140, 84], [200, 80], [170, 106], [138, 128], [204, 126]];
   return (
-    <svg viewBox="0 0 340 214" role="img" aria-label={cev("Verici {0}, alıcı {1}: {2}", vg, ag, cokelme ? "çökelme var, kan verilemez" : "çökelme yok, kan uygun")}>
+    <svg viewBox="0 0 340 214" role="img" aria-label={cev("Verici {0}, alıcı {1}: {2}", vg, ag, cokelme ? cev("çökelme var, kan verilemez") : cev("çökelme yok, kan uygun"))}>
       <text x={52} y={24} fontSize={11.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">{cev("Verici:")} {vg}</text>
       <Antijenli x={52} y={80} g={vg} r={26} />
       <text x={52} y={130} fontSize={10.5} fontWeight={700} fill="var(--muted)" textAnchor="middle">

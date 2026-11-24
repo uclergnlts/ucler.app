@@ -177,7 +177,7 @@ function Mercek({ v, s }: SahneProps) {
   const cx = (138 + R) / 2, rx = (R - 138) / 2;
   const durum = net ? cev("Odak retinada: görüntü net") : f < R ? cev("Odak retinanın önünde: bulanık") : cev("Odak retinanın arkasında: bulanık");
   return (
-    <svg viewBox="0 0 340 220" role="img" aria-label={cev("{0} göz, {1}. {2}", hiper ? "Hipermetrop" : "Miyop", d === 0 ? "gözlük yok" : d < 0 ? "kalın kenarlı mercek" : "ince kenarlı mercek", durum)}>
+    <svg viewBox="0 0 340 220" role="img" aria-label={cev("{0} göz, {1}. {2}", hiper ? cev("Hipermetrop") : cev("Miyop"), d === 0 ? cev("gözlük yok") : d < 0 ? cev("kalın kenarlı mercek") : cev("ince kenarlı mercek"), durum)}>
       <ellipse cx={cx} cy={Y} rx={rx} ry={56} fill="none" stroke="var(--ink)" strokeWidth={2} />
       <path d={`M${R - 8} ${Y - 40} Q${R + 4} ${Y} ${R - 8} ${Y + 40}`} fill="none" stroke={MOR} strokeWidth={4} />
       <ellipse cx={L} cy={Y} rx={7} ry={24} fill={MAVI} fillOpacity={0.35} stroke={MAVI} strokeWidth={2} />
@@ -404,7 +404,7 @@ function Kol({ v }: SahneProps) {
   );
   const durum = b && tr ? cev("İkisi birden kasıldı: kol kilitlendi") : b ? cev("Biseps çekti: dirsek büküldü") : tr ? cev("Triseps çekti: kol açıldı") : cev("İki kas da gevşek");
   return (
-    <svg viewBox="0 0 340 225" role="img" aria-label={cev("Biseps {0}, triseps {1}. {2}", b ? "kasılı" : "gevşek", tr ? "kasılı" : "gevşek", durum)}>
+    <svg viewBox="0 0 340 225" role="img" aria-label={cev("Biseps {0}, triseps {1}. {2}", b ? cev("kasılı") : cev("gevşek"), tr ? cev("kasılı") : cev("gevşek"), durum)}>
       <rect x={52} y={E.y - 8} width={E.x - 52} height={16} rx={8} fill="var(--panel)" stroke="var(--ink)" strokeWidth={2} />
       <circle cx={48} cy={E.y} r={14} fill="var(--panel)" stroke="var(--ink)" strokeWidth={2} />
       <line x1={E.x} y1={E.y} x2={uc.x} y2={uc.y} stroke="var(--ink)" strokeWidth={16} strokeLinecap="round" />

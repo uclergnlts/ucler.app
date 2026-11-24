@@ -324,7 +324,7 @@ function Kuvvet({ v }: SahneProps) {
   const ad = zayif ? cev("CH₃COOH (sirke asidi)") : cev("HCl (hidroklorik asit)");
   const isik = zayif ? 0.25 : 1;
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={`0,1 M ${ad}: ${zayif ? cev("moleküllerin çoğu iyonlaşmamış") : cev("hepsi iyonlaşmış")}`}>
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("0,1 M {0}: {1}", ad, zayif ? cev("moleküllerin çoğu iyonlaşmamış") : cev("hepsi iyonlaşmış"))}>
       <text x={170} y={20} fontSize={12.5} fontWeight={800} textAnchor="middle" fill="var(--ink)">0,1 M {ad}</text>
       <g>
         <path d="M44 48 L44 182 Q44 192 54 192 L196 192 Q206 192 206 182 L206 48" fill="none" stroke="var(--ink)" strokeWidth={2} />

@@ -43,7 +43,7 @@ function Basamak({ s, v }: SahneProps) {
       })}
       <text x={170} y={170} fontSize={14} fontWeight={800} textAnchor="middle" fill="var(--ink)">{ifade} = {isaret(toplam)}</text>
       <text x={170} y={198} fontSize={13} fontWeight={800} textAnchor="middle" fill={tamam ? "var(--good)" : "var(--muted)"}>
-        {tamam ? cev("Toplam {0}: tanecik yüküne eşit", isaret(f.yuk)) : cev("Toplam {0} olmalı ({1})", isaret(f.yuk), f.yuk === 0 ? "nötr bileşik" : "iyon yükü")}
+        {tamam ? cev("Toplam {0}: tanecik yüküne eşit", isaret(f.yuk)) : cev("Toplam {0} olmalı ({1})", isaret(f.yuk), f.yuk === 0 ? cev("nötr bileşik") : cev("iyon yükü"))}
       </text>
     </svg>
   );

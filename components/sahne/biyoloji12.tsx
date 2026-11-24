@@ -129,7 +129,7 @@ function Gogus({ v }: SahneProps) {
   const ry = (tepe - 2 - (ust + 24)) / 2;
   const hacim = 1 + 0.12 * d + 0.07 * k;
   return (
-    <svg viewBox="0 0 340 220" role="img" aria-label={cev("Göğüs boşluğu: diyafram {0}, kaburga kasları {1}; akciğer içi basınç {2} mmHg", d ? "kasılı ve düz" : "gevşek ve kubbe", k ? "kasılı" : "gevşek", P)}>
+    <svg viewBox="0 0 340 220" role="img" aria-label={cev("Göğüs boşluğu: diyafram {0}, kaburga kasları {1}; akciğer içi basınç {2} mmHg", d ? cev("kasılı ve düz") : cev("gevşek ve kubbe"), k ? cev("kasılı") : cev("gevşek"), P)}>
       {/* kaburga kafesi */}
       <path d={`M${cx - 30} ${ust} L${cx - yarim} ${ust + 40} L${cx - yarim} ${taban} M${cx + 30} ${ust} L${cx + yarim} ${ust + 40} L${cx + yarim} ${taban}`} fill="none" stroke="var(--ink)" strokeWidth={2} strokeLinejoin="round" />
       {/* soluk borusu ve akciğerler */}
@@ -676,7 +676,7 @@ function Esik({ v }: SahneProps) {
   const tasinan = Math.min(toplam, 9);
   const kacan = toplam - tasinan;
   return (
-    <svg viewBox="0 0 340 222" role="img" aria-label={cev("Kan şekeri {0} mg/dL: {1}", k, kacan > 0 ? "taşıyıcılar doydu, glikoz idrara kaçıyor" : "glikozun hepsi geri emiliyor")}>
+    <svg viewBox="0 0 340 222" role="img" aria-label={cev("Kan şekeri {0} mg/dL: {1}", k, kacan > 0 ? cev("taşıyıcılar doydu, glikoz idrara kaçıyor") : cev("glikozun hepsi geri emiliyor"))}>
       <text x={20} y={22} fontSize={10.5} fontWeight={700} fill="#a77a06">{cev("proksimal tüp (süzüntü akıyor →)")}</text>
       <rect x={20} y={30} width={240} height={40} rx={10} fill={SARI} fillOpacity={0.16} />
       {/* taşıyıcılar */}

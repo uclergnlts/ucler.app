@@ -217,8 +217,8 @@ export default function Tekrar({ sorular }: { sorular: Record<string, TekrarSoru
 /** Tekrar sonucundaki açıklama: yalnızca gerçekten sırada kalan sorular için yeniden gelme sözü verir. */
 function sonucMetni(yanlis: number, ilerleyen: number, ogrenilen: number) {
   const c: string[] = [];
-  if (ogrenilen) c.push(`${ogrenilen} soruyu öğrendin, artık sorulmayacak.`);
-  if (ilerleyen) c.push(`Doğru yaptığın ${ilerleyen} soru birkaç gün sonra yeniden gelecek.`);
-  if (yanlis) c.push(`Yanlış yaptığın ${yanlis} soru yarın yeniden gelecek.`);
+  if (ogrenilen) c.push(cev("{0} soruyu öğrendin, artık sorulmayacak.", ogrenilen));
+  if (ilerleyen) c.push(cev("Doğru yaptığın {0} soru birkaç gün sonra yeniden gelecek.", ilerleyen));
+  if (yanlis) c.push(cev("Yanlış yaptığın {0} soru yarın yeniden gelecek.", yanlis));
   return c.join(" ");
 }

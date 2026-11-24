@@ -442,7 +442,7 @@ function ZarLab({ v, set, saat = 0 }: SahneProps) {
   useBildir(v, set, { o2fark: Math.abs(o2s - o2g), nasag: nag });
   const saga = d.gecis.filter((g) => g.yon > 0).length, sola = d.gecis.length - saga;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("O2 solda {0}, sağda {1}; sodyum iyonu solda {2}, sağda {3}; kanal {4}", o2s, o2g, nas, nag, kanal ? "açık" : "kapalı")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("O2 solda {0}, sağda {1}; sodyum iyonu solda {2}, sağda {3}; kanal {4}", o2s, o2g, nas, nag, kanal ? cev("açık") : cev("kapalı"))}>
       <g fontSize={12} fontWeight={700}>
         <text x={10} y={22} fill="var(--c1)">{cev("O₂: sol {0} · sağ {1}", o2s, o2g)}</text>
         <text x={330} y={22} fill="var(--c4)" textAnchor="end">{cev("Na⁺: sol {0} · sağ {1}", nas, nag)}</text>
@@ -886,7 +886,7 @@ function KaynamaLab({ v, set, saat = 0 }: SahneProps) {
   const BAR = { x0: 212, x1: 330, PMAX: 2.2 }, bw = (p: number) => (Math.min(p, BAR.PMAX) / BAR.PMAX) * (BAR.x1 - BAR.x0);
   const sicak = sinir((d.T - 20) / 100, 0, 1), nOk = Math.round(2 + P * 3);
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Dış basınç {0} atmosfer, su {1} derece, {2}", say(P), Math.round(d.T), kayniyor ? "kaynıyor" : "kaynamıyor")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Dış basınç {0} atmosfer, su {1} derece, {2}", say(P), Math.round(d.T), kayniyor ? cev("kaynıyor") : cev("kaynamıyor"))}>
       <text x={10} y={22} fontSize={13} fontWeight={800} fill={kayniyor ? "var(--good)" : "var(--ink)"}>{kayniyor ? cev("Kaynıyor: buhar basıncı = dış basınç") : isit ? cev("Isınıyor") : cev("Isıtıcı kapalı")}</text>
       <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("su {0} °C · kaynama noktası {1} °C", say(d.T), say(Tb))}</text>
       {/* dış basınç okları */}

@@ -75,7 +75,7 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
                         durum,
                         serbest: ac,
                         dokun: true,
-                        etiket: `${e.no}. ${e.title}, ${res ? "bitti" : durum === "sirada" ? cev("sıradaki konu") : ac ? cev("açık") : "kilitli"}`,
+                        etiket: `${e.no}. ${e.title}, ${res ? cev("bitti") : durum === "sirada" ? cev("sıradaki konu") : ac ? cev("açık") : cev("kilitli")}`,
                         ac: () => setSecim({ tur: "konu", e }),
                       };
                     }),
@@ -86,7 +86,7 @@ export default function Road({ ders, list }: { ders: DersId; list: Entry[] }) {
                       test: true,
                       serbest: testAcik,
                       dokun: true,
-                      etiket: cev("{0}. ünite testi, {1}", u.no, gecti ? "geçildi" : testAcik ? "çözebilirsin" : "kilitli"),
+                      etiket: cev("{0}. ünite testi, {1}", u.no, gecti ? cev("geçildi") : testAcik ? cev("çözebilirsin") : cev("kilitli")),
                       ac: () => setSecim({ tur: "test", u }),
                     },
                   ]}

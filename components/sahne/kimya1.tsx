@@ -155,7 +155,7 @@ function KapaliKap({ t, oynuyor, s, v }: SahneProps) {
   const d = yumusak(u); // kalay → kalay oksit
   const renk = `rgb(${Math.round(140 + 90 * d)},${Math.round(150 + 82 * d)},${Math.round(165 + 70 * d)})`;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Terazi {0} gram gösteriyor, balonun ağzı {1}", kutle.toFixed(2), acik ? "açık" : "kapalı")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Terazi {0} gram gösteriyor, balonun ağzı {1}", kutle.toFixed(2), acik ? cev("açık") : cev("kapalı"))}>
       <g>
         <circle cx={170} cy={116} r={44} fill="var(--surface)" stroke="var(--line-2)" strokeWidth={2.5} />
         <path d="M160 74 L160 36 M180 74 L180 36" stroke="var(--line-2)" strokeWidth={2.5} />

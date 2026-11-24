@@ -69,12 +69,12 @@ export function yanlisSay(formul: string, hata: "parantez" | "katsayi", s?: stri
 
 // Oyundaki formüller. Ad yalnızca bilgi için gösterilir.
 export const FORMULLER: { f: string; ad: string }[] = [
-  { f: "H2O", ad: "su" },
+  { f: "H2O", ad: cev("su") },
   { f: "CO2", ad: cev("karbon dioksit") },
-  { f: "NH3", ad: "amonyak" },
-  { f: "CH4", ad: "metan" },
-  { f: "C6H12O6", ad: "glikoz" },
-  { f: "C12H22O11", ad: "sakaroz" },
+  { f: "NH3", ad: cev("amonyak") },
+  { f: "CH4", ad: cev("metan") },
+  { f: "C6H12O6", ad: cev("glikoz") },
+  { f: "C12H22O11", ad: cev("sakaroz") },
   { f: "C2H5OH", ad: cev("etil alkol") },
   { f: "CH3COOH", ad: cev("asetik asit") },
   { f: "H2SO4", ad: cev("sülfürik asit") },

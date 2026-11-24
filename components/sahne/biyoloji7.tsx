@@ -120,7 +120,7 @@ function Eslesme({ s, t, oynuyor }: SahneProps) {
   const u = ilerleme(t, oynuyor, sure);
   const x = (i: number) => 60 + i * 44, Y1 = 70, Y2 = 150;
   return (
-    <svg viewBox="0 0 340 220" role="img" aria-label={cev("Üst iplik 5'-{0}-3'. Karşı iplik {1}", KALIP, u >= 1 ? "3'-TACGTC-5'" : "henüz tamamlanmadı")}>
+    <svg viewBox="0 0 340 220" role="img" aria-label={cev("Üst iplik 5'-{0}-3'. Karşı iplik {1}", KALIP, u >= 1 ? "3'-TACGTC-5'" : cev("henüz tamamlanmadı"))}>
       <g>
         <line x1={x(0) - 22} y1={Y1 - 22} x2={x(5) + 22} y2={Y1 - 22} stroke="var(--ink)" strokeWidth={3} strokeLinecap="round" />
         <text x={x(0) - 30} y={Y1 - 18} fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="end">5'</text>
@@ -216,7 +216,7 @@ function Eslenme({ s, t, oynuyor }: SahneProps) {
   ];
   const yy = (n: number, j: number) => 108 + (j - (n - 1) / 2) * 30;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Eşlenme: {0}", k2 ? "2. kuşakta 2 hibrit, 2 hafif DNA" : k1 ? "1. kuşakta 2 hibrit DNA" : "başlangıçta 1 ağır DNA")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("Eşlenme: {0}", k2 ? cev("2. kuşakta 2 hibrit, 2 hafif DNA") : k1 ? cev("1. kuşakta 2 hibrit DNA") : cev("başlangıçta 1 ağır DNA"))}>
       <g fontSize={12} fontWeight={800} fill="var(--ink)" textAnchor="middle">
         <text x={54} y={30}>{cev("başlangıç")}</text>
         <text x={164} y={30}>{cev("1. eşlenme")}</text>
@@ -516,7 +516,7 @@ function Mutasyon({ v }: SahneProps) {
   const aa = kd.map((c) => KOD[c]), orak = aa[2] === cev("Val");
   const x = (j: number, k: number) => 40 + j * 78 + k * 18;
   return (
-    <svg viewBox="0 0 340 240" role="img" aria-label={cev("6. kodon {0}: {1}. {2}", k6, aa[2], orak ? "Hemoglobin değişti, alyuvar orak biçimli" : "Alyuvar normal")}>
+    <svg viewBox="0 0 340 240" role="img" aria-label={cev("6. kodon {0}: {1}. {2}", k6, aa[2], orak ? cev("Hemoglobin değişti, alyuvar orak biçimli") : cev("Alyuvar normal"))}>
       <text x={20} y={22} fontSize={12} fontWeight={700} fill="var(--muted)">{cev("β-globin mRNA, 4.–7. kodonlar")}</text>
       <g>
         {kd.map((c, j) =>

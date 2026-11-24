@@ -573,7 +573,7 @@ function Foto({ s, t, oynuyor }: SahneProps) {
 function Cimlenme({ v }: SahneProps) {
   const su = v.su === 1, o2 = v.o2 === 1, sicak = v.sicak === 1, isik = v.isik === 1;
   const ok = su && o2 && sicak;
-  const eksik = [!su && "su", !o2 && "oksijen", !sicak && "uygun sıcaklık"].filter(Boolean).join(", ");
+  const eksik = [!su && cev("su"), !o2 && cev("oksijen"), !sicak && cev("uygun sıcaklık")].filter(Boolean).join(", ");
   const CX = 170, ZY = 168;
   return (
     <svg viewBox="0 0 340 240" role="img" aria-label={ok ? cev("Tohum çimlendi") : cev("Tohum çimlenmedi. Eksik: {0}", eksik)}>

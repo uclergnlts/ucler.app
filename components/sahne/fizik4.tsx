@@ -148,7 +148,7 @@ function Fma({ s, v, t, oynuyor, kosular }: SahneProps) {
 function Agirlik({ v }: SahneProps) {
   const ay = v.ay === 1, g = ay ? 1.62 : G, W = 60 * g;
   return (
-    <svg viewBox="0 0 340 226" role="img" aria-label={cev("{0}: kütle 60 kilogram, ağırlık {1} newton", ay ? "Ay" : "Dünya", Math.round(W))}>
+    <svg viewBox="0 0 340 226" role="img" aria-label={cev("{0}: kütle 60 kilogram, ağırlık {1} newton", ay ? cev("Ay") : cev("Dünya"), Math.round(W))}>
       <line x1={14} x2={326} y1={190} y2={190} stroke={ay ? "var(--muted)" : "var(--ink)"} strokeWidth={2} />
       {ay && (
         <g fill="none" stroke="var(--line-2)" strokeWidth={1.5}>

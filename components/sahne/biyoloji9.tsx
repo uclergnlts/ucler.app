@@ -462,7 +462,7 @@ function Insulin({ v, t, oynuyor, s }: SahneProps) {
       {u > 0 && <polyline points={pts} fill="none" stroke={ins ? MOR : KIRMIZI} strokeWidth={3} strokeLinejoin="round" />}
       {u > 0 && <circle cx={ST(h)} cy={SY(seker(h, ins))} r={5.5} fill={ins ? MOR : KIRMIZI} stroke="var(--surface)" strokeWidth={1.6} />}
       <text x={170} y={220} fontSize={12.5} fontWeight={800} fill="var(--ink)" textAnchor="middle">
-        {u <= 0 ? (ins ? cev("β hücreleri insülin salgılayacak. Oynat.") : cev("İnsülin salgılanmıyor. Oynat.")) : cev("{0} mg/dL · {1}", deger, ins ? "insülin: hücreler glikoz alıyor" : "insülin yok: glikoz kanda kalıyor")}
+        {u <= 0 ? (ins ? cev("β hücreleri insülin salgılayacak. Oynat.") : cev("İnsülin salgılanmıyor. Oynat.")) : cev("{0} mg/dL · {1}", deger, ins ? cev("insülin: hücreler glikoz alıyor") : cev("insülin yok: glikoz kanda kalıyor"))}
       </text>
     </svg>
   );
@@ -475,7 +475,7 @@ function Pankreas({ v }: SahneProps) {
   const yuksek = mg > 110, dusuk = mg < 70;
   const y = 186 - ((mg - 40) / 160) * 150;
   return (
-    <svg viewBox="0 0 340 230" role="img" aria-label={cev("Kan şekeri {0} mg/dL: {1}", mg, yuksek ? "insülin salgılanıyor" : dusuk ? "glukagon salgılanıyor" : "denge")}>
+    <svg viewBox="0 0 340 230" role="img" aria-label={cev("Kan şekeri {0} mg/dL: {1}", mg, yuksek ? cev("insülin salgılanıyor") : dusuk ? cev("glukagon salgılanıyor") : cev("denge"))}>
       <g>
         <rect x={30} y={30} width={22} height={160} rx={11} fill="var(--surface)" stroke="var(--ink)" strokeWidth={1.4} />
         <rect x={31} y={186 - ((110 - 40) / 160) * 150} width={20} height={((110 - 70) / 160) * 150} fill={YESIL} fillOpacity={0.25} />

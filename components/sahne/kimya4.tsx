@@ -251,7 +251,7 @@ function HalDegisim({ v }: SahneProps) {
     );
   };
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0}: ısı {1}", d.ad, d.alir ? "alır" : "verir")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("{0}: ısı {1}", d.ad, d.alir ? cev("alır") : cev("verir"))}>
       <g>{DEGISIMLER.map((D) => ok(D, D === d))}</g>
       {HAL_YER.map(([x, y], i) => <HalKutu key={i} x={x} y={y} hal={i} />)}
       <g textAnchor="middle">

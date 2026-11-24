@@ -67,7 +67,7 @@ export default function UniteTesti({ ders, no, list, sorular }: { ders: DersId; 
             <h2 className="mt-1 text-[22px]">{gecti ? cev("Üniteyi geçtin!") : cev("Geçmek için en az {0} gerekiyor.", GECME)}</h2>
             <p className="text-[15px] text-muted-foreground">
               {gecti
-                ? cev("{0} ünitesinin bütün konuları açıldı{1}.", u.ad, sonraki ? `; sıradaki ünite: ${sonraki.ad}` : "")
+                ? cev("{0} ünitesinin bütün konuları açıldı{1}.", u.ad, sonraki ? cev("; sıradaki ünite: {0}", sonraki.ad) : "")
                 : cev("Konuları sırayla çalışarak devam edebilir ya da testi yeniden çözebilirsin. Yanlışların tekrar sırana eklendi.")}
             </p>
             <div className="relative z-30 mt-4 grid w-full gap-2">

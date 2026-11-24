@@ -310,7 +310,7 @@ function Cenek({ v }: SahneProps) {
   const sonuc = tek === 3 ? cev("tek çenekli") : tek === 0 ? cev("çift çenekli") : cev("özellikler karışık");
   const renk = tek === 3 ? "var(--c1)" : tek === 0 ? "var(--c2)" : "var(--muted)";
   return (
-    <svg viewBox="0 0 340 250" role="img" aria-label={cev("{0} çiçek yaprağı, {1} damar, {2} kök: {3}", p, pd ? "paralel" : "ağsı", sk ? "saçak" : "kazık", sonuc)}>
+    <svg viewBox="0 0 340 250" role="img" aria-label={cev("{0} çiçek yaprağı, {1} damar, {2} kök: {3}", p, pd ? cev("paralel") : cev("ağsı"), sk ? cev("saçak") : cev("kazık"), sonuc)}>
       <g>
         {Array.from({ length: p }, (_, i) => {
           const a = (i * 360) / p - 90, r = (a * Math.PI) / 180;

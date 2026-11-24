@@ -277,7 +277,7 @@ function Ester({ v }: SahneProps) {
 function Sabun({ v }: SahneProps) {
   const n = sinir(v.n ?? 0, 0, 5), kopan = Math.min(3, n), fazla = n - kopan;
   return (
-    <svg viewBox="0 0 340 236" role="img" aria-label={cev("1 mol yağa {0} mol NaOH: {1} ester bağı koptu{2}", n, kopan, fazla ? `, ${fazla} mol NaOH arttı` : "")}>
+    <svg viewBox="0 0 340 236" role="img" aria-label={cev("1 mol yağa {0} mol NaOH: {1} ester bağı koptu{2}", n, kopan, fazla ? cev(", {0} mol NaOH arttı", fazla) : "")}>
       {[0, 1, 2].map((i) => {
         const y = 40 + i * 48, kop = i < kopan, dx = kop ? 30 : 0;
         return (
