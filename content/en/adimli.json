@@ -15990,6 +15990,232 @@
   ],
   "soruOnce": true
  },
+ "mitoz": {
+  "id": "mitoz",
+  "ders": "biyoloji",
+  "konu": "mitoz",
+  "baslik": "Mitosis and asexual reproduction",
+  "ozet": "Try first, then learn the name. Copy the DNA, play through mitosis and divide the cell.",
+  "adimlar": [
+   {
+    "baslik": "The cell cycle",
+    "metin": "A cell spends most of its time in <b>interphase</b>, between two divisions. Move through the cycle and stop at the stage where the amount of DNA increases.",
+    "sahne": {
+     "tur": "biy4-dongu"
+    },
+    "deger": {
+     "k": 5
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Move through the cycle",
+      "min": 0,
+      "max": 100,
+      "adim": 5,
+      "onek": "%"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": [
+       35,
+       55
+      ]
+     },
+     "tamam": "The amount of DNA rises from 2 units to 4 units in the <b>S phase</b>. No new DNA is made during mitosis."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Chromosome and chromatid",
+    "metin": "Use the switch to copy the DNA, and look at the numbers.",
+    "sahne": {
+     "tur": "biy4-kromatit"
+    },
+    "deger": {
+     "es": 0
+    },
+    "kontroller": [
+     {
+      "ad": "es",
+      "etiket": "Copy the DNA",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "How many chromosomes does this cell have once copied?",
+     "secenekler": [
+      {
+       "yazi": "8",
+       "neden": "8 is the number of chromatids. To count chromosomes, count the centromeres."
+      },
+      {
+       "yazi": "4",
+       "neden": "4 centromeres means 4 chromosomes. The number of chromatids is 8.",
+       "dogru": true
+      },
+      {
+       "yazi": "2",
+       "neden": "The cell has two pairs, which means 4 chromosomes: 2n = 4."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "The stages of mitosis",
+    "metin": "Mitosis goes through four stages: <b>prophase, metaphase, anaphase and telophase</b>. In this cell 2n = 4, and the DNA has already been copied. Make a guess before you play mitosis.",
+    "sahne": {
+     "tur": "biy4-mitoz",
+     "sure": 8
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In which stage does the number of chromosomes double (to 8) for a short time?",
+     "secenekler": [
+      {
+       "yazi": "Prophase",
+       "neden": "In prophase, chromosomes only shorten, thicken and become visible. There are 4 of them."
+      },
+      {
+       "yazi": "Metaphase",
+       "neden": "In metaphase, chromosomes line up at the equator, but the sister chromatids are still joined. So there are 4 chromosomes."
+      },
+      {
+       "yazi": "Anaphase",
+       "neden": "Once the centromeres split, each chromatid counts as a separate chromosome, and the number rises from 4 to 8. The amount of DNA does not change.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Counting chromosomes",
+    "metin": "To make a karyotype, you need the stage where the chromosomes are shortest, most distinct and lined up in a single row. Change the stage and find it.",
+    "sahne": {
+     "tur": "biy4-mitoz"
+    },
+    "deger": {
+     "e": 1
+    },
+    "kontroller": [
+     {
+      "ad": "e",
+      "etiket": "Stage",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "e": 2
+     },
+     "tamam": "This stage is <b>metaphase</b>, and the chromosomes are lined up in a single row at the equator. The 46 human chromosomes are counted in this stage too."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Dividing the cytoplasm",
+    "metin": "First play the animal cell. Then switch to the plant cell and play it too.",
+    "sahne": {
+     "tur": "biy4-sitokinez",
+     "sure": 4
+    },
+    "deger": {
+     "b": 0
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Plant cell",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "b": 1
+     },
+     "tamam": "In a plant, Golgi vesicles join in the middle of the cell. The <b>cell plate</b> grows from the inside out to the edges and separates the two cells."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Asexual reproduction: fission",
+    "metin": "How does the number of bacteria grow? Make a guess before you play.",
+    "sahne": {
+     "tur": "biy4-bakteri",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "A bacterium splits in two every 20 minutes. How many bacteria will there be after 2 hours?",
+     "secenekler": [
+      {
+       "yazi": "12",
+       "neden": "The number does not go up by 1 with each division. It doubles."
+      },
+      {
+       "yazi": "6",
+       "neden": "There are 6 divisions in 2 hours. But the number of bacteria is not equal to the number of divisions."
+      },
+      {
+       "yazi": "64",
+       "neden": "There are 6 divisions in 120 minutes, and the number doubles with each one. The result is 2⁶ = 64 bacteria.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Grafting",
+    "metin": "In <b>grafting</b>, a piece of branch from one plant (the scion) is joined to the roots and trunk of another plant (the rootstock).",
+    "sahne": {
+     "tur": "biy4-asi",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "A scion of a sweet apple variety was grafted onto a sour wild apple rootstock. What fruit will the grafted branch bear?",
+     "secenekler": [
+      {
+       "yazi": "Sour, like the rootstock",
+       "neden": "The rootstock provides the roots and trunk. The branch and fruit develop from the scion."
+      },
+      {
+       "yazi": "A mix of both",
+       "neden": "There is no fertilization in grafting, and the inherited traits do not mix. The branch grows from the scion's own cells by mitosis."
+      },
+      {
+       "yazi": "Sweet, like the scion",
+       "neden": "The branch and fruit develop from the scion's cells by mitosis and are genetically the same as the scion. Gardeners copy a variety they like by grafting, without waiting for seeds.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "The cell cycle is made of interphase (G1, S, G2), mitosis and cytokinesis. DNA is copied in the <b>S phase</b>.",
+   "The number of chromosomes equals the number of centromeres. A copied chromosome carries two sister chromatids.",
+   "The stages of mitosis are prophase, metaphase, anaphase and telophase. The chromosome number is doubled only in anaphase and telophase. Mitosis ends with two 2n cells.",
+   "Cytokinesis happens by pinching in in animal cells and with a cell plate in plant cells.",
+   "In asexual reproduction, the offspring are genetically identical to the parent. A bacterium's binary fission is not mitosis. In grafting, the fruit has the traits of the scion."
+  ],
+  "soruOnce": true
+ },
  "siniflandirma": {
   "id": "siniflandirma",
   "ders": "biyoloji",

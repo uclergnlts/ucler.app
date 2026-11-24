@@ -1599,6 +1599,280 @@
    }
   ]
  },
+ "mitoz": {
+  "title": "Mitosis and asexual reproduction",
+  "summary": "How does a cell split in two, and how do living things multiply from a single parent?",
+  "cards": [
+   {
+    "h": "The cell cycle: interphase and M",
+    "p": "The time from a cell's formation to its division is called the <b>cell cycle</b>. The longest stage is <b>interphase</b>. The cell grows in G<sub>1</sub>, copies its DNA in <b>S</b> and prepares to divide in G<sub>2</sub>. Then come mitosis and cytokinesis, the division of the cytoplasm.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mit-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><path d='M94.3 44.0 A60 60 0 0 1 129.1 151.2' stroke='var(--c1)' stroke-opacity='0.45' stroke-width='24' fill='none'/><text x='149.1' y='90.0' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>G₁</text><path d='M125.4 153.8 A60 60 0 0 1 35.7 124.7' stroke='var(--c2)' stroke-opacity='0.45' stroke-width='24' fill='none'/><text x='73.5' y='165.6' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>S</text><path d='M34.3 120.4 A60 60 0 0 1 49.3 61.8' stroke='var(--c4)' stroke-opacity='0.45' stroke-width='24' fill='none'/><text x='33.9' y='93.6' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>G₂</text><path d='M52.6 58.7 A60 60 0 0 1 89.7 44.0' stroke='var(--c3)' stroke-opacity='0.45' stroke-width='24' fill='none'/><text x='69.9' y='52.7' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>M</text><path d='M121.4 29.6 A80 80 0 0 1 168.1 79.3' stroke='var(--muted)' stroke-width='1.4' fill='none' marker-end='url(#mit-1)'/><text x='92' y='101' font-size='12' fill='var(--muted)' text-anchor='middle'>cell</text><text x='92' y='117' font-size='12' fill='var(--muted)' text-anchor='middle'>cycle</text><text x='186' y='30' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>interphase = G₁ + S + G₂</text><circle cx='190' cy='56' r='5' fill='var(--c1)' fill-opacity='0.6'/><text x='202' y='60' font-size='12' fill='var(--ink)' text-anchor='start'>G₁: growth, synthesis</text><circle cx='190' cy='84' r='5' fill='var(--c2)' fill-opacity='0.6'/><text x='202' y='88' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>S: DNA is copied</text><circle cx='190' cy='112' r='5' fill='var(--c4)' fill-opacity='0.6'/><text x='202' y='116' font-size='12' fill='var(--ink)' text-anchor='start'>G₂: preparation</text><circle cx='190' cy='140' r='5' fill='var(--c3)' fill-opacity='0.6'/><text x='202' y='144' font-size='12' fill='var(--ink)' text-anchor='start'>M: mitosis +</text><text x='202' y='160' font-size='12' fill='var(--ink)' text-anchor='start'>cytokinesis</text><text x='186' y='190' font-size='11' fill='var(--muted)' text-anchor='start'>longest stage: interphase</text></svg>",
+    "key": "DNA is copied in the S phase of interphase, not during mitosis.",
+    "etk": {
+     "tur": "sirala",
+     "soru": "Put the stages of the cell cycle in order, starting with G<sub>1</sub>.",
+     "ogeler": [
+      "G<sub>1</sub>",
+      "S",
+      "G<sub>2</sub>",
+      "Mitosis",
+      "Cytokinesis"
+     ]
+    }
+   },
+   {
+    "h": "Chromosome, chromatid, centromere",
+    "p": "The loose DNA in interphase is called <b>chromatin</b>. During division, chromatin shortens and thickens and is then called a <b>chromosome</b>. A copied chromosome is made of two <b>sister chromatids</b> joined at the <b>centromere</b>. In humans, 2n = 46.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mit-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='70' y='24' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>not copied</text><text x='250' y='24' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>copied</text><path d='M70 52 L70 132' stroke='var(--c1)' stroke-width='8' stroke-linecap='round'/><circle cx='70' cy='92' r='2.2' fill='var(--ink)' fill-opacity='1'/><path d='M110 92 L198 92' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#mit-2)'/><text x='154' y='82' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>S phase</text><text x='154' y='110' font-size='11' fill='var(--muted)' text-anchor='middle'>DNA is copied</text><path d='M245.5 52 L245.5 132' stroke='var(--c1)' stroke-width='8' stroke-linecap='round'/><path d='M254.5 52 L254.5 132' stroke='var(--c1)' stroke-width='8' stroke-linecap='round'/><circle cx='250' cy='92' r='2.6' fill='var(--ink)' fill-opacity='1'/><text x='263' y='96' font-size='11' fill='var(--ink)' text-anchor='start'>centromere</text><text x='70' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>1 chromosome</text><text x='70' y='175' font-size='11' fill='var(--muted)' text-anchor='middle'>1 chromatid = 1 DNA</text><text x='250' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>1 chromosome</text><text x='250' y='175' font-size='11' fill='var(--muted)' text-anchor='middle'>2 sister chromatids = 2 DNA</text><text x='160' y='196' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>number of chromosomes = number of centromeres</text></svg>",
+    "key": "The number of chromosomes equals the number of centromeres. A copied chromosome is still 1 chromosome, but it carries 2 chromatids. In a diploid (2n) cell, one of each pair comes from the mother and the other from the father."
+   },
+   {
+    "h": "Prophase: chromosomes appear",
+    "p": "<b>Prophase</b> is the first stage of mitosis. The chromosomes become visible, and the nuclear envelope and nucleolus disappear. In an animal cell, the centrosomes move to the poles and <b>spindle fibers</b> form between them.",
+    "svg": "<svg viewBox='0 0 320 200'><ellipse cx='160' cy='100' rx='118' ry='66' fill='var(--c3)' fill-opacity='0.07' stroke='var(--c3)' stroke-width='1.6'/><circle cx='160' cy='100' r='44' fill='none' stroke='var(--c1)' stroke-width='1.6' stroke-dasharray='5 5'/><path d='M72 100 Q160 44 248 100' stroke='var(--c5)' stroke-opacity='0.55' stroke-width='1' fill='none'/><path d='M72 100 Q160 70 248 100' stroke='var(--c5)' stroke-opacity='0.55' stroke-width='1' fill='none'/><path d='M72 100 Q160 130 248 100' stroke='var(--c5)' stroke-opacity='0.55' stroke-width='1' fill='none'/><path d='M72 100 Q160 156 248 100' stroke='var(--c5)' stroke-opacity='0.55' stroke-width='1' fill='none'/><path d='M72 100 L248 100' stroke='var(--c5)' stroke-width='1'/><g transform='rotate(25 140 82)'><path d='M137.0 71 L137.0 93' stroke='var(--c2)' stroke-width='5' stroke-linecap='round'/><path d='M143.0 71 L143.0 93' stroke='var(--c2)' stroke-width='5' stroke-linecap='round'/><circle cx='140' cy='82' r='2.6' fill='var(--ink)' fill-opacity='1'/></g><g transform='rotate(-30 182 86)'><path d='M179.0 76 L179.0 96' stroke='var(--c1)' stroke-width='5' stroke-linecap='round'/><path d='M185.0 76 L185.0 96' stroke='var(--c1)' stroke-width='5' stroke-linecap='round'/><circle cx='182' cy='86' r='2.6' fill='var(--ink)' fill-opacity='1'/></g><g transform='rotate(70 146 120)'><path d='M143.0 109 L143.0 131' stroke='var(--c1)' stroke-width='5' stroke-linecap='round'/><path d='M149.0 109 L149.0 131' stroke='var(--c1)' stroke-width='5' stroke-linecap='round'/><circle cx='146' cy='120' r='2.6' fill='var(--ink)' fill-opacity='1'/></g><g transform='rotate(-10 178 120)'><path d='M175.0 111 L175.0 129' stroke='var(--c2)' stroke-width='5' stroke-linecap='round'/><path d='M181.0 111 L181.0 129' stroke='var(--c2)' stroke-width='5' stroke-linecap='round'/><circle cx='178' cy='120' r='2.6' fill='var(--ink)' fill-opacity='1'/></g><circle cx='69' cy='100' r='2.6' fill='var(--c5)' fill-opacity='1'/><circle cx='75' cy='100' r='2.6' fill='var(--c5)' fill-opacity='1'/><circle cx='245' cy='100' r='2.6' fill='var(--c5)' fill-opacity='1'/><circle cx='251' cy='100' r='2.6' fill='var(--c5)' fill-opacity='1'/><text x='16' y='20' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>centrosome</text><path d='M40 25 L70 95' stroke='var(--muted)' stroke-width='1'/><text x='304' y='20' font-size='12' fill='var(--c5)' text-anchor='end' font-weight='700'>spindle fibers</text><path d='M268 25 L214 79' stroke='var(--muted)' stroke-width='1'/><text x='160' y='186' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>nuclear envelope and nucleolus disappear</text><text x='160' y='16' font-size='11' fill='var(--ink)' text-anchor='middle'>chromosomes become distinct</text></svg>",
+    "key": "Plant cells have no centrosomes, but spindle fibers still form."
+   },
+   {
+    "h": "Metaphase: a single line at the equator",
+    "p": "In <b>metaphase</b>, spindle fibers attach to the centromeres, and the chromosomes line up in a single row at the equator. As you just found, the chromosomes are at their shortest and most distinct in this stage. That is why a <b>karyotype</b> is made in this stage.",
+    "svg": "<svg viewBox='0 0 320 200'><ellipse cx='160' cy='100' rx='118' ry='66' fill='var(--c3)' fill-opacity='0.07' stroke='var(--c3)' stroke-width='1.6'/><path d='M160 30 L160 172' stroke='var(--acc)' stroke-width='1.2' stroke-dasharray='4 4'/><path d='M58 100 L155 52' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M262 100 L165 52' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M58 100 L155 82' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M262 100 L165 82' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M58 100 L155 118' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M262 100 L165 118' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M58 100 L155 148' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M262 100 L165 148' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M157.0 42 L157.0 62' stroke='var(--c1)' stroke-width='5' stroke-linecap='round'/><path d='M163.0 42 L163.0 62' stroke='var(--c1)' stroke-width='5' stroke-linecap='round'/><circle cx='160' cy='52' r='2.6' fill='var(--ink)' fill-opacity='1'/><path d='M157.0 72 L157.0 92' stroke='var(--c2)' stroke-width='5' stroke-linecap='round'/><path d='M163.0 72 L163.0 92' stroke='var(--c2)' stroke-width='5' stroke-linecap='round'/><circle cx='160' cy='82' r='2.6' fill='var(--ink)' fill-opacity='1'/><path d='M157.0 108 L157.0 128' stroke='var(--c1)' stroke-width='5' stroke-linecap='round'/><path d='M163.0 108 L163.0 128' stroke='var(--c1)' stroke-width='5' stroke-linecap='round'/><circle cx='160' cy='118' r='2.6' fill='var(--ink)' fill-opacity='1'/><path d='M157.0 138 L157.0 158' stroke='var(--c2)' stroke-width='5' stroke-linecap='round'/><path d='M163.0 138 L163.0 158' stroke='var(--c2)' stroke-width='5' stroke-linecap='round'/><circle cx='160' cy='148' r='2.6' fill='var(--ink)' fill-opacity='1'/><circle cx='55' cy='100' r='2.6' fill='var(--c5)' fill-opacity='1'/><circle cx='61' cy='100' r='2.6' fill='var(--c5)' fill-opacity='1'/><circle cx='259' cy='100' r='2.6' fill='var(--c5)' fill-opacity='1'/><circle cx='265' cy='100' r='2.6' fill='var(--c5)' fill-opacity='1'/><text x='160' y='20' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>equatorial plane</text><text x='58' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>pole</text><text x='262' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>pole</text><text x='160' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>single row, most distinct</text><text x='96' y='56' font-size='11' fill='var(--c5)' text-anchor='end'>spindle fiber</text></svg>",
+    "key": "A karyotype is a picture of the chromosomes arranged in pairs by size and shape."
+   },
+   {
+    "h": "Anaphase: chromatids separate",
+    "p": "In <b>anaphase</b>, the centromeres split and the sister chromatids are pulled to opposite poles. Each chromatid now counts as a separate chromosome. That is why the number of chromosomes doubles for a short time.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mit-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><ellipse cx='160' cy='100' rx='132' ry='62' fill='var(--c3)' fill-opacity='0.07' stroke='var(--c3)' stroke-width='1.6'/><path d='M50 100 L118 62' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M270 100 L202 62' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M50 100 L118 88' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M270 100 L202 88' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M50 100 L118 112' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M270 100 L202 112' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M50 100 L118 138' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M270 100 L202 138' stroke='var(--c5)' stroke-opacity='0.6' stroke-width='1'/><path d='M127 53 L118 62 L127 71' stroke='var(--c1)' stroke-width='4.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/><circle cx='118' cy='62' r='2' fill='var(--ink)' fill-opacity='1'/><path d='M193 53 L202 62 L193 71' stroke='var(--c1)' stroke-width='4.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/><circle cx='202' cy='62' r='2' fill='var(--ink)' fill-opacity='1'/><path d='M127 79 L118 88 L127 97' stroke='var(--c2)' stroke-width='4.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/><circle cx='118' cy='88' r='2' fill='var(--ink)' fill-opacity='1'/><path d='M193 79 L202 88 L193 97' stroke='var(--c2)' stroke-width='4.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/><circle cx='202' cy='88' r='2' fill='var(--ink)' fill-opacity='1'/><path d='M127 103 L118 112 L127 121' stroke='var(--c1)' stroke-width='4.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/><circle cx='118' cy='112' r='2' fill='var(--ink)' fill-opacity='1'/><path d='M193 103 L202 112 L193 121' stroke='var(--c1)' stroke-width='4.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/><circle cx='202' cy='112' r='2' fill='var(--ink)' fill-opacity='1'/><path d='M127 129 L118 138 L127 147' stroke='var(--c2)' stroke-width='4.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/><circle cx='118' cy='138' r='2' fill='var(--ink)' fill-opacity='1'/><path d='M193 129 L202 138 L193 147' stroke='var(--c2)' stroke-width='4.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/><circle cx='202' cy='138' r='2' fill='var(--ink)' fill-opacity='1'/><circle cx='47' cy='100' r='2.6' fill='var(--c5)' fill-opacity='1'/><circle cx='53' cy='100' r='2.6' fill='var(--c5)' fill-opacity='1'/><circle cx='267' cy='100' r='2.6' fill='var(--c5)' fill-opacity='1'/><circle cx='273' cy='100' r='2.6' fill='var(--c5)' fill-opacity='1'/><path d='M160 44 L160 156' stroke='var(--line)' stroke-width='1' stroke-dasharray='4 4'/><path d='M146 30 L104 30' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#mit-5)'/><path d='M174 30 L216 30' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#mit-5)'/><text x='160' y='20' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>sister chromatids separate</text><text x='160' y='178' font-size='12' fill='var(--ink)' text-anchor='middle'>each chromatid is now a chromosome</text><text x='160' y='195' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>if 2n = 4, anaphase has 8 chromosomes</text></svg>",
+    "key": "In a cell with 2n = 4, the number of chromosomes becomes 8 in anaphase. The amount of DNA does not change.",
+    "once": {
+     "soru": "What is pulled to opposite poles in anaphase?",
+     "secenekler": [
+      {
+       "yazi": "Sister chromatids",
+       "neden": "Once the centromere splits, each chromatid is pulled to its own pole.",
+       "dogru": true
+      },
+      {
+       "yazi": "The nuclear envelope",
+       "neden": "The nuclear envelope already disappeared in prophase."
+      },
+      {
+       "yazi": "Centrosomes",
+       "neden": "The centrosomes are already at the poles. What gets pulled to the poles are the chromatids."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Telophase and cytokinesis",
+    "p": "In <b>telophase</b>, the chromosomes loosen and the nuclear envelope forms again. Then the cytoplasm divides. This is called <b>cytokinesis</b>. An animal cell divides by <b>pinching in</b> at the middle. A plant cell builds a <b>cell plate</b> in the middle.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mit-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><text x='80' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Animal</text><text x='240' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Plant</text><path d='M160 12 L160 188' stroke='var(--line)' stroke-width='1'/><circle cx='54' cy='92' r='34' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.6'/><circle cx='106' cy='92' r='34' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.6'/><circle cx='48' cy='92' r='9' fill='var(--c1)' fill-opacity='0.35'/><circle cx='112' cy='92' r='9' fill='var(--c1)' fill-opacity='0.35'/><path d='M80 40 L80 60' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-end='url(#mit-6)'/><path d='M80 144 L80 124' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-end='url(#mit-6)'/><rect x='186' y='54' width='108' height='76' rx='3' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='2.4'/><circle cx='212' cy='92' r='9' fill='var(--c1)' fill-opacity='0.35'/><circle cx='268' cy='92' r='9' fill='var(--c1)' fill-opacity='0.35'/><path d='M240 72 L240 112' stroke='var(--c4)' stroke-width='3'/><circle cx='240' cy='62' r='2.6' fill='var(--c4)' fill-opacity='1'/><circle cx='240' cy='66' r='2.6' fill='var(--c4)' fill-opacity='1'/><circle cx='240' cy='118' r='2.6' fill='var(--c4)' fill-opacity='1'/><circle cx='240' cy='122' r='2.6' fill='var(--c4)' fill-opacity='1'/><text x='80' y='160' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>pinching in:</text><text x='80' y='175' font-size='11' fill='var(--ink)' text-anchor='middle'>membrane folds in at the middle</text><text x='240' y='160' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>cell plate (middle lamella):</text><text x='240' y='175' font-size='11' fill='var(--ink)' text-anchor='middle'>vesicles join in the middle</text><text x='80' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>centrosome present</text><text x='240' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>no centrosome</text></svg>",
+    "key": "In a plant, the cell wall does not allow pinching in. That is why the plate is built from Golgi vesicles. Mitosis divides the nucleus, and cytokinesis divides the cytoplasm."
+   },
+   {
+    "h": "DNA and chromosomes stage by stage",
+    "p": "In a cell with 2n = 4, the amount of DNA rises from 2 units to 4 units in the S phase. After cytokinesis, each daughter cell gets 2 units. The number of chromosomes is 8 only in anaphase and telophase.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M80 22 L80 176' stroke='var(--line)' stroke-width='1' stroke-dasharray='2 3'/><path d='M112 22 L112 176' stroke='var(--line)' stroke-width='1' stroke-dasharray='2 3'/><path d='M144 22 L144 176' stroke='var(--line)' stroke-width='1' stroke-dasharray='2 3'/><path d='M176 22 L176 176' stroke='var(--line)' stroke-width='1' stroke-dasharray='2 3'/><path d='M208 22 L208 176' stroke='var(--line)' stroke-width='1' stroke-dasharray='2 3'/><path d='M240 22 L240 176' stroke='var(--line)' stroke-width='1' stroke-dasharray='2 3'/><path d='M272 22 L272 176' stroke='var(--line)' stroke-width='1' stroke-dasharray='2 3'/><text x='64.0' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>G₁</text><text x='96.0' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>S</text><text x='128.0' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>G₂</text><text x='160.0' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>P</text><text x='192.0' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>M</text><text x='224.0' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>A</text><text x='256.0' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>T</text><text x='288.0' y='192' font-size='10' fill='var(--ink)' text-anchor='middle'>daughter</text><path d='M48 22 L48 94' stroke='var(--ink)' stroke-width='1.2'/><path d='M48 94 L308 94' stroke='var(--ink)' stroke-width='1.2'/><path d='M48 116 L48 176' stroke='var(--ink)' stroke-width='1.2'/><path d='M48 176 L308 176' stroke='var(--ink)' stroke-width='1.2'/><path d='M48 84 L80 84 L112 40 L272 40 L272 84 L304 84' stroke='var(--c2)' stroke-width='2.4' fill='none'/><path d='M48 166 L208 166 L208 126 L272 126 L272 166 L304 166' stroke='var(--c1)' stroke-width='2.4' fill='none'/><text x='42' y='88' font-size='11' fill='var(--ink)' text-anchor='end'>2</text><text x='42' y='44' font-size='11' fill='var(--ink)' text-anchor='end'>4</text><text x='42' y='170' font-size='11' fill='var(--ink)' text-anchor='end'>4</text><text x='42' y='130' font-size='11' fill='var(--ink)' text-anchor='end'>8</text><text x='54' y='16' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>amount of DNA (units)</text><text x='54' y='112' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>number of chromosomes (2n = 4)</text></svg>",
+    "key": "In telophase, each new nucleus has 4 chromosomes. Mitosis keeps the chromosome number the same. One 2n cell gives two 2n cells.",
+    "once": {
+     "soru": "A human cell with 2n = 46 divided by mitosis. How many chromosomes are in each daughter cell?",
+     "secenekler": [
+      {
+       "yazi": "46",
+       "neden": "Mitosis keeps the chromosome number the same. A 2n cell gives 2n cells again.",
+       "dogru": true
+      },
+      {
+       "yazi": "23",
+       "neden": "The division that halves the chromosome number is meiosis."
+      },
+      {
+       "yazi": "92",
+       "neden": "92 chromosomes are seen only for a short time, in anaphase."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Why mitosis matters and how it is controlled",
+    "p": "Mitosis allows <b>growth</b>, <b>repair</b> and <b>renewal</b>. In single-celled eukaryotes, it is also a way to reproduce. The cycle has <b>checkpoints</b> at G<sub>1</sub>, G<sub>2</sub> and metaphase. If this control breaks down, <b>cancer</b> can develop.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='12' width='128' height='50' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.2'/><text x='72' y='32' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>growth</text><text x='72' y='50' font-size='11' fill='var(--ink)' text-anchor='middle'>from zygote to body</text><rect x='8' y='74' width='128' height='50' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.2'/><text x='72' y='94' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>repair</text><text x='72' y='112' font-size='11' fill='var(--ink)' text-anchor='middle'>wound healing</text><rect x='8' y='136' width='128' height='50' rx='6' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.2'/><text x='72' y='156' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>renewal</text><text x='72' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>skin, blood cells</text><text x='232' y='24' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>checkpoints:</text><text x='232' y='40' font-size='12' fill='var(--ink)' text-anchor='middle'>G₁, G₂ and metaphase</text><rect x='168' y='62' width='24' height='18' rx='2' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><rect x='194' y='62' width='24' height='18' rx='2' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><rect x='220' y='62' width='24' height='18' rx='2' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><rect x='246' y='62' width='24' height='18' rx='2' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><rect x='272' y='62' width='24' height='18' rx='2' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><text x='232' y='98' font-size='11' fill='var(--muted)' text-anchor='middle'>working control: orderly tissue</text><rect x='168' y='158' width='24' height='18' rx='2' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><rect x='194' y='158' width='24' height='18' rx='2' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><rect x='220' y='158' width='24' height='18' rx='2' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><rect x='246' y='158' width='24' height='18' rx='2' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><rect x='272' y='158' width='24' height='18' rx='2' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)'/><circle cx='206' cy='148' r='7' fill='var(--c2)' fill-opacity='0.45'/><circle cx='220' cy='148' r='7' fill='var(--c2)' fill-opacity='0.45'/><circle cx='234' cy='148' r='7' fill='var(--c2)' fill-opacity='0.45'/><circle cx='248' cy='148' r='7' fill='var(--c2)' fill-opacity='0.45'/><circle cx='213' cy='136' r='7' fill='var(--c2)' fill-opacity='0.45'/><circle cx='227' cy='136' r='7' fill='var(--c2)' fill-opacity='0.45'/><circle cx='241' cy='136' r='7' fill='var(--c2)' fill-opacity='0.45'/><circle cx='220' cy='124' r='7' fill='var(--c2)' fill-opacity='0.45'/><circle cx='234' cy='124' r='7' fill='var(--c2)' fill-opacity='0.45'/><text x='232' y='194' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>broken control: tumor</text></svg>",
+    "key": "As a cell grows, its surface-to-volume ratio drops and division begins. Mature nerve cells do not divide.",
+    "once": {
+     "soru": "Which kind of division closes a cut on your hand?",
+     "secenekler": [
+      {
+       "yazi": "Mitosis",
+       "neden": "The skin cells at the edge of the wound divide by mitosis and fill the gap.",
+       "dogru": true
+      },
+      {
+       "yazi": "Meiosis",
+       "neden": "Meiosis only makes reproductive cells."
+      },
+      {
+       "yazi": "Neither",
+       "neden": "Cells cannot fill the gap just by growing. New cells are needed."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Asexual reproduction: fission",
+    "p": "In <b>asexual reproduction</b>, a single parent is enough and there is no fertilization. The offspring are genetically identical to the parent. Amoebas and euglenas divide by mitosis. A bacterium's <b>binary fission</b> is not mitosis, because a bacterium has no nucleus.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mit-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='160' y='18' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>Amoeba: division by mitosis</text><path d='M34 56 C30 36 54 32 60 40 C70 28 90 42 84 56 C92 72 66 80 56 72 C42 80 26 68 34 56 Z' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.5'/><circle cx='60' cy='56' r='6' fill='var(--c5)' fill-opacity='0.6'/><path d='M106 56 L146 56' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-9)'/><path d='M179.2 56 C176.0 40.0 195.2 36.8 200 43.2 C208.0 33.599999999999994 224.0 44.8 219.2 56 C225.6 68.8 204.8 75.2 196.8 68.8 C185.6 75.2 172.8 65.6 179.2 56 Z' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.5'/><circle cx='200' cy='56' r='4.800000000000001' fill='var(--c5)' fill-opacity='0.6'/><path d='M247.2 56 C244.0 40.0 263.2 36.8 268 43.2 C276.0 33.599999999999994 292.0 44.8 287.2 56 C293.6 68.8 272.8 75.2 264.8 68.8 C253.6 75.2 240.8 65.6 247.2 56 Z' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.5'/><circle cx='268' cy='56' r='4.800000000000001' fill='var(--c5)' fill-opacity='0.6'/><path d='M10 98 L310 98' stroke='var(--line)' stroke-width='1'/><text x='160' y='118' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>Bacterium: binary fission (not mitosis)</text><rect x='34' y='138' width='52' height='24' rx='12' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><ellipse cx='60' cy='150' rx='10' ry='6' fill='none' stroke='var(--c2)' stroke-width='1.4'/><path d='M106 150 L146 150' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-9)'/><rect x='174' y='138' width='52' height='24' rx='12' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><ellipse cx='200' cy='150' rx='10' ry='6' fill='none' stroke='var(--c2)' stroke-width='1.4'/><rect x='242' y='138' width='52' height='24' rx='12' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><ellipse cx='268' cy='150' rx='10' ry='6' fill='none' stroke='var(--c2)' stroke-width='1.4'/><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>no nucleus or spindle, circular DNA</text></svg>",
+    "key": "Mitosis happens only in eukaryotes. In a bacterium, the circular DNA is copied and separated, and no spindle fibers form."
+   },
+   {
+    "h": "Budding and spore formation",
+    "p": "In <b>budding</b>, an outgrowth forms on the parent, and it grows into a new individual. Yeast and hydras reproduce this way. In <b>spore formation</b>, a mold makes many spores by mitosis, and each spore can form a new individual.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='55' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Brewer's yeast</text><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Hydra</text><text x='272' y='22' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Bread mold</text><circle cx='50' cy='110' r='26' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.5'/><circle cx='84' cy='88' r='13' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.5'/><circle cx='46' cy='112' r='6' fill='var(--c4)' fill-opacity='0.6'/><circle cx='84' cy='88' r='4' fill='var(--c4)' fill-opacity='0.6'/><path d='M150 150 L150 92 Q160 84 170 92 L170 150 Z' fill='var(--c3)' fill-opacity='0.18' stroke='var(--c3)' stroke-width='1.5'/><path d='M152 92 Q146 70 136 62' stroke='var(--c3)' stroke-width='1.5' fill='none'/><path d='M157 92 Q156 70 150 62' stroke='var(--c3)' stroke-width='1.5' fill='none'/><path d='M163 92 Q164 70 170 62' stroke='var(--c3)' stroke-width='1.5' fill='none'/><path d='M168 92 Q174 70 184 62' stroke='var(--c3)' stroke-width='1.5' fill='none'/><path d='M170 124 Q186 118 190 106' stroke='var(--c3)' stroke-width='5' stroke-linecap='round' fill='none' stroke-opacity='0.6'/><path d='M190 106 l-4 -8 M190 106 l4 -7' stroke='var(--c3)' stroke-width='1.2'/><path d='M258 150 L258 100' stroke='var(--c5)' stroke-width='1.5'/><path d='M286 150 L286 112' stroke='var(--c5)' stroke-width='1.5'/><path d='M244 150 L300 150' stroke='var(--c5)' stroke-width='1.5'/><circle cx='258' cy='92' r='10' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)' stroke-width='1.5'/><circle cx='286' cy='104' r='9' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)' stroke-width='1.5'/><circle cx='254' cy='89' r='1.8' fill='var(--c5)' fill-opacity='1'/><circle cx='261' cy='94' r='1.8' fill='var(--c5)' fill-opacity='1'/><circle cx='258' cy='88' r='1.8' fill='var(--c5)' fill-opacity='1'/><circle cx='283' cy='101' r='1.8' fill='var(--c5)' fill-opacity='1'/><circle cx='289' cy='106' r='1.8' fill='var(--c5)' fill-opacity='1'/><circle cx='286' cy='101' r='1.8' fill='var(--c5)' fill-opacity='1'/><circle cx='272' cy='76' r='1.8' fill='var(--c5)' fill-opacity='1'/><circle cx='280' cy='70' r='1.8' fill='var(--c5)' fill-opacity='1'/><circle cx='300' cy='84' r='1.8' fill='var(--c5)' fill-opacity='1'/><circle cx='240' cy='74' r='1.8' fill='var(--c5)' fill-opacity='1'/><text x='84' y='66' font-size='11' fill='var(--muted)' text-anchor='middle'>bud</text><text x='200' y='148' font-size='11' fill='var(--muted)' text-anchor='middle'>bud</text><text x='272' y='168' font-size='11' fill='var(--muted)' text-anchor='middle'>sporangium</text><path d='M272 157 L284 115' stroke='var(--muted)' stroke-width='1'/><path d='M14 178 L214 178' stroke='var(--c3)' stroke-width='1.5'/><text x='110' y='194' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>budding</text><path d='M238 178 L314 178' stroke='var(--c5)' stroke-width='1.5'/><text x='272' y='194' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>spore formation</text><path d='M229 30 L229 170' stroke='var(--line)' stroke-width='1'/></svg>",
+    "key": "The offspring formed by budding is smaller than the parent. In fission, the two offspring are about the same size.",
+    "once": {
+     "soru": "An outgrowth forms on a yeast cell, grows and breaks off. What kind of reproduction is this?",
+     "secenekler": [
+      {
+       "yazi": "Budding",
+       "neden": "A small bud grows on the parent. The offspring is smaller than the parent.",
+       "dogru": true
+      },
+      {
+       "yazi": "Fission",
+       "neden": "In fission, the parent splits in two and the two offspring are about equal."
+      },
+      {
+       "yazi": "Spore formation",
+       "neden": "A spore is a single cell, and many of them form inside sacs."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Regeneration and parthenogenesis",
+    "p": "Regrowing a lost part is called <b>regeneration</b>. If the broken-off piece becomes a whole individual, it counts as reproduction. Planarians reproduce this way. In <b>parthenogenesis</b>, an unfertilized egg develops. Male honeybees (n) form this way.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mit-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='76' y='20' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Planarian</text><ellipse cx='76' cy='52' rx='60' ry='11' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.4'/><circle cx='32' cy='49' r='2' fill='var(--ink)' fill-opacity='1'/><circle cx='32' cy='55' r='2' fill='var(--ink)' fill-opacity='1'/><path d='M56 34 L56 70' stroke='var(--c2)' stroke-width='1.4' stroke-dasharray='3 3'/><path d='M96 34 L96 70' stroke='var(--c2)' stroke-width='1.4' stroke-dasharray='3 3'/><path d='M76 78 L76 96' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-11)'/><ellipse cx='76' cy='112' rx='27.0' ry='7.2' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.4'/><circle cx='58.0' cy='110.2' r='1.6' fill='var(--ink)' fill-opacity='1'/><circle cx='58.0' cy='113.8' r='1.6' fill='var(--ink)' fill-opacity='1'/><ellipse cx='76' cy='136' rx='27.0' ry='7.2' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.4'/><circle cx='58.0' cy='134.2' r='1.6' fill='var(--ink)' fill-opacity='1'/><circle cx='58.0' cy='137.8' r='1.6' fill='var(--ink)' fill-opacity='1'/><ellipse cx='76' cy='160' rx='27.0' ry='7.2' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.4'/><circle cx='58.0' cy='158.2' r='1.6' fill='var(--ink)' fill-opacity='1'/><circle cx='58.0' cy='161.8' r='1.6' fill='var(--ink)' fill-opacity='1'/><text x='76' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>pieces become whole individuals</text><path d='M160 12 L160 188' stroke='var(--line)' stroke-width='1'/><text x='240' y='20' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Honeybee</text><rect x='184' y='30' width='112' height='24' rx='6' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.2'/><text x='240' y='47' font-size='12' fill='var(--ink)' text-anchor='middle'>queen (2n)</text><path d='M222 56 L204 82' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-11)'/><path d='M258 56 L276 82' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-11)'/><text x='204' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>unfertilized</text><text x='204' y='112' font-size='11' fill='var(--ink)' text-anchor='middle'>egg (n)</text><text x='276' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>fertilized</text><text x='276' y='112' font-size='11' fill='var(--ink)' text-anchor='middle'>egg (2n)</text><path d='M204 118 L204 140' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-11)'/><path d='M276 118 L276 140' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-11)'/><text x='204' y='156' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>male (n)</text><text x='276' y='156' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>female (2n)</text><text x='204' y='174' font-size='11' fill='var(--c2)' text-anchor='middle'>parthenogenesis</text><text x='276' y='174' font-size='11' fill='var(--muted)' text-anchor='middle'>worker, queen</text></svg>",
+    "key": "In a starfish, an arm carrying part of the central disk becomes a new individual. The egg forms by meiosis, so an offspring made by parthenogenesis is not identical to its mother.",
+    "once": {
+     "soru": "A lizard regrows its lost tail. Is this reproduction?",
+     "secenekler": [
+      {
+       "yazi": "No",
+       "neden": "No new individual forms. Only the lost part is regrown.",
+       "dogru": true
+      },
+      {
+       "yazi": "Yes",
+       "neden": "Reproduction requires a new individual. The tail does not become an individual."
+      },
+      {
+       "yazi": "Yes, if the tail is long",
+       "neden": "The length of the tail does not matter, because no new individual forms."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Vegetative reproduction in plants",
+    "p": "Plants can make new individuals from their roots, stems or leaves. Willows are grown from <b>cuttings</b>, grapevines by <b>layering</b> and fruit trees by <b>grafting</b>. Potatoes spread by <b>tubers</b>, onions by <b>bulbs</b> and strawberries by <b>runners</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='10' width='98' height='78' rx='6' fill='var(--c3)' fill-opacity='0.13' stroke='var(--c3)' stroke-width='1.2'/><text x='57' y='34' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Cutting</text><text x='57' y='56' font-size='11' fill='var(--ink)' text-anchor='middle'>piece of a branch</text><text x='57' y='73' font-size='11' fill='var(--muted)' text-anchor='middle'>roots in the soil</text><rect x='111' y='10' width='98' height='78' rx='6' fill='var(--c3)' fill-opacity='0.13' stroke='var(--c3)' stroke-width='1.2'/><text x='160' y='34' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Layering</text><text x='160' y='56' font-size='11' fill='var(--ink)' text-anchor='middle'>branch bent and</text><text x='160' y='73' font-size='11' fill='var(--muted)' text-anchor='middle'>buried in soil</text><rect x='214' y='10' width='98' height='78' rx='6' fill='var(--c1)' fill-opacity='0.13' stroke='var(--c1)' stroke-width='1.2'/><text x='263' y='34' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Grafting</text><text x='263' y='56' font-size='11' fill='var(--ink)' text-anchor='middle'>scion joined</text><text x='263' y='73' font-size='11' fill='var(--muted)' text-anchor='middle'>to rootstock</text><rect x='8' y='98' width='98' height='78' rx='6' fill='var(--c4)' fill-opacity='0.13' stroke='var(--c4)' stroke-width='1.2'/><text x='57' y='122' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>Tuber</text><text x='57' y='144' font-size='11' fill='var(--ink)' text-anchor='middle'>stem tuber</text><text x='57' y='161' font-size='11' fill='var(--muted)' text-anchor='middle'>potato</text><rect x='111' y='98' width='98' height='78' rx='6' fill='var(--c5)' fill-opacity='0.13' stroke='var(--c5)' stroke-width='1.2'/><text x='160' y='122' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Bulb</text><text x='160' y='144' font-size='11' fill='var(--ink)' text-anchor='middle'>fleshy leaves</text><text x='160' y='161' font-size='11' fill='var(--muted)' text-anchor='middle'>onion, tulip</text><rect x='214' y='98' width='98' height='78' rx='6' fill='var(--c2)' fill-opacity='0.13' stroke='var(--c2)' stroke-width='1.2'/><text x='263' y='122' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Runner</text><text x='263' y='144' font-size='11' fill='var(--ink)' text-anchor='middle'>creeping stem</text><text x='263' y='161' font-size='11' fill='var(--muted)' text-anchor='middle'>strawberry</text><text x='160' y='194' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>all rely on mitosis: offspring identical to the parent</text></svg>",
+    "key": "In a cutting, a piece of branch takes root in the soil. In layering, a branch is buried in the soil and cut off once it roots. In grafting, the fruit has the traits of the scion, while the rootstock provides the roots and trunk."
+   },
+   {
+    "h": "Tissue culture and cloning",
+    "p": "In <b>tissue culture</b>, a few plant cells grow into a whole plant in a sterile medium. In <b>cloning</b>, the nucleus of a body cell is moved into an egg whose nucleus has been removed. Dolly the sheep was born this way in 1996.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='mit-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><rect x='6' y='14' width='116' height='42' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><text x='64' y='31' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>A: body cell</text><text x='64' y='47' font-size='11' fill='var(--muted)' text-anchor='middle'>nucleus taken</text><rect x='6' y='120' width='116' height='42' rx='6' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.2'/><text x='64' y='137' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>B: egg</text><text x='64' y='153' font-size='11' fill='var(--muted)' text-anchor='middle'>nucleus removed</text><path d='M122 40 L148 74' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-13)'/><path d='M122 136 L148 102' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-13)'/><rect x='150' y='68' width='72' height='40' rx='6' fill='var(--c4)' fill-opacity='0.18' stroke='var(--c4)' stroke-width='1.2'/><text x='186' y='85' font-size='11' fill='var(--ink)' text-anchor='middle'>fused</text><text x='186' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>cell</text><path d='M222 88 L240 88' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-13)'/><rect x='242' y='64' width='72' height='48' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.2'/><text x='278' y='82' font-size='11' fill='var(--ink)' text-anchor='middle'>C: surrogate</text><text x='278' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>mother</text><path d='M278 112 L278 130' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-13)'/><text x='278' y='146' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>lamb</text><text x='278' y='162' font-size='11' fill='var(--muted)' text-anchor='middle'>nuclear DNA</text><text x='278' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>same as A's</text><text x='118' y='194' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>Dolly the sheep, 1996</text></svg>",
+    "key": "Asexual reproduction is fast, and a single parent is enough. However, it does not create genetic variety.",
+    "once": {
+     "soru": "Dolly's nuclear DNA is the same as which sheep's?",
+     "secenekler": [
+      {
+       "yazi": "The nucleus donor",
+       "neden": "The nucleus moved into the egg carries all of Dolly's nuclear DNA.",
+       "dogru": true
+      },
+      {
+       "yazi": "The egg donor",
+       "neden": "The egg's nucleus had been removed."
+      },
+      {
+       "yazi": "The one that gave birth",
+       "neden": "The surrogate mother only grows the embryo."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• The cell cycle is made of interphase (G<sub>1</sub>, S, G<sub>2</sub>), mitosis and cytokinesis. DNA is copied in the S phase.<br>• Chromosomes appear in prophase, line up at the equator in metaphase, chromatids separate in anaphase and nuclei form in telophase.<br>• Mitosis keeps the chromosome number the same.<br>• In asexual reproduction, the offspring are usually identical to the parent.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='14' width='300' height='52' rx='6' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='160' y='36' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>interphase (G₁ → S → G₂) → mitosis → cytokinesis</text><text x='160' y='54' font-size='12' fill='var(--c1)' text-anchor='middle'>prophase · metaphase · anaphase · telophase</text><path d='M160 70 L160 90' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-14)'/><rect x='10' y='94' width='300' height='40' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.2'/><text x='160' y='119' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>2n cell → two identical 2n cells</text><path d='M160 138 L160 156' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#mit-14)'/><rect x='10' y='160' width='300' height='34' rx='6' fill='var(--c4)' fill-opacity='0.16' stroke='var(--c4)' stroke-width='1.2'/><text x='160' y='182' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>asexual reproduction: one parent, usually identical offspring</text><defs><marker id='mit-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sirala",
+    "q": "Put the events in an animal cell's cycle in order.",
+    "ogeler": [
+     "DNA is copied (S phase)",
+     "Chromosomes appear and the nuclear envelope disappears",
+     "Chromosomes line up in a single row at the equator",
+     "Sister chromatids are pulled to opposite poles",
+     "The nuclear envelope forms again at the poles",
+     "The cytoplasm pinches in and divides"
+    ],
+    "e": "DNA is copied in the S phase of interphase. Then chromosomes appear in prophase, line up at the equator in metaphase and their chromatids separate in anaphase. Nuclei form in telophase, and cytokinesis comes last."
+   },
+   {
+    "tur": "sayi",
+    "q": "A human cell with 2n = 46 chromosomes is going through mitosis. How many chromatids does this cell have in metaphase?",
+    "cevap": 92,
+    "birim": "chromatids",
+    "e": "In the S phase, every chromosome is copied and carries two sister chromatids. That is why there are 46 × 2 = 92 chromatids."
+   },
+   {
+    "tur": "eslestir",
+    "q": "Match each example with its type of asexual reproduction.",
+    "ciftler": [
+     [
+      "An amoeba splitting in two",
+      "Fission"
+     ],
+     [
+      "An outgrowth forming on yeast",
+      "Budding"
+     ],
+     [
+      "Bread mold multiplying",
+      "Spore formation"
+     ],
+     [
+      "A piece of planarian becoming an individual",
+      "Regeneration"
+     ],
+     [
+      "A male honeybee forming",
+      "Parthenogenesis"
+     ]
+    ],
+    "e": "An amoeba divides by mitosis, yeast buds and bread mold makes spores in a sporangium. A cut piece of planarian becomes a whole individual by regeneration. A male honeybee develops from an unfertilized egg. This is called parthenogenesis."
+   },
+   {
+    "q": "In a cell going through mitosis, which of these shows that it is a plant cell?",
+    "o": [
+     "Spindle fibers forming",
+     "Chromosomes lining up at the equator",
+     "Sister chromatids separating",
+     "The cytoplasm dividing with a cell plate"
+    ],
+    "a": 3,
+    "e": "Spindle fibers forming, chromosomes lining up at the equator and chromatids separating happen in both kinds of cell. A cell plate, however, forms only in plant cells.",
+    "y": [
+     "Spindle fibers also form in animal cells. What is unique to plants is division with a cell plate.",
+     "Chromosomes line up at the equator in every mitosis. What is unique to plants is the cell plate.",
+     "Sister chromatids separate in the anaphase of every mitosis. What marks a plant is the cytoplasm dividing with a cell plate.",
+     ""
+    ]
+   }
+  ]
+ },
  "siniflandirma": {
   "title": "Classifying living things",
   "summary": "How are living things grouped, and how are species named?",
