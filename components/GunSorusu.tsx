@@ -15,7 +15,6 @@ import {
   bonus, gunKayitOku, gunKayitYaz, gunPuan, gununSorusu, sunucuBasla, sunucuBitir, sunucuDurum, sunucuSonuc, trGun,
   useGunKayit, yeniSoruya, type GunKayit, type GunSonuc, type SunucuDurum,
 } from "@/lib/gunsoru";
-import { soruIzi } from "@/lib/iz";
 import { useOyunAcik } from "@/lib/oyun";
 import { kaydet } from "@/lib/puan";
 import { olay } from "@/lib/olay";
@@ -78,7 +77,7 @@ export function GunSorusuKart({ havuz }: { havuz: string[] }) {
 
 type Durum = "yukleniyor" | "giris" | "soru" | "sonuc" | "hata";
 
-export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru> }) {
+export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru & { iz: string }> }) {
   const oturum = useOturum(), oyun = useOyunAcik(), g = useBugun();
   const kayit = useGunKayit();
   const [durum, setDurum] = useState<Durum>("yukleniyor");
@@ -140,7 +139,7 @@ export default function GunSorusu({ havuz }: { havuz: Record<string, TekrarSoru>
     let sonuc: GunSonuc = { dogru: ok, ms, puan: ok ? gunPuan(ms) : 0, kayitli: false };
     if (sunucuyla) {
       setBekle(true);
-      try { sonuc = sunucuSonuc(await sunucuBitir(cevap, soruIzi(Q.q), ok)) ?? sonuc; } catch { /* bağlantı yok: sonuç bu cihazda kalır, kaydedilmedi */ }
+      try { sonuc = sunucuSonuc(await sunucuBitir(cevap, Q.iz, ok)) ?? sonuc; } catch { /* bağlantı yok: sonuç bu cihazda kalır, kaydedilmedi */ }
       setBekle(false);
     }
     gunKayitYaz({ ...kayit, sonuc });

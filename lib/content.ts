@@ -9,6 +9,7 @@ import { DIL } from "./dil";
 import { DERS_IDS, DERSLER, type DersId, type Entry, type Question, type Topic } from "./dersler";
 import { adimliDers } from "./adimli";
 import { sureDk } from "./asama";
+import { soruIzi } from "./iz";
 
 export * from "./dersler";
 // JSON'dan gelen "tur" alanı string olarak çıkarılır; biçimi tools/check.py doğrular.
@@ -91,12 +92,16 @@ export function kartBasliklari(): Record<string, string[]> {
 
 /** Günün sorusu havuzu: konu testlerindeki etkileşimli sorular (sırala, eşleştir, ayır, sayı). Sahne sorusu ve
  *  kartlara/şekle gönderme yapan sorular kart olmadan anlaşılmayacağı için dışarıda kalır. Seçim: lib/gunsoru.ts. */
-export function gunSorusuHavuzu(): Record<string, TekrarSoru> {
-  const out: Record<string, TekrarSoru> = {};
+// Havuz ve iz her dilde Türkçe kaynaktan hesaplanır: İngilizce kopyada da aynı gün aynı soru çıkar ve sunucu
+// (supabase/functions/gunun-sorusu, Türkçe gunsoru-cevap.json) cevabı puanlayabilir.
+export function gunSorusuHavuzu(): Record<string, TekrarSoru & { iz: string }> {
+  const out: Record<string, TekrarSoru & { iz: string }> = {};
   for (const [key, q] of Object.entries(tumSorular())) {
+    const tr = TR[q.ders][q.konu]?.quiz[Number(key.split(".")[2])];
+    if (!tr || tr.tur !== q.tur) continue;
     if (q.tur !== "sirala" && q.tur !== "eslestir" && q.tur !== "ayir" && q.tur !== "sayi") continue;
-    if (/yukarı|şekil|grafik|tablo|kartta|bu konu/i.test(q.q)) continue;
-    out[key] = q;
+    if (/yukarı|şekil|grafik|tablo|kartta|bu konu/i.test(tr.q)) continue;
+    out[key] = { ...q, iz: soruIzi(tr.q) };
   }
   return out;
 }
