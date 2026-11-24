@@ -185,7 +185,7 @@ function Film({ v }: SahneProps) {
   const aralik = 12 + g * 0.3;
   return (
     <svg viewBox="0 0 340 240" role="img" aria-label={cev("Gliserol yüzde {0}: film {1}", Math.round(g), d)}>
-      <text x={14} y={22} fontSize={13} fontWeight={800} fill={renk}>%{Math.round(g)} {cev("gliserol: film")} {d}</text>
+      <text x={14} y={22} fontSize={13} fontWeight={800} fill={renk}>{cev("%{0} gliserol: film {1}", Math.round(g), d)}</text>
       {/* film şeridi */}
       {d === cev("kırılgan") ? (
         <g>

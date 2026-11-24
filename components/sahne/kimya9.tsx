@@ -147,7 +147,7 @@ function Maxwell({ v }: SahneProps) {
       </g>
       <g fontSize={12} fontWeight={800}>
         <text x={x1} y={64} textAnchor="end" fill="var(--ink)">{T} K</text>
-        <text x={x1} y={82} textAnchor="end" fill="var(--kimya)">{cev("Ea'yı aşan: %")}{virgul(yuzde, 1)}</text>
+        <text x={x1} y={82} textAnchor="end" fill="var(--kimya)">{cev("Ea'yı aşan: %{0}", virgul(yuzde, 1))}</text>
         {T !== 300 && <text x={x1} y={100} fontSize={11} textAnchor="end" fill="var(--muted)">300 K: %{virgul(ref, 1)}</text>}
       </g>
       <text x={20} y={204} fontSize={11} fontWeight={600} fill="var(--muted)">{T !== 300 ? cev("Kesikli eğri 300 K. Ea yerinde kalır.") : cev("Eşik (Ea) yerinde kalır.")}</text>
@@ -426,7 +426,7 @@ function Isi({ v }: SahneProps) {
       </g>
       <g fontSize={12.5} fontWeight={800}>
         <text x={186} y={80} fill="var(--ink)">{T} °C</text>
-        <text x={186} y={104} fill={KAHVE}>{cev("N₂O₄'ün %")}{Math.round(f * 100)}{cev("'ü ayrıştı")}</text>
+        <text x={186} y={104} fill={KAHVE}>{cev("N₂O₄'ün %{0}'ı ayrıştı", Math.round(f * 100))}</text>
         <text x={186} y={124} fontSize={11.5} fill="var(--muted)">{10 - d} N₂O₄ · {2 * d} {cev("NO₂")}</text>
         <rect x={186} y={140} width={130} height={12} rx={6} fill="var(--line)" />
         <rect x={186} y={140} width={Math.max(6, 130 * f)} height={12} rx={6} fill={KAHVE} />

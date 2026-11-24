@@ -510,7 +510,7 @@ function AtomEko({ v, set }: SahneProps) {
       <rect x={40} y={112} width={(W * e) / 100} height={26} rx={8} fill="var(--c3)" />
       {e < 100 && <text x={40 + (W * e) / 100 + 8} y={130} fontSize={11.5} fontWeight={800} fill="var(--muted)">{cev("atık")}</text>}
       <text x={48} y={130} fontSize={11.5} fontWeight={800} fill="#fff">{cev("ürün")}</text>
-      <text x={170} y={170} fontSize={16} fontWeight={800} textAnchor="middle" fill={e === 100 ? "var(--good)" : "var(--ink)"}>{cev("Atom ekonomisi: %")}{e}</text>
+      <text x={170} y={170} fontSize={16} fontWeight={800} textAnchor="middle" fill={e === 100 ? "var(--good)" : "var(--ink)"}>{cev("Atom ekonomisi: %{0}", e)}</text>
       <text x={170} y={192} fontSize={11.5} fontWeight={700} textAnchor="middle" fill="var(--muted)">
         {d.urun} / {d.top} {cev("× 100 · ürünün kütlesi / girenlerin kütlesi")}
       </text>
@@ -555,7 +555,7 @@ function Nano({ v }: SahneProps) {
         <text x={300} y={164} fontSize={12} textAnchor="end" fill="var(--muted)">{cev("toplam hacim")}</text>
         <text x={300} y={186} fontSize={18} textAnchor="end" fill="var(--ink)">{cev("aynı")}</text>
       </g>
-      <text x={170} y={222} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">{cev("Her kenar")} {n} {cev("parçaya bölündü")}</text>
+      <text x={170} y={222} fontSize={12} fontWeight={700} textAnchor="middle" fill="var(--muted)">{cev("Her kenar {0} parçaya bölündü", n)}</text>
     </svg>
   );
 }
