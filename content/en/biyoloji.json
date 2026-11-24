@@ -2189,6 +2189,385 @@
    }
   ]
  },
+ "kalitim": {
+  "title": "Heredity (Mendelian genetics)",
+  "summary": "How are traits passed from generation to generation? The rules of heredity, from Mendel to the family tree",
+  "olay": {
+   "yer": "1856 · Brno",
+   "h": "28,000 pea plants in a monastery garden",
+   "p": "For eight years, Gregor Mendel grew about 28,000 pea plants and counted their flowers and seeds one by one. The ratios he counted came out the same every time."
+  },
+  "cards": [
+   {
+    "h": "Gene, allele and locus",
+    "p": "A piece of DNA that determines a trait is called a <b>gene</b>, and the gene's position on a chromosome is called its <b>locus</b>. The different forms of a gene are called <b>alleles</b> (such as A and a). If the alleles are the same, the individual is <b>homozygous</b> (AA, aa). If they differ, it is <b>heterozygous</b> (Aa).",
+    "svg": "<svg viewBox='0 0 320 200'><text x='131' y='17' font-size='12' fill='var(--muted)' text-anchor='middle'>homologous chromosome pair</text><rect x='95' y='28' width='22' height='148' rx='11' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><rect x='145' y='28' width='22' height='148' rx='11' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><rect x='95' y='52' width='22' height='18' fill='var(--c2)' fill-opacity='0.35'/><rect x='145' y='52' width='22' height='18' fill='var(--c2)' fill-opacity='0.35'/><rect x='95' y='112' width='22' height='18' fill='var(--c3)' fill-opacity='0.35'/><rect x='145' y='112' width='22' height='18' fill='var(--c3)' fill-opacity='0.35'/><text x='106' y='66' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><text x='156' y='66' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>a</text><text x='106' y='126' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>B</text><text x='156' y='126' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>B</text><text x='84' y='65' font-size='11' fill='var(--muted)' text-anchor='end'>locus 1</text><text x='84' y='125' font-size='11' fill='var(--muted)' text-anchor='end'>locus 2</text><text x='106' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>from mother</text><text x='156' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>from father</text><text x='184' y='58' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>Aa: heterozygous</text><text x='184' y='74' font-size='11' fill='var(--muted)' text-anchor='start'>alleles differ</text><text x='184' y='118' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>BB: homozygous</text><text x='184' y='134' font-size='11' fill='var(--muted)' text-anchor='start'>alleles the same</text><text x='184' y='166' font-size='11' fill='var(--ink)' text-anchor='start'>A and a: two alleles</text><text x='184' y='181' font-size='11' fill='var(--ink)' text-anchor='start'>of the same gene</text></svg>",
+    "key": "One allele comes from the mother and the other from the father. A body cell has two alleles for each autosomal gene, and a gamete has one.",
+    "once": {
+     "soru": "How many alleles for the eye color gene are in one of your body cells?",
+     "secenekler": [
+      {
+       "yazi": "2",
+       "neden": "Each homologous chromosome carries one allele. One comes from the mother and the other from the father.",
+       "dogru": true
+      },
+      {
+       "yazi": "1",
+       "neden": "A gamete has one allele, while a body cell has two."
+      },
+      {
+       "yazi": "4",
+       "neden": "There is one on each homologous chromosome, so there are two alleles in total."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Genotype, phenotype, dominance",
+    "p": "An individual's pair of alleles is called its <b>genotype</b>, and the trait you can see is called its <b>phenotype</b>. In an Aa individual, the allele that shows its effect is <b>dominant</b> (A), and the hidden allele is <b>recessive</b> (a). A recessive trait appears only in aa individuals.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='12' y='66' font-size='12' fill='var(--muted)' text-anchor='start'>genotype</text><text x='12' y='151' font-size='12' fill='var(--muted)' text-anchor='start'>phenotype</text><path d='M110 34 V28 H220 V34' fill='none' stroke='var(--muted)' stroke-width='1.2'/><text x='165' y='20' font-size='11' fill='var(--muted)' text-anchor='middle'>same phenotype, different genotype</text><text x='130' y='66' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>AA</text><circle cx='130' cy='105' r='18' fill='var(--c5)' fill-opacity='0.55' stroke='var(--c5)' stroke-width='1.5'/><circle cx='130' cy='105' r='5' fill='var(--c4)' fill-opacity='0.9' stroke='var(--c4)' stroke-width='1'/><text x='130' y='151' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>purple</text><text x='200' y='66' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>Aa</text><circle cx='200' cy='105' r='18' fill='var(--c5)' fill-opacity='0.55' stroke='var(--c5)' stroke-width='1.5'/><circle cx='200' cy='105' r='5' fill='var(--c4)' fill-opacity='0.9' stroke='var(--c4)' stroke-width='1'/><text x='200' y='151' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>purple</text><text x='270' y='66' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>aa</text><circle cx='270' cy='105' r='18' fill='var(--panel)' fill-opacity='1' stroke='var(--muted)' stroke-width='1.5'/><circle cx='270' cy='105' r='5' fill='var(--c4)' fill-opacity='0.9' stroke='var(--c4)' stroke-width='1'/><text x='270' y='151' font-size='13' fill='var(--muted)' text-anchor='middle' font-weight='700'>white</text><text x='165' y='186' font-size='11' fill='var(--ink)' text-anchor='middle'>A dominant: in Aa, a's effect is hidden</text></svg>",
+    "key": "Being dominant does not mean being more common or stronger. For example, having six fingers (polydactyly) is a dominant trait, but it is rare.",
+    "once": {
+     "soru": "If brown eyes (A) are dominant over blue (a), what color are the eyes of a person with genotype Aa?",
+     "secenekler": [
+      {
+       "yazi": "Brown",
+       "neden": "The dominant A allele masks the effect of the a allele.",
+       "dogru": true
+      },
+      {
+       "yazi": "Blue",
+       "neden": "Blue eyes appear only in people with genotype aa."
+      },
+      {
+       "yazi": "An in-between color",
+       "neden": "With complete dominance, no in-between color forms."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Why did Mendel choose peas?",
+    "p": "In the 1860s, Mendel made thousands of crosses with peas. Peas produce many seeds and fertilize themselves to give true-breeding lines. Also, seven of their traits come in two clear forms.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='8' width='162' height='40' rx='6' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)' stroke-width='1.2'/><text x='14' y='25' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Many generations quickly</text><text x='14' y='40' font-size='10' fill='var(--muted)' text-anchor='start'>many seeds, fast generations</text><rect x='6' y='55' width='162' height='40' rx='6' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)' stroke-width='1.2'/><text x='14' y='72' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Pollination can be controlled</text><text x='14' y='87' font-size='10' fill='var(--muted)' text-anchor='start'>self-pollination or artificial cross</text><rect x='6' y='102' width='162' height='40' rx='6' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)' stroke-width='1.2'/><text x='14' y='119' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Clear contrasting traits</text><text x='14' y='134' font-size='10' fill='var(--muted)' text-anchor='start'>no in-between forms, easy to count</text><rect x='6' y='149' width='162' height='40' rx='6' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)' stroke-width='1.2'/><text x='14' y='166' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>True-breeding lines are easy</text><text x='14' y='181' font-size='10' fill='var(--muted)' text-anchor='start'>pure lines by self-pollination</text><text x='246' y='20' font-size='11' fill='var(--muted)' text-anchor='middle'>examples of contrasting traits</text><circle cx='210' cy='50' r='11' fill='var(--c4)' fill-opacity='0.7' stroke='var(--c4)' stroke-width='1.5'/><circle cx='282' cy='50' r='11' fill='var(--c3)' fill-opacity='0.7' stroke='var(--c3)' stroke-width='1.5'/><text x='246' y='54' font-size='13' fill='var(--muted)' text-anchor='middle'>/</text><text x='210' y='77' font-size='10' fill='var(--muted)' text-anchor='middle'>yellow</text><text x='282' y='77' font-size='10' fill='var(--muted)' text-anchor='middle'>green</text><circle cx='210' cy='103' r='11' fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)' stroke-width='1.5'/><path d='M271 103 Q274 92 282 94 Q289 91 292 99 Q296 106 290 111 Q284 117 277 113 Q269 111 271 103 Z' fill='var(--c4)' fill-opacity='0.5' stroke='var(--c4)' stroke-width='1.5'/><text x='246' y='107' font-size='13' fill='var(--muted)' text-anchor='middle'>/</text><text x='210' y='130' font-size='10' fill='var(--muted)' text-anchor='middle'>round</text><text x='282' y='130' font-size='10' fill='var(--muted)' text-anchor='middle'>wrinkled</text><circle cx='210' cy='156' r='11' fill='var(--c5)' fill-opacity='0.6' stroke='var(--c5)' stroke-width='1.5'/><circle cx='282' cy='156' r='11' fill='var(--panel)' fill-opacity='1' stroke='var(--muted)' stroke-width='1.5'/><text x='246' y='160' font-size='13' fill='var(--muted)' text-anchor='middle'>/</text><text x='210' y='183' font-size='10' fill='var(--muted)' text-anchor='middle'>purple flower</text><text x='282' y='183' font-size='10' fill='var(--muted)' text-anchor='middle'>white flower</text></svg>",
+    "key": "Mendel succeeded because he started with true-breeding lines, looked at one trait at a time and counted the offspring."
+   },
+   {
+    "h": "The law of segregation and the Punnett square",
+    "p": "The parents are called P, the offspring F<sub>1</sub> and the grandchildren F<sub>2</sub>. When gametes form, the alleles of a gene pair separate from each other. This is called the <b>law of segregation</b>. By the <b>Punnett square</b>, an Aa × Aa cross gives a genotype ratio of 1:2:1 and a phenotype ratio of 3:1.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kal-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='62' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>P: AA × aa</text><text x='62' y='38' font-size='11' fill='var(--muted)' text-anchor='middle'>purple × white</text><line x1='62' y1='45' x2='62' y2='66' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#kal-4)'/><text x='62' y='84' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>F<tspan font-size='10' baseline-shift='sub'>1</tspan>: Aa</text><text x='62' y='104' font-size='11' fill='var(--muted)' text-anchor='middle'>all purple</text><line x1='62' y1='110' x2='62' y2='128' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#kal-4)'/><text x='62' y='146' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>F<tspan font-size='10' baseline-shift='sub'>1</tspan> × F<tspan font-size='10' baseline-shift='sub'>1</tspan></text><text x='62' y='166' font-size='11' fill='var(--muted)' text-anchor='middle'>Aa × Aa</text><text x='205' y='32' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>A</text><text x='255' y='32' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>a</text><text x='168' y='70' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>A</text><text x='168' y='120' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>a</text><rect x='180' y='40' width='50' height='50' fill='var(--c5)' fill-opacity='0.3' stroke='var(--ink)' stroke-width='1.2'/><text x='205' y='70' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>AA</text><rect x='230' y='40' width='50' height='50' fill='var(--c5)' fill-opacity='0.3' stroke='var(--ink)' stroke-width='1.2'/><text x='255' y='70' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>Aa</text><rect x='180' y='90' width='50' height='50' fill='var(--c5)' fill-opacity='0.3' stroke='var(--ink)' stroke-width='1.2'/><text x='205' y='120' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>Aa</text><rect x='230' y='90' width='50' height='50' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><text x='255' y='120' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>aa</text><text x='230' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>genotype  1 AA : 2 Aa : 1 aa</text><text x='230' y='182' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>phenotype  3 purple : 1 white</text></svg>",
+    "key": "In a Punnett square, the gametes are written along the rows and columns and then combined. The ratios are probabilities. Getting exactly 1 white out of 4 offspring is not guaranteed."
+   },
+   {
+    "h": "The test cross",
+    "p": "In the <b>test cross</b> you just made, an individual with the dominant phenotype is crossed with aa. If all the offspring have the dominant phenotype, the individual is most likely AA. If half the offspring are recessive, the individual is Aa.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='12' fill='var(--muted)' text-anchor='middle'>dominant-phenotype individual (A_) × aa</text><line x1='160' y1='32' x2='160' y2='192' stroke='var(--line)' stroke-width='1.5'/><text x='80' y='50' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>AA × aa</text><text x='240' y='50' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>Aa × aa</text><circle cx='35' cy='92' r='11' fill='var(--c5)' fill-opacity='0.55' stroke='var(--c5)' stroke-width='1.5'/><circle cx='65' cy='92' r='11' fill='var(--c5)' fill-opacity='0.55' stroke='var(--c5)' stroke-width='1.5'/><circle cx='95' cy='92' r='11' fill='var(--c5)' fill-opacity='0.55' stroke='var(--c5)' stroke-width='1.5'/><circle cx='125' cy='92' r='11' fill='var(--c5)' fill-opacity='0.55' stroke='var(--c5)' stroke-width='1.5'/><circle cx='195' cy='92' r='11' fill='var(--c5)' fill-opacity='0.55' stroke='var(--c5)' stroke-width='1.5'/><circle cx='225' cy='92' r='11' fill='var(--panel)' fill-opacity='1' stroke='var(--muted)' stroke-width='1.5'/><circle cx='255' cy='92' r='11' fill='var(--c5)' fill-opacity='0.55' stroke='var(--c5)' stroke-width='1.5'/><circle cx='285' cy='92' r='11' fill='var(--panel)' fill-opacity='1' stroke='var(--muted)' stroke-width='1.5'/><text x='80' y='130' font-size='12' fill='var(--c5)' text-anchor='middle'>all Aa, purple</text><text x='240' y='130' font-size='12' fill='var(--ink)' text-anchor='middle'>½ Aa purple : ½ aa white</text><text x='80' y='170' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>→ individual is AA</text><text x='240' y='170' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>1 : 1 → individual is Aa</text></svg>",
+    "key": "The other parent is always aa, because it gives only a and so does not hide the effect of the other allele. Even a single recessive offspring proves that the individual is Aa.",
+    "etk": {
+     "tur": "eslestir",
+     "soru": "There is one gene with complete dominance. Match each cross with the phenotype of its offspring.",
+     "ciftler": [
+      [
+       "AA × aa",
+       "All dominant phenotype"
+      ],
+      [
+       "Aa × Aa",
+       "3 : 1"
+      ],
+      [
+       "Aa × aa",
+       "1 : 1"
+      ],
+      [
+       "aa × aa",
+       "All recessive phenotype"
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Independent assortment: 9:3:3:1",
+    "p": "Genes on different chromosomes are sorted into gametes independently of each other. This is called <b>independent assortment</b>. An AaBb individual makes four kinds of gametes: AB, Ab, aB and ab. An AaBb × AaBb cross gives a phenotype ratio of <b>9:3:3:1</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='92' y='17' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>AaBb × AaBb</text><text x='92' y='33' font-size='10' fill='var(--muted)' text-anchor='middle'>4 × 4 = 16 combinations</text><text x='49.0' y='55' font-size='10' fill='var(--muted)' text-anchor='middle'>AB</text><text x='31' y='78' font-size='10' fill='var(--muted)' text-anchor='end'>AB</text><text x='77.0' y='55' font-size='10' fill='var(--muted)' text-anchor='middle'>Ab</text><text x='31' y='106' font-size='10' fill='var(--muted)' text-anchor='end'>Ab</text><text x='105.0' y='55' font-size='10' fill='var(--muted)' text-anchor='middle'>aB</text><text x='31' y='134' font-size='10' fill='var(--muted)' text-anchor='end'>aB</text><text x='133.0' y='55' font-size='10' fill='var(--muted)' text-anchor='middle'>ab</text><text x='31' y='162' font-size='10' fill='var(--muted)' text-anchor='end'>ab</text><rect x='35' y='60' width='28' height='28' fill='var(--c3)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='63' y='60' width='28' height='28' fill='var(--c3)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='91' y='60' width='28' height='28' fill='var(--c3)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='119' y='60' width='28' height='28' fill='var(--c3)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='35' y='88' width='28' height='28' fill='var(--c3)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='63' y='88' width='28' height='28' fill='var(--c4)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='91' y='88' width='28' height='28' fill='var(--c3)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='119' y='88' width='28' height='28' fill='var(--c4)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='35' y='116' width='28' height='28' fill='var(--c3)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='63' y='116' width='28' height='28' fill='var(--c3)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='91' y='116' width='28' height='28' fill='var(--c1)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='119' y='116' width='28' height='28' fill='var(--c1)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='35' y='144' width='28' height='28' fill='var(--c3)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='63' y='144' width='28' height='28' fill='var(--c4)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='91' y='144' width='28' height='28' fill='var(--c1)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><rect x='119' y='144' width='28' height='28' fill='var(--c2)' fill-opacity='0.45' stroke='var(--panel)' stroke-width='1.5'/><text x='240' y='52' font-size='11' fill='var(--muted)' text-anchor='middle'>phenotype ratio</text><text x='170' y='84' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>A_B_</text><rect x='212' y='72' width='90' height='16' rx='3' fill='var(--c3)' fill-opacity='0.45' stroke='var(--c3)' stroke-width='1.2'/><text x='307' y='84' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>9</text><text x='170' y='110' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>A_bb</text><rect x='212' y='98' width='30' height='16' rx='3' fill='var(--c4)' fill-opacity='0.45' stroke='var(--c4)' stroke-width='1.2'/><text x='247' y='110' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>3</text><text x='170' y='136' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>aaB_</text><rect x='212' y='124' width='30' height='16' rx='3' fill='var(--c1)' fill-opacity='0.45' stroke='var(--c1)' stroke-width='1.2'/><text x='247' y='136' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>3</text><text x='170' y='162' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>aabb</text><rect x='212' y='150' width='10' height='16' rx='3' fill='var(--c2)' fill-opacity='0.45' stroke='var(--c2)' stroke-width='1.2'/><text x='227' y='162' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>1</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>condition: genes on different chromosomes</text></svg>",
+    "key": "n heterozygous gene pairs give 2ⁿ kinds of gametes and 3ⁿ kinds of genotypes. Solve each pair separately and multiply the results: the chance of aabb is ¼ · ¼ = 1/16.",
+    "once": {
+     "soru": "How many kinds of gametes does an AaBb individual make?",
+     "secenekler": [
+      {
+       "yazi": "4",
+       "neden": "One allele from each gene pair goes into a gamete. This gives the gametes AB, Ab, aB and ab.",
+       "dogru": true
+      },
+      {
+       "yazi": "2",
+       "neden": "The two genes sort independently, so the allele combinations multiply."
+      },
+      {
+       "yazi": "16",
+       "neden": "16 is the number of boxes when two AaBb individuals are crossed."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Incomplete dominance and codominance",
+    "p": "In the <b>incomplete dominance</b> you just saw, a heterozygous individual shows an in-between phenotype. For example, an RW snapdragon has pink flowers. In <b>codominance</b>, the effects of both alleles show fully. For example, a person with genotype I<sup>A</sup>I<sup>B</sup> has blood type AB.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='85' y='18' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Incomplete dominance</text><text x='245' y='18' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Codominance</text><line x1='170' y1='8' x2='170' y2='192' stroke='var(--line)' stroke-width='1.5'/><text x='35' y='46' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>RR</text><circle cx='35' cy='75' r='16' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='1.5'/><text x='35' y='110' font-size='11' fill='var(--muted)' text-anchor='middle'>red</text><text x='85' y='46' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>RW</text><circle cx='85' cy='75' r='16' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1.5'/><text x='85' y='110' font-size='11' fill='var(--muted)' text-anchor='middle'>pink</text><text x='135' y='46' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>WW</text><circle cx='135' cy='75' r='16' fill='var(--panel)' fill-opacity='1' stroke='var(--muted)' stroke-width='1.5'/><text x='135' y='110' font-size='11' fill='var(--muted)' text-anchor='middle'>white</text><text x='85' y='140' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>F<tspan font-size='10' baseline-shift='sub'>2</tspan>: 1 : 2 : 1</text><text x='85' y='158' font-size='10' fill='var(--muted)' text-anchor='middle'>genotype ratio = phenotype ratio</text><text x='85' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>snapdragon flower</text><circle cx='245' cy='72' r='30' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)' stroke-width='1.5'/><polygon points='280.1,80.5 274.6,90.5 285.6,90.5' fill='var(--c1)' fill-opacity='0.7'/><rect x='255.0' y='102.6' width='9' height='9' fill='var(--c4)' fill-opacity='0.8'/><polygon points='230.5,101.1 225.0,111.1 236.0,111.1' fill='var(--c1)' fill-opacity='0.7'/><rect x='205.4' y='82.0' width='9' height='9' fill='var(--c4)' fill-opacity='0.8'/><polygon points='209.9,51.5 204.4,61.5 215.4,61.5' fill='var(--c1)' fill-opacity='0.7'/><rect x='226.0' y='32.4' width='9' height='9' fill='var(--c4)' fill-opacity='0.8'/><polygon points='259.5,30.9 254.0,40.9 265.0,40.9' fill='var(--c1)' fill-opacity='0.7'/><rect x='275.6' y='53.0' width='9' height='9' fill='var(--c4)' fill-opacity='0.8'/><text x='245' y='76' font-size='10' fill='var(--muted)' text-anchor='middle'>red blood cell</text><polygon points='196,124 190.5,134 201.5,134' fill='var(--c1)' fill-opacity='0.7'/><text x='208' y='133' font-size='11' fill='var(--ink)' text-anchor='start'>A antigen</text><rect x='191.5' y='144.5' width='9' height='9' fill='var(--c4)' fill-opacity='0.8'/><text x='208' y='153' font-size='11' fill='var(--ink)' text-anchor='start'>B antigen</text><text x='245' y='182' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>I<tspan font-size='10' baseline-shift='super'>A</tspan>I<tspan font-size='10' baseline-shift='super'>B</tspan> → type AB</text></svg>",
+    "key": "Pink is not a blend. Red and white appear again in the F₂. A person with type AB has both A and B antigens on their red blood cells."
+   },
+   {
+    "h": "Multiple alleles: ABO and Rh",
+    "p": "A locus can have more than two alleles. This is called <b>multiple alleles</b>. The ABO blood group system has three alleles, but each person carries only two of them. In the Rh system, the D allele (Rh+) is dominant.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='8' width='184' height='140' rx='6' fill='var(--panel)' fill-opacity='1' stroke='var(--line)' stroke-width='1'/><text x='40' y='28' font-size='11' fill='var(--muted)' text-anchor='middle'>type</text><text x='130' y='28' font-size='11' fill='var(--muted)' text-anchor='middle'>genotype</text><line x1='16' y1='36' x2='184' y2='36' stroke='var(--line)' stroke-width='1'/><text x='40' y='60' font-size='14' fill='var(--c1)' text-anchor='middle' font-weight='700'>A</text><text x='130' y='60' font-size='13' fill='var(--ink)' text-anchor='middle'>I<tspan font-size='10' baseline-shift='super'>A</tspan>I<tspan font-size='10' baseline-shift='super'>A</tspan>, I<tspan font-size='10' baseline-shift='super'>A</tspan>i</text><text x='40' y='86' font-size='14' fill='var(--c4)' text-anchor='middle' font-weight='700'>B</text><text x='130' y='86' font-size='13' fill='var(--ink)' text-anchor='middle'>I<tspan font-size='10' baseline-shift='super'>B</tspan>I<tspan font-size='10' baseline-shift='super'>B</tspan>, I<tspan font-size='10' baseline-shift='super'>B</tspan>i</text><text x='40' y='112' font-size='14' fill='var(--c5)' text-anchor='middle' font-weight='700'>AB</text><text x='130' y='112' font-size='13' fill='var(--ink)' text-anchor='middle'>I<tspan font-size='10' baseline-shift='super'>A</tspan>I<tspan font-size='10' baseline-shift='super'>B</tspan></text><text x='40' y='138' font-size='14' fill='var(--muted)' text-anchor='middle' font-weight='700'>O</text><text x='130' y='138' font-size='13' fill='var(--ink)' text-anchor='middle'>ii</text><text x='100' y='168' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>I<tspan font-size='10' baseline-shift='super'>A</tspan> = I<tspan font-size='10' baseline-shift='super'>B</tspan> > i</text><text x='100' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>3 alleles, 6 genotypes, 4 phenotypes</text><rect x='202' y='8' width='112' height='78' rx='6' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1.2'/><text x='258' y='27' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>Rh factor</text><text x='258' y='50' font-size='12' fill='var(--ink)' text-anchor='middle'>Rh+ : DD, Dd</text><text x='258' y='72' font-size='12' fill='var(--ink)' text-anchor='middle'>Rh− : dd</text><rect x='202' y='96' width='112' height='96' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)' stroke-width='1.2'/><text x='258' y='115' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Incompatibility</text><text x='258' y='136' font-size='11' fill='var(--ink)' text-anchor='middle'>mother Rh−</text><text x='258' y='153' font-size='11' fill='var(--ink)' text-anchor='middle'>baby Rh+</text><text x='258' y='178' font-size='10' fill='var(--c2)' text-anchor='middle'>next pregnancy at risk</text></svg>",
+    "key": "If an Rh− mother gives birth to an Rh+ baby, she may make antibodies. Then a later Rh+ baby faces blood incompatibility. An anti-D shot given after birth prevents this."
+   },
+   {
+    "h": "How sex is determined in humans",
+    "p": "Humans have 44 autosomes and 2 sex chromosomes. Women are XX, and men are XY. All eggs carry an X chromosome. Half of the sperm carry an X, and half carry a Y. That is why the sperm determines the sex.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>mother 44+XX  ×  father 44+XY</text><rect x='110' y='34' width='190' height='40' fill='var(--panel)' stroke='var(--line)' stroke-width='1'/><text x='157' y='52' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>22+X</text><text x='157' y='67' font-size='10' fill='var(--muted)' text-anchor='middle'>sperm</text><text x='253' y='52' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>22+Y</text><text x='253' y='67' font-size='10' fill='var(--muted)' text-anchor='middle'>sperm</text><rect x='20' y='74' width='90' height='54' fill='var(--panel)' stroke='var(--line)' stroke-width='1'/><text x='65' y='98' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>22+X</text><text x='65' y='114' font-size='10' fill='var(--muted)' text-anchor='middle'>egg</text><rect x='110' y='74' width='95' height='54' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.2'/><rect x='205' y='74' width='95' height='54' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><text x='157' y='98' font-size='14' fill='var(--c2)' text-anchor='middle' font-weight='700'>44+XX</text><text x='157' y='116' font-size='11' fill='var(--muted)' text-anchor='middle'>girl</text><text x='253' y='98' font-size='14' fill='var(--c1)' text-anchor='middle' font-weight='700'>44+XY</text><text x='253' y='116' font-size='11' fill='var(--muted)' text-anchor='middle'>boy</text><text x='160' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>The father's sperm determines the sex:</text><text x='160' y='166' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>each birth ≈ ½ girl, ½ boy</text><text x='160' y='190' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>Y-linked gene: from father to all sons</text></svg>",
+    "key": "Earlier children do not change the probability. Even after three girls, the chance of a boy is ½.",
+    "once": {
+     "soru": "A couple has three daughters. What is the chance that their fourth child is a boy?",
+     "secenekler": [
+      {
+       "yazi": "½",
+       "neden": "Each birth is independent of the others. A sperm has an even chance of carrying an X or a Y.",
+       "dogru": true
+      },
+      {
+       "yazi": "Very high",
+       "neden": "Earlier children do not change the probability."
+      },
+      {
+       "yazi": "¼",
+       "neden": "The chance is ½ again with every birth."
+      }
+     ]
+    }
+   },
+   {
+    "h": "X-linked recessive inheritance",
+    "p": "Color blindness and hemophilia are passed on by a recessive allele on the X chromosome. A woman with genotype X<sup>H</sup>X<sup>h</sup> is healthy, but she is a <b>carrier</b>. A man has only one X, so a single recessive allele is enough. That is why these conditions are more common in men.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='95' y='16' font-size='11' fill='var(--muted)' text-anchor='middle'>carrier mother × healthy father</text><text x='75' y='38' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>X<tspan font-size='10' baseline-shift='super'>H</tspan></text><text x='145' y='38' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>X<tspan font-size='10' baseline-shift='super'>h</tspan></text><text x='26' y='80' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>X<tspan font-size='10' baseline-shift='super'>H</tspan></text><text x='26' y='130' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Y</text><rect x='40' y='50' width='70' height='50' fill='var(--panel)' fill-opacity='1' stroke='var(--ink)' stroke-width='1.2'/><text x='75' y='72' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>X<tspan font-size='10' baseline-shift='super'>H</tspan>X<tspan font-size='10' baseline-shift='super'>H</tspan></text><text x='75' y='89' font-size='10' fill='var(--muted)' text-anchor='middle'>daughter, healthy</text><rect x='110' y='50' width='70' height='50' fill='var(--c4)' fill-opacity='0.2' stroke='var(--ink)' stroke-width='1.2'/><text x='145' y='72' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>X<tspan font-size='10' baseline-shift='super'>H</tspan>X<tspan font-size='10' baseline-shift='super'>h</tspan></text><text x='145' y='89' font-size='10' fill='var(--muted)' text-anchor='middle'>daughter, carrier</text><rect x='40' y='100' width='70' height='50' fill='var(--panel)' fill-opacity='1' stroke='var(--ink)' stroke-width='1.2'/><text x='75' y='122' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>X<tspan font-size='10' baseline-shift='super'>H</tspan>Y</text><text x='75' y='139' font-size='10' fill='var(--muted)' text-anchor='middle'>son, healthy</text><rect x='110' y='100' width='70' height='50' fill='var(--c2)' fill-opacity='0.25' stroke='var(--ink)' stroke-width='1.2'/><text x='145' y='122' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>X<tspan font-size='10' baseline-shift='super'>h</tspan>Y</text><text x='145' y='139' font-size='10' fill='var(--muted)' text-anchor='middle'>son, affected</text><text x='110' y='172' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>½ of sons have hemophilia</text><text x='110' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>½ of daughters are carriers</text><circle cx='203' cy='44' r='2.5' fill='var(--acc)' fill-opacity='1' stroke='var(--acc)' stroke-width='0'/><text x='210' y='48' font-size='11' fill='var(--ink)' text-anchor='start'>A man has one X:</text><text x='210' y='63' font-size='11' fill='var(--ink)' text-anchor='start'>one recessive allele</text><text x='210' y='78' font-size='11' fill='var(--ink)' text-anchor='start'>causes the condition</text><circle cx='203' cy='108' r='2.5' fill='var(--acc)' fill-opacity='1' stroke='var(--acc)' stroke-width='0'/><text x='210' y='112' font-size='11' fill='var(--ink)' text-anchor='start'>Not passed from</text><text x='210' y='127' font-size='11' fill='var(--ink)' text-anchor='start'>father to son</text><circle cx='203' cy='150' r='2.5' fill='var(--acc)' fill-opacity='1' stroke='var(--acc)' stroke-width='0'/><text x='210' y='154' font-size='11' fill='var(--ink)' text-anchor='start'>An affected daughter's</text><text x='210' y='169' font-size='11' fill='var(--ink)' text-anchor='start'>father is affected too</text></svg>",
+    "key": "A man gets his X chromosome from his mother. That is why an X-linked trait is not passed from father to son."
+   },
+   {
+    "h": "Y-linked and sex-influenced traits",
+    "p": "<b>Y-linked</b> genes pass from a father to all his sons, and not to his daughters. The SRY gene is an example. The genes for <b>sex-influenced</b> traits are on the autosomes, but their effect changes with hormones.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='75' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Y-linked</text><rect x='29' y='40' width='22' height='22' fill='var(--c1)' fill-opacity='0.6' stroke='var(--ink)' stroke-width='1.2'/><circle cx='110' cy='51' r='11' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><path d='M51 51 H99 M80 51 V78 M22 78 H136 M22 78 V88 M60 78 V88 M98 78 V88 M136 78 V88' stroke='var(--ink)' stroke-width='1.2' fill='none'/><rect x='11' y='88' width='22' height='22' fill='var(--c1)' fill-opacity='0.6' stroke='var(--ink)' stroke-width='1.2'/><circle cx='60' cy='99' r='11' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><rect x='87' y='88' width='22' height='22' fill='var(--c1)' fill-opacity='0.6' stroke='var(--ink)' stroke-width='1.2'/><circle cx='136' cy='99' r='11' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.2'/><text x='75' y='134' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>from father to all sons</text><text x='75' y='150' font-size='11' fill='var(--ink)' text-anchor='middle'>not passed to daughters</text><text x='75' y='174' font-size='10' fill='var(--muted)' text-anchor='middle'>e.g. the SRY gene</text><line x1='158' y1='8' x2='158' y2='192' stroke='var(--line)' stroke-width='1'/><text x='240' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Sex-influenced</text><text x='240' y='31' font-size='10' fill='var(--muted)' text-anchor='middle'>simple model: autosomal gene</text><rect x='168' y='93' width='148' height='22' fill='var(--c4)' fill-opacity='0.2'/><text x='190' y='56' font-size='10' fill='var(--muted)' text-anchor='middle'>genotype</text><text x='245' y='56' font-size='10' fill='var(--muted)' text-anchor='middle'>male</text><text x='293' y='56' font-size='10' fill='var(--muted)' text-anchor='middle'>female</text><line x1='168' y1='62' x2='316' y2='62' stroke='var(--line)' stroke-width='1'/><text x='190' y='82' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>BB</text><text x='245' y='82' font-size='11' fill='var(--c2)' text-anchor='middle'>bald</text><text x='293' y='82' font-size='11' fill='var(--c2)' text-anchor='middle'>bald</text><text x='190' y='108' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Bb</text><text x='245' y='108' font-size='11' fill='var(--c2)' text-anchor='middle'>bald</text><text x='293' y='108' font-size='11' fill='var(--ink)' text-anchor='middle'>normal</text><text x='190' y='134' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>bb</text><text x='245' y='134' font-size='11' fill='var(--ink)' text-anchor='middle'>normal</text><text x='293' y='134' font-size='11' fill='var(--ink)' text-anchor='middle'>normal</text><text x='240' y='164' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>Bb: bald only in males</text><text x='240' y='180' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>really many genes</text></svg>",
+    "key": "Textbooks describe baldness as a sex-influenced trait, but in reality many genes play a role. In an X-linked recessive condition, an affected son gets the allele from his mother.",
+    "once": {
+     "soru": "A gene on the Y chromosome passes from a father to whom?",
+     "secenekler": [
+      {
+       "yazi": "All his sons",
+       "neden": "Every son gets a Y chromosome from his father.",
+       "dogru": true
+      },
+      {
+       "yazi": "All his children",
+       "neden": "Daughters get an X from their father, not a Y."
+      },
+      {
+       "yazi": "Only his daughters",
+       "neden": "Daughters have no Y chromosome."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Linked genes and crossing over",
+    "p": "Genes on the same chromosome are usually passed on together. They are called <b>linked genes</b>. An AB/ab individual mostly makes AB and ab gametes. If <b>crossing over</b> happens, a small number of Ab and aB gametes also form.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='kal-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='47' y='18' font-size='11' fill='var(--muted)' text-anchor='middle'>linked genes</text><text x='140' y='18' font-size='11' fill='var(--muted)' text-anchor='middle'>crossing over</text><text x='255' y='18' font-size='11' fill='var(--muted)' text-anchor='middle'>gametes</text><rect x='25' y='40' width='14' height='110' rx='7' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.2'/><rect x='55' y='40' width='14' height='110' rx='7' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1.2'/><text x='32' y='74' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>A</text><text x='32' y='134' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>B</text><text x='62' y='74' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>a</text><text x='62' y='134' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>b</text><text x='47' y='170' font-size='11' fill='var(--ink)' text-anchor='middle'>AB / ab</text><line x1='80' y1='95' x2='100' y2='95' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#kal-11)'/><path d='M120 42 V82 L150 108 V148' fill='none' stroke='var(--c1)' stroke-opacity='0.45' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M150 42 V82 L120 108 V148' fill='none' stroke='var(--c2)' stroke-opacity='0.45' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><text x='110' y='66' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>A</text><text x='160' y='66' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>a</text><text x='110' y='134' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>b</text><text x='160' y='134' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>B</text><text x='135' y='170' font-size='11' fill='var(--ink)' text-anchor='middle'>pieces swapped</text><line x1='180' y1='95' x2='198' y2='95' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#kal-11)'/><rect x='212' y='42' width='12' height='50' fill='var(--c1)' fill-opacity='0.45'/><rect x='212' y='92' width='12' height='50' fill='var(--c1)' fill-opacity='0.45'/><text x='218' y='160' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>AB</text><rect x='238' y='42' width='12' height='50' fill='var(--c1)' fill-opacity='0.45'/><rect x='238' y='92' width='12' height='50' fill='var(--c2)' fill-opacity='0.45'/><text x='244' y='160' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>Ab</text><rect x='264' y='42' width='12' height='50' fill='var(--c2)' fill-opacity='0.45'/><rect x='264' y='92' width='12' height='50' fill='var(--c1)' fill-opacity='0.45'/><text x='270' y='160' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>aB</text><rect x='290' y='42' width='12' height='50' fill='var(--c2)' fill-opacity='0.45'/><rect x='290' y='92' width='12' height='50' fill='var(--c2)' fill-opacity='0.45'/><text x='296' y='160' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>ab</text><text x='258' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>AB, ab: parental type (many)</text><text x='258' y='195' font-size='10' fill='var(--c5)' text-anchor='middle'>Ab, aB: recombinant (few)</text></svg>",
+    "key": "In the notation AB/ab, A and B are on one chromosome, and a and b are on its homolog. The farther apart two genes are, the more likely crossing over is between them.",
+    "once": {
+     "soru": "How do two genes that sit next to each other on the same chromosome sort into gametes?",
+     "secenekler": [
+      {
+       "yazi": "Mostly together",
+       "neden": "They are carried on the same chromosome, so they do not sort independently.",
+       "dogru": true
+      },
+      {
+       "yazi": "Independently",
+       "neden": "Independent assortment applies to genes on different chromosomes."
+      },
+      {
+       "yazi": "They never separate",
+       "neden": "Crossing over sometimes separates these genes."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Polygenic inheritance and variety",
+    "p": "Traits such as height and skin color are set by many genes together. This is called <b>polygenic inheritance</b>. Together with the effect of the environment, it gives a smooth range from short to tall. The sources of variety are crossing over, independent assortment, random fertilization and mutation.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='92' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>AaBbCc × AaBbCc</text><text x='92' y='31' font-size='10' fill='var(--muted)' text-anchor='middle'>spread of the 64 combinations</text><rect x='14' y='154.8' width='18' height='5.2' fill='var(--c5)' fill-opacity='0.45' stroke='var(--c5)' stroke-width='1'/><text x='23' y='150.8' font-size='10' fill='var(--muted)' text-anchor='middle'>1</text><text x='23' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>0</text><rect x='37' y='128.8' width='18' height='31.2' fill='var(--c5)' fill-opacity='0.45' stroke='var(--c5)' stroke-width='1'/><text x='46' y='124.8' font-size='10' fill='var(--muted)' text-anchor='middle'>6</text><text x='46' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>1</text><rect x='60' y='82.0' width='18' height='78.0' fill='var(--c5)' fill-opacity='0.45' stroke='var(--c5)' stroke-width='1'/><text x='69' y='78.0' font-size='10' fill='var(--muted)' text-anchor='middle'>15</text><text x='69' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>2</text><rect x='83' y='56.0' width='18' height='104.0' fill='var(--c5)' fill-opacity='0.45' stroke='var(--c5)' stroke-width='1'/><text x='92' y='52.0' font-size='10' fill='var(--muted)' text-anchor='middle'>20</text><text x='92' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>3</text><rect x='106' y='82.0' width='18' height='78.0' fill='var(--c5)' fill-opacity='0.45' stroke='var(--c5)' stroke-width='1'/><text x='115' y='78.0' font-size='10' fill='var(--muted)' text-anchor='middle'>15</text><text x='115' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>4</text><rect x='129' y='128.8' width='18' height='31.2' fill='var(--c5)' fill-opacity='0.45' stroke='var(--c5)' stroke-width='1'/><text x='138' y='124.8' font-size='10' fill='var(--muted)' text-anchor='middle'>6</text><text x='138' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>5</text><rect x='152' y='154.8' width='18' height='5.2' fill='var(--c5)' fill-opacity='0.45' stroke='var(--c5)' stroke-width='1'/><text x='161' y='150.8' font-size='10' fill='var(--muted)' text-anchor='middle'>1</text><text x='161' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>6</text><line x1='10' y1='160' x2='176' y2='160' stroke='var(--ink)' stroke-width='1.2'/><text x='92' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>number of active (capital) alleles</text><line x1='186' y1='8' x2='186' y2='192' stroke='var(--line)' stroke-width='1'/><text x='196' y='44' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Sources</text><text x='196' y='59' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>of variety</text><circle cx='199' cy='82' r='2.5' fill='var(--acc)'/><text x='207' y='86' font-size='11' fill='var(--ink)' text-anchor='start'>crossing over</text><circle cx='199' cy='104' r='2.5' fill='var(--acc)'/><text x='207' y='108' font-size='11' fill='var(--ink)' text-anchor='start'>independent assortment</text><circle cx='199' cy='126' r='2.5' fill='var(--acc)'/><text x='207' y='130' font-size='11' fill='var(--ink)' text-anchor='start'>random fertilization</text><circle cx='199' cy='148' r='2.5' fill='var(--acc)'/><text x='207' y='152' font-size='11' fill='var(--ink)' text-anchor='start'>mutation</text><text x='196' y='180' font-size='10' fill='var(--muted)' text-anchor='start'>+ environment</text></svg>",
+    "key": "The more active alleles there are, the stronger the trait. When a single gene affects many traits, it is called pleiotropy. The sickle-cell allele is an example.",
+    "once": {
+     "soru": "Why do the heights of students in a class vary smoothly from short to tall?",
+     "secenekler": [
+      {
+       "yazi": "Many genes and the environment",
+       "neden": "The number of active alleles and environmental effects such as nutrition create a smooth range.",
+       "dogru": true
+      },
+      {
+       "yazi": "One gene, two alleles",
+       "neden": "If one gene set the trait, there would be only a few clear groups."
+      },
+      {
+       "yazi": "Height is not inherited",
+       "neden": "Height is strongly inherited, but no single gene sets it."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Family trees and cousin marriage",
+    "p": "In a family tree, a square shows a male, a circle shows a female and a filled symbol shows an affected individual. If two healthy parents have an affected child, the trait is recessive. <b>Marriage between relatives</b> raises the risk of recessive conditions.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='67' y='14' width='16' height='16' fill='var(--panel)' fill-opacity='1' stroke='var(--ink)' stroke-width='1.5'/><circle cx='125' cy='22' r='8' fill='var(--panel)' fill-opacity='1' stroke='var(--ink)' stroke-width='1.5'/><path d='M83 22 H117 M100 22 V42 M60 42 H140 M60 42 V62 M140 42 V62' fill='none' stroke='var(--ink)' stroke-width='1.2'/><circle cx='20' cy='70' r='8' fill='var(--panel)' fill-opacity='1' stroke='var(--ink)' stroke-width='1.5'/><rect x='52' y='62' width='16' height='16' fill='var(--panel)' fill-opacity='1' stroke='var(--ink)' stroke-width='1.5'/><circle cx='140' cy='70' r='8' fill='var(--panel)' fill-opacity='1' stroke='var(--ink)' stroke-width='1.5'/><rect x='172' y='62' width='16' height='16' fill='var(--panel)' fill-opacity='1' stroke='var(--ink)' stroke-width='1.5'/><path d='M28 70 H52 M148 70 H172 M40 70 V107 M160 70 V107' fill='none' stroke='var(--ink)' stroke-width='1.2'/><rect x='32' y='107' width='16' height='16' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><rect x='32' y='107' width='8' height='16' fill='var(--ink)' fill-opacity='0.6'/><circle cx='160' cy='115' r='8' fill='var(--panel)' fill-opacity='1' stroke='var(--ink)' stroke-width='1.5'/><path d='M160 107 A8 8 0 0 0 160 123 Z' fill='var(--ink)' fill-opacity='0.6'/><path d='M48 112 H152 M48 118 H152 M100 118 V152' fill='none' stroke='var(--ink)' stroke-width='1.2'/><text x='40' y='140' font-size='10' fill='var(--muted)' text-anchor='middle'>Aa</text><text x='160' y='140' font-size='10' fill='var(--muted)' text-anchor='middle'>Aa</text><rect x='92' y='152' width='16' height='16' fill='var(--c2)' fill-opacity='0.8' stroke='var(--ink)' stroke-width='1.5'/><text x='114' y='164' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>aa</text><rect x='214' y='14' width='16' height='16' fill='var(--panel)' fill-opacity='1' stroke='var(--ink)' stroke-width='1.5'/><text x='236' y='26' font-size='11' fill='var(--ink)' text-anchor='start'>male</text><circle cx='222' cy='46' r='8' fill='var(--panel)' fill-opacity='1' stroke='var(--ink)' stroke-width='1.5'/><text x='236' y='50' font-size='11' fill='var(--ink)' text-anchor='start'>female</text><rect x='214' y='62' width='16' height='16' fill='var(--c2)' fill-opacity='0.8' stroke='var(--ink)' stroke-width='1.5'/><text x='236' y='74' font-size='11' fill='var(--ink)' text-anchor='start'>affected</text><rect x='214' y='86' width='16' height='16' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><rect x='214' y='86' width='8' height='16' fill='var(--ink)' fill-opacity='0.6'/><text x='236' y='98' font-size='11' fill='var(--ink)' text-anchor='start'>carrier</text><path d='M212 116 H232 M212 121 H232' fill='none' stroke='var(--ink)' stroke-width='1.2'/><text x='238' y='117' font-size='11' fill='var(--ink)' text-anchor='start'>marriage between</text><text x='238' y='131' font-size='11' fill='var(--ink)' text-anchor='start'>relatives</text><text x='160' y='192' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>two healthy parents + affected child → recessive</text></svg>",
+    "key": "Cousins may have inherited the same recessive allele from a shared ancestor. Albinism and cystic fibrosis are examples. If two affected parents have a healthy child, the trait is dominant.",
+    "once": {
+     "soru": "Two healthy parents have an albino child. What kind of trait is albinism?",
+     "secenekler": [
+      {
+       "yazi": "Recessive",
+       "neden": "The parents are carriers (Aa). The child got both recessive alleles.",
+       "dogru": true
+      },
+      {
+       "yazi": "Dominant",
+       "neden": "If albinism were dominant, at least one parent would be albino."
+      },
+      {
+       "yazi": "Not inherited",
+       "neden": "Albinism is a trait passed on through genes."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Modification and mutation",
+    "p": "The phenotype is the result of the genotype and the environment working together. A change the environment makes without changing the DNA is called a <b>modification</b>, and it is not inherited. A <b>mutation</b> is a lasting change in the DNA, and if it happens in a reproductive cell, it passes to the offspring.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='24' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>phenotype = genotype + environment</text><rect x='98' y='38' width='106' height='24' rx='4' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.2'/><rect x='210' y='38' width='106' height='24' rx='4' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.2'/><text x='151' y='55' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Modification</text><text x='263' y='55' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Mutation</text><line x1='8' y1='97' x2='316' y2='97' stroke='var(--line)' stroke-width='1'/><line x1='8' y1='145' x2='316' y2='145' stroke='var(--line)' stroke-width='1'/><text x='8' y='84' font-size='11' fill='var(--muted)' text-anchor='start'>what changes</text><text x='151' y='84' font-size='11' fill='var(--ink)' text-anchor='middle'>only the phenotype</text><text x='263' y='84' font-size='11' fill='var(--ink)' text-anchor='middle'>DNA sequence</text><text x='8' y='126' font-size='11' fill='var(--muted)' text-anchor='start'>inherited?</text><text x='151' y='126' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>no</text><text x='263' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>yes, if in a</text><text x='263' y='134' font-size='11' fill='var(--ink)' text-anchor='middle'>reproductive cell</text><text x='8' y='172' font-size='11' fill='var(--muted)' text-anchor='start'>example</text><text x='151' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>Himalayan rabbit,</text><text x='151' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>hydrangea color</text><text x='263' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>sickle-cell</text><text x='263' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>anemia</text></svg>",
+    "key": "The cold body tips of a Himalayan rabbit turn black. A hydrangea blooms blue in acidic soil.",
+    "once": {
+     "soru": "If someone gets a tan in the sun, will their children be born darker?",
+     "secenekler": [
+      {
+       "yazi": "No",
+       "neden": "Tanning does not change the DNA. It is a modification and is not inherited.",
+       "dogru": true
+      },
+      {
+       "yazi": "Yes",
+       "neden": "A change the environment makes in the phenotype does not pass to the offspring."
+      },
+      {
+       "yazi": "Only their daughters",
+       "neden": "A modification does not pass to any child."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• When gametes form, alleles separate. Genes on different chromosomes sort independently.<br>• An Aa × Aa cross gives a phenotype ratio of 3:1 and a genotype ratio of 1:2:1.<br>• n heterozygous pairs give 2<sup>n</sup> gametes.<br>• Incomplete dominance gives an in-between phenotype, and in codominance both alleles show together.<br>• X-linked recessive conditions are common in males.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='12' width='96' height='84' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.2'/><text x='56' y='56' font-size='15' fill='var(--c5)' text-anchor='middle' font-weight='700'>3 : 1</text><text x='56' y='80' font-size='10' fill='var(--muted)' text-anchor='middle'>Aa × Aa phenotype</text><rect x='112' y='12' width='96' height='84' rx='6' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><text x='160' y='56' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>1 : 2 : 1</text><text x='160' y='80' font-size='10' fill='var(--muted)' text-anchor='middle'>Aa × Aa genotype</text><rect x='216' y='12' width='96' height='84' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><text x='264' y='56' font-size='15' fill='var(--c3)' text-anchor='middle' font-weight='700'>9:3:3:1</text><text x='264' y='80' font-size='10' fill='var(--muted)' text-anchor='middle'>AaBb × AaBb</text><rect x='8' y='106' width='96' height='84' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.2'/><text x='56' y='150' font-size='15' fill='var(--c4)' text-anchor='middle' font-weight='700'>1 : 1</text><text x='56' y='174' font-size='10' fill='var(--muted)' text-anchor='middle'>Aa × aa (test)</text><rect x='112' y='106' width='96' height='84' rx='6' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.2'/><text x='160' y='150' font-size='15' fill='var(--c2)' text-anchor='middle' font-weight='700'>2<tspan font-size='10' baseline-shift='super'>n</tspan></text><text x='160' y='174' font-size='10' fill='var(--muted)' text-anchor='middle'>kinds of gametes</text><rect x='216' y='106' width='96' height='84' rx='6' fill='var(--acc)' fill-opacity='0.12' stroke='var(--acc)' stroke-width='1.2'/><text x='264' y='150' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='700'>½</text><text x='264' y='174' font-size='10' fill='var(--muted)' text-anchor='middle'>girl or boy</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "The genes are on different chromosomes. In an AaBb × Aabb cross, what percent chance is there of an offspring with genotype aabb?",
+    "cevap": 12.5,
+    "tolerans": 0.1,
+    "birim": "%",
+    "e": "In Aa × Aa, the chance of aa is 1/4, and in Bb × bb, the chance of bb is 1/2. Multiply the two probabilities: 1/4 · 1/2 = 1/8, which is 12.5%."
+   },
+   {
+    "tur": "ayir",
+    "q": "The mother has type AB (I<sup>A</sup>I<sup>B</sup>), and the father has type O (ii). Which blood types can the children have?",
+    "gruplar": [
+     "Possible",
+     "Not possible"
+    ],
+    "ogeler": [
+     [
+      "Type A",
+      0
+     ],
+     [
+      "Type B",
+      0
+     ],
+     [
+      "Type AB",
+      1
+     ],
+     [
+      "Type O",
+      1
+     ]
+    ],
+    "e": "The mother gives I<sup>A</sup> or I<sup>B</sup>, and the father gives only i. So the children have a ½ chance of I<sup>A</sup>i (A) and a ½ chance of I<sup>B</sup>i (B). Type AB needs two I alleles, and type O needs two i alleles. Neither is possible."
+   },
+   {
+    "tur": "ayir",
+    "q": "Which changes can pass to the offspring? Put each one in the right group.",
+    "gruplar": [
+     "Inherited",
+     "Not inherited"
+    ],
+    "ogeler": [
+     [
+      "A mutation in a sperm",
+      0
+     ],
+     [
+      "The hemophilia allele",
+      0
+     ],
+     [
+      "ABO blood type",
+      0
+     ],
+     [
+      "Tanning in the sun",
+      1
+     ],
+     [
+      "Muscle gained by exercise",
+      1
+     ],
+     [
+      "A mutation in a skin cell",
+      1
+     ]
+    ],
+    "e": "Blood type and the hemophilia allele pass to the offspring through genes, and a mutation in a sperm passes on through the reproductive cell. Tanning and muscles growing with exercise are modifications that do not change the DNA. A mutation in a skin cell also stays in that individual only."
+   },
+   {
+    "q": "A girl is color-blind. Which statement about her family is certain?",
+    "o": [
+     "Her father is color-blind.",
+     "Her mother is color-blind.",
+     "All her brothers are color-blind.",
+     "Her father is a carrier, and her mother is healthy."
+    ],
+    "a": 0,
+    "e": "Both of the girl's X chromosomes carry the recessive allele, and one of them came from her father. The father has only one X, so he is certainly color-blind. The mother may be a carrier or affected. Males cannot be carriers.",
+    "y": [
+     "",
+     "The girl gets one X from her father. The mother may not be color-blind and may only be a carrier.",
+     "Brothers get their X chromosome from the mother. If the mother is a carrier, only some of them may be color-blind.",
+     "A male has only one X, so a male cannot be a carrier. The father who gave his X to the girl is certainly color-blind."
+    ]
+   }
+  ]
+ },
  "siniflandirma": {
   "title": "Classifying living things",
   "summary": "How are living things grouped, and how are species named?",

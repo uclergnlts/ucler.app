@@ -16456,6 +16456,319 @@
   ],
   "soruOnce": true
  },
+ "kalitim": {
+  "id": "kalitim",
+  "ders": "biyoloji",
+  "konu": "kalitim",
+  "baslik": "Heredity (Mendelian genetics)",
+  "ozet": "Try first, then learn the name. Build a Punnett square, and work out blood types and color blindness.",
+  "adimlar": [
+   {
+    "baslik": "Start with true-breeding plants",
+    "metin": "In peas, the purple flower allele <b>A</b> is dominant and the white flower allele <b>a</b> is recessive. Like Mendel, cross a true-breeding purple plant (AA) with a true-breeding white plant (aa). Each parent gives one allele to the offspring.",
+    "sahne": {
+     "tur": "biy5-punnett",
+     "mod": "baskin",
+     "p1": 2,
+     "p2": 0,
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What color are the flowers of the offspring (F₁)?",
+     "secenekler": [
+      {
+       "yazi": "Half purple, half white",
+       "neden": "One parent can give only A, and the other only a."
+      },
+      {
+       "yazi": "All white",
+       "neden": "A white flower needs two recessive alleles (aa)."
+      },
+      {
+       "yazi": "All purple",
+       "dogru": true,
+       "neden": "All offspring are Aa, and since A is dominant, the flowers are purple. The a allele was not lost. It was only hidden."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Crossing lab",
+    "metin": "Choose the parents and make offspring. Each parent gives one of its alleles to each offspring at random. Find the following yourself.",
+    "sahne": {
+     "tur": "sim-capraz"
+    },
+    "deger": {
+     "p1": 2,
+     "p2": 0,
+     "uret": 0,
+     "uretildi": 0,
+     "yavru": 0,
+     "beyazYuzde": 0
+    },
+    "kontroller": [
+     {
+      "ad": "p1",
+      "etiket": "Number of A in parent 1",
+      "min": 0,
+      "max": 2,
+      "tur": "sayac"
+     },
+     {
+      "ad": "p2",
+      "etiket": "Number of A in parent 2",
+      "min": 0,
+      "max": 2,
+      "tur": "sayac"
+     },
+     {
+      "ad": "uret",
+      "etiket": "Make 100 offspring",
+      "min": 0,
+      "max": 1,
+      "tur": "dugme"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "Cross the F₁ plants with each other (<b>Aa × Aa</b>) and make 100 offspring. What is the ratio of purple to white flowers?",
+       "hedef": {
+        "p1": 1,
+        "p2": 1,
+        "yavru": [
+         100,
+         100000
+        ]
+       },
+       "coz": [
+        {
+         "p1": 1,
+         "p2": 1
+        },
+        {
+         "uret": 1
+        }
+       ],
+       "tamam": "The ratio is about <b>3 purple : 1 white</b>, and the genotype ratio is 1 AA : 2 Aa : 1 aa. The white color that was hidden in F₁ appeared again. So the allele was not lost. It was hidden in the Aa plants."
+      },
+      {
+       "yazi": "Find a cross that gives <b>no white</b> offspring, however many offspring you make.",
+       "hedef": {
+        "yavru": [
+         100,
+         100000
+        ],
+        "beyazYuzde": 0
+       },
+       "coz": [
+        {
+         "p1": 2,
+         "p2": 1
+        },
+        {
+         "uret": 1
+        }
+       ],
+       "tamam": "If one parent is AA, every offspring gets an A from it and is purple. A white offspring needs both parents to give a."
+      },
+      {
+       "yazi": "In the Aa × Aa cross, raise the number of offspring to <b>500</b>. Does the share of white get close to 25%?",
+       "hedef": {
+        "p1": 1,
+        "p2": 1,
+        "yavru": [
+         500,
+         100000
+        ]
+       },
+       "coz": [
+        {
+         "p1": 1,
+         "p2": 1
+        },
+        {
+         "uret": 1
+        },
+        {
+         "uret": 1
+        },
+        {
+         "uret": 1
+        },
+        {
+         "uret": 1
+        },
+        {
+         "uret": 1
+        }
+       ],
+       "tamam": "With few offspring, the ratio drifts by chance. As the number of offspring grows, the ratio gets close to 25%. That is why Mendel counted thousands of peas."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "The test cross",
+    "metin": "To find out whether a purple plant is AA or Aa, you crossed it with a white (<b>aa</b>) plant. Make a guess before you count the offspring.",
+    "sahne": {
+     "tur": "biy5-test",
+     "mor": 52,
+     "beyaz": 48,
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "If about half the offspring are white, what is the genotype of the purple plant?",
+     "secenekler": [
+      {
+       "yazi": "AA",
+       "neden": "In an AA × aa cross, all offspring are Aa and purple. No white offspring can appear."
+      },
+      {
+       "yazi": "Aa",
+       "dogru": true,
+       "neden": "52 purple and 48 white offspring is about a 1:1 ratio. So the purple plant gives the a allele to half of its gametes. That means it is Aa."
+      },
+      {
+       "yazi": "Cannot be told",
+       "neden": "Every white offspring (aa) must have gotten one of its a alleles from the purple plant."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Incomplete dominance",
+    "metin": "In snapdragons, the red (<b>R</b>) and white (<b>W</b>) alleles are not dominant over each other, so an RW plant has <b>pink</b> flowers. We crossed two pink plants.",
+    "sahne": {
+     "tur": "biy5-punnett",
+     "mod": "eksik",
+     "e1": [
+      "K",
+      "B"
+     ],
+     "e2": [
+      "K",
+      "B"
+     ]
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "What is the phenotype ratio of the offspring?",
+     "secenekler": [
+      {
+       "yazi": "3 red : 1 white",
+       "neden": "A 3:1 ratio is seen with complete dominance. Here, RW individuals have an in-between color, pink."
+      },
+      {
+       "yazi": "All pink",
+       "neden": "Pink is not a blend. The alleles separate, and RR and WW offspring appear again."
+      },
+      {
+       "yazi": "1 red : 2 pink : 1 white",
+       "dogru": true,
+       "neden": "With incomplete dominance, each genotype gives its own color. So the phenotype ratio is the same as the genotype ratio: 1:2:1."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Blood types",
+    "metin": "The ABO system has three alleles. <b>I<sup>A</sup></b> and <b>I<sup>B</sup></b> are codominant, and <b>i</b> is recessive to both. The mother has type A (I<sup>A</sup>i), and the father has type B (I<sup>B</sup>i). Make a guess first, then fill in the square.",
+    "sahne": {
+     "tur": "biy5-punnett",
+     "mod": "kan",
+     "e1": [
+      "IA",
+      "i"
+     ],
+     "e2": [
+      "IB",
+      "i"
+     ],
+     "sure": 3
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which blood types can this couple's children have?",
+     "secenekler": [
+      {
+       "yazi": "Only A and B",
+       "neden": "Both parents carry an i allele, and a child who gets two i alleles has type O. If I<sup>A</sup> and I<sup>B</sup> come together, the type is AB."
+      },
+      {
+       "yazi": "A, B, AB and O",
+       "dogru": true,
+       "neden": "All four blood types are possible, each with a ¼ chance. In an I<sup>A</sup>I<sup>B</sup> child, both alleles show their effect. This is called codominance. Their red blood cells carry both A and B antigens."
+      },
+      {
+       "yazi": "Only AB",
+       "neden": "For type AB, the child must get I<sup>A</sup> from the mother and I<sup>B</sup> from the father. This is only one of four possibilities."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "X-linked inheritance",
+    "metin": "The color blindness allele (<b>X<sup>h</sup></b>) is a recessive allele carried on the X chromosome. The mother is a carrier (X<sup>H</sup>X<sup>h</sup>), and the father is healthy. Look at the square. If you like, make the father color-blind and compare the results.",
+    "sahne": {
+     "tur": "biy5-punnett",
+     "mod": "x",
+     "e1": [
+      "XH",
+      "Xh"
+     ]
+    },
+    "deger": {
+     "bk": 0
+    },
+    "kontroller": [
+     {
+      "ad": "bk",
+      "etiket": "Father color-blind",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "With a healthy father, what is the chance that this couple's sons are color-blind?",
+     "secenekler": [
+      {
+       "yazi": "0",
+       "neden": "A son gets his X chromosome from his mother, and one of the mother's X chromosomes is X<sup>h</sup>."
+      },
+      {
+       "yazi": "½",
+       "dogru": true,
+       "neden": "A son gets Y from his father and X from his mother. Half of the sons get X<sup>H</sup>, and half get X<sup>h</sup>."
+      },
+      {
+       "yazi": "¼",
+       "neden": "¼ is the share among all children. Looking only at sons, one in two is color-blind."
+      }
+     ]
+    },
+    "kart": 10
+   }
+  ],
+  "kapanis": [
+   "For each trait there are two alleles, one from the mother and one from the father. Only one of them goes into a gamete. This is called the <b>law of segregation</b>.",
+   "An Aa × Aa cross gives a genotype ratio of <b>1:2:1</b> and a phenotype ratio of <b>3:1</b>. The genotype of an individual with the dominant phenotype is found with a <b>test cross</b> against aa.",
+   "In <b>incomplete dominance</b>, a heterozygous individual shows an in-between phenotype such as pink. In <b>codominance</b>, both alleles show at once, as in blood type AB.",
+   "The ABO system has three alleles, but each person carries only two of them.",
+   "X-linked recessive traits such as color blindness and hemophilia are more common in males. A male gets his X chromosome from his mother."
+  ],
+  "soruOnce": true
+ },
  "siniflandirma": {
   "id": "siniflandirma",
   "ders": "biyoloji",
