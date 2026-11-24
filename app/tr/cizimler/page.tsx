@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { paylasim } from "@/lib/seo";
 import Cizimler from "@/components/Cizimler";
 
 // Çizim galerisinin Türkçesi; İngilizcesi /drawings/ adresindedir.
@@ -6,7 +7,8 @@ import Cizimler from "@/components/Cizimler";
 export const metadata: Metadata = {
   title: { absolute: "Çizimler · ucler" },
   description: "ucler YouTube videolarındaki bütün gravür çizimleri tek yerde.",
-  alternates: { canonical: "/tr/cizimler/", languages: { en: "/drawings/", tr: "/tr/cizimler/" } },
+  alternates: { canonical: "/tr/cizimler/", languages: { en: "/drawings/", tr: "/tr/cizimler/", "x-default": "/drawings/" } },
+  ...paylasim("Çizimler · ucler", "ucler YouTube videolarındaki bütün gravür çizimleri tek yerde.", "tr"),
 };
 
 export default function Page() {

@@ -1,17 +1,21 @@
+import { cev } from "@/lib/dil";
 import type { Metadata } from "next";
+import { paylasim } from "@/lib/seo";
 import Tanitim from "@/components/Tanitim";
+import YapisalVeri from "@/components/YapisalVeri";
 import { readyTopics } from "@/lib/content";
 import { DERS_IDS } from "@/lib/dersler";
 
 // Tanıtım sayfasının Türkçesi; İngilizcesi "/" adresindedir (app/page.tsx).
 export const metadata: Metadata = {
-  title: { absolute: "ucler: bilim, hakkını vererek" },
-  description: "ucler, herkesin bilimi anlamasına yardım eder: uygulamada kısa ve etkileşimli dersler, YouTube'da uzun videolar.",
-  alternates: { canonical: "/tr/", languages: { en: "/", tr: "/tr/" } },
+  title: { absolute: cev("ucler: bilim, hakkını vererek") },
+  description: cev("ucler, herkesin bilimi anlamasına yardım eder: uygulamada kısa ve etkileşimli dersler, YouTube'da uzun videolar."),
+  alternates: { canonical: "/tr/", languages: { en: "/", tr: "/tr/", "x-default": "/" } },
+  ...paylasim(cev("ucler: bilim, hakkını vererek"), cev("ucler, herkesin bilimi anlamasına yardım eder: uygulamada kısa ve etkileşimli dersler, YouTube'da uzun videolar."), "tr"),
 };
 
 export default function Page() {
   const konular = readyTopics();
   const sayi = Object.fromEntries(DERS_IDS.map((d) => [d, konular.filter((t) => t.ders === d).length]));
-  return <Tanitim sayi={sayi} dil="tr" />;
+  return <><YapisalVeri dil="tr" /><Tanitim sayi={sayi} dil="tr" /></>;
 }

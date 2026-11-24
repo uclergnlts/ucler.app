@@ -22,6 +22,8 @@ const DATA = DIL === "en"
   : TR;
 /** Konu bu kopyanın dilinde mi? (İngilizce kopyada henüz çevrilmemiş konular için false.) */
 export const cevrili = (d: DersId, id: string) => DIL !== "en" || id in EN[d];
+/** Konunun İngilizce çevirisi var mı? (Hangi kopyada derlendiğinden bağımsız; hreflang ve site haritası için.) */
+export const enHazir = (d: DersId, id: string) => id in EN[d];
 
 export const topic = (d: DersId, id: string): Topic | undefined => DATA[d][id];
 
