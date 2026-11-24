@@ -4943,6 +4943,352 @@
    }
   ]
  },
+ "tepkime-hizi": {
+  "title": "Reaction rate",
+  "summary": "How is rate measured, what does it depend on and what does a catalyst do?",
+  "cards": [
+   {
+    "h": "What is reaction rate?",
+    "p": "Reaction rate is the change in concentration per unit time. For A → B we write <b>r = −Δ[A]/Δt = Δ[B]/Δt</b>, and the unit is M/s. The slope of the curve at a single point is called the <b>instantaneous rate</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='thiz-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M40 160 V22' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#thiz-1)'/><path d='M40 160 H306' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#thiz-1)'/><text x='46' y='18' font-size='11' fill='var(--muted)' text-anchor='start'>concentration (M)</text><text x='300' y='176' font-size='11' fill='var(--muted)' text-anchor='end'>t (s)</text><polyline points='40.0,35.0 48.7,40.7 57.3,46.2 66.0,51.4 74.7,56.4 83.3,61.2 92.0,65.7 100.7,70.0 109.3,74.2 118.0,78.1 126.7,81.9 135.3,85.5 144.0,88.9 152.7,92.1 161.3,95.3 170.0,98.2 178.7,101.1 187.3,103.8 196.0,106.4 204.7,108.8 213.3,111.2 222.0,113.4 230.7,115.6 239.3,117.6 248.0,119.5 256.7,121.4 265.3,123.2 274.0,124.9 282.7,126.5 291.3,128.0 300.0,129.5' fill='none' stroke='var(--c2)' stroke-width='2.2'/><polyline points='40.0,160.0 48.7,154.3 57.3,148.8 66.0,143.6 74.7,138.6 83.3,133.8 92.0,129.3 100.7,125.0 109.3,120.8 118.0,116.9 126.7,113.1 135.3,109.5 144.0,106.1 152.7,102.9 161.3,99.7 170.0,96.8 178.7,93.9 187.3,91.2 196.0,88.6 204.7,86.2 213.3,83.8 222.0,81.6 230.7,79.4 239.3,77.4 248.0,75.5 256.7,73.6 265.3,71.8 274.0,70.1 282.7,68.5 291.3,67.0 300.0,65.5' fill='none' stroke='var(--c1)' stroke-width='2.2'/><line x1='40' y1='81.875' x2='126.66666666666667' y2='81.875' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><line x1='126.66666666666667' y1='81.875' x2='126.66666666666667' y2='160' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><text x='34' y='39.0' font-size='10' fill='var(--muted)' text-anchor='end'>0.80</text><text x='34' y='85.875' font-size='10' fill='var(--muted)' text-anchor='end'>0.50</text><text x='126.66666666666667' y='173' font-size='10' fill='var(--muted)' text-anchor='middle'>20</text><text x='40' y='173' font-size='10' fill='var(--muted)' text-anchor='middle'>0</text><text x='250' y='138' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>[A] decreases</text><text x='250' y='62' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>[B] increases</text><text x='176' y='193' font-size='11' fill='var(--ink)' text-anchor='middle'>A → B   avg. rate (0-20 s) = 0.30 / 20 = 0.015 M/s</text></svg>",
+    "key": "Reactants are used up, so Δ[reactant] is negative. A minus sign is put in front, so the rate is always positive. The change between two moments is called the average rate."
+   },
+   {
+    "h": "How is rate measured?",
+    "p": "Instead of concentration, an easy-to-measure property is tracked. This property must <b>change</b> as the reaction goes on. Volume of gas released, pressure, color, conductivity or mass in an open container can be tracked.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='8' width='308' height='34' rx='5' fill='var(--c1)' fill-opacity='0.08'/><rect x='6' y='8' width='4' height='34' rx='1' fill='var(--c1)' fill-opacity='0.9'/><text x='16' y='29' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>Gas volume</text><text x='88' y='23' font-size='11' fill='var(--ink)' text-anchor='start'>Mg(s) + 2HCl(aq) → MgCl₂(aq) + H₂(g)</text><text x='88' y='37' font-size='10' fill='var(--muted)' text-anchor='start'>volume of H₂ released grows over time</text><rect x='6' y='46' width='308' height='34' rx='5' fill='var(--c5)' fill-opacity='0.08'/><rect x='6' y='46' width='4' height='34' rx='1' fill='var(--c5)' fill-opacity='0.9'/><text x='16' y='67' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>Pressure</text><text x='88' y='61' font-size='11' fill='var(--ink)' text-anchor='start'>2NO(g) + O₂(g) → 2NO₂(g)</text><text x='88' y='75' font-size='10' fill='var(--muted)' text-anchor='start'>constant V, T: 3 mol gas → 2 mol, pressure drops</text><rect x='6' y='84' width='308' height='34' rx='5' fill='var(--c2)' fill-opacity='0.08'/><rect x='6' y='84' width='4' height='34' rx='1' fill='var(--c2)' fill-opacity='0.9'/><text x='16' y='105' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>Color</text><text x='88' y='99' font-size='11' fill='var(--ink)' text-anchor='start'>H₂(g) + Br₂(g) → 2HBr(g)</text><text x='88' y='113' font-size='10' fill='var(--muted)' text-anchor='start'>red-brown Br₂ is used up, color fades</text><rect x='6' y='122' width='308' height='34' rx='5' fill='var(--c3)' fill-opacity='0.08'/><rect x='6' y='122' width='4' height='34' rx='1' fill='var(--c3)' fill-opacity='0.9'/><text x='16' y='143' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>Conductivity</text><text x='88' y='137' font-size='11' fill='var(--ink)' text-anchor='start'>Ag⁺(aq) + Cl⁻(aq) → AgCl(s)</text><text x='88' y='151' font-size='10' fill='var(--muted)' text-anchor='start'>ions precipitate, conductivity drops</text><rect x='6' y='160' width='308' height='34' rx='5' fill='var(--c4)' fill-opacity='0.08'/><rect x='6' y='160' width='4' height='34' rx='1' fill='var(--c4)' fill-opacity='0.9'/><text x='16' y='181' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>Mass</text><text x='88' y='175' font-size='11' fill='var(--ink)' text-anchor='start'>CaCO₃(s) + 2HCl(aq) → … + CO₂(g)</text><text x='88' y='189' font-size='10' fill='var(--muted)' text-anchor='start'>in an open container CO₂ escapes, mass drops</text></svg>",
+    "key": "If the moles of gas don't change (as in H₂ + Br₂ → 2HBr), the rate can't be tracked by pressure.",
+    "once": {
+     "soru": "A Mg ribbon dissolves in HCl solution, releasing H₂ gas. What is the easiest way to track the rate?",
+     "secenekler": [
+      {
+       "yazi": "By the volume of gas released",
+       "neden": "As H₂ is released, its volume can be measured. The increase in volume per unit time shows the rate.",
+       "dogru": true
+      },
+      {
+       "yazi": "By the color of the solution",
+       "neden": "Both HCl and MgCl₂ solutions are colorless. So the color doesn't change."
+      },
+      {
+       "yazi": "By the volume of the solution",
+       "neden": "The volume of the solution doesn't change noticeably."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Coefficients and rate",
+    "p": "The reaction <b>aA → bB</b> has a single rate, found from <b>r = −(1/a)·Δ[A]/Δt = (1/b)·Δ[B]/Δt</b>. The rates at which substances are used up and formed are proportional to their coefficients.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='30' font-size='18' fill='var(--ink)' text-anchor='middle' font-weight='700'>N₂ + 3H₂ → 2NH₃</text><text x='96' y='67' font-size='12' fill='var(--muted)' text-anchor='end'>N₂ used up</text><rect x='104' y='52' width='23' height='22' rx='3' fill='var(--c1)' fill-opacity='0.55'/><text x='133' y='67' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>0.1 M/s</text><text x='96' y='101' font-size='12' fill='var(--muted)' text-anchor='end'>H₂ used up</text><rect x='104' y='86' width='69' height='22' rx='3' fill='var(--c2)' fill-opacity='0.55'/><text x='179' y='101' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>0.3 M/s</text><text x='96' y='135' font-size='12' fill='var(--muted)' text-anchor='end'>NH₃ formed</text><rect x='104' y='120' width='46' height='22' rx='3' fill='var(--c3)' fill-opacity='0.55'/><text x='156' y='135' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>0.2 M/s</text><rect x='10' y='158' width='300' height='34' rx='6' fill='var(--panel)' fill-opacity='1'/><text x='160' y='180' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>reaction rate r = 0.1/1 = 0.3/3 = 0.2/2 = 0.1 M/s</text></svg>",
+    "key": "The ratio of the rates equals the ratio of the coefficients. For N₂, H₂ and NH₃, for example, this ratio is 1 : 3 : 2."
+   },
+   {
+    "h": "Collision theory",
+    "p": "For a reaction, particles must collide, but only a few collisions give products. An <b>effective collision</b> needs enough kinetic energy and the <b>right orientation</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='thiz-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><defs><marker id='thiz-41' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><circle cx='26' cy='31' r='7' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='26' cy='45' r='7' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><path d='M36 38 H48' stroke='var(--muted)' stroke-width='1.2' fill='none' marker-end='url(#thiz-4)'/><circle cx='70' cy='31' r='7' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><circle cx='70' cy='45' r='7' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><path d='M98 38 H118' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#thiz-41)'/><circle cx='136' cy='31' r='7' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='136' cy='45' r='7' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='176' cy='31' r='7' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><circle cx='176' cy='45' r='7' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><path d='M128 56 H116' stroke='var(--muted)' stroke-width='1.2' fill='none' marker-end='url(#thiz-4)'/><path d='M184 56 H196' stroke='var(--muted)' stroke-width='1.2' fill='none' marker-end='url(#thiz-4)'/><text x='206' y='35' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>Not enough energy</text><text x='206' y='51' font-size='11' fill='var(--muted)' text-anchor='start'>bounces off</text><circle cx='19' cy='100' r='7' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='33' cy='100' r='7' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><path d='M40 100 H58' stroke='var(--muted)' stroke-width='1.6' fill='none' marker-end='url(#thiz-4)'/><circle cx='69' cy='100' r='7' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><circle cx='83' cy='100' r='7' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><path d='M98 100 H118' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#thiz-41)'/><circle cx='129' cy='100' r='7' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='143' cy='100' r='7' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='169' cy='100' r='7' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><circle cx='183' cy='100' r='7' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><path d='M128 114 H116' stroke='var(--muted)' stroke-width='1.2' fill='none' marker-end='url(#thiz-4)'/><path d='M184 114 H196' stroke='var(--muted)' stroke-width='1.2' fill='none' marker-end='url(#thiz-4)'/><text x='206' y='97' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>Wrong orientation</text><text x='206' y='113' font-size='11' fill='var(--muted)' text-anchor='start'>bounces off</text><circle cx='26' cy='155' r='7' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='26' cy='169' r='7' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><path d='M36 162 H58' stroke='var(--muted)' stroke-width='1.6' fill='none' marker-end='url(#thiz-4)'/><circle cx='70' cy='155' r='7' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><circle cx='70' cy='169' r='7' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><path d='M98 162 H118' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#thiz-41)'/><circle cx='136' cy='152' r='7' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='150' cy='152' r='7' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><circle cx='136' cy='172' r='7' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='150' cy='172' r='7' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><text x='178' y='166' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>2AB</text><text x='206' y='159' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>Effective collision</text><text x='206' y='175' font-size='11' fill='var(--muted)' text-anchor='start'>product forms</text><line x1='8' y1='69' x2='312' y2='69' stroke='var(--line)' stroke-width='1'/><line x1='8' y1='131' x2='312' y2='131' stroke='var(--line)' stroke-width='1'/><text x='160' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>A₂ + B₂ → 2AB</text></svg>",
+    "key": "Enough energy and the right orientation together make an effective collision. The rate depends on the number of effective collisions per unit time."
+   },
+   {
+    "h": "Activation energy",
+    "p": "The minimum energy needed for an effective collision is called the <b>activation energy (E<sub>a</sub>)</b>. At the top of the hill, an unstable, short-lived <b>activated complex</b> forms. If E<sub>a</sub> is large, the reaction is usually slow.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='thiz-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><defs><marker id='thiz-51' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><path d='M30 175 V20' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#thiz-5)'/><path d='M30 175 H306' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#thiz-5)'/><text x='36' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>potential energy</text><text x='300' y='191' font-size='11' fill='var(--muted)' text-anchor='end'>reaction progress</text><path d='M34 120 H90 C125.0 120 125.0 50 160 50 C195.0 50 195.0 150 230 150 H300' fill='none' stroke='var(--ink)' stroke-width='2.2'/><line x1='70' y1='50' x2='160' y2='50' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><path d='M78 118 V52' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-start='url(#thiz-51)' marker-end='url(#thiz-51)'/><text x='72' y='90' font-size='13' fill='var(--c2)' text-anchor='end' font-weight='700'>E<tspan font-size='10' baseline-shift='sub'>a</tspan></text><circle cx='160' cy='50' r='5' fill='var(--c5)' fill-opacity='0.9' stroke='var(--c5)'/><text x='170' y='40' font-size='11' fill='var(--c5)' text-anchor='start' font-weight='700'>activated complex</text><text x='62' y='136' font-size='11' fill='var(--muted)' text-anchor='middle'>reactants</text><text x='262' y='166' font-size='11' fill='var(--muted)' text-anchor='middle'>products</text><text x='36' y='154' font-size='10' fill='var(--muted)' text-anchor='start'>complex: unstable, very short-lived</text><text x='36' y='168' font-size='10' fill='var(--muted)' text-anchor='start'>old bonds weaken, new ones form</text></svg>",
+    "key": "In the activated complex, old bonds weaken and new ones begin to form.",
+    "once": {
+     "soru": "Paper releases heat when it burns, but it doesn't catch fire by itself on a desk. Why?",
+     "secenekler": [
+      {
+       "yazi": "It needs energy to start",
+       "neden": "Exothermic reactions also have an activation energy. A match supplies this energy.",
+       "dogru": true
+      },
+      {
+       "yazi": "Burning is endothermic",
+       "neden": "Burning releases heat, so it is exothermic."
+      },
+      {
+       "yazi": "Air has no oxygen",
+       "neden": "There is enough oxygen in the air."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Forward and reverse activation energy",
+    "p": "The forward and reverse reactions pass over the same hill. The difference gives the heat of reaction: <b>ΔH = E<sub>a,forward</sub> − E<sub>a,reverse</sub></b>. In an exothermic reaction, E<sub>a,forward</sub> is smaller.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='thiz-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='thiz-61' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><defs><marker id='thiz-62' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><line x1='22' y1='20' x2='22' y2='172' stroke='var(--ink)' stroke-width='1.2'/><line x1='22' y1='172' x2='228' y2='172' stroke='var(--ink)' stroke-width='1.2'/><text x='26' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>PE (kJ)</text><path d='M26 92 H55 C85.0 92 85.0 40 115 40 C145.0 40 145.0 144 175 144 H222' fill='none' stroke='var(--ink)' stroke-width='2.2'/><line x1='42' y1='40' x2='200' y2='40' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><line x1='170' y1='92' x2='222' y2='92' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><path d='M46 90 V42' stroke='var(--c2)' stroke-width='1.6' fill='none' marker-start='url(#thiz-6)' marker-end='url(#thiz-6)'/><text x='52' y='70' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>Eₐ,f</text><path d='M190 142 V42' stroke='var(--c1)' stroke-width='1.6' fill='none' marker-start='url(#thiz-61)' marker-end='url(#thiz-61)'/><text x='185' y='80' font-size='12' fill='var(--c1)' text-anchor='end' font-weight='700'>Eₐ,r</text><path d='M212 94 V142' stroke='var(--c3)' stroke-width='1.6' fill='none' marker-start='url(#thiz-62)' marker-end='url(#thiz-62)'/><text x='212' y='162' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>ΔH</text><rect x='236' y='14' width='80' height='172' rx='6' fill='var(--panel)' fill-opacity='1'/><text x='276' y='34' font-size='11' fill='var(--ink)' text-anchor='middle'>Reactants: 60</text><text x='276' y='52' font-size='11' fill='var(--ink)' text-anchor='middle'>Complex: 100</text><text x='276' y='70' font-size='11' fill='var(--ink)' text-anchor='middle'>Products: 20</text><line x1='244' y1='80' x2='308' y2='80' stroke='var(--line)' stroke-width='1'/><text x='276' y='98' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Eₐ,f = 40</text><text x='276' y='118' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>Eₐ,r = 80</text><line x1='244' y1='128' x2='308' y2='128' stroke='var(--line)' stroke-width='1'/><text x='276' y='148' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>ΔH = 40 − 80</text><text x='276' y='166' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>= −40 kJ</text><text x='276' y='181' font-size='10' fill='var(--muted)' text-anchor='middle'>exothermic</text></svg>",
+    "key": "In an endothermic reaction Ea,forward > Ea,reverse, because ΔH > 0.",
+    "once": {
+     "soru": "In an exothermic reaction, from which direction is it harder to climb the hill?",
+     "secenekler": [
+      {
+       "yazi": "The reverse direction",
+       "neden": "The products have lower energy. Climbing the hill from the products takes more energy.",
+       "dogru": true
+      },
+      {
+       "yazi": "The forward direction",
+       "neden": "The reactants are at high energy and closer to the top."
+      },
+      {
+       "yazi": "They are equal",
+       "neden": "The reactants and products have different energies, so the heights differ."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Rate law and order",
+    "p": "The rate law has the form <b>rate = k[A]<sup>x</sup>[B]<sup>y</sup></b>. x and y are found <b>by experiment</b>, and in elementary reactions they equal the coefficients. Solids and pure liquids are not written in the rate law.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='44' font-size='24' fill='var(--acc)' text-anchor='middle' font-weight='700'>rate = k[A]<tspan font-size='15' baseline-shift='super'>x</tspan>[B]<tspan font-size='15' baseline-shift='super'>y</tspan></text><text x='70' y='72' font-size='11' fill='var(--muted)' text-anchor='middle'>k: rate constant</text><text x='210' y='72' font-size='11' fill='var(--muted)' text-anchor='middle'>x, y: orders (by experiment)</text><rect x='10' y='84' width='300' height='22' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='84' y='99' font-size='11' fill='var(--muted)' text-anchor='middle' font-weight='700'>Order in A</text><text x='236' y='99' font-size='11' fill='var(--muted)' text-anchor='middle' font-weight='700'>When [A] doubles, rate</text><text x='84' y='124' font-size='12' fill='var(--ink)' text-anchor='middle'>x = 0</text><text x='236' y='124' font-size='12' fill='var(--ink)' text-anchor='middle'>unchanged (1×)</text><text x='84' y='146' font-size='12' fill='var(--ink)' text-anchor='middle'>x = 1</text><text x='236' y='146' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>2×</text><text x='84' y='168' font-size='12' fill='var(--ink)' text-anchor='middle'>x = 2</text><text x='236' y='168' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>4×</text><line x1='10' y1='132' x2='310' y2='132' stroke='var(--line)' stroke-width='1'/><line x1='10' y1='154' x2='310' y2='154' stroke='var(--line)' stroke-width='1'/><text x='160' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>overall order = x + y</text></svg>",
+    "key": "The overall order is x + y. k doesn't change with concentration, but it does change with temperature and catalysts.",
+    "once": {
+     "soru": "In the one-step reaction 2A → B, if [A] doubles, by what factor does the rate change?",
+     "secenekler": [
+      {
+       "yazi": "4 times",
+       "neden": "In an elementary reaction the order equals the coefficient, so rate = k[A]². The rate goes up 2² = 4 times.",
+       "dogru": true
+      },
+      {
+       "yazi": "2 times",
+       "neden": "The rate is proportional to the square of [A], not linear."
+      },
+      {
+       "yazi": "No change",
+       "neden": "When concentration rises, the number of collisions rises."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Finding order from experiments",
+    "p": "Compare two experiments in which only one substance's concentration changes. If doubling the concentration doubles the rate, the order is 1. If the rate goes up 4 times, the order is 2.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>2X + Y → Z  (same temperature)</text><rect x='10' y='26' width='300' height='22' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='40' y='41' font-size='11' fill='var(--muted)' text-anchor='middle' font-weight='700'>Exp.</text><text x='110' y='41' font-size='11' fill='var(--muted)' text-anchor='middle' font-weight='700'>[X] (M)</text><text x='180' y='41' font-size='11' fill='var(--muted)' text-anchor='middle' font-weight='700'>[Y] (M)</text><text x='260' y='41' font-size='11' fill='var(--muted)' text-anchor='middle' font-weight='700'>rate (M/s)</text><text x='40' y='66' font-size='12' fill='var(--ink)' text-anchor='middle'>1</text><text x='110' y='66' font-size='12' fill='var(--ink)' text-anchor='middle'>0.10</text><text x='180' y='66' font-size='12' fill='var(--ink)' text-anchor='middle'>0.10</text><text x='260' y='66' font-size='12' fill='var(--ink)' text-anchor='middle'>2×10⁻³</text><text x='40' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>2</text><text x='110' y='86' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>0.20</text><text x='180' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>0.10</text><text x='260' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>4×10⁻³</text><text x='40' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>3</text><text x='110' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>0.10</text><text x='180' y='106' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>0.20</text><text x='260' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>8×10⁻³</text><line x1='10' y1='114' x2='310' y2='114' stroke='var(--line)' stroke-width='1'/><text x='16' y='132' font-size='12' fill='var(--c1)' text-anchor='start'>1 → 2: [X] 2×, rate 2×  ⇒  x = 1</text><text x='16' y='152' font-size='12' fill='var(--c2)' text-anchor='start'>1 → 3: [Y] 2×, rate 4×  ⇒  y = 2</text><rect x='10' y='162' width='300' height='32' rx='6' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)'/><text x='160' y='183' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>rate = k[X][Y]²   (3rd order; not equal to coefficients)</text></svg>",
+    "etk": {
+     "tur": "formul",
+     "soru": "For this reaction rate = k[X][Y]<sup>2</sup>, k = 2 L²/(mol²·s). Double [X] or [Y]: by what factor does the rate go up?",
+     "girdiler": [
+      {
+       "ad": "X",
+       "etiket": "[X]",
+       "birim": "M",
+       "min": 0.1,
+       "max": 1,
+       "adim": 0.1,
+       "deger": 0.1
+      },
+      {
+       "ad": "Y",
+       "etiket": "[Y]",
+       "birim": "M",
+       "min": 0.1,
+       "max": 1,
+       "adim": 0.1,
+       "deger": 0.1
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "rate",
+       "ifade": "2*X*Y^2",
+       "birim": "M/s",
+       "basamak": 4,
+       "max": 2
+      }
+     ]
+    },
+    "key": "If the concentration goes up n times, the rate goes up nˣ times. If doubling the concentration makes the rate 4 times larger, x = 2."
+   },
+   {
+    "h": "Units of the rate constant",
+    "p": "The unit of rate is always M/s. The unit of k depends on the <b>overall order</b>. It is M/s for zero order, 1/s for first order and 1/(M·s) for second order.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='26' font-size='16' fill='var(--acc)' text-anchor='middle' font-weight='700'>k = rate / [A]<tspan font-size='10' baseline-shift='super'>n</tspan></text><text x='160' y='48' font-size='11' fill='var(--muted)' text-anchor='middle'>rate: M/s  ·  n: overall order</text><rect x='10' y='60' width='300' height='22' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='70' y='75' font-size='11' fill='var(--muted)' text-anchor='middle' font-weight='700'>overall order</text><text x='220' y='75' font-size='11' fill='var(--muted)' text-anchor='middle' font-weight='700'>unit of k</text><text x='70' y='102' font-size='12' fill='var(--ink)' text-anchor='middle'>0</text><text x='220' y='102' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>M/s  =  mol/(L·s)</text><line x1='10' y1='112' x2='310' y2='112' stroke='var(--line)' stroke-width='1'/><text x='70' y='132' font-size='12' fill='var(--ink)' text-anchor='middle'>1</text><text x='220' y='132' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>1/s  =  s⁻¹</text><line x1='10' y1='142' x2='310' y2='142' stroke='var(--line)' stroke-width='1'/><text x='70' y='162' font-size='12' fill='var(--ink)' text-anchor='middle'>2</text><text x='220' y='162' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>1/(M·s)  =  L/(mol·s)</text><text x='160' y='192' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>general: M<tspan font-size='9' baseline-shift='super'>1−n</tspan> · s⁻¹</text></svg>",
+    "key": "If the unit of k is M/s, the reaction is zero order. Then the rate doesn't depend on concentration.",
+    "once": {
+     "soru": "For rate = k[A], rate is in M/s and [A] in M. What is the unit of k?",
+     "secenekler": [
+      {
+       "yazi": "1/s",
+       "neden": "k = rate / [A] = (M/s) / M = 1/s.",
+       "dogru": true
+      },
+      {
+       "yazi": "M/s",
+       "neden": "M/s is the unit of rate. The unit of k comes from dividing it by [A]."
+      },
+      {
+       "yazi": "M",
+       "neden": "k relates to rate, so its unit must include time."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Mechanism and the slow step",
+    "p": "Most reactions happen in several steps, and these steps are called the <b>mechanism</b>. The overall rate is set by the <b>slowest step</b>, the one with the largest E<sub>a</sub>. The rate law is written from the reactants of this step.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='thiz-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><rect x='8' y='4' width='304' height='24' rx='5' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)'/><text x='16' y='21' font-size='12' fill='var(--ink)' text-anchor='start'>1)  NO₂ + NO₂ → <tspan fill='var(--c5)' font-weight='700'>NO₃</tspan> + NO</text><text x='304' y='21' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>slow</text><rect x='8' y='32' width='304' height='24' rx='5' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)'/><text x='16' y='49' font-size='12' fill='var(--ink)' text-anchor='start'>2)  <tspan fill='var(--c5)' font-weight='700'>NO₃</tspan> + CO → NO₂ + CO₂</text><text x='304' y='49' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='700'>fast</text><text x='12' y='74' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Net: NO₂ + CO → NO + CO₂</text><text x='308' y='74' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='700'>Rate = k[NO₂]²</text><path d='M20 192 V88' stroke='var(--muted)' stroke-width='1.2' fill='none' marker-end='url(#thiz-9)'/><path d='M20 192 H196' stroke='var(--muted)' stroke-width='1.2' fill='none' marker-end='url(#thiz-9)'/><text x='4' y='104' font-size='10' fill='var(--muted)' text-anchor='start'>PE</text><text x='194' y='186' font-size='10' fill='var(--muted)' text-anchor='end'>progress</text><path d='M22 160 H38 C52 160 56 100 66 100 C76 100 82 146 96 146 C108 146 112 128 120 128 C128 128 134 172 150 172 H190' stroke='var(--acc)' stroke-width='2.2' fill='none'/><line x1='22' y1='160' x2='66' y2='160' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><line x1='66' y1='160' x2='66' y2='102' stroke='var(--c2)' stroke-width='1.2' stroke-dasharray='3 3'/><line x1='96' y1='146' x2='120' y2='146' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><line x1='120' y1='146' x2='120' y2='130' stroke='var(--c3)' stroke-width='1.2' stroke-dasharray='3 3'/><text x='66' y='94' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>Ea₁ (slow)</text><text x='124' y='122' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>Ea₂ (fast)</text><text x='96' y='162' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>NO₃</text><text x='206' y='108' font-size='11' fill='var(--acc)' text-anchor='start' font-weight='700'>The highest hill</text><text x='206' y='123' font-size='11' fill='var(--acc)' text-anchor='start' font-weight='700'>= slow step;</text><text x='206' y='138' font-size='11' fill='var(--ink)' text-anchor='start'>it sets the rate.</text><text x='206' y='164' font-size='11' fill='var(--muted)' text-anchor='start'>Species in the dip:</text><text x='206' y='179' font-size='11' fill='var(--c5)' text-anchor='start'>intermediate (NO₃)</text></svg>",
+    "key": "An intermediate that forms in one step and is used up in the next is not written in the rate law.",
+    "once": {
+     "soru": "On a production line, three machines work in sequence: 100, 10 and 50 items per hour. Which one sets the speed of the line?",
+     "secenekler": [
+      {
+       "yazi": "The one making 10 per hour",
+       "neden": "Items pile up at the slowest machine. The line can't run faster than this machine.",
+       "dogru": true
+      },
+      {
+       "yazi": "The one making 100 per hour",
+       "neden": "The fast machine waits for the slow one after it."
+      },
+      {
+       "yazi": "The average of the three",
+       "neden": "In sequential work, the slowest step sets the overall speed."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Nature of reactants and concentration",
+    "p": "Reactions between oppositely charged ions are very fast. The more bonds that must break, the slower the reaction. When <b>concentration</b> rises, the number of collisions rises and so does the rate.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='thiz-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='10' y='16' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>Nature of reactants</text><rect x='8' y='24' width='304' height='30' rx='5' fill='var(--c3)' fill-opacity='0.1'/><text x='16' y='44' font-size='12' fill='var(--ink)' text-anchor='start'>Ag⁺ + Cl⁻ → AgCl(s)</text><text x='304' y='44' font-size='11' fill='var(--c3)' text-anchor='end' font-weight='700'>very fast: opposite ions</text><rect x='8' y='58' width='304' height='30' rx='5' fill='var(--c2)' fill-opacity='0.1'/><text x='16' y='78' font-size='12' fill='var(--ink)' text-anchor='start'>CH₄ + 2O₂ → CO₂ + 2H₂O</text><text x='304' y='78' font-size='11' fill='var(--c2)' text-anchor='end' font-weight='700'>slow: many bonds break</text><text x='10' y='102' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>Concentration</text><rect x='20' y='108' width='130' height='66' rx='6' fill='var(--panel)' fill-opacity='1' stroke='var(--panel)'/><circle cx='56' cy='143' r='5' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><circle cx='71' cy='146' r='5' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='99' cy='119' r='5' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><circle cx='31' cy='158' r='5' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><rect x='170' y='108' width='130' height='66' rx='6' fill='var(--panel)' fill-opacity='1' stroke='var(--panel)'/><circle cx='209' cy='128' r='5' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><circle cx='290' cy='140' r='5' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='272' cy='140' r='5' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><circle cx='250' cy='124' r='5' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='250' cy='159' r='5' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><circle cx='223' cy='156' r='5' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='277' cy='121' r='5' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><circle cx='236' cy='135' r='5' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='274' cy='166' r='5' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><circle cx='190' cy='156' r='5' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><circle cx='225' cy='124' r='5' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)'/><circle cx='236' cy='166' r='5' fill='var(--c1)' fill-opacity='0.8' stroke='var(--c1)'/><path d='M154 141 H166' stroke='var(--ink)' stroke-width='1.4' fill='none' marker-end='url(#thiz-10)'/><text x='85' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>few collisions</text><text x='235' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>many collisions</text></svg>",
+    "key": "For gases, reducing the volume raises the concentration. The concentration of a substance with zero order doesn't change the rate.",
+    "once": {
+     "soru": "Charcoal burns slowly in air but quickly with a bright flame in pure oxygen. Why?",
+     "secenekler": [
+      {
+       "yazi": "Oxygen concentration is higher",
+       "neden": "There is more O₂ per unit volume. So the number of collisions and the rate go up.",
+       "dogru": true
+      },
+      {
+       "yazi": "Ea gets smaller",
+       "neden": "Ea is changed by a catalyst, not by concentration."
+      },
+      {
+       "yazi": "The charcoal gives off more heat",
+       "neden": "It is the same reaction, and the heat released is the same. Only the rate is different."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Temperature: Maxwell–Boltzmann",
+    "p": "When temperature rises, particles speed up. The main effect, though, is that a larger fraction of particles exceeds E<sub>a</sub>. E<sub>a</sub> doesn't change, but k gets larger. That's why the rate goes up in both exothermic and endothermic reactions.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='thiz-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M165.0 165 L165.0 143.3 L166.5 143.7 L168.0 144.1 L169.5 144.5 L171.0 144.9 L172.5 145.3 L174.0 145.7 L175.5 146.0 L177.0 146.4 L178.5 146.8 L180.0 147.1 L181.5 147.5 L183.0 147.8 L184.5 148.2 L186.0 148.5 L187.5 148.9 L189.0 149.2 L190.5 149.5 L192.0 149.8 L193.5 150.1 L195.0 150.4 L196.5 150.7 L198.0 151.0 L199.5 151.3 L201.0 151.6 L202.5 151.8 L204.0 152.1 L205.5 152.4 L207.0 152.6 L208.5 152.9 L210.0 153.1 L211.5 153.4 L213.0 153.6 L214.5 153.9 L216.0 154.1 L217.5 154.3 L219.0 154.5 L220.5 154.8 L222.0 155.0 L223.5 155.2 L225.0 155.4 L226.5 155.6 L228.0 155.8 L229.5 156.0 L231.0 156.2 L232.5 156.4 L234.0 156.5 L235.5 156.7 L237.0 156.9 L238.5 157.1 L240.0 157.2 L241.5 157.4 L243.0 157.6 L244.5 157.7 L246.0 157.9 L247.5 158.0 L249.0 158.2 L250.5 158.3 L252.0 158.5 L253.5 158.6 L255.0 158.7 L256.5 158.9 L258.0 159.0 L259.5 159.1 L261.0 159.3 L262.5 159.4 L264.0 159.5 L265.5 159.6 L267.0 159.7 L268.5 159.8 L270.0 160.0 L271.5 160.1 L273.0 160.2 L274.5 160.3 L276.0 160.4 L277.5 160.5 L279.0 160.6 L280.5 160.7 L282.0 160.8 L283.5 160.9 L285.0 161.0 L286.5 161.0 L288.0 161.1 L289.5 161.2 L291.0 161.3 L292.5 161.4 L294.0 161.5 L295.5 161.5 L297.0 161.6 L298.5 161.7 L300.0 161.8 L300.0 165 Z' fill='var(--c2)' fill-opacity='0.25'/><path d='M165.0 165 L165.0 158.5 L166.5 158.8 L168.0 159.1 L169.5 159.3 L171.0 159.6 L172.5 159.8 L174.0 160.0 L175.5 160.3 L177.0 160.5 L178.5 160.7 L180.0 160.9 L181.5 161.0 L183.0 161.2 L184.5 161.4 L186.0 161.5 L187.5 161.7 L189.0 161.8 L190.5 162.0 L192.0 162.1 L193.5 162.2 L195.0 162.4 L196.5 162.5 L198.0 162.6 L199.5 162.7 L201.0 162.8 L202.5 162.9 L204.0 163.0 L205.5 163.1 L207.0 163.2 L208.5 163.3 L210.0 163.3 L211.5 163.4 L213.0 163.5 L214.5 163.5 L216.0 163.6 L217.5 163.7 L219.0 163.7 L220.5 163.8 L222.0 163.8 L223.5 163.9 L225.0 163.9 L226.5 164.0 L228.0 164.0 L229.5 164.1 L231.0 164.1 L232.5 164.2 L234.0 164.2 L235.5 164.2 L237.0 164.3 L238.5 164.3 L240.0 164.3 L241.5 164.4 L243.0 164.4 L244.5 164.4 L246.0 164.4 L247.5 164.5 L249.0 164.5 L250.5 164.5 L252.0 164.5 L253.5 164.6 L255.0 164.6 L256.5 164.6 L258.0 164.6 L259.5 164.6 L261.0 164.7 L262.5 164.7 L264.0 164.7 L265.5 164.7 L267.0 164.7 L268.5 164.7 L270.0 164.7 L271.5 164.8 L273.0 164.8 L274.5 164.8 L276.0 164.8 L277.5 164.8 L279.0 164.8 L280.5 164.8 L282.0 164.8 L283.5 164.8 L285.0 164.8 L286.5 164.8 L288.0 164.9 L289.5 164.9 L291.0 164.9 L292.5 164.9 L294.0 164.9 L295.5 164.9 L297.0 164.9 L298.5 164.9 L300.0 164.9 L300.0 165 Z' fill='var(--c1)' fill-opacity='0.55'/><path d='M30 165 V22' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#thiz-11)'/><path d='M30 165 H306' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-end='url(#thiz-11)'/><polyline points='30.0,165.0 31.5,106.5 33.0,86.3 34.5,73.3 36.0,64.3 37.5,57.9 39.0,53.4 40.5,50.3 42.0,48.4 43.5,47.3 45.0,47.0 46.5,47.3 48.0,48.0 49.5,49.2 51.0,50.7 52.5,52.4 54.0,54.4 55.5,56.6 57.0,58.9 58.5,61.3 60.0,63.8 61.5,66.3 63.0,68.9 64.5,71.6 66.0,74.2 67.5,76.9 69.0,79.5 70.5,82.1 72.0,84.7 73.5,87.3 75.0,89.8 76.5,92.3 78.0,94.7 79.5,97.1 81.0,99.5 82.5,101.8 84.0,104.0 85.5,106.2 87.0,108.3 88.5,110.3 90.0,112.3 91.5,114.3 93.0,116.2 94.5,118.0 96.0,119.8 97.5,121.5 99.0,123.2 100.5,124.8 102.0,126.3 103.5,127.8 105.0,129.3 106.5,130.7 108.0,132.0 109.5,133.4 111.0,134.6 112.5,135.8 114.0,137.0 115.5,138.1 117.0,139.2 118.5,140.3 120.0,141.3 121.5,142.2 123.0,143.2 124.5,144.1 126.0,144.9 127.5,145.8 129.0,146.6 130.5,147.3 132.0,148.1 133.5,148.8 135.0,149.5 136.5,150.1 138.0,150.7 139.5,151.3 141.0,151.9 142.5,152.5 144.0,153.0 145.5,153.5 147.0,154.0 148.5,154.5 150.0,154.9 151.5,155.4 153.0,155.8 154.5,156.2 156.0,156.5 157.5,156.9 159.0,157.3 160.5,157.6 162.0,157.9 163.5,158.2 165.0,158.5 166.5,158.8 168.0,159.1 169.5,159.3 171.0,159.6 172.5,159.8 174.0,160.0 175.5,160.3 177.0,160.5 178.5,160.7 180.0,160.9 181.5,161.0 183.0,161.2 184.5,161.4 186.0,161.5 187.5,161.7 189.0,161.8 190.5,162.0 192.0,162.1 193.5,162.2 195.0,162.4 196.5,162.5 198.0,162.6 199.5,162.7 201.0,162.8 202.5,162.9 204.0,163.0 205.5,163.1 207.0,163.2 208.5,163.3 210.0,163.3 211.5,163.4 213.0,163.5 214.5,163.5 216.0,163.6 217.5,163.7 219.0,163.7 220.5,163.8 222.0,163.8 223.5,163.9 225.0,163.9 226.5,164.0 228.0,164.0 229.5,164.1 231.0,164.1 232.5,164.2 234.0,164.2 235.5,164.2 237.0,164.3 238.5,164.3 240.0,164.3 241.5,164.4 243.0,164.4 244.5,164.4 246.0,164.4 247.5,164.5 249.0,164.5 250.5,164.5 252.0,164.5 253.5,164.6 255.0,164.6 256.5,164.6 258.0,164.6 259.5,164.6 261.0,164.7 262.5,164.7 264.0,164.7 265.5,164.7 267.0,164.7 268.5,164.7 270.0,164.7 271.5,164.8 273.0,164.8 274.5,164.8 276.0,164.8 277.5,164.8 279.0,164.8 280.5,164.8 282.0,164.8 283.5,164.8 285.0,164.8 286.5,164.8 288.0,164.9 289.5,164.9 291.0,164.9 292.5,164.9 294.0,164.9 295.5,164.9 297.0,164.9 298.5,164.9 300.0,164.9' fill='none' stroke='var(--c1)' stroke-width='2.2'/><polyline points='30.0,165.0 31.5,143.8 33.0,135.7 34.5,130.0 36.0,125.6 37.5,122.1 39.0,119.1 40.5,116.7 42.0,114.6 43.5,112.9 45.0,111.4 46.5,110.2 48.0,109.2 49.5,108.3 51.0,107.6 52.5,107.1 54.0,106.7 55.5,106.4 57.0,106.2 58.5,106.0 60.0,106.0 61.5,106.0 63.0,106.1 64.5,106.3 66.0,106.5 67.5,106.8 69.0,107.1 70.5,107.5 72.0,107.8 73.5,108.3 75.0,108.7 76.5,109.2 78.0,109.7 79.5,110.2 81.0,110.8 82.5,111.4 84.0,111.9 85.5,112.5 87.0,113.1 88.5,113.8 90.0,114.4 91.5,115.0 93.0,115.7 94.5,116.3 96.0,117.0 97.5,117.6 99.0,118.3 100.5,118.9 102.0,119.6 103.5,120.3 105.0,120.9 106.5,121.6 108.0,122.3 109.5,122.9 111.0,123.6 112.5,124.2 114.0,124.9 115.5,125.5 117.0,126.1 118.5,126.8 120.0,127.4 121.5,128.0 123.0,128.6 124.5,129.3 126.0,129.9 127.5,130.5 129.0,131.1 130.5,131.7 132.0,132.2 133.5,132.8 135.0,133.4 136.5,133.9 138.0,134.5 139.5,135.0 141.0,135.6 142.5,136.1 144.0,136.6 145.5,137.2 147.0,137.7 148.5,138.2 150.0,138.7 151.5,139.2 153.0,139.6 154.5,140.1 156.0,140.6 157.5,141.0 159.0,141.5 160.5,142.0 162.0,142.4 163.5,142.8 165.0,143.3 166.5,143.7 168.0,144.1 169.5,144.5 171.0,144.9 172.5,145.3 174.0,145.7 175.5,146.0 177.0,146.4 178.5,146.8 180.0,147.1 181.5,147.5 183.0,147.8 184.5,148.2 186.0,148.5 187.5,148.9 189.0,149.2 190.5,149.5 192.0,149.8 193.5,150.1 195.0,150.4 196.5,150.7 198.0,151.0 199.5,151.3 201.0,151.6 202.5,151.8 204.0,152.1 205.5,152.4 207.0,152.6 208.5,152.9 210.0,153.1 211.5,153.4 213.0,153.6 214.5,153.9 216.0,154.1 217.5,154.3 219.0,154.5 220.5,154.8 222.0,155.0 223.5,155.2 225.0,155.4 226.5,155.6 228.0,155.8 229.5,156.0 231.0,156.2 232.5,156.4 234.0,156.5 235.5,156.7 237.0,156.9 238.5,157.1 240.0,157.2 241.5,157.4 243.0,157.6 244.5,157.7 246.0,157.9 247.5,158.0 249.0,158.2 250.5,158.3 252.0,158.5 253.5,158.6 255.0,158.7 256.5,158.9 258.0,159.0 259.5,159.1 261.0,159.3 262.5,159.4 264.0,159.5 265.5,159.6 267.0,159.7 268.5,159.8 270.0,160.0 271.5,160.1 273.0,160.2 274.5,160.3 276.0,160.4 277.5,160.5 279.0,160.6 280.5,160.7 282.0,160.8 283.5,160.9 285.0,161.0 286.5,161.0 288.0,161.1 289.5,161.2 291.0,161.3 292.5,161.4 294.0,161.5 295.5,161.5 297.0,161.6 298.5,161.7 300.0,161.8' fill='none' stroke='var(--c2)' stroke-width='2.2'/><line x1='165.0' y1='40' x2='165.0' y2='165' stroke='var(--ink)' stroke-width='1.4' stroke-dasharray='4 3'/><text x='165.0' y='34' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Eₐ (threshold)</text><text x='36' y='18' font-size='11' fill='var(--muted)' text-anchor='start'>number of particles</text><text x='300' y='181' font-size='11' fill='var(--muted)' text-anchor='end'>kinetic energy</text><text x='76' y='40' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>T₁</text><text x='118' y='88' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='700'>T₂ > T₁</text><text x='204' y='120' font-size='11' fill='var(--ink)' text-anchor='start'>Above Eₐ:</text><text x='204' y='134' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>more at T₂</text><text x='160' y='196' font-size='10' fill='var(--muted)' text-anchor='middle'>The total area under the curves (number of particles) is the same.</text></svg>",
+    "key": "Roughly, every 10 °C rise about doubles the rate of many reactions."
+   },
+   {
+    "h": "Surface area",
+    "p": "<b>Heterogeneous</b> reactions, such as solid–solution ones, happen only at the contact surface. Grinding a solid into powder increases the surface, so collisions and the rate go up.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M45 50 h64 v64 h-64 z' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><path d='M45 50 l25.6 -25.6 h64 l-25.6 25.6 z' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)'/><path d='M109 50 l25.6 -25.6 v64 l-25.6 25.6 z' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)'/><text x='88' y='140' font-size='11' fill='var(--muted)' text-anchor='middle'>1 cube, edge 2 cm</text><text x='88' y='158' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>surface: 6 × 4 = 24 cm²</text><path d='M186 54 h22 v22 h-22 z' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><path d='M186 54 l8.8 -8.8 h22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)'/><path d='M208 54 l8.8 -8.8 v22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)'/><path d='M186 92 h22 v22 h-22 z' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><path d='M186 92 l8.8 -8.8 h22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)'/><path d='M208 92 l8.8 -8.8 v22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)'/><path d='M216 54 h22 v22 h-22 z' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><path d='M216 54 l8.8 -8.8 h22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)'/><path d='M238 54 l8.8 -8.8 v22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)'/><path d='M216 92 h22 v22 h-22 z' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><path d='M216 92 l8.8 -8.8 h22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)'/><path d='M238 92 l8.8 -8.8 v22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)'/><path d='M246 54 h22 v22 h-22 z' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><path d='M246 54 l8.8 -8.8 h22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)'/><path d='M268 54 l8.8 -8.8 v22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)'/><path d='M246 92 h22 v22 h-22 z' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><path d='M246 92 l8.8 -8.8 h22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)'/><path d='M268 92 l8.8 -8.8 v22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)'/><path d='M276 54 h22 v22 h-22 z' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><path d='M276 54 l8.8 -8.8 h22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)'/><path d='M298 54 l8.8 -8.8 v22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)'/><path d='M276 92 h22 v22 h-22 z' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><path d='M276 92 l8.8 -8.8 h22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)'/><path d='M298 92 l8.8 -8.8 v22 l-8.8 8.8 z' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)'/><text x='242' y='140' font-size='11' fill='var(--muted)' text-anchor='middle'>8 cubes, edge 1 cm</text><text x='242' y='158' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>surface: 8 × 6 = 48 cm²</text><line x1='160' y1='20' x2='160' y2='166' stroke='var(--line)' stroke-width='1'/><text x='160' y='190' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>Same mass, twice the surface: powder is faster</text></svg>",
+    "key": "Flour dust in the air can explode from a spark. Surface area plays no role in gas–gas reactions."
+   },
+   {
+    "h": "Catalyst",
+    "p": "A catalyst speeds up a reaction by opening <b>a new path with a lower E<sub>a</sub></b>, and it comes out of the reaction unchanged. The forward and reverse rates both go up, but ΔH doesn't change.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='thiz-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='thiz-131' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><defs><marker id='thiz-132' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c5)'/></marker></defs><line x1='22' y1='20' x2='22' y2='172' stroke='var(--ink)' stroke-width='1.2'/><line x1='22' y1='172' x2='306' y2='172' stroke='var(--ink)' stroke-width='1.2'/><text x='26' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>PE</text><path d='M26 110 H110 C145.0 110 145.0 34 180 34 C215.0 34 215.0 146 250 146 H300' fill='none' stroke='var(--ink)' stroke-width='2.2'/><path d='M26 110 H110 C145.0 110 145.0 80 180 80 C215.0 80 215.0 146 250 146 H300' fill='none' stroke='var(--c3)' stroke-width='2.2' stroke-dasharray='5 4'/><line x1='38' y1='34' x2='180' y2='34' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><line x1='70' y1='80' x2='180' y2='80' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><path d='M44 108 V36' stroke='var(--c2)' stroke-width='1.4' fill='none' marker-start='url(#thiz-13)' marker-end='url(#thiz-13)'/><text x='39' y='64' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>Eₐ</text><path d='M86 108 V82' stroke='var(--c3)' stroke-width='1.4' fill='none' marker-start='url(#thiz-131)' marker-end='url(#thiz-131)'/><text x='102' y='72' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>Eₐ (cat.)</text><line x1='240' y1='110' x2='300' y2='110' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><path d='M290 112 V144' stroke='var(--c5)' stroke-width='1.4' fill='none' marker-start='url(#thiz-132)' marker-end='url(#thiz-132)'/><text x='268' y='164' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>ΔH same</text><text x='196' y='26' font-size='11' fill='var(--ink)' text-anchor='start'>uncatalyzed</text><text x='214' y='76' font-size='11' fill='var(--c3)' text-anchor='start' font-weight='700'>catalyzed</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>Forward and reverse Eₐ drop by the same amount.</text></svg>",
+    "key": "The amount of product doesn't change either. The catalysts in living things are enzymes."
+   },
+   {
+    "h": "Types of catalysts and inhibitors",
+    "p": "A catalyst in the same phase as the reactants is <b>homogeneous</b>, and one in a different phase is <b>heterogeneous</b>. Substances that slow a reaction down are called <b>inhibitors</b>. Food preservatives delay spoilage this way.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>2H₂O₂(aq) → 2H₂O(l) + O₂(g)</text><rect x='8' y='32' width='148' height='128' rx='6' fill='var(--c3)' fill-opacity='0.06' stroke='var(--c3)' stroke-width='1.2'/><rect x='164' y='32' width='148' height='128' rx='6' fill='var(--c5)' fill-opacity='0.06' stroke='var(--c5)' stroke-width='1.2'/><text x='82' y='50' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Homogeneous</text><text x='238' y='50' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Heterogeneous</text><path d='M52 64 V132 Q52 138 58 138 H106 Q112 138 112 132 V64' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='53' y='84' width='58' height='53' fill='var(--c1)' fill-opacity='0.15'/><circle cx='66' cy='100' r='3.5' fill='var(--c3)' fill-opacity='0.7'/><circle cx='92' cy='96' r='3.5' fill='var(--c3)' fill-opacity='0.7'/><circle cx='78' cy='118' r='3.5' fill='var(--c3)' fill-opacity='0.7'/><circle cx='100' cy='126' r='3.5' fill='var(--c3)' fill-opacity='0.7'/><text x='82' y='154' font-size='11' fill='var(--muted)' text-anchor='middle'>I⁻ in water: one phase</text><path d='M208 64 V132 Q208 138 214 138 H262 Q268 138 268 132 V64' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='209' y='84' width='58' height='53' fill='var(--c1)' fill-opacity='0.15'/><rect x='216' y='126' width='44' height='10' rx='2' fill='var(--c5)' fill-opacity='0.6'/><circle cx='226' cy='112' r='3' fill='none' stroke='var(--ink)' stroke-width='1'/><circle cx='244' cy='104' r='3' fill='none' stroke='var(--ink)' stroke-width='1'/><circle cx='234' cy='92' r='3' fill='none' stroke='var(--ink)' stroke-width='1'/><text x='238' y='154' font-size='11' fill='var(--muted)' text-anchor='middle'>solid MnO₂: two phases</text><rect x='8' y='168' width='304' height='26' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)' stroke-width='1.2'/><text x='160' y='186' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Inhibitor: slows a reaction (food preservatives)</text></svg>",
+    "key": "I⁻ dissolved in water speeds up H₂O₂ as a homogeneous catalyst, and solid MnO₂ as a heterogeneous one. The solid Pt and Pd in a catalytic converter are also heterogeneous catalysts.",
+    "once": {
+     "soru": "What do preservatives added to food do to spoilage reactions?",
+     "secenekler": [
+      {
+       "yazi": "Slow them down",
+       "neden": "Preservatives are inhibitors and delay spoilage.",
+       "dogru": true
+      },
+      {
+       "yazi": "Speed them up",
+       "neden": "A substance that speeds up a reaction is a catalyst."
+      },
+      {
+       "yazi": "No effect",
+       "neden": "If they had no effect, they wouldn't be added to food."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• Rate is the change in concentration per unit time, and the rates of substances are proportional to the coefficients.<br>• An effective collision needs enough energy and the right orientation.<br>• ΔH = E<sub>a,forward</sub> − E<sub>a,reverse</sub>. A catalyst lowers E<sub>a</sub> and doesn't change ΔH.<br>• The rate law is rate = k[A]<sup>x</sup>[B]<sup>y</sup>, and the orders are found by experiment.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='12' width='304' height='30' rx='5' fill='var(--panel)' fill-opacity='1'/><text x='70' y='32' font-size='12' fill='var(--muted)' text-anchor='middle' font-weight='700'>Change</text><text x='160' y='32' font-size='12' fill='var(--muted)' text-anchor='middle' font-weight='700'>rate</text><text x='220' y='32' font-size='12' fill='var(--muted)' text-anchor='middle' font-weight='700'>k</text><text x='280' y='32' font-size='12' fill='var(--muted)' text-anchor='middle' font-weight='700'>Eₐ</text><text x='70' y='70' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Concentration ↑</text><text x='160' y='70' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>↑*</text><text x='220' y='70' font-size='13' fill='var(--muted)' text-anchor='middle'>same</text><text x='280' y='70' font-size='13' fill='var(--muted)' text-anchor='middle'>same</text><line x1='8' y1='85' x2='312' y2='85' stroke='var(--line)' stroke-width='1'/><text x='70' y='108' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Temperature ↑</text><text x='160' y='108' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>↑</text><text x='220' y='108' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>↑</text><text x='280' y='108' font-size='13' fill='var(--muted)' text-anchor='middle'>same</text><line x1='8' y1='123' x2='312' y2='123' stroke='var(--line)' stroke-width='1'/><text x='70' y='146' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Catalyst</text><text x='160' y='146' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>↑</text><text x='220' y='146' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>↑</text><text x='280' y='146' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>↓</text><line x1='8' y1='161' x2='312' y2='161' stroke='var(--line)' stroke-width='1'/><text x='160' y='172' font-size='11' fill='var(--ink)' text-anchor='middle'>ΔH: unchanged in all three (including catalyst)</text><text x='160' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>* for substances with nonzero order</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "The rate law of X + 2Y → Z is rate = k[X]<sup>2</sup>[Y]. At the same temperature, if [X] is tripled and [Y] is halved, by what factor does the rate change?",
+    "cevap": 4.5,
+    "birim": "times",
+    "e": "The rate changes by 3² × ½ = 4.5 times. The orders come from the rate law, not from the coefficients of the equation."
+   },
+   {
+    "tur": "ayir",
+    "q": "For a reaction between a solid and a solution, sort each change by its effect on the rate.",
+    "gruplar": [
+     "Increases rate",
+     "Decreases rate"
+    ],
+    "ogeler": [
+     [
+      "Raising the temperature",
+      0
+     ],
+     [
+      "Adding a catalyst",
+      0
+     ],
+     [
+      "Powdering the solid",
+      0
+     ],
+     [
+      "Adding an inhibitor",
+      1
+     ],
+     [
+      "Lowering the temperature",
+      1
+     ],
+     [
+      "Lumps instead of powder",
+      1
+     ]
+    ],
+    "e": "As temperature rises, more particles exceed E<sub>a</sub>. A catalyst opens a path with lower E<sub>a</sub>. A powdered solid has a larger contact surface. An inhibitor, low temperature and small contact surface slow the reaction."
+   },
+   {
+    "tur": "sayi",
+    "q": "For a reaction, E<sub>a,forward</sub> = 120 kJ and E<sub>a,reverse</sub> = 45 kJ. What is ΔH for the reaction in kJ?",
+    "cevap": 75,
+    "birim": "kJ",
+    "e": "ΔH = E<sub>a,forward</sub> − E<sub>a,reverse</sub> = 120 − 45 = +75 kJ. The result is positive, so the reaction is endothermic. The products are 75 kJ higher than the reactants."
+   },
+   {
+    "q": "The reaction 2NO + Br<sub>2</sub> → 2NOBr has two steps: 1) NO + Br<sub>2</sub> → NOBr<sub>2</sub> (slow), 2) NOBr<sub>2</sub> + NO → 2NOBr (fast). Which is the rate law?",
+    "o": [
+     "rate = k[NO]<sup>2</sup>[Br<sub>2</sub>]",
+     "rate = k[NO][Br<sub>2</sub>]",
+     "rate = k[NOBr<sub>2</sub>][NO]",
+     "rate = k[NO]<sup>2</sup>"
+    ],
+    "a": 1,
+    "e": "The slow step sets the rate. The reactants of this step are one NO and one Br<sub>2</sub>, so rate = k[NO][Br<sub>2</sub>]. The second NO enters in the fast step and doesn't affect the rate.",
+    "y": [
+     "You took the exponents from the coefficients of the net equation. The rate law is written from the slow step, which has only one NO.",
+     "",
+     "NOBr<sub>2</sub> is an intermediate. Intermediates are not written in the rate law.",
+     "Br<sub>2</sub> takes part in the slow step and can't be left out of the rate law."
+    ]
+   }
+  ]
+ },
  "asit-baz": {
   "title": "Acids, bases and salts",
   "summary": "Learn the definitions of acids and bases, pH, Ka, neutralization, salts and titration.",

@@ -11544,6 +11544,335 @@
   ],
   "soruOnce": true
  },
+ "tepkime-hizi": {
+  "id": "tepkime-hizi",
+  "ders": "kimya",
+  "konu": "tepkime-hizi",
+  "baslik": "Reaction rate",
+  "ozet": "Watch the concentration curve and collide molecules. Try temperature and a catalyst, then find the rate law from experiments.",
+  "adimlar": [
+   {
+    "baslik": "Does the rate slow down?",
+    "metin": "The reaction A → B is starting. Press play and watch the slope of the curve.",
+    "sahne": {
+     "tur": "kim9-egri",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to the rate as the reaction goes on?",
+     "secenekler": [
+      {
+       "yazi": "It increases",
+       "neden": "The rate depends on the concentration of the reactants. As A is used up, there are fewer particles to collide, so the rate doesn't increase."
+      },
+      {
+       "yazi": "It decreases",
+       "neden": "As A runs out, the number of collisions drops and the slope flattens. The rate is highest at the start.",
+       "dogru": true
+      },
+      {
+       "yazi": "It stays the same",
+       "neden": "A constant rate would mean the curve is a straight line. But the curve keeps flattening."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Coefficients and rate",
+    "metin": "Rates are proportional to the coefficients. In N₂ + 3H₂ → 2NH₃, H₂ is used up at <b>0.6 M/s</b>. Set the rate at which NH₃ forms.",
+    "sahne": {
+     "tur": "kim9-katsayi"
+    },
+    "deger": {
+     "nh3": 2
+    },
+    "kontroller": [
+     {
+      "ad": "nh3",
+      "etiket": "NH₃ formation rate",
+      "min": 1,
+      "max": 10,
+      "birim": "M/s",
+      "carpan": 0.1,
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "nh3": 4
+     },
+     "ipucu": "Rates are proportional to the coefficients. While 3 mol of H₂ is used up, 2 mol of NH₃ forms.",
+     "tamam": "0.6 × 2/3 = <b>0.4 M/s</b>. Rates are proportional to the coefficients: 0.2 M/s for N₂, 0.6 for H₂ and 0.4 for NH₃. Dividing each by its coefficient gives the same reaction rate, 0.2 M/s."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Effective collision",
+    "metin": "Ea is the minimum energy for a collision to give products. In the reaction AB + C → A + BC, Ea = 60 kJ. Set the energy and the orientation, then press play.",
+    "sahne": {
+     "tur": "kim9-carpisma",
+     "sure": 3
+    },
+    "deger": {
+     "yon": 0,
+     "e": 30
+    },
+    "kontroller": [
+     {
+      "ad": "yon",
+      "etiket": "C hits the B end",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "e",
+      "etiket": "Collision energy",
+      "min": 10,
+      "max": 100,
+      "adim": 10,
+      "birim": "kJ",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "yon": 1,
+      "e": [
+       60,
+       100
+      ]
+     },
+     "tamam": "The energy reached Ea and C hit the B end. This is an <b>effective collision</b>. Very few collisions are effective, so not every collision gives products."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Temperature",
+    "metin": "The curve shows how the particles are spread over energies. The shaded area shows the particles above Ea. Raise the temperature and see what changes.",
+    "sahne": {
+     "tur": "kim9-maxwell"
+    },
+    "deger": {
+     "T": 300
+    },
+    "kontroller": [
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 300,
+      "max": 500,
+      "adim": 20,
+      "birim": "K",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why does the rate rise when temperature rises?",
+     "secenekler": [
+      {
+       "yazi": "Ea gets smaller",
+       "neden": "The Ea line didn't move. Temperature doesn't shift the threshold, it increases the number of particles past it."
+      },
+      {
+       "yazi": "There are more particles",
+       "neden": "The number of particles in the container is the same. So the total area under the curve doesn't change."
+      },
+      {
+       "yazi": "More particles exceed Ea",
+       "neden": "The curve spreads to the right and the shaded area grows. So the number of effective collisions per unit time increases.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 12
+   },
+   {
+    "baslik": "Surface area",
+    "metin": "The same mass of marble (CaCO₃) is dropped into HCl. In one flask the marble is in lumps, in the other it is powdered. The CO₂ released will inflate balloons.",
+    "sahne": {
+     "tur": "kim9-yuzey",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which balloon inflates faster?",
+     "secenekler": [
+      {
+       "yazi": "Lump marble",
+       "neden": "With lumps, the acid touches only the outer surface. A small surface means few collisions."
+      },
+      {
+       "yazi": "Powdered marble",
+       "neden": "More CaCO₃ particles collide with the acid per unit time, so CO₂ comes out fast. The mass is the same, so in the end both balloons inflate equally.",
+       "dogru": true
+      },
+      {
+       "yazi": "Both at the same rate",
+       "neden": "In the end the total CO₂ released is the same, but the surface decides how fast it comes out."
+      }
+     ]
+    },
+    "kart": 13
+   },
+   {
+    "baslik": "Collision lab",
+    "metin": "A and B particles are colliding in the container. An orange flash shows an <b>effective collision</b> that gives products. The curve on the right is the energy spread of the particles, and the shaded part shows those above Ea. Change the concentration, the temperature and the catalyst.",
+    "sahne": {
+     "tur": "sim-carpisma"
+    },
+    "deger": {
+     "T": 300,
+     "n": 1,
+     "kat": 0
+    },
+    "kontroller": [
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 250,
+      "max": 400,
+      "adim": 10,
+      "birim": "K"
+     },
+     {
+      "ad": "n",
+      "etiket": "Concentration",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac",
+      "onek": "×"
+     },
+     {
+      "ad": "kat",
+      "etiket": "Catalyst",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "At 300 K, <b>double</b> the concentration of A and B. By what factor did the rate change?",
+       "hedef": {
+        "n": 2,
+        "T": 300,
+        "kat": 0
+       },
+       "coz": [
+        {
+         "kat": 0,
+         "T": 300,
+         "n": 2
+        }
+       ],
+       "tamam": "The rate went up 4 times. Both A and B doubled, so A–B collisions went up 2 × 2 = 4 times. For this reaction, rate = k[A][B]."
+      },
+      {
+       "yazi": "At concentration 1, raise the temperature from <b>300 K</b> to just <b>310 K</b>.",
+       "hedef": [
+        {
+         "n": 1,
+         "T": 300,
+         "kat": 0
+        },
+        {
+         "n": 1,
+         "T": 310,
+         "kat": 0
+        }
+       ],
+       "sirali": true,
+       "coz": [
+        {
+         "kat": 0,
+         "n": 1,
+         "T": 300
+        },
+        {
+         "T": 310
+        }
+       ],
+       "tamam": "A 10 K rise made the rate about 1.9 times larger. The particles sped up a little, but the main reason is that the part of the curve above Ea grew."
+      },
+      {
+       "yazi": "At 300 K and concentration 1, add a <b>catalyst</b>.",
+       "hedef": {
+        "n": 1,
+        "T": 300,
+        "kat": 1
+       },
+       "coz": [
+        {
+         "n": 1,
+         "T": 300,
+         "kat": 1
+        }
+       ],
+       "tamam": "The catalyst lowered Ea from 50 kJ to 40 kJ and the threshold moved left. Without any change in temperature, the rate went up about 55 times. A catalyst comes out of the reaction unchanged."
+      }
+     ]
+    },
+    "kart": 14
+   },
+   {
+    "baslik": "Rate law from experiments",
+    "metin": "[X] is kept constant. Increase [Y] and watch by what factor the rate changes.",
+    "sahne": {
+     "tur": "kim9-derece"
+    },
+    "deger": {
+     "y": 1
+    },
+    "kontroller": [
+     {
+      "ad": "y",
+      "etiket": "[Y]",
+      "min": 1,
+      "max": 4,
+      "birim": "M",
+      "carpan": 0.1,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What is the order of the reaction in Y?",
+     "secenekler": [
+      {
+       "yazi": "1",
+       "neden": "If it were first order, doubling [Y] would double the rate. Here the rate goes up 4 times."
+      },
+      {
+       "yazi": "3",
+       "neden": "If it were third order, doubling [Y] would make the rate 8 times larger."
+      },
+      {
+       "yazi": "2",
+       "neden": "When [Y] doubled, the rate went up 4 times, and when it tripled, 9 times. The rate is proportional to [Y]², so y = 2.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 8
+   }
+  ],
+  "kapanis": [
+   "Reaction rate is the change in concentration per unit time (<b>rate = −Δ[reactant]/Δt</b>). The rates of substances are proportional to their coefficients.",
+   "For a reaction to happen, a collision must be <b>effective</b>. The energy must exceed Ea and the orientation must be right.",
+   "Temperature increases the fraction of particles above Ea. A larger contact surface speeds up heterogeneous reactions.",
+   "A <b>catalyst</b> lowers Ea equally in both directions and doesn't change ΔH.",
+   "The rate law is <b>rate = k[A]ˣ[B]ʸ</b>. If doubling a concentration makes the rate 4 times larger, the order in that substance is 2."
+  ],
+  "soruOnce": true
+ },
  "asit-baz": {
   "id": "asit-baz",
   "ders": "kimya",
