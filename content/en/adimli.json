@@ -19551,6 +19551,232 @@
   ],
   "soruOnce": true
  },
+ "sindirim": {
+  "id": "sindirim",
+  "ders": "biyoloji",
+  "konu": "sindirim",
+  "baslik": "Digestive system",
+  "ozet": "Follow a bite from the mouth to the anus, break down food, run enzymes at the right pH and open up the surface of the villi.",
+  "adimlar": [
+   {
+    "baslik": "The journey of a bite",
+    "metin": "Food travels through a one-way tube that runs from the mouth to the anus. Next to this tube are the <b>accessory organs</b>. Make a guess first, then follow the bite.",
+    "sahne": {
+     "tur": "biy11-kanal",
+     "sure": 7
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which one does the bite not pass through?",
+     "secenekler": [
+      {
+       "yazi": "Stomach",
+       "neden": "The stomach is part of the digestive tract. Here the bite is churned with acid and turns into a soupy mix called chyme."
+      },
+      {
+       "yazi": "Esophagus",
+       "neden": "The esophagus pushes the bite to the stomach by peristalsis. So the bite does pass through it."
+      },
+      {
+       "yazi": "Pancreas",
+       "dogru": true,
+       "neden": "The pancreas is an accessory organ, and food does not pass through it. The pancreas releases its juice into the duodenum. The liver works the same way."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Chew",
+    "metin": "Break the bite into pieces and make its surface 4 times larger.",
+    "sahne": {
+     "tur": "biy11-yuzey"
+    },
+    "deger": {
+     "n": 1
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Cuts",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 4
+     },
+     "ipucu": "The more pieces you cut each edge into, the larger the total surface.",
+     "tamam": "You cut the bite into 64 pieces and made its surface 4 times larger. The surface amylase can touch grew, but the substance is still starch."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "What starts where?",
+    "metin": "Change the food and play all three. Then think about the case below.",
+    "sahne": {
+     "tur": "biy11-baslangic",
+     "sure": 5
+    },
+    "deger": {
+     "b": 1
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Food",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 3,
+     "soru": "In someone whose salivary glands do not work, what happens to the chemical digestion of starch?",
+     "secenekler": [
+      {
+       "yazi": "It never happens",
+       "neden": "Pancreatic juice also contains amylase. So starch is still digested in the small intestine."
+      },
+      {
+       "yazi": "It starts in the small intestine",
+       "dogru": true,
+       "neden": "The early digestion in the mouth does not happen. But pancreatic amylase and maltase still break starch down to glucose in the small intestine."
+      },
+      {
+       "yazi": "It starts in the stomach with pepsin",
+       "neden": "Pepsin acts only on proteins. The enzyme that breaks down starch is amylase."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Enzymes and pH",
+    "metin": "Pepsin and trypsin work at different pH values. Change the pH and find where pepsin works fastest.",
+    "sahne": {
+     "tur": "biy11-ph"
+    },
+    "deger": {
+     "ph": 7
+    },
+    "kontroller": [
+     {
+      "ad": "ph",
+      "etiket": "pH",
+      "min": 1,
+      "max": 9
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "ph": 2
+     },
+     "ipucu": "Pepsin works in the stomach. Stomach acid makes the pH very low.",
+     "tamam": "At pH 2, pepsin works fastest, while trypsin has almost stopped. Every enzyme has its own optimum pH. When the conditions change, one stops and the other starts working."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Bile",
+    "metin": "Fat forms big drops in water. <b>Lipase</b> can only work on the surface of a drop. <b>Bile</b>, made by the liver, flows into the duodenum. Turn bile on and press play.",
+    "sahne": {
+     "tur": "biy11-safra",
+     "sure": 4
+    },
+    "deger": {
+     "safra": 0
+    },
+    "kontroller": [
+     {
+      "ad": "safra",
+      "etiket": "Add bile",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "safra": 1
+     },
+     "ipucu": "Bile breaks fat into tiny droplets. With more surface, lipase works faster.",
+     "tamam": "Bile broke the fat into tiny droplets. As the surface grew, lipase sped up and broke down all of the fat in the same time."
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Villi",
+    "metin": "Most absorption happens in the <b>small intestine</b>. If the small intestine were a smooth tube, its surface would be very small. Fold the wall, then add the villi and microvilli.",
+    "sahne": {
+     "tur": "biy11-villus"
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Surface level",
+      "min": 0,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": 3
+     },
+     "ipucu": "At the last level, the membrane of each lining cell forms brush-like projections.",
+     "tamam": "Folds, villi and microvilli together increase the surface hundreds of times. The maltase, lactase and peptidases on the microvillus membrane also carry out the last step of digestion here."
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Into blood or lymph?",
+    "metin": "Inside each villus there is a network of <b>blood capillaries</b> and, in the middle, a <b>lymph capillary</b> with a closed end. Make a guess first, then press play.",
+    "sahne": {
+     "tur": "biy11-emilim",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In the villus, where do most fatty acids and glycerol go?",
+     "secenekler": [
+      {
+       "yazi": "Into the lymph capillary",
+       "dogru": true,
+       "neden": "Fatty acids and glycerol are rebuilt into fat in the lining cell, and most of it passes into the lymph. Vitamins A, D, E and K follow this route too. The lymph later joins the blood."
+      },
+      {
+       "yazi": "Into the blood capillary",
+       "neden": "Glucose, amino acids, water and water-soluble vitamins pass into the blood capillary. This blood goes to the liver first. Most fats do not take this route."
+      },
+      {
+       "yazi": "Into the large intestine",
+       "neden": "The large intestine releases no digestive enzymes and only absorbs water and minerals. Fat is fully digested and absorbed in the small intestine."
+      }
+     ]
+    },
+    "kart": 11
+   }
+  ],
+  "kapanis": [
+   "Food moves through a one-way tube. The liver and pancreas are not part of the tube, they only release their secretions into it.",
+   "Mechanical digestion increases the surface. Only enzymes change the molecule, by hydrolysis.",
+   "Chemical digestion starts in the mouth for carbohydrates, in the stomach for proteins and in the small intestine for fats. All of them finish in the small intestine.",
+   "Pepsin works in an acidic environment, and pancreatic enzymes work where bicarbonate has neutralized the acid. Bile is not an enzyme, it emulsifies fat.",
+   "Villi and microvilli greatly increase the surface. Glucose and amino acids pass into the blood, and most fats into the lymph."
+  ],
+  "soruOnce": true
+ },
  "ekosistem": {
   "id": "ekosistem",
   "ders": "biyoloji",
