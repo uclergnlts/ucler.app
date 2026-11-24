@@ -4,12 +4,16 @@
 import { cev } from "@/lib/dil";
 import { Capacitor } from "@capacitor/core";
 import { olay } from "./olay";
-import { SITE_URL } from "./site";
+import { APP_STORE_URL, SITE_URL } from "./site";
 
 /** Google Play'deki uygulama sayfası. App Store adresi lib/site.ts içinde (APP_STORE_URL). */
 export const PLAY_URL = "https://play.google.com/store/apps/details?id=app.ucler";
-/** "Uygulamayı puanla" satırının açacağı adres; mağaza sayfası olmayan yerde null. */
-export const magazaAdresi = () => (Capacitor.getPlatform() === "android" ? PLAY_URL : null);
+/** "Uygulamayı puanla" satırının açacağı adres: Android'de Play sayfası, iPhone'da App Store'un yorum yazma ekranı;
+ *  mağaza sayfası olmayan yerde (site) null. */
+export const magazaAdresi = () => {
+  const p = Capacitor.getPlatform();
+  return p === "android" ? PLAY_URL : p === "ios" ? `${APP_STORE_URL}?action=write-review` : null;
+};
 
 /**
  * Paylaşım menüsünü açar. Android uygulamasında tarayıcının navigator.share özelliği yoktur, o yüzden Capacitor

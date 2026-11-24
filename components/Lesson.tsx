@@ -11,7 +11,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { DERSLER, secmeli, type DersId, type Entry, type Topic } from "@/lib/dersler";
 import {
-  asamaBitir, doneKeys, ipucuGoruldu, setProg, toggleAnlamadim, useAnlamadim, useAsama, useDurumlar, useIpucu, useProg, useTarayici, useYer,
+  asamaBitir, ipucuGoruldu, setProg, toggleAnlamadim, useAnlamadim, useAsama, useDurumlar, useIpucu, useProg, useTarayici, useYer,
   yanlisKaydet, yerYaz,
 } from "@/lib/store";
 import { asamalar, kartinAsamasi, sureDk } from "@/lib/asama";
@@ -425,8 +425,9 @@ export default function Lesson({
       <article className="flex flex-col items-center gap-2 pt-4 text-center">
         {great && <Konfeti />}
         {iyi && <Madalya kupa />}
-        {/* Mağaza puanlaması yalnızca iyi bir sonucun ardından ve öğrenci en az üç konu bitirmişse istenir. */}
-        {iyi && doneKeys(prog).length >= 3 && <Puanla />}
+        {/* Mağaza puanlaması iyi bir sonucun ardından istenir; ilk iyi biten konu yeter (eskiden en az üç konu bekleniyordu,
+            yeni öğrencilerin çoğu oraya varmadığı için hiç puan gelmiyordu; Üçler 2026-11-24). En çok 60 günde bir. */}
+        {iyi && <Puanla />}
         <motion.div
           className="font-display text-[56px] leading-none font-extrabold text-acc"
           initial={{ scale: 0.6, opacity: 0 }}
