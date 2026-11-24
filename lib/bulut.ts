@@ -372,9 +372,14 @@ async function appleKodu(): Promise<string | null> {
 
 /** Uygulamaya derin bağlantıyla dönülünce (app.ucler://giris?code=...) oturumu açar. Hata varsa mesajını döner. */
 export async function uygulamaDonusu(url: string): Promise<string | null> {
-  const q = new globalThis.URL(url.replace("#", "?")).searchParams;
+  // Tarayıcı, Google'ın dönüş adresindeki boş "#" parçasını yönlendirmede korur ve bağlantı
+  // app.ucler://giris?code=...# olarak gelir. "#" işaretini "?" yapmak kodun sonuna "?" ekliyor ve Supabase
+  // kodu tanımıyordu. Bu yüzden sorgu ve # parçası ayrı ayrı okunur.
+  const [ana, parca = ""] = url.split("#");
+  const q = new globalThis.URL(ana).searchParams;
+  new URLSearchParams(parca).forEach((v, k) => { if (!q.has(k)) q.set(k, v); });
   if (q.get("error")) return cev("Giriş tamamlanamadı. Yeniden dene ya da e-postayla devam et.");
-  const kod = q.get("code");
+  const kod = q.get("code")?.trim();
   if (!kod) return null;
   const { error } = await sb().auth.exchangeCodeForSession(kod);
   return error ? hataMetni(error) : null;
