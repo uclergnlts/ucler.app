@@ -7637,6 +7637,308 @@
    }
   ]
  },
+ "fonksiyonel-gruplar": {
+  "title": "Functional groups",
+  "summary": "Learn about alcohols, ethers, aldehydes, ketones, acids, esters, amines and amides.",
+  "cards": [
+   {
+    "h": "What is a functional group?",
+    "p": "The group of atoms that decides a compound's reactions and properties is called a <b>functional group</b>. The carbon skeleton is the carrier, and the group gives the character. In formulas, <b>R</b> is the hydrocarbon part.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle'>Same carbon skeleton, different group</text><rect x='12' y='32' width='140' height='132' rx='6' fill='var(--c4)' fill-opacity='0.1' stroke='var(--c4)'/><rect x='168' y='32' width='140' height='132' rx='6' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)'/><text x='82' y='54' font-size='13' fill='var(--muted)' text-anchor='middle'>Ethane</text><text x='238' y='54' font-size='13' fill='var(--muted)' text-anchor='middle'>Ethanol</text><text x='82' y='82' font-size='15' fill='var(--ink)' text-anchor='middle'>CH₃−CH₃</text><text x='238' y='82' font-size='15' fill='var(--ink)' text-anchor='middle'>CH₃−CH₂−<tspan fill='var(--c2)'>OH</tspan></text><text x='82' y='110' font-size='11' fill='var(--ink)' text-anchor='middle'>gas at 25 °C</text><text x='238' y='110' font-size='11' fill='var(--ink)' text-anchor='middle'>liquid at 25 °C</text><text x='82' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>boils at −89 °C</text><text x='238' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>boils at 78 °C</text><text x='82' y='146' font-size='11' fill='var(--ink)' text-anchor='middle'>barely dissolves in water</text><text x='238' y='146' font-size='11' fill='var(--ink)' text-anchor='middle'>mixes with water</text><text x='160' y='186' font-size='11' fill='var(--ink)' text-anchor='middle'>R−OH: R is the hydrocarbon part, <tspan fill='var(--c2)'>−OH</tspan> is the functional group</text></svg>",
+    "etk": {
+     "tur": "eslestir",
+     "soru": "Match each functional group with its compound class (R: hydrocarbon part).",
+     "ciftler": [
+      [
+       "R−OH",
+       "Alcohol"
+      ],
+      [
+       "R−O−R′",
+       "Ether"
+      ],
+      [
+       "R−CHO",
+       "Aldehyde"
+      ],
+      [
+       "R−CO−R′",
+       "Ketone"
+      ],
+      [
+       "R−COOH",
+       "Carboxylic acid"
+      ],
+      [
+       "R−COO−R′",
+       "Ester"
+      ]
+     ]
+    },
+    "key": "Compounds with the same functional group undergo similar reactions."
+   },
+   {
+    "h": "Alcohols: names and classes",
+    "p": "If an −OH group is bonded to a saturated carbon, the compound is an <b>alcohol</b>. Ethanol and 2-propanol are examples. If the carbon carrying −OH is bonded to 1, 2 or 3 carbons, the alcohol is <b>1°, 2° or 3°</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--ink)' text-anchor='middle'>Red C: the carbon bonded to −OH</text><text x='62' y='56' font-size='12' fill='var(--c1)' text-anchor='middle'>OH</text><line x1='62' y1='62' x2='62' y2='72' stroke='var(--ink)' stroke-width='1.2'/><text x='69' y='86' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>CH₂</text><text x='22' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃</text><line x1='36' y1='82' x2='49' y2='82' stroke='var(--ink)' stroke-width='1.2'/><text x='168' y='56' font-size='12' fill='var(--c1)' text-anchor='middle'>OH</text><line x1='168' y1='62' x2='168' y2='72' stroke='var(--ink)' stroke-width='1.2'/><text x='172' y='86' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>CH</text><text x='128' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃</text><line x1='142' y1='82' x2='155' y2='82' stroke='var(--ink)' stroke-width='1.2'/><line x1='168' y1='92' x2='168' y2='104' stroke='var(--ink)' stroke-width='1.2'/><text x='168' y='118' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃</text><text x='262' y='56' font-size='12' fill='var(--c1)' text-anchor='middle'>OH</text><line x1='262' y1='62' x2='262' y2='72' stroke='var(--ink)' stroke-width='1.2'/><text x='262' y='86' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>C</text><text x='222' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃</text><line x1='236' y1='82' x2='249' y2='82' stroke='var(--ink)' stroke-width='1.2'/><text x='302' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃</text><line x1='275' y1='82' x2='288' y2='82' stroke='var(--ink)' stroke-width='1.2'/><line x1='262' y1='92' x2='262' y2='104' stroke='var(--ink)' stroke-width='1.2'/><text x='262' y='118' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃</text><line x1='107' y1='132' x2='107' y2='192' stroke='var(--line)' stroke-width='1'/><line x1='213' y1='132' x2='213' y2='192' stroke='var(--line)' stroke-width='1'/><text x='55' y='146' font-size='11' fill='var(--ink)' text-anchor='middle'>ethanol</text><text x='160' y='146' font-size='11' fill='var(--ink)' text-anchor='middle'>2-propanol</text><text x='264' y='146' font-size='11' fill='var(--ink)' text-anchor='middle'>2-methyl-2-propanol</text><text x='55' y='166' font-size='12' fill='var(--c3)' text-anchor='middle'>1° (primary)</text><text x='160' y='166' font-size='12' fill='var(--c4)' text-anchor='middle'>2° (secondary)</text><text x='264' y='166' font-size='12' fill='var(--c5)' text-anchor='middle'>3° (tertiary)</text><text x='55' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>bonded to 1 C</text><text x='160' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>bonded to 2 C</text><text x='264' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>bonded to 3 C</text></svg>",
+    "key": "An alcohol's name is made by adding -ol to the alkane name. In phenol, −OH is bonded to a benzene ring, and in acetic acid, it is bonded to the C=O carbon. So neither is an alcohol.",
+    "once": {
+     "soru": "Why does the name of ethanol (C₂H₅OH), the alcohol in cologne, end in -ol?",
+     "secenekler": [
+      {
+       "yazi": "It has an −OH group",
+       "neden": "Alcohol names are made by adding -ol to the alkane name.",
+       "dogru": true
+      },
+      {
+       "yazi": "It contains oxygen gas",
+       "neden": "There is no O₂ gas in the molecule. The O atom is inside the −OH group."
+      },
+      {
+       "yazi": "Because it is a liquid",
+       "neden": "The name comes from the group, not from the state of the substance."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Hydrogen bonding and solubility",
+    "p": "Alcohols form <b>hydrogen bonds</b> between their −OH groups. That is why they boil at much higher temperatures than similar alkanes. They also form hydrogen bonds with water, but solubility drops as the chain gets longer.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='80' y='20' font-size='12' fill='var(--ink)' text-anchor='middle'>Between ethanol and water</text><text x='98' y='50' font-size='11' fill='var(--c1)' text-anchor='middle'>hydrogen bond</text><text x='14' y='72' font-size='13' fill='var(--ink)' text-anchor='start'>C₂H₅−O−H</text><line x1='86' y1='68' x2='110' y2='68' stroke='var(--c1)' stroke-width='1.5' stroke-dasharray='3 3'/><text x='114' y='72' font-size='13' fill='var(--ink)' text-anchor='start'>O−H</text><line x1='119' y1='76' x2='119' y2='86' stroke='var(--ink)' stroke-width='1.2'/><text x='119' y='100' font-size='13' fill='var(--ink)' text-anchor='middle'>H</text><text x='10' y='130' font-size='11' fill='var(--muted)' text-anchor='start'>Boiling point:</text><text x='10' y='148' font-size='11' fill='var(--ink)' text-anchor='start'>ethanol (46 g/mol): 78 °C</text><text x='10' y='166' font-size='11' fill='var(--ink)' text-anchor='start'>propane (44 g/mol): −42 °C</text><line x1='158' y1='30' x2='158' y2='170' stroke='var(--line)' stroke-width='1'/><text x='240' y='20' font-size='12' fill='var(--ink)' text-anchor='middle'>Solubility in water</text><rect x='166' y='33' width='146' height='21' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='172' y='48' font-size='11' fill='var(--ink)' text-anchor='start'>methanol</text><text x='306' y='48' font-size='11' fill='var(--c1)' text-anchor='end'>fully miscible</text><rect x='166' y='57' width='146' height='21' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='172' y='72' font-size='11' fill='var(--ink)' text-anchor='start'>ethanol</text><text x='306' y='72' font-size='11' fill='var(--c1)' text-anchor='end'>fully miscible</text><rect x='166' y='81' width='146' height='21' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='172' y='96' font-size='11' fill='var(--ink)' text-anchor='start'>1-propanol</text><text x='306' y='96' font-size='11' fill='var(--c1)' text-anchor='end'>fully miscible</text><rect x='166' y='105' width='146' height='21' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='172' y='120' font-size='11' fill='var(--ink)' text-anchor='start'>1-butanol</text><text x='306' y='120' font-size='11' fill='var(--c2)' text-anchor='end'>low</text><rect x='166' y='129' width='146' height='21' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='172' y='144' font-size='11' fill='var(--ink)' text-anchor='start'>1-hexanol</text><text x='306' y='144' font-size='11' fill='var(--c2)' text-anchor='end'>very low</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>More C means lower solubility</text></svg>",
+    "key": "Aqueous solutions of alcohols are neutral. An alcohol gives H₂ with Na (2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂), but an ether does not."
+   },
+   {
+    "h": "Oxidation of alcohols",
+    "p": "Oxidizing agents remove the H of −OH and one H on the same carbon. A 1° alcohol becomes an aldehyde (−CHO) first, then a carboxylic acid (−COOH). A 2° alcohol becomes a ketone (C=O). A 3° alcohol is not oxidized.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='fonk-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='18' font-size='12' fill='var(--muted)' text-anchor='middle'>[O]: KMnO₄ or K₂Cr₂O₇ (in acid)</text><rect x='6' y='34' width='308' height='46' rx='6' fill='var(--c3)' fill-opacity='0.08'/><rect x='6' y='88' width='308' height='46' rx='6' fill='var(--c4)' fill-opacity='0.08'/><rect x='6' y='142' width='308' height='46' rx='6' fill='var(--c5)' fill-opacity='0.08'/><text x='50' y='56' font-size='12' fill='var(--ink)' text-anchor='middle'>R−CH₂OH</text><line x1='88' y1='52' x2='114' y2='52' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#fonk-1)'/><text x='101' y='44' font-size='10' fill='var(--muted)' text-anchor='middle'>[O]</text><text x='152' y='56' font-size='12' fill='var(--ink)' text-anchor='middle'>R−CHO</text><line x1='186' y1='52' x2='212' y2='52' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#fonk-1)'/><text x='199' y='44' font-size='10' fill='var(--muted)' text-anchor='middle'>[O]</text><text x='260' y='56' font-size='12' fill='var(--ink)' text-anchor='middle'>R−COOH</text><text x='50' y='73' font-size='11' fill='var(--c3)' text-anchor='middle'>1° alcohol</text><text x='152' y='73' font-size='11' fill='var(--muted)' text-anchor='middle'>aldehyde</text><text x='260' y='73' font-size='11' fill='var(--muted)' text-anchor='middle'>carboxylic acid</text><text x='50' y='110' font-size='12' fill='var(--ink)' text-anchor='middle'>R−CHOH−R′</text><line x1='92' y1='106' x2='118' y2='106' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#fonk-1)'/><text x='105' y='98' font-size='10' fill='var(--muted)' text-anchor='middle'>[O]</text><text x='160' y='110' font-size='12' fill='var(--ink)' text-anchor='middle'>R−CO−R′</text><text x='262' y='110' font-size='11' fill='var(--muted)' text-anchor='middle'>stops here</text><text x='50' y='127' font-size='11' fill='var(--c4)' text-anchor='middle'>2° alcohol</text><text x='160' y='127' font-size='11' fill='var(--muted)' text-anchor='middle'>ketone</text><text x='50' y='164' font-size='12' fill='var(--ink)' text-anchor='middle'>R₃C−OH</text><text x='96' y='164' font-size='11' fill='var(--c2)' text-anchor='start'>not oxidized (no H on that C)</text><text x='50' y='181' font-size='11' fill='var(--c5)' text-anchor='middle'>3° alcohol</text></svg>",
+    "key": "KMnO₄ and K₂Cr₂O₇ are oxidizing agents. Ethanol becomes ethanal first, then acetic acid. 2-propanol becomes acetone."
+   },
+   {
+    "h": "Ethanol, methanol and fermentation",
+    "p": "<b>Ethanol</b> is made when yeast breaks down sugar without oxygen. This process is called <b>fermentation</b>. <b>Methanol</b> is very toxic, and even a small amount can cause blindness or death.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--muted)' text-anchor='middle'>Fermentation (yeast, no oxygen)</text><text x='160' y='48' font-size='14' fill='var(--ink)' text-anchor='middle'>C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂</text><text x='160' y='66' font-size='11' fill='var(--muted)' text-anchor='middle'>glucose → ethanol + carbon dioxide</text><rect x='12' y='80' width='140' height='108' rx='6' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)'/><rect x='168' y='80' width='140' height='108' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)'/><text x='82' y='102' font-size='12' fill='var(--c3)' text-anchor='middle'>Ethanol (C₂H₅OH)</text><text x='238' y='102' font-size='12' fill='var(--c2)' text-anchor='middle'>Methanol (CH₃OH)</text><text x='82' y='126' font-size='11' fill='var(--ink)' text-anchor='middle'>the alcohol in drinks</text><text x='82' y='144' font-size='11' fill='var(--ink)' text-anchor='middle'>cologne, disinfectant</text><text x='82' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>fuel additive</text><text x='238' y='126' font-size='11' fill='var(--c2)' text-anchor='middle'>very toxic</text><text x='238' y='144' font-size='11' fill='var(--ink)' text-anchor='middle'>in the body, turns into</text><text x='238' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>formaldehyde and formic acid</text><text x='238' y='180' font-size='11' fill='var(--c2)' text-anchor='middle'>blindness, death</text></svg>",
+    "key": "In the body, methanol turns into formaldehyde and formic acid. It cannot be told apart from ethanol by smell or look. The poison in bootleg liquor is also methanol.",
+    "once": {
+     "soru": "When yeast is added to dough, the dough rises. What forms as the yeast breaks down sugar?",
+     "secenekler": [
+      {
+       "yazi": "Ethanol and CO₂",
+       "neden": "In fermentation, sugar turns into ethanol and CO₂. The CO₂ makes the dough rise.",
+       "dogru": true
+      },
+      {
+       "yazi": "Methanol and water",
+       "neden": "Yeast does not make methanol. The product of fermentation is ethanol."
+      },
+      {
+       "yazi": "Only water",
+       "neden": "A gas makes the dough rise, and that gas is CO₂."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Polyhydric alcohols",
+    "p": "Alcohols with more than one −OH are <b>polyhydric alcohols</b>. <b>Ethylene glycol</b> (2 OH) is antifreeze and is toxic. <b>Glycerol</b> (3 OH) holds moisture and is part of the structure of fats.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='80' y='22' font-size='12' fill='var(--muted)' text-anchor='middle'>Polyhydric alcohols</text><text x='80' y='50' font-size='12' fill='var(--ink)' text-anchor='middle'><tspan fill='var(--c1)'>HO</tspan>−CH₂−CH₂−<tspan fill='var(--c1)'>OH</tspan></text><text x='80' y='68' font-size='11' fill='var(--ink)' text-anchor='middle'>ethylene glycol: antifreeze</text><text x='36' y='104' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₂</text><line x1='36' y1='110' x2='36' y2='122' stroke='var(--ink)' stroke-width='1.2'/><text x='36' y='136' font-size='12' fill='var(--c1)' text-anchor='middle'>OH</text><text x='80' y='104' font-size='12' fill='var(--ink)' text-anchor='middle'>CH</text><line x1='80' y1='110' x2='80' y2='122' stroke='var(--ink)' stroke-width='1.2'/><text x='80' y='136' font-size='12' fill='var(--c1)' text-anchor='middle'>OH</text><text x='124' y='104' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₂</text><line x1='124' y1='110' x2='124' y2='122' stroke='var(--ink)' stroke-width='1.2'/><text x='124' y='136' font-size='12' fill='var(--c1)' text-anchor='middle'>OH</text><line x1='50' y1='100' x2='70' y2='100' stroke='var(--ink)' stroke-width='1.2'/><line x1='91' y1='100' x2='110' y2='100' stroke='var(--ink)' stroke-width='1.2'/><text x='80' y='160' font-size='11' fill='var(--ink)' text-anchor='middle'>glycerol: humectant</text><line x1='160' y1='30' x2='160' y2='186' stroke='var(--line)' stroke-width='1'/><text x='240' y='22' font-size='12' fill='var(--muted)' text-anchor='middle'>Boiling point</text><line x1='170' y1='170' x2='312' y2='170' stroke='var(--muted)' stroke-width='1'/><rect x='175' y='139' width='30' height='31' rx='2' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><text x='190' y='133' font-size='11' fill='var(--ink)' text-anchor='middle'>78 °C</text><text x='190' y='186' font-size='11' fill='var(--ink)' text-anchor='middle'>ethanol</text><rect x='225' y='91' width='30' height='79' rx='2' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><text x='240' y='85' font-size='11' fill='var(--ink)' text-anchor='middle'>197 °C</text><text x='240' y='186' font-size='11' fill='var(--ink)' text-anchor='middle'>glycol</text><rect x='275' y='54' width='30' height='116' rx='2' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)'/><text x='290' y='48' font-size='11' fill='var(--ink)' text-anchor='middle'>290 °C</text><text x='290' y='186' font-size='11' fill='var(--ink)' text-anchor='middle'>glycerol</text><text x='80' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>More OH, more H bonds</text></svg>",
+    "key": "The more −OH groups, the higher the boiling point. Fat = glycerol + 3 fatty acids.",
+    "once": {
+     "soru": "In winter, what is added to the water in a car radiator to keep it from freezing?",
+     "secenekler": [
+      {
+       "yazi": "Ethylene glycol",
+       "neden": "Ethylene glycol lowers the freezing point of water and is the main ingredient of antifreeze.",
+       "dogru": true
+      },
+      {
+       "yazi": "Salt",
+       "neden": "Salt also delays freezing, but it makes metal rust."
+      },
+      {
+       "yazi": "Sugar",
+       "neden": "Sugar is not used in radiators, because it settles out and clogs them."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Ethers and functional group isomerism",
+    "p": "In an <b>ether</b>, an O atom links two carbon groups (R−O−R′). An ether has no O−H bond, and its molecules do not form hydrogen bonds with each other. Ethanol and dimethyl ether are <b>functional group isomers</b> of each other.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--ink)' text-anchor='middle'>Ether: R−<tspan fill='var(--c2)'>O</tspan>−R′ (O bonded to two C groups)</text><text x='160' y='40' font-size='11' fill='var(--muted)' text-anchor='middle'>diethyl ether: C₂H₅−O−C₂H₅, boils at 35 °C</text><rect x='8' y='56' width='304' height='22' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='14' y='71' font-size='11' fill='var(--muted)' text-anchor='start'>C₂H₆O</text><text x='168' y='71' font-size='12' fill='var(--c1)' text-anchor='middle'>ethanol</text><text x='266' y='71' font-size='12' fill='var(--c5)' text-anchor='middle'>dimethyl ether</text><text x='14' y='98' font-size='11' fill='var(--muted)' text-anchor='start'>structure</text><text x='168' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>CH₃−CH₂−OH</text><text x='266' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>CH₃−O−CH₃</text><text x='14' y='119' font-size='11' fill='var(--muted)' text-anchor='start'>group</text><text x='168' y='119' font-size='11' fill='var(--ink)' text-anchor='middle'>alcohol (−OH)</text><text x='266' y='119' font-size='11' fill='var(--ink)' text-anchor='middle'>ether (−O−)</text><text x='14' y='140' font-size='11' fill='var(--muted)' text-anchor='start'>boiling point</text><text x='168' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>78 °C</text><text x='266' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>−24 °C</text><text x='14' y='161' font-size='11' fill='var(--muted)' text-anchor='start'>H bonds (between molecules)</text><text x='168' y='161' font-size='11' fill='var(--ink)' text-anchor='middle'>yes</text><text x='266' y='161' font-size='11' fill='var(--ink)' text-anchor='middle'>no</text><text x='14' y='182' font-size='11' fill='var(--muted)' text-anchor='start'>with Na</text><text x='168' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>gives H₂</text><text x='266' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>no reaction</text></svg>",
+    "key": "Diethyl ether is a volatile, highly flammable solvent. Aldehyde–ketone and acid–ester pairs can also be functional group isomers."
+   },
+   {
+    "h": "Aldehydes and ketones: the carbonyl group",
+    "p": "The C=O group is called a <b>carbonyl</b>. At the end of a chain (−CHO), it makes an <b>aldehyde</b>, and between two carbons, it makes a <b>ketone</b>. Their names end in -al (ethanal) and -one (propanone).",
+    "svg": "<svg viewBox='0 0 320 200'><text x='80' y='22' font-size='12' fill='var(--c1)' text-anchor='middle'>Aldehyde (−CHO)</text><text x='240' y='22' font-size='12' fill='var(--c5)' text-anchor='middle'>Ketone (C=O inside)</text><text x='80' y='52' font-size='15' fill='var(--c2)' text-anchor='middle'>O</text><line x1='77' y1='58' x2='77' y2='75' stroke='var(--c2)' stroke-width='1.2'/><line x1='83' y1='58' x2='83' y2='75' stroke='var(--c2)' stroke-width='1.2'/><text x='80' y='90' font-size='15' fill='var(--c2)' text-anchor='middle'>C</text><text x='46' y='90' font-size='15' fill='var(--ink)' text-anchor='middle'>R</text><line x1='54' y1='85' x2='72' y2='85' stroke='var(--ink)' stroke-width='1.2'/><text x='114' y='90' font-size='15' fill='var(--ink)' text-anchor='middle'>H</text><line x1='88' y1='85' x2='106' y2='85' stroke='var(--ink)' stroke-width='1.2'/><text x='240' y='52' font-size='15' fill='var(--c2)' text-anchor='middle'>O</text><line x1='237' y1='58' x2='237' y2='75' stroke='var(--c2)' stroke-width='1.2'/><line x1='243' y1='58' x2='243' y2='75' stroke='var(--c2)' stroke-width='1.2'/><text x='240' y='90' font-size='15' fill='var(--c2)' text-anchor='middle'>C</text><text x='206' y='90' font-size='15' fill='var(--ink)' text-anchor='middle'>R</text><line x1='214' y1='85' x2='232' y2='85' stroke='var(--ink)' stroke-width='1.2'/><text x='274' y='90' font-size='15' fill='var(--ink)' text-anchor='middle'>R′</text><line x1='248' y1='85' x2='266' y2='85' stroke='var(--ink)' stroke-width='1.2'/><line x1='160' y1='14' x2='160' y2='190' stroke='var(--line)' stroke-width='1'/><text x='80' y='122' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>HCHO</text><text x='240' y='122' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₃COCH₃</text><text x='80' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>formaldehyde (methanal)</text><text x='240' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>acetone (propanone)</text><text x='80' y='162' font-size='11' fill='var(--muted)' text-anchor='middle'>formalin: ≈ 37%</text><text x='240' y='162' font-size='11' fill='var(--muted)' text-anchor='middle'>nail polish remover, solvent</text><text x='80' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>aqueous solution</text><text x='240' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>needs at least 3 C</text></svg>",
+    "key": "Formalin is a 37% solution of methanal. Acetone (propanone) is used as nail polish remover.",
+    "once": {
+     "soru": "The acetone in nail polish remover is a ketone. Where is the C=O in a ketone?",
+     "secenekler": [
+      {
+       "yazi": "Between two carbons",
+       "neden": "In a ketone, the carbonyl carbon has a carbon on each side.",
+       "dogru": true
+      },
+      {
+       "yazi": "At the end of the chain",
+       "neden": "A C=O at the end (−CHO) is an aldehyde."
+      },
+      {
+       "yazi": "Inside a ring",
+       "neden": "Acetone is a three-carbon molecule with no ring."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Tollens and Fehling tests",
+    "p": "Aldehydes are easily oxidized, and ketones are not. <b>Tollens'</b> reagent gives a silver mirror with an aldehyde. Blue <b>Fehling's</b> solution gives a brick-red precipitate with an aliphatic aldehyde.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='77' y='18' font-size='13' fill='var(--ink)' text-anchor='middle'>Tollens</text><text x='77' y='34' font-size='10' fill='var(--muted)' text-anchor='middle'>Ag⁺ + NH₃</text><text x='242' y='18' font-size='13' fill='var(--ink)' text-anchor='middle'>Fehling</text><text x='242' y='34' font-size='10' fill='var(--muted)' text-anchor='middle'>Cu²⁺ (blue)</text><line x1='160' y1='10' x2='160' y2='186' stroke='var(--line)' stroke-width='1'/><path d='M30 92 L30 130 A10 10 0 0 0 50 130 L50 92 Z' fill='var(--panel)' fill-opacity='1'/><path d='M30 92 L30 130 A10 10 0 0 0 50 130 L50 92' fill='none' stroke='var(--muted)' stroke-width='4'/><path d='M30 46 L30 130 A10 10 0 0 0 50 130 L50 46' fill='none' stroke='var(--ink)' stroke-width='1.2'/><path d='M105 92 L105 130 A10 10 0 0 0 125 130 L125 92 Z' fill='var(--panel)' fill-opacity='1'/><path d='M105 46 L105 130 A10 10 0 0 0 125 130 L125 46' fill='none' stroke='var(--ink)' stroke-width='1.2'/><path d='M195 92 L195 130 A10 10 0 0 0 215 130 L215 92 Z' fill='var(--c1)' fill-opacity='0.25'/><path d='M195 128 A10 10 0 0 0 215 128 Z' fill='var(--c2)' fill-opacity='0.85'/><path d='M195 46 L195 130 A10 10 0 0 0 215 130 L215 46' fill='none' stroke='var(--ink)' stroke-width='1.2'/><path d='M270 92 L270 130 A10 10 0 0 0 290 130 L290 92 Z' fill='var(--c1)' fill-opacity='0.4'/><path d='M270 46 L270 130 A10 10 0 0 0 290 130 L290 46' fill='none' stroke='var(--ink)' stroke-width='1.2'/><text x='40' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>aldehyde</text><text x='115' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>ketone</text><text x='205' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>aliphatic ald.</text><text x='280' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>ketone</text><text x='40' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>silver mirror</text><text x='115' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>no change</text><text x='205' y='182' font-size='11' fill='var(--c2)' text-anchor='middle'>Cu₂O settles</text><text x='280' y='182' font-size='11' fill='var(--muted)' text-anchor='middle'>stays blue</text><text x='160' y='198' font-size='10' fill='var(--c4)' text-anchor='middle'>benzaldehyde: Tollens +, Fehling −</text></svg>",
+    "key": "Benzaldehyde gives a positive Tollens test but not a Fehling test. In the test, the aldehyde is oxidized to a carboxylic acid."
+   },
+   {
+    "h": "Carboxylic acids",
+    "p": "Compounds with a carboxyl group (−COOH) are called <b>carboxylic acids</b>. Formic acid in ants and acetic acid in vinegar are examples. They are weak acids. With bases, they give a salt and water, and with active metals, they give H₂.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='80' y='30' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>HCOOH</text><text x='240' y='30' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>CH₃COOH</text><text x='80' y='48' font-size='11' fill='var(--muted)' text-anchor='middle'>formic acid (ants)</text><text x='240' y='48' font-size='11' fill='var(--muted)' text-anchor='middle'>acetic acid (vinegar)</text><text x='160' y='84' font-size='13' fill='var(--ink)' text-anchor='middle'>CH₃COOH + H₂O ⇌ CH₃COO⁻ + H₃O⁺</text><text x='160' y='104' font-size='11' fill='var(--muted)' text-anchor='middle'>weak acid: equilibrium lies far to the left</text><rect x='20' y='120' width='280' height='20' rx='3' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)'/><rect x='296' y='120' width='4' height='20' fill='var(--c2)'/><text x='20' y='160' font-size='11' fill='var(--c1)' text-anchor='start'>≈ 99% CH₃COOH molecules</text><text x='300' y='160' font-size='11' fill='var(--c2)' text-anchor='end'>≈ 1% ions</text><text x='160' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>0.1 M acetic acid, 25 °C</text></svg>",
+    "key": "Their names end in -oic acid, as in ethanoic acid. They give CO₂ with carbonates. Because its structure resembles an aldehyde, HCOOH also gives a positive Tollens test.",
+    "once": {
+     "soru": "Vinegar fizzes when you add a little carbonate. Which group does the acid in vinegar carry?",
+     "secenekler": [
+      {
+       "yazi": "−COOH",
+       "neden": "The carboxyl group gives off H⁺. So the carbonate releases CO₂ foam.",
+       "dogru": true
+      },
+      {
+       "yazi": "−OH",
+       "neden": "An alcohol's −OH group is neutral and does not make carbonate fizz."
+      },
+      {
+       "yazi": "−CHO",
+       "neden": "The aldehyde group is not an acid."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Esters and esterification",
+    "p": "When a carboxylic acid and an alcohol are heated with concentrated H₂SO₄, an <b>ester and water</b> form. The reaction is reversible, and the reverse is called <b>ester hydrolysis</b>. Small esters smell like fruit.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--muted)' text-anchor='middle'>Esterification (concentrated H₂SO₄, heat)</text><text x='85' y='56' font-size='14' fill='var(--ink)' text-anchor='middle'>CH₃−CO<tspan fill='var(--c2)'>OH</tspan></text><text x='160' y='56' font-size='14' fill='var(--ink)' text-anchor='middle'>+</text><text x='235' y='56' font-size='14' fill='var(--ink)' text-anchor='middle'><tspan fill='var(--c2)'>H</tspan>O−C₂H₅</text><text x='85' y='74' font-size='11' fill='var(--muted)' text-anchor='middle'>acetic acid</text><text x='235' y='74' font-size='11' fill='var(--muted)' text-anchor='middle'>ethanol</text><text x='160' y='106' font-size='15' fill='var(--ink)' text-anchor='middle'>⇌</text><text x='176' y='105' font-size='10' fill='var(--muted)' text-anchor='start'>reversible</text><text x='85' y='140' font-size='14' fill='var(--ink)' text-anchor='middle'>CH₃<tspan fill='var(--c1)'>−COO−</tspan>C₂H₅</text><text x='170' y='140' font-size='14' fill='var(--ink)' text-anchor='middle'>+</text><text x='235' y='140' font-size='14' fill='var(--ink)' text-anchor='middle'><tspan fill='var(--c2)'>H₂O</tspan></text><text x='85' y='158' font-size='11' fill='var(--muted)' text-anchor='middle'>ethyl acetate (ester)</text><text x='235' y='158' font-size='11' fill='var(--muted)' text-anchor='middle'>water</text><text x='160' y='186' font-size='11' fill='var(--c2)' text-anchor='middle'>Water: the acid's −OH + the alcohol's H</text></svg>",
+    "key": "An ester's name gives the alcohol's alkyl group first, then the acid with the ending -oate, as in ethyl ethanoate. Isoamyl acetate smells like bananas, and ethyl butanoate like pineapple."
+   },
+   {
+    "h": "Fats and saponification",
+    "p": "Fats are esters formed from the three −OH groups of glycerol and three fatty acids. When a fat is heated with NaOH, glycerol and <b>soap</b> form. This process is called <b>saponification</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='40' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>fat</text><text x='68' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>+</text><text x='106' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>3 NaOH</text><text x='148' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>→</text><text x='196' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>glycerol</text><text x='238' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>+</text><text x='280' y='30' font-size='13' fill='var(--ink)' text-anchor='middle'>3 soap</text><text x='40' y='48' font-size='10' fill='var(--muted)' text-anchor='middle'>(triglyceride)</text><text x='280' y='48' font-size='10' fill='var(--muted)' text-anchor='middle'>(RCOO⁻Na⁺)</text><path d='M30 112 L46 104 L62 112 L78 104 L94 112 L110 104 L126 112 L142 104 L158 112 L174 104 L190 112' fill='none' stroke='var(--c4)' stroke-width='2.5'/><circle cx='202' cy='106' r='11' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)'/><text x='202' y='84' font-size='11' fill='var(--c2)' text-anchor='middle'>COO⁻</text><text x='240' y='110' font-size='12' fill='var(--c1)' text-anchor='middle'>Na⁺</text><text x='110' y='136' font-size='11' fill='var(--c4)' text-anchor='middle'>nonpolar tail: likes oil</text><text x='222' y='156' font-size='11' fill='var(--c2)' text-anchor='middle'>ionic head: likes water</text><text x='160' y='186' font-size='11' fill='var(--muted)' text-anchor='middle'>The tails sink into the dirt, and the heads face the water.</text></svg>",
+    "key": "1 mol of triglyceride is saponified by 3 mol of NaOH. KOH gives a softer soap."
+   },
+   {
+    "h": "Amines and amides",
+    "p": "<b>Amines</b> are derivatives of ammonia in which carbon groups replace the H atoms, and they are <b>weak bases</b>. In an <b>amide</b>, N is bonded to a carbonyl carbon (−CONH−). The <b>peptide bond</b> in proteins is an amide bond.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='80' y='24' font-size='12' fill='var(--c1)' text-anchor='middle'>Amine (−NH₂)</text><text x='240' y='24' font-size='12' fill='var(--c3)' text-anchor='middle'>Amide (−CONH−)</text><line x1='160' y1='12' x2='160' y2='190' stroke='var(--line)' stroke-width='1'/><text x='80' y='52' font-size='14' fill='var(--ink)' text-anchor='middle'>CH₃−NH₂</text><text x='80' y='70' font-size='11' fill='var(--muted)' text-anchor='middle'>methylamine</text><text x='80' y='102' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃NH₂ + H₂O ⇌</text><text x='80' y='122' font-size='12' fill='var(--ink)' text-anchor='middle'>CH₃NH₃⁺ + OH⁻</text><text x='80' y='150' font-size='11' fill='var(--c1)' text-anchor='middle'>N takes H⁺: basic</text><text x='80' y='170' font-size='11' fill='var(--muted)' text-anchor='middle'>fishy smell comes from amines</text><text x='220' y='64' font-size='14' fill='var(--c3)' text-anchor='middle'>O</text><line x1='217' y1='70' x2='217' y2='88' stroke='var(--c3)' stroke-width='1.2'/><line x1='223' y1='70' x2='223' y2='88' stroke='var(--c3)' stroke-width='1.2'/><text x='220' y='104' font-size='14' fill='var(--c3)' text-anchor='middle'>C</text><text x='256' y='104' font-size='14' fill='var(--c3)' text-anchor='middle'>N</text><line x1='228' y1='99' x2='248' y2='99' stroke='var(--c3)' stroke-width='1.2'/><line x1='194' y1='99' x2='212' y2='99' stroke='var(--ink)' stroke-width='1.2'/><line x1='264' y1='99' x2='284' y2='99' stroke='var(--ink)' stroke-width='1.2'/><line x1='256' y1='108' x2='256' y2='122' stroke='var(--ink)' stroke-width='1.2'/><text x='256' y='136' font-size='14' fill='var(--ink)' text-anchor='middle'>H</text><text x='240' y='162' font-size='11' fill='var(--c3)' text-anchor='middle'>peptide bond = amide bond</text><text x='240' y='180' font-size='11' fill='var(--muted)' text-anchor='middle'>in proteins and nylon</text></svg>",
+    "key": "The formula of methylamine is CH₃NH₂. When an amine and a carboxylic acid combine, an amide and water form. A peptide bond also forms with the loss of water.",
+    "once": {
+     "soru": "The bad smell of fish comes from amines. Squeezing lemon on it reduces the smell. Why?",
+     "secenekler": [
+      {
+       "yazi": "The acid forms a salt with the amine",
+       "neden": "An amine is a base, and the acid in lemon turns it into a salt that does not evaporate.",
+       "dogru": true
+      },
+      {
+       "yazi": "Lemon covers the smell",
+       "neden": "The lemon smell helps, but the main effect is that the amine turns into a salt."
+      },
+      {
+       "yazi": "Lemon cooks the fish",
+       "neden": "Lemon does not cook the fish. The acid in lemon neutralizes the basic amine."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• The functional group decides a compound's properties.<br>• A 1° alcohol becomes an aldehyde first, then an acid. A 2° alcohol becomes a ketone, and a 3° alcohol is not oxidized.<br>• Aldehydes give a positive Tollens test, and ketones do not.<br>• An acid and an alcohol give an ester and water. A fat and NaOH give soap.<br>• An amine is a base, and a peptide bond is an amide bond.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='4' y='5' width='312' height='21' rx='4' fill='var(--acc)' fill-opacity='0.15'/><text x='10' y='20' font-size='11' fill='var(--muted)' text-anchor='start'>Class</text><text x='80' y='20' font-size='11' fill='var(--muted)' text-anchor='start'>Group</text><text x='134' y='20' font-size='11' fill='var(--muted)' text-anchor='start'>Example</text><text x='204' y='20' font-size='11' fill='var(--muted)' text-anchor='start'>Key feature</text><text x='10' y='41' font-size='11' fill='var(--ink)' text-anchor='start'>Alcohol</text><text x='80' y='41' font-size='11' fill='var(--c2)' text-anchor='start'>−OH</text><text x='134' y='41' font-size='11' fill='var(--ink)' text-anchor='start'>ethanol</text><text x='204' y='41' font-size='11' fill='var(--ink)' text-anchor='start'>neutral; H₂ with Na</text><rect x='4' y='47' width='312' height='21' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='10' y='62' font-size='11' fill='var(--ink)' text-anchor='start'>Ether</text><text x='80' y='62' font-size='11' fill='var(--c2)' text-anchor='start'>R−O−R′</text><text x='134' y='62' font-size='11' fill='var(--ink)' text-anchor='start'>diethyl ether</text><text x='204' y='62' font-size='11' fill='var(--ink)' text-anchor='start'>no O−H; volatile</text><text x='10' y='83' font-size='11' fill='var(--ink)' text-anchor='start'>Aldehyde</text><text x='80' y='83' font-size='11' fill='var(--c2)' text-anchor='start'>−CHO</text><text x='134' y='83' font-size='11' fill='var(--ink)' text-anchor='start'>acetaldehyde</text><text x='204' y='83' font-size='11' fill='var(--ink)' text-anchor='start'>Tollens, Fehling +</text><rect x='4' y='89' width='312' height='21' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='10' y='104' font-size='11' fill='var(--ink)' text-anchor='start'>Ketone</text><text x='80' y='104' font-size='11' fill='var(--c2)' text-anchor='start'>R−CO−R′</text><text x='134' y='104' font-size='11' fill='var(--ink)' text-anchor='start'>acetone</text><text x='204' y='104' font-size='11' fill='var(--ink)' text-anchor='start'>Tollens, Fehling −</text><text x='10' y='125' font-size='11' fill='var(--ink)' text-anchor='start'>Carb. acid</text><text x='80' y='125' font-size='11' fill='var(--c2)' text-anchor='start'>−COOH</text><text x='134' y='125' font-size='11' fill='var(--ink)' text-anchor='start'>acetic acid</text><text x='204' y='125' font-size='11' fill='var(--ink)' text-anchor='start'>weak acid</text><rect x='4' y='131' width='312' height='21' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='10' y='146' font-size='11' fill='var(--ink)' text-anchor='start'>Ester</text><text x='80' y='146' font-size='11' fill='var(--c2)' text-anchor='start'>−COO−</text><text x='134' y='146' font-size='11' fill='var(--ink)' text-anchor='start'>ethyl acetate</text><text x='204' y='146' font-size='11' fill='var(--ink)' text-anchor='start'>fruity smell</text><text x='10' y='167' font-size='11' fill='var(--ink)' text-anchor='start'>Amine</text><text x='80' y='167' font-size='11' fill='var(--c2)' text-anchor='start'>−NH₂</text><text x='134' y='167' font-size='11' fill='var(--ink)' text-anchor='start'>methylamine</text><text x='204' y='167' font-size='11' fill='var(--ink)' text-anchor='start'>weak base</text><rect x='4' y='173' width='312' height='21' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='10' y='188' font-size='11' fill='var(--ink)' text-anchor='start'>Amide</text><text x='80' y='188' font-size='11' fill='var(--c2)' text-anchor='start'>−CONH₂</text><text x='134' y='188' font-size='11' fill='var(--ink)' text-anchor='start'>acetamide</text><text x='204' y='188' font-size='11' fill='var(--ink)' text-anchor='start'>peptide bond</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Propanoic acid and methanol are heated with concentrated H₂SO₄. Which ester forms?",
+    "o": [
+     "Propyl methanoate",
+     "Methyl propanoate",
+     "Methyl ethanoate",
+     "Propyl propanoate"
+    ],
+    "a": 1,
+    "e": "An ester's name gives the alcohol's alkyl group (methyl) first, then the acid with -oate (propanoate). So CH₃CH₂COOCH₃ is methyl propanoate.",
+    "y": [
+     "You reversed the order. The alkyl part comes from the alcohol (methyl), and the -oate part from the acid (propanoate).",
+     "",
+     "The acid has 3 carbons (propanoic). Ethanoate comes from a 2-carbon acid.",
+     "The alcohol is methanol. So the alkyl part is methyl, not propyl."
+    ]
+   },
+   {
+    "tur": "sayi",
+    "q": "How many grams of NaOH are used when 0.2 mol of triglyceride (fat) is completely saponified? (NaOH = 40 g/mol)",
+    "cevap": 24,
+    "birim": "g",
+    "e": "Each triglyceride has three ester bonds, so 1 mol of fat uses 3 mol of NaOH. 0.2 × 3 = 0.6 mol of NaOH is needed. That is 0.6 × 40 = 24 g."
+   },
+   {
+    "tur": "ayir",
+    "q": "Sort each alcohol by the first product it forms when oxidized with K₂Cr₂O₇.",
+    "gruplar": [
+     "Aldehyde",
+     "Ketone",
+     "Not oxidized"
+    ],
+    "ogeler": [
+     [
+      "Ethanol",
+      0
+     ],
+     [
+      "1-propanol",
+      0
+     ],
+     [
+      "2-propanol",
+      1
+     ],
+     [
+      "2-butanol",
+      1
+     ],
+     [
+      "(CH₃)₃C−OH",
+      2
+     ]
+    ],
+    "e": "Ethanol and 1-propanol are primary alcohols and become aldehydes first. 2-propanol and 2-butanol are secondary alcohols and give ketones. (CH₃)₃C−OH is a tertiary alcohol. The carbon carrying −OH has no H, so it is not oxidized."
+   },
+   {
+    "q": "X and Y both have the formula C₃H₆O. X gives a silver mirror with Tollens' reagent, and Y does not. What could X and Y be?",
+    "o": [
+     "X: propanone, Y: propanal",
+     "X and Y are the same compound",
+     "X: 2-propanol, Y: propanal",
+     "X: propanal, Y: propanone"
+    ],
+    "a": 3,
+    "e": "A silver mirror points to an aldehyde (propanal). A ketone (propanone) does not give a positive Tollens test. The two are functional group isomers with the same formula. The formula of 2-propanol is C₃H₈O.",
+    "y": [
+     "Tollens' reagent oxidizes aldehydes. Propanone is a ketone, so it gives no silver mirror.",
+     "The same compound gives the same reaction. Different behavior shows two separate isomers, an aldehyde and a ketone.",
+     "The formula of 2-propanol is C₃H₈O, and it gives no silver mirror. Propanal does give a silver mirror.",
+     ""
+    ]
+   }
+  ]
+ },
  "kimya-her-yerde": {
   "title": "Chemistry everywhere",
   "summary": "Learn about cleaning products, polymers, medicines, food and farm chemistry.",

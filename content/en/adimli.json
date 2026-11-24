@@ -13409,6 +13409,253 @@
   ],
   "soruOnce": true
  },
+ "fonksiyonel-gruplar": {
+  "id": "fonksiyonel-gruplar",
+  "ders": "kimya",
+  "konu": "fonksiyonel-gruplar",
+  "baslik": "Functional groups",
+  "ozet": "Add a group to ethane and dissolve alcohols in water. Compare ethanol with an ether, oxidize alcohols, test an aldehyde, then make an ester and soap.",
+  "adimlar": [
+   {
+    "baslik": "Change the group",
+    "metin": "Put different groups in place of one H in ethane. Turn ethane into a liquid that mixes with water.",
+    "sahne": {
+     "tur": "kim12-grup"
+    },
+    "deger": {
+     "g": 0
+    },
+    "kontroller": [
+     {
+      "ad": "g",
+      "etiket": "Group",
+      "min": 0,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "g": 3
+     },
+     "ipucu": "Which group can form hydrogen bonds with water?",
+     "tamam": "The −OH that replaced an H turned gaseous ethane into ethanol. Ethanol boils at 78 °C and mixes with water in any proportion. This is because the −OH group forms hydrogen bonds with water."
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "If the chain grows",
+    "metin": "An alcohol's −OH end is polar, and its carbon chain is nonpolar. Lengthen the chain and watch the solubility in water. Find <b>the longest alcohol that mixes with water in any proportion</b>.",
+    "sahne": {
+     "tur": "kim12-cozunur"
+    },
+    "deger": {
+     "n": 1
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Number of carbons",
+      "min": 1,
+      "max": 8,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 3
+     },
+     "ipucu": "Look for the last alcohol whose bar stays blue.",
+     "tamam": "Alcohols up to propanol mix with water in any proportion. From butanol on, solubility drops quickly."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Same formula, different group",
+    "metin": "Ethanol and dimethyl ether both have the formula C₂H₆O. So they are <b>functional group isomers</b>. Compare them with the switch.",
+    "sahne": {
+     "tur": "kim12-hbag"
+    },
+    "deger": {
+     "e": 0
+    },
+    "kontroller": [
+     {
+      "ad": "e",
+      "etiket": "Dimethyl ether",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why does ethanol boil at a much higher temperature?",
+     "secenekler": [
+      {
+       "yazi": "Ethanol has a larger molar mass",
+       "neden": "Both have the formula C₂H₆O, and their molar masses are the same (46 g/mol)."
+      },
+      {
+       "yazi": "Ethanol molecules hold each other by hydrogen bonds",
+       "neden": "Ethanol's O−H group forms a hydrogen bond with the O atom of a neighboring molecule. The ether has no O−H, and its molecules attract each other weakly.",
+       "dogru": true
+      },
+      {
+       "yazi": "The bonds between atoms in the ether are weak",
+       "neden": "Boiling does not break the bonds inside a molecule. What is overcome is the attraction between molecules."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Oxidize alcohols",
+    "metin": "Orange dichromate removes the H of −OH and one H on that carbon, and turns green itself. We add a primary, a secondary and a tertiary alcohol to three tubes.",
+    "sahne": {
+     "tur": "kim12-dikromat",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In which tube does the orange color stay?",
+     "secenekler": [
+      {
+       "yazi": "Ethanol",
+       "neden": "Ethanol is a primary alcohol, and its carbon carrying −OH has 2 H. It is oxidized first to ethanal, then to acetic acid."
+      },
+      {
+       "yazi": "2-propanol",
+       "neden": "2-propanol is a secondary alcohol, and its carbon carrying −OH has 1 H. It is oxidized to propanone (acetone)."
+      },
+      {
+       "yazi": "2-methyl-2-propanol",
+       "neden": "In a tertiary alcohol, the carbon carrying −OH has no H. With no H to remove, it is not oxidized under these conditions.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Aldehyde or ketone?",
+    "metin": "Aldehydes are easily oxidized, and ketones are not. Heat the three tubes first with <b>Tollens'</b> reagent, then with <b>Fehling's</b> solution, and compare the results.",
+    "sahne": {
+     "tur": "kim12-ayirac",
+     "sure": 3
+    },
+    "deger": {
+     "r": 0
+    },
+    "kontroller": [
+     {
+      "ad": "r",
+      "etiket": "Fehling's solution",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "Which one gives neither test?",
+     "secenekler": [
+      {
+       "yazi": "Benzaldehyde",
+       "neden": "Benzaldehyde is an aldehyde and gives a silver mirror with Tollens' reagent."
+      },
+      {
+       "yazi": "Propanal",
+       "neden": "Propanal is an aliphatic aldehyde and gives both tests."
+      },
+      {
+       "yazi": "Propanone",
+       "neden": "Propanone is a ketone, and its carbonyl carbon has no H to remove. So neither a silver mirror nor Cu₂O forms.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Make an ester",
+    "metin": "An acid and an alcohol give an ester and water. An ester's name gives the alcohol's alkyl group first, then the acid with the ending -oate. Choose the acid and the alcohol to make ethyl butanoate, which smells like pineapple.",
+    "sahne": {
+     "tur": "kim12-ester"
+    },
+    "deger": {
+     "a": 1,
+     "b": 1
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "Acid",
+      "min": 0,
+      "max": 2,
+      "tur": "sayac"
+     },
+     {
+      "ad": "b",
+      "etiket": "Alcohol",
+      "min": 0,
+      "max": 2,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "a": 2,
+      "b": 1
+     },
+     "ipucu": "The first part of the name comes from the alcohol (ethyl), and the second from the acid (butanoate).",
+     "tamam": "Butanoic acid and ethanol give ethyl butanoate and water. The reaction is reversible, and water can break the ester back down. This is called ester hydrolysis."
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Make soap",
+    "metin": "In a fat, glycerol is linked to three fatty acids by ester bonds. NaOH breaks each ester bond. Saponify 1 mol of fat completely, with no NaOH left over.",
+    "sahne": {
+     "tur": "kim12-sabun"
+    },
+    "deger": {
+     "n": 0
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "NaOH (mol)",
+      "min": 0,
+      "max": 5,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 3
+     },
+     "ipucu": "How many ester bonds are there?",
+     "tamam": "1 mol of triglyceride and 3 mol of NaOH give 1 mol of glycerol and 3 mol of soap. Soap is the sodium salt of a fatty acid."
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "The functional group decides a compound's character. A single −OH added to ethane turns this gas into a liquid that mixes with water.",
+   "The first three alcohols mix with water in any proportion. As the chain gets longer, solubility drops.",
+   "Ethanol and dimethyl ether are functional group isomers. Ethanol forms hydrogen bonds, so it boils at a much higher temperature.",
+   "A 1° alcohol becomes an aldehyde first, then an acid. A 2° alcohol becomes a ketone. A 3° alcohol is not oxidized.",
+   "Aldehydes give a positive Tollens test, and ketones do not. Benzaldehyde, however, does not give a positive Fehling test.",
+   "An acid and an alcohol give an ester and water. 1 mol of fat is saponified by 3 mol of NaOH."
+  ],
+  "soruOnce": true
+ },
  "kimya-her-yerde": {
   "id": "kimya-her-yerde",
   "ders": "kimya",
