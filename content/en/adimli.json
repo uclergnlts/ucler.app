@@ -16769,6 +16769,192 @@
   ],
   "soruOnce": true
  },
+ "dna-genetik-kod": {
+  "id": "dna-genetik-kod",
+  "ders": "biyoloji",
+  "konu": "dna-genetik-kod",
+  "baslik": "DNA, replication and biotechnology",
+  "ozet": "Try first, then learn the name. Pair the bases, calculate with Chargaff's rule and watch DNA being copied.",
+  "adimlar": [
+   {
+    "baslik": "The letters of DNA",
+    "metin": "DNA has four bases: A, G, T and C. Count their rings and find which ones have two rings.",
+    "sahne": {
+     "tur": "biy7-nukleotit"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which two bases have two rings (purines)?",
+     "secenekler": [
+      {
+       "yazi": "T and C",
+       "neden": "T and C have one ring. They are pyrimidines."
+      },
+      {
+       "yazi": "A and G",
+       "dogru": true,
+       "neden": "Adenine and guanine are double-ringed purines. Thymine and cytosine are single-ringed pyrimidines. Uracil in RNA also has one ring."
+      },
+      {
+       "yazi": "A and T",
+       "neden": "A has two rings, but T has one. Count the rings again."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Base pairing",
+    "metin": "The two strands hold on to each other through hydrogen bonds between their bases. A always pairs with T, and G always pairs with C. The strands are antiparallel. Guess the partner of the top strand.",
+    "sahne": {
+     "tur": "biy7-eslesme",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which strand pairs with 5'-ATGCAG-3'?",
+     "secenekler": [
+      {
+       "yazi": "3'-ATGCAG-5'",
+       "neden": "This is a copy of the same sequence and does not follow the pairing rule."
+      },
+      {
+       "yazi": "3'-UACGUC-5'",
+       "neden": "U is found only in RNA. In DNA, T pairs with A."
+      },
+      {
+       "yazi": "3'-TACGTC-5'",
+       "dogru": true,
+       "neden": "T pairs with A, A with T, C with G and G with C. The direction is reversed too, so it runs 3'→5'. There are two hydrogen bonds between A and T, and three between G and C."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Chargaff's rule",
+    "metin": "An A–T pair has 2 hydrogen bonds, and a G–C pair has 3. Change the number of adenines in this 100-base-pair DNA and make the number of hydrogen bonds <b>270</b>.",
+    "sahne": {
+     "tur": "biy7-chargaff"
+    },
+    "deger": {
+     "A": 50
+    },
+    "kontroller": [
+     {
+      "ad": "A",
+      "etiket": "Adenine",
+      "min": 0,
+      "max": 100,
+      "adim": 10,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "A": 30
+     },
+     "tamam": "With 30 adenines, T = 30, and G and C are 70 each. The number of hydrogen bonds is 2·30 + 3·70 = 270. The more G–C pairs there are, the more bonds there are and the harder it is to separate the strands."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Replication is semiconservative",
+    "metin": "When DNA is copied, the two strands separate and each one acts as a template for a new strand. Meselson and Stahl copied DNA containing heavy ¹⁵N twice in a light ¹⁴N medium.",
+    "sahne": {
+     "tur": "biy7-eslenme",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "After the second replication, how many of the 4 DNA molecules contain an old (heavy) strand?",
+     "secenekler": [
+      {
+       "yazi": "All 4",
+       "neden": "There are only two old strands, and they do not break apart. So they can end up in only two molecules."
+      },
+      {
+       "yazi": "None",
+       "neden": "The old strands are not lost. In every replication, they stay inside the new molecules as templates."
+      },
+      {
+       "yazi": "2",
+       "dogru": true,
+       "neden": "The two old strands go into two different molecules. This gives 2 hybrid and 2 light DNA molecules. After the first replication, all molecules are hybrid. Each new molecule has one old and one new strand. This is called semiconservative replication."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "The enzymes of replication",
+    "metin": "Play the replication fork and see which enzyme does what.",
+    "sahne": {
+     "tur": "biy7-catal",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which enzyme breaks the hydrogen bonds between the two strands and separates them?",
+     "secenekler": [
+      {
+       "yazi": "Ligase",
+       "neden": "Ligase glues pieces together. It does not separate the strands."
+      },
+      {
+       "yazi": "DNA polymerase",
+       "neden": "DNA polymerase builds the new strand by adding nucleotides that match the template. The strands are opened before that."
+      },
+      {
+       "yazi": "Helicase",
+       "dogru": true,
+       "neden": "Helicase moves along at the tip of the fork, breaks the hydrogen bonds and opens the two strands."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "PCR: copying in a tube",
+    "metin": "PCR copies a piece of DNA in a tube. First the DNA is heated and the strands separate, then primers attach and the new strand is built. The number of copies doubles with every cycle. Increase the number of cycles and get at least <b>1,000</b> copies.",
+    "sahne": {
+     "tur": "biy7-pcr"
+    },
+    "deger": {
+     "n": 1
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Cycles",
+      "min": 0,
+      "max": 12,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": [
+       10,
+       12
+      ]
+     },
+     "tamam": "10 cycles give 2¹⁰ = 1,024 copies. That is why a DNA fingerprint can be made from even a single hair root or bloodstain at a crime scene."
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "A nucleotide is made of a phosphate, a deoxyribose sugar and a base. Purines (A, G) have two rings, and pyrimidines (T, C) have one.",
+   "There are two hydrogen bonds between A and T, and three between G and C. The two strands run in opposite directions.",
+   "By Chargaff's rule, in double-stranded DNA the number of A equals the number of T, and the number of G equals the number of C.",
+   "Replication is semiconservative. Helicase opens the strands, DNA polymerase builds and ligase joins the pieces.",
+   "In PCR, each cycle doubles the number of copies. n cycles give 2ⁿ copies."
+  ],
+  "soruOnce": true
+ },
  "siniflandirma": {
   "id": "siniflandirma",
   "ders": "biyoloji",
