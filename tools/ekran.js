@@ -59,6 +59,8 @@ server.listen(0, async () => {
   await p.addInitScript((u) => { try { if (!localStorage.getItem('tf-unite')) localStorage.setItem('tf-unite', JSON.stringify(u)); } catch {} }, uniteler);
   // TEMA=koyu ya da TEMA=acik verilirse görüntüler o görünümde alınır (lib/tema.ts); verilmezse açık.
   await p.addInitScript((t) => { try { localStorage.setItem('tf-tema', JSON.stringify(t)); } catch {} }, process.env.TEMA === 'koyu' ? 'koyu' : 'acik');
+  // Dil seçimi yazılmazsa ilk açılış kuralı (app/layout.tsx) tf-unite'yi görüp Türkçeye döner.
+  await p.addInitScript((d) => { try { localStorage.setItem('tf-dil', JSON.stringify(d)); } catch {} }, process.env.DIL === 'en' ? 'en' : 'tr');
   await p.addInitScript(() => { const st = window.setTimeout; window.setTimeout = (f, d, ...a) => st(f, d === 25000 ? 400 : d, ...a); });
   const ileri = (ms) => p.waitForTimeout(ms);
   // CEVIRI=<json dosyası> verilirse ekrandaki yazılar görüntü alınırken sözlükteki karşılıklarıyla değiştirilir, sonra geri konur

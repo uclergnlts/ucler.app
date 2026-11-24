@@ -359,7 +359,7 @@ export default function Lesson({
         </AnimatePresence>
         {!bildirim && s.i === ilkOge + 1 && !ipucu.includes("akis") && (
           // Bir kez gösterilir: önceki sayfaya üstteki geri okuyla dönülür, anlamadım simgesi sağ üstte.
-          <p className="pb-2.5 text-[13px] text-muted-foreground">{cev("Önceki sayfaya üstteki okla dönebilirsin. Anlamadığın ya da hata gördüğün yerde sağ üstteki ? simgesine dokun.")}</p>
+          <p className="pb-2.5 text-[13px] text-muted-foreground">{cev("Önceki sayfaya üstteki okla dönebilirsin. Anlamadığın ya da hata gördüğün yerde üstteki \"Hata bildir\" düğmesine dokun.")}</p>
         )}
         <Button className="w-full" data-next disabled={kilitli} onClick={() => step(1)}>{kilitli ? (soruBekler(s.i) ? cev("Bir cevap seç") : gorevYazisi(ogeler[s.i])) : last ? cev("Aşamayı bitir") : cev("Devam")}</Button>
       </Alt>

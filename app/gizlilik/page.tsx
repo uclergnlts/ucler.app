@@ -38,7 +38,7 @@ export default function Page() {
         </Bolum>
         <Bolum title={cev("Sorun bildirimleri")}>
           <p>
-            {cev("Bir yerde ? simgesine dokunup \"Anlamadım\" ya da \"Hata var\" dersen, seçtiğin tür, yazdığın not ve bildirimin yeri (ders, konu, kart ya da soru numarası, cihaz türü) ekibimize gönderilir. Hesabınla giriş yaptıysan bildirim hesabına bağlanır; hesabını silersen bu bağ da silinir. Bildirimleri yalnızca ekip görür ve yalnızca içeriği düzeltmek için kullanır.")}
+            {cev("\"Hata bildir\" düğmesine dokunup \"Anlamadım\" ya da \"Hata var\" dersen, seçtiğin tür, yazdığın not ve bildirimin yeri (ders, konu, kart ya da soru numarası, cihaz türü) ekibimize gönderilir. Hesabınla giriş yaptıysan bildirim hesabına bağlanır; hesabını silersen bu bağ da silinir. Bildirimleri yalnızca ekip görür ve yalnızca içeriği düzeltmek için kullanır.")}
           </p>
         </Bolum>
         <Bolum title={cev("Kullanım sayımı")}>

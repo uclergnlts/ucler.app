@@ -31,7 +31,7 @@ export default function Anlamadiklarim({ all, basliklar }: { all: Record<DersId,
           ))}
         </Liste>
       ) : (
-        <Bos>{cev("Bir kartı anlamadıysan ders ekranında sağ üstteki ? simgesine dokun. Kart buraya gelir, sonra dönüp yeniden bakabilirsin.")}</Bos>
+        <Bos>{cev("Bir kartı anlamadıysan ders ekranında üstteki \"Hata bildir\" düğmesine dokunup \"Anlamadım\"ı seç. Kart buraya gelir, sonra dönüp yeniden bakabilirsin.")}</Bos>
       )}
     </Kabuk>
   );
