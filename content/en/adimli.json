@@ -15106,5 +15106,327 @@
    "In food tests, iodine shows starch, Benedict's shows sugar, biuret shows protein and Sudan III shows fat. Pure water is the control tube."
   ],
   "soruOnce": true
+ },
+ "enzimler": {
+  "id": "enzimler",
+  "ders": "biyoloji",
+  "konu": "enzimler",
+  "baslik": "Enzymes",
+  "ozet": "Try first, then learn the name: add the enzyme, heat it, change the pH, and play with the substrate.",
+  "adimlar": [
+   {
+    "baslik": "The energy barrier",
+    "metin": "For a reaction to start, an energy hill must first be climbed. This hill is called the <b>activation energy</b>. Add the <b>enzyme</b> and look at the graph.",
+    "sahne": {
+     "tur": "biy2-aktivasyon"
+    },
+    "deger": {
+     "enzim": 0
+    },
+    "kontroller": [
+     {
+      "ad": "enzim",
+      "etiket": "Add enzyme",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What did the enzyme change?",
+     "secenekler": [
+      {
+       "yazi": "Only the activation energy",
+       "dogru": true,
+       "neden": "With a lower hill, a much larger share of colliding molecules gets over the barrier. That is why the reaction speeds up."
+      },
+      {
+       "yazi": "The product formed",
+       "neden": "Look at the right end of the graph: the product is in the same place. The enzyme only makes the path easier."
+      },
+      {
+       "yazi": "The overall energy difference",
+       "neden": "Look at the purple arrow: the energy difference is the same with and without the enzyme. Only the height of the hill changes."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Enzyme-substrate complex",
+    "metin": "The enzyme grabs the substance it acts on (the <b>substrate</b>) and converts it. Predict what will happen before you press play.",
+    "sahne": {
+     "tur": "biy2-enzim-substrat",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to the enzyme when the reaction ends?",
+     "secenekler": [
+      {
+       "yazi": "It leaves unchanged",
+       "dogru": true,
+       "neden": "When the products leave, the active site empties and the enzyme binds a new substrate. That is why a cell gets a lot done with a small amount of enzyme."
+      },
+      {
+       "yazi": "It is used up with the product",
+       "neden": "An enzyme is a catalyst and is not used up in the reaction."
+      },
+      {
+       "yazi": "It turns into product",
+       "neden": "The substrate is what turns into product. The enzyme only speeds up this change."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Each enzyme has its own substrate",
+    "metin": "This enzyme is <b>lactase</b>. Which of the three substances fits its active site?",
+    "sahne": {
+     "tur": "biy2-ozgulluk",
+     "sure": 3,
+     "maddeler": [
+      {
+       "ad": "yağ",
+       "sekil": "zincir"
+      },
+      {
+       "ad": "laktoz",
+       "sekil": "sivri"
+      },
+      {
+       "ad": "maltoz",
+       "sekil": "kare"
+      }
+     ]
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which one does lactase act on?",
+     "secenekler": [
+      {
+       "yazi": "Fat",
+       "neden": "Lipase breaks down fats. Lactase's active site doesn't fit fat."
+      },
+      {
+       "yazi": "Lactose",
+       "dogru": true,
+       "neden": "Lactose fits lactase's active site exactly. People with little lactase cannot digest the lactose in milk."
+      },
+      {
+       "yazi": "Maltose",
+       "neden": "Maltase breaks down maltose. Even though maltose is a similar sugar, it doesn't fit lactase's active site."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Enzyme lab",
+    "metin": "In the tube, a human enzyme is breaking down substrate. Change the temperature and look at the enzymes, the product count and the graph. If the enzyme is damaged, you can add a new one with <b>Add fresh enzyme</b>.",
+    "sahne": {
+     "tur": "sim-enzim"
+    },
+    "deger": {
+     "T": 20,
+     "bozuk": 0,
+     "yeni": 0
+    },
+    "kontroller": [
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 0,
+      "max": 80,
+      "birim": "°C"
+     },
+     {
+      "ad": "yeni",
+      "etiket": "Add fresh enzyme",
+      "min": 0,
+      "max": 1,
+      "tur": "dugme"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "Find the temperature at which the enzyme works <b>fastest</b>.",
+       "hedef": {
+        "T": [
+         36,
+         38
+        ],
+        "bozuk": 0
+       },
+       "coz": [
+        {
+         "T": 37,
+         "yeni": 1
+        }
+       ],
+       "tamam": "The <b>optimum temperature</b> of human enzymes is about 37 °C. At this temperature, the active sites fill and empty most often."
+      },
+      {
+       "yazi": "Cool the enzyme to <b>5 °C</b>, then warm it back to <b>37 °C</b>.",
+       "hedef": [
+        {
+         "T": [
+          0,
+          5
+         ],
+         "bozuk": 0
+        },
+        {
+         "T": [
+          36,
+          38
+         ],
+         "bozuk": 0
+        }
+       ],
+       "sirali": true,
+       "coz": [
+        {
+         "T": 5,
+         "yeni": 1
+        },
+        {
+         "T": 37
+        }
+       ],
+       "tamam": "In the cold, the enzyme slowed down but was not damaged. When it warmed up, it returned to its old speed. Cold does not damage an enzyme, it only slows it down."
+      },
+      {
+       "yazi": "Now go up to <b>60 °C</b>, then cool back to <b>37 °C</b>.",
+       "hedef": {
+        "T": [
+         36,
+         38
+        ],
+        "bozuk": 1
+       },
+       "coz": [
+        {
+         "T": 60
+        },
+        {
+         "T": 37
+        }
+       ],
+       "tamam": "Above 55 °C, the enzyme's 3D shape was damaged. This is called <b>denaturation</b>. Even after cooling, the active site did not come back. In the same way, a cooked egg white does not go back to raw."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "pH",
+    "metin": "The stomach is acidic, and the small intestine is slightly basic. Change the pH and bring <b>pepsin</b> to where it works fastest.",
+    "sahne": {
+     "tur": "biy2-ph"
+    },
+    "deger": {
+     "ph": 7
+    },
+    "kontroller": [
+     {
+      "ad": "ph",
+      "etiket": "pH",
+      "min": 0,
+      "max": 14
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "ph": 2
+     },
+     "tamam": "Pepsin works fastest in stomach acid (pH ≈ 2). At pH 8, it almost stops. Trypsin works there."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Amount of substrate",
+    "metin": "There are 4 enzymes here, and their number doesn't change. Add substrate and see how the rate changes.",
+    "sahne": {
+     "tur": "biy2-doygunluk"
+    },
+    "deger": {
+     "s": 1
+    },
+    "kontroller": [
+     {
+      "ad": "s",
+      "etiket": "Substrate",
+      "min": 0,
+      "max": 12,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What happens to the rate if you raise the substrate from 8 to 12?",
+     "secenekler": [
+      {
+       "yazi": "It doesn't change",
+       "dogru": true,
+       "neden": "The 4 active sites of the 4 enzymes were already full at the 4th substrate. Extra substrate waits in line."
+      },
+      {
+       "yazi": "It rises",
+       "neden": "Raise the substrate above 4 and look at the rate bar. See what happens once the active sites are full."
+      },
+      {
+       "yazi": "It falls",
+       "neden": "More substrate doesn't lower the rate. But busy enzymes cannot handle more at the same time."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Competitive inhibitor",
+    "metin": "Right now, a <b>competitive inhibitor</b> is blocking the active sites of 2 of the 4 enzymes. Add substrate to get at least <b>3 enzymes</b> working again.",
+    "sahne": {
+     "tur": "biy2-inhibitor"
+    },
+    "deger": {
+     "s": 4
+    },
+    "kontroller": [
+     {
+      "ad": "s",
+      "etiket": "Substrate",
+      "min": 4,
+      "max": 16,
+      "adim": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "s": [
+       8,
+       16
+      ]
+     },
+     "tamam": "With more substrate, its chance of taking the active site rises, and the inhibitor's effect weakens. This doesn't work against a noncompetitive inhibitor, because it does not bind to the active site."
+    },
+    "kart": 9
+   }
+  ],
+  "kapanis": [
+   "Enzymes speed up reactions by lowering the <b>activation energy</b>. They do not change the product or the energy difference.",
+   "The substrate binds to the active site (E + S → ES → E + product). The enzyme leaves the reaction unchanged and is used again.",
+   "The active site is flexible (<b>induced fit</b>), and each enzyme acts on particular substrates (<b>specificity</b>).",
+   "Each enzyme has an <b>optimum temperature</b> and <b>pH</b>. Too much heat and the wrong pH damage the enzyme.",
+   "Once the active sites are full, the rate levels off. This is called saturation. The effect of a <b>competitive inhibitor</b> weakens as substrate increases."
+  ],
+  "soruOnce": true
  }
 }
