@@ -14099,5 +14099,461 @@
    "Green chemistry prevents waste from the start. At the nanoscale, the surface-to-volume ratio grows."
   ],
   "soruOnce": true
+ },
+ "yesil-kimya": {
+  "id": "yesil-kimya",
+  "ders": "kimya",
+  "konu": "yesil-kimya",
+  "baslik": "Green chemistry and nanotechnology",
+  "ozet": "Compare a macro and a micro experiment, cut a cube down to the nanoscale, make silver nanoparticles with waste extract, watch mercury build up along the food chain, tune a starch film and get hydrogen from waste.",
+  "adimlar": [
+   {
+    "baslik": "Beaker or drops?",
+    "metin": "Run the same reaction first in a beaker, then in a well plate. Compare the two with the switch.",
+    "sahne": {
+     "tur": "kim14-mikro"
+    },
+    "deger": {
+     "mikro": 0
+    },
+    "kontroller": [
+     {
+      "ad": "mikro",
+      "etiket": "Microscale",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "At microscale, by what factor did the waste drop?",
+     "secenekler": [
+      {
+       "yazi": "100 times",
+       "dogru": true,
+       "neden": "Waste dropped from 50 mL to 0.5 mL, and 50 ÷ 0.5 = 100. Chemicals also dropped 100 times, and rinse water 25 times."
+      },
+      {
+       "yazi": "10 times",
+       "neden": "Work out 50 ÷ 0.5. The result is much larger than 10."
+      },
+      {
+       "yazi": "2 times",
+       "neden": "Look at the bars. The microscale waste is barely visible."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Cut the cube",
+    "metin": "Cut a 1 cm³ cube into smaller and smaller cubes. Make the total surface area <b>about 60 m²</b>, about the floor of a classroom.",
+    "sahne": {
+     "tur": "kim14-nano"
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Cutting",
+      "min": 0,
+      "max": 6,
+      "adim": 1,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": [
+       5,
+       5
+      ]
+     },
+     "tamam": "When the edge reaches <b>100 nm</b>, the surface of 1 cm³ of material reaches 60 m². Reactions happen at surfaces, which is why nanoparticles are so reactive.",
+     "ipucu": "Each time the edge is divided by 10, the surface grows 10 times."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Add the extract",
+    "metin": "Extract made from used tea leaves will be dripped into silver nitrate solution.",
+    "sahne": {
+     "tur": "kim14-gumus",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What is seen in the solution?",
+     "secenekler": [
+      {
+       "yazi": "It turns yellow-brown",
+       "dogru": true,
+       "neden": "Polyphenols in the extract reduce Ag⁺ ions to Ag. The silver nanoparticles that form absorb light and give the solution a yellow-brown color."
+      },
+      {
+       "yazi": "It turns blue",
+       "neden": "Blue is typical of copper(II) ions. Here there is silver."
+      },
+      {
+       "yazi": "Nothing changes",
+       "neden": "The extract is a reducing agent. It reacts with Ag⁺, and the color changes."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "A copper nanoparticle plan",
+    "metin": "You will make <b>copper nanoparticles</b> from pomegranate peel the same way as with silver. Set up the experiment plan.",
+    "sahne": {
+     "tur": "deney-plan",
+     "baslik": "Bakır nanoparçacık deney planı",
+     "satirlar": [
+      {
+       "ad": "tuz",
+       "etiket": "Metal tuzu",
+       "dogru": 1,
+       "secenekler": [
+        {
+         "yazi": "Bakır(II) sülfat"
+        },
+        {
+         "yazi": "Gümüş nitrat",
+         "neden": "Gümüş nitrat gümüş nanoparçacık verir; bakır için bakır tuzu gerekir."
+        },
+        {
+         "yazi": "Sofra tuzu",
+         "neden": "Sodyum iyonunu bitki özütü metale indirgeyemez."
+        }
+       ]
+      },
+      {
+       "ad": "ozut",
+       "etiket": "İndirgen",
+       "dogru": 2,
+       "secenekler": [
+        {
+         "yazi": "Saf su",
+         "neden": "Saf suda Cu²⁺'yı indirgeyecek polifenol yok."
+        },
+        {
+         "yazi": "Nar kabuğu özütü"
+        },
+        {
+         "yazi": "Zeytinyağı",
+         "neden": "Yağ suda çözünmez; indirgen özüt sulu olmalı."
+        }
+       ]
+      },
+      {
+       "ad": "kosul",
+       "etiket": "Koşul",
+       "dogru": 1,
+       "secenekler": [
+        {
+         "yazi": "70 °C, karıştır"
+        },
+        {
+         "yazi": "Soğukta beklet",
+         "neden": "Soğukta indirgenme çok yavaşlar."
+        },
+        {
+         "yazi": "Kaynatıp kurut",
+         "neden": "Kuruyunca parçacıklar topaklanır ve yükseltgenir."
+        }
+       ]
+      },
+      {
+       "ad": "olcum",
+       "etiket": "Ölçüm",
+       "dogru": 3,
+       "secenekler": [
+        {
+         "yazi": "Kütle tartımı",
+         "neden": "Oluşan miktar tartılamayacak kadar az; soğurma ölçülür."
+        },
+        {
+         "yazi": "420 nm soğurma",
+         "neden": "420 nm gümüşün tepesidir; bakırınki yaklaşık 570 nm."
+        },
+        {
+         "yazi": "~570 nm soğurma"
+        }
+       ]
+      }
+     ]
+    },
+    "deger": {
+     "tuz": 0,
+     "ozut": 0,
+     "kosul": 0,
+     "olcum": 0
+    },
+    "kontroller": [
+     {
+      "ad": "tuz",
+      "etiket": "Metal salt",
+      "min": 0,
+      "max": 3,
+      "tur": "surukle"
+     },
+     {
+      "ad": "ozut",
+      "etiket": "Reducing agent",
+      "min": 0,
+      "max": 3,
+      "tur": "surukle"
+     },
+     {
+      "ad": "kosul",
+      "etiket": "Condition",
+      "min": 0,
+      "max": 3,
+      "tur": "surukle"
+     },
+     {
+      "ad": "olcum",
+      "etiket": "Measurement",
+      "min": 0,
+      "max": 3,
+      "tur": "surukle"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "tuz": 1,
+      "ozut": 2,
+      "kosul": 1,
+      "olcum": 3
+     },
+     "tamam": "Polyphenols in pomegranate peel reduce Cu²⁺ ions to Cu atoms, and heat speeds up the reaction. Copper nanoparticles have an absorbance peak near 570 nm. Copper oxidizes easily in air, so the measurement is made right away.",
+     "ipucu": "Adapt the steps of the silver experiment to copper."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Compare the results",
+    "metin": "Extracts from three wastes were mixed with silver nitrate using the same amount, temperature and time. Compare the results.",
+    "sahne": {
+     "tur": "deney-tablo",
+     "baslik": "Gümüş nanoparçacık",
+     "sutunlar": [
+      "Atık özütü",
+      "Tepe",
+      "Soğurma"
+     ],
+     "satirlar": [
+      [
+       "Çay posası",
+       "421 nm",
+       "0,62"
+      ],
+      [
+       "Nar kabuğu",
+       "423 nm",
+       "0,95"
+      ],
+      [
+       "Portakal kabuğu",
+       "420 nm",
+       "0,31"
+      ]
+     ],
+     "not": "Soğurmalardan körün (yalnız özüt) değeri çıkarıldı."
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which extract made the most silver nanoparticles?",
+     "secenekler": [
+      {
+       "yazi": "Pomegranate peel",
+       "dogru": true,
+       "neden": "The conditions are the same and the peaks are in the same place, so the sizes are similar. The largest blank-corrected absorbance means the most particles."
+      },
+      {
+       "yazi": "Used tea leaves",
+       "neden": "The absorbance of used tea leaves (0.62) is smaller than that of pomegranate peel (0.95)."
+      },
+      {
+       "yazi": "Orange peel",
+       "neden": "Orange peel has the smallest absorbance (0.31). It also has the fewest particles."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "A strange result with copper",
+    "metin": "The same comparison was made with copper sulfate. One result is different from the others.",
+    "sahne": {
+     "tur": "deney-tablo",
+     "baslik": "Bakır nanoparçacık",
+     "sutunlar": [
+      "Atık özütü",
+      "Tepe",
+      "Soğurma"
+     ],
+     "satirlar": [
+      [
+       "Çay posası",
+       "572 nm",
+       "0,48"
+      ],
+      [
+       "Nar kabuğu",
+       "575 nm",
+       "0,30"
+      ],
+      [
+       "Portakal kabuğu",
+       "640 nm",
+       "0,52"
+      ]
+     ],
+     "not": "Portakal kabuğu tüpü bir gün sonra yeşilimsi görünüyordu."
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which result cannot be compared directly with the others?",
+     "secenekler": [
+      {
+       "yazi": "Orange peel",
+       "dogru": true,
+       "neden": "This sample's peak has shifted to 640 nm. So the particles have a different size or type (for example, oxidized copper). Its absorbance is large, but the amount cannot be compared directly."
+      },
+      {
+       "yazi": "Used tea leaves",
+       "neden": "This sample's peak is in the copper range (about 570 nm). So it can be compared with the others."
+      },
+      {
+       "yazi": "Pomegranate peel",
+       "neden": "This sample's peak is in the copper range (about 570 nm). Its absorbance is small, but it can be compared."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Where does mercury build up?",
+    "metin": "A small amount of mercury waste got into a lake. Follow the food chain.",
+    "sahne": {
+     "tur": "kim14-birikim",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Where is the mercury concentration highest?",
+     "secenekler": [
+      {
+       "yazi": "At the top of the chain, in humans",
+       "dogru": true,
+       "neden": "Each organism eats many prey and gets rid of mercury much more slowly than it takes it in. The concentration multiplies at each level. This is called biomagnification."
+      },
+      {
+       "yazi": "In the water",
+       "neden": "The concentration is lowest in the water. Mercury passes into living things and builds up there."
+      },
+      {
+       "yazi": "Equal everywhere",
+       "neden": "Mercury leaves the body slowly, so it concentrates at the upper levels."
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "A flexible film",
+    "metin": "You are making a film with 10 g of starch. Adjust the glycerol amount. The film should be <b>flexible</b>, neither brittle nor sticky.",
+    "sahne": {
+     "tur": "kim14-film"
+    },
+    "deger": {
+     "g": 0
+    },
+    "kontroller": [
+     {
+      "ad": "g",
+      "etiket": "Glycerol",
+      "min": 0,
+      "max": 60,
+      "adim": 5,
+      "tur": "surgu",
+      "birim": "%"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "g": [
+       20,
+       40
+      ]
+     },
+     "tamam": "Glycerol slips between the starch chains and pushes them slightly apart. So the film bends but does not fall apart. Designing a polymer means choosing its ingredients for the purpose.",
+     "ipucu": "If the film cracks, add glycerol. If it is sticky, use less."
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "The right conditions for bacteria",
+    "metin": "Set the pH and temperature, then press play. Collect <b>the most hydrogen</b> in the balloon.",
+    "sahne": {
+     "tur": "kim14-hidrojen",
+     "sure": 5
+    },
+    "deger": {
+     "pH": 7,
+     "T": 25
+    },
+    "kontroller": [
+     {
+      "ad": "pH",
+      "etiket": "pH",
+      "min": 4,
+      "max": 8,
+      "adim": 0.1,
+      "tur": "surgu"
+     },
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 20,
+      "max": 60,
+      "adim": 1,
+      "tur": "surgu",
+      "birim": "°C"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "pH": [
+       5.2,
+       5.8
+      ],
+      "T": [
+       32,
+       38
+      ]
+     },
+     "tamam": "A slightly acidic (pH ≈ 5.5) and warm (≈ 35 °C) environment suits these bacteria best. In a real experiment, the waste type, amount and time are kept constant.",
+     "ipucu": "Make the environment slightly acidic and bring the temperature close to body temperature."
+    },
+    "kart": 11
+   }
+  ],
+  "kapanis": [
+   "Preventing waste is better than cleaning it up. Microscale work makes this possible in the lab.",
+   "As matter gets smaller, its surface grows. At the nanoscale, matter behaves differently.",
+   "Silver and copper nanoparticles can be made with waste extracts. In the comparison, the only variable is the waste type. If the peak position is the same, blank-corrected absorbances are compared.",
+   "Heavy metals build up in living things. Mercury becomes more concentrated step by step along the food chain.",
+   "A biodegradable film and hydrogen from waste depend on choosing the ingredients and conditions."
+  ],
+  "soruOnce": true
  }
 }
