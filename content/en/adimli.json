@@ -18607,6 +18607,253 @@
   ],
   "soruOnce": true
  },
+ "sinir-sistemi": {
+  "id": "sinir-sistemi",
+  "ders": "biyoloji",
+  "konu": "sinir-sistemi",
+  "baslik": "Nervous system",
+  "ozet": "Try it first, then learn its name. Follow the impulse, push the membrane to threshold, race a myelinated axon and watch a reflex.",
+  "adimlar": [
+   {
+    "baslik": "The path in a neuron",
+    "metin": "Play the neuron and follow the path the impulse takes.",
+    "sahne": {
+     "tur": "biy9-noron",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which path does the impulse follow in a neuron?",
+     "secenekler": [
+      {
+       "yazi": "Axon → cell body → dendrite",
+       "neden": "That is the reverse direction. The axon carries the impulse away from the cell body, and the dendrite receives the stimulus."
+      },
+      {
+       "yazi": "Dendrite → cell body → axon → axon terminal",
+       "dogru": true,
+       "neden": "The stimulus is received at the dendrite and passes through the cell body. Then it travels along the axon and is passed to the next cell at the axon terminal."
+      },
+      {
+       "yazi": "Cell body → dendrite → axon terminal",
+       "neden": "Dendrites bring the stimulus to the cell body. The impulse does not go from the cell body to the dendrite."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Pass the threshold",
+    "metin": "The inside of a resting membrane is <b>−70 mV</b> compared with the outside. If a stimulus brings the membrane to the <b>−55 mV</b> threshold, an impulse forms. Set the stimulus and press play.",
+    "sahne": {
+     "tur": "biy9-aksiyon",
+     "sure": 4
+    },
+    "deger": {
+     "u": 5
+    },
+    "kontroller": [
+     {
+      "ad": "u",
+      "etiket": "Stimulus",
+      "min": 0,
+      "max": 30,
+      "adim": 5,
+      "birim": "mV",
+      "onek": "+",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "u": [
+       15,
+       30
+      ]
+     },
+     "ipucu": "To raise the membrane from −70 to −55, you need at least +15 mV.",
+     "tamam": "The threshold was passed. Na⁺ channels opened, Na⁺ ions rushed in and the membrane rose to +30 mV. This is called depolarization. Then K⁺ ions left and the membrane returned to its old state. This is called repolarization. These flows do not use ATP."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "All or none",
+    "metin": "You passed the threshold. Now <b>strengthen</b> the stimulus and play with two different values. Then compare the peaks.",
+    "sahne": {
+     "tur": "biy9-aksiyon",
+     "sure": 4
+    },
+    "deger": {
+     "u": 20
+    },
+    "kontroller": [
+     {
+      "ad": "u",
+      "etiket": "Stimulus",
+      "min": 15,
+      "max": 30,
+      "adim": 5,
+      "birim": "mV",
+      "onek": "+",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "When the stimulus got stronger, what happened to the impulse's peak?",
+     "secenekler": [
+      {
+       "yazi": "It grew with the stimulus",
+       "neden": "The peak stayed at +30 mV each time. Once the threshold is passed, the impulse is always the same size."
+      },
+      {
+       "yazi": "It got smaller",
+       "neden": "The peak did not shrink. It reached +30 mV in both tries."
+      },
+      {
+       "yazi": "It stayed the same",
+       "dogru": true,
+       "neden": "By the all-or-none rule, an impulse forms at full size once the threshold is passed. A strong stimulus does not make the impulse bigger, it makes impulses more often."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Myelin race",
+    "metin": "Some axons are wrapped in a <b>myelin</b> sheath. The impulse forms again at the <b>nodes of Ranvier</b> between the sheath segments. Press play.",
+    "sahne": {
+     "tur": "biy9-miyelin",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "The impulse reaches the end of which axon first?",
+     "secenekler": [
+      {
+       "yazi": "Myelinated axon",
+       "dogru": true,
+       "neden": "The impulse jumps from node to node. In a thick myelinated axon the speed passes 100 m/s, while in an unmyelinated axon it is about 1 m/s."
+      },
+      {
+       "yazi": "Unmyelinated axon",
+       "neden": "In an unmyelinated axon, the impulse must form again at every point of the membrane. This slows conduction."
+      },
+      {
+       "yazi": "Both at once",
+       "neden": "Myelin raises conduction speed a lot. So the impulses do not reach the ends at the same time."
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Synapse",
+    "metin": "Neurons do not touch each other. Between them is a gap called a <b>synapse</b>. Watch what happens when an impulse reaches the axon terminal.",
+    "sahne": {
+     "tur": "biy9-sinaps",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "How does the impulse cross the synaptic gap?",
+     "secenekler": [
+      {
+       "yazi": "A current jumps the gap",
+       "neden": "At most synapses, electricity does not jump the gap. The transfer is chemical."
+      },
+      {
+       "yazi": "A neurotransmitter is released",
+       "dogru": true,
+       "neden": "Vesicles in the axon terminal release a chemical messenger called a neurotransmitter into the gap."
+      },
+      {
+       "yazi": "The terminal fuses with the next neuron",
+       "neden": "Neurons do not fuse with each other, and the gap between them stays."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Reflex arc",
+    "metin": "Your hand touches a hot stove. Play the path of the signal.",
+    "sahne": {
+     "tur": "biy9-refleks",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Where does the command to pull your hand back come from?",
+     "secenekler": [
+      {
+       "yazi": "The brain",
+       "neden": "The brain notices the pain later. The hand is pulled back before that."
+      },
+      {
+       "yazi": "The cerebellum",
+       "neden": "The cerebellum controls balance and coordination. It does not start this reflex."
+      },
+      {
+       "yazi": "The spinal cord",
+       "dogru": true,
+       "neden": "The interneuron is in the spinal cord, and the signal is passed to the motor neuron before it reaches the brain. That is why the reflex is so fast."
+      }
+     ]
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Autonomic nervous system",
+    "metin": "Heartbeat and digestion are controlled involuntarily. The <b>sympathetic</b> system prepares the body for danger, and the <b>parasympathetic</b> system prepares it for rest. Use the switch to go between the two systems.",
+    "sahne": {
+     "tur": "biy9-otonom"
+    },
+    "deger": {
+     "sem": 0
+    },
+    "kontroller": [
+     {
+      "ad": "sem",
+      "etiket": "Sympathetic",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which is an effect of the parasympathetic system?",
+     "secenekler": [
+      {
+       "yazi": "Faster heartbeat",
+       "neden": "The sympathetic system is what speeds up the heart."
+      },
+      {
+       "yazi": "Faster digestion",
+       "dogru": true,
+       "neden": "The parasympathetic system is the rest-and-digest system. Through acetylcholine it speeds up digestion and slows the heart."
+      },
+      {
+       "yazi": "Dilated pupils",
+       "neden": "The sympathetic system is what dilates the pupil. This lets more light into the eye."
+      }
+     ]
+    },
+    "kart": 14
+   }
+  ],
+  "kapanis": [
+   "The impulse travels from the dendrite to the cell body, then along the axon to the axon terminal.",
+   "When the membrane passes the −55 mV threshold, Na⁺ enters first and then K⁺ leaves. The impulse follows the all-or-none rule.",
+   "In a myelinated axon, the impulse jumps from node to node and travels much faster.",
+   "Transmission at a synapse is chemical and one-way.",
+   "A reflex is processed in the spinal cord. The brain notices the pain afterward."
+  ],
+  "soruOnce": true
+ },
  "ekosistem": {
   "id": "ekosistem",
   "ders": "biyoloji",
