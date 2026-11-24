@@ -4256,6 +4256,693 @@
    }
   ]
  },
+ "cozeltiler": {
+  "title": "Solutions and solubility",
+  "summary": "Learn about dissolving, concentration units, colligative properties and solubility.",
+  "cards": [
+   {
+    "h": "Recall: solvent and solute",
+    "p": "A solution is a homogeneous mixture. The substance that spreads out is called the <b>solute</b>, and the substance it spreads into is the <b>solvent</b>. Like dissolves like. That's why polar ethanol and water mix in any proportion.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Like dissolves like</text><text x='178' y='48' font-size='12' fill='var(--c1)' text-anchor='middle'>Water (polar)</text><text x='266' y='48' font-size='12' fill='var(--c4)' text-anchor='middle'>Hexane (nonpolar)</text><rect x='10' y='60' width='300' height='58' rx='6' fill='var(--panel)' fill-opacity='1' stroke='var(--line)'/><rect x='10' y='124' width='300' height='58' rx='6' fill='var(--panel)' fill-opacity='1' stroke='var(--line)'/><text x='16' y='84' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Polar / ionic</text><text x='16' y='102' font-size='11' fill='var(--muted)' text-anchor='start'>salt, sugar, ethanol</text><text x='16' y='148' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Nonpolar</text><text x='16' y='166' font-size='11' fill='var(--muted)' text-anchor='start'>oil, I₂, gasoline</text><rect x='138' y='68' width='80' height='42' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='178' y='94' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>dissolves</text><rect x='226' y='68' width='80' height='42' rx='6' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)'/><text x='266' y='94' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>very little</text><rect x='138' y='132' width='80' height='42' rx='6' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)'/><text x='178' y='158' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>very little</text><rect x='226' y='132' width='80' height='42' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)'/><text x='266' y='158' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>dissolves</text><text x='160' y='195' font-size='11' fill='var(--muted)' text-anchor='middle'>Row: solute, column: solvent</text></svg>",
+    "key": "Ethanol and water form hydrogen bonds. In an aqueous solution, (aq) is written after the solute, for example NaCl(aq).",
+    "once": {
+     "soru": "Why doesn't oil dissolve in water?",
+     "secenekler": [
+      {
+       "yazi": "Oil is nonpolar, water is polar",
+       "neden": "Like dissolves like. Nonpolar oil doesn't interact with polar water.",
+       "dogru": true
+      },
+      {
+       "yazi": "Oil is lighter than water",
+       "neden": "Being lighter doesn't decide solubility. Ethanol is also lighter than water, but it dissolves in water."
+      },
+      {
+       "yazi": "Oil isn't a liquid",
+       "neden": "Liquid oils don't dissolve in water either."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Dissolving: ionic and molecular",
+    "p": "Ionic solids such as NaCl <b>split into ions</b> in water. Sugar spreads out <b>as molecules</b>. Particles being surrounded by water molecules is called <b>hydration</b>. Dissolving is a physical change.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>NaCl(s) → Na⁺(aq) + Cl⁻(aq)</text><circle cx='104.7' cy='131.6' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='113.6' cy='122.7' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='101.9' cy='119.9' r='7' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><circle cx='46.4' cy='122.7' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='55.3' cy='131.6' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='58.1' cy='119.9' r='7' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><circle cx='55.3' cy='64.4' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='46.4' cy='73.3' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='58.1' cy='76.1' r='7' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><circle cx='113.6' cy='73.3' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='104.7' cy='64.4' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='101.9' cy='76.1' r='7' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><circle cx='80' cy='98' r='13' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1'/><text x='80' y='102' font-size='11' fill='var(--ink)' text-anchor='middle'>Na⁺</text><circle cx='263.3' cy='121.3' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='261.7' cy='133.3' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='270.4' cy='128.4' r='7' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><circle cx='216.7' cy='121.3' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='204.7' cy='119.7' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='209.6' cy='128.4' r='7' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><circle cx='216.7' cy='74.7' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='218.3' cy='62.7' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='209.6' cy='67.6' r='7' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><circle cx='263.3' cy='74.7' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='275.3' cy='76.3' r='4.5' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><circle cx='270.4' cy='67.6' r='7' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><circle cx='240' cy='98' r='16' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1'/><text x='240' y='102' font-size='12' fill='var(--ink)' text-anchor='middle'>Cl⁻</text><text x='80' y='158' font-size='11' fill='var(--muted)' text-anchor='middle'>O end (δ−) turns to the ion</text><text x='240' y='158' font-size='11' fill='var(--muted)' text-anchor='middle'>H ends (δ+) turn to the ion</text><circle cx='98' cy='182' r='5' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><text x='108' y='186' font-size='11' fill='var(--ink)' text-anchor='start'>O</text><circle cx='130' cy='182' r='4' fill='var(--muted)' fill-opacity='0.15' stroke='var(--muted)' stroke-width='1'/><text x='139' y='186' font-size='11' fill='var(--ink)' text-anchor='start'>H</text><text x='162' y='186' font-size='11' fill='var(--acc)' text-anchor='start'>Hydration: water surrounds the ion</text></svg>",
+    "key": "If the solvent is not water, this is called solvation. Salt water conducts electricity because it contains ions, but sugar water does not."
+   },
+   {
+    "h": "Heat of solution",
+    "p": "In dissolving, energy is absorbed as the particles separate and released as the solvent surrounds them. Depending on which is larger, dissolving is <b>exothermic</b> or <b>endothermic</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Dissolving = separating + surrounding</text><text x='82' y='42' font-size='11' fill='var(--c1)' text-anchor='middle'>① particles separate</text><text x='82' y='56' font-size='11' fill='var(--muted)' text-anchor='middle'>energy absorbed</text><text x='238' y='42' font-size='11' fill='var(--c2)' text-anchor='middle'>② solvent surrounds</text><text x='238' y='56' font-size='11' fill='var(--muted)' text-anchor='middle'>energy released</text><rect x='8' y='70' width='148' height='122' rx='6' fill='var(--c2)' fill-opacity='0.06' stroke='var(--c2)' stroke-width='1.2'/><rect x='164' y='70' width='148' height='122' rx='6' fill='var(--c1)' fill-opacity='0.06' stroke='var(--c1)' stroke-width='1.2'/><text x='82' y='92' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Exothermic</text><text x='82' y='110' font-size='11' fill='var(--muted)' text-anchor='middle'>② dominates</text><text x='82' y='134' font-size='12' fill='var(--ink)' text-anchor='middle'>NaOH, H₂SO₄</text><text x='82' y='158' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>container warms</text><text x='238' y='92' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Endothermic</text><text x='238' y='110' font-size='11' fill='var(--muted)' text-anchor='middle'>① dominates</text><text x='238' y='134' font-size='12' fill='var(--ink)' text-anchor='middle'>NH₄NO₃, KNO₃</text><text x='238' y='158' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>container cools</text><text x='238' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>solubility rises with T</text></svg>",
+    "key": "When NaOH and H₂SO₄ dissolve, the container warms. When NH₄NO₃ and KNO₃ dissolve, the container cools. Substances that dissolve endothermically become more soluble with temperature.",
+    "once": {
+     "soru": "When the salt in a cold pack dissolves in water, the pack gets cold. What kind of dissolving is this?",
+     "secenekler": [
+      {
+       "yazi": "Endothermic",
+       "neden": "Dissolving takes heat from the surroundings. That's why the pack gets cold.",
+       "dogru": true
+      },
+      {
+       "yazi": "Exothermic",
+       "neden": "If it were exothermic, the pack would warm up."
+      },
+      {
+       "yazi": "Chemical reaction",
+       "neden": "Dissolving is a physical change, and no new substance forms."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Percent concentration and ppm",
+    "p": "<b>Mass percent</b> is the mass of solute in 100 g of solution. For example, a solution of 20 g of salt and 80 g of water is 20%. For very dilute solutions, <b>ppm</b> is used. 1 ppm means 1 mg of solute in 1 kg of solution.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Expressing concentration as percent and ppm</text><rect x='6' y='34' width='96' height='150' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)'/><text x='54' y='54' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>Mass %</text><line x1='16' y1='80' x2='92' y2='80' stroke='var(--ink)' stroke-width='1'/><text x='54' y='74' font-size='11' fill='var(--ink)' text-anchor='middle'>m solute</text><text x='54' y='96' font-size='11' fill='var(--ink)' text-anchor='middle'>m solution</text><text x='54' y='112' font-size='11' fill='var(--muted)' text-anchor='middle'>× 100</text><text x='54' y='134' font-size='11' fill='var(--muted)' text-anchor='middle'>20 g salt</text><text x='54' y='150' font-size='11' fill='var(--muted)' text-anchor='middle'>+ 80 g water</text><text x='54' y='174' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>20%</text><rect x='112' y='34' width='96' height='150' rx='6' fill='var(--c5)' fill-opacity='0.08' stroke='var(--c5)'/><text x='160' y='54' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>Volume %</text><line x1='122' y1='80' x2='198' y2='80' stroke='var(--ink)' stroke-width='1'/><text x='160' y='74' font-size='11' fill='var(--ink)' text-anchor='middle'>V solute</text><text x='160' y='96' font-size='11' fill='var(--ink)' text-anchor='middle'>V solution</text><text x='160' y='112' font-size='11' fill='var(--muted)' text-anchor='middle'>× 100</text><text x='160' y='134' font-size='11' fill='var(--muted)' text-anchor='middle'>80 mL ethanol</text><text x='160' y='150' font-size='11' fill='var(--muted)' text-anchor='middle'>100 mL solution</text><text x='160' y='174' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>80%</text><rect x='218' y='34' width='96' height='150' rx='6' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)'/><text x='266' y='54' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>ppm</text><line x1='228' y1='80' x2='304' y2='80' stroke='var(--ink)' stroke-width='1'/><text x='266' y='74' font-size='11' fill='var(--ink)' text-anchor='middle'>m solute</text><text x='266' y='96' font-size='11' fill='var(--ink)' text-anchor='middle'>m solution</text><text x='266' y='112' font-size='11' fill='var(--muted)' text-anchor='middle'>× 10⁶</text><text x='266' y='134' font-size='11' fill='var(--muted)' text-anchor='middle'>1 mg solute</text><text x='266' y='150' font-size='11' fill='var(--muted)' text-anchor='middle'>1 kg solution</text><text x='266' y='174' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>1 ppm</text><text x='160' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>ppm: parts per million; for very dilute solutions</text></svg>",
+    "key": "The denominator is the solution, not the solvent. Volume percent is used for liquids. 100 mL of an 80% cologne contains 80 mL of ethanol."
+   },
+   {
+    "h": "Molarity: M = n / V",
+    "p": "<b>Molarity</b> is the number of moles of solute in 1 liter of solution, found from <b>M = n / V</b>. Here V is the volume of the <b>solution</b>, not of the solvent.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='coz-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='70' y='52' font-size='24' fill='var(--acc)' text-anchor='middle' font-weight='700'>M = n / V</text><text x='20' y='84' font-size='11' fill='var(--ink)' text-anchor='start'>n: moles of solute</text><text x='20' y='102' font-size='11' fill='var(--ink)' text-anchor='start'>V: solution volume (L)</text><text x='20' y='120' font-size='11' fill='var(--muted)' text-anchor='start'>unit: mol/L = M</text><path d='M232 40 V92 L196 160 Q192 172 204 172 H292 Q304 172 300 160 L264 92 V40' fill='none' stroke='var(--ink)' stroke-width='2'/><path d='M232 92 L198 156 Q195 170 206 170 H290 Q301 170 298 156 L264 92 Z' fill='var(--c1)' fill-opacity='0.15'/><path d='M232 60 V92 H264 V60 Z' fill='var(--c1)' fill-opacity='0.15'/><line x1='226' y1='60' x2='270' y2='60' stroke='var(--c2)' stroke-width='1.5'/><text x='276' y='64' font-size='11' fill='var(--c2)' text-anchor='start'>250 mL</text><text x='248' y='140' font-size='11' fill='var(--ink)' text-anchor='middle'>0.1 mol</text><text x='248' y='155' font-size='11' fill='var(--ink)' text-anchor='middle'>NaOH</text><rect x='10' y='140' width='170' height='50' rx='6' fill='var(--panel)' fill-opacity='1' stroke='var(--line)'/><text x='95' y='160' font-size='11' fill='var(--ink)' text-anchor='middle'>4 g ÷ 40 g/mol = 0.1 mol</text><text x='95' y='180' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>0.1 mol ÷ 0.25 L = 0.4 M</text><text x='248' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>water up to the line</text></svg>",
+    "etk": {
+     "tur": "formul",
+     "soru": "M = n / V. Change the mass of solute, the molar mass and the final volume of the solution. (NaOH: 40 g/mol)",
+     "girdiler": [
+      {
+       "ad": "m",
+       "etiket": "Mass of solute",
+       "birim": "g",
+       "min": 1,
+       "max": 20,
+       "adim": 1,
+       "deger": 4
+      },
+      {
+       "ad": "Mk",
+       "etiket": "Molar mass",
+       "birim": "g/mol",
+       "min": 20,
+       "max": 200,
+       "adim": 1,
+       "deger": 40
+      },
+      {
+       "ad": "V",
+       "etiket": "Solution volume",
+       "birim": "mL",
+       "min": 100,
+       "max": 1000,
+       "adim": 50,
+       "deger": 250
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "n",
+       "ifade": "m/Mk",
+       "birim": "mol",
+       "basamak": 3
+      },
+      {
+       "ad": "Molarity",
+       "ifade": "m/Mk/(V/1000)",
+       "birim": "M (mol/L)",
+       "basamak": 3,
+       "max": 2
+      }
+     ]
+    },
+    "key": "For example, 4 g of NaOH (40 g/mol) is 0.1 mol. If it is made up to 250 mL with water, the concentration is 0.1 / 0.25 = 0.4 M. Don't forget to convert mL to liters."
+   },
+   {
+    "h": "Molality and mole fraction",
+    "p": "<b>Molality</b> is the number of moles of solute per 1 kg of <b>solvent</b>, and it doesn't change with temperature. <b>Mole fraction</b> is the moles of one component divided by the total moles, and it has no unit.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='30' width='146' height='160' rx='6' fill='var(--c5)' fill-opacity='0.07' stroke='var(--c5)'/><text x='81' y='50' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Molality</text><text x='81' y='78' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>m = n / kg solvent</text><text x='81' y='104' font-size='11' fill='var(--muted)' text-anchor='middle'>0.5 mol sugar</text><text x='81' y='120' font-size='11' fill='var(--muted)' text-anchor='middle'>250 g = 0.25 kg water</text><text x='81' y='142' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>m = 0.5 / 0.25 = 2 m</text><text x='81' y='172' font-size='11' fill='var(--ink)' text-anchor='middle'>independent of temperature</text><rect x='166' y='30' width='146' height='160' rx='6' fill='var(--c3)' fill-opacity='0.07' stroke='var(--c3)'/><text x='239' y='50' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Mole fraction</text><text x='239' y='78' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>X<tspan font-size='10' baseline-shift='sub'>A</tspan> = n<tspan font-size='10' baseline-shift='sub'>A</tspan> / n<tspan font-size='10' baseline-shift='sub'>total</tspan></text><text x='239' y='96' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>X(ethanol) = 2/8 = 0.25</text><circle cx='186' cy='116' r='7' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><circle cx='208' cy='140' r='7' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><circle cx='230' cy='114' r='7' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><circle cx='252' cy='138' r='7' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><circle cx='274' cy='116' r='7' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><circle cx='294' cy='140' r='7' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><circle cx='196' cy='158' r='7' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><circle cx='270' cy='158' r='7' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><text x='239' y='180' font-size='10' fill='var(--muted)' text-anchor='middle'>red: ethanol, blue: water</text></svg>",
+    "key": "Molarity is based on liters of solution, and molality on kilograms of solvent.",
+    "once": {
+     "soru": "Which one doesn't change when a solution is heated?",
+     "secenekler": [
+      {
+       "yazi": "Molality",
+       "neden": "Molality is based on mass, and mass doesn't change with heat.",
+       "dogru": true
+      },
+      {
+       "yazi": "Molarity",
+       "neden": "The volume expands with heat, so the molarity drops slightly."
+      },
+      {
+       "yazi": "Both change",
+       "neden": "Molality is based on mass, so it stays constant."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Dilution and mixing",
+    "p": "If you add water to a solution, the moles don't change, only the volume grows. So <b>M₁V₁ = M₂V₂</b>. If two solutions are mixed, add up the moles and divide by the total volume.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='coz-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><rect x='20' y='128' width='70' height='32' fill='var(--c1)' fill-opacity='0.15'/><path d='M20 78 V160 H90 V78' fill='none' stroke='var(--ink)' stroke-width='2'/><circle cx='28.75' cy='144.0' r='4.5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='46.25' cy='144.0' r='4.5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='63.75' cy='144.0' r='4.5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='81.25' cy='144.0' r='4.5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><text x='55' y='70' font-size='11' fill='var(--ink)' text-anchor='middle'>100 mL, 2 M</text><text x='55' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>0.2 mol</text><path d='M102 132 H150' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#coz-7)'/><text x='126' y='120' font-size='11' fill='var(--c1)' text-anchor='middle'>+300 mL water</text><rect x='166' y='48' width='90' height='112' fill='var(--c1)' fill-opacity='0.15'/><path d='M166 38 V160 H256 V38' fill='none' stroke='var(--ink)' stroke-width='2'/><circle cx='177.25' cy='92.0' r='4.5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='199.75' cy='116.0' r='4.5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='222.25' cy='92.0' r='4.5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='244.75' cy='116.0' r='4.5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><text x='211' y='30' font-size='11' fill='var(--ink)' text-anchor='middle'>400 mL, 0.5 M</text><text x='211' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>still 0.2 mol</text><text x='290' y='92' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>n constant</text><text x='290' y='110' font-size='12' fill='var(--c1)' text-anchor='middle'>V increased</text><text x='160' y='196' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>M₁V₁ = M₂V₂ → 2 · 100 = M₂ · 400</text></svg>",
+    "key": "The concentration of a mixture is Mfinal = (M₁V₁ + M₂V₂) / (V₁ + V₂). Mixing equal volumes of 1 M and 3 M solutions gives 2 M."
+   },
+   {
+    "h": "From percent and density to molarity",
+    "p": "A bottle of concentrated acid lists the mass percent and the density. The molarity is <b>M = 10·d·% / M<sub>A</sub></b>. For example, 36.5% HCl (d = 1.2 g/mL) is 12 M.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='40' y='28' width='30' height='12' rx='3' fill='var(--c2)' fill-opacity='0.7'/><rect x='43' y='40' width='24' height='18' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><rect x='22' y='58' width='66' height='126' rx='10' fill='var(--c1)' fill-opacity='0.12' stroke='var(--ink)' stroke-width='1.5'/><rect x='29' y='92' width='52' height='56' rx='4' fill='var(--panel)' stroke='var(--line)'/><text x='55' y='110' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>HCl</text><text x='55' y='125' font-size='11' fill='var(--c2)' text-anchor='middle'>36.5%</text><text x='55' y='140' font-size='10' fill='var(--muted)' text-anchor='middle'>d = 1.2</text><text x='108' y='40' font-size='11' fill='var(--muted)'>Take 1 L of solution:</text><text x='108' y='62' font-size='12' fill='var(--ink)'>mass = 1000 · 1.2 = 1200 g</text><text x='108' y='86' font-size='12' fill='var(--ink)'>HCl = 1200 · 0.365 = 438 g</text><text x='108' y='110' font-size='12' fill='var(--ink)'>n = 438 / 36.5 = 12 mol</text><text x='108' y='134' font-size='12' fill='var(--c2)' font-weight='700'>M = 12 mol / 1 L = 12 M</text><rect x='104' y='154' width='208' height='30' rx='6' fill='var(--acc)' fill-opacity='0.12' stroke='var(--acc)'/><text x='208' y='174' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>M = 10 · d · % / M<tspan font-size='9' dy='3'>A</tspan></text></svg>",
+    "key": "MA is the molar mass. In the formula, the percent is written as a number (36.5) and d in g/mL.",
+    "once": {
+     "soru": "What is the mass in grams of 1 L of a solution with density 1.2 g/mL?",
+     "secenekler": [
+      {
+       "yazi": "1200",
+       "neden": "The mass of 1 L of solution is 1000 mL × 1.2 g/mL = 1200 g.",
+       "dogru": true
+      },
+      {
+       "yazi": "1.2",
+       "neden": "That is the mass of 1 mL. 1 L is 1000 mL."
+      },
+      {
+       "yazi": "120",
+       "neden": "1 L is 1000 mL, not 100 mL."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Ion concentration",
+    "p": "When an ionic substance dissociates, the concentration of each ion equals the salt concentration times its coefficient in the formula. For example, in 1 M CaCl₂, [Ca²⁺] = 1 M and [Cl⁻] = 2 M.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='coz-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='160' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CaCl₂(s) → Ca²⁺(aq) + 2Cl⁻(aq)</text><text x='52' y='44' font-size='12' fill='var(--muted)' text-anchor='middle'>1 M CaCl₂</text><rect x='14' y='54' width='76' height='32' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)'/><text x='52' y='75' font-size='12' fill='var(--ink)' text-anchor='middle'>CaCl₂</text><path d='M98 70 H128' stroke='var(--muted)' stroke-width='1.5' fill='none' marker-end='url(#coz-8)'/><circle cx='158' cy='70' r='13' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1'/><text x='158' y='74' font-size='10' fill='var(--ink)' text-anchor='middle'>Ca²⁺</text><circle cx='206' cy='70' r='12' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1'/><text x='206' y='74' font-size='11' fill='var(--ink)' text-anchor='middle'>Cl⁻</text><circle cx='240' cy='70' r='12' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1'/><text x='240' y='74' font-size='11' fill='var(--ink)' text-anchor='middle'>Cl⁻</text><text x='158' y='104' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>1 M</text><text x='223' y='104' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>2 M</text><line x1='14' y1='120' x2='306' y2='120' stroke='var(--line)' stroke-width='1'/><text x='160' y='140' font-size='12' fill='var(--ink)' text-anchor='middle'>0.2 M Al₂(SO₄)₃ → 2Al³⁺ + 3SO₄²⁻</text><text x='90' y='164' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>[Al³⁺] = 0.4 M</text><text x='230' y='164' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>[SO₄²⁻] = 0.6 M</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>ion concentration = salt concentration × coefficient</text></svg>",
+    "key": "Square brackets show molar concentration. If solutions with a common ion are mixed, add up that ion's moles and divide by the total volume."
+   },
+   {
+    "h": "Colligative properties",
+    "p": "Some properties depend not on the kind of solute but on the <b>number of particles</b>. These are called <b>colligative</b> properties. When a nonvolatile substance dissolves, the <b>vapor pressure drops</b> (Raoult's law).",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='coz-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><rect x='20' y='40' width='120' height='120' fill='none' stroke='var(--ink)' stroke-width='2'/><rect x='21' y='110' width='118' height='49' fill='var(--c1)' fill-opacity='0.15'/><circle cx='36' cy='52' r='4' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1'/><circle cx='68' cy='64' r='4' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1'/><circle cx='102' cy='50' r='4' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1'/><circle cx='124' cy='72' r='4' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1'/><circle cx='50' cy='80' r='4' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1'/><circle cx='86' cy='84' r='4' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1'/><circle cx='116' cy='92' r='4' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1'/><circle cx='32' cy='96' r='4' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1'/><path d='M40 106 V96' stroke='var(--c1)' stroke-width='1' fill='none' marker-end='url(#coz-9)'/><path d='M80 106 V96' stroke='var(--c1)' stroke-width='1' fill='none' marker-end='url(#coz-9)'/><path d='M120 106 V96' stroke='var(--c1)' stroke-width='1' fill='none' marker-end='url(#coz-9)'/><rect x='170' y='40' width='120' height='120' fill='none' stroke='var(--ink)' stroke-width='2'/><rect x='171' y='110' width='118' height='49' fill='var(--c1)' fill-opacity='0.15'/><circle cx='178' cy='128' r='4.5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='199' cy='138' r='4.5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='220' cy='128' r='4.5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='241' cy='138' r='4.5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='262' cy='128' r='4.5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='283' cy='138' r='4.5' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='186' cy='52' r='4' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1'/><circle cx='218' cy='64' r='4' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1'/><circle cx='252' cy='50' r='4' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1'/><path d='M230 106 V96' stroke='var(--c1)' stroke-width='1' fill='none' marker-end='url(#coz-9)'/><text x='80' y='28' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>pure water</text><text x='230' y='28' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>sugar water</text><text x='80' y='178' font-size='12' fill='var(--c1)' text-anchor='middle'>P° (high)</text><text x='230' y='178' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>P &lt; P°</text><text x='160' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>Raoult: P = X · P° (X: mole fraction of solvent)</text></svg>",
+    "key": "Raoult's law is P = Xsolvent·P°solvent. Boiling point elevation, freezing point depression and osmotic pressure are also colligative properties.",
+    "once": {
+     "soru": "Sugar water and salt water have the same concentration. Which has the lower vapor pressure?",
+     "secenekler": [
+      {
+       "yazi": "Salt water",
+       "neden": "NaCl gives two ions. More particles lower the vapor pressure more.",
+       "dogru": true
+      },
+      {
+       "yazi": "Sugar water",
+       "neden": "Sugar doesn't ionize and gives fewer particles."
+      },
+      {
+       "yazi": "They are equal",
+       "neden": "The concentration is the same, but the number of particles differs."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Boiling rises, freezing drops",
+    "p": "A solution of a nonvolatile substance freezes at a lower temperature and boils at a higher temperature than pure water. The change is <b>ΔT = K·m·i</b>, where i is the number of particles. i = 1 for sugar, 2 for NaCl and 3 for CaCl₂.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Water and 1 m NaCl solution at 1 atm</text><text x='20' y='46' font-size='11' fill='var(--muted)' text-anchor='start'>pure water: liquid range</text><rect x='52.5' y='52' width='225.0' height='14' fill='var(--c1)' fill-opacity='0.3'/><text x='52.5' y='82' font-size='11' fill='var(--c1)' text-anchor='middle'>0 °C</text><text x='277.5' y='82' font-size='11' fill='var(--c1)' text-anchor='middle'>100 °C</text><text x='20' y='104' font-size='11' fill='var(--muted)' text-anchor='start'>solution: range widens</text><rect x='44.1' y='110' width='235.70000000000002' height='14' fill='var(--c5)' fill-opacity='0.3'/><text x='44.1' y='140' font-size='11' fill='var(--c5)' text-anchor='start'>−3.72 °C</text><text x='279.8' y='140' font-size='11' fill='var(--c5)' text-anchor='end'>101.04 °C</text><rect x='10' y='152' width='300' height='44' rx='6' fill='var(--panel)' fill-opacity='1' stroke='var(--line)'/><text x='160' y='170' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>ΔT<tspan font-size='10' baseline-shift='sub'>f</tspan> = 1.86 · 1 · 2 = 3.72 °C</text><text x='160' y='188' font-size='11' fill='var(--ink)' text-anchor='middle'>ΔT<tspan font-size='10' baseline-shift='sub'>b</tspan> = 0.52 · 1 · 2 = 1.04 °C   (i = 2, ideal)</text></svg>",
+    "key": "Because the vapor pressure is lower, it reaches the outside pressure at a higher temperature. Antifreeze added to engine coolant prevents freezing the same way."
+   },
+   {
+    "h": "Osmosis and reverse osmosis",
+    "p": "Water moves through a semipermeable membrane from the dilute side to the concentrated side. This is called <b>osmosis</b>. The pressure that stops this flow is called <b>osmotic pressure</b>. Applying more pressure to the concentrated side is called <b>reverse osmosis</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='coz-osm' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><defs><marker id='coz-osm2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='82' y='20' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Osmosis</text><text x='238' y='20' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Reverse osmosis</text><rect x='14' y='40' width='136' height='120' fill='none' stroke='var(--ink)' stroke-width='2'/><line x1='82' y1='40' x2='82' y2='160' stroke='var(--muted)' stroke-width='1.5' stroke-dasharray='4 3'/><rect x='15' y='100' width='66' height='59' fill='var(--c1)' fill-opacity='0.15'/><rect x='83' y='72' width='66' height='87' fill='var(--c1)' fill-opacity='0.15'/><circle cx='98' cy='90' r='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='126' cy='106' r='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='118' cy='148' r='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='138' cy='138' r='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><path d='M54 130 H110' stroke='var(--c1)' stroke-width='2' fill='none' marker-end='url(#coz-osm)'/><text x='48' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>pure water</text><text x='116' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>salt water</text><text x='116' y='66' font-size='10' fill='var(--c1)' text-anchor='middle'>rises</text><rect x='170' y='40' width='136' height='120' fill='none' stroke='var(--ink)' stroke-width='2'/><line x1='238' y1='40' x2='238' y2='160' stroke='var(--muted)' stroke-width='1.5' stroke-dasharray='4 3'/><rect x='171' y='86' width='66' height='73' fill='var(--c1)' fill-opacity='0.15'/><rect x='239' y='86' width='66' height='73' fill='var(--c1)' fill-opacity='0.15'/><rect x='240' y='78' width='64' height='8' fill='var(--muted)' fill-opacity='0.5'/><path d='M272 46 V74' stroke='var(--ink)' stroke-width='2' fill='none' marker-end='url(#coz-osm2)'/><text x='288' y='60' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>P</text><circle cx='254' cy='104' r='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='280' cy='118' r='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='260' cy='140' r='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><circle cx='290' cy='148' r='4' fill='var(--c2)' fill-opacity='0.6' stroke='var(--c2)' stroke-width='1'/><path d='M266 128 H210' stroke='var(--c1)' stroke-width='2' fill='none' marker-end='url(#coz-osm)'/><text x='204' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>clean water</text><text x='272' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>seawater</text><text x='160' y='195' font-size='11' fill='var(--muted)' text-anchor='middle'>- - - semipermeable membrane: water passes, ions don't</text></svg>",
+    "key": "Reverse osmosis makes seawater drinkable. What passes through the membrane is water, not the solute. Saline solution has the same osmotic pressure as blood.",
+    "once": {
+     "soru": "What happens if you soak a cucumber in salt water?",
+     "secenekler": [
+      {
+       "yazi": "It shrinks",
+       "neden": "The outside is more concentrated. So water leaves the cucumber.",
+       "dogru": true
+      },
+      {
+       "yazi": "It swells",
+       "neden": "Water moves to the concentrated side, which is outside."
+      },
+      {
+       "yazi": "No change",
+       "neden": "There is a concentration difference between inside and outside. So water moves."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Solubility and saturation",
+    "p": "<b>Solubility</b> is the most substance that can dissolve in a given amount of solvent at a given temperature. A solution that reaches this limit is <b>saturated</b>, and one below it is <b>unsaturated</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='coz-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M48 172 H306' stroke='var(--ink)' marker-end='url(#coz-11)'/><path d='M48 172 V16' stroke='var(--ink)' marker-end='url(#coz-11)'/><text x='48.0' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>0</text><text x='110.0' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>20</text><text x='172.0' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>40</text><text x='234.0' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>60</text><text x='296.0' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>80</text><line x1='48' y1='132.0' x2='296' y2='132.0' stroke='var(--line)' stroke-width='0.8' stroke-dasharray='3 3'/><text x='44' y='136.0' font-size='10' fill='var(--muted)' text-anchor='end'>50</text><line x1='48' y1='92.0' x2='296' y2='92.0' stroke='var(--line)' stroke-width='0.8' stroke-dasharray='3 3'/><text x='44' y='96.0' font-size='10' fill='var(--muted)' text-anchor='end'>100</text><line x1='48' y1='52.0' x2='296' y2='52.0' stroke='var(--line)' stroke-width='0.8' stroke-dasharray='3 3'/><text x='44' y='56.0' font-size='10' fill='var(--muted)' text-anchor='end'>150</text><text x='296' y='198' font-size='10' fill='var(--muted)' text-anchor='end'>°C</text><text x='52' y='12' font-size='10' fill='var(--muted)' text-anchor='start'>g / 100 g water</text><polyline points='48.0,161.4 79.0,155.3 110.0,146.7 141.0,135.4 172.0,120.9 203.0,103.6 234.0,84.0 265.0,61.6 296.0,36.8' fill='none' stroke='var(--acc)' stroke-width='2.2'/><text x='258.8' y='88.0' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>KNO₃</text><circle cx='172.0' cy='120.8' r='4' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='1'/><text x='180.0' y='134.8' font-size='11' fill='var(--ink)' text-anchor='start'>saturated</text><circle cx='234.0' cy='140.0' r='4' fill='var(--c3)' fill-opacity='1' stroke='var(--c3)' stroke-width='1'/><text x='242.0' y='144.0' font-size='11' fill='var(--c3)' text-anchor='start'>unsaturated</text><circle cx='141.0' cy='92.0' r='4' fill='var(--c2)' fill-opacity='1' stroke='var(--c2)' stroke-width='1'/><text x='133.0' y='96.0' font-size='11' fill='var(--c2)' text-anchor='end'>supersaturated</text><text x='133.0' y='110.0' font-size='10' fill='var(--muted)' text-anchor='end'>(unstable)</text></svg>",
+    "key": "Tables usually give solubility in g per 100 g of water. For gases the pressure is also stated. A hot saturated solution that is cooled carefully can hold the extra solute for a while. This is called a supersaturated solution.",
+    "once": {
+     "soru": "At 20 °C, 100 g of water dissolves at most 36 g of salt. What happens if you add 50 g of salt?",
+     "secenekler": [
+      {
+       "yazi": "14 g stays at the bottom",
+       "neden": "36 g dissolves, and the excess (14 g) stays undissolved.",
+       "dogru": true
+      },
+      {
+       "yazi": "All of it dissolves",
+       "neden": "At that temperature water can't dissolve more than 36 g."
+      },
+      {
+       "yazi": "None of it dissolves",
+       "neden": "36 g, up to the limit, dissolves."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Factors that affect solubility",
+    "p": "The solubility of solids usually rises with temperature. The solubility of gases falls with temperature and rises with pressure (<b>Henry's law</b>). A <b>common ion</b> also lowers solubility.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='coz-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>What changes solubility?</text><path d='M14 150 H94' stroke='var(--ink)' marker-end='url(#coz-12)'/><path d='M14 150 V62' stroke='var(--ink)' marker-end='url(#coz-12)'/><path d='M18 138 Q59 128 86 76' fill='none' stroke='var(--c4)' stroke-width='2.2'/><text x='54' y='40' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>Solid</text><text x='54' y='54' font-size='10' fill='var(--muted)' text-anchor='middle'>(usually rises)</text><text x='94' y='166' font-size='11' fill='var(--ink)' text-anchor='end'>T</text><path d='M118 150 H198' stroke='var(--ink)' marker-end='url(#coz-12)'/><path d='M118 150 V62' stroke='var(--ink)' marker-end='url(#coz-12)'/><path d='M122 80 Q148 130 190 140' fill='none' stroke='var(--c1)' stroke-width='2.2'/><text x='158' y='40' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>Gas</text><text x='158' y='54' font-size='10' fill='var(--muted)' text-anchor='middle'>(falls in water)</text><text x='198' y='166' font-size='11' fill='var(--ink)' text-anchor='end'>T</text><path d='M222 150 H302' stroke='var(--ink)' marker-end='url(#coz-12)'/><path d='M222 150 V62' stroke='var(--ink)' marker-end='url(#coz-12)'/><path d='M222 150 L294 80' fill='none' stroke='var(--c3)' stroke-width='2.2'/><text x='262' y='40' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Gas: Henry</text><text x='262' y='54' font-size='10' fill='var(--muted)' text-anchor='middle'>C = k · P (constant T)</text><text x='302' y='166' font-size='11' fill='var(--ink)' text-anchor='end'>P</text><text x='160' y='178' font-size='11' fill='var(--muted)' text-anchor='middle'>Vertical axis: solubility</text><text x='160' y='195' font-size='11' fill='var(--muted)' text-anchor='middle'>Pressure has practically no effect on solids and liquids.</text></svg>",
+    "key": "There are exceptions such as Ca(OH)₂. AgCl dissolves less in NaCl solution than in pure water. In hot summers, dissolved oxygen in lakes decreases."
+   },
+   {
+    "h": "The solubility curve and crystallization",
+    "p": "The curve shows the most substance 100 g of water can dissolve at each temperature. When a hot saturated solution is cooled, the excess substance <b>comes out as crystals</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='coz-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M48 172 H306' stroke='var(--ink)' marker-end='url(#coz-13)'/><path d='M48 172 V16' stroke='var(--ink)' marker-end='url(#coz-13)'/><text x='48.0' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>0</text><text x='110.0' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>20</text><text x='172.0' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>40</text><text x='234.0' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>60</text><text x='296.0' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>80</text><line x1='48' y1='132.0' x2='296' y2='132.0' stroke='var(--line)' stroke-width='0.8' stroke-dasharray='3 3'/><text x='44' y='136.0' font-size='10' fill='var(--muted)' text-anchor='end'>50</text><line x1='48' y1='92.0' x2='296' y2='92.0' stroke='var(--line)' stroke-width='0.8' stroke-dasharray='3 3'/><text x='44' y='96.0' font-size='10' fill='var(--muted)' text-anchor='end'>100</text><line x1='48' y1='52.0' x2='296' y2='52.0' stroke='var(--line)' stroke-width='0.8' stroke-dasharray='3 3'/><text x='44' y='56.0' font-size='10' fill='var(--muted)' text-anchor='end'>150</text><text x='296' y='198' font-size='10' fill='var(--muted)' text-anchor='end'>°C</text><text x='52' y='12' font-size='10' fill='var(--muted)' text-anchor='start'>g / 100 g water</text><defs><marker id='coz-13b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><polyline points='48.0,161.4 79.0,155.3 110.0,146.7 141.0,135.4 172.0,120.9 203.0,103.6 234.0,84.0 265.0,61.6 296.0,36.8' fill='none' stroke='var(--acc)' stroke-width='2.2'/><polyline points='48.0,143.4 110.0,143.2 172.0,142.7 234.0,142.2 296.0,141.3' fill='none' stroke='var(--c1)' stroke-width='2'/><text x='252.6' y='52.0' font-size='12' fill='var(--acc)' text-anchor='end' font-weight='700'>KNO₃</text><text x='296.0' y='133.3' font-size='11' fill='var(--c1)' text-anchor='end' font-weight='700'>NaCl</text><line x1='234.0' y1='172' x2='234.0' y2='84.0' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><line x1='110.0' y1='172' x2='110.0' y2='146.7' stroke='var(--muted)' stroke-width='1' stroke-dasharray='3 3'/><circle cx='234.0' cy='84.0' r='4' fill='var(--acc)' fill-opacity='1' stroke='var(--acc)' stroke-width='1'/><text x='242.0' y='100.0' font-size='11' fill='var(--acc)' text-anchor='start'>110 g</text><circle cx='110.0' cy='146.7' r='4' fill='var(--acc)' fill-opacity='1' stroke='var(--acc)' stroke-width='1'/><text x='104.0' y='138.7' font-size='11' fill='var(--acc)' text-anchor='end'>≈32 g</text><path d='M221.6 84.0 Q141.0 84.0 116.2 143.2' fill='none' stroke='var(--c2)' stroke-width='1.5' stroke-dasharray='4 3' marker-end='url(#coz-13b)'/><text x='180' y='64' font-size='11' fill='var(--c2)' text-anchor='start'>cool</text><rect x='60' y='28' width='100' height='38' rx='6' fill='var(--panel)' fill-opacity='1' stroke='var(--c2)'/><text x='110' y='44' font-size='11' fill='var(--ink)' text-anchor='middle'>110 − 32</text><text x='110' y='60' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>≈ 78 g crystallizes</text></svg>",
+    "key": "At 60 °C, 110 g of KNO₃ dissolves in 100 g of water, and at 20 °C, 32 g. So when the solution cools, 78 g of KNO₃ comes out. With 200 g of water, twice as much would come out."
+   },
+   {
+    "h": "Summary",
+    "p": "• Like dissolves like. Dissolving can absorb or release heat.<br>• Concentration is expressed as percent, ppm, molarity (M = n/V), molality and mole fraction.<br>• In dilution the moles stay constant: M₁V₁ = M₂V₂.<br>• Colligative properties depend on the number of particles (ΔT = K·m·i).<br>• Solubility depends on temperature and, for gases, on pressure.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='110' y='84' width='100' height='30' rx='6' fill='var(--acc)' fill-opacity='0.15' stroke='var(--acc)'/><text x='160' y='104' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>Solution</text><line x1='160' y1='84' x2='80' y2='48' stroke='var(--muted)' stroke-width='1'/><line x1='160' y1='84' x2='240' y2='48' stroke='var(--muted)' stroke-width='1'/><line x1='160' y1='114' x2='80' y2='150' stroke='var(--muted)' stroke-width='1'/><line x1='160' y1='114' x2='240' y2='150' stroke='var(--muted)' stroke-width='1'/><rect x='10.0' y='24' width='140' height='26' rx='6' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)'/><text x='80' y='42' font-size='11' fill='var(--ink)' text-anchor='middle'>Dissolving, hydration</text><rect x='170.0' y='24' width='140' height='26' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)'/><text x='240' y='42' font-size='11' fill='var(--ink)' text-anchor='middle'>%, ppm, M, m, X</text><rect x='10.0' y='148' width='140' height='26' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)'/><text x='80' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>Colligative: i · m</text><rect x='170.0' y='148' width='140' height='26' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)'/><text x='240' y='166' font-size='11' fill='var(--ink)' text-anchor='middle'>Solubility, curve</text><text x='160' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>Like dissolves like · M₁V₁ = M₂V₂</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "The solubility of KNO₃ is 110 g at 60 °C and 32 g at 20 °C per 100 g of water. A saturated solution made with 50 g of water at 60 °C is cooled to 20 °C. How many grams of KNO₃ come out?",
+    "cevap": 39,
+    "birim": "g",
+    "e": "50 g of water dissolves 55 g of KNO₃ at 60 °C and 16 g at 20 °C. The difference is 55 − 16 = 39 g."
+   },
+   {
+    "tur": "sirala",
+    "q": "Order the freezing points at 1 atm from highest to lowest.",
+    "ogeler": [
+     "Pure water",
+     "0.1 m sugar solution",
+     "0.1 m NaCl solution",
+     "0.1 m CaCl₂ solution"
+    ],
+    "e": "Freezing point depression is ΔT = K·m·i and depends on the number of particles. Pure water has no depression. i = 1 for sugar, 2 for NaCl and 3 for CaCl₂. So the CaCl₂ solution freezes at the lowest temperature."
+   },
+   {
+    "tur": "sayi",
+    "q": "200 mL of 0.5 M NaCl is mixed with 300 mL of 1 M NaCl. What is the concentration of the final solution in M? (Volumes add up.)",
+    "cevap": 0.8,
+    "tolerans": 0.005,
+    "birim": "M",
+    "e": "Add up the moles: 0.2·0.5 + 0.3·1 = 0.4 mol. The total volume is 0.5 L, so the concentration is 0.4 / 0.5 = 0.8 M."
+   },
+   {
+    "q": "A student says, \"As temperature rises, every substance becomes more soluble in water.\" Which is true about this claim?",
+    "o": [
+     "It doesn't hold for gases.",
+     "It is true for every substance.",
+     "It is true only at constant pressure.",
+     "Temperature doesn't affect solubility."
+    ],
+    "a": 0,
+    "e": "The solubility of solids usually rises, but that of gases falls with temperature (and so does that of some solids such as Ca(OH)₂). Also, the rate of dissolving and solubility are not the same thing.",
+    "y": [
+     "",
+     "Rate and solubility are different ideas. As temperature rises, gases escape from water and their solubility falls.",
+     "Even at constant pressure, the solubility of gases falls as temperature rises. So the generalization is wrong.",
+     "Temperature does affect solubility. It raises the solubility of most solids and lowers that of gases."
+    ]
+   }
+  ]
+ },
+ "tepkime-enerjisi": {
+  "title": "Energy in chemical reactions",
+  "summary": "Learn about reactions that absorb and release heat, calculating ΔH, Hess's law and calorimetry.",
+  "cards": [
+   {
+    "h": "Releasing and absorbing heat",
+    "p": "The substances being studied are the <b>system</b>, and everything else is the <b>surroundings</b>. A process that gives heat to the surroundings is <b>exothermic</b>, and the container warms. One that takes heat from the surroundings is <b>endothermic</b>, and the container cools.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tenj-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='tenj-101' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><rect x='8' y='8' width='148' height='184' rx='6' fill='var(--c2)' fill-opacity='0.06' stroke='var(--c2)' stroke-width='1.2'/><rect x='164' y='8' width='148' height='184' rx='6' fill='var(--c1)' fill-opacity='0.06' stroke='var(--c1)' stroke-width='1.2'/><text x='82' y='28' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Exothermic</text><text x='238' y='28' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Endothermic</text><path d='M56 62 V128 Q56 134 62 134 H102 Q108 134 108 128 V62' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='57' y='84' width='50' height='49' fill='var(--c2)' fill-opacity='0.2'/><text x='82' y='112' font-size='11' fill='var(--ink)' text-anchor='middle'>system</text><path d='M54 100 H20' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#tenj-1)'/><path d='M110 100 H144' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#tenj-1)'/><path d='M212 62 V128 Q212 134 218 134 H258 Q264 134 264 128 V62' stroke='var(--ink)' stroke-width='1.5' fill='none'/><rect x='213' y='84' width='50' height='49' fill='var(--c1)' fill-opacity='0.2'/><text x='238' y='112' font-size='11' fill='var(--ink)' text-anchor='middle'>system</text><path d='M176 100 H208' stroke='var(--c1)' stroke-width='2' fill='none' marker-end='url(#tenj-101)'/><path d='M300 100 H268' stroke='var(--c1)' stroke-width='2' fill='none' marker-end='url(#tenj-101)'/><text x='82' y='156' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>gives heat to surroundings</text><text x='82' y='174' font-size='11' fill='var(--muted)' text-anchor='middle'>container warms</text><text x='238' y='156' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>takes heat from surroundings</text><text x='238' y='174' font-size='11' fill='var(--muted)' text-anchor='middle'>container cools</text><text x='37' y='90' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>heat</text><text x='127' y='90' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>heat</text><text x='192' y='90' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>heat</text><text x='284' y='90' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>heat</text></svg>",
+    "key": "A reaction started by heating is not necessarily endothermic. For example, burning started by a match releases heat."
+   },
+   {
+    "h": "Everyday examples",
+    "p": "Burning, neutralization, respiration, freezing and condensation are <b>exothermic</b>. Melting, evaporation, photosynthesis and the electrolysis of water are <b>endothermic</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='10' width='145' height='160' rx='6' fill='var(--c2)' fill-opacity='0.07' stroke='var(--c2)' stroke-width='1.2'/><rect x='165' y='10' width='145' height='160' rx='6' fill='var(--c1)' fill-opacity='0.07' stroke='var(--c1)' stroke-width='1.2'/><text x='82' y='32' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Releases heat (exo)</text><text x='238' y='32' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Absorbs heat (endo)</text><path d='M20 42 L145 42' stroke='var(--c2)' stroke-width='1'/><path d='M175 42 L300 42' stroke='var(--c1)' stroke-width='1'/><text x='82' y='66' font-size='12' fill='var(--ink)' text-anchor='middle'>burning</text><text x='82' y='89' font-size='12' fill='var(--ink)' text-anchor='middle'>neutralization</text><text x='82' y='112' font-size='12' fill='var(--ink)' text-anchor='middle'>respiration</text><text x='82' y='135' font-size='12' fill='var(--ink)' text-anchor='middle'>freezing</text><text x='82' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>condensation</text><text x='238' y='66' font-size='12' fill='var(--ink)' text-anchor='middle'>melting ice</text><text x='238' y='89' font-size='12' fill='var(--ink)' text-anchor='middle'>evaporation</text><text x='238' y='112' font-size='12' fill='var(--ink)' text-anchor='middle'>photosynthesis</text><text x='238' y='135' font-size='12' fill='var(--ink)' text-anchor='middle'>electrolysis of water</text><text x='238' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>decomposing limestone</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>A change of state is physical, but it still absorbs or releases heat.</text></svg>",
+    "etk": {
+     "tur": "ayir",
+     "soru": "Put each process in the right group: does it give heat to the surroundings or take heat from them?",
+     "gruplar": [
+      "Exothermic",
+      "Endothermic"
+     ],
+     "ogeler": [
+      [
+       "Burning",
+       0
+      ],
+      [
+       "Neutralization",
+       0
+      ],
+      [
+       "Respiration",
+       0
+      ],
+      [
+       "Water freezing",
+       0,
+       "Freezing water gives heat to the surroundings."
+      ],
+      [
+       "Water vapor condensing",
+       0
+      ],
+      [
+       "Ice melting",
+       1
+      ],
+      [
+       "Water evaporating",
+       1,
+       "That's why sweat cools you as it evaporates."
+      ],
+      [
+       "Photosynthesis",
+       1
+      ],
+      [
+       "Electrolysis of water",
+       1
+      ]
+     ]
+    },
+    "key": "In photosynthesis, the Sun's energy turns into the chemical energy of glucose and oxygen. In respiration, this energy is released.",
+    "once": {
+     "soru": "When water freezes, does it give heat to the surroundings or take heat from them?",
+     "secenekler": [
+      {
+       "yazi": "It gives heat",
+       "neden": "Freezing is exothermic. Freezing water gives heat to the surroundings.",
+       "dogru": true
+      },
+      {
+       "yazi": "It takes heat",
+       "neden": "Melting takes heat. Freezing is the reverse of melting."
+      },
+      {
+       "yazi": "No exchange",
+       "neden": "Changes of state always involve heat exchange."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Enthalpy and the sign of ΔH",
+    "p": "The energy content of a system at constant pressure is called <b>enthalpy</b> (H). What we measure is the change in enthalpy: <b>ΔH = H<sub>products</sub> − H<sub>reactants</sub></b>. In an exothermic reaction ΔH is negative, and in an endothermic one it is positive.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='34' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>ΔH = H<tspan font-size='10' baseline-shift='sub'>products</tspan> − H<tspan font-size='10' baseline-shift='sub'>reactants</tspan></text><rect x='10' y='52' width='300' height='56' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)' stroke-width='1.2'/><rect x='10' y='118' width='300' height='56' rx='6' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1.2'/><text x='62' y='86' font-size='15' fill='var(--c2)' text-anchor='middle' font-weight='700'>ΔH &lt; 0</text><text x='120' y='76' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>exothermic: heat is released</text><text x='120' y='96' font-size='11' fill='var(--muted)' text-anchor='start'>products have lower enthalpy</text><text x='62' y='152' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>ΔH &gt; 0</text><text x='120' y='142' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>endothermic: heat is absorbed</text><text x='120' y='162' font-size='11' fill='var(--muted)' text-anchor='start'>products have higher enthalpy</text><text x='160' y='193' font-size='11' fill='var(--muted)' text-anchor='middle'>At constant pressure ΔH = heat absorbed or released (kJ)</text></svg>",
+    "key": "Heat is energy being transferred, not content. The absolute value of enthalpy can't be measured. The sign is written from the system's point of view.",
+    "once": {
+     "soru": "Burning gives heat to the surroundings. What is the sign of ΔH for burning?",
+     "secenekler": [
+      {
+       "yazi": "Negative",
+       "neden": "The system loses heat. So the products have lower enthalpy than the reactants.",
+       "dogru": true
+      },
+      {
+       "yazi": "Positive",
+       "neden": "A positive ΔH is seen in processes that absorb heat."
+      },
+      {
+       "yazi": "Zero",
+       "neden": "Burning releases heat. So ΔH can't be zero."
+      }
+     ]
+    }
+   },
+   {
+    "h": "How heat is written in an equation",
+    "p": "For exothermic reactions, heat is written next to the products, or ΔH is given as negative. For endothermic reactions, heat is written next to the reactants, and ΔH is positive. Always write the states of the substances.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='12' width='300' height='82' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)' stroke-width='1.2'/><rect x='10' y='106' width='300' height='82' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)' stroke-width='1.2'/><text x='22' y='32' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>Exothermic</text><text x='160' y='58' font-size='13' fill='var(--ink)' text-anchor='middle'>C(graphite) + O₂(g) → CO₂(g) + <tspan fill='var(--c2)' font-weight='700'>393.5 kJ</tspan></text><text x='160' y='82' font-size='12' fill='var(--muted)' text-anchor='middle'>or:  ΔH = −393.5 kJ  (heat on the right)</text><text x='22' y='126' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>Endothermic</text><text x='160' y='152' font-size='13' fill='var(--ink)' text-anchor='middle'>N₂(g) + O₂(g) + <tspan fill='var(--c1)' font-weight='700'>180.5 kJ</tspan> → 2NO(g)</text><text x='160' y='176' font-size='12' fill='var(--muted)' text-anchor='middle'>or:  ΔH = +180.5 kJ  (heat on the left)</text></svg>",
+    "key": "If the states of the substances change, ΔH changes too. Don't write the heat twice. Write it either as a term in the equation or as ΔH.",
+    "once": {
+     "soru": "What is the sign of ΔH for CaCO₃ + heat → CaO + CO₂?",
+     "secenekler": [
+      {
+       "yazi": "Positive",
+       "neden": "The heat is written on the reactant side. So the reaction absorbs heat.",
+       "dogru": true
+      },
+      {
+       "yazi": "Negative",
+       "neden": "It would be negative if the heat were on the product side."
+      },
+      {
+       "yazi": "Zero",
+       "neden": "Heat is written in the equation. So ΔH can't be zero."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Potential energy diagram",
+    "p": "In an energy diagram, the vertical axis shows energy and the horizontal axis shows the progress of the reaction. The difference between reactants and products is ΔH. The hill between them is called the <b>activation energy</b> (E<sub>a</sub>).",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tenj-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><defs><marker id='tenj-105' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c5)'/></marker></defs><text x='85' y='20' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Exothermic</text><text x='245' y='20' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>Endothermic</text><path d='M22 30 L22 170' stroke='var(--ink)' stroke-width='1.2'/><path d='M22 170 L152 170' stroke='var(--ink)' stroke-width='1.2'/><path d='M180 30 L180 170' stroke='var(--ink)' stroke-width='1.2'/><path d='M180 170 L312 170' stroke='var(--ink)' stroke-width='1.2'/><path d='M40 80 L146 80' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><path d='M24 80 H40 C60 80 62 36 80 36 C98 36 102 135 120 135 H150' stroke='var(--c2)' stroke-width='2.2' fill='none'/><path d='M80 79 V40' stroke='var(--c5)' stroke-width='1.3' fill='none' marker-end='url(#tenj-105)'/><text x='80' y='98' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>E<tspan font-size='10' baseline-shift='sub'>a</tspan></text><path d='M140 82 V132' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#tenj-5)'/><text x='134' y='114' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>ΔH</text><text x='26' y='96' font-size='10' fill='var(--muted)' text-anchor='start'>reactants</text><text x='134' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>products</text><path d='M200 135 L304 135' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><path d='M182 135 H200 C222 135 222 36 240 36 C258 36 262 80 280 80 H310' stroke='var(--c1)' stroke-width='2.2' fill='none'/><path d='M300 133 V83' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#tenj-5)'/><text x='294' y='114' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>ΔH</text><text x='200' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>reactants</text><text x='286' y='72' font-size='10' fill='var(--muted)' text-anchor='middle'>products</text><text x='160' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>vertical: potential energy  ·  horizontal: reaction progress</text></svg>",
+    "key": "In an exothermic reaction the products are lower, and in an endothermic one they are higher. The height of the hill doesn't change ΔH. You'll see the details in the Reaction rate topic."
+   },
+   {
+    "h": "Standard enthalpy of formation",
+    "p": "The enthalpy change when 1 mol of a compound forms from its elements at 25 °C and 1 atm is called the <b>standard enthalpy of formation</b> (ΔH°<sub>f</sub>). The enthalpy of formation of stable elements is zero.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>25 °C, 1 atm  ·  ΔH°<tspan font-size='10' baseline-shift='sub'>f</tspan> (kJ/mol)</text><rect x='10' y='30' width='120' height='150' rx='6' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)' stroke-width='1.2'/><rect x='140' y='30' width='170' height='150' rx='6' fill='var(--c4)' fill-opacity='0.08' stroke='var(--c4)' stroke-width='1.2'/><text x='70' y='50' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>ΔH°<tspan font-size='10' baseline-shift='sub'>f</tspan> = 0</text><text x='225' y='50' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>ΔH°<tspan font-size='10' baseline-shift='sub'>f</tspan> ≠ 0</text><text x='70' y='76' font-size='12' fill='var(--ink)' text-anchor='middle'>H₂(g)</text><text x='70' y='98' font-size='12' fill='var(--ink)' text-anchor='middle'>O₂(g)</text><text x='70' y='120' font-size='12' fill='var(--ink)' text-anchor='middle'>C(graphite)</text><text x='70' y='142' font-size='12' fill='var(--ink)' text-anchor='middle'>Br₂(l)</text><text x='70' y='164' font-size='12' fill='var(--ink)' text-anchor='middle'>Na(s)</text><text x='160' y='76' font-size='12' fill='var(--ink)' text-anchor='start'>O₃(g)</text><text x='160' y='98' font-size='12' fill='var(--ink)' text-anchor='start'>C(diamond)</text><text x='160' y='120' font-size='12' fill='var(--ink)' text-anchor='start'>Br₂(g)</text><text x='160' y='142' font-size='12' fill='var(--ink)' text-anchor='start'>H₂O(l)</text><text x='160' y='164' font-size='12' fill='var(--ink)' text-anchor='start'>CO₂(g)</text><text x='296' y='76' font-size='12' fill='var(--muted)' text-anchor='end'>+142.7</text><text x='296' y='98' font-size='12' fill='var(--muted)' text-anchor='end'>+1.9</text><text x='296' y='120' font-size='12' fill='var(--muted)' text-anchor='end'>+30.9</text><text x='296' y='142' font-size='12' fill='var(--muted)' text-anchor='end'>−285.8</text><text x='296' y='164' font-size='12' fill='var(--muted)' text-anchor='end'>−393.5</text><text x='70' y='194' font-size='10' fill='var(--c3)' text-anchor='middle'>element in stable state</text><text x='225' y='194' font-size='10' fill='var(--c4)' text-anchor='middle'>other state or compound</text></svg>",
+    "key": "Elements are taken in their most stable states. Ozone and diamond are not the stable states, so their values are not zero. The more negative ΔH°f is, the more stable the compound.",
+    "once": {
+     "soru": "What is the standard enthalpy of formation of O₂ gas?",
+     "secenekler": [
+      {
+       "yazi": "0",
+       "neden": "O₂ is the most stable form of oxygen. So its value is taken as zero.",
+       "dogru": true
+      },
+      {
+       "yazi": "−393.5 kJ",
+       "neden": "That is the enthalpy of formation of CO₂."
+      },
+      {
+       "yazi": "+143 kJ",
+       "neden": "This value is close to ozone's. O₂ is the most stable form of oxygen."
+      }
+     ]
+    }
+   },
+   {
+    "h": "ΔH from enthalpies of formation",
+    "p": "The reaction enthalpy is ΔH = ΣΔH°<sub>f</sub>(products) − ΣΔH°<sub>f</sub>(reactants). Multiply each value by its coefficient. Stable elements (such as O<sub>2</sub>) have a value of zero.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='24' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>ΔH = ΣΔH°<tspan font-size='10' baseline-shift='sub'>f</tspan>(products) − ΣΔH°<tspan font-size='10' baseline-shift='sub'>f</tspan>(reactants)</text><path d='M10 38 L310 38' stroke='var(--line)' stroke-width='1'/><text x='40' y='64' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>C₂H₆(g)</text><text x='80' y='64' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>+</text><text x='120' y='64' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>7/2 O₂(g)</text><text x='163' y='64' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>→</text><text x='205' y='64' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>2CO₂(g)</text><text x='240' y='64' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>+</text><text x='280' y='64' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>3H₂O(l)</text><text x='40' y='84' font-size='11' fill='var(--c1)' text-anchor='middle'>−84.7</text><text x='120' y='84' font-size='11' fill='var(--c1)' text-anchor='middle'>0</text><text x='205' y='84' font-size='11' fill='var(--c1)' text-anchor='middle'>2×(−393.5)</text><text x='280' y='84' font-size='11' fill='var(--c1)' text-anchor='middle'>3×(−285.8)</text><text x='160' y='112' font-size='11' fill='var(--ink)' text-anchor='middle'>ΔH = [2×(−393.5) + 3×(−285.8)] − [−84.7 + 0]</text><text x='160' y='134' font-size='12' fill='var(--ink)' text-anchor='middle'>ΔH = −1644.4 − (−84.7)</text><rect x='60' y='144' width='200' height='32' rx='6' fill='var(--acc)' fill-opacity='0.12' stroke='var(--acc)' stroke-width='1.2'/><text x='160' y='166' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='700'>ΔH = −1559.7 kJ</text><text x='160' y='191' font-size='10' fill='var(--muted)' text-anchor='middle'>ΔH°<tspan font-size='10' baseline-shift='sub'>f</tspan> values in kJ/mol · for 1 mol of ethane</text></svg>",
+    "key": "Write the products first, then the reactants. For burning ethane the result is −1559.7 kJ. So when 1 mol of ethane burns, 1559.7 kJ of heat is released."
+   },
+   {
+    "h": "Coefficients, reversing and amount",
+    "p": "ΔH belongs to the moles in the equation. If you multiply the coefficients by 2, ΔH is multiplied by 2 too. If you reverse the equation, the sign changes.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='8' width='300' height='50' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)' stroke-width='1.2'/><text x='20' y='29' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>1 mol</text><text x='160' y='29' font-size='13' fill='var(--ink)' text-anchor='middle'>H₂(g) + ½O₂(g) → H₂O(l)</text><text x='160' y='49' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>ΔH = −285.8 kJ</text><rect x='10' y='64' width='300' height='50' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)' stroke-width='1.2'/><text x='20' y='85' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>× 2</text><text x='160' y='85' font-size='13' fill='var(--ink)' text-anchor='middle'>2H₂(g) + O₂(g) → 2H₂O(l)</text><text x='160' y='105' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>ΔH = −571.6 kJ</text><rect x='10' y='120' width='300' height='50' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)' stroke-width='1.2'/><text x='20' y='141' font-size='11' fill='var(--c1)' text-anchor='start' font-weight='700'>reverse</text><text x='160' y='141' font-size='13' fill='var(--ink)' text-anchor='middle'>2H₂O(l) → 2H₂(g) + O₂(g)</text><text x='160' y='161' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>ΔH = +571.6 kJ</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>1 g H₂ = 0.5 mol  →  142.9 kJ released</text></svg>",
+    "key": "If the amount of substance is halved, the heat is halved too. For example, burning 1 g of H₂ (0.5 mol) releases 142.9 kJ of heat.",
+    "once": {
+     "soru": "For H₂ + ½O₂ → H₂O, ΔH = −286 kJ. What is ΔH for decomposing water (H₂O → H₂ + ½O₂)?",
+     "secenekler": [
+      {
+       "yazi": "+286 kJ",
+       "neden": "When reversed, the number stays the same and the sign changes.",
+       "dogru": true
+      },
+      {
+       "yazi": "−286 kJ",
+       "neden": "Decomposition is the reverse of formation. So it doesn't release heat, it absorbs heat."
+      },
+      {
+       "yazi": "−572 kJ",
+       "neden": "The coefficients didn't change, only the direction."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Hess's law",
+    "p": "According to <b>Hess's law</b>, ΔH depends only on the initial and final states, not on the path taken. If you add up the steps, their ΔH values add up too.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tenj-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='tenj-109' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c5)'/></marker></defs><defs><marker id='tenj-209' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><path d='M20 42 L215 42' stroke='var(--ink)' stroke-width='2'/><text x='95' y='34' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>C(graphite) + O₂(g)</text><path d='M170 82 L300 82' stroke='var(--ink)' stroke-width='2'/><text x='252' y='74' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CO(g) + ½O₂(g)</text><path d='M20 168 L300 168' stroke='var(--ink)' stroke-width='2'/><text x='160' y='188' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>CO₂(g)</text><path d='M50 44 V164' stroke='var(--c2)' stroke-width='1.8' fill='none' marker-end='url(#tenj-9)'/><text x='58' y='108' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>−393.5</text><path d='M190 44 V78' stroke='var(--c5)' stroke-width='1.8' fill='none' marker-end='url(#tenj-109)'/><text x='184' y='64' font-size='12' fill='var(--c5)' text-anchor='end' font-weight='700'>? = −110.5</text><path d='M280 84 V164' stroke='var(--c2)' stroke-width='1.8' fill='none' marker-end='url(#tenj-9)'/><text x='272' y='128' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>−283.0</text><text x='160' y='150' font-size='11' fill='var(--muted)' text-anchor='middle'>different path, same total ΔH</text></svg>",
+    "key": "The heat of formation of CO is the burning of C (−393.5 kJ) plus the reversed burning of CO (+283.0 kJ), which is −110.5 kJ. Change the sign of any step you reverse. Multiply the value of any step you scale by the same number."
+   },
+   {
+    "h": "Estimating ΔH from bond energies",
+    "p": "The energy needed to break 1 mol of bonds in the gas phase is called the <b>bond energy</b>. The same amount of energy is released when the bond forms. So <b>ΔH ≈ Σ(broken) − Σ(formed)</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='28' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>2 H–H  +  O=O  →  2 H₂O(g)</text><rect x='10' y='42' width='145' height='92' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)' stroke-width='1.2'/><rect x='165' y='42' width='145' height='92' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)' stroke-width='1.2'/><text x='82' y='62' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>Broken (energy absorbed)</text><text x='238' y='62' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>Formed (energy released)</text><text x='82' y='84' font-size='12' fill='var(--ink)' text-anchor='middle'>2 × H–H: 2 × 436</text><text x='82' y='104' font-size='12' fill='var(--ink)' text-anchor='middle'>O=O: 498</text><text x='238' y='84' font-size='12' fill='var(--ink)' text-anchor='middle'>4 × O–H</text><text x='238' y='104' font-size='12' fill='var(--ink)' text-anchor='middle'>4 × 463</text><path d='M25 112 L140 112' stroke='var(--line)' stroke-width='1'/><path d='M180 112 L295 112' stroke='var(--line)' stroke-width='1'/><text x='82' y='127' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>total 1370</text><text x='238' y='127' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>total 1852</text><text x='160' y='162' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='700'>ΔH ≈ 1370 − 1852 = −482 kJ</text><text x='160' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>bond energies in kJ/mol, average values</text></svg>",
+    "key": "Here the order is reversed: the bonds formed are subtracted from the bonds broken. Because average values are used, the result is approximate."
+   },
+   {
+    "h": "Calorimetry: measuring heat",
+    "p": "A <b>calorimeter</b> is an insulated container that measures the heat of a reaction. The water absorbs the heat given off by the reaction, and this heat is <b>q = m·c·ΔT</b>. The specific heat of water is 4.18 J/g·°C.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='20' y='60' width='110' height='110' rx='6' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><rect x='30' y='70' width='90' height='92' rx='4' fill='var(--c1)' fill-opacity='0.18' stroke='var(--c1)'/><rect x='50' y='112' width='50' height='34' rx='4' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)'/><text x='75' y='133' font-size='10' fill='var(--ink)' text-anchor='middle'>reaction</text><path d='M105 30 L105 140' stroke='var(--ink)' stroke-width='2'/><circle cx='105' cy='143' r='4' fill='var(--c2)'/><path d='M42 40 L42 150' stroke='var(--muted)' stroke-width='1.5'/><text x='110' y='22' font-size='10' fill='var(--muted)' text-anchor='middle'>thermometer</text><text x='16' y='34' font-size='10' fill='var(--muted)' text-anchor='start'>stirrer</text><text x='75' y='92' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>water</text><text x='75' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>insulated container</text><text x='150' y='40' font-size='15' fill='var(--acc)' text-anchor='start' font-weight='700'>q = m·c·ΔT</text><text x='150' y='66' font-size='12' fill='var(--ink)' text-anchor='start'>m = 200 g water</text><text x='150' y='86' font-size='12' fill='var(--ink)' text-anchor='start'>c = 4.18 J/g·°C</text><text x='150' y='106' font-size='12' fill='var(--ink)' text-anchor='start'>ΔT = 27 − 22 = 5 °C</text><text x='150' y='130' font-size='12' fill='var(--ink)' text-anchor='start'>q = 200 · 4.18 · 5</text><text x='150' y='150' font-size='13' fill='var(--acc)' text-anchor='start' font-weight='700'>q = 4180 J ≈ 4.2 kJ</text><text x='150' y='172' font-size='11' fill='var(--muted)' text-anchor='start'>heat absorbed by water = heat</text><text x='150' y='186' font-size='11' fill='var(--muted)' text-anchor='start'>released by reaction</text></svg>",
+    "etk": {
+     "tur": "formul",
+     "soru": "q = m·c·ΔT, with c = 4.18 J/(g·°C) for water. Change the mass of water and the temperature rise: how many kJ did the reaction release?",
+     "girdiler": [
+      {
+       "ad": "m",
+       "etiket": "Mass of water",
+       "birim": "g",
+       "min": 50,
+       "max": 500,
+       "adim": 10,
+       "deger": 200
+      },
+      {
+       "ad": "dT",
+       "etiket": "Temperature rise (ΔT)",
+       "birim": "°C",
+       "min": 0.5,
+       "max": 30,
+       "adim": 0.5,
+       "deger": 5
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "q",
+       "ifade": "m*4.18*dT",
+       "birim": "J",
+       "basamak": 0
+      },
+      {
+       "ad": "q",
+       "ifade": "m*4.18*dT/1000",
+       "birim": "kJ",
+       "basamak": 2,
+       "max": 63
+      }
+     ]
+    },
+    "key": "If the water warms up, the reaction is exothermic and ΔH is negative. In simple calculations the heat absorbed by the container is ignored."
+   },
+   {
+    "h": "Fuel values",
+    "p": "The heat released when 1 gram of a fuel burns is called its <b>fuel value</b> (kJ/g). Hydrogen has a very high fuel value, and its only product is water. But hydrogen is hard to store.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Fuel value (kJ/g, approx.)</text><text x='12' y='45' font-size='11' fill='var(--ink)' text-anchor='start'>hydrogen</text><rect x='92' y='34' width='177.5' height='14' rx='3' fill='var(--c1)' fill-opacity='0.6'/><text x='275.5' y='45' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>142</text><text x='12' y='66' font-size='11' fill='var(--ink)' text-anchor='start'>methane</text><rect x='92' y='55' width='68.8' height='14' rx='3' fill='var(--c4)' fill-opacity='0.6'/><text x='166.75' y='66' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>55</text><text x='12' y='87' font-size='11' fill='var(--ink)' text-anchor='start'>gasoline</text><rect x='92' y='76' width='57.5' height='14' rx='3' fill='var(--c4)' fill-opacity='0.6'/><text x='155.5' y='87' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>46</text><text x='12' y='108' font-size='11' fill='var(--ink)' text-anchor='start'>fat (food)</text><rect x='92' y='97' width='46.2' height='14' rx='3' fill='var(--c3)' fill-opacity='0.6'/><text x='144.25' y='108' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>37</text><text x='12' y='129' font-size='11' fill='var(--ink)' text-anchor='start'>ethanol</text><rect x='92' y='118' width='37.5' height='14' rx='3' fill='var(--c4)' fill-opacity='0.6'/><text x='135.5' y='129' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>30</text><text x='12' y='150' font-size='11' fill='var(--ink)' text-anchor='start'>wood (dry)</text><rect x='92' y='139' width='22.5' height='14' rx='3' fill='var(--c4)' fill-opacity='0.6'/><text x='120.5' y='150' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>18</text><text x='12' y='171' font-size='11' fill='var(--ink)' text-anchor='start'>carbohydrate</text><rect x='92' y='160' width='21.2' height='14' rx='3' fill='var(--c3)' fill-opacity='0.6'/><text x='119.25' y='171' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>17</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>1 kcal = 4.18 kJ  ·  fat ≈ 9, carbohydrate ≈ 4 kcal/g</text></svg>",
+    "key": "Fuel value is given per gram. Don't confuse it with ΔH, which is given per mole. In food, fat gives more than twice the energy of carbohydrate.",
+    "once": {
+     "soru": "What product forms when hydrogen fuel burns?",
+     "secenekler": [
+      {
+       "yazi": "Only water",
+       "neden": "Burning hydrogen forms only water (H₂ + ½O₂ → H₂O). There is no carbon, so no CO₂ is released.",
+       "dogru": true
+      },
+      {
+       "yazi": "CO₂ and water",
+       "neden": "Hydrogen contains no carbon. So CO₂ can't form."
+      },
+      {
+       "yazi": "Ash",
+       "neden": "Ash is the unburned residue of solid fuels."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Changes of state have a ΔH too",
+    "p": "Changes of state are enthalpy changes too. For example, for H<sub>2</sub>O(l) → H<sub>2</sub>O(g), ΔH = +44 kJ. So burning that forms liquid water releases more heat than burning that forms steam.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='tenj-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='tenj-113' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c5)'/></marker></defs><path d='M20 42 L300 42' stroke='var(--ink)' stroke-width='2'/><text x='160' y='32' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>H₂(g) + ½O₂(g)</text><path d='M170 148 L300 148' stroke='var(--c5)' stroke-width='2'/><text x='240' y='140' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>H₂O(g)</text><path d='M20 168 L300 168' stroke='var(--c1)' stroke-width='2'/><text x='60' y='186' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>H₂O(l)</text><path d='M60 44 V164' stroke='var(--c2)' stroke-width='1.8' fill='none' marker-end='url(#tenj-13)'/><text x='68' y='100' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>−285.8 kJ</text><path d='M200 44 V144' stroke='var(--c2)' stroke-width='1.8' fill='none' marker-end='url(#tenj-13)'/><text x='208' y='100' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>−241.8 kJ</text><path d='M286 151 V164' stroke='var(--c5)' stroke-width='1.4' fill='none' marker-end='url(#tenj-113)' marker-start='url(#tenj-113)'/><text x='300' y='186' font-size='11' fill='var(--c5)' text-anchor='end'>difference 44.0 kJ: heat of vaporization</text></svg>",
+    "key": "When 1 mol of H₂ burns, 285.8 kJ of heat is released if liquid water forms, and 241.8 kJ if steam forms. Ice also absorbs heat when it melts, with ΔH of about +6.0 kJ.",
+    "once": {
+     "soru": "What is the sign of ΔH when water evaporates?",
+     "secenekler": [
+      {
+       "yazi": "Positive",
+       "neden": "Evaporation takes heat from the surroundings.",
+       "dogru": true
+      },
+      {
+       "yazi": "Negative",
+       "neden": "A negative ΔH belongs to heat-releasing processes such as condensation."
+      },
+      {
+       "yazi": "Zero",
+       "neden": "Evaporation involves heat exchange."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Enthalpies with special names",
+    "p": "The enthalpy change when 1 mol of a substance burns completely is called the <b>enthalpy of combustion</b>, and it is usually negative. The <b>enthalpy of neutralization</b> is about −57 kJ per mole of water formed. Enthalpies of melting and vaporization are positive.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='8' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='16' y='26' font-size='12' fill='var(--muted)' text-anchor='start' font-weight='700'>Type</text><text x='110' y='26' font-size='12' fill='var(--muted)' text-anchor='start' font-weight='700'>Example</text><text x='304' y='26' font-size='12' fill='var(--muted)' text-anchor='end' font-weight='700'>ΔH (kJ)</text><text x='16' y='58' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>Combustion</text><text x='110' y='58' font-size='11' fill='var(--ink)' text-anchor='start'>CH₄ + 2O₂ → CO₂ + 2H₂O</text><text x='304' y='58' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>−890</text><line x1='8' y1='70' x2='312' y2='70' stroke='var(--line)' stroke-width='1'/><text x='16' y='92' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>Neutralization</text><text x='110' y='92' font-size='11' fill='var(--ink)' text-anchor='start'>H⁺ + OH⁻ → H₂O</text><text x='304' y='92' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>≈ −57</text><line x1='8' y1='104' x2='312' y2='104' stroke='var(--line)' stroke-width='1'/><text x='16' y='126' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>Solution</text><text x='110' y='126' font-size='11' fill='var(--ink)' text-anchor='start'>NH₄NO₃(s) → NH₄⁺ + NO₃⁻</text><text x='304' y='126' font-size='12' fill='var(--c1)' text-anchor='end' font-weight='700'>+26</text><line x1='8' y1='138' x2='312' y2='138' stroke='var(--line)' stroke-width='1'/><text x='16' y='160' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>Vaporization</text><text x='110' y='160' font-size='11' fill='var(--ink)' text-anchor='start'>H₂O(l) → H₂O(g)</text><text x='304' y='160' font-size='12' fill='var(--c1)' text-anchor='end' font-weight='700'>+44</text><text x='160' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>Values per mole; solution is negative for NaOH.</text></svg>",
+    "key": "This value is for a strong acid and base. The enthalpy of solution can be negative or positive.",
+    "once": {
+     "soru": "A strong acid and base neutralize and form 2 mol of water. About how many kJ of heat are released?",
+     "secenekler": [
+      {
+       "yazi": "114",
+       "neden": "About 57 kJ is released for each mole of water. So it is 2 × 57 kJ.",
+       "dogru": true
+      },
+      {
+       "yazi": "57",
+       "neden": "57 kJ is for 1 mol of water."
+      },
+      {
+       "yazi": "28.5",
+       "neden": "More water means more heat, not less."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• An exothermic reaction releases heat (ΔH negative), and an endothermic reaction absorbs heat (ΔH positive).<br>• ΔH is the enthalpies of formation of the products minus those of the reactants. For stable elements this value is zero.<br>• Reversing an equation changes the sign, and ΔH is proportional to the coefficients.<br>• With bond energies, ΔH ≈ broken − formed.<br>• In calorimetry, q = m·c·ΔT.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Four ways to find ΔH</text><rect x='10' y='36' width='145' height='66' rx='6' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1.2'/><text x='82' y='64' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>Enthalpy of formation</text><text x='82' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>Σ products − Σ reactants</text><rect x='165' y='36' width='145' height='66' rx='6' fill='var(--c5)' fill-opacity='0.1' stroke='var(--c5)' stroke-width='1.2'/><text x='237' y='64' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Hess's law</text><text x='237' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>add the steps</text><rect x='10' y='112' width='145' height='66' rx='6' fill='var(--c4)' fill-opacity='0.1' stroke='var(--c4)' stroke-width='1.2'/><text x='82' y='140' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>Bond energy</text><text x='82' y='162' font-size='12' fill='var(--ink)' text-anchor='middle'>broken − formed</text><rect x='165' y='112' width='145' height='66' rx='6' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.2'/><text x='237' y='140' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>Calorimetry</text><text x='237' y='162' font-size='12' fill='var(--ink)' text-anchor='middle'>q = m·c·ΔT</text><text x='160' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>reverse: sign changes · × n: ΔH × n</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "Given S(s) + O₂(g) → SO₂(g) ΔH = −297 kJ and 2SO₂(g) + O₂(g) → 2SO₃(g) ΔH = −198 kJ. What is ΔH in kJ for S(s) + 3/2 O₂(g) → SO₃(g)?",
+    "cevap": -396,
+    "birim": "kJ",
+    "e": "Divide the second equation by 2: SO₂ + ½O₂ → SO₃, ΔH = −99 kJ. Add it to the first equation and cancel SO₂. The result is −297 + (−99) = −396 kJ (Hess's law)."
+   },
+   {
+    "tur": "sayi",
+    "q": "For C₃H₈(g) + 5O₂(g) → 3CO₂(g) + 4H₂O(l), ΔH = −2220 kJ. How many kJ of heat are released when 11 g of propane (M = 44 g/mol) burns completely?",
+    "cevap": 555,
+    "birim": "kJ",
+    "e": "11 g of C₃H₈ is 11 / 44 = 0.25 mol. Heat is proportional to the amount of substance, so 0.25 × 2220 = 555 kJ of heat is released."
+   },
+   {
+    "tur": "sayi",
+    "q": "Calculate ΔH for N₂(g) + 3H₂(g) → 2NH₃(g) from bond energies. (kJ/mol: N≡N 945, H–H 436, N–H 391)",
+    "cevap": -93,
+    "tolerans": 0.5,
+    "birim": "kJ",
+    "e": "The bonds broken have an energy of 945 + 3·436 = 2253 kJ. 2 NH₃ have 6 N–H bonds, with an energy of 6·391 = 2346 kJ. ΔH ≈ 2253 − 2346 = −93 kJ."
+   },
+   {
+    "q": "In a reaction's potential energy diagram, the reactants are at 50 kJ, the products at 20 kJ and the peak at 120 kJ. Which is true?",
+    "o": [
+     "ΔH = +30 kJ. Endothermic",
+     "ΔH = −100 kJ. Exothermic",
+     "ΔH = +70 kJ. Endothermic",
+     "ΔH = −30 kJ. Exothermic"
+    ],
+    "a": 3,
+    "e": "ΔH = H(products) − H(reactants) = 20 − 50 = −30 kJ. The products are lower, so the reaction is exothermic. 70 kJ is not ΔH but the activation energy.",
+    "y": [
+     "ΔH = products − reactants = 20 − 50 = −30 kJ. The products are lower, so the reaction is exothermic.",
+     "−100 kJ is the drop from the peak to the products. ΔH is the difference between reactants and products, which is −30 kJ.",
+     "70 kJ is the activation energy (120 − 50). ΔH is the products minus the reactants.",
+     ""
+    ]
+   }
+  ]
+ },
  "asit-baz": {
   "title": "Acids, bases and salts",
   "summary": "Learn the definitions of acids and bases, pH, Ka, neutralization, salts and titration.",

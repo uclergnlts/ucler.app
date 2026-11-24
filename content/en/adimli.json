@@ -10946,6 +10946,604 @@
   ],
   "soruOnce": true
  },
+ "cozeltiler": {
+  "id": "cozeltiler",
+  "ders": "kimya",
+  "konu": "cozeltiler",
+  "baslik": "Solutions",
+  "ozet": "Try it first, then learn its name. Dissolve salt, set the concentration, dilute the solution and freeze it.",
+  "adimlar": [
+   {
+    "baslik": "Ionic or molecular?",
+    "metin": "Add sugar to the water first, then salt. Watch the dissolved particles and the bulb in the circuit.",
+    "sahne": {
+     "tur": "kim8-cozunme"
+    },
+    "deger": {
+     "tuz": 0
+    },
+    "kontroller": [
+     {
+      "ad": "tuz",
+      "etiket": "Solute: salt (sugar if off)",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why does salt water conduct electricity?",
+     "secenekler": [
+      {
+       "yazi": "Water conducts on its own",
+       "neden": "Pure water has very few ions and doesn't light the bulb. In sugar water the bulb stayed dim too."
+      },
+      {
+       "yazi": "Salt splits into ions",
+       "neden": "NaCl splits into Na⁺ and Cl⁻ ions in water (<b>ionic dissolving</b>). Sugar spreads out as molecules and gives no ions (<b>molecular dissolving</b>). Substances that split into ions in water and make the solution conduct are called <b>electrolytes</b>.",
+       "dogru": true
+      },
+      {
+       "yazi": "The salt crystal stays intact",
+       "neden": "The crystal breaks apart in water. Water molecules surround the ions and pull them apart. An undissolved crystal couldn't carry charge."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Mass percent",
+    "metin": "Mass percent is the mass of solute divided by the mass of solution, times 100. The glass holds 20 g of salt. Adjust the water and make the solution <b>40%</b> by mass.",
+    "sahne": {
+     "tur": "kim8-yuzde"
+    },
+    "deger": {
+     "su": 40
+    },
+    "kontroller": [
+     {
+      "ad": "su",
+      "etiket": "Water",
+      "min": 20,
+      "max": 120,
+      "adim": 10,
+      "birim": "g",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "su": 30
+     },
+     "tamam": "20 g of salt and 30 g of water make 50 g of solution. 20 / 50 = <b>40%</b>. The denominator is again the mass of the solution. If you had divided by the water, you'd get 67%."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Molarity",
+    "metin": "Molarity is the number of moles divided by the volume of solution in liters. The flask holds 0.1 mol of NaOH. Change the volume to make the solution <b>0.5 M</b>.",
+    "sahne": {
+     "tur": "kim8-molarite"
+    },
+    "deger": {
+     "V": 500
+    },
+    "kontroller": [
+     {
+      "ad": "V",
+      "etiket": "Solution volume",
+      "min": 100,
+      "max": 1000,
+      "adim": 50,
+      "birim": "mL",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "V": 200
+     },
+     "tamam": "V = n / M = 0.1 / 0.5 = 0.2 L, that is <b>200 mL</b>. The same amount of substance in a smaller volume is more concentrated."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Dilution",
+    "metin": "You have 100 mL of a 2 M solution. Add water to bring the concentration to <b>0.8 M</b>.",
+    "sahne": {
+     "tur": "kim8-seyreltme"
+    },
+    "deger": {
+     "V": 100
+    },
+    "kontroller": [
+     {
+      "ad": "V",
+      "etiket": "Total volume",
+      "min": 100,
+      "max": 500,
+      "adim": 50,
+      "birim": "mL",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "V": 250
+     },
+     "tamam": "Adding water doesn't change the moles, so there is always 0.2 mol. Since 2 · 100 = 0.8 · V₂, V₂ = <b>250 mL</b>. So you added 150 mL of water."
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Ion concentration",
+    "metin": "CaCl₂ splits into <b>one Ca²⁺ and two Cl⁻</b> ions in water. Change the concentration and watch the ion bars.",
+    "sahne": {
+     "tur": "kim8-iyon"
+    },
+    "deger": {
+     "c": 2
+    },
+    "kontroller": [
+     {
+      "ad": "c",
+      "etiket": "CaCl₂ concentration",
+      "min": 1,
+      "max": 4,
+      "carpan": 0.5,
+      "birim": "M",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What is the total ion concentration in a 0.5 M CaCl₂ solution?",
+     "secenekler": [
+      {
+       "yazi": "0.5 M",
+       "neden": "That is only the Ca²⁺ concentration. Each CaCl₂ also gives two Cl⁻."
+      },
+      {
+       "yazi": "1 M",
+       "neden": "That is only the Cl⁻ concentration (2 · 0.5). You need to add the Ca²⁺ ions too."
+      },
+      {
+       "yazi": "1.5 M",
+       "neden": "CaCl₂ splits into Ca²⁺ and 2Cl⁻ in water. [Ca²⁺] = 0.5 M and [Cl⁻] = 1 M, so the total is <b>1.5 M</b>. One formula unit gives 3 ions.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Freezing point",
+    "metin": "We put pure water, sugar water, salt water (NaCl) and a CaCl₂ solution in the freezer. All are <b>1 molal</b>.",
+    "sahne": {
+     "tur": "kim8-donma",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Of the solutions, which freezes last?",
+     "secenekler": [
+      {
+       "yazi": "Sugar water",
+       "neden": "Sugar doesn't ionize, and each molecule stays as one particle (i = 1). So the freezing point drops by only 1.86 °C."
+      },
+      {
+       "yazi": "Salt water (NaCl)",
+       "neden": "NaCl gives two ions (i = 2), and the freezing point drops by 3.72 °C. But there is a solute that gives three ions."
+      },
+      {
+       "yazi": "CaCl₂ solution",
+       "neden": "CaCl₂ gives three ions (i = 3), so this solution has the most particles. The freezing point drops by 1.86 · 3 ≈ 5.6 °C. That's why salt is spread on roads in winter.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Why does soda fizz?",
+    "metin": "Soda contains CO₂ dissolved under pressure. Open the cap, change the temperature and watch the dissolved CO₂ bar.",
+    "sahne": {
+     "tur": "kim8-gazoz"
+    },
+    "deger": {
+     "kapak": 0,
+     "T": 5
+    },
+    "kontroller": [
+     {
+      "ad": "kapak",
+      "etiket": "Open the cap",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 5,
+      "max": 35,
+      "adim": 10,
+      "birim": "°C",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why does soda fizz when you open it?",
+     "secenekler": [
+      {
+       "yazi": "The liquid heats and boils",
+       "neden": "Opening the cap doesn't change the soda's temperature. And the bubbles are CO₂, not water vapor."
+      },
+      {
+       "yazi": "Air gets in and forms bubbles",
+       "neden": "The bubbles are not air from outside, but CO₂ leaving the liquid."
+      },
+      {
+       "yazi": "Pressure drops, CO₂ solubility falls",
+       "neden": "A gas's solubility is proportional to its partial pressure above the liquid (Henry's law). When the cap opens, the pressure drops and the extra CO₂ comes out as bubbles.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 14
+   },
+   {
+    "baslik": "Solubility lab",
+    "metin": "We put 100 g of water in a beaker. Add KNO₃ (potassium nitrate) and change the temperature. Dissolved ions spread through the water, and the undissolved part stays at the bottom as crystals. Look at the dot on the right and the solubility curve. Find the following yourself.",
+    "sahne": {
+     "tur": "sim-cozunurluk"
+    },
+    "deger": {
+     "tuz": 0,
+     "T": 20,
+     "doygun": 0,
+     "cozunen": 0
+    },
+    "kontroller": [
+     {
+      "ad": "tuz",
+      "etiket": "KNO₃ added",
+      "min": 0,
+      "max": 120,
+      "adim": 5,
+      "birim": "g"
+     },
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 0,
+      "max": 80,
+      "adim": 5,
+      "birim": "°C"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "Add KNO₃ to the water at 20 °C. What is the most that dissolves?",
+       "hedef": {
+        "T": 20,
+        "doygun": 1
+       },
+       "coz": [
+        {
+         "T": 20,
+         "tuz": 50
+        }
+       ],
+       "tamam": "At 20 °C, about 32 g of KNO₃ dissolved in 100 g of water and the rest stayed at the bottom. This solution is <b>saturated</b>, meaning it can't dissolve more KNO₃ at that temperature."
+      },
+      {
+       "yazi": "Dissolve the solid at the bottom by <b>heating</b> (with at least 40 g of KNO₃).",
+       "hedef": {
+        "tuz": [
+         40,
+         120
+        ],
+        "doygun": 0,
+        "cozunen": [
+         40,
+         120
+        ]
+       },
+       "coz": [
+        {
+         "tuz": 50,
+         "T": 45
+        }
+       ],
+       "tamam": "The solubility of KNO₃ rises quickly with temperature, and at 45 °C all 50 g dissolved. Most solids behave this way. Gases, though, dissolve less when hot."
+      },
+      {
+       "yazi": "With everything dissolved, cool the solution <b>below 25 °C</b> and watch the bottom.",
+       "hedef": [
+        {
+         "tuz": [
+          40,
+          120
+         ],
+         "doygun": 0,
+         "cozunen": [
+          40,
+          120
+         ]
+        },
+        {
+         "tuz": [
+          40,
+          120
+         ],
+         "T": [
+          0,
+          25
+         ],
+         "doygun": 1
+        }
+       ],
+       "sirali": true,
+       "coz": [
+        {
+         "tuz": 50,
+         "T": 45
+        },
+        {
+         "T": 10
+        }
+       ],
+       "tamam": "As it cooled, the solubility fell and the extra KNO₃ <b>came out</b> as crystals. Dissolving when hot and cooling to get pure crystals is called <b>recrystallization</b>."
+      }
+     ]
+    },
+    "kart": 15
+   }
+  ],
+  "kapanis": [
+   "Salt splits into <b>ions</b> in water and its solution conducts electricity. Sugar spreads out as <b>molecules</b>.",
+   "Mass percent is the mass of solute divided by the mass of the <b>solution</b>. Molarity is <b>M = n / V</b>, with V in liters.",
+   "In dilution the moles don't change: <b>M₁·V₁ = M₂·V₂</b>. To find an ion's concentration, multiply the salt concentration by that ion's count in the formula.",
+   "Colligative properties depend on the number of particles (<b>ΔT = K·m·i</b>). The more ions, the lower the freezing point.",
+   "The solubility of gases <b>rises with pressure</b> and <b>falls with temperature</b>."
+  ],
+  "soruOnce": true
+ },
+ "tepkime-enerjisi": {
+  "id": "tepkime-enerjisi",
+  "ders": "kimya",
+  "konu": "tepkime-enerjisi",
+  "baslik": "Energy in reactions",
+  "ozet": "Try it first, then learn its name. Watch a container cool, build an energy diagram, calculate with Hess's law and measure in a calorimeter.",
+  "adimlar": [
+   {
+    "baslik": "Cold pack",
+    "metin": "We add ammonium nitrate (NH₄NO₃) to water at room temperature. Watch the thermometer.",
+    "sahne": {
+     "tur": "kim8-kap",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to the container as NH₄NO₃ dissolves in water?",
+     "secenekler": [
+      {
+       "yazi": "It warms up",
+       "neden": "Warming happens in a heat-releasing (exothermic) process. NaOH dissolving in water is an example."
+      },
+      {
+       "yazi": "It cools down",
+       "neden": "Dissolving pulls heat from the surroundings, so the container cools. This process is <b>endothermic</b> (ΔH > 0). Instant cold packs for sports injuries work this way.",
+       "dogru": true
+      },
+      {
+       "yazi": "The temperature stays the same",
+       "neden": "Separating the ions takes energy, and surrounding them with water molecules releases energy. These two are not equal, so the temperature changes."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Energy diagram",
+    "metin": "The reactants have an enthalpy of <b>200 kJ</b>. Set the enthalpy of the products to make <b>ΔH = −90 kJ</b>.",
+    "sahne": {
+     "tur": "kim8-pe"
+    },
+    "deger": {
+     "u": 300
+    },
+    "kontroller": [
+     {
+      "ad": "u",
+      "etiket": "Enthalpy of products",
+      "min": 50,
+      "max": 350,
+      "adim": 10,
+      "birim": "kJ",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "u": 110
+     },
+     "tamam": "ΔH = H(products) − H(reactants) = 110 − 200 = <b>−90 kJ</b>. The products are lower, so energy was released and the reaction is <b>exothermic</b>. At first the products were higher (ΔH = +100 kJ), so the reaction was endothermic."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Activation energy",
+    "metin": "For the reaction to start, the hill has to be crossed. This hill is called the <b>activation energy</b> (Ea). Raise and lower the hill.",
+    "sahne": {
+     "tur": "kim8-pe"
+    },
+    "deger": {
+     "u": 110,
+     "ea": 120
+    },
+    "kontroller": [
+     {
+      "ad": "ea",
+      "etiket": "Activation energy",
+      "min": 40,
+      "max": 200,
+      "adim": 10,
+      "birim": "kJ",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "What happens to ΔH when the hill gets higher?",
+     "secenekler": [
+      {
+       "yazi": "It gets more negative",
+       "neden": "ΔH looks only at the starting and ending levels. The height of the hill doesn't enter the calculation."
+      },
+      {
+       "yazi": "It becomes positive",
+       "neden": "The reactants and products stayed where they were. The products are still lower, so the reaction is still exothermic."
+      },
+      {
+       "yazi": "It stays the same",
+       "neden": "Whatever the hill, ΔH = 110 − 200 = −90 kJ. Ea affects only the <b>rate</b> of the reaction, and the lower the hill, the faster the reaction. A <b>catalyst</b> also lowers Ea, but it doesn't change ΔH.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Burning methane",
+    "metin": "Balance the equation CH₄ + 2O₂ → CO₂ + ? H₂O. ΔH is calculated from enthalpies of formation: ΔH = ΣΔH°f(products) − ΣΔH°f(reactants).",
+    "sahne": {
+     "tur": "kim8-metan"
+    },
+    "deger": {
+     "k": 1
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "H₂O coefficient",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "k": 2
+     },
+     "tamam": "4 H atoms need 2 H₂O. ΔH = [−393.5 + 2·(−285.8)] − (−74.8) = <b>−890.3 kJ</b>. O₂ is an element, so its enthalpy of formation is zero. That's why natural gas is a good fuel."
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Hess's law",
+    "metin": "It's hard to measure ΔH for C + ½O₂ → CO directly. Add two known equations. In the target, CO must be on the product side.",
+    "sahne": {
+     "tur": "kim8-hess"
+    },
+    "deger": {
+     "ters": 0
+    },
+    "kontroller": [
+     {
+      "ad": "ters",
+      "etiket": "Reverse the second equation",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "ters": 1
+     },
+     "tamam": "The ΔH of the reversed equation changes sign, so −283.0 kJ becomes +283.0 kJ. When the equations are added, CO₂ cancels and the result is −393.5 + 283.0 = <b>−110.5 kJ</b>. According to <b>Hess's law</b>, ΔH depends not on the path but only on the start and end."
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Bond energies",
+    "metin": "Look at the reaction H₂ + Cl₂ → 2HCl. Breaking bonds takes energy, and forming bonds releases energy. The bond energies are 436 for H–H, 243 for Cl–Cl and 432 kJ/mol for H–Cl.",
+    "sahne": {
+     "tur": "kim8-bag",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Does this reaction absorb or release heat?",
+     "secenekler": [
+      {
+       "yazi": "It absorbs heat",
+       "neden": "Breaking the bonds takes 679 kJ, but forming two H–Cl bonds releases 864 kJ. More energy is released."
+      },
+      {
+       "yazi": "It releases heat",
+       "neden": "The bonds broken total 436 + 243 = 679 kJ, and the bonds formed total 2 · 432 = 864 kJ. ΔH = 679 − 864 = <b>−185 kJ</b>, so the reaction is exothermic.",
+       "dogru": true
+      },
+      {
+       "yazi": "Neither",
+       "neden": "The energies of the bonds broken and formed are not equal. The broken ones total 679 kJ and the formed ones 864 kJ."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Calorimeter",
+    "metin": "The heat absorbed by water is q = m·c·ΔT, with c = 4.18 J/g·°C for water. A reaction gives <b>8360 J</b> of heat to the water in a calorimeter, and the water is at 20 °C. Set the mass of water so the temperature rises by <b>10 °C</b>.",
+    "sahne": {
+     "tur": "kim8-kalorimetre"
+    },
+    "deger": {
+     "m": 100
+    },
+    "kontroller": [
+     {
+      "ad": "m",
+      "etiket": "Mass of water",
+      "min": 100,
+      "max": 500,
+      "adim": 50,
+      "birim": "g",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "m": 200
+     },
+     "tamam": "Since q = m·c·ΔT, 8360 = 200 · 4.18 · 10. The water went <b>from 20 °C to 30 °C</b>. When the same heat spreads through more water, the temperature rises less. Food calories are measured this way too."
+    },
+    "kart": 11
+   }
+  ],
+  "kapanis": [
+   "Reactions that release heat are <b>exothermic</b> (ΔH < 0). Reactions that absorb heat are <b>endothermic</b> (ΔH > 0).",
+   "<b>ΔH = H(products) − H(reactants)</b>. Activation energy decides the rate and doesn't change ΔH.",
+   "From enthalpies of formation, ΔH = ΣΔH°f(products) − ΣΔH°f(reactants). The enthalpy of formation of elements is zero.",
+   "By <b>Hess's law</b>, when equations are added their ΔH values add, and reversing an equation changes the sign. With bond energies, ΔH = Σ(broken) − Σ(formed).",
+   "In a calorimeter, heat is <b>q = m·c·ΔT</b>. The specific heat of water is 4.18 J/g·°C."
+  ],
+  "soruOnce": true
+ },
  "asit-baz": {
   "id": "asit-baz",
   "ders": "kimya",
