@@ -15990,6 +15990,507 @@
   ],
   "soruOnce": true
  },
+ "fotosentez": {
+  "id": "fotosentez",
+  "ders": "biyoloji",
+  "konu": "fotosentez",
+  "baslik": "Photosynthesis",
+  "ozet": "Try first, then learn the name. Trace the source of oxygen, find chlorophyll's colors, turn off the light and look for the limiting factor.",
+  "adimlar": [
+   {
+    "baslik": "Where does the oxygen come from?",
+    "metin": "In photosynthesis, CO₂ and water turn into glucose using light energy, and O₂ is released. We labeled the oxygen of the water with ¹⁸O and showed it in red. Play and follow the atoms.",
+    "sahne": {
+     "tur": "biy8-denklem",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Where do the oxygen atoms in the released O₂ come from?",
+     "secenekler": [
+      {
+       "yazi": "From CO₂",
+       "neden": "The oxygen of CO₂ does not go into O₂."
+      },
+      {
+       "yazi": "From water",
+       "dogru": true,
+       "neden": "In the light-dependent stage, water is split and O₂ is released. This is called photolysis. That is why labeled water gives labeled O₂."
+      },
+      {
+       "yazi": "Half from CO₂, half from water",
+       "neden": "All of the labeled oxygen showed up in O₂. None of the oxygen from CO₂ went into O₂."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Which colors does chlorophyll capture?",
+    "metin": "Chlorophyll does not absorb every color equally. Change the wavelength and find the curve's second peak, in the <b>red</b>.",
+    "sahne": {
+     "tur": "biy8-renk"
+    },
+    "deger": {
+     "l": 550
+    },
+    "kontroller": [
+     {
+      "ad": "l",
+      "etiket": "Wavelength",
+      "min": 400,
+      "max": 700,
+      "adim": 5,
+      "birim": "nm"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "l": [
+       650,
+       680
+      ]
+     },
+     "ipucu": "Red light is at the right end of the spectrum, above 650 nm.",
+     "tamam": "The curve has two peaks: blue-violet and red. The green in between (about 550 nm) is the color absorbed least."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Engelmann's experiment",
+    "metin": "In the 1880s, Engelmann lit a filament-shaped green alga with light passed through a prism. Next to it he placed oxygen-seeking (aerobic) bacteria. These bacteria gather where a lot of O₂ is being made.",
+    "sahne": {
+     "tur": "biy8-engelmann",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Where do the most bacteria gather?",
+     "secenekler": [
+      {
+       "yazi": "In the green region",
+       "neden": "Green is the color absorbed least. Photosynthesis and O₂ production are lowest there."
+      },
+      {
+       "yazi": "Equally everywhere",
+       "neden": "The rate of photosynthesis changes with wavelength. So O₂ is not made in the same amount in every region."
+      },
+      {
+       "yazi": "In blue-violet and red",
+       "dogru": true,
+       "neden": "Most O₂ is made in these colors. This experiment showed how the rate of photosynthesis changes with wavelength, which is the action spectrum."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Turn off the light",
+    "metin": "The Calvin cycle uses the ATP and NADPH made in the light stage to turn CO₂ into sugar. With the light on, the cycle keeps turning. Turn off the light and play.",
+    "sahne": {
+     "tur": "biy8-evreler",
+     "sure": 6
+    },
+    "deger": {
+     "isik": 1
+    },
+    "kontroller": [
+     {
+      "ad": "isik",
+      "etiket": "Light",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "isik": 0
+     },
+     "tamam": "When the light went off, no new ATP and NADPH came. Once the supply ran out, the Calvin cycle stopped too."
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "Photosynthesis lab",
+    "metin": "A water plant gives off O₂ bubbles as it carries out photosynthesis. Change the light, CO₂ and temperature. The bubbles and the graph change right away. Find the following yourself.",
+    "sahne": {
+     "tur": "sim-foto"
+    },
+    "deger": {
+     "isik": 20,
+     "co2": 30,
+     "T": 25
+    },
+    "kontroller": [
+     {
+      "ad": "isik",
+      "etiket": "Light intensity",
+      "min": 0,
+      "max": 100,
+      "adim": 10,
+      "birim": "%"
+     },
+     {
+      "ad": "co2",
+      "etiket": "CO₂",
+      "min": 0,
+      "max": 100,
+      "adim": 10,
+      "birim": "%"
+     },
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 5,
+      "max": 45,
+      "birim": "°C"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "With CO₂ at 30%, increase the light. At what point does the rate <b>stop rising</b>?",
+       "hedef": {
+        "co2": 30,
+        "isik": [
+         40,
+         100
+        ]
+       },
+       "coz": [
+        {
+         "co2": 30,
+         "isik": 50
+        }
+       ],
+       "tamam": "Once the light passed 30%, the rate did not rise, because CO₂ is now the scarcest factor. On the flat part of the graph, adding more light does not help."
+      },
+      {
+       "yazi": "Make photosynthesis go <b>as fast as possible</b>.",
+       "hedef": {
+        "hiz": [
+         0.97,
+         1
+        ]
+       },
+       "coz": [
+        {
+         "isik": 100,
+         "co2": 100,
+         "T": 30
+        }
+       ],
+       "tamam": "Light and CO₂ are enough, and the temperature is at the optimum (about 30 °C), so no factor is limiting the rate. At any moment, the scarcest factor sets the rate."
+      },
+      {
+       "yazi": "With photosynthesis at its fastest, raise the temperature above <b>40 °C</b>.",
+       "hedef": {
+        "T": [
+         41,
+         45
+        ],
+        "isik": [
+         40,
+         100
+        ],
+        "co2": [
+         40,
+         100
+        ]
+       },
+       "coz": [
+        {
+         "isik": 100,
+         "co2": 100,
+         "T": 44
+        }
+       ],
+       "tamam": "The rate dropped even though light and CO₂ were plentiful. The Calvin cycle runs on enzymes, and enzymes break down at temperatures above the optimum."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Temperature",
+    "metin": "The Calvin cycle runs on enzymes. Count the bubbles the water plant gives off and set the temperature to the value where photosynthesis is fastest.",
+    "sahne": {
+     "tur": "biy8-sicaklik"
+    },
+    "deger": {
+     "s": 10
+    },
+    "kontroller": [
+     {
+      "ad": "s",
+      "etiket": "Temperature",
+      "min": 0,
+      "max": 50,
+      "adim": 5,
+      "birim": "°C"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "s": 30
+     },
+     "ipucu": "Raise the temperature step by step. When the bubbles start to drop, go back one step.",
+     "tamam": "The rate of photosynthesis is highest at the optimum temperature. At higher temperatures, enzymes break down and the rate falls quickly."
+    },
+    "kart": 9
+   }
+  ],
+  "kapanis": [
+   "The O₂ released in photosynthesis comes from water.",
+   "Chlorophyll absorbs blue-violet and red light and reflects green light.",
+   "The light-dependent stage makes ATP and NADPH. The Calvin cycle stops when they run out.",
+   "The rate of photosynthesis is limited by the scarcest factor. This factor can be light, CO₂ or temperature.",
+   "The temperature curve is bell-shaped. At very high temperatures, enzymes break down."
+  ],
+  "soruOnce": true
+ },
+ "hucresel-solunum": {
+  "id": "hucresel-solunum",
+  "ders": "biyoloji",
+  "konu": "hucresel-solunum",
+  "baslik": "Cellular respiration",
+  "ozet": "Try it first, then learn its name. Break down glucose step by step, count the ATP and cut off the oxygen.",
+  "adimlar": [
+   {
+    "baslik": "From glucose to ATP",
+    "metin": "In aerobic respiration, glucose is broken down all the way to CO₂ and water. The stages are <b>glycolysis</b> in the cytoplasm, the <b>Krebs cycle</b> in the matrix and the <b>ETC</b> in the inner membrane. Press play.",
+    "sahne": {
+     "tur": "biy8-solunum",
+     "sure": 8
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In which stage is most ATP made?",
+     "secenekler": [
+      {
+       "yazi": "Glycolysis",
+       "neden": "Glycolysis gives only a few ATP. The real gain comes later."
+      },
+      {
+       "yazi": "Krebs cycle",
+       "neden": "The Krebs cycle gives only 2 ATP over two turns."
+      },
+      {
+       "yazi": "ETC",
+       "dogru": true,
+       "neden": "Using the energy of electrons taken from glucose, most of the ATP, about 26-28, is made in the ETC."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Glycolysis",
+    "metin": "Play glycolysis, which splits glucose in two, and watch the ATP counter.",
+    "sahne": {
+     "tur": "biy8-glikoliz",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Glycolysis makes 4 ATP. Why is the net gain 2 ATP?",
+     "secenekler": [
+      {
+       "yazi": "2 ATP are spent at the start",
+       "dogru": true,
+       "neden": "2 ATP are spent first to prepare glucose for the reaction. So 4 − 2 = 2 ATP remain."
+      },
+      {
+       "yazi": "2 ATP leave with CO₂",
+       "neden": "ATP does not leave with CO₂. No CO₂ is released in glycolysis either. The first CO₂ is released in pyruvate oxidation."
+      },
+      {
+       "yazi": "2 ATP turn into NADH",
+       "neden": "NADH is the reduced form of NAD⁺ and is not made from ATP."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Carbons become CO₂",
+    "metin": "If O₂ is present, pyruvate enters the mitochondrion. First comes pyruvate oxidation, then the Krebs cycle turns twice. Step through the stages and watch the counters.",
+    "sahne": {
+     "tur": "biy8-krebs"
+    },
+    "deger": {
+     "a": 0
+    },
+    "kontroller": [
+     {
+      "ad": "a",
+      "etiket": "Stage",
+      "min": 0,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "a": 3
+     },
+     "tamam": "All 6 carbons of glucose have become CO₂. Two were released in pyruvate oxidation and four in the Krebs cycle. A total of 10 NADH and 2 FADH₂ built up, and their energy will be turned into ATP in the ETC."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Cut off the oxygen",
+    "metin": "There is no <b>O₂</b>. Play the ETC.",
+    "sahne": {
+     "tur": "biy8-ets",
+     "sure": 5,
+     "oksijen": false
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens without O₂?",
+     "secenekler": [
+      {
+       "yazi": "ETC slows, ATP continues",
+       "neden": "With no final electron acceptor, electrons pile up in the chain and the chain stops completely."
+      },
+      {
+       "yazi": "Krebs speeds up",
+       "neden": "The Krebs cycle needs NAD⁺. When NAD⁺ runs low, the cycle does not speed up, it stops."
+      },
+      {
+       "yazi": "Chain jams, NAD⁺ runs out",
+       "dogru": true,
+       "neden": "With no O₂ to take the electrons, NADH cannot turn back into NAD⁺. When NAD⁺ runs out, the Krebs cycle and glycolysis stop too."
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Fermentation",
+    "metin": "Play the yeast first, then switch to the muscle cell and play again.",
+    "sahne": {
+     "tur": "biy8-fermantasyon",
+     "sure": 5
+    },
+    "deger": {
+     "kas": 0
+    },
+    "kontroller": [
+     {
+      "ad": "kas",
+      "etiket": "Muscle cell",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "kosu": 2,
+     "soru": "What is the difference between the two fermentations?",
+     "secenekler": [
+      {
+       "yazi": "Muscle makes more ATP",
+       "neden": "In both, ATP comes only from glycolysis, and one glucose gives a net 2 ATP."
+      },
+      {
+       "yazi": "Only yeast releases CO₂",
+       "dogru": true,
+       "neden": "Yeast turns pyruvate into ethyl alcohol and CO₂, while the muscle cell turns it into lactic acid."
+      },
+      {
+       "yazi": "Only muscle regenerates NAD⁺",
+       "neden": "The purpose of both fermentations is to regenerate NAD⁺ and keep glycolysis going."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Yield",
+    "metin": "Fermentation gives a net 2 ATP per glucose, and its products still carry energy. Aerobic respiration gives about 30 ATP per glucose. How many glucose does fermentation need to give the same amount of ATP?",
+    "sahne": {
+     "tur": "biy8-verim"
+    },
+    "deger": {
+     "g": 1
+    },
+    "kontroller": [
+     {
+      "ad": "g",
+      "etiket": "Glucose",
+      "min": 1,
+      "max": 20,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "g": 15
+     },
+     "ipucu": "Each glucose gives 2 ATP. For 30 ATP, divide 30 by 2.",
+     "tamam": "15 glucose × 2 ATP = 30 ATP. So a fermenting cell burns about 15 times as much glucose for the same ATP."
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "A plant by day and night",
+    "metin": "A plant cell does both photosynthesis and respiration. Compare its gas exchange by day and by night.",
+    "sahne": {
+     "tur": "biy8-gece"
+    },
+    "deger": {
+     "gece": 0
+    },
+    "kontroller": [
+     {
+      "ad": "gece",
+      "etiket": "Night",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why does a plant give off O₂ during the day?",
+     "secenekler": [
+      {
+       "yazi": "No respiration by day",
+       "neden": "Respiration goes on day and night in a living cell. It does not stop during the day."
+      },
+      {
+       "yazi": "Respiration uses O₂ only at night",
+       "neden": "Aerobic respiration uses O₂ all the time, because O₂ is the final electron acceptor of the ETC."
+      },
+      {
+       "yazi": "Photosynthesis is faster",
+       "dogru": true,
+       "neden": "By day both processes run together. But photosynthesis makes more O₂ than respiration uses."
+      }
+     ]
+    },
+    "kart": 13
+   }
+  ],
+  "kapanis": [
+   "Glycolysis takes place in the cytoplasm, needs no O₂ and gives a net 2 ATP.",
+   "The carbons of glucose are released as CO₂ in pyruvate oxidation and the Krebs cycle.",
+   "Most ATP is made in the ETC, and the final electron acceptor is O₂. The total is about 30-32 ATP.",
+   "Without O₂, fermentation regenerates NAD⁺ but gives only 2 ATP.",
+   "A plant respires day and night. In light, photosynthesis is faster than respiration."
+  ],
+  "soruOnce": true
+ },
  "mitoz": {
   "id": "mitoz",
   "ders": "biyoloji",
