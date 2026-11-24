@@ -11873,6 +11873,318 @@
   ],
   "soruOnce": true
  },
+ "kimyasal-denge": {
+  "id": "kimyasal-denge",
+  "ders": "kimya",
+  "konu": "kimyasal-denge",
+  "baslik": "Chemical equilibrium",
+  "ozet": "Watch equilibrium form and calculate Kc. Compare Q with K, then push the equilibrium with pressure, temperature and a catalyst.",
+  "adimlar": [
+   {
+    "baslik": "How does equilibrium form?",
+    "metin": "We put only N₂O₄ into a closed container, and the reaction N₂O₄ ⇌ 2NO₂ begins. Watch the forward and reverse rates.",
+    "sahne": {
+     "tur": "kim9-denge",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens when the rates become equal?",
+     "secenekler": [
+      {
+       "yazi": "The reaction stops",
+       "neden": "From outside it looks stopped, but the molecules keep converting. Equilibrium isn't static, it is dynamic."
+      },
+      {
+       "yazi": "It continues both ways equally",
+       "neden": "The conversion continues, but the two directions balance each other. This is called <b>dynamic equilibrium</b>. You would reach equilibrium even if you started with only NO₂.",
+       "dogru": true
+      },
+      {
+       "yazi": "N₂O₄ runs out completely",
+       "neden": "The reverse reaction makes N₂O₄ again from NO₂. In a closed container the reactants don't run out."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "Calculating Kc",
+    "metin": "We put 1 mol each of H₂ and I₂ into a 1 L container. At equilibrium 1.6 mol of HI was measured. Adjust the table to match.",
+    "sahne": {
+     "tur": "kim9-bdd"
+    },
+    "deger": {
+     "hi": 10
+    },
+    "kontroller": [
+     {
+      "ad": "hi",
+      "etiket": "HI at equilibrium",
+      "min": 2,
+      "max": 18,
+      "adim": 2,
+      "birim": "mol",
+      "carpan": 0.1,
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "hi": 16
+     },
+     "ipucu": "While 2x mol of HI forms, x mol of H₂ and x mol of I₂ are used up.",
+     "tamam": "2x = 1.6, so x = 0.8. At equilibrium there is 0.2 M H₂, 0.2 M I₂ and 1.6 M HI. Kc = 1.6² / (0.2 · 0.2) = <b>64</b>."
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Q and K",
+    "metin": "Writing the current concentrations into the K expression gives <b>Q</b>. For H₂ + I₂ ⇌ 2HI, K = 64, and the container has [H₂] = [I₂] = 0.1 M. Find the HI concentration that makes Q equal to K.",
+    "sahne": {
+     "tur": "kim9-q"
+    },
+    "deger": {
+     "hi": 2
+    },
+    "kontroller": [
+     {
+      "ad": "hi",
+      "etiket": "[HI]",
+      "min": 1,
+      "max": 16,
+      "birim": "M",
+      "carpan": 0.1,
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "hi": 8
+     },
+     "tamam": "Q = 0.8² / (0.1 · 0.1) = 64, which equals K. So the system is <b>at equilibrium</b>. If Q < K the reaction runs forward, and if Q > K it runs in reverse."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Reduce the volume",
+    "metin": "The reaction N₂O₄ ⇌ 2NO₂ is at equilibrium. We push the piston to halve the volume.",
+    "sahne": {
+     "tur": "kim9-hacim",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which way does the equilibrium shift?",
+     "secenekler": [
+      {
+       "yazi": "Toward NO₂ (right)",
+       "neden": "There are 2 mol of gas on the right. If the equilibrium shifted there, the moles of gas and the pressure would rise. The system does the opposite."
+      },
+      {
+       "yazi": "It doesn't shift",
+       "neden": "The moles of gas differ on the two sides, so a volume change shifts the equilibrium."
+      },
+      {
+       "yazi": "Toward N₂O₄ (left)",
+       "neden": "To lower the pressure, the system lowers the moles of gas, and 2 mol of NO₂ turn into 1 mol of N₂O₄. But it doesn't erase the disturbance completely. The NO₂ concentration still stays higher than at the start.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Equilibrium lab",
+    "metin": "We put 1 M N₂O₄ into a closed container, and the reaction N₂O₄ + heat ⇌ 2NO₂ began. NO₂ is brown. Watch the molecules and the concentration graph. Then add N₂O₄ to the container or heat it.",
+    "sahne": {
+     "tur": "sim-denge"
+    },
+    "deger": {
+     "T": 300,
+     "ekle": 0,
+     "eklendi": 0,
+     "dengede": 0
+    },
+    "kontroller": [
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 300,
+      "max": 400,
+      "adim": 10,
+      "birim": "K"
+     },
+     {
+      "ad": "ekle",
+      "etiket": "Add N₂O₄",
+      "min": 0,
+      "max": 1,
+      "tur": "dugme"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "Watch equilibrium form. Why don't the concentrations change anymore?",
+       "hedef": {
+        "dengede": 1
+       },
+       "coz": [
+        {
+         "T": 300
+        }
+       ],
+       "tamam": "The forward and reverse rates became equal. The reaction didn't stop, it runs both ways at the same rate. So the concentrations stayed constant and <b>dynamic equilibrium</b> was reached."
+      },
+      {
+       "yazi": "At equilibrium, <b>add N₂O₄</b> and wait for the new equilibrium.",
+       "hedef": [
+        {
+         "eklendi": [
+          1,
+          99
+         ]
+        },
+        {
+         "eklendi": [
+          1,
+          99
+         ],
+         "dengede": 1
+        }
+       ],
+       "sirali": true,
+       "coz": [
+        {
+         "ekle": 1
+        }
+       ],
+       "tamam": "Some of the added N₂O₄ turned into NO₂. The equilibrium shifted <b>forward</b>, the direction that uses up the added substance (Le Chatelier). Q became equal to K again, and K didn't change."
+      },
+      {
+       "yazi": "Heat the container above <b>360 K</b> and wait for the new equilibrium.",
+       "hedef": {
+        "T": [
+         360,
+         400
+        ],
+        "dengede": 1
+       },
+       "coz": [
+        {
+         "T": 380
+        }
+       ],
+       "tamam": "The forward direction absorbs heat. So heating shifted the equilibrium forward, the container turned brown and <b>Kc grew</b>. Only temperature changes K."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Catalyst and equilibrium",
+    "metin": "Add a catalyst to the same reaction and compare the NO₂ curves.",
+    "sahne": {
+     "tur": "kim9-dengekat"
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Catalyst",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "How does a catalyst affect equilibrium?",
+     "secenekler": [
+      {
+       "yazi": "Equilibrium is reached sooner",
+       "neden": "A catalyst speeds up the forward and reverse reactions equally. The equilibrium concentrations and K don't change, only the time to reach equilibrium gets shorter.",
+       "dogru": true
+      },
+      {
+       "yazi": "More NO₂ forms",
+       "neden": "Both curves rise to the same height. A catalyst doesn't increase product or shift the equilibrium."
+      },
+      {
+       "yazi": "K gets larger",
+       "neden": "K changes only with temperature. A catalyst speeds up both directions equally, so it doesn't change the ratio."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "The Haber process",
+    "metin": "Look at the reaction N₂ + 3H₂ ⇌ 2NH₃ + heat. Change the pressure and temperature, then look at the NH₃ yield and the rate.",
+    "sahne": {
+     "tur": "kim9-haber"
+    },
+    "deger": {
+     "P": 100,
+     "T": 450
+    },
+    "kontroller": [
+     {
+      "ad": "P",
+      "etiket": "Pressure",
+      "min": 50,
+      "max": 300,
+      "adim": 50,
+      "birim": "atm",
+      "tur": "surgu"
+     },
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 300,
+      "max": 600,
+      "adim": 50,
+      "birim": "°C",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which raises the NH₃ yield without lowering the rate?",
+     "secenekler": [
+      {
+       "yazi": "Raising the temperature",
+       "neden": "The rate rises, but the forward direction is exothermic, so the equilibrium shifts left and the yield drops."
+      },
+      {
+       "yazi": "Raising the pressure",
+       "neden": "In the reaction 4 mol of gas turn into 2 mol. So pressure shifts the equilibrium toward NH₃, the side with fewer moles. Compressed gases also collide more, so the rate doesn't drop.",
+       "dogru": true
+      },
+      {
+       "yazi": "Lowering the temperature",
+       "neden": "The yield rises, but the reaction becomes very slow. That's why a moderate temperature and a catalyst are chosen."
+      }
+     ]
+    },
+    "kart": 11
+   }
+  ],
+  "kapanis": [
+   "In a closed container, when the forward and reverse rates become equal, <b>dynamic equilibrium</b> is reached. Concentrations stay constant, but conversion continues.",
+   "<b>Kc</b> is the ratio of product concentrations to reactant concentrations, with the coefficients as exponents. Solids and pure liquids are not written in it.",
+   "If <b>Q < K</b> the reaction runs forward, and if <b>Q > K</b> it runs in reverse. If Q = K, the system is at equilibrium.",
+   "By Le Chatelier's principle, a system reduces the disturbance. When pressure rises, the equilibrium shifts toward fewer moles of gas, and when heated, toward the endothermic direction.",
+   "Only temperature changes K. A catalyst speeds up reaching equilibrium, but it doesn't shift it."
+  ],
+  "soruOnce": true
+ },
  "asit-baz": {
   "id": "asit-baz",
   "ders": "kimya",

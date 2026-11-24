@@ -5289,6 +5289,411 @@
    }
   ]
  },
+ "kimyasal-denge": {
+  "title": "Chemical equilibrium",
+  "summary": "Dynamic equilibrium, K and Q, Le Chatelier's principle and the solubility product.",
+  "cards": [
+   {
+    "h": "Reversible reactions and equilibrium",
+    "p": "In a closed container many reactions run in both directions (⇌). When the forward and reverse rates become equal, <b>equilibrium</b> is reached. At this point the concentrations no longer change, but they don't have to be equal.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='12' fill='var(--muted)' text-anchor='middle'>Closed container, constant temperature</text><line x1='30' y1='40' x2='30' y2='160' stroke='var(--ink)' stroke-width='1.2'/><line x1='30' y1='160' x2='150' y2='160' stroke='var(--ink)' stroke-width='1.2'/><text x='34' y='38' font-size='11' fill='var(--muted)' text-anchor='start'>rate</text><line x1='100' y1='52' x2='100' y2='160' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><path d='M30 50 C55 92 75 112 100 115 L150 115' stroke='var(--c1)' stroke-width='2.2' fill='none'/><path d='M30 160 C55 132 75 118 100 115 L150 115' stroke='var(--c2)' stroke-width='2.2' fill='none'/><text x='48' y='62' font-size='11' fill='var(--c1)' text-anchor='start' font-weight='700'>forward</text><text x='48' y='150' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>reverse</text><text x='125' y='106' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>equal</text><text x='100' y='46' font-size='11' fill='var(--ink)' text-anchor='middle'>equilibrium</text><text x='150' y='174' font-size='11' fill='var(--muted)' text-anchor='end'>time</text><line x1='180' y1='40' x2='180' y2='160' stroke='var(--ink)' stroke-width='1.2'/><line x1='180' y1='160' x2='300' y2='160' stroke='var(--ink)' stroke-width='1.2'/><text x='184' y='38' font-size='11' fill='var(--muted)' text-anchor='start'>concentration</text><line x1='250' y1='52' x2='250' y2='160' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><path d='M180 52 C205 90 225 104 250 107 L300 107' stroke='var(--c4)' stroke-width='2.2' fill='none'/><path d='M180 160 C205 138 225 131 250 129 L300 129' stroke='var(--c3)' stroke-width='2.2' fill='none'/><text x='300' y='99' font-size='11' fill='var(--c4)' text-anchor='end' font-weight='700'>reactants</text><text x='300' y='145' font-size='11' fill='var(--c3)' text-anchor='end' font-weight='700'>products</text><text x='250' y='46' font-size='11' fill='var(--ink)' text-anchor='middle'>equilibrium</text><text x='300' y='174' font-size='11' fill='var(--muted)' text-anchor='end'>time</text><text x='160' y='194' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>Rates equal; concentrations constant but not equal</text></svg>",
+    "key": "Equilibrium is reached only in a closed system. The water–vapor equilibrium and a saturated solution are physical equilibria."
+   },
+   {
+    "h": "The equilibrium constant Kc",
+    "p": "For aA + bB ⇌ cC + dD we write <b>K<sub>c</sub> = [C]<sup>c</sup>[D]<sup>d</sup> / [A]<sup>a</sup>[B]<sup>b</sup></b>. Products go in the numerator and reactants in the denominator. Solids and pure liquids are left out.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='26' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>aA(g) + bB(g) ⇌ cC(g) + dD(g)</text><text x='58' y='90' font-size='22' fill='var(--acc)' text-anchor='middle' font-weight='700'>K<tspan font-size='14' baseline-shift='sub'>c</tspan></text><text x='96' y='88' font-size='20' fill='var(--ink)' text-anchor='middle'>=</text><text x='185' y='70' font-size='18' fill='var(--c3)' text-anchor='middle' font-weight='700'>[C]ᶜ [D]ᵈ</text><line x1='130' y1='79' x2='240' y2='79' stroke='var(--ink)' stroke-width='1.5'/><text x='185' y='104' font-size='18' fill='var(--c4)' text-anchor='middle' font-weight='700'>[A]ᵃ [B]ᵇ</text><text x='250' y='68' font-size='11' fill='var(--c3)' text-anchor='start'>products</text><text x='250' y='102' font-size='11' fill='var(--c4)' text-anchor='start'>reactants</text><rect x='10' y='124' width='300' height='50' rx='6' fill='var(--panel)' fill-opacity='1'/><text x='160' y='144' font-size='13' fill='var(--ink)' text-anchor='middle'>CaCO₃(s) ⇌ CaO(s) + CO₂(g)</text><text x='160' y='164' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>K<tspan font-size='10' baseline-shift='sub'>c</tspan> = [CO₂]</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>Solids (s) and pure liquids (l) are not written in the expression.</text></svg>",
+    "key": "As long as the temperature doesn't change, Kc stays constant. Gases and (aq) species go into the expression, but substances in (s) and (l) states don't.",
+    "once": {
+     "soru": "For CaCO₃(s) ⇌ CaO(s) + CO₂(g), which substance appears in the Kc expression?",
+     "secenekler": [
+      {
+       "yazi": "Only CO₂",
+       "neden": "The concentration of a solid is constant and isn't written in the expression. So Kc = [CO₂].",
+       "dogru": true
+      },
+      {
+       "yazi": "All three",
+       "neden": "CaCO₃ and CaO are solids, so they don't go into the K expression."
+      },
+      {
+       "yazi": "Only the solids",
+       "neden": "Solids are left out, and gases are written."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The relationship between Kp and Kc",
+    "p": "For gas reactions, K can also be written with <b>partial pressures</b>, and this is called K<sub>p</sub>. <b>K<sub>p</sub> = K<sub>c</sub>·(RT)<sup>Δn</sup></b>. Here Δn is the moles of gaseous products minus the moles of gaseous reactants.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='40' font-size='20' fill='var(--acc)' text-anchor='middle' font-weight='700'>K<tspan font-size='10' baseline-shift='sub'>p</tspan> = K<tspan font-size='10' baseline-shift='sub'>c</tspan> · (RT)<tspan font-size='13' baseline-shift='super'>Δn</tspan></text><text x='160' y='66' font-size='12' fill='var(--ink)' text-anchor='middle'>Δn = moles of gaseous products − moles of gaseous reactants</text><text x='160' y='84' font-size='11' fill='var(--muted)' text-anchor='middle'>R = 0.082 L·atm/(mol·K), T in kelvins</text><rect x='8' y='98' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='14' y='116' font-size='11' fill='var(--ink)' text-anchor='start'>N₂(g) + 3H₂(g) ⇌ 2NH₃(g)</text><text x='196' y='116' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>Δn = −2</text><text x='308' y='116' font-size='12' fill='var(--ink)' text-anchor='end'>K<tspan font-size='10' baseline-shift='sub'>p</tspan> = K<tspan font-size='10' baseline-shift='sub'>c</tspan>(RT)⁻²</text><rect x='8' y='126' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='0.4'/><text x='14' y='144' font-size='11' fill='var(--ink)' text-anchor='start'>H₂(g) + I₂(g) ⇌ 2HI(g)</text><text x='196' y='144' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>Δn = 0</text><text x='308' y='144' font-size='12' fill='var(--ink)' text-anchor='end'>K<tspan font-size='10' baseline-shift='sub'>p</tspan> = K<tspan font-size='10' baseline-shift='sub'>c</tspan></text><rect x='8' y='154' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='14' y='172' font-size='11' fill='var(--ink)' text-anchor='start'>CaCO₃(s) ⇌ CaO(s) + CO₂(g)</text><text x='196' y='172' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>Δn = +1</text><text x='308' y='172' font-size='12' fill='var(--ink)' text-anchor='end'>K<tspan font-size='10' baseline-shift='sub'>p</tspan> = K<tspan font-size='10' baseline-shift='sub'>c</tspan>·RT</text><text x='160' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>Solids and liquids are not counted in Δn.</text></svg>",
+    "key": "T is in kelvins, and only gases are counted in Δn. Partial pressure is the pressure a gas would exert on its own in the mixture.",
+    "once": {
+     "soru": "In H₂ + I₂ ⇌ 2HI, the moles of gas are equal on both sides. How are Kp and Kc related?",
+     "secenekler": [
+      {
+       "yazi": "They are equal",
+       "neden": "Δn = 2 − 2 = 0. Since (RT)⁰ = 1, Kp = Kc.",
+       "dogru": true
+      },
+      {
+       "yazi": "Kp is larger",
+       "neden": "That can happen when Δn > 0."
+      },
+      {
+       "yazi": "Kp is smaller",
+       "neden": "That can happen when Δn < 0."
+      }
+     ]
+    }
+   },
+   {
+    "h": "What does the size of K tell us?",
+    "p": "If K is very large, <b>products</b> dominate at equilibrium and the reaction almost goes to completion. If K is very small, reactants remain the majority. K says nothing about the <b>rate</b> of the reaction.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--muted)' text-anchor='middle'>What dominates at equilibrium?</text><rect x='30' y='46' width='91' height='16' fill='var(--c4)' fill-opacity='0.35'/><rect x='121' y='46' width='78' height='16' fill='var(--c5)' fill-opacity='0.2'/><rect x='199' y='46' width='91' height='16' fill='var(--c3)' fill-opacity='0.35'/><text x='75' y='40' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>reactants dominate</text><text x='160' y='40' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>both present</text><text x='245' y='40' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>products dominate</text><line x1='30' y1='62' x2='30' y2='68' stroke='var(--ink)' stroke-width='1'/><text x='30' y='80' font-size='10' fill='var(--ink)' text-anchor='middle'>10⁻¹⁰</text><line x1='121' y1='62' x2='121' y2='68' stroke='var(--ink)' stroke-width='1'/><text x='121' y='80' font-size='10' fill='var(--ink)' text-anchor='middle'>10⁻³</text><line x1='160' y1='62' x2='160' y2='68' stroke='var(--ink)' stroke-width='1'/><text x='160' y='80' font-size='10' fill='var(--ink)' text-anchor='middle'>1</text><line x1='199' y1='62' x2='199' y2='68' stroke='var(--ink)' stroke-width='1'/><text x='199' y='80' font-size='10' fill='var(--ink)' text-anchor='middle'>10³</text><line x1='290' y1='62' x2='290' y2='68' stroke='var(--ink)' stroke-width='1'/><text x='290' y='80' font-size='10' fill='var(--ink)' text-anchor='middle'>10¹⁰</text><line x1='30' y1='62' x2='290' y2='62' stroke='var(--ink)' stroke-width='1.2'/><text x='160' y='96' font-size='10' fill='var(--muted)' text-anchor='middle'>K (logarithmic scale)</text><rect x='57' y='108' width='36' height='52' fill='var(--c4)' fill-opacity='0.6'/><rect x='57' y='160' width='36' height='4' fill='var(--c3)' fill-opacity='0.6'/><rect x='142' y='108' width='36' height='28' fill='var(--c4)' fill-opacity='0.6'/><rect x='142' y='136' width='36' height='28' fill='var(--c3)' fill-opacity='0.6'/><rect x='227' y='108' width='36' height='4' fill='var(--c4)' fill-opacity='0.6'/><rect x='227' y='112' width='36' height='52' fill='var(--c3)' fill-opacity='0.6'/><rect x='104' y='172' width='10' height='10' fill='var(--c4)' fill-opacity='0.6'/><text x='118' y='181' font-size='11' fill='var(--muted)' text-anchor='start'>reactant</text><rect x='176' y='172' width='10' height='10' fill='var(--c3)' fill-opacity='0.6'/><text x='190' y='181' font-size='11' fill='var(--muted)' text-anchor='start'>product</text><text x='160' y='197' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>K gives no information about the reaction rate.</text></svg>",
+    "key": "Roughly, if K > 10³, products dominate. A large K means a lot of product, not a fast reaction.",
+    "once": {
+     "soru": "A reaction has K = 10¹⁰. What can be said about this reaction?",
+     "secenekler": [
+      {
+       "yazi": "Lots of product at equilibrium",
+       "neden": "A large K shows that the numerator, the products, dominate.",
+       "dogru": true
+      },
+      {
+       "yazi": "It is very fast",
+       "neden": "K says nothing about rate. Reaching equilibrium could take years."
+      },
+      {
+       "yazi": "It doesn't proceed at all",
+       "neden": "That happens when K is very small."
+      }
+     ]
+    }
+   },
+   {
+    "h": "K when the equation changes",
+    "p": "If the equation is <b>reversed</b>, the new constant is 1/K. If the coefficients are <b>multiplied by n</b>, it becomes K<sup>n</sup>. If two equations are <b>added</b>, the constants are multiplied to give K<sub>1</sub>·K<sub>2</sub>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Start:  A ⇌ B, constant K</text><text x='40' y='44' font-size='11' fill='var(--muted)' text-anchor='start'>Change to the equation</text><text x='262' y='44' font-size='11' fill='var(--muted)' text-anchor='middle'>New constant</text><rect x='10' y='51' width='300' height='24' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='22' y='68' font-size='12' fill='var(--ink)' text-anchor='start'>Reverse:  B ⇌ A</text><text x='262' y='68' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>1 / K</text><rect x='10' y='77' width='300' height='24' rx='4' fill='var(--panel)' fill-opacity='0.4'/><text x='22' y='94' font-size='12' fill='var(--ink)' text-anchor='start'>Multiply by 2:  2A ⇌ 2B</text><text x='262' y='94' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>K²</text><rect x='10' y='103' width='300' height='24' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='22' y='120' font-size='12' fill='var(--ink)' text-anchor='start'>Divide by 2:  ½A ⇌ ½B</text><text x='262' y='120' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>√K</text><rect x='10' y='129' width='300' height='24' rx='4' fill='var(--panel)' fill-opacity='0.4'/><text x='22' y='146' font-size='12' fill='var(--ink)' text-anchor='start'>Add:  (1) + (2)</text><text x='262' y='146' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>K₁ · K₂</text><rect x='10' y='155' width='300' height='24' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='22' y='172' font-size='12' fill='var(--ink)' text-anchor='start'>Subtract:  (1) − (2)</text><text x='262' y='172' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>K₁ / K₂</text><text x='160' y='194' font-size='10' fill='var(--muted)' text-anchor='middle'>(1) and (2) are two equations with constants K₁ and K₂.</text></svg>",
+    "key": "If the coefficients are halved, it becomes √K. When equations are added, the Ks are multiplied, not added.",
+    "once": {
+     "soru": "For A ⇌ B, K = 4. What is K for B ⇌ A?",
+     "secenekler": [
+      {
+       "yazi": "1/4",
+       "neden": "In the reverse reaction the numerator and denominator swap. So K' = 1/K.",
+       "dogru": true
+      },
+      {
+       "yazi": "4",
+       "neden": "When the equation is reversed, the expression is inverted too."
+      },
+      {
+       "yazi": "−4",
+       "neden": "K is a ratio of concentrations and can't be negative."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The reaction quotient Q",
+    "p": "Writing the current concentrations into the K expression gives <b>Q</b>. If <b>Q &lt; K</b>, the reaction runs forward, and if <b>Q &gt; K</b>, it runs in reverse. If Q = K, the system is at equilibrium.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='deng-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><defs><marker id='deng-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><text x='160' y='22' font-size='12' fill='var(--ink)' text-anchor='middle'>Q: current concentrations in the K expression</text><line x1='20' y1='90' x2='300' y2='90' stroke='var(--ink)' stroke-width='1.5'/><line x1='160' y1='80' x2='160' y2='100' stroke='var(--acc)' stroke-width='2.5'/><text x='160' y='72' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='700'>K</text><text x='85' y='76' font-size='14' fill='var(--c3)' text-anchor='middle' font-weight='700'>Q &lt; K</text><text x='235' y='76' font-size='14' fill='var(--c2)' text-anchor='middle' font-weight='700'>Q &gt; K</text><path d='M50 114 L140 114' stroke='var(--c3)' stroke-width='2' fill='none' marker-end='url(#deng-1)'/><path d='M270 114 L180 114' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#deng-2)'/><text x='85' y='136' font-size='11' fill='var(--muted)' text-anchor='middle'>too little product</text><text x='85' y='152' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>runs forward</text><text x='235' y='136' font-size='11' fill='var(--muted)' text-anchor='middle'>too much product</text><text x='235' y='152' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>runs in reverse</text><rect x='70' y='166' width='180' height='26' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)'/><text x='160' y='184' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>Q = K: system at equilibrium</text></svg>",
+    "etk": {
+     "tur": "formul",
+     "soru": "H₂ + I₂ ⇌ 2HI, K<sub>c</sub> = 64 at this temperature. Change the current concentrations: Q = [HI]²/([H₂][I₂]) tells the direction of the reaction.",
+     "girdiler": [
+      {
+       "ad": "H2",
+       "etiket": "[H₂]",
+       "birim": "M",
+       "min": 0.1,
+       "max": 1,
+       "adim": 0.1,
+       "deger": 0.2
+      },
+      {
+       "ad": "I2",
+       "etiket": "[I₂]",
+       "birim": "M",
+       "min": 0.1,
+       "max": 1,
+       "adim": 0.1,
+       "deger": 0.2
+      },
+      {
+       "ad": "HI",
+       "etiket": "[HI]",
+       "birim": "M",
+       "min": 0.2,
+       "max": 4,
+       "adim": 0.2,
+       "deger": 1
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "Q",
+       "ifade": "HI^2/(H2*I2)",
+       "basamak": 2,
+       "max": 128
+      }
+     ],
+     "yorum": [
+      [
+       63.99,
+       "Q &lt; K: the reaction runs forward."
+      ],
+      [
+       64.01,
+       "Q = K: the system is at equilibrium."
+      ],
+      [
+       null,
+       "Q &gt; K: the reaction runs in reverse."
+      ]
+     ]
+    },
+    "key": "A reaction always moves in the direction that brings Q closer to K."
+   },
+   {
+    "h": "Equilibrium calculations: the ICE table",
+    "p": "For an equilibrium calculation, set up a table with rows for <b>initial, change and equilibrium</b>. The changes are proportional to the coefficients. For example, for H₂ + I₂ ⇌ 2HI the changes are −x, −x and +2x. Concentrations go into K.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>H₂(g) + I₂(g) ⇌ 2HI(g)   (2 L container)</text><text x='140' y='44' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>H₂</text><text x='200' y='44' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>I₂</text><text x='266' y='44' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>HI</text><rect x='8' y='52' width='304' height='25' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='16' y='70' font-size='12' fill='var(--muted)' text-anchor='start' font-weight='700'>Initial</text><text x='140' y='70' font-size='13' fill='var(--ink)' text-anchor='middle'>2</text><text x='200' y='70' font-size='13' fill='var(--ink)' text-anchor='middle'>2</text><text x='266' y='70' font-size='13' fill='var(--ink)' text-anchor='middle'>0</text><rect x='8' y='78' width='304' height='25' rx='4' fill='var(--panel)' fill-opacity='0.4'/><text x='16' y='96' font-size='12' fill='var(--muted)' text-anchor='start' font-weight='700'>Change</text><text x='140' y='96' font-size='13' fill='var(--c5)' text-anchor='middle'>−x</text><text x='200' y='96' font-size='13' fill='var(--c5)' text-anchor='middle'>−x</text><text x='266' y='96' font-size='13' fill='var(--c5)' text-anchor='middle'>+2x</text><rect x='8' y='104' width='304' height='25' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='16' y='122' font-size='12' fill='var(--muted)' text-anchor='start' font-weight='700'>Equilibrium</text><text x='140' y='122' font-size='13' fill='var(--ink)' text-anchor='middle'>2 − x</text><text x='200' y='122' font-size='13' fill='var(--ink)' text-anchor='middle'>2 − x</text><text x='266' y='122' font-size='13' fill='var(--ink)' text-anchor='middle'>2x</text><text x='160' y='150' font-size='12' fill='var(--ink)' text-anchor='middle'>At equilibrium HI = 2.4 mol → 2x = 2.4 → x = 1.2</text><text x='160' y='168' font-size='12' fill='var(--ink)' text-anchor='middle'>[H₂] = [I₂] = 0.8 / 2 = 0.4 M,  [HI] = 2.4 / 2 = 1.2 M</text><text x='160' y='192' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>K<tspan font-size='10' baseline-shift='sub'>c</tspan> = 1.2² / (0.4 · 0.4) = 9</text></svg>",
+    "key": "If the container isn't 1 L, divide moles by volume. For example, if a 2 L container starts with 2 mol each of H₂ and I₂ and 2.4 mol of HI forms at equilibrium, then x = 1.2. In that case Kc = 1.2² / 0.4² = 9."
+   },
+   {
+    "h": "Le Chatelier: concentration",
+    "p": "According to <b>Le Chatelier's principle</b>, if a system at equilibrium is disturbed, the equilibrium shifts in the direction that reduces the disturbance. If a substance is added, it shifts toward the side that uses it up. If a substance is removed, it shifts toward the side that produces it.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>N₂ + 3H₂ ⇌ 2NH₃  (constant V and T)</text><line x1='40' y1='34' x2='40' y2='170' stroke='var(--ink)' stroke-width='1.2'/><line x1='40' y1='170' x2='272' y2='170' stroke='var(--ink)' stroke-width='1.2'/><text x='44' y='40' font-size='10' fill='var(--muted)' text-anchor='start'>concentration</text><line x1='120' y1='46' x2='120' y2='170' stroke='var(--muted)' stroke-width='1' stroke-dasharray='4 3'/><path d='M40 100 L120 100 L120 62 C140 72 170 81 200 83 L270 83' stroke='var(--c1)' stroke-width='2.2' fill='none'/><path d='M40 112 L120 112 C140 116 170 118 200 119 L270 119' stroke='var(--c4)' stroke-width='2.2' fill='none'/><path d='M40 152 L120 152 C140 144 170 139 200 138 L270 138' stroke='var(--c3)' stroke-width='2.2' fill='none'/><text x='276' y='86' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>H₂</text><text x='276' y='123' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>N₂</text><text x='276' y='142' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>NH₃</text><text x='120' y='42' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>H₂ added</text><text x='214' y='60' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>equilibrium shifts right</text><text x='80' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>old equilibrium</text><text x='196' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>new equilibrium</text><text x='160' y='198' font-size='10' fill='var(--muted)' text-anchor='middle'>The temperature is the same, so K doesn't change.</text></svg>",
+    "key": "If the temperature is constant, K doesn't change. Adding a solid or a pure liquid doesn't shift the equilibrium.",
+    "once": {
+     "soru": "You add some more of a reactant to a container at equilibrium. Which way does the equilibrium shift?",
+     "secenekler": [
+      {
+       "yazi": "Forward",
+       "neden": "The equilibrium shifts toward the side that uses up the added substance, which is forward.",
+       "dogru": true
+      },
+      {
+       "yazi": "Reverse",
+       "neden": "The reverse direction produces reactants. That would increase the excess substance even more."
+      },
+      {
+       "yazi": "It doesn't shift",
+       "neden": "Adding a gaseous or dissolved reactant does shift the equilibrium."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Pressure, volume and inert gas",
+    "p": "At constant temperature, when the volume shrinks the pressure rises, and the equilibrium shifts toward the side with <b>fewer moles of gas</b>. If the moles are equal, there is no shift. Adding an inert gas at constant volume doesn't shift the equilibrium either.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='108' y='22' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>N₂O₄(g)</text><text x='160' y='22' font-size='14' fill='var(--muted)' text-anchor='middle'>⇌</text><text x='212' y='22' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>2NO₂(g)</text><text x='108' y='40' font-size='11' fill='var(--c1)' text-anchor='middle'>1 mol gas</text><text x='212' y='40' font-size='11' fill='var(--c2)' text-anchor='middle'>2 mol gas</text><rect x='8' y='52' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='16' y='70' font-size='12' fill='var(--ink)' text-anchor='start'>Volume shrinks (P rises)</text><text x='304' y='70' font-size='12' fill='var(--c1)' text-anchor='end' font-weight='700'>← fewer-moles side</text><rect x='8' y='82' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='0.4'/><text x='16' y='100' font-size='12' fill='var(--ink)' text-anchor='start'>Volume grows (P falls)</text><text x='304' y='100' font-size='12' fill='var(--c2)' text-anchor='end' font-weight='700'>→ more-moles side</text><rect x='8' y='112' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='1'/><text x='16' y='130' font-size='12' fill='var(--ink)' text-anchor='start'>He added at constant V</text><text x='304' y='130' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='700'>no shift</text><rect x='8' y='142' width='304' height='26' rx='4' fill='var(--panel)' fill-opacity='0.4'/><text x='16' y='160' font-size='12' fill='var(--ink)' text-anchor='start'>Δn = 0  (H₂ + I₂ ⇌ 2HI)</text><text x='304' y='160' font-size='12' fill='var(--c3)' text-anchor='end' font-weight='700'>no shift</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>Only gases count toward moles.</text></svg>",
+    "etk": {
+     "tur": "ayir",
+     "soru": "N₂(g) + 3H₂(g) ⇌ 2NH₃(g), ΔH = −92 kJ. For each change, which way does the equilibrium shift?",
+     "gruplar": [
+      "Forward (right)",
+      "Reverse (left)",
+      "No shift"
+     ],
+     "ogeler": [
+      [
+       "Adding H₂",
+       0
+      ],
+      [
+       "Removing NH₃",
+       0
+      ],
+      [
+       "Reducing the volume",
+       0,
+       "The pressure rises. The equilibrium shifts toward the side with fewer moles of gas (2 mol NH₃)."
+      ],
+      [
+       "Raising the temperature",
+       1,
+       "The reaction is exothermic. When the temperature rises, the equilibrium shifts toward the heat-absorbing direction, which is reverse."
+      ],
+      [
+       "Removing N₂",
+       1
+      ],
+      [
+       "Increasing the volume",
+       1,
+       "The pressure falls. The equilibrium shifts toward the side with more moles of gas (4 mol)."
+      ],
+      [
+       "Adding a catalyst",
+       2,
+       "A catalyst speeds up the forward and reverse reactions by the same factor."
+      ],
+      [
+       "Adding He at constant volume",
+       2,
+       "The partial pressures don't change, so the equilibrium doesn't shift."
+      ]
+     ]
+    },
+    "key": "If an inert gas is added at constant pressure, the volume grows. Then the equilibrium shifts toward the side with more moles."
+   },
+   {
+    "h": "Temperature and catalysts",
+    "p": "<b>Only temperature</b> changes K. Heating shifts the equilibrium in the endothermic direction. So for an <b>exothermic</b> reaction K decreases, and for an endothermic one it increases. A <b>catalyst</b> doesn't shift the equilibrium.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='36' y1='34' x2='36' y2='150' stroke='var(--ink)' stroke-width='1.2'/><line x1='36' y1='150' x2='176' y2='150' stroke='var(--ink)' stroke-width='1.2'/><text x='26' y='42' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>K</text><text x='182' y='154' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>T</text><path d='M40 48 C80 98 120 124 172 134' stroke='var(--c2)' stroke-width='2.2' fill='none'/><path d='M40 140 C80 132 120 104 172 50' stroke='var(--c1)' stroke-width='2.2' fill='none'/><text x='36' y='170' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>exothermic: T↑ means K↓</text><text x='36' y='188' font-size='11' fill='var(--c1)' text-anchor='start' font-weight='700'>endothermic: T↑ means K↑</text><rect x='196' y='30' width='116' height='152' rx='8' fill='var(--panel)' fill-opacity='1'/><text x='254' y='52' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Catalyst</text><text x='254' y='76' font-size='11' fill='var(--ink)' text-anchor='middle'>speeds up forward and reverse</text><text x='254' y='92' font-size='11' fill='var(--ink)' text-anchor='middle'>by the same factor</text><text x='254' y='116' font-size='11' fill='var(--ink)' text-anchor='middle'>equilibrium is</text><text x='254' y='132' font-size='11' fill='var(--ink)' text-anchor='middle'>reached sooner</text><text x='254' y='160' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>no shift</text><text x='254' y='176' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>K unchanged</text></svg>",
+    "key": "For an exothermic reaction, heating speeds it up but makes K smaller."
+   },
+   {
+    "h": "The Haber process",
+    "p": "Ammonia is made from N₂ and H₂. The reaction is exothermic and the moles of gas decrease. So <b>high pressure</b> raises the yield. A temperature of about 450 °C and an <b>iron catalyst</b> are a compromise between rate and yield.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='deng-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><defs><marker id='deng-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c3)'/></marker></defs><text x='160' y='20' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>N₂(g) + 3H₂(g) ⇌ 2NH₃(g)   ΔH = −92 kJ</text><text x='26' y='92' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>N₂, H₂</text><path d='M48 88 L80 88' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#deng-3)'/><rect x='82' y='54' width='100' height='72' rx='8' fill='var(--acc)' fill-opacity='0.1' stroke='var(--acc)'/><text x='132' y='72' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>reactor</text><text x='132' y='88' font-size='11' fill='var(--ink)' text-anchor='middle'>≈200 atm</text><text x='132' y='103' font-size='11' fill='var(--ink)' text-anchor='middle'>≈450 °C</text><text x='132' y='118' font-size='11' fill='var(--ink)' text-anchor='middle'>Fe catalyst</text><path d='M182 88 L210 88' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#deng-3)'/><rect x='212' y='64' width='96' height='48' rx='8' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)'/><text x='260' y='84' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>cooler</text><text x='260' y='100' font-size='11' fill='var(--ink)' text-anchor='middle'>NH₃ liquefies</text><path d='M260 112 L260 138' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#deng-3)'/><text x='260' y='152' font-size='11' fill='var(--c3)' text-anchor='middle' font-weight='700'>NH₃(l) is separated</text><path d='M260 64 V44 H132 V52' stroke='var(--c3)' stroke-width='1.5' fill='none' stroke-dasharray='4 3' marker-end='url(#deng-4)'/><text x='196' y='38' font-size='10' fill='var(--c3)' text-anchor='middle'>unreacted N₂ and H₂ are recycled</text><text x='160' y='176' font-size='11' fill='var(--ink)' text-anchor='middle'>High P: shifts to fewer-moles side (NH₃), yield rises</text><text x='160' y='194' font-size='11' fill='var(--muted)' text-anchor='middle'>Low T raises yield but is slow: 450 °C is a compromise</text></svg>",
+    "key": "A low temperature raises the yield, but the reaction becomes very slow. Cooling NH₃ and removing it pushes the equilibrium toward the products."
+   },
+   {
+    "h": "The solubility product Ksp",
+    "p": "A slightly soluble salt is in equilibrium with its ions in a saturated solution. For AgCl we write <b>K<sub>sp</sub> = [Ag<sup>+</sup>][Cl<sup>−</sup>]</b>. If the solubility is s, K<sub>sp</sub> = s² for AB type salts and 4s³ for AB₂ type.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='24' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>AgCl(s) ⇌ Ag⁺(aq) + Cl⁻(aq)</text><text x='160' y='46' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>K<tspan font-size='10' baseline-shift='sub'>sp</tspan> = [Ag⁺][Cl⁻]</text><rect x='10' y='58' width='145' height='98' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)'/><text x='82' y='78' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>AB type (AgCl)</text><text x='82' y='99' font-size='11' fill='var(--ink)' text-anchor='middle'>[A⁺] = s,  [B⁻] = s</text><text x='82' y='123' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>K<tspan font-size='10' baseline-shift='sub'>sp</tspan> = s²</text><text x='82' y='143' font-size='12' fill='var(--muted)' text-anchor='middle'>s = √K<tspan font-size='10' baseline-shift='sub'>sp</tspan></text><rect x='165' y='58' width='145' height='98' rx='6' fill='var(--c5)' fill-opacity='0.08' stroke='var(--c5)'/><text x='237' y='78' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>AB₂ type (CaF₂)</text><text x='237' y='99' font-size='11' fill='var(--ink)' text-anchor='middle'>[Ca²⁺] = s,  [F⁻] = 2s</text><text x='237' y='123' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>K<tspan font-size='10' baseline-shift='sub'>sp</tspan> = s·(2s)² = 4s³</text><text x='237' y='143' font-size='12' fill='var(--muted)' text-anchor='middle'>s = ∛(K<tspan font-size='10' baseline-shift='sub'>sp</tspan> / 4)</text><text x='160' y='175' font-size='11' fill='var(--ink)' text-anchor='middle'>AgCl at 25 °C: K<tspan font-size='10' baseline-shift='sub'>sp</tspan> = 1.8×10⁻¹⁰</text><text x='160' y='196' font-size='11' fill='var(--ink)' text-anchor='middle'>s ≈ 1.3×10⁻⁵ mol/L</text></svg>",
+    "key": "Ksp is short for solubility product. You can compare Ksp and solubility directly only for salts of the same type.",
+    "once": {
+     "soru": "In the equilibrium AgCl(s) ⇌ Ag⁺ + Cl⁻, why isn't AgCl written in the Ksp expression?",
+     "secenekler": [
+      {
+       "yazi": "Because it is a solid",
+       "neden": "The concentration of a solid is constant and isn't written in the K expression.",
+       "dogru": true
+      },
+      {
+       "yazi": "Because it dissolves slightly",
+       "neden": "It's left out because it is a solid, not because it dissolves slightly."
+      },
+      {
+       "yazi": "Because it is a salt",
+       "neden": "Dissolved ions are written. What is left out is the solid form of the substance."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Precipitation and the common ion",
+    "p": "If the ion product in a mixture is Q &gt; K<sub>sp</sub>, a <b>precipitate</b> forms. If one of the salt's ions is already in the solution (a <b>common ion</b>), the salt dissolves less.",
+    "svg": "<svg viewBox='0 0 320 200'><circle cx='18' cy='22' r='5' fill='var(--c3)' fill-opacity='0.85'/><text x='30' y='26' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='700'>Q &lt; K<tspan font-size='10' baseline-shift='sub'>sp</tspan></text><text x='110' y='26' font-size='12' fill='var(--ink)' text-anchor='start'>unsaturated: no precipitate</text><circle cx='18' cy='44' r='5' fill='var(--c5)' fill-opacity='0.85'/><text x='30' y='48' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='700'>Q = K<tspan font-size='10' baseline-shift='sub'>sp</tspan></text><text x='110' y='48' font-size='12' fill='var(--ink)' text-anchor='start'>saturated: equilibrium</text><circle cx='18' cy='66' r='5' fill='var(--c2)' fill-opacity='0.85'/><text x='30' y='70' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='700'>Q &gt; K<tspan font-size='10' baseline-shift='sub'>sp</tspan></text><text x='110' y='70' font-size='12' fill='var(--ink)' text-anchor='start'>precipitate forms</text><line x1='10' y1='92' x2='310' y2='92' stroke='var(--line)' stroke-width='1'/><text x='160' y='112' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Common ion effect: solubility of AgCl (25 °C)</text><text x='14' y='138' font-size='11' fill='var(--muted)' text-anchor='start'>pure water</text><rect x='86' y='126' width='160' height='16' rx='3' fill='var(--c1)' fill-opacity='0.55'/><text x='252' y='138' font-size='11' fill='var(--ink)' text-anchor='start'>1.3×10⁻⁵ M</text><text x='14' y='166' font-size='11' fill='var(--muted)' text-anchor='start'>0.1 M NaCl</text><rect x='86' y='154' width='4' height='16' rx='1' fill='var(--c2)' fill-opacity='0.8'/><text x='96' y='166' font-size='11' fill='var(--ink)' text-anchor='start'>1.8×10⁻⁹ M  (about 7000 times less)</text><text x='160' y='192' font-size='11' fill='var(--acc)' text-anchor='middle' font-weight='700'>Extra Cl⁻ pushes the equilibrium left, so AgCl dissolves less.</text></svg>",
+    "key": "If Q = Ksp, the solution is saturated. When solutions are mixed, the volume grows. So calculate Q with the diluted concentrations.",
+    "once": {
+     "soru": "Can you dissolve more AgCl in pure water or in NaCl solution?",
+     "secenekler": [
+      {
+       "yazi": "In pure water",
+       "neden": "The Cl⁻ in NaCl pushes the equilibrium left. So AgCl dissolves less in that solution.",
+       "dogru": true
+      },
+      {
+       "yazi": "In NaCl solution",
+       "neden": "The common Cl⁻ ion lowers solubility, it doesn't raise it."
+      },
+      {
+       "yazi": "Equal in both",
+       "neden": "A common ion lowers solubility."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• At equilibrium the forward and reverse rates are equal and concentrations are constant.<br>• Solids and pure liquids are not written in the K expression.<br>• If Q &lt; K the reaction runs forward, and if Q &gt; K it runs in reverse.<br>• Equilibrium shifts in the direction that reduces the disturbance, and only temperature changes K.<br>• If Q &gt; K<sub>sp</sub>, a precipitate forms. A common ion lowers solubility.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='14' fill='var(--acc)' text-anchor='middle' font-weight='700'>Chemical equilibrium</text><rect x='10' y='30' width='146' height='70' rx='8' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)'/><text x='83' y='60' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>Forward rate = reverse rate</text><text x='83' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>concentrations constant</text><rect x='164' y='30' width='146' height='70' rx='8' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)'/><text x='237' y='60' font-size='12' fill='var(--c3)' text-anchor='middle' font-weight='700'>Q &lt; K → forward</text><text x='237' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>Q &gt; K → reverse</text><rect x='10' y='112' width='146' height='70' rx='8' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)'/><text x='83' y='142' font-size='12' fill='var(--c2)' text-anchor='middle' font-weight='700'>Toward reducing the disturbance</text><text x='83' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>Only T changes K</text><rect x='164' y='112' width='146' height='70' rx='8' fill='var(--c5)' fill-opacity='0.1' stroke='var(--c5)'/><text x='237' y='142' font-size='12' fill='var(--c5)' text-anchor='middle' font-weight='700'>Q &gt; K<tspan font-size='10' baseline-shift='sub'>sp</tspan> → precipitate</text><text x='237' y='162' font-size='11' fill='var(--ink)' text-anchor='middle'>common ion lowers s</text><text x='160' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>Solids and pure liquids are not written in the K expression.</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "At constant temperature, 1 mol of N₂O₄ is placed in a closed 2 L container: N₂O₄(g) ⇌ 2NO₂(g). At equilibrium the container holds 0.4 mol of NO₂. What is K<sub>c</sub>?",
+    "cevap": 0.1,
+    "tolerans": 0.001,
+    "e": "When 0.4 mol of NO₂ forms, 0.2 mol of N₂O₄ is used up and 0.8 mol of N₂O₄ remains. [N₂O₄] = 0.4 M and [NO₂] = 0.2 M, so K<sub>c</sub> = 0.2² / 0.4 = 0.1."
+   },
+   {
+    "tur": "ayir",
+    "q": "The reaction N₂(g) + 3H₂(g) ⇌ 2NH₃(g) is exothermic. Sort each change by where it shifts the equilibrium.",
+    "gruplar": [
+     "Toward products",
+     "Toward reactants",
+     "No shift"
+    ],
+    "ogeler": [
+     [
+      "Adding N₂",
+      0
+     ],
+     [
+      "Reducing the volume",
+      0
+     ],
+     [
+      "Removing NH₃",
+      0
+     ],
+     [
+      "Heating",
+      1
+     ],
+     [
+      "Increasing the volume",
+      1
+     ],
+     [
+      "Removing H₂",
+      1
+     ],
+     [
+      "Adding a catalyst",
+      2
+     ],
+     [
+      "He at constant volume",
+      2
+     ]
+    ],
+    "e": "Added N₂ is used up, and removed NH₃ is produced again. When the volume shrinks, the equilibrium shifts toward the side with fewer moles (2 mol gas). Heating shifts an exothermic equilibrium toward the reactants. A catalyst and He added at constant volume don't shift the equilibrium."
+   },
+   {
+    "q": "In a saturated solution of a slightly soluble AB<sub>2</sub> salt, the molar solubility is s = 1×10<sup>−3</sup> M. What is K<sub>sp</sub>?",
+    "o": [
+     "1×10<sup>−6</sup>",
+     "2×10<sup>−9</sup>",
+     "4×10<sup>−9</sup>",
+     "1×10<sup>−9</sup>"
+    ],
+    "a": 2,
+    "e": "[A<sup>2+</sup>] = s and [B<sup>−</sup>] = 2s. So K<sub>sp</sub> = s·(2s)<sup>2</sup> = 4s<sup>3</sup> = 4×10<sup>−9</sup>.",
+    "y": [
+     "You used s² as for the AB type. AB<sub>2</sub> has two anions, so the result is 4s³.",
+     "You forgot to square 2s. The right answer is s·(2s)² = 4s³.",
+     "",
+     "You used just s³. [B<sup>−</sup>] = 2s, so its square is 4s², and the result is 4s³."
+    ]
+   },
+   {
+    "q": "For A(g) + B(g) ⇌ 2C(g), K<sub>c</sub> = 4 at a certain temperature. At one moment a 1 L container holds 1 mol of A, 1 mol of B and 4 mol of C. Which is true?",
+    "o": [
+     "The system is at equilibrium",
+     "It runs forward, C increases",
+     "Q = 4, equal to K",
+     "It runs in reverse, C decreases"
+    ],
+    "a": 3,
+    "e": "Q = 4² / (1·1) = 16. Since Q &gt; K, the reaction runs in reverse. C is used up until Q drops to 4.",
+    "y": [
+     "Q = [C]²/([A][B]) = 4²/(1·1) = 16. Since Q ≠ K, the system is not at equilibrium.",
+     "Q = 16, which is larger than K = 4. There is too much product, so the reaction runs in reverse.",
+     "When calculating Q, [C] must be squared. So the result is 4² = 16, not 4.",
+     ""
+    ]
+   }
+  ]
+ },
  "asit-baz": {
   "title": "Acids, bases and salts",
   "summary": "Learn the definitions of acids and bases, pH, Ka, neutralization, salts and titration.",
