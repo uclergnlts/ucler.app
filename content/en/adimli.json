@@ -13860,5 +13860,244 @@
    "Label values are per 100 g. When taking medicine, follow the dose and the length of use."
   ],
   "soruOnce": true
+ },
+ "enerji-kaynaklari": {
+  "id": "enerji-kaynaklari",
+  "ders": "kimya",
+  "konu": "enerji-kaynaklari",
+  "baslik": "Energy sources and scientific advances",
+  "ozet": "Distill crude oil and compare the CO₂ emissions of fuels. Remove the greenhouse gases, watch acid rain and explore power plants. Finally, calculate atom economy and nano surface area.",
+  "adimlar": [
+   {
+    "baslik": "Separate crude oil",
+    "metin": "Crude oil is heated at the bottom of the tower. As the vapor rises, it cools, and each molecule condenses on the tray that matches its boiling point. This is called <b>fractional distillation</b>. Choose a molecule <b>that will go into gasoline</b>.",
+    "sahne": {
+     "tur": "kim12-kule"
+    },
+    "deger": {
+     "c": 20
+    },
+    "kontroller": [
+     {
+      "ad": "c",
+      "etiket": "Number of carbons",
+      "min": 1,
+      "max": 30,
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "c": [
+       5,
+       10
+      ]
+     },
+     "ipucu": "Gasoline is taken from the upper part of the tower and is made of small molecules.",
+     "tamam": "Gasoline is made of molecules of about C₅–C₁₀. The smaller the molecule, the lower its boiling point and the higher up the tower it condenses."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Which fuel gives less CO₂?",
+    "metin": "When a fossil fuel burns completely, CO₂ and water form. Make the same heat (1 MJ) with three fuels and find the one that releases the least CO₂.",
+    "sahne": {
+     "tur": "kim12-co2"
+    },
+    "deger": {
+     "y": 0
+    },
+    "kontroller": [
+     {
+      "ad": "y",
+      "etiket": "Fuel",
+      "min": 0,
+      "max": 2,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "y": 2
+     },
+     "ipucu": "Look for the fuel with the shortest bar.",
+     "tamam": "Natural gas (mostly methane) is the fossil fuel that releases the least CO₂. Still, its emissions are not zero, because natural gas is also a fossil fuel."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "The greenhouse effect",
+    "metin": "Now we will remove all the greenhouse gases from the atmosphere.",
+    "sahne": {
+     "tur": "kim12-sera",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to Earth's average temperature?",
+     "secenekler": [
+      {
+       "yazi": "Stays at ≈ 15 °C",
+       "neden": "The incoming sunlight stays the same, but the heat given off escapes to space without being held back. So the surface cools."
+      },
+      {
+       "yazi": "Drops to ≈ −18 °C",
+       "neden": "The infrared rays given off by the surface escape to space without being held back. The average temperature drops from about 15 °C to −18 °C.",
+       "dogru": true
+      },
+      {
+       "yazi": "Rises to ≈ 40 °C",
+       "neden": "Greenhouse gases hold heat in. Removing them causes cooling, not warming."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Acid rain",
+    "metin": "Increase the amount of SO₂ in the air. Watch the pH of the rain and the marble.",
+    "sahne": {
+     "tur": "kim12-asit"
+    },
+    "deger": {
+     "s": 0
+    },
+    "kontroller": [
+     {
+      "ad": "s",
+      "etiket": "SO₂ in the air",
+      "min": 0,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why is the pH of unpolluted rain ≈ 5.6 and not 7?",
+     "secenekler": [
+      {
+       "yazi": "SO₂ in the air acidifies all rain",
+       "neden": "Even without SO₂, the pH of rain is 5.6. SO₂ pushes the pH below 5.6 and causes true acid rain."
+      },
+      {
+       "yazi": "Rainwater carries basic dust",
+       "neden": "Basic substances would raise the pH. Rain is slightly acidic."
+      },
+      {
+       "yazi": "It dissolves CO₂ from the air",
+       "neden": "CO₂ forms H₂CO₃ with water, and this weak acid lowers the pH to about 5.6. SO₂ gives strong H₂SO₄, so it lowers the pH even more.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Power plants",
+    "metin": "Each power plant turns one type of energy into electricity. A fuel cell makes electricity directly from H₂ and O₂. Select the plants one by one and look at the conversion chain.",
+    "sahne": {
+     "tur": "kim12-santral"
+    },
+    "deger": {
+     "k": 0
+    },
+    "kontroller": [
+     {
+      "ad": "k",
+      "etiket": "Power plant",
+      "min": 0,
+      "max": 5,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which ones make electricity without a turbine and generator?",
+     "secenekler": [
+      {
+       "yazi": "Solar cell and fuel cell",
+       "neden": "In a solar cell, light sets electrons in the semiconductor moving directly. In a fuel cell, H₂ and O₂ react at the electrodes. Neither has a spinning part.",
+       "dogru": true
+      },
+      {
+       "yazi": "Wind and hydroelectric",
+       "neden": "Both use the energy of motion to turn a turbine, and a generator produces the electricity."
+      },
+      {
+       "yazi": "Nuclear and solar cell",
+       "neden": "The solar cell is right, but a nuclear plant uses the heat of fission to make steam and turn a turbine."
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Atom economy",
+    "metin": "Atom economy shows how much of the reactants' atoms end up in the desired product. We can make ethanol by three different routes. Find the route with 100% atom economy.",
+    "sahne": {
+     "tur": "kim12-atomeko"
+    },
+    "deger": {
+     "y": 0
+    },
+    "kontroller": [
+     {
+      "ad": "y",
+      "etiket": "Route",
+      "min": 0,
+      "max": 2,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "y": 2
+     },
+     "ipucu": "Look for the reaction that makes no by-product.",
+     "tamam": "In the addition reaction, all the reactants' atoms end up in ethanol, and the atom economy is 100%. The substitution route stays at 31% because of the NaBr waste."
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Nanoscale",
+    "metin": "Cut the cube into smaller cubes and triple the total surface area.",
+    "sahne": {
+     "tur": "kim12-nano"
+    },
+    "deger": {
+     "n": 1
+    },
+    "kontroller": [
+     {
+      "ad": "n",
+      "etiket": "Pieces per edge",
+      "min": 1,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "n": 3
+     },
+     "ipucu": "Cutting each edge into 2 pieces doubles the surface area.",
+     "tamam": "You got 27 small cubes, and the total surface area tripled. A material with a larger surface-to-volume ratio reacts more readily. That is why nanoparticles are good catalysts."
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "Crude oil is separated into its parts by fractional distillation. Small molecules leave from the upper part of the tower.",
+   "For the same heat, natural gas gives the least CO₂, but it is still a fossil fuel.",
+   "Without the greenhouse effect, the average temperature would be about −18 °C. Extra CO₂ strengthens this effect.",
+   "The pH of clean rain is about 5.6. SO₂ and nitrogen oxides push it even lower.",
+   "Solar cells and fuel cells make electricity without a turbine. Other power plants use a turbine and a generator.",
+   "Green chemistry prevents waste from the start. At the nanoscale, the surface-to-volume ratio grows."
+  ],
+  "soruOnce": true
  }
 }
