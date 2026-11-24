@@ -19065,6 +19065,248 @@
   ],
   "soruOnce": true
  },
+ "duyu-organlari": {
+  "id": "duyu-organlari",
+  "ders": "biyoloji",
+  "konu": "duyu-organlari",
+  "baslik": "Sense organs",
+  "ozet": "Watch a stimulus become a perception. Adjust the pupil to light, focus the lens on something near, choose glasses for a nearsighted eye and follow the path of sound in the ear.",
+  "adimlar": [
+   {
+    "baslik": "From stimulus to perception",
+    "metin": "Imagine someone whose eyes and optic nerves are healthy, but whose <b>visual center</b> in the brain is damaged. Make a guess first, then press play.",
+    "sahne": {
+     "tur": "biy10-yol",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Can this person see?",
+     "secenekler": [
+      {
+       "yazi": "Yes",
+       "neden": "The eye turns light into impulses, but it is the brain that interprets the impulses and turns them into an image."
+      },
+      {
+       "yazi": "Only colors are lost",
+       "neden": "Colors are told apart by the cones in the retina. When the visual center is damaged, no image is perceived at all."
+      },
+      {
+       "yazi": "No",
+       "dogru": true,
+       "neden": "Perception happens in the center in the brain, not in the receptor. So brain damage can make even a healthy eye blind."
+      }
+     ]
+    },
+    "kart": 1
+   },
+   {
+    "baslik": "The pupil",
+    "metin": "The <b>iris</b> uses its muscles to set the size of the <b>pupil</b>. Change the light and make the pupil as wide as it can get.",
+    "sahne": {
+     "tur": "biy10-bebek"
+    },
+    "deger": {
+     "isik": 4
+    },
+    "kontroller": [
+     {
+      "ad": "isik",
+      "etiket": "Light",
+      "min": 1,
+      "max": 5,
+      "adim": 1,
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "isik": 1
+     },
+     "ipucu": "In dim light the pupil gets bigger and more light reaches the retina.",
+     "tamam": "In dim light the pupil got bigger, and in bright light it gets smaller. This is a reflex, and it protects the retina from too much light."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Look near",
+    "metin": "The <b>suspensory ligaments</b> attach the lens to the ciliary body. Use the switch to look near and watch the muscle, the ligaments and the lens.",
+    "sahne": {
+     "tur": "biy10-uyum"
+    },
+    "deger": {
+     "yakin": 0
+    },
+    "kontroller": [
+     {
+      "ad": "yakin",
+      "etiket": "Look near",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "How does the lens get thicker when you look at something near?",
+     "secenekler": [
+      {
+       "yazi": "Muscle contracts, ligaments loosen",
+       "dogru": true,
+       "neden": "When the ligaments loosen, the flexible lens thickens on its own and bends light more. This focuses the light from a nearby object onto the retina."
+      },
+      {
+       "yazi": "Muscle relaxes, ligaments tighten",
+       "neden": "This happens when looking far. The tight ligaments pull on the lens and make it thinner."
+      },
+      {
+       "yazi": "The iris squeezes the lens",
+       "neden": "The iris only sets the size of the pupil. The shape of the lens is changed by the ciliary muscles."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "A nearsighted eye",
+    "metin": "In a nearsighted eye the eyeball is long. Light from a faraway object focuses <b>in front of the retina</b> and the image is blurry. Pick a lens and move the focus onto the retina.",
+    "sahne": {
+     "tur": "biy10-mercek",
+     "kusur": "miyop"
+    },
+    "deger": {
+     "d": 0
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Glasses",
+      "min": -3,
+      "max": 3,
+      "adim": 1,
+      "birim": "D",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "d": -2
+     },
+     "ipucu": "The focus falls too far forward. A minus lens that spreads the light a little pushes the focus back.",
+     "tamam": "The concave (diverging) lens spread the light and the focus landed on the retina. Nearsighted people see far things blurry and wear minus lenses."
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "A farsighted eye",
+    "metin": "In a farsighted eye the eyeball is short and the focus falls <b>behind the retina</b>. This person sees near things blurry. Try the lenses.",
+    "sahne": {
+     "tur": "biy10-mercek",
+     "kusur": "hiper"
+    },
+    "deger": {
+     "d": 0
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Glasses",
+      "min": -3,
+      "max": 3,
+      "adim": 1,
+      "birim": "D",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which lens corrects farsightedness?",
+     "secenekler": [
+      {
+       "yazi": "Concave lens",
+       "neden": "This lens spreads light and pushes the focus even further back. It corrects nearsightedness but makes farsightedness worse."
+      },
+      {
+       "yazi": "Convex lens",
+       "dogru": true,
+       "neden": "A converging lens gathers the light early and pulls the focus forward onto the retina. Farsighted people wear plus lenses."
+      },
+      {
+       "yazi": "Cylindrical lens",
+       "neden": "A cylindrical lens corrects an uneven curve of the cornea, which is astigmatism. It does not move the focus forward."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "The path of sound",
+    "metin": "A patient's eardrum and cochlea are healthy, but the ossicles in the middle ear have hardened and cannot move. Make a guess first, then press play.",
+    "sahne": {
+     "tur": "biy10-kulak",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Where does the sound get stuck in this ear?",
+     "secenekler": [
+      {
+       "yazi": "At the eardrum",
+       "neden": "The eardrum is healthy, so it vibrates. The problem is in the ossicles that should carry the vibration."
+      },
+      {
+       "yazi": "In the middle ear",
+       "dogru": true,
+       "neden": "A stirrup that cannot move cannot vibrate the oval window. Even though the cochlea and nerve are healthy, the signal never reaches the inner ear. This is called conductive hearing loss."
+      },
+      {
+       "yazi": "At the auditory nerve",
+       "neden": "The nerve is healthy, but since the cochlea is not stimulated, no impulse forms for it to carry."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Balance",
+    "metin": "You just got off a Ferris wheel, and even though you are standing still, your head is spinning. Make a guess first, then press play.",
+    "sahne": {
+     "tur": "biy10-denge",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Why is your head spinning even though you have stopped?",
+     "secenekler": [
+      {
+       "yazi": "The cochlea was stimulated",
+       "neden": "The cochlea is for hearing. It detects sound vibrations, not rotation."
+      },
+      {
+       "yazi": "Eustachian tube pressure changed",
+       "neden": "The Eustachian tube only balances the pressure on both sides of the eardrum. It does not detect rotation."
+      },
+      {
+       "yazi": "The canal fluid is still moving",
+       "dogru": true,
+       "neden": "The canal stops with you, but the fluid inside keeps flowing for a while because of inertia. The hair cells still tell the cerebellum you are turning, while your eyes show you have stopped."
+      }
+     ]
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "A receptor turns a stimulus into an impulse, and perception happens in the brain.",
+   "The pupil gets bigger in dim light and smaller in bright light. When looking near, the ciliary muscle contracts and the lens gets thicker.",
+   "In myopia the focus is in front of the retina and a concave lens is needed. In hyperopia the focus is behind the retina and a convex lens is needed.",
+   "Sound travels from the eardrum through the hammer, anvil and stirrup to the cochlea. The semicircular canals detect rotation, and the utricle and saccule detect tilting.",
+   "In dim light the rods work and colors are not seen. Cones tell colors apart in bright light."
+  ],
+  "soruOnce": true
+ },
  "ekosistem": {
   "id": "ekosistem",
   "ders": "biyoloji",
