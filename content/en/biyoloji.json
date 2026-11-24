@@ -5842,6 +5842,418 @@
    }
   ]
  },
+ "endokrin": {
+  "title": "Endocrine system",
+  "summary": "Hormones, endocrine glands and how the body is regulated by chemical signals",
+  "cards": [
+   {
+    "h": "Hormones and types of glands",
+    "p": "A <b>hormone</b> is a chemical messenger that a gland releases directly into the blood. <b>Endocrine</b> glands have no ducts. <b>Exocrine</b> glands release their secretions through a duct. <b>Mixed</b> glands do both.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='end-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker><marker id='end-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='end-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker><marker id='end-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker></defs><text x='55' y='20' font-size='13' fill='var(--c3)' text-anchor='middle'>Endocrine</text><circle cx='55' cy='52' r='18' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='2'/><text x='160' y='20' font-size='13' fill='var(--c1)' text-anchor='middle'>Exocrine</text><circle cx='160' cy='52' r='18' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='2'/><text x='265' y='20' font-size='13' fill='var(--c5)' text-anchor='middle'>Mixed</text><circle cx='265' cy='52' r='18' fill='var(--c5)' fill-opacity='0.25' stroke='var(--c5)' stroke-width='2'/><rect x='20' y='96' width='70' height='16' rx='8' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><line x1='55' y1='70' x2='55' y2='92' stroke='var(--c3)' stroke-width='2' marker-end='url(#end-1)'/><text x='55' y='124' font-size='11' fill='var(--muted)' text-anchor='middle'>blood vessel</text><line x1='125' y1='108' x2='195' y2='108' stroke='var(--ink)' stroke-width='2'/><path d='M156,70 L156,104 M164,70 L164,104' stroke='var(--c1)' stroke-width='2' fill='none'/><line x1='160' y1='74' x2='160' y2='102' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#end-2)'/><text x='160' y='124' font-size='11' fill='var(--muted)' text-anchor='middle'>duct → surface</text><rect x='225' y='96' width='34' height='16' rx='8' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><line x1='255' y1='68' x2='243' y2='92' stroke='var(--c3)' stroke-width='2' marker-end='url(#end-3)'/><path d='M273,68 L285,104 M279,66 L291,102' stroke='var(--c1)' stroke-width='2' fill='none'/><line x1='276' y1='72' x2='286' y2='100' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#end-4)'/><line x1='276' y1='108' x2='306' y2='108' stroke='var(--ink)' stroke-width='2'/><text x='265' y='124' font-size='11' fill='var(--muted)' text-anchor='middle'>blood + duct</text><line x1='10' y1='136' x2='310' y2='136' stroke='var(--line)'/><text x='55' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>ductless</text><text x='55' y='180' font-size='11' fill='var(--muted)' text-anchor='middle'>thyroid, pituitary</text><text x='160' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>with ducts</text><text x='160' y='180' font-size='11' fill='var(--muted)' text-anchor='middle'>sweat, saliva</text><text x='265' y='158' font-size='12' fill='var(--ink)' text-anchor='middle'>both</text><text x='265' y='180' font-size='11' fill='var(--muted)' text-anchor='middle'>pancreas, testis</text></svg>",
+    "key": "If a gland has no duct, its secretion goes into the blood and the gland is endocrine. If it has a duct, the gland is exocrine. The pancreas and the sex glands are mixed glands.",
+    "once": {
+     "soru": "A sweat gland releases its secretion onto the skin through a duct. What kind of gland is it?",
+     "secenekler": [
+      {
+       "yazi": "Exocrine",
+       "neden": "A gland that releases its secretion onto a body surface through a duct is an exocrine gland.",
+       "dogru": true
+      },
+      {
+       "yazi": "Endocrine",
+       "neden": "An endocrine gland has no duct, and its secretion goes directly into the blood."
+      },
+      {
+       "yazi": "Mixed",
+       "neden": "A mixed gland releases secretions both into the blood and into a duct. A sweat gland releases only into a duct."
+      }
+     ]
+    }
+   },
+   {
+    "h": "What all hormones have in common",
+    "p": "A hormone travels through the whole body in the blood, but it only affects <b>target cells</b> that have the right <b>receptor</b>. Even a tiny amount is enough. Hormones are broken down in the liver and removed by the kidneys.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='end-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker></defs><circle cx='45' cy='50' r='20' fill='var(--c3)' fill-opacity='0.25' stroke='var(--c3)' stroke-width='2'/><text x='45' y='20' font-size='12' fill='var(--ink)' text-anchor='middle'>gland</text><line x1='45' y1='70' x2='45' y2='88' stroke='var(--c3)' stroke-width='2' marker-end='url(#end-5)'/><rect x='15' y='92' width='295' height='22' rx='11' fill='var(--c2)' fill-opacity='0.2' stroke='var(--c2)'/><polygon points='70,97 76,109 64,109' fill='var(--c4)'/><polygon points='100,97 106,109 94,109' fill='var(--c4)'/><polygon points='140,97 146,109 134,109' fill='var(--c4)'/><polygon points='175,97 181,109 169,109' fill='var(--c4)'/><polygon points='215,97 221,109 209,109' fill='var(--c4)'/><polygon points='250,97 256,109 244,109' fill='var(--c4)'/><polygon points='285,97 291,109 279,109' fill='var(--c4)'/><text x='200' y='84' font-size='12' fill='var(--muted)' text-anchor='middle'>the hormone travels everywhere in the blood</text><circle cx='100' cy='160' r='24' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='2'/><path d='M93,136 L93,128 L100,140 L107,128 L107,136' fill='none' stroke='var(--c5)' stroke-width='2.5'/><polygon points='100,124 94,116 106,116' fill='var(--c4)'/><text x='100' y='164' font-size='11' fill='var(--ink)' text-anchor='middle'>target</text><text x='165' y='156' font-size='11' fill='var(--c3)' text-anchor='start'>has receptor</text><text x='165' y='170' font-size='11' fill='var(--c3)' text-anchor='start'>→ effect</text><circle cx='270' cy='160' r='24' fill='var(--muted)' fill-opacity='0.12' stroke='var(--muted)' stroke-width='2'/><text x='270' y='164' font-size='11' fill='var(--muted)' text-anchor='middle'>cell</text><text x='314' y='194' font-size='11' fill='var(--c2)' text-anchor='end'>no receptor → no effect</text><text x='76' y='48' font-size='11' fill='var(--muted)' text-anchor='start'>a tiny amount is enough</text></svg>",
+    "key": "The same hormone can have different effects on different targets. For example, adrenaline speeds up the heart but slows down digestion."
+   },
+   {
+    "h": "The chemical makeup of hormones",
+    "p": "Hormones fall into three groups by structure. Insulin and ADH are <b>proteins or peptides</b>, adrenaline and thyroxine are <b>amines</b>, and cortisol and the sex hormones are <b>steroids</b>. Steroids pass through the membrane, and their receptors are inside the cell.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='107' y1='8' x2='107' y2='196' stroke='var(--line)' stroke-width='1'/><line x1='213' y1='8' x2='213' y2='196' stroke='var(--line)' stroke-width='1'/><text x='54' y='20' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>Protein, peptide</text><text x='160' y='20' font-size='11' fill='var(--c4)' text-anchor='middle' font-weight='700'>Amine</text><text x='266' y='20' font-size='11' fill='var(--c5)' text-anchor='middle' font-weight='700'>Steroid</text><path d='M24 54 L36 66 L48 54 L60 66 L72 54 L84 66' stroke='var(--c1)' stroke-width='1.2' fill='none'/><circle cx='24' cy='54' r='5' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1'/><circle cx='36' cy='66' r='5' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1'/><circle cx='48' cy='54' r='5' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1'/><circle cx='60' cy='66' r='5' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1'/><circle cx='72' cy='54' r='5' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1'/><circle cx='84' cy='66' r='5' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1'/><circle cx='160' cy='60' r='7' fill='var(--c4)' fill-opacity='0.45' stroke='var(--c4)' stroke-width='1.2'/><polygon points='249.0,64.0 244.5,71.8 235.5,71.8 231.0,64.0 235.5,56.2 244.5,56.2' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.2'/><polygon points='262.5,56.2 258.0,64.0 249.0,64.0 244.5,56.2 249.0,48.4 258.0,48.4' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.2'/><polygon points='276.0,64.0 271.5,71.8 262.5,71.8 258.0,64.0 262.5,56.2 271.5,56.2' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.2'/><polygon points='289.5,56.2 285.0,64.0 276.0,64.0 271.5,56.2 276.0,48.4 285.0,48.4' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1.2'/><text x='54' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>insulin</text><text x='54' y='113' font-size='11' fill='var(--ink)' text-anchor='middle'>glucagon</text><text x='54' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>GH, ADH</text><text x='160' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>adrenaline</text><text x='160' y='113' font-size='11' fill='var(--ink)' text-anchor='middle'>thyroxine</text><text x='160' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>melatonin</text><text x='266' y='98' font-size='11' fill='var(--ink)' text-anchor='middle'>cortisol</text><text x='266' y='113' font-size='11' fill='var(--ink)' text-anchor='middle'>aldosterone</text><text x='266' y='128' font-size='11' fill='var(--ink)' text-anchor='middle'>estrogen</text><text x='54' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>amino acid chain</text><text x='160' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>amino acid derivative</text><text x='266' y='152' font-size='10' fill='var(--muted)' text-anchor='middle'>from cholesterol</text><text x='54' y='174' font-size='10' fill='var(--c2)' text-anchor='middle'>water-soluble:</text><text x='54' y='188' font-size='10' fill='var(--c2)' text-anchor='middle' font-weight='700'>membrane receptor</text><text x='160' y='174' font-size='10' fill='var(--c2)' text-anchor='middle'>adrenaline: membrane</text><text x='160' y='188' font-size='10' fill='var(--c2)' text-anchor='middle'>thyroxine: inside cell</text><text x='266' y='174' font-size='10' fill='var(--c2)' text-anchor='middle'>fat-soluble:</text><text x='266' y='188' font-size='10' fill='var(--c2)' text-anchor='middle' font-weight='700'>receptor inside cell</text></svg>",
+    "key": "Steroid hormones are made in the smooth ER, and protein hormones are made by ribosomes. Protein hormones and adrenaline have their receptors on the membrane. Thyroxine enters the cell.",
+    "once": {
+     "soru": "Steroid hormones are made from cholesterol. Can they pass easily through the cell membrane?",
+     "secenekler": [
+      {
+       "yazi": "Yes",
+       "neden": "Steroids are fat-soluble. So they pass directly through the lipid layer of the membrane.",
+       "dogru": true
+      },
+      {
+       "yazi": "No",
+       "neden": "The ones that cannot pass through the membrane are protein hormones, and their receptors are on the membrane."
+      },
+      {
+       "yazi": "Only with a carrier",
+       "neden": "Steroids cross the membrane without needing a carrier."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Nervous and hormonal control",
+    "p": "The <b>nervous system</b> sends messages through neurons. This is fast, short-lived and goes to a specific target. The <b>endocrine system</b> sends messages through the blood. This is slow, long-lasting and affects a wide area. The <b>hypothalamus</b> links the two systems.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='95' y='10' width='105' height='26' rx='5' fill='var(--c5)' fill-opacity='0.2'/><rect x='205' y='10' width='105' height='26' rx='5' fill='var(--c3)' fill-opacity='0.2'/><text x='147' y='28' font-size='13' fill='var(--ink)' text-anchor='middle'>Nervous</text><text x='257' y='28' font-size='13' fill='var(--ink)' text-anchor='middle'>Hormonal</text><text x='12' y='62' font-size='12' fill='var(--muted)' text-anchor='start'>Signal</text><text x='147' y='62' font-size='12' fill='var(--ink)' text-anchor='middle'>by neuron</text><text x='257' y='62' font-size='12' fill='var(--ink)' text-anchor='middle'>by blood</text><line x1='10' y1='74' x2='310' y2='74' stroke='var(--line)'/><text x='12' y='88' font-size='12' fill='var(--muted)' text-anchor='start'>Speed</text><text x='147' y='88' font-size='12' fill='var(--ink)' text-anchor='middle'>very fast</text><text x='257' y='88' font-size='12' fill='var(--ink)' text-anchor='middle'>slow</text><line x1='10' y1='100' x2='310' y2='100' stroke='var(--line)'/><text x='12' y='114' font-size='12' fill='var(--muted)' text-anchor='start'>Duration</text><text x='147' y='114' font-size='12' fill='var(--ink)' text-anchor='middle'>short</text><text x='257' y='114' font-size='12' fill='var(--ink)' text-anchor='middle'>long</text><line x1='10' y1='126' x2='310' y2='126' stroke='var(--line)'/><text x='12' y='140' font-size='12' fill='var(--muted)' text-anchor='start'>Range</text><text x='147' y='140' font-size='12' fill='var(--ink)' text-anchor='middle'>narrow, specific</text><text x='257' y='140' font-size='12' fill='var(--ink)' text-anchor='middle'>wide, many tissues</text><line x1='10' y1='152' x2='310' y2='152' stroke='var(--line)'/><text x='12' y='166' font-size='12' fill='var(--muted)' text-anchor='start'>Example</text><text x='147' y='166' font-size='12' fill='var(--ink)' text-anchor='middle'>pulling your hand away</text><text x='257' y='166' font-size='12' fill='var(--ink)' text-anchor='middle'>growing taller</text><line x1='10' y1='178' x2='310' y2='178' stroke='var(--line)'/><text x='160' y='194' font-size='12' fill='var(--acc)' text-anchor='middle'>the bridge between the two systems: hypothalamus</text></svg>",
+    "key": "Pulling your hand away from a hot stove is nervous control. Growing taller is hormonal control."
+   },
+   {
+    "h": "Negative feedback",
+    "p": "The hypothalamus releases <b>TRH</b>, the pituitary releases <b>TSH</b>, and TSH stimulates the thyroid. When <b>thyroxine</b> rises in the blood, TRH and TSH fall. This is called <b>negative feedback</b>. The product puts the brakes on its own production.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='end-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker><marker id='end-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><rect x='30' y='14' width='120' height='30' rx='6' fill='var(--panel)' stroke='var(--ink)'/><text x='90' y='34' font-size='13' fill='var(--ink)' text-anchor='middle'>hypothalamus</text><rect x='30' y='74' width='120' height='30' rx='6' fill='var(--panel)' stroke='var(--ink)'/><text x='90' y='94' font-size='13' fill='var(--ink)' text-anchor='middle'>anterior pituitary</text><rect x='30' y='134' width='120' height='30' rx='6' fill='var(--panel)' stroke='var(--ink)'/><text x='90' y='154' font-size='13' fill='var(--ink)' text-anchor='middle'>thyroid</text><line x1='90' y1='44' x2='90' y2='72' stroke='var(--c3)' stroke-width='2' marker-end='url(#end-6)'/><text x='98' y='63' font-size='12' fill='var(--c3)' text-anchor='start'>TRH</text><line x1='90' y1='104' x2='90' y2='132' stroke='var(--c3)' stroke-width='2' marker-end='url(#end-6)'/><text x='98' y='123' font-size='12' fill='var(--c3)' text-anchor='start'>TSH</text><line x1='150' y1='149' x2='188' y2='149' stroke='var(--c3)' stroke-width='2' marker-end='url(#end-6)'/><rect x='190' y='134' width='90' height='30' rx='6' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)'/><text x='235' y='154' font-size='13' fill='var(--ink)' text-anchor='middle'>thyroxine ↑</text><polyline points='235,134 235,29 154,29' fill='none' stroke='var(--c2)' stroke-width='2' stroke-dasharray='5 3' marker-end='url(#end-7)'/><line x1='235' y1='89' x2='154' y2='89' stroke='var(--c2)' stroke-width='2' stroke-dasharray='5 3' marker-end='url(#end-7)'/><text x='195' y='22' font-size='12' fill='var(--c2)' text-anchor='middle'>− inhibits</text><text x='195' y='82' font-size='12' fill='var(--c2)' text-anchor='middle'>− inhibits</text><text x='160' y='192' font-size='12' fill='var(--muted)' text-anchor='middle'>when thyroxine rises, TRH and TSH fall</text></svg>",
+    "key": "This system works like a thermostat. Oxytocin during childbirth is an example of positive feedback."
+   },
+   {
+    "h": "The hypothalamus and the posterior pituitary",
+    "p": "The <b>hypothalamus</b> controls the anterior pituitary. <b>ADH</b> and <b>oxytocin</b> are made in the hypothalamus, stored in the <b>posterior pituitary</b> and released into the blood from there. ADH increases water reabsorption in the kidneys. Oxytocin contracts the uterus during childbirth.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='end-8' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker></defs><rect x='70' y='10' width='180' height='32' rx='14' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)' stroke-width='2'/><text x='160' y='31' font-size='13' fill='var(--ink)' text-anchor='middle'>hypothalamus</text><line x1='110' y1='42' x2='110' y2='86' stroke='var(--c1)' stroke-width='2' stroke-dasharray='4 3' marker-end='url(#end-8)'/><text x='102' y='62' font-size='11' fill='var(--c1)' text-anchor='end'>releasing</text><text x='102' y='76' font-size='11' fill='var(--c1)' text-anchor='end'>hormones</text><line x1='158' y1='42' x2='158' y2='92' stroke='var(--c5)' stroke-width='1.5'/><line x1='165' y1='42' x2='165' y2='92' stroke='var(--c5)' stroke-width='1.5'/><line x1='172' y1='42' x2='172' y2='92' stroke='var(--c5)' stroke-width='1.5'/><text x='184' y='62' font-size='11' fill='var(--c5)' text-anchor='start'>ADH, oxytocin</text><text x='184' y='76' font-size='11' fill='var(--c5)' text-anchor='start'>travel down nerve fibers</text><circle cx='110' cy='116' r='26' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='2'/><circle cx='164' cy='116' r='26' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)' stroke-width='2'/><text x='110' y='120' font-size='11' fill='var(--ink)' text-anchor='middle'>anterior lobe</text><text x='164' y='120' font-size='11' fill='var(--ink)' text-anchor='middle'>posterior lobe</text><text x='160' y='166' font-size='12' fill='var(--ink)' text-anchor='middle'>ADH → more water reabsorbed in the kidney</text><text x='160' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>oxytocin → uterus contracts, milk is let down</text></svg>",
+    "key": "The posterior pituitary does not make hormones. It stores and releases the hormones made by the hypothalamus. Oxytocin also lets milk flow during breastfeeding.",
+    "once": {
+     "soru": "You lost a lot of water and you are thirsty. How do your kidneys adjust your urine?",
+     "secenekler": [
+      {
+       "yazi": "Less, darker urine",
+       "neden": "ADH rises and the kidney reabsorbs water. So urine becomes less and darker.",
+       "dogru": true
+      },
+      {
+       "yazi": "More, diluted urine",
+       "neden": "This happens when the body has too much water."
+      },
+      {
+       "yazi": "No change",
+       "neden": "The kidney constantly adjusts urine to the body's water balance."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The anterior pituitary: manager of the glands",
+    "p": "The <b>anterior pituitary</b> makes its own hormones. <b>GH</b> drives growth. <b>TSH</b> stimulates the thyroid, <b>ACTH</b> the adrenal cortex, and <b>FSH</b> and <b>LH</b> the sex glands. <b>Prolactin</b> drives milk production.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='end-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--muted)'/></marker></defs><rect x='8' y='80' width='76' height='40' rx='8' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='2'/><text x='46' y='98' font-size='12' fill='var(--ink)' text-anchor='middle'>anterior</text><text x='46' y='112' font-size='12' fill='var(--ink)' text-anchor='middle'>pituitary</text><line x1='84' y1='100' x2='98' y2='26' stroke='var(--line)' stroke-width='1.5'/><text x='102' y='30' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='bold'>GH</text><line x1='162' y1='26' x2='186' y2='26' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#end-9)'/><text x='192' y='30' font-size='12' fill='var(--ink)' text-anchor='start'>bone, muscle: growth</text><line x1='84' y1='100' x2='98' y2='62' stroke='var(--line)' stroke-width='1.5'/><text x='102' y='66' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='bold'>TSH</text><line x1='162' y1='62' x2='186' y2='62' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#end-9)'/><text x='192' y='66' font-size='12' fill='var(--ink)' text-anchor='start'>thyroid</text><line x1='84' y1='100' x2='98' y2='98' stroke='var(--line)' stroke-width='1.5'/><text x='102' y='102' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='bold'>ACTH</text><line x1='162' y1='98' x2='186' y2='98' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#end-9)'/><text x='192' y='102' font-size='12' fill='var(--ink)' text-anchor='start'>adrenal cortex</text><line x1='84' y1='100' x2='98' y2='134' stroke='var(--line)' stroke-width='1.5'/><text x='102' y='138' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='bold'>FSH, LH</text><line x1='162' y1='134' x2='186' y2='134' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#end-9)'/><text x='192' y='138' font-size='12' fill='var(--ink)' text-anchor='start'>testis, ovary</text><line x1='84' y1='100' x2='98' y2='170' stroke='var(--line)' stroke-width='1.5'/><text x='102' y='174' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='bold'>prolactin</text><line x1='162' y1='170' x2='186' y2='170' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#end-9)'/><text x='192' y='174' font-size='12' fill='var(--ink)' text-anchor='start'>breast: milk production</text></svg>",
+    "key": "Prolactin makes milk, and oxytocin lets it flow. ACTH stands for adrenocorticotropic hormone, FSH for follicle-stimulating hormone and LH for luteinizing hormone.",
+    "once": {
+     "soru": "The anterior pituitary also controls other glands. If it is damaged, what happens to the thyroid?",
+     "secenekler": [
+      {
+       "yazi": "Underactive",
+       "neden": "The TSH that stimulates the thyroid stops coming, and thyroxine falls.",
+       "dogru": true
+      },
+      {
+       "yazi": "Overactive",
+       "neden": "When its signal stops, a gland does not speed up. It slows down."
+      },
+      {
+       "yazi": "Unaffected",
+       "neden": "The thyroid works on the TSH released by the anterior pituitary."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The thyroid gland",
+    "p": "The thyroid releases the hormone <b>thyroxine</b>, which contains <b>iodine</b>, and thyroxine sets the metabolic rate. If there is not enough iodine, the gland grows. This is called a <b>goiter</b>. Using iodized salt prevents goiter.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='end-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><rect x='72' y='26' width='16' height='140' rx='4' fill='var(--line)' stroke='var(--muted)'/><line x1='72' y1='36' x2='88' y2='36' stroke='var(--muted)'/><line x1='72' y1='50' x2='88' y2='50' stroke='var(--muted)'/><line x1='72' y1='64' x2='88' y2='64' stroke='var(--muted)'/><line x1='72' y1='78' x2='88' y2='78' stroke='var(--muted)'/><line x1='72' y1='92' x2='88' y2='92' stroke='var(--muted)'/><line x1='72' y1='106' x2='88' y2='106' stroke='var(--muted)'/><line x1='72' y1='120' x2='88' y2='120' stroke='var(--muted)'/><line x1='72' y1='134' x2='88' y2='134' stroke='var(--muted)'/><line x1='72' y1='148' x2='88' y2='148' stroke='var(--muted)'/><line x1='72' y1='162' x2='88' y2='162' stroke='var(--muted)'/><ellipse cx='58' cy='96' rx='17' ry='32' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='2'/><ellipse cx='102' cy='96' rx='17' ry='32' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='2'/><rect x='70' y='100' width='20' height='14' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)'/><text x='80' y='186' font-size='13' fill='var(--ink)' text-anchor='middle'>thyroid</text><rect x='150' y='12' width='160' height='26' rx='6' fill='var(--panel)' stroke='var(--ink)'/><text x='230' y='30' font-size='12' fill='var(--ink)' text-anchor='middle'>iodine deficiency</text><line x1='230' y1='38' x2='230' y2='48' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#end-10)'/><rect x='150' y='50' width='160' height='26' rx='6' fill='var(--panel)' stroke='var(--ink)'/><text x='230' y='68' font-size='12' fill='var(--ink)' text-anchor='middle'>thyroxine falls</text><line x1='230' y1='76' x2='230' y2='86' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#end-10)'/><rect x='150' y='88' width='160' height='26' rx='6' fill='var(--panel)' stroke='var(--ink)'/><text x='230' y='106' font-size='12' fill='var(--ink)' text-anchor='middle'>TSH rises (no brake)</text><line x1='230' y1='114' x2='230' y2='124' stroke='var(--ink)' stroke-width='1.5' marker-end='url(#end-10)'/><rect x='150' y='126' width='160' height='26' rx='6' fill='var(--panel)' stroke='var(--c2)'/><text x='230' y='144' font-size='12' fill='var(--c2)' text-anchor='middle'>thyroid grows: goiter</text><text x='230' y='186' font-size='12' fill='var(--c3)' text-anchor='middle'>iodized salt prevents it</text></svg>",
+    "key": "Too much thyroxine (hyperthyroidism) causes weight loss and a racing heart. Too little thyroxine (hypothyroidism) causes tiredness and weight gain. Thyroxine is essential for growth and brain development in childhood."
+   },
+   {
+    "h": "Calcium balance and the parathyroid",
+    "p": "The <b>parathyroid</b> glands release <b>parathyroid hormone</b>. When blood Ca<sup>2+</sup> falls, parathyroid hormone releases calcium from bone. When Ca<sup>2+</sup> rises, the thyroid releases <b>calcitonin</b>, which sends calcium into bone.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='end-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='end-12' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><text x='82' y='16' font-size='12' fill='var(--c1)' text-anchor='middle'>thyroid</text><text x='238' y='16' font-size='12' fill='var(--c2)' text-anchor='middle'>parathyroid</text><rect x='10' y='24' width='144' height='26' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)'/><text x='82' y='42' font-size='12' fill='var(--ink)' text-anchor='middle'>blood Ca²⁺ high</text><line x1='82' y1='50' x2='82' y2='66' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#end-11)'/><rect x='10' y='68' width='144' height='26' rx='6' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)'/><text x='82' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>calcitonin ↑</text><line x1='82' y1='94' x2='82' y2='110' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#end-11)'/><rect x='10' y='112' width='144' height='26' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)'/><text x='82' y='130' font-size='12' fill='var(--ink)' text-anchor='middle'>Ca goes into bone</text><line x1='82' y1='138' x2='82' y2='154' stroke='var(--c1)' stroke-width='1.5' marker-end='url(#end-11)'/><rect x='10' y='156' width='144' height='26' rx='6' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)'/><text x='82' y='174' font-size='12' fill='var(--ink)' text-anchor='middle'>blood Ca²⁺ falls</text><rect x='166' y='24' width='144' height='26' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)'/><text x='238' y='42' font-size='12' fill='var(--ink)' text-anchor='middle'>blood Ca²⁺ low</text><line x1='238' y1='50' x2='238' y2='66' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#end-12)'/><rect x='166' y='68' width='144' height='26' rx='6' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)'/><text x='238' y='86' font-size='12' fill='var(--ink)' text-anchor='middle'>parathyroid hormone ↑</text><line x1='238' y1='94' x2='238' y2='110' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#end-12)'/><rect x='166' y='112' width='144' height='26' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)'/><text x='238' y='130' font-size='12' fill='var(--ink)' text-anchor='middle'>bone releases Ca</text><line x1='238' y1='138' x2='238' y2='154' stroke='var(--c2)' stroke-width='1.5' marker-end='url(#end-12)'/><rect x='166' y='156' width='144' height='26' rx='6' fill='var(--c2)' fill-opacity='0.08' stroke='var(--c2)'/><text x='238' y='174' font-size='12' fill='var(--ink)' text-anchor='middle'>blood Ca²⁺ rises</text><text x='160' y='196' font-size='12' fill='var(--muted)' text-anchor='middle'>opposite effects: antagonistic hormones</text></svg>",
+    "key": "Parathyroid hormone raises blood calcium, and calcitonin lowers it. These two hormones have opposite (antagonistic) effects. Parathyroid hormone also increases calcium reabsorption in the kidney and absorption in the intestine.",
+    "once": {
+     "soru": "Blood calcium has dropped. What happens to the calcium in the bones?",
+     "secenekler": [
+      {
+       "yazi": "It dissolves into the blood",
+       "neden": "Parathyroid hormone releases calcium from bone, and blood calcium rises.",
+       "dogru": true
+      },
+      {
+       "yazi": "It builds up in bone",
+       "neden": "Calcium is sent into bone by calcitonin when blood levels are high."
+      },
+      {
+       "yazi": "No change",
+       "neden": "Bone is the body's calcium store, and this store is used when calcium levels fall."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The adrenal glands",
+    "p": "The <b>cortex</b> of the adrenal gland releases cortisol and aldosterone. Cortisol raises blood sugar under stress, and aldosterone makes the body hold on to Na<sup>+</sup> and water. The <b>medulla</b> of the gland releases <b>adrenaline</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><ellipse cx='72' cy='90' rx='60' ry='45' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='2'/><ellipse cx='72' cy='90' rx='28' ry='20' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='2'/><text x='72' y='162' font-size='11' fill='var(--muted)' text-anchor='middle'>cross section of the adrenal gland</text><line x1='118' y1='64' x2='146' y2='30' stroke='var(--c4)' stroke-width='1.5'/><line x1='92' y1='96' x2='146' y2='118' stroke='var(--c2)' stroke-width='1.5'/><text x='150' y='30' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='bold'>cortex</text><text x='150' y='50' font-size='11' fill='var(--ink)' text-anchor='start'>cortisol ← ACTH: sugar ↑</text><text x='150' y='68' font-size='11' fill='var(--ink)' text-anchor='start'>aldosterone: holds Na⁺ and water</text><text x='150' y='118' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='bold'>medulla ← nerve</text><text x='150' y='138' font-size='11' fill='var(--ink)' text-anchor='start'>adrenaline: fight or flight</text><text x='150' y='156' font-size='11' fill='var(--ink)' text-anchor='start'>heart speeds up, sugar ↑</text></svg>",
+    "key": "The adrenal medulla is stimulated by sympathetic nerves. Adrenaline is the response to sudden danger, and cortisol is the response to long-lasting stress.",
+    "once": {
+     "soru": "You hear a noise in the dark at night, you jump and your heart races. Which hormone causes this?",
+     "secenekler": [
+      {
+       "yazi": "Adrenaline",
+       "neden": "In sudden danger, the adrenal medulla releases adrenaline and the heart speeds up.",
+       "dogru": true
+      },
+      {
+       "yazi": "Insulin",
+       "neden": "Insulin lowers blood sugar. It does not speed up the heart."
+      },
+      {
+       "yazi": "Melatonin",
+       "neden": "Melatonin sets the sleep cycle."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The pancreas and blood sugar",
+    "p": "The endocrine part of the pancreas is called the <b>islets of Langerhans</b>. After a meal, β cells release <b>insulin</b> and blood sugar falls. When you are hungry, α cells release <b>glucagon</b> and blood sugar rises.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='end-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c1)'/></marker><marker id='end-14' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><line x1='28' y1='14' x2='28' y2='176' stroke='var(--ink)'/><line x1='28' y1='176' x2='312' y2='176' stroke='var(--ink)'/><text x='34' y='16' font-size='11' fill='var(--muted)' text-anchor='start'>blood sugar</text><text x='310' y='192' font-size='11' fill='var(--muted)' text-anchor='end'>time</text><line x1='28' y1='100' x2='312' y2='100' stroke='var(--muted)' stroke-dasharray='5 4'/><path d='M28,100 C60,100 70,44 100,44 C130,44 140,100 170,100 L190,100 C215,100 225,148 250,148 C275,148 285,100 312,100' fill='none' stroke='var(--acc)' stroke-width='3'/><line x1='140' y1='34' x2='140' y2='66' stroke='var(--c1)' stroke-width='2' marker-end='url(#end-13)'/><text x='148' y='46' font-size='12' fill='var(--c1)' text-anchor='start'>insulin (β)</text><text x='100' y='32' font-size='12' fill='var(--ink)' text-anchor='middle'>fed</text><text x='250' y='90' font-size='12' fill='var(--ink)' text-anchor='middle'>fasting</text><line x1='204' y1='158' x2='204' y2='126' stroke='var(--c2)' stroke-width='2' marker-end='url(#end-14)'/><text x='196' y='152' font-size='12' fill='var(--c2)' text-anchor='end'>glucagon (α)</text></svg>",
+    "key": "Insulin is the only hormone that lowers blood sugar. Glucagon, adrenaline and cortisol raise it. The liver and muscles store glucose as glycogen."
+   },
+   {
+    "h": "Diabetes",
+    "p": "If insulin is missing or does not work, blood sugar rises and sugar passes into the urine. This is called diabetes. In <b>type 1</b> diabetes, the β cells are destroyed. In <b>type 2</b> diabetes, cells do not respond to insulin.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='80' y='8' width='112' height='24' rx='5' fill='var(--c1)' fill-opacity='0.2'/><rect x='198' y='8' width='112' height='24' rx='5' fill='var(--c5)' fill-opacity='0.2'/><text x='136' y='25' font-size='13' fill='var(--ink)' text-anchor='middle'>Type 1</text><text x='254' y='25' font-size='13' fill='var(--ink)' text-anchor='middle'>Type 2</text><text x='10' y='54' font-size='12' fill='var(--muted)' text-anchor='start'>Problem</text><text x='136' y='54' font-size='11' fill='var(--ink)' text-anchor='middle'>no insulin made</text><text x='254' y='54' font-size='11' fill='var(--ink)' text-anchor='middle'>insulin resistance</text><line x1='8' y1='64' x2='312' y2='64' stroke='var(--line)'/><text x='10' y='80' font-size='12' fill='var(--muted)' text-anchor='start'>Cause</text><text x='136' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>β cells destroyed</text><text x='254' y='80' font-size='11' fill='var(--ink)' text-anchor='middle'>cells do not respond</text><line x1='8' y1='90' x2='312' y2='90' stroke='var(--line)'/><text x='10' y='106' font-size='12' fill='var(--muted)' text-anchor='start'>How common</text><text x='136' y='106' font-size='11' fill='var(--ink)' text-anchor='middle'>rare (about 5-10%)</text><text x='254' y='106' font-size='11' fill='var(--ink)' text-anchor='middle'>common (about 90%)</text><line x1='8' y1='116' x2='312' y2='116' stroke='var(--line)'/><text x='10' y='132' font-size='12' fill='var(--muted)' text-anchor='start'>Treatment</text><text x='136' y='132' font-size='11' fill='var(--ink)' text-anchor='middle'>insulin is a must</text><text x='254' y='132' font-size='11' fill='var(--ink)' text-anchor='middle'>lifestyle, medicine</text><line x1='8' y1='142' x2='312' y2='142' stroke='var(--line)'/><rect x='8' y='152' width='304' height='42' rx='6' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)'/><text x='160' y='169' font-size='12' fill='var(--ink)' text-anchor='middle'>in both: high blood sugar, sugar in urine,</text><text x='160' y='186' font-size='12' fill='var(--ink)' text-anchor='middle'>frequent urination and thirst</text></svg>",
+    "key": "In type 1 diabetes, the immune system destroys the β cells. In type 2 diabetes, the problem is not a lack of insulin but insulin resistance. Excess weight raises this risk.",
+    "once": {
+     "soru": "A patient's pancreas cannot make insulin. What happens to their blood sugar?",
+     "secenekler": [
+      {
+       "yazi": "It stays high",
+       "neden": "Without insulin, cells cannot take in glucose, so glucose stays in the blood.",
+       "dogru": true
+      },
+      {
+       "yazi": "It falls",
+       "neden": "The hormone that lowers blood sugar is insulin. Without insulin, sugar does not fall."
+      },
+      {
+       "yazi": "It stays normal",
+       "neden": "There is no other hormone that lowers blood sugar."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Sex glands, the pineal gland and the thymus",
+    "p": "The <b>testes</b> release testosterone, and the <b>ovaries</b> release estrogen and progesterone. The <b>pineal gland</b> releases <b>melatonin</b> in the dark and sets the sleep cycle. T lymphocytes mature in the <b>thymus</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='10' y='22' font-size='12' fill='var(--muted)' text-anchor='start'>gland</text><text x='82' y='22' font-size='12' fill='var(--muted)' text-anchor='start'>hormone</text><text x='176' y='22' font-size='12' fill='var(--muted)' text-anchor='start'>job</text><line x1='8' y1='30' x2='312' y2='30' stroke='var(--ink)'/><circle cx='14' cy='50' r='4' fill='var(--c1)'/><text x='24' y='54' font-size='12' fill='var(--ink)' text-anchor='start'>testis</text><text x='82' y='54' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='bold'>testosterone</text><text x='176' y='54' font-size='11' fill='var(--ink)' text-anchor='start'>sperm, male traits</text><line x1='8' y1='65' x2='312' y2='65' stroke='var(--line)'/><circle cx='14' cy='80' r='4' fill='var(--c2)'/><text x='24' y='84' font-size='12' fill='var(--ink)' text-anchor='start'>ovary</text><text x='82' y='84' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='bold'>estrogen</text><text x='176' y='84' font-size='11' fill='var(--ink)' text-anchor='start'>female traits</text><line x1='8' y1='95' x2='312' y2='95' stroke='var(--line)'/><circle cx='14' cy='110' r='4' fill='var(--c2)'/><text x='24' y='114' font-size='12' fill='var(--ink)' text-anchor='start'>ovary</text><text x='82' y='114' font-size='12' fill='var(--c2)' text-anchor='start' font-weight='bold'>progesterone</text><text x='176' y='114' font-size='11' fill='var(--ink)' text-anchor='start'>maintains pregnancy</text><line x1='8' y1='125' x2='312' y2='125' stroke='var(--line)'/><circle cx='14' cy='140' r='4' fill='var(--c5)'/><text x='24' y='144' font-size='12' fill='var(--ink)' text-anchor='start'>pineal</text><text x='82' y='144' font-size='12' fill='var(--c5)' text-anchor='start' font-weight='bold'>melatonin</text><text x='176' y='144' font-size='11' fill='var(--ink)' text-anchor='start'>sleep-wake cycle</text><line x1='8' y1='155' x2='312' y2='155' stroke='var(--line)'/><circle cx='14' cy='170' r='4' fill='var(--c3)'/><text x='24' y='174' font-size='12' fill='var(--ink)' text-anchor='start'>thymus</text><text x='82' y='174' font-size='12' fill='var(--c3)' text-anchor='start' font-weight='bold'>thymosin</text><text x='176' y='174' font-size='11' fill='var(--ink)' text-anchor='start'>T lymphocytes mature</text><line x1='8' y1='185' x2='312' y2='185' stroke='var(--line)'/></svg>",
+    "key": "Sex hormones control the sex traits that appear at puberty. The thymus shrinks after puberty. The menstrual cycle is covered in the Reproductive system topic.",
+    "once": {
+     "soru": "You look at a bright screen for a long time before bed. Why is your sleep delayed?",
+     "secenekler": [
+      {
+       "yazi": "Melatonin drops",
+       "neden": "Melatonin rises in the dark, and screen light suppresses it.",
+       "dogru": true
+      },
+      {
+       "yazi": "Insulin rises",
+       "neden": "Insulin regulates blood sugar, not sleep."
+      },
+      {
+       "yazi": "Adrenaline drops",
+       "neden": "A drop in adrenaline makes falling asleep easier, not harder."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Hormone disorders",
+    "p": "In childhood, too much GH causes <b>gigantism</b> and too little causes <b>dwarfism</b>. In adults, too much GH causes <b>acromegaly</b>. A lack of thyroxine causes <b>congenital hypothyroidism</b>, and a lack of ADH causes <b>diabetes insipidus</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><line x1='8' y1='150' x2='312' y2='150' stroke='var(--muted)'/><circle cx='42' cy='65' r='11' fill='var(--muted)' fill-opacity='0.3' stroke='var(--muted)' stroke-width='2'/><g stroke='var(--muted)' stroke-width='3' stroke-linecap='round' fill='none'><line x1='42' y1='75' x2='42' y2='107'/><line x1='42' y1='107' x2='30' y2='150'/><line x1='42' y1='107' x2='54' y2='150'/><line x1='42' y1='81' x2='27' y2='107'/><line x1='42' y1='81' x2='57' y2='107'/></g><circle cx='118' cy='36' r='14' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='2'/><g stroke='var(--c2)' stroke-width='3' stroke-linecap='round' fill='none'><line x1='118' y1='50' x2='118' y2='92'/><line x1='118' y1='92' x2='103' y2='150'/><line x1='118' y1='92' x2='133' y2='150'/><line x1='118' y1='58' x2='98' y2='92'/><line x1='118' y1='58' x2='138' y2='92'/></g><circle cx='194' cy='97' r='7' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='2'/><g stroke='var(--c1)' stroke-width='3' stroke-linecap='round' fill='none'><line x1='194' y1='103' x2='194' y2='123'/><line x1='194' y1='123' x2='187' y2='150'/><line x1='194' y1='123' x2='201' y2='150'/><line x1='194' y1='107' x2='184' y2='123'/><line x1='194' y1='107' x2='204' y2='123'/></g><circle cx='270' cy='65' r='11' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='2'/><g stroke='var(--c5)' stroke-width='3' stroke-linecap='round' fill='none'><line x1='270' y1='75' x2='270' y2='107'/><line x1='270' y1='107' x2='258' y2='150'/><line x1='270' y1='107' x2='282' y2='150'/><line x1='270' y1='81' x2='255' y2='107'/><line x1='270' y1='81' x2='285' y2='107'/></g><circle cx='255' cy='107' r='5' fill='var(--c5)'/><circle cx='285' cy='107' r='5' fill='var(--c5)'/><ellipse cx='258' cy='149' rx='8' ry='3' fill='var(--c5)'/><ellipse cx='282' cy='149' rx='8' ry='3' fill='var(--c5)'/><rect x='262' y='69' width='16' height='6' rx='3' fill='var(--c5)'/><text x='42' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>normal</text><text x='118' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>gigantism</text><text x='118' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>child, GH ↑</text><text x='194' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>dwarfism</text><text x='194' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>child, GH ↓</text><text x='270' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>acromegaly</text><text x='270' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>adult, GH ↑</text></svg>",
+    "key": "Congenital hypothyroidism causes delayed growth and intellectual disability in childhood. In diabetes insipidus, large amounts of diluted urine are produced.",
+    "etk": {
+     "tur": "eslestir",
+     "soru": "Match each disorder with its cause.",
+     "ciftler": [
+      [
+       "Gigantism",
+       "Too much GH in childhood"
+      ],
+      [
+       "Dwarfism",
+       "Too little GH in childhood"
+      ],
+      [
+       "Acromegaly",
+       "Too much GH in an adult"
+      ],
+      [
+       "Congenital hypothyroidism",
+       "Too little thyroxine in childhood"
+      ],
+      [
+       "Diabetes insipidus",
+       "Lack of ADH"
+      ],
+      [
+       "Type 1 diabetes",
+       "No insulin made"
+      ]
+     ]
+    },
+    "once": {
+     "soru": "If an adult has too much GH, do they grow taller?",
+     "secenekler": [
+      {
+       "yazi": "No",
+       "neden": "In adults the growth plates have closed. So the hands, feet and jaw get thicker instead.",
+       "dogru": true
+      },
+      {
+       "yazi": "Yes",
+       "neden": "Height increases only while the growth plates are open, that is, in childhood."
+      },
+      {
+       "yazi": "A little",
+       "neden": "After the growth plates close, height does not increase at all."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Stomach, intestine and fat hormones",
+    "p": "The stomach increases acid secretion with the hormone <b>gastrin</b>. The small intestine triggers bicarbonate release with the hormone <b>secretin</b>. An empty stomach releases <b>ghrelin</b>, which makes you hungry. Fat tissue releases <b>leptin</b>, which tells the brain \"the stores are full\".",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='8' width='150' height='84' rx='6' fill='var(--c4)' fill-opacity='0.14' stroke='var(--c4)' stroke-width='1.5'/><text x='81' y='30' font-size='11' fill='var(--muted)' text-anchor='middle'>stomach</text><text x='81' y='54' font-size='15' fill='var(--c4)' text-anchor='middle' font-weight='700'>gastrin</text><text x='81' y='78' font-size='12' fill='var(--ink)' text-anchor='middle'>acid secretion ↑</text><rect x='164' y='8' width='150' height='84' rx='6' fill='var(--c1)' fill-opacity='0.14' stroke='var(--c1)' stroke-width='1.5'/><text x='239' y='30' font-size='11' fill='var(--muted)' text-anchor='middle'>small intestine</text><text x='239' y='54' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>secretin</text><text x='239' y='78' font-size='12' fill='var(--ink)' text-anchor='middle'>bicarbonate ↑</text><rect x='6' y='100' width='150' height='84' rx='6' fill='var(--c2)' fill-opacity='0.14' stroke='var(--c2)' stroke-width='1.5'/><text x='81' y='122' font-size='11' fill='var(--muted)' text-anchor='middle'>empty stomach</text><text x='81' y='146' font-size='15' fill='var(--c2)' text-anchor='middle' font-weight='700'>ghrelin</text><text x='81' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>appetite ↑</text><rect x='164' y='100' width='150' height='84' rx='6' fill='var(--c3)' fill-opacity='0.14' stroke='var(--c3)' stroke-width='1.5'/><text x='239' y='122' font-size='11' fill='var(--muted)' text-anchor='middle'>fat tissue</text><text x='239' y='146' font-size='15' fill='var(--c3)' text-anchor='middle' font-weight='700'>leptin</text><text x='239' y='170' font-size='12' fill='var(--ink)' text-anchor='middle'>appetite ↓</text></svg>",
+    "key": "When the response to leptin weakens, it is harder to feel full. This contributes to obesity and raises the risk of type 2 diabetes and high blood pressure.",
+    "once": {
+     "soru": "How does fat tissue send the \"stores are full\" message to the brain?",
+     "secenekler": [
+      {
+       "yazi": "By a hormone",
+       "neden": "Fat tissue releases leptin, and leptin reaches the brain through the blood.",
+       "dogru": true
+      },
+      {
+       "yazi": "By a nerve",
+       "neden": "Fat tissue sends this message through the blood, not through nerves."
+      },
+      {
+       "yazi": "It cannot",
+       "neden": "Fat tissue can also release hormones."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• Endocrine glands have no ducts. A hormone travels in the blood and affects its target cell.<br>• Hormonal effects start slowly, last long and affect a wide area.<br>• The hypothalamus and pituitary control the other glands. Negative feedback keeps the balance.<br>• Insulin and glucagon have opposite effects, and so do calcitonin and parathyroid hormone.",
+    "svg": "<svg viewBox='0 0 320 200'><circle cx='160' cy='34' r='24' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><rect x='152' y='58' width='16' height='10' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><rect x='124' y='68' width='72' height='108' rx='18' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><line x1='157' y1='46' x2='116' y2='42' stroke='var(--line)' stroke-width='1.5'/><circle cx='157' cy='46' r='4' fill='var(--c5)'/><text x='112' y='46' font-size='12' fill='var(--ink)' text-anchor='end'>pituitary</text><line x1='164' y1='36' x2='204' y2='38' stroke='var(--line)' stroke-width='1.5'/><circle cx='164' cy='36' r='4' fill='var(--c5)'/><text x='208' y='42' font-size='12' fill='var(--ink)' text-anchor='start'>hypothalamus</text><line x1='168' y1='24' x2='204' y2='16' stroke='var(--line)' stroke-width='1.5'/><circle cx='168' cy='24' r='4' fill='var(--c5)'/><text x='208' y='20' font-size='12' fill='var(--ink)' text-anchor='start'>pineal</text><line x1='160' y1='64' x2='116' y2='60' stroke='var(--line)' stroke-width='1.5'/><circle cx='160' cy='64' r='4' fill='var(--c2)'/><text x='112' y='64' font-size='12' fill='var(--ink)' text-anchor='end'>thyroid, parathyroid</text><line x1='160' y1='84' x2='204' y2='82' stroke='var(--line)' stroke-width='1.5'/><circle cx='160' cy='84' r='4' fill='var(--c3)'/><text x='208' y='86' font-size='12' fill='var(--ink)' text-anchor='start'>thymus</text><line x1='176' y1='116' x2='204' y2='114' stroke='var(--line)' stroke-width='1.5'/><circle cx='176' cy='116' r='4' fill='var(--c4)'/><text x='208' y='118' font-size='12' fill='var(--ink)' text-anchor='start'>adrenal</text><line x1='152' y1='128' x2='116' y2='124' stroke='var(--line)' stroke-width='1.5'/><circle cx='152' cy='128' r='4' fill='var(--c1)'/><text x='112' y='128' font-size='12' fill='var(--ink)' text-anchor='end'>pancreas</text><line x1='148' y1='158' x2='116' y2='156' stroke='var(--line)' stroke-width='1.5'/><circle cx='148' cy='158' r='4' fill='var(--ink)'/><text x='112' y='160' font-size='12' fill='var(--ink)' text-anchor='end'>sex glands</text><circle cx='144' cy='116' r='4' fill='var(--c4)'/><circle cx='172' cy='158' r='4' fill='var(--ink)'/><text x='160' y='194' font-size='12' fill='var(--muted)' text-anchor='middle'>main endocrine glands</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "eslestir",
+    "q": "Match each hormone with where it is released.",
+    "ciftler": [
+     [
+      "Insulin",
+      "Pancreas (β cells)"
+     ],
+     [
+      "Parathyroid hormone",
+      "Parathyroid"
+     ],
+     [
+      "Cortisol",
+      "Adrenal cortex"
+     ],
+     [
+      "Adrenaline",
+      "Adrenal medulla"
+     ],
+     [
+      "Melatonin",
+      "Pineal gland"
+     ]
+    ],
+    "e": "Insulin is released by the β cells of the islets of Langerhans, and parathyroid hormone by the parathyroid glands. Cortisol comes from the cortex of the adrenal gland, and adrenaline from its medulla. Melatonin is the hormone of the pineal gland."
+   },
+   {
+    "tur": "ayir",
+    "q": "Group each hormone by its chemical structure.",
+    "gruplar": [
+     "Protein-peptide",
+     "Amine",
+     "Steroid"
+    ],
+    "ogeler": [
+     [
+      "Insulin",
+      0
+     ],
+     [
+      "GH",
+      0
+     ],
+     [
+      "ADH",
+      0
+     ],
+     [
+      "Adrenaline",
+      1
+     ],
+     [
+      "Thyroxine",
+      1
+     ],
+     [
+      "Melatonin",
+      1
+     ],
+     [
+      "Cortisol",
+      2
+     ],
+     [
+      "Aldosterone",
+      2
+     ]
+    ],
+    "e": "Insulin, GH and ADH are proteins or peptides. Adrenaline, thyroxine and melatonin are amines derived from amino acids. Cortisol and aldosterone are steroids derived from cholesterol."
+   },
+   {
+    "tur": "sirala",
+    "q": "Put in order the chain that sets the cortisol level during long-lasting stress.",
+    "ogeler": [
+     "The hypothalamus releases a releasing hormone",
+     "The anterior pituitary releases ACTH",
+     "The adrenal cortex releases cortisol",
+     "Cortisol puts the brakes on the hypothalamus and pituitary"
+    ],
+    "e": "This chain works on the same logic as the TRH-TSH-thyroxine chain. The hypothalamus stimulates the anterior pituitary, and ACTH stimulates the adrenal cortex. Rising cortisol puts the brakes on the chain. This is called negative feedback."
+   },
+   {
+    "q": "A healthy student's blood sugar rises above normal after lunch and returns to normal within two hours. What mainly brings it down?",
+    "o": [
+     "Glucagon from the pancreas",
+     "Insulin from the pancreas",
+     "Adrenaline from the adrenal gland",
+     "Cortisol from the adrenal gland"
+    ],
+    "a": 1,
+    "e": "When blood sugar rises, β cells release insulin. Cells take in glucose and the liver stores glycogen. Glucagon, adrenaline and cortisol raise blood sugar.",
+    "y": [
+     "Glucagon raises blood sugar. The hormone that lowers sugar after a meal is insulin.",
+     "",
+     "Adrenaline raises blood sugar. The hormone that lowers it by moving sugar into cells is insulin.",
+     "Cortisol raises blood sugar. The drop after a meal comes from insulin released by the pancreas."
+    ]
+   }
+  ]
+ },
  "ekosistem": {
   "title": "Ecosystem ecology and current environmental problems",
   "summary": "How does energy flow, how does matter cycle, and what disrupts an ecosystem?",

@@ -18854,6 +18854,217 @@
   ],
   "soruOnce": true
  },
+ "endokrin": {
+  "id": "endokrin",
+  "ders": "biyoloji",
+  "konu": "endokrin",
+  "baslik": "Endocrine system",
+  "ozet": "See which cells a hormone affects, race nervous control against hormonal control, balance blood sugar with insulin and watch the thyroid's brake.",
+  "adimlar": [
+   {
+    "baslik": "Target cell",
+    "metin": "A hormone spreads through the whole body in the blood. Some cells have <b>receptors</b> on their surface that recognize it. Press play and see which cells respond.",
+    "sahne": {
+     "tur": "biy9-hedef",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In which cells does the hormone have an effect?",
+     "secenekler": [
+      {
+       "yazi": "All cells",
+       "neden": "The hormone reaches every cell, but a cell without the receptor does not recognize it."
+      },
+      {
+       "yazi": "Cells with the receptor",
+       "dogru": true,
+       "neden": "The hormone binds to its receptor like a key in a lock. A cell without the receptor is not affected."
+      },
+      {
+       "yazi": "Cells near the gland",
+       "neden": "Because the hormone travels in the blood, it can affect faraway cells too."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Speed and duration",
+    "metin": "The nervous system and the endocrine system work together, but at different speeds. Race the effects of the two systems.",
+    "sahne": {
+     "tur": "biy9-hiz",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which effect lasts longer?",
+     "secenekler": [
+      {
+       "yazi": "Hormonal effect",
+       "dogru": true,
+       "neden": "A hormone arrives slowly in the blood, but it stays there for a while. So its effect starts late and lasts long."
+      },
+      {
+       "yazi": "Nervous effect",
+       "neden": "A nervous effect starts very fast but does not last long."
+      },
+      {
+       "yazi": "Both last the same",
+       "neden": "Their durations are clearly different. The nervous effect is short, and the hormonal effect is long."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "After a meal",
+    "metin": "After a meal, blood sugar rises and the <b>β cells</b> of the pancreas release <b>insulin</b>. Play it first without insulin, then turn insulin on.",
+    "sahne": {
+     "tur": "biy9-insulin",
+     "sure": 5
+    },
+    "deger": {
+     "ins": 0
+    },
+    "kontroller": [
+     {
+      "ad": "ins",
+      "etiket": "Insulin",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "ins": 1
+     },
+     "ipucu": "Turn insulin on and play again.",
+     "tamam": "Insulin let the cells take in glucose, and the liver stored the extra glucose as glycogen. So blood sugar returned to normal."
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Two opposite hormones",
+    "metin": "Blood sugar is normally kept at about <b>70-110 mg/dL</b>. Change the blood sugar and watch how the pancreas responds.",
+    "sahne": {
+     "tur": "biy9-pankreas"
+    },
+    "deger": {
+     "mg": 90
+    },
+    "kontroller": [
+     {
+      "ad": "mg",
+      "etiket": "Blood sugar",
+      "min": 40,
+      "max": 200,
+      "adim": 10,
+      "birim": "mg/dL",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "After a long fast, blood sugar fell to 60 mg/dL. Which hormone is released?",
+     "secenekler": [
+      {
+       "yazi": "Insulin",
+       "neden": "Insulin lowers blood sugar. It is not released when sugar is already low."
+      },
+      {
+       "yazi": "Glucagon",
+       "dogru": true,
+       "neden": "The α cells of the pancreas release glucagon. The liver then breaks down glycogen and releases glucose into the blood."
+      },
+      {
+       "yazi": "ADH",
+       "neden": "ADH is released from the pituitary and increases water reabsorption in the kidney. It does not regulate blood sugar."
+      }
+     ]
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "A chain that brakes itself",
+    "metin": "The hypothalamus releases <b>TRH</b>, the pituitary releases <b>TSH</b>, and TSH tells the thyroid to make <b>thyroxine</b>. Raise the thyroxine and watch the hormones above it.",
+    "sahne": {
+     "tur": "biy9-tiroit"
+    },
+    "deger": {
+     "tx": 2
+    },
+    "kontroller": [
+     {
+      "ad": "tx",
+      "etiket": "Thyroxine",
+      "min": 1,
+      "max": 5,
+      "adim": 1,
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "tx": 5
+     },
+     "tamam": "As thyroxine rose, TRH and TSH fell. This is called negative feedback. The product puts the brakes on the chain that makes it, so its level stays steady."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Iodine deficiency",
+    "metin": "The thyroid uses <b>iodine</b> to make thyroxine. Turn on iodine deficiency and see what happens to the chain.",
+    "sahne": {
+     "tur": "biy9-tiroit"
+    },
+    "deger": {
+     "tx": 3,
+     "eksik": 0
+    },
+    "kontroller": [
+     {
+      "ad": "eksik",
+      "etiket": "Iodine deficiency",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why does the thyroid grow (goiter) when iodine is lacking?",
+     "secenekler": [
+      {
+       "yazi": "Iodine builds up",
+       "neden": "The problem is a lack of iodine, not too much."
+      },
+      {
+       "yazi": "Thyroxine rises",
+       "neden": "Without iodine, thyroxine cannot be made, so thyroxine falls."
+      },
+      {
+       "yazi": "TSH rises",
+       "dogru": true,
+       "neden": "When thyroxine falls, the hypothalamus and pituitary are no longer braked. The rising TSH keeps stimulating the thyroid and the gland grows."
+      }
+     ]
+    },
+    "kart": 8
+   }
+  ],
+  "kapanis": [
+   "A hormone travels everywhere in the blood, but it only affects cells that have its receptor.",
+   "Nervous effects are fast and short, while hormonal effects are slow and long-lasting.",
+   "Insulin lowers blood sugar, and glucagon raises it.",
+   "Thyroxine puts the brakes on TRH and TSH. This is called negative feedback.",
+   "With iodine deficiency this brake is lost, TSH rises and a goiter forms."
+  ],
+  "soruOnce": true
+ },
  "ekosistem": {
   "id": "ekosistem",
   "ders": "biyoloji",
