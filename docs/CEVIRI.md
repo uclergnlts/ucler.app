@@ -138,3 +138,90 @@ Bir terim her yerde aynı çevrilir. Yeni terim çıktıkça buraya eklenir.
 | kütle merkezi (KM) | center of mass (CM) | |
 | itme | impulse | Yüklerde "repulsion" |
 | yüzde | 20% | Türkçe %20 |
+
+## Terim sözlüğü (Kimya)
+
+| Türkçe | İngilizce | Not |
+|---|---|---|
+| element / bileşik / karışım | element / compound / mixture | |
+| homojen / heterojen | homogeneous / heterogeneous | |
+| çözelti / çözücü / çözünen | solution / solvent / solute | |
+| çözünürlük | solubility | |
+| doymuş / doymamış / aşırı doymuş | saturated / unsaturated / supersaturated | |
+| derişim | concentration | molarite = molarity |
+| mol / mol kütlesi | mole (birim: mol) / molar mass | |
+| Avogadro sayısı | Avogadro's number | |
+| atom numarası / kütle numarası | atomic number / mass number | |
+| izotop / izoton / izobar | isotope / isotone / isobar | |
+| katman (elektron) | shell | orbital = orbital |
+| değerlik elektronu | valence electron | |
+| periyot / grup | period / group | 1A, 8A yazımı korunur |
+| soygaz / halojen | noble gas / halogen | |
+| iyonlaşma enerjisi | ionization energy | |
+| elektronegatiflik | electronegativity | |
+| iyonik / kovalent / metalik bağ | ionic / covalent / metallic bond | |
+| polar / apolar | polar / nonpolar | |
+| hidrojen bağı | hydrogen bond | |
+| tepkime | reaction | |
+| denkleştirme | balancing | |
+| sınırlayıcı bileşen | limiting reactant | |
+| verim | yield | |
+| ekzotermik / endotermik | exothermic / endothermic | |
+| entalpi | enthalpy (ΔH) | |
+| aktivasyon enerjisi | activation energy (Ea) | |
+| katalizör | catalyst | |
+| tepkime hızı | reaction rate | |
+| denge sabiti | equilibrium constant (Kc) | |
+| Le Chatelier ilkesi | Le Chatelier's principle | |
+| asit / baz / tuz | acid / base / salt | |
+| nötrleşme | neutralization | |
+| indikatör (turnusol) | indicator (litmus) | |
+| yükseltgenme / indirgenme | oxidation / reduction | redoks = redox |
+| yükseltgenme basamağı | oxidation number | |
+| anot / katot | anode / cathode | |
+| pil / elektroliz | cell (battery) / electrolysis | |
+| hidrokarbon | hydrocarbon | alkan / alken / alkin = alkane / alkene / alkyne |
+| fonksiyonel grup | functional group | |
+| izomer | isomer | |
+| tuz köprüsü | salt bridge | |
+
+## Terim sözlüğü (Biyoloji)
+
+| Türkçe | İngilizce | Not |
+|---|---|---|
+| hücre zarı / hücre duvarı | cell membrane / cell wall | |
+| çekirdek / çekirdekçik | nucleus / nucleolus | |
+| granüllü / granülsüz ER | rough / smooth ER | |
+| koful | vacuole | merkezi koful = central vacuole |
+| osmoz / difüzyon | osmosis / diffusion | |
+| aktif taşıma | active transport | |
+| hipotonik / izotonik / hipertonik | hypotonic / isotonic / hypertonic | |
+| enzim / substrat | enzyme / substrate | |
+| fotosentez / kemosentez | photosynthesis / chemosynthesis | |
+| oksijenli solunum / fermantasyon | aerobic respiration / fermentation | |
+| mitoz / mayoz | mitosis / meiosis | |
+| homolog kromozom | homologous chromosome | tetrat = tetrad |
+| kardeş kromatit | sister chromatid | |
+| baskın / çekinik | dominant / recessive | |
+| genotip / fenotip | genotype / phenotype | |
+| eşeyli / eşeysiz üreme | sexual / asexual reproduction | |
+| eşlenme (DNA) | replication | |
+| kalıp / kodlayan iplik | template / coding strand | |
+| doğal seçilim | natural selection | |
+| gen havuzu / alel frekansı | gene pool / allele frequency | |
+| genetik sürüklenme | genetic drift | |
+| homolog / analog organ | homologous / analogous structure | |
+| üretici / tüketici / ayrıştırıcı | producer / consumer / decomposer | |
+| besin zinciri / ağı | food chain / web | |
+| popülasyon / komünite | population / community | |
+| taşıma kapasitesi | carrying capacity (K) | |
+| atardamar / toplardamar / kılcal | artery / vein / capillary | ana toplardamar = vena cava |
+| karıncık / kulakçık | ventricle / atrium | |
+| alyuvar / akyuvar / kan pulcuğu | red blood cell / white blood cell / platelet | |
+| bağışıklık / antikor / antijen | immunity / antibody / antigen | |
+| yutak / gırtlak / soluk borusu | pharynx / larynx / trachea | |
+| bronş / bronşçuk / alveol | bronchus / bronchiole / alveolus | |
+| böbrek / nefron | kidney / nephron | süzüntü = filtrate |
+| sarı cisim | corpus luteum | |
+| yumurta kanalı | oviduct | |
+| sperm kanalı | vas deferens | |
