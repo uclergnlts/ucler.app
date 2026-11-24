@@ -16407,5 +16407,235 @@
    "Body temperature is constant only in birds and mammals. Feathers are unique to birds, and hair and mammary glands to mammals."
   ],
   "soruOnce": true
+ },
+ "bitkiler-alemi": {
+  "id": "bitkiler-alemi",
+  "ders": "biyoloji",
+  "konu": "bitkiler-alemi",
+  "baslik": "The plant kingdom and plant groups",
+  "ozet": "Try first, then learn the name. Use switches to find a group, move water up and play through alternation of generations.",
+  "adimlar": [
+   {
+    "baslik": "Plant groups",
+    "metin": "Flip the switches and find which group the <b>pine</b> belongs to.",
+    "sahne": {
+     "tur": "biy4-gruplar"
+    },
+    "deger": {
+     "d": 0,
+     "t": 0,
+     "c": 0
+    },
+    "kontroller": [
+     {
+      "ad": "d",
+      "etiket": "Vascular bundles (xylem, phloem)",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "t",
+      "etiket": "Seeds",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "c",
+      "etiket": "Flowers and fruit",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "d": 1,
+      "t": 1,
+      "c": 0
+     },
+     "tamam": "A pine is a <b>gymnosperm</b>. It has vascular bundles and seeds, but no flowers or fruit."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Why are mosses small?",
+    "metin": "Two stems get water from below at the same time. One has no vascular bundles (xylem), and the other has them.",
+    "sahne": {
+     "tur": "biy4-su",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In which one does the water reach the top?",
+     "secenekler": [
+      {
+       "yazi": "Both at the same time",
+       "neden": "Water moving from cell to cell is very slow. A pipe-like path carries water much faster."
+      },
+      {
+       "yazi": "Only the one with bundles",
+       "neden": "Xylem carries water up quickly, like a pipe. In the stem without bundles, water passes slowly from cell to cell.",
+       "dogru": true
+      },
+      {
+       "yazi": "Only the one without bundles",
+       "neden": "In the stem without bundles, water only moves slowly from cell to cell."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Alternation of generations",
+    "metin": "The leaf cells of a fern have 24 chromosomes (2n = 24). The leaf makes spores by meiosis, and meiosis halves the chromosome number. A spore grows by mitosis, which keeps the number the same, and becomes a small heart-shaped plant called the prothallus.",
+    "sahne": {
+     "tur": "biy4-dol",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "How many chromosomes are in the cells of the heart-shaped prothallus?",
+     "secenekler": [
+      {
+       "yazi": "24",
+       "neden": "The prothallus is not the sporophyte. It is the gametophyte, and it grows from a spore made by meiosis."
+      },
+      {
+       "yazi": "12",
+       "neden": "The spore forms by meiosis and is n = 12. The prothallus grows from the spore by mitosis, and mitosis does not change the chromosome number.",
+       "dogru": true
+      },
+      {
+       "yazi": "48",
+       "neden": "In alternation of generations, the chromosome number goes from n to 2n only at fertilization. No 4n cells form."
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Which generation is dominant?",
+    "metin": "One of the two generations is large and long-lived. It is called the <b>dominant generation</b>. Change the group and compare the size of the gametophyte and the sporophyte.",
+    "sahne": {
+     "tur": "biy4-baskin"
+    },
+    "deger": {
+     "g": 1
+    },
+    "kontroller": [
+     {
+      "ad": "g",
+      "etiket": "Group",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "How do the generations change from mosses to seed plants?",
+     "secenekler": [
+      {
+       "yazi": "The gametophyte grows",
+       "neden": "Set the group to 3. In a seed plant, the gametophyte is only as big as a pollen grain or an embryo sac."
+      },
+      {
+       "yazi": "The sporophyte grows",
+       "neden": "The green mat we see in a moss is the gametophyte, while the large plant we see in a fern is the sporophyte. In seed plants, the gametophyte stays microscopic.",
+       "dogru": true
+      },
+      {
+       "yazi": "Nothing changes",
+       "neden": "Look at the bars. In every group, one generation is much larger than the other."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Exposed and enclosed seeds",
+    "metin": "Watch what happens after fertilization in a pine and an apple.",
+    "sahne": {
+     "tur": "biy4-tohum",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "In which one does the seed stay inside a fruit?",
+     "secenekler": [
+      {
+       "yazi": "The apple",
+       "neden": "An apple is an angiosperm. The ovule is protected in the flower's ovary, and the seed stays inside the fruit.",
+       "dogru": true
+      },
+      {
+       "yazi": "The pine",
+       "neden": "In a pine, the seed sits exposed on the scale of the female cone. There is no ovary, so no flower or fruit forms."
+      },
+      {
+       "yazi": "Both",
+       "neden": "A fruit develops from an ovary. A pine has no flower or ovary, so it forms no fruit."
+      }
+     ]
+    },
+    "kart": 9
+   },
+   {
+    "baslik": "Monocots and dicots",
+    "metin": "The rose on the screen is a dicot. Change its features and turn it into a <b>tulip</b> with 6 tepals.",
+    "sahne": {
+     "tur": "biy4-cenek"
+    },
+    "deger": {
+     "p": 5,
+     "pd": 0,
+     "sk": 0
+    },
+    "kontroller": [
+     {
+      "ad": "p",
+      "etiket": "Tepals",
+      "min": 3,
+      "max": 6,
+      "tur": "sayac"
+     },
+     {
+      "ad": "pd",
+      "etiket": "Parallel leaf veins",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "sk",
+      "etiket": "Fibrous root",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "p": 6,
+      "pd": 1,
+      "sk": 1
+     },
+     "tamam": "A tulip is a monocot. Its 6 tepals (a multiple of 3), parallel veins and fibrous root show this together."
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "Plants are eukaryotic, multicellular, have cellulose walls and <b>protect an embryo</b>. Most make their own food by photosynthesis.",
+   "Mosses are nonvascular and seedless, while ferns are vascular but seedless. Gymnosperms and angiosperms are both vascular and have seeds.",
+   "In alternation of generations, the 2n sporophyte makes <b>spores</b> by meiosis. Gametes form by mitosis in the n gametophyte.",
+   "The gametophyte is dominant in mosses, and the sporophyte is dominant in ferns and seed plants.",
+   "In gymnosperms the seed is exposed on a scale, and in angiosperms it is inside a fruit. Monocots have flower parts in multiples of 3, parallel veins and fibrous roots."
+  ],
+  "soruOnce": true
  }
 }
