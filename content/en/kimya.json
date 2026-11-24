@@ -3966,6 +3966,296 @@
    }
   ]
  },
+ "gazlar": {
+  "title": "Gases",
+  "summary": "Learn the relationships between pressure, volume, temperature and moles, the gas laws and real gases.",
+  "cards": [
+   {
+    "h": "Gases and four quantities",
+    "p": "Gases compress easily, fill their container and mix in any proportion. Four quantities describe a gas: pressure <b>P</b>, volume <b>V</b>, temperature <b>T</b> and number of moles <b>n</b>. Temperature is always used in kelvins.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><path d='M30 40 V172 H130 V40' stroke='var(--ink)' stroke-width='2' fill='none'/><rect x='31' y='84' width='98' height='87' fill='var(--c1)' fill-opacity='0.12'/><rect x='31' y='72' width='98' height='12' fill='var(--muted)' fill-opacity='0.6'/><path d='M80 72 V50' stroke='var(--muted)' stroke-width='4' fill='none'/><path d='M80 22 V44' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#gaz-1)'/><text x='92' y='36' font-size='13' fill='var(--c2)' text-anchor='start' font-weight='700'>P</text><circle cx='50' cy='100' r='4.5' fill='var(--c1)'/><circle cx='85' cy='95' r='4.5' fill='var(--c1)'/><circle cx='112' cy='110' r='4.5' fill='var(--c1)'/><circle cx='65' cy='128' r='4.5' fill='var(--c1)'/><circle cx='100' cy='140' r='4.5' fill='var(--c1)'/><circle cx='48' cy='155' r='4.5' fill='var(--c1)'/><circle cx='118' cy='158' r='4.5' fill='var(--c1)'/><circle cx='80' cy='160' r='4.5' fill='var(--c1)'/><text x='172' y='52' font-size='15' fill='var(--c2)' text-anchor='middle' font-weight='700'>P</text><text x='188' y='52' font-size='12' fill='var(--ink)' text-anchor='start'>pressure</text><text x='308' y='52' font-size='11' fill='var(--muted)' text-anchor='end'>atm, mmHg</text><text x='172' y='82' font-size='15' fill='var(--c1)' text-anchor='middle' font-weight='700'>V</text><text x='188' y='82' font-size='12' fill='var(--ink)' text-anchor='start'>volume</text><text x='308' y='82' font-size='11' fill='var(--muted)' text-anchor='end'>L</text><text x='172' y='112' font-size='15' fill='var(--c4)' text-anchor='middle' font-weight='700'>T</text><text x='188' y='112' font-size='12' fill='var(--ink)' text-anchor='start'>temperature</text><text x='308' y='112' font-size='11' fill='var(--muted)' text-anchor='end'>K</text><text x='172' y='142' font-size='15' fill='var(--c3)' text-anchor='middle' font-weight='700'>n</text><text x='188' y='142' font-size='12' fill='var(--ink)' text-anchor='start'>moles</text><text x='308' y='142' font-size='11' fill='var(--muted)' text-anchor='end'>mol</text><path d='M160 64 H310 M160 94 H310 M160 124 H310' stroke='var(--line)' stroke-width='1' fill='none'/><text x='235' y='180' font-size='13' fill='var(--acc)' text-anchor='middle' font-weight='700'>T (K) = t (°C) + 273</text></svg>",
+    "key": "The kelvin temperature is the Celsius temperature plus 273. 0 °C is not zero, it is 273 K. Gases have low densities.",
+    "once": {
+     "soru": "In gas calculations, how many kelvins is 27 °C?",
+     "secenekler": [
+      {
+       "yazi": "300",
+       "neden": "T (K) = t (°C) + 273 = 300 K.",
+       "dogru": true
+      },
+      {
+       "yazi": "27",
+       "neden": "The gas laws work with kelvins. You add 273 to the Celsius value."
+      },
+      {
+       "yazi": "246",
+       "neden": "You add 273, you don't subtract it."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Pressure units and the manometer",
+    "p": "<b>1 atm equals 760 mmHg and about 101.3 kPa</b>. A <b>manometer</b> measures gas pressure. If the mercury is lower on the gas side, then P<sub>gas</sub> = P<sub>0</sub> + h.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='18' font-size='12' fill='var(--acc)' text-anchor='middle' font-weight='700'>1 atm = 76 cmHg = 760 mmHg ≈ 101.3 kPa</text><rect x='14' y='44' width='36' height='36' rx='6' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><text x='32' y='66' font-size='11' fill='var(--c1)' text-anchor='middle'>gas</text><path d='M50 62 H70 V140 Q70 156 90 156 Q110 156 110 140 V38' stroke='var(--line)' stroke-width='12' fill='none'/><path d='M70 125 V140 Q70 156 90 156 Q110 156 110 140 V75' stroke='var(--muted)' stroke-width='8' fill='none'/><path d='M103 38 H117' stroke='var(--ink)' stroke-width='2.5' fill='none'/><path d='M118 75 H134 M78 125 H134' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 2'/><path d='M128 77 V123' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-start='url(#gaz-2)' marker-end='url(#gaz-2)'/><text x='135' y='104' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>h</text><text x='124' y='48' font-size='10' fill='var(--muted)' text-anchor='start'>vacuum</text><rect x='174' y='44' width='36' height='36' rx='6' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><text x='192' y='66' font-size='11' fill='var(--c1)' text-anchor='middle'>gas</text><path d='M210 62 H230 V140 Q230 156 250 156 Q270 156 270 140 V38' stroke='var(--line)' stroke-width='12' fill='none'/><path d='M230 125 V140 Q230 156 250 156 Q270 156 270 140 V75' stroke='var(--muted)' stroke-width='8' fill='none'/><path d='M278 75 H294 M238 125 H294' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 2'/><path d='M288 77 V123' stroke='var(--ink)' stroke-width='1.2' fill='none' marker-start='url(#gaz-2)' marker-end='url(#gaz-2)'/><text x='295' y='104' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>h</text><text x='284' y='48' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>P₀</text><text x='80' y='172' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Closed-end</text><text x='80' y='190' font-size='12' fill='var(--c1)' text-anchor='middle'>P<tspan font-size='10' baseline-shift='sub'>gas</tspan> = h</text><text x='240' y='172' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Open-end</text><text x='240' y='190' font-size='12' fill='var(--c1)' text-anchor='middle'>P<tspan font-size='10' baseline-shift='sub'>gas</tspan> = P₀ + h</text></svg>",
+    "key": "1 atm is 76 cmHg, and 1 mmHg equals 1 torr. If the mercury is higher on the gas side, Pgas = P0 − h. In a closed-end manometer, Pgas = h.",
+    "once": {
+     "soru": "In an open-end manometer, the mercury is 10 cm lower on the gas side. The outside pressure is 76 cmHg. What is the gas pressure in cmHg?",
+     "secenekler": [
+      {
+       "yazi": "86",
+       "neden": "The gas pushes the mercury harder than the outside air. So it is 76 + 10 = 86.",
+       "dogru": true
+      },
+      {
+       "yazi": "66",
+       "neden": "The mercury is lower on the gas side, so the gas is pushing harder."
+      },
+      {
+       "yazi": "10",
+       "neden": "That would be true for a closed-end manometer."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Boyle's law: P·V is constant",
+    "p": "At constant temperature and moles, pressure and volume are inversely proportional, and <b>P₁·V₁ = P₂·V₂</b>. If the volume is halved, the pressure doubles.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='95' y='18' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>P–V: hyperbola</text><text x='250' y='18' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>P–1/V: straight line</text><path d='M30 170 H165' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-3)'/><path d='M30 170 V28' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-3)'/><text x='24' y='40' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>P</text><text x='165' y='186' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>V</text><path d='M55.5 28.8 L57.0 36.7 L58.5 43.7 L60.0 50.0 L61.5 55.7 L63.0 60.9 L64.5 65.7 L66.0 70.0 L67.5 74.0 L69.0 77.7 L70.5 81.1 L72.0 84.3 L73.5 87.2 L75.0 90.0 L76.5 92.6 L78.0 95.0 L79.5 97.3 L81.0 99.4 L82.5 101.4 L84.0 103.3 L85.5 105.1 L87.0 106.8 L88.5 108.5 L90.0 110.0 L91.5 111.5 L93.0 112.9 L94.5 114.2 L96.0 115.5 L97.5 116.7 L99.0 117.8 L100.5 118.9 L102.0 120.0 L103.5 121.0 L105.0 122.0 L106.5 122.9 L108.0 123.8 L109.5 124.7 L111.0 125.6 L112.5 126.4 L114.0 127.1 L115.5 127.9 L117.0 128.6 L118.5 129.3 L120.0 130.0 L121.5 130.7 L123.0 131.3 L124.5 131.9 L126.0 132.5 L127.5 133.1 L129.0 133.6 L130.5 134.2 L132.0 134.7 L133.5 135.2 L135.0 135.7 L136.5 136.2 L138.0 136.7 L139.5 137.1 L141.0 137.6 L142.5 138.0 L144.0 138.4 L145.5 138.8 L147.0 139.2 L148.5 139.6 L150.0 140.0 L151.5 140.4 L153.0 140.7 L154.5 141.1 L156.0 141.4 L157.5 141.8 L159.0 142.1' stroke='var(--c1)' stroke-width='2.5' fill='none'/><path d='M60 170 V50 H30 M90 170 V110 H30 M150 170 V140 H30' stroke='var(--muted)' stroke-width='1' fill='none' stroke-dasharray='3 3'/><circle cx='60' cy='50' r='3.5' fill='var(--c2)'/><circle cx='90' cy='110' r='3.5' fill='var(--c2)'/><circle cx='150' cy='140' r='3.5' fill='var(--c2)'/><text x='60' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>1</text><text x='90' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>2</text><text x='150' y='184' font-size='11' fill='var(--muted)' text-anchor='middle'>4</text><text x='20' y='54' font-size='11' fill='var(--muted)' text-anchor='end'>4</text><text x='20' y='114' font-size='11' fill='var(--muted)' text-anchor='end'>2</text><text x='20' y='144' font-size='11' fill='var(--muted)' text-anchor='end'>1</text><text x='115' y='70' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>P·V = 4</text><path d='M195 170 H305' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-3)'/><path d='M195 170 V28' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-3)'/><text x='189' y='40' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>P</text><text x='305' y='186' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>1/V</text><path d='M195 170 L292 50' stroke='var(--c1)' stroke-width='2.5' fill='none'/><text x='250' y='150' font-size='11' fill='var(--muted)' text-anchor='start'>constant T and n</text></svg>",
+    "key": "The particles then hit the walls twice as often. The P–V graph is a hyperbola. A scuba diver doesn't hold their breath while rising, because the air in the lungs expands."
+   },
+   {
+    "h": "Charles's law and absolute zero",
+    "p": "At constant pressure and moles, volume is directly proportional to kelvin temperature, and <b>V₁/T₁ = V₂/T₂</b>. The temperature at which the volume would drop to zero is called <b>absolute zero</b>. Absolute zero is 0 K, or −273 °C.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M30 160 H305' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-4)'/><path d='M200 160 V30' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-4)'/><text x='208' y='38' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>V</text><text x='305' y='176' font-size='11' fill='var(--ink)' text-anchor='end'>t (°C)</text><text x='200' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>0</text><text x='250.0' y='176' font-size='11' fill='var(--muted)' text-anchor='middle'>100</text><path d='M63.5 160 L170.0 100.0' stroke='var(--c1)' stroke-width='1.5' fill='none' stroke-dasharray='4 3'/><path d='M170.0 100.0 L250.0 55.0' stroke='var(--c1)' stroke-width='2.5' fill='none'/><path d='M63.5 160 L170.0 128.6' stroke='var(--c1)' stroke-width='1.5' fill='none' stroke-dasharray='4 3'/><path d='M170.0 128.6 L250.0 105.0' stroke='var(--c1)' stroke-width='2.5' fill='none'/><circle cx='63.5' cy='160' r='4' fill='var(--c2)'/><text x='63.5' y='176' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>−273 °C</text><text x='63.5' y='193' font-size='11' fill='var(--c2)' text-anchor='middle'>absolute zero = 0 K</text><text x='95' y='50' font-size='13' fill='var(--c1)' text-anchor='middle' font-weight='700'>V / T = constant</text><text x='95' y='68' font-size='11' fill='var(--muted)' text-anchor='middle'>constant P and n</text></svg>",
+    "key": "Heating from 27 °C to 54 °C does not double the volume. The temperature goes from 300 K to 327 K, and the volume grows by only 9%."
+   },
+   {
+    "h": "Gay-Lussac's law: P ∝ T",
+    "p": "At constant volume and moles, pressure is directly proportional to kelvin temperature, and <b>P₁/T₁ = P₂/T₂</b>. Heated particles hit the walls more often and harder.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><defs><marker id='gaz-5b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><text x='70' y='22' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>P / T = constant</text><rect x='30' y='40' width='80' height='90' rx='8' fill='var(--c4)' fill-opacity='0.15' stroke='var(--ink)' stroke-width='2'/><circle cx='50' cy='62' r='4.5' fill='var(--c4)'/><circle cx='88' cy='58' r='4.5' fill='var(--c4)'/><circle cx='70' cy='82' r='4.5' fill='var(--c4)'/><circle cx='100' cy='95' r='4.5' fill='var(--c4)'/><circle cx='45' cy='105' r='4.5' fill='var(--c4)'/><circle cx='80' cy='115' r='4.5' fill='var(--c4)'/><path d='M55 66 L64 58' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-5b)'/><path d='M92 99 L104 106' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-5b)'/><path d='M45 109 L38 118' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-5b)'/><path d='M70 168 C58 160 60 150 66 142 C67 150 72 150 70 140 C80 148 84 158 70 168 Z' fill='var(--c2)' fill-opacity='0.7'/><text x='86' y='162' font-size='11' fill='var(--c2)' text-anchor='start'>heat</text><text x='70' y='190' font-size='11' fill='var(--muted)' text-anchor='middle'>constant V and n</text><path d='M170 165 H305' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-5)'/><path d='M170 165 V30' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-5)'/><text x='164' y='42' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>P</text><text x='305' y='181' font-size='11' fill='var(--ink)' text-anchor='end'>T (K)</text><text x='170' y='181' font-size='11' fill='var(--muted)' text-anchor='middle'>0</text><path d='M170 165 L298 51' stroke='var(--c4)' stroke-width='2.5' fill='none'/><circle cx='230' cy='111.5625' r='4' fill='var(--c2)'/><circle cx='290' cy='58.125' r='4' fill='var(--c2)'/><text x='240' y='128' font-size='11' fill='var(--ink)' text-anchor='start'>300 K → 2 atm</text><text x='282' y='40' font-size='11' fill='var(--ink)' text-anchor='end'>600 K → 4 atm</text></svg>",
+    "key": "That's why tire pressure rises on a long drive and why you never throw a spray can into a fire. Don't confuse this law with the law of combining volumes."
+   },
+   {
+    "h": "Avogadro's law: V ∝ n",
+    "p": "At the same temperature and pressure, equal volumes of gases contain equal numbers of particles. At constant temperature and pressure, volume is directly proportional to moles, and <b>V₁/n₁ = V₂/n₂</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='20' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>same T, P and V → same number of particles</text><rect x='15' y='32' width='90' height='92' rx='6' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='42' cy='60' r='5' fill='var(--c1)'/><circle cx='77' cy='56' r='5' fill='var(--c1)'/><circle cx='59' cy='83' r='5' fill='var(--c1)'/><circle cx='87' cy='90' r='5' fill='var(--c1)'/><circle cx='39' cy='108' r='5' fill='var(--c1)'/><circle cx='72' cy='113' r='5' fill='var(--c1)'/><text x='60' y='142' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>He</text><rect x='115' y='32' width='90' height='92' rx='6' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='138' cy='60' r='4.5' fill='var(--c3)'/><circle cx='146' cy='60' r='4.5' fill='var(--c3)'/><circle cx='173' cy='56' r='4.5' fill='var(--c3)'/><circle cx='181' cy='56' r='4.5' fill='var(--c3)'/><circle cx='155' cy='83' r='4.5' fill='var(--c3)'/><circle cx='163' cy='83' r='4.5' fill='var(--c3)'/><circle cx='183' cy='90' r='4.5' fill='var(--c3)'/><circle cx='191' cy='90' r='4.5' fill='var(--c3)'/><circle cx='135' cy='108' r='4.5' fill='var(--c3)'/><circle cx='143' cy='108' r='4.5' fill='var(--c3)'/><circle cx='168' cy='113' r='4.5' fill='var(--c3)'/><circle cx='176' cy='113' r='4.5' fill='var(--c3)'/><text x='160' y='142' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>N₂</text><rect x='215' y='32' width='90' height='92' rx='6' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='235' cy='60' r='3.5' fill='var(--c2)'/><circle cx='249' cy='60' r='3.5' fill='var(--c2)'/><circle cx='242' cy='60' r='4.5' fill='var(--ink)'/><circle cx='270' cy='56' r='3.5' fill='var(--c2)'/><circle cx='284' cy='56' r='3.5' fill='var(--c2)'/><circle cx='277' cy='56' r='4.5' fill='var(--ink)'/><circle cx='252' cy='83' r='3.5' fill='var(--c2)'/><circle cx='266' cy='83' r='3.5' fill='var(--c2)'/><circle cx='259' cy='83' r='4.5' fill='var(--ink)'/><circle cx='280' cy='90' r='3.5' fill='var(--c2)'/><circle cx='294' cy='90' r='3.5' fill='var(--c2)'/><circle cx='287' cy='90' r='4.5' fill='var(--ink)'/><circle cx='232' cy='108' r='3.5' fill='var(--c2)'/><circle cx='246' cy='108' r='3.5' fill='var(--c2)'/><circle cx='239' cy='108' r='4.5' fill='var(--ink)'/><circle cx='265' cy='113' r='3.5' fill='var(--c2)'/><circle cx='279' cy='113' r='3.5' fill='var(--c2)'/><circle cx='272' cy='113' r='4.5' fill='var(--ink)'/><text x='260' y='142' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>CO₂</text><text x='160' y='170' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>N₂ + 3H₂ → 2NH₃</text><text x='160' y='190' font-size='12' fill='var(--muted)' text-anchor='middle'>volume ratio = mole ratio = 1 : 3 : 2</text></svg>",
+    "key": "When you blow up a balloon, its volume grows because you add gas. In reactions where the moles of gas decrease, such as N₂ + 3H₂ → 2NH₃, the volume decreases too.",
+    "once": {
+     "soru": "Under the same conditions, which has more molecules: 1 L of H₂ or 1 L of O₂?",
+     "secenekler": [
+      {
+       "yazi": "Equal",
+       "neden": "Under the same conditions, equal volumes of gases contain equal numbers of particles.",
+       "dogru": true
+      },
+      {
+       "yazi": "O₂",
+       "neden": "O₂ is heavier, but the number of particles is the same."
+      },
+      {
+       "yazi": "H₂",
+       "neden": "H₂ is lighter, but the number of particles is the same."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The combined gas law",
+    "p": "If the moles are constant, the three laws combine into <b>P₁V₁/T₁ = P₂V₂/T₂</b>. You cancel whatever quantity doesn't change from both sides. Temperature must be in kelvins.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='15' y='28' width='112' height='92' rx='8' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1.5'/><text x='71' y='48' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>State 1</text><text x='71' y='72' font-size='12' fill='var(--ink)' text-anchor='middle'>P₁ = 1 atm</text><text x='71' y='91' font-size='12' fill='var(--ink)' text-anchor='middle'>V₁ = 6 L</text><text x='71' y='110' font-size='12' fill='var(--ink)' text-anchor='middle'>T₁ = 300 K</text><rect x='193' y='28' width='112' height='92' rx='8' fill='var(--c3)' fill-opacity='0.1' stroke='var(--c3)' stroke-width='1.5'/><text x='249' y='48' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>State 2</text><text x='249' y='72' font-size='12' fill='var(--ink)' text-anchor='middle'>P₂ = 2 atm</text><text x='249' y='91' font-size='12' fill='var(--ink)' text-anchor='middle'>V₂ = ?</text><text x='249' y='110' font-size='12' fill='var(--ink)' text-anchor='middle'>T₂ = 400 K</text><path d='M134 82 H186' stroke='var(--ink)' stroke-width='2' fill='none' marker-end='url(#gaz-7)'/><text x='160' y='72' font-size='11' fill='var(--muted)' text-anchor='middle'>n constant</text><text x='160' y='146' font-size='14' fill='var(--ink)' text-anchor='middle' font-weight='700'>P₁V₁ / T₁ = P₂V₂ / T₂</text><text x='160' y='170' font-size='13' fill='var(--c3)' text-anchor='middle' font-weight='700'>V₂ = 1·6·400 / (300·2) = 4 L</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>27 °C → 300 K,  127 °C → 400 K</text></svg>",
+    "key": "For example, 6 L of gas at 27 °C and 1 atm becomes V₂ = 1·6·400 / (300·2) = 4 L at 127 °C and 2 atm. For P and V it is enough to use the same unit on both sides.",
+    "once": {
+     "soru": "Both the pressure and the kelvin temperature of a gas double. What happens to its volume?",
+     "secenekler": [
+      {
+       "yazi": "It stays the same",
+       "neden": "Doubling the pressure halves the volume, and doubling the temperature doubles it. The two effects cancel.",
+       "dogru": true
+      },
+      {
+       "yazi": "It becomes 4 times larger",
+       "neden": "Raising the pressure shrinks the volume. The two effects work in opposite directions."
+      },
+      {
+       "yazi": "It is halved",
+       "neden": "Raising the temperature also grows the volume, and the two effects cancel."
+      }
+     ]
+    }
+   },
+   {
+    "h": "The ideal gas law: PV = nRT",
+    "p": "<b>P·V = n·R·T</b> links all four quantities. If P is in atm, V in liters and T in kelvins, then <b>R = 0.082</b> L·atm/(mol·K). In SI units, R = 8.314 J/(mol·K).",
+    "svg": "<svg viewBox='0 0 320 200'><text x='48' y='62' font-size='24' fill='var(--c2)' text-anchor='middle' font-weight='700'>P</text><text x='48' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>atm</text><text x='102' y='62' font-size='24' fill='var(--c1)' text-anchor='middle' font-weight='700'>V</text><text x='102' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>L</text><text x='164' y='62' font-size='24' fill='var(--c3)' text-anchor='middle' font-weight='700'>n</text><text x='164' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>mol</text><text x='218' y='62' font-size='24' fill='var(--c5)' text-anchor='middle' font-weight='700'>R</text><text x='218' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>0.082</text><text x='272' y='62' font-size='24' fill='var(--c4)' text-anchor='middle' font-weight='700'>T</text><text x='272' y='88' font-size='12' fill='var(--muted)' text-anchor='middle'>K</text><text x='75' y='62' font-size='24' fill='var(--ink)' text-anchor='middle'>·</text><text x='133' y='62' font-size='24' fill='var(--ink)' text-anchor='middle'>=</text><text x='191' y='62' font-size='24' fill='var(--ink)' text-anchor='middle'>·</text><text x='245' y='62' font-size='24' fill='var(--ink)' text-anchor='middle'>·</text><rect x='40' y='108' width='240' height='84' rx='8' fill='var(--panel)' stroke='var(--line)'/><text x='160' y='128' font-size='12' fill='var(--ink)' text-anchor='middle'>0.5 mol gas · 4.1 L · 27 °C</text><text x='160' y='154' font-size='13' fill='var(--ink)' text-anchor='middle'>P = 0.5 · 0.082 · 300 / 4.1</text><text x='160' y='180' font-size='14' fill='var(--c3)' text-anchor='middle' font-weight='700'>P = 3 atm</text></svg>",
+    "etk": {
+     "tur": "formul",
+     "soru": "P·V = n·R·T, R = 0.082 L·atm/(mol·K). Change the moles, the temperature and the volume.",
+     "girdiler": [
+      {
+       "ad": "n",
+       "etiket": "Moles",
+       "birim": "mol",
+       "min": 0.1,
+       "max": 3,
+       "adim": 0.1,
+       "deger": 0.5
+      },
+      {
+       "ad": "T",
+       "etiket": "Temperature",
+       "birim": "K",
+       "min": 200,
+       "max": 600,
+       "adim": 10,
+       "deger": 300
+      },
+      {
+       "ad": "V",
+       "etiket": "Volume",
+       "birim": "L",
+       "min": 1,
+       "max": 50,
+       "adim": 0.1,
+       "deger": 4.1
+      }
+     ],
+     "ciktilar": [
+      {
+       "ad": "P",
+       "ifade": "n*0.082*T/V",
+       "birim": "atm",
+       "basamak": 2,
+       "max": 20
+      },
+      {
+       "ad": "P",
+       "ifade": "n*0.082*T/V*760",
+       "birim": "mmHg",
+       "basamak": 0
+      }
+     ]
+    },
+    "key": "For example, 0.5 mol of gas in a 4.1 L container at 27 °C has a pressure of P = 0.5·0.082·300 / 4.1 = 3 atm. If pressure is in kPa, use R = 8.314 L·kPa/(mol·K)."
+   },
+   {
+    "h": "Gas density and molar mass",
+    "p": "If you substitute n = m/M, you get <b>d = P·M/(R·T)</b>. Gas density increases with pressure and molar mass and decreases with temperature.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-9' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><text x='160' y='36' font-size='20' fill='var(--acc)' text-anchor='middle' font-weight='700'>d = P·M / (R·T)</text><rect x='18' y='56' width='118' height='28' rx='6' fill='var(--panel)' stroke='var(--line)'/><rect x='18' y='92' width='118' height='28' rx='6' fill='var(--panel)' stroke='var(--line)'/><rect x='18' y='128' width='118' height='28' rx='6' fill='var(--panel)' stroke='var(--line)'/><text x='77' y='75' font-size='13' fill='var(--ink)' text-anchor='middle'>P ↑  →  d ↑</text><text x='77' y='111' font-size='13' fill='var(--ink)' text-anchor='middle'>M ↑  →  d ↑</text><text x='77' y='147' font-size='13' fill='var(--c2)' text-anchor='middle'>T ↑  →  d ↓</text><rect x='156' y='56' width='150' height='100' rx='8' fill='var(--c1)' fill-opacity='0.08' stroke='var(--c1)'/><text x='231' y='76' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>O₂ · 0 °C · 1 atm</text><text x='231' y='102' font-size='12' fill='var(--ink)' text-anchor='middle'>d = 1·32 / (0.082·273)</text><text x='231' y='132' font-size='14' fill='var(--c1)' text-anchor='middle' font-weight='700'>d ≈ 1.43 g/L</text><text x='160' y='186' font-size='13' fill='var(--ink)' text-anchor='middle'>molar mass:  M = d·R·T / P</text></svg>",
+    "key": "Using density, the molar mass of an unknown gas is found from M = d·R·T/P.",
+    "once": {
+     "soru": "Why does a hot air balloon rise?",
+     "secenekler": [
+      {
+       "yazi": "The air inside thins out",
+       "neden": "Heated air has a lower density. The cooler air around it pushes it up.",
+       "dogru": true
+      },
+      {
+       "yazi": "Hot air has no mass",
+       "neden": "Hot air has mass too. There is just less of it in the same volume."
+      },
+      {
+       "yazi": "The flame pushes the balloon",
+       "neden": "The flame heats the air. What lifts the balloon is the difference in density."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Kinetic theory",
+    "p": "According to <b>kinetic theory</b>, ideal gas particles move randomly, their volume is negligible and they don't attract each other. The average kinetic energy is directly proportional to absolute temperature.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-10' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='gaz-10b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><rect x='18' y='30' width='132' height='130' rx='6' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='40' cy='55' r='5' fill='var(--c1)'/><path d='M40 55 L54 47' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10)'/><circle cx='95' cy='50' r='5' fill='var(--c1)'/><path d='M95 50 L82 62' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10)'/><circle cx='125' cy='80' r='5' fill='var(--c1)'/><path d='M125 80 L138 70' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10)'/><circle cx='60' cy='95' r='5' fill='var(--c1)'/><path d='M60 95 L48 108' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10)'/><circle cx='105' cy='115' r='5' fill='var(--c1)'/><path d='M105 115 L120 122' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10)'/><circle cx='45' cy='140' r='5' fill='var(--c1)'/><path d='M45 140 L60 132' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10)'/><circle cx='90' cy='145' r='5' fill='var(--c1)'/><path d='M90 145 L104 140' stroke='var(--c2)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10)'/><text x='84' y='20' font-size='11' fill='var(--muted)' text-anchor='middle'>random, straight-line motion</text><text x='160' y='188' font-size='11' fill='var(--ink)' text-anchor='middle'>particle volume ≈ 0 · no attraction · elastic collisions</text><path d='M185 150 H305' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10b)'/><path d='M185 150 V30' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-10b)'/><text x='191' y='36' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>avg. E<tspan font-size='10' baseline-shift='sub'>k</tspan></text><text x='305' y='166' font-size='11' fill='var(--ink)' text-anchor='end'>T (K)</text><path d='M185 150 L296 48' stroke='var(--c5)' stroke-width='2.5' fill='none'/><text x='268' y='118' font-size='11' fill='var(--c5)' text-anchor='middle'>all gases</text><text x='268' y='133' font-size='11' fill='var(--c5)' text-anchor='middle'>same line</text></svg>",
+    "key": "Collisions between particles are elastic. At the same temperature every gas has the same average kinetic energy, but a light gas moves faster."
+   },
+   {
+    "h": "Graham's law: diffusion and effusion",
+    "p": "A gas spreading through another gas is called <b>diffusion</b>, and a gas escaping through a tiny hole is called <b>effusion</b>. The rate is inversely proportional to the square root of the molar mass, and <b>r₁/r₂ = √(M₂/M₁)</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-11' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><defs><marker id='gaz-11b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><defs><marker id='gaz-11c' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--muted)'/></marker></defs><text x='160' y='28' font-size='18' fill='var(--acc)' text-anchor='middle' font-weight='700'>r₁ / r₂ = √(M₂ / M₁)</text><rect x='30' y='82' width='260' height='24' rx='12' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><rect x='180.5' y='83' width='9' height='22' fill='var(--muted)' fill-opacity='0.55'/><path d='M42 72 H177' stroke='var(--c1)' stroke-width='2' fill='none' marker-end='url(#gaz-11)'/><path d='M278 72 H195' stroke='var(--c2)' stroke-width='2' fill='none' marker-end='url(#gaz-11b)'/><text x='100' y='62' font-size='11' fill='var(--c1)' text-anchor='middle' font-weight='700'>NH₃ (17 g/mol)</text><text x='240' y='62' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>HCl (36.5)</text><text x='184.53550114450263' y='124' font-size='11' fill='var(--ink)' text-anchor='middle'>NH₄Cl ring</text><path d='M32 144 H183' stroke='var(--muted)' stroke-width='1' fill='none' marker-start='url(#gaz-11c)' marker-end='url(#gaz-11c)'/><path d='M187 144 H288' stroke='var(--muted)' stroke-width='1' fill='none' marker-start='url(#gaz-11c)' marker-end='url(#gaz-11c)'/><text x='107.26775057225132' y='160' font-size='11' fill='var(--muted)' text-anchor='middle'>≈ 59 cm</text><text x='237.26775057225132' y='160' font-size='11' fill='var(--muted)' text-anchor='middle'>≈ 41 cm</text><text x='160' y='188' font-size='12' fill='var(--ink)' text-anchor='middle'>H₂ spreads √(32/2) = 4 times faster than O₂</text></svg>",
+    "key": "H₂ (2 g/mol) spreads 4 times faster than O₂ (32 g/mol). The comparison is made at the same temperature."
+   },
+   {
+    "h": "Dalton's law and gas over water",
+    "p": "Each gas in a mixture exerts pressure as if it filled the container alone, so <b>P<sub>total</sub> = P<sub>A</sub> + P<sub>B</sub></b>. The partial pressure of a gas is <b>P<sub>A</sub> = X<sub>A</sub>·P<sub>total</sub></b>.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='15' y='30' width='120' height='108' rx='6' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.5'/><circle cx='40' cy='60' r='6' fill='var(--c1)'/><circle cx='100' cy='105' r='6' fill='var(--c1)'/><circle cx='70' cy='50' r='6' fill='var(--c2)'/><circle cx='115' cy='62' r='6' fill='var(--c2)'/><circle cx='35' cy='100' r='6' fill='var(--c2)'/><circle cx='70' cy='88' r='6' fill='var(--c2)'/><circle cx='60' cy='122' r='6' fill='var(--c2)'/><circle cx='112' cy='128' r='6' fill='var(--c2)'/><text x='75' y='20' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>1 mol A + 3 mol B</text><text x='75' y='156' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>P<tspan font-size='10' baseline-shift='sub'>total</tspan> = 4 atm</text><text x='75' y='174' font-size='11' fill='var(--c1)' text-anchor='middle'>X<tspan font-size='10' baseline-shift='sub'>A</tspan> = 1/4 → P<tspan font-size='10' baseline-shift='sub'>A</tspan> = 1 atm</text><text x='75' y='192' font-size='11' fill='var(--c2)' text-anchor='middle'>X<tspan font-size='10' baseline-shift='sub'>B</tspan> = 3/4 → P<tspan font-size='10' baseline-shift='sub'>B</tspan> = 3 atm</text><text x='242' y='18' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>P<tspan font-size='10' baseline-shift='sub'>H₂</tspan> = P<tspan font-size='10' baseline-shift='sub'>atm</tspan> − P<tspan font-size='10' baseline-shift='sub'>water</tspan></text><rect x='176' y='126' width='133' height='53' fill='var(--c1)' fill-opacity='0.25'/><rect x='226' y='34' width='32' height='92' fill='var(--c5)' fill-opacity='0.1'/><path d='M175 104 V180 H310 V104' stroke='var(--ink)' stroke-width='2' fill='none'/><path d='M225 160 V36 Q225 31 230 31 H254 Q259 31 259 36 V160' stroke='var(--ink)' stroke-width='2' fill='none'/><circle cx='236' cy='50' r='4' fill='var(--c5)'/><circle cx='249' cy='70' r='4' fill='var(--c5)'/><circle cx='236' cy='92' r='4' fill='var(--c5)'/><circle cx='249' cy='108' r='4' fill='var(--c5)'/><circle cx='242' cy='60' r='3' fill='var(--c1)' fill-opacity='0.6'/><circle cx='242' cy='100' r='3' fill='var(--c1)' fill-opacity='0.6'/><text x='220' y='52' font-size='11' fill='var(--c5)' text-anchor='end'>H₂ +</text><text x='220' y='67' font-size='11' fill='var(--c5)' text-anchor='end'>water vapor</text><text x='242' y='195' font-size='10' fill='var(--muted)' text-anchor='middle'>water levels inside and outside equal</text></svg>",
+    "key": "XA is the mole fraction of gas A. For a gas collected over water, subtract the water vapor pressure. At 25 °C the water vapor pressure is about 24 mmHg, so H₂ collected at 760 mmHg has a pressure of 736 mmHg."
+   },
+   {
+    "h": "Real gases and liquefaction",
+    "p": "Real gas particles have volume and attract each other. So real gases deviate from ideal behavior at high pressure and low temperature. A gas above its <b>critical temperature</b> won't liquefy even when compressed.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='gaz-13' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><path d='M40 170 H305' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-13)'/><path d='M40 170 V22' stroke='var(--ink)' stroke-width='1.5' fill='none' marker-end='url(#gaz-13)'/><text x='46' y='28' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>PV / nRT</text><text x='305' y='186' font-size='12' fill='var(--ink)' text-anchor='end' font-weight='700'>P</text><text x='34' y='114' font-size='11' fill='var(--muted)' text-anchor='end'>1</text><path d='M40 110 H300' stroke='var(--muted)' stroke-width='1.5' fill='none' stroke-dasharray='5 4'/><text x='296' y='126' font-size='11' fill='var(--muted)' text-anchor='end'>ideal</text><path d='M40 110 C90 149.0 150 152.0 200 110 S270 56.0 300 38.0' stroke='var(--c2)' stroke-width='2.5' fill='none'/><path d='M40 110 C80 117.2 130 117.2 170 110 S260 89.0 300 80.0' stroke='var(--c3)' stroke-width='2.5' fill='none'/><text x='130' y='160' font-size='11' fill='var(--muted)' text-anchor='middle'>effect of attraction: &lt; 1</text><text x='296' y='30.0' font-size='11' fill='var(--c2)' text-anchor='end'>low T</text><text x='296' y='101' font-size='11' fill='var(--c3)' text-anchor='end'>high T</text></svg>",
+    "key": "A gas below its critical temperature is called a vapor, and a vapor liquefies when compressed. The most nearly ideal gases are small, nonpolar ones such as He and H₂.",
+    "once": {
+     "soru": "Under which conditions does a gas behave most like an ideal gas?",
+     "secenekler": [
+      {
+       "yazi": "Low pressure, high temperature",
+       "neden": "Under these conditions the particles are far apart and fast. So their volume and attraction become negligible.",
+       "dogru": true
+      },
+      {
+       "yazi": "High pressure, low temperature",
+       "neden": "Under these conditions the particles are crowded and attraction matters."
+      },
+      {
+       "yazi": "High pressure, high temperature",
+       "neden": "At high pressure the particles' own volume becomes important."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• Temperature is always in kelvins, and 1 atm is 760 mmHg.<br>• The gas laws combine into P·V = n·R·T.<br>• Density is d = P·M/(R·T). By Graham's law, r ∝ 1/√M.<br>• Average kinetic energy depends only on temperature.<br>• Total pressure is the sum of the partial pressures. Real gases deviate at high pressure and low temperature.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M85 60 L120 80 M235 60 L200 80 M85 140 L120 120 M235 140 L200 120' stroke='var(--muted)' stroke-width='1.5' fill='none'/><rect x='15' y='20' width='140' height='40' rx='8' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)'/><text x='85.0' y='37' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Boyle: P·V</text><text x='85.0' y='53' font-size='11' fill='var(--muted)' text-anchor='middle'>constant T, n</text><rect x='165' y='20' width='140' height='40' rx='8' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)'/><text x='235.0' y='37' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Charles: V / T</text><text x='235.0' y='53' font-size='11' fill='var(--muted)' text-anchor='middle'>constant P, n</text><rect x='15' y='140' width='140' height='40' rx='8' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)'/><text x='85.0' y='157' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Gay-Lussac: P / T</text><text x='85.0' y='173' font-size='11' fill='var(--muted)' text-anchor='middle'>constant V, n</text><rect x='165' y='140' width='140' height='40' rx='8' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)'/><text x='235.0' y='157' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Avogadro: V / n</text><text x='235.0' y='173' font-size='11' fill='var(--muted)' text-anchor='middle'>constant P, T</text><rect x='100' y='80' width='120' height='40' rx='8' fill='var(--panel)' stroke='var(--acc)' stroke-width='2'/><text x='160' y='106' font-size='15' fill='var(--acc)' text-anchor='middle' font-weight='700'>P·V = n·R·T</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "sayi",
+    "q": "A closed 8.2 L container holds 0.5 mol of ideal gas at 127 °C. What is the gas pressure in atm? (R = 0.082 L·atm/(mol·K))",
+    "cevap": 2,
+    "birim": "atm",
+    "e": "T = 127 + 273 = 400 K. P = n·R·T / V = 0.5·0.082·400 / 8.2 = 2 atm. If you forget to convert to kelvins, you get 0.64 atm."
+   },
+   {
+    "tur": "sayi",
+    "q": "Two containers are joined by a closed valve. The 2 L one holds He at 3 atm and the 4 L one holds Ne at 1.5 atm. If the valve is opened at constant temperature, what is the final pressure in atm?",
+    "cevap": 2,
+    "birim": "atm",
+    "e": "Each gas spreads into the total 6 L. P(He) = 3·2/6 = 1 atm and P(Ne) = 1.5·4/6 = 1 atm. By Dalton's law, P(total) = 1 + 1 = 2 atm. In short, you can write P₁V₁ + P₂V₂ = P(final)·V(total)."
+   },
+   {
+    "tur": "sirala",
+    "q": "At the same temperature, order these gases from fastest to slowest spreading. (g/mol: H₂ 2, He 4, CH₄ 16, O₂ 32, CO₂ 44)",
+    "ogeler": [
+     "H₂",
+     "He",
+     "CH₄",
+     "O₂",
+     "CO₂"
+    ],
+    "e": "By Graham's law, the rate is inversely proportional to √M, so the gas with the smaller molar mass is faster. The order is H₂ > He > CH₄ > O₂ > CO₂."
+   },
+   {
+    "q": "Hydrogen is collected over water at 27 °C. The water levels inside and outside are equal, and the outside pressure is 750 mmHg. If the vapor pressure of water at 27 °C is 27 mmHg, what is the partial pressure of H₂ in mmHg?",
+    "o": [
+     "777",
+     "750",
+     "723",
+     "27"
+    ],
+    "a": 2,
+    "e": "The total pressure in the container equals the outside pressure and is made up of the pressures of H₂ and water vapor. So the pressure of H₂ is 750 − 27 = 723 mmHg. Adding the water vapor pressure is a common mistake.",
+    "y": [
+     "You subtract the water vapor pressure, you don't add it. The total pressure is the sum of the pressures of H₂ and water vapor.",
+     "750 mmHg is the total pressure. It includes 27 mmHg of water vapor pressure, so the pressure of H₂ is less.",
+     "",
+     "27 mmHg is the partial pressure of the water vapor. The pressure of H₂ is the total minus this value."
+    ]
+   }
+  ]
+ },
  "asit-baz": {
   "title": "Acids, bases and salts",
   "summary": "Learn the definitions of acids and bases, pH, Ka, neutralization, salts and titration.",
@@ -4373,6 +4663,318 @@
      "At the equivalence point all of the acid has reacted. The CH₃COO<sup>−</sup> left in solution makes it basic.",
      "The pH reaches 14 only with 1 M OH<sup>−</sup>. Here there is only acetate, a weak base.",
      ""
+    ]
+   }
+  ]
+ },
+ "kimya-her-yerde": {
+  "title": "Chemistry everywhere",
+  "summary": "Learn about cleaning products, polymers, medicines, food and farm chemistry.",
+  "cards": [
+   {
+    "h": "Chemicals at home",
+    "p": "Every day in the kitchen and bathroom you use chemicals such as salt, baking soda, vinegar and bleach. Cleaning products, plastics, medicines and food additives are all chemistry too. That's why you should read the label.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='14' y='15' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>Common name</text><text x='122' y='15' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>Formula</text><text x='196' y='15' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>What is it for?</text><rect x='6' y='21' width='308' height='19.6' rx='4' fill='var(--acc)' fill-opacity='0.08'/><text x='14' y='35' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Table salt</text><text x='122' y='35' font-size='11' fill='var(--acc)' text-anchor='start' font-weight='700'>NaCl</text><text x='196' y='35' font-size='11' fill='var(--ink)' text-anchor='start'>flavor, preserving</text><text x='14' y='54.6' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Baking soda</text><text x='122' y='54.6' font-size='11' fill='var(--acc)' text-anchor='start' font-weight='700'>NaHCO₃</text><text x='196' y='54.6' font-size='11' fill='var(--ink)' text-anchor='start'>raising dough</text><rect x='6' y='60.2' width='308' height='19.6' rx='4' fill='var(--acc)' fill-opacity='0.08'/><text x='14' y='74.2' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Washing soda</text><text x='122' y='74.2' font-size='11' fill='var(--acc)' text-anchor='start' font-weight='700'>Na₂CO₃</text><text x='196' y='74.2' font-size='11' fill='var(--ink)' text-anchor='start'>softening water</text><text x='14' y='93.8' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Vinegar</text><text x='122' y='93.8' font-size='11' fill='var(--acc)' text-anchor='start' font-weight='700'>CH₃COOH</text><text x='196' y='93.8' font-size='11' fill='var(--ink)' text-anchor='start'>sour, pickles, sauces</text><rect x='6' y='99.4' width='308' height='19.6' rx='4' fill='var(--acc)' fill-opacity='0.08'/><text x='14' y='113.4' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Bleach</text><text x='122' y='113.4' font-size='11' fill='var(--acc)' text-anchor='start' font-weight='700'>NaOCl</text><text x='196' y='113.4' font-size='11' fill='var(--ink)' text-anchor='start'>whitening, disinfecting</text><text x='14' y='133' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Muriatic acid</text><text x='122' y='133' font-size='11' fill='var(--acc)' text-anchor='start' font-weight='700'>HCl</text><text x='196' y='133' font-size='11' fill='var(--ink)' text-anchor='start'>strong acid, cleaning</text><rect x='6' y='138.6' width='308' height='19.6' rx='4' fill='var(--acc)' fill-opacity='0.08'/><text x='14' y='152.6' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Caustic soda</text><text x='122' y='152.6' font-size='11' fill='var(--acc)' text-anchor='start' font-weight='700'>NaOH</text><text x='196' y='152.6' font-size='11' fill='var(--ink)' text-anchor='start'>drain cleaner</text><text x='14' y='172.2' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Quicklime</text><text x='122' y='172.2' font-size='11' fill='var(--acc)' text-anchor='start' font-weight='700'>CaO</text><text x='196' y='172.2' font-size='11' fill='var(--ink)' text-anchor='start'>mortar, heats up in water</text><rect x='6' y='177.8' width='308' height='19.6' rx='4' fill='var(--acc)' fill-opacity='0.08'/><text x='14' y='191.8' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Slaked lime</text><text x='122' y='191.8' font-size='11' fill='var(--acc)' text-anchor='start' font-weight='700'>Ca(OH)₂</text><text x='196' y='191.8' font-size='11' fill='var(--ink)' text-anchor='start'>whitewash, mortar</text></svg>",
+    "key": "Baking soda is NaHCO₃, washing soda is Na₂CO₃ and slaked lime is Ca(OH)₂. Muriatic acid is an HCl solution.",
+    "once": {
+     "soru": "What is the chemical name of the soda used to make a cake rise?",
+     "secenekler": [
+      {
+       "yazi": "Sodium bicarbonate",
+       "neden": "Baking soda is NaHCO₃. When heated it releases CO₂ and makes the dough rise.",
+       "dogru": true
+      },
+      {
+       "yazi": "Sodium chloride",
+       "neden": "NaCl is table salt."
+      },
+      {
+       "yazi": "Calcium carbonate",
+       "neden": "CaCO₃ is limestone."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Soap and micelles",
+    "p": "<b>Soap</b> is the sodium or potassium salt of a fatty acid. The tail of a soap molecule sinks into the grease, and the head faces the water. The sphere that forms this way is called a <b>micelle</b>. The micelle keeps dirt suspended in water.",
+    "svg": "<svg viewBox='0 0 320 200'><polyline points='24,36 38,26 52,36 66,26 80,36 94,26 108,36 122,26 136,36 150,26' fill='none' stroke='var(--c4)' stroke-width='2.5'/><circle cx='170' cy='31' r='11' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.5'/><text x='170' y='35' font-size='12' fill='var(--ink)' text-anchor='middle'>–</text><text x='190' y='28' font-size='12' fill='var(--c1)' text-anchor='start' font-weight='700'>COO⁻ Na⁺</text><text x='88' y='56' font-size='11' fill='var(--c4)' text-anchor='middle'>hydrophobic tail</text><text x='88' y='69' font-size='10' fill='var(--muted)' text-anchor='middle'>loves grease</text><text x='210' y='52' font-size='11' fill='var(--c1)' text-anchor='middle'>hydrophilic head</text><text x='210' y='65' font-size='10' fill='var(--muted)' text-anchor='middle'>loves water</text><rect x='6' y='82' width='308' height='112' rx='8' fill='var(--c1)' fill-opacity='0.07' stroke='var(--line)' stroke-width='1.5'/><circle cx='82' cy='138' r='22' fill='var(--c4)' fill-opacity='0.35' stroke='var(--c4)' stroke-width='1.5'/><text x='82' y='142' font-size='11' fill='var(--ink)' text-anchor='middle'>grease</text><line x1='106.0' y1='138.0' x2='124.0' y2='138.0' stroke='var(--c4)' stroke-width='2'/><circle cx='129.0' cy='138.0' r='5' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.2'/><line x1='102.8' y1='150.0' x2='118.4' y2='159.0' stroke='var(--c4)' stroke-width='2'/><circle cx='122.7' cy='161.5' r='5' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.2'/><line x1='94.0' y1='158.8' x2='103.0' y2='174.4' stroke='var(--c4)' stroke-width='2'/><circle cx='105.5' cy='178.7' r='5' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.2'/><line x1='82.0' y1='162.0' x2='82.0' y2='180.0' stroke='var(--c4)' stroke-width='2'/><circle cx='82.0' cy='185.0' r='5' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.2'/><line x1='70.0' y1='158.8' x2='61.0' y2='174.4' stroke='var(--c4)' stroke-width='2'/><circle cx='58.5' cy='178.7' r='5' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.2'/><line x1='61.2' y1='150.0' x2='45.6' y2='159.0' stroke='var(--c4)' stroke-width='2'/><circle cx='41.3' cy='161.5' r='5' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.2'/><line x1='58.0' y1='138.0' x2='40.0' y2='138.0' stroke='var(--c4)' stroke-width='2'/><circle cx='35.0' cy='138.0' r='5' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.2'/><line x1='61.2' y1='126.0' x2='45.6' y2='117.0' stroke='var(--c4)' stroke-width='2'/><circle cx='41.3' cy='114.5' r='5' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.2'/><line x1='70.0' y1='117.2' x2='61.0' y2='101.6' stroke='var(--c4)' stroke-width='2'/><circle cx='58.5' cy='97.3' r='5' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.2'/><line x1='82.0' y1='114.0' x2='82.0' y2='96.0' stroke='var(--c4)' stroke-width='2'/><circle cx='82.0' cy='91.0' r='5' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.2'/><line x1='94.0' y1='117.2' x2='103.0' y2='101.6' stroke='var(--c4)' stroke-width='2'/><circle cx='105.5' cy='97.3' r='5' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.2'/><line x1='102.8' y1='126.0' x2='118.4' y2='117.0' stroke='var(--c4)' stroke-width='2'/><circle cx='122.7' cy='114.5' r='5' fill='var(--c1)' fill-opacity='0.5' stroke='var(--c1)' stroke-width='1.2'/><text x='146' y='112' font-size='13' fill='var(--ink)' text-anchor='start' font-weight='700'>micelle</text><text x='146' y='132' font-size='11' fill='var(--ink)' text-anchor='start'>tails inside the grease</text><text x='146' y='150' font-size='11' fill='var(--ink)' text-anchor='start'>heads face the water</text><text x='146' y='168' font-size='11' fill='var(--muted)' text-anchor='start'>dirt stays suspended,</text><text x='146' y='184' font-size='11' fill='var(--muted)' text-anchor='start'>rinses away</text></svg>",
+    "etk": {
+     "tur": "isaretle",
+     "soru": "Tap the parts of the soap molecule and the micelle.",
+     "noktalar": [
+      {
+       "x": 66,
+       "y": 26,
+       "ad": "Hydrophobic tail",
+       "acik": "The tail is a long hydrocarbon chain. It is nonpolar, so it loves grease, not water."
+      },
+      {
+       "x": 170,
+       "y": 31,
+       "ad": "Hydrophilic head",
+       "acik": "The head is the ionic −COO⁻ end. It interacts well with polar water molecules."
+      },
+      {
+       "x": 82,
+       "y": 123,
+       "ad": "Greasy dirt",
+       "acik": "Nonpolar grease does not dissolve in water. The soap's tails sink into the grease."
+      },
+      {
+       "x": 129,
+       "y": 138,
+       "ad": "Head facing water",
+       "acik": "Water molecules surround the heads on the micelle's surface. This keeps the dirt suspended in water."
+      },
+      {
+       "x": 296,
+       "y": 110,
+       "ad": "Water",
+       "acik": "A polar solvent. The micelles carrying dirt spread through the water and rinse away."
+      }
+     ]
+    },
+    "key": "The ionic head loves water (hydrophilic) and the hydrocarbon tail loves grease (hydrophobic). Soap is made from fat and NaOH (with glycerol as a byproduct)."
+   },
+   {
+    "h": "Hard water and limescale",
+    "p": "Hard water contains a lot of Ca²⁺ and Mg²⁺. Soap forms an insoluble scum with these ions and lathers poorly. When hard water is heated, CaCO₃ settles out, and this is how limescale forms in a kettle.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='22' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Ca(HCO₃)₂ → CaCO₃↓ + H₂O + CO₂</text><text x='160' y='38' font-size='10' fill='var(--muted)' text-anchor='middle'>heating temporary hard water deposits limescale</text><path d='M50 60 L50 150 Q50 160 60 160 L110 160 Q120 160 120 150 L120 60' fill='none' stroke='var(--ink)' stroke-width='1.8'/><rect x='51' y='95' width='68' height='64' rx='2' fill='var(--c1)' fill-opacity='0.15' stroke='none' stroke-width='1.5'/><text x='85' y='180' font-size='11' fill='var(--ink)' text-anchor='middle'>soft water + soap</text><path d='M200 60 L200 150 Q200 160 210 160 L260 160 Q270 160 270 150 L270 60' fill='none' stroke='var(--ink)' stroke-width='1.8'/><rect x='201' y='95' width='68' height='64' rx='2' fill='var(--c1)' fill-opacity='0.15' stroke='none' stroke-width='1.5'/><text x='235' y='180' font-size='11' fill='var(--ink)' text-anchor='middle'>hard water + soap</text><circle cx='58' cy='88' r='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><circle cx='72' cy='84' r='7' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><circle cx='86' cy='89' r='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><circle cx='64' cy='76' r='5' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><circle cx='80' cy='74' r='5' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><circle cx='94' cy='80' r='5' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><circle cx='72' cy='66' r='4' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.2'/><rect x='208' y='153' width='9' height='4' rx='1' fill='var(--muted)' fill-opacity='0.7'/><rect x='222' y='155' width='9' height='4' rx='1' fill='var(--muted)' fill-opacity='0.7'/><rect x='236' y='152' width='9' height='4' rx='1' fill='var(--muted)' fill-opacity='0.7'/><rect x='250' y='154' width='9' height='4' rx='1' fill='var(--muted)' fill-opacity='0.7'/><rect x='214' y='147' width='9' height='4' rx='1' fill='var(--muted)' fill-opacity='0.7'/><rect x='244' y='147' width='9' height='4' rx='1' fill='var(--muted)' fill-opacity='0.7'/><text x='235' y='118' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>Ca²⁺ Mg²⁺</text><text x='235' y='90' font-size='10' fill='var(--muted)' text-anchor='middle'>little lather</text><text x='85' y='196' font-size='10' fill='var(--muted)' text-anchor='middle'>lots of lather</text><text x='235' y='196' font-size='10' fill='var(--muted)' text-anchor='middle'>scum</text></svg>",
+    "key": "Temporary hardness from Ca(HCO₃)₂ goes away when you boil the water. Permanent hardness from CaSO₄ does not."
+   },
+   {
+    "h": "Soap or detergent?",
+    "p": "Detergents are synthetic cleaners made from petroleum, and their structure is similar to soap. They don't form scum with Ca²⁺ and Mg²⁺, so they <b>lather even in hard water</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='124' y='8' width='92' height='28' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='170' y='27' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Soap</text><rect x='222' y='8' width='92' height='28' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='268' y='27' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Detergent</text><rect x='6' y='46' width='308' height='34' rx='4' fill='var(--acc)' fill-opacity='0.08' stroke='none' stroke-width='1.5'/><text x='14' y='67' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Raw material</text><text x='170' y='67' font-size='12' fill='var(--ink)' text-anchor='middle'>fat + base</text><text x='268' y='67' font-size='12' fill='var(--ink)' text-anchor='middle'>from petroleum</text><text x='14' y='104' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Head group</text><text x='170' y='104' font-size='12' fill='var(--ink)' text-anchor='middle'>–COO⁻ Na⁺</text><text x='268' y='104' font-size='12' fill='var(--ink)' text-anchor='middle'>–SO₃⁻ Na⁺</text><rect x='6' y='120' width='308' height='34' rx='4' fill='var(--acc)' fill-opacity='0.08' stroke='none' stroke-width='1.5'/><text x='14' y='141' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>In hard water</text><text x='170' y='141' font-size='12' fill='var(--ink)' text-anchor='middle'>lathers poorly</text><text x='268' y='141' font-size='12' fill='var(--ink)' text-anchor='middle'>lathers</text><text x='14' y='178' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>In nature</text><text x='170' y='178' font-size='12' fill='var(--ink)' text-anchor='middle'>breaks down easily</text><text x='268' y='178' font-size='12' fill='var(--ink)' text-anchor='middle'>more slowly</text></svg>",
+    "key": "The head group of a detergent is −SO₃⁻. Soap breaks down more easily in nature. Detergents with phosphates can cause excess algae growth in lakes."
+   },
+   {
+    "h": "Never mix them",
+    "p": "When bleach mixes with acid, toxic <b>Cl₂</b> gas is released (NaOCl + 2HCl → NaCl + H₂O + Cl₂). When bleach mixes with an ammonia cleaner, toxic <b>chloramine</b> forms.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hery-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker></defs><rect x='8' y='14' width='84' height='44' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='50' y='33' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>Bleach</text><text x='50' y='49' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>NaOCl</text><text x='104' y='41' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>+</text><rect x='116' y='14' width='84' height='44' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='158' y='33' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>Muriatic acid</text><text x='158' y='49' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>HCl</text><line x1='206' y1='36' x2='234' y2='36' stroke='var(--c2)' stroke-width='2' marker-end='url(#hery-1)'/><rect x='238' y='14' width='76' height='44' rx='6' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)' stroke-width='1.5'/><text x='276' y='33' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>chlorine gas</text><text x='276' y='49' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>Cl₂</text><rect x='8' y='80' width='84' height='44' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='50' y='99' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>Bleach</text><text x='50' y='115' font-size='12' fill='var(--c1)' text-anchor='middle' font-weight='700'>NaOCl</text><text x='104' y='107' font-size='15' fill='var(--ink)' text-anchor='middle' font-weight='700'>+</text><rect x='116' y='80' width='84' height='44' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='158' y='99' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>Ammonia cleaner</text><text x='158' y='115' font-size='12' fill='var(--c4)' text-anchor='middle' font-weight='700'>NH₃</text><line x1='206' y1='102' x2='234' y2='102' stroke='var(--c2)' stroke-width='2' marker-end='url(#hery-1)'/><rect x='238' y='80' width='76' height='44' rx='6' fill='var(--c2)' fill-opacity='0.18' stroke='var(--c2)' stroke-width='1.5'/><text x='276' y='99' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>chloramine</text><text x='276' y='115' font-size='11' fill='var(--c2)' text-anchor='middle' font-weight='700'>gases</text><line x1='8' y1='140' x2='312' y2='140' stroke='var(--line)' stroke-width='1'/><text x='160' y='162' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>NaOCl + 2HCl → NaCl + H₂O + Cl₂</text><text x='160' y='186' font-size='11' fill='var(--c2)' text-anchor='middle'>Both are toxic: they burn the airways.</text></svg>",
+    "key": "Acidic limescale removers also release chlorine when mixed with bleach. Use cleaning products one at a time. If you notice a sharp chlorine smell, leave the room at once and open the windows."
+   },
+   {
+    "h": "From monomer to polymer",
+    "p": "A <b>polymer</b> is a giant molecule made by joining thousands of small <b>monomers</b>. Ethene gives polyethylene (bags), vinyl chloride gives PVC (pipes), and tetrafluoroethene gives Teflon.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hery-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker></defs><circle cx='22' cy='30' r='8' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1.5'/><circle cx='44' cy='30' r='8' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1.5'/><circle cx='66' cy='30' r='8' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1.5'/><circle cx='88' cy='30' r='8' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1.5'/><text x='55' y='58' font-size='11' fill='var(--muted)' text-anchor='middle'>monomers</text><line x1='118' y1='30' x2='150' y2='30' stroke='var(--ink)' stroke-width='2' marker-end='url(#hery-2)'/><line x1='160' y1='30' x2='306' y2='30' stroke='var(--c1)' stroke-width='2.5'/><circle cx='166' cy='30' r='8' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1.5'/><circle cx='188' cy='30' r='8' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1.5'/><circle cx='210' cy='30' r='8' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1.5'/><circle cx='232' cy='30' r='8' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1.5'/><circle cx='254' cy='30' r='8' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1.5'/><circle cx='276' cy='30' r='8' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1.5'/><circle cx='298' cy='30' r='8' fill='var(--c1)' fill-opacity='0.4' stroke='var(--c1)' stroke-width='1.5'/><text x='233' y='58' font-size='11' fill='var(--muted)' text-anchor='middle'>polymer (long chain)</text><text x='14' y='84' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>Monomer</text><text x='116' y='84' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>Polymer</text><text x='206' y='84' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>Where?</text><rect x='6' y='92' width='308' height='24' rx='4' fill='var(--acc)' fill-opacity='0.08' stroke='none' stroke-width='1.5'/><text x='14' y='108' font-size='11' fill='var(--ink)' text-anchor='start'>ethene</text><text x='116' y='108' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>polyethylene</text><text x='206' y='108' font-size='11' fill='var(--ink)' text-anchor='start'>bags, film</text><text x='14' y='134' font-size='11' fill='var(--ink)' text-anchor='start'>vinyl chloride</text><text x='116' y='134' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>PVC</text><text x='206' y='134' font-size='11' fill='var(--ink)' text-anchor='start'>pipes, cables</text><rect x='6' y='144' width='308' height='24' rx='4' fill='var(--acc)' fill-opacity='0.08' stroke='none' stroke-width='1.5'/><text x='14' y='160' font-size='11' fill='var(--ink)' text-anchor='start'>tetrafluoroethene</text><text x='116' y='160' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>Teflon</text><text x='206' y='160' font-size='11' fill='var(--ink)' text-anchor='start'>nonstick pan</text><text x='14' y='186' font-size='11' fill='var(--ink)' text-anchor='start'>two monomers</text><text x='116' y='186' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>PET</text><text x='206' y='186' font-size='11' fill='var(--ink)' text-anchor='start'>water bottle</text></svg>",
+    "key": "PET, which water bottles are made of, is made from two different monomers. Plastics are synthetic polymers. Starch, cellulose and proteins are natural polymers. You'll see the details in the Hydrocarbons topic."
+   },
+   {
+    "h": "Plastic codes and nature",
+    "p": "The number inside the triangle on a plastic shows its type. 1 is PET, 2 HDPE, 3 PVC, 5 PP and 6 PS. Plastics stay in nature for hundreds of years and break into <b>microplastics</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hery-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c2)'/></marker><marker id='hery-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--c3)'/></marker></defs><polygon points='24.0,10 7.0,40 41.0,40' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='24.0' y='35' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>1</text><text x='24.0' y='56' font-size='10' fill='var(--ink)' text-anchor='middle'>PET</text><polygon points='69.3,10 52.3,40 86.3,40' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='69.3' y='35' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>2</text><text x='69.3' y='56' font-size='10' fill='var(--ink)' text-anchor='middle'>HDPE</text><polygon points='114.6,10 97.6,40 131.6,40' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='114.6' y='35' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>3</text><text x='114.6' y='56' font-size='10' fill='var(--ink)' text-anchor='middle'>PVC</text><polygon points='159.9,10 142.9,40 176.9,40' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='159.9' y='35' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>4</text><text x='159.9' y='56' font-size='10' fill='var(--ink)' text-anchor='middle'>LDPE</text><polygon points='205.2,10 188.2,40 222.2,40' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='205.2' y='35' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>5</text><text x='205.2' y='56' font-size='10' fill='var(--ink)' text-anchor='middle'>PP</text><polygon points='250.5,10 233.5,40 267.5,40' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='250.5' y='35' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>6</text><text x='250.5' y='56' font-size='10' fill='var(--ink)' text-anchor='middle'>PS</text><polygon points='295.8,10 278.8,40 312.8,40' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='295.8' y='35' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>7</text><text x='295.8' y='56' font-size='10' fill='var(--ink)' text-anchor='middle'>Other</text><line x1='8' y1='68' x2='312' y2='68' stroke='var(--line)' stroke-width='1'/><rect x='8' y='78' width='90' height='40' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><text x='53' y='96' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>ordinary</text><text x='53' y='111' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>plastic</text><line x1='102' y1='98' x2='128' y2='98' stroke='var(--c2)' stroke-width='2' marker-end='url(#hery-3)'/><rect x='132' y='78' width='180' height='40' rx='6' fill='var(--panel)' stroke='var(--line)' stroke-width='1.5'/><text x='222' y='95' font-size='11' fill='var(--ink)' text-anchor='middle'>lasts hundreds of years,</text><text x='222' y='110' font-size='11' fill='var(--c2)' text-anchor='middle'>breaks into microplastics</text><rect x='8' y='134' width='90' height='40' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='53' y='152' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>biodegradable</text><text x='53' y='167' font-size='10' fill='var(--muted)' text-anchor='middle'>(e.g. PLA)</text><line x1='102' y1='154' x2='128' y2='154' stroke='var(--c3)' stroke-width='2' marker-end='url(#hery-4)'/><rect x='132' y='134' width='180' height='40' rx='6' fill='var(--panel)' stroke='var(--line)' stroke-width='1.5'/><text x='222' y='151' font-size='11' fill='var(--ink)' text-anchor='middle'>broken down by microorganisms</text><text x='222' y='166' font-size='10' fill='var(--muted)' text-anchor='middle'>(under proper composting)</text><text x='160' y='192' font-size='10' fill='var(--muted)' text-anchor='middle'>The number in the triangle shows the plastic type.</text></svg>",
+    "key": "4 is LDPE and 7 is other. The triangle does not guarantee that it will be recycled. Biodegradable plastics (such as PLA made from starch) are broken down by microorganisms under the right conditions.",
+    "once": {
+     "soru": "What happens to a plastic bottle thrown into the sea?",
+     "secenekler": [
+      {
+       "yazi": "It lasts for centuries",
+       "neden": "Plastic breaks down very slowly in nature. It crumbles into microplastics.",
+       "dogru": true
+      },
+      {
+       "yazi": "It rots in a few months",
+       "neden": "Microorganisms can't break down most plastics."
+      },
+      {
+       "yazi": "It dissolves in water",
+       "neden": "Plastics are nonpolar, so they don't dissolve in water."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Medicine: active ingredient and dose",
+    "p": "The substance that makes a medicine work is called the <b>active ingredient</b>. Too small a dose does nothing, and too much is poisonous. Antibiotics act on bacteria, not on viruses.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hery-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--muted)'/></marker></defs><rect x='34' y='24' width='180' height='40' rx='0' fill='var(--c2)' fill-opacity='0.12' stroke='none' stroke-width='1.5'/><rect x='34' y='64' width='180' height='60' rx='0' fill='var(--c3)' fill-opacity='0.15' stroke='none' stroke-width='1.5'/><line x1='34' y1='24' x2='34' y2='170' stroke='var(--ink)' stroke-width='1.5'/><line x1='34' y1='170' x2='220' y2='170' stroke='var(--ink)' stroke-width='1.5'/><path d='M34 170 Q46 80 62 82 Q82 86 100 110 L104 112 Q116 76 128 78 Q148 82 166 108 L170 110 Q182 74 194 76 Q206 78 214 86' fill='none' stroke='var(--c1)' stroke-width='2.5'/><path d='M104 112 Q118 40 132 44 Q150 48 166 70' fill='none' stroke='var(--c2)' stroke-width='2' stroke-dasharray='5 4'/><line x1='36' y1='192' x2='36' y2='178' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#hery-5)'/><line x1='104' y1='192' x2='104' y2='178' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#hery-5)'/><line x1='170' y1='192' x2='170' y2='178' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#hery-5)'/><text x='44' y='190' font-size='10' fill='var(--muted)' text-anchor='start'>1st dose</text><text x='112' y='190' font-size='10' fill='var(--muted)' text-anchor='start'>2nd dose</text><text x='178' y='190' font-size='10' fill='var(--muted)' text-anchor='start'>3rd dose</text><text x='150' y='38' font-size='10' fill='var(--c2)' text-anchor='start'>double dose</text><text x='222' y='40' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>toxic</text><text x='222' y='90' font-size='11' fill='var(--c3)' text-anchor='start' font-weight='700'>therapeutic</text><text x='222' y='104' font-size='11' fill='var(--c3)' text-anchor='start' font-weight='700'>range</text><text x='222' y='150' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>ineffective</text><text x='40' y='16' font-size='10' fill='var(--muted)' text-anchor='start'>amount of drug in blood</text><text x='280' y='184' font-size='10' fill='var(--muted)' text-anchor='middle'>time →</text></svg>",
+    "key": "The same active ingredient can be sold under different brand names. If antibiotics are misused or stopped early, resistant bacteria multiply. So take an antibiotic for as long as the doctor says.",
+    "once": {
+     "soru": "What happens if someone with the flu takes an antibiotic?",
+     "secenekler": [
+      {
+       "yazi": "No effect on the flu",
+       "neden": "The flu is a viral disease, and antibiotics act only on bacteria. Unnecessary use leads to resistance.",
+       "dogru": true
+      },
+      {
+       "yazi": "Faster recovery",
+       "neden": "Antibiotics don't kill viruses."
+      },
+      {
+       "yazi": "No more flu ever",
+       "neden": "An antibiotic gives no immunity, because it is not a vaccine."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Food spoilage and E numbers",
+    "p": "Food spoils because of microorganisms, enzymes and oxygen. Cooling, drying, salting and pasteurization slow spoilage down. Additives are listed on the label with <b>E numbers</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='14' y='20' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>Code</text><text x='104' y='20' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>Group</text><text x='214' y='20' font-size='11' fill='var(--muted)' text-anchor='start' font-weight='700'>Example</text><rect x='6' y='28' width='308' height='26' rx='4' fill='var(--acc)' fill-opacity='0.08' stroke='none' stroke-width='1.5'/><text x='14' y='45' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>E100–E199</text><text x='104' y='45' font-size='11' fill='var(--ink)' text-anchor='start'>color</text><text x='214' y='45' font-size='11' fill='var(--ink)' text-anchor='start'>curcumin</text><text x='14' y='73' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>E200–E299</text><text x='104' y='73' font-size='11' fill='var(--ink)' text-anchor='start'>preservative</text><text x='214' y='73' font-size='11' fill='var(--ink)' text-anchor='start'>sodium benzoate</text><rect x='6' y='84' width='308' height='26' rx='4' fill='var(--acc)' fill-opacity='0.08' stroke='none' stroke-width='1.5'/><text x='14' y='101' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>E300–E399</text><text x='104' y='101' font-size='11' fill='var(--ink)' text-anchor='start'>antioxidant</text><text x='214' y='101' font-size='11' fill='var(--ink)' text-anchor='start'>vitamin C</text><text x='14' y='129' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>E400–E499</text><text x='104' y='129' font-size='11' fill='var(--ink)' text-anchor='start'>thickener</text><text x='214' y='129' font-size='11' fill='var(--ink)' text-anchor='start'>xanthan gum</text><rect x='6' y='140' width='308' height='26' rx='4' fill='var(--acc)' fill-opacity='0.08' stroke='none' stroke-width='1.5'/><text x='14' y='157' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>E600–E699</text><text x='104' y='157' font-size='11' fill='var(--ink)' text-anchor='start'>flavor enhancer</text><text x='214' y='157' font-size='11' fill='var(--ink)' text-anchor='start'>MSG (E621)</text><text x='14' y='185' font-size='12' fill='var(--acc)' text-anchor='start' font-weight='700'>E950–E969</text><text x='104' y='185' font-size='11' fill='var(--ink)' text-anchor='start'>sweetener</text><text x='214' y='185' font-size='11' fill='var(--ink)' text-anchor='start'>aspartame</text></svg>",
+    "key": "Fats go rancid when they oxidize. Preservatives, colors and antioxidants are all additives. An E number shows that an additive is permitted. But it doesn't mean you can eat unlimited amounts.",
+    "once": {
+     "soru": "How does salt in brine keep food from spoiling?",
+     "secenekler": [
+      {
+       "yazi": "It draws water from microbes",
+       "neden": "Concentrated salt draws water out of microorganisms by osmosis. So the microorganisms can't multiply.",
+       "dogru": true
+      },
+      {
+       "yazi": "It heats the food",
+       "neden": "Salt does not produce heat."
+      },
+      {
+       "yazi": "It adds oxygen",
+       "neden": "Oxygen speeds up spoilage, and salt does not add oxygen."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Reading the label",
+    "p": "The values on a nutrition label are usually per <b>100 g</b>. The <b>use-by date</b> is a safety limit, and the <b>best-before date</b> is about quality.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='8' y='8' width='168' height='186' rx='4' fill='var(--panel)' stroke='var(--ink)' stroke-width='1.8'/><text x='16' y='26' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Nutrition / 100 g</text><line x1='14' y1='33' x2='170' y2='33' stroke='var(--ink)' stroke-width='2'/><text x='16' y='52' font-size='11' fill='var(--ink)' text-anchor='start'>Energy</text><text x='168' y='52' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>480 kcal</text><line x1='14' y1='59' x2='170' y2='59' stroke='var(--line)' stroke-width='1'/><text x='16' y='73' font-size='11' fill='var(--ink)' text-anchor='start'>Fat</text><text x='168' y='73' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>20 g</text><line x1='14' y1='80' x2='170' y2='80' stroke='var(--line)' stroke-width='1'/><text x='28' y='94' font-size='11' fill='var(--muted)' text-anchor='start'>saturated fat</text><text x='168' y='94' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>9 g</text><line x1='14' y1='101' x2='170' y2='101' stroke='var(--line)' stroke-width='1'/><text x='16' y='115' font-size='11' fill='var(--ink)' text-anchor='start'>Carbohydrate</text><text x='168' y='115' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>68 g</text><line x1='14' y1='122' x2='170' y2='122' stroke='var(--line)' stroke-width='1'/><text x='28' y='136' font-size='11' fill='var(--muted)' text-anchor='start'>sugars</text><text x='168' y='136' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>25 g</text><line x1='14' y1='143' x2='170' y2='143' stroke='var(--line)' stroke-width='1'/><text x='16' y='157' font-size='11' fill='var(--ink)' text-anchor='start'>Protein</text><text x='168' y='157' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>7 g</text><line x1='14' y1='164' x2='170' y2='164' stroke='var(--line)' stroke-width='1'/><text x='16' y='178' font-size='11' fill='var(--ink)' text-anchor='start'>Salt</text><text x='168' y='178' font-size='11' fill='var(--ink)' text-anchor='end' font-weight='700'>0.8 g</text><rect x='186' y='8' width='126' height='56' rx='6' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.5'/><text x='249' y='28' font-size='13' fill='var(--c2)' text-anchor='middle' font-weight='700'>Use by</text><text x='249' y='46' font-size='10' fill='var(--ink)' text-anchor='middle'>use-by date</text><text x='249' y='58' font-size='10' fill='var(--muted)' text-anchor='middle'>safety limit</text><rect x='186' y='72' width='126' height='56' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.5'/><text x='249' y='92' font-size='13' fill='var(--c4)' text-anchor='middle' font-weight='700'>Best before</text><text x='249' y='110' font-size='10' fill='var(--ink)' text-anchor='middle'>best-before date</text><text x='249' y='122' font-size='10' fill='var(--muted)' text-anchor='middle'>quality limit</text><rect x='186' y='136' width='126' height='58' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.5'/><text x='249' y='156' font-size='13' fill='var(--c5)' text-anchor='middle' font-weight='700'>Cosmetics</text><text x='249' y='174' font-size='10' fill='var(--ink)' text-anchor='middle'>ingredient list</text><text x='249' y='186' font-size='10' fill='var(--muted)' text-anchor='middle'>from most to least</text></svg>",
+    "key": "The label lists energy, fat, saturated fat, carbohydrate, sugars, protein and salt. If you eat the whole pack, do the math for the pack's mass. On cosmetics, the ingredients are listed from most to least."
+   },
+   {
+    "h": "Farm chemicals",
+    "p": "Fertilizer gives plants nitrogen, phosphorus and potassium. Pesticides kill pests. Insecticides are used against insects, herbicides against weeds and fungicides against fungi. Too much fertilizer causes <b>eutrophication</b> in lakes.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hery-6' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--ink)'/></marker><marker id='hery-7' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='5' markerHeight='5' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--muted)'/></marker></defs><rect x='8' y='14' width='92' height='44' rx='6' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='54' y='33' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>excess fertilizer</text><text x='54' y='49' font-size='11' fill='var(--ink)' text-anchor='middle'>N, P</text><rect x='114' y='14' width='92' height='44' rx='6' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='160' y='33' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>rain carries it</text><text x='160' y='49' font-size='11' fill='var(--ink)' text-anchor='middle'>into the lake</text><rect x='220' y='14' width='92' height='44' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='266' y='33' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>too much algae</text><text x='266' y='49' font-size='11' fill='var(--ink)' text-anchor='middle'>and plants</text><rect x='220' y='78' width='92' height='44' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><text x='266' y='97' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>O₂ in water</text><text x='266' y='113' font-size='11' fill='var(--ink)' text-anchor='middle'>drops</text><rect x='114' y='78' width='92' height='44' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><text x='160' y='97' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>fish</text><text x='160' y='113' font-size='11' fill='var(--ink)' text-anchor='middle'>die</text><line x1='102' y1='36' x2='112' y2='36' stroke='var(--ink)' stroke-width='1.8' marker-end='url(#hery-6)'/><line x1='208' y1='36' x2='218' y2='36' stroke='var(--ink)' stroke-width='1.8' marker-end='url(#hery-6)'/><line x1='266' y1='60' x2='266' y2='76' stroke='var(--ink)' stroke-width='1.8' marker-end='url(#hery-6)'/><line x1='218' y1='100' x2='208' y2='100' stroke='var(--ink)' stroke-width='1.8' marker-end='url(#hery-6)'/><text x='8' y='96' font-size='12' fill='var(--c4)' text-anchor='start' font-weight='700'>eutrophication</text><line x1='8' y1='134' x2='312' y2='134' stroke='var(--line)' stroke-width='1'/><text x='160' y='150' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>pesticides build up along the food chain</text><circle cx='40' cy='170' r='3' fill='var(--c5)' fill-opacity='0.4' stroke='var(--c5)' stroke-width='1.5'/><text x='40' y='194' font-size='10' fill='var(--muted)' text-anchor='middle'>plankton</text><line x1='49' y1='170' x2='108' y2='170' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#hery-7)'/><circle cx='120' cy='170' r='5' fill='var(--c5)' fill-opacity='0.4' stroke='var(--c5)' stroke-width='1.5'/><text x='120' y='194' font-size='10' fill='var(--muted)' text-anchor='middle'>small fish</text><line x1='131' y1='170' x2='188' y2='170' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#hery-7)'/><circle cx='200' cy='170' r='7' fill='var(--c5)' fill-opacity='0.4' stroke='var(--c5)' stroke-width='1.5'/><text x='200' y='194' font-size='10' fill='var(--muted)' text-anchor='middle'>large fish</text><line x1='213' y1='170' x2='268' y2='170' stroke='var(--muted)' stroke-width='1.5' marker-end='url(#hery-7)'/><circle cx='280' cy='170' r='9' fill='var(--c5)' fill-opacity='0.4' stroke='var(--c5)' stroke-width='1.5'/><text x='280' y='194' font-size='10' fill='var(--muted)' text-anchor='middle'>bird</text></svg>",
+    "key": "Persistent pesticides such as DDT build up as they move up the food chain. Predators are affected the most.",
+    "once": {
+     "soru": "Rain carries excess fertilizer from a field into a lake. What happens in the lake?",
+     "secenekler": [
+      {
+       "yazi": "Algae grow out of control",
+       "neden": "Fertilizer feeds the algae too. As the algae rot, the oxygen in the water drops and the fish die.",
+       "dogru": true
+      },
+      {
+       "yazi": "The water gets cleaner",
+       "neden": "Fertilizer pollutes the water, and the excess nutrients upset the balance."
+      },
+      {
+       "yazi": "The fish multiply",
+       "neden": "The oxygen drops, so the fish die."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Check the pH when choosing a product",
+    "p": "<b>Limescale</b> is a basic deposit, and an acidic product (vinegar) dissolves it. <b>Greasy dirt</b> comes off with a basic product (soap, baking soda). Never put acid on marble or strong base on aluminum.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='20' y='92' width='20' height='16' fill='var(--c2)' fill-opacity='0.88'/><rect x='40' y='92' width='20' height='16' fill='var(--c2)' fill-opacity='0.79'/><rect x='60' y='92' width='20' height='16' fill='var(--c2)' fill-opacity='0.70'/><rect x='80' y='92' width='20' height='16' fill='var(--c2)' fill-opacity='0.61'/><rect x='100' y='92' width='20' height='16' fill='var(--c2)' fill-opacity='0.52'/><rect x='120' y='92' width='20' height='16' fill='var(--c2)' fill-opacity='0.43'/><rect x='140' y='92' width='20' height='16' fill='var(--c3)' fill-opacity='0.34'/><rect x='160' y='92' width='20' height='16' fill='var(--c3)' fill-opacity='0.25'/><rect x='180' y='92' width='20' height='16' fill='var(--c5)' fill-opacity='0.34'/><rect x='200' y='92' width='20' height='16' fill='var(--c5)' fill-opacity='0.43'/><rect x='220' y='92' width='20' height='16' fill='var(--c5)' fill-opacity='0.52'/><rect x='240' y='92' width='20' height='16' fill='var(--c5)' fill-opacity='0.61'/><rect x='260' y='92' width='20' height='16' fill='var(--c5)' fill-opacity='0.70'/><rect x='280' y='92' width='20' height='16' fill='var(--c5)' fill-opacity='0.79'/><text x='20' y='124' font-size='10' fill='var(--muted)' text-anchor='middle'>0</text><text x='60' y='124' font-size='10' fill='var(--muted)' text-anchor='middle'>2</text><text x='100' y='124' font-size='10' fill='var(--muted)' text-anchor='middle'>4</text><text x='140' y='124' font-size='10' fill='var(--muted)' text-anchor='middle'>6</text><text x='160' y='124' font-size='10' fill='var(--muted)' text-anchor='middle'>7</text><text x='260' y='124' font-size='10' fill='var(--muted)' text-anchor='middle'>12</text><text x='300' y='124' font-size='10' fill='var(--muted)' text-anchor='middle'>14</text><text x='20' y='84' font-size='11' fill='var(--c2)' text-anchor='start' font-weight='700'>acidic</text><text x='300' y='84' font-size='11' fill='var(--c5)' text-anchor='end' font-weight='700'>basic</text><line x1='60' y1='88' x2='60' y2='70' stroke='var(--muted)'/><line x1='80' y1='88' x2='80' y2='70' stroke='var(--muted)'/><line x1='130.0' y1='88' x2='130.0' y2='70' stroke='var(--muted)'/><text x='60' y='62' font-size='11' fill='var(--ink)' text-anchor='middle'>citric acid</text><text x='80' y='44' font-size='11' fill='var(--ink)' text-anchor='middle'>vinegar</text><text x='130.0' y='62' font-size='11' fill='var(--ink)' text-anchor='middle'>skin care</text><line x1='190.0' y1='110' x2='190.0' y2='134' stroke='var(--muted)'/><line x1='220' y1='110' x2='220' y2='134' stroke='var(--muted)'/><line x1='280' y1='110' x2='280' y2='134' stroke='var(--muted)'/><text x='190.0' y='148' font-size='11' fill='var(--ink)' text-anchor='middle'>baking soda</text><text x='220' y='164' font-size='11' fill='var(--ink)' text-anchor='middle'>soap</text><text x='280' y='148' font-size='11' fill='var(--ink)' text-anchor='middle'>drain cleaner</text><rect x='6' y='172' width='308' height='24' rx='6' fill='var(--panel)'/><text x='160' y='188' font-size='11.5' fill='var(--ink)' text-anchor='middle' font-weight='700'>limescale → acidic product · grease → basic product</text></svg>",
+    "key": "Skin care products have a pH close to 5.5. A stronger product is not a better one. Choose the mildest product that does the job.",
+    "once": {
+     "soru": "Which removes limescale stains in the shower most easily?",
+     "secenekler": [
+      {
+       "yazi": "Vinegar",
+       "neden": "Limescale is CaCO₃, and the acid in vinegar dissolves it.",
+       "dogru": true
+      },
+      {
+       "yazi": "Soap",
+       "neden": "Soap is basic. It removes greasy dirt, but it does not dissolve limescale."
+      },
+      {
+       "yazi": "Baking soda",
+       "neden": "Baking soda is basic too, and it does not dissolve limescale."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• Soap is a fatty acid salt, and it carries dirt into water by forming micelles.<br>• In hard water soap forms scum, but detergent lathers.<br>• Never mix bleach with acidic or ammonia cleaners.<br>• Plastic is a polymer and lasts a long time in nature.<br>• Watch the dose of medicines and read food labels.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='10' width='146' height='54' rx='8' fill='var(--c1)' fill-opacity='0.15' stroke='var(--c1)' stroke-width='1.5'/><text x='83' y='33' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Cleaning</text><text x='83' y='51' font-size='11' fill='var(--muted)' text-anchor='middle'>never mix</text><rect x='164' y='10' width='146' height='54' rx='8' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='237' y='33' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Soap</text><text x='237' y='51' font-size='11' fill='var(--muted)' text-anchor='middle'>micelles carry dirt</text><rect x='10' y='72' width='146' height='54' rx='8' fill='var(--c4)' fill-opacity='0.15' stroke='var(--c4)' stroke-width='1.5'/><text x='83' y='95' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Plastic</text><text x='83' y='113' font-size='11' fill='var(--muted)' text-anchor='middle'>check the code, sort it</text><rect x='164' y='72' width='146' height='54' rx='8' fill='var(--c5)' fill-opacity='0.15' stroke='var(--c5)' stroke-width='1.5'/><text x='237' y='95' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Medicine</text><text x='237' y='113' font-size='11' fill='var(--muted)' text-anchor='middle'>follow the dose</text><rect x='10' y='134' width='146' height='54' rx='8' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><text x='83' y='157' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Food</text><text x='83' y='175' font-size='11' fill='var(--muted)' text-anchor='middle'>read the label</text><rect x='164' y='134' width='146' height='54' rx='8' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><text x='237' y='157' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Farming</text><text x='237' y='175' font-size='11' fill='var(--muted)' text-anchor='middle'>use in moderation</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "eslestir",
+    "q": "Match each farm chemical to its job.",
+    "ciftler": [
+     [
+      "Insecticide",
+      "Kills insects"
+     ],
+     [
+      "Herbicide",
+      "Kills weeds"
+     ],
+     [
+      "Fungicide",
+      "Kills fungi"
+     ],
+     [
+      "Fertilizer",
+      "Gives plants N, P, K"
+     ]
+    ],
+    "e": "Insecticides, herbicides and fungicides are pesticides used against insects, weeds and fungi. Fertilizer doesn't kill pests. It gives plants nitrogen, phosphorus and potassium."
+   },
+   {
+    "tur": "ayir",
+    "q": "Sort each property under soap or detergent.",
+    "gruplar": [
+     "Soap",
+     "Detergent"
+    ],
+    "ogeler": [
+     [
+      "A fatty acid salt",
+      0
+     ],
+     [
+      "Forms scum in hard water",
+      0
+     ],
+     [
+      "Breaks down more easily",
+      0
+     ],
+     [
+      "Made from petroleum",
+      1
+     ],
+     [
+      "Lathers in hard water too",
+      1
+     ],
+     [
+      "May contain phosphate",
+      1
+     ]
+    ],
+    "e": "Soap is the Na or K salt of a fatty acid. It forms scum with Ca²⁺ and Mg²⁺ and breaks down more easily in nature. Detergent is a synthetic substance made from petroleum, and it lathers in hard water too. Detergents with added phosphate can cause algae growth in lakes."
+   },
+   {
+    "tur": "sayi",
+    "q": "A bag of chips says 0.8 g of salt per 100 g. If you eat the whole 30 g bag, how many grams of salt do you get?",
+    "cevap": 0.24,
+    "tolerans": 0.005,
+    "birim": "g",
+    "e": "The values on the label are per 100 g. So 0.8 × 30 / 100 = 0.24 g of salt."
+   },
+   {
+    "q": "Someone mixes bleach with an ammonia glass cleaner to clean the windows. What happens?",
+    "o": [
+     "Toxic chloramine gases form",
+     "A stronger, safe cleaner forms",
+     "They neutralize to salt and water",
+     "No reaction, they just dilute"
+    ],
+    "a": 0,
+    "e": "Hypochlorite reacts with ammonia and forms chloramine gases that burn the airways. Never mix bleach with acid or with ammonia.",
+    "y": [
+     "",
+     "Mixing two cleaners doesn't clean better. Together these two produce a toxic gas.",
+     "Ammonia is a weak base and bleach is basic too. What happens here is not neutralization but chloramine formation.",
+     "NaOCl reacts with ammonia and releases toxic chloramine."
     ]
    }
   ]

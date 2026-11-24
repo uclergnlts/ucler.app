@@ -10646,6 +10646,306 @@
   ],
   "soruOnce": true
  },
+ "gazlar": {
+  "id": "gazlar",
+  "ders": "kimya",
+  "konu": "gazlar",
+  "baslik": "Gases",
+  "ozet": "Try it first, then learn its name. Push the piston, heat the gas, add moles and discover the laws yourself.",
+  "adimlar": [
+   {
+    "baslik": "Boyle: compress",
+    "metin": "With temperature and moles constant, push the piston to reduce the volume. The particles will hit the walls more often. Make the pressure <b>2 atm</b>.",
+    "sahne": {
+     "tur": "kim7-boyle"
+    },
+    "deger": {
+     "V": 4
+    },
+    "kontroller": [
+     {
+      "ad": "V",
+      "etiket": "Volume",
+      "min": 1,
+      "max": 8,
+      "birim": "L",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "V": 2
+     },
+     "tamam": "When the volume was halved, the pressure doubled, and P·V always stayed 4. This is called <b>Boyle's law</b>, written P₁·V₁ = P₂·V₂."
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Charles: heat",
+    "metin": "Now the pressure is constant and the piston is free. The gas at 27 °C has a volume of 6 L. Heat the gas and make its volume <b>8 L</b>. Also look at the temperature in kelvins.",
+    "sahne": {
+     "tur": "kim7-charles"
+    },
+    "deger": {
+     "t": 27
+    },
+    "kontroller": [
+     {
+      "ad": "t",
+      "etiket": "Temperature",
+      "min": -73,
+      "max": 327,
+      "adim": 50,
+      "birim": "°C",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "t": 127
+     },
+     "tamam": "To raise the volume from 6 L to 8 L, that is by 4/3, the kelvin temperature must also go up by 4/3. It goes from 300 K to 400 K, or 127 °C. This is called <b>Charles's law</b>, written V₁/T₁ = V₂/T₂."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Gay-Lussac: closed container",
+    "metin": "This time the container is closed and its volume doesn't change. The gas inside is at 27 °C and 1 atm. We'll heat the container to 327 °C.",
+    "sahne": {
+     "tur": "kim7-gay-lussac",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to the pressure when the gas is heated to 327 °C?",
+     "secenekler": [
+      {
+       "yazi": "It stays the same",
+       "neden": "The volume is constant, but the particles speed up and hit the walls more often and harder."
+      },
+      {
+       "yazi": "It becomes 2 atm",
+       "neden": "The kelvin temperature went from 300 K to 600 K, so it doubled. At constant volume, pressure is directly proportional to kelvin temperature (P₁/T₁ = P₂/T₂). That's why you never throw a spray can into a fire.",
+       "dogru": true
+      },
+      {
+       "yazi": "It becomes 12 atm",
+       "neden": "Going from 27 to 327 looks like a 12-fold increase. But in gas calculations temperature is always in kelvins, and it goes from 300 K to 600 K."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Gas lab",
+    "metin": "The piston container holds 1 mol of gas at 27 °C, 24.6 L and 1 atm. Change the volume, temperature and moles, and the particles and pressure change instantly. Find three ways to double the pressure.",
+    "sahne": {
+     "tur": "sim-gaz"
+    },
+    "deger": {
+     "V": 24.6,
+     "T": 27,
+     "n": 1
+    },
+    "kontroller": [
+     {
+      "ad": "V",
+      "etiket": "Volume",
+      "min": 5,
+      "max": 25,
+      "adim": 0.1,
+      "birim": "L"
+     },
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": -73,
+      "max": 327,
+      "birim": "°C"
+     },
+     {
+      "ad": "n",
+      "etiket": "Moles",
+      "min": 0.5,
+      "max": 2,
+      "adim": 0.5,
+      "birim": "mol",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "kesfet",
+     "bulgular": [
+      {
+       "yazi": "Make the pressure <b>2 atm</b> without changing the temperature or the moles.",
+       "hedef": {
+        "P": [
+         1.95,
+         2.05
+        ],
+        "T": 27,
+        "n": 1
+       },
+       "coz": [
+        {
+         "T": 27,
+         "n": 1,
+         "V": 12.3
+        }
+       ],
+       "tamam": "You halved the volume (12.3 L) and the pressure doubled. P·V stayed constant, which is <b>Boyle's</b> law. The particles hit the walls more often."
+      },
+      {
+       "yazi": "Keep the volume at 24.6 L and heat the gas to <b>327 °C</b>. What is the pressure now?",
+       "hedef": {
+        "V": [
+         24.5,
+         24.7
+        ],
+        "T": 327,
+        "n": 1
+       },
+       "coz": [
+        {
+         "n": 1,
+         "V": 24.6,
+         "T": 327
+        }
+       ],
+       "tamam": "The temperature went from 300 K to 600 K. When the kelvin temperature doubled, the pressure doubled too, which is <b>Gay-Lussac's</b> law. The Celsius value went from 27 to 327, 12 times larger, but calculations use kelvins."
+      },
+      {
+       "yazi": "Find a <b>third way</b> to make the pressure 2 atm at 27 °C and 24.6 L.",
+       "hedef": {
+        "V": [
+         24.5,
+         24.7
+        ],
+        "T": 27,
+        "n": 2
+       },
+       "coz": [
+        {
+         "V": 24.6,
+         "T": 27,
+         "n": 2
+        }
+       ],
+       "tamam": "You made the moles 2. With twice as many particles in the same volume, there were twice as many hits on the walls. All three laws are contained in <b>P·V = n·R·T</b>."
+      }
+     ]
+    },
+    "kart": 8
+   },
+   {
+    "baslik": "What are the particles doing?",
+    "metin": "Change the temperature and watch how the arrows and bars change.",
+    "sahne": {
+     "tur": "kim7-kinetik"
+    },
+    "deger": {
+     "T": 300
+    },
+    "kontroller": [
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": 100,
+      "max": 600,
+      "adim": 100,
+      "birim": "K",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "If the absolute temperature rises from 300 K to 600 K, what happens to the average kinetic energy?",
+     "secenekler": [
+      {
+       "yazi": "It becomes 4 times larger",
+       "neden": "Kinetic energy is proportional to the temperature itself, not its square. Four times would need 1200 K."
+      },
+      {
+       "yazi": "It stays the same",
+       "neden": "Kinetic energy depends only on absolute temperature. When the temperature changes, it changes too."
+      },
+      {
+       "yazi": "It doubles",
+       "neden": "Average kinetic energy is directly proportional to absolute temperature. Speed grows with √T, so at 600 K it is about 1.41 times larger.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Graham: which is faster?",
+    "metin": "Put cotton soaked in NH₃ at one end of a glass tube and cotton soaked in HCl at the other. Where the two gases meet, they form white NH₄Cl smoke.",
+    "sahne": {
+     "tur": "kim7-graham",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Where does the white ring form?",
+     "secenekler": [
+      {
+       "yazi": "Right in the middle",
+       "neden": "For the ring to form in the middle, the two gases would have to spread at the same rate. But their molar masses differ."
+      },
+      {
+       "yazi": "Near the HCl end",
+       "neden": "A light gas spreads faster, and r₁/r₂ = √(M₂/M₁). NH₃ (17 g/mol) is about 1.47 times faster than HCl (36.5 g/mol) and covers 59% of the way. This is called <b>Graham's law</b>.",
+       "dogru": true
+      },
+      {
+       "yazi": "Near the NH₃ end",
+       "neden": "That would mean HCl is faster. But HCl is heavier."
+      }
+     ]
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Dalton: partial pressure",
+    "metin": "Each gas in a mixture exerts its own pressure. The container holds 2 mol of N₂ at a pressure of 1 atm. Add O₂ and make the O₂ pressure half of the total.",
+    "sahne": {
+     "tur": "kim7-dalton"
+    },
+    "deger": {
+     "o": 0
+    },
+    "kontroller": [
+     {
+      "ad": "o",
+      "etiket": "O₂",
+      "min": 0,
+      "max": 4,
+      "birim": "mol",
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "o": 2
+     },
+     "tamam": "2 mol of O₂ also exerts 1 atm, and the total pressure becomes 1 + 1 = 2 atm. Partial pressure is proportional to mole fraction, so P(O₂) = X(O₂) · P(total) = ½ · 2 = 1 atm. This is called <b>Dalton's law</b>, written P(total) = P(A) + P(B)."
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "In gas calculations temperature is always in <b>kelvins</b>, found from T = t + 273.",
+   "By <b>Boyle's</b> law, P·V is constant. By <b>Charles's</b> law V, and by <b>Gay-Lussac's</b> law P, is directly proportional to temperature. By <b>Avogadro's</b> law, V is proportional to moles.",
+   "All these laws combine into <b>P·V = n·R·T</b>, with R = 0.082 L·atm/(mol·K).",
+   "Average kinetic energy depends only on absolute temperature. By <b>Graham's</b> law a light gas spreads faster, and the rate is inversely proportional to √M.",
+   "By <b>Dalton's</b> law, the total pressure of a mixture is the sum of the partial pressures. Each gas's partial pressure is proportional to its mole fraction."
+  ],
+  "soruOnce": true
+ },
  "asit-baz": {
   "id": "asit-baz",
   "ders": "kimya",
@@ -10943,6 +11243,211 @@
    "Strong acids ionize completely, weak acids only partly. Strong and concentrated are not the same thing.",
    "An acid and a base form a salt and water. A salt solution is not always neutral. A buffer keeps pH changes small.",
    "Active metals form a salt and H₂ with acids. Cu, Ag and Au give no H₂ with HCl."
+  ],
+  "soruOnce": true
+ },
+ "kimya-her-yerde": {
+  "id": "kimya-her-yerde",
+  "ders": "kimya",
+  "konu": "kimya-her-yerde",
+  "baslik": "Chemistry everywhere",
+  "ozet": "Try it first, then learn its name. Test soap, hard water, plastics and labels yourself.",
+  "adimlar": [
+   {
+    "baslik": "How does soap clean?",
+    "metin": "Greasy dirt doesn't dissolve in water. One end of a soap molecule loves water and the other loves grease. <b>Add soap</b> to the water and watch how the molecules surround the grease drop.",
+    "sahne": {
+     "tur": "kim7-misel"
+    },
+    "deger": {
+     "s": 0
+    },
+    "kontroller": [
+     {
+      "ad": "s",
+      "etiket": "Add soap",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which part of the soap molecule sinks into the greasy dirt?",
+     "secenekler": [
+      {
+       "yazi": "The ionic head",
+       "neden": "The head loves water (hydrophilic). So when a micelle forms, the heads stay outside and face the water."
+      },
+      {
+       "yazi": "The hydrocarbon tail",
+       "neden": "The tail loves grease (hydrophobic) and sinks into the dirt. The head stays outside and faces the water.",
+       "dogru": true
+      },
+      {
+       "yazi": "The whole molecule",
+       "neden": "The two ends of the molecule behave differently. One loves water and the other loves grease. That is what makes soap useful."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Limescale in the kettle",
+    "metin": "When hard water is heated, CaCO₃ settles at the bottom of the kettle. This is the limescale you know.",
+    "sahne": {
+     "tur": "kim7-kirec",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens if you put vinegar in a kettle with limescale?",
+     "secenekler": [
+      {
+       "yazi": "The scale gets thicker",
+       "neden": "Vinegar doesn't leave scale. On the contrary, the acid in vinegar reacts with the scale."
+      },
+      {
+       "yazi": "Nothing happens",
+       "neden": "Vinegar is an acid (acetic acid) and limescale is a carbonate. These two react."
+      },
+      {
+       "yazi": "The scale fizzes and dissolves",
+       "neden": "CaCO₃ dissolves in acid, forming a soluble salt, water and CO₂ gas. That is why descalers are acidic.",
+       "dogru": true
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Hard water",
+    "metin": "This water contains a lot of Ca²⁺ and Mg²⁺, and the soap lathers poorly. Change the cleaner and get lots of lather in hard water.",
+    "sahne": {
+     "tur": "kim7-sert-su"
+    },
+    "deger": {
+     "sert": 1,
+     "d": 0
+    },
+    "kontroller": [
+     {
+      "ad": "sert",
+      "etiket": "Hard water",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     },
+     {
+      "ad": "d",
+      "etiket": "Use detergent",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "sert": 1,
+      "d": 1
+     },
+     "ipucu": "Keep the water hard. Change only the cleaner.",
+     "tamam": "Synthetic <b>detergent</b> doesn't form scum with Ca²⁺ and Mg²⁺, so it lathers in hard water too."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Never mix them",
+    "metin": "You might think of mixing two cleaners to clean the bathroom better. What happens when bleach (NaOCl) and muriatic acid (HCl) mix?",
+    "sahne": {
+     "tur": "kim7-karistir",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens if you mix bleach and muriatic acid?",
+     "secenekler": [
+      {
+       "yazi": "A toxic gas is released",
+       "neden": "NaOCl and HCl react and release toxic Cl₂ gas. This gas burns the airways. Use cleaners separately and air out the room.",
+       "dogru": true
+      },
+      {
+       "yazi": "It cleans better",
+       "neden": "Mixing doesn't clean better. The two substances react and produce a toxic gas."
+      },
+      {
+       "yazi": "They neutralize into water",
+       "neden": "This mixture doesn't just neutralize. Chlorine gas is released too."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "From monomer to polymer",
+    "metin": "A polymer forms when small <b>monomers</b> link together like a chain. Change the monomer and make Teflon, which is used in nonstick pans.",
+    "sahne": {
+     "tur": "kim7-polimer"
+    },
+    "deger": {
+     "m": 1
+    },
+    "kontroller": [
+     {
+      "ad": "m",
+      "etiket": "Monomer",
+      "min": 1,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "m": 3
+     },
+     "tamam": "Tetrafluoroethene gives Teflon (PTFE). The C–F bonds are very strong and nonpolar, so almost nothing sticks to Teflon."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Read the label",
+    "metin": "The values on a nutrition label are usually per <b>100 g</b>. 100 g of this biscuit contains 25 g of sugar. How much do you have to eat to reach the recommended daily limit of 50 g of sugar?",
+    "sahne": {
+     "tur": "kim7-etiket"
+    },
+    "deger": {
+     "g": 40
+    },
+    "kontroller": [
+     {
+      "ad": "g",
+      "etiket": "Biscuits eaten",
+      "min": 20,
+      "max": 300,
+      "adim": 20,
+      "birim": "g",
+      "tur": "surgu"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "g": 200
+     },
+     "tamam": "200 g × 25 / 100 = 50 g of sugar. Scale the value on the label to the mass you eat. On cosmetics, too, ingredients are listed from most to least."
+    },
+    "kart": 10
+   }
+  ],
+  "kapanis": [
+   "Soap is a fatty acid salt. Its tail sinks into dirt, its head faces water, and the <b>micelle</b> that forms carries dirt through water.",
+   "In hard water (Ca²⁺, Mg²⁺) soap forms scum, but <b>detergent</b> lathers. Limescale (CaCO₃) dissolves in acid.",
+   "<b>Never mix</b> bleach with acidic or ammonia cleaners, because a toxic gas is released.",
+   "Plastics are synthetic <b>polymers</b> made from monomers, and they last a long time in nature.",
+   "Label values are per 100 g. When taking medicine, follow the dose and the length of use."
   ],
   "soruOnce": true
  }
