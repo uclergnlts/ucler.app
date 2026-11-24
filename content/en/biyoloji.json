@@ -1919,5 +1919,414 @@
     ]
    }
   ]
+ },
+ "hayvanlar-alemi": {
+  "title": "The animal kingdom: invertebrates and vertebrates",
+  "summary": "How do you tell the invertebrate phyla and vertebrate classes apart?",
+  "cards": [
+   {
+    "h": "What all animals share",
+    "p": "Animals are <b>eukaryotic</b>, <b>multicellular</b> and <b>heterotrophic</b>. In other words, they take in ready-made food by swallowing it. Their cells have no cell wall. Most of them move, and their muscle and nerve tissues let them react quickly.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='10' y='28' width='184' height='24' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.2'/><circle cx='24' cy='40' r='5' fill='var(--c5)' fill-opacity='0.7' stroke='var(--c5)' stroke-width='1'/><text x='36' y='44' font-size='11' fill='var(--ink)' text-anchor='start'>Eukaryote: cell with a nucleus</text><rect x='10' y='58' width='184' height='24' rx='6' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.2'/><circle cx='24' cy='70' r='5' fill='var(--c1)' fill-opacity='0.7' stroke='var(--c1)' stroke-width='1'/><text x='36' y='74' font-size='11' fill='var(--ink)' text-anchor='start'>Multicellular</text><rect x='10' y='88' width='184' height='24' rx='6' fill='var(--c4)' fill-opacity='0.12' stroke='var(--c4)' stroke-width='1.2'/><circle cx='24' cy='100' r='5' fill='var(--c4)' fill-opacity='0.7' stroke='var(--c4)' stroke-width='1'/><text x='36' y='104' font-size='11' fill='var(--ink)' text-anchor='start'>Heterotroph: swallows food</text><rect x='10' y='118' width='184' height='24' rx='6' fill='var(--c2)' fill-opacity='0.12' stroke='var(--c2)' stroke-width='1.2'/><circle cx='24' cy='130' r='5' fill='var(--c2)' fill-opacity='0.7' stroke='var(--c2)' stroke-width='1'/><text x='36' y='134' font-size='11' fill='var(--ink)' text-anchor='start'>No cell wall</text><rect x='10' y='148' width='184' height='24' rx='6' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.2'/><circle cx='24' cy='160' r='5' fill='var(--c3)' fill-opacity='0.7' stroke='var(--c3)' stroke-width='1'/><text x='36' y='164' font-size='11' fill='var(--ink)' text-anchor='start'>Most can move</text><text x='258' y='20' font-size='11' fill='var(--muted)' text-anchor='middle'>is there a wall?</text><rect x='216' y='30' width='84' height='50' rx='4' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='4'/><rect x='222' y='36' width='72' height='38' rx='3' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)' stroke-width='1'/><circle cx='245' cy='55' r='7' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><text x='258' y='96' font-size='11' fill='var(--ink)' text-anchor='middle'>plant: wall</text><path d='M222 128 C222 106 250 104 262 110 C280 104 298 116 294 132 C298 148 270 154 256 148 C238 154 220 146 222 128 Z' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.2' stroke-linejoin='round' stroke-linecap='round'/><circle cx='250' cy='128' r='7' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><text x='258' y='172' font-size='11' fill='var(--ink)' text-anchor='middle'>animal: no wall</text><text x='160' y='192' font-size='11' fill='var(--muted)' text-anchor='middle'>Adult sponges and corals stay attached to one spot</text></svg>",
+    "key": "Animal cells have no wall. Plants have a cellulose wall, and fungi have a chitin wall.",
+    "once": {
+     "soru": "An organism is multicellular, has no cell wall and takes in food by swallowing it. Which kingdom is it in?",
+     "secenekler": [
+      {
+       "yazi": "Animals",
+       "neden": "Animals are multicellular, have no cell wall and are heterotrophs. They take in food by swallowing it.",
+       "dogru": true
+      },
+      {
+       "yazi": "Plants",
+       "neden": "Plants have a cellulose wall, and they carry out photosynthesis."
+      },
+      {
+       "yazi": "Fungi",
+       "neden": "Fungi have a chitin wall. They digest food outside the body and absorb it."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Invertebrates and vertebrates",
+    "p": "<b>Vertebrates</b> have a <b>backbone</b> made of vertebrae along their back, and it protects the spinal cord. <b>Invertebrates</b> have no backbone, but some of them have an exoskeleton. About 95% of animal species are invertebrates.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='16' font-size='12' fill='var(--ink)' text-anchor='middle'>Known animal species</text><rect x='12' y='24' width='281' height='18' rx='3' fill='var(--c5)' fill-opacity='0.3' stroke='var(--c5)' stroke-width='1'/><rect x='293' y='24' width='15' height='18' rx='3' fill='var(--c1)' fill-opacity='0.6' stroke='var(--c1)' stroke-width='1'/><text x='12' y='58' font-size='11' fill='var(--c5)' text-anchor='start' font-weight='700'>invertebrates ≈ 95%</text><text x='308' y='58' font-size='11' fill='var(--c1)' text-anchor='end' font-weight='700'>vertebrates ≈ 5%</text><rect x='10' y='68' width='176' height='126' rx='6' fill='var(--c5)' fill-opacity='0.07' stroke='var(--c5)' stroke-width='1.2'/><rect x='194' y='68' width='116' height='126' rx='6' fill='var(--c1)' fill-opacity='0.07' stroke='var(--c1)' stroke-width='1.2'/><text x='98' y='86' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Invertebrate phyla</text><text x='252' y='86' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Vertebrate classes</text><text x='22' y='106' font-size='11' fill='var(--ink)' text-anchor='start'>Sponges</text><text x='22' y='122' font-size='11' fill='var(--ink)' text-anchor='start'>Cnidarians</text><text x='22' y='138' font-size='11' fill='var(--ink)' text-anchor='start'>Worms (3 phyla)</text><text x='22' y='154' font-size='11' fill='var(--ink)' text-anchor='start'>Mollusks</text><text x='22' y='170' font-size='11' fill='var(--ink)' text-anchor='start'>Arthropods</text><text x='22' y='186' font-size='11' fill='var(--ink)' text-anchor='start'>Echinoderms</text><text x='206' y='106' font-size='11' fill='var(--ink)' text-anchor='start'>Fish</text><text x='206' y='122' font-size='11' fill='var(--ink)' text-anchor='start'>Amphibians</text><text x='206' y='138' font-size='11' fill='var(--ink)' text-anchor='start'>Reptiles</text><text x='206' y='154' font-size='11' fill='var(--ink)' text-anchor='start'>Birds</text><text x='206' y='170' font-size='11' fill='var(--ink)' text-anchor='start'>Mammals</text></svg>",
+    "key": "Not every animal with a skeleton is a vertebrate. For example, an insect has an exoskeleton but no backbone.",
+    "etk": {
+     "tur": "ayir",
+     "soru": "Put each animal in the right group.",
+     "gruplar": [
+      "Invertebrate",
+      "Vertebrate"
+     ],
+     "ogeler": [
+      [
+       "Starfish",
+       0,
+       "It has an internal skeleton of chalky plates under its skin, but no backbone."
+      ],
+      [
+       "Octopus",
+       0,
+       "It has well-developed eyes and a nervous system, but it is a mollusk and has no backbone."
+      ],
+      [
+       "Spider",
+       0
+      ],
+      [
+       "Earthworm",
+       0
+      ],
+      [
+       "Jellyfish",
+       0
+      ],
+      [
+       "Shark",
+       1,
+       "Its skeleton is made of cartilage, but it has a backbone. It is a cartilaginous fish."
+      ],
+      [
+       "Frog",
+       1
+      ],
+      [
+       "Dolphin",
+       1,
+       "It looks like a fish, but it is a mammal and a vertebrate."
+      ],
+      [
+       "Snake",
+       1
+      ],
+      [
+       "Penguin",
+       1
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Sponges and cnidarians",
+    "p": "<b>Sponges</b> have no true tissues. They feed by filtering food out of the water that flows through the pores in their body. <b>Cnidarians</b> such as jellyfish, corals and hydras have two cell layers and hunt with the <b>stinging cells</b> on their tentacles.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hay-1' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><defs><marker id='hay-2' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><line x1='160' y1='8' x2='160' y2='196' stroke='var(--line)' stroke-width='1.2' stroke-linecap='round'/><text x='80' y='14' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Sponge</text><text x='240' y='14' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Cnidarian (hydra)</text><path d='M52 162 L40 60 L58 46 L102 46 L120 60 L108 162 Z' fill='var(--c4)' fill-opacity='0.25' stroke='var(--c4)' stroke-width='1.5' stroke-linejoin='round' stroke-linecap='round'/><ellipse cx='80' cy='47' rx='22' ry='5' fill='var(--panel)' fill-opacity='1' stroke='var(--c4)' stroke-width='1.2'/><circle cx='56' cy='76' r='3.5' fill='var(--panel)' fill-opacity='1' stroke='var(--c4)' stroke-width='1'/><circle cx='82' cy='70' r='3.5' fill='var(--panel)' fill-opacity='1' stroke='var(--c4)' stroke-width='1'/><circle cx='104' cy='80' r='3.5' fill='var(--panel)' fill-opacity='1' stroke='var(--c4)' stroke-width='1'/><circle cx='62' cy='104' r='3.5' fill='var(--panel)' fill-opacity='1' stroke='var(--c4)' stroke-width='1'/><circle cx='92' cy='98' r='3.5' fill='var(--panel)' fill-opacity='1' stroke='var(--c4)' stroke-width='1'/><circle cx='70' cy='130' r='3.5' fill='var(--panel)' fill-opacity='1' stroke='var(--c4)' stroke-width='1'/><circle cx='98' cy='126' r='3.5' fill='var(--panel)' fill-opacity='1' stroke='var(--c4)' stroke-width='1'/><circle cx='80' cy='150' r='3.5' fill='var(--panel)' fill-opacity='1' stroke='var(--c4)' stroke-width='1'/><line x1='16' y1='100' x2='41' y2='100' stroke='var(--c1)' stroke-width='1.5' stroke-linecap='round' marker-end='url(#hay-1)'/><line x1='144' y1='100' x2='118' y2='100' stroke='var(--c1)' stroke-width='1.5' stroke-linecap='round' marker-end='url(#hay-1)'/><line x1='80' y1='40' x2='80' y2='24' stroke='var(--c1)' stroke-width='1.5' stroke-linecap='round' marker-end='url(#hay-1)'/><text x='88' y='31' font-size='10' fill='var(--c1)' text-anchor='start'>water out</text><text x='80' y='180' font-size='11' fill='var(--ink)' text-anchor='middle'>water in through pores</text><text x='80' y='195' font-size='11' fill='var(--muted)' text-anchor='middle'>no true tissues or organs</text><path d='M230 76 C222 60 210 50 200 42' fill='none' stroke='var(--c1)' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/><path d='M236 74 C234 58 228 44 222 32' fill='none' stroke='var(--c1)' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/><path d='M244 74 C246 58 252 44 258 32' fill='none' stroke='var(--c1)' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/><path d='M250 76 C258 60 266 50 272 42' fill='none' stroke='var(--c1)' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/><circle cx='213' cy='55' r='2.5' fill='var(--c2)' fill-opacity='0.9' stroke='var(--c2)' stroke-width='0.5'/><circle cx='228' cy='48' r='2.5' fill='var(--c2)' fill-opacity='0.9' stroke='var(--c2)' stroke-width='0.5'/><circle cx='252' cy='48' r='2.5' fill='var(--c2)' fill-opacity='0.9' stroke='var(--c2)' stroke-width='0.5'/><circle cx='266' cy='53' r='2.5' fill='var(--c2)' fill-opacity='0.9' stroke='var(--c2)' stroke-width='0.5'/><rect x='225' y='74' width='30' height='90' rx='8' fill='var(--c1)' fill-opacity='0.18' stroke='var(--c1)' stroke-width='1.5'/><rect x='232' y='82' width='16' height='74' rx='5' fill='var(--panel)' fill-opacity='1' stroke='var(--c3)' stroke-width='1.2'/><ellipse cx='240' cy='166' rx='20' ry='4' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1'/><text x='314' y='32' font-size='10' fill='var(--ink)' text-anchor='end'>tentacle</text><line x1='274' y1='58' x2='268' y2='54' stroke='var(--c2)' stroke-width='1' stroke-linecap='round'/><text x='278' y='62' font-size='10' fill='var(--c2)' text-anchor='start'>stinging</text><text x='278' y='74' font-size='10' fill='var(--c2)' text-anchor='start'>cell</text><text x='262' y='112' font-size='10' fill='var(--c1)' text-anchor='start'>outer layer</text><text x='262' y='134' font-size='10' fill='var(--c3)' text-anchor='start'>inner layer</text><text x='240' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>two cell layers</text><text x='240' y='196' font-size='11' fill='var(--muted)' text-anchor='middle'>tentacles, radial</text></svg>",
+    "key": "Sponges have no tissues, and their body is full of pores. Cnidarians have two layers. They have tentacles and stinging cells.",
+    "once": {
+     "soru": "A sponge passes water through the holes in its body. How does it get its food?",
+     "secenekler": [
+      {
+       "yazi": "By filtering water",
+       "neden": "A sponge filters the food carried by the water that enters its pores. An adult sponge lives attached to one spot.",
+       "dogru": true
+      },
+      {
+       "yazi": "By hunting",
+       "neden": "A sponge has no tentacles and no mouth."
+      },
+      {
+       "yazi": "By photosynthesis",
+       "neden": "Animals do not carry out photosynthesis."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Three worm phyla",
+    "p": "<b>Flatworms</b> have a flattened body, and most are parasites. <b>Roundworms</b> have a separate mouth and anus. The body of <b>segmented worms</b> is made of rings. They have a <b>closed circulatory system</b>, which means the blood always stays inside vessels.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='8' width='308' height='58' rx='6' fill='var(--c4)' fill-opacity='0.07' stroke='var(--c4)' stroke-width='1.2'/><text x='130' y='26' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Flatworms</text><text x='130' y='42' font-size='11' fill='var(--ink)' text-anchor='start'>tapeworm, planarian</text><text x='130' y='58' font-size='11' fill='var(--muted)' text-anchor='start'>flat body, most are parasites</text><path d='M18 37 C26 23 48 25 64 27 C84 29 104 31 112 37 C104 43 84 45 64 47 C48 49 26 51 18 37 Z' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.2' stroke-linejoin='round' stroke-linecap='round'/><circle cx='30' cy='34' r='1.8' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0.5'/><circle cx='30' cy='40' r='1.8' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0.5'/><rect x='6' y='72' width='308' height='58' rx='6' fill='var(--c1)' fill-opacity='0.07' stroke='var(--c1)' stroke-width='1.2'/><text x='130' y='90' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Roundworms</text><text x='130' y='106' font-size='11' fill='var(--ink)' text-anchor='start'>intestinal roundworm, pinworm</text><text x='130' y='122' font-size='11' fill='var(--muted)' text-anchor='start'>cylindrical, separate mouth and anus</text><path d='M16 101 C30 96 50 96 64 96 C80 96 100 96 114 101 C100 106 80 106 64 106 C50 106 30 106 16 101 Z' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.2' stroke-linejoin='round' stroke-linecap='round'/><rect x='6' y='136' width='308' height='58' rx='6' fill='var(--c2)' fill-opacity='0.07' stroke='var(--c2)' stroke-width='1.2'/><text x='130' y='154' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Segmented worms</text><text x='130' y='170' font-size='11' fill='var(--ink)' text-anchor='start'>earthworm, leech</text><text x='130' y='186' font-size='11' fill='var(--muted)' text-anchor='start'>segmented body, closed circulation</text><rect x='14' y='158' width='9' height='14' rx='3' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1'/><rect x='23' y='158' width='9' height='14' rx='3' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1'/><rect x='32' y='158' width='9' height='14' rx='3' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1'/><rect x='41' y='158' width='9' height='14' rx='3' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1'/><rect x='50' y='158' width='9' height='14' rx='3' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1'/><rect x='59' y='158' width='9' height='14' rx='3' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1'/><rect x='68' y='158' width='9' height='14' rx='3' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1'/><rect x='77' y='158' width='9' height='14' rx='3' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1'/><rect x='86' y='158' width='9' height='14' rx='3' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1'/><rect x='95' y='158' width='9' height='14' rx='3' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1'/><rect x='104' y='158' width='9' height='14' rx='3' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1'/></svg>",
+    "key": "A tapeworm has no digestive system. It absorbs digested food through its body surface.",
+    "once": {
+     "soru": "A tapeworm lives in the human intestine and has no digestive system. How does it feed?",
+     "secenekler": [
+      {
+       "yazi": "Through its body surface",
+       "neden": "A tapeworm absorbs the digested food in the intestine through its body surface. It is a parasitic flatworm.",
+       "dogru": true
+      },
+      {
+       "yazi": "By sucking blood",
+       "neden": "A tapeworm does not suck blood. It absorbs the ready food in the intestine."
+      },
+      {
+       "yazi": "By photosynthesis",
+       "neden": "Animals do not carry out photosynthesis."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Mollusks",
+    "p": "<b>Mollusks</b> have a soft body. Most of them have a chalky <b>shell</b> made by the <b>mantle</b>. A snail's shell is one piece, while a mussel's shell has two parts. An octopus has no outer shell, and it is a very intelligent animal.",
+    "svg": "<svg viewBox='0 0 320 200'><path d='M14 98 C20 88 40 86 64 88 L100 88 C108 88 110 96 104 98 Z' fill='var(--c3)' fill-opacity='0.3' stroke='var(--c3)' stroke-width='1.2' stroke-linejoin='round' stroke-linecap='round'/><line x1='98' y1='88' x2='104' y2='70' stroke='var(--c3)' stroke-width='1.5' stroke-linecap='round'/><line x1='92' y1='88' x2='94' y2='72' stroke='var(--c3)' stroke-width='1.5' stroke-linecap='round'/><circle cx='104' cy='69' r='2' fill='var(--c3)' fill-opacity='1' stroke='var(--c3)' stroke-width='0.5'/><circle cx='94' cy='71' r='2' fill='var(--c3)' fill-opacity='1' stroke='var(--c3)' stroke-width='0.5'/><circle cx='56' cy='66' r='24' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><path d='M56 66 m-14 0 a14 14 0 1 1 14 14 a9 9 0 1 1 -9 -9 a4 4 0 1 1 4 4' fill='none' stroke='var(--c4)' stroke-width='1.2' stroke-linejoin='round' stroke-linecap='round'/><path d='M126 70 C132 46 188 46 194 70 Z' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5' stroke-linejoin='round' stroke-linecap='round'/><path d='M126 70 C132 94 188 94 194 70 Z' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5' stroke-linejoin='round' stroke-linecap='round'/><circle cx='128' cy='70' r='2.5' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0.5'/><ellipse cx='265' cy='44' rx='20' ry='22' fill='var(--c5)' fill-opacity='0.25' stroke='var(--c5)' stroke-width='1.5'/><circle cx='258' cy='52' r='2.5' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0.5'/><circle cx='272' cy='52' r='2.5' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0.5'/><path d='M249 64 C249 80 236 84 228 104' fill='none' stroke='var(--c5)' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/><path d='M255 64 C255 80 251 84 243 104' fill='none' stroke='var(--c5)' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/><path d='M261 64 C261 80 266 84 258 104' fill='none' stroke='var(--c5)' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/><path d='M267 64 C267 80 281 84 273 104' fill='none' stroke='var(--c5)' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/><path d='M273 64 C273 80 296 84 288 104' fill='none' stroke='var(--c5)' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/><path d='M279 64 C279 80 311 84 303 104' fill='none' stroke='var(--c5)' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/><text x='60' y='126' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Snail</text><text x='60' y='143' font-size='11' fill='var(--ink)' text-anchor='middle'>single coiled shell</text><text x='60' y='159' font-size='10' fill='var(--muted)' text-anchor='middle'>gastropod</text><text x='160' y='126' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Mussel</text><text x='160' y='143' font-size='11' fill='var(--ink)' text-anchor='middle'>two-part shell</text><text x='160' y='159' font-size='10' fill='var(--muted)' text-anchor='middle'>bivalve</text><text x='265' y='126' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Octopus</text><text x='265' y='143' font-size='11' fill='var(--ink)' text-anchor='middle'>no outer shell</text><text x='265' y='159' font-size='10' fill='var(--muted)' text-anchor='middle'>cephalopod</text><line x1='10' y1='170' x2='310' y2='170' stroke='var(--line)' stroke-width='1' stroke-linecap='round'/><text x='160' y='188' font-size='11' fill='var(--ink)' text-anchor='middle'>Shared: soft body, mantle, muscular foot</text></svg>",
+    "key": "Most mollusks have open circulation, but the octopus has closed circulation.",
+    "once": {
+     "soru": "Which one has no outer shell but is still a mollusk?",
+     "secenekler": [
+      {
+       "yazi": "Octopus",
+       "neden": "An octopus has no outer shell. It is an intelligent mollusk with well-developed eyes and a nervous system.",
+       "dogru": true
+      },
+      {
+       "yazi": "Snail",
+       "neden": "A snail has a one-piece shell."
+      },
+      {
+       "yazi": "Mussel",
+       "neden": "A mussel has a two-part shell."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Arthropods",
+    "p": "The largest phylum is the <b>arthropods</b>. Their body is covered by an <b>exoskeleton made of chitin</b>, and they molt in order to grow. An insect has 3 pairs of legs, and a spider has 4 pairs. That is why a spider is not an insect.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='16' font-size='13' fill='var(--ink)' text-anchor='middle' font-weight='700'>Four main groups</text><rect x='4' y='24' width='312' height='22' rx='4' fill='var(--acc)' fill-opacity='0.18' stroke='var(--acc)' stroke-width='1'/><text x='8' y='39' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Group</text><text x='90' y='39' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Example</text><text x='186' y='39' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Legs</text><text x='278' y='39' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Antennae</text><rect x='4' y='50' width='312' height='21' rx='3' fill='var(--panel)' fill-opacity='1' stroke='var(--line)' stroke-width='0.8'/><text x='8' y='65' font-size='11' fill='var(--c5)' text-anchor='start' font-weight='700'>Insects</text><text x='90' y='65' font-size='11' fill='var(--ink)' text-anchor='start'>bee, fly</text><text x='186' y='65' font-size='11' fill='var(--ink)' text-anchor='start'>3 pairs</text><text x='278' y='65' font-size='11' fill='var(--ink)' text-anchor='start'>1 pair</text><rect x='4' y='74' width='312' height='21' rx='3' fill='var(--panel)' fill-opacity='0.4' stroke='var(--line)' stroke-width='0.8'/><text x='8' y='89' font-size='11' fill='var(--c5)' text-anchor='start' font-weight='700'>Arachnids</text><text x='90' y='89' font-size='11' fill='var(--ink)' text-anchor='start'>spider, scorpion</text><text x='186' y='89' font-size='11' fill='var(--ink)' text-anchor='start'>4 pairs</text><text x='278' y='89' font-size='11' fill='var(--ink)' text-anchor='start'>none</text><rect x='4' y='98' width='312' height='21' rx='3' fill='var(--panel)' fill-opacity='1' stroke='var(--line)' stroke-width='0.8'/><text x='8' y='113' font-size='11' fill='var(--c5)' text-anchor='start' font-weight='700'>Crustaceans</text><text x='90' y='113' font-size='11' fill='var(--ink)' text-anchor='start'>crab, shrimp</text><text x='186' y='113' font-size='11' fill='var(--ink)' text-anchor='start'>crab: 5 pairs</text><text x='278' y='113' font-size='11' fill='var(--ink)' text-anchor='start'>2 pairs</text><rect x='4' y='122' width='312' height='21' rx='3' fill='var(--panel)' fill-opacity='0.4' stroke='var(--line)' stroke-width='0.8'/><text x='8' y='137' font-size='11' fill='var(--c5)' text-anchor='start' font-weight='700'>Myriapods</text><text x='90' y='137' font-size='11' fill='var(--ink)' text-anchor='start'>millipede, centipede</text><text x='186' y='137' font-size='11' fill='var(--ink)' text-anchor='start'>many</text><text x='278' y='137' font-size='11' fill='var(--ink)' text-anchor='start'>1 pair</text><text x='160' y='170' font-size='11' fill='var(--ink)' text-anchor='middle'>Shared: chitin exoskeleton, jointed legs</text><text x='160' y='188' font-size='11' fill='var(--muted)' text-anchor='middle'>They molt in order to grow</text></svg>",
+    "key": "An insect's body has 3 parts, and it has 3 pairs of legs and antennae. A spider's body has 2 parts, and it has 4 pairs of legs and no antennae."
+   },
+   {
+    "h": "Echinoderms",
+    "p": "<b>Echinoderms</b> such as starfish and sea urchins live only in the sea. They have an <b>internal skeleton</b> made of chalky plates. The adults have <b>radial symmetry</b> and move with their tube feet.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Comparing symmetry</text><polygon points='90.0,40.0 102.9,80.2 145.2,80.1 110.9,104.8 124.1,144.9 90.0,120.0 55.9,144.9 69.1,104.8 34.8,80.1 77.1,80.2' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5' stroke-linejoin='round'/><line x1='90' y1='98' x2='90' y2='32' stroke='var(--c5)' stroke-width='1' stroke-linecap='round' stroke-dasharray='3 3'/><line x1='90' y1='98' x2='152.77' y2='77.6049' stroke='var(--c5)' stroke-width='1' stroke-linecap='round' stroke-dasharray='3 3'/><line x1='90' y1='98' x2='128.794' y2='151.395' stroke='var(--c5)' stroke-width='1' stroke-linecap='round' stroke-dasharray='3 3'/><line x1='90' y1='98' x2='51.2062' y2='151.395' stroke='var(--c5)' stroke-width='1' stroke-linecap='round' stroke-dasharray='3 3'/><line x1='90' y1='98' x2='27.2303' y2='77.6049' stroke='var(--c5)' stroke-width='1' stroke-linecap='round' stroke-dasharray='3 3'/><circle cx='90' cy='68' r='2' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='0.5'/><circle cx='90' cy='56' r='2' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='0.5'/><circle cx='118.532' cy='88.7295' r='2' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='0.5'/><circle cx='129.944' cy='85.0213' r='2' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='0.5'/><circle cx='107.634' cy='122.271' r='2' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='0.5'/><circle cx='114.687' cy='131.979' r='2' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='0.5'/><circle cx='72.3664' cy='122.271' r='2' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='0.5'/><circle cx='65.313' cy='131.979' r='2' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='0.5'/><circle cx='61.4683' cy='88.7295' r='2' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='0.5'/><circle cx='50.0556' cy='85.0213' r='2' fill='var(--c2)' fill-opacity='0.8' stroke='var(--c2)' stroke-width='0.5'/><circle cx='90' cy='98' r='6' fill='var(--c4)' fill-opacity='0.6' stroke='var(--c4)' stroke-width='1'/><line x1='240' y1='26' x2='240' y2='158' stroke='var(--c5)' stroke-width='1' stroke-linecap='round' stroke-dasharray='3 3'/><ellipse cx='240' cy='104' rx='15' ry='34' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><ellipse cx='240' cy='62' rx='11' ry='9' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.5'/><circle cx='240' cy='44' r='7' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1.5'/><line x1='230' y1='56' x2='212' y2='64' stroke='var(--ink)' stroke-width='1.2' stroke-linecap='round'/><line x1='250' y1='56' x2='268' y2='64' stroke='var(--ink)' stroke-width='1.2' stroke-linecap='round'/><line x1='230' y1='64' x2='208' y2='72' stroke='var(--ink)' stroke-width='1.2' stroke-linecap='round'/><line x1='250' y1='64' x2='272' y2='72' stroke='var(--ink)' stroke-width='1.2' stroke-linecap='round'/><line x1='230' y1='72' x2='212' y2='80' stroke='var(--ink)' stroke-width='1.2' stroke-linecap='round'/><line x1='250' y1='72' x2='268' y2='80' stroke='var(--ink)' stroke-width='1.2' stroke-linecap='round'/><text x='90' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>radial, five arms</text><text x='90' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>starfish</text><text x='240' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>bilateral symmetry</text><text x='240' y='190' font-size='10' fill='var(--muted)' text-anchor='middle'>insect, fish, human</text></svg>",
+    "key": "Echinoderms have an internal skeleton, but no backbone. That is why they are invertebrates.",
+    "once": {
+     "soru": "A starfish has an internal skeleton of chalky plates under its skin. Is a starfish a vertebrate?",
+     "secenekler": [
+      {
+       "yazi": "No",
+       "neden": "A starfish has an internal skeleton, but no backbone. That is why it is an invertebrate.",
+       "dogru": true
+      },
+      {
+       "yazi": "Yes",
+       "neden": "Having an internal skeleton does not mean having a backbone."
+      },
+      {
+       "yazi": "Only its larva",
+       "neden": "A starfish larva has no backbone either."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Fish",
+    "p": "<b>Fish</b> breathe with gills and swim with fins. Their heart has <b>two chambers</b>, and their body temperature changes with the surroundings. A shark's skeleton is made of <b>cartilage</b>, while an anchovy's skeleton is made of <b>bone</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hay-3' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c1)'/></marker></defs><defs><marker id='hay-4' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--c2)'/></marker></defs><rect x='40' y='30' width='86' height='30' rx='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.2'/><text x='83' y='50' font-size='12' fill='var(--ink)' text-anchor='middle'>gills</text><rect x='14' y='130' width='60' height='36' rx='6' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.2'/><text x='44' y='145' font-size='12' fill='var(--ink)' text-anchor='middle'>heart</text><text x='44' y='160' font-size='10' fill='var(--muted)' text-anchor='middle'>2 chambers</text><rect x='92' y='130' width='60' height='36' rx='6' fill='var(--c5)' fill-opacity='0.12' stroke='var(--c5)' stroke-width='1.2'/><text x='122' y='153' font-size='12' fill='var(--ink)' text-anchor='middle'>body</text><line x1='44' y1='128' x2='58' y2='64' stroke='var(--c1)' stroke-width='2' stroke-linecap='round' marker-end='url(#hay-3)'/><line x1='108' y1='64' x2='120' y2='126' stroke='var(--c2)' stroke-width='2' stroke-linecap='round' marker-end='url(#hay-4)'/><line x1='91' y1='148' x2='77' y2='148' stroke='var(--c1)' stroke-width='2' stroke-linecap='round' marker-end='url(#hay-3)'/><text x='30' y='98' font-size='10' fill='var(--c1)' text-anchor='middle'>O₂-poor</text><text x='134' y='98' font-size='10' fill='var(--c2)' text-anchor='middle'>O₂-rich</text><rect x='166' y='22' width='148' height='74' rx='6' fill='var(--c4)' fill-opacity='0.1' stroke='var(--c4)' stroke-width='1.2'/><text x='240' y='40' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Cartilaginous</text><text x='240' y='56' font-size='11' fill='var(--ink)' text-anchor='middle'>shark, ray</text><text x='240' y='71' font-size='11' fill='var(--muted)' text-anchor='middle'>no gill cover</text><text x='240' y='86' font-size='11' fill='var(--muted)' text-anchor='middle'>no swim bladder</text><rect x='166' y='102' width='148' height='74' rx='6' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='1.2'/><text x='240' y='120' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Bony</text><text x='240' y='136' font-size='11' fill='var(--ink)' text-anchor='middle'>anchovy, trout</text><text x='240' y='151' font-size='11' fill='var(--muted)' text-anchor='middle'>gill cover</text><text x='240' y='166' font-size='11' fill='var(--muted)' text-anchor='middle'>most have a swim bladder</text><text x='160' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>Only oxygen-poor blood passes through the heart</text></svg>",
+    "key": "Only oxygen-poor blood passes through a fish's heart. The blood picks up oxygen in the gills.",
+    "once": {
+     "soru": "How does a fish breathe in water?",
+     "secenekler": [
+      {
+       "yazi": "With gills",
+       "neden": "Gills take up the oxygen dissolved in the water.",
+       "dogru": true
+      },
+      {
+       "yazi": "With lungs",
+       "neden": "Most fish have no lungs. Fish breathe with gills."
+      },
+      {
+       "yazi": "Through the skin",
+       "neden": "Breathing through the skin matters for frogs. A fish breathes with gills."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Amphibians",
+    "p": "<b>Amphibians</b> such as frogs and salamanders lay eggs without shells in water. Their larvae are called <b>tadpoles</b>, and a tadpole breathes with gills. The tadpole goes through <b>metamorphosis</b> and turns into an adult with lungs. An amphibian's heart has three chambers.",
+    "svg": "<svg viewBox='0 0 320 200'><defs><marker id='hay-5' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='var(--ink)'/></marker></defs><circle cx='30' cy='50' r='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1'/><circle cx='30' cy='50' r='2' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0.5'/><circle cx='42' cy='46' r='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1'/><circle cx='42' cy='46' r='2' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0.5'/><circle cx='52' cy='54' r='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1'/><circle cx='52' cy='54' r='2' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0.5'/><circle cx='36' cy='62' r='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1'/><circle cx='36' cy='62' r='2' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0.5'/><circle cx='48' cy='66' r='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1'/><circle cx='48' cy='66' r='2' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0.5'/><circle cx='26' cy='72' r='6' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1'/><circle cx='26' cy='72' r='2' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0.5'/><ellipse cx='108' cy='58' rx='9' ry='7' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.2'/><path d='M116 55 C126 52 128 62 134 58 C128 64 126 64 116 61' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1' stroke-linejoin='round' stroke-linecap='round'/><ellipse cx='190' cy='58' rx='9' ry='7' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1.2'/><path d='M198 55 C208 52 202 62 208 58 C202 64 208 64 198 61' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1' stroke-linejoin='round' stroke-linecap='round'/><line x1='196' y1='64' x2='194' y2='72' stroke='var(--c1)' stroke-width='1.5' stroke-linecap='round'/><line x1='200' y1='63' x2='202' y2='71' stroke='var(--c1)' stroke-width='1.5' stroke-linecap='round'/><ellipse cx='280' cy='60' rx='18' ry='12' fill='var(--c3)' fill-opacity='0.35' stroke='var(--c3)' stroke-width='1.5'/><circle cx='272' cy='48' r='4' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)' stroke-width='1'/><circle cx='288' cy='48' r='4' fill='var(--c3)' fill-opacity='0.4' stroke='var(--c3)' stroke-width='1'/><circle cx='272' cy='48' r='1.5' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0.5'/><circle cx='288' cy='48' r='1.5' fill='var(--ink)' fill-opacity='1' stroke='var(--ink)' stroke-width='0.5'/><path d='M264 66 C254 70 252 78 260 78' fill='none' stroke='var(--c3)' stroke-width='1.5' stroke-linejoin='round' stroke-linecap='round'/><path d='M296 66 C306 70 308 78 300 78' fill='none' stroke='var(--c3)' stroke-width='1.5' stroke-linejoin='round' stroke-linecap='round'/><line x1='66' y1='58' x2='94' y2='58' stroke='var(--ink)' stroke-width='1.5' stroke-linecap='round' marker-end='url(#hay-5)'/><line x1='142' y1='58' x2='176' y2='58' stroke='var(--ink)' stroke-width='1.5' stroke-linecap='round' marker-end='url(#hay-5)'/><line x1='220' y1='58' x2='256' y2='58' stroke='var(--ink)' stroke-width='1.5' stroke-linecap='round' marker-end='url(#hay-5)'/><text x='40' y='94' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>egg</text><text x='40' y='108' font-size='10' fill='var(--muted)' text-anchor='middle'>in water, no shell</text><text x='120' y='94' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>tadpole</text><text x='120' y='108' font-size='10' fill='var(--muted)' text-anchor='middle'>gills</text><text x='200' y='94' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>legs grow</text><text x='200' y='108' font-size='10' fill='var(--muted)' text-anchor='middle'>tail shrinks</text><text x='280' y='94' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>frog</text><text x='280' y='108' font-size='10' fill='var(--muted)' text-anchor='middle'>lungs + skin</text><line x1='10' y1='118' x2='310' y2='118' stroke='var(--line)' stroke-width='1' stroke-linecap='round'/><rect x='18' y='128' width='40' height='22' rx='4' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.2'/><rect x='62' y='128' width='40' height='22' rx='4' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.2'/><rect x='18' y='154' width='84' height='32' rx='4' fill='var(--c5)' fill-opacity='0.25' stroke='var(--c5)' stroke-width='1.2'/><text x='38' y='143' font-size='10' fill='var(--ink)' text-anchor='middle'>right</text><text x='82' y='143' font-size='10' fill='var(--ink)' text-anchor='middle'>left</text><text x='60' y='174' font-size='11' fill='var(--ink)' text-anchor='middle'>ventricle</text><text x='116' y='142' font-size='11' fill='var(--ink)' text-anchor='start'>Heart: 2 atria + 1 ventricle</text><text x='116' y='160' font-size='11' fill='var(--ink)' text-anchor='start'>Blood partly mixes in the ventricle</text><text x='116' y='178' font-size='11' fill='var(--muted)' text-anchor='start'>Skin is moist, bare and full of glands</text></svg>",
+    "key": "A frog's skin must stay moist, because breathing through the skin only works when the skin is moist.",
+    "once": {
+     "soru": "A tadpole, the young of a frog, breathes with gills in water. What does an adult frog breathe with?",
+     "secenekler": [
+      {
+       "yazi": "Lungs and skin",
+       "neden": "The lungs develop during metamorphosis. An adult frog also breathes through its moist skin.",
+       "dogru": true
+      },
+      {
+       "yazi": "Only gills",
+       "neden": "The gills disappear during metamorphosis."
+      },
+      {
+       "yazi": "Only skin",
+       "neden": "An adult frog also has lungs. Breathing through the skin only helps them."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Reptiles",
+    "p": "<b>Reptiles</b> have dry, scaly skin. This reduces water loss. Reptiles breathe with lungs and lay <b>shelled eggs</b> on land. Most have a three-chambered heart, but a <b>crocodile's heart has four chambers</b>. Their body temperature changes with the surroundings.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='18' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>The wall in the ventricle</text><rect x='30' y='30' width='45' height='28' rx='4' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.2'/><rect x='79' y='30' width='45' height='28' rx='4' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.2'/><rect x='30' y='62' width='94' height='50' rx='4' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)' stroke-width='1.2'/><line x1='77' y1='112' x2='77' y2='88' stroke='var(--ink)' stroke-width='2.5' stroke-linecap='round'/><text x='52' y='48' font-size='10' fill='var(--ink)' text-anchor='middle'>right</text><text x='102' y='48' font-size='10' fill='var(--ink)' text-anchor='middle'>left</text><text x='77' y='80' font-size='10' fill='var(--muted)' text-anchor='middle'>partial wall</text><rect x='196' y='30' width='45' height='28' rx='4' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.2'/><rect x='245' y='30' width='45' height='28' rx='4' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.2'/><rect x='196' y='62' width='45' height='50' rx='4' fill='var(--c1)' fill-opacity='0.25' stroke='var(--c1)' stroke-width='1.2'/><rect x='245' y='62' width='45' height='50' rx='4' fill='var(--c2)' fill-opacity='0.25' stroke='var(--c2)' stroke-width='1.2'/><text x='218' y='48' font-size='10' fill='var(--ink)' text-anchor='middle'>right</text><text x='268' y='48' font-size='10' fill='var(--ink)' text-anchor='middle'>left</text><text x='218' y='91' font-size='10' fill='var(--ink)' text-anchor='middle'>right</text><text x='268' y='91' font-size='10' fill='var(--ink)' text-anchor='middle'>left</text><text x='77' y='132' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>most reptiles</text><text x='77' y='148' font-size='11' fill='var(--muted)' text-anchor='middle'>3 chambers, partly mixed</text><text x='243' y='132' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>crocodile</text><text x='243' y='148' font-size='11' fill='var(--muted)' text-anchor='middle'>4 chambers, full wall</text><line x1='10' y1='162' x2='310' y2='162' stroke='var(--line)' stroke-width='1' stroke-linecap='round'/><text x='160' y='182' font-size='11' fill='var(--ink)' text-anchor='middle'>Dry, scaly skin and shelled eggs</text><text x='160' y='196' font-size='10' fill='var(--muted)' text-anchor='middle'>Body temperature varies in both</text></svg>",
+    "key": "A crocodile's heart has four chambers, but its body temperature still varies."
+   },
+   {
+    "h": "Birds",
+    "p": "<b>Feathers</b> are found only in birds. Birds have hollow, light bones. They also have <b>air sacs</b>. Their heart has four chambers, and their body temperature is <b>constant</b>. Birds lay shelled eggs.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='80' y='26' font-size='11' fill='var(--ink)' text-anchor='middle'>bird bone: filled with air</text><rect x='14' y='36' width='132' height='30' rx='14' fill='var(--c1)' fill-opacity='0.2' stroke='var(--c1)' stroke-width='1.5'/><rect x='24' y='42' width='112' height='18' rx='8' fill='var(--panel)' fill-opacity='1' stroke='var(--line)' stroke-width='1'/><polyline points='26,43 36,59 46,43 56,59 66,43 76,59 86,43 96,59 106,43 116,59 126,43' fill='none' stroke='var(--c1)' stroke-width='1.2'/><text x='80' y='82' font-size='10' fill='var(--muted)' text-anchor='middle'>light but strong</text><text x='80' y='112' font-size='11' fill='var(--ink)' text-anchor='middle'>mammal bone: filled with marrow</text><rect x='14' y='122' width='132' height='30' rx='14' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)' stroke-width='1.5'/><rect x='24' y='128' width='112' height='18' rx='8' fill='var(--c4)' fill-opacity='0.45' stroke='var(--c4)' stroke-width='1'/><line x1='160' y1='20' x2='160' y2='160' stroke='var(--line)' stroke-width='1' stroke-linecap='round'/><text x='176' y='26' font-size='12' fill='var(--ink)' text-anchor='start' font-weight='700'>Built for flight</text><circle cx='182' cy='46' r='4' fill='var(--c3)' fill-opacity='0.6' stroke='var(--c3)' stroke-width='1'/><text x='192' y='50' font-size='11' fill='var(--ink)' text-anchor='start'>feathers</text><circle cx='182' cy='70' r='4' fill='var(--c3)' fill-opacity='0.6' stroke='var(--c3)' stroke-width='1'/><text x='192' y='74' font-size='11' fill='var(--ink)' text-anchor='start'>hollow bones</text><circle cx='182' cy='94' r='4' fill='var(--c3)' fill-opacity='0.6' stroke='var(--c3)' stroke-width='1'/><text x='192' y='98' font-size='11' fill='var(--ink)' text-anchor='start'>air sacs</text><circle cx='182' cy='118' r='4' fill='var(--c3)' fill-opacity='0.6' stroke='var(--c3)' stroke-width='1'/><text x='192' y='122' font-size='11' fill='var(--ink)' text-anchor='start'>light beak, no teeth</text><circle cx='182' cy='142' r='4' fill='var(--c3)' fill-opacity='0.6' stroke='var(--c3)' stroke-width='1'/><text x='192' y='146' font-size='11' fill='var(--ink)' text-anchor='start'>strong chest muscles</text><text x='160' y='190' font-size='11' fill='var(--ink)' text-anchor='middle'>Only birds have feathers</text></svg>",
+    "key": "Air sacs make air flow in one direction through a bird's lungs."
+   },
+   {
+    "h": "Mammals",
+    "p": "What sets <b>mammals</b> apart from other animals is <b>hair</b> and the <b>mammary glands</b> that feed the young with milk. The <b>diaphragm</b> helps with breathing. Their heart has four chambers, and their body temperature is constant. The platypus lays eggs, but it nurses its young.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='6' y='6' width='308' height='42' rx='6' fill='var(--acc)' fill-opacity='0.12' stroke='var(--acc)' stroke-width='1.2'/><text x='160' y='23' font-size='11' fill='var(--ink)' text-anchor='middle'>All have: hair, mammary glands, diaphragm,</text><text x='160' y='40' font-size='11' fill='var(--ink)' text-anchor='middle'>a four-chambered heart, constant body temperature</text><rect x='6' y='56' width='98' height='122' rx='6' fill='var(--c4)' fill-opacity='0.08' stroke='var(--c4)' stroke-width='1.2'/><ellipse cx='55' cy='92' rx='14' ry='18' fill='var(--c4)' fill-opacity='0.3' stroke='var(--c4)' stroke-width='1.5'/><text x='55' y='134' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>Egg-laying</text><text x='55' y='151' font-size='11' fill='var(--ink)' text-anchor='middle'>platypus</text><text x='55' y='167' font-size='10' fill='var(--muted)' text-anchor='middle'>then drinks milk</text><rect x='111' y='56' width='98' height='122' rx='6' fill='var(--c5)' fill-opacity='0.08' stroke='var(--c5)' stroke-width='1.2'/><path d='M136 76 L136 98 C136 114 184 114 184 98 L184 76' fill='var(--c5)' fill-opacity='0.2' stroke='var(--c5)' stroke-width='1.5' stroke-linejoin='round' stroke-linecap='round'/><circle cx='160' cy='96' r='7' fill='var(--c5)' fill-opacity='0.5' stroke='var(--c5)' stroke-width='1'/><text x='160' y='134' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>Marsupials</text><text x='160' y='151' font-size='11' fill='var(--ink)' text-anchor='middle'>kangaroo, koala</text><text x='160' y='167' font-size='10' fill='var(--muted)' text-anchor='middle'>grows in a pouch</text><rect x='216' y='56' width='98' height='122' rx='6' fill='var(--c3)' fill-opacity='0.08' stroke='var(--c3)' stroke-width='1.2'/><circle cx='265' cy='92' r='22' fill='var(--c3)' fill-opacity='0.12' stroke='var(--c3)' stroke-width='1.5'/><circle cx='269' cy='98' r='8' fill='var(--c3)' fill-opacity='0.5' stroke='var(--c3)' stroke-width='1'/><ellipse cx='253' cy='82' rx='8' ry='4' fill='var(--c2)' fill-opacity='0.5' stroke='var(--c2)' stroke-width='1'/><line x1='257' y1='86' x2='266' y2='92' stroke='var(--c2)' stroke-width='1.2' stroke-linecap='round'/><text x='265' y='134' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>Placentals</text><text x='265' y='151' font-size='11' fill='var(--ink)' text-anchor='middle'>human, bat</text><text x='265' y='167' font-size='10' fill='var(--muted)' text-anchor='middle'>develops in the uterus</text><text x='160' y='194' font-size='10' fill='var(--muted)' text-anchor='middle'>Whales and dolphins are placental mammals too</text></svg>",
+    "key": "A dolphin looks like a fish, but it breathes with lungs and nurses its young. That is why it is a mammal."
+   },
+   {
+    "h": "Variable and constant body temperature",
+    "p": "In fish, amphibians and reptiles, body temperature changes along with the surroundings. These animals slow down in the cold. <b>Birds and mammals</b>, however, make heat through metabolism and keep it in with feathers, hair or a layer of fat. That is why their body temperature is <b>constant</b>.",
+    "svg": "<svg viewBox='0 0 320 200'><rect x='4' y='8' width='312' height='22' rx='4' fill='var(--acc)' fill-opacity='0.18' stroke='var(--acc)' stroke-width='1'/><text x='8' y='23' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Class</text><text x='80' y='23' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Breathing</text><text x='172' y='23' font-size='11' fill='var(--ink)' text-anchor='middle' font-weight='700'>Heart</text><text x='194' y='23' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Fertilization</text><text x='254' y='23' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Covering</text><rect x='4' y='34' width='312' height='21' rx='3' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='0.8'/><text x='8' y='49' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Fish</text><text x='80' y='49' font-size='11' fill='var(--ink)' text-anchor='start'>gills</text><text x='172' y='49' font-size='11' fill='var(--ink)' text-anchor='middle'>2</text><text x='194' y='49' font-size='11' fill='var(--ink)' text-anchor='start'>external</text><text x='254' y='49' font-size='11' fill='var(--ink)' text-anchor='start'>scales</text><rect x='4' y='58' width='312' height='21' rx='3' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='0.8'/><text x='8' y='73' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Amphibian</text><text x='80' y='73' font-size='11' fill='var(--ink)' text-anchor='start'>skin, lungs</text><text x='172' y='73' font-size='11' fill='var(--ink)' text-anchor='middle'>3</text><text x='194' y='73' font-size='11' fill='var(--ink)' text-anchor='start'>external</text><text x='254' y='73' font-size='11' fill='var(--ink)' text-anchor='start'>moist skin</text><rect x='4' y='82' width='312' height='21' rx='3' fill='var(--c1)' fill-opacity='0.1' stroke='var(--c1)' stroke-width='0.8'/><text x='8' y='97' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Reptile</text><text x='80' y='97' font-size='11' fill='var(--ink)' text-anchor='start'>lungs</text><text x='172' y='97' font-size='11' fill='var(--ink)' text-anchor='middle'>3-4</text><text x='194' y='97' font-size='11' fill='var(--ink)' text-anchor='start'>internal</text><text x='254' y='97' font-size='11' fill='var(--ink)' text-anchor='start'>dry scales</text><rect x='4' y='106' width='312' height='21' rx='3' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)' stroke-width='0.8'/><text x='8' y='121' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Bird</text><text x='80' y='121' font-size='11' fill='var(--ink)' text-anchor='start'>lungs</text><text x='172' y='121' font-size='11' fill='var(--ink)' text-anchor='middle'>4</text><text x='194' y='121' font-size='11' fill='var(--ink)' text-anchor='start'>internal</text><text x='254' y='121' font-size='11' fill='var(--ink)' text-anchor='start'>feathers</text><rect x='4' y='130' width='312' height='21' rx='3' fill='var(--c2)' fill-opacity='0.1' stroke='var(--c2)' stroke-width='0.8'/><text x='8' y='145' font-size='11' fill='var(--ink)' text-anchor='start' font-weight='700'>Mammal</text><text x='80' y='145' font-size='11' fill='var(--ink)' text-anchor='start'>lungs</text><text x='172' y='145' font-size='11' fill='var(--ink)' text-anchor='middle'>4</text><text x='194' y='145' font-size='11' fill='var(--ink)' text-anchor='start'>internal</text><text x='254' y='145' font-size='11' fill='var(--ink)' text-anchor='start'>hair</text><text x='8' y='172' font-size='10' fill='var(--muted)' text-anchor='start'>Row color:</text><rect x='160' y='162' width='12' height='12' rx='2' fill='var(--c1)' fill-opacity='0.3' stroke='var(--c1)' stroke-width='1'/><text x='176' y='172' font-size='10' fill='var(--ink)' text-anchor='start'>variable</text><rect x='236' y='162' width='12' height='12' rx='2' fill='var(--c2)' fill-opacity='0.3' stroke='var(--c2)' stroke-width='1'/><text x='252' y='172' font-size='10' fill='var(--ink)' text-anchor='start'>constant</text><text x='160' y='192' font-size='11' fill='var(--ink)' text-anchor='middle'>Only birds and mammals keep a constant temperature</text></svg>",
+    "key": "A constant body temperature is found only in birds and mammals."
+   },
+   {
+    "h": "Nervous systems in animals",
+    "p": "A sponge has no nerve cells. A hydra has a <b>net</b>-like nervous system, a planarian has a <b>ladder</b>-like one, and an insect has one with a <b>chain of ganglia</b>. Vertebrates have a brain and a spinal cord.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='40' y='172' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>sponge</text><text x='40' y='188' font-size='10.5' fill='var(--muted)' text-anchor='middle'>no nerves</text><text x='120' y='172' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>hydra</text><text x='120' y='188' font-size='10.5' fill='var(--muted)' text-anchor='middle'>net</text><text x='200' y='172' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>planarian</text><text x='200' y='188' font-size='10.5' fill='var(--muted)' text-anchor='middle'>ladder</text><text x='280' y='172' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>insect</text><text x='280' y='188' font-size='10.5' fill='var(--muted)' text-anchor='middle'>chain of ganglia</text><path d='M22 140 Q14 90 30 50 L50 50 Q66 90 58 140 Z' fill='var(--c4)' fill-opacity='0.2' stroke='var(--c4)' stroke-width='1.5'/><path d='M108 140 L108 64 Q120 52 132 64 L132 140 Z' fill='var(--c3)' fill-opacity='0.15' stroke='var(--c3)' stroke-width='1.5'/><path d='M108 64 L102 44 M114 58 L112 36 M126 58 L128 36 M132 64 L138 44' stroke='var(--c3)' stroke-width='1.5' fill='none'/><path d='M112 80 L128 96 M128 80 L112 96 M112 104 L128 120 M128 104 L112 120 M120 72 L120 132' stroke='var(--c5)' stroke-width='1.2' fill='none'/><path d='M200 50 Q222 56 218 100 Q214 140 200 146 Q186 140 182 100 Q178 56 200 50 Z' fill='var(--c1)' fill-opacity='0.12' stroke='var(--c1)' stroke-width='1.5'/><circle cx='194' cy='68' r='4' fill='var(--c5)'/><circle cx='206' cy='68' r='4' fill='var(--c5)'/><path d='M194 72 L194 136 M206 72 L206 136 M194 86 H206 M194 100 H206 M194 114 H206 M194 128 H206' stroke='var(--c5)' stroke-width='1.4' fill='none'/><ellipse cx='280' cy='60' rx='12' ry='10' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><ellipse cx='280' cy='86' rx='14' ry='14' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><ellipse cx='280' cy='124' rx='16' ry='22' fill='var(--c2)' fill-opacity='0.15' stroke='var(--c2)' stroke-width='1.5'/><path d='M280 60 L280 140' stroke='var(--c5)' stroke-width='1.4'/><circle cx='280' cy='58' r='4' fill='var(--c5)'/><circle cx='280' cy='86' r='4' fill='var(--c5)'/><circle cx='280' cy='108' r='4' fill='var(--c5)'/><circle cx='280' cy='124' r='4' fill='var(--c5)'/><circle cx='280' cy='140' r='4' fill='var(--c5)'/><text x='160' y='20' font-size='11' fill='var(--muted)' text-anchor='middle'>simple to complex: nerve cells gather at the front</text></svg>",
+    "key": "The gathering of nerve cells in the head region is called cephalization.",
+    "once": {
+     "soru": "A jellyfish has no brain, but when you touch it, its whole body reacts. What is its nervous system like?",
+     "secenekler": [
+      {
+       "yazi": "Like a net",
+       "neden": "In hydras and jellyfish, nerve cells spread through the body like a net. That is why a signal travels in every direction.",
+       "dogru": true
+      },
+      {
+       "yazi": "Brain and spinal cord",
+       "neden": "A brain and a spinal cord are found in vertebrates."
+      },
+      {
+       "yazi": "None at all",
+       "neden": "The animals with no nerve cells are sponges. A jellyfish has nerve cells."
+      }
+     ]
+    }
+   },
+   {
+    "h": "Summary",
+    "p": "• Animals are eukaryotic, multicellular and heterotrophic. Their cells have no wall.<br>• About 95% of species are invertebrates. The largest phylum is the arthropods.<br>• The heart has 2 chambers in fish, 3 in amphibians and most reptiles, and 4 in birds and mammals.<br>• Body temperature is constant only in birds and mammals.",
+    "svg": "<svg viewBox='0 0 320 200'><text x='160' y='16' font-size='12' fill='var(--ink)' text-anchor='middle' font-weight='700'>Number of heart chambers</text><text x='84' y='42' font-size='11' fill='var(--ink)' text-anchor='end'>Fish</text><rect x='92' y='28' width='42' height='19' rx='3' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><rect x='138' y='28' width='42' height='19' rx='3' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><text x='192' y='42' font-size='11' fill='var(--muted)' text-anchor='start'>2</text><text x='84' y='68' font-size='11' fill='var(--ink)' text-anchor='end'>Amphibian</text><rect x='92' y='54' width='42' height='19' rx='3' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><rect x='138' y='54' width='42' height='19' rx='3' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><rect x='184' y='54' width='42' height='19' rx='3' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><text x='238' y='68' font-size='11' fill='var(--muted)' text-anchor='start'>3</text><text x='84' y='94' font-size='11' fill='var(--ink)' text-anchor='end'>Reptile</text><rect x='92' y='80' width='42' height='19' rx='3' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><rect x='138' y='80' width='42' height='19' rx='3' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><rect x='184' y='80' width='42' height='19' rx='3' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><text x='238' y='94' font-size='11' fill='var(--muted)' text-anchor='start'>3 (crocodile 4)</text><text x='84' y='120' font-size='11' fill='var(--ink)' text-anchor='end'>Bird</text><rect x='92' y='106' width='42' height='19' rx='3' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><rect x='138' y='106' width='42' height='19' rx='3' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><rect x='184' y='106' width='42' height='19' rx='3' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><rect x='230' y='106' width='42' height='19' rx='3' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><text x='284' y='120' font-size='11' fill='var(--muted)' text-anchor='start'>4</text><text x='84' y='146' font-size='11' fill='var(--ink)' text-anchor='end'>Mammal</text><rect x='92' y='132' width='42' height='19' rx='3' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><rect x='138' y='132' width='42' height='19' rx='3' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><rect x='184' y='132' width='42' height='19' rx='3' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><rect x='230' y='132' width='42' height='19' rx='3' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><text x='284' y='146' font-size='11' fill='var(--muted)' text-anchor='start'>4</text><rect x='60' y='168' width='12' height='12' rx='2' fill='var(--c1)' fill-opacity='0.35' stroke='var(--c1)' stroke-width='1'/><text x='76' y='178' font-size='11' fill='var(--ink)' text-anchor='start'>variable temperature</text><rect x='186' y='168' width='12' height='12' rx='2' fill='var(--c2)' fill-opacity='0.35' stroke='var(--c2)' stroke-width='1'/><text x='202' y='178' font-size='11' fill='var(--ink)' text-anchor='start'>constant temperature</text></svg>"
+   }
+  ],
+  "quiz": [
+   {
+    "tur": "eslestir",
+    "q": "Match each animal with its phylum.",
+    "ciftler": [
+     [
+      "Jellyfish",
+      "Cnidarians"
+     ],
+     [
+      "Tapeworm",
+      "Flatworms"
+     ],
+     [
+      "Leech",
+      "Segmented worms"
+     ],
+     [
+      "Octopus",
+      "Mollusks"
+     ],
+     [
+      "Starfish",
+      "Echinoderms"
+     ]
+    ],
+    "e": "A jellyfish is a cnidarian with stinging cells, a tapeworm is a flatworm, and a leech is a segmented worm. An octopus is a mollusk without a shell, and a starfish is an echinoderm."
+   },
+   {
+    "tur": "ayir",
+    "q": "Sort each animal by its body temperature.",
+    "gruplar": [
+     "Variable temperature",
+     "Constant temperature"
+    ],
+    "ogeler": [
+     [
+      "Trout",
+      0
+     ],
+     [
+      "Frog",
+      0
+     ],
+     [
+      "Crocodile",
+      0
+     ],
+     [
+      "Snake",
+      0
+     ],
+     [
+      "Penguin",
+      1
+     ],
+     [
+      "Bat",
+      1
+     ],
+     [
+      "Dolphin",
+      1
+     ],
+     [
+      "Platypus",
+      1
+     ]
+    ],
+    "e": "Body temperature is constant only in birds and mammals. A penguin is a bird. A bat, a dolphin and a platypus are mammals. In fish, amphibians and reptiles, body temperature varies."
+   },
+   {
+    "tur": "eslestir",
+    "q": "Match each set of features with its vertebrate class.",
+    "ciftler": [
+     [
+      "Gills, two-chambered heart",
+      "Fish"
+     ],
+     [
+      "Moist skin and lungs, three chambers",
+      "Amphibians"
+     ],
+     [
+      "Dry scaly skin, shelled eggs",
+      "Reptiles"
+     ],
+     [
+      "Feathers, hollow bones",
+      "Birds"
+     ],
+     [
+      "Hair, mammary glands, diaphragm",
+      "Mammals"
+     ]
+    ],
+    "e": "Gills and a two-chambered heart belong to fish, and moist skin and a three-chambered heart belong to amphibians. Dry scaly skin and shelled eggs belong to reptiles. Feathers are found only in birds, and hair and mammary glands only in mammals."
+   },
+   {
+    "q": "Which feature shows for certain that an animal is a vertebrate?",
+    "o": [
+     "A closed circulatory system",
+     "A backbone made of vertebrae along its back",
+     "A skeleton that supports its body",
+     "Breathing with lungs"
+    ],
+    "a": 1,
+    "e": "Earthworms and octopuses also have closed circulation. Arthropods have a skeleton too, in the form of an exoskeleton. Fish breathe with gills, not lungs. The feature that defines a vertebrate is the backbone.",
+    "y": [
+     "Invertebrates such as the earthworm also have closed circulation. What sets vertebrates apart is the backbone.",
+     "",
+     "An insect's exoskeleton also supports its body. What shows for certain that an animal is a vertebrate is a backbone made of vertebrae.",
+     "Fish are vertebrates, but they breathe with gills. The sure test is having a backbone."
+    ]
+   }
+  ]
  }
 }

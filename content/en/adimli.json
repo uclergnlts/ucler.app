@@ -16202,5 +16202,210 @@
    "There are three domains: Bacteria, Archaea and Eukaryotes. Viruses are not cells, so they belong to no kingdom."
   ],
   "soruOnce": true
+ },
+ "hayvanlar-alemi": {
+  "id": "hayvanlar-alemi",
+  "ders": "biyoloji",
+  "konu": "hayvanlar-alemi",
+  "baslik": "The animal kingdom",
+  "ozet": "Try first, then learn the name. Find the backbone, count the legs, build the heart and compare body temperatures.",
+  "adimlar": [
+   {
+    "baslik": "A skeleton, but a backbone?",
+    "metin": "Look at the skeletons of three animals. Find which one has a <b>backbone</b>.",
+    "sahne": {
+     "tur": "biy3-iskelet"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which one is a vertebrate?",
+     "secenekler": [
+      {
+       "yazi": "Insect",
+       "neden": "An insect has a hard exoskeleton, but no backbone."
+      },
+      {
+       "yazi": "Starfish",
+       "neden": "A starfish has an internal skeleton of chalky plates under its skin, but no backbone. Echinoderms are invertebrates."
+      },
+      {
+       "yazi": "Fish",
+       "dogru": true,
+       "neden": "A fish has a backbone made of vertebrae along its back. The spinal cord runs through this bony canal."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Insect or spider?",
+    "metin": "A spider has 8 legs, and an insect has 6. There are 2 spiders in the garden. Add enough insects to make <b>34</b> legs in total.",
+    "sahne": {
+     "tur": "biy3-bacak",
+     "orumcek": 2
+    },
+    "deger": {
+     "b": 0
+    },
+    "kontroller": [
+     {
+      "ad": "b",
+      "etiket": "Insects",
+      "min": 0,
+      "max": 5,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "b": 3
+     },
+     "tamam": "2 spiders have 16 legs, and 3 insects have 18. That makes 34 legs in total."
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Build the heart",
+    "metin": "In vertebrates, the number of heart chambers differs from group to group. Change the number of chambers and watch how the blood flows. Then build a <b>bird's</b> heart.",
+    "sahne": {
+     "tur": "biy3-kalp"
+    },
+    "deger": {
+     "o": 2
+    },
+    "kontroller": [
+     {
+      "ad": "o",
+      "etiket": "Chambers",
+      "min": 2,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "o": 4
+     },
+     "tamam": "In a four-chambered heart, oxygen-rich and oxygen-poor blood never mix. This is how the large amount of oxygen needed for flight is supplied."
+    },
+    "kart": 11
+   },
+   {
+    "baslik": "Variable and constant body temperature",
+    "metin": "Change the outside temperature and compare the two animals.",
+    "sahne": {
+     "tur": "biy3-sicaklik"
+    },
+    "deger": {
+     "T": 30
+    },
+    "kontroller": [
+     {
+      "ad": "T",
+      "etiket": "Outside temperature",
+      "min": 0,
+      "max": 40,
+      "birim": "°C"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "A mouse and a lizard are about the same size. Which one has to eat more food?",
+     "secenekler": [
+      {
+       "yazi": "Lizard",
+       "neden": "A lizard does not burn food to warm its body. It gets heat from the sun and its surroundings."
+      },
+      {
+       "yazi": "Mouse",
+       "dogru": true,
+       "neden": "A mouse makes the heat it needs to keep its body at 37 °C by burning food. The colder it gets, the more it has to eat."
+      },
+      {
+       "yazi": "Both eat the same",
+       "neden": "Lower the outside temperature to 5 °C. The mouse is still at 37 °C. Think about where that heat comes from."
+      }
+     ]
+    },
+    "kart": 13
+   },
+   {
+    "baslik": "Who is this animal?",
+    "metin": "An animal breathes with lungs. Its heart has <b>four chambers</b>, but its body temperature is <b>variable</b>. Change the number of chambers and see how many chambers each group has.",
+    "sahne": {
+     "tur": "biy3-kalp"
+    },
+    "deger": {
+     "o": 3
+    },
+    "kontroller": [
+     {
+      "ad": "o",
+      "etiket": "Chambers",
+      "min": 2,
+      "max": 4,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which animal could this be?",
+     "secenekler": [
+      {
+       "yazi": "Eagle",
+       "neden": "An eagle's heart has four chambers, but its body temperature is constant."
+      },
+      {
+       "yazi": "Frog",
+       "neden": "A frog's heart has three chambers."
+      },
+      {
+       "yazi": "Crocodile",
+       "dogru": true,
+       "neden": "A crocodile is a reptile, but its heart has four chambers. Even so, its body temperature varies. So a four-chambered heart alone does not mean a constant temperature."
+      }
+     ]
+    },
+    "kart": 10
+   },
+   {
+    "baslik": "Flying is not the test",
+    "metin": "A bat can fly. Look at its features one by one and find its class.",
+    "sahne": {
+     "tur": "biy3-yarasa",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "Which class is the bat in?",
+     "secenekler": [
+      {
+       "yazi": "Birds",
+       "neden": "A bat has no feathers. Flying is not unique to birds."
+      },
+      {
+       "yazi": "Mammals",
+       "dogru": true,
+       "neden": "A bat has hair and feeds its young with milk, so it is a mammal. Its wing is skin stretched between its long fingers."
+      },
+      {
+       "yazi": "Reptiles",
+       "neden": "Reptiles have dry, scaly skin, and their body temperature varies. A bat has hair, and its body temperature is constant."
+      }
+     ]
+    },
+    "kart": 12
+   }
+  ],
+  "kapanis": [
+   "Animals are eukaryotic, multicellular and heterotrophic. Their cells have no wall.",
+   "What shows an animal is a vertebrate is not a skeleton but a <b>backbone</b>. About 95% of species are invertebrates, and the largest phylum is the arthropods.",
+   "An insect has 3 pairs of legs, and a spider has 4 pairs. That is why a spider is not an insect.",
+   "The heart has 2 chambers in fish, 3 in amphibians and most reptiles, and 4 in birds, mammals and crocodiles.",
+   "Body temperature is constant only in birds and mammals. Feathers are unique to birds, and hair and mammary glands to mammals."
+  ],
+  "soruOnce": true
  }
 }
