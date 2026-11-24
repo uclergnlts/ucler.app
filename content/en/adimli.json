@@ -7564,5 +7564,689 @@
    "The amount left is found with N = N₀ / 2ⁿ. Fission splits a nucleus, and fusion joins nuclei. Both release energy."
   ],
   "soruOnce": true
+ },
+ "simya": {
+  "id": "simya",
+  "ders": "kimya",
+  "konu": "simya",
+  "baslik": "The science of chemistry: from alchemy to chemistry",
+  "ozet": "Try it first, then learn its name. Distill a mixture, split water and weigh a closed flask.",
+  "adimlar": [
+   {
+    "baslik": "Gold from lead?",
+    "metin": "The alchemists' biggest goal was to turn lead into gold. Today we know the difference. A lead atom has 82 protons in its nucleus, and a gold atom has 79.",
+    "sahne": {
+     "tur": "element-donusum"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Why did lead never turn into gold?",
+     "secenekler": [
+      {
+       "yazi": "Reactions do not change proton number",
+       "neden": "In a chemical reaction only electrons and bonds change. To turn lead into gold you would have to remove 3 protons from the nucleus. Only a nuclear reaction can do that, and only in tiny amounts.",
+       "dogru": true
+      },
+      {
+       "yazi": "They could not heat it enough",
+       "neden": "A furnace's heat breaks bonds, but it does not reach the nucleus. Even the hottest furnace cannot change the number of protons."
+      },
+      {
+       "yazi": "They never found the philosopher's stone",
+       "neden": "The problem was not a missing ingredient but the type of reaction. No substance can change the number of protons by chemical means."
+      }
+     ]
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Distillation",
+    "metin": "The flask holds a mixture of water and alcohol. What happens when you heat it?",
+    "sahne": {
+     "tur": "damitma",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "When you heat it, which reaches the collecting flask first?",
+     "secenekler": [
+      {
+       "yazi": "Alcohol",
+       "neden": "Alcohol boils at about 78 °C and water at 100 °C. So the alcohol evaporates and condenses first. The collected liquid still contains some water, so distillation is repeated to get pure alcohol.",
+       "dogru": true
+      },
+      {
+       "yazi": "Water",
+       "neden": "Water boils at 100 °C, so it evaporates later than alcohol."
+      },
+      {
+       "yazi": "Both at once",
+       "neden": "Their boiling points differ, so one evaporates first."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Is water an element?",
+    "metin": "Since ancient times water was thought to be an element. Is it really? Pass an electric current through water (this experiment was first done in 1800).",
+    "sahne": {
+     "tur": "elektroliz",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to the water when the current is on?",
+     "secenekler": [
+      {
+       "yazi": "It splits into two different gases",
+       "neden": "Hydrogen collects at the negative pole and oxygen at the positive pole. The volume of hydrogen is twice that of oxygen. This is the 2 to 1 ratio in the formula H₂O.",
+       "dogru": true
+      },
+      {
+       "yazi": "Nothing, it only warms up",
+       "neden": "The electric current breaks the water down, and gas collects in the tubes."
+      },
+      {
+       "yazi": "It all evaporates",
+       "neden": "This is decomposition, not evaporation. The gases in the tubes are hydrogen and oxygen, not water vapor."
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Boyle's definition",
+    "metin": "Robert Boyle proposed a definition in 1661. By this definition, an <b>element</b> is a substance that cannot be broken into simpler substances. Look at what collected in the tubes.",
+    "sahne": {
+     "tur": "elektroliz",
+     "son": true
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "By this definition, what is water?",
+     "secenekler": [
+      {
+       "yazi": "Compound",
+       "neden": "Water split into two simpler substances, so it cannot be an element. Water is a compound in which hydrogen and oxygen combine in a fixed ratio.",
+       "dogru": true
+      },
+      {
+       "yazi": "Element",
+       "neden": "That was the old idea, but the experiment showed that water breaks down. In science, the experiment has the last word."
+      },
+      {
+       "yazi": "Mixture",
+       "neden": "The gases were not dissolved in the water. They separated only through a chemical change, and always in a 2 to 1 ratio. This shows that water is a compound."
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Lavoisier's balance",
+    "metin": "You will heat tin in a sealed flask. The tin will slowly turn into a white powder.",
+    "sahne": {
+     "tur": "kapali-kap",
+     "sure": 5
+    },
+    "deger": {
+     "acik": 0
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "When the heating is done, what does the balance show?",
+     "secenekler": [
+      {
+       "yazi": "The same",
+       "neden": "Nothing enters or leaves the sealed flask. The atoms only rearrange, and the total mass stays the same. This is called <b>conservation of mass</b>.",
+       "dogru": true
+      },
+      {
+       "yazi": "More",
+       "neden": "The tin gets heavier, but the oxygen it needs comes from the air inside the flask. The total does not change."
+      },
+      {
+       "yazi": "Less",
+       "neden": "Nothing can escape from a sealed flask, so the mass cannot go down."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "If the flask is open",
+    "metin": "Now leave the flask open and repeat the experiment. Watch the balance.",
+    "sahne": {
+     "tur": "kapali-kap",
+     "sure": 5
+    },
+    "deger": {
+     "acik": 0
+    },
+    "kontroller": [
+     {
+      "ad": "acik",
+      "etiket": "Flask is open",
+      "min": 0,
+      "max": 1,
+      "tur": "anahtar"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "acik": 1
+     },
+     "tamam": "The mass went up! The tin combined with oxygen from the air. Nothing escaped from the flask. New air came in from outside to replace the oxygen used up."
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Test the claim",
+    "metin": "A chemist says that when a metal burns, phlogiston leaves it, so the metal gets lighter. How would you test this claim with the scientific method?",
+    "sahne": {
+     "tur": "bilim-dongu"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which one really tests the claim?",
+     "secenekler": [
+      {
+       "yazi": "Burn it in a closed container and weigh",
+       "neden": "Measurement tests the claim. When tin burned its mass went up, so nothing came out of it. Oxygen went in from the air. This is how the phlogiston idea fell apart.",
+       "dogru": true
+      },
+      {
+       "yazi": "Ask a famous scholar",
+       "neden": "In science, evidence counts, not authority. Famous scholars can be wrong too."
+      },
+      {
+       "yazi": "Look in old books",
+       "neden": "Books repeat a claim but do not test it. Testing needs experiment and measurement."
+      }
+     ]
+    },
+    "kart": 8
+   }
+  ],
+  "kapanis": [
+   "Alchemy searched for gold and the elixir of life, but failed. That is because chemical reactions do not change an element.",
+   "Alchemy left behind <b>distillation</b> and lab equipment. Distillation separates by boiling point difference.",
+   "For <b>Boyle</b>, an element is a substance that cannot be broken into simpler substances. Water can be broken down, so it is a compound.",
+   "<b>Lavoisier</b> showed that in a closed container the total mass before and after a reaction is the same. This is called conservation of mass.",
+   "Repeatable experiments and measurement, in other words the scientific method, made chemistry a science."
+  ],
+  "soruOnce": true
+ },
+ "kimya-bilimi": {
+  "id": "kimya-bilimi",
+  "ders": "kimya",
+  "konu": "kimya-bilimi",
+  "baslik": "The language and safety of chemistry",
+  "ozet": "Try it first, then learn its name. Build formulas, decode symbols and recognize hazard symbols.",
+  "adimlar": [
+   {
+    "baslik": "Build the formula yourself",
+    "metin": "Add atoms to build water, H₂O.",
+    "sahne": {
+     "tur": "formul-kur",
+     "atomlar": [
+      "H",
+      "O"
+     ],
+     "adlar": {
+      "H": "hidrojen atomu",
+      "O": "oksijen atomu",
+      "H2": "hidrojen gazı",
+      "O2": "oksijen gazı",
+      "O3": "ozon",
+      "H2O": "su",
+      "H2O2": "hidrojen peroksit",
+      "C": "karbon atomu",
+      "CO": "karbon monoksit",
+      "CO2": "karbon dioksit",
+      "Na": "sodyum",
+      "Cl": "klor atomu",
+      "NaCl": "sodyum klorür (sofra tuzu)"
+     }
+    },
+    "deger": {
+     "H": 0,
+     "O": 1
+    },
+    "kontroller": [
+     {
+      "ad": "H",
+      "etiket": "Hydrogen (H)",
+      "min": 0,
+      "max": 4,
+      "tur": "sayac"
+     },
+     {
+      "ad": "O",
+      "etiket": "Oxygen (O)",
+      "min": 0,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "H": 2,
+      "O": 1
+     },
+     "tamam": "Two hydrogens and one oxygen combine to form H₂O. The subscript of oxygen is 1, so it is not written. The water molecule is bent, not straight."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "One atom, a big difference",
+    "metin": "This molecule is <b>CO</b>, carbon monoxide, a toxic gas. Add one more oxygen to make the <b>CO₂</b> you breathe out.",
+    "sahne": {
+     "tur": "formul-kur",
+     "atomlar": [
+      "C",
+      "O"
+     ],
+     "adlar": {
+      "H": "hidrojen atomu",
+      "O": "oksijen atomu",
+      "H2": "hidrojen gazı",
+      "O2": "oksijen gazı",
+      "O3": "ozon",
+      "H2O": "su",
+      "H2O2": "hidrojen peroksit",
+      "C": "karbon atomu",
+      "CO": "karbon monoksit",
+      "CO2": "karbon dioksit",
+      "Na": "sodyum",
+      "Cl": "klor atomu",
+      "NaCl": "sodyum klorür (sofra tuzu)"
+     }
+    },
+    "deger": {
+     "C": 1,
+     "O": 1
+    },
+    "kontroller": [
+     {
+      "ad": "O",
+      "etiket": "Oxygen (O)",
+      "min": 0,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "O": 2
+     },
+     "tamam": "CO₂ is called carbon dioxide. A single oxygen completely changes the substance. CO sticks to the hemoglobin in blood and blocks oxygen transport. CO₂ is already in the air you breathe."
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Decode the symbol",
+    "metin": "Some symbols come from the element's Latin name. For example, the symbol for iron is Fe (<i>ferrum</i>) and for gold Au (<i>aurum</i>). Decode this symbol.",
+    "sahne": {
+     "tur": "element-sembol",
+     "sembol": "Sn",
+     "z": 50,
+     "ipucu": "Konserve kutularını paslanmaya karşı kaplar."
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Sn is the symbol for which element?",
+     "secenekler": [
+      {
+       "yazi": "Tin",
+       "neden": "Sn comes from <i>stannum</i>, the Latin name for tin. A food can is steel with a thin coating of tin.",
+       "dogru": true
+      },
+      {
+       "yazi": "Sodium",
+       "neden": "The symbol for sodium is Na, from its Latin name <i>natrium</i>."
+      },
+      {
+       "yazi": "Silicon",
+       "neden": "The symbol for silicon is Si. Sn comes from the Latin name <i>stannum</i>."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Common names",
+    "metin": "Now build table salt, NaCl.",
+    "sahne": {
+     "tur": "formul-kur",
+     "atomlar": [
+      "Na",
+      "Cl"
+     ],
+     "adlar": {
+      "H": "hidrojen atomu",
+      "O": "oksijen atomu",
+      "H2": "hidrojen gazı",
+      "O2": "oksijen gazı",
+      "O3": "ozon",
+      "H2O": "su",
+      "H2O2": "hidrojen peroksit",
+      "C": "karbon atomu",
+      "CO": "karbon monoksit",
+      "CO2": "karbon dioksit",
+      "Na": "sodyum",
+      "Cl": "klor atomu",
+      "NaCl": "sodyum klorür (sofra tuzu)"
+     },
+     "iyonik": true
+    },
+    "deger": {
+     "Na": 1,
+     "Cl": 0
+    },
+    "kontroller": [
+     {
+      "ad": "Cl",
+      "etiket": "Chlorine (Cl)",
+      "min": 0,
+      "max": 3,
+      "tur": "sayac"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "Cl": 1
+     },
+     "tamam": "NaCl is called sodium chloride, which is table salt. Salt is actually a crystal made of Na⁺ and Cl⁻ ions. The formula shows their 1 to 1 ratio."
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Hazard symbol",
+    "metin": "Look at the symbol on the label before you open the bottle.",
+    "sahne": {
+     "tur": "piktogram",
+     "isaret": "alev"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "What does this symbol mean?",
+     "secenekler": [
+      {
+       "yazi": "Flammable",
+       "neden": "The flame symbol marks flammable substances such as alcohol, acetone and gasoline. They are kept away from flames and sparks.",
+       "dogru": true
+      },
+      {
+       "yazi": "Explosive",
+       "neden": "The explosive symbol shows an exploding bomb."
+      },
+      {
+       "yazi": "Toxic",
+       "neden": "A toxic substance is marked with a skull."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "A small difference",
+    "metin": "This symbol looks like the first one, but there is a circle under the flame. This small difference means a very different hazard.",
+    "sahne": {
+     "tur": "piktogram",
+     "isaret": "alev-daire"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which kind of substance does this symbol mark?",
+     "secenekler": [
+      {
+       "yazi": "Oxidizing",
+       "neden": "The flame over a circle marks substances that do not burn themselves but give off oxygen and start or intensify burning. Concentrated hydrogen peroxide is an example. These are kept away from flammable substances.",
+       "dogru": true
+      },
+      {
+       "yazi": "Flammable",
+       "neden": "The flammable symbol shows only a flame, with no circle under it."
+      },
+      {
+       "yazi": "Corrosive",
+       "neden": "The corrosive symbol shows liquid dripping onto a hand and a surface and eating them away."
+      }
+     ]
+    },
+    "kart": 7
+   },
+   {
+    "baslik": "Diluting an acid",
+    "metin": "You need to dilute a concentrated acid. A lot of heat is released when acid and water mix.",
+    "sahne": {
+     "tur": "seyreltme",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "How do you mix them?",
+     "secenekler": [
+      {
+       "yazi": "Add the acid slowly to water",
+       "neden": "When acid is added a little at a time to plenty of water, the heat spreads through the large mass of water and nothing splashes. That is why acid is always added to water.",
+       "dogru": true
+      },
+      {
+       "yazi": "Pour water onto the acid",
+       "neden": "A little water on top of the acid heats up suddenly, boils and splashes the acid."
+      },
+      {
+       "yazi": "The order does not matter",
+       "neden": "It does matter, because if water is added to acid, the hot water can splash the acid."
+      }
+     ]
+    },
+    "kart": 8
+   }
+  ],
+  "kapanis": [
+   "In a symbol the first letter is a capital and the second is lowercase. <b>Co</b> is cobalt, while <b>CO</b> is carbon monoxide.",
+   "The <b>subscript</b> in a formula shows how many of that atom there are. A subscript of 1 is not written (H₂O, CO₂).",
+   "Some symbols come from Latin names. Fe comes from <i>ferrum</i>, Au from <i>aurum</i> and Pb from <i>plumbum</i>.",
+   "Diamond-shaped symbols with a red border describe hazards. A flame marks a flammable substance, and a flame over a circle marks an oxidizing substance.",
+   "When diluting, <b>add acid to water</b> slowly, never the other way around."
+  ],
+  "soruOnce": true
+ },
+ "madde": {
+  "id": "madde",
+  "ders": "kimya",
+  "konu": "madde",
+  "baslik": "Matter and its properties",
+  "ozet": "Try it first, then learn its name. Heat water, watch the particles, mix substances and burn one.",
+  "adimlar": [
+   {
+    "baslik": "Three states",
+    "metin": "The container holds water particles. Change the temperature and see how the particles are arranged. Then turn the water into a <b>gas</b>.",
+    "sahne": {
+     "tur": "kim2-hal"
+    },
+    "deger": {
+     "T": -20
+    },
+    "kontroller": [
+     {
+      "ad": "T",
+      "etiket": "Temperature",
+      "min": -20,
+      "max": 120,
+      "adim": 10,
+      "birim": "°C"
+     }
+    ],
+    "gorev": {
+     "tur": "ayarla",
+     "hedef": {
+      "T": [
+       110,
+       120
+      ]
+     },
+     "tamam": "In a gas the particles are far apart and fast, and they fill the whole container. In a solid they vibrate in place, and in a liquid they slide past each other. The particles are always the same water molecules. Only their arrangement and motion change."
+    },
+    "kart": 2
+   },
+   {
+    "baslik": "Temperature while melting",
+    "metin": "You keep heating the ice and measure its temperature. The graph will show how the temperature changes over time.",
+    "sahne": {
+     "tur": "kim2-isinma",
+     "sure": 6
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "While the ice melts, it keeps absorbing heat. What happens to its temperature?",
+     "secenekler": [
+      {
+       "yazi": "It stays constant",
+       "dogru": true,
+       "neden": "The heat absorbed goes into pulling the particles apart. So the temperature stays at 0 °C while melting and at 100 °C while boiling (at 1 atm). Mixtures, on the other hand, usually melt over a range of temperatures."
+      },
+      {
+       "yazi": "It rises steadily",
+       "neden": "The ice absorbs heat, but its temperature does not rise while it melts. The heat goes into something else."
+      },
+      {
+       "yazi": "It goes down",
+       "neden": "The ice is absorbing heat, not releasing it. So its temperature does not drop."
+      }
+     ]
+    },
+    "kart": 3
+   },
+   {
+    "baslik": "Element, compound, mixture",
+    "metin": "Look at the particles in the boxes. If different atoms are bonded in a fixed ratio, it is a <b>compound</b>. If substances sit together without bonding, it is a <b>mixture</b>.",
+    "sahne": {
+     "tur": "kim2-ornek"
+    },
+    "gorev": {
+     "tur": "secim",
+     "soru": "Which box holds a compound?",
+     "secenekler": [
+      {
+       "yazi": "A",
+       "neden": "These molecules have two atoms, but both are oxygen. It contains only one kind of atom, so this substance is an element: O₂."
+      },
+      {
+       "yazi": "B",
+       "dogru": true,
+       "neden": "In each molecule two hydrogens are bonded to one oxygen, so this substance is water (H₂O). Different atoms are bonded in a fixed ratio, so it is a compound."
+      },
+      {
+       "yazi": "C",
+       "neden": "Here H₂ and O₂ molecules sit together without bonding. So this is a mixture of two elements."
+      }
+     ]
+    },
+    "kart": 4
+   },
+   {
+    "baslik": "Homogeneous or heterogeneous?",
+    "metin": "You will stir both glasses well. One has sugar and water, the other olive oil and water.",
+    "sahne": {
+     "tur": "kim2-karistir",
+     "sure": 5
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "After stirring and waiting, which one is the same everywhere?",
+     "secenekler": [
+      {
+       "yazi": "The sugar water",
+       "dogru": true,
+       "neden": "Sugar dissolves in water and spreads evenly everywhere. Olive oil does not dissolve, and since it is less dense than water it rises to the top, forming two layers."
+      },
+      {
+       "yazi": "The oil and water",
+       "neden": "Oil and water do not mix. After waiting, the oil collects on top."
+      },
+      {
+       "yazi": "Both",
+       "neden": "Stirring does not dissolve everything. After waiting, one of the glasses separates into layers."
+      }
+     ]
+    },
+    "kart": 5
+   },
+   {
+    "baslik": "Physical change",
+    "metin": "What changes when ice melts? Watch the water molecules up close.",
+    "sahne": {
+     "tur": "kim2-degisim",
+     "olay": "erime",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens to the water molecules when ice melts?",
+     "secenekler": [
+      {
+       "yazi": "They stay the same",
+       "dogru": true,
+       "neden": "Melting is a physical change. The molecule is still H₂O, and the substance is still water. Tearing paper and dissolving sugar are also physical changes."
+      },
+      {
+       "yazi": "They split into H and O atoms",
+       "neden": "Splitting water into its atoms takes a chemical method such as electrolysis. Melting does not do that."
+      },
+      {
+       "yazi": "They turn into another substance",
+       "neden": "Melted ice is still water. If you freeze it, it becomes ice again."
+      }
+     ]
+    },
+    "kart": 6
+   },
+   {
+    "baslik": "Chemical change",
+    "metin": "Now you are burning charcoal, which is carbon. The carbon atoms will meet oxygen molecules from the air.",
+    "sahne": {
+     "tur": "kim2-degisim",
+     "olay": "yanma",
+     "sure": 4
+    },
+    "gorev": {
+     "tur": "tahmin",
+     "soru": "What happens when carbon burns?",
+     "secenekler": [
+      {
+       "yazi": "A new substance forms",
+       "dogru": true,
+       "neden": "Carbon and oxygen bond to form carbon dioxide (CO₂), and this is a chemical change. The atoms do not disappear. They bond in a new arrangement. Heat and light given off are also clues of a chemical change."
+      },
+      {
+       "yazi": "It only turns into a gas",
+       "neden": "If only the state changed, the molecule would stay the same. Here carbon combines with oxygen to form a new substance."
+      },
+      {
+       "yazi": "The atoms disappear",
+       "neden": "Atoms do not disappear in a reaction. They only bond again with other atoms."
+      }
+     ]
+    },
+    "kart": 6
+   }
+  ],
+  "kapanis": [
+   "Matter is anything with mass and volume. In a solid the particles are ordered and vibrate, in a liquid they slide past each other, and in a gas they are far apart and fast.",
+   "A pure substance has a definite melting and boiling point. While the state is changing, the temperature stays constant. Pure water melts at 0 °C and boils at 100 °C at 1 atm.",
+   "An <b>element</b> is made of one kind of atom, and a <b>compound</b> of different atoms bonded in a fixed ratio. In a <b>mixture</b> the substances do not bond to each other.",
+   "A homogeneous mixture is the same everywhere, for example sugar water. In a heterogeneous mixture you can tell the parts apart, for example olive oil and water.",
+   "In a <b>physical</b> change the substance stays the same, as in melting and dissolving. In a <b>chemical</b> change a new substance forms, as in burning and rusting."
+  ],
+  "soruOnce": true
  }
 }
