@@ -110,7 +110,7 @@ const SalSahne: React.FC<{ mod: 'ilk' | 'son' }> = ({ mod }) => {
   const f = useCurrentFrame();
   const sal = Math.sin(f / 14) * 14;
   return (
-    <Kadraj zoom={mod === 'ilk' ? [1.15, 1.0] : [1.0, 1.12]} origin={[540, 1100]}>
+    <Kadraj zoom={mod === 'ilk' ? [1.45, 1.1] : [1.0, 1.12]} origin={mod === 'ilk' ? [560, 1330] : [540, 1100]}>
       <Deniz ufuk={860} gunes={[820, 520, 110]} />
       <path d={`M930 ${1260 + Math.sin(f / 9) * 6} l40 -90 l40 90 Z`} fill="#3A4A6B" stroke={INK} strokeWidth={7} />
       <g transform={`translate(0 ${sal}) rotate(${Math.sin(f / 18) * 2} 540 1500)`}>
@@ -393,6 +393,7 @@ const short = makeShort({
   voiceLen: 21.73,
   tail: 0.45,
   baslik: ['LOST AT SEA:', 'DRINK THE OCEAN?'],
+  kanca: { en: 'SAFE TO DRINK?', tr: 'İÇİLİR Mİ?', y: 700 },
   vurgu: '#7FD6FF',
   plan: [
     { w: 'You', C: S1 },

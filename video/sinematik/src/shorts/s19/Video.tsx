@@ -88,11 +88,12 @@ const S1: React.FC = () => {
   const t = useTt();
   const f = useCurrentFrame();
   return (
-    <Kadraj zoom={[1.12, 1.0]} origin={[700, 1500]}>
+    <Kadraj zoom={[1.3, 1.05]} origin={[720, 1680]} shakeAt={[0.0]} shake={14}>
       <Mutfak />
       <Cizgi x={300} y={1900} s={1.9} goz="sok" agiz="o" kas="kalkik" bakis={[1, 1]} kolSag={[50, 30]} kolSol={[20, 14]} />
+      {/* kanca: bakteriler 0. karede zaten kurabiyeye koşuyor */}
       {[[560, 1560, -20], [930, 1580, 16], [1000, 1780, 30], [540, 1830, -30]].map(([x, y, r], i) => (
-        <Bakteri key={i} x={x} y={y + (1 - pop(t, 0.35 + i * 0.12)) * 60} s={0.9 * pop(t, 0.35 + i * 0.12)} r={r + Math.sin(f / 6 + i) * 6} />
+        <Bakteri key={i} x={x + (760 - x) * ap(t, 0, 1.2) * 0.25} y={y + Math.sin(f / 4 + i) * 10} s={0.9} r={r + Math.sin(f / 6 + i) * 6} el />
       ))}
       <Kurabiye x={760} y={1700} s={1.15} r={12} />
       {[0, 1, 2, 3, 4, 5].map((i) => (
@@ -413,6 +414,7 @@ const short = makeShort({
   tail: 0.45,
   baslik: ['THE', '5-SECOND RULE'],
   vurgu: '#B8F06A',
+  kanca: { en: 'SAFE TO EAT?', tr: 'YENİR Mİ?', y: 1080, renk: '#B8F06A' },
   plan: [
     { w: 'Your', C: S1 },
     { w: 'Five', C: S2 },

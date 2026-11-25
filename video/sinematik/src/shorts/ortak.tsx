@@ -351,6 +351,8 @@ export const makeShort = (o: {
   tema?: 'gece';
   /** Gece temasında çekim başına "ŞEKİL n · ..." notu (plan sırasıyla). */
   sekil?: string[];
+  /** Kanca: 0. karede tam boy görünen büyük orta yazı (kaydırmayı durdurmak için), ~1,6 sn sonra söner. */
+  kanca?: { en: string; tr?: string; y?: number; renk?: string; dur?: number };
 }) => {
   const esle = o.esle ?? {};
   const tail = o.tail ?? 0.7;
@@ -416,6 +418,11 @@ export const makeShort = (o: {
         </div>
           </>
         )}
+        {o.kanca && (
+          <Sequence from={0} durationInFrames={fr(o.kanca.dur ?? 1.7)} name="kanca">
+            <Kanca {...o.kanca} dil={o.dil ?? 'en'} />
+          </Sequence>
+        )}
         <Sequence from={fr(OFF)} durationInFrames={fr(o.voiceLen + 0.1)}>
           <div style={{ position: 'absolute', left: 60, right: 60, bottom: 400, display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
             <Caption words={o.words} color={o.tema === 'gece' ? GD.teb : '#fff'} accent={o.tema === 'gece' ? GD.sari : '#FFD54A'} size={70} style={{ fontFamily, transformOrigin: 'center', textShadow: `0 4px 0 ${INK}, 0 0 20px rgba(0,0,0,0.9)`, WebkitTextStroke: `2px ${INK}` }} />
@@ -434,6 +441,20 @@ export const makeShort = (o: {
     );
   };
   return { Comp, frames };
+};
+
+/** 0. karede tam boy duran büyük kanca yazısı; hafif nabız, sonda söner. */
+const Kanca: React.FC<{ en: string; tr?: string; y?: number; renk?: string; dur?: number; dil: 'en' | 'tr' }> = ({ en, tr, y = 720, renk = '#FFD54A', dur = 1.7, dil }) => {
+  const f = useCurrentFrame();
+  const sn = f / FPS;
+  const nabiz = 1 + 0.04 * Math.sin(sn * 9);
+  const o = interpolate(sn, [dur - 0.3, dur], [1, 0], clamp);
+  const metin = dil === 'tr' && tr ? tr : en;
+  return (
+    <div style={{ position: 'absolute', left: 30, right: 30, top: y - 110, textAlign: 'center', opacity: o, transform: `rotate(-4deg) scale(${nabiz})` }}>
+      <span style={{ fontFamily, fontWeight: 800, fontSize: 150, lineHeight: 1, letterSpacing: '-0.02em', color: renk, WebkitTextStroke: `16px ${INK}`, paintOrder: 'stroke fill', textShadow: `0 10px 0 ${INK}, 0 0 40px rgba(0,0,0,0.7)` }}>{metin}</span>
+    </div>
+  );
 };
 
 /** Dile göre yazı: <T en="20 min" tr="20 dk" /> */
