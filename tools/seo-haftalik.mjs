@@ -172,16 +172,18 @@ export async function veriCek() {
   ]);
   // Önemli sayfaların dizin durumu (URL Denetimi API, günde 2000 hak; 25 tane yeter).
   const adresler = (await siteHaritasiAdresleri()).slice(0, 25);
-  const dizin = [];
-  for (const u of adresler) {
+  // Her denetim ~6 sn sürüyor; 5'erli gruplar halinde paralel.
+  const denetle = async (u) => {
     try {
       const j = await gsc(jeton, "/v1/urlInspection/index:inspect", { inspectionUrl: u, siteUrl: MULK });
       const s = j.inspectionResult?.indexStatusResult || {};
-      dizin.push({ sayfa: u, karar: s.verdict, durum: s.coverageState, sonTarama: s.lastCrawlTime });
+      return { sayfa: u, karar: s.verdict, durum: s.coverageState, sonTarama: s.lastCrawlTime };
     } catch (e) {
-      dizin.push({ sayfa: u, hata: String(e.message).slice(0, 200) });
+      return { sayfa: u, hata: String(e.message).slice(0, 200) };
     }
-  }
+  };
+  const dizin = [];
+  for (let i = 0; i < adresler.length; i += 5) dizin.push(...(await Promise.all(adresler.slice(i, i + 5).map(denetle))));
   return {
     cekildi: new Date().toISOString(),
     donem: d,

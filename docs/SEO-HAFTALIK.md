@@ -25,7 +25,11 @@ Araç: `tools/seo-haftalik.mjs`. Rapor: `seo/haftalik/oneri-YYYY-AA-GG.md` (orta
 
 Toplam gösterim 28 günde 300'ün altındaysa ince ayar önerilmez; rapor bunu açıkça söyler ve en güçlü sinyali yalnız bilgi olarak verir.
 
-## Kurulum (bir kez, Üçler)
+## Kurulum (yapıldı 2026-11-25)
+
+Mülk sc-domain:ucler.app (DNS TXT ile doğrulandı), site haritası gönderildi. Google Cloud projesi ucler-app-512523, servis hesabı seo-okuyucu@ucler-app-512523.iam.gserviceaccount.com, Search Console izni Sınırlı. Anahtar yalnız ortam değişkeninde durur.
+
+## Kurulum adımları (yeniden kurmak gerekirse)
 
 1. **Search Console:** ucler.app mülkü yoksa https://search.google.com/search-console adresinde "Alan adı" mülkü olarak ekle (Squarespace DNS'e TXT kaydı).
 2. **Google Cloud:** https://console.cloud.google.com adresinde bir proje aç, "Google Search Console API" yi etkinleştir, IAM > Servis hesapları > yeni servis hesabı > Anahtarlar > JSON anahtar indir.
@@ -36,7 +40,7 @@ Toplam gösterim 28 günde 300'ün altındaysa ince ayar önerilmez; rapor bunu 
 ## Elle çalıştırma
 
 ```
-GSC_SERVIS_HESABI=/yol/anahtar.json node tools/seo-haftalik.mjs
+NODE_USE_ENV_PROXY=1 GSC_SERVIS_HESABI=/yol/anahtar.json node tools/seo-haftalik.mjs   # bulut ortamında proxy için NODE_USE_ENV_PROXY=1 şart
 node tools/seo-haftalik.mjs --veri seo/haftalik/veri-2026-11-25.json   # kayıtlı veriyle
 ```
 
