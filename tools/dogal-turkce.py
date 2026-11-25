@@ -117,7 +117,7 @@ def kaynaklar():
     for f in sorted(glob.glob(os.path.join(ROOT, "content", "adimli", "*.json"))):
         for yol, m in json_metinleri(json.load(open(f, encoding="utf-8"))):
             yield "Adımlı ders", os.path.relpath(f, ROOT), yol, m
-    for f in [os.path.join(ROOT, "content", "videolar.json"), os.path.join(ROOT, "app", "yenilikler.json")]:
+    for f in [os.path.join(ROOT, "content", "videolar.json"), os.path.join(ROOT, "app", "yenilikler.json"), os.path.join(ROOT, "content", "surumler.json")]:
         if os.path.isfile(f):
             for yol, m in json_metinleri(json.load(open(f, encoding="utf-8"))):
                 yield "Video ve yenilik", os.path.relpath(f, ROOT), yol, m

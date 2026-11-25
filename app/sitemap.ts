@@ -7,7 +7,7 @@ import { SITE_URL } from "@/lib/site";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const sayfalar = ["/", "/tr/", "/drawings/", "/tr/cizimler/", "/kesfet/", "/hakkinda/", "/gizlilik/", "/kosullar/"];
+  const sayfalar = ["/", "/tr/", "/drawings/", "/tr/cizimler/", "/updates/", "/tr/guncellemeler/", "/kesfet/", "/hakkinda/", "/gizlilik/", "/kosullar/"];
   // /videolar/ haritada yok: sekme 2026-11-24'te kalktı, adres ana sayfaya yönlenir.
   return [
     ...sayfalar.map((y) => ({ url: SITE_URL + y })),

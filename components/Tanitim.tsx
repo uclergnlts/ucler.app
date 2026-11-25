@@ -5,6 +5,7 @@ import Link from "next/link";
 import { APP_STORE_URL, INSTAGRAM, IOS_YAYINDA, PLAY_URL, YOUTUBE } from "@/lib/site";
 import { CizgiDugme, CizgiIzleyen, CizgiYuruyen } from "./Cizgi";
 import { CIZIM_YOL } from "./Cizimler";
+import { SURUM_YOL } from "./SurumNotlari";
 import { Logo } from "./temel";
 
 export type Dil = "en" | "tr";
@@ -14,7 +15,7 @@ const METIN = {
     al: "Get the app", play: "Get it on Google Play", ios: "Download on the App Store", yakinda: "soon", izle: "Watch on YouTube",
     k1: "Fig. 1 · Who we are", h1a: "Knowledge belongs to ", h1b: "everyone",
     giris: "ucler is an independent learning project from Türkiye. We help people truly understand what they study: short interactive lessons in the app, and long, careful videos on YouTube.",
-    not: "The app is in Turkish today, English is on the way",
+    not: "",
     k2: "What we do", h2: "Two ways in. Same idea behind both.",
     amac: "Our goal is simple: help people reach knowledge and learn science, wherever they live and whatever school they went to.",
     a1k: "01 · The app", a1h: "Learn by doing, a few minutes at a time",
@@ -41,7 +42,7 @@ const METIN = {
       biyoloji: ["Biology", "Cells, genetics, energy in life, the human body, ecology, evolution"],
     },
     sona: "Stay ", sonb: "curious",
-    gizlilik: "Privacy", kosul: "Terms", sil: "Delete account",
+    gizlilik: "Privacy", kosul: "Terms", surum: "Release notes", sil: "Delete account",
   },
   tr: {
     al: "Uygulamayı indir", play: "Google Play'den indir", ios: "App Store'dan indir", yakinda: "yakında", izle: "YouTube'da izle",
@@ -74,7 +75,7 @@ const METIN = {
       biyoloji: ["Biyoloji", "Hücre, kalıtım, canlılarda enerji, insan vücudu, ekoloji ve evrim"],
     },
     sona: "Hep ", sonb: "merak et",
-    gizlilik: "Gizlilik", kosul: "Koşullar", sil: "Hesabı sil",
+    gizlilik: "Gizlilik", kosul: "Koşullar", surum: "Sürüm notları", sil: "Hesabı sil",
   },
 } as const;
 
@@ -280,6 +281,7 @@ export default function Tanitim({ sayi, dil = "en" }: { sayi: Record<string, num
             <a href={YOUTUBE.url} className="hover:text-[var(--ink)]">YouTube</a>
             <a href={INSTAGRAM.url} className="hover:text-[var(--ink)]">Instagram</a>
             <Link href={CIZIM_YOL[dil]} className="hover:text-[var(--ink)]">{m.cz}</Link>
+            <Link href={SURUM_YOL[dil]} className="hover:text-[var(--ink)]">{m.surum}</Link>
             <Link href="/gizlilik/" className="hover:text-[var(--ink)]">{m.gizlilik}</Link>
             <Link href="/kosullar/" className="hover:text-[var(--ink)]">{m.kosul}</Link>
             <Link href="/hesap-silme/" className="hover:text-[var(--ink)]">{m.sil}</Link>

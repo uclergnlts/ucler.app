@@ -19,9 +19,9 @@ let n = 0;
 })("");
 console.log(`out/en/: ${n} dosya`);
 
-// Türkçe derleme bütün sayfalara <html lang="tr"> yazar; İngilizce tanıtım sayfası ve çizim galerisi Türkçe derlemede
+// Türkçe derleme bütün sayfalara <html lang="tr"> yazar; İngilizce tanıtım sayfası, çizim galerisi ve sürüm notları Türkçe derlemede
 // durduğu için onların dil etiketi burada düzeltilir (Bing ve ekran okuyucular bu etiketi kullanır).
-for (const f of ["index.html", path.join("drawings", "index.html")]) {
+for (const f of ["index.html", path.join("drawings", "index.html"), path.join("updates", "index.html")]) {
   const p = path.join("out", f);
   if (!fs.existsSync(p)) continue;
   const s = fs.readFileSync(p, "utf8");

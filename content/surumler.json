@@ -1,0 +1,77 @@
+{
+  "_not": "Uygulamanın sürüm notları. Sayfa: /updates/ (İngilizce) ve /tr/guncellemeler/ (Türkçe), components/SurumNotlari.tsx. Yeni sürüm: listenin EN ÜSTÜNE bir öğe ekle. Mağazada yayına girdiği gün 'yayin' içine o platformun tarihini yaz (YYYY-AA-GG). Tarihi boş olan platform sayfada 'mağaza onayında' görünür. İki platformun da tarihi boşsa sürüm 'yakında' etiketiyle görünür. Maddeler tam cümleyle yazılır (docs/DOGAL-TURKCE.md).",
+  "surumler": [
+    {
+      "surum": "1.1.1",
+      "yayin": { "ios": "", "android": "" },
+      "tr": {
+        "baslik": "Google ile giriş düzeldi",
+        "maddeler": [
+          "Uygulamada Google ile giriş yeniden çalışıyor. Önceki sürümde Google'da giriş yaptıktan sonra uygulamaya geri dönülemiyordu.",
+          "Videolar sekmesi kaldırıldı. Konuların içindeki videolar yerinde duruyor.",
+          "Uygulamayı puanlama isteği artık ilk konunu iyi bir sonuçla bitirdiğinde çıkıyor. Ayarlar'daki \"Uygulamayı puanla\" satırı iPhone'da da var."
+        ]
+      },
+      "en": {
+        "baslik": "Google sign-in fixed",
+        "maddeler": [
+          "Signing in with Google works again in the app. In the previous version the app did not open again after you signed in on Google.",
+          "The Videos tab is gone. The videos inside lessons stay where they were.",
+          "The app now asks for a rating after your first topic that goes well. \"Rate the app\" in Settings now works on iPhone too."
+        ]
+      }
+    },
+    {
+      "surum": "1.1",
+      "yayin": { "ios": "2026-11-24", "android": "2026-11-24" },
+      "tr": {
+        "baslik": "ucler artık İngilizce de var",
+        "maddeler": [
+          "85 konunun hepsi, testler, simülasyonlar ve günün sorusu İngilizce olarak da var.",
+          "Uygulama ilk açılışta telefonunun dilinde açılır. Dili Profil > Ayarlar > Dil bölümünden değiştirebilirsin.",
+          "Açık ve koyu görünüm arasında seçim yapabilirsin.",
+          "Konular 28 üniteye göre yeniden düzenlendi.",
+          "Birçok küçük hatayı düzelttik."
+        ]
+      },
+      "en": {
+        "baslik": "ucler now speaks English",
+        "maddeler": [
+          "All 85 topics, the tests, the simulations and the question of the day are now in English.",
+          "The app opens in your phone's language. You can switch in Profile > Settings > Language.",
+          "You can choose between a light and a dark theme.",
+          "Topics are now grouped into 28 units.",
+          "We fixed many small bugs."
+        ]
+      }
+    },
+    {
+      "surum": "1.0",
+      "yayin": { "ios": "2026-11-24", "android": "2026-11-17" },
+      "tr": {
+        "baslik": "İlk sürüm",
+        "maddeler": [
+          "Fizik, kimya ve biyolojide 85 konu var. Konular en temelden başlar ve üniversitenin ilk yılına kadar gider.",
+          "Her konu kısa kartlarla, dokunabildiğin çizimlerle ve küçük görevlerle anlatılır. Konunun sonunda kısa bir test bulunur.",
+          "Bazı konularda canlı simülasyon var. Bir değeri değiştirdiğinde sonucu hemen görürsün.",
+          "Her gün yeni bir günün sorusu çıkar. Topladığın puanlar haftalık lige yazılır.",
+          "Yanlış yaptığın sorular birkaç gün arayla yeniden karşına çıkar.",
+          "İstersen hesap açabilirsin. Hesap açınca ilerlemen cihazlar arasında taşınır.",
+          "Bu sürümde uygulama yalnızca Türkçeydi."
+        ]
+      },
+      "en": {
+        "baslik": "First release",
+        "maddeler": [
+          "85 topics in physics, chemistry and biology, from the very basics to first-year university.",
+          "Every topic is told with short cards, drawings you can touch and small tasks. Each topic ends with a quick test.",
+          "Some topics have live simulations. Change a value and see the result right away.",
+          "A new question of the day every day. The points you earn go into a weekly league.",
+          "Questions you get wrong come back a few days later.",
+          "You can create an account if you like. With an account your progress moves between devices.",
+          "This version was in Turkish only."
+        ]
+      }
+    }
+  ]
+}
