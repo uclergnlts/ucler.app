@@ -353,11 +353,15 @@ export const makeShort = (o: {
   sekil?: string[];
   /** Kanca: 0. karede tam boy görünen büyük orta yazı (kaydırmayı durdurmak için), ~1,6 sn sonra söner. */
   kanca?: { en: string; tr?: string; y?: number; renk?: string; dur?: number };
+  /** En sonda ~2.5 sn ucler uygulama reklamı (Üçler 2026-11-26). */
+  reklam?: boolean;
 }) => {
   const esle = o.esle ?? {};
   const tail = o.tail ?? 0.7;
   const ana = Math.round((o.voiceLen + OFF + tail) * FPS);
-  const frames = ana + (o.sonraki ? FPS : 0);
+  const sonrakiSon = ana + (o.sonraki ? FPS : 0);
+  const REKLAM = Math.round(2.5 * FPS);
+  const frames = sonrakiSon + (o.reklam ? REKLAM : 0);
   const sec = (w: string) => (w === '@END' ? o.voiceLen + Math.max(0.05, tail - 0.6) : findWord(o.words, esle[w] ?? w)) + OFF;
   const fr = (s: number) => Math.round(s * FPS);
   const shots = o.plan.map((p, i) => {
@@ -367,7 +371,7 @@ export const makeShort = (o: {
   });
   const Comp: React.FC = () => {
     const f = useCurrentFrame();
-    const titleO = f >= ana && o.sonraki ? 0 : 1;
+    const titleO = (f >= ana && o.sonraki) || (o.reklam && f >= sonrakiSon) ? 0 : 1;
     return (
       <AbsoluteFill style={{ background: o.tema === 'gece' ? GD.gece : '#0B0D16' }}>
         <DilCtx.Provider value={o.dil ?? 'en'}>
@@ -417,6 +421,11 @@ export const makeShort = (o: {
           ucler<span style={{ color: '#F2C21A' }}>.</span>
         </div>
           </>
+        )}
+        {o.reklam && (
+          <Sequence from={sonrakiSon} durationInFrames={REKLAM} name="reklam">
+            <Reklam dil={o.dil ?? 'en'} />
+          </Sequence>
         )}
         {o.kanca && (
           <Sequence from={0} durationInFrames={fr(o.kanca.dur ?? 1.7)} name="kanca">
@@ -524,5 +533,25 @@ const GeceUst: React.FC<{ baslik: [string, string]; titleO: number; sekil?: stri
         </div>
       )}
     </>
+  );
+};
+
+/** Uygulama reklamı: gerçek uygulama ekranı + ucler. + mağazalar. */
+const Reklam: React.FC<{ dil: string }> = ({ dil }) => {
+  const f = useCurrentFrame();
+  const g = interpolate(f, [0, 10], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
+  const tr = dil === 'tr';
+  return (
+    <AbsoluteFill style={{ background: '#0F1626', fontFamily }}>
+      <div style={{ position: 'absolute', left: 0, right: 0, top: 120, textAlign: 'center', color: '#fff', fontWeight: 800, fontSize: 76, lineHeight: 1.05, letterSpacing: '-0.02em', opacity: g, transform: `translateY(${(1 - g) * 30}px)` }}>
+        <div>{tr ? 'Kendin dene' : 'Try it yourself'}</div>
+        <div style={{ color: '#FFD54A' }}>{tr ? 'ucler uygulamasında' : 'in the ucler app'}</div>
+      </div>
+      <img src={staticFile('reklam/ekran.png')} style={{ position: 'absolute', left: (1080 - 680) / 2, top: 330, width: 680, borderRadius: 36, boxShadow: '0 20px 60px rgba(0,0,0,0.6)', transform: `translateY(${(1 - g) * 220}px) scale(${1 + f * 0.0012})`, opacity: g }} />
+      <div style={{ position: 'absolute', left: 0, right: 0, top: 1700, textAlign: 'center', opacity: g }}>
+        <div style={{ color: '#fff', fontWeight: 800, fontSize: 92, letterSpacing: '-0.03em' }}>ucler<span style={{ color: '#F2C21A' }}>.</span></div>
+        <div style={{ color: 'rgba(255,255,255,0.85)', fontWeight: 700, fontSize: 40, marginTop: 4 }}>{tr ? 'Ücretsiz · App Store ve Google Play' : 'Free on App Store & Google Play'}</div>
+      </div>
+    </AbsoluteFill>
   );
 };

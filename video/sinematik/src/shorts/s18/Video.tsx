@@ -167,9 +167,10 @@ const Onay: React.FC<{ x: number; y: number; s?: number }> = ({ x, y, s = 1 }) =
 const S1: React.FC = () => {
   const t = useTt();
   const f = useCurrentFrame();
-  const d = ap(t, 0.1, 1.1, (x) => x);
+  // kanca: sakız 0. karede zaten boğazın ortasında, kadraj yakın ve sarsıntılı
+  const d = ap(t, 0, 1.1, (x) => x);
   return (
-    <Kadraj zoom={[1.0, 1.1]} origin={[420, 1050]}>
+    <Kadraj zoom={[1.35, 1.1]} origin={[360, 1250]} shakeAt={[0]} shake={14}>
       <Sinif />
       <Cizgi x={360} y={1900} s={2.0} goz="sok" agiz="duz" kas="kalkik" bakis={[0, 1]} kolSag={[30, 150]} kolSol={[20, 14]} />
       {/* gövdede "röntgen" penceresi: yemek borusu ve inen sakız */}
@@ -179,12 +180,12 @@ const S1: React.FC = () => {
         {[0, 1, 2, 3].map((i) => (
           <path key={i} d={`M-58 ${-150 + i * 110} q58 30 116 0`} stroke="#7A1F3A" strokeWidth={8} fill="none" opacity={0.6} />
         ))}
-        <Sakiz x={0} y={lerp(-160, 150, d)} s={0.42} yuz="sok" r={Math.sin(f / 3) * 8} />
+        <Sakiz x={0} y={lerp(-40, 150, d)} s={0.42} yuz="sok" r={Math.sin(f / 3) * 8} />
         {[0, 1].map((i) => (
-          <path key={i} d={`M${-30 + i * 60} ${lerp(-160, 150, d) - 60} v-44`} stroke="#fff" strokeWidth={6} strokeLinecap="round" opacity={0.6} />
+          <path key={i} d={`M${-30 + i * 60} ${lerp(-40, 150, d) - 60} v-44`} stroke="#fff" strokeWidth={6} strokeLinecap="round" opacity={0.6} />
         ))}
       </g>
-      <g transform={`translate(760 760) scale(${pop(t, 0.45)}) rotate(${Math.sin(f / 5) * 5})`}>
+      <g transform={`translate(760 760) scale(${pop(t, 1.6)}) rotate(${Math.sin(f / 5) * 5})`}>
         <Etiket x={0} y={0} size={150} renk="#fff">
           <T en="GULP!" tr="GULP!" />
         </Etiket>
@@ -442,6 +443,8 @@ const AYAR: Parameters<typeof makeShort>[0] = {
   tail: 0.7,
   baslik: ['YOU SWALLOWED', 'YOUR GUM'],
   vurgu: '#FF9CC8',
+  reklam: true,
+  kanca: { en: 'STUCK 7 YEARS?', tr: '7 YIL KALIR MI?', y: 640, renk: '#FF9CC8' },
   plan: [
     { w: 'You', C: S1 },
     { w: 'They', C: S2 },
