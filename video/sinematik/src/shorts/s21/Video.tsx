@@ -454,6 +454,8 @@ const short = makeShort({
   words: WORDS,
   voiceLen: 24.06,
   tail: 0.4,
+  reklam: true,
+  kanca: { en: 'BUTTER DOWN?', tr: 'YAĞLI YÜZ MÜ?', y: 640 },
   baslik: ['TOAST FALLS', 'OFF THE TABLE'],
   vurgu: '#FFE25A',
   plan: [

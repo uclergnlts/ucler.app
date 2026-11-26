@@ -48,7 +48,7 @@ export const S26_ILK: React.FC = () => {
   return (
     <Sahne zoom={[1.5, 1.58]} origin={[520, 900]}>
       <Oda />
-      <Patla t={t} at={0} y={600} size={120} renk="#FF8A2A">
+      <Patla t={t} at={-0.5} y={600} size={120} renk="#FF8A2A">
         NIGHT VISION?
       </Patla>
     </Sahne>
@@ -330,6 +330,7 @@ const short = makeShort({
   words: WORDS,
   voiceLen: 20.67,
   tail: 0.55,
+  reklam: true,
   baslik: ['CARROTS AND', 'NIGHT VISION'],
   plan: [
     { w: 'Carrots', C: S26_ILK },

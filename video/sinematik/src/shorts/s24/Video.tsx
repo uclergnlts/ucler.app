@@ -78,7 +78,7 @@ export const S24_ILK: React.FC = () => {
   return (
     <Sahne zoom={[1.18, 1.3]} origin={[600, 1300]}>
       <Banyo />
-      <Patla t={t} at={0} y={640} size={90} renk="#FF6B5A">
+      <Patla t={t} at={-0.5} y={640} size={90} renk="#FF6B5A">
         SPINS BACKWARD?
       </Patla>
     </Sahne>
@@ -253,6 +253,7 @@ const short = makeShort({
   words: WORDS,
   voiceLen: 17.65,
   tail: 0.55,
+  reklam: true,
   baslik: ['FLUSH IN', 'AUSTRALIA'],
   plan: [
     { w: 'Flush', C: S24_ILK },

@@ -40,7 +40,7 @@ export const S25_ILK: React.FC = () => {
   return (
     <Sahne zoom={[1.15, 1.28]} origin={[600, 1100]}>
       <Mutfak />
-      <Patla t={t} at={0} y={640} size={120} renk="#FF6B5A">
+      <Patla t={t} at={-0.5} y={640} size={120} renk="#FF6B5A">
         INSIDE OUT?
       </Patla>
     </Sahne>
@@ -286,6 +286,7 @@ const short = makeShort({
   words: WORDS,
   voiceLen: 19.41,
   tail: 0.55,
+  reklam: true,
   baslik: ['MICROWAVE', 'LASAGNA'],
   plan: [
     { w: 'Microwave', C: S25_ILK },

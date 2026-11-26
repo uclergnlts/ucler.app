@@ -78,7 +78,7 @@ export const S31_ILK: React.FC = () => {
   return (
     <Sahne zoom={[1.12, 1.22]} origin={[540, 1150]}>
       <Sokak />
-      <Patla t={t} at={0} y={560} size={94} renk="#FF8A3D">
+      <Patla t={t} at={-0.5} y={560} size={94} renk="#FF8A3D">
         HEAT LEAVES HEAD?
       </Patla>
     </Sahne>
@@ -261,6 +261,7 @@ const short = makeShort({
   words: WORDS,
   voiceLen: 22.94,
   tail: 0.6,
+  reklam: true,
   baslik: ['NO HAT IN', 'WINTER'],
   plan: [
     { w: 'Most', C: S31_ILK },

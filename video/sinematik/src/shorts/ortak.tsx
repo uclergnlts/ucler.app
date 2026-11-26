@@ -359,7 +359,9 @@ export const makeShort = (o: {
   const esle = o.esle ?? {};
   const tail = o.tail ?? 0.7;
   const ana = Math.round((o.voiceLen + OFF + tail) * FPS);
-  const sonrakiSon = ana + (o.sonraki ? FPS : 0);
+  // reklam varsa 'sonraki video' karesi yerine reklam gelir
+  const sonraki = o.reklam ? undefined : o.sonraki;
+  const sonrakiSon = ana + (sonraki ? FPS : 0);
   const REKLAM = Math.round(2.5 * FPS);
   const frames = sonrakiSon + (o.reklam ? REKLAM : 0);
   const sec = (w: string) => (w === '@END' ? o.voiceLen + Math.max(0.05, tail - 0.6) : findWord(o.words, esle[w] ?? w)) + OFF;
@@ -371,7 +373,7 @@ export const makeShort = (o: {
   });
   const Comp: React.FC = () => {
     const f = useCurrentFrame();
-    const titleO = (f >= ana && o.sonraki) || (o.reklam && f >= sonrakiSon) ? 0 : 1;
+    const titleO = (f >= ana && sonraki) || (o.reklam && f >= sonrakiSon) ? 0 : 1;
     return (
       <AbsoluteFill style={{ background: o.tema === 'gece' ? GD.gece : '#0B0D16' }}>
         <DilCtx.Provider value={o.dil ?? 'en'}>
@@ -396,11 +398,11 @@ export const makeShort = (o: {
         </WordsCtx.Provider>
         </EsleCtx.Provider>
         </DilCtx.Provider>
-        {o.sonraki && (
+        {sonraki && (
           <Sequence from={ana} durationInFrames={FPS} name="sonraki video">
-            <WordsCtx.Provider value={o.sonraki.words}>
+            <WordsCtx.Provider value={sonraki.words}>
               <ShotStart.Provider value={-OFF}>
-                <o.sonraki.C />
+                <sonraki.C />
               </ShotStart.Provider>
             </WordsCtx.Provider>
             <div style={{ position: 'absolute', left: 0, right: 0, top: 230, textAlign: 'center' }}>

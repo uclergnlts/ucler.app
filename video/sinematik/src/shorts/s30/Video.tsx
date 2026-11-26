@@ -35,7 +35,7 @@ export const S30_ILK: React.FC = () => {
   return (
     <Sahne zoom={[1.12, 1.22]} origin={[450, 1300]} shakeAt={[0.05]} shake={10}>
       <Kiyi />
-      <Patla t={t} at={0} y={600} size={116} renk="#FF6B5A">
+      <Patla t={t} at={-0.5} y={600} size={116} renk="#FF6B5A">
         JELLYFISH STING!
       </Patla>
     </Sahne>
@@ -252,6 +252,7 @@ const short = makeShort({
   words: WORDS,
   voiceLen: 21.13,
   tail: 0.55,
+  reklam: true,
   baslik: ['JELLYFISH', 'STING'],
   plan: [
     { w: 'Jellyfish', C: S30_ILK },

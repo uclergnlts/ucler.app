@@ -64,7 +64,7 @@ export const S27_ILK: React.FC = () => {
   return (
     <Sahne zoom={[1.12, 1.24]} origin={[480, 1150]}>
       <Mutfak dokuyor />
-      <Patla t={t} at={0} y={620} size={120} renk="#FFD54A">
+      <Patla t={t} at={-0.5} y={620} size={120} renk="#FFD54A">
         BOILS FASTER?
       </Patla>
     </Sahne>
@@ -273,6 +273,7 @@ const short = makeShort({
   words: WORDS,
   voiceLen: 23.55,
   tail: 0.55,
+  reklam: true,
   baslik: ['SALT IN THE', 'PASTA WATER'],
   plan: [
     { w: 'Salt', C: S27_ILK },

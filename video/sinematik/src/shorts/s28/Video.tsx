@@ -38,7 +38,7 @@ export const S28_ILK: React.FC = () => {
   return (
     <Sahne zoom={[1.12, 1.22]} origin={[420, 1200]}>
       <Plaj />
-      <Patla t={t} at={0} y={600} size={96} renk="#FFD54A">
+      <Patla t={t} at={-0.5} y={600} size={96} renk="#FFD54A">
         SWIM AFTER LUNCH?
       </Patla>
     </Sahne>
@@ -223,6 +223,7 @@ const short = makeShort({
   words: WORDS,
   voiceLen: 21.55,
   tail: 0.55,
+  reklam: true,
   baslik: ['SWIM RIGHT', 'AFTER LUNCH'],
   plan: [
     { w: 'Swim', C: S28_ILK },

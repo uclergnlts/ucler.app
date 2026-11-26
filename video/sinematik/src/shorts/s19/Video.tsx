@@ -412,6 +412,7 @@ const short = makeShort({
   words: WORDS,
   voiceLen: 18.48,
   tail: 0.45,
+  reklam: true,
   baslik: ['THE', '5-SECOND RULE'],
   vurgu: '#B8F06A',
   kanca: { en: 'SAFE TO EAT?', tr: 'YENİR Mİ?', y: 1080, renk: '#B8F06A' },

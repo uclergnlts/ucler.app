@@ -58,7 +58,7 @@ export const S29_ILK: React.FC = () => {
   return (
     <Sahne zoom={[1.14, 1.24]} origin={[450, 1100]}>
       <Banyo />
-      <Patla t={t} at={0} y={560} size={86} renk="#FFD54A">
+      <Patla t={t} at={-0.5} y={560} size={86} renk="#FFD54A">
         GROWS BACK THICKER?
       </Patla>
     </Sahne>
@@ -264,6 +264,7 @@ const short = makeShort({
   words: WORDS,
   voiceLen: 23.13,
   tail: 0.55,
+  reklam: true,
   baslik: ['SHAVE AND IT', 'GROWS BACK'],
   plan: [
     { w: 'Shave', C: S29_ILK },

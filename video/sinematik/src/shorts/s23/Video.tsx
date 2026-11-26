@@ -57,7 +57,7 @@ export const S23_ILK: React.FC = () => {
   return (
     <Sahne zoom={[2.2, 2.3]} origin={[500, 984]}>
       <Istasyon />
-      <Patla t={t} at={0} y={640} size={150} renk="#FF6B5A">
+      <Patla t={t} at={-0.5} y={640} size={150} renk="#FF6B5A">
         BOOM?
       </Patla>
     </Sahne>
@@ -286,6 +286,7 @@ const short = makeShort({
   words: WORDS,
   voiceLen: 18.86,
   tail: 0.55,
+  reklam: true,
   baslik: ['PHONE AT THE', 'GAS PUMP'],
   plan: [
     { w: 'Phone', C: S23_ILK },

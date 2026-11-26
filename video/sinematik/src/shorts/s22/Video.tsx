@@ -46,7 +46,7 @@ export const S22_ILK: React.FC = () => {
   return (
     <Sahne zoom={[1.72, 1.8]} origin={[540, 1050]} shakeAt={[k + 0.1]} shake={10}>
       <Oda pops={[0.05, k + 0.1]} />
-      <Patla t={t} at={0} y={640} size={140} renk="#FF6B5A">
+      <Patla t={t} at={-0.5} y={640} size={140} renk="#FF6B5A">
         ARTHRITIS?
       </Patla>
     </Sahne>
@@ -294,6 +294,7 @@ const short = makeShort({
   words: WORDS,
   voiceLen: 19.92,
   tail: 0.55,
+  reklam: true,
   baslik: ['CRACK YOUR', 'KNUCKLES'],
   plan: [
     { w: 'Cracking', C: S22_ILK },

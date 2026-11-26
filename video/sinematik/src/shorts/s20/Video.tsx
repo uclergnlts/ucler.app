@@ -392,6 +392,7 @@ const short = makeShort({
   words: WORDS,
   voiceLen: 21.73,
   tail: 0.45,
+  reklam: true,
   baslik: ['LOST AT SEA:', 'DRINK THE OCEAN?'],
   kanca: { en: 'SAFE TO DRINK?', tr: 'İÇİLİR Mİ?', y: 700 },
   vurgu: '#7FD6FF',
