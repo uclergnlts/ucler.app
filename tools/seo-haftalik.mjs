@@ -384,6 +384,31 @@ export function analiz(veri, deneyler = [], bugun = new Date()) {
 }
 
 // ---------------------------------------------------------------------------
+// Soru/sorgu fırsatları: Search Console regex filtrelerinin Türkçe + İngilizce
+// karşılıkları. Satın alma ve yerel filtreler bize uymadığı için yok.
+// ---------------------------------------------------------------------------
+// JS'te \b yalnız ASCII harfleri tanır; Türkçe harfler için (?<!\p{L}) / (?!\p{L}) sınırı kullanılır.
+const k = (govde) => new RegExp(govde, "iu");
+export const SORGU_KALIPLARI = {
+  soru: k("^(who|what|when|where|why|how|which|can|could|should|would|will|do|does|did|is|are|was|were|has|have)(?![\\p{L}])|(?<![\\p{L}])(nedir|neden|niçin|nasıl|ne zaman|nerede|hangi|kaç(?:a|ı|ta)?|kimdir|mı|mi|mu|mü)(?![\\p{L}])|\\?$"),
+  tanim: k("(?<![\\p{L}])(what is|what are|define|definition|meaning|means|explained|nedir|ne demek|anlamı|tanımı|ne işe yarar)(?![\\p{L}])"),
+  nasil: k("(?<![\\p{L}])(how to|how do|guide|tutorial|step by step|nasıl yapılır|nasıl hesaplanır|nasıl bulunur|adım adım)(?![\\p{L}])"),
+  ogrenme: k("(?<![\\p{L}])(learn|explain|understand|basics|beginner|konu anlatımı|özet|anlatım|ders|öğren|formül(?:ü|leri)?|denklem(?:i)?|tablo(?:su)?|şema(?:sı)?|soru(?:ları)?|test)(?![\\p{L}])"),
+  uzun: /^(?:\S+\s+){3,}\S+$/u,
+};
+const MARKA = /^(ü?u?cler|eucler|ucler\.app)$/iu;
+
+export function soruFirsatlari(satir) {
+  const out = [];
+  for (const r of satir || []) {
+    if (!r.sorgu || MARKA.test(r.sorgu.trim())) continue;
+    const gruplar = Object.entries(SORGU_KALIPLARI).filter(([, re]) => re.test(r.sorgu)).map(([k]) => k);
+    if (gruplar.length) out.push({ ...r, gruplar });
+  }
+  return out.sort((a, b) => b.gosterim - a.gosterim || a.sira - b.sira);
+}
+
+// ---------------------------------------------------------------------------
 // Rapor
 // ---------------------------------------------------------------------------
 export function rapor(veri, s) {
@@ -414,6 +439,12 @@ export function rapor(veri, s) {
   if (digerleri.length) {
     satir.push("", "## Sıradaki adaylar (bu hafta yapılmayacak)", "");
     for (const a of digerleri) satir.push(`- ${a.baslik}. ${a.kanit}`);
+  }
+  const firsat = soruFirsatlari(veri.ciftSimdi);
+  if (firsat.length) {
+    satir.push("", "## Soru ve sorgu fırsatları (bilgi; öneri değil)", "", "Google'ın bizi gösterdiği soru, tanım, nasıl ve uzun aramalar. Sayfa bu soruya doğrudan cevap veren bir ara başlık ya da kısa paragraf ekleyebilir.", "");
+    for (const f of firsat.slice(0, 15))
+      satir.push(`- ${kisa(f.sayfa)}: "${f.sorgu}" [${f.gruplar.join(", ")}] ${f.gosterim} gösterim, ${f.tik} tık, sıra ${f.sira.toFixed(0)}`);
   }
   satir.push("", "_Kurallar ve eşikler: tools/seo-haftalik.mjs içindeki KURAL. Tahmini kazançlar kaba bir tıklama oranı eğrisine dayanır, söz değildir._");
   return satir.join("\n") + "\n";

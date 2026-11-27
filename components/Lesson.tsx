@@ -51,8 +51,9 @@ type State = { a: number; ara: boolean; i: number; en: number; q: number; cevap:
 const START: State = { a: -1, ara: false, i: 0, en: 0, q: -1, cevap: null, sonuc: null, right: 0, odul: 0, cevaplar: [] };
 
 export default function Lesson({
-  ders, id, t, next, adimli, on = [], list,
-}: { ders: DersId; id: string; t: Topic; next?: { id: string; title: string }; adimli?: AdimliDers; on?: { id: string; title: string }[]; list: Entry[] }) {
+  ders, id, t, next, adimli, on = [], list, sss,
+}: { ders: DersId; id: string; t: Topic; next?: { id: string; title: string }; adimli?: AdimliDers; on?: { id: string; title: string }[]; list: Entry[];
+  sss?: { s: string; c: string }[] }) {
   const [s, setS] = useState<State>(START);
   // Adımların hepsi bir karta yerleştirilmişse anlatımın içine girer (şu an 85 konunun hepsinde böyle).
   const birlesik = !!adimli?.adimlar.length && adimli.adimlar.every((a) => a.kart);
@@ -280,6 +281,20 @@ export default function Lesson({
             </ol>
           </div>
         </details>
+        {/* Sık sorulan sorular: Google'da bizi gösterdiği gerçek aramalara kısa cevaplar (content/sss.json, Üçler 2026-11-27, SEO). */}
+        {sss?.length ? (
+          <details className="rounded-xl border border-border px-4 py-3 text-[14.5px]">
+            <summary className="cursor-pointer font-semibold text-muted-foreground">{cev("Sık sorulan sorular")}</summary>
+            <div className="grid gap-3 pt-3">
+              {sss.map((x) => (
+                <section key={x.s} className="grid gap-1">
+                  <h2 className="font-display text-[16px] leading-snug">{x.s}</h2>
+                  <p className="leading-relaxed text-muted-foreground">{x.c}</p>
+                </section>
+              ))}
+            </div>
+          </details>
+        ) : null}
       </div>
     );
     controls = (

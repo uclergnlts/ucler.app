@@ -406,6 +406,18 @@ if os.path.exists(KAZANIM_JSON) and not sys.argv[1:]:
             if durum != "tam" and not c.get("not"): err("kazanım", kod, f"{durum}: neyin eksik olduğu 'not' alanında yazılmalı")
     kazanim_ozet = f"  kazanımlar: {len(kodlar)} çıktı, {sayac['tam']} tam, {sayac['kismi']} kısmi, {sayac['yok']} eksik"
 
+# Sık sorulan sorular (content/sss.json): konu sayfasında, yalnız Türkçe sitede. Soru "?" ile biter, cevap ≤ 60 kelime.
+SSS_JSON = os.path.join(CONTENT, "sss.json")
+if os.path.exists(SSS_JSON) and not sys.argv[1:]:
+    for anahtar, liste in json.load(open(SSS_JSON, encoding="utf-8")).items():
+        if anahtar.startswith("_"): continue
+        ders, _, tid = anahtar.partition("/")
+        if tid not in d.get(ders, {}): err("sss", anahtar, "böyle bir konu yok"); continue
+        if not 1 <= len(liste) <= 6: err("sss", anahtar, "1-6 soru olmalı")
+        for x in liste:
+            if not x.get("s", "").endswith("?"): err("sss", anahtar, "soru '?' ile bitmeli:", x.get("s"))
+            if len(x.get("c", "").split()) > 60: err("sss", anahtar, "cevap 60 kelimeyi aşıyor:", x.get("s"))
+
 for w in warn: print("UYARI:", w)
 print("TAMAM" if not bad else f"{bad} sorun")
 if kazanim_ozet: print(kazanim_ozet)
