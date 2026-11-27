@@ -23,6 +23,8 @@ Araç: `tools/seo-haftalik.mjs`. Rapor: `seo/haftalik/oneri-YYYY-AA-GG.md` (orta
 | Düşen sayfa | Önceki 28 günde ≥10 tık, şimdi %40+ az | Önce neden raporu, sonra öneri |
 | İçerik boşluğu | Sorgu ≥30 gösterim ama en iyi sıra >20 | Yeni konu ya da bölüm (haftalık konu planına aday) |
 
+Raporun sonunda ayrıca **soru ve sorgu fırsatları** listelenir: Search Console regex filtrelerinin Türkçe + İngilizce karşılıkları (soru, tanım, nasıl, öğrenme, 4+ kelime; kalıplar `SORGU_KALIPLARI`). Bunlar öneri değil bilgidir; bir sayfaya soru başlığı eklemek yine tek öneri ve onayla yapılır.
+
 Toplam gösterim 28 günde 300'ün altındaysa ince ayar önerilmez; rapor bunu açıkça söyler ve en güçlü sinyali yalnız bilgi olarak verir.
 
 ## Kurulum (yapıldı 2026-11-25)
