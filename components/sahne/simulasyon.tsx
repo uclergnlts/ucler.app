@@ -378,7 +378,7 @@ function GazLab({ v, saat = 0 }: SahneProps) {
   return (
     <svg viewBox="0 0 340 222" role="img" aria-label={cev("{0} mol gaz, {1} santigrat derece, {2} litre: basınç {3} atm", n, Tc, say(V), say(P, 2))}>
       <text x={10} y={22} fontSize={13} fontWeight={800} fill="var(--ink)">{cev("n = {0} mol · T = {1} K · V = {2} L", say(n), TK, say(V))}</text>
-      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">P = n·R·T / V = {say(n)}·0,082·{TK} / {say(V)}</text>
+      <text x={10} y={41} fontSize={12} fontWeight={700} fill="var(--muted)">P = n·R·T / V = {say(n)}·{say(0.082, 3)}·{TK} / {say(V)}</text>
 
       {/* silindir ve piston */}
       <rect x={GZ.x0} y={GZ.ust} width={px - GZ.x0} height={GZ.alt - GZ.ust} fill={renk} opacity={0.14} />
