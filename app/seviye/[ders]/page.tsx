@@ -13,7 +13,7 @@ export const generateStaticParams = () => DERS_IDS.map((ders) => ({ ders }));
 
 export async function generateMetadata({ params }: Props) {
   const { ders } = await params;
-  return { title: isDers(ders) ? cev("{0} · seviye testi", DERSLER[ders].ad) : undefined };
+  return { title: isDers(ders) ? cev("{0} · seviye testi", DERSLER[ders].ad) : undefined, robots: { index: false } };
 }
 
 export default async function Page({ params }: Props) {
